@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-100 — bounded live M2 until valid result
 
-Status: ACTIVE
+Status: CLOSED
 Risk: R2
 Worker: /root/r100_worker
 Reviewer: Codex /root

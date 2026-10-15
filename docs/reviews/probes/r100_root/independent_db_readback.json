@@ -1,0 +1,19 @@
+{
+  "reviewer": "Codex /root",
+  "recordedAt": "2026-10-15T01:33:35Z",
+  "sameOwnedContainer": "88c14ee97ffd41d8ab61da3679e2c6b97cc15033c16c35a1e246e0cbe298385f",
+  "query": "SELECT cap,consumed FROM intervention_budgets; SELECT state,usage_state,input_usage_presence,output_usage_presence,input_tokens,output_tokens,response_model FROM intervention_attempts WHERE run_id='f54449f9-7e7d-4220-89e5-06a57f1fb7ce'; SELECT execution,disposition FROM intervention_cases WHERE id='1df962e3-4e1d-4dae-8c6b-59adcaedcb38'; SELECT COUNT(*) FROM intervention_proposals WHERE case_id='1df962e3-4e1d-4dae-8c6b-59adcaedcb38';",
+  "readbackLines": [
+    "4\t1",
+    "RESPONSE_RECEIVED\tKNOWN\tknown\tknown\t360\t261\tqwen3.7-flash",
+    "LLM_SUCCEEDED\tPENDING_REVIEW",
+    "1"
+  ],
+  "expectedMatches": true,
+  "goUsed": 3,
+  "providerCallsUsed": 1,
+  "physicalSlotsPresent": [
+    1
+  ],
+  "continuationTokensPresent": []
+}

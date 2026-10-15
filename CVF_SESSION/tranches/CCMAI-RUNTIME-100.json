@@ -81,16 +81,21 @@
     "perAttemptContinuation": "Only semantic OUTPUT_INVALID with exactknownmatching wire/DBmetadata maycontinue, afterRootexclusive token boundpriorreceiptSHA,nextslot/case,sourcebinarymanifest anddeadline; worker cannot approve; no outputtuning"
   },
   "claimScope": "Actual bounded synthetic current-source M2 request/response and validated proposal plusfaithfulknownusage or honestfailure; independentRootreceipt/source/DBreview. Not fullM2stage, M3/humanworkflow/pilot/billing/hosted/deployment orallentrygovernance.",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "FROZEN",
+  "phase": "FREEZE",
   "baseCommit": "b33d1fe83be35aa0e20d18590a5462e7f0ecd6fd",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_100_M2_INTERVENTION_LIVE.md",
   "buildCommit": "a5eb32d8ae5ce8abe3413cafcba3fc620543689d",
-  "reviewEvidence": [],
-  "disposition": "OPEN",
-  "freeze": "OPEN",
+  "reviewEvidence": [
+    "docs/reviews/R100_FINAL_INDEPENDENT_LIVE_REVIEW_2026-10-15.md"
+  ],
+  "disposition": "REVIEW_PASS",
+  "freeze": "FROZEN",
   "history": [
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS",
+    "FROZEN"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -100,10 +105,16 @@
   ],
   "dispatcher": "Codex /root",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "CLOSED",
   "x-actualExecution": {
-    "providerCalls": 0,
-    "goInvocations": 1
+    "providerCalls": 1,
+    "goInvocations": 3,
+    "workerGo": 3,
+    "reviewerGo": 0,
+    "unusedProviderSlots": 3,
+    "continuations": 0
   },
-  "x-sourceBinaryAdmission": "docs/reviews/probes/r100_root/source_binary_admission.json"
+  "x-sourceBinaryAdmission": "docs/reviews/probes/r100_root/source_binary_admission.json",
+  "closer": "Codex /root",
+  "governanceReceipt": "docs/reviews/probes/r100_root/real_provider_receipt.json"
 }

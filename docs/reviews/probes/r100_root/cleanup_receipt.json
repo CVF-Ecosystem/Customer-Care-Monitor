@@ -1,0 +1,44 @@
+{
+  "reviewer": "Codex /root",
+  "recordedAt": "2026-10-15T01:34:39Z",
+  "removedResources": [
+    {
+      "kind": "container",
+      "id": "88c14ee97ffd41d8ab61da3679e2c6b97cc15033c16c35a1e246e0cbe298385f",
+      "absent": true
+    },
+    {
+      "kind": "network",
+      "id": "090f219443a916efb7881b2d5f16a91f63e312cd48705bee9f4d00244fe5b274",
+      "absent": true
+    },
+    {
+      "kind": "volume",
+      "id": "8af062efad37cb17e29b4b17841867b88eaf74fb920d034385dca6e2e9a1216e",
+      "absent": true
+    }
+  ],
+  "protectedContainerIds": {
+    "ccma-app-1": "07822f249ff071e4f9f08463da804279a57b151901345b7560047d1b23662027",
+    "ccma-nginx-1": "0770fa03aee1c748425e03dcc6a3e3a8413ef2365a6981dc3fc5259e66b2fe3e",
+    "ccma-db-1": "ee1fc7f682631ac3c0ca57b80aff7e233ddde405c2618f35ca0aae6e60e23314"
+  },
+  "oldSourcesSeedsConsumedMarkersUnchanged": true,
+  "new3Frozen13TLSUnchanged": true,
+  "physicalSlotsUsed": [
+    1
+  ],
+  "unusedSlots": [
+    2,
+    3,
+    4
+  ],
+  "continuationsCreated": 0,
+  "goUsed": 3,
+  "goMax": 4,
+  "providerCallsUsed": 1,
+  "providerCallsMax": 4,
+  "stopReason": "FIRST_VALID_PROPOSAL_FAITHFUL_KNOWN_USAGE",
+  "remainingCallsNotAdmittedAfterStop": true,
+  "boundedCredentialPatternScan": "PASS_NO_RECOGNIZABLE_LITERAL_NOT_UNIVERSAL_DLP_PROOF"
+}

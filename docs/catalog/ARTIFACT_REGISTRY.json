@@ -1143,7 +1143,7 @@
       "family": "continuity",
       "path": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
       "status": "ACTIVE",
-      "description": "Current activeM2/R100 ownerfreshmax4 granted; sourceadmission/compilepending, firstvalidstops; M3/business/pilot OPEN."
+      "description": "CurrentM2boundedrealproposal+KNOWN360/261usage acceptedR100/API1of4/cleanupverified; fullM2OPEN, M3humanworkflow planningnext."
     },
     {
       "id": "ccma-product-delivery-publication-20261013",
@@ -10657,6 +10657,258 @@
       "path": "docs/reviews/probes/r100_root/source_binary_admission.json",
       "status": "ACTIVE",
       "description": "Rootreviewedsource/binary/dependencies/manifest digest-bound admission beforecredential/fixture."
+    },
+    {
+      "id": "r100-final-independent-live-review",
+      "family": "continuity",
+      "path": "docs/reviews/R100_FINAL_INDEPENDENT_LIVE_REVIEW_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "Rootindependentboundedrealproposal/usage/DB/cleanup REVIEW_PASS; fullM2/M3/pilotOPEN."
+    },
+    {
+      "id": "r100-worker-fixture-return",
+      "family": "continuity",
+      "path": "docs/reviews/R100_PRECHECK_FIXTURE_WORKER_RETURN_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "Historical prelive fixture/precheck return; actualnextlive verified separately."
+    },
+    {
+      "id": "r100-actual-attempt-1-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/attempt-1.json",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-attempt-1-ready",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/attempt-1.ready",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-campaign-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/campaign.json",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-cleanup-receipt-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/cleanup_receipt.json",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-container-pin-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/container_pin.json",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-fixture-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/fixture.json",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-fixture-pre-live-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/fixture_pre_live.json",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-fixture-readback-resume-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/fixture_readback_resume.json",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-fresh-slot-1-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/fresh_slot-1.json",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-independent-attempt-1-summary-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/independent_attempt_1_summary.json",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-independent-db-readback-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/independent_db_readback.json",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-ownership-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/ownership.json",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-real-provider-receipt-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/real_provider_receipt.json",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-seed-go-start",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/seed.go-start",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-worker-claim",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker.claim",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-worker-dispatch",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker.dispatch",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-worker-go-start",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker.go-start",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-worker-live-command-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_live/command.txt",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-worker-live-cwd-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_live/cwd.txt",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-worker-live-exit-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_live/exit.txt",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-worker-live-stderr-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_live/stderr.txt",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-worker-live-stdout-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_live/stdout.txt",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-worker-precheck-command-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_precheck/command.txt",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-worker-precheck-cwd-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_precheck/cwd.txt",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-worker-precheck-exit-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_precheck/exit.txt",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-worker-precheck-stderr-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_precheck/stderr.txt",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-worker-precheck-stdout-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_precheck/stdout.json",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-worker-receipt-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_receipt.json",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-worker-setup-command-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_setup/command.txt",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-worker-setup-cwd-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_setup/cwd.txt",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-worker-setup-exit-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_setup/exit.txt",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-worker-setup-setup-summary-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_setup/setup_summary.json",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-worker-setup-stderr-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_setup/stderr.txt",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r100-actual-worker-setup-stdout-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r100_root/worker_setup/stdout.txt",
+      "status": "ACTIVE",
+      "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
     }
   ]
 }

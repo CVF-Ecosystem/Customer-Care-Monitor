@@ -1,0 +1,1 @@
+python -B scripts/r100_intervention_live_fixture.py live --role worker

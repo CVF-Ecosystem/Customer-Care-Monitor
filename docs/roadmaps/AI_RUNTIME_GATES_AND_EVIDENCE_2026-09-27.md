@@ -4,7 +4,19 @@
 
 **Quyết định thiết kế đi kèm:** [mẫu lọc dữ liệu SoT-first có thể tái sử dụng](../decisions/SOT_FIRST_DATA_FILTERING_PATTERN_2026-09-27.md). Mẫu nêu hợp đồng chung; roadmap này ánh xạ vào ứng dụng CSKH và chưa chứng minh một thư viện đa dự án đã vận hành.
 
-## Current R100 owner-granted route — 2026-10-15
+## Current product result and finite next move — R100, 2026-10-15
+
+| Milestone | Current truth | Remaining acceptance / next move |
+|---|---|---|
+| M1 | Local synthetic intended contract accepted historically | Named reviewer/assignee, SLA, permitted corpus/holdout andquality/budget thresholds remainOPEN; settle alongsideM3planning |
+| M2 current | One realAlibaba qwen3.7-flash complaint proposal valid on currentR099source + R100harness; exactsnapshot/ID/quote andKNOWN360/261usage persisted; DENY403/WAIT200 beforephysicalcall; API1/4 andGo3/4, stopfirstvalid, fixtureclean | Boundedmanualsynthetic slice accepted. FullM2/S2/S3 permissions/PII/entrypaths/recovery/quality exits remainOPEN; installedrunnerdisabled |
+| M3 next | NOT_IMPLEMENTED / NOT_DISPATCHED | Sourceinventory andtestable contract -> boundedSPEC/workorder -> integrated confirm/reject/correct, assignment/deadline/outcome throughbrowser/backend withpermission/stale/concurrency checks |
+| M4 | Shadow/pilot NOT_RUN | M2/M3scope pluslockedcorpus/thresholds/people/realdata/account authority; no autosend |
+| M5 | Release/operations OPEN | RevisionCI, backup/restore/security/load/rollback/releaseacceptance; no currentpush/deployauthority |
+
+Stop achieved atfirstvalid, remaining3slots notspent orreassigned; oldR0982/2/R099Go1 unchanged. Explanation/nextaction English inthiscase; Vietnamesequality/generalaccuracy NOT_ACCEPTED. Fixture foundstopped afterinterruption; samepinnedID restartedonly forindependentreadback thenremoved withnetwork/volume; originalapp/DB unchanged. RawCLIwrapperstdout expectation flag unresolved, no stdout-contract PASS; actualrequest/response + Rootstrictreceipt/DB review are the evidence. Facebook/ZaloOA parked, docs55/R086native/fence gaps remainOPEN without inventing currentcounts orprerequisitechain. [Independent review](../reviews/R100_FINAL_INDEPENDENT_LIVE_REVIEW_2026-10-15.md).
+
+## Historical R100 owner-granted execution route — 2026-10-15
 
 Owner grants **max4 freshcalls untilvalidresult**, superseding max2 proposal/semanticfailurestop only. CurrentmilestoneM2, R099source0640431 compiled/sourceaccepted; changed-source runtimeNOTRUN beforeR100. NewR100 seedb33d1fe83be35aa0e20d18590a5462e7f0ecd6fd precedes BUILD. Fourpredeclaredsyntheticcases/fixedthinkingfalseprompt, oneownedloopbackfixture; Rootaudit eachsemanticinvalid/faithfulusage thenexclusivecontinuation. Stop firstvalidproposal+faithfulknownusage ortransport/metadata/security/ledger/DBfailure, max4/300sec. Onecompile/oneseed/onelive <=4Go, no oldbudgetreset/sourcechange. Rootindependentactualreceipt review needsno duplicatecall. NextM3 humanworkflow afteractualproposal; M1businessparallel, pilotreleaseOPEN/accountsparked. Earlier max2 pendingapproval sections below are superseded planning history, not authority.
 

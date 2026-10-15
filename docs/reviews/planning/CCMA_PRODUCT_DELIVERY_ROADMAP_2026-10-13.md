@@ -4,7 +4,19 @@ Status: ACTIVE_PLANNING
 
 Ngày: 2026-10-13. Plan ID: `CCMAI-PRODUCT-DELIVERY-20261013`. Tác giả: Local ORCHESTRATOR / SPEC_AUTHOR. Phạm vi đợt này: tài liệu R1 theo yêu cầu trực tiếp của owner; implementation tương lai tối thiểu R2 theo AGENTS.md. Baseline source: `49160128df5109ed46054babb6942457a3ed85a9`; worktree sạch trước authoring. Các mốc M1–M5 dưới đây đều chưa được nghiệm thu theo hợp đồng roadmap này.
 
-## Current R100 owner-granted route — 2026-10-15
+## Current product result and finite next move — R100, 2026-10-15
+
+| Milestone | Current truth | Remaining acceptance / next move |
+|---|---|---|
+| M1 | Local synthetic intended contract accepted historically | Named reviewer/assignee, SLA, permitted corpus/holdout andquality/budget thresholds remainOPEN; settle alongsideM3planning |
+| M2 current | One realAlibaba qwen3.7-flash complaint proposal valid on currentR099source + R100harness; exactsnapshot/ID/quote andKNOWN360/261usage persisted; DENY403/WAIT200 beforephysicalcall; API1/4 andGo3/4, stopfirstvalid, fixtureclean | Boundedmanualsynthetic slice accepted. FullM2/S2/S3 permissions/PII/entrypaths/recovery/quality exits remainOPEN; installedrunnerdisabled |
+| M3 next | NOT_IMPLEMENTED / NOT_DISPATCHED | Sourceinventory andtestable contract -> boundedSPEC/workorder -> integrated confirm/reject/correct, assignment/deadline/outcome throughbrowser/backend withpermission/stale/concurrency checks |
+| M4 | Shadow/pilot NOT_RUN | M2/M3scope pluslockedcorpus/thresholds/people/realdata/account authority; no autosend |
+| M5 | Release/operations OPEN | RevisionCI, backup/restore/security/load/rollback/releaseacceptance; no currentpush/deployauthority |
+
+Stop achieved atfirstvalid, remaining3slots notspent orreassigned; oldR0982/2/R099Go1 unchanged. Explanation/nextaction English inthiscase; Vietnamesequality/generalaccuracy NOT_ACCEPTED. Fixture foundstopped afterinterruption; samepinnedID restartedonly forindependentreadback thenremoved withnetwork/volume; originalapp/DB unchanged. RawCLIwrapperstdout expectation flag unresolved, no stdout-contract PASS; actualrequest/response + Rootstrictreceipt/DB review are the evidence. Facebook/ZaloOA parked, docs55/R086native/fence gaps remainOPEN without inventing currentcounts orprerequisitechain. [Independent review](../R100_FINAL_INDEPENDENT_LIVE_REVIEW_2026-10-15.md).
+
+## Historical R100 owner-granted execution route — 2026-10-15
 
 Owner grants **max4 freshcalls untilvalidresult**, superseding max2 proposal/semanticfailurestop only. CurrentmilestoneM2, R099source0640431 compiled/sourceaccepted; changed-source runtimeNOTRUN beforeR100. NewR100 seedb33d1fe83be35aa0e20d18590a5462e7f0ecd6fd precedes BUILD. Fourpredeclaredsyntheticcases/fixedthinkingfalseprompt, oneownedloopbackfixture; Rootaudit eachsemanticinvalid/faithfulusage thenexclusivecontinuation. Stop firstvalidproposal+faithfulknownusage ortransport/metadata/security/ledger/DBfailure, max4/300sec. Onecompile/oneseed/onelive <=4Go, no oldbudgetreset/sourcechange. Rootindependentactualreceipt review needsno duplicatecall. NextM3 humanworkflow afteractualproposal; M1businessparallel, pilotreleaseOPEN/accountsparked. Earlier max2 pendingapproval sections below are superseded planning history, not authority.
 
@@ -96,7 +108,7 @@ Sol Medium source plus one consolidated repair reviewed independently by Root. A
 | Mốc | Kết quả nghiệm thu | Stage liên quan | Dependency | Trạng thái hiện hành |
 |---|---|---|---|---|
 | M1 | Hợp đồng bản đầu tiên và route an toàn hữu hạn | S0, một phần S1/S7 | Nguồn/review hiện hành | R092 local synthetic intended contract accepted historically; current M1 business/pilot acceptance OPEN. Does not block bounded synthetic M2 |
-| M2 | Một đường phân tích có quyết định và đề xuất gắn nguồn | S1/S2/S3 | M1 contract; prerequisite thật sự chặn | ACTIVE MILESTONE: R100 ownerfreshmax4 granted, newharness BUILD/sourcebinaryadmission pending; currentR099source0640431 acceptedcompile only/currentruntimeNOT_RUN. R098 historicalrealempty/no proposals/capspent; fullM2 OPEN |
+| M2 | Một đường phân tích có quyết định và đề xuất gắn nguồn | S1/S2/S3 | M1 contract; prerequisite thật sự chặn | R100boundedrealpathREVIEW_PASS/FROZEN: actual1call validproposal, faithfulKNOWN360/261usage, consumed1of4, cleanup/protectedPASS. FullM2/S2/S3 OPEN; M3planning next |
 | M3 | Người dùng hoàn tất review → giao việc → kết quả | S5 và an toàn S7 tối thiểu | M2 contract/data; một phần UI/API có thể chuẩn bị song song sau khóa contract | PLANNED — chưa dispatch |
 | M4 | Chất lượng và lợi ích được đo trong shadow/pilot giới hạn | S0/S6; S4 nếu tối ưu | M2/M3, live readiness và an toàn dữ liệu | PLANNED — chưa dispatch |
 | M5 | Bản phát hành có thể cài, vận hành và tiếp quản | S7 | M4 GO và proof release | PLANNED — chưa dispatch |
@@ -259,12 +271,12 @@ Mẫu báo owner: “Dùng được X trong môi trường Y. Mốc M còn thi�
 | D02 người review/assignee, SLA giờ làm việc | OPEN | Local ánh xạ roles; owner chỉ định người/quy tắc nghiệp vụ còn thiếu | Workflow/pilot acceptance |
 | D03 corpus/PII/holdout | Synthetic baseline có; real-data scope OPEN | Local lập corpus contract; owner cho quyền dữ liệu cần thiết | Disclosure và M4 |
 | D04 ngưỡng chất lượng và budget | Chưa khóa trong roadmap này | Local đề xuất phép đo/căn cứ; owner chốt trade-off; không bịa số | M1 exit/pilot GO |
-| D05 provider/model/key readiness | R098 oldsource realHTTP200/modelknown but emptyanswers/metadata loss, dollarbillingUNKNOWN; currentR099 liveNOTRUN | Owner2026-10-15 grants R100 max4 newcalls untilfirstvalidproposal+faithfulusage, explicitthinkingfalse; source/binarysignature required beforekey/fixture; no oldbudgetreset | Current boundedsyntheticM2; fullM2/pilot OPEN |
+| D05 provider/model/key readiness | R100 current-source realAlibaba/qwen3.7-flash HTTP200, explicitthinkingfalse, validproposal andKNOWN360/261persistedusage; dollarbillingUNKNOWN | Ownermax4 stopsfirstvalid at1/4; no moreR100calls. Futureprovider effects require separatelybounded applicableauthority, neverreuseclosedmarkers | Boundedmanualsynthetic accepted; fullM2/pilotOPEN |
 | D06 topology/recovery/fence | In-process coordinator + DB parent-lock admission; orphan running fail-closed; distributed cancellation, crash recovery, reclaim và mixed-binary rollout không có | Chỉ đề xuất một process/one selected manual synthetic job; giữ fail-closed, không auto-reclaim; không mở lại accepted inheritance review | Multi-process/restart/live-data readiness; không chặn route local synthetic |
 | D07 Facebook/Zalo OA | OWNER_DEFERRED | Chỉ owner mở lại; không đưa vào prerequisite của Pancake synthetic; giữ nguyên evidence đã chấp nhận | Live riêng hai kênh |
 | D08 release target và vận hành | OPEN | Chốt môi trường/người vận hành trước M5; không tự deploy | M5 release |
 
-**Next allowed planning action:** Execute the committed bounded R100 order under ownerfreshmax4: Rootaudits newharness beforeonecompile, signs exactsource/binary/ledger beforekey/fixture, reviews eachsemanticinvalid beforecontinuation. Firstvalidproposal+faithfulusage orhardfailure stops. Rootindependentreview actualreceipt, cleanup/protectedchecks thenupdateM2 acceptance andM3planning. M1business/pilotcriteria stayOPEN; no generic supporting successor.
+**Next allowed planning action:** R100 boundedrealproposal+faithfulusage accepted; Root commits finalreview/cleanup/roadmap then prepares M3sourceinventory, testablehumanreview/correction/assignment/deadline/outcome contract andboundedSPEC/workorder. Browser/backend negativeproof required. M1people/SLA/corpus/threshold decisions parallel, pilot/releaseOPEN; no generic prerequisite successor orfurtherR100call.
 
 ## 15. Source Authority và Evidence Comparison
 

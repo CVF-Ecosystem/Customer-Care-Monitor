@@ -1,0 +1,22 @@
+{
+  "slot": 1,
+  "receiptSha256": "c3cf9a8cad78cbfed4b784a802cd17b65e5814e966232755f3c158d9bf0c6c70",
+  "decision": "VALID",
+  "errorCode": "",
+  "attempts": 1,
+  "httpStatus": 200,
+  "dbReadOK": true,
+  "cap": 4,
+  "consumed": 1,
+  "proposals": 1,
+  "model": "qwen3.7-flash",
+  "inputTokens": 360,
+  "outputTokens": 261,
+  "usageState": "KNOWN",
+  "caseExecution": "LLM_SUCCEEDED",
+  "caseReason": "",
+  "physicalSlotsUsed": 1,
+  "enableThinking": false,
+  "independentResult": "VALID_PROPOSAL_AND_FAITHFUL_KNOWN_USAGE_STOP",
+  "scope": "BOUNDED_SYNTHETIC_ACTUAL_RECEIPT_NOT_FULL_M2_OR_QUALITY_ACCEPTANCE"
+}

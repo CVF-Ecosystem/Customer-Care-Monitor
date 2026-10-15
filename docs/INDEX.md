@@ -10,7 +10,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-058.json`
 - Separate R1 seed for accepted R061 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-062.json`
 - GitHub project-branch material publication receipt for the M1-M5 delivery roadmap; remote SHA readback, no product/runtime acceptance.: `docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json`
-- Current activeM2/R100 ownerfreshmax4 granted; sourceadmission/compilepending, firstvalidstops; M3/business/pilot OPEN.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
+- CurrentM2boundedrealproposal+KNOWN360/261usage acceptedR100/API1of4/cleanupverified; fullM2OPEN, M3humanworkflow planningnext.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
 - All seven selected inheritance findings independently accepted bounded and material exported atd121c9e; full product exits remain open.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
@@ -936,6 +936,40 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R099 exact source candidate and independent review; current runtime proof NOT_RUN.: `docs/reviews/probes/r099_source/pre_build_identity.json`
 - R099 exact source candidate and independent review; current runtime proof NOT_RUN.: `docs/reviews/R099_PRE_BUILD_INDEPENDENT_SOURCE_REVIEW_2026-10-14.md`
 - R099 exact source candidate and independent review; current runtime proof NOT_RUN.: `docs/reviews/R099_SOURCE_READY_WORKER_RETURN_2026-10-14.md`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/attempt-1.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/attempt-1.ready`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/campaign.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/cleanup_receipt.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/container_pin.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/fixture.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/fixture_pre_live.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/fixture_readback_resume.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/fresh_slot-1.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/independent_attempt_1_summary.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/independent_db_readback.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/ownership.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/real_provider_receipt.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/seed.go-start`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker.claim`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker.dispatch`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker.go-start`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_live/command.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_live/cwd.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_live/exit.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_live/stderr.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_live/stdout.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_precheck/command.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_precheck/cwd.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_precheck/exit.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_precheck/stderr.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_precheck/stdout.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_receipt.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_setup/command.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_setup/cwd.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_setup/exit.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_setup/setup_summary.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_setup/stderr.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_setup/stdout.txt`
 - Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/binary_bytes.txt`
 - Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/binary_sha256.txt`
 - Rootcompile/sourcebinary digest admission, API0/4 liveNOTRUN.: `docs/reviews/R100_COMPILE_BINARY_ADMISSION_2026-10-15.md`
@@ -947,6 +981,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/stderr.txt`
 - Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/stdout.txt`
 - Immutable Root dispatcher seed for ownerfreshmax4 syntheticuntilvalid; beforeBUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-100.json`
+- Rootindependentboundedrealproposal/usage/DB/cleanup REVIEW_PASS; fullM2/M3/pilotOPEN.: `docs/reviews/R100_FINAL_INDEPENDENT_LIVE_REVIEW_2026-10-15.md`
 - Rootnew4 grantledger digest copy; oldspentcaps unchanged.: `docs/reviews/probes/r100_root/fresh_owner_manifest.json`
 - Explicit isolatedR100harness, max4untilvalid, defaultnotactivated.: `backend/api/handlers/intervention_live_r100_test.go`
 - R2newharness andsourceboundeffects; workerSolMedium, independentRoot, no oldbudgetreset.: `docs/work_orders/CCMAI_RUNTIME_100_M2_INTERVENTION_LIVE.md`
@@ -958,6 +993,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Rootpre-effect current13/oldsource/seed/marker/containeridentity protection.: `docs/reviews/probes/r100_root/protected_baseline.json`
 - Rootreviewedsource/binary/dependencies/manifest digest-bound admission beforecredential/fixture.: `docs/reviews/probes/r100_root/source_binary_admission.json`
 - PurePython toolingidentity/parserchecks; no mockprovider governanceproof.: `scripts/tests/test_r100_intervention_live_fixture.py`
+- Historical prelive fixture/precheck return; actualnextlive verified separately.: `docs/reviews/R100_PRECHECK_FIXTURE_WORKER_RETURN_2026-10-15.md`
 - Source-only worker return; oneprecompile repair, puretooling7PASS, no liveclaim.: `docs/reviews/R100_SOURCE_READY_WORKER_RETURN_2026-10-15.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
