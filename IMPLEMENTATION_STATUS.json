@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "x-roadmapTracking": {
     "updatedAt": "2026-10-15",
-    "status": "M3_SPEC_ACCEPTED_DISPATCH_READY",
+    "status": "M3_NATIVE_WORKFLOW_PASS_BROWSER_OPEN",
     "currentCheckpoint": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
     "stages": {
       "S0": "PARTIAL_LIVE_BASELINE_OPEN",
@@ -23,21 +23,22 @@
       "M5 release/portable operations"
     ],
     "currentBlockers": [
-      "M3 H01..H08 implementation and real backend/browser evidence pending",
-      "FullM2 and M1 business people/SLA/corpus/threshold; pilot/release OPEN"
+      "Actual browser proof blocked by runtime Windows browser URL-policy support",
+      "Three inherited Dashboard UI fixture failures reproduced before M3; full suite remains failed",
+      "Full M2/WAIT_DATA rerun and M1 people/SLA/corpus/threshold/pilot/release remain open"
     ],
     "executionAuthorityExpanded": false,
     "eta": "NOT_ESTABLISHED",
     "deliveryRoadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
     "currentMilestone": "M3",
-    "milestoneAcceptance": "M3_NOT_IMPLEMENTED_R100_BOUNDED_M2_HISTORICAL",
+    "milestoneAcceptance": "LOCAL_NATIVE_ACCEPTANCE_BROWSER_AND_FULL_UI_OPEN",
     "deliveryRoadmapPublication": "d72de76984e4aad9c208cc82e6093578797b5340",
     "m1BusinessPilotAcceptance": "OPEN",
     "currentPublication": "LOCAL_ONLY_NOT_PUSHED"
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "R094 bounded M2 source/local manual synthetic intervention prototype independently reviewed: authenticated route, snapshot evidence, monotonic call admission, queue/detail and failure handling; real provider0, default app disabled, full M2/M3/pilot OPEN. docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
@@ -78,11 +79,11 @@
     "R071 bounded adapter-presence aggregate locally FROZEN: exact int64/status/snapshot/overflow and legacy preservation; no Analyzer persistence/live governance proof."
   ],
   "x-buildInProgress": {
-    "tranche": "CCMAI-RUNTIME-101",
-    "status": "DISPATCH_READY_NOT_IMPLEMENTED",
-    "providerCalls": 0,
+    "tranche": "CCMAI-RUNTIME-102",
+    "status": "DISPATCH_READY_SOURCE_ONLY",
     "goInvocations": 0,
-    "browser": "NOT_RUN"
+    "providerCalls": 0,
+    "browser": "OUT_OF_SCOPE"
   },
   "knownLimitations": [
     "R100 FROZEN boundedreal syntheticcomplaint proposal atsourcea5eb32d, firstcallVALID/API1of4, faithfulKNOWN360input/261output, Rootreceipt+independentDBreadback andownedcleanup verified; slots2–4unused/no furtherR100call. FullM2/S2/S3, M3humanreview/assignment/outcome, Vietnamesequality/pilot/releaseOPEN. Installedinterventiondisabled; accountsparked; no oldbudgetreset.",
@@ -2016,7 +2017,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-101",
+  "activeTranche": "CCMAI-RUNTIME-102",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
@@ -2033,7 +2034,7 @@
     "freeze": "OPEN"
   },
   "activeWorkOrders": [
-    "docs/work_orders/CCMAI_RUNTIME_101_M3_HUMAN_WORKFLOW.md"
+    "docs/work_orders/CCMAI_RUNTIME_102_WAITDATA_BACKEND.md"
   ],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
@@ -2143,8 +2144,8 @@
   "x-productDeliveryPlanning": {
     "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
     "currentMilestone": "M3",
-    "milestoneStatus": "DISPATCH_READY_NOT_IMPLEMENTED",
-    "nextAction": "CCMAI-RUNTIME-101 M3 repaired source admitted for finite local software verification; Root records formatted hashes/static gates and commits source before worker offline compile, owned fixture/native/UI checks and real browser review. Go0/16 fixture0/2 API0/mock0; R100 slots unavailable. Full M2/M3/WAIT_DATA rerun, M1 business/pilot/release OPEN; accounts parked, no installed activation/push/deploy.",
+    "milestoneStatus": "R102_SOURCE_DISPATCH_READY_R101_REVIEW_OPEN",
+    "nextAction": "CCMAI-RUNTIME-102 source-only dispatch under seedc199f13: /root/r102_worker implements accepted W01..08 SPEC within exact paths, acknowledges handoff before BUILD; Root independently reviews before Go/DB/Docker runtime. No provider/mock/UI/RunManual/ownership bypass. NewR102 counters0of8Go/0of1fixture. R101 REVIEW/FREEZE/UIB01-B10/Dashboard3failures and actualAIrerun/fullM2/M3/M1business/pilot/release remain OPEN; oldR101Go3/16 fixture2/2 preserved, Facebook/ZaloOA parked. No download/server/push/deploy.",
     "providerBudget": "R101 zero; R100 stopped/no further effects",
     "m1BusinessPilotAcceptance": "OPEN",
     "publication": "LOCAL_ONLY_NOT_PUSHED"
@@ -2562,11 +2563,41 @@
     }
   },
   "x-r101M3": {
-    "status": "ACCEPTED_INTENDED_SPEC_DISPATCH_READY",
+    "status": "REVIEW_NATIVE_PASS_BROWSER_POLICY_BLOCKED",
     "spec": "docs/specs/M3_HUMAN_WORKFLOW_R101_SPEC_2026-10-15.md",
-    "source": "NOT_IMPLEMENTED",
-    "native": "NOT_RUN",
-    "browser": "NOT_RUN",
-    "fullM3": "OPEN"
-  }
+    "source": "200df3e",
+    "native": "PASS_6_TOP_4_NESTED_NO_SKIP",
+    "browser": "BLOCKED_RUNTIME_URL_POLICY_WINDOWS_BROWSER",
+    "fullM3": "OPEN",
+    "cleanup": "FINAL_OWNED_FIXTURE_STOPPED_PRESERVED_FOR_SAME_ID_RESUME"
+  },
+  "x-r101ClaudeReturnReview": {
+    "review": "docs/reviews/R101_CLAUDE_RETURN_INDEPENDENT_REVIEW_2026-10-15.md",
+    "disposition": "BLOCKED_RETURN_RECORDED_WITH_QUALIFICATIONS",
+    "browser": "B01-B10_NOT_RUN",
+    "freeze": "OPEN",
+    "driverFetchAttempt": "REPORTED_EXTERNAL_EFFECT_NOT_BLANKET_COMPLIANT",
+    "reviewerGo": 2,
+    "aggregateGo": 3,
+    "fixtures": 2,
+    "vitePerFinalFixtureAllowance": "USED_NO_AUTOMATIC_RELAUNCH"
+  },
+  "x-waitDataBackendPlanning": {
+    "candidateTranche": "CCMAI-RUNTIME-102",
+    "roadmapIds": [
+      "M3-05",
+      "M2-02"
+    ],
+    "planningPhase": "WORK_ORDER",
+    "status": "DISPATCH_READY_SOURCE_ONLY",
+    "spec": "docs/specs/M3_WAITDATA_BACKEND_R102_SPEC_2026-10-15.md",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_102_WAITDATA_BACKEND.md",
+    "implementation": "NOT_STARTED",
+    "runtime": "NOT_RUN",
+    "providerAuthority": "NONE",
+    "sourceBaseline": "200df3e4a7bc2a326425922a5230508a4fd9b0fe",
+    "nextGate": "Committed dispatch, worker acknowledgment and source BUILD; Root source admission before runtime",
+    "actualRerun": "OPEN_EXECUTOR_NOT_INCLUDED"
+  },
+  "x-activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_WAITDATA_BACKEND_R102_2026-10-15.md"
 }

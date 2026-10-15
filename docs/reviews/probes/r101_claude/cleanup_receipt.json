@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-10-15T14:34:10+07:00",
+  "actor": "Claude / Evidence Operator",
+  "disposition": "SAFE_CLEANUP_COMPLETE",
+  "viteDevServer": {
+    "taskId": "task-83",
+    "port": 3011,
+    "status": "STOPPED"
+  },
+  "backendFixture": {
+    "pid": 9536,
+    "port": 52962,
+    "status": "STOPPED"
+  },
+  "fixtureDocker": {
+    "containerId": "e1555e03d69360e1cd7729afd9e52856443f5172d76454653beec981a7d6477a",
+    "name": "ccmai-r101-review-final-20261015",
+    "networkId": "35c3959ac41517050defad05cbad7a08717b24c8879683e25baf3e2702625e98",
+    "volumeName": "ccmai-r101-review-final-20261015",
+    "status": "EXITED_PRESERVED_FOR_ROOT"
+  },
+  "protectedBaseline": {
+    "containers": [
+      "0770fa03aee1c748425e03dcc6a3e3a8413ef2365a6981dc3fc5259e66b2fe3e",
+      "07822f249ff071e4f9f08463da804279a57b151901345b7560047d1b23662027",
+      "ee1fc7f682631ac3c0ca57b80aff7e233ddde405c2618f35ca0aae6e60e23314"
+    ],
+    "status": "UNTOUCHED_RUNNING"
+  }
+}

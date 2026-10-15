@@ -1,0 +1,6 @@
+{
+  "command": "npm --prefix frontend test -- intervention-api.test.ts intervention-ui.test.ts",
+  "cwd": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+  "exit": 0,
+  "output": "\r\n> frontend@0.0.0 test\r\n> vitest run intervention-api.test.ts intervention-ui.test.ts\r\n\r\n\r\n RUN  v4.1.0 D:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/frontend\r\n\r\n\r\n Test Files  2 passed (2)\r\n      Tests  5 passed (5)\r\n   Start at  11:07:05\r\n   Duration  24.51s (transform 11.07s, setup 0ms, import 15.00s, tests 432ms, environment 16.95s)\r\n\r\n"
+}

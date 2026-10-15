@@ -1,0 +1,9 @@
+{
+  "firstFixture": "internal network published port absent; cleaned and budget consumed",
+  "finalFixture": "private exclusive bridge loopback publication verified",
+  "finalSetupProbeFailure": "socket SELECT1 observed temporary init server, schema query then lost socket; corrected to TCP on same owned final container after initialization",
+  "recreationAfterFinalSetupFailure": false,
+  "sourceApplicationEdits": false,
+  "nativeAfterTCPReady": true,
+  "responsible": "Codex /root review infrastructure"
+}

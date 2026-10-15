@@ -1,0 +1,7 @@
+{
+  "exit": 1,
+  "nodeCheckOrdinal": 3,
+  "baselineCommit": "4424e9d22521ded2be1a6fe0463c0ddccf9bc931",
+  "scope": "isolated prior-source frontend, cached modules only",
+  "command": "npm --prefix .cvf/runtime/r101_baseline/frontend test -- dashboard-service-status.spec.ts"
+}

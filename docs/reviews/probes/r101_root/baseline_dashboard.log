@@ -1,0 +1,109 @@
+
+> frontend@0.0.0 test
+> vitest run dashboard-service-status.spec.ts
+
+
+ RUN  v4.1.0 D:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/.cvf/runtime/r101_baseline/frontend
+
+stderr | src/__tests__/dashboard-service-status.spec.ts > Dashboard service status is an explicit unknown (F07) > A: shows the unknown state at first render and while the Dashboard request is pending
+[Vue warn]: [Vuetify UPGRADE] 'dense' is deprecated, use 'density="comfortable"' instead. 
+  at <VRow dense="" class="mb-4 d-md-none" > 
+  at <Dashboard ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+stderr | src/__tests__/dashboard-service-status.spec.ts > Dashboard service status is an explicit unknown (F07) > B: stays unknown for a populated with positive job and channel counts response and still updates the metrics
+[Vue warn]: [Vuetify UPGRADE] 'dense' is deprecated, use 'density="comfortable"' instead. 
+  at <VRow dense="" class="mb-4 d-md-none" > 
+  at <Dashboard ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+stderr | src/__tests__/dashboard-service-status.spec.ts > Dashboard service status is an explicit unknown (F07) > D: ignores incidental health-like payload fields and scheduler metrics, and makes no health call
+[Vue warn]: [Vuetify UPGRADE] 'dense' is deprecated, use 'density="comfortable"' instead. 
+  at <VRow dense="" class="mb-4 d-md-none" > 
+  at <Dashboard ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+stderr | src/__tests__/dashboard-service-status.spec.ts > Dashboard service status is an explicit unknown (F07) > D: ignores incidental health-like payload fields and scheduler metrics, and makes no health call
+[Vue warn]: [Vuetify UPGRADE] 'dense' is deprecated, use 'density="comfortable"' instead. 
+  at <VRow dense="" class="mb-4 d-md-none" > 
+  at <Dashboard ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+stderr | src/__tests__/dashboard-service-status.spec.ts > Dashboard service status is an explicit unknown (F07) > D: ignores incidental health-like payload fields and scheduler metrics, and makes no health call
+[Vue warn]: [Vuetify UPGRADE] 'dense' is deprecated, use 'density="comfortable"' instead. 
+  at <VRow dense="" class="mb-4 d-md-none" > 
+  at <Dashboard ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+stderr | src/__tests__/dashboard-service-status.spec.ts > Dashboard service status is an explicit unknown (F07) > D: ignores incidental health-like payload fields and scheduler metrics, and makes no health call
+[Vue warn]: [Vuetify UPGRADE] 'dense' is deprecated, use 'density="comfortable"' instead. 
+  at <VRow dense="" class="mb-4 d-md-none" > 
+  at <Dashboard ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+stderr | src/__tests__/dashboard-service-status.spec.ts > Dashboard service status is an explicit unknown (F07) > D: ignores incidental health-like payload fields and scheduler metrics, and makes no health call
+[Vue warn]: [Vuetify UPGRADE] 'dense' is deprecated, use 'density="comfortable"' instead. 
+  at <VRow dense="" class="mb-4 d-md-none" > 
+  at <Dashboard ref="VTU_COMPONENT" > 
+  at <VTUROOT>
+
+ ❯ src/__tests__/dashboard-service-status.spec.ts (13 tests | 3 failed) 708ms
+     × A: shows the unknown state at first render and while the Dashboard request is pending 109ms
+     × B: stays unknown for a populated with positive job and channel counts response and still updates the metrics 42ms
+     × D: ignores incidental health-like payload fields and scheduler metrics, and makes no health call 168ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/__tests__/dashboard-service-status.spec.ts > Dashboard service status is an explicit unknown (F07) > A: shows the unknown state at first render and while the Dashboard request is pending
+TypeError: resolve is not a function
+ ❯ src/__tests__/dashboard-service-status.spec.ts:114:5
+    112|     await flushPromises()
+    113|     expectUnknownAndNeutral(w) // still pending
+    114|     resolve(payload())
+       |     ^
+    115|     await flushPromises()
+    116|     expectUnknownAndNeutral(w)
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+ FAIL  src/__tests__/dashboard-service-status.spec.ts > Dashboard service status is an explicit unknown (F07) > B: stays unknown for a populated with positive job and channel counts response and still updates the metrics
+AssertionError: expected 'Trang chủHôm nay7 ngày28 ngàyTháng nà…' to contain '4242'
+
+Expected: "4242"
+Received: "Trang chủHôm nay7 ngày28 ngàyTháng nàyQuý nàyNăm nàyNgày theo giờ Việt Nam (UTC+7) Trạng thái dịch vụChưa có phép kiểm tra sức khỏe cho các dịch vụ này.API ServerChưa có dữ liệu kiểm traDatabaseChưa có dữ liệu kiểm traSchedulerChưa có dữ liệu kiểm tra"
+
+ ❯ src/__tests__/dashboard-service-status.spec.ts:129:72
+    127|       const w = await mountDashboard()
+    128|       expectUnknownAndNeutral(w)
+    129|       if (name.startsWith('populated with positive')) expect(w.text())…
+       |                                                                        ^
+    130|     })
+    131|   }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/3]⎯
+
+ FAIL  src/__tests__/dashboard-service-status.spec.ts > Dashboard service status is an explicit unknown (F07) > D: ignores incidental health-like payload fields and scheduler metrics, and makes no health call
+AssertionError: unexpected request /tenants/t1/me: expected '/tenants/t1/me' to match /\/tenants\/t1\/(dashboard|dem…/tenants\
+
+- Expected:
+/\/tenants\/t1\/(dashboard|demo\/status)$/
+
++ Received:
+"/tenants/t1/me"
+
+ ❯ src/__tests__/dashboard-service-status.spec.ts:189:64
+    187|     const urls = apiGet.mock.calls.map((c) => String(c[0]))
+    188|     expect(urls.length).toBeGreaterThan(0)
+    189|     for (const u of urls) expect(u, `unexpected request ${u}`).toMatch…
+       |                                                                ^
+    190|     expect(urls.some((u) => /health/i.test(u))).toBe(false)
+    191|     expect(apiPost.mock.calls.length).toBe(0)
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/3]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  3 failed | 10 passed (13)
+   Start at  11:09:39
+   Duration  5.34s (transform 3.09s, setup 0ms, import 4.23s, tests 708ms, environment 278ms)
+

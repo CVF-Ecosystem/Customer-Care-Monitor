@@ -1,0 +1,249 @@
+{
+  "observedAtUtc": "2026-10-15T07:37:23.954893+00:00",
+  "reviewer": "Codex /root",
+  "scope": "Read-only current-state verification; no browser action or provider call",
+  "head": "200df3e4a7bc2a326425922a5230508a4fd9b0fe",
+  "claudeManifest": [
+    {
+      "path": "docs/reviews/probes/r101_claude/browser_tool_failure.json",
+      "hashMatches": true,
+      "sizeMatches": true
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude/cleanup_receipt.json",
+      "hashMatches": true,
+      "sizeMatches": true
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude/fixture_port_reconciliation.json",
+      "hashMatches": true,
+      "sizeMatches": true
+    }
+  ],
+  "sourceManifest": [
+    {
+      "path": "backend/api/handlers/intervention.go",
+      "matches": true
+    },
+    {
+      "path": "backend/api/handlers/intervention_m3.go",
+      "matches": true
+    },
+    {
+      "path": "backend/api/handlers/intervention_m3_test.go",
+      "matches": true
+    },
+    {
+      "path": "backend/api/router.go",
+      "matches": true
+    },
+    {
+      "path": "backend/db/models/intervention.go",
+      "matches": true
+    },
+    {
+      "path": "backend/db/mysql.go",
+      "matches": true
+    },
+    {
+      "path": "backend/engine/intervention.go",
+      "matches": true
+    },
+    {
+      "path": "backend/engine/intervention_m3.go",
+      "matches": true
+    },
+    {
+      "path": "frontend/src/__tests__/intervention-api.test.ts",
+      "matches": true
+    },
+    {
+      "path": "frontend/src/__tests__/intervention-ui.test.ts",
+      "matches": true
+    },
+    {
+      "path": "frontend/src/api/intervention.ts",
+      "matches": true
+    },
+    {
+      "path": "frontend/src/i18n/en.ts",
+      "matches": true
+    },
+    {
+      "path": "frontend/src/i18n/vi.ts",
+      "matches": true
+    },
+    {
+      "path": "frontend/src/layouts/DefaultLayout.vue",
+      "matches": true
+    },
+    {
+      "path": "frontend/src/router/index.ts",
+      "matches": true
+    },
+    {
+      "path": "frontend/src/views/InterventionCases.vue",
+      "matches": true
+    },
+    {
+      "path": "frontend/src/views/Users.vue",
+      "matches": true
+    }
+  ],
+  "binarySha256": "4c7575e180dd198d995bfe09bdc45061740a987be8ec0765f02b203e1c251f31",
+  "trackedBackendFrontendChanges": [],
+  "untrackedBackendFrontendFiles": [],
+  "reportSha256": "3cfc1c054bd73a68d09cf87ddfb7b7c9682ddffc7ebda7a45ff1b23631646615",
+  "manifestSha256": "d41a27de6c4374c6a80cbf2d74e3665bc0e1d47325b59b19a821b97e8c94a5bf",
+  "fixture": {
+    "id": "e1555e03d69360e1cd7729afd9e52856443f5172d76454653beec981a7d6477a",
+    "image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "status": "exited",
+    "labels": {
+      "ccmai.tranche": "CCMAI-RUNTIME-101"
+    },
+    "mounts": [
+      {
+        "Destination": "/var/lib/mysql",
+        "Driver": "local",
+        "Mode": "z",
+        "Name": "ccmai-r101-review-final-20261015",
+        "Propagation": "",
+        "RW": true,
+        "Source": "/var/lib/docker/volumes/ccmai-r101-review-final-20261015/_data",
+        "Type": "volume"
+      }
+    ],
+    "networks": {
+      "ccmai-r101-review-final-20261015": {
+        "Aliases": null,
+        "DNSNames": [
+          "ccmai-r101-review-final-20261015",
+          "e1555e03d693"
+        ],
+        "DriverOpts": null,
+        "EndpointID": "",
+        "Gateway": "",
+        "GlobalIPv6Address": "",
+        "GlobalIPv6PrefixLen": 0,
+        "GwPriority": 0,
+        "IPAMConfig": null,
+        "IPAddress": "",
+        "IPPrefixLen": 0,
+        "IPv6Gateway": "",
+        "Links": null,
+        "MacAddress": "",
+        "NetworkID": "35c3959ac41517050defad05cbad7a08717b24c8879683e25baf3e2702625e98"
+      }
+    }
+  },
+  "network": {
+    "id": "35c3959ac41517050defad05cbad7a08717b24c8879683e25baf3e2702625e98",
+    "labels": {
+      "ccmai.tranche": "CCMAI-RUNTIME-101"
+    },
+    "containers": {}
+  },
+  "volume": {
+    "name": "ccmai-r101-review-final-20261015",
+    "labels": {
+      "ccmai.tranche": "CCMAI-RUNTIME-101"
+    }
+  },
+  "protectedCurrent": [
+    {
+      "current": {
+        "id": "0770fa03aee1c748425e03dcc6a3e3a8413ef2365a6981dc3fc5259e66b2fe3e",
+        "name": "/ccma-nginx-1",
+        "image": "sha256:ea146e630ecce789e6ebd966d9fd82f89a678db76aab768724e784cd91e092d8",
+        "status": "running",
+        "mounts": [
+          {
+            "Destination": "/etc/lego",
+            "Driver": "local",
+            "Mode": "rw",
+            "Name": "ccma_lego_certs",
+            "Propagation": "",
+            "RW": true,
+            "Source": "/var/lib/docker/volumes/ccma_lego_certs/_data",
+            "Type": "volume"
+          },
+          {
+            "Destination": "/var/www/acme",
+            "Driver": "local",
+            "Mode": "rw",
+            "Name": "ccma_lego_webroot",
+            "Propagation": "",
+            "RW": true,
+            "Source": "/var/lib/docker/volumes/ccma_lego_webroot/_data",
+            "Type": "volume"
+          }
+        ]
+      },
+      "equalsRecordedBaseline": true
+    },
+    {
+      "current": {
+        "id": "07822f249ff071e4f9f08463da804279a57b151901345b7560047d1b23662027",
+        "name": "/ccma-app-1",
+        "image": "sha256:4de9a938fb4d1bef55c4f3beb777e95c3333c644b80e8cd1798f804835e444a4",
+        "status": "running",
+        "mounts": [
+          {
+            "Destination": "/var/lib/cqa/files",
+            "Driver": "local",
+            "Mode": "rw",
+            "Name": "ccma_file_storage",
+            "Propagation": "",
+            "RW": true,
+            "Source": "/var/lib/docker/volumes/ccma_file_storage/_data",
+            "Type": "volume"
+          }
+        ]
+      },
+      "equalsRecordedBaseline": true
+    },
+    {
+      "current": {
+        "id": "ee1fc7f682631ac3c0ca57b80aff7e233ddde405c2618f35ca0aae6e60e23314",
+        "name": "/ccma-db-1",
+        "image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+        "status": "running",
+        "mounts": [
+          {
+            "Destination": "/var/lib/mysql",
+            "Driver": "local",
+            "Mode": "rw",
+            "Name": "ccma_mysql_data",
+            "Propagation": "",
+            "RW": true,
+            "Source": "/var/lib/docker/volumes/ccma_mysql_data/_data",
+            "Type": "volume"
+          }
+        ]
+      },
+      "equalsRecordedBaseline": true
+    }
+  ],
+  "hostCleanup": {
+    "processes": [],
+    "listeners": []
+  },
+  "counters": {
+    "workerGo": 1,
+    "reviewerGo": 2,
+    "aggregateGo": 3,
+    "fixtureReservations": 2,
+    "nodeChecks": 3,
+    "frontendBuilds": 1,
+    "providerCalls": 0,
+    "mockProviderCalls": 0,
+    "launches": [
+      "six_native_human_tests",
+      "real_router_browser_fixture"
+    ]
+  },
+  "browserEvidence": "B01-B10 NOT_RUN; error/cleanup receipts are operator-authored, not independent tool transcript",
+  "externalDownloadAttempt": "Reported browser manager attempted driver fetch; HTTP404 not independently replayed; strict no-download compliance not established",
+  "disposition": "BLOCKED_RETURN_RECORDED_WITH_QUALIFICATIONS; NOT_BROWSER_ACCEPTANCE"
+}

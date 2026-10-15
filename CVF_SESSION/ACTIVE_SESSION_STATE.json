@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,11 +12,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-101",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M3_HUMAN_WORKFLOW_R101_2026-10-15.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-101 M3 repaired source admitted for finite local software verification; Root records formatted hashes/static gates and commits source before worker offline compile, owned fixture/native/UI checks and real browser review. Go0/16 fixture0/2 API0/mock0; R100 slots unavailable. Full M2/M3/WAIT_DATA rerun, M1 business/pilot/release OPEN; accounts parked, no installed activation/push/deploy.",
+  "activeTranche": "CCMAI-RUNTIME-102",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_WAITDATA_BACKEND_R102_2026-10-15.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-102 source-only dispatch under seedc199f13: /root/r102_worker implements accepted W01..08 SPEC within exact paths, acknowledges handoff before BUILD; Root independently reviews before Go/DB/Docker runtime. No provider/mock/UI/RunManual/ownership bypass. NewR102 counters0of8Go/0of1fixture. R101 REVIEW/FREEZE/UIB01-B10/Dashboard3failures and actualAIrerun/fullM2/M3/M1business/pilot/release remain OPEN; oldR101Go3/16 fixture2/2 preserved, Facebook/ZaloOA parked. No download/server/push/deploy.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER, ORCHESTRATOR and COMMIT_STEWARD; Sol Medium /root/m3_design REPAIR_WORKER formatted source returned, no runtime yet.",
+  "activeRole": "Codex /root ORCHESTRATOR, WORK_ORDER_AUTHOR, COMMIT_STEWARD and SESSION_SYNC_STEWARD; /root/r102_worker Sol Medium source worker after committed dispatch; Root independent REVIEWER.",
   "updatedAt": "2026-10-15",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {
@@ -1797,39 +1797,37 @@
     "x-r100SourceAdmission": "docs/reviews/R100_PRECOMPILE_INDEPENDENT_SOURCE_ADMISSION_2026-10-15.md"
   },
   "x-currentExecutionBudget": {
+    "goInvocationsTotal": 8,
+    "workerGoInvocations": 4,
+    "reviewerGoInvocations": 3,
+    "dispatcherReserveGoInvocations": 1,
+    "includesBuildsAndCompiledBinaryLaunches": true,
     "physicalProviderRequestsTotal": 0,
     "mockProviderRequestsTotal": 0,
-    "goInvocationsTotal": 16,
-    "workerGoInvocations": 8,
-    "reviewerGoInvocations": 6,
-    "rootUnspentReserveGoInvocations": 2,
-    "includesBuildsAndCompiledBinaryLaunches": true,
-    "ownedDisposableMySQLFixturesTotal": 2,
-    "fixtureImage": "cached mysql:8.0 --pull never",
-    "loopbackOnly": true,
-    "fixtureScope": "New r101-labelled isolated containers/networks/volumes and new database only; verify ownership before cleanup. Original app/database read-only protected inventory.",
-    "sourceFirst": "Worker source/tooling/test authoring only until Root consolidated audit admits finite runtime campaign. No provider construction, synthetic proposals directly seeded and labelled human-software fixtures.",
-    "sameScopeRepairs": "At most two consolidated repair rounds within existing authority and counters; third without independent new root cause stops for REVIEW_COST_ESCALATION_REQUIRED. No automatic successor.",
-    "nodeCommands": "Cached dependencies only; at most 6 focused/full frontend verification invocations plus one typecheck/build and one loopback development server per fixture. Root may inspect through actual browser without API interception.",
-    "campaignStop": "Stop on protected-state/secret/network/ownership anomaly, exhausted budget, or contract failure requiring scope expansion. Preserve failed receipts and clean only owned resources.",
+    "nodeCommands": 0,
+    "browserOrDevServerLaunches": 0,
+    "ownedDisposableMySQLFixturesTotal": 1,
+    "fixtureImageId": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "fixtureRoute": "One new exclusively labelled R102 cached-image --pull never MySQL container, network and volume with 127.0.0.1 publication and synthetic DB only; do not reuse or change R101 resources. Safe ownership/protected baseline before effects, finite TCP readiness, preserve failures, no recreation. Root owns infrastructure and cleanup; worker source first.",
+    "sourceFirst": "Source and tests only until Root independent consolidated review admits bounded offline compile/local synthetic MySQL software checks. Standalone gofmt on authorized changed files permitted, not a build launch.",
+    "repairRounds": "At most two consolidated same-scope repairs; third without independent new root cause stops with REVIEW_COST_ESCALATION_REQUIRED. No automatic budget or scope widening.",
     "actualUsed": {
       "goInvocations": 0,
+      "workerGo": 0,
+      "reviewerGo": 0,
+      "fixtures": 0,
       "providerCalls": 0,
-      "fixtures": 0
+      "mockProviderCalls": 0
     }
   },
   "x-currentWorkerDispatch": {
-    "worker": "/root/m3_design",
+    "worker": "/root/r102_worker",
     "model": "gpt-6-sol",
     "effort": "medium",
     "status": "DISPATCH_READY_SOURCE_ONLY",
-    "seedCommit": "43c65adc188db4e8b5321a39641edfcab4088e8d"
+    "seedCommit": "c199f13d01bdae7c4ad2b12e8528e0f4bce412e3"
   },
-  "x-actualWorkerModel": {
-    "model": "gpt-6-sol",
-    "effort": "medium",
-    "reason": "Owner-authorized difficult transactional source/currentness/permission/UI-lifetime M3 after Luna Max source intake"
-  },
+  "x-actualWorkerModel": "/root/r102_worker gpt-6-sol medium; transactional complexity",
   "x-ownerSubagentPreference": {
     "date": "2026-10-15",
     "primary": "gpt-6-luna/max",
@@ -1837,26 +1835,110 @@
     "root": "orchestrator/reviewer",
     "actualSelection": "Sol Medium for M3 transactional difficulty; Luna Max read-only inventory"
   },
-  "x-currentPermittedGoInvocations": 0,
-  "x-preEffectApproval": "NOT_GRANTED_SOURCE_AUDIT_FIRST",
+  "x-currentPermittedGoInvocations": "R1020 before independent source admission; seed cap8 only after admission",
+  "x-preEffectApproval": "SOURCE_ONLY; Root independent consolidated admission required before any runtime",
   "x-currentReview": {
     "result": "NOT_RUN",
-    "scope": "R101_LOCAL_SYNTHETIC_HUMAN_WORKFLOW"
+    "scope": "R102_LOCAL_SOURCE_REVISION_NONEXECUTING_INTENT"
   },
   "x-currentClosure": {
     "status": "OPEN",
-    "fullM2": "OPEN",
+    "actualRerun": "OPEN",
+    "R101": "REVIEW_OPEN",
     "M3": "OPEN",
     "pilot": "OPEN"
   },
   "x-productDeliveryPlanning": {
     "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
     "currentMilestone": "M3",
-    "milestoneStatus": "DISPATCH_READY_NOT_IMPLEMENTED",
-    "nextAction": "CCMAI-RUNTIME-101 M3 repaired source admitted for finite local software verification; Root records formatted hashes/static gates and commits source before worker offline compile, owned fixture/native/UI checks and real browser review. Go0/16 fixture0/2 API0/mock0; R100 slots unavailable. Full M2/M3/WAIT_DATA rerun, M1 business/pilot/release OPEN; accounts parked, no installed activation/push/deploy.",
+    "milestoneStatus": "R102_SOURCE_DISPATCH_READY_R101_REVIEW_OPEN",
+    "nextAction": "CCMAI-RUNTIME-102 source-only dispatch under seedc199f13: /root/r102_worker implements accepted W01..08 SPEC within exact paths, acknowledges handoff before BUILD; Root independently reviews before Go/DB/Docker runtime. No provider/mock/UI/RunManual/ownership bypass. NewR102 counters0of8Go/0of1fixture. R101 REVIEW/FREEZE/UIB01-B10/Dashboard3failures and actualAIrerun/fullM2/M3/M1business/pilot/release remain OPEN; oldR101Go3/16 fixture2/2 preserved, Facebook/ZaloOA parked. No download/server/push/deploy.",
     "providerBudget": "R101 zero; R100 stopped/no further effects",
     "m1BusinessPilotAcceptance": "OPEN",
     "publication": "LOCAL_ONLY_NOT_PUSHED"
   },
-  "roleRoute": "ROOT_ORCHESTRATOR_TO_SOL_MEDIUM_WORKER_TO_INDEPENDENT_ROOT_REVIEW"
+  "roleRoute": "ROOT_ORCHESTRATOR_TO_SOL_MEDIUM_WORKER_TO_INDEPENDENT_ROOT_REVIEW",
+  "x-waitDataBackendPlanning": {
+    "candidateTranche": "CCMAI-RUNTIME-102",
+    "roadmapIds": [
+      "M3-05",
+      "M2-02"
+    ],
+    "planningPhase": "WORK_ORDER",
+    "status": "DISPATCH_READY_SOURCE_ONLY",
+    "spec": "docs/specs/M3_WAITDATA_BACKEND_R102_SPEC_2026-10-15.md",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_102_WAITDATA_BACKEND.md",
+    "implementation": "NOT_STARTED",
+    "runtime": "NOT_RUN",
+    "providerAuthority": "NONE",
+    "sourceBaseline": "200df3e4a7bc2a326425922a5230508a4fd9b0fe",
+    "nextGate": "Committed dispatch, worker acknowledgment and source BUILD; Root source admission before runtime",
+    "actualRerun": "OPEN_EXECUTOR_NOT_INCLUDED"
+  },
+  "x-historicalR101BeforeR102": {
+    "activeTranche": "CCMAI-RUNTIME-101",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M3_HUMAN_WORKFLOW_R101_2026-10-15.md",
+    "nextAllowedMove": "CCMAI-RUNTIME-101 remains REVIEW/FREEZE OPEN; owner selected backend-first M3-05 while UI blocked. R102 candidate SPEC and DRAFT work order prepared under docs/reviews/planning/R102_WAITDATA_BACKEND_*_2026-10-15.md: append-only source observation plus durable AWAITING_EXECUTION_AUTHORITY intent, no AI execution. Root next finalizes and commits new immutable dispatch authority before any R102 BUILD; no R101 seed/budget reuse. R101 browserB01-B10 NOT_RUN, Dashboard3 baseline failures OPEN, source200df3e/native inherited unchanged. Existing fixture2/2 stopped/preserved, workerGo1 reviewerGo2 aggregate3/16 Node3/build1/provider0/mock0 unchanged; no runtime/download/server effects this planning turn. FullM2/M3/actualWAIT_DATA rerun/M1business/pilot/release OPEN; Facebook/ZaloOA parked.",
+    "activeRole": "Codex /root ORCHESTRATOR, SPEC_AUTHOR, WORK_ORDER_AUTHOR and SESSION_SYNC_STEWARD for WAIT_DATA candidate; independent R101 REVIEWER retained; Sol Medium read-only design adviser returned.",
+    "x-currentExecutionBudget": {
+      "physicalProviderRequestsTotal": 0,
+      "mockProviderRequestsTotal": 0,
+      "goInvocationsTotal": 16,
+      "workerGoInvocations": 8,
+      "reviewerGoInvocations": 6,
+      "rootUnspentReserveGoInvocations": 2,
+      "includesBuildsAndCompiledBinaryLaunches": true,
+      "ownedDisposableMySQLFixturesTotal": 2,
+      "fixtureImage": "cached mysql:8.0 --pull never",
+      "loopbackOnly": true,
+      "fixtureScope": "New r101-labelled isolated containers/networks/volumes and new database only; verify ownership before cleanup. Original app/database read-only protected inventory.",
+      "sourceFirst": "Worker source/tooling/test authoring only until Root consolidated audit admits finite runtime campaign. No provider construction, synthetic proposals directly seeded and labelled human-software fixtures.",
+      "sameScopeRepairs": "At most two consolidated repair rounds within existing authority and counters; third without independent new root cause stops for REVIEW_COST_ESCALATION_REQUIRED. No automatic successor.",
+      "nodeCommands": "Cached dependencies only; at most 6 focused/full frontend verification invocations plus one typecheck/build and one loopback development server per fixture. Root may inspect through actual browser without API interception.",
+      "campaignStop": "Stop on protected-state/secret/network/ownership anomaly, exhausted budget, or contract failure requiring scope expansion. Preserve failed receipts and clean only owned resources.",
+      "actualUsed": {
+        "goInvocations": 2,
+        "workerGo": 1,
+        "reviewerGo": 1,
+        "fixtures": 2,
+        "providerCalls": 0,
+        "mockProviderCalls": 0,
+        "nodeChecks": 3,
+        "frontendBuilds": 1
+      }
+    },
+    "x-currentWorkerDispatch": {
+      "worker": "/root/m3_design",
+      "model": "gpt-6-sol",
+      "effort": "medium",
+      "status": "RETURNED_USAGE_LIMIT_FROZEN_SOURCE",
+      "seedCommit": "43c65adc188db4e8b5321a39641edfcab4088e8d",
+      "sourceCommit": "200df3e"
+    },
+    "x-currentReview": {
+      "result": "NATIVE_PASS_BROWSER_RUNTIME_POLICY_BLOCKED",
+      "scope": "R101_LOCAL_SYNTHETIC_HUMAN_WORKFLOW",
+      "sourceCommit": "200df3e4a7bc2a326425922a5230508a4fd9b0fe"
+    },
+    "x-currentClosure": {
+      "status": "OPEN",
+      "fullM2": "OPEN",
+      "M3": "OPEN",
+      "pilot": "OPEN"
+    },
+    "actualCounters": {
+      "workerGo": 1,
+      "reviewerGo": 2,
+      "aggregateGo": 3,
+      "fixtureReservations": 2,
+      "nodeChecks": 3,
+      "frontendBuilds": 1,
+      "providerCalls": 0,
+      "mockProviderCalls": 0,
+      "launches": [
+        "six_native_human_tests",
+        "real_router_browser_fixture"
+      ]
+    }
+  }
 }

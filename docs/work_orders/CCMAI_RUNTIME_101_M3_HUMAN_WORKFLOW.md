@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-101 — M3 human review through outcome
 
-Status: ACTIVE
+Status: COMPLETE_PENDING_REVIEW
 Risk: R2
 Worker: /root/m3_design (Sol Medium)
 Reviewer: Codex /root
@@ -47,3 +47,7 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 | terminal_completion_review | POST_MATERIAL | reviewer | POST_MATERIAL | exact committed material and bounded disposition | EXACT_PATHS | commit-steward | CONTINUITY_COMMIT | pre_commit |
 | continuity | CONTINUITY_COMMIT | session-sync-steward | CONTINUITY_COMMIT | memory state handoff implementation roadmap catalog | BOUNDED_PATH_FAMILIES | session-sync-steward | CONTINUITY_COMMIT | terminal_completion_review |
 | committed_range_closure | POST_MATERIAL_CLOSURE | reviewer | POST_MATERIAL_CLOSURE | exact local committed range with profile pins | EXACT_PATHS | session-sync-steward | CONTINUITY_COMMIT | continuity |
+
+## Owner-requested Claude browser evidence assignment — 2026-10-15
+
+Execution checklist and required report: docs/reviews/planning/R101_CLAUDE_BROWSER_EVIDENCE_HANDOFF_2026-10-15.md. Owner will assign Claude as REVIEW evidence operator only; implementationWorker and independent reviewer remain as recorded in the immutable seed. This supplemental task authorizes no code repair, new fixture, provider, commit or closure. Source200df3e and all counters remain unchanged until actual execution. Root judges the external return independently.

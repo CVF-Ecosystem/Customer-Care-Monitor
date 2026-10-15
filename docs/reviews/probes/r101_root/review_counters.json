@@ -1,0 +1,14 @@
+{
+  "workerGo": 1,
+  "reviewerGo": 2,
+  "aggregateGo": 3,
+  "fixtureReservations": 2,
+  "nodeChecks": 3,
+  "frontendBuilds": 1,
+  "providerCalls": 0,
+  "mockProviderCalls": 0,
+  "launches": [
+    "six_native_human_tests",
+    "real_router_browser_fixture"
+  ]
+}

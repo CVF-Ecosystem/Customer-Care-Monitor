@@ -5,6 +5,104 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r102-dispatch-4",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-102.json",
+      "status": "ACTIVE",
+      "description": "R102 exact-path source-first dispatch for local WAIT_DATA revision/nonexecuting intent; runtime and actualAI/browser/fullM3 acceptance OPEN."
+    },
+    {
+      "id": "r102-dispatch-3",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-102.json",
+      "status": "ACTIVE",
+      "description": "R102 exact-path source-first dispatch for local WAIT_DATA revision/nonexecuting intent; runtime and actualAI/browser/fullM3 acceptance OPEN."
+    },
+    {
+      "id": "r102-dispatch-1",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_102_WAITDATA_BACKEND.md",
+      "status": "ACTIVE",
+      "description": "R102 exact-path source-first dispatch for local WAIT_DATA revision/nonexecuting intent; runtime and actualAI/browser/fullM3 acceptance OPEN."
+    },
+    {
+      "id": "r102-dispatch-0",
+      "family": "continuity",
+      "path": "docs/specs/M3_WAITDATA_BACKEND_R102_SPEC_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "R102 exact-path source-first dispatch for local WAIT_DATA revision/nonexecuting intent; runtime and actualAI/browser/fullM3 acceptance OPEN."
+    },
+    {
+      "id": "r102-waitdata-candidate-work-order",
+      "family": "continuity",
+      "path": "docs/reviews/planning/R102_WAITDATA_BACKEND_WORK_ORDER_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "Owner-selected M3-05 backend-first intended source-revision/rerun-intent packet; candidate only, no dispatch/BUILD/runtime/provider or actual AI rerun acceptance."
+    },
+    {
+      "id": "r102-waitdata-candidate-spec",
+      "family": "continuity",
+      "path": "docs/reviews/planning/R102_WAITDATA_BACKEND_SPEC_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "Owner-selected M3-05 backend-first intended source-revision/rerun-intent packet; candidate only, no dispatch/BUILD/runtime/provider or actual AI rerun acceptance."
+    },
+    {
+      "id": "r101-claude-return-review-6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r101_root/claude_return_independent_verification.json",
+      "status": "ACTIVE",
+      "description": "R101 blocked Claude browser return and qualified independent review; source/current cleanup verified, B01-B10 NOT_RUN and FREEZE OPEN; no runtime AI governance proof."
+    },
+    {
+      "id": "r101-claude-return-review-5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r101_claude/fixture_port_reconciliation.json",
+      "status": "ACTIVE",
+      "description": "R101 blocked Claude browser return and qualified independent review; source/current cleanup verified, B01-B10 NOT_RUN and FREEZE OPEN; no runtime AI governance proof."
+    },
+    {
+      "id": "r101-claude-return-review-4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r101_claude/cleanup_receipt.json",
+      "status": "ACTIVE",
+      "description": "R101 blocked Claude browser return and qualified independent review; source/current cleanup verified, B01-B10 NOT_RUN and FREEZE OPEN; no runtime AI governance proof."
+    },
+    {
+      "id": "r101-claude-return-review-3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r101_claude/browser_tool_failure.json",
+      "status": "ACTIVE",
+      "description": "R101 blocked Claude browser return and qualified independent review; source/current cleanup verified, B01-B10 NOT_RUN and FREEZE OPEN; no runtime AI governance proof."
+    },
+    {
+      "id": "r101-claude-return-review-2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r101_claude/manifest.json",
+      "status": "ACTIVE",
+      "description": "R101 blocked Claude browser return and qualified independent review; source/current cleanup verified, B01-B10 NOT_RUN and FREEZE OPEN; no runtime AI governance proof."
+    },
+    {
+      "id": "r101-claude-return-review-1",
+      "family": "continuity",
+      "path": "docs/reviews/R101_CLAUDE_BROWSER_RETURN_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "R101 blocked Claude browser return and qualified independent review; source/current cleanup verified, B01-B10 NOT_RUN and FREEZE OPEN; no runtime AI governance proof."
+    },
+    {
+      "id": "r101-claude-return-review-0",
+      "family": "continuity",
+      "path": "docs/reviews/R101_CLAUDE_RETURN_INDEPENDENT_REVIEW_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "R101 blocked Claude browser return and qualified independent review; source/current cleanup verified, B01-B10 NOT_RUN and FREEZE OPEN; no runtime AI governance proof."
+    },
+    {
+      "id": "r101-claude-browser-handoff",
+      "family": "continuity",
+      "path": "docs/reviews/planning/R101_CLAUDE_BROWSER_EVIDENCE_HANDOFF_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "Owner-requested prepared external Claude UI evidence packet for R101 REVIEW; no source repair, seed role change, runtime execution or closure claimed."
+    },
+    {
       "id": "r101-formatted-source-manifest",
       "family": "continuity",
       "path": "docs/reviews/probes/r101_root/formatted_source_manifest.json",
@@ -1192,7 +1290,7 @@
       "family": "continuity",
       "path": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
       "status": "ACTIVE",
-      "description": "CurrentM2boundedrealproposal+KNOWN360/261usage acceptedR100/API1of4/cleanupverified; fullM2OPEN, M3humanworkflow planningnext."
+      "description": "Current backend-first WAIT_DATA candidate SPEC/order; R101 native inherited and browser/full-suite/FREEZE OPEN; full milestones not accepted."
     },
     {
       "id": "ccma-product-delivery-publication-20261013",
@@ -3584,9 +3682,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_M3_HUMAN_WORKFLOW_R101_2026-10-15.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_WAITDATA_BACKEND_R102_2026-10-15.md",
       "status": "ACTIVE",
-      "description": "Current R100 ownerfreshmax4 bounded M2 live handoff; sourcebinaryadmission mandatory beforeeffects."
+      "description": "Active R102 source-first WAIT_DATA backend handoff; R101 browser/review blockers preserved."
     },
     {
       "id": "r060-work-order",
@@ -10958,6 +11056,13 @@
       "path": "docs/reviews/probes/r100_root/worker_setup/stdout.txt",
       "status": "ACTIVE",
       "description": "Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof."
+    },
+    {
+      "id": "r101-handoff-retained-review",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_M3_HUMAN_WORKFLOW_R101_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "Retained R101 REVIEW/FREEZE OPEN checkpoint; session routing superseded by R102 without product closure."
     }
   ]
 }
