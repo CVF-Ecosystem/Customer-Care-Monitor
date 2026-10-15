@@ -15,7 +15,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R102 source-first WAIT_DATA backend handoff; R101 browser/review blockers preserved.: `CVF_SESSION/handoffs/AGENT_HANDOFF_WAITDATA_BACKEND_R102_2026-10-15.md`
+- Active R103 browser tooling recovery handoff; R102 bounded FREEZE and R101 UI blockers preserved.: `CVF_SESSION/handoffs/AGENT_HANDOFF_BROWSER_TOOLING_R103_2026-10-15.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -1079,6 +1079,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent exact source review for stored-JSON fixture repair3; planned compile/native only, not runtime acceptance.: `docs/reviews/R102_REPAIR3_INDEPENDENT_ADMISSION_2026-10-15.md`
 - Owner-selected M3-05 backend-first intended source-revision/rerun-intent packet; candidate only, no dispatch/BUILD/runtime/provider or actual AI rerun acceptance.: `docs/reviews/planning/R102_WAITDATA_BACKEND_SPEC_2026-10-15.md`
 - Owner-selected M3-05 backend-first intended source-revision/rerun-intent packet; candidate only, no dispatch/BUILD/runtime/provider or actual AI rerun acceptance.: `docs/reviews/planning/R102_WAITDATA_BACKEND_WORK_ORDER_2026-10-15.md`
+- R103 source-first official browser tooling recovery dispatch; conditional R101 UI only after supported capability pass.: `docs/work_orders/CCMAI_RUNTIME_103_BROWSER_TOOLING_RECOVERY.md`
+- R103 source-first official browser tooling recovery dispatch; conditional R101 UI only after supported capability pass.: `CVF_SESSION/tranches/CCMAI-RUNTIME-103.json`
+- Historical R102 bounded local FREEZE handoff; session routing superseded by R103, acceptance unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_WAITDATA_BACKEND_R102_2026-10-15.md`
 - Owner-authorized scoped official Playwright1.57 driver/cache tooling recovery; no product acceptance or provider effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-103.json`
 - Owner-authorized scoped official Playwright1.57 driver/cache tooling recovery; no product acceptance or provider effects.: `docs/reviews/R103_BROWSER_TOOLING_SPEC_2026-10-15.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-103",
+  "authorityKind": "DISPATCHER_OWNED_LOCAL_BROWSER_TOOLING_RECOVERY_AND_CONDITIONAL_R101_UI_EVIDENCE",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "/root/r103_tooling_worker",
+    "repairWorker": "/root/r103_tooling_worker",
+    "reviewer": "Codex /root",
+    "commitSteward": "Codex /root",
+    "closer": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_103_BROWSER_TOOLING_RECOVERY.md",
+    "docs/reviews/probes/r103_tooling/**",
+    "docs/reviews/probes/r103_root/**",
+    "docs/reviews/R103_BROWSER_TOOLING_SPEC_2026-10-15.md",
+    "docs/reviews/R103_BROWSER_TOOLING_WORKER_RETURN_2026-10-15.md",
+    "docs/reviews/R103_INDEPENDENT_TOOLING_REVIEW_2026-10-15.md",
+    "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "docs/reviews/probes/r101_root/review_counters.json",
+    "docs/reviews/probes/r101_root/fixture_owner.json"
+  ],
+  "prohibitedEffects": [
+    "application_backend_frontend_source_or_project_dependency_lock_edits",
+    "provider_mock_or_real_secret_customer_channel_message_sync_AI_execution",
+    "Core_governance_gate_workflow_policy_or_existing_seed_edits",
+    "delete_overwrite_existing_cache_contents_or_browser_versions_or_global_node_npm_settings",
+    "kill_restart_user_Antigravity_Codex_browser_or_unowned_processes",
+    "unverified_archive_extraction_or_version_faking_or_TLS_policy_security_bypass",
+    "old_Azure_driver_CDN_retry_or_unofficial_binary_sources",
+    "new_Docker_fixture_or_original_app_DB_R102_resource_mutation",
+    "worker_commit_self_review_push_merge_deploy_release",
+    "claim_tooling_health_equals_R101_UI_or_AI_governance_acceptance"
+  ],
+  "ownerAuthorization": "Owner explicitly says xử lý đi after official-source driver1.57 repair explanation; authorizes necessary official tooling download/cache installation and validation, then UI retry only if valid supported browser capture exists. Separate new authority supersedes R101 no-download restriction ONLY for this scoped tooling task; historical seeds/evidence untouched.",
+  "externalAllowedPaths": [
+    "C:/Users/tiennm/AppData/Local/ms-playwright-go/1.57.0",
+    "C:/Users/tiennm/AppData/Local/ms-playwright"
+  ],
+  "cachePolicy": "Initially driver157 dir empty. Stage official archive under project ignored runtime, verify npm dist.integrity SHA512 and version/paths before extraction, copy existing C:/Program Files/nodejs/node.exe, publish only into verified empty driver157 dir; preserve all preexisting browser directories. Browser installation only required chromium revision with PLAYWRIGHT_SKIP_BROWSER_GC=1; no deletion or global config changes.",
+  "networkAuthority": {
+    "allowed": "HTTPS official registry.npmjs.org playwright-core1.57.0 metadata/tarball; official Playwright Chromium/ffmpeg/winldd hosts as declared by pinned package and redirect receipt; no provider or credentials",
+    "maxDownloadBytes": 800000000,
+    "maxToolingCampaignSeconds": 1800,
+    "perCommandTimeoutSeconds": 300,
+    "automaticRetries": 0,
+    "blindMirrorOrVersionFallback": false
+  },
+  "executionBudget": {
+    "providerCalls": 0,
+    "mockCalls": 0,
+    "goCompiles": 0,
+    "newFixtures": 0,
+    "driverInstallCampaigns": 1,
+    "requiredChromiumInstallCampaigns": 1,
+    "rootLocalCapabilityCampaigns": 1,
+    "conditionalR101BackendLaunches": 1,
+    "conditionalViteLaunches": 1,
+    "repairs": "Consolidate source/script findings; stop after third same-root repair cost escalation unless owner later changes it. Preserve every failure/actual request/process ledger."
+  },
+  "conditionalUiRoute": "Only after independent Root tooling review and supported browser control/capture PASS. R101 pinned binary hash4c7575e180dd198d995bfe09bdc45061740a987be8ec0765f02b203e1c251f31 + exact frontend manifest; existing R101 final container/network/volume only, no recreate; record current backend source drift instead of pretending old17hashes match; Root admits evidence runner/fixture/server before effects, B01-B10 real UI only.",
+  "claimScope": "Tool driver/version/cache/browser blank-page capture health plus separately attributed conditional R101 synthetic human-software UI observations only; all unrun checks stay NOT_RUN.",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "baseCommit": "7ef0593ab757f8a1e75cb0674e70627f9a9fcd7b",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_103_BROWSER_TOOLING_RECOVERY.md",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "PENDING",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "dispatcher": "Codex /root",
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "DISPATCH_READY",
+  "x-actualExecution": {
+    "providerCalls": 0,
+    "mockCalls": 0,
+    "driverInstalls": 0,
+    "browserInstalls": 0,
+    "newFixtures": 0,
+    "backendLaunches": 0,
+    "viteLaunches": 0
+  }
+}

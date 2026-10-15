@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_WAITDATA_BACKEND_R102_2026-10-15.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_BROWSER_TOOLING_R103_2026-10-15.md",
       "status": "ACTIVE",
-      "description": "Active R102 source-first WAIT_DATA backend handoff; R101 browser/review blockers preserved."
+      "description": "Active R103 browser tooling recovery handoff; R102 bounded FREEZE and R101 UI blockers preserved."
     },
     {
       "id": "r060-work-order",
@@ -11511,6 +11511,27 @@
       "path": "docs/reviews/R103_BROWSER_TOOLING_SPEC_2026-10-15.md",
       "status": "ACTIVE",
       "description": "Owner-authorized scoped official Playwright1.57 driver/cache tooling recovery; no product acceptance or provider effects."
+    },
+    {
+      "id": "r103-dispatch-0",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_103_BROWSER_TOOLING_RECOVERY.md",
+      "status": "ACTIVE",
+      "description": "R103 source-first official browser tooling recovery dispatch; conditional R101 UI only after supported capability pass."
+    },
+    {
+      "id": "r103-dispatch-2",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-103.json",
+      "status": "ACTIVE",
+      "description": "R103 source-first official browser tooling recovery dispatch; conditional R101 UI only after supported capability pass."
+    },
+    {
+      "id": "r103-inherited-r102-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_WAITDATA_BACKEND_R102_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "Historical R102 bounded local FREEZE handoff; session routing superseded by R103, acceptance unchanged."
     }
   ]
 }
