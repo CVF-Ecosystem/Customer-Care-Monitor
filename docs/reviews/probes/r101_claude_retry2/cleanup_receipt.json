@@ -1,0 +1,23 @@
+{
+  "status": "NOT_APPLICABLE_NO_INFRASTRUCTURE_LAUNCHED",
+  "recordedAt": "2026-10-15T20:17:38.1978667+07:00",
+  "backendBinaryLaunches": 0,
+  "viteServersLaunched": 0,
+  "dockerInspections": 0,
+  "dockerStarts": 0,
+  "dockerStops": 0,
+  "fixtureOwnerChanges": 0,
+  "newFixtures": 0,
+  "fixtureState": "NOT_REQUERIED_AFTER_BROWSER_CAPABILITY_STOP",
+  "ownedBrowserTabByLuna": "NONE_CREATED",
+  "rootCapabilityTab": {
+    "tabId": "tab1",
+    "createdBy": "Codex /root",
+    "closed": "SUCCEEDED",
+    "scope": "about:blank only"
+  },
+  "containerId": "e1555e03d69360e1cd7729afd9e52856443f5172d76454653beec981a7d6477a",
+  "networkId": "35c3959ac41517050defad05cbad7a08717b24c8879683e25baf3e2702625e98",
+  "volume": "ccmai-r101-review-final-20261015",
+  "protectedInventory": "NOT_CAPTURED_NO_DOCKER_ACTION"
+}

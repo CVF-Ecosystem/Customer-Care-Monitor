@@ -1,0 +1,17 @@
+{
+  "attempt": 1,
+  "capturedAt": "2026-10-15T20:15:07.7814574+07:00",
+  "tool": "mcp__cua_repl.js",
+  "browser": "iab",
+  "action": "createBrowserTab",
+  "targetUrl": "about:blank",
+  "options": {
+    "visible": true
+  },
+  "result": "FAILED_NO_TAB_HANDLE",
+  "rawError": "IAB visibility is not supported in a subagent thread",
+  "screenshotCaptured": false,
+  "fallbackAttempted": false,
+  "infrastructureOpened": false,
+  "next": "Awaiting Root main-thread capability check; no fallback or infrastructure"
+}

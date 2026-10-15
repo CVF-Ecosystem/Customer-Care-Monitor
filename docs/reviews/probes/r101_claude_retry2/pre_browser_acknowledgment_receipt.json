@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-10-15T20:13:48.9440555+07:00",
+  "reportPath": "docs\\reviews\\R101_CLAUDE_BROWSER_RETRY2_RETURN_2026-10-15.md",
+  "reportSha256": "ad724d11a798f3d8597d914e0bf52834410cf679532e2806c7fe3b389aa1a736",
+  "authorizationPath": "docs\\reviews\\probes\\r101_claude_retry2\\owner_supplemental_authorization.txt",
+  "authorizationSha256": "7c5be1b82dd04af3d72015ea2ee991b0c31606a7718b960730756ab319016306",
+  "browserEffectStarted": false,
+  "countersBefore": {
+    "workerGo": 1,
+    "reviewerGo": 2,
+    "aggregateGo": 3,
+    "fixtureReservations": 2,
+    "nodeChecks": 3,
+    "frontendBuilds": 1,
+    "providerCalls": 0,
+    "mockProviderCalls": 0
+  }
+}

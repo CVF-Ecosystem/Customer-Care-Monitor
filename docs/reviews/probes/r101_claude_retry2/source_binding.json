@@ -1,0 +1,22 @@
+{
+  "currentCheckoutHead": "25d0d757346c27a680290385f6ec24d738b817c5",
+  "currentProjectPhase": "FREEZE",
+  "activeTranche": "CCMAI-RUNTIME-102",
+  "r101ExpectedSource": "200df3e4a7bc2a326425922a5230508a4fd9b0fe",
+  "formattedManifestSourceBase": "4424e9d22521ded2be1a6fe0463c0ddccf9bc931",
+  "formattedManifestPath": "docs/reviews/probes/r101_root/formatted_source_manifest.json",
+  "manifestEntryCount": 17,
+  "currentR102KnownMatchCount": "14/17 per Root dispatch note; not rehashed in retry2",
+  "knownR102BackendChanges": [
+    "backend/api/router.go",
+    "backend/db/models/intervention.go",
+    "backend/db/mysql.go"
+  ],
+  "expectedR101BrowserBinary": ".cvf/runtime/r101_worker/r101_handlers.test.exe",
+  "expectedBinarySha256": "4c7575e180dd198d995bfe09bdc45061740a987be8ec0765f02b203e1c251f31",
+  "binaryRehashedThisRetry": false,
+  "frontendManifestEntriesRehashedThisRetry": false,
+  "reasonNotReverified": "Browser screenshot capability prerequisite failed before runtime preparation",
+  "backendBinaryLaunched": false,
+  "sourceClaim": "No 17/17 current-source match or R102 backend runtime claim"
+}

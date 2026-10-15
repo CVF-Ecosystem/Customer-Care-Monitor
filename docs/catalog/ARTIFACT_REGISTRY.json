@@ -11385,6 +11385,118 @@
       "path": "docs/reviews/probes/r102_worker/handlers_r3_compile_stdout.txt",
       "status": "ACTIVE",
       "description": "R102 independent local backend review or exact execution/cleanup evidence:20native+7nestedPASS; actual AI/full milestones remain OPEN."
+    },
+    {
+      "id": "r101-retry2-e9242d74c3460f",
+      "family": "continuity",
+      "path": "docs/reviews/R101_RETRY2_INDEPENDENT_REVIEW_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only."
+    },
+    {
+      "id": "r101-retry2-17e1953958a47b",
+      "family": "continuity",
+      "path": "docs/reviews/R101_CLAUDE_BROWSER_RETRY2_RETURN_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only."
+    },
+    {
+      "id": "r101-retry2-438695ecf32c65",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r101_root/retry2_independent_verification.json",
+      "status": "ACTIVE",
+      "description": "R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only."
+    },
+    {
+      "id": "r101-retry2-5cf5cc9c7a5463",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r101_claude_retry2/browser_capability_main_thread_attempt.json",
+      "status": "ACTIVE",
+      "description": "R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only."
+    },
+    {
+      "id": "r101-retry2-c20485c14731fa",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r101_claude_retry2/browser_capability_main_thread_error.txt",
+      "status": "ACTIVE",
+      "description": "R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only."
+    },
+    {
+      "id": "r101-retry2-f85e1a50c32e7f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r101_claude_retry2/browser_capability_playwright_subagent_attempt.json",
+      "status": "ACTIVE",
+      "description": "R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only."
+    },
+    {
+      "id": "r101-retry2-f14b321a3bba97",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r101_claude_retry2/browser_capability_playwright_subagent_error.txt",
+      "status": "ACTIVE",
+      "description": "R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only."
+    },
+    {
+      "id": "r101-retry2-4c83b28dccc735",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r101_claude_retry2/browser_capability_subagent_attempt.json",
+      "status": "ACTIVE",
+      "description": "R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only."
+    },
+    {
+      "id": "r101-retry2-dcd1de703e7f3c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r101_claude_retry2/browser_capability_subagent_error.txt",
+      "status": "ACTIVE",
+      "description": "R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only."
+    },
+    {
+      "id": "r101-retry2-bef6f08964fa9b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r101_claude_retry2/cleanup_receipt.json",
+      "status": "ACTIVE",
+      "description": "R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only."
+    },
+    {
+      "id": "r101-retry2-bdefc7dbe712f7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r101_claude_retry2/evidence_manifest.json",
+      "status": "ACTIVE",
+      "description": "R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only."
+    },
+    {
+      "id": "r101-retry2-305cb3a1a1b58c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r101_claude_retry2/git_status_after.json",
+      "status": "ACTIVE",
+      "description": "R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only."
+    },
+    {
+      "id": "r101-retry2-a7c129f9a457e0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r101_claude_retry2/owner_supplemental_authorization.txt",
+      "status": "ACTIVE",
+      "description": "R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only."
+    },
+    {
+      "id": "r101-retry2-bd9f8c9e3e4cef",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r101_claude_retry2/pre_browser_acknowledgment_receipt.json",
+      "status": "ACTIVE",
+      "description": "R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only."
+    },
+    {
+      "id": "r101-retry2-06b4734fd98a06",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r101_claude_retry2/retry_counters_after.json",
+      "status": "ACTIVE",
+      "description": "R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only."
+    },
+    {
+      "id": "r101-retry2-c012ef6dd27b42",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r101_claude_retry2/source_binding.json",
+      "status": "ACTIVE",
+      "description": "R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only."
     }
   ]
 }
