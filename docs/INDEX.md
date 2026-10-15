@@ -1079,6 +1079,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent exact source review for stored-JSON fixture repair3; planned compile/native only, not runtime acceptance.: `docs/reviews/R102_REPAIR3_INDEPENDENT_ADMISSION_2026-10-15.md`
 - Owner-selected M3-05 backend-first intended source-revision/rerun-intent packet; candidate only, no dispatch/BUILD/runtime/provider or actual AI rerun acceptance.: `docs/reviews/planning/R102_WAITDATA_BACKEND_SPEC_2026-10-15.md`
 - Owner-selected M3-05 backend-first intended source-revision/rerun-intent packet; candidate only, no dispatch/BUILD/runtime/provider or actual AI rerun acceptance.: `docs/reviews/planning/R102_WAITDATA_BACKEND_WORK_ORDER_2026-10-15.md`
+- Owner-authorized scoped official Playwright1.57 driver/cache tooling recovery; no product acceptance or provider effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-103.json`
+- Owner-authorized scoped official Playwright1.57 driver/cache tooling recovery; no product acceptance or provider effects.: `docs/reviews/R103_BROWSER_TOOLING_SPEC_2026-10-15.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

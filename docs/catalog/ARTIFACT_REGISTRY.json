@@ -11497,6 +11497,20 @@
       "path": "docs/reviews/probes/r101_claude_retry2/source_binding.json",
       "status": "ACTIVE",
       "description": "R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only."
+    },
+    {
+      "id": "r103-recovery-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-103.json",
+      "status": "ACTIVE",
+      "description": "Owner-authorized scoped official Playwright1.57 driver/cache tooling recovery; no product acceptance or provider effects."
+    },
+    {
+      "id": "r103-recovery-spec",
+      "family": "continuity",
+      "path": "docs/reviews/R103_BROWSER_TOOLING_SPEC_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "Owner-authorized scoped official Playwright1.57 driver/cache tooling recovery; no product acceptance or provider effects."
     }
   ]
 }
