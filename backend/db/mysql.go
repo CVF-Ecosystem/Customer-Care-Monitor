@@ -55,6 +55,7 @@ func AutoMigrate() error {
 		&models.InterventionCase{},
 		&models.InterventionProposal{},
 		&models.InterventionReceipt{},
+		&models.InterventionHumanEvent{},
 		&models.AppSetting{},
 		&models.NotificationLog{},
 		&models.NotificationDeliveryManifest{},

@@ -5,6 +5,27 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r101-formatted-source-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r101_root/formatted_source_manifest.json",
+      "status": "ACTIVE",
+      "description": "Exact pre-runtime formatted source hashes; source only, Go0/API0 and native/browser NOT_RUN."
+    },
+    {
+      "id": "r101-source-review-0",
+      "family": "continuity",
+      "path": "docs/reviews/R101_PRE_RUNTIME_CONSOLIDATED_SOURCE_FINDINGS_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "Independent Root source findings/admission; compile/native/browser NOT_RUN, no runtime AI governance claim."
+    },
+    {
+      "id": "r101-source-review-1",
+      "family": "continuity",
+      "path": "docs/reviews/R101_REPAIRED_SOURCE_ADMISSION_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "Independent Root source findings/admission; compile/native/browser NOT_RUN, no runtime AI governance claim."
+    },
+    {
       "id": "r101-m3-spec",
       "family": "continuity",
       "path": "docs/specs/M3_HUMAN_WORKFLOW_R101_SPEC_2026-10-15.md",

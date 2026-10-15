@@ -112,6 +112,18 @@ const router = createRouter({
           meta: { perm: 'jobs' },
         },
         {
+          path: 'intervention-cases',
+          name: 'intervention-cases',
+          component: () => import('../views/InterventionCases.vue'),
+          meta: { perm: 'intervention_cases' },
+        },
+        {
+          path: 'intervention-cases/:caseId',
+          name: 'intervention-case-detail',
+          component: () => import('../views/InterventionCases.vue'),
+          meta: { perm: 'intervention_cases' },
+        },
+        {
           path: 'activity-logs',
           name: 'activity-logs',
           component: () => import('../views/ActivityLogs.vue'),

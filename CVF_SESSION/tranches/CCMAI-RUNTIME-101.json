@@ -64,8 +64,8 @@
     "campaignStop": "Stop on protected-state/secret/network/ownership anomaly, exhausted budget, or contract failure requiring scope expansion. Preserve failed receipts and clean only owned resources."
   },
   "claimScope": "Local synthetic human software workflow: review/correct/assign/deadline/outcome and audit persistence, tenant/permission/version/stale guards with actual MySQL and real browser evidence. This does not prove runtime AI governance, real AI quality, full M2/M3 stage exit, real channels, pilot, hosted CI, installed readiness or deployment.",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "43c65adc188db4e8b5321a39641edfcab4088e8d",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_101_M3_HUMAN_WORKFLOW.md",
   "buildCommit": null,
@@ -74,7 +74,8 @@
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -84,5 +85,5 @@
   ],
   "dispatcher": "Codex /root",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "DISPATCH_READY"
+  "workOrderStatus": "ACTIVE"
 }

@@ -299,6 +299,7 @@ const navItems = computed(() => {
     { icon: 'mdi-forum', label: 'nav_messages', route: `${base}/messages`, exact: false, perm: 'messages' },
     { icon: 'mdi-robot', label: 'nav_jobs', route: `${base}/jobs`, exact: false, perm: 'jobs' },
     { icon: 'mdi-clipboard-list', label: 'nav_results', route: `${base}/results`, exact: false, perm: 'jobs' },
+    { icon: 'mdi-account-check', label: 'iv_title', route: `${base}/intervention-cases`, exact: false, perm: 'intervention_cases' },
     { icon: 'mdi-text-box-search', label: 'activity_logs', route: `${base}/activity-logs`, exact: false, perm: 'settings' },
     { icon: 'mdi-currency-usd', label: 'cost_logs', route: `${base}/cost-logs`, exact: false, perm: 'settings' },
     { icon: 'mdi-bell-ring', label: 'nav_notification_logs', route: `${base}/notifications`, exact: false, perm: 'settings' },

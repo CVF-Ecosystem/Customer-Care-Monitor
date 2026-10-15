@@ -30,29 +30,34 @@ type InterventionAttempt struct {
 }
 
 type InterventionCase struct {
-	ID             string     `gorm:"type:char(36);primaryKey" json:"id"`
-	TenantID       string     `gorm:"type:char(36);not null;index:idx_intervention_queue,priority:1;uniqueIndex:uq_intervention_case,priority:1" json:"tenant_id"`
-	JobID          string     `gorm:"type:char(36);not null;uniqueIndex:uq_intervention_case,priority:2" json:"job_id"`
-	RunID          string     `gorm:"type:char(36);not null" json:"run_id"`
-	ConversationID string     `gorm:"type:char(36);not null;uniqueIndex:uq_intervention_case,priority:3" json:"conversation_id"`
-	UseCase        string     `gorm:"type:varchar(40);not null;uniqueIndex:uq_intervention_case,priority:4" json:"use_case"`
-	Version        int        `gorm:"not null" json:"version"`
-	SnapshotID     *string    `gorm:"type:char(36)" json:"snapshot_id"`
-	SnapshotDigest string     `gorm:"type:char(64)" json:"snapshot_digest"`
-	Eligibility    string     `gorm:"type:varchar(20);not null" json:"eligibility"`
-	Execution      string     `gorm:"type:varchar(24);not null" json:"execution"`
-	Disposition    string     `gorm:"type:varchar(24);not null" json:"disposition"`
-	WorkState      string     `gorm:"type:varchar(24);not null;index:idx_intervention_queue,priority:2" json:"work_state"`
-	ReasonCode     string     `gorm:"type:varchar(60)" json:"reason_code"`
-	NextAction     string     `gorm:"type:varchar(120)" json:"next_action"`
-	DataOwnerID    *string    `gorm:"type:char(36)" json:"data_owner_id"`
-	DueAt          *time.Time `json:"due_at"`
-	ActorID        string     `gorm:"type:char(36);not null" json:"actor_id"`
-	PolicyVersion  string     `gorm:"type:varchar(40);not null" json:"policy_version"`
-	PromptVersion  string     `gorm:"type:varchar(40);not null" json:"prompt_version"`
-	SchemaVersion  string     `gorm:"type:varchar(40);not null" json:"schema_version"`
-	CreatedAt      time.Time  `gorm:"not null;index:idx_intervention_queue,priority:3" json:"created_at"`
-	UpdatedAt      time.Time  `gorm:"not null" json:"updated_at"`
+	ID               string     `gorm:"type:char(36);primaryKey" json:"id"`
+	TenantID         string     `gorm:"type:char(36);not null;index:idx_intervention_queue,priority:1;uniqueIndex:uq_intervention_case,priority:1" json:"tenant_id"`
+	JobID            string     `gorm:"type:char(36);not null;uniqueIndex:uq_intervention_case,priority:2" json:"job_id"`
+	RunID            string     `gorm:"type:char(36);not null" json:"run_id"`
+	ConversationID   string     `gorm:"type:char(36);not null;uniqueIndex:uq_intervention_case,priority:3" json:"conversation_id"`
+	UseCase          string     `gorm:"type:varchar(40);not null;uniqueIndex:uq_intervention_case,priority:4" json:"use_case"`
+	Version          int        `gorm:"not null" json:"version"`
+	SnapshotID       *string    `gorm:"type:char(36)" json:"snapshot_id"`
+	SnapshotDigest   string     `gorm:"type:char(64)" json:"snapshot_digest"`
+	Eligibility      string     `gorm:"type:varchar(20);not null" json:"eligibility"`
+	Execution        string     `gorm:"type:varchar(24);not null" json:"execution"`
+	Disposition      string     `gorm:"type:varchar(24);not null" json:"disposition"`
+	WorkState        string     `gorm:"type:varchar(24);not null;index:idx_intervention_queue,priority:2" json:"work_state"`
+	ReasonCode       string     `gorm:"type:varchar(60)" json:"reason_code"`
+	NextAction       string     `gorm:"type:varchar(120)" json:"next_action"`
+	DataOwnerID      *string    `gorm:"type:char(36)" json:"data_owner_id"`
+	AssigneeID       *string    `gorm:"type:char(36)" json:"assignee_id"`
+	DueAt            *time.Time `json:"due_at"`
+	HumanAssessment  string     `gorm:"type:varchar(24)" json:"human_assessment"`
+	HumanExplanation string     `gorm:"type:text" json:"human_explanation"`
+	HumanNextAction  string     `gorm:"type:text" json:"human_next_action"`
+	OutcomeText      string     `gorm:"type:text" json:"outcome_text"`
+	ActorID          string     `gorm:"type:char(36);not null" json:"actor_id"`
+	PolicyVersion    string     `gorm:"type:varchar(40);not null" json:"policy_version"`
+	PromptVersion    string     `gorm:"type:varchar(40);not null" json:"prompt_version"`
+	SchemaVersion    string     `gorm:"type:varchar(40);not null" json:"schema_version"`
+	CreatedAt        time.Time  `gorm:"not null;index:idx_intervention_queue,priority:3" json:"created_at"`
+	UpdatedAt        time.Time  `gorm:"not null" json:"updated_at"`
 }
 
 type InterventionProposal struct {
@@ -84,4 +89,23 @@ type InterventionReceipt struct {
 	Code       string    `gorm:"type:varchar(60);not null" json:"code"`
 	UsageState string    `gorm:"type:varchar(16);not null" json:"usage_state"`
 	CreatedAt  time.Time `gorm:"not null" json:"created_at"`
+}
+
+// InterventionHumanEvent is append-only application history. No route updates or
+// deletes these rows; the case projection and one event commit in one transaction.
+type InterventionHumanEvent struct {
+	ID             string    `gorm:"type:char(36);primaryKey" json:"id"`
+	TenantID       string    `gorm:"type:char(36);not null;index" json:"tenant_id"`
+	CaseID         string    `gorm:"type:char(36);not null;uniqueIndex:uq_intervention_human_version,priority:1" json:"case_id"`
+	CaseVersion    int       `gorm:"not null;uniqueIndex:uq_intervention_human_version,priority:2" json:"case_version"`
+	ActorID        string    `gorm:"type:char(36);not null" json:"actor_id"`
+	Action         string    `gorm:"type:varchar(32);not null" json:"action"`
+	Reason         string    `gorm:"type:varchar(500);not null" json:"reason"`
+	ProposalID     *string   `gorm:"type:char(36)" json:"proposal_id"`
+	SnapshotID     string    `gorm:"type:char(36);not null" json:"snapshot_id"`
+	SnapshotDigest string    `gorm:"type:char(64);not null" json:"snapshot_digest"`
+	SourceStatus   string    `gorm:"type:varchar(40);not null" json:"source_status"`
+	Before         string    `gorm:"type:json;not null" json:"before"`
+	After          string    `gorm:"type:json;not null" json:"after"`
+	CreatedAt      time.Time `gorm:"not null" json:"created_at"`
 }

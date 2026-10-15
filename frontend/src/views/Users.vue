@@ -208,12 +208,13 @@ const loadError = ref(false)
 
 const inviteDialog = ref(false)
 const inviting = ref(false)
-const inviteForm = ref({ name: '', email: '', password: '', role: 'member', permissions: { channels: 'r', messages: 'r', jobs: 'r', settings: '' } as Record<string, string> })
+const inviteForm = ref({ name: '', email: '', password: '', role: 'member', permissions: { channels: 'r', messages: 'r', jobs: 'r', settings: '', intervention_cases: '' } as Record<string, string> })
 const createFormRef = ref<any>(null)
 const permissionFeatures = computed(() => [
   { key: 'channels', label: t('us_feat_channels') },
   { key: 'messages', label: t('us_feat_messages') },
   { key: 'jobs', label: t('us_feat_jobs') },
+  { key: 'intervention_cases', label: t('iv_title') },
   { key: 'settings', label: t('us_feat_settings') },
 ])
 
@@ -275,7 +276,7 @@ async function doInvite() {
     }
     await userStore.inviteUser(tenantId.value, payload)
     inviteDialog.value = false
-    inviteForm.value = { name: '', email: '', password: '', role: 'member', permissions: { channels: 'r', messages: 'r', jobs: 'r', settings: '' } }
+    inviteForm.value = { name: '', email: '', password: '', role: 'member', permissions: { channels: 'r', messages: 'r', jobs: 'r', settings: '', intervention_cases: '' } }
     showSnack(t('us_created'), 'success')
   } catch (err: any) {
     showSnack(friendlyError(err), 'error')
@@ -316,7 +317,7 @@ async function doRemove() {
 function openPermissions(u: TenantUser) {
   permTarget.value = u
   try {
-    editPerms.value = u.permissions ? JSON.parse(u.permissions) : { channels: 'r', messages: 'r', jobs: 'r', settings: '' }
+    editPerms.value = u.permissions ? JSON.parse(u.permissions) : { channels: 'r', messages: 'r', jobs: 'r', settings: '', intervention_cases: '' }
   } catch {
     editPerms.value = { channels: 'r', messages: 'r', jobs: 'r', settings: '' }
   }

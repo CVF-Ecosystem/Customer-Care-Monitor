@@ -1,9 +1,12 @@
 package handlers
 
 import (
+	"encoding/base64"
 	"errors"
 	"net/http"
 	"strconv"
+	"strings"
+	"time"
 
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/middleware"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db"
@@ -59,28 +62,48 @@ func ListInterventionCases(c *gin.Context) {
 		limit = n
 	}
 	state := c.Query("state")
-	if state != "" && state != "OPEN" && state != "WAITING_ON_DATA" {
+	if state != "" && !m3AllowedState(state) {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "invalid_state"})
 		return
 	}
 	q := db.DB.Model(&models.InterventionCase{}).Where("tenant_id = ?", tenantID)
 	if state != "" {
 		q = q.Where("work_state = ?", state)
+	} else {
+		q = q.Where("work_state IN ?", []string{"OPEN", "ASSIGNED", "WAITING_ON_DATA"})
+	}
+	var total int64
+	if q.Count(&total).Error != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "list_failed"})
+		return
 	}
 	if cursor := c.Query("cursor"); cursor != "" {
-		q = q.Where("id < ?", cursor)
+		decoded, err := base64.RawURLEncoding.DecodeString(cursor)
+		parts := strings.SplitN(string(decoded), "|", 2)
+		if err != nil || len(parts) != 2 || parts[1] == "" {
+			c.JSON(http.StatusBadRequest, gin.H{"error": "invalid_cursor"})
+			return
+		}
+		at, err := time.Parse(time.RFC3339Nano, parts[0])
+		if err != nil {
+			c.JSON(http.StatusBadRequest, gin.H{"error": "invalid_cursor"})
+			return
+		}
+		q = q.Where("created_at > ? OR (created_at = ? AND id > ?)", at, at, parts[1])
 	}
 	var rows []models.InterventionCase
-	if q.Order("id DESC").Limit(limit+1).Find(&rows).Error != nil {
+	if q.Order("created_at ASC, id ASC").Limit(limit+1).Find(&rows).Error != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "list_failed"})
 		return
 	}
 	next := ""
-	if len(rows) > limit {
-		next = rows[limit-1].ID
+	hasMore := len(rows) > limit
+	if hasMore {
+		last := rows[limit-1]
+		next = base64.RawURLEncoding.EncodeToString([]byte(last.CreatedAt.UTC().Format(time.RFC3339Nano) + "|" + last.ID))
 		rows = rows[:limit]
 	}
-	c.JSON(http.StatusOK, gin.H{"items": rows, "next_cursor": next})
+	c.JSON(http.StatusOK, gin.H{"items": rows, "next_cursor": next, "has_more": hasMore, "total": total, "order": "created_at_asc_id_asc"})
 }
 
 func GetInterventionCase(c *gin.Context) {
@@ -100,5 +123,10 @@ func GetInterventionCase(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "detail_failed"})
 		return
 	}
-	c.JSON(http.StatusOK, gin.H{"case": row, "proposals": proposals, "receipts": receipts})
+	var events []models.InterventionHumanEvent
+	if db.DB.Where("case_id = ? AND tenant_id = ?", row.ID, tenantID).Order("case_version ASC").Find(&events).Error != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "detail_failed"})
+		return
+	}
+	c.JSON(http.StatusOK, gin.H{"case": row, "proposals": proposals, "receipts": receipts, "human_events": events, "source_status": m3SourceStatus(row)})
 }

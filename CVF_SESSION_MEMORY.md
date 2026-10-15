@@ -9,18 +9,18 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M3_HUMAN_WORKFLOW_R101_2026-10-15.md", "activeTranche": "CCMAI-RUNTIME-101", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M3_HUMAN_WORKFLOW_R101_2026-10-15.md", "activeTranche": "CCMAI-RUNTIME-101", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
+- Current mode: BUILD
+- Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_M3_HUMAN_WORKFLOW_R101_2026-10-15.md
 
-CCMAI-RUNTIME-101 M3 DISPATCH_READY: committed seed43c65ad and accepted intended SPEC bound human review/correction/assignment/deadline/outcome. Root commits dispatch after gates; Sol Medium rehydrates and acknowledges before source-only BUILD. Root source audit must precede any Go/fixture/browser/server effect. API0/mock0; R100 unused slots unavailable. M1 business/fullM2/M3/pilot/release OPEN, Facebook/Zalo OA parked; no installed activation/push/merge/deploy.
+CCMAI-RUNTIME-101 M3 repaired source admitted for finite local software verification; Root records formatted hashes/static gates and commits source before worker offline compile, owned fixture/native/UI checks and real browser review. Go0/16 fixture0/2 API0/mock0; R100 slots unavailable. Full M2/M3/WAIT_DATA rerun, M1 business/pilot/release OPEN; accounts parked, no installed activation/push/deploy.
 
-Codex /root ORCHESTRATOR, SPEC_AUTHOR, WORK_ORDER_AUTHOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; independent REVIEWER reserved. Sol Medium /root/m3_design selected implementation worker after Luna Max intake.
+Codex /root independent REVIEWER, ORCHESTRATOR and COMMIT_STEWARD; Sol Medium /root/m3_design REPAIR_WORKER formatted source returned, no runtime yet.
 
 ## Historical R100 bounded real result before M3 dispatch
 

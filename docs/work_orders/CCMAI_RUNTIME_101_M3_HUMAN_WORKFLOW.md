@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-101 — M3 human review through outcome
 
-Status: DISPATCH_READY
+Status: ACTIVE
 Risk: R2
 Worker: /root/m3_design (Sol Medium)
 Reviewer: Codex /root

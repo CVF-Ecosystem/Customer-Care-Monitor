@@ -150,7 +150,11 @@ func (s *InterventionService) RunManual(ctx context.Context, tenantID, actorID, 
 			caseRow.Version = prior.Version + 1
 			// A pending human review belongs to its prior immutable proposal; do not
 			// silently replace it with a rerun before M3 decides.
-			if prior.Disposition == "PENDING_REVIEW" {
+			owned, ownerErr := m3HasHumanOwnership(tx, prior)
+			if ownerErr != nil {
+				return ErrInterventionUnavailable
+			}
+			if owned {
 				return ErrInterventionBusy
 			}
 		}

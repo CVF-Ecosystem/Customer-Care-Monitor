@@ -995,10 +995,13 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - PurePython toolingidentity/parserchecks; no mockprovider governanceproof.: `scripts/tests/test_r100_intervention_live_fixture.py`
 - Historical prelive fixture/precheck return; actualnextlive verified separately.: `docs/reviews/R100_PRECHECK_FIXTURE_WORKER_RETURN_2026-10-15.md`
 - Source-only worker return; oneprecompile repair, puretooling7PASS, no liveclaim.: `docs/reviews/R100_SOURCE_READY_WORKER_RETURN_2026-10-15.md`
+- Exact pre-runtime formatted source hashes; source only, Go0/API0 and native/browser NOT_RUN.: `docs/reviews/probes/r101_root/formatted_source_manifest.json`
 - R101 M3 accepted intended local synthetic human workflow contract/dispatch; implementation/native/browser acceptance OPEN, no provider or production effects.: `docs/work_orders/CCMAI_RUNTIME_101_M3_HUMAN_WORKFLOW.md`
 - R101 M3 accepted intended local synthetic human workflow contract/dispatch; implementation/native/browser acceptance OPEN, no provider or production effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-101.json`
 - R101 M3 accepted intended local synthetic human workflow contract/dispatch; implementation/native/browser acceptance OPEN, no provider or production effects.: `docs/specs/M3_HUMAN_WORKFLOW_R101_SPEC_2026-10-15.md`
 - R101 M3 accepted intended local synthetic human workflow contract/dispatch; implementation/native/browser acceptance OPEN, no provider or production effects.: `CVF_SESSION/tranches/CCMAI-RUNTIME-101.json`
+- Independent Root source findings/admission; compile/native/browser NOT_RUN, no runtime AI governance claim.: `docs/reviews/R101_PRE_RUNTIME_CONSOLIDATED_SOURCE_FINDINGS_2026-10-15.md`
+- Independent Root source findings/admission; compile/native/browser NOT_RUN, no runtime AI governance claim.: `docs/reviews/R101_REPAIRED_SOURCE_ADMISSION_2026-10-15.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`
