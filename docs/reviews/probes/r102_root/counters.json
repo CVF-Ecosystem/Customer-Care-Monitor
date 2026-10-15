@@ -1,7 +1,7 @@
 {
-  "workerGo": 3,
-  "reviewerGo": 2,
-  "aggregateGo": 5,
+  "workerGo": 4,
+  "reviewerGo": 3,
+  "aggregateGo": 7,
   "fixtureReservations": 1,
   "providerCalls": 0,
   "mockProviderCalls": 0,
@@ -32,6 +32,18 @@
       "role": "reviewer",
       "kind": "native_binary",
       "pattern": "^TestR102"
+    },
+    {
+      "role": "reviewer",
+      "kind": "native_binary",
+      "pattern": "^TestR102"
+    },
+    {
+      "commandReceipt": "docs/reviews/probes/r102_worker/handlers_r3_compile_command.json",
+      "exit": 0,
+      "kind": "offline_handlers_r3_compile",
+      "counterAlreadyConsumed": true,
+      "role": "worker"
     },
     {
       "role": "reviewer",

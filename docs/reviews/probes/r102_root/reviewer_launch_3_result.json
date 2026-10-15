@@ -1,0 +1,93 @@
+{
+  "command": [
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r102_worker\\r102_handlers_r3.test.exe",
+    "-test.run",
+    "^TestR102",
+    "-test.count=1",
+    "-test.v",
+    "-test.failfast",
+    "-test.timeout=240s"
+  ],
+  "exit": 0,
+  "accepted": true,
+  "requiredTopLevel": [
+    "TestR102NativeRevisionIntent",
+    "TestR102NativeDenialsAndRollback",
+    "TestR102NativeChannelBarrier",
+    "TestR102NativeSourceChangesReplayAndRevocation",
+    "TestR102NativeSourceMutationRejection",
+    "TestR102NativeCorruptRevisionUnavailable",
+    "TestR102NativeLatestVersionAndRequestRollback",
+    "TestR102NativeCompetingWriters",
+    "TestR102NativeBodyAndCursorBounds",
+    "TestR102NativeStateAndIdentityRejections",
+    "TestR102NativeForeignRevisionAnchorAndPermissions",
+    "TestR102NativeCompetingRequestKeys",
+    "TestR102NativeHumanActionCompetition",
+    "TestR102NativeMembershipRevocationBarrier",
+    "TestR102NativeSyncWriterBeforeRequest",
+    "TestR102NativePaginationAndMessageCap",
+    "TestR102NativeLegacyEventSurvivesMigration",
+    "TestR102NativeSilentSQLSuccessAndFailure",
+    "TestR102NativeActionBeforeSourceAndRevocation",
+    "TestR102NativeInsertAndCASRollbackBranches"
+  ],
+  "missingPasses": [],
+  "noSkip": true,
+  "binarySha256": "c2c5ba7d2f0c8fb1c5d63ae756916612eef285f6abff80861c0f056e3d9e9469",
+  "source": {
+    "admitted": true,
+    "reviewer": "Codex /root",
+    "scope": "Repair3 offline handlers compile, same preserved fixture independent all20 native groups after committed source",
+    "review": "docs/reviews/R102_REPAIR3_INDEPENDENT_ADMISSION_2026-10-15.md",
+    "repairRounds": 3,
+    "files": [
+      {
+        "path": "backend/db/models/intervention_waitdata.go",
+        "bytes": 3736,
+        "sha256": "e3ff5755c019ace0018295528261c685e5d81b9d1c105e0cd98474d9a417bd17"
+      },
+      {
+        "path": "backend/db/models/intervention.go",
+        "bytes": 7634,
+        "sha256": "2d4a44f7026061f303cc2c2ab7805d7a045d18294935be9af22736d20e691c3b"
+      },
+      {
+        "path": "backend/db/mysql.go",
+        "bytes": 4810,
+        "sha256": "1dbf1b6fa89cfc8c5b4a33fc77986fed67a9d96edf3bb95aa43f36ce7502e731"
+      },
+      {
+        "path": "backend/engine/intervention_waitdata.go",
+        "bytes": 18261,
+        "sha256": "994a943700ea2a12614d6ed2391097498f9cce02378cf95a356eeedd4cb56835"
+      },
+      {
+        "path": "backend/engine/intervention_waitdata_test.go",
+        "bytes": 1947,
+        "sha256": "9470f1db5afccac05a714de28dc960cc73f58297131452f3c12bc883e9e42ba4"
+      },
+      {
+        "path": "backend/api/handlers/intervention_waitdata.go",
+        "bytes": 8421,
+        "sha256": "47decbe5f68826ba9e42f34b919c6d61f7ff42a820160c3a469cdaeb5cb5c8c4"
+      },
+      {
+        "path": "backend/api/handlers/intervention_waitdata_test.go",
+        "bytes": 50503,
+        "sha256": "d306bad96c327c61b46a11897a96fea92d0549c9c4b7820494baf2c58bbdc291"
+      },
+      {
+        "path": "backend/api/router.go",
+        "bytes": 16392,
+        "sha256": "930748786626e1aa3d1926bbd18f29cdb7ae771266c68374d63b7118973c0f58"
+      }
+    ],
+    "providerCalls": 0,
+    "mockProviderCalls": 0,
+    "fixtureRepairDisposition": "docs/reviews/R102_FIXTURE_JSON_REPAIR_DISPOSITION_2026-10-15.md",
+    "supplementalAuthority": "CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json"
+  },
+  "providerCalls": 0,
+  "mockProviderCalls": 0
+}
