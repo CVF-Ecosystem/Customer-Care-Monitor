@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_BROWSER_TOOLING_R103_2026-10-15.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R101_UI_R105_2026-10-16.md",
       "status": "ACTIVE",
-      "description": "Active R103 browser tooling recovery handoff; R102 bounded FREEZE and R101 UI blockers preserved."
+      "description": "Active R105 historical R101 UI evidence handoff; source/seed committed, active contract checked before runtime."
     },
     {
       "id": "r060-work-order",
@@ -12127,6 +12127,41 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-105.json",
       "status": "ACTIVE",
       "description": "Root immutable bounded historical R101 UI seed; must precede active105 BUILD, finite new campaign only."
+    },
+    {
+      "id": "r103-historical-tooling-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_BROWSER_TOOLING_R103_2026-10-15.md",
+      "status": "ACTIVE",
+      "description": "Historical bounded R103 tooling freeze; routing superseded only."
+    },
+    {
+      "id": "r105-formal-ui-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md",
+      "status": "ACTIVE",
+      "description": "Formal bounded historical UI packet; active dispatch checked, no runtime/product acceptance from status."
+    },
+    {
+      "id": "r105-tranche-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-105.json",
+      "status": "ACTIVE",
+      "description": "R105 record bound to immutable seed base, exact roles and finite independent-review campaign."
+    },
+    {
+      "id": "r105-effective-worker-prompt",
+      "family": "continuity",
+      "path": "docs/reviews/planning/R105_CLAUDE_EXECUTION_PROMPT_2026-10-16.md",
+      "status": "ACTIVE",
+      "description": "Exact external Claude operator prompt referencing formal ACTIVE order/immutable seed; no generic authority discovery or bridge replay."
+    },
+    {
+      "id": "r105-effective-admission-check",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r105_dispatch_preparation/effective_admission_validation.json",
+      "status": "ACTIVE",
+      "description": "Actual read-only reviewed runner admission PASS for current formal state/seed/base/pins; no runtime launched."
     }
   ]
 }

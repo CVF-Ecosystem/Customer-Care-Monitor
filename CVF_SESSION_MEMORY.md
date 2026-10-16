@@ -9,18 +9,18 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_BROWSER_TOOLING_R103_2026-10-15.md", "activeTranche": "CCMAI-RUNTIME-103", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R101_UI_R105_2026-10-16.md", "activeTranche": "CCMAI-RUNTIME-105", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: FREEZE
-- Active phase: FREEZE
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_BROWSER_TOOLING_R103_2026-10-15.md
+- Current mode: BUILD
+- Active phase: BUILD
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R101_UI_R105_2026-10-16.md
 
-CCMAI-RUNTIME-103 remains historical tooling CLOSED. Owner now grants Root full orchestrator/reviewer authority for bounded R105 historical R101 UI dispatch, including preparation/seed/order commits. Root commits reviewed source/evidence and immutable105seed first, then binds actual baseCommit/formal order/record/continuity and checks active closeability before BUILD. No runtime until effective105dispatch; source review12offline/89gate units accepted, actual UI NOT_RUN. R101200df3e historical claim only; Dashboard3 failures/full product gates OPEN, R102 local FROZEN unchanged, Facebook/Zalo OA parked.
+CCMAI-RUNTIME-105 BUILD / ACTIVE: named Claude Antigravity REVIEW_EVIDENCE_OPERATOR executes formal order docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md using reviewed supervisor once, only after verifying committed dispatch HEAD and current immutable760726e6base/Root source receipt/pins. Owner full-authority grant and active pre-dispatch closeability PASS; no further authority clarification within seed scope. New fixture0, existing fixture start1/backend1/Vite1, provider/mock/compile/build/install0, retries0, owned tabs3/actions10, backend30min/campaign35min inclcleanup. Preserve original diagnostic tab/no reuse. Return actual B01-B10 evidence/cleanup for independent Root review; runtime currently NOT_RUN, parent historical R101/full product/Dashboard3 failures OPEN, R102 local FROZEN unchanged, Facebook/Zalo OA parked.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD / SESSION_SYNC_STEWARD; owner-approved seed/preparation commit, runtime pending active105gate.
+Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; named external evidence operator executes bounded UI, Root reviews return.
 
 Mandatory pre-dispatch learning: [docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md](docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md). Read before any similar UI/browser assignment; unknown readiness is HOLD, not a speculative dispatch. Corrected draft is not executable authority.
 

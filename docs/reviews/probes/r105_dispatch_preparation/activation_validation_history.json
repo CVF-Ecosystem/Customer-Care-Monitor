@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-16",
+  "owner": "Codex /root",
+  "scope": "Dispatcher metadata; no worker/runtime dispatch",
+  "checks": [
+    {
+      "phase": "pre-dispatch",
+      "attempt": 1,
+      "result": "FAIL",
+      "control": "CVF-DG-APPL-01",
+      "findings": [
+        "dispatch_continuity topology must be EXACT_PATHS",
+        "dispatch_continuity mutationSurface must name an exact AGENT_HANDOFF material-SHA marker"
+      ],
+      "repair": "Root replaced general dispatch continuity row with exact current handoff path/material-SHA marker and EXACT_PATHS topology before any runtime or dispatch commit",
+      "runtimeEffects": 0
+    }
+  ]
+}

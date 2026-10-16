@@ -38,7 +38,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "FREEZE",
+  "currentPhase": "BUILD",
   "completedCapabilities": [
     "R094 bounded M2 source/local manual synthetic intervention prototype independently reviewed: authenticated route, snapshot evidence, monotonic call admission, queue/detail and failure handling; real provider0, default app disabled, full M2/M3/pilot OPEN. docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
@@ -79,9 +79,9 @@
     "R071 bounded adapter-presence aggregate locally FROZEN: exact int64/status/snapshot/overflow and legacy preservation; no Analyzer persistence/live governance proof."
   ],
   "x-buildInProgress": {
-    "tranche": "CCMAI-RUNTIME-103",
-    "status": "NONE_FROZEN_TOOLING_ONLY",
-    "sourceCommit": "7efc308f19a845918f0ca2901746781e9b4bfaf7",
+    "tranche": "CCMAI-RUNTIME-105",
+    "status": "ACTIVE_UI_EVIDENCE_NOT_RUN",
+    "sourceCommit": "760726e691114a85af315ab5823112375c6af570",
     "providerCalls": 0
   },
   "knownLimitations": [
@@ -2015,7 +2015,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-103",
+  "activeTranche": "CCMAI-RUNTIME-105",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
@@ -2031,7 +2031,9 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [],
+  "activeWorkOrders": [
+    "docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md"
+  ],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -2595,7 +2597,7 @@
     "nextGate": "Separate SPEC/work order for actual AI executor/integration or M1 business decisions",
     "actualRerun": "OPEN_EXECUTOR_NOT_INCLUDED"
   },
-  "x-activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_BROWSER_TOOLING_R103_2026-10-15.md",
+  "x-activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R101_UI_R105_2026-10-16.md",
   "x-ownerRepairContinuation": "CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json",
   "x-r102Current": {
     "status": "FROZEN_LOCAL_ONLY",
@@ -2659,14 +2661,14 @@
   },
   "updatedAt": "2026-10-16",
   "x-dispatchReadinessRepair": {
-    "status": "OWNER_GRANTED_PREPARATION_COMMIT",
+    "status": "ACTIVE_BOUNDED_RUNTIME_AUTHORITY",
     "learning": "docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md",
     "draftWorkOrder": "docs/reviews/planning/R105_R101_UI_EVIDENCE_WORK_ORDER_DRAFT_2026-10-16.md",
     "authorityCandidate": "docs/reviews/planning/R105_R101_UI_AUTHORITY_CANDIDATE_2026-10-16.json",
     "rootReadinessEvidence": "docs/reviews/probes/r105_dispatch_preparation/readiness_inventory.json",
     "noCommit": false,
     "noFreeze": true,
-    "noRuntime": true,
+    "noRuntime": false,
     "historicalBridgeProvenanceReview": "docs/reviews/R104_BRIDGE_SUPPLEMENT_INDEPENDENT_REVIEW_2026-10-16.md",
     "historicalBridgeProvenance": "ACCEPTED_DATA_URL_DIAGNOSTIC_ONLY",
     "residualTabCleanup": "UNVERIFIED_LEGACY_TAB_PRESERVE_NO_REUSE",
@@ -2675,6 +2677,15 @@
     "sourceCandidateAuthor": "/root/r105_runner_candidate (Sol Medium)",
     "independentOfflineTests": 12,
     "sourceDisposition": "SOURCE_REVIEW_PASS_RUNTIME_NOT_RUN",
-    "remainingBoundary": "Commit immutable seed, then actual105base/order/record/continuity/active gates before runtime"
+    "remainingBoundary": "Execute once under effective committed105dispatch; independent Root review required, no closure claim"
+  },
+  "x-r105Current": {
+    "status": "BUILD",
+    "seedCommit": "760726e691114a85af315ab5823112375c6af570",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md",
+    "riskCeiling": "R2",
+    "sourceReview": "docs/reviews/R105_RUNNER_INDEPENDENT_SOURCE_REVIEW_2026-10-16.md",
+    "runtime": "NOT_RUN",
+    "nextAction": "CCMAI-RUNTIME-105 BUILD / ACTIVE: named Claude Antigravity REVIEW_EVIDENCE_OPERATOR executes formal order docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md using reviewed supervisor once, only after verifying committed dispatch HEAD and current immutable760726e6base/Root source receipt/pins. Owner full-authority grant and active pre-dispatch closeability PASS; no further authority clarification within seed scope. New fixture0, existing fixture start1/backend1/Vite1, provider/mock/compile/build/install0, retries0, owned tabs3/actions10, backend30min/campaign35min inclcleanup. Preserve original diagnostic tab/no reuse. Return actual B01-B10 evidence/cleanup for independent Root review; runtime currently NOT_RUN, parent historical R101/full product/Dashboard3 failures OPEN, R102 local FROZEN unchanged, Facebook/Zalo OA parked."
   }
 }

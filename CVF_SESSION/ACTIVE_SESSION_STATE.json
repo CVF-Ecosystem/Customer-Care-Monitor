@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "FREEZE",
-  "activePhase": "FREEZE",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,11 +12,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-103",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_BROWSER_TOOLING_R103_2026-10-15.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-103 remains historical tooling CLOSED. Owner now grants Root full orchestrator/reviewer authority for bounded R105 historical R101 UI dispatch, including preparation/seed/order commits. Root commits reviewed source/evidence and immutable105seed first, then binds actual baseCommit/formal order/record/continuity and checks active closeability before BUILD. No runtime until effective105dispatch; source review12offline/89gate units accepted, actual UI NOT_RUN. R101200df3e historical claim only; Dashboard3 failures/full product gates OPEN, R102 local FROZEN unchanged, Facebook/Zalo OA parked.",
+  "activeTranche": "CCMAI-RUNTIME-105",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R101_UI_R105_2026-10-16.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-105 BUILD / ACTIVE: named Claude Antigravity REVIEW_EVIDENCE_OPERATOR executes formal order docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md using reviewed supervisor once, only after verifying committed dispatch HEAD and current immutable760726e6base/Root source receipt/pins. Owner full-authority grant and active pre-dispatch closeability PASS; no further authority clarification within seed scope. New fixture0, existing fixture start1/backend1/Vite1, provider/mock/compile/build/install0, retries0, owned tabs3/actions10, backend30min/campaign35min inclcleanup. Preserve original diagnostic tab/no reuse. Return actual B01-B10 evidence/cleanup for independent Root review; runtime currently NOT_RUN, parent historical R101/full product/Dashboard3 failures OPEN, R102 local FROZEN unchanged, Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD / SESSION_SYNC_STEWARD; owner-approved seed/preparation commit, runtime pending active105gate.",
+  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; named external evidence operator executes bounded UI, Root reviews return.",
   "updatedAt": "2026-10-16",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {
@@ -1862,7 +1862,7 @@
     "m1BusinessPilotAcceptance": "OPEN",
     "publication": "LOCAL_ONLY_NOT_PUSHED"
   },
-  "roleRoute": "ROOT_ORCHESTRATOR_TO_SOL_MEDIUM_WORKER_TO_INDEPENDENT_ROOT_REVIEW",
+  "roleRoute": "ROOT_ORCHESTRATOR_TO_EXTERNAL_REVIEW_EVIDENCE_OPERATOR_TO_INDEPENDENT_ROOT_REVIEW",
   "x-waitDataBackendPlanning": {
     "candidateTranche": "CCMAI-RUNTIME-102",
     "roadmapIds": [
@@ -2043,14 +2043,14 @@
     }
   },
   "x-dispatchReadinessRepair": {
-    "status": "OWNER_GRANTED_PREPARATION_COMMIT",
+    "status": "ACTIVE_BOUNDED_RUNTIME_AUTHORITY",
     "learning": "docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md",
     "draftWorkOrder": "docs/reviews/planning/R105_R101_UI_EVIDENCE_WORK_ORDER_DRAFT_2026-10-16.md",
     "authorityCandidate": "docs/reviews/planning/R105_R101_UI_AUTHORITY_CANDIDATE_2026-10-16.json",
     "rootReadinessEvidence": "docs/reviews/probes/r105_dispatch_preparation/readiness_inventory.json",
     "noCommit": false,
     "noFreeze": true,
-    "noRuntime": true,
+    "noRuntime": false,
     "historicalBridgeProvenanceReview": "docs/reviews/R104_BRIDGE_SUPPLEMENT_INDEPENDENT_REVIEW_2026-10-16.md",
     "historicalBridgeProvenance": "ACCEPTED_DATA_URL_DIAGNOSTIC_ONLY",
     "residualTabCleanup": "UNVERIFIED_LEGACY_TAB_PRESERVE_NO_REUSE",
@@ -2059,11 +2059,20 @@
     "sourceCandidateAuthor": "/root/r105_runner_candidate (Sol Medium)",
     "independentOfflineTests": 12,
     "sourceDisposition": "SOURCE_REVIEW_PASS_RUNTIME_NOT_RUN",
-    "remainingBoundary": "Commit immutable seed, then actual105base/order/record/continuity/active gates before runtime"
+    "remainingBoundary": "Execute once under effective committed105dispatch; independent Root review required, no closure claim"
   },
   "x-r105OwnerGrant": {
     "date": "2026-10-16",
     "authorization": "cho phép toàn quyền, theo đúng vai trò orchestrator/reviewer. next",
     "scope": "Reviewed historical R101 UI R105 packet, finite seed budgets; Root commits/reviews, external evidence operator executes; no provider/production/publication/deploy expansion"
+  },
+  "x-r105Current": {
+    "status": "BUILD",
+    "seedCommit": "760726e691114a85af315ab5823112375c6af570",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md",
+    "riskCeiling": "R2",
+    "sourceReview": "docs/reviews/R105_RUNNER_INDEPENDENT_SOURCE_REVIEW_2026-10-16.md",
+    "runtime": "NOT_RUN",
+    "nextAction": "CCMAI-RUNTIME-105 BUILD / ACTIVE: named Claude Antigravity REVIEW_EVIDENCE_OPERATOR executes formal order docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md using reviewed supervisor once, only after verifying committed dispatch HEAD and current immutable760726e6base/Root source receipt/pins. Owner full-authority grant and active pre-dispatch closeability PASS; no further authority clarification within seed scope. New fixture0, existing fixture start1/backend1/Vite1, provider/mock/compile/build/install0, retries0, owned tabs3/actions10, backend30min/campaign35min inclcleanup. Preserve original diagnostic tab/no reuse. Return actual B01-B10 evidence/cleanup for independent Root review; runtime currently NOT_RUN, parent historical R101/full product/Dashboard3 failures OPEN, R102 local FROZEN unchanged, Facebook/Zalo OA parked."
   }
 }

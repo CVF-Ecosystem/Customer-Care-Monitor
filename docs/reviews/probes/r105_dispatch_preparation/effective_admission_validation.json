@@ -1,0 +1,9 @@
+{
+  "scope": "Read-only source validator: current record/order/state, immutable Git seed/base, Root review and file hashes; no start/status/stop or runtime",
+  "result": "PASS",
+  "baseCommit": "760726e691114a85af315ab5823112375c6af570",
+  "seedSha256": "3a6b562118022f9b718a17a99effb2eb1975d8f7f9abe26bae68507f16edad11",
+  "seedHashRepresentation": "UTF8_LF",
+  "runtime": "NOT_RUN",
+  "dispatchCommitRequiredBeforeOperatorEffects": true
+}

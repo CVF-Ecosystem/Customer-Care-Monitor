@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+    "run",
+    "--phase",
+    "pre-dispatch",
+    "--project-root",
+    ".",
+    "--packet",
+    "docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md"
+  ],
+  "exitCode": 0,
+  "scope": "Active packet closeability checked; runtime NOT_RUN"
+}

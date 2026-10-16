@@ -15,7 +15,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R103 browser tooling recovery handoff; R102 bounded FREEZE and R101 UI blockers preserved.: `CVF_SESSION/handoffs/AGENT_HANDOFF_BROWSER_TOOLING_R103_2026-10-15.md`
+- Active R105 historical R101 UI evidence handoff; source/seed committed, active contract checked before runtime.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R101_UI_R105_2026-10-16.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -1084,6 +1084,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R103 source-first official browser tooling recovery dispatch; conditional R101 UI only after supported capability pass.: `docs/work_orders/CCMAI_RUNTIME_103_BROWSER_TOOLING_RECOVERY.md`
 - R103 source-first official browser tooling recovery dispatch; conditional R101 UI only after supported capability pass.: `CVF_SESSION/tranches/CCMAI-RUNTIME-103.json`
 - Hash/size integrity of actual R103 install/cache/control/capture evidence; integrated bridge/R101 UI remains unobserved.: `docs/reviews/probes/r103_root/final_evidence_manifest.json`
+- Historical bounded R103 tooling freeze; routing superseded only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_BROWSER_TOOLING_R103_2026-10-15.md`
 - Historical R102 bounded local FREEZE handoff; session routing superseded by R103, acceptance unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_WAITDATA_BACKEND_R102_2026-10-15.md`
 - Owner-authorized scoped official Playwright1.57 driver/cache tooling recovery; no product acceptance or provider effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-103.json`
 - Owner-authorized scoped official Playwright1.57 driver/cache tooling recovery; no product acceptance or provider effects.: `docs/reviews/R103_BROWSER_TOOLING_SPEC_2026-10-15.md`
@@ -1159,7 +1160,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Read-only pinned CLI/local named pipe/empty config compatibility; no fixture lifecycle.: `docs/reviews/probes/r105_dispatch_preparation/docker_readonly_binding_check.json`
 - Three actual safe-field metadata commands and source validator PASS; fixture exited.: `docs/reviews/probes/r105_dispatch_preparation/docker_format_input_verification.json`
 - Sol Medium independent document review; draft accepted only as NOT_DISPATCHABLE, no runtime acceptance.: `docs/reviews/R105_DRAFT_READINESS_PEER_REVIEW_2026-10-16.md`
+- Actual read-only reviewed runner admission PASS for current formal state/seed/base/pins; no runtime launched.: `docs/reviews/probes/r105_dispatch_preparation/effective_admission_validation.json`
+- Exact external Claude operator prompt referencing formal ACTIVE order/immutable seed; no generic authority discovery or bridge replay.: `docs/reviews/planning/R105_CLAUDE_EXECUTION_PROMPT_2026-10-16.md`
 - Root actual12tests/syntax/137frontend/17Git rows/exact binary checks.: `docs/reviews/probes/r105_dispatch_preparation/candidate_final_offline_verification.json`
+- Formal bounded historical UI packet; active dispatch checked, no runtime/product acceptance from status.: `docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md`
 - Root immutable bounded historical R101 UI seed; must precede active105 BUILD, finite new campaign only.: `CVF_SESSION/authority/CCMAI-RUNTIME-105.json`
 - Root SOURCE_REVIEW_PASS_RUNTIME_NOT_RUN; active authority/UI still pending.: `docs/reviews/R105_RUNNER_INDEPENDENT_SOURCE_REVIEW_2026-10-16.md`
 - 12 offline software tests, injected commands/processes; no CVF runtime AI governance claim.: `docs/reviews/probes/r105_root/test_r105_ui_runner.py`
@@ -1168,6 +1172,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - 43 captured source-preparation artifacts with byte hashes/newline restoration metadata; no committed-byte/runtime claim.: `docs/reviews/probes/r105_dispatch_preparation/source_preparation_evidence_manifest.json`
 - Root exact source/input hashes; receipt must be committed at future seed base before reliance.: `docs/reviews/probes/r105_root/source_review_receipt.json`
 - Rejected scaffold and repair findings, distinct third-round ownership cause, final source-only acceptance.: `docs/reviews/probes/r105_dispatch_preparation/runner_review_rounds.json`
+- R105 record bound to immutable seed base, exact roles and finite independent-review campaign.: `CVF_SESSION/tranches/CCMAI-RUNTIME-105.json`
 - Corrected historical R101 UI work-order draft; NOT_DISPATCHABLE, no runtime authority.: `docs/reviews/planning/R105_R101_UI_EVIDENCE_WORK_ORDER_DRAFT_2026-10-16.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
