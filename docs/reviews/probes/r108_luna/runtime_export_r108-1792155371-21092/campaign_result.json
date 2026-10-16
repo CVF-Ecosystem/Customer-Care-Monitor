@@ -1,0 +1,18 @@
+{
+  "actionPosts": null,
+  "binarySha256": "cb73ee13e0369cca75ea276cc668f30c3ced42cead5f62c56d68f3c1eaa66f93",
+  "campaignId": "r108-1792155371-21092",
+  "claimLimit": "synthetic current-source diagnostic only; no product/governance/release claim",
+  "cleanupErrors": [
+    "fixture cleanup: fixture stop identity mismatch"
+  ],
+  "elapsedSeconds": 60.721,
+  "goCompileExitCode": 0,
+  "nativeClassification": null,
+  "nativeInvocationExitCode": null,
+  "proposedStatus": "HOLD",
+  "protectedInventoryUnchanged": true,
+  "reason": "MySQL handshake ended early",
+  "status": "PENDING_FINALIZATION",
+  "trancheId": "CCMAI-RUNTIME-108"
+}

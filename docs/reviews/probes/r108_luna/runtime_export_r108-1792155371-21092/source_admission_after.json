@@ -1,0 +1,10 @@
+{
+  "admissionSha256": "ee31990f2ef669c342df8a8c830c0aa3fc27dff9a37a36b48118ff5046c04ba6",
+  "headCommit": "b4a53d4b9fb63c3073b880eb9c7e3e8e6510eafa",
+  "pinsStable": true,
+  "reviewedSourceCommit": "a4b1d490676b5ef9f165446a2aca33f10adb39df",
+  "sourcePins": {
+    "backend/api/handlers/intervention_reopen_r108_test.go": "f4adcee0e5b811743caebda15f77b63a88495f925652a13ce0ef51ece6aa2a7f",
+    "docs/reviews/probes/r108_luna/r108_native_runner.py": "899afa92934dede2d99d28d591bc4232d29a52f764d10f8420588e8e940fb138"
+  }
+}

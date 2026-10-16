@@ -1,0 +1,6 @@
+{
+  "campaignId": "r108-1792155371-21092",
+  "evidenceManifest": "files_manifest.json",
+  "reason": "MySQL handshake ended early",
+  "status": "HOLD"
+}

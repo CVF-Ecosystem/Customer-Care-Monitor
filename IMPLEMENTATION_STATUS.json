@@ -38,7 +38,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "R094 bounded M2 source/local manual synthetic intervention prototype independently reviewed: authenticated route, snapshot evidence, monotonic call admission, queue/detail and failure handling; real provider0, default app disabled, full M2/M3/pilot OPEN. docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
@@ -2031,9 +2031,7 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [
-    "docs/work_orders/CCMAI_RUNTIME_108_REOPEN_DIAGNOSTIC.md"
-  ],
+  "activeWorkOrders": [],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -2692,7 +2690,8 @@
   "x-blockedWorkOrders": [
     "docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md",
     "docs/work_orders/CCMAI_RUNTIME_106_CODEX_R101_UI_EVIDENCE.md",
-    "docs/work_orders/CCMAI_RUNTIME_107_CODEX_R101_UI_EVIDENCE.md"
+    "docs/work_orders/CCMAI_RUNTIME_107_CODEX_R101_UI_EVIDENCE.md",
+    "docs/work_orders/CCMAI_RUNTIME_108_REOPEN_DIAGNOSTIC.md"
   ],
   "x-r106Current": {
     "status": "BUILD_BLOCKED",
@@ -2766,12 +2765,23 @@
     "verification": "Audit in intended scope and verify rendered UI when a supported browser is available; not yet audited/fixed in this stopped session."
   },
   "x-r108Current": {
-    "status": "BUILD_RUNTIME_ADMITTED",
+    "status": "CHANGES_REQUIRED",
     "seedCommit": "86cee15ac68c315c2bb16f9ba6b25566831bfcc7",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_108_REOPEN_DIAGNOSTIC.md",
-    "runtime": "NOT_RUN_UNCONSUMED",
-    "nextAction": "CCMAI-RUNTIME-108 BUILD admitted one native diagnostic: independently reviewed/pinned Luna source committed; source_admission.json binds source commit/test/runner/seed/order/Go. After committed admission and worker acknowledgment run one compile/one exact existing fixture start/one native invocation,max4actionPOSTs,total600s,retries0, owned cleanup and full evidence return; no production patch/listener/Vite/provider/install. Root connected browser HTTP/control/PNG PASS; worker has no browser role. Preserve R107 spent and R102/user resources; subsequent UI wording/B06/B08-B10 remains separately bounded. Dashboard3/fullM2/M3/pilot/release OPEN, Facebook/ZaloOA parked.",
+    "runtime": "ONE_COMPILE_FIXTURE_SPENT_NATIVE_NOT_RUN",
+    "nextAction": "CCMAI-RUNTIME-108 REVIEW / CHANGES_REQUIRED, order BLOCKED_WITH_REASON: compile1/fixture1 spent, native0/actionPOST0, early-EOF readiness HOLD; cleanup validator rejected deprecation banner, Root independently confirms exact fixture exited/protected safe fields equal. Preserve original receipts/seed/budgets and current binary cb73ee13e0369cca75ea276cc668f30c3ced42cead5f62c56d68f3c1eaa66f93. Owner audit/self-handle grant covers bounded R109 product successor: no Go recompile, new supervisor readiness/cleanup + UI-language repair, one native then connected Root browser UI phase under new committed finite authority. No R108 replay/provider/install/user-resource changes; browser failure stops. Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked.",
     "sourceCommit": "a4b1d490676b5ef9f165446a2aca33f10adb39df",
-    "sourceReview": "docs/reviews/R108_INDEPENDENT_SOURCE_ADMISSION_2026-10-16.md"
+    "sourceReview": "docs/reviews/R108_INDEPENDENT_SOURCE_ADMISSION_2026-10-16.md",
+    "review": "docs/reviews/R108_INDEPENDENT_RUNTIME_HOLD_REVIEW_2026-10-16.md",
+    "actualExecution": {
+      "compiles": 1,
+      "fixtureStarts": 1,
+      "nativeInvocations": 0,
+      "caseActionPosts": 0,
+      "runtimeRetries": 0,
+      "providerCalls": 0,
+      "browserProductTabs": 0,
+      "viteLaunches": 0
+    }
   }
 }

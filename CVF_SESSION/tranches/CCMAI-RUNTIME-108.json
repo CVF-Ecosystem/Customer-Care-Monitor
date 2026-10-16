@@ -54,20 +54,24 @@
   "dockerHost": "npipe:////./pipe/dockerDesktopLinuxEngine",
   "dockerSha256": "6c699720bb9523dedb9eb5d22a49951ea9210dbdb1314a3554029eee9be76896",
   "entryDecision": "Inherit R101/R102 source truth and R107 partial UI/failure; Root HTTP click/PNG PASS then immutable seed, committed BUILD source-only, independent source review/commit before one native campaign. No old budget reset.",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
   "baseCommit": "86cee15ac68c315c2bb16f9ba6b25566831bfcc7",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_108_REOPEN_DIAGNOSTIC.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
-  "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "PENDING_SOURCE_AND_DIAGNOSTIC",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
+  "buildCommit": "a4b1d490676b5ef9f165446a2aca33f10adb39df",
+  "reviewEvidence": [
+    "docs/reviews/R108_INDEPENDENT_RUNTIME_HOLD_REVIEW_2026-10-16.md"
+  ],
+  "disposition": "BLOCKED_READINESS_EOF_BEFORE_NATIVE",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -77,5 +81,15 @@
   ],
   "x-sourceReview": "docs/reviews/R108_INDEPENDENT_SOURCE_ADMISSION_2026-10-16.md",
   "x-runtimeAdmission": "docs/reviews/probes/r108_root/source_admission.json",
-  "x-sourceCommit": "a4b1d490676b5ef9f165446a2aca33f10adb39df"
+  "x-sourceCommit": "a4b1d490676b5ef9f165446a2aca33f10adb39df",
+  "x-actualExecution": {
+    "compiles": 1,
+    "fixtureStarts": 1,
+    "nativeInvocations": 0,
+    "caseActionPosts": 0,
+    "runtimeRetries": 0,
+    "providerCalls": 0,
+    "browserProductTabs": 0,
+    "viteLaunches": 0
+  }
 }

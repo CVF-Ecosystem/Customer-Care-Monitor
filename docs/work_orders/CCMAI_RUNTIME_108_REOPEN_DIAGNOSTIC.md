@@ -1,6 +1,6 @@
 # R108 bounded REOPEN native diagnosis
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 dispatchKind: INITIAL
 Worker: /root/r108_browser_luna (Luna Max, IMPLEMENTATION_WORKER)
@@ -61,3 +61,7 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 
 
 Material-SHA marker:86cee15ac68c315c2bb16f9ba6b25566831bfcc7. Seed committed before BUILD; source admission is still pending.
+
+## Independent execution disposition
+
+docs/reviews/R108_INDEPENDENT_RUNTIME_HOLD_REVIEW_2026-10-16.md returns CHANGES_REQUIRED: compile1/fixture1/native0/POST0; supervisor HOLD before native. Root exact fixture exited/protection-safe equality verified; original cleanup inconsistencies retained. No replay or source edit under spent108.

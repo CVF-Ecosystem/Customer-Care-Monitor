@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-108",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R108_REOPEN_DIAGNOSTIC_2026-10-16.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-108 BUILD admitted one native diagnostic: independently reviewed/pinned Luna source committed; source_admission.json binds source commit/test/runner/seed/order/Go. After committed admission and worker acknowledgment run one compile/one exact existing fixture start/one native invocation,max4actionPOSTs,total600s,retries0, owned cleanup and full evidence return; no production patch/listener/Vite/provider/install. Root connected browser HTTP/control/PNG PASS; worker has no browser role. Preserve R107 spent and R102/user resources; subsequent UI wording/B06/B08-B10 remains separately bounded. Dashboard3/fullM2/M3/pilot/release OPEN, Facebook/ZaloOA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-108 REVIEW / CHANGES_REQUIRED, order BLOCKED_WITH_REASON: compile1/fixture1 spent, native0/actionPOST0, early-EOF readiness HOLD; cleanup validator rejected deprecation banner, Root independently confirms exact fixture exited/protected safe fields equal. Preserve original receipts/seed/budgets and current binary cb73ee13e0369cca75ea276cc668f30c3ced42cead5f62c56d68f3c1eaa66f93. Owner audit/self-handle grant covers bounded R109 product successor: no Go recompile, new supervisor readiness/cleanup + UI-language repair, one native then connected Root browser UI phase under new committed finite authority. No R108 replay/provider/install/user-resource changes; browser failure stops. Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r108_browser_luna Luna Max IMPLEMENTATION_WORKER, source-only until admission.",
+  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna Max implementation worker returned blocked/idle, no further R108 runtime authority.",
   "updatedAt": "2026-10-16",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {
@@ -2097,13 +2097,13 @@
     "instruction": "cho phép bạn audit và tự xử lý để có kết quả cần thiết. trường hợp chạy browser trong môi trường runtime không được thì dừng, báo tôi chuyển agent khác làm. chú ý: ngôn ngữ thể hiện trên ui/ux, ko để xuất hiện ngôn ngữ của Dev",
     "scope": "Owner authorizes audit and necessary bounded handling toward pending REOPEN/UI outcome; Root must prepare current authority/build/evidence contract, not reset old seeds or budgets.",
     "stopCondition": "If runtime browser cannot operate, stop and ask owner to transfer execution to a connected agent; no alternate automation stack or runtime blind retry.",
-    "status": "AUTHORIZED_SOURCE_DISPATCH_RUNTIME_PENDING_ADMISSION",
+    "status": "OWNER_AUDIT_HANDLING_ACTIVE_R108_SPENT_R109_PREPARATION",
     "handoff": "docs/reviews/R107_R108_BROWSER_STOP_HANDOFF_2026-10-16.md"
   },
   "x-ownerUiLanguageDirective": {
     "date": "2026-10-16",
     "source": "Explicit owner UI/UX instruction",
     "requirement": "All product-facing labels, statuses, instructions and error messages must use language understandable to end users. Do not expose developer jargon, raw API/enum/error codes, stack traces, runtime/tooling/governance implementation details in ordinary UI flows. Keep technical diagnostics in evidence/logs.",
-    "verification": "Audit in intended scope and verify rendered UI when a supported browser is available; not yet audited/fixed in this stopped session."
+    "verification": "R108 source audit findings recorded; bounded R109 repair and rendered verification pending."
   }
 }
