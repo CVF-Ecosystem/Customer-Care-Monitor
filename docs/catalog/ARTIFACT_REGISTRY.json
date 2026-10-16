@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R109_HUMAN_UI_2026-10-16.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R110_REMAINING_UI_2026-10-17.md",
       "status": "ACTIVE",
-      "description": "R109 interrupted partial current-source evidence; browser transfer required, language findings and full acceptance OPEN."
+      "description": "R110 renewed remaining UI and plain-language source-only dispatch; runtime not admitted."
     },
     {
       "id": "r060-work-order",
@@ -19078,6 +19078,69 @@
       "path": "docs/reviews/probes/r109_root/final_workspace_doctor_recheck.stdout.txt",
       "status": "ACTIVE",
       "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r110-c35c8174c199cf5e29",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-110.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-4f56a9309c16cb3598",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-110.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-1c8e02ac2e0bce1b44",
+      "family": "continuity",
+      "path": "docs/reviews/LUNA_RECONNECT_CAPABILITY_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-a37ee99e84a56773bc",
+      "family": "continuity",
+      "path": "docs/reviews/probes/luna_reconnect_20261017/capability_inventory.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-4aab84a1a792614120",
+      "family": "continuity",
+      "path": "docs/reviews/probes/root_luna_reconnect_20261017/after_click.png",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-f3cd3e1f27b57b6b72",
+      "family": "continuity",
+      "path": "docs/reviews/probes/root_luna_reconnect_20261017/ready.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-1033c7ba6118819e2b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/root_luna_reconnect_20261017/result.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-6ab56a8e7b5d43030c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/root_luna_reconnect_20261017/stop.request",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-73b8b496db10f097f6",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_110_REMAINING_UI.md",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
     }
   ]
 }

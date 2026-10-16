@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-110",
+  "authorityKind": "DISPATCHER_OWNED_RENEWED_REMAINING_UI_AND_PLAIN_LANGUAGE",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "/root/r108_browser_luna",
+    "reviewer": "Codex /root",
+    "commitSteward": "Codex /root",
+    "closer": "Codex /root"
+  },
+  "allowedPaths": [
+    "frontend/src/views/Dashboard.vue",
+    "frontend/src/i18n/vi.ts",
+    "frontend/src/i18n/en.ts",
+    "frontend/src/__tests__/dashboard-service-status.spec.ts",
+    "frontend/src/__tests__/intervention-presentation.test.ts",
+    "docs/reviews/R110_*.md",
+    "docs/reviews/probes/r110_root/**",
+    "docs/reviews/probes/r110_luna/**",
+    ".cvf/runtime/r110_workflow/**",
+    "docs/work_orders/CCMAI_RUNTIME_110_REMAINING_UI.md",
+    "docs/reviews/probes/root_luna_reconnect_20261017/**",
+    "docs/reviews/probes/luna_reconnect_20261017/**",
+    "docs/reviews/LUNA_RECONNECT_CAPABILITY_2026-10-17.md",
+    "frontend/src/views/Jobs/JobDetail.vue"
+  ],
+  "prohibitedEffects": [
+    "provider/mock-governance/secret/customer/channel access",
+    "production backend/Core/gate/dependency/global config changes",
+    "modify old seeds/budgets/receipts/source/binary or call R108 again",
+    "Docker create/recreate/pull/prune/compose; mutate R102/user app/DB",
+    "new Go compile, alternate browser automation, policy bypass",
+    "worker commit/seed edit/self-review/push/deploy/FREEZE"
+  ],
+  "executionBudget": {
+    "goCompiles": 0,
+    "frontendTestInvocations": 2,
+    "frontendTypecheckInvocations": 2,
+    "existingFixtureStarts": 1,
+    "nativeInvocations": 0,
+    "nativeActionPosts": 0,
+    "backendListenerLaunches": 1,
+    "viteLaunches": 1,
+    "productTabs": 3,
+    "uiPostSubmissionsIncludingAuth": 8,
+    "campaignSeconds": 1200,
+    "runtimeRetries": 0,
+    "newFixtures": 0,
+    "providerCalls": 0,
+    "mockCalls": 0
+  },
+  "worker": "/root/r108_browser_luna",
+  "claimScope": "Remaining B07 and supported B08/B09 only, rendered wording correction; inherit R109 B01-B06/B10 with source qualifications; no full product/governance acceptance",
+  "ownerAuthority": "Owner explicitly renews Luna execution: ban dang lam tot ma? giao lai luna chay nhu khi nay xem. Root actual integrated HTTP click/screenshot PASS this session; Luna is source/supervisor worker and Root browser operator as before. Fresh R110 scope, no old budget reset. Stop on actual browser failure.",
+  "fixture": {
+    "container": "e1555e03d69360e1cd7729afd9e52856443f5172d76454653beec981a7d6477a",
+    "image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "volume": "ccmai-r101-review-final-20261015",
+    "network": "35c3959ac41517050defad05cbad7a08717b24c8879683e25baf3e2702625e98",
+    "label": "CCMAI-RUNTIME-101",
+    "db": "r101_fixture"
+  },
+  "dockerExe": "C:/Users/tiennm/AppData/Local/Programs/DockerDesktop/resources/bin/docker.exe",
+  "dockerHost": "npipe:////./pipe/dockerDesktopLinuxEngine",
+  "dockerSha256": "6c699720bb9523dedb9eb5d22a49951ea9210dbdb1314a3554029eee9be76896",
+  "entryDecision": "Fresh owner renewal -> reviewed source language repairs -> focused validation -> independent runtime admission. One existing fixture/backend/Vite campaign, native0, Go0, retries0. Preserve all R109 interruption evidence and spent budgets.",
+  "compiledBackend": {
+    "path": ".cvf/runtime/r108_native/campaign/r108_handlers.test.exe",
+    "sha256": "cb73ee13e0369cca75ea276cc668f30c3ced42cead5f62c56d68f3c1eaa66f93",
+    "bytes": 58031616,
+    "reviewedSourceCommit": "a4b1d490676b5ef9f165446a2aca33f10adb39df",
+    "compileExecutionHead": "b4a53d4b9fb63c3073b880eb9c7e3e8e6510eafa",
+    "requireNoBackendDelta": true
+  },
+  "nodeExe": "C:/Program Files/nodejs/node.exe",
+  "nodeSha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+  "browserOperator": "Codex /root",
+  "browserTool": "mcp__cua_repl",
+  "browserSurface": "iab",
+  "status": "BUILD",
+  "phase": "BUILD",
+  "baseCommit": "90d703e5cdd44b8d86dd74fe89c33cd620988d08",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_110_REMAINING_UI.md",
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "ACTIVE",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "SOURCE_PREPARATION_RUNTIME_NOT_ADMITTED",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ]
+}

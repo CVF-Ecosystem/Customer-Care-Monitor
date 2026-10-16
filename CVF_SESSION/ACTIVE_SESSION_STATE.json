@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,11 +12,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-109",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R109_HUMAN_UI_2026-10-16.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-109 CHANGES_REQUIRED after interrupted single campaign: native/current B01-B06 and B10 functional PASS; B07/B08/B09 NOT_RUN, source-copy/shell language findings OPEN. Original supervisor finalization missing; separate Root exact-fixture recovery PASS/protected unchanged, tab closure NOT_OBSERVED. STOP runtime/browser here per owner; transfer preserved packet to another stable connected agent with fresh bounded source/build authority. R109 spent fixture/native/backend/Vite1 each, native4/UI11POST, Go0/retry0; no replay or unused-slot reuse. No FREEZE/full product acceptance; Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, accounts parked.",
+  "activeTranche": "CCMAI-RUNTIME-110",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R110_REMAINING_UI_2026-10-17.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-110 BUILD source-only after renewed owner Luna grant and Root integrated HTTP click/capture PASS. Pre-dispatch active closeability PASS; Luna repairs four UI source files and prepares new supervisor, no runtime until committed independent admission. B07 then supported B08/B09 only; inherit R109 partial evidence without replay. Native0/Go0/provider0/retries0; old budgets immutable. Dashboard3/full product/pilot/release OPEN, R102 local FROZEN, accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r108_browser_luna Luna Max returned BLOCKED_WITH_REASON and stopped; no active runtime or browser execution.",
+  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r108_browser_luna Luna Max capability returned no browser, proposed source/supervisor worker; Root connected browser operator.",
   "updatedAt": "2026-10-17",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {

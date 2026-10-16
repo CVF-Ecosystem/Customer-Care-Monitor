@@ -2,27 +2,20 @@
 
 Memory class: POINTER_RECORD
 
-This is the project continuity front door. It is CVF-governed project state,
-not provider-specific memory and not a chat transcript.
-
-Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it must match
-`CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
-`IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
-
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R109_HUMAN_UI_2026-10-16.md", "activeTranche": "CCMAI-RUNTIME-109", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R110_REMAINING_UI_2026-10-17.md", "activeTranche": "CCMAI-RUNTIME-110", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R109_HUMAN_UI_2026-10-16.md
+- Current mode: BUILD
+- Active phase: BUILD
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R110_REMAINING_UI_2026-10-17.md
 
-CCMAI-RUNTIME-109 CHANGES_REQUIRED after interrupted single campaign: native/current B01-B06 and B10 functional PASS; B07/B08/B09 NOT_RUN, source-copy/shell language findings OPEN. Original supervisor finalization missing; separate Root exact-fixture recovery PASS/protected unchanged, tab closure NOT_OBSERVED. STOP runtime/browser here per owner; transfer preserved packet to another stable connected agent with fresh bounded source/build authority. R109 spent fixture/native/backend/Vite1 each, native4/UI11POST, Go0/retry0; no replay or unused-slot reuse. No FREEZE/full product acceptance; Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, accounts parked.
+CCMAI-RUNTIME-110 BUILD source-only after renewed owner Luna grant and Root integrated HTTP click/capture PASS. Pre-dispatch active closeability PASS; Luna repairs four UI source files and prepares new supervisor, no runtime until committed independent admission. B07 then supported B08/B09 only; inherit R109 partial evidence without replay. Native0/Go0/provider0/retries0; old budgets immutable. Dashboard3/full product/pilot/release OPEN, R102 local FROZEN, accounts parked.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r108_browser_luna Luna Max returned BLOCKED_WITH_REASON and stopped; no active runtime or browser execution.
+Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r108_browser_luna Luna Max capability returned no browser, proposed source/supervisor worker; Root connected browser operator.
 
-Mandatory pre-dispatch learning: [docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md](docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md). Read before any similar UI/browser assignment; unknown readiness is HOLD, not a speculative dispatch. Corrected draft is not executable authority.
+Mandatory pre-dispatch learning: docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md. R109 interrupted packet stays unchanged.
 
 ## Historical R100 bounded real result before M3 dispatch
 

@@ -1,6 +1,6 @@
 # R109 human UI product completion
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 - Project: Customer-Care-Monitor-AI

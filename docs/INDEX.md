@@ -15,7 +15,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- R109 interrupted partial current-source evidence; browser transfer required, language findings and full acceptance OPEN.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R109_HUMAN_UI_2026-10-16.md`
+- R110 renewed remaining UI and plain-language source-only dispatch; runtime not admitted.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R110_REMAINING_UI_2026-10-17.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -2162,6 +2162,15 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0097.json`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_012_target_inspect.json`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/runtime_admission_preflight.stderr.txt`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/root_luna_reconnect_20261017/result.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/LUNA_RECONNECT_CAPABILITY_2026-10-17.md`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/root_luna_reconnect_20261017/after_click.png`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `CVF_SESSION/tranches/CCMAI-RUNTIME-110.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/root_luna_reconnect_20261017/stop.request`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/work_orders/CCMAI_RUNTIME_110_REMAINING_UI.md`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/luna_reconnect_20261017/capability_inventory.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `CVF_SESSION/authority/CCMAI-RUNTIME-110.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/root_luna_reconnect_20261017/ready.json`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

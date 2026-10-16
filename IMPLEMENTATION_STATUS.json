@@ -38,7 +38,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "BUILD",
   "completedCapabilities": [
     "R094 bounded M2 source/local manual synthetic intervention prototype independently reviewed: authenticated route, snapshot evidence, monotonic call admission, queue/detail and failure handling; real provider0, default app disabled, full M2/M3/pilot OPEN. docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
@@ -2015,7 +2015,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-109",
+  "activeTranche": "CCMAI-RUNTIME-110",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
@@ -2031,7 +2031,9 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [],
+  "activeWorkOrders": [
+    "docs/work_orders/CCMAI_RUNTIME_110_REMAINING_UI.md"
+  ],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -2792,5 +2794,12 @@
     "nextAction": "CCMAI-RUNTIME-109 CHANGES_REQUIRED after interrupted single campaign: native/current B01-B06 and B10 functional PASS; B07/B08/B09 NOT_RUN, source-copy/shell language findings OPEN. Original supervisor finalization missing; separate Root exact-fixture recovery PASS/protected unchanged, tab closure NOT_OBSERVED. STOP runtime/browser here per owner; transfer preserved packet to another stable connected agent with fresh bounded source/build authority. R109 spent fixture/native/backend/Vite1 each, native4/UI11POST, Go0/retry0; no replay or unused-slot reuse. No FREEZE/full product acceptance; Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, accounts parked.",
     "sourceCommit": "5ab60830368482e072cb0150a7894235ca950c24",
     "review": "docs/reviews/R109_INDEPENDENT_INTERRUPTED_REVIEW_2026-10-17.md"
+  },
+  "x-r110Current": {
+    "status": "BUILD_SOURCE_ONLY",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_110_REMAINING_UI.md",
+    "handoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R110_REMAINING_UI_2026-10-17.md",
+    "nextAction": "CCMAI-RUNTIME-110 BUILD source-only after renewed owner Luna grant and Root integrated HTTP click/capture PASS. Pre-dispatch active closeability PASS; Luna repairs four UI source files and prepares new supervisor, no runtime until committed independent admission. B07 then supported B08/B09 only; inherit R109 partial evidence without replay. Native0/Go0/provider0/retries0; old budgets immutable. Dashboard3/full product/pilot/release OPEN, R102 local FROZEN, accounts parked.",
+    "runtime": "NOT_RUN_NOT_ADMITTED"
   }
 }
