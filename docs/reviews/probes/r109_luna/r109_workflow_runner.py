@@ -187,7 +187,10 @@ def verify_committed_file(root: Path, helper: Any, relative: str, expected_hash:
     actual = sha256_file(path)
     require(actual == expected_hash, f"workspace source pin mismatch: {relative}")
     blob = run_git(root, helper, "show", f"{commit}:{relative}", deadline=deadline)
-    require(blob == path.read_bytes(), f"committed bytes differ from workspace: {relative}")
+    physical = path.read_bytes()
+    # Keep the physical-byte pin exact above; compare Git's text representation
+    # with only the permitted UTF-8 CRLF-to-LF normalization.
+    require(normalize_text(blob) == normalize_text(physical), f"committed text differs from workspace: {relative}")
 
 
 def verify_admission(root: Path, *, deadline: float | None = None) -> tuple[dict[str, Any], Any, Path, Path, Path, str]:
@@ -269,7 +272,7 @@ def verify_admission(root: Path, *, deadline: float | None = None) -> tuple[dict
     for relative, expected in source_pins.items():
         verify_committed_file(root, helper, relative, expected, commit="HEAD", deadline=deadline)
         source_blob = run_git(root, helper, "show", f"{admission_source_commit}:{relative}", deadline=deadline)
-        require(source_blob == (root / relative).read_bytes(), f"source differs from reviewed commit: {relative}")
+        require(normalize_text(source_blob) == normalize_text((root / relative).read_bytes()), f"source text differs from reviewed commit: {relative}")
     source_status = run_git(root, helper, "status", "--porcelain", "--untracked-files=all", "--", *PINNED_SOURCE_PATHS, deadline=deadline)
     require(not source_status.strip(), "reviewed UI/supervisor sources are not clean")
 

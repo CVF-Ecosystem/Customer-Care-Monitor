@@ -1,0 +1,17 @@
+{
+  "recordedAtUTC": "2026-10-16T17:09:53.692712+00:00",
+  "result": "FAIL",
+  "stage": "READ_ONLY_COMMITTED_ADMISSION_CHECK",
+  "errorType": "Hold",
+  "error": "committed bytes differ from workspace: frontend/src/i18n/vi.ts",
+  "errorRepresentation": "Exact error transcribed from actual tool exception; full trace remains in tool transcript",
+  "head": "b4bcc8a78cc7adb36c4905c88d0fa2d81070f849",
+  "path": "frontend/src/i18n/vi.ts",
+  "workspaceSHA256": "e54f809098605e3d36f3f538875e406e0e17d387613ff7a4db161ab7cd66de8a",
+  "gitBlobSHA256": "001b744e2b4f0d962e5df9a267730ec5112702f641a466e88d5df010d3cd8f53",
+  "differentBytes": true,
+  "crlfOnlyDifference": true,
+  "runtimeSlotUsed": false,
+  "fixtureStarts": 0,
+  "nativeInvocations": 0
+}

@@ -62,3 +62,13 @@ Dashboard baseline and broader product acceptance remain open.
 
 This admits the bounded execution only. Native and product UI results are
 NOT_RUN at this review; no FREEZE, release or worker self-approval.
+
+## Pre-start text representation correction — 2026-10-17
+
+The first read-only committed check stopped on the locale's physical CRLF vs
+Git LF representation, before the campaign slot was created. Root accepted
+the independently reviewed two-comparison repair in
+R109_NEWLINE_REPRESENTATION_REVIEW_2026-10-17.md and targeted checks in
+newline_validation.json. Exact physical hashes stay mandatory. The current
+admission must point to the repaired source; the initial admission is retained
+as runtime_admission_initial.json. No fixture or native budget was consumed.
