@@ -1,6 +1,6 @@
 # R107 repaired historical R101 UI campaign
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 - Project: Customer-Care-Monitor-AI
@@ -30,3 +30,5 @@ Fresh rehydration and doctor27PASS/historical pin warning. Root ORCHESTRATOR/SPE
 ## Owner authority and runtime-browser stop — 2026-10-16
 
 Owner authorizes audit and necessary handling without repeated same-scope confirmation, but explicitly requires STOP and transfer if runtime browser fails. Fresh rehydration/doctor27PASS (historical Core pin warning) and Root declaration preceded probe. Actual CUA inventory apps[]/browsers[]; about:blank creation returned `Browser is not available: iab`. STOP before any new source/compile/fixture/backend/Vite/native replay. No substitute stack, install, app restart or further browser retry. docs/reviews/R107_R108_BROWSER_STOP_HANDOFF_2026-10-16.md and docs/reviews/probes/r107_root/r108_browser_capability_stop.json preserve this boundary. Receiving agent must prove its own connected runtime browser; no repeat owner permission for this grant. R108 remains without dispatched seed/order. UI/UX language directive is mandatory: end-user wording, no Dev jargon/raw codes; no language audit/fix is claimed in this stopped session.
+
+Routing superseded by CVF_SESSION/handoffs/AGENT_HANDOFF_R108_REOPEN_DIAGNOSTIC_2026-10-16.md; R107 remains blocked/spent and original evidence immutable.

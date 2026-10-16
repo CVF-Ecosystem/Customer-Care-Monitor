@@ -9,18 +9,18 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R107_R101_UI_2026-10-16.md", "activeTranche": "CCMAI-RUNTIME-107", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R108_REOPEN_DIAGNOSTIC_2026-10-16.md", "activeTranche": "CCMAI-RUNTIME-108", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R107_R101_UI_2026-10-16.md
+- Current mode: BUILD
+- Active phase: BUILD
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R108_REOPEN_DIAGNOSTIC_2026-10-16.md
 
-CCMAI-RUNTIME-107 REVIEW / CHANGES_REQUIRED; R108 owner-authorized audit/handling is HOLD before dispatch. Current integrated browser getState apps[]/browsers[] and createBrowserTab(iab,about:blank) returned Browser is not available: iab; obey owner STOP, transfer to another browser-connected agent. No fixture/backend/Vite/compile/native replay/source edit started, no workaround/retry. Receiving agent inherits owner authority without repeat permission, rehydrates and proves its own supported runtime browser before bounded R108 admission. UI/UX must use user-facing language, no developer jargon/raw internal errors. Historical UI6PASS/1FAIL/3NOT_RUN, REOPEN cause unknown, old budgets/seeds unchanged; Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked.
+CCMAI-RUNTIME-108 BUILD source preparation only: current Root HTTP/control/PNG PASS and Luna Max capability check underway. Seed/base86cee15ac68c315c2bb16f9ba6b25566831bfcc7; worker /root/r108_browser_luna prepares one opt-in diagnostic test/supervisor, then Root independently reviews and commits source admission before compile/fixture/native effects. Budget1compile/1fixture/1native/4actionPOSTs/600s/retries0; no production patch/browser product/Vite/provider/install. Preserve R107 spent/baseline and R102/user resources. UI/UX end-user wording mandatory; Dashboard3/fullM2/M3/pilot/release OPEN, Facebook/ZaloOA parked.
 
-Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna Max UI evidence worker returned blocked/idle, no further runtime authority.
+Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r108_browser_luna Luna Max IMPLEMENTATION_WORKER, source-only until admission.
 
 Mandatory pre-dispatch learning: [docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md](docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md). Read before any similar UI/browser assignment; unknown readiness is HOLD, not a speculative dispatch. Corrected draft is not executable authority.
 

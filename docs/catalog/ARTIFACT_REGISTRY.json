@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R107_R101_UI_2026-10-16.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R108_REOPEN_DIAGNOSTIC_2026-10-16.md",
       "status": "ACTIVE",
-      "description": "Current R107 partial historical UI review:6PASS/1FAIL/3NOT_RUN; spent runtime, read-only REOPEN diagnosis and DRAFT R108 proposal, no renewed execution authority."
+      "description": "R108 bounded REOPEN diagnostic; source-only BUILD, runtime pending independent admission; original UI partial and UI-language requirement retained."
     },
     {
       "id": "r060-work-order",
@@ -14673,6 +14673,20 @@
       "id": "r107-a9f46671735caebe0a",
       "family": "continuity",
       "path": "docs/reviews/probes/r107_root/r108_connected/root_http_clicked.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r108-ceb2bdfa56781fcb29",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-108.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r108-fb3b8ae5a6c8162ab8",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-108.json",
       "status": "ACTIVE",
       "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
     }

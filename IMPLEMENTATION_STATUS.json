@@ -38,7 +38,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "BUILD",
   "completedCapabilities": [
     "R094 bounded M2 source/local manual synthetic intervention prototype independently reviewed: authenticated route, snapshot evidence, monotonic call admission, queue/detail and failure handling; real provider0, default app disabled, full M2/M3/pilot OPEN. docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
@@ -2015,7 +2015,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-107",
+  "activeTranche": "CCMAI-RUNTIME-108",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
@@ -2031,7 +2031,9 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [],
+  "activeWorkOrders": [
+    "docs/work_orders/CCMAI_RUNTIME_108_REOPEN_DIAGNOSTIC.md"
+  ],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -2595,7 +2597,7 @@
     "nextGate": "Separate SPEC/work order for actual AI executor/integration or M1 business decisions",
     "actualRerun": "OPEN_EXECUTOR_NOT_INCLUDED"
   },
-  "x-activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R107_R101_UI_2026-10-16.md",
+  "x-activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R108_REOPEN_DIAGNOSTIC_2026-10-16.md",
   "x-ownerRepairContinuation": "CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json",
   "x-r102Current": {
     "status": "FROZEN_LOCAL_ONLY",
@@ -2762,5 +2764,12 @@
     "source": "Explicit owner UI/UX instruction",
     "requirement": "All product-facing labels, statuses, instructions and error messages must use language understandable to end users. Do not expose developer jargon, raw API/enum/error codes, stack traces, runtime/tooling/governance implementation details in ordinary UI flows. Keep technical diagnostics in evidence/logs.",
     "verification": "Audit in intended scope and verify rendered UI when a supported browser is available; not yet audited/fixed in this stopped session."
+  },
+  "x-r108Current": {
+    "status": "BUILD_SOURCE_ONLY",
+    "seedCommit": "86cee15ac68c315c2bb16f9ba6b25566831bfcc7",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_108_REOPEN_DIAGNOSTIC.md",
+    "runtime": "NOT_RUN_UNCONSUMED",
+    "nextAction": "CCMAI-RUNTIME-108 BUILD source preparation only: current Root HTTP/control/PNG PASS and Luna Max capability check underway. Seed/base86cee15ac68c315c2bb16f9ba6b25566831bfcc7; worker /root/r108_browser_luna prepares one opt-in diagnostic test/supervisor, then Root independently reviews and commits source admission before compile/fixture/native effects. Budget1compile/1fixture/1native/4actionPOSTs/600s/retries0; no production patch/browser product/Vite/provider/install. Preserve R107 spent/baseline and R102/user resources. UI/UX end-user wording mandatory; Dashboard3/fullM2/M3/pilot/release OPEN, Facebook/ZaloOA parked."
   }
 }
