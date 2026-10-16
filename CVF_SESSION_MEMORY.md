@@ -9,18 +9,18 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R108_REOPEN_DIAGNOSTIC_2026-10-16.md", "activeTranche": "CCMAI-RUNTIME-108", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R109_HUMAN_UI_2026-10-16.md", "activeTranche": "CCMAI-RUNTIME-109", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R108_REOPEN_DIAGNOSTIC_2026-10-16.md
+- Current mode: BUILD
+- Active phase: BUILD
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R109_HUMAN_UI_2026-10-16.md
 
-CCMAI-RUNTIME-108 REVIEW / CHANGES_REQUIRED, order BLOCKED_WITH_REASON: compile1/fixture1 spent, native0/actionPOST0, early-EOF readiness HOLD; cleanup validator rejected deprecation banner, Root independently confirms exact fixture exited/protected safe fields equal. Preserve original receipts/seed/budgets and current binary cb73ee13e0369cca75ea276cc668f30c3ced42cead5f62c56d68f3c1eaa66f93. Owner audit/self-handle grant covers bounded R109 product successor: no Go recompile, new supervisor readiness/cleanup + UI-language repair, one native then connected Root browser UI phase under new committed finite authority. No R108 replay/provider/install/user-resource changes; browser failure stops. Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked.
+CCMAI-RUNTIME-109 BUILD source-only product completion under existing owner grant: Luna repairs intervention UI wording/history and new supervisor readiness/cleanup; Root independent source review and focused cached validation before committed runtime admission. Reuse current backend binarycb73ee13, Go0; one shared fixture/native/backend/Vite campaign2100s/retries0, native4POST/UI14POST/max3tabs. Root connected browser owns UI; worker no browser role. Preserve R108 spent/failed receipts and all old seeds/budgets. Actual browser failure stops for owner transfer. Dashboard3/fullM2/M3/pilot/release OPEN; R102 local FROZEN, accounts parked.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna Max implementation worker returned blocked/idle, no further R108 runtime authority.
+Codex /root ORCHESTRATOR / independent REVIEWER / connected browser verification / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r108_browser_luna Luna Max IMPLEMENTATION_WORKER source-only until admission.
 
 Mandatory pre-dispatch learning: [docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md](docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md). Read before any similar UI/browser assignment; unknown readiness is HOLD, not a speculative dispatch. Corrected draft is not executable authority.
 

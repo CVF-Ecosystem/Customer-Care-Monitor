@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,11 +12,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-108",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R108_REOPEN_DIAGNOSTIC_2026-10-16.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-108 REVIEW / CHANGES_REQUIRED, order BLOCKED_WITH_REASON: compile1/fixture1 spent, native0/actionPOST0, early-EOF readiness HOLD; cleanup validator rejected deprecation banner, Root independently confirms exact fixture exited/protected safe fields equal. Preserve original receipts/seed/budgets and current binary cb73ee13e0369cca75ea276cc668f30c3ced42cead5f62c56d68f3c1eaa66f93. Owner audit/self-handle grant covers bounded R109 product successor: no Go recompile, new supervisor readiness/cleanup + UI-language repair, one native then connected Root browser UI phase under new committed finite authority. No R108 replay/provider/install/user-resource changes; browser failure stops. Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked.",
+  "activeTranche": "CCMAI-RUNTIME-109",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R109_HUMAN_UI_2026-10-16.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-109 BUILD source-only product completion under existing owner grant: Luna repairs intervention UI wording/history and new supervisor readiness/cleanup; Root independent source review and focused cached validation before committed runtime admission. Reuse current backend binarycb73ee13, Go0; one shared fixture/native/backend/Vite campaign2100s/retries0, native4POST/UI14POST/max3tabs. Root connected browser owns UI; worker no browser role. Preserve R108 spent/failed receipts and all old seeds/budgets. Actual browser failure stops for owner transfer. Dashboard3/fullM2/M3/pilot/release OPEN; R102 local FROZEN, accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna Max implementation worker returned blocked/idle, no further R108 runtime authority.",
+  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / connected browser verification / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r108_browser_luna Luna Max IMPLEMENTATION_WORKER source-only until admission.",
   "updatedAt": "2026-10-16",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {

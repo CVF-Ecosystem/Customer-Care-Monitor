@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R108_REOPEN_DIAGNOSTIC_2026-10-16.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R109_HUMAN_UI_2026-10-16.md",
       "status": "ACTIVE",
-      "description": "R108 bounded REOPEN diagnostic; source-only BUILD, runtime pending independent admission; original UI partial and UI-language requirement retained."
+      "description": "R109 human UI language and bounded current-source native/browser completion; source-only until admission, old evidence retained."
     },
     {
       "id": "r060-work-order",
@@ -15389,6 +15389,20 @@
       "path": "docs/reviews/probes/r108_root/final_reviewer_fast.stdout.txt",
       "status": "ACTIVE",
       "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r109-e84f2ca41ddf84ecd3",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-109.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-aa998be2207b6efc20",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_109_HUMAN_UI_COMPLETION.md",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
     }
   ]
 }

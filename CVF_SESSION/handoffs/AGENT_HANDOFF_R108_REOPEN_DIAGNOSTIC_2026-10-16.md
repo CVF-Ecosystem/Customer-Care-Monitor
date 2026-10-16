@@ -1,6 +1,6 @@
 # R108 bounded REOPEN diagnostic
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 - Project: Customer-Care-Monitor-AI
@@ -22,3 +22,5 @@ Root re-read current108 canonical continuity and reviewed both final source file
 ## Root independent runtime HOLD review
 
 Root independent review docs/reviews/R108_INDEPENDENT_RUNTIME_HOLD_REVIEW_2026-10-16.md accepts honest blocked evidence, no native result/product fix. compile1/fixture1/native0/POST0, no retries. Root corroborates fixture exited and protected safe fields equal without another stop/start. Root missed early-EOF readiness and deprecated --time output handling in source review; failures retained. Binary current-source build preserved and reusable only under bounded successor. Root transitions to SESSION_SYNC_STEWARD/COMMIT_STEWARD for blocked evidence, then ORCHESTRATOR/WORK_ORDER_AUTHOR for granted product-focused R109 route (UI wording + native/browser proof), no repeated owner approval, no seed/counter reset.
+
+Routing superseded by CVF_SESSION/handoffs/AGENT_HANDOFF_R109_HUMAN_UI_2026-10-16.md; R108 remains blocked/spent with original receipts unchanged.
