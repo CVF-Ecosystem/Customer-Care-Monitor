@@ -1,0 +1,13 @@
+{
+  "reviewer": "Codex /root",
+  "sourceCandidateAuthor": "/root/r108_browser_luna",
+  "sourcePins": {
+    "backend/api/handlers/intervention_reopen_r108_test.go": "f4adcee0e5b811743caebda15f77b63a88495f925652a13ce0ef51ece6aa2a7f",
+    "docs/reviews/probes/r108_luna/r108_native_runner.py": "899afa92934dede2d99d28d591bc4232d29a52f764d10f8420588e8e940fb138"
+  },
+  "staticPythonAST": "PASS",
+  "actualDockerTemplates": "PASS unchanged from recorded inspection",
+  "goVersionObserved": "go1.27.0 windows/amd64",
+  "nativeRuntime": "NOT_RUN",
+  "sourceCompiles": 0
+}

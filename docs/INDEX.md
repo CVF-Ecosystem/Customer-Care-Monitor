@@ -1533,8 +1533,21 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent Root source receipt; browser unavailable, campaign unconsumed.: `docs/reviews/probes/r107_root/source_review_receipt.json`
 - Exact captured source/module/check evidence before Git normalization.: `docs/reviews/probes/r107_root/captured_candidate_evidence.zip`
 - Root source/module review; actual import PASS, no runtime acceptance.: `docs/reviews/R107_SOURCE_MODULE_INDEPENDENT_REVIEW_2026-10-16.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_root/source_precommit.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_root/source_precommit.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/R108_DISPATCH_PREPARATION_NOTES_2026-10-16.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_root/reviewed_source_pins.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_root/source_preflight.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/work_orders/CCMAI_RUNTIME_108_REOPEN_DIAGNOSTIC.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_root/source_inspection.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_root/source_preflight.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/R108_UI_LANGUAGE_SOURCE_AUDIT_2026-10-16.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_root/source_precommit.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/r108_native_runner.py`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `CVF_SESSION/authority/CCMAI-RUNTIME-108.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_root/source_preflight.json`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `CVF_SESSION/tranches/CCMAI-RUNTIME-108.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/R108_INDEPENDENT_SOURCE_ADMISSION_2026-10-16.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`
