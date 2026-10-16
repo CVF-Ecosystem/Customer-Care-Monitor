@@ -68,18 +68,19 @@
   "historicalResourcePolicy": "Only existing R101 container/image/volume/network identities pinned by reviewed runner; fresh synthetic tenant/case/migration in that disposable fixture admitted once. No old readiness/counters/baseline rewrite, no third fixture. Preserve original R104 tab/no reuse/no closure claim.",
   "runtimePinsRepresentation": "Captured current workspace bytes for five exact pins; immutable seed content UTF8_LF; recheck after checkout.",
   "claimLimits": "B01-B10 observations only, static gates not runtime AI governance/hostedCI/full current R102 backend or M3/product acceptance. Three Dashboard baseline failures OPEN; no worker source repair/self-approval/commit.",
-  "status": "BUILD",
+  "status": "BUILD_BLOCKED",
   "phase": "BUILD",
   "baseCommit": "760726e691114a85af315ab5823112375c6af570",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md",
   "buildCommit": null,
   "reviewEvidence": [],
-  "disposition": "PENDING",
+  "disposition": "BLOCKED_BROWSER_SURFACE_UNAVAILABLE",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "BUILD_BLOCKED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -89,7 +90,7 @@
   ],
   "dispatcher": "Codex /root",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
   "x-sourceReview": "docs/reviews/R105_RUNNER_INDEPENDENT_SOURCE_REVIEW_2026-10-16.md",
   "x-actualExecution": {
     "fixtureStarts": 0,
@@ -106,5 +107,6 @@
     "activeGateApplicability": "CHECKED",
     "materialShaMarker": "760726e691114a85af315ab5823112375c6af570",
     "execution": "NOT_RUN"
-  }
+  },
+  "x-capabilityEvidence": "docs/reviews/probes/r105_root/CODEX_BROWSER_CAPABILITY_2026-10-16.json"
 }

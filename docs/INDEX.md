@@ -1156,6 +1156,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Three diagnostic artifacts verified; hashes do not authenticate tool history.: `docs/reviews/probes/r104_bridge_check/evidence_manifest.json`
 - Proposed authority candidate only; no effective seed/tranche/commit.: `docs/reviews/planning/R105_R101_UI_AUTHORITY_CANDIDATE_2026-10-16.json`
 - Sol Medium candidate/repair history and actual offline results; runtime NOT_RUN.: `docs/reviews/probes/r105_root/RUNNER_CANDIDATE_RETURN_2026-10-16.md`
+- Actual Root CUA empty inventory and unavailable iab; no product runtime or UI claim.: `docs/reviews/probes/r105_root/CODEX_BROWSER_CAPABILITY_2026-10-16.json`
+- Sol Medium routing assessment; Root-reported browser results attributed, no runtime, conditional successor only.: `docs/reviews/probes/r105_root/CODEX_WORKER_CAPABILITY_RETURN_2026-10-16.md`
 - Reviewed no-env/API-only Vite config template with owned health nonce; no server launched.: `docs/reviews/probes/r105_root/r105_vite_config.mjs.template`
 - Read-only pinned CLI/local named pipe/empty config compatibility; no fixture lifecycle.: `docs/reviews/probes/r105_dispatch_preparation/docker_readonly_binding_check.json`
 - Three actual safe-field metadata commands and source validator PASS; fixture exited.: `docs/reviews/probes/r105_dispatch_preparation/docker_format_input_verification.json`

@@ -1,5 +1,7 @@
 # R105 — prompt giao Claude thực hiện UI, authority đã chuẩn bị
 
+**HOLD 2026-10-16:** formal order is now BLOCKED_WITH_REASON following owner request for Codex/subagent execution and actual missing browser surface. Historical prompt retained; do not execute until Root issues an effective reviewed route.
+
 Đọc và thực hiện work order chính thức:
 `docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md`
 

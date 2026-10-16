@@ -18,9 +18,9 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R101_UI_R105_2026-10-16.md
 
-CCMAI-RUNTIME-105 BUILD / ACTIVE: named Claude Antigravity REVIEW_EVIDENCE_OPERATOR executes formal order docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md using reviewed supervisor once, only after verifying committed dispatch HEAD and current immutable760726e6base/Root source receipt/pins. Owner full-authority grant and active pre-dispatch closeability PASS; no further authority clarification within seed scope. New fixture0, existing fixture start1/backend1/Vite1, provider/mock/compile/build/install0, retries0, owned tabs3/actions10, backend30min/campaign35min inclcleanup. Preserve original diagnostic tab/no reuse. Return actual B01-B10 evidence/cleanup for independent Root review; runtime currently NOT_RUN, parent historical R101/full product/Dashboard3 failures OPEN, R102 local FROZEN unchanged, Facebook/Zalo OA parked.
+CCMAI-RUNTIME-105 BUILD_BLOCKED / BLOCKED_WITH_REASON: owner authorizes Codex subagent execution, but current CUA inventory has no browser and iab creation returns Browser is not available: iab. Preserve immutable105 Claude authority and unconsumed runtime; do not start fixture/backend/Vite or dispatch a substitute worker. Restore a supported browser surface, verify capability, then Root binds the authorized worker/tool through a reviewed successor before UI effects; no repeated owner approval within that grant. B01-B10 NOT_RUN, Dashboard3/fullM2/M3/pilot/release OPEN; R102 local FROZEN unchanged, Facebook/Zalo OA parked.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; named external evidence operator executes bounded UI, Root reviews return.
+Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol Medium capability adviser only, no runtime worker dispatched.
 
 Mandatory pre-dispatch learning: [docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md](docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md). Read before any similar UI/browser assignment; unknown readiness is HOLD, not a speculative dispatch. Corrected draft is not executable authority.
 

@@ -12162,6 +12162,20 @@
       "path": "docs/reviews/probes/r105_dispatch_preparation/effective_admission_validation.json",
       "status": "ACTIVE",
       "description": "Actual read-only reviewed runner admission PASS for current formal state/seed/base/pins; no runtime launched."
+    },
+    {
+      "id": "r105-codex-browser-capability",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r105_root/CODEX_BROWSER_CAPABILITY_2026-10-16.json",
+      "status": "ACTIVE",
+      "description": "Actual Root CUA empty inventory and unavailable iab; no product runtime or UI claim."
+    },
+    {
+      "id": "r105-codex-worker-capability-return",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r105_root/CODEX_WORKER_CAPABILITY_RETURN_2026-10-16.md",
+      "status": "ACTIVE",
+      "description": "Sol Medium routing assessment; Root-reported browser results attributed, no runtime, conditional successor only."
     }
   ]
 }

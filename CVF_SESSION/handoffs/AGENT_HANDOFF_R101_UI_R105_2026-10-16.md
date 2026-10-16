@@ -6,9 +6,9 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: BUILD
 - Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; named external evidence operator executes bounded UI, Root reviews return.
+- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol Medium capability adviser only, no runtime worker dispatched.
 - Active tranche: CCMAI-RUNTIME-105
-- Next allowed move: CCMAI-RUNTIME-105 BUILD / ACTIVE: named Claude Antigravity REVIEW_EVIDENCE_OPERATOR executes formal order docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md using reviewed supervisor once, only after verifying committed dispatch HEAD and current immutable760726e6base/Root source receipt/pins. Owner full-authority grant and active pre-dispatch closeability PASS; no further authority clarification within seed scope. New fixture0, existing fixture start1/backend1/Vite1, provider/mock/compile/build/install0, retries0, owned tabs3/actions10, backend30min/campaign35min inclcleanup. Preserve original diagnostic tab/no reuse. Return actual B01-B10 evidence/cleanup for independent Root review; runtime currently NOT_RUN, parent historical R101/full product/Dashboard3 failures OPEN, R102 local FROZEN unchanged, Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-105 BUILD_BLOCKED / BLOCKED_WITH_REASON: owner authorizes Codex subagent execution, but current CUA inventory has no browser and iab creation returns Browser is not available: iab. Preserve immutable105 Claude authority and unconsumed runtime; do not start fixture/backend/Vite or dispatch a substitute worker. Restore a supported browser surface, verify capability, then Root binds the authorized worker/tool through a reviewed successor before UI effects; no repeated owner approval within that grant. B01-B10 NOT_RUN, Dashboard3/fullM2/M3/pilot/release OPEN; R102 local FROZEN unchanged, Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Root WORK_ORDER acknowledgment — 2026-10-16
@@ -26,3 +26,13 @@ Fresh canonical WORK_ORDER rehydration and doctor27PASS; active pre-dispatch pro
 ## Independent dispatch peer review — 2026-10-16
 
 Sol Medium /root/dispatch_draft_review returned a read-only metadata review: seed/base, independent R2 roles, ACTIVE/BUILD mapping, pins, budgets, path/effect boundaries and active closeability PASS are consistent. Its sole dispatch HOLD was that the order/record/BUILD continuity were not yet committed at inspection time. Root added explicit committed-HEAD presence and no-drift commands to the order/prompt; Root must commit this synchronized packet and verify exact HEAD before handoff. This peer review covers static dispatch readiness only; runtime and B01-B10 remain NOT_RUN.
+
+## Owner subagent execution grant and capability stop — 2026-10-16
+
+User explicitly authorized Root execution via Luna Max or Sol Medium. Root rehydrated current continuity and doctor27PASS, then checked documented CUA before any runtime. Actual inventory apps[]/browsers[]; createBrowserTab(iab,about:blank) returned Browser is not available: iab. Native APIs disabled. See docs/reviews/probes/r105_root/CODEX_BROWSER_CAPABILITY_2026-10-16.json. Root assigned Sol Medium read-only capability/routing assessment only; no runtime dispatch or successor seed. R105 immutable worker/tool binding remains unchanged; the new grant allows a future reviewed successor without another permission loop once capability exists. All campaign counters0 and runtime dir absent; no cleanup needed because no resources created. Static dispatch acceptance atb90cf4d remains historical, superseded for execution by this factual capability HOLD.
+
+## Root independent review of capability adviser return — 2026-10-16
+
+Root reviewed docs/reviews/probes/r105_root/CODEX_WORKER_CAPABILITY_RETURN_2026-10-16.md against its own original CUA tool calls and receipt. ACCEPTED_CAPABILITY_BLOCK_ONLY: adviser accurately attributes the browser results to Root, independently observed runtime-dir absence, and identifies hardcoded105 worker/seed/runtime bindings. Conditional successor design is not executable authority or UI evidence. No source adaptation justified while the selected browser is unavailable. Root independently rechecks runtime absence/unchanged seed and gates before committing this blocker; no FREEZE.
+
+Metadata gate repair before commit: pre-commit profile initially rejected a BLOCKED handoff header and blocked order listed as active. Root retained Status ACTIVE for the current continuity handoff and removed the non-executable order from activeWorkOrders; tranche/order remain BUILD_BLOCKED/BLOCKED_WITH_REASON. No execution or authority expansion.

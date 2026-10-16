@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-105 — historical R101 UI evidence campaign
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 Worker: Claude / Antigravity-IDE REVIEW_EVIDENCE_OPERATOR
 Reviewer: Codex /root
@@ -123,3 +123,7 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 | terminal_completion_review | POST_MATERIAL | reviewer | POST_MATERIAL | exact material commit and bounded disposition | EXACT_PATHS | commit-steward | CONTINUITY_COMMIT | pre_commit |
 | continuity | CONTINUITY_COMMIT | session-sync-steward | CONTINUITY_COMMIT | memory state handoff implementation catalog | BOUNDED_PATH_FAMILIES | session-sync-steward | CONTINUITY_COMMIT | terminal_completion_review |
 | committed_range_closure | POST_MATERIAL_CLOSURE | reviewer | POST_MATERIAL_CLOSURE | exact local range with pinned profile | EXACT_PATHS | session-sync-steward | CONTINUITY_COMMIT | continuity |
+
+## Execution hold — current Codex capability, 2026-10-16
+
+Owner requested Root/subagent execution after dispatch b90cf4d. Current CUA reports no browsers; iab tab creation is unavailable. This order is BLOCKED, not executable by a substitute worker. Immutable seed105 retains the historical external Claude binding. Runtime remains unconsumed. Root must verify a supported browser and bind the new authorized worker/tool through a reviewed successor before any campaign. Evidence: docs/reviews/probes/r105_root/CODEX_BROWSER_CAPABILITY_2026-10-16.json. No UI result or original Antigravity capability failure inferred.
