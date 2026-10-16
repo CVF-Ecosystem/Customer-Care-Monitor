@@ -9,18 +9,18 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_CODEX_R101_UI_R106_2026-10-16.md", "activeTranche": "CCMAI-RUNTIME-106", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R107_R101_UI_2026-10-16.md", "activeTranche": "CCMAI-RUNTIME-107", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
 - Current mode: BUILD
 - Active phase: BUILD
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_CODEX_R101_UI_R106_2026-10-16.md
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R107_R101_UI_2026-10-16.md
 
-CCMAI-RUNTIME-106 BUILD_BLOCKED; approved R107 source/module repair now independently SOURCE_REVIEW_PASS_RUNTIME_NOT_RUN: real pinnedNode import PASS, Root13offline tests PASS. Current CUA has no browsers and iab creation unavailable. Retain owner-approved one NEW campaign unconsumed; no further permission within scope. When supported browser connects, verify capability and commit exact R107 seed/order/BUILD admission, then execute B01-B10 once and independently review. Preserve R106 spent1/1 and old evidence; Dashboard3/fullM2/M3/pilot/release OPEN, Facebook/ZaloOA parked.
+CCMAI-RUNTIME-107 BUILD/ACTIVE: accepted sequential template + actualNode module-load +13offline; current Root CUA HTTP/control/PNG PASS. Immutable source/seed base5b019f563009b1fc82205d3f1dcc9cf13efc075a; commit exact ACTIVE/BUILD admission before /root/r107_vite_worker executes owner-approved one NEW fixture/backend/Vite campaign, B01-B10 and owned cleanup; retries0. Preserve R106 spent1/1/1 and all old seeds/evidence. No provider/mock/install/source repair; Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna Max evidence worker returned blocked/idle, no further runtime authority.
+Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r107_vite_worker REVIEW_EVIDENCE_OPERATOR, runtime only after committed dispatch.
 
 Mandatory pre-dispatch learning: [docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md](docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md). Read before any similar UI/browser assignment; unknown readiness is HOLD, not a speculative dispatch. Corrected draft is not executable authority.
 

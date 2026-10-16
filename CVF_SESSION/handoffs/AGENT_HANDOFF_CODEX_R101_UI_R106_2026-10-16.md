@@ -1,6 +1,6 @@
 # R106 Codex historical R101 UI evidence
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 - Project: Customer-Care-Monitor-AI
@@ -30,3 +30,5 @@ Owner asks to open/test through completion and reduce repetitive gate overhead a
 ## Root R107 source REVIEW acknowledgment — 2026-10-16
 
 Independent review docs/reviews/R107_SOURCE_MODULE_INDEPENDENT_REVIEW_2026-10-16.md accepts source/module scope only: actual worker Node import PASS, Root13offline PASS,18hashes/rendered config/predecessor pins independently verified. No server/browser campaign, new allowance remains1. Currentbrowser unavailable receipt retained. Root proceeds to source/evidence commit only, no new runtime activation or permission request. Resume approved R107 once supported browser exists.
+
+Routing superseded by R107 only; R106 record/order remain BLOCKED/spent. Current handoff CVF_SESSION/handoffs/AGENT_HANDOFF_R107_R101_UI_2026-10-16.md.
