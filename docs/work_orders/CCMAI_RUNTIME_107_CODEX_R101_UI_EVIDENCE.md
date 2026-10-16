@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-107 — repaired sequential-import historical R101 UI campaign
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 Worker: /root/r107_vite_worker (REVIEW_EVIDENCE_OPERATOR)
 Reviewer: Codex /root
@@ -115,3 +115,7 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 ## Committed authority marker
 
 Material-SHA marker:5b019f563009b1fc82205d3f1dcc9cf13efc075a. Effective ACTIVE/BUILD packet must be committed before effects.
+
+## Independent reviewed result — 2026-10-16
+
+One campaign consumed fixture/backend/Vite1/1/1; retries0; integrated browser/Vite succeeded. B01-B05/B07 PASS, B06 REOPEN503 FAIL, B08-B10 NOT_RUN after interruption. Eight POST submissions/two tabs. Root corroborates exact fixture exited/recorded PIDs absent/protected safe equality; original cleanup.json absent and tab closure unobserved. No more runtime/source effects under this spent order; docs/reviews/R107_PARTIAL_UI_INDEPENDENT_REVIEW_2026-10-16.md returns CHANGES_REQUIRED with freeze OPEN. Historical R101 evidence only.

@@ -13135,6 +13135,1441 @@
       "path": "docs/reviews/probes/r107_root/active_pre_dispatch.stdout.txt",
       "status": "ACTIVE",
       "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-0e421296a9563c1032",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/cua_create_visible_failure.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-c50f03d5d9c0d326f0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/cua_tab_b_create_failure.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-e59c86b84450be1bd0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/00_product_initial.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-d56cc0e3b0004e2ff5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/00_product_initial.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-5ba8b889bb0ab51e6f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/00_product_initial.tool.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-b33f9370ac1389afba",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/01_b01_owner_login.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-b9be2d6dfa0db089bb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/01_b01_owner_login.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-fddfbf27be41bdadc4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/01_b01_owner_login.tool.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-ff60b210801b7d3a36",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/01_b01_owner_login_after.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-cb47c6bc5838ab46e7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/01_b01_owner_login_after.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-045cc763378943db99",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/01_b01_owner_login_after.tool.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-67384d15ff898842f3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/02_b01_queue.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-54e335cedbd8ebddfa",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/02_b01_queue.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-bd09e2d0879bcd5f9b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/02_b01_queue.tool.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-0df93d81f9f300d94c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/02_b01_queue_loaded.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-a1bf0f4f2b2e6f6e1b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/02_b01_queue_loaded.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-99024e3a80636dffc3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/02_b01_queue_loaded.tool.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-7ef2f0bf904884f3b9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/02_b01_queue_observed_href.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-106feb63d624a900ad",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/02_b01_queue_observed_href.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-4a42c24383849a3fb3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/02_b01_queue_observed_href.tool.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-94f21e0fd5bc697e41",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/02_b01_queue_postclick.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-958cfc12ff291ae3df",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/02_b01_queue_postclick.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-ef31c99081c0a22859",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/02_b01_queue_postclick.tool.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-be81841af37deae882",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/03_b01_fresh_case_before_mutation.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-5111fd2369538b8e56",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/03_b01_fresh_case_before_mutation.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-98ebf3eba146697316",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/03_b01_fresh_case_before_mutation.tool.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-21d8997feb314e73e3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/04_b01_original_history.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-8e000513585ab88928",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/04_b01_original_history.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-39fba25d762504dc4b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/04_b01_original_history.tool.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-98d6eebd05df43441d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/05_b02_b03_tab_b_loaded.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-cb01e6418baadf4089",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/05_b02_b03_tab_b_loaded.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-b9aaca251c29481f78",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/05_b02_b03_tab_b_loaded.tool.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-e1532c051541202529",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/05_b02_b03_tab_b_original.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-891019bb1d25f5a7e1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/05_b02_b03_tab_b_original.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-bcd89fcf5847c53cba",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/05_b02_b03_tab_b_original.tool.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-95f7a88d8f63102177",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/06_b02_action_options.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-f4a8fc616f6088c3ad",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/06_b02_action_options.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-e8be0ea8b28e16719a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/06_b02_action_options.tool.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-e2a1d2b370c1db2394",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/07_b02_correction_fields.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-0c1e0f01f66ebf1378",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/07_b02_correction_fields.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-9a2f4eff5cdae553b5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/07_b02_correction_fields_full.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-5a3237f3dc2f074b9e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/07_b02_correction_fields_full.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-82d6813198372ef647",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/08_b02_filled_before_submit.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-74c061e7e9b1c9ad7c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/08_b02_filled_before_submit.meta.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-15ce663a26e924eed7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/08_b02_filled_before_submit.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-0519dad6bef48c0232",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/09_b02_after_submit.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-e0531110d5610bdd2e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/09_b02_after_submit.meta.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-8542b1c8c8eaf36dca",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/09_b02_after_submit.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-345019391f87917cc1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/10_b03_tab_b_stale_before.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-cf3b923e954fa3761b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/10_b03_tab_b_stale_before.meta.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-edb96c8af806d8cb1e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/10_b03_tab_b_stale_before.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-c8bf107288ea37f2b1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/11_b03_action_options.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-05a137a4b9a744ae94",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/11_b03_action_options.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-f132bd1d77b2375cbd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/12_b03_selected_stale_action.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-a8665b62268172842e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/12_b03_selected_stale_action.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-3fb6925d70fb0a0253",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/13_b03_before_submit.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-969d1e949d67888101",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/13_b03_before_submit.meta.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-3bff1ce07584e6153b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/13_b03_before_submit.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-48699e5920fe9b4c97",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/14_b03_after_submit.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-31575fa0e9b199a2f5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/14_b03_after_submit.meta.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-a407c7b0bf167e919f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/14_b03_after_submit.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-e67bae3eb41202e98e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/15_b04_latest_before_assign.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-9d23b79892a0ae4a32",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/15_b04_latest_before_assign.meta.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-aed0e8598c15093ae2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/15_b04_latest_before_assign.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-84cbb17f39b8fea63a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/16_b04_assign_form.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-b08180ee6057d286b3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/16_b04_assign_form.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-3f1d2d039ed4e74d02",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/17_b04_action_options.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-84602255220d6e6a01",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/17_b04_action_options.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-3d8bd9a43ca5ef38ff",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/18_b04_assignment_fields.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-39eefd538c8ec70545",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/18_b04_assignment_fields.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-c0ec5f098e3dd6d46d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/19_b04_assignee_options.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-797b01f7338c863484",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/19_b04_assignee_options.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-0f88405942558401f4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/20_b04_member_selected.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-f0a895781106ba8ba3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/20_b04_member_selected.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-86ee07d6d5edcd1b7c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/21_b04_filled_before_submit.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-a9625b36257fac2873",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/21_b04_filled_before_submit.meta.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-14fcc65878f8025bbc",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/21_b04_filled_before_submit.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-a0babc78fd2376521a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/22_b04_after_submit.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-aa490c0914dd6c9699",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/22_b04_after_submit.meta.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-9771c3e351d862828a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/22_b04_after_submit.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-9ad72f2b58514525d3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/23_b04_after_reload.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-ec40c2bca810b14918",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/23_b04_after_reload.meta.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-2d90a7553dac077264",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/23_b04_after_reload.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-193b10a6f7178e008a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/24_b05_latest_before_resolve.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-6e9c38f8f08d9f19ea",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/24_b05_latest_before_resolve.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-b721322529c1c85d26",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/25_b05_action_options.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-6ea2fdc329dfae3649",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/25_b05_action_options.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-c421282ff764026a14",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/26_b05_outcome_fields.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-c32d72521467d92e1b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/26_b05_outcome_fields.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-c4a93b5d279056e8f7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/27_b05_filled_before_submit.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-a482f75e6b43271acd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/27_b05_filled_before_submit.meta.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-c7dd3095a40ae60f60",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/27_b05_filled_before_submit.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-d3e8972742b0c23dfb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/28_b05_after_submit.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-0dc8f4a0c8ab145924",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/28_b05_after_submit.meta.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-b114a12ef7b24a0bbb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/28_b05_after_submit.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-6b76417360a767815d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/29_b05_after_reload.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-03ab128444a7a39ae8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/29_b05_after_reload.meta.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-30399a141a6632463c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/29_b05_after_reload.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-7e31f88a598c525bc3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/30_b05_terminal_queue.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-790d314a8c994bf63b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/30_b05_terminal_queue.meta.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-1fc44b91aa2a9cd18c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/30_b05_terminal_queue.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-4d159e849e95881f65",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/31_b05_queue_filters.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-3d802b9a64311e9b01",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/31_b05_queue_filters.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-c1eb2c3389c4a9931e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/32_b05_resolved_filter.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-ec67cdf72bebaf7364",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/32_b05_resolved_filter.meta.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-b4e5bd58d0f5e5a2a9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/32_b05_resolved_filter.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-b5253312078c8ac82e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/33_b06_resolved_detail_before_reopen.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-eba72b6019d337c711",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/33_b06_resolved_detail_before_reopen.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-b8a630d2abe5d3a201",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/34_b06_action_options.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-fc5dabbd6ceb9c7023",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/34_b06_action_options.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-e6f6d089bfaafe0889",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/35_b06_reopen_fields.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-f2422f4ebc980c897a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/35_b06_reopen_fields.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-9224ff0b2a8ef3dc9e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/36_b06_filled_before_submit.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-37034cbddbd25285f8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/36_b06_filled_before_submit.meta.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-17d0324190775bb747",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/36_b06_filled_before_submit.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-82735670a12264ac41",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/37_b06_after_submit.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-78ee5f004f1c9efed5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/37_b06_after_submit.meta.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-80d679f92ecd98daff",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/37_b06_after_submit.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-b9a86e2cead1a67c91",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/38_b06_after_reload.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-bdea3988faffa86745",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/38_b06_after_reload.meta.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-65a83c0da13ecac628",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/38_b06_after_reload.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-a11b73ba12ab56b8e4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/39_b06_after_reopen_settled.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-9b81f6063b4d66e9d9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/39_b06_after_reopen_settled.meta.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-874d645e4384fa57de",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/39_b06_after_reopen_settled.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-cd11f48b40be7db1bb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/40_b06_failure_summary.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-f0f7f9d61a4a31856b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/41_b07_owner_logout.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-83232d87001d7c9316",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/41_b07_owner_logout.meta.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-295afe801739ed485a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/41_b07_owner_logout.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-a68dc83948830de06f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/42_b07_reader_login_before_submit.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-6cc73c3f4268f52197",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/42_b07_reader_login_before_submit.meta.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-3c023770845d529545",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/42_b07_reader_login_before_submit.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-a68b79516d00816459",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/43_b07_reader_after_login.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-58838098583922d04b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/43_b07_reader_after_login.meta.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-7eeba16dbc1a3792a2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/43_b07_reader_after_login.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-b5eabbc857b8b0059f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/44_b07_reader_queue.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-b4ad839d213bfa1c7e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/44_b07_reader_queue.meta.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-2f200395e7bdc3b94f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/44_b07_reader_queue.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-e3ce856374ce2cff84",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/45_b07_reader_detail.ax.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-b41b9424d609d684b9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/45_b07_reader_detail.meta.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-becd92c174ff190032",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/observations/45_b07_reader_detail.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-5581e11271395c5bb8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/preflight_tool_calls.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-d4326926b30879fa63",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/r107_cua_worker_return_evidence_manifest.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-0d41ba6ecec4721193",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/r107_runtime_sha256_size_manifest.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-50febdad25db9ead1f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runner_inspect_tool_call.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-a15ff830c92a551446",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runner_start_tool_call.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-ae2c3ea0523416cfd4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/admission.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-a68394c0263a833251",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/backend.stderr.log",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-a83df4507b345aa04f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/backend.stdout.log",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-1174beae78fffdf5f4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/backend_launch.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-79203f1d37b21438b9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/backend_process.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-c2c0767ac25d20a9fd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/command_001.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-81208d20209a15a6fa",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/command_002.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-548e9cd69c14f5ca86",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/command_003.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-122b4224a87fb7f7c0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/command_004.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-c7d7884b0f4ccc29ed",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/command_005.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-00c8fa18fbbf665c6f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/command_006.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-ec57d17934df00785b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/command_007.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-8dae7aa7621974a11b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/command_008.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-11759d55f901222d40",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/command_009.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-84cc115053a9a563a9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/command_010.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-5b256a0733dad3fe42",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/fixture_start.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-20bca975f01b6206d3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/launch_011.intent.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-a687f499a1e997ee46",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/launch_011.result.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-82ddd9a747175e325a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/launch_012.intent.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-85ab7605950fec82b3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/launch_012.result.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-cd3bdf03fdf645b8d5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/protected_before.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-1fdb9a05fa8cff1d99",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/ready.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-5fcff337a582bf0912",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/running.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-db08d863b750373e32",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/stop.request",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-3ede348b0d2a5ca226",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/vite.config.mjs",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-22d3f8b0882aba128e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/vite.stderr.log",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-40d09b493e6ddf738e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/vite.stdout.log",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-b692cb69e5a98f4dfa",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/vite_config_receipt.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-57f3f4b12b66de4518",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/vite_launch.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-321f9936c8411819f8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/runtime/vite_process.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-f5cba2423e12c17736",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_cua/worker_return_gate_tool_call.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-5a5bce261fe21b04c5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/captured_worker_evidence.zip",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-dfa9663eb54a45b4be",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/dispatch_preflight.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-d70ff4f06fdf1bd06c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/dispatch_preflight.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-83661cace3a0c65a48",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/dispatch_preflight.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-871bebef7acbfda0fe",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/dispatch_profile.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-b4b8f77a33a066f210",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/dispatch_profile.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-bede52b4d22d2b8643",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/dispatch_profile.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-1533d5f28e720d2f18",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/post_runtime_independent_verification.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-f63f55497a73f534fd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/resume_gate_units.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-e9e4beaa5274d4e67b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/resume_gate_units.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-5261dbd61d089f7db2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/resume_gate_units.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-5b22ccda79e27a6b06",
+      "family": "continuity",
+      "path": "docs/reviews/R107_PARTIAL_UI_INDEPENDENT_REVIEW_2026-10-16.md",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-b0a89e4668fda9cce9",
+      "family": "continuity",
+      "path": "docs/reviews/R107_R101_UI_WORKER_RETURN_2026-10-16.md",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-1c4fdd8eec173e889f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/captured_git_byte_contract.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-da11485bbb1c450184",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/final_legacy_preflight.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-76115342b8639d025f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/final_legacy_preflight.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-17299ef48fb1c47adb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/final_legacy_preflight.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-d3d50f8ff852cb9462",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/final_reviewer_fast.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-e27e74fc4e310ef5dd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/final_reviewer_fast.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-f202077517c0ffb487",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/final_reviewer_fast.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-691ec91ad3e97460df",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/authored_whitespace_check.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-8fb732cc010310d440",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/authored_whitespace_check.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-50416c0bd3ebd264c9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/authored_whitespace_check.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-6400bfe1ea3a56619c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/final_precommit.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-27ab2f0b0c17adfb84",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/final_precommit.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-b66d5a7b1bae052f23",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/final_precommit.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-b4a55ae6aa076ed713",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/raw_whitespace_check.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-46ab45ff0e1fe85639",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/raw_whitespace_check.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-01c6cb4290d8e27409",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/raw_whitespace_check.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
     }
   ]
 }

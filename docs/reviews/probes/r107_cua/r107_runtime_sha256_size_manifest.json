@@ -1,0 +1,164 @@
+{
+  "source": ".cvf/runtime/r107_cua",
+  "copiedTo": "docs/reviews/probes/r107_cua/runtime",
+  "byteComparison": "SHA-256 and byte length matched for each file at copy time",
+  "fileCount": 30,
+  "files": [
+    {
+      "path": "admission.json",
+      "bytes": 260,
+      "sha256": "302a47687af0caf84b7978d4b59fe4f7d75cdde1112b792931a35105b327343d"
+    },
+    {
+      "path": "backend_launch.json",
+      "bytes": 73,
+      "sha256": "50d0ec037f22b38e643be5bcc456b147da005feacf4b8414e99676d96b5963e7"
+    },
+    {
+      "path": "backend_process.json",
+      "bytes": 488,
+      "sha256": "76191dba5e626b1a558b571bb817243e0da62a392e06e0c526a89b37a082aa03"
+    },
+    {
+      "path": "backend.stderr.log",
+      "bytes": 101,
+      "sha256": "d80a4f33ba8c95f3dfc7e41de111ebc11d5bb1b4b32608b009ab5d75016130f2"
+    },
+    {
+      "path": "backend.stdout.log",
+      "bytes": 32634,
+      "sha256": "814ccc34a5f1530af1c0f7feaa807beefca5abf61b8d1ca6fda6d33d7c2f9975"
+    },
+    {
+      "path": "command_001.json",
+      "bytes": 902,
+      "sha256": "c352fcb9e5ba3670e14a8f87aa870fc8034f90e70718fb3fe140353d69cb8f98"
+    },
+    {
+      "path": "command_002.json",
+      "bytes": 8703,
+      "sha256": "57270e0c91fa952467b2eb45adb30b8b856cc760c4d9cced07a617193a2c3868"
+    },
+    {
+      "path": "command_003.json",
+      "bytes": 2196,
+      "sha256": "aa2bc63d922a273ee78e01cb17f7adfbff3549298874c0234ed8da9686627a8d"
+    },
+    {
+      "path": "command_004.json",
+      "bytes": 956,
+      "sha256": "3cda312a6ab1c737e1433b370d03dc1479b718d3b9bb848fc821d0ea2126fd69"
+    },
+    {
+      "path": "command_005.json",
+      "bytes": 692,
+      "sha256": "25be8a48f5d4a0624c54fefb3ecc4972ad06293792484133520a7dbe916918a7"
+    },
+    {
+      "path": "command_006.json",
+      "bytes": 687,
+      "sha256": "24927cf150d4d9c3be307da5a80293298ceaa2c0866e79f9d79a648787c62903"
+    },
+    {
+      "path": "command_007.json",
+      "bytes": 2363,
+      "sha256": "b06e22fb23f4b859cecc85a55c656fec95cd125a5d0eacb8ef3a85183e214d68"
+    },
+    {
+      "path": "command_008.json",
+      "bytes": 931,
+      "sha256": "d852a83e51e53421012c2b7ce20b40a468113bbef432cb59a43a2b449edfc1ec"
+    },
+    {
+      "path": "command_009.json",
+      "bytes": 2363,
+      "sha256": "b06e22fb23f4b859cecc85a55c656fec95cd125a5d0eacb8ef3a85183e214d68"
+    },
+    {
+      "path": "command_010.json",
+      "bytes": 871,
+      "sha256": "eb2aa581971920ca947a757da3ee2feeeb0883db8ad07656e39ea4dbefefb712"
+    },
+    {
+      "path": "fixture_start.json",
+      "bytes": 72,
+      "sha256": "73de69464cb7fdeb0c3cadc8935247860a92a08e179383ff04ae284e343914bd"
+    },
+    {
+      "path": "launch_011.intent.json",
+      "bytes": 439,
+      "sha256": "9f8de8d893dd9c1379cfab5fcb03e06e3c7909d3c6967038ba0db3b51463ab49"
+    },
+    {
+      "path": "launch_011.result.json",
+      "bytes": 53,
+      "sha256": "f7b5c30de1804a6475b5c51cda785fc56164ed25cedd0f6963c0fea20ebd333f"
+    },
+    {
+      "path": "launch_012.intent.json",
+      "bytes": 537,
+      "sha256": "c8cc209c3a943b383367e7cb7ecdfa93d7c1913f76d99dd495f6759b72164088"
+    },
+    {
+      "path": "launch_012.result.json",
+      "bytes": 53,
+      "sha256": "616a3a214436685240903fc23cb58ac92a9a27b46cc3ccad98a005ebb53ad964"
+    },
+    {
+      "path": "protected_before.json",
+      "bytes": 1303,
+      "sha256": "22d0618eb960bfefc72121ae63aab74e40c021039acc668826806efc4b1c31df"
+    },
+    {
+      "path": "ready.json",
+      "bytes": 252,
+      "sha256": "d689e643708091bc6b53e6d9065ea255474718c0d5f634b7b696dff5e46d6461"
+    },
+    {
+      "path": "running.json",
+      "bytes": 64,
+      "sha256": "c2882879d6706d8579ba24a550902c01f8b0eb42e871759e0912855b336fe868"
+    },
+    {
+      "path": "stop.request",
+      "bytes": 38,
+      "sha256": "88390ceb395f9b90e4b107472def529a1484f81aa5fbf9a29a4bf406e75ad700"
+    },
+    {
+      "path": "vite_config_receipt.json",
+      "bytes": 117,
+      "sha256": "6cde598df28a1fc165dc720215412b5bcb17b5a0bbf41c3e4a0a9054f133921d"
+    },
+    {
+      "path": "vite_launch.json",
+      "bytes": 70,
+      "sha256": "d154591e79284c762b0694d9a04f5350848cd19f1a86dd7793b88e026c70cdbd"
+    },
+    {
+      "path": "vite_process.json",
+      "bytes": 538,
+      "sha256": "34596de21cd6c06546718e9ce0cc270d7bd3acae6f8b965d62fd2a975068b1e3"
+    },
+    {
+      "path": "vite.config.mjs",
+      "bytes": 1689,
+      "sha256": "298572b512da34531c60ebf7e081c7481c06d819dc07f7d3aefab0f2f1c43d89"
+    },
+    {
+      "path": "vite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vite.stdout.log",
+      "bytes": 2282,
+      "sha256": "f8b62c5c3a51007323d67dc122e2b68c34ca77c11505ce30c3f0cc753dea1508"
+    }
+  ],
+  "directories": [
+    {
+      "path": "docker-cli-config",
+      "empty": true
+    }
+  ]
+}

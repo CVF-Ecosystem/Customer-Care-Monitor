@@ -1,0 +1,15 @@
+Browser tab: 1, Title: "Customer Care Monitor AI", URL: "http://127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases/35b4e3be-6b17-4598-a45a-7b8003039d0f".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 51, 62-66
+~			50 combo box (collapsed) Secondary Actions: Expand
+~				60 container
+~					61 text Sửa đánh giá
++					62 combo box (collapsed, settable) Thao tác, Value: Sửa đánh giá, ID: input-v-24, Secondary Actions: Expand
++				52 text Thao tác
++			63 container
++				64 text Giải thích do người sửa
++				65 text entry area (settable) Giải thích do người sửa, ID: input-v-33
++			66 container
++				67 text Bước tiếp theo do người xác định
++				68 text entry area (settable) Bước tiếp theo do người xác định, ID: input-v-36
+The focused UI element is 62 combo box (collapsed, settable) Thao tác, Value: Sửa đánh giá, ID: input-v-24, Secondary Actions: Expand

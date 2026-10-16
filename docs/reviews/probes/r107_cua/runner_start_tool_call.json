@@ -1,0 +1,9 @@
+{
+  "tool": "exec_command",
+  "command": "python -B docs/reviews/probes/r107_root/r107_ui_runner.py start --project-root .",
+  "stdout": "",
+  "stderr": "",
+  "exitCode": null,
+  "sessionId": 37563,
+  "wallTimeSeconds": 10.001881
+}

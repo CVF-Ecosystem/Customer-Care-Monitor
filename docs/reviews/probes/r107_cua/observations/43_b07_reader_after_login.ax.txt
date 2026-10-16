@@ -1,0 +1,48 @@
+Browser tab: 1, Title: "Customer Care Monitor AI", URL: "http://127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514".
+1 AXWebArea Customer Care Monitor AI, URL: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514
+	2 container
+		3 container
+			4 text Customer Care Monitor AI
+			5 button
+		6 text Không gian làm việc
+		7 content list
+			8 link Description: Trang chủ, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514
+			9 link Description: Ca cần can thiệp, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases
+		10 button
+		11 pop up button (collapsed) Tiếng Việt, Secondary Actions: Expand
+			12 text Tiếng Việt
+		13 text R
+		14 text R101 member
+		15 button
+		16 text Bắt đầu:
+		17 button
+		18 heading Trang chủ, Value: 1
+			19 text Trang chủ
+		20 container
+			21 text Hôm nay 7 ngày 28 ngày Tháng này Quý này Năm này
+		22 container
+			23 date field (settable) Value: 2026-09-19, ID: input-v-31
+				24 container
+					25 stepper
+					26 stepper
+					27 stepper
+				28 pop up button Show date picker
+		29 container
+			30 date field (settable) Value: 2026-10-16, ID: input-v-34
+				31 container
+					32 stepper
+					33 stepper
+					34 stepper
+				35 pop up button Show date picker
+		36 text Ngày theo giờ Việt Nam (UTC+7)
+		37 container
+			38 text  Trạng thái dịch vụ Chưa có phép kiểm tra sức khỏe cho các dịch vụ này.
+			39 content list
+				40 container
+					41 text API Server Chưa có dữ liệu kiểm tra
+				42 container
+					43 text Database Chưa có dữ liệu kiểm tra
+				44 container
+					45 text Scheduler Chưa có dữ liệu kiểm tra
+
+The focused UI element is 1 AXWebArea Customer Care Monitor AI, URL: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514

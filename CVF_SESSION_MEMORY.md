@@ -9,18 +9,18 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R107_R101_UI_2026-10-16.md", "activeTranche": "CCMAI-RUNTIME-107", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R107_R101_UI_2026-10-16.md", "activeTranche": "CCMAI-RUNTIME-107", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R107_R101_UI_2026-10-16.md
 
-CCMAI-RUNTIME-107 BUILD/ACTIVE: accepted sequential template + actualNode module-load +13offline; current Root CUA HTTP/control/PNG PASS. Immutable source/seed base5b019f563009b1fc82205d3f1dcc9cf13efc075a; commit exact ACTIVE/BUILD admission before /root/r107_vite_worker executes owner-approved one NEW fixture/backend/Vite campaign, B01-B10 and owned cleanup; retries0. Preserve R106 spent1/1/1 and all old seeds/evidence. No provider/mock/install/source repair; Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked.
+CCMAI-RUNTIME-107 REVIEW / CHANGES_REQUIRED, order BLOCKED_WITH_REASON: historical R101 UI B01-B05/B07 PASS, B06 REOPEN HTTP503 FAIL, B08-B10 NOT_RUN after interruption. One fixture/backend/Vite campaign spent1/1/1, retries0, eight POSTs/two tabs; no further runtime. Exact fixture exited/recorded PIDs absent/protected safe fields equal; supervisor cleanup receipt missing and tab closure NOT_OBSERVED. Root next bounds REOPEN diagnosis and remaining UI/cleanup evidence contract before a finite successor; no automatic repair/start/seed reset. Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r107_vite_worker REVIEW_EVIDENCE_OPERATOR, runtime only after committed dispatch.
+Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna Max UI evidence worker returned blocked/idle, no further runtime authority.
 
 Mandatory pre-dispatch learning: [docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md](docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md). Read before any similar UI/browser assignment; unknown readiness is HOLD, not a speculative dispatch. Corrected draft is not executable authority.
 

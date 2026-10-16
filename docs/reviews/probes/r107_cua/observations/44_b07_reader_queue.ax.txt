@@ -1,0 +1,37 @@
+Browser tab: 1, Title: "Customer Care Monitor AI", URL: "http://127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases".
+1 AXWebArea Customer Care Monitor AI, URL: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases
+	2 container
+		3 container
+			4 text Customer Care Monitor AI
+			5 button
+		6 text R101 Synthetic
+		7 content list
+			8 link Description: Trang chủ, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514
+			9 link Description: Ca cần can thiệp, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases
+		10 button
+		11 pop up button (collapsed) Tiếng Việt, Secondary Actions: Expand
+			12 text Tiếng Việt
+		13 text R
+		14 text R101 member
+		15 button
+		16 text Bắt đầu:
+		17 text Kết nối kênh chat
+		18 text Đồng bộ tin nhắn
+		19 text Cấu hình AI Provider
+		20 text Tạo công việc phân tích
+		21 text Chạy thử phân tích
+		22 button
+		23 heading Ca cần can thiệp, Value: 1
+			24 text Ca cần can thiệp
+		25 container
+			26 text Hàng đợi xử lý
+			27 combo box (collapsed) Secondary Actions: Expand
+				28 container
+					29 text Đang xử lý
+					30 combo box (collapsed, settable) Trạng thái, Value: Đang xử lý, ID: input-v-63, Secondary Actions: Expand
+				31 text Trạng thái
+			32 text Tổng số ca theo bộ lọc: 1 · Sắp xếp theo thời điểm tạo
+			33 content list
+				34 link Description: 452a48a6-5345-4953-a88d-5b047e1e85cd Chờ bổ sung dữ liệu · 10/16/2026, 2:41:42 PM, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases/2a8bc0b9-cc62-4ff1-ab26-e740bbc8f0e9
+
+The focused UI element is 9 link Description: Ca cần can thiệp, URL: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases

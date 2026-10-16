@@ -1,0 +1,46 @@
+{
+  "capturedBy": "/root/r107_vite_worker",
+  "purpose": "R107 pre-runner committed dispatch preflight; direct original exec_command outputs",
+  "results": [
+    {
+      "tool": "exec_command",
+      "command": "git rev-parse HEAD",
+      "stdout": "a489e4954d954ac45ab5e5228ab5fecd89627f17\n",
+      "stderr": "",
+      "exitCode": 0,
+      "wallTimeSeconds": 0.1961086
+    },
+    {
+      "tool": "exec_command",
+      "command": "git cat-file -e HEAD:docs/work_orders/CCMAI_RUNTIME_107_CODEX_R101_UI_EVIDENCE.md",
+      "stdout": "",
+      "stderr": "",
+      "exitCode": 0,
+      "wallTimeSeconds": 0.2044153
+    },
+    {
+      "tool": "exec_command",
+      "command": "git cat-file -e HEAD:CVF_SESSION/tranches/CCMAI-RUNTIME-107.json",
+      "stdout": "",
+      "stderr": "",
+      "exitCode": 0,
+      "wallTimeSeconds": 0.2083254
+    },
+    {
+      "tool": "exec_command",
+      "command": "git cat-file -e HEAD:CVF_SESSION/handoffs/AGENT_HANDOFF_R107_R101_UI_2026-10-16.md",
+      "stdout": "",
+      "stderr": "",
+      "exitCode": 0,
+      "wallTimeSeconds": 0.1845721
+    },
+    {
+      "tool": "exec_command",
+      "command": "git diff HEAD --exit-code -- docs/work_orders/CCMAI_RUNTIME_107_CODEX_R101_UI_EVIDENCE.md CVF_SESSION/tranches/CCMAI-RUNTIME-107.json CVF_SESSION/authority/CCMAI-RUNTIME-107.json CVF_SESSION/ACTIVE_SESSION_STATE.json CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json CVF_SESSION_MEMORY.md CVF_SESSION/handoffs/AGENT_HANDOFF_R107_R101_UI_2026-10-16.md IMPLEMENTATION_STATUS.json",
+      "stdout": "",
+      "stderr": "",
+      "exitCode": 0,
+      "wallTimeSeconds": 0.2246271
+    }
+  ]
+}

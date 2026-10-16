@@ -95,20 +95,24 @@
     "path": "docs/reviews/probes/r107_root/module_validation.json",
     "sha256": "062b641ac09cbffc10f392012a80bb0217bf82b537fcdd6eb89c1b3e686cca9e"
   },
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
   "baseCommit": "5b019f563009b1fc82205d3f1dcc9cf13efc075a",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_107_CODEX_R101_UI_EVIDENCE.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
-  "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "PENDING_HISTORICAL_UI_EVIDENCE",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
+  "buildCommit": "a489e4954d954ac45ab5e5228ab5fecd89627f17",
+  "reviewEvidence": [
+    "docs/reviews/R107_PARTIAL_UI_INDEPENDENT_REVIEW_2026-10-16.md"
+  ],
+  "disposition": "BLOCKED_PARTIAL_UI_REOPEN_503_AND_INTERRUPTED_EVIDENCE",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -118,12 +122,18 @@
   ],
   "x-sourceReview": "docs/reviews/R107_SOURCE_MODULE_INDEPENDENT_REVIEW_2026-10-16.md",
   "x-actualExecution": {
-    "fixtureStarts": 0,
-    "backendLaunches": 0,
-    "viteLaunches": 0,
+    "fixtureStarts": 1,
+    "backendLaunches": 1,
+    "viteLaunches": 1,
+    "newFixtures": 0,
+    "caseActionSubmissions": 5,
+    "authSubmissions": 3,
+    "totalPostSubmissions": 8,
+    "productTabs": 2,
     "runtimeRetries": 0,
     "providerCalls": 0,
     "mockCalls": 0,
-    "UI": "NOT_RUN"
+    "UI": "6_PASS_1_FAIL_3_NOT_RUN",
+    "cleanup": "FIXTURE_EXITED_PIDS_ABSENT_PROTECTED_EQUAL_SUPERVISOR_RECEIPT_MISSING_TABS_NOT_OBSERVED"
   }
 }

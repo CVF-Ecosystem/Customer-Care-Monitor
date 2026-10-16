@@ -1,0 +1,48 @@
+Browser tab: 1, Title: "Customer Care Monitor AI", URL: "http://127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases/35b4e3be-6b17-4598-a45a-7b8003039d0f".
+1 AXWebArea Customer Care Monitor AI, URL: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases/35b4e3be-6b17-4598-a45a-7b8003039d0f
+	2 container
+		3 container
+			4 text Customer Care Monitor AI
+			5 button
+			6 text R101 Synthetic
+			7 content list
+				8 link Description: Trang chủ, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514
+				9 link Description: Kênh chat, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/channels
+				10 link Description: Tin nhắn, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/messages
+				11 link Description: Tác vụ AI, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/jobs
+				12 link Description: Kết quả, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/results
+				13 link Description: Ca cần can thiệp, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases
+				14 link Description: Nhật ký hệ thống, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/activity-logs
+				15 link Description: Nhật ký chi phí, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/cost-logs
+				16 link Description: Lịch sử thông báo, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/notifications
+				17 link Description: Kết nối MCP, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/mcp
+				18 link Description: Người dùng, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/users
+				19 link Description: Cài đặt, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/settings
+		20 button
+		21 pop up button (collapsed) Tiếng Việt, Secondary Actions: Expand
+			22 text Tiếng Việt
+		23 text R
+		24 text R101 owner
+		25 button
+		26 text Bắt đầu:
+		27 text Kết nối kênh chat
+		28 text Đồng bộ tin nhắn
+		29 text Cấu hình AI Provider
+		30 text Tạo công việc phân tích
+		31 text Chạy thử phân tích
+		32 button
+		33 heading Ca cần can thiệp, Value: 1
+			34 text Ca cần can thiệp
+		35 link Description: Về hàng đợi, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases
+		36 progress indicator Loading intervention cases
+		37 container
+			38 combo box (collapsed) Secondary Actions: Expand
+				39 combo box (collapsed) Secondary Actions: Expand
+			40 container
+				41 text entry area (settable)
+		42 container
+			43 button (collapsed) Secondary Actions: Expand
+			44 button (collapsed) Secondary Actions: Expand
+			45 button (collapsed) Secondary Actions: Expand
+
+The focused UI element is 1 AXWebArea Customer Care Monitor AI, URL: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases/35b4e3be-6b17-4598-a45a-7b8003039d0f

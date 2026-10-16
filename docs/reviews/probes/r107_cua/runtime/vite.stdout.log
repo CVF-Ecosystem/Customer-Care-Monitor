@@ -1,0 +1,15 @@
+[2m2:41:44 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m Re-optimizing dependencies because vite config has changed
+
+  [32m[1mVITE[22m v8.0.1[39m  [2mready in [0m[1m1531[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m3011[22m/[39m
+[2m2:43:46 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32m✨ new dependencies optimized: [33mvuetify/components/VApp, vuetify/components/VAppBar, vuetify/components/VAvatar, vuetify/components/VBtn, vuetify/components/VCard, vuetify/components/VChip, vuetify/components/VDialog, vuetify/components/VDivider, vuetify/components/VGrid, vuetify/components/VIcon, vuetify/components/VList, vuetify/components/VMain, vuetify/components/VMenu, vuetify/components/VNavigationDrawer, vuetify/components/VProgressCircular, vuetify/components/VSheet, vuetify/components/VSnackbar, vuetify/components/VTextField[32m[39m
+[2m2:43:46 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32m✨ optimized dependencies changed. reloading[39m
+[2m2:43:47 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32m✨ new dependencies optimized: [33mvuetify/components/VForm[32m[39m
+[2m2:43:47 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32m✨ optimized dependencies changed. reloading[39m
+[2m2:44:19 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32m✨ new dependencies optimized: [33mvuetify/components/VAlert[32m[39m
+[2m2:44:19 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32m✨ optimized dependencies changed. reloading[39m
+[2m2:44:20 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32m✨ new dependencies optimized: [33mvuetify/components/VChipGroup, vuetify/components/VTable[32m[39m
+[2m2:44:20 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32m✨ optimized dependencies changed. reloading[39m
+[2m2:44:32 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32m✨ new dependencies optimized: [33mvuetify/components/VProgressLinear, vuetify/components/VSelect, vuetify/components/VTextarea[32m[39m
+[2m2:44:32 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32m✨ optimized dependencies changed. reloading[39m

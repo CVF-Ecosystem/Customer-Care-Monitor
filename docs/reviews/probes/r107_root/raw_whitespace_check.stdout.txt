@@ -1,0 +1,60 @@
+docs/reviews/probes/r107_cua/observations/03_b01_fresh_case_before_mutation.ax.txt:46: trailing whitespace.
++					45 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/04_b01_original_history.ax.txt:46: trailing whitespace.
++					45 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/05_b02_b03_tab_b_loaded.ax.txt:46: trailing whitespace.
++					48 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/06_b02_action_options.ax.txt:46: trailing whitespace.
++					45 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/07_b02_correction_fields_full.ax.txt:46: trailing whitespace.
++					45 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/08_b02_filled_before_submit.ax.txt:46: trailing whitespace.
++					45 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/09_b02_after_submit.ax.txt:46: trailing whitespace.
++					45 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/10_b03_tab_b_stale_before.ax.txt:46: trailing whitespace.
++					48 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/11_b03_action_options.ax.txt:46: trailing whitespace.
++					48 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/12_b03_selected_stale_action.ax.txt:46: trailing whitespace.
++					48 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/13_b03_before_submit.ax.txt:46: trailing whitespace.
++					48 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/14_b03_after_submit.ax.txt:47: trailing whitespace.
++					48 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/16_b04_assign_form.ax.txt:46: trailing whitespace.
++					53 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/17_b04_action_options.ax.txt:46: trailing whitespace.
++					53 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/18_b04_assignment_fields.ax.txt:46: trailing whitespace.
++					53 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/19_b04_assignee_options.ax.txt:46: trailing whitespace.
++					53 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/20_b04_member_selected.ax.txt:46: trailing whitespace.
++					53 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/21_b04_filled_before_submit.ax.txt:46: trailing whitespace.
++					53 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/22_b04_after_submit.ax.txt:46: trailing whitespace.
++					53 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/24_b05_latest_before_resolve.ax.txt:46: trailing whitespace.
++					54 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/25_b05_action_options.ax.txt:46: trailing whitespace.
++					54 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/26_b05_outcome_fields.ax.txt:46: trailing whitespace.
++					54 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/27_b05_filled_before_submit.ax.txt:46: trailing whitespace.
++					54 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/28_b05_after_submit.ax.txt:46: trailing whitespace.
++					54 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/33_b06_resolved_detail_before_reopen.ax.txt:46: trailing whitespace.
++					47 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/34_b06_action_options.ax.txt:46: trailing whitespace.
++					47 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/35_b06_reopen_fields.ax.txt:46: trailing whitespace.
++					47 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/36_b06_filled_before_submit.ax.txt:46: trailing whitespace.
++					47 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/37_b06_after_submit.ax.txt:46: trailing whitespace.
++					47 AXListMarker • 
+docs/reviews/probes/r107_cua/observations/39_b06_after_reopen_settled.ax.txt:46: trailing whitespace.
++					55 AXListMarker • 

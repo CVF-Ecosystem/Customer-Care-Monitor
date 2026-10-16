@@ -1,0 +1,10 @@
+{
+  "observedAt": "2026-10-16T14:46:13.6178966+07:00",
+  "tool": "mcp__cua_repl.js",
+  "requestedCall": "createBrowserTab(\"2\",\"http://127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases/35b4e3be-6b17-4598-a45a-7b8003039d0f\",{visible:false})",
+  "result": "IAB visibility is not supported in a subagent thread",
+  "tabCreated": false,
+  "productNavigation": false,
+  "applicationActions": 0,
+  "currentKnownProductTabs": 1
+}

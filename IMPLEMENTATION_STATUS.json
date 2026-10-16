@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "x-roadmapTracking": {
     "updatedAt": "2026-10-16",
-    "status": "M3_NATIVE_WORKFLOW_PASS_BROWSER_OPEN",
+    "status": "M3_PARTIAL_HISTORICAL_UI_REOPEN_FAILED",
     "currentCheckpoint": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
     "stages": {
       "S0": "PARTIAL_LIVE_BASELINE_OPEN",
@@ -23,7 +23,7 @@
       "M5 release/portable operations"
     ],
     "currentBlockers": [
-      "R106 Vite ESM import race before readiness; CUA HTTP health PASS but R101 B01-B10 NOT_RUN",
+      "R107 historical UI6PASS/1FAIL/3NOT_RUN: REOPEN503; interruption, missing supervisor cleanup receipt and tab closure unobserved. Browser/Vite worked in campaign.",
       "Three inherited Dashboard UI fixture failures reproduced before M3; full suite remains failed",
       "Full M2/WAIT_DATA rerun and M1 people/SLA/corpus/threshold/pilot/release remain open"
     ],
@@ -31,14 +31,14 @@
     "eta": "NOT_ESTABLISHED",
     "deliveryRoadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
     "currentMilestone": "M3",
-    "milestoneAcceptance": "LOCAL_NATIVE_ACCEPTANCE_BROWSER_AND_FULL_UI_OPEN",
+    "milestoneAcceptance": "LOCAL_NATIVE_ACCEPTANCE_PARTIAL_HISTORICAL_BROWSER_FULL_UI_OPEN",
     "deliveryRoadmapPublication": "d72de76984e4aad9c208cc82e6093578797b5340",
     "m1BusinessPilotAcceptance": "OPEN",
     "currentPublication": "LOCAL_ONLY_NOT_PUSHED"
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "R094 bounded M2 source/local manual synthetic intervention prototype independently reviewed: authenticated route, snapshot evidence, monotonic call admission, queue/detail and failure handling; real provider0, default app disabled, full M2/M3/pilot OPEN. docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
@@ -2031,9 +2031,7 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [
-    "docs/work_orders/CCMAI_RUNTIME_107_CODEX_R101_UI_EVIDENCE.md"
-  ],
+  "activeWorkOrders": [],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -2661,7 +2659,7 @@
   },
   "updatedAt": "2026-10-16",
   "x-dispatchReadinessRepair": {
-    "status": "BLOCKED_VITE_IMPORT_RACE_AFTER_BACKEND_READY",
+    "status": "R107_BROWSER_VITE_WORKED_PRODUCT_EVIDENCE_PARTIAL",
     "learning": "docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md",
     "draftWorkOrder": "docs/reviews/planning/R105_R101_UI_EVIDENCE_WORK_ORDER_DRAFT_2026-10-16.md",
     "authorityCandidate": "docs/reviews/planning/R105_R101_UI_AUTHORITY_CANDIDATE_2026-10-16.json",
@@ -2677,7 +2675,7 @@
     "sourceCandidateAuthor": "/root/r105_runner_candidate (Sol Medium)",
     "independentOfflineTests": 12,
     "sourceDisposition": "SOURCE_REVIEW_PASS_RUNTIME_NOT_RUN",
-    "remainingBoundary": "Sequential-import proposal + actual module-load readiness, then new explicit finite runtime allowance;106spent/retries0"
+    "remainingBoundary": "Historical REOPEN503 diagnosis/source-fixture contract; B08-B10 and cleanup evidence need finite successor authority. R107/R106 spent, no retries."
   },
   "x-r105Current": {
     "status": "BUILD_BLOCKED",
@@ -2691,7 +2689,8 @@
   },
   "x-blockedWorkOrders": [
     "docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md",
-    "docs/work_orders/CCMAI_RUNTIME_106_CODEX_R101_UI_EVIDENCE.md"
+    "docs/work_orders/CCMAI_RUNTIME_106_CODEX_R101_UI_EVIDENCE.md",
+    "docs/work_orders/CCMAI_RUNTIME_107_CODEX_R101_UI_EVIDENCE.md"
   ],
   "x-r106Current": {
     "status": "BUILD_BLOCKED",
@@ -2725,10 +2724,26 @@
     "actualModuleImport": "PASS"
   },
   "x-r107Current": {
-    "status": "BUILD",
+    "status": "CHANGES_REQUIRED",
     "seedCommit": "5b019f563009b1fc82205d3f1dcc9cf13efc075a",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_107_CODEX_R101_UI_EVIDENCE.md",
-    "runtime": "NOT_RUN_UNCONSUMED",
-    "nextAction": "CCMAI-RUNTIME-107 BUILD/ACTIVE: accepted sequential template + actualNode module-load +13offline; current Root CUA HTTP/control/PNG PASS. Immutable source/seed base5b019f563009b1fc82205d3f1dcc9cf13efc075a; commit exact ACTIVE/BUILD admission before /root/r107_vite_worker executes owner-approved one NEW fixture/backend/Vite campaign, B01-B10 and owned cleanup; retries0. Preserve R106 spent1/1/1 and all old seeds/evidence. No provider/mock/install/source repair; Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked."
+    "runtime": "ONE_CAMPAIGN_SPENT_PARTIAL_UI",
+    "nextAction": "CCMAI-RUNTIME-107 REVIEW / CHANGES_REQUIRED, order BLOCKED_WITH_REASON: historical R101 UI B01-B05/B07 PASS, B06 REOPEN HTTP503 FAIL, B08-B10 NOT_RUN after interruption. One fixture/backend/Vite campaign spent1/1/1, retries0, eight POSTs/two tabs; no further runtime. Exact fixture exited/recorded PIDs absent/protected safe fields equal; supervisor cleanup receipt missing and tab closure NOT_OBSERVED. Root next bounds REOPEN diagnosis and remaining UI/cleanup evidence contract before a finite successor; no automatic repair/start/seed reset. Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked.",
+    "review": "docs/reviews/R107_PARTIAL_UI_INDEPENDENT_REVIEW_2026-10-16.md",
+    "actualExecution": {
+      "fixtureStarts": 1,
+      "backendLaunches": 1,
+      "viteLaunches": 1,
+      "newFixtures": 0,
+      "caseActionSubmissions": 5,
+      "authSubmissions": 3,
+      "totalPostSubmissions": 8,
+      "productTabs": 2,
+      "runtimeRetries": 0,
+      "providerCalls": 0,
+      "mockCalls": 0,
+      "UI": "6_PASS_1_FAIL_3_NOT_RUN",
+      "cleanup": "FIXTURE_EXITED_PIDS_ABSENT_PROTECTED_EQUAL_SUPERVISOR_RECEIPT_MISSING_TABS_NOT_OBSERVED"
+    }
   }
 }
