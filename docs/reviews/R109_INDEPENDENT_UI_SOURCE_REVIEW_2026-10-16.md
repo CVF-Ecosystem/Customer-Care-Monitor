@@ -8,8 +8,8 @@ Disposition: UI_SOURCE_AND_FOCUSED_VALIDATION_ACCEPTED_RUNTIME_NOT_RUN
 
 The Root review covers the intervention view, presentation helper, vi/en
 strings and focused tests against the R109 order and original R108 language
-audit. This is source review only. Tests, native diagnostic and rendered UI
-acceptance are not yet observed.
+audit. At the initial review, tests, native diagnostic and rendered UI had not
+been observed; the focused validation results are recorded below.
 
 Initial implementation removes raw enum/error/UUID/provider/model/digest and
 JSON display, localizes filters/loading/revision and presents whitelisted

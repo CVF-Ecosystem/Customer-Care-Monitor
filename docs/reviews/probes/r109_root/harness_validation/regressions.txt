@@ -1,0 +1,8 @@
+test_complete_mysql_error_stops_once_and_records_only_safe_number (__main__.HarnessRegression.test_complete_mysql_error_stops_once_and_records_only_safe_number) ... ok
+test_early_eof_is_pending_then_fragmented_complete_greeting_is_ready (__main__.HarnessRegression.test_early_eof_is_pending_then_fragmented_complete_greeting_is_ready) ... ok
+test_pipe_readiness_arrives_before_eof_and_split_password_is_redacted (__main__.HarnessRegression.test_pipe_readiness_arrives_before_eof_and_split_password_is_redacted) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.124s
+
+OK

@@ -1,0 +1,23 @@
+{
+  "recordedAtUTC": "2026-10-16T16:59:26.207542+00:00",
+  "tool": "mcp__cua_repl",
+  "browser": "iab id2",
+  "origin": "http://127.0.0.1:65245/",
+  "result": "HTTP_CLICK_CAPTURE_PASS",
+  "observedBefore": "Chưa kiểm tra",
+  "observedAfter": "Đã kết nối",
+  "calls": [
+    "cua.createBrowserTab(2,http://127.0.0.1:65245/)",
+    "r109Health.click(3)",
+    "r109Health.getAXState()",
+    "r109Health.getScreenshot()",
+    "r109Health.close()"
+  ],
+  "screenshot": "after_click.png",
+  "ownedTabClosed": true,
+  "ownedHealthServerExitCode": 0,
+  "productBackendViteFixture": "NOT_RUN",
+  "cachePath": "NOT_OBSERVED",
+  "driverVersion": "NOT_OBSERVED",
+  "representation": "Operator transcription of actual calls/results; original screenshot bytes retained"
+}

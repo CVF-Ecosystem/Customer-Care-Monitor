@@ -1,0 +1,7 @@
+{
+  "outputRedaction": "exact synthetic R101 fixture passwords, R108 DSN pattern and bearer-token pattern",
+  "rawBytesObserved": 44,
+  "readerError": null,
+  "redactedBytesRetained": 60,
+  "redactedSha256": "ff08557af9389a18b905159c2cdeaf1df2ae815f3988c596be651fe214e75f60"
+}
