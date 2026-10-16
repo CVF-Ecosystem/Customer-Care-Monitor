@@ -76,20 +76,26 @@
   "browserOperator": "Codex /root",
   "browserTool": "mcp__cua_repl",
   "browserSurface": "iab",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
   "baseCommit": "25d3b40f90d0b001a1d1862034e18aa521ddd67a",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_109_HUMAN_UI_COMPLETION.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
   "buildCommit": "5ab60830368482e072cb0150a7894235ca950c24",
-  "reviewEvidence": [],
-  "disposition": "RUNTIME_ADMITTED_PENDING_SINGLE_CAMPAIGN",
+  "reviewEvidence": [
+    "docs/reviews/R109_HUMAN_UI_WORKER_RETURN_2026-10-16.md",
+    "docs/reviews/R109_ROOT_UI_OBSERVATIONS_2026-10-17.md",
+    "docs/reviews/R109_INDEPENDENT_INTERRUPTED_REVIEW_2026-10-17.md"
+  ],
+  "disposition": "PARTIAL_EVIDENCE_ACCEPTED_BROWSER_TRANSFER_REQUIRED",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -100,8 +106,16 @@
   "x-runtimeAdmission": {
     "sourceCommit": "5ab60830368482e072cb0150a7894235ca950c24",
     "admission": "docs/reviews/probes/r109_root/runtime_admission.json",
-    "status": "NOT_RUN",
+    "status": "INTERRUPTED_SPENT",
     "frontendTestsUsed": 1,
-    "frontendTypechecksUsed": 1
+    "frontendTypechecksUsed": 1,
+    "fixtureStarts": 1,
+    "nativeInvocations": 1,
+    "backendLaunches": 1,
+    "viteLaunches": 1,
+    "nativeActionPosts": 4,
+    "uiPosts": 11,
+    "retries": 0,
+    "goCompiles": 0
   }
 }

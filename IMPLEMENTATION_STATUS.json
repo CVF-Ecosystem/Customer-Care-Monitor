@@ -38,7 +38,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "R094 bounded M2 source/local manual synthetic intervention prototype independently reviewed: authenticated route, snapshot evidence, monotonic call admission, queue/detail and failure handling; real provider0, default app disabled, full M2/M3/pilot OPEN. docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
@@ -2031,9 +2031,7 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [
-    "docs/work_orders/CCMAI_RUNTIME_109_HUMAN_UI_COMPLETION.md"
-  ],
+  "activeWorkOrders": [],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -2787,11 +2785,12 @@
     }
   },
   "x-r109Current": {
-    "status": "BUILD_RUNTIME_ADMITTED",
+    "status": "CHANGES_REQUIRED",
     "seedCommit": "25d3b40f90d0b001a1d1862034e18aa521ddd67a",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_109_HUMAN_UI_COMPLETION.md",
-    "runtime": "NOT_RUN_UNCONSUMED",
-    "nextAction": "CCMAI-RUNTIME-109 BUILD runtime admitted at source5ab60830 after UI14tests/typecheck and supervisor3regressions/config-import PASS. Luna executes one shared fixture/native/backend/Vite campaign2100s/retries0 with reused binarycb73ee13 and Go0; native4POST then only on NOT_REPRODUCED Root connected browser B01-B10/UI14POST/max3tabs. Stop on native failure or actual browser failure; preserve raw failures and owned cleanup. No source changes or HEAD commit during campaign. Return exact worker packet for independent Root review; no FREEZE. Dashboard3/fullM2/M3/pilot/release OPEN; R102 local FROZEN, accounts parked.",
-    "sourceCommit": "5ab60830368482e072cb0150a7894235ca950c24"
+    "runtime": "INTERRUPTED_SPENT_PARTIAL_UI_NATIVE_PASS",
+    "nextAction": "CCMAI-RUNTIME-109 CHANGES_REQUIRED after interrupted single campaign: native/current B01-B06 and B10 functional PASS; B07/B08/B09 NOT_RUN, source-copy/shell language findings OPEN. Original supervisor finalization missing; separate Root exact-fixture recovery PASS/protected unchanged, tab closure NOT_OBSERVED. STOP runtime/browser here per owner; transfer preserved packet to another stable connected agent with fresh bounded source/build authority. R109 spent fixture/native/backend/Vite1 each, native4/UI11POST, Go0/retry0; no replay or unused-slot reuse. No FREEZE/full product acceptance; Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, accounts parked.",
+    "sourceCommit": "5ab60830368482e072cb0150a7894235ca950c24",
+    "review": "docs/reviews/R109_INDEPENDENT_INTERRUPTED_REVIEW_2026-10-17.md"
   }
 }

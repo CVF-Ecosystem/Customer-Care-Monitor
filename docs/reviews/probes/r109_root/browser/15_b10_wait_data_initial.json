@@ -1,0 +1,9 @@
+{
+  "observedAtUTC": "2026-10-16T17:21:55.744Z",
+  "tool": "mcp__cua_repl",
+  "tabId": "3",
+  "url": "http://127.0.0.1:3011/4b44be84-86fc-47ef-a018-e515b5ae74ea/intervention-cases/e543aa21-236c-401d-9676-8c27808b6062",
+  "operatorRecordedAction": "Existing waiting case update1, sourceINCOMPLETE, no proposal; observed generic source-copy overstatement recorded as finding",
+  "dom": "15_b10_wait_data_initial.dom.txt",
+  "screenshot": "15_b10_wait_data_initial.png"
+}

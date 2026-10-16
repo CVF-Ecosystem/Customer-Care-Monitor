@@ -1,13 +1,13 @@
 # R109 human UI language and bounded native/browser completion
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 dispatchKind: INITIAL
 Worker: /root/r108_browser_luna (Luna Max, source and supervisor executor; no browser role)
 Reviewer: Codex /root (independent code review and connected browser verification)
 Commit steward: Codex /root
 providerExecutionAuthority: NONE
-Disposition: RUNTIME_ADMITTED_PENDING_SINGLE_CAMPAIGN
+Disposition: PARTIAL_EVIDENCE_ACCEPTED_BROWSER_TRANSFER_REQUIRED
 
 ## Authority, entry and checker read-ahead
 
@@ -77,3 +77,7 @@ Material-SHA marker:25d3b40f90d0b001a1d1862034e18aa521ddd67a. Source-only commit
 Root independently accepted source a93b463a8968e1c11648e734a9dbd011a07b8369 with UI14tests/typecheck and supervisor3regressions/actual Node config import PASS. Exact committed runtime_admission.json is mandatory; one existing shared fixture/native/UI campaign only, old counters untouched. Root connected browser HTTP click/screenshot PASS; no product result yet.
 
 Current runtime source after pre-start newline repair: 5ab60830368482e072cb0150a7894235ca950c24. Original admission is preserved; physical SHA pins unchanged in meaning and refreshed for the repaired supervisor only. No campaign attempt was consumed by the read-only failure.
+
+## Independent interrupted result — 2026-10-17
+
+CHANGES_REQUIRED, freeze OPEN. Native NOT_REPRODUCED and current B01-B06/B10 functional PASS; B07-B09 NOT_RUN and language findings OPEN. Original supervisor receipts missing after interruption. Root separate exact-fixture recovery PASS/protected unchanged, no PID kill, final tab closure NOT_OBSERVED. One campaign spent; owner stop/transfer condition applies, no replay or further effects under this order.

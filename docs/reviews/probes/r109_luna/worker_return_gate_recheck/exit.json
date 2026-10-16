@@ -1,0 +1,12 @@
+{
+  "command": "python -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase worker-return --project-root . --packet docs/work_orders/CCMAI_RUNTIME_109_HUMAN_UI_COMPLETION.md --packet docs/reviews/R109_HUMAN_UI_WORKER_RETURN_2026-10-16.md",
+  "startedAtLocal": "2026-10-17T00:37:22.1673026+07:00",
+  "durationMs": 1116,
+  "exitCode": 0,
+  "stdoutPath": "docs\\reviews\\probes\\r109_luna\\worker_return_gate_recheck\\stdout.txt",
+  "stdoutBytes": 801,
+  "stdoutSha256": "e3e6741c278e5e19ea1489b1a58ffa7aef5c5968d50c352df09e30e0f8286a03",
+  "stderrPath": "docs\\reviews\\probes\\r109_luna\\worker_return_gate_recheck\\stderr.txt",
+  "stderrBytes": 0,
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

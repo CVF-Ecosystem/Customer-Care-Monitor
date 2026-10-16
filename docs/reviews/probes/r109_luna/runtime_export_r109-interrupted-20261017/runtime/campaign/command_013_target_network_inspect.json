@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "--config",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r109_workflow\\campaign\\docker-cli-config",
+    "network",
+    "inspect",
+    "--format",
+    "{\"Id\":{{json .Id}},\"Name\":{{json .Name}},\"Containers\":[{{ $first := true }}{{range $id,$c := .Containers}}{{if not $first}},{{end}}{{ $first = false }}{\"Id\":{{json $id}},\"Name\":{{json $c.Name}}}{{end}}]}",
+    "35c3959ac41517050defad05cbad7a08717b24c8879683e25baf3e2702625e98"
+  ],
+  "exitCode": 0,
+  "failureType": null,
+  "outputRedaction": "exact synthetic fixture credential and bearer-token patterns only",
+  "pid": 16980,
+  "stderrBytes": 0,
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdoutBytes": 247,
+  "stdoutSha256": "68529f9b439d3b3583a3a8b62ccffde462e2bbfeaac253d2f7b243a0bd4862f3",
+  "timedOut": false
+}

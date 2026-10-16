@@ -1,0 +1,8 @@
+{
+  "ambientEnvironmentDisabled": true,
+  "apiOrigin": "http://127.0.0.1:60285",
+  "envDir": false,
+  "healthRoute": "/__r109_health",
+  "path": "vite.config.mjs",
+  "sha256": "6318086ae6582adf104ee929bbde3527905ed0a2bfc3d10bf254b12cb767afd4"
+}

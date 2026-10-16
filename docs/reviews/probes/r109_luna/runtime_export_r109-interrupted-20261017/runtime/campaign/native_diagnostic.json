@@ -1,0 +1,331 @@
+{
+  "actionCount": 4,
+  "actions": [
+    {
+      "action": "CORRECT",
+      "actor_role": "member",
+      "after": {
+        "case": {
+          "disposition": "HUMAN_CORRECT",
+          "human_assessment": "CORRECT",
+          "outcome_present": false,
+          "version": 2,
+          "work_state": "OPEN"
+        },
+        "event_count": 1,
+        "events": [
+          {
+            "action": "CORRECT",
+            "after_outcome_present": false,
+            "before_outcome_present": false,
+            "reason_matches_b06": false,
+            "version": 2
+          }
+        ],
+        "persisted_case_and_events_sha256": "e8950470d683fdad9e929b80914310198cfed24870b0039b0fd8e72f99c883e7",
+        "proposal_count": 1
+      },
+      "before": {
+        "case": {
+          "disposition": "PENDING_REVIEW",
+          "human_assessment": "",
+          "outcome_present": false,
+          "version": 1,
+          "work_state": "OPEN"
+        },
+        "event_count": 0,
+        "events": null,
+        "persisted_case_and_events_sha256": "a1c62e3e4b63fa7680bbdf04580341c326c8c949d259b80befc2ed0ac9021e01",
+        "proposal_count": 1
+      },
+      "db_error": {
+        "captured": false,
+        "class": "NOT_CAPTURED",
+        "constraint": "NOT_IDENTIFIED",
+        "mysql_number": 0,
+        "sql_state": "",
+        "stage": "NOT_CAPTURED"
+      },
+      "http_status": 200,
+      "request_fields": {
+        "action": "CORRECT",
+        "expected_proposal_id": "2613cd4e-a81f-4f7e-a8a0-f32bff43bf81",
+        "expected_revision": 1,
+        "expected_snapshot_digest": "04dd4541a8d6b9928ab546b10206e87c8d943915d60b1eea44d62b4420271038",
+        "expected_snapshot_id": "f475eb7d-d4a4-4559-8d9f-ba77ca2a697b",
+        "expected_version": 1,
+        "explanation": "Điều chỉnh thông tin xử lý",
+        "next_action": "Kiểm tra đơn hàng",
+        "reason": "R108 synthetic correction"
+      }
+    },
+    {
+      "action": "ASSIGN",
+      "actor_role": "owner",
+      "after": {
+        "case": {
+          "disposition": "HUMAN_CORRECT",
+          "due_at": "2026-10-17T17:14:32Z",
+          "human_assessment": "CORRECT",
+          "outcome_present": false,
+          "version": 3,
+          "work_state": "ASSIGNED"
+        },
+        "event_count": 2,
+        "events": [
+          {
+            "action": "CORRECT",
+            "after_outcome_present": false,
+            "before_outcome_present": false,
+            "reason_matches_b06": false,
+            "version": 2
+          },
+          {
+            "action": "ASSIGN",
+            "after_outcome_present": false,
+            "before_outcome_present": false,
+            "reason_matches_b06": false,
+            "version": 3
+          }
+        ],
+        "persisted_case_and_events_sha256": "df513223bf55ba7bf0c6d55a24dc5e0462ad98b8604b5c06ca8ac23b5bb03d9f",
+        "proposal_count": 1
+      },
+      "before": {
+        "case": {
+          "disposition": "HUMAN_CORRECT",
+          "human_assessment": "CORRECT",
+          "outcome_present": false,
+          "version": 2,
+          "work_state": "OPEN"
+        },
+        "event_count": 1,
+        "events": [
+          {
+            "action": "CORRECT",
+            "after_outcome_present": false,
+            "before_outcome_present": false,
+            "reason_matches_b06": false,
+            "version": 2
+          }
+        ],
+        "persisted_case_and_events_sha256": "e8950470d683fdad9e929b80914310198cfed24870b0039b0fd8e72f99c883e7",
+        "proposal_count": 1
+      },
+      "db_error": {
+        "captured": false,
+        "class": "NOT_CAPTURED",
+        "constraint": "NOT_IDENTIFIED",
+        "mysql_number": 0,
+        "sql_state": "",
+        "stage": "NOT_CAPTURED"
+      },
+      "http_status": 200,
+      "request_fields": {
+        "action": "ASSIGN",
+        "assignee_id": "39b43f37-c147-4f18-bc16-61be82e078c6",
+        "due_at": "2026-10-17T17:14:32Z",
+        "expected_proposal_id": "2613cd4e-a81f-4f7e-a8a0-f32bff43bf81",
+        "expected_revision": 1,
+        "expected_snapshot_digest": "04dd4541a8d6b9928ab546b10206e87c8d943915d60b1eea44d62b4420271038",
+        "expected_snapshot_id": "f475eb7d-d4a4-4559-8d9f-ba77ca2a697b",
+        "expected_version": 2,
+        "reason": "R108 synthetic assignment"
+      }
+    },
+    {
+      "action": "RESOLVE",
+      "actor_role": "member",
+      "after": {
+        "case": {
+          "disposition": "HUMAN_CORRECT",
+          "due_at": "2026-10-17T17:14:32Z",
+          "human_assessment": "CORRECT",
+          "outcome_present": true,
+          "version": 4,
+          "work_state": "RESOLVED"
+        },
+        "event_count": 3,
+        "events": [
+          {
+            "action": "CORRECT",
+            "after_outcome_present": false,
+            "before_outcome_present": false,
+            "reason_matches_b06": false,
+            "version": 2
+          },
+          {
+            "action": "ASSIGN",
+            "after_outcome_present": false,
+            "before_outcome_present": false,
+            "reason_matches_b06": false,
+            "version": 3
+          },
+          {
+            "action": "RESOLVE",
+            "after_outcome_present": true,
+            "before_outcome_present": false,
+            "reason_matches_b06": false,
+            "version": 4
+          }
+        ],
+        "persisted_case_and_events_sha256": "78624cb7d6d66b142d02d42c4c91e5e4aaa705c84dd97fd0cc740ce44e02f085",
+        "proposal_count": 1
+      },
+      "before": {
+        "case": {
+          "disposition": "HUMAN_CORRECT",
+          "due_at": "2026-10-17T17:14:32Z",
+          "human_assessment": "CORRECT",
+          "outcome_present": false,
+          "version": 3,
+          "work_state": "ASSIGNED"
+        },
+        "event_count": 2,
+        "events": [
+          {
+            "action": "CORRECT",
+            "after_outcome_present": false,
+            "before_outcome_present": false,
+            "reason_matches_b06": false,
+            "version": 2
+          },
+          {
+            "action": "ASSIGN",
+            "after_outcome_present": false,
+            "before_outcome_present": false,
+            "reason_matches_b06": false,
+            "version": 3
+          }
+        ],
+        "persisted_case_and_events_sha256": "df513223bf55ba7bf0c6d55a24dc5e0462ad98b8604b5c06ca8ac23b5bb03d9f",
+        "proposal_count": 1
+      },
+      "db_error": {
+        "captured": false,
+        "class": "NOT_CAPTURED",
+        "constraint": "NOT_IDENTIFIED",
+        "mysql_number": 0,
+        "sql_state": "",
+        "stage": "NOT_CAPTURED"
+      },
+      "http_status": 200,
+      "request_fields": {
+        "action": "RESOLVE",
+        "expected_proposal_id": "2613cd4e-a81f-4f7e-a8a0-f32bff43bf81",
+        "expected_revision": 1,
+        "expected_snapshot_digest": "04dd4541a8d6b9928ab546b10206e87c8d943915d60b1eea44d62b4420271038",
+        "expected_snapshot_id": "f475eb7d-d4a4-4559-8d9f-ba77ca2a697b",
+        "expected_version": 3,
+        "outcome": "Đã xác nhận và giao bộ phận xử lý",
+        "reason": "R108 synthetic resolution"
+      }
+    },
+    {
+      "action": "REOPEN",
+      "actor_role": "owner",
+      "after": {
+        "case": {
+          "disposition": "HUMAN_CORRECT",
+          "due_at": "2026-10-17T17:14:32Z",
+          "human_assessment": "CORRECT",
+          "outcome_present": false,
+          "version": 5,
+          "work_state": "ASSIGNED"
+        },
+        "event_count": 4,
+        "events": [
+          {
+            "action": "CORRECT",
+            "after_outcome_present": false,
+            "before_outcome_present": false,
+            "reason_matches_b06": false,
+            "version": 2
+          },
+          {
+            "action": "ASSIGN",
+            "after_outcome_present": false,
+            "before_outcome_present": false,
+            "reason_matches_b06": false,
+            "version": 3
+          },
+          {
+            "action": "RESOLVE",
+            "after_outcome_present": true,
+            "before_outcome_present": false,
+            "reason_matches_b06": false,
+            "version": 4
+          },
+          {
+            "action": "REOPEN",
+            "after_outcome_present": false,
+            "before_outcome_present": true,
+            "reason_matches_b06": true,
+            "version": 5
+          }
+        ],
+        "persisted_case_and_events_sha256": "34d3cc47467d567f84975c89697dd7e1caabb941eb5d30dadc8b5ee04bcfbf23",
+        "proposal_count": 1
+      },
+      "before": {
+        "case": {
+          "disposition": "HUMAN_CORRECT",
+          "due_at": "2026-10-17T17:14:32Z",
+          "human_assessment": "CORRECT",
+          "outcome_present": true,
+          "version": 4,
+          "work_state": "RESOLVED"
+        },
+        "event_count": 3,
+        "events": [
+          {
+            "action": "CORRECT",
+            "after_outcome_present": false,
+            "before_outcome_present": false,
+            "reason_matches_b06": false,
+            "version": 2
+          },
+          {
+            "action": "ASSIGN",
+            "after_outcome_present": false,
+            "before_outcome_present": false,
+            "reason_matches_b06": false,
+            "version": 3
+          },
+          {
+            "action": "RESOLVE",
+            "after_outcome_present": true,
+            "before_outcome_present": false,
+            "reason_matches_b06": false,
+            "version": 4
+          }
+        ],
+        "persisted_case_and_events_sha256": "78624cb7d6d66b142d02d42c4c91e5e4aaa705c84dd97fd0cc740ce44e02f085",
+        "proposal_count": 1
+      },
+      "db_error": {
+        "captured": false,
+        "class": "NOT_CAPTURED",
+        "constraint": "NOT_IDENTIFIED",
+        "mysql_number": 0,
+        "sql_state": "",
+        "stage": "NOT_CAPTURED"
+      },
+      "http_status": 200,
+      "request_fields": {
+        "action": "REOPEN",
+        "due_at": "2026-10-17T17:14:32Z",
+        "expected_proposal_id": "2613cd4e-a81f-4f7e-a8a0-f32bff43bf81",
+        "expected_revision": 1,
+        "expected_snapshot_digest": "04dd4541a8d6b9928ab546b10206e87c8d943915d60b1eea44d62b4420271038",
+        "expected_snapshot_id": "f475eb7d-d4a4-4559-8d9f-ba77ca2a697b",
+        "expected_version": 4,
+        "reason": "Đã có thông tin bổ sung cần xác minh sau khi ghi kết quả; mở lại để tiếp tục theo dõi."
+      }
+    }
+  ],
+  "claim": "current-source synthetic human workflow diagnostic only",
+  "classification": "NOT_REPRODUCED",
+  "exitCode": 0,
+  "lifecycleAccepted": true
+}

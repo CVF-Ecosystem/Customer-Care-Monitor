@@ -1,0 +1,53 @@
+{
+  "binaryBytes": 58031616,
+  "binaryPath": ".cvf/runtime/r108_native/campaign/r108_handlers.test.exe",
+  "binarySha256": "cb73ee13e0369cca75ea276cc668f30c3ced42cead5f62c56d68f3c1eaa66f93",
+  "budget": {
+    "backendLaunches": 1,
+    "fixtureStarts": 1,
+    "goCompiles": 0,
+    "nativeActionPosts": 4,
+    "nativeInvocations": 1,
+    "runtimeRetries": 0,
+    "viteLaunches": 1
+  },
+  "campaignId": "r109-1792170860-5076",
+  "campaignLimitSeconds": 2100,
+  "cleanupReserveSeconds": 75,
+  "dockerSha256": "6c699720bb9523dedb9eb5d22a49951ea9210dbdb1314a3554029eee9be76896",
+  "environment": "SystemRoot/WINDIR/TEMP/TMP plus explicitly declared synthetic fixture values only; no .env or provider settings",
+  "evidencePins": {
+    "docs/reviews/R109_INDEPENDENT_RUNTIME_ADMISSION_REVIEW_2026-10-16.md": "d3cd3e68fd3ff62330343b67a48bdc34fb60d477fe2c02de624edb59f352d902",
+    "docs/reviews/R109_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-16.md": "444c3a6fdef08e5f7e30a8eddcfb66c83fc7e776b86418edfe64fc85157c129d",
+    "docs/reviews/probes/r109_root/binary_reuse_verification.json": "a19b5adb4d3da7f7f5920096613aa3617e61e4f781e83d908e1c05da2add6966",
+    "docs/reviews/probes/r109_root/validation_1/focused_tests.json": "4036bb4832cd4b178645ff12fe07876691fb1c6ab2dc4e9445a2c65edea1b4e7",
+    "docs/reviews/probes/r109_root/validation_1/focused_tests.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/reviews/probes/r109_root/validation_1/focused_tests.stdout.txt": "697bf577164e4c17fc530e02584a1ffaf90ccdc08211de3631cb47e609b9e494",
+    "docs/reviews/probes/r109_root/validation_1/forced_typecheck.json": "28f5fb92ccbd7eb54c88b5570aab337cac93fcfd7b245bd80ca0ab5707b3aecb",
+    "docs/reviews/probes/r109_root/validation_1/forced_typecheck.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/reviews/probes/r109_root/validation_1/forced_typecheck.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/reviews/probes/r109_root/validation_1/source_pins.json": "d007ee021cd79ee766989060ff7bd12b06281c1042036dadf4432d18d1d311e8"
+  },
+  "headCommit": "7fc2273b485b765543dd78fc60afc51ee68d0cb3",
+  "helperSha256": "899afa92934dede2d99d28d591bc4232d29a52f764d10f8420588e8e940fb138",
+  "nodeSha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+  "reviewedSourceCommit": "5ab60830368482e072cb0150a7894235ca950c24",
+  "runtimeAdmissionSha256": "78d848ec130fd2ac747d7690f673d1924491f6c74cfeeeb144343a1a2002da49",
+  "seedSha256": "0dd81d210dcf40ff90869a3cebf17784095646c60d846ea98820ddbc8aec1029",
+  "sourcePins": {
+    "docs/reviews/probes/r108_luna/r108_native_runner.py": "899afa92934dede2d99d28d591bc4232d29a52f764d10f8420588e8e940fb138",
+    "docs/reviews/probes/r109_luna/r109_vite_config.mjs.template": "a07f20c1a825aa14e0772069a466d3f49c34bd0e3628523b2cabad71474d3c68",
+    "docs/reviews/probes/r109_luna/r109_workflow_runner.py": "0d6dbeda1433d50fac37ece865bdc39be09ec5842ea4b73b2f651e5c515d7535",
+    "docs/reviews/probes/r109_root/focused-test.config.mjs": "09e1e492b49685192028a1394230e39e7ed89ebb7ca4888eedaac8e0b832740f",
+    "frontend/src/__tests__/intervention-api.test.ts": "06851bd2e20080165c69cbb224872b86c7d559dcc627863e9a4268cffaf464d8",
+    "frontend/src/__tests__/intervention-presentation.test.ts": "fa50a420a5f2861a4be382e7f7b724dea98ee54cca2279c14bd103adb4f696ff",
+    "frontend/src/__tests__/intervention-ui.test.ts": "5ea4e3dcc7530448369b0740be54bbaafe16109f9d43cbadd36faf72ab55f65e",
+    "frontend/src/i18n/en.ts": "9e80a4e5fd7cff448ada01e238ff44fceb11cf0fc56722ebe0776b4b8865c90d",
+    "frontend/src/i18n/vi.ts": "e54f809098605e3d36f3f538875e406e0e17d387613ff7a4db161ab7cd66de8a",
+    "frontend/src/utils/interventionPresentation.ts": "4e25b89d0600972b03da02e4acab10274ee8c4ff51c3679d6204b59bad28c050",
+    "frontend/src/views/InterventionCases.vue": "888c5b672a013d6ab2c6965423899977bcecb70cd460a8abdf374e93067c05e5"
+  },
+  "startedAtUnix": 1792170860.682179,
+  "trancheId": "CCMAI-RUNTIME-109",
+  "workOrderSha256": "14d74e19904a236850027e33a4741ff2148fbf813d3dd384d8ee38fc4dc350d0"
+}

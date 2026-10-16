@@ -1,0 +1,9 @@
+{
+  "observedAtUTC": "2026-10-16T17:22:33.141Z",
+  "tool": "mcp__cua_repl",
+  "tabId": "3",
+  "url": "http://127.0.0.1:3011/4b44be84-86fc-47ef-a018-e515b5ae74ea/intervention-cases/e543aa21-236c-401d-9676-8c27808b6062",
+  "operatorRecordedAction": "Data escalation persisted update3, stillwaiting/sourceincomplete, owner/deadline retained; source-copy finding preserved",
+  "dom": "18_b10_escalated_reloaded.dom.txt",
+  "screenshot": "18_b10_escalated_reloaded.png"
+}

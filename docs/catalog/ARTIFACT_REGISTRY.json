@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R109_HUMAN_UI_2026-10-16.md",
       "status": "ACTIVE",
-      "description": "R109 human UI language and bounded current-source native/browser completion; source-only until admission, old evidence retained."
+      "description": "R109 interrupted partial current-source evidence; browser transfer required, language findings and full acceptance OPEN."
     },
     {
       "id": "r060-work-order",
@@ -15849,6 +15849,3233 @@
       "id": "r109-d1027b051f06943f7d",
       "family": "continuity",
       "path": "docs/reviews/R109_NEWLINE_REPRESENTATION_REVIEW_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-264e3aca6db957eaf1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/r109_worker_evidence_manifest.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-c0cd931850f065308e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/00_inherited_session.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-9f5d43a048da661c9d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/00_inherited_session.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-02ef6349d8bf1679e4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/00_inherited_session.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-db7c3d971b8f0c636c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/01_b01_queue.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-5c79d05dcef2976c48",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/01_b01_queue.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-7516f2f6875a9eca6e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/01_b01_queue.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a5274e76953ae34d6c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/02_b01_initial_detail.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-22d7776a6839e81175",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/02_b01_initial_detail.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-125e60bbec43ae90af",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/02_b01_initial_detail.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-c47c0615977aa21a4a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/03_b03_stale_version1.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-121eace87b27e25eb6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/03_b03_stale_version1.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-e24961721407a7e65f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/03_b03_stale_version1.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-568e907b8e3e21dcfa",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/04_b02_before_submit.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-0ca2fd8bd182e1080f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/04_b02_before_submit.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-d153d1c939d82c1cd3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/04_b02_before_submit.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-f256464005ed17a2af",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/05_b02_corrected.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-cc6e72cfb42bb004f5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/05_b02_corrected.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a606b110d493d024a1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/05_b02_corrected.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-4f018b32c1f332dd43",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/06_b03_before_stale_submit.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-01f660eefac665515c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/06_b03_before_stale_submit.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-c122a7746e0d775639",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/06_b03_before_stale_submit.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-699f3d51bae6e1c12e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/07_b03_conflict.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-ec284244842fa136e8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/07_b03_conflict.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-d21beb9432f83c6f5c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/07_b03_conflict.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-5bc13a3ba1a1778588",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/08_b04_before_assign.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a2c567ca1005574077",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/08_b04_before_assign.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-49c1f383aaccf203fa",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/08_b04_before_assign.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-f69bff5aef09db750c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/09_b04_reloaded.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-b7ec495f6f10a86cac",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/09_b04_reloaded.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-f7d378e2fe78c7eeac",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/09_b04_reloaded.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-2abf565ad553e771c9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/10_b05_resolved_reloaded.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-680f3071510690036d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/10_b05_resolved_reloaded.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-dfc40d1be2fc6187b2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/10_b05_resolved_reloaded.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-0ec3ac11303bce8d7d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/11_b05_terminal_filter.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-def96504306d6b5ffc",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/11_b05_terminal_filter.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-1511745672a057e221",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/11_b05_terminal_filter.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-084f5d8f75bd00a9d2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/12_b06_before_reopen.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-5d36f656d8479d62f3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/12_b06_before_reopen.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-8ed3a9ffabcd022145",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/12_b06_before_reopen.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-95f9806f8b8ed9040b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/13_b06_reopened_history.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a2c4a247a26f4a6170",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/13_b06_reopened_history.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-3fce2329b463783856",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/13_b06_reopened_history.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-737ebc67990cc5214f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/14_b08_dimensions.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-21f60c5b8269cb42ba",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/14_b08_narrow_detail_history.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-f372a0449eb8451ad0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/14_b08_narrow_detail_history.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-b70007eb47a3d58551",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/14_b08_narrow_detail_history.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a7d448d0c96aa39470",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/14_b08_viewport_outcome.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-3d38fbf0ab4b397b6b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/15_b10_wait_data_initial.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-709cec8c83b6583d17",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/15_b10_wait_data_initial.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a03ea399fbcfac334c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/15_b10_wait_data_initial.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-532e1e9f3284c1fd3d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/16_b10_completion_guard.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-2569285c991eb087a8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/16_b10_completion_guard.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-251d1ab4da5a1319a3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/16_b10_completion_guard.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-f1dd6ab1b287ac4b45",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/17_b10_assigned_reloaded.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-646c443e9fcc378a72",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/17_b10_assigned_reloaded.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-6f92fb34c57fd12af9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/17_b10_assigned_reloaded.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-0f325dde2f83953db2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/18_b10_escalated_reloaded.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-b495f217ec5e042a36",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/18_b10_escalated_reloaded.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-4fc0b3125997839e0d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/18_b10_escalated_reloaded.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-2d7f03fb29e252263f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/capability_inventory.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-e35f1991b7b4e7a593",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/root_submission_reservations.jsonl",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-99c65a7c7a2b36e423",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser_interruption.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-46b708c3aabe6ed3a8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_001_target_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-e9aa1f228f8eb2c42f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_001_target_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-8cbfbb7d86a84730c4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_001_target_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-4a0545add84960d784",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_002_target_network_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-35df13199aca58f7af",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_002_target_network_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-66da1748fb682699a0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_002_target_network_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-56f7b420dbb87643ff",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_003_fixture_volume_users.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-bbaae5a9ac21b7bbfe",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_003_fixture_volume_users.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-3458f5b1dba5244639",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_003_fixture_volume_users.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-830a6f9e94e6d7b39d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_004_all_container_ids.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-9ec73ebc9a259d7c64",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_004_all_container_ids.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-008002c5c49b4cd9dc",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_004_all_container_ids.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-721e0c1ddfb0ec03ac",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_005_protected_container_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-2a9e27c4082513a080",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_005_protected_container_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a0d959be7833288e24",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_005_protected_container_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-87bad24dfcaae0b992",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_006_target_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-d9355a0a9a3f47c346",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_006_target_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-ee30f883aa03f74026",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_006_target_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-577e88b37637477e12",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_007_target_network_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-7b714bc9ebee207815",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_007_target_network_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a7bcdab82c0886cbaa",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_007_target_network_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-c7b121a1a15030706a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_008_fixture_volume_users.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-f21d0e16e89c17194f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_008_fixture_volume_users.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-246df1feb7ed3b8c15",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_008_fixture_volume_users.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a1d7279273d32977a8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_009_fixture_stop.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-daa84673650c558aea",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_009_fixture_stop.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-dc323c5770069feb25",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_009_fixture_stop.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-0e5d4bb45f322695cf",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_010_target_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-77ec1c0a837b4d7e6e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_010_target_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a14e146553a3a69132",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_010_target_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-20b66b1ccc0ba88be7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_011_target_network_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-c2e1e8c25c81288557",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_011_target_network_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-00f765ce9f26bd9051",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_011_target_network_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-54c5d2a4eaad3a5b9a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_012_fixture_volume_users.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-b848bca46e23272ab2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_012_fixture_volume_users.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-5844b759f622ef46dd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_012_fixture_volume_users.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-c6e780d108b74e3cfb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_013_all_container_ids.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-c541521b206c72fca5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_013_all_container_ids.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-082ff7443bc1d3774a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_013_all_container_ids.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-f789774e1a940db24d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_014_protected_container_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-d0a3fab94316736508",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_014_protected_container_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-069d8ddebb2dcb754c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_014_protected_container_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-01e297e7c57c7114b4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/fixture_final_state.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-ad1fc2ee152d744193",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/fixture_stop_command.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-42362395a6d0579ce7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/protected_after_root_cleanup.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-c662b9f4c52720f880",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/protected_before_root_cleanup.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-fad9418da4ad58215d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/root_recovery_receipt.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-1772bc8964b76cb2fa",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_post_runtime_source_verification.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-79bac4f5ca9589d905",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_ui_observations.md",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-dadadf24a2e6d7017a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-3df73699be9d04f99d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-b4ccae9621d8e56855",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_launch.reservation.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-01b8b914ecd610384e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_launch_intent.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-de06a1131914bbf21f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_launch_result.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-deeb4c16c3093c4c7c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0001.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-022a9fc46adb584fc0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0002.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-58447694d06cb80a1e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0003.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-2d003c4dd86da5aa51",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0004.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-b89d09efee0b1b4720",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0005.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-6aca2549ef0da9edb8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0006.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-3fe530dd4956658251",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0007.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-2c95da86933e832ae0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0008.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-46ea9a8cab490ca6b6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0009.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-72f031dea077c4962a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0010.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-431b1bb02fdba261df",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0011.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-df348a5ac9780b245c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0012.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-df33a4eba23d8691da",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0013.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-e06c026bdc1f4fb36d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0014.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-14fb9bfadc0c242af9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0015.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-527c2cc86264052403",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0016.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-aafd7901dad0597992",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0017.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-3b446bc5e17b963981",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0018.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-354bc398366ee3ed77",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0019.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-7ff50a5d2aeea7e301",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0020.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-c2ea442333418bb4ff",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0021.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-510e14ddeefe964f19",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0022.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-f3739e6c89259e1596",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0023.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-2be19359ece0f4f10c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0024.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-700acaf3e6f6a5c2d1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0025.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-fdb0848298c398b953",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0026.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-5c3095ed6b10482883",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0027.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-becbc1d496196b3d60",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0028.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-e7618d281982dba9e9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0029.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a722f85fbbebe2c3d6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0030.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-5569c3f3807acb5e4b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0031.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-dcbb346e356f3ca2e1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0032.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-4334f365a6ae7c3ce2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0033.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-4e7ea3e7fddb1477e7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0034.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-1370bddf4da0ab8604",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0035.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-118b2dee0c83488f1f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0036.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-e6464d62c657aac8fc",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0037.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-4c2d5b231ee6f69c47",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0038.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-48dae69617769a278d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0039.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-335336abb3fda95be4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0040.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-0a5afd753c1d805eb7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0041.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-105e294d512afc3330",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0042.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-85f9b4ce0dc902feeb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0043.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-87eab25e2eb004e7b0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0044.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-dc832b3e7edf3cdc26",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0045.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-386154e21baa970aa1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0046.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-28db3132a5034fd8f7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0047.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-5ea74d554fc3c400ad",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0048.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-b4d787f76b8511a840",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0049.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-e28d5cec0e3718681d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0050.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a66324da8bb38382ed",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0051.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-282871917532e4e456",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0052.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-fcce97b5213e28e47e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0053.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-bf73d4b27a81866311",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0054.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-cef3bdc31a57c2333b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0055.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-0f64fb6bab1862cb7b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0056.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-013e30d5c31401aed9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0057.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-aa3cba0a58a760ee29",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0058.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-9107cbc969acd9764c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0059.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-4413ba95792d8ee7a0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0060.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-3162ba9b60da04ad2b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0061.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-f2a286110361961e36",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0062.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-d1db6e08665bbcfaab",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0063.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-cd0180e09d3a1a5611",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0064.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-cc08fe7b2f7d4514c4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0065.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-4cc8b8e7e48b721b84",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0066.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a7891db639f9dbacaf",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0067.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-bbb4802e2ed32d40e7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0068.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-acad4b90e5891a0191",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0069.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-1b2a91261cdb22d3e1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0070.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-ccf21fc337f63440a0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0071.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-b200348e865e261b53",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0072.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-13f8901f5c5bc45fd4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0073.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-ad3115dcdc7d3a2b72",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0074.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-d87a2c7ff693c56649",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0075.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-7ce183f3148fa0996b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0076.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-39d4e57cb83a48f30d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0077.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-0dc5345f28db02e809",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0078.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-7b7579fa838c126fe0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0079.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-be72fe0a27dde18b01",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0080.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-c3c8ff236730c3c7a2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0081.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-b553c8962d7f57ad68",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0082.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a1fba7a4916741a533",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0083.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-944b917788d938e4ac",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0084.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-3f663391b7c263d760",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0085.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-d24d3b51c4918afd00",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0086.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-09cd8eab7708f577b0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0087.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-694081906a244caca0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0088.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-efa82849ee548045da",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0089.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-e53ba7025c0e09198c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0090.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-b79c5867eb0ed6d5a6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0091.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-bb9edc97389152b57f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0092.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-00923b20d59aac91dc",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0093.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-11262a6ca64c2e9a95",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0094.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-93bfa2f8a166d279a8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0095.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-e134e330ccfbda37f6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0096.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-fef0e50ec3f2d36ceb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0097.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-8d9efbf02047c08ca9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0098.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-bf9422deeb1773b19f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0099.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-6f8d97274683c6e73c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0100.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-822c1ca210ddeac28c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0101.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a13dcc435a7b76fc57",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0102.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a1862f3c73ecdee93d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0103.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-4c93d9bd71a9447151",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0104.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-68a162c8d7efe73d84",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0105.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-3f428c85785176ba89",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0106.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-1507ede618c38897c8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0107.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-1218468931d45b2e9d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0108.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-c1f6cb0454d3a2defa",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0109.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-9b0bcc4648e0ad6e30",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0110.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-c4acbc3c946a0cbeef",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0111.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-1e748651509261114a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0112.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-dbadf67ea4398fb09f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0113.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-3fd0cae2d58cbfd442",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0114.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-cd48d0c28d6a7ae813",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0115.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-2aee9e8236b295669c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0116.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-09a032213e6650ccf6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0117.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-28aaa2bd3e55f7e81c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/campaign_intent.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-f82ce84596979faf95",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_001_target_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-3c3ce64e7f4330c0e3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_001_target_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-7b141c98fd4cb27a69",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_001_target_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-6979359f66526db7ea",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_002_target_network_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-c17cc7e2e7754a29eb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_002_target_network_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-540626b64fe9ec6822",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_002_target_network_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-307817e5f63559129c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_003_fixture_volume_users.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-46547c62c77d993327",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_003_fixture_volume_users.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-682563dccbf504db39",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_003_fixture_volume_users.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-16a6d66139a222effb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_004_all_container_ids.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-ad154fa2bb7667d71f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_004_all_container_ids.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-062b402ca5c3b83feb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_004_all_container_ids.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-998d933c738ea9a871",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_005_protected_container_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-7f440b141aa0ebfb3c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_005_protected_container_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-10f622daae3fbe56e1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_005_protected_container_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a50fc9c70f5946a57c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_006_target_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-f423908a7a4c4178d2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_006_target_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-6605c5ad2492b897a0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_006_target_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-b7af41fabb501b29b4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_007_target_network_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-d6a30b1f165e6293bd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_007_target_network_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-435c196b0800101cd6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_007_target_network_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-7f703ef156120c6ceb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_008_fixture_volume_users.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-13b5c584a70dfc6f66",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_008_fixture_volume_users.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-e5e4665e3e1720a469",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_008_fixture_volume_users.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-1c7068759a0b802900",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_009_all_container_ids.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-9277f9451ae30e0871",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_009_all_container_ids.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-b3cc78c8cdbcdcf728",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_009_all_container_ids.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-ea406428941591080c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_010_protected_container_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-36d27a3950b8bae6ce",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_010_protected_container_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-96bef511ef92675ed2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_010_protected_container_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-7b5783c8e33862975a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_011_fixture_start.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-1812e76d712d6deb13",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_011_fixture_start.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-19821c0405b6aad75c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_011_fixture_start.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-ff91d719c383c7ab65",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_012_target_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-065479d97dc0d764d0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_012_target_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-fe260ede632ad701e0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_012_target_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-6c64a040c9712a18f1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_013_target_network_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-ac0f0c5a186fee1d71",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_013_target_network_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-3938d686f2428f3a2e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_013_target_network_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-1660fbe015a4b37689",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_014_fixture_volume_users.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-53f2f765ac7f332d82",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_014_fixture_volume_users.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-5f4f5ac0d33799a216",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_014_fixture_volume_users.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-0aac01693de47a97a9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_015_native_diagnostic.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-ad04b3c50780c05a89",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_015_native_diagnostic.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-d6d9e784d51fc207cd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_015_native_diagnostic.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-ef2fbefac3897480e1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/fixture_before.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-b20a0cbb368201d542",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/fixture_ready.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-2b3c17d584e81d7081",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/fixture_start.reservation.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-8f01286c55c9829daf",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/fixture_start_result.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a7d791fb1cd8319eef",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/fixture_volume_users_before.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-92f6b7e8c40df17330",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/gin_post_observations.jsonl",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-1c198c44c8c0f26d5d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/native_diagnostic.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-6de6b65f31858c7e17",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/native_invocation.reservation.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-5ffd7485b49057b759",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/network_before.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-c0bd58ba9d461a7e8c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/protected_before.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-4a24e485ce0423807f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/readiness/mysql_probe_0001.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-8f82cf5bd1b4a7b901",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/readiness/mysql_probe_0002.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-3d454edafeff11145f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/readiness/mysql_probe_0003.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-0e28502692c81967c9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/readiness/mysql_ready.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-302f0e4584e66764c5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/ready.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-16288b7d4e89daa43b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/running.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-7b98b0755f6266d913",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/stop.request",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-8a8d2023e69ec1bc03",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/ui_post_submissions.jsonl",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-7c97c41d0a3593b2f0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/vite.config.mjs",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-9fe43a5816f80a97b5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/vite.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-d9ba25b1b70b1dc8c8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/vite.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-20164a33dd0c4f27d5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/vite_config_receipt.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-858e7c941604bd6628",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/vite_launch.reservation.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-0c41e8a6c4f8a2f932",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/vite_launch_intent.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-f4712f405fd554df3d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/vite_launch_result.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-cdb13c5311f423ea43",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/vite_readiness_0001.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-b74d392a0b766979b5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/vite_readiness_0002.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-bf3558a10a3b1c335a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/supervisor_invocation.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-ee6d3f02359b5c3859",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/worker_return_gate/exit.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-6e1940c6b3d83ee6ac",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/worker_return_gate/stderr.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-da7a647ded8af0b501",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/worker_return_gate/stdout.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-29105df2ad765f70ee",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/worker_return_gate_final/exit.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-fc872b62cdc0d1fed2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/worker_return_gate_final/stderr.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-fb092fda3d717338a8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/worker_return_gate_final/stdout.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-e384428a576c3a503f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/worker_return_gate_recheck/exit.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-5e28ddf23fb795692f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/worker_return_gate_recheck/stderr.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-c5c44d0ab7bda1f907",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/worker_return_gate_recheck/stdout.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-7d4257330ca02231a1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_luna/worker_return_packet_manifest.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-112c5ed7589c759056",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/00_inherited_session.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-2a374c127440eed1ae",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/00_inherited_session.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-8d21af1179a95d2b02",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/00_inherited_session.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-3306fca3c5eff57d08",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/01_b01_queue.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-60a45c981c626a8d75",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/01_b01_queue.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-0c9cdf3eb38ecfc730",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/01_b01_queue.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-9ee6b6b93f04c6882a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/02_b01_initial_detail.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-f5e7fa6ba7b7bbd789",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/02_b01_initial_detail.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-5e20f9a86f26dd23ab",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/02_b01_initial_detail.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-d211984fefbd260420",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/03_b03_stale_version1.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-5e6820aa8b03427a5d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/03_b03_stale_version1.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-537df5c4f4fc8fe1c3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/03_b03_stale_version1.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-1ed0094c29ecfd7863",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/04_b02_before_submit.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-76f07b81980c4ff426",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/04_b02_before_submit.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-08f16fac53ef4179ca",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/04_b02_before_submit.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-d26f31fa46f8480231",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/05_b02_corrected.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-f21f57e6536d8e87ae",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/05_b02_corrected.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-16e843b1128a85619e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/05_b02_corrected.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-daecd91b6b6d5484ce",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/06_b03_before_stale_submit.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-d8010a6c014acd4bae",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/06_b03_before_stale_submit.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-f2dfb74ac5af91c866",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/06_b03_before_stale_submit.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-48e697b3248e231c76",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/07_b03_conflict.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-6c4f7b49fc56851e35",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/07_b03_conflict.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-9d8dd8f9b46f6e0b76",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/07_b03_conflict.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-6218be4e0fec36e4ca",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/08_b04_before_assign.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-4f9cec38cfeff8523b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/08_b04_before_assign.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-88a5b554acb5a3fafb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/08_b04_before_assign.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-f0623cab49f649a278",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/09_b04_reloaded.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-348840e7fe9c019818",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/09_b04_reloaded.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-654a9b227aad3dd4f0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/09_b04_reloaded.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-1ca09645157bff008b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/10_b05_resolved_reloaded.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a3ea5a3fc0c3f7128c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/10_b05_resolved_reloaded.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-aadffea11e9c7da40c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/10_b05_resolved_reloaded.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-713b2311af93a35ff5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/11_b05_terminal_filter.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-3a6d62b15cb1e5e6d2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/11_b05_terminal_filter.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-09a66d470604f72eae",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/11_b05_terminal_filter.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-1c74f7bdb5621dfe00",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/12_b06_before_reopen.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-fcd6f5a97d35cd455b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/12_b06_before_reopen.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-5d09417578c6c4b775",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/12_b06_before_reopen.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-036f4a43b7e392ce11",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/13_b06_reopened_history.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-11f8531694017d8786",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/13_b06_reopened_history.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-8f17d8710a0b449f17",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/13_b06_reopened_history.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-851c92d7d317afa2f8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/14_b08_dimensions.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-30b538ec3e2dc296cb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/14_b08_narrow_detail_history.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-1fa48c0762c001505d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/14_b08_narrow_detail_history.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-9e7da7bcc56a40f35f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/14_b08_narrow_detail_history.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-7cfddb5cd95c0900d1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/14_b08_viewport_outcome.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-b6bc5bacae329819ca",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/15_b10_wait_data_initial.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-3a5e30b25223000c01",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/15_b10_wait_data_initial.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-01235005b6f0c31746",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/15_b10_wait_data_initial.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-fa19b5809477daf98c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/16_b10_completion_guard.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-2db24f6c667fb57680",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/16_b10_completion_guard.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-620f5d76953cf6d3d2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/16_b10_completion_guard.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-66a3b072662968105f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/17_b10_assigned_reloaded.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-0b2e256bcd7fe5a4c6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/17_b10_assigned_reloaded.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-daacd73fc6236e0d3c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/17_b10_assigned_reloaded.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a83beb7143381c0037",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/18_b10_escalated_reloaded.dom.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-d73d48523fc9cba18e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/18_b10_escalated_reloaded.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-73529ffd97b8058c88",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/18_b10_escalated_reloaded.png",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-da1889d8459d658445",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser/root_submission_reservations.jsonl",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-0794b1b68b79f10768",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/browser_interruption.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-d582ce50642e37345c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/committed_admission_check.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-61d5006bc38cbc99f3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/committed_admission_recheck.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-512c1b08d51fb88f1f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/committed_admission_recheck.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-90c6ad6cf55b845b70",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/committed_admission_recheck.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-1b1dc2bc62e5a3019e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/independent_export_verification.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-0e4f12532a863cd287",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_001_target_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-2db0dcba43562a7027",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_001_target_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-dafd0d7b1ae675246e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_001_target_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-3f6562f91fc38c2c2d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_002_target_network_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-045626e6aadd95848f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_002_target_network_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-7f308facec5726ecb7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_002_target_network_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-6d73adfefb756e5dd9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_003_fixture_volume_users.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-fa105b3b67cfe3a6c0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_003_fixture_volume_users.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-1374607e400dd4b1f7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_003_fixture_volume_users.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-59fc9aaecbf9f5c48b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_004_all_container_ids.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-afd2d26a6bb97ec59d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_004_all_container_ids.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-45234efaeb138ed2a9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_004_all_container_ids.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-8d4759ccd1b0924e0c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_005_protected_container_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-68c109e38f08455f37",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_005_protected_container_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-4a7612a8ca46d27ec2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_005_protected_container_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-e793d4f7e80ee86f3c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_006_target_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-fa3f1746c7dd973b99",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_006_target_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a6dc208f18b145f337",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_006_target_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-20dc373b055b44975a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_007_target_network_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-b6eaca75da8b6db01e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_007_target_network_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-9d4fce6df169dd35e8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_007_target_network_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-e55eb6c6857e6c3a2f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_008_fixture_volume_users.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-9620f1092de5b933bd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_008_fixture_volume_users.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-bd9d08442bf5e344bc",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_008_fixture_volume_users.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-3b96634f96170f1b8d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_009_fixture_stop.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-7489cc9544cd6a5ad9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_009_fixture_stop.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-cff7a97b1319c23b60",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_009_fixture_stop.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-2824ef652ae7f8fafa",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_010_target_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-f964a0d6a6c81f937f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_010_target_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-614c2ba7d9a2d5dae3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_010_target_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a2b22016245bb3b419",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_011_target_network_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-5a6d4acc9c02813efd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_011_target_network_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a635341f9dcb345800",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_011_target_network_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-591827e1bf24492954",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_012_fixture_volume_users.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-4a9cccdb062ea1c5dd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_012_fixture_volume_users.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-e625f281a464097b2b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_012_fixture_volume_users.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-20ff489f87a0bd7e4d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_013_all_container_ids.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-b654933b2473564d44",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_013_all_container_ids.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-3d7aa513a8c32276e1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_013_all_container_ids.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-584d3848e0db9a0b85",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_014_protected_container_inspect.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-49acd485b395f424d4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_014_protected_container_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-6e34b8e09e3e6afdd3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/command_014_protected_container_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-740e59a36c34be99e1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/fixture_final_state.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-fe72f64a8b2d334cad",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/fixture_stop_command.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-926fed372cc0201fe3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/protected_after_root_cleanup.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-684702bd0d4b9a0a4f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/protected_before_root_cleanup.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-c2b222b71784cd0e83",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/root_recovery_receipt.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-aad9b3b0516c54cab0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/post_runtime_source_verification.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-fb6c1895c29e79c8ab",
+      "family": "continuity",
+      "path": "docs/reviews/R109_HUMAN_UI_WORKER_RETURN_2026-10-16.md",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-7c413d269dce912133",
+      "family": "continuity",
+      "path": "docs/reviews/R109_INDEPENDENT_INTERRUPTED_REVIEW_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-7a33155ae2cab66a08",
+      "family": "continuity",
+      "path": "docs/reviews/R109_ROOT_UI_OBSERVATIONS_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-977b674c1ae1190cd4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/captured_evidence.zip",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-adfba0853083659642",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/captured_git_byte_contract.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-cf4eceadbd62ebfe28",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/final_preflight.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-553aa82bdcce8f605c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/final_preflight.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-cb107ac49b6dcd6427",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/final_preflight.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-94c293ed8e03a3a5fd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/final_reviewer_fast.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-8a8455dfde2a91bab4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/final_reviewer_fast.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-2a091159759afeb8b5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/final_reviewer_fast.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-ea34d88b0489d84eb5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/final_workspace_doctor.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-4d188d9a1d7c518140",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/final_workspace_doctor.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-e504197400b8068330",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/final_workspace_doctor.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-0205bc5782827b9871",
+      "family": "continuity",
+      "path": "docs/reviews/R109_FINAL_GATE_DISPOSITION_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-4fe399838567610d62",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/final_gate_receipts.zip",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-258aebd20bc44abc36",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/final_packet_manifest.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-618f88030269c61fb9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/final_precommit.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-9eeec82839ac3cf3a9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/final_precommit.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-08d24941f2d605b2ee",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/final_precommit.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-8f794e6b7340b66ac5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/final_preflight_recheck.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-e83d1170e69fe11d7f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/final_preflight_recheck.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-47faae51697b581cc3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/final_preflight_recheck.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-78a5f8965707171b11",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/final_reviewer_fast_recheck.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-a03fdbca43d64b8cd6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/final_reviewer_fast_recheck.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-6ad65203514f9b12d1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/final_reviewer_fast_recheck.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-1f4729947b4cd8bbbd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/final_workspace_doctor_recheck.json",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-b674e5b594d3a9cdea",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/final_workspace_doctor_recheck.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
+    },
+    {
+      "id": "r109-883a341b2a3891a24f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r109_root/final_workspace_doctor_recheck.stdout.txt",
       "status": "ACTIVE",
       "description": "Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim."
     }

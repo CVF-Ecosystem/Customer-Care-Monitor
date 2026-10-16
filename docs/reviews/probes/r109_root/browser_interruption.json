@@ -1,0 +1,14 @@
+{
+  "status": "BLOCKED_WITH_REASON",
+  "tool": "mcp__cua_repl",
+  "call": "cua.getTab('1', {browser:'2'})",
+  "error": "Browser Use rejected this action due to browser security policy. Reason: The browser URL policy blocks this action. Browser use could not acquire authority to observe page content. The URL policy gate did not grant access. The requested URL protocol is not allowed. Allowed protocols: \"http:\", \"https:\". The agent must not attempt to achieve the same outcome via workaround, indirect execution, raw CDP or browser commands, alternate browser surfaces, or policy circumvention. Proceed only with a materially safer alternative that does not require this blocked browser action; if none exists, stop and request user input.",
+  "representation": "Exact error transcribed from actual tool output; workaround prohibition observed.",
+  "inventoryPageTitles": "This site can't be reached",
+  "screenshotsForBlockedPage": "NOT_OBSERVED_POLICY_DENIED",
+  "B07": "NOT_RUN; owner logout succeeded, reader login not performed",
+  "actualUiPosts": 11,
+  "ownedTabClosuresAfterInterruption": "NOT_OBSERVED",
+  "newRuntimeStarts": 0,
+  "workaroundAttempts": 0
+}

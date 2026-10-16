@@ -1,0 +1,119 @@
+- navigation:
+  - generic: Customer Care Monitor AI
+  - button:
+    - generic: 󰅁
+  - separator
+  - generic: R101 Synthetic
+  - separator
+  - list:
+    - link "Trang chủ":
+      - /url: /4b44be84-86fc-47ef-a018-e515b5ae74ea
+      - generic: 󰕮
+      - generic: Trang chủ
+    - link "Kênh chat":
+      - /url: /4b44be84-86fc-47ef-a018-e515b5ae74ea/channels
+      - generic: 󱘖
+      - generic: Kênh chat
+    - link "Tin nhắn":
+      - /url: /4b44be84-86fc-47ef-a018-e515b5ae74ea/messages
+      - generic: 󰊌
+      - generic: Tin nhắn
+    - link "Tác vụ AI":
+      - /url: /4b44be84-86fc-47ef-a018-e515b5ae74ea/jobs
+      - generic: 󰚩
+      - generic: Tác vụ AI
+    - link "Kết quả":
+      - /url: /4b44be84-86fc-47ef-a018-e515b5ae74ea/results
+      - generic: 󱃔
+      - generic: Kết quả
+    - link "Ca cần can thiệp":
+      - /url: /4b44be84-86fc-47ef-a018-e515b5ae74ea/intervention-cases
+      - generic: 󰀈
+      - generic: Ca cần can thiệp
+    - link "Nhật ký hệ thống":
+      - /url: /4b44be84-86fc-47ef-a018-e515b5ae74ea/activity-logs
+      - generic: 󰺮
+      - generic: Nhật ký hệ thống
+    - link "Nhật ký chi phí":
+      - /url: /4b44be84-86fc-47ef-a018-e515b5ae74ea/cost-logs
+      - generic: 󰇁
+      - generic: Nhật ký chi phí
+    - link "Lịch sử thông báo":
+      - /url: /4b44be84-86fc-47ef-a018-e515b5ae74ea/notifications
+      - generic: 󰂞
+      - generic: Lịch sử thông báo
+    - link "Kết nối MCP":
+      - /url: /4b44be84-86fc-47ef-a018-e515b5ae74ea/mcp
+      - generic: 󱂛
+      - generic: Kết nối MCP
+    - link "Người dùng":
+      - /url: /4b44be84-86fc-47ef-a018-e515b5ae74ea/users
+      - generic: 󰡉
+      - generic: Người dùng
+    - link "Cài đặt":
+      - /url: /4b44be84-86fc-47ef-a018-e515b5ae74ea/settings
+      - generic: 󰒓
+      - generic: Cài đặt
+  - separator
+  - button:
+    - generic: 󰖔
+  - button "Tiếng Việt":
+    - generic: 󰗊
+    - text: Tiếng Việt
+    - generic: 󰍝
+  - generic: R
+  - generic: R101 owner
+  - button:
+    - generic: 󰍃
+- main:
+  - generic: 󱓞
+  - generic: "Bắt đầu:"
+  - generic: 󰗠
+  - generic: Kết nối kênh chat
+  - generic: 󰗠
+  - generic: Đồng bộ tin nhắn
+  - generic: 󰝦
+  - generic: Cấu hình AI Provider
+  - generic: 󰗠
+  - generic: Tạo công việc phân tích
+  - generic: 󰝦
+  - generic: Chạy thử phân tích
+  - button:
+    - generic: 󰅖
+  - heading "Ca cần can thiệp" [level=1]
+  - link "Về hàng đợi":
+    - /url: /4b44be84-86fc-47ef-a018-e515b5ae74ea/intervention-cases
+    - generic: Về hàng đợi
+  - alert:
+    - generic: 󰀨
+    - generic: "Nguồn dữ liệu: Chưa đủ thông tin để xử lý. Thông tin khớp với hồ sơ nội bộ, nhưng chưa xác nhận đã có đầy đủ nội dung từ kênh."
+  - generic: Mã ca C1AA760B
+  - paragraph: "Trạng thái xử lý: Chờ bổ sung dữ liệu · Đánh giá của người duyệt: Chưa duyệt · Lần cập nhật 3"
+  - paragraph: "Người bổ sung dữ liệu: R101 member"
+  - paragraph: "Hạn xử lý: 10:00:00 20/10/2026"
+  - paragraph: "Bước tiếp theo của người xử lý: Chuyển người phụ trách theo dõi việc bổ sung thông tin."
+  - alert:
+    - generic: 󰀨
+    - generic: Ca đang chờ người phụ trách bổ sung dữ liệu. Giao bổ sung dữ liệu hoặc chuyển cấp để tiếp tục.
+  - generic: Thao tác
+  - combobox:
+    - combobox "Thao tác"
+    - generic: 󰍝
+    - generic: Thao tác
+  - alert
+  - generic: Lý do (bắt buộc)
+  - textbox "Lý do (bắt buộc)"
+  - alert
+  - button "Ghi nhận thao tác" [disabled]:
+    - generic: Ghi nhận thao tác
+  - generic: Lịch sử xử lý
+  - strong: Giao bổ sung dữ liệu · Lần cập nhật 2
+  - text: · 00:22:08 17/10/2026 · R101 owner
+  - paragraph: "Lý do (bắt buộc): Chưa có nội dung trao đổi để người xử lý đánh giá."
+  - paragraph: "Nguồn dữ liệu: Chưa đủ thông tin để xử lý"
+  - generic "Xem thay đổi"
+  - strong: Chuyển cấp xử lý dữ liệu · Lần cập nhật 3
+  - text: · 00:22:24 17/10/2026 · R101 owner
+  - paragraph: "Lý do (bắt buộc): Cần người phụ trách hỗ trợ thu thập thông tin còn thiếu."
+  - paragraph: "Nguồn dữ liệu: Chưa đủ thông tin để xử lý"
+  - generic "Xem thay đổi"

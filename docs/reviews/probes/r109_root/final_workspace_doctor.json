@@ -1,0 +1,14 @@
+{
+  "command": [
+    "powershell",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "../.Controlled-Vibe-Framework-CVF/scripts/check_cvf_workspace_agent_enforcement.ps1",
+    "-ProjectPath",
+    "."
+  ],
+  "exitCode": 1,
+  "elapsedSeconds": 17.80901399999857,
+  "recordedAtUTC": "2026-10-16T17:42:12.705459+00:00"
+}

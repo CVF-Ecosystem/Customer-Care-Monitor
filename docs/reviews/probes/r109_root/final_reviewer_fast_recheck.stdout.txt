@@ -1,0 +1,13 @@
+[PASS] CVF-DG-INST-01 PASS
+[PASS] CVF-DG-CONT-01 PASS
+[PASS] CVF-DG-RANGE-01 PASS
+       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=7fc2273b485b765543dd78fc60afc51ee68d0cb3 candidates=456 deleted=0
+[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked
+       note: docs/work_orders/CCMAI_RUNTIME_109_HUMAN_UI_COMPLETION.md: status BLOCKED_WITH_REASON is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract
+[PASS] CVF-DG-ROUTE-01 PASS
+       note: checked: docs/work_orders/CCMAI_RUNTIME_109_HUMAN_UI_COMPLETION.md
+[PASS] CVF-DG-ROLE-01 PASS
+       note: checked: docs/reviews/R109_FINAL_GATE_DISPOSITION_2026-10-17.md, docs/reviews/R109_HUMAN_UI_WORKER_RETURN_2026-10-16.md, docs/reviews/R109_INDEPENDENT_INTERRUPTED_REVIEW_2026-10-17.md, docs/reviews/R109_ROOT_UI_OBSERVATIONS_2026-10-17.md, docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_ui_observations.md
+[PASS] CVF-DG-CLAIM-01 PASS
+       note: 0 explicit claim line(s) and 6 document(s) scanned
+RESULT: PASS phase=reviewer-fast mandatoryControls=7 failed=0

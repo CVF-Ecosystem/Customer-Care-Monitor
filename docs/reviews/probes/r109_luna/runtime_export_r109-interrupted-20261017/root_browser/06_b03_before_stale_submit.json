@@ -1,0 +1,9 @@
+{
+  "observedAtUTC": "2026-10-16T17:17:55.543Z",
+  "tool": "mcp__cua_repl",
+  "tabId": "3",
+  "url": "http://127.0.0.1:3011/4b44be84-86fc-47ef-a018-e515b5ae74ea/intervention-cases/632e7ad1-ca55-4f3f-96a0-40d4223d9116",
+  "operatorRecordedAction": "TabB still update1 attempts CONFIRM after tabA update2",
+  "dom": "06_b03_before_stale_submit.dom.txt",
+  "screenshot": "06_b03_before_stale_submit.png"
+}

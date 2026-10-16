@@ -1,0 +1,11 @@
+[PASS] provenance
+       note: required doc outside project not checked (portable mode): ..\WORKSPACE_RULES.md
+       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core
+[PASS] continuity
+[PASS] tranche
+[PASS] claims
+[PASS] secrets
+       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read
+[PASS] workflows
+[PASS] catalog
+CVF downstream preflight: PASS (7/7 executed gates passed)

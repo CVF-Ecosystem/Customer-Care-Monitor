@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "--config",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r109_workflow\\campaign\\docker-cli-config",
+    "container",
+    "inspect",
+    "--format",
+    "{\"Id\":{{json .Id}},\"Name\":{{json .Name}},\"Image\":{{json .Image}},\"Status\":{{json .State.Status}},\"Mounts\":[{{range $i,$m := .Mounts}}{{if $i}},{{end}}{\"Type\":{{json $m.Type}},\"Name\":{{json $m.Name}},\"Destination\":{{json $m.Destination}},\"RW\":{{json $m.RW}}}{{end}}],\"PortBindings\":{{json .HostConfig.PortBindings}},\"Networks\":[{{ $first := true }}{{range $name,$net := .NetworkSettings.Networks}}{{if not $first}},{{end}}{{ $first = false }}{\"Name\":{{json $name}},\"NetworkID\":{{json $net.NetworkID}}}{{end}}]}",
+    "0770fa03aee1c748425e03dcc6a3e3a8413ef2365a6981dc3fc5259e66b2fe3e",
+    "07822f249ff071e4f9f08463da804279a57b151901345b7560047d1b23662027",
+    "e0beb8f8946adba643d2fded6971818b0d9b3848958a0ef0a234e3d03a5b1076",
+    "ee1fc7f682631ac3c0ca57b80aff7e233ddde405c2618f35ca0aae6e60e23314"
+  ],
+  "exitCode": 0,
+  "failureType": null,
+  "outputRedaction": "exact synthetic fixture credential and bearer-token patterns only",
+  "pid": 12432,
+  "stderrBytes": 0,
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdoutBytes": 1962,
+  "stdoutSha256": "2031f789d3b4eaf00214fe8c51a78ca27c9777fa540c63c733edaa4d3d6c5f93",
+  "timedOut": false
+}

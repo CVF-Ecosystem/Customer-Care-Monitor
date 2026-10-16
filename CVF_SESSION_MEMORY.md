@@ -9,18 +9,18 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R109_HUMAN_UI_2026-10-16.md", "activeTranche": "CCMAI-RUNTIME-109", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R109_HUMAN_UI_2026-10-16.md", "activeTranche": "CCMAI-RUNTIME-109", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R109_HUMAN_UI_2026-10-16.md
 
-CCMAI-RUNTIME-109 BUILD runtime admitted at source5ab60830 after UI14tests/typecheck and supervisor3regressions/config-import PASS. Luna executes one shared fixture/native/backend/Vite campaign2100s/retries0 with reused binarycb73ee13 and Go0; native4POST then only on NOT_REPRODUCED Root connected browser B01-B10/UI14POST/max3tabs. Stop on native failure or actual browser failure; preserve raw failures and owned cleanup. No source changes or HEAD commit during campaign. Return exact worker packet for independent Root review; no FREEZE. Dashboard3/fullM2/M3/pilot/release OPEN; R102 local FROZEN, accounts parked.
+CCMAI-RUNTIME-109 CHANGES_REQUIRED after interrupted single campaign: native/current B01-B06 and B10 functional PASS; B07/B08/B09 NOT_RUN, source-copy/shell language findings OPEN. Original supervisor finalization missing; separate Root exact-fixture recovery PASS/protected unchanged, tab closure NOT_OBSERVED. STOP runtime/browser here per owner; transfer preserved packet to another stable connected agent with fresh bounded source/build authority. R109 spent fixture/native/backend/Vite1 each, native4/UI11POST, Go0/retry0; no replay or unused-slot reuse. No FREEZE/full product acceptance; Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, accounts parked.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / connected browser verification / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r108_browser_luna Luna Max IMPLEMENTATION_WORKER admitted supervisor executor, no browser role.
+Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r108_browser_luna Luna Max returned BLOCKED_WITH_REASON and stopped; no active runtime or browser execution.
 
 Mandatory pre-dispatch learning: [docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md](docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md). Read before any similar UI/browser assignment; unknown readiness is HOLD, not a speculative dispatch. Corrected draft is not executable authority.
 

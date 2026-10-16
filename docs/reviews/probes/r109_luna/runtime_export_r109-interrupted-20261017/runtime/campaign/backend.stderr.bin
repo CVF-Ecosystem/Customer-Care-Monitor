@@ -1,0 +1,4 @@
+2026/10/17 00:14:32 Database connected successfully
+2026/10/17 00:14:34 Database migration completed
+2026/10/17 00:15:28 [security] JWT validation failed: ip=127.0.0.1 path=/api/v1/profile error=token has invalid claims: token is expired
+2026/10/17 00:15:28 [security] JWT validation failed: ip=127.0.0.1 path=/api/v1/tenants error=token has invalid claims: token is expired

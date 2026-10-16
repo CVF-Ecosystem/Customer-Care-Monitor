@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r108_native\\campaign\\r108_handlers.test.exe",
+    "-test.run",
+    "^TestR101BrowserFixture$",
+    "-test.v",
+    "-test.timeout=35m"
+  ],
+  "environmentNames": [
+    "PATH",
+    "R101_BROWSER_FIXTURE",
+    "R101_MYSQL_DSN",
+    "SystemRoot",
+    "TEMP",
+    "TMP",
+    "WINDIR"
+  ],
+  "environmentValuesRecorded": false,
+  "label": "backend",
+  "startedAtUnix": 1792170872.781563
+}
