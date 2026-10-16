@@ -14,7 +14,7 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-106",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_CODEX_R101_UI_R106_2026-10-16.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-106 BUILD_BLOCKED / BLOCKED_WITH_REASON: one shared105/106 fixture/backend/Vite campaign consumed1/1/1, retries0; backend ready, Vite ERR_REQUIRE_ESM_RACE_CONDITION before running receipt, B01-B10 NOT_RUN. Owned children absent, exact fixture exited, protected safe fields equal;45worker hashes PASS. Root preserves failed source/logs/ledgers and presents unapplied sequential-import repair plus real module-load prerequisite/new finite campaign decision packet R107; no automatic source repair/retry/start or seed reset. Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-106 BUILD_BLOCKED; approved R107 source/module repair now independently SOURCE_REVIEW_PASS_RUNTIME_NOT_RUN: real pinnedNode import PASS, Root13offline tests PASS. Current CUA has no browsers and iab creation unavailable. Retain owner-approved one NEW campaign unconsumed; no further permission within scope. When supported browser connects, verify capability and commit exact R107 seed/order/BUILD admission, then execute B01-B10 once and independently review. Preserve R106 spent1/1 and old evidence; Dashboard3/fullM2/M3/pilot/release OPEN, Facebook/ZaloOA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
   "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna Max evidence worker returned blocked/idle, no further runtime authority.",
   "updatedAt": "2026-10-16",
@@ -2081,5 +2081,14 @@
     "authority": "User explicitly asks Root to handle execution with subagent",
     "status": "CAPABILITY_BLOCKED_BEFORE_WORKER_REBIND",
     "probe": "docs/reviews/probes/r105_root/CODEX_BROWSER_CAPABILITY_2026-10-16.json"
+  },
+  "x-r107OwnerGrant": {
+    "date": "2026-10-16",
+    "instruction": "mở ra test cho hoàn tất, siết kỹ quá phải làm nhiều không hiệu quả",
+    "sourceWorker": "/root/r107_vite_worker (Sol Medium)",
+    "scope": "R107 decision packet source/module validation then one additional synthetic UI campaign after prerequisites",
+    "newCampaigns": 1,
+    "runtimeRetries": 0,
+    "status": "SOURCE_MODULE_REVIEW_PASS_BROWSER_UNAVAILABLE_NEW_CAMPAIGN_UNCONSUMED"
   }
 }

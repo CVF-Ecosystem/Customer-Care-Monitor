@@ -1,0 +1,1 @@
+{"result":"PASS","node":"v24.19.0","configRoot":"D:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/frontend","envDir":false,"host":"127.0.0.1","port":3011,"strictPort":true,"proxy":{"/api":{"target":"http://127.0.0.1:52962","changeOrigin":true}},"pluginGroups":3,"mode":"MODULE_IMPORT_ONLY_NO_SERVER"}

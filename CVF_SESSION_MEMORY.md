@@ -18,7 +18,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_CODEX_R101_UI_R106_2026-10-16.md
 
-CCMAI-RUNTIME-106 BUILD_BLOCKED / BLOCKED_WITH_REASON: one shared105/106 fixture/backend/Vite campaign consumed1/1/1, retries0; backend ready, Vite ERR_REQUIRE_ESM_RACE_CONDITION before running receipt, B01-B10 NOT_RUN. Owned children absent, exact fixture exited, protected safe fields equal;45worker hashes PASS. Root preserves failed source/logs/ledgers and presents unapplied sequential-import repair plus real module-load prerequisite/new finite campaign decision packet R107; no automatic source repair/retry/start or seed reset. Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked.
+CCMAI-RUNTIME-106 BUILD_BLOCKED; approved R107 source/module repair now independently SOURCE_REVIEW_PASS_RUNTIME_NOT_RUN: real pinnedNode import PASS, Root13offline tests PASS. Current CUA has no browsers and iab creation unavailable. Retain owner-approved one NEW campaign unconsumed; no further permission within scope. When supported browser connects, verify capability and commit exact R107 seed/order/BUILD admission, then execute B01-B10 once and independently review. Preserve R106 spent1/1 and old evidence; Dashboard3/fullM2/M3/pilot/release OPEN, Facebook/ZaloOA parked.
 
 Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna Max evidence worker returned blocked/idle, no further runtime authority.
 

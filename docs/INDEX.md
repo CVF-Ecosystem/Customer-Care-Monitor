@@ -1274,6 +1274,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/admission.json`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/supervisor_start.json`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/backend.stdout.log.meta.json`
+- Sol Medium candidate and actual cachedNode module-load result.: `docs/reviews/probes/r107_root/RUNNER_CANDIDATE_RETURN_2026-10-16.md`
+- Actual current empty inventory and unavailable iab, distinct from historicalR106.: `docs/reviews/probes/r107_root/current_browser_probe.json`
+- Actual pinnedNode import command, exit0 and byte hashes; no server.: `docs/reviews/probes/r107_root/module_validation.json`
+- Independent Root source receipt; browser unavailable, campaign unconsumed.: `docs/reviews/probes/r107_root/source_review_receipt.json`
+- Exact captured source/module/check evidence before Git normalization.: `docs/reviews/probes/r107_root/captured_candidate_evidence.zip`
+- Root source/module review; actual import PASS, no runtime acceptance.: `docs/reviews/R107_SOURCE_MODULE_INDEPENDENT_REVIEW_2026-10-16.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

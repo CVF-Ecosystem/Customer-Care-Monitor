@@ -12862,6 +12862,48 @@
       "path": "docs/reviews/probes/r106_root/captured_worker_evidence.zip",
       "status": "ACTIVE",
       "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r107-source-module-review",
+      "family": "continuity",
+      "path": "docs/reviews/R107_SOURCE_MODULE_INDEPENDENT_REVIEW_2026-10-16.md",
+      "status": "ACTIVE",
+      "description": "Root source/module review; actual import PASS, no runtime acceptance."
+    },
+    {
+      "id": "r107-reviewed-source-receipt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/source_review_receipt.json",
+      "status": "ACTIVE",
+      "description": "Independent Root source receipt; browser unavailable, campaign unconsumed."
+    },
+    {
+      "id": "r107-candidate-return",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/RUNNER_CANDIDATE_RETURN_2026-10-16.md",
+      "status": "ACTIVE",
+      "description": "Sol Medium candidate and actual cachedNode module-load result."
+    },
+    {
+      "id": "r107-module-validation",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/module_validation.json",
+      "status": "ACTIVE",
+      "description": "Actual pinnedNode import command, exit0 and byte hashes; no server."
+    },
+    {
+      "id": "r107-source-captured-evidence",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/captured_candidate_evidence.zip",
+      "status": "ACTIVE",
+      "description": "Exact captured source/module/check evidence before Git normalization."
+    },
+    {
+      "id": "r107-current-browser-probe",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r107_root/current_browser_probe.json",
+      "status": "ACTIVE",
+      "description": "Actual current empty inventory and unavailable iab, distinct from historicalR106."
     }
   ]
 }

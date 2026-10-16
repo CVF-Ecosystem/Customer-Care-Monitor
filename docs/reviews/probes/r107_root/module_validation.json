@@ -1,0 +1,21 @@
+{
+  "disposition": "PASS",
+  "exitCode": 0,
+  "failure": null,
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r107_root\\validate_config.mjs",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r107_module_validation\\vite.config.mjs",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\frontend"
+  ],
+  "cwd": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+  "elapsedSeconds": 3.4577584266662598,
+  "nodeSha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+  "templateSha256": "67f3c4c6e03d1005052c645b0b6d028c46072265e19c2a1c3140a94648f0b938",
+  "configSha256": "1b00ba59e0f9136b8eb7e4202eaac0d8b9fd5008315e6e92ae111f4d4df764a8",
+  "checkerSha256": "47755bb79e99468bff2e30af3401b31444f995038dc67acf07155f7181409621",
+  "stdoutSha256": "7db2771720e73f4d292e56e72284b3f1ef602394c84980f60124b70d03713e49",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtimeCampaign": "NOT_RUN",
+  "claim": "Actual cached Node config import and assertions only; no server/UI/governance acceptance"
+}

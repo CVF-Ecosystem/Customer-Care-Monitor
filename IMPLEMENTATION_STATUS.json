@@ -2698,7 +2698,7 @@
     "riskCeiling": "R2",
     "sourceReview": "docs/reviews/R106_RUNNER_INDEPENDENT_SOURCE_REVIEW_2026-10-16.md",
     "runtime": "ONE_CAMPAIGN_CONSUMED_VITE_CONFIG_BLOCKED",
-    "nextAction": "CCMAI-RUNTIME-106 BUILD_BLOCKED / BLOCKED_WITH_REASON: one shared105/106 fixture/backend/Vite campaign consumed1/1/1, retries0; backend ready, Vite ERR_REQUIRE_ESM_RACE_CONDITION before running receipt, B01-B10 NOT_RUN. Owned children absent, exact fixture exited, protected safe fields equal;45worker hashes PASS. Root preserves failed source/logs/ledgers and presents unapplied sequential-import repair plus real module-load prerequisite/new finite campaign decision packet R107; no automatic source repair/retry/start or seed reset. Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked.",
+    "nextAction": "CCMAI-RUNTIME-106 BUILD_BLOCKED; approved R107 source/module repair now independently SOURCE_REVIEW_PASS_RUNTIME_NOT_RUN: real pinnedNode import PASS, Root13offline tests PASS. Current CUA has no browsers and iab creation unavailable. Retain owner-approved one NEW campaign unconsumed; no further permission within scope. When supported browser connects, verify capability and commit exact R107 seed/order/BUILD admission, then execute B01-B10 once and independently review. Preserve R106 spent1/1 and old evidence; Dashboard3/fullM2/M3/pilot/release OPEN, Facebook/ZaloOA parked.",
     "review": "docs/reviews/R106_RUNTIME_BLOCK_INDEPENDENT_REVIEW_2026-10-16.md",
     "actualExecution": {
       "fixtureStarts": 1,
@@ -2712,5 +2712,14 @@
       "UI": "B01_B10_NOT_RUN",
       "cleanup": "FIXTURE_EXITED_PROTECTED_EQUAL_RECORDED_PIDS_ABSENT"
     }
+  },
+  "x-r107Preparation": {
+    "status": "SOURCE_MODULE_REVIEW_PASS_BROWSER_UNAVAILABLE",
+    "worker": "/root/r107_vite_worker",
+    "newCampaignAllowed": 1,
+    "runtime": "NOT_RUN_NEW_CAMPAIGN_UNCONSUMED",
+    "review": "docs/reviews/R107_SOURCE_MODULE_INDEPENDENT_REVIEW_2026-10-16.md",
+    "independentOfflineTests": 13,
+    "actualModuleImport": "PASS"
   }
 }

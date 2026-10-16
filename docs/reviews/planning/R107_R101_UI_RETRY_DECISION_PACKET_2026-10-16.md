@@ -1,9 +1,9 @@
 # Decision packet — sequential-import repair and one further historical UI campaign
 
 Status: DRAFT
-Disposition: NOT_EXECUTABLE_PENDING_NEW_FINITE_RUNTIME_AUTHORITY
+Disposition: OWNER_APPROVED_SOURCE_PREPARATION_RUNTIME_PENDING_PREREQUISITES
 Risk: R2
-Worker: /root/r105_successor_route (Luna Max; proposed only, not dispatched)
+Worker: /root/r107_vite_worker (Sol Medium; source preparation authorized, runtime not dispatched)
 Reviewer: Codex /root
 Commit steward: Codex /root
 
@@ -19,3 +19,7 @@ R106 consumed its exact one fixture/backend/Vite campaign and has runtimeRetries
 No product source, dependency, global configuration, secrets, provider/mock, customer/channel, original/R102 resource mutation, install/download, publication or deployment. The three Dashboard baseline failures and full M2/M3/pilot/release remain OPEN.
 
 The required decision is permission for the narrowly scoped successor source/module validation and exactly one additional historical synthetic UI campaign after those prerequisites pass. No seed, tranche, successor runtime or start command is created or executed by this planning packet. Root must bind the exact candidate hashes before a worker receives runtime admission.
+
+## Owner decision and execution acknowledgment — 2026-10-16
+
+After Root presented this exact finite proposal, owner instructed: “mở ra test cho hoàn tất, siết kỹ quá phải làm nhiều không hiệu quả”. Root accepts this as approval of the proposed source repair/module validation and one additional campaign after prerequisites. Do not request the same approval again. Sol Medium is assigned candidate/source preparation; Root independently reviews and commits. R106 consumed counters remain immutable. The current session's browser inventory is empty and iab creation unavailable, so perform the useful source/module repair now and retain the new campaign unconsumed until supported browser capability and committed admission exist. This DRAFT remains a decision/preparation artifact, not an ACTIVE runtime work order.
