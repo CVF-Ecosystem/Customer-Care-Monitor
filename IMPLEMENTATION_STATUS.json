@@ -2728,7 +2728,7 @@
     "seedCommit": "5b019f563009b1fc82205d3f1dcc9cf13efc075a",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_107_CODEX_R101_UI_EVIDENCE.md",
     "runtime": "ONE_CAMPAIGN_SPENT_PARTIAL_UI",
-    "nextAction": "CCMAI-RUNTIME-107 REVIEW / CHANGES_REQUIRED: read-only REOPEN diagnosis complete, internal root cause NOT_ESTABLISHED because saved fixture SQL diagnostics/response body absent; engine/handler/test identical historical-to519e47a. Concrete R108 proposal docs/reviews/R107_REOPEN_DIAGNOSIS_AND_R108_PROPOSAL_2026-10-16.md remains DRAFT: new finite diagnostic allowance required before test-fixture source/one compile/one MySQL start/one native replay(max4writes,600s,retries0), no production patch/browser/Vite/provider. R107 spent1/1/1 stays spent; no seed reset or automatic effects. Six historical UI PASS/B06FAIL/B08-B10NOT_RUN and cleanup gaps retained. Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked.",
+    "nextAction": "CCMAI-RUNTIME-107 REVIEW / CHANGES_REQUIRED; R108 owner-authorized audit/handling is HOLD before dispatch. Current integrated browser getState apps[]/browsers[] and createBrowserTab(iab,about:blank) returned Browser is not available: iab; obey owner STOP, transfer to another browser-connected agent. No fixture/backend/Vite/compile/native replay/source edit started, no workaround/retry. Receiving agent inherits owner authority without repeat permission, rehydrates and proves its own supported runtime browser before bounded R108 admission. UI/UX must use user-facing language, no developer jargon/raw internal errors. Historical UI6PASS/1FAIL/3NOT_RUN, REOPEN cause unknown, old budgets/seeds unchanged; Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked.",
     "review": "docs/reviews/R107_PARTIAL_UI_INDEPENDENT_REVIEW_2026-10-16.md",
     "actualExecution": {
       "fixtureStarts": 1,
@@ -2746,6 +2746,21 @@
       "cleanup": "FIXTURE_EXITED_PIDS_ABSENT_PROTECTED_EQUAL_SUPERVISOR_RECEIPT_MISSING_TABS_NOT_OBSERVED"
     },
     "diagnosisProposal": "docs/reviews/R107_REOPEN_DIAGNOSIS_AND_R108_PROPOSAL_2026-10-16.md",
-    "rootCause": "NOT_ESTABLISHED_SAVED_SQL_DIAGNOSTICS_ABSENT"
+    "rootCause": "NOT_ESTABLISHED_SAVED_SQL_DIAGNOSTICS_ABSENT",
+    "browserStopHandoff": "docs/reviews/R107_R108_BROWSER_STOP_HANDOFF_2026-10-16.md"
+  },
+  "x-r108OwnerAuditGrant": {
+    "date": "2026-10-16",
+    "instruction": "cho phép bạn audit và tự xử lý để có kết quả cần thiết. trường hợp chạy browser trong môi trường runtime không được thì dừng, báo tôi chuyển agent khác làm. chú ý: ngôn ngữ thể hiện trên ui/ux, ko để xuất hiện ngôn ngữ của Dev",
+    "scope": "Owner authorizes audit and necessary bounded handling toward pending REOPEN/UI outcome; Root must prepare current authority/build/evidence contract, not reset old seeds or budgets.",
+    "stopCondition": "If runtime browser cannot operate, stop and ask owner to transfer execution to a connected agent; no alternate automation stack or runtime blind retry.",
+    "status": "AUTHORIZED_NOT_DISPATCHED_BROWSER_STOP",
+    "handoff": "docs/reviews/R107_R108_BROWSER_STOP_HANDOFF_2026-10-16.md"
+  },
+  "x-ownerUiLanguageDirective": {
+    "date": "2026-10-16",
+    "source": "Explicit owner UI/UX instruction",
+    "requirement": "All product-facing labels, statuses, instructions and error messages must use language understandable to end users. Do not expose developer jargon, raw API/enum/error codes, stack traces, runtime/tooling/governance implementation details in ordinary UI flows. Keep technical diagnostics in evidence/logs.",
+    "verification": "Audit in intended scope and verify rendered UI when a supported browser is available; not yet audited/fixed in this stopped session."
   }
 }

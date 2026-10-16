@@ -1,0 +1,38 @@
+{
+  "recordedAtUTC": "2026-10-16T12:23:54.137421+00:00",
+  "head": "0e955ee64b74d78aa0a2fcb7563952c8eacb1be1",
+  "tool": "mcp__cua_repl.js",
+  "representation": "Faithful transcription of actual tool invocations/results shown in this session; not a raw tool-transport export.",
+  "calls": [
+    {
+      "code": "await cua.rewriteDocumentation();",
+      "result": "Documentation returned; no UI action."
+    },
+    {
+      "code": "var r108BrowserInventory = await cua.getState();",
+      "result": {
+        "apps": [],
+        "browsers": []
+      }
+    },
+    {
+      "code": "var r108BridgeProbe = await cua.createBrowserTab(\"iab\", \"about:blank\");",
+      "resultText": "Browser is not available: iab"
+    }
+  ],
+  "result": "BLOCKED_BROWSER_UNAVAILABLE_STOPPED_AT_OWNER_REQUEST",
+  "screenshot": "NOT_OBSERVED_NO_TAB_CREATED",
+  "toolCachePath": "NOT_OBSERVED",
+  "toolDriverVersion": "NOT_OBSERVED",
+  "newProductTabs": 0,
+  "fixtureStarts": 0,
+  "backendLaunches": 0,
+  "viteLaunches": 0,
+  "nativeReplays": 0,
+  "compiles": 0,
+  "productSourceEdits": 0,
+  "providerCalls": 0,
+  "installs": 0,
+  "resourceCleanup": "NO_TASK_RUNTIME_OR_TAB_CREATED",
+  "fallbacks": 0
+}

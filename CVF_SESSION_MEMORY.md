@@ -18,7 +18,7 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 - Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R107_R101_UI_2026-10-16.md
 
-CCMAI-RUNTIME-107 REVIEW / CHANGES_REQUIRED: read-only REOPEN diagnosis complete, internal root cause NOT_ESTABLISHED because saved fixture SQL diagnostics/response body absent; engine/handler/test identical historical-to519e47a. Concrete R108 proposal docs/reviews/R107_REOPEN_DIAGNOSIS_AND_R108_PROPOSAL_2026-10-16.md remains DRAFT: new finite diagnostic allowance required before test-fixture source/one compile/one MySQL start/one native replay(max4writes,600s,retries0), no production patch/browser/Vite/provider. R107 spent1/1/1 stays spent; no seed reset or automatic effects. Six historical UI PASS/B06FAIL/B08-B10NOT_RUN and cleanup gaps retained. Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked.
+CCMAI-RUNTIME-107 REVIEW / CHANGES_REQUIRED; R108 owner-authorized audit/handling is HOLD before dispatch. Current integrated browser getState apps[]/browsers[] and createBrowserTab(iab,about:blank) returned Browser is not available: iab; obey owner STOP, transfer to another browser-connected agent. No fixture/backend/Vite/compile/native replay/source edit started, no workaround/retry. Receiving agent inherits owner authority without repeat permission, rehydrates and proves its own supported runtime browser before bounded R108 admission. UI/UX must use user-facing language, no developer jargon/raw internal errors. Historical UI6PASS/1FAIL/3NOT_RUN, REOPEN cause unknown, old budgets/seeds unchanged; Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked.
 
 Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna Max UI evidence worker returned blocked/idle, no further runtime authority.
 
@@ -960,3 +960,7 @@ Bounded portable material d0ebc890d043b5f94b647c1b228e8f1660f83292 is on codex/c
 ## Owner roadmap audit renewal — 2026-10-15
 
 Owner: continue, audit carefully and update roadmap to avoid drift. Root consolidated auxiliary projection and historical-route repairs per docs/reviews/R099_ROADMAP_CONTINUITY_AUDIT_2026-10-15.md. Current milestone M2; R099 source/compile accepted only, current runtime/FREEZE OPEN; R100 fresh budget proposed, no current call authority. M1 business and M3/pilot gaps stay explicit, no supporting-scope chain or budget reset. Metadata gates/commit precede owner handback.
+
+## Standing owner directive — UI/UX language, 2026-10-16
+
+Product-facing labels, statuses, help and errors must use end-user language, not Dev jargon, raw enums/API codes/stack traces or tooling details. Verify rendered UI under the bounded active product scope. Root cause diagnostics remain in logs/review artifacts. Recorded with owner audit authority and browser-stop instruction in docs/reviews/R107_R108_BROWSER_STOP_HANDOFF_2026-10-16.md.

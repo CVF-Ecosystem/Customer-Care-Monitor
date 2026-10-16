@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-108",
+  "authorityKind": "DISPATCHER_OWNED_BOUNDED_REOPEN_DIAGNOSIS",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "/root/r108_browser_luna",
+    "reviewer": "Codex /root",
+    "commitSteward": "Codex /root",
+    "closer": "Codex /root"
+  },
+  "allowedPaths": [
+    "backend/api/handlers/intervention_reopen_r108_test.go",
+    "docs/reviews/R108_*.md",
+    "docs/reviews/probes/r108_root/**",
+    "docs/reviews/probes/r108_luna/**",
+    ".cvf/runtime/r108_native/**",
+    "docs/work_orders/CCMAI_RUNTIME_108_REOPEN_DIAGNOSTIC.md"
+  ],
+  "prohibitedEffects": [
+    "provider/mock/secret/customer/channel access",
+    "production engine/handler/model/frontend/Core/gate/dependency/global config changes",
+    "edit old seeds/budgets/receipts or reuse old binary as current evidence",
+    "Docker create/recreate/pull/prune/compose; mutate R102 or user app/DB",
+    "browser product/Vite/backend listener campaign; runtime retry",
+    "worker commits/seed edits/self-review/push/deploy/FREEZE"
+  ],
+  "executionBudget": {
+    "sourceCompiles": 1,
+    "existingFixtureStarts": 1,
+    "nativeInvocations": 1,
+    "caseActionPosts": 4,
+    "campaignSeconds": 600,
+    "runtimeRetries": 0,
+    "newFixtures": 0,
+    "backendListeners": 0,
+    "viteLaunches": 0,
+    "providerCalls": 0,
+    "mockCalls": 0
+  },
+  "worker": "/root/r108_browser_luna",
+  "claimScope": "Synthetic current-source diagnostic only; reproduced error or NOT_REPRODUCED, not repair/product/governance acceptance",
+  "ownerAuthority": "Owner authorizes audit and necessary handling; renewed continuation and Luna Max on connected environment. Stop if integrated runtime browser fails; no repeated same-scope approval. UI must use end-user language.",
+  "fixture": {
+    "container": "e1555e03d69360e1cd7729afd9e52856443f5172d76454653beec981a7d6477a",
+    "image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "volume": "ccmai-r101-review-final-20261015",
+    "network": "35c3959ac41517050defad05cbad7a08717b24c8879683e25baf3e2702625e98",
+    "label": "CCMAI-RUNTIME-101",
+    "db": "r101_fixture"
+  },
+  "dockerExe": "C:/Users/tiennm/AppData/Local/Programs/DockerDesktop/resources/bin/docker.exe",
+  "dockerHost": "npipe:////./pipe/dockerDesktopLinuxEngine",
+  "dockerSha256": "6c699720bb9523dedb9eb5d22a49951ea9210dbdb1314a3554029eee9be76896",
+  "entryDecision": "Inherit R101/R102 source truth and R107 partial UI/failure; Root HTTP click/PNG PASS then immutable seed, committed BUILD source-only, independent source review/commit before one native campaign. No old budget reset."
+}

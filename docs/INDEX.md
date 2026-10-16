@@ -1414,6 +1414,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/07_b02_correction_fields_full.ax.txt`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/23_b04_after_reload.ax.txt`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/39_b06_after_reopen_settled.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/r108_connected/root_capability.json`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/15_b04_latest_before_assign.meta.json`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/22_b04_after_submit.ax.txt`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/39_b06_after_reopen_settled.ax.txt`
@@ -1429,6 +1430,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/backend.stdout.log`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/12_b03_selected_stale_action.png`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/21_b04_filled_before_submit.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/r108_connected/root_http_clicked.png`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/22_b04_after_submit.meta.json`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/admission.json`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/15_b04_latest_before_assign.png`
@@ -1452,6 +1454,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/vite_config_receipt.json`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/25_b05_action_options.ax.txt`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/34_b06_action_options.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/r108_browser_capability_stop.json`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/38_b06_after_reload.ax.txt`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/05_b02_b03_tab_b_loaded.tool.json`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/01_b01_owner_login.png`
@@ -1521,6 +1524,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/browser_capability_receipt.json`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/worker_return_gate_tool_call.json`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/resume_gate_units.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/R107_R108_BROWSER_STOP_HANDOFF_2026-10-16.md`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/34_b06_action_options.png`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/admission_gate_units.json`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/01_b01_owner_login.tool.json`
