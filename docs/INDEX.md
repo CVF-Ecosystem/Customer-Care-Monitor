@@ -1637,6 +1637,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/r109_workflow_runner.py`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/capability_inventory.json`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/harness_validation/regressions.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/supervisor_preflight.stderr.txt`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/ui_source_preflight.json`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/harness_validation/eof_then_ready/readiness/mysql_probe_0002.json`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/validation_1/source_pins.json`
@@ -1645,6 +1646,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/ui_source_preflight.stdout.txt`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/ui_source_precommit.stdout.txt`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/dispatch_precommit_check.stderr.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/supervisor_preflight.json`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/ui_source_preflight.stderr.txt`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/R109_INDEPENDENT_RUNTIME_ADMISSION_REVIEW_2026-10-16.md`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/harness_validation/eof_then_ready/readiness/mysql_ready.json`
@@ -1666,10 +1668,13 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/validation_1/forced_typecheck.stderr.txt`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/harness_validation/eof_then_ready/readiness/mysql_probe_0001.json`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/work_orders/CCMAI_RUNTIME_109_HUMAN_UI_COMPLETION.md`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/supervisor_precommit.stdout.txt`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/harness_validation/config_import.stdout.txt`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/R109_WORKER_ACKNOWLEDGMENT_2026-10-16.md`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `CVF_SESSION/authority/CCMAI-RUNTIME-109.json`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/harness_validation/result.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/runtime_admission.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/supervisor_preflight.stdout.txt`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/harness_validation/fatal_server_error/readiness/mysql_probe_0001.json`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/bridge_renewed/result.json`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/bridge_renewed/after_click.png`
@@ -1677,9 +1682,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/resume_20261017_doctor.stdout.txt`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/bridge_health_server.py`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/validate_supervisor.py`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/supervisor_precommit.json`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/binary_reuse_verification.json`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `CVF_SESSION/tranches/CCMAI-RUNTIME-109.json`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/validation_1/focused_tests.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/supervisor_precommit.stderr.txt`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/harness_validation/offline_pipe.bin`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/ui_source_precommit.json`
 - Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/R109_ROOT_UI_VERIFICATION_PLAN_2026-10-16.md`

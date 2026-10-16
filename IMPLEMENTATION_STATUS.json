@@ -2787,10 +2787,11 @@
     }
   },
   "x-r109Current": {
-    "status": "BUILD_SOURCE_ONLY",
+    "status": "BUILD_RUNTIME_ADMITTED",
     "seedCommit": "25d3b40f90d0b001a1d1862034e18aa521ddd67a",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_109_HUMAN_UI_COMPLETION.md",
     "runtime": "NOT_RUN_UNCONSUMED",
-    "nextAction": "CCMAI-RUNTIME-109 BUILD source-only product completion under existing owner grant: Luna repairs intervention UI wording/history and new supervisor readiness/cleanup; Root independent source review and focused cached validation before committed runtime admission. Reuse current backend binarycb73ee13, Go0; one shared fixture/native/backend/Vite campaign2100s/retries0, native4POST/UI14POST/max3tabs. Root connected browser owns UI; worker no browser role. Preserve R108 spent/failed receipts and all old seeds/budgets. Actual browser failure stops for owner transfer. Dashboard3/fullM2/M3/pilot/release OPEN; R102 local FROZEN, accounts parked."
+    "nextAction": "CCMAI-RUNTIME-109 BUILD runtime admitted at sourcea93b463a after UI14tests/typecheck and supervisor3regressions/config-import PASS. Luna executes one shared fixture/native/backend/Vite campaign2100s/retries0 with reused binarycb73ee13 and Go0; native4POST then only on NOT_REPRODUCED Root connected browser B01-B10/UI14POST/max3tabs. Stop on native failure or actual browser failure; preserve raw failures and owned cleanup. No source changes or HEAD commit during campaign. Return exact worker packet for independent Root review; no FREEZE. Dashboard3/fullM2/M3/pilot/release OPEN; R102 local FROZEN, accounts parked.",
+    "sourceCommit": "a93b463a8968e1c11648e734a9dbd011a07b8369"
   }
 }

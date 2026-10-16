@@ -7,7 +7,7 @@ Worker: /root/r108_browser_luna (Luna Max, source and supervisor executor; no br
 Reviewer: Codex /root (independent code review and connected browser verification)
 Commit steward: Codex /root
 providerExecutionAuthority: NONE
-Disposition: SOURCE_ONLY_PENDING_INDEPENDENT_VALIDATION_AND_RUNTIME_ADMISSION
+Disposition: RUNTIME_ADMITTED_PENDING_SINGLE_CAMPAIGN
 
 ## Authority, entry and checker read-ahead
 
@@ -71,3 +71,7 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 
 
 Material-SHA marker:25d3b40f90d0b001a1d1862034e18aa521ddd67a. Source-only committed admission precedes edits; runtime admission still pending.
+
+## Runtime source admission — 2026-10-17
+
+Root independently accepted source a93b463a8968e1c11648e734a9dbd011a07b8369 with UI14tests/typecheck and supervisor3regressions/actual Node config import PASS. Exact committed runtime_admission.json is mandatory; one existing shared fixture/native/UI campaign only, old counters untouched. Root connected browser HTTP click/screenshot PASS; no product result yet.
