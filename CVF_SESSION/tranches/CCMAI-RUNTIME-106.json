@@ -1,0 +1,123 @@
+{
+  "schemaVersion": "1.0",
+  "authorityKind": "DISPATCHER_OWNED_HISTORICAL_R101_UI_EVIDENCE",
+  "trancheId": "CCMAI-RUNTIME-106",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "/root/r105_successor_route",
+    "reviewer": "Codex /root",
+    "commitSteward": "Codex /root",
+    "closer": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/reviews/R106_*.md",
+    "docs/reviews/probes/r106_root/**",
+    "docs/reviews/probes/r106_cua/**",
+    ".cvf/runtime/r106_cua/**",
+    "docs/specs/R106_CODEX_R101_UI_SPEC_2026-10-16.md",
+    "docs/work_orders/CCMAI_RUNTIME_106_CODEX_R101_UI_EVIDENCE.md"
+  ],
+  "prohibitedEffects": [
+    "any effect before Root admission and effective committed seed/order/continuity",
+    "provider/mock/secret/customer/channel effects",
+    "application/Core/gate/policy/dependency/global configuration changes",
+    "alter historical seeds/counters/manifests/baselines/ready/process evidence",
+    "Docker create/recreate/pull/compose/prune or changes to R102/user resources",
+    "install/download/compile/native/frontend test/build",
+    "nonloopback listeners or unrelated localhost8080 MCP/OAuth routes",
+    "policy bypass/file protocol retry/standalone browser substitution",
+    "worker commits/seed edits/self-review/push/merge/deploy/FREEZE"
+  ],
+  "executionBudget": {
+    "newFixtures": 0,
+    "existingFixtureStarts": 1,
+    "historicalBackendLaunches": 1,
+    "viteLaunches": 1,
+    "maxSimultaneousProductTabs": 3,
+    "applicationActionSubmissions": 10,
+    "runtimeRetries": 0,
+    "backendSeconds": 1800,
+    "wholeCampaignSeconds": 2100,
+    "providerCalls": 0,
+    "mockCalls": 0,
+    "goCompiles": 0,
+    "testBuildCommands": 0
+  },
+  "historicalTargetCommit": "200df3e4a7bc2a326425922a5230508a4fd9b0fe",
+  "binarySha256": "4c7575e180dd198d995bfe09bdc45061740a987be8ec0765f02b203e1c251f31",
+  "nodeExe": "C:/Program Files/nodejs/node.exe",
+  "nodeSha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+  "dockerExe": "C:/Users/tiennm/AppData/Local/Programs/DockerDesktop/resources/bin/docker.exe",
+  "dockerSha256": "6c699720bb9523dedb9eb5d22a49951ea9210dbdb1314a3554029eee9be76896",
+  "dockerHost": "npipe:////./pipe/dockerDesktopLinuxEngine",
+  "runtimePins": {
+    "docs/reviews/probes/r106_root/r106_ui_runner.py": "9670d06d662077e2ded390e847d502a209b428dcf437e8a2f9397f10e8a17790",
+    "docs/reviews/probes/r106_root/r106_vite_config.mjs.template": "8c8a40d463247443044578a16cdd2452f44c090d6f5c7fdf5a6068e67c5efbda",
+    "docs/reviews/probes/r105_dispatch_preparation/frontend_input_manifest.json": "9bc280a50432f56f9a12272b138e26831106bc7fa0002aa3b825f73ece58b8df",
+    "docs/reviews/probes/r101_root/formatted_source_manifest.json": "61c57a5ed0613626327dd92fae352feae23c78e1d3e8ea45c06c86bd2e7660d3",
+    "docs/reviews/probes/r106_root/source_review_receipt.json": "05e0446f7e8d8a7420e16521e26ad281df6b2e236d6f8ff8c2057972e565ecf4"
+  },
+  "ownerAuthorization": "Owner explicitly requests Codex subagent execution of R105 UI packet; current canonical hold requires verified supported tool and reviewed successor without another owner approval. Root directly verified IAB HTTP/control/capture. This immutable successor changes worker/tool binding only; one shared105/106 historical synthetic campaign. Root retains review/commit ownership; no provider, production, publication or deployment authority.",
+  "claimScope": "Historical R101 synthetic human software UI only; no current R102/M3/full product/governance acceptance",
+  "entryDecision": "Inherit accepted R105 source controls/historical R101 target; verified CUA HTTP prerequisite -> bounded R106 U01-U05 SPEC and independent successor source review -> immutable seed commit -> WORK_ORDER/record/base -> active gates and synchronized committed BUILD -> one UI campaign -> independent REVIEW. Preserve R105 blocked/unused, original seeds and all historical failures/counters.",
+  "workerAllowedPaths": [
+    "docs/reviews/R106_R101_UI_WORKER_RETURN_2026-10-16.md",
+    "docs/reviews/probes/r106_cua/**",
+    ".cvf/runtime/r106_cua/**"
+  ],
+  "historicalResourcePolicy": "Only existing R101 container/image/volume/network identities pinned by reviewed runner; fresh synthetic tenant/case/migration in that disposable fixture admitted once. No old readiness/counters/baseline rewrite, no third fixture. Preserve original R104 tab/no reuse/no closure claim.",
+  "runtimePinsRepresentation": "Captured current workspace bytes for five exact pins; immutable seed content UTF8_LF; recheck after checkout.",
+  "claimLimits": "B01-B10 observations only, static gates not runtime AI governance/hostedCI/full current R102 backend or M3/product acceptance. Three Dashboard baseline failures OPEN; no worker source repair/self-approval/commit.",
+  "worker": "/root/r105_successor_route",
+  "browserTool": "mcp__cua_repl",
+  "browserSurface": "iab",
+  "capabilityReceipt": {
+    "path": "docs/reviews/probes/r105_root/codex_capability_resume/receipt.json",
+    "sha256": "4f327d6d73516b67c24bc39c711575cf1e592dfb9af31fce9c563ec434c9a229"
+  },
+  "campaignLineage": {
+    "parent": "CCMAI-RUNTIME-105",
+    "parentRuntime": ".cvf/runtime/r105_claude",
+    "parentExecutionRequired": {
+      "fixtureStarts": 0,
+      "backendLaunches": 0,
+      "viteLaunches": 0
+    },
+    "sharedExistingFixtureStarts": 1,
+    "sharedBackendLaunches": 1,
+    "sharedViteLaunches": 1,
+    "runtimeRetries": 0
+  },
+  "status": "BUILD",
+  "phase": "BUILD",
+  "baseCommit": "88f0c5e64185e538cfc47381a0820cacd73bab51",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_106_CODEX_R101_UI_EVIDENCE.md",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "PENDING_HISTORICAL_UI_EVIDENCE",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD"
+  ],
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "ACTIVE",
+  "dispatcher": "Codex /root",
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "x-sourceReview": "docs/reviews/R106_RUNNER_INDEPENDENT_SOURCE_REVIEW_2026-10-16.md",
+  "x-actualExecution": {
+    "fixtureStarts": 0,
+    "backendLaunches": 0,
+    "viteLaunches": 0,
+    "providerCalls": 0,
+    "mockCalls": 0,
+    "UI": "NOT_RUN"
+  }
+}

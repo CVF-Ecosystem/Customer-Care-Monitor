@@ -1,6 +1,6 @@
 # R105 historical R101 UI evidence handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 - Project: Customer-Care-Monitor-AI
@@ -42,3 +42,5 @@ Metadata gate repair before commit: pre-commit profile initially rejected a BLOC
 Fresh manifest/policy/compact/state/memory/handoff/implementation/index rehydration and doctor27PASS. Owner renews subagent execution grant. Root directly observed current iab2 discovery, blank capture, and pure-loopback HTTP health page click to Control OK plus real PNG; owned health tabs closed and only own foreground health server stopped (CtrlC exit1). Receipt under docs/reviews/probes/r105_root/codex_capability_resume/. This is no app/fixture effect. Root retains ORCHESTRATOR/independent REVIEWER; Luna transitions read-only adviser to SPEC_AUTHOR for inert separately named106 runner/config/tests candidate under DESIGN. No105 immutable seed/runner/pins edit, no speculative runtime dispatch. A reviewed successor is required because worker/tool identity changed; one shared105/106 campaign, not a new attempt budget. Root source review and immutable successor/base/active gates/dispatch commit precede BUILD effects.
 
 Root role transition: ORCHESTRATOR -> SPEC_AUTHOR / WORK_ORDER_AUTHOR for bounded R106 U01-U05 intended contract and successor packet; independent REVIEWER retained only for worker-authored candidate source evaluation. R105 remains blocked and immutable; no runtime authority from this documentary transition.
+
+R106 routing transition: this continuity handoff is historical/SUPERSEDED, while the immutable R105 order/record stay BLOCKED and unconsumed. Current handoff is CVF_SESSION/handoffs/AGENT_HANDOFF_CODEX_R101_UI_R106_2026-10-16.md. Initial106 pre-dispatch correctly caught Root's stale implementation activeTranche and double ACTIVE handoff; both corrected before BUILD/runtime; failure receipt retained.

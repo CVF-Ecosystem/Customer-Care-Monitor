@@ -9,18 +9,18 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 `CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
 `IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R101_UI_R105_2026-10-16.md", "activeTranche": "CCMAI-RUNTIME-105", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_CODEX_R101_UI_R106_2026-10-16.md", "activeTranche": "CCMAI-RUNTIME-106", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
 - Current mode: BUILD
 - Active phase: BUILD
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R101_UI_R105_2026-10-16.md
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_CODEX_R101_UI_R106_2026-10-16.md
 
-CCMAI-RUNTIME-105 BUILD_BLOCKED: current Codex IAB HTTP/control/capture now directly PASS; immutable105 Claude binding and all unused campaign slots preserved. Root prepares separately reviewed CCMAI-RUNTIME-106 successor with Luna Max/CUA binding and shared one-campaign lineage before committed dispatch. Inert source candidate DESIGN only; no fixture/backend/Vite before effective successor authority. B01-B10 NOT_RUN, Dashboard3/fullM2/M3/pilot/release OPEN; R102 local FROZEN and Facebook/ZaloOA parked.
+CCMAI-RUNTIME-106 BUILD/ACTIVE: committed immutable source/seed base88f0c5e64185e538cfc47381a0820cacd73bab51; Root independently reviewed successor and current CUA HTTP/control/capture. Luna Max /root/r105_successor_route may execute only after committed ACTIVE order/BUILD record/pointers and exact guards PASS: one shared105/106 fixture/backend/Vite campaign, new106 receipts, B01-B10 and cooperative cleanup. R105 remains blocked/unused; no provider/mock/install/source repair. Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna Max inert successor source candidate SPEC_AUTHOR only, no runtime worker dispatched.
+Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r105_successor_route Luna Max REVIEW_EVIDENCE_OPERATOR admitted only after committed dispatch.
 
 Mandatory pre-dispatch learning: [docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md](docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md). Read before any similar UI/browser assignment; unknown readiness is HOLD, not a speculative dispatch. Corrected draft is not executable authority.
 
