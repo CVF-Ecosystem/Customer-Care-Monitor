@@ -1,0 +1,10 @@
+{
+  "frontend/src/views/InterventionCases.vue": "888c5b672a013d6ab2c6965423899977bcecb70cd460a8abdf374e93067c05e5",
+  "frontend/src/utils/interventionPresentation.ts": "4e25b89d0600972b03da02e4acab10274ee8c4ff51c3679d6204b59bad28c050",
+  "frontend/src/i18n/vi.ts": "e54f809098605e3d36f3f538875e406e0e17d387613ff7a4db161ab7cd66de8a",
+  "frontend/src/i18n/en.ts": "9e80a4e5fd7cff448ada01e238ff44fceb11cf0fc56722ebe0776b4b8865c90d",
+  "frontend/src/__tests__/intervention-ui.test.ts": "5ea4e3dcc7530448369b0740be54bbaafe16109f9d43cbadd36faf72ab55f65e",
+  "frontend/src/__tests__/intervention-presentation.test.ts": "fa50a420a5f2861a4be382e7f7b724dea98ee54cca2279c14bd103adb4f696ff",
+  "frontend/src/__tests__/intervention-api.test.ts": "06851bd2e20080165c69cbb224872b86c7d559dcc627863e9a4268cffaf464d8",
+  "docs/reviews/probes/r109_root/focused-test.config.mjs": "09e1e492b49685192028a1394230e39e7ed89ebb7ca4888eedaac8e0b832740f"
+}
