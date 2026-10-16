@@ -1,0 +1,14 @@
+[PASS] CVF-DG-INST-01 PASS
+[PASS] CVF-DG-CONT-01 PASS
+[PASS] CVF-DG-RANGE-01 PASS
+       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=f9e87e576833551e513c7958f160918a6be090af candidates=58 deleted=0
+[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked
+       note: docs/work_orders/CCMAI_RUNTIME_106_CODEX_R101_UI_EVIDENCE.md: status BLOCKED_WITH_REASON is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract
+[PASS] CVF-DG-ROUTE-01 PASS
+       note: checked: docs/work_orders/CCMAI_RUNTIME_106_CODEX_R101_UI_EVIDENCE.md
+[FAIL] CVF-DG-ROLE-01 FAIL
+       ROLE_FIELD_INVALID @ docs/reviews/planning/R107_R101_UI_RETRY_DECISION_PACKET_2026-10-16.md#Reviewer: R2 review needs exactly one non-empty Reviewer line
+       ROLE_FIELD_INVALID @ docs/reviews/planning/R107_R101_UI_RETRY_DECISION_PACKET_2026-10-16.md#Worker: R2 review needs exactly one non-empty Worker line
+[PASS] CVF-DG-CLAIM-01 PASS
+       note: 0 explicit claim line(s) and 4 document(s) scanned
+RESULT: FAIL phase=reviewer-fast mandatoryControls=7 failed=1

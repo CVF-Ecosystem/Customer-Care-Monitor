@@ -1,6 +1,6 @@
 # CCMAI-RUNTIME-106 — Codex historical R101 UI evidence successor
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 Worker: /root/r105_successor_route (Luna Max REVIEW_EVIDENCE_OPERATOR)
 Reviewer: Codex /root
@@ -117,3 +117,7 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 ## Exact committed authority
 
 Immutable seed/source-review baseCommit: 88f0c5e64185e538cfc47381a0820cacd73bab51. Material-SHA marker:88f0c5e64185e538cfc47381a0820cacd73bab51. Source pins in immutable seed; active dispatch must be separately committed before effects.
+
+## Execution result — 2026-10-16
+
+BLOCKED after the single admitted campaign: backend readiness observed; Vite configuration ERR_REQUIRE_ESM_RACE_CONDITION before running.json, allB01-B10 NOT_RUN. Start budget1/1/1 consumed/retries0. Finally cleanup completed with errors[] and nonzero child exits retained; Root independently corroborated fixture exited/protected safe equality/recordedPIDs absent. No more starts or worker repair authority; see docs/reviews/R106_RUNTIME_BLOCK_INDEPENDENT_REVIEW_2026-10-16.md.

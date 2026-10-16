@@ -89,21 +89,24 @@
     "sharedViteLaunches": 1,
     "runtimeRetries": 0
   },
-  "status": "BUILD",
+  "status": "BUILD_BLOCKED",
   "phase": "BUILD",
   "baseCommit": "88f0c5e64185e538cfc47381a0820cacd73bab51",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_106_CODEX_R101_UI_EVIDENCE.md",
   "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "PENDING_HISTORICAL_UI_EVIDENCE",
+  "reviewEvidence": [
+    "docs/reviews/R106_RUNTIME_BLOCK_INDEPENDENT_REVIEW_2026-10-16.md"
+  ],
+  "disposition": "BLOCKED_RUNTIME_VITE_ESM_IMPORT_RACE",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "BUILD_BLOCKED"
   ],
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
   "dispatcher": "Codex /root",
   "planningPhaseTrace": [
     "INTAKE",
@@ -113,11 +116,15 @@
   ],
   "x-sourceReview": "docs/reviews/R106_RUNNER_INDEPENDENT_SOURCE_REVIEW_2026-10-16.md",
   "x-actualExecution": {
-    "fixtureStarts": 0,
-    "backendLaunches": 0,
-    "viteLaunches": 0,
+    "fixtureStarts": 1,
+    "backendLaunches": 1,
+    "viteLaunches": 1,
+    "applicationActions": 0,
+    "productTabs": 0,
+    "runtimeRetries": 0,
     "providerCalls": 0,
     "mockCalls": 0,
-    "UI": "NOT_RUN"
+    "UI": "B01_B10_NOT_RUN",
+    "cleanup": "FIXTURE_EXITED_PROTECTED_EQUAL_RECORDED_PIDS_ABSENT"
   }
 }

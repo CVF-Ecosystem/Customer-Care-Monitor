@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "x-roadmapTracking": {
-    "updatedAt": "2026-10-15",
+    "updatedAt": "2026-10-16",
     "status": "M3_NATIVE_WORKFLOW_PASS_BROWSER_OPEN",
     "currentCheckpoint": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
     "stages": {
@@ -23,7 +23,7 @@
       "M5 release/portable operations"
     ],
     "currentBlockers": [
-      "Current Codex session has no connected browser; iab unavailable. Historical external data-URL proof does not establish current HTTP/UI capability.",
+      "R106 Vite ESM import race before readiness; CUA HTTP health PASS but R101 B01-B10 NOT_RUN",
       "Three inherited Dashboard UI fixture failures reproduced before M3; full suite remains failed",
       "Full M2/WAIT_DATA rerun and M1 people/SLA/corpus/threshold/pilot/release remain open"
     ],
@@ -2031,9 +2031,7 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [
-    "docs/work_orders/CCMAI_RUNTIME_106_CODEX_R101_UI_EVIDENCE.md"
-  ],
+  "activeWorkOrders": [],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -2661,7 +2659,7 @@
   },
   "updatedAt": "2026-10-16",
   "x-dispatchReadinessRepair": {
-    "status": "BLOCKED_BROWSER_SURFACE_UNAVAILABLE",
+    "status": "BLOCKED_VITE_IMPORT_RACE_AFTER_BACKEND_READY",
     "learning": "docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md",
     "draftWorkOrder": "docs/reviews/planning/R105_R101_UI_EVIDENCE_WORK_ORDER_DRAFT_2026-10-16.md",
     "authorityCandidate": "docs/reviews/planning/R105_R101_UI_AUTHORITY_CANDIDATE_2026-10-16.json",
@@ -2677,7 +2675,7 @@
     "sourceCandidateAuthor": "/root/r105_runner_candidate (Sol Medium)",
     "independentOfflineTests": 12,
     "sourceDisposition": "SOURCE_REVIEW_PASS_RUNTIME_NOT_RUN",
-    "remainingBoundary": "Committed effective R106 dispatch and actual UI campaign; current CUA health PASS"
+    "remainingBoundary": "Sequential-import proposal + actual module-load readiness, then new explicit finite runtime allowance;106spent/retries0"
   },
   "x-r105Current": {
     "status": "BUILD_BLOCKED",
@@ -2690,15 +2688,29 @@
     "currentCuaCapability": "docs/reviews/probes/r105_root/codex_capability_resume/receipt.json"
   },
   "x-blockedWorkOrders": [
-    "docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md"
+    "docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md",
+    "docs/work_orders/CCMAI_RUNTIME_106_CODEX_R101_UI_EVIDENCE.md"
   ],
   "x-r106Current": {
-    "status": "BUILD",
+    "status": "BUILD_BLOCKED",
     "seedCommit": "88f0c5e64185e538cfc47381a0820cacd73bab51",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_106_CODEX_R101_UI_EVIDENCE.md",
     "riskCeiling": "R2",
     "sourceReview": "docs/reviews/R106_RUNNER_INDEPENDENT_SOURCE_REVIEW_2026-10-16.md",
-    "runtime": "NOT_RUN",
-    "nextAction": "CCMAI-RUNTIME-106 BUILD/ACTIVE: committed immutable source/seed base88f0c5e64185e538cfc47381a0820cacd73bab51; Root independently reviewed successor and current CUA HTTP/control/capture. Luna Max /root/r105_successor_route may execute only after committed ACTIVE order/BUILD record/pointers and exact guards PASS: one shared105/106 fixture/backend/Vite campaign, new106 receipts, B01-B10 and cooperative cleanup. R105 remains blocked/unused; no provider/mock/install/source repair. Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked."
+    "runtime": "ONE_CAMPAIGN_CONSUMED_VITE_CONFIG_BLOCKED",
+    "nextAction": "CCMAI-RUNTIME-106 BUILD_BLOCKED / BLOCKED_WITH_REASON: one shared105/106 fixture/backend/Vite campaign consumed1/1/1, retries0; backend ready, Vite ERR_REQUIRE_ESM_RACE_CONDITION before running receipt, B01-B10 NOT_RUN. Owned children absent, exact fixture exited, protected safe fields equal;45worker hashes PASS. Root preserves failed source/logs/ledgers and presents unapplied sequential-import repair plus real module-load prerequisite/new finite campaign decision packet R107; no automatic source repair/retry/start or seed reset. Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked.",
+    "review": "docs/reviews/R106_RUNTIME_BLOCK_INDEPENDENT_REVIEW_2026-10-16.md",
+    "actualExecution": {
+      "fixtureStarts": 1,
+      "backendLaunches": 1,
+      "viteLaunches": 1,
+      "applicationActions": 0,
+      "productTabs": 0,
+      "runtimeRetries": 0,
+      "providerCalls": 0,
+      "mockCalls": 0,
+      "UI": "B01_B10_NOT_RUN",
+      "cleanup": "FIXTURE_EXITED_PROTECTED_EQUAL_RECORDED_PIDS_ABSENT"
+    }
   }
 }

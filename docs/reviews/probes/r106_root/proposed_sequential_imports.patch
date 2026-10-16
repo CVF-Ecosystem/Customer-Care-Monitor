@@ -1,0 +1,15 @@
+This is an UNAPPLIED next-scope proposal, not permission to alter immutable
+R105/R106 inputs or consume another runtime attempt. Review a separately named
+template/runner and new finite campaign authority before applying/testing.
+
+--- reviewed-template-before
++++ proposed-successor-template-after
+@@ -17,5 +17,3 @@
+-const [{ defineConfig }, { default: vue }, { default: vuetify }] = await Promise.all([
+-  importFromFrontend('vite'),
+-  importFromFrontend('@vitejs/plugin-vue'),
+-  importFromFrontend('vite-plugin-vuetify'),
+-])
++const { defineConfig } = await importFromFrontend('vite')
++const { default: vue } = await importFromFrontend('@vitejs/plugin-vue')
++const { default: vuetify } = await importFromFrontend('vite-plugin-vuetify')

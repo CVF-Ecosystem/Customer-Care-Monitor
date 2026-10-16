@@ -18,9 +18,9 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_CODEX_R101_UI_R106_2026-10-16.md
 
-CCMAI-RUNTIME-106 BUILD/ACTIVE: committed immutable source/seed base88f0c5e64185e538cfc47381a0820cacd73bab51; Root independently reviewed successor and current CUA HTTP/control/capture. Luna Max /root/r105_successor_route may execute only after committed ACTIVE order/BUILD record/pointers and exact guards PASS: one shared105/106 fixture/backend/Vite campaign, new106 receipts, B01-B10 and cooperative cleanup. R105 remains blocked/unused; no provider/mock/install/source repair. Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked.
+CCMAI-RUNTIME-106 BUILD_BLOCKED / BLOCKED_WITH_REASON: one shared105/106 fixture/backend/Vite campaign consumed1/1/1, retries0; backend ready, Vite ERR_REQUIRE_ESM_RACE_CONDITION before running receipt, B01-B10 NOT_RUN. Owned children absent, exact fixture exited, protected safe fields equal;45worker hashes PASS. Root preserves failed source/logs/ledgers and presents unapplied sequential-import repair plus real module-load prerequisite/new finite campaign decision packet R107; no automatic source repair/retry/start or seed reset. Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r105_successor_route Luna Max REVIEW_EVIDENCE_OPERATOR admitted only after committed dispatch.
+Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna Max evidence worker returned blocked/idle, no further runtime authority.
 
 Mandatory pre-dispatch learning: [docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md](docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md). Read before any similar UI/browser assignment; unknown readiness is HOLD, not a speculative dispatch. Corrected draft is not executable authority.
 

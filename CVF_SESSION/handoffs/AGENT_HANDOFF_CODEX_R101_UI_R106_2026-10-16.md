@@ -6,9 +6,9 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: BUILD
 - Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r105_successor_route Luna Max REVIEW_EVIDENCE_OPERATOR admitted only after committed dispatch.
+- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna Max evidence worker returned blocked/idle, no further runtime authority.
 - Active tranche: CCMAI-RUNTIME-106
-- Next allowed move: CCMAI-RUNTIME-106 BUILD/ACTIVE: committed immutable source/seed base88f0c5e64185e538cfc47381a0820cacd73bab51; Root independently reviewed successor and current CUA HTTP/control/capture. Luna Max /root/r105_successor_route may execute only after committed ACTIVE order/BUILD record/pointers and exact guards PASS: one shared105/106 fixture/backend/Vite campaign, new106 receipts, B01-B10 and cooperative cleanup. R105 remains blocked/unused; no provider/mock/install/source repair. Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked.
+- Next allowed move: CCMAI-RUNTIME-106 BUILD_BLOCKED / BLOCKED_WITH_REASON: one shared105/106 fixture/backend/Vite campaign consumed1/1/1, retries0; backend ready, Vite ERR_REQUIRE_ESM_RACE_CONDITION before running receipt, B01-B10 NOT_RUN. Owned children absent, exact fixture exited, protected safe fields equal;45worker hashes PASS. Root preserves failed source/logs/ledgers and presents unapplied sequential-import repair plus real module-load prerequisite/new finite campaign decision packet R107; no automatic source repair/retry/start or seed reset. Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, Facebook/ZaloOA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Root dispatch acknowledgment — 2026-10-16
@@ -18,3 +18,7 @@ Fresh105 continuity/doctor27PASS; current Root IAB HTTP/control/PNG PASS resolve
 ## Root BUILD admission acknowledgment — 2026-10-16
 
 Rehydrated WORK_ORDER pointers; active pre-dispatch controls checked. Root authorizes one supervisor campaign only after this BUILD/ACTIVE packet is committed and worker verifies actual HEAD, pins, lineage and ownership. Material-SHA marker:88f0c5e64185e538cfc47381a0820cacd73bab51. Review role remains independent; worker only collects UI evidence and cleanup.
+
+## Root independent failed-campaign review and blocked sync — 2026-10-16
+
+Current106BUILD continuity/seed/order/source re-read; Root retains independent REVIEWER, now SESSION_SYNC_STEWARD/COMMIT_STEWARD for blocked evidence only. Worker ran one exact supervisor after committed dispatch; backend ready, Vite config ESM race before running.json. Three reservations spent, no browser product navigation/actions, no retry/source fix. Root verified38runtime originals/copies and45worker hashes, exact fixture exited, recordedPID19068/7924 absent, protected safe rows inclR102 equal. Both child exits1 retained; finally cleanup rather than manual stop path observed. Root owns source-readiness review miss: injected13tests and89gateunits did not prove actual module loading. Formal review docs/reviews/R106_RUNTIME_BLOCK_INDEPENDENT_REVIEW_2026-10-16.md records blocker, no UI/governance acceptance or FREEZE. Old105seed/runner/budgets untouched. Unapplied sequential-import diff and R107 decision packet require new finite authority before any extra source/runtime effect; no automatic successor.
