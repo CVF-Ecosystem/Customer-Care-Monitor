@@ -14780,6 +14780,13 @@
       "path": "docs/reviews/probes/r108_root/source_preflight.stdout.txt",
       "status": "ACTIVE",
       "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r108-ea006e2e78004e2f31",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r108_root/source_admission.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
     }
   ]
 }

@@ -1,0 +1,16 @@
+{
+  "trancheId": "CCMAI-RUNTIME-108",
+  "decision": "RUNTIME_ADMITTED",
+  "reviewer": "Codex /root",
+  "reviewedSourceCommit": "a4b1d490676b5ef9f165446a2aca33f10adb39df",
+  "sourcePins": {
+    "backend/api/handlers/intervention_reopen_r108_test.go": "f4adcee0e5b811743caebda15f77b63a88495f925652a13ce0ef51ece6aa2a7f",
+    "docs/reviews/probes/r108_luna/r108_native_runner.py": "899afa92934dede2d99d28d591bc4232d29a52f764d10f8420588e8e940fb138"
+  },
+  "seedSha256": "a9d1b1b97d7a10be78eedb4d0b321d670c150cdfbb34b5a4037475d23bc3029e",
+  "workOrderSha256": "b6fb83892ce6afad26f277dfb1f0eb3a201c244baf462f944640b94540eb4fd2",
+  "goExe": "C:/Program Files/Go/bin/go.exe",
+  "goSha256": "7d828191ba32519a9c9361789ab647486236ed45c660889196c7770a8ff1985c",
+  "reviewEvidence": "docs/reviews/R108_INDEPENDENT_SOURCE_ADMISSION_2026-10-16.md",
+  "goVersionObserved": "go1.27.0 windows/amd64"
+}

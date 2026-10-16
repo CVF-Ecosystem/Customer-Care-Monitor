@@ -2766,10 +2766,12 @@
     "verification": "Audit in intended scope and verify rendered UI when a supported browser is available; not yet audited/fixed in this stopped session."
   },
   "x-r108Current": {
-    "status": "BUILD_SOURCE_ONLY",
+    "status": "BUILD_RUNTIME_ADMITTED",
     "seedCommit": "86cee15ac68c315c2bb16f9ba6b25566831bfcc7",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_108_REOPEN_DIAGNOSTIC.md",
     "runtime": "NOT_RUN_UNCONSUMED",
-    "nextAction": "CCMAI-RUNTIME-108 BUILD source preparation only: current Root HTTP/control/PNG PASS and Luna Max capability check underway. Seed/base86cee15ac68c315c2bb16f9ba6b25566831bfcc7; worker /root/r108_browser_luna prepares one opt-in diagnostic test/supervisor, then Root independently reviews and commits source admission before compile/fixture/native effects. Budget1compile/1fixture/1native/4actionPOSTs/600s/retries0; no production patch/browser product/Vite/provider/install. Preserve R107 spent/baseline and R102/user resources. UI/UX end-user wording mandatory; Dashboard3/fullM2/M3/pilot/release OPEN, Facebook/ZaloOA parked."
+    "nextAction": "CCMAI-RUNTIME-108 BUILD admitted one native diagnostic: independently reviewed/pinned Luna source committed; source_admission.json binds source commit/test/runner/seed/order/Go. After committed admission and worker acknowledgment run one compile/one exact existing fixture start/one native invocation,max4actionPOSTs,total600s,retries0, owned cleanup and full evidence return; no production patch/listener/Vite/provider/install. Root connected browser HTTP/control/PNG PASS; worker has no browser role. Preserve R107 spent and R102/user resources; subsequent UI wording/B06/B08-B10 remains separately bounded. Dashboard3/fullM2/M3/pilot/release OPEN, Facebook/ZaloOA parked.",
+    "sourceCommit": "a4b1d490676b5ef9f165446a2aca33f10adb39df",
+    "sourceReview": "docs/reviews/R108_INDEPENDENT_SOURCE_ADMISSION_2026-10-16.md"
   }
 }

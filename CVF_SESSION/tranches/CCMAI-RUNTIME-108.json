@@ -74,5 +74,8 @@
     "DESIGN",
     "SPEC",
     "WORK_ORDER"
-  ]
+  ],
+  "x-sourceReview": "docs/reviews/R108_INDEPENDENT_SOURCE_ADMISSION_2026-10-16.md",
+  "x-runtimeAdmission": "docs/reviews/probes/r108_root/source_admission.json",
+  "x-sourceCommit": "a4b1d490676b5ef9f165446a2aca33f10adb39df"
 }
