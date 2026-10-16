@@ -3,8 +3,8 @@
   "activePhase": "BUILD",
   "activeTranche": "CCMAI-RUNTIME-105",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R101_UI_R105_2026-10-16.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-105 BUILD_BLOCKED / BLOCKED_WITH_REASON: owner authorizes Codex subagent execution, but current CUA inventory has no browser and iab creation returns Browser is not available: iab. Preserve immutable105 Claude authority and unconsumed runtime; do not start fixture/backend/Vite or dispatch a substitute worker. Restore a supported browser surface, verify capability, then Root binds the authorized worker/tool through a reviewed successor before UI effects; no repeated owner approval within that grant. B01-B10 NOT_RUN, Dashboard3/fullM2/M3/pilot/release OPEN; R102 local FROZEN unchanged, Facebook/Zalo OA parked.",
-  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol Medium capability adviser only, no runtime worker dispatched.",
+  "nextAllowedMove": "CCMAI-RUNTIME-105 BUILD_BLOCKED: current Codex IAB HTTP/control/capture now directly PASS; immutable105 Claude binding and all unused campaign slots preserved. Root prepares separately reviewed CCMAI-RUNTIME-106 successor with Luna Max/CUA binding and shared one-campaign lineage before committed dispatch. Inert source candidate DESIGN only; no fixture/backend/Vite before effective successor authority. B01-B10 NOT_RUN, Dashboard3/fullM2/M3/pilot/release OPEN; R102 local FROZEN and Facebook/ZaloOA parked.",
+  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna Max inert successor source candidate SPEC_AUTHOR only, no runtime worker dispatched.",
   "updatedAt": "2026-10-16",
   "schemaVersion": "1.0",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved."

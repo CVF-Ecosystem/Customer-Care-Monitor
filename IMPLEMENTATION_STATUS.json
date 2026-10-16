@@ -2675,7 +2675,7 @@
     "sourceCandidateAuthor": "/root/r105_runner_candidate (Sol Medium)",
     "independentOfflineTests": 12,
     "sourceDisposition": "SOURCE_REVIEW_PASS_RUNTIME_NOT_RUN",
-    "remainingBoundary": "Restore supported browser and bind successor worker/tool before effects"
+    "remainingBoundary": "Current IAB HTTP/control/capture PASS; review successor worker/tool/lineage and commit effective authority before app effects"
   },
   "x-r105Current": {
     "status": "BUILD_BLOCKED",
@@ -2684,7 +2684,8 @@
     "riskCeiling": "R2",
     "sourceReview": "docs/reviews/R105_RUNNER_INDEPENDENT_SOURCE_REVIEW_2026-10-16.md",
     "runtime": "NOT_RUN",
-    "nextAction": "CCMAI-RUNTIME-105 BUILD_BLOCKED / BLOCKED_WITH_REASON: owner authorizes Codex subagent execution, but current CUA inventory has no browser and iab creation returns Browser is not available: iab. Preserve immutable105 Claude authority and unconsumed runtime; do not start fixture/backend/Vite or dispatch a substitute worker. Restore a supported browser surface, verify capability, then Root binds the authorized worker/tool through a reviewed successor before UI effects; no repeated owner approval within that grant. B01-B10 NOT_RUN, Dashboard3/fullM2/M3/pilot/release OPEN; R102 local FROZEN unchanged, Facebook/Zalo OA parked."
+    "nextAction": "CCMAI-RUNTIME-105 BUILD_BLOCKED: current Codex IAB HTTP/control/capture now directly PASS; immutable105 Claude binding and all unused campaign slots preserved. Root prepares separately reviewed CCMAI-RUNTIME-106 successor with Luna Max/CUA binding and shared one-campaign lineage before committed dispatch. Inert source candidate DESIGN only; no fixture/backend/Vite before effective successor authority. B01-B10 NOT_RUN, Dashboard3/fullM2/M3/pilot/release OPEN; R102 local FROZEN and Facebook/ZaloOA parked.",
+    "currentCuaCapability": "docs/reviews/probes/r105_root/codex_capability_resume/receipt.json"
   },
   "x-blockedWorkOrders": [
     "docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md"

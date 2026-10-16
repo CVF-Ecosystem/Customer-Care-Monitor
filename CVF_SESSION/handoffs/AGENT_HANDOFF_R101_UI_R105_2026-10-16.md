@@ -6,9 +6,9 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: BUILD
 - Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol Medium capability adviser only, no runtime worker dispatched.
+- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna Max inert successor source candidate SPEC_AUTHOR only, no runtime worker dispatched.
 - Active tranche: CCMAI-RUNTIME-105
-- Next allowed move: CCMAI-RUNTIME-105 BUILD_BLOCKED / BLOCKED_WITH_REASON: owner authorizes Codex subagent execution, but current CUA inventory has no browser and iab creation returns Browser is not available: iab. Preserve immutable105 Claude authority and unconsumed runtime; do not start fixture/backend/Vite or dispatch a substitute worker. Restore a supported browser surface, verify capability, then Root binds the authorized worker/tool through a reviewed successor before UI effects; no repeated owner approval within that grant. B01-B10 NOT_RUN, Dashboard3/fullM2/M3/pilot/release OPEN; R102 local FROZEN unchanged, Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-105 BUILD_BLOCKED: current Codex IAB HTTP/control/capture now directly PASS; immutable105 Claude binding and all unused campaign slots preserved. Root prepares separately reviewed CCMAI-RUNTIME-106 successor with Luna Max/CUA binding and shared one-campaign lineage before committed dispatch. Inert source candidate DESIGN only; no fixture/backend/Vite before effective successor authority. B01-B10 NOT_RUN, Dashboard3/fullM2/M3/pilot/release OPEN; R102 local FROZEN and Facebook/ZaloOA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Root WORK_ORDER acknowledgment — 2026-10-16
@@ -36,3 +36,9 @@ User explicitly authorized Root execution via Luna Max or Sol Medium. Root rehyd
 Root reviewed docs/reviews/probes/r105_root/CODEX_WORKER_CAPABILITY_RETURN_2026-10-16.md against its own original CUA tool calls and receipt. ACCEPTED_CAPABILITY_BLOCK_ONLY: adviser accurately attributes the browser results to Root, independently observed runtime-dir absence, and identifies hardcoded105 worker/seed/runtime bindings. Conditional successor design is not executable authority or UI evidence. No source adaptation justified while the selected browser is unavailable. Root independently rechecks runtime absence/unchanged seed and gates before committing this blocker; no FREEZE.
 
 Metadata gate repair before commit: pre-commit profile initially rejected a BLOCKED handoff header and blocked order listed as active. Root retained Status ACTIVE for the current continuity handoff and removed the non-executable order from activeWorkOrders; tranche/order remain BUILD_BLOCKED/BLOCKED_WITH_REASON. No execution or authority expansion.
+
+## Root current-CUA capability and successor DESIGN acknowledgment — 2026-10-16
+
+Fresh manifest/policy/compact/state/memory/handoff/implementation/index rehydration and doctor27PASS. Owner renews subagent execution grant. Root directly observed current iab2 discovery, blank capture, and pure-loopback HTTP health page click to Control OK plus real PNG; owned health tabs closed and only own foreground health server stopped (CtrlC exit1). Receipt under docs/reviews/probes/r105_root/codex_capability_resume/. This is no app/fixture effect. Root retains ORCHESTRATOR/independent REVIEWER; Luna transitions read-only adviser to SPEC_AUTHOR for inert separately named106 runner/config/tests candidate under DESIGN. No105 immutable seed/runner/pins edit, no speculative runtime dispatch. A reviewed successor is required because worker/tool identity changed; one shared105/106 campaign, not a new attempt budget. Root source review and immutable successor/base/active gates/dispatch commit precede BUILD effects.
+
+Root role transition: ORCHESTRATOR -> SPEC_AUTHOR / WORK_ORDER_AUTHOR for bounded R106 U01-U05 intended contract and successor packet; independent REVIEWER retained only for worker-authored candidate source evaluation. R105 remains blocked and immutable; no runtime authority from this documentary transition.

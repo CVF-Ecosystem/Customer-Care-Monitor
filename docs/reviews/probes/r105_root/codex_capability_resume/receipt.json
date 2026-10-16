@@ -1,0 +1,55 @@
+{
+  "recordedAtUTC": "2026-10-16T07:02:21.087756+00:00",
+  "observer": "Codex /root",
+  "kind": "DIRECT_TOOL_OBSERVATION_RECEIPT_NOT_RAW_EXPORT",
+  "checkout": "3a039794eb4b61b7033bc41a1b63329845deef46",
+  "tool": "mcp__cua_repl.js",
+  "browser": "iab",
+  "browserId": "2",
+  "inventory": {
+    "apps": [],
+    "browsers": [
+      "iab2",
+      "mcpapps1"
+    ]
+  },
+  "blank": {
+    "create": "PASS",
+    "capture": "PASS",
+    "closedCall": "SUCCESS"
+  },
+  "http": {
+    "origin": "http://127.0.0.1:65512/",
+    "before": "button Check control",
+    "action": "click(1)",
+    "after": "button Control OK",
+    "capture": "PASS",
+    "closedCall": "SUCCESS"
+  },
+  "server": {
+    "source": "docs/reviews/probes/r105_root/codex_capability_resume/http_health.py",
+    "bind": "127.0.0.1:0",
+    "foregroundSession": 26734,
+    "stop": "CtrlC via original session",
+    "exit": 1,
+    "http200": [
+      "/",
+      "/favicon.ico"
+    ]
+  },
+  "images": {
+    "about_blank.png": "3feda1912fecb9ee4717bef2018d9e6dc8a6111eabab9fffbd45ab50bc9636b7",
+    "http_control_ok.png": "17fd270c3b086356968cf6b96c88f56ba6b545ef5e9f85d1f77230bd960e2de8"
+  },
+  "productEffects": {
+    "fixtureStarts": 0,
+    "backendLaunches": 0,
+    "viteLaunches": 0,
+    "applicationActions": 0,
+    "providerCalls": 0,
+    "mockCalls": 0
+  },
+  "driverVersionUsed": "NOT_OBSERVED",
+  "cachePathUsed": "NOT_OBSERVED",
+  "limits": "Pure health HTTP/control/capture only. Original tool calls remain in Root chat; not product UI or runtime governance proof."
+}

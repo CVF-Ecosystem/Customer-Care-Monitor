@@ -12176,6 +12176,125 @@
       "path": "docs/reviews/probes/r105_root/CODEX_WORKER_CAPABILITY_RETURN_2026-10-16.md",
       "status": "ACTIVE",
       "description": "Sol Medium routing assessment; Root-reported browser results attributed, no runtime, conditional successor only."
+    },
+    {
+      "id": "r106-a8e32a34fece158e87",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r105_root/codex_capability_resume/about_blank.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r106-32f737115f04226fae",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r105_root/codex_capability_resume/http_control_ok.png",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r106-0dab0f4f66470c4b91",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r105_root/codex_capability_resume/http_health.py",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r106-95c576044e0cb56411",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r105_root/codex_capability_resume/receipt.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r106-1a6ee10333161c0151",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r106_root/r106_ui_runner.py",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r106-efcf8a0161394b5947",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r106_root/r106_vite_config.mjs.template",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r106-c033d792108ad0d469",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r106_root/RUNNER_CANDIDATE_RETURN_2026-10-16.md",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r106-aa2f3810d1bd4ed568",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r106_root/test_r106_ui_runner.py",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r106-8589dce4fc0674f736",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-106.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r106-64b04171471836a335",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r106_root/gate_units.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r106-249934cca553478a18",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r106_root/gate_units.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r106-e286fb226c13b162ab",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r106_root/gate_units.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r106-2c4ef160cbc106f590",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r106_root/offline_tests.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r106-e078507f37b9bba50c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r106_root/offline_tests.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r106-18fa0afff62dacebfd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r106_root/offline_tests.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r106-e66c1b6991e62fa841",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r106_root/source_review_receipt.json",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
+    },
+    {
+      "id": "r106-47fb67e04220f9f1d0",
+      "family": "continuity",
+      "path": "docs/reviews/R106_RUNNER_INDEPENDENT_SOURCE_REVIEW_2026-10-16.md",
+      "status": "ACTIVE",
+      "description": "Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim."
     }
   ]
 }

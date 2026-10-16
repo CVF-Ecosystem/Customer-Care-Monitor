@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-16",
+  "scope": "R106_SUCCESSOR_SOURCE_ONLY",
+  "disposition": "SOURCE_REVIEW_PASS_RUNTIME_NOT_RUN",
+  "reviewer": "Codex /root",
+  "sourceCandidateAuthor": "/root/r105_successor_route",
+  "runtimePins": {
+    "docs/reviews/probes/r106_root/r106_ui_runner.py": "9670d06d662077e2ded390e847d502a209b428dcf437e8a2f9397f10e8a17790",
+    "docs/reviews/probes/r106_root/r106_vite_config.mjs.template": "8c8a40d463247443044578a16cdd2452f44c090d6f5c7fdf5a6068e67c5efbda",
+    "docs/reviews/probes/r105_dispatch_preparation/frontend_input_manifest.json": "9bc280a50432f56f9a12272b138e26831106bc7fa0002aa3b825f73ece58b8df",
+    "docs/reviews/probes/r101_root/formatted_source_manifest.json": "61c57a5ed0613626327dd92fae352feae23c78e1d3e8ea45c06c86bd2e7660d3"
+  },
+  "testSha256": "5d1d4087259632e8e904df6042e436855befd03edb9c6f71a5ba0ee4e6a10d8c",
+  "independentReview": "docs/reviews/R106_RUNNER_INDEPENDENT_SOURCE_REVIEW_2026-10-16.md",
+  "offlineEvidence": "docs/reviews/probes/r106_root/offline_tests.json",
+  "claimBoundary": "Static software source/admission only; product lifecycle/UI/governance not proved"
+}
