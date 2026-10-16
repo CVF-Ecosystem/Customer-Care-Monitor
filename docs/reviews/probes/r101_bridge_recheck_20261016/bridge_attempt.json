@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0",
+  "recordType": "integrated_browser_bridge_recheck",
+  "date": "2026-10-16",
+  "project": "Customer-Care-Monitor-AI",
+  "checkoutHead": "64238c411b2fd9e966ef90ec73a243c8b355305e",
+  "currentPhase": "FREEZE",
+  "activeTranche": "CCMAI-RUNTIME-103",
+  "r101ParentWorkOrderStatus": "COMPLETE_PENDING_REVIEW",
+  "r101SupplementalPacketStatus": "DRAFT",
+  "risk": "R2",
+  "worker": "Luna Max IMPLEMENTATION_WORKER",
+  "reviewer": "Codex /root (independent)",
+  "overallBridgeResult": "NOT_PASS_BLOCKED",
+  "browserCreateResult": "PASS",
+  "navigationResult": "BLOCKED_BROWSER_URL_POLICY",
+  "buttonClick": "NOT_RUN",
+  "changedState": "NOT_RUN",
+  "screenshot": "NOT_ATTEMPTED",
+  "browserEngineVersion": "NOT_OBSERVED",
+  "playwrightDriverVersion": "NOT_OBSERVED",
+  "browserCachePath": "NOT_OBSERVED",
+  "appSourceOrBinary": "NOT_USED",
+  "applicationBackend": "NOT_STARTED",
+  "viteServer": "NOT_STARTED",
+  "fixture": "NOT_STARTED",
+  "providerCalls": 0,
+  "mockProviderCalls": 0,
+  "installOrDownload": 0,
+  "userAppRestart": 0,
+  "externalNetworkEgress": "No successful navigation or egress observed; exact policy denial is preserved",
+  "healthPage": {
+    "path": "docs/reviews/probes/r101_bridge_recheck_20261016/health.html",
+    "sha256": "F85EE30F05131E975185E3597E3AFBF4B0305E77FEB38E161D4C1515345E9EC3"
+  },
+  "calls": [
+    {
+      "code": "let tab = await cua.createBrowserTab(\"iab\", \"about:blank\", { visible: false });",
+      "tool": "mcp__cua_repl.js",
+      "result": "Browser tab: 1, Title: \"about:blank\", URL: \"about:blank\". 0 AXWebArea about:blank. The focused UI element is 0 AXWebArea about:blank."
+    },
+    {
+      "code": "await tab.goto(\"file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/docs/reviews/probes/r101_bridge_recheck_20261016/health.html\"); await tab.getAXState();",
+      "rawError": "Browser Use rejected this action due to browser security policy. Reason: The browser URL policy blocks this action. Browser use could not acquire authority to trigger network egress. The URL policy gate did not grant access. The requested URL protocol is not allowed. Allowed protocols: \"http:\", \"https:\". The agent must not attempt to achieve the same outcome via workaround, indirect execution, raw CDP or browser commands, alternate browser surfaces, or policy circumvention. Proceed only with a materially safer alternative that does not require this blocked browser action; if none exists, stop and request user input.",
+      "tool": "mcp__cua_repl.js",
+      "result": "BLOCKED_BROWSER_URL_POLICY",
+      "getAXStateExecuted": false
+    },
+    {
+      "code": "await tab.close();",
+      "tool": "mcp__cua_repl.js",
+      "result": "Invocation completed without returned text or error; no post-close inventory."
+    }
+  ],
+  "effects": {
+    "browserTabsCreated": 1,
+    "probeTabCloseCalls": 1,
+    "successfulProductNavigation": 0,
+    "buttonClicks": 0,
+    "screenshotsCaptured": 0,
+    "goTests": 0,
+    "nodeOrFrontendTests": 0,
+    "backendStarts": 0,
+    "viteStarts": 0,
+    "fixtureStarts": 0,
+    "sourceOrDependencyChanges": 0,
+    "otherUserTabsTouched": 0
+  },
+  "matrix": {
+    "B01": "NOT_RUN",
+    "B02": "NOT_RUN",
+    "B03": "NOT_RUN",
+    "B04": "NOT_RUN",
+    "B05": "NOT_RUN",
+    "B06": "NOT_RUN",
+    "B07": "NOT_RUN",
+    "B08": "NOT_RUN",
+    "B09": "NOT_RUN",
+    "B10": "NOT_RUN"
+  },
+  "probeToolTranscript": "docs/reviews/probes/r101_bridge_recheck_20261016/bridge_tool_transcript.txt",
+  "sha256Manifest": "docs/reviews/probes/r101_bridge_recheck_20261016/SHA256SUMS.txt"
+}

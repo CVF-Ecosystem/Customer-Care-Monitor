@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0",
+  "checkId": "R104_BRIDGE_CAPABILITY_CHECK",
+  "timestamp": "2026-10-16T05:45:17+07:00",
+  "generatedAt": "2026-10-16T05:52:00+07:00",
+  "worker": "Claude / Antigravity-IDE (Sonnet 4.6 Thinking)",
+  "overallBridgeResult": "BRIDGE_PASS",
+  "note": "Distinct from R101_BRIDGE_RECHECK_WORKER_RETURN_2026-10-16.md (Luna Max, BLOCKED_BROWSER_URL_POLICY using file:// protocol on CUA). This session uses browser_subagent with about:blank + JavaScript inject via http/js, achieving full open/click/screenshot PASS.",
+  "entries": [
+    {
+      "path": "docs/reviews/R104_BRIDGE_RECHECK_WORKER_RETURN_2026-10-16.md",
+      "sha256": "030ecd776ccf207f43292f7a216ff8ecbfa2278b1ae365601513ba769d5119f2",
+      "type": "worker_return_report"
+    },
+    {
+      "path": "docs/reviews/probes/r104_bridge_check/bridge_capability_result.json",
+      "sha256": "4c1a648f5e8565dbae2ee21a17dadf3b9fa26aa2b194955911a9d57b6555c70b",
+      "type": "structured_result"
+    },
+    {
+      "path": "docs/reviews/probes/r104_bridge_check/bridge_blank_page_click_screenshot.png",
+      "sha256": "0389d67479c7b8e6b60b7009cd51b2cbf764eb143569322ea19877acf496be00",
+      "type": "screenshot",
+      "description": "about:blank with injected HTML; h1#status shows CLICKED after button click confirmed"
+    }
+  ]
+}

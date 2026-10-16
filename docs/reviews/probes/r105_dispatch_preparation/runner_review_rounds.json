@@ -1,0 +1,66 @@
+{
+  "scope": "Source/design candidate review only; no effective runtime authority or tranche activation",
+  "date": "2026-10-16",
+  "reviewer": "Codex /root",
+  "sourceCandidateAuthor": "/root/r105_runner_candidate (Sol Medium)",
+  "rounds": [
+    {
+      "round": 0,
+      "disposition": "CHANGES_REQUIRED_INCOMPLETE_RUNNER",
+      "sourceSha256": "6dc951deee22bcb253bda3231e068d17b94623e4c0fc7fba7a4cbe82ac967099",
+      "sourceHashAttribution": "Worker return; Root inspected source content, did not independently rehash this historical snapshot",
+      "findings": [
+        "Unconditional runtime_hold leaves lifecycle implementation absent even for future effective authority",
+        "No supervisor deadline/owned cleanup implementation",
+        "Historical Git and fixture validators not connected to execution",
+        "Ledger reservation missing fsync",
+        "Config placeholders require safe JSON renderer and pinned minimal environment"
+      ],
+      "repairOwner": "/root/r105_runner_candidate",
+      "repairScope": "Same four source-candidate files; offline tests only",
+      "runtimeEffects": 0,
+      "repairRound": 1,
+      "status": "SOURCE_REPAIRED_ROUND1_RETURNED"
+    },
+    {
+      "round": 1,
+      "sourceSha256": "6bf35415bfa564da19abde61dcd1a187d40ced710d94c2398875c1df86409bde",
+      "sourceHashAttribution": "Root independently hashed current source in candidate_offline_verification.json",
+      "disposition": "CHANGES_REQUIRED_EVIDENCE_FAILURE_PATHS",
+      "offlineChecks": {
+        "unitTests": 7,
+        "unitResult": "PASS",
+        "nodeTemplateSyntax": "PASS",
+        "actualFrontendInputs": 137,
+        "actualHistoricalGitRows": 17,
+        "historicalBinaryHash": "PASS"
+      },
+      "findings": [
+        "TimeoutExpired bypasses command timeout/exit receipt; Popen launch failure has no exact attempted argv record",
+        "Log reader exceptions may end thread without supervisor cleanup failure; UTF8 cap retained byte count must equal actual output"
+      ],
+      "repairOwner": "/root/r105_runner_candidate",
+      "repairRound": 2,
+      "status": "SOURCE_REPAIRED_ROUND2_RETURNED",
+      "runtimeEffects": 0
+    },
+    {
+      "round": 2,
+      "sourceSha256": "b83dfacc3b4849c6d54f5b824d5360732d706ff1cd2fe26d7c9cdc7e7f93415d",
+      "sourceHashAttribution": "Worker-reported round2; Root inspected launch and supervisor source",
+      "disposition": "CHANGES_REQUIRED_NEW_INDEPENDENT_ROOT_CAUSE",
+      "finding": "Successful Popen followed by failed launch-result receipt write loses the new child handle before supervisor assignment; finally cannot stop that owned process",
+      "newRootCause": "LIVE_HANDLE_LOST_AFTER_SPAWN_ON_RECEIPT_FAILURE",
+      "distinctFromPriorFindings": "Timeout receipt absent and reader-thread failure addressed command/stream evidence; this finding is post-spawn resource ownership loss inside launch before caller receives a handle",
+      "repairRound": 3,
+      "repairOwner": "/root/r105_runner_candidate",
+      "repairLimit": "One local launch-failure cleanup guard plus injected test; no other refactor/effect",
+      "costReview": "AGENTS third-round stop applies without independent new root cause. Root identified and documented this new cause before allowing the narrow source-only repair; no repetitive same-cause expansion. Further findings require consolidated cost review.",
+      "runtimeEffects": 0,
+      "status": "SOURCE_REPAIRED_ROUND3_RETURNED"
+    }
+  ],
+  "finalDisposition": "SOURCE_REVIEW_PASS_RUNTIME_NOT_RUN",
+  "finalSourceSha256": "f27c5bfc729c67bf717473a7dbc894352446c9f74813be08243350e46a4d478a",
+  "independentReview": "docs/reviews/R105_RUNNER_INDEPENDENT_SOURCE_REVIEW_2026-10-16.md"
+}

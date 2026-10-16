@@ -1,0 +1,691 @@
+{
+  "sourceHead": "64238c411b2fd9e966ef90ec73a243c8b355305e",
+  "scope": "All tracked frontend files present, excluding .env filenames; captured-byte hashes, no dependency install/env read",
+  "files": [
+    {
+      "path": "frontend/.gitignore",
+      "bytes": 277,
+      "sha256": "d50ab07e11fa4bf3b1c7c3312e1d7baeab56cca756832ccf40476823ad2a38b7"
+    },
+    {
+      "path": "frontend/README.md",
+      "bytes": 447,
+      "sha256": "e9cb3c554246c31688049b11843963e80698c83c851444da0ba9943383af572a"
+    },
+    {
+      "path": "frontend/index.html",
+      "bytes": 382,
+      "sha256": "fe3b9302935f33b5028d5c227d60e2cfff5cfd4f5cd9e3bc41f6bdcd73488537"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "bytes": 135511,
+      "sha256": "da41e1de5d5b853295a303092aab9433aeea8168fda2cf0420dd94e9f579fb00"
+    },
+    {
+      "path": "frontend/package.json",
+      "bytes": 913,
+      "sha256": "d16bea0b83ad7eb871576061f7ea91534a2dd2fdc7eef26eb20ec908e4fca24d"
+    },
+    {
+      "path": "frontend/public/favicon.png",
+      "bytes": 4627,
+      "sha256": "bdd8b863fac5ab9772e079df6eff9654e792c32675aff389d98a3a6b12b4b67c"
+    },
+    {
+      "path": "frontend/public/icons.svg",
+      "bytes": 5055,
+      "sha256": "7ca2d67c9c3aebf50cdc8709ee8aacf8cdb8cc7ea6325ea94939caef5da1c53d"
+    },
+    {
+      "path": "frontend/src/App.vue",
+      "bytes": 2511,
+      "sha256": "aac4d71dc484c59a685038f2249d2ddb8ce10c4b29269116b39db356f4b0369d"
+    },
+    {
+      "path": "frontend/src/__tests__/adapter-usage-presence.spec.ts",
+      "bytes": 28782,
+      "sha256": "29a5ac9d2b0a627d9489685c869019d8c72a88b57d1b0f79df378178943d2b17"
+    },
+    {
+      "path": "frontend/src/__tests__/business-day.spec.ts",
+      "bytes": 7075,
+      "sha256": "56debf47c77288ff77fb9802c2d0de21af851722122e3a04f0628704d39abdda"
+    },
+    {
+      "path": "frontend/src/__tests__/channels-sync-status.spec.ts",
+      "bytes": 15249,
+      "sha256": "de0acb57f325a5db9c8c20e2f0a6c3a30d1155cafa3f183fefd0735a69ab4473"
+    },
+    {
+      "path": "frontend/src/__tests__/conversations-lifetime.spec.ts",
+      "bytes": 11078,
+      "sha256": "9ac40c5840f5ca79a3953cb78caa1e8e7c9a5d3138bee6af0d6d22a639a4d3ba"
+    },
+    {
+      "path": "frontend/src/__tests__/cost-logs-business-day.spec.ts",
+      "bytes": 4475,
+      "sha256": "0002850f0076faabab3c433089eef12866b00620fff54e4ff8fa4950f525a833"
+    },
+    {
+      "path": "frontend/src/__tests__/dashboard-business-day.spec.ts",
+      "bytes": 6345,
+      "sha256": "72e924d9a29663e02d2a3b4afe39de8a2070c2c0fcfae4d9230d1ee1f28f4ca8"
+    },
+    {
+      "path": "frontend/src/__tests__/dashboard-permissions.spec.ts",
+      "bytes": 8062,
+      "sha256": "0efa504dc84935a97b5fe4692729971f2b2d9a05704b2d7d249e95ca4eaf1d25"
+    },
+    {
+      "path": "frontend/src/__tests__/dashboard-qc-card.spec.ts",
+      "bytes": 5787,
+      "sha256": "6797bd51673e065f2d11e315198869e018a2a58dbcd8c7ace25acbd541e82e29"
+    },
+    {
+      "path": "frontend/src/__tests__/dashboard-service-status.spec.ts",
+      "bytes": 10810,
+      "sha256": "e9078d155c638cbf0f028120e7eb885beec1f179a7557168d49de25db8aa1ec5"
+    },
+    {
+      "path": "frontend/src/__tests__/fixtures/conversation-lifetime/harness.ts",
+      "bytes": 13272,
+      "sha256": "1b5261c28b6654866615fbd0d387889b063205758a7ce602b4d880adc8c494f6"
+    },
+    {
+      "path": "frontend/src/__tests__/format.spec.ts",
+      "bytes": 2333,
+      "sha256": "0d7393ee218ca2e28163c986555497d83fd87929efc3a4053506fd2f4af26d49"
+    },
+    {
+      "path": "frontend/src/__tests__/i18n.spec.ts",
+      "bytes": 2693,
+      "sha256": "d44bb0da73c5b848ef377841c8a88c68816a30f048e028b32eb0393fb9ae6d2c"
+    },
+    {
+      "path": "frontend/src/__tests__/intervention-api.test.ts",
+      "bytes": 2326,
+      "sha256": "06851bd2e20080165c69cbb224872b86c7d559dcc627863e9a4268cffaf464d8"
+    },
+    {
+      "path": "frontend/src/__tests__/intervention-ui.test.ts",
+      "bytes": 6205,
+      "sha256": "d1ed5788e74d1c2949006d37d55c96b16dfdef35393fc4a3e52a5edeaf81d6ba"
+    },
+    {
+      "path": "frontend/src/__tests__/job-detail-logic.spec.ts",
+      "bytes": 7450,
+      "sha256": "49de8bb8cb3a490e2eefd9dc06a3606a6cdc03c7cae25a8706f579cb013fd126"
+    },
+    {
+      "path": "frontend/src/__tests__/job-detail-view.spec.ts",
+      "bytes": 9406,
+      "sha256": "74b6a8a6d9555c84ae0fa8fb2a23af32bbaf81ed6447053e4e149919c6cf9f56"
+    },
+    {
+      "path": "frontend/src/__tests__/job-run-cancel.spec.ts",
+      "bytes": 12403,
+      "sha256": "b42e3f22921adab8afd897315b0e3091c37c6e999f3e8f4b9643ad55bad70afd"
+    },
+    {
+      "path": "frontend/src/__tests__/job-run-dialog-modes.spec.ts",
+      "bytes": 11140,
+      "sha256": "9f053559f20d19daae0239f9814a44feed3ff2da7c13d59e63c146d62f4dbc9c"
+    },
+    {
+      "path": "frontend/src/__tests__/jobs-screens.spec.ts",
+      "bytes": 11427,
+      "sha256": "6557708d15ff1440a77c92309574ddc94d20d52de3ff5dde2df08553aaa7f818"
+    },
+    {
+      "path": "frontend/src/__tests__/layout-avatars.spec.ts",
+      "bytes": 1275,
+      "sha256": "c96362a90dd0b0cfc2fd75f0b23c04b779a1d0bc47aa7afcd3f7137740b295c8"
+    },
+    {
+      "path": "frontend/src/__tests__/layout-permissions.spec.ts",
+      "bytes": 7606,
+      "sha256": "fbed87ac7cf32bdbd4e3b66a77e1ea53c437580949e0b7f08a49c95f4c30d789"
+    },
+    {
+      "path": "frontend/src/__tests__/logs-mcp.spec.ts",
+      "bytes": 10790,
+      "sha256": "37bb153660b28c6483bed9f712b741fafe9ee0356cce51ac2bedacfa77d37058"
+    },
+    {
+      "path": "frontend/src/__tests__/messages-business-day.spec.ts",
+      "bytes": 5766,
+      "sha256": "0ce766f7105c33362706aa88ead3c0ef7c0e69e36307eba5ab2ca3be30f3143e"
+    },
+    {
+      "path": "frontend/src/__tests__/messages-lifetime-resources.spec.ts",
+      "bytes": 7347,
+      "sha256": "4c28e5d3dcd6a0f7300c42996d527d22205943c15db59c8d2283f1eb89f07d82"
+    },
+    {
+      "path": "frontend/src/__tests__/messages-lifetime-startup.spec.ts",
+      "bytes": 21580,
+      "sha256": "3095cea20300c062c8391d819b3e9db18e37233f4ac2d0598c0e4f683da7f5ed"
+    },
+    {
+      "path": "frontend/src/__tests__/messages-lifetime.spec.ts",
+      "bytes": 19701,
+      "sha256": "5619f7189b4fde25e042e4ace7dbd67629ae6d999c9968fd65ea8a407ddd0d1c"
+    },
+    {
+      "path": "frontend/src/__tests__/messages-screen.spec.ts",
+      "bytes": 11607,
+      "sha256": "236de4524d62e5f062af01bcf8a10ad5f35bb42b3938e2b4fe48747f943b8e64"
+    },
+    {
+      "path": "frontend/src/__tests__/notification-delivery-status.spec.ts",
+      "bytes": 2905,
+      "sha256": "902c40de5055df39de78dac0f1f90563aed0dab5d9af2c772ba62e508d148995"
+    },
+    {
+      "path": "frontend/src/__tests__/notification-route-permissions.spec.ts",
+      "bytes": 2747,
+      "sha256": "714d8d7267984ef48891a2af21fcfe68ea8aaa157d8a005360e228d0a715e4d1"
+    },
+    {
+      "path": "frontend/src/__tests__/results-business-day.spec.ts",
+      "bytes": 7207,
+      "sha256": "b217dd479f97d8a088de934394e099a847e73ce7d42545ac702122a9f3cb57e1"
+    },
+    {
+      "path": "frontend/src/__tests__/results-screen.spec.ts",
+      "bytes": 13895,
+      "sha256": "70bdec42dccd6ca362b0f19f9a7f968d9772cdfd2174b9201e428bd82be1362c"
+    },
+    {
+      "path": "frontend/src/__tests__/results-source-note.spec.ts",
+      "bytes": 4364,
+      "sha256": "e57354bac40cc28c0ef4a54bc27231d66cdccb8ed217f0b13e0180b774c0b872"
+    },
+    {
+      "path": "frontend/src/__tests__/review.spec.ts",
+      "bytes": 3390,
+      "sha256": "42b0ad8c1c87a4fbab2f7b8fb44d9988c544728883ae3bc28dd3e8e25e828c9a"
+    },
+    {
+      "path": "frontend/src/__tests__/run-observation-adapter-compat.spec.ts",
+      "bytes": 10313,
+      "sha256": "5b6e176788dd49f4eda1d53c2959fb383b9d7c7b6cc5b35ed7ae045553991ac4"
+    },
+    {
+      "path": "frontend/src/__tests__/run-observation-job-detail.spec.ts",
+      "bytes": 10224,
+      "sha256": "d0a30dd5fb3eca6e0d1ecf35998401f460ec885ef696c51feb9d50fa36a2979a"
+    },
+    {
+      "path": "frontend/src/__tests__/run-observation-panel.spec.ts",
+      "bytes": 5862,
+      "sha256": "8a3c709614cf60ee207ab045b66a4f043f12ae59cd97062f39ec1bcdd57f5a0f"
+    },
+    {
+      "path": "frontend/src/__tests__/run-observation.spec.ts",
+      "bytes": 17642,
+      "sha256": "d10bc57286af06d4dd360905e1e69e5b8b9aa9f8f3782e2df02674e73a0c4b2a"
+    },
+    {
+      "path": "frontend/src/__tests__/settings-users-auth.spec.ts",
+      "bytes": 9413,
+      "sha256": "c3d9d45f178137a0b65a431b1c2b4457993af47e5e5aac2fbf9427e53e9fbd71"
+    },
+    {
+      "path": "frontend/src/__tests__/setup-stale-token.spec.ts",
+      "bytes": 8482,
+      "sha256": "68b52043a4aaa14e036c7563d46f3c3914009682b23b07aa215b5a6305d2e740"
+    },
+    {
+      "path": "frontend/src/__tests__/setup-status-unavailable.spec.ts",
+      "bytes": 22510,
+      "sha256": "3f398f749e968fb5d60ed746a3dbd42e6f8b62a960e3d100b6af46f492537d2d"
+    },
+    {
+      "path": "frontend/src/__tests__/theme.spec.ts",
+      "bytes": 1310,
+      "sha256": "8781f64cbfd06ae938f7a3456468ead74dd3649c9d92346366eee562a591f606"
+    },
+    {
+      "path": "frontend/src/__tests__/trend.spec.ts",
+      "bytes": 3422,
+      "sha256": "245cfc8ac2a9b6213328cc86bffcf00baf616fe72f87bb507347571d7d9d521d"
+    },
+    {
+      "path": "frontend/src/__tests__/ui-components.spec.ts",
+      "bytes": 8998,
+      "sha256": "32674c27de242ef09eef580302a19ac1edb9151a757b62d1698179a33c2644c0"
+    },
+    {
+      "path": "frontend/src/api/index.ts",
+      "bytes": 2304,
+      "sha256": "29b9654db21e0737f7f88a5fa69b024ac601071f96fc2b958eb5270c07cbf39d"
+    },
+    {
+      "path": "frontend/src/api/intervention.ts",
+      "bytes": 5507,
+      "sha256": "92061d56a4d3d98b7336b026c0c11e7f667e01961a22570f398f40728f8d4ada"
+    },
+    {
+      "path": "frontend/src/assets/hero.png",
+      "bytes": 44919,
+      "sha256": "72a860570eddf1dd9988f26c7106c67be286bc9f2fd3303c465ce87edb1ae6cd"
+    },
+    {
+      "path": "frontend/src/assets/vite.svg",
+      "bytes": 8710,
+      "sha256": "2f1f6c6f90a0ef7422cbb4cfafcd8ad329c507a18afdc34cc21fa72179b9c54a"
+    },
+    {
+      "path": "frontend/src/assets/vue.svg",
+      "bytes": 496,
+      "sha256": "5532db34f1c52841881bab8aeca6c3e8d092bd21a689a65f4d8f8cf8041eef9d"
+    },
+    {
+      "path": "frontend/src/components/CronPicker.vue",
+      "bytes": 4610,
+      "sha256": "07bf5b95fccc6a147fcccfca7d72d6ec7fd23ae1ceb6991f9e96b02b67a156a6"
+    },
+    {
+      "path": "frontend/src/components/JobWizard/StepAnalysisSchedule.vue",
+      "bytes": 1165,
+      "sha256": "27270673dbc4181ea645ab51dc35f017ad9c4b4baed0d93e1e7d3df27802c665"
+    },
+    {
+      "path": "frontend/src/components/JobWizard/StepConfirm.vue",
+      "bytes": 3710,
+      "sha256": "4f561e2a8dca9db0684a6145a8505ee6a91a471e0c001cd74c7fde602f227066"
+    },
+    {
+      "path": "frontend/src/components/JobWizard/StepInput.vue",
+      "bytes": 2999,
+      "sha256": "536270ca1f6169055a645432dba075f6646e5556b0ba2d1a100e84ada104a603"
+    },
+    {
+      "path": "frontend/src/components/JobWizard/StepOutput.vue",
+      "bytes": 11442,
+      "sha256": "552bf7e01d3bb1859288085ae36d16f22f7b3bd57f30c8bdb3164f2d94d1f322"
+    },
+    {
+      "path": "frontend/src/components/JobWizard/StepOutputSchedule.vue",
+      "bytes": 2233,
+      "sha256": "e3e90c3ab3aed0b2fc79db344a7a5339c8b8ea7c3172e781bf4b3e91a5da0b45"
+    },
+    {
+      "path": "frontend/src/components/JobWizard/StepRules.vue",
+      "bytes": 5309,
+      "sha256": "e3f11049fffefcad88a1ed550e28e4f40c2a6eeffcee49f1dd01809bbc793dfc"
+    },
+    {
+      "path": "frontend/src/components/JobWizard/StepType.vue",
+      "bytes": 2618,
+      "sha256": "30c1e8da83ccd01793877d0fe304b0cdd87191aa6acaedeb214e74e195e99748"
+    },
+    {
+      "path": "frontend/src/components/LanguageSwitcher.vue",
+      "bytes": 1119,
+      "sha256": "176da69493c857ccebc0b4ac9c3db577f1db966ecceb1e5326270444d13e0f34"
+    },
+    {
+      "path": "frontend/src/components/OnboardingWizard.vue",
+      "bytes": 2929,
+      "sha256": "4a89c447fbfce9383f4f64c838eefb0d3e389aa56bef139b9bc011023b830a5e"
+    },
+    {
+      "path": "frontend/src/components/StatusBadge.vue",
+      "bytes": 1440,
+      "sha256": "3c0243665af91e3cbfbe8ebffa47f776eb228ed2d79aabd7c0ace862ba324e46"
+    },
+    {
+      "path": "frontend/src/components/ui/ActionMenu.vue",
+      "bytes": 1673,
+      "sha256": "5e14b62062df5957c18bc9764a219f4213e8ca3fb6beb8135b3bffcb977ba6e8"
+    },
+    {
+      "path": "frontend/src/components/ui/AiGeneratedLabel.vue",
+      "bytes": 545,
+      "sha256": "d035edfff173d23e3f4793b0647bb030c00c61aa96155805605b9458ee4fbfa0"
+    },
+    {
+      "path": "frontend/src/components/ui/AppDialog.vue",
+      "bytes": 2616,
+      "sha256": "d1dbb090ab3b8ef814741df9d2e797691cb3045d6ff0f0ce571fbda15d1657a8"
+    },
+    {
+      "path": "frontend/src/components/ui/ConfidenceText.vue",
+      "bytes": 1281,
+      "sha256": "01a94be0e60071e6c83425630e6f8a76621388a2804eb8422951b473fc67825e"
+    },
+    {
+      "path": "frontend/src/components/ui/ConfirmDialog.vue",
+      "bytes": 2139,
+      "sha256": "1c35f6f3f7a71eff37d9e005bcdd047e992f7e9f2bf251862c569655a8feb75e"
+    },
+    {
+      "path": "frontend/src/components/ui/FilterBar.vue",
+      "bytes": 531,
+      "sha256": "c71f99acd6bd28f0ec87a2d9acdd600d40f7ec2ee31b98be1c63d804888ed5c1"
+    },
+    {
+      "path": "frontend/src/components/ui/MetricCard.vue",
+      "bytes": 2776,
+      "sha256": "ddb37b17baa4f1906d2f8beb5681e43e32d246825d3944e13aa4d7206087be7d"
+    },
+    {
+      "path": "frontend/src/components/ui/ResultCard.vue",
+      "bytes": 2821,
+      "sha256": "0cae776f119b991bb4c81f4c9c81ee744794f46b0513edbff6829a2b74cf736a"
+    },
+    {
+      "path": "frontend/src/components/ui/RunObservationPanel.vue",
+      "bytes": 3853,
+      "sha256": "10a834a79c22ddc666ab33d9f71bc03539da8e962da3635bb1ce320c06f2029c"
+    },
+    {
+      "path": "frontend/src/components/ui/SourceStatusChip.vue",
+      "bytes": 2035,
+      "sha256": "f4bf3a5e8e60580a98c2925787c5ad48c287fab3a60af5489117639bb140936b"
+    },
+    {
+      "path": "frontend/src/components/ui/SourceStatusPanel.vue",
+      "bytes": 2965,
+      "sha256": "4e49338bcf743adc6c34d15f96d58dd00c2de727c18d76df24a0cbb0777db334"
+    },
+    {
+      "path": "frontend/src/components/ui/SyncStatusChip.vue",
+      "bytes": 1803,
+      "sha256": "8cf62e6522294cec2e0f621e9316bbd023119e39ebf78f3a006d132204b29228"
+    },
+    {
+      "path": "frontend/src/components/ui/VerdictChip.vue",
+      "bytes": 1905,
+      "sha256": "e9980f3cdf412bf8045369e56c26183aad892edddc8e21b5e35ef6e6b5c38a44"
+    },
+    {
+      "path": "frontend/src/components/ui/types.ts",
+      "bytes": 240,
+      "sha256": "7e9c88dda07571e01b5bf8fcce5c15a003848d46add0aa7dfc2bd7a05c02ad15"
+    },
+    {
+      "path": "frontend/src/composables/channelTypes.ts",
+      "bytes": 839,
+      "sha256": "8669393b9b0628e345a7e72d9b52d5ccea5e48d88e4083998a5f57d944f6cab7"
+    },
+    {
+      "path": "frontend/src/composables/useChatTranscript.ts",
+      "bytes": 3643,
+      "sha256": "2c67e3d260f5e904642521f8fb32e234b340ce76ee1b34cbc546be5c42e3ac31"
+    },
+    {
+      "path": "frontend/src/i18n/en.ts",
+      "bytes": 45462,
+      "sha256": "1a12bf64a05c2213d254cef6939357e814128795b3e03651fdf92b1a0ba15c71"
+    },
+    {
+      "path": "frontend/src/i18n/index.ts",
+      "bytes": 278,
+      "sha256": "4a816a95e6d1e88312a8770a576aa5d7e328a3b92d75bd3b12f168ffc086a2f1"
+    },
+    {
+      "path": "frontend/src/i18n/vi.ts",
+      "bytes": 52777,
+      "sha256": "c8f0b486879e168f59a83b0b47a2c863a622cc01d8a97b0ef79c22687a887343"
+    },
+    {
+      "path": "frontend/src/layouts/AuthLayout.vue",
+      "bytes": 690,
+      "sha256": "05be3c1a4db61ada92f2f50d45090a46c9b4ea77c8a40b2a512a4037020f3966"
+    },
+    {
+      "path": "frontend/src/layouts/DefaultLayout.vue",
+      "bytes": 13915,
+      "sha256": "8af479143c96aead13d86cf3b7c99b969bd4c1a92303c78a402f3d5f245839be"
+    },
+    {
+      "path": "frontend/src/main.ts",
+      "bytes": 341,
+      "sha256": "b41adec24e8de76fa87941db32f37b0d8ce8350abc50e6508eed4fb7b1f56133"
+    },
+    {
+      "path": "frontend/src/plugins/vuetify.ts",
+      "bytes": 1304,
+      "sha256": "d28657d93a521816588587d39c98262495a595df1ff9e03b7f43489d463e90b5"
+    },
+    {
+      "path": "frontend/src/router/index.ts",
+      "bytes": 8655,
+      "sha256": "1640e1b52071032a599bc5db03f96e616f2af7d3532eafd1645707bc851fadcc"
+    },
+    {
+      "path": "frontend/src/router/setupStatus.ts",
+      "bytes": 2966,
+      "sha256": "3268ed232606c5ed2d60387565aea1c0377fa644a1e38265640c8802746c34e0"
+    },
+    {
+      "path": "frontend/src/shims-vuetify.d.ts",
+      "bytes": 143,
+      "sha256": "a0d49dfc4444412e38a57558a0b92832e4b710c6e7ae74918ca7bc6f3a0950ea"
+    },
+    {
+      "path": "frontend/src/stores/auth.ts",
+      "bytes": 3823,
+      "sha256": "df790958dcfd6945fcd8abd7124ccecfb23baed089946d064cf6459bc226fdce"
+    },
+    {
+      "path": "frontend/src/stores/channels.ts",
+      "bytes": 2863,
+      "sha256": "e4335f01d02545c6cc8b710939c05b2be1db033bdd01e44c10145be95acc1df4"
+    },
+    {
+      "path": "frontend/src/stores/conversations.ts",
+      "bytes": 3687,
+      "sha256": "aa967ccbacec8d4355b1077fc3c391de273d55eec68803f193424e1e1e9f8855"
+    },
+    {
+      "path": "frontend/src/stores/jobs.ts",
+      "bytes": 6044,
+      "sha256": "75cd6cab078600313b8f7ead8b356eaff0a13809960e981d45b12178ce6b96cd"
+    },
+    {
+      "path": "frontend/src/stores/tenants.ts",
+      "bytes": 635,
+      "sha256": "b8fa14f1d572c1e31a55b998424b2b991ccb4002e497fa8d58a146c48c3f3180"
+    },
+    {
+      "path": "frontend/src/stores/users.ts",
+      "bytes": 1231,
+      "sha256": "881b039104e6785cfab951b693bbe232299b6d7b950589a223ac483a9536b63f"
+    },
+    {
+      "path": "frontend/src/styles/foundation.css",
+      "bytes": 681,
+      "sha256": "972058e65abc540cacad392f831b851790c56385bc06ef01a407055890267a3c"
+    },
+    {
+      "path": "frontend/src/styles/tokens.ts",
+      "bytes": 4317,
+      "sha256": "823512bc51d21747def9f9dd8e09107d121da10b2aae6e8062bc41ae2a74d4a9"
+    },
+    {
+      "path": "frontend/src/utils/businessDay.ts",
+      "bytes": 3421,
+      "sha256": "067f73af1e3a05a37b2a1355ad7dcb769920f951e6abab3a28f4336e5f0664da"
+    },
+    {
+      "path": "frontend/src/utils/format.ts",
+      "bytes": 3457,
+      "sha256": "33eba12b9b686224cbf80a05194074a85bfbf6713c999c9bfe11ee6405a743ae"
+    },
+    {
+      "path": "frontend/src/utils/review.ts",
+      "bytes": 3352,
+      "sha256": "79309a9244192b91399088a851182ad46b942e6c4ebcc8c294bb72ddd11c2c03"
+    },
+    {
+      "path": "frontend/src/utils/trend.ts",
+      "bytes": 1853,
+      "sha256": "acb619dc21c6d5f744d7f61bd2c53ca0a00484aad4f44e15a26a5a371e622eb1"
+    },
+    {
+      "path": "frontend/src/views/ActivityLogs.vue",
+      "bytes": 8659,
+      "sha256": "714a2dc98f19c061100190aaf5528840b35b278c7c2c50877926872592023e4c"
+    },
+    {
+      "path": "frontend/src/views/Channels.vue",
+      "bytes": 19024,
+      "sha256": "6bafb81e9864a94c247a8318e527ec03f20d218003fa58711607c855ebd903e6"
+    },
+    {
+      "path": "frontend/src/views/Channels/ChannelDetail.vue",
+      "bytes": 15341,
+      "sha256": "e50b38c2c46522f9cab85cc44126745439c866c56746c8ab46aea71d8c699432"
+    },
+    {
+      "path": "frontend/src/views/CostLogs.vue",
+      "bytes": 11132,
+      "sha256": "dda8fc73e9ce309e4f1615522f2740dcfec7a1a4b1ce971afb4e38f86644b3fe"
+    },
+    {
+      "path": "frontend/src/views/Dashboard.vue",
+      "bytes": 24446,
+      "sha256": "553f6dea0addef960e0948580ac3e83a11bc1b1bd2b27aa7399b7561b0430f34"
+    },
+    {
+      "path": "frontend/src/views/InterventionCases.vue",
+      "bytes": 15485,
+      "sha256": "df388273c4fe84f05c12ab658f38c70bd79ab93b119c76af15e191f1ef5f8c55"
+    },
+    {
+      "path": "frontend/src/views/Jobs/JobCreate.vue",
+      "bytes": 8796,
+      "sha256": "2b28a82ed7ce2e2b24fe104e6bc2004fbb1ab7f15fb9b293e5edde74d1dfea33"
+    },
+    {
+      "path": "frontend/src/views/Jobs/JobDetail.vue",
+      "bytes": 59599,
+      "sha256": "21a62c9b601fe54983fe955ebdd691b35bdd421c86b4e9a33d3a1e9752f68f50"
+    },
+    {
+      "path": "frontend/src/views/Jobs/JobEdit.vue",
+      "bytes": 7783,
+      "sha256": "fe67f2b37837cdad9001b5967fa5d602d7a5dfa87fd8612ba3644d5282c71f4a"
+    },
+    {
+      "path": "frontend/src/views/Jobs/JobList.vue",
+      "bytes": 12200,
+      "sha256": "a4c97d6ed77f5290321c5492dc3aa4402a9a252f07d82821b96f8a58aa28cf92"
+    },
+    {
+      "path": "frontend/src/views/Jobs/job-detail/adapter-usage-presence.ts",
+      "bytes": 5670,
+      "sha256": "b493be65851a8435ea6eb4ccd437c26d02bc28e00054998ff00286aad1f21695"
+    },
+    {
+      "path": "frontend/src/views/Jobs/job-detail/logic.ts",
+      "bytes": 8414,
+      "sha256": "91048fb94cbdc233312ad2bb91a159d9ba82313988bae60efbb09bdcf5640608"
+    },
+    {
+      "path": "frontend/src/views/Jobs/job-detail/run-observation.ts",
+      "bytes": 21242,
+      "sha256": "96170652142c16daf0b29a102f0a86ee59984732b8db52d603ebbb1ebb741cab"
+    },
+    {
+      "path": "frontend/src/views/Jobs/job-list/schedule.ts",
+      "bytes": 2093,
+      "sha256": "a5eccfe9fac387c41bebefc4ffdadfa4639acc0395438a4438456517201ec591"
+    },
+    {
+      "path": "frontend/src/views/Login.vue",
+      "bytes": 2852,
+      "sha256": "53b92e8078fb7953ec9a9764398de57cbf9f4c8ced51c098365e52e8cc0048c3"
+    },
+    {
+      "path": "frontend/src/views/MCPConnections.vue",
+      "bytes": 13846,
+      "sha256": "fe52ca0b65b97df84d8b93961905c021f1bdb44c884e190f43a7329599c3176c"
+    },
+    {
+      "path": "frontend/src/views/Messages.vue",
+      "bytes": 49749,
+      "sha256": "0ed5d3c100c26fd1db46e46e88db5d094743c3cc47c160344597a631eefb0d45"
+    },
+    {
+      "path": "frontend/src/views/NotFound.vue",
+      "bytes": 570,
+      "sha256": "c7ad07ab25bc05bdb3d4e15ce7ee5653c68f17feee81434c33f74b8a64074410"
+    },
+    {
+      "path": "frontend/src/views/NotificationLogs.vue",
+      "bytes": 10450,
+      "sha256": "c285b585fa6193fe646cc55dd9cfd8d72ac428ee1710520d76ff18862af9a317"
+    },
+    {
+      "path": "frontend/src/views/Results.vue",
+      "bytes": 50520,
+      "sha256": "68640c9c0e57299213bf6910a034a8c588a15588c3c02670e1153a603b3ab45d"
+    },
+    {
+      "path": "frontend/src/views/Settings.vue",
+      "bytes": 30019,
+      "sha256": "cf568e67e41a725ee0f13fc2a0bd9ac6559d5933e824cb57b715864bf46f0cba"
+    },
+    {
+      "path": "frontend/src/views/Setup.vue",
+      "bytes": 3986,
+      "sha256": "bb8090ef344357ba0ff88b96e9459699f7bcdfd25fbdc1c917eb0d817143a594"
+    },
+    {
+      "path": "frontend/src/views/SetupStatusUnavailable.vue",
+      "bytes": 1263,
+      "sha256": "4f7b3a14e662228a1922db58dce8999587f6786e97d102001ec218765d4b1c17"
+    },
+    {
+      "path": "frontend/src/views/Tenants.vue",
+      "bytes": 1163,
+      "sha256": "709886421aa06617bf7e3281b873a5b696c9cb81bf3133a754a0cf970ade255e"
+    },
+    {
+      "path": "frontend/src/views/Users.vue",
+      "bytes": 17119,
+      "sha256": "1381df7511262b417cf4b79b248391736620a87dcf431def50c36864198cc03e"
+    },
+    {
+      "path": "frontend/src/wireframes/DesignSystem.vue",
+      "bytes": 14998,
+      "sha256": "6583eca6d5f2d907847b617de67e8cf5326df446eaf28dadc992cabb56f49d7b"
+    },
+    {
+      "path": "frontend/src/wireframes/Results.vue",
+      "bytes": 27162,
+      "sha256": "e8cc81950441cc267240f97ffa0004a61986b0e927244d20b861dbfa5f005241"
+    },
+    {
+      "path": "frontend/src/wireframes/StorageSettings.vue",
+      "bytes": 10987,
+      "sha256": "c7977c7af484d293107ae34abe00270948f0d993dbe7ff9fb4d2ac6565229309"
+    },
+    {
+      "path": "frontend/tsconfig.app.json",
+      "bytes": 517,
+      "sha256": "46f4d87d1a9a21986f3a42bb0e5ccad3308fa74f69ae73ce60d572ea1b178a93"
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "bytes": 126,
+      "sha256": "ad28d132ee48d6e23917cf5827cace785d0fc01a44ca68b0dda51cc8c3fd3f52"
+    },
+    {
+      "path": "frontend/tsconfig.node.json",
+      "bytes": 679,
+      "sha256": "a6d49d645590cac21c235a0548605d867321b2e1750e99176d2153d702dfa842"
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "bytes": 939,
+      "sha256": "736c63d3a72a5b126841ceedeac4b4a01854a2bec71bd57d2f46a23ec3cf68de"
+    }
+  ]
+}

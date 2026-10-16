@@ -1,0 +1,144 @@
+{
+  "schemaVersion": "1.0",
+  "documentKind": "AUTHORITY_CANDIDATE_NOT_EFFECTIVE",
+  "proposedTrancheId": "CCMAI-RUNTIME-105",
+  "riskCeiling": "R2",
+  "status": "DRAFT_NOT_DISPATCHABLE",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Claude / Antigravity-IDE REVIEW_EVIDENCE_OPERATOR",
+    "reviewer": "Codex /root",
+    "commitSteward": "Codex /root",
+    "closer": "Codex /root"
+  },
+  "historicalTargetCommit": "200df3e4a7bc2a326425922a5230508a4fd9b0fe",
+  "binarySha256": "4c7575e180dd198d995bfe09bdc45061740a987be8ec0765f02b203e1c251f31",
+  "allowedPaths": [
+    "docs/reviews/R105_R101_UI_WORKER_RETURN_2026-10-16.md",
+    "docs/reviews/probes/r105_claude/**",
+    ".cvf/runtime/r105_claude/**"
+  ],
+  "rootPreparationPaths": [
+    "docs/reviews/probes/r105_root/**",
+    "docs/reviews/planning/R105_*"
+  ],
+  "allowedExternalEffectsAfterActivation": [
+    "one start/stop of existing owned R101 fixture",
+    "one exact historical binary launch and its synthetic fixture seeding",
+    "one loopback Vite launch with reviewed config and no env files",
+    "Antigravity integrated product UI observations and bounded human actions on that synthetic tenant"
+  ],
+  "prohibitedEffects": [
+    "any effect before Root admission and effective committed seed/order/continuity",
+    "provider/mock/secret/customer/channel effects",
+    "application/Core/gate/policy/dependency/global configuration changes",
+    "alter historical seeds/counters/manifests/baselines/ready/process evidence",
+    "Docker create/recreate/pull/compose/prune or changes to R102/user resources",
+    "install/download/compile/native/frontend test/build",
+    "nonloopback listeners or unrelated localhost8080 MCP/OAuth routes",
+    "policy bypass/file protocol retry/standalone browser substitution",
+    "worker commits/seed edits/self-review/push/merge/deploy/FREEZE"
+  ],
+  "executionBudget": {
+    "newFixtures": 0,
+    "existingFixtureStarts": 1,
+    "historicalBackendLaunches": 1,
+    "viteLaunches": 1,
+    "maxSimultaneousProductTabs": 3,
+    "applicationActionSubmissions": 10,
+    "runtimeRetries": 0,
+    "backendSeconds": 1800,
+    "wholeCampaignSeconds": 2100,
+    "providerCalls": 0,
+    "mockCalls": 0,
+    "goCompiles": 0,
+    "testBuildCommands": 0
+  },
+  "ledgerPolicy": "New append-only pre-effect reservations; preserve historical R101 counters exactly. A fresh failed campaign cannot reset its ledger.",
+  "activationHolds": [
+    "formal dispatcher seed committed before reliance, matching record/base/order/continuity and active gates",
+    "revalidate current pinned inputs/resources immediately before admitted effects"
+  ],
+  "commitAuthority": "NONE in current user instruction; candidate is not an authority seed and opens no tranche",
+  "claimScope": "Historical R101 synthetic human software UI only; no current R102/M3/full product/governance acceptance",
+  "frontendInputManifest": "docs/reviews/probes/r105_dispatch_preparation/frontend_input_manifest.json",
+  "volumeExclusivityReceipt": "docs/reviews/probes/r105_dispatch_preparation/volume_exclusivity.json",
+  "workerAllowedPaths": [
+    "docs/reviews/R105_R101_UI_WORKER_RETURN_2026-10-16.md",
+    "docs/reviews/probes/r105_claude/**",
+    ".cvf/runtime/r105_claude/**"
+  ],
+  "formalSeedScopeRequirement": "Formal allowedPaths must include reviewed Root preparation artifacts as well as worker outputs. Keep workerAllowedPaths as a role restriction; workers cannot edit Root runner, formal order, authority or review. Formalize the final paths before immutable seed commit; alternatively commit runner before the tranche baseCommit and explicitly bind its hash/read-only use.",
+  "historicalBridgeEvidenceReview": "docs/reviews/R104_BRIDGE_SUPPLEMENT_INDEPENDENT_REVIEW_2026-10-16.md",
+  "historicalBridgeEvidenceDisposition": "ACCEPTED_DATA_URL_DIAGNOSTIC_ONLY",
+  "runnerSourceReview": "docs/reviews/R105_RUNNER_INDEPENDENT_SOURCE_REVIEW_2026-10-16.md",
+  "sourceReviewReceipt": "docs/reviews/probes/r105_root/source_review_receipt.json",
+  "residualDiagnosticTabDisposition": "PRESERVE_UNTOUCHED_NO_REUSE_NO_CLOSURE_CLAIM",
+  "formalSeedFields": {
+    "authorityKind": "DISPATCHER_OWNED_HISTORICAL_R101_UI_EVIDENCE",
+    "trancheId": "CCMAI-RUNTIME-105",
+    "riskCeiling": "R2",
+    "roles": {
+      "workOrderAuthor": "Codex /root",
+      "implementationWorker": "Claude / Antigravity-IDE REVIEW_EVIDENCE_OPERATOR",
+      "reviewer": "Codex /root",
+      "commitSteward": "Codex /root",
+      "closer": "Codex /root"
+    },
+    "allowedPaths": [
+      "docs/reviews/R105_R101_UI_WORKER_RETURN_2026-10-16.md",
+      "docs/reviews/probes/r105_claude/**",
+      ".cvf/runtime/r105_claude/**",
+      "docs/reviews/probes/r105_root/**",
+      "docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md"
+    ],
+    "prohibitedEffects": [
+      "any effect before Root admission and effective committed seed/order/continuity",
+      "provider/mock/secret/customer/channel effects",
+      "application/Core/gate/policy/dependency/global configuration changes",
+      "alter historical seeds/counters/manifests/baselines/ready/process evidence",
+      "Docker create/recreate/pull/compose/prune or changes to R102/user resources",
+      "install/download/compile/native/frontend test/build",
+      "nonloopback listeners or unrelated localhost8080 MCP/OAuth routes",
+      "policy bypass/file protocol retry/standalone browser substitution",
+      "worker commits/seed edits/self-review/push/merge/deploy/FREEZE"
+    ],
+    "executionBudget": {
+      "newFixtures": 0,
+      "existingFixtureStarts": 1,
+      "historicalBackendLaunches": 1,
+      "viteLaunches": 1,
+      "maxSimultaneousProductTabs": 3,
+      "applicationActionSubmissions": 10,
+      "runtimeRetries": 0,
+      "backendSeconds": 1800,
+      "wholeCampaignSeconds": 2100,
+      "providerCalls": 0,
+      "mockCalls": 0,
+      "goCompiles": 0,
+      "testBuildCommands": 0
+    },
+    "historicalTargetCommit": "200df3e4a7bc2a326425922a5230508a4fd9b0fe",
+    "binarySha256": "4c7575e180dd198d995bfe09bdc45061740a987be8ec0765f02b203e1c251f31",
+    "nodeExe": "C:/Program Files/nodejs/node.exe",
+    "nodeSha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+    "dockerExe": "C:/Users/tiennm/AppData/Local/Programs/DockerDesktop/resources/bin/docker.exe",
+    "dockerSha256": "6c699720bb9523dedb9eb5d22a49951ea9210dbdb1314a3554029eee9be76896",
+    "dockerHost": "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "runtimePins": {
+      "docs/reviews/probes/r105_root/r105_ui_runner.py": "f27c5bfc729c67bf717473a7dbc894352446c9f74813be08243350e46a4d478a",
+      "docs/reviews/probes/r105_root/r105_vite_config.mjs.template": "8c8a40d463247443044578a16cdd2452f44c090d6f5c7fdf5a6068e67c5efbda",
+      "docs/reviews/probes/r105_dispatch_preparation/frontend_input_manifest.json": "9bc280a50432f56f9a12272b138e26831106bc7fa0002aa3b825f73ece58b8df",
+      "docs/reviews/probes/r101_root/formatted_source_manifest.json": "61c57a5ed0613626327dd92fae352feae23c78e1d3e8ea45c06c86bd2e7660d3",
+      "docs/reviews/probes/r105_root/source_review_receipt.json": "444a9dc14bd9530815f83f5573390e831e9cb869a2cf4dce05b810f30504ddd7"
+    }
+  },
+  "formalRecordContract": {
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md",
+    "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+    "workOrderStatusAtExecution": "ACTIVE",
+    "phaseAtExecution": "BUILD",
+    "statusAtExecution": "BUILD",
+    "baseCommitRequirement": "Actual future40hex ancestor containing unchanged first-commit seed and source review; no placeholder or current64238c4 reused"
+  }
+}

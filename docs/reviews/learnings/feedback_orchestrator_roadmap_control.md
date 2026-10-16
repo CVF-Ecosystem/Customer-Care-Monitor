@@ -37,3 +37,7 @@ Project: RECORDED_AND_LINKED / EFFECTIVENESS_NOT_YET_VERIFIED. Memory/handoff/st
 Kiểm tra publication tài liệu: doctor PASS WITH NOTE25/1 (stale pin/GATE_PROFILE_NOT_INSTALLED giữ nguyên); local và cached origin/main..HEAD preflight PASS7/7;46 gate unit tests PASS42.932s; catalog Windows PowerShell qua preflight và PowerShell7 riêng PASS; git diff --check PASS. Không chạy lại docs build đang có55 deadlinks, không có runtime/provider/push. Các kết quả này chỉ kiểm tra repository/tài liệu, không đánh giá hiệu quả kiểm soát roadmap.
 
 Upstream: PROPOSED_FOR_CVF_INTAKE / NOT_SENT / NOT_ACCEPTED. Đề xuất CVF cha xem xét checkpoint tiến độ tổng thể và mẫu handback cho owner không viết code, bổ sung cho gate cấp tranche; record này là packet nguồn. Chưa gửi thông điệp, sửa core hay khẳng định CVF cha tiếp nhận. Root ORCHESTRATOR chuẩn bị transfer khi có scope riêng được phép. Learning mô tả lỗi điều phối của dự án, không khẳng định CVF đã kiểm soát hành vi AI; không có provider call hoặc live governance proof trong lần cập nhật này.
+
+## Related recurrence — 2026-10-16
+
+Root dispatch chưa sẵn sàng khiến hai lượt UI không đạt mục tiêu; xem [learning readiness](feedback_dispatch_readiness_and_browser_evidence.md). Checklist8 điều kiện phải được Root xử lý trước dispatch, phân biệt tool bridge/source/fixture/authority. Chưa có bằng chứng effectiveness qua lần chạy tiếp theo.

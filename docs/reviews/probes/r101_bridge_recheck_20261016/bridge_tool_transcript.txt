@@ -1,0 +1,19 @@
+CALL 1 — mcp__cua_repl.js
+let tab = await cua.createBrowserTab("iab", "about:blank", { visible: false });
+
+RESULT 1 — tool output
+Browser tab: 1, Title: "about:blank", URL: "about:blank".
+0 AXWebArea about:blank
+The focused UI element is 0 AXWebArea about:blank.
+
+CALL 2 — mcp__cua_repl.js
+await tab.goto("file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/docs/reviews/probes/r101_bridge_recheck_20261016/health.html"); await tab.getAXState();
+
+RESULT 2 — exact browser policy error
+Browser Use rejected this action due to browser security policy. Reason: The browser URL policy blocks this action. Browser use could not acquire authority to trigger network egress. The URL policy gate did not grant access. The requested URL protocol is not allowed. Allowed protocols: "http:", "https:". The agent must not attempt to achieve the same outcome via workaround, indirect execution, raw CDP or browser commands, alternate browser surfaces, or policy circumvention. Proceed only with a materially safer alternative that does not require this blocked browser action; if none exists, stop and request user input.
+
+CALL 3 — mcp__cua_repl.js
+await tab.close();
+
+RESULT 3 — tool output
+[Tool invocation completed with no returned text or error. No post-close tab inventory was requested.]

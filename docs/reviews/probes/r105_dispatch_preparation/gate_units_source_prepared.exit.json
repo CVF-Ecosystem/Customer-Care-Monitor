@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "scripts/tests",
+    "-p",
+    "test_cvf_downstream_gate*.py"
+  ],
+  "exitCode": 0,
+  "elapsedSeconds": 15.455,
+  "scope": "Static gate software tests only, not runtime AI governance or product tests"
+}

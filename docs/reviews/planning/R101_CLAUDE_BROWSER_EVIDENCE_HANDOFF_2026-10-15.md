@@ -1,6 +1,8 @@
 # R101 — Bàn giao Claude kiểm tra UI M3 và trả bằng chứng
 
 Status: DRAFT
+
+> SUPERSEDED_FOR_EXECUTION on 2026-10-16. Do not run the commands below. Root verified3 current source drifts and a changed protection inventory; old counters/PIDs/ports are historical. Corrected non-dispatchable work-order draft: [R105 historical R101 UI evidence](R105_R101_UI_EVIDENCE_WORK_ORDER_DRAFT_2026-10-16.md). Root owns unresolved activation/runner/session-evidence holds; this old packet cannot grant runtime authority. Original content is retained for traceability.
 Handoff readiness: PREPARED_FOR_OWNER_ASSIGNMENT
 Date: 2026-10-15
 Parent work order: docs/work_orders/CCMAI_RUNTIME_101_M3_HUMAN_WORKFLOW.md

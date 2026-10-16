@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-16",
+  "reviewer": "Codex /root",
+  "supplementManifestChecks": [
+    {
+      "path": "docs/reviews/probes/r104_bridge_supplement/browser_recording.webp",
+      "bytes": 359354,
+      "expectedBytes": 359354,
+      "sha256": "f3f4ce3995be8ac50ff3a51122c49c81da97ebf4beffca9f9ed3327e7a9c3a62",
+      "expectedSha256": "f3f4ce3995be8ac50ff3a51122c49c81da97ebf4beffca9f9ed3327e7a9c3a62",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r104_bridge_supplement/browser_subagent_invocation_and_response.json",
+      "bytes": 12465,
+      "expectedBytes": 12465,
+      "sha256": "39fe77c27a020612a8913106e2ee106f1af4bab463b186151561a039fd650afc",
+      "expectedSha256": "39fe77c27a020612a8913106e2ee106f1af4bab463b186151561a039fd650afc",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r104_bridge_supplement/click_feedback_screenshot.png",
+      "bytes": 51217,
+      "expectedBytes": 51217,
+      "sha256": "7b4adfbb22cfa5ae22938010d0b84305361c934402c19a22ad69e5ae6fe1ec26",
+      "expectedSha256": "7b4adfbb22cfa5ae22938010d0b84305361c934402c19a22ad69e5ae6fe1ec26",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r104_bridge_supplement/raw_gate_execution.json",
+      "bytes": 2122,
+      "expectedBytes": 2122,
+      "sha256": "a5a7868184f83a1d0299e950e8b64f7b9308b410f79631de88a971cb09e78a29",
+      "expectedSha256": "a5a7868184f83a1d0299e950e8b64f7b9308b410f79631de88a971cb09e78a29",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r104_bridge_supplement/subagent_scratchpad.md",
+      "bytes": 550,
+      "expectedBytes": 550,
+      "sha256": "18143d1a0039c98cee87f77d4410823fc5961b6b6e90056d9f95d1f1ad3e2447",
+      "expectedSha256": "18143d1a0039c98cee87f77d4410823fc5961b6b6e90056d9f95d1f1ad3e2447",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r104_bridge_supplement/tab_closure_status.json",
+      "bytes": 938,
+      "expectedBytes": 938,
+      "sha256": "e7c1a786b7b95d0237b90aab247e1106f80d6debaf09eb22f710c12c57dff505",
+      "expectedSha256": "e7c1a786b7b95d0237b90aab247e1106f80d6debaf09eb22f710c12c57dff505",
+      "match": true
+    }
+  ],
+  "invocationAndResponseMatchOriginalJsonObjects": true,
+  "binaryAndScratchpadCopies": [
+    {
+      "path": "docs/reviews/probes/r104_bridge_supplement/browser_recording.webp",
+      "original": "C:\\Users\\tiennm\\.gemini\\antigravity-ide\\brain\\6d5440a8-74c0-4ed9-ae82-61f7044237a6\\bridge_capability_check_1792104322338.webp",
+      "bytesExact": true
+    },
+    {
+      "path": "docs/reviews/probes/r104_bridge_supplement/click_feedback_screenshot.png",
+      "original": "C:\\Users\\tiennm\\.gemini\\antigravity-ide\\brain\\6d5440a8-74c0-4ed9-ae82-61f7044237a6\\.system_generated\\click_feedback\\click_feedback_1792104343365.png",
+      "bytesExact": true
+    },
+    {
+      "path": "docs/reviews/probes/r104_bridge_supplement/subagent_scratchpad.md",
+      "original": "C:\\Users\\tiennm\\.gemini\\antigravity-ide\\brain\\6d5440a8-74c0-4ed9-ae82-61f7044237a6\\browser\\scratchpad_i5drwyai.md",
+      "bytesExact": true
+    }
+  ],
+  "oldR104Manifest3EntriesStillMatch": true,
+  "recording": {
+    "dimensions": [
+      1295,
+      1011
+    ],
+    "frames": 55,
+    "visuallyInspectedFrameIndices": [
+      0,
+      27,
+      54
+    ],
+    "observations": [
+      "blank",
+      "WAITING and Click Me",
+      "CLICKED and Click Me"
+    ]
+  },
+  "clickFeedbackVisuallyInspected": "WAITING plus cursor at Click Me, consistent with click-time capture; not alone post-click proof",
+  "manifestItself": {
+    "bytes": 1831,
+    "sha256": "7be093b5aebcad2d76fa74411484003715ed6c7a78da140a0b2e00dfedd0aa58",
+    "reportSelfHashAndSizeOutdated": true
+  },
+  "tabCleanup": "No close call in exported trace; ACTIVE at worker metadata capture, not independently checked live",
+  "historicalBridgeDecision": "ACCEPT_DATA_URL_CLICK_CAPTURE_ONLY",
+  "productHttpAndR101Ui": "NOT_RUN",
+  "driverAndCacheActuallyUsed": "NOT_OBSERVED",
+  "currentBrowserRuntimeActions": 0,
+  "newCommitOrFreeze": false
+}

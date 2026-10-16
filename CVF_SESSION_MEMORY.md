@@ -18,9 +18,11 @@ Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it m
 - Active phase: FREEZE
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_BROWSER_TOOLING_R103_2026-10-15.md
 
-CCMAI-RUNTIME-103 FROZEN tooling recovery only at7efc308: official driver1.57 + Chromium/headless1200 installed; Root335package/610oldcache hashes and real local launch/click/PNG PASS. Install campaigns driver1/browser1, reported bodies292458123bytes, browser redirect/wire counts unknown, no retries observed. Codex managed IAB unavailable/nativepipe unavailable; Antigravity integrated tool NOT_OBSERVED; R101UI B01-B10 NOT_RUN, server/fixture0. Next external Claude/Antigravity session checks blank capture using restored cache, then separately bounded source-bound R101 UI; independent M3-05 executor SPEC remains available. R101/R102 old acceptance/baselines unchanged; no more install/runtime authority from closure, provider/mock0/no appsource/secret/userapprestart/newfixture/globalconfig/push/deploy. Facebook/ZaloOA parked.
+CCMAI-RUNTIME-103 remains historical tooling CLOSED. Owner now grants Root full orchestrator/reviewer authority for bounded R105 historical R101 UI dispatch, including preparation/seed/order commits. Root commits reviewed source/evidence and immutable105seed first, then binds actual baseCommit/formal order/record/continuity and checks active closeability before BUILD. No runtime until effective105dispatch; source review12offline/89gate units accepted, actual UI NOT_RUN. R101200df3e historical claim only; Dashboard3 failures/full product gates OPEN, R102 local FROZEN unchanged, Facebook/Zalo OA parked.
 
-Codex /root CLOSER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; independent tooling review accepted, UI bridge unresolved.
+Codex /root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD / SESSION_SYNC_STEWARD; owner-approved seed/preparation commit, runtime pending active105gate.
+
+Mandatory pre-dispatch learning: [docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md](docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md). Read before any similar UI/browser assignment; unknown readiness is HOLD, not a speculative dispatch. Corrected draft is not executable authority.
 
 ## Historical R100 bounded real result before M3 dispatch
 

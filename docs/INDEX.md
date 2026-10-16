@@ -35,6 +35,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Historical R042 independent acceptance/dead-link correction and R043 local closure intake.: `CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md`
 - Historical R043 offline-contract FREEZE and R044 seed preparation; original closure evidence unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_OFFLINE_PROOF_FREEZE_2026-10-03.md`
 - Project continuity front door.: `CVF_SESSION_MEMORY.md`
+- Root-owned pre-dispatch checks; applied to draft, effectiveness OPEN.: `docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md`
 - Independent bounded exact-source four-Go runner; synthetic application observation only.: `docs/reviews/probes/r060_independent_campaign.py`
 - Actual failed independent exact-source raw evidence; no suite or mutation acceptance.: `docs/reviews/probes/r060_independent_manifest.json`
 - Reviewer-selected120 positives and two source-only mutation controls; no runtime result.: `docs/reviews/probes/r060_independent_plan.json`
@@ -1009,6 +1010,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R101 M3 accepted intended local synthetic human workflow contract/dispatch; implementation/native/browser acceptance OPEN, no provider or production effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-101.json`
 - R101 M3 accepted intended local synthetic human workflow contract/dispatch; implementation/native/browser acceptance OPEN, no provider or production effects.: `docs/specs/M3_HUMAN_WORKFLOW_R101_SPEC_2026-10-15.md`
 - R101 M3 accepted intended local synthetic human workflow contract/dispatch; implementation/native/browser acceptance OPEN, no provider or production effects.: `CVF_SESSION/tranches/CCMAI-RUNTIME-101.json`
+- Qualified denied file-scheme probe; no HTTP or product failure inference.: `docs/reviews/R101_BRIDGE_RECHECK_INDEPENDENT_REVIEW_2026-10-16.md`
 - R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only.: `docs/reviews/probes/r101_claude_retry2/retry_counters_after.json`
 - R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only.: `docs/reviews/R101_CLAUDE_BROWSER_RETRY2_RETURN_2026-10-15.md`
 - R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only.: `docs/reviews/probes/r101_claude_retry2/git_status_after.json`
@@ -1142,6 +1144,31 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R103 source repair/admission or prepared health probe; driver/browser runtime not yet observed.: `docs/reviews/probes/r103_tooling/repair_driver.py`
 - R103 source repair/admission or prepared health probe; driver/browser runtime not yet observed.: `docs/reviews/R103_CONSOLIDATED_SCRIPT_REVIEW_2026-10-15.md`
 - R103 source repair/admission or prepared health probe; driver/browser runtime not yet observed.: `docs/reviews/R103_DRIVER_SOURCE_ADMISSION_2026-10-15.md`
+- Worker exported original local session evidence; diagnostic only, tab closure withdrawn.: `docs/reviews/R104_BRIDGE_EVIDENCE_SUPPLEMENT_2026-10-16.md`
+- Root CHANGES_REQUIRED for dispatch contract/evidence gaps; no UI acceptance.: `docs/reviews/R104_BRIDGE_RECHECK_INDEPENDENT_REVIEW_2026-10-16.md`
+- Root13/13 saved artifact hash checks and final PNG inspection.: `docs/reviews/probes/r104_root_review/artifact_verification.json`
+- Selected original explicit-packet gate calls/results only; no unrelated session content.: `docs/reviews/probes/r104_supplement_root_review/supplement_gate_source_excerpts.json`
+- Independent historical data-URL provenance acceptance with cleanup/manifest/gate qualifications; no UI dispatch.: `docs/reviews/R104_BRIDGE_SUPPLEMENT_INDEPENDENT_REVIEW_2026-10-16.md`
+- All6 supplemental artifact sizes/hashes verified; original copies checked.: `docs/reviews/probes/r104_bridge_supplement/evidence_manifest.json`
+- Root actual source-object/source-copy comparisons and recording frame inspection.: `docs/reviews/probes/r104_supplement_root_review/verification.json`
+- Worker-reported bridge PASS, product NOT_RUN; raw session export missing.: `docs/reviews/R104_BRIDGE_RECHECK_WORKER_RETURN_2026-10-16.md`
+- Three diagnostic artifacts verified; hashes do not authenticate tool history.: `docs/reviews/probes/r104_bridge_check/evidence_manifest.json`
+- Proposed authority candidate only; no effective seed/tranche/commit.: `docs/reviews/planning/R105_R101_UI_AUTHORITY_CANDIDATE_2026-10-16.json`
+- Sol Medium candidate/repair history and actual offline results; runtime NOT_RUN.: `docs/reviews/probes/r105_root/RUNNER_CANDIDATE_RETURN_2026-10-16.md`
+- Reviewed no-env/API-only Vite config template with owned health nonce; no server launched.: `docs/reviews/probes/r105_root/r105_vite_config.mjs.template`
+- Read-only pinned CLI/local named pipe/empty config compatibility; no fixture lifecycle.: `docs/reviews/probes/r105_dispatch_preparation/docker_readonly_binding_check.json`
+- Three actual safe-field metadata commands and source validator PASS; fixture exited.: `docs/reviews/probes/r105_dispatch_preparation/docker_format_input_verification.json`
+- Sol Medium independent document review; draft accepted only as NOT_DISPATCHABLE, no runtime acceptance.: `docs/reviews/R105_DRAFT_READINESS_PEER_REVIEW_2026-10-16.md`
+- Root actual12tests/syntax/137frontend/17Git rows/exact binary checks.: `docs/reviews/probes/r105_dispatch_preparation/candidate_final_offline_verification.json`
+- Root immutable bounded historical R101 UI seed; must precede active105 BUILD, finite new campaign only.: `CVF_SESSION/authority/CCMAI-RUNTIME-105.json`
+- Root SOURCE_REVIEW_PASS_RUNTIME_NOT_RUN; active authority/UI still pending.: `docs/reviews/R105_RUNNER_INDEPENDENT_SOURCE_REVIEW_2026-10-16.md`
+- 12 offline software tests, injected commands/processes; no CVF runtime AI governance claim.: `docs/reviews/probes/r105_root/test_r105_ui_runner.py`
+- Read-only binary/source/fixture/protection checks; no runtime started.: `docs/reviews/probes/r105_dispatch_preparation/readiness_inventory.json`
+- Reviewed source candidate only; no effective R105 runtime authority.: `docs/reviews/probes/r105_root/r105_ui_runner.py`
+- 43 captured source-preparation artifacts with byte hashes/newline restoration metadata; no committed-byte/runtime claim.: `docs/reviews/probes/r105_dispatch_preparation/source_preparation_evidence_manifest.json`
+- Root exact source/input hashes; receipt must be committed at future seed base before reliance.: `docs/reviews/probes/r105_root/source_review_receipt.json`
+- Rejected scaffold and repair findings, distinct third-round ownership cause, final source-only acceptance.: `docs/reviews/probes/r105_dispatch_preparation/runner_review_rounds.json`
+- Corrected historical R101 UI work-order draft; NOT_DISPATCHABLE, no runtime authority.: `docs/reviews/planning/R105_R101_UI_EVIDENCE_WORK_ORDER_DRAFT_2026-10-16.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

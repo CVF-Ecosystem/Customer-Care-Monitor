@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "updatedAt": "2026-10-15",
+  "updatedAt": "2026-10-16",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
@@ -11938,6 +11938,195 @@
       "path": "docs/reviews/probes/r103_root/final_evidence_manifest.json",
       "status": "ACTIVE",
       "description": "Hash/size integrity of actual R103 install/cache/control/capture evidence; integrated bridge/R101 UI remains unobserved."
+    },
+    {
+      "id": "dispatch-readiness-learning",
+      "family": "continuity",
+      "path": "docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md",
+      "status": "ACTIVE",
+      "description": "Root-owned pre-dispatch checks; applied to draft, effectiveness OPEN."
+    },
+    {
+      "id": "r105-ui-order-draft",
+      "family": "continuity",
+      "path": "docs/reviews/planning/R105_R101_UI_EVIDENCE_WORK_ORDER_DRAFT_2026-10-16.md",
+      "status": "ACTIVE",
+      "description": "Corrected historical R101 UI work-order draft; NOT_DISPATCHABLE, no runtime authority."
+    },
+    {
+      "id": "r105-authority-candidate",
+      "family": "continuity",
+      "path": "docs/reviews/planning/R105_R101_UI_AUTHORITY_CANDIDATE_2026-10-16.json",
+      "status": "ACTIVE",
+      "description": "Proposed authority candidate only; no effective seed/tranche/commit."
+    },
+    {
+      "id": "r105-root-readiness",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r105_dispatch_preparation/readiness_inventory.json",
+      "status": "ACTIVE",
+      "description": "Read-only binary/source/fixture/protection checks; no runtime started."
+    },
+    {
+      "id": "r104-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/R104_BRIDGE_RECHECK_INDEPENDENT_REVIEW_2026-10-16.md",
+      "status": "ACTIVE",
+      "description": "Root CHANGES_REQUIRED for dispatch contract/evidence gaps; no UI acceptance."
+    },
+    {
+      "id": "r104-worker-bridge-return",
+      "family": "continuity",
+      "path": "docs/reviews/R104_BRIDGE_RECHECK_WORKER_RETURN_2026-10-16.md",
+      "status": "ACTIVE",
+      "description": "Worker-reported bridge PASS, product NOT_RUN; raw session export missing."
+    },
+    {
+      "id": "r104-worker-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r104_bridge_check/evidence_manifest.json",
+      "status": "ACTIVE",
+      "description": "Three diagnostic artifacts verified; hashes do not authenticate tool history."
+    },
+    {
+      "id": "r104-root-integrity",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r104_root_review/artifact_verification.json",
+      "status": "ACTIVE",
+      "description": "Root13/13 saved artifact hash checks and final PNG inspection."
+    },
+    {
+      "id": "r101-recheck-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/R101_BRIDGE_RECHECK_INDEPENDENT_REVIEW_2026-10-16.md",
+      "status": "ACTIVE",
+      "description": "Qualified denied file-scheme probe; no HTTP or product failure inference."
+    },
+    {
+      "id": "r105-draft-peer-review",
+      "family": "continuity",
+      "path": "docs/reviews/R105_DRAFT_READINESS_PEER_REVIEW_2026-10-16.md",
+      "status": "ACTIVE",
+      "description": "Sol Medium independent document review; draft accepted only as NOT_DISPATCHABLE, no runtime acceptance."
+    },
+    {
+      "id": "r104-evidence-supplement",
+      "family": "continuity",
+      "path": "docs/reviews/R104_BRIDGE_EVIDENCE_SUPPLEMENT_2026-10-16.md",
+      "status": "ACTIVE",
+      "description": "Worker exported original local session evidence; diagnostic only, tab closure withdrawn."
+    },
+    {
+      "id": "r104-supplement-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/R104_BRIDGE_SUPPLEMENT_INDEPENDENT_REVIEW_2026-10-16.md",
+      "status": "ACTIVE",
+      "description": "Independent historical data-URL provenance acceptance with cleanup/manifest/gate qualifications; no UI dispatch."
+    },
+    {
+      "id": "r104-supplement-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r104_bridge_supplement/evidence_manifest.json",
+      "status": "ACTIVE",
+      "description": "All6 supplemental artifact sizes/hashes verified; original copies checked."
+    },
+    {
+      "id": "r104-supplement-root-verification",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r104_supplement_root_review/verification.json",
+      "status": "ACTIVE",
+      "description": "Root actual source-object/source-copy comparisons and recording frame inspection."
+    },
+    {
+      "id": "r104-supplement-gate-source",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r104_supplement_root_review/supplement_gate_source_excerpts.json",
+      "status": "ACTIVE",
+      "description": "Selected original explicit-packet gate calls/results only; no unrelated session content."
+    },
+    {
+      "id": "r105-runner-candidate",
+      "family": "tool",
+      "path": "docs/reviews/probes/r105_root/r105_ui_runner.py",
+      "status": "ACTIVE",
+      "description": "Reviewed source candidate only; no effective R105 runtime authority."
+    },
+    {
+      "id": "r105-config-template",
+      "family": "tool",
+      "path": "docs/reviews/probes/r105_root/r105_vite_config.mjs.template",
+      "status": "ACTIVE",
+      "description": "Reviewed no-env/API-only Vite config template with owned health nonce; no server launched."
+    },
+    {
+      "id": "r105-offline-tests",
+      "family": "tool",
+      "path": "docs/reviews/probes/r105_root/test_r105_ui_runner.py",
+      "status": "ACTIVE",
+      "description": "12 offline software tests, injected commands/processes; no CVF runtime AI governance claim."
+    },
+    {
+      "id": "r105-candidate-return",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r105_root/RUNNER_CANDIDATE_RETURN_2026-10-16.md",
+      "status": "ACTIVE",
+      "description": "Sol Medium candidate/repair history and actual offline results; runtime NOT_RUN."
+    },
+    {
+      "id": "r105-independent-source-review",
+      "family": "continuity",
+      "path": "docs/reviews/R105_RUNNER_INDEPENDENT_SOURCE_REVIEW_2026-10-16.md",
+      "status": "ACTIVE",
+      "description": "Root SOURCE_REVIEW_PASS_RUNTIME_NOT_RUN; active authority/UI still pending."
+    },
+    {
+      "id": "r105-source-review-receipt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r105_root/source_review_receipt.json",
+      "status": "ACTIVE",
+      "description": "Root exact source/input hashes; receipt must be committed at future seed base before reliance."
+    },
+    {
+      "id": "r105-final-offline-verification",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r105_dispatch_preparation/candidate_final_offline_verification.json",
+      "status": "ACTIVE",
+      "description": "Root actual12tests/syntax/137frontend/17Git rows/exact binary checks."
+    },
+    {
+      "id": "r105-docker-binding-check",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r105_dispatch_preparation/docker_readonly_binding_check.json",
+      "status": "ACTIVE",
+      "description": "Read-only pinned CLI/local named pipe/empty config compatibility; no fixture lifecycle."
+    },
+    {
+      "id": "r105-docker-format-check",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r105_dispatch_preparation/docker_format_input_verification.json",
+      "status": "ACTIVE",
+      "description": "Three actual safe-field metadata commands and source validator PASS; fixture exited."
+    },
+    {
+      "id": "r105-source-review-rounds",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r105_dispatch_preparation/runner_review_rounds.json",
+      "status": "ACTIVE",
+      "description": "Rejected scaffold and repair findings, distinct third-round ownership cause, final source-only acceptance."
+    },
+    {
+      "id": "r105-source-preparation-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r105_dispatch_preparation/source_preparation_evidence_manifest.json",
+      "status": "ACTIVE",
+      "description": "43 captured source-preparation artifacts with byte hashes/newline restoration metadata; no committed-byte/runtime claim."
+    },
+    {
+      "id": "r105-immutable-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-105.json",
+      "status": "ACTIVE",
+      "description": "Root immutable bounded historical R101 UI seed; must precede active105 BUILD, finite new campaign only."
     }
   ]
 }

@@ -1,0 +1,12 @@
+test_config_literal_render_and_environment_filter (docs.reviews.probes.r105_root.test_r105_ui_runner.CandidateTests.test_config_literal_render_and_environment_filter) ... ok
+test_fixture_identity_port_and_fresh_ready (docs.reviews.probes.r105_root.test_r105_ui_runner.CandidateTests.test_fixture_identity_port_and_fresh_ready) ... ok
+test_frontend_pins_and_path_escape (docs.reviews.probes.r105_root.test_r105_ui_runner.CandidateTests.test_frontend_pins_and_path_escape) ... ok
+test_historical_crlf_mapping_and_duplicate_rejection (docs.reviews.probes.r105_root.test_r105_ui_runner.CandidateTests.test_historical_crlf_mapping_and_duplicate_rejection) ... ok
+test_reservation_is_irreversible_and_runtime_holds (docs.reviews.probes.r105_root.test_r105_ui_runner.CandidateTests.test_reservation_is_irreversible_and_runtime_holds) ... ok
+test_seed_git_lf_representation (docs.reviews.probes.r105_root.test_r105_ui_runner.CandidateTests.test_seed_git_lf_representation) ... ok
+test_supervised_deadline_and_exception_cleanup (docs.reviews.probes.r105_root.test_r105_ui_runner.CandidateTests.test_supervised_deadline_and_exception_cleanup) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.211s
+
+OK
