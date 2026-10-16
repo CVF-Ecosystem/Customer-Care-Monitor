@@ -1274,8 +1274,30 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/admission.json`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/supervisor_start.json`
 - Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/backend.stdout.log.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/r107_vite_config.mjs.template`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/r107_ui_runner.py`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/admission_gate_units.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/browser_capability_control_ok.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/offline_tests.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/offline_tests_initial.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/validated_vite.config.mjs`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/run_module_validation.py`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/proposed_binding_fields.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/module_validation.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/validate_config.mjs`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/admission_gate_units.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `CVF_SESSION/authority/CCMAI-RUNTIME-107.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/module_validation.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/offline_tests_initial.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/offline_tests.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/test_r107_ui_runner.py`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/offline_tests.stderr.txt`
 - Sol Medium candidate and actual cachedNode module-load result.: `docs/reviews/probes/r107_root/RUNNER_CANDIDATE_RETURN_2026-10-16.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/offline_tests_initial.stderr.txt`
 - Actual current empty inventory and unavailable iab, distinct from historicalR106.: `docs/reviews/probes/r107_root/current_browser_probe.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/candidate_hashes.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/browser_capability_receipt.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/admission_gate_units.json`
 - Actual pinnedNode import command, exit0 and byte hashes; no server.: `docs/reviews/probes/r107_root/module_validation.json`
 - Independent Root source receipt; browser unavailable, campaign unconsumed.: `docs/reviews/probes/r107_root/source_review_receipt.json`
 - Exact captured source/module/check evidence before Git normalization.: `docs/reviews/probes/r107_root/captured_candidate_evidence.zip`

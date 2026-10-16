@@ -1,0 +1,10 @@
+[PASS] CVF-DG-INST-01 PASS
+[PASS] CVF-DG-CONT-01 PASS
+[PASS] CVF-DG-RANGE-01 PASS
+       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=59127d0a37ed78bca74c6e76f347ecf5a1cc4b0c candidates=11 deleted=0
+[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - no candidate work-order packet in scope
+[PASS] CVF-DG-ROLE-01 PASS
+       note: checked: docs/reviews/R107_SOURCE_MODULE_INDEPENDENT_REVIEW_2026-10-16.md
+[PASS] CVF-DG-CLAIM-01 PASS
+       note: 0 explicit claim line(s) and 1 document(s) scanned
+RESULT: PASS phase=pre-commit mandatoryControls=6 failed=0
