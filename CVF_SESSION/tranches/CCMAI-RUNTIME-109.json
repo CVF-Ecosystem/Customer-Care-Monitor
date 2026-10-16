@@ -82,7 +82,7 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_109_HUMAN_UI_COMPLETION.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
   "workOrderStatus": "ACTIVE",
-  "buildCommit": "a93b463a8968e1c11648e734a9dbd011a07b8369",
+  "buildCommit": "5ab60830368482e072cb0150a7894235ca950c24",
   "reviewEvidence": [],
   "disposition": "RUNTIME_ADMITTED_PENDING_SINGLE_CAMPAIGN",
   "freeze": "OPEN",
@@ -98,7 +98,7 @@
     "WORK_ORDER"
   ],
   "x-runtimeAdmission": {
-    "sourceCommit": "a93b463a8968e1c11648e734a9dbd011a07b8369",
+    "sourceCommit": "5ab60830368482e072cb0150a7894235ca950c24",
     "admission": "docs/reviews/probes/r109_root/runtime_admission.json",
     "status": "NOT_RUN",
     "frontendTestsUsed": 1,

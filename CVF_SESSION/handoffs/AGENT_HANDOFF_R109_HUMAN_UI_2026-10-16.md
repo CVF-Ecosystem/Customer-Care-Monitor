@@ -8,7 +8,7 @@ Status: ACTIVE
 - Active phase: BUILD
 - Active role: Codex /root ORCHESTRATOR / independent REVIEWER / connected browser verification / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r108_browser_luna Luna Max IMPLEMENTATION_WORKER admitted supervisor executor, no browser role.
 - Active tranche: CCMAI-RUNTIME-109
-- Next allowed move: CCMAI-RUNTIME-109 BUILD runtime admitted at sourcea93b463a after UI14tests/typecheck and supervisor3regressions/config-import PASS. Luna executes one shared fixture/native/backend/Vite campaign2100s/retries0 with reused binarycb73ee13 and Go0; native4POST then only on NOT_REPRODUCED Root connected browser B01-B10/UI14POST/max3tabs. Stop on native failure or actual browser failure; preserve raw failures and owned cleanup. No source changes or HEAD commit during campaign. Return exact worker packet for independent Root review; no FREEZE. Dashboard3/fullM2/M3/pilot/release OPEN; R102 local FROZEN, accounts parked.
+- Next allowed move: CCMAI-RUNTIME-109 BUILD runtime admitted at source5ab60830 after UI14tests/typecheck and supervisor3regressions/config-import PASS. Luna executes one shared fixture/native/backend/Vite campaign2100s/retries0 with reused binarycb73ee13 and Go0; native4POST then only on NOT_REPRODUCED Root connected browser B01-B10/UI14POST/max3tabs. Stop on native failure or actual browser failure; preserve raw failures and owned cleanup. No source changes or HEAD commit during campaign. Return exact worker packet for independent Root review; no FREEZE. Dashboard3/fullM2/M3/pilot/release OPEN; R102 local FROZEN, accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Root acknowledgment
@@ -18,3 +18,5 @@ Root ORCHESTRATOR/SPEC_AUTHOR/WORK_ORDER_AUTHOR inherits consolidated UI audit, 
 ## Root runtime acknowledgment — 2026-10-17
 
 Reviewed source a93b463a8968e1c11648e734a9dbd011a07b8369; UI14tests/typecheck and supervisor3regressions/actual config import PASS, fresh integrated HTTP click/screenshot PASS. Root admits only the committed pinned shared campaign and retains independent product browser verification. Seed/budgets unchanged, runtime currently NOT_RUN. Luna must acknowledge current authority before start; Root waits for owned cleanup before metadata commits.
+
+Root pre-start repair acknowledgment: current reviewed source 5ab60830368482e072cb0150a7894235ca950c24 includes only the newline comparison repair; first admission failed read-only, campaign slot remains unused. Initial admission retained; current receipt refreshed, same seed/budgets.

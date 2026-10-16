@@ -75,3 +75,5 @@ Material-SHA marker:25d3b40f90d0b001a1d1862034e18aa521ddd67a. Source-only commit
 ## Runtime source admission — 2026-10-17
 
 Root independently accepted source a93b463a8968e1c11648e734a9dbd011a07b8369 with UI14tests/typecheck and supervisor3regressions/actual Node config import PASS. Exact committed runtime_admission.json is mandatory; one existing shared fixture/native/UI campaign only, old counters untouched. Root connected browser HTTP click/screenshot PASS; no product result yet.
+
+Current runtime source after pre-start newline repair: 5ab60830368482e072cb0150a7894235ca950c24. Original admission is preserved; physical SHA pins unchanged in meaning and refreshed for the repaired supervisor only. No campaign attempt was consumed by the read-only failure.
