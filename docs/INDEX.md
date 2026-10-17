@@ -2327,6 +2327,27 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/final_checks/workspace_doctor.stdout.txt`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/work_orders/CCMAI_RUNTIME_111_REMAINING_UI.md`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/R112_INDEPENDENT_RUNTIME_HOLD_REVIEW_2026-10-17.md`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/fixture_readiness.json`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_001_target_inspect.stderr.bin`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_005_protected_container_inspect.json`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_004_all_container_ids.stderr.bin`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_005_protected_container_inspect.stderr.bin`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_002_target_network_inspect.json`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_001_target_inspect.stdout.bin`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_004_all_container_ids.stdout.bin`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_004_all_container_ids.json`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/docker_command.json`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_001_target_inspect.json`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_003_fixture_volume_users.stderr.bin`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `CVF_SESSION/authority/CCMAI-RUNTIME-113.json`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_003_fixture_volume_users.stdout.bin`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/stdout.bin`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_002_target_network_inspect.stdout.bin`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_002_target_network_inspect.stderr.bin`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_003_fixture_volume_users.json`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/R113_CAPABILITY_AND_DISPATCH_PREPARATION_2026-10-17.md`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/stderr.bin`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_005_protected_container_inspect.stdout.bin`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

@@ -20275,6 +20275,153 @@
       "path": "docs/reviews/probes/r112_resume_20261017T021300Z/result.json",
       "status": "ACTIVE",
       "description": "Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse."
+    },
+    {
+      "id": "r113-prep-da40fef9d3ca107f",
+      "family": "continuity",
+      "path": "docs/reviews/R113_CAPABILITY_AND_DISPATCH_PREPARATION_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse."
+    },
+    {
+      "id": "r113-prep-972991c432836f2f",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-113.json",
+      "status": "ACTIVE",
+      "description": "Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse."
+    },
+    {
+      "id": "r113-prep-8dfc58472072cf2e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_001_target_inspect.json",
+      "status": "ACTIVE",
+      "description": "Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse."
+    },
+    {
+      "id": "r113-prep-149cf0a46e70846c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_001_target_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse."
+    },
+    {
+      "id": "r113-prep-787182fd4c7c24e8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_001_target_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse."
+    },
+    {
+      "id": "r113-prep-684d38b7fb4f51b1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_002_target_network_inspect.json",
+      "status": "ACTIVE",
+      "description": "Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse."
+    },
+    {
+      "id": "r113-prep-c5b39bbee5f0e3dd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_002_target_network_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse."
+    },
+    {
+      "id": "r113-prep-b112aa66b3d10c2a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_002_target_network_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse."
+    },
+    {
+      "id": "r113-prep-c801d7dfc1cd994d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_003_fixture_volume_users.json",
+      "status": "ACTIVE",
+      "description": "Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse."
+    },
+    {
+      "id": "r113-prep-90e1a8a622070865",
+      "family": "continuity",
+      "path": "docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_003_fixture_volume_users.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse."
+    },
+    {
+      "id": "r113-prep-9c03e14255d19e88",
+      "family": "continuity",
+      "path": "docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_003_fixture_volume_users.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse."
+    },
+    {
+      "id": "r113-prep-8318f1f7869c0611",
+      "family": "continuity",
+      "path": "docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_004_all_container_ids.json",
+      "status": "ACTIVE",
+      "description": "Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse."
+    },
+    {
+      "id": "r113-prep-3943946ee6720505",
+      "family": "continuity",
+      "path": "docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_004_all_container_ids.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse."
+    },
+    {
+      "id": "r113-prep-7e9e92b07dc5030d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_004_all_container_ids.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse."
+    },
+    {
+      "id": "r113-prep-27515e1936d3438c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_005_protected_container_inspect.json",
+      "status": "ACTIVE",
+      "description": "Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse."
+    },
+    {
+      "id": "r113-prep-4e14a75fae039be1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_005_protected_container_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse."
+    },
+    {
+      "id": "r113-prep-fcb9a1374f31f52c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_005_protected_container_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse."
+    },
+    {
+      "id": "r113-prep-8bfd6ab5fc4cc046",
+      "family": "continuity",
+      "path": "docs/reviews/probes/resume_bddda27f_20261017T023257Z/docker_command.json",
+      "status": "ACTIVE",
+      "description": "Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse."
+    },
+    {
+      "id": "r113-prep-12ed1d3abe31f18b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/resume_bddda27f_20261017T023257Z/fixture_readiness.json",
+      "status": "ACTIVE",
+      "description": "Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse."
+    },
+    {
+      "id": "r113-prep-e528486a078cfcf3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/resume_bddda27f_20261017T023257Z/stderr.bin",
+      "status": "ACTIVE",
+      "description": "Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse."
+    },
+    {
+      "id": "r113-prep-a0617629c9c15a1c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/resume_bddda27f_20261017T023257Z/stdout.bin",
+      "status": "ACTIVE",
+      "description": "Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse."
     }
   ]
 }

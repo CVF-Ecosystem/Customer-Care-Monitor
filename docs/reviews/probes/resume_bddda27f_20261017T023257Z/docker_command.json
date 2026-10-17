@@ -1,0 +1,23 @@
+{
+  "observedAtUTC": "2026-10-17T02:32:58.049369+00:00",
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "--config",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\docker_capability_20261017T023257Z",
+    "version",
+    "--format",
+    "{{json .Server.Version}}"
+  ],
+  "timeoutSeconds": 15,
+  "timedOut": false,
+  "exitCode": 0,
+  "ownedChildPid": 25296,
+  "ownedChildReaped": true,
+  "elapsedSeconds": 0.157,
+  "stdoutBytes": 9,
+  "stdoutSha256": "d9d51e6e7a0462460c20f5c0f67c8b054ca993e3c4c90e232a89cc7e1d43bf2a",
+  "stderrBytes": 0,
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
