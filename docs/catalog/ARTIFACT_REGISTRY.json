@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R118_CURRENT_PROPOSAL_UI_2026-10-18.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R119_CURRENT_UI_PROOF_2026-10-18.md",
       "status": "ACTIVE",
-      "description": "Active R118 source-only current proposal UI and readable history; current rendered proof/full milestones OPEN."
+      "description": "Active R119 finite current UI synthetic proof; runtime HOLD until exact admissions."
     },
     {
       "id": "r060-work-order",
@@ -32238,6 +32238,34 @@
       "path": "docs/reviews/probes/r118_root/committed_source_binding.json",
       "status": "ACTIVE",
       "description": "R118 exact original bytes or commit/source binding; source/component only, rendered UI open."
+    },
+    {
+      "id": "r119-seed",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-119.json",
+      "status": "ACTIVE",
+      "description": "Immutable R119 synthetic UI finite authority; provider0/lifecycle0."
+    },
+    {
+      "id": "r119-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-119.json",
+      "status": "ACTIVE",
+      "description": "R119 actual current UI evidence status and finite caps."
+    },
+    {
+      "id": "r119-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_119_CURRENT_UI_PROOF.md",
+      "status": "ACTIVE",
+      "description": "Source-helper then separately admitted one current UI campaign."
+    },
+    {
+      "id": "r118-historical-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R118_CURRENT_PROPOSAL_UI_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Historical R118 accepted source/component only; current-render open."
     }
   ]
 }

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-119",
+  "authorityKind": "DISPATCHER_OWNED_M3_CURRENT_UI_FINITE_READONLY_SYNTHETIC_PROOF",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "/root/r119_runtime_design",
+    "reviewer": "Codex /root",
+    "commitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "backend/api/handlers/intervention_ui_r119_test.go",
+    "scripts/r119_ui_supervisor.py",
+    "scripts/r119_vite_config.mjs.template",
+    "scripts/tests/test_r119_ui_supervisor.py",
+    "frontend/src/api/intervention.ts",
+    "frontend/src/views/InterventionCases.vue",
+    "frontend/src/utils/interventionPresentation.ts",
+    "frontend/src/i18n/vi.ts",
+    "frontend/src/i18n/en.ts",
+    "frontend/src/__tests__/intervention-ui.test.ts",
+    "docs/reviews/R119_*.md",
+    "docs/reviews/probes/r119_root/**",
+    "docs/reviews/probes/r119_worker/**",
+    "docs/work_orders/CCMAI_RUNTIME_119_CURRENT_UI_PROOF.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md"
+  ],
+  "prohibitedEffects": [
+    "Old runner/campaign execution or old seed/budget/evidence reset; existing fixture/container/network/volume writes or restart",
+    "Production/customer/installed DB or live channel access; provider/key/secret access or calls; real AI/governance claim from synthetic fixture",
+    "Backend product changes except new isolated test harness; dependency/gate/Core edits; install/download/daemon restart/alternate browser stack",
+    "Any lifecycle/AI/data-mutation HTTP route or body; any API write except two exact synthetic auth login/logout total",
+    "Worker runtime start/commit/seed edits/self-review; push/merge/deploy/installed activation/full milestone claim"
+  ],
+  "executionBudget": {
+    "rootCompileInvocations": 2,
+    "workerPythonChecks": 2,
+    "rootPythonChecks": 1,
+    "conditionalWorkerFrontendChecks": 2,
+    "conditionalRootFrontendChecks": 2,
+    "sourceRepairRounds": 2,
+    "campaignStarts": 1,
+    "newFixtureStarts": 1,
+    "fixtureFinalStops": 1,
+    "backendStarts": 1,
+    "viteStarts": 1,
+    "productTabs": 1,
+    "authPosts": 2,
+    "caseActions": 0,
+    "providerCalls": 0,
+    "automaticRetries": 0,
+    "campaignSeconds": 1200
+  },
+  "ownerAuthorization": "Persistent owner authorizes Root roadmap continuation, independent review/commit and Luna Max/Sol Medium worker; next after R118 requests targeted actual UI proof. This fresh R119 local synthetic read-only authority does not reuse old slots or expand provider/secret access.",
+  "inheritedEvidence": {
+    "checkpoint": "dd60d8d04aad85facf38d81ec46fa2290dd62987",
+    "uiSource": "7f74a75f93671973bcfe55b5cb491076c0d2bdf9",
+    "sourceReview": "docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md",
+    "backend": "R117 bounded real/native accepted, 1of1 spent; no replay",
+    "qualifications": "R113 B07 bounded inherited; R114 terminal MISSING; B08 raster qualified; B09 unsupportedNOT_RUN; Dashboard3 historical failures"
+  },
+  "fixtureContract": {
+    "image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "name": "ccmai-r119-ui-20261018",
+    "database": "r119_fixture",
+    "network": "new dedicated bridge with explicit NAT and127.0.0.1 host binding; no egress confinement claim",
+    "volume": "new named exclusive same-name volume; preserve final exited container/network/volume",
+    "ownership": "immutable IDs+nonce labels+exclusive membership/mounts/ports; protected baseline actual before/after",
+    "data": "synthetic labeled source/proposals/history only; current active rev2 vs off-lineage rev3 last, no actual provider/history enactment"
+  },
+  "runtimeAdmission": "Committed seed before BUILD; independently reviewed helper/test/config and exact current handler test binary/source/frontend/Node/Docker pins committed before sole setup. Setup publishes exact IDs/port/DSN readiness; Root commits resource admission before backend/Vite/browser. New test-only fixture uses strict owned r119_fixture loopbackDSN before inherited m3FixtureStart compatibility; never runs old browser test or runner.",
+  "sourceRepairScope": "Only same-objective harness/test readiness or concrete R118 proposal/history wording findings within allowlist, max2 rounds; frontend checks conditional on actual source repair, not replay of accepted tests. No product backend redesign or executor activation.",
+  "stopCondition": "Any capability/source/resource/port/protected/process/receipt uncertainty stops product campaign and permits only identity-proven owned cleanup. No restart/reinstall/new stack/blind successor. Third repair without independent cause records REVIEW_COST_ESCALATION_REQUIRED.",
+  "claimScope": "Real browser/DOM/original screenshot proof of synthetic UI structure/wording/current proposal selection only. Original MIME/raster dimensions separate from CSSviewport; no resized mobile proof. B09 only if advertised supported offline control, currently unsupported. No AI governance/actual human processing/fullM3/FREEZE claim with missing proof.",
+  "baseCommit": "7d944e253ca849d4ea9aede420c2ca679f81c35c",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_119_CURRENT_UI_PROOF.md",
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "workOrderStatus": "DISPATCH_READY",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "OPEN",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ]
+}

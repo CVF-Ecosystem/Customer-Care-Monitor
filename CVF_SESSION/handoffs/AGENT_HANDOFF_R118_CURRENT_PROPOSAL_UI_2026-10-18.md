@@ -1,6 +1,6 @@
 # R118 current proposal UI handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 
@@ -26,3 +26,5 @@ BUILD acknowledgment before source edit: Sol Medium /root/r118_ui_worker rehydra
 Root REVIEW acknowledgment after worker return: canonical summary/state/handoff/status/index reread; R2/liveYES/Core fa34ed49 and inherited doctor27PASS/pinwarning; source-only independent role. Worker2of3 frontend checks used, Root2of2 used;24tests PASS and app typecheck PASS independently. Six hashes match, seed unchanged. No source repair round consumed; no product/provider/DB effects. Final buildCommit binding pending source commit.
 
 Final independent source/component REVIEW_PASS bound to 7f74a75f93671973bcfe55b5cb491076c0d2bdf9. Original command/probe bytes preserved in original_probe_bytes.json before Git text line-ending normalization; original readable logs retained. Staged diff --check reported trailing blank EOF lines in two raw Vitest stdout files; not a source finding, raw bytes intentionally retained. Earlier unqualified diff-clean statement applies tracked source at that time, not these subsequently staged raw logs. Root sequencing did not halt the source commit at that report; this disposition explicitly records it. No FREEZE/current-screen/runtime claim. Next authority must pin source/binary/fixture before effects.
+
+Successor R119 targeted synthetic current-UI proof: CVF_SESSION/handoffs/AGENT_HANDOFF_R119_CURRENT_UI_PROOF_2026-10-18.md. R118 accepted source7f74a75f and budgets unchanged; no current screen acceptance inherited.
