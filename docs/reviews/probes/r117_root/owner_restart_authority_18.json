@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "authorityKind": "EXPLICIT_HUMAN_POST_SHUTDOWN_CONTINUATION",
+  "trancheId": "CCMAI-RUNTIME-117",
+  "issuedAtUTC": "2026-10-17T17:57:25.847267+00:00",
+  "ownerInstruction": "do tôi tắt máy tính, cho phép chạy lại nếu cần thiết",
+  "ownerInstructionDateLocal": "2026-10-18",
+  "rootOwner": "Codex /root",
+  "parentSeed": "CVF_SESSION/authority/CCMAI-RUNTIME-117.json",
+  "parentSeedUnchanged": true,
+  "effectException": "Supersedes parent no-restart rule only for exact already-owned R117 fixture after owner-confirmed machine shutdown. No old R116 or other protected resources touched. Additional restart1 and exact-owned final stop1; original start1/cleanup1 remain spent.",
+  "containerId": "033e0151bb4805cce1ce6dc347ab79ab8275e016c8ace371cfda158297a2c352",
+  "volumeName": "ccmai-r117-root-20261017",
+  "networkId": "fe2271a8b533ec1ed3d3d09f1b561afcf6491c9353b246555ad3fd3518e5bab0",
+  "image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+  "additionalBudget": {
+    "ownedFixtureRestarts": 1,
+    "ownedFixtureFinalStops": 1,
+    "nativeReplays": 0,
+    "additionalProviderCalls": 0
+  },
+  "physicalProviderAuthority": "Reaffirm original R117 still-unattempted one-call grant under current explicit restart/resume; total max1 unchanged, actual0. No new physical slot or counter reset. R116/older slots unavailable.",
+  "providerGrantId": "CCMAI-RUNTIME-117-OWNER-NEW1-20261017",
+  "sourceAction": "Source-only operational helper in r117_worker; Root independent review before runtime. Product/supervisor/binaries unchanged; accepted native proofs inherited, no replay.",
+  "admission": "Commit this authority before helper BUILD/effects. Archive prior fixture/runtime/expiredlive draft and old cleanupHOLD, preserve originals. Verify exact ownership, source/binaries and current protected drift before start; accept only owner-explained default bridge replacement with equal protected containers/volumes/other networks. Record fresh operational baseline without overwriting historical evidence. Rebind actual port/fixture/runtime/live admission and commit before provider.",
+  "stop": "Stop at first restart/readiness/identity/unexplained inventory/provider uncertainty; no second restart, no install/daemon restart/alternate stack. One Alibaba call max only after valid live admission, then independent readback and exact-owned cleanup.",
+  "acceptedDefaultBridgeReplacement": {
+    "name": "bridge",
+    "oldId": "0d9f7d2dba52be2e98f8d20ade28956797e6950fecb9e6fea798e6d497d1d271",
+    "newId": "ee9a01565a47c6d046857ae6534a688143034693f7b379faeacd6a94ab97cbd2",
+    "evidence": "docs/reviews/probes/r117_root/protected_resource_drift_18.json",
+    "scope": "Only this old/new default bridge identity, owner shutdown explanation. No other protected delta admitted."
+  }
+}

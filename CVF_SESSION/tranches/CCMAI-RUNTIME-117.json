@@ -119,13 +119,18 @@
     "WORK_ORDER"
   ],
   "budgetUsed": {
-    "rootFocusedChecks": 1,
+    "rootFocusedChecks": 3,
     "workerGoChecks": 0,
     "workerPythonChecks": 3,
     "rootPythonChecks": 1,
     "fixtureStarts": 1,
-    "fixtureTeardowns": 0,
+    "fixtureTeardowns": 1,
     "physicalAlibabaCalls": 0
   },
-  "sourceRepairRoundsUsed": 0
+  "sourceRepairRoundsUsed": 0,
+  "ownerContinuationAuthority": "docs/reviews/probes/r117_root/owner_restart_authority_18.json",
+  "additionalOwnerBudgetUsed": {
+    "ownedFixtureRestarts": 0,
+    "ownedFixtureFinalStops": 0
+  }
 }

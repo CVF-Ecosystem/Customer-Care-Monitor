@@ -49,3 +49,7 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 | committed_range_closure | POST_MATERIAL_CLOSURE | reviewer | POST_MATERIAL_CLOSURE | R117 local range profile checks | BOUNDED_PATH_FAMILIES | commit-steward | CONTINUITY_COMMIT | continuity |
 
 Material-SHA marker:980f9563. Worker source-only BUILD; DB/live require Root committed admission.
+
+## Explicit owner shutdown continuation — 2026-10-18
+
+Owner confirms machine shutdown and explicitly permits rerun if necessary. Dispatcher supplement docs/reviews/probes/r117_root/owner_restart_authority_18.json grants exactly one restart of owned R117 container033e0151… and one additional final owned stop, superseding parent no-restart for that resource only. Original seed/start1/cleanup1/provider0 counters remain unchanged. Original cleanupHOLD/default-bridge replacement preserved; owner explanation is reported, selected Docker evidence independently observed. No native replay or product/supervisor source change; still max1 total R117 Alibaba physical call, current0, refreshed committed runtime/live pins required. No other resource restart or tool-stack repair. Source-only helper worker then Root independent review.

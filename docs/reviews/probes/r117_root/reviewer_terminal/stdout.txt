@@ -1,0 +1,1605 @@
+=== RUN   TestR116WaitDataNativeSyncWriterRace
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.549ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.601ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.623ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:23 [32m
+[0m[33m[0.530ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.084ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.738ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.762ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:23 [32m
+[0m[33m[0.535ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32m
+[0m[33m[1.636ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32m
+[0m[33m[1.644ms] [34;1m[rows:2][0m 
+SELECT
+	TABLE_NAME,
+	COLUMN_NAME,
+	INDEX_NAME,
+	NON_UNIQUE 
+FROM
+	information_schema.STATISTICS 
+WHERE
+	TABLE_SCHEMA = 'r116_fixture' 
+	AND TABLE_NAME = 'users' 
+ORDER BY
+	INDEX_NAME,
+	SEQ_IN_INDEX
+
+2026/10/17 20:53:23 [32m
+[0m[33m[0.547ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32m
+[0m[33m[1.821ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32m
+[0m[33m[1.054ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'r116_fixture' AND table_name = 'users' AND constraint_name = 'uni_users_email'
+
+2026/10/17 20:53:23 [32m
+[0m[33m[0.544ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32m
+[0m[33m[1.592ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32m
+[0m[33m[1.611ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'users' AND index_name = 'idx_users_email'
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.639ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.106ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.818ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'users' AND index_name = 'idx_users_email'
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.040ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.596ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.671ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'user_tenants' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:23 [32m
+[0m[33m[0.545ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.666ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.099ms] [34;1m[rows:-][0m SELECT * FROM `user_tenants` LIMIT 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.614ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'user_tenants' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.626ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.662ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.625ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'tenants' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:23 [32m
+[0m[33m[0.903ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.181ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.054ms] [34;1m[rows:-][0m SELECT * FROM `tenants` LIMIT 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.245ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'tenants' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:23 [32m
+[0m[33m[0.534ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32m
+[0m[33m[1.090ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32m
+[0m[33m[1.638ms] [34;1m[rows:2][0m 
+SELECT
+	TABLE_NAME,
+	COLUMN_NAME,
+	INDEX_NAME,
+	NON_UNIQUE 
+FROM
+	information_schema.STATISTICS 
+WHERE
+	TABLE_SCHEMA = 'r116_fixture' 
+	AND TABLE_NAME = 'tenants' 
+ORDER BY
+	INDEX_NAME,
+	SEQ_IN_INDEX
+
+2026/10/17 20:53:23 [32m
+[0m[33m[0.547ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32m
+[0m[33m[1.627ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32m
+[0m[33m[1.237ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'r116_fixture' AND table_name = 'tenants' AND constraint_name = 'uni_tenants_slug'
+
+2026/10/17 20:53:23 [32m
+[0m[33m[0.614ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32m
+[0m[33m[1.802ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32m
+[0m[33m[1.584ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'tenants' AND index_name = 'idx_tenants_slug'
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.082ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.159ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.598ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'tenants' AND index_name = 'idx_tenants_slug'
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.553ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.650ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.466ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'channels' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:23 [32m
+[0m[33m[0.550ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.647ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.096ms] [34;1m[rows:-][0m SELECT * FROM `channels` LIMIT 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.212ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'channels' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.557ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.134ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.493ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'r116_fixture' AND table_name = 'channels' AND constraint_name = 'fk_tenants_channels'
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.520ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.133ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.633ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'channels' AND index_name = 'idx_channel_tenant_active'
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.547ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.626ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.680ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'conversations' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:23 [32m
+[0m[33m[0.630ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.624ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.075ms] [34;1m[rows:-][0m SELECT * FROM `conversations` LIMIT 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.658ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'conversations' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.527ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.077ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.211ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'r116_fixture' AND table_name = 'conversations' AND constraint_name = 'fk_conversations_channel'
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.523ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.053ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.960ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'conversations' AND index_name = 'idx_conv_tenant_last_msg'
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.514ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.480ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.111ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'conversations' AND index_name = 'idx_conv_channel'
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.506ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.270ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.418ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'messages' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:23 [32m
+[0m[33m[0.734ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.058ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:23 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.118ms] [34;1m[rows:-][0m SELECT * FROM `messages` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.106ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'messages' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.526ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.637ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.609ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'r116_fixture' AND table_name = 'messages' AND constraint_name = 'fk_conversations_messages'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.655ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.605ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.064ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'messages' AND index_name = 'idx_msg_conv_time'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.570ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.071ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.611ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'jobs' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.546ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.696ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.473ms] [34;1m[rows:-][0m SELECT * FROM `jobs` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.864ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'jobs' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.576ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.669ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.732ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'r116_fixture' AND table_name = 'jobs' AND constraint_name = 'fk_jobs_tenant'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.550ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.150ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.653ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'jobs' AND index_name = 'idx_job_tenant_active'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.065ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.586ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.099ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'job_runs' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.076ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.015ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.336ms] [34;1m[rows:-][0m SELECT * FROM `job_runs` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.226ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'job_runs' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.556ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.127ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.961ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'r116_fixture' AND table_name = 'job_runs' AND constraint_name = 'fk_job_runs_job'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.530ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.177ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.127ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'job_runs' AND index_name = 'idx_jobrun_job_started'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.506ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.329ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.496ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'job_results' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.505ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.142ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.299ms] [34;1m[rows:-][0m SELECT * FROM `job_results` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.571ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'job_results' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.507ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.177ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.621ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'job_results' AND index_name = 'idx_result_run'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.791ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.071ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.659ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'job_results' AND index_name = 'idx_result_tenant_type'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.607ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.131ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.595ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'job_results' AND index_name = 'idx_result_tenant_conv'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.267ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.070ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.617ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'job_results' AND index_name = 'idx_job_results_analysis_snapshot_id'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.549ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.101ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.715ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'analysis_snapshots' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.071ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.099ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.066ms] [34;1m[rows:-][0m SELECT * FROM `analysis_snapshots` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.665ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'analysis_snapshots' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.534ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.642ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.980ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'analysis_snapshots' AND index_name = 'idx_snapshot_tenant_conv'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.525ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.224ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.592ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'analysis_snapshots' AND index_name = 'idx_snapshot_run_conv'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.542ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.637ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.105ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'analysis_snapshots' AND index_name = 'idx_analysis_snapshots_digest'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.524ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.094ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.670ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_budgets' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.780ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.683ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.165ms] [34;1m[rows:-][0m SELECT * FROM `intervention_budgets` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.080ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_budgets' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.140ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.632ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.589ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_budgets' AND index_name = 'uq_intervention_budget'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.550ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.673ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.593ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_attempts' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.702ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.659ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.144ms] [34;1m[rows:-][0m SELECT * FROM `intervention_attempts` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.196ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_attempts' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.523ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32m
+[0m[33m[2.403ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32m
+[0m[33m[2.200ms] [34;1m[rows:4][0m 
+SELECT
+	TABLE_NAME,
+	COLUMN_NAME,
+	INDEX_NAME,
+	NON_UNIQUE 
+FROM
+	information_schema.STATISTICS 
+WHERE
+	TABLE_SCHEMA = 'r116_fixture' 
+	AND TABLE_NAME = 'intervention_attempts' 
+ORDER BY
+	INDEX_NAME,
+	SEQ_IN_INDEX
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.561ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.677ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.099ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'r116_fixture' AND table_name = 'intervention_attempts' AND constraint_name = 'uni_intervention_attempts_execution_id'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.546ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.118ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.630ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_attempts' AND index_name = 'idx_intervention_attempts_execution_id'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.562ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.732ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.835ms] [34;1m[rows:4][0m 
+SELECT
+	TABLE_NAME,
+	COLUMN_NAME,
+	INDEX_NAME,
+	NON_UNIQUE 
+FROM
+	information_schema.STATISTICS 
+WHERE
+	TABLE_SCHEMA = 'r116_fixture' 
+	AND TABLE_NAME = 'intervention_attempts' 
+ORDER BY
+	INDEX_NAME,
+	SEQ_IN_INDEX
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.596ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.637ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32m
+[0m[33m[2.150ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'r116_fixture' AND table_name = 'intervention_attempts' AND constraint_name = 'uni_intervention_attempts_run_id'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.125ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32m
+[0m[33m[2.754ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32m
+[0m[33m[2.192ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_attempts' AND index_name = 'idx_intervention_attempts_run_id'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.087ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.193ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.722ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_attempts' AND index_name = 'idx_intervention_attempts_execution_id'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.121ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.694ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.243ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_attempts' AND index_name = 'idx_intervention_attempts_tenant_id'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.546ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.618ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.150ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_attempts' AND index_name = 'idx_intervention_attempts_run_id'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.077ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.232ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.200ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_cases' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.534ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.383ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.590ms] [34;1m[rows:-][0m SELECT * FROM `intervention_cases` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.240ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_cases' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.553ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.600ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.711ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_cases' AND index_name = 'idx_intervention_queue'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.542ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.682ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.725ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_cases' AND index_name = 'uq_intervention_case'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.557ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.739ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.176ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_proposals' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.070ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.683ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.647ms] [34;1m[rows:-][0m SELECT * FROM `intervention_proposals` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.633ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_proposals' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.550ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.695ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.772ms] [34;1m[rows:5][0m 
+SELECT
+	TABLE_NAME,
+	COLUMN_NAME,
+	INDEX_NAME,
+	NON_UNIQUE 
+FROM
+	information_schema.STATISTICS 
+WHERE
+	TABLE_SCHEMA = 'r116_fixture' 
+	AND TABLE_NAME = 'intervention_proposals' 
+ORDER BY
+	INDEX_NAME,
+	SEQ_IN_INDEX
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.133ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.093ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.120ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'r116_fixture' AND table_name = 'intervention_proposals' AND constraint_name = 'uni_intervention_proposals_run_id'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.060ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32m
+[0m[33m[2.221ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.688ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_proposals' AND index_name = 'idx_intervention_proposals_run_id'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.563ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.218ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.203ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_proposals' AND index_name = 'idx_intervention_proposals_tenant_id'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.119ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.652ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.657ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_proposals' AND index_name = 'uq_intervention_proposal_revision'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.574ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.625ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.697ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_proposals' AND index_name = 'idx_intervention_proposals_run_id'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.916ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.584ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.000ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_receipts' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.140ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.092ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.745ms] [34;1m[rows:-][0m SELECT * FROM `intervention_receipts` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.228ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_receipts' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.558ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.682ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.652ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_receipts' AND index_name = 'idx_intervention_receipts_tenant_id'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.589ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.383ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.171ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_receipts' AND index_name = 'idx_intervention_receipts_case_id'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.569ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.866ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.087ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_human_events' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.518ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.393ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.377ms] [34;1m[rows:-][0m SELECT * FROM `intervention_human_events` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.402ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_human_events' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.513ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.481ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.274ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_human_events' AND index_name = 'idx_intervention_human_events_tenant_id'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.136ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.960ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.454ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_human_events' AND index_name = 'uq_intervention_human_version'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.509ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.282ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.609ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_data_revisions' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.521ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.066ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.093ms] [34;1m[rows:-][0m SELECT * FROM `intervention_data_revisions` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.368ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_data_revisions' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.132ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.820ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.158ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_data_revisions' AND index_name = 'idx_data_revision_case'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.555ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.668ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.631ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_rerun_requests' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.575ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.118ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.200ms] [34;1m[rows:-][0m SELECT * FROM `intervention_rerun_requests` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.298ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_rerun_requests' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.534ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.643ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.129ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_rerun_requests' AND index_name = 'uq_rerun_request_key'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.070ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.667ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.745ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_rerun_requests' AND index_name = 'uq_rerun_revision'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.559ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.657ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.699ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_rerun_requests' AND index_name = 'idx_rerun_request_case'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.516ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.251ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.484ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_execution_grants' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.514ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.473ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.505ms] [34;1m[rows:-][0m SELECT * FROM `intervention_execution_grants` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.750ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_execution_grants' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.504ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.132ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.526ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_execution_grants' AND index_name = 'uq_intervention_grant_request'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.505ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.368ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.672ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_executions' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.545ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.112ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.112ms] [34;1m[rows:-][0m SELECT * FROM `intervention_executions` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.631ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_executions' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.779ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.710ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.662ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_executions' AND index_name = 'uq_intervention_execution_request'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.539ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.620ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.109ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_executions' AND index_name = 'uq_intervention_execution_run'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.568ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.620ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.182ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'intervention_executions' AND index_name = 'uq_intervention_execution_grant'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.522ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.065ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.668ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'app_settings' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.570ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.809ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.109ms] [34;1m[rows:-][0m SELECT * FROM `app_settings` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.208ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'app_settings' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.084ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.303ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.641ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'app_settings' AND index_name = 'idx_setting_tenant_key'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.553ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.049ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.820ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'notification_logs' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.507ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.287ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.101ms] [34;1m[rows:-][0m SELECT * FROM `notification_logs` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.601ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'notification_logs' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.093ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.060ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.124ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'notification_logs' AND index_name = 'idx_notiflog_tenant_sent'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.096ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.089ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.236ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'notification_logs' AND index_name = 'idx_notiflog_delivery_output'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.552ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.073ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.178ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'notification_delivery_manifests' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.546ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.689ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.832ms] [34;1m[rows:-][0m SELECT * FROM `notification_delivery_manifests` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.678ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'notification_delivery_manifests' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.527ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.979ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32m
+[0m[33m[2.241ms] [34;1m[rows:3][0m 
+SELECT
+	TABLE_NAME,
+	COLUMN_NAME,
+	INDEX_NAME,
+	NON_UNIQUE 
+FROM
+	information_schema.STATISTICS 
+WHERE
+	TABLE_SCHEMA = 'r116_fixture' 
+	AND TABLE_NAME = 'notification_delivery_manifests' 
+ORDER BY
+	INDEX_NAME,
+	SEQ_IN_INDEX
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.554ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.186ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32m
+[0m[33m[2.247ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'r116_fixture' AND table_name = 'notification_delivery_manifests' AND constraint_name = 'uni_notification_delivery_manifests_job_run_id'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.619ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.094ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.692ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'notification_delivery_manifests' AND index_name = 'uq_delivery_manifest_run'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.577ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.062ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.285ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'notification_delivery_manifests' AND index_name = 'idx_delivery_manifest_tenant_run'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.541ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.127ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.657ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'notification_delivery_manifests' AND index_name = 'uq_delivery_manifest_run'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.554ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.653ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.820ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'notification_delivery_receipts' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.654ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.640ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.094ms] [34;1m[rows:-][0m SELECT * FROM `notification_delivery_receipts` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.708ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'notification_delivery_receipts' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.541ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.706ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.602ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'notification_delivery_receipts' AND index_name = 'idx_delivery_receipt_tenant_run'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.574ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.711ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.641ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'notification_delivery_receipts' AND index_name = 'uq_delivery_receipt_run_output'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.522ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.581ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.569ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'notification_delivery_receipts' AND index_name = 'idx_delivery_receipt_run_status'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.518ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.067ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.104ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'ai_usage_logs' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.512ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.533ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.074ms] [34;1m[rows:-][0m SELECT * FROM `ai_usage_logs` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.120ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'ai_usage_logs' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.102ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.669ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.148ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'ai_usage_logs' AND index_name = 'idx_aiusage_tenant_created'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.514ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.075ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.664ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'o_auth_clients' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.185ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.663ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.678ms] [34;1m[rows:-][0m SELECT * FROM `o_auth_clients` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.648ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'o_auth_clients' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.540ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.614ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.680ms] [34;1m[rows:2][0m 
+SELECT
+	TABLE_NAME,
+	COLUMN_NAME,
+	INDEX_NAME,
+	NON_UNIQUE 
+FROM
+	information_schema.STATISTICS 
+WHERE
+	TABLE_SCHEMA = 'r116_fixture' 
+	AND TABLE_NAME = 'o_auth_clients' 
+ORDER BY
+	INDEX_NAME,
+	SEQ_IN_INDEX
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.101ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.626ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.593ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'r116_fixture' AND table_name = 'o_auth_clients' AND constraint_name = 'uni_o_auth_clients_client_id'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.523ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.564ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.863ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'o_auth_clients' AND index_name = 'idx_o_auth_clients_client_id'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.514ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.532ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.315ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'o_auth_clients' AND index_name = 'idx_o_auth_clients_client_id'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.000ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.269ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.405ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'o_auth_authorization_codes' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.747ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.246ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.035ms] [34;1m[rows:-][0m SELECT * FROM `o_auth_authorization_codes` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.707ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'o_auth_authorization_codes' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.567ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.731ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32m
+[0m[33m[2.879ms] [34;1m[rows:4][0m 
+SELECT
+	TABLE_NAME,
+	COLUMN_NAME,
+	INDEX_NAME,
+	NON_UNIQUE 
+FROM
+	information_schema.STATISTICS 
+WHERE
+	TABLE_SCHEMA = 'r116_fixture' 
+	AND TABLE_NAME = 'o_auth_authorization_codes' 
+ORDER BY
+	INDEX_NAME,
+	SEQ_IN_INDEX
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.557ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32m
+[0m[33m[2.627ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32m
+[0m[33m[2.224ms] [34;1m[rows:-][0m SELECT count(*) FROM INFORMATION_SCHEMA.table_constraints WHERE constraint_schema = 'r116_fixture' AND table_name = 'o_auth_authorization_codes' AND constraint_name = 'uni_o_auth_authorization_codes_code'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.086ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.086ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.766ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'o_auth_authorization_codes' AND index_name = 'idx_o_auth_authorization_codes_code'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.591ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.654ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.087ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'o_auth_authorization_codes' AND index_name = 'idx_o_auth_authorization_codes_code'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.121ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.949ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.680ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'o_auth_authorization_codes' AND index_name = 'idx_o_auth_authorization_codes_client_id'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.531ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.695ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.746ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'o_auth_authorization_codes' AND index_name = 'idx_o_auth_authorization_codes_expires_at'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.605ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.140ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.752ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'o_auth_tokens' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[1.116ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.107ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.142ms] [34;1m[rows:-][0m SELECT * FROM `o_auth_tokens` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.243ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'o_auth_tokens' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.533ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.675ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.728ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'o_auth_tokens' AND index_name = 'idx_oauth_access'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.586ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.146ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.709ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r116_fixture' AND table_name = 'activity_logs' AND table_type = 'BASE TABLE'
+
+2026/10/17 20:53:24 [32m
+[0m[33m[0.582ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.706ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.081ms] [34;1m[rows:-][0m SELECT * FROM `activity_logs` LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.592ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'r116_fixture' AND table_name = 'activity_logs' ORDER BY ORDINAL_POSITION
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.095ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.728ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.646ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'activity_logs' AND index_name = 'idx_activity_tenant_created'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[0.562ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.652ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.700ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'activity_logs' AND index_name = 'idx_activity_logs_action'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:103
+[0m[33m[0.590ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:103
+[0m[33m[1.157ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:103
+[0m[33m[1.737ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'channels' AND index_name = 'uq_channel_tenant_type_ext'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:103
+[0m[33m[0.571ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:103
+[0m[33m[1.715ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:103
+[0m[33m[1.556ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'conversations' AND index_name = 'uq_conv_tenant_channel_ext'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:103
+[0m[33m[1.079ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:103
+[0m[33m[1.613ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r116_fixture%' ORDER BY SCHEMA_NAME='r116_fixture' DESC,SCHEMA_NAME limit 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:103
+[0m[33m[2.166ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r116_fixture' AND table_name = 'messages' AND index_name = 'uq_msg_tenant_conv_ext'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:139
+[0m[33m[1.612ms] [34;1m[rows:0][0m UPDATE channels c JOIN tenants t ON t.id = c.tenant_id
+			SET c.is_demo_fixture = TRUE
+			WHERE c.is_demo_fixture = FALSE
+			  AND ((BINARY c.channel_type = 'zalo_oa' AND BINARY c.external_id = 'demo-zalo-oa')
+			    OR (BINARY c.channel_type = 'facebook' AND BINARY c.external_id = 'demo-fb-page'))
+			  AND c.credentials_encrypted = '{"demo":true}'
+			  AND JSON_EXTRACT(t.settings, '$.is_demo_data') = TRUE
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:148
+[0m[33m[0.557ms] [34;1m[rows:0][0m UPDATE channels
+			SET last_sync_status = '', last_sync_error = ''
+			WHERE is_demo_fixture = TRUE
+			  AND last_sync_at IS NULL
+			  AND BINARY last_sync_status = 'error'
+			  AND BINARY last_sync_error LIKE 'decrypt failed:%'
+			  AND sync_run_id IS NULL
+			  AND sync_lease_until IS NULL
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:84
+[0m[33m[6.200ms] [34;1m[rows:1][0m INSERT INTO `tenants` (`id`,`name`,`slug`,`settings`,`created_at`,`updated_at`) VALUES ('5a818cb0-22c7-4177-96b9-b802bb7027a9','R116 sync fixture','r116-sync-5a818cb0-22c7-4177-96b9-b802bb7027a9','{}','2026-10-17 13:53:24.541','2026-10-17 13:53:24.541')
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:84
+[0m[33m[7.238ms] [34;1m[rows:1][0m INSERT INTO `users` (`id`,`email`,`password_hash`,`name`,`is_admin`,`token_version`,`language`,`created_at`,`updated_at`) VALUES ('d9aa3e24-35b0-4072-b5ba-63cde46e5177','d9aa3e24-35b0-4072-b5ba-63cde46e5177@example.invalid','synthetic','R116 owner',false,0,'vi','2026-10-17 13:53:24.541','2026-10-17 13:53:24.541')
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:84
+[0m[33m[5.485ms] [34;1m[rows:1][0m INSERT INTO `user_tenants` (`user_id`,`tenant_id`,`role`,`permissions`) VALUES ('d9aa3e24-35b0-4072-b5ba-63cde46e5177','5a818cb0-22c7-4177-96b9-b802bb7027a9','owner','{}')
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:84
+[0m[33m[5.457ms] [34;1m[rows:1][0m INSERT INTO `channels` (`id`,`tenant_id`,`channel_type`,`name`,`external_id`,`credentials_encrypted`,`is_active`,`last_sync_at`,`last_sync_status`,`last_sync_error`,`metadata`,`created_at`,`updated_at`,`sync_run_id`,`sync_lease_until`,`is_demo_fixture`) VALUES ('f26cd636-53a6-4852-98a8-a42ad3003d23','5a818cb0-22c7-4177-96b9-b802bb7027a9','pancake','synthetic','f26cd636-53a6-4852-98a8-a42ad3003d23','synthetic',true,NULL,'syncing','','{}','2026-10-17 13:53:24.541','2026-10-17 13:53:24.541','3a2b92dd-f41e-499a-9981-d588b7a9bbfd',NULL,true)
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:84
+[0m[33m[7.041ms] [34;1m[rows:1][0m INSERT INTO `conversations` (`id`,`tenant_id`,`channel_id`,`external_conversation_id`,`external_user_id`,`customer_name`,`last_message_at`,`message_count`,`metadata`,`created_at`,`updated_at`) VALUES ('600a77d3-01ad-435f-a951-000ab9e8c7c9','5a818cb0-22c7-4177-96b9-b802bb7027a9','f26cd636-53a6-4852-98a8-a42ad3003d23','600a77d3-01ad-435f-a951-000ab9e8c7c9','','',NULL,0,'{}','2026-10-17 13:53:24.541','2026-10-17 13:53:24.541')
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:84
+[0m[33m[4.973ms] [34;1m[rows:1][0m INSERT INTO `jobs` (`id`,`tenant_id`,`name`,`description`,`job_type`,`input_channel_ids`,`rules_content`,`rules_config`,`skip_conditions`,`ai_provider`,`ai_model`,`outputs`,`output_schedule`,`output_cron`,`output_at`,`schedule_type`,`schedule_cron`,`is_active`,`last_run_at`,`last_run_status`,`created_at`,`updated_at`) VALUES ('8fa50a01-d2a9-4630-81d7-3661ba95b66a','5a818cb0-22c7-4177-96b9-b802bb7027a9','R116 sync race','','intervention','["f26cd636-53a6-4852-98a8-a42ad3003d23"]','','{}','','claude','','[]','instant','',NULL,'manual','',true,NULL,'','2026-10-17 13:53:24.541','2026-10-17 13:53:24.541')
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:84
+[0m[33m[5.962ms] [34;1m[rows:1][0m INSERT INTO `job_runs` (`id`,`job_id`,`tenant_id`,`started_at`,`finished_at`,`status`,`summary`,`error_message`,`created_at`) VALUES ('b57ebc01-c5ed-459e-9952-cc1dbfa08ade','8fa50a01-d2a9-4630-81d7-3661ba95b66a','5a818cb0-22c7-4177-96b9-b802bb7027a9','2026-10-17 13:53:24.541','2026-10-17 13:53:24.541','error','{}','','2026-10-17 13:53:24.541')
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:90
+[0m[33m[5.561ms] [34;1m[rows:1][0m INSERT INTO `analysis_snapshots` (`id`,`tenant_id`,`job_run_id`,`conversation_id`,`schema_version`,`digest`,`coverage`,`coverage_reasons`,`message_count`,`manifest`,`created_at`) VALUES ('c8d92dae-c286-4234-88a7-96c8c409389a','5a818cb0-22c7-4177-96b9-b802bb7027a9','b57ebc01-c5ed-459e-9952-cc1dbfa08ade','600a77d3-01ad-435f-a951-000ab9e8c7c9','ccma.snapshot.v1','e9ec3e19ea979906b5891f35bba84f33fe87025db965b20779bc89ab3d3f164c','empty','["NO_MESSAGES"]',0,'{"schema_version":"ccma.snapshot.v1","tenant_id":"5a818cb0-22c7-4177-96b9-b802bb7027a9","conversation_id":"600a77d3-01ad-435f-a951-000ab9e8c7c9","coverage":"empty","coverage_reasons":["NO_MESSAGES"],"omitted_earlier_messages":0,"messages":[]}','2026-10-17 13:53:24.583')
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:91
+[0m[33m[6.405ms] [34;1m[rows:1][0m INSERT INTO `intervention_cases` (`id`,`active_execution_id`,`active_proposal_id`,`tenant_id`,`job_id`,`run_id`,`conversation_id`,`use_case`,`version`,`snapshot_id`,`snapshot_digest`,`eligibility`,`execution`,`disposition`,`work_state`,`reason_code`,`next_action`,`data_owner_id`,`assignee_id`,`due_at`,`human_assessment`,`human_explanation`,`human_next_action`,`outcome_text`,`actor_id`,`policy_version`,`prompt_version`,`schema_version`,`created_at`,`updated_at`) VALUES ('8416659a-9e5c-47c8-ad86-a84079dba6d0',NULL,NULL,'5a818cb0-22c7-4177-96b9-b802bb7027a9','8fa50a01-d2a9-4630-81d7-3661ba95b66a','b57ebc01-c5ed-459e-9952-cc1dbfa08ade','600a77d3-01ad-435f-a951-000ab9e8c7c9','pancake_complaint_wait',1,'c8d92dae-c286-4234-88a7-96c8c409389a','e9ec3e19ea979906b5891f35bba84f33fe87025db965b20779bc89ab3d3f164c','WAIT_DATA','NOT_RUN','NOT_CREATED','WAITING_ON_DATA','SOURCE_INCOMPLETE','',NULL,NULL,NULL,'','','','','d9aa3e24-35b0-4072-b5ba-63cde46e5177','ccma.synthetic.intervention.v1','r116-sync','ccma.intervention.v1','2026-10-17 13:53:24.541','2026-10-17 13:53:24.541')
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:97
+[0m[33m[2.180ms] [34;1m[rows:1][0m SELECT * FROM `messages` WHERE tenant_id = '5a818cb0-22c7-4177-96b9-b802bb7027a9' AND conversation_id = '600a77d3-01ad-435f-a951-000ab9e8c7c9' AND external_message_id = 'c2f41b83-ff6e-4599-b131-36235decfb2d' LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:103
+[0m[33m[6.588ms] [34;1m[rows:1][0m INSERT INTO `intervention_execution_grants` (`id`,`tenant_id`,`job_id`,`case_id`,`request_id`,`data_revision_id`,`actor_id`,`provider`,`model`,`policy_version`,`prompt_version`,`config_ref`,`issuer_id`,`evidence_ref`,`deadline`,`state`,`consumed_execution_id`,`created_at`) VALUES ('a528d22b-c17b-433f-9bda-82965a5bbc9a','5a818cb0-22c7-4177-96b9-b802bb7027a9','8fa50a01-d2a9-4630-81d7-3661ba95b66a','8416659a-9e5c-47c8-ad86-a84079dba6d0','0a11f214-7205-4182-a062-2a7ea535ca75','b43c11d4-7bb3-4f26-836f-5da6b7c55fdf','d9aa3e24-35b0-4072-b5ba-63cde46e5177','alibaba_maas','qwen3.7-flash','ccma.synthetic.intervention.v1','r116-sync','r116-sync','d9aa3e24-35b0-4072-b5ba-63cde46e5177','r116-synthetic','2026-10-17 13:58:24.541','ISSUED',NULL,'2026-10-17 13:53:24.541')
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:103
+[0m[33m[6.239ms] [34;1m[rows:1][0m INSERT INTO `intervention_budgets` (`id`,`tenant_id`,`job_id`,`cap`,`consumed`,`created_at`) VALUES ('0b49e57d-f356-4ec7-afea-678a3ccb78f5','5a818cb0-22c7-4177-96b9-b802bb7027a9','8fa50a01-d2a9-4630-81d7-3661ba95b66a',1,0,'2026-10-17 13:53:24.541')
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:117
+[0m[33m[1.703ms] [34;1m[rows:1][0m SELECT * FROM `intervention_executions` WHERE id = 'bbed1f29-6743-465b-8108-35967785f961' LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention.go:397
+[0m[33m[10.008ms] [34;1m[rows:1][0m UPDATE `intervention_attempts` SET `input_tokens`=20,`input_usage_presence`='known',`output_tokens`=10,`output_usage_presence`='known',`response_model`='qwen3.7-flash',`state`='RESPONSE_RECEIVED',`usage_state`='KNOWN' WHERE id = '1695b9a6-03e1-4f76-acfc-407907a723a9' AND state = 'CONSUMED'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:117
+[0m[33m[2.134ms] [34;1m[rows:1][0m SELECT * FROM `intervention_executions` WHERE id = 'bbed1f29-6743-465b-8108-35967785f961' AND `intervention_executions`.`id` = 'bbed1f29-6743-465b-8108-35967785f961' LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:117
+[0m[33m[2.000ms] [34;1m[rows:1][0m SELECT * FROM `intervention_executions` WHERE id = 'bbed1f29-6743-465b-8108-35967785f961' AND `intervention_executions`.`id` = 'bbed1f29-6743-465b-8108-35967785f961' LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:117
+[0m[33m[2.526ms] [34;1m[rows:1][0m SELECT * FROM `intervention_executions` WHERE id = 'bbed1f29-6743-465b-8108-35967785f961' AND `intervention_executions`.`id` = 'bbed1f29-6743-465b-8108-35967785f961' LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:120
+[0m[33m[2.217ms] [34;1m[rows:1][0m SELECT count(*) FROM `intervention_proposals` WHERE tenant_id = '5a818cb0-22c7-4177-96b9-b802bb7027a9'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:122
+[0m[33m[1.611ms] [34;1m[rows:1][0m SELECT * FROM `intervention_budgets` WHERE tenant_id = '5a818cb0-22c7-4177-96b9-b802bb7027a9' AND job_id = '8fa50a01-d2a9-4630-81d7-3661ba95b66a' LIMIT 1
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:71
+[0m[33m[5.528ms] [34;1m[rows:1][0m DELETE FROM `intervention_receipts` WHERE tenant_id = '5a818cb0-22c7-4177-96b9-b802bb7027a9'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:71
+[0m[33m[3.379ms] [34;1m[rows:0][0m DELETE FROM `intervention_proposals` WHERE tenant_id = '5a818cb0-22c7-4177-96b9-b802bb7027a9'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:71
+[0m[33m[6.103ms] [34;1m[rows:1][0m DELETE FROM `intervention_attempts` WHERE tenant_id = '5a818cb0-22c7-4177-96b9-b802bb7027a9'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:71
+[0m[33m[7.271ms] [34;1m[rows:1][0m DELETE FROM `intervention_executions` WHERE tenant_id = '5a818cb0-22c7-4177-96b9-b802bb7027a9'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:71
+[0m[33m[5.108ms] [34;1m[rows:1][0m DELETE FROM `intervention_execution_grants` WHERE tenant_id = '5a818cb0-22c7-4177-96b9-b802bb7027a9'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:71
+[0m[33m[5.564ms] [34;1m[rows:1][0m DELETE FROM `intervention_budgets` WHERE tenant_id = '5a818cb0-22c7-4177-96b9-b802bb7027a9'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:71
+[0m[33m[5.742ms] [34;1m[rows:1][0m DELETE FROM `intervention_rerun_requests` WHERE tenant_id = '5a818cb0-22c7-4177-96b9-b802bb7027a9'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:71
+[0m[33m[4.587ms] [34;1m[rows:1][0m DELETE FROM `intervention_data_revisions` WHERE tenant_id = '5a818cb0-22c7-4177-96b9-b802bb7027a9'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:71
+[0m[33m[6.745ms] [34;1m[rows:2][0m DELETE FROM `intervention_human_events` WHERE tenant_id = '5a818cb0-22c7-4177-96b9-b802bb7027a9'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:71
+[0m[33m[6.345ms] [34;1m[rows:1][0m DELETE FROM `intervention_cases` WHERE tenant_id = '5a818cb0-22c7-4177-96b9-b802bb7027a9'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:71
+[0m[33m[5.003ms] [34;1m[rows:2][0m DELETE FROM `analysis_snapshots` WHERE tenant_id = '5a818cb0-22c7-4177-96b9-b802bb7027a9'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:71
+[0m[33m[6.091ms] [34;1m[rows:2][0m DELETE FROM `job_runs` WHERE tenant_id = '5a818cb0-22c7-4177-96b9-b802bb7027a9'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:71
+[0m[33m[6.216ms] [34;1m[rows:1][0m DELETE FROM `messages` WHERE tenant_id = '5a818cb0-22c7-4177-96b9-b802bb7027a9'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:71
+[0m[33m[6.042ms] [34;1m[rows:1][0m DELETE FROM `conversations` WHERE tenant_id = '5a818cb0-22c7-4177-96b9-b802bb7027a9'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:71
+[0m[33m[6.252ms] [34;1m[rows:1][0m DELETE FROM `jobs` WHERE tenant_id = '5a818cb0-22c7-4177-96b9-b802bb7027a9'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:71
+[0m[33m[5.741ms] [34;1m[rows:1][0m DELETE FROM `channels` WHERE tenant_id = '5a818cb0-22c7-4177-96b9-b802bb7027a9'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:71
+[0m[33m[5.198ms] [34;1m[rows:1][0m DELETE FROM `user_tenants` WHERE tenant_id = '5a818cb0-22c7-4177-96b9-b802bb7027a9'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:73
+[0m[33m[7.139ms] [34;1m[rows:1][0m DELETE FROM `tenants` WHERE id = '5a818cb0-22c7-4177-96b9-b802bb7027a9'
+
+2026/10/17 20:53:24 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/engine/intervention_waitdata_executor_test.go:74
+[0m[33m[6.434ms] [34;1m[rows:1][0m DELETE FROM `users` WHERE id = 'd9aa3e24-35b0-4072-b5ba-63cde46e5177'
+--- PASS: TestR116WaitDataNativeSyncWriterRace (1.08s)
+PASS

@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "--config",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r117_execution\\docker-cli-config",
+    "ps",
+    "-aq",
+    "--no-trunc",
+    "--filter",
+    "volume=ccmai-r117-root-20261017"
+  ],
+  "startedAt": "2026-10-17T17:53:39.729017+00:00",
+  "timeoutSeconds": 15
+}

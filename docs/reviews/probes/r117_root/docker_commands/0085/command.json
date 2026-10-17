@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "--config",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r117_execution\\docker-cli-config",
+    "inspect",
+    "--format",
+    "{\"Id\":{{json .Id}},\"Status\":{{json .State.Status}},\"ExitCode\":{{json .State.ExitCode}},\"OOMKilled\":{{json .State.OOMKilled}},\"StartedAt\":{{json .State.StartedAt}},\"FinishedAt\":{{json .State.FinishedAt}},\"Error\":{{json .State.Error}}}",
+    "033e0151bb4805cce1ce6dc347ab79ab8275e016c8ace371cfda158297a2c352"
+  ],
+  "startedAt": "2026-10-17T17:53:59.219341+00:00",
+  "timeoutSeconds": 15
+}

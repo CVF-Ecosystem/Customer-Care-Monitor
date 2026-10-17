@@ -2885,8 +2885,9 @@
     "freeze": "OPEN",
     "sourceCommit": "8aafa0ce",
     "fixture": "READY_OWNED_LOOPBACK",
-    "native": "NOT_RUN",
-    "live": "NOT_RUN",
-    "providerCalls": 0
+    "native": "HANDLERS11TOP11NESTED_ENGINE1_PASS_NOSKIP",
+    "live": "ADMISSION_PREPARED_NOT_RUN",
+    "providerCalls": 0,
+    "rootFocusedChecks": 3
   }
 }
