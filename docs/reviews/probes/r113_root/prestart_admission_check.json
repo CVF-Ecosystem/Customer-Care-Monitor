@@ -1,0 +1,12 @@
+{
+  "atUTC": "2026-10-17T02:44:10.771185+00:00",
+  "result": "COMMITTED_ADMISSION_VERIFIED",
+  "head": "0a26662386ed2d3c040433a8e81398a80b481048",
+  "exclusiveRuntimeRoot": "ABSENT",
+  "runtimeStarts": 0,
+  "initialHolds": [
+    "Admission rawCRLF/GitLF mismatch corrected using committedLF bytes",
+    "Git stat cache refreshed via git add --renormalize; staged diff empty"
+  ],
+  "inspectNote": "inspect.runtimeAdmissionCommitted hardcoded false; actual committed source/evidence/seed/order/binary guards passed"
+}

@@ -1,0 +1,17 @@
+{
+  "atUTC": "2026-10-17T03:05:53.086135+00:00",
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "scripts/tests",
+    "-p",
+    "test_cvf_downstream_gate*.py"
+  ],
+  "exitCode": 0,
+  "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderrSha256": "c01b8ac2c4c9828f44aec291f314d998555455fafe671ced4665f2d7d356d2db"
+}

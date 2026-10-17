@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "x-roadmapTracking": {
     "updatedAt": "2026-10-17",
-    "status": "M3_PARTIAL_HISTORICAL_UI_REOPEN_FAILED",
+    "status": "M3_CURRENT_UI_PARTIAL_R113_CHANGES_REQUIRED",
     "currentCheckpoint": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
     "stages": {
       "S0": "PARTIAL_LIVE_BASELINE_OPEN",
@@ -23,7 +23,8 @@
       "M5 release/portable operations"
     ],
     "currentBlockers": [
-      "Remaining current UI B07/B08/wording evidence under fresh finite R113; B09 unsupported NOT_RUN",
+      "R113 current wording onboarding AIProvider/mobile clipping OPEN; B08CSS390x844 observed but screenshot raster qualified; B09unsupportedNOT_RUN",
+      "Original R113 supervisor terminal/cleanup receipt missing; independent Root final state corroborated",
       "Three inherited Dashboard failures; full suite not green",
       "Actual WAIT_DATA AI rerun executor and fullM2/M3/pilot/release OPEN"
     ],
@@ -31,14 +32,14 @@
     "eta": "NOT_ESTABLISHED",
     "deliveryRoadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
     "currentMilestone": "M3",
-    "milestoneAcceptance": "LOCAL_NATIVE_ACCEPTANCE_PARTIAL_HISTORICAL_BROWSER_FULL_UI_OPEN",
+    "milestoneAcceptance": "B07_UI_ACCEPTED_B08_QUALIFIED_ONBOARDING_WORDING_OPEN",
     "deliveryRoadmapPublication": "d72de76984e4aad9c208cc82e6093578797b5340",
     "m1BusinessPilotAcceptance": "OPEN",
     "currentPublication": "LOCAL_ONLY_NOT_PUSHED"
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "R094 bounded M2 source/local manual synthetic intervention prototype independently reviewed: authenticated route, snapshot evidence, monotonic call admission, queue/detail and failure handling; real provider0, default app disabled, full M2/M3/pilot OPEN. docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
@@ -2826,11 +2827,19 @@
     "newProductAuthority": "NONE"
   },
   "x-r113Current": {
-    "status": "BUILD",
+    "status": "CHANGES_REQUIRED",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_113_REMAINING_UI.md",
     "handoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R113_REMAINING_UI_2026-10-17.md",
-    "nextAction": "CCMAI-RUNTIME-113 BUILD source0622d185 independently accepted; exact committed runtime admission then sole new113start by Luna supervisor, Root integrated browser B07/B08/current wording; B09 unsupported NOT_RUN. Budgets fixture1/backend1/Vite1/allPOST8/1200sec/retry0, no lifecycle replay/old-budget reuse/provider/push/deploy. Stop on runtime/browser failure and review owned cleanup; fullM2/M3/pilot/release OPEN, accounts parked.",
+    "nextAction": "CCMAI-RUNTIME-113 CHANGES_REQUIRED: B07 bounded reader UI-controls PASS; B08 observedCSS390x844 but raster/layout qualified, B09 unsupported NOT_RUN; onboarding AIProvider wording/mobile clipping OPEN. Sole campaign spent, UIauth6/8 lifecycle0/provider0, no113retry or old-slot reuse. Root final fixture exited/protected baseline equal and recorded PIDs/listeners absent; original supervisor cleanup/exit MISSING, cause unknown. Next bounded source-only onboarding repair SPEC/workorder plus fresh exact changed-source/binary/capture admission before any runtime; no generic tool repair/lifecycle replay. FullM2/M3/pilot/release OPEN,R102local backend only,Facebook/ZaloOA parked; no FREEZE/push/merge/deploy.",
     "uiSource": "a28cdd0ac9ad1c9d1fd30ced6cf627dd62a56ba2",
-    "b09": "NOT_RUN_UNSUPPORTED_OFFLINE_CONTROL"
+    "b09": "NOT_RUN_UNSUPPORTED_OFFLINE_CONTROL",
+    "review": "docs/reviews/R113_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md",
+    "runtime": "SOLE_CAMPAIGN_SPENT_PARTIAL_CURRENT_UI",
+    "B07": "PASS_BOUNDED_UI_CONTROLS",
+    "B08": "PARTIAL_CSS390x844_RASTER_LAYOUT_QUALIFIED",
+    "wording": "ONBOARDING_AI_PROVIDER_OPEN",
+    "originalSupervisorCleanup": "MISSING",
+    "finalFixture": "EXITED_ROOT_OBSERVED",
+    "protected": "BASELINE_EQUAL"
   }
 }

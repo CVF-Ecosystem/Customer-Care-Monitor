@@ -71,28 +71,51 @@
   "browserOperator": "Codex /root",
   "browserTool": "mcp__cua_repl",
   "browserSurface": "iab",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
   "baseCommit": "7644ee02ca60fb8732e209cb313ea32a26ec4491",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_113_REMAINING_UI.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
   "buildCommit": "0622d185bfba8eae960138b57acd9a82f34842fd",
   "reviewEvidence": [
     "docs/reviews/R113_INDEPENDENT_BINDING_REVIEW_2026-10-17.md",
-    "docs/reviews/R113_INDEPENDENT_RUNTIME_ADMISSION_REVIEW_2026-10-17.md"
+    "docs/reviews/R113_INDEPENDENT_RUNTIME_ADMISSION_REVIEW_2026-10-17.md",
+    "docs/reviews/R113_RUNTIME_WORKER_RETURN_2026-10-17.md",
+    "docs/reviews/R113_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md"
   ],
-  "disposition": "SOURCE_ACCEPTED_RUNTIME_ADMISSION_PENDING_COMMIT",
+  "disposition": "B07_ACCEPTED_BOUNDED_B08_QUALIFIED_WORDING_OPEN",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
     "DESIGN",
     "SPEC",
     "WORK_ORDER"
-  ]
+  ],
+  "x-runtimeOutcome": {
+    "campaignStarts": 1,
+    "fixtureStarts": 1,
+    "backendStarts": 1,
+    "viteStarts": 1,
+    "uiPosts": 6,
+    "goCompiles": 0,
+    "nativeInvocations": 0,
+    "frontendValidation": 0,
+    "providerCalls": 0,
+    "runtimeRetries": 0,
+    "B07": "PASS_BOUNDED_UI_CONTROLS",
+    "B08": "PARTIAL_QUALIFIED",
+    "B09": "NOT_RUN",
+    "wording": "CHANGES_REQUIRED",
+    "originalSupervisorCleanup": "MISSING",
+    "rootFinalFixture": "EXITED",
+    "protected": "BASELINE_EQUAL"
+  }
 }

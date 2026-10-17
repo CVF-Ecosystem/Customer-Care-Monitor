@@ -1,0 +1,20 @@
+{
+  "atUTC": "2026-10-17T03:04:36.630662+00:00",
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-B",
+    "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+    "run",
+    "--phase",
+    "reviewer-fast",
+    "--project-root",
+    ".",
+    "--packet",
+    "docs/work_orders/CCMAI_RUNTIME_113_REMAINING_UI.md",
+    "--packet",
+    "docs/reviews/R113_RUNTIME_WORKER_RETURN_2026-10-17.md",
+    "--packet",
+    "docs/reviews/R113_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md"
+  ],
+  "exitCode": 0
+}

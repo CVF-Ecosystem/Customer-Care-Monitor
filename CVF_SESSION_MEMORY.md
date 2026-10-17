@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R113_REMAINING_UI_2026-10-17.md", "activeTranche": "CCMAI-RUNTIME-113", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R113_REMAINING_UI_2026-10-17.md", "activeTranche": "CCMAI-RUNTIME-113", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R113_REMAINING_UI_2026-10-17.md
 
-CCMAI-RUNTIME-113 BUILD source0622d185 independently accepted; exact committed runtime admission then sole new113start by Luna supervisor, Root integrated browser B07/B08/current wording; B09 unsupported NOT_RUN. Budgets fixture1/backend1/Vite1/allPOST8/1200sec/retry0, no lifecycle replay/old-budget reuse/provider/push/deploy. Stop on runtime/browser failure and review owned cleanup; fullM2/M3/pilot/release OPEN, accounts parked.
+CCMAI-RUNTIME-113 CHANGES_REQUIRED: B07 bounded reader UI-controls PASS; B08 observedCSS390x844 but raster/layout qualified, B09 unsupported NOT_RUN; onboarding AIProvider wording/mobile clipping OPEN. Sole campaign spent, UIauth6/8 lifecycle0/provider0, no113retry or old-slot reuse. Root final fixture exited/protected baseline equal and recorded PIDs/listeners absent; original supervisor cleanup/exit MISSING, cause unknown. Next bounded source-only onboarding repair SPEC/workorder plus fresh exact changed-source/binary/capture admission before any runtime; no generic tool repair/lifecycle replay. FullM2/M3/pilot/release OPEN,R102local backend only,Facebook/ZaloOA parked; no FREEZE/push/merge/deploy.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r113_readiness Luna Max IMPLEMENTATION_WORKER
+Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r113_readiness Luna Max returned; no active runtime/browser execution
 
 Mandatory learning: docs/reviews/learnings/feedback_orchestrator_roadmap_control.md and feedback_dispatch_readiness_and_browser_evidence.md. R110/R111/R112 packets, counters and historical failures immutable. R112 final fixture/protection NOT_OBSERVED stays historical.
 

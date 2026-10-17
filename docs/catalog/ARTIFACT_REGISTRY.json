@@ -20499,6 +20499,2064 @@
       "path": "docs/reviews/probes/r113_root/runtime_admission.json",
       "status": "ACTIVE",
       "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-06e6dd44d27092ff2c",
+      "family": "continuity",
+      "path": "docs/reviews/R113_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-8b3ce35cc48a123960",
+      "family": "continuity",
+      "path": "docs/reviews/R113_RUNTIME_WORKER_RETURN_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-c0cbe5c92c9bd7782f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/backend_post_route_audit.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-e365471a71299cbf89",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/final_source_effect_review.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-03addfab64e49644f8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_export_review.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-5cd81aa47bc48af546",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/prestart_admission_check.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-97baf5e93d0a1f82f9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/process_listener_final.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-414b24c83db3e147b1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/ui_review_results.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-d88a1006562cf7e66b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/capture_byte_review.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-6d094de990f4d38f7b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/final_logged_out.dom.txt",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-b945473b4e5fc5d171",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/final_logged_out.png",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-7a1ef75f36a91ab3c3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/final_logged_out.raw.jpg",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-b802b839d4f43b5418",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/history_correction_expanded_mobile390x844.dom.txt",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-2ef4f993ded11dbd76",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/history_correction_expanded_mobile390x844.png",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-fca0b3a5a630922a59",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/history_correction_expanded_mobile390x844.raw.jpg",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-acad8292b9adcc8b14",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/history_expanded_mobile390x844.dom.txt",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-af0c8cd06f4dfbb197",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/history_expanded_mobile390x844.png",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-ad34e115b17dff20a4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/history_expanded_mobile390x844.raw.jpg",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-d728c18f050bed7307",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/observed_owner_queue_mobile390x844.dom.txt",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-5ea0e3f5ee3bb816e4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/observed_owner_queue_mobile390x844.png",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-f5ced14951dc0592d6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/observed_owner_queue_mobile390x844.raw.jpg",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-2594811c883168ddf5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/owner_assignment_form_mobile390x844.dom.txt",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-89813f65a358ac5873",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/owner_assignment_form_mobile390x844.png",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-9ea38ebc72bf272530",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/owner_assignment_form_mobile390x844.raw.jpg",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-242383efbd00387bb1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/owner_detail_mobile390x844.dom.txt",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-7fa009d61f599a42b9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/owner_detail_mobile390x844.png",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-caa1dca022eb311fac",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/owner_detail_mobile390x844.raw.jpg",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-920bd2082f07ccac58",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/owner_form_history_mobile390x844.dom.txt",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-577d4f9524aba5367e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/owner_form_history_mobile390x844.png",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-9843dfdc5a51c17785",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/owner_form_history_mobile390x844.raw.jpg",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-9290ca7dc4a9023bf4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/owner_initial.dom.txt",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-0fb6500819930b5fab",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/owner_initial.png",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-1348920c05ec48ee9b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/owner_initial.raw.jpg",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-ad3b16d2a0d161dc9e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/owner_queue_desktop.dom.txt",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-d133cc300b8ed09dcb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/owner_queue_desktop.png",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-2c47241f16276d3f00",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/owner_queue_desktop.raw.jpg",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-75ca09b6e09057a4ce",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/owner_queue_mobile390x844.dom.txt",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-9aa7243858bc5a195b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/owner_queue_mobile390x844.png",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-68d7b2a4f6d347f2ca",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/owner_queue_mobile390x844.raw.jpg",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-a8c6013103544aa3d6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/reader_detail_no_write_controls.dom.txt",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-37c0f51d041ea3ff01",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/reader_detail_no_write_controls.png",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-86f51afa721800d8d0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/reader_detail_no_write_controls.raw.jpg",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-2a58812ae980c1bf75",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/reader_queue.dom.txt",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-33e61375fc8aaace35",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/reader_queue.png",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-56566c41ace6fa7c6b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/browser/reader_queue.raw.jpg",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-9ca239c7ec9e8de135",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_cleanup/command_001_target_inspect.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-b2f53e8b1ae2510e52",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_cleanup/command_001_target_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-7a217cd387e0ca3259",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_cleanup/command_001_target_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-93d1ba8845146287c3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_cleanup/command_002_target_network_inspect.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-57f15f2e32332440be",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_cleanup/command_002_target_network_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-2e6afc315f665e8227",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_cleanup/command_002_target_network_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-b1475e58ad85beb88f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_cleanup/command_003_fixture_volume_users.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-eb3e3958242df887b9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_cleanup/command_003_fixture_volume_users.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-4f44ef4860a0e9e287",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_cleanup/command_003_fixture_volume_users.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-dbc3985336b21e9d83",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_cleanup/command_004_all_container_ids.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-11cba35c67e2017f8a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_cleanup/command_004_all_container_ids.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-df7c61a8fbd1011925",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_cleanup/command_004_all_container_ids.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-02d2c916229195504a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_cleanup/command_005_protected_container_inspect.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-41a09e71b89663cda9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_cleanup/command_005_protected_container_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-008cc30223936e9d86",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_cleanup/command_005_protected_container_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-2918cf9c9fc5803b1c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_cleanup/command_006_root_owned_fixture_stop.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-f3122087be2e9e564c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_cleanup/command_006_root_owned_fixture_stop.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-bc8e6c2557185683b6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_cleanup/command_006_root_owned_fixture_stop.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-ae4eebcc0bd8c5407a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_cleanup/root_cleanup_receipt.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-7dc73196728efb8a35",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_poststop/command_001_target_inspect.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-9c358c6af6225c57af",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_poststop/command_001_target_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-5dc7aeeaf16afd64a9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_poststop/command_001_target_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-15a6deb3cc938bc75a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_poststop/command_002_target_network_inspect.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-4ae4c6510af9748543",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_poststop/command_002_target_network_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-61d150d146e135cf88",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_poststop/command_002_target_network_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-292cfc564c7361b935",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_poststop/command_003_fixture_volume_users.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-729965690f6bf41ada",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_poststop/command_003_fixture_volume_users.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-fe3a624734a23979c9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_poststop/command_003_fixture_volume_users.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-e2b41ba9bb3d6f06b0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_poststop/command_004_all_container_ids.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-88e3d2ee67a91ae760",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_poststop/command_004_all_container_ids.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-ddafab934f504122bf",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_poststop/command_004_all_container_ids.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-02d8b8b3ce034c2af4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_poststop/command_005_protected_container_inspect.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-8728a32eec01939830",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_poststop/command_005_protected_container_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-dec3fe7da158f1cd11",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_poststop/command_005_protected_container_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-b81b00cd81e1205280",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_poststop/final_state_receipt.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-d2d77d73c76e6e6e90",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_poststop/docker-cli-config/config.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-057e14b4fd60398a9b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/independent_cleanup/docker-cli-config/config.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-620b2f5c0f7b57abee",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign_raw.zip",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-599f3b18a67adcf88f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/manifest.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-6ea475807b341e256c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-715639c19c84d55040",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-e72874249aa259c21a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_launch.reservation.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-e68eb89181b4ca11fe",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_launch_intent.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-9b184460a6c956657b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_launch_result.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-562ea72c116c7d45e9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0001.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-edd2fe061d676fbcb0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0002.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-42f2b772aacf145280",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0003.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-43bdc631ebaec3679f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0004.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-4429f9abbf81278280",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0005.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-42fefd21b7560e994c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0006.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-26dafd9d48f6ffd694",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0007.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-57e010fca5b20c92eb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0008.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-f5de73a69c71935f54",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0009.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-854ed90de3560c0c0e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0010.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-649c53af875371b1c5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0011.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-ac508ff8dc3bb87757",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0012.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-49f75e751c7364f83b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0013.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-3e9b45736bf209f992",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0014.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-47f08edd26f55cf3a5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0015.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-27c5798c0d2c547916",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0016.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-8c5b866573cb63259f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0017.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-8562ba3c61a3ec51f3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0018.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-9e497c3adb0f2a78e5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0019.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-6ff915a6e0e9052e21",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0020.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-b71e7a5f3cd8e526d3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0021.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-ff9ab39a3e3c8fac7d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0022.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-741af4b877e969d7c5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0023.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-8b5992635e2d5a1548",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0024.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-5095e69d29ae4c1677",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0025.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-039a10282b926e1d5c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0026.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-607fb67a271aff6f9e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0027.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-24de173b1a5e2b932c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0028.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-74f3ae5073392a4449",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0029.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-0e75341f3876806fcf",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0030.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-710b64693e70522ac6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0031.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-29307b3eff8ac6f447",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0032.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-e67e37dde73591c823",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0033.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-8d4cfd8706a79d5ee0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0034.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-95ab86b82e0bde48a2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0035.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-4a8c8976e7ecd26f05",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0036.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-20e25c27799b8582a8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0037.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-92a23a89226b5687d9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0038.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-097b02f070ce6834bd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0039.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-181fa0c13d5e4d98fe",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0040.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-1cf8781e69df321527",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0041.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-eecb33e3b8dc82bd3e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0042.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-41a58574e10d7fdc51",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0043.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-57607ecdfedec3ff9b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0044.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-1ee442c501c98ec8f9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0045.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-68eba00e1934d2ba5d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0046.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-31326a016391eac026",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0047.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-57e0deb4a139241b8c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0048.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-1c6ece1a75de914a0f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0049.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-a28145b7660a74c243",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0050.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-ae3a4bb2e2e52c7ac8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0051.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-1c3c6500f24b57bd0b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0052.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-3a92b0bfd5f38fecbb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0053.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-14b4da9811f02d7db9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0054.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-60aff675b77f7623a2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0055.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-313753f13338606272",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0056.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-e6b2aa2332423b0e99",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0057.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-b6f398d5160af077f7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0058.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-c1f23ad468ee883eee",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0059.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-36391b1c8fd7608306",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0060.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-6754a0b1285cc30ca9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0061.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-68c4f0c241bb616425",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0062.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-e833a3d9f3653a66c6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0063.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-533a26cc2a995c9052",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0064.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-5224985444d3d357d6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0065.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-079a36a93f8800518c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0066.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-be596fddbf26804629",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0067.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-a8c4221e0a64eb2866",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0068.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-619bb8a9c4cf53e1b4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0069.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-f59e12745b23a8f683",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0070.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-189fd3de5177675f3e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0071.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-98e8b3fa7bd9792e60",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0072.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-cbb421d384e64bba29",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0073.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-037740221043add75a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0074.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-1821c4e86c5c9d5fc2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0075.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-b97f0427dc8e848931",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0076.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-2a567d64a5be650e3d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0077.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-8c8c59a7cd2354894e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0078.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-811281dafffd9fafa6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0079.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-3d1262b0a55cf0a113",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0080.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-6bd4bca6242e3747a1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0081.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-55e5ce6ec0e7d41781",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0082.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-25085e8612fc5dcd01",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0083.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-b41717ca897b6a7a74",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0084.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-28489116bedea97c55",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0085.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-780a2bdfa9b18b7258",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0086.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-2e87382eec355a0121",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0087.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-0116565f8fa15be508",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0088.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-6847faff5501157ff8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0089.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-18c1a05affcf84db93",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0090.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-db9c00dae4466c841e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0091.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-cb5fb242433c231505",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0092.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-b1307700fda909b64b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0093.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-606eae84f32727395c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0094.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-658a8c38a9e6dcfd7c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0095.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-bc76a0bb41a51ac676",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0096.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-bebe9117ebd77a9419",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0097.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-14b63d7579ea7b9bfa",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0098.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-5b9d3136eb8af52bab",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0099.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-f4502a3e3628abbae3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0100.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-17f72e0ea30eea9d27",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0101.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-f9f5a7e979adb2cfd5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0102.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-ecfd8383a63d2197e0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0103.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-eb4a3b592b60897a91",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0104.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-562d23804d9fec41d5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0105.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-a1a1b8a6980b12763a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0106.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-0d36b23cc9fd1f2b98",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0107.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-88123c51c4195b2a43",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0108.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-98ff3f4614753c46df",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0109.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-779a9103fdbd748032",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0110.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-b9e3a515078f2b83a1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0111.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-3894db7f1354f09ec7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0112.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-07661ea5ecf46bbac2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0113.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-caeb0799d24ae8001e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0114.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-3c3386e3cec1d6993e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0115.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-dceb08640a7b937ee4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0116.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-4a45067ffdb0d305fb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0117.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-07689ebfedaf6c5e6c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0118.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-e6fda578bf05748305",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/campaign_intent.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-973899a5b61487539d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_001_target_inspect.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-ac6cfe2acf0cd49a6c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_001_target_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-8849dfadd635b46374",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_001_target_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-78b103bc7e578c926e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_002_target_network_inspect.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-27eeb6b4112f24236e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_002_target_network_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-c127e7d7f6886f4b85",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_002_target_network_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-26d29516c93c3fbaef",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_003_fixture_volume_users.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-6abcf1672eeeed9108",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_003_fixture_volume_users.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-e166b04146df410b97",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_003_fixture_volume_users.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-c5e717df4a74a945a1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_004_all_container_ids.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-7be4f97ca55fc8c104",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_004_all_container_ids.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-0035cc8535a8b9ef9a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_004_all_container_ids.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-991175e177355c4b36",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_005_protected_container_inspect.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-88f1521cf50aa42bd4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_005_protected_container_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-2a65c6751bc15e22e5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_005_protected_container_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-21b568526974863fe0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_006_target_inspect.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-2aa4161c0250d5be57",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_006_target_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-fc94c18bf2804467e2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_006_target_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-d73fe95371aa71ac66",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_007_target_network_inspect.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-9a09030504492e5472",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_007_target_network_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-5726ed5546a4593cef",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_007_target_network_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-308cd4038f32bf69f3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_008_fixture_volume_users.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-f2415d8d6b4ccaaeb6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_008_fixture_volume_users.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-eeedda1b73e5a1780b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_008_fixture_volume_users.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-82d683a1d1b5fb74a2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_009_all_container_ids.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-00249a2fae086cb473",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_009_all_container_ids.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-f585b46dd102173fe2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_009_all_container_ids.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-33b8aa5664b22aafc4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_010_protected_container_inspect.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-eb52e7da2d61696e2d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_010_protected_container_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-13e1bf93c11f5331f7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_010_protected_container_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-dc4cc046cf90685aae",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_011_fixture_start.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-62464ff5981afd831e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_011_fixture_start.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-8d5040a95dc4813416",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_011_fixture_start.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-638ad41ed49a34a6d5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_012_target_inspect.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-aa2255403ed8e313b5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_012_target_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-ca92ca9ab29dab09ae",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_012_target_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-b6b7f757f92bcc2daa",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_013_target_network_inspect.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-b3e4c64c5c63dcd2f1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_013_target_network_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-8eb861600cb50f18f9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_013_target_network_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-dc0510c1863b77ba28",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_014_fixture_volume_users.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-3c3ff10ce89fd3e69e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_014_fixture_volume_users.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-f48ce8359c06fc2094",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_014_fixture_volume_users.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-2f86e6a12bc14585b9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/fixture_before.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-649ebfbe01fa14f126",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/fixture_ready.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-ebefd6a428204d2b40",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/fixture_start.reservation.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-ce7ff710872e6232a7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/fixture_start_result.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-95e3e69a3bff63c223",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/fixture_volume_users_before.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-df71eca0a5c9d8b56d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/gin_post_observations.jsonl",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-cc48e2c3a08b8114a4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/inherited_native_status.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-86638017dd13ddad48",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/network_before.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-342e0339ca7e3b5d59",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/protected_before.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-24469657735de07d03",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/ready.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-e570aa4103421e0b7e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/running.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-f99da6588567ea28c4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/stop.request",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-22715513135bc2bfcd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/ui_post_submissions.jsonl",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-937521b0164ebf88bb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite.config.mjs",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-289ddadf4e41abac48",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-0b52d2ff15031a3c69",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-32ff34506ac042db14",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite_config_receipt.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-050d4ecfc40af5af66",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite_launch.reservation.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-9ce83e86c71d4cd24d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite_launch_intent.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-1a9c25884724f5a041",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite_launch_result.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-304b858fd25a876031",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite_readiness_0001.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-e91c79ddd1e5208b8f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite_readiness_0002.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-6a56bf2c5051863547",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite_readiness_0003.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-7c1471b8fe81e43e47",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite_readiness_0004.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-3608f37792814041fd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite_readiness_0005.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-fa523803b764a3d71d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite_readiness_0006.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-ce91b92466a84af238",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/readiness/mysql_probe_0001.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-9a51805bc345f1043d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/readiness/mysql_probe_0002.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-23a6da99935ec2a1ef",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/readiness/mysql_probe_0003.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-e60135007f25bd561b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/readiness/mysql_ready.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-7eb668c938d3e72fdc",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/root_archive_manifest.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-fb7942a9f7e85d5c02",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/root_runtime_archive.zip",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-d42c71e976ed6e7e28",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/final_checks/gate_unit.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-806d7dfee2509809bd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/final_checks/gate_unit.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-05353da6413ec872da",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/final_checks/gate_unit.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-831273d7b11a259833",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/final_checks/precommit.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-127d59ed400e11eccd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/final_checks/precommit.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-af3066b2572387dd51",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/final_checks/precommit.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-2dea65cc0c2e465a90",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/final_checks/preflight.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-7f6c73dc2c7e15878f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/final_checks/preflight.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-c75ba6dca887cec033",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/final_checks/preflight.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-38de1dc517d975f179",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/final_checks/reviewer_fast.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-fcddb4e38c5e687882",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/final_checks/reviewer_fast.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-d1da2699c2671ccb15",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/final_checks/reviewer_fast.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
     }
   ]
 }

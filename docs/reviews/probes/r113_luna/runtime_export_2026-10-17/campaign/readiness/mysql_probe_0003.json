@@ -1,0 +1,7 @@
+{
+  "classification": "MYSQL_PROTOCOL_10_GREETING",
+  "elapsedSeconds": 0.007,
+  "probe": 3,
+  "safeServerErrorNumber": null,
+  "state": "READY"
+}

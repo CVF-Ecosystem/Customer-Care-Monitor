@@ -1,13 +1,13 @@
 # R113 fresh remaining M3 UI evidence
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 dispatchKind: INITIAL
 Worker: /root/r113_readiness (Luna Max IMPLEMENTATION_WORKER)
 Reviewer: Codex /root
 Commit steward: Codex /root
 providerExecutionAuthority: NONE
-Disposition: BINDING_ONLY_DISPATCH_RUNTIME_NOT_ADMITTED
+Disposition: B07_ACCEPTED_BOUNDED_B08_QUALIFIED_WORDING_OPEN
 
 ## Intake / design / SPEC / WORK_ORDER
 
@@ -59,3 +59,7 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 
 
 Material-SHA marker:7644ee02ca60fb8732e209cb313ea32a26ec4491. Runtime NOT_ADMITTED until separate exact receipt.
+
+## Independent terminal return
+
+Sole113campaign spent; B07boundedUIaccepted, B08CSS390x844 observed with raw-raster/layout qualifications, B09unsupportedNOT_RUN, onboarding wording OPEN. Original supervisor terminal receipt missing; Root final fixtureexited/protectedbaselineequal/processesabsent independently observed. No113retry/FREEZE/source repair; exact independent review and raw manifests control.

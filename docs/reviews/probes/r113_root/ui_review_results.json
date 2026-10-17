@@ -1,0 +1,76 @@
+{
+  "reviewer": "Codex /root",
+  "worker": "/root/r113_readiness",
+  "campaignHead": "0a26662386ed2d3c040433a8e81398a80b481048",
+  "bindingSource": "0622d185bfba8eae960138b57acd9a82f34842fd",
+  "inheritedUiSource": "a28cdd0ac9ad1c9d1fd30ced6cf627dd62a56ba2",
+  "B07": {
+    "status": "PASS_BOUNDED_UI_CONTROLS",
+    "evidence": [
+      "browser/reader_queue.dom.txt",
+      "browser/reader_detail_no_write_controls.dom.txt",
+      "browser/reader_detail_no_write_controls.raw.jpg"
+    ],
+    "checks": {
+      "freshReaderAfterActualOwnerLogout": true,
+      "queueReadable": true,
+      "detailHistoryReadable": true,
+      "saveButtons": 0,
+      "actionCombobox": 0,
+      "reasonTextbox": 0,
+      "caseRevision": 1
+    },
+    "limit": "No direct write/API denial exercised; UI permission proof only"
+  },
+  "B08": {
+    "status": "PARTIAL_OBSERVED_CSS_VIEWPORT_WITH_RASTER_QUALIFICATION",
+    "cssViewport": {
+      "width": 390,
+      "height": 844
+    },
+    "observedSurfaces": [
+      "queue",
+      "detail",
+      "owner_assignment_and_due_controls",
+      "four_expanded_history_changes"
+    ],
+    "rasterDimensions": "queue390x843; detail/form/history375x811; exact390x844 rawPNG NOT_OBSERVED",
+    "horizontalDocumentOverflow": "not observed in measured pages: scrollWidth=clientWidth375",
+    "layoutFinding": "onboarding chips clipped/unreadable at mobile width; core forms/history readable",
+    "limit": "No native-device/emulated phone claim; actual integrated browser CSS viewport only"
+  },
+  "B09": {
+    "status": "NOT_RUN",
+    "reason": "No documented offline control advertised; no firewall/interception/fake error"
+  },
+  "wording": {
+    "status": "CHANGES_REQUIRED",
+    "acceptedVisited": "Human-readable case/state/source/proposal and expanded history before/after labels verified in rendered current UI",
+    "finding": "Shared onboarding banner still Cấu hình AI Provider; label source backend/api/handlers/dashboard.go:189; mobile chip content clipped in frontend/src/components/OnboardingWizard.vue",
+    "limit": "No app-wide wording acceptance; unvisited settings/jobs not tested"
+  },
+  "effects": {
+    "uiAuthPosts": 6,
+    "ginPosts": 6,
+    "lifecyclePosts": 0,
+    "productTabs": 1,
+    "fixtureStarts": 1,
+    "backendStarts": 1,
+    "viteStarts": 1,
+    "runtimeRetries": 0,
+    "goInvocations": 0,
+    "frontendValidation": 0,
+    "providerCalls": 0
+  },
+  "cleanup": {
+    "originalSupervisorTerminal": "MISSING_SESSION_UNAVAILABLE_CAUSE_UNKNOWN",
+    "rootFinalFixture": "EXITED",
+    "protected": "EQUALS_CAMPAIGN_BASELINE",
+    "processesAndListeners": "ABSENT",
+    "browserTab": "CLOSED_ACTUAL",
+    "viewport": "RESET"
+  },
+  "disposition": "CHANGES_REQUIRED_NO_FREEZE",
+  "inheritedFailures": "R11026PASS3knownDashboardFAIL/typecheckPASS; no test rerun or all-green claim",
+  "fullMilestones": "M2/M3/pilot/release OPEN; R102local backend only; Facebook/ZaloOAparked"
+}

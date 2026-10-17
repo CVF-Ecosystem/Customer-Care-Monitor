@@ -1,0 +1,11 @@
+{
+  "matchingListeners": [],
+  "claim": "Absent recorded PIDs/listeners only; original supervisor terminal receipt remains missing",
+  "matchingProcesses": [],
+  "observedAtUTC": "2026-10-17T02:59:53.2658851Z",
+  "recordedPids": [
+    25388,
+    23820,
+    24072
+  ]
+}

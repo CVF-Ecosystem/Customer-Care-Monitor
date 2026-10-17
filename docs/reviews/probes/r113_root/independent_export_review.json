@@ -1,0 +1,15 @@
+{
+  "atUTC": "2026-10-17T03:02:06.392012+00:00",
+  "result": "PASS_BYTES_ONLY",
+  "workerRawFiles": 196,
+  "workerRawBytes": 80089,
+  "sourceExportZipExactByteParity": true,
+  "zipSha256": "93b77944eb664a5c49f1fc3629729ae66ee5de795770051987cb018f29da60b3",
+  "zipBytes": 59016,
+  "missingOriginalTerminalReceipts": [
+    "cleanup.json",
+    "campaign_result.json",
+    "campaign_disposition.json"
+  ],
+  "claimLimit": "Byte verification does not authenticate unavailable supervisor exit or erase missing original terminal receipts; Root final observed state separate"
+}

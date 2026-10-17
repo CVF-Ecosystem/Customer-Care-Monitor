@@ -1,10 +1,10 @@
 {
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "activeTranche": "CCMAI-RUNTIME-113",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R113_REMAINING_UI_2026-10-17.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-113 BUILD source0622d185 independently accepted; exact committed runtime admission then sole new113start by Luna supervisor, Root integrated browser B07/B08/current wording; B09 unsupported NOT_RUN. Budgets fixture1/backend1/Vite1/allPOST8/1200sec/retry0, no lifecycle replay/old-budget reuse/provider/push/deploy. Stop on runtime/browser failure and review owned cleanup; fullM2/M3/pilot/release OPEN, accounts parked.",
-  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r113_readiness Luna Max IMPLEMENTATION_WORKER",
+  "nextAllowedMove": "CCMAI-RUNTIME-113 CHANGES_REQUIRED: B07 bounded reader UI-controls PASS; B08 observedCSS390x844 but raster/layout qualified, B09 unsupported NOT_RUN; onboarding AIProvider wording/mobile clipping OPEN. Sole campaign spent, UIauth6/8 lifecycle0/provider0, no113retry or old-slot reuse. Root final fixture exited/protected baseline equal and recorded PIDs/listeners absent; original supervisor cleanup/exit MISSING, cause unknown. Next bounded source-only onboarding repair SPEC/workorder plus fresh exact changed-source/binary/capture admission before any runtime; no generic tool repair/lifecycle replay. FullM2/M3/pilot/release OPEN,R102local backend only,Facebook/ZaloOA parked; no FREEZE/push/merge/deploy.",
+  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r113_readiness Luna Max returned; no active runtime/browser execution",
   "updatedAt": "2026-10-17",
   "schemaVersion": "1.0",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
@@ -21,7 +21,7 @@
     "date": "2026-10-16",
     "source": "Explicit owner UI/UX instruction",
     "requirement": "All product-facing labels, statuses, instructions and error messages must use language understandable to end users. Do not expose developer jargon, raw API/enum/error codes, stack traces, runtime/tooling/governance implementation details in ordinary UI flows. Keep technical diagnostics in evidence/logs.",
-    "verification": "R110 bounded source wording repair/qualified tests accepted; rendered current UI NOT_RUN after R112 Docker inspection timeouts."
+    "verification": "R113 current rendered intervention/history wording partly verified; shared onboarding AIProvider/mobile clipping remain OPEN. Raw JPEGs preserved, derivedPNG codec/dimension qualifications; no app-wide language PASS."
   },
   "x-r112LatestResumeDiagnostic": {
     "observedAtUTC": "2026-10-17T02:13:00.370385+00:00",
@@ -30,5 +30,17 @@
     "evidence": "docs/reviews/probes/r112_resume_20261017T021300Z",
     "runtimeEffectCount": 0,
     "newProductAuthority": "NONE"
+  },
+  "x-r113CurrentOutcome": {
+    "status": "CHANGES_REQUIRED",
+    "review": "docs/reviews/R113_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md",
+    "B07": "PASS_BOUNDED_UI_CONTROLS",
+    "B08": "PARTIAL_CSS390x844_RASTER_AND_LAYOUT_QUALIFIED",
+    "B09": "NOT_RUN_UNSUPPORTED",
+    "wording": "ONBOARDING_AI_PROVIDER_OPEN",
+    "campaignHead": "0a26662386ed2d3c040433a8e81398a80b481048",
+    "finalFixture": "EXITED_ROOT_OBSERVED",
+    "protected": "EQUALS_CAMPAIGN_BASELINE",
+    "originalSupervisorCleanup": "MISSING"
   }
 }
