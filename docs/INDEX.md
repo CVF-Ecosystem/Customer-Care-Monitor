@@ -15,7 +15,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- R112 Docker inspection timeout before fixture start; source accepted bounded, current product UI NOT_RUN, stop/transfer required.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R112_REMAINING_UI_2026-10-17.md`
+- Current R113 bounded UI evidence handoff; inherited historical failures and partial acceptance preserved.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R113_REMAINING_UI_2026-10-17.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -2327,6 +2327,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/final_checks/workspace_doctor.stdout.txt`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/work_orders/CCMAI_RUNTIME_111_REMAINING_UI.md`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/R112_INDEPENDENT_RUNTIME_HOLD_REVIEW_2026-10-17.md`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/work_orders/CCMAI_RUNTIME_113_REMAINING_UI.md`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `CVF_SESSION/tranches/CCMAI-RUNTIME-113.json`
 - Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/fixture_readiness.json`
 - Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_001_target_inspect.stderr.bin`
 - Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_005_protected_container_inspect.json`

@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R112_REMAINING_UI_2026-10-17.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R113_REMAINING_UI_2026-10-17.md",
       "status": "ACTIVE",
-      "description": "R112 Docker inspection timeout before fixture start; source accepted bounded, current product UI NOT_RUN, stop/transfer required."
+      "description": "Current R113 bounded UI evidence handoff; inherited historical failures and partial acceptance preserved."
     },
     {
       "id": "r060-work-order",
@@ -20422,6 +20422,20 @@
       "path": "docs/reviews/probes/resume_bddda27f_20261017T023257Z/stdout.bin",
       "status": "ACTIVE",
       "description": "Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse."
+    },
+    {
+      "id": "r113-c864ac9d62579cbcc4",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-113.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-276010e735f9a1fd89",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_113_REMAINING_UI.md",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
     }
   ]
 }

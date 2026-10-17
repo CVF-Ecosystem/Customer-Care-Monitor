@@ -1,6 +1,6 @@
 # R112 runtime-only UI successor
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 - Project: Customer-Care-Monitor-AI
@@ -35,3 +35,7 @@ The one start reached only two read-only Docker commands, both timed out with ow
 ## Owner resume diagnostic — 2026-10-17 09:13 Asia/Saigon
 
 Root performed one read-only Docker server-version check; timed out15seconds/exit1/empty stdout-stderr. Browser inventory present, no tab/interaction. No new product authority, start or old-slot reuse. STOP/transfer unchanged; see docs/reviews/R112_RESUME_CAPABILITY_HOLD_2026-10-17_021300Z.md. Original runtime evidence and all old counters unchanged.
+
+## R113 pointer transition
+
+Owner resumes at bddda27f; fresh capability now responds. Active continuation moves to AGENT_HANDOFF_R113_REMAINING_UI_2026-10-17.md. All R112 failures, counters and historical final inventory NOT_OBSERVED remain unchanged.

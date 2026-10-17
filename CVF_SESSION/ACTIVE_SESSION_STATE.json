@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,11 +12,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-112",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R112_REMAINING_UI_2026-10-17.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-112 CHANGES_REQUIRED: sole start failed before fixture startup because pinned Docker target inspect and protected-inventory ps timed out; owned Docker children terminated, final fixture/protected state NOT_OBSERVED. Fixture/backend/Vite/native/Go/productUI0; start1/retry0, unused slots stayunused. Source9e7620b1/inheritedUIa28cdd0a stable;26PASS3knownDashboardFAIL/typecheckPASS, current rendered wording and B07/B08/B09 NOT_RUN. STOP runtime/browser here per owner; transfer full preserved R110/R111/R112 packet to another integrated-browser agent with responsive Docker and fresh bounded authority, no replay/reset/restart. R109 partial native/B01-B06/B10 retained; no FREEZE/fullM2/M3/pilot/release acceptance, Dashboard3 OPEN, R102 local FROZEN, Facebook/ZaloOA accounts parked.",
+  "activeTranche": "CCMAI-RUNTIME-113",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R113_REMAINING_UI_2026-10-17.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-113 DISPATCH_READY binding-only: seed7644ee02 committed; Luna Max copies reviewed112 runner/template with113 bindings only. Root independently reviews/commits source then separate exact runtime admission. Product B07/B08/wording pending, B09 unsupported NOT_RUN; no old budget reuse/provider/push/deploy, fullM2/M3/pilot/release OPEN and accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r108_browser_luna Luna Max returned BLOCKED_WITH_REASON and stopped; no active runtime/browser execution.",
+  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r113_readiness Luna Max IMPLEMENTATION_WORKER",
   "updatedAt": "2026-10-17",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {

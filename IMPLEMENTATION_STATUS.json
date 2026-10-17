@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "x-roadmapTracking": {
-    "updatedAt": "2026-10-16",
+    "updatedAt": "2026-10-17",
     "status": "M3_PARTIAL_HISTORICAL_UI_REOPEN_FAILED",
     "currentCheckpoint": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
     "stages": {
@@ -23,9 +23,9 @@
       "M5 release/portable operations"
     ],
     "currentBlockers": [
-      "R107 historical UI6PASS/1FAIL/3NOT_RUN: REOPEN503; interruption, missing supervisor cleanup receipt and tab closure unobserved. Browser/Vite worked in campaign.",
-      "Three inherited Dashboard UI fixture failures reproduced before M3; full suite remains failed",
-      "Full M2/WAIT_DATA rerun and M1 people/SLA/corpus/threshold/pilot/release remain open"
+      "Remaining current UI B07/B08/wording evidence under fresh finite R113; B09 unsupported NOT_RUN",
+      "Three inherited Dashboard failures; full suite not green",
+      "Actual WAIT_DATA AI rerun executor and fullM2/M3/pilot/release OPEN"
     ],
     "executionAuthorityExpanded": false,
     "eta": "NOT_ESTABLISHED",
@@ -38,7 +38,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "R094 bounded M2 source/local manual synthetic intervention prototype independently reviewed: authenticated route, snapshot evidence, monotonic call admission, queue/detail and failure handling; real provider0, default app disabled, full M2/M3/pilot OPEN. docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
@@ -2015,7 +2015,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-112",
+  "activeTranche": "CCMAI-RUNTIME-113",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
@@ -2824,5 +2824,13 @@
     "evidence": "docs/reviews/probes/r112_resume_20261017T021300Z",
     "runtimeEffectCount": 0,
     "newProductAuthority": "NONE"
+  },
+  "x-r113Current": {
+    "status": "DISPATCH_READY",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_113_REMAINING_UI.md",
+    "handoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R113_REMAINING_UI_2026-10-17.md",
+    "nextAction": "CCMAI-RUNTIME-113 DISPATCH_READY binding-only: seed7644ee02 committed; Luna Max copies reviewed112 runner/template with113 bindings only. Root independently reviews/commits source then separate exact runtime admission. Product B07/B08/wording pending, B09 unsupported NOT_RUN; no old budget reuse/provider/push/deploy, fullM2/M3/pilot/release OPEN and accounts parked.",
+    "uiSource": "a28cdd0ac9ad1c9d1fd30ced6cf627dd62a56ba2",
+    "b09": "NOT_RUN_UNSUPPORTED_OFFLINE_CONTROL"
   }
 }
