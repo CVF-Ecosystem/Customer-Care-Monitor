@@ -1528,7 +1528,7 @@
       "family": "continuity",
       "path": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
       "status": "ACTIVE",
-      "description": "Current R115 M3-05 intended executor design reviewed; actual implementation/live proof and full milestones OPEN; R114 evidence gaps retained."
+      "description": "Current R116 WAIT_DATA executor source accepted; native/live and full product milestones OPEN; historical UI qualifications retained."
     },
     {
       "id": "ccma-product-delivery-publication-20261013",
@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R116_WAITDATA_EXECUTOR_2026-10-17.md",
       "status": "ACTIVE",
-      "description": "Active R115 documentary M3-05 executor design handoff; no implementation/runtime authority."
+      "description": "Active R116 executor source/build and conditional evidence handoff; full milestones OPEN."
     },
     {
       "id": "r060-work-order",
@@ -24720,6 +24720,300 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_116_WAITDATA_EXECUTOR.md",
       "status": "ACTIVE",
       "description": "R116 bounded executor source/evidence control; exact claim scope applies."
+    },
+    {
+      "id": "r116-4861fd8a55590e13ba",
+      "family": "continuity",
+      "path": "docs/reviews/R116_IMPLEMENTATION_WORKER_RETURN_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-83314674609836bb99",
+      "family": "continuity",
+      "path": "docs/reviews/R116_INDEPENDENT_SOURCE_REVIEW_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-e0875850c8c003b216",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/independent_db_readback.py",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-c8a60464ebc0fd433a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/preparation_observations.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-c55692854341e2f41b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/return0_independent_identity.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-c47ca550474bfad01e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/supervisor_source_review.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-1c364203ac86d20133",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/worker_return0.zip",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-fd94ba21fb8544e760",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_worker/go4_pre_hashes.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-4864be28747b7b3de4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_worker/go5_exit.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-4a58803e83ad6dc048",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_worker/go5_pre_hashes.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-6c6a43a2d3c908c5a0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_worker/go5_stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-f45db4d62f4ee2f9b3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_worker/go5_stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-2079da040dda20b1c2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_worker/go_invocations.md",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-d264bd9650c427ffc8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_worker/run_go5.ps1",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-272d18927667ed68dd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/go_tool_readiness.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-3d22b6c4827055af3c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/repair1_independent_identity.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-a198b5391f5d6c0825",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/repair1_source_delta.diff",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-81e4f7ce394dc4f3f4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/repair2_independent_identity.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-08cf3adb20036544ac",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/source_binary_admission.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-8f53051f0bed1bc7ea",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/worker_repair1.zip",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-4fe7d5a40a0b0e9df2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/worker_repair2.zip",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-64538baa1ab965901f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/gate_unit/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-4edfc001b0eab2c56c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/gate_unit/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-d5f64bbf411dae5e4e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/gate_unit/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-07b40235fecba03099",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/gate_unit/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-e9a133d68536978397",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/go_root_1/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-4e2adb078fb5baf533",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/go_root_1/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-06ee283a496b6437dd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/go_root_1/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-f94f9701f8663a86f8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/go_root_1/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-53386fb4325a585b2c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/go_root_2/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-a2fa0d255940cd5489",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/go_root_2/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-9bf1c244ebab901802",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/go_root_2/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-d67770bac7b721fcea",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/go_root_2/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-dfbf5d1561d20a4d7f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_worker/go6_exit.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-8609ba0dcace3c7bd1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_worker/go6_postcompile_deltas.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-db29ad28af51ca5293",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_worker/go6_pre_hashes.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-699095ade3c9166164",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_worker/go6_stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-595e1a377532234123",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_worker/go6_stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-8ad52fe548fbf879f9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_worker/repair1_final_hashes.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-83a0bb613acce7b011",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_worker/repair2_delta_paths.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-e58bbc4359f2c20cc7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_worker/repair2_final_hashes.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-dde8e68c0431870f31",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_worker/run_go6.ps1",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
     }
   ]
 }

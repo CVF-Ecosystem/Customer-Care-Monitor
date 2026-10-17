@@ -249,6 +249,10 @@ func DeleteJob(c *gin.Context) {
 		}
 		return nil
 	})
+	if errors.Is(err, engine.ErrWaitDataLineage) {
+		c.JSON(http.StatusConflict, gin.H{"error": "intervention_history_in_use"})
+		return
+	}
 	if errors.Is(err, engine.ErrJobBusy) {
 		// An owned or stored running run exists: nothing was deleted or reset.
 		c.JSON(http.StatusConflict, gin.H{"error": "job_already_running"})
@@ -285,16 +289,41 @@ func ClearJobResults(c *gin.Context) {
 		c.JSON(http.StatusNotFound, gin.H{"error": "job_not_found"})
 		return
 	}
-
-	// Delete results + usage logs + notification logs (keep runs)
-	var runIDs []string
-	db.DB.Model(&models.JobRun{}).Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Pluck("id", &runIDs)
-	if len(runIDs) > 0 {
-		db.DB.Where("job_run_id IN ? AND tenant_id = ?", runIDs, tenantID).Delete(&models.JobResult{})
-		db.DB.Where("job_run_id IN ? AND tenant_id = ?", runIDs, tenantID).Delete(&models.AnalysisSnapshot{})
+	// Keep the lineage check, parent/run locks and every destructive write in
+	// the same transaction. Otherwise admission could race the checked fence.
+	err := db.DB.Transaction(func(tx *gorm.DB) error {
+		if err := engine.GuardJobMutation(tx, tenantID, jobID); err != nil {
+			return err
+		}
+		var runs []models.JobRun
+		if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Order("id ASC").Find(&runs).Error; err != nil {
+			return err
+		}
+		runIDs := make([]string, 0, len(runs))
+		for _, run := range runs {
+			runIDs = append(runIDs, run.ID)
+		}
+		if len(runIDs) > 0 {
+			if err := tx.Where("job_run_id IN ? AND tenant_id = ?", runIDs, tenantID).Delete(&models.JobResult{}).Error; err != nil {
+				return err
+			}
+			if err := tx.Where("job_run_id IN ? AND tenant_id = ?", runIDs, tenantID).Delete(&models.AnalysisSnapshot{}).Error; err != nil {
+				return err
+			}
+		}
+		if err := tx.Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.AIUsageLog{}).Error; err != nil {
+			return err
+		}
+		return tx.Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.NotificationLog{}).Error
+	})
+	if errors.Is(err, engine.ErrWaitDataLineage) || errors.Is(err, engine.ErrJobBusy) {
+		c.JSON(http.StatusConflict, gin.H{"error": "intervention_history_in_use"})
+		return
 	}
-	db.DB.Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.AIUsageLog{})
-	db.DB.Where("job_id = ? AND tenant_id = ?", jobID, tenantID).Delete(&models.NotificationLog{})
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "clear_results_failed"})
+		return
+	}
 
 	db.LogActivity(tenantID, middleware.GetUserID(c), middleware.GetUserEmail(c), "job.clear_results", "job", jobID, "Cleared results for job: "+job.Name, "", c.ClientIP())
 
@@ -355,6 +384,10 @@ func ClearJobRuns(c *gin.Context) {
 		}
 		return nil
 	})
+	if errors.Is(err, engine.ErrWaitDataLineage) {
+		c.JSON(http.StatusConflict, gin.H{"error": "intervention_history_in_use"})
+		return
+	}
 	if errors.Is(err, engine.ErrJobBusy) {
 		c.JSON(http.StatusConflict, gin.H{"error": "job_already_running"})
 		return

@@ -93,11 +93,19 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_116_WAITDATA_EXECUTOR.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
   "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "IMPLEMENTATION_PENDING",
+  "reviewEvidence": [
+    "docs/reviews/R116_INDEPENDENT_SOURCE_REVIEW_2026-10-17.md"
+  ],
+  "disposition": "SOURCE_ACCEPTED_FOR_ISOLATED_PROOF_NATIVE_LIVE_OPEN",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
     "BUILD"
   ],
   "planningPhaseTrace": [
@@ -108,5 +116,17 @@
   ],
   "phase": "BUILD",
   "status": "BUILD",
-  "workOrderStatus": "ACTIVE"
+  "workOrderStatus": "ACTIVE",
+  "sourceRepairRoundsUsed": 2,
+  "budgetUsed": {
+    "workerRecordedInvocations": 6,
+    "workerGoCLIInvocations": 4,
+    "workerGofmtInvocations": 2,
+    "rootFocusedChecks": 2,
+    "fixtureStarts": 0,
+    "physicalAlibabaCalls": 0
+  },
+  "repair1Acknowledgment": "Worker fresh canonical rehydration/declaration acknowledged D01-D04 before same-scope source repair; recorded by Root.",
+  "reviewScope": "SOURCE_COMPILE_ONLY",
+  "historyNormalization": "Root source reviews were performed and archived before repair; omitted REVIEW_PENDING transitions corrected after preflight detected BUILD->CHANGES_REQUIRED. No effects/budget reset."
 }

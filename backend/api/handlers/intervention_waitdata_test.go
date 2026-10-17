@@ -111,16 +111,20 @@ func r102Must(t *testing.T, rows ...any) {
 // loopback fixture; this guard prevents accidental use of preserved R101 data.
 func r102Start(t *testing.T) *r102Fixture {
 	t.Helper()
+	return r102StartWithDSN(t, os.Getenv("R102_MYSQL_DSN"), "r102_fixture")
+}
+
+func r102StartWithDSN(t *testing.T, dsn, databaseName string) *r102Fixture {
+	t.Helper()
 	if handlers.InterventionRunner != nil {
 		t.Fatal("provider runner must remain nil")
 	}
-	dsn := os.Getenv("R102_MYSQL_DSN")
 	if dsn == "" {
-		t.Skip("NOT_RUN: R102_MYSQL_DSN owned synthetic fixture required")
+		t.Skip("NOT_RUN: owned synthetic fixture DSN required")
 	}
 	parsed, err := mysqlcfg.ParseDSN(dsn)
-	if err != nil || parsed.Net != "tcp" || !strings.HasPrefix(parsed.Addr, "127.0.0.1:") || parsed.DBName != "r102_fixture" {
-		t.Fatal("R102 DSN must target the named loopback synthetic database")
+	if err != nil || parsed.Net != "tcp" || !strings.HasPrefix(parsed.Addr, "127.0.0.1:") || parsed.DBName != databaseName {
+		t.Fatal("DSN must target the named loopback synthetic database")
 	}
 	if err := db.Connect(dsn, false); err != nil {
 		t.Fatal(err)
@@ -145,6 +149,9 @@ func r102Start(t *testing.T) *r102Fixture {
 	f := &r102Fixture{t: t, tenant: pkg.NewUUID(), other: pkg.NewUUID(), owner: pkg.NewUUID(), writer: pkg.NewUUID(), noJobs: pkg.NewUUID(), reader: pkg.NewUUID(), unknown: pkg.NewUUID(), channel: pkg.NewUUID(), conv: pkg.NewUUID(), job: pkg.NewUUID(), caseID: pkg.NewUUID(), snap: pkg.NewUUID(), run: pkg.NewUUID(), token: map[string]string{}}
 	now := time.Now().UTC().Truncate(time.Millisecond)
 	t.Cleanup(func() {
+		if databaseName == "r116_fixture" && os.Getenv("CCMAI_R116_NATIVE") == "1" && os.Getenv("CCMAI_R116_LIVE") == "1" && os.Getenv("CCMAI_R116_PRESERVE") == "1" {
+			return
+		}
 		// Delete only this test's generated tenant rows; never drop the database.
 		for _, model := range []any{&models.InterventionRerunRequest{}, &models.InterventionDataRevision{}, &models.InterventionHumanEvent{}, &models.InterventionCase{}, &models.AnalysisSnapshot{}, &models.Message{}, &models.Conversation{}, &models.Job{}, &models.Channel{}, &models.UserTenant{}} {
 			if err := db.DB.Unscoped().Where("tenant_id = ?", f.tenant).Delete(model).Error; err != nil {

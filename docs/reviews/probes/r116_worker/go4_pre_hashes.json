@@ -1,0 +1,66 @@
+[
+  {
+    "Path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\backend\\db\\models\\intervention.go",
+    "Hash": "607FE7606C976895D0AFEFBA11BB10E6DAF815EF238612811DE0711C45E40493"
+  },
+  {
+    "Path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\backend\\db\\models\\intervention_waitdata.go",
+    "Hash": "BCE04E4FD9BAE54AF464874BFFFDBFB2B02019C19B315622E1E7F66F7B676F20"
+  },
+  {
+    "Path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\backend\\db\\mysql.go",
+    "Hash": "8F7120BA208BCEB48FDCE1E162315E2DB6DE8380AF57DFB6976DBF957625B6B7"
+  },
+  {
+    "Path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\backend\\engine\\intervention.go",
+    "Hash": "CFC5F331385F81E112F7ECF039BFDE8D2D5DA11C6604A107256C8D3754E734F6"
+  },
+  {
+    "Path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\backend\\engine\\intervention_m3.go",
+    "Hash": "75B26BC087F389AB147A9390337AF04D75EFF9FD538B6CD31C8130FF8E90AED7"
+  },
+  {
+    "Path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\backend\\engine\\intervention_waitdata_executor.go",
+    "Hash": "B9811534A69F1AB70A0C93FEAFE3296FAA6B1C136D6A9FE862245529FC2E28D5"
+  },
+  {
+    "Path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\backend\\engine\\intervention_waitdata_executor_test.go",
+    "Hash": "91E2B83F99A3D21E7DC896023BF038AB6A72E7DA389F7B31FB745507BA34A36E"
+  },
+  {
+    "Path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\backend\\engine\\job_run_ownership.go",
+    "Hash": "B9A8F8A3B5A23E32C3E9CE8E64243276B76FC8E5247537BF6E6CFDC430629B71"
+  },
+  {
+    "Path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\backend\\api\\handlers\\intervention.go",
+    "Hash": "61B47C3DBD7E0AB10D3AD1B3D3C075E72F84CD67A9D9897707357C02D29D31C1"
+  },
+  {
+    "Path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\backend\\api\\handlers\\intervention_waitdata.go",
+    "Hash": "401A829D0A45175B2C139BE04A31670D65DF9BEB789A5FEB773FA510C88F986D"
+  },
+  {
+    "Path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\backend\\api\\handlers\\intervention_waitdata_test.go",
+    "Hash": "1CFF500E599E3BBA1903296152E0B6E12F603400C856838385C22790CE87E23D"
+  },
+  {
+    "Path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\backend\\api\\handlers\\intervention_waitdata_executor_r116_test.go",
+    "Hash": "0E34DD659BF93EFD324B07CB5B052EC2734369934BFE68E4D2E5527BC1549533"
+  },
+  {
+    "Path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\backend\\api\\handlers\\channels.go",
+    "Hash": "738FD1805F5A5AEF29355DD8FDAD7EFAAF47AFB0190C14C96A27769FCE6B9CAD"
+  },
+  {
+    "Path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\backend\\api\\handlers\\jobs.go",
+    "Hash": "09565BCE3B905052FB44BCC39611E5C611CC6880A14813A9B4FA7D65EDB492E5"
+  },
+  {
+    "Path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\backend\\api\\handlers\\demo.go",
+    "Hash": "541F0A049640D3A7FB581BBA543A56B1F31139908A1110BACB5471A605A70B1E"
+  },
+  {
+    "Path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\backend\\api\\router.go",
+    "Hash": "6DE6A0E0955CD99DD5CE3D632EA33DF99FF70BDC1EF33B5BE8B677CFA88B1615"
+  }
+]

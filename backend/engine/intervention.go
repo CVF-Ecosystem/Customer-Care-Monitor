@@ -29,6 +29,9 @@ type InterventionTransport interface {
 }
 type InterventionService struct {
 	Transport       InterventionTransport
+	Provider        string
+	Model           string
+	ConfigRef       string
 	PolicyVersion   string
 	PromptVersion   string
 	Prompt          string

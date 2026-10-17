@@ -80,6 +80,41 @@ func CreateInterventionRerunRequest(c *gin.Context) {
 	c.JSON(status, gin.H{"request": requestView(*r), "case_version": r.CaseVersion, "replayed": replayed})
 }
 
+// ExecuteInterventionRerun accepts only a grant reference and expected case
+// version. The service is installed explicitly by server-owned configuration.
+func ExecuteInterventionRerun(c *gin.Context) {
+	var in engine.WaitDataExecuteInput
+	c.Request.Body = http.MaxBytesReader(c.Writer, c.Request.Body, 512)
+	d := json.NewDecoder(c.Request.Body)
+	start, err := d.Token()
+	if err != nil || start != json.Delim('{') { c.JSON(http.StatusBadRequest, gin.H{"error":"invalid_request"}); return }
+	fields := map[string]json.RawMessage{}
+	for d.More() {
+		key, err := d.Token()
+		name, ok := key.(string)
+		if err != nil || !ok || (name != "expected_case_version" && name != "grant_id") { c.JSON(http.StatusBadRequest, gin.H{"error":"invalid_request"}); return }
+		if _, duplicate := fields[name]; duplicate { c.JSON(http.StatusBadRequest, gin.H{"error":"invalid_request"}); return }
+		var raw json.RawMessage
+		if d.Decode(&raw) != nil { c.JSON(http.StatusBadRequest, gin.H{"error":"invalid_request"}); return }
+		fields[name] = raw
+	}
+	end, endErr := d.Token()
+	if endErr != nil || end != json.Delim('}') || len(fields) != 2 || d.Decode(new(any)) != io.EOF || json.Unmarshal(fields["expected_case_version"], &in.ExpectedCaseVersion) != nil || json.Unmarshal(fields["grant_id"], &in.GrantID) != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "invalid_request"})
+		return
+	}
+	r, replayed, err := engine.ClaimWaitDataExecution(c.Request.Context(), middleware.GetTenantID(c), middleware.GetUserID(c), c.Param("caseId"), c.Param("requestId"), in, engine.WaitDataExecutor)
+	if err != nil {
+		waitDataError(c, err)
+		return
+	}
+	status := http.StatusAccepted
+	if replayed && r.State != "CLAIMED" && r.State != "CALL_MAY_HAVE_STARTED" && r.State != "RESPONSE_RECORDED" {
+		status = http.StatusOK
+	}
+	c.JSON(status, gin.H{"execution": gin.H{"id": r.ID, "state": r.State, "terminal_code": r.TerminalCode, "run_id": r.RunID, "snapshot_id": r.SnapshotID}, "replayed": replayed})
+}
+
 func waitDataReadCase(c *gin.Context) (models.InterventionCase, bool) {
 	tenant, actor := middleware.GetTenantID(c), middleware.GetUserID(c)
 	var membership models.UserTenant

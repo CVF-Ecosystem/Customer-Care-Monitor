@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "C:\\Program Files\\Go\\bin\\go.exe",
+    "env",
+    "GOVERSION",
+    "GOPATH",
+    "GOCACHE",
+    "GOMODCACHE",
+    "GOOS",
+    "GOARCH"
+  ],
+  "exitCode": 0,
+  "goExeSha256": "7d828191ba32519a9c9361789ab647486236ed45c660889196c7770a8ff1985c",
+  "selectedEnv": {
+    "GOVERSION": "go1.27.0",
+    "GOPATH": "C:\\Users\\tiennm\\go",
+    "GOCACHE": "C:\\Users\\tiennm\\AppData\\Local\\go-build",
+    "GOMODCACHE": "C:\\Users\\tiennm\\go\\pkg\\mod",
+    "GOOS": "windows",
+    "GOARCH": "amd64"
+  },
+  "claimScope": "Read-only tool readiness, no product test/compile/provider/DB run",
+  "productFocusedChecksUsed": 0
+}

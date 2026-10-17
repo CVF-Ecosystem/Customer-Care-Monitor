@@ -143,8 +143,32 @@ func M3ApplyAction(ctx context.Context, tenantID, actorID, caseID string, a M3Ac
 		var proposal models.InterventionProposal
 		hasProposal := a.Action != "ASSIGN_DATA" && a.Action != "ESCALATE_DATA"
 		if hasProposal {
+			if current.ActiveProposalID == nil {
+				if current.ActiveExecutionID != nil {
+					return ErrM3Conflict
+				}
+				var count int64
+				if tx.Model(&models.InterventionProposal{}).Where("tenant_id = ? AND case_id = ? AND run_id = ? AND snapshot_id = ? AND snapshot_digest = ?", tenantID, caseID, current.RunID, snap.ID, snap.Digest).Count(&count).Error != nil || count != 1 {
+					return ErrM3Conflict
+				}
+			}
 			if a.ExpectedProposalID == "" || a.ExpectedRevision < 1 || tx.Clauses(clause.Locking{Strength: "UPDATE"}).Where("id = ? AND case_id = ? AND tenant_id = ?", a.ExpectedProposalID, caseID, tenantID).Take(&proposal).Error != nil || proposal.Revision != a.ExpectedRevision || proposal.RunID != current.RunID || proposal.SnapshotID != snap.ID || proposal.SnapshotDigest != snap.Digest {
 				return ErrM3Conflict
+			}
+			if current.ActiveProposalID != nil {
+				if *current.ActiveProposalID != proposal.ID {
+					return ErrM3Conflict
+				}
+			} else {
+				// Legacy NULL pointer: prove uniqueness across the whole current
+				// projection before selecting the caller's proposal.
+				if current.ActiveExecutionID != nil {
+					return ErrM3Conflict
+				}
+				if changed := tx.Model(&models.InterventionCase{}).Where("tenant_id = ? AND id = ? AND version = ? AND active_proposal_id IS NULL AND active_execution_id IS NULL", tenantID, caseID, current.Version).Update("active_proposal_id", proposal.ID); changed.Error != nil || changed.RowsAffected != 1 {
+					return ErrM3Conflict
+				}
+				current.ActiveProposalID = &proposal.ID
 			}
 		} else if a.ExpectedProposalID != "" || a.ExpectedRevision != 0 {
 			return ErrM3Invalid

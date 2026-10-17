@@ -58,6 +58,8 @@ func AutoMigrate() error {
 		&models.InterventionHumanEvent{},
 		&models.InterventionDataRevision{},
 		&models.InterventionRerunRequest{},
+		&models.InterventionExecutionGrant{},
+		&models.InterventionExecution{},
 		&models.AppSetting{},
 		&models.NotificationLog{},
 		&models.NotificationDeliveryManifest{},

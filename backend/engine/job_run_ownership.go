@@ -319,6 +319,9 @@ func JobRunActive(tenantID, jobID string) bool {
 // active local owner or any stored running row with ErrJobBusy, and returns ErrJobMissing when the
 // tenant-scoped job does not exist. Job -> JobRun lock order.
 func GuardJobMutation(tx *gorm.DB, tenantID, jobID string) error {
+	if err := GuardWaitDataLineage(tx, tenantID, jobID, ""); err != nil {
+		return err
+	}
 	var parents []models.Job
 	if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).Select("id").
 		Where("id = ? AND tenant_id = ?", jobID, tenantID).Find(&parents).Error; err != nil {

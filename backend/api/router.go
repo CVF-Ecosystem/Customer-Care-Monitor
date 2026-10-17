@@ -206,6 +206,7 @@ func SetupRouter(cfg *config.Config) *gin.Engine {
 			tenant.GET("/intervention-cases/:caseId/data-revisions/:revisionId", requireKnownTenantPermission("intervention_cases", "r"), handlers.GetInterventionDataRevision)
 			tenant.POST("/intervention-cases/:caseId/rerun-requests", requireKnownTenantPermission("intervention_cases", "r"), requireKnownTenantPermission("intervention_cases", "w"), requireKnownTenantPermission("jobs", "w"), handlers.CreateInterventionRerunRequest)
 			tenant.GET("/intervention-cases/:caseId/rerun-requests", requireKnownTenantPermission("intervention_cases", "r"), handlers.ListInterventionRerunRequests)
+			tenant.POST("/intervention-cases/:caseId/rerun-requests/:requestId/execute", requireKnownTenantPermission("intervention_cases", "r"), requireKnownTenantPermission("intervention_cases", "w"), requireKnownTenantPermission("jobs", "w"), handlers.ExecuteInterventionRerun)
 			tenant.POST("/jobs/:jobId/cancel", middleware.RequirePermission("jobs", "w"), handlers.CancelJob)
 			tenant.GET("/jobs/:jobId/runs", middleware.RequirePermission("jobs", "r"), handlers.ListJobRuns)
 			tenant.GET("/jobs/:jobId/runs/:runId/results", middleware.RequirePermission("jobs", "r"), handlers.ListJobResults)

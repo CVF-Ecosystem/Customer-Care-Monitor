@@ -1,0 +1,24 @@
+{
+  "worker": "Codex /root (fixture supervisor only)",
+  "reviewer": "/root/r116_supervisor_review Luna Max",
+  "riskCeiling": "R2",
+  "reviewKind": "READ_ONLY_SOURCE",
+  "initialStatus": "CHANGES_REQUIRED",
+  "initialOriginalSourceSnapshot": "NOT_CAPTURED_EVOLVING_WORKTREE",
+  "reviewedRepair2Sha256": "312d2d91ec5064c878d0b95eb2f5f57313ef0b8a79141bc6684652c8cc62a5bf",
+  "retractedFinding": "Network filter allegedly absent; current both volume/network Name!=NAME filters verified by reviewer, stale concurrent snapshot explicitly retracted.",
+  "reviewerFinalResidual": "Partial Docker network/volume create acknowledgment window could falsely report no-container cleanup with null/missing resource proof. Config/prompt semantics, provider wire/usage/counters and actual runtime remain Root admission prerequisites.",
+  "rootFinalDeltaSha256": "446e3be899d0159ddcfb83cd3cc08e9a0b0a73e0c0e3d23730a18b7b52b2c2b8",
+  "rootFinalDelta": [
+    "Missing network acknowledgment after start marker now explicit PARTIAL_NETWORK_CREATION_UNRESOLVED_MANUAL_HOLD",
+    "Missing volume acknowledgment after network receipt now explicit PARTIAL_VOLUME_CREATION_UNRESOLVED_MANUAL_HOLD",
+    "reviewer native mode may choose separately pinned in-root engine test binary, all paths/hash guards retained"
+  ],
+  "costRecord": "Supervisor repair1 addressed initial consolidated readiness blockers; repair2 addressed independently found link traversal/cleanup marker timing/uncommitted source proof. Final finite delta handles newly independent daemon-create acknowledgment uncertainty; no repeated same-root-cause third repair and no runtime retry. No more generic supervisor repair chain is planned.",
+  "reviewerSupportBoundary": "Supports bounded mechanics at reviewed312d2d91 except partial ack finding; final delta is Root-authored fail-closed control with AST parse only, not independently executed or claimed Luna-final-accepted.",
+  "runtimeAdmission": "NOT_ISSUED",
+  "fixtureStarts": 0,
+  "providerCalls": 0,
+  "osNetworkConfinement": "NOT_CLAIMED_SOURCE_BOUND_CONNECTOR",
+  "claimLimits": "No source/runtime/product/governance blanket PASS. Root independently reviews selected config/prompt/source/binary/fixture/test connector, physical wire and DB counters before acceptance."
+}

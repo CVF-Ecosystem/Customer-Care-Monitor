@@ -128,5 +128,5 @@ func GetInterventionCase(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "detail_failed"})
 		return
 	}
-	c.JSON(http.StatusOK, gin.H{"case": row, "proposals": proposals, "receipts": receipts, "human_events": events, "source_status": m3SourceStatus(row)})
+	c.JSON(http.StatusOK, gin.H{"case": row, "active_proposal_id": row.ActiveProposalID, "proposals": proposals, "receipts": receipts, "human_events": events, "source_status": m3SourceStatus(row)})
 }

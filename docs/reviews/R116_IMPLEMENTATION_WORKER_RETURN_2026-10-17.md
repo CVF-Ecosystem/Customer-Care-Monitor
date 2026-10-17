@@ -1,0 +1,28 @@
+# R116 implementation worker repair2 source return
+
+Status: COMPLETE_PENDING_REVIEW_SOURCE_ONLY; repair2 exact source requires Root independent compile and native admission
+Tranche: CCMAI-RUNTIME-116 / BUILD repair round 2 of 2
+Role: IMPLEMENTATION_WORKER; independent Root reviewer and commit steward retain authority
+Authority: unchanged immutable seed `CVF_SESSION/authority/CCMAI-RUNTIME-116.json` at `b06209f28c36afc954f754531db6c363057d5cf7`; accepted R115 SPEC and active R116 order.
+
+## Repair2 D05 disposition
+
+`TestR116WaitDataNativeA6PublicationAndTerminalFaults` now derives replay expectation from the asserted persisted execution state: `PUBLISHED` expects HTTP 200; deliberately held `RESPONSE_RECORDED` expects HTTP 202. The existing state, terminal-code, proposal, receipt, blocking-run and one-call assertions remain. The route already implements this behavior; repair2 changes only `backend/api/handlers/intervention_waitdata_executor_r116_test.go`. `probes/r116_worker/repair2_delta_paths.txt` records that single difference from repair1, and `probes/r116_worker/repair2_final_hashes.json` pins all 16 current source/test files. `git diff --check` exited 0. No Go/formatter/native/DB/provider/secret/network effect was performed in repair2. Root's repair1 exact-source compile passed with drift 0; repair2's single test edit is not yet compiled and awaits Root's independent check.
+## Repair1 response to independent review D01-D04
+
+- D01: Added controlled real-MySQL fault tests for admission rollback, pre-marker attempt-write rollback/no debit, persisted marker debit with no transport and ownerless `RECOVERY_REQUIRED`, response-recorded owner loss with no reconstructed proposal/receipt and blocking run, one original-owner DB publication retry, persistent publication hold, failed terminal receipt commit, and settlement failure. Replays assert no new provider call. These are controlled persisted software windows, **not** process-kill proof or real-provider evidence.
+- D02: Added a native engine test in `backend/engine/intervention_waitdata_executor_test.go` that uses actual `SyncEngine.upsertMessage` through `withOwnedSyncWrite` on an explicitly opted-in fresh loopback `r116_fixture`, while the provider double is held. It asserts the writer finishes without waiting on transport, a changed source blocks publication, and the debit remains. Handler A8 now calls all supported destructive routes concurrently during a held call and checks original run/snapshot equality. The legacy same-run second-candidate insert is asserted rejected by the unique run constraint.
+- D03: Distinguished missing/stale from storage reads in the new executor; checked affected rows at marker, response record, publication, terminal, recovery, and budget mutations. Raw unresolved admission observes `ADMISSION_UNCERTAIN`; uncertain marker never becomes a false no-call DENIED receipt. Cancellation is honored at terminal serialization and failed terminal writes reset owner finalization while leaving the run blocked.
+- D04: The new R116 fixture alone seeds a terminal original JobRun and WAIT_DATA receipt. Native A1 and live paths compare original run/snapshot/receipt/revision/request and preexisting events across execution. Live receipt includes safe original-object identifiers and state for Root readback. Added invalid/expired/mismatched grant, permission denial, duplicate/missing/unknown/trailing/oversize execute JSON, and uppercase UUID-case tests. Concurrent A2 permits a 409 race loser, requires a 202 winner, then terminal replay 200 and one durable effect.
+
+## Source and checks
+
+Exactly 16 worker-authorized Go source/test paths have current SHA-256 pins in `probes/r116_worker/repair2_final_hashes.json`; repair1 pins remain in `repair1_final_hashes.json`. `git diff --check` exited 0. Worker Go budget is **6/6**. The sixth invocation was `go -C backend test ./engine ./api/handlers -run '^$'` with GOPROXY=off, GOSUMDB=off, GOTOOLCHAIN=local, exit 0, zero tests selected; raw output and exit in `probes/r116_worker/go6_stdout.txt`, `go6_stderr.txt`, `go6_exit.txt`, and pre-effect source hashes in `go6_pre_hashes.json`. Exact 16/16 prehashes were unchanged immediately after the invocation.
+
+Two repair1 edits after worker compile changed the engine executor and handler native test; `go6_postcompile_deltas.txt` records them. Root then compiled repair1 exact source with drift 0. Repair2 changed only the native test, which is **not claimed compiled**; the worker has no Go invocation remaining. Root must independently compile exact repair2 hashes before DB/native/live admission. Earlier compile failure and summary-only earlier command records remain preserved in `go_invocations.md`; no output was retroactively invented.
+
+## Boundaries and closeability
+
+Native handlers/engine A1..A8, owned DB fixture, secret/provider effects, real Alibaba governance evidence, hosted CI, deployment, and FREEZE remain **NOT_RUN/OPEN**. No worker fixture/database/provider/network/credential call or commit occurred. Software doubles and source inspection support design only, never a CVF governance claim. Root must review the whole source, compile exact repair2 code, run admitted fresh fixture tests, and inspect persisted rows independently. A third same-root-cause repair is outside the current budget. Original source/history is preserved; ordinary `WaitDataExecutor` remains nil without explicit server-owned installation. Worker did not edit seed, work order, continuity, catalog, status, Root harness or Core. Budget: source repair 2/2, worker Go 6/6, Root focused checks 1/4 at worker return, native campaigns 0, fixture starts 0/1, Alibaba physical calls 0/2.
+
+

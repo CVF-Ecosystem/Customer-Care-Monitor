@@ -10,12 +10,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-058.json`
 - Separate R1 seed for accepted R061 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-062.json`
 - GitHub project-branch material publication receipt for the M1-M5 delivery roadmap; remote SHA readback, no product/runtime acceptance.: `docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json`
-- Current R115 M3-05 intended executor design reviewed; actual implementation/live proof and full milestones OPEN; R114 evidence gaps retained.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
+- Current R116 WAIT_DATA executor source accepted; native/live and full product milestones OPEN; historical UI qualifications retained.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
 - All seven selected inheritance findings independently accepted bounded and material exported atd121c9e; full product exits remain open.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R115 documentary M3-05 executor design handoff; no implementation/runtime authority.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R116_WAITDATA_EXECUTOR_2026-10-17.md`
+- Active R116 executor source/build and conditional evidence handoff; full milestones OPEN.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R116_WAITDATA_EXECUTOR_2026-10-17.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -2954,14 +2954,56 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Exact final documentary packet bytes after Root metadata normalization; no runtime proof.: `docs/reviews/probes/r115_root/committed_packet_original.zip`
 - R115 documentary M3-05 executor intended contract; no product implementation/runtime authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-115.json`
 - R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/specs/M3_WAITDATA_EXECUTOR_R115_SPEC_2026-10-17.md`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_1/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/gate_unit/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/source_binary_admission.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/worker_return0.zip`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go_invocations.md`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_tool_readiness.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/repair1_independent_identity.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/R116_IMPLEMENTATION_WORKER_RETURN_2026-10-17.md`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go5_exit.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go5_pre_hashes.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_1/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/gate_unit/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/worker_repair2.zip`
 - R116 bounded executor authority/readiness; exact evidence limits apply.: `docs/reviews/R116_INTAKE_AND_FINITE_ROUTE_2026-10-17.md`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_2/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go6_stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/gate_unit/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go6_stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go5_stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/repair2_independent_identity.json`
 - R116 bounded executor authority/readiness; exact evidence limits apply.: `docs/reviews/probes/r116_root/readiness_inventory.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/R116_INDEPENDENT_SOURCE_REVIEW_2026-10-17.md`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/repair2_delta_paths.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go6_postcompile_deltas.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/repair1_final_hashes.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/worker_repair1.zip`
 - R116 bounded executor source/evidence control; exact claim scope applies.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R115_EXECUTOR_DESIGN_2026-10-17.md`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_2/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/repair1_source_delta.diff`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_2/exit.json`
 - R116 bounded executor source/evidence control; exact claim scope applies.: `CVF_SESSION/tranches/CCMAI-RUNTIME-116.json`
 - R116 bounded executor authority/readiness; exact evidence limits apply.: `docs/reviews/probes/r116_root/readiness_docker_version.json`
 - R116 bounded executor authority/readiness; exact evidence limits apply.: `CVF_SESSION/authority/CCMAI-RUNTIME-116.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/supervisor_source_review.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/return0_independent_identity.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/preparation_observations.json`
 - R116 bounded executor authority/readiness; exact evidence limits apply.: `docs/reviews/probes/r116_root/readiness_secret_readiness.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/run_go5.ps1`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/gate_unit/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_2/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go6_pre_hashes.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/run_go6.ps1`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go6_exit.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/independent_db_readback.py`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/repair2_final_hashes.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_1/command.json`
 - R116 bounded executor source/evidence control; exact claim scope applies.: `docs/work_orders/CCMAI_RUNTIME_116_WAITDATA_EXECUTOR.md`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go5_stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_1/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go4_pre_hashes.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`
