@@ -1,5 +1,12 @@
 # CCMA — Roadmap phát triển sản phẩm và tiếp quản giữa các agent
 
+## Current R118 UI source checkpoint — 2026-10-18
+
+M3 current-proposal display/action binding now follows the backend active pointer/current lineage with unique legacy fallback; current heading/new WAIT_DATA history/system reason localized. Root independently24focusedtests and app typecheckPASS, source-only review pending final commit binding. No product browser/server/fixture/provider effects, no AI governance claim. See docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md.
+
+Remaining finite product proof: exact source/binary/fixture admission then one targeted current proposal/history wording observation, no lifecycle/provider replay. B07 inherited bounded; B08 exact raster qualified, B09 unsupportedNOT_RUN. Ordinary installed executor activation/fullM2/M3/M1business/pilot/release OPEN; R117 one real call consumed, all old evidence/budgets unchanged, accounts parked, no push/merge/deploy. No generic tooling successor.
+
+
 ## Current checkpoint — R117 bounded M3 backend real flow accepted, 2026-10-18
 
 Actual WAIT_DATA source revision -> one real Alibaba execution/new run/new snapshot -> new proposal on same case -> synthetic writer API CONFIRM persisted, independently accepted. Real HTTP200, one call/debit/grant, faithful340input297output; native11top11nested+engine1PASS, noSKIP. Source5d38dd51/harness8aafa0ce, exact live admission06e16ea8; no ordinary installed activation/current UI-render/actual human decision claim. Owner-authorized same-fixture restart/finalstop after shutdown succeeded; final EXITED/current operational protected equality observed, original interrupted cleanupHOLD/defaultbridge replacement retained.

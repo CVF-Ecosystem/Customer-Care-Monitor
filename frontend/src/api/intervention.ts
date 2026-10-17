@@ -2,7 +2,8 @@
 // the shared Axios refresh interceptor must never silently replay an action.
 export interface InterventionCase {
   id: string; tenant_id: string; job_id: string; conversation_id: string
-  version: number; snapshot_id: string | null; snapshot_digest: string
+  version: number; run_id: string; snapshot_id: string | null; snapshot_digest: string
+  active_execution_id?: string | null; active_proposal_id?: string | null
   disposition: string; work_state: string; reason_code: string; next_action: string
   human_assessment: string; human_explanation: string; human_next_action: string
   data_owner_id: string | null; assignee_id: string | null; due_at: string | null
@@ -19,7 +20,7 @@ export interface InterventionEvent {
 }
 export interface InterventionDetail {
   case: InterventionCase; proposals: InterventionProposal[]
-  human_events: InterventionEvent[]; source_status: string
+  active_proposal_id?: string | null; human_events: InterventionEvent[]; source_status: string
 }
 export interface InterventionAction {
   action: string; expected_version: number; expected_snapshot_id: string

@@ -49,21 +49,33 @@
   "baseCommit": "40a301fa33e0b9cb364b283008d08b449da39d18",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_118_CURRENT_PROPOSAL_UI.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
-  "workOrderStatus": "DISPATCH_READY",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
+  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
   "buildCommit": null,
-  "reviewEvidence": [],
+  "reviewEvidence": [
+    "docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md"
+  ],
   "disposition": "OPEN",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",
     "DESIGN",
     "SPEC",
     "WORK_ORDER"
-  ]
+  ],
+  "budgetUsed": {
+    "workerFocusedFrontendChecks": 2,
+    "rootFocusedFrontendChecks": 2,
+    "sameScopeRepairRounds": 0,
+    "providerCalls": 0,
+    "fixtureStarts": 0,
+    "productBrowserCampaigns": 0
+  }
 }

@@ -1,0 +1,9 @@
+{
+  "exit": 0,
+  "elapsedSeconds": 29.426,
+  "hashes": {
+    "command.json": "e42cc183258188d62334707ac8fb098409780be89881102d5acd92ac0ff2bc01",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "d2b107877c065c80715f5b7461da0ce06884284f34b7c7ee85f6180c1111eb5b"
+  }
+}

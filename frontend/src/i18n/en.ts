@@ -1014,6 +1014,9 @@ export default {
   iv_source: 'Source',
   iv_local_only: 'We have not confirmed that all channel content is included. Please review before acting.',
   iv_original: 'Initial proposal',
+  iv_current_proposal: 'Current proposal',
+  iv_proposal_unavailable: 'The current proposal cannot be verified. Reload the case before taking action.',
+  iv_reason_approved_execution: 'Approved review of the updated information',
   iv_fixture: 'This example data is for trying the review process; it is not a live AI result.',
   iv_kind: 'Proposal type',
   iv_explanation: 'Explanation in the proposal',
@@ -1061,4 +1064,7 @@ export default {
   iv_act_reopen: 'Reopen',
   iv_act_assign_data: 'Assign source follow-up',
   iv_act_escalate_data: 'Escalate source follow-up',
+  iv_act_observe_data: 'Review updated information',
+  iv_act_request_rerun: 'Request a new assessment',
+  iv_act_execute_rerun: 'Updated assessment prepared',
 }

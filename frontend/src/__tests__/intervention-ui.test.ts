@@ -23,7 +23,7 @@ vi.mock('../api/intervention', () => ({
 }))
 
 function deferred<T>() { let resolve!: (v:T)=>void; const promise=new Promise<T>(r=>{resolve=r}); return {promise,resolve} }
-function detail(id:string): InterventionDetail { return {case:{id,tenant_id:'t',job_id:'job',conversation_id:id,version:1,snapshot_id:'s',snapshot_digest:'d',disposition:'PENDING_REVIEW',work_state:'OPEN',reason_code:'',next_action:'',human_assessment:'',human_explanation:'',human_next_action:'',outcome_text:'',data_owner_id:null,assignee_id:null,due_at:null,created_at:'2026-10-15T00:00:00Z',updated_at:'2026-10-15T00:00:00Z'},proposals:[{id:'p',revision:1,run_id:'r',snapshot_id:'s',snapshot_digest:'d',kind:'complaint',explanation:'Original '+id,next_action:'Check',evidence:'[]',provider:'private-provider',model:'private-model',prompt_version:'r101-direct-seed',created_at:'2026-10-15T00:00:00Z'}],human_events:[],source_status:'LOCAL_MATCH_CURRENTNESS_UNVERIFIED'} }
+function detail(id:string): InterventionDetail { return {case:{id,tenant_id:'t',job_id:'job',conversation_id:id,version:1,run_id:'r',snapshot_id:'s',snapshot_digest:'d',disposition:'PENDING_REVIEW',work_state:'OPEN',reason_code:'',next_action:'',human_assessment:'',human_explanation:'',human_next_action:'',outcome_text:'',data_owner_id:null,assignee_id:null,due_at:null,created_at:'2026-10-15T00:00:00Z',updated_at:'2026-10-15T00:00:00Z'},proposals:[{id:'p',revision:1,run_id:'r',snapshot_id:'s',snapshot_digest:'d',kind:'complaint',explanation:'Original '+id,next_action:'Check',evidence:'[]',provider:'private-provider',model:'private-model',prompt_version:'r101-direct-seed',created_at:'2026-10-15T00:00:00Z'}],human_events:[],source_status:'LOCAL_MATCH_CURRENTNESS_UNVERIFIED'} }
 
 async function mounted(initial:string|null='A', locale:'en'|'vi'='en') {
   const pinia=createPinia(); setActivePinia(pinia)
@@ -119,6 +119,7 @@ describe('intervention case presentation', () => {
     data.proposals[0].kind='PRIVATE_KIND'
     data.proposals[0].evidence=JSON.stringify([{message_id:'private-message-id',quote:'Khách đã nhận được hàng.'}])
     data.proposals[0].snapshot_digest='private-digest'
+    data.case.snapshot_digest='private-digest'
     data.proposals[0].provider='private-provider'
     data.proposals[0].model='private-model'
     data.human_events=[{
@@ -189,5 +190,106 @@ describe('intervention case presentation', () => {
     expect(wrapper.text()).toContain('Không thể lưu thao tác lúc này. Hãy thử lại sau.')
     expect(wrapper.text()).not.toContain('private_write_failure')
     wrapper.unmount()
+  })
+})
+
+describe('R118 current proposal and history', () => {
+  beforeEach(() => { calls.detail.mockReset(); calls.assignees.mockReset(); calls.list.mockReset(); calls.action.mockReset(); localStorage.setItem('cqa_access_token','synthetic-session'); calls.assignees.mockResolvedValue({items:[]}) })
+
+  it('shows and submits the pointed current proposal even when an older array item follows it', async () => {
+    const data=detail('CASE-A')
+    data.case.run_id='new-run'; data.case.snapshot_id='new-snapshot'; data.case.snapshot_digest='new-digest'
+    data.case.active_proposal_id='current'; data.active_proposal_id='current'
+    data.proposals=[{...data.proposals[0],id:'current',revision:4,run_id:'new-run',snapshot_id:'new-snapshot',snapshot_digest:'new-digest',explanation:'Current assessment'},data.proposals[0]]
+    calls.detail.mockResolvedValue(data); calls.action.mockResolvedValue({case:data.case})
+    const {wrapper}=await mounted(); await flushPromises()
+    expect(wrapper.text()).toContain('Current proposal')
+    expect(wrapper.text()).toContain('Current assessment')
+    expect(wrapper.text()).not.toContain('Original CASE-A')
+    const vm=wrapper.vm as unknown as {action:string;reason:string;submit:()=>Promise<void>}
+    vm.action='CONFIRM'; vm.reason='Reviewed'; await flushPromises(); await vm.submit()
+    expect(calls.action).toHaveBeenCalledWith('t','A','synthetic-session',expect.any(AbortSignal),expect.objectContaining({expected_proposal_id:'current',expected_revision:4}))
+    wrapper.unmount()
+  })
+
+  it.each(['unknown pointer','mismatched lineage','duplicate pointer','contradictory pointers'])('blocks proposal action for %s', async scenario => {
+    const data=detail('CASE-A')
+    data.active_proposal_id='p'; data.case.active_proposal_id='p'
+    if (scenario==='unknown pointer') data.active_proposal_id=data.case.active_proposal_id='missing'
+    if (scenario==='mismatched lineage') data.proposals[0].run_id='old-run'
+    if (scenario==='duplicate pointer') data.proposals.push({...data.proposals[0]})
+    if (scenario==='contradictory pointers') data.case.active_proposal_id='different'
+    calls.detail.mockResolvedValue(data)
+    const {wrapper}=await mounted(); await flushPromises()
+    expect(wrapper.text()).toContain('The current proposal cannot be verified')
+    const vm=wrapper.vm as unknown as {action:string;reason:string;canSubmit:boolean;submit:()=>Promise<void>}
+    vm.action='CONFIRM'; vm.reason='Reviewed'; await flushPromises()
+    expect(vm.canSubmit).toBe(false)
+    await vm.submit(); expect(calls.action).not.toHaveBeenCalled()
+    wrapper.unmount()
+  })
+
+  it('accepts only one full-lineage legacy proposal without an active execution', async () => {
+    const data=detail('CASE-A')
+    data.proposals.unshift({...data.proposals[0],id:'old',run_id:'old-run'})
+    calls.detail.mockResolvedValue(data); calls.action.mockResolvedValue({case:data.case})
+    const {wrapper}=await mounted(); await flushPromises()
+    const vm=wrapper.vm as unknown as {action:string;reason:string;canSubmit:boolean;submit:()=>Promise<void>}
+    vm.action='CONFIRM'; vm.reason='Reviewed'; await flushPromises()
+    expect(vm.canSubmit).toBe(true)
+    await vm.submit()
+    expect(calls.action.mock.lastCall?.[4]).toMatchObject({expected_proposal_id:'p',expected_revision:1})
+    wrapper.unmount()
+    calls.action.mockReset()
+    for (const blocked of ['ambiguous','execution','missing lineage']) {
+      const candidate=detail('CASE-A')
+      if (blocked==='ambiguous') candidate.proposals.push({...candidate.proposals[0],id:'second'})
+      if (blocked==='execution') candidate.case.active_execution_id='execution'
+      if (blocked==='missing lineage') candidate.case.run_id=''
+      calls.detail.mockResolvedValue(candidate)
+      const next=await mounted(); await flushPromises()
+      const form=next.wrapper.vm as unknown as {action:string;reason:string;canSubmit:boolean;submit:()=>Promise<void>}
+      form.action='CONFIRM'; form.reason='Reviewed'; await flushPromises()
+      expect(form.canSubmit, blocked).toBe(false)
+      await form.submit(); expect(calls.action, blocked).not.toHaveBeenCalled()
+      next.wrapper.unmount()
+    }
+  })
+
+  it('sends proposal-less data follow-up even when a proposal is present', async () => {
+    const data=detail('CASE-A'); data.case.work_state='WAITING_ON_DATA'; data.case.disposition='WAIT_DATA'
+    data.case.active_proposal_id='p'; data.active_proposal_id='p'
+    calls.detail.mockResolvedValue(data); calls.action.mockResolvedValue({case:data.case})
+    const {wrapper}=await mounted(); await flushPromises()
+    const vm=wrapper.vm as unknown as {action:string;reason:string;nextAction:string;submit:()=>Promise<void>}
+    vm.action='ESCALATE_DATA'; vm.reason='Need help'; vm.nextAction='Contact the source'; await flushPromises(); await vm.submit()
+    expect(calls.action.mock.lastCall?.[4]).toMatchObject({expected_proposal_id:'',expected_revision:0})
+    wrapper.unmount()
+  })
+
+  it('localizes new history labels and the exact system reason, preserving a person’s text', async () => {
+    const data=detail('CASE-A')
+    data.human_events=['OBSERVE_DATA','REQUEST_RERUN','EXECUTE_RERUN'].map((action,i)=>({id:String(i),case_version:i+1,actor_id:'person',action,reason:action==='EXECUTE_RERUN'?'approved execution':'Người xử lý đã kiểm tra',before:'{}',after:'{}',source_status:'bound_currentness_unverified',created_at:'2026-10-18T00:00:00Z'}))
+    calls.detail.mockResolvedValue(data)
+    const {wrapper}=await mounted('A','vi'); await flushPromises()
+    const text=wrapper.text()
+    for (const readable of ['Kiểm tra thông tin bổ sung','Yêu cầu đánh giá lại','Đã có đánh giá mới','Đã duyệt đánh giá lại thông tin mới','Người xử lý đã kiểm tra','Chưa xác nhận đủ nội dung từ kênh']) expect(text).toContain(readable)
+    for (const raw of ['OBSERVE_DATA','REQUEST_RERUN','EXECUTE_RERUN','approved execution','bound_currentness_unverified']) expect(text).not.toContain(raw)
+    wrapper.unmount()
+
+    const english=detail('CASE-B')
+    english.human_events=[
+      {...data.human_events[0],id:'other',reason:'approved execution'},
+      {...data.human_events[2],id:'system'},
+    ]
+    calls.detail.mockResolvedValue(english)
+    const next=await mounted('B','en'); await flushPromises()
+    const translated=next.wrapper.text()
+    expect(translated).toContain('Review updated information')
+    expect(translated).toContain('Updated assessment prepared')
+    expect(translated).toContain('Approved review of the updated information')
+    expect(translated).toContain('approved execution')
+    expect(translated).not.toContain('EXECUTE_RERUN')
+    next.wrapper.unmount()
   })
 })

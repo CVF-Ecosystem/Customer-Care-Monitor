@@ -1,0 +1,9 @@
+
+ RUN  v4.1.0 D:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/frontend
+
+
+ Test Files  3 passed (3)
+      Tests  24 passed (24)
+   Start at  01:33:30
+   Duration  83.87s (transform 36.41s, setup 0ms, import 49.16s, tests 4.88s, environment 56.05s)
+

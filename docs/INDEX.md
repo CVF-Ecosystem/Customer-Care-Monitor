@@ -10,12 +10,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-058.json`
 - Separate R1 seed for accepted R061 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-062.json`
 - GitHub project-branch material publication receipt for the M1-M5 delivery roadmap; remote SHA readback, no product/runtime acceptance.: `docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json`
-- Current R117 bounded M3 backend real synthetic flow accepted; current UI/full milestones open, spent authority no replay.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
+- R118 current proposal UI source checked and R117 bounded real backend inherited; current UI/full milestones OPEN.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
 - All seven selected inheritance findings independently accepted bounded and material exported atd121c9e; full product exits remain open.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R117 finite source/native/live verification handoff; full product milestones OPEN.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R118_CURRENT_PROPOSAL_UI_2026-10-18.md`
+- Active R118 source-only current proposal UI and readable history; current rendered proof/full milestones OPEN.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R118_CURRENT_PROPOSAL_UI_2026-10-18.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -4005,7 +4005,33 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0104/exit.json`
 - R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0030/command.json`
 - R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0185/stderr.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/independent_source_audit.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/focused_frontend/stdout.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/worker_return_gate.stdout.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/R118_IMPLEMENTATION_WORKER_RETURN_2026-10-18.md`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/focused_frontend/stderr.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/typecheck/command.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/typecheck/stdout.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/worker_return_gate_initial.stdout.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/capability_observations.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/worker_return_gate_initial.receipt.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/source_hashes.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/typecheck/receipt.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/focused_frontend.stderr.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/vue_tsc.stdout.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/focused_frontend.stdout.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/focused_frontend/receipt.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/source_hashes.json`
 - R118 immutable source-only M3 UI dispatcher seed.: `CVF_SESSION/authority/CCMAI-RUNTIME-118.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/focused_frontend/command.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/worker_return_gate.receipt.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/vue_tsc.receipt.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/vue_tsc.stderr.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/worker_return_gate.stderr.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/focused_frontend.receipt.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/typecheck/stderr.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/worker_return_gate_initial.stderr.txt`
 - Finite current proposal binding/history acceptance and independent review.: `docs/work_orders/CCMAI_RUNTIME_118_CURRENT_PROPOSAL_UI.md`
 - R118 source/component-only status; rendered proof open.: `CVF_SESSION/tranches/CCMAI-RUNTIME-118.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`

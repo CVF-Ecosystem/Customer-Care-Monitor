@@ -1,3 +1,24 @@
+import type { InterventionDetail, InterventionProposal } from '../api/intervention'
+
+export function currentInterventionProposal(detail: InterventionDetail | null): InterventionProposal | null {
+  if (!detail || !Array.isArray(detail.proposals)) return null
+  const current = detail.case
+  const top = detail.active_proposal_id
+  const nested = current.active_proposal_id
+  if (top !== undefined && nested !== undefined && top !== nested) return null
+  const pointer = top !== undefined ? top : nested
+  if (!current.run_id || !current.snapshot_id || !current.snapshot_digest) return null
+  const matches = detail.proposals.filter(proposal =>
+    proposal && typeof proposal.id === 'string' && !!proposal.id &&
+    Number.isInteger(proposal.revision) && proposal.revision > 0 &&
+    proposal.run_id === current.run_id && proposal.snapshot_id === current.snapshot_id &&
+    proposal.snapshot_digest === current.snapshot_digest &&
+    (pointer == null || proposal.id === pointer))
+  if (pointer != null && (typeof pointer !== 'string' || !pointer)) return null
+  if (pointer == null && current.active_execution_id != null) return null
+  return matches.length === 1 ? matches[0] : null
+}
+
 export type InterventionHistoryField =
   | 'disposition'
   | 'work_state'
@@ -46,6 +67,7 @@ const ASSESSMENT_KEYS: Record<string, string> = {
 
 const SOURCE_KEYS: Record<string, string> = {
   LOCAL_MATCH_CURRENTNESS_UNVERIFIED: 'iv_source_local_match_currentness_unverified',
+  BOUND_CURRENTNESS_UNVERIFIED: 'iv_source_local_match_currentness_unverified',
   CHANGED: 'iv_source_changed',
   INCOMPLETE: 'iv_source_incomplete',
   UNAVAILABLE: 'iv_source_unavailable',
@@ -60,7 +82,13 @@ const ACTION_KEYS: Record<string, string> = {
   REOPEN: 'iv_act_reopen',
   ASSIGN_DATA: 'iv_act_assign_data',
   ESCALATE_DATA: 'iv_act_escalate_data',
+  OBSERVE_DATA: 'iv_act_observe_data',
+  REQUEST_RERUN: 'iv_act_request_rerun',
+  EXECUTE_RERUN: 'iv_act_execute_rerun',
 }
+
+export const interventionEventReasonKey = (action: string, reason: string): string | null =>
+  action === 'EXECUTE_RERUN' && reason === 'approved execution' ? 'iv_reason_approved_execution' : null
 
 const DISPOSITION_KEYS: Record<string, string> = {
   PENDING_REVIEW: 'iv_disposition_pending',

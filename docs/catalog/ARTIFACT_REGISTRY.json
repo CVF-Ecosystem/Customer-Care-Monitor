@@ -1528,7 +1528,7 @@
       "family": "continuity",
       "path": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
       "status": "ACTIVE",
-      "description": "Current R117 bounded M3 backend real synthetic flow accepted; current UI/full milestones open, spent authority no replay."
+      "description": "R118 current proposal UI source checked and R117 bounded real backend inherited; current UI/full milestones OPEN."
     },
     {
       "id": "ccma-product-delivery-publication-20261013",
@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R118_CURRENT_PROPOSAL_UI_2026-10-18.md",
       "status": "ACTIVE",
-      "description": "Active R117 finite source/native/live verification handoff; full product milestones OPEN."
+      "description": "Active R118 source-only current proposal UI and readable history; current rendered proof/full milestones OPEN."
     },
     {
       "id": "r060-work-order",
@@ -32042,6 +32042,188 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_118_CURRENT_PROPOSAL_UI.md",
       "status": "ACTIVE",
       "description": "Finite current proposal binding/history acceptance and independent review."
+    },
+    {
+      "id": "r118-c59fd48c7b400eb4",
+      "family": "continuity",
+      "path": "docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-276aa6c81ccc0539",
+      "family": "continuity",
+      "path": "docs/reviews/R118_IMPLEMENTATION_WORKER_RETURN_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-4d9f17eff0ba7a65",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_root/capability_observations.json",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-07f52c46f39073a5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_root/independent_source_audit.json",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-62d673b34beb677e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_root/source_hashes.json",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-b835d71370945d0c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_root/focused_frontend/command.json",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-a5f0945a5ca11e9f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_root/focused_frontend/receipt.json",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-2b2110eb33369c6a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_root/focused_frontend/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-12c48a4e86178803",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_root/focused_frontend/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-4245a94b9f6d7fe7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_root/typecheck/command.json",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-8ef983901ee792c2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_root/typecheck/receipt.json",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-e7fa281750dd9f0c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_root/typecheck/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-45133a6038f34ad4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_root/typecheck/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-e29b17e63b7c450f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_worker/focused_frontend.receipt.json",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-977d6333df5c0110",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_worker/focused_frontend.stderr.txt",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-9c14b5a06948e9f7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_worker/focused_frontend.stdout.txt",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-ae564f0b402aa898",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_worker/source_hashes.json",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-d21fa57c33e40181",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_worker/vue_tsc.receipt.json",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-d5a5ed96b0a38bb7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_worker/vue_tsc.stderr.txt",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-9797a31aa02ad41b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_worker/vue_tsc.stdout.txt",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-c8e2404fe79c2615",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_worker/worker_return_gate.receipt.json",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-e149c2ce2701e446",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_worker/worker_return_gate.stderr.txt",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-25a185437bca28c5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_worker/worker_return_gate.stdout.txt",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-4f38c68787c9d557",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_worker/worker_return_gate_initial.receipt.json",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-fcd3c1738f826656",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_worker/worker_return_gate_initial.stderr.txt",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-4a20c8526908dbc8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_worker/worker_return_gate_initial.stdout.txt",
+      "status": "ACTIVE",
+      "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
     }
   ]
 }

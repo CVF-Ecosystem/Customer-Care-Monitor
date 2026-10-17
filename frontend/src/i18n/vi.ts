@@ -1014,6 +1014,9 @@ export default {
   iv_source: 'Nguồn dữ liệu',
   iv_local_only: 'Chưa xác nhận đầy đủ nội dung từ kênh. Vui lòng đối chiếu trước khi xử lý.',
   iv_original: 'Đề xuất ban đầu',
+  iv_current_proposal: 'Đề xuất hiện tại',
+  iv_proposal_unavailable: 'Chưa thể xác minh đề xuất hiện tại. Hãy tải lại ca trước khi thao tác.',
+  iv_reason_approved_execution: 'Đã duyệt đánh giá lại thông tin mới',
   iv_fixture: 'Đây là dữ liệu minh họa để thử quy trình, không phải kết quả từ AI trực tiếp.',
   iv_kind: 'Loại đề xuất',
   iv_explanation: 'Giải thích trong đề xuất',
@@ -1061,4 +1064,7 @@ export default {
   iv_act_reopen: 'Mở lại',
   iv_act_assign_data: 'Giao bổ sung dữ liệu',
   iv_act_escalate_data: 'Chuyển cấp xử lý dữ liệu',
+  iv_act_observe_data: 'Kiểm tra thông tin bổ sung',
+  iv_act_request_rerun: 'Yêu cầu đánh giá lại',
+  iv_act_execute_rerun: 'Đã có đánh giá mới',
 }

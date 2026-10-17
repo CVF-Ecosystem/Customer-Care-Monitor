@@ -1,0 +1,7 @@
+{
+  "command": "python -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase worker-return --project-root . --packet docs/work_orders/CCMAI_RUNTIME_118_CURRENT_PROPOSAL_UI.md --packet docs/reviews/R118_IMPLEMENTATION_WORKER_RETURN_2026-10-18.md",
+  "cwd": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+  "exitCode": 0,
+  "stdout": "docs\\reviews\\probes\\r118_worker\\worker_return_gate.stdout.txt",
+  "stderr": "docs\\reviews\\probes\\r118_worker\\worker_return_gate.stderr.txt"
+}

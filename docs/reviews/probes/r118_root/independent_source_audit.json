@@ -1,0 +1,38 @@
+{
+  "sourceChecks": {
+    "frontend/src/api/intervention.ts": {
+      "workerMatchesCurrent": true,
+      "rootMatchesWorker": true
+    },
+    "frontend/src/views/InterventionCases.vue": {
+      "workerMatchesCurrent": true,
+      "rootMatchesWorker": true
+    },
+    "frontend/src/utils/interventionPresentation.ts": {
+      "workerMatchesCurrent": true,
+      "rootMatchesWorker": true
+    },
+    "frontend/src/i18n/vi.ts": {
+      "workerMatchesCurrent": true,
+      "rootMatchesWorker": true
+    },
+    "frontend/src/i18n/en.ts": {
+      "workerMatchesCurrent": true,
+      "rootMatchesWorker": true
+    },
+    "frontend/src/__tests__/intervention-ui.test.ts": {
+      "workerMatchesCurrent": true,
+      "rootMatchesWorker": true
+    }
+  },
+  "allSixMatch": true,
+  "immutableSeedMatchesFirstCommit": true,
+  "firstSeedCommit": "40a301fa33e0b9cb364b283008d08b449da39d18",
+  "dispatchCommit": "de3eba55c36644a99e0bfe67fbdb9764dd67232a",
+  "reviewer": "Codex /root",
+  "worker": "/root/r118_ui_worker",
+  "backendContract": "intervention_m3.go146-175 read-only reviewed",
+  "providerCalls": 0,
+  "productRuntimeStarts": 0,
+  "claim": "UI source/component only; no governance runtime or changed-screen proof"
+}

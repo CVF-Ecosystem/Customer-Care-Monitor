@@ -1,0 +1,7 @@
+{
+  "command": "node node_modules/vue-tsc/bin/vue-tsc.js --noEmit -p tsconfig.app.json",
+  "cwd": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\frontend",
+  "exitCode": 0,
+  "stdout": "docs\\reviews\\probes\\r118_worker\\vue_tsc.stdout.txt",
+  "stderr": "docs\\reviews\\probes\\r118_worker\\vue_tsc.stderr.txt"
+}

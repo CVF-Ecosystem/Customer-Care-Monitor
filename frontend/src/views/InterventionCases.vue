@@ -45,7 +45,7 @@
         </v-card-text>
       </v-card>
       <v-card v-if="proposal" class="mb-4">
-        <v-card-title>{{ $t('iv_original') }}</v-card-title>
+        <v-card-title>{{ $t('iv_current_proposal') }}</v-card-title>
         <v-card-text>
           <v-alert v-if="proposal.prompt_version === 'r101-direct-seed'" type="info" class="mb-3">{{ $t('iv_fixture') }}</v-alert>
           <p>{{ $t('iv_kind') }}: {{ proposalKindLabel(proposal.kind) }}</p>
@@ -55,6 +55,7 @@
           <ul><li v-for="(ref, i) in evidence" :key="i">“{{ ref.quote }}”</li></ul>
         </v-card-text>
       </v-card>
+      <v-alert v-else-if="requiresProposal" type="warning" class="mb-4">{{ $t('iv_proposal_unavailable') }}</v-alert>
       <v-alert v-if="detail.case.work_state === 'WAITING_ON_DATA'" type="warning" class="mb-4">
         {{ $t('iv_wait_data') }} {{ $t('iv_rerun_manual') }}
       </v-alert>
@@ -82,7 +83,7 @@
           <p v-if="!detail.human_events.length">{{ $t('iv_empty_history') }}</p>
           <div v-for="event in detail.human_events" :key="event.id" class="mb-3 pb-3 border-b">
             <strong>{{ actionLabel(event.action) }} · {{ revisionLabel(event.case_version) }}</strong> · {{ formatDate(event.created_at) }} · {{ person(event.actor_id) }}
-            <p>{{ $t('iv_reason') }}: {{ event.reason }}</p>
+            <p>{{ $t('iv_reason') }}: {{ eventReason(event) }}</p>
             <p class="text-caption">{{ $t('iv_source') }}: {{ sourceLabel(event.source_status) }}</p>
             <details>
               <summary>{{ $t('iv_change') }}</summary>
@@ -111,8 +112,10 @@ import {
   interventionActionKey,
   interventionAssessmentKey,
   interventionCaseReference,
+  currentInterventionProposal,
   interventionDispositionKey,
   interventionHistoryChanges,
+  interventionEventReasonKey,
   interventionProposalKindKey,
   interventionSourceKey,
   interventionStateKey,
@@ -133,7 +136,7 @@ let generation = 0; let controller: AbortController | null = null
 const currentLifetime = () => JSON.stringify([tenantId.value,caseId.value,auth.accessToken,auth.tenantPerms.role,auth.tenantPerms.permissions])
 const stillCurrent = (mine:number,key:string,signal:AbortSignal) => mine===generation && key===currentLifetime() && !signal.aborted
 const filters = computed(() => [{title:t('iv_active'),value:''}, ...['OPEN','ASSIGNED','WAITING_ON_DATA','RESOLVED','REJECTED'].map(value=>({title:stateLabel(value),value}))])
-const proposal = computed(() => detail.value?.proposals.at(-1))
+const proposal = computed(() => currentInterventionProposal(detail.value))
 const evidence = computed<{message_id:string;quote:string}[]>(() => { try { const refs = JSON.parse(proposal.value?.evidence || '[]'); return Array.isArray(refs) ? refs.filter(x => x && typeof x.message_id === 'string' && typeof x.quote === 'string') : [] } catch { return [] } })
 const availableActions = computed(() => {
   const c = detail.value?.case; if (!c) return []
@@ -145,8 +148,11 @@ const availableActions = computed(() => {
   return names.map(value => ({title:t('iv_act_'+value.toLowerCase()),value}))
 })
 const needsDue = computed(() => ['ASSIGN','ASSIGN_DATA','REOPEN'].includes(action.value))
+const proposalLessAction = computed(() => ['ASSIGN_DATA','ESCALATE_DATA'].includes(action.value))
+const requiresProposal = computed(() => availableActions.value.some(item => !['ASSIGN_DATA','ESCALATE_DATA'].includes(item.value)))
 const sourceAllowsAction = computed(() => ['ASSIGN_DATA','ESCALATE_DATA'].includes(action.value) || detail.value?.source_status === 'LOCAL_MATCH_CURRENTNESS_UNVERIFIED')
 const canSubmit = computed(() => !!detail.value && !!action.value && sourceAllowsAction.value && !!reason.value.trim() && reason.value.length <= 500 && !busy.value &&
+  (proposalLessAction.value || !!proposal.value) &&
   (!needsDue.value || !!dueLocal.value) && (!['ASSIGN','ASSIGN_DATA'].includes(action.value) || !!assigneeId.value) &&
   (action.value !== 'CORRECT' || (!!explanation.value.trim() && !!nextAction.value.trim())) &&
   (!['ASSIGN_DATA','ESCALATE_DATA'].includes(action.value) || !!nextAction.value.trim()) &&
@@ -164,6 +170,7 @@ function stateLabel(value:string) { return t(interventionStateKey(value)) }
 function assessmentLabel(value:string) { return t(interventionAssessmentKey(value)) }
 function sourceLabel(value:string) { return t(interventionSourceKey(value)) }
 function actionLabel(value:string) { return t(interventionActionKey(value)) }
+function eventReason(event: InterventionEvent) { const key=interventionEventReasonKey(event.action,event.reason); return key ? t(key) : event.reason }
 function proposalKindLabel(value:string) { return t(interventionProposalKindKey(value)) }
 const historyLabels = computed<InterventionHistoryLabels>(() => ({
   fields: {
@@ -228,7 +235,7 @@ async function more() {
 }
 async function submit() {
   if (!canSubmit.value || !detail.value || !canEdit.value) return
-  const mine=generation, tenant=tenantId.value, id=caseId.value, token=auth.accessToken, c=detail.value.case, p=proposal.value, key=currentLifetime()
+  const mine=generation, tenant=tenantId.value, id=caseId.value, token=auth.accessToken, c=detail.value.case, p=proposalLessAction.value ? null : proposal.value, key=currentLifetime()
   const signal=controller?.signal; if (!signal) return
   let due: string | undefined
   if (needsDue.value) { const date=new Date(dueLocal.value); if (!Number.isFinite(date.getTime()) || date.getTime()<=Date.now()) { error.value=t('iv_invalid_due'); return }; due=date.toISOString() }
