@@ -2879,16 +2879,17 @@
     "protected": "EQUAL"
   },
   "x-r117Current": {
-    "status": "NATIVE_ACCEPTED_OWNER_SHUTDOWN_RECOVERY",
+    "status": "OWNER_RESTART_READY_LIVE_ADMISSION_PENDING_COMMIT",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_117_WAITDATA_VERIFICATION.md",
     "nextAction": "CCMAI-RUNTIME-117 BUILD: owner-confirmed shutdown continuation authority88c0865e permits one exact-owned R117 restart and final stop; inherit accepted source/binaries/native11top11nested+engine1PASS without replay. Root reviews operational helper, refreshes actual fixture/runtime/live pins and commits before sole unattempted Alibaba call, independent DB/wire review and cleanup. Old counters/evidence unchanged; no tool-repair chain/push/merge/deploy. FullM2/M3/UI/pilot/release OPEN; Facebook/ZaloOA parked.",
     "freeze": "OPEN",
     "sourceCommit": "8aafa0ce",
-    "fixture": "READY_OWNED_LOOPBACK",
+    "fixture": "READY_SAME_OWNED_RESOURCE",
     "native": "HANDLERS11TOP11NESTED_ENGINE1_PASS_NOSKIP",
-    "live": "NOT_RUN",
+    "live": "ADMISSION_REFRESHED_NOT_RUN",
     "providerCalls": 0,
     "rootFocusedChecks": 3,
-    "ownerContinuationAuthority": "docs/reviews/probes/r117_root/owner_restart_authority_18.json"
+    "ownerContinuationAuthority": "docs/reviews/probes/r117_root/owner_restart_authority_18.json",
+    "ownerRestartsUsed": 1
   }
 }

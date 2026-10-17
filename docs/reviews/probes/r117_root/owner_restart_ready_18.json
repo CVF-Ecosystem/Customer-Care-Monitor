@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-17T18:04:58.548519+00:00",
+  "containerId": "033e0151bb4805cce1ce6dc347ab79ab8275e016c8ace371cfda158297a2c352",
+  "port": 61823,
+  "state": "running",
+  "mysqlSchema": "r116_fixture",
+  "operationalBaselineSha256": "00b419c0db3a9ac59085e4b0676cc4c720ffc3682bc622abddc9c2e072f8ab26",
+  "localFixtureSha256": "4c1b66521664fbe52ff2d508bb7322461e9e693e8754bba4eb112ed8b7fdaa46",
+  "originalPinSha256": "41b73398a692c153b7bcf889d7691f22d88078d6381fe314ef434beb4709fc93",
+  "supplementSha256": "652149d549bdef060fc32a2ec73cd732c061cf3a98ef0bb12cc70eb3f60c13e2",
+  "sourceAdmissionSha256": "02f0cef7fb1cc0f8ffeaa276cfad04b12d49fd75d460903fdbb3a702387f7ae1",
+  "nativeReplay": false,
+  "providerCall": false
+}

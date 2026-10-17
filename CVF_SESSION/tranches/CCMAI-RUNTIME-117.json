@@ -133,7 +133,7 @@
   "sourceRepairRoundsUsed": 1,
   "ownerContinuationAuthority": "docs/reviews/probes/r117_root/owner_restart_authority_18.json",
   "additionalOwnerBudgetUsed": {
-    "ownedFixtureRestarts": 0,
+    "ownedFixtureRestarts": 1,
     "ownedFixtureFinalStops": 0
   },
   "ownerHelperSourceFinding": "Cleanup must not require successful ready/localpin rebind after authorized start; original ownership/baseline sufficient for exact final stop on partial readiness failure."

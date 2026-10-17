@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "trancheId": "CCMAI-RUNTIME-117",
-  "fixtureSha256": "41b73398a692c153b7bcf889d7691f22d88078d6381fe314ef434beb4709fc93",
+  "fixtureSha256": "4c1b66521664fbe52ff2d508bb7322461e9e693e8754bba4eb112ed8b7fdaa46",
   "sourceAdmissionSha256": "02f0cef7fb1cc0f8ffeaa276cfad04b12d49fd75d460903fdbb3a702387f7ae1",
   "testBinary": ".cvf/runtime/r117_execution/bin/handlers.test.exe",
   "reviewerTestBinary": ".cvf/runtime/r117_execution/bin/engine.test.exe",
@@ -12,9 +12,12 @@
   },
   "fixtureContainerId": "033e0151bb4805cce1ce6dc347ab79ab8275e016c8ace371cfda158297a2c352",
   "fixtureImage": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
-  "loopbackPort": 59002,
+  "loopbackPort": 61823,
   "logicalDatabase": "r116_fixture",
-  "dsnSha256": "78cdcd44a9c901b1a2312f012f77fbfeed921660b1a6bd9d93582e7f643e0957",
+  "dsnSha256": "b1917f80b1ea7bba4832cb9c25c0e39f3e8fdc204522eb2297682bfbb1146549",
   "technicalHarnessCompatibility": "R116 test names/env/schema only; NEW R117 fixture/campaign/grant/physical slots",
-  "nativeAdmission": "Root source/binary/fixture checked; provider NOT admitted before both native groups PASS"
+  "nativeAdmission": "Native proofs inherited at identical source/binaries, no replay; exact-owned restart authorized after owner shutdown",
+  "ownerContinuationAuthoritySha256": "652149d549bdef060fc32a2ec73cd732c061cf3a98ef0bb12cc70eb3f60c13e2",
+  "ownerOperationalBaselineSha256": "00b419c0db3a9ac59085e4b0676cc4c720ffc3682bc622abddc9c2e072f8ab26",
+  "supersedesRuntimeAdmissionSha256": "c53583e328c454617521a3c18273becc2bb5339bcd5db2cb4b9968ad76de85bc"
 }
