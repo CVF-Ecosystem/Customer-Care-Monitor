@@ -2327,6 +2327,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/final_checks/workspace_doctor.stdout.txt`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/work_orders/CCMAI_RUNTIME_111_REMAINING_UI.md`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/R112_INDEPENDENT_RUNTIME_HOLD_REVIEW_2026-10-17.md`
+- Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
+- Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
+- Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`
+- Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/R112_RESUME_CAPABILITY_HOLD_2026-10-17_021300Z.md`
+- Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/result.json`
+- Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stderr.bin`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

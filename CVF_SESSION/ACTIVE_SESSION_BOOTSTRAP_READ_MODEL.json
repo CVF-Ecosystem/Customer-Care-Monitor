@@ -22,5 +22,13 @@
     "source": "Explicit owner UI/UX instruction",
     "requirement": "All product-facing labels, statuses, instructions and error messages must use language understandable to end users. Do not expose developer jargon, raw API/enum/error codes, stack traces, runtime/tooling/governance implementation details in ordinary UI flows. Keep technical diagnostics in evidence/logs.",
     "verification": "R110 bounded source wording repair/qualified tests accepted; rendered current UI NOT_RUN after R112 Docker inspection timeouts."
+  },
+  "x-r112LatestResumeDiagnostic": {
+    "observedAtUTC": "2026-10-17T02:13:00.370385+00:00",
+    "status": "DOCKER_CAPABILITY_HOLD",
+    "report": "docs/reviews/R112_RESUME_CAPABILITY_HOLD_2026-10-17_021300Z.md",
+    "evidence": "docs/reviews/probes/r112_resume_20261017T021300Z",
+    "runtimeEffectCount": 0,
+    "newProductAuthority": "NONE"
   }
 }

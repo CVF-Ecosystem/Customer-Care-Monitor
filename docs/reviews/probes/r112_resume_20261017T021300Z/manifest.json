@@ -1,0 +1,26 @@
+{
+  "scope": "Single owner-resumed read-only Docker capability check; no product runtime",
+  "files": [
+    {
+      "path": "command_001_server_version.json",
+      "bytes": 783,
+      "sha256": "e9d5f76254b8667bae07101c85cc8c661708258f17ba1bb727c00aad23de1d83"
+    },
+    {
+      "path": "command_001_server_version.stderr.bin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "command_001_server_version.stdout.bin",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "result.json",
+      "bytes": 597,
+      "sha256": "bf76bc85a2dbba3bfbe71284adf2d388e1d370a3781768a217c676ef00c9796a"
+    }
+  ],
+  "selfHash": "EXCLUDED; recorded in report"
+}

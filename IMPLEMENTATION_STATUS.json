@@ -2816,5 +2816,13 @@
     "nextAction": "CCMAI-RUNTIME-112 CHANGES_REQUIRED: sole start failed before fixture startup because pinned Docker target inspect and protected-inventory ps timed out; owned Docker children terminated, final fixture/protected state NOT_OBSERVED. Fixture/backend/Vite/native/Go/productUI0; start1/retry0, unused slots stayunused. Source9e7620b1/inheritedUIa28cdd0a stable;26PASS3knownDashboardFAIL/typecheckPASS, current rendered wording and B07/B08/B09 NOT_RUN. STOP runtime/browser here per owner; transfer full preserved R110/R111/R112 packet to another integrated-browser agent with responsive Docker and fresh bounded authority, no replay/reset/restart. R109 partial native/B01-B06/B10 retained; no FREEZE/fullM2/M3/pilot/release acceptance, Dashboard3 OPEN, R102 local FROZEN, Facebook/ZaloOA accounts parked.",
     "sourceCommit": "9e7620b138ca218e63c903f52603f786670a6028",
     "review": "docs/reviews/R112_INDEPENDENT_RUNTIME_HOLD_REVIEW_2026-10-17.md"
+  },
+  "x-r112LatestResumeDiagnostic": {
+    "observedAtUTC": "2026-10-17T02:13:00.370385+00:00",
+    "status": "DOCKER_CAPABILITY_HOLD",
+    "report": "docs/reviews/R112_RESUME_CAPABILITY_HOLD_2026-10-17_021300Z.md",
+    "evidence": "docs/reviews/probes/r112_resume_20261017T021300Z",
+    "runtimeEffectCount": 0,
+    "newProductAuthority": "NONE"
   }
 }

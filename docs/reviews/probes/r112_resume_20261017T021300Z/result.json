@@ -1,0 +1,16 @@
+{
+  "backendStarts": 0,
+  "browserInventory": "Root observed iab2 available with no tabs; interaction not tested in this resume",
+  "cachePath": "NOT_OBSERVED",
+  "driverVersion": "NOT_OBSERVED",
+  "error": "Docker server_version command timed out or could not start",
+  "errorType": "Hold",
+  "fixtureStarts": 0,
+  "goCompiles": 0,
+  "nativeInvocations": 0,
+  "observedAtUTC": "2026-10-17T02:13:00.370385+00:00",
+  "productUiPosts": 0,
+  "result": "DOCKER_CAPABILITY_HOLD",
+  "scope": "One read-only Docker server version capability check, not R112 replay or product launch",
+  "viteStarts": 0
+}

@@ -20233,6 +20233,48 @@
       "path": "docs/reviews/probes/r112_root/staged_byte_contract.json",
       "status": "ACTIVE",
       "description": "R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims."
+    },
+    {
+      "id": "resume112-80997e2900a604bf4e",
+      "family": "continuity",
+      "path": "docs/reviews/R112_RESUME_CAPABILITY_HOLD_2026-10-17_021300Z.md",
+      "status": "ACTIVE",
+      "description": "Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse."
+    },
+    {
+      "id": "resume112-13a39a415843b38479",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json",
+      "status": "ACTIVE",
+      "description": "Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse."
+    },
+    {
+      "id": "resume112-a0882d4b3265696066",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse."
+    },
+    {
+      "id": "resume112-5809f3f68592ae625e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse."
+    },
+    {
+      "id": "resume112-183949ae5b133456b3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json",
+      "status": "ACTIVE",
+      "description": "Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse."
+    },
+    {
+      "id": "resume112-84af6120b09a41d7f9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r112_resume_20261017T021300Z/result.json",
+      "status": "ACTIVE",
+      "description": "Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse."
     }
   ]
 }
