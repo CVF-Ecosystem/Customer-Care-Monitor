@@ -208,6 +208,88 @@
           "stderr": ""
         }
       ]
+    },
+    {
+      "at": "2026-10-17T08:08:30.612499+00:00",
+      "checks": [
+        {
+          "name": "pre-commit",
+          "argv": [
+            "python",
+            "-B",
+            "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+            "run",
+            "--phase",
+            "pre-commit",
+            "--project-root",
+            ".",
+            "--packet",
+            "docs/work_orders/CCMAI_RUNTIME_115_EXECUTOR_DESIGN.md",
+            "--packet",
+            "docs/reviews/R115_DESIGN_WORKER_RETURN_2026-10-17.md",
+            "--packet",
+            "docs/reviews/R115_INDEPENDENT_DESIGN_REVIEW_2026-10-17.md"
+          ],
+          "startedAtUTC": "2026-10-17T08:08:10.990409+00:00",
+          "exitCode": 0,
+          "stdout": "[PASS] CVF-DG-INST-01 PASS\r\n[PASS] CVF-DG-CONT-01 PASS\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=5461048b606557c4b0742d78e39f783cececf767 candidates=8 deleted=0\r\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\r\n       note: docs/work_orders/CCMAI_RUNTIME_115_EXECUTOR_DESIGN.md: status REVIEWER_ACCEPTED is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\r\n[PASS] CVF-DG-ROLE-01 PASS\r\n       note: checked: docs/reviews/R115_DESIGN_WORKER_RETURN_2026-10-17.md, docs/reviews/R115_INDEPENDENT_DESIGN_REVIEW_2026-10-17.md\r\n[PASS] CVF-DG-CLAIM-01 PASS\r\n       note: 0 explicit claim line(s) and 3 document(s) scanned\r\nRESULT: PASS phase=pre-commit mandatoryControls=6 failed=0\r\n",
+          "stderr": ""
+        },
+        {
+          "name": "legacy-preflight",
+          "argv": [
+            "python",
+            "-B",
+            "scripts/cvf_downstream_gate.py",
+            "preflight"
+          ],
+          "startedAtUTC": "2026-10-17T08:08:10.991570+00:00",
+          "exitCode": 1,
+          "stdout": "[PASS] provenance\r\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\r\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\r\n[PASS] continuity\r\n[FAIL] tranche\r\n       - CCMAI-RUNTIME-115: REVIEW_PASS requires disposition REVIEW_PASS\r\n[PASS] claims\r\n[PASS] secrets\r\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\r\n[PASS] workflows\r\n[PASS] catalog\r\nCVF downstream preflight: FAIL (6/7 executed gates passed)\r\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "at": "2026-10-17T08:09:10.427419+00:00",
+      "checks": [
+        {
+          "name": "pre-commit",
+          "argv": [
+            "python",
+            "-B",
+            "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+            "run",
+            "--phase",
+            "pre-commit",
+            "--project-root",
+            ".",
+            "--packet",
+            "docs/work_orders/CCMAI_RUNTIME_115_EXECUTOR_DESIGN.md",
+            "--packet",
+            "docs/reviews/R115_DESIGN_WORKER_RETURN_2026-10-17.md",
+            "--packet",
+            "docs/reviews/R115_INDEPENDENT_DESIGN_REVIEW_2026-10-17.md"
+          ],
+          "startedAtUTC": "2026-10-17T08:08:52.646780+00:00",
+          "exitCode": 0,
+          "stdout": "[PASS] CVF-DG-INST-01 PASS\r\n[PASS] CVF-DG-CONT-01 PASS\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=5461048b606557c4b0742d78e39f783cececf767 candidates=9 deleted=0\r\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\r\n       note: docs/work_orders/CCMAI_RUNTIME_115_EXECUTOR_DESIGN.md: status REVIEWER_ACCEPTED is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\r\n[PASS] CVF-DG-ROLE-01 PASS\r\n       note: checked: docs/reviews/R115_DESIGN_WORKER_RETURN_2026-10-17.md, docs/reviews/R115_INDEPENDENT_DESIGN_REVIEW_2026-10-17.md\r\n[PASS] CVF-DG-CLAIM-01 PASS\r\n       note: 0 explicit claim line(s) and 3 document(s) scanned\r\nRESULT: PASS phase=pre-commit mandatoryControls=6 failed=0\r\n",
+          "stderr": ""
+        },
+        {
+          "name": "legacy-preflight",
+          "argv": [
+            "python",
+            "-B",
+            "scripts/cvf_downstream_gate.py",
+            "preflight"
+          ],
+          "startedAtUTC": "2026-10-17T08:08:52.647610+00:00",
+          "exitCode": 0,
+          "stdout": "[PASS] provenance\r\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\r\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\r\n[PASS] continuity\r\n[PASS] tranche\r\n[PASS] claims\r\n[PASS] secrets\r\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\r\n[PASS] workflows\r\n[PASS] catalog\r\nCVF downstream preflight: PASS (7/7 executed gates passed)\r\n",
+          "stderr": ""
+        }
+      ]
     }
   ],
   "workerSubmittedArtifactPins": {
