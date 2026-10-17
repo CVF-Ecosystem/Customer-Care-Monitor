@@ -1528,7 +1528,7 @@
       "family": "continuity",
       "path": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
       "status": "ACTIVE",
-      "description": "Current R116 executor source accepted only; runtime blocked by missing fixture port, DB/live NOT_RUN, owned fixture stopped and protected inventory equal; full milestones OPEN."
+      "description": "Current R117 M3 WAIT_DATA source/native accepted; owner-authorized post-shutdown single restart and remaining one live proof/readback/cleanup; full milestones OPEN."
     },
     {
       "id": "ccma-product-delivery-publication-20261013",
@@ -28911,6 +28911,20 @@
       "id": "r117-21482041181dd52cc8",
       "family": "continuity",
       "path": "docs/reviews/probes/r117_root/live_admission_unissued_snapshot_18.json",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-31ef1cb8168be0f102",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_root/owner_ops_source_review_18.json",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-b3ff40c09a07d83d9d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_worker/owner_resume_ops.py",
       "status": "ACTIVE",
       "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
     }

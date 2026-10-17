@@ -14,10 +14,10 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-117",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R117_WAITDATA_VERIFICATION_2026-10-17.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-117 BUILD: repair admitted port/cleanup supervisor and fresh-live grant binding, Root review exact source/binary and commit admission; one NEW isolated fixture then serial handlers/engine native, one fresh Alibaba call only if native pass and committed live admission. Stop any uncertainty, no runtime retries or old budget reuse. FullM2/M3/pilot/release/UI gaps OPEN, Facebook/ZaloOA parked; no push/merge/deploy.",
+  "nextAllowedMove": "CCMAI-RUNTIME-117 BUILD: owner-confirmed shutdown continuation authority88c0865e permits one exact-owned R117 restart and final stop; inherit accepted source/binaries/native11top11nested+engine1PASS without replay. Root reviews operational helper, refreshes actual fixture/runtime/live pins and commits before sole unattempted Alibaba call, independent DB/wire review and cleanup. Old counters/evidence unchanged; no tool-repair chain/push/merge/deploy. FullM2/M3/UI/pilot/release OPEN; Facebook/ZaloOA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD / live secret custodian; /root/r117_execution_worker Sol Medium IMPLEMENTATION_WORKER",
-  "updatedAt": "2026-10-17",
+  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD / SESSION_SYNC_STEWARD / live secret custodian; /root/r117_execution_worker source-only operational helper",
+  "updatedAt": "2026-10-18",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {
     "date": "2026-10-12",
@@ -2174,5 +2174,15 @@
     "usedPhysicalCalls": 0,
     "fresh": true,
     "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-117.json"
+  },
+  "x-r117OwnerShutdownContinuation": {
+    "authority": "docs/reviews/probes/r117_root/owner_restart_authority_18.json",
+    "commit": "88c0865e861a9f1ff417c0452cf8f312ac8e91d7",
+    "ownerReportedShutdown": true,
+    "restartCap": 1,
+    "additionalFinalStopCap": 1,
+    "nativeReplay": 0,
+    "physicalTotalCap": 1,
+    "physicalUsed": 0
   }
 }

@@ -110,6 +110,9 @@
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
     "BUILD"
   ],
   "planningPhaseTrace": [
@@ -122,15 +125,16 @@
     "rootFocusedChecks": 3,
     "workerGoChecks": 0,
     "workerPythonChecks": 3,
-    "rootPythonChecks": 1,
+    "rootPythonChecks": 2,
     "fixtureStarts": 1,
     "fixtureTeardowns": 1,
     "physicalAlibabaCalls": 0
   },
-  "sourceRepairRoundsUsed": 0,
+  "sourceRepairRoundsUsed": 1,
   "ownerContinuationAuthority": "docs/reviews/probes/r117_root/owner_restart_authority_18.json",
   "additionalOwnerBudgetUsed": {
     "ownedFixtureRestarts": 0,
     "ownedFixtureFinalStops": 0
-  }
+  },
+  "ownerHelperSourceFinding": "Cleanup must not require successful ready/localpin rebind after authorized start; original ownership/baseline sufficient for exact final stop on partial readiness failure."
 }

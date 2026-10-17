@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "x-roadmapTracking": {
-    "updatedAt": "2026-10-17",
-    "status": "M3_WAITDATA_R117_FINITE_VERIFICATION",
+    "updatedAt": "2026-10-18",
+    "status": "M3_WAITDATA_NATIVE_ACCEPTED_LIVE_PENDING",
     "currentCheckpoint": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
     "stages": {
       "S0": "PARTIAL_LIVE_BASELINE_OPEN",
@@ -23,7 +23,7 @@
       "M5 release/portable operations"
     ],
     "currentBlockers": [
-      "R116 executor source5d38dd51/compile accepted only; owned fixture started but published MySQL port absent; DB/native/live NOT_RUN, fixture stopped/protected equal, no restart.",
+      "R117 WAIT_DATA source/compile/native handlers11top11nested+engine1PASS; actual live NOT_RUN. Owner shutdown confirms runtime interruption, exact-owned restart permitted once under supplement88c0865e; refreshed live admission/readback/cleanup pending.",
       "R114 original terminal evidence MISSING/noFREEZE; B08rasterqualified/B09unsupported",
       "Dashboard3failures, actualAIrerun/fullM2/M3/pilot/release and M1business acceptance OPEN"
     ],
@@ -2879,15 +2879,16 @@
     "protected": "EQUAL"
   },
   "x-r117Current": {
-    "status": "BUILD",
+    "status": "NATIVE_ACCEPTED_OWNER_SHUTDOWN_RECOVERY",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_117_WAITDATA_VERIFICATION.md",
-    "nextAction": "CCMAI-RUNTIME-117 BUILD: repair admitted port/cleanup supervisor and fresh-live grant binding, Root review exact source/binary and commit admission; one NEW isolated fixture then serial handlers/engine native, one fresh Alibaba call only if native pass and committed live admission. Stop any uncertainty, no runtime retries or old budget reuse. FullM2/M3/pilot/release/UI gaps OPEN, Facebook/ZaloOA parked; no push/merge/deploy.",
+    "nextAction": "CCMAI-RUNTIME-117 BUILD: owner-confirmed shutdown continuation authority88c0865e permits one exact-owned R117 restart and final stop; inherit accepted source/binaries/native11top11nested+engine1PASS without replay. Root reviews operational helper, refreshes actual fixture/runtime/live pins and commits before sole unattempted Alibaba call, independent DB/wire review and cleanup. Old counters/evidence unchanged; no tool-repair chain/push/merge/deploy. FullM2/M3/UI/pilot/release OPEN; Facebook/ZaloOA parked.",
     "freeze": "OPEN",
     "sourceCommit": "8aafa0ce",
     "fixture": "READY_OWNED_LOOPBACK",
     "native": "HANDLERS11TOP11NESTED_ENGINE1_PASS_NOSKIP",
-    "live": "ADMISSION_PREPARED_NOT_RUN",
+    "live": "NOT_RUN",
     "providerCalls": 0,
-    "rootFocusedChecks": 3
+    "rootFocusedChecks": 3,
+    "ownerContinuationAuthority": "docs/reviews/probes/r117_root/owner_restart_authority_18.json"
   }
 }

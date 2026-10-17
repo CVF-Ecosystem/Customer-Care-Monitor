@@ -11,11 +11,11 @@ Memory class: POINTER_RECORD
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R117_WAITDATA_VERIFICATION_2026-10-17.md
 
-CCMAI-RUNTIME-117 BUILD: repair admitted port/cleanup supervisor and fresh-live grant binding, Root review exact source/binary and commit admission; one NEW isolated fixture then serial handlers/engine native, one fresh Alibaba call only if native pass and committed live admission. Stop any uncertainty, no runtime retries or old budget reuse. FullM2/M3/pilot/release/UI gaps OPEN, Facebook/ZaloOA parked; no push/merge/deploy.
+CCMAI-RUNTIME-117 BUILD: owner-confirmed shutdown continuation authority88c0865e permits one exact-owned R117 restart and final stop; inherit accepted source/binaries/native11top11nested+engine1PASS without replay. Root reviews operational helper, refreshes actual fixture/runtime/live pins and commits before sole unattempted Alibaba call, independent DB/wire review and cleanup. Old counters/evidence unchanged; no tool-repair chain/push/merge/deploy. FullM2/M3/UI/pilot/release OPEN; Facebook/ZaloOA parked.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD / live secret custodian; /root/r117_execution_worker Sol Medium IMPLEMENTATION_WORKER
+Codex /root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD / SESSION_SYNC_STEWARD / live secret custodian; /root/r117_execution_worker source-only operational helper
 
-R116 source5d38dd51 accepted compile only; failed fixture port observed, start1of1 consumed, owned fixture EXITED/protected equal. R116 unused2physical calls permanently unavailable. R117 new1 under persistent explicit owner live permission; no reset. Read shared roadmap/control and dispatch/readiness learnings.
+R117 source/binaries and native proofs accepted only; live0of1. Owner confirms shutdown and permits one exact-owned restart under committed supplement; old seed/start1/cleanup1 remain spent. Original cleanupHOLD default-bridge identity drift preserved and explained by owner shutdown. No installed activation/full milestone claim; re-read roadmap/control and dispatch/readiness learnings.
 
 ## Historical R114 bounded UI result
 

@@ -1,0 +1,13 @@
+{
+  "worker": "/root/r117_execution_worker",
+  "reviewer": "Codex /root",
+  "helperSha256": "a1d37aeb5a93e2a1807403012d605130fa976fe5fa3019c2173afcbb6c19b883",
+  "supplementSha256": "652149d549bdef060fc32a2ec73cd732c061cf3a98ef0bb12cc70eb3f60c13e2",
+  "parse": "AST_PASS",
+  "checksRun": "AST only; no runtime/secret/provider",
+  "sourceFinding": "Corrected: cleanup uses immutable original pin and recorded operational baseline even when port/MySQL readiness/rebind failed; readiness evidence optional and reported, no fabricated success.",
+  "nativeProof": "INHERITED_NOT_REPLAYED",
+  "oldSupervisorSourceUnchanged": true,
+  "disposition": "ROOT_ACCEPTED_FOR_ONE_AUTHORIZED_RESTART_AND_FINAL_STOP",
+  "limits": "Source and AST inspection only, not runtime PASS. If container already exited before final cleanup, helper holds and Root observes actual owned terminal without claiming an executed stop."
+}

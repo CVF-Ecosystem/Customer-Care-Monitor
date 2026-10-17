@@ -1,9 +1,8 @@
 # Roadmap CSKH: dữ liệu đáng tin, bộ lọc hỗ trợ AI và xử lý có trách nhiệm
 
-## Current checkpoint — R116 runtime blocked
+## Current checkpoint — R117 M3 live verification pending, 2026-10-18
 
-WAIT_DATA executor source independently accepted and committed5d38dd51; exact compilePASS. Actual isolated fixture start1of1 consumed but Docker publishedMySQLport absent. Native/Alibaba NOT_RUN (0calls); owned container observedEXITED and protected containers/resources equal. Stop runtime, no replay/restart/alternate stack. Next finite decision must settle port publication and failed-start cleanup before any new authority/start. No executor/runtime/wholeM3 acceptance; full M2/M3/pilot/release OPEN. See docs/reviews/R116_RUNTIME_ADMISSION_BLOCKER_2026-10-17.md.
-
+WAIT_DATA executor source5d38dd51 with R117 guarded harness8aafa0ce accepted source/compile; actual owned MySQL handlers11top11nested and supported sync-writer1PASS/noSKIP. Real Alibaba0of1, no runtime governance PASS. Owner confirms machine shutdown caused interruption and authorizes exact-owned fixture restart once under supplement88c0865e; no native replay or old budget reset. Finite remaining route: Root admitted restart+fresh exact runtime/live pins -> one existing authorized live call -> independent raw wire/usage/DB/synthetic confirm and cleanup. Original cleanupHOLD/defaultbridge drift retained; no tool-repair chain. FullM2/M3/UI/pilot/release and M1business OPEN, Facebook/ZaloOA parked; no push/merge/deploy.
 
 ## R116 product route — 2026-10-17
 

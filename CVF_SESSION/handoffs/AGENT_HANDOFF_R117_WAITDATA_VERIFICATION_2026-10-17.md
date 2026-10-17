@@ -6,9 +6,9 @@ Status: ACTIVE
 
 - Current mode: BUILD
 - Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD / live secret custodian; /root/r117_execution_worker Sol Medium IMPLEMENTATION_WORKER
+- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD / SESSION_SYNC_STEWARD / live secret custodian; /root/r117_execution_worker source-only operational helper
 - Active tranche: CCMAI-RUNTIME-117
-- Next allowed move: CCMAI-RUNTIME-117 BUILD: repair admitted port/cleanup supervisor and fresh-live grant binding, Root review exact source/binary and commit admission; one NEW isolated fixture then serial handlers/engine native, one fresh Alibaba call only if native pass and committed live admission. Stop any uncertainty, no runtime retries or old budget reuse. FullM2/M3/pilot/release/UI gaps OPEN, Facebook/ZaloOA parked; no push/merge/deploy.
+- Next allowed move: CCMAI-RUNTIME-117 BUILD: owner-confirmed shutdown continuation authority88c0865e permits one exact-owned R117 restart and final stop; inherit accepted source/binaries/native11top11nested+engine1PASS without replay. Root reviews operational helper, refreshes actual fixture/runtime/live pins and commits before sole unattempted Alibaba call, independent DB/wire review and cleanup. Old counters/evidence unchanged; no tool-repair chain/push/merge/deploy. FullM2/M3/UI/pilot/release OPEN; Facebook/ZaloOA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Acknowledgments
@@ -28,3 +28,7 @@ Root native observed: handlers11top+11nestedPASS, engine actual sync-writer1PASS
 Owner2026-10-18 confirms shutdown and permits rerun. Root records bounded supplement owner_restart_authority_18.json before helper BUILD/any restart. Actual native11top11nested+engine1PASS inherited; interrupted runtime observedEXITED255/OOMfalse, original cleanupHOLD because defaultbridge ID changed only; containers/volumes/other networks equal. Cause explanation OWNER_REPORTED_SHUTDOWN, not inferred agent action. Old seed/counters/evidence unchanged. Exact same owned R117 restart1/additionalstop1 authorized; max1 physical total still0, no native replay. Root rehydrated canonical continuity/doctor27PASS/pinwarning/knowledge; R2/liveYES, Root review/authority/commit/custody.
 
 Resumed worker acknowledgment before helper edit: freshly rehydrated/declaration doctor27PASS/pinwarning, source-only owner_resume_ops helper, no runtime/tests/Go/provider/commit. Root records; supplement commit pin required before BUILD. Expired never-used live draft preserved byte-for-byte as unissued snapshot; active live admission absent until fresh actual resumed pinning.
+
+Root owner-helper source review before effect finds cleanup readiness dependency; source correction1of2 must permit exact-owned stop after partial restart readiness failure using original pin/current recorded baseline. Same committed supplement/source-only worker scope, no tests/effects/provider. Root admission withheld; original product/native acceptance unchanged. History explicitly records REVIEW_PENDING/CHANGES_REQUIRED/BUILD for this helper review.
+
+Owner-helper source correction independently accepted at exactSHAa1d37aeb…, ASTPASS, RootPython2of2. Root full-source review covers both successful rebind and partial readiness cleanup; no native/Go/provider effect. Commit helper and review before sole owner-authorized restart. Parent counters unchanged.

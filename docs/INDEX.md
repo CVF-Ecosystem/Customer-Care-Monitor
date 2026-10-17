@@ -10,7 +10,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-058.json`
 - Separate R1 seed for accepted R061 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-062.json`
 - GitHub project-branch material publication receipt for the M1-M5 delivery roadmap; remote SHA readback, no product/runtime acceptance.: `docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json`
-- Current R116 executor source accepted only; runtime blocked by missing fixture port, DB/live NOT_RUN, owned fixture stopped and protected inventory equal; full milestones OPEN.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
+- Current R117 M3 WAIT_DATA source/native accepted; owner-authorized post-shutdown single restart and remaining one live proof/readback/cleanup; full milestones OPEN.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
 - All seven selected inheritance findings independently accepted bounded and material exported atd121c9e; full product exits remain open.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
@@ -3210,6 +3210,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0082/stdout.txt`
 - R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0024/exit.json`
 - R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0070/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/owner_ops_source_review_18.json`
 - R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0078/exit.json`
 - R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0081/stderr.txt`
 - R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0050/command.json`
@@ -3439,6 +3440,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/root_check_3/stdout.txt`
 - R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0033/exit.json`
 - R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0012/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_worker/owner_resume_ops.py`
 - R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0083/exit.json`
 - R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0050/stderr.txt`
 - R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0046/stdout.txt`
