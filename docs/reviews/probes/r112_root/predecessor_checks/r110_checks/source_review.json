@@ -1,0 +1,21 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+    "run",
+    "--phase",
+    "reviewer-fast",
+    "--project-root",
+    ".",
+    "--packet",
+    "docs/work_orders/CCMAI_RUNTIME_110_REMAINING_UI.md",
+    "--packet",
+    "docs/reviews/R110_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-17.md",
+    "--packet",
+    "docs/reviews/R110_INDEPENDENT_TOOLING_REVIEW_2026-10-17.md"
+  ],
+  "exitCode": 0,
+  "elapsedSeconds": 0.46311350000905804,
+  "recordedAtUTC": "2026-10-17T01:23:21.559903+00:00"
+}

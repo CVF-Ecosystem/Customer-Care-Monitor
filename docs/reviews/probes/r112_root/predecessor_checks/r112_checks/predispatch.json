@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+    "run",
+    "--phase",
+    "pre-dispatch",
+    "--project-root",
+    ".",
+    "--packet",
+    "docs/work_orders/CCMAI_RUNTIME_112_REMAINING_UI.md"
+  ],
+  "exitCode": 0,
+  "elapsedSeconds": 0.4731434999848716,
+  "recordedAtUTC": "2026-10-17T01:31:06.513848+00:00"
+}

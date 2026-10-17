@@ -2804,7 +2804,7 @@
     "sourceCommit": "a28cdd0ac9ad1c9d1fd30ced6cf627dd62a56ba2"
   },
   "x-r111Current": {
-    "status": "PARKED_NOT_DISPATCHED",
+    "status": "CHANGES_REQUIRED_NOT_DISPATCHED",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_111_REMAINING_UI.md",
     "handoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R111_REMAINING_UI_2026-10-17.md",
     "runtime": "NOT_RUN",

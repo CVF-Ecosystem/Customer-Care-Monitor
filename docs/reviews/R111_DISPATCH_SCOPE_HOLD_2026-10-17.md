@@ -4,7 +4,7 @@ Status: CHANGES_REQUIRED
 Risk: R2
 Worker: /root/r108_browser_luna (NOT_DISPATCHED)
 Reviewer: Codex /root
-Disposition: PARKED_ROOT_PREDECESSOR_ORDER_SCOPE_OMISSION
+Disposition: NOT_DISPATCHED_ROOT_PREDECESSOR_ORDER_SCOPE_OMISSION
 
 Root's initial111 seed omitted the prior110 work-order status transition from
 allowedPaths. Profile pre-dispatch passed its five controls but legacy

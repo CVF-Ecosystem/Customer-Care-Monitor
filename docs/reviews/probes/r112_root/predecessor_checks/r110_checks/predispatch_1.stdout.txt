@@ -1,0 +1,9 @@
+[PASS] CVF-DG-INST-01 PASS
+[PASS] CVF-DG-CONT-01 PASS
+[PASS] CVF-DG-RANGE-01 PASS
+       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=90d703e5cdd44b8d86dd74fe89c33cd620988d08 candidates=15 deleted=0
+[PASS] CVF-DG-APPL-01 PASS
+       note: checked: docs/work_orders/CCMAI_RUNTIME_110_REMAINING_UI.md
+[PASS] CVF-DG-ROUTE-01 PASS
+       note: checked: docs/work_orders/CCMAI_RUNTIME_110_REMAINING_UI.md
+RESULT: PASS phase=pre-dispatch mandatoryControls=5 failed=0

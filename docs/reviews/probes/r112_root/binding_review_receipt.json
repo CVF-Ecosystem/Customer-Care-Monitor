@@ -1,0 +1,15 @@
+{
+  "observedAtUTC": "2026-10-17T01:35:07.916122+00:00",
+  "result": "PASS",
+  "scope": "Binding-only static parity; no frontend validation or runtime invocation",
+  "functionClassParityCount": 32,
+  "runnerSha256": "ef81ccb34d655a1ec717451230fae780107f3a8d441c2bf325b8126ea4037173",
+  "templateSha256": "1a4f46bb1e0aeaa832a6befd7bbed734a3d0f7965c57fb7be0f878acc4674ebb",
+  "templateIdentityOnlyParity": true,
+  "inheritedSourcePinsVerified": 11,
+  "frontendDiffFromAcceptedSource": "",
+  "exclusiveRuntimeRoot": "ABSENT",
+  "frontendTestInvocations": 0,
+  "frontendTypecheckInvocations": 0,
+  "runtimeStarts": 0
+}

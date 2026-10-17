@@ -13,8 +13,13 @@ Status: ACTIVE
 
 ## Root acknowledgment
 
-Root inherits accepted R110 UI source and qualified checks. R110 prelaunch failure stays immutable, no same-order retry. Seed 041274966c515d598cd4e32549a4349ee7b91aaa precedes binding-only BUILD. Knowledge output must be outside exclusive111 runtime directory; Root/worker both verify absence immediately before invocation. Root owns independent review and browser; worker has no browser. No runtime until separate exact committed admission.
+Root inherits accepted R110 UI source and qualified checks. R110 prelaunch failure stays immutable, no same-order retry. Seed db93d36ed560d02f5b7b475d66f64f1b8487c499 precedes binding-only BUILD. Knowledge output must be outside exclusive112 runtime directory; Root/worker both verify absence immediately before invocation. Root owns independent review and browser; worker has no browser. No runtime until separate exact committed admission.
 
 ## R112 Root dispatch acknowledgment
 
 Seed db93d36ed560d02f5b7b475d66f64f1b8487c499 includes both predecessor order status transitions; R111 never dispatched, no source/runtime changes. Root accepts scope preparation defect and preserves failed preflight. Runtime-only new112 bindings retain exact accepted110 UI/code/evidence. No runtime until committed admission; exclusive root absent before start, knowledge output elsewhere.
+
+## Worker source acknowledgment recorded by Root
+
+Luna reported fresh R112 declaration and canonical continuity agreement at seed/base db93d36. Knowledge ingest wrote only .cvf/runtime/r112_knowledge_luna.json; exclusive .cvf/runtime/r112_workflow confirmed absent. Worker limits edits to the two new runner/template files; Root records this acknowledgment before binding-only BUILD edits. No UI/source validation or runtime replay.
+
