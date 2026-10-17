@@ -7,7 +7,7 @@ Worker: /root/r108_browser_luna (Luna Max IMPLEMENTATION_WORKER; source bindings
 Reviewer: Codex /root
 Commit steward: Codex /root
 providerExecutionAuthority: NONE
-Disposition: BINDING_ONLY_SOURCE_PREPARATION_RUNTIME_NOT_ADMITTED
+Disposition: RUNTIME_ADMITTED_PENDING_SINGLE_CAMPAIGN
 
 ## Intake, design and specification inheritance
 
@@ -112,3 +112,7 @@ Material-SHA marker:db93d36ed560d02f5b7b475d66f64f1b8487c499. No runtime before 
 ## R112 scope clarification
 
 R111 never dispatched because Root omitted the110 status transition from its seed. Preserve that failed preflight and immutable seed. Seed112 explicitly includes only110/111 work-order metadata transition paths plus new112 runtime-only paths; no product source edits or broadened external effect.
+
+## Exact runtime admission
+
+Root admits binding source 9e7620b138ca218e63c903f52603f786670a6028 and unchanged R110 UI sourcea28cdd0a. Root observed exclusive runtime root absent; final worker check is mandatory immediately before sole start. Require committed runtime_admission.json with all exact source/evidence/seed pins. R110/R111 failures retained, no retries or source changes; frontendtests/typecheck/native/Go0, UI8POST,1200s and owned cleanup.

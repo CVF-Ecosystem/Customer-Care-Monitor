@@ -2231,6 +2231,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/source_preflight.stdout.txt`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r111_checks/predispatch.stdout.txt`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r112_checks/preflight_dispatch_recheck.stdout.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/runtime_admission.json`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/admission_precommit.json`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/admission_preflight.stderr.txt`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r110_root/prestart_admission_check.json`
@@ -2240,6 +2241,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/preflight_dispatch.json`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/R110_PRELAUNCH_HOLD_INDEPENDENT_REVIEW_2026-10-17.md`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/unit_dispatch.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/R112_INDEPENDENT_RUNTIME_ADMISSION_REVIEW_2026-10-17.md`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r111_checks/preflight_dispatch.stderr.txt`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r110_luna/prelaunch_hold/evidence_manifest.json`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/admission_preflight.json`

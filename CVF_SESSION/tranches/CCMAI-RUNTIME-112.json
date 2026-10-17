@@ -78,9 +78,11 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_112_REMAINING_UI.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
   "workOrderStatus": "ACTIVE",
-  "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "BINDING_ONLY_RUNTIME_NOT_ADMITTED",
+  "buildCommit": "9e7620b138ca218e63c903f52603f786670a6028",
+  "reviewEvidence": [
+    "docs/reviews/R112_INDEPENDENT_BINDING_REVIEW_2026-10-17.md"
+  ],
+  "disposition": "RUNTIME_ADMITTED_PENDING_SINGLE_CAMPAIGN",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -92,5 +94,14 @@
     "DESIGN",
     "SPEC",
     "WORK_ORDER"
-  ]
+  ],
+  "x-runtimeAdmission": {
+    "sourceCommit": "9e7620b138ca218e63c903f52603f786670a6028",
+    "inheritedUiSource": "a28cdd0ac9ad1c9d1fd30ced6cf627dd62a56ba2",
+    "admission": "docs/reviews/probes/r112_root/runtime_admission.json",
+    "status": "NOT_RUN_UNCONSUMED",
+    "frontendTestsUsed": 0,
+    "frontendTypechecksUsed": 0,
+    "runtimeStarts": 0
+  }
 }

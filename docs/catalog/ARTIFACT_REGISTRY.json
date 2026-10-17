@@ -19925,6 +19925,20 @@
       "path": "docs/reviews/R112_INDEPENDENT_BINDING_REVIEW_2026-10-17.md",
       "status": "ACTIVE",
       "description": "R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims."
+    },
+    {
+      "id": "r111-27fa1d9e2fd6c34d67",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r112_root/runtime_admission.json",
+      "status": "ACTIVE",
+      "description": "R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims."
+    },
+    {
+      "id": "r111-4a0e10504d51c375cb",
+      "family": "continuity",
+      "path": "docs/reviews/R112_INDEPENDENT_RUNTIME_ADMISSION_REVIEW_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims."
     }
   ]
 }
