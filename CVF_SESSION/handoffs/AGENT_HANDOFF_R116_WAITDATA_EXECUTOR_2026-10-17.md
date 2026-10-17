@@ -1,6 +1,6 @@
 # R116 WAIT_DATA executor handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 
@@ -33,3 +33,5 @@ Root post-compaction rehydration/declaration and doctor27PASS with publicCorepin
 Root exact admitted source committed 5d38dd51c387ce161c013a9b6ff866a1d1c7af3d. Fixture start marker consumed1of1; Docker create/start exit0, but published3306port empty and inspect template failed. No runtime admission, native test or physical API call. Root verified exact containerID/image/ownerlabels/mount/network/exclusive use then stopped it, preserving owned resources. Final observed EXITED; protected containers/resources equal baseline. Standard supervisor fallback would require a missing port, so Root used explicit bounded ownership-verified cleanup, no restart/repair/tool-chain retry. Raw Docker commands and original effect/ownership/hold records retained in r116_root.
 
 R116 status BUILD_BLOCKED / FREEZE OPEN, source accepted only; worker6of6, Root2of4, fixture1of1, provider0of2. Root admits supervisor readiness miss: source review did not expose actual port publication failure. Underlying Docker cause unestablished. Future finite route must settle loopback publication and failed-start cleanup under a distinct valid authority only when justified; no new tranche/start/provider dispatched here. Source has executor candidate, not accepted current runtime or ordinary installed activation. Full M2/M3/pilot/release and historical UI gaps remain OPEN.
+
+R117 successor pointer only: prior failed campaign/budgets/evidence unchanged; see active R117 handoff for new independently bounded authority.

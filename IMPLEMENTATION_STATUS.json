@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "x-roadmapTracking": {
     "updatedAt": "2026-10-17",
-    "status": "M3_EXECUTOR_SOURCE_ACCEPTED_RUNTIME_BLOCKED",
+    "status": "M3_WAITDATA_R117_FINITE_VERIFICATION",
     "currentCheckpoint": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
     "stages": {
       "S0": "PARTIAL_LIVE_BASELINE_OPEN",
@@ -2015,7 +2015,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-116",
+  "activeTranche": "CCMAI-RUNTIME-117",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
@@ -2877,5 +2877,11 @@
     "live": "NOT_RUN",
     "fixtureFinal": "EXITED_OWNED_PRESERVED",
     "protected": "EQUAL"
+  },
+  "x-r117Current": {
+    "status": "BUILD",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_117_WAITDATA_VERIFICATION.md",
+    "nextAction": "CCMAI-RUNTIME-117 BUILD: repair admitted port/cleanup supervisor and fresh-live grant binding, Root review exact source/binary and commit admission; one NEW isolated fixture then serial handlers/engine native, one fresh Alibaba call only if native pass and committed live admission. Stop any uncertainty, no runtime retries or old budget reuse. FullM2/M3/pilot/release/UI gaps OPEN, Facebook/ZaloOA parked; no push/merge/deploy.",
+    "freeze": "OPEN"
   }
 }

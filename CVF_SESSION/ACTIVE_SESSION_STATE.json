@@ -12,11 +12,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-116",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R116_WAITDATA_EXECUTOR_2026-10-17.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-116 BUILD_BLOCKED: source5d38dd51 and exact Root compile2of4 accepted only; fixture start1of1 consumed but published MySQL port absent, native/provider NOT_RUN. Owned fixture stopped with protected inventory equal. Stop runtime; preserve seed/counters and handoff failed-port/cleanup evidence for a future bounded readiness decision before any new authority/start. No restart/replay/install/alternate stack; fullM2/M3/pilot/release and UI gaps OPEN; Facebook/ZaloOA parked; no push/merge/deploy.",
+  "activeTranche": "CCMAI-RUNTIME-117",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R117_WAITDATA_VERIFICATION_2026-10-17.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-117 BUILD: repair admitted port/cleanup supervisor and fresh-live grant binding, Root review exact source/binary and commit admission; one NEW isolated fixture then serial handlers/engine native, one fresh Alibaba call only if native pass and committed live admission. Stop any uncertainty, no runtime retries or old budget reuse. FullM2/M3/pilot/release/UI gaps OPEN, Facebook/ZaloOA parked; no push/merge/deploy.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; implementation worker returned idle, runtime stopped",
+  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD / live secret custodian; /root/r117_execution_worker Sol Medium IMPLEMENTATION_WORKER",
   "updatedAt": "2026-10-17",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {
@@ -2167,5 +2167,12 @@
     "rootChecksUsed": 2,
     "physicalCallsUsed": 0,
     "report": "docs/reviews/R116_RUNTIME_ADMISSION_BLOCKER_2026-10-17.md"
+  },
+  "x-r117OwnerGrant": {
+    "id": "CCMAI-RUNTIME-117-OWNER-NEW1-20261017",
+    "physicalCallCap": 1,
+    "usedPhysicalCalls": 0,
+    "fresh": true,
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-117.json"
   }
 }

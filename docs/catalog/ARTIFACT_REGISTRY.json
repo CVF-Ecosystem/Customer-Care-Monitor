@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R116_WAITDATA_EXECUTOR_2026-10-17.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R117_WAITDATA_VERIFICATION_2026-10-17.md",
       "status": "ACTIVE",
-      "description": "Active R116 executor source/build and conditional evidence handoff; full milestones OPEN."
+      "description": "Active R117 finite source/native/live verification handoff; full product milestones OPEN."
     },
     {
       "id": "r060-work-order",
@@ -26029,6 +26029,20 @@
       "path": "docs/reviews/probes/r117_root/docker_readiness.json",
       "status": "ACTIVE",
       "description": "R117 bounded WAIT_DATA verification authority/readiness; exact scope and inherited failures preserved."
+    },
+    {
+      "id": "r117-c3d0b35519be6427de",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_117_WAITDATA_VERIFICATION.md",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-19cfb0b7772a3f3176",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-117.json",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
     }
   ]
 }

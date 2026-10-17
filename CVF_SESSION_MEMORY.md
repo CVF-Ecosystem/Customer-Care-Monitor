@@ -2,20 +2,20 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R116_WAITDATA_EXECUTOR_2026-10-17.md", "activeTranche": "CCMAI-RUNTIME-116", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R117_WAITDATA_VERIFICATION_2026-10-17.md", "activeTranche": "CCMAI-RUNTIME-117", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
 - Current mode: BUILD
 - Active phase: BUILD
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R116_WAITDATA_EXECUTOR_2026-10-17.md
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R117_WAITDATA_VERIFICATION_2026-10-17.md
 
-CCMAI-RUNTIME-116 BUILD_BLOCKED: source5d38dd51 and exact Root compile2of4 accepted only; fixture start1of1 consumed but published MySQL port absent, native/provider NOT_RUN. Owned fixture stopped with protected inventory equal. Stop runtime; preserve seed/counters and handoff failed-port/cleanup evidence for a future bounded readiness decision before any new authority/start. No restart/replay/install/alternate stack; fullM2/M3/pilot/release and UI gaps OPEN; Facebook/ZaloOA parked; no push/merge/deploy.
+CCMAI-RUNTIME-117 BUILD: repair admitted port/cleanup supervisor and fresh-live grant binding, Root review exact source/binary and commit admission; one NEW isolated fixture then serial handlers/engine native, one fresh Alibaba call only if native pass and committed live admission. Stop any uncertainty, no runtime retries or old budget reuse. FullM2/M3/pilot/release/UI gaps OPEN, Facebook/ZaloOA parked; no push/merge/deploy.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; implementation worker returned idle, runtime stopped
+Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD / live secret custodian; /root/r117_execution_worker Sol Medium IMPLEMENTATION_WORKER
 
-Root independently accepted source/compile only. Fresh grant Alibaba0of2; fixture consumed1of1, no admission/test/provider. Final fixture EXITED/protected containers and resources equal; original Docker failure retained. Shared roadmap and readiness learnings re-read; route reassessed at failed prerequisite, no support-tranche chain dispatched.
+R116 source5d38dd51 accepted compile only; failed fixture port observed, start1of1 consumed, owned fixture EXITED/protected equal. R116 unused2physical calls permanently unavailable. R117 new1 under persistent explicit owner live permission; no reset. Read shared roadmap/control and dispatch/readiness learnings.
 
 ## Historical R114 bounded UI result
 
