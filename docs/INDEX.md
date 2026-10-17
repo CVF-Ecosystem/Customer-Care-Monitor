@@ -2954,6 +2954,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Exact final documentary packet bytes after Root metadata normalization; no runtime proof.: `docs/reviews/probes/r115_root/committed_packet_original.zip`
 - R115 documentary M3-05 executor intended contract; no product implementation/runtime authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-115.json`
 - R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/specs/M3_WAITDATA_EXECUTOR_R115_SPEC_2026-10-17.md`
+- R116 bounded executor authority/readiness; exact evidence limits apply.: `docs/reviews/R116_INTAKE_AND_FINITE_ROUTE_2026-10-17.md`
+- R116 bounded executor authority/readiness; exact evidence limits apply.: `docs/reviews/probes/r116_root/readiness_inventory.json`
+- R116 bounded executor authority/readiness; exact evidence limits apply.: `docs/reviews/probes/r116_root/readiness_docker_version.json`
+- R116 bounded executor authority/readiness; exact evidence limits apply.: `CVF_SESSION/authority/CCMAI-RUNTIME-116.json`
+- R116 bounded executor authority/readiness; exact evidence limits apply.: `docs/reviews/probes/r116_root/readiness_secret_readiness.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

@@ -24664,6 +24664,41 @@
       "path": "docs/reviews/probes/r115_root/committed_packet_original.zip",
       "status": "ACTIVE",
       "description": "Exact final documentary packet bytes after Root metadata normalization; no runtime proof."
+    },
+    {
+      "id": "r116-bef26529f54fe46565",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-116.json",
+      "status": "ACTIVE",
+      "description": "R116 bounded executor authority/readiness; exact evidence limits apply."
+    },
+    {
+      "id": "r116-506059b859ff641940",
+      "family": "continuity",
+      "path": "docs/reviews/R116_INTAKE_AND_FINITE_ROUTE_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R116 bounded executor authority/readiness; exact evidence limits apply."
+    },
+    {
+      "id": "r116-ae9a86a7c2d61b78d1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/readiness_docker_version.json",
+      "status": "ACTIVE",
+      "description": "R116 bounded executor authority/readiness; exact evidence limits apply."
+    },
+    {
+      "id": "r116-82aa8bece771b7b522",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/readiness_inventory.json",
+      "status": "ACTIVE",
+      "description": "R116 bounded executor authority/readiness; exact evidence limits apply."
+    },
+    {
+      "id": "r116-d200a4f632ab8f4482",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/readiness_secret_readiness.json",
+      "status": "ACTIVE",
+      "description": "R116 bounded executor authority/readiness; exact evidence limits apply."
     }
   ]
 }
