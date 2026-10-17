@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "python",
+    "-B",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r117_worker\\owner_resume_ops.py",
+    "cleanup"
+  ],
+  "sourceSha256": "a1d37aeb5a93e2a1807403012d605130fa976fe5fa3019c2173afcbb6c19b883",
+  "startedAtUTC": "2026-10-17T18:10:20.084887+00:00",
+  "supplementBudgetReservation": {
+    "ownedFixtureFinalStops": 1
+  }
+}

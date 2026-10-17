@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "python",
+    "-B",
+    "scripts/r117_waitdata_fixture.py",
+    "live"
+  ],
+  "startedAtUTC": "2026-10-17T18:07:18.092845+00:00",
+  "rootCheck": 4,
+  "mode": "live"
+}

@@ -1,0 +1,47 @@
+{
+  "reviewer": "Codex /root",
+  "checks": {
+    "onePhysicalMarker": true,
+    "rawRequestMarkerMatches": true,
+    "providerStatus200": true,
+    "exactRequestedModel": true,
+    "thinkingDisabled": true,
+    "maxCompletion768": true,
+    "faithfulUsage": true,
+    "sourceDigestBound": true,
+    "validProposalPublished": true,
+    "oneRunSnapshotAttemptProposalReceipt": true,
+    "singleDebit": true,
+    "syntheticWriterConfirm200": true,
+    "freshOwnerGrant": true
+  },
+  "physicalCallCount": 1,
+  "requestSha256": "6e36f51650a89f2c2cf25a76ee9b87d30f13924137f396c21c3d25243c9cedd5",
+  "wireReceiptSha256": "69bb136a2967f7c538e3eed8e8ab04cefaf7262654ad2cf36fff1d9a22e1b632",
+  "usage": {
+    "prompt_tokens": 340,
+    "total_tokens": 637,
+    "completion_tokens": 297,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "text_tokens": 340
+    }
+  },
+  "observedModel": "qwen3.7-flash",
+  "proposalContent": {
+    "schema": "ccma.intervention.v1",
+    "conversation_id": "b9fe1ead-fa7e-4bc7-ae5c-09f21ccca44f",
+    "snapshot_digest": "af7f4bb90f90cf957043ba11bdbf9ea54328369638f29c9fddf464b19359f573",
+    "kind": "complaint",
+    "explanation": "Khách hàng đã gửi tin nhắn trực tiếp nêu rõ việc 'khiếu nại' và yêu cầu theo dõi đơn hàng. Đây là một khiếu nại cần được xử lý ngay để xác minh tình trạng đơn hàng và giải quyết vấn đề cho khách.",
+    "next_action": "Kiểm tra thông tin đơn hàng liên quan đến cuộc trò chuyện này, xác minh nguyên nhân gây khiếu nại và phản hồi lại khách hàng với hướng giải quyết cụ thể hoặc tiến độ xử lý.",
+    "evidence_refs": [
+      {
+        "message_id": "6bb59ec4-bcc2-4748-bcf6-d7953c796c8a",
+        "quote": "Tôi khiếu nại và chờ đơn hàng"
+      }
+    ]
+  },
+  "wordingReview": "Actual explanation/next_action read for understandable Vietnamese; source model content only, no current UI-render or actual-human decision claim",
+  "claimBoundary": "One bounded synthetic actual provider flow, not full M2/M3/CVF product/governance readiness. Native failure/recovery doubles are software-only; original exact history asserted before CONFIRM, independent later readback selected originals only."
+}

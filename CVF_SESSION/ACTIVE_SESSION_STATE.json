@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-117",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R117_WAITDATA_VERIFICATION_2026-10-17.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-117 BUILD: owner-confirmed shutdown continuation authority88c0865e permits one exact-owned R117 restart and final stop; inherit accepted source/binaries/native11top11nested+engine1PASS without replay. Root reviews operational helper, refreshes actual fixture/runtime/live pins and commits before sole unattempted Alibaba call, independent DB/wire review and cleanup. Old counters/evidence unchanged; no tool-repair chain/push/merge/deploy. FullM2/M3/UI/pilot/release OPEN; Facebook/ZaloOA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-117 REVIEW_PASS bounded source/native/one-real-synthetic-WAIT_DATA flow: same-case new proposal and synthetic CONFIRM persisted, faithful340input297output, physical1of1 consumed; finalownedfixtureEXITED/current operational protected baseline equal. No further R117 runtime/provider/native replay. ORCHESTRATOR next bounds M3 current-UI review/processing and remaining mobile/wording acceptance using inherited evidence, no generic tool-repair chain. FullM2/M3/pilot/release/M1business OPEN, Facebook/ZaloOA parked; no push/merge/deploy.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD / SESSION_SYNC_STEWARD / live secret custodian; /root/r117_execution_worker source-only operational helper",
+  "activeRole": "Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; implementation worker returned idle, live authority consumed and runtime stopped",
   "updatedAt": "2026-10-18",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {
@@ -2171,9 +2171,10 @@
   "x-r117OwnerGrant": {
     "id": "CCMAI-RUNTIME-117-OWNER-NEW1-20261017",
     "physicalCallCap": 1,
-    "usedPhysicalCalls": 0,
+    "usedPhysicalCalls": 1,
     "fresh": true,
-    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-117.json"
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-117.json",
+    "status": "CONSUMED_CLOSED_NO_MORE_CALLS"
   },
   "x-r117OwnerShutdownContinuation": {
     "authority": "docs/reviews/probes/r117_root/owner_restart_authority_18.json",
@@ -2183,6 +2184,24 @@
     "additionalFinalStopCap": 1,
     "nativeReplay": 0,
     "physicalTotalCap": 1,
-    "physicalUsed": 0
+    "physicalUsed": 1,
+    "ownedRestartsUsed": 1,
+    "ownedFinalStopsUsed": 1,
+    "status": "COMPLETE_OWNED_RUNTIME_STOPPED"
+  },
+  "x-r117CurrentOutcome": {
+    "status": "REVIEW_PASS",
+    "scope": "SOURCE_NATIVE_ONE_REAL_SYNTHETIC_EXECUTOR_FLOW_ONLY",
+    "review": "docs/reviews/R117_FINAL_INDEPENDENT_REVIEW_2026-10-18.md",
+    "native": "HANDLERS11TOP11NESTED_ENGINE1_PASS_NOSKIP",
+    "physicalCalls": 1,
+    "observedInputTokens": 340,
+    "observedOutputTokens": 297,
+    "newProposal": "PUBLISHED_SAME_CASE",
+    "syntheticConfirm": "PERSISTED",
+    "fixture": "EXITED_PRESERVED",
+    "protected": "EQUAL_TO_OWNER_AUTHORIZED_OPERATIONAL_BASELINE",
+    "oldCleanupHold": "PRESERVED_OWNER_SHUTDOWN_EXPLANATION",
+    "freeze": "OPEN"
   }
 }

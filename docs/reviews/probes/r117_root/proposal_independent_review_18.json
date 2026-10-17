@@ -1,0 +1,11 @@
+{
+  "reviewer": "Codex /root",
+  "checks": {
+    "storedProposalTextMatchesProvider": true,
+    "storedProposalEvidenceMatchesProvider": true,
+    "storedProviderAndModelHonest": true,
+    "storedEvidenceQuoteMatchesSource": true
+  },
+  "independentDbReadbackSha256": "d338d91995696abeca6aec2ddfa2aa5a26ecabe9cd06dd270d8e44eb116377e7",
+  "originalHistoryScope": "Live harness exact before/after originals across publication prior to CONFIRM; independent post-CONFIRM selected row fields, not full original-object byte comparison"
+}

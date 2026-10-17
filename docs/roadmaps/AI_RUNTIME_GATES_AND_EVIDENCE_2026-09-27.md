@@ -1,8 +1,10 @@
 # Roadmap CSKH: dữ liệu đáng tin, bộ lọc hỗ trợ AI và xử lý có trách nhiệm
 
-## Current checkpoint — R117 M3 live verification pending, 2026-10-18
+## Current checkpoint — R117 bounded M3 backend real flow accepted, 2026-10-18
 
-WAIT_DATA executor source5d38dd51 with R117 guarded harness8aafa0ce accepted source/compile; actual owned MySQL handlers11top11nested and supported sync-writer1PASS/noSKIP. Real Alibaba0of1, no runtime governance PASS. Owner confirms machine shutdown caused interruption and authorizes exact-owned fixture restart once under supplement88c0865e; no native replay or old budget reset. Finite remaining route: Root admitted restart+fresh exact runtime/live pins -> one existing authorized live call -> independent raw wire/usage/DB/synthetic confirm and cleanup. Original cleanupHOLD/defaultbridge drift retained; no tool-repair chain. FullM2/M3/UI/pilot/release and M1business OPEN, Facebook/ZaloOA parked; no push/merge/deploy.
+Actual WAIT_DATA source revision -> one real Alibaba execution/new run/new snapshot -> new proposal on same case -> synthetic writer API CONFIRM persisted, independently accepted. Real HTTP200, one call/debit/grant, faithful340input297output; native11top11nested+engine1PASS, noSKIP. Source5d38dd51/harness8aafa0ce, exact live admission06e16ea8; no ordinary installed activation/current UI-render/actual human decision claim. Owner-authorized same-fixture restart/finalstop after shutdown succeeded; final EXITED/current operational protected equality observed, original interrupted cleanupHOLD/defaultbridge replacement retained.
+
+Finite next product move is M3 current UI review/processing and remaining mobile/wording acceptance, inheriting current accepted backend/evidence and enforcing actual browser capability/admission. No further R117calls/native/runtime or generic tool-repair chain. FullM2/M3, B08raster/B09offline and other historical UI qualifiers, Dashboard3baselinefailures, M1business/pilot/release remain OPEN; Facebook/ZaloOA parked; no push/merge/deploy. See docs/reviews/R117_FINAL_INDEPENDENT_REVIEW_2026-10-18.md.
 
 ## R116 product route — 2026-10-17
 

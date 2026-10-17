@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "python",
+    "-B",
+    "docs/reviews/probes/r117_root/independent_db_readback.py"
+  ],
+  "startedAtUTC": "2026-10-17T18:09:10.289686+00:00",
+  "sourceSha256": "5497e703e37b1c1e5cfbfc3c760f72f6b18c2df4fb22021449988cd033387bcc",
+  "readOnly": true
+}

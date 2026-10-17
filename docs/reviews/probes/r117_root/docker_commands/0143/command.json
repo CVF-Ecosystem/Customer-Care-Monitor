@@ -1,0 +1,27 @@
+{
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "--config",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r117_execution\\docker-cli-config",
+    "exec",
+    "-e",
+    "MYSQL_PWD=r117-synthetic-only",
+    "033e0151bb4805cce1ce6dc347ab79ab8275e016c8ace371cfda158297a2c352",
+    "mysql",
+    "--default-character-set=utf8mb4",
+    "-h",
+    "127.0.0.1",
+    "-u",
+    "root",
+    "-N",
+    "-B",
+    "--raw",
+    "r116_fixture",
+    "-e",
+    "SELECT JSON_OBJECT('id',`id`,'active_execution_id',`active_execution_id`,'active_proposal_id',`active_proposal_id`,'tenant_id',`tenant_id`,'job_id',`job_id`,'run_id',`run_id`,'conversation_id',`conversation_id`,'use_case',`use_case`,'version',`version`,'snapshot_id',`snapshot_id`,'snapshot_digest',`snapshot_digest`,'eligibility',`eligibility`,'execution',`execution`,'disposition',`disposition`,'work_state',`work_state`,'reason_code',`reason_code`,'next_action',`next_action`,'data_owner_id',`data_owner_id`,'assignee_id',`assignee_id`,'due_at',`due_at`,'human_assessment',`human_assessment`,'human_explanation',`human_explanation`,'human_next_action',`human_next_action`,'outcome_text',`outcome_text`,'actor_id',`actor_id`,'policy_version',`policy_version`,'prompt_version',`prompt_version`,'schema_version',`schema_version`,'created_at',`created_at`,'updated_at',`updated_at`) FROM `intervention_cases` WHERE tenant_id='a75842dd-fe63-4a7c-aa2a-db551cfa4fa8' ORDER BY id LIMIT 1000"
+  ],
+  "startedAt": "2026-10-17T18:09:53.207966+00:00",
+  "timeoutSeconds": 15
+}

@@ -2,20 +2,20 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R117_WAITDATA_VERIFICATION_2026-10-17.md", "activeTranche": "CCMAI-RUNTIME-117", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R117_WAITDATA_VERIFICATION_2026-10-17.md", "activeTranche": "CCMAI-RUNTIME-117", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R117_WAITDATA_VERIFICATION_2026-10-17.md
 
-CCMAI-RUNTIME-117 BUILD: owner-confirmed shutdown continuation authority88c0865e permits one exact-owned R117 restart and final stop; inherit accepted source/binaries/native11top11nested+engine1PASS without replay. Root reviews operational helper, refreshes actual fixture/runtime/live pins and commits before sole unattempted Alibaba call, independent DB/wire review and cleanup. Old counters/evidence unchanged; no tool-repair chain/push/merge/deploy. FullM2/M3/UI/pilot/release OPEN; Facebook/ZaloOA parked.
+CCMAI-RUNTIME-117 REVIEW_PASS bounded source/native/one-real-synthetic-WAIT_DATA flow: same-case new proposal and synthetic CONFIRM persisted, faithful340input297output, physical1of1 consumed; finalownedfixtureEXITED/current operational protected baseline equal. No further R117 runtime/provider/native replay. ORCHESTRATOR next bounds M3 current-UI review/processing and remaining mobile/wording acceptance using inherited evidence, no generic tool-repair chain. FullM2/M3/pilot/release/M1business OPEN, Facebook/ZaloOA parked; no push/merge/deploy.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD / SESSION_SYNC_STEWARD / live secret custodian; /root/r117_execution_worker source-only operational helper
+Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; implementation worker returned idle, live authority consumed and runtime stopped
 
-R117 source/binaries and native proofs accepted only; live0of1. Owner confirms shutdown and permits one exact-owned restart under committed supplement; old seed/start1/cleanup1 remain spent. Original cleanupHOLD default-bridge identity drift preserved and explained by owner shutdown. No installed activation/full milestone claim; re-read roadmap/control and dispatch/readiness learnings.
+Source5d38dd51/harness8aafa0ce, final runtime/live admission06e16ea8. Owner supplement88c0865e authorized one exact-owned restart after reported shutdown; old seed/start1/cleanup1 and failed original cleanupHOLD preserved. Current final cleanup PASS against explicit renewed operational baseline (defaultbridge replacement only). Root4of6checks, native inherited/no replay after restart, Alibaba1of1 actual HTTP200, newproposal and synthetic API-confirm accepted with exact wire/DB/usage review. Exact original history assertion spans executor publication before CONFIRM; later independent readback checks selected original fields, no full original-object byte equality after CONFIRM claim. No current UI-render/actual human decision or full governance/product readiness claim. Required roadmap/control and dispatch/readiness learnings apply before next scope; do not replay spent authority.
 
 ## Historical R114 bounded UI result
 

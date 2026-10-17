@@ -1,6 +1,6 @@
 # R117 WAIT_DATA finite readiness repair and product verification
 
-Status: ACTIVE
+Status: REVIEWER_ACCEPTED
 Risk: R2
 dispatchKind: INITIAL
 Worker: /root/r117_execution_worker
@@ -53,3 +53,7 @@ Material-SHA marker:980f9563. Worker source-only BUILD; DB/live require Root com
 ## Explicit owner shutdown continuation — 2026-10-18
 
 Owner confirms machine shutdown and explicitly permits rerun if necessary. Dispatcher supplement docs/reviews/probes/r117_root/owner_restart_authority_18.json grants exactly one restart of owned R117 container033e0151… and one additional final owned stop, superseding parent no-restart for that resource only. Original seed/start1/cleanup1/provider0 counters remain unchanged. Original cleanupHOLD/default-bridge replacement preserved; owner explanation is reported, selected Docker evidence independently observed. No native replay or product/supervisor source change; still max1 total R117 Alibaba physical call, current0, refreshed committed runtime/live pins required. No other resource restart or tool-stack repair. Source-only helper worker then Root independent review.
+
+## Bounded independent result — 2026-10-18
+
+Source/native and one real synthetic WAIT_DATA executor flow accepted in R117_FINAL_INDEPENDENT_REVIEW_2026-10-18.md; same-case proposal and synthetic confirmation persisted, faithful340/297tokens, physical1of1. Owner-authorized resume of same fixture after shutdown succeeded; final owned stop/current operational protected equality observed, old cleanupHOLD retained. No additional calls/runtime, no fullM3/UI/product readiness/FREEZE claim.

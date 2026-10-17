@@ -1,0 +1,182 @@
+{
+  "at": "2026-10-17T18:10:49.641598+00:00",
+  "containerId": "033e0151bb4805cce1ce6dc347ab79ab8275e016c8ace371cfda158297a2c352",
+  "before": {
+    "Id": "033e0151bb4805cce1ce6dc347ab79ab8275e016c8ace371cfda158297a2c352",
+    "Image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "Name": "/ccmai-r117-root-20261017",
+    "State": "running",
+    "Labels": {
+      "ccmai.owner": "975dd60d-af4d-4090-8ad3-9a46e00370ef",
+      "ccmai.tranche": "CCMAI-RUNTIME-117"
+    },
+    "Mounts": [
+      {
+        "Destination": "/var/lib/mysql",
+        "Driver": "local",
+        "Mode": "z",
+        "Name": "ccmai-r117-root-20261017",
+        "Propagation": "",
+        "RW": true,
+        "Source": "/var/lib/docker/volumes/ccmai-r117-root-20261017/_data",
+        "Type": "volume"
+      }
+    ],
+    "Networks": {
+      "ccmai-r117-root-20261017": {
+        "Aliases": null,
+        "DNSNames": [
+          "ccmai-r117-root-20261017",
+          "033e0151bb48"
+        ],
+        "DriverOpts": null,
+        "EndpointID": "b348233d05a39a7c3465fa821bfea788f16ab74f9e322a0e2fa5ec35c23deb78",
+        "Gateway": "172.22.0.1",
+        "GlobalIPv6Address": "",
+        "GlobalIPv6PrefixLen": 0,
+        "GwPriority": 0,
+        "IPAMConfig": null,
+        "IPAddress": "172.22.0.2",
+        "IPPrefixLen": 16,
+        "IPv6Gateway": "",
+        "Links": null,
+        "MacAddress": "e2:19:81:9a:14:00",
+        "NetworkID": "fe2271a8b533ec1ed3d3d09f1b561afcf6491c9353b246555ad3fd3518e5bab0"
+      }
+    },
+    "Ports": {
+      "3306/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "61823"
+        }
+      ]
+    },
+    "ownedResourceIdentity": {
+      "containers": {
+        "033e0151bb4805cce1ce6dc347ab79ab8275e016c8ace371cfda158297a2c352": {
+          "Name": "ccmai-r117-root-20261017",
+          "EndpointID": "b348233d05a39a7c3465fa821bfea788f16ab74f9e322a0e2fa5ec35c23deb78",
+          "MacAddress": "e2:19:81:9a:14:00",
+          "IPv4Address": "172.22.0.2/16",
+          "IPv6Address": ""
+        }
+      },
+      "volume": {
+        "Name": "ccmai-r117-root-20261017",
+        "CreatedAt": "2026-10-17T13:50:51Z",
+        "Mountpoint": "/var/lib/docker/volumes/ccmai-r117-root-20261017/_data",
+        "Driver": "local",
+        "Labels": {
+          "ccmai.owner": "975dd60d-af4d-4090-8ad3-9a46e00370ef",
+          "ccmai.tranche": "CCMAI-RUNTIME-117"
+        },
+        "Options": null
+      },
+      "network": {
+        "Id": "fe2271a8b533ec1ed3d3d09f1b561afcf6491c9353b246555ad3fd3518e5bab0",
+        "Name": "ccmai-r117-root-20261017",
+        "Created": "2026-10-17T13:50:51.402347055Z",
+        "Driver": "bridge",
+        "Internal": false,
+        "Labels": {
+          "ccmai.owner": "975dd60d-af4d-4090-8ad3-9a46e00370ef",
+          "ccmai.tranche": "CCMAI-RUNTIME-117"
+        },
+        "Options": {
+          "com.docker.network.bridge.gateway_mode_ipv4": "nat",
+          "com.docker.network.bridge.host_binding_ipv4": "127.0.0.1",
+          "com.docker.network.enable_ipv4": "true",
+          "com.docker.network.enable_ipv6": "false"
+        }
+      }
+    }
+  },
+  "after": {
+    "Id": "033e0151bb4805cce1ce6dc347ab79ab8275e016c8ace371cfda158297a2c352",
+    "Image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "Name": "/ccmai-r117-root-20261017",
+    "State": "exited",
+    "Labels": {
+      "ccmai.owner": "975dd60d-af4d-4090-8ad3-9a46e00370ef",
+      "ccmai.tranche": "CCMAI-RUNTIME-117"
+    },
+    "Mounts": [
+      {
+        "Destination": "/var/lib/mysql",
+        "Driver": "local",
+        "Mode": "z",
+        "Name": "ccmai-r117-root-20261017",
+        "Propagation": "",
+        "RW": true,
+        "Source": "/var/lib/docker/volumes/ccmai-r117-root-20261017/_data",
+        "Type": "volume"
+      }
+    ],
+    "Networks": {
+      "ccmai-r117-root-20261017": {
+        "Aliases": null,
+        "DNSNames": [
+          "ccmai-r117-root-20261017",
+          "033e0151bb48"
+        ],
+        "DriverOpts": null,
+        "EndpointID": "",
+        "Gateway": "",
+        "GlobalIPv6Address": "",
+        "GlobalIPv6PrefixLen": 0,
+        "GwPriority": 0,
+        "IPAMConfig": null,
+        "IPAddress": "",
+        "IPPrefixLen": 0,
+        "IPv6Gateway": "",
+        "Links": null,
+        "MacAddress": "",
+        "NetworkID": "fe2271a8b533ec1ed3d3d09f1b561afcf6491c9353b246555ad3fd3518e5bab0"
+      }
+    },
+    "Ports": {},
+    "ownedResourceIdentity": {
+      "containers": {},
+      "volume": {
+        "Name": "ccmai-r117-root-20261017",
+        "CreatedAt": "2026-10-17T13:50:51Z",
+        "Mountpoint": "/var/lib/docker/volumes/ccmai-r117-root-20261017/_data",
+        "Driver": "local",
+        "Labels": {
+          "ccmai.owner": "975dd60d-af4d-4090-8ad3-9a46e00370ef",
+          "ccmai.tranche": "CCMAI-RUNTIME-117"
+        },
+        "Options": null
+      },
+      "network": {
+        "Id": "fe2271a8b533ec1ed3d3d09f1b561afcf6491c9353b246555ad3fd3518e5bab0",
+        "Name": "ccmai-r117-root-20261017",
+        "Created": "2026-10-17T13:50:51.402347055Z",
+        "Driver": "bridge",
+        "Internal": false,
+        "Labels": {
+          "ccmai.owner": "975dd60d-af4d-4090-8ad3-9a46e00370ef",
+          "ccmai.tranche": "CCMAI-RUNTIME-117"
+        },
+        "Options": {
+          "com.docker.network.bridge.gateway_mode_ipv4": "nat",
+          "com.docker.network.bridge.host_binding_ipv4": "127.0.0.1",
+          "com.docker.network.enable_ipv4": "true",
+          "com.docker.network.enable_ipv6": "false"
+        }
+      }
+    }
+  },
+  "stopExitCode": 0,
+  "protectedBaselineEquals": true,
+  "protectedResourcesEqual": true,
+  "containerPreservedStopped": true,
+  "volumeAndNetworkPreservedOwned": true,
+  "operationalBaselineSha256": "00b419c0db3a9ac59085e4b0676cc4c720ffc3682bc622abddc9c2e072f8ab26",
+  "supplementSha256": "652149d549bdef060fc32a2ec73cd732c061cf3a98ef0bb12cc70eb3f60c13e2",
+  "originalCleanupReceiptPreserved": true,
+  "localPinReboundBeforeStop": true,
+  "readyReceiptPresent": true,
+  "providerCallsObservedByHelper": "NOT_OBSERVED"
+}

@@ -1,0 +1,11 @@
+id
+tenant_id
+job_run_id
+conversation_id
+schema_version
+digest
+coverage
+coverage_reasons
+message_count
+manifest
+created_at

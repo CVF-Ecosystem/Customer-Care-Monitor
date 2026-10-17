@@ -98,14 +98,15 @@
   "baseCommit": "980f95639391bab799e443bba3db1c24e8923f5d",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_117_WAITDATA_VERIFICATION.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "status": "BUILD",
-  "phase": "BUILD",
-  "workOrderStatus": "ACTIVE",
-  "buildCommit": null,
+  "status": "REVIEW_PASS",
+  "phase": "REVIEW",
+  "workOrderStatus": "REVIEWER_ACCEPTED",
+  "buildCommit": "06e16ea8dbf20f1ca4fdbf5c56a5fd5142dd419a",
   "reviewEvidence": [
-    "docs/reviews/R117_INDEPENDENT_REVIEW_2026-10-17.md"
+    "docs/reviews/R117_INDEPENDENT_REVIEW_2026-10-17.md",
+    "docs/reviews/R117_FINAL_INDEPENDENT_REVIEW_2026-10-18.md"
   ],
-  "disposition": "SOURCE_ACCEPTED_FOR_ISOLATED_PROOF",
+  "disposition": "REVIEW_PASS",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -113,7 +114,9 @@
     "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -122,19 +125,35 @@
     "WORK_ORDER"
   ],
   "budgetUsed": {
-    "rootFocusedChecks": 3,
+    "rootFocusedChecks": 4,
     "workerGoChecks": 0,
     "workerPythonChecks": 3,
     "rootPythonChecks": 2,
     "fixtureStarts": 1,
     "fixtureTeardowns": 1,
-    "physicalAlibabaCalls": 0
+    "physicalAlibabaCalls": 1
   },
   "sourceRepairRoundsUsed": 1,
   "ownerContinuationAuthority": "docs/reviews/probes/r117_root/owner_restart_authority_18.json",
   "additionalOwnerBudgetUsed": {
     "ownedFixtureRestarts": 1,
-    "ownedFixtureFinalStops": 0
+    "ownedFixtureFinalStops": 1
   },
-  "ownerHelperSourceFinding": "Cleanup must not require successful ready/localpin rebind after authorized start; original ownership/baseline sufficient for exact final stop on partial readiness failure."
+  "ownerHelperSourceFinding": "Cleanup must not require successful ready/localpin rebind after authorized start; original ownership/baseline sufficient for exact final stop on partial readiness failure.",
+  "physicalCallReservation": {
+    "grantId": "CCMAI-RUNTIME-117-OWNER-NEW1-20261017",
+    "slot": 1,
+    "reservedAtUTC": "2026-10-17T18:07:17.572808+00:00",
+    "state": "CONSUMED_ONE_OBSERVED_PHYSICAL_MARKER; original live test PASS",
+    "additionalSlots": 0
+  },
+  "reviewScope": "SOURCE_NATIVE_ONE_REAL_SYNTHETIC_WAITDATA_EXECUTOR_FLOW_ONLY",
+  "governanceReceipt": "docs/reviews/probes/r117_root/real_provider_governance_receipt_18.json",
+  "finalRuntime": {
+    "fixture": "EXITED_PRESERVED",
+    "protectedOperationalBaselineEqual": true,
+    "originalInterruptedCleanupHoldPreserved": true,
+    "providerCalls": 1,
+    "noFurtherEffects": true
+  }
 }

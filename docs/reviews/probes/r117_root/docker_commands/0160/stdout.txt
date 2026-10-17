@@ -1,0 +1,9 @@
+id
+job_id
+tenant_id
+started_at
+finished_at
+status
+summary
+error_message
+created_at
