@@ -1,6 +1,6 @@
 # R113 fresh remaining M3 UI evidence
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 
@@ -27,3 +27,7 @@ Root transitions REVIEWER -> SESSION_SYNC_STEWARD / COMMIT_STEWARD after indepen
 Original supervisor cleanup/result/disposition/exit missing after session unavailable; cause unknown, original files not fabricated. Root exact owned fixture stop1 then read-only final corroboration: exited/exclusive/protected equal campaign baseline; recorded PID25388/23820/24072 and listeners absent. Actual browser logout, reset,tabclose/listempty observed. Source/HEAD stable through runtime0a266623;196raw files80089bytes/source-export-zip parity accepted. Root raw JPEG/DOM/PNG originals and codec/label mistakes transparently retained. Independent review: docs/reviews/R113_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md.
 
 Source repair is outside113binding-only paths/effects. Next finite move is separate source-only onboarding wording/mobile-chip SPEC/workorder (dashboard.go title and OnboardingWizard layout), exact changed-source/binary admission before any targeted runtime. Inherit B07 and qualified mobile/history, do not replay lifecycle or create generic Docker/browser repairs. FullM2/M3/pilot/release and Dashboard3 remain OPEN; R102 no actual rerun executor, accounts parked. No FREEZE or current runtime authority remains.
+
+## R114 pointer transition
+
+Owner next authorizes bounded onboarding source repair. Active continuation moves to AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md; R113 result, budgets and missing original receipt preserved.

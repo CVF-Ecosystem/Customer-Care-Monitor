@@ -23,10 +23,9 @@
       "M5 release/portable operations"
     ],
     "currentBlockers": [
-      "R113 current wording onboarding AIProvider/mobile clipping OPEN; B08CSS390x844 observed but screenshot raster qualified; B09unsupportedNOT_RUN",
-      "Original R113 supervisor terminal/cleanup receipt missing; independent Root final state corroborated",
-      "Three inherited Dashboard failures; full suite not green",
-      "Actual WAIT_DATA AI rerun executor and fullM2/M3/pilot/release OPEN"
+      "R114 onboarding wording/mobile-chip source repair not yet implemented or rendered",
+      "B08 priorCSS390x844 observed with raster qualification; B09unsupportedNOT_RUN",
+      "Three inherited Dashboard failures, no full suite green; actual WAIT_DATA rerun executor/fullM2/M3/pilot/release OPEN"
     ],
     "executionAuthorityExpanded": false,
     "eta": "NOT_ESTABLISHED",
@@ -39,7 +38,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "R094 bounded M2 source/local manual synthetic intervention prototype independently reviewed: authenticated route, snapshot evidence, monotonic call admission, queue/detail and failure handling; real provider0, default app disabled, full M2/M3/pilot OPEN. docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
@@ -2016,7 +2015,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-113",
+  "activeTranche": "CCMAI-RUNTIME-114",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
@@ -2841,5 +2840,13 @@
     "originalSupervisorCleanup": "MISSING",
     "finalFixture": "EXITED_ROOT_OBSERVED",
     "protected": "BASELINE_EQUAL"
+  },
+  "x-r114Current": {
+    "status": "DISPATCH_READY",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_114_ONBOARDING_UI.md",
+    "handoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md",
+    "nextAction": "CCMAI-RUNTIME-114 DISPATCH_READY: committed seed before source BUILD; Luna Max repairs only onboarding component/new focused test and114runner bindings. Root independently reviews source/validation then exact committed admission before any runtime. Inherit113B07/history, B09unsupportedNOT_RUN, no lifecycle replay/old-slot reuse/provider/push/deploy; fullM2/M3/pilot/release OPEN/accounts parked.",
+    "uiSource": "a28cdd0ac9ad1c9d1fd30ced6cf627dd62a56ba2",
+    "b09": "NOT_RUN_UNSUPPORTED_OFFLINE_CONTROL"
   }
 }

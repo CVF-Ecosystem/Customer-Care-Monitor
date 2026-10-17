@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R113_REMAINING_UI_2026-10-17.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md",
       "status": "ACTIVE",
-      "description": "Current R113 bounded UI evidence handoff; inherited historical failures and partial acceptance preserved."
+      "description": "Current R114 onboarding wording/mobile repair; fresh source authority, runtime not admitted; inherited qualified evidence preserved."
     },
     {
       "id": "r060-work-order",
@@ -22571,6 +22571,20 @@
       "path": "docs/reviews/R114_INTAKE_AND_FINITE_ROUTE_2026-10-17.md",
       "status": "ACTIVE",
       "description": "R114 finite onboarding wording/mobile source repair; runtime not admitted, historical qualified evidence preserved."
+    },
+    {
+      "id": "r114-09bb3e87f1d18ebf18",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-114.json",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-093c94694da59f73a5",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_114_ONBOARDING_UI.md",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
     }
   ]
 }
