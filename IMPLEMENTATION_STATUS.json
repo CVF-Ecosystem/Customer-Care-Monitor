@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "x-roadmapTracking": {
     "updatedAt": "2026-10-17",
-    "status": "M3_R114_TARGETED_UI_RUNTIME_ADMITTED",
+    "status": "M3_R114_ONBOARDING_ACCEPTED_BOUNDED_TERMINAL_GAP_OPEN",
     "currentCheckpoint": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
     "stages": {
       "S0": "PARTIAL_LIVE_BASELINE_OPEN",
@@ -23,22 +23,22 @@
       "M5 release/portable operations"
     ],
     "currentBlockers": [
-      "R114 current onboarding mobile/wording runtime proof pending; source3tests/typecheckPASS",
-      "R113B07boundedUI/history inherited; B09unsupportedNOT_RUN",
-      "Three inherited Dashboard failures; actual WAIT_DATA AI rerun executor/fullM2/M3/pilot/release OPEN"
+      "R114 original supervisor exit/cleanup/source-after MISSING; noFREEZE/no more114runtime",
+      "B08CSS390x844 observed, exact raw390x844PNG unobserved; B09unsupportedNOT_RUN",
+      "Three inherited Dashboard failures; actual WAIT_DATA executor/source-writer integration and fullM2/M3/pilot/release OPEN"
     ],
     "executionAuthorityExpanded": false,
     "eta": "NOT_ESTABLISHED",
     "deliveryRoadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
     "currentMilestone": "M3",
-    "milestoneAcceptance": "B07_UI_ACCEPTED_B08_QUALIFIED_ONBOARDING_WORDING_OPEN",
+    "milestoneAcceptance": "B07_INHERITED_ONBOARDING_WORDING_LABELS_ACCEPTED_B08_RASTER_QUALIFIED_B09_NOT_RUN",
     "deliveryRoadmapPublication": "d72de76984e4aad9c208cc82e6093578797b5340",
     "m1BusinessPilotAcceptance": "OPEN",
     "currentPublication": "LOCAL_ONLY_NOT_PUSHED"
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "R094 bounded M2 source/local manual synthetic intervention prototype independently reviewed: authenticated route, snapshot evidence, monotonic call admission, queue/detail and failure handling; real provider0, default app disabled, full M2/M3/pilot OPEN. docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
@@ -2842,11 +2842,16 @@
     "protected": "BASELINE_EQUAL"
   },
   "x-r114Current": {
-    "status": "BUILD",
+    "status": "CHANGES_REQUIRED",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_114_ONBOARDING_UI.md",
     "handoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md",
-    "nextAction": "CCMAI-RUNTIME-114 BUILD runtime admitted after sourceaa92c149 and exact committed Root admission: Luna runs sole new114supervisor; Root observes onboarding desktop/mobile390x844 and queue/detail, owner login/logout only, then cooperative cleanup and independent REVIEW. Existingfixture/backend/Vite1, POST8max, tabs3max,1200sec,retry0; no old-slot/lifecycle/provider/secret/push/deploy. B07/history inherited, B09unsupportedNOT_RUN; fullM2/M3/pilot/release OPEN/accounts parked.",
-    "uiSource": "a28cdd0ac9ad1c9d1fd30ced6cf627dd62a56ba2",
-    "b09": "NOT_RUN_UNSUPPORTED_OFFLINE_CONTROL"
+    "nextAction": "CCMAI-RUNTIME-114 CHANGES_REQUIRED: onboarding wording/full labels accepted on sourceaa92c149 and CSS390x844, but original supervisor exit/cleanup/source-after missing; noFREEZE/no further114runtime. Recover original receipts read-only only if available; do not replay/reset old budgets. B07inherited, B08rasterqualified, B09unsupportedNOT_RUN. Next product move M3-05 executor/integration SPEC before separate authority; fullM2/M3/pilot/release OPEN, no provider/secret/push/deploy; accounts parked.",
+    "uiSource": "aa92c149f47efaec391fb001b0d23ee0dff67f25",
+    "b09": "NOT_RUN_UNSUPPORTED_OFFLINE_CONTROL",
+    "review": "docs/reviews/R114_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md",
+    "outcome": "ONBOARDING_SOURCE_RENDER_ACCEPTED_BOUNDED_TERMINAL_EVIDENCE_INCOMPLETE",
+    "runtimeReplay": "PROHIBITED",
+    "finalFixture": "EXITED_ROOT_OBSERVED",
+    "protected": "4_MATCHES_CAMPAIGN_BASELINE"
   }
 }

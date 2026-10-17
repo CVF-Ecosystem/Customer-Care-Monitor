@@ -1,0 +1,7 @@
+{
+  "containerId": "e1555e03d69360e1cd7729afd9e52856443f5172d76454653beec981a7d6477a",
+  "mysqlHost": "127.0.0.1",
+  "mysqlPort": 58465,
+  "readinessProbes": 2,
+  "state": "READY"
+}

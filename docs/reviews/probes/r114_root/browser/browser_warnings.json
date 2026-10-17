@@ -1,0 +1,14 @@
+[
+  {
+    "level": "warn",
+    "message": "[Vue warn]: [Vuetify UPGRADE] 'dense' is deprecated, use 'density=\"comfortable\"' instead. \n  at <VRow dense=\"\" class=\"mb-4 d-md-none\" > \n  at <Dashboard onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< [object] > > \n  at <RouterView key=\"cf15a737-427e-467d-99bf-815d00702ae0\" > \n  at <VContainer fluid=\"\" class=\"pa-4 pa-md-6\" > \n  at <VMain class=\"bg-background\" > \n  at <DefaultLayout key=2 > \n  at <VApp> \n  at <App>",
+    "timestamp": "2026-10-17T04:31:56.349Z",
+    "url": "http://127.0.0.1:3011/node_modules/.vite/deps/vue.runtime.esm-bundler-CXGjih-T.js?v=53fe3fed"
+  },
+  {
+    "level": "warn",
+    "message": "[Vue warn]: [Vuetify UPGRADE] 'dense' is deprecated, use 'density=\"comfortable\"' instead. \n  at <VRow dense=\"\" class=\"mb-4 d-md-none\" > \n  at <Dashboard onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< [object] > > \n  at <RouterView key=\"cf15a737-427e-467d-99bf-815d00702ae0\" > \n  at <VContainer fluid=\"\" class=\"pa-4 pa-md-6\" > \n  at <VMain class=\"bg-background\" > \n  at <DefaultLayout key=2 > \n  at <VApp> \n  at <App>",
+    "timestamp": "2026-10-17T04:32:00.566Z",
+    "url": "http://127.0.0.1:3011/node_modules/.vite/deps/vue.runtime.esm-bundler-CXGjih-T.js?v=7b96a8fa"
+  }
+]

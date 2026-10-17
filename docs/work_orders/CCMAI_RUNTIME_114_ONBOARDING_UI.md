@@ -1,13 +1,13 @@
 # R114 onboarding wording and mobile repair
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 dispatchKind: INITIAL
 Worker: /root/r114_onboarding_luna
 Reviewer: Codex /root
 Commit steward: Codex /root
 providerExecutionAuthority: NONE
-Disposition: SOURCE_ACCEPTED_EXACT_RUNTIME_ADMITTED
+Disposition: ONBOARDING_ACCEPTED_BOUNDED_TERMINAL_EVIDENCE_INCOMPLETE
 
 ## INTAKE / DESIGN / SPEC / WORK_ORDER
 
@@ -59,3 +59,5 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 
 
 Material-SHA marker:7619b22bd9d34e76e540e975cf8b2633c1403702. Source accepted ataa92c149; current exact committed Root admission controls sole114runtime.
+
+Final Root disposition: CHANGES_REQUIRED/noFREEZE; sourceaa92c149 and current onboarding wording/full labels accepted bounded, original supervisor terminal/cleanup/source-after MISSING. Exact runtime admission is historical consumed authority; current record REVIEW blocks further start. Read-only recovery only, no114replay/unusedslotreuse. Final independent report and raw-byte manifests govern claims.

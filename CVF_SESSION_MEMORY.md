@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md", "activeTranche": "CCMAI-RUNTIME-114", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md", "activeTranche": "CCMAI-RUNTIME-114", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md
 
-CCMAI-RUNTIME-114 BUILD runtime admitted after sourceaa92c149 and exact committed Root admission: Luna runs sole new114supervisor; Root observes onboarding desktop/mobile390x844 and queue/detail, owner login/logout only, then cooperative cleanup and independent REVIEW. Existingfixture/backend/Vite1, POST8max, tabs3max,1200sec,retry0; no old-slot/lifecycle/provider/secret/push/deploy. B07/history inherited, B09unsupportedNOT_RUN; fullM2/M3/pilot/release OPEN/accounts parked.
+CCMAI-RUNTIME-114 CHANGES_REQUIRED: onboarding wording/full labels accepted on sourceaa92c149 and CSS390x844, but original supervisor exit/cleanup/source-after missing; noFREEZE/no further114runtime. Recover original receipts read-only only if available; do not replay/reset old budgets. B07inherited, B08rasterqualified, B09unsupportedNOT_RUN. Next product move M3-05 executor/integration SPEC before separate authority; fullM2/M3/pilot/release OPEN, no provider/secret/push/deploy; accounts parked.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r114_onboarding_luna Luna Max IMPLEMENTATION_WORKER
+Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r114_onboarding_luna returned idle, no further runtime
 
 Mandatory learning: docs/reviews/learnings/feedback_orchestrator_roadmap_control.md and feedback_dispatch_readiness_and_browser_evidence.md. R110/R111/R112 packets, counters and historical failures immutable. R112 final fixture/protection NOT_OBSERVED stays historical.
 

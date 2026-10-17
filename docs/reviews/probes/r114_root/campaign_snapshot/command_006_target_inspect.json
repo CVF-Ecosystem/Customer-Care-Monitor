@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "--config",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r114_workflow\\campaign\\docker-cli-config",
+    "container",
+    "inspect",
+    "--format",
+    "{\"Id\":{{json .Id}},\"Name\":{{json .Name}},\"Image\":{{json .Image}},\"Status\":{{json .State.Status}},\"FixtureLabel\":{{json (index .Config.Labels \"ccmai.tranche\")}},\"Mounts\":[{{range $i,$m := .Mounts}}{{if $i}},{{end}}{\"Type\":{{json $m.Type}},\"Name\":{{json $m.Name}},\"Destination\":{{json $m.Destination}},\"RW\":{{json $m.RW}}}{{end}}],\"PortBindings\":{{json .HostConfig.PortBindings}},\"Networks\":[{{ $first := true }}{{range $name,$net := .NetworkSettings.Networks}}{{if not $first}},{{end}}{{ $first = false }}{\"Name\":{{json $name}},\"NetworkID\":{{json $net.NetworkID}}}{{end}}],\"Ports\":{{json .NetworkSettings.Ports}}}",
+    "e1555e03d69360e1cd7729afd9e52856443f5172d76454653beec981a7d6477a"
+  ],
+  "exitCode": 0,
+  "failureType": null,
+  "outputRedaction": "exact synthetic fixture credential and bearer-token patterns only",
+  "pid": 12904,
+  "stderrBytes": 0,
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdoutBytes": 578,
+  "stdoutSha256": "14c68effee66f930d0aedbefe24991fb97773fa198011622d0a4359f9ab44386",
+  "timedOut": false
+}

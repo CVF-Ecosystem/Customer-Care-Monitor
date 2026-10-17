@@ -1,0 +1,153 @@
+=== RUN   TestR101BrowserFixture
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /api/v1/files/*filepath   --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api.SetupRouter.func2 (4 handlers)
+[GIN-debug] GET    /health                   --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api.SetupRouter.func3 (6 handlers)
+[GIN-debug] GET    /api/v1/version/check     --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.CheckVersion (6 handlers)
+[GIN-debug] GET    /api/v1/setup/status      --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.SetupStatus (6 handlers)
+[GIN-debug] POST   /api/v1/setup             --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.Setup (6 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.Login (6 handlers)
+[GIN-debug] POST   /api/v1/auth/refresh      --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.RefreshTokenHandler (6 handlers)
+[GIN-debug] POST   /api/v1/auth/logout       --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.Logout (6 handlers)
+[GIN-debug] GET    /api/v1/channels/zalo/callback --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ZaloOAuthCallback (6 handlers)
+[GIN-debug] GET    /api/v1/channels/facebook/callback --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.FacebookOAuthCallback (6 handlers)
+[GIN-debug] GET    /api/v1/profile           --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.GetProfile (7 handlers)
+[GIN-debug] PUT    /api/v1/profile           --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.UpdateProfile (7 handlers)
+[GIN-debug] PUT    /api/v1/profile/password  --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ChangeProfilePassword (7 handlers)
+[GIN-debug] GET    /api/v1/tenants           --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ListTenants (7 handlers)
+[GIN-debug] POST   /api/v1/tenants           --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.CreateTenant (7 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.GetTenant (8 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/me --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.GetTenantMe (8 handlers)
+[GIN-debug] PUT    /api/v1/tenants/:tenantId --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.UpdateTenant (9 handlers)
+[GIN-debug] DELETE /api/v1/tenants/:tenantId --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.DeleteTenant (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/channels --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ListChannels (9 handlers)
+[GIN-debug] POST   /api/v1/tenants/:tenantId/channels --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.CreateChannel (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/channels/:channelId --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.GetChannel (9 handlers)
+[GIN-debug] PUT    /api/v1/tenants/:tenantId/channels/:channelId --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.UpdateChannel (9 handlers)
+[GIN-debug] DELETE /api/v1/tenants/:tenantId/channels/:channelId --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.DeleteChannel (9 handlers)
+[GIN-debug] POST   /api/v1/tenants/:tenantId/channels/:channelId/test --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.TestChannelConnection (9 handlers)
+[GIN-debug] POST   /api/v1/tenants/:tenantId/channels/:channelId/sync --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.SyncChannelNow (9 handlers)
+[GIN-debug] POST   /api/v1/tenants/:tenantId/channels/:channelId/reauth --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ReauthChannel (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/channels/:channelId/sync-history --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.GetChannelSyncHistory (9 handlers)
+[GIN-debug] DELETE /api/v1/tenants/:tenantId/channels/:channelId/conversations --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.PurgeChannelConversations (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/onboarding-status --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.GetOnboardingStatus (8 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/conversations --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ListConversations (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/conversations/export --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ExportMessages (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/conversations/evaluated --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ListEvaluatedConversations (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/conversations/:conversationId/messages --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.GetConversationMessages (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/conversations/:conversationId/evaluations --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.GetConversationEvaluations (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/conversations/:conversationId/page --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.GetConversationPage (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/dashboard --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.GetDashboard (8 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/jobs --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ListJobs (9 handlers)
+[GIN-debug] POST   /api/v1/tenants/:tenantId/jobs --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.CreateJob (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/jobs/:jobId --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.GetJob (9 handlers)
+[GIN-debug] PUT    /api/v1/tenants/:tenantId/jobs/:jobId --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.UpdateJob (9 handlers)
+[GIN-debug] DELETE /api/v1/tenants/:tenantId/jobs/:jobId --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.DeleteJob (9 handlers)
+[GIN-debug] POST   /api/v1/tenants/:tenantId/jobs/:jobId/trigger --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.TriggerJob (9 handlers)
+[GIN-debug] POST   /api/v1/tenants/:tenantId/jobs/:jobId/test-run --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.TestRunJob (9 handlers)
+[GIN-debug] POST   /api/v1/tenants/:tenantId/jobs/:jobId/intervention-run --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.RunIntervention (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/intervention-cases --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ListInterventionCases (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/intervention-assignees --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ListInterventionAssignees (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/intervention-cases/:caseId --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.GetInterventionCase (9 handlers)
+[GIN-debug] POST   /api/v1/tenants/:tenantId/intervention-cases/:caseId/actions --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ApplyInterventionAction (10 handlers)
+[GIN-debug] POST   /api/v1/tenants/:tenantId/intervention-cases/:caseId/data-revisions --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.CreateInterventionDataRevision (10 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/intervention-cases/:caseId/data-revisions --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ListInterventionDataRevisions (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/intervention-cases/:caseId/data-revisions/:revisionId --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.GetInterventionDataRevision (9 handlers)
+[GIN-debug] POST   /api/v1/tenants/:tenantId/intervention-cases/:caseId/rerun-requests --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.CreateInterventionRerunRequest (11 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/intervention-cases/:caseId/rerun-requests --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ListInterventionRerunRequests (9 handlers)
+[GIN-debug] POST   /api/v1/tenants/:tenantId/jobs/:jobId/cancel --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.CancelJob (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/jobs/:jobId/runs --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ListJobRuns (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/jobs/:jobId/runs/:runId/results --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ListJobResults (9 handlers)
+[GIN-debug] POST   /api/v1/tenants/:tenantId/test-output --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.TestOutput (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/activity-logs --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ListActivityLogs (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/cost-logs --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ListCostLogs (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/users --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ListTenantUsers (8 handlers)
+[GIN-debug] POST   /api/v1/tenants/:tenantId/users/invite --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.InviteUser (9 handlers)
+[GIN-debug] PUT    /api/v1/tenants/:tenantId/users/:userId/role --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.UpdateUserRole (9 handlers)
+[GIN-debug] PUT    /api/v1/tenants/:tenantId/users/:userId/reset-password --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ResetUserPassword (9 handlers)
+[GIN-debug] DELETE /api/v1/tenants/:tenantId/users/:userId --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.RemoveUserFromTenant (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/jobs/:jobId/results --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ListAllJobResults (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/jobs/:jobId/results/export --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ExportJobResults (9 handlers)
+[GIN-debug] DELETE /api/v1/tenants/:tenantId/jobs/:jobId/results --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ClearJobResults (9 handlers)
+[GIN-debug] DELETE /api/v1/tenants/:tenantId/jobs/:jobId/runs --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ClearJobRuns (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/results --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ListResults (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/results/facets --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ResultsFacets (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/results/export --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ExportResults (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/settings --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.GetSettings (9 handlers)
+[GIN-debug] PUT    /api/v1/tenants/:tenantId/settings --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.SaveSetting (9 handlers)
+[GIN-debug] PUT    /api/v1/tenants/:tenantId/settings/ai --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.SaveAISettings (9 handlers)
+[GIN-debug] PUT    /api/v1/tenants/:tenantId/settings/analysis --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.SaveAnalysisSettings (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/settings/storage --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.GetStorageStatus (9 handlers)
+[GIN-debug] PUT    /api/v1/tenants/:tenantId/settings/storage --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.SaveStorageSettings (9 handlers)
+[GIN-debug] POST   /api/v1/tenants/:tenantId/settings/storage/test --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.TestStorageSettings (9 handlers)
+[GIN-debug] POST   /api/v1/tenants/:tenantId/settings/ai/test --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.TestAIKey (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/settings/ai/models --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ListAIModels (9 handlers)
+[GIN-debug] POST   /api/v1/tenants/:tenantId/settings/ai/models/refresh --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.RefreshAIModels (9 handlers)
+[GIN-debug] PUT    /api/v1/tenants/:tenantId/settings/general --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.SaveGeneralSettings (9 handlers)
+[GIN-debug] PUT    /api/v1/tenants/:tenantId/settings/password --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ChangePassword (8 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/notification-logs --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ListNotificationLogs (9 handlers)
+[GIN-debug] GET    /api/v1/tenants/:tenantId/demo/status --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.GetDemoStatus (8 handlers)
+[GIN-debug] POST   /api/v1/tenants/:tenantId/demo/import --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ImportDemoData (9 handlers)
+[GIN-debug] DELETE /api/v1/tenants/:tenantId/demo/reset --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ResetDemoData (9 handlers)
+[GIN-debug] GET    /api/v1/agents            --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ListAgents (7 handlers)
+[GIN-debug] GET    /api/v1/agents/capabilities --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.ListAgents (7 handlers)
+[GIN-debug] POST   /api/v1/agents/:agentName/run --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.AgentRun (7 handlers)
+[GIN-debug] GET    /api/v1/agents/:agentName/query --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.AgentQuery (7 handlers)
+[GIN-debug] GET    /api/v1/agents/:agentName/health --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers.AgentHealth (7 handlers)
+[GIN-debug] POST   /mcp                      --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp.handleMCPRequest (7 handlers)
+[GIN-debug] GET    /oauth/authorize          --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp.handleAuthorize (6 handlers)
+[GIN-debug] POST   /oauth/authorize          --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp.handleAuthorizeLogin (6 handlers)
+[GIN-debug] POST   /oauth/token              --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp.handleToken (6 handlers)
+[GIN-debug] POST   /oauth/revoke             --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp.handleRevoke (6 handlers)
+[GIN-debug] GET    /.well-known/oauth-authorization-server --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp.handleOAuthMetadata (6 handlers)
+[GIN-debug] GET    /.well-known/oauth-protected-resource --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp.handleProtectedResourceMetadata (6 handlers)
+[GIN-debug] GET    /api/v1/mcp/clients       --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp.ListMCPClients (7 handlers)
+[GIN-debug] POST   /api/v1/mcp/clients       --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp.CreateMCPClient (7 handlers)
+[GIN-debug] DELETE /api/v1/mcp/clients/:id   --> github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp.DeleteMCPClient (7 handlers)
+R101_BROWSER_READY http://127.0.0.1:58469 tenant=cf15a737-427e-467d-99bf-815d00702ae0 case=c58cb345-01ff-4f42-b3e3-482ac60049dc reader=abf2ae99-fbb1-430c-9388-989980e13204
+R101_BROWSER_OWNER 5b0d8fd0-5d2b-4169-a9e5-ca6f5fc9fae4@example.invalid
+[GIN] 2026/10/17 - 11:31:47 | 200 |   2.19ms |       127.0.0.1 | GET      "/api/v1/setup/status"
+[GIN] 2026/10/17 - 11:31:48 | 200 |   1.52ms |       127.0.0.1 | GET      "/api/v1/setup/status"
+[GIN] 2026/10/17 - 11:31:54 | 200 |  13.97ms |       127.0.0.1 | POST     "/api/v1/auth/login"
+[GIN] 2026/10/17 - 11:31:54 | 200 |   5.99ms |       127.0.0.1 | GET      "/api/v1/profile"
+[GIN] 2026/10/17 - 11:31:55 | 200 |   1.91ms |       127.0.0.1 | GET      "/api/v1/setup/status"
+[GIN] 2026/10/17 - 11:31:55 | 200 |   6.88ms |       127.0.0.1 | GET      "/api/v1/profile"
+[GIN] 2026/10/17 - 11:31:55 | 200 |  12.26ms |       127.0.0.1 | GET      "/api/v1/tenants"
+[GIN] 2026/10/17 - 11:31:55 | 200 |   6.58ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0"
+[GIN] 2026/10/17 - 11:31:56 | 200 |   1.91ms |       127.0.0.1 | GET      "/api/v1/setup/status"
+[GIN] 2026/10/17 - 11:31:56 | 200 |  10.13ms |       127.0.0.1 | GET      "/api/v1/tenants"
+[GIN] 2026/10/17 - 11:31:56 | 200 |  10.13ms |       127.0.0.1 | GET      "/api/v1/profile"
+[GIN] 2026/10/17 - 11:31:56 | 200 |  10.23ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0"
+[GIN] 2026/10/17 - 11:31:56 | 200 |   6.55ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0/me"
+[GIN] 2026/10/17 - 11:31:56 | 200 |   8.81ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0/demo/status"
+[GIN] 2026/10/17 - 11:31:56 | 200 |   2.12ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0/me"
+[GIN] 2026/10/17 - 11:31:56 | 200 |   20.4ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0/onboarding-status"
+[GIN] 2026/10/17 - 11:31:56 | 200 |  16.34ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0/onboarding-status"
+[GIN] 2026/10/17 - 11:31:56 | 200 |   6.35ms |       127.0.0.1 | GET      "/api/v1/tenants"
+[GIN] 2026/10/17 - 11:31:56 | 200 |  42.16ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0/dashboard?from=2026-09-20&to=2026-10-17"
+[GIN] 2026/10/17 - 11:32:00 | 200 |   1.51ms |       127.0.0.1 | GET      "/api/v1/setup/status"
+[GIN] 2026/10/17 - 11:32:00 | 200 |  14.25ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0"
+[GIN] 2026/10/17 - 11:32:00 | 200 |    2.4ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0/me"
+[GIN] 2026/10/17 - 11:32:00 | 200 |   7.32ms |       127.0.0.1 | GET      "/api/v1/profile"
+[GIN] 2026/10/17 - 11:32:00 | 200 |   2.21ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0/me"
+[GIN] 2026/10/17 - 11:32:00 | 200 |  12.18ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0/demo/status"
+[GIN] 2026/10/17 - 11:32:00 | 200 |  18.75ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0/onboarding-status"
+[GIN] 2026/10/17 - 11:32:00 | 200 |   8.76ms |       127.0.0.1 | GET      "/api/v1/tenants"
+[GIN] 2026/10/17 - 11:32:00 | 200 |  42.34ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0/dashboard?from=2026-09-20&to=2026-10-17"
+[GIN] 2026/10/17 - 11:32:23 | 200 |   1.51ms |       127.0.0.1 | GET      "/api/v1/setup/status"
+[GIN] 2026/10/17 - 11:32:23 | 200 |  10.14ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0"
+[GIN] 2026/10/17 - 11:32:23 | 200 |   2.74ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0/me"
+[GIN] 2026/10/17 - 11:32:24 | 200 |   3.62ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0/me"
+[GIN] 2026/10/17 - 11:32:24 | 200 |   9.59ms |       127.0.0.1 | GET      "/api/v1/profile"
+[GIN] 2026/10/17 - 11:32:24 | 200 |  19.47ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0/onboarding-status"
+[GIN] 2026/10/17 - 11:32:24 | 200 |  10.11ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0/intervention-cases?limit=20"
+[GIN] 2026/10/17 - 11:32:24 | 200 |   7.42ms |       127.0.0.1 | GET      "/api/v1/tenants"
+[GIN] 2026/10/17 - 11:32:32 | 200 |  25.35ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0/intervention-cases/c58cb345-01ff-4f42-b3e3-482ac60049dc"
+[GIN] 2026/10/17 - 11:32:32 | 200 |  24.32ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0/onboarding-status"
+[GIN] 2026/10/17 - 11:32:32 | 200 |   6.76ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0/intervention-assignees"
+[GIN] 2026/10/17 - 11:32:47 | 200 |   8.79ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0/intervention-cases?limit=20"
+[GIN] 2026/10/17 - 11:32:47 | 200 |  15.52ms |       127.0.0.1 | GET      "/api/v1/tenants/cf15a737-427e-467d-99bf-815d00702ae0/onboarding-status"
+[GIN] 2026/10/17 - 11:32:57 | 200 |       0s |       127.0.0.1 | POST     "/api/v1/auth/logout"
+[GIN] 2026/10/17 - 11:32:57 | 200 |   1.61ms |       127.0.0.1 | GET      "/api/v1/setup/status"

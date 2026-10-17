@@ -1,0 +1,155 @@
+{
+  "devicePixelRatio": 1.0000000149011612,
+  "docClientWidth": 1265,
+  "docScrollWidth": 1265,
+  "innerHeight": 900,
+  "innerWidth": 1280,
+  "labels": [
+    {
+      "chip": {
+        "bottom": 58,
+        "height": 26,
+        "right": 527.6750030517578,
+        "width": 136.4250030517578,
+        "x": 391.25,
+        "y": 32
+      },
+      "content": {
+        "clientWidth": 101,
+        "scrollWidth": 101
+      },
+      "label": {
+        "bottom": 54,
+        "clientWidth": 101,
+        "height": 18,
+        "right": 517.6750183105469,
+        "scrollWidth": 101,
+        "width": 101,
+        "x": 416.6750183105469,
+        "y": 36
+      },
+      "style": {
+        "overflowWrap": "anywhere",
+        "whiteSpace": "normal"
+      },
+      "text": "Kết nối kênh chat"
+    },
+    {
+      "chip": {
+        "bottom": 58,
+        "height": 26,
+        "right": 666.6749877929688,
+        "width": 135,
+        "x": 531.6749877929688,
+        "y": 32
+      },
+      "content": {
+        "clientWidth": 100,
+        "scrollWidth": 100
+      },
+      "label": {
+        "bottom": 54,
+        "clientWidth": 100,
+        "height": 18,
+        "right": 656.6750411987305,
+        "scrollWidth": 100,
+        "width": 99.57500457763672,
+        "x": 557.1000366210938,
+        "y": 36
+      },
+      "style": {
+        "overflowWrap": "anywhere",
+        "whiteSpace": "normal"
+      },
+      "text": "Đồng bộ tin nhắn"
+    },
+    {
+      "chip": {
+        "bottom": 58,
+        "height": 26,
+        "right": 766.3749923706055,
+        "width": 95.70000457763672,
+        "x": 670.6749877929688,
+        "y": 32
+      },
+      "content": {
+        "clientWidth": 59,
+        "scrollWidth": 59
+      },
+      "label": {
+        "bottom": 54,
+        "clientWidth": 59,
+        "height": 18,
+        "right": 755.575023651123,
+        "scrollWidth": 59,
+        "width": 58.67499923706055,
+        "x": 696.9000244140625,
+        "y": 36
+      },
+      "style": {
+        "overflowWrap": "anywhere",
+        "whiteSpace": "normal"
+      },
+      "text": "Cài đặt AI"
+    },
+    {
+      "chip": {
+        "bottom": 58,
+        "height": 26,
+        "right": 947.0375061035156,
+        "width": 176.66250610351562,
+        "x": 770.375,
+        "y": 32
+      },
+      "content": {
+        "clientWidth": 141,
+        "scrollWidth": 141
+      },
+      "label": {
+        "bottom": 54,
+        "clientWidth": 141,
+        "height": 18,
+        "right": 937.0374908447266,
+        "scrollWidth": 141,
+        "width": 141.2375030517578,
+        "x": 795.7999877929688,
+        "y": 36
+      },
+      "style": {
+        "overflowWrap": "anywhere",
+        "whiteSpace": "normal"
+      },
+      "text": "Tạo công việc phân tích"
+    },
+    {
+      "chip": {
+        "bottom": 58,
+        "height": 26,
+        "right": 1099.0375366210938,
+        "width": 148,
+        "x": 951.0375366210938,
+        "y": 32
+      },
+      "content": {
+        "clientWidth": 111,
+        "scrollWidth": 111
+      },
+      "label": {
+        "bottom": 54,
+        "clientWidth": 111,
+        "height": 18,
+        "right": 1088.2375106811523,
+        "scrollWidth": 111,
+        "width": 110.9749984741211,
+        "x": 977.2625122070312,
+        "y": 36
+      },
+      "style": {
+        "overflowWrap": "anywhere",
+        "whiteSpace": "normal"
+      },
+      "text": "Chạy thử phân tích"
+    }
+  ],
+  "url": "http://127.0.0.1:3011/cf15a737-427e-467d-99bf-815d00702ae0"
+}

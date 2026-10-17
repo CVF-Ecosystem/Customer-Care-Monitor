@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-114",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-114 BUILD runtime admitted after sourceaa92c149 and exact committed Root admission: Luna runs sole new114supervisor; Root observes onboarding desktop/mobile390x844 and queue/detail, owner login/logout only, then cooperative cleanup and independent REVIEW. Existingfixture/backend/Vite1, POST8max, tabs3max,1200sec,retry0; no old-slot/lifecycle/provider/secret/push/deploy. B07/history inherited, B09unsupportedNOT_RUN; fullM2/M3/pilot/release OPEN/accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-114 CHANGES_REQUIRED: onboarding wording/full labels accepted on sourceaa92c149 and CSS390x844, but original supervisor exit/cleanup/source-after missing; noFREEZE/no further114runtime. Recover original receipts read-only only if available; do not replay/reset old budgets. B07inherited, B08rasterqualified, B09unsupportedNOT_RUN. Next product move M3-05 executor/integration SPEC before separate authority; fullM2/M3/pilot/release OPEN, no provider/secret/push/deploy; accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r114_onboarding_luna Luna Max IMPLEMENTATION_WORKER",
+  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r114_onboarding_luna returned idle, no further runtime",
   "updatedAt": "2026-10-17",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {
@@ -2104,7 +2104,7 @@
     "date": "2026-10-16",
     "source": "Explicit owner UI/UX instruction",
     "requirement": "All product-facing labels, statuses, instructions and error messages must use language understandable to end users. Do not expose developer jargon, raw API/enum/error codes, stack traces, runtime/tooling/governance implementation details in ordinary UI flows. Keep technical diagnostics in evidence/logs.",
-    "verification": "R113 current rendered intervention/history wording partly verified; shared onboarding AIProvider/mobile clipping remain OPEN. Raw JPEGs preserved, derivedPNG codec/dimension qualifications; no app-wide language PASS."
+    "verification": "R114 sourceaa92c149: current shared onboarding Cài đặt AI and full5labels independently observed desktop/CSS390x844 queue/detail. R113 intervention/history wording inherited qualified; raw JPEG raster differs, derivedPNG noresize, no app-wide language PASS. Original supervisor terminal/cleanup missing; noFREEZE."
   },
   "x-r112LatestResumeDiagnostic": {
     "observedAtUTC": "2026-10-17T02:13:00.370385+00:00",
@@ -2125,5 +2125,19 @@
     "finalFixture": "EXITED_ROOT_OBSERVED",
     "protected": "EQUALS_CAMPAIGN_BASELINE",
     "originalSupervisorCleanup": "MISSING"
+  },
+  "x-r114CurrentOutcome": {
+    "status": "CHANGES_REQUIRED",
+    "source": "aa92c149f47efaec391fb001b0d23ee0dff67f25",
+    "campaignHead": "954013408715cb0213d37bb7d51b714f29b900f8",
+    "review": "docs/reviews/R114_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md",
+    "onboarding": "WORDING_AND_FULL_LABELS_ACCEPTED_BOUNDED_CSS390x844",
+    "B07": "INHERITED_R113_BOUNDED_UI",
+    "B08": "RASTER_QUALIFIED",
+    "B09": "NOT_RUN_UNSUPPORTED",
+    "supervisorTerminalCleanup": "MISSING",
+    "finalFixture": "EXITED_INDEPENDENTLY_OBSERVED",
+    "protected": "4_EQUALS_CAMPAIGN_BASELINE",
+    "runtimeReplay": "PROHIBITED"
   }
 }

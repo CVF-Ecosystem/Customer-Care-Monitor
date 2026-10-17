@@ -1,0 +1,100 @@
+- navigation:
+  - generic: Customer Care Monitor AI
+  - button:
+    - generic: 󰅁
+  - separator
+  - generic: R101 Synthetic
+  - separator
+  - list:
+    - link "Trang chủ":
+      - /url: /cf15a737-427e-467d-99bf-815d00702ae0
+      - generic: 󰕮
+      - generic: Trang chủ
+    - link "Kênh chat":
+      - /url: /cf15a737-427e-467d-99bf-815d00702ae0/channels
+      - generic: 󱘖
+      - generic: Kênh chat
+    - link "Tin nhắn":
+      - /url: /cf15a737-427e-467d-99bf-815d00702ae0/messages
+      - generic: 󰊌
+      - generic: Tin nhắn
+    - link "Tác vụ AI":
+      - /url: /cf15a737-427e-467d-99bf-815d00702ae0/jobs
+      - generic: 󰚩
+      - generic: Tác vụ AI
+    - link "Kết quả":
+      - /url: /cf15a737-427e-467d-99bf-815d00702ae0/results
+      - generic: 󱃔
+      - generic: Kết quả
+    - link "Ca cần can thiệp":
+      - /url: /cf15a737-427e-467d-99bf-815d00702ae0/intervention-cases
+      - generic: 󰀈
+      - generic: Ca cần can thiệp
+    - link "Nhật ký hệ thống":
+      - /url: /cf15a737-427e-467d-99bf-815d00702ae0/activity-logs
+      - generic: 󰺮
+      - generic: Nhật ký hệ thống
+    - link "Nhật ký chi phí":
+      - /url: /cf15a737-427e-467d-99bf-815d00702ae0/cost-logs
+      - generic: 󰇁
+      - generic: Nhật ký chi phí
+    - link "Lịch sử thông báo":
+      - /url: /cf15a737-427e-467d-99bf-815d00702ae0/notifications
+      - generic: 󰂞
+      - generic: Lịch sử thông báo
+    - link "Kết nối trợ lý AI":
+      - /url: /cf15a737-427e-467d-99bf-815d00702ae0/mcp
+      - generic: 󱂛
+      - generic: Kết nối trợ lý AI
+    - link "Người dùng":
+      - /url: /cf15a737-427e-467d-99bf-815d00702ae0/users
+      - generic: 󰡉
+      - generic: Người dùng
+    - link "Cài đặt":
+      - /url: /cf15a737-427e-467d-99bf-815d00702ae0/settings
+      - generic: 󰒓
+      - generic: Cài đặt
+  - separator
+  - button:
+    - generic: 󰖔
+  - button "Tiếng Việt":
+    - generic: 󰗊
+    - text: Tiếng Việt
+    - generic: 󰍝
+  - generic: R
+  - generic: R101 owner
+  - button:
+    - generic: 󰍃
+- main:
+  - generic: 󱓞
+  - generic: "Bắt đầu:"
+  - generic: 󰗠
+  - generic: Kết nối kênh chat
+  - generic: 󰗠
+  - generic: Đồng bộ tin nhắn
+  - generic: 󰝦
+  - generic: Cài đặt AI
+  - generic: 󰗠
+  - generic: Tạo công việc phân tích
+  - generic: 󰝦
+  - generic: Chạy thử phân tích
+  - button:
+    - generic: 󰅖
+  - heading "Ca cần can thiệp" [level=1]
+  - generic: Hàng đợi xử lý
+  - combobox:
+    - generic: Đang xử lý
+    - combobox "Trạng thái": Đang xử lý
+    - generic: 󰍝
+    - generic: Trạng thái
+  - alert
+  - paragraph: "Tổng số ca theo bộ lọc: 2 · Sắp xếp theo thời điểm tạo"
+  - list:
+    - link "Mã ca F4C0CE64 Chờ duyệt hoặc giao việc · 11:30:49 17/10/2026":
+      - /url: /cf15a737-427e-467d-99bf-815d00702ae0/intervention-cases/c58cb345-01ff-4f42-b3e3-482ac60049dc
+      - generic: Mã ca F4C0CE64
+      - generic: Chờ duyệt hoặc giao việc · 11:30:49 17/10/2026
+    - link "Mã ca CF830E1E Chờ bổ sung dữ liệu · 11:30:49 17/10/2026":
+      - /url: /cf15a737-427e-467d-99bf-815d00702ae0/intervention-cases/ef88f5a8-e057-4dac-a59c-0734acb09bfd
+      - generic: Mã ca CF830E1E
+      - generic: Chờ bổ sung dữ liệu · 11:30:49 17/10/2026
