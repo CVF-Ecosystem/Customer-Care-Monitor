@@ -14,3 +14,7 @@ Status: ACTIVE
 ## Root acknowledgment
 
 Owner renewal supersedes the earlier stop for a fresh bounded attempt only. Root current HTTP click/capture PASS, owned diagnostic closed. Luna no browser, Root retains UI role. Seed 90d703e5cdd44b8d86dd74fe89c33cd620988d08 precedes all BUILD edits. R109 source/current native and B01-B06/B10 inherited with exact review qualifications. Source-only dispatch after pre-dispatch gate; runtime still not admitted.
+
+## Luna source-worker acknowledgment — 2026-10-17
+
+Luna acknowledges CCMAI-RUNTIME-110 BUILD at dispatch HEAD b313727765da25fcf29599b2005472f8209c90b7 with immutable seed/baseCommit 90d703e5cdd44b8d86dd74fe89c33cd620988d08. Scope is the four authorized UI files (`Dashboard.vue`, `Jobs/JobDetail.vue`, `vi.ts`, `en.ts`), meaningful wording assertions in the two allowed existing tests if needed, and a new R110 runner/template only under `docs/reviews/probes/r110_luna/`. Preserve request, route, provider, permission, unknown-service-state, and Dashboard baseline behavior. No backend, old runner/evidence/seed, fixture, browser, tests, or runtime actions; Root must independently review source and issue separate runtime admission before any validation or campaign execution. Parked Facebook/Zalo OA setup remains unchanged.

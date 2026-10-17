@@ -1,0 +1,55 @@
+{
+  "recordedAtUTC": "2026-10-16T18:02:35.878428+00:00",
+  "result": "PASS",
+  "sourceSha256": "9707bc42390f0a6609e221ceadd32e8c3b5478f125194c4b038848ab0388bfde",
+  "templateSha256": "10e83c215ba21f0a3e53a174455b2f8e7e313afff12b5b11baf3096318a6da5b",
+  "safetyAstParity": [
+    "Campaign",
+    "PipeCapture",
+    "normalize_text",
+    "verify_committed_file",
+    "minimal_env",
+    "await_backend_ready",
+    "wait_vite_health",
+    "parse_backend_ready"
+  ],
+  "baselineAcceptance": "ACTUAL_EXIT1_KNOWN_BASELINE_ONLY",
+  "negativeControls": [
+    {
+      "case": "falsely green test receipt",
+      "result": "REJECTED",
+      "error": "actual focused test/typecheck exit status changed"
+    },
+    {
+      "case": "source pin set changed",
+      "result": "REJECTED",
+      "error": "known baseline source pins differ from the independent qualification"
+    },
+    {
+      "case": "wrong failure count",
+      "result": "REJECTED",
+      "error": "known baseline suite counts changed"
+    },
+    {
+      "case": "unrecognized failure",
+      "result": "REJECTED",
+      "error": "focused failures differ from the exact inherited baseline"
+    }
+  ],
+  "nativeInvocationInCampaign": false,
+  "campaignSeconds": 1200,
+  "uiPostLimit": 8,
+  "configImportExitCode": 0,
+  "configImport": {
+    "envDir": false,
+    "host": "127.0.0.1",
+    "port": 3011,
+    "strictPort": true,
+    "plugins": 4,
+    "proxy": [
+      "/api"
+    ]
+  },
+  "runtimeStarted": false,
+  "claim": "Offline tooling checks only; no product/provider/governance proof"
+}

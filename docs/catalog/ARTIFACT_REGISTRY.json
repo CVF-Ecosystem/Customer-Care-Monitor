@@ -19141,6 +19141,342 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_110_REMAINING_UI.md",
       "status": "ACTIVE",
       "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-a10e89eac9adef36ca",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_luna/r110_vite_config.mjs.template",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-15c5ab97502283a052",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_luna/r110_workflow_runner.py",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-ddb9e74bfb643cc2e7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/binary_reuse_verification.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-a54045a9f813b28313",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/dispatch_checks/predispatch_1.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-a8266ad3cd8bae17a9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/dispatch_checks/predispatch_1.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-7d71aa1b46e8b80111",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/dispatch_checks/predispatch_1.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-3fb820481396b3d2f9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/dispatch_checks/preflight_dispatch.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-d54f73bfe15b23505d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/dispatch_checks/preflight_dispatch.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-6869cb145b75f58e9a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/dispatch_checks/preflight_dispatch.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-b67d8e902768b09784",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/dispatch_checks/unit_dispatch.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-813dd708f60331c5c7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/dispatch_checks/unit_dispatch.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-88fa0795faa05fbbb4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/dispatch_checks/unit_dispatch.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-7b4f1e7a72fc9d87f2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/focused-test.config.mjs",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-b6ecd397f05146f5bf",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/readiness_inventory/command_001_target_inspect.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-e110b3fb1366648dee",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/readiness_inventory/command_001_target_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-b99470308ca0525aac",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/readiness_inventory/command_001_target_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-e9cb4f7b4b68e5f163",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/readiness_inventory/command_002_target_network_inspect.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-c65f9690bd086e2636",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/readiness_inventory/command_002_target_network_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-dea90bcc9f9ccca8ed",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/readiness_inventory/command_002_target_network_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-f4dfe19d36ec19acbe",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/readiness_inventory/command_003_fixture_volume_users.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-21983bd79818ee5ed8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/readiness_inventory/command_003_fixture_volume_users.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-039ede710f2e81be51",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/readiness_inventory/command_003_fixture_volume_users.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-f5e35bd19d9f3a58b2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/readiness_inventory/command_004_all_container_ids.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-498d0ee18ad1d47ccb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/readiness_inventory/command_004_all_container_ids.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-d161ddb7a7d2f92430",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/readiness_inventory/command_004_all_container_ids.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-14ad1eb3518ed30cc4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/readiness_inventory/command_005_protected_container_inspect.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-b090ce903785ca3c77",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/readiness_inventory/command_005_protected_container_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-29813eec3b7b0ec844",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/readiness_inventory/command_005_protected_container_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-856c99efbf02144e78",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/readiness_inventory/protected_current.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-978905748eb42a7e62",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/readiness_inventory/readiness_receipt.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-8c0307b77fa1e21aab",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/tooling_check/config_import.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-7495b72658dbad9d04",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/tooling_check/config_import.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-517c25b904420e02d6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/tooling_check/import_check.mjs",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-8a75dd926e7e9369c8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/tooling_check/rendered.config.mjs",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-523dbee8a4536ef9a5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/tooling_check/tooling_receipt.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-3ab6c1a7385adcf8ff",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/validation_1/baseline_qualification.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-8ff7341318b25d0e22",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/validation_1/focused_tests.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-0d181ca2f6df54c853",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/validation_1/focused_tests.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-6055df93ea1e423871",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/validation_1/focused_tests.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-0e389706d46356adb0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/validation_1/forced_typecheck.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-7e0642897831afe168",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/validation_1/forced_typecheck.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-19b68861ba10fceb61",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/validation_1/forced_typecheck.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-d032fb902d7712b5f2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/validation_1/source_pins.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-0c7909dc6871de0964",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/viewport_capability_probe.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-a5de621ca9261683f5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/viewport_capability_probe.png",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-b3a874de598bee6514",
+      "family": "continuity",
+      "path": "docs/reviews/R110_DISPATCH_REVIEW_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-adc2102c07dea96ebb",
+      "family": "continuity",
+      "path": "docs/reviews/R110_INDEPENDENT_TOOLING_REVIEW_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-014a56cc254f307d3e",
+      "family": "continuity",
+      "path": "docs/reviews/R110_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
     }
   ]
 }

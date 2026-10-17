@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "scripts/cvf_downstream_gate.py",
+    "preflight"
+  ],
+  "exitCode": 0,
+  "elapsedSeconds": 3.7370276000001468,
+  "recordedAtUTC": "2026-10-16T17:52:38.507130+00:00"
+}

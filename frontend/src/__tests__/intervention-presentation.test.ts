@@ -1,4 +1,6 @@
 import { describe, expect, it } from 'vitest'
+import enMessages from '../i18n/en'
+import viMessages from '../i18n/vi'
 import {
   interventionActionKey,
   interventionAssessmentKey,
@@ -32,6 +34,41 @@ const labels: InterventionHistoryLabels = {
 }
 
 describe('intervention presentation helpers', () => {
+  it('explains incomplete channel data without claiming that records match', () => {
+    expect(viMessages.iv_source_local_match_currentness_unverified).not.toMatch(/khớp/i)
+    expect(viMessages.iv_source_local_match_currentness_unverified).toContain('Chưa xác nhận')
+    expect(viMessages.iv_local_only).not.toMatch(/khớp/i)
+    expect(viMessages.iv_local_only).toContain('Chưa xác nhận')
+    expect(enMessages.iv_source_local_match_currentness_unverified).not.toMatch(/matches/i)
+    expect(enMessages.iv_source_local_match_currentness_unverified).toContain('not fully verified')
+    expect(enMessages.iv_local_only).not.toMatch(/matches/i)
+    expect(enMessages.iv_local_only).toContain('not confirmed')
+  })
+
+  it('uses plain language for common AI and assistant-connection controls', () => {
+    for (const messages of [viMessages, enMessages]) {
+      expect(messages.ai_provider).not.toMatch(/provider/i)
+      expect(messages.api_key).not.toMatch(/api/i)
+      expect(messages.test_api_key).not.toMatch(/api/i)
+      expect(messages.nav_mcp).not.toMatch(/mcp/i)
+      expect(messages.mcp_connections).not.toMatch(/mcp/i)
+      expect(messages.mc_sub).not.toMatch(/mcp/i)
+      expect(messages.st_intro_ai).not.toMatch(/provider|api key/i)
+      expect(messages.st_need_key).not.toMatch(/api key/i)
+      expect(messages.job_ai_service_missing_title).not.toMatch(/provider/i)
+      expect(messages.job_ai_service_missing_text).not.toMatch(/provider|api key/i)
+    }
+    expect(viMessages.nav_mcp).toContain('trợ lý AI')
+    expect(viMessages.mcp_connections).toContain('trợ lý AI')
+    expect(enMessages.nav_mcp).toContain('assistant')
+    expect(enMessages.mcp_connections).toContain('assistant')
+    expect(viMessages.ai_model).toContain('Mô hình')
+    expect(viMessages.refresh_model_list).toContain('mô hình')
+    expect(viMessages.st_intro_ai).toContain('mô hình')
+    expect(viMessages.st_models_updated).toContain('mô hình')
+    expect(viMessages.st_key_saved_note).toContain('khóa truy cập')
+  })
+
   it('maps known values and never returns an unrecognized wire value', () => {
     expect(interventionStateKey('OPEN')).toBe('iv_state_open')
     expect(interventionStateKey('INTERNAL_NEW_STATE')).toBe('iv_state_other')

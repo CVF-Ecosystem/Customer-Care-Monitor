@@ -1,0 +1,16 @@
+{
+  "observer": "Codex /root",
+  "tool": "mcp__cua_repl.js",
+  "browser": "iab id2",
+  "purpose": "Fresh diagnostic capability before product runtime",
+  "advertisedBrowserCapabilities": ["visibility", "viewport"],
+  "requested": {"width": 390, "height": 844},
+  "actualDom": {"width": 390, "height": 844, "innerWidth": 390, "innerHeight": 844},
+  "page": "about:blank",
+  "result": "CAPABILITY_PASS_PRODUCT_B08_NOT_RUN",
+  "screenshot": "viewport_capability_probe.png",
+  "tabClosed": true,
+  "viewportReset": true,
+  "offlineControl": "NOT_ADVERTISED",
+  "representation": "Operator transcription of actual documented tool calls/results in task transcript; original screenshot bytes retained"
+}

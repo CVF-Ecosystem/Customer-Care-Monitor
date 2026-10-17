@@ -425,9 +425,9 @@
       <v-card class="pa-6">
         <v-card-title>
           <v-icon start color="warning">mdi-alert</v-icon>
-          Chưa cấu hình AI Provider
+          {{ $t('job_ai_service_missing_title') }}
         </v-card-title>
-        <v-card-text>Bạn cần cấu hình API key của AI Provider (Claude hoặc Gemini) trước khi chạy tác vụ phân tích.</v-card-text>
+        <v-card-text>{{ $t('job_ai_service_missing_text') }}</v-card-text>
         <v-card-actions>
           <v-spacer />
           <v-btn variant="text" @click="aiNotConfiguredDialog = false">Đóng</v-btn>

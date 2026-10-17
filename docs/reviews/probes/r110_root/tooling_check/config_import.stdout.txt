@@ -1,0 +1,1 @@
+{"envDir":false,"host":"127.0.0.1","port":3011,"strictPort":true,"plugins":4,"proxy":["/api"]}
