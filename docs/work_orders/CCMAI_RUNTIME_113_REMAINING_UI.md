@@ -1,6 +1,6 @@
 # R113 fresh remaining M3 UI evidence
 
-Status: DISPATCH_READY
+Status: ACTIVE
 Risk: R2
 dispatchKind: INITIAL
 Worker: /root/r113_readiness (Luna Max IMPLEMENTATION_WORKER)

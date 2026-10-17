@@ -71,19 +71,20 @@
   "browserOperator": "Codex /root",
   "browserTool": "mcp__cua_repl",
   "browserSurface": "iab",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "7644ee02ca60fb8732e209cb313ea32a26ec4491",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_113_REMAINING_UI.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "DISPATCH_READY",
+  "workOrderStatus": "ACTIVE",
   "buildCommit": null,
   "reviewEvidence": [],
   "disposition": "BINDING_ONLY_DISPATCH_RUNTIME_NOT_ADMITTED",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",

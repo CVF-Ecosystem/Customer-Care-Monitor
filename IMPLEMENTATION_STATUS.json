@@ -38,7 +38,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "WORK_ORDER",
+  "currentPhase": "BUILD",
   "completedCapabilities": [
     "R094 bounded M2 source/local manual synthetic intervention prototype independently reviewed: authenticated route, snapshot evidence, monotonic call admission, queue/detail and failure handling; real provider0, default app disabled, full M2/M3/pilot OPEN. docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
@@ -2826,10 +2826,10 @@
     "newProductAuthority": "NONE"
   },
   "x-r113Current": {
-    "status": "DISPATCH_READY",
+    "status": "BUILD",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_113_REMAINING_UI.md",
     "handoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R113_REMAINING_UI_2026-10-17.md",
-    "nextAction": "CCMAI-RUNTIME-113 DISPATCH_READY binding-only: seed7644ee02 committed; Luna Max copies reviewed112 runner/template with113 bindings only. Root independently reviews/commits source then separate exact runtime admission. Product B07/B08/wording pending, B09 unsupported NOT_RUN; no old budget reuse/provider/push/deploy, fullM2/M3/pilot/release OPEN and accounts parked.",
+    "nextAction": "CCMAI-RUNTIME-113 BUILD binding-only: seed7644ee02 and dispatch27909244 precede worker edits. Luna Max rehydrates and copies112 runner/template with113 bindings only; Root independently reviews/commits source before exact runtime admission. Runtime NOT_ADMITTED; B07/B08/wording pending,B09 unsupported NOT_RUN; no old budgets/provider/push/deploy/full acceptance.",
     "uiSource": "a28cdd0ac9ad1c9d1fd30ced6cf627dd62a56ba2",
     "b09": "NOT_RUN_UNSUPPORTED_OFFLINE_CONTROL"
   }

@@ -2,16 +2,16 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R113_REMAINING_UI_2026-10-17.md", "activeTranche": "CCMAI-RUNTIME-113", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R113_REMAINING_UI_2026-10-17.md", "activeTranche": "CCMAI-RUNTIME-113", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
+- Current mode: BUILD
+- Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R113_REMAINING_UI_2026-10-17.md
 
-CCMAI-RUNTIME-113 DISPATCH_READY binding-only: seed7644ee02 committed; Luna Max copies reviewed112 runner/template with113 bindings only. Root independently reviews/commits source then separate exact runtime admission. Product B07/B08/wording pending, B09 unsupported NOT_RUN; no old budget reuse/provider/push/deploy, fullM2/M3/pilot/release OPEN and accounts parked.
+CCMAI-RUNTIME-113 BUILD binding-only: seed7644ee02 and dispatch27909244 precede worker edits. Luna Max rehydrates and copies112 runner/template with113 bindings only; Root independently reviews/commits source before exact runtime admission. Runtime NOT_ADMITTED; B07/B08/wording pending,B09 unsupported NOT_RUN; no old budgets/provider/push/deploy/full acceptance.
 
 Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r113_readiness Luna Max IMPLEMENTATION_WORKER
 

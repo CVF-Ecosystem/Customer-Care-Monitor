@@ -2327,8 +2327,15 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/final_checks/workspace_doctor.stdout.txt`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/work_orders/CCMAI_RUNTIME_111_REMAINING_UI.md`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/R112_INDEPENDENT_RUNTIME_HOLD_REVIEW_2026-10-17.md`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/binding_review_receipt.json`
 - R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/work_orders/CCMAI_RUNTIME_113_REMAINING_UI.md`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/operator_transcription.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/R113_BINDING_WORKER_RETURN_2026-10-17.md`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/readiness_pins.json`
 - R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `CVF_SESSION/tranches/CCMAI-RUNTIME-113.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/r113_vite_config.mjs.template`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/r113_workflow_runner.py`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/R113_INDEPENDENT_BINDING_REVIEW_2026-10-17.md`
 - Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/fixture_readiness.json`
 - Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_001_target_inspect.stderr.bin`
 - Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_005_protected_container_inspect.json`

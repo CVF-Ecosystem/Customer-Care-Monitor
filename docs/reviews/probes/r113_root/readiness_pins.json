@@ -1,0 +1,31 @@
+{
+  "binary": {
+    "path": ".cvf/runtime/r108_native/campaign/r108_handlers.test.exe",
+    "sha256": "cb73ee13e0369cca75ea276cc668f30c3ced42cead5f62c56d68f3c1eaa66f93",
+    "bytes": 58031616,
+    "matches": true
+  },
+  "docker": {
+    "path": "C:/Users/tiennm/AppData/Local/Programs/DockerDesktop/resources/bin/docker.exe",
+    "sha256": "6c699720bb9523dedb9eb5d22a49951ea9210dbdb1314a3554029eee9be76896",
+    "bytes": 44829104,
+    "matches": true
+  },
+  "node": {
+    "path": "C:/Program Files/nodejs/node.exe",
+    "sha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+    "bytes": 92825416,
+    "matches": true
+  },
+  "helper": {
+    "path": "docs/reviews/probes/r108_luna/r108_native_runner.py",
+    "sha256": "899afa92934dede2d99d28d591bc4232d29a52f764d10f8420588e8e940fb138",
+    "bytes": 45186,
+    "matches": true
+  },
+  "inheritedUiConfigPins": 11,
+  "backendDiff": "",
+  "frontendDiff": "",
+  "port3011": "AVAILABLE",
+  "exclusiveRuntimeRoot": "ABSENT"
+}
