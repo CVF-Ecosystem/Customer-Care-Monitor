@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-115",
+  "authorityKind": "DISPATCHER_OWNED_M3_EXECUTOR_DESIGN_ONLY",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "/root/r115_executor_spec",
+    "reviewer": "Codex /root",
+    "commitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/specs/M3_WAITDATA_EXECUTOR_R115_SPEC_2026-10-17.md",
+    "docs/reviews/R115_*.md",
+    "docs/reviews/planning/R115_EXECUTOR_IMPLEMENTATION_WORK_ORDER_DRAFT_2026-10-17.md",
+    "docs/reviews/probes/r115_root/**",
+    "docs/reviews/probes/r115_worker/**",
+    "docs/work_orders/CCMAI_RUNTIME_115_EXECUTOR_DESIGN.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md"
+  ],
+  "prohibitedEffects": [
+    "application/backend/frontend/test/dependency/gate/Core changes",
+    "application Go/native/Node/browser/Docker/DB/runtime execution or inspection",
+    "provider/channel/network/credential/.env access",
+    "old evidence/seed/tranche/budget changes or runtime replay",
+    "worker commit/self-review/seed edit",
+    "push/merge/deploy/productFREEZE/governance claim"
+  ],
+  "executionBudget": {
+    "applicationRuns": 0,
+    "providerCalls": 0,
+    "mockCalls": 0,
+    "fixtureActions": 0,
+    "browserActions": 0,
+    "productTestRuns": 0
+  },
+  "documentRepairRounds": 2,
+  "workerModel": {
+    "model": "gpt-6-sol",
+    "reasoningEffort": "medium"
+  },
+  "ownerAuthorization": "Owner next continues from68a3d30b; current canonical next move permits M3-05 actual WAIT_DATA executor/integration SPEC before separate R2 authority. Sol Medium authorized for difficult work; Root orchestrator/independent reviewer/commit. Planning only, no implied provider/secret/runtime authority.",
+  "claimScope": "Source-backed intended contract and non-dispatchable future implementation draft only. No current executor, delivery, governance or full milestone acceptance."
+}

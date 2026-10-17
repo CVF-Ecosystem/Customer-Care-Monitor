@@ -24538,6 +24538,20 @@
       "path": "docs/reviews/probes/r114_root/final_checks/checks.json",
       "status": "ACTIVE",
       "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r115-e5e625b30736ae4664",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-115.json",
+      "status": "ACTIVE",
+      "description": "R115 documentary M3-05 executor intended contract; no product implementation/runtime authority."
+    },
+    {
+      "id": "r115-4b4e566cd355979f03",
+      "family": "continuity",
+      "path": "docs/reviews/R115_INTAKE_AND_FINITE_ROUTE_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R115 documentary M3-05 executor intended contract; no product implementation/runtime authority."
     }
   ]
 }

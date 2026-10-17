@@ -2936,6 +2936,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0079.json`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/mobile_queue.raw.jpg`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_010_protected_container_inspect.stdout.bin`
+- R115 documentary M3-05 executor intended contract; no product implementation/runtime authority.: `docs/reviews/R115_INTAKE_AND_FINITE_ROUTE_2026-10-17.md`
+- R115 documentary M3-05 executor intended contract; no product implementation/runtime authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-115.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`
