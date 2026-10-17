@@ -3146,6 +3146,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0023/exit.json`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go4_pre_hashes.json`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0031/stderr.txt`
+- R117 bounded WAIT_DATA verification authority/readiness; exact scope and inherited failures preserved.: `docs/reviews/probes/r117_root/docker_readiness.json`
+- R117 bounded WAIT_DATA verification authority/readiness; exact scope and inherited failures preserved.: `docs/reviews/R117_INTAKE_AND_FINITE_ROUTE_2026-10-17.md`
+- R117 bounded WAIT_DATA verification authority/readiness; exact scope and inherited failures preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-117.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

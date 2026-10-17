@@ -26008,6 +26008,27 @@
       "path": "docs/reviews/probes/r116_root/final_gate_unit/stdout.txt",
       "status": "ACTIVE",
       "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r117-cd2e11a706cea68bbf",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-117.json",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA verification authority/readiness; exact scope and inherited failures preserved."
+    },
+    {
+      "id": "r117-c24bbcf574ad23be49",
+      "family": "continuity",
+      "path": "docs/reviews/R117_INTAKE_AND_FINITE_ROUTE_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA verification authority/readiness; exact scope and inherited failures preserved."
+    },
+    {
+      "id": "r117-7258ccf14bf6721860",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_root/docker_readiness.json",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA verification authority/readiness; exact scope and inherited failures preserved."
     }
   ]
 }
