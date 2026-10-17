@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-111",
+  "authorityKind": "DISPATCHER_OWNED_PRELAUNCH_COLLISION_SUCCESSOR_RUNTIME_ONLY",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "/root/r108_browser_luna",
+    "reviewer": "Codex /root",
+    "commitSteward": "Codex /root",
+    "closer": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/reviews/R111_*.md",
+    "docs/reviews/probes/r111_root/**",
+    "docs/reviews/probes/r111_luna/**",
+    ".cvf/runtime/r111_workflow/**",
+    "docs/work_orders/CCMAI_RUNTIME_111_REMAINING_UI.md"
+  ],
+  "prohibitedEffects": [
+    "provider/mock-governance/secret/customer/channel access",
+    "production backend/Core/gate/dependency/global config changes",
+    "modify old seeds/budgets/receipts/source/binary or call R108 again",
+    "Docker create/recreate/pull/prune/compose; mutate R102/user app/DB",
+    "new Go compile, alternate browser automation, policy bypass",
+    "worker commit/seed edit/self-review/push/deploy/FREEZE"
+  ],
+  "executionBudget": {
+    "goCompiles": 0,
+    "frontendTestInvocations": 0,
+    "frontendTypecheckInvocations": 0,
+    "existingFixtureStarts": 1,
+    "nativeInvocations": 0,
+    "nativeActionPosts": 0,
+    "backendListenerLaunches": 1,
+    "viteLaunches": 1,
+    "productTabs": 3,
+    "uiPostSubmissionsIncludingAuth": 8,
+    "campaignSeconds": 1200,
+    "runtimeRetries": 0,
+    "newFixtures": 0,
+    "providerCalls": 0,
+    "mockCalls": 0
+  },
+  "worker": "/root/r108_browser_luna",
+  "claimScope": "Runtime-only B07/B08 and supported B09 at inherited reviewed R110 UI source; no lifecycle replay, source repair or full product/governance acceptance",
+  "ownerAuthority": "Owner renews Luna execution and subsequent tiep; same bounded audit/self-handle grant. R110 attempted start rejected before campaign creation due unrelated knowledge receipt; keep that failure immutable. Root may prepare this fresh runtime-only successor without another confirmation, budgets never reset.",
+  "fixture": {
+    "container": "e1555e03d69360e1cd7729afd9e52856443f5172d76454653beec981a7d6477a",
+    "image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "volume": "ccmai-r101-review-final-20261015",
+    "network": "35c3959ac41517050defad05cbad7a08717b24c8879683e25baf3e2702625e98",
+    "label": "CCMAI-RUNTIME-101",
+    "db": "r101_fixture"
+  },
+  "dockerExe": "C:/Users/tiennm/AppData/Local/Programs/DockerDesktop/resources/bin/docker.exe",
+  "dockerHost": "npipe:////./pipe/dockerDesktopLinuxEngine",
+  "dockerSha256": "6c699720bb9523dedb9eb5d22a49951ea9210dbdb1314a3554029eee9be76896",
+  "entryDecision": "R110 prelaunch HOLD, campaign creation0/fixture0/backend0/Vite0; original start not retried. Inherit UI source a28cdd0a, actual26PASS/3knownDashboardFAIL and typecheckPASS, all accepted source/tooling evidence. New seed precedes new binding-only runner; knowledge ingest output MUST remain outside exclusive runtime root. Require exact absent/empty runtime root check immediately before start.",
+  "compiledBackend": {
+    "path": ".cvf/runtime/r108_native/campaign/r108_handlers.test.exe",
+    "sha256": "cb73ee13e0369cca75ea276cc668f30c3ced42cead5f62c56d68f3c1eaa66f93",
+    "bytes": 58031616,
+    "reviewedSourceCommit": "a4b1d490676b5ef9f165446a2aca33f10adb39df",
+    "compileExecutionHead": "b4a53d4b9fb63c3073b880eb9c7e3e8e6510eafa",
+    "requireNoBackendDelta": true
+  },
+  "nodeExe": "C:/Program Files/nodejs/node.exe",
+  "nodeSha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+  "browserOperator": "Codex /root",
+  "browserTool": "mcp__cua_repl",
+  "browserSurface": "iab",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
+  "baseCommit": "041274966c515d598cd4e32549a4349ee7b91aaa",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_111_REMAINING_UI.md",
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
+  "buildCommit": null,
+  "reviewEvidence": [
+    "docs/reviews/R111_DISPATCH_SCOPE_HOLD_2026-10-17.md"
+  ],
+  "disposition": "NOT_DISPATCHED_PREDECESSOR_ORDER_SCOPE_OMISSION",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ]
+}

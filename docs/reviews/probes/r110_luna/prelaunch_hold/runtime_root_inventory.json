@@ -1,0 +1,15 @@
+{
+  "observedAtUTC": "2026-10-17T01:28:06.8908241Z",
+  "runtimeRoot": ".cvf/runtime/r110_workflow",
+  "entries": [
+    {
+      "bytes": 1867,
+      "type": "file",
+      "name": "knowledge_index_luna.json",
+      "lastWriteTimeUtc": "2026-10-16T17:53:56.5498070Z",
+      "sha256": "93782504539fe3a27409b2809828fb26fb72bbd08724f41fd03cd17ee0fb5dae"
+    }
+  ],
+  "campaignDirectoryPresent": false,
+  "claimLimit": "Read-only inventory after the single start precondition HOLD; no campaign directory or runtime process observed."
+}

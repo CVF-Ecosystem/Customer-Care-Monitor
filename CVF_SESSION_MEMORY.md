@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R110_REMAINING_UI_2026-10-17.md", "activeTranche": "CCMAI-RUNTIME-110", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R112_REMAINING_UI_2026-10-17.md", "activeTranche": "CCMAI-RUNTIME-112", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
 - Current mode: BUILD
 - Active phase: BUILD
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R110_REMAINING_UI_2026-10-17.md
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R112_REMAINING_UI_2026-10-17.md
 
-CCMAI-RUNTIME-110 BUILD runtime admitted at reviewed sourcea28cdd0a with actual26PASS/3knownDashboardFAIL retained and typecheckPASS, tooling/config checksPASS. Luna executes one pinned existing fixture/backend/Vite campaign1200s; native0/Go0/retries0, Root integrated browser B07 and actual390x844 B08, B09 only if documented offline control; max8UI POSTs including auth. No lifecycle replay/source changes/HEAD commit during campaign. Stop on browser failure and verify owned cleanup; return exact packet for independent review. No FREEZE/full product acceptance; Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, accounts parked.
+CCMAI-RUNTIME-112 BUILD runtime-only successor: R110 prelaunch HOLD/effects0 and R111 not-dispatched scope omission preserved. Inherit reviewed UI sourcea28cdd0a/26PASS3baselineFAIL/typecheckPASS; no product source or validation rerun. Luna prepares112 path bindings only; knowledge output outside exclusive runtime root. Root independently reviews/commits admission and both actors verify runtime root absent before sole start. Root B07/B08 and supported B09; fixture/backend/Vite1, UI8POST,1200s,native0/Go0/retries0. Old seeds/budgets untouched; no FREEZE/full acceptance, Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, accounts parked.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / connected browser verifier / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r108_browser_luna Luna Max IMPLEMENTATION_WORKER admitted supervisor executor, no browser role.
+Codex /root ORCHESTRATOR / independent REVIEWER / connected browser verifier / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r108_browser_luna Luna Max IMPLEMENTATION_WORKER R112 binding-only supervisor, no browser role.
 
 Mandatory pre-dispatch learning: docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md. R109 interrupted packet stays unchanged.
 

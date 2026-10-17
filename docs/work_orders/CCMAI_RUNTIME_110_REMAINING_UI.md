@@ -1,13 +1,13 @@
 # R110 remaining human UI evidence and plain language
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 dispatchKind: INITIAL
 Worker: /root/r108_browser_luna (Luna Max IMPLEMENTATION_WORKER; source and supervised runtime only)
 Reviewer: Codex /root
 Commit steward: Codex /root
 providerExecutionAuthority: NONE
-Disposition: RUNTIME_ADMITTED_PENDING_SINGLE_CAMPAIGN
+Disposition: PRELAUNCH_KNOWLEDGE_DIRECTORY_COLLISION_NO_RUNTIME_EFFECTS
 
 ## Intake, design and inherited specification
 
@@ -70,3 +70,7 @@ Material-SHA marker:90d703e5cdd44b8d86dd74fe89c33cd620988d08. Source-only until 
 ## Exact runtime admission
 
 Root reviewed source a28cdd0ac9ad1c9d1fd30ced6cf627dd62a56ba2 with actual26PASS/3inheritedDashboardFAIL and forcedtypecheckPASS. All three failures match pinned historical R101 output; no all-suite pass or baseline repair. New supervisor/config and pureguard checks PASS. Committed runtime_admission.json must bind all source/evidence hashes before the sole start. Only remaining UI/read-only language observations; native0/Go0/retries0. A retained R109 synthetic owner/case may be read for B08 history/owner-form layout, then owner logout/fresh R110 reader login for B07. No lifecycle writes or token reuse. No source/HEAD mutations during campaign.
+
+## Prelaunch hold
+
+Start1 rejected before campaign creation: unrelated knowledge index occupied exclusive runtime root. No fixture/backend/Vite/native/GUI effects. Preserve file and original failed attempt; R110 not retried. Fresh R111 runtime-only successor inherits accepted UI source and qualified evidence; no full acceptance/FREEZE.

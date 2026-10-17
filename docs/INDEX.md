@@ -15,7 +15,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- R110 renewed remaining UI and plain-language source-only dispatch; runtime not admitted.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R110_REMAINING_UI_2026-10-17.md`
+- R111 runtime-only binding successor after R110 prelaunch collision; runtime not admitted.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R112_REMAINING_UI_2026-10-17.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -2225,6 +2225,23 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_003_fixture_volume_users.json`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_004_all_container_ids.json`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/bridge_resume_20261017/result.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `CVF_SESSION/authority/CCMAI-RUNTIME-112.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r110_root/prestart_admission_check.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r110_luna/prelaunch_hold/source_identity.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/R110_PRELAUNCH_HOLD_INDEPENDENT_REVIEW_2026-10-17.md`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r110_luna/prelaunch_hold/evidence_manifest.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `CVF_SESSION/tranches/CCMAI-RUNTIME-112.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r110_luna/prelaunch_hold/worker_return_gate_transcript.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/work_orders/CCMAI_RUNTIME_112_REMAINING_UI.md`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R111_REMAINING_UI_2026-10-17.md`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/R110_REMAINING_UI_WORKER_RETURN_2026-10-17.md`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r110_luna/prelaunch_hold/knowledge_index_luna.preexisting.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r110_luna/prelaunch_hold/runtime_root_inventory.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/R111_DISPATCH_SCOPE_HOLD_2026-10-17.md`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `CVF_SESSION/tranches/CCMAI-RUNTIME-111.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r110_luna/prelaunch_hold/start_invocation_transcript.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `CVF_SESSION/authority/CCMAI-RUNTIME-111.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/work_orders/CCMAI_RUNTIME_111_REMAINING_UI.md`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

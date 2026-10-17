@@ -1,6 +1,6 @@
 # R110 remaining UI after renewed owner grant
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 - Project: Customer-Care-Monitor-AI
@@ -22,3 +22,14 @@ Luna acknowledges CCMAI-RUNTIME-110 BUILD at dispatch HEAD b313727765da25fcf2959
 ## Root runtime admission acknowledgment — 2026-10-17
 
 Root independently reviewed and committed source a28cdd0ac9ad1c9d1fd30ced6cf627dd62a56ba2. Source26/29 with exact3historical Dashboard failures retained, typecheck and puretooling checks PASS. Fresh resumed integrated HTTP click/capture PASS, diagnostic closed. Admit only the new exact R110 campaign after this receipt is committed. No source/HEAD changes until supervised cleanup. Old R109 budgets/evidence unchanged. Root performs product browser evidence; worker rehydrates/acknowledges before start.
+
+
+## Luna admitted runtime executor acknowledgment — 2026-10-17
+
+Luna rehydrated the current R110 bootstrap, active state, memory, handoff, implementation status, documentation index, active order, immutable seed/record, runtime-admission review and committed admission. Current HEAD is 8806ed5b615a09fdd7d0f5757dd7df57fa1bedd7; reviewed source is a28cdd0ac9ad1c9d1fd30ced6cf627dd62a56ba2. Root's committed read-only admission check at this HEAD is PASS. The known focused-test result remains 26/29 with the three exact inherited Dashboard failures retained; forced typecheck and tooling checks passed.
+
+Luna accepts one execution of `python -B docs/reviews/probes/r110_luna/r110_workflow_runner.py start --project-root .` from project root. The bound limits are one existing fixture start, one backend launch, one Vite launch, at most eight UI POST submissions including auth/automatic refresh, 1200 seconds including cleanup, native actions 0, Go compiles 0, retries 0. Root owns the integrated browser; Luna has no browser role. No lifecycle replay, source/HEAD/admission/seed changes, or old R109 campaign reuse. Stop on an actual browser/runtime failure, preserve original evidence, and let the supervisor complete owned-process/fixture/protection cleanup. No campaign effect has occurred at the time of this acknowledgment.
+
+## R110 prelaunch HOLD
+
+The exact start was rejected before campaign creation due knowledge_index_luna.json in exclusive runtime root. No fixture/backend/Vite/native/GUI effects; original file retained. Worker setup error and Root readiness omission accepted as defects. No R110 retry; current pointer transfers to fresh R111 runtime-only authority, UI source/evidence unchanged.

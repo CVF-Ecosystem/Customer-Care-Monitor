@@ -1,0 +1,100 @@
+{
+  "observedAtUTC": "2026-10-17T01:28:16.7187294Z",
+  "projectHead": "041274966c515d598cd4e32549a4349ee7b91aaa",
+  "reviewedSourceCommit": "a28cdd0ac9ad1c9d1fd30ced6cf627dd62a56ba2",
+  "runtimeAdmissionSha256": "d665df716dc7ef9ac0d1a3e7457489949b2ec20eece47d92f9f35ab9660dc834",
+  "sourcePins": [
+    {
+      "path": "frontend/src/views/InterventionCases.vue",
+      "admittedSha256": "888c5b672a013d6ab2c6965423899977bcecb70cd460a8abdf374e93067c05e5",
+      "actualSha256": "888c5b672a013d6ab2c6965423899977bcecb70cd460a8abdf374e93067c05e5",
+      "matches": true
+    },
+    {
+      "path": "frontend/src/utils/interventionPresentation.ts",
+      "admittedSha256": "4e25b89d0600972b03da02e4acab10274ee8c4ff51c3679d6204b59bad28c050",
+      "actualSha256": "4e25b89d0600972b03da02e4acab10274ee8c4ff51c3679d6204b59bad28c050",
+      "matches": true
+    },
+    {
+      "path": "frontend/src/views/Dashboard.vue",
+      "admittedSha256": "7f56b01a8ef976994f5d90a4184f41f4d3b3268899c5ce34b3adea728c016c98",
+      "actualSha256": "7f56b01a8ef976994f5d90a4184f41f4d3b3268899c5ce34b3adea728c016c98",
+      "matches": true
+    },
+    {
+      "path": "frontend/src/views/Jobs/JobDetail.vue",
+      "admittedSha256": "36abe634120fdc5bfb8cbf17c31d2fae069c5b2f92775696d27da0e9ffe085ec",
+      "actualSha256": "36abe634120fdc5bfb8cbf17c31d2fae069c5b2f92775696d27da0e9ffe085ec",
+      "matches": true
+    },
+    {
+      "path": "frontend/src/i18n/vi.ts",
+      "admittedSha256": "44dbf2f47b71bca872258269b5211461d990ce721b38dbaa1bc3a16216ba835c",
+      "actualSha256": "44dbf2f47b71bca872258269b5211461d990ce721b38dbaa1bc3a16216ba835c",
+      "matches": true
+    },
+    {
+      "path": "frontend/src/i18n/en.ts",
+      "admittedSha256": "42a6bfec0bf2b9d3d0ca2b6f6a394e285e99c1546054565c7fd3461daf975530",
+      "actualSha256": "42a6bfec0bf2b9d3d0ca2b6f6a394e285e99c1546054565c7fd3461daf975530",
+      "matches": true
+    },
+    {
+      "path": "frontend/src/__tests__/intervention-ui.test.ts",
+      "admittedSha256": "5ea4e3dcc7530448369b0740be54bbaafe16109f9d43cbadd36faf72ab55f65e",
+      "actualSha256": "5ea4e3dcc7530448369b0740be54bbaafe16109f9d43cbadd36faf72ab55f65e",
+      "matches": true
+    },
+    {
+      "path": "frontend/src/__tests__/intervention-presentation.test.ts",
+      "admittedSha256": "9f89c4597be783dc0a80339755be616bee0a72d08a39e64810969786ccf1048a",
+      "actualSha256": "9f89c4597be783dc0a80339755be616bee0a72d08a39e64810969786ccf1048a",
+      "matches": true
+    },
+    {
+      "path": "frontend/src/__tests__/dashboard-service-status.spec.ts",
+      "admittedSha256": "9b54eb1073fa64d7cab7c6f505a47aabc4281d35febbd655beb833f4b0293126",
+      "actualSha256": "9b54eb1073fa64d7cab7c6f505a47aabc4281d35febbd655beb833f4b0293126",
+      "matches": true
+    },
+    {
+      "path": "frontend/src/__tests__/intervention-api.test.ts",
+      "admittedSha256": "06851bd2e20080165c69cbb224872b86c7d559dcc627863e9a4268cffaf464d8",
+      "actualSha256": "06851bd2e20080165c69cbb224872b86c7d559dcc627863e9a4268cffaf464d8",
+      "matches": true
+    },
+    {
+      "path": "docs/reviews/probes/r110_root/focused-test.config.mjs",
+      "admittedSha256": "0f4ac7a79b747183f43372e3fc76719b625978a262e978fa26a11574d9dfd000",
+      "actualSha256": "0f4ac7a79b747183f43372e3fc76719b625978a262e978fa26a11574d9dfd000",
+      "matches": true
+    },
+    {
+      "path": "docs/reviews/probes/r110_luna/r110_workflow_runner.py",
+      "admittedSha256": "9707bc42390f0a6609e221ceadd32e8c3b5478f125194c4b038848ab0388bfde",
+      "actualSha256": "9707bc42390f0a6609e221ceadd32e8c3b5478f125194c4b038848ab0388bfde",
+      "matches": true
+    },
+    {
+      "path": "docs/reviews/probes/r110_luna/r110_vite_config.mjs.template",
+      "admittedSha256": "10e83c215ba21f0a3e53a174455b2f8e7e313afff12b5b11baf3096318a6da5b",
+      "actualSha256": "10e83c215ba21f0a3e53a174455b2f8e7e313afff12b5b11baf3096318a6da5b",
+      "matches": true
+    },
+    {
+      "path": "docs/reviews/probes/r108_luna/r108_native_runner.py",
+      "admittedSha256": "899afa92934dede2d99d28d591bc4232d29a52f764d10f8420588e8e940fb138",
+      "actualSha256": "899afa92934dede2d99d28d591bc4232d29a52f764d10f8420588e8e940fb138",
+      "matches": true
+    }
+  ],
+  "handoffAcknowledgmentIsUncommitted": true,
+  "gitStatusShort": [
+    " M CVF_SESSION/handoffs/AGENT_HANDOFF_R110_REMAINING_UI_2026-10-17.md",
+    "?? docs/reviews/R110_REMAINING_UI_WORKER_RETURN_2026-10-17.md",
+    "?? docs/reviews/probes/r110_luna/prelaunch_hold/",
+    "?? docs/reviews/probes/r110_root/prestart_admission_check.json"
+  ],
+  "claimLimit": "Read-only source identity snapshot after the precondition HOLD; no source content or HEAD change was made by this worker."
+}

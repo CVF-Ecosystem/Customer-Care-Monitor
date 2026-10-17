@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R110_REMAINING_UI_2026-10-17.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R112_REMAINING_UI_2026-10-17.md",
       "status": "ACTIVE",
-      "description": "R110 renewed remaining UI and plain-language source-only dispatch; runtime not admitted."
+      "description": "R111 runtime-only binding successor after R110 prelaunch collision; runtime not admitted."
     },
     {
       "id": "r060-work-order",
@@ -19519,6 +19519,125 @@
       "path": "docs/reviews/R110_INDEPENDENT_RUNTIME_ADMISSION_REVIEW_2026-10-17.md",
       "status": "ACTIVE",
       "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r111-f076fb170b5f94612a",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-111.json",
+      "status": "ACTIVE",
+      "description": "R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims."
+    },
+    {
+      "id": "r111-ddf7d4ec5071354885",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-111.json",
+      "status": "ACTIVE",
+      "description": "R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims."
+    },
+    {
+      "id": "r111-50355f66f1dc328d94",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_luna/prelaunch_hold/evidence_manifest.json",
+      "status": "ACTIVE",
+      "description": "R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims."
+    },
+    {
+      "id": "r111-9ae29162ff8e5b3a09",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_luna/prelaunch_hold/knowledge_index_luna.preexisting.json",
+      "status": "ACTIVE",
+      "description": "R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims."
+    },
+    {
+      "id": "r111-9f5f945c32ec4f177d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_luna/prelaunch_hold/runtime_root_inventory.json",
+      "status": "ACTIVE",
+      "description": "R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims."
+    },
+    {
+      "id": "r111-3e4ca89d88919c3236",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_luna/prelaunch_hold/source_identity.json",
+      "status": "ACTIVE",
+      "description": "R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims."
+    },
+    {
+      "id": "r111-efc102a158931771d5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_luna/prelaunch_hold/start_invocation_transcript.json",
+      "status": "ACTIVE",
+      "description": "R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims."
+    },
+    {
+      "id": "r111-6460906a3bda83525d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_luna/prelaunch_hold/worker_return_gate_transcript.json",
+      "status": "ACTIVE",
+      "description": "R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims."
+    },
+    {
+      "id": "r111-394848280e0ca1c4b6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/prestart_admission_check.json",
+      "status": "ACTIVE",
+      "description": "R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims."
+    },
+    {
+      "id": "r111-4499550ea5d112cd36",
+      "family": "continuity",
+      "path": "docs/reviews/R110_PRELAUNCH_HOLD_INDEPENDENT_REVIEW_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims."
+    },
+    {
+      "id": "r111-92d9466423d8433d21",
+      "family": "continuity",
+      "path": "docs/reviews/R110_REMAINING_UI_WORKER_RETURN_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims."
+    },
+    {
+      "id": "r111-fd83fc15f0286344ec",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_111_REMAINING_UI.md",
+      "status": "ACTIVE",
+      "description": "R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims."
+    },
+    {
+      "id": "r111-04416ee9bbe71368d0",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-112.json",
+      "status": "ACTIVE",
+      "description": "R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims."
+    },
+    {
+      "id": "r111-85e5bc68d7bb8863f4",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R111_REMAINING_UI_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims."
+    },
+    {
+      "id": "r111-5e5238c4bec5a9668b",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-112.json",
+      "status": "ACTIVE",
+      "description": "R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims."
+    },
+    {
+      "id": "r111-c261dd3143dfdbdc30",
+      "family": "continuity",
+      "path": "docs/reviews/R111_DISPATCH_SCOPE_HOLD_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims."
+    },
+    {
+      "id": "r111-6b488cd0162b32b428",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_112_REMAINING_UI.md",
+      "status": "ACTIVE",
+      "description": "R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims."
     }
   ]
 }

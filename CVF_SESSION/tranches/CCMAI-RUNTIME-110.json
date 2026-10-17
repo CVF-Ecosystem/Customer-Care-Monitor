@@ -79,23 +79,27 @@
   "browserOperator": "Codex /root",
   "browserTool": "mcp__cua_repl",
   "browserSurface": "iab",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
   "baseCommit": "90d703e5cdd44b8d86dd74fe89c33cd620988d08",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_110_REMAINING_UI.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
   "buildCommit": "a28cdd0ac9ad1c9d1fd30ced6cf627dd62a56ba2",
   "reviewEvidence": [
     "docs/reviews/R110_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-17.md",
-    "docs/reviews/R110_INDEPENDENT_TOOLING_REVIEW_2026-10-17.md"
+    "docs/reviews/R110_INDEPENDENT_TOOLING_REVIEW_2026-10-17.md",
+    "docs/reviews/R110_REMAINING_UI_WORKER_RETURN_2026-10-17.md",
+    "docs/reviews/R110_PRELAUNCH_HOLD_INDEPENDENT_REVIEW_2026-10-17.md"
   ],
-  "disposition": "RUNTIME_ADMITTED_PENDING_SINGLE_CAMPAIGN",
+  "disposition": "PRELAUNCH_KNOWLEDGE_DIRECTORY_COLLISION_NO_RUNTIME_EFFECTS",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -106,10 +110,16 @@
   "x-runtimeAdmission": {
     "sourceCommit": "a28cdd0ac9ad1c9d1fd30ced6cf627dd62a56ba2",
     "admission": "docs/reviews/probes/r110_root/runtime_admission.json",
-    "status": "NOT_RUN_UNCONSUMED",
+    "status": "START_REJECTED_PRE_CAMPAIGN",
     "frontendTestsUsed": 1,
     "frontendTypechecksUsed": 1,
     "actualFocusedTestExitCode": 1,
-    "qualifiedBaselineFailures": 3
+    "qualifiedBaselineFailures": 3,
+    "startInvocations": 1,
+    "fixtureStarts": 0,
+    "backendLaunches": 0,
+    "viteLaunches": 0,
+    "nativeInvocations": 0,
+    "uiPosts": 0
   }
 }

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-110",
+  "disposition": "BLOCKED_WITH_REASON",
+  "manifestExcludesItself": true,
+  "files": [
+    {
+      "path": "docs/reviews/probes/r110_luna/prelaunch_hold/knowledge_index_luna.preexisting.json",
+      "bytes": 1867,
+      "sha256": "93782504539fe3a27409b2809828fb26fb72bbd08724f41fd03cd17ee0fb5dae"
+    },
+    {
+      "path": "docs/reviews/probes/r110_luna/prelaunch_hold/runtime_root_inventory.json",
+      "bytes": 543,
+      "sha256": "6c91ab52ac3bca0bc6df9dd3c54402a8ac7fa379304c4a39c5ce92afcca837cb"
+    },
+    {
+      "path": "docs/reviews/probes/r110_luna/prelaunch_hold/start_invocation_transcript.json",
+      "bytes": 779,
+      "sha256": "d24ffef2c4019231bf81fef9983aafbdeb84fc794cc48e31bd41780e39e469cd"
+    },
+    {
+      "path": "docs/reviews/probes/r110_luna/prelaunch_hold/source_identity.json",
+      "bytes": 4798,
+      "sha256": "26437037f72ee75e2e5922db18e3823920f3334bd9b7e543dd145b2d3db17cf1"
+    },
+    {
+      "path": "docs/reviews/probes/r110_luna/prelaunch_hold/worker_return_gate_transcript.json",
+      "bytes": 973,
+      "sha256": "199c1d188551c737b6bed69a68c375a5bef5efa6713181cff76208546e72845a"
+    },
+    {
+      "path": "docs/reviews/R110_REMAINING_UI_WORKER_RETURN_2026-10-17.md",
+      "bytes": 4491,
+      "sha256": "81863f733b6c17d1a31c8159a5a813326872eec047c14292f19a49e11c94505e"
+    }
+  ]
+}
