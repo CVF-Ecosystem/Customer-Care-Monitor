@@ -15,7 +15,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R119 CHANGES_REQUIRED: setup failed before UI, start/stop consumed, raw packet preserved; no runtime replay.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R119_CURRENT_UI_PROOF_2026-10-18.md`
+- Active R120 two-readiness fixes then conditional direct current UI proof; runtime requires committed admissions.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R120_CURRENT_UI_2026-10-18.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -4081,9 +4081,33 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_worker/python_002.stderr.bin`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/1.json`
 - R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open.: `docs/reviews/probes/r119_root/setup_001/receipt.json`
+- Historical R119 CHANGES_REQUIRED setup failure and original counters preserved; no replay.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R119_CURRENT_UI_PROOF_2026-10-18.md`
 - Source-helper then separately admitted one current UI campaign.: `docs/work_orders/CCMAI_RUNTIME_119_CURRENT_UI_PROOF.md`
 - R119 actual current UI evidence status and finite caps.: `CVF_SESSION/tranches/CCMAI-RUNTIME-119.json`
 - Immutable R119 synthetic UI finite authority; provider0/lifecycle0.: `CVF_SESSION/authority/CCMAI-RUNTIME-119.json`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/2/stderr.bin`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/commands.json`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/1/command.json`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/2/stdout.bin`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/1/stderr.bin`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/archive_manifest.json`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/raw_readonly.zip`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/0/stderr.bin`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `CVF_SESSION/tranches/CCMAI-RUNTIME-120.json`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/1/receipt.json`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/0/receipt.json`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/2/receipt.json`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/R119_READONLY_CAUSE_AND_R120_DECISION_2026-10-18.md`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/1/stdout.bin`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/3/command.json`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/2/command.json`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/3/receipt.json`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/work_orders/CCMAI_RUNTIME_120_CURRENT_UI_PROOF.md`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/3/stderr.bin`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/0/stdout.bin`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/0/command.json`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/3/stdout.bin`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `CVF_SESSION/authority/CCMAI-RUNTIME-120.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

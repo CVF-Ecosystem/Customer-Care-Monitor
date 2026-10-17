@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R119_CURRENT_UI_PROOF_2026-10-18.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R120_CURRENT_UI_2026-10-18.md",
       "status": "ACTIVE",
-      "description": "Active R119 CHANGES_REQUIRED: setup failed before UI, start/stop consumed, raw packet preserved; no runtime replay."
+      "description": "Active R120 two-readiness fixes then conditional direct current UI proof; runtime requires committed admissions."
     },
     {
       "id": "r060-work-order",
@@ -32574,6 +32574,174 @@
       "path": "docs/reviews/probes/r119_root/setup_001/stdout.bin",
       "status": "ACTIVE",
       "description": "R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open."
+    },
+    {
+      "id": "r120-97458b93b4d529af",
+      "family": "continuity",
+      "path": "docs/reviews/R119_READONLY_CAUSE_AND_R120_DECISION_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions."
+    },
+    {
+      "id": "r120-f7070fd97b8ffd9f",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-120.json",
+      "status": "ACTIVE",
+      "description": "Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions."
+    },
+    {
+      "id": "r120-6a45270595733c15",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-120.json",
+      "status": "ACTIVE",
+      "description": "Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions."
+    },
+    {
+      "id": "r120-cf30ddf5f516d01c",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_120_CURRENT_UI_PROOF.md",
+      "status": "ACTIVE",
+      "description": "Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions."
+    },
+    {
+      "id": "r120-3e9f2424d5fa9c11",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/followup_readonly/archive_manifest.json",
+      "status": "ACTIVE",
+      "description": "Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions."
+    },
+    {
+      "id": "r120-1509720c9f0cabfa",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/followup_readonly/commands.json",
+      "status": "ACTIVE",
+      "description": "Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions."
+    },
+    {
+      "id": "r120-4665d4b7716c1f35",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/followup_readonly/raw_readonly.zip",
+      "status": "ACTIVE",
+      "description": "Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions."
+    },
+    {
+      "id": "r120-d7849d2df9bca80e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/followup_readonly/0/command.json",
+      "status": "ACTIVE",
+      "description": "Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions."
+    },
+    {
+      "id": "r120-87f406935d66efc3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/followup_readonly/0/receipt.json",
+      "status": "ACTIVE",
+      "description": "Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions."
+    },
+    {
+      "id": "r120-67923fd2312d3f9a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/followup_readonly/0/stderr.bin",
+      "status": "ACTIVE",
+      "description": "Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions."
+    },
+    {
+      "id": "r120-d3d358c69a61a8fa",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/followup_readonly/0/stdout.bin",
+      "status": "ACTIVE",
+      "description": "Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions."
+    },
+    {
+      "id": "r120-2196f44a366c1cdc",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/followup_readonly/1/command.json",
+      "status": "ACTIVE",
+      "description": "Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions."
+    },
+    {
+      "id": "r120-7834dbaecc89248a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/followup_readonly/1/receipt.json",
+      "status": "ACTIVE",
+      "description": "Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions."
+    },
+    {
+      "id": "r120-373e63439d3a2eda",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/followup_readonly/1/stderr.bin",
+      "status": "ACTIVE",
+      "description": "Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions."
+    },
+    {
+      "id": "r120-9975a6f9693fdf4c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/followup_readonly/1/stdout.bin",
+      "status": "ACTIVE",
+      "description": "Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions."
+    },
+    {
+      "id": "r120-bc58b6a2b5b8d2c9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/followup_readonly/2/command.json",
+      "status": "ACTIVE",
+      "description": "Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions."
+    },
+    {
+      "id": "r120-8d416bd4d19eb5bb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/followup_readonly/2/receipt.json",
+      "status": "ACTIVE",
+      "description": "Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions."
+    },
+    {
+      "id": "r120-11b48ce667ce8296",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/followup_readonly/2/stderr.bin",
+      "status": "ACTIVE",
+      "description": "Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions."
+    },
+    {
+      "id": "r120-2fd174c720478f0b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/followup_readonly/2/stdout.bin",
+      "status": "ACTIVE",
+      "description": "Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions."
+    },
+    {
+      "id": "r120-ba81a77e7f4840ec",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/followup_readonly/3/command.json",
+      "status": "ACTIVE",
+      "description": "Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions."
+    },
+    {
+      "id": "r120-cde9639886ca0221",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/followup_readonly/3/receipt.json",
+      "status": "ACTIVE",
+      "description": "Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions."
+    },
+    {
+      "id": "r120-d1436563265c85a5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/followup_readonly/3/stderr.bin",
+      "status": "ACTIVE",
+      "description": "Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions."
+    },
+    {
+      "id": "r120-f66fd385c0ad6ed5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/followup_readonly/3/stdout.bin",
+      "status": "ACTIVE",
+      "description": "Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions."
+    },
+    {
+      "id": "r119-historical-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R119_CURRENT_UI_PROOF_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Historical R119 CHANGES_REQUIRED setup failure and original counters preserved; no replay."
     }
   ]
 }

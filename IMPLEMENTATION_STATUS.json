@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "x-roadmapTracking": {
     "updatedAt": "2026-10-18",
-    "status": "M3_CURRENT_UI_NOT_RUN_R119_SETUP_FAILED",
+    "status": "M3_CURRENT_UI_R120_FINITE_READINESS_AFTER_CAUSE_REVIEW",
     "currentCheckpoint": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
     "stages": {
       "S0": "PARTIAL_LIVE_BASELINE_OPEN",
@@ -39,7 +39,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "R118 REVIEW_PASS SOURCE_COMPONENT_ONLY at7f74a75f93671973bcfe55b5cb491076c0d2bdf9: current proposal pointer/lineage binding, safe legacy fallback and proposal-less data actions, VN/EN WAIT_DATA history. Root24tests/app typecheckPASS, original byte archive/source pins verified; changed-screen UI proof NOT_RUN/FREEZE OPEN. docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md",
     "R117 bounded WAIT_DATA backend real synthetic flow independently accepted: new same-case proposal after source revision, faithful realAlibaba340/297tokens, synthetic CONFIRM persisted, one call/debit, native11top11nested+engine1PASS. Exact owned owner-authorized restart/finalstop and operational protected equality observed; original interruption/cleanupHOLD retained. Current UI/fullM2/M3/pilot/release remain OPEN. docs/reviews/R117_FINAL_INDEPENDENT_REVIEW_2026-10-18.md",
@@ -2018,7 +2018,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-119",
+  "activeTranche": "CCMAI-RUNTIME-120",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
@@ -2925,5 +2925,12 @@
     "freeze": "OPEN",
     "nextAction": "CCMAI-RUNTIME-119 CHANGES_REQUIRED: sole fixture start consumed; setup exited1 MYSQL_PROTOCOL_INVALID before backend/Vite/product browser. Stop runtime, preserve immutable seed/counters/raw packet; read-only failed-packet and finite readiness review before any new authority/start, no automatic successor or replay. Owned fixture EXITED and protected7containers/8networks/470volumes equal; listener-close proof OPEN (connectEx10035). Current UI wording/selection NOT_RUN; B07 inherited, B08 raster/B09 unsupported/fullM2/M3/pilot/release OPEN; Facebook/ZaloOA parked; no provider/secret/push/merge/deploy.",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_119_CURRENT_UI_PROOF.md"
+  },
+  "x-r120Current": {
+    "status": "WORK_ORDER",
+    "scope": "TWO_READINESS_FIXES_THEN_CONDITIONAL_CURRENT_UI_ONLY",
+    "providerCalls": 0,
+    "runtime": "NOT_ADMITTED",
+    "nextAction": "CCMAI-RUNTIME-120 source-only readiness BUILD after committed seed/pre-dispatch; fix bounded MySQL greeting and explicit Windows host-listener proof, offline discrimination and Root independent review before one exact admitted current-UI campaign. R119 remains CHANGES_REQUIRED/start-stop consumed, no replay/reset. New sole setup/start/stop/backend/Vite/tab1/auth2/caseActions0/provider0, failure stops with no automatic successor. B07 inherited/B08 raster/B09 unsupported/fullM2/M3/pilot/release OPEN; Facebook/ZaloOA parked; no push/merge/deploy."
   }
 }

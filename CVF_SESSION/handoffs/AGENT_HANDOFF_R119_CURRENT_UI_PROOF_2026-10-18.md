@@ -1,6 +1,6 @@
 # R119 current proposal/history browser proof
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 
@@ -38,3 +38,5 @@ R119 CHANGES_REQUIRED, not closed/FROZEN. Reviewed source96ba23cc and admission7
 Independent final read-only identity: exact owned714f2f0c85ee5e01b7219fa77fae35d6da40b8d2c89c178cd86a882ee4681d52 EXITED, owned network/volume exclusive/preserved, protected7containers/8networks/470volumes equals baseline; source/binary raw hashes unchanged. Published port56024 connectEx10035/non-success is not proof of listener refusal; closure OPEN. No additional stop/restart/delete. Setup terminal/raw Docker commands and final observation archived with hashes in docs/reviews/probes/r119_root/failed_setup_raw.zip and failed_setup_manifest.json.
 
 Root review/source-readiness miss: the readiness reader assumes one recv(5) returns a complete MySQL header and treats a short/nonprotocol read as permanent failure. TCP permits partial reads; actual received bytes were not captured, so precise runtime cause remains UNKNOWN. The helper also requires one specific refusal code for listener proof; Docker/Windows observation10035 does not satisfy it. Do not infer Docker unavailable or owner shutdown. No source repair, new runtime authority or automatic successor was opened after this failure. See R119_FINAL_INDEPENDENT_REVIEW_2026-10-18.md for finite handoff and claim limits.
+
+Read-only followup and Root decision: R119_READONLY_CAUSE_AND_R120_DECISION_2026-10-18.md; all R119 failed receipts/counters unchanged. Successor active handoff CVF_SESSION/handoffs/AGENT_HANDOFF_R120_CURRENT_UI_2026-10-18.md is a separately justified source/readiness contract, not R119 replay authority.

@@ -1,5 +1,10 @@
 # CCMA — Roadmap phát triển sản phẩm và tiếp quản giữa các agent
 
+## Current R120 finite UI route — 2026-10-18
+
+Read-only Root/Sol diagnosis confirms fatal readiness during MySQL initialization (exact greeting bytes UNKNOWN); Docker responds, old owned container EXITED/Pid0/Ports{} and host listener absent now, without retroactive R119 cleanup PASS. R119 start/stop/checks remain consumed. Separately bounded R120 fixes only accumulated pre-auth greeting and explicit Windows listener-table proof, with unit discriminators/Root independent review before one new exact-admitted current-proposal/history UI observation. New seed precedes BUILD; runtime HOLD for source/binary and resource commits. No provider/lifecycle replay/product redesign/automatic support successor. First prerequisite failure stops. Current UI still NOT_RUN, B07inherited/B08raster/B09unsupported/fullM2/M3/M1business/pilot/release OPEN; accountsparked, no push/merge/deploy. Decision: docs/reviews/R119_READONLY_CAUSE_AND_R120_DECISION_2026-10-18.md. Earlier checkpoints historical.
+
+
 ## Current R119 failed UI setup checkpoint — 2026-10-18
 
 Current-source proposal/history UI remains NOT_RUN: reviewed harness96ba23cc and offline compile1PASS/source-binary admission7ea25d35 preceded the sole fresh setup, which exited1 MYSQL_PROTOCOL_INVALID before backend/Vite/browser. Fixture start1/stop1 consumed; exact owned fixture EXITED and protected7containers/8networks/470volumes equal, listener-close proof OPEN(connectEx10035). Root records readiness review miss; raw failed packet preserved. R119 CHANGES_REQUIRED/noFREEZE/no replay or automatic tooling successor. Finite next decision: read-only root-cause/failed-packet review -> only justified explicit fresh readiness/start authority -> same missing M3 current-proposal/history browser proof and terminal review. No provider needed. R118 source/component and spent R117 real evidence inherited; B07bounded/B08raster/B09unsupported, fullM2/M3/M1business/pilot/release OPEN; Facebook/ZaloOA parked. See docs/reviews/R119_FINAL_INDEPENDENT_REVIEW_2026-10-18.md. Earlier checkpoints below historical.

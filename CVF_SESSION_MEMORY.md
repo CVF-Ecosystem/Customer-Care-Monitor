@@ -2,20 +2,20 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R119_CURRENT_UI_PROOF_2026-10-18.md", "activeTranche": "CCMAI-RUNTIME-119", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R120_CURRENT_UI_2026-10-18.md", "activeTranche": "CCMAI-RUNTIME-120", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R119_CURRENT_UI_PROOF_2026-10-18.md
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R120_CURRENT_UI_2026-10-18.md
 
-CCMAI-RUNTIME-119 CHANGES_REQUIRED: sole fixture start consumed; setup exited1 MYSQL_PROTOCOL_INVALID before backend/Vite/product browser. Stop runtime, preserve immutable seed/counters/raw packet; read-only failed-packet and finite readiness review before any new authority/start, no automatic successor or replay. Owned fixture EXITED and protected7containers/8networks/470volumes equal; listener-close proof OPEN (connectEx10035). Current UI wording/selection NOT_RUN; B07 inherited, B08 raster/B09 unsupported/fullM2/M3/pilot/release OPEN; Facebook/ZaloOA parked; no provider/secret/push/merge/deploy.
+CCMAI-RUNTIME-120 source-only readiness BUILD after committed seed/pre-dispatch; fix bounded MySQL greeting and explicit Windows host-listener proof, offline discrimination and Root independent review before one exact admitted current-UI campaign. R119 remains CHANGES_REQUIRED/start-stop consumed, no replay/reset. New sole setup/start/stop/backend/Vite/tab1/auth2/caseActions0/provider0, failure stops with no automatic successor. B07 inherited/B08 raster/B09 unsupported/fullM2/M3/pilot/release OPEN; Facebook/ZaloOA parked; no push/merge/deploy.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; source workers idle; runtime STOPPED, R119 start budget consumed
+Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna Max source-only implementation pending committed dispatch; runtime HOLD
 
-R118 source7f74a75f independently24tests/app typecheckPASS, checkpointdd60d8d0; current UI-render unverified. R117 backend real synthetic result inherited1of1 consumed, no replay. R119 fresh synthetic UI structure only; two exact admissions before effects, no provider/secret/lifecycle authority.
+R119 CHANGES_REQUIRED18a45eda, start1/stop1 consumed; source/compile accepted, UI NOT_RUN/listener predicate notproven. Read-only cause review and exact old listener absence do not alter failed evidence. R120 finite two-readiness fixes then direct M3 current-proposal/history UI proof only; no provider. R118source7f74a75f24tests/typecheck, R117real1spent inherited.
 
 ## Historical R114 bounded UI result
 
