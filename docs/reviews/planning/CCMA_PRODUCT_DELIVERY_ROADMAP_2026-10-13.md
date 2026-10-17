@@ -1,5 +1,10 @@
 # CCMA — Roadmap phát triển sản phẩm và tiếp quản giữa các agent
 
+## Current R119 failed UI setup checkpoint — 2026-10-18
+
+Current-source proposal/history UI remains NOT_RUN: reviewed harness96ba23cc and offline compile1PASS/source-binary admission7ea25d35 preceded the sole fresh setup, which exited1 MYSQL_PROTOCOL_INVALID before backend/Vite/browser. Fixture start1/stop1 consumed; exact owned fixture EXITED and protected7containers/8networks/470volumes equal, listener-close proof OPEN(connectEx10035). Root records readiness review miss; raw failed packet preserved. R119 CHANGES_REQUIRED/noFREEZE/no replay or automatic tooling successor. Finite next decision: read-only root-cause/failed-packet review -> only justified explicit fresh readiness/start authority -> same missing M3 current-proposal/history browser proof and terminal review. No provider needed. R118 source/component and spent R117 real evidence inherited; B07bounded/B08raster/B09unsupported, fullM2/M3/M1business/pilot/release OPEN; Facebook/ZaloOA parked. See docs/reviews/R119_FINAL_INDEPENDENT_REVIEW_2026-10-18.md. Earlier checkpoints below historical.
+
+
 ## Current R118 UI source checkpoint — 2026-10-18
 
 M3 current-proposal display/action binding now follows the backend active pointer/current lineage with unique legacy fallback; current heading/new WAIT_DATA history/system reason localized. Root independently24focusedtests and app typecheckPASS, source/component REVIEW_PASS at7f74a75f, FREEZE OPEN. No product browser/server/fixture/provider effects, no AI governance claim. See docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md.

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-119",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R119_CURRENT_UI_PROOF_2026-10-18.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-119 source-helper BUILD then Root independent review/compile and committed exact source-binary admission before sole new fixture setup; committed exact resource admission before backend/Vite/browser current-proposal/history wording proof. Synthetic UI structure only, max1campaign/auth2/caseActions0/provider0; no old replay or generic tool-repair chain. R118 source and R117 spent real evidence inherited; B08raster/B09unsupported/fullM2/M3/pilot/release OPEN, Facebook/ZaloOA parked; no push/merge/deploy.",
+  "nextAllowedMove": "CCMAI-RUNTIME-119 CHANGES_REQUIRED: sole fixture start consumed; setup exited1 MYSQL_PROTOCOL_INVALID before backend/Vite/product browser. Stop runtime, preserve immutable seed/counters/raw packet; read-only failed-packet and finite readiness review before any new authority/start, no automatic successor or replay. Owned fixture EXITED and protected7containers/8networks/470volumes equal; listener-close proof OPEN (connectEx10035). Current UI wording/selection NOT_RUN; B07 inherited, B08 raster/B09 unsupported/fullM2/M3/pilot/release OPEN; Facebook/ZaloOA parked; no provider/secret/push/merge/deploy.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; original Sol draft worker unavailable, delegated Luna REPAIR_WORKER active source BUILD; runtime HOLD",
+  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; source workers idle; runtime STOPPED, R119 start budget consumed",
   "updatedAt": "2026-10-18",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {
@@ -2213,6 +2213,27 @@
     "appTypecheck": "PASS",
     "currentUiRuntime": "NOT_RUN",
     "providerCalls": 0,
+    "freeze": "OPEN"
+  },
+  "x-r119CurrentOutcome": {
+    "status": "CHANGES_REQUIRED",
+    "review": "docs/reviews/R119_FINAL_INDEPENDENT_REVIEW_2026-10-18.md",
+    "sourceCommit": "96ba23cc8a53f5f26eca7902adc2bb824a0c3d61",
+    "sourceAdmissionCommit": "7ea25d35",
+    "compile": "PASS_OFFLINE_1_OF_2",
+    "setup": "EXIT1_MYSQL_PROTOCOL_INVALID",
+    "fixtureStartsUsed": 1,
+    "fixtureFinalStopsUsed": 1,
+    "backendStarts": 0,
+    "viteStarts": 0,
+    "productTabs": 0,
+    "authPosts": 0,
+    "caseActions": 0,
+    "providerCalls": 0,
+    "currentUi": "NOT_RUN",
+    "fixture": "EXITED_OWNED_PRESERVED",
+    "protected": "EQUAL_7_CONTAINERS_8_NETWORKS_470_VOLUMES",
+    "listenerClosure": "NOT_PROVEN_CONNECT_EX_10035",
     "freeze": "OPEN"
   }
 }

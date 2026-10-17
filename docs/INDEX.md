@@ -15,7 +15,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R119 finite current UI synthetic proof; runtime HOLD until exact admissions.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R119_CURRENT_UI_PROOF_2026-10-18.md`
+- Active R119 CHANGES_REQUIRED: setup failed before UI, start/stop consumed, raw packet preserved; no runtime replay.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R119_CURRENT_UI_PROOF_2026-10-18.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -4040,9 +4040,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/1.stderr.bin`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/browser_capability_transcription.json`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/refresh_20261017T232738Z/stderr.bin`
+- R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open.: `docs/reviews/probes/r119_root/setup_001/reservation.json`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/python_001/stdout.bin`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_worker/checks.json`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/refresh_20261017T232738Z/stdout.bin`
+- R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open.: `docs/reviews/probes/r119_root/final_observation/receipt.json`
+- R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open.: `docs/reviews/probes/r119_root/failed_setup_raw.zip`
 - R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending.: `docs/reviews/probes/r119_root/compile_001/stderr.bin`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/python_001/receipt.json`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/R119_IMPLEMENTATION_WORKER_RETURN_2026-10-18.md`
@@ -4052,6 +4055,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/3.stderr.bin`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/0.json`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/1.stdout.bin`
+- R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open.: `docs/reviews/R119_FINAL_INDEPENDENT_REVIEW_2026-10-18.md`
+- R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open.: `docs/reviews/probes/r119_root/setup_001/stderr.bin`
+- R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open.: `docs/reviews/probes/r119_root/failed_setup_manifest.json`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_worker/python_001.stderr.bin`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/frontend_source_baseline.json`
 - R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending.: `docs/reviews/probes/r119_root/source_binary_admission.json`
@@ -4063,6 +4069,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/0.stdout.bin`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/python_001/stderr.bin`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/2.stderr.bin`
+- R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open.: `docs/reviews/probes/r119_root/setup_001/stdout.bin`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/executables.json`
 - R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending.: `docs/reviews/probes/r119_root/compile_001/reservation.json`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/2.stdout.bin`
@@ -4073,6 +4080,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending.: `docs/reviews/probes/r119_root/pre_runtime_raw.zip`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_worker/python_002.stderr.bin`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/1.json`
+- R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open.: `docs/reviews/probes/r119_root/setup_001/receipt.json`
 - Source-helper then separately admitted one current UI campaign.: `docs/work_orders/CCMAI_RUNTIME_119_CURRENT_UI_PROOF.md`
 - R119 actual current UI evidence status and finite caps.: `CVF_SESSION/tranches/CCMAI-RUNTIME-119.json`
 - Immutable R119 synthetic UI finite authority; provider0/lifecycle0.: `CVF_SESSION/authority/CCMAI-RUNTIME-119.json`

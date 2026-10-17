@@ -4,11 +4,11 @@ Status: ACTIVE
 
 ## Current State
 
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; original Sol draft worker unavailable, delegated Luna REPAIR_WORKER active source BUILD; runtime HOLD
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; source workers idle; runtime STOPPED, R119 start budget consumed
 - Active tranche: CCMAI-RUNTIME-119
-- Next allowed move: CCMAI-RUNTIME-119 source-helper BUILD then Root independent review/compile and committed exact source-binary admission before sole new fixture setup; committed exact resource admission before backend/Vite/browser current-proposal/history wording proof. Synthetic UI structure only, max1campaign/auth2/caseActions0/provider0; no old replay or generic tool-repair chain. R118 source and R117 spent real evidence inherited; B08raster/B09unsupported/fullM2/M3/pilot/release OPEN, Facebook/ZaloOA parked; no push/merge/deploy.
+- Next allowed move: CCMAI-RUNTIME-119 CHANGES_REQUIRED: sole fixture start consumed; setup exited1 MYSQL_PROTOCOL_INVALID before backend/Vite/product browser. Stop runtime, preserve immutable seed/counters/raw packet; read-only failed-packet and finite readiness review before any new authority/start, no automatic successor or replay. Owned fixture EXITED and protected7containers/8networks/470volumes equal; listener-close proof OPEN (connectEx10035). Current UI wording/selection NOT_RUN; B07 inherited, B08 raster/B09 unsupported/fullM2/M3/pilot/release OPEN; Facebook/ZaloOA parked; no provider/secret/push/merge/deploy.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Rehydration and scope decision
@@ -30,3 +30,11 @@ Repair BUILD acknowledgment before edit: Luna /root/r119_repair_luna freshly reh
 Root rehydration and independent source review acknowledgment: canonical current files agree BUILD/R119, parked field-name distinction accepted. Worker returned four unchanged source files; worker2/2 and Root1/1 Python checks PASS8 each, runtime absent. Root independently accepts source only for offline compile and exact admissions; runtime not observed. Source repair1/2, compile0/2, campaign0/1/provider0. See R119_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md.
 
 Root compile1of2 PASS exit0 in36.706s, current handler binary20a477a09cf3084fb6308fa379d3ecc3e691f588a68cbdf63e6d02b621511807, all source unchanged from96ba23cc. Exact source/binary admission prepared and Git-normalized committed content independently compared for every pinned path; source runtime HOLD until admission commit. Original raw pre-runtime bytes archived to avoid Git line-ending ambiguity.
+
+## Final independent runtime disposition
+
+R119 CHANGES_REQUIRED, not closed/FROZEN. Reviewed source96ba23cc and admission7ea25d35 committed before setup. Offline compile1/2 PASS, workerPython2/2 and RootPython1/1 each8unitPASS; sourceRepair1/2. Sole setup1/start1/stop1 consumed; actual setup process exit1 after68.457s with MYSQL_PROTOCOL_INVALID. Cleanup also recorded OWNED_FIXTURE_LISTENER_STILL_OPEN. No exact setup receipt/resource admission/serve intent; backend0/Vite0/producttab0/auth0/caseActions0/provider0. No fixture data seeded, durable fingerprints/effect DB counters NOT_OBSERVED, not PASS.
+
+Independent final read-only identity: exact owned714f2f0c85ee5e01b7219fa77fae35d6da40b8d2c89c178cd86a882ee4681d52 EXITED, owned network/volume exclusive/preserved, protected7containers/8networks/470volumes equals baseline; source/binary raw hashes unchanged. Published port56024 connectEx10035/non-success is not proof of listener refusal; closure OPEN. No additional stop/restart/delete. Setup terminal/raw Docker commands and final observation archived with hashes in docs/reviews/probes/r119_root/failed_setup_raw.zip and failed_setup_manifest.json.
+
+Root review/source-readiness miss: the readiness reader assumes one recv(5) returns a complete MySQL header and treats a short/nonprotocol read as permanent failure. TCP permits partial reads; actual received bytes were not captured, so precise runtime cause remains UNKNOWN. The helper also requires one specific refusal code for listener proof; Docker/Windows observation10035 does not satisfy it. Do not infer Docker unavailable or owner shutdown. No source repair, new runtime authority or automatic successor was opened after this failure. See R119_FINAL_INDEPENDENT_REVIEW_2026-10-18.md for finite handoff and claim limits.

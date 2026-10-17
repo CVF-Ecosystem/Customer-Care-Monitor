@@ -1,6 +1,6 @@
 # R119 current proposal/history finite browser proof
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 dispatchKind: INITIAL
 Worker: /root/r119_runtime_design
@@ -57,3 +57,5 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 Material-SHA marker: 7d944e253ca849d4ea9aede420c2ca679f81c35c. Source-only dispatch; runtime separate committed admissions.
 
 Same-scope completion assignment: original Sol worker usage limit after partial source/no check receipt; delegated Luna repair worker finishes within same worker2Python cap, not fresh budget. Root draftreview records one conservative repair round. No seed/allowed-path/risk/effects/commit-owner change.
+
+Final return: CHANGES_REQUIRED; exact source/binary admission committed, compile1PASS, sole setup failed MYSQL_PROTOCOL_INVALID and consumed fixture start/stop. Backend/Vite/browser/auth/actions/provider0; protected inventory equal, owned fixture exited, listener-close proof OPEN10035. See docs/reviews/R119_FINAL_INDEPENDENT_REVIEW_2026-10-18.md. No runtime replay/reset/new automatic successor.

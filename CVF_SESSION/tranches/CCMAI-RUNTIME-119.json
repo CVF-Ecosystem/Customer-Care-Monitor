@@ -78,15 +78,16 @@
   "baseCommit": "7d944e253ca849d4ea9aede420c2ca679f81c35c",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_119_CURRENT_UI_PROOF.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "status": "BUILD",
-  "phase": "BUILD",
-  "workOrderStatus": "ACTIVE",
-  "buildCommit": null,
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
+  "buildCommit": "96ba23cc8a53f5f26eca7902adc2bb824a0c3d61",
   "reviewEvidence": [
     "docs/reviews/R119_DRAFT_SOURCE_REVIEW_2026-10-18.md",
-    "docs/reviews/R119_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md"
+    "docs/reviews/R119_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md",
+    "docs/reviews/R119_FINAL_INDEPENDENT_REVIEW_2026-10-18.md"
   ],
-  "disposition": "OPEN",
+  "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -94,7 +95,9 @@
     "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -108,6 +111,36 @@
     "rootPythonChecks": 1,
     "rootCompileInvocations": 1,
     "campaignStarts": 0,
-    "providerCalls": 0
+    "providerCalls": 0,
+    "newFixtureStarts": 1,
+    "fixtureFinalStops": 1,
+    "backendStarts": 0,
+    "viteStarts": 0,
+    "productTabs": 0,
+    "authPosts": 0,
+    "caseActions": 0,
+    "automaticRetries": 0
+  },
+  "setupInvocationsUsed": 1,
+  "runtimeOutcome": {
+    "status": "CHANGES_REQUIRED",
+    "review": "docs/reviews/R119_FINAL_INDEPENDENT_REVIEW_2026-10-18.md",
+    "sourceCommit": "96ba23cc8a53f5f26eca7902adc2bb824a0c3d61",
+    "sourceAdmissionCommit": "7ea25d35",
+    "compile": "PASS_OFFLINE_1_OF_2",
+    "setup": "EXIT1_MYSQL_PROTOCOL_INVALID",
+    "fixtureStartsUsed": 1,
+    "fixtureFinalStopsUsed": 1,
+    "backendStarts": 0,
+    "viteStarts": 0,
+    "productTabs": 0,
+    "authPosts": 0,
+    "caseActions": 0,
+    "providerCalls": 0,
+    "currentUi": "NOT_RUN",
+    "fixture": "EXITED_OWNED_PRESERVED",
+    "protected": "EQUAL_7_CONTAINERS_8_NETWORKS_470_VOLUMES",
+    "listenerClosure": "NOT_PROVEN_CONNECT_EX_10035",
+    "freeze": "OPEN"
   }
 }

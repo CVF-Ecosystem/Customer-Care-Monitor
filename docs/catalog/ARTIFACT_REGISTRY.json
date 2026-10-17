@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R119_CURRENT_UI_PROOF_2026-10-18.md",
       "status": "ACTIVE",
-      "description": "Active R119 finite current UI synthetic proof; runtime HOLD until exact admissions."
+      "description": "Active R119 CHANGES_REQUIRED: setup failed before UI, start/stop consumed, raw packet preserved; no runtime replay."
     },
     {
       "id": "r060-work-order",
@@ -32518,6 +32518,62 @@
       "path": "docs/reviews/probes/r119_root/compile_001/stdout.bin",
       "status": "ACTIVE",
       "description": "R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending."
+    },
+    {
+      "id": "r119-6b136eb7b100de31",
+      "family": "continuity",
+      "path": "docs/reviews/R119_FINAL_INDEPENDENT_REVIEW_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open."
+    },
+    {
+      "id": "r119-6bc5ba2e6f1837c4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/failed_setup_manifest.json",
+      "status": "ACTIVE",
+      "description": "R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open."
+    },
+    {
+      "id": "r119-3c237173cee56d8e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/failed_setup_raw.zip",
+      "status": "ACTIVE",
+      "description": "R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open."
+    },
+    {
+      "id": "r119-388ad7013c79cce2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/final_observation/receipt.json",
+      "status": "ACTIVE",
+      "description": "R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open."
+    },
+    {
+      "id": "r119-fa0766012b669b1a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/setup_001/receipt.json",
+      "status": "ACTIVE",
+      "description": "R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open."
+    },
+    {
+      "id": "r119-2b5fcad42c2b9b7f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/setup_001/reservation.json",
+      "status": "ACTIVE",
+      "description": "R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open."
+    },
+    {
+      "id": "r119-6b8341873edb4894",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/setup_001/stderr.bin",
+      "status": "ACTIVE",
+      "description": "R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open."
+    },
+    {
+      "id": "r119-bf155a83934a874a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/setup_001/stdout.bin",
+      "status": "ACTIVE",
+      "description": "R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open."
     }
   ]
 }
