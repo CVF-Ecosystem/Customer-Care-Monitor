@@ -1,5 +1,10 @@
 # Roadmap CSKH: dữ liệu đáng tin, bộ lọc hỗ trợ AI và xử lý có trách nhiệm
 
+## Current R116 product route — 2026-10-17
+
+Owner grants continuation with fresh Alibaba live testing. R115 intended design accepted only; R116 source-only implementation then Root-admitted isolated MySQL discriminators and capped max2 fresh real calls, stopfirstvalid/anyuncertainty. Goal is WAIT_DATA same-case new proposal available for human review with original lineage preserved. No old budget/runner replay or installed activation. UI raster/offline/terminal gaps, Dashboard3knownfailures, fullM2/M3/pilot/release and M1business stay OPEN; Facebook/ZaloOAparked. Three finite steps, no ETA/percentage. See docs/work_orders/CCMAI_RUNTIME_116_WAITDATA_EXECUTOR.md.
+
+
 ## Current R115 M3-05 intended design — 2026-10-17
 
 Source-backed executor/integration SPEC and non-dispatchable R2 implementation DRAFT prepared by Sol Medium and independently reviewed by Root after2documentrepairs;14sourcefiles/31referencebounds/hashpins verified against product68a3d30b. Product source unchanged. Intended path binds fresh execution authority, atomic current-permission/source claim+JobRun, canonical replay, durable call marker/cost, same-case active proposal and legacy compatibility, source/delete provenance fences. Unknown call/ownerloss stays manualhold, no automatic provider replay or invented terminal receipt. This is design acceptance only: executor/fences/activeprojection NOT_IMPLEMENTED, product/DB/liveproof NOT_RUN; no M3/S-stage exit.

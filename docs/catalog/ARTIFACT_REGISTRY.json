@@ -3920,7 +3920,7 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R115_EXECUTOR_DESIGN_2026-10-17.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R116_WAITDATA_EXECUTOR_2026-10-17.md",
       "status": "ACTIVE",
       "description": "Active R115 documentary M3-05 executor design handoff; no implementation/runtime authority."
     },
@@ -24699,6 +24699,27 @@
       "path": "docs/reviews/probes/r116_root/readiness_secret_readiness.json",
       "status": "ACTIVE",
       "description": "R116 bounded executor authority/readiness; exact evidence limits apply."
+    },
+    {
+      "id": "r116-9bc7258dc4ca1a48b3",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R115_EXECUTOR_DESIGN_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R116 bounded executor source/evidence control; exact claim scope applies."
+    },
+    {
+      "id": "r116-a99b410ced6e719ba0",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-116.json",
+      "status": "ACTIVE",
+      "description": "R116 bounded executor source/evidence control; exact claim scope applies."
+    },
+    {
+      "id": "r116-eda171822b17a57372",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_116_WAITDATA_EXECUTOR.md",
+      "status": "ACTIVE",
+      "description": "R116 bounded executor source/evidence control; exact claim scope applies."
     }
   ]
 }

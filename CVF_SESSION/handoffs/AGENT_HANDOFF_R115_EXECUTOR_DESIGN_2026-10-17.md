@@ -1,6 +1,6 @@
 # R115 M3-05 executor design handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 
@@ -33,3 +33,5 @@ Root REVIEW_PASS acknowledgment: whole repaired packet independently reviewed;14
 Material documentary commit5461048b contains exact reviewed SPEC/draft/ledger/return plus Root reviews/rawarchives. Worker-return/reviewer-fast/pre-commit and legacypreflightPASS; APPL is explicitlyNOT_APPLICABLE for returned/DRAFTstates, actualpre-dispatchAPPL/ROUTEPASS preserved. Unit89PASS31.959s is gate tooling only. Root accepts REVIEW_PASSforintendeddesign only, FREEZEOPEN/no implementation authority. Remaining route: separateR2source implementation -> isolatedDBfault/concurrency proof -> fresh-authorized realprovider evidence/independent result. No ETA/percentage, no resource/call budget reused.
 
 Final legacy tranche gate held descriptive disposition atREVIEW_PASS; Root normalized required disposition REVIEW_PASS and retained narrow intended-design-only boundary in reviewScope/claimScope, with FREEZEOPEN. Failed check output preserved in staticCheckHistory. This is Root exact-schema metadata correction; no product claim upgrade or worker repair.
+
+Current pointer moves to R116 source/build authority after fresh owner Alibaba grant; R115 remains intended-design-only REVIEW_PASS, no product FREEZE.

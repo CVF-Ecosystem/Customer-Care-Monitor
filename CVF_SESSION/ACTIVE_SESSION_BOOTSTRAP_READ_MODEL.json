@@ -1,10 +1,10 @@
 {
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
-  "activeTranche": "CCMAI-RUNTIME-115",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R115_EXECUTOR_DESIGN_2026-10-17.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-115 REVIEW_PASS DOCUMENTARY_ONLY: source-backed executor/integration SPEC and non-dispatchable R2 implementation DRAFT accepted; prepare separate exact R2 source/build order before product implementation, fresh grant before provider/secret/runtime proof. R102 remains nonexecuting intent; R114 CHANGES_REQUIRED/noFREEZE, B08rasterqualified/B09unsupported, Dashboard3failures/fullM2/M3/pilot/release OPEN; accounts parked. No old-slot replay/provider/secret/push/merge/deploy/productFREEZE.",
-  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r115_executor_spec returned, no further authoring or runtime",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
+  "activeTranche": "CCMAI-RUNTIME-116",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R116_WAITDATA_EXECUTOR_2026-10-17.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-116 BUILD: Sol Medium implements accepted WAIT_DATA executor contract source-only first; Root independently reviews and commits exact source/binary/fixture admission before isolated DB proof and fresh capped Alibaba live proof. Fresh2call maximum stopfirstvalid/anyuncertainty; no old-slot replay, ordinary activation or push/merge/deploy. R114 UI gaps, Dashboard3baselinefailures, fullM2/M3/pilot/release OPEN; Facebook/ZaloOA parked.",
+  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD / live secret custodian; /root/r116_executor_worker Sol Medium IMPLEMENTATION_WORKER",
   "updatedAt": "2026-10-17",
   "schemaVersion": "1.0",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
@@ -64,5 +64,12 @@
     "productImplementation": "NOT_IMPLEMENTED",
     "runtime": "NOT_RUN_NOT_AUTHORIZED",
     "documentRepairRounds": 2
+  },
+  "x-r116OwnerGrant": {
+    "id": "CCMAI-RUNTIME-116-OWNER-NEW2-20261017",
+    "physicalCallCap": 2,
+    "usedPhysicalCalls": 0,
+    "fresh": true,
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-116.json"
   }
 }
