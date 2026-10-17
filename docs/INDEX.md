@@ -2655,7 +2655,47 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_005_protected_container_inspect.stdout.bin`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/work_orders/CCMAI_RUNTIME_114_ONBOARDING_UI.md`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `CVF_SESSION/tranches/CCMAI-RUNTIME-114.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/R114_SOURCE_WORKER_RETURN_2026-10-17.md`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/readiness_receipt.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_006_protected_container_inspect.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/R114_INDEPENDENT_SOURCE_REVIEW_2026-10-17.md`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_luna/r114_binding_parity.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/source_raw_receipts.zip`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_001_server_version.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_003_target_network_inspect.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_004_fixture_volume_users.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_006_protected_container_inspect.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_006_protected_container_inspect.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/validation_1/focused.reservation.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_luna/r114_vite_config.mjs.template`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_003_target_network_inspect.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_005_all_container_ids.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/validation_1/typecheck.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_002_target_inspect.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_001_server_version.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_002_target_inspect.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/operator_transcription.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_005_all_container_ids.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/validation_1/typecheck.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_luna/worker_vitest_01.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_luna/focused-test.config.mjs`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_004_fixture_volume_users.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_luna/worker_vitest_01.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/independent_source_verification.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/docker-cli-config/config.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/validation_1/focused.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_003_target_network_inspect.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/validation_1/focused.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_004_fixture_volume_users.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_luna/worker_vitest_01.stderr.bin`
 - R114 finite onboarding wording/mobile source repair; runtime not admitted, historical qualified evidence preserved.: `docs/reviews/R114_INTAKE_AND_FINITE_ROUTE_2026-10-17.md`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_001_server_version.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_005_all_container_ids.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_002_target_inspect.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/validation_1/focused.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/validation_1/typecheck.reservation.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/validation_1/typecheck.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_luna/r114_workflow_runner.py`
 - R114 finite onboarding wording/mobile source repair; runtime not admitted, historical qualified evidence preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-114.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`

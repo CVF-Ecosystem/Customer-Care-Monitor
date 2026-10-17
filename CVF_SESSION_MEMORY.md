@@ -2,16 +2,16 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md", "activeTranche": "CCMAI-RUNTIME-114", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md", "activeTranche": "CCMAI-RUNTIME-114", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
+- Current mode: BUILD
+- Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md
 
-CCMAI-RUNTIME-114 DISPATCH_READY: committed seed before source BUILD; Luna Max repairs only onboarding component/new focused test and114runner bindings. Root independently reviews source/validation then exact committed admission before any runtime. Inherit113B07/history, B09unsupportedNOT_RUN, no lifecycle replay/old-slot reuse/provider/push/deploy; fullM2/M3/pilot/release OPEN/accounts parked.
+CCMAI-RUNTIME-114 BUILD source-only after committed seed7619b22b/dispatch: Luna Max repairs onboarding wording/wrapping plus focused regression and114bindings; Root independently reviews before separate exact runtime admission. Fresh sourceValidationBudget only; no current runtime/lifecycle/old-slot reuse/provider/push/deploy. InheritB07/history, B09unsupportedNOT_RUN; fullM2/M3/pilot/release OPEN/accounts parked.
 
 Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r114_onboarding_luna Luna Max IMPLEMENTATION_WORKER
 

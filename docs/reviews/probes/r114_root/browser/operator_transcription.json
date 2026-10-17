@@ -1,0 +1,26 @@
+{
+  "provenance": "Root operator transcription of actual CUA calls/results; original tools in chat, not exported raw transcript",
+  "entries": [
+    {
+      "at": "2026-10-17T04:19:53.696Z",
+      "kind": "capability",
+      "value": {
+        "ownedDiagnosticTab": "2",
+        "url": "about:blank",
+        "domReadSucceeded": true,
+        "capabilities": [
+          {
+            "id": "visibility",
+            "description": "Use to show or hide the browser to the user, and to determine the browser's current visibility. Keep browser work in the background unless the user asks to see it or live viewing is useful. When the browser should be visible, call set(true)."
+          },
+          {
+            "id": "viewport",
+            "description": "Controls an explicit browser viewport override for responsive or device-size testing. Use it when a task calls for specific dimensions or breakpoint validation; otherwise leave it unset so the browser uses its normal viewport. Reset temporary overrides before finishing unless the user asked to keep them."
+          }
+        ],
+        "offline": "NOT_ADVERTISED",
+        "baselineOtherTab": "tab1 stale old localhost route in inventory; not used or modified for114"
+      }
+    }
+  ]
+}

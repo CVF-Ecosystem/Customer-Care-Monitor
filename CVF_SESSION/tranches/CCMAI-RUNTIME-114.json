@@ -82,19 +82,20 @@
     "thirdWithoutNewRootCause": "REVIEW_COST_ESCALATION_REQUIRED",
     "scope": "new onboarding component test only; no full suite or29test baseline replay"
   },
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "baseCommit": "7619b22bd9d34e76e540e975cf8b2633c1403702",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_114_ONBOARDING_UI.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "DISPATCH_READY",
+  "workOrderStatus": "ACTIVE",
   "buildCommit": null,
   "reviewEvidence": [],
   "disposition": "SOURCE_ONLY_DISPATCH_RUNTIME_NOT_ADMITTED",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",

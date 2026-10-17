@@ -1,6 +1,6 @@
 # R114 onboarding wording and mobile repair
 
-Status: DISPATCH_READY
+Status: ACTIVE
 Risk: R2
 dispatchKind: INITIAL
 Worker: /root/r114_onboarding_luna
@@ -42,7 +42,7 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | authorization_review | PRE_DISPATCH | orchestrator | PRE_DISPATCH | R114 immutable seed source-review receipt formal order and record | BOUNDED_PATH_FAMILIES | commit-steward | DISPATCH_COMMIT | NONE |
 | pre_dispatch_gate | PRE_DISPATCH | orchestrator | PRE_DISPATCH | R114 order continuity catalog and exact source pins | BOUNDED_PATH_FAMILIES | commit-steward | DISPATCH_COMMIT | authorization_review |
-| dispatch_continuity | IMPLEMENTATION | session-sync-steward | IMPLEMENTATION | CVF_SESSION/handoffs/AGENT_HANDOFF_R114_REMAINING_UI_2026-10-17.md material-SHA marker | EXACT_PATHS | session-sync-steward | DISPATCH_CONTINUITY_COMMIT | pre_dispatch_gate |
+| dispatch_continuity | IMPLEMENTATION | session-sync-steward | IMPLEMENTATION | CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md material-SHA marker | EXACT_PATHS | session-sync-steward | DISPATCH_CONTINUITY_COMMIT | pre_dispatch_gate |
 | focused_checker_tests | WORKER_RETURN | implementation-worker | WORKER_RETURN | U01 through U05 inherited qualified source exact new binding runtime root readiness browser campaign and owned cleanup | BOUNDED_PATH_FAMILIES | commit-steward | MATERIAL_COMMIT | dispatch_continuity |
 | adif_integrity | WORKER_RETURN | implementation-worker | WORKER_RETURN | R114 raw failures lineage manifests limits and NOT_RUN branches | BOUNDED_PATH_FAMILIES | commit-steward | MATERIAL_COMMIT | focused_checker_tests |
 | pre_implementation_autorun | IMPLEMENTATION | implementation-worker | IMPLEMENTATION | R114 effective admission and worker acknowledgment | BOUNDED_PATH_FAMILIES | session-sync-steward | MATERIAL_COMMIT | dispatch_continuity |

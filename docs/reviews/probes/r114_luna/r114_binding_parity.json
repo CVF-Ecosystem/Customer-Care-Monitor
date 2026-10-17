@@ -1,0 +1,112 @@
+{
+  "trancheId": "CCMAI-RUNTIME-114",
+  "worker": "/root/r114_onboarding_luna",
+  "createdUtc": "2026-10-17T04:25:41.018Z",
+  "checks": {
+    "runner": "IDENTITY_ONLY_PARITY_PASS",
+    "template": "IDENTITY_ONLY_PARITY_PASS",
+    "focusedTestConfig": "R110_COPY_ENV_DIR_FALSE_R114_PREFIX_PARITY_PASS",
+    "runtimeValidationCountersRemainZero": true,
+    "exclusiveRuntimeRootExists": false
+  },
+  "bindings": {
+    "worker": "/root/r114_onboarding_luna",
+    "seedPath": "CVF_SESSION/authority/CCMAI-RUNTIME-114.json",
+    "recordPath": "CVF_SESSION/tranches/CCMAI-RUNTIME-114.json",
+    "handoffPath": "CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md",
+    "orderPath": "docs/work_orders/CCMAI_RUNTIME_114_ONBOARDING_UI.md",
+    "sourceReviewPath": "docs/reviews/R110_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-17.md",
+    "validationRoot": "docs/reviews/probes/r110_root/validation_1",
+    "r108HelperPath": "docs/reviews/probes/r108_luna/r108_native_runner.py",
+    "r108HelperSha256": "899afa92934dede2d99d28d591bc4232d29a52f764d10f8420588e8e940fb138",
+    "runtimePath": ".cvf/runtime/r114_workflow",
+    "runtimePathExists": false
+  },
+  "preservedR110Evidence": {
+    "sourceReview": {
+      "path": "docs/reviews/R110_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-17.md",
+      "sha256": "818d3c4d909952509b1d97d44008883e320432cd6526f0fa7545f04e83e2b10b"
+    },
+    "sourcePins": {
+      "path": "docs/reviews/probes/r110_root/validation_1/source_pins.json",
+      "sha256": "3d863860a0ceec7031fb9cb91596e0b2d052ee6cb7154e3b21cb21fceba57722",
+      "pins": {
+        "frontend/src/views/InterventionCases.vue": "888c5b672a013d6ab2c6965423899977bcecb70cd460a8abdf374e93067c05e5",
+        "frontend/src/utils/interventionPresentation.ts": "4e25b89d0600972b03da02e4acab10274ee8c4ff51c3679d6204b59bad28c050",
+        "frontend/src/views/Dashboard.vue": "7f56b01a8ef976994f5d90a4184f41f4d3b3268899c5ce34b3adea728c016c98",
+        "frontend/src/views/Jobs/JobDetail.vue": "36abe634120fdc5bfb8cbf17c31d2fae069c5b2f92775696d27da0e9ffe085ec",
+        "frontend/src/i18n/vi.ts": "44dbf2f47b71bca872258269b5211461d990ce721b38dbaa1bc3a16216ba835c",
+        "frontend/src/i18n/en.ts": "42a6bfec0bf2b9d3d0ca2b6f6a394e285e99c1546054565c7fd3461daf975530",
+        "frontend/src/__tests__/intervention-ui.test.ts": "5ea4e3dcc7530448369b0740be54bbaafe16109f9d43cbadd36faf72ab55f65e",
+        "frontend/src/__tests__/intervention-presentation.test.ts": "9f89c4597be783dc0a80339755be616bee0a72d08a39e64810969786ccf1048a",
+        "frontend/src/__tests__/dashboard-service-status.spec.ts": "9b54eb1073fa64d7cab7c6f505a47aabc4281d35febbd655beb833f4b0293126",
+        "frontend/src/__tests__/intervention-api.test.ts": "06851bd2e20080165c69cbb224872b86c7d559dcc627863e9a4268cffaf464d8",
+        "docs/reviews/probes/r110_root/focused-test.config.mjs": "0f4ac7a79b747183f43372e3fc76719b625978a262e978fa26a11574d9dfd000"
+      }
+    },
+    "baselineQualification": {
+      "path": "docs/reviews/probes/r110_root/validation_1/baseline_qualification.json",
+      "sha256": "b8b6a1c6af476443f02e19720d53e3bede5a8b3ca652a6ff19b1ed976da9279b",
+      "status": "KNOWN_BASELINE_ONLY",
+      "suiteTests": 29,
+      "passedTests": 26,
+      "failedTests": 3,
+      "historicalEvidence": "docs/reviews/probes/r101_worker/frontend_full.json",
+      "historicalEvidenceSha256": "0487ef7e828b7271ff02c3291757bd31ae9bdf06e9dfb6e6c911d2dc11db0dfb",
+      "currentLogPins": {
+        "docs/reviews/probes/r110_root/validation_1/focused_tests.json": "b320100fb84e7937fffc009b766a3c7a9616f94e4acc98984e07dbad40b579c7",
+        "docs/reviews/probes/r110_root/validation_1/focused_tests.stdout.txt": "de0ff6f99d7ddd429d9ee66bd3de793d04478469a13b4521e171962f57e73668",
+        "docs/reviews/probes/r110_root/validation_1/focused_tests.stderr.txt": "4359719c646c5b2e70d49b99dc1c30369deee657d01d0d08fe917b7931e81ddf",
+        "docs/reviews/probes/r110_root/validation_1/forced_typecheck.json": "74b6bf0b1cf664044fbfc426a80aea762d41fb05b1b150d1dd6df28370d1924d"
+      }
+    },
+    "binaryReuse": {
+      "path": "docs/reviews/probes/r110_root/binary_reuse_verification.json",
+      "sha256": "c2f3a032e6dab62442f597326c84ed28e6f1722a807b4f47eca63183b7d7cd6e",
+      "binarySha256": "cb73ee13e0369cca75ea276cc668f30c3ced42cead5f62c56d68f3c1eaa66f93"
+    },
+    "preservedPaths": [
+      "docs/reviews/R110_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-17.md",
+      "docs/reviews/probes/r110_root/validation_1/source_pins.json",
+      "docs/reviews/probes/r110_root/validation_1/baseline_qualification.json",
+      "docs/reviews/probes/r110_root/validation_1/focused_tests.json",
+      "docs/reviews/probes/r110_root/validation_1/focused_tests.stdout.txt",
+      "docs/reviews/probes/r110_root/validation_1/focused_tests.stderr.txt",
+      "docs/reviews/probes/r110_root/validation_1/forced_typecheck.json",
+      "docs/reviews/probes/r110_root/binary_reuse_verification.json",
+      "docs/reviews/probes/r101_worker/frontend_full.json"
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "docs/reviews/probes/r113_luna/r113_workflow_runner.py",
+      "bytes": 69986,
+      "sha256": "79a5dfb98de2e49dc258653b727816638664bc5e19e715129c8b43768e0f59df"
+    },
+    {
+      "path": "docs/reviews/probes/r114_luna/r114_workflow_runner.py",
+      "bytes": 69994,
+      "sha256": "7ab016aa8d413c37d78fc8456f2c724ad7484d79eead68ac8b65dc05a171bd37"
+    },
+    {
+      "path": "docs/reviews/probes/r113_luna/r113_vite_config.mjs.template",
+      "bytes": 3105,
+      "sha256": "e5bdedb9f92065279219125cacd6b118d3072bed0d28ffc0d8f1b24749d1d65c"
+    },
+    {
+      "path": "docs/reviews/probes/r114_luna/r114_vite_config.mjs.template",
+      "bytes": 3105,
+      "sha256": "0176b1fc6d15d10ebb28b351d12e22ed4442b51506b1bbff7b3500534d8640da"
+    },
+    {
+      "path": "docs/reviews/probes/r110_root/focused-test.config.mjs",
+      "bytes": 857,
+      "sha256": "0f4ac7a79b747183f43372e3fc76719b625978a262e978fa26a11574d9dfd000"
+    },
+    {
+      "path": "docs/reviews/probes/r114_luna/focused-test.config.mjs",
+      "bytes": 857,
+      "sha256": "525b9dddb544e8cc0e4866e0ca933fba98f4f0c256cdae2db72541a26943009d"
+    }
+  ]
+}

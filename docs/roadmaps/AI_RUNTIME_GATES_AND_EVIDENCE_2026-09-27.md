@@ -1,5 +1,14 @@
 # Roadmap CSKH: dữ liệu đáng tin, bộ lọc hỗ trợ AI và xử lý có trách nhiệm
 
+## Current R114 onboarding source repair — 2026-10-17
+
+Owner next continues from51441649. Seed7619b22b and dispatch381c6ae1 precede Luna Max source BUILD; Root owns authority/independent review/commit. Exact product outcome: onboarding uses the existing localized AI-settings label and full readable chip text at narrow390x844. Only OnboardingWizard.vue/new focused regression product paths; backend/API payload/native binary and i18n inputs unchanged. Source UI structure tests are local component mocks only, not governance proof. Current actual Docker29.8.2/exited-exclusive fixture/protected4 and new integrated blanktab2 DOM/viewport capability verified; runtime not yet admitted.
+
+Finite route: coherent component/test and identity-only114runner bindings -> independent source/focused checks and exact committed admission -> at most one new targeted rendered banner/queue proof plus actual cleanup/independent result. No B07/lifecycle replay, old budget reset or generic tools-repair chain. Source validation worker2/root2focusedVitest/worker1/root1forcedtypecheck; no full suite replay. Conditional runtime one exactfixture/backend/Vite,8allPOST/3tabs/1200sec/retry0, Go/native/provider0. Failed current capability stops runtime; no install/restart/alternate stack.
+
+Inherit R113B07boundedUIaccepted and qualifiedCSS390x844/history, R109partialB01-B06/B10, R11026PASS3knownDashboardFAIL/typecheckPASS. R113 originalsupervisorcleanup/exitmissing and Root finalfixtureexited/protectedbaselineequal preserved. B09unsupportedNOT_RUN, fullM2/M3/pilot/release and R102actualAIrerunexecutor OPEN; Facebook/ZaloOAparked. No new acceptance/whole-suite green/FREEZE/push/merge/deploy claim. Earlier current-route paragraphs are historical; canonical114records control execution.
+
+
 **Trạng thái:** DRAFT / REVIEW_PENDING. **Ngày:** 2026-09-27. **Work order lập kế hoạch:** `CCMAI-ROADMAP-001`. **Rủi ro dự kiến khi triển khai:** tối thiểu R2 cho dữ liệu khách hàng, provider/network và governance runtime. Roadmap này không cấp quyền BUILD các tranche sản phẩm, gọi provider, đưa dữ liệu ra ngoài, triển khai production hoặc tuyên bố CVF đã kiểm soát AI runtime.
 
 **Quyết định thiết kế đi kèm:** [mẫu lọc dữ liệu SoT-first có thể tái sử dụng](../decisions/SOT_FIRST_DATA_FILTERING_PATTERN_2026-09-27.md). Mẫu nêu hợp đồng chung; roadmap này ánh xạ vào ứng dụng CSKH và chưa chứng minh một thư viện đa dự án đã vận hành.

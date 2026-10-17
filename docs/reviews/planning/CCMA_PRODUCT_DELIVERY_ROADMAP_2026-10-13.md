@@ -1,5 +1,14 @@
 # CCMA — Roadmap phát triển sản phẩm và tiếp quản giữa các agent
 
+## Current R114 onboarding source repair — 2026-10-17
+
+Owner next continues from51441649. Seed7619b22b and dispatch381c6ae1 precede Luna Max source BUILD; Root owns authority/independent review/commit. Exact product outcome: onboarding uses the existing localized AI-settings label and full readable chip text at narrow390x844. Only OnboardingWizard.vue/new focused regression product paths; backend/API payload/native binary and i18n inputs unchanged. Source UI structure tests are local component mocks only, not governance proof. Current actual Docker29.8.2/exited-exclusive fixture/protected4 and new integrated blanktab2 DOM/viewport capability verified; runtime not yet admitted.
+
+Finite route: coherent component/test and identity-only114runner bindings -> independent source/focused checks and exact committed admission -> at most one new targeted rendered banner/queue proof plus actual cleanup/independent result. No B07/lifecycle replay, old budget reset or generic tools-repair chain. Source validation worker2/root2focusedVitest/worker1/root1forcedtypecheck; no full suite replay. Conditional runtime one exactfixture/backend/Vite,8allPOST/3tabs/1200sec/retry0, Go/native/provider0. Failed current capability stops runtime; no install/restart/alternate stack.
+
+Inherit R113B07boundedUIaccepted and qualifiedCSS390x844/history, R109partialB01-B06/B10, R11026PASS3knownDashboardFAIL/typecheckPASS. R113 originalsupervisorcleanup/exitmissing and Root finalfixtureexited/protectedbaselineequal preserved. B09unsupportedNOT_RUN, fullM2/M3/pilot/release and R102actualAIrerunexecutor OPEN; Facebook/ZaloOAparked. No new acceptance/whole-suite green/FREEZE/push/merge/deploy claim. Earlier current-route paragraphs are historical; canonical114records control execution.
+
+
 ## Current R113 UI result and finite next move — 2026-10-17
 
 Current source-bound integrated browser evidence now exists at UIa28cdd0a/binding0622d185/campaignHEAD0a266623. B07 boundedPASS: fresh reader after actual ownerlogout reads queue/detail/history without write controls, revision1. B08 actualCSS390x844 queue/detail/ownerform/four expanded historic changes observed, with raw-JPEG raster variance(queue390x843/detail-form-history375x811), derivedPNG no resize; no exact390x844rawPNG or globalmobilePASS. B09 unsupportedNOT_RUN. Visited intervention/history wording understandable, but shared onboarding “Cấu hình AI Provider” and mobile chip clipping remainOPEN. [Independent review](../R113_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md).

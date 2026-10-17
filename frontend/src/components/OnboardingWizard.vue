@@ -1,5 +1,5 @@
 <template>
-  <v-sheet v-if="visible" color="indigo-lighten-5" rounded class="d-flex align-center pa-2 mb-4 ga-2">
+  <v-sheet v-if="visible" color="indigo-lighten-5" rounded class="d-flex align-start pa-2 mb-4 ga-2">
     <v-icon color="primary" class="flex-shrink-0">mdi-rocket-launch</v-icon>
     <div class="onboarding-steps d-flex align-center ga-1">
       <span class="text-body-2 font-weight-medium" style="white-space: nowrap;">Bắt đầu:</span>
@@ -10,9 +10,10 @@
         :color="step.done ? 'success' : 'default'"
         :variant="step.done ? 'flat' : 'outlined'"
         :prepend-icon="step.done ? 'mdi-check-circle' : 'mdi-circle-outline'"
+        class="onboarding-step-chip"
         @click="goToStep(step)"
       >
-        {{ step.title }}
+        <span class="onboarding-step-chip__label">{{ displayStepTitle(step) }}</span>
       </v-chip>
       <v-chip
         v-if="completedCount === steps.length"
@@ -31,10 +32,12 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import api from '../api'
 
 const route = useRoute()
 const router = useRouter()
+const { t } = useI18n()
 const tenantId = computed(() => route.params.tenantId as string)
 
 interface OnboardingStep {
@@ -54,6 +57,10 @@ const visible = computed(() => {
 })
 
 const completedCount = computed(() => steps.value.filter(s => s.done).length)
+
+function displayStepTitle(step: OnboardingStep) {
+  return step.key === 'ai' ? t('ai_config') : step.title
+}
 
 async function loadOnboarding() {
   if (!tenantId.value) return
@@ -93,13 +100,29 @@ async function dismiss() {
 
 <style scoped>
 .onboarding-steps {
-  overflow-x: auto;
-  flex-wrap: nowrap;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  flex: 1 1 0;
+  flex-wrap: wrap;
+  overflow: visible;
   min-width: 0;
 }
-.onboarding-steps::-webkit-scrollbar {
-  display: none;
+
+.onboarding-step-chip {
+  flex: 0 1 auto;
+  height: auto !important;
+  max-width: 100%;
+  min-width: 0;
+  min-height: var(--v-chip-height, 24px);
+}
+
+.onboarding-step-chip :deep(.v-chip__content) {
+  max-width: 100%;
+  min-width: 0;
+  white-space: normal;
+}
+
+.onboarding-step-chip__label {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
 }
 </style>

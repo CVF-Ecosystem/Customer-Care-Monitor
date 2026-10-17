@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "--config",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r114_root\\readiness\\docker-cli-config",
+    "ps",
+    "-aq",
+    "--no-trunc",
+    "--filter",
+    "volume=ccmai-r101-review-final-20261015"
+  ],
+  "exitCode": 0,
+  "failureType": null,
+  "outputRedaction": "exact synthetic fixture credential and bearer-token patterns only",
+  "pid": 4936,
+  "stderrBytes": 0,
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdoutBytes": 65,
+  "stdoutSha256": "79da5e95f64b2724f3b2fac89c7b1c56191c863e481d8da9d0a0183878da2496",
+  "timedOut": false
+}

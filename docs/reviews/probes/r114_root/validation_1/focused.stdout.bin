@@ -1,0 +1,10 @@
+
+ RUN  v4.1.0 D:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/frontend
+
+ ✓ src/__tests__/onboarding-wizard.spec.ts (3 tests) 202ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  11:24:44
+   Duration  7.04s (transform 4.98s, setup 0ms, import 6.42s, tests 202ms, environment 273ms)
+

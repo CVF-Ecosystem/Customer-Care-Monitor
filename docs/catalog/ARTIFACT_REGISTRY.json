@@ -22585,6 +22585,286 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_114_ONBOARDING_UI.md",
       "status": "ACTIVE",
       "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-36503376cf44abce3a",
+      "family": "continuity",
+      "path": "docs/reviews/R114_INDEPENDENT_SOURCE_REVIEW_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-0c3c77df8fe9a70105",
+      "family": "continuity",
+      "path": "docs/reviews/R114_SOURCE_WORKER_RETURN_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-c03e6ccefa3dc1d4ee",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/independent_source_verification.json",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-3a9041be65b929f087",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/source_raw_receipts.zip",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-a7704ede1d59c75630",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/browser/operator_transcription.json",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-87b90f21a6d2d97c69",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/readiness/command_001_server_version.json",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-e579ba844ef6f853fb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/readiness/command_001_server_version.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-550f9a6f237aa4978d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/readiness/command_001_server_version.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-7f1fd0479e435f5125",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/readiness/command_002_target_inspect.json",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-8bc3300b018517d85f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/readiness/command_002_target_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-e94b397f4b184ca455",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/readiness/command_002_target_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-58e856600ce3bbe611",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/readiness/command_003_target_network_inspect.json",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-d8da1ec4636f99f84b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/readiness/command_003_target_network_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-72eec6299f7becb7c8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/readiness/command_003_target_network_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-b147d2fe022184c25c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/readiness/command_004_fixture_volume_users.json",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-5fc5282b000a83352b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/readiness/command_004_fixture_volume_users.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-db28ae540870e08e59",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/readiness/command_004_fixture_volume_users.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-e5f51c72c8cd62b5fa",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/readiness/command_005_all_container_ids.json",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-a7de1bb38bdf49adc3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/readiness/command_005_all_container_ids.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-78cea19497ad2ec53c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/readiness/command_005_all_container_ids.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-619e998e9d2bdd85dc",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/readiness/command_006_protected_container_inspect.json",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-64ac88a53260e87920",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/readiness/command_006_protected_container_inspect.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-2cd440b7defb493730",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/readiness/command_006_protected_container_inspect.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-17fff7fd8bdd5f6d2d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/readiness/readiness_receipt.json",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-d9ba86e09f4eb5750a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/validation_1/focused.json",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-66a88430f6db0f3e95",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/validation_1/focused.reservation.json",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-ce500a962a9a818a69",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/validation_1/focused.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-eff5aa8340de0abcf7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/validation_1/focused.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-a8a10ca5221f56057f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/validation_1/typecheck.json",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-f024169bac4614c901",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/validation_1/typecheck.reservation.json",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-7a38e706d2b4003910",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/validation_1/typecheck.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-f6889aa098612013e9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/validation_1/typecheck.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-caf58fc29cfa45bb39",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_root/readiness/docker-cli-config/config.json",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-ace005c50aee3bd2a3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_luna/focused-test.config.mjs",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-3a38ac61a50dbf6103",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_luna/r114_binding_parity.json",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-6fad8dec54fe17cd95",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_luna/r114_vite_config.mjs.template",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-fb2bfee85d67530898",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_luna/r114_workflow_runner.py",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-b848aa13be89f73b5c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_luna/worker_vitest_01.json",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-dd60ed50c1e1a235f4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_luna/worker_vitest_01.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-ac634cb737bdcee842",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r114_luna/worker_vitest_01.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
     }
   ]
 }
