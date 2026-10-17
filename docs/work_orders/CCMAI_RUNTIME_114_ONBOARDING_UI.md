@@ -7,7 +7,7 @@ Worker: /root/r114_onboarding_luna
 Reviewer: Codex /root
 Commit steward: Codex /root
 providerExecutionAuthority: NONE
-Disposition: SOURCE_ONLY_DISPATCH_RUNTIME_NOT_ADMITTED
+Disposition: SOURCE_ACCEPTED_EXACT_RUNTIME_ADMITTED
 
 ## INTAKE / DESIGN / SPEC / WORK_ORDER
 
@@ -58,4 +58,4 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 
 
 
-Material-SHA marker:7619b22bd9d34e76e540e975cf8b2633c1403702. Runtime NOT_ADMITTED until exact committed admission.
+Material-SHA marker:7619b22bd9d34e76e540e975cf8b2633c1403702. Source accepted ataa92c149; current exact committed Root admission controls sole114runtime.

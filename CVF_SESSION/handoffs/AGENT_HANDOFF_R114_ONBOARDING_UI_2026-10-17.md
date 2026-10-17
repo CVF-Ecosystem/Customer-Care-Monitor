@@ -9,7 +9,7 @@ Status: ACTIVE
 - Active phase: BUILD
 - Active role: Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r114_onboarding_luna Luna Max IMPLEMENTATION_WORKER
 - Active tranche: CCMAI-RUNTIME-114
-- Next allowed move: CCMAI-RUNTIME-114 BUILD source-only after committed seed7619b22b/dispatch: Luna Max repairs onboarding wording/wrapping plus focused regression and114bindings; Root independently reviews before separate exact runtime admission. Fresh sourceValidationBudget only; no current runtime/lifecycle/old-slot reuse/provider/push/deploy. InheritB07/history, B09unsupportedNOT_RUN; fullM2/M3/pilot/release OPEN/accounts parked.
+- Next allowed move: CCMAI-RUNTIME-114 BUILD runtime admitted after sourceaa92c149 and exact committed Root admission: Luna runs sole new114supervisor; Root observes onboarding desktop/mobile390x844 and queue/detail, owner login/logout only, then cooperative cleanup and independent REVIEW. Existingfixture/backend/Vite1, POST8max, tabs3max,1200sec,retry0; no old-slot/lifecycle/provider/secret/push/deploy. B07/history inherited, B09unsupportedNOT_RUN; fullM2/M3/pilot/release OPEN/accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Acknowledgments and history
@@ -25,3 +25,5 @@ Root independent source-review rehydration acknowledgment: current114BUILD summa
 Root source REVIEW_PASS: full component/spec inspection, independent identity-only runner/template/config parity and11inherited pins unchanged; focused3PASS/exit0, forcedtypecheckPASS/exit0. Worker invocation1 exitUNKNOWN preserved. Source material commit precedes exact separate runtime admission. Canonical order table handoff basename repaired. See docs/reviews/R114_INDEPENDENT_SOURCE_REVIEW_2026-10-17.md.
 
 Root exact runtime admission: sourceaa92c149 independent source acceptance, current browser/Docker and immutable binary/source pins reviewed. Only new114sole campaign conditional on committed admission guards; no old runner/slot replay. Root browser, Luna supervisor, Root independent outcome review/commit. Source3PASS/typecheckPASS; B09unsupportedNOT_RUN, inherited product gaps unchanged.
+
+Continuity reconciliation before runtime: worker correctly stopped without invoking start because Root left the current nextAllowedMove source-only after committing runtime admission. Root owns this metadata miss. Current state/bootstrap/memory/header/order now explicitly admit only the sole114campaign under exact committed admission. Earlier source-only and not-yet-admitted statements are historical stages, superseded by this acknowledgment. No fixture/server effect occurred during the hold; no retry/budget reset. Root rehydrated these canonical surfaces and grants BUILD runtime role to Luna/Root browser under same authority.

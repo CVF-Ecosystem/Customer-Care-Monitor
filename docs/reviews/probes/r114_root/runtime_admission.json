@@ -22,7 +22,7 @@
   },
   "evidencePins": {
     "docs/reviews/R110_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-17.md": "818d3c4d909952509b1d97d44008883e320432cd6526f0fa7545f04e83e2b10b",
-    "docs/reviews/R114_INDEPENDENT_RUNTIME_ADMISSION_REVIEW_2026-10-17.md": "cd7093f55919cf7d5fca82c347f4a957925e61f37e85ce499b826a854b203daa",
+    "docs/reviews/R114_INDEPENDENT_RUNTIME_ADMISSION_REVIEW_2026-10-17.md": "4db2a22ccd2120902494bbccf9add6bed2435d06d5928df9b69ec4a9d0f3370f",
     "docs/reviews/probes/r110_root/validation_1/source_pins.json": "3d863860a0ceec7031fb9cb91596e0b2d052ee6cb7154e3b21cb21fceba57722",
     "docs/reviews/probes/r110_root/binary_reuse_verification.json": "c2f3a032e6dab62442f597326c84ed28e6f1722a807b4f47eca63183b7d7cd6e",
     "docs/reviews/probes/r110_root/validation_1/baseline_qualification.json": "b8b6a1c6af476443f02e19720d53e3bede5a8b3ca652a6ff19b1ed976da9279b",
@@ -35,7 +35,7 @@
     "docs/reviews/probes/r110_root/validation_1/forced_typecheck.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   "seedSha256": "1f9301f811bed93d7894dc49dde9dbbad5ed0e4b96c35a3c359c4a1ac7db2c1f",
-  "workOrderSha256": "68ba841b0eb9c8831c16285bbec252762114b2eb3ef2337486cd0ba421142454",
+  "workOrderSha256": "1052f3f7fddff1827ec45754dd4bea5c85476b228fa3a2b9a8c1594865474732",
   "helperSha256": "899afa92934dede2d99d28d591bc4232d29a52f764d10f8420588e8e940fb138",
   "scope": "Sole fresh114 targeted onboarding wording/full mobile labels; inheritedB07/history not replayed; B09unsupportedNOT_RUN",
   "binaryPins": {

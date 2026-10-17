@@ -11,7 +11,7 @@ Memory class: POINTER_RECORD
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md
 
-CCMAI-RUNTIME-114 BUILD source-only after committed seed7619b22b/dispatch: Luna Max repairs onboarding wording/wrapping plus focused regression and114bindings; Root independently reviews before separate exact runtime admission. Fresh sourceValidationBudget only; no current runtime/lifecycle/old-slot reuse/provider/push/deploy. InheritB07/history, B09unsupportedNOT_RUN; fullM2/M3/pilot/release OPEN/accounts parked.
+CCMAI-RUNTIME-114 BUILD runtime admitted after sourceaa92c149 and exact committed Root admission: Luna runs sole new114supervisor; Root observes onboarding desktop/mobile390x844 and queue/detail, owner login/logout only, then cooperative cleanup and independent REVIEW. Existingfixture/backend/Vite1, POST8max, tabs3max,1200sec,retry0; no old-slot/lifecycle/provider/secret/push/deploy. B07/history inherited, B09unsupportedNOT_RUN; fullM2/M3/pilot/release OPEN/accounts parked.
 
 Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r114_onboarding_luna Luna Max IMPLEMENTATION_WORKER
 
