@@ -1528,7 +1528,7 @@
       "family": "continuity",
       "path": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
       "status": "ACTIVE",
-      "description": "Current R114 onboarding wording/full labels accepted bounded; missing supervisor terminal evidence, B08 raster-qualified/B09 unsupported and full M2/M3/release remain OPEN; next M3-05 executor SPEC."
+      "description": "Current R115 M3-05 intended executor design reviewed; actual implementation/live proof and full milestones OPEN; R114 evidence gaps retained."
     },
     {
       "id": "ccma-product-delivery-publication-20261013",
@@ -24573,6 +24573,97 @@
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md",
       "status": "ACTIVE",
       "description": "Historical R114 CHANGES_REQUIRED; source/UI accepted bounded, original terminal gap retained; noFREEZE."
+    },
+    {
+      "id": "r115-ff66f554c1a7a9ec60",
+      "family": "continuity",
+      "path": "docs/specs/M3_WAITDATA_EXECUTOR_R115_SPEC_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R115 source-backed intended executor design/evidence; implementation/runtime not dispatched."
+    },
+    {
+      "id": "r115-1cc6a68eb1eda05531",
+      "family": "continuity",
+      "path": "docs/reviews/planning/R115_EXECUTOR_IMPLEMENTATION_WORK_ORDER_DRAFT_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R115 source-backed intended executor design/evidence; implementation/runtime not dispatched."
+    },
+    {
+      "id": "r115-bebf07d7dabe294efe",
+      "family": "continuity",
+      "path": "docs/reviews/R115_CONSOLIDATED_DESIGN_REVIEW_ROUND0_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R115 source-backed intended executor design/evidence; implementation/runtime not dispatched."
+    },
+    {
+      "id": "r115-a9c95970f32e86d53b",
+      "family": "continuity",
+      "path": "docs/reviews/R115_CONSOLIDATED_DESIGN_REVIEW_ROUND1_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R115 source-backed intended executor design/evidence; implementation/runtime not dispatched."
+    },
+    {
+      "id": "r115-7e7e9eb7c1b5faf6d0",
+      "family": "continuity",
+      "path": "docs/reviews/R115_DESIGN_WORKER_RETURN_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R115 source-backed intended executor design/evidence; implementation/runtime not dispatched."
+    },
+    {
+      "id": "r115-b67ffb2740cd75bec9",
+      "family": "continuity",
+      "path": "docs/reviews/R115_INDEPENDENT_DESIGN_REVIEW_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R115 source-backed intended executor design/evidence; implementation/runtime not dispatched."
+    },
+    {
+      "id": "r115-9fa8f7d13ba7694979",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r115_root/accepted_design_original.zip",
+      "status": "ACTIVE",
+      "description": "R115 source-backed intended executor design/evidence; implementation/runtime not dispatched."
+    },
+    {
+      "id": "r115-656234e6238b7a9914",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r115_root/final_independent_verification.json",
+      "status": "ACTIVE",
+      "description": "R115 source-backed intended executor design/evidence; implementation/runtime not dispatched."
+    },
+    {
+      "id": "r115-a9aa87c6d4ce3fd39d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r115_root/first_pass_identity_review.json",
+      "status": "ACTIVE",
+      "description": "R115 source-backed intended executor design/evidence; implementation/runtime not dispatched."
+    },
+    {
+      "id": "r115-af445540f14e429399",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r115_root/first_pass_original.zip",
+      "status": "ACTIVE",
+      "description": "R115 source-backed intended executor design/evidence; implementation/runtime not dispatched."
+    },
+    {
+      "id": "r115-78f83b70b2ba03a407",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r115_root/repair1_original.zip",
+      "status": "ACTIVE",
+      "description": "R115 source-backed intended executor design/evidence; implementation/runtime not dispatched."
+    },
+    {
+      "id": "r115-660ea7d40af75aa76a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r115_worker/source_identity.json",
+      "status": "ACTIVE",
+      "description": "R115 source-backed intended executor design/evidence; implementation/runtime not dispatched."
+    },
+    {
+      "id": "r115-committed-packet-original",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r115_root/committed_packet_original.zip",
+      "status": "ACTIVE",
+      "description": "Exact final documentary packet bytes after Root metadata normalization; no runtime proof."
     }
   ]
 }

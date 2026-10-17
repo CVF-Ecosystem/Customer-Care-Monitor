@@ -1,0 +1,226 @@
+{
+  "reviewer": "Codex /root",
+  "observedAtUTC": "2026-10-17T08:03:15.133567+00:00",
+  "sourceBaseline": "68a3d30b921c3c145659c187daa1cecb49fe50d8",
+  "inspectedHead": "4aa2e49354be162e080a0f7d6305a1e749b73ce2",
+  "sourceFilesVerified": 14,
+  "referenceBoundsVerified": 31,
+  "allBlobsEqualProductBaseline": true,
+  "artifactPins": {
+    "docs/specs/M3_WAITDATA_EXECUTOR_R115_SPEC_2026-10-17.md": "0decfa2fc7fda36fb9395b2d4828f60ff2532d97ebd9ae9570ea25f757b8f8e6",
+    "docs/reviews/planning/R115_EXECUTOR_IMPLEMENTATION_WORK_ORDER_DRAFT_2026-10-17.md": "aedecc6a6f56e151c622f312be1ecc2f293691c58b657932fc95d706f34e9673",
+    "docs/reviews/probes/r115_worker/source_identity.json": "37168d7b4048b85eccecb40f0069b12c317b17c22923fe0f8aeff3692ac2291c",
+    "docs/reviews/R115_DESIGN_WORKER_RETURN_2026-10-17.md": "88a70cb8c6657988addab337760addc765c56774593e0cdf216f50b34f54d8c0"
+  },
+  "supplementaryTransportReference": {
+    "path": "backend/ai/openai_compatible.go",
+    "physicalSha256": "a1ac47fcba0e813d139b2ab4dcd47d872ac5614b9d5528c805cd007df34e99fd",
+    "gitBlob": "e22b2e53f0d0b6732fded4f4fe17f33bb59db457",
+    "range": [
+      190,
+      256
+    ],
+    "scope": "Root supplementary source inspection of existing AnalyzeChatOnce, no live call or new transport authority"
+  },
+  "productSourceChanges": [],
+  "applicationTests": "NOT_RUN",
+  "runtimeProvider": "NOT_RUN_NOT_AUTHORIZED",
+  "gateUnitSuite": {
+    "tests": 89,
+    "seconds": 31.959,
+    "exitCode": 0,
+    "provenance": "Root transcription of actual completed session29564, not product tests"
+  },
+  "documentRepairRounds": 2,
+  "acceptedArchiveSha256": "cea28c3e9d533441f3a8b8eacc13b230486494aa677f5878c3ac05be3a272e74",
+  "disposition": "INTENDED_DESIGN_ACCEPTED_ONLY",
+  "staticCheckHistory": [
+    {
+      "at": "2026-10-17T08:05:18.575155+00:00",
+      "checks": [
+        {
+          "name": "worker-return",
+          "argv": [
+            "python",
+            "-B",
+            "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+            "run",
+            "--phase",
+            "worker-return",
+            "--project-root",
+            ".",
+            "--packet",
+            "docs/work_orders/CCMAI_RUNTIME_115_EXECUTOR_DESIGN.md",
+            "--packet",
+            "docs/reviews/R115_DESIGN_WORKER_RETURN_2026-10-17.md",
+            "--packet",
+            "docs/reviews/R115_INDEPENDENT_DESIGN_REVIEW_2026-10-17.md"
+          ],
+          "startedAtUTC": "2026-10-17T08:05:01.277860+00:00",
+          "exitCode": 2,
+          "stdout": "[PASS] CVF-DG-INST-01 PASS\r\n[PASS] CVF-DG-CONT-01 PASS\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=4aa2e49354be162e080a0f7d6305a1e749b73ce2 candidates=23 deleted=0\r\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\r\n       note: docs/work_orders/CCMAI_RUNTIME_115_EXECUTOR_DESIGN.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\r\n[FAIL] CVF-DG-ROLE-01 FAIL\r\n       RISK_INVALID @ docs/reviews/planning/R115_EXECUTOR_IMPLEMENTATION_WORK_ORDER_DRAFT_2026-10-17.md#Risk: Risk 'R2_PROPOSED / NOT_DISPATCHABLE' is not one of ['R0', 'R1', 'R2', 'R3'] (exact upper-case token required)\r\n       note: docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\r\n[PASS] CVF-DG-CLAIM-01 PASS\r\n       note: 0 explicit claim line(s) and 7 document(s) scanned\r\nRESULT: FAIL phase=worker-return mandatoryControls=6 failed=1\r\n",
+          "stderr": ""
+        },
+        {
+          "name": "reviewer-fast",
+          "argv": [
+            "python",
+            "-B",
+            "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+            "run",
+            "--phase",
+            "reviewer-fast",
+            "--project-root",
+            ".",
+            "--packet",
+            "docs/work_orders/CCMAI_RUNTIME_115_EXECUTOR_DESIGN.md",
+            "--packet",
+            "docs/reviews/R115_DESIGN_WORKER_RETURN_2026-10-17.md",
+            "--packet",
+            "docs/reviews/R115_INDEPENDENT_DESIGN_REVIEW_2026-10-17.md"
+          ],
+          "startedAtUTC": "2026-10-17T08:05:01.278960+00:00",
+          "exitCode": 2,
+          "stdout": "[PASS] CVF-DG-INST-01 PASS\r\n[PASS] CVF-DG-CONT-01 PASS\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=4aa2e49354be162e080a0f7d6305a1e749b73ce2 candidates=23 deleted=0\r\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\r\n       note: docs/work_orders/CCMAI_RUNTIME_115_EXECUTOR_DESIGN.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\r\n[PASS] CVF-DG-ROUTE-01 PASS\r\n       note: checked: docs/work_orders/CCMAI_RUNTIME_115_EXECUTOR_DESIGN.md\r\n[FAIL] CVF-DG-ROLE-01 FAIL\r\n       RISK_INVALID @ docs/reviews/planning/R115_EXECUTOR_IMPLEMENTATION_WORK_ORDER_DRAFT_2026-10-17.md#Risk: Risk 'R2_PROPOSED / NOT_DISPATCHABLE' is not one of ['R0', 'R1', 'R2', 'R3'] (exact upper-case token required)\r\n       note: docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\r\n[PASS] CVF-DG-CLAIM-01 PASS\r\n       note: 0 explicit claim line(s) and 7 document(s) scanned\r\nRESULT: FAIL phase=reviewer-fast mandatoryControls=7 failed=1\r\n",
+          "stderr": ""
+        },
+        {
+          "name": "pre-commit",
+          "argv": [
+            "python",
+            "-B",
+            "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+            "run",
+            "--phase",
+            "pre-commit",
+            "--project-root",
+            ".",
+            "--packet",
+            "docs/work_orders/CCMAI_RUNTIME_115_EXECUTOR_DESIGN.md",
+            "--packet",
+            "docs/reviews/R115_DESIGN_WORKER_RETURN_2026-10-17.md",
+            "--packet",
+            "docs/reviews/R115_INDEPENDENT_DESIGN_REVIEW_2026-10-17.md"
+          ],
+          "startedAtUTC": "2026-10-17T08:05:01.280176+00:00",
+          "exitCode": 2,
+          "stdout": "[PASS] CVF-DG-INST-01 PASS\r\n[PASS] CVF-DG-CONT-01 PASS\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=4aa2e49354be162e080a0f7d6305a1e749b73ce2 candidates=23 deleted=0\r\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\r\n       note: docs/work_orders/CCMAI_RUNTIME_115_EXECUTOR_DESIGN.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\r\n[FAIL] CVF-DG-ROLE-01 FAIL\r\n       RISK_INVALID @ docs/reviews/planning/R115_EXECUTOR_IMPLEMENTATION_WORK_ORDER_DRAFT_2026-10-17.md#Risk: Risk 'R2_PROPOSED / NOT_DISPATCHABLE' is not one of ['R0', 'R1', 'R2', 'R3'] (exact upper-case token required)\r\n       note: docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\r\n[PASS] CVF-DG-CLAIM-01 PASS\r\n       note: 0 explicit claim line(s) and 7 document(s) scanned\r\nRESULT: FAIL phase=pre-commit mandatoryControls=6 failed=1\r\n",
+          "stderr": ""
+        },
+        {
+          "name": "legacy-preflight",
+          "argv": [
+            "python",
+            "-B",
+            "scripts/cvf_downstream_gate.py",
+            "preflight"
+          ],
+          "startedAtUTC": "2026-10-17T08:05:01.282709+00:00",
+          "exitCode": 0,
+          "stdout": "[PASS] provenance\r\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\r\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\r\n[PASS] continuity\r\n[PASS] tranche\r\n[PASS] claims\r\n[PASS] secrets\r\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\r\n[PASS] workflows\r\n[PASS] catalog\r\nCVF downstream preflight: PASS (7/7 executed gates passed)\r\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "at": "2026-10-17T08:07:01.932530+00:00",
+      "checks": [
+        {
+          "name": "worker-return",
+          "argv": [
+            "python",
+            "-B",
+            "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+            "run",
+            "--phase",
+            "worker-return",
+            "--project-root",
+            ".",
+            "--packet",
+            "docs/work_orders/CCMAI_RUNTIME_115_EXECUTOR_DESIGN.md",
+            "--packet",
+            "docs/reviews/R115_DESIGN_WORKER_RETURN_2026-10-17.md",
+            "--packet",
+            "docs/reviews/R115_INDEPENDENT_DESIGN_REVIEW_2026-10-17.md"
+          ],
+          "startedAtUTC": "2026-10-17T08:06:44.450458+00:00",
+          "exitCode": 0,
+          "stdout": "[PASS] CVF-DG-INST-01 PASS\r\n[PASS] CVF-DG-CONT-01 PASS\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=4aa2e49354be162e080a0f7d6305a1e749b73ce2 candidates=24 deleted=0\r\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\r\n       note: docs/work_orders/CCMAI_RUNTIME_115_EXECUTOR_DESIGN.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\r\n[PASS] CVF-DG-ROLE-01 PASS\r\n       note: checked: docs/reviews/R115_CONSOLIDATED_DESIGN_REVIEW_ROUND0_2026-10-17.md, docs/reviews/R115_CONSOLIDATED_DESIGN_REVIEW_ROUND1_2026-10-17.md, docs/reviews/R115_DESIGN_WORKER_RETURN_2026-10-17.md, docs/reviews/R115_INDEPENDENT_DESIGN_REVIEW_2026-10-17.md, docs/reviews/planning/R115_EXECUTOR_IMPLEMENTATION_WORK_ORDER_DRAFT_2026-10-17.md\r\n       note: docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\r\n[PASS] CVF-DG-CLAIM-01 PASS\r\n       note: 0 explicit claim line(s) and 7 document(s) scanned\r\nRESULT: PASS phase=worker-return mandatoryControls=6 failed=0\r\n",
+          "stderr": ""
+        },
+        {
+          "name": "reviewer-fast",
+          "argv": [
+            "python",
+            "-B",
+            "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+            "run",
+            "--phase",
+            "reviewer-fast",
+            "--project-root",
+            ".",
+            "--packet",
+            "docs/work_orders/CCMAI_RUNTIME_115_EXECUTOR_DESIGN.md",
+            "--packet",
+            "docs/reviews/R115_DESIGN_WORKER_RETURN_2026-10-17.md",
+            "--packet",
+            "docs/reviews/R115_INDEPENDENT_DESIGN_REVIEW_2026-10-17.md"
+          ],
+          "startedAtUTC": "2026-10-17T08:06:44.451528+00:00",
+          "exitCode": 0,
+          "stdout": "[PASS] CVF-DG-INST-01 PASS\r\n[PASS] CVF-DG-CONT-01 PASS\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=4aa2e49354be162e080a0f7d6305a1e749b73ce2 candidates=24 deleted=0\r\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\r\n       note: docs/work_orders/CCMAI_RUNTIME_115_EXECUTOR_DESIGN.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\r\n[PASS] CVF-DG-ROUTE-01 PASS\r\n       note: checked: docs/work_orders/CCMAI_RUNTIME_115_EXECUTOR_DESIGN.md\r\n[PASS] CVF-DG-ROLE-01 PASS\r\n       note: checked: docs/reviews/R115_CONSOLIDATED_DESIGN_REVIEW_ROUND0_2026-10-17.md, docs/reviews/R115_CONSOLIDATED_DESIGN_REVIEW_ROUND1_2026-10-17.md, docs/reviews/R115_DESIGN_WORKER_RETURN_2026-10-17.md, docs/reviews/R115_INDEPENDENT_DESIGN_REVIEW_2026-10-17.md, docs/reviews/planning/R115_EXECUTOR_IMPLEMENTATION_WORK_ORDER_DRAFT_2026-10-17.md\r\n       note: docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\r\n[PASS] CVF-DG-CLAIM-01 PASS\r\n       note: 0 explicit claim line(s) and 7 document(s) scanned\r\nRESULT: PASS phase=reviewer-fast mandatoryControls=7 failed=0\r\n",
+          "stderr": ""
+        },
+        {
+          "name": "pre-commit",
+          "argv": [
+            "python",
+            "-B",
+            "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+            "run",
+            "--phase",
+            "pre-commit",
+            "--project-root",
+            ".",
+            "--packet",
+            "docs/work_orders/CCMAI_RUNTIME_115_EXECUTOR_DESIGN.md",
+            "--packet",
+            "docs/reviews/R115_DESIGN_WORKER_RETURN_2026-10-17.md",
+            "--packet",
+            "docs/reviews/R115_INDEPENDENT_DESIGN_REVIEW_2026-10-17.md"
+          ],
+          "startedAtUTC": "2026-10-17T08:06:44.452809+00:00",
+          "exitCode": 0,
+          "stdout": "[PASS] CVF-DG-INST-01 PASS\r\n[PASS] CVF-DG-CONT-01 PASS\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=4aa2e49354be162e080a0f7d6305a1e749b73ce2 candidates=24 deleted=0\r\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\r\n       note: docs/work_orders/CCMAI_RUNTIME_115_EXECUTOR_DESIGN.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\r\n[PASS] CVF-DG-ROLE-01 PASS\r\n       note: checked: docs/reviews/R115_CONSOLIDATED_DESIGN_REVIEW_ROUND0_2026-10-17.md, docs/reviews/R115_CONSOLIDATED_DESIGN_REVIEW_ROUND1_2026-10-17.md, docs/reviews/R115_DESIGN_WORKER_RETURN_2026-10-17.md, docs/reviews/R115_INDEPENDENT_DESIGN_REVIEW_2026-10-17.md, docs/reviews/planning/R115_EXECUTOR_IMPLEMENTATION_WORK_ORDER_DRAFT_2026-10-17.md\r\n       note: docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\r\n[PASS] CVF-DG-CLAIM-01 PASS\r\n       note: 0 explicit claim line(s) and 7 document(s) scanned\r\nRESULT: PASS phase=pre-commit mandatoryControls=6 failed=0\r\n",
+          "stderr": ""
+        },
+        {
+          "name": "legacy-preflight",
+          "argv": [
+            "python",
+            "-B",
+            "scripts/cvf_downstream_gate.py",
+            "preflight"
+          ],
+          "startedAtUTC": "2026-10-17T08:06:44.453516+00:00",
+          "exitCode": 0,
+          "stdout": "[PASS] provenance\r\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\r\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\r\n[PASS] continuity\r\n[PASS] tranche\r\n[PASS] claims\r\n[PASS] secrets\r\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\r\n[PASS] workflows\r\n[PASS] catalog\r\nCVF downstream preflight: PASS (7/7 executed gates passed)\r\n",
+          "stderr": ""
+        }
+      ]
+    }
+  ],
+  "workerSubmittedArtifactPins": {
+    "docs/specs/M3_WAITDATA_EXECUTOR_R115_SPEC_2026-10-17.md": "0decfa2fc7fda36fb9395b2d4828f60ff2532d97ebd9ae9570ea25f757b8f8e6",
+    "docs/reviews/planning/R115_EXECUTOR_IMPLEMENTATION_WORK_ORDER_DRAFT_2026-10-17.md": "ba2c334e72e344f594839fb8650cf28154ad1683a6acf9d5d8554562b3e2beb5",
+    "docs/reviews/probes/r115_worker/source_identity.json": "37168d7b4048b85eccecb40f0069b12c317b17c22923fe0f8aeff3692ac2291c",
+    "docs/reviews/R115_DESIGN_WORKER_RETURN_2026-10-17.md": "88a70cb8c6657988addab337760addc765c56774593e0cdf216f50b34f54d8c0"
+  },
+  "workerSubmittedHashesMatchReviewedArchive": true,
+  "rootMetadataNormalization": {
+    "path": "docs/reviews/planning/R115_EXECUTOR_IMPLEMENTATION_WORK_ORDER_DRAFT_2026-10-17.md",
+    "beforeSha256": "ba2c334e72e344f594839fb8650cf28154ad1683a6acf9d5d8554562b3e2beb5",
+    "afterSha256": "aedecc6a6f56e151c622f312be1ecc2f293691c58b657932fc95d706f34e9673",
+    "scope": "Risk exactR2token; future unassigned role placeholders; separate proposed-only disposition. No substantive design/authority change."
+  }
+}

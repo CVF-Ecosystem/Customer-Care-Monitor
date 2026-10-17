@@ -1,0 +1,309 @@
+{
+  "schemaVersion": "1.0",
+  "sourceBaseline": "68a3d30b921c3c145659c187daa1cecb49fe50d8",
+  "inspectedHead": "4aa2e49354be162e080a0f7d6305a1e749b73ce2",
+  "claimScope": "STATIC_SOURCE_ONLY",
+  "runtimeAcceptance": "NOT_RUN",
+  "liveProviderAcceptance": "NOT_RUN",
+  "files": [
+    {
+      "path": "backend/engine/intervention_waitdata.go",
+      "references": [
+        {
+          "function": "replayRerunRequest",
+          "startLine": 78,
+          "endLine": 112,
+          "claim": "replayRerunRequest current source fact"
+        },
+        {
+          "function": "withWaitDataLocked",
+          "startLine": 152,
+          "endLine": 219,
+          "claim": "withWaitDataLocked current source fact"
+        },
+        {
+          "function": "CaptureInterventionDataRevision",
+          "startLine": 270,
+          "endLine": 313,
+          "claim": "CaptureInterventionDataRevision current source fact"
+        },
+        {
+          "function": "RequestInterventionRerun",
+          "startLine": 316,
+          "endLine": 410,
+          "claim": "RequestInterventionRerun current source fact"
+        }
+      ],
+      "physicalSha256": "994a943700ea2a12614d6ed2391097498f9cce02378cf95a356eeedd4cb56835",
+      "gitBlob": "b60ebfed42abbf7e3ffb0a0c2a2762f7b6516149",
+      "lineCount": 411
+    },
+    {
+      "path": "backend/engine/intervention.go",
+      "references": [
+        {
+          "function": "RunManual admission",
+          "startLine": 55,
+          "endLine": 110,
+          "claim": "RunManual admission current source fact"
+        },
+        {
+          "function": "RunManual case and budget",
+          "startLine": 132,
+          "endLine": 210,
+          "claim": "RunManual case and budget current source fact"
+        },
+        {
+          "function": "RunManual call and publication",
+          "startLine": 217,
+          "endLine": 315,
+          "claim": "RunManual call and publication current source fact"
+        },
+        {
+          "function": "settleInterventionResponse",
+          "startLine": 387,
+          "endLine": 401,
+          "claim": "settleInterventionResponse current source fact"
+        }
+      ],
+      "physicalSha256": "7a729301958d448ac7847486a88675bf19b0fb6e13c6bbfec4a601a9024c6a97",
+      "gitBlob": "66429a18ba38ad4ece1d10ac2f570ed1ccb35f2c",
+      "lineCount": 458
+    },
+    {
+      "path": "backend/engine/intervention_m3.go",
+      "references": [
+        {
+          "function": "M3ApplyAction",
+          "startLine": 82,
+          "endLine": 146,
+          "claim": "M3ApplyAction current source fact"
+        }
+      ],
+      "physicalSha256": "4b9ea8114e28285d2300b1c8b8db08589d1289cd5787231436268e504bd20dd6",
+      "gitBlob": "2a778689f15dcd44b0181d5f60d13d156ea59b2a",
+      "lineCount": 289
+    },
+    {
+      "path": "backend/engine/job_run_ownership.go",
+      "references": [
+        {
+          "function": "coordinator contract",
+          "startLine": 19,
+          "endLine": 34,
+          "claim": "coordinator contract current source fact"
+        },
+        {
+          "function": "admitJobRun",
+          "startLine": 110,
+          "endLine": 190,
+          "claim": "admitJobRun current source fact"
+        },
+        {
+          "function": "GuardJobMutation",
+          "startLine": 317,
+          "endLine": 342,
+          "claim": "GuardJobMutation current source fact"
+        }
+      ],
+      "physicalSha256": "aeef979a969f52efdf8f7c34e223ee4e0f6889965148c46bdaa2cd2d499d22f6",
+      "gitBlob": "513febc593268ccb09fd95395c3da7a6df40a35e",
+      "lineCount": 398
+    },
+    {
+      "path": "backend/engine/sync.go",
+      "references": [
+        {
+          "function": "withOwnedSyncWrite",
+          "startLine": 164,
+          "endLine": 200,
+          "claim": "withOwnedSyncWrite current source fact"
+        },
+        {
+          "function": "upsertConversation",
+          "startLine": 622,
+          "endLine": 657,
+          "claim": "upsertConversation current source fact"
+        },
+        {
+          "function": "upsertMessage",
+          "startLine": 660,
+          "endLine": 745,
+          "claim": "upsertMessage current source fact"
+        },
+        {
+          "function": "updateOwnedMessageCount",
+          "startLine": 748,
+          "endLine": 761,
+          "claim": "updateOwnedMessageCount current source fact"
+        }
+      ],
+      "physicalSha256": "c841ea0865f1f4b83853409a0e8939c87f99d5009c42b6729cd01beefaaaced0",
+      "gitBlob": "1098bfa2d82b83ed7f04caca0e6d53068b60b0eb",
+      "lineCount": 1221
+    },
+    {
+      "path": "backend/db/models/intervention.go",
+      "references": [
+        {
+          "function": "intervention models",
+          "startLine": 5,
+          "endLine": 112,
+          "claim": "intervention models current source fact"
+        }
+      ],
+      "physicalSha256": "2d4a44f7026061f303cc2c2ab7805d7a045d18294935be9af22736d20e691c3b",
+      "gitBlob": "05c88134af0fd17b02cab36998234d4178097f49",
+      "lineCount": 113
+    },
+    {
+      "path": "backend/db/models/intervention_waitdata.go",
+      "references": [
+        {
+          "function": "InterventionDataRevision",
+          "startLine": 5,
+          "endLine": 26,
+          "claim": "InterventionDataRevision current source fact"
+        },
+        {
+          "function": "InterventionRerunRequest",
+          "startLine": 28,
+          "endLine": 49,
+          "claim": "InterventionRerunRequest current source fact"
+        }
+      ],
+      "physicalSha256": "e3ff5755c019ace0018295528261c685e5d81b9d1c105e0cd98474d9a417bd17",
+      "gitBlob": "62c9c2b49906057d374231a82c04d44b330e1147",
+      "lineCount": 49
+    },
+    {
+      "path": "backend/api/handlers/intervention.go",
+      "references": [
+        {
+          "function": "GetInterventionCase",
+          "startLine": 109,
+          "endLine": 131,
+          "claim": "GetInterventionCase current source fact"
+        }
+      ],
+      "physicalSha256": "72b4cd64edcfb87cac83cb0e21febe3f49fd2ecd5615c68c048bdbd26ccf7da4",
+      "gitBlob": "246c5af82f04dc7017d563176e68a0e69f1743e5",
+      "lineCount": 132
+    },
+    {
+      "path": "backend/api/handlers/intervention_waitdata.go",
+      "references": [
+        {
+          "function": "create handlers",
+          "startLine": 53,
+          "endLine": 80,
+          "claim": "create handlers current source fact"
+        },
+        {
+          "function": "waitDataReadCase",
+          "startLine": 83,
+          "endLine": 109,
+          "claim": "waitDataReadCase current source fact"
+        },
+        {
+          "function": "requestView",
+          "startLine": 148,
+          "endLine": 153,
+          "claim": "requestView current source fact"
+        },
+        {
+          "function": "ListInterventionRerunRequests",
+          "startLine": 203,
+          "endLine": 223,
+          "claim": "ListInterventionRerunRequests current source fact"
+        }
+      ],
+      "physicalSha256": "47decbe5f68826ba9e42f34b919c6d61f7ff42a820160c3a469cdaeb5cb5c8c4",
+      "gitBlob": "c05f8a28ce7bfff63ad14bd3a9e5764a38f3e998",
+      "lineCount": 230
+    },
+    {
+      "path": "backend/api/handlers/channels.go",
+      "references": [
+        {
+          "function": "channel delete",
+          "startLine": 260,
+          "endLine": 296,
+          "claim": "channel delete current source fact"
+        },
+        {
+          "function": "purge source",
+          "startLine": 333,
+          "endLine": 373,
+          "claim": "purge source current source fact"
+        }
+      ],
+      "physicalSha256": "31cddd956d91bb243b7acdfec31406db1ad4424d2a1c2b833f3b5f41fce95b9b",
+      "gitBlob": "cd3b29f251c4f149733acc3504dece9595cae2aa",
+      "lineCount": 1110
+    },
+    {
+      "path": "backend/api/handlers/demo.go",
+      "references": [
+        {
+          "function": "demo cleanup",
+          "startLine": 440,
+          "endLine": 476,
+          "claim": "demo cleanup current source fact"
+        }
+      ],
+      "physicalSha256": "52a822a81bcc9a686923364a3a7a8d881c9df4f8c556d4777e2849903f327e3c",
+      "gitBlob": "062baa619cae22ac8dc8f7a913d1364a83a588d9",
+      "lineCount": 773
+    },
+    {
+      "path": "backend/db/mysql.go",
+      "references": [
+        {
+          "function": "AutoMigrate schema registration",
+          "startLine": 41,
+          "endLine": 60,
+          "claim": "AutoMigrate schema registration current source fact"
+        }
+      ],
+      "physicalSha256": "1dbf1b6fa89cfc8c5b4a33fc77986fed67a9d96edf3bb95aa43f36ce7502e731",
+      "gitBlob": "51b4c257cdcef2d067137099056526547b8a64f8",
+      "lineCount": 167
+    },
+    {
+      "path": "backend/api/router.go",
+      "references": [
+        {
+          "function": "intervention route registration",
+          "startLine": 193,
+          "endLine": 209,
+          "claim": "intervention route registration current source fact"
+        }
+      ],
+      "physicalSha256": "930748786626e1aa3d1926bbd18f29cdb7ae771266c68374d63b7118973c0f58",
+      "gitBlob": "852656409ddbe11518d63b0163bf84a87b28b188",
+      "lineCount": 330
+    },
+    {
+      "path": "backend/api/handlers/jobs.go",
+      "references": [
+        {
+          "function": "DeleteJob",
+          "startLine": 200,
+          "endLine": 249,
+          "claim": "DeleteJob current source fact"
+        },
+        {
+          "function": "ClearJobRuns",
+          "startLine": 304,
+          "endLine": 342,
+          "claim": "ClearJobRuns current source fact"
+        }
+      ],
+      "physicalSha256": "e2e8b0c86cc9390d94b64b8e5f0b16b0806bb37fa335b21e85799fdefe4e3e3e",
+      "gitBlob": "70a04e3087f36a119c0e8f12608773b45295635c",
+      "lineCount": 1007
+    }
+  ],
+  "repairRound": 2
+}

@@ -10,7 +10,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-058.json`
 - Separate R1 seed for accepted R061 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-062.json`
 - GitHub project-branch material publication receipt for the M1-M5 delivery roadmap; remote SHA readback, no product/runtime acceptance.: `docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json`
-- Current R114 onboarding wording/full labels accepted bounded; missing supervisor terminal evidence, B08 raster-qualified/B09 unsupported and full M2/M3/release remain OPEN; next M3-05 executor SPEC.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
+- Current R115 M3-05 intended executor design reviewed; actual implementation/live proof and full milestones OPEN; R114 evidence gaps retained.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
 - All seven selected inheritance findings independently accepted bounded and material exported atd121c9e; full product exits remain open.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
@@ -2937,10 +2937,23 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/mobile_queue.raw.jpg`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_010_protected_container_inspect.stdout.bin`
 - Historical R114 CHANGES_REQUIRED; source/UI accepted bounded, original terminal gap retained; noFREEZE.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/reviews/planning/R115_EXECUTOR_IMPLEMENTATION_WORK_ORDER_DRAFT_2026-10-17.md`
 - R115 documentary M3-05 executor intended contract; no product implementation/runtime authority.: `docs/reviews/R115_INTAKE_AND_FINITE_ROUTE_2026-10-17.md`
 - R115 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/work_orders/CCMAI_RUNTIME_115_EXECUTOR_DESIGN.md`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/reviews/probes/r115_root/final_independent_verification.json`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/reviews/probes/r115_worker/source_identity.json`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/reviews/probes/r115_root/repair1_original.zip`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/reviews/R115_DESIGN_WORKER_RETURN_2026-10-17.md`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/reviews/probes/r115_root/accepted_design_original.zip`
 - R115 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `CVF_SESSION/tranches/CCMAI-RUNTIME-115.json`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/reviews/probes/r115_root/first_pass_identity_review.json`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/reviews/R115_CONSOLIDATED_DESIGN_REVIEW_ROUND1_2026-10-17.md`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/reviews/probes/r115_root/first_pass_original.zip`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/reviews/R115_INDEPENDENT_DESIGN_REVIEW_2026-10-17.md`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/reviews/R115_CONSOLIDATED_DESIGN_REVIEW_ROUND0_2026-10-17.md`
+- Exact final documentary packet bytes after Root metadata normalization; no runtime proof.: `docs/reviews/probes/r115_root/committed_packet_original.zip`
 - R115 documentary M3-05 executor intended contract; no product implementation/runtime authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-115.json`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/specs/M3_WAITDATA_EXECUTOR_R115_SPEC_2026-10-17.md`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

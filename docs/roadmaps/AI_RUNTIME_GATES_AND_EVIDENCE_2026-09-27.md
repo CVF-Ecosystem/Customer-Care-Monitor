@@ -1,5 +1,11 @@
 # Roadmap CSKH: dữ liệu đáng tin, bộ lọc hỗ trợ AI và xử lý có trách nhiệm
 
+## Current R115 M3-05 intended design — 2026-10-17
+
+Source-backed executor/integration SPEC and non-dispatchable R2 implementation DRAFT prepared by Sol Medium and independently reviewed by Root after2documentrepairs;14sourcefiles/31referencebounds/hashpins verified against product68a3d30b. Product source unchanged. Intended path binds fresh execution authority, atomic current-permission/source claim+JobRun, canonical replay, durable call marker/cost, same-case active proposal and legacy compatibility, source/delete provenance fences. Unknown call/ownerloss stays manualhold, no automatic provider replay or invented terminal receipt. This is design acceptance only: executor/fences/activeprojection NOT_IMPLEMENTED, product/DB/liveproof NOT_RUN; no M3/S-stage exit.
+
+Finite next route: separately seed exact R2 implementation order -> bounded source/unit and isolatedDBfault/concurrency proof -> fresh explicitly authorized real-provider acceptance plus independent result. Current candidate budgets are proposals, no provider/secret/runtime grant or deploy. R102 remains localrevision/nonexecutingintent; R114CHANGES_REQUIRED/noFREEZE/terminalgap, B08rasterqualified/B09unsupported, R1103Dashboardfailures and fullM2/M3/pilot/release/M1business gaps retained; accounts parked. No newUI/tool-repair chain, old budget reuse, push/merge/deploy. Earlier sections below are historical.
+
 ## Current R114 bounded onboarding result — 2026-10-17
 
 Sourceaa92c149/campaignHEAD95401340: shared banner now says **Cài đặt AI** and all5onboarding labels are fully readable/wrapped on desktop and actualCSS390x844 queue/detail. Root independent3focusedtestsPASS/exit0 and forcedtypecheckPASS; no full-suite rerun. This resolves the two observed R113onboarding defects on current source, not allUI/fullM3. [Independent review](../reviews/R114_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md). B07inheritedR113boundedUI; B08DOM390x844 plus prior form/history evidence qualified by JPEG raster(queue390x843/detail375x811); exact390x844rawPNGunobserved. DerivedPNGnoresize. B09unsupportedNOT_RUN.

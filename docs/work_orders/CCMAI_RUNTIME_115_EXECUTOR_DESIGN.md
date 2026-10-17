@@ -1,6 +1,6 @@
 # R115 actual WAIT_DATA executor/integration design
 
-Status: ACTIVE
+Status: COMPLETE_PENDING_REVIEW
 Risk: R1
 dispatchKind: INITIAL
 Worker: /root/r115_executor_spec

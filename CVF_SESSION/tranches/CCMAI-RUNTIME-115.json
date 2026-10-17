@@ -45,13 +45,25 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_115_EXECUTOR_DESIGN.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
   "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "DOCUMENTARY_DESIGN_ONLY_PRODUCT_NOT_DISPATCHED",
+  "reviewEvidence": [
+    "docs/reviews/R115_CONSOLIDATED_DESIGN_REVIEW_ROUND0_2026-10-17.md",
+    "docs/reviews/R115_CONSOLIDATED_DESIGN_REVIEW_ROUND1_2026-10-17.md",
+    "docs/reviews/R115_INDEPENDENT_DESIGN_REVIEW_2026-10-17.md",
+    "docs/reviews/probes/r115_root/final_independent_verification.json"
+  ],
+  "disposition": "INTENDED_DESIGN_ACCEPTED_ONLY_IMPLEMENTATION_NOT_DISPATCHED",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -59,7 +71,7 @@
     "SPEC",
     "WORK_ORDER"
   ],
-  "phase": "BUILD",
-  "status": "BUILD",
-  "workOrderStatus": "ACTIVE"
+  "phase": "REVIEW",
+  "status": "REVIEW_PENDING",
+  "workOrderStatus": "COMPLETE_PENDING_REVIEW"
 }
