@@ -1,10 +1,10 @@
 {
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "activeTranche": "CCMAI-RUNTIME-112",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R112_REMAINING_UI_2026-10-17.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-112 BUILD exact runtime admitted at binding source9e7620b1/inheritedUIa28cdd0a. Root32function/class parity and11sourcepins PASS, exclusive112runtime root ABSENT. Luna verifies root absent then sole fixture/backend/Vite campaign1200s; frontendtests0/typecheck0/native0/Go0/retry0, UI8POST/tabs3. Root integrated browser B07/B08, B09 only documented support, no lifecycle replay. No source/HEAD changes until exact owned cleanup/terminal return. PriorR110HOLD/effects0 andR111notdispatched immutable. No FREEZE/full acceptance; Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, accounts parked.",
-  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / connected browser verifier / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r108_browser_luna Luna Max IMPLEMENTATION_WORKER R112 binding-only supervisor, no browser role.",
+  "nextAllowedMove": "CCMAI-RUNTIME-112 CHANGES_REQUIRED: sole start failed before fixture startup because pinned Docker target inspect and protected-inventory ps timed out; owned Docker children terminated, final fixture/protected state NOT_OBSERVED. Fixture/backend/Vite/native/Go/productUI0; start1/retry0, unused slots stayunused. Source9e7620b1/inheritedUIa28cdd0a stable;26PASS3knownDashboardFAIL/typecheckPASS, current rendered wording and B07/B08/B09 NOT_RUN. STOP runtime/browser here per owner; transfer full preserved R110/R111/R112 packet to another integrated-browser agent with responsive Docker and fresh bounded authority, no replay/reset/restart. R109 partial native/B01-B06/B10 retained; no FREEZE/fullM2/M3/pilot/release acceptance, Dashboard3 OPEN, R102 local FROZEN, Facebook/ZaloOA accounts parked.",
+  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r108_browser_luna Luna Max returned BLOCKED_WITH_REASON and stopped; no active runtime/browser execution.",
   "updatedAt": "2026-10-17",
   "schemaVersion": "1.0",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
@@ -14,13 +14,13 @@
     "instruction": "cho phép bạn audit và tự xử lý để có kết quả cần thiết. trường hợp chạy browser trong môi trường runtime không được thì dừng, báo tôi chuyển agent khác làm. chú ý: ngôn ngữ thể hiện trên ui/ux, ko để xuất hiện ngôn ngữ của Dev",
     "scope": "Owner authorizes audit and necessary bounded handling toward pending REOPEN/UI outcome; Root must prepare current authority/build/evidence contract, not reset old seeds or budgets.",
     "stopCondition": "If runtime browser cannot operate, stop and ask owner to transfer execution to a connected agent; no alternate automation stack or runtime blind retry.",
-    "status": "OWNER_AUDIT_HANDLING_ACTIVE_R108_SPENT_R109_PREPARATION",
-    "handoff": "docs/reviews/R107_R108_BROWSER_STOP_HANDOFF_2026-10-16.md"
+    "status": "OWNER_STOP_TRANSFER_R112_DOCKER_INSPECTION_TIMEOUT",
+    "handoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R112_REMAINING_UI_2026-10-17.md"
   },
   "x-ownerUiLanguageDirective": {
     "date": "2026-10-16",
     "source": "Explicit owner UI/UX instruction",
     "requirement": "All product-facing labels, statuses, instructions and error messages must use language understandable to end users. Do not expose developer jargon, raw API/enum/error codes, stack traces, runtime/tooling/governance implementation details in ordinary UI flows. Keep technical diagnostics in evidence/logs.",
-    "verification": "R108 source audit findings recorded; bounded R109 repair and rendered verification pending."
+    "verification": "R110 bounded source wording repair/qualified tests accepted; rendered current UI NOT_RUN after R112 Docker inspection timeouts."
   }
 }

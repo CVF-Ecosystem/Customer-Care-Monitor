@@ -38,7 +38,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "R094 bounded M2 source/local manual synthetic intervention prototype independently reviewed: authenticated route, snapshot evidence, monotonic call admission, queue/detail and failure handling; real provider0, default app disabled, full M2/M3/pilot OPEN. docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
     "R063 bounded rule_observation RO01..12 FROZEN under separate R064 authority at medium child source55e836a: root53top152PASS, two semantic mutation kills/healthy classification contrasts, restored9top43PASS;213member restoration/cleanup, exact8oldtestlines preserved, source/preparation/execution/scalars unchanged. Fingerprint is observed content, unavailable permission/policy-version/WAIT_DATA honest; full S2/live/governance/hosted still unestablished.",
@@ -2031,9 +2031,7 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [
-    "docs/work_orders/CCMAI_RUNTIME_112_REMAINING_UI.md"
-  ],
+  "activeWorkOrders": [],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -2811,11 +2809,12 @@
     "nextAction": "New112 explicit predecessor status reconciliation"
   },
   "x-r112Current": {
-    "status": "BUILD_RUNTIME_ADMITTED",
+    "status": "CHANGES_REQUIRED",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_112_REMAINING_UI.md",
     "handoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R112_REMAINING_UI_2026-10-17.md",
-    "runtime": "NOT_RUN_UNCONSUMED",
-    "nextAction": "CCMAI-RUNTIME-112 BUILD exact runtime admitted at binding source9e7620b1/inheritedUIa28cdd0a. Root32function/class parity and11sourcepins PASS, exclusive112runtime root ABSENT. Luna verifies root absent then sole fixture/backend/Vite campaign1200s; frontendtests0/typecheck0/native0/Go0/retry0, UI8POST/tabs3. Root integrated browser B07/B08, B09 only documented support, no lifecycle replay. No source/HEAD changes until exact owned cleanup/terminal return. PriorR110HOLD/effects0 andR111notdispatched immutable. No FREEZE/full acceptance; Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, accounts parked.",
-    "sourceCommit": "9e7620b138ca218e63c903f52603f786670a6028"
+    "runtime": "FAILED_BEFORE_FIXTURE_DOCKER_TIMEOUTS",
+    "nextAction": "CCMAI-RUNTIME-112 CHANGES_REQUIRED: sole start failed before fixture startup because pinned Docker target inspect and protected-inventory ps timed out; owned Docker children terminated, final fixture/protected state NOT_OBSERVED. Fixture/backend/Vite/native/Go/productUI0; start1/retry0, unused slots stayunused. Source9e7620b1/inheritedUIa28cdd0a stable;26PASS3knownDashboardFAIL/typecheckPASS, current rendered wording and B07/B08/B09 NOT_RUN. STOP runtime/browser here per owner; transfer full preserved R110/R111/R112 packet to another integrated-browser agent with responsive Docker and fresh bounded authority, no replay/reset/restart. R109 partial native/B01-B06/B10 retained; no FREEZE/fullM2/M3/pilot/release acceptance, Dashboard3 OPEN, R102 local FROZEN, Facebook/ZaloOA accounts parked.",
+    "sourceCommit": "9e7620b138ca218e63c903f52603f786670a6028",
+    "review": "docs/reviews/R112_INDEPENDENT_RUNTIME_HOLD_REVIEW_2026-10-17.md"
   }
 }

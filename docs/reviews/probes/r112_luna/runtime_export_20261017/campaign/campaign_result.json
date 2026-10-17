@@ -1,0 +1,32 @@
+{
+  "binarySha256": "cb73ee13e0369cca75ea276cc668f30c3ced42cead5f62c56d68f3c1eaa66f93",
+  "browserReadyObserved": false,
+  "campaignId": "r112-1792201025-19336",
+  "claimLimit": "R112 supervised synthetic local UI only; native evidence is inherited and NOT_RUN, with no full product/governance/release claim",
+  "cleanupErrors": [
+    "post-campaign protected inventory: Hold",
+    "owned fixture final state was not verified"
+  ],
+  "elapsedSeconds": 33.425,
+  "fixtureCleanupVerified": false,
+  "mysqlReadinessProbes": 0,
+  "mysqlServerErrorNumber": null,
+  "nativeActionCount": 0,
+  "nativeClassification": "INHERITED_NOT_RUN",
+  "nativeExitCode": null,
+  "nativeLifecycleAccepted": null,
+  "proposedStatus": "FAILED",
+  "protectedInventoryUnchanged": null,
+  "reason": "bounded campaign exception: Hold",
+  "status": "PENDING_FINALIZATION",
+  "trancheId": "CCMAI-RUNTIME-112",
+  "uiPostCounts": {
+    "blockedByLocalHarness": 0,
+    "budgetCounted": 0,
+    "exceeded": false,
+    "forwarded": 0,
+    "ginPostObserved": 0,
+    "remaining": 8,
+    "submitted": 0
+  }
+}

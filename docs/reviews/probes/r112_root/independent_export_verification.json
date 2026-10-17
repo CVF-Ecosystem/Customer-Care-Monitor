@@ -1,0 +1,19 @@
+{
+  "observedAtUTC": "2026-10-17T01:42:22.505668+00:00",
+  "result": "PASS_EXPORTED_EVIDENCE_INTEGRITY_ONLY",
+  "campaignFilesCompared": 12,
+  "exportIndexedFilesVerified": 16,
+  "exportActualFilesIncludingManifest": 17,
+  "exportManifestSha256": "f1228ba543d76a7168f10dd2401c54405223e815d708e34e6b65d30ec254f0c7",
+  "runtimeOutcome": "FAILED",
+  "intermediateResultStatus": "PENDING_FINALIZATION",
+  "dockerTimedOutChildrenTerminated": 2,
+  "fixtureStartAttempted": false,
+  "productTabs": 0,
+  "uiPosts": 0,
+  "sourcePinsStable": true,
+  "headCommit": "c028f62ec4993f41c65cb9ed484a428db4f72b61",
+  "fixtureFinalState": "NOT_OBSERVED",
+  "protectedFinalState": "NOT_OBSERVED",
+  "scope": "Integrity verification only, not runtime/cleanup/product PASS"
+}

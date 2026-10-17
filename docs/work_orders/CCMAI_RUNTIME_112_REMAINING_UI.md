@@ -1,13 +1,13 @@
 # R112 remaining UI after prelaunch directory collision
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 dispatchKind: INITIAL
 Worker: /root/r108_browser_luna (Luna Max IMPLEMENTATION_WORKER; source bindings and runtime supervisor only)
 Reviewer: Codex /root
 Commit steward: Codex /root
 providerExecutionAuthority: NONE
-Disposition: RUNTIME_ADMITTED_PENDING_SINGLE_CAMPAIGN
+Disposition: DOCKER_INSPECTION_TIMEOUT_BEFORE_FIXTURE_TRANSFER_REQUIRED
 
 ## Intake, design and specification inheritance
 
@@ -116,3 +116,7 @@ R111 never dispatched because Root omitted the110 status transition from its see
 ## Exact runtime admission
 
 Root admits binding source 9e7620b138ca218e63c903f52603f786670a6028 and unchanged R110 UI sourcea28cdd0a. Root observed exclusive runtime root absent; final worker check is mandatory immediately before sole start. Require committed runtime_admission.json with all exact source/evidence/seed pins. R110/R111 failures retained, no retries or source changes; frontendtests/typecheck/native/Go0, UI8POST,1200s and owned cleanup.
+
+## Independent terminal disposition
+
+CHANGES_REQUIRED/freezeOPEN. One start ended FAILED before fixture start: target Docker inspect and protected inventory ps timed out, empty stdout/stderr, owned command children terminated. Backend/Vite/native/Go/product UI0. Final fixture/protection NOT_OBSERVED; currentB07/B08/B09NOT_RUN. Source/admission stable, inherited qualified test failures remain. Stop/transfer per owner; no replay/new effects under112.

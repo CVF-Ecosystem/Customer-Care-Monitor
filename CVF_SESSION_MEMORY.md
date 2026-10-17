@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R112_REMAINING_UI_2026-10-17.md", "activeTranche": "CCMAI-RUNTIME-112", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R112_REMAINING_UI_2026-10-17.md", "activeTranche": "CCMAI-RUNTIME-112", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R112_REMAINING_UI_2026-10-17.md
 
-CCMAI-RUNTIME-112 BUILD exact runtime admitted at binding source9e7620b1/inheritedUIa28cdd0a. Root32function/class parity and11sourcepins PASS, exclusive112runtime root ABSENT. Luna verifies root absent then sole fixture/backend/Vite campaign1200s; frontendtests0/typecheck0/native0/Go0/retry0, UI8POST/tabs3. Root integrated browser B07/B08, B09 only documented support, no lifecycle replay. No source/HEAD changes until exact owned cleanup/terminal return. PriorR110HOLD/effects0 andR111notdispatched immutable. No FREEZE/full acceptance; Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, accounts parked.
+CCMAI-RUNTIME-112 CHANGES_REQUIRED: sole start failed before fixture startup because pinned Docker target inspect and protected-inventory ps timed out; owned Docker children terminated, final fixture/protected state NOT_OBSERVED. Fixture/backend/Vite/native/Go/productUI0; start1/retry0, unused slots stayunused. Source9e7620b1/inheritedUIa28cdd0a stable;26PASS3knownDashboardFAIL/typecheckPASS, current rendered wording and B07/B08/B09 NOT_RUN. STOP runtime/browser here per owner; transfer full preserved R110/R111/R112 packet to another integrated-browser agent with responsive Docker and fresh bounded authority, no replay/reset/restart. R109 partial native/B01-B06/B10 retained; no FREEZE/fullM2/M3/pilot/release acceptance, Dashboard3 OPEN, R102 local FROZEN, Facebook/ZaloOA accounts parked.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / connected browser verifier / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r108_browser_luna Luna Max IMPLEMENTATION_WORKER R112 binding-only supervisor, no browser role.
+Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r108_browser_luna Luna Max returned BLOCKED_WITH_REASON and stopped; no active runtime/browser execution.
 
 Mandatory pre-dispatch learning: docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md. R109 interrupted packet stays unchanged.
 

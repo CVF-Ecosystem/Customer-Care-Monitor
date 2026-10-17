@@ -72,22 +72,26 @@
   "browserOperator": "Codex /root",
   "browserTool": "mcp__cua_repl",
   "browserSurface": "iab",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
   "baseCommit": "db93d36ed560d02f5b7b475d66f64f1b8487c499",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_112_REMAINING_UI.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
   "buildCommit": "9e7620b138ca218e63c903f52603f786670a6028",
   "reviewEvidence": [
-    "docs/reviews/R112_INDEPENDENT_BINDING_REVIEW_2026-10-17.md"
+    "docs/reviews/R112_INDEPENDENT_BINDING_REVIEW_2026-10-17.md",
+    "docs/reviews/R112_REMAINING_UI_WORKER_RETURN_2026-10-17.md",
+    "docs/reviews/R112_INDEPENDENT_RUNTIME_HOLD_REVIEW_2026-10-17.md"
   ],
-  "disposition": "RUNTIME_ADMITTED_PENDING_SINGLE_CAMPAIGN",
+  "disposition": "DOCKER_INSPECTION_TIMEOUT_BEFORE_FIXTURE_TRANSFER_REQUIRED",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -99,9 +103,19 @@
     "sourceCommit": "9e7620b138ca218e63c903f52603f786670a6028",
     "inheritedUiSource": "a28cdd0ac9ad1c9d1fd30ced6cf627dd62a56ba2",
     "admission": "docs/reviews/probes/r112_root/runtime_admission.json",
-    "status": "NOT_RUN_UNCONSUMED",
+    "status": "FAILED_PRE_FIXTURE_START_SPENT",
     "frontendTestsUsed": 0,
     "frontendTypechecksUsed": 0,
-    "runtimeStarts": 0
+    "runtimeStarts": 1,
+    "fixtureStarts": 0,
+    "backendLaunches": 0,
+    "viteLaunches": 0,
+    "nativeInvocations": 0,
+    "uiPosts": 0,
+    "retries": 0,
+    "goCompiles": 0,
+    "dockerCommandTimeouts": 2,
+    "fixtureFinalState": "NOT_OBSERVED",
+    "protectedFinalState": "NOT_OBSERVED"
   }
 }

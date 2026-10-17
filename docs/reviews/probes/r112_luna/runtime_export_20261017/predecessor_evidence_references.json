@@ -1,0 +1,16 @@
+{
+  "R110_prelaunch_HOLD": {
+    "duplicated": false,
+    "evidenceDirectory": "docs/reviews/probes/r110_luna/prelaunch_hold/",
+    "workerReturn": "docs/reviews/R110_REMAINING_UI_WORKER_RETURN_2026-10-17.md"
+  },
+  "R111_not_dispatched": {
+    "duplicated": false,
+    "formalOrder": "docs/work_orders/CCMAI_RUNTIME_111_REMAINING_UI.md",
+    "predecessorChecks": "docs/reviews/probes/r112_root/predecessor_checks/r111_checks/"
+  },
+  "R112_admission": {
+    "prestartCheck": "docs/reviews/probes/r112_root/prestart_admission_check.json",
+    "runtimeAdmission": "docs/reviews/probes/r112_root/runtime_admission.json"
+  }
+}
