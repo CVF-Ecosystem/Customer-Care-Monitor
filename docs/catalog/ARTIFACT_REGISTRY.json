@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R115_EXECUTOR_DESIGN_2026-10-17.md",
       "status": "ACTIVE",
-      "description": "Current R114 onboarding wording/mobile repair; fresh source authority, runtime not admitted; inherited qualified evidence preserved."
+      "description": "Active R115 documentary M3-05 executor design handoff; no implementation/runtime authority."
     },
     {
       "id": "r060-work-order",
@@ -24552,6 +24552,27 @@
       "path": "docs/reviews/R115_INTAKE_AND_FINITE_ROUTE_2026-10-17.md",
       "status": "ACTIVE",
       "description": "R115 documentary M3-05 executor intended contract; no product implementation/runtime authority."
+    },
+    {
+      "id": "r115-a896f0e452fb1a7d13",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-115.json",
+      "status": "ACTIVE",
+      "description": "R115 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r115-5924c227027b66d321",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_115_EXECUTOR_DESIGN.md",
+      "status": "ACTIVE",
+      "description": "R115 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-historical-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "Historical R114 CHANGES_REQUIRED; source/UI accepted bounded, original terminal gap retained; noFREEZE."
     }
   ]
 }

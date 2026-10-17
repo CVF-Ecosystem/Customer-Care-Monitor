@@ -1,6 +1,6 @@
 # R114 onboarding wording and mobile repair
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 
@@ -33,3 +33,5 @@ Root REVIEW acknowledgment and handoff: canonical current state/bootstrap/memory
 Roadmap reassessment after repeated missing terminal evidence: stop automatic UI/supervisor campaigns and tool-repair chains. Read-only recovery only if original host actually exposes receipt. No reset/replayoldtranches. Next meaningful product route is M3-05 actualWAIT_DATAexecutor/source-writer integration SPEC -> separate bounded BUILD/live-proof authority. This scope grants no provider/secret/live governance effect. FullM2/M3/pilot/release and3Dashboardfailures OPEN, R102localintentonly, Facebook/ZaloOAparked. Review: docs/reviews/R114_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md. Evidence package: docs/reviews/probes/r114_root/independent_outcome.json.
 
 Final profile gate held HANDOFF_NOT_ACTIVE because Root used tranche disposition as handoff lifecycle status. Root corrected handoff Status ACTIVE while tranche CHANGES_REQUIRED/orderBLOCKED_WITH_REASON/FREEZEOPEN remain unchanged. Failed gate outputs retained in final_checks/checks.json history. No product/runtime repair or claim upgrade.
+
+Current pointer moves to R115 documentary M3-05 design; R114 disposition remainsCHANGES_REQUIRED/noFREEZE, no runtime replay.

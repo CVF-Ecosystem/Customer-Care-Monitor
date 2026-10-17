@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,11 +12,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-114",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-114 CHANGES_REQUIRED: onboarding wording/full labels accepted on sourceaa92c149 and CSS390x844, but original supervisor exit/cleanup/source-after missing; noFREEZE/no further114runtime. Recover original receipts read-only only if available; do not replay/reset old budgets. B07inherited, B08rasterqualified, B09unsupportedNOT_RUN. Next product move M3-05 executor/integration SPEC before separate authority; fullM2/M3/pilot/release OPEN, no provider/secret/push/deploy; accounts parked.",
+  "activeTranche": "CCMAI-RUNTIME-115",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R115_EXECUTOR_DESIGN_2026-10-17.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-115 BUILD: Sol Medium authors source-backed M3-05 executor/source-writer integration SPEC, implementation DRAFT and identity/acceptance matrix only; Root independently reviews and commits. Zero product/runtime/Docker/browser/provider/network/secret/test effects. Separate future R2 authority before implementation or live proof; R114 CHANGES_REQUIRED/noFREEZE, B08qualified/B09unsupported and fullM2/M3/pilot/release OPEN; accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r114_onboarding_luna returned idle, no further runtime",
+  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r115_executor_spec Sol Medium SPEC_AUTHOR documentary worker",
   "updatedAt": "2026-10-17",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {
