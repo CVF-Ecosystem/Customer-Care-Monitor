@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "docker",
+    "image",
+    "inspect",
+    "--format",
+    "{{.Id}}",
+    "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+  ],
+  "exit": 0,
+  "seconds": 0.351,
+  "stdoutSha256": "7f43a3012a5bc28c403205ac0de7d039180c9ae361cb404bd09e11043160153d",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

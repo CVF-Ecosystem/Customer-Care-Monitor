@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R119_CURRENT_UI_PROOF_2026-10-18.md", "activeTranche": "CCMAI-RUNTIME-119", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R119_CURRENT_UI_PROOF_2026-10-18.md", "activeTranche": "CCMAI-RUNTIME-119", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
+- Current mode: BUILD
+- Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R119_CURRENT_UI_PROOF_2026-10-18.md
 
 CCMAI-RUNTIME-119 source-helper BUILD then Root independent review/compile and committed exact source-binary admission before sole new fixture setup; committed exact resource admission before backend/Vite/browser current-proposal/history wording proof. Synthetic UI structure only, max1campaign/auth2/caseActions0/provider0; no old replay or generic tool-repair chain. R118 source and R117 spent real evidence inherited; B08raster/B09unsupported/fullM2/M3/pilot/release OPEN, Facebook/ZaloOA parked; no push/merge/deploy.
 
-Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol source-only worker pending BUILD; independent Root REVIEWER/runtime custodian reserved
+Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; original Sol draft worker unavailable, delegated Luna REPAIR_WORKER active source BUILD; runtime HOLD
 
 R118 source7f74a75f independently24tests/app typecheckPASS, checkpointdd60d8d0; current UI-render unverified. R117 backend real synthetic result inherited1of1 consumed, no replay. R119 fresh synthetic UI structure only; two exact admissions before effects, no provider/secret/lifecycle authority.
 

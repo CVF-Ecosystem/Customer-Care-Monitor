@@ -1,9 +1,10 @@
 # R119 current proposal/history finite browser proof
 
-Status: DISPATCH_READY
+Status: ACTIVE
 Risk: R2
 dispatchKind: INITIAL
 Worker: /root/r119_runtime_design
+Repair worker: /root/r119_repair_luna
 Reviewer: Codex /root
 Commit steward: Codex /root
 providerExecutionAuthority: NONE
@@ -54,3 +55,5 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 | committed_range_closure | POST_MATERIAL_CLOSURE | reviewer | POST_MATERIAL_CLOSURE | R119 local range profile checks | BOUNDED_PATH_FAMILIES | commit-steward | CONTINUITY_COMMIT | continuity |
 
 Material-SHA marker: 7d944e253ca849d4ea9aede420c2ca679f81c35c. Source-only dispatch; runtime separate committed admissions.
+
+Same-scope completion assignment: original Sol worker usage limit after partial source/no check receipt; delegated Luna repair worker finishes within same worker2Python cap, not fresh budget. Root draftreview records one conservative repair round. No seed/allowed-path/risk/effects/commit-owner change.

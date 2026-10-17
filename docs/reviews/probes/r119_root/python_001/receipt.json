@@ -1,0 +1,28 @@
+{
+  "argv": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "scripts.tests.test_r119_ui_supervisor"
+  ],
+  "rootPythonInvocation": 1,
+  "exit": 0,
+  "elapsedSeconds": 0.933,
+  "sourceBefore": {
+    "scripts/r119_ui_supervisor.py": "f8f085a798abf5142a391103fbbaa3c12a49154674235699380e535a5b3695ad",
+    "scripts/r119_vite_config.mjs.template": "7147fd7dea0ab53325459978ed980485b7787620e7af8d672f706a9965769237",
+    "scripts/tests/test_r119_ui_supervisor.py": "8405dd12da0a03f6ea11f6994f2bade8d9e7a6730222555c25b3af9dc0355163",
+    "backend/api/handlers/intervention_ui_r119_test.go": "8225b08530951ad7ba11978cf2a5ebdaa1764518d106b8d74c0d8fbad30db687"
+  },
+  "sourceAfter": {
+    "scripts/r119_ui_supervisor.py": "f8f085a798abf5142a391103fbbaa3c12a49154674235699380e535a5b3695ad",
+    "scripts/r119_vite_config.mjs.template": "7147fd7dea0ab53325459978ed980485b7787620e7af8d672f706a9965769237",
+    "scripts/tests/test_r119_ui_supervisor.py": "8405dd12da0a03f6ea11f6994f2bade8d9e7a6730222555c25b3af9dc0355163",
+    "backend/api/handlers/intervention_ui_r119_test.go": "8225b08530951ad7ba11978cf2a5ebdaa1764518d106b8d74c0d8fbad30db687"
+  },
+  "unchanged": true,
+  "runtimeAbsent": true,
+  "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderrSha256": "d7811b4bfe25d7e0c1be763690d30768631820097fc32400a15d62571fa7846d"
+}

@@ -1,10 +1,10 @@
 {
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "activeTranche": "CCMAI-RUNTIME-119",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R119_CURRENT_UI_PROOF_2026-10-18.md",
   "nextAllowedMove": "CCMAI-RUNTIME-119 source-helper BUILD then Root independent review/compile and committed exact source-binary admission before sole new fixture setup; committed exact resource admission before backend/Vite/browser current-proposal/history wording proof. Synthetic UI structure only, max1campaign/auth2/caseActions0/provider0; no old replay or generic tool-repair chain. R118 source and R117 spent real evidence inherited; B08raster/B09unsupported/fullM2/M3/pilot/release OPEN, Facebook/ZaloOA parked; no push/merge/deploy.",
-  "activeRole": "Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol source-only worker pending BUILD; independent Root REVIEWER/runtime custodian reserved",
+  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; original Sol draft worker unavailable, delegated Luna REPAIR_WORKER active source BUILD; runtime HOLD",
   "updatedAt": "2026-10-18",
   "schemaVersion": "1.0",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",

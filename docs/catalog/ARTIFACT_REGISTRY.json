@@ -32266,6 +32266,209 @@
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R118_CURRENT_PROPOSAL_UI_2026-10-18.md",
       "status": "ACTIVE",
       "description": "Historical R118 accepted source/component only; current-render open."
+    },
+    {
+      "id": "r119-4a41829cfab5f8fc",
+      "family": "continuity",
+      "path": "docs/reviews/R119_DRAFT_SOURCE_REVIEW_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-3e8da285e6cfb01a",
+      "family": "continuity",
+      "path": "docs/reviews/R119_IMPLEMENTATION_WORKER_RETURN_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-dc095832fbb1abdd",
+      "family": "continuity",
+      "path": "docs/reviews/R119_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-3d64a3cadaf9fd38",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/python_001/receipt.json",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-b77345fe24cd9383",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/python_001/stderr.bin",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-2b81baf42eddda7f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/python_001/stdout.bin",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-5d07d49058d26c91",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/readiness/0.json",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-de8598de4782a7e5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/readiness/0.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-b145061ecdb91eb2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/readiness/0.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-edff1de5a30b4346",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/readiness/1.json",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-0dfa7d587d780605",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/readiness/1.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-693402b0d81580cb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/readiness/1.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-576b0ddfe15033d6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/readiness/2.json",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-ba819a9ac9fb23a8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/readiness/2.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-d7de3cbe86a5c471",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/readiness/2.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-ae83405b7c946fe2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/readiness/3.json",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-5ae61f510cc0fabc",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/readiness/3.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-e0e19c41c1193133",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/readiness/3.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-1f44b72ac42de841",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/readiness/browser_capability_transcription.json",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-ce3f9be46f7a6f8d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/readiness/executables.json",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-73094d2266524784",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/readiness/frontend_source_baseline.json",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-e02d51d826055d0d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/readiness/refresh_20261017T232738Z/receipt.json",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-29010561385e165b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/readiness/refresh_20261017T232738Z/stderr.bin",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-388516daebb3b3de",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/readiness/refresh_20261017T232738Z/stdout.bin",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-318542155e49014d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_worker/checks.json",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-72ac7d73864f7f69",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_worker/python_001.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-97d51af26db94ef4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_worker/python_001.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-eb45704ef587565e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_worker/python_002.stderr.bin",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-509bd5db844363c3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_worker/python_002.stdout.bin",
+      "status": "ACTIVE",
+      "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
     }
   ]
 }

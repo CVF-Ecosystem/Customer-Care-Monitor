@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "docker",
+    "network",
+    "ls",
+    "--no-trunc",
+    "--format",
+    "{{json .}}"
+  ],
+  "exit": 0,
+  "seconds": 0.269,
+  "stdoutSha256": "eb696faa9013724f091a495aa41a44b0b143c0c3f92742241c0e36d9a9b3c5c3",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "docker",
+    "ps",
+    "-a",
+    "--no-trunc",
+    "--format",
+    "{{json .}}"
+  ],
+  "exit": 0,
+  "seconds": 0.429,
+  "stdoutSha256": "5b3d759314476e322b4cb52902889eda3297550511fb8a45ab67e7cfb05a16cd",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

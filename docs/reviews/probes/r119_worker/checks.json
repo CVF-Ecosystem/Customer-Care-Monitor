@@ -1,0 +1,37 @@
+[
+  {
+    "check": 1,
+    "argv": [
+      "python",
+      "-B",
+      "-m",
+      "unittest",
+      "scripts.tests.test_r119_ui_supervisor"
+    ],
+    "workingDirectory": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+    "exitCode": 0,
+    "stdoutFile": "docs\\reviews\\probes\\r119_worker\\python_001.stdout.bin",
+    "stdoutBytes": 0,
+    "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderrFile": "docs\\reviews\\probes\\r119_worker\\python_001.stderr.bin",
+    "stderrBytes": 111,
+    "stderrSha256": "a079559ead7a3e34ae5c67ded93f4f4a869c944303a5e4cbfcaa4f90a1d2d0ae"
+  },
+  {
+    "check": 2,
+    "argv": [
+      "python",
+      "-B",
+      "scripts/r119_ui_supervisor.py",
+      "inspect"
+    ],
+    "workingDirectory": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+    "exitCode": 0,
+    "stdoutFile": "docs\\reviews\\probes\\r119_worker\\python_002.stdout.bin",
+    "stdoutBytes": 180,
+    "stdoutSha256": "2a9e44724ee56cefb73095537f37d847623bdcf738d1a0c9d4da2a667a72cf28",
+    "stderrFile": "docs\\reviews\\probes\\r119_worker\\python_002.stderr.bin",
+    "stderrBytes": 0,
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

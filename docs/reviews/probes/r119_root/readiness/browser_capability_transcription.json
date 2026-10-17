@@ -1,0 +1,28 @@
+{
+  "recordKind": "ROOT_TRANSCRIPTION_NOT_RAW_TOOL_EXPORT",
+  "inventory": {
+    "apps": [],
+    "browsers": [
+      {
+        "id": "2",
+        "type": "iab",
+        "tabs": []
+      },
+      {
+        "id": "1",
+        "type": "mcpapps",
+        "tabs": []
+      }
+    ]
+  },
+  "browserCapabilities": [
+    "visibility",
+    "viewport"
+  ],
+  "offline": "NOT_RUN_UNSUPPORTED",
+  "route": "official CUA IAB localhost development route documented",
+  "productBrowserStarts": 0,
+  "priorRasterQualification": "R118 blank CSS390x844 originalJPEG390x843 inherited only, not rerun/product proof",
+  "doctor": "27/27PASS, oldmanifestpinwarning, no hostedCI claim",
+  "knowledge": "1README/1chunk ignored .cvf/runtime/r119_knowledge_intake.json"
+}

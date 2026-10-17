@@ -1,0 +1,18 @@
+{
+  "node": {
+    "path": "C:\\Program Files\\nodejs\\node.EXE",
+    "sha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237"
+  },
+  "docker": {
+    "path": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+    "sha256": "6c699720bb9523dedb9eb5d22a49951ea9210dbdb1314a3554029eee9be76896"
+  },
+  "go": {
+    "path": "C:\\Program Files\\Go\\bin\\go.EXE",
+    "sha256": "7d828191ba32519a9c9361789ab647486236ed45c660889196c7770a8ff1985c"
+  },
+  "python": {
+    "path": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "version": "3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]"
+  }
+}

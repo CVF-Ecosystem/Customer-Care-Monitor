@@ -7,7 +7,8 @@
     "workOrderAuthor": "Codex /root",
     "implementationWorker": "/root/r119_runtime_design",
     "reviewer": "Codex /root",
-    "commitSteward": "Codex /root"
+    "commitSteward": "Codex /root",
+    "repairWorker": "/root/r119_repair_luna"
   },
   "allowedPaths": [
     "backend/api/handlers/intervention_ui_r119_test.go",
@@ -77,21 +78,36 @@
   "baseCommit": "7d944e253ca849d4ea9aede420c2ca679f81c35c",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_119_CURRENT_UI_PROOF.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
-  "workOrderStatus": "DISPATCH_READY",
+  "status": "BUILD",
+  "phase": "BUILD",
+  "workOrderStatus": "ACTIVE",
   "buildCommit": null,
-  "reviewEvidence": [],
+  "reviewEvidence": [
+    "docs/reviews/R119_DRAFT_SOURCE_REVIEW_2026-10-18.md",
+    "docs/reviews/R119_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md"
+  ],
   "disposition": "OPEN",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
     "DESIGN",
     "SPEC",
     "WORK_ORDER"
-  ]
+  ],
+  "budgetUsed": {
+    "sourceRepairRounds": 1,
+    "workerPythonChecks": 2,
+    "rootPythonChecks": 1,
+    "rootCompileInvocations": 0,
+    "campaignStarts": 0,
+    "providerCalls": 0
+  }
 }
