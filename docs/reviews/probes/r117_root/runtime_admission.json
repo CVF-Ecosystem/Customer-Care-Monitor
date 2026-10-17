@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "trancheId": "CCMAI-RUNTIME-117",
+  "fixtureSha256": "41b73398a692c153b7bcf889d7691f22d88078d6381fe314ef434beb4709fc93",
+  "sourceAdmissionSha256": "02f0cef7fb1cc0f8ffeaa276cfad04b12d49fd75d460903fdbb3a702387f7ae1",
+  "testBinary": ".cvf/runtime/r117_execution/bin/handlers.test.exe",
+  "reviewerTestBinary": ".cvf/runtime/r117_execution/bin/engine.test.exe",
+  "testModes": {
+    "native": "^TestR116WaitDataNative[A-Za-z0-9_]+$",
+    "reviewer": "^TestR116WaitDataNative[A-Za-z0-9_]+$",
+    "live": "^TestR116WaitDataRealAlibaba$"
+  },
+  "fixtureContainerId": "033e0151bb4805cce1ce6dc347ab79ab8275e016c8ace371cfda158297a2c352",
+  "fixtureImage": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+  "loopbackPort": 59002,
+  "logicalDatabase": "r116_fixture",
+  "dsnSha256": "78cdcd44a9c901b1a2312f012f77fbfeed921660b1a6bd9d93582e7f643e0957",
+  "technicalHarnessCompatibility": "R116 test names/env/schema only; NEW R117 fixture/campaign/grant/physical slots",
+  "nativeAdmission": "Root source/binary/fixture checked; provider NOT admitted before both native groups PASS"
+}

@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "--config",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r117_execution\\docker-cli-config",
+    "network",
+    "create",
+    "--driver",
+    "bridge",
+    "--opt",
+    "com.docker.network.bridge.gateway_mode_ipv4=nat",
+    "--opt",
+    "com.docker.network.bridge.host_binding_ipv4=127.0.0.1",
+    "--label",
+    "ccmai.tranche=CCMAI-RUNTIME-117",
+    "--label",
+    "ccmai.owner=975dd60d-af4d-4090-8ad3-9a46e00370ef",
+    "ccmai-r117-root-20261017"
+  ],
+  "startedAt": "2026-10-17T13:50:51.358477+00:00",
+  "timeoutSeconds": 15
+}

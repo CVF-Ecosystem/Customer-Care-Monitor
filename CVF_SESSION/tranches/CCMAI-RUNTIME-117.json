@@ -123,7 +123,7 @@
     "workerGoChecks": 0,
     "workerPythonChecks": 3,
     "rootPythonChecks": 1,
-    "fixtureStarts": 0,
+    "fixtureStarts": 1,
     "fixtureTeardowns": 0,
     "physicalAlibabaCalls": 0
   },
