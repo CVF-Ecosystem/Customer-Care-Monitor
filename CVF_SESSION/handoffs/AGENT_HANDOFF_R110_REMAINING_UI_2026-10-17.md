@@ -6,9 +6,9 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: BUILD
 - Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r108_browser_luna Luna Max capability returned no browser, proposed source/supervisor worker; Root connected browser operator.
+- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / connected browser verifier / SESSION_SYNC_STEWARD / COMMIT_STEWARD; /root/r108_browser_luna Luna Max IMPLEMENTATION_WORKER admitted supervisor executor, no browser role.
 - Active tranche: CCMAI-RUNTIME-110
-- Next allowed move: CCMAI-RUNTIME-110 BUILD source-only after renewed owner Luna grant and Root integrated HTTP click/capture PASS. Pre-dispatch active closeability PASS; Luna repairs four UI source files and prepares new supervisor, no runtime until committed independent admission. B07 then supported B08/B09 only; inherit R109 partial evidence without replay. Native0/Go0/provider0/retries0; old budgets immutable. Dashboard3/full product/pilot/release OPEN, R102 local FROZEN, accounts parked.
+- Next allowed move: CCMAI-RUNTIME-110 BUILD runtime admitted at reviewed sourcea28cdd0a with actual26PASS/3knownDashboardFAIL retained and typecheckPASS, tooling/config checksPASS. Luna executes one pinned existing fixture/backend/Vite campaign1200s; native0/Go0/retries0, Root integrated browser B07 and actual390x844 B08, B09 only if documented offline control; max8UI POSTs including auth. No lifecycle replay/source changes/HEAD commit during campaign. Stop on browser failure and verify owned cleanup; return exact packet for independent review. No FREEZE/full product acceptance; Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Root acknowledgment
@@ -18,3 +18,7 @@ Owner renewal supersedes the earlier stop for a fresh bounded attempt only. Root
 ## Luna source-worker acknowledgment — 2026-10-17
 
 Luna acknowledges CCMAI-RUNTIME-110 BUILD at dispatch HEAD b313727765da25fcf29599b2005472f8209c90b7 with immutable seed/baseCommit 90d703e5cdd44b8d86dd74fe89c33cd620988d08. Scope is the four authorized UI files (`Dashboard.vue`, `Jobs/JobDetail.vue`, `vi.ts`, `en.ts`), meaningful wording assertions in the two allowed existing tests if needed, and a new R110 runner/template only under `docs/reviews/probes/r110_luna/`. Preserve request, route, provider, permission, unknown-service-state, and Dashboard baseline behavior. No backend, old runner/evidence/seed, fixture, browser, tests, or runtime actions; Root must independently review source and issue separate runtime admission before any validation or campaign execution. Parked Facebook/Zalo OA setup remains unchanged.
+
+## Root runtime admission acknowledgment — 2026-10-17
+
+Root independently reviewed and committed source a28cdd0ac9ad1c9d1fd30ced6cf627dd62a56ba2. Source26/29 with exact3historical Dashboard failures retained, typecheck and puretooling checks PASS. Fresh resumed integrated HTTP click/capture PASS, diagnostic closed. Admit only the new exact R110 campaign after this receipt is committed. No source/HEAD changes until supervised cleanup. Old R109 budgets/evidence unchanged. Root performs product browser evidence; worker rehydrates/acknowledges before start.

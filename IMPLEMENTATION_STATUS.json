@@ -2796,10 +2796,11 @@
     "review": "docs/reviews/R109_INDEPENDENT_INTERRUPTED_REVIEW_2026-10-17.md"
   },
   "x-r110Current": {
-    "status": "BUILD_SOURCE_ONLY",
+    "status": "BUILD_RUNTIME_ADMITTED",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_110_REMAINING_UI.md",
     "handoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R110_REMAINING_UI_2026-10-17.md",
-    "nextAction": "CCMAI-RUNTIME-110 BUILD source-only after renewed owner Luna grant and Root integrated HTTP click/capture PASS. Pre-dispatch active closeability PASS; Luna repairs four UI source files and prepares new supervisor, no runtime until committed independent admission. B07 then supported B08/B09 only; inherit R109 partial evidence without replay. Native0/Go0/provider0/retries0; old budgets immutable. Dashboard3/full product/pilot/release OPEN, R102 local FROZEN, accounts parked.",
-    "runtime": "NOT_RUN_NOT_ADMITTED"
+    "nextAction": "CCMAI-RUNTIME-110 BUILD runtime admitted at reviewed sourcea28cdd0a with actual26PASS/3knownDashboardFAIL retained and typecheckPASS, tooling/config checksPASS. Luna executes one pinned existing fixture/backend/Vite campaign1200s; native0/Go0/retries0, Root integrated browser B07 and actual390x844 B08, B09 only if documented offline control; max8UI POSTs including auth. No lifecycle replay/source changes/HEAD commit during campaign. Stop on browser failure and verify owned cleanup; return exact packet for independent review. No FREEZE/full product acceptance; Dashboard3/fullM2/M3/pilot/release OPEN, R102 local FROZEN, accounts parked.",
+    "runtime": "NOT_RUN_UNCONSUMED",
+    "sourceCommit": "a28cdd0ac9ad1c9d1fd30ced6cf627dd62a56ba2"
   }
 }

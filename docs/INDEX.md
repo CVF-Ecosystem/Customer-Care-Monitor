@@ -2170,6 +2170,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/root_luna_reconnect_20261017/result.json`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_005_protected_container_inspect.json`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_luna/r110_workflow_runner.py`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/bridge_resume_20261017/after_click.png`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/validation_1/forced_typecheck.stdout.txt`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/LUNA_RECONNECT_CAPABILITY_2026-10-17.md`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_003_fixture_volume_users.stderr.bin`
@@ -2195,12 +2196,14 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/tooling_check/rendered.config.mjs`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/tooling_check/config_import.stderr.txt`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/validation_1/focused_tests.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/R110_INDEPENDENT_RUNTIME_ADMISSION_REVIEW_2026-10-17.md`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/readiness_receipt.json`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_luna/r110_vite_config.mjs.template`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/luna_reconnect_20261017/capability_inventory.json`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/dispatch_checks/predispatch_1.json`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/viewport_capability_probe.png`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/dispatch_checks/predispatch_1.stderr.txt`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/runtime_admission.json`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/R110_INDEPENDENT_TOOLING_REVIEW_2026-10-17.md`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_005_protected_container_inspect.stderr.bin`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/R110_DISPATCH_REVIEW_2026-10-17.md`
@@ -2208,10 +2211,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_001_target_inspect.json`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_001_target_inspect.stdout.bin`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `CVF_SESSION/authority/CCMAI-RUNTIME-110.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/bridge_resume_20261017/stop.request`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_002_target_network_inspect.stderr.bin`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/validation_1/source_pins.json`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_004_all_container_ids.stdout.bin`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/dispatch_checks/preflight_dispatch.stderr.txt`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/bridge_resume_20261017/ready.json`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/binary_reuse_verification.json`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_002_target_network_inspect.stdout.bin`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_001_target_inspect.stderr.bin`
@@ -2219,6 +2224,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/root_luna_reconnect_20261017/ready.json`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_003_fixture_volume_users.json`
 - Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_004_all_container_ids.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/bridge_resume_20261017/result.json`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

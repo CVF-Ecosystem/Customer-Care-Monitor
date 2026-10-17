@@ -19477,6 +19477,48 @@
       "path": "docs/reviews/R110_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-17.md",
       "status": "ACTIVE",
       "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-15f11bbd856f6facde",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/bridge_resume_20261017/after_click.png",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-d7631581d21aa2e7d5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/bridge_resume_20261017/ready.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-f8b08bdfb20fc47423",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/bridge_resume_20261017/result.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-c47b4604cf7e416687",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/bridge_resume_20261017/stop.request",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-ad22ebb132d75dd584",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r110_root/runtime_admission.json",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
+    },
+    {
+      "id": "r110-92c53824f1766f5fc7",
+      "family": "continuity",
+      "path": "docs/reviews/R110_INDEPENDENT_RUNTIME_ADMISSION_REVIEW_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance."
     }
   ]
 }

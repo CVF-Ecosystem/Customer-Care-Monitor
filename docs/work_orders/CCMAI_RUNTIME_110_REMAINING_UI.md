@@ -7,7 +7,7 @@ Worker: /root/r108_browser_luna (Luna Max IMPLEMENTATION_WORKER; source and supe
 Reviewer: Codex /root
 Commit steward: Codex /root
 providerExecutionAuthority: NONE
-Disposition: SOURCE_PREPARATION_RUNTIME_NOT_ADMITTED
+Disposition: RUNTIME_ADMITTED_PENDING_SINGLE_CAMPAIGN
 
 ## Intake, design and inherited specification
 
@@ -66,3 +66,7 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 
 
 Material-SHA marker:90d703e5cdd44b8d86dd74fe89c33cd620988d08. Source-only until separate committed runtime admission.
+
+## Exact runtime admission
+
+Root reviewed source a28cdd0ac9ad1c9d1fd30ced6cf627dd62a56ba2 with actual26PASS/3inheritedDashboardFAIL and forcedtypecheckPASS. All three failures match pinned historical R101 output; no all-suite pass or baseline repair. New supervisor/config and pureguard checks PASS. Committed runtime_admission.json must bind all source/evidence hashes before the sole start. Only remaining UI/read-only language observations; native0/Go0/retries0. A retained R109 synthetic owner/case may be read for B08 history/owner-form layout, then owner logout/fresh R110 reader login for B07. No lifecycle writes or token reuse. No source/HEAD mutations during campaign.
