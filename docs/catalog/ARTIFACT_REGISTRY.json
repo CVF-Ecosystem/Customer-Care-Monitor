@@ -32469,6 +32469,55 @@
       "path": "docs/reviews/probes/r119_worker/python_002.stdout.bin",
       "status": "ACTIVE",
       "description": "R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim."
+    },
+    {
+      "id": "r119-e76b5ce703b3b4d6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/pre_runtime_raw.zip",
+      "status": "ACTIVE",
+      "description": "R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending."
+    },
+    {
+      "id": "r119-accbc0a16620aeba",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/pre_runtime_raw_manifest.json",
+      "status": "ACTIVE",
+      "description": "R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending."
+    },
+    {
+      "id": "r119-8f4b7f687b7dc134",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/source_binary_admission.json",
+      "status": "ACTIVE",
+      "description": "R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending."
+    },
+    {
+      "id": "r119-a8c03766476ec0b8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/compile_001/receipt.json",
+      "status": "ACTIVE",
+      "description": "R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending."
+    },
+    {
+      "id": "r119-d62bdee7cb55d847",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/compile_001/reservation.json",
+      "status": "ACTIVE",
+      "description": "R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending."
+    },
+    {
+      "id": "r119-3c8f12d0fa563ae7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/compile_001/stderr.bin",
+      "status": "ACTIVE",
+      "description": "R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending."
+    },
+    {
+      "id": "r119-ad4d33571455944a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r119_root/compile_001/stdout.bin",
+      "status": "ACTIVE",
+      "description": "R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending."
     }
   ]
 }

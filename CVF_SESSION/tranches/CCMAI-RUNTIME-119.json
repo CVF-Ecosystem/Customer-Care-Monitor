@@ -106,7 +106,7 @@
     "sourceRepairRounds": 1,
     "workerPythonChecks": 2,
     "rootPythonChecks": 1,
-    "rootCompileInvocations": 0,
+    "rootCompileInvocations": 1,
     "campaignStarts": 0,
     "providerCalls": 0
   }

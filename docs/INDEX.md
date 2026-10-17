@@ -4043,6 +4043,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/python_001/stdout.bin`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_worker/checks.json`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/refresh_20261017T232738Z/stdout.bin`
+- R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending.: `docs/reviews/probes/r119_root/compile_001/stderr.bin`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/python_001/receipt.json`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/R119_IMPLEMENTATION_WORKER_RETURN_2026-10-18.md`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/R119_DRAFT_SOURCE_REVIEW_2026-10-18.md`
@@ -4053,17 +4054,23 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/1.stdout.bin`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_worker/python_001.stderr.bin`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/frontend_source_baseline.json`
+- R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending.: `docs/reviews/probes/r119_root/source_binary_admission.json`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_worker/python_001.stdout.bin`
+- R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending.: `docs/reviews/probes/r119_root/compile_001/receipt.json`
+- R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending.: `docs/reviews/probes/r119_root/pre_runtime_raw_manifest.json`
+- R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending.: `docs/reviews/probes/r119_root/compile_001/stdout.bin`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/3.json`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/0.stdout.bin`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/python_001/stderr.bin`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/2.stderr.bin`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/executables.json`
+- R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending.: `docs/reviews/probes/r119_root/compile_001/reservation.json`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/2.stdout.bin`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/R119_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/0.stderr.bin`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/refresh_20261017T232738Z/receipt.json`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/3.stdout.bin`
+- R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending.: `docs/reviews/probes/r119_root/pre_runtime_raw.zip`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_worker/python_002.stderr.bin`
 - R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/1.json`
 - Source-helper then separately admitted one current UI campaign.: `docs/work_orders/CCMAI_RUNTIME_119_CURRENT_UI_PROOF.md`
