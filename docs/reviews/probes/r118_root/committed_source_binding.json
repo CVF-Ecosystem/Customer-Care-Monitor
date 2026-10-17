@@ -1,0 +1,42 @@
+{
+  "buildCommit": "7f74a75f93671973bcfe55b5cb491076c0d2bdf9",
+  "allMatch": true,
+  "files": {
+    "frontend/src/__tests__/intervention-ui.test.ts": {
+      "worktreeRawSha256": "4f4b02763208ddae13d0699de601fa9a786996eeb0ec3ce45aa8f0ffc4cc3f0c",
+      "manifestMatches": true,
+      "gitBlobSha256": "4f4b02763208ddae13d0699de601fa9a786996eeb0ec3ce45aa8f0ffc4cc3f0c",
+      "gitNormalizedBytesEqual": true
+    },
+    "frontend/src/api/intervention.ts": {
+      "worktreeRawSha256": "9177f0c9b805ca277c35c05bc7052954d272a3bb8df457ed3cb3822ef5f4d9ef",
+      "manifestMatches": true,
+      "gitBlobSha256": "9177f0c9b805ca277c35c05bc7052954d272a3bb8df457ed3cb3822ef5f4d9ef",
+      "gitNormalizedBytesEqual": true
+    },
+    "frontend/src/i18n/en.ts": {
+      "worktreeRawSha256": "fdef63db782a2aaa6b2b07f61c86df78b7edc04006062afff8cdb040ddb9db30",
+      "manifestMatches": true,
+      "gitBlobSha256": "e14645e21c3364442372387e8565d9154dc206aa2f76ccf72fd79606b446f22e",
+      "gitNormalizedBytesEqual": true
+    },
+    "frontend/src/i18n/vi.ts": {
+      "worktreeRawSha256": "bddd1cf50e69566991ffa0124909c860754cc7b3460add3ccaec4f0007287764",
+      "manifestMatches": true,
+      "gitBlobSha256": "8b3fbc9a950d19e4b2c8f9f7affe4dd1d8ce5999ab928819968c90f72abe2d12",
+      "gitNormalizedBytesEqual": true
+    },
+    "frontend/src/utils/interventionPresentation.ts": {
+      "worktreeRawSha256": "7855913e6f249b905a1f6b8df1b409c55a3e71a12a9f8745fa2350a1acd38e71",
+      "manifestMatches": true,
+      "gitBlobSha256": "7855913e6f249b905a1f6b8df1b409c55a3e71a12a9f8745fa2350a1acd38e71",
+      "gitNormalizedBytesEqual": true
+    },
+    "frontend/src/views/InterventionCases.vue": {
+      "worktreeRawSha256": "ef16c32177138a4d8acc65bfbd8403a0ef30b1b61602e65c6d246e5b6b5542d9",
+      "manifestMatches": true,
+      "gitBlobSha256": "ef16c32177138a4d8acc65bfbd8403a0ef30b1b61602e65c6d246e5b6b5542d9",
+      "gitNormalizedBytesEqual": true
+    }
+  }
+}

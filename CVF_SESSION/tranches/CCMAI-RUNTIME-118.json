@@ -49,20 +49,21 @@
   "baseCommit": "40a301fa33e0b9cb364b283008d08b449da39d18",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_118_CURRENT_PROPOSAL_UI.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "status": "REVIEW_PENDING",
+  "status": "REVIEW_PASS",
   "phase": "REVIEW",
-  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
-  "buildCommit": null,
+  "workOrderStatus": "REVIEWER_ACCEPTED",
+  "buildCommit": "7f74a75f93671973bcfe55b5cb491076c0d2bdf9",
   "reviewEvidence": [
     "docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md"
   ],
-  "disposition": "OPEN",
+  "disposition": "REVIEW_PASS",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
   ],
   "planningPhaseTrace": [
     "INTAKE",

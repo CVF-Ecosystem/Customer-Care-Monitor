@@ -4015,6 +4015,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/worker_return_gate_initial.stdout.txt`
 - R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/capability_observations.json`
 - R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/worker_return_gate_initial.receipt.json`
+- R118 exact original bytes or commit/source binding; source/component only, rendered UI open.: `docs/reviews/probes/r118_root/committed_source_binding.json`
 - R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/source_hashes.json`
 - R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/typecheck/receipt.json`
 - R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/focused_frontend.stderr.txt`
@@ -4025,6 +4026,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R118 immutable source-only M3 UI dispatcher seed.: `CVF_SESSION/authority/CCMAI-RUNTIME-118.json`
 - R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/focused_frontend/command.json`
 - R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md`
+- R118 exact original bytes or commit/source binding; source/component only, rendered UI open.: `docs/reviews/probes/r118_root/original_probe_bytes.json`
 - R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/worker_return_gate.receipt.json`
 - R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/vue_tsc.receipt.json`
 - R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/vue_tsc.stderr.txt`

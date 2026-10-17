@@ -1,6 +1,6 @@
 # R118 independent current-proposal UI source review
 
-Status: REVIEW_PENDING
+Status: REVIEW_PASS
 Risk: R2
 Worker: /root/r118_ui_worker
 Reviewer: Codex /root
@@ -8,7 +8,7 @@ Commit steward: Codex /root
 Scope: SOURCE_COMPONENT_ONLY
 FREEZE: OPEN
 
-The detail screen now selects the server's current proposal rather than the last array entry, binds human-action payloads to its ID/revision, and uses readable Vietnamese/English names for new WAIT_DATA history. Root independently reviewed the whole six-file delta and backend contract; no open source finding. Final source commit identity is pending this material commit, so tranche remains REVIEW_PENDING until bound afterward.
+The detail screen now selects the server's current proposal rather than the last array entry, binds human-action payloads to its ID/revision, and uses readable Vietnamese/English names for new WAIT_DATA history. Root independently reviewed the whole six-file delta and backend contract; no open source finding. Final source commit 7f74a75f93671973bcfe55b5cb491076c0d2bdf9 is independently bound in probes/r118_root/committed_source_binding.json; all six Git-normalized source contents equal the checked worktree bytes. This accepts source/component scope only; FREEZE remains OPEN.
 
 Root authored immutable seed40a301fa33e0b9cb364b283008d08b449da39d18; admitted orderde3eba55c36644a99e0bfe67fbdb9764dd67232a precedes worker BUILD acknowledgment. Sol implemented; Root did not implement/self-review worker source. Independent source audit verifies seed unchanged and all six worker/current/Root hashes equal: probes/r118_root/independent_source_audit.json, source_hashes.json. These prove checked source identity, not human authorship by Git identity alone; Root directly dispatched and retained seed/commit custody.
 
@@ -26,4 +26,6 @@ No product runtime, fixture, DB, provider or secret effects under R118. Capabili
 
 Finite remaining route: admit exact changed frontend/backend binary and owned fixture plus supported browser route before one targeted read-only current proposal/history wording observation; inherit B07 without replaying lifecycle/provider effects. Stop if readiness fails, preserve raw DOM/original image and exact raster limits; no generic tool repair chain. Actual human integrated M3 completion and full M2/M3/M4/M5 exits remain OPEN. Facebook/ZaloOA parked; no push/merge/deploy. FREEZE not granted.
 
-Local static material checks observed: legacy preflight7/7 PASS; reviewer-fast7mandatoryPASS including ROLE/ROUTE; pre-commit6mandatoryPASS. APPL is explicitly NOT_APPLICABLE at COMPLETE_PENDING_REVIEW, so this is not a fresh closeability PASS; actual earlier DISPATCH_READY pre-dispatchAPPL/ROUTE PASS and worker-returnACTIVE APPL/ROLE PASS are separately retained. Git diff --check clean. Catalog regenerated; final committed range remains pending.
+Local static material checks observed: legacy preflight7/7 PASS; reviewer-fast7mandatoryPASS including ROLE/ROUTE; pre-commit6mandatoryPASS. APPL is explicitly NOT_APPLICABLE at COMPLETE_PENDING_REVIEW, so this is not a fresh closeability PASS; actual earlier DISPATCH_READY pre-dispatchAPPL/ROUTE PASS and worker-returnACTIVE APPL/ROLE PASS are separately retained. Tracked source diff --check was clean. Catalog regenerated; final committed range remains pending.
+
+Final source binding: 7f74a75f93671973bcfe55b5cb491076c0d2bdf9. Root preserves every original probe file byte/hash in probes/r118_root/original_probe_bytes.json (base64), because Git may normalize CRLF in the readable text copies. Source manifest raw worktree hashes and normalized Git commit equality are separate, both checked. Staged whitespace check at source commit reported extra blank EOF lines in the two raw Vitest stdout files; Root command sequencing continued to commit. Raw output is intentionally preserved, warning retained, no source whitespace defect or unqualified whole-change whitespace PASS claimed. All required governance gates passed before source commit; this warning does not replace any mandatory gate or grant FREEZE.

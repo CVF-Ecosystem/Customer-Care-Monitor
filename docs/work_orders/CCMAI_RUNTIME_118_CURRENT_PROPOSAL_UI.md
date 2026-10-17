@@ -1,6 +1,6 @@
 # R118 current proposal UI binding and understandable history
 
-Status: COMPLETE_PENDING_REVIEW
+Status: REVIEWER_ACCEPTED
 Risk: R2
 dispatchKind: INITIAL
 Worker: /root/r118_ui_worker

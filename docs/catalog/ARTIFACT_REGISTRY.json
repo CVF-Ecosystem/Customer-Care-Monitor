@@ -32224,6 +32224,20 @@
       "path": "docs/reviews/probes/r118_worker/worker_return_gate_initial.stdout.txt",
       "status": "ACTIVE",
       "description": "R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof."
+    },
+    {
+      "id": "r118-c814f6a9503709f1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_root/original_probe_bytes.json",
+      "status": "ACTIVE",
+      "description": "R118 exact original bytes or commit/source binding; source/component only, rendered UI open."
+    },
+    {
+      "id": "r118-5615a1a742224257",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r118_root/committed_source_binding.json",
+      "status": "ACTIVE",
+      "description": "R118 exact original bytes or commit/source binding; source/component only, rendered UI open."
     }
   ]
 }
