@@ -2653,6 +2653,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/R113_CAPABILITY_AND_DISPATCH_PREPARATION_2026-10-17.md`
 - Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/stderr.bin`
 - Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_005_protected_container_inspect.stdout.bin`
+- R114 finite onboarding wording/mobile source repair; runtime not admitted, historical qualified evidence preserved.: `docs/reviews/R114_INTAKE_AND_FINITE_ROUTE_2026-10-17.md`
+- R114 finite onboarding wording/mobile source repair; runtime not admitted, historical qualified evidence preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-114.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

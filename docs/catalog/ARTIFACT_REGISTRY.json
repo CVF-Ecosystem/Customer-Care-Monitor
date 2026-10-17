@@ -22557,6 +22557,20 @@
       "path": "docs/reviews/probes/r113_root/final_checks/reviewer_fast.stdout.bin",
       "status": "ACTIVE",
       "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r114-fcba49b9e8f4a9b5d7",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-114.json",
+      "status": "ACTIVE",
+      "description": "R114 finite onboarding wording/mobile source repair; runtime not admitted, historical qualified evidence preserved."
+    },
+    {
+      "id": "r114-e1a58a62f3d3cfb9c4",
+      "family": "continuity",
+      "path": "docs/reviews/R114_INTAKE_AND_FINITE_ROUTE_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R114 finite onboarding wording/mobile source repair; runtime not admitted, historical qualified evidence preserved."
     }
   ]
 }
