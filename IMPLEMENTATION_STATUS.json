@@ -2829,7 +2829,7 @@
     "status": "BUILD",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_113_REMAINING_UI.md",
     "handoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R113_REMAINING_UI_2026-10-17.md",
-    "nextAction": "CCMAI-RUNTIME-113 BUILD binding-only: seed7644ee02 and dispatch27909244 precede worker edits. Luna Max rehydrates and copies112 runner/template with113 bindings only; Root independently reviews/commits source before exact runtime admission. Runtime NOT_ADMITTED; B07/B08/wording pending,B09 unsupported NOT_RUN; no old budgets/provider/push/deploy/full acceptance.",
+    "nextAction": "CCMAI-RUNTIME-113 BUILD source0622d185 independently accepted; exact committed runtime admission then sole new113start by Luna supervisor, Root integrated browser B07/B08/current wording; B09 unsupported NOT_RUN. Budgets fixture1/backend1/Vite1/allPOST8/1200sec/retry0, no lifecycle replay/old-budget reuse/provider/push/deploy. Stop on runtime/browser failure and review owned cleanup; fullM2/M3/pilot/release OPEN, accounts parked.",
     "uiSource": "a28cdd0ac9ad1c9d1fd30ced6cf627dd62a56ba2",
     "b09": "NOT_RUN_UNSUPPORTED_OFFLINE_CONTROL"
   }

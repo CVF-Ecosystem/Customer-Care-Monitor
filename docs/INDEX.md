@@ -2328,8 +2328,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/work_orders/CCMAI_RUNTIME_111_REMAINING_UI.md`
 - R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/R112_INDEPENDENT_RUNTIME_HOLD_REVIEW_2026-10-17.md`
 - R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/binding_review_receipt.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/runtime_admission.json`
 - R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/work_orders/CCMAI_RUNTIME_113_REMAINING_UI.md`
 - R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/operator_transcription.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/R113_INDEPENDENT_RUNTIME_ADMISSION_REVIEW_2026-10-17.md`
 - R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/R113_BINDING_WORKER_RETURN_2026-10-17.md`
 - R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/readiness_pins.json`
 - R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `CVF_SESSION/tranches/CCMAI-RUNTIME-113.json`

@@ -20485,6 +20485,20 @@
       "path": "docs/reviews/probes/r113_luna/r113_workflow_runner.py",
       "status": "ACTIVE",
       "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-35ae62b82dcced4661",
+      "family": "continuity",
+      "path": "docs/reviews/R113_INDEPENDENT_RUNTIME_ADMISSION_REVIEW_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
+    },
+    {
+      "id": "r113-26aca0b9319d1ba073",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r113_root/runtime_admission.json",
+      "status": "ACTIVE",
+      "description": "R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance."
     }
   ]
 }

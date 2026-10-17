@@ -77,9 +77,12 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_113_REMAINING_UI.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
   "workOrderStatus": "ACTIVE",
-  "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "BINDING_ONLY_DISPATCH_RUNTIME_NOT_ADMITTED",
+  "buildCommit": "0622d185bfba8eae960138b57acd9a82f34842fd",
+  "reviewEvidence": [
+    "docs/reviews/R113_INDEPENDENT_BINDING_REVIEW_2026-10-17.md",
+    "docs/reviews/R113_INDEPENDENT_RUNTIME_ADMISSION_REVIEW_2026-10-17.md"
+  ],
+  "disposition": "SOURCE_ACCEPTED_RUNTIME_ADMISSION_PENDING_COMMIT",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
