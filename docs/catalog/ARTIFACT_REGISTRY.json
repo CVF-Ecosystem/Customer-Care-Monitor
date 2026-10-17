@@ -26043,6 +26043,223 @@
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-117.json",
       "status": "ACTIVE",
       "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-677594161706653db4",
+      "family": "continuity",
+      "path": "docs/reviews/R117_IMPLEMENTATION_WORKER_RETURN_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-baf401ffecca109a99",
+      "family": "continuity",
+      "path": "docs/reviews/R117_INDEPENDENT_REVIEW_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-535ddd17b5f0172681",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_root/independent_db_readback.py",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-4a6fbd2959ec463a62",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_root/source_binary_admission.json",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-024228e8ec006fe65c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_root/supervisor_review_delta.diff",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-5e6673f195988ccd3b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_root/worker_return_original.txt",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-80fd239bc405a69ed0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_root/go_root_1/command.json",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-85545fd3c944a37331",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_root/go_root_1/exit.json",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-ed6390895b20e0b2ec",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_root/go_root_1/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-13922014760f0f6ca8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_root/go_root_1/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-7ea4b7811e58c47414",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_root/python_root_1/command.json",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-4967e12618742c621a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_root/python_root_1/exit.json",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-b747248bd22e9dfd93",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_root/python_root_1/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-d4463acd8d49535b58",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_root/python_root_1/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-36c76ebb5d23b23c96",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_worker/python_check_1_command.txt",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-be88940359c2b0a9d0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_worker/python_check_1_exit.txt",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-381770611052cfc702",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_worker/python_check_1_source_sha256.txt",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-fa219a96c974f1555f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_worker/python_check_1_stderr.txt",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-da1a6f97973de8943f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_worker/python_check_1_stdout.txt",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-35830d62f1762577e0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_worker/python_check_2_command.txt",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-eb695665cddc123ad3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_worker/python_check_2_exit.txt",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-6155691b9ab59f5871",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_worker/python_check_2_source_sha256.txt",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-f5e80afabe5b6e7694",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_worker/python_check_2_stderr.txt",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-3ca860b2bb928af91b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_worker/python_check_2_stdout.txt",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-6235ecf4beaf046a15",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_worker/python_check_2_test_sha256.txt",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-7668d63bfc55113bc9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_worker/python_check_3_command.txt",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-58e102a234f5acf405",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_worker/python_check_3_exit.txt",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-eed3de06e2e3d1dc1f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_worker/python_check_3_source_sha256.txt",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-a8efcbb1c7a486a408",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_worker/python_check_3_stderr.txt",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-9365c62b6b28f86056",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_worker/python_check_3_stdout.txt",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r117-4877368bd76626854a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r117_worker/python_check_3_test_sha256.txt",
+      "status": "ACTIVE",
+      "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
     }
   ]
 }

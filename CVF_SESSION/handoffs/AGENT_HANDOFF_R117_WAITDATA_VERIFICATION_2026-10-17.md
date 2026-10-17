@@ -14,3 +14,9 @@ Status: ACTIVE
 ## Acknowledgments
 
 Root fresh rehydration/declaration doctor27PASS/pinwarning and knowledge. New seed 980f95639391bab799e443bba3db1c24e8923f5d before BUILD; R116 failed campaign immutable. Inherit R115 contract and R116 source review, not runtime acceptance.
+
+R117 worker BUILD acknowledgment: /root/r117_execution_worker freshly rehydrated canonical inputs/declaration, doctor27PASS/pinwarning and source-only scope, no continuity contradiction. Root records before edit. Canonical knowledge script is in read-only sibling Core; Root already ingested1chunk into .cvf/runtime/r117_knowledge_intake.json outside execution roots. Source seed980f9563 and dispatchde66dda9 precede edits; worker no runtime/provider/commit.
+
+Root R117 BUILD declaration: immutable seed980f9563 and dispatchde66dda9 precede source BUILD, R2/liveYES, Root independent review/commit/secret custody, Sol source-only. First dispatch preflight conflicting ACTIVE old pointer repaired; actual pre-dispatch5mandatoryPASS including APPL/ROUTE, legacy7PASS/profileprecommitPASS. Governance89unitPASS14.293s static only. Root does not claim native/provider/capability from model names.
+
+Root final source admission: three worker hashes match; whole supervisor delta and live grant guard independently inspected, offline5PASS, handler compileRoot1of6PASS/drift0. Engine inherited exactbinary/source unchanged except unrelated handler test. Source/binary admission commit before any setup. Native/live0; no fixture start. Readback limits recorded in independent review. WorkerPython3of3, RootPython1of2, workerGo0.

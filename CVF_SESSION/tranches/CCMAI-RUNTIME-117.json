@@ -102,8 +102,10 @@
   "phase": "BUILD",
   "workOrderStatus": "ACTIVE",
   "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "PENDING",
+  "reviewEvidence": [
+    "docs/reviews/R117_INDEPENDENT_REVIEW_2026-10-17.md"
+  ],
+  "disposition": "SOURCE_ACCEPTED_FOR_ISOLATED_PROOF",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -117,10 +119,10 @@
     "WORK_ORDER"
   ],
   "budgetUsed": {
-    "rootFocusedChecks": 0,
+    "rootFocusedChecks": 1,
     "workerGoChecks": 0,
-    "workerPythonChecks": 0,
-    "rootPythonChecks": 0,
+    "workerPythonChecks": 3,
+    "rootPythonChecks": 1,
     "fixtureStarts": 0,
     "fixtureTeardowns": 0,
     "physicalAlibabaCalls": 0

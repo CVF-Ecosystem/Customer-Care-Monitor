@@ -768,7 +768,7 @@ func TestR116WaitDataRealAlibaba(t *testing.T) {
 	effectDir, evidenceDir := os.Getenv("CCMAI_R116_EFFECT_DIR"), os.Getenv("CCMAI_R116_EVIDENCE_DIR")
 	admissionSHA, ownerGrant := os.Getenv("CCMAI_R116_ADMISSION_SHA"), os.Getenv("CCMAI_R116_OWNER_GRANT")
 	endpointHash := sha256.Sum256([]byte(endpoint))
-	if len(key) < 16 || hex.EncodeToString(endpointHash[:]) != "b22a15b6e8aa4113c2816acae6935a84d052a2d7b81db734ccdc4f5be81b4f8f" || effectDir == "" || evidenceDir == "" || ownerGrant != "CCMAI-RUNTIME-116-OWNER-NEW2-20261017" || !regexp.MustCompile(`^[0-9a-f]{64}$`).MatchString(admissionSHA) {
+	if len(key) < 16 || hex.EncodeToString(endpointHash[:]) != "b22a15b6e8aa4113c2816acae6935a84d052a2d7b81db734ccdc4f5be81b4f8f" || effectDir == "" || evidenceDir == "" || ownerGrant != "CCMAI-RUNTIME-117-OWNER-NEW1-20261017" || !regexp.MustCompile(`^[0-9a-f]{64}$`).MatchString(admissionSHA) {
 		t.Fatal("R116 live admission input missing or mismatched")
 	}
 	entries, err := os.ReadDir(effectDir)
