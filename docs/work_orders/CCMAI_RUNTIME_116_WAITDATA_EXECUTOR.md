@@ -1,6 +1,6 @@
 # R116 WAIT_DATA executor implementation and conditional live acceptance
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 dispatchKind: INITIAL
 Worker: /root/r116_executor_worker
@@ -49,3 +49,7 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 | committed_range_closure | POST_MATERIAL_CLOSURE | reviewer | POST_MATERIAL_CLOSURE | R116 local range profile checks | BOUNDED_PATH_FAMILIES | commit-steward | CONTINUITY_COMMIT | continuity |
 
 Material-SHA marker:b06209f28c36afc954f754531db6c363057d5cf7. Worker source-only BUILD; DB/live require Root committed admission.
+
+## Execution stop
+
+Source accepted only at 5d38dd51c387ce161c013a9b6ff866a1d1c7af3d; native/live NOT_RUN. Fixture start1of1 consumed; observed Docker published3306port absent. No restart/replay. Exact owned container stopped and preserved, protected containers/resources equal. Worker6of6, Root2of4, API0of2; no unused budget reset. See R116_RUNTIME_ADMISSION_BLOCKER_2026-10-17.md.

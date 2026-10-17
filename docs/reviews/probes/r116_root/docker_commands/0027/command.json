@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "--config",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r116_execution\\docker-cli-config",
+    "network",
+    "inspect",
+    "--format",
+    "{{json .}}",
+    "e7be3b07db3688ca18cdb30d7c8b1766f011176294ca88539bb1292161ae93a7"
+  ],
+  "startedAt": "2026-10-17T13:26:36.130184+00:00",
+  "timeoutSeconds": 15
+}

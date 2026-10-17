@@ -1,6 +1,11 @@
 # CCMA — Roadmap phát triển sản phẩm và tiếp quản giữa các agent
 
-## Current R116 product route — 2026-10-17
+## Current checkpoint — R116 runtime blocked
+
+WAIT_DATA executor source independently accepted and committed5d38dd51; exact compilePASS. Actual isolated fixture start1of1 consumed but Docker publishedMySQLport absent. Native/Alibaba NOT_RUN (0calls); owned container observedEXITED and protected containers/resources equal. Stop runtime, no replay/restart/alternate stack. Next finite decision must settle port publication and failed-start cleanup before any new authority/start. No executor/runtime/wholeM3 acceptance; full M2/M3/pilot/release OPEN. See docs/reviews/R116_RUNTIME_ADMISSION_BLOCKER_2026-10-17.md.
+
+
+## R116 product route — 2026-10-17
 
 Owner grants continuation with fresh Alibaba live testing. R115 intended design accepted only; R116 source-only implementation then Root-admitted isolated MySQL discriminators and capped max2 fresh real calls, stopfirstvalid/anyuncertainty. Goal is WAIT_DATA same-case new proposal available for human review with original lineage preserved. No old budget/runner replay or installed activation. UI raster/offline/terminal gaps, Dashboard3knownfailures, fullM2/M3/pilot/release and M1business stay OPEN; Facebook/ZaloOAparked. Three finite steps, no ETA/percentage. Current source return compiled offline but Root review0 CHANGES_REQUIRED; D01-D04 repair1 before any runtime admission. Native/DB/provider remain NOT_RUN. See docs/work_orders/CCMAI_RUNTIME_116_WAITDATA_EXECUTOR.md.
 

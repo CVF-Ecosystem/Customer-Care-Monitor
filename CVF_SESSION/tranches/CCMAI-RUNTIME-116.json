@@ -92,11 +92,12 @@
   "baseCommit": "b06209f28c36afc954f754531db6c363057d5cf7",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_116_WAITDATA_EXECUTOR.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "buildCommit": null,
+  "buildCommit": "5d38dd51c387ce161c013a9b6ff866a1d1c7af3d",
   "reviewEvidence": [
-    "docs/reviews/R116_INDEPENDENT_SOURCE_REVIEW_2026-10-17.md"
+    "docs/reviews/R116_INDEPENDENT_SOURCE_REVIEW_2026-10-17.md",
+    "docs/reviews/R116_RUNTIME_ADMISSION_BLOCKER_2026-10-17.md"
   ],
-  "disposition": "SOURCE_ACCEPTED_FOR_ISOLATED_PROOF_NATIVE_LIVE_OPEN",
+  "disposition": "BUILD_BLOCKED_FIXTURE_PORT_NOT_PUBLISHED",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -106,7 +107,8 @@
     "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
-    "BUILD"
+    "BUILD",
+    "BUILD_BLOCKED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -115,16 +117,17 @@
     "WORK_ORDER"
   ],
   "phase": "BUILD",
-  "status": "BUILD",
-  "workOrderStatus": "ACTIVE",
+  "status": "BUILD_BLOCKED",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
   "sourceRepairRoundsUsed": 2,
   "budgetUsed": {
     "workerRecordedInvocations": 6,
     "workerGoCLIInvocations": 4,
     "workerGofmtInvocations": 2,
     "rootFocusedChecks": 2,
-    "fixtureStarts": 0,
-    "physicalAlibabaCalls": 0
+    "fixtureStarts": 1,
+    "physicalAlibabaCalls": 0,
+    "fixtureTeardowns": 1
   },
   "repair1Acknowledgment": "Worker fresh canonical rehydration/declaration acknowledged D01-D04 before same-scope source repair; recorded by Root.",
   "reviewScope": "SOURCE_COMPILE_ONLY",

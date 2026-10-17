@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "scripts/tests",
+    "-p",
+    "test_cvf_downstream_gate*.py"
+  ],
+  "startedAtUTC": "2026-10-17T13:28:14.982822+00:00"
+}

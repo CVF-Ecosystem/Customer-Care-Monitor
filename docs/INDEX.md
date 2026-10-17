@@ -10,7 +10,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-058.json`
 - Separate R1 seed for accepted R061 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-062.json`
 - GitHub project-branch material publication receipt for the M1-M5 delivery roadmap; remote SHA readback, no product/runtime acceptance.: `docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json`
-- Current R116 WAIT_DATA executor source accepted; native/live and full product milestones OPEN; historical UI qualifications retained.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
+- Current R116 executor source accepted only; runtime blocked by missing fixture port, DB/live NOT_RUN, owned fixture stopped and protected inventory equal; full milestones OPEN.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
 - All seven selected inheritance findings independently accepted bounded and material exported atd121c9e; full product exits remain open.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
@@ -2954,56 +2954,198 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Exact final documentary packet bytes after Root metadata normalization; no runtime proof.: `docs/reviews/probes/r115_root/committed_packet_original.zip`
 - R115 documentary M3-05 executor intended contract; no product implementation/runtime authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-115.json`
 - R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/specs/M3_WAITDATA_EXECUTOR_R115_SPEC_2026-10-17.md`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0027/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0032/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0022/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0007/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0015/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0015/exit.json`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_1/stderr.txt`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/gate_unit/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0016/command.json`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/source_binary_admission.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0032/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0031/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0022/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0025/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0019/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0028/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0023/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0003/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0006/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0010/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0007/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0013/exit.json`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/worker_return0.zip`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0008/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0008/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0012/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0010/command.json`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go_invocations.md`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0003/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0001/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0012/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0021/stderr.txt`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_tool_readiness.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0007/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0012/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0014/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0011/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0025/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0020/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0028/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0025/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0020/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/final_gate_unit/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0025/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0011/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0006/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0031/command.json`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/repair1_independent_identity.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0032/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0007/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0012/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0003/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0024/stderr.txt`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/R116_IMPLEMENTATION_WORKER_RETURN_2026-10-17.md`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go5_exit.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0013/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0023/stderr.txt`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go5_pre_hashes.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0004/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/R116_RUNTIME_ADMISSION_BLOCKER_2026-10-17.md`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_1/exit.json`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/gate_unit/exit.json`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/worker_repair2.zip`
 - R116 bounded executor authority/readiness; exact evidence limits apply.: `docs/reviews/R116_INTAKE_AND_FINITE_ROUTE_2026-10-17.md`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0010/exit.json`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_2/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0013/stderr.txt`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go6_stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0026/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0027/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0004/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0020/stdout.txt`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/gate_unit/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0009/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0016/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0029/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/setup_failure/fixture-start.effect`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/cleanup_receipt.json`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go6_stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0013/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0011/command.json`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go5_stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0005/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0018/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0017/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0006/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0014/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0001/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0005/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0030/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0019/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0002/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0004/command.json`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/repair2_independent_identity.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0026/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/final_gate_unit/stdout.txt`
 - R116 bounded executor authority/readiness; exact evidence limits apply.: `docs/reviews/probes/r116_root/readiness_inventory.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0005/stderr.txt`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/R116_INDEPENDENT_SOURCE_REVIEW_2026-10-17.md`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/repair2_delta_paths.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0002/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/setup_failure/container-create.effect`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go6_postcompile_deltas.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0027/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0019/stderr.txt`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/repair1_final_hashes.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0024/command.json`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/worker_repair1.zip`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0024/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0024/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0009/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/failed_setup_observation.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0005/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0002/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0006/stdout.txt`
 - R116 bounded executor source/evidence control; exact claim scope applies.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R115_EXECUTOR_DESIGN_2026-10-17.md`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_2/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0001/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0028/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0014/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0015/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/setup_failure/network-created.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0020/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0030/stderr.txt`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/repair1_source_delta.diff`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_2/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0030/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0021/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0008/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/setup_failure/outcome.json`
 - R116 bounded executor source/evidence control; exact claim scope applies.: `CVF_SESSION/tranches/CCMAI-RUNTIME-116.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0019/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0023/command.json`
 - R116 bounded executor authority/readiness; exact evidence limits apply.: `docs/reviews/probes/r116_root/readiness_docker_version.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0014/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0027/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0029/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0003/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/final_gate_unit/exit.json`
 - R116 bounded executor authority/readiness; exact evidence limits apply.: `CVF_SESSION/authority/CCMAI-RUNTIME-116.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0018/stderr.txt`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/supervisor_source_review.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0021/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0017/stderr.txt`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/return0_independent_identity.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0016/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/final_gate_unit/command.json`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/preparation_observations.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0017/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0009/stdout.txt`
 - R116 bounded executor authority/readiness; exact evidence limits apply.: `docs/reviews/probes/r116_root/readiness_secret_readiness.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0022/exit.json`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/run_go5.ps1`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0010/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0004/stderr.txt`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/gate_unit/stderr.txt`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_2/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0029/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0001/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0028/exit.json`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go6_pre_hashes.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0030/command.json`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/run_go6.ps1`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go6_exit.txt`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/independent_db_readback.py`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0022/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0021/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0002/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0018/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0026/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/setup_failure/hold-1792243544323160400.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0016/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0018/command.json`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/repair2_final_hashes.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/setup_failure/container-created.json`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_1/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0008/stderr.txt`
 - R116 bounded executor source/evidence control; exact claim scope applies.: `docs/work_orders/CCMAI_RUNTIME_116_WAITDATA_EXECUTOR.md`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0009/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0015/stderr.txt`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go5_stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0029/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0026/stderr.txt`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_1/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0032/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0017/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/setup_failure/volume-created.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0011/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0031/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0023/exit.json`
 - R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go4_pre_hashes.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0031/stderr.txt`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

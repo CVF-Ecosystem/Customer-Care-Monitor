@@ -1528,7 +1528,7 @@
       "family": "continuity",
       "path": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
       "status": "ACTIVE",
-      "description": "Current R116 WAIT_DATA executor source accepted; native/live and full product milestones OPEN; historical UI qualifications retained."
+      "description": "Current R116 executor source accepted only; runtime blocked by missing fixture port, DB/live NOT_RUN, owned fixture stopped and protected inventory equal; full milestones OPEN."
     },
     {
       "id": "ccma-product-delivery-publication-20261013",
@@ -25012,6 +25012,1000 @@
       "id": "r116-dde8e68c0431870f31",
       "family": "continuity",
       "path": "docs/reviews/probes/r116_worker/run_go6.ps1",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-4cf80851659d8c8fdd",
+      "family": "continuity",
+      "path": "docs/reviews/R116_RUNTIME_ADMISSION_BLOCKER_2026-10-17.md",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-698870d0b843677a7b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/cleanup_receipt.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-948e2c737917d724a2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/failed_setup_observation.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-8565a5b7663d2858ef",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/setup_failure/container-create.effect",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-e8dbfe25810c74af98",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/setup_failure/container-created.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-6914570309afd97186",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/setup_failure/fixture-start.effect",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-e3b60f51e246575f9a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/setup_failure/hold-1792243544323160400.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-9f29b2d9098cf6eac0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/setup_failure/network-created.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-a8ce64e1421c0efa48",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/setup_failure/outcome.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-fad63951e1f9f36a27",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/setup_failure/volume-created.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-222471cf39739ab14d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0001/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-9c5f62560f1b8ad48e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0001/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-d6b74e35cd908ad4c7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0001/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-77f1069f4bb137e3fd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0001/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-e1b9bdd5388d7e7472",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0002/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-9b6a25d1c0d9a10348",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0002/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-7ab43824b987a0c8f5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0002/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-84d9b425887b70edd7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0002/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-ba15efdde2d773281b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0003/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-21bf050ad325d4f43f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0003/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-14e96798c26d03cf74",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0003/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-46396c41f1ddb1e5c1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0003/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-8183f1bde8a0aa065e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0004/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-4c0178f86f976ccc40",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0004/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-d4fae3500c476cce53",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0004/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-631c87f5040af03e19",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0004/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-981c0f2153bd8ec54a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0005/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-77fb2f51c2a0e0bf48",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0005/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-82bfadb882a5d4729a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0005/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-70bb35182319ce9e6b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0005/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-3a02696de2c45678bb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0006/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-181a5cac1af9a0bde7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0006/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-72a8742d065877b65b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0006/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-9ba426cd6e3871db4d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0006/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-441d7e79f72fc789a2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0007/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-1ae7cbae8b98b4cd0e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0007/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-05b8b20c0887227d2f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0007/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-283e03a2123175fb9d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0007/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-1d6e2b1f7e23f17e13",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0008/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-a73685658207c4aa3c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0008/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-ec278adeff6d5f3c91",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0008/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-1c923432531100c4dd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0008/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-f2824f4106a7ff17d5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0009/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-923664659f77adc87f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0009/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-6518c743437678aae1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0009/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-cd41bd8f12757870dc",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0009/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-1e5d01fbcfffc3ae49",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0010/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-52fbfe807b5184787b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0010/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-d49e7ab59ba9bc5cfe",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0010/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-1ac79da2c24409d295",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0010/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-6beaeee07341b07a9a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0011/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-2ef8caf2ff85d3c24b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0011/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-fb381dd11f8c9fd4fc",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0011/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-379216609781af3153",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0011/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-462e46a798b2e5d139",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0012/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-1dc6a92b0541c616d0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0012/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-23baf9d8f527b1e91b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0012/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-2bf45b2d7593d18356",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0012/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-4922a73400e7a8ca9e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0013/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-1b9f1f5f2c9f9d5d72",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0013/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-53fe5197988baa9990",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0013/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-69d3c4861d12231e8e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0013/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-2d776614dae613ffbc",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0014/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-755a7d8dbd85d74551",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0014/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-9cd8cfb28951eaed10",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0014/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-b202dda6ad2d226769",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0014/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-9ea2455c6423b4dd32",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0015/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-063f91df9c625e3d43",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0015/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-f2ef10f964b97dd396",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0015/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-062bdf01018e8065e7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0015/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-07da29075f5f666c53",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0016/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-c67083fb3c4d1a3026",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0016/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-e4b2468c94ca8b2bd2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0016/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-6572707a40383d16ce",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0016/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-facccedda81eb288f1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0017/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-cb02652ae3c520e137",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0017/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-c540c789a496f95c00",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0017/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-72603743f9c9bd020c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0017/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-e5381f50d5b9ce6f4f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0018/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-e2812f130cf6138642",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0018/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-c1c090eccf655f9bfe",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0018/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-71c8f0def497794091",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0018/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-1284fc9787fe289c57",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0019/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-ab3b89417f19376b42",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0019/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-89e2a06b4b725badf8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0019/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-79fc8647db33d7dfb1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0019/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-3433d8eca8ba7f671f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0020/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-9f4336d5d23d361e6b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0020/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-35001dbee137f75c7c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0020/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-6419bb73769a5ffd96",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0020/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-c4f794ca6de14a6537",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0021/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-a408180d671dc53d68",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0021/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-25032aff01cc73c439",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0021/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-e1565117c097ebbc44",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0021/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-041667a6605f308a8d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0022/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-d20ac74a4a7ae9747a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0022/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-11f889166c49461fe0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0022/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-e0d489538494a929a8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0022/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-ac745a259584182763",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0023/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-fc53ee2680871866a9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0023/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-493a5ae0e40acda53e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0023/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-14745ca8637d968a49",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0023/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-8c9e1e99627b236bf9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0024/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-9005854c5bca745bb1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0024/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-476f780f911b304612",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0024/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-906a6a33860c94de9a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0024/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-34bcef7680bdebbf80",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0025/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-3682ba5e021256e3f1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0025/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-124c41dff5fb53f924",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0025/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-31777183e4e76e5fd0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0025/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-e2c600e4d3ab73d243",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0026/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-81f3160d33a728f766",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0026/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-f58eec292f0e0410cf",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0026/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-5fdb8226078361f903",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0026/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-b74f4a915bc6308519",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0027/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-860ead8056611a510f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0027/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-61bf58a7ccf2f1ac69",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0027/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-0226203cc9fe57cc9c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0027/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-12a815f32f4c77fcaa",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0028/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-d9a035eda77faeee4d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0028/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-34a200be4f0419711d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0028/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-9cc633aa44da6e8b91",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0028/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-f4a47a20e8ae5739d4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0029/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-ba01fc7cb548955491",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0029/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-d6b07218982c64b5d6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0029/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-6660d569ba60c0cb43",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0029/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-ddcc0b150fe31a1adf",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0030/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-a34f63440c372603a3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0030/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-a14759ef0b2c00e18e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0030/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-797fc339b0a579fcdc",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0030/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-3cb88ef57ebce4d06f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0031/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-fb9564353af699e1fd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0031/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-ff654b95c3faa89783",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0031/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-0cec1938281c0fff99",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0031/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-3df3b51e795ccbf1a8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0032/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-faadd0bcb119f396f8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0032/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-0387ccdcc17116c74d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0032/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-0bb4e63ec5a0c48d90",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/docker_commands/0032/stdout.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-c689966f9c8635cb69",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/final_gate_unit/command.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-bd396692e6259eb885",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/final_gate_unit/exit.json",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-35b42bc9549d59eca1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/final_gate_unit/stderr.txt",
+      "status": "ACTIVE",
+      "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
+    },
+    {
+      "id": "r116-81f5d727509fbf29bd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r116_root/final_gate_unit/stdout.txt",
       "status": "ACTIVE",
       "description": "R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim."
     }

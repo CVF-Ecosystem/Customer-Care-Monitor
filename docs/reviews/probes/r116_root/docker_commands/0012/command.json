@@ -1,0 +1,31 @@
+{
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "--config",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r116_execution\\docker-cli-config",
+    "create",
+    "--pull=never",
+    "--name",
+    "ccmai-r116-root-20261017",
+    "--label",
+    "ccmai.tranche=CCMAI-RUNTIME-116",
+    "--label",
+    "ccmai.owner=af1b06f6-1af4-460e-b25a-0fd70c1924b8",
+    "--network",
+    "ccmai-r116-root-20261017",
+    "-p",
+    "127.0.0.1::3306",
+    "-v",
+    "ccmai-r116-root-20261017:/var/lib/mysql",
+    "-e",
+    "MYSQL_ROOT_PASSWORD=r116-synthetic-only",
+    "-e",
+    "MYSQL_DATABASE=r116_fixture",
+    "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "--skip-name-resolve"
+  ],
+  "startedAt": "2026-10-17T13:25:40.844075+00:00",
+  "timeoutSeconds": 15
+}

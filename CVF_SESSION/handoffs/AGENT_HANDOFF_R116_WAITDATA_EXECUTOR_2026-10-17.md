@@ -7,9 +7,9 @@ Status: ACTIVE
 - Project: Customer-Care-Monitor-AI
 - Current mode: BUILD
 - Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol Medium implementation worker returned idle
+- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; implementation worker returned idle, runtime stopped
 - Active tranche: CCMAI-RUNTIME-116
-- Next allowed move: CCMAI-RUNTIME-116 BUILD: source independently accepted and Root exact compile2of4 PASS; commit source/binary admission, create one owned isolated fixture, commit actual fixture/runtime admission, then handlers and engine native checks3and4. Provider NOT_RUN; live verification needs separately seeded finite operational authority after exhausted checks, no old counter reset. FullM2/M3/pilot/release and R114 UI gaps OPEN; Facebook/ZaloOA parked; no push/merge/deploy.
+- Next allowed move: CCMAI-RUNTIME-116 BUILD_BLOCKED: source5d38dd51 and exact Root compile2of4 accepted only; fixture start1of1 consumed but published MySQL port absent, native/provider NOT_RUN. Owned fixture stopped with protected inventory equal. Stop runtime; preserve seed/counters and handoff failed-port/cleanup evidence for a future bounded readiness decision before any new authority/start. No restart/replay/install/alternate stack; fullM2/M3/pilot/release and UI gaps OPEN; Facebook/ZaloOA parked; no push/merge/deploy.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 ## Acknowledgments
@@ -27,3 +27,9 @@ Root repair1 re-review:16/16pinsmatch, exact independentcompilePASS/sourceDrift0
 Worker repair2 acknowledgment received: fresh canonical rehydration/declaration, same R2 seed/paths, D05 test-only correction plus hashes/return; Go6of6 and native/provider0 unchanged. Root records acknowledgment before test edit; no additional worker commands/effects. Root check1of4; source compile must repeat after final test delta.
 
 Root post-compaction rehydration/declaration and doctor27PASS with publicCorepin warning; knowledge1chunk ingested outside exclusive execution directory. Repair2 source admission exactcompile Root2of4/drift0 and16/16hashes; worker returned idle. No fixture/provider effects yet. Source-only admission commit precedes setup; runtime admission commits actual fixture identity before native.
+
+## Runtime stop and handback
+
+Root exact admitted source committed 5d38dd51c387ce161c013a9b6ff866a1d1c7af3d. Fixture start marker consumed1of1; Docker create/start exit0, but published3306port empty and inspect template failed. No runtime admission, native test or physical API call. Root verified exact containerID/image/ownerlabels/mount/network/exclusive use then stopped it, preserving owned resources. Final observed EXITED; protected containers/resources equal baseline. Standard supervisor fallback would require a missing port, so Root used explicit bounded ownership-verified cleanup, no restart/repair/tool-chain retry. Raw Docker commands and original effect/ownership/hold records retained in r116_root.
+
+R116 status BUILD_BLOCKED / FREEZE OPEN, source accepted only; worker6of6, Root2of4, fixture1of1, provider0of2. Root admits supervisor readiness miss: source review did not expose actual port publication failure. Underlying Docker cause unestablished. Future finite route must settle loopback publication and failed-start cleanup under a distinct valid authority only when justified; no new tranche/start/provider dispatched here. Source has executor candidate, not accepted current runtime or ordinary installed activation. Full M2/M3/pilot/release and historical UI gaps remain OPEN.

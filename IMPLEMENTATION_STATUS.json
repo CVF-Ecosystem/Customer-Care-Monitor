@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "x-roadmapTracking": {
     "updatedAt": "2026-10-17",
-    "status": "M3_EXECUTOR_IMPLEMENTATION_DISPATCH",
+    "status": "M3_EXECUTOR_SOURCE_ACCEPTED_RUNTIME_BLOCKED",
     "currentCheckpoint": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
     "stages": {
       "S0": "PARTIAL_LIVE_BASELINE_OPEN",
@@ -23,7 +23,7 @@
       "M5 release/portable operations"
     ],
     "currentBlockers": [
-      "R116 fresh R2 source/live authority dispatched; actual executor BUILD under independent review, isolated DB/live evidence NOT_RUN before Root source/binary/fixture admission",
+      "R116 executor source5d38dd51/compile accepted only; owned fixture started but published MySQL port absent; DB/native/live NOT_RUN, fixture stopped/protected equal, no restart.",
       "R114 original terminal evidence MISSING/noFREEZE; B08rasterqualified/B09unsupported",
       "Dashboard3failures, actualAIrerun/fullM2/M3/pilot/release and M1business acceptance OPEN"
     ],
@@ -2864,12 +2864,18 @@
     "productImplementation": "NOT_IMPLEMENTED"
   },
   "x-r116Current": {
-    "status": "BUILD_SOURCE_ACCEPTED_NATIVE_LIVE_OPEN",
+    "status": "BUILD_BLOCKED",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_116_WAITDATA_EXECUTOR.md",
     "scope": "M3_WAITDATA_EXECUTOR_SOURCE_DB_CONDITIONAL_REAL",
-    "nextAction": "CCMAI-RUNTIME-116 BUILD: source independently accepted and Root exact compile2of4 PASS; commit source/binary admission, create one owned isolated fixture, commit actual fixture/runtime admission, then handlers and engine native checks3and4. Provider NOT_RUN; live verification needs separately seeded finite operational authority after exhausted checks, no old counter reset. FullM2/M3/pilot/release and R114 UI gaps OPEN; Facebook/ZaloOA parked; no push/merge/deploy.",
+    "nextAction": "CCMAI-RUNTIME-116 BUILD_BLOCKED: source5d38dd51 and exact Root compile2of4 accepted only; fixture start1of1 consumed but published MySQL port absent, native/provider NOT_RUN. Owned fixture stopped with protected inventory equal. Stop runtime; preserve seed/counters and handoff failed-port/cleanup evidence for a future bounded readiness decision before any new authority/start. No restart/replay/install/alternate stack; fullM2/M3/pilot/release and UI gaps OPEN; Facebook/ZaloOA parked; no push/merge/deploy.",
     "providerCalls": 0,
     "freeze": "OPEN",
-    "rootFocusedChecks": 2
+    "rootFocusedChecks": 2,
+    "sourceCommit": "5d38dd51c387ce161c013a9b6ff866a1d1c7af3d",
+    "fixtureStarts": 1,
+    "native": "NOT_RUN",
+    "live": "NOT_RUN",
+    "fixtureFinal": "EXITED_OWNED_PRESERVED",
+    "protected": "EQUAL"
   }
 }
