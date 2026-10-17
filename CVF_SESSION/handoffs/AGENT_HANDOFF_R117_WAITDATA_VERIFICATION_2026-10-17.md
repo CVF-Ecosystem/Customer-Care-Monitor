@@ -1,6 +1,6 @@
 # R117 WAIT_DATA finite verification handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 
@@ -40,3 +40,5 @@ Owner-authorized restart actualPASS, exact samecontainer/volume/network, source/
 REVIEW_PASS source/native/one-real-synthetic WAIT_DATA executor flow only; FREEZE OPEN/fullM2/M3/UI/pilot/release OPEN. RealAlibaba1/1 HTTP200, PUBLISHED/PROPOSAL_VALID, same-case newrun/newsnapshot/newproposal, original objects retained with stated equality boundaries, syntheticCONFIRM200 persisted. Faithful usage340input/297output, one durableattempt/debit/grantconsumed; Root marker/requestSHA match and independent DB15checksPASS, stored proposal text/evidence match provider/source. Actual generated Vietnamese wording understandable; no current UI-render proof or actual human operator decision.
 
 Owner-authorized restart1/finalstop1 complete, original start1/cleanup1 unchanged. ExactfixtureEXITED/preserved, current protectedcontainers/resources equal explicitly owner-authorized operational baseline. Original cleanupHOLD and owner-confirmed shutdown/defaultbridge replacement retained unchanged. Rootfocused4/6, workerGo0/2, workerPython3/3, RootPython2/2, source correction1/2; unused allowances unavailable for replay/new effects. No moreR117calls/runtime. Final review and realreceipt in r117_root; future move is M3 UI/processing acceptance with inherited evidence, not new generic helper chain. Root phase/role now independent REVIEWER/session-sync/commit steward.
+
+R118 source-only current UI successor: CVF_SESSION/handoffs/AGENT_HANDOFF_R118_CURRENT_PROPOSAL_UI_2026-10-18.md. R117 acceptance and spent budgets unchanged.

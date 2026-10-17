@@ -2,20 +2,20 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R117_WAITDATA_VERIFICATION_2026-10-17.md", "activeTranche": "CCMAI-RUNTIME-117", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R118_CURRENT_PROPOSAL_UI_2026-10-18.md", "activeTranche": "CCMAI-RUNTIME-118", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R117_WAITDATA_VERIFICATION_2026-10-17.md
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R118_CURRENT_PROPOSAL_UI_2026-10-18.md
 
-CCMAI-RUNTIME-117 REVIEW_PASS bounded source/native/one-real-synthetic-WAIT_DATA flow: same-case new proposal and synthetic CONFIRM persisted, faithful340input297output, physical1of1 consumed; finalownedfixtureEXITED/current operational protected baseline equal. No further R117 runtime/provider/native replay. ORCHESTRATOR next bounds M3 current-UI review/processing and remaining mobile/wording acceptance using inherited evidence, no generic tool-repair chain. FullM2/M3/pilot/release/M1business OPEN, Facebook/ZaloOA parked; no push/merge/deploy.
+CCMAI-RUNTIME-118 source-only M3 current-proposal binding and readable WAIT_DATA history: Root commits immutable authority before BUILD, dispatches independent worker, reviews discriminating component tests/typecheck and source. Product runtime/provider/fixture authority NONE; R117 spent evidence inherited without replay. Current UI-render/B08 raster/B09 offline and fullM2/M3/pilot/release/M1business OPEN; Facebook/ZaloOA parked; no push/merge/deploy.
 
-Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; implementation worker returned idle, live authority consumed and runtime stopped
+Codex /root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; independent REVIEWER reserved after worker return
 
-Source5d38dd51/harness8aafa0ce, final runtime/live admission06e16ea8. Owner supplement88c0865e authorized one exact-owned restart after reported shutdown; old seed/start1/cleanup1 and failed original cleanupHOLD preserved. Current final cleanup PASS against explicit renewed operational baseline (defaultbridge replacement only). Root4of6checks, native inherited/no replay after restart, Alibaba1of1 actual HTTP200, newproposal and synthetic API-confirm accepted with exact wire/DB/usage review. Exact original history assertion spans executor publication before CONFIRM; later independent readback checks selected original fields, no full original-object byte equality after CONFIRM claim. No current UI-render/actual human decision or full governance/product readiness claim. Required roadmap/control and dispatch/readiness learnings apply before next scope; do not replay spent authority.
+R117 bounded real backend accepted at efa456a9, 1/1 provider consumed, fixture stopped. R118 fixes source gap: explicit active pointer rather than last array item; current lineage/legacy unique fallback consistent backend; user-readable new history. No runtime proof inherited for changed UI.
 
 ## Historical R114 bounded UI result
 

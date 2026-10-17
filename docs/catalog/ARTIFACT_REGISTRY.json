@@ -3920,7 +3920,7 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R117_WAITDATA_VERIFICATION_2026-10-17.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R118_CURRENT_PROPOSAL_UI_2026-10-18.md",
       "status": "ACTIVE",
       "description": "Active R117 finite source/native/live verification handoff; full product milestones OPEN."
     },
@@ -32021,6 +32021,27 @@
       "path": "docs/reviews/probes/r117_root/final_gate_unit_18/stdout.txt",
       "status": "ACTIVE",
       "description": "R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply."
+    },
+    {
+      "id": "r118-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-118.json",
+      "status": "ACTIVE",
+      "description": "R118 immutable source-only M3 UI dispatcher seed."
+    },
+    {
+      "id": "r118-tranche",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-118.json",
+      "status": "ACTIVE",
+      "description": "R118 source/component-only status; rendered proof open."
+    },
+    {
+      "id": "r118-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_118_CURRENT_PROPOSAL_UI.md",
+      "status": "ACTIVE",
+      "description": "Finite current proposal binding/history acceptance and independent review."
     }
   ]
 }
