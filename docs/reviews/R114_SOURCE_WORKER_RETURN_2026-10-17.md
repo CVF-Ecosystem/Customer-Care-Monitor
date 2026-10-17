@@ -50,6 +50,10 @@ Root retains its separate two focused-test and one forced-typecheck slots. The f
 
 `docs/reviews/probes/r114_luna/r114_binding_parity.json` records byte-for-byte parity against the R113 runner/template after the permitted identity substitutions. It binds worker `/root/r114_onboarding_luna`, order `docs/work_orders/CCMAI_RUNTIME_114_ONBOARDING_UI.md`, and handoff `CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md`. The R110 source-review and validation evidence paths and R108 helper path/hash remain unchanged. The copied runner retains runtime frontend test and typecheck counters at zero. It was not executed.
 
+The parity artifact now includes the exact inherited R110 source-pin receipt at `docs/reviews/probes/r110_root/validation_1/source_pins.json` (SHA-256 `3d863860a0ceec7031fb9cb91596e0b2d052ee6cb7154e3b21cb21fceba57722`) and its 11 path-to-hash entries, the R110 independent source review (SHA-256 `818d3c4d909952509b1d97d44008883e320432cd6526f0fa7545f04e83e2b10b`), and the binary-reuse receipt (SHA-256 `c2f3a032e6dab62442f597326c84ed28e6f1722a807b4f47eca63183b7d7cd6e`). It also records the R110 baseline qualification hash `b8b6a1c6af476443f02e19720d53e3bede5a8b3ca652a6ff19b1ed976da9279b`: 26/29 historical tests passed and the three Dashboard failures remain open; historical evidence SHA-256 is `0487ef7e828b7271ff02c3291757bd31ae9bdf06e9dfb6e6c911d2dc11db0dfb`. The full preserved evidence-path list, including focused-test and forced-typecheck logs, appears in the parity JSON. The inherited R110 receipts themselves were not changed.
+
+The updated binding parity JSON SHA-256 is `a742ea877a9ef7dfdb11edba27257ee580f7d59c3b0d2b62f6d5a0617051fbf7`.
+
 | Binding artifact | SHA-256 |
 |---|---|
 | `docs/reviews/probes/r114_luna/r114_workflow_runner.py` | `7ab016aa8d413c37d78fc8456f2c724ad7484d79eead68ac8b65dc05a171bd37` |

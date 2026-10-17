@@ -73,6 +73,9 @@
       "docs/reviews/probes/r110_root/validation_1/focused_tests.stdout.txt",
       "docs/reviews/probes/r110_root/validation_1/focused_tests.stderr.txt",
       "docs/reviews/probes/r110_root/validation_1/forced_typecheck.json",
+      "docs/reviews/probes/r110_root/validation_1/forced_typecheck.stdout.txt",
+      "docs/reviews/probes/r110_root/validation_1/forced_typecheck.stderr.txt",
+      "docs/reviews/probes/r110_root/focused-test.config.mjs",
       "docs/reviews/probes/r110_root/binary_reuse_verification.json",
       "docs/reviews/probes/r101_worker/frontend_full.json"
     ]

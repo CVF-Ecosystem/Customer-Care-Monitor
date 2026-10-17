@@ -21,6 +21,16 @@
         "offline": "NOT_ADVERTISED",
         "baselineOtherTab": "tab1 stale old localhost route in inventory; not used or modified for114"
       }
+    },
+    {
+      "at": "2026-10-17T04:28:06.606Z",
+      "kind": "source_commit_capability_recheck",
+      "value": {
+        "sourceCommit": "aa92c149f47efaec391fb001b0d23ee0dff67f25",
+        "tabId": "2",
+        "dom": "blank page reachable",
+        "offlineControl": "NOT_ADVERTISED"
+      }
     }
   ]
 }

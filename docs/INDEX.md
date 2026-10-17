@@ -2657,6 +2657,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `CVF_SESSION/tranches/CCMAI-RUNTIME-114.json`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/R114_SOURCE_WORKER_RETURN_2026-10-17.md`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/readiness_receipt.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/runtime_admission.json`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_006_protected_container_inspect.stdout.bin`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/R114_INDEPENDENT_SOURCE_REVIEW_2026-10-17.md`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_luna/r114_binding_parity.json`
@@ -2674,6 +2675,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_002_target_inspect.json`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_001_server_version.json`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_002_target_inspect.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/R114_INDEPENDENT_RUNTIME_ADMISSION_REVIEW_2026-10-17.md`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/operator_transcription.json`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_005_all_container_ids.stderr.bin`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/validation_1/typecheck.json`
@@ -2682,6 +2684,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_004_fixture_volume_users.json`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_luna/worker_vitest_01.json`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/independent_source_verification.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/admission_readiness_pins.json`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/docker-cli-config/config.json`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/validation_1/focused.stderr.bin`
 - R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_003_target_network_inspect.stderr.bin`

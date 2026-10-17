@@ -1,0 +1,28 @@
+{
+  "reviewer": "Codex /root",
+  "observedAtUTC": "2026-10-17T04:28:34.546190+00:00",
+  "reviewedSourceCommit": "aa92c149f47efaec391fb001b0d23ee0dff67f25",
+  "binary": {
+    "path": ".cvf/runtime/r108_native/campaign/r108_handlers.test.exe",
+    "sha256": "cb73ee13e0369cca75ea276cc668f30c3ced42cead5f62c56d68f3c1eaa66f93",
+    "bytes": 58031616,
+    "reviewedSourceCommit": "a4b1d490676b5ef9f165446a2aca33f10adb39df",
+    "compileExecutionHead": "b4a53d4b9fb63c3073b880eb9c7e3e8e6510eafa",
+    "requireNoBackendDelta": true
+  },
+  "binaryPhysicalHashVerified": true,
+  "backendDiff": "",
+  "backendWorktree": "",
+  "frontendWorktree": "",
+  "exclusiveRuntimeRootAbsent": true,
+  "port3011Free": true,
+  "browser": "fresh tab2 blank DOM reachable; capabilities visibility/viewport, offline NOT_ADVERTISED; tab1 stale baseline untouched",
+  "docker": "29.8.2 server answered; stopped exclusive exact fixture/protected4 captured in readiness/readiness_receipt.json; supervisor must recheck before start",
+  "newSourcePins": {
+    "frontend/src/components/OnboardingWizard.vue": "58acc5579752a7f4cbc68ffe346ca679a1a1635bcda4dbba10eea2968246bf24",
+    "frontend/src/__tests__/onboarding-wizard.spec.ts": "807b4c77b064caad0ef322c4e6fde0b319df4e840366811691d576b9bfd268e9",
+    "docs/reviews/probes/r114_luna/r114_workflow_runner.py": "7ab016aa8d413c37d78fc8456f2c724ad7484d79eead68ac8b65dc05a171bd37",
+    "docs/reviews/probes/r114_luna/r114_vite_config.mjs.template": "0176b1fc6d15d10ebb28b351d12e22ed4442b51506b1bbff7b3500534d8640da",
+    "docs/reviews/probes/r114_luna/focused-test.config.mjs": "525b9dddb544e8cc0e4866e0ca933fba98f4f0c256cdae2db72541a26943009d"
+  }
+}
