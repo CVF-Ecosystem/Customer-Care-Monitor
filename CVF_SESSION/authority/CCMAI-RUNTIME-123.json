@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-123",
+  "authorityKind": "DISPATCHER_OWNED_OWNER_CONTINUATION_DELIVERY_GAPS",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Sol synthetic activation; Luna Dashboard fixture; Root runtime fixture only if needed",
+    "reviewer": "Root delegated source; Luna Root-authored runtime fixture",
+    "commitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "backend/config/**",
+    "backend/cli/**",
+    "backend/main.go",
+    "backend/engine/intervention_startup*.go",
+    "backend/api/handlers/intervention*.go",
+    "backend/api/router.go",
+    "backend/db/models/intervention*.go",
+    "frontend/src/__tests__/dashboard-service-status.spec.ts",
+    "frontend/src/__tests__/*intervention*",
+    "frontend/src/api/intervention*",
+    "frontend/src/views/InterventionCases.vue",
+    "frontend/src/views/Jobs/JobDetail.vue",
+    "frontend/src/views/Messages.vue",
+    "frontend/src/components/Intervention*.vue",
+    "frontend/src/i18n/vi.ts",
+    "frontend/src/i18n/en.ts",
+    "docker-compose.yml",
+    "docs/reference/INTERVENTION_SYNTHETIC_ACTIVATION_CONTRACT.md",
+    "docs/reference/INTERVENTION_SYNTHETIC_RUNBOOK.md",
+    "docs/reviews/R123_*.md",
+    "docs/reviews/probes/review_completion_20261018/**",
+    "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/work_orders/CCMAI_RUNTIME_123_DELIVERY_COMPLETION.md",
+    "README.md"
+  ],
+  "prohibitedEffects": [
+    "Installed app/customer DB or actual channel mutation",
+    "Real provider/paid call or real credential read during testing",
+    "Old seed/ledger/cap or evidence reset",
+    "Automatic customer send or employee decision",
+    "Push/merge/deploy without explicit request"
+  ],
+  "ownerAuthorization": "Owner continues locally validated fixes: tiep after source checkpoint79c084a1. Prior supplied AGENTS revoked. Root orchestrator/independent reviewer; Luna Max standard worker, Sol Medium difficult startup/state work.",
+  "scope": "Repair three stale Dashboard fixture tests; complete full native Go/DB checks and current synthetic UI terminal accounting; implement explicit opt-in synthetic ordinary startup and supported operator provisioning. Default disabled; real-source guards unchanged. No provider execution authorized during verification.",
+  "verification": "Fresh owned MySQL plus cached Go Docker container for durable full-suite logs; browser bounded synthetic only. Independent source tests, negative configs/permissions/budget/grants, ordinary startup clean-install integration without test-only runner injection.",
+  "claimBoundary": "Software/synthetic presentation only; provider/governance/quality/pilot/release not inferred from stubs or build success."
+}
