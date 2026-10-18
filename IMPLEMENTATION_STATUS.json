@@ -34,7 +34,7 @@
     "deliveryRoadmapPublication": "d72de76984e4aad9c208cc82e6093578797b5340",
     "m1BusinessPilotAcceptance": "OPEN",
     "currentPublication": "BASE_1e3db8b1_PUSHED_AND_MERGED_d7a6f76_THIS_ROADMAP_UPDATE_LOCAL_ONLY",
-    "nextPlannedWork": "CCMAI-RUNTIME-127 complete one bounded synthetic browser human workflow: correction, assignment, outcome/reopen, WAIT_DATA ownership/escalation, stale and reader controls, reload and narrow viewport. Reuse accepted source/native evidence; Root reviews Sol fixture before runtime. No provider/customer data/installed app mutation/push/deploy. Full M3 exit only for evidenced criteria."
+    "nextPlannedWork": "CCMAI-RUNTIME-127-A complete one bounded synthetic browser human workflow: correction, assignment, outcome/reopen, WAIT_DATA ownership/escalation, stale and reader controls, reload and narrow viewport. Reuse accepted source/native evidence; Root reviews Sol fixture before runtime. No provider/customer data/installed app mutation/push/deploy. Full M3 exit only for evidenced criteria."
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",

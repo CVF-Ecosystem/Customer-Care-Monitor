@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "trancheId": "CCMAI-RUNTIME-127",
-  "authorityKind": "OWNER_CONTINUED_SYNTHETIC_M3_BROWSER_ACTION_ACCEPTANCE",
+  "authorityKind": "DISPATCHER_OWNED_SYNTHETIC_M3_BROWSER_ACTION_ACCEPTANCE",
   "riskCeiling": "R2",
   "roles": {
     "workOrderAuthor": "Codex /root",
@@ -29,8 +29,8 @@
   "verification": "Root source review before opt-in run; owned nonce-bound synthetic schema, existing isolated Docker Go/MySQL caches and source-bound frontend build; real IAB actions, response journal, durable final projection/events/counters and server exit receipt. Failures preserved. No broad suite repeat without source dependency change.",
   "claimBoundary": "Software/synthetic presentation only; provider/governance/quality/pilot/release not inferred from stubs or build success.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_127_M3_BROWSER_ACTIONS.md",
-  "baseCommit": "90bc02ed14c5e3997ec97fe400a64cf06cae6f70",
-  "status": "DISPATCH_READY",
+  "baseCommit": "445d29f39aa8f4343eb095584cb145884c09a1ca",
+  "status": "BUILD",
   "phase": "BUILD",
   "workOrderStatus": "ACTIVE",
   "buildCommit": null,
@@ -43,5 +43,7 @@
     "WORK_ORDER",
     "DISPATCH_READY",
     "BUILD"
-  ]
+  ],
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "supersededBy": "CCMAI-RUNTIME-127-A"
 }
