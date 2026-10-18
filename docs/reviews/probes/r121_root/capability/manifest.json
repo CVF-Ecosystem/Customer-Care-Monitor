@@ -1,0 +1,49 @@
+{
+  "archive": "docs/reviews/probes/r121_root/capability/original_bytes.zip",
+  "sha256": "2e2a4c6115c59024d371854f403a7562c4caad23f1bd772b0d2674dd071628b7",
+  "files": [
+    {
+      "path": ".cvf/runtime/r121_capability/child_end.json",
+      "bytes": 79,
+      "sha256": "9236530d905111cbf0a3257eeb8c642e2910cacdc7d7dac89769dd5d3a65e4f1"
+    },
+    {
+      "path": ".cvf/runtime/r121_capability/child_started.json",
+      "bytes": 56,
+      "sha256": "8f7d34ab70f470cb580e21b349ab856df0d88f7072c173fe00caede57757d43f"
+    },
+    {
+      "path": ".cvf/runtime/r121_capability/lifecycle.py",
+      "bytes": 2164,
+      "sha256": "f3ac8617fcc0cc2f5d81f8c9ce277039cfa3148cd641e7e9e825e5df199a877b"
+    },
+    {
+      "path": ".cvf/runtime/r121_capability/parent_ready.json",
+      "bytes": 137,
+      "sha256": "7754c51aaa26102aecad09002f146f1e7d916943de79461e17f0b331f5805487"
+    },
+    {
+      "path": ".cvf/runtime/r121_capability/parent_receipt.json",
+      "bytes": 344,
+      "sha256": "3b9e53f8eb2100f78eced94bbf2a5bede7adfdd3b3bf22da6f8963bd477efc60"
+    },
+    {
+      "path": ".cvf/runtime/r121_capability/reservation.json",
+      "bytes": 105,
+      "sha256": "d4358bd35637d3d230a1d3bf91613a3a83e5c6d83226be0c8eb52383eae8c941"
+    },
+    {
+      "path": ".cvf/runtime/r121_capability/stop_requested",
+      "bytes": 18,
+      "sha256": "816dc319b6b05651e21c01faf8ed3f0f731060b5dd1bd5f530c030a3c99e0131"
+    }
+  ],
+  "actualOriginalExecExit": 1,
+  "expectedOriginalExecExit": 17,
+  "status": "HOLD_EXIT_DISCRIMINATOR_MISMATCH",
+  "childWaitObserved": true,
+  "childExit": 0,
+  "newProductStarts": 0,
+  "retry": false,
+  "cause": "Outer shell exit mapping suspected; not independently reproduced. No claim of supervisor lifetime loss."
+}

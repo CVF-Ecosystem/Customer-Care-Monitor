@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md",
       "status": "ACTIVE",
-      "description": "Active R121 finite original-terminal M3 proof; source-only dispatch, runtime conditional on admissions."
+      "description": "R121 capability exit mismatch HOLD; no source BUILD or product runtime."
     },
     {
       "id": "r060-work-order",
@@ -33554,6 +33554,55 @@
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R120_CURRENT_UI_2026-10-18.md",
       "status": "ACTIVE",
       "description": "Superseded R120 pointer; original CHANGES_REQUIRED/evidence/caps unchanged."
+    },
+    {
+      "id": "r121-capability-0",
+      "family": "continuity",
+      "path": "docs/reviews/R121_CAPABILITY_HOLD_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "R121 original short capability evidence or hold decision; expectedexec17/actual1, childwait0, no product runtime or retry."
+    },
+    {
+      "id": "r121-capability-1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/capability/exec_final.json",
+      "status": "ACTIVE",
+      "description": "R121 original short capability evidence or hold decision; expectedexec17/actual1, childwait0, no product runtime or retry."
+    },
+    {
+      "id": "r121-capability-2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/capability/exec_initial.json",
+      "status": "ACTIVE",
+      "description": "R121 original short capability evidence or hold decision; expectedexec17/actual1, childwait0, no product runtime or retry."
+    },
+    {
+      "id": "r121-capability-3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/capability/manifest.json",
+      "status": "ACTIVE",
+      "description": "R121 original short capability evidence or hold decision; expectedexec17/actual1, childwait0, no product runtime or retry."
+    },
+    {
+      "id": "r121-capability-4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/capability/original_bytes.zip",
+      "status": "ACTIVE",
+      "description": "R121 original short capability evidence or hold decision; expectedexec17/actual1, childwait0, no product runtime or retry."
+    },
+    {
+      "id": "r121-capability-5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/capability/reservation.json",
+      "status": "ACTIVE",
+      "description": "R121 original short capability evidence or hold decision; expectedexec17/actual1, childwait0, no product runtime or retry."
+    },
+    {
+      "id": "r121-capability-command-record",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/capability/invocation_record.json",
+      "status": "ACTIVE",
+      "description": "Root transcription of invocation command, explicitly not raw tool export; mismatch cause remains inferred."
     }
   ]
 }

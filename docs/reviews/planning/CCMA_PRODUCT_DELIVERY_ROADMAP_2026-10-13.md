@@ -1,5 +1,9 @@
 # CCMA — Roadmap phát triển sản phẩm và tiếp quản giữa các agent
 
+## Current R121 local capability hold — 2026-10-18
+
+Owner chose local continuation after R120 read-only lifetime review. One harmless local parent/child admission observed cooperative stop/wait exit0 and receipt; original outer exec returned1 vs declared17, so A2 NOT_MET. Source BUILD/compile/product runtime all NOT_STARTED, capability1of1 consumed/no retry. Root execution command lacked explicit native exit propagation; exact shell mapping cause not reproduced. Minimal prospective correction is explicit PowerShell exit propagation, not supervisor redesign; needs separately granted confirmation before product admission. R120 UI bounded acceptance/terminal gaps preserved, no oldcap reset or automatic successor. FullM2/M3/M1business/pilot/release OPEN/accountsparked.
+
 ## Current R120 observed UI / terminal evidence hold — 2026-10-18
 
 R120 actual current UI observation: correct active rev2 over later off-lineage rev3; three readable Vietnamese history events/system reason, synthetic notice. CSS390x844 has no horizontal overflow, original JPEG375x811 (not exact-raster390x844/PNG); B09 unsupported NOT_RUN and B07 inherited. Overall CHANGES_REQUIRED: original supervisor terminal/held-child wait-exit/final fingerprint-effect counters MISSING after session loss, cause UNKNOWN. Root separate identity-proven sole fixture stop succeeded: EXITED/Pid0/Ports{}, listeners3019/64408/64629absent, protected8containers/9networks/471volumesequal, source400/binary/executablesunchanged. UI observation is not AI governance or actual workflow proof. Runtime stopped; no replay/repair/automatic successor/provider. Read-only failed-terminal/lifetime review/transfer only before separate governed runtime decision. FullM2/M3/M1business/pilot/release OPEN, accountsparked/no push-merge-deploy. Review: docs/reviews/R120_FINAL_INDEPENDENT_UI_REVIEW_2026-10-18.md.

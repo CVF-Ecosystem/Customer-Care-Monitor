@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md", "activeTranche": "CCMAI-RUNTIME-121", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md", "activeTranche": "CCMAI-RUNTIME-121", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md
 
-CCMAI-RUNTIME-121 DISPATCH_READY: Luna source-only four mechanical R120->R121 copies after current rehydration and Root-recorded acknowledgment. Root one short capability admission; no product setup before independent source/capability acceptance and committed source-binary/resource admissions. Old R120 immutable/CHANGES_REQUIRED, all full milestones OPEN, accounts parked; no provider/case actions/push/merge/deploy.
+CCMAI-RUNTIME-121 CHANGES_REQUIRED: sole short capability original exec returned1 vs declared17, despite actual child wait/exit0. Source BUILD and product runtime NOT_STARTED; no retry or product start under consumed capability cap. Preserve exact evidence and review minimal explicit PowerShell exit propagation proposal before separately granted confirmation. Old R120 evidence/caps immutable; fullM2/M3/M1business/pilot/release OPEN, accounts parked; no provider/push/merge/deploy.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna /root/r121_isolation_luna source worker pending acknowledgment
+Codex /root ORCHESTRATOR / independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Root capability operator; Luna independent static assessment returned idle, source NOT_STARTED
 
 R120 UI accepted bounded, original terminal/durable accounting missing, stopped/CHANGES_REQUIRED and consumed caps immutable. R121 separate local route per owner instruction, no new product implementation claim.
 
@@ -961,3 +961,5 @@ Owner: continue, audit carefully and update roadmap to avoid drift. Root consoli
 ## Standing owner directive — UI/UX language, 2026-10-16
 
 Product-facing labels, statuses, help and errors must use end-user language, not Dev jargon, raw enums/API codes/stack traces or tooling details. Verify rendered UI under the bounded active product scope. Root cause diagnostics remain in logs/review artifacts. Recorded with owner audit authority and browser-stop instruction in docs/reviews/R107_R108_BROWSER_STOP_HANDOFF_2026-10-16.md.
+
+R121 capability evidence and smallest prospective invocation correction independently assessed read-only by Luna; no source BUILD and no acceptance. Full report: docs/reviews/R121_CAPABILITY_HOLD_2026-10-18.md.

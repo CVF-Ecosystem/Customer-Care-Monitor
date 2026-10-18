@@ -1,6 +1,6 @@
 # R121 finite M3 original terminal and current UI proof
 
-Status: DISPATCH_READY
+Status: BLOCKED_WITH_REASON
 Risk: R2
 dispatchKind: INITIAL
 Worker: /root/r121_isolation_luna
@@ -63,3 +63,6 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 
 Material-SHA marker: 33186d0133fdf7272fe61f20ee1c9ac17bb5b11f. Source-only dispatch; exact admissions required.
 
+## Capability disposition
+
+Root sole short capability check observed cooperative child stop/wait exit0 and durable receipt, but original outer exec returned1 rather than declared17. A2 NOT_MET; no source BUILD, worker checks, compile or product starts occurred. Capability1of1 consumed; no retry or product runtime under this record. Proposed explicit PowerShell exit propagation requires a separately granted confirmation; old evidence stays unchanged.

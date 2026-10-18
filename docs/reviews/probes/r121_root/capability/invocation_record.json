@@ -1,0 +1,8 @@
+{
+  "recordKind": "ROOT_TRANSCRIPTION_OF_ISSUED_TOOL_ARGUMENTS_NOT_RAW_EXPORT",
+  "command": "python -B .cvf/runtime/r121_capability/lifecycle.py",
+  "shell": "environment default PowerShell",
+  "yield_time_ms": 1000,
+  "originalSessionId": 66544,
+  "reviewerQualification": "Plain invocation command is Root-recorded; raw tool result does not itself include argv."
+}
