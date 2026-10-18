@@ -1,12 +1,12 @@
 # R121 implementation worker return
 
-Status: COMPLETE_PENDING_REVIEW  
-Phase: BUILD  
-Risk: R2  
-Worker: /root/r121_isolation_luna  
-Reviewer: Codex /root  
-Commit steward: Codex /root  
-Build grant: `a3f39e5db88dbaa08e0781f9b45ff808af99f98f`  
+Status: COMPLETE_PENDING_REVIEW
+Phase: BUILD
+Risk: R2
+Worker: /root/r121_isolation_luna
+Reviewer: Codex /root
+Commit steward: Codex /root
+Build grant: `a3f39e5db88dbaa08e0781f9b45ff808af99f98f`
 Base: `33186d0133fdf7272fe61f20ee1c9ac17bb5b11f`
 
 ## Delivered source scope

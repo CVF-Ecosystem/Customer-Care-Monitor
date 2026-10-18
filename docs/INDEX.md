@@ -4236,6 +4236,14 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/probes/r121_root/capability_confirmation/manifest.json`
 - Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/probes/r121_root/capability_confirmation/original_bytes.zip`
 - Owner local resume bounded M3 seed; no BUILD/runtime before activation/admission.: `CVF_SESSION/authority/CCMAI-RUNTIME-121.json`
+- R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run.: `docs/reviews/probes/r121_root/source_binary_admission.json`
+- R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run.: `docs/reviews/probes/r121_root/compile_001/receipt.json`
+- R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run.: `docs/reviews/probes/r121_root/compile_001/reservation.json`
+- R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run.: `docs/reviews/probes/r121_root/compile_001/stderr.bin`
+- R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run.: `docs/reviews/probes/r121_root/compile_001/stdout.bin`
+- R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run.: `docs/reviews/probes/r121_root/docker_readiness/receipt.json`
+- R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run.: `docs/reviews/probes/r121_root/docker_readiness/stderr.bin`
+- R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run.: `docs/reviews/probes/r121_root/docker_readiness/stdout.bin`
 - R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/R121_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md`
 - R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/R121_IMPLEMENTATION_WORKER_RETURN_2026-10-18.md`
 - R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_root/source_unit_001/source_verification.json`

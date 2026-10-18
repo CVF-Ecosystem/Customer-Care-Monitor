@@ -3,7 +3,7 @@
   "activePhase": "BUILD",
   "activeTranche": "CCMAI-RUNTIME-121",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-121 source-only reviewed: four exact mechanical copies, worker19/Root19 focusedPASS, no product source changes. Root commits source then sole offline compile and exact source-binary admission before setup; committed exact resource admission before sole original-foreground-session M3 UI campaign/terminal review. Original failed cap and owner continuation separate; provider/case actions0, full milestones OPEN/accounts parked/no push-merge-deploy.",
+  "nextAllowedMove": "CCMAI-RUNTIME-121 source/binary admission ready: source9e392d98, sole offline compilePASS/405pins unchanged, binary3853a899; Root commits exact admission before sole fresh setup. Commit exact new resource admission before sole original foreground UI campaign and actual terminal/fingerprint/effect review. No provider/case actions, old failed evidence/caps unchanged; full milestones OPEN/accounts parked/no push-merge-deploy.",
   "activeRole": "Codex /root ORCHESTRATOR / independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD and authorized runtime operator; Luna source worker/static recorder assessor returned idle",
   "updatedAt": "2026-10-18",
   "schemaVersion": "1.0",
@@ -198,8 +198,11 @@
     "expectedExecExit": 17,
     "heldChildExit": 0,
     "heldChildWaitObserved": true,
-    "source": "ACCEPTED_SOURCE_ONLY_COMPILE_PENDING",
-    "productRuntime": "NOT_RUN"
+    "source": "COMMITTED_REVIEWED",
+    "productRuntime": "NOT_RUN",
+    "compile": "PASS_OFFLINE_1OF1",
+    "sourcePins": 405,
+    "setup": "NOT_RUN"
   },
   "x-r121CapabilityContinuation": {
     "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-121-CAPABILITY-CONTINUATION.json",

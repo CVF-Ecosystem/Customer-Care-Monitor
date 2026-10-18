@@ -33743,6 +33743,62 @@
       "path": "docs/reviews/probes/r121_root/source_unit_001/stdout.bin",
       "status": "ACTIVE",
       "description": "R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance."
+    },
+    {
+      "id": "r121-source-admission-0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/source_binary_admission.json",
+      "status": "ACTIVE",
+      "description": "R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run."
+    },
+    {
+      "id": "r121-source-admission-1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/compile_001/receipt.json",
+      "status": "ACTIVE",
+      "description": "R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run."
+    },
+    {
+      "id": "r121-source-admission-2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/compile_001/reservation.json",
+      "status": "ACTIVE",
+      "description": "R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run."
+    },
+    {
+      "id": "r121-source-admission-3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/compile_001/stderr.bin",
+      "status": "ACTIVE",
+      "description": "R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run."
+    },
+    {
+      "id": "r121-source-admission-4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/compile_001/stdout.bin",
+      "status": "ACTIVE",
+      "description": "R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run."
+    },
+    {
+      "id": "r121-source-admission-5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/docker_readiness/receipt.json",
+      "status": "ACTIVE",
+      "description": "R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run."
+    },
+    {
+      "id": "r121-source-admission-6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/docker_readiness/stderr.bin",
+      "status": "ACTIVE",
+      "description": "R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run."
+    },
+    {
+      "id": "r121-source-admission-7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/docker_readiness/stdout.bin",
+      "status": "ACTIVE",
+      "description": "R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run."
     }
   ]
 }

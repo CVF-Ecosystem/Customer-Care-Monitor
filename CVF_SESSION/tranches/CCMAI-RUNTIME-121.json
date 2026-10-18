@@ -65,7 +65,7 @@
   "status": "BUILD",
   "phase": "BUILD",
   "workOrderStatus": "ACTIVE",
-  "buildCommit": null,
+  "buildCommit": "9e392d985dfed3f8dcdd179819a546464115a619",
   "reviewEvidence": [
     "docs/reviews/R121_CAPABILITY_HOLD_2026-10-18.md",
     "docs/reviews/R121_CAPABILITY_CONFIRMATION_REVIEW_2026-10-18.md",
@@ -92,7 +92,7 @@
     "workerPythonChecks": 1,
     "rootPythonChecks": 1,
     "sourceRepairRounds": 0,
-    "rootCompileInvocations": 0,
+    "rootCompileInvocations": 1,
     "campaignStarts": 0,
     "newFixtureStarts": 0,
     "setupInvocations": 0,
@@ -111,8 +111,11 @@
     "expectedExecExit": 17,
     "heldChildExit": 0,
     "heldChildWaitObserved": true,
-    "source": "ACCEPTED_SOURCE_ONLY_COMPILE_PENDING",
-    "productRuntime": "NOT_RUN"
+    "source": "COMMITTED_REVIEWED",
+    "productRuntime": "NOT_RUN",
+    "compile": "PASS_OFFLINE_1OF1",
+    "sourcePins": 405,
+    "setup": "NOT_RUN"
   },
   "x-capabilityContinuation": {
     "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-121-CAPABILITY-CONTINUATION.json",
