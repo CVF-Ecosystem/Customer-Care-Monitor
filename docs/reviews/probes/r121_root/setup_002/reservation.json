@@ -1,0 +1,12 @@
+{
+  "mode": "setup",
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-B",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\r121_ui_supervisor.py",
+    "setup"
+  ],
+  "wrapperPid": 26632,
+  "startedAt": 1792301366.455739,
+  "invocation": 2
+}

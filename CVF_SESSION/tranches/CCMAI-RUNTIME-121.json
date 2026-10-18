@@ -122,17 +122,27 @@
     "productRuntime": "NOT_RUN",
     "compile": "POSTREPAIR_OFFLINE_COMPILE_PASS",
     "sourcePins": 405,
-    "setup": "EXIT1_SOURCE_ADMISSION_IDENTITY",
-    "actualFixtureStarts": 0,
+    "setup": "POSTREPAIR_READY_EXIT0",
+    "actualFixtureStarts": 1,
     "actualBackendStarts": 0,
     "actualViteStarts": 0,
     "actualProductTabs": 0,
     "actualProviderCalls": 0,
-    "runtimeDirectoryPresent": false,
+    "runtimeDirectoryPresent": true,
     "setupWaitObserved": true,
     "setupWrapperMetadataError": null,
-    "postRepairSetup": "NOT_RUN",
-    "newBinarySha256": "cb52235ceafee389f52a3fcc80ff9685887e4d7cef6035ea8a5428e30a582162"
+    "postRepairSetup": "READY_EXIT0_WAIT_OBSERVED",
+    "newBinarySha256": "cb52235ceafee389f52a3fcc80ff9685887e4d7cef6035ea8a5428e30a582162",
+    "initialSetup": "EXIT1_SOURCE_ADMISSION_IDENTITY_NO_RESOURCE_EFFECT",
+    "containerId": "e8386c20fc1a4d3f3ebf11f05b2ec491eb968b15e28bb101b6a46b6ee0afca77",
+    "networkId": "c36815bdd5d46788c6194b95bfa0585618a8ec0d8b9a2d9a7344f8aea12bda3b",
+    "volumeName": "ccmai-r121-ui-20261018",
+    "port": 56961,
+    "protectedCounts": {
+      "containers": 9,
+      "networks": 10,
+      "volumes": 472
+    }
   },
   "x-capabilityContinuation": {
     "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-121-CAPABILITY-CONTINUATION.json",
@@ -162,9 +172,9 @@
     },
     "used": {
       "offlineCompile": 1,
-      "setupInvocation": 0,
-      "newFixtureStart": 0
+      "setupInvocation": 1,
+      "newFixtureStart": 1
     },
-    "status": "COMPILED_ADMISSION_COMMIT_PENDING"
+    "status": "SETUP_READY_RESOURCE_ADMISSION_COMMIT_PENDING"
   }
 }

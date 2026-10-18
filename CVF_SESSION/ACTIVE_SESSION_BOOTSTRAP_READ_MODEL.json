@@ -3,7 +3,7 @@
   "activePhase": "BUILD",
   "activeTranche": "CCMAI-RUNTIME-121",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-121 fixed source5cf1244f/new binarycb52235c independently pinned405unchanged; postrepair compile1of1PASS, original compile/setup evidence/caps immutable. Root commits revised source-binary admission then sole postrepair setup002 using explicit recorder slot002; commit exact resource admission before original unspent sole M3 UI campaign/terminal review. No more units/provider/case actions; full milestones OPEN/accounts parked/no push-merge-deploy.",
+  "nextAllowedMove": "CCMAI-RUNTIME-121 setup002READY/original exit0/wait observed; owned e8386c20/loopback56961 verified running, protected9containers10networks472volumes equal,405sourcepins unchanged. Root commits exact resource admission before original unspent sole foreground M3 proposal/history UI campaign; keep original exec polled through logout/immediate stop/final accounting and owned cleanup. No provider/case actions, old failure/caps unchanged/full milestones OPEN/accounts parked/no push-merge-deploy.",
   "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD and authorized runtime operator; Sol repair worker and independent static recorder assessor returned idle",
   "updatedAt": "2026-10-18",
   "schemaVersion": "1.0",
@@ -202,17 +202,27 @@
     "productRuntime": "NOT_RUN",
     "compile": "POSTREPAIR_OFFLINE_COMPILE_PASS",
     "sourcePins": 405,
-    "setup": "EXIT1_SOURCE_ADMISSION_IDENTITY",
-    "actualFixtureStarts": 0,
+    "setup": "POSTREPAIR_READY_EXIT0",
+    "actualFixtureStarts": 1,
     "actualBackendStarts": 0,
     "actualViteStarts": 0,
     "actualProductTabs": 0,
     "actualProviderCalls": 0,
-    "runtimeDirectoryPresent": false,
+    "runtimeDirectoryPresent": true,
     "setupWaitObserved": true,
     "setupWrapperMetadataError": null,
-    "postRepairSetup": "NOT_RUN",
-    "newBinarySha256": "cb52235ceafee389f52a3fcc80ff9685887e4d7cef6035ea8a5428e30a582162"
+    "postRepairSetup": "READY_EXIT0_WAIT_OBSERVED",
+    "newBinarySha256": "cb52235ceafee389f52a3fcc80ff9685887e4d7cef6035ea8a5428e30a582162",
+    "initialSetup": "EXIT1_SOURCE_ADMISSION_IDENTITY_NO_RESOURCE_EFFECT",
+    "containerId": "e8386c20fc1a4d3f3ebf11f05b2ec491eb968b15e28bb101b6a46b6ee0afca77",
+    "networkId": "c36815bdd5d46788c6194b95bfa0585618a8ec0d8b9a2d9a7344f8aea12bda3b",
+    "volumeName": "ccmai-r121-ui-20261018",
+    "port": 56961,
+    "protectedCounts": {
+      "containers": 9,
+      "networks": 10,
+      "volumes": 472
+    }
   },
   "x-r121CapabilityContinuation": {
     "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-121-CAPABILITY-CONTINUATION.json",
@@ -231,9 +241,9 @@
     },
     "used": {
       "offlineCompile": 1,
-      "setupInvocation": 0,
-      "newFixtureStart": 0
+      "setupInvocation": 1,
+      "newFixtureStart": 1
     },
-    "status": "COMPILED_ADMISSION_COMMIT_PENDING"
+    "status": "SETUP_READY_RESOURCE_ADMISSION_COMMIT_PENDING"
   }
 }

@@ -4254,6 +4254,15 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_worker/namespace_repair/stdout.bin`
 - R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_root/source_unit_002/receipt.json`
 - R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_root/source_unit_002/reservation.json`
+- Actual postrepair setup002 originalwait/exit0 and exact fresh owned resource/source/protection admission, no UI campaign yet.: `docs/reviews/probes/r121_root/resource_admission.json`
+- Actual postrepair setup002 originalwait/exit0 and exact fresh owned resource/source/protection admission, no UI campaign yet.: `docs/reviews/probes/r121_root/setup_002/child_started.json`
+- Actual postrepair setup002 originalwait/exit0 and exact fresh owned resource/source/protection admission, no UI campaign yet.: `docs/reviews/probes/r121_root/setup_002/independent_resource_proof.json`
+- Actual postrepair setup002 originalwait/exit0 and exact fresh owned resource/source/protection admission, no UI campaign yet.: `docs/reviews/probes/r121_root/setup_002/receipt.json`
+- Actual postrepair setup002 originalwait/exit0 and exact fresh owned resource/source/protection admission, no UI campaign yet.: `docs/reviews/probes/r121_root/setup_002/reservation.json`
+- Actual postrepair setup002 originalwait/exit0 and exact fresh owned resource/source/protection admission, no UI campaign yet.: `docs/reviews/probes/r121_root/setup_002/stderr.bin`
+- Actual postrepair setup002 originalwait/exit0 and exact fresh owned resource/source/protection admission, no UI campaign yet.: `docs/reviews/probes/r121_root/setup_002/stdout.bin`
+- Actual postrepair setup002 originalwait/exit0 and exact fresh owned resource/source/protection admission, no UI campaign yet.: `docs/reviews/probes/r121_root/setup_002/tool_final.json`
+- Actual postrepair setup002 originalwait/exit0 and exact fresh owned resource/source/protection admission, no UI campaign yet.: `docs/reviews/probes/r121_root/setup_002/tool_initial.json`
 - R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/R121_IDENTITY_CONSOLIDATED_REPAIR_DECISION_2026-10-18.md`
 - R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/probes/r121_root/setup_001/child_started.json`
 - R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/probes/r121_root/setup_001/receipt.json`

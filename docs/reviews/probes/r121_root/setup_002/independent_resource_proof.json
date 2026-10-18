@@ -1,0 +1,99 @@
+{
+  "observedAt": 1792301581.9995577,
+  "container": {
+    "Id": "e8386c20fc1a4d3f3ebf11f05b2ec491eb968b15e28bb101b6a46b6ee0afca77",
+    "Image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "Name": "/ccmai-r121-ui-20261018",
+    "State": "running",
+    "Pid": 9987,
+    "Labels": {
+      "ccmai.owner": "c651200f4f4f66d37fbfb61224dba98c",
+      "ccmai.tranche": "CCMAI-RUNTIME-121"
+    },
+    "Mounts": [
+      {
+        "Destination": "/var/lib/mysql",
+        "Driver": "local",
+        "Mode": "z",
+        "Name": "ccmai-r121-ui-20261018",
+        "Propagation": "",
+        "RW": true,
+        "Source": "/var/lib/docker/volumes/ccmai-r121-ui-20261018/_data",
+        "Type": "volume"
+      }
+    ],
+    "NetworkMode": "ccmai-r121-ui-20261018",
+    "Networks": {
+      "ccmai-r121-ui-20261018": {
+        "Aliases": null,
+        "DNSNames": [
+          "ccmai-r121-ui-20261018",
+          "e8386c20fc1a"
+        ],
+        "DriverOpts": null,
+        "EndpointID": "4a91ad80440b68d47b7ede576c19e5785d4deaa06f6bfd7e4a7bce3beacf9547",
+        "Gateway": "172.25.0.1",
+        "GlobalIPv6Address": "",
+        "GlobalIPv6PrefixLen": 0,
+        "GwPriority": 0,
+        "IPAMConfig": null,
+        "IPAddress": "172.25.0.2",
+        "IPPrefixLen": 16,
+        "IPv6Gateway": "",
+        "Links": null,
+        "MacAddress": "a2:c4:9d:ca:48:75",
+        "NetworkID": "c36815bdd5d46788c6194b95bfa0585618a8ec0d8b9a2d9a7344f8aea12bda3b"
+      }
+    },
+    "Ports": {
+      "3306/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "56961"
+        }
+      ]
+    },
+    "networkIdentity": {
+      "Id": "c36815bdd5d46788c6194b95bfa0585618a8ec0d8b9a2d9a7344f8aea12bda3b",
+      "Name": "ccmai-r121-ui-20261018",
+      "Created": "2026-10-18T05:30:20.842945626Z",
+      "Driver": "bridge",
+      "Internal": false,
+      "Labels": {
+        "ccmai.owner": "c651200f4f4f66d37fbfb61224dba98c",
+        "ccmai.tranche": "CCMAI-RUNTIME-121"
+      },
+      "Options": {
+        "com.docker.network.bridge.gateway_mode_ipv4": "nat",
+        "com.docker.network.bridge.host_binding_ipv4": "127.0.0.1",
+        "com.docker.network.enable_ipv4": "true",
+        "com.docker.network.enable_ipv6": "false"
+      }
+    },
+    "volumeIdentity": {
+      "Name": "ccmai-r121-ui-20261018",
+      "CreatedAt": "2026-10-18T05:30:21Z",
+      "Mountpoint": "/var/lib/docker/volumes/ccmai-r121-ui-20261018/_data",
+      "Driver": "local",
+      "Labels": {
+        "ccmai.owner": "c651200f4f4f66d37fbfb61224dba98c",
+        "ccmai.tranche": "CCMAI-RUNTIME-121"
+      },
+      "Options": null
+    }
+  },
+  "protectedEqual": true,
+  "protectedCounts": {
+    "containers": 9,
+    "networks": 10,
+    "volumes": 472
+  },
+  "all405SourcePinsUnchanged": true,
+  "wrapper": {
+    "exit": 0,
+    "waitObserved": true,
+    "childPid": 24932,
+    "metadataError": null,
+    "finishedAt": 1792301482.2567873
+  }
+}
