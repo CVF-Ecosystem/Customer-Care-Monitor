@@ -7,7 +7,8 @@
     "workOrderAuthor": "Codex /root",
     "implementationWorker": "/root/r120_ui_readiness_luna",
     "reviewer": "Codex /root",
-    "commitSteward": "Codex /root"
+    "commitSteward": "Codex /root",
+    "repairWorker": "/root/r120_ui_readiness_luna"
   },
   "allowedPaths": [
     "backend/api/handlers/intervention_ui_r120_test.go",
@@ -77,18 +78,27 @@
   "baseCommit": "5aa100c6f5a798ee17c9ba0465f070980fe8a6d4",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_120_CURRENT_UI_PROOF.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
-  "workOrderStatus": "DISPATCH_READY",
+  "status": "BUILD",
+  "phase": "BUILD",
+  "workOrderStatus": "ACTIVE",
   "buildCommit": null,
   "reviewEvidence": [
-    "docs/reviews/R119_READONLY_CAUSE_AND_R120_DECISION_2026-10-18.md"
+    "docs/reviews/R119_READONLY_CAUSE_AND_R120_DECISION_2026-10-18.md",
+    "docs/reviews/R120_SOURCE_REVIEW_ROUND1_2026-10-18.md",
+    "docs/reviews/R120_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md"
   ],
   "disposition": "OPEN",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -98,11 +108,11 @@
   ],
   "budgetUsed": {
     "rootCompileInvocations": 0,
-    "workerPythonChecks": 0,
-    "rootPythonChecks": 0,
+    "workerPythonChecks": 2,
+    "rootPythonChecks": 2,
     "conditionalWorkerFrontendChecks": 0,
     "conditionalRootFrontendChecks": 0,
-    "sourceRepairRounds": 0,
+    "sourceRepairRounds": 2,
     "campaignStarts": 0,
     "newFixtureStarts": 0,
     "fixtureFinalStops": 0,

@@ -1,0 +1,16 @@
+{
+  "rootPythonInvocation": 2,
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "scripts.tests.test_r120_ui_supervisor"
+  ],
+  "sourceBefore": {
+    "scripts/r120_ui_supervisor.py": "55447e898549c2f9450e10efcba938bee6de48616d8843ee455fefaa3723344a",
+    "scripts/r120_vite_config.mjs.template": "1881ec5c99f7d9e35c67e30583b5237de00ddd860fe5a010e2ed09c61a115bc1",
+    "scripts/tests/test_r120_ui_supervisor.py": "7b6185ebae41be93698d77cb04b97bc2c9a7f4addef0194c5daa07dac1f003d6",
+    "backend/api/handlers/intervention_ui_r120_test.go": "4c06353d372155e09b7106d140f84061f72022c2dd33c444075b2eeb9bf61cd3"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "kind": "ROOT_TRANSCRIPTION_NOT_RAW_TOOL_EXPORT",
+  "browserInventory": "IAB id2 available,0tabs; apps[]; capabilitiesvisibility/viewport only",
+  "offline": "UNSUPPORTED_NOT_RUN",
+  "docker": "29.8.2 actualread-only response0.144sec exit0 recorded r119followup_readonly0",
+  "hostListenerMethod": "canonical WindowsPowerShell Get-NetTCPConnection Listen filtered exact56024, exit0 [] recordedr119followup3",
+  "newFixtureStarts": 0,
+  "productTabs": 0,
+  "providerCalls": 0
+}

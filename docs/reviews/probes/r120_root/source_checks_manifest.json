@@ -1,0 +1,19 @@
+{
+  "archiveSha256": "416a7fe14f3b35fccbf31586f0ea38e1c4211cec4254566ff3f971310200f77b",
+  "finalSourceSha256": {
+    "scripts/r120_ui_supervisor.py": "6a70d1f38428ed70d7382bc69c8e5e8bfd0f49bad97ceadbc4be46d77b8a0217",
+    "scripts/r120_vite_config.mjs.template": "1881ec5c99f7d9e35c67e30583b5237de00ddd860fe5a010e2ed09c61a115bc1",
+    "scripts/tests/test_r120_ui_supervisor.py": "7b6185ebae41be93698d77cb04b97bc2c9a7f4addef0194c5daa07dac1f003d6",
+    "backend/api/handlers/intervention_ui_r120_test.go": "4c06353d372155e09b7106d140f84061f72022c2dd33c444075b2eeb9bf61cd3"
+  },
+  "workerChecks": 2,
+  "rootChecks": 2,
+  "runtimeStarts": 0,
+  "testedSourceSha256": {
+    "scripts/r120_ui_supervisor.py": "55447e898549c2f9450e10efcba938bee6de48616d8843ee455fefaa3723344a",
+    "scripts/r120_vite_config.mjs.template": "1881ec5c99f7d9e35c67e30583b5237de00ddd860fe5a010e2ed09c61a115bc1",
+    "scripts/tests/test_r120_ui_supervisor.py": "7b6185ebae41be93698d77cb04b97bc2c9a7f4addef0194c5daa07dac1f003d6",
+    "backend/api/handlers/intervention_ui_r120_test.go": "4c06353d372155e09b7106d140f84061f72022c2dd33c444075b2eeb9bf61cd3"
+  },
+  "finalTimingDelta": "EXACT_CONSTANT_ONLY_STATIC_REVIEW_NO_UNIT_RERUN"
+}

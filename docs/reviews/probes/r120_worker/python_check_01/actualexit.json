@@ -1,0 +1,14 @@
+{
+  "actualExit": 0,
+  "finishedAtUtc": "2026-10-18T00:04:05.1666307Z",
+  "stdoutBytes": 0,
+  "stderrBytes": 3016,
+  "sourceHashesAfter": {
+    "scripts/r120_ui_supervisor.py": "0ea2e490183b4dc574e139e7866bbbdd780cec915b3f7119288cd93feef3c80f",
+    "scripts/r120_vite_config.mjs.template": "1881ec5c99f7d9e35c67e30583b5237de00ddd860fe5a010e2ed09c61a115bc1",
+    "scripts/tests/test_r120_ui_supervisor.py": "4b9b78eb82d9a6e34ff232ca764247808c4f7cd41efab3f1d9f12265ea97e439",
+    "backend/api/handlers/intervention_ui_r120_test.go": "4c06353d372155e09b7106d140f84061f72022c2dd33c444075b2eeb9bf61cd3"
+  },
+  "sourceHashesUnchanged": true,
+  "runtimePresentAfter": false
+}

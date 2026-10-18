@@ -1,0 +1,18 @@
+{
+  "node": {
+    "path": "C:\\Program Files\\nodejs\\node.EXE",
+    "sha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237"
+  },
+  "docker": {
+    "path": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+    "sha256": "6c699720bb9523dedb9eb5d22a49951ea9210dbdb1314a3554029eee9be76896"
+  },
+  "go": {
+    "path": "C:\\Program Files\\Go\\bin\\go.EXE",
+    "sha256": "7d828191ba32519a9c9361789ab647486236ed45c660889196c7770a8ff1985c"
+  },
+  "powershell": {
+    "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "sha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f"
+  }
+}

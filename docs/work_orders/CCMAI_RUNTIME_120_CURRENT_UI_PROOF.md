@@ -1,6 +1,6 @@
 # R120 current proposal/history finite browser proof
 
-Status: DISPATCH_READY
+Status: ACTIVE
 Risk: R2
 dispatchKind: INITIAL
 Worker: /root/r120_ui_readiness_luna

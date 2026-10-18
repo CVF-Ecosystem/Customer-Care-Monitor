@@ -1,0 +1,10 @@
+{
+  "finalSourceSha256": "6a70d1f38428ed70d7382bc69c8e5e8bfd0f49bad97ceadbc4be46d77b8a0217",
+  "beforeSha256": "55447e898549c2f9450e10efcba938bee6de48616d8843ee455fefaa3723344a",
+  "exactOnlyConstantDelta": true,
+  "before": "CAMPAIGN_SECONDS-75",
+  "after": "CAMPAIGN_SECONDS-180",
+  "newUnitInvocation": false,
+  "reviewer": "Codex /root",
+  "otherThreeSourceHashesUnchanged": true
+}

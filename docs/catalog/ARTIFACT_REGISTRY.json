@@ -32742,6 +32742,216 @@
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R119_CURRENT_UI_PROOF_2026-10-18.md",
       "status": "ACTIVE",
       "description": "Historical R119 CHANGES_REQUIRED setup failure and original counters preserved; no replay."
+    },
+    {
+      "id": "r120-7ea7cef88a109871",
+      "family": "continuity",
+      "path": "docs/reviews/R120_IMPLEMENTATION_WORKER_RETURN_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-06d179ad6ff86463",
+      "family": "continuity",
+      "path": "docs/reviews/R120_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-0069ade1cc9fd258",
+      "family": "continuity",
+      "path": "docs/reviews/R120_SOURCE_REVIEW_ROUND1_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-4fcb676a39aa9db0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_root/source_checks_manifest.json",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-36fa9a1b5f2cf59e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_root/source_checks_original.zip",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-b152a3b3ea172eb7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_root/python_001/receipt.json",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-ad0a2b348007cebb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_root/python_001/reservation.json",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-7492fab49537877e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_root/python_001/stderr.bin",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-6c0e41eced667ce8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_root/python_001/stdout.bin",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-c02230c5e62acf2e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_root/python_002/receipt.json",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-8c646aa29773b5aa",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_root/python_002/reservation.json",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-cdac929f13cfb98b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_root/python_002/stderr.bin",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-68cfbe42f87b43e0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_root/python_002/stdout.bin",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-c390622fedafea21",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_root/readiness/capability_observation.json",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-8dcd919fcefcff47",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_root/readiness/executables.json",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-b0d2aeb0281836bc",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_worker/python_check_01/actualexit.json",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-7a609e6819483aa2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_worker/python_check_01/reservation.json",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-7305dbc5eb432233",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_worker/python_check_01/source_hashes_after.json",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-7b23a09b188a1cca",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_worker/python_check_01/source_hashes_before.json",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-dcfab6d98a7c3255",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_worker/python_check_01/stderr.bin",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-b620baf140d320ee",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_worker/python_check_01/stdout.bin",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-9ecae434dbfc8816",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_worker/python_check_02/actualexit.json",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-9a5ccafd92d14264",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_worker/python_check_02/reservation.json",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-0e18cd0983621846",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_worker/python_check_02/source_hashes_after.json",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-8912ddac2a3485e1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_worker/python_check_02/source_hashes_before.json",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-f000b40d35c12cfb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_worker/python_check_02/stderr.bin",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-7ee0428b03da4cec",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_worker/python_check_02/stdout.bin",
+      "status": "ACTIVE",
+      "description": "R120 bounded independent source/check evidence; runtime/current UI not yet admitted."
+    },
+    {
+      "id": "r120-7538a1d2838aec16",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_root/repair2_timing/after_review.json",
+      "status": "ACTIVE",
+      "description": "R120 exact final cleanup constant delta static review; no extra unit invocation or runtime."
+    },
+    {
+      "id": "r120-eed4ece0fd51f4ce",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_root/repair2_timing/before.json",
+      "status": "ACTIVE",
+      "description": "R120 exact final cleanup constant delta static review; no extra unit invocation or runtime."
+    },
+    {
+      "id": "r120-a3d67dd7f11aa13c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_root/repair2_timing/before.zip",
+      "status": "ACTIVE",
+      "description": "R120 exact final cleanup constant delta static review; no extra unit invocation or runtime."
     }
   ]
 }

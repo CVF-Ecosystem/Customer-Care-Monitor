@@ -1,0 +1,7 @@
+{
+  "sourceSha256": "55447e898549c2f9450e10efcba938bee6de48616d8843ee455fefaa3723344a",
+  "archiveSha256": "387e05f590864af13dbd23132571bdfa0cf3f87eb66a16e8a06c446c1b995b5b",
+  "finding": "campaign cleanup uses75 despite explicit180seed/order",
+  "unitChecksRemaining": 0,
+  "authorizedChange": "exact sole -75 to -180 campaign deadline allocation; no other code/test changes"
+}

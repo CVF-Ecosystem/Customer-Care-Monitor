@@ -1,0 +1,23 @@
+test_docker_command_keeps_raw_stdout_and_stderr_bytes (__main__.R120SupervisorTests.test_docker_command_keeps_raw_stdout_and_stderr_bytes) ... ok
+test_final_fingerprint_and_provider_related_counts_must_match (__main__.R120SupervisorTests.test_final_fingerprint_and_provider_related_counts_must_match) ... ok
+test_listener_query_does_not_run_when_powershell_hash_mismatches (__main__.R120SupervisorTests.test_listener_query_does_not_run_when_powershell_hash_mismatches) ... ok
+test_listener_table_accepts_only_valid_empty_json_array_and_keeps_raw_evidence (__main__.R120SupervisorTests.test_listener_table_accepts_only_valid_empty_json_array_and_keeps_raw_evidence) ... ok
+test_listener_table_nonempty_query_error_malformed_and_timeout_fail_closed (__main__.R120SupervisorTests.test_listener_table_nonempty_query_error_malformed_and_timeout_fail_closed) ... ok
+test_mysql_complete_invalid_header_fails_without_retry (__main__.R120SupervisorTests.test_mysql_complete_invalid_header_fails_without_retry) ... ok
+test_mysql_greeting_accumulates_fragmented_header_with_bounded_reads (__main__.R120SupervisorTests.test_mysql_greeting_accumulates_fragmented_header_with_bounded_reads) ... ok
+test_mysql_readiness_retries_eof_then_accepts_complete_greeting (__main__.R120SupervisorTests.test_mysql_readiness_retries_eof_then_accepts_complete_greeting) ... ok
+test_mysql_repeated_eof_and_timeout_stop_at_deadline (__main__.R120SupervisorTests.test_mysql_repeated_eof_and_timeout_stop_at_deadline) ... ok
+test_mysql_transient_greeting_error_keeps_partial_byte_count (__main__.R120SupervisorTests.test_mysql_transient_greeting_error_keeps_partial_byte_count) ... ok
+test_owner_identity_projection_includes_docker_pid_for_terminal_proof (__main__.R120SupervisorTests.test_owner_identity_projection_includes_docker_pid_for_terminal_proof) ... ok
+test_published_port_requires_one_complete_loopback_binding (__main__.R120SupervisorTests.test_published_port_requires_one_complete_loopback_binding) ... ok
+test_route_policy_allows_reads_and_only_two_auth_posts (__main__.R120SupervisorTests.test_route_policy_allows_reads_and_only_two_auth_posts) ... ok
+test_stop_uses_exact_owned_id_without_a_published_port (__main__.R120SupervisorTests.test_stop_uses_exact_owned_id_without_a_published_port) ... ok
+test_stopped_container_requires_exited_pid_zero_and_empty_ports (__main__.R120SupervisorTests.test_stopped_container_requires_exited_pid_zero_and_empty_ports) ... ok
+test_terminal_route_ledgers_match_forwarded_backend_statuses (__main__.R120SupervisorTests.test_terminal_route_ledgers_match_forwarded_backend_statuses) ... ok
+test_unknown_ownership_prevents_stop (__main__.R120SupervisorTests.test_unknown_ownership_prevents_stop) ... ok
+test_vite_and_go_ledgers_reject_a_third_auth_attempt_independently (__main__.R120SupervisorTests.test_vite_and_go_ledgers_reject_a_third_auth_attempt_independently) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 1.059s
+
+OK
