@@ -4098,13 +4098,16 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/raw_readonly.zip`
 - R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_root/source_checks_manifest.json`
 - Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/0/stderr.bin`
+- R120 exact current offline compile and source-binary admission; runtime conditional, provider0.: `docs/reviews/probes/r120_root/compile_001/reservation.json`
 - R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_root/python_002/stdout.bin`
+- R120 exact current offline compile and source-binary admission; runtime conditional, provider0.: `docs/reviews/probes/r120_root/compile_001/stderr.bin`
 - Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `CVF_SESSION/tranches/CCMAI-RUNTIME-120.json`
 - R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_root/python_001/stdout.bin`
 - R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_worker/python_check_01/source_hashes_after.json`
 - R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_root/python_001/stderr.bin`
 - R120 exact final cleanup constant delta static review; no extra unit invocation or runtime.: `docs/reviews/probes/r120_root/repair2_timing/after_review.json`
 - Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/1/receipt.json`
+- R120 exact current offline compile and source-binary admission; runtime conditional, provider0.: `docs/reviews/probes/r120_root/compile_001/receipt.json`
 - R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_worker/python_check_01/reservation.json`
 - R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_worker/python_check_01/source_hashes_before.json`
 - R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/R120_IMPLEMENTATION_WORKER_RETURN_2026-10-18.md`
@@ -4126,9 +4129,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/3/command.json`
 - Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/2/command.json`
 - R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_root/python_002/receipt.json`
+- R120 exact current offline compile and source-binary admission; runtime conditional, provider0.: `docs/reviews/probes/r120_root/compile_001/stdout.bin`
 - R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_root/readiness/capability_observation.json`
 - R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_root/python_002/stderr.bin`
 - Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/3/receipt.json`
+- R120 exact current offline compile and source-binary admission; runtime conditional, provider0.: `docs/reviews/probes/r120_root/source_binary_admission.json`
 - Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/work_orders/CCMAI_RUNTIME_120_CURRENT_UI_PROOF.md`
 - Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/3/stderr.bin`
 - Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/0/stdout.bin`
