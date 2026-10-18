@@ -29,7 +29,7 @@
   "verification": "Root source review before opt-in run; owned nonce-bound synthetic schema, existing isolated Docker Go/MySQL caches and source-bound frontend build; real IAB actions, response journal, durable final projection/events/counters and server exit receipt. Failures preserved. No broad suite repeat without source dependency change.",
   "claimBoundary": "Software/synthetic presentation only; provider/governance/quality/pilot/release not inferred from stubs or build success.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_127_M3_BROWSER_ACTIONS.md",
-  "baseCommit": "445d29f39aa8f4343eb095584cb145884c09a1ca",
+  "baseCommit": "69539ca60dcb71d8e282d968a3d1ff0aa29eeaed",
   "status": "BUILD",
   "phase": "BUILD",
   "workOrderStatus": "ACTIVE",
