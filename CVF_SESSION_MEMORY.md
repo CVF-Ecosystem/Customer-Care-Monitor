@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R127_M3_BROWSER_ACTIONS_2026-10-19.md", "activeTranche": "CCMAI-RUNTIME-127-A", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R127_M3_BROWSER_ACTIONS_2026-10-19.md", "activeTranche": "CCMAI-RUNTIME-127-A", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R127_M3_BROWSER_ACTIONS_2026-10-19.md
 
-CCMAI-RUNTIME-127-A complete one bounded synthetic browser human workflow: correction, assignment, outcome/reopen, WAIT_DATA ownership/escalation, stale and reader controls, reload and narrow viewport. Reuse accepted source/native evidence; Root reviews Sol fixture before runtime. No provider/customer data/installed app mutation/push/deploy. Full M3 exit only for evidenced criteria.
+CCMAI-RUNTIME-127-A REVIEW_PASS for current synthetic human workflow: correction/assignment/outcome/reopen, WAIT_DATA ownership/escalation, stale409, native reader403, browser reader controls absent and reload persistence, with original exit0 and zero provider effects. First fixture exit1 retained. Next fix observed read-only case participant display names without widening permissions; B09 offline unsupported, full M3/pilot/release remain open.
 
-Root ORCHESTRATOR / independent REVIEWER; Sol Medium browser fixture worker; Luna Max acceptance inventory
+Root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; M3 synthetic browser actions accepted
 
 R126 accepted local feedback fixes with qualified whole-package proof at90bc02ed; original failed full runs remain failed.
 

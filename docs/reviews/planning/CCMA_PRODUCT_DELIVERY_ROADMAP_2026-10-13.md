@@ -1,5 +1,12 @@
 # CCMA — Roadmap phát triển sản phẩm và tiếp quản giữa các agent
 
+## R127-A — luồng thao tác M3 trên trình duyệt, 2026-10-19
+
+Đã nghiệm thu phạm vi synthetic hiện tại: sửa đánh giá → giao việc → ghi kết quả → mở lại, giữ lịch sử qua tải lại; giao người bổ sung và chuyển cấp vẫn giữ ca chờ dữ liệu; tab cũ409; backend chặn reader403 và UI reader không có nút ghi. Bản chạy lại exit0, nguồn/đề xuất giữ nguyên, đúng6event, không gọi provider. Lượt đầu exit1 do baseline fixture chưa seed con trỏ đề xuất hiện tại được giữ nguyên; không sửa lịch sử lỗi.
+
+CSS390x844 được quan sát thực tế; ảnh gốc có raster nội dung375px, không nhận exact-raster390. Offline B09 chưa chạy vì thiếu điều khiển offline. Còn lỗi đọc hiểu cụ thể: reader thấy fallback tên người xử lý/lịch sử dù người dùng có tên; bước tiếp theo chỉ bổ sung nhãn người tham gia ca, giữ quyền ghi/danh bạ. Full M3/pilot/release còn mở. Xem [review](../R127_M3_BROWSER_ACTIONS_REVIEW_2026-10-19.md). Các checkpoint dưới đây là lịch sử.
+
+
 ## R126 — chốt sửa góp ý local, 2026-10-18
 
 Các mục N01/N03/N04/N05 đã sửa và được kiểm tra local; N02 có đường chạy synthetic qua binary thông thường, setup/CLI/hạn mức/grant, không gọi provider. N03 giữ lịch sử khi người dùng xác nhận nguồn đã đổi; UI mới có mã thoát0 và fingerprint trước/sau bằng nhau. Frontend45file/474test và build PASS; Python231PASS.

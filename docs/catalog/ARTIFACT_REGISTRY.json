@@ -34429,6 +34429,55 @@
       "path": "docs/reviews/R127_M3_BROWSER_ACTIONS_REVIEW_2026-10-19.md",
       "status": "ACTIVE",
       "description": "M3 current bounded browser workflow, synthetic only; original failed evidence preserved."
+    },
+    {
+      "id": "r127-browser-backend-terminal",
+      "family": "continuity",
+      "path": "docs/reviews/probes/m3_workflow_20261019/backend_terminal.json",
+      "status": "ACTIVE",
+      "description": "Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open."
+    },
+    {
+      "id": "r127-browser-evidence-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/m3_workflow_20261019/evidence_manifest.json",
+      "status": "ACTIVE",
+      "description": "Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open."
+    },
+    {
+      "id": "r127-browser-original-verification",
+      "family": "continuity",
+      "path": "docs/reviews/probes/m3_workflow_20261019/original_verification.zip",
+      "status": "ACTIVE",
+      "description": "Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open."
+    },
+    {
+      "id": "r127-browser-reopened",
+      "family": "continuity",
+      "path": "docs/reviews/probes/m3_workflow_20261019/reopened.jpg",
+      "status": "ACTIVE",
+      "description": "Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open."
+    },
+    {
+      "id": "r127-browser-review-summary",
+      "family": "continuity",
+      "path": "docs/reviews/probes/m3_workflow_20261019/review_summary.json",
+      "status": "ACTIVE",
+      "description": "Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open."
+    },
+    {
+      "id": "r127-browser-wait-escalated-narrow",
+      "family": "continuity",
+      "path": "docs/reviews/probes/m3_workflow_20261019/wait_escalated_narrow.jpg",
+      "status": "ACTIVE",
+      "description": "Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open."
+    },
+    {
+      "id": "r127-final-check-receipts",
+      "family": "continuity",
+      "path": "docs/reviews/probes/m3_workflow_20261019/final_checks.json",
+      "status": "ACTIVE",
+      "description": "Actual local final gate/build receipts, preserving initial stale-tranche metadata failure; not hosted CI proof."
     }
   ]
 }

@@ -4347,8 +4347,15 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance.: `docs/reviews/probes/review_completion_20261018/latest_package_coverage_manifest.json`
 - Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance.: `docs/reviews/probes/review_completion_20261018/local_verification_originals.zip`
 - Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance.: `docs/reviews/probes/review_completion_20261018/verification_summary.json`
+- Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open.: `docs/reviews/probes/m3_workflow_20261019/backend_terminal.json`
+- Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open.: `docs/reviews/probes/m3_workflow_20261019/evidence_manifest.json`
+- Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open.: `docs/reviews/probes/m3_workflow_20261019/original_verification.zip`
+- Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open.: `docs/reviews/probes/m3_workflow_20261019/reopened.jpg`
 - M3 current bounded browser workflow, synthetic only; original failed evidence preserved.: `docs/reviews/R127_M3_BROWSER_ACTIONS_REVIEW_2026-10-19.md`
+- Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open.: `docs/reviews/probes/m3_workflow_20261019/review_summary.json`
+- Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open.: `docs/reviews/probes/m3_workflow_20261019/wait_escalated_narrow.jpg`
 - M3 current bounded browser workflow, synthetic only; original failed evidence preserved.: `docs/work_orders/CCMAI_RUNTIME_127_M3_BROWSER_ACTIONS.md`
+- Actual local final gate/build receipts, preserving initial stale-tranche metadata failure; not hosted CI proof.: `docs/reviews/probes/m3_workflow_20261019/final_checks.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

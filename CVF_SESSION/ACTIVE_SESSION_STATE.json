@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-127-A",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R127_M3_BROWSER_ACTIONS_2026-10-19.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-127-A complete one bounded synthetic browser human workflow: correction, assignment, outcome/reopen, WAIT_DATA ownership/escalation, stale and reader controls, reload and narrow viewport. Reuse accepted source/native evidence; Root reviews Sol fixture before runtime. No provider/customer data/installed app mutation/push/deploy. Full M3 exit only for evidenced criteria.",
+  "nextAllowedMove": "CCMAI-RUNTIME-127-A REVIEW_PASS for current synthetic human workflow: correction/assignment/outcome/reopen, WAIT_DATA ownership/escalation, stale409, native reader403, browser reader controls absent and reload persistence, with original exit0 and zero provider effects. First fixture exit1 retained. Next fix observed read-only case participant display names without widening permissions; B09 offline unsupported, full M3/pilot/release remain open.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / independent REVIEWER; Sol Medium browser fixture worker; Luna Max acceptance inventory",
+  "activeRole": "Root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; M3 synthetic browser actions accepted",
   "updatedAt": "2026-10-19",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {

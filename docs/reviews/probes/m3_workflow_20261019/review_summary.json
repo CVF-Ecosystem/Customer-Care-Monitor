@@ -1,0 +1,162 @@
+{
+  "status": "PASS_BOUNDED_CURRENT_SYNTHETIC_WORKFLOW",
+  "sourceCommit": "dadcdca07c3d44fd71a38314b1888a7e4003e092",
+  "firstRunExit": 1,
+  "firstRunFailure": "Fixture incorrectly treated supported legacy active-proposal pointer backfill as source mutation. Original failure retained.",
+  "repair": "Seed explicit active pointer before baseline; unchanged identity assertion independently reviewed by Root/Luna. Unique fixture user names only.",
+  "secondRunExit": 0,
+  "browserCaseActions": [
+    {
+      "action": "CORRECT",
+      "allowed": true,
+      "method": "POST",
+      "path": "/api/v1/tenants/01d02cc3-7406-4835-9b0f-8b2805417816/intervention-cases/78821e08-2864-4734-9411-b86bdf821cce/actions",
+      "status": 200
+    },
+    {
+      "action": "CONFIRM",
+      "allowed": true,
+      "method": "POST",
+      "path": "/api/v1/tenants/01d02cc3-7406-4835-9b0f-8b2805417816/intervention-cases/78821e08-2864-4734-9411-b86bdf821cce/actions",
+      "status": 409
+    },
+    {
+      "action": "ASSIGN",
+      "allowed": true,
+      "method": "POST",
+      "path": "/api/v1/tenants/01d02cc3-7406-4835-9b0f-8b2805417816/intervention-cases/78821e08-2864-4734-9411-b86bdf821cce/actions",
+      "status": 200
+    },
+    {
+      "action": "RESOLVE",
+      "allowed": true,
+      "method": "POST",
+      "path": "/api/v1/tenants/01d02cc3-7406-4835-9b0f-8b2805417816/intervention-cases/78821e08-2864-4734-9411-b86bdf821cce/actions",
+      "status": 200
+    },
+    {
+      "action": "REOPEN",
+      "allowed": true,
+      "method": "POST",
+      "path": "/api/v1/tenants/01d02cc3-7406-4835-9b0f-8b2805417816/intervention-cases/78821e08-2864-4734-9411-b86bdf821cce/actions",
+      "status": 200
+    },
+    {
+      "action": "ASSIGN_DATA",
+      "allowed": true,
+      "method": "POST",
+      "path": "/api/v1/tenants/01d02cc3-7406-4835-9b0f-8b2805417816/intervention-cases/71f3a8da-fa94-4520-8bf1-9fe92a47f2fc/actions",
+      "status": 200
+    },
+    {
+      "action": "ESCALATE_DATA",
+      "allowed": true,
+      "method": "POST",
+      "path": "/api/v1/tenants/01d02cc3-7406-4835-9b0f-8b2805417816/intervention-cases/71f3a8da-fa94-4520-8bf1-9fe92a47f2fc/actions",
+      "status": 200
+    }
+  ],
+  "terminal": {
+    "actionPosts": 7,
+    "authPosts": 4,
+    "case": {
+      "assessment": "CORRECT",
+      "assigneeId": "374e5262-36e2-44e1-834a-5b8bd3ca13b0",
+      "dataOwnerId": null,
+      "disposition": "HUMAN_CORRECT",
+      "history": [
+        {
+          "action": "CORRECT",
+          "priorOutcomePresent": false,
+          "version": 2
+        },
+        {
+          "action": "ASSIGN",
+          "priorOutcomePresent": false,
+          "version": 3
+        },
+        {
+          "action": "RESOLVE",
+          "priorOutcomePresent": false,
+          "version": 4
+        },
+        {
+          "action": "REOPEN",
+          "priorOutcomePresent": true,
+          "version": 5
+        }
+      ],
+      "id": "78821e08-2864-4734-9411-b86bdf821cce",
+      "outcomePresent": false,
+      "version": 5,
+      "workState": "ASSIGNED"
+    },
+    "finalEffects": {
+      "attempts": 0,
+      "budgets": 0,
+      "executions": 0,
+      "grants": 0,
+      "humanEvents": 12,
+      "receipts": 0,
+      "runs": 0,
+      "snapshots": 4
+    },
+    "finalFingerprints": {
+      "case": "5988107f4c5fdb948264bbdf6fb976ab79a2c657524ea1456e610b07ae1415ed",
+      "waitCase": "e6484a15bb479bb70d3ee7248184aa3739fc2578e5e5c920784d7666ccf297c1"
+    },
+    "initialEffects": {
+      "attempts": 0,
+      "budgets": 0,
+      "executions": 0,
+      "grants": 0,
+      "humanEvents": 6,
+      "receipts": 0,
+      "runs": 0,
+      "snapshots": 4
+    },
+    "initialFingerprints": {
+      "case": "c24d53d5bbf4f87444a64df68a045340e90b86c230f0223be2a39ea910323c04",
+      "waitCase": "e194212bb31fb169816ca8408b859fe174e38e97331ab99e985359ee845d9379"
+    },
+    "journalError": "<nil>",
+    "ownerLogin": true,
+    "pass": true,
+    "proposalUnchanged": true,
+    "readerDetailRead": true,
+    "readerLogin": true,
+    "readerWriteDeniedNative": true,
+    "serverStopped": true,
+    "sourceIdentityUnchanged": true,
+    "staleActionConflict": true,
+    "stopReason": "stop_file",
+    "waitCase": {
+      "assessment": "",
+      "assigneeId": null,
+      "dataOwnerId": "374e5262-36e2-44e1-834a-5b8bd3ca13b0",
+      "disposition": "WAIT_DATA",
+      "history": [
+        {
+          "action": "ASSIGN_DATA",
+          "priorOutcomePresent": false,
+          "version": 2
+        },
+        {
+          "action": "ESCALATE_DATA",
+          "priorOutcomePresent": false,
+          "version": 3
+        }
+      ],
+      "id": "71f3a8da-fa94-4520-8bf1-9fe92a47f2fc",
+      "outcomePresent": false,
+      "version": 3,
+      "workState": "WAITING_ON_DATA"
+    }
+  },
+  "readerWrite403": "Native authenticated same-router probe, not browser submission",
+  "readerBrowser": "Authenticated detail visible; action controls absent",
+  "viewport": "Actual CSS390x844; original screenshot raster375px content width; no exact390-raster claim",
+  "offlineFailureB09": "NOT_RUN_UNSUPPORTED_BROWSER_CONTROL",
+  "fullM3PilotRelease": "OPEN",
+  "newObservedLimitation": "Read-only participant names fall back despite users having names; writable assignee directory is not fetched for read-only role. Follow-up should supply only case participant display names without widening write/directory permission."
+}

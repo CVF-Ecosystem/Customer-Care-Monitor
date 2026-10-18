@@ -1,6 +1,6 @@
 # M3 browser actions on isolated synthetic data
 
-Status: ACTIVE
+Status: REVIEWER_ACCEPTED
 Risk: R2
 Worker: Sol Medium browser fixture; Luna Max acceptance inventory
 Reviewer: Root independent source/browser/terminal evidence review
