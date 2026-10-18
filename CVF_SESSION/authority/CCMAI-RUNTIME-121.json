@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-121",
+  "authorityKind": "DISPATCHER_OWNED_OWNER_LOCAL_RESUME_FINITE_M3_TERMINAL_PROOF",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "/root/r121_isolation_luna",
+    "reviewer": "Codex /root",
+    "commitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "backend/api/handlers/intervention_ui_r121_test.go",
+    "scripts/r121_ui_supervisor.py",
+    "scripts/r121_vite_config.mjs.template",
+    "scripts/tests/test_r121_ui_supervisor.py",
+    "docs/work_orders/CCMAI_RUNTIME_121_M3_TERMINAL_PROOF.md",
+    "docs/reviews/R121_*.md",
+    "docs/reviews/probes/r121_root/**",
+    "docs/reviews/probes/r121_worker/**",
+    "docs/reviews/planning/R120_DESKTOP_EXECUTION_TRANSFER_PROPOSAL_2026-10-18.md",
+    "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md"
+  ],
+  "prohibitedEffects": [
+    "Old runtime/seed/admission/evidence/budget mutation or reset; old runner execution; existing resource start/stop/write",
+    "Production/customer/installed DB and real channels; provider/key/secret access or call; external network effects",
+    "Product source, dependencies, gate/Core/workflow edits; supervisor redesign or alternate automation stack; downloads/install/daemon restart",
+    "Worker runtime/compile/commit/seed edits/self-approval; any case/provider/business mutation; HTTP writes except exact synthetic login/logout two total",
+    "Push/merge/deploy/installed activation/full milestone or governance claim from synthetic presentation; automatic retry/successor"
+  ],
+  "ownerAuthorization": "2026-10-18 owner cancels proposed Desktop transfer and instructs Root: thoi khoi, lam di (continue here). Persistent roadmap/Root independent review and Luna Max worker authority retained. New separate finite local M3 decision, not old R120 replay or cap renewal; zero provider authority.",
+  "executionBudget": {
+    "capabilityInvocations": 1,
+    "capabilitySeconds": 90,
+    "workerPythonChecks": 2,
+    "rootPythonChecks": 2,
+    "sourceRepairRounds": 2,
+    "rootCompileInvocations": 1,
+    "campaignStarts": 1,
+    "newFixtureStarts": 1,
+    "setupInvocations": 1,
+    "fixtureFinalStops": 1,
+    "backendStarts": 1,
+    "viteStarts": 1,
+    "productTabs": 1,
+    "authPosts": 2,
+    "caseActions": 0,
+    "providerCalls": 0,
+    "automaticRetries": 0,
+    "campaignSeconds": 1200
+  },
+  "purpose": "New synthetic read-only M3 current-proposal/history observation WITH original supervisor terminal, held-child waits/exits and final durable accounting. Never repair original R120 evidence.",
+  "sourceScope": "Four mechanical R120->R121 isolation copies only, all behavior unchanged. No product changes or generic lifetime repair. Source admission and resource admission commits required before effects.",
+  "capabilityAdmission": "One harmless parent+short child file-stop lifecycle, no listeners/Docker/DB/browser; original exec/write_stdin must return declared exit17 and actual child wait/exit with receipt; max90seconds/no retry. Only observed short uninterrupted lifecycle is proven. Failure stops product route.",
+  "lifetimeProcedure": "Root keeps original foreground wrapper/exec attached, polls original session at bounded intervals through browser work, requests stop immediately after minimal UI/logout/tab cleanup, then waits for actual original exit and receipts in same turn. No intentional compaction or handoff. Stop command exit0 alone insufficient.",
+  "acceptance": "Inherited R120 A1..A8 safety/accounting/current-selection constraints unchanged except mechanical new identity and explicit foreground polling/terminal collection. Target UI <=180sec afterREADY; campaign max1200 incl180cleanup. All original terminal/wait/exit/final fingerprints/effect counts, listeners/protected/source equality required.",
+  "stopCondition": "First capability/source/runtime/evidence uncertainty stops product route; exact newly owned cleanup only. No automatic retry/stack change/successor. Preserve failures. R120 CHANGES_REQUIRED and original unknown cause retained.",
+  "claimScope": "Synthetic UI presentation/accounting only. Not actual human workflow, runtime AI governance, full M3, pilot or release.",
+  "inheritedCheckpoint": "9a8c917d6383fb797a5daac1340318b99a5ef4f2",
+  "cleanupReserveSeconds": 180
+}

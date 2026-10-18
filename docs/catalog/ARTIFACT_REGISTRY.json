@@ -33512,6 +33512,27 @@
       "path": "docs/reviews/probes/r120_root/lifetime_review_20261018.json",
       "status": "ACTIVE",
       "description": "Existing303archive members verified against sizes/hashes; no recovered terminal/accounting and no runtime execution."
+    },
+    {
+      "id": "r121-immutable-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-121.json",
+      "status": "ACTIVE",
+      "description": "Owner local resume bounded M3 seed; no BUILD/runtime before activation/admission."
+    },
+    {
+      "id": "r120-local-resume-decision",
+      "family": "continuity",
+      "path": "docs/reviews/R120_LOCAL_RESUME_DECISION_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Separate finite owner-directed local route after lifetime review, old evidence/caps unchanged."
+    },
+    {
+      "id": "r120-desktop-proposal",
+      "family": "continuity",
+      "path": "docs/reviews/planning/R120_DESKTOP_EXECUTION_TRANSFER_PROPOSAL_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Existing unmodified read-only Desktop capability proposal; short lifetime applicability unverified."
     }
   ]
 }

@@ -4144,6 +4144,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/0/stdout.bin`
 - Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/0/command.json`
 - R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_worker/python_check_01/stderr.bin`
+- Existing unmodified read-only Desktop capability proposal; short lifetime applicability unverified.: `docs/reviews/planning/R120_DESKTOP_EXECUTION_TRANSFER_PROPOSAL_2026-10-18.md`
 - R120 actual sole setup and exact independent resource admission; backend/browser pending, provider0.: `docs/reviews/probes/r120_root/setup_001/receipt.json`
 - R120 exact final cleanup constant delta static review; no extra unit invocation or runtime.: `docs/reviews/probes/r120_root/repair2_timing/before.json`
 - R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_worker/python_check_02/stderr.bin`
@@ -4216,8 +4217,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/R120_FINAL_INDEPENDENT_UI_REVIEW_2026-10-18.md`
 - R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_history.metrics.json`
 - R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_runtime_manifest.json`
+- Separate finite owner-directed local route after lifetime review, old evidence/caps unchanged.: `docs/reviews/R120_LOCAL_RESUME_DECISION_2026-10-18.md`
 - Read-only lifetime diagnosis and finite transfer decision; original terminal/accounting missing, no source repair or new runtime authority.: `docs/reviews/R120_READONLY_LIFETIME_REVIEW_AND_DECISION_2026-10-18.md`
 - Existing303archive members verified against sizes/hashes; no recovered terminal/accounting and no runtime execution.: `docs/reviews/probes/r120_root/lifetime_review_20261018.json`
+- Owner local resume bounded M3 seed; no BUILD/runtime before activation/admission.: `CVF_SESSION/authority/CCMAI-RUNTIME-121.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`
