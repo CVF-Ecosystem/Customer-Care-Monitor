@@ -2,8 +2,10 @@ package handlers
 
 import (
 	"encoding/base64"
+	"encoding/json"
 	"errors"
 	"net/http"
+	"sort"
 	"strconv"
 	"strings"
 	"time"
@@ -13,6 +15,7 @@ import (
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models"
 	"github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine"
 	"github.com/gin-gonic/gin"
+	"github.com/google/uuid"
 )
 
 // InterventionRunner defaults to nil. Ordinary startup installs it only when
@@ -128,6 +131,47 @@ func GetInterventionCase(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "detail_failed"})
 		return
 	}
+	ids := map[string]struct{}{}
+	addID := func(id string) {
+		if _, err := uuid.Parse(id); err == nil {
+			ids[id] = struct{}{}
+		}
+	}
+	for _, id := range []*string{row.AssigneeID, row.DataOwnerID} {
+		if id != nil {
+			addID(*id)
+		}
+	}
+	for _, event := range events {
+		addID(event.ActorID)
+		for _, projection := range []string{event.Before, event.After} {
+			var fields map[string]json.RawMessage
+			if json.Unmarshal([]byte(projection), &fields) != nil {
+				continue
+			}
+			for _, key := range []string{"assignee_id", "data_owner_id"} {
+				var id string
+				if json.Unmarshal(fields[key], &id) == nil {
+					addID(id)
+				}
+			}
+		}
+	}
+	participants := []struct {
+		UserID string `json:"user_id"`
+		Name   string `json:"name"`
+	}{}
+	if len(ids) != 0 {
+		selected := make([]string, 0, len(ids))
+		for id := range ids {
+			selected = append(selected, id)
+		}
+		sort.Strings(selected)
+		if db.DB.Table("user_tenants AS ut").Select("ut.user_id, users.name").Joins("JOIN users ON users.id = ut.user_id").Where("ut.tenant_id = ? AND ut.user_id IN ?", tenantID, selected).Order("ut.user_id ASC").Scan(&participants).Error != nil {
+			c.JSON(http.StatusServiceUnavailable, gin.H{"error": "participants_unavailable"})
+			return
+		}
+	}
 	sourceStatus := m3SourceStatus(row)
 	currentDigest := ""
 	reviewedCurrent := false
@@ -146,5 +190,5 @@ func GetInterventionCase(c *gin.Context) {
 			}
 		}
 	}
-	c.JSON(http.StatusOK, gin.H{"case": row, "active_proposal_id": row.ActiveProposalID, "proposals": proposals, "receipts": receipts, "human_events": events, "source_status": sourceStatus, "current_source_digest": currentDigest, "reviewed_source_current": reviewedCurrent})
+	c.JSON(http.StatusOK, gin.H{"case": row, "active_proposal_id": row.ActiveProposalID, "proposals": proposals, "receipts": receipts, "human_events": events, "participants": participants, "source_status": sourceStatus, "current_source_digest": currentDigest, "reviewed_source_current": reviewedCurrent})
 }

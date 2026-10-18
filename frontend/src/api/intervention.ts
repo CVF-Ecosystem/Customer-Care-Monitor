@@ -22,6 +22,7 @@ export interface InterventionEvent {
 export interface InterventionDetail {
   case: InterventionCase; proposals: InterventionProposal[]
   active_proposal_id?: string | null; human_events: InterventionEvent[]; source_status: string
+  participants?: {user_id: string; name: string}[]
   current_source_digest?: string; reviewed_source_current?: boolean
 }
 export interface InterventionAction {

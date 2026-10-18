@@ -199,7 +199,7 @@ func SetupRouter(cfg *config.Config) *gin.Engine {
 			tenant.POST("/jobs/:jobId/intervention-run", requireKnownTenantPermission("jobs", "w"), handlers.RunIntervention)
 			tenant.GET("/intervention-capability", requireKnownTenantPermission("intervention_cases", "r"), handlers.GetInterventionCapability)
 			tenant.GET("/intervention-cases", requireKnownTenantPermission("intervention_cases", "r"), handlers.ListInterventionCases)
-			tenant.GET("/intervention-assignees", requireKnownTenantPermission("intervention_cases", "r"), handlers.ListInterventionAssignees)
+			tenant.GET("/intervention-assignees", requireKnownTenantPermission("intervention_cases", "r"), requireKnownTenantPermission("intervention_cases", "w"), handlers.ListInterventionAssignees)
 			tenant.GET("/intervention-cases/:caseId", requireKnownTenantPermission("intervention_cases", "r"), handlers.GetInterventionCase)
 			tenant.POST("/intervention-cases/:caseId/actions", requireKnownTenantPermission("intervention_cases", "r"), requireKnownTenantPermission("intervention_cases", "w"), handlers.ApplyInterventionAction)
 			tenant.POST("/intervention-cases/:caseId/data-revisions", requireKnownTenantPermission("intervention_cases", "r"), requireKnownTenantPermission("intervention_cases", "w"), handlers.CreateInterventionDataRevision)

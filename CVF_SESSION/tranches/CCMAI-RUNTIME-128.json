@@ -34,7 +34,7 @@
   "verification": "Focused authenticated native MySQL privacy/permissions/error checks; relevant UI regression and build; reuse existing bounded browser fixture for current-source reader labels and lifecycle regression, actual exit/effects/source receipts. No new provider or generic tooling.",
   "claimBoundary": "Software/synthetic presentation only; provider/governance/quality/pilot/release not inferred from stubs or build success.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_128_CASE_PARTICIPANT_NAMES.md",
-  "baseCommit": "e8af875fc08ebd94bc2cd328a54491b852298ee3",
+  "baseCommit": "5d9252af127f782607a291197cf322db5381fb52",
   "status": "BUILD",
   "phase": "BUILD",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",

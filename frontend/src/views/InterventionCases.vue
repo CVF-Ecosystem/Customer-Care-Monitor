@@ -172,7 +172,7 @@ function caseReference(conversationId: string, id: string) {
   return t('iv_case_reference', { reference: reference.value })
 }
 function revisionLabel(version: number) { return t('iv_revision', { version }) }
-function person(id: string) { return assignees.value.find(x => x.user_id === id)?.name || t('iv_person_unavailable') }
+function person(id: string) { return detail.value?.participants?.find(x => x.user_id === id)?.name || assignees.value.find(x => x.user_id === id)?.name || t('iv_person_unavailable') }
 function stateLabel(value:string) { return t(interventionStateKey(value)) }
 function assessmentLabel(value:string) { return t(interventionAssessmentKey(value)) }
 function sourceLabel(value:string) { return t(interventionSourceKey(value)) }

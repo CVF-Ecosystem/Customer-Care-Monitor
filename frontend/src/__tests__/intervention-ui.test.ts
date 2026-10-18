@@ -77,9 +77,9 @@ describe('changed source review action', () => {
   })
 })
 
-async function mounted(initial:string|null='A', locale:'en'|'vi'='en') {
+async function mounted(initial:string|null='A', locale:'en'|'vi'='en', reader=false) {
   const pinia=createPinia(); setActivePinia(pinia)
-  const auth=useAuthStore(); auth.tenantPerms={role:'owner',permissions:{}}
+  const auth=useAuthStore(); auth.tenantPerms=reader ? {role:'member',permissions:{intervention_cases:'r'}} : {role:'owner',permissions:{}}
   const router=createRouter({history:createMemoryHistory(),routes:[{path:'/:tenantId/intervention-cases/:caseId?',component:InterventionCases},{path:'/:tenantId/messages',component:{template:'<div />'}}]})
   const i18n=createI18n({legacy:false,locale,messages:{en:enMessages,vi:viMessages}})
   await router.push(initial ? `/t/intervention-cases/${initial}` : '/t/intervention-cases'); await router.isReady()
@@ -103,6 +103,59 @@ describe('R101 route lifetime', () => {
     a.resolve(detail('CASE-A')); await flushPromises()
     expect(wrapper.text()).toContain('CASE-B')
     expect(wrapper.text()).not.toContain('CASE-A')
+    wrapper.unmount()
+  })
+
+  it('renders only the current reader case participant names, including history, without loading the assignee directory', async () => {
+    const a=deferred<InterventionDetail>(), b=deferred<InterventionDetail>()
+    const withParticipants=(id:string, prefix:string):InterventionDetail => {
+      const data=detail(id)
+      data.case.data_owner_id=`${prefix}-owner`
+      data.case.assignee_id=`${prefix}-current`
+      data.human_events=[{
+        id:`${prefix}-event`,case_version:2,actor_id:`${prefix}-actor`,action:'CONFIRM',reason:'Reviewed',
+        before:JSON.stringify({version:1,disposition:'PENDING_REVIEW',work_state:'ASSIGNED',human_assessment:'',human_explanation:'',human_next_action:'',assignee_id:`${prefix}-previous`,data_owner_id:`${prefix}-owner`,due_at:null,outcome_text:''}),
+        after:JSON.stringify({version:2,disposition:'HUMAN_CONFIRM',work_state:'ASSIGNED',human_assessment:'CONFIRM',human_explanation:'',human_next_action:'',assignee_id:`${prefix}-current`,data_owner_id:`${prefix}-owner`,due_at:null,outcome_text:''}),
+        source_status:'LOCAL_MATCH_CURRENTNESS_UNVERIFIED',created_at:'2026-10-16T08:00:00Z',
+      }]
+      data.participants=[
+        {user_id:`${prefix}-owner`,name:`${prefix} data owner`},
+        {user_id:`${prefix}-current`,name:`${prefix} current assignee`},
+        {user_id:`${prefix}-previous`,name:`${prefix} previous assignee`},
+        {user_id:`${prefix}-actor`,name:`${prefix} history actor`},
+      ]
+      return data
+    }
+    calls.detail.mockImplementation((_tenant:string,id:string) => id==='A' ? a.promise : b.promise)
+    const {wrapper,router}=await mounted('A','en',true)
+    await flushPromises()
+    expect(calls.detail).toHaveBeenCalledWith('t','A','synthetic-session',expect.any(AbortSignal))
+    await router.push('/t/intervention-cases/B'); await flushPromises()
+    b.resolve(withParticipants('CASE-B','B')); await flushPromises()
+    let text=wrapper.text()
+    expect(text).toContain('B data owner')
+    expect(text).toContain('B current assignee')
+    expect(text).toContain('B previous assignee')
+    expect(text).toContain('B history actor')
+    expect(text).not.toContain('A data owner')
+    expect(text).not.toContain('A current assignee')
+    expect(text).not.toContain('A previous assignee')
+    expect(text).not.toContain('A history actor')
+    expect(text).not.toContain('Record action')
+    expect(calls.assignees).not.toHaveBeenCalled()
+
+    a.resolve(withParticipants('CASE-A','A')); await flushPromises()
+    text=wrapper.text()
+    expect(text).toContain('B data owner')
+    expect(text).toContain('B current assignee')
+    expect(text).toContain('B previous assignee')
+    expect(text).toContain('B history actor')
+    expect(text).not.toContain('A data owner')
+    expect(text).not.toContain('A current assignee')
+    expect(text).not.toContain('A previous assignee')
+    expect(text).not.toContain('A history actor')
+    expect(text).not.toContain('Record action')
+    expect(calls.assignees).not.toHaveBeenCalled()
     wrapper.unmount()
   })
 

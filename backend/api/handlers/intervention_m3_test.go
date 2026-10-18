@@ -6,6 +6,7 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"net"
 	"net/http"
@@ -184,6 +185,144 @@ func (f *m3Fixture) action(id, caseID, name string, version int, more map[string
 		req[k] = v
 	}
 	return req
+}
+
+func TestM3CaseParticipantsAreScopedToHistory(t *testing.T) {
+	f := m3FixtureStart(t)
+	for id, name := range map[string]string{f.owner: "Case owner", f.member: "Current assignee", f.assignee: "Previous assignee"} {
+		if err := db.DB.Model(&models.User{}).Where("id = ?", id).Update("name", name).Error; err != nil {
+			t.Fatal(err)
+		}
+	}
+	foreignID := pkg.NewUUID()
+	m3MustCreate(t, &models.User{ID: foreignID, Email: foreignID + "@example.invalid", Name: "Foreign private name", PasswordHash: "synthetic", CreatedAt: time.Now(), UpdatedAt: time.Now()}, &models.UserTenant{UserID: foreignID, TenantID: f.otherTenant, Role: "member", Permissions: `{"intervention_cases":"r"}`})
+	casePath := "/intervention-cases/" + f.caseID
+	waitPath := "/intervention-cases/" + f.waitID
+	due := time.Now().UTC().Add(24 * time.Hour).Format(time.RFC3339)
+	steps := []struct {
+		path, actor, caseID, action string
+		version                     int
+		fields                      map[string]any
+	}{
+		{casePath, f.member, f.caseID, "CORRECT", 1, map[string]any{"explanation": "Human correction", "next_action": "Check order"}},
+		{casePath, f.owner, f.caseID, "ASSIGN", 2, map[string]any{"assignee_id": f.assignee, "due_at": due}},
+		{casePath, f.owner, f.caseID, "ASSIGN", 3, map[string]any{"assignee_id": f.member, "due_at": due}},
+		{casePath, f.member, f.caseID, "RESOLVE", 4, map[string]any{"outcome": "Completed"}},
+		{waitPath, f.owner, f.waitID, "ASSIGN_DATA", 1, map[string]any{"assignee_id": f.assignee, "due_at": due, "next_action": "Collect source"}},
+		{waitPath, f.owner, f.waitID, "ASSIGN_DATA", 2, map[string]any{"assignee_id": f.member, "due_at": due, "next_action": "Collect missing source"}},
+	}
+	for _, step := range steps {
+		if rec := f.send(http.MethodPost, f.tenant, step.actor, step.path+"/actions", f.action(step.actor, step.caseID, step.action, step.version, step.fields)); rec.Code != http.StatusOK {
+			t.Fatalf("%s: %d %s", step.action, rec.Code, rec.Body.String())
+		}
+	}
+	var event models.InterventionHumanEvent
+	if err := db.DB.Where("case_id = ?", f.caseID).Order("case_version ASC").First(&event).Error; err != nil {
+		t.Fatal(err)
+	}
+	var before map[string]any
+	if err := json.Unmarshal([]byte(event.Before), &before); err != nil {
+		t.Fatal(err)
+	}
+	before["assignee_id"], before["data_owner_id"] = foreignID, "malformed-id"
+	forged, _ := json.Marshal(before)
+	if err := db.DB.Model(&event).Update("before", string(forged)).Error; err != nil {
+		t.Fatal(err)
+	}
+	check := func(path string, want map[string]string) {
+		t.Helper()
+		rec := f.send(http.MethodGet, f.tenant, f.reader, path, nil)
+		if rec.Code != http.StatusOK {
+			t.Fatalf("reader detail: %d %s", rec.Code, rec.Body.String())
+		}
+		var detail struct {
+			Participants []map[string]any `json:"participants"`
+		}
+		if err := json.Unmarshal(rec.Body.Bytes(), &detail); err != nil {
+			t.Fatal(err)
+		}
+		got := map[string]string{}
+		for _, item := range detail.Participants {
+			if len(item) != 2 {
+				t.Fatalf("participant exposed extra fields: %v", item)
+			}
+			id, idOK := item["user_id"].(string)
+			name, nameOK := item["name"].(string)
+			if !idOK || !nameOK {
+				t.Fatalf("invalid participant: %v", item)
+			}
+			got[id] = name
+		}
+		if len(got) != len(want) {
+			t.Fatalf("participants = %v, want %v", got, want)
+		}
+		for id, name := range want {
+			if got[id] != name {
+				t.Fatalf("participant %s = %q, want %q", id, got[id], name)
+			}
+		}
+		if _, found := got[foreignID]; found {
+			t.Fatal("foreign tenant name leaked")
+		}
+	}
+	check(casePath, map[string]string{f.owner: "Case owner", f.member: "Current assignee", f.assignee: "Previous assignee"})
+	check(waitPath, map[string]string{f.owner: "Case owner", f.member: "Current assignee", f.assignee: "Previous assignee"})
+	for _, id := range []string{f.owner, f.member} {
+		if rec := f.send(http.MethodGet, f.tenant, id, "/intervention-assignees", nil); rec.Code != http.StatusOK {
+			t.Fatalf("editor assignees: %d", rec.Code)
+		}
+	}
+	if rec := f.send(http.MethodGet, f.tenant, f.reader, "/intervention-assignees", nil); rec.Code != http.StatusForbidden {
+		t.Fatalf("reader assignees: %d", rec.Code)
+	}
+}
+
+func TestM3CaseParticipantLookupFailureIsClosed(t *testing.T) {
+	f := m3FixtureStart(t)
+	path := "/intervention-cases/" + f.caseID
+	if rec := f.send(http.MethodPost, f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "CORRECT", 1, map[string]any{"explanation": "Reviewed", "next_action": "Follow up"})); rec.Code != http.StatusOK {
+		t.Fatalf("seed actor event: %d %s", rec.Code, rec.Body.String())
+	}
+	const hook = "m3:participant_batch_failure"
+	fired := 0
+	if err := db.DB.Callback().Row().Before("gorm:row").Register(hook, func(tx *gorm.DB) {
+		if tx.Statement.TableExpr == nil || tx.Statement.TableExpr.SQL != "user_tenants AS ut" || len(tx.Statement.Selects) != 1 || tx.Statement.Selects[0] != "ut.user_id, users.name" {
+			return
+		}
+		where, ok := tx.Statement.Clauses["WHERE"].Expression.(clause.Where)
+		if !ok {
+			return
+		}
+		for _, condition := range where.Exprs {
+			if expression, ok := condition.(clause.Expr); ok && strings.Contains(expression.SQL, "ut.user_id IN") {
+				fired++
+				tx.AddError(errors.New("forced participant lookup failure"))
+				return
+			}
+		}
+	}); err != nil {
+		t.Fatal(err)
+	}
+	removed := false
+	t.Cleanup(func() {
+		if !removed {
+			_ = db.DB.Callback().Row().Remove(hook)
+		}
+	})
+	rec := f.send(http.MethodGet, f.tenant, f.reader, path, nil)
+	if fired != 1 {
+		t.Fatalf("participant batch failure callback fired %d times", fired)
+	}
+	if rec.Code != http.StatusServiceUnavailable || strings.TrimSpace(rec.Body.String()) != `{"error":"participants_unavailable"}` {
+		t.Fatalf("lookup failure returned %d %s", rec.Code, rec.Body.String())
+	}
+	if err := db.DB.Callback().Row().Remove(hook); err != nil {
+		t.Fatal(err)
+	}
+	removed = true
+	if rec := f.send(http.MethodGet, f.tenant, f.reader, path, nil); rec.Code != http.StatusOK {
+		t.Fatalf("detail after hook removal: %d %s", rec.Code, rec.Body.String())
+	}
 }
 
 // A human-owned case must retain a way to act after a supported local source
