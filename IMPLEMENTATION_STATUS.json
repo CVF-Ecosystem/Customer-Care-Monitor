@@ -23,22 +23,22 @@
       "M5 release/portable operations"
     ],
     "currentBlockers": [
-      "Full M3 acceptance/pilot/release and parked Facebook/ZaloOA remain open.",
-      "Hosted CI and a fresh post-repair single full Go invocation have not run; current whole-package coverage is qualified and proven."
+      "B09 offline browser control is unavailable; full M3 acceptance requires its remaining explicit dispositions.",
+      "Business/pilot/account and hosted release acceptance remain open."
     ],
     "executionAuthorityExpanded": false,
     "eta": "NOT_ESTABLISHED",
     "deliveryRoadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
     "currentMilestone": "M3",
-    "milestoneAcceptance": "R117_BOUNDED_BACKEND_REAL_R118_SOURCE_R120_SYNTHETIC_UI_OBSERVED_TERMINAL_MISSING_FULL_M3_OPEN",
+    "milestoneAcceptance": "R128_CURRENT_SYNTHETIC_HUMAN_WORKFLOW_AND_READER_NAMES_ACCEPTED_FULL_M3_OPEN",
     "deliveryRoadmapPublication": "d72de76984e4aad9c208cc82e6093578797b5340",
     "m1BusinessPilotAcceptance": "OPEN",
     "currentPublication": "BASE_1e3db8b1_PUSHED_AND_MERGED_d7a6f76_THIS_ROADMAP_UPDATE_LOCAL_ONLY",
-    "nextPlannedWork": "CCMAI-RUNTIME-128 fix observed reader participant-name fallback using case-scoped same-tenant names, keep action permissions and restrict full assignee directory to editors. Root independently verifies native privacy/permission cases, reader UI regression/build and actual current browser with terminal receipt. No provider/customer data/installed app mutation/push/deploy; full M3/pilot/release remain open."
+    "nextPlannedWork": "CCMAI-RUNTIME-128 REVIEW_PASS: readers see case-scoped participant names after reload without write controls or full-directory requests; native7/UI21/build/current browser exit0 accepted. Consolidate remaining M3 acceptance from these receipts; B09 offline unsupported and business/pilot/hosted release remain open. No generic helper scope or provider/customer/push/deploy action without a concrete roadmap need."
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "R118 REVIEW_PASS SOURCE_COMPONENT_ONLY at7f74a75f93671973bcfe55b5cb491076c0d2bdf9: current proposal pointer/lineage binding, safe legacy fallback and proposal-less data actions, VN/EN WAIT_DATA history. Root24tests/app typecheckPASS, original byte archive/source pins verified; changed-screen UI proof NOT_RUN/FREEZE OPEN. docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md",
     "R117 bounded WAIT_DATA backend real synthetic flow independently accepted: new same-case proposal after source revision, faithful realAlibaba340/297tokens, synthetic CONFIRM persisted, one call/debit, native11top11nested+engine1PASS. Exact owned owner-authorized restart/finalstop and operational protected equality observed; original interruption/cleanupHOLD retained. Current UI/fullM2/M3/pilot/release remain OPEN. docs/reviews/R117_FINAL_INDEPENDENT_REVIEW_2026-10-18.md",
@@ -2033,9 +2033,7 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [
-    "docs/work_orders/CCMAI_RUNTIME_128_CASE_PARTICIPANT_NAMES.md"
-  ],
+  "activeWorkOrders": [],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -3079,9 +3077,10 @@
     "fullM3": "OPEN"
   },
   "x-r128CurrentOutcome": {
-    "status": "BUILD",
+    "status": "REVIEW_PASS",
     "review": "docs/reviews/R128_CASE_PARTICIPANT_NAMES_REVIEW_2026-10-19.md",
     "providerCalls": 0,
-    "currentVerification": "PENDING"
+    "currentVerification": "NATIVE7_UI21_BUILD_BROWSER_EXIT0",
+    "sourceCommit": "bc5333946ddefcfa137db4f3c253ea507bdf06e5"
   }
 }

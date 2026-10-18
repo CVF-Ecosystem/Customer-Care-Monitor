@@ -1,0 +1,188 @@
+{
+  "archive": "original_verification.zip",
+  "archiveSHA256": "d7bded019900baa61e9fd5435e1ef95b39688651147a6dc7ab02b9e4f1db762c",
+  "files": [
+    {
+      "path": "backend_runner.sh",
+      "bytes": 1168,
+      "sha256": "e7f48f7839948d28d311bf4a599f188400f8cebf4d0e746f69ff3e6a7bc295dc"
+    },
+    {
+      "path": "browser/assigned_reload_dom.txt",
+      "bytes": 5013,
+      "sha256": "1b865a9eed9f6b1585920ea480d15179fb50b8a4b597cb926c6b663e14d729f5"
+    },
+    {
+      "path": "browser/backend_terminal.json",
+      "bytes": 1758,
+      "sha256": "9d525124c5b2c7a4c66fdf76377b8da3391c559c5117fc0a9878228917161b92"
+    },
+    {
+      "path": "browser/corrected_dom.txt",
+      "bytes": 4591,
+      "sha256": "18f10a0cfadc255e311614e48db1b659697f31814a4b65febb3864583a66b40e"
+    },
+    {
+      "path": "browser/fixture_identity.json",
+      "bytes": 146,
+      "sha256": "ca4c1394dde9928d10bdf7c3bf82cf6211083b9906e852289b4f1722268c6d51"
+    },
+    {
+      "path": "browser/go-workflow.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "browser/go-workflow.log",
+      "bytes": 37643,
+      "sha256": "0362fde1b71d96b92c09a3dc24c73702914fbf4633b0d5eb05db3e55d1432914"
+    },
+    {
+      "path": "browser/initial_dom.txt",
+      "bytes": 4101,
+      "sha256": "66e440c997e4ef847bec5ede0c7e500659cf739b858aef995283fc7102c9b730"
+    },
+    {
+      "path": "browser/logout_dom.txt",
+      "bytes": 473,
+      "sha256": "314e746c5f94462d8f25c4d6d5d80f5235d0cc16b3ad5989b9ab9cfdcd622ee3"
+    },
+    {
+      "path": "browser/reader_assertions.json",
+      "bytes": 127,
+      "sha256": "1e001f5b4b51bf2a6d072a4dc102b1f1ee96345b93812577c6ba0472343e5e60"
+    },
+    {
+      "path": "browser/reader_history.jpg",
+      "bytes": 74195,
+      "sha256": "4d8c3af824f4a220f2b982dda8d4fc110bd7e6cfe49cb9607146a25a6d0be682"
+    },
+    {
+      "path": "browser/reader_names.jpg",
+      "bytes": 87688,
+      "sha256": "5216f978d5ed8cc013e759bb51a726e97e721dfef3c897c5cb144baf2203a048"
+    },
+    {
+      "path": "browser/reader_reload_dom.txt",
+      "bytes": 3884,
+      "sha256": "58a3e97d349534794242e6ee6e82866bf8bb2fa8ea266b990a609e502f9dcd43"
+    },
+    {
+      "path": "browser/reader_wait_assertions.json",
+      "bytes": 128,
+      "sha256": "ccf18906178168f9ee3fe973f2849b4c291715543f9e93da4f529058b3c25959"
+    },
+    {
+      "path": "browser/reader_wait_dom.txt",
+      "bytes": 2900,
+      "sha256": "66f5b6a6b3be3f119e7eb5abe1bc1fa7fdfd3dbe0b700fc439175acc90088e1d"
+    },
+    {
+      "path": "browser/ready.json",
+      "bytes": 388,
+      "sha256": "51327a80ccf72597dacaca0e9403253ed8a1901e031b6f0182323d03ac55c596"
+    },
+    {
+      "path": "browser/reopened_reload_dom.txt",
+      "bytes": 6032,
+      "sha256": "2f0efad74a6fa5199df99acffb996ac093d9daa1ac8bd95503f3bf6e7fcaf699"
+    },
+    {
+      "path": "browser/resolved_reload_dom.txt",
+      "bytes": 5416,
+      "sha256": "6b5d59dcd951ccec1e3a2a995eb5af31297907b06c53ed32fd66264d6fc9ca76"
+    },
+    {
+      "path": "browser/route_journal.jsonl",
+      "bytes": 46082,
+      "sha256": "4b5f97f5faa7c372bf2676ee1fac509f6a1aa76be30ee3c46624808a5755ba8c"
+    },
+    {
+      "path": "browser/stale_conflict_dom.txt",
+      "bytes": 4730,
+      "sha256": "0a7dc452aa3d32d349c5a007ee9fd18029aab130b7ed8de606ed5a2ba96f4f99"
+    },
+    {
+      "path": "browser/stop",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "browser/wait_assigned_reload_dom.txt",
+      "bytes": 4322,
+      "sha256": "e92bdf38ecb0c418b7071b95ab9212c7cc43a4e3b0e0fb6dfb3a58d98eed8e33"
+    },
+    {
+      "path": "browser/wait_escalated_reload_dom.txt",
+      "bytes": 4639,
+      "sha256": "bf4e8fe4589cf9a31667881d00a6c13620443ce9f2f0e135c2c2fbd5b5e4d1e1"
+    },
+    {
+      "path": "cleanup_receipt.json",
+      "bytes": 1712,
+      "sha256": "bafb197f1eb9bcbcc708e7e81a67ff61cfa9f18a479af683f0a78ba9041f59d0"
+    },
+    {
+      "path": "close_review.py",
+      "bytes": 12094,
+      "sha256": "12d64848462d029c05fc1a485599de4916bd223956981cbeb466126d4be1ff43"
+    },
+    {
+      "path": "frontend-build.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "frontend-build.log",
+      "bytes": 13486,
+      "sha256": "279f9100771d82000aba852c43a885599ddfd2c8df6b192338ac209402a210c0"
+    },
+    {
+      "path": "frontend-tests.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "frontend-tests.log",
+      "bytes": 1457,
+      "sha256": "8b7b1ef39704ab97a40d794bc73fb84a0f3ee16d1a1a8e904f57a8ea17e61e4f"
+    },
+    {
+      "path": "frontend_source_hashes.json",
+      "bytes": 16436,
+      "sha256": "05b3d8d8e8ff19cace2ada95249e9058230f7e1d723699705699a19a81975a93"
+    },
+    {
+      "path": "native.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "native.log",
+      "bytes": 130838,
+      "sha256": "2d493ad881a6c23432e01c414d58a895a6aa1ed68fca56b5e5a44f27643a76c1"
+    },
+    {
+      "path": "prepare_records.py",
+      "bytes": 7423,
+      "sha256": "170cfb42d08c53e341ccab61b5cb305aa610a0f01aecc0c4f04386902bbc98ae"
+    },
+    {
+      "path": "source_identity.json",
+      "bytes": 48066,
+      "sha256": "6af774bed3981e23f5cfff92de604c973c4f29e21c970ceac4e7299d4f581d4c"
+    },
+    {
+      "path": "verification_summary.json",
+      "bytes": 4385,
+      "sha256": "d1d41a57e7bac97edcf7a27e2efa44be71bb3e4109b6441ffe40696bd2a4a2d7"
+    },
+    {
+      "path": "final_checks.json",
+      "bytes": 3565,
+      "sha256": "a5fd891a20352509d91838ae306c8c200a5075b278d74cc95d895dc6a5416a13"
+    }
+  ],
+  "excluded": "Source snapshots, dependencies and build output; no real key/customer data used.",
+  "finalCheckReceiptsAppendedAfterDocsBuild": true
+}

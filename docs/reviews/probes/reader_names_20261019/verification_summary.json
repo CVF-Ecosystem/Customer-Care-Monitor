@@ -1,0 +1,153 @@
+{
+  "status": "REVIEW_PASS_CASE_SCOPED_READER_NAMES",
+  "sourceCommit": "bc5333946ddefcfa137db4f3c253ea507bdf06e5",
+  "nativeTopLevelTests": [
+    "TestM3CaseParticipantsAreScopedToHistory",
+    "TestM3CaseParticipantLookupFailureIsClosed",
+    "TestM3ChangedSourceAfterAssignmentRequiresExplicitReview",
+    "TestM3ChangedSourceBeforeAssessmentStillConflicts",
+    "TestM3ChangedSourceAfterAssessmentBeforeAssignmentCanRecover",
+    "TestR101HumanWorkflowNative",
+    "TestR101SourceAndPermissionConflicts"
+  ],
+  "nativeExit": 0,
+  "frontendRelevantTests": 21,
+  "frontendTestFiles": 2,
+  "frontendBuildExit": 0,
+  "browserExit": 0,
+  "browserActions": [
+    [
+      "CORRECT",
+      200
+    ],
+    [
+      "CONFIRM",
+      409
+    ],
+    [
+      "ASSIGN",
+      200
+    ],
+    [
+      "RESOLVE",
+      200
+    ],
+    [
+      "REOPEN",
+      200
+    ],
+    [
+      "ASSIGN_DATA",
+      200
+    ],
+    [
+      "ESCALATE_DATA",
+      200
+    ]
+  ],
+  "browserTerminal": {
+    "actionPosts": 7,
+    "authPosts": 4,
+    "case": {
+      "assessment": "CORRECT",
+      "assigneeId": "92ce9eeb-4cf2-4d22-b018-c74cc3080943",
+      "dataOwnerId": null,
+      "disposition": "HUMAN_CORRECT",
+      "history": [
+        {
+          "action": "CORRECT",
+          "priorOutcomePresent": false,
+          "version": 2
+        },
+        {
+          "action": "ASSIGN",
+          "priorOutcomePresent": false,
+          "version": 3
+        },
+        {
+          "action": "RESOLVE",
+          "priorOutcomePresent": false,
+          "version": 4
+        },
+        {
+          "action": "REOPEN",
+          "priorOutcomePresent": true,
+          "version": 5
+        }
+      ],
+      "id": "74de23b4-ac98-4092-a472-4849b466caa9",
+      "outcomePresent": false,
+      "version": 5,
+      "workState": "ASSIGNED"
+    },
+    "finalEffects": {
+      "attempts": 0,
+      "budgets": 0,
+      "executions": 0,
+      "grants": 0,
+      "humanEvents": 18,
+      "receipts": 0,
+      "runs": 0,
+      "snapshots": 6
+    },
+    "finalFingerprints": {
+      "case": "22921309adf24b59edee1c03f76a2c486f46a86e292f0908f3f6670b264874f3",
+      "waitCase": "fb1498bed9ff26599008e1694b24ca9057b6b5343fdbca05ae2b4120c44ffddb"
+    },
+    "initialEffects": {
+      "attempts": 0,
+      "budgets": 0,
+      "executions": 0,
+      "grants": 0,
+      "humanEvents": 12,
+      "receipts": 0,
+      "runs": 0,
+      "snapshots": 6
+    },
+    "initialFingerprints": {
+      "case": "1ca6872fe39772a37f256a05b0010b1892f8b9e14c7bf444406cb735bb8eb6e5",
+      "waitCase": "ebf2979232f8b816a7a46d5da3135a65d008de490330ed024bc720eb7c8f8d86"
+    },
+    "journalError": "<nil>",
+    "ownerLogin": true,
+    "pass": true,
+    "proposalUnchanged": true,
+    "readerDetailRead": true,
+    "readerLogin": true,
+    "readerWriteDeniedNative": true,
+    "serverStopped": true,
+    "sourceIdentityUnchanged": true,
+    "staleActionConflict": true,
+    "stopReason": "stop_file",
+    "waitCase": {
+      "assessment": "",
+      "assigneeId": null,
+      "dataOwnerId": "92ce9eeb-4cf2-4d22-b018-c74cc3080943",
+      "disposition": "WAIT_DATA",
+      "history": [
+        {
+          "action": "ASSIGN_DATA",
+          "priorOutcomePresent": false,
+          "version": 2
+        },
+        {
+          "action": "ESCALATE_DATA",
+          "priorOutcomePresent": false,
+          "version": 3
+        }
+      ],
+      "id": "79049edc-579d-49e3-97a9-a74eb62f588f",
+      "outcomePresent": false,
+      "version": 3,
+      "workState": "WAITING_ON_DATA"
+    }
+  },
+  "readerNamesAfterReload": "PASS_CASE_AND_WAIT_DATA_CURRENT_AND_HISTORY",
+  "readerFullDirectoryRequests": 0,
+  "participantPrivacy": "Only user_id/name for referenced same-tenant users; historical actor/assignee/data-owner IDs included; unrelated and foreign names omitted. Reader directory403; editor200. Injected batch query failure503 only error; healthy query restored200.",
+  "providerCalls": 0,
+  "fullGoAndFullFrontendSuite": "NOT_RERUN_THIS_CHANGE_FOCUSED_NATIVE_UI_BUILD_BROWSER_VERIFIED",
+  "hostedCI": "NOT_RUN",
+  "fullM3PilotRelease": "OPEN",
+  "browserCleanupLimit": "Current R128 tabs closed. Prior expired test error tabs were blocked by browser URL policy and left unchanged; no workaround attempted."
+}

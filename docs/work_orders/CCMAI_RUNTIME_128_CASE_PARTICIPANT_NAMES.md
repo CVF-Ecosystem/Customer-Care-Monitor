@@ -1,6 +1,6 @@
 # Case-scoped participant names for read-only reviewers
 
-Status: ACTIVE
+Status: REVIEWER_ACCEPTED
 Risk: R2
 Worker: Sol Medium backend participant scope; Luna Max frontend reader labels
 Reviewer: Root independent source/native/browser evidence review

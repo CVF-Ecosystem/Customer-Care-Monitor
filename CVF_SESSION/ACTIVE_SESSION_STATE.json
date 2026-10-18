@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-128",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R128_CASE_PARTICIPANT_NAMES_2026-10-19.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-128 fix observed reader participant-name fallback using case-scoped same-tenant names, keep action permissions and restrict full assignee directory to editors. Root independently verifies native privacy/permission cases, reader UI regression/build and actual current browser with terminal receipt. No provider/customer data/installed app mutation/push/deploy; full M3/pilot/release remain open.",
+  "nextAllowedMove": "CCMAI-RUNTIME-128 REVIEW_PASS: readers see case-scoped participant names after reload without write controls or full-directory requests; native7/UI21/build/current browser exit0 accepted. Consolidate remaining M3 acceptance from these receipts; B09 offline unsupported and business/pilot/hosted release remain open. No generic helper scope or provider/customer/push/deploy action without a concrete roadmap need.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / independent REVIEWER; Sol Medium backend participant scope; Luna Max frontend reader labels",
+  "activeRole": "Root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; reader participant-name fix accepted",
   "updatedAt": "2026-10-19",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {

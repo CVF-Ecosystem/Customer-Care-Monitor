@@ -1,5 +1,12 @@
 # CCMA — Roadmap phát triển sản phẩm và tiếp quản giữa các agent
 
+## R128 — tên người tham gia ca cho tài khoản chỉ đọc, 2026-10-19
+
+Đã sửa và nghiệm thu local: reader thấy tên người xử lý, người bổ sung dữ liệu và người ghi lịch sử sau reload; API chỉ trả user_id/name của người cùng workspace được ca/lịch sử ca tham chiếu. Không trả người ngoài ca/khác workspace; danh sách chọn người xử lý yêu cầu quyền đọc và ghi. Reader vẫn không có thao tác ghi hoặc yêu cầu danh bạ đầy đủ.
+
+Native MySQL7test, UI/API21test, build và lượt browser hiện tại exit0 PASS; luồng sửa/giao/kết quả/mở lại và WAIT_DATA không hồi quy, không gọi provider. Không nhận full Go/frontend suite mới. Xem [review](../R128_CASE_PARTICIPANT_NAMES_REVIEW_2026-10-19.md). Tiếp theo chốt bảng acceptance M3 từ bằng chứng hiện có; B09 offline chưa có điều khiển hỗ trợ, full M3/business/pilot/hosted/release còn mở. Không mở chuỗi tooling/polish mới nếu không có gap sản phẩm cụ thể. Các checkpoint dưới là lịch sử.
+
+
 ## R127-A — luồng thao tác M3 trên trình duyệt, 2026-10-19
 
 Đã nghiệm thu phạm vi synthetic hiện tại: sửa đánh giá → giao việc → ghi kết quả → mở lại, giữ lịch sử qua tải lại; giao người bổ sung và chuyển cấp vẫn giữ ca chờ dữ liệu; tab cũ409; backend chặn reader403 và UI reader không có nút ghi. Bản chạy lại exit0, nguồn/đề xuất giữ nguyên, đúng6event, không gọi provider. Lượt đầu exit1 do baseline fixture chưa seed con trỏ đề xuất hiện tại được giữ nguyên; không sửa lịch sử lỗi.

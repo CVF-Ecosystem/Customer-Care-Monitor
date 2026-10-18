@@ -35,19 +35,21 @@
   "claimBoundary": "Software/synthetic presentation only; provider/governance/quality/pilot/release not inferred from stubs or build success.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_128_CASE_PARTICIPANT_NAMES.md",
   "baseCommit": "5d9252af127f782607a291197cf322db5381fb52",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PASS",
+  "phase": "REVIEW",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
-  "buildCommit": null,
+  "workOrderStatus": "REVIEWER_ACCEPTED",
+  "buildCommit": "bc5333946ddefcfa137db4f3c253ea507bdf06e5",
   "reviewEvidence": [
     "docs/reviews/R128_CASE_PARTICIPANT_NAMES_REVIEW_2026-10-19.md"
   ],
-  "disposition": "PENDING",
+  "disposition": "REVIEW_PASS",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
   ]
 }

@@ -34499,6 +34499,55 @@
       "path": "docs/reviews/R128_CASE_PARTICIPANT_NAMES_REVIEW_2026-10-19.md",
       "status": "ACTIVE",
       "description": "Concrete case-scoped reader display-name fix; preserves permissions and historical browser evidence."
+    },
+    {
+      "id": "r128-reader-backend-terminal",
+      "family": "continuity",
+      "path": "docs/reviews/probes/reader_names_20261019/backend_terminal.json",
+      "status": "ACTIVE",
+      "description": "Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open."
+    },
+    {
+      "id": "r128-reader-cleanup-receipt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/reader_names_20261019/cleanup_receipt.json",
+      "status": "ACTIVE",
+      "description": "Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open."
+    },
+    {
+      "id": "r128-reader-evidence-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/reader_names_20261019/evidence_manifest.json",
+      "status": "ACTIVE",
+      "description": "Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open."
+    },
+    {
+      "id": "r128-reader-original-verification",
+      "family": "continuity",
+      "path": "docs/reviews/probes/reader_names_20261019/original_verification.zip",
+      "status": "ACTIVE",
+      "description": "Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open."
+    },
+    {
+      "id": "r128-reader-reader-history",
+      "family": "continuity",
+      "path": "docs/reviews/probes/reader_names_20261019/reader_history.jpg",
+      "status": "ACTIVE",
+      "description": "Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open."
+    },
+    {
+      "id": "r128-reader-reader-names",
+      "family": "continuity",
+      "path": "docs/reviews/probes/reader_names_20261019/reader_names.jpg",
+      "status": "ACTIVE",
+      "description": "Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open."
+    },
+    {
+      "id": "r128-reader-verification-summary",
+      "family": "continuity",
+      "path": "docs/reviews/probes/reader_names_20261019/verification_summary.json",
+      "status": "ACTIVE",
+      "description": "Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open."
     }
   ]
 }
