@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-128",
+  "authorityKind": "DISPATCHER_OWNED_CASE_SCOPED_READER_PARTICIPANT_NAMES",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Sol Medium backend participant scope; Luna Max frontend reader labels",
+    "reviewer": "Root independent source/native/browser evidence review",
+    "commitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "backend/api/handlers/intervention.go",
+    "backend/api/router.go",
+    "backend/api/handlers/intervention_m3_test.go",
+    "frontend/src/api/intervention.ts",
+    "frontend/src/views/InterventionCases.vue",
+    "frontend/src/__tests__/intervention-ui.test.ts",
+    "docs/work_orders/CCMAI_RUNTIME_128_CASE_PARTICIPANT_NAMES.md",
+    "docs/reviews/R128_*.md",
+    "docs/reviews/probes/reader_names_20261019/**",
+    "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md"
+  ],
+  "prohibitedEffects": [
+    "Installed app/customer DB or actual channel mutation",
+    "Real provider/paid call or real credential read during testing",
+    "Old seed/ledger/cap or evidence reset",
+    "Automatic customer send or employee decision",
+    "Push/merge/deploy without explicit request"
+  ],
+  "ownerAuthorization": "Owner continues roadmap and explicitly authorized Luna Max/Sol Medium workers with Root independent review. Prior AGENTS instructions revoked. Scope fixes concrete reader-name fallback observed in the completed R127-A browser run; ordinary reversible local synthetic testing remains authorized.",
+  "scope": "Add participant display names only for the current case and tenant, including historical assignees/data owners and event actors. Reader UI resolves these names without fetching a full member directory. Full assignee lookup requires read and write; action permissions and source/transaction semantics unchanged. No unrelated refactor or schema change.",
+  "verification": "Focused authenticated native MySQL privacy/permissions/error checks; relevant UI regression and build; reuse existing bounded browser fixture for current-source reader labels and lifecycle regression, actual exit/effects/source receipts. No new provider or generic tooling.",
+  "claimBoundary": "Software/synthetic presentation only; provider/governance/quality/pilot/release not inferred from stubs or build success.",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_128_CASE_PARTICIPANT_NAMES.md",
+  "baseCommit": "e8af875fc08ebd94bc2cd328a54491b852298ee3",
+  "status": "BUILD",
+  "phase": "BUILD",
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "ACTIVE",
+  "buildCommit": null,
+  "reviewEvidence": [
+    "docs/reviews/R128_CASE_PARTICIPANT_NAMES_REVIEW_2026-10-19.md"
+  ],
+  "disposition": "PENDING",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD"
+  ]
+}

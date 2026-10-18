@@ -3920,7 +3920,7 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R127_M3_BROWSER_ACTIONS_2026-10-19.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R128_CASE_PARTICIPANT_NAMES_2026-10-19.md",
       "status": "ACTIVE",
       "description": "Current R126 DB fixture lifetime and current-package verification handoff."
     },
@@ -34478,6 +34478,27 @@
       "path": "docs/reviews/probes/m3_workflow_20261019/final_checks.json",
       "status": "ACTIVE",
       "description": "Actual local final gate/build receipts, preserving initial stale-tranche metadata failure; not hosted CI proof."
+    },
+    {
+      "id": "r127-browser-accepted-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R127_M3_BROWSER_ACTIONS_2026-10-19.md",
+      "status": "ACTIVE",
+      "description": "Concrete case-scoped reader display-name fix; preserves permissions and historical browser evidence."
+    },
+    {
+      "id": "r128-participant-workorder",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_128_CASE_PARTICIPANT_NAMES.md",
+      "status": "ACTIVE",
+      "description": "Concrete case-scoped reader display-name fix; preserves permissions and historical browser evidence."
+    },
+    {
+      "id": "r128-participant-review",
+      "family": "continuity",
+      "path": "docs/reviews/R128_CASE_PARTICIPANT_NAMES_REVIEW_2026-10-19.md",
+      "status": "ACTIVE",
+      "description": "Concrete case-scoped reader display-name fix; preserves permissions and historical browser evidence."
     }
   ]
 }

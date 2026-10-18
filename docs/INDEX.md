@@ -15,7 +15,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R126 DB fixture lifetime and current-package verification handoff.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R127_M3_BROWSER_ACTIONS_2026-10-19.md`
+- Current R126 DB fixture lifetime and current-package verification handoff.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R128_CASE_PARTICIPANT_NAMES_2026-10-19.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -4347,6 +4347,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance.: `docs/reviews/probes/review_completion_20261018/latest_package_coverage_manifest.json`
 - Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance.: `docs/reviews/probes/review_completion_20261018/local_verification_originals.zip`
 - Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance.: `docs/reviews/probes/review_completion_20261018/verification_summary.json`
+- Concrete case-scoped reader display-name fix; preserves permissions and historical browser evidence.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R127_M3_BROWSER_ACTIONS_2026-10-19.md`
 - Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open.: `docs/reviews/probes/m3_workflow_20261019/backend_terminal.json`
 - Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open.: `docs/reviews/probes/m3_workflow_20261019/evidence_manifest.json`
 - Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open.: `docs/reviews/probes/m3_workflow_20261019/original_verification.zip`
@@ -4356,6 +4357,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open.: `docs/reviews/probes/m3_workflow_20261019/wait_escalated_narrow.jpg`
 - M3 current bounded browser workflow, synthetic only; original failed evidence preserved.: `docs/work_orders/CCMAI_RUNTIME_127_M3_BROWSER_ACTIONS.md`
 - Actual local final gate/build receipts, preserving initial stale-tranche metadata failure; not hosted CI proof.: `docs/reviews/probes/m3_workflow_20261019/final_checks.json`
+- Concrete case-scoped reader display-name fix; preserves permissions and historical browser evidence.: `docs/reviews/R128_CASE_PARTICIPANT_NAMES_REVIEW_2026-10-19.md`
+- Concrete case-scoped reader display-name fix; preserves permissions and historical browser evidence.: `docs/work_orders/CCMAI_RUNTIME_128_CASE_PARTICIPANT_NAMES.md`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

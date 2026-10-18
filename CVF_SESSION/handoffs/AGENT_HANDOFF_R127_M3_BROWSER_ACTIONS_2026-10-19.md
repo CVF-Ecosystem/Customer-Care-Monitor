@@ -1,6 +1,7 @@
 # M3 browser action acceptance
 
-Status: ACTIVE
+Status: SUPERSEDED
+Successor: CVF_SESSION/handoffs/AGENT_HANDOFF_R128_CASE_PARTICIPANT_NAMES_2026-10-19.md
 
 ## Current State
 

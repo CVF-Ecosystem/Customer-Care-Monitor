@@ -34,11 +34,11 @@
     "deliveryRoadmapPublication": "d72de76984e4aad9c208cc82e6093578797b5340",
     "m1BusinessPilotAcceptance": "OPEN",
     "currentPublication": "BASE_1e3db8b1_PUSHED_AND_MERGED_d7a6f76_THIS_ROADMAP_UPDATE_LOCAL_ONLY",
-    "nextPlannedWork": "CCMAI-RUNTIME-127-A REVIEW_PASS for current synthetic human workflow: correction/assignment/outcome/reopen, WAIT_DATA ownership/escalation, stale409, native reader403, browser reader controls absent and reload persistence, with original exit0 and zero provider effects. First fixture exit1 retained. Next fix observed read-only case participant display names without widening permissions; B09 offline unsupported, full M3/pilot/release remain open."
+    "nextPlannedWork": "CCMAI-RUNTIME-128 fix observed reader participant-name fallback using case-scoped same-tenant names, keep action permissions and restrict full assignee directory to editors. Root independently verifies native privacy/permission cases, reader UI regression/build and actual current browser with terminal receipt. No provider/customer data/installed app mutation/push/deploy; full M3/pilot/release remain open."
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "BUILD",
   "completedCapabilities": [
     "R118 REVIEW_PASS SOURCE_COMPONENT_ONLY at7f74a75f93671973bcfe55b5cb491076c0d2bdf9: current proposal pointer/lineage binding, safe legacy fallback and proposal-less data actions, VN/EN WAIT_DATA history. Root24tests/app typecheckPASS, original byte archive/source pins verified; changed-screen UI proof NOT_RUN/FREEZE OPEN. docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md",
     "R117 bounded WAIT_DATA backend real synthetic flow independently accepted: new same-case proposal after source revision, faithful realAlibaba340/297tokens, synthetic CONFIRM persisted, one call/debit, native11top11nested+engine1PASS. Exact owned owner-authorized restart/finalstop and operational protected equality observed; original interruption/cleanupHOLD retained. Current UI/fullM2/M3/pilot/release remain OPEN. docs/reviews/R117_FINAL_INDEPENDENT_REVIEW_2026-10-18.md",
@@ -2017,7 +2017,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-127-A",
+  "activeTranche": "CCMAI-RUNTIME-128",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
@@ -2033,7 +2033,9 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [],
+  "activeWorkOrders": [
+    "docs/work_orders/CCMAI_RUNTIME_128_CASE_PARTICIPANT_NAMES.md"
+  ],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -2597,7 +2599,7 @@
     "nextGate": "Separate SPEC/work order for actual AI executor/integration or M1 business decisions",
     "actualRerun": "OPEN_EXECUTOR_NOT_INCLUDED"
   },
-  "x-activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R127_M3_BROWSER_ACTIONS_2026-10-19.md",
+  "x-activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R128_CASE_PARTICIPANT_NAMES_2026-10-19.md",
   "x-ownerRepairContinuation": "CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json",
   "x-r102Current": {
     "status": "FROZEN_LOCAL_ONLY",
@@ -3075,5 +3077,11 @@
     "providerCalls": 0,
     "firstRun": "EXIT1_RETAINED_FIXTURE_POINTER_BASELINE",
     "fullM3": "OPEN"
+  },
+  "x-r128CurrentOutcome": {
+    "status": "BUILD",
+    "review": "docs/reviews/R128_CASE_PARTICIPANT_NAMES_REVIEW_2026-10-19.md",
+    "providerCalls": 0,
+    "currentVerification": "PENDING"
   }
 }
