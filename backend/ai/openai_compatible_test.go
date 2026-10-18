@@ -7,8 +7,58 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"strings"
+	"sync/atomic"
 	"testing"
 )
+
+func TestR094AnalyzeChatOnceNeverRetriesOrRedirects(t *testing.T) {
+	var calls atomic.Int64
+	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		calls.Add(1)
+		w.Header().Set("Location", "/elsewhere")
+		w.WriteHeader(http.StatusTemporaryRedirect)
+	}))
+	defer srv.Close()
+	p := NewOpenAIProvider("synthetic", "fixture-model", 128, srv.URL)
+	if _, err := p.AnalyzeChatOnce(context.Background(), "system", "synthetic", 6000); err == nil || calls.Load() != 1 {
+		t.Fatalf("redirect err=%v calls=%d", err, calls.Load())
+	}
+	if _, err := p.AnalyzeChatOnce(context.Background(), "system", "synthetic", 1); err == nil || calls.Load() != 1 {
+		t.Fatalf("oversize err=%v calls=%d", err, calls.Load())
+	}
+	tooMany := NewOpenAIProvider("synthetic", "fixture-model", 769, srv.URL)
+	if _, err := tooMany.AnalyzeChatOnce(context.Background(), "system", "synthetic", 6000); err == nil || calls.Load() != 1 {
+		t.Fatalf("token cap err=%v calls=%d", err, calls.Load())
+	}
+	defaultTokens := NewOpenAIProvider("synthetic", "fixture-model", 0, srv.URL)
+	if _, err := defaultTokens.AnalyzeChatOnce(context.Background(), "system", "synthetic", 6000); err == nil || calls.Load() != 1 {
+		t.Fatalf("default token cap err=%v calls=%d", err, calls.Load())
+	}
+	atLimit := NewOpenAIProvider("synthetic", "fixture-model", 768, srv.URL)
+	if _, err := atLimit.AnalyzeChatOnce(context.Background(), "system", "synthetic", 6000); err == nil || calls.Load() != 2 {
+		t.Fatalf("boundary token err=%v calls=%d", err, calls.Load())
+	}
+}
+
+func TestR094AnalyzeChatOnceResponseModelBinding(t *testing.T) {
+	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprint(w, `{"model":"other-model","choices":[{"message":{"content":"{}"}}]}`)
+	}))
+	defer srv.Close()
+	p := NewOpenAIProvider("synthetic", "fixture-model", 128, srv.URL)
+	if _, err := p.AnalyzeChatOnce(context.Background(), "system", "synthetic", 6000); err == nil || !strings.Contains(err.Error(), "response_model_mismatch") {
+		t.Fatalf("model mismatch err=%v", err)
+	}
+}
+
+func TestR094AnalyzeChatOnceBoundsResponseBytes(t *testing.T) {
+	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) { fmt.Fprint(w, strings.Repeat("x", (1<<20)+1)) }))
+	defer srv.Close()
+	p := NewOpenAIProvider("synthetic", "fixture-model", 128, srv.URL)
+	if _, err := p.AnalyzeChatOnce(context.Background(), "system", "synthetic", 6000); err == nil || !strings.Contains(err.Error(), "response_invalid") {
+		t.Fatalf("large response err=%v", err)
+	}
+}
 
 func TestOpenAICompatibleGoiVaDocPhanHoi(t *testing.T) {
 	var gotBody map[string]any

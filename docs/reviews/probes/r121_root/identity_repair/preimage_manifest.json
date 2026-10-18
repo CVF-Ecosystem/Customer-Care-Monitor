@@ -1,0 +1,31 @@
+{
+  "archive": "docs/reviews/probes/r121_root/identity_repair/preimage.zip",
+  "sha256": "2a9948c545839329bf1037c5e27e2a8cbef52839c0a84f3aa0723956bf2f781d",
+  "files": [
+    {
+      "path": "backend/api/handlers/intervention_ui_r121_test.go",
+      "sha256": "9189b27519afb033a5740d5fdc477dcf9c33aca1d9618448d52009de37e294a9",
+      "bytes": 12541
+    },
+    {
+      "path": "scripts/r121_ui_supervisor.py",
+      "sha256": "686a75b1f766960a1e8d223bc8cc80b1776d09a95d4518eff0cfca9b97c9d989",
+      "bytes": 52976
+    },
+    {
+      "path": "scripts/r121_vite_config.mjs.template",
+      "sha256": "9f2b970e414a1947c9ce78b06a35cf1af5778283d3c50e2ba4edc643a03e13c3",
+      "bytes": 2678
+    },
+    {
+      "path": "scripts/tests/test_r121_ui_supervisor.py",
+      "sha256": "39a67b509d4e653f02d551d3a0d8824ecaa446c114374d3babfe9959a42bfd4b",
+      "bytes": 22194
+    },
+    {
+      "path": "docs/reviews/probes/r121_root/source_binary_admission.json",
+      "sha256": "b7de63e11b6357c3ffbfa56b2009fe4c039dcd85bd1ad655f4cb8a341f2bb7ba",
+      "bytes": 47626
+    }
+  ]
+}

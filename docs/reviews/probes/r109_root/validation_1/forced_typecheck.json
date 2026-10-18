@@ -1,0 +1,19 @@
+{
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\frontend\\node_modules\\vue-tsc\\bin\\vue-tsc.js",
+    "-b",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\frontend\\tsconfig.json",
+    "--force"
+  ],
+  "exitCode": 0,
+  "startedAtUTC": "2026-10-16T13:27:15.533789+00:00",
+  "nodeSha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+  "environmentKeys": [
+    "SystemRoot",
+    "TEMP",
+    "TMP",
+    "WINDIR"
+  ],
+  "scope": "focused cached source validation only; runtime NOT_RUN"
+}

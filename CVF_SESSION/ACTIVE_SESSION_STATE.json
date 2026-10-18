@@ -12,13 +12,13 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-093",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-093 returned with positive evidence-reference failure: exact HTTP compatibility observed, provider budget2/2 exhausted, no redispatch/reset. Next prepare one bounded M2 application packet with verified local toolchain/isolated DB setup, strict snapshot/ID/quote validation, durable physical-call admission and actual application evidence. M2/M3/pilot OPEN; Facebook/Zalo OA parked.",
+  "activeTranche": "CCMAI-RUNTIME-121",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-121 CHANGES_REQUIRED: original serve exit1/wait observed; Unicode console encoding failure before browser, terminal HOLD/FINAL_EVIDENCE_MISSING. Owned fixture/backend/Vite stopped, three listeners absent, protected9containers10networks472volumes and405sourcepins unchanged. Preserve consumed campaign/caps and raw evidence; read-only bounded follow-up decision only, no automatic retry/successor/provider. FullM2/M3/M1business/pilot/release OPEN/accounts parked/no push-merge-deploy.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root independent REVIEWER, ORCHESTRATOR and SESSION_SYNC_STEWARD; Luna max worker returned; risk R2.",
-  "updatedAt": "2026-10-13",
-  "x-resolvedCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
+  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; implementation and repair workers idle",
+  "updatedAt": "2026-10-18",
+  "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {
     "date": "2026-10-12",
     "source": "Explicit owner instruction to record roadmap correction in handoff/memory and apply without reminders",
@@ -53,42 +53,8 @@
     "progressReporting": "Product outcome and remaining acceptance, prerequisite cost and next route; source/unit distinct from native/live/deployed proof. Luna assessment supports delivery; root orchestration/reviewer faults separately attributed.",
     "executionAuthorityExpanded": false,
     "currentRoadmap": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
-    "roadmapUpdateTrigger": "Every relevant handback changing acceptance, blocker or route; read before next scope selection without reminders"
-  },
-  "x-currentExecutionBudget": {
-    "physicalProviderRequestsTotal": 2,
-    "workerRequests": 1,
-    "reviewerRequests": 1,
-    "automaticRetries": 0,
-    "timeoutSecondsPerRequest": 60,
-    "maxCompletionTokensPerRequest": 768,
-    "maxRequestBodyBytes": 6000,
-    "maxResponseBytes": 1048576,
-    "maxElapsedCampaignMinutes": 5,
-    "financialLimit": "Owner test authorization is limited by hard request/token/input/time caps; actual quota and dollar charge UNKNOWN until provider/account evidence. No replenishment, billing settings or quota-overrun continuation.",
-    "sameScopeRepairs": "Repair tooling/source before request, or after failure without another provider request; cap never reset. Stop at third formal repair round without independent root cause."
-  },
-  "x-actualWorkerModel": {
-    "model": "gpt-6-luna",
-    "reasoningEffort": "max",
-    "source": "docs/reviews/R091_R1_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md",
-    "verification": "SESSION_REPORTED_NOT_PROVIDER_VERIFIED",
-    "tokens": null,
-    "bill": null,
-    "usageReason": "Numeric usage/billing not exposed to the worker"
-  },
-  "x-ownerSubagentPreference": {
-    "model": "gpt-6-luna",
-    "reasoningEffort": "max",
-    "workflow": "Authorized internal worker; Root independent reviewer",
-    "source": "2026-10-13 current operator instruction"
-  },
-  "x-candidatePlanning": {
-    "id": "R087",
-    "status": "REVIEW_PASS",
-    "artifact": "docs/work_orders/CCMAI_RUNTIME_087.md",
-    "sourceImplementation": "NOT_APPLICABLE_DOCUMENTARY_ONLY",
-    "sourceOrRuntimeDispatched": false
+    "roadmapUpdateTrigger": "Every relevant handback changing acceptance, blocker or route; read before next scope selection without reminders",
+    "renewedOwnerDirectiveDate": "2026-10-15"
   },
   "x-historicalR067State": {
     "schemaVersion": "1.0",
@@ -318,7 +284,6 @@
     "modelAssessment": "docs/reviews/R067_LUNA_XHIGH_VS_SOL_MEDIUM_ASSESSMENT_2026-10-09.md",
     "publishedClosureCommit": "20d6a66658f93b2a44bb0c0a335648f94ce9d3d3"
   },
-  "roleRoute": "INTERNAL_LUNA_WORKER_LOCAL_INDEPENDENT_REVIEW",
   "x-pendingValidationProposal": {
     "status": "NO_APPLICATION_NATIVE_AUTHORITY",
     "workerPermittedNative": 0,
@@ -421,7 +386,6 @@
     }
   },
   "x-lunaQualityTracker": "docs/reviews/LUNA_TRANCHE_QUALITY_TRACKER_2026-10-10.json",
-  "x-currentPermittedGoInvocations": 0,
   "x-historicalR068Publication": {
     "status": "UNVERIFIED_CREDENTIAL_MANAGER_WAIT_TERMINATED",
     "receipt": "docs/reviews/probes/r068_branch_publication_disposition_2026-10-10.json",
@@ -827,13 +791,6 @@
     "status": "NOT_AUTHORIZED_IN_R077"
   },
   "x-nextScopeProposal": null,
-  "x-currentReview": {
-    "result": "REVIEWER_ACCEPTED_CLOSED_PASS_BOUNDED",
-    "review": "docs/reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
-    "A_review": "docs/reviews/R090_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
-    "freeze": "OPEN",
-    "actualCBuildCommit": "d121c9ecf24a869aea92264db1e01cd853dec0ec"
-  },
   "x-historicalR081Continuity": {
     "currentMode": "REVIEW",
     "activePhase": "REVIEW",
@@ -911,23 +868,6 @@
       "gateUnits": "46PASS30.790s_reused_unchanged_scripts_tests",
       "hostedCiObserved": false
     }
-  },
-  "x-currentRepair": {
-    "trancheId": "CCMAI-RUNTIME-091",
-    "reviewRound": 2,
-    "repairRounds": 1,
-    "status": "REVIEWER_ACCEPTED",
-    "redispatchAllowed": false
-  },
-  "x-currentClosure": {
-    "status": "ALL_SEVEN_CLOSED_PASS_BOUNDED_EXPORTED",
-    "acceptedFindingCount": 7,
-    "roadmap": "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md",
-    "C_materialCommit": "d121c9ecf24a869aea92264db1e01cd853dec0ec",
-    "A_materialCommit": "44bb345d0d0efb5e6a01b2f23e975e17a65f5d02",
-    "F06_materialCommit": "a8865d15296ce1a82ae368363d8f7de29392cdd0",
-    "productFreeze": "OPEN",
-    "publicationReceipt": "docs/reviews/probes/r091_local_review/publication.json"
   },
   "x-historicalR083Continuity": {
     "currentMode": "REVIEW",
@@ -1039,8 +979,6 @@
       "automaticRetries": 0
     }
   },
-  "x-preEffectApproval": "NOT_GRANTED_SOURCE_ONLY",
-  "x-reviewerCampaignApproval": "NOT_GRANTED_SOURCE_ONLY",
   "x-historicalR085Continuity": {
     "currentMode": "REVIEW",
     "activePhase": "REVIEW",
@@ -1295,13 +1233,6 @@
       "backend per-case/SKIP receipts"
     ]
   },
-  "x-currentWorkerDispatch": {
-    "worker": "/root/outbound_intake",
-    "model": "gpt-6-luna",
-    "effort": "max",
-    "status": "RETURNED_ACCEPTED_IDLE",
-    "seed": "5441a18116e4b897549750cd7317ffdb8ae9e74b"
-  },
   "x-historicalPreR091FinalClosureProjections": {
     "x-currentReview": {
       "result": "R091_R1_WORKER_RETURN_PENDING_INDEPENDENT_REVIEW",
@@ -1402,21 +1333,6 @@
     "x-publicationStatus": "R088_UNACCEPTED_UNCOMMITTED_NO_PUSH",
     "x-publicationReceipt": null
   },
-  "x-productDeliveryPlanning": {
-    "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
-    "planId": "CCMAI-PRODUCT-DELIVERY-20261013",
-    "status": "ACTIVE_PLANNING",
-    "sourceBaseline": "49160128df5109ed46054babb6942457a3ed85a9",
-    "currentMilestone": "M1",
-    "milestoneStatus": "NOT_ACCEPTED_CONTRACT_DECISIONS_OPEN",
-    "nextAction": "Prepare M1 contract/decision register and finite prerequisite route; no M2 dispatch from roadmap alone.",
-    "authority": "Owner requested detailed roadmap authoring; R1 documents and continuity only.",
-    "executionAuthorityExpanded": false,
-    "publication": "EXPORTED_MATERIAL_REMOTE_SHA_VERIFIED",
-    "updatedAt": "2026-10-13",
-    "materialCommit": "d72de76984e4aad9c208cc82e6093578797b5340",
-    "publicationReceipt": "docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json"
-  },
   "x-historicalPreR092CurrentAuthority": {
     "activeTranche": "CCMAI-RUNTIME-091",
     "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_OUTBOUND_R091_2026-10-13.md",
@@ -1448,5 +1364,969 @@
       "realDataRuns": 0,
       "verification": "Targeted source/accepted evidence read, document links/diff, catalog, legacy gate unit tests, seven-gate preflight and installed explicit-packet checks; root independent source contract review."
     }
+  },
+  "x-historicalPreR094CurrentProjection": {
+    "currentMode": "REVIEW",
+    "activePhase": "REVIEW",
+    "activeTranche": "CCMAI-RUNTIME-093",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md",
+    "nextAllowedMove": "CCMAI-RUNTIME-093 returned with positive evidence-reference failure: exact HTTP compatibility observed, provider budget2/2 exhausted, no redispatch/reset. Next prepare one bounded M2 application packet with verified local toolchain/isolated DB setup, strict snapshot/ID/quote validation, durable physical-call admission and actual application evidence. M2/M3/pilot OPEN; Facebook/Zalo OA parked.",
+    "activeRole": "Codex /root independent REVIEWER, ORCHESTRATOR and SESSION_SYNC_STEWARD; Luna max worker returned; risk R2.",
+    "roleRoute": "INTERNAL_LUNA_WORKER_LOCAL_INDEPENDENT_REVIEW",
+    "x-currentWorkerDispatch": {
+      "worker": "/root/outbound_intake",
+      "model": "gpt-6-luna",
+      "effort": "max",
+      "status": "RETURNED_ACCEPTED_IDLE",
+      "seed": "5441a18116e4b897549750cd7317ffdb8ae9e74b"
+    },
+    "x-currentExecutionBudget": {
+      "physicalProviderRequestsTotal": 2,
+      "workerRequests": 1,
+      "reviewerRequests": 1,
+      "automaticRetries": 0,
+      "timeoutSecondsPerRequest": 60,
+      "maxCompletionTokensPerRequest": 768,
+      "maxRequestBodyBytes": 6000,
+      "maxResponseBytes": 1048576,
+      "maxElapsedCampaignMinutes": 5,
+      "financialLimit": "Owner test authorization is limited by hard request/token/input/time caps; actual quota and dollar charge UNKNOWN until provider/account evidence. No replenishment, billing settings or quota-overrun continuation.",
+      "sameScopeRepairs": "Repair tooling/source before request, or after failure without another provider request; cap never reset. Stop at third formal repair round without independent root cause."
+    },
+    "x-candidatePlanning": {
+      "id": "R087",
+      "status": "REVIEW_PASS",
+      "artifact": "docs/work_orders/CCMAI_RUNTIME_087.md",
+      "sourceImplementation": "NOT_APPLICABLE_DOCUMENTARY_ONLY",
+      "sourceOrRuntimeDispatched": false
+    },
+    "x-currentReview": {
+      "result": "REVIEWER_ACCEPTED_CLOSED_PASS_BOUNDED",
+      "review": "docs/reviews/R091_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
+      "A_review": "docs/reviews/R090_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md",
+      "freeze": "OPEN",
+      "actualCBuildCommit": "d121c9ecf24a869aea92264db1e01cd853dec0ec"
+    },
+    "x-currentRepair": {
+      "trancheId": "CCMAI-RUNTIME-091",
+      "reviewRound": 2,
+      "repairRounds": 1,
+      "status": "REVIEWER_ACCEPTED",
+      "redispatchAllowed": false
+    },
+    "x-currentClosure": {
+      "status": "ALL_SEVEN_CLOSED_PASS_BOUNDED_EXPORTED",
+      "acceptedFindingCount": 7,
+      "roadmap": "docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md",
+      "C_materialCommit": "d121c9ecf24a869aea92264db1e01cd853dec0ec",
+      "A_materialCommit": "44bb345d0d0efb5e6a01b2f23e975e17a65f5d02",
+      "F06_materialCommit": "a8865d15296ce1a82ae368363d8f7de29392cdd0",
+      "productFreeze": "OPEN",
+      "publicationReceipt": "docs/reviews/probes/r091_local_review/publication.json"
+    },
+    "x-productDeliveryPlanning": {
+      "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+      "planId": "CCMAI-PRODUCT-DELIVERY-20261013",
+      "status": "ACTIVE_PLANNING",
+      "sourceBaseline": "49160128df5109ed46054babb6942457a3ed85a9",
+      "currentMilestone": "M1",
+      "milestoneStatus": "NOT_ACCEPTED_CONTRACT_DECISIONS_OPEN",
+      "nextAction": "Prepare M1 contract/decision register and finite prerequisite route; no M2 dispatch from roadmap alone.",
+      "authority": "Owner requested detailed roadmap authoring; R1 documents and continuity only.",
+      "executionAuthorityExpanded": false,
+      "publication": "EXPORTED_MATERIAL_REMOTE_SHA_VERIFIED",
+      "updatedAt": "2026-10-13",
+      "materialCommit": "d72de76984e4aad9c208cc82e6093578797b5340",
+      "publicationReceipt": "docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json"
+    },
+    "x-actualWorkerModel": {
+      "model": "gpt-6-luna",
+      "reasoningEffort": "max",
+      "source": "docs/reviews/R091_R1_OUTBOUND_DELIVERY_WORKER_RETURN_2026-10-13.md",
+      "verification": "SESSION_REPORTED_NOT_PROVIDER_VERIFIED",
+      "tokens": null,
+      "bill": null,
+      "usageReason": "Numeric usage/billing not exposed to the worker"
+    },
+    "x-ownerSubagentPreference": {
+      "model": "gpt-6-luna",
+      "reasoningEffort": "max",
+      "workflow": "Authorized internal worker; Root independent reviewer",
+      "source": "2026-10-13 current operator instruction"
+    }
+  },
+  "x-historicalPreR095CurrentProjection": {
+    "currentMode": "FREEZE",
+    "activePhase": "FREEZE",
+    "activeTranche": "CCMAI-RUNTIME-094",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_INTERVENTION_R094_2026-10-14.md",
+    "nextAllowedMove": "CCMAI-RUNTIME-094 FROZEN bounded source/local at564ed59; Root presents source-bound R095 live M2 approval packet for max2 NEW Alibaba application requests on synthetic data before any provider/secret effect. R094 Go10/10 and R093 provider2/2 exhausted unchanged; installed service disabled, full M2/M3/pilot OPEN, accounts parked.",
+    "activeRole": "Codex /root CLOSER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD after independent R2 REVIEW; Sol Medium implementation/repair returned accepted, Luna Max intake complete.",
+    "x-currentWorkerDispatch": {
+      "worker": "/root/m2_worker",
+      "model": "gpt-6-sol",
+      "effort": "medium",
+      "status": "RETURNED_ACCEPTED_IDLE",
+      "seed": "0e0663559c38279531f070afe231756f79b79422"
+    },
+    "x-currentExecutionBudget": {
+      "physicalProviderRequestsTotal": 0,
+      "automaticRetries": 0,
+      "goInvocationsTotal": 10,
+      "workerGoInvocations": 6,
+      "reviewerGoInvocations": 4,
+      "ownedDisposableMySQLFixturesTotal": 2,
+      "fixturesPerRole": 1,
+      "fixtureImage": "mysql:8.0 cached only; --pull never; no existing services or volumes",
+      "loopbackOnly": true,
+      "maxWorkerMinutes": 60,
+      "sameScopeRepairs": "Up to two consolidated source repair rounds inside unchanged scope/counters; third round without independent new root cause stops REVIEW_COST_ESCALATION_REQUIRED. No replacement live authority or budget reset.",
+      "cost": "Zero external provider calls. Local request ledger implementation is a physical-call cap, not dollar or vendor billing proof.",
+      "workerGoUsed": 6,
+      "reviewerGoUsed": 4,
+      "remainingGo": 0,
+      "actualProviderRequests": 0
+    },
+    "x-currentReview": {
+      "result": "REVIEW_PASS_BOUNDED_SOURCE_LOCAL",
+      "review": "docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md",
+      "materialCommit": "564ed593bfdc67d3daa9339ea05781e49bbf84ba",
+      "fullM2": "OPEN"
+    },
+    "x-currentRepair": {
+      "status": "REPAIR1_REVIEWED_PASS",
+      "round": 1,
+      "workerGoRemaining": 0,
+      "rootGoRemaining": 0
+    },
+    "x-currentClosure": {
+      "status": "FROZEN_BOUNDED_SOURCE_LOCAL",
+      "materialCommit": "564ed593bfdc67d3daa9339ea05781e49bbf84ba",
+      "fullM2": "OPEN",
+      "live": "NOT_RUN",
+      "approvalPacket": "docs/reviews/planning/R095_LIVE_M2_APPROVAL_PACKET_2026-10-14.md",
+      "providerApproval": "NOT_GRANTED"
+    }
+  },
+  "x-historicalPreR096CurrentProjection": {
+    "currentMode": "REVIEW",
+    "activePhase": "REVIEW",
+    "activeTranche": "CCMAI-RUNTIME-095",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R095_2026-10-14.md",
+    "nextAllowedMove": "CCMAI-RUNTIME-095 BLOCKED before provider: workerclaim permanently consumed,SECRET_SCHEMA_MISMATCH,actualHTTP0,sharedfixture cleaned,R094 source unchanged. Root prepares R096 bounded continuation under same owner max2 NEW physical calls with cross-tranche parentledger; oldR095/R093 markers and budgets neverreset. M2/M3/pilot OPEN,accounts parked.",
+    "activeRole": "Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker stopped after R095 pre-provider failure, read-only R096 design.",
+    "x-currentWorkerDispatch": {
+      "worker": "/root/m2_worker",
+      "model": "gpt-6-sol",
+      "effort": "medium",
+      "status": "SIGNED_FIXTURE_READY",
+      "seed": "5f8170dcab6bc8fec0a8e06dee59c0de71d0ed62"
+    },
+    "x-currentExecutionBudget": {
+      "physicalProviderRequestsTotal": 2,
+      "workerProviderRequests": 1,
+      "reviewerProviderRequests": 1,
+      "automaticRetries": 0,
+      "redirects": 0,
+      "fallbacks": 0,
+      "model": "qwen3.7-flash",
+      "region": "ap-southeast-1",
+      "endpointSha256": "b22a15b6e8aa4113c2816acae6935a84d052a2d7b81db734ccdc4f5be81b4f8f",
+      "requestedCompletionTokens": 758,
+      "ownerOutputCeiling": 768,
+      "requestBytesMax": 6000,
+      "responseBytesMax": 1048576,
+      "requestTimeoutSeconds": 60,
+      "campaignSecondsMax": 300,
+      "goInvocationsTotal": 8,
+      "workerGoInvocations": 5,
+      "reviewerGoInvocations": 3,
+      "includesCompiledTestBinaryLaunches": true,
+      "ownedDisposableMySQLFixturesTotal": 1,
+      "fixtureImage": "cached mysql:8.0 --pull never",
+      "sharedFixture": true,
+      "loopbackOnly": true,
+      "sameScopeRepairs": "max2 consolidated repairs within unchanged counters; third without independent cause stops REVIEW_COST_ESCALATION_REQUIRED",
+      "secretSource": "CVF_SESSION/LOCAL_PROVIDER_SECRETS.json gitignored untracked; reviewed metadata only; credential stdin to hash-pinned binary, never argv/env/persistent copies",
+      "cost": "Actual vendor dollar charge UNKNOWN; failed/timeout/unknown effect permanently consumes slot; observed completion>768 blocks reviewer effect."
+    },
+    "x-currentReview": {
+      "result": "BLOCKED_PRE_PROVIDER_CONFIG_SCHEMA",
+      "sourceAdmission": "OLD_SOURCE_SIGNED",
+      "providerCalls": 0,
+      "artifact": "docs/reviews/R095_PRE_PROVIDER_FAILURE_DISPOSITION_2026-10-14.md"
+    },
+    "x-currentRepair": {
+      "round": 1,
+      "status": "SOURCE_ACCEPTED",
+      "findings": [
+        "F1",
+        "F2",
+        "F3"
+      ]
+    },
+    "x-currentClosure": {
+      "status": "NOT_CLOSED",
+      "reason": "live acceptance notexecuted"
+    }
+  },
+  "x-historicalPreR099AuxiliaryProjection": {
+    "x-currentClosure": {
+      "status": "FROZEN",
+      "scope": "LOCAL_TLS_TOOLING_ONLY",
+      "fullM2": "OPEN",
+      "nextApprovalPacket": "docs/reviews/planning/R098_CORRECTED_TLS_LIVE_APPROVAL_PACKET_2026-10-14.md",
+      "providerApproval": "NOT_GRANTED"
+    },
+    "x-currentRepair": {
+      "status": "RETURNED_ASSERTION_NOT_RUN",
+      "round": 1
+    }
+  },
+  "x-historicalDeliveryPlanningBeforeR099RoadmapAudit": {
+    "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "planId": "CCMAI-PRODUCT-DELIVERY-20261013",
+    "status": "M2_SOURCE_LOCAL_ACCEPTED_FULL_M2_OPEN",
+    "sourceBaseline": "49160128df5109ed46054babb6942457a3ed85a9",
+    "currentMilestone": "M2",
+    "milestoneStatus": "BOUNDED_LIVE_HARNESS_BUILD",
+    "nextAction": "R096 same-owner aggregate max2 NEW Alibaba synthetic M2 application calls: Sol Medium builds bounded harness/offline evidence; Root independently source-signs exact source and binary before key read or live dispatch. Worker1/reviewer1,758 requested tokens,60sec each,no retry; existing app/DB untouched,R0932/2 exhausted,R094 frozen,M2/M3/pilot OPEN,accounts parked.",
+    "authority": "R096 new committed seed; owner explicit max2 new calls; source signature required before credentials/effect",
+    "executionAuthorityExpanded": false,
+    "publication": "EXPORTED_MATERIAL_REMOTE_SHA_VERIFIED",
+    "updatedAt": "2026-10-14",
+    "materialCommit": "d72de76984e4aad9c208cc82e6093578797b5340",
+    "publicationReceipt": "docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json"
+  },
+  "x-roadmapAudit": {
+    "date": "2026-10-15",
+    "evidence": "docs/reviews/R099_ROADMAP_CONTINUITY_AUDIT_2026-10-15.md",
+    "currentMilestone": "M2",
+    "currentRuntime": "NOT_RUN",
+    "executionAuthorityExpanded": false
+  },
+  "x-historicalR099CurrentBeforeR100": {
+    "currentMode": "REVIEW",
+    "activePhase": "REVIEW",
+    "activeTranche": "CCMAI-RUNTIME-099",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_RESPONSE_REPAIR_R099_2026-10-14.md",
+    "nextAllowedMove": "CCMAI-RUNTIME-099 REVIEW_PASS SOURCE_COMPILE_ONLY at0640431, proof302e873, FREEZE/current runtime NOT_RUN and fullM2 OPEN. Root presents docs/reviews/planning/R100_NONTHINKING_M2_LIVE_APPROVAL_PACKET_2026-10-14.md for fresh max2 synthetic Alibaba calls with thinkingfalse; call2 onlyaftervalidproposal/faithfulusage, failurestops. No newAPI/key/fixture before ownergrant/seed/signature. R0982/2/Go4/4 andR099Go1/1 exhausted unchanged, M3/pilot OPEN, Facebook/ZaloOA parked.",
+    "activeRole": "Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; Sol Medium source worker returned accepted idle, no replay.",
+    "x-currentExecutionBudget": {
+      "physicalProviderRequestsTotal": 0,
+      "providerSecretReads": 0,
+      "DBFixtureOperations": 0,
+      "goInvocationsTotal": 1,
+      "workerGoInvocations": 1,
+      "reviewerGoInvocations": 0,
+      "buildCommand": "go -C backend build ./ai ./engine ./api/handlers",
+      "goproxy": "off",
+      "gosumdb": "off",
+      "runtimeTests": 0,
+      "sameScopeRepairs": "max2 consolidated SOURCE precompile repairs withinunchangedbudget, source review before one compile; no newcompile/replay on failure; third withoutindependentcause stops cost escalation",
+      "actualUsed": {
+        "workerGo": 1,
+        "reviewerGo": 0,
+        "providerCalls": 0,
+        "runtimeTests": 0,
+        "DBFixtureOperations": 0
+      }
+    },
+    "x-productDeliveryPlanning": {
+      "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+      "planId": "CCMAI-PRODUCT-DELIVERY-20261013",
+      "status": "M2_SOURCE_COMPILE_ACCEPTED_CURRENT_RUNTIME_NOT_RUN",
+      "sourceBaseline": "0640431dc3c31b3b8403d775ae50a6bc6dfdf601",
+      "currentMilestone": "M2",
+      "milestoneStatus": "FULL_M2_NOT_ACCEPTED",
+      "nextAction": "CCMAI-RUNTIME-099 REVIEW_PASS SOURCE_COMPILE_ONLY at0640431, proof302e873, FREEZE/current runtime NOT_RUN and fullM2 OPEN. Root presents docs/reviews/planning/R100_NONTHINKING_M2_LIVE_APPROVAL_PACKET_2026-10-14.md for fresh max2 synthetic Alibaba calls with thinkingfalse; call2 onlyaftervalidproposal/faithfulusage, failurestops. No newAPI/key/fixture before ownergrant/seed/signature. R0982/2/Go4/4 andR099Go1/1 exhausted unchanged, M3/pilot OPEN, Facebook/ZaloOA parked.",
+      "authority": "R099 source-only seed unchanged; one compile spent. R100 proposed only, fresh owner provider/credential/fixture authority not granted.",
+      "executionAuthorityExpanded": false,
+      "publication": "CURRENT_ROADMAP_AUDIT_LOCAL_ONLY_NOT_PUSHED",
+      "updatedAt": "2026-10-15",
+      "reviewEvidence": "docs/reviews/R099_ROADMAP_CONTINUITY_AUDIT_2026-10-15.md",
+      "currentRuntimeEvidence": "NOT_RUN",
+      "m1BusinessPilotAcceptance": "OPEN",
+      "m3HumanWorkflowAcceptance": "OPEN",
+      "futureLivePacket": "docs/reviews/planning/R100_NONTHINKING_M2_LIVE_APPROVAL_PACKET_2026-10-14.md",
+      "providerBudget": "R098 2/2 spent; R100 NONE_PENDING_NEW_OWNER_GRANT"
+    },
+    "x-currentClosure": {
+      "status": "SOURCE_CANDIDATE_ACCEPTED_FREEZE_OPEN",
+      "scope": "R099_SOURCE_COMPILE_ONLY",
+      "fullM2": "OPEN",
+      "nextApprovalPacket": "docs/reviews/planning/R100_NONTHINKING_M2_LIVE_APPROVAL_PACKET_2026-10-14.md",
+      "providerApproval": "NOT_GRANTED"
+    },
+    "x-currentRepair": {
+      "round": 1,
+      "status": "SOURCE_DRAFT_CORRECTIONS_ACCEPTED",
+      "scope": "R099_F1_F2_PRECOMPILE_ONLY",
+      "runtime": "NOT_RUN"
+    }
+  },
+  "x-historicalPreR101CurrentProjection": {
+    "x-currentExecutionBudget": {
+      "physicalProviderRequestsTotal": 4,
+      "workerProviderRequestsMax": 4,
+      "reviewerProviderRequests": 0,
+      "stopOnFirstValidProposalWithFaithfulKnownUsage": true,
+      "automaticRetries": 0,
+      "redirects": 0,
+      "fallbacks": 0,
+      "model": "qwen3.7-flash",
+      "region": "ap-southeast-1",
+      "enableThinking": false,
+      "endpointSha256": "b22a15b6e8aa4113c2816acae6935a84d052a2d7b81db734ccdc4f5be81b4f8f",
+      "requestedCompletionTokens": 758,
+      "ownerOutputCeiling": 768,
+      "requestBytesMax": 6000,
+      "responseBytesMax": 1048576,
+      "requestTimeoutSeconds": 60,
+      "campaignSecondsMax": 300,
+      "goInvocationsTotal": 4,
+      "workerGoInvocations": 3,
+      "reviewerGoInvocations": 0,
+      "unspentReserveGoInvocations": 1,
+      "includesCompiledTestBinaryLaunches": true,
+      "plannedGoRoute": [
+        "oneofflinecompile",
+        "oneseedbinary",
+        "oneworker_livebinary_untilresult"
+      ],
+      "ownedDisposableMySQLFixturesTotal": 1,
+      "fixtureImage": "cached mysql:8.0 --pull never",
+      "loopbackOnly": true,
+      "sameScopeRepairs": "max2 consolidatedprecompile source repairs; onecompile no recompile/runtime replay afterfailure; thirdwithoutnewcause cost escalation",
+      "secretSource": "CVF_SESSION/LOCAL_PROVIDER_SECRETS.json ignored/untracked; onlyafterRootsignature memory/stdin; neverargv/env/log/copy",
+      "freshOwnerGrantId": "CCMAI-RUNTIME-100-OWNER-NEW4-20261015",
+      "parentPhysicalLedger": ".cvf/runtime/owner_alibaba_r100_new4_20261015",
+      "freshGrantCap": 4,
+      "historicalR098Calls": 2,
+      "cost": "Actual dollarbillingUNKNOWN; everyfailure/timeout/unknown consumedpermanently; no refund",
+      "compiledTLSDependency": {
+        "path": "backend/api/handlers/intervention_live_r096_test.go",
+        "sha256": "3d2340131829f7afcb54d81be7d903c29fc8b36f160d065a05cd338a5df50dad",
+        "constructor": "r096IsolatedTransport() directunchanged reuse"
+      },
+      "currentProductSourceCommit": "0640431dc3c31b3b8403d775ae50a6bc6dfdf601",
+      "perAttemptContinuation": "Only semantic OUTPUT_INVALID with exactknownmatching wire/DBmetadata maycontinue, afterRootexclusive token boundpriorreceiptSHA,nextslot/case,sourcebinarymanifest anddeadline; worker cannot approve; no outputtuning",
+      "actualUsed": {
+        "providerCalls": 1,
+        "goInvocations": 3,
+        "workerGo": 3,
+        "reviewerGo": 0
+      },
+      "stopReason": "FIRST_VALID_RESULT_NO_MORE_EFFECTS",
+      "remainingCallsDisposition": "3_UNUSED_NOT_ADMITTED_AFTER_FIRST_VALID_STOP"
+    },
+    "x-actualWorkerModel": {
+      "model": "gpt-6-sol",
+      "effort": "medium",
+      "reason": "User-authorized fallback for difficult atomic/concurrent admission and evidence validation; Luna read-only intake complete."
+    },
+    "x-ownerSubagentPreference": {
+      "date": "2026-10-14",
+      "primary": "gpt-6-luna/max",
+      "fallback": "gpt-6-sol/medium",
+      "root": "orchestrator/reviewer",
+      "actualSelection": "Sol Medium for M2 difficulty"
+    },
+    "x-candidatePlanning": {
+      "id": "CCMAI-RUNTIME-100",
+      "status": "FROZEN",
+      "artifact": "docs/work_orders/CCMAI_RUNTIME_100_M2_INTERVENTION_LIVE.md"
+    },
+    "roleRoute": "INTERNAL_SOL_WORKER_LOCAL_INDEPENDENT_REVIEW",
+    "x-currentPermittedGoInvocations": 7,
+    "x-currentReview": {
+      "result": "REVIEW_PASS",
+      "artifact": "docs/reviews/R099_FINAL_INDEPENDENT_SOURCE_COMPILE_REVIEW_2026-10-14.md",
+      "scope": "SOURCE_ONLY_NOT_CURRENT_RUNTIME_PROOF",
+      "materialProof": "302e873"
+    },
+    "x-currentRepair": {
+      "status": "SETTLED_PRECOMPILE_ROUND1",
+      "runtimeSourceRepairs": 0,
+      "originalFindings": "docs/reviews/R100_PRECOMPILE_CONSOLIDATED_FINDINGS_2026-10-15.md"
+    },
+    "x-currentClosure": {
+      "status": "FROZEN",
+      "scope": "BOUNDED_REAL_SYNTHETIC_M2_ONLY",
+      "review": "docs/reviews/R100_FINAL_INDEPENDENT_LIVE_REVIEW_2026-10-15.md",
+      "cleanup": "docs/reviews/probes/r100_root/cleanup_receipt.json",
+      "fullM2": "OPEN"
+    },
+    "x-preEffectApproval": "NOT_GRANTED_SOURCE_ONLY",
+    "x-reviewerCampaignApproval": "NOT_GRANTED_SOURCE_ONLY",
+    "x-currentWorkerDispatch": {
+      "worker": "/root/m2_worker",
+      "model": "gpt-6-sol",
+      "effort": "medium",
+      "status": "REVIEW_PASS",
+      "seed": "e9b4cefc9ca09cc4c72210ac39d436349e0cccab"
+    },
+    "x-productDeliveryPlanning": {
+      "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+      "planId": "CCMAI-PRODUCT-DELIVERY-20261013",
+      "status": "M2_BOUNDED_REAL_PROPOSAL_ACCEPTED_M3_PLANNING_NEXT",
+      "sourceBaseline": "0640431dc3c31b3b8403d775ae50a6bc6dfdf601",
+      "currentMilestone": "M2",
+      "milestoneStatus": "BOUNDED_REAL_PATH_ACCEPTED_FULL_M2_OPEN",
+      "nextAction": "CCMAI-RUNTIME-100 FROZEN boundedreal syntheticM2 atsourcea5eb32d: firstcallvalidproposal+faithfulusage360/261, API1/4 Go3/4, ownedfixtureclean/protectedunchanged. No moreR100calls; unusedslots2-4 stayunused, oldbudgetsunchanged. ORCHESTRATOR next prepares finite M3 humanreview/correction/assignment/deadline/outcome SPEC/workorder andbrowser/backend evidence; M1businessparallel, fullM2/M3/pilot/releaseOPEN, Facebook/ZaloOAparked. No installedactivation/push/merge/deploy.",
+      "authority": "Owner2026-10-15 max4 untilvalidresult; immutableR100 seedb33d1fe83be35aa0e20d18590a5462e7f0ecd6fd; source/binarysignature stillmandatory beforeeffects",
+      "executionAuthorityExpanded": false,
+      "publication": "LOCAL_ONLY_NOT_PUSHED",
+      "updatedAt": "2026-10-15",
+      "reviewEvidence": "docs/reviews/R100_FINAL_INDEPENDENT_LIVE_REVIEW_2026-10-15.md",
+      "currentRuntimeEvidence": "ONE_REAL_COMPLAINT_PROPOSAL_AND_FAITHFUL_USAGE_ACCEPTED",
+      "m1BusinessPilotAcceptance": "OPEN",
+      "m3HumanWorkflowAcceptance": "OPEN",
+      "futureLivePacket": "docs/reviews/planning/R100_NONTHINKING_M2_LIVE_APPROVAL_PACKET_2026-10-14.md",
+      "providerBudget": "R1001/4 used; stoppedfirstvalid; 3unused/no furtherR100effect; oldcaps unchanged"
+    },
+    "x-ownerPhysicalProviderAllowance": {
+      "total": 2,
+      "usedKnown": 2,
+      "freshOwnerGrantId": "CCMAI-RUNTIME-098-OWNER-NEW2-20261014",
+      "parentLedger": ".cvf/runtime/owner_alibaba_r098_new2_20261014",
+      "historicalR096": "2/2 exhausted unchanged",
+      "status": "EXHAUSTED_R098_NOT_AUTHORITY_FOR_R099",
+      "activeProviderCallsAuthorized": 0
+    },
+    "x-r100SourceAdmission": "docs/reviews/R100_PRECOMPILE_INDEPENDENT_SOURCE_ADMISSION_2026-10-15.md"
+  },
+  "x-currentExecutionBudget": {
+    "providerCalls": 0,
+    "mockCalls": 0,
+    "goCompiles": 0,
+    "newFixtures": 0,
+    "driverInstallCampaigns": 1,
+    "requiredChromiumInstallCampaigns": 1,
+    "rootLocalCapabilityCampaigns": 1,
+    "conditionalR101BackendLaunches": 1,
+    "conditionalViteLaunches": 1,
+    "repairs": "Consolidate source/script findings; stop after third same-root repair cost escalation unless owner later changes it. Preserve every failure/actual request/process ledger.",
+    "actualUsed": {
+      "driverInstalls": 1,
+      "browserInstalls": 1,
+      "rootHealthCampaigns": 1,
+      "npmRequests": 2,
+      "npmBytes": 1989716,
+      "browserArtifactAttemptsObserved": 2,
+      "browserArchiveBytesReported": 290468407,
+      "browserRedirects": "NOT_OBSERVED",
+      "browserWireTotalBytes": "NOT_OBSERVED",
+      "providerCalls": 0,
+      "mockCalls": 0,
+      "goCompiles": 0,
+      "newFixtures": 0,
+      "backendLaunches": 0,
+      "viteLaunches": 0
+    }
+  },
+  "x-currentWorkerDispatch": {
+    "worker": "/root/r102_worker",
+    "model": "gpt-6-sol",
+    "effort": "medium",
+    "status": "DISPATCH_READY_SOURCE_ONLY",
+    "seedCommit": "c199f13d01bdae7c4ad2b12e8528e0f4bce412e3"
+  },
+  "x-actualWorkerModel": "/root/r102_worker gpt-6-sol medium; transactional complexity",
+  "x-ownerSubagentPreference": {
+    "date": "2026-10-15",
+    "primary": "gpt-6-luna/max",
+    "fallback": "gpt-6-sol/medium",
+    "root": "orchestrator/reviewer",
+    "actualSelection": "Sol Medium for M3 transactional difficulty; Luna Max read-only inventory"
+  },
+  "x-currentPermittedGoInvocations": "R1020 before independent source admission; seed cap8 only after admission",
+  "x-preEffectApproval": "CLOSED_NO_FURTHER_INSTALL_OR_RUNTIME",
+  "x-currentReview": {
+    "result": "REVIEW_PASS_FROZEN_TOOLING_ONLY",
+    "evidence": "docs/reviews/R103_INDEPENDENT_TOOLING_REVIEW_2026-10-16.md"
+  },
+  "x-currentClosure": {
+    "status": "OPEN",
+    "actualRerun": "OPEN",
+    "R101": "REVIEW_OPEN",
+    "M3": "OPEN",
+    "pilot": "OPEN"
+  },
+  "x-productDeliveryPlanning": {
+    "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "currentMilestone": "M3",
+    "milestoneStatus": "R103_TOOLING_FROZEN_R101_UI_BRIDGE_OPEN",
+    "nextAction": "CCMAI-RUNTIME-103 FROZEN tooling recovery only at7efc308: official driver1.57 + Chromium/headless1200 installed; Root335package/610oldcache hashes and real local launch/click/PNG PASS. Install campaigns driver1/browser1, reported bodies292458123bytes, browser redirect/wire counts unknown, no retries observed. Codex managed IAB unavailable/nativepipe unavailable; Antigravity integrated tool NOT_OBSERVED; R101UI B01-B10 NOT_RUN, server/fixture0. Next external Claude/Antigravity session checks blank capture using restored cache, then separately bounded source-bound R101 UI; independent M3-05 executor SPEC remains available. R101/R102 old acceptance/baselines unchanged; no more install/runtime authority from closure, provider/mock0/no appsource/secret/userapprestart/newfixture/globalconfig/push/deploy. Facebook/ZaloOA parked.",
+    "providerBudget": "R101 zero; R100 stopped/no further effects",
+    "m1BusinessPilotAcceptance": "OPEN",
+    "publication": "LOCAL_ONLY_NOT_PUSHED"
+  },
+  "roleRoute": "ROOT_ORCHESTRATOR_TO_EXTERNAL_REVIEW_EVIDENCE_OPERATOR_TO_INDEPENDENT_ROOT_REVIEW",
+  "x-waitDataBackendPlanning": {
+    "candidateTranche": "CCMAI-RUNTIME-102",
+    "roadmapIds": [
+      "M3-05",
+      "M2-02"
+    ],
+    "planningPhase": "FREEZE",
+    "status": "FROZEN_LOCAL_BACKEND_ONLY",
+    "spec": "docs/specs/M3_WAITDATA_BACKEND_R102_SPEC_2026-10-15.md",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_102_WAITDATA_BACKEND.md",
+    "implementation": "SOURCE_LOCAL_ACCEPTED",
+    "runtime": "20_NATIVE_7_NESTED_PASS_ENGINE2_PASS_NO_SKIP",
+    "providerAuthority": "NONE",
+    "sourceBaseline": "200df3e4a7bc2a326425922a5230508a4fd9b0fe",
+    "nextGate": "Separate SPEC/work order for actual AI executor/integration or M1 business decisions",
+    "actualRerun": "OPEN_EXECUTOR_NOT_INCLUDED"
+  },
+  "x-historicalR101BeforeR102": {
+    "activeTranche": "CCMAI-RUNTIME-101",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_M3_HUMAN_WORKFLOW_R101_2026-10-15.md",
+    "nextAllowedMove": "CCMAI-RUNTIME-101 remains REVIEW/FREEZE OPEN; owner selected backend-first M3-05 while UI blocked. R102 candidate SPEC and DRAFT work order prepared under docs/reviews/planning/R102_WAITDATA_BACKEND_*_2026-10-15.md: append-only source observation plus durable AWAITING_EXECUTION_AUTHORITY intent, no AI execution. Root next finalizes and commits new immutable dispatch authority before any R102 BUILD; no R101 seed/budget reuse. R101 browserB01-B10 NOT_RUN, Dashboard3 baseline failures OPEN, source200df3e/native inherited unchanged. Existing fixture2/2 stopped/preserved, workerGo1 reviewerGo2 aggregate3/16 Node3/build1/provider0/mock0 unchanged; no runtime/download/server effects this planning turn. FullM2/M3/actualWAIT_DATA rerun/M1business/pilot/release OPEN; Facebook/ZaloOA parked.",
+    "activeRole": "Codex /root ORCHESTRATOR, SPEC_AUTHOR, WORK_ORDER_AUTHOR and SESSION_SYNC_STEWARD for WAIT_DATA candidate; independent R101 REVIEWER retained; Sol Medium read-only design adviser returned.",
+    "x-currentExecutionBudget": {
+      "physicalProviderRequestsTotal": 0,
+      "mockProviderRequestsTotal": 0,
+      "goInvocationsTotal": 16,
+      "workerGoInvocations": 8,
+      "reviewerGoInvocations": 6,
+      "rootUnspentReserveGoInvocations": 2,
+      "includesBuildsAndCompiledBinaryLaunches": true,
+      "ownedDisposableMySQLFixturesTotal": 2,
+      "fixtureImage": "cached mysql:8.0 --pull never",
+      "loopbackOnly": true,
+      "fixtureScope": "New r101-labelled isolated containers/networks/volumes and new database only; verify ownership before cleanup. Original app/database read-only protected inventory.",
+      "sourceFirst": "Worker source/tooling/test authoring only until Root consolidated audit admits finite runtime campaign. No provider construction, synthetic proposals directly seeded and labelled human-software fixtures.",
+      "sameScopeRepairs": "At most two consolidated repair rounds within existing authority and counters; third without independent new root cause stops for REVIEW_COST_ESCALATION_REQUIRED. No automatic successor.",
+      "nodeCommands": "Cached dependencies only; at most 6 focused/full frontend verification invocations plus one typecheck/build and one loopback development server per fixture. Root may inspect through actual browser without API interception.",
+      "campaignStop": "Stop on protected-state/secret/network/ownership anomaly, exhausted budget, or contract failure requiring scope expansion. Preserve failed receipts and clean only owned resources.",
+      "actualUsed": {
+        "goInvocations": 2,
+        "workerGo": 1,
+        "reviewerGo": 1,
+        "fixtures": 2,
+        "providerCalls": 0,
+        "mockProviderCalls": 0,
+        "nodeChecks": 3,
+        "frontendBuilds": 1
+      }
+    },
+    "x-currentWorkerDispatch": {
+      "worker": "/root/m3_design",
+      "model": "gpt-6-sol",
+      "effort": "medium",
+      "status": "RETURNED_USAGE_LIMIT_FROZEN_SOURCE",
+      "seedCommit": "43c65adc188db4e8b5321a39641edfcab4088e8d",
+      "sourceCommit": "200df3e"
+    },
+    "x-currentReview": {
+      "result": "NATIVE_PASS_BROWSER_RUNTIME_POLICY_BLOCKED",
+      "scope": "R101_LOCAL_SYNTHETIC_HUMAN_WORKFLOW",
+      "sourceCommit": "200df3e4a7bc2a326425922a5230508a4fd9b0fe"
+    },
+    "x-currentClosure": {
+      "status": "OPEN",
+      "fullM2": "OPEN",
+      "M3": "OPEN",
+      "pilot": "OPEN"
+    },
+    "actualCounters": {
+      "workerGo": 1,
+      "reviewerGo": 2,
+      "aggregateGo": 3,
+      "fixtureReservations": 2,
+      "nodeChecks": 3,
+      "frontendBuilds": 1,
+      "providerCalls": 0,
+      "mockProviderCalls": 0,
+      "launches": [
+        "six_native_human_tests",
+        "real_router_browser_fixture"
+      ]
+    }
+  },
+  "x-ownerRepairContinuation": "CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json",
+  "x-r102Current": {
+    "status": "FROZEN_LOCAL_ONLY",
+    "review": "docs/reviews/R102_FINAL_INDEPENDENT_BACKEND_REVIEW_2026-10-15.md",
+    "source": "6700de80a01217b7e382bf59008dadd20635be87",
+    "actualExecution": {
+      "goInvocations": 7,
+      "workerGo": 4,
+      "reviewerGo": 3,
+      "fixtures": 1,
+      "providerCalls": 0,
+      "mockProviderCalls": 0
+    },
+    "actualAI": "NOT_RUN",
+    "fullM3": "OPEN"
+  },
+  "x-r101Retry2ReturnReview": {
+    "review": "docs/reviews/R101_RETRY2_INDEPENDENT_REVIEW_2026-10-15.md",
+    "disposition": "BLOCKED_RETURN_RECORDED_WITH_QUALIFICATIONS",
+    "browser": "B01_B10_NOT_RUN_NO_SCREENSHOTS",
+    "manifestEntriesVerified": 16,
+    "driverFetch": "REPORTED_ATTEMPTED_EXTERNAL_FETCH_NOT_STRICT_COMPLIANCE",
+    "provenance": "OPERATOR_REPORTED_TOOL_HISTORY_NOT_INDEPENDENTLY_AUTHENTICATED",
+    "r101Counters": {
+      "workerGo": 1,
+      "reviewerGo": 2,
+      "aggregateGo": 3,
+      "fixtures": 2,
+      "nodeChecks": 3,
+      "builds": 1,
+      "providerCalls": 0,
+      "mockCalls": 0
+    },
+    "nextRoadmap": "M3_05_WAITDATA_EXECUTOR_SPEC_ONLY_NO_BUILD"
+  },
+  "x-historicalR102BeforeR103": {
+    "activeTranche": "CCMAI-RUNTIME-102",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_WAITDATA_BACKEND_R102_2026-10-15.md",
+    "nextAllowedMove": "CCMAI-RUNTIME-102 remains FROZEN. Owner now authorizes R103 tooling repair: commit immutable CCMAI-RUNTIME-103 seed/contract, then bounded WORK_ORDER before official npm driver1.57.0 download/cache install, independent capability review and conditional R101 UI retry. Current driver157 cache empty, Node24.19 available; no install/runtime yet. R101 UI/Dashboard3baseline/FREEZE and fullmilestones OPEN; no provider/secret/app source/newfixture/globalconfig/push/deploy. Facebook/ZaloOA parked.",
+    "activeRole": "Codex /root independent REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / metadata COMMIT_STEWARD; R101 retry2 recorded, no runtime dispatched.",
+    "x-currentExecutionBudget": {
+      "goInvocationsTotal": 8,
+      "workerGoInvocations": 4,
+      "reviewerGoInvocations": 3,
+      "dispatcherReserveGoInvocations": 1,
+      "includesBuildsAndCompiledBinaryLaunches": true,
+      "physicalProviderRequestsTotal": 0,
+      "mockProviderRequestsTotal": 0,
+      "nodeCommands": 0,
+      "browserOrDevServerLaunches": 0,
+      "ownedDisposableMySQLFixturesTotal": 1,
+      "fixtureImageId": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+      "fixtureRoute": "One new exclusively labelled R102 cached-image --pull never MySQL container, network and volume with 127.0.0.1 publication and synthetic DB only; do not reuse or change R101 resources. Safe ownership/protected baseline before effects, finite TCP readiness, preserve failures, no recreation. Root owns infrastructure and cleanup; worker source first.",
+      "sourceFirst": "Source and tests only until Root independent consolidated review admits bounded offline compile/local synthetic MySQL software checks. Standalone gofmt on authorized changed files permitted, not a build launch.",
+      "repairRounds": "At most two consolidated same-scope repairs; third without independent new root cause stops with REVIEW_COST_ESCALATION_REQUIRED. No automatic budget or scope widening.",
+      "actualUsed": {
+        "goInvocations": 7,
+        "workerGo": 4,
+        "reviewerGo": 3,
+        "fixtures": 1,
+        "providerCalls": 0,
+        "mockProviderCalls": 0
+      },
+      "supplementalAuthority": "CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json"
+    },
+    "x-currentReview": {
+      "result": "REVIEW_PASS_FROZEN_LOCAL_ONLY",
+      "evidence": "docs/reviews/R102_FINAL_INDEPENDENT_BACKEND_REVIEW_2026-10-15.md"
+    }
+  },
+  "x-r103Current": {
+    "status": "FROZEN_TOOLING_ONLY_UI_BRIDGE_OPEN",
+    "review": "docs/reviews/R103_INDEPENDENT_TOOLING_REVIEW_2026-10-16.md",
+    "driver": "1.57.0",
+    "chromium": "143.0.7499.4/revision1200",
+    "localControlCapture": "PASS_REAL_PNG",
+    "integratedBrowser": "BLOCKED_PROVIDER_UNAVAILABLE",
+    "R101UI": "NOT_RUN",
+    "actualExecution": {
+      "driverInstalls": 1,
+      "browserInstalls": 1,
+      "rootHealthCampaigns": 1,
+      "npmRequests": 2,
+      "npmBytes": 1989716,
+      "browserArtifactAttemptsObserved": 2,
+      "browserArchiveBytesReported": 290468407,
+      "browserRedirects": "NOT_OBSERVED",
+      "browserWireTotalBytes": "NOT_OBSERVED",
+      "providerCalls": 0,
+      "mockCalls": 0,
+      "goCompiles": 0,
+      "newFixtures": 0,
+      "backendLaunches": 0,
+      "viteLaunches": 0
+    }
+  },
+  "x-dispatchReadinessRepair": {
+    "status": "BLOCKED_BROWSER_SURFACE_UNAVAILABLE",
+    "learning": "docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md",
+    "draftWorkOrder": "docs/reviews/planning/R105_R101_UI_EVIDENCE_WORK_ORDER_DRAFT_2026-10-16.md",
+    "authorityCandidate": "docs/reviews/planning/R105_R101_UI_AUTHORITY_CANDIDATE_2026-10-16.json",
+    "rootReadinessEvidence": "docs/reviews/probes/r105_dispatch_preparation/readiness_inventory.json",
+    "noCommit": false,
+    "noFreeze": true,
+    "noRuntime": true,
+    "historicalBridgeProvenanceReview": "docs/reviews/R104_BRIDGE_SUPPLEMENT_INDEPENDENT_REVIEW_2026-10-16.md",
+    "historicalBridgeProvenance": "ACCEPTED_DATA_URL_DIAGNOSTIC_ONLY",
+    "residualTabCleanup": "UNVERIFIED_LEGACY_TAB_PRESERVE_NO_REUSE",
+    "runnerSourceReview": "docs/reviews/R105_RUNNER_INDEPENDENT_SOURCE_REVIEW_2026-10-16.md",
+    "sourceReviewReceipt": "docs/reviews/probes/r105_root/source_review_receipt.json",
+    "sourceCandidateAuthor": "/root/r105_runner_candidate (Sol Medium)",
+    "independentOfflineTests": 12,
+    "sourceDisposition": "SOURCE_REVIEW_PASS_RUNTIME_NOT_RUN",
+    "remainingBoundary": "Supported browser capability plus successor worker/tool binding before effects; original105 seed unchanged"
+  },
+  "x-r105OwnerGrant": {
+    "date": "2026-10-16",
+    "authorization": "cho phép toàn quyền, theo đúng vai trò orchestrator/reviewer. next",
+    "scope": "Reviewed historical R101 UI R105 packet, finite seed budgets; Root commits/reviews, external evidence operator executes; no provider/production/publication/deploy expansion"
+  },
+  "x-r105Current": {
+    "status": "BUILD_BLOCKED",
+    "seedCommit": "760726e691114a85af315ab5823112375c6af570",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md",
+    "riskCeiling": "R2",
+    "sourceReview": "docs/reviews/R105_RUNNER_INDEPENDENT_SOURCE_REVIEW_2026-10-16.md",
+    "runtime": "NOT_RUN",
+    "nextAction": "CCMAI-RUNTIME-105 BUILD_BLOCKED / BLOCKED_WITH_REASON: owner authorizes Codex subagent execution, but current CUA inventory has no browser and iab creation returns Browser is not available: iab. Preserve immutable105 Claude authority and unconsumed runtime; do not start fixture/backend/Vite or dispatch a substitute worker. Restore a supported browser surface, verify capability, then Root binds the authorized worker/tool through a reviewed successor before UI effects; no repeated owner approval within that grant. B01-B10 NOT_RUN, Dashboard3/fullM2/M3/pilot/release OPEN; R102 local FROZEN unchanged, Facebook/Zalo OA parked."
+  },
+  "x-ownerSubagentExecutionGrant": {
+    "date": "2026-10-16",
+    "requestedWorker": "Luna Max or Sol Medium",
+    "authority": "User explicitly asks Root to handle execution with subagent",
+    "status": "CAPABILITY_BLOCKED_BEFORE_WORKER_REBIND",
+    "probe": "docs/reviews/probes/r105_root/CODEX_BROWSER_CAPABILITY_2026-10-16.json"
+  },
+  "x-r107OwnerGrant": {
+    "date": "2026-10-16",
+    "instruction": "mở ra test cho hoàn tất, siết kỹ quá phải làm nhiều không hiệu quả",
+    "sourceWorker": "/root/r107_vite_worker (Sol Medium)",
+    "scope": "R107 decision packet source/module validation then one additional synthetic UI campaign after prerequisites",
+    "newCampaigns": 1,
+    "runtimeRetries": 0,
+    "status": "CAMPAIGN_SPENT_PARTIAL_UI_REVIEW_CHANGES_REQUIRED"
+  },
+  "x-r107DiagnosisProposal": "docs/reviews/R107_REOPEN_DIAGNOSIS_AND_R108_PROPOSAL_2026-10-16.md",
+  "x-r108OwnerAuditGrant": {
+    "date": "2026-10-16",
+    "instruction": "cho phép bạn audit và tự xử lý để có kết quả cần thiết. trường hợp chạy browser trong môi trường runtime không được thì dừng, báo tôi chuyển agent khác làm. chú ý: ngôn ngữ thể hiện trên ui/ux, ko để xuất hiện ngôn ngữ của Dev",
+    "scope": "Owner authorizes audit and necessary bounded handling toward pending REOPEN/UI outcome; Root must prepare current authority/build/evidence contract, not reset old seeds or budgets.",
+    "stopCondition": "If runtime browser cannot operate, stop and ask owner to transfer execution to a connected agent; no alternate automation stack or runtime blind retry.",
+    "status": "OWNER_STOP_TRANSFER_R112_DOCKER_INSPECTION_TIMEOUT",
+    "handoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R112_REMAINING_UI_2026-10-17.md"
+  },
+  "x-ownerUiLanguageDirective": {
+    "date": "2026-10-16",
+    "source": "Explicit owner UI/UX instruction",
+    "requirement": "All product-facing labels, statuses, instructions and error messages must use language understandable to end users. Do not expose developer jargon, raw API/enum/error codes, stack traces, runtime/tooling/governance implementation details in ordinary UI flows. Keep technical diagnostics in evidence/logs.",
+    "verification": "R114 sourceaa92c149: current shared onboarding Cài đặt AI and full5labels independently observed desktop/CSS390x844 queue/detail. R113 intervention/history wording inherited qualified; raw JPEG raster differs, derivedPNG noresize, no app-wide language PASS. Original supervisor terminal/cleanup missing; noFREEZE."
+  },
+  "x-r112LatestResumeDiagnostic": {
+    "observedAtUTC": "2026-10-17T02:13:00.370385+00:00",
+    "status": "DOCKER_CAPABILITY_HOLD",
+    "report": "docs/reviews/R112_RESUME_CAPABILITY_HOLD_2026-10-17_021300Z.md",
+    "evidence": "docs/reviews/probes/r112_resume_20261017T021300Z",
+    "runtimeEffectCount": 0,
+    "newProductAuthority": "NONE"
+  },
+  "x-r113CurrentOutcome": {
+    "status": "CHANGES_REQUIRED",
+    "review": "docs/reviews/R113_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md",
+    "B07": "PASS_BOUNDED_UI_CONTROLS",
+    "B08": "PARTIAL_CSS390x844_RASTER_AND_LAYOUT_QUALIFIED",
+    "B09": "NOT_RUN_UNSUPPORTED",
+    "wording": "ONBOARDING_AI_PROVIDER_OPEN",
+    "campaignHead": "0a26662386ed2d3c040433a8e81398a80b481048",
+    "finalFixture": "EXITED_ROOT_OBSERVED",
+    "protected": "EQUALS_CAMPAIGN_BASELINE",
+    "originalSupervisorCleanup": "MISSING"
+  },
+  "x-r114CurrentOutcome": {
+    "status": "CHANGES_REQUIRED",
+    "source": "aa92c149f47efaec391fb001b0d23ee0dff67f25",
+    "campaignHead": "954013408715cb0213d37bb7d51b714f29b900f8",
+    "review": "docs/reviews/R114_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md",
+    "onboarding": "WORDING_AND_FULL_LABELS_ACCEPTED_BOUNDED_CSS390x844",
+    "B07": "INHERITED_R113_BOUNDED_UI",
+    "B08": "RASTER_QUALIFIED",
+    "B09": "NOT_RUN_UNSUPPORTED",
+    "supervisorTerminalCleanup": "MISSING",
+    "finalFixture": "EXITED_INDEPENDENTLY_OBSERVED",
+    "protected": "4_EQUALS_CAMPAIGN_BASELINE",
+    "runtimeReplay": "PROHIBITED"
+  },
+  "x-r115CurrentOutcome": {
+    "status": "REVIEW_PASS",
+    "scope": "INTENDED_DESIGN_ONLY",
+    "review": "docs/reviews/R115_INDEPENDENT_DESIGN_REVIEW_2026-10-17.md",
+    "productImplementation": "NOT_IMPLEMENTED",
+    "runtime": "NOT_RUN_NOT_AUTHORIZED",
+    "documentRepairRounds": 2
+  },
+  "x-r116OwnerGrant": {
+    "id": "CCMAI-RUNTIME-116-OWNER-NEW2-20261017",
+    "physicalCallCap": 2,
+    "usedPhysicalCalls": 0,
+    "fresh": true,
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-116.json"
+  },
+  "x-r116CurrentOutcome": {
+    "status": "BUILD_BLOCKED",
+    "sourceCommit": "5d38dd51c387ce161c013a9b6ff866a1d1c7af3d",
+    "sourceReview": "ACCEPTED_FOR_ISOLATED_PROOF_ONLY",
+    "native": "NOT_RUN",
+    "live": "NOT_RUN",
+    "fixtureStartsUsed": 1,
+    "fixture": "EXITED_OWNED_PRESERVED",
+    "protected": "CONTAINERS_AND_RESOURCES_EQUAL",
+    "rootChecksUsed": 2,
+    "physicalCallsUsed": 0,
+    "report": "docs/reviews/R116_RUNTIME_ADMISSION_BLOCKER_2026-10-17.md"
+  },
+  "x-r117OwnerGrant": {
+    "id": "CCMAI-RUNTIME-117-OWNER-NEW1-20261017",
+    "physicalCallCap": 1,
+    "usedPhysicalCalls": 1,
+    "fresh": true,
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-117.json",
+    "status": "CONSUMED_CLOSED_NO_MORE_CALLS"
+  },
+  "x-r117OwnerShutdownContinuation": {
+    "authority": "docs/reviews/probes/r117_root/owner_restart_authority_18.json",
+    "commit": "88c0865e861a9f1ff417c0452cf8f312ac8e91d7",
+    "ownerReportedShutdown": true,
+    "restartCap": 1,
+    "additionalFinalStopCap": 1,
+    "nativeReplay": 0,
+    "physicalTotalCap": 1,
+    "physicalUsed": 1,
+    "ownedRestartsUsed": 1,
+    "ownedFinalStopsUsed": 1,
+    "status": "COMPLETE_OWNED_RUNTIME_STOPPED"
+  },
+  "x-r117CurrentOutcome": {
+    "status": "REVIEW_PASS",
+    "scope": "SOURCE_NATIVE_ONE_REAL_SYNTHETIC_EXECUTOR_FLOW_ONLY",
+    "review": "docs/reviews/R117_FINAL_INDEPENDENT_REVIEW_2026-10-18.md",
+    "native": "HANDLERS11TOP11NESTED_ENGINE1_PASS_NOSKIP",
+    "physicalCalls": 1,
+    "observedInputTokens": 340,
+    "observedOutputTokens": 297,
+    "newProposal": "PUBLISHED_SAME_CASE",
+    "syntheticConfirm": "PERSISTED",
+    "fixture": "EXITED_PRESERVED",
+    "protected": "EQUAL_TO_OWNER_AUTHORIZED_OPERATIONAL_BASELINE",
+    "oldCleanupHold": "PRESERVED_OWNER_SHUTDOWN_EXPLANATION",
+    "freeze": "OPEN"
+  },
+  "x-r118CurrentOutcome": {
+    "status": "REVIEW_PASS",
+    "scope": "SOURCE_COMPONENT_ONLY",
+    "sourceCommit": "7f74a75f93671973bcfe55b5cb491076c0d2bdf9",
+    "review": "docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md",
+    "focusedTests": 24,
+    "appTypecheck": "PASS",
+    "currentUiRuntime": "NOT_RUN",
+    "providerCalls": 0,
+    "freeze": "OPEN"
+  },
+  "x-r119CurrentOutcome": {
+    "status": "CHANGES_REQUIRED",
+    "review": "docs/reviews/R119_FINAL_INDEPENDENT_REVIEW_2026-10-18.md",
+    "sourceCommit": "96ba23cc8a53f5f26eca7902adc2bb824a0c3d61",
+    "sourceAdmissionCommit": "7ea25d35",
+    "compile": "PASS_OFFLINE_1_OF_2",
+    "setup": "EXIT1_MYSQL_PROTOCOL_INVALID",
+    "fixtureStartsUsed": 1,
+    "fixtureFinalStopsUsed": 1,
+    "backendStarts": 0,
+    "viteStarts": 0,
+    "productTabs": 0,
+    "authPosts": 0,
+    "caseActions": 0,
+    "providerCalls": 0,
+    "currentUi": "NOT_RUN",
+    "fixture": "EXITED_OWNED_PRESERVED",
+    "protected": "EQUAL_7_CONTAINERS_8_NETWORKS_470_VOLUMES",
+    "listenerClosure": "NOT_PROVEN_CONNECT_EX_10035",
+    "freeze": "OPEN"
+  },
+  "x-r120CurrentOutcome": {
+    "status": "CHANGES_REQUIRED",
+    "review": "docs/reviews/R120_FINAL_INDEPENDENT_UI_REVIEW_2026-10-18.md",
+    "sourceCommit": "db9c4aa6aaabef5181c48cc4ee28d1cc0a2e515e",
+    "productUiSource": "7f74a75f93671973bcfe55b5cb491076c0d2bdf9",
+    "campaignAdmissionCommit": "540de723",
+    "currentProposal": "OBSERVED_CORRECT_ACTIVE_REV2_NOT_LAST_REV3",
+    "historyWording": "THREE_LOCALIZED_EVENTS_AND_SYSTEM_REASON_OBSERVED",
+    "uiEvidenceScope": "SYNTHETIC_PRESENTATION_ONLY",
+    "B07": "INHERITED_R113_BOUNDED",
+    "B08": "QUALIFIED_CSS390x844_NATIVE_JPEG375x811",
+    "B09": "NOT_RUN_UNSUPPORTED",
+    "authPostsObserved": 2,
+    "caseMutationRoutesObserved": 0,
+    "providerCallsObserved": 0,
+    "finalEffectCounters": "NOT_OBSERVED",
+    "finalDurableFingerprint": "NOT_OBSERVED",
+    "originalSupervisorTerminal": "MISSING",
+    "heldChildWaitExit": "NOT_OBSERVED",
+    "serveExitReceipt": "MISSING",
+    "fixture": "EXITED_PID0_PORTS_EMPTY_ROOT_ORPHAN_CLEANUP",
+    "hostListeners": "ABSENT_EXACT_3019_64408_64629",
+    "protected": "EQUAL_8_CONTAINERS_9_NETWORKS_471_VOLUMES",
+    "sourcePins": "ALL400_UNCHANGED_BINARY_AND_EXECUTABLES_UNCHANGED",
+    "freeze": "OPEN",
+    "nextAction": "CCMAI-RUNTIME-120 CHANGES_REQUIRED: preserve accepted bounded current-proposal/history UI observations and exact Root orphan cleanup; original supervisor terminal, held-child wait/exit and final durable fingerprint/effect counters MISSING. Runtime stopped, sole fixture/campaign/start-stop budgets consumed; no replay, source repair, automatic successor or provider call. Read-only lifetime review completed; transfer decision packet only before any separately governed runtime decision. B07 inherited bounded; B08 CSS390x844/originalJPEG375x811 qualified; B09 unsupported NOT_RUN; fullM2/M3/M1business/pilot/release OPEN, Facebook/ZaloOA parked; no push/merge/deploy."
+  },
+  "x-r120LifetimeReview": {
+    "status": "READ_ONLY_REVIEW_COMPLETE_RUNTIME_HOLD",
+    "review": "docs/reviews/R120_READONLY_LIFETIME_REVIEW_AND_DECISION_2026-10-18.md",
+    "verification": "docs/reviews/probes/r120_root/lifetime_review_20261018.json",
+    "diagnosticWorker": "/root/r120_lifetime_audit_luna (Luna Max, read-only)",
+    "independentReviewer": "Codex /root",
+    "actualDisappearanceCause": "UNKNOWN",
+    "runtimeAuthorized": false,
+    "sourceRepairAuthorized": false,
+    "newRuntimeInvocations": 0,
+    "providerCalls": 0
+  },
+  "x-r120PreservedCheckpoint": {
+    "currentMode": "REVIEW",
+    "activePhase": "REVIEW",
+    "activeTranche": "CCMAI-RUNTIME-120",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R120_CURRENT_UI_2026-10-18.md",
+    "nextAllowedMove": "CCMAI-RUNTIME-120 CHANGES_REQUIRED: preserve accepted bounded current-proposal/history UI observations and exact Root orphan cleanup; original supervisor terminal, held-child wait/exit and final durable fingerprint/effect counters MISSING. Runtime stopped, sole fixture/campaign/start-stop budgets consumed; no replay, source repair, automatic successor or provider call. Read-only lifetime review completed; transfer decision packet only before any separately governed runtime decision. B07 inherited bounded; B08 CSS390x844/originalJPEG375x811 qualified; B09 unsupported NOT_RUN; fullM2/M3/M1business/pilot/release OPEN, Facebook/ZaloOA parked; no push/merge/deploy.",
+    "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; implementation worker idle; R120 runtime stopped and transfer packet preserved"
+  },
+  "x-r121CurrentOutcome": {
+    "status": "CHANGES_REQUIRED",
+    "review": "docs/reviews/R121_FINAL_TERMINAL_REVIEW_2026-10-18.md",
+    "sourceCommit": "5cf1244f73a29dfff9ab987d4fe8ae51c67abb38",
+    "originalServeExit": 1,
+    "heldChildWaitObserved": true,
+    "supervisorTerminal": "HOLD_UNICODE_ENCODING_BEFORE_BROWSER",
+    "terminalErrors": [
+      "FINAL_EVIDENCE_MISSING"
+    ],
+    "currentUi": "NOT_RUN",
+    "actualBackendStarts": 1,
+    "actualViteStarts": 1,
+    "actualProductTabs": 0,
+    "authPosts": 0,
+    "caseActions": 0,
+    "providerCalls": 0,
+    "finalAccounting": "RAW_BACKEND_EQUAL_MARKERS_PRESENT_COMBINED_VALIDATION_NOT_RUN",
+    "fixture": "EXITED_PID0_PORTS_EMPTY_PRESERVED",
+    "listeners": "3019_62861_56961_ABSENT_PS_EXIT0_EMPTY_TABLES",
+    "protected": "EQUAL_9_CONTAINERS_10_NETWORKS_472_VOLUMES",
+    "sourcePins": "405_UNCHANGED",
+    "freeze": "OPEN"
+  },
+  "x-r121CapabilityContinuation": {
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-121-CAPABILITY-CONTINUATION.json",
+    "ownerInstruction": "cho phép dùng đến khi hoàn tất",
+    "attemptsUsed": 1,
+    "status": "PASS_SHORT_UNINTERRUPTED_LIFECYCLE_ONLY",
+    "originalCapUsedUnchanged": 1,
+    "evidence": "docs/reviews/probes/r121_root/capability_confirmation/manifest.json"
+  },
+  "x-r121PostRepairAdmission": {
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-121-POSTREPAIR-ADMISSION.json",
+    "budget": {
+      "offlineCompile": 1,
+      "setupInvocation": 1,
+      "newFixtureStart": 1
+    },
+    "used": {
+      "offlineCompile": 1,
+      "setupInvocation": 1,
+      "newFixtureStart": 1
+    },
+    "status": "CONSUMED_SETUP_READY_CAMPAIGN_HOLD"
   }
 }

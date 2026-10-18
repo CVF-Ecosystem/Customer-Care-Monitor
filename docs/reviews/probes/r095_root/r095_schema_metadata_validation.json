@@ -1,0 +1,9 @@
+{
+  "endpointHashMatches": true,
+  "regionHostMatches": true,
+  "keyValidAsciiShape": true,
+  "recommendedModelMatches": false,
+  "pinnedModelListed": false,
+  "authHeaderIgnored": true,
+  "campaignElapsedSeconds": 163.0
+}

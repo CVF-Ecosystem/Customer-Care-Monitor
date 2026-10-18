@@ -1,0 +1,9 @@
+Owner yêu cầu chạy lại UI. Chỉ thị này bổ sung quyền:
+- Mở lại đúng fixture R101 đã giữ.
+- Một lần launch backend browser-fixture binary.
+- Một lần launch Vite dev server loopback.
+- Thực hiện B01–B10 và cleanup.
+
+Giữ counters cũ, tăng trước launch, không reset. Snapshot hiện có: workerGo1/reviewerGo2/aggregateGo3; fixture2/2, Node checks3, frontendBuild1. Phải đọc lại số thực tế trước chạy.
+
+Không tạo fixture mới. Không dùng quyền “không giới hạn” của R102 để mở rộng lượt UI này.

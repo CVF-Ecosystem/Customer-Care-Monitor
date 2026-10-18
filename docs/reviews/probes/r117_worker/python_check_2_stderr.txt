@@ -1,0 +1,10 @@
+test_absent_port_still_verifies_exact_ownership (test_r117_waitdata_fixture.R117FixtureTests.test_absent_port_still_verifies_exact_ownership) ... ok
+test_cleanup_rejects_wrong_owner_before_stop (test_r117_waitdata_fixture.R117FixtureTests.test_cleanup_rejects_wrong_owner_before_stop) ... ok
+test_cleanup_uses_container_receipt_without_port (test_r117_waitdata_fixture.R117FixtureTests.test_cleanup_uses_container_receipt_without_port) ... ok
+test_full_published_port_shape (test_r117_waitdata_fixture.R117FixtureTests.test_full_published_port_shape) ... ok
+test_wrong_identity_mount_network_or_exclusivity_rejects (test_r117_waitdata_fixture.R117FixtureTests.test_wrong_identity_mount_network_or_exclusivity_rejects) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.024s
+
+OK

@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-16",
+  "scope": "R107_SOURCE_AND_REAL_MODULE_LOAD_ONLY",
+  "disposition": "SOURCE_REVIEW_PASS_RUNTIME_NOT_RUN",
+  "reviewer": "Codex /root",
+  "sourceCandidateAuthor": "/root/r107_vite_worker",
+  "runtimePins": {
+    "docs/reviews/probes/r107_root/r107_ui_runner.py": "5a85e97e6964e4c88ed73a9bfff85c16bea1ae22b69d2c58e0c9ebb6cdb9e490",
+    "docs/reviews/probes/r107_root/r107_vite_config.mjs.template": "67f3c4c6e03d1005052c645b0b6d028c46072265e19c2a1c3140a94648f0b938",
+    "docs/reviews/probes/r105_dispatch_preparation/frontend_input_manifest.json": "9bc280a50432f56f9a12272b138e26831106bc7fa0002aa3b825f73ece58b8df",
+    "docs/reviews/probes/r101_root/formatted_source_manifest.json": "61c57a5ed0613626327dd92fae352feae23c78e1d3e8ea45c06c86bd2e7660d3"
+  },
+  "testSha256": "011af99c08fc724bebaaa8ad117d1bd470268f51103069183bd45f8b0fce8d2b",
+  "independentOfflineTests": 13,
+  "actualModuleLoad": "WORKER_OBSERVED_PASS_ROOT_REVIEWED_SOURCE_AND_EXACT_ARTIFACTS_NO_RELOAD",
+  "moduleValidation": {
+    "path": "docs/reviews/probes/r107_root/module_validation.json",
+    "sha256": "062b641ac09cbffc10f392012a80bb0217bf82b537fcdd6eb89c1b3e686cca9e"
+  },
+  "capturedFilesVerified": 18,
+  "capturedArchiveSha256": "e728c9393c2a7cf058ce7179e70029d1f183d21259fc2b9d2ecc121e99c0d4cd",
+  "runtime": "NOT_RUN_CURRENT_BROWSER_UNAVAILABLE",
+  "independentReview": "docs/reviews/R107_SOURCE_MODULE_INDEPENDENT_REVIEW_2026-10-16.md",
+  "claimBoundary": "Module import and source checks only; no Vite server/browser/product/governance/hosted CI acceptance"
+}

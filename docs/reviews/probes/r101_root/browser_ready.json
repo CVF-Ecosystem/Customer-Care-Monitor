@@ -1,0 +1,9 @@
+{
+  "apiUrl": "http://127.0.0.1:52962",
+  "tenant": "da33b823-ec6b-421c-9403-25aff8ae34df",
+  "case": "e63e9d12-eef7-4c7a-825d-17e64c4b1c71",
+  "reader": "a9df5da4-38c5-468a-a145-73dcb073876a",
+  "ownerEmail": "3c17dcab-32d5-4ab6-b5a5-10022e916b1f@example.invalid",
+  "pid": 9536,
+  "syntheticFixture": true
+}

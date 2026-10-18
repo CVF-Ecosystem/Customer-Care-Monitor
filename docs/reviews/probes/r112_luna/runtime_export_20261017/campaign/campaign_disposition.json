@@ -1,0 +1,16 @@
+{
+  "campaignId": "r112-1792201025-19336",
+  "evidenceManifest": "files_manifest.json",
+  "evidenceManifestSha256": "ffce26d081c35f1e8e653dd86c6167ab4e3cb36a61e01ca0c48ef8f35e778122",
+  "reason": "bounded campaign exception: Hold",
+  "status": "FAILED",
+  "uiPostCounts": {
+    "blockedByLocalHarness": 0,
+    "budgetCounted": 0,
+    "exceeded": false,
+    "forwarded": 0,
+    "ginPostObserved": 0,
+    "remaining": 8,
+    "submitted": 0
+  }
+}

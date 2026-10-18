@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-109",
+  "tool": "functions.exec -> tools.exec_command",
+  "command": "python -B docs/reviews/probes/r109_luna/r109_workflow_runner.py start --project-root .",
+  "invocationCount": 1,
+  "initialResponse": {
+    "chunkId": "c00dd2",
+    "waitSeconds": 10.0139842,
+    "sessionId": 6933,
+    "stdout": "",
+    "originalTokenCount": 0,
+    "exitCode": null,
+    "status": "SESSION_REMAINS_ACTIVE"
+  },
+  "pollHistory": "Several owned-session polls returned empty output while sessionId 6933 remained active. After the browser/executor interruption, the final write_stdin call returned aborted; no terminal response with exit code or final stdout/stderr was available.",
+  "finalExitCode": null,
+  "finalStdout": "NOT_OBSERVED_AFTER_INTERRUPTION",
+  "finalStderr": "NOT_OBSERVED_AFTER_INTERRUPTION",
+  "supervisorCleanup": "NOT_OBSERVED; the original campaign cleanup/disposition receipts are absent and remain unwritten.",
+  "retryCount": 0,
+  "note": "This receipt records the tool response facts available in the task transcript; it is not a reconstructed raw terminal transcript. Root's separate exact-fixture recovery is documented under docs/reviews/probes/r109_root/interrupted_cleanup/."
+}

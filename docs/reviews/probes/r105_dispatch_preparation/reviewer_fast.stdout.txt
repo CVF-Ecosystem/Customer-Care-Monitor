@@ -1,0 +1,16 @@
+[PASS] CVF-DG-INST-01 PASS
+[PASS] CVF-DG-CONT-01 PASS
+[PASS] CVF-DG-RANGE-01 PASS
+       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=64238c411b2fd9e966ef90ec73a243c8b355305e candidates=38 deleted=0
+[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - no candidate work-order packet in scope
+[PASS] CVF-DG-ROUTE-01 PASS
+       note: checked: docs/reviews/planning/R105_R101_UI_EVIDENCE_WORK_ORDER_DRAFT_2026-10-16.md
+[PASS] CVF-DG-ROLE-01 PASS
+       note: checked: docs/reviews/R101_BRIDGE_RECHECK_INDEPENDENT_REVIEW_2026-10-16.md, docs/reviews/R101_BRIDGE_RECHECK_WORKER_RETURN_2026-10-16.md, docs/reviews/R104_BRIDGE_RECHECK_INDEPENDENT_REVIEW_2026-10-16.md, docs/reviews/R104_BRIDGE_RECHECK_WORKER_RETURN_2026-10-16.md, docs/reviews/planning/R105_R101_UI_EVIDENCE_WORK_ORDER_DRAFT_2026-10-16.md
+       note: docs/reviews/learnings/README.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)
+       note: docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)
+       note: docs/reviews/learnings/feedback_orchestrator_roadmap_control.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)
+       note: docs/reviews/planning/R101_CLAUDE_BROWSER_EVIDENCE_HANDOFF_2026-10-15.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)
+[PASS] CVF-DG-CLAIM-01 PASS
+       note: 0 explicit claim line(s) and 9 document(s) scanned
+RESULT: PASS phase=reviewer-fast mandatoryControls=7 failed=0

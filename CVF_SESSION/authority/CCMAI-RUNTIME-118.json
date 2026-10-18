@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-118",
+  "authorityKind": "DISPATCHER_OWNED_M3_CURRENT_PROPOSAL_UI_SOURCE_AND_WORDING",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "/root/r118_ui_worker",
+    "reviewer": "Codex /root",
+    "commitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    "frontend/src/api/intervention.ts",
+    "frontend/src/views/InterventionCases.vue",
+    "frontend/src/utils/interventionPresentation.ts",
+    "frontend/src/i18n/vi.ts",
+    "frontend/src/i18n/en.ts",
+    "frontend/src/__tests__/intervention-ui.test.ts",
+    "frontend/src/__tests__/intervention*.test.ts",
+    "docs/reviews/R118_*.md",
+    "docs/reviews/probes/r118_worker/**",
+    "docs/reviews/probes/r118_root/**",
+    "docs/work_orders/CCMAI_RUNTIME_118_CURRENT_PROPOSAL_UI.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md"
+  ],
+  "prohibitedEffects": [
+    "Runtime servers/browser product campaign/Docker DB fixture/provider/key/secret access or mutation",
+    "Backend/dependencies/gates/Core changes, installs/downloads or alternate automation",
+    "Old runner or budget replay, worker seed edits/commits/self-review",
+    "Push/merge/deploy/installed activation/full milestone or mock-governance claim"
+  ],
+  "executionBudget": {
+    "workerFocusedFrontendChecks": 3,
+    "rootFocusedFrontendChecks": 2,
+    "sameScopeRepairRounds": 2,
+    "providerCalls": 0,
+    "fixtureStarts": 0,
+    "productBrowserCampaigns": 0
+  },
+  "ownerAuthorization": "Persistent owner instruction continue roadmap as Root orchestrator/reviewer with Luna Max/Sol Medium worker; same-scope source correction authorized. No fresh live effects in this order.",
+  "inheritedEvidence": {
+    "checkpoint": "efa456a98f2a43ec13cfbc79b394be86d63a1efa",
+    "backendReview": "docs/reviews/R117_FINAL_INDEPENDENT_REVIEW_2026-10-18.md",
+    "uiQualification": "R113 B07 bounded; R114 wording bounded; B08 raster qualified/B09 unsupported; no replay"
+  },
+  "claimScope": "Current proposal selection/action binding and understandable WAIT_DATA history in source/component tests only; no runtime UI or AI governance claim.",
+  "stopCondition": "Unexpected dependency/runtime requirement stops that branch; third repair without independent new root cause requires REVIEW_COST_ESCALATION_REQUIRED. No generic tooling successor."
+}

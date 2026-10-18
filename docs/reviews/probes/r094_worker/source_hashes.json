@@ -1,0 +1,46 @@
+[
+  {
+    "path": "backend/db/models/intervention.go",
+    "sha256": "04bffe0b6c274c5dc1623b15a361a4808614131b89b003225852949937ab5d5d"
+  },
+  {
+    "path": "backend/engine/intervention.go",
+    "sha256": "da3936ca642ff43da5bd09a0d1de4866fb1bc84dc6a9d094bf641d11cf1db084"
+  },
+  {
+    "path": "backend/api/handlers/intervention.go",
+    "sha256": "339526007b4fa02f6a73be5c66c66536ce47c926a3b961ce02e3460968f61f53"
+  },
+  {
+    "path": "backend/api/handlers/intervention_route_test.go",
+    "sha256": "dab14eaa9cc58d172ebf3a770809e4c05dafeec410ca1a69643313bcba2408b8"
+  },
+  {
+    "path": "backend/ai/openai_compatible.go",
+    "sha256": "8c6131130ae49f93b0bbfddbb1920370373a3a32712549a19cedc54f2c14cb5b"
+  },
+  {
+    "path": "backend/ai/openai_compatible_test.go",
+    "sha256": "98d22c001b0515a2ebc99c84518e87505a868ee11a77b062d70c5c24895d57ad"
+  },
+  {
+    "path": "backend/engine/analyzer.go",
+    "sha256": "d1c9ba5153cbd79e891899f78d42fa0caacbaf7ef2ae570c1dc7084382971bc2"
+  },
+  {
+    "path": "backend/engine/analyzer_modes.go",
+    "sha256": "02b979fc9166c2ebc4371b1b78dfec08afbc526174423238244e57a3caab9824"
+  },
+  {
+    "path": "backend/api/handlers/jobs.go",
+    "sha256": "e2e8b0c86cc9390d94b64b8e5f0b16b0806bb37fa335b21e85799fdefe4e3e3e"
+  },
+  {
+    "path": "backend/api/router.go",
+    "sha256": "94d91d60204bd07cca09d00c45068e8cbf5a355f83e289ac7026ceac3fece4dd"
+  },
+  {
+    "path": "backend/db/mysql.go",
+    "sha256": "c694812f913d6121622857c46b8d7878ef7b4fefff92ec1b3b1f8489e084076b"
+  }
+]

@@ -1,0 +1,13 @@
+id
+tenant_id
+conversation_id
+external_message_id
+sender_type
+sender_name
+sender_external_id
+content
+content_type
+attachments
+sent_at
+raw_data
+created_at

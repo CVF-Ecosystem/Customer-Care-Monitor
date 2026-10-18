@@ -1,0 +1,25 @@
+{
+  "baselineCommit": "4424e9d22521ded2be1a6fe0463c0ddccf9bc931",
+  "route": "isolated git archive of tracked frontend; cached node_modules junction, no installs/download or checked source edits",
+  "target": ".cvf\\runtime\\r101_baseline",
+  "unchangedFiles": [
+    {
+      "path": "frontend/src/views/Dashboard.vue",
+      "sameBytes": true,
+      "baselineSha256": "553f6dea0addef960e0948580ac3e83a11bc1b1bd2b27aa7399b7561b0430f34",
+      "currentSha256": "553f6dea0addef960e0948580ac3e83a11bc1b1bd2b27aa7399b7561b0430f34"
+    },
+    {
+      "path": "frontend/src/__tests__/dashboard-service-status.spec.ts",
+      "sameBytes": true,
+      "baselineSha256": "e9078d155c638cbf0f028120e7eb885beec1f179a7557168d49de25db8aa1ec5",
+      "currentSha256": "e9078d155c638cbf0f028120e7eb885beec1f179a7557168d49de25db8aa1ec5"
+    },
+    {
+      "path": "frontend/src/stores/auth.ts",
+      "sameBytes": true,
+      "baselineSha256": "df790958dcfd6945fcd8abd7124ccecfb23baed089946d064cf6459bc226fdce",
+      "currentSha256": "df790958dcfd6945fcd8abd7124ccecfb23baed089946d064cf6459bc226fdce"
+    }
+  ]
+}

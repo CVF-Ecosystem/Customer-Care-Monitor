@@ -1,0 +1,192 @@
+{
+  "status": "PASS",
+  "unitSuite": {
+    "command": "python -B -m unittest discover -s scripts/tests -p test_cvf_downstream_gate*.py",
+    "exitCode": 0,
+    "tests": 89,
+    "seconds": 40.054,
+    "provenance": "Root transcription of completed exec session34102 actual final output; not raw subprocess export"
+  },
+  "checks": [
+    {
+      "name": "worker-return",
+      "argv": [
+        "python",
+        "-B",
+        "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+        "run",
+        "--phase",
+        "worker-return",
+        "--project-root",
+        ".",
+        "--packet",
+        "docs/work_orders/CCMAI_RUNTIME_114_ONBOARDING_UI.md",
+        "--packet",
+        "docs/reviews/R114_RUNTIME_WORKER_RETURN_2026-10-17.md",
+        "--packet",
+        "docs/reviews/R114_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md"
+      ],
+      "startedAtUTC": "2026-10-17T07:43:14.385764+00:00",
+      "endedAtUTC": "2026-10-17T07:43:16.140014+00:00",
+      "exitCode": 0,
+      "stdout": "[PASS] CVF-DG-INST-01 PASS\r\n[PASS] CVF-DG-CONT-01 PASS\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=954013408715cb0213d37bb7d51b714f29b900f8 candidates=248 deleted=0\r\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\r\n       note: docs/work_orders/CCMAI_RUNTIME_114_ONBOARDING_UI.md: status BLOCKED_WITH_REASON is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\r\n[PASS] CVF-DG-ROLE-01 PASS\r\n       note: checked: docs/reviews/R114_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md, docs/reviews/R114_RUNTIME_WORKER_RETURN_2026-10-17.md\r\n       note: docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\r\n[PASS] CVF-DG-CLAIM-01 PASS\r\n       note: 0 explicit claim line(s) and 4 document(s) scanned\r\nRESULT: PASS phase=worker-return mandatoryControls=6 failed=0\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "reviewer-fast",
+      "argv": [
+        "python",
+        "-B",
+        "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+        "run",
+        "--phase",
+        "reviewer-fast",
+        "--project-root",
+        ".",
+        "--packet",
+        "docs/work_orders/CCMAI_RUNTIME_114_ONBOARDING_UI.md",
+        "--packet",
+        "docs/reviews/R114_RUNTIME_WORKER_RETURN_2026-10-17.md",
+        "--packet",
+        "docs/reviews/R114_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md"
+      ],
+      "startedAtUTC": "2026-10-17T07:43:14.386675+00:00",
+      "endedAtUTC": "2026-10-17T07:43:16.147475+00:00",
+      "exitCode": 0,
+      "stdout": "[PASS] CVF-DG-INST-01 PASS\r\n[PASS] CVF-DG-CONT-01 PASS\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=954013408715cb0213d37bb7d51b714f29b900f8 candidates=248 deleted=0\r\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\r\n       note: docs/work_orders/CCMAI_RUNTIME_114_ONBOARDING_UI.md: status BLOCKED_WITH_REASON is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\r\n[PASS] CVF-DG-ROUTE-01 PASS\r\n       note: checked: docs/work_orders/CCMAI_RUNTIME_114_ONBOARDING_UI.md\r\n[PASS] CVF-DG-ROLE-01 PASS\r\n       note: checked: docs/reviews/R114_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md, docs/reviews/R114_RUNTIME_WORKER_RETURN_2026-10-17.md\r\n       note: docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\r\n[PASS] CVF-DG-CLAIM-01 PASS\r\n       note: 0 explicit claim line(s) and 4 document(s) scanned\r\nRESULT: PASS phase=reviewer-fast mandatoryControls=7 failed=0\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "pre-commit",
+      "argv": [
+        "python",
+        "-B",
+        "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+        "run",
+        "--phase",
+        "pre-commit",
+        "--project-root",
+        ".",
+        "--packet",
+        "docs/work_orders/CCMAI_RUNTIME_114_ONBOARDING_UI.md",
+        "--packet",
+        "docs/reviews/R114_RUNTIME_WORKER_RETURN_2026-10-17.md",
+        "--packet",
+        "docs/reviews/R114_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md"
+      ],
+      "startedAtUTC": "2026-10-17T07:43:14.387473+00:00",
+      "endedAtUTC": "2026-10-17T07:43:16.161755+00:00",
+      "exitCode": 0,
+      "stdout": "[PASS] CVF-DG-INST-01 PASS\r\n[PASS] CVF-DG-CONT-01 PASS\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=954013408715cb0213d37bb7d51b714f29b900f8 candidates=248 deleted=0\r\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\r\n       note: docs/work_orders/CCMAI_RUNTIME_114_ONBOARDING_UI.md: status BLOCKED_WITH_REASON is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\r\n[PASS] CVF-DG-ROLE-01 PASS\r\n       note: checked: docs/reviews/R114_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md, docs/reviews/R114_RUNTIME_WORKER_RETURN_2026-10-17.md\r\n       note: docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\r\n[PASS] CVF-DG-CLAIM-01 PASS\r\n       note: 0 explicit claim line(s) and 4 document(s) scanned\r\nRESULT: PASS phase=pre-commit mandatoryControls=6 failed=0\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "legacy-preflight",
+      "argv": [
+        "python",
+        "-B",
+        "scripts/cvf_downstream_gate.py",
+        "preflight"
+      ],
+      "startedAtUTC": "2026-10-17T07:43:16.162826+00:00",
+      "endedAtUTC": "2026-10-17T07:43:33.305132+00:00",
+      "exitCode": 0,
+      "stdout": "[PASS] provenance\r\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\r\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\r\n[PASS] continuity\r\n[PASS] tranche\r\n[PASS] claims\r\n[PASS] secrets\r\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\r\n[PASS] workflows\r\n[PASS] catalog\r\nCVF downstream preflight: PASS (7/7 executed gates passed)\r\n",
+      "stderr": ""
+    }
+  ],
+  "history": [
+    {
+      "status": "FAIL",
+      "checks": [
+        {
+          "name": "worker-return",
+          "argv": [
+            "python",
+            "-B",
+            "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+            "run",
+            "--phase",
+            "worker-return",
+            "--project-root",
+            ".",
+            "--packet",
+            "docs/work_orders/CCMAI_RUNTIME_114_ONBOARDING_UI.md",
+            "--packet",
+            "docs/reviews/R114_RUNTIME_WORKER_RETURN_2026-10-17.md",
+            "--packet",
+            "docs/reviews/R114_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md"
+          ],
+          "startedAtUTC": "2026-10-17T07:42:33.073879+00:00",
+          "endedAtUTC": "2026-10-17T07:42:34.955467+00:00",
+          "exitCode": 2,
+          "stdout": "[PASS] CVF-DG-INST-01 PASS\r\n[FAIL] CVF-DG-CONT-01 FAIL\r\n       HANDOFF_NOT_ACTIVE @ CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md: active handoff status must be exactly `Status: ACTIVE`, found Status: 'CHANGES_REQUIRED'\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=954013408715cb0213d37bb7d51b714f29b900f8 candidates=248 deleted=0\r\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\r\n       note: docs/work_orders/CCMAI_RUNTIME_114_ONBOARDING_UI.md: status BLOCKED_WITH_REASON is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\r\n[PASS] CVF-DG-ROLE-01 PASS\r\n       note: checked: docs/reviews/R114_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md, docs/reviews/R114_RUNTIME_WORKER_RETURN_2026-10-17.md\r\n       note: docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\r\n[PASS] CVF-DG-CLAIM-01 PASS\r\n       note: 0 explicit claim line(s) and 4 document(s) scanned\r\nRESULT: FAIL phase=worker-return mandatoryControls=6 failed=1\r\n",
+          "stderr": ""
+        },
+        {
+          "name": "reviewer-fast",
+          "argv": [
+            "python",
+            "-B",
+            "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+            "run",
+            "--phase",
+            "reviewer-fast",
+            "--project-root",
+            ".",
+            "--packet",
+            "docs/work_orders/CCMAI_RUNTIME_114_ONBOARDING_UI.md",
+            "--packet",
+            "docs/reviews/R114_RUNTIME_WORKER_RETURN_2026-10-17.md",
+            "--packet",
+            "docs/reviews/R114_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md"
+          ],
+          "startedAtUTC": "2026-10-17T07:42:33.074765+00:00",
+          "endedAtUTC": "2026-10-17T07:42:34.976416+00:00",
+          "exitCode": 2,
+          "stdout": "[PASS] CVF-DG-INST-01 PASS\r\n[FAIL] CVF-DG-CONT-01 FAIL\r\n       HANDOFF_NOT_ACTIVE @ CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md: active handoff status must be exactly `Status: ACTIVE`, found Status: 'CHANGES_REQUIRED'\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=954013408715cb0213d37bb7d51b714f29b900f8 candidates=248 deleted=0\r\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\r\n       note: docs/work_orders/CCMAI_RUNTIME_114_ONBOARDING_UI.md: status BLOCKED_WITH_REASON is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\r\n[PASS] CVF-DG-ROUTE-01 PASS\r\n       note: checked: docs/work_orders/CCMAI_RUNTIME_114_ONBOARDING_UI.md\r\n[PASS] CVF-DG-ROLE-01 PASS\r\n       note: checked: docs/reviews/R114_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md, docs/reviews/R114_RUNTIME_WORKER_RETURN_2026-10-17.md\r\n       note: docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\r\n[PASS] CVF-DG-CLAIM-01 PASS\r\n       note: 0 explicit claim line(s) and 4 document(s) scanned\r\nRESULT: FAIL phase=reviewer-fast mandatoryControls=7 failed=1\r\n",
+          "stderr": ""
+        },
+        {
+          "name": "pre-commit",
+          "argv": [
+            "python",
+            "-B",
+            "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+            "run",
+            "--phase",
+            "pre-commit",
+            "--project-root",
+            ".",
+            "--packet",
+            "docs/work_orders/CCMAI_RUNTIME_114_ONBOARDING_UI.md",
+            "--packet",
+            "docs/reviews/R114_RUNTIME_WORKER_RETURN_2026-10-17.md",
+            "--packet",
+            "docs/reviews/R114_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md"
+          ],
+          "startedAtUTC": "2026-10-17T07:42:33.076803+00:00",
+          "endedAtUTC": "2026-10-17T07:42:34.955222+00:00",
+          "exitCode": 2,
+          "stdout": "[PASS] CVF-DG-INST-01 PASS\r\n[FAIL] CVF-DG-CONT-01 FAIL\r\n       HANDOFF_NOT_ACTIVE @ CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md: active handoff status must be exactly `Status: ACTIVE`, found Status: 'CHANGES_REQUIRED'\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=954013408715cb0213d37bb7d51b714f29b900f8 candidates=248 deleted=0\r\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\r\n       note: docs/work_orders/CCMAI_RUNTIME_114_ONBOARDING_UI.md: status BLOCKED_WITH_REASON is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\r\n[PASS] CVF-DG-ROLE-01 PASS\r\n       note: checked: docs/reviews/R114_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md, docs/reviews/R114_RUNTIME_WORKER_RETURN_2026-10-17.md\r\n       note: docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\r\n[PASS] CVF-DG-CLAIM-01 PASS\r\n       note: 0 explicit claim line(s) and 4 document(s) scanned\r\nRESULT: FAIL phase=pre-commit mandatoryControls=6 failed=1\r\n",
+          "stderr": ""
+        },
+        {
+          "name": "legacy-preflight",
+          "argv": [
+            "python",
+            "-B",
+            "scripts/cvf_downstream_gate.py",
+            "preflight"
+          ],
+          "startedAtUTC": "2026-10-17T07:42:34.977252+00:00",
+          "endedAtUTC": "2026-10-17T07:42:52.845500+00:00",
+          "exitCode": 0,
+          "stdout": "[PASS] provenance\r\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\r\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\r\n[PASS] continuity\r\n[PASS] tranche\r\n[PASS] claims\r\n[PASS] secrets\r\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\r\n[PASS] workflows\r\n[PASS] catalog\r\nCVF downstream preflight: PASS (7/7 executed gates passed)\r\n",
+          "stderr": ""
+        }
+      ],
+      "disposition": "Root corrected HANDOFF_NOT_ACTIVE lifecycle status; tranche remainsCHANGES_REQUIRED"
+    }
+  ]
+}

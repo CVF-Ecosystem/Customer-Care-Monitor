@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-B",
+    "scripts/r120_ui_supervisor.py",
+    "serve"
+  ],
+  "campaignInvocation": 1,
+  "resourceAdmissionCommit": "540de72363737f8ad11752942ceb596fc7587f2f",
+  "wrapperPid": 4772,
+  "automaticRetries": 0
+}

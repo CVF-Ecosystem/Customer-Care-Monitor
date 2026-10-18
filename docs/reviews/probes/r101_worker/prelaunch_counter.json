@@ -1,0 +1,11 @@
+{
+  "tranche": "CCMAI-RUNTIME-101",
+  "sourceCommit": "200df3e4a7bc2a326425922a5230508a4fd9b0fe",
+  "sourceHashes": "17/17_MATCH",
+  "goBuildBinaryLaunchesUsedBeforeCompile": 0,
+  "workerCeiling": 8,
+  "aggregateCeiling": 16,
+  "ownedFixturesBeforeCompile": 0,
+  "providerCalls": 0,
+  "mockProviderCalls": 0
+}

@@ -1,0 +1,15 @@
+{
+  "cwd": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+  "counterAfter": {
+    "aggregateGo": 2,
+    "workerGo": 2
+  },
+  "command": "go -C backend test -c -o ../.cvf/runtime/r102_worker/r102_handlers_r2.test.exe ./api/handlers",
+  "GOPROXY": "off",
+  "GOSUMDB": "off",
+  "GOTOOLCHAIN": "local",
+  "counterBefore": {
+    "aggregateGo": 1,
+    "workerGo": 1
+  }
+}

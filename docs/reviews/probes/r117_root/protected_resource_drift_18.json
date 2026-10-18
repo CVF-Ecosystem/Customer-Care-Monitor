@@ -1,0 +1,33 @@
+{
+  "volumes": [],
+  "networks": [
+    {
+      "before": {
+        "CreatedAt": "2026-10-17 12:42:04.621654607 +0000 UTC",
+        "Driver": "bridge",
+        "ID": "0d9f7d2dba52be2e98f8d20ade28956797e6950fecb9e6fea798e6d497d1d271",
+        "IPv4": "true",
+        "IPv6": "false",
+        "Internal": "false",
+        "Labels": "",
+        "Name": "bridge",
+        "Scope": "local"
+      },
+      "after": null
+    },
+    {
+      "before": null,
+      "after": {
+        "CreatedAt": "2026-10-17 17:48:16.139227238 +0000 UTC",
+        "Driver": "bridge",
+        "ID": "ee9a01565a47c6d046857ae6534a688143034693f7b379faeacd6a94ab97cbd2",
+        "IPv4": "true",
+        "IPv6": "false",
+        "Internal": "false",
+        "Labels": "",
+        "Name": "bridge",
+        "Scope": "local"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "observedAt": "2026-10-16T07:44:19.317Z",
+  "tool": "mcp__cua_repl.js",
+  "tabId": "1",
+  "url": "http://127.0.0.1:3011/login",
+  "action": {
+    "case": "B01",
+    "sequence": 1,
+    "actor": "fresh synthetic owner a7ea085c-62c9-4819-976c-286a350a2881@example.invalid",
+    "action": "submit login form using the R101SyntheticOnly password specified in the work order",
+    "submitted": true
+  },
+  "submissionCount": 1,
+  "state": "Browser tab: 1, Title: \"Customer Care Monitor AI\", URL: \"http://127.0.0.1:3011/login\".\n0 AXWebArea Customer Care Monitor AI, URL: 127.0.0.1:3011/login\n\t1 container\n\t\t2 heading Customer Care Monitor AI, Value: 1\n\t\t\t3 text Customer Care Monitor AI\n\t\t4 container Đăng nhập hệ thống\n\t\t\t5 heading Đăng nhập hệ thống, Value: 2\n\t\t\t\t6 text Đăng nhập hệ thống\n\t\t\t7 container\n\t\t\t\t19 text field (settable) Email, Value: <redacted>\n\t\t\t\t20 text Email\n\t\t\t\t21 text field (settable) Mật khẩu, Value: <redacted>\n\t\t\t\t14 button Mật khẩu appended action\n\t\t\t\t\t22 text 󰈈\n\t\t\t\t23 text Mật khẩu\n\t\t\t\t16 button Đăng nhập\n\t\t17 pop up button (collapsed) Tiếng Việt, Secondary Actions: Expand\n\t\t\t18 text Tiếng Việt\n\nThe focused UI element is 16 button Đăng nhập",
+  "screenshot": "observations/01_b01_owner_login.png"
+}

@@ -1,0 +1,19 @@
+{
+  "browserTransferLimits": "not applicable; browser download is a separate action",
+  "bytes": 1989716,
+  "metadata": {
+    "bytes": 2684,
+    "final": "https://registry.npmjs.org/playwright-core/1.57.0",
+    "requested": "https://registry.npmjs.org/playwright-core/1.57.0",
+    "sha256": "85a54c9a554939bf1834b3a61e656aa5275b6cfece5034801b43f8ba19fa8bec",
+    "status": 200
+  },
+  "tarball": {
+    "bytes": 1987032,
+    "final": "https://registry.npmjs.org/playwright-core/-/playwright-core-1.57.0.tgz",
+    "requested": "https://registry.npmjs.org/playwright-core/-/playwright-core-1.57.0.tgz",
+    "sha256": "8d2942f575e1b772bae8bd2c4d71f9055bf6581bc79d7001b2b277335b89ef2a",
+    "status": 200
+  },
+  "tarballSRI": "sha512-agTcKlMw/mjBWOnD6kFZttAAGHgi/Nw0CZ2o6JqWSbMlI219lAFLZZCyqByTsvVAJq5XA5H8cA6PrvBRpBWEuQ=="
+}

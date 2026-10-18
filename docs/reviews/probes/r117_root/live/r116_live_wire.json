@@ -1,0 +1,92 @@
+{
+  "active_proposal_id": "a4a72a28-5c6a-47f0-b59e-0c68ad5c30b9",
+  "actor_id": "5e67d9a2-9c94-4676-8550-72384062c2d2",
+  "adapter_provider": "openai",
+  "admission_sha256": "e9f6ea72fa7fa92a36b7bc8c43acb9fa1b4deaee0c633df47db09de3677fb332",
+  "attempt_count": 1,
+  "attempts": 1,
+  "budget_cap": 1,
+  "budget_consumed": 1,
+  "case_id": "b4f03ea9-96be-4ba1-8d7b-574d100a8ea0",
+  "case_version_before_action": 4,
+  "config_ref": "r116-alibaba-b22a15b6e8aa4113c2816acae6935a84d052a2d7b81db734ccdc4f5be81b4f8f",
+  "endpoint_sha256": "b22a15b6e8aa4113c2816acae6935a84d052a2d7b81db734ccdc4f5be81b4f8f",
+  "event_count_before_action": 3,
+  "execution_id": "e13659d3-8c66-4a79-a1e2-fa090cf8c934",
+  "grant_evidence_ref": "CCMAI-RUNTIME-117-OWNER-NEW1-20261017:e9f6ea72fa7fa92a36b7bc8c43acb9fa1b4deaee0c633df47db09de3677fb332",
+  "grant_id": "fc1ac4a8-bbe5-4f94-87e2-0ea59187e16c",
+  "http_status": 200,
+  "human_confirm_status": 200,
+  "input_tokens": 340,
+  "job_id": "d24fb655-0936-4491-abf0-870e2f48b8fd",
+  "original_event_count": 2,
+  "original_history_equal": true,
+  "original_receipt_code": "WAIT_DATA",
+  "original_receipt_id": "3f44453f-7d31-45f2-8b02-cd11a8688fa4",
+  "original_request_status": "AWAITING_EXECUTION_AUTHORITY",
+  "original_revision_digest": "af7f4bb90f90cf957043ba11bdbf9ea54328369638f29c9fddf464b19359f573",
+  "original_revision_id": "da41dc27-128b-4dfa-9dc9-16801dd18085",
+  "original_run_id": "704ed46c-31ef-42cf-b693-c5052dada8f7",
+  "original_run_status": "error",
+  "original_snapshot_digest": "44e51e6c76c71a0044363e02fb5d684f700e9a1fee590be04a4aea5086ac7f1e",
+  "original_snapshot_id": "7d1fceba-cc88-4c5b-b023-dbec3323b514",
+  "output_tokens": 297,
+  "owner_grant": "CCMAI-RUNTIME-117-OWNER-NEW1-20261017",
+  "physical_provider": "alibaba_maas",
+  "prompt_version": "r116-alibaba-v1",
+  "proposal_count": 1,
+  "receipt_count": 1,
+  "request": {
+    "enable_thinking": false,
+    "max_completion_tokens": 768,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Chỉ phân tích hội thoại giả lập này. Trả về đúng một đối tượng JSON gọn, không dùng markdown. Các trường bắt buộc: schema, conversation_id, snapshot_digest, kind, explanation, next_action, evidence_refs. schema phải là ccma.intervention.v1; kind là complaint. Dùng đúng conversation_id, snapshot_digest và message_id trong chỉ dẫn kèm theo. evidence_refs có đúng một phần tử với message_id và quote; quote là đoạn trích chính xác từ lời khách, chứa 'khiếu nại'. Viết explanation và next_action bằng tiếng Việt dễ hiểu cho nhân viên chăm sóc khách hàng. Không bịa thông tin.\nReturn one JSON object with schema ccma.intervention.v1, conversation_id b9fe1ead-fa7e-4bc7-ae5c-09f21ccca44f, snapshot_digest af7f4bb90f90cf957043ba11bdbf9ea54328369638f29c9fddf464b19359f573, kind complaint or waiting, explanation, next_action, and evidence_refs with canonical message_id and exact quote."
+      },
+      {
+        "role": "user",
+        "content": "[2026-10-18T01:08:05+07:00 | msg:6bb59ec4-bcc2-4748-bcf6-d7953c796c8a] customer (customer): Tôi khiếu nại và chờ đơn hàng\n"
+      }
+    ],
+    "model": "qwen3.7-flash"
+  },
+  "request_id": "883d560a-2dca-4afc-a3d8-a962856c8916",
+  "response": {
+    "id": "chatcmpl-58889eaa-dae4-90d7-a409-6b50ee998858",
+    "object": "chat.completion",
+    "created": 1792260486,
+    "model": "qwen3.7-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"schema\": \"ccma.intervention.v1\",\n  \"conversation_id\": \"b9fe1ead-fa7e-4bc7-ae5c-09f21ccca44f\",\n  \"snapshot_digest\": \"af7f4bb90f90cf957043ba11bdbf9ea54328369638f29c9fddf464b19359f573\",\n  \"kind\": \"complaint\",\n  \"explanation\": \"Khách hàng đã gửi tin nhắn trực tiếp nêu rõ việc 'khiếu nại' và yêu cầu theo dõi đơn hàng. Đây là một khiếu nại cần được xử lý ngay để xác minh tình trạng đơn hàng và giải quyết vấn đề cho khách.\",\n  \"next_action\": \"Kiểm tra thông tin đơn hàng liên quan đến cuộc trò chuyện này, xác minh nguyên nhân gây khiếu nại và phản hồi lại khách hàng với hướng giải quyết cụ thể hoặc tiến độ xử lý.\",\n  \"evidence_refs\": [\n    {\n      \"message_id\": \"6bb59ec4-bcc2-4748-bcf6-d7953c796c8a\",\n      \"quote\": \"Tôi khiếu nại và chờ đơn hàng\"\n    }\n  ]\n}"
+        },
+        "finish_reason": "stop",
+        "logprobs": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 340,
+      "total_tokens": 637,
+      "completion_tokens": 297,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 340
+      }
+    }
+  },
+  "response_model": "qwen3.7-flash",
+  "revision_id": "da41dc27-128b-4dfa-9dc9-16801dd18085",
+  "run_count": 1,
+  "run_id": "2a8716d3-2fa7-47ac-aadd-688ff4495c43",
+  "snapshot_count": 1,
+  "snapshot_id": "ad1682db-8bd8-4a02-a657-8661f9724fac",
+  "source_digest": "af7f4bb90f90cf957043ba11bdbf9ea54328369638f29c9fddf464b19359f573",
+  "state": "PUBLISHED",
+  "tenant_id": "a75842dd-fe63-4a7c-aa2a-db551cfa4fa8",
+  "terminal_code": "PROPOSAL_VALID",
+  "usage_state": "KNOWN"
+}

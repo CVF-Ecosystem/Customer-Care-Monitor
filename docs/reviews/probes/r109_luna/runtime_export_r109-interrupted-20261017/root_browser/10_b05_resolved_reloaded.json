@@ -1,0 +1,9 @@
+{
+  "observedAtUTC": "2026-10-16T17:19:24.750Z",
+  "tool": "mcp__cua_repl",
+  "tabId": "2",
+  "url": "http://127.0.0.1:3011/4b44be84-86fc-47ef-a018-e515b5ae74ea/intervention-cases/632e7ad1-ca55-4f3f-96a0-40d4223d9116",
+  "operatorRecordedAction": "Reload preserved resolved update4 and exact outcome",
+  "dom": "10_b05_resolved_reloaded.dom.txt",
+  "screenshot": "10_b05_resolved_reloaded.png"
+}

@@ -1,0 +1,23 @@
+{
+  "fixtureBeforeStatus": "running",
+  "fixtureFinal": {
+    "finalContainerId": "e1555e03d69360e1cd7729afd9e52856443f5172d76454653beec981a7d6477a",
+    "finalStatus": "exited",
+    "identityVerifiedFromStructuredInspection": true,
+    "networkId": "35c3959ac41517050defad05cbad7a08717b24c8879683e25baf3e2702625e98",
+    "stopCommandNeeded": true,
+    "volumeUsers": [
+      "e1555e03d69360e1cd7729afd9e52856443f5172d76454653beec981a7d6477a"
+    ]
+  },
+  "newStarts": 0,
+  "newStops": 1,
+  "observedAtUTC": "2026-10-16T17:32:26.783876+00:00",
+  "observer": "Codex /root ORCHESTRATOR, exact-owned-resource cleanup",
+  "oldPids": "Never terminated by PID; observed18728 is conhost,20848 absent",
+  "originalCampaign": "Preserved without rewriting receipts",
+  "originalSupervisorCleanup": "NOT_OBSERVED",
+  "protectedMatchesOriginalCampaign": true,
+  "protectedUnchangedByRootCleanup": true,
+  "result": "PASS"
+}

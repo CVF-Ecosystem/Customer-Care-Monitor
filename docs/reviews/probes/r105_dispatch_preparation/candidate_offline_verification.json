@@ -1,0 +1,37 @@
+{
+  "scope": "Offline source/software checks only; no Docker/SQL/backend/Vite/browser/provider launch",
+  "results": [
+    {
+      "name": "candidate_units",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "unittest",
+        "docs/reviews/probes/r105_root/test_r105_ui_runner.py",
+        "-v"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "template_syntax",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--check",
+        "--input-type=module"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "Root_actual_read_only_input_verification",
+      "frontendFiles": 137,
+      "historicalGitRows": 17,
+      "binarySha256": "4c7575e180dd198d995bfe09bdc45061740a987be8ec0765f02b203e1c251f31"
+    }
+  ],
+  "candidateHashes": {
+    "docs/reviews/probes/r105_root/r105_ui_runner.py": "6bf35415bfa564da19abde61dcd1a187d40ced710d94c2398875c1df86409bde",
+    "docs/reviews/probes/r105_root/test_r105_ui_runner.py": "1cebf39ddfbe75c20c72753441bd75ad61697257751977b21fcf5d9429b9ca6d",
+    "docs/reviews/probes/r105_root/r105_vite_config.mjs.template": "86aa4af32624314323e5e6b3b42046f60e564ac3878f54a17cf214fbdfc8050b"
+  }
+}

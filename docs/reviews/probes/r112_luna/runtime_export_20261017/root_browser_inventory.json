@@ -1,0 +1,12 @@
+{
+  "copiedFiles": [],
+  "observedAtUTC": "2026-10-17T01:39:57.645354+00:00",
+  "productBrowserCases": "B07/B08/B09 NOT_RUN",
+  "productBrowserPasses": 0,
+  "rootReportedProductTabs": 0,
+  "rootReportedSource": "Root message during the R112 runtime interruption; Luna did not independently use or inspect CUA inventory.",
+  "sourceDirectory": "docs/reviews/probes/r112_root/browser",
+  "sourceDirectoryWasEmptyAtCapture": true,
+  "workerBrowserCalls": 0,
+  "workerBrowserRole": "NONE"
+}

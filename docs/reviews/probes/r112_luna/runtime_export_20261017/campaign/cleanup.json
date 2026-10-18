@@ -1,0 +1,58 @@
+{
+  "elapsedSeconds": 33.425,
+  "errors": [
+    "post-campaign protected inventory: Hold",
+    "owned fixture final state was not verified"
+  ],
+  "fixtureCleanup": {
+    "startAttempted": false,
+    "verified": false
+  },
+  "fixtureStartAttempted": false,
+  "ownedProcessHandleCleanupChecked": true,
+  "ownedProcesses": [
+    {
+      "exitCode": 1,
+      "failureType": null,
+      "label": "target_inspect",
+      "ownedChildTreeTermination": {
+        "attempted": true,
+        "directHandleTerminationAttempted": true,
+        "exitCode": 1,
+        "ownedChildTreeTerminationAttempted": true,
+        "ownedChildTreeTerminationExitCode": 0,
+        "pid": 20620,
+        "stillRunning": false
+      },
+      "pid": 20620,
+      "timedOut": true
+    },
+    {
+      "exitCode": 1,
+      "failureType": null,
+      "label": "all_container_ids",
+      "ownedChildTreeTermination": {
+        "attempted": true,
+        "directHandleTerminationAttempted": true,
+        "exitCode": 1,
+        "ownedChildTreeTerminationAttempted": true,
+        "ownedChildTreeTerminationExitCode": 0,
+        "pid": 7692,
+        "stillRunning": false
+      },
+      "pid": 7692,
+      "timedOut": true
+    }
+  ],
+  "protectedInventoryUnchanged": null,
+  "readerStates": [],
+  "uiPostCounts": {
+    "blockedByLocalHarness": 0,
+    "budgetCounted": 0,
+    "exceeded": false,
+    "forwarded": 0,
+    "ginPostObserved": 0,
+    "remaining": 8,
+    "submitted": 0
+  }
+}

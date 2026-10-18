@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-B",
+    "scripts/r120_ui_supervisor.py",
+    "stop"
+  ],
+  "stopRequestInvocation": 1,
+  "requestedAt": 1792283154.875243
+}

@@ -1,6 +1,6 @@
 # Alibaba synthetic live — R093
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 <!-- CVF-GC020-MATERIAL-SHA:START -->
 R093 actual reviewed material: `bf229b5e8d8a44dafe0f17afa09e69b088859d36`; returned positive evidence-reference failure, request cap2/2 exhausted, FREEZE OPEN. Seed7639e46/dispatch03e95ce preserved; no app-governance/CI/deploy claim.
@@ -47,3 +47,7 @@ Initial outcome synchronization failed legacy continuity because next move used 
 
 ## Owner-authorized branch publication
 Owner explicitly requested GitHub push after the local return. Root declared temporary COMMIT_STEWARD for publication, rehydrated continuity and verified doctor27/27, legacy7/7 and pinned exact-range gates. Ordinary branch codex/ccma-product-m1 published at `7b14533bcfb54d10f192145b455b9babad79af2a`; remote readback verified. Receipt: docs/reviews/probes/r093_alibaba_live/publication.json. This fresh owner authorization covers Root branch export only; historical immutable worker seeds and prohibited effects are unchanged. No force/main/merge/deploy/new provider effect or acceptance change. Root returns to existing REVIEW/ORCHESTRATOR/SESSION_SYNC responsibilities; next M2 move and parked accounts unchanged.
+
+## Pointer-only successor — 2026-10-14
+
+R094 is current source/local continuation; R093 returned evidence, cap2/2 and authority are unchanged.

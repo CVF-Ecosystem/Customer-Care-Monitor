@@ -1,0 +1,16 @@
+{
+  "recordedAtUTC": "2026-10-17T01:24:44.247988+00:00",
+  "tool": "mcp__cua_repl.js",
+  "browser": "iab2",
+  "origin": "http://127.0.0.1:62371/",
+  "result": "HTTP_CLICK_CAPTURE_PASS",
+  "before": "Chưa kiểm tra",
+  "after": "Đã kết nối",
+  "ownedTabClosed": true,
+  "healthServerExitCode": 0,
+  "screenshot": "after_click.png",
+  "cachePath": "NOT_OBSERVED",
+  "driverVersion": "NOT_OBSERVED",
+  "productRuntime": "NOT_RUN",
+  "representation": "Operator transcription of actual documented calls/results; raw tool conversation and original screenshot retained"
+}

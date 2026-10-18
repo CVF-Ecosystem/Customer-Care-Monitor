@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "-NoProfile",
+    "-NonInteractive",
+    "-Command",
+    "$ErrorActionPreference='Stop'; $matches=@(Get-NetTCPConnection -State Listen -ErrorAction Stop | Where-Object { $_.LocalPort -eq 56024 }); ConvertTo-Json -InputObject @($matches | Select-Object LocalAddress,LocalPort,State,OwningProcess) -Compress"
+  ],
+  "scope": "READ_ONLY_EXACT_OLD_PORT_LISTENER_OBSERVATION",
+  "timeoutSeconds": 15
+}

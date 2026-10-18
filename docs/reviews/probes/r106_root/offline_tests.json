@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "docs/reviews/probes/r106_root",
+    "-p",
+    "test_r106_ui_runner.py",
+    "-v"
+  ],
+  "exitCode": 0,
+  "elapsedSeconds": 1.1731938000011723,
+  "recordedAtUTC": "2026-10-16T07:09:41.835375+00:00"
+}

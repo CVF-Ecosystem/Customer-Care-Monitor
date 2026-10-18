@@ -1,0 +1,16 @@
+{
+  "scope": "Document validation only",
+  "attempts": [
+    {
+      "check": "legacy preflight",
+      "result": "FAIL",
+      "finding": "state.nextAllowedMove does not mention the active tranche CCMAI-RUNTIME-103",
+      "repair": "Prepended full active tranche ID in all synchronized next-move fields; no runtime effects"
+    },
+    {
+      "check": "profile pre-dispatch with draft in planning directory",
+      "result": "PASS_STATIC_ONLY",
+      "applicability": "NOT_APPLICABLE_WITH_REASON: no candidate work-order packet in scope; closeability NOT checked"
+    }
+  ]
+}

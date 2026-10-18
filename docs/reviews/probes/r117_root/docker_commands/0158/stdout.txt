@@ -1,0 +1,16 @@
+id
+tenant_id
+case_id
+case_version
+actor_id
+action
+reason
+proposal_id
+data_revision_id
+rerun_request_id
+snapshot_id
+snapshot_digest
+source_status
+before
+after
+created_at

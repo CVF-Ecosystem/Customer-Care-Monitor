@@ -1,0 +1,61 @@
+{
+  "observedAtUTC": "2026-10-16T12:03:53.515577+00:00",
+  "head": "519e47aa3b3136a8736e48643e3d512c5c29c75b",
+  "historicalTarget": "200df3e4a7bc2a326425922a5230508a4fd9b0fe",
+  "sourceComparisons": [
+    {
+      "path": "backend/engine/intervention_m3.go",
+      "historicalBlobSha256": "4b9ea8114e28285d2300b1c8b8db08589d1289cd5787231436268e504bd20dd6",
+      "headBlobSha256": "4b9ea8114e28285d2300b1c8b8db08589d1289cd5787231436268e504bd20dd6",
+      "identical": true
+    },
+    {
+      "path": "backend/api/handlers/intervention_m3.go",
+      "historicalBlobSha256": "e705ff907d408a3e0c3224e9284586bd61f86aad850a57451b45b75dc6ba038c",
+      "headBlobSha256": "e705ff907d408a3e0c3224e9284586bd61f86aad850a57451b45b75dc6ba038c",
+      "identical": true
+    },
+    {
+      "path": "backend/api/handlers/intervention_m3_test.go",
+      "historicalBlobSha256": "affe89cda3cdab1c0b3b8f365a6cce953977b0277ae153da5593953b5e7687bc",
+      "headBlobSha256": "affe89cda3cdab1c0b3b8f365a6cce953977b0277ae153da5593953b5e7687bc",
+      "identical": true
+    },
+    {
+      "path": "backend/db/models/intervention.go",
+      "historicalBlobSha256": "ad81997042e9f9815aded39c1d772068c9286d82b7dfec7a5021d7177addac63",
+      "headBlobSha256": "2d4a44f7026061f303cc2c2ab7805d7a045d18294935be9af22736d20e691c3b",
+      "identical": false
+    }
+  ],
+  "backendLog": "docs/reviews/probes/r107_cua/runtime/backend.stdout.log",
+  "backendLogSha256": "814ccc34a5f1530af1c0f7feaa807beefca5abf61b8d1ca6fda6d33d7c2f9975",
+  "casePosts": [
+    {
+      "line": 160,
+      "text": "[GIN] 2026/10/16 - 14:47:42 | 200 |  39.19ms |       127.0.0.1 | POST     \"/api/v1/tenants/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases/35b4e3be-6b17-4598-a45a-7b8003039d0f/actions\""
+    },
+    {
+      "line": 162,
+      "text": "[GIN] 2026/10/16 - 14:48:05 | 409 |  21.22ms |       127.0.0.1 | POST     \"/api/v1/tenants/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases/35b4e3be-6b17-4598-a45a-7b8003039d0f/actions\""
+    },
+    {
+      "line": 173,
+      "text": "[GIN] 2026/10/16 - 14:48:55 | 200 |  40.26ms |       127.0.0.1 | POST     \"/api/v1/tenants/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases/35b4e3be-6b17-4598-a45a-7b8003039d0f/actions\""
+    },
+    {
+      "line": 184,
+      "text": "[GIN] 2026/10/16 - 14:49:19 | 200 |   36.8ms |       127.0.0.1 | POST     \"/api/v1/tenants/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases/35b4e3be-6b17-4598-a45a-7b8003039d0f/actions\""
+    },
+    {
+      "line": 207,
+      "text": "[GIN] 2026/10/16 - 14:49:55 | 503 |  11.79ms |       127.0.0.1 | POST     \"/api/v1/tenants/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases/35b4e3be-6b17-4598-a45a-7b8003039d0f/actions\""
+    }
+  ],
+  "inspectionOnly": true,
+  "runtimeStarts": 0,
+  "tests": 0,
+  "providerCalls": 0,
+  "rootCause": "NOT_ESTABLISHED",
+  "sourceInterpretation": "400 validation;409 conflict/update failure;503 explicit unavailable or unclassified transaction/commit failure. Saved log has no raw SQL error."
+}

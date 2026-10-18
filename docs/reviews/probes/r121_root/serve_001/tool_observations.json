@@ -1,0 +1,24 @@
+{
+  "initial": {
+    "chunk_id": "3bb4ee",
+    "wall_time_seconds": 10.0082263,
+    "session_id": 30261,
+    "original_token_count": 9,
+    "output": "FOREGROUND_HELD serve pid=25580\r\n"
+  },
+  "latest": {
+    "chunk_id": "edd56c",
+    "wall_time_seconds": 5.0111583,
+    "session_id": 30261,
+    "original_token_count": 0,
+    "output": ""
+  },
+  "finalObserved": {
+    "chunk_id": "ae2b3f",
+    "wall_time_seconds": 0.0000199,
+    "exit_code": 1,
+    "original_token_count": 7,
+    "output": "FOREGROUND_EXIT serve 1\r\n"
+  },
+  "qualification": "Final is verbatim original write_stdin result observed after compaction; initial/latest retained in orchestration store."
+}

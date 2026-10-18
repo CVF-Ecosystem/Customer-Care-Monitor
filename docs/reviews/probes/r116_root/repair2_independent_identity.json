@@ -1,0 +1,8 @@
+{
+  "matchedFiles": 16,
+  "onlyDeltaFromRepair1": "backend/api/handlers/intervention_waitdata_executor_r116_test.go",
+  "D05": "PUBLISHED200; held RESPONSE_RECORDED202; remaining assertions retained",
+  "compileExit": 0,
+  "sourceDrift": 0,
+  "archiveSha256": "4b7b36553bec310670b6695e4b17b1abbb54fc4a4c97ed45a9613f3745dc9e5d"
+}

@@ -1,0 +1,5 @@
+=== RUN   TestR102PayloadHashAndBounds
+--- PASS: TestR102PayloadHashAndBounds (0.00s)
+=== RUN   TestR102ContentCapPrecedesTranscriptBuild
+--- PASS: TestR102ContentCapPrecedesTranscriptBuild (0.00s)
+PASS

@@ -1,0 +1,13 @@
+{
+  "recordedAt": "2026-10-15T13:57:56.980988+00:00",
+  "component": "Codex computer-use @oai/sky",
+  "initialize": "PASS",
+  "listAppsAttempts": 3,
+  "recovery": "initial -> retry -> kernel reset + reinitialize -> final retry",
+  "result": "BLOCKED_NATIVE_PIPE_UNAVAILABLE",
+  "rawError": "Computer Use native pipe is unavailable: failed to connect native pipe: The system cannot find the file specified. (os error 2)",
+  "windowsAutomation": "NOT_RUN",
+  "applicationUI": "NOT_RUN",
+  "relationToDriver157": "Independent component; driver repair does not establish native pipe availability",
+  "userAppsKilledOrRestarted": false
+}

@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "providerCall": true,
+  "mock": false,
+  "synthetic": false,
+  "providerResponseOrigin": "REAL_PROVIDER_RESPONSE",
+  "dataScope": "SYNTHETIC_VIETNAMESE_FIXTURE_ONLY",
+  "provider": "alibaba_maas",
+  "adapterProvider": "openai",
+  "model": "qwen3.7-flash",
+  "request": {
+    "enable_thinking": false,
+    "max_completion_tokens": 768,
+    "messages": [
+      {
+        "role": "system",
+        "content": "Chỉ phân tích hội thoại giả lập này. Trả về đúng một đối tượng JSON gọn, không dùng markdown. Các trường bắt buộc: schema, conversation_id, snapshot_digest, kind, explanation, next_action, evidence_refs. schema phải là ccma.intervention.v1; kind là complaint. Dùng đúng conversation_id, snapshot_digest và message_id trong chỉ dẫn kèm theo. evidence_refs có đúng một phần tử với message_id và quote; quote là đoạn trích chính xác từ lời khách, chứa 'khiếu nại'. Viết explanation và next_action bằng tiếng Việt dễ hiểu cho nhân viên chăm sóc khách hàng. Không bịa thông tin.\nReturn one JSON object with schema ccma.intervention.v1, conversation_id b9fe1ead-fa7e-4bc7-ae5c-09f21ccca44f, snapshot_digest af7f4bb90f90cf957043ba11bdbf9ea54328369638f29c9fddf464b19359f573, kind complaint or waiting, explanation, next_action, and evidence_refs with canonical message_id and exact quote."
+      },
+      {
+        "role": "user",
+        "content": "[2026-10-18T01:08:05+07:00 | msg:6bb59ec4-bcc2-4748-bcf6-d7953c796c8a] customer (customer): Tôi khiếu nại và chờ đơn hàng\n"
+      }
+    ],
+    "model": "qwen3.7-flash"
+  },
+  "response": {
+    "id": "chatcmpl-58889eaa-dae4-90d7-a409-6b50ee998858",
+    "object": "chat.completion",
+    "created": 1792260486,
+    "model": "qwen3.7-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"schema\": \"ccma.intervention.v1\",\n  \"conversation_id\": \"b9fe1ead-fa7e-4bc7-ae5c-09f21ccca44f\",\n  \"snapshot_digest\": \"af7f4bb90f90cf957043ba11bdbf9ea54328369638f29c9fddf464b19359f573\",\n  \"kind\": \"complaint\",\n  \"explanation\": \"Khách hàng đã gửi tin nhắn trực tiếp nêu rõ việc 'khiếu nại' và yêu cầu theo dõi đơn hàng. Đây là một khiếu nại cần được xử lý ngay để xác minh tình trạng đơn hàng và giải quyết vấn đề cho khách.\",\n  \"next_action\": \"Kiểm tra thông tin đơn hàng liên quan đến cuộc trò chuyện này, xác minh nguyên nhân gây khiếu nại và phản hồi lại khách hàng với hướng giải quyết cụ thể hoặc tiến độ xử lý.\",\n  \"evidence_refs\": [\n    {\n      \"message_id\": \"6bb59ec4-bcc2-4748-bcf6-d7953c796c8a\",\n      \"quote\": \"Tôi khiếu nại và chờ đơn hàng\"\n    }\n  ]\n}"
+        },
+        "finish_reason": "stop",
+        "logprobs": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 340,
+      "total_tokens": 637,
+      "completion_tokens": 297,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 340
+      }
+    }
+  },
+  "ownerGrant": "CCMAI-RUNTIME-117-OWNER-NEW1-20261017",
+  "admissionSha256": "e9f6ea72fa7fa92a36b7bc8c43acb9fa1b4deaee0c633df47db09de3677fb332",
+  "wireReceipt": "docs/reviews/probes/r117_root/live/r116_live_wire.json",
+  "wireReceiptSha256": "69bb136a2967f7c538e3eed8e8ab04cefaf7262654ad2cf36fff1d9a22e1b632",
+  "physicalCalls": 1,
+  "inputTokens": 340,
+  "outputTokens": 297,
+  "claimScope": "One source/grant-bound synthetic WAIT_DATA execution and proposal publication with faithful real usage; native failure/recovery tests remain software-only, no wholeCVF/fullM2/M3/product readiness claim"
+}

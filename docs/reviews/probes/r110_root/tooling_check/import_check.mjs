@@ -1,0 +1,1 @@
+import cfg from './rendered.config.mjs'; if(cfg.envDir!==false||cfg.server.host!=='127.0.0.1'||cfg.server.port!==3011||cfg.server.strictPort!==true)throw Error('configuration binding mismatch'); console.log(JSON.stringify({envDir:cfg.envDir,host:cfg.server.host,port:cfg.server.port,strictPort:cfg.server.strictPort,plugins:cfg.plugins.length,proxy:Object.keys(cfg.server.proxy)}));

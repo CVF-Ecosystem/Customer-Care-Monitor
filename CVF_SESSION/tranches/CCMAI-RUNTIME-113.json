@@ -1,0 +1,121 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-113",
+  "authorityKind": "DISPATCHER_OWNED_FRESH_REMAINING_UI",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "/root/r113_readiness",
+    "reviewer": "Codex /root",
+    "commitSteward": "Codex /root",
+    "closer": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/reviews/R113_*.md",
+    "docs/reviews/probes/r113_root/**",
+    "docs/reviews/probes/r113_luna/**",
+    ".cvf/runtime/r113_workflow/**",
+    "docs/work_orders/CCMAI_RUNTIME_113_REMAINING_UI.md",
+    "docs/reviews/probes/resume_bddda27f_20261017T023257Z/**"
+  ],
+  "prohibitedEffects": [
+    "provider/mock-governance/secret/customer/channel access",
+    "production backend/Core/gate/dependency/global config changes",
+    "modify old seeds/budgets/receipts/source/binary or call R108 again",
+    "Docker create/recreate/pull/prune/compose; mutate R102/user app/DB",
+    "new Go compile, alternate browser automation, policy bypass",
+    "worker commit/seed edit/self-review/push/deploy/FREEZE"
+  ],
+  "executionBudget": {
+    "goCompiles": 0,
+    "frontendTestInvocations": 0,
+    "frontendTypecheckInvocations": 0,
+    "existingFixtureStarts": 1,
+    "nativeInvocations": 0,
+    "nativeActionPosts": 0,
+    "backendListenerLaunches": 1,
+    "viteLaunches": 1,
+    "productTabs": 3,
+    "uiPostSubmissionsIncludingAuth": 8,
+    "campaignSeconds": 1200,
+    "runtimeRetries": 0,
+    "newFixtures": 0,
+    "providerCalls": 0,
+    "mockCalls": 0
+  },
+  "worker": "/root/r113_readiness",
+  "claimScope": "Bounded local synthetic UI B07 reader controls and B08 actual390x844 plus visited current wording; B09 unsupported NOT_RUN; no full product/governance acceptance",
+  "ownerAuthority": "Owner 2026-10-17 resumes from bddda27f, authorizes finite fresh UI evidence authority after actual integrated browser and Docker capability checks; Root authority/independent review/commit, Luna Max worker. No push/merge/deploy/provider/secret authority.",
+  "fixture": {
+    "container": "e1555e03d69360e1cd7729afd9e52856443f5172d76454653beec981a7d6477a",
+    "image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "volume": "ccmai-r101-review-final-20261015",
+    "network": "35c3959ac41517050defad05cbad7a08717b24c8879683e25baf3e2702625e98",
+    "label": "CCMAI-RUNTIME-101",
+    "db": "r101_fixture"
+  },
+  "dockerExe": "C:/Users/tiennm/AppData/Local/Programs/DockerDesktop/resources/bin/docker.exe",
+  "dockerHost": "npipe:////./pipe/dockerDesktopLinuxEngine",
+  "dockerSha256": "6c699720bb9523dedb9eb5d22a49951ea9210dbdb1314a3554029eee9be76896",
+  "entryDecision": "New R113: R112 sole attempt spent and preserved CHANGES_REQUIRED. Fresh read-only Docker server/version and exact stopped/exclusive fixture/protected inventory PASS; integrated browser blank tab works, viewport control advertised. Only B07/B08/current wording; B09 NOT_RUN without supported offline control. No old budget reuse or lifecycle replay; inherit UIa28cdd0a and exact R110 qualification. Seed commit before binding BUILD; separate exact admission before sole runtime.",
+  "compiledBackend": {
+    "path": ".cvf/runtime/r108_native/campaign/r108_handlers.test.exe",
+    "sha256": "cb73ee13e0369cca75ea276cc668f30c3ced42cead5f62c56d68f3c1eaa66f93",
+    "bytes": 58031616,
+    "reviewedSourceCommit": "a4b1d490676b5ef9f165446a2aca33f10adb39df",
+    "compileExecutionHead": "b4a53d4b9fb63c3073b880eb9c7e3e8e6510eafa",
+    "requireNoBackendDelta": true
+  },
+  "nodeExe": "C:/Program Files/nodejs/node.exe",
+  "nodeSha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+  "browserOperator": "Codex /root",
+  "browserTool": "mcp__cua_repl",
+  "browserSurface": "iab",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
+  "baseCommit": "7644ee02ca60fb8732e209cb313ea32a26ec4491",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_113_REMAINING_UI.md",
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
+  "buildCommit": "0622d185bfba8eae960138b57acd9a82f34842fd",
+  "reviewEvidence": [
+    "docs/reviews/R113_INDEPENDENT_BINDING_REVIEW_2026-10-17.md",
+    "docs/reviews/R113_INDEPENDENT_RUNTIME_ADMISSION_REVIEW_2026-10-17.md",
+    "docs/reviews/R113_RUNTIME_WORKER_RETURN_2026-10-17.md",
+    "docs/reviews/R113_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md"
+  ],
+  "disposition": "B07_ACCEPTED_BOUNDED_B08_QUALIFIED_WORDING_OPEN",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "x-runtimeOutcome": {
+    "campaignStarts": 1,
+    "fixtureStarts": 1,
+    "backendStarts": 1,
+    "viteStarts": 1,
+    "uiPosts": 6,
+    "goCompiles": 0,
+    "nativeInvocations": 0,
+    "frontendValidation": 0,
+    "providerCalls": 0,
+    "runtimeRetries": 0,
+    "B07": "PASS_BOUNDED_UI_CONTROLS",
+    "B08": "PARTIAL_QUALIFIED",
+    "B09": "NOT_RUN",
+    "wording": "CHANGES_REQUIRED",
+    "originalSupervisorCleanup": "MISSING",
+    "rootFinalFixture": "EXITED",
+    "protected": "BASELINE_EQUAL"
+  }
+}

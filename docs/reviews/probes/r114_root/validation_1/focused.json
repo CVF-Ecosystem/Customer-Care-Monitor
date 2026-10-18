@@ -1,0 +1,22 @@
+{
+  "startedAtUTC": "2026-10-17T04:24:43.778849+00:00",
+  "endedAtUTC": "2026-10-17T04:24:51.353345+00:00",
+  "argv": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\frontend\\node_modules\\vitest\\vitest.mjs",
+    "run",
+    "--config",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r114_luna\\focused-test.config.mjs",
+    "src/__tests__/onboarding-wizard.spec.ts"
+  ],
+  "exitCode": 0,
+  "nodeSha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+  "stdoutSha256": "d23527629d2c8fb451489932a11b5fc636b93e73b61e0c1f6c51b116374131ac",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "sourcePins": {
+    "frontend/src/components/OnboardingWizard.vue": "58acc5579752a7f4cbc68ffe346ca679a1a1635bcda4dbba10eea2968246bf24",
+    "frontend/src/__tests__/onboarding-wizard.spec.ts": "807b4c77b064caad0ef322c4e6fde0b319df4e840366811691d576b9bfd268e9",
+    "docs/reviews/probes/r114_luna/focused-test.config.mjs": "525b9dddb544e8cc0e4866e0ca933fba98f4f0c256cdae2db72541a26943009d"
+  },
+  "claimLimit": "Source/UI structure only; no rendered layout/governance proof"
+}

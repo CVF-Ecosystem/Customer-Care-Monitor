@@ -1,0 +1,9 @@
+{
+  "observedAtUTC": "2026-10-16T17:17:24.605Z",
+  "tool": "mcp__cua_repl",
+  "tabId": "3",
+  "url": "http://127.0.0.1:3011/4b44be84-86fc-47ef-a018-e515b5ae74ea/intervention-cases/632e7ad1-ca55-4f3f-96a0-40d4223d9116",
+  "operatorRecordedAction": "Second tab retained pending version1 before correction",
+  "dom": "03_b03_stale_version1.dom.txt",
+  "screenshot": "03_b03_stale_version1.png"
+}

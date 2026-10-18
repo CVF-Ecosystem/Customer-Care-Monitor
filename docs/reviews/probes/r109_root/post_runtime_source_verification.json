@@ -1,0 +1,9 @@
+{
+  "result": "PASS",
+  "mode": "POST_INTERRUPTION_READ_ONLY_SOURCE_CHECK",
+  "observedAtUTC": "2026-10-16T17:33:16.274860+00:00",
+  "headCommit": "7fc2273b485b765543dd78fc60afc51ee68d0cb3",
+  "reviewedSourceCommit": "5ab60830368482e072cb0150a7894235ca950c24",
+  "binarySHA256": "cb73ee13e0369cca75ea276cc668f30c3ced42cead5f62c56d68f3c1eaa66f93",
+  "scope": "Sources and pinned evidence stable; no original supervisor-finalization claim"
+}

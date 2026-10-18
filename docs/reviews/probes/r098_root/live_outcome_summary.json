@@ -1,0 +1,62 @@
+[
+  {
+    "role": "worker",
+    "recordedAt": "2026-10-14T11:12:05Z",
+    "attempts": 1,
+    "wireHTTP": 200,
+    "model": "qwen3.7-flash",
+    "finishReason": "length",
+    "contentBytes": 0,
+    "reasoningContentBytes": 2367,
+    "providerReportedUsage": {
+      "prompt_tokens": 272,
+      "total_tokens": 1030,
+      "completion_tokens": 758,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 272
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 758,
+        "text_tokens": 758
+      }
+    },
+    "caseExecution": "USAGE_UNKNOWN",
+    "caseReason": "PROVIDER_UNKNOWN",
+    "dbAttemptUsage": "UNKNOWN",
+    "proposals": 0,
+    "dbBudgetConsumed": 1,
+    "waitStatus": 200,
+    "denyStatus": 403
+  },
+  {
+    "role": "reviewer",
+    "recordedAt": "2026-10-14T11:13:54Z",
+    "attempts": 1,
+    "wireHTTP": 200,
+    "model": "qwen3.7-flash",
+    "finishReason": "length",
+    "contentBytes": 0,
+    "reasoningContentBytes": 2287,
+    "providerReportedUsage": {
+      "prompt_tokens": 266,
+      "total_tokens": 1024,
+      "completion_tokens": 758,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "text_tokens": 266
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 758,
+        "text_tokens": 758
+      }
+    },
+    "caseExecution": "USAGE_UNKNOWN",
+    "caseReason": "PROVIDER_UNKNOWN",
+    "dbAttemptUsage": "UNKNOWN",
+    "proposals": 0,
+    "dbBudgetConsumed": 2,
+    "waitStatus": 200,
+    "denyStatus": 403
+  }
+]

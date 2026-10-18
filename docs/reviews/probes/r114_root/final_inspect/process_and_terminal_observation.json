@@ -1,0 +1,24 @@
+{
+  "observedAtUTC": "2026-10-17T07:37:07.501987+00:00",
+  "reviewer": "Codex /root",
+  "processListenerQueryExitCode": 0,
+  "query": "$p=@(Get-Process -Id 25344,23000 -ErrorAction SilentlyContinue | Select-Object Id,ProcessName); $l=@(Get-NetTCPConnection -State Listen -LocalPort 3011,58469 -ErrorAction SilentlyContinue | Select-Object LocalAddress,LocalPort,OwningProcess); [pscustomobject]@{processes=$p;listeners=$l}|ConvertTo-Json -Depth 4",
+  "observation": {
+    "processes": [],
+    "listeners": []
+  },
+  "supervisorSessionRead": {
+    "sessionId": 42009,
+    "tool": "write_stdin",
+    "result": "Unknown process id 42009",
+    "provenance": "Root operator transcription of actual tool error; not fabricated raw tool export"
+  },
+  "stopRequest": {
+    "command": "python -B docs/reviews/probes/r114_luna/r114_workflow_runner.py stop --project-root .",
+    "exitCode": 0,
+    "result": "STOP_REQUESTED",
+    "requestedAtUnix": 1792222509.776152,
+    "qualification": "request issued after observed campaign deadline on resumed turn; no evidence supervisor received it"
+  },
+  "claimLimit": "Absence now does not establish original cleanup, end time or exit code; no Root fixture stop performed because already exited"
+}

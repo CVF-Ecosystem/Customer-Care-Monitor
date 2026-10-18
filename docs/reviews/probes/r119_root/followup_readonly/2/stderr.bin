@@ -1,0 +1,14 @@
+2026-10-17T23:37:36.283550846Z 2026-10-17T23:37:36.280460Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2026-10-17T23:37:36.283591816Z 2026-10-17T23:37:36.280605Z 0 [System] [MY-013169] [Server] /usr/sbin/mysqld (mysqld 8.0.46) initializing of server in progress as process 80
+2026-10-17T23:37:36.294014221Z 2026-10-17T23:37:36.293460Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2026-10-17T23:37:37.268630941Z 2026-10-17T23:37:37.267991Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2026-10-17T23:37:39.713921040Z 2026-10-17T23:37:39.713249Z 6 [Warning] [MY-010453] [Server] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
+2026-10-17T23:37:45.104805385Z 2026-10-17T23:37:45.081019Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2026-10-17T23:37:45.106017296Z 2026-10-17T23:37:45.084282Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.46) starting as process 124
+2026-10-17T23:37:45.115101775Z 2026-10-17T23:37:45.114282Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2026-10-17T23:37:45.478336076Z 2026-10-17T23:37:45.477741Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2026-10-17T23:37:45.985859137Z 2026-10-17T23:37:45.985164Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2026-10-17T23:37:45.985903293Z 2026-10-17T23:37:45.985375Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2026-10-17T23:37:45.994896076Z 2026-10-17T23:37:45.994256Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2026-10-17T23:37:46.042550709Z 2026-10-17T23:37:46.041885Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: /var/run/mysqld/mysqlx.sock
+2026-10-17T23:37:46.042603222Z 2026-10-17T23:37:46.041974Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.46'  socket: '/var/run/mysqld/mysqld.sock'  port: 0  MySQL Community Server - GPL.

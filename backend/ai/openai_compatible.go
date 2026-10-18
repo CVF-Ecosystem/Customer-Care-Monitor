@@ -8,6 +8,7 @@ import (
 	"io"
 	"net/http"
 	"strings"
+	"time"
 )
 
 // OpenAICompatibleProvider nói chuyện với bất kỳ dịch vụ nào theo chuẩn
@@ -17,11 +18,12 @@ import (
 // Cố ý gọi HTTP trực tiếp thay vì thêm SDK: phần API dùng tới chỉ là một endpoint
 // với vài trường, và mỗi SDK lại ràng buộc thêm một nhà cung cấp cụ thể.
 type OpenAICompatibleProvider struct {
-	providerName string
-	apiKey       string
-	model        string
-	baseURL      string
-	maxTokens    int
+	providerName        string
+	apiKey              string
+	model               string
+	baseURL             string
+	maxTokens           int
+	onceDisableThinking bool
 }
 
 const (
@@ -73,6 +75,7 @@ type chatMessage struct {
 }
 
 type chatCompletionResponse struct {
+	Model   string `json:"model"`
 	Choices []struct {
 		Message struct {
 			Content string `json:"content"`
@@ -182,4 +185,76 @@ func (p *OpenAICompatibleProvider) AnalyzeChatBatch(ctx context.Context, systemP
 	batchPrompt := WrapBatchPrompt(systemPrompt, len(items))
 	batchTranscript := FormatBatchTranscript(items)
 	return p.AnalyzeChat(ctx, batchPrompt, batchTranscript)
+}
+
+// AnalyzeChatOnce is reserved for a caller that has durably consumed one
+// physical-call slot. It never redirects, retries, or returns provider text in errors.
+func (p *OpenAICompatibleProvider) AnalyzeChatOnce(ctx context.Context, systemPrompt, transcript string, maxRequestBytes int64) (AIResponse, error) {
+	if p == nil {
+		return AIResponse{}, fmt.Errorf("provider_unavailable")
+	}
+	if p.onceDisableThinking && !p.validAlibabaQwen37OnceEndpoint() {
+		return AIResponse{}, fmt.Errorf("once_thinking_option_invalid")
+	}
+	if p.maxTokens < 1 || p.maxTokens > 768 {
+		return AIResponse{}, fmt.Errorf("completion_limit_invalid")
+	}
+	if maxRequestBytes <= 0 || maxRequestBytes > 6000 {
+		return AIResponse{}, fmt.Errorf("request_limit_invalid")
+	}
+	body := map[string]any{"model": p.model, "messages": []chatMessage{{Role: "system", Content: systemPrompt}, {Role: "user", Content: transcript}}, "max_completion_tokens": p.maxTokens}
+	if p.onceDisableThinking {
+		body["enable_thinking"] = false
+	}
+	payload, err := json.Marshal(body)
+	if err != nil || int64(len(payload)) > maxRequestBytes {
+		return AIResponse{}, fmt.Errorf("request_too_large")
+	}
+	req, err := http.NewRequestWithContext(ctx, http.MethodPost, p.baseURL+"/chat/completions", bytes.NewReader(payload))
+	if err != nil {
+		return AIResponse{}, fmt.Errorf("request_invalid")
+	}
+	req.Header.Set("Content-Type", "application/json")
+	req.Header.Set("Authorization", "Bearer "+p.apiKey)
+	client := &http.Client{Timeout: 60 * time.Second, CheckRedirect: func(*http.Request, []*http.Request) error { return http.ErrUseLastResponse }}
+	resp, err := client.Do(req)
+	if err != nil {
+		return AIResponse{}, fmt.Errorf("transport_unknown")
+	}
+	defer resp.Body.Close()
+	if resp.StatusCode != http.StatusOK {
+		return AIResponse{}, fmt.Errorf("provider_status_%d", resp.StatusCode)
+	}
+	raw, err := io.ReadAll(io.LimitReader(resp.Body, (1<<20)+1))
+	if err != nil || len(raw) > 1<<20 {
+		return AIResponse{}, fmt.Errorf("response_invalid")
+	}
+	fields, counts, objectOK := usageJSONObject(raw)
+	if !objectOK || counts["model"] != 1 {
+		return AIResponse{}, fmt.Errorf("response_invalid")
+	}
+	var wireModel string
+	if json.Unmarshal(fields["model"], &wireModel) != nil || wireModel == "" {
+		return AIResponse{}, fmt.Errorf("response_model_unknown")
+	}
+	if wireModel != p.model {
+		return AIResponse{}, fmt.Errorf("response_model_mismatch")
+	}
+	observed := AIResponse{Model: wireModel, Provider: p.providerName, UsagePresence: openAICompatibleUsagePresence(raw)}
+	observed.InputTokens = chatOnceFlatKnownCount(observed.UsagePresence.InputTokens)
+	observed.OutputTokens = chatOnceFlatKnownCount(observed.UsagePresence.OutputTokens)
+	var parsed chatCompletionResponse
+	if json.Unmarshal(raw, &parsed) != nil {
+		return observed, chatOnceObservedResponseError{}
+	}
+	providerError := bytes.TrimSpace(parsed.Error)
+	if counts["choices"] != 1 || len(parsed.Choices) != 1 || (len(providerError) != 0 && !bytes.Equal(providerError, []byte("null"))) {
+		return observed, chatOnceObservedResponseError{}
+	}
+	choice := parsed.Choices[0]
+	if choice.Message.Refusal != "" || choice.FinishReason != "stop" || strings.TrimSpace(choice.Message.Content) == "" {
+		return observed, chatOnceObservedResponseError{}
+	}
+	observed.Content = choice.Message.Content
+	return observed, nil
 }

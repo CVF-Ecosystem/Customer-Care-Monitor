@@ -1,0 +1,7 @@
+{
+  "command": "node node_modules/vitest/vitest.mjs run src/__tests__/intervention-ui.test.ts src/__tests__/intervention-presentation.test.ts src/__tests__/intervention-api.test.ts",
+  "cwd": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\frontend",
+  "exitCode": 0,
+  "stdout": "docs\\reviews\\probes\\r118_worker\\focused_frontend.stdout.txt",
+  "stderr": "docs\\reviews\\probes\\r118_worker\\focused_frontend.stderr.txt"
+}

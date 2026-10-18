@@ -1,0 +1,18 @@
+{
+  "sourceCommit": "5d38dd51c387ce161c013a9b6ff866a1d1c7af3d",
+  "setupToolSession": 4489,
+  "observedSupervisorOutput": "R116_HOLD DOCKER_COMMAND_FAILED",
+  "supervisorOutputProvenance": "Observed tool response; not a reconstructed original process transcript",
+  "firstFailedDockerCommand": "inspect --format published3306 HostPort",
+  "failure": "Docker returned running container with Ports3306/tcp empty list; inspect template index failed",
+  "containerId": "6ec08ace674cd293e7a93e01fc83d56c60a24e0902302cff11e0680e726e75f4",
+  "rootCause": "Port publication absent on observed owned internal network fixture; underlying Docker reason NOT_ESTABLISHED",
+  "fixtureStartAttempts": 1,
+  "nativeExecutions": 0,
+  "physicalAlibabaCalls": 0,
+  "rootFocusedChecksUsed": 2,
+  "workerRecordedChecksUsed": 6,
+  "cleanup": "Root exact-ID ownership-verified fallback stopped container; original raw Docker stop and post-inspect retained",
+  "prohibitedNextEffects": "No restart/replay/install/alternate stack or provider call under this failed campaign",
+  "finiteNextRoute": "Stop R116 runtime. A future authority must independently settle supported isolated loopback port publication and supervisor failed-start cleanup before any new fixture; preserve old seed/counters. No runtime successor dispatched here."
+}

@@ -181,9 +181,14 @@ func CreateChannel(c *gin.Context) {
 		ExternalID:           externalID,
 		CredentialsEncrypted: credentialsToStore,
 		IsActive:             true,
-		Metadata:             func() string { if req.Metadata != "" { return req.Metadata }; return "{}" }(),
-		CreatedAt:            now,
-		UpdatedAt:            now,
+		Metadata: func() string {
+			if req.Metadata != "" {
+				return req.Metadata
+			}
+			return "{}"
+		}(),
+		CreatedAt: now,
+		UpdatedAt: now,
 	}
 
 	if err := db.DB.Create(&channel).Error; err != nil {
@@ -266,9 +271,16 @@ func DeleteChannel(c *gin.Context) {
 	// rolled-back cascade.
 	var convIDs []string
 	err := db.DB.Transaction(func(tx *gorm.DB) error {
+		if err := engine.GuardWaitDataLineage(tx, tenantID, "", channelID); err != nil {
+			return err
+		}
+		var lockedChannel models.Channel
+		if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).Where("tenant_id = ? AND id = ?", tenantID, channelID).Take(&lockedChannel).Error; err != nil {
+			return err
+		}
 		var conversations []models.Conversation
 		if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).
-			Where("channel_id = ? AND tenant_id = ?", channelID, tenantID).
+			Where("channel_id = ? AND tenant_id = ?", channelID, tenantID).Order("id ASC").
 			Find(&conversations).Error; err != nil {
 			return fmt.Errorf("lock conversations: %w", err)
 		}
@@ -295,6 +307,10 @@ func DeleteChannel(c *gin.Context) {
 		}
 		return nil
 	})
+	if errors.Is(err, engine.ErrWaitDataLineage) {
+		c.JSON(http.StatusConflict, gin.H{"error": "intervention_history_in_use"})
+		return
+	}
 	if err != nil {
 		log.Printf("[error] delete channel %s cascade: %v", channelID, err)
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "delete_channel_failed"})
@@ -333,9 +349,16 @@ func PurgeChannelConversations(c *gin.Context) {
 	var convIDs []string
 	var messagesDeleted, convsDeleted int64
 	err := db.DB.Transaction(func(tx *gorm.DB) error {
+		if err := engine.GuardWaitDataLineage(tx, tenantID, "", channelID); err != nil {
+			return err
+		}
+		var lockedChannel models.Channel
+		if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).Where("tenant_id = ? AND id = ?", tenantID, channelID).Take(&lockedChannel).Error; err != nil {
+			return err
+		}
 		var conversations []models.Conversation
 		if err := tx.Clauses(clause.Locking{Strength: "UPDATE"}).
-			Where("channel_id = ? AND tenant_id = ?", channelID, tenantID).
+			Where("channel_id = ? AND tenant_id = ?", channelID, tenantID).Order("id ASC").
 			Find(&conversations).Error; err != nil {
 			return fmt.Errorf("lock conversations: %w", err)
 		}
@@ -373,6 +396,10 @@ func PurgeChannelConversations(c *gin.Context) {
 		}
 		return nil
 	})
+	if errors.Is(err, engine.ErrWaitDataLineage) {
+		c.JSON(http.StatusConflict, gin.H{"error": "intervention_history_in_use"})
+		return
+	}
 	if err != nil {
 		log.Printf("[error] purge channel %s conversations: %v", channelID, err)
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "purge_conversations_failed"})
@@ -565,7 +592,7 @@ type zaloTokenResponse struct {
 	AccessToken  string          `json:"access_token"`
 	RefreshToken string          `json:"refresh_token"`
 	ExpiresIn    json.RawMessage `json:"expires_in"` // Zalo returns string or int
-	Error        json.RawMessage `json:"error"`       // can be int or string
+	Error        json.RawMessage `json:"error"`      // can be int or string
 	Message      string          `json:"message"`
 }
 
@@ -644,8 +671,8 @@ func fetchZaloOAInfo(accessToken string) (*zaloOAInfo, error) {
 		Error   int    `json:"error"`
 		Message string `json:"message"`
 		Data    struct {
-			OAID   string `json:"oa_id"`
-			Name   string `json:"name"`
+			OAID string `json:"oa_id"`
+			Name string `json:"name"`
 		} `json:"data"`
 	}
 	if err := json.Unmarshal(body, &result); err != nil {

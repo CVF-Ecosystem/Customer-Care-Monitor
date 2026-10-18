@@ -1,0 +1,9 @@
+{
+  "observedAtUTC": "2026-10-16T17:15:49.258Z",
+  "tool": "mcp__cua_repl",
+  "tabId": "2",
+  "url": "http://127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514",
+  "operatorRecordedAction": "Opened root URL; observed historical synthetic reader session before fresh login",
+  "dom": "00_inherited_session.dom.txt",
+  "screenshot": "00_inherited_session.png"
+}

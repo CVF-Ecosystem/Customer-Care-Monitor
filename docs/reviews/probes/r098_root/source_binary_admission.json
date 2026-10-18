@@ -1,0 +1,38 @@
+{
+  "approvedBy": "Codex /root",
+  "model": "qwen3.7-flash",
+  "region": "ap-southeast-1",
+  "endpointSha256": "b22a15b6e8aa4113c2816acae6935a84d052a2d7b81db734ccdc4f5be81b4f8f",
+  "requestedTokens": 758,
+  "physicalRequestsTotal": 2,
+  "workerRequests": 1,
+  "reviewerRequests": 1,
+  "automaticRetries": 0,
+  "freshOwnerGrantId": "CCMAI-RUNTIME-098-OWNER-NEW2-20261014",
+  "tlsDependencySha256": "3d2340131829f7afcb54d81be7d903c29fc8b36f160d065a05cd338a5df50dad",
+  "sourceSha256": {
+    "backend/api/handlers/intervention_live_r098_test.go": "0fbd2590dc2425ec254196b04b839cf476020189d0869ef70e8cd54602aa0536",
+    "scripts/r098_intervention_live_fixture.py": "1944353ba5586b01e4e6a2c680f626e482b358e63675df7f7a800fe4c0d886e8",
+    "scripts/tests/test_r098_intervention_live_fixture.py": "49466312c3fdd9a5f12e2fea90151fc9747a4f0607a9765977097d54e34b871f"
+  },
+  "frozenSourceSha256": {
+    "backend/engine/intervention.go": "1349833280b4ee6170729c921a7e37ee0f4302fd6a5638e114f2cd425f280cb2",
+    "backend/engine/intervention_usage_test.go": "a5e5c33d6f3fd7f1373cac51eebd0299a923362609d296120b225f4a13036346",
+    "backend/db/models/intervention.go": "25f5fd35ba1ee47382966dcbbc8e571910598e044586acb8234e7d889d4a5830",
+    "backend/api/handlers/intervention.go": "f8ae2624521db3755f510754f09578392060818e4f9a7243d8e856df3a2e8496",
+    "backend/api/handlers/intervention_route_test.go": "3b6dd20878fc9712c7e2e054aea2187c4917d4e1176036c56506af59dcc5841b",
+    "backend/ai/openai_compatible.go": "99e7b34750ad7991497b23bca415da17a3977d60f7d6074685d947f4989e8d00",
+    "backend/ai/openai_compatible_test.go": "d9899c5073b7fc9d26d5eee44e6e8cdb79cce0103b80b2fd437472a6be44149f",
+    "backend/api/router.go": "94d91d60204bd07cca09d00c45068e8cbf5a355f83e289ac7026ceac3fece4dd",
+    "backend/api/handlers/jobs.go": "e2e8b0c86cc9390d94b64b8e5f0b16b0806bb37fa335b21e85799fdefe4e3e3e",
+    "backend/db/mysql.go": "c694812f913d6121622857c46b8d7878ef7b4fefff92ec1b3b1f8489e084076b",
+    "backend/engine/analyzer.go": "d1c9ba5153cbd79e891899f78d42fa0caacbaf7ef2ae570c1dc7084382971bc2",
+    "backend/engine/analyzer_modes.go": "02b979fc9166c2ebc4371b1b78dfec08afbc526174423238244e57a3caab9824"
+  },
+  "binarySha256": "df02ce7a587831a05282effb8e7276651aded6aaac3d9b06e0d07e910a1619d4",
+  "parentManifestSha256": "875a7bb93a9ab4330806d1df6f0b3a62343d52fa20b34aa96a09913671766106",
+  "activationCommit": "7b0af4f0712e73204b3362d7f2267b4c11d03be9",
+  "sourceMaterialCommit": "3d1ce43b1739d6edbba6296a2231a487268473d7",
+  "approvedAt": "2026-10-14T11:08:30.259615+00:00",
+  "reviewEvidence": "docs/reviews/R098_PRE_EFFECT_SOURCE_ADMISSION_2026-10-14.md"
+}

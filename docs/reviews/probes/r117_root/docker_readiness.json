@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "--config",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r116_execution\\docker-cli-config",
+    "version",
+    "--format",
+    "{{.Server.Version}}"
+  ],
+  "exitCode": 0,
+  "stdout": "29.8.2",
+  "stderr": "",
+  "binarySha256": "6c699720bb9523dedb9eb5d22a49951ea9210dbdb1314a3554029eee9be76896"
+}

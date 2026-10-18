@@ -1,0 +1,4 @@
+=== RUN   TestR096TransportTLSOffline
+--- PASS: TestR096TransportTLSOffline (0.02s)
+PASS
+ok  	github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers	7.613s

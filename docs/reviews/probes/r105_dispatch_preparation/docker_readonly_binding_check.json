@@ -1,0 +1,24 @@
+{
+  "scope": "Read-only compatibility probe, local Docker server version only; no start/stop/SQL/auth/pull",
+  "command": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "--config",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r105_cli_metadata_probe\\docker-config",
+    "version",
+    "--format",
+    "{{.Server.Version}}"
+  ],
+  "dockerExeSha256": "6c699720bb9523dedb9eb5d22a49951ea9210dbdb1314a3554029eee9be76896",
+  "exitCode": 0,
+  "stdout": "29.8.2\n",
+  "stderr": "",
+  "environmentKeys": [
+    "SystemRoot",
+    "TEMP",
+    "TMP",
+    "WINDIR"
+  ],
+  "configContract": "Explicit empty --config directory and minimal environment; no OS-wide file-access audit claimed"
+}

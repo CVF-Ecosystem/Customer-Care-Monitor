@@ -1,0 +1,22 @@
+Browser tab: 1, Title: "Customer Care Monitor AI", URL: "http://127.0.0.1:3011/login".
+0 AXWebArea Customer Care Monitor AI, URL: 127.0.0.1:3011/login
+	1 container
+		2 heading Customer Care Monitor AI, Value: 1
+			3 text Customer Care Monitor AI
+		4 container Đăng nhập hệ thống
+			5 heading Đăng nhập hệ thống, Value: 2
+				6 text Đăng nhập hệ thống
+			7 container
+				8 container
+					9 text Email
+					10 text field (settable) Email
+				11 container
+					12 text Mật khẩu
+					13 text field (settable) Mật khẩu
+				14 button Mật khẩu appended action
+					15 text 󰈈
+				16 button Đăng nhập
+		17 pop up button (collapsed) Tiếng Việt, Secondary Actions: Expand
+			18 text Tiếng Việt
+
+The focused UI element is 0 AXWebArea Customer Care Monitor AI, URL: 127.0.0.1:3011/login

@@ -1,0 +1,14 @@
+{
+  "command": [
+    "git",
+    "diff",
+    "--cached",
+    "--check",
+    "--",
+    ".",
+    ":(exclude)docs/reviews/probes/r107_cua"
+  ],
+  "exitCode": 0,
+  "elapsedSeconds": 0.13362859998596832,
+  "recordedAtUTC": "2026-10-16T11:58:00.021057+00:00"
+}

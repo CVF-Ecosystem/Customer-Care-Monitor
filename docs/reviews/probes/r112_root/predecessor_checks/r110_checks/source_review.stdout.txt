@@ -1,0 +1,13 @@
+[PASS] CVF-DG-INST-01 PASS
+[PASS] CVF-DG-CONT-01 PASS
+[PASS] CVF-DG-RANGE-01 PASS
+       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=b313727765da25fcf29599b2005472f8209c90b7 candidates=57 deleted=0
+[PASS] CVF-DG-APPL-01 PASS
+       note: checked: docs/work_orders/CCMAI_RUNTIME_110_REMAINING_UI.md
+[PASS] CVF-DG-ROUTE-01 PASS
+       note: checked: docs/work_orders/CCMAI_RUNTIME_110_REMAINING_UI.md
+[PASS] CVF-DG-ROLE-01 PASS
+       note: checked: docs/reviews/R110_DISPATCH_REVIEW_2026-10-17.md, docs/reviews/R110_INDEPENDENT_TOOLING_REVIEW_2026-10-17.md, docs/reviews/R110_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-17.md
+[PASS] CVF-DG-CLAIM-01 PASS
+       note: 0 explicit claim line(s) and 4 document(s) scanned
+RESULT: PASS phase=reviewer-fast mandatoryControls=7 failed=0

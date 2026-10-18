@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python",
+    "-B",
+    "scripts/r117_waitdata_fixture.py",
+    "cleanup"
+  ],
+  "startedAtUTC": "2026-10-17T17:53:37.812364+00:00",
+  "budgetReservation": {
+    "fixtureTeardowns": 1
+  }
+}

@@ -1,0 +1,139 @@
+- navigation:
+  - generic: Customer Care Monitor AI
+  - button:
+    - generic: 󰅁
+  - separator
+  - generic: Minh họa R120
+  - separator
+  - list:
+    - link "Trang chủ":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751
+      - generic: 󰕮
+      - generic: Trang chủ
+    - link "Kênh chat":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/channels
+      - generic: 󱘖
+      - generic: Kênh chat
+    - link "Tin nhắn":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/messages
+      - generic: 󰊌
+      - generic: Tin nhắn
+    - link "Tác vụ AI":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/jobs
+      - generic: 󰚩
+      - generic: Tác vụ AI
+    - link "Kết quả":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/results
+      - generic: 󱃔
+      - generic: Kết quả
+    - link "Ca cần can thiệp":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/intervention-cases
+      - generic: 󰀈
+      - generic: Ca cần can thiệp
+    - link "Nhật ký hệ thống":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/activity-logs
+      - generic: 󰺮
+      - generic: Nhật ký hệ thống
+    - link "Nhật ký chi phí":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/cost-logs
+      - generic: 󰇁
+      - generic: Nhật ký chi phí
+    - link "Lịch sử thông báo":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/notifications
+      - generic: 󰂞
+      - generic: Lịch sử thông báo
+    - link "Kết nối trợ lý AI":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/mcp
+      - generic: 󱂛
+      - generic: Kết nối trợ lý AI
+    - link "Người dùng":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/users
+      - generic: 󰡉
+      - generic: Người dùng
+    - link "Cài đặt":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/settings
+      - generic: 󰒓
+      - generic: Cài đặt
+  - separator
+  - button:
+    - generic: 󰖔
+  - button "Tiếng Việt":
+    - generic: 󰗊
+    - text: Tiếng Việt
+    - generic: 󰍝
+  - generic: "N"
+  - generic: Người duyệt minh họa
+  - button:
+    - generic: 󰍃
+- main:
+  - generic: 󱓞
+  - generic: "Bắt đầu:"
+  - generic: 󰗠
+  - generic: Kết nối kênh chat
+  - generic: 󰗠
+  - generic: Đồng bộ tin nhắn
+  - generic: 󰝦
+  - generic: Cài đặt AI
+  - generic: 󰗠
+  - generic: Tạo công việc phân tích
+  - generic: 󰝦
+  - generic: Chạy thử phân tích
+  - button:
+    - generic: 󰅖
+  - heading "Trang chủ" [level=1]
+  - generic: Hôm nay
+  - generic: 7 ngày
+  - generic: 28 ngày
+  - generic: Tháng này
+  - generic: Quý này
+  - generic: Năm này
+  - textbox: 2026-09-21
+  - textbox: 2026-10-18
+  - generic: Ngày theo giờ Việt Nam (UTC+7)
+  - generic: Tổng hội thoại
+  - generic: "0"
+  - generic: 󰍩
+  - generic "Số dòng vi phạm QC trong khoảng thời gian đã chọn; một hội thoại có thể có nhiều vi phạm": Vi phạm QC
+  - generic: "0"
+  - generic: 󰢨
+  - generic: Công việc đang chạy
+  - generic: "1"
+  - generic: 󰃗
+  - generic: Kênh hoạt động
+  - generic: "1"
+  - generic: 󱘖
+  - generic: Tổng tin nhắn
+  - generic: "1"
+  - generic: 󰻧
+  - generic: Chi phí AI
+  - generic: 0đ
+  - generic: 󰇁
+  - generic: 󰂞
+  - text: Hoạt động gần đây
+  - generic: 󰗠
+  - generic: Chưa có hoạt động nào trong khoảng thời gian này.
+  - generic: 󰇁
+  - text: Chi phí AI
+  - generic: Chi phí hôm nay
+  - generic: 0đ
+  - generic: Chi phí tháng này
+  - generic: 0đ
+  - generic: Không có dữ liệu
+  - generic: 󰘥
+  - text: Trạng thái dịch vụ
+  - generic: Chưa có phép kiểm tra sức khỏe cho các dịch vụ này.
+  - list:
+    - generic: Ứng dụng
+    - generic: 󰘥
+    - generic: Chưa có dữ liệu kiểm tra
+    - generic: Kho dữ liệu
+    - generic: 󰘥
+    - generic: Chưa có dữ liệu kiểm tra
+    - generic: Lịch chạy tự động
+    - generic: 󰘥
+    - generic: Chưa có dữ liệu kiểm tra
+  - generic: 󱅳
+  - text: Tin nhắn theo ngày
+  - generic: 󰄪
+  - text: Chi phí AI theo ngày
+  - generic: Không có dữ liệu

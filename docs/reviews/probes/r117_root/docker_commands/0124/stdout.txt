@@ -1,0 +1,1 @@
+{"CreatedAt":"2026-10-17T13:50:51Z","Driver":"local","Labels":{"ccmai.owner":"975dd60d-af4d-4090-8ad3-9a46e00370ef","ccmai.tranche":"CCMAI-RUNTIME-117"},"Mountpoint":"/var/lib/docker/volumes/ccmai-r117-root-20261017/_data","Name":"ccmai-r117-root-20261017","Options":null,"Scope":"local"}

@@ -1,0 +1,36 @@
+{
+  "collectionId": "knowledge",
+  "collectionName": "knowledge",
+  "generatedAt": "2026-10-17T00:53:56Z",
+  "sourceFolder": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\knowledge",
+  "chunkCount": 1,
+  "chunks": [
+    {
+      "id": "knowledge-chunk-0",
+      "sourceFile": "README.md",
+      "content": "# Project Knowledge\n\nPlace `.md` files in this folder to inject project-specific context into CVF-governed AI runs.\n\n## How it works\n\n1. Add `.md` files describing your project's specs, decisions, or domain terms.\n2. Run `../.Controlled-Vibe-Framework-CVF/scripts/ingest_cvf_downstream_knowledge.ps1 -KnowledgePath ./knowledge` to index them into `knowledge/_index.json`.\n3. CVF-governed `/api/execute` calls that include your `knowledgeCollectionId` will automatically\n   retrieve relevant chunks and inject them into the AI system prompt.\n\n## What to put here\n\n- Architecture decisions and rationale\n- Domain terminology and definitions\n- Project specs, requirements, or acceptance criteria\n- Process guides or runbooks your team follows\n\n## What NOT to put here\n\n- Secrets, API keys, or credentials (never - governance enforcement will reject these)\n- Binary files or non-markdown formats (not supported in this wave)\n\n## Reference\n\nW116-T1 Downstream Knowledge Pipeline - `docs/roadmaps/CVF_W116_T1_DOWNSTREAM_KNOWLEDGE_PIPELINE_ROADMAP_2026-04-23.md`",
+      "keywords": [
+        "knowledge",
+        "your",
+        "into",
+        "files",
+        "project",
+        "will",
+        "them",
+        "cvf-governed",
+        "specs",
+        "what",
+        "this",
+        "inject",
+        "decisions",
+        "domain",
+        "here",
+        "project-specific",
+        "automatically",
+        "these",
+        "terminology",
+        "keys"
+      ]
+    }
+  ]
+}

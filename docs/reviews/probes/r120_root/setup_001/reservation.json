@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-B",
+    "scripts/r120_ui_supervisor.py",
+    "setup"
+  ],
+  "setupInvocation": 1,
+  "sourceAdmissionCommit": "b8aa321c321c6cc236703d181ef2ec4680959f2f",
+  "automaticRetries": 0
+}

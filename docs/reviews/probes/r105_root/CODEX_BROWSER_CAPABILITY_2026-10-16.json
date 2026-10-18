@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-16",
+  "observer": "Codex /root",
+  "scope": "Documented CUA discovery and empty-tab capability only; no application navigation or campaign",
+  "observations": [
+    {
+      "tool": "mcp__cua_repl.js",
+      "call": "await cua.getState();",
+      "result": {
+        "apps": [],
+        "browsers": []
+      }
+    },
+    {
+      "tool": "mcp__cua_repl.js",
+      "call": "await cua.createBrowserTab('iab', 'about:blank', {visible:false});",
+      "result": "Browser is not available: iab"
+    }
+  ],
+  "nativeComputerApis": "Disabled by active tool instructions",
+  "runtimeDirectoryExists": false,
+  "fixtureStarts": 0,
+  "backendLaunches": 0,
+  "viteLaunches": 0,
+  "applicationActions": 0,
+  "disposition": "BLOCKED_BROWSER_SURFACE_UNAVAILABLE",
+  "claimLimits": "No UI result; no claim that external Antigravity is unavailable; no network/Playwright diagnosis inferred."
+}

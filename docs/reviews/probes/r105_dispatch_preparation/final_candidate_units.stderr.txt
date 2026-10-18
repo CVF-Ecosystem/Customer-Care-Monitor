@@ -1,0 +1,17 @@
+test_config_literal_render_and_environment_filter (docs.reviews.probes.r105_root.test_r105_ui_runner.CandidateTests.test_config_literal_render_and_environment_filter) ... ok
+test_cooperative_stop_request_is_idempotent (docs.reviews.probes.r105_root.test_r105_ui_runner.CandidateTests.test_cooperative_stop_request_is_idempotent) ... ok
+test_fixture_identity_port_and_fresh_ready (docs.reviews.probes.r105_root.test_r105_ui_runner.CandidateTests.test_fixture_identity_port_and_fresh_ready) ... ok
+test_formal_admission_packet_and_history_binding (docs.reviews.probes.r105_root.test_r105_ui_runner.CandidateTests.test_formal_admission_packet_and_history_binding) ... ok
+test_frontend_pins_and_path_escape (docs.reviews.probes.r105_root.test_r105_ui_runner.CandidateTests.test_frontend_pins_and_path_escape) ... ok
+test_historical_crlf_mapping_and_duplicate_rejection (docs.reviews.probes.r105_root.test_r105_ui_runner.CandidateTests.test_historical_crlf_mapping_and_duplicate_rejection) ... ok
+test_post_spawn_receipt_failure_stops_owned_handle (docs.reviews.probes.r105_root.test_r105_ui_runner.CandidateTests.test_post_spawn_receipt_failure_stops_owned_handle) ... ok
+test_reader_failure_and_multibyte_truncation (docs.reviews.probes.r105_root.test_r105_ui_runner.CandidateTests.test_reader_failure_and_multibyte_truncation) ... ok
+test_reservation_is_irreversible_and_runtime_holds (docs.reviews.probes.r105_root.test_r105_ui_runner.CandidateTests.test_reservation_is_irreversible_and_runtime_holds) ... ok
+test_seed_git_lf_representation (docs.reviews.probes.r105_root.test_r105_ui_runner.CandidateTests.test_seed_git_lf_representation) ... ok
+test_supervised_deadline_and_exception_cleanup (docs.reviews.probes.r105_root.test_r105_ui_runner.CandidateTests.test_supervised_deadline_and_exception_cleanup) ... ok
+test_timeout_and_launch_failure_have_receipts (docs.reviews.probes.r105_root.test_r105_ui_runner.CandidateTests.test_timeout_and_launch_failure_have_receipts) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.332s
+
+OK

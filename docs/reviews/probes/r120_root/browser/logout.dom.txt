@@ -1,0 +1,17 @@
+- generic: 󰭻
+- heading "Customer Care Monitor AI" [level=1]
+- region "Đăng nhập hệ thống":
+  - heading "Đăng nhập hệ thống" [level=2]
+  - generic: 󰇰
+  - generic: Email
+  - textbox "Email"
+  - generic: 󰍁
+  - generic: Mật khẩu
+  - textbox "Mật khẩu"
+  - button "Mật khẩu appended action": 󰈈
+  - button "Đăng nhập":
+    - generic: Đăng nhập
+- button "Tiếng Việt":
+  - generic: 󰗊
+  - text: Tiếng Việt
+  - generic: 󰍝

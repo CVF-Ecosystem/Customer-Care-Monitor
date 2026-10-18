@@ -1,0 +1,70 @@
+Browser tab: 1, Title: "Customer Care Monitor AI", URL: "http://127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases/35b4e3be-6b17-4598-a45a-7b8003039d0f".
+1 AXWebArea Customer Care Monitor AI, URL: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases/35b4e3be-6b17-4598-a45a-7b8003039d0f
+	2 container
+		3 container
+			4 text Customer Care Monitor AI
+			5 button
+			6 text R101 Synthetic
+			7 content list
+				8 link Description: Trang chủ, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514
+				9 link Description: Kênh chat, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/channels
+				10 link Description: Tin nhắn, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/messages
+				11 link Description: Tác vụ AI, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/jobs
+				12 link Description: Kết quả, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/results
+				13 link Description: Ca cần can thiệp, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases
+				14 link Description: Nhật ký hệ thống, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/activity-logs
+				15 link Description: Nhật ký chi phí, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/cost-logs
+				16 link Description: Lịch sử thông báo, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/notifications
+				17 link Description: Kết nối MCP, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/mcp
+				18 link Description: Người dùng, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/users
+				19 link Description: Cài đặt, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/settings
+		20 button
+		21 pop up button (collapsed) Tiếng Việt, Secondary Actions: Expand
+			22 text Tiếng Việt
+		23 text R
+		24 text R101 owner
+		25 button
+		30 text Bắt đầu:
+		31 text Kết nối kênh chat
+		32 text Đồng bộ tin nhắn
+		33 text Cấu hình AI Provider
+		34 text Tạo công việc phân tích
+		35 text Chạy thử phân tích
+		36 button
+		28 heading Ca cần can thiệp, Value: 1
+			29 text Ca cần can thiệp
+		37 link Description: Về hàng đợi, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases
+		38 text Nguồn dữ liệu: Khớp bản ghi nội bộ; chưa xác minh toàn bộ nguồn. So sánh nội bộ không chứng minh dữ liệu kênh bên ngoài đầy đủ.
+		39 container
+			40 text Ca 72c4b454-46a6-4da5-8a7c-2ea6a70277a6 Trạng thái xử lý: Đã ghi kết quả · Đánh giá của người duyệt: Đã sửa đánh giá · v4 Người xử lý: R101 member Hạn xử lý: 10/17/2026, 10:00:00 AM Kết quả xử lý: Đơn hàng đã được kiểm tra; cập nhật kết quả cho khách hàng và lưu lịch sử xử lý. Giải thích do người sửa: Khách phản ánh đơn hàng giao chậm; cần xác minh vận đơn trước khi phản hồi. Bước tiếp theo do người xác định: Tra cứu mã vận đơn và xác nhận thời gian giao dự kiến với khách hàng.
+		41 container
+			42 text Đề xuất AI gốc (không chỉnh sửa)
+			43 text Dữ liệu đề xuất tổng hợp để kiểm thử quy trình người xử lý; không phải kết quả AI trực tiếp.
+			44 text Loại: complaint Giải thích gốc: Đơn hàng chậm Bước tiếp theo gốc: Kiểm tra đơn hàng Dẫn chứng:
+			45 content list
+				46 container
+					47 AXListMarker • 
+					48 text c3dab6fb-031e-4ecf-abc5-c8f4e2ef11c7: “khiếu nại”
+			49 text synthetic-seed-not-provider none · d3f9dc400b8f592855d17e52ce06efe628d8e256e2f53debe15505a11f325748
+		50 container
+			51 text Thao tác
+			52 combo box (collapsed) Secondary Actions: Expand
+				53 combo box (collapsed, settable) Thao tác, ID: input-v-33, Secondary Actions: Expand
+				54 text Thao tác
+			55 container
+				56 text Lý do (bắt buộc)
+				57 text entry area (settable) Lý do (bắt buộc), ID: input-v-37
+			58 button (disabled) Ghi nhận thao tác
+				59 text Ghi nhận thao tác
+		60 container
+			61 text Lịch sử người xử lý Sửa đánh giá · v2  · 10/16/2026, 2:47:42 PM · R101 owner Lý do (bắt buộc): Kiểm tra thủ công cho thấy đề xuất ban đầu thiếu bước xác minh tình trạng giao hàng. Nguồn dữ liệu: Khớp bản ghi nội bộ; chưa xác minh toàn bộ nguồn
+			62 button (collapsed) Trước và sau, Secondary Actions: Expand
+				63 text Trước và sau
+			64 text Giao việc / đổi hạn · v3  · 10/16/2026, 2:48:55 PM · R101 owner Lý do (bắt buộc): Giao ca cho thành viên để theo dõi và xác nhận đơn hàng chậm. Nguồn dữ liệu: Khớp bản ghi nội bộ; chưa xác minh toàn bộ nguồn
+			65 button (collapsed) Trước và sau, Secondary Actions: Expand
+				66 text Trước và sau
+			67 text Ghi kết quả · v4  · 10/16/2026, 2:49:19 PM · R101 owner Lý do (bắt buộc): Đã kiểm tra thông tin vận chuyển trong dữ liệu tổng hợp của kịch bản. Nguồn dữ liệu: Khớp bản ghi nội bộ; chưa xác minh toàn bộ nguồn
+			68 button (collapsed) Trước và sau, Secondary Actions: Expand
+				69 text Trước và sau
+
+The focused UI element is 1 AXWebArea Customer Care Monitor AI, URL: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases/35b4e3be-6b17-4598-a45a-7b8003039d0f

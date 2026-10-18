@@ -1,0 +1,14 @@
+{
+  "observedAt": "2026-10-15T22:14:55.606Z",
+  "result": "PASS_STANDALONE_DRIVER_ONLY",
+  "driverVersion": "1.57.0",
+  "browserVersion": "143.0.7499.4",
+  "executable": "C:\\Users\\tiennm\\AppData\\Local\\ms-playwright\\chromium-1200\\chrome-win64\\chrome.exe",
+  "url": "about:blank",
+  "controlClickVerified": true,
+  "screenshot": "docs/reviews/probes/r103_root/driver_health.png",
+  "screenshotSha256": "a9a515c98bbdb1d79504b28fe414c0d42d363bd0e3180d57be70330315a50281",
+  "integratedAntigravityTool": "NOT_OBSERVED",
+  "R101UI": "NOT_RUN",
+  "providerCalls": 0
+}

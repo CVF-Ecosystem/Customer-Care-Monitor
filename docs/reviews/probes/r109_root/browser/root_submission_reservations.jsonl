@@ -1,0 +1,10 @@
+{"ordinal":2,"atUTC":"2026-10-16T17:16:22.844Z","type":"RECONCILED_FROM_REAL_SERVER_COUNTS_NOT_PRE_RESERVATION","reason":"Initial automatic session refresh and unlabeled logout button; both POSTs counted, before-click reservation missing for logout"}
+{"ordinal":1,"reason":"B01 fresh owner login","atUTC":"2026-10-16T17:16:27.135Z","type":"BEFORE_UI_CLICK_RESERVATION_NOT_HTTP_OBSERVATION"}
+{"ordinal":2,"reason":"B02 CORRECT expected version1","atUTC":"2026-10-16T17:17:33.976Z","type":"BEFORE_UI_CLICK_RESERVATION_NOT_HTTP_OBSERVATION"}
+{"ordinal":3,"reason":"B03 stale CONFIRM once; expected409","atUTC":"2026-10-16T17:17:55.553Z","type":"BEFORE_UI_CLICK_RESERVATION_NOT_HTTP_OBSERVATION"}
+{"ordinal":4,"reason":"B04 ASSIGN expected update2","atUTC":"2026-10-16T17:18:34.664Z","type":"BEFORE_UI_CLICK_RESERVATION_NOT_HTTP_OBSERVATION"}
+{"ordinal":5,"reason":"B05 RESOLVE expected update3","atUTC":"2026-10-16T17:18:58.786Z","type":"BEFORE_UI_CLICK_RESERVATION_NOT_HTTP_OBSERVATION"}
+{"ordinal":6,"reason":"B06 REOPEN expected update4","atUTC":"2026-10-16T17:19:44.309Z","type":"BEFORE_UI_CLICK_RESERVATION_NOT_HTTP_OBSERVATION"}
+{"ordinal":7,"reason":"B10 ASSIGN_DATA expected update1","atUTC":"2026-10-16T17:22:07.995Z","type":"BEFORE_UI_CLICK_RESERVATION_NOT_HTTP_OBSERVATION"}
+{"ordinal":8,"reason":"B10 ESCALATE_DATA expected update2","atUTC":"2026-10-16T17:22:24.711Z","type":"BEFORE_UI_CLICK_RESERVATION_NOT_HTTP_OBSERVATION"}
+{"ordinal":9,"reason":"B07 owner logout before fresh reader login","atUTC":"2026-10-16T17:22:49.806Z","type":"BEFORE_UI_CLICK_RESERVATION_NOT_HTTP_OBSERVATION"}

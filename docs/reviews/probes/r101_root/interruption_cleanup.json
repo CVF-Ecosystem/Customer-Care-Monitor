@@ -1,0 +1,19 @@
+{
+  "tranche": "CCMAI-RUNTIME-101",
+  "disposition": "USER_STOPPED_COMPUTER_USE",
+  "fixtureReservations": 1,
+  "ownedContainerRemoved": "cb9d3bdf74d619610c51346ba0aaa8c79b5ad78d04587d53e1ffe3bde1c0493d",
+  "ownedNetworkRemoved": "dae2fef1fb482583f506f4e7069d5d4627148bff33a06ad95992971cfdedca27",
+  "ownedVolumeRemoved": "ccmai-r101-review-20261015",
+  "nativeGoLaunches": 0,
+  "workerGo": 1,
+  "reviewerGo": 0,
+  "aggregateGo": 1,
+  "providerCalls": 0,
+  "mockProviderCalls": 0,
+  "setupFailure": "IndexError on empty NetworkSettings.Ports[3306/tcp]; subsequent inspect confirmed no published host port on internal network. No fixture recreation or native launch.",
+  "browser": "INTERRUPTED_BEFORE_APPLICATION_NAVIGATION",
+  "originalContainersUntouchedByCleanup": true,
+  "source": "200df3e",
+  "freeze": "OPEN"
+}

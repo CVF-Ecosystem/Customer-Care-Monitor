@@ -1,0 +1,7 @@
+{
+  "classification": "EARLY_EOF_OR_SHORT_READ",
+  "elapsedSeconds": 0.005,
+  "probe": 2,
+  "safeServerErrorNumber": null,
+  "state": "NOT_READY"
+}

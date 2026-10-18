@@ -1,0 +1,27 @@
+{
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "--config",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r117_execution\\docker-cli-config",
+    "exec",
+    "-e",
+    "MYSQL_PWD=r117-synthetic-only",
+    "033e0151bb4805cce1ce6dc347ab79ab8275e016c8ace371cfda158297a2c352",
+    "mysql",
+    "--default-character-set=utf8mb4",
+    "-h",
+    "127.0.0.1",
+    "-u",
+    "root",
+    "-N",
+    "-B",
+    "--raw",
+    "r116_fixture",
+    "-e",
+    "SELECT JSON_OBJECT('id',`id`,'tenant_id',`tenant_id`,'job_run_id',`job_run_id`,'conversation_id',`conversation_id`,'schema_version',`schema_version`,'digest',`digest`,'coverage',`coverage`,'coverage_reasons',`coverage_reasons`,'message_count',`message_count`,'manifest',`manifest`,'created_at',`created_at`) FROM `analysis_snapshots` WHERE tenant_id='a75842dd-fe63-4a7c-aa2a-db551cfa4fa8' ORDER BY id LIMIT 1000"
+  ],
+  "startedAt": "2026-10-17T18:09:56.007488+00:00",
+  "timeoutSeconds": 15
+}

@@ -1,8 +1,149 @@
 # CCMA — Roadmap phát triển sản phẩm và tiếp quản giữa các agent
 
-Status: ACTIVE_PLANNING
+## Current R121 terminal hold — 2026-10-18
 
-Ngày: 2026-10-13. Plan ID: `CCMAI-PRODUCT-DELIVERY-20261013`. Tác giả: Local ORCHESTRATOR / SPEC_AUTHOR. Phạm vi đợt này: tài liệu R1 theo yêu cầu trực tiếp của owner; implementation tương lai tối thiểu R2 theo AGENTS.md. Baseline source: `49160128df5109ed46054babb6942457a3ed85a9`; worktree sạch trước authoring. Các mốc M1–M5 dưới đây đều chưa được nghiệm thu theo hợp đồng roadmap này.
+CCMAI-RUNTIME-121 CHANGES_REQUIRED: original serve exit1/wait observed; Unicode console encoding failure before browser, terminal HOLD/FINAL_EVIDENCE_MISSING. Owned fixture/backend/Vite stopped, three listeners absent, protected9containers10networks472volumes and405sourcepins unchanged. Preserve consumed campaign/caps and raw evidence; read-only bounded follow-up decision only, no automatic retry/successor/provider. FullM2/M3/M1business/pilot/release OPEN/accounts parked/no push-merge-deploy. Review: docs/reviews/R121_FINAL_TERMINAL_REVIEW_2026-10-18.md.
+
+Earlier checkpoint sections are historical.
+
+
+## Current R121 local capability hold — 2026-10-18
+
+Owner chose local continuation after R120 read-only lifetime review. One harmless local parent/child admission observed cooperative stop/wait exit0 and receipt; original outer exec returned1 vs declared17, so A2 NOT_MET. Source BUILD/compile/product runtime all NOT_STARTED, capability1of1 consumed/no retry. Root execution command lacked explicit native exit propagation; exact shell mapping cause not reproduced. Minimal prospective correction is explicit PowerShell exit propagation, not supervisor redesign; needs separately granted confirmation before product admission. R120 UI bounded acceptance/terminal gaps preserved, no oldcap reset or automatic successor. FullM2/M3/M1business/pilot/release OPEN/accountsparked.
+
+## Current R120 observed UI / terminal evidence hold — 2026-10-18
+
+R120 actual current UI observation: correct active rev2 over later off-lineage rev3; three readable Vietnamese history events/system reason, synthetic notice. CSS390x844 has no horizontal overflow, original JPEG375x811 (not exact-raster390x844/PNG); B09 unsupported NOT_RUN and B07 inherited. Overall CHANGES_REQUIRED: original supervisor terminal/held-child wait-exit/final fingerprint-effect counters MISSING after session loss, cause UNKNOWN. Root separate identity-proven sole fixture stop succeeded: EXITED/Pid0/Ports{}, listeners3019/64408/64629absent, protected8containers/9networks/471volumesequal, source400/binary/executablesunchanged. UI observation is not AI governance or actual workflow proof. Runtime stopped; no replay/repair/automatic successor/provider. Read-only failed-terminal/lifetime review/transfer only before separate governed runtime decision. FullM2/M3/M1business/pilot/release OPEN, accountsparked/no push-merge-deploy. Review: docs/reviews/R120_FINAL_INDEPENDENT_UI_REVIEW_2026-10-18.md.
+
+Read-only Luna Max diagnosis independently verified by Root: the stop command acknowledges a request only; terminal publication depends on the original supervisor reaching cleanup. Existing303member archive matches its manifest but contains no final markers/terminal/serve receipt. Actual disappearance cause UNKNOWN; no product source defect or repair established. Transfer decision: docs/reviews/R120_READONLY_LIFETIME_REVIEW_AND_DECISION_2026-10-18.md. Current implementation projection aligned to this R120 hold. No new runtime authority or automatic successor.
+
+Earlier checkpoint sections are historical.
+
+## Current R120 finite UI route — 2026-10-18
+
+Read-only Root/Sol diagnosis confirms fatal readiness during MySQL initialization (exact greeting bytes UNKNOWN); Docker responds, old owned container EXITED/Pid0/Ports{} and host listener absent now, without retroactive R119 cleanup PASS. R119 start/stop/checks remain consumed. Separately bounded R120 fixes only accumulated pre-auth greeting and explicit Windows listener-table proof, with unit discriminators/Root independent review before one new exact-admitted current-proposal/history UI observation. New seed precedes BUILD; runtime HOLD for source/binary and resource commits. No provider/lifecycle replay/product redesign/automatic support successor. First prerequisite failure stops. Current UI still NOT_RUN, B07inherited/B08raster/B09unsupported/fullM2/M3/M1business/pilot/release OPEN; accountsparked, no push/merge/deploy. Decision: docs/reviews/R119_READONLY_CAUSE_AND_R120_DECISION_2026-10-18.md. Earlier checkpoints historical.
+
+
+## Current R119 failed UI setup checkpoint — 2026-10-18
+
+Current-source proposal/history UI remains NOT_RUN: reviewed harness96ba23cc and offline compile1PASS/source-binary admission7ea25d35 preceded the sole fresh setup, which exited1 MYSQL_PROTOCOL_INVALID before backend/Vite/browser. Fixture start1/stop1 consumed; exact owned fixture EXITED and protected7containers/8networks/470volumes equal, listener-close proof OPEN(connectEx10035). Root records readiness review miss; raw failed packet preserved. R119 CHANGES_REQUIRED/noFREEZE/no replay or automatic tooling successor. Finite next decision: read-only root-cause/failed-packet review -> only justified explicit fresh readiness/start authority -> same missing M3 current-proposal/history browser proof and terminal review. No provider needed. R118 source/component and spent R117 real evidence inherited; B07bounded/B08raster/B09unsupported, fullM2/M3/M1business/pilot/release OPEN; Facebook/ZaloOA parked. See docs/reviews/R119_FINAL_INDEPENDENT_REVIEW_2026-10-18.md. Earlier checkpoints below historical.
+
+
+## Current R118 UI source checkpoint — 2026-10-18
+
+M3 current-proposal display/action binding now follows the backend active pointer/current lineage with unique legacy fallback; current heading/new WAIT_DATA history/system reason localized. Root independently24focusedtests and app typecheckPASS, source/component REVIEW_PASS at7f74a75f, FREEZE OPEN. No product browser/server/fixture/provider effects, no AI governance claim. See docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md.
+
+Remaining finite product proof: exact source/binary/fixture admission then one targeted current proposal/history wording observation, no lifecycle/provider replay. B07 inherited bounded; B08 exact raster qualified, B09 unsupportedNOT_RUN. Ordinary installed executor activation/fullM2/M3/M1business/pilot/release OPEN; R117 one real call consumed, all old evidence/budgets unchanged, accounts parked, no push/merge/deploy. No generic tooling successor.
+
+
+## Current checkpoint — R117 bounded M3 backend real flow accepted, 2026-10-18
+
+Actual WAIT_DATA source revision -> one real Alibaba execution/new run/new snapshot -> new proposal on same case -> synthetic writer API CONFIRM persisted, independently accepted. Real HTTP200, one call/debit/grant, faithful340input297output; native11top11nested+engine1PASS, noSKIP. Source5d38dd51/harness8aafa0ce, exact live admission06e16ea8; no ordinary installed activation/current UI-render/actual human decision claim. Owner-authorized same-fixture restart/finalstop after shutdown succeeded; final EXITED/current operational protected equality observed, original interrupted cleanupHOLD/defaultbridge replacement retained.
+
+Finite next product move is M3 current UI review/processing and remaining mobile/wording acceptance, inheriting current accepted backend/evidence and enforcing actual browser capability/admission. No further R117calls/native/runtime or generic tool-repair chain. FullM2/M3, B08raster/B09offline and other historical UI qualifiers, Dashboard3baselinefailures, M1business/pilot/release remain OPEN; Facebook/ZaloOA parked; no push/merge/deploy. See docs/reviews/R117_FINAL_INDEPENDENT_REVIEW_2026-10-18.md.
+
+## R116 product route — 2026-10-17
+
+Owner grants continuation with fresh Alibaba live testing. R115 intended design accepted only; R116 source-only implementation then Root-admitted isolated MySQL discriminators and capped max2 fresh real calls, stopfirstvalid/anyuncertainty. Goal is WAIT_DATA same-case new proposal available for human review with original lineage preserved. No old budget/runner replay or installed activation. UI raster/offline/terminal gaps, Dashboard3knownfailures, fullM2/M3/pilot/release and M1business stay OPEN; Facebook/ZaloOAparked. Three finite steps, no ETA/percentage. Current source return compiled offline but Root review0 CHANGES_REQUIRED; D01-D04 repair1 before any runtime admission. Native/DB/provider remain NOT_RUN. See docs/work_orders/CCMAI_RUNTIME_116_WAITDATA_EXECUTOR.md.
+
+
+## Historical R115 M3-05 intended design — 2026-10-17
+
+Source-backed executor/integration SPEC and non-dispatchable R2 implementation DRAFT prepared by Sol Medium and independently reviewed by Root after2documentrepairs;14sourcefiles/31referencebounds/hashpins verified against product68a3d30b. Product source unchanged. Intended path binds fresh execution authority, atomic current-permission/source claim+JobRun, canonical replay, durable call marker/cost, same-case active proposal and legacy compatibility, source/delete provenance fences. Unknown call/ownerloss stays manualhold, no automatic provider replay or invented terminal receipt. This is design acceptance only: executor/fences/activeprojection NOT_IMPLEMENTED, product/DB/liveproof NOT_RUN; no M3/S-stage exit.
+
+Finite next route: separately seed exact R2 implementation order -> bounded source/unit and isolatedDBfault/concurrency proof -> fresh explicitly authorized real-provider acceptance plus independent result. Current candidate budgets are proposals, no provider/secret/runtime grant or deploy. R102 remains localrevision/nonexecutingintent; R114CHANGES_REQUIRED/noFREEZE/terminalgap, B08rasterqualified/B09unsupported, R1103Dashboardfailures and fullM2/M3/pilot/release/M1business gaps retained; accounts parked. No newUI/tool-repair chain, old budget reuse, push/merge/deploy. Earlier sections below are historical.
+
+## Historical R114 bounded onboarding result — 2026-10-17
+
+Sourceaa92c149/campaignHEAD95401340: shared banner now says **Cài đặt AI** and all5onboarding labels are fully readable/wrapped on desktop and actualCSS390x844 queue/detail. Root independent3focusedtestsPASS/exit0 and forcedtypecheckPASS; no full-suite rerun. This resolves the two observed R113onboarding defects on current source, not allUI/fullM3. [Independent review](../R114_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md). B07inheritedR113boundedUI; B08DOM390x844 plus prior form/history evidence qualified by JPEG raster(queue390x843/detail375x811); exact390x844rawPNGunobserved. DerivedPNGnoresize. B09unsupportedNOT_RUN.
+
+Sole114fixture/backend/Vite/tab1,authPOST2(login/logout),caseaction/native/Go/runtimefrontendvalidation/provider/mock/retry0. Actual logout/viewportreset/ownedtab2close observed; baseline stale tab1untouched. Original supervisor42009terminal/cleanup/source-afterMISSING, duration/end/causeUNKNOWN; later Rootstoprequestafterdeadline is not cleanup proof. Independent final fixturealreadyEXITED/exclusive/protected4equal/PIDsandportsabsent, source/binarypinsmatch;0Rootfixturestop.185survivingrawfiles73584bytes hash/ZIP-preserved. CHANGES_REQUIRED/noFREEZE; no new114runtime/reset or tool-repair chain. Root continuity source-only/admission mismatch was held and fixed before start.
+
+Finite next route: recover original terminal receipts read-only only if actually available; otherwise retain gap without replay. Next product planning is M3-05 actualWAIT_DATAexecutor/source-writer integration SPEC -> separate bounded BUILD/live-proof authority. No provider/secret authority here. R102remains localrevision/nonexecutingintentonly, R11026PASS/3DashboardFAIL/typecheckPASS unchanged, fullM2/M3/pilot/release OPEN and Facebook/ZaloOAparked. Earlier route/result sections below are historical; current114records control. No push/merge/deploy.
+
+## Current R113 UI result and finite next move — 2026-10-17
+
+Current source-bound integrated browser evidence now exists at UIa28cdd0a/binding0622d185/campaignHEAD0a266623. B07 boundedPASS: fresh reader after actual ownerlogout reads queue/detail/history without write controls, revision1. B08 actualCSS390x844 queue/detail/ownerform/four expanded historic changes observed, with raw-JPEG raster variance(queue390x843/detail-form-history375x811), derivedPNG no resize; no exact390x844rawPNG or globalmobilePASS. B09 unsupportedNOT_RUN. Visited intervention/history wording understandable, but shared onboarding “Cấu hình AI Provider” and mobile chip clipping remainOPEN. [Independent review](../R113_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md).
+
+Sole113campaignspent,fixture/backend/Vite1/tab1/auth6of8/lifecycle0/native0/Go0/frontendvalidation0/provider0/retry0. Supervisor originalcleanup/result/exitreceiptMISSING after unknown-session; causeunknown. Root independently verified recordedPIDs/listenersabsent, stopped exact owned fixtureonce, then observed fixtureexited/exclusive/protectedbaselineequal. Actual logout/viewportreset/tabclose observed. Missing original evidence stays missing; no synthetic cleanupPASS. Raw196files80089bytes exactsource/export/zip verified; browser rawJPEG/DOM and derivedPNG/capturecodec/dimensions retained.
+
+R113 CHANGES_REQUIRED/noFREEZE. Finite next route: bound source-only onboarding wording/mobile-chip repair SPEC/workorder -> independent source/tests and exact changed-source/binary admission -> one targeted changed-screen proof/independent result, inheriting B07/current qualified history without lifecycle replay. This is a concrete product defect route, not another generic browser/Docker repair campaign. No further113start or unusedslotreuse; oldR110/R111/R112 source/evidence/budgets immutable. R11026PASS3knownDashboardFAIL/typecheckPASS remains qualified. FullM2/M3/M4/M5 and S0-S7 exits OPEN; R102local backend only/noactualAIrerunexecutor, Facebook/ZaloOAparked; no provider/secret/push/merge/deploy authority. Earlier current-route paragraphs below are historical.
+
+## Current browser tooling recovery — 2026-10-16
+
+R103 recovered official exact driver1.57.0 plus Chromium/headless1200 from npm/official browser CDN. Root335package hashes and610preexisting cachefile hashes verified; actual local browser143 launch/control/PNG capture PASS. [Independent tooling review](../R103_INDEPENDENT_TOOLING_REVIEW_2026-10-16.md) accepts cache/component health only. Codex browser API currently exposes no IAB provider, native pipe is unavailable, and external Antigravity browser_subagent was not observed; conditional R101 UI/server/fixture branch did not run. Driver ZIP404 bootstrap dependency was addressed without source/project dependency changes or version faking. Next: external Claude/Antigravity client blank-page capture using restored cache, then source-bound R101B01..B10 only when capable. No repeated reinstall/old-CDN attempt. Independent M3-05 executor SPEC remains available while bridge is absent. R101 Dashboard3baseline/FREEZE and full milestones remain OPEN; R102 local backend FROZEN, accounts parked.
+
+## Historical route after R101 browser retry2 — 2026-10-15
+
+[Independent retry2 review](../R101_RETRY2_INDEPENDENT_REVIEW_2026-10-15.md) records BLOCKED with qualifications: all16 manifest entries verified, no screenshots, B01..B10 NOT_RUN, R101 counters unchanged. The reported stop avoided app-infrastructure launch; a repeated automatic Playwright/CDN fetch remains an attempted external effect, so strict no-download wording and universal browser incapability are not accepted. Operator/tool chronology is not independently authenticated. Original report/log retained; R101 REVIEW/FREEZE and Dashboard3baselinefailures stay OPEN. Do not repeat unchanged-tool UI attempts.
+
+R102 remains FROZEN for local revision/nonexecuting intent. The selected next product route is M3-05 actual WAIT_DATA rerun executor/integration SPEC: audit current request/ownership/reservation paths -> define fresh source/permission, idempotency, linked run/history and failure/recovery contract plus real-provider acceptance -> bounded R2 work order before BUILD/effects. No source/provider/secret/browser-server campaign is dispatched here. UI acceptance resumes only with evidenced working capture or a separately scoped attributed manual route. M1 business decisions remain separate; fullM2/M3/pilot/release OPEN and Facebook/ZaloOA parked.
+
+## Current R102 local backend FREEZE — 2026-10-15
+
+R102 source6700de80 passed Root independent20native+7nested MySQL checks, noSKIP, plus2 engine checks at unchanged engine source. The local capability captures append-only source revisions and persists AWAITING_EXECUTION_AUTHORITY/NOT_RUN intents; original analysis/history/owner preserved. [Final bounded review](../R102_FINAL_INDEPENDENT_BACKEND_REVIEW_2026-10-15.md) accepts W01..08 backend software only. Actual AI executor and source writer integration are still absent from this slice. Go7 (worker4/reviewer3), repairs3, same sole fixture stopped/preserved with protected equality. Old failure and Root review miss retained; owner continuation7cbcd52 removed same-scope numerical caps, not effect/claim boundaries. Next bounded move: separately authorized SPEC/work order for actual WAIT_DATA executor/integration or parallel M1 people/SLA/corpus decisions. R101 browser/Dashboard3baselinefailures/FREEZE, fullM2/M3/M1business/pilot/release remain OPEN; Facebook/ZaloOA parked. No UI/provider/mock/download/originalDB/push/deploy effects. Earlier current/dispatch paragraphs are historical.
+
+## Historical R102 source BUILD — 2026-10-15
+
+Owner explicitly authorizes subagent work under Root supervision. Immutable seedc199f13 precedes dispatch11a60c0; final SPEC docs/specs/M3_WAITDATA_BACKEND_R102_SPEC_2026-10-15.md and order docs/work_orders/CCMAI_RUNTIME_102_WAITDATA_BACKEND.md govern source-only BUILD by /root/r102_worker Sol Medium, Root independent reviewer/commit steward. Intended local source revision and nonexecuting rerun intent only; no actual AI reanalysis. Root source review precedes any runtime, newR102Go0of8/fixture0of1. R101 REVIEW/browser/fullsuite/FREEZE remains OPEN, old resources/counters unchanged. Earlier candidate route below is historical preparation, not current dispatch truth. No UI/provider/mock/RunManual/guard bypass/installed activation/download/push/deploy.
+
+## Historical backend-first route — WAIT_DATA candidate, 2026-10-15
+
+Owner chooses work independent from blocked browser tooling and continues with M3-05 backend preparation. R101 source200df3e has inherited six native groups/four nested PASS and compile/newUI/build evidence; browserB01..B10 NOT_RUN, three inherited Dashboard tests FAIL, independent Claude return BLOCKED with driver-fetch qualification. R101 remains REVIEW/FREEZE OPEN. This updates the stale pre-dispatch current-state descriptions below; those sections are retained as historical checkpoints.
+
+Prepared intended [WAIT_DATA SPEC](R102_WAITDATA_BACKEND_SPEC_2026-10-15.md) and [candidate work order](R102_WAITDATA_BACKEND_WORK_ORDER_2026-10-15.md). Backend capability: observe locally supplemented source in an append-only revision, then persist an explicit rerun intent AWAITING_EXECUTION_AUTHORITY/NOT_RUN without replacing original analysis or human history. Existing source writer supplies messages; no transcript mutation, executor, provider, UI repair, Dashboard repair or live channel work is included. Actual AI rerun and full M3-05 remain OPEN. Candidate R102 is not dispatched and has no installed seed or runtime authority.
+
+Finite next route: finalize/commit immutable dispatcher authority -> implement the coherent revision/intent/API/test slice -> admit bounded synthetic MySQL checks and independently review local scope. R101 budgets/fixture2of2 remain unchanged and cannot fund this candidate. M1 people/SLA/corpus/threshold decisions may proceed in parallel; M4/M5 remain gated. Browser capability repair is not a prerequisite for this backend slice. Facebook/Zalo OA remain parked. No current runtime/provider/download/server/push/deploy effects.
+
+## Current M3 dispatch route — R101, 2026-10-15
+
+R100 bounded real synthetic proposal/faithful usage remains accepted at its exact recorded source; stopped after1/4 physical calls, unused slots unavailable. Current execution focus M3: accepted intended H01..H08 SPEC and immutable seed43c65ad bound review/correction/assignment/deadline/outcome, source/version/tenant guards and human history. Sol Medium implementation selected for transactional/source-lock/UI-lifetime difficulty after Luna Max inventory; Root independent review/commit. Source-only first, Root source admission before finite local MySQL/backend/browser proof (max16Go/two owned cached fixtures, zero provider/mock/secret). No installed activation or existing app/DB changes. Source/native/browser NOT_RUN before dispatch; fullM3 including WAIT_DATA rerun acceptance OPEN. M1 real people/SLA/corpus/threshold and fullM2/pilot/release OPEN, Facebook/Zalo OA parked. Route has three remaining steps: implement coherent human workflow -> actual isolated backend/browser proof -> independent acceptance/conditional local closure. No generic prerequisite successor; same-scope repairs bounded2, third without new cause cost escalation. Earlier current/next sections below are historical as of this R101 dispatch.
+
+## Current product result and finite next move — R100, 2026-10-15
+
+| Milestone | Current truth | Remaining acceptance / next move |
+|---|---|---|
+| M1 | Local synthetic intended contract accepted historically | Named reviewer/assignee, SLA, permitted corpus/holdout andquality/budget thresholds remainOPEN; settle alongsideM3planning |
+| M2 current | One realAlibaba qwen3.7-flash complaint proposal valid on currentR099source + R100harness; exactsnapshot/ID/quote andKNOWN360/261usage persisted; DENY403/WAIT200 beforephysicalcall; API1/4 andGo3/4, stopfirstvalid, fixtureclean | Boundedmanualsynthetic slice accepted. FullM2/S2/S3 permissions/PII/entrypaths/recovery/quality exits remainOPEN; installedrunnerdisabled |
+| M3 next | NOT_IMPLEMENTED / NOT_DISPATCHED | Sourceinventory andtestable contract -> boundedSPEC/workorder -> integrated confirm/reject/correct, assignment/deadline/outcome throughbrowser/backend withpermission/stale/concurrency checks |
+| M4 | Shadow/pilot NOT_RUN | M2/M3scope pluslockedcorpus/thresholds/people/realdata/account authority; no autosend |
+| M5 | Release/operations OPEN | RevisionCI, backup/restore/security/load/rollback/releaseacceptance; no currentpush/deployauthority |
+
+Stop achieved atfirstvalid, remaining3slots notspent orreassigned; oldR0982/2/R099Go1 unchanged. Explanation/nextaction English inthiscase; Vietnamesequality/generalaccuracy NOT_ACCEPTED. Fixture foundstopped afterinterruption; samepinnedID restartedonly forindependentreadback thenremoved withnetwork/volume; originalapp/DB unchanged. RawCLIwrapperstdout expectation flag unresolved, no stdout-contract PASS; actualrequest/response + Rootstrictreceipt/DB review are the evidence. Facebook/ZaloOA parked, docs55/R086native/fence gaps remainOPEN without inventing currentcounts orprerequisitechain. [Independent review](../R100_FINAL_INDEPENDENT_LIVE_REVIEW_2026-10-15.md).
+
+## Historical R100 owner-granted execution route — 2026-10-15
+
+Owner grants **max4 freshcalls untilvalidresult**, superseding max2 proposal/semanticfailurestop only. CurrentmilestoneM2, R099source0640431 compiled/sourceaccepted; changed-source runtimeNOTRUN beforeR100. NewR100 seedb33d1fe83be35aa0e20d18590a5462e7f0ecd6fd precedes BUILD. Fourpredeclaredsyntheticcases/fixedthinkingfalseprompt, oneownedloopbackfixture; Rootaudit eachsemanticinvalid/faithfulusage thenexclusivecontinuation. Stop firstvalidproposal+faithfulknownusage ortransport/metadata/security/ledger/DBfailure, max4/300sec. Onecompile/oneseed/onelive <=4Go, no oldbudgetreset/sourcechange. Rootindependentactualreceipt review needsno duplicatecall. NextM3 humanworkflow afteractualproposal; M1businessparallel, pilotreleaseOPEN/accountsparked. Earlier max2 pendingapproval sections below are superseded planning history, not authority.
+
+## Historical audited delivery route before owner max4 grant — 2026-10-15
+
+| Route | Acceptance still missing | Required next move / owner | Stop condition |
+|---|---|---|---|
+| M2 current | Real valid proposal on R099 source and faithfully persisted observed usage | Root completes source/compile review commit; owner decides proposed R100 fresh max2 budget; dispatcher pins new seed and source/binary before worker | No grant: no provider/key/fixture. Call1 failure or missing proposal/usage: stop before call2; no retry/tuning |
+| M3 next | Human confirm/reject/correct, assignment/deadline/outcome through browser and backend | Root prepares bounded SPEC/work order after valid source-bound proposal evidence | No automatic dispatch or customer send; reject stale/unauthorized writes |
+| M1 business / M4 pilot | Named reviewer, SLA, permitted real corpus/holdout and locked quality/budget thresholds | Owner business decisions and Root proposals can proceed alongside synthetic M2 | No real-data/pilot disclosure before scoped authority and acceptance |
+| M5 release | Revision-specific CI, recovery/security/operations and release acceptance | Separate release scope after product capability | No push, merge, deployment or production activation under this audit |
+| Parked / inherited gaps | Facebook/Zalo OA accounts; docs55 and R086 native/fence remain open | Account route needs owner resumption; other gaps need demonstrated dependency before becoming prerequisites | No silent account activation or generic prerequisite successor; historical55 count is not reverified |
+
+This route is planning only. R094 exact-old-source local proof and R098 real-provider failure receipts remain historical; changed R099 dependencies have no current runtime proof. Full M1–M5 and S0–S7 exits remain open. [Consolidated audit](../R099_ROADMAP_CONTINUITY_AUDIT_2026-10-15.md).
+
+## Historical source candidate and proposed next milestone — R099
+
+R099 source/compile REVIEW_PASS bounded, source0640431/proof302e873, onebuild PASS/0API/runtime. Candidate preserves knownmetadata through safe observed-error andsettlement, adds explicit immutable thinkingfalse once-only option. Actual changed-source proof NOT_RUN, FREEZE/fullM2 OPEN. HistoricalR094 acceptance preserved exactoldrevision; changeddependencies never inherititsruntimeacceptance. R098 real2HTTP200 at758each wereempty/no proposals, DBmetadata lost; budgets2/2/Go4/4 andcleanupverified unchanged. Root owns provider mode/cap/metadata miss.
+
+Concrete R100 packet requests freshmax2 syntheticcalls with explicitthinkingfalse/literalcanonicalJSONfields; call2 onlyifcall1 validproposal+faithfulusage, otherwise stop unusedslot/no tune/retry. No newseed/key/provider/fixture effects beforefreshownergrant and source-boundsignature. Product acceptance stillneeds realproposal withcanonicalevidence/knownobservedusage; then M3 humanreview/assignment/outcome. No generic prerequisite successor, no ETA/percentage, M3/pilot/realchannel OPEN, accountsparked.
+
+## Historical M2 live outcome and finite product repair — R098
+
+R098 actual2HTTP200/qwen3.7,758completioneach, finishlength/answerempty, proposals0. Both rawprovider usages known but adapter/engine losesmetadata into DBUNKNOWN; R098 CHANGES_REQUIRED/FREEZE OPEN. Fixture verifiedclean, app/DB unchanged, physical2/2 andGo4/4 neverreset. Root owns requestmode/cap and metadata review gaps. R096 oldunknowncause unproved, R097 localTLS remains bounded accepted.
+
+Independent new rootcauses justify one coherent R099 source-only product repair: preserve observed model/usage then explicit invalid-output settlement, add explicit immutable thinkingfalse future option supported by Alibaba docs. Zero API/key/DB/fixture/runtime, one compile/static independentreview; no mockgovproof. Fresh changed-request/liveapproval only after concrete candidate; no generic support successor/automatic rerun. Full M2/M3/pilot OPEN, Facebook/Zalo OA parked.
+
+## Historical M2 checkpoint — R096/R097, 2026-10-14
+
+M2 source/local backend prototype accepted at R094; actual live R096 attempts2/2 returned no provider HTTP response, usage/model/billing UNKNOWN, proposals0. R096 remains CHANGES_REQUIRED/FREEZE OPEN. Two consumed slots never reset; old R0932/2 and R095 pre-provider failure retained. Root owns the HTTP1 transport source admission miss; local reproduction identifies copied ALPN mismatch, remote cause remains unproved. Corrected source83c29ce is read-only; exactly one R097 local TLS regression PASS/exit0/noSKIP, proof only protocol tooling. Owned fixture cleaned, existing app/DB unchanged.
+
+R097 independent review accepted bounded local TLS proof; FREEZE local tooling only, material510856d. Finite next route: present concrete corrected TLS live approval packet R098 for fresh max2 synthetic calls. No call before fresh owner grant and new immutable seed/source admission. No generic prerequisite successor: failed local proof or first unknown live result requires stop/reassess. Product outcome still pending is evidence-valid real AI proposal or explicit real-output rejection, then M3 human review/assignment/outcome; full M2/M3/pilot not accepted. Facebook/Zalo OA parked.
 
 ## 1. Đọc và áp dụng roadmap này
 
@@ -45,16 +186,24 @@ Review nguồn: [R088](../R088_FINAL_INDEPENDENT_LOCAL_REVIEW_2026-10-13.md), [R
 
 Drift M1 đã đối chiếu với source hiện tại: spec database từng nói provider trước candidate; PRODUCT_DIRECTION từng dùng câu blanket “chưa triển khai” và nói chưa cấu hình provider thật. R092 sửa hai câu hiện hành theo source/owner/config readiness. `IMPLEMENTATION_STATUS.knownLimitations` hiện ghi R065 dispatch text là lịch sử/superseded; không coi đó là lệnh hiện hành. Các “next” trong ảnh chụp lịch sử UI được giữ nguyên như lịch sử. Không chạy lại full docs55/link inventory trong R092; số 55 không được khẳng định là count hiện tại. Audit 8 mục `--omit=dev` và 17 mục full audit có scope khác nhau; không gọi chênh số là regression nếu chưa so sánh lock/command/date.
 
-## R093 provider checkpoint và route hữu hạn
+## Historical R093 provider checkpoint và route hữu hạn
 
 [Independent live review](../R093_INDEPENDENT_LIVE_OUTCOME_REVIEW_2026-10-13.md): Alibaba qwen3.7-flash HTTP compatibility observed twice with synthetic data; positive output rejected for invalid ID/missing complaint anchor, neutral PASS. Budget2/2 exhausted; no further R093 retry. R092/R093 are two support scopes, not usable end-user workflow. Next is one coherent M2 application packet including verified local toolchain/isolated DB setup, WAIT_DATA/DENY before disclosure, durable physical-call reservation and strict proposal evidence validation. M3 then completes human review/assignment/outcome in browser. No Go/Docker/MySQL found in checked paths; setup is an explicit prerequisite of that packet, not a new endless support campaign. Full M1/M4/M5 business/pilot decisions remain open.
 
+## Historical R094 machine and bounded M2 route — 2026-10-14
+
+Owner resumes synchronized main and appoints Root orchestrator/reviewer; Luna Max primary, Sol Medium fallback when hard. Luna source intake and Sol design identify durable concurrent physical-call admission, exact evidence and legacy bypass; Root selects Sol Medium. R094 accepted intended SPEC and committed seed activate one coherent M2 source/local synthetic packet, not another provider characterization. Current machine has Go1.27, Node24.19/npm11.17, Docker29.8 and cached mysql:8.0; previous missing-toolchain statements are historical, no install campaign needed. Existing app/DB protected. Full M2/live/M3/pilot remain OPEN; zero new provider/secret/push/deploy effects. R093 positive evidence failure and cap2/2 retained. Next concrete capability: evidence-bound proposal plus readable case queue/detail on one manual synthetic job, with deny/wait zero disclosure. See ../../work_orders/CCMAI_RUNTIME_094_M2_INTERVENTION_APPLICATION.md.
+
+## Historical R094 independent local result — 2026-10-14
+
+Sol Medium source plus one consolidated repair reviewed independently by Root. Actual authenticated app route/MySQL/loopback delivers validated proposal and readable case, with deny/wait, tenant permissions, stable cap, malformed/stale/cancel/transaction failure assertions. Two named mutations killed and exact source restored; final9top-level/four nested adapter cases PASS. Worker6/root4Go consumed10/10; owned fixtures removed and existing containers unchanged. See ../R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md. This prototype is default disabled/unconfigured in installed app and has zero real provider calls; full M2 and M3/pilot stay OPEN. Next is new bounded live M2 cap/source activation approval, then M3 human workflow; no generic supporting successor or old-budget replay.
+
 ## 4. Thứ tự delivery và trạng thái
 
-| Mốc | Kết quả nghiệm thu | Stage liên quan | Dependency | Trạng thái lúc tạo |
+| Mốc | Kết quả nghiệm thu | Stage liên quan | Dependency | Trạng thái hiện hành |
 |---|---|---|---|---|
-| M1 | Hợp đồng bản đầu tiên và route an toàn hữu hạn | S0, một phần S1/S7 | Nguồn/review hiện hành | R092 independently reviewed LOCAL_SYNTHETIC_CONTRACT_READY at1e46390; R093 two real HTTP200/model-match observations; positive evidence-reference FAIL, neutral PASS, cap exhausted/returned; app governance and business/pilot exit OPEN |
-| M2 | Một đường phân tích có quyết định và đề xuất gắn nguồn | S1/S2/S3 | M1 contract; prerequisite thật sự chặn | PLANNED — chưa dispatch |
+| M1 | Hợp đồng bản đầu tiên và route an toàn hữu hạn | S0, một phần S1/S7 | Nguồn/review hiện hành | R092 local synthetic intended contract accepted historically; current M1 business/pilot acceptance OPEN. Does not block bounded synthetic M2 |
+| M2 | Một đường phân tích có quyết định và đề xuất gắn nguồn | S1/S2/S3 | M1 contract; prerequisite thật sự chặn | R100boundedrealpathREVIEW_PASS/FROZEN: actual1call validproposal, faithfulKNOWN360/261usage, consumed1of4, cleanup/protectedPASS. FullM2/S2/S3 OPEN; M3planning next |
 | M3 | Người dùng hoàn tất review → giao việc → kết quả | S5 và an toàn S7 tối thiểu | M2 contract/data; một phần UI/API có thể chuẩn bị song song sau khóa contract | PLANNED — chưa dispatch |
 | M4 | Chất lượng và lợi ích được đo trong shadow/pilot giới hạn | S0/S6; S4 nếu tối ưu | M2/M3, live readiness và an toàn dữ liệu | PLANNED — chưa dispatch |
 | M5 | Bản phát hành có thể cài, vận hành và tiếp quản | S7 | M4 GO và proof release | PLANNED — chưa dispatch |
@@ -217,12 +366,12 @@ Mẫu báo owner: “Dùng được X trong môi trường Y. Mốc M còn thi�
 | D02 người review/assignee, SLA giờ làm việc | OPEN | Local ánh xạ roles; owner chỉ định người/quy tắc nghiệp vụ còn thiếu | Workflow/pilot acceptance |
 | D03 corpus/PII/holdout | Synthetic baseline có; real-data scope OPEN | Local lập corpus contract; owner cho quyền dữ liệu cần thiết | Disclosure và M4 |
 | D04 ngưỡng chất lượng và budget | Chưa khóa trong roadmap này | Local đề xuất phép đo/căn cứ; owner chốt trade-off; không bịa số | M1 exit/pilot GO |
-| D05 provider/model/key readiness | Owner cho phép Alibaba AI test với synthetic input; secret-safe metadata ghi config present (`ap-southeast-1`, `qwen3.7-flash`), `CONFIG_PRESENT_NOT_LIVE_VERIFIED`; chưa có API request/response, adapter compatibility hay billing proof | R093 có authority seed riêng, chưa active tại R092 handback; tối đa 2 direct HTTP requests/zero retry theo seed. App integration/governance call cần packet R2 và cap Go retry riêng | Chỉ live branch; local synthetic source/UI không bị chặn |
+| D05 provider/model/key readiness | R100 current-source realAlibaba/qwen3.7-flash HTTP200, explicitthinkingfalse, validproposal andKNOWN360/261persistedusage; dollarbillingUNKNOWN | Ownermax4 stopsfirstvalid at1/4; no moreR100calls. Futureprovider effects require separatelybounded applicableauthority, neverreuseclosedmarkers | Boundedmanualsynthetic accepted; fullM2/pilotOPEN |
 | D06 topology/recovery/fence | In-process coordinator + DB parent-lock admission; orphan running fail-closed; distributed cancellation, crash recovery, reclaim và mixed-binary rollout không có | Chỉ đề xuất một process/one selected manual synthetic job; giữ fail-closed, không auto-reclaim; không mở lại accepted inheritance review | Multi-process/restart/live-data readiness; không chặn route local synthetic |
 | D07 Facebook/Zalo OA | OWNER_DEFERRED | Chỉ owner mở lại; không đưa vào prerequisite của Pancake synthetic; giữ nguyên evidence đã chấp nhận | Live riêng hai kênh |
 | D08 release target và vận hành | OPEN | Chốt môi trường/người vận hành trước M5; không tự deploy | M5 release |
 
-**Next allowed planning action:** Root independent-review R092 contract và drift fix. Sau khi chấp nhận, dispatcher mới chọn một packet M2 hữu hạn; R093 live HTTP authority vẫn là packet R2 riêng và chưa active. Không yêu cầu owner trả lời lại các quyền đã có. Thiếu tên nhân viên/SLA/ngưỡng pilot chỉ giữ acceptance tương ứng OPEN, không dừng synthetic build.
+**Next allowed planning action:** R100 boundedrealproposal+faithfulusage accepted; Root commits finalreview/cleanup/roadmap then prepares M3sourceinventory, testablehumanreview/correction/assignment/deadline/outcome contract andboundedSPEC/workorder. Browser/backend negativeproof required. M1people/SLA/corpus/threshold decisions parallel, pilot/releaseOPEN; no generic prerequisite successor orfurtherR100call.
 
 ## 15. Source Authority và Evidence Comparison
 

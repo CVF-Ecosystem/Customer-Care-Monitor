@@ -1,0 +1,22 @@
+{
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\frontend\\node_modules\\vitest\\vitest.mjs",
+    "run",
+    "--config",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r109_root\\focused-test.config.mjs",
+    "src/__tests__/intervention-api.test.ts",
+    "src/__tests__/intervention-ui.test.ts",
+    "src/__tests__/intervention-presentation.test.ts"
+  ],
+  "exitCode": 0,
+  "startedAtUTC": "2026-10-16T13:25:21.810621+00:00",
+  "nodeSha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+  "environmentKeys": [
+    "SystemRoot",
+    "TEMP",
+    "TMP",
+    "WINDIR"
+  ],
+  "scope": "focused cached source validation only; runtime NOT_RUN"
+}

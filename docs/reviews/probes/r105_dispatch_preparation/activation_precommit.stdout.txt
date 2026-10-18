@@ -1,0 +1,12 @@
+[PASS] CVF-DG-INST-01 PASS
+[PASS] CVF-DG-CONT-01 PASS
+[PASS] CVF-DG-RANGE-01 PASS
+       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=760726e691114a85af315ab5823112375c6af570 candidates=13 deleted=0
+[PASS] CVF-DG-APPL-01 PASS
+       note: checked: docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md
+[PASS] CVF-DG-ROLE-01 PASS
+       note: checked: docs/reviews/R105_RUNNER_INDEPENDENT_SOURCE_REVIEW_2026-10-16.md
+       note: docs/reviews/planning/R105_CLAUDE_EXECUTION_PROMPT_2026-10-16.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)
+[PASS] CVF-DG-CLAIM-01 PASS
+       note: 0 explicit claim line(s) and 3 document(s) scanned
+RESULT: PASS phase=pre-commit mandatoryControls=6 failed=0

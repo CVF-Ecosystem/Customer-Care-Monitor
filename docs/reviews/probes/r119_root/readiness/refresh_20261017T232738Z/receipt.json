@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "docker",
+    "version",
+    "--format",
+    "{{.Server.Version}}"
+  ],
+  "exit": 0,
+  "elapsedSeconds": 0.348,
+  "stdoutSha256": "c007c7e1712540ee77c9ce8e454890d905ff0193ec24907cb08ffd9d00b25d98",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

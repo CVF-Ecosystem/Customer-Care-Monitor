@@ -1,0 +1,29 @@
+{
+  "recordedAtUTC": "2026-10-16T12:29:22.526065+00:00",
+  "observer": "Codex /root",
+  "browser": "iab id2",
+  "inventory": {
+    "iab": true,
+    "mcpapps": true
+  },
+  "failedDiagnostic": {
+    "protocol": "data:",
+    "result": "Browser Use rejected this action due to browser security policy. Requested URL protocol not allowed; only HTTP/HTTPS. No bypass attempted."
+  },
+  "httpUrl": "http://127.0.0.1:53552/",
+  "calls": [
+    "cua.createBrowserTab(\"2\", \"http://127.0.0.1:53552\")",
+    "r108RootHttp.click(3)",
+    "r108RootHttp.getAXState()",
+    "r108RootHttp.getScreenshot()",
+    "r108RootHttp.close()"
+  ],
+  "observedBefore": "button Kiểm tra",
+  "observedAfter": "button Đã kết nối",
+  "screenshot": "docs/reviews/probes/r107_root/r108_connected/root_http_clicked.png",
+  "ownTabClosed": true,
+  "result": "HTTP_CONTROL_CAPTURE_PASS",
+  "representation": "Transcribed actual tool invocations/results; original screenshot bytes, no reconstructed screenshot.",
+  "cachePath": "NOT_OBSERVED",
+  "driverVersion": "NOT_OBSERVED"
+}

@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r117_execution\\bin\\handlers.test.exe",
+    "-test.run=^TestR116WaitDataRealAlibaba$",
+    "-test.v",
+    "-test.count=1",
+    "-test.timeout=180s"
+  ],
+  "cwd": "backend",
+  "startedAt": "2026-10-17T18:07:57.670949+00:00",
+  "finishedAt": "2026-10-17T18:08:10.437706+00:00",
+  "exitCode": 0,
+  "pid": 11012,
+  "failure": "",
+  "sourceAdmissionSha256": "02f0cef7fb1cc0f8ffeaa276cfad04b12d49fd75d460903fdbb3a702387f7ae1",
+  "runtimeAdmissionSha256": "c7d7191f1d753a52e54ea2489b46d7458e7ebeae7a6d8b430c6e0f6bc4f56bda",
+  "binarySha256": "80e66674335a02ca153e5e2c6c6bfcca03b7908bc9dd1fe9eaeae78fbbf0b4e4",
+  "binaryAfterSha256": "80e66674335a02ca153e5e2c6c6bfcca03b7908bc9dd1fe9eaeae78fbbf0b4e4",
+  "stdoutSha256": "bcfa9019773ede83767c551a4a6447501a3775468439df4c44a6a4b0d73da869",
+  "stderrSha256": "7e9fc9fac4e91604c36c78b46cf4bc0328c9d2b360c1103547e07b9d7985305a",
+  "testSkipObserved": false,
+  "providerMode": true
+}

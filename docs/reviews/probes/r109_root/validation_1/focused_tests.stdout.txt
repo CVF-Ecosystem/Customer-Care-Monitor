@@ -1,0 +1,15 @@
+
+[1m[46m RUN [49m[22m [36mv4.1.0 [39m[90mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/frontend[39m
+
+ [32m✓[39m src/__tests__/intervention-ui.test.ts [2m([22m[2m8 tests[22m[2m)[22m[33m 2923[2mms[22m[39m
+     [33m[2m✓[22m[39m does not show a late case A response after navigation to case B [33m 599[2mms[22m[39m
+     [33m[2m✓[22m[39m clears case data and actions when the session or permission changes [33m 594[2mms[22m[39m
+     [33m[2m✓[22m[39m disables duplicate submit, ignores a late action after navigation, and does not replay conflict [33m 797[2mms[22m[39m
+ [32m✓[39m src/__tests__/intervention-presentation.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32m✓[39m src/__tests__/intervention-api.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 42[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m3 passed[39m[22m[90m (3)[39m
+[2m      Tests [22m [1m[32m14 passed[39m[22m[90m (14)[39m
+[2m   Start at [22m 20:25:41
+[2m   Duration [22m 93.42s[2m (transform 38.20s, setup 0ms, import 52.48s, tests 2.99s, environment 33.66s)[22m
+

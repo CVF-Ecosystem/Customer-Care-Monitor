@@ -1,0 +1,110 @@
+{
+  "campaignCopiedByteForByte": true,
+  "campaignCopyIntegrityVerification": {
+    "allDirectoryPathsIdentical": true,
+    "allFileBytesIdentical": true,
+    "directoriesCompared": 1,
+    "filesCompared": 12,
+    "result": "PASS"
+  },
+  "createdAtUTC": "2026-10-17T01:40:51.560069+00:00",
+  "directories": [
+    "campaign",
+    "campaign/docker-cli-config",
+    "root_browser"
+  ],
+  "excludedBinary": {
+    "bytes": 58031616,
+    "disposition": "EXCLUDED_FROM_EXPORT; inherited binary remains at original ignored runtime path and was not copied into the evidence export.",
+    "path": ".cvf/runtime/r108_native/campaign/r108_handlers.test.exe",
+    "sha256": "cb73ee13e0369cca75ea276cc668f30c3ced42cead5f62c56d68f3c1eaa66f93"
+  },
+  "fileCount": 16,
+  "files": [
+    {
+      "bytes": 325,
+      "path": "binary_exclusion.json",
+      "sha256": "5d2dad0825c2f6246f61ae68b02298e28011b049a332807633923f92f2810a77"
+    },
+    {
+      "bytes": 444,
+      "path": "campaign/campaign_disposition.json",
+      "sha256": "7adead3933bf6a3a7c743f99845ae0fd7471b2d1addd083ac4417aced531c7a2"
+    },
+    {
+      "bytes": 4902,
+      "path": "campaign/campaign_intent.json",
+      "sha256": "918942de74612a5aa8f4da7f4ec8d3e815ad8565ae69c6759dfc671bd83868ec"
+    },
+    {
+      "bytes": 1071,
+      "path": "campaign/campaign_result.json",
+      "sha256": "b14ff57843948c324a957c5d3dc7cfa2d678e16d81faf4936d6dfef7fd4a877d"
+    },
+    {
+      "bytes": 1449,
+      "path": "campaign/cleanup.json",
+      "sha256": "7d5152dadf468e3f21f0f2f9db28eadf605be4d556ece336bef9417409e60f3b"
+    },
+    {
+      "bytes": 1479,
+      "path": "campaign/command_001_target_inspect.json",
+      "sha256": "339c9e102d635e76320f7ac0063aa3f67556ea513ff39cb9c0baf4adf9a199a3"
+    },
+    {
+      "bytes": 0,
+      "path": "campaign/command_001_target_inspect.stderr.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "campaign/command_001_target_inspect.stdout.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 745,
+      "path": "campaign/command_002_all_container_ids.json",
+      "sha256": "d02094971776a9281609a4bfeadfe92c0619bcf51d3e7f8aba292164c5f27a8d"
+    },
+    {
+      "bytes": 0,
+      "path": "campaign/command_002_all_container_ids.stderr.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "campaign/command_002_all_container_ids.stdout.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1537,
+      "path": "campaign/files_manifest.json",
+      "sha256": "ffce26d081c35f1e8e653dd86c6167ab4e3cb36a61e01ca0c48ef8f35e778122"
+    },
+    {
+      "bytes": 273,
+      "path": "campaign/source_admission_after.json",
+      "sha256": "aadfccbc81624a4a3775359b1b1f9dd8dbc9b59cae09b7fd54bed4adf920720a"
+    },
+    {
+      "bytes": 640,
+      "path": "predecessor_evidence_references.json",
+      "sha256": "3fde137c3f9399c2c5d9ad525bae39b2fde9fdef6fe47d1dca81335baf636292"
+    },
+    {
+      "bytes": 499,
+      "path": "root_browser_inventory.json",
+      "sha256": "5151bf7649f53af2d6b326db1f6cbc44baa05049e4c920ffa3961df5e37c9323"
+    },
+    {
+      "bytes": 6035,
+      "path": "start_invocation.json",
+      "sha256": "e16baadceea7602855bbaca1bd742b065860df7a012660ad532da85a829a3c45"
+    }
+  ],
+  "manifestSelfHash": "EXCLUDED_BY_DESIGN; hash and byte count are recorded in the worker return.",
+  "manifestVersion": "1.0",
+  "rootBrowserDirectorySnapshot": "root_browser_inventory.json",
+  "sourceRuntimeRoot": ".cvf/runtime/r112_workflow",
+  "totalBytes": 19399
+}

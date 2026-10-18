@@ -1,0 +1,10 @@
+{
+  "apiOrigin": "http://127.0.0.1:58469",
+  "backendPid": 25344,
+  "browserUrl": "http://127.0.0.1:3011/",
+  "campaignDeadlineUnix": 1792212571.9049647,
+  "rootBrowserOwner": "Codex /root",
+  "vitePid": 23000,
+  "viteReadinessProbes": 1,
+  "workerBrowserRole": "NONE"
+}

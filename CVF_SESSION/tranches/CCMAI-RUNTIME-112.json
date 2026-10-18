@@ -1,0 +1,121 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-112",
+  "authorityKind": "DISPATCHER_OWNED_RUNTIME_ONLY_WITH_PREDECESSOR_STATUS_RECONCILIATION",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "/root/r108_browser_luna",
+    "reviewer": "Codex /root",
+    "commitSteward": "Codex /root",
+    "closer": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/reviews/R112_*.md",
+    "docs/reviews/probes/r112_root/**",
+    "docs/reviews/probes/r112_luna/**",
+    ".cvf/runtime/r112_workflow/**",
+    "docs/work_orders/CCMAI_RUNTIME_112_REMAINING_UI.md",
+    "docs/work_orders/CCMAI_RUNTIME_110_REMAINING_UI.md",
+    "docs/work_orders/CCMAI_RUNTIME_111_REMAINING_UI.md"
+  ],
+  "prohibitedEffects": [
+    "provider/mock-governance/secret/customer/channel access",
+    "production backend/Core/gate/dependency/global config changes",
+    "modify old seeds/budgets/receipts/source/binary or call R108 again",
+    "Docker create/recreate/pull/prune/compose; mutate R102/user app/DB",
+    "new Go compile, alternate browser automation, policy bypass",
+    "worker commit/seed edit/self-review/push/deploy/FREEZE"
+  ],
+  "executionBudget": {
+    "goCompiles": 0,
+    "frontendTestInvocations": 0,
+    "frontendTypecheckInvocations": 0,
+    "existingFixtureStarts": 1,
+    "nativeInvocations": 0,
+    "nativeActionPosts": 0,
+    "backendListenerLaunches": 1,
+    "viteLaunches": 1,
+    "productTabs": 3,
+    "uiPostSubmissionsIncludingAuth": 8,
+    "campaignSeconds": 1200,
+    "runtimeRetries": 0,
+    "newFixtures": 0,
+    "providerCalls": 0,
+    "mockCalls": 0
+  },
+  "worker": "/root/r108_browser_luna",
+  "claimScope": "Runtime-only B07/B08 and supported B09 at inherited reviewed R110 UI source; no lifecycle replay, source repair or full product/governance acceptance",
+  "ownerAuthority": "Owner renews Luna execution and subsequent tiep; same bounded audit/self-handle grant. R110 attempted start rejected before campaign creation due unrelated knowledge receipt; keep that failure immutable. Root may prepare this fresh runtime-only successor without another confirmation, budgets never reset.",
+  "fixture": {
+    "container": "e1555e03d69360e1cd7729afd9e52856443f5172d76454653beec981a7d6477a",
+    "image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "volume": "ccmai-r101-review-final-20261015",
+    "network": "35c3959ac41517050defad05cbad7a08717b24c8879683e25baf3e2702625e98",
+    "label": "CCMAI-RUNTIME-101",
+    "db": "r101_fixture"
+  },
+  "dockerExe": "C:/Users/tiennm/AppData/Local/Programs/DockerDesktop/resources/bin/docker.exe",
+  "dockerHost": "npipe:////./pipe/dockerDesktopLinuxEngine",
+  "dockerSha256": "6c699720bb9523dedb9eb5d22a49951ea9210dbdb1314a3554029eee9be76896",
+  "entryDecision": "Preserve R110 prelaunch HOLD/effects0 and R111 NOT_DISPATCHED because Root omitted predecessor order metadata scope. New112seed explicitly admits only predecessor order status reconciliation plus new runtime-only bindings. Inherit accepted UI source a28cdd0a and all actual qualified checks. No old seed edits, counter reset, UI repair, native or validation rerun; exact empty runtime root check before sole start.",
+  "compiledBackend": {
+    "path": ".cvf/runtime/r108_native/campaign/r108_handlers.test.exe",
+    "sha256": "cb73ee13e0369cca75ea276cc668f30c3ced42cead5f62c56d68f3c1eaa66f93",
+    "bytes": 58031616,
+    "reviewedSourceCommit": "a4b1d490676b5ef9f165446a2aca33f10adb39df",
+    "compileExecutionHead": "b4a53d4b9fb63c3073b880eb9c7e3e8e6510eafa",
+    "requireNoBackendDelta": true
+  },
+  "nodeExe": "C:/Program Files/nodejs/node.exe",
+  "nodeSha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+  "browserOperator": "Codex /root",
+  "browserTool": "mcp__cua_repl",
+  "browserSurface": "iab",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
+  "baseCommit": "db93d36ed560d02f5b7b475d66f64f1b8487c499",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_112_REMAINING_UI.md",
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
+  "buildCommit": "9e7620b138ca218e63c903f52603f786670a6028",
+  "reviewEvidence": [
+    "docs/reviews/R112_INDEPENDENT_BINDING_REVIEW_2026-10-17.md",
+    "docs/reviews/R112_REMAINING_UI_WORKER_RETURN_2026-10-17.md",
+    "docs/reviews/R112_INDEPENDENT_RUNTIME_HOLD_REVIEW_2026-10-17.md"
+  ],
+  "disposition": "DOCKER_INSPECTION_TIMEOUT_BEFORE_FIXTURE_TRANSFER_REQUIRED",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "x-runtimeAdmission": {
+    "sourceCommit": "9e7620b138ca218e63c903f52603f786670a6028",
+    "inheritedUiSource": "a28cdd0ac9ad1c9d1fd30ced6cf627dd62a56ba2",
+    "admission": "docs/reviews/probes/r112_root/runtime_admission.json",
+    "status": "FAILED_PRE_FIXTURE_START_SPENT",
+    "frontendTestsUsed": 0,
+    "frontendTypechecksUsed": 0,
+    "runtimeStarts": 1,
+    "fixtureStarts": 0,
+    "backendLaunches": 0,
+    "viteLaunches": 0,
+    "nativeInvocations": 0,
+    "uiPosts": 0,
+    "retries": 0,
+    "goCompiles": 0,
+    "dockerCommandTimeouts": 2,
+    "fixtureFinalState": "NOT_OBSERVED",
+    "protectedFinalState": "NOT_OBSERVED"
+  }
+}

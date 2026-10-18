@@ -1,0 +1,9 @@
+{
+  "exitCode": 0,
+  "finishedAtUTC": "2026-10-17T13:13:23.227152+00:00",
+  "sourceChangedDuringCompile": [],
+  "binarySha256": {
+    ".cvf/runtime/r116_execution/bin/engine.test.exe": "eb5a5516632edeacf67542d38bc7698987258be38f11de431a5e872145e626bb",
+    ".cvf/runtime/r116_execution/bin/handlers.test.exe": "941a34a83be7308210cac4b64d72796b422324a0ecfbbc20cf9d3d7518aa2f4e"
+  }
+}

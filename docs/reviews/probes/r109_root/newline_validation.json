@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "actualCRLFWorkspaceAgainstGitLF": "PASS",
+  "wrongPhysicalHashRejected": true,
+  "allEvidenceFilesCompared": 10,
+  "runnerSHA256": "0d6dbeda1433d50fac37ece865bdc39be09ec5842ea4b73b2f651e5c515d7535",
+  "scope": "READ_ONLY_TEXT_REPRESENTATION_CHECK_NO_RUNTIME",
+  "priorHarnessRegressions": "INHERITED_UNCHANGED_FUNCTIONS",
+  "uiSourceAndValidation": "UNCHANGED"
+}

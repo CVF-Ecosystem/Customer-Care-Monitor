@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "python",
+    "-B",
+    "scripts/r117_waitdata_fixture.py",
+    "reviewer"
+  ],
+  "startedAtUTC": "2026-10-17T13:53:12.739848+00:00",
+  "rootCheck": 3,
+  "mode": "reviewer"
+}

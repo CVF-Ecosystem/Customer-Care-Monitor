@@ -1,0 +1,59 @@
+{
+  "tranche": "CCMAI-RUNTIME-121",
+  "status": "SOURCE_COPIES_CREATED_PENDING_INDEPENDENT_REVIEW",
+  "transformation": "literal byte replacements R120->R121 and r120->r121 only",
+  "files": [
+    {
+      "source": "backend/api/handlers/intervention_ui_r120_test.go",
+      "target": "backend/api/handlers/intervention_ui_r121_test.go",
+      "sourceSha256": "4c06353d372155e09b7106d140f84061f72022c2dd33c444075b2eeb9bf61cd3",
+      "targetSha256": "9189b27519afb033a5740d5fdc477dcf9c33aca1d9618448d52009de37e294a9",
+      "sourceBytes": 12541,
+      "targetBytes": 12541,
+      "uppercaseReplacements": 28,
+      "lowercaseReplacements": 29,
+      "noOldIdentityRemains": true,
+      "targetEqualsMechanicalExpected": true,
+      "sourceUnchanged": true
+    },
+    {
+      "source": "scripts/r120_ui_supervisor.py",
+      "target": "scripts/r121_ui_supervisor.py",
+      "sourceSha256": "6a70d1f38428ed70d7382bc69c8e5e8bfd0f49bad97ceadbc4be46d77b8a0217",
+      "targetSha256": "686a75b1f766960a1e8d223bc8cc80b1776d09a95d4518eff0cfca9b97c9d989",
+      "sourceBytes": 52976,
+      "targetBytes": 52976,
+      "uppercaseReplacements": 27,
+      "lowercaseReplacements": 16,
+      "noOldIdentityRemains": true,
+      "targetEqualsMechanicalExpected": true,
+      "sourceUnchanged": true
+    },
+    {
+      "source": "scripts/r120_vite_config.mjs.template",
+      "target": "scripts/r121_vite_config.mjs.template",
+      "sourceSha256": "1881ec5c99f7d9e35c67e30583b5237de00ddd860fe5a010e2ed09c61a115bc1",
+      "targetSha256": "9f2b970e414a1947c9ce78b06a35cf1af5778283d3c50e2ba4edc643a03e13c3",
+      "sourceBytes": 2678,
+      "targetBytes": 2678,
+      "uppercaseReplacements": 7,
+      "lowercaseReplacements": 2,
+      "noOldIdentityRemains": true,
+      "targetEqualsMechanicalExpected": true,
+      "sourceUnchanged": true
+    },
+    {
+      "source": "scripts/tests/test_r120_ui_supervisor.py",
+      "target": "scripts/tests/test_r121_ui_supervisor.py",
+      "sourceSha256": "7b6185ebae41be93698d77cb04b97bc2c9a7f4addef0194c5daa07dac1f003d6",
+      "targetSha256": "39a67b509d4e653f02d551d3a0d8824ecaa446c114374d3babfe9959a42bfd4b",
+      "sourceBytes": 22194,
+      "targetBytes": 22194,
+      "uppercaseReplacements": 9,
+      "lowercaseReplacements": 3,
+      "noOldIdentityRemains": true,
+      "targetEqualsMechanicalExpected": true,
+      "sourceUnchanged": true
+    }
+  ]
+}

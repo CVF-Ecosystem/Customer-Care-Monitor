@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "scripts/tests",
+    "-p",
+    "test_cvf_downstream_gate*.py"
+  ],
+  "exitCode": 0,
+  "elapsedSeconds": 14.762192900001537,
+  "recordedAtUTC": "2026-10-16T07:37:20.036938+00:00"
+}

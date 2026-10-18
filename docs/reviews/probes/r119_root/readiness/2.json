@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "docker",
+    "volume",
+    "ls",
+    "--format",
+    "{{json .}}"
+  ],
+  "exit": 0,
+  "seconds": 0.356,
+  "stdoutSha256": "fd93691004e4f2437b07c65158748bf935ee4ffab3fe4e02062a770eea92f830",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

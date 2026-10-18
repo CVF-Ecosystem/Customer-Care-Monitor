@@ -1,0 +1,12 @@
+# R096 independent pre-effect source admission
+
+Status: SOURCE_ADMISSION_ACCEPTED_LIVE_PENDING
+Risk: R2
+Worker: /root/m2_worker
+Reviewer: Codex /root
+
+Root inspected new current-schema, parent-ledger and HTTP1 seams before compile, then independently ran Python14/14 PASS and finalbinary withoutapproval; ROOT_APPROVAL_MISSING,wire0 beforestdin/DB/provider. Exact hashes/evidence docs/reviews/probes/r096_root/pre_effect_identity.json. Finalbinarydec0ba5c83474b23e0748a03b142616eabb34112af36968581ba16e24f063b5e. FrozenR09412 andR0953source unchanged; no R096fixture/key/API yet. DispatcherRoot seed4503afb predates activationb819e91 andBUILD. Tooling/source admission is not runtimeAIgovernance or fullM2 proof.
+
+Root confirms actualR095receipt knownpreprovider0 andimmutableSHA; parentmanifest sameownerphysicalcap2,role-specific O_EXCL effectslots inside recorder beforeRoundTrip, no R095/R093 reset. Signedbinary checks parenthash/predecessor beforestdin,exact role/campaign/fixture/DSN/model/endpoint andpersistentgo-start. Fresh HTTP1 (ForceAttemptHTTP2 false andemptyTLSNextProto),keepalivesdisabled,SDKAnalyzeChatOnce no retry/redirect/fallback. Boundedpartial response retained, source input/evidence preserved, unknownusage neverzero, completion>768 blockssecond effect. Pythonstrictcurrentproviders.alibaba_maas inert key/baseurl validated; model solelyimmutableownerqwen3.7, presets observationonly, availabilityUNKNOWN untilactualresponse. Ignoredexecutable/providerheader/configinstructionfields notexecuted orprinted. Root signature pins harness3,frozen12,binary,parentmanifest; precheckrequiredBEFOREcampaign toavoidR095schemafailure. Originalfixtureownership/cleanup/secretstdin/sanitizer controls inherited and reviewed unchanged.
+
+RootGo1/3,workerGo1/4. Worker disclosed compileterminalcwdbackend deviation; futureGo-Cbackend fromprojectroot, noreplay/backdating. Independent actualtooling outputs retained; source-specific R095offline tests were historicalBUILD-window evidence, notrelabelledcurrentCI. No hostedCI orwholebackend/browser proof. Root may commit exactsource andsign admission, then metadata-only key/endpoint shape precheck. One newownedcachedfixture,worker1/reviewer1 atmost2combinedphysicalcalls underoriginalownerpermission; failures/unknown consumepermanent markers, no tuning/refund. FullM2/M3/pilot/installapp/billing remainOPEN/UNKNOWN. No push/merge/deploy/publicexport.

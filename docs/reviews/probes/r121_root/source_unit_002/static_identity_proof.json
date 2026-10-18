@@ -1,0 +1,31 @@
+{
+  "preimageZip": "docs/reviews/probes/r121_root/identity_repair/preimage.zip",
+  "rows": [
+    {
+      "path": "backend/api/handlers/intervention_ui_r121_test.go",
+      "fullIdReplacements": 2,
+      "sha256": "172c825360b6e98d31c062416e9f938cbceae3a59abd1370fbfa7a25e299ba43",
+      "exactOnlyDelta": true
+    },
+    {
+      "path": "scripts/r121_ui_supervisor.py",
+      "fullIdReplacements": 5,
+      "sha256": "1cdb9366271eca9524f6fe36a55cf40c1cbaa8ce39f27303d19fcfedf260796c",
+      "exactOnlyDelta": true
+    },
+    {
+      "path": "scripts/r121_vite_config.mjs.template",
+      "fullIdReplacements": 0,
+      "sha256": "9f2b970e414a1947c9ce78b06a35cf1af5778283d3c50e2ba4edc643a03e13c3",
+      "exactOnlyDelta": true
+    },
+    {
+      "path": "scripts/tests/test_r121_ui_supervisor.py",
+      "fullIdReplacements": 1,
+      "sha256": "d443277c774d9d43121dbdacf95e607e85687c9ddffd265352ebfba413c081c7",
+      "exactOnlyDelta": true
+    }
+  ],
+  "oldSourcePinsUnchanged": 400,
+  "oldBinaryAdmissionInvalidForNewSource": true
+}

@@ -44,3 +44,5 @@ Quy ước này hướng dẫn ghi và dùng learning; việc lưu record không
 - [Repair workflow, continuity, mutation và evidence](feedback_cvf_repair_workflow.md)
 
 - [Phân lớp evidence độ phủ sync](feedback_sync_coverage_evidence_layers.md)
+
+- [Dispatch readiness, browser evidence và trách nhiệm Root trước giao việc](feedback_dispatch_readiness_and_browser_evidence.md) — đọc trước mọi UI/browser handoff; draft được sửa, effectiveness còn OPEN.

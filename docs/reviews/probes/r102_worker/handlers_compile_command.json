@@ -1,0 +1,15 @@
+{
+  "GOTOOLCHAIN": "local",
+  "command": "go -C backend test -c -o ../.cvf/runtime/r102_worker/r102_handlers.test.exe ./api/handlers",
+  "GOSUMDB": "off",
+  "cwd": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+  "counterBefore": {
+    "aggregateGo": 0,
+    "workerGo": 0
+  },
+  "GOPROXY": "off",
+  "counterAfter": {
+    "aggregateGo": 1,
+    "workerGo": 1
+  }
+}

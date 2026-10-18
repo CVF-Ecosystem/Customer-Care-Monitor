@@ -1,0 +1,112 @@
+{
+  "schemaVersion": "1.0",
+  "authorityKind": "DISPATCHER_OWNED_HISTORICAL_R101_UI_EVIDENCE",
+  "trancheId": "CCMAI-RUNTIME-105",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Claude / Antigravity-IDE REVIEW_EVIDENCE_OPERATOR",
+    "reviewer": "Codex /root",
+    "commitSteward": "Codex /root",
+    "closer": "Codex /root"
+  },
+  "allowedPaths": [
+    "docs/reviews/R105_R101_UI_WORKER_RETURN_2026-10-16.md",
+    "docs/reviews/probes/r105_claude/**",
+    ".cvf/runtime/r105_claude/**",
+    "docs/reviews/probes/r105_root/**",
+    "docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md"
+  ],
+  "prohibitedEffects": [
+    "any effect before Root admission and effective committed seed/order/continuity",
+    "provider/mock/secret/customer/channel effects",
+    "application/Core/gate/policy/dependency/global configuration changes",
+    "alter historical seeds/counters/manifests/baselines/ready/process evidence",
+    "Docker create/recreate/pull/compose/prune or changes to R102/user resources",
+    "install/download/compile/native/frontend test/build",
+    "nonloopback listeners or unrelated localhost8080 MCP/OAuth routes",
+    "policy bypass/file protocol retry/standalone browser substitution",
+    "worker commits/seed edits/self-review/push/merge/deploy/FREEZE"
+  ],
+  "executionBudget": {
+    "newFixtures": 0,
+    "existingFixtureStarts": 1,
+    "historicalBackendLaunches": 1,
+    "viteLaunches": 1,
+    "maxSimultaneousProductTabs": 3,
+    "applicationActionSubmissions": 10,
+    "runtimeRetries": 0,
+    "backendSeconds": 1800,
+    "wholeCampaignSeconds": 2100,
+    "providerCalls": 0,
+    "mockCalls": 0,
+    "goCompiles": 0,
+    "testBuildCommands": 0
+  },
+  "historicalTargetCommit": "200df3e4a7bc2a326425922a5230508a4fd9b0fe",
+  "binarySha256": "4c7575e180dd198d995bfe09bdc45061740a987be8ec0765f02b203e1c251f31",
+  "nodeExe": "C:/Program Files/nodejs/node.exe",
+  "nodeSha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+  "dockerExe": "C:/Users/tiennm/AppData/Local/Programs/DockerDesktop/resources/bin/docker.exe",
+  "dockerSha256": "6c699720bb9523dedb9eb5d22a49951ea9210dbdb1314a3554029eee9be76896",
+  "dockerHost": "npipe:////./pipe/dockerDesktopLinuxEngine",
+  "runtimePins": {
+    "docs/reviews/probes/r105_root/r105_ui_runner.py": "f27c5bfc729c67bf717473a7dbc894352446c9f74813be08243350e46a4d478a",
+    "docs/reviews/probes/r105_root/r105_vite_config.mjs.template": "8c8a40d463247443044578a16cdd2452f44c090d6f5c7fdf5a6068e67c5efbda",
+    "docs/reviews/probes/r105_dispatch_preparation/frontend_input_manifest.json": "9bc280a50432f56f9a12272b138e26831106bc7fa0002aa3b825f73ece58b8df",
+    "docs/reviews/probes/r101_root/formatted_source_manifest.json": "61c57a5ed0613626327dd92fae352feae23c78e1d3e8ea45c06c86bd2e7660d3",
+    "docs/reviews/probes/r105_root/source_review_receipt.json": "444a9dc14bd9530815f83f5573390e831e9cb869a2cf4dce05b810f30504ddd7"
+  },
+  "ownerAuthorization": "Owner 2026-10-16 explicitly grants full authority within Root orchestrator/reviewer role and says next after Root requested commit of reviewed preparation/immutable R105 seed/order and dispatch to Claude. Grant supersedes prior no-commit restriction for this bounded historical synthetic UI campaign, not provider/production/publication/deploy or failed-baseline closure.",
+  "claimScope": "Historical R101 synthetic human software UI only; no current R102/M3/full product/governance acceptance",
+  "entryDecision": "Inherit R101 historical200df3e source/binary and R104 recorded data-URL capability only; Root source review/12offline/89gateunits accepted, no actual application browser result. INTAKE/DESIGN/SPEC prepared; seed precedes formal WORK_ORDER/base/BUILD. Active pre-dispatch controls and Root admission before runtime.",
+  "workerAllowedPaths": [
+    "docs/reviews/R105_R101_UI_WORKER_RETURN_2026-10-16.md",
+    "docs/reviews/probes/r105_claude/**",
+    ".cvf/runtime/r105_claude/**"
+  ],
+  "historicalResourcePolicy": "Only existing R101 container/image/volume/network identities pinned by reviewed runner; fresh synthetic tenant/case/migration in that disposable fixture admitted once. No old readiness/counters/baseline rewrite, no third fixture. Preserve original R104 tab/no reuse/no closure claim.",
+  "runtimePinsRepresentation": "Captured current workspace bytes for five exact pins; immutable seed content UTF8_LF; recheck after checkout.",
+  "claimLimits": "B01-B10 observations only, static gates not runtime AI governance/hostedCI/full current R102 backend or M3/product acceptance. Three Dashboard baseline failures OPEN; no worker source repair/self-approval/commit.",
+  "status": "BUILD_BLOCKED",
+  "phase": "BUILD",
+  "baseCommit": "760726e691114a85af315ab5823112375c6af570",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "BLOCKED_BROWSER_SURFACE_UNAVAILABLE",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD",
+    "BUILD_BLOCKED"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "dispatcher": "Codex /root",
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
+  "x-sourceReview": "docs/reviews/R105_RUNNER_INDEPENDENT_SOURCE_REVIEW_2026-10-16.md",
+  "x-actualExecution": {
+    "fixtureStarts": 0,
+    "backendLaunches": 0,
+    "viteLaunches": 0,
+    "providerCalls": 0,
+    "mockCalls": 0,
+    "UI": "NOT_RUN"
+  },
+  "x-dispatchAcknowledgment": {
+    "date": "2026-10-16",
+    "root": "Codex /root",
+    "preDispatchCloseability": "PASS",
+    "activeGateApplicability": "CHECKED",
+    "materialShaMarker": "760726e691114a85af315ab5823112375c6af570",
+    "execution": "NOT_RUN"
+  },
+  "x-capabilityEvidence": "docs/reviews/probes/r105_root/CODEX_BROWSER_CAPABILITY_2026-10-16.json"
+}

@@ -1,0 +1,660 @@
+{
+  "reviewer": "Codex /root",
+  "at": "2026-10-17T18:10:05.993640+00:00",
+  "readOnly": true,
+  "readbackSourceSha256": "5497e703e37b1c1e5cfbfc3c760f72f6b18c2df4fb22021449988cd033387bcc",
+  "supervisorSha256": "11d26453ba86df9a98fd76a6858629755b3490f32178c5d68747530907fc0862",
+  "wireReceiptSha256": "69bb136a2967f7c538e3eed8e8ab04cefaf7262654ad2cf36fff1d9a22e1b632",
+  "fixturePinSha256": "4c1b66521664fbe52ff2d508bb7322461e9e693e8754bba4eb112ed8b7fdaa46",
+  "checks": {
+    "sameCasePublished": true,
+    "oneActiveProposal": true,
+    "oneAttemptAndDebit": true,
+    "grantConsumedBySameExecution": true,
+    "originalSnapshotRetained": true,
+    "newSnapshotBound": true,
+    "oneTerminalReceipt": true,
+    "observedUsageMatchesWire": true,
+    "rawWireUsageKnownAndFaithful": true,
+    "oneNewRunAndSnapshot": true,
+    "confirmedActionAndEventCount": true,
+    "freshGrantEvidence": true,
+    "oldRunAndReceiptRetained": true,
+    "originalRevisionAndRequestRetained": true,
+    "humanConfirmPersisted": true
+  },
+  "rows": {
+    "intervention_executions": [
+      {
+        "id": "e13659d3-8c66-4a79-a1e2-fa090cf8c934",
+        "state": "PUBLISHED",
+        "job_id": "d24fb655-0936-4491-abf0-870e2f48b8fd",
+        "run_id": "2a8716d3-2fa7-47ac-aadd-688ff4495c43",
+        "case_id": "b4f03ea9-96be-4ba1-8d7b-574d100a8ea0",
+        "actor_id": "5e67d9a2-9c94-4676-8550-72384062c2d2",
+        "grant_id": "fc1ac4a8-bbe5-4f94-87e2-0ea59187e16c",
+        "body_hash": "603ada5bf0ddb6146ae42370dd961d4921307b226754ac8a2b04c77c8026e752",
+        "tenant_id": "a75842dd-fe63-4a7c-aa2a-db551cfa4fa8",
+        "config_ref": "r116-alibaba-b22a15b6e8aa4113c2816acae6935a84d052a2d7b81db734ccdc4f5be81b4f8f",
+        "created_at": "2026-10-17 18:08:05.615000",
+        "request_id": "883d560a-2dca-4afc-a3d8-a962856c8916",
+        "updated_at": "2026-10-17 18:08:10.175000",
+        "revision_id": "da41dc27-128b-4dfa-9dc9-16801dd18085",
+        "snapshot_id": "ad1682db-8bd8-4a02-a657-8661f9724fac",
+        "terminal_code": "PROPOSAL_VALID",
+        "conversation_id": "b9fe1ead-fa7e-4bc7-ae5c-09f21ccca44f",
+        "manifest_digest": "af7f4bb90f90cf957043ba11bdbf9ea54328369638f29c9fddf464b19359f573",
+        "original_run_id": "704ed46c-31ef-42cf-b693-c5052dada8f7",
+        "snapshot_digest": "af7f4bb90f90cf957043ba11bdbf9ea54328369638f29c9fddf464b19359f573",
+        "claimed_case_version": 3,
+        "original_snapshot_id": "7d1fceba-cc88-4c5b-b023-dbec3323b514",
+        "expected_case_version": 3,
+        "original_snapshot_digest": "44e51e6c76c71a0044363e02fb5d684f700e9a1fee590be04a4aea5086ac7f1e"
+      }
+    ],
+    "intervention_execution_grants": [
+      {
+        "id": "fc1ac4a8-bbe5-4f94-87e2-0ea59187e16c",
+        "model": "qwen3.7-flash",
+        "state": "CONSUMED",
+        "job_id": "d24fb655-0936-4491-abf0-870e2f48b8fd",
+        "case_id": "b4f03ea9-96be-4ba1-8d7b-574d100a8ea0",
+        "actor_id": "5e67d9a2-9c94-4676-8550-72384062c2d2",
+        "deadline": "2026-10-17 18:13:05.530000",
+        "provider": "openai",
+        "issuer_id": "7961cd5a-6877-413f-9d5b-89d2afb89418",
+        "tenant_id": "a75842dd-fe63-4a7c-aa2a-db551cfa4fa8",
+        "config_ref": "r116-alibaba-b22a15b6e8aa4113c2816acae6935a84d052a2d7b81db734ccdc4f5be81b4f8f",
+        "created_at": "2026-10-17 18:08:05.530000",
+        "request_id": "883d560a-2dca-4afc-a3d8-a962856c8916",
+        "evidence_ref": "CCMAI-RUNTIME-117-OWNER-NEW1-20261017:e9f6ea72fa7fa92a36b7bc8c43acb9fa1b4deaee0c633df47db09de3677fb332",
+        "policy_version": "ccma.synthetic.intervention.v1",
+        "prompt_version": "r116-alibaba-v1",
+        "data_revision_id": "da41dc27-128b-4dfa-9dc9-16801dd18085",
+        "consumed_execution_id": "e13659d3-8c66-4a79-a1e2-fa090cf8c934"
+      }
+    ],
+    "intervention_cases": [
+      {
+        "id": "b4f03ea9-96be-4ba1-8d7b-574d100a8ea0",
+        "due_at": null,
+        "job_id": "d24fb655-0936-4491-abf0-870e2f48b8fd",
+        "run_id": "2a8716d3-2fa7-47ac-aadd-688ff4495c43",
+        "version": 5,
+        "actor_id": "7961cd5a-6877-413f-9d5b-89d2afb89418",
+        "use_case": "pancake_complaint_wait",
+        "execution": "LLM_SUCCEEDED",
+        "tenant_id": "a75842dd-fe63-4a7c-aa2a-db551cfa4fa8",
+        "created_at": "2026-10-17 18:08:05.022000",
+        "updated_at": "2026-10-17 18:08:10.355000",
+        "work_state": "OPEN",
+        "assignee_id": null,
+        "disposition": "HUMAN_CONFIRM",
+        "eligibility": "ELIGIBLE",
+        "next_action": "",
+        "reason_code": "",
+        "snapshot_id": "ad1682db-8bd8-4a02-a657-8661f9724fac",
+        "outcome_text": "",
+        "data_owner_id": null,
+        "policy_version": "ccma.synthetic.intervention.v1",
+        "prompt_version": "r116-alibaba-v1",
+        "schema_version": "ccma.intervention.v1",
+        "conversation_id": "b9fe1ead-fa7e-4bc7-ae5c-09f21ccca44f",
+        "snapshot_digest": "af7f4bb90f90cf957043ba11bdbf9ea54328369638f29c9fddf464b19359f573",
+        "human_assessment": "CONFIRM",
+        "human_explanation": "",
+        "human_next_action": "",
+        "active_proposal_id": "a4a72a28-5c6a-47f0-b59e-0c68ad5c30b9",
+        "active_execution_id": "e13659d3-8c66-4a79-a1e2-fa090cf8c934"
+      }
+    ],
+    "intervention_rerun_requests": [
+      {
+        "id": "883d560a-2dca-4afc-a3d8-a962856c8916",
+        "job_id": "d24fb655-0936-4491-abf0-870e2f48b8fd",
+        "reason": "R102 explicit request",
+        "status": "AWAITING_EXECUTION_AUTHORITY",
+        "case_id": "b4f03ea9-96be-4ba1-8d7b-574d100a8ea0",
+        "actor_id": "5e67d9a2-9c94-4676-8550-72384062c2d2",
+        "execution": "NOT_RUN",
+        "tenant_id": "a75842dd-fe63-4a7c-aa2a-db551cfa4fa8",
+        "created_at": "2026-10-17 18:08:05.507000",
+        "request_key": "r116-new",
+        "case_version": 3,
+        "payload_hash": "1d79bfa6396b58210f8674d7851d508026d9d13268534c267151c47768f47db8",
+        "conversation_id": "b9fe1ead-fa7e-4bc7-ae5c-09f21ccca44f",
+        "data_revision_id": "da41dc27-128b-4dfa-9dc9-16801dd18085",
+        "expected_version": 2,
+        "data_revision_digest": "af7f4bb90f90cf957043ba11bdbf9ea54328369638f29c9fddf464b19359f573",
+        "original_snapshot_id": "7d1fceba-cc88-4c5b-b023-dbec3323b514",
+        "original_snapshot_digest": "44e51e6c76c71a0044363e02fb5d684f700e9a1fee590be04a4aea5086ac7f1e"
+      }
+    ],
+    "intervention_data_revisions": [
+      {
+        "id": "da41dc27-128b-4dfa-9dc9-16801dd18085",
+        "digest": "af7f4bb90f90cf957043ba11bdbf9ea54328369638f29c9fddf464b19359f573",
+        "job_id": "d24fb655-0936-4491-abf0-870e2f48b8fd",
+        "reason": "R102 source observed",
+        "case_id": "b4f03ea9-96be-4ba1-8d7b-574d100a8ea0",
+        "actor_id": "5e67d9a2-9c94-4676-8550-72384062c2d2",
+        "coverage": "complete",
+        "manifest": "{\"schema_version\":\"ccma.snapshot.v1\",\"tenant_id\":\"a75842dd-fe63-4a7c-aa2a-db551cfa4fa8\",\"conversation_id\":\"b9fe1ead-fa7e-4bc7-ae5c-09f21ccca44f\",\"coverage\":\"complete\",\"coverage_reasons\":[],\"omitted_earlier_messages\":0,\"messages\":[{\"message_id\":\"6bb59ec4-bcc2-4748-bcf6-d7953c796c8a\",\"external_message_id\":\"e40f6302-3e83-468b-876b-48558c70386d\",\"sender_type\":\"customer\",\"sender_name\":\"\",\"content_type\":\"text\",\"sent_at\":\"2026-10-17T18:08:05.338Z\",\"content_sha256\":\"d2ea0c2db2f3cbc341379d6aed21d31e068f740df88f58d921c26dbf14fbd404\",\"content_code_points\":29,\"attachment_coverage\":\"none\",\"attachment_count\":0}]}",
+        "tenant_id": "a75842dd-fe63-4a7c-aa2a-db551cfa4fa8",
+        "created_at": "2026-10-17 18:08:05.405000",
+        "case_version": 2,
+        "message_count": 1,
+        "conversation_id": "b9fe1ead-fa7e-4bc7-ae5c-09f21ccca44f",
+        "coverage_reasons": [],
+        "observation_status": "LOCAL_MATCH_CURRENTNESS_UNVERIFIED",
+        "original_snapshot_id": "7d1fceba-cc88-4c5b-b023-dbec3323b514",
+        "original_snapshot_digest": "44e51e6c76c71a0044363e02fb5d684f700e9a1fee590be04a4aea5086ac7f1e",
+        "originating_case_version": 1
+      }
+    ],
+    "analysis_snapshots": [
+      {
+        "id": "7d1fceba-cc88-4c5b-b023-dbec3323b514",
+        "digest": "44e51e6c76c71a0044363e02fb5d684f700e9a1fee590be04a4aea5086ac7f1e",
+        "coverage": "empty",
+        "manifest": "{\"schema_version\":\"ccma.snapshot.v1\",\"tenant_id\":\"a75842dd-fe63-4a7c-aa2a-db551cfa4fa8\",\"conversation_id\":\"b9fe1ead-fa7e-4bc7-ae5c-09f21ccca44f\",\"coverage\":\"empty\",\"coverage_reasons\":[\"NO_MESSAGES\"],\"omitted_earlier_messages\":0,\"messages\":[]}",
+        "tenant_id": "a75842dd-fe63-4a7c-aa2a-db551cfa4fa8",
+        "created_at": "2026-10-17 18:08:05.022000",
+        "job_run_id": "704ed46c-31ef-42cf-b693-c5052dada8f7",
+        "message_count": 0,
+        "schema_version": "ccma.snapshot.v1",
+        "conversation_id": "b9fe1ead-fa7e-4bc7-ae5c-09f21ccca44f",
+        "coverage_reasons": [
+          "NO_MESSAGES"
+        ]
+      },
+      {
+        "id": "ad1682db-8bd8-4a02-a657-8661f9724fac",
+        "digest": "af7f4bb90f90cf957043ba11bdbf9ea54328369638f29c9fddf464b19359f573",
+        "coverage": "complete",
+        "manifest": "{\"schema_version\":\"ccma.snapshot.v1\",\"tenant_id\":\"a75842dd-fe63-4a7c-aa2a-db551cfa4fa8\",\"conversation_id\":\"b9fe1ead-fa7e-4bc7-ae5c-09f21ccca44f\",\"coverage\":\"complete\",\"coverage_reasons\":[],\"omitted_earlier_messages\":0,\"messages\":[{\"message_id\":\"6bb59ec4-bcc2-4748-bcf6-d7953c796c8a\",\"external_message_id\":\"e40f6302-3e83-468b-876b-48558c70386d\",\"sender_type\":\"customer\",\"sender_name\":\"\",\"content_type\":\"text\",\"sent_at\":\"2026-10-17T18:08:05.338Z\",\"content_sha256\":\"d2ea0c2db2f3cbc341379d6aed21d31e068f740df88f58d921c26dbf14fbd404\",\"content_code_points\":29,\"attachment_coverage\":\"none\",\"attachment_count\":0}]}",
+        "tenant_id": "a75842dd-fe63-4a7c-aa2a-db551cfa4fa8",
+        "created_at": "2026-10-17 18:08:05.680000",
+        "job_run_id": "2a8716d3-2fa7-47ac-aadd-688ff4495c43",
+        "message_count": 1,
+        "schema_version": "ccma.snapshot.v1",
+        "conversation_id": "b9fe1ead-fa7e-4bc7-ae5c-09f21ccca44f",
+        "coverage_reasons": []
+      }
+    ],
+    "intervention_attempts": [
+      {
+        "id": "0a816d63-633e-42d8-a853-585ca69afa83",
+        "state": "RESPONSE_RECEIVED",
+        "job_id": "d24fb655-0936-4491-abf0-870e2f48b8fd",
+        "run_id": "2a8716d3-2fa7-47ac-aadd-688ff4495c43",
+        "budget_id": "b97e43a9-723a-4f7c-9219-50de7080daec",
+        "tenant_id": "a75842dd-fe63-4a7c-aa2a-db551cfa4fa8",
+        "created_at": "2026-10-17 18:08:05.773000",
+        "usage_state": "KNOWN",
+        "execution_id": "e13659d3-8c66-4a79-a1e2-fa090cf8c934",
+        "input_tokens": 340,
+        "output_tokens": 297,
+        "response_model": "qwen3.7-flash",
+        "input_usage_presence": "known",
+        "output_usage_presence": "known"
+      }
+    ],
+    "intervention_budgets": [
+      {
+        "id": "b97e43a9-723a-4f7c-9219-50de7080daec",
+        "cap": 1,
+        "job_id": "d24fb655-0936-4491-abf0-870e2f48b8fd",
+        "consumed": 1,
+        "tenant_id": "a75842dd-fe63-4a7c-aa2a-db551cfa4fa8",
+        "created_at": "2026-10-17 18:08:05.530000"
+      }
+    ],
+    "intervention_proposals": [
+      {
+        "id": "a4a72a28-5c6a-47f0-b59e-0c68ad5c30b9",
+        "kind": "complaint",
+        "model": "qwen3.7-flash",
+        "run_id": "2a8716d3-2fa7-47ac-aadd-688ff4495c43",
+        "case_id": "b4f03ea9-96be-4ba1-8d7b-574d100a8ea0",
+        "evidence": [
+          {
+            "quote": "Tôi khiếu nại và chờ đơn hàng",
+            "message_id": "6bb59ec4-bcc2-4748-bcf6-d7953c796c8a"
+          }
+        ],
+        "provider": "openai",
+        "revision": 4,
+        "tenant_id": "a75842dd-fe63-4a7c-aa2a-db551cfa4fa8",
+        "created_at": "2026-10-17 18:08:10.175000",
+        "explanation": "Khách hàng đã gửi tin nhắn trực tiếp nêu rõ việc 'khiếu nại' và yêu cầu theo dõi đơn hàng. Đây là một khiếu nại cần được xử lý ngay để xác minh tình trạng đơn hàng và giải quyết vấn đề cho khách.",
+        "next_action": "Kiểm tra thông tin đơn hàng liên quan đến cuộc trò chuyện này, xác minh nguyên nhân gây khiếu nại và phản hồi lại khách hàng với hướng giải quyết cụ thể hoặc tiến độ xử lý.",
+        "snapshot_id": "ad1682db-8bd8-4a02-a657-8661f9724fac",
+        "usage_state": "KNOWN",
+        "policy_version": "ccma.synthetic.intervention.v1",
+        "prompt_version": "r116-alibaba-v1",
+        "schema_version": "ccma.intervention.v1",
+        "snapshot_digest": "af7f4bb90f90cf957043ba11bdbf9ea54328369638f29c9fddf464b19359f573"
+      }
+    ],
+    "intervention_receipts": [
+      {
+        "id": "3f44453f-7d31-45f2-8b02-cd11a8688fa4",
+        "code": "WAIT_DATA",
+        "run_id": "704ed46c-31ef-42cf-b693-c5052dada8f7",
+        "case_id": "b4f03ea9-96be-4ba1-8d7b-574d100a8ea0",
+        "tenant_id": "a75842dd-fe63-4a7c-aa2a-db551cfa4fa8",
+        "created_at": "2026-10-17 18:08:05.308000",
+        "usage_state": "UNKNOWN"
+      },
+      {
+        "id": "558e0f20-426e-4425-97f7-db0dfcac4501",
+        "code": "PROPOSAL_VALID",
+        "run_id": "2a8716d3-2fa7-47ac-aadd-688ff4495c43",
+        "case_id": "b4f03ea9-96be-4ba1-8d7b-574d100a8ea0",
+        "tenant_id": "a75842dd-fe63-4a7c-aa2a-db551cfa4fa8",
+        "created_at": "2026-10-17 18:08:10.175000",
+        "usage_state": "KNOWN"
+      }
+    ],
+    "intervention_human_events": [
+      {
+        "id": "197a3183-c1c7-46f8-8fc8-5be8ed208169",
+        "after": {
+          "due_at": null,
+          "version": 5,
+          "work_state": "OPEN",
+          "assignee_id": null,
+          "disposition": "HUMAN_CONFIRM",
+          "outcome_text": "",
+          "data_owner_id": null,
+          "human_assessment": "CONFIRM",
+          "human_explanation": "",
+          "human_next_action": ""
+        },
+        "action": "CONFIRM",
+        "before": {
+          "due_at": null,
+          "version": 4,
+          "work_state": "OPEN",
+          "assignee_id": null,
+          "disposition": "PENDING_REVIEW",
+          "outcome_text": "",
+          "data_owner_id": null,
+          "human_assessment": "",
+          "human_explanation": "",
+          "human_next_action": ""
+        },
+        "reason": "Đã xác nhận đề xuất cho khách hàng giả lập",
+        "case_id": "b4f03ea9-96be-4ba1-8d7b-574d100a8ea0",
+        "actor_id": "5e67d9a2-9c94-4676-8550-72384062c2d2",
+        "tenant_id": "a75842dd-fe63-4a7c-aa2a-db551cfa4fa8",
+        "created_at": "2026-10-17 18:08:10.355000",
+        "proposal_id": "a4a72a28-5c6a-47f0-b59e-0c68ad5c30b9",
+        "snapshot_id": "ad1682db-8bd8-4a02-a657-8661f9724fac",
+        "case_version": 5,
+        "source_status": "LOCAL_MATCH_CURRENTNESS_UNVERIFIED",
+        "snapshot_digest": "af7f4bb90f90cf957043ba11bdbf9ea54328369638f29c9fddf464b19359f573",
+        "data_revision_id": null,
+        "rerun_request_id": null
+      },
+      {
+        "id": "646b5317-199f-464a-95f2-21f27b849461",
+        "after": {
+          "due_at": null,
+          "version": 2,
+          "work_state": "WAITING_ON_DATA",
+          "assignee_id": null,
+          "disposition": "NOT_CREATED",
+          "outcome_text": "",
+          "data_owner_id": null,
+          "human_assessment": "",
+          "human_explanation": "",
+          "human_next_action": ""
+        },
+        "action": "OBSERVE_DATA",
+        "before": {
+          "due_at": null,
+          "version": 1,
+          "work_state": "WAITING_ON_DATA",
+          "assignee_id": null,
+          "disposition": "NOT_CREATED",
+          "outcome_text": "",
+          "data_owner_id": null,
+          "human_assessment": "",
+          "human_explanation": "",
+          "human_next_action": ""
+        },
+        "reason": "R102 source observed",
+        "case_id": "b4f03ea9-96be-4ba1-8d7b-574d100a8ea0",
+        "actor_id": "5e67d9a2-9c94-4676-8550-72384062c2d2",
+        "tenant_id": "a75842dd-fe63-4a7c-aa2a-db551cfa4fa8",
+        "created_at": "2026-10-17 18:08:05.405000",
+        "proposal_id": null,
+        "snapshot_id": "7d1fceba-cc88-4c5b-b023-dbec3323b514",
+        "case_version": 2,
+        "source_status": "LOCAL_MATCH_CURRENTNESS_UNVERIFIED",
+        "snapshot_digest": "44e51e6c76c71a0044363e02fb5d684f700e9a1fee590be04a4aea5086ac7f1e",
+        "data_revision_id": "da41dc27-128b-4dfa-9dc9-16801dd18085",
+        "rerun_request_id": null
+      },
+      {
+        "id": "6eb52314-0ab4-4a4c-a631-613399d7b2c9",
+        "after": {
+          "due_at": null,
+          "version": 3,
+          "work_state": "WAITING_ON_DATA",
+          "assignee_id": null,
+          "disposition": "NOT_CREATED",
+          "outcome_text": "",
+          "data_owner_id": null,
+          "human_assessment": "",
+          "human_explanation": "",
+          "human_next_action": ""
+        },
+        "action": "REQUEST_RERUN",
+        "before": {
+          "due_at": null,
+          "version": 2,
+          "work_state": "WAITING_ON_DATA",
+          "assignee_id": null,
+          "disposition": "NOT_CREATED",
+          "outcome_text": "",
+          "data_owner_id": null,
+          "human_assessment": "",
+          "human_explanation": "",
+          "human_next_action": ""
+        },
+        "reason": "R102 explicit request",
+        "case_id": "b4f03ea9-96be-4ba1-8d7b-574d100a8ea0",
+        "actor_id": "5e67d9a2-9c94-4676-8550-72384062c2d2",
+        "tenant_id": "a75842dd-fe63-4a7c-aa2a-db551cfa4fa8",
+        "created_at": "2026-10-17 18:08:05.507000",
+        "proposal_id": null,
+        "snapshot_id": "7d1fceba-cc88-4c5b-b023-dbec3323b514",
+        "case_version": 3,
+        "source_status": "LOCAL_MATCH_CURRENTNESS_UNVERIFIED",
+        "snapshot_digest": "44e51e6c76c71a0044363e02fb5d684f700e9a1fee590be04a4aea5086ac7f1e",
+        "data_revision_id": "da41dc27-128b-4dfa-9dc9-16801dd18085",
+        "rerun_request_id": "883d560a-2dca-4afc-a3d8-a962856c8916"
+      },
+      {
+        "id": "d9c09a0c-1140-47fa-a8a8-bb8f7d6ce873",
+        "after": {
+          "due_at": null,
+          "run_id": "2a8716d3-2fa7-47ac-aadd-688ff4495c43",
+          "version": 4,
+          "request_id": "883d560a-2dca-4afc-a3d8-a962856c8916",
+          "work_state": "OPEN",
+          "assignee_id": null,
+          "disposition": "PENDING_REVIEW",
+          "revision_id": "da41dc27-128b-4dfa-9dc9-16801dd18085",
+          "snapshot_id": "ad1682db-8bd8-4a02-a657-8661f9724fac",
+          "execution_id": "e13659d3-8c66-4a79-a1e2-fa090cf8c934",
+          "outcome_text": "",
+          "data_owner_id": null,
+          "snapshot_digest": "af7f4bb90f90cf957043ba11bdbf9ea54328369638f29c9fddf464b19359f573",
+          "human_assessment": "",
+          "human_explanation": "",
+          "human_next_action": "",
+          "active_proposal_id": "a4a72a28-5c6a-47f0-b59e-0c68ad5c30b9"
+        },
+        "action": "EXECUTE_RERUN",
+        "before": {
+          "due_at": null,
+          "run_id": "704ed46c-31ef-42cf-b693-c5052dada8f7",
+          "version": 3,
+          "request_id": "883d560a-2dca-4afc-a3d8-a962856c8916",
+          "work_state": "WAITING_ON_DATA",
+          "assignee_id": null,
+          "disposition": "NOT_CREATED",
+          "revision_id": "da41dc27-128b-4dfa-9dc9-16801dd18085",
+          "snapshot_id": "7d1fceba-cc88-4c5b-b023-dbec3323b514",
+          "execution_id": "e13659d3-8c66-4a79-a1e2-fa090cf8c934",
+          "outcome_text": "",
+          "data_owner_id": null,
+          "snapshot_digest": "44e51e6c76c71a0044363e02fb5d684f700e9a1fee590be04a4aea5086ac7f1e",
+          "human_assessment": "",
+          "human_explanation": "",
+          "human_next_action": ""
+        },
+        "reason": "approved execution",
+        "case_id": "b4f03ea9-96be-4ba1-8d7b-574d100a8ea0",
+        "actor_id": "5e67d9a2-9c94-4676-8550-72384062c2d2",
+        "tenant_id": "a75842dd-fe63-4a7c-aa2a-db551cfa4fa8",
+        "created_at": "2026-10-17 18:08:10.175000",
+        "proposal_id": "a4a72a28-5c6a-47f0-b59e-0c68ad5c30b9",
+        "snapshot_id": "ad1682db-8bd8-4a02-a657-8661f9724fac",
+        "case_version": 4,
+        "source_status": "bound_currentness_unverified",
+        "snapshot_digest": "af7f4bb90f90cf957043ba11bdbf9ea54328369638f29c9fddf464b19359f573",
+        "data_revision_id": "da41dc27-128b-4dfa-9dc9-16801dd18085",
+        "rerun_request_id": "883d560a-2dca-4afc-a3d8-a962856c8916"
+      }
+    ],
+    "job_runs": [
+      {
+        "id": "2a8716d3-2fa7-47ac-aadd-688ff4495c43",
+        "job_id": "d24fb655-0936-4491-abf0-870e2f48b8fd",
+        "status": "success",
+        "summary": {},
+        "tenant_id": "a75842dd-fe63-4a7c-aa2a-db551cfa4fa8",
+        "created_at": "2026-10-17 18:08:05.615000",
+        "started_at": "2026-10-17 18:08:05.615000",
+        "finished_at": "2026-10-17 18:08:10.175000",
+        "error_message": ""
+      },
+      {
+        "id": "704ed46c-31ef-42cf-b693-c5052dada8f7",
+        "job_id": "d24fb655-0936-4491-abf0-870e2f48b8fd",
+        "status": "error",
+        "summary": {},
+        "tenant_id": "a75842dd-fe63-4a7c-aa2a-db551cfa4fa8",
+        "created_at": "2026-10-17 18:08:05.308000",
+        "started_at": "2026-10-17 18:08:05.308000",
+        "finished_at": "2026-10-17 18:08:05.308000",
+        "error_message": ""
+      }
+    ],
+    "messages": [
+      {
+        "id": "6bb59ec4-bcc2-4748-bcf6-d7953c796c8a",
+        "content": "Tôi khiếu nại và chờ đơn hàng",
+        "sent_at": "2026-10-17 18:08:05.338000",
+        "raw_data": {},
+        "tenant_id": "a75842dd-fe63-4a7c-aa2a-db551cfa4fa8",
+        "created_at": "2026-10-17 18:08:05.338000",
+        "attachments": [],
+        "sender_name": "",
+        "sender_type": "customer",
+        "content_type": "text",
+        "conversation_id": "b9fe1ead-fa7e-4bc7-ae5c-09f21ccca44f",
+        "sender_external_id": "",
+        "external_message_id": "e40f6302-3e83-468b-876b-48558c70386d"
+      }
+    ]
+  },
+  "before": {
+    "Id": "033e0151bb4805cce1ce6dc347ab79ab8275e016c8ace371cfda158297a2c352",
+    "Image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "Name": "/ccmai-r117-root-20261017",
+    "State": "running",
+    "Labels": {
+      "ccmai.owner": "975dd60d-af4d-4090-8ad3-9a46e00370ef",
+      "ccmai.tranche": "CCMAI-RUNTIME-117"
+    },
+    "Mounts": [
+      {
+        "Destination": "/var/lib/mysql",
+        "Driver": "local",
+        "Mode": "z",
+        "Name": "ccmai-r117-root-20261017",
+        "Propagation": "",
+        "RW": true,
+        "Source": "/var/lib/docker/volumes/ccmai-r117-root-20261017/_data",
+        "Type": "volume"
+      }
+    ],
+    "Networks": {
+      "ccmai-r117-root-20261017": {
+        "Aliases": null,
+        "DNSNames": [
+          "ccmai-r117-root-20261017",
+          "033e0151bb48"
+        ],
+        "DriverOpts": null,
+        "EndpointID": "b348233d05a39a7c3465fa821bfea788f16ab74f9e322a0e2fa5ec35c23deb78",
+        "Gateway": "172.22.0.1",
+        "GlobalIPv6Address": "",
+        "GlobalIPv6PrefixLen": 0,
+        "GwPriority": 0,
+        "IPAMConfig": null,
+        "IPAddress": "172.22.0.2",
+        "IPPrefixLen": 16,
+        "IPv6Gateway": "",
+        "Links": null,
+        "MacAddress": "e2:19:81:9a:14:00",
+        "NetworkID": "fe2271a8b533ec1ed3d3d09f1b561afcf6491c9353b246555ad3fd3518e5bab0"
+      }
+    },
+    "Ports": {
+      "3306/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "61823"
+        }
+      ]
+    },
+    "ownedResourceIdentity": {
+      "containers": {
+        "033e0151bb4805cce1ce6dc347ab79ab8275e016c8ace371cfda158297a2c352": {
+          "Name": "ccmai-r117-root-20261017",
+          "EndpointID": "b348233d05a39a7c3465fa821bfea788f16ab74f9e322a0e2fa5ec35c23deb78",
+          "MacAddress": "e2:19:81:9a:14:00",
+          "IPv4Address": "172.22.0.2/16",
+          "IPv6Address": ""
+        }
+      },
+      "volume": {
+        "Name": "ccmai-r117-root-20261017",
+        "CreatedAt": "2026-10-17T13:50:51Z",
+        "Mountpoint": "/var/lib/docker/volumes/ccmai-r117-root-20261017/_data",
+        "Driver": "local",
+        "Labels": {
+          "ccmai.owner": "975dd60d-af4d-4090-8ad3-9a46e00370ef",
+          "ccmai.tranche": "CCMAI-RUNTIME-117"
+        },
+        "Options": null
+      },
+      "network": {
+        "Id": "fe2271a8b533ec1ed3d3d09f1b561afcf6491c9353b246555ad3fd3518e5bab0",
+        "Name": "ccmai-r117-root-20261017",
+        "Created": "2026-10-17T13:50:51.402347055Z",
+        "Driver": "bridge",
+        "Internal": false,
+        "Labels": {
+          "ccmai.owner": "975dd60d-af4d-4090-8ad3-9a46e00370ef",
+          "ccmai.tranche": "CCMAI-RUNTIME-117"
+        },
+        "Options": {
+          "com.docker.network.bridge.gateway_mode_ipv4": "nat",
+          "com.docker.network.bridge.host_binding_ipv4": "127.0.0.1",
+          "com.docker.network.enable_ipv4": "true",
+          "com.docker.network.enable_ipv6": "false"
+        }
+      }
+    }
+  },
+  "after": {
+    "Id": "033e0151bb4805cce1ce6dc347ab79ab8275e016c8ace371cfda158297a2c352",
+    "Image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "Name": "/ccmai-r117-root-20261017",
+    "State": "running",
+    "Labels": {
+      "ccmai.owner": "975dd60d-af4d-4090-8ad3-9a46e00370ef",
+      "ccmai.tranche": "CCMAI-RUNTIME-117"
+    },
+    "Mounts": [
+      {
+        "Destination": "/var/lib/mysql",
+        "Driver": "local",
+        "Mode": "z",
+        "Name": "ccmai-r117-root-20261017",
+        "Propagation": "",
+        "RW": true,
+        "Source": "/var/lib/docker/volumes/ccmai-r117-root-20261017/_data",
+        "Type": "volume"
+      }
+    ],
+    "Networks": {
+      "ccmai-r117-root-20261017": {
+        "Aliases": null,
+        "DNSNames": [
+          "ccmai-r117-root-20261017",
+          "033e0151bb48"
+        ],
+        "DriverOpts": null,
+        "EndpointID": "b348233d05a39a7c3465fa821bfea788f16ab74f9e322a0e2fa5ec35c23deb78",
+        "Gateway": "172.22.0.1",
+        "GlobalIPv6Address": "",
+        "GlobalIPv6PrefixLen": 0,
+        "GwPriority": 0,
+        "IPAMConfig": null,
+        "IPAddress": "172.22.0.2",
+        "IPPrefixLen": 16,
+        "IPv6Gateway": "",
+        "Links": null,
+        "MacAddress": "e2:19:81:9a:14:00",
+        "NetworkID": "fe2271a8b533ec1ed3d3d09f1b561afcf6491c9353b246555ad3fd3518e5bab0"
+      }
+    },
+    "Ports": {
+      "3306/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "61823"
+        }
+      ]
+    },
+    "ownedResourceIdentity": {
+      "containers": {
+        "033e0151bb4805cce1ce6dc347ab79ab8275e016c8ace371cfda158297a2c352": {
+          "Name": "ccmai-r117-root-20261017",
+          "EndpointID": "b348233d05a39a7c3465fa821bfea788f16ab74f9e322a0e2fa5ec35c23deb78",
+          "MacAddress": "e2:19:81:9a:14:00",
+          "IPv4Address": "172.22.0.2/16",
+          "IPv6Address": ""
+        }
+      },
+      "volume": {
+        "Name": "ccmai-r117-root-20261017",
+        "CreatedAt": "2026-10-17T13:50:51Z",
+        "Mountpoint": "/var/lib/docker/volumes/ccmai-r117-root-20261017/_data",
+        "Driver": "local",
+        "Labels": {
+          "ccmai.owner": "975dd60d-af4d-4090-8ad3-9a46e00370ef",
+          "ccmai.tranche": "CCMAI-RUNTIME-117"
+        },
+        "Options": null
+      },
+      "network": {
+        "Id": "fe2271a8b533ec1ed3d3d09f1b561afcf6491c9353b246555ad3fd3518e5bab0",
+        "Name": "ccmai-r117-root-20261017",
+        "Created": "2026-10-17T13:50:51.402347055Z",
+        "Driver": "bridge",
+        "Internal": false,
+        "Labels": {
+          "ccmai.owner": "975dd60d-af4d-4090-8ad3-9a46e00370ef",
+          "ccmai.tranche": "CCMAI-RUNTIME-117"
+        },
+        "Options": {
+          "com.docker.network.bridge.gateway_mode_ipv4": "nat",
+          "com.docker.network.bridge.host_binding_ipv4": "127.0.0.1",
+          "com.docker.network.enable_ipv4": "true",
+          "com.docker.network.enable_ipv6": "false"
+        }
+      }
+    }
+  },
+  "claimBoundary": "Independent synthetic DB readback only. Root separately verifies provider wire, original-object equality, human action and any unproved matrix cases. No OS network sandbox or production claim."
+}

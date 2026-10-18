@@ -1,0 +1,15 @@
+{
+  "reviewer": "Codex /root",
+  "recordedAt": "2026-10-15T01:32:59Z",
+  "samePinnedContainer": "88c14ee97ffd41d8ab61da3679e2c6b97cc15033c16c35a1e246e0cbe298385f",
+  "preReadbackState": {
+    "Status": "exited",
+    "Running": false,
+    "ExitCode": 255,
+    "OOMKilled": false,
+    "StartedAt": "2026-10-14T20:56:02.643742825Z",
+    "FinishedAt": "2026-10-15T01:22:36.223805744Z"
+  },
+  "reason": "Interruption resume found ownedfixture stopped; exactsameID restart only forindependent DBreadback/cleanup, no recreation/newGo/provider",
+  "providerCallsBefore": 1
+}

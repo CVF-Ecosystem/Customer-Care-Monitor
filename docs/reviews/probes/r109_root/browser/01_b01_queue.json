@@ -1,0 +1,9 @@
+{
+  "observedAtUTC": "2026-10-16T17:16:48.032Z",
+  "tool": "mcp__cua_repl",
+  "tabId": "2",
+  "url": "http://127.0.0.1:3011/4b44be84-86fc-47ef-a018-e515b5ae74ea/intervention-cases",
+  "operatorRecordedAction": "Fresh owner current tenant queue",
+  "dom": "01_b01_queue.dom.txt",
+  "screenshot": "01_b01_queue.png"
+}

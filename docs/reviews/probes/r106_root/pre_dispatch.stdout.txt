@@ -1,0 +1,11 @@
+[PASS] CVF-DG-INST-01 PASS
+[FAIL] CVF-DG-CONT-01 FAIL
+       SURFACE_MISMATCH @ CVF_SESSION/ACTIVE_SESSION_STATE.json#/activeTranche: activeTranche differs across surfaces: CVF_SESSION/ACTIVE_SESSION_STATE.json#/activeTranche='CCMAI-RUNTIME-106'; IMPLEMENTATION_STATUS.json#/activeTranche='CCMAI-RUNTIME-105'; CVF_SESSION/handoffs/AGENT_HANDOFF_CODEX_R101_UI_R106_2026-10-16.md#Active tranche='CCMAI-RUNTIME-106'
+       CONFLICTING_ACTIVE_HANDOFF @ CVF_SESSION/handoffs/AGENT_HANDOFF_R101_UI_R105_2026-10-16.md: a second handoff also declares an ACTIVE status
+[PASS] CVF-DG-RANGE-01 PASS
+       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=88f0c5e64185e538cfc47381a0820cacd73bab51 candidates=10 deleted=0
+[PASS] CVF-DG-APPL-01 PASS
+       note: checked: docs/work_orders/CCMAI_RUNTIME_106_CODEX_R101_UI_EVIDENCE.md
+[PASS] CVF-DG-ROUTE-01 PASS
+       note: checked: docs/work_orders/CCMAI_RUNTIME_106_CODEX_R101_UI_EVIDENCE.md
+RESULT: FAIL phase=pre-dispatch mandatoryControls=5 failed=1

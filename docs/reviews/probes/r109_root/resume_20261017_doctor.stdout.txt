@@ -1,0 +1,40 @@
+
+CVF Workspace Agent Enforcement Doctor
+=======================================
+Project: D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI
+
+
+  Check                                              Status
+  -------------------------------------------------- ------
+  Project folder exists                              [PASS]
+  Project isolated from CVF core                     [PASS]
+  .cvf/manifest.json exists                          [PASS]
+  .cvf/manifest.json is valid                        [PASS]
+  .cvf/policy.json exists                            [PASS]
+  Live governance evidence mandatory                 [PASS]
+  AGENTS.md exists                                   [PASS]
+  Bootstrap log exists                               [PASS]
+  CVF core path reachable                            [PASS]
+  Workspace rules file exists                        [PASS]
+  CVF core origin is public remote                   [PASS]
+  Public workspace kit is complete                   [PASS]
+  CVF public core matches origin/main                [PASS]
+  CVF public core worktree clean                     [PASS]
+  CVF core commit matches manifest                   [FAIL]
+         -> Manifest: e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba / Actual: fa34ed49e56648acafe8b0388e48e0aa0523f007 (warn only - core may have updated)
+  Required docs referenced by manifest exist         [PASS]
+  knowledge/ folder present (optional)               [PASS]
+  Seven-step phase model is canonical                [PASS]
+  Project continuity and catalog front doors exist   [PASS]
+  Active session state resolves its handoff          [PASS]
+  Implementation status and module registry are valid JSON [PASS]
+  AGENTS contract defines roles and seven steps      [PASS]
+  Pinned CVF core commit is public-remote reachable  [PASS]
+  Session and tranche continuity rehydration required [PASS]
+  Governed downstream catalog validates (--check)    [PASS]
+  Gate CVF-DG-INST-01                                [PASS]
+  Gate CVF-DG-CONT-01                                [PASS]
+
+  GATE_COVERAGE: INVOKED=33 NOT_APPLICABLE_WITH_REASON=9 hostedCiObserved=false
+  RESULT: PASS (27/27 checks passed)
+  Scope: the listed doctor checks only. Not a claim of hosted CI, real adoption or runtime AI enforcement.

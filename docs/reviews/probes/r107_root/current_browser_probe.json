@@ -1,0 +1,21 @@
+{
+  "observer": "Codex /root",
+  "date": "2026-10-16",
+  "calls": [
+    {
+      "call": "await cua.getState();",
+      "result": {
+        "apps": [],
+        "browsers": []
+      }
+    },
+    {
+      "call": "await cua.createBrowserTab('iab','about:blank',{visible:true});",
+      "result": "Browser is not available: iab"
+    }
+  ],
+  "disposition": "CURRENT_BROWSER_UNAVAILABLE",
+  "scope": "Current session only; does not negate recorded R106 browser functionality",
+  "r107CampaignStarted": false,
+  "newCampaignAllowance": 1
+}

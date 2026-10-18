@@ -1,0 +1,1 @@
+{"result":"PASS","node":"v24.19.0","mode":"MODULE_IMPORT_ONLY_NO_SERVER","pluginGroups":4}

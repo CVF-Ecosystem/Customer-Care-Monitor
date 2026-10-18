@@ -1,0 +1,52 @@
+[
+  {
+    "bytes": 4902,
+    "path": "campaign_intent.json",
+    "sha256": "918942de74612a5aa8f4da7f4ec8d3e815ad8565ae69c6759dfc671bd83868ec"
+  },
+  {
+    "bytes": 1071,
+    "path": "campaign_result.json",
+    "sha256": "b14ff57843948c324a957c5d3dc7cfa2d678e16d81faf4936d6dfef7fd4a877d"
+  },
+  {
+    "bytes": 1449,
+    "path": "cleanup.json",
+    "sha256": "7d5152dadf468e3f21f0f2f9db28eadf605be4d556ece336bef9417409e60f3b"
+  },
+  {
+    "bytes": 1479,
+    "path": "command_001_target_inspect.json",
+    "sha256": "339c9e102d635e76320f7ac0063aa3f67556ea513ff39cb9c0baf4adf9a199a3"
+  },
+  {
+    "bytes": 0,
+    "path": "command_001_target_inspect.stderr.bin",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "bytes": 0,
+    "path": "command_001_target_inspect.stdout.bin",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "bytes": 745,
+    "path": "command_002_all_container_ids.json",
+    "sha256": "d02094971776a9281609a4bfeadfe92c0619bcf51d3e7f8aba292164c5f27a8d"
+  },
+  {
+    "bytes": 0,
+    "path": "command_002_all_container_ids.stderr.bin",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "bytes": 0,
+    "path": "command_002_all_container_ids.stdout.bin",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "bytes": 273,
+    "path": "source_admission_after.json",
+    "sha256": "aadfccbc81624a4a3775359b1b1f9dd8dbc9b59cae09b7fd54bed4adf920720a"
+  }
+]

@@ -1,0 +1,394 @@
+{
+  "provenance": "Root operator transcription of actual CUA calls/results; not raw tool export",
+  "entries": [
+    {
+      "at": "2026-10-17T02:39:42.128Z",
+      "kind": "capability",
+      "value": {
+        "tabId": "1",
+        "url": "about:blank",
+        "browserCapabilities": [
+          {
+            "id": "visibility",
+            "description": "Use to show or hide the browser to the user, and to determine the browser's current visibility. Keep browser work in the background unless the user asks to see it or live viewing is useful. When the browser should be visible, call set(true)."
+          },
+          {
+            "id": "viewport",
+            "description": "Controls an explicit browser viewport override for responsive or device-size testing. Use it when a task calls for specific dimensions or breakpoint validation; otherwise leave it unset so the browser uses its normal viewport. Reset temporary overrides before finishing unless the user asked to keep them."
+          }
+        ],
+        "tabCapabilities": [
+          {
+            "id": "pageAssets",
+            "description": "List assets already observed in the current page state and bundle selected assets into a temporary local artifact."
+          },
+          {
+            "id": "webmcp",
+            "description": "Fetch page-defined WebMCP tools bound to the current document, then call them through the returned object."
+          }
+        ],
+        "offline": "NOT_ADVERTISED"
+      }
+    },
+    {
+      "at": "2026-10-17T02:45:54.592Z",
+      "kind": "reserve_product_tab",
+      "value": {
+        "ordinal": 1,
+        "url": "http://127.0.0.1:3011/",
+        "effect": "navigate existing owned blank tab"
+      }
+    },
+    {
+      "at": "2026-10-17T02:46:09.272Z",
+      "kind": "reserve_auth_post",
+      "value": {
+        "ordinal": 1,
+        "action": "fresh synthetic owner login",
+        "lifecycleWrites": 0
+      }
+    },
+    {
+      "at": "2026-10-17T02:46:17.119Z",
+      "kind": "capture",
+      "value": {
+        "label": "owner_initial",
+        "domPath": "owner_initial.dom.txt",
+        "pngPath": "owner_initial.png",
+        "url": "http://127.0.0.1:3011/ad5f12e9-72fa-4f52-9c9d-63b3a0855cf7"
+      }
+    },
+    {
+      "at": "2026-10-17T02:46:25.582Z",
+      "kind": "wording_finding",
+      "value": {
+        "screen": "owner landing",
+        "text": "Cấu hình AI Provider",
+        "finding": "developer term still rendered in onboarding banner",
+        "sourceClaim": "R110 wording source repair is partial; not app-wide language PASS"
+      }
+    },
+    {
+      "at": "2026-10-17T02:46:30.300Z",
+      "kind": "capture",
+      "value": {
+        "label": "owner_queue_desktop",
+        "domPath": "owner_queue_desktop.dom.txt",
+        "pngPath": "owner_queue_desktop.png",
+        "url": "http://127.0.0.1:3011/ad5f12e9-72fa-4f52-9c9d-63b3a0855cf7"
+      }
+    },
+    {
+      "at": "2026-10-17T02:46:30.304Z",
+      "kind": "viewport_set_intent",
+      "value": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "at": "2026-10-17T02:46:30.717Z",
+      "kind": "capture",
+      "value": {
+        "label": "owner_queue_mobile390x844",
+        "domPath": "owner_queue_mobile390x844.dom.txt",
+        "pngPath": "owner_queue_mobile390x844.png",
+        "url": "http://127.0.0.1:3011/ad5f12e9-72fa-4f52-9c9d-63b3a0855cf7"
+      }
+    },
+    {
+      "at": "2026-10-17T02:46:40.284Z",
+      "kind": "navigation_observation",
+      "value": {
+        "issue": "link click remained dashboard",
+        "url": "http://127.0.0.1:3011/ad5f12e9-72fa-4f52-9c9d-63b3a0855cf7",
+        "action": "navigate exact observed queue href once"
+      }
+    },
+    {
+      "at": "2026-10-17T02:46:50.590Z",
+      "kind": "B08_queue_dimensions",
+      "value": {
+        "clientWidth": 390,
+        "innerHeight": 844,
+        "innerWidth": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "at": "2026-10-17T02:46:50.680Z",
+      "kind": "capture",
+      "value": {
+        "label": "observed_owner_queue_mobile390x844",
+        "domPath": "observed_owner_queue_mobile390x844.dom.txt",
+        "pngPath": "observed_owner_queue_mobile390x844.png",
+        "url": "http://127.0.0.1:3011/ad5f12e9-72fa-4f52-9c9d-63b3a0855cf7/intervention-cases"
+      }
+    },
+    {
+      "at": "2026-10-17T02:46:55.645Z",
+      "kind": "capture",
+      "value": {
+        "label": "owner_detail_mobile390x844",
+        "domPath": "owner_detail_mobile390x844.dom.txt",
+        "pngPath": "owner_detail_mobile390x844.png",
+        "url": "http://127.0.0.1:3011/ad5f12e9-72fa-4f52-9c9d-63b3a0855cf7/intervention-cases/e0dc3d36-f01d-4047-a8b7-7e6445ac71c3"
+      }
+    },
+    {
+      "at": "2026-10-17T02:46:55.676Z",
+      "kind": "B08_detail_dimensions",
+      "value": {
+        "clientWidth": 375,
+        "innerHeight": 844,
+        "innerWidth": 390,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "at": "2026-10-17T02:47:03.973Z",
+      "kind": "capture",
+      "value": {
+        "label": "owner_form_history_mobile390x844",
+        "domPath": "owner_form_history_mobile390x844.dom.txt",
+        "pngPath": "owner_form_history_mobile390x844.png",
+        "url": "http://127.0.0.1:3011/ad5f12e9-72fa-4f52-9c9d-63b3a0855cf7/intervention-cases/e0dc3d36-f01d-4047-a8b7-7e6445ac71c3"
+      }
+    },
+    {
+      "at": "2026-10-17T02:47:43.160Z",
+      "kind": "action_failure",
+      "value": {
+        "action": "body.press End after selecting assignment",
+        "error": "Playwright selector deadline exceeded",
+        "retry": 0
+      }
+    },
+    {
+      "at": "2026-10-17T02:47:48.944Z",
+      "kind": "timeout_classification",
+      "value": {
+        "observation": "fresh DOM responds and assignment choice applied; isolated End key failure, no disconnected browser/stack retry",
+        "sourceState": "Lần cập nhật1",
+        "lifecycleWrites": 0
+      }
+    },
+    {
+      "at": "2026-10-17T02:47:49.462Z",
+      "kind": "capture",
+      "value": {
+        "label": "owner_assignment_form_mobile390x844",
+        "domPath": "owner_assignment_form_mobile390x844.dom.txt",
+        "pngPath": "owner_assignment_form_mobile390x844.png",
+        "url": "http://127.0.0.1:3011/ad5f12e9-72fa-4f52-9c9d-63b3a0855cf7/intervention-cases/a53643d1-3560-4fba-894d-30b78ba215c6"
+      }
+    },
+    {
+      "at": "2026-10-17T02:47:49.519Z",
+      "kind": "B08_owner_form_dimensions",
+      "value": {
+        "clientWidth": 375,
+        "innerHeight": 844,
+        "innerWidth": 390,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "at": "2026-10-17T02:47:55.257Z",
+      "kind": "viewport_reset",
+      "value": {
+        "temporaryOverride": "CLEARED"
+      }
+    },
+    {
+      "at": "2026-10-17T02:48:05.630Z",
+      "kind": "reserve_auth_post",
+      "value": {
+        "ordinal": 2,
+        "action": "actual owner logout",
+        "lifecycleWrites": 0
+      }
+    },
+    {
+      "at": "2026-10-17T02:48:11.130Z",
+      "kind": "owner_logout_observed",
+      "value": {
+        "url": "http://127.0.0.1:3011/login"
+      }
+    },
+    {
+      "at": "2026-10-17T02:48:15.822Z",
+      "kind": "reserve_auth_post",
+      "value": {
+        "ordinal": 3,
+        "action": "fresh fixture reader login",
+        "lifecycleWrites": 0
+      }
+    },
+    {
+      "at": "2026-10-17T02:48:26.209Z",
+      "kind": "capture",
+      "value": {
+        "label": "reader_queue",
+        "domPath": "reader_queue.dom.txt",
+        "pngPath": "reader_queue.png",
+        "url": "http://127.0.0.1:3011/ad5f12e9-72fa-4f52-9c9d-63b3a0855cf7/intervention-cases"
+      }
+    },
+    {
+      "at": "2026-10-17T02:48:33.729Z",
+      "kind": "capture",
+      "value": {
+        "label": "reader_detail_no_write_controls",
+        "domPath": "reader_detail_no_write_controls.dom.txt",
+        "pngPath": "reader_detail_no_write_controls.png",
+        "url": "http://127.0.0.1:3011/ad5f12e9-72fa-4f52-9c9d-63b3a0855cf7/intervention-cases/e0dc3d36-f01d-4047-a8b7-7e6445ac71c3"
+      }
+    },
+    {
+      "at": "2026-10-17T02:48:33.787Z",
+      "kind": "B07_reader_controls",
+      "value": {
+        "saveButtons": 0,
+        "actionCombobox": 0,
+        "reasonTextbox": 0
+      }
+    },
+    {
+      "at": "2026-10-17T02:48:54.606Z",
+      "kind": "reserve_auth_post",
+      "value": {
+        "ordinal": 4,
+        "action": "reader logout",
+        "lifecycleWrites": 0
+      }
+    },
+    {
+      "at": "2026-10-17T02:49:03.929Z",
+      "kind": "reserve_auth_post",
+      "value": {
+        "ordinal": 5,
+        "action": "prior R109 synthetic owner login for read-only expanded history",
+        "lifecycleWrites": 0
+      }
+    },
+    {
+      "at": "2026-10-17T02:49:28.140Z",
+      "kind": "historical_case_before",
+      "value": {
+        "case": "632e7ad1-ca55-4f3f-96a0-40d4223d9116",
+        "revision": 5,
+        "eventCount": 4,
+        "lifecycleWrites": 0
+      }
+    },
+    {
+      "at": "2026-10-17T02:49:34.658Z",
+      "kind": "capture",
+      "value": {
+        "label": "history_expanded_mobile390x844",
+        "domPath": "history_expanded_mobile390x844.dom.txt",
+        "pngPath": "history_expanded_mobile390x844.png",
+        "url": "http://127.0.0.1:3011/4b44be84-86fc-47ef-a018-e515b5ae74ea/intervention-cases/632e7ad1-ca55-4f3f-96a0-40d4223d9116"
+      }
+    },
+    {
+      "at": "2026-10-17T02:49:34.699Z",
+      "kind": "B08_history_dimensions",
+      "value": {
+        "clientWidth": 375,
+        "details": [
+          {
+            "open": false,
+            "text": "Xem thay đổiKết quả đánh giáTrước: Đang chờ đánh giáSau: Đã chỉnh sửaĐánh giá của người duyệtTrước: Chưa có thông tinSau: Đã sửa đánh giáGiải thích của người xử lýTrước: Chưa có thông tinSau: Khách cần được xác nhận thời gian giao hàng mới.Bước tiếp theo của người xử lýTrước: Chưa có thông tinSau: Liên hệ bộ phận giao hàng và báo lại cho khách."
+          },
+          {
+            "open": true,
+            "text": "Xem thay đổiTrạng thái xử lýTrước: Chờ duyệt hoặc giao việcSau: Đã giao xử lýNgười xử lýTrước: Chưa có thông tinSau: R101 memberHạn xử lýTrước: Chưa có thông tinSau: 15:30:00 20/10/2026"
+          },
+          {
+            "open": true,
+            "text": "Xem thay đổiTrạng thái xử lýTrước: Đã giao xử lýSau: Đã ghi kết quảKết quả xử lýTrước: Chưa có thông tinSau: Đã xác nhận lịch giao mới với khách và hẹn theo dõi ngày mai."
+          },
+          {
+            "open": true,
+            "text": "Xem thay đổiTrạng thái xử lýTrước: Đã ghi kết quảSau: Đã giao xử lýHạn xử lýTrước: 15:30:00 20/10/2026Sau: 16:45:00 21/10/2026Kết quả xử lýTrước: Đã xác nhận lịch giao mới với khách và hẹn theo dõi ngày mai.Sau: Chưa có thông tin"
+          }
+        ],
+        "innerHeight": 844,
+        "innerWidth": 390,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "at": "2026-10-17T02:49:40.167Z",
+      "kind": "capture",
+      "value": {
+        "label": "history_correction_expanded_mobile390x844",
+        "domPath": "history_correction_expanded_mobile390x844.dom.txt",
+        "pngPath": "history_correction_expanded_mobile390x844.png",
+        "url": "http://127.0.0.1:3011/4b44be84-86fc-47ef-a018-e515b5ae74ea/intervention-cases/632e7ad1-ca55-4f3f-96a0-40d4223d9116"
+      }
+    },
+    {
+      "at": "2026-10-17T02:49:40.238Z",
+      "kind": "historical_case_after",
+      "value": {
+        "revision": 5,
+        "eventCount": 4,
+        "lifecycleWrites": 0,
+        "detailOpen": [
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "at": "2026-10-17T02:49:51.749Z",
+      "kind": "B08_history_final_dimensions",
+      "value": {
+        "clientWidth": 375,
+        "innerHeight": 844,
+        "innerWidth": 390,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "at": "2026-10-17T02:49:51.849Z",
+      "kind": "reserve_auth_post",
+      "value": {
+        "ordinal": 6,
+        "action": "prior synthetic owner logout; browser cleanup",
+        "lifecycleWrites": 0
+      }
+    },
+    {
+      "at": "2026-10-17T02:49:56.358Z",
+      "kind": "capture",
+      "value": {
+        "label": "final_logged_out",
+        "domPath": "final_logged_out.dom.txt",
+        "pngPath": "final_logged_out.png",
+        "url": "http://127.0.0.1:3011/login"
+      }
+    },
+    {
+      "at": "2026-10-17T02:49:56.370Z",
+      "kind": "browser_cleanup",
+      "value": {
+        "viewportReset": true,
+        "finalUrl": "http://127.0.0.1:3011/login",
+        "lifecycleWrites": 0
+      }
+    },
+    {
+      "at": "2026-10-17T02:49:56.422Z",
+      "kind": "owned_tab_closed",
+      "value": {
+        "tabId": "1"
+      }
+    }
+  ]
+}

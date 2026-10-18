@@ -1,0 +1,21 @@
+{
+  "reviewer": "Codex /root",
+  "actualNative": {
+    "native": {
+      "topPass": 11,
+      "nestedPass": 11,
+      "receiptSha256": "129f1bfbf73a8608af484a9184c0ebaccb2f9886b82bf11af7786080b8f82b07",
+      "stdoutSha256": "c937c997820e6b96c4d25cf85fabbc73370f07a112c27c1aad77132332613d09",
+      "binarySha256": "80e66674335a02ca153e5e2c6c6bfcca03b7908bc9dd1fe9eaeae78fbbf0b4e4"
+    },
+    "reviewer": {
+      "topPass": 1,
+      "nestedPass": 0,
+      "receiptSha256": "7a9b75664630923579e19fa788e25f383af7c26ab5c9e2324a280c276bc66638",
+      "stdoutSha256": "b3224f62a165ba603ce8cab349315ad421588ae81197544b5871d8bd11ed1e83",
+      "binarySha256": "eb5a5516632edeacf67542d38bc7698987258be38f11de431a5e872145e626bb"
+    }
+  },
+  "providerCalls": 0,
+  "claimScope": "Software integration on owned fresh MySQL only; transport doubles not AI governance proof; controlled crash windows not process-kill proof"
+}

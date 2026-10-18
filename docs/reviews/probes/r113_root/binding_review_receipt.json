@@ -1,0 +1,18 @@
+{
+  "atUTC": "2026-10-17T02:40:17.145296+00:00",
+  "result": "PASS",
+  "reviewer": "Codex /root",
+  "worker": "/root/r113_readiness",
+  "exactIdentityOnlyTextParity": true,
+  "functionClassParityCount": 32,
+  "templateIdentityOnlyParity": true,
+  "inheritedInputPinsVerified": 11,
+  "exclusiveRuntimeRoot": "ABSENT",
+  "runtimeStarts": 0,
+  "frontendTests": 0,
+  "goInvocations": 0,
+  "pins": {
+    "docs/reviews/probes/r113_luna/r113_workflow_runner.py": "79a5dfb98de2e49dc258653b727816638664bc5e19e715129c8b43768e0f59df",
+    "docs/reviews/probes/r113_luna/r113_vite_config.mjs.template": "e5bdedb9f92065279219125cacd6b118d3072bed0d28ffc0d8f1b24749d1d65c"
+  }
+}

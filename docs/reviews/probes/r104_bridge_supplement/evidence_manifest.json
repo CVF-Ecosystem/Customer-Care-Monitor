@@ -1,0 +1,44 @@
+{
+  "manifestVersion": "1.0",
+  "createdAt": "2026-10-16T06:21:00+07:00",
+  "scope": "R104 Antigravity Integrated Browser Bridge Evidence Supplement",
+  "sourceConversationId": "6d5440a8-74c0-4ed9-ae82-61f7044237a6",
+  "files": [
+    {
+      "path": "docs/reviews/probes/r104_bridge_supplement/browser_recording.webp",
+      "fileName": "browser_recording.webp",
+      "sha256": "f3f4ce3995be8ac50ff3a51122c49c81da97ebf4beffca9f9ed3327e7a9c3a62",
+      "sizeBytes": 359354
+    },
+    {
+      "path": "docs/reviews/probes/r104_bridge_supplement/browser_subagent_invocation_and_response.json",
+      "fileName": "browser_subagent_invocation_and_response.json",
+      "sha256": "39fe77c27a020612a8913106e2ee106f1af4bab463b186151561a039fd650afc",
+      "sizeBytes": 12465
+    },
+    {
+      "path": "docs/reviews/probes/r104_bridge_supplement/click_feedback_screenshot.png",
+      "fileName": "click_feedback_screenshot.png",
+      "sha256": "7b4adfbb22cfa5ae22938010d0b84305361c934402c19a22ad69e5ae6fe1ec26",
+      "sizeBytes": 51217
+    },
+    {
+      "path": "docs/reviews/probes/r104_bridge_supplement/raw_gate_execution.json",
+      "fileName": "raw_gate_execution.json",
+      "sha256": "a5a7868184f83a1d0299e950e8b64f7b9308b410f79631de88a971cb09e78a29",
+      "sizeBytes": 2122
+    },
+    {
+      "path": "docs/reviews/probes/r104_bridge_supplement/subagent_scratchpad.md",
+      "fileName": "subagent_scratchpad.md",
+      "sha256": "18143d1a0039c98cee87f77d4410823fc5961b6b6e90056d9f95d1f1ad3e2447",
+      "sizeBytes": 550
+    },
+    {
+      "path": "docs/reviews/probes/r104_bridge_supplement/tab_closure_status.json",
+      "fileName": "tab_closure_status.json",
+      "sha256": "e7c1a786b7b95d0237b90aab247e1106f80d6debaf09eb22f710c12c57dff505",
+      "sizeBytes": 938
+    }
+  ]
+}

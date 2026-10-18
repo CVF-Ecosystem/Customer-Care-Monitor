@@ -1,0 +1,122 @@
+{
+  "browserReadyObserved": false,
+  "campaignBudgetSeconds": 1200,
+  "campaignDispositionPath": ".cvf/runtime/r112_workflow/campaign/campaign_disposition.json",
+  "campaignDispositionStatus": "FAILED",
+  "campaignProposedStatus": "FAILED",
+  "campaignResultPath": ".cvf/runtime/r112_workflow/campaign/campaign_result.json",
+  "campaignResultStatus": "PENDING_FINALIZATION",
+  "cleanupErrors": [
+    "post-campaign protected inventory: Hold",
+    "owned fixture final state was not verified"
+  ],
+  "cleanupReserveSeconds": 75,
+  "combinedToolOutputExact": "{\"trancheId\": \"CCMAI-RUNTIME-112\", \"status\": \"FAILED\", \"reason\": \"bounded campaign exception: Hold\", \"evidenceDirectory\": \"D:\\\\UNG DUNG AI\\\\TOOL AI 2026\\\\CVF-Workspace\\\\Customer-Care-Monitor-AI\\\\.cvf\\\\runtime\\\\r112_workflow\\\\campaign\", \"elapsedSeconds\": 33.553, \"nativeClassification\": \"INHERITED_NOT_RUN\"}\r\n",
+  "command": "python -B docs/reviews/probes/r112_luna/r112_workflow_runner.py start --project-root .",
+  "dispatchHead": "c028f62ec4993f41c65cb9ed484a428db4f72b61",
+  "executorSessionId": 99684,
+  "fixtureFinalState": "NOT_OBSERVED",
+  "fixtureStartAttempted": false,
+  "inheritedUiSourceCommit": "a28cdd0ac9ad1c9d1fd30ced6cf627dd62a56ba2",
+  "initialToolResponse": {
+    "exitCode": null,
+    "output": "",
+    "sessionId": 99684,
+    "wallTimeSeconds": 10.016
+  },
+  "nativeClassification": "INHERITED_NOT_RUN",
+  "notes": [
+    "No retry, restart, browser action, or further runtime command was issued.",
+    "Read-only Docker inventory subprocesses timed out; their full command JSON and zero-byte stdout/stderr captures are retained under campaign/.",
+    "Supervisor reported cleanupErrors and did not verify final fixture/protected inventory state."
+  ],
+  "outerProcessTimedOut": false,
+  "outerTimeoutConfigured": null,
+  "prestartAdmissionCheck": "docs/reviews/probes/r112_root/prestart_admission_check.json",
+  "protectedInventoryFinalState": "NOT_OBSERVED",
+  "readOnlyDockerInventorySubcommands": [
+    {
+      "argv": [
+        "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe",
+        "--host",
+        "npipe:////./pipe/dockerDesktopLinuxEngine",
+        "--config",
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r112_workflow\\campaign\\docker-cli-config",
+        "container",
+        "inspect",
+        "--format",
+        "{\"Id\":{{json .Id}},\"Name\":{{json .Name}},\"Image\":{{json .Image}},\"Status\":{{json .State.Status}},\"FixtureLabel\":{{json (index .Config.Labels \"ccmai.tranche\")}},\"Mounts\":[{{range $i,$m := .Mounts}}{{if $i}},{{end}}{\"Type\":{{json $m.Type}},\"Name\":{{json $m.Name}},\"Destination\":{{json $m.Destination}},\"RW\":{{json $m.RW}}}{{end}}],\"PortBindings\":{{json .HostConfig.PortBindings}},\"Networks\":[{{ $first := true }}{{range $name,$net := .NetworkSettings.Networks}}{{if not $first}},{{end}}{{ $first = false }}{\"Name\":{{json $name}},\"NetworkID\":{{json $net.NetworkID}}}{{end}}],\"Ports\":{{json .NetworkSettings.Ports}}}",
+        "e1555e03d69360e1cd7729afd9e52856443f5172d76454653beec981a7d6477a"
+      ],
+      "exitCode": 1,
+      "failureType": null,
+      "ownedProcessTermination": {
+        "attempted": true,
+        "directHandleTerminationAttempted": true,
+        "exitCode": 1,
+        "ownedChildTreeTerminationAttempted": true,
+        "ownedChildTreeTerminationExitCode": 0,
+        "pid": 20620,
+        "stillRunning": false
+      },
+      "pid": 20620,
+      "receiptPath": "campaign/command_001_target_inspect.json",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdoutBytes": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timedOut": true
+    },
+    {
+      "argv": [
+        "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe",
+        "--host",
+        "npipe:////./pipe/dockerDesktopLinuxEngine",
+        "--config",
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r112_workflow\\campaign\\docker-cli-config",
+        "ps",
+        "-aq",
+        "--no-trunc"
+      ],
+      "exitCode": 1,
+      "failureType": null,
+      "ownedProcessTermination": {
+        "attempted": true,
+        "directHandleTerminationAttempted": true,
+        "exitCode": 1,
+        "ownedChildTreeTerminationAttempted": true,
+        "ownedChildTreeTerminationExitCode": 0,
+        "pid": 7692,
+        "stillRunning": false
+      },
+      "pid": 7692,
+      "receiptPath": "campaign/command_002_all_container_ids.json",
+      "stderrBytes": 0,
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdoutBytes": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timedOut": true
+    }
+  ],
+  "requestedInitialYieldMilliseconds": 1000,
+  "reviewedSourceCommit": "9e7620b138ca218e63c903f52603f786670a6028",
+  "runnerElapsedSeconds": 33.553,
+  "runtimeAdmissionPath": "docs/reviews/probes/r112_root/runtime_admission.json",
+  "runtimeCampaignStatus": "FAILED",
+  "shell": "powershell",
+  "startInvocationCount": 1,
+  "stderrSeparatelyObserved": false,
+  "stdoutSeparatelyObserved": false,
+  "streamCaptureNote": "The execution tools returned one output field. Stream separation was not observed; do not infer an empty outer stderr.",
+  "terminalExitCode": 1,
+  "terminalState": "EXITED_FAILED",
+  "toolOutputField": "output (combined; tool did not expose distinct stdout/stderr fields)",
+  "trancheId": "CCMAI-RUNTIME-112",
+  "uiPostCounts": {
+    "blockedByLocalHarness": 0,
+    "forwarded": 0,
+    "ginPostObserved": 0,
+    "submitted": 0
+  },
+  "workingDirectory": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI"
+}

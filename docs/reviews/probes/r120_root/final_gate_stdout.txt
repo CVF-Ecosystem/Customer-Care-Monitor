@@ -1,0 +1,12 @@
+[PASS] CVF-DG-INST-01 PASS
+[PASS] CVF-DG-CONT-01 PASS
+[PASS] CVF-DG-RANGE-01 PASS
+       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=540de72363737f8ad11752942ceb596fc7587f2f candidates=75 deleted=0
+[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked
+       note: docs/work_orders/CCMAI_RUNTIME_120_CURRENT_UI_PROOF.md: status BLOCKED_WITH_REASON is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract
+[PASS] CVF-DG-ROLE-01 PASS
+       note: checked: docs/reviews/R120_FINAL_INDEPENDENT_UI_REVIEW_2026-10-18.md, docs/reviews/R120_IMPLEMENTATION_WORKER_RETURN_2026-10-18.md
+       note: docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)
+[PASS] CVF-DG-CLAIM-01 PASS
+       note: 0 explicit claim line(s) and 4 document(s) scanned
+RESULT: PASS phase=pre-commit mandatoryControls=6 failed=0

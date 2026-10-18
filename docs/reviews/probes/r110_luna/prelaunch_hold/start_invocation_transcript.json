@@ -1,0 +1,21 @@
+{
+  "command": "python -B docs/reviews/probes/r110_luna/r110_workflow_runner.py start --project-root .",
+  "tool": "functions.exec -> tools.exec_command",
+  "exitCode": 1,
+  "wallTimeSeconds": 2.3483467,
+  "returnedOutput": "{\"trancheId\": \"CCMAI-RUNTIME-110\", \"status\": \"HOLD\", \"reason\": \"R110 append-only runtime ledger is already used\"}",
+  "streamSeparation": "exec_command returned one output field; stdout/stderr were not separately exposed",
+  "stderr": "NOT_SEPARATELY_OBSERVED",
+  "invocationCount": 1,
+  "externalEffects": {
+    "retries": 0,
+    "backendLaunches": 0,
+    "goCompiles": 0,
+    "fixtureStarts": 0,
+    "nativeInvocations": 0,
+    "nativeActionPosts": 0,
+    "productTabs": 0,
+    "uiPosts": 0,
+    "viteLaunches": 0
+  }
+}

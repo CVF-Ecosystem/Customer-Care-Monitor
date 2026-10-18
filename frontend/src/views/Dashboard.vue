@@ -216,7 +216,7 @@
           <div class="text-caption text-medium-emphasis mb-2" data-testid="service-status-note">{{ $t('service_health_note') }}</div>
           <v-list density="compact">
             <v-list-item v-for="name in serviceNames" :key="name" class="px-0">
-              <v-list-item-title class="text-body-2">{{ name }}</v-list-item-title>
+              <v-list-item-title class="text-body-2">{{ $t(name) }}</v-list-item-title>
               <template #append>
                 <v-chip size="x-small" variant="tonal" prepend-icon="mdi-help-circle-outline" data-testid="service-status-chip">
                   {{ $t('service_health_unknown') }}
@@ -310,7 +310,7 @@ const costByDay = ref<any[]>([])
 const exchangeRate = ref(26000)
 // Service names only: no health state exists in the UI (CCMAI-RUNTIME-029). Health is neither
 // inferred from the Dashboard request nor from job/channel counts or payload hints.
-const serviceNames = ['API Server', 'Database', 'Scheduler']
+const serviceNames = ['service_application', 'service_data_storage', 'service_automated_schedule']
 const messagesByDay = ref<any[]>([])
 const channelCounts = ref<any[]>([])
 const totalMessages = computed(() => messagesByDay.value.reduce((sum, d) => sum + (d.count || 0), 0))

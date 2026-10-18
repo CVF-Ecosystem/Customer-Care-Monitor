@@ -1,0 +1,20 @@
+# R102 consolidated independent source review — round 1
+
+Status: CHANGES_REQUIRED
+Risk: R2
+Worker: /root/r102_worker
+Reviewer: Codex /root
+Date: 2026-10-15
+Scope: eight source/test paths in worker source_manifest.json
+Runtime admission: NOT_GRANTED
+
+Root independently inspected the final model/service/handler/router changes, native/unit designs, source manifest, SPEC W01..08, immutable seed and worker's disclosed coverage limits. Source-only BUILD remains authorized, Go0/fixture0/provider0. Early in-BUILD feedback on canonical manifests, latest-by-case-version, scoped replay, status labels and foreign404 has been incorporated. The following four groups form the first consolidated repair round; no source scope, risk, external effects, budget or commit-owner change.
+
+1. **Prevent SQL payload logging (blocking W08).** New transactions inherit db.DB's logger. Normal non-production Connect uses Info, and error traces can interpolate human reasons and entire source manifests in INSERT/UPDATE SQL. Silent test configuration masks this. Use a silent session for new service mutations, including replay sessions as appropriate, without changing global logger or existing M3 source. Add a real native captured-logger test at Info that runs a successful action and an induced storage failure, and proves submitted reason/source metadata sentinel values are absent from the sink. Safe HTTP errors must remain generic. No real secrets are needed.
+2. **Complete ordered concurrency evidence (W05).** Worker correctly discloses no separate observer/request-before-writer held-lock test. Sequential success then replay after changed source does not establish that ordering. Add a finite test-only GORM barrier after a new action has taken its locks, before event insert/commit; attempt a supported-writer-shaped channel update and membership revocation while the action holds its relevant locks. Verify they cannot finish until release, the action commits first, and later stale/revoked requests fail. Preserve existing writer-first/revocation-first tests. Use distinct actors where appropriate, bounded waits and safe release on failure. No production hook or shared-source edit.
+3. **Complete rollback branch evidence (W07).** Existing unique-event collisions prove event-failure rollback but not failures before it. Add test-scoped GORM callbacks to fail revision insert and request insert separately and force case CAS to affect0 rows. Assert actual case/version/event/revision/request state is unchanged on each rejected mutation. Remove callbacks reliably; do not alter Core, application triggers or existing tables outside the owned synthetic DB. Existing ownership guard/RunManual remains source unchanged, not fake-provider runtime proof.
+4. **Fail closed in test evidence and cleanup.** Multiple invariant counts/reads and cleanup deletes ignore .Error. A failed count can look like unchanged0/0 and incorrectly pass; cleanup failures are currently hidden. Check errors for all assertion-bearing reads/counts and mark cleanup errors as test failures. Ensure synthetic-channel goroutines have finite completion/error paths before fixture DB close. Preserve raw failures, no silent retry.
+
+Repair worker must rehydrate current canonical continuity, acknowledge role transition in active handoff before edits, repair these groups together, gofmt only authorized files, refresh source manifest and return exact coverage/limits. Root will re-review the full changed set before any compile/DB effect. At most two consolidated same-scope repair rounds; third without independent new root cause stops under REVIEW_COST_ESCALATION_REQUIRED. No provider/mock, external download, browser/UI, original DB or R101 fixture effects.
+
+The backend slice remains local observation and AWAITING_EXECUTION_AUTHORITY/NOT_RUN intent. Actual AI rerun, R101 browser/full-suite/FREEZE, full M2/M3/pilot/release remain OPEN. This review evaluates source and test design only; no native or runtime AI governance acceptance is claimed.

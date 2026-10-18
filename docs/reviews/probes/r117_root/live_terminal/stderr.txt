@@ -1,0 +1,3 @@
+2026/10/18 01:08:01 Database connected successfully
+2026/10/18 01:08:03 Database migration completed
+2026/10/18 01:08:05 Database migration completed

@@ -1,0 +1,13 @@
+[PASS] CVF-DG-INST-01 PASS
+[PASS] CVF-DG-CONT-01 PASS
+[PASS] CVF-DG-RANGE-01 PASS
+       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=64238c411b2fd9e966ef90ec73a243c8b355305e candidates=18 deleted=0
+[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked
+       note: docs/work_orders/CCMAI_RUNTIME_101_M3_HUMAN_WORKFLOW.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract
+[PASS] CVF-DG-ROUTE-01 PASS
+       note: checked: docs/work_orders/CCMAI_RUNTIME_101_M3_HUMAN_WORKFLOW.md
+[PASS] CVF-DG-ROLE-01 PASS
+       note: checked: docs/reviews/R101_BRIDGE_RECHECK_INDEPENDENT_REVIEW_2026-10-16.md, docs/reviews/R101_BRIDGE_RECHECK_WORKER_RETURN_2026-10-16.md, docs/reviews/R104_BRIDGE_RECHECK_INDEPENDENT_REVIEW_2026-10-16.md, docs/reviews/R104_BRIDGE_RECHECK_WORKER_RETURN_2026-10-16.md
+[PASS] CVF-DG-CLAIM-01 PASS
+       note: 0 explicit claim line(s) and 5 document(s) scanned
+RESULT: PASS phase=reviewer-fast mandatoryControls=7 failed=0

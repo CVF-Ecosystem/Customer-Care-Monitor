@@ -1,0 +1,43 @@
+{
+  "observedAtUTC": "2026-10-16T07:37:04.781938+00:00",
+  "observer": "Codex /root",
+  "kind": "DIRECT_TOOL_OBSERVATION_RECEIPT_NOT_RAW_EXPORT",
+  "tool": "mcp__cua_repl.js",
+  "browser": "iab",
+  "browserId": "2",
+  "inventory": {
+    "apps": [],
+    "browsers": [
+      "iab2",
+      "mcpapps1"
+    ]
+  },
+  "http": {
+    "origin": "http://127.0.0.1:56814/",
+    "before": "button Check control",
+    "action": "click(1)",
+    "after": "button Control OK",
+    "capture": "PASS",
+    "closedCall": "SUCCESS"
+  },
+  "capture": {
+    "path": "docs/reviews/probes/r107_root/browser_capability_control_ok.png",
+    "sha256": "17fd270c3b086356968cf6b96c88f56ba6b545ef5e9f85d1f77230bd960e2de8"
+  },
+  "healthServer": {
+    "source": "docs/reviews/probes/r105_root/codex_capability_resume/http_health.py",
+    "foregroundSession": 90837,
+    "stop": "CtrlC through original session",
+    "exit": 1
+  },
+  "driverVersion": "NOT_OBSERVED",
+  "productEffects": {
+    "fixtureStarts": 0,
+    "backendLaunches": 0,
+    "viteLaunches": 0,
+    "applicationActions": 0,
+    "providerCalls": 0,
+    "mockCalls": 0
+  },
+  "limits": "Pure loopback health only; original calls in Root chat. Product origin/UI untested. No driver download or module-validation replay."
+}

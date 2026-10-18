@@ -1,0 +1,20 @@
+{
+  "docs/reviews/probes/r107_root/current_browser_probe.json": "a3a0b0ce4b0a109b95137e2c20fb5398485d95c28fcbee131dd53a941fd5cd5a",
+  "docs/reviews/probes/r107_root/module_validation.json": "062b641ac09cbffc10f392012a80bb0217bf82b537fcdd6eb89c1b3e686cca9e",
+  "docs/reviews/probes/r107_root/module_validation.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "docs/reviews/probes/r107_root/module_validation.stdout.txt": "7db2771720e73f4d292e56e72284b3f1ef602394c84980f60124b70d03713e49",
+  "docs/reviews/probes/r107_root/offline_tests.json": "0e069b22ebc34228ab0cf2d123d0fdb4f8f8ab71bde3125d6ed8a122a68415ac",
+  "docs/reviews/probes/r107_root/offline_tests.stderr.txt": "e7f12a99acae87405df08a2709a784260130f1680269e0b582dde71e5a578275",
+  "docs/reviews/probes/r107_root/offline_tests.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "docs/reviews/probes/r107_root/offline_tests_initial.json": "a156a6b53d5e49da37216ec416085c5f3831eff8f8fe9cf32190e597869f579c",
+  "docs/reviews/probes/r107_root/offline_tests_initial.stderr.txt": "b2a22a55f864cad3e5fa499286fa6e965bcf07430b105d067b1ab75e165c8f9b",
+  "docs/reviews/probes/r107_root/offline_tests_initial.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "docs/reviews/probes/r107_root/proposed_binding_fields.json": "19dfd2724b32051eb4725bccfe297fc48b4cff15df78215ec10f4ba3e7564f4b",
+  "docs/reviews/probes/r107_root/r107_ui_runner.py": "5a85e97e6964e4c88ed73a9bfff85c16bea1ae22b69d2c58e0c9ebb6cdb9e490",
+  "docs/reviews/probes/r107_root/r107_vite_config.mjs.template": "67f3c4c6e03d1005052c645b0b6d028c46072265e19c2a1c3140a94648f0b938",
+  "docs/reviews/probes/r107_root/run_module_validation.py": "d74bba29342672879d8f5f20c1f474b757163c7666050a4f595329c5f82e17a2",
+  "docs/reviews/probes/r107_root/RUNNER_CANDIDATE_RETURN_2026-10-16.md": "fcba1880300fc20ca1d7c6a615a1e8edd037467574aa7ed1ef817566c54a88b0",
+  "docs/reviews/probes/r107_root/test_r107_ui_runner.py": "011af99c08fc724bebaaa8ad117d1bd470268f51103069183bd45f8b0fce8d2b",
+  "docs/reviews/probes/r107_root/validate_config.mjs": "47755bb79e99468bff2e30af3401b31444f995038dc67acf07155f7181409621",
+  "docs/reviews/probes/r107_root/validated_vite.config.mjs": "1b00ba59e0f9136b8eb7e4202eaac0d8b9fd5008315e6e92ae111f4d4df764a8"
+}

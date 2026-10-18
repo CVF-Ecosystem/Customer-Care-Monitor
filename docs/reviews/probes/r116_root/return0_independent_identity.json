@@ -1,0 +1,73 @@
+{
+  "reviewer": "Codex /root",
+  "sourceHashMatches": 16,
+  "source": [
+    {
+      "path": "backend/db/models/intervention.go",
+      "sha256": "607fe7606c976895d0afefba11bb10e6daf815ef238612811de0711c45e40493"
+    },
+    {
+      "path": "backend/db/models/intervention_waitdata.go",
+      "sha256": "bce04e4fd9bae54af464874bfffdbfb2b02019c19b315622e1e7f66f7b676f20"
+    },
+    {
+      "path": "backend/db/mysql.go",
+      "sha256": "8f7120ba208bceb48fdce1e162315e2db6de8380af57dfb6976dbf957625b6b7"
+    },
+    {
+      "path": "backend/engine/intervention.go",
+      "sha256": "cfc5f331385f81e112f7ecf039bfde8d2d5da11c6604a107256c8d3754e734f6"
+    },
+    {
+      "path": "backend/engine/intervention_m3.go",
+      "sha256": "c9e26387e987288b0e85789339e0c4a4a48ca6c9eb8634d235c0103043c4cc6b"
+    },
+    {
+      "path": "backend/engine/intervention_waitdata_executor.go",
+      "sha256": "44fc9cc9497cf01a78cf57d63c93fe14258d3226584d542d2d0d48c16984b648"
+    },
+    {
+      "path": "backend/engine/intervention_waitdata_executor_test.go",
+      "sha256": "41c175c0faea025bc7fd4e297a35a03244c240745034cd4a463724915a568028"
+    },
+    {
+      "path": "backend/engine/job_run_ownership.go",
+      "sha256": "b9a8f8a3b5a23e32c3e9ce8e64243276b76fc8e5247537bf6e6cfdc430629b71"
+    },
+    {
+      "path": "backend/api/handlers/intervention.go",
+      "sha256": "61b47c3dbd7e0ab10d3ad1b3d3c075e72f84cd67a9d9897707357c02d29d31c1"
+    },
+    {
+      "path": "backend/api/handlers/intervention_waitdata.go",
+      "sha256": "401a829d0a45175b2c139be04a31670d65df9beb789a5feb773fa510c88f986d"
+    },
+    {
+      "path": "backend/api/handlers/intervention_waitdata_test.go",
+      "sha256": "df833ea13b571377ae64c89a34a7803a0c633154153235310b22d360f4873345"
+    },
+    {
+      "path": "backend/api/handlers/intervention_waitdata_executor_r116_test.go",
+      "sha256": "1d1cb2189fd2b473f3df0989f3d3b3f7ee695581382d1976812df6a2245cc3a1"
+    },
+    {
+      "path": "backend/api/handlers/channels.go",
+      "sha256": "738fd1805f5a5aef29355dd8fdad7efaaf47afb0190c14c96a27769fce6b9cad"
+    },
+    {
+      "path": "backend/api/handlers/jobs.go",
+      "sha256": "8b759b8a2bd54250a1e050553f80afd9bc6679d94928e8acd2e01c40178453b9"
+    },
+    {
+      "path": "backend/api/handlers/demo.go",
+      "sha256": "15580b74a236279ee9d12a7205ad1659e973408953cde0297355fa8b7ddffa45"
+    },
+    {
+      "path": "backend/api/router.go",
+      "sha256": "6de6a0e0955cd99dd5ce3d632ea33df99ff70bdc1ef33b5be8b677cfa88b1615"
+    }
+  ],
+  "archiveSha256": "4cee8dd9f882d23fad4bb683c525163117ec681303afda2c7770df6bbbf55f0e",
+  "runtime": "NOT_RUN",
+  "providerCalls": 0
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-121",
+  "authorityKind": "DISPATCHER_OWNED_EXPLICIT_OWNER_CAPABILITY_CONTINUATION",
+  "date": "2026-10-18",
+  "ownerInstruction": "cho phép dùng đến khi hoàn tất",
+  "replyScope": "Harmless local process confirmation, max90sec per invocation, explicit native exit propagation; no application/Docker/database/browser/provider effects.",
+  "scope": "Complete the proposed original-session exit17/cooperative child wait0 confirmation using original probe bytes in fresh paths. Adaptive same-scope procedural correction permitted by owner until completion; no blind retry or automatic product start.",
+  "originalCap": "Original R121 capability1of1 remains consumed and immutable; continuation attempts counted separately.",
+  "roles": {
+    "operator": "Codex /root",
+    "independentStaticAssessor": "/root/r121_isolation_luna"
+  },
+  "prohibitedEffects": [
+    "Product start/source change/Go/Docker/DB/browser/listener/network/provider/secret/installation",
+    "Overwriting old probe/evidence/seed or resetting consumed budget",
+    "Supervisor redesign or unrelated scope expansion"
+  ],
+  "completion": "Actual original foreground exec exit17 matching retained-child wait0/endmarker/receipt; observed short uninterrupted lifecycle only."
+}

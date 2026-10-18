@@ -1,0 +1,11 @@
+{
+  "observedAt": "2026-10-15T20:17:38.1978667+07:00",
+  "head": "25d0d757346c27a680290385f6ec24d738b817c5",
+  "statusShort": [
+    "?? docs/reviews/R101_CLAUDE_BROWSER_RETRY2_RETURN_2026-10-15.md",
+    "?? docs/reviews/probes/r101_claude_retry2/"
+  ],
+  "preReportBaselineCaptured": false,
+  "productSourceEditsByOperator": 0,
+  "commitsByOperator": 0
+}

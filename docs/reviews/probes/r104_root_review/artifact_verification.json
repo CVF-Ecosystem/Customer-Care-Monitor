@@ -1,0 +1,104 @@
+{
+  "reviewer": "Codex /root",
+  "date": "2026-10-16",
+  "head": "64238c411b2fd9e966ef90ec73a243c8b355305e",
+  "checks": [
+    {
+      "path": "docs/reviews/R104_BRIDGE_RECHECK_WORKER_RETURN_2026-10-16.md",
+      "bytes": 11814,
+      "expected": "030ecd776ccf207f43292f7a216ff8ecbfa2278b1ae365601513ba769d5119f2",
+      "actual": "030ecd776ccf207f43292f7a216ff8ecbfa2278b1ae365601513ba769d5119f2",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r104_bridge_check/bridge_capability_result.json",
+      "bytes": 2785,
+      "expected": "4c1a648f5e8565dbae2ee21a17dadf3b9fa26aa2b194955911a9d57b6555c70b",
+      "actual": "4c1a648f5e8565dbae2ee21a17dadf3b9fa26aa2b194955911a9d57b6555c70b",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r104_bridge_check/bridge_blank_page_click_screenshot.png",
+      "bytes": 27588,
+      "expected": "0389d67479c7b8e6b60b7009cd51b2cbf764eb143569322ea19877acf496be00",
+      "actual": "0389d67479c7b8e6b60b7009cd51b2cbf764eb143569322ea19877acf496be00",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/R101_BRIDGE_RECHECK_WORKER_RETURN_2026-10-16.md",
+      "bytes": 5991,
+      "expected": "AAD44C0056AA5498B7607DB90F8DDF406EEF40FB72089F83E6E7AEDF9532580E",
+      "actual": "aad44c0056aa5498b7607db90f8ddf406eef40fb72089f83e6e7aedf9532580e",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r101_bridge_recheck_20261016/bridge_attempt.json",
+      "bytes": 3692,
+      "expected": "6F3D156590FB31993603C4F71B49D3C7660D9EF486586E88D6A2FDE8266588E9",
+      "actual": "6f3d156590fb31993603c4f71b49d3c7660d9ef486586e88d6a2fde8266588e9",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r101_bridge_recheck_20261016/bridge_tool_transcript.txt",
+      "bytes": 1326,
+      "expected": "037657EBCF71BBABDE0589004A53B17E18CAD7E5E91A178125C18D75F513DF94",
+      "actual": "037657ebcf71bbabde0589004a53b17e18cad7e5e91a178125c18d75f513df94",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r101_bridge_recheck_20261016/health.html",
+      "bytes": 437,
+      "expected": "F85EE30F05131E975185E3597E3AFBF4B0305E77FEB38E161D4C1515345E9EC3",
+      "actual": "f85ee30f05131e975185e3597e3afbf4b0305e77feb38e161d4c1515345e9ec3",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r101_bridge_recheck_20261016/r101_worker_return_gate.stdout.txt",
+      "bytes": 831,
+      "expected": "189E467E781C6A0E39A72CD714EC031D277ACF6837CBF7577A8A9C9F3249F022",
+      "actual": "189e467e781c6a0e39a72cd714ec031d277acf6837cbf7577a8a9c9f3249f022",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r101_bridge_recheck_20261016/r101_worker_return_gate.stderr.txt",
+      "bytes": 0,
+      "expected": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r101_bridge_recheck_20261016/r101_worker_return_gate.exit.json",
+      "bytes": 276,
+      "expected": "56E14D19C5399A79079650ADCC0BEBC61809E29E878B2D53BA09C5714676E474",
+      "actual": "56e14d19c5399a79079650adcc0bebc61809e29e878b2d53ba09c5714676e474",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r101_bridge_recheck_20261016/r103_worker_return_gate.stdout.txt",
+      "bytes": 821,
+      "expected": "6452A429698BED9309169D0A13ACFC4F6C23411F4F33845D10690A6029C93281",
+      "actual": "6452a429698bed9309169d0a13acfc4f6c23411f4f33845d10690a6029c93281",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r101_bridge_recheck_20261016/r103_worker_return_gate.stderr.txt",
+      "bytes": 0,
+      "expected": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r101_bridge_recheck_20261016/r103_worker_return_gate.exit.json",
+      "bytes": 283,
+      "expected": "349F1BFEB1BCBFE83D3B6B854D4B3BF973A097BE0A78588F0662BDB8B9060928",
+      "actual": "349f1bfeb1bcbfe83d3b6b854d4b3bf973a097be0a78588f0662bdb8b9060928",
+      "match": true
+    }
+  ],
+  "imageVisuallyInspected": true,
+  "imageObservation": "1295x999 PNG shows CLICKED heading and Click Me button; image alone does not authenticate tool invocation or before/after transition.",
+  "r104AuthorityExists": false,
+  "r104TrancheExists": false,
+  "runtimeReplayed": false,
+  "canonicalStateModified": false
+}

@@ -1,0 +1,34 @@
+Browser tab: 1, Title: "Customer Care Monitor AI", URL: "http://127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases/2a8bc0b9-cc62-4ff1-ab26-e740bbc8f0e9".
+1 AXWebArea Customer Care Monitor AI, URL: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases/2a8bc0b9-cc62-4ff1-ab26-e740bbc8f0e9
+	2 container
+		3 container
+			4 text Customer Care Monitor AI
+			5 button
+		6 text R101 Synthetic
+		7 content list
+			8 link Description: Trang chủ, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514
+			9 link Description: Ca cần can thiệp, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases
+		10 button
+		11 pop up button (collapsed) Tiếng Việt, Secondary Actions: Expand
+			12 text Tiếng Việt
+		13 text R
+		14 text R101 member
+		15 button
+		25 text Bắt đầu:
+		26 text Kết nối kênh chat
+		27 text Đồng bộ tin nhắn
+		28 text Cấu hình AI Provider
+		29 text Tạo công việc phân tích
+		30 text Chạy thử phân tích
+		31 button
+		23 heading Ca cần can thiệp, Value: 1
+			24 text Ca cần can thiệp
+		32 link Description: Về hàng đợi, Value: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases
+		33 text Nguồn dữ liệu: Nguồn chưa đủ. So sánh nội bộ không chứng minh dữ liệu kênh bên ngoài đầy đủ.
+		34 container
+			35 text Ca 452a48a6-5345-4953-a88d-5b047e1e85cd Trạng thái xử lý: Chờ bổ sung dữ liệu · Đánh giá của người duyệt: Chưa duyệt · v1
+		36 text Ca đang chờ bổ sung dữ liệu. SOURCE_INCOMPLETE. Chạy phân tích lại cần đường M2 thủ công riêng; thao tác này không gọi AI.
+		37 container
+			38 text Lịch sử người xử lý Chưa có thao tác
+
+The focused UI element is 1 AXWebArea Customer Care Monitor AI, URL: 127.0.0.1:3011/9c49e237-549f-4a19-bd7e-686a7047e514/intervention-cases/2a8bc0b9-cc62-4ff1-ab26-e740bbc8f0e9

@@ -1,0 +1,9 @@
+{
+  "observedAtUTC": "2026-10-16T17:19:35.709Z",
+  "tool": "mcp__cua_repl",
+  "tabId": "3",
+  "url": "http://127.0.0.1:3011/4b44be84-86fc-47ef-a018-e515b5ae74ea/intervention-cases",
+  "operatorRecordedAction": "Resolved case appears under localized terminal filter",
+  "dom": "11_b05_terminal_filter.dom.txt",
+  "screenshot": "11_b05_terminal_filter.png"
+}

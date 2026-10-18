@@ -1,0 +1,9 @@
+{
+  "args": [
+    "version",
+    "--format",
+    "{{.Server.Version}}"
+  ],
+  "kind": "READ_ONLY_POST_FAILURE",
+  "timeoutSeconds": 15
+}

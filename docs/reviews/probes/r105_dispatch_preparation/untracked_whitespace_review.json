@@ -1,0 +1,10 @@
+{
+  "scope": "No-index checks do not stage files; Git exit1 means added content, only actual whitespace output is listed",
+  "findings": [
+    {
+      "path": "docs/reviews/R104_BRIDGE_EVIDENCE_SUPPLEMENT_2026-10-16.md",
+      "output": "docs/reviews/R104_BRIDGE_EVIDENCE_SUPPLEMENT_2026-10-16.md:167: new blank line at EOF.",
+      "exitCode": 3
+    }
+  ]
+}

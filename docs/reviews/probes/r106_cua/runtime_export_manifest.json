@@ -1,0 +1,205 @@
+{
+  "schemaVersion": "1.0",
+  "directories": [
+    "docker-cli-config"
+  ],
+  "copyVerification": "PASS_BYTE_LENGTH_AND_SHA256",
+  "directoryCount": 1,
+  "capturedAtUtc": "2026-10-16T07:16:29.2008319Z",
+  "fileCount": 38,
+  "export": "docs/reviews/probes/r106_cua/runtime",
+  "source": ".cvf/runtime/r106_cua",
+  "files": [
+    {
+      "sha256": "bcae2091ecb85ca49b5c8c36a5eb9d02993c380d7f020e59d2b34329a0bf0eb1",
+      "path": "admission.json",
+      "bytes": 261
+    },
+    {
+      "sha256": "50d0ec037f22b38e643be5bcc456b147da005feacf4b8414e99676d96b5963e7",
+      "path": "backend_launch.json",
+      "bytes": 73
+    },
+    {
+      "sha256": "7f3127272fc22bea86ca5e269d7698ce0c539762c9b1d6d80c0a8c6bac787796",
+      "path": "backend_process.json",
+      "bytes": 487
+    },
+    {
+      "sha256": "4633833ad389e2e29871aef01f6a68881bfab46d2a2cbe7e7ee8d5617fb14bb0",
+      "path": "backend.stderr.log",
+      "bytes": 101
+    },
+    {
+      "sha256": "728e2a146703c679b5579e092b1f242c785c8c2504cba4a5a7d2b97f138d9398",
+      "path": "backend.stderr.log.meta.json",
+      "bytes": 257
+    },
+    {
+      "sha256": "312189dd473dd09c0fa4c04e693624553a6f8a2f44fb809e60cae79c226c87c7",
+      "path": "backend.stdout.log",
+      "bytes": 15864
+    },
+    {
+      "sha256": "ca6440476bd6d9d81932790e834018fe6ba033404d62fe9caf7d8aa32026aa7b",
+      "path": "backend.stdout.log.meta.json",
+      "bytes": 261
+    },
+    {
+      "sha256": "412a4ba9b58cbe8b8d84878c2fb1156f442f663a3794302926486751ee84af78",
+      "path": "cleanup.json",
+      "bytes": 489
+    },
+    {
+      "sha256": "b5eff3d27857a98a44302a8750837f32d1356a9b998a4dd5a7aa96e617c08899",
+      "path": "command_001.json",
+      "bytes": 902
+    },
+    {
+      "sha256": "c7b375d850025ef13342dd4ef3b1bd0f7a6fe7826a50a1e46fbba7ffad1309c9",
+      "path": "command_002.json",
+      "bytes": 8703
+    },
+    {
+      "sha256": "6ed3f8c790ba5217cedc8347264d4a680a36904d42f9da3f83959a57371bfdb8",
+      "path": "command_003.json",
+      "bytes": 2196
+    },
+    {
+      "sha256": "755c7d56a5c07605ba8c4555be8230ec5afbcc40450f26d7673b765ec820a868",
+      "path": "command_004.json",
+      "bytes": 956
+    },
+    {
+      "sha256": "28256e9bd1537a1c0464f52f7cf59d4656b7962c354f91639d2f02fda77aa639",
+      "path": "command_005.json",
+      "bytes": 692
+    },
+    {
+      "sha256": "d46d4e845f8e45116c0f6052d9344ae7c8b5738582088235198dc78e13193bcc",
+      "path": "command_006.json",
+      "bytes": 687
+    },
+    {
+      "sha256": "79424ec5e999385b3ccceae756904e9b367f5b4e19587419b7334265d2ed97c1",
+      "path": "command_007.json",
+      "bytes": 2363
+    },
+    {
+      "sha256": "5839dd87b19e8c42dab26675c89c3d5ecd8253520751f03ce847e1e5a5f2eda0",
+      "path": "command_008.json",
+      "bytes": 931
+    },
+    {
+      "sha256": "79424ec5e999385b3ccceae756904e9b367f5b4e19587419b7334265d2ed97c1",
+      "path": "command_009.json",
+      "bytes": 2363
+    },
+    {
+      "sha256": "8e0832d87a1fc1ec8de81b87e3226c7ac764803f17897bf6c35bcf6e1297f734",
+      "path": "command_010.json",
+      "bytes": 871
+    },
+    {
+      "sha256": "79424ec5e999385b3ccceae756904e9b367f5b4e19587419b7334265d2ed97c1",
+      "path": "command_013.json",
+      "bytes": 2363
+    },
+    {
+      "sha256": "60dada01ab4f316ea61211862724814fedca42ffa5d13776f3620298211ef99d",
+      "path": "command_014.json",
+      "bytes": 759
+    },
+    {
+      "sha256": "b5eff3d27857a98a44302a8750837f32d1356a9b998a4dd5a7aa96e617c08899",
+      "path": "command_015.json",
+      "bytes": 902
+    },
+    {
+      "sha256": "c7b375d850025ef13342dd4ef3b1bd0f7a6fe7826a50a1e46fbba7ffad1309c9",
+      "path": "command_016.json",
+      "bytes": 8703
+    },
+    {
+      "sha256": "73de69464cb7fdeb0c3cadc8935247860a92a08e179383ff04ae284e343914bd",
+      "path": "fixture_start.json",
+      "bytes": 72
+    },
+    {
+      "sha256": "6e575f132dcda9f633853d736c639fecdc6b3a12738bc19a66f7b57a80ab5c9e",
+      "path": "launch_011.intent.json",
+      "bytes": 438
+    },
+    {
+      "sha256": "f09594ce88f25efeb5c14f49c5b1df91645d9508561ef965663933fa11dde4b8",
+      "path": "launch_011.result.json",
+      "bytes": 53
+    },
+    {
+      "sha256": "35d0511af896c3093d1167f30ede2abca93f4ba91a65a18df0de8be208c9d043",
+      "path": "launch_012.intent.json",
+      "bytes": 537
+    },
+    {
+      "sha256": "bdc9e1b9c833eada5669565007082f187baa65b09b1367467642eafbb5cdff12",
+      "path": "launch_012.result.json",
+      "bytes": 52
+    },
+    {
+      "sha256": "d1fea51a6e152806425e21404ee5902a84470552b2ecf7e19b68eede6fc36b8d",
+      "path": "protected_after.json",
+      "bytes": 1326
+    },
+    {
+      "sha256": "22d0618eb960bfefc72121ae63aab74e40c021039acc668826806efc4b1c31df",
+      "path": "protected_before.json",
+      "bytes": 1303
+    },
+    {
+      "sha256": "695e16917de58190cf79a87df81912482c3660e4dc20d15b7b2aca2a956050cf",
+      "path": "ready.json",
+      "bytes": 252
+    },
+    {
+      "sha256": "bf41dbb9bb8adf7113364ed0c0ff3fb4559fe087dbbd9518e0d74bdc4216988c",
+      "path": "vite_config_receipt.json",
+      "bytes": 117
+    },
+    {
+      "sha256": "d154591e79284c762b0694d9a04f5350848cd19f1a86dd7793b88e026c70cdbd",
+      "path": "vite_launch.json",
+      "bytes": 70
+    },
+    {
+      "sha256": "941529e8bf47df76dae4a1254981bf870a5e56ee717b50cd3bc1e7da1267e0db",
+      "path": "vite_process.json",
+      "bytes": 537
+    },
+    {
+      "sha256": "55762470a00a4da55c9276146a8afe9ff20bfd80195811a1c15c312ee11c7d25",
+      "path": "vite.config.mjs",
+      "bytes": 1711
+    },
+    {
+      "sha256": "3d4231cc2aaa687521a8c6708225c7827046c2288926df64c0da9fba95cf44e3",
+      "path": "vite.stderr.log",
+      "bytes": 1515
+    },
+    {
+      "sha256": "a6513902e14cc3c8efa5bea88ee1aa45274dc8268b2edf3b2860e91ae244d29f",
+      "path": "vite.stderr.log.meta.json",
+      "bytes": 259
+    },
+    {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "vite.stdout.log",
+      "bytes": 0
+    },
+    {
+      "sha256": "9e21e461c5eda2caa37dc4b8c81282d2362157b2332bd0bca7bf839d249a2da9",
+      "path": "vite.stdout.log.meta.json",
+      "bytes": 253
+    }
+  ],
+  "runtimeDirectoryLastWriteUtc": "2026-10-16T07:15:24.2518381Z"
+}

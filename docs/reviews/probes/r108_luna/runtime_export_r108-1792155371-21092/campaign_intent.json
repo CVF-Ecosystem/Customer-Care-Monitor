@@ -1,0 +1,26 @@
+{
+  "budget": {
+    "actionPosts": 4,
+    "compile": 1,
+    "fixtureStart": 1,
+    "nativeInvocation": 1,
+    "retries": 0
+  },
+  "campaignId": "r108-1792155371-21092",
+  "campaignLimitSeconds": 600,
+  "cleanupReserveSeconds": 75,
+  "environment": "minimal allowlist; synthetic test DSN is not serialized",
+  "goExe": "C:\\Program Files\\Go\\bin\\go.exe",
+  "goSha256": "7d828191ba32519a9c9361789ab647486236ed45c660889196c7770a8ff1985c",
+  "headCommit": "b4a53d4b9fb63c3073b880eb9c7e3e8e6510eafa",
+  "reviewedSourceCommit": "a4b1d490676b5ef9f165446a2aca33f10adb39df",
+  "seedSha256": "a9d1b1b97d7a10be78eedb4d0b321d670c150cdfbb34b5a4037475d23bc3029e",
+  "sourceAdmissionSha256": "ee31990f2ef669c342df8a8c830c0aa3fc27dff9a37a36b48118ff5046c04ba6",
+  "sourcePins": {
+    "backend/api/handlers/intervention_reopen_r108_test.go": "f4adcee0e5b811743caebda15f77b63a88495f925652a13ce0ef51ece6aa2a7f",
+    "docs/reviews/probes/r108_luna/r108_native_runner.py": "899afa92934dede2d99d28d591bc4232d29a52f764d10f8420588e8e940fb138"
+  },
+  "startedAtUnix": 1792155371.45571,
+  "trancheId": "CCMAI-RUNTIME-108",
+  "workOrderSha256": "b6fb83892ce6afad26f277dfb1f0eb3a201c244baf462f944640b94540eb4fd2"
+}

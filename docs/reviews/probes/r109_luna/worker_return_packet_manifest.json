@@ -1,0 +1,123 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-109",
+  "status": "BLOCKED_WITH_REASON",
+  "createdAtLocal": "2026-10-17T00:38:54.2822154+07:00",
+  "files": [
+    {
+      "path": "docs/reviews/R109_HUMAN_UI_WORKER_RETURN_2026-10-16.md",
+      "bytes": 12952,
+      "sha256": "4e379bdecda5b561378de580fcf62cc411c247a0f016fc15d15ec423837bf589"
+    },
+    {
+      "path": "docs/reviews/probes/r109_luna/supervisor_invocation.json",
+      "bytes": 1251,
+      "sha256": "16ef5af61eed71e4e02c90537ba83422079d12322a376810039383b323f15be7"
+    },
+    {
+      "path": "docs/reviews/probes/r109_luna/worker_return_gate/stdout.txt",
+      "bytes": 737,
+      "sha256": "77d893aedc15bcecdb1c63f9b2c792ca7bb22d94f2e023316be98ea612780e93"
+    },
+    {
+      "path": "docs/reviews/probes/r109_luna/worker_return_gate/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r109_luna/worker_return_gate/exit.json",
+      "bytes": 741,
+      "sha256": "1b56cb38870f580aab89a23791cf8210656e8f000a4b7f26dd4aa0c7b575fa31"
+    },
+    {
+      "path": "docs/reviews/probes/r109_luna/worker_return_gate_recheck/stdout.txt",
+      "bytes": 801,
+      "sha256": "e3e6741c278e5e19ea1489b1a58ffa7aef5c5968d50c352df09e30e0f8286a03"
+    },
+    {
+      "path": "docs/reviews/probes/r109_luna/worker_return_gate_recheck/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r109_luna/worker_return_gate_recheck/exit.json",
+      "bytes": 757,
+      "sha256": "544d880a38389022d042e37fb8fc02b86a0d03ff5befd7dfa79fe4ed3547f0f2"
+    },
+    {
+      "path": "docs/reviews/probes/r109_luna/worker_return_gate_final/stdout.txt",
+      "bytes": 801,
+      "sha256": "662329157cae8de17506df39399387d2f42c51020c2a40d82057761391803c4a"
+    },
+    {
+      "path": "docs/reviews/probes/r109_luna/worker_return_gate_final/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r109_luna/worker_return_gate_final/exit.json",
+      "bytes": 753,
+      "sha256": "683553f79f7d322da39442e9cdbe51479e328fa0f19193e182fcead1511dce2f"
+    },
+    {
+      "path": "docs/reviews/R109_INDEPENDENT_INTERRUPTED_REVIEW_2026-10-17.md",
+      "bytes": 3776,
+      "sha256": "a8b8698f0977a38d7d08af5c77e79160ef55158898e9fd5ae30d2437d08a7e44"
+    },
+    {
+      "path": "docs/reviews/R109_ROOT_UI_OBSERVATIONS_2026-10-17.md",
+      "bytes": 6668,
+      "sha256": "4c75459bf19b86fd6c611eff01920423e28f10e8bcc695398b182a483f9d6365"
+    },
+    {
+      "path": "docs/reviews/probes/r109_root/browser_interruption.json",
+      "bytes": 1172,
+      "sha256": "9251839bbb721d5056dc046de339d110f6b5303e644a51f4e852757b58660127"
+    },
+    {
+      "path": "docs/reviews/probes/r109_root/interrupted_cleanup/root_recovery_receipt.json",
+      "bytes": 912,
+      "sha256": "354acd590a7138b0396a38e07e098779591667aff2d651012a2f9ab06913827f"
+    },
+    {
+      "path": "docs/reviews/probes/r109_root/post_runtime_source_verification.json",
+      "bytes": 449,
+      "sha256": "c1be8b53f03b0c78efebfdcaa3d7543846425db8c1ab0af27f85d6ad05ec1de4"
+    },
+    {
+      "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/r109_worker_evidence_manifest.json",
+      "bytes": 127576,
+      "sha256": "ed804155327eeb0cd511185e15d8647cffeae24ecc1e7eb0cd51c2edcb56815f"
+    }
+  ],
+  "runtimeExport": {
+    "path": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/",
+    "manifest": "docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/r109_worker_evidence_manifest.json",
+    "manifestSha256": "ed804155327eeb0cd511185e15d8647cffeae24ecc1e7eb0cd51c2edcb56815f",
+    "includedFiles": 306,
+    "allIncludedFilesByteIdentical": true,
+    "excludedBinarySha256": "cb73ee13e0369cca75ea276cc668f30c3ced42cead5f62c56d68f3c1eaa66f93",
+    "excludedBinaryBytes": 58031616
+  },
+  "workerReturnGateRuns": [
+    {
+      "path": "docs/reviews/probes/r109_luna/worker_return_gate/",
+      "exitCode": 0,
+      "stdoutSha256": "77d893aedc15bcecdb1c63f9b2c792ca7bb22d94f2e023316be98ea612780e93",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r109_luna/worker_return_gate_recheck/",
+      "exitCode": 0,
+      "stdoutSha256": "e3e6741c278e5e19ea1489b1a58ffa7aef5c5968d50c352df09e30e0f8286a03",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r109_luna/worker_return_gate_final/",
+      "exitCode": 0,
+      "stdoutSha256": "662329157cae8de17506df39399387d2f42c51020c2a40d82057761391803c4a",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "note": "Indexes the final BLOCKED worker return, all three complete worker-return gate transcripts, supervisor invocation facts, Root browser observations/interruption/cleanup/source-check records, and the byte-verified runtime export. The supervisor invocation receipt explicitly distinguishes known tool-response facts from unobserved terminal output. No original supervisor cleanup is claimed."
+}

@@ -2,23 +2,94 @@
 
 Memory class: POINTER_RECORD
 
-This is the project continuity front door. It is CVF-governed project state,
-not provider-specific memory and not a chat transcript.
-
-Machine-readable front marker (checked by `scripts/cvf_downstream_gate.py`; it must match
-`CVF_SESSION/ACTIVE_SESSION_STATE.json`, the active handoff header and
-`IMPLEMENTATION_STATUS.currentPhase`). Update it in the same change as the state file:
-
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md", "activeTranche": "CCMAI-RUNTIME-093", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md", "activeTranche": "CCMAI-RUNTIME-121", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
 - Current mode: REVIEW
 - Active phase: REVIEW
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md
+
+CCMAI-RUNTIME-121 CHANGES_REQUIRED: original serve exit1/wait observed; Unicode console encoding failure before browser, terminal HOLD/FINAL_EVIDENCE_MISSING. Owned fixture/backend/Vite stopped, three listeners absent, protected9containers10networks472volumes and405sourcepins unchanged. Preserve consumed campaign/caps and raw evidence; read-only bounded follow-up decision only, no automatic retry/successor/provider. FullM2/M3/M1business/pilot/release OPEN/accounts parked/no push-merge-deploy.
+
+Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; implementation and repair workers idle
+
+R120 UI accepted bounded, original terminal/durable accounting missing, stopped/CHANGES_REQUIRED and consumed caps immutable. R121 separate local route per owner instruction, no new product implementation claim.
+
+## Historical R114 bounded UI result
+
+Sourceaa92c149/campaign95401340 onboarding wording/full5labels acceptedCSS390x844; original supervisor terminal/cleanup/source-afterMISSING, CHANGES_REQUIRED/noFREEZE. Final exactfixtureexited/protected4equal; B07inherited, B08rasterqualified/B09unsupported. No further114runtime; handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md.
+
+## Historical R100 bounded real result before M3 dispatch
+
+### Prior truth
+
+- Contract: cvf.downstreamContinuityContract@1.0.0
+- Current mode: FREEZE
+- Active phase: FREEZE
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R100_2026-10-15.md
+
+CCMAI-RUNTIME-100 FROZEN boundedreal syntheticM2 atsourcea5eb32d: firstcallvalidproposal+faithfulusage360/261, API1/4 Go3/4, ownedfixtureclean/protectedunchanged. No moreR100calls; unusedslots2-4 stayunused, oldbudgetsunchanged. ORCHESTRATOR next prepares finite M3 humanreview/correction/assignment/deadline/outcome SPEC/workorder andbrowser/backend evidence; M1businessparallel, fullM2/M3/pilot/releaseOPEN, Facebook/ZaloOAparked. No installedactivation/push/merge/deploy.
+
+Codex /root CLOSER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD after independent R2 REVIEW; /root/r100_worker returned, no further R100 effects.
+
+## Historical R099 prior to owner max4 grant
+
+### Prior truth
+
+- Contract: cvf.downstreamContinuityContract@1.0.0
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_RESPONSE_REPAIR_R099_2026-10-14.md
+
+CCMAI-RUNTIME-099 REVIEW_PASS SOURCE_COMPILE_ONLY at0640431, proof302e873, FREEZE/current runtime NOT_RUN and fullM2 OPEN. Root presents docs/reviews/planning/R100_NONTHINKING_M2_LIVE_APPROVAL_PACKET_2026-10-14.md for fresh max2 synthetic Alibaba calls with thinkingfalse; call2 onlyaftervalidproposal/faithfulusage, failurestops. No newAPI/key/fixture before ownergrant/seed/signature. R0982/2/Go4/4 andR099Go1/1 exhausted unchanged, M3/pilot OPEN, Facebook/ZaloOA parked.
+
+Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; Sol Medium source worker returned accepted idle, no replay.
+
+## Historical R094 bounded closure
+
+### Historical truth
+
+- Contract: cvf.downstreamContinuityContract@1.0.0
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R095_2026-10-14.md
+
+CCMAI-RUNTIME-095 BLOCKED before provider: workerclaim permanently consumed,SECRET_SCHEMA_MISMATCH,actualHTTP0,sharedfixture cleaned,R094 source unchanged. Root prepares R096 bounded continuation under same owner max2 NEW physical calls with cross-tranche parentledger; oldR095/R093 markers and budgets neverreset. M2/M3/pilot OPEN,accounts parked.
+
+Codex /root independent REVIEWER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD; /root/m2_worker stopped after R095 pre-provider failure, read-only R096 design.
+
+## Historical R094 bounded closure
+
+### Historical truth
+
+- Contract: cvf.downstreamContinuityContract@1.0.0
+- Current mode: FREEZE
+- Active phase: FREEZE
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_M2_INTERVENTION_R094_2026-10-14.md
+
+### Historical M2 execution — 2026-10-14
+
+CCMAI-RUNTIME-094 FROZEN bounded source/local at564ed59; Root presents source-bound R095 live M2 approval packet for max2 NEW Alibaba application requests on synthetic data before any provider/secret effect. R094 Go10/10 and R093 provider2/2 exhausted unchanged; installed service disabled, full M2/M3/pilot OPEN, accounts parked.
+
+Codex /root CLOSER, ORCHESTRATOR, SESSION_SYNC_STEWARD and COMMIT_STEWARD after independent R2 REVIEW; Sol Medium implementation/repair returned accepted, Luna Max intake complete.
+
+Owner resumes from synchronized main and permits Luna Max, Sol Medium when hard; Root orchestrator/reviewer. Luna source intake complete; durable concurrency/evidence/bypass complexity selects Sol Medium. Accepted intended SPEC and immutable R094 seed precede BUILD. Bounded source/local independently accepted and FROZEN at564ed59; full M2/live/M3/pilot remain OPEN. Go/Node/Docker available on this machine; no setup/install campaign. Existing application/DB stays untouched. No real provider request or secret access is admitted here.
+
+
+Independent final review: docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md. Proposed live approval packet: docs/reviews/planning/R095_LIVE_M2_APPROVAL_PACKET_2026-10-14.md. Worktree source/native acceptance is development-only; no installed activation, real provider, browser, hosted CI or deployment proof. No further R094 Go or R093 calls.
+
+## Historical R093 handback and branch publication
+
+### R093 truth at handback
+
+- Contract: cvf.downstreamContinuityContract@1.0.0
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md
 
-## Current M1 execution — 2026-10-13
+### Historical M1 execution — 2026-10-13
 
 CCMAI-RUNTIME-093 returned with positive evidence-reference failure: exact HTTP compatibility observed, provider budget2/2 exhausted, no redispatch/reset. Next prepare one bounded M2 application packet with verified local toolchain/isolated DB setup, strict snapshot/ID/quote validation, durable physical-call admission and actual application evidence. M2/M3/pilot OPEN; Facebook/Zalo OA parked.
 
@@ -26,7 +97,7 @@ Codex /root independent REVIEWER, ORCHESTRATOR and SESSION_SYNC_STEWARD; Luna ma
 
 Prior tranche/planning sections below are historical accepted context; current CCMAI-RUNTIME-093 order controls execution within its seed. Owner requires synthetic channel data and authorizes Alibaba real AI tests only within bounded R2 authority.
 
-## Current branch publication
+### Historical branch publication
 
 Owner-authorized branch codex/ccma-product-m1 published at `7b14533bcfb54d10f192145b455b9babad79af2a`; remote SHA verified in docs/reviews/probes/r093_alibaba_live/publication.json. R093 returned finding/FREEZE OPEN and exhausted provider budget remain unchanged; no main merge or deployment.
 
@@ -882,3 +953,31 @@ CCMAI-RUNTIME-053 cumulative publication repair6 BUILD under committed dispositi
 ## GOV002 accepted publication
 
 Bounded portable material d0ebc890d043b5f94b647c1b228e8f1660f83292 is on codex/cvf-portable-inheritance, independently remote-SHA verified. Publication receipt: docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json. Tranche REVIEW_PASS / product FREEZE OPEN, no active work orders; inherited runtime roadmap is DRAFT pending separate SPEC/order/seed. No hosted CI success asserted.
+
+## Owner roadmap audit renewal — 2026-10-15
+
+Owner: continue, audit carefully and update roadmap to avoid drift. Root consolidated auxiliary projection and historical-route repairs per docs/reviews/R099_ROADMAP_CONTINUITY_AUDIT_2026-10-15.md. Current milestone M2; R099 source/compile accepted only, current runtime/FREEZE OPEN; R100 fresh budget proposed, no current call authority. M1 business and M3/pilot gaps stay explicit, no supporting-scope chain or budget reset. Metadata gates/commit precede owner handback.
+
+## Standing owner directive — UI/UX language, 2026-10-16
+
+Product-facing labels, statuses, help and errors must use end-user language, not Dev jargon, raw enums/API codes/stack traces or tooling details. Verify rendered UI under the bounded active product scope. Root cause diagnostics remain in logs/review artifacts. Recorded with owner audit authority and browser-stop instruction in docs/reviews/R107_R108_BROWSER_STOP_HANDOFF_2026-10-16.md.
+
+R121 capability evidence and smallest prospective invocation correction independently assessed read-only by Luna; no source BUILD and no acceptance. Full report: docs/reviews/R121_CAPABILITY_HOLD_2026-10-18.md.
+
+Owner explicitly replies “cho phép dùng đến khi hoàn tất” to the harmless process confirmation request. Root records supplementary capability-only authority CVF_SESSION/authority/CCMAI-RUNTIME-121-CAPABILITY-CONTINUATION.json before effect, no old seed/cap/evidence reset. First continuation attempt reserved; source BUILD/product effects remain unadmitted until actual review.
+
+Explicit owner capability continuation succeeded actual originalexec17/heldchildwait0, scope short uninterrupted only. Supplementary authority and raw confirmation separate from unchanged failed first attempt. Root reactivates same bounded R121 source BUILD pending independent capability review/current worker acknowledgment and committed grant; source/runtime still unstarted. Review: docs/reviews/R121_CAPABILITY_CONFIRMATION_REVIEW_2026-10-18.md.
+
+Source-only independent acceptance: four byte-exact mechanical copies/400oldpins unchanged; worker19PASS1/2, Root19PASS1/2, repair0/2. Root-authored foreground recorder metadata-error gap independently found by Luna, fixed by Root try/finally and read-only rechecked accepted for that interval only; no OS-kill/wait-failure guarantee. Source worker idle; Root sole offline compile/exact admissions next, runtime still absent. Review: docs/reviews/R121_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md.
+
+Root sole offline compile1of1 PASS exit0/35.019sec atsource9e392d985dfed3f8dcdd179819a546464115a619;405pins unchanged, binary3853a899ccbe03c51e9c47b428221b6d302d2df746fd14fa55733f15464b798d/58448384bytes. Git cat-file batch normalizedLF verifies committed source; offline GOPROXYoff/GOSUMDBoff/GOTOOLCHAINlocal/GOENVoff. Read-only Docker29.8.2 responds and IAB inventory available0tabs. No setup/product effects before committed admission.
+
+Sole setup child10408 original wrapper held/waitObserved true/exit1/metadataErrornull; stderr Hold:SOURCE_ADMISSION_IDENTITY. R121 runtime directory absent and source fails identity before any Docker command. Root omitted full CCMAI-RUNTIME-120 token from mechanical contract; new copies still expect old fulltranche while admission121. Compile/setup consumed, actual fixture/backend/Vite/tab/provider0, no rerun. Root commissions Sol Medium consolidated read-only cross-file namespace/dependency audit before first same-scope source repair; no resource/runtime authority expanded.
+
+Consolidated Sol read-only audit before first repair found8 full-ID sites across3newcopies; other paths/env/DSN/symbols/template and intentional R101 helper aligned. Root SPEC_AUTHOR/WORK_ORDER_AUTHOR corrects copying recipe, unchanged product identity acceptance/scope/risk/effects/commit owner. Sol REPAIR_WORKER acknowledgment and committed grant precede8exact literal changes; worker/Root checks1/2 each remain one, source repair1/2 planned. No compile/setup/runtime from this repair; consumed caps preserved and old binary inadmissible after edit. Decision: docs/reviews/R121_IDENTITY_CONSOLIDATED_REPAIR_DECISION_2026-10-18.md.
+
+Repair1 independently accepted exact8ID-only delta/3files, Vite unchanged/old400equal; worker/Root19PASS final2of2 exhausted. Root explicit same-scope postrepair budget decision CVF_SESSION/authority/CCMAI-RUNTIME-121-POSTREPAIR-ADMISSION.json separately grants one additional offline compile/setup/new-fixture-start, no oldcap reset or extra campaign/provider/action grant. Source/binary must be newly pinned/committed. Current recorder slot002 revision pending independent static review. Source worker idle; no further source/unit changes permitted without separate cause/remaining authority.
+
+Postrepair sole fresh offline compile PASS exit0/17.683sec at5cf1244f/405pins unchanged; binarycb52235ceafee389f52a3fcc80ff9685887e4d7cef6035ea8a5428e30a582162 under r121_build/after_repair/handlers.test.exe. Original source/admission/first binary preserved in Git+preimage ZIP; current canonical admission revised from candidate002 only after byte-preservation check. Root commits this before setup002; runtime directory/resource effects still absent. Original unspent sole campaign caps not renewed.
+
+Postrepair SETUP002 actual wrapper exit0/waitObserved/metadataErrornull. Exact new owned e8386c20fc1a4d3f3ebf11f05b2ec491eb968b15e28bb101b6a46b6ee0afca77 /networkc36815bdd5d46788c6194b95bfa0585618a8ec0d8b9a2d9a7344f8aea12bda3b /volumeccmai-r121-ui-20261018 /loopback56961 runningPID>0 independently verified; protected9containers10networks472volumesequal,405pins unchanged. MySQL31transientEOF then attempt32 five-byteREADY, no restart. Setup receipts/toolreturns preserved. Root commits exact resource admission before serve/backend/Vite/tab/auth; all those budgets0, provider/case0. Original failed setup001 and conservative old start reservation remain historical, actual fixture starts1 from continuation.

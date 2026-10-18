@@ -1,0 +1,16 @@
+{
+  "command": [
+    "docker",
+    "ps",
+    "-aq",
+    "--no-trunc",
+    "--filter",
+    "volume=ccmai-r101-review-final-20261015"
+  ],
+  "exitCode": 0,
+  "containerIds": [
+    "e1555e03d69360e1cd7729afd9e52856443f5172d76454653beec981a7d6477a"
+  ],
+  "exclusive": true,
+  "scope": "Read-only current observation; recheck before admitted start"
+}

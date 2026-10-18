@@ -1,9 +1,24 @@
-﻿{
-    "schemaVersion":  "1.0",
-    "projectName":  "Customer-Care-Monitor-AI",
-    "updatedAt":  "2026-09-26",
-    "claimBoundary":  "Empty initial registry; add only source-verified modules with evidence. No status may represent plan-only intent.",
-    "modules":  [
-
-                ]
+{
+  "schemaVersion": "1.0",
+  "projectName": "Customer-Care-Monitor-AI",
+  "updatedAt": "2026-10-15",
+  "claimBoundary": "Historical R094 source/local and R097 TLS tool accepted bounded; R098 actual two HTTP200 empty replies no proposal; R099 source/compile candidate accepted only, current runtime/M2/M3/pilot/deployment OPEN.",
+  "modules": [
+    {
+      "id": "m2-manual-synthetic-intervention",
+      "name": "Manual synthetic intervention prototype",
+      "path": "backend/engine/intervention.go",
+      "status": "PARTIAL",
+      "description": "Boundedrealmanualsyntheticcomplaint proposal+faithfulKNOWNusage acceptedR100; installedrunnerdisabled, fullM2/M3/pilotOPEN.",
+      "evidence": "docs/reviews/R100_FINAL_INDEPENDENT_LIVE_REVIEW_2026-10-15.md (oneactualcurrent-sourcepositive/faithfulusage/cleanup); docs/reviews/R098_FINAL_INDEPENDENT_LIVE_REVIEW_2026-10-14.md (historicalfailure); docs/reviews/R099_FINAL_INDEPENDENT_SOURCE_COMPILE_REVIEW_2026-10-14.md (sourcecompileonly)"
+    },
+    {
+      "id": "m3-human-case-workflow",
+      "name": "Human intervention case workflow",
+      "path": "frontend/src/views/InterventionCases.vue",
+      "status": "PARTIAL",
+      "description": "R101 source candidate after independent source audit; compile/native/browser NOT_RUN, full M3 OPEN.",
+      "evidence": "docs/reviews/R101_REPAIRED_SOURCE_ADMISSION_2026-10-15.md"
+    }
+  ]
 }

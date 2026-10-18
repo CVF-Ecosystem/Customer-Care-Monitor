@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "python",
+    "-B",
+    "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+    "run",
+    "--phase",
+    "pre-commit",
+    "--project-root",
+    ".",
+    "--packet",
+    "docs/work_orders/CCMAI_RUNTIME_120_CURRENT_UI_PROOF.md",
+    "--packet",
+    "docs/reviews/R120_IMPLEMENTATION_WORKER_RETURN_2026-10-18.md",
+    "--packet",
+    "docs/reviews/R120_FINAL_INDEPENDENT_UI_REVIEW_2026-10-18.md"
+  ],
+  "exit": 0,
+  "elapsedSeconds": 0.4759817123413086,
+  "finishedAt": 1792283492.7384841
+}

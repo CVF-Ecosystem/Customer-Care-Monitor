@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "date": "2026-10-17",
+  "worker": "/root/r108_browser_luna (Luna Max)",
+  "scope": "Capability-only integrated-browser reconnection intake; no R109 campaign replay.",
+  "integratedTool": "mcp__cua_repl.js",
+  "firstCall": "await cua.getState();",
+  "documentedApiLoaded": true,
+  "inventory": {
+    "apps": [],
+    "browsers": []
+  },
+  "toolError": null,
+  "browserVersion": "NOT_OBSERVED",
+  "browserCacheState": "NOT_OBSERVED",
+  "tabCreated": false,
+  "navigationAttempted": false,
+  "clickAttempted": false,
+  "screenshotCaptured": false,
+  "capabilityOutcome": "UNAVAILABLE_IN_LUNA_SESSION_EMPTY_BROWSER_INVENTORY",
+  "productUiEvidence": "NOT_OBSERVED",
+  "rootSeparateEvidence": {
+    "reportedBy": "Root",
+    "notObservedByThisWorker": true,
+    "reportedOutcome": "Fresh benign local HTTP health page changed from 'Chưa kiểm tra' to 'Đã kết nối'; screenshot captured; own tab closed; owned health server exited.",
+    "artifact": "docs/reviews/probes/root_luna_reconnect_20261017/after_click.png"
+  },
+  "campaignBoundary": {
+    "r109Replay": false,
+    "backendFixtureOrViteStarted": false,
+    "sourceOrSeedEdited": false,
+    "earlierBudgetsChanged": false
+  }
+}

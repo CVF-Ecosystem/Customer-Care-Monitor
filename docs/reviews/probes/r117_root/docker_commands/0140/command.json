@@ -1,0 +1,27 @@
+{
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "--config",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r117_execution\\docker-cli-config",
+    "exec",
+    "-e",
+    "MYSQL_PWD=r117-synthetic-only",
+    "033e0151bb4805cce1ce6dc347ab79ab8275e016c8ace371cfda158297a2c352",
+    "mysql",
+    "--default-character-set=utf8mb4",
+    "-h",
+    "127.0.0.1",
+    "-u",
+    "root",
+    "-N",
+    "-B",
+    "--raw",
+    "r116_fixture",
+    "-e",
+    "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA='r116_fixture' AND TABLE_NAME='intervention_execution_grants' ORDER BY ORDINAL_POSITION"
+  ],
+  "startedAt": "2026-10-17T18:09:51.714784+00:00",
+  "timeoutSeconds": 15
+}

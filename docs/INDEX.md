@@ -10,12 +10,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-058.json`
 - Separate R1 seed for accepted R061 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-062.json`
 - GitHub project-branch material publication receipt for the M1-M5 delivery roadmap; remote SHA readback, no product/runtime acceptance.: `docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json`
-- Current local M1-M5 plan; R092 contract reviewed, R093 wire observed with positive output finding; next integrated M2 route, product/pilot exits open.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
+- R120 current proposal/history observed bounded; terminal/durable accounting missing, full milestones OPEN.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
 - All seven selected inheritance findings independently accepted bounded and material exported atd121c9e; full product exits remain open.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R093 Alibaba synthetic live handoff; max2 actual requests and no app governance claim.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md`
+- R121 repaired full namespace accepted source-only; fresh finite postrepair admission, runtime not yet proven.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -35,6 +35,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Historical R042 independent acceptance/dead-link correction and R043 local closure intake.: `CVF_SESSION/handoffs/AGENT_HANDOFF_OFFLINE_PROOF_USAGE_2026-10-03.md`
 - Historical R043 offline-contract FREEZE and R044 seed preparation; original closure evidence unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_OFFLINE_PROOF_FREEZE_2026-10-03.md`
 - Project continuity front door.: `CVF_SESSION_MEMORY.md`
+- Root-owned pre-dispatch checks; applied to draft, effectiveness OPEN.: `docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md`
 - Independent bounded exact-source four-Go runner; synthetic application observation only.: `docs/reviews/probes/r060_independent_campaign.py`
 - Actual failed independent exact-source raw evidence; no suite or mutation acceptance.: `docs/reviews/probes/r060_independent_manifest.json`
 - Reviewer-selected120 positives and two source-only mutation controls; no runtime result.: `docs/reviews/probes/r060_independent_plan.json`
@@ -778,6 +779,3539 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Actual material/source byte bindings; only Git newline normalization differs, original executed SHA retained.: `docs/reviews/probes/r093_alibaba_live/committed_source_bindings.json`
 - Owner-authorized ordinary branch export with actual remote material SHA readback; no CI/deploy or acceptance claim.: `docs/reviews/probes/r093_alibaba_live/publication.json`
 - R2 Alibaba exact provider characterization with synthetic inputs, physical request caps and independent source review.: `docs/work_orders/CCMAI_RUNTIME_093_ALIBABA_SYNTHETIC_LIVE.md`
+- Historical returned R093 handoff; provider cap exhausted unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_ALIBABA_SYNTHETIC_LIVE_R093_2026-10-13.md`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/cap_mutation.log`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_worker/native_first_fail.log`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/restored.json`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `backend/engine/intervention.go`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `backend/engine/intervention_usage_test.go`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/mutation.json`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/cap_mutation_restoration.json`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `backend/api/handlers/intervention.go`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/R094_R1_M2_INTERVENTION_REPAIR_RETURN_2026-10-14.md`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/final_source_identity.json`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_worker/source_hashes.json`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/baseline.log`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/R094_FINAL_INDEPENDENT_M2_REVIEW_2026-10-14.md`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `backend/db/models/intervention.go`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/fixture_created.json`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_worker/native_final_pass.log`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_worker/native_second_fail.log`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/baseline.json`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_worker/source_hashes_repair1.json`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/cap_mutation.json`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `backend/api/handlers/intervention_route_test.go`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/cleanup.json`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/mutation_restoration.json`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/mutation.log`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_worker/native_initial_pass.log`
+- R094 source/local prototype, actual software evidence or retained failure; no live AI governance claim.: `docs/reviews/probes/r094_root/restored.log`
+- Actual pre-closure89 portable gate units; static repository behavior only.: `docs/reviews/probes/r094_root/gate_units_continuity.log`
+- Actual final portable gate unittest output; repository checks only, no runtime AI proof.: `docs/reviews/probes/r094_root/gate_units_final.log`
+- Root consolidated F1..F4 independent source/evidence findings; one same-scope repair.: `docs/reviews/R094_INITIAL_INDEPENDENT_M2_REVIEW_2026-10-14.md`
+- M2 manual synthetic application source/local work order.: `docs/work_orders/CCMAI_RUNTIME_094_M2_INTERVENTION_APPLICATION.md`
+- R094 bounded source/local lifecycle, full M2 live OPEN.: `CVF_SESSION/tranches/CCMAI-RUNTIME-094.json`
+- Immutable R2 M2 source/local authority; real provider requests zero.: `CVF_SESSION/authority/CCMAI-RUNTIME-094.json`
+- Accepted intended M2 state/API/admission/evidence contract; no implementation acceptance.: `docs/specs/M2_INTERVENTION_APPLICATION_SPEC_2026-10-14.md`
+- Sol Medium returned local M2 source/tests; initial coverage gaps explicit.: `docs/reviews/R094_M2_INTERVENTION_WORKER_RETURN_2026-10-14.md`
+- R095 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `CVF_SESSION/handoffs/AGENT_HANDOFF_M2_INTERVENTION_R094_2026-10-14.md`
+- R095 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `docs/work_orders/CCMAI_RUNTIME_095_M2_INTERVENTION_LIVE.md`
+- R095 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `CVF_SESSION/tranches/CCMAI-RUNTIME-095.json`
+- R095 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `CVF_SESSION/authority/CCMAI-RUNTIME-095.json`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/probes/r095_root/r095_fixture.json`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/probes/r095_root/fixture_pre_live.json`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/probes/r095_root/cleanup.json`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/R095_PRE_PROVIDER_FAILURE_DISPOSITION_2026-10-14.md`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `CVF_SESSION/authority/CCMAI-RUNTIME-096.json`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/probes/r095_root/r095_container_pin.json`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/probes/r095_root/r095_campaign.json`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/probes/r095_root/r095_schema_shape.json`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/probes/r095_root/r095_ownership.json`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/probes/r095_root/r095_schema_metadata_validation.json`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/probes/r095_root/r095_worker_receipt.json`
+- Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/probes/r095_root/source_admission.json`
+- Concrete new max2 Alibaba application effect proposal; NOT_AUTHORIZED, old budgets unchanged.: `docs/reviews/planning/R095_LIVE_M2_APPROVAL_PACKET_2026-10-14.md`
+- R095 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `docs/specs/M2_INTERVENTION_LIVE_R095_SPEC_2026-10-14.md`
+- R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `scripts/tests/test_r095_intervention_live_fixture.py`
+- R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `docs/reviews/probes/r095_root/no_approval_binary_stdout.log`
+- R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `docs/reviews/R095_FINAL_PRE_EFFECT_SOURCE_ADMISSION_2026-10-14.md`
+- R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `docs/reviews/probes/r095_root/no_approval_binary_stderr.log`
+- R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `scripts/r095_intervention_live_fixture.py`
+- R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `backend/api/handlers/intervention_live_r095_test.go`
+- R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `docs/reviews/probes/r095_worker/worker_source_hashes.json`
+- R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `docs/reviews/R095_R1_PRE_EFFECT_WORKER_RETURN_2026-10-14.md`
+- R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `docs/reviews/R095_INITIAL_PRE_EFFECT_SOURCE_REVIEW_2026-10-14.md`
+- R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `docs/reviews/probes/r095_root/pre_effect_identity.json`
+- R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `docs/reviews/probes/r095_worker/worker_offline9.log`
+- R096 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R095_2026-10-14.md`
+- R096 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `docs/work_orders/CCMAI_RUNTIME_096_M2_INTERVENTION_LIVE.md`
+- R096 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `CVF_SESSION/tranches/CCMAI-RUNTIME-096.json`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/reviewer_receipt.json`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/repair1_go_stdout.log`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/config_precheck_stdout.log`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/source_admission.json`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/tls_protocol_probe.go`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/worker_receipt.json`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/R096_REPAIR1_WORKER_RETURN_2026-10-14.md`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `CVF_SESSION/authority/CCMAI-RUNTIME-097.json`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/tls_repro_stdout.json`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/config_precheck_stderr.log`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/fixture_pre_live.json`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/tls_repro_stderr.log`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/parent_owner_cap.json`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/R096_TRANSPORT_FAILURE_AND_TLS_REPAIR_REVIEW_2026-10-14.md`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/parent_slot-2.json`
+- Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/parent_slot-1.json`
+- R096 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `docs/specs/M2_INTERVENTION_LIVE_R096_SPEC_2026-10-14.md`
+- Verified removal of stopped R096 owned fixture; protected containers and consumed markers unchanged.: `docs/reviews/probes/r096_root/cleanup_receipt.json`
+- R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `scripts/r096_intervention_live_fixture.py`
+- R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `docs/reviews/probes/r096_root/no_approval_binary_stdout.log`
+- R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `backend/api/handlers/intervention_live_r096_test.go`
+- R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `docs/reviews/probes/r096_root/pre_effect_identity.json`
+- R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `docs/reviews/probes/r096_worker/worker_offline_transcript.txt`
+- R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `docs/reviews/probes/r096_root/offline14_stdout.log`
+- R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `docs/reviews/probes/r096_root/offline14_stderr.log`
+- R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `docs/reviews/R096_PRE_EFFECT_SOURCE_ADMISSION_2026-10-14.md`
+- R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `docs/reviews/R096_PRE_EFFECT_WORKER_RETURN_2026-10-14.md`
+- R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `scripts/tests/test_r096_intervention_live_fixture.py`
+- R096 bounded same-owner source/parentledger admission or actual offline tooling evidence; live pending.: `docs/reviews/probes/r096_root/no_approval_binary_stderr.log`
+- Bounded R097 local protocol proof; no live governance or product closure.: `docs/work_orders/CCMAI_RUNTIME_097_LOCAL_TLS_PROOF.md`
+- Bounded R097 local protocol proof; no live governance or product closure.: `CVF_SESSION/tranches/CCMAI-RUNTIME-097.json`
+- Bounded R097 local protocol proof; no live governance or product closure.: `docs/specs/R097_LOCAL_TLS_PROOF_SPEC_2026-10-14.md`
+- Bounded R097 local protocol proof; no live governance or product closure.: `CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R096_2026-10-14.md`
+- Independent bounded local TLS tooling review PASS; actual live M2 remains blocked.: `docs/reviews/R097_FINAL_INDEPENDENT_LOCAL_TLS_REVIEW_2026-10-14.md`
+- Actual one-shot local TLS proof or fresh-budget proposal only; no live product acceptance.: `docs/reviews/R097_LOCAL_TLS_WORKER_RETURN_2026-10-14.md`
+- Actual one-shot local TLS proof or fresh-budget proposal only; no live product acceptance.: `docs/reviews/probes/r097_local_tls/worker_go_stdout.log`
+- Actual one-shot local TLS proof or fresh-budget proposal only; no live product acceptance.: `docs/reviews/probes/r097_local_tls/root_dependency_audit.json`
+- Actual one-shot local TLS proof or fresh-budget proposal only; no live product acceptance.: `docs/reviews/probes/r097_local_tls/worker_proof.json`
+- Actual one-shot local TLS proof or fresh-budget proposal only; no live product acceptance.: `docs/reviews/probes/r097_local_tls/worker_go_stderr.log`
+- Actual one-shot local TLS proof or fresh-budget proposal only; no live product acceptance.: `docs/reviews/planning/R098_CORRECTED_TLS_LIVE_APPROVAL_PACKET_2026-10-14.md`
+- Fresh R098 max2 synthetic live envelope; historical budgets unchanged.: `docs/specs/M2_INTERVENTION_LIVE_R098_SPEC_2026-10-14.md`
+- Fresh R098 max2 synthetic live envelope; historical budgets unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_TLS_R097_2026-10-14.md`
+- Actual reviewed source/binary signature or secret-free config metadata proof; provider pending.: `docs/reviews/probes/r098_root/source_binary_admission.json`
+- Actual reviewed source/binary signature or secret-free config metadata proof; provider pending.: `docs/reviews/probes/r098_root/compile_identity.json`
+- Actual reviewed source/binary signature or secret-free config metadata proof; provider pending.: `docs/reviews/probes/r098_root/worker_compile_stderr.log`
+- Actual reviewed source/binary signature or secret-free config metadata proof; provider pending.: `docs/reviews/probes/r098_root/worker_compile_stdout.log`
+- Actual reviewed source/binary signature or secret-free config metadata proof; provider pending.: `docs/reviews/probes/r098_root/config_precheck.log`
+- Fresh R098 max2 synthetic live envelope; historical budgets unchanged.: `CVF_SESSION/tranches/CCMAI-RUNTIME-098.json`
+- Fresh R098 max2 synthetic live envelope; historical budgets unchanged.: `docs/work_orders/CCMAI_RUNTIME_098_M2_INTERVENTION_LIVE.md`
+- Independent exact owned fixture pre-live proof; no provider result yet.: `docs/reviews/probes/r098_root/worker_setup_stdout.log`
+- Independent exact owned fixture pre-live proof; no provider result yet.: `docs/reviews/probes/r098_root/fixture_pre_live.json`
+- Independent exact owned fixture pre-live proof; no provider result yet.: `docs/reviews/probes/r098_root/worker_setup_stderr.log`
+- Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance.: `docs/reviews/probes/r098_root/fresh_slot-2.json`
+- Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance.: `docs/reviews/probes/r098_root/fresh_owner_cap.json`
+- Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance.: `docs/reviews/probes/r098_root/worker_receipt.json`
+- Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance.: `CVF_SESSION/authority/CCMAI-RUNTIME-099.json`
+- Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance.: `docs/reviews/probes/r098_root/live_outcome_summary.json`
+- Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance.: `docs/reviews/probes/r098_root/reviewer_receipt.json`
+- Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance.: `docs/reviews/probes/r098_root/fresh_slot-1.json`
+- Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance.: `docs/reviews/R098_FINAL_INDEPENDENT_LIVE_REVIEW_2026-10-14.md`
+- Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance.: `docs/reviews/probes/r098_root/real_provider_receipt.json`
+- Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance.: `docs/reviews/R098_LIVE_WORKER_RETURN_2026-10-14.md`
+- Actual R098 responses/failure review/cleanup or finite source-only R099 seed; no full M2 acceptance.: `docs/reviews/probes/r098_root/cleanup_receipt.json`
+- Fresh explicit owner max2 grant, old budgets unchanged, seed before BUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-098.json`
+- Exact reviewed R098 source/tooling admission or protected dependency proof, live pending.: `docs/reviews/probes/r098_root/root_offline_tests.log`
+- Exact reviewed R098 source/tooling admission or protected dependency proof, live pending.: `scripts/tests/test_r098_intervention_live_fixture.py`
+- Exact reviewed R098 source/tooling admission or protected dependency proof, live pending.: `docs/reviews/R098_PRE_EFFECT_SOURCE_WORKER_RETURN_2026-10-14.md`
+- Exact reviewed R098 source/tooling admission or protected dependency proof, live pending.: `docs/reviews/probes/r098_root/fresh_owner_manifest.json`
+- Exact reviewed R098 source/tooling admission or protected dependency proof, live pending.: `backend/api/handlers/intervention_live_r098_test.go`
+- Exact reviewed R098 source/tooling admission or protected dependency proof, live pending.: `scripts/r098_intervention_live_fixture.py`
+- Exact reviewed R098 source/tooling admission or protected dependency proof, live pending.: `docs/reviews/probes/r098_root/pre_compile_identity.json`
+- Exact reviewed R098 source/tooling admission or protected dependency proof, live pending.: `docs/reviews/probes/r098_root/protected_baseline.json`
+- Exact reviewed R098 source/tooling admission or protected dependency proof, live pending.: `docs/reviews/R098_PRE_EFFECT_SOURCE_ADMISSION_2026-10-14.md`
+- Finite R099 source-only candidate; no runtime/live governance proof.: `docs/work_orders/CCMAI_RUNTIME_099_OBSERVED_RESPONSE_REPAIR.md`
+- Finite R099 source-only candidate; no runtime/live governance proof.: `docs/specs/R099_OBSERVED_RESPONSE_REPAIR_SPEC_2026-10-14.md`
+- Finite R099 source-only candidate; no runtime/live governance proof.: `CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R098_2026-10-14.md`
+- Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority.: `docs/reviews/planning/R100_NONTHINKING_M2_LIVE_APPROVAL_PACKET_2026-10-14.md`
+- Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority.: `docs/reviews/probes/r099_source/stderr.txt`
+- Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority.: `docs/reviews/probes/r099_source/exit.txt`
+- Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority.: `docs/reviews/probes/r099_source/command.txt`
+- Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority.: `docs/reviews/probes/r099_source/source_sha256.txt`
+- Root raw compile receipt and exact source hash audit; no new Go/runtime/provider effect.: `docs/reviews/probes/r099_source/compile_audit_receipt_2026-10-15.json`
+- Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority.: `docs/reviews/probes/r099_source/cwd.txt`
+- Actual source-only compile receipt or concrete R100 changed-request proposal; no live authority.: `docs/reviews/probes/r099_source/stdout.txt`
+- Finite R099 source-only candidate; no runtime/live governance proof.: `CVF_SESSION/tranches/CCMAI-RUNTIME-099.json`
+- Current R099 source/compile REVIEW_PASS only; FREEZE/currentlive proof OPEN, R100 permission pending.: `docs/reviews/R099_FINAL_INDEPENDENT_SOURCE_COMPILE_REVIEW_2026-10-14.md`
+- Consolidated current M2 roadmap/projection audit; source-compile only, live R100 approval pending.: `docs/reviews/R099_ROADMAP_CONTINUITY_AUDIT_2026-10-15.md`
+- R099 exact source candidate and independent review; current runtime proof NOT_RUN.: `backend/ai/chat_once_response.go`
+- R099 exact source candidate and independent review; current runtime proof NOT_RUN.: `docs/reviews/probes/r099_source/pre_build_identity.json`
+- R099 exact source candidate and independent review; current runtime proof NOT_RUN.: `docs/reviews/R099_PRE_BUILD_INDEPENDENT_SOURCE_REVIEW_2026-10-14.md`
+- R099 exact source candidate and independent review; current runtime proof NOT_RUN.: `docs/reviews/R099_SOURCE_READY_WORKER_RETURN_2026-10-14.md`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/attempt-1.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/attempt-1.ready`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/campaign.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/cleanup_receipt.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/container_pin.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/fixture.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/fixture_pre_live.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/fixture_readback_resume.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/fresh_slot-1.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/independent_attempt_1_summary.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/independent_db_readback.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/ownership.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/real_provider_receipt.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/seed.go-start`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker.claim`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker.dispatch`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker.go-start`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_live/command.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_live/cwd.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_live/exit.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_live/stderr.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_live/stdout.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_precheck/command.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_precheck/cwd.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_precheck/exit.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_precheck/stderr.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_precheck/stdout.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_receipt.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_setup/command.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_setup/cwd.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_setup/exit.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_setup/setup_summary.json`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_setup/stderr.txt`
+- Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_setup/stdout.txt`
+- Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/binary_bytes.txt`
+- Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/binary_sha256.txt`
+- Rootcompile/sourcebinary digest admission, API0/4 liveNOTRUN.: `docs/reviews/R100_COMPILE_BINARY_ADMISSION_2026-10-15.md`
+- Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/command.txt`
+- Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/cwd.txt`
+- Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/env.txt`
+- Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/exit.txt`
+- Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/source_sha256.txt`
+- Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/stderr.txt`
+- Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/stdout.txt`
+- Immutable Root dispatcher seed for ownerfreshmax4 syntheticuntilvalid; beforeBUILD.: `CVF_SESSION/authority/CCMAI-RUNTIME-100.json`
+- Rootindependentboundedrealproposal/usage/DB/cleanup REVIEW_PASS; fullM2/M3/pilotOPEN.: `docs/reviews/R100_FINAL_INDEPENDENT_LIVE_REVIEW_2026-10-15.md`
+- Rootnew4 grantledger digest copy; oldspentcaps unchanged.: `docs/reviews/probes/r100_root/fresh_owner_manifest.json`
+- Explicit isolatedR100harness, max4untilvalid, defaultnotactivated.: `backend/api/handlers/intervention_live_r100_test.go`
+- R2newharness andsourceboundeffects; workerSolMedium, independentRoot, no oldbudgetreset.: `docs/work_orders/CCMAI_RUNTIME_100_M2_INTERVENTION_LIVE.md`
+- Accepted intendedR100 current-source realproposal+faithfulusage contract; max4freshcalls.: `docs/specs/M2_INTERVENTION_LIVE_R100_SPEC_2026-10-15.md`
+- SourcebinaryboundR100fixture/livesupervisor, Rootcontinuation eachsemanticinvalid.: `scripts/r100_intervention_live_fixture.py`
+- Rootconsolidated6source-only findings beforecompile/effects, repairedonepass.: `docs/reviews/R100_PRECOMPILE_CONSOLIDATED_FINDINGS_2026-10-15.md`
+- Exactnew3/current13/TLSsource hashes beforecompile; no provider effect.: `docs/reviews/probes/r100_root/pre_compile_identity.json`
+- IndependentRoot repairedsource audit acceptssoleofflinecompile only.: `docs/reviews/R100_PRECOMPILE_INDEPENDENT_SOURCE_ADMISSION_2026-10-15.md`
+- Rootpre-effect current13/oldsource/seed/marker/containeridentity protection.: `docs/reviews/probes/r100_root/protected_baseline.json`
+- Rootreviewedsource/binary/dependencies/manifest digest-bound admission beforecredential/fixture.: `docs/reviews/probes/r100_root/source_binary_admission.json`
+- PurePython toolingidentity/parserchecks; no mockprovider governanceproof.: `scripts/tests/test_r100_intervention_live_fixture.py`
+- Historical prelive fixture/precheck return; actualnextlive verified separately.: `docs/reviews/R100_PRECHECK_FIXTURE_WORKER_RETURN_2026-10-15.md`
+- Source-only worker return; oneprecompile repair, puretooling7PASS, no liveclaim.: `docs/reviews/R100_SOURCE_READY_WORKER_RETURN_2026-10-15.md`
+- Owner-requested prepared external Claude UI evidence packet for R101 REVIEW; no source repair, seed role change, runtime execution or closure claimed.: `docs/reviews/planning/R101_CLAUDE_BROWSER_EVIDENCE_HANDOFF_2026-10-15.md`
+- R101 blocked Claude browser return and qualified independent review; source/current cleanup verified, B01-B10 NOT_RUN and FREEZE OPEN; no runtime AI governance proof.: `docs/reviews/R101_CLAUDE_RETURN_INDEPENDENT_REVIEW_2026-10-15.md`
+- R101 blocked Claude browser return and qualified independent review; source/current cleanup verified, B01-B10 NOT_RUN and FREEZE OPEN; no runtime AI governance proof.: `docs/reviews/R101_CLAUDE_BROWSER_RETURN_2026-10-15.md`
+- R101 blocked Claude browser return and qualified independent review; source/current cleanup verified, B01-B10 NOT_RUN and FREEZE OPEN; no runtime AI governance proof.: `docs/reviews/probes/r101_claude/manifest.json`
+- R101 blocked Claude browser return and qualified independent review; source/current cleanup verified, B01-B10 NOT_RUN and FREEZE OPEN; no runtime AI governance proof.: `docs/reviews/probes/r101_claude/browser_tool_failure.json`
+- R101 blocked Claude browser return and qualified independent review; source/current cleanup verified, B01-B10 NOT_RUN and FREEZE OPEN; no runtime AI governance proof.: `docs/reviews/probes/r101_claude/cleanup_receipt.json`
+- R101 blocked Claude browser return and qualified independent review; source/current cleanup verified, B01-B10 NOT_RUN and FREEZE OPEN; no runtime AI governance proof.: `docs/reviews/probes/r101_claude/fixture_port_reconciliation.json`
+- R101 blocked Claude browser return and qualified independent review; source/current cleanup verified, B01-B10 NOT_RUN and FREEZE OPEN; no runtime AI governance proof.: `docs/reviews/probes/r101_root/claude_return_independent_verification.json`
+- Exact pre-runtime formatted source hashes; source only, Go0/API0 and native/browser NOT_RUN.: `docs/reviews/probes/r101_root/formatted_source_manifest.json`
+- Retained R101 REVIEW/FREEZE OPEN checkpoint; session routing superseded by R102 without product closure.: `CVF_SESSION/handoffs/AGENT_HANDOFF_M3_HUMAN_WORKFLOW_R101_2026-10-15.md`
+- R101 M3 accepted intended local synthetic human workflow contract/dispatch; implementation/native/browser acceptance OPEN, no provider or production effects.: `docs/work_orders/CCMAI_RUNTIME_101_M3_HUMAN_WORKFLOW.md`
+- R101 M3 accepted intended local synthetic human workflow contract/dispatch; implementation/native/browser acceptance OPEN, no provider or production effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-101.json`
+- R101 M3 accepted intended local synthetic human workflow contract/dispatch; implementation/native/browser acceptance OPEN, no provider or production effects.: `docs/specs/M3_HUMAN_WORKFLOW_R101_SPEC_2026-10-15.md`
+- R101 M3 accepted intended local synthetic human workflow contract/dispatch; implementation/native/browser acceptance OPEN, no provider or production effects.: `CVF_SESSION/tranches/CCMAI-RUNTIME-101.json`
+- Qualified denied file-scheme probe; no HTTP or product failure inference.: `docs/reviews/R101_BRIDGE_RECHECK_INDEPENDENT_REVIEW_2026-10-16.md`
+- R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only.: `docs/reviews/probes/r101_claude_retry2/retry_counters_after.json`
+- R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only.: `docs/reviews/R101_CLAUDE_BROWSER_RETRY2_RETURN_2026-10-15.md`
+- R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only.: `docs/reviews/probes/r101_claude_retry2/git_status_after.json`
+- R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only.: `docs/reviews/probes/r101_root/retry2_independent_verification.json`
+- R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only.: `docs/reviews/probes/r101_claude_retry2/browser_capability_subagent_attempt.json`
+- R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only.: `docs/reviews/probes/r101_claude_retry2/browser_capability_main_thread_attempt.json`
+- R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only.: `docs/reviews/probes/r101_claude_retry2/owner_supplemental_authorization.txt`
+- R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only.: `docs/reviews/probes/r101_claude_retry2/pre_browser_acknowledgment_receipt.json`
+- R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only.: `docs/reviews/probes/r101_claude_retry2/evidence_manifest.json`
+- R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only.: `docs/reviews/probes/r101_claude_retry2/cleanup_receipt.json`
+- R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only.: `docs/reviews/probes/r101_claude_retry2/source_binding.json`
+- R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only.: `docs/reviews/probes/r101_claude_retry2/browser_capability_main_thread_error.txt`
+- R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only.: `docs/reviews/probes/r101_claude_retry2/browser_capability_subagent_error.txt`
+- R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only.: `docs/reviews/R101_RETRY2_INDEPENDENT_REVIEW_2026-10-15.md`
+- R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only.: `docs/reviews/probes/r101_claude_retry2/browser_capability_playwright_subagent_error.txt`
+- R101 retry2 blocked browser evidence/independent qualified review; B01-B10 NOT_RUN, no product acceptance; next executor SPEC only.: `docs/reviews/probes/r101_claude_retry2/browser_capability_playwright_subagent_attempt.json`
+- Independent Root source findings/admission; compile/native/browser NOT_RUN, no runtime AI governance claim.: `docs/reviews/R101_PRE_RUNTIME_CONSOLIDATED_SOURCE_FINDINGS_2026-10-15.md`
+- Independent Root source findings/admission; compile/native/browser NOT_RUN, no runtime AI governance claim.: `docs/reviews/R101_REPAIRED_SOURCE_ADMISSION_2026-10-15.md`
+- R102 exact-path source-first dispatch for local WAIT_DATA revision/nonexecuting intent; runtime and actualAI/browser/fullM3 acceptance OPEN.: `docs/specs/M3_WAITDATA_BACKEND_R102_SPEC_2026-10-15.md`
+- R102 exact-path source-first dispatch for local WAIT_DATA revision/nonexecuting intent; runtime and actualAI/browser/fullM3 acceptance OPEN.: `docs/work_orders/CCMAI_RUNTIME_102_WAITDATA_BACKEND.md`
+- R102 exact-path source-first dispatch for local WAIT_DATA revision/nonexecuting intent; runtime and actualAI/browser/fullM3 acceptance OPEN.: `CVF_SESSION/authority/CCMAI-RUNTIME-102.json`
+- R102 exact-path source-first dispatch for local WAIT_DATA revision/nonexecuting intent; runtime and actualAI/browser/fullM3 acceptance OPEN.: `CVF_SESSION/tranches/CCMAI-RUNTIME-102.json`
+- R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved.: `docs/reviews/probes/r102_root/fixture_reservation.json`
+- R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved.: `docs/reviews/probes/r102_root/proposed_fixture_repair3.patch`
+- R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved.: `docs/reviews/probes/r102_root/fixture_owner.json`
+- R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved.: `docs/reviews/probes/r102_root/reviewer_launch_2_stderr.log`
+- R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved.: `docs/reviews/probes/r102_worker/engine_compile_exit.json`
+- R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved.: `docs/reviews/probes/r102_worker/handlers_r2_compile_command.json`
+- R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved.: `docs/reviews/probes/r102_worker/handlers_r2_compile_exit.json`
+- R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved.: `docs/reviews/probes/r102_root/reviewer_launch_2_stdout.log`
+- R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved.: `docs/reviews/probes/r102_worker/handlers_r2_compile_stdout.txt`
+- R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved.: `docs/reviews/probes/r102_worker/engine_compile_stderr.txt`
+- R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved.: `docs/reviews/probes/r102_worker/engine_compile_command.json`
+- R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved.: `docs/reviews/probes/r102_root/reviewer_launch_1_stderr.log`
+- R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved.: `docs/reviews/probes/r102_worker/handlers_r2_compile_stderr.txt`
+- R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved.: `docs/reviews/probes/r102_root/reviewer_launch_2_result.json`
+- R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved.: `docs/reviews/probes/r102_worker/engine_compile_stdout.txt`
+- R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved.: `docs/reviews/probes/r102_root/reviewer_launch_1_stdout.log`
+- R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved.: `docs/reviews/probes/r102_root/protected_baseline.json`
+- R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved.: `docs/reviews/R102_REVIEW_COST_ESCALATION_REQUIRED_2026-10-15.md`
+- R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved.: `docs/reviews/probes/r102_root/fixture_ready.json`
+- R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved.: `docs/reviews/probes/r102_root/reviewer_launch_1_result.json`
+- R102 actual bounded local software evidence; compile/engine2PASS, native first groupFAIL, no full acceptance; review cost escalation and owned fixture stopped/preserved.: `docs/reviews/probes/r102_root/cleanup_checkpoint.json`
+- R102 independent local backend review or exact execution/cleanup evidence:20native+7nestedPASS; actual AI/full milestones remain OPEN.: `docs/reviews/probes/r102_root/reviewer_launch_3_stdout.log`
+- R102 independent local backend review or exact execution/cleanup evidence:20native+7nestedPASS; actual AI/full milestones remain OPEN.: `docs/reviews/R102_FINAL_INDEPENDENT_BACKEND_REVIEW_2026-10-15.md`
+- R102 independent local backend review or exact execution/cleanup evidence:20native+7nestedPASS; actual AI/full milestones remain OPEN.: `docs/reviews/probes/r102_worker/handlers_r3_compile_stdout.txt`
+- R102 independent local backend review or exact execution/cleanup evidence:20native+7nestedPASS; actual AI/full milestones remain OPEN.: `docs/reviews/probes/r102_worker/handlers_r3_compile_stderr.txt`
+- R102 independent local backend review or exact execution/cleanup evidence:20native+7nestedPASS; actual AI/full milestones remain OPEN.: `docs/reviews/probes/r102_root/reviewer_launch_3_result.json`
+- R102 independent local backend review or exact execution/cleanup evidence:20native+7nestedPASS; actual AI/full milestones remain OPEN.: `docs/reviews/probes/r102_root/reviewer_launch_3_stderr.log`
+- R102 independent local backend review or exact execution/cleanup evidence:20native+7nestedPASS; actual AI/full milestones remain OPEN.: `docs/reviews/probes/r102_worker/handlers_r3_compile_exit.json`
+- R102 independent local backend review or exact execution/cleanup evidence:20native+7nestedPASS; actual AI/full milestones remain OPEN.: `docs/reviews/probes/r102_root/cleanup_after_go7.json`
+- R102 independent local backend review or exact execution/cleanup evidence:20native+7nestedPASS; actual AI/full milestones remain OPEN.: `docs/reviews/probes/r102_root/resume_6.json`
+- R102 independent local backend review or exact execution/cleanup evidence:20native+7nestedPASS; actual AI/full milestones remain OPEN.: `docs/reviews/probes/r102_worker/handlers_r3_compile_command.json`
+- R102 preserved first handlers compilePASS and fixture-only repair2; no native/provider acceptance.: `docs/reviews/R102_FIXTURE_JSON_REPAIR_DISPOSITION_2026-10-15.md`
+- R102 preserved first handlers compilePASS and fixture-only repair2; no native/provider acceptance.: `docs/reviews/probes/r102_worker/handlers_compile_command.json`
+- R102 preserved first handlers compilePASS and fixture-only repair2; no native/provider acceptance.: `docs/reviews/probes/r102_worker/handlers_compile_exit.json`
+- R102 preserved first handlers compilePASS and fixture-only repair2; no native/provider acceptance.: `docs/reviews/probes/r102_worker/handlers_compile_stderr.txt`
+- R102 preserved first handlers compilePASS and fixture-only repair2; no native/provider acceptance.: `docs/reviews/probes/r102_worker/handlers_compile_stdout.txt`
+- Pinned actual offline binary hashes for failed native/accepted2engine checks; not full backend acceptance.: `docs/reviews/probes/r102_root/binary_manifest.json`
+- Explicit owner cost-escalation continuation without fixed same-scope Go/repair caps; historical seed/counters and all other boundaries preserved.: `CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json`
+- R102 independently admitted exact source/local software campaign; runtime results and AI rerun remain unproved.: `docs/reviews/R102_REPAIRED_SOURCE_ADMISSION_2026-10-15.md`
+- R102 independently admitted exact source/local software campaign; runtime results and AI rerun remain unproved.: `docs/reviews/probes/r102_root/source_admission.json`
+- R102 source-only implementation/review/finite campaign records; no runtime before independent source admission, native and actual AI rerun OPEN.: `docs/reviews/R102_CONSOLIDATED_SOURCE_REVIEW_2026-10-15.md`
+- R102 source-only implementation/review/finite campaign records; no runtime before independent source admission, native and actual AI rerun OPEN.: `docs/reviews/R102_WAITDATA_WORKER_RETURN_2026-10-15.md`
+- R102 source-only implementation/review/finite campaign records; no runtime before independent source admission, native and actual AI rerun OPEN.: `docs/reviews/probes/r102_worker/source_manifest.json`
+- R102 source-only implementation/review/finite campaign records; no runtime before independent source admission, native and actual AI rerun OPEN.: `docs/reviews/probes/r102_root/review_campaign.py`
+- R102 source-only implementation/review/finite campaign records; no runtime before independent source admission, native and actual AI rerun OPEN.: `docs/reviews/probes/r102_root/counters.json`
+- Independent exact source review for stored-JSON fixture repair3; planned compile/native only, not runtime acceptance.: `docs/reviews/R102_REPAIR3_INDEPENDENT_ADMISSION_2026-10-15.md`
+- Owner-selected M3-05 backend-first intended source-revision/rerun-intent packet; candidate only, no dispatch/BUILD/runtime/provider or actual AI rerun acceptance.: `docs/reviews/planning/R102_WAITDATA_BACKEND_SPEC_2026-10-15.md`
+- Owner-selected M3-05 backend-first intended source-revision/rerun-intent packet; candidate only, no dispatch/BUILD/runtime/provider or actual AI rerun acceptance.: `docs/reviews/planning/R102_WAITDATA_BACKEND_WORK_ORDER_2026-10-15.md`
+- R103 source-first official browser tooling recovery dispatch; conditional R101 UI only after supported capability pass.: `docs/work_orders/CCMAI_RUNTIME_103_BROWSER_TOOLING_RECOVERY.md`
+- R103 source-first official browser tooling recovery dispatch; conditional R101 UI only after supported capability pass.: `CVF_SESSION/tranches/CCMAI-RUNTIME-103.json`
+- Hash/size integrity of actual R103 install/cache/control/capture evidence; integrated bridge/R101 UI remains unobserved.: `docs/reviews/probes/r103_root/final_evidence_manifest.json`
+- Historical bounded R103 tooling freeze; routing superseded only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_BROWSER_TOOLING_R103_2026-10-15.md`
+- Historical R102 bounded local FREEZE handoff; session routing superseded by R103, acceptance unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_WAITDATA_BACKEND_R102_2026-10-15.md`
+- Owner-authorized scoped official Playwright1.57 driver/cache tooling recovery; no product acceptance or provider effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-103.json`
+- Owner-authorized scoped official Playwright1.57 driver/cache tooling recovery; no product acceptance or provider effects.: `docs/reviews/R103_BROWSER_TOOLING_SPEC_2026-10-15.md`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/driver_install1/chromium-dry-run.command.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/browser_install1/installed-node-version.command.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/browser_install1/worker-install-return.md`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/browser_install1/campaign-reservation.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/browser_install1/result.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_root/managed_browser_capability_20261016.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/driver_install1/existing-node-version.stderr.txt`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_root/gate_units_20261016.stdout.log`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/browser_install1/chromium-dry-run.stdout.txt`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/browser_install1/chromium-dry-run.command.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/driver_install1/chromium-dry-run.stderr.txt`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/browser_install1/chromium-install-result.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/driver_install1/driver-version.stdout.txt`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/browser_install1/chromium-install.stderr.txt`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_root/browser_install_independent_verification.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/browser_install1/browser-cache-before.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/driver_install1/worker-install-return.md`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/driver_install1/network.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/driver_install1/browser-cache-after-driver`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/driver_install1/npm-requests.jsonl`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_root/driver_health.png`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_root/driver_health.stderr.log`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/driver_install1/existing-node-version.stdout.txt`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/browser_install1/chromium-install.stdout.txt`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/driver_install1/driver-version.stderr.txt`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/browser_install1/browser-cache-after.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/driver_install1/result.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/browser_install1/installed-node-version.stdout.txt`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_root/gate_units_20261016.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/browser_install1/installed-driver-version.stderr.txt`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_root/driver_health.stdout.log`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_root/gate_units_20261016.stderr.log`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/browser_install1/installed-driver-version.command.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_root/browser_cache_before_install.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/browser_install1/installed-driver-version.stdout.txt`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/driver_install1/chromium-dry-run.stdout.txt`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/driver_install1/campaign-reservation.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/R103_INDEPENDENT_TOOLING_REVIEW_2026-10-16.md`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/driver_install1/browser-cache-before.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/browser_install1/chromium-install.command.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_root/driver_health.command.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/browser_install1/installed-node-version.stderr.txt`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/R103_BROWSER_INSTALL_ADMISSION_2026-10-15.md`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_root/installed_driver_verification.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/browser_install1/chromium-plan.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/driver_install1/chromium-plan.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/browser_install1/chromium-dry-run.stderr.txt`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/driver_install1/driver-version.command.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_root/driver_health_result.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/driver_install1/existing-node-version.command.json`
+- R103 official driver/browser recovery or actual independent control/capture proof; tooling only, integrated bridge/R101 UI not accepted.: `docs/reviews/probes/r103_tooling/driver_install1/published-files.json`
+- R103 source repair/admission or prepared health probe; driver/browser runtime not yet observed.: `docs/reviews/probes/r103_root/native_pipe_capability.json`
+- R103 source repair/admission or prepared health probe; driver/browser runtime not yet observed.: `docs/reviews/R103_BROWSER_TOOLING_WORKER_RETURN_2026-10-15.md`
+- R103 source repair/admission or prepared health probe; driver/browser runtime not yet observed.: `docs/reviews/probes/r103_root/driver_health.cjs`
+- R103 source repair/admission or prepared health probe; driver/browser runtime not yet observed.: `docs/reviews/probes/r103_tooling/repair_driver.py`
+- R103 source repair/admission or prepared health probe; driver/browser runtime not yet observed.: `docs/reviews/R103_CONSOLIDATED_SCRIPT_REVIEW_2026-10-15.md`
+- R103 source repair/admission or prepared health probe; driver/browser runtime not yet observed.: `docs/reviews/R103_DRIVER_SOURCE_ADMISSION_2026-10-15.md`
+- Worker exported original local session evidence; diagnostic only, tab closure withdrawn.: `docs/reviews/R104_BRIDGE_EVIDENCE_SUPPLEMENT_2026-10-16.md`
+- Root CHANGES_REQUIRED for dispatch contract/evidence gaps; no UI acceptance.: `docs/reviews/R104_BRIDGE_RECHECK_INDEPENDENT_REVIEW_2026-10-16.md`
+- Root13/13 saved artifact hash checks and final PNG inspection.: `docs/reviews/probes/r104_root_review/artifact_verification.json`
+- Selected original explicit-packet gate calls/results only; no unrelated session content.: `docs/reviews/probes/r104_supplement_root_review/supplement_gate_source_excerpts.json`
+- Independent historical data-URL provenance acceptance with cleanup/manifest/gate qualifications; no UI dispatch.: `docs/reviews/R104_BRIDGE_SUPPLEMENT_INDEPENDENT_REVIEW_2026-10-16.md`
+- All6 supplemental artifact sizes/hashes verified; original copies checked.: `docs/reviews/probes/r104_bridge_supplement/evidence_manifest.json`
+- Root actual source-object/source-copy comparisons and recording frame inspection.: `docs/reviews/probes/r104_supplement_root_review/verification.json`
+- Worker-reported bridge PASS, product NOT_RUN; raw session export missing.: `docs/reviews/R104_BRIDGE_RECHECK_WORKER_RETURN_2026-10-16.md`
+- Three diagnostic artifacts verified; hashes do not authenticate tool history.: `docs/reviews/probes/r104_bridge_check/evidence_manifest.json`
+- Proposed authority candidate only; no effective seed/tranche/commit.: `docs/reviews/planning/R105_R101_UI_AUTHORITY_CANDIDATE_2026-10-16.json`
+- Sol Medium candidate/repair history and actual offline results; runtime NOT_RUN.: `docs/reviews/probes/r105_root/RUNNER_CANDIDATE_RETURN_2026-10-16.md`
+- Actual Root CUA empty inventory and unavailable iab; no product runtime or UI claim.: `docs/reviews/probes/r105_root/CODEX_BROWSER_CAPABILITY_2026-10-16.json`
+- Sol Medium routing assessment; Root-reported browser results attributed, no runtime, conditional successor only.: `docs/reviews/probes/r105_root/CODEX_WORKER_CAPABILITY_RETURN_2026-10-16.md`
+- Reviewed no-env/API-only Vite config template with owned health nonce; no server launched.: `docs/reviews/probes/r105_root/r105_vite_config.mjs.template`
+- Read-only pinned CLI/local named pipe/empty config compatibility; no fixture lifecycle.: `docs/reviews/probes/r105_dispatch_preparation/docker_readonly_binding_check.json`
+- Three actual safe-field metadata commands and source validator PASS; fixture exited.: `docs/reviews/probes/r105_dispatch_preparation/docker_format_input_verification.json`
+- Sol Medium independent document review; draft accepted only as NOT_DISPATCHABLE, no runtime acceptance.: `docs/reviews/R105_DRAFT_READINESS_PEER_REVIEW_2026-10-16.md`
+- Actual read-only reviewed runner admission PASS for current formal state/seed/base/pins; no runtime launched.: `docs/reviews/probes/r105_dispatch_preparation/effective_admission_validation.json`
+- Exact external Claude operator prompt referencing formal ACTIVE order/immutable seed; no generic authority discovery or bridge replay.: `docs/reviews/planning/R105_CLAUDE_EXECUTION_PROMPT_2026-10-16.md`
+- Root actual12tests/syntax/137frontend/17Git rows/exact binary checks.: `docs/reviews/probes/r105_dispatch_preparation/candidate_final_offline_verification.json`
+- Formal bounded historical UI packet; active dispatch checked, no runtime/product acceptance from status.: `docs/work_orders/CCMAI_RUNTIME_105_R101_UI_EVIDENCE.md`
+- Root immutable bounded historical R101 UI seed; must precede active105 BUILD, finite new campaign only.: `CVF_SESSION/authority/CCMAI-RUNTIME-105.json`
+- Root SOURCE_REVIEW_PASS_RUNTIME_NOT_RUN; active authority/UI still pending.: `docs/reviews/R105_RUNNER_INDEPENDENT_SOURCE_REVIEW_2026-10-16.md`
+- 12 offline software tests, injected commands/processes; no CVF runtime AI governance claim.: `docs/reviews/probes/r105_root/test_r105_ui_runner.py`
+- Read-only binary/source/fixture/protection checks; no runtime started.: `docs/reviews/probes/r105_dispatch_preparation/readiness_inventory.json`
+- Reviewed source candidate only; no effective R105 runtime authority.: `docs/reviews/probes/r105_root/r105_ui_runner.py`
+- 43 captured source-preparation artifacts with byte hashes/newline restoration metadata; no committed-byte/runtime claim.: `docs/reviews/probes/r105_dispatch_preparation/source_preparation_evidence_manifest.json`
+- Root exact source/input hashes; receipt must be committed at future seed base before reliance.: `docs/reviews/probes/r105_root/source_review_receipt.json`
+- Rejected scaffold and repair findings, distinct third-round ownership cause, final source-only acceptance.: `docs/reviews/probes/r105_dispatch_preparation/runner_review_rounds.json`
+- R105 record bound to immutable seed base, exact roles and finite independent-review campaign.: `CVF_SESSION/tranches/CCMAI-RUNTIME-105.json`
+- Corrected historical R101 UI work-order draft; NOT_DISPATCHABLE, no runtime authority.: `docs/reviews/planning/R105_R101_UI_EVIDENCE_WORK_ORDER_DRAFT_2026-10-16.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/blocked_reviewer_corrected.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/captured_worker_evidence.zip`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/command_014.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/R106_R101_UI_WORKER_RETURN_2026-10-16.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/launch_012.result.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/proposed_sequential_imports.patch`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/dispatch_preflight.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r105_root/codex_capability_resume/http_health.py`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/command_006.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/backend.stderr.log.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/seed_profile.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/command_007.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/command_010.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/offline_tests.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/r106_ui_runner.py`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/pre_dispatch.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/blocked_reviewer_corrected.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/gate_units.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/seed_preflight.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/pre_dispatch.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/backend_process.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/offline_tests.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/seed_preflight.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/evidence_sha256_manifest.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r105_root/codex_capability_resume/http_control_ok.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/launch_012.intent.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/command_009.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/work_orders/CCMAI_RUNTIME_106_CODEX_R101_UI_EVIDENCE.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/pre_dispatch_corrected.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/R106_RUNNER_INDEPENDENT_SOURCE_REVIEW_2026-10-16.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/fixture_start.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/blocked_reviewer_fast.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/command_016.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/seed_preflight.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/planning/R107_R101_UI_RETRY_DECISION_PACKET_2026-10-16.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/dispatch_preflight.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/backend.stdout.log`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/vite_process.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/gate_units.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/command_013.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/command_001.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/blocked_reviewer_fast.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/vite_launch.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/pre_dispatch_corrected.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/post_runtime_independent_verification.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/cleanup.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/vite.stdout.log.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/worker_return_gate.exit.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/vite.stderr.log`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/protected_before.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `CVF_SESSION/authority/CCMAI-RUNTIME-106.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/vite_config_receipt.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/blocked_preflight.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/command_015.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/captured_git_byte_contract.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/backend_launch.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/command_003.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r105_root/codex_capability_resume/receipt.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/pre_dispatch_corrected.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/blocked_preflight.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/protected_after.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `CVF_SESSION/tranches/CCMAI-RUNTIME-106.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/R106_RUNTIME_BLOCK_INDEPENDENT_REVIEW_2026-10-16.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/command_008.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/worker_return_gate.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/seed_profile.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/backend.stderr.log`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/dispatch_profile.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r105_root/codex_capability_resume/about_blank.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/test_r106_ui_runner.py`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/dispatch_preflight.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/vite.config.mjs`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/RUNNER_CANDIDATE_RETURN_2026-10-16.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/ready.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/blocked_reviewer_corrected.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/vite.stderr.log.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/blocked_preflight.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/command_005.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/dispatch_profile.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime_export_manifest.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/command_002.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/launch_011.result.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/pre_dispatch.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/offline_tests.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/worker_return_gate.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/gate_units.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/command_004.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/source_review_receipt.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/launch_011.intent.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/dispatch_profile.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/seed_profile.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/vite.stdout.log`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/r106_vite_config.mjs.template`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_root/blocked_reviewer_fast.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/specs/R106_CODEX_R101_UI_SPEC_2026-10-16.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/admission.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/supervisor_start.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r106_cua/runtime/backend.stdout.log.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/command_006.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/diagnosis_reviewer_fast.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/raw_whitespace_check.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/29_b05_after_reload.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/01_b01_owner_login_after.tool.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/09_b02_after_submit.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/r107_vite_config.mjs.template`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/11_b03_action_options.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/r107_ui_runner.py`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/07_b02_correction_fields.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/r107_runtime_sha256_size_manifest.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/28_b05_after_submit.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/02_b01_queue_loaded.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/cua_create_visible_failure.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/20_b04_member_selected.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/02_b01_queue_observed_href.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/backend_launch.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/command_009.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/command_004.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/seed_admission_profile.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/21_b04_filled_before_submit.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/post_runtime_independent_verification.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/08_b02_filled_before_submit.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/final_legacy_preflight.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/36_b06_filled_before_submit.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/24_b05_latest_before_resolve.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/admission_gate_units.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/seed_admission_gate.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/browser_capability_control_ok.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/captured_git_byte_contract.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/seed_admission_gate.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/30_b05_terminal_queue.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/ready.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/launch_011.intent.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/offline_tests.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/04_b01_original_history.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/vite.stderr.log`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/offline_tests_initial.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/final_precommit.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/41_b07_owner_logout.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/validated_vite.config.mjs`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/23_b04_after_reload.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/44_b07_reader_queue.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/29_b05_after_reload.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/14_b03_after_submit.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/vite_process.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/10_b03_tab_b_stale_before.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/36_b06_filled_before_submit.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/diagnosis_reviewer_fast.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/18_b04_assignment_fields.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/04_b01_original_history.tool.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/13_b03_before_submit.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/42_b07_reader_login_before_submit.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/31_b05_queue_filters.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/18_b04_assignment_fields.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/vite.config.mjs`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/17_b04_action_options.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/run_module_validation.py`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/13_b03_before_submit.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/vite.stdout.log`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/seed_admission_profile.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/raw_whitespace_check.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/14_b03_after_submit.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/02_b01_queue_observed_href.tool.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/31_b05_queue_filters.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/active_pre_dispatch.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/authored_whitespace_check.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runner_inspect_tool_call.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/03_b01_fresh_case_before_mutation.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/proposed_binding_fields.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/resume_gate_units.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/command_003.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/work_orders/CCMAI_RUNTIME_107_CODEX_R101_UI_EVIDENCE.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/02_b01_queue.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/R107_REOPEN_DIAGNOSIS_AND_R108_PROPOSAL_2026-10-16.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/preflight_tool_calls.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/vite_launch.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/43_b07_reader_after_login.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/07_b02_correction_fields_full.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/captured_worker_evidence.zip`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/R107_PARTIAL_UI_INDEPENDENT_REVIEW_2026-10-16.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/fixture_start.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/00_product_initial.tool.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/reopen_static_diagnosis.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/diagnosis_preflight.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/running.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/final_precommit.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/38_b06_after_reload.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/02_b01_queue.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/diagnosis_preflight.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/authored_whitespace_check.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/29_b05_after_reload.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/42_b07_reader_login_before_submit.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/24_b05_latest_before_resolve.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/25_b05_action_options.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/08_b02_filled_before_submit.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/final_legacy_preflight.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/diagnosis_reviewer_fast.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/37_b06_after_submit.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/30_b05_terminal_queue.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/backend_process.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/19_b04_assignee_options.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/module_validation.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/validate_config.mjs`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/30_b05_terminal_queue.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/43_b07_reader_after_login.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/02_b01_queue_observed_href.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/37_b06_after_submit.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/command_002.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/37_b06_after_submit.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/08_b02_filled_before_submit.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/launch_012.intent.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/41_b07_owner_logout.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/dispatch_preflight.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/17_b04_action_options.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/16_b04_assign_form.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/command_010.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/09_b02_after_submit.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/launch_012.result.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/21_b04_filled_before_submit.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/dispatch_profile.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/admission_gate_units.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/39_b06_after_reopen_settled.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/05_b02_b03_tab_b_original.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/command_008.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/04_b01_original_history.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/authored_whitespace_check.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/36_b06_filled_before_submit.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/02_b01_queue_postclick.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/02_b01_queue_postclick.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/06_b02_action_options.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/13_b03_before_submit.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/22_b04_after_submit.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/05_b02_b03_tab_b_loaded.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/03_b01_fresh_case_before_mutation.tool.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/02_b01_queue_loaded.tool.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/diagnosis_precommit.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/07_b02_correction_fields_full.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/23_b04_after_reload.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/39_b06_after_reopen_settled.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/r108_connected/root_capability.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/15_b04_latest_before_assign.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/22_b04_after_submit.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/39_b06_after_reopen_settled.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runner_start_tool_call.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/02_b01_queue_loaded.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/14_b03_after_submit.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `CVF_SESSION/authority/CCMAI-RUNTIME-107.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/27_b05_filled_before_submit.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/backend.stderr.log`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/launch_011.result.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/43_b07_reader_after_login.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/42_b07_reader_login_before_submit.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/backend.stdout.log`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/12_b03_selected_stale_action.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/21_b04_filled_before_submit.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/r108_connected/root_http_clicked.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/22_b04_after_submit.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/admission.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/15_b04_latest_before_assign.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/16_b04_assign_form.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/R107_R101_UI_WORKER_RETURN_2026-10-16.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/28_b05_after_submit.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/module_validation.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/offline_tests_initial.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/offline_tests.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/01_b01_owner_login.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/45_b07_reader_detail.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/raw_whitespace_check.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/44_b07_reader_queue.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/dispatch_profile.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/32_b05_resolved_filter.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/33_b06_resolved_detail_before_reopen.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/seed_admission_profile.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/44_b07_reader_queue.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/test_r107_ui_runner.py`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/final_precommit.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/vite_config_receipt.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/25_b05_action_options.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/34_b06_action_options.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/r108_browser_capability_stop.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/38_b06_after_reload.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/05_b02_b03_tab_b_loaded.tool.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/01_b01_owner_login.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/05_b02_b03_tab_b_original.tool.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/02_b01_queue.tool.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/38_b06_after_reload.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/03_b01_fresh_case_before_mutation.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/45_b07_reader_detail.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/dispatch_profile.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/19_b04_assignee_options.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/diagnosis_precommit.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/32_b05_resolved_filter.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/command_001.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/26_b05_outcome_fields.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/active_pre_dispatch.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/26_b05_outcome_fields.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/diagnosis_precommit.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/27_b05_filled_before_submit.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/cua_tab_b_create_failure.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/command_005.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/27_b05_filled_before_submit.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/11_b03_action_options.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/offline_tests.stderr.txt`
+- Sol Medium candidate and actual cachedNode module-load result.: `docs/reviews/probes/r107_root/RUNNER_CANDIDATE_RETURN_2026-10-16.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/05_b02_b03_tab_b_loaded.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/01_b01_owner_login_after.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/offline_tests_initial.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `CVF_SESSION/tranches/CCMAI-RUNTIME-107.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/40_b06_failure_summary.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/protected_before.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/10_b03_tab_b_stale_before.meta.json`
+- Actual current empty inventory and unavailable iab, distinct from historicalR106.: `docs/reviews/probes/r107_root/current_browser_probe.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/final_reviewer_fast.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/28_b05_after_submit.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/r107_cua_worker_return_evidence_manifest.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/00_product_initial.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/dispatch_preflight.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/final_legacy_preflight.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/stop.request`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/active_pre_dispatch.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/dispatch_preflight.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/09_b02_after_submit.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/05_b02_b03_tab_b_original.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/final_reviewer_fast.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/07_b02_correction_fields.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/45_b07_reader_detail.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/00_product_initial.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/15_b04_latest_before_assign.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/35_b06_reopen_fields.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/06_b02_action_options.tool.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/seed_admission_gate.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/resume_gate_units.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/diagnosis_preflight.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/33_b06_resolved_detail_before_reopen.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/23_b04_after_reload.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/runtime/command_007.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/32_b05_resolved_filter.meta.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/10_b03_tab_b_stale_before.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/02_b01_queue_postclick.tool.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/20_b04_member_selected.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/41_b07_owner_logout.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/12_b03_selected_stale_action.ax.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/final_reviewer_fast.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/35_b06_reopen_fields.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/candidate_hashes.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/06_b02_action_options.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/browser_capability_receipt.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/worker_return_gate_tool_call.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/resume_gate_units.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/R107_R108_BROWSER_STOP_HANDOFF_2026-10-16.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/34_b06_action_options.png`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_root/admission_gate_units.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/01_b01_owner_login.tool.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r107_cua/observations/01_b01_owner_login_after.ax.txt`
+- Actual pinnedNode import command, exit0 and byte hashes; no server.: `docs/reviews/probes/r107_root/module_validation.json`
+- Independent Root source receipt; browser unavailable, campaign unconsumed.: `docs/reviews/probes/r107_root/source_review_receipt.json`
+- Exact captured source/module/check evidence before Git normalization.: `docs/reviews/probes/r107_root/captured_candidate_evidence.zip`
+- Root source/module review; actual import PASS, no runtime acceptance.: `docs/reviews/R107_SOURCE_MODULE_INDEPENDENT_REVIEW_2026-10-16.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_003_fixture_volume_users.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/R108_WORKER_ACKNOWLEDGMENT_2026-10-16.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_002_target_network_inspect.stdout.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_005_protected_container_inspect.stdout.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/fixture_start.reservation.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_012_fixture_start.stderr.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/cleanup.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_002_target_network_inspect.stderr.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_root/source_precommit.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_root/final_reviewer_fast.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_015_fixture_volume_users.stderr.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_root/source_precommit.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_015_fixture_volume_users.stdout.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_007_target_inspect.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_018_all_container_ids.stdout.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/R108_DISPATCH_PREPARATION_NOTES_2026-10-16.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/fixture_volume_users_before.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/campaign_disposition.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_017_fixture_stop.stderr.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_012_fixture_start.stdout.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_016_target_inspect.stderr.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_root/post_runtime_independent_verification.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_017_fixture_stop.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/worker_return_gate.transcript.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/compile.reservation.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_root/reviewed_source_pins.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_006_compile.stderr.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_root/source_preflight.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_017_fixture_stop.stdout.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/work_orders/CCMAI_RUNTIME_108_REOPEN_DIAGNOSTIC.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_014_target_network_inspect.stderr.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_root/final_reviewer_fast.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_007_target_inspect.stdout.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_008_target_network_inspect.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_009_fixture_volume_users.stderr.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_root/source_inspection.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_013_target_inspect.stdout.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_007_target_inspect.stderr.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_root/captured_worker_evidence.zip`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_root/source_preflight.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_006_compile.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_009_fixture_volume_users.stdout.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_004_all_container_ids.stdout.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_001_target_inspect.stderr.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_016_target_inspect.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_012_fixture_start.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/fixture_before.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_013_target_inspect.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/network_before.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_006_compile.stdout.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/worker_return_gate_recheck.transcript.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_root/captured_git_byte_contract.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_003_fixture_volume_users.stderr.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/R108_REOPEN_DIAGNOSTIC_WORKER_RETURN_2026-10-16.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_001_target_inspect.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_004_all_container_ids.stderr.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/protected_after.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_011_protected_container_inspect.stdout.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_005_protected_container_inspect.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_011_protected_container_inspect.stderr.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_010_all_container_ids.stdout.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_019_protected_container_inspect.stdout.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_009_fixture_volume_users.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_008_target_network_inspect.stdout.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_005_protected_container_inspect.stderr.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_001_target_inspect.stdout.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/R108_UI_LANGUAGE_SOURCE_AUDIT_2026-10-16.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_root/source_precommit.stderr.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_016_target_inspect.stdout.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/campaign_intent.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/r108_native_runner.py`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_015_fixture_volume_users.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_013_target_inspect.stderr.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/source_admission_after.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `CVF_SESSION/authority/CCMAI-RUNTIME-108.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_root/final_reviewer_fast.stdout.txt`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/binary_manifest.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_014_target_network_inspect.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/R108_INDEPENDENT_RUNTIME_HOLD_REVIEW_2026-10-16.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_011_protected_container_inspect.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_018_all_container_ids.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/protected_before.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_010_all_container_ids.stderr.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_019_protected_container_inspect.stderr.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_root/source_admission.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_018_all_container_ids.stderr.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_root/source_preflight.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_019_protected_container_inspect.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/campaign_result.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/runtime_export_manifest.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/files_manifest.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_014_target_network_inspect.stdout.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_002_target_network_inspect.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_010_all_container_ids.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/source_admission_before.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_004_all_container_ids.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `CVF_SESSION/tranches/CCMAI-RUNTIME-108.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/fixture_start.result.json`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_008_target_network_inspect.stderr.bin`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/R108_INDEPENDENT_SOURCE_ADMISSION_2026-10-16.md`
+- Bounded Codex historical UI successor preparation/evidence; exact artifact facts control, no full product or live governance claim.: `docs/reviews/probes/r108_luna/runtime_export_r108-1792155371-21092/command_003_fixture_volume_users.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_004_all_container_ids.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0093.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_011_target_network_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/15_b10_wait_data_initial.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0057.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_launch_intent.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/fixture_final_state.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/06_b03_before_stale_submit.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/R109_FINAL_GATE_DISPOSITION_2026-10-17.md`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0002.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/00_inherited_session.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/13_b06_reopened_history.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_002_target_network_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/runtime_admission_initial.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_004_all_container_ids.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_012_target_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_014_protected_container_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser_interruption.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_013_all_container_ids.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/12_b06_before_reopen.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/final_precommit.stdout.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/04_b02_before_submit.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0117.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/11_b05_terminal_filter.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0087.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0041.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_015_native_diagnostic.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/17_b10_assigned_reloaded.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/vite_launch_intent.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/01_b01_queue.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/04_b02_before_submit.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0078.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/runtime_admission_precommit.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/r109_workflow_runner.py`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/readiness/mysql_ready.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_001_target_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_010_target_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/11_b05_terminal_filter.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/18_b10_escalated_reloaded.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0056.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0042.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_005_protected_container_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0094.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/00_inherited_session.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0036.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/13_b06_reopened_history.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0108.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/03_b03_stale_version1.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/02_b01_initial_detail.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0035.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_003_fixture_volume_users.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/capability_inventory.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_008_fixture_volume_users.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0073.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0015.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0107.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/11_b05_terminal_filter.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/running.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/harness_validation/regressions.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_014_fixture_volume_users.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_004_all_container_ids.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/05_b02_corrected.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/supervisor_preflight.stderr.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_post_runtime_source_verification.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_011_fixture_start.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_011_fixture_start.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/ui_source_preflight.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/independent_export_verification.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0070.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/native_diagnostic.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_009_all_container_ids.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/12_b06_before_reopen.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/10_b05_resolved_reloaded.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0112.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/04_b02_before_submit.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/final_workspace_doctor_recheck.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/14_b08_narrow_detail_history.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/vite_config_receipt.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/harness_validation/eof_then_ready/readiness/mysql_probe_0002.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_011_target_network_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_007_target_network_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_013_all_container_ids.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/14_b08_narrow_detail_history.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/02_b01_initial_detail.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_008_fixture_volume_users.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/16_b10_completion_guard.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/validation_1/source_pins.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/16_b10_completion_guard.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/final_packet_manifest.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/r109_worker_evidence_manifest.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/focused-test.config.mjs`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_010_target_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0052.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/campaign_intent.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0047.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/worker_return_gate_final/exit.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/final_reviewer_fast.stdout.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/00_inherited_session.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_005_protected_container_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/10_b05_resolved_reloaded.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0116.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/fixture_start.reservation.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0024.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0008.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/harness_validation/offline_pipe.bin.meta.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0004.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/capability_inventory.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_001_target_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/16_b10_completion_guard.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/ui_source_preflight.stdout.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/ready.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_003_fixture_volume_users.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/14_b08_narrow_detail_history.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0061.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/01_b01_queue.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0040.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/ui_source_precommit.stdout.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_003_fixture_volume_users.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/09_b04_reloaded.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/dispatch_precommit_check.stderr.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0019.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_002_target_network_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_010_protected_container_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0046.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_013_target_network_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0077.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/15_b10_wait_data_initial.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/11_b05_terminal_filter.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0018.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_009_fixture_stop.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_001_target_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/15_b10_wait_data_initial.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/readiness/mysql_probe_0003.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_013_all_container_ids.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0106.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_002_target_network_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0085.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/supervisor_preflight.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/13_b06_reopened_history.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0114.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0007.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/protected_after_root_cleanup.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/runtime_admission_precommit.stdout.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0011.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0033.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_007_target_network_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/ui_source_preflight.stderr.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0060.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_004_all_container_ids.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_003_fixture_volume_users.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_001_target_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0009.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/final_preflight_recheck.stdout.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/R109_INDEPENDENT_RUNTIME_ADMISSION_REVIEW_2026-10-16.md`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0039.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/07_b03_conflict.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_014_protected_container_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/08_b04_before_assign.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_002_target_network_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/readiness/mysql_probe_0001.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_005_protected_container_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_012_fixture_volume_users.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0038.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0104.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0066.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/final_workspace_doctor.stderr.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0034.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/06_b03_before_stale_submit.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/08_b04_before_assign.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/18_b10_escalated_reloaded.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/final_gate_receipts.zip`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0022.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/committed_admission_recheck.stderr.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0016.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/16_b10_completion_guard.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/03_b03_stale_version1.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_014_fixture_volume_users.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_002_target_network_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_012_fixture_volume_users.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/final_preflight.stderr.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0031.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/04_b02_before_submit.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_003_fixture_volume_users.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_007_target_network_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0003.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_012_fixture_volume_users.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_014_protected_container_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_012_fixture_volume_users.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_004_all_container_ids.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_011_target_network_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/08_b04_before_assign.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0027.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/01_b01_queue.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/12_b06_before_reopen.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/12_b06_before_reopen.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/02_b01_initial_detail.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/worker_return_gate_recheck/stderr.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/03_b03_stale_version1.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0048.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/harness_validation/eof_then_ready/readiness/mysql_ready.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_014_fixture_volume_users.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/network_before.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/01_b01_queue.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/first_admission_byte_failure.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_010_target_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/final_precommit.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/committed_admission_recheck.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/16_b10_completion_guard.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/08_b04_before_assign.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/17_b10_assigned_reloaded.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/09_b04_reloaded.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_006_target_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/17_b10_assigned_reloaded.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_002_target_network_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/validation_1/forced_typecheck.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/10_b05_resolved_reloaded.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_003_fixture_volume_users.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/protected_before_root_cleanup.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0105.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_005_protected_container_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0088.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_002_target_network_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/07_b03_conflict.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0006.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/final_reviewer_fast_recheck.stdout.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/07_b03_conflict.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_013_target_network_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/validation_1/focused_tests.stderr.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_003_fixture_volume_users.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/native_invocation.reservation.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/worker_return_gate/stderr.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_014_protected_container_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0100.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/17_b10_assigned_reloaded.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0025.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/15_b10_wait_data_initial.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/11_b05_terminal_filter.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_005_protected_container_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0010.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/18_b10_escalated_reloaded.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/14_b08_dimensions.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/fixture_final_state.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_009_fixture_stop.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/01_b01_queue.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/04_b02_before_submit.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_010_target_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/final_reviewer_fast_recheck.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/harness_validation/config_import.stderr.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_ui_observations.md`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/R109_ROOT_UI_OBSERVATIONS_2026-10-17.md`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/dispatch_precommit_check.stdout.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_001_target_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_011_fixture_start.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_007_target_network_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0079.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/stop.request`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/run_focused_validation.py`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/R109_INDEPENDENT_INTERRUPTED_REVIEW_2026-10-17.md`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/vite.config.mjs`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0076.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/14_b08_viewport_outcome.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/worker_return_packet_manifest.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/harness_validation/vite.config.mjs`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_002_target_network_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_005_protected_container_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/validation_1/forced_typecheck.stdout.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_008_fixture_volume_users.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0020.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0101.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_004_all_container_ids.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/r109_vite_config.mjs.template`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/14_b08_dimensions.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/vite_launch.reservation.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0043.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_006_target_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0044.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/validation_1/focused_tests.stdout.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/final_workspace_doctor_recheck.stdout.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/08_b04_before_assign.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/final_reviewer_fast.stderr.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/ui_post_submissions.jsonl`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/bridge_renewed/ready.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_001_target_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/00_inherited_session.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_005_protected_container_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0098.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/12_b06_before_reopen.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/fixture_start_result.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/13_b06_reopened_history.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/final_preflight_recheck.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/readiness/mysql_probe_0002.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/resume_20261017_doctor.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/assert_config.mjs`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/committed_admission_recheck.stdout.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0059.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/bridge_renewed/stop.request`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/protected_after_root_cleanup.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_009_all_container_ids.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/gin_post_observations.jsonl`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0095.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0084.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/final_reviewer_fast.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/13_b06_reopened_history.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_008_fixture_volume_users.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_010_protected_container_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/captured_evidence.zip`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_005_protected_container_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser_interruption.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0110.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_007_target_network_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/07_b03_conflict.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/14_b08_narrow_detail_history.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_004_all_container_ids.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/02_b01_initial_detail.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/final_precommit.stderr.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/00_inherited_session.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/vite.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/15_b10_wait_data_initial.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/final_reviewer_fast_recheck.stderr.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_005_protected_container_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0102.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_010_target_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0103.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_009_fixture_stop.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0083.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/resume_20261017_doctor.stderr.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/ui_source_precommit.stderr.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_011_target_network_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/13_b06_reopened_history.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/08_b04_before_assign.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/10_b05_resolved_reloaded.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/validation_1/forced_typecheck.stderr.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_006_target_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/02_b01_initial_detail.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/harness_validation/eof_then_ready/readiness/mysql_probe_0001.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/05_b02_corrected.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_011_target_network_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0051.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_006_target_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0030.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0067.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_007_target_network_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/14_b08_viewport_outcome.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/fixture_volume_users_before.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/18_b10_escalated_reloaded.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0058.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/work_orders/CCMAI_RUNTIME_109_HUMAN_UI_COMPLETION.md`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/post_runtime_source_verification.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/10_b05_resolved_reloaded.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0017.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_013_target_network_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0069.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_015_native_diagnostic.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_004_all_container_ids.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/fixture_stop_command.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0074.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/supervisor_precommit.stdout.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/captured_git_byte_contract.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_004_all_container_ids.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/harness_validation/config_import.stdout.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0072.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/fixture_ready.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_009_all_container_ids.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/18_b10_escalated_reloaded.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_launch.reservation.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0049.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0082.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_013_all_container_ids.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/final_workspace_doctor_recheck.stderr.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/15_b10_wait_data_initial.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_007_target_network_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/14_b08_narrow_detail_history.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/vite_readiness_0002.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/R109_WORKER_ACKNOWLEDGMENT_2026-10-16.md`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/runtime_admission_precommit.stderr.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0091.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_007_target_network_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/09_b04_reloaded.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_012_fixture_volume_users.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0005.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0092.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_003_fixture_volume_users.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0068.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/runtime_admission_preflight.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_008_fixture_volume_users.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `CVF_SESSION/authority/CCMAI-RUNTIME-109.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0080.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0028.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/supervisor_invocation.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0054.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0099.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/protected_before.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/00_inherited_session.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/06_b03_before_stale_submit.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_002_target_network_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0109.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/root_recovery_receipt.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_011_target_network_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0021.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0081.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/harness_validation/result.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/03_b03_stale_version1.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0111.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_013_all_container_ids.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/worker_return_gate_recheck/stdout.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/protected_before_root_cleanup.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_013_all_container_ids.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/runtime_admission.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_008_fixture_volume_users.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/supervisor_preflight.stdout.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/harness_validation/fatal_server_error/readiness/mysql_probe_0001.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/final_preflight.stdout.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0065.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/05_b02_corrected.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0071.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0064.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0115.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/vite_readiness_0001.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/bridge_renewed/result.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0055.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/final_preflight.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/bridge_renewed/after_click.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_009_fixture_stop.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_014_protected_container_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/R109_NEWLINE_REPRESENTATION_REVIEW_2026-10-17.md`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/04_b02_before_submit.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/runtime_admission_preflight.stdout.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0063.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/03_b03_stale_version1.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/07_b03_conflict.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0086.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/05_b02_corrected.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/dispatch_precommit_check.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/committed_admission_check.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_007_target_network_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_015_native_diagnostic.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/18_b10_escalated_reloaded.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/resume_20261017_doctor.stdout.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/06_b03_before_stale_submit.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0075.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_006_target_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/bridge_health_server.py`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/vite.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/root_submission_reservations.jsonl`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/worker_return_gate/stdout.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_009_fixture_stop.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/17_b10_assigned_reloaded.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/06_b03_before_stale_submit.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_001_target_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/01_b01_queue.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0113.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/newline_validation.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_009_fixture_stop.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0045.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0032.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/validate_supervisor.py`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_launch_result.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0001.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/11_b05_terminal_filter.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0013.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0012.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/10_b05_resolved_reloaded.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/supervisor_precommit.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0014.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/binary_reuse_verification.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0096.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/03_b03_stale_version1.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0050.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/root_submission_reservations.jsonl`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/worker_return_gate_recheck/exit.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/final_workspace_doctor.stdout.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0090.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_008_fixture_volume_users.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_008_fixture_volume_users.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_012_fixture_volume_users.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0037.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0029.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_006_target_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/final_preflight_recheck.stderr.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `CVF_SESSION/tranches/CCMAI-RUNTIME-109.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_001_target_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/final_workspace_doctor.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_010_protected_container_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/07_b03_conflict.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_006_target_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/worker_return_gate/exit.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/fixture_before.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/validation_1/focused_tests.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0089.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/09_b04_reloaded.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/supervisor_precommit.stderr.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/17_b10_assigned_reloaded.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_008_fixture_volume_users.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/05_b02_corrected.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/05_b02_corrected.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0062.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/06_b03_before_stale_submit.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/14_b08_narrow_detail_history.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0023.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_006_target_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/vite_launch_result.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/02_b01_initial_detail.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/09_b04_reloaded.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/harness_validation/offline_pipe.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/command_014_protected_container_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_browser/09_b04_reloaded.png`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_001_target_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/ui_source_precommit.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_010_target_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_003_fixture_volume_users.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/16_b10_completion_guard.dom.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/command_006_target_inspect.stderr.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/root_interrupted_cleanup/root_recovery_receipt.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/worker_return_gate_final/stdout.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/R109_HUMAN_UI_WORKER_RETURN_2026-10-16.md`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/R109_ROOT_UI_VERIFICATION_PLAN_2026-10-16.md`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/worker_return_gate_final/stderr.txt`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0053.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/browser/12_b06_before_reopen.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/R109_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-16.md`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0026.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_012_target_inspect.stdout.bin`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/interrupted_cleanup/fixture_stop_command.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/backend_readiness_0097.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_luna/runtime_export_r109-interrupted-20261017/runtime/campaign/command_012_target_inspect.json`
+- Bounded human UI language and synthetic native/browser evidence; exact artifact disposition controls, no full product or AI governance claim.: `docs/reviews/probes/r109_root/runtime_admission_preflight.stderr.txt`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/R110_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-17.md`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_003_fixture_volume_users.stdout.bin`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/viewport_capability_probe.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/validation_1/focused_tests.stderr.txt`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/validation_1/forced_typecheck.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/root_luna_reconnect_20261017/result.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_005_protected_container_inspect.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_luna/r110_workflow_runner.py`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/bridge_resume_20261017/after_click.png`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/validation_1/forced_typecheck.stdout.txt`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/LUNA_RECONNECT_CAPABILITY_2026-10-17.md`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_003_fixture_volume_users.stderr.bin`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_005_protected_container_inspect.stdout.bin`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/validation_1/baseline_qualification.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/dispatch_checks/preflight_dispatch.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_004_all_container_ids.stderr.bin`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/root_luna_reconnect_20261017/after_click.png`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `CVF_SESSION/tranches/CCMAI-RUNTIME-110.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/tooling_check/import_check.mjs`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/tooling_check/tooling_receipt.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/validation_1/focused_tests.stdout.txt`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/dispatch_checks/preflight_dispatch.stdout.txt`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/root_luna_reconnect_20261017/stop.request`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/work_orders/CCMAI_RUNTIME_110_REMAINING_UI.md`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/tooling_check/config_import.stdout.txt`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/focused-test.config.mjs`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/dispatch_checks/predispatch_1.stdout.txt`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/validation_1/forced_typecheck.stderr.txt`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/dispatch_checks/unit_dispatch.stderr.txt`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/protected_current.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/dispatch_checks/unit_dispatch.stdout.txt`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/tooling_check/rendered.config.mjs`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/tooling_check/config_import.stderr.txt`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/validation_1/focused_tests.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/R110_INDEPENDENT_RUNTIME_ADMISSION_REVIEW_2026-10-17.md`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/readiness_receipt.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_luna/r110_vite_config.mjs.template`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/luna_reconnect_20261017/capability_inventory.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/dispatch_checks/predispatch_1.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/viewport_capability_probe.png`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/dispatch_checks/predispatch_1.stderr.txt`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/runtime_admission.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/R110_INDEPENDENT_TOOLING_REVIEW_2026-10-17.md`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_005_protected_container_inspect.stderr.bin`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/R110_DISPATCH_REVIEW_2026-10-17.md`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/dispatch_checks/unit_dispatch.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_001_target_inspect.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_001_target_inspect.stdout.bin`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `CVF_SESSION/authority/CCMAI-RUNTIME-110.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/bridge_resume_20261017/stop.request`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_002_target_network_inspect.stderr.bin`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/validation_1/source_pins.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_004_all_container_ids.stdout.bin`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/dispatch_checks/preflight_dispatch.stderr.txt`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/bridge_resume_20261017/ready.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/binary_reuse_verification.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_002_target_network_inspect.stdout.bin`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_001_target_inspect.stderr.bin`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_002_target_network_inspect.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/root_luna_reconnect_20261017/ready.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_003_fixture_volume_users.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/readiness_inventory/command_004_all_container_ids.json`
+- Renewed remaining UI scope; exact artifact disposition and runtime admission control acceptance.: `docs/reviews/probes/r110_root/bridge_resume_20261017/result.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/runtime_export_20261017/campaign/source_admission_after.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/runtime_export_20261017/campaign/files_manifest.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `CVF_SESSION/authority/CCMAI-RUNTIME-112.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/binding_review_receipt.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/final_packet_manifest.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/independent_export_verification.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/source_review.stderr.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/final_checks/reviewer_fast.stderr.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/source_preflight.stdout.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r111_checks/predispatch.stdout.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/runtime_export_20261017/start_invocation.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r112_checks/preflight_dispatch_recheck.stdout.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/runtime_admission.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/final_checks/workspace_doctor.stderr.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/runtime_export_20261017/predecessor_evidence_references.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/admission_precommit.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/runtime_export_20261017/campaign/command_002_all_container_ids.stdout.bin`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/runtime_export_20261017/campaign/command_001_target_inspect.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/admission_preflight.stderr.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/worker_return_gate_recheck.stdout.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/runtime_export_20261017/binary_exclusion.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r110_root/prestart_admission_check.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/R112_INDEPENDENT_BINDING_REVIEW_2026-10-17.md`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r112_checks/preflight_dispatch_recheck.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r110_luna/prelaunch_hold/source_identity.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/preflight_dispatch.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/R110_PRELAUNCH_HOLD_INDEPENDENT_REVIEW_2026-10-17.md`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/unit_dispatch.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/R112_INDEPENDENT_RUNTIME_ADMISSION_REVIEW_2026-10-17.md`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r111_checks/preflight_dispatch.stderr.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r110_luna/prelaunch_hold/evidence_manifest.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/runtime_export_20261017/campaign/command_001_target_inspect.stdout.bin`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/worker_return_gate_20261017.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/runtime_export_20261017/campaign/campaign_intent.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/admission_preflight.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `CVF_SESSION/tranches/CCMAI-RUNTIME-112.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/prestart_admission_check.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/worker_return_gate_recheck.stderr.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/runtime_export_20261017/campaign/command_001_target_inspect.stderr.bin`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r110_luna/prelaunch_hold/worker_return_gate_transcript.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r112_checks/predispatch.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/admission_preflight.stdout.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/work_orders/CCMAI_RUNTIME_112_REMAINING_UI.md`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/admission_precommit.stderr.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/r112_workflow_runner.py`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r112_checks/preflight_dispatch.stdout.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/source_review.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r112_checks/predispatch.stdout.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/final_checks/workspace_doctor.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r112_checks/predispatch.stderr.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/source_preflight.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/predispatch_1.stdout.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R111_REMAINING_UI_2026-10-17.md`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/preflight_dispatch.stdout.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/preflight_dispatch.stderr.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/staged_byte_contract.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/final_checks/precommit.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/R110_REMAINING_UI_WORKER_RETURN_2026-10-17.md`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/predispatch_1.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r111_checks/predispatch.stderr.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r110_luna/prelaunch_hold/knowledge_index_luna.preexisting.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/runtime_export_20261017/export_manifest.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/final_checks/preflight.stderr.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r110_luna/prelaunch_hold/runtime_root_inventory.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/R112_DISPATCH_REVIEW_2026-10-17.md`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/final_checks/reviewer_fast.stdout.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/runtime_export_20261017/campaign/command_002_all_container_ids.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r111_checks/preflight_dispatch.stdout.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r112_checks/preflight_dispatch_recheck.stderr.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/final_checks/reviewer_fast.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/unit_dispatch.stdout.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/runtime_export_20261017/campaign/cleanup.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/R112_REMAINING_UI_WORKER_RETURN_2026-10-17.md`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r111_checks/preflight_dispatch.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/predispatch_1.stderr.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/final_checks/preflight.stdout.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/r112_vite_config.mjs.template`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/R111_DISPATCH_SCOPE_HOLD_2026-10-17.md`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/raw_capture.zip`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/R112_FINAL_GATE_DISPOSITION_2026-10-17.md`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/runtime_export_20261017/root_browser_inventory.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/capture_failure.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/final_checks/precommit.stdout.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/unit_dispatch.stderr.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/source_preflight.stderr.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/final_checks/preflight.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/source_review.stdout.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r110_checks/admission_precommit.stdout.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `CVF_SESSION/tranches/CCMAI-RUNTIME-111.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/runtime_export_20261017/campaign/campaign_disposition.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/runtime_export_20261017/campaign/campaign_result.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/worker_return_gate_recheck.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r110_luna/prelaunch_hold/start_invocation_transcript.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `CVF_SESSION/authority/CCMAI-RUNTIME-111.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/final_checks/precommit.stderr.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r112_checks/preflight_dispatch.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r111_checks/predispatch.json`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_luna/runtime_export_20261017/campaign/command_002_all_container_ids.stderr.bin`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/predecessor_checks/r112_checks/preflight_dispatch.stderr.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/probes/r112_root/final_checks/workspace_doctor.stdout.txt`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/work_orders/CCMAI_RUNTIME_111_REMAINING_UI.md`
+- R110 preserved hold or new R111 remaining UI evidence; artifact disposition limits claims.: `docs/reviews/R112_INDEPENDENT_RUNTIME_HOLD_REVIEW_2026-10-17.md`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_009_all_container_ids.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_004_all_container_ids.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_cleanup/command_005_protected_container_inspect.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0088.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_cleanup/command_005_protected_container_inspect.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_poststop/command_005_protected_container_inspect.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0074.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0026.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_export_review.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite_launch.reservation.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/final_checks/gate_unit.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_cleanup/docker-cli-config/config.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/R113_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0113.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0118.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0066.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0039.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0107.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0030.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/owner_initial.png`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_cleanup/command_004_all_container_ids.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/final_checks/precommit.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/owner_initial.raw.jpg`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_010_protected_container_inspect.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0054.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0098.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_poststop/command_002_target_network_inspect.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0101.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0040.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0075.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0071.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0090.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite_launch_result.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0052.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0049.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0041.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0045.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0037.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_006_target_inspect.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/ui_post_submissions.jsonl`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/binding_review_receipt.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/readiness/mysql_probe_0003.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/owner_detail_mobile390x844.dom.txt`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/ready.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0028.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0083.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/owner_assignment_form_mobile390x844.dom.txt`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/runtime_admission.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_003_fixture_volume_users.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0007.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/work_orders/CCMAI_RUNTIME_113_REMAINING_UI.md`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0016.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_002_target_network_inspect.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0085.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_cleanup/command_006_root_owned_fixture_stop.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_poststop/command_003_fixture_volume_users.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0032.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0077.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/reader_queue.dom.txt`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_005_protected_container_inspect.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_006_target_inspect.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/owner_queue_desktop.raw.jpg`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/final_checks/preflight.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_cleanup/command_002_target_network_inspect.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0087.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/operator_transcription.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/history_correction_expanded_mobile390x844.png`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/fixture_before.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite_readiness_0001.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_008_fixture_volume_users.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0047.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0056.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite_config_receipt.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_010_protected_container_inspect.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/reader_queue.png`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/protected_before.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/R113_INDEPENDENT_RUNTIME_ADMISSION_REVIEW_2026-10-17.md`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite_readiness_0005.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0060.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/reader_detail_no_write_controls.png`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0112.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/final_checks/reviewer_fast.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0053.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0115.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_014_fixture_volume_users.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0080.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0014.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/ui_review_results.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_cleanup/command_005_protected_container_inspect.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0043.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0003.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0006.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0004.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0005.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0015.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0013.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0117.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0036.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_poststop/command_002_target_network_inspect.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_cleanup/command_003_fixture_volume_users.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0025.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0065.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0064.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0082.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0105.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0001.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/reader_queue.raw.jpg`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/R113_BINDING_WORKER_RETURN_2026-10-17.md`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_007_target_network_inspect.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0044.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/owner_form_history_mobile390x844.png`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0008.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0048.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_cleanup/command_002_target_network_inspect.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/readiness_pins.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/manifest.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0099.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/prestart_admission_check.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_poststop/command_001_target_inspect.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/observed_owner_queue_mobile390x844.png`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0094.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0027.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0055.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0069.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_poststop/command_002_target_network_inspect.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign_raw.zip`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_011_fixture_start.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_012_target_inspect.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0011.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/fixture_ready.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0095.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0061.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0089.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0062.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/owner_queue_mobile390x844.raw.jpg`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0046.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite_readiness_0003.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_003_fixture_volume_users.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0081.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/final_logged_out.dom.txt`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0020.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0031.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_poststop/command_003_fixture_volume_users.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0023.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0029.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/owner_queue_mobile390x844.dom.txt`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0110.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0086.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_002_target_network_inspect.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/final_logged_out.raw.jpg`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_cleanup/command_001_target_inspect.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_004_all_container_ids.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite_readiness_0004.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_poststop/command_001_target_inspect.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/root_archive_manifest.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/final_checks/preflight.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/owner_detail_mobile390x844.png`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/final_checks/gate_unit.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0079.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_009_all_container_ids.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/final_checks/precommit.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0010.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0018.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/network_before.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/reader_detail_no_write_controls.raw.jpg`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_poststop/command_005_protected_container_inspect.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0108.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_001_target_inspect.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_poststop/command_004_all_container_ids.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_005_protected_container_inspect.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/owner_assignment_form_mobile390x844.png`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/R113_RUNTIME_WORKER_RETURN_2026-10-17.md`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0024.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0017.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0078.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0034.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_011_fixture_start.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_013_target_network_inspect.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/owner_form_history_mobile390x844.dom.txt`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/owner_initial.dom.txt`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0038.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite.config.mjs`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_cleanup/command_002_target_network_inspect.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0035.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/fixture_volume_users_before.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_001_target_inspect.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/process_listener_final.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/owner_form_history_mobile390x844.raw.jpg`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0072.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0109.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_005_protected_container_inspect.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_007_target_network_inspect.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/readiness/mysql_probe_0002.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/owner_queue_mobile390x844.png`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_launch_result.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_poststop/command_001_target_inspect.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_cleanup/command_001_target_inspect.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite_launch_intent.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0019.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/owner_assignment_form_mobile390x844.raw.jpg`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0106.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0050.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0068.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/reader_detail_no_write_controls.dom.txt`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_012_target_inspect.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0012.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_001_target_inspect.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/history_expanded_mobile390x844.dom.txt`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/history_expanded_mobile390x844.raw.jpg`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/owner_queue_desktop.dom.txt`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0051.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_cleanup/root_cleanup_receipt.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/history_expanded_mobile390x844.png`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/final_checks/precommit.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0093.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_cleanup/command_003_fixture_volume_users.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_cleanup/command_001_target_inspect.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_013_target_network_inspect.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0084.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_013_target_network_inspect.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0058.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0021.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/history_correction_expanded_mobile390x844.dom.txt`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_poststop/final_state_receipt.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/final_logged_out.png`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0076.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0111.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0096.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_cleanup/command_006_root_owned_fixture_stop.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0067.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0097.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/backend_post_route_audit.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_002_target_network_inspect.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0059.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_004_all_container_ids.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/final_checks/preflight.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `CVF_SESSION/tranches/CCMAI-RUNTIME-113.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_012_target_inspect.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/owner_detail_mobile390x844.raw.jpg`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0114.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0092.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0073.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/inherited_native_status.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/fixture_start_result.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/readiness/mysql_probe_0001.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/owner_queue_desktop.png`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/final_checks/reviewer_fast.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_poststop/docker-cli-config/config.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/final_checks/gate_unit.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/observed_owner_queue_mobile390x844.dom.txt`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_007_target_network_inspect.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/capture_byte_review.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0091.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_cleanup/command_004_all_container_ids.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_014_fixture_volume_users.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_011_fixture_start.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0116.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_poststop/command_004_all_container_ids.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_poststop/command_005_protected_container_inspect.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/gin_post_observations.jsonl`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_cleanup/command_004_all_container_ids.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_003_fixture_volume_users.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/r113_vite_config.mjs.template`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_poststop/command_004_all_container_ids.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/final_source_effect_review.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/running.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/readiness/mysql_ready.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0033.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_launch_intent.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0057.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/campaign_intent.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_launch.reservation.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0063.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite_readiness_0002.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_cleanup/command_003_fixture_volume_users.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0104.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_010_protected_container_inspect.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/fixture_start.reservation.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0103.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0002.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0042.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_008_fixture_volume_users.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_008_fixture_volume_users.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_cleanup/command_006_root_owned_fixture_stop.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/r113_workflow_runner.py`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0100.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_014_fixture_volume_users.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_009_all_container_ids.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0070.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/observed_owner_queue_mobile390x844.raw.jpg`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0009.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/R113_INDEPENDENT_BINDING_REVIEW_2026-10-17.md`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/stop.request`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0102.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/vite_readiness_0006.json`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/root_runtime_archive.zip`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/command_006_target_inspect.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/browser/history_correction_expanded_mobile390x844.raw.jpg`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/final_checks/reviewer_fast.stderr.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_root/independent_poststop/command_003_fixture_volume_users.stdout.bin`
+- R113 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r113_luna/runtime_export_2026-10-17/campaign/backend_readiness_0022.json`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/fixture_readiness.json`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_001_target_inspect.stderr.bin`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_005_protected_container_inspect.json`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_004_all_container_ids.stderr.bin`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_005_protected_container_inspect.stderr.bin`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_002_target_network_inspect.json`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_001_target_inspect.stdout.bin`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_004_all_container_ids.stdout.bin`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_004_all_container_ids.json`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/docker_command.json`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_001_target_inspect.json`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_003_fixture_volume_users.stderr.bin`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `CVF_SESSION/authority/CCMAI-RUNTIME-113.json`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_003_fixture_volume_users.stdout.bin`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/stdout.bin`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_002_target_network_inspect.stdout.bin`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_002_target_network_inspect.stderr.bin`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_003_fixture_volume_users.json`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/R113_CAPABILITY_AND_DISPATCH_PREPARATION_2026-10-17.md`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/stderr.bin`
+- Fresh R113 read-only capability/seed preparation; no product start or old-budget reuse.: `docs/reviews/probes/resume_bddda27f_20261017T023257Z/command_005_protected_container_inspect.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot_manifest.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/desktop_queue_loaded.derived.png`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/stop.request`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0068.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0063.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0003.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_011_fixture_start.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/readiness/mysql_probe_0002.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0086.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_001_target_inspect.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/running.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/work_orders/CCMAI_RUNTIME_114_ONBOARDING_UI.md`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0067.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `CVF_SESSION/tranches/CCMAI-RUNTIME-114.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0046.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/vite_launch_intent.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0035.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/R114_SOURCE_WORKER_RETURN_2026-10-17.md`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_005_protected_container_inspect.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0076.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0039.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0033.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0011.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/ready.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0072.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/readiness_receipt.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/final_inspect/command_001_target_inspect.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_012_target_inspect.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0040.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/R114_RUNTIME_WORKER_RETURN_2026-10-17.md`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0050.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0019.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0031.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/desktop_queue.metrics.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0106.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/desktop_queue_loaded.raw.jpg`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/mobile_detail.derived.png`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/fixture_volume_users_before.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/mobile_queue.derived.png`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0036.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0013.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/runtime_admission.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/desktop_queue_loaded.metrics.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_006_target_inspect.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_010_protected_container_inspect.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0096.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/final_inspect/command_004_all_container_ids.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_006_protected_container_inspect.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0027.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0009.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/mobile_queue.dom.txt`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_005_protected_container_inspect.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/root_original_bytes.zip`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0061.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/R114_INDEPENDENT_SOURCE_REVIEW_2026-10-17.md`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/vite.config.mjs`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0080.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/mobile_detail.dom.txt`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0054.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_luna/r114_binding_parity.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/source_raw_receipts.zip`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_009_all_container_ids.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0100.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/desktop_queue.raw.jpg`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/vite.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0001.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/independent_source_after.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/final_inspect/command_003_fixture_volume_users.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0066.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0014.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0028.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_014_fixture_volume_users.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/final_inspect/command_005_protected_container_inspect.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/final_inspect/command_001_target_inspect.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0104.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0107.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/mobile_home.derived.png`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0007.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_003_fixture_volume_users.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_013_target_network_inspect.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0056.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/vite.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0090.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_007_target_network_inspect.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0099.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_012_target_inspect.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0025.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_003_fixture_volume_users.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_012_target_inspect.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0023.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0111.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_001_server_version.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0075.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0026.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0041.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_007_target_network_inspect.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0071.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_003_target_network_inspect.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0103.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_006_target_inspect.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0069.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_013_target_network_inspect.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/desktop_queue_loaded.dom.txt`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0053.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/logout.dom.txt`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_004_fixture_volume_users.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/capture_codec_and_dimensions.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0064.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_006_protected_container_inspect.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_006_protected_container_inspect.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0055.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/mobile_home.raw.jpg`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_010_protected_container_inspect.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/validation_1/focused.reservation.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_006_target_inspect.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_launch_result.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_004_all_container_ids.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/final_inspect/command_004_all_container_ids.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/independent_outcome.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0087.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_luna/r114_vite_config.mjs.template`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/vite_config_receipt.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_003_target_network_inspect.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0113.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_008_fixture_volume_users.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0016.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/browser_warnings.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0092.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_003_fixture_volume_users.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_005_all_container_ids.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/validation_1/typecheck.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_002_target_network_inspect.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_002_target_inspect.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_011_fixture_start.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/desktop_queue.derived.png`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0045.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/final_inspect/process_and_terminal_observation.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0070.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_001_server_version.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0084.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_008_fixture_volume_users.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0088.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_002_target_inspect.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_005_protected_container_inspect.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_007_target_network_inspect.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/mobile_home.dom.txt`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_original_bytes.zip`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/network_before.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0021.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0051.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0085.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/vite_launch_result.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0108.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/readiness/mysql_ready.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0059.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_004_all_container_ids.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0043.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0008.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/R114_INDEPENDENT_RUNTIME_ADMISSION_REVIEW_2026-10-17.md`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0101.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0032.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0030.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/fixture_before.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/final_inspect/command_005_protected_container_inspect.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/fixture_start.reservation.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/gin_post_observations.jsonl`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0095.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0094.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0029.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0112.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_launch_intent.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0049.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0062.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/operator_transcription.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/protected_before.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_005_all_container_ids.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0074.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/validation_1/typecheck.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_011_fixture_start.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/final_inspect/command_002_target_network_inspect.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0020.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/final_inspect/owned_process_listener.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_luna/worker_vitest_01.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_luna/focused-test.config.mjs`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0004.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_001_target_inspect.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0018.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_004_fixture_volume_users.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/final_inspect/command_005_protected_container_inspect.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_004_all_container_ids.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0078.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_luna/worker_vitest_01.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/campaign_intent.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/independent_source_verification.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0044.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/admission_readiness_pins.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0091.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0038.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0047.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/mobile_home.metrics.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/ui_post_submissions.jsonl`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0098.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/final_inspect/inventory.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0005.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/docker-cli-config/config.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0065.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/final_inspect/command_003_fixture_volume_users.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/fixture_start_result.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0057.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0048.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/inherited_native_status.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_009_all_container_ids.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/validation_1/focused.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0081.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0010.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0058.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/desktop_queue.dom.txt`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/final_inspect/owned_process_listener.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0097.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_002_target_network_inspect.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_014_fixture_volume_users.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/final_inspect/command_002_target_network_inspect.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/fixture_ready.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/readiness/mysql_probe_0001.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_003_target_network_inspect.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/validation_1/focused.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_009_all_container_ids.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0012.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_004_fixture_volume_users.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0083.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/final_inspect/docker-cli-config/config.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/vite_readiness_0001.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_luna/worker_vitest_01.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/final_inspect/command_004_all_container_ids.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0042.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0052.json`
+- R114 finite onboarding wording/mobile source repair; runtime not admitted, historical qualified evidence preserved.: `docs/reviews/R114_INTAKE_AND_FINITE_ROUTE_2026-10-17.md`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0015.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/final_inspect/command_001_target_inspect.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/vite_launch.reservation.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_001_server_version.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_005_all_container_ids.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/final_checks/checks.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0109.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0073.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/readiness/command_002_target_inspect.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_014_fixture_volume_users.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0102.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0024.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0089.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0105.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/validation_1/focused.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/validation_1/typecheck.reservation.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0017.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0002.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_002_target_network_inspect.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/final_inspect/command_003_fixture_volume_users.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/mobile_queue.metrics.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0093.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0082.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0077.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_001_target_inspect.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0060.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_008_fixture_volume_users.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0022.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/validation_1/typecheck.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/final_inspect/command_002_target_network_inspect.stdout.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/mobile_detail.metrics.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0037.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/R114_INDEPENDENT_UI_EVIDENCE_REVIEW_2026-10-17.md`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/mobile_detail.raw.jpg`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_013_target_network_inspect.stderr.bin`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_launch.reservation.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0110.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_luna/r114_workflow_runner.py`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0034.json`
+- R114 finite onboarding wording/mobile source repair; runtime not admitted, historical qualified evidence preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-114.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0006.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/backend_readiness_0079.json`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/browser/mobile_queue.raw.jpg`
+- R114 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/reviews/probes/r114_root/campaign_snapshot/command_010_protected_container_inspect.stdout.bin`
+- Historical R114 CHANGES_REQUIRED; source/UI accepted bounded, original terminal gap retained; noFREEZE.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/reviews/planning/R115_EXECUTOR_IMPLEMENTATION_WORK_ORDER_DRAFT_2026-10-17.md`
+- R115 documentary M3-05 executor intended contract; no product implementation/runtime authority.: `docs/reviews/R115_INTAKE_AND_FINITE_ROUTE_2026-10-17.md`
+- R115 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `docs/work_orders/CCMAI_RUNTIME_115_EXECUTOR_DESIGN.md`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/reviews/probes/r115_root/final_independent_verification.json`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/reviews/probes/r115_worker/source_identity.json`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/reviews/probes/r115_root/repair1_original.zip`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/reviews/R115_DESIGN_WORKER_RETURN_2026-10-17.md`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/reviews/probes/r115_root/accepted_design_original.zip`
+- R115 bounded remaining UI authority/evidence; exact artifact limits control, no whole product acceptance.: `CVF_SESSION/tranches/CCMAI-RUNTIME-115.json`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/reviews/probes/r115_root/first_pass_identity_review.json`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/reviews/R115_CONSOLIDATED_DESIGN_REVIEW_ROUND1_2026-10-17.md`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/reviews/probes/r115_root/first_pass_original.zip`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/reviews/R115_INDEPENDENT_DESIGN_REVIEW_2026-10-17.md`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/reviews/R115_CONSOLIDATED_DESIGN_REVIEW_ROUND0_2026-10-17.md`
+- Exact final documentary packet bytes after Root metadata normalization; no runtime proof.: `docs/reviews/probes/r115_root/committed_packet_original.zip`
+- R115 documentary M3-05 executor intended contract; no product implementation/runtime authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-115.json`
+- R115 source-backed intended executor design/evidence; implementation/runtime not dispatched.: `docs/specs/M3_WAITDATA_EXECUTOR_R115_SPEC_2026-10-17.md`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0027/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0032/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0022/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0007/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0015/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0015/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_1/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/gate_unit/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0016/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/source_binary_admission.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0032/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0031/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0022/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0025/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0019/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0028/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0023/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0003/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0006/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0010/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0007/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0013/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/worker_return0.zip`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0008/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0008/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0012/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0010/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go_invocations.md`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0003/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0001/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0012/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0021/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_tool_readiness.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0007/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0012/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0014/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0011/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0025/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0020/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0028/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0025/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0020/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/final_gate_unit/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0025/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0011/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0006/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0031/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/repair1_independent_identity.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0032/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0007/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0012/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0003/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0024/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/R116_IMPLEMENTATION_WORKER_RETURN_2026-10-17.md`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go5_exit.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0013/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0023/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go5_pre_hashes.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0004/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/R116_RUNTIME_ADMISSION_BLOCKER_2026-10-17.md`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_1/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/gate_unit/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/worker_repair2.zip`
+- R116 bounded executor authority/readiness; exact evidence limits apply.: `docs/reviews/R116_INTAKE_AND_FINITE_ROUTE_2026-10-17.md`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0010/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_2/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0013/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go6_stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0026/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0027/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0004/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0020/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/gate_unit/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0009/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0016/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0029/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/setup_failure/fixture-start.effect`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/cleanup_receipt.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go6_stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0013/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0011/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go5_stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0005/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0018/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0017/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0006/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0014/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0001/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0005/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0030/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0019/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0002/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0004/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/repair2_independent_identity.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0026/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/final_gate_unit/stdout.txt`
+- R116 bounded executor authority/readiness; exact evidence limits apply.: `docs/reviews/probes/r116_root/readiness_inventory.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0005/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/R116_INDEPENDENT_SOURCE_REVIEW_2026-10-17.md`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/repair2_delta_paths.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0002/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/setup_failure/container-create.effect`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go6_postcompile_deltas.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0027/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0019/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/repair1_final_hashes.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0024/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/worker_repair1.zip`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0024/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0024/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0009/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/failed_setup_observation.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0005/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0002/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0006/stdout.txt`
+- R116 bounded executor source/evidence control; exact claim scope applies.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R115_EXECUTOR_DESIGN_2026-10-17.md`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_2/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0001/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0028/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0014/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0015/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/setup_failure/network-created.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0020/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0030/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/repair1_source_delta.diff`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_2/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0030/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0021/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0008/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/setup_failure/outcome.json`
+- R116 bounded executor source/evidence control; exact claim scope applies.: `CVF_SESSION/tranches/CCMAI-RUNTIME-116.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0019/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0023/command.json`
+- R116 bounded executor authority/readiness; exact evidence limits apply.: `docs/reviews/probes/r116_root/readiness_docker_version.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0014/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0027/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0029/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0003/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/final_gate_unit/exit.json`
+- R116 bounded executor authority/readiness; exact evidence limits apply.: `CVF_SESSION/authority/CCMAI-RUNTIME-116.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0018/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/supervisor_source_review.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0021/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0017/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/return0_independent_identity.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0016/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/final_gate_unit/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/preparation_observations.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0017/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0009/stdout.txt`
+- R116 bounded executor authority/readiness; exact evidence limits apply.: `docs/reviews/probes/r116_root/readiness_secret_readiness.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0022/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/run_go5.ps1`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0010/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0004/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/gate_unit/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_2/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0029/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0001/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0028/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go6_pre_hashes.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0030/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/run_go6.ps1`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go6_exit.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/independent_db_readback.py`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0022/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0021/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0002/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0018/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0026/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/setup_failure/hold-1792243544323160400.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0016/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0018/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/repair2_final_hashes.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/setup_failure/container-created.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_1/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0008/stderr.txt`
+- R116 bounded executor source/evidence control; exact claim scope applies.: `docs/work_orders/CCMAI_RUNTIME_116_WAITDATA_EXECUTOR.md`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0009/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0015/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go5_stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0029/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0026/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/go_root_1/stdout.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0032/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0017/command.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/setup_failure/volume-created.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0011/stderr.txt`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0031/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0023/exit.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_worker/go4_pre_hashes.json`
+- R116 source/admission/evidence record; raw failure and exact claim boundaries preserved, no full milestone claim.: `docs/reviews/probes/r116_root/docker_commands/0031/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0169/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0168/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0047/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0014/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/final_gate_unit_18/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0179/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0063/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/owner_restart_authority_18.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0041/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0059/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/supervisor_review_delta.diff`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0141/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0149/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0056/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0175/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/readback_terminal/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0169/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/owner_actions_18/cleanup/pid.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0084/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0122/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0055/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0181/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0107/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0152/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0051/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0132/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/fixture_local_before_owner_restart_18.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0003/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0096/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0145/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0105/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0140/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0018/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0163/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0060/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0126/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0153/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0079/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0085/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0066/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0022/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0017/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0086/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0055/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0177/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0060/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0141/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0068/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0065/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0096/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0124/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0158/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0011/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0172/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0085/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0035/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0102/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0133/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0161/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0167/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0178/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/go_root_1/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0108/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/lifecycle/cleanup/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0030/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0034/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0080/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0117/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0110/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0024/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0019/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0065/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0072/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0053/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0058/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0174/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0102/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0057/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0026/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0176/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/root_check_3/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `CVF_SESSION/tranches/CCMAI-RUNTIME-117.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0084/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0072/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0167/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0148/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0029/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0159/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0149/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/root_check_4/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0051/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0043/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0079/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0095/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0052/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/live_admission_unissued_snapshot_18.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0070/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0088/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0134/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0176/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0102/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0008/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0147/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/R117_FINAL_INDEPENDENT_REVIEW_2026-10-18.md`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0097/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0165/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0147/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0023/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0127/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0116/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0140/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0183/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0123/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0076/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0019/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0062/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0007/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0167/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0109/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0032/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0125/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0083/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0103/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0172/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0025/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0133/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/owner_restart_port_observation_18.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0183/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0027/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0091/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0028/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0140/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0111/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0082/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0123/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0156/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0024/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0129/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0070/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/owner_ops_source_review_18.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0170/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0078/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0081/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0097/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0050/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0100/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0100/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0017/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0180/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0007/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_worker/python_check_2_command.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0085/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0040/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0136/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0157/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0138/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_worker/python_check_1_command.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0159/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0034/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0111/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_worker/python_check_1_source_sha256.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0115/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0104/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0143/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0042/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0074/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0103/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0053/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/fixture_ready.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0054/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0024/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0157/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0075/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0108/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0098/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0050/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/root_check_2/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_worker/python_check_2_stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0116/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/final_gate_unit_18/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0181/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0138/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0115/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0112/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0162/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0056/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0077/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0064/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0038/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0044/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0047/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0125/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0119/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/runtime_admission.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0144/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0137/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0112/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0014/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0018/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0152/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0125/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0063/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0071/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0158/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0138/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0023/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0001/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0130/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0135/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_worker/python_check_3_test_sha256.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0039/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0099/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0134/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/python_root_1/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/owner_actions_18/restart/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0113/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0049/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/source_binary_admission.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0106/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0023/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0084/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0185/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0184/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0006/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/readback_terminal/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0005/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0123/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0162/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0090/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0121/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0099/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0131/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0032/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0120/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0039/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0120/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0160/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0001/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/owner_actions_18/cleanup/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0085/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0005/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0170/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0059/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0045/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0156/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/native_terminal/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0125/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0027/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0173/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0059/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0071/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0175/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0177/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0015/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0128/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0170/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0170/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0069/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0151/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0020/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0093/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0138/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0071/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0064/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0164/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/independent_db_readback.py`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0069/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0150/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0101/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0160/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/live_terminal/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0038/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0093/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0182/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0070/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0075/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0146/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/lifecycle/cleanup/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0036/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0161/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0180/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/lifecycle/setup/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_worker/python_check_3_exit.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0176/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0012/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/reviewer_terminal/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0031/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0072/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0105/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0029/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0181/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0115/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0061/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0035/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0150/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0088/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0092/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0073/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0130/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/worker_return_original.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0137/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0094/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0107/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0178/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0021/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0086/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0154/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0119/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0151/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0142/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_worker/python_check_2_source_sha256.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0108/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0109/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_worker/python_check_2_test_sha256.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/root_check_4/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0032/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0040/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0148/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0013/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/owner_restart_ready_18.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0104/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/root_check_3/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0092/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0083/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0123/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0067/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0005/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0171/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0101/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0082/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0036/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0106/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0130/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/R117_IMPLEMENTATION_WORKER_RETURN_2026-10-17.md`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0133/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0052/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/root_check_2/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/independent_db_readback.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0009/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0107/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0061/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0069/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0118/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0028/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0117/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0005/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0064/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/native_terminal/receipt.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0174/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0020/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0164/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0013/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0099/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0042/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0152/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0077/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0057/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0034/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0028/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0018/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/gate_unit_resume_18/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0062/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0100/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0132/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0091/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0012/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0021/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0140/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0174/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0105/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0139/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0022/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0054/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0017/stderr.txt`
+- R117 bounded WAIT_DATA verification authority/readiness; exact scope and inherited failures preserved.: `docs/reviews/probes/r117_root/docker_readiness.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0144/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0022/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0006/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0018/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0004/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/live_admission_expired_draft_18.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0002/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0034/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/owner_actions_18/cleanup/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/native_terminal/post_inventory.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0148/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0081/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0042/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_worker/python_check_3_command.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0055/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0154/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0118/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0088/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0011/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0047/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0162/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/native_terminal/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0010/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0015/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0068/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0017/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0031/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/owner_cleanup_receipt_18.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0117/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0165/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/python_root_1/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0046/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0023/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0094/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0121/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0067/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0052/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0027/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0149/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/go_root_1/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0132/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0060/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0068/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/resume_interruption_18.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0126/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0141/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0078/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/root_check_2/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0166/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0066/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0006/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0051/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0010/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0059/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/go_root_1/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0172/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0113/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0114/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0110/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/cleanup_receipt.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0091/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0185/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0106/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/live_terminal/live_artifact_binding.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0004/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0178/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/proposal_independent_review_18.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0122/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0003/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0124/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0101/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0080/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0079/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0009/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0027/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0049/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0179/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0065/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0043/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0168/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0184/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0146/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0103/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/gate_unit_resume_18/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0108/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0127/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0155/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0031/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0087/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0019/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0008/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0045/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0010/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0153/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0008/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0041/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0038/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0114/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0089/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0151/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0039/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0015/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_worker/python_check_3_stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0037/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0176/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0082/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0160/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0007/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0106/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0183/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0181/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0167/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0038/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0047/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/gate_unit_resume_18/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0148/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0037/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0002/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0086/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0173/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0061/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0135/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0054/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/owner_actions_18/cleanup/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0173/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0111/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0076/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0156/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0166/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/lifecycle/cleanup/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0092/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/live/r116_live_wire.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0115/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0044/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0015/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0045/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0094/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/owner_actions_18/restart/pid.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0161/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0135/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0122/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/reviewer_terminal/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0048/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0069/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0109/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0114/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0087/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0117/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0104/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0048/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0026/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0021/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0062/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0089/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0063/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0130/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0088/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0025/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0033/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0129/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0044/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0168/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0004/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0150/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/root_check_3/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0121/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0182/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0056/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0110/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0179/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0056/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0098/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0003/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0054/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0129/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0036/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/fixture_pin_after_owner_restart_18.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0175/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_worker/python_check_3_stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/final_gate_unit_18/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0029/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0153/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0048/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0150/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0076/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0149/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0009/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0139/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0182/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0143/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0147/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0119/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0046/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0013/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0134/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0004/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0137/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0103/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0080/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0155/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0166/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0146/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0073/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0058/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/root_check_2/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/readback_terminal/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0127/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0154/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0035/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0053/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0165/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0043/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0165/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0070/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0009/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0011/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0172/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0098/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/root_check_3/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0139/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0168/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0163/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0033/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0012/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_worker/owner_resume_ops.py`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0083/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0050/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0090/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0093/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0127/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0046/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0099/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/python_root_1/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0096/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/physical_call_marker_1.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0012/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0075/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0045/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0180/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0073/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0163/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0157/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0173/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0183/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0118/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0052/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0049/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0051/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0169/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0040/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/R117_INDEPENDENT_REVIEW_2026-10-17.md`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0132/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/lifecycle/setup/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0030/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0086/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/native_independent_summary.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0095/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0124/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0064/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/readback_terminal/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0031/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0112/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0120/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/final_gate_unit_18/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0180/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0025/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0021/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0164/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_worker/python_check_1_exit.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0087/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0136/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0143/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0089/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/live_admission.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/owner_operational_baseline_18.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0095/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0141/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0185/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0175/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0161/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0083/command.json`
+- R117 bounded WAIT_DATA verification authority/readiness; exact scope and inherited failures preserved.: `docs/reviews/R117_INTAKE_AND_FINITE_ROUTE_2026-10-17.md`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0131/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0152/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0053/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0019/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0025/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/live_terminal/post_inventory.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/owner_actions_18/restart/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0062/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0010/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/live_independent_wire_review_18.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/work_orders/CCMAI_RUNTIME_117_WAITDATA_VERIFICATION.md`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0184/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0142/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0109/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0122/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0158/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0171/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0020/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0093/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0153/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0063/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0091/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0020/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0147/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0157/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0101/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0072/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0074/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/runtime_admission_before_owner_restart_18.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0028/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0133/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0060/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0067/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/real_provider_governance_receipt_18.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0035/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0111/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0184/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0094/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0022/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0136/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0037/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0113/stdout.txt`
+- R117 bounded WAIT_DATA verification authority/readiness; exact scope and inherited failures preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-117.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0128/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0078/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/owner_actions_18/cleanup/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0078/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0131/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0075/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0134/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0155/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0001/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0118/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0178/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0042/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0163/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/port_observation.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/gate_unit_resume_18/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0089/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0081/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0090/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0128/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0110/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0026/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0166/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0077/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/python_root_1/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0174/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0177/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0177/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0079/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0097/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0081/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/root_check_4/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/live_terminal/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0007/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0067/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0145/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0066/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0135/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/reviewer_terminal/receipt.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0112/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0159/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0044/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0014/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/lifecycle/setup/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0077/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0182/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0014/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0001/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0171/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_worker/python_check_1_stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0006/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0029/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0107/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0016/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0096/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/lifecycle/cleanup/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0144/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0008/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0033/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0065/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0076/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0137/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0016/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0155/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0144/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0179/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0046/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/protected_resource_drift_18.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0043/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0119/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0131/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0142/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0113/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0160/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0041/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0116/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0169/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0080/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0057/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0011/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0171/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0040/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0120/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0116/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0102/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/live_terminal/receipt.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0071/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0055/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0048/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0156/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0151/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0136/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0114/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0145/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0121/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0097/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0143/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0090/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0154/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/root_check_4/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0026/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0016/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0159/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0013/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0164/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0016/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0146/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0002/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_worker/python_check_2_exit.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0058/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0095/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0158/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0098/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/go_root_1/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0003/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0039/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0128/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_worker/python_check_3_source_sha256.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0126/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/reviewer_terminal/post_inventory.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0126/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0024/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0050/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0145/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0036/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0124/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/lifecycle/setup/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0074/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0100/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0092/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0030/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0142/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0139/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0084/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/owner_actions_18/restart/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0037/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_worker/python_check_2_stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0041/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0068/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0074/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0162/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0073/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0032/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0057/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0105/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0049/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_worker/python_check_1_stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0002/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0129/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0058/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0033/stdout.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0066/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/fixture_pin.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/owner_actions_18/restart/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0087/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0061/stderr.txt`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0082/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0104/exit.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0030/command.json`
+- R117 bounded WAIT_DATA control/evidence; exact failures and claim limits apply.: `docs/reviews/probes/r117_root/docker_commands/0185/stderr.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/independent_source_audit.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/focused_frontend/stdout.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/worker_return_gate.stdout.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/R118_IMPLEMENTATION_WORKER_RETURN_2026-10-18.md`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/focused_frontend/stderr.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/typecheck/command.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/typecheck/stdout.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/worker_return_gate_initial.stdout.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/capability_observations.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/worker_return_gate_initial.receipt.json`
+- R118 exact original bytes or commit/source binding; source/component only, rendered UI open.: `docs/reviews/probes/r118_root/committed_source_binding.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/source_hashes.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/typecheck/receipt.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/focused_frontend.stderr.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/vue_tsc.stdout.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/focused_frontend.stdout.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/focused_frontend/receipt.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/source_hashes.json`
+- R118 immutable source-only M3 UI dispatcher seed.: `CVF_SESSION/authority/CCMAI-RUNTIME-118.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/focused_frontend/command.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md`
+- R118 exact original bytes or commit/source binding; source/component only, rendered UI open.: `docs/reviews/probes/r118_root/original_probe_bytes.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/worker_return_gate.receipt.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/vue_tsc.receipt.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/vue_tsc.stderr.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/worker_return_gate.stderr.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/focused_frontend.receipt.json`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_root/typecheck/stderr.txt`
+- R118 actual source/component evidence or explicitly labeled capability transcription; no changed-screen/governance runtime proof.: `docs/reviews/probes/r118_worker/worker_return_gate_initial.stderr.txt`
+- Historical R118 accepted source/component only; current-render open.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R118_CURRENT_PROPOSAL_UI_2026-10-18.md`
+- Finite current proposal binding/history acceptance and independent review.: `docs/work_orders/CCMAI_RUNTIME_118_CURRENT_PROPOSAL_UI.md`
+- R118 source/component-only status; rendered proof open.: `CVF_SESSION/tranches/CCMAI-RUNTIME-118.json`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/1.stderr.bin`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/browser_capability_transcription.json`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/refresh_20261017T232738Z/stderr.bin`
+- R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open.: `docs/reviews/probes/r119_root/setup_001/reservation.json`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/python_001/stdout.bin`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_worker/checks.json`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/refresh_20261017T232738Z/stdout.bin`
+- R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open.: `docs/reviews/probes/r119_root/final_observation/receipt.json`
+- R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open.: `docs/reviews/probes/r119_root/failed_setup_raw.zip`
+- R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending.: `docs/reviews/probes/r119_root/compile_001/stderr.bin`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/python_001/receipt.json`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/R119_IMPLEMENTATION_WORKER_RETURN_2026-10-18.md`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/R119_DRAFT_SOURCE_REVIEW_2026-10-18.md`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_worker/python_002.stdout.bin`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/2.json`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/3.stderr.bin`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/0.json`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/1.stdout.bin`
+- R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open.: `docs/reviews/R119_FINAL_INDEPENDENT_REVIEW_2026-10-18.md`
+- R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open.: `docs/reviews/probes/r119_root/setup_001/stderr.bin`
+- R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open.: `docs/reviews/probes/r119_root/failed_setup_manifest.json`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_worker/python_001.stderr.bin`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/frontend_source_baseline.json`
+- R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending.: `docs/reviews/probes/r119_root/source_binary_admission.json`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_worker/python_001.stdout.bin`
+- R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending.: `docs/reviews/probes/r119_root/compile_001/receipt.json`
+- R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending.: `docs/reviews/probes/r119_root/pre_runtime_raw_manifest.json`
+- R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending.: `docs/reviews/probes/r119_root/compile_001/stdout.bin`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/3.json`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/0.stdout.bin`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/python_001/stderr.bin`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/2.stderr.bin`
+- R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open.: `docs/reviews/probes/r119_root/setup_001/stdout.bin`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/executables.json`
+- R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending.: `docs/reviews/probes/r119_root/compile_001/reservation.json`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/2.stdout.bin`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/R119_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/0.stderr.bin`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/refresh_20261017T232738Z/receipt.json`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/3.stdout.bin`
+- R119 exact offline compile/source-binary admission and original raw byte evidence; runtime pending.: `docs/reviews/probes/r119_root/pre_runtime_raw.zip`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_worker/python_002.stderr.bin`
+- R119 bounded source/readiness evidence; runtime UI acceptance pending, no AI governance claim.: `docs/reviews/probes/r119_root/readiness/1.json`
+- R119 failed sole setup/raw independent final evidence; UI NOT_RUN, owned exited/protected equal, listener proof open.: `docs/reviews/probes/r119_root/setup_001/receipt.json`
+- Historical R119 CHANGES_REQUIRED setup failure and original counters preserved; no replay.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R119_CURRENT_UI_PROOF_2026-10-18.md`
+- Source-helper then separately admitted one current UI campaign.: `docs/work_orders/CCMAI_RUNTIME_119_CURRENT_UI_PROOF.md`
+- R119 actual current UI evidence status and finite caps.: `CVF_SESSION/tranches/CCMAI-RUNTIME-119.json`
+- Immutable R119 synthetic UI finite authority; provider0/lifecycle0.: `CVF_SESSION/authority/CCMAI-RUNTIME-119.json`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/R120_SOURCE_REVIEW_ROUND1_2026-10-18.md`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/R120_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_worker/python_check_02/source_hashes_after.json`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/2/stderr.bin`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/commands.json`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/1/command.json`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/2/stdout.bin`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_root/source_checks_original.zip`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/1/stderr.bin`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/archive_manifest.json`
+- R120 actual sole setup and exact independent resource admission; backend/browser pending, provider0.: `docs/reviews/probes/r120_root/resource_independent/stdout.bin`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/raw_readonly.zip`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_root/source_checks_manifest.json`
+- R120 actual sole setup and exact independent resource admission; backend/browser pending, provider0.: `docs/reviews/probes/r120_root/resource_independent/command.json`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/0/stderr.bin`
+- R120 exact current offline compile and source-binary admission; runtime conditional, provider0.: `docs/reviews/probes/r120_root/compile_001/reservation.json`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_root/python_002/stdout.bin`
+- R120 exact current offline compile and source-binary admission; runtime conditional, provider0.: `docs/reviews/probes/r120_root/compile_001/stderr.bin`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `CVF_SESSION/tranches/CCMAI-RUNTIME-120.json`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_root/python_001/stdout.bin`
+- R120 actual sole setup and exact independent resource admission; backend/browser pending, provider0.: `docs/reviews/probes/r120_root/resource_admission.json`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_worker/python_check_01/source_hashes_after.json`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_root/python_001/stderr.bin`
+- R120 exact final cleanup constant delta static review; no extra unit invocation or runtime.: `docs/reviews/probes/r120_root/repair2_timing/after_review.json`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/1/receipt.json`
+- R120 exact current offline compile and source-binary admission; runtime conditional, provider0.: `docs/reviews/probes/r120_root/compile_001/receipt.json`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_worker/python_check_01/reservation.json`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_worker/python_check_01/source_hashes_before.json`
+- R120 actual sole setup and exact independent resource admission; backend/browser pending, provider0.: `docs/reviews/probes/r120_root/resource_independent/stderr.bin`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/R120_IMPLEMENTATION_WORKER_RETURN_2026-10-18.md`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_worker/python_check_02/stdout.bin`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/0/receipt.json`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_worker/python_check_02/source_hashes_before.json`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_root/python_002/reservation.json`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/2/receipt.json`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_root/readiness/executables.json`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/R119_READONLY_CAUSE_AND_R120_DECISION_2026-10-18.md`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/1/stdout.bin`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_worker/python_check_02/reservation.json`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_worker/python_check_02/actualexit.json`
+- R120 exact final cleanup constant delta static review; no extra unit invocation or runtime.: `docs/reviews/probes/r120_root/repair2_timing/before.zip`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_root/python_001/reservation.json`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_worker/python_check_01/actualexit.json`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_root/python_001/receipt.json`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_worker/python_check_01/stdout.bin`
+- R120 actual sole setup and exact independent resource admission; backend/browser pending, provider0.: `docs/reviews/probes/r120_root/setup_001/reservation.json`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/3/command.json`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/2/command.json`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_root/python_002/receipt.json`
+- R120 exact current offline compile and source-binary admission; runtime conditional, provider0.: `docs/reviews/probes/r120_root/compile_001/stdout.bin`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_root/readiness/capability_observation.json`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_root/python_002/stderr.bin`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/3/receipt.json`
+- R120 exact current offline compile and source-binary admission; runtime conditional, provider0.: `docs/reviews/probes/r120_root/source_binary_admission.json`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/work_orders/CCMAI_RUNTIME_120_CURRENT_UI_PROOF.md`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/3/stderr.bin`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/0/stdout.bin`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/0/command.json`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_worker/python_check_01/stderr.bin`
+- Existing unmodified read-only Desktop capability proposal; short lifetime applicability unverified.: `docs/reviews/planning/R120_DESKTOP_EXECUTION_TRANSFER_PROPOSAL_2026-10-18.md`
+- R120 actual sole setup and exact independent resource admission; backend/browser pending, provider0.: `docs/reviews/probes/r120_root/setup_001/receipt.json`
+- R120 exact final cleanup constant delta static review; no extra unit invocation or runtime.: `docs/reviews/probes/r120_root/repair2_timing/before.json`
+- R120 bounded independent source/check evidence; runtime/current UI not yet admitted.: `docs/reviews/probes/r120_worker/python_check_02/stderr.bin`
+- R120 actual sole setup and exact independent resource admission; backend/browser pending, provider0.: `docs/reviews/probes/r120_root/resource_independent/receipt.json`
+- R120 actual sole setup and exact independent resource admission; backend/browser pending, provider0.: `docs/reviews/probes/r120_root/setup_001/stderr.bin`
+- R120 actual sole setup and exact independent resource admission; backend/browser pending, provider0.: `docs/reviews/probes/r120_root/setup_001/stdout.bin`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/3/stdout.bin`
+- Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `CVF_SESSION/authority/CCMAI-RUNTIME-120.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/final_source_recheck.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_history_settled.rendered.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_detail.dom.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/process_inventory_command.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/owned_before.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_detail.main.html`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/stop_001/stderr.bin`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/cleanup_reservation.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_detail.jpg`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_proposal.metrics.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_history.main.html`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_proposal.main.html`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_history.metrics.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/serve_001/stderr.bin`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_history.dom.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_proposal.rendered.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_detail.jpg`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_proposal.dom.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/queue.dom.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/source_recheck.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/after_login.dom.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/ui_assertions.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_history.rendered.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_history.main.html`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/logout.dom.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/protected_final.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_detail.main.html`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/serve_001/reservation.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_history_settled.dom.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/operations.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/owned_after.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/orphan_cleanup_receipt.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/native_image_manifest.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_proposal.jpg`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_runtime_original.zip`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/login.dom.txt`
+- Actual final static pre-commit profile receipt; not runtime acceptance, APPL explicitly not applicable.: `docs/reviews/probes/r120_root/final_gate_receipt.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/viewport_reset.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/stop_001/reservation.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/serve_001/stdout.bin`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/stop_001/stdout.bin`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/process_inventory_stderr.bin`
+- Actual final static pre-commit profile receipt; not runtime acceptance, APPL explicitly not applicable.: `docs/reviews/probes/r120_root/final_gate_stderr.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/route_accounting.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_detail.metrics.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/child_listener_observations.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_history.jpg`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_history.jpg`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_detail.dom.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_detail.rendered.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_history.dom.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/process_inventory_stdout.bin`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_detail.rendered.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_history_settled.main.html`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_detail.metrics.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_history.rendered.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_history_settled.metrics.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/stop_001/receipt.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/logout.jpg`
+- Actual final static pre-commit profile receipt; not runtime acceptance, APPL explicitly not applicable.: `docs/reviews/probes/r120_root/final_gate_stdout.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_history_settled.jpg`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/R120_FINAL_INDEPENDENT_UI_REVIEW_2026-10-18.md`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_history.metrics.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_runtime_manifest.json`
+- Separate finite owner-directed local route after lifetime review, old evidence/caps unchanged.: `docs/reviews/R120_LOCAL_RESUME_DECISION_2026-10-18.md`
+- Read-only lifetime diagnosis and finite transfer decision; original terminal/accounting missing, no source repair or new runtime authority.: `docs/reviews/R120_READONLY_LIFETIME_REVIEW_AND_DECISION_2026-10-18.md`
+- Existing303archive members verified against sizes/hashes; no recovered terminal/accounting and no runtime execution.: `docs/reviews/probes/r120_root/lifetime_review_20261018.json`
+- Superseded R120 pointer; original CHANGES_REQUIRED/evidence/caps unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R120_CURRENT_UI_2026-10-18.md`
+- R121 original short capability evidence or hold decision; expectedexec17/actual1, childwait0, no product runtime or retry.: `docs/reviews/R121_CAPABILITY_HOLD_2026-10-18.md`
+- R121 original short capability evidence or hold decision; expectedexec17/actual1, childwait0, no product runtime or retry.: `docs/reviews/probes/r121_root/capability/exec_final.json`
+- R121 original short capability evidence or hold decision; expectedexec17/actual1, childwait0, no product runtime or retry.: `docs/reviews/probes/r121_root/capability/exec_initial.json`
+- R121 original short capability evidence or hold decision; expectedexec17/actual1, childwait0, no product runtime or retry.: `docs/reviews/probes/r121_root/capability/manifest.json`
+- R121 original short capability evidence or hold decision; expectedexec17/actual1, childwait0, no product runtime or retry.: `docs/reviews/probes/r121_root/capability/original_bytes.zip`
+- R121 original short capability evidence or hold decision; expectedexec17/actual1, childwait0, no product runtime or retry.: `docs/reviews/probes/r121_root/capability/reservation.json`
+- Root transcription of invocation command, explicitly not raw tool export; mismatch cause remains inferred.: `docs/reviews/probes/r121_root/capability/invocation_record.json`
+- Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `CVF_SESSION/authority/CCMAI-RUNTIME-121-CAPABILITY-CONTINUATION.json`
+- Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/R121_CAPABILITY_CONFIRMATION_REVIEW_2026-10-18.md`
+- Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/probes/r121_root/capability_confirmation/exec_final.json`
+- Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/probes/r121_root/capability_confirmation/exec_initial.json`
+- Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/probes/r121_root/capability_confirmation/invocation.json`
+- Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/probes/r121_root/capability_confirmation/manifest.json`
+- Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/probes/r121_root/capability_confirmation/original_bytes.zip`
+- R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim.: `docs/reviews/R121_FINAL_TERMINAL_REVIEW_2026-10-18.md`
+- R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim.: `docs/reviews/probes/r121_root/campaign_terminal_raw.zip`
+- R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim.: `docs/reviews/probes/r121_root/browser/capture_readiness.json`
+- R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim.: `docs/reviews/probes/r121_root/campaign_terminal_manifest.json`
+- R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim.: `docs/reviews/probes/r121_root/campaign_terminal_summary.json`
+- R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim.: `docs/reviews/probes/r121_root/serve_001/child_started.json`
+- R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim.: `docs/reviews/probes/r121_root/serve_001/receipt.json`
+- R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim.: `docs/reviews/probes/r121_root/serve_001/reservation.json`
+- R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim.: `docs/reviews/probes/r121_root/serve_001/stderr.bin`
+- R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim.: `docs/reviews/probes/r121_root/serve_001/stdout.bin`
+- R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim.: `docs/reviews/probes/r121_root/serve_001/tool_observations.json`
+- Owner local resume bounded M3 seed; no BUILD/runtime before activation/admission.: `CVF_SESSION/authority/CCMAI-RUNTIME-121.json`
+- R121 repaired source5cf1244/new binarycb52235c actual offline compile and candidate admission; initial failed source/admission immutable in archive/Git.: `docs/reviews/probes/r121_root/source_binary_admission_candidate_002.json`
+- R121 repaired source5cf1244/new binarycb52235c actual offline compile and candidate admission; initial failed source/admission immutable in archive/Git.: `docs/reviews/probes/r121_root/compile_002/receipt.json`
+- R121 repaired source5cf1244/new binarycb52235c actual offline compile and candidate admission; initial failed source/admission immutable in archive/Git.: `docs/reviews/probes/r121_root/compile_002/reservation.json`
+- R121 repaired source5cf1244/new binarycb52235c actual offline compile and candidate admission; initial failed source/admission immutable in archive/Git.: `docs/reviews/probes/r121_root/compile_002/stderr.bin`
+- R121 repaired source5cf1244/new binarycb52235c actual offline compile and candidate admission; initial failed source/admission immutable in archive/Git.: `docs/reviews/probes/r121_root/compile_002/stdout.bin`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `CVF_SESSION/authority/CCMAI-RUNTIME-121-POSTREPAIR-ADMISSION.json`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/R121_R1_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_root/source_unit_002/static_identity_proof.json`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_root/source_unit_002/stderr.bin`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_root/source_unit_002/stdout.bin`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/R121_R1_NAMESPACE_REPAIR_RETURN_2026-10-18.md`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_worker/namespace_repair/command.json`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_worker/namespace_repair/receipt.json`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_worker/namespace_repair/static_identity_proof.json`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_worker/namespace_repair/stderr.bin`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_worker/namespace_repair/stdout.bin`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_root/source_unit_002/receipt.json`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_root/source_unit_002/reservation.json`
+- Actual postrepair setup002 originalwait/exit0 and exact fresh owned resource/source/protection admission, no UI campaign yet.: `docs/reviews/probes/r121_root/resource_admission.json`
+- Actual postrepair setup002 originalwait/exit0 and exact fresh owned resource/source/protection admission, no UI campaign yet.: `docs/reviews/probes/r121_root/setup_002/child_started.json`
+- Actual postrepair setup002 originalwait/exit0 and exact fresh owned resource/source/protection admission, no UI campaign yet.: `docs/reviews/probes/r121_root/setup_002/independent_resource_proof.json`
+- Actual postrepair setup002 originalwait/exit0 and exact fresh owned resource/source/protection admission, no UI campaign yet.: `docs/reviews/probes/r121_root/setup_002/receipt.json`
+- Actual postrepair setup002 originalwait/exit0 and exact fresh owned resource/source/protection admission, no UI campaign yet.: `docs/reviews/probes/r121_root/setup_002/reservation.json`
+- Actual postrepair setup002 originalwait/exit0 and exact fresh owned resource/source/protection admission, no UI campaign yet.: `docs/reviews/probes/r121_root/setup_002/stderr.bin`
+- Actual postrepair setup002 originalwait/exit0 and exact fresh owned resource/source/protection admission, no UI campaign yet.: `docs/reviews/probes/r121_root/setup_002/stdout.bin`
+- Actual postrepair setup002 originalwait/exit0 and exact fresh owned resource/source/protection admission, no UI campaign yet.: `docs/reviews/probes/r121_root/setup_002/tool_final.json`
+- Actual postrepair setup002 originalwait/exit0 and exact fresh owned resource/source/protection admission, no UI campaign yet.: `docs/reviews/probes/r121_root/setup_002/tool_initial.json`
+- R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/R121_IDENTITY_CONSOLIDATED_REPAIR_DECISION_2026-10-18.md`
+- R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/probes/r121_root/setup_001/child_started.json`
+- R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/probes/r121_root/setup_001/receipt.json`
+- R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/probes/r121_root/setup_001/reservation.json`
+- R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/probes/r121_root/setup_001/stderr.bin`
+- R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/probes/r121_root/setup_001/stdout.bin`
+- R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/probes/r121_root/setup_001/tool_result.json`
+- R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/probes/r121_root/identity_repair/preimage.zip`
+- R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/probes/r121_root/identity_repair/preimage_manifest.json`
+- R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run.: `docs/reviews/probes/r121_root/source_binary_admission.json`
+- R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run.: `docs/reviews/probes/r121_root/compile_001/receipt.json`
+- R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run.: `docs/reviews/probes/r121_root/compile_001/reservation.json`
+- R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run.: `docs/reviews/probes/r121_root/compile_001/stderr.bin`
+- R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run.: `docs/reviews/probes/r121_root/compile_001/stdout.bin`
+- R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run.: `docs/reviews/probes/r121_root/docker_readiness/receipt.json`
+- R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run.: `docs/reviews/probes/r121_root/docker_readiness/stderr.bin`
+- R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run.: `docs/reviews/probes/r121_root/docker_readiness/stdout.bin`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/R121_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/R121_IMPLEMENTATION_WORKER_RETURN_2026-10-18.md`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_root/source_unit_001/source_verification.json`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_root/source_unit_001/stderr.bin`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_root/source_unit_001/stdout.bin`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_root/foreground_wrapper.py`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_worker/python_check_01/command.json`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_worker/python_check_01/receipt.json`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_worker/python_check_01/stderr.bin`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_worker/python_check_01/stdout.bin`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_worker/source_copy_manifest.json`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_root/source_unit_001/receipt.json`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_root/source_unit_001/reservation.json`
+- R121 finite active record, old budgets immutable.: `CVF_SESSION/tranches/CCMAI-RUNTIME-121.json`
+- Finite mechanical isolation and original-session M3 terminal proof; no runtime before admissions.: `docs/work_orders/CCMAI_RUNTIME_121_M3_TERMINAL_PROOF.md`
+- Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
+- Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
+- Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`
+- Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/R112_RESUME_CAPABILITY_HOLD_2026-10-17_021300Z.md`
+- Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/result.json`
+- Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stderr.bin`
 - Read-only source audit selects source-preparation observational receipt DESIGN/SPEC; no BUILD, policy enforcement or provider authority.: `docs/reviews/ROADMAP_NEXT_SCOPE_AFTER_R054_2026-10-06.md`
 - Source-only remaining roadmap audit selects bounded lazy provider initialization as S2 prerequisite; no runtime/governance acceptance.: `docs/reviews/ROADMAP_NEXT_SCOPE_R050_2026-10-05.md`
 - R033 closure review and local FREEZE decision; source identity and inherited evidence limits.: `docs/reviews/CCMAI_RUNTIME_033_LOCAL_MESSAGE_CLOSURE_2026-10-03.md`

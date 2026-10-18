@@ -1,0 +1,31 @@
+{
+  "tranche": "CCMAI-RUNTIME-101",
+  "observedAt": "2026-10-15T20:17:38.1978667+07:00",
+  "source": "docs/reviews/probes/r101_root/review_counters.json",
+  "before": {
+    "workerGo": 1,
+    "reviewerGo": 2,
+    "aggregateGo": 3,
+    "fixtureReservations": "2/2",
+    "nodeChecks": 3,
+    "frontendBuilds": 1,
+    "providerCalls": 0,
+    "mockProviderCalls": 0
+  },
+  "after": {
+    "workerGo": 1,
+    "reviewerGo": 2,
+    "aggregateGo": 3,
+    "fixtureReservations": 2,
+    "nodeChecks": 3,
+    "frontendBuilds": 1,
+    "providerCalls": 0,
+    "mockProviderCalls": 0
+  },
+  "changed": false,
+  "launchesHistory": [
+    "six_native_human_tests",
+    "real_router_browser_fixture"
+  ],
+  "newLaunches": 0
+}

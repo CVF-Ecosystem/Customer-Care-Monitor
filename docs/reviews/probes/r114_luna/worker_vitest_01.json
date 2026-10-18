@@ -1,0 +1,50 @@
+{
+  "trancheId": "CCMAI-RUNTIME-114",
+  "worker": "/root/r114_onboarding_luna",
+  "kind": "focused-vitest",
+  "invocation": 1,
+  "status": "SUMMARY_3_PASS_EXIT_UNKNOWN",
+  "command": {
+    "executable": "C:\\Program Files\\nodejs\\node.exe",
+    "executableSha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+    "argv": [
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "--config",
+      "../docs/reviews/probes/r114_luna/focused-test.config.mjs",
+      "src/__tests__/onboarding-wizard.spec.ts"
+    ],
+    "workingDirectory": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\frontend",
+    "launcher": "PowerShell Start-Process -Wait -PassThru"
+  },
+  "observed": {
+    "vitestStartLocal": "2026-10-17T11:23:03+07:00",
+    "vitestDurationSeconds": 37.9,
+    "endTimeObserved": false,
+    "exitCode": null,
+    "exitCodeObserved": false,
+    "childPid": null,
+    "childPidObserved": false,
+    "testFiles": "1 passed",
+    "tests": "3 passed",
+    "testFailuresObserved": false,
+    "parentReceiptObserved": false
+  },
+  "stdout": {
+    "path": "docs/reviews/probes/r114_luna/worker_vitest_01.stdout.bin",
+    "bytes": 265,
+    "sha256": "395f9acbf024aac1008b7fcf5dd7aaaf6c15f5b18a0a5792b0bc1fe2409960f5"
+  },
+  "stderr": {
+    "path": "docs/reviews/probes/r114_luna/worker_vitest_01.stderr.bin",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "inputs": {
+    "frontend/src/components/OnboardingWizard.vue": "58acc5579752a7f4cbc68ffe346ca679a1a1635bcda4dbba10eea2968246bf24",
+    "frontend/src/__tests__/onboarding-wizard.spec.ts": "807b4c77b064caad0ef322c4e6fde0b319df4e840366811691d576b9bfd268e9",
+    "docs/reviews/probes/r114_luna/focused-test.config.mjs": "525b9dddb544e8cc0e4866e0ca933fba98f4f0c256cdae2db72541a26943009d"
+  },
+  "interpretation": "Vitest stdout reports three tests passed. Parent process exit code and exact end time were not captured; no exit PASS is claimed. This attempt consumes worker focusedVitest slot 1 of 2.",
+  "claimBoundary": "Pure mounted UI structure with mocked API calls; no provider or governance behavior claim."
+}

@@ -1,0 +1,130 @@
+- banner:
+  - button:
+    - generic: 󰍜
+  - generic: Customer Care Monitor AI
+- navigation:
+  - generic: Customer Care Monitor AI
+  - separator
+  - generic: Minh họa R120
+  - separator
+  - list:
+    - link "Trang chủ":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751
+      - generic: 󰕮
+      - generic: Trang chủ
+    - link "Kênh chat":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/channels
+      - generic: 󱘖
+      - generic: Kênh chat
+    - link "Tin nhắn":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/messages
+      - generic: 󰊌
+      - generic: Tin nhắn
+    - link "Tác vụ AI":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/jobs
+      - generic: 󰚩
+      - generic: Tác vụ AI
+    - link "Kết quả":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/results
+      - generic: 󱃔
+      - generic: Kết quả
+    - link "Ca cần can thiệp":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/intervention-cases
+      - generic: 󰀈
+      - generic: Ca cần can thiệp
+    - link "Nhật ký hệ thống":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/activity-logs
+      - generic: 󰺮
+      - generic: Nhật ký hệ thống
+    - link "Nhật ký chi phí":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/cost-logs
+      - generic: 󰇁
+      - generic: Nhật ký chi phí
+    - link "Lịch sử thông báo":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/notifications
+      - generic: 󰂞
+      - generic: Lịch sử thông báo
+    - link "Kết nối trợ lý AI":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/mcp
+      - generic: 󱂛
+      - generic: Kết nối trợ lý AI
+    - link "Người dùng":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/users
+      - generic: 󰡉
+      - generic: Người dùng
+    - link "Cài đặt":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/settings
+      - generic: 󰒓
+      - generic: Cài đặt
+  - separator
+  - button:
+    - generic: 󰖔
+  - button "Tiếng Việt":
+    - generic: 󰗊
+    - text: Tiếng Việt
+    - generic: 󰍝
+  - generic: "N"
+  - generic: Người duyệt minh họa
+  - button:
+    - generic: 󰍃
+- main:
+  - generic: 󱓞
+  - generic: "Bắt đầu:"
+  - generic: 󰗠
+  - generic: Kết nối kênh chat
+  - generic: 󰗠
+  - generic: Đồng bộ tin nhắn
+  - generic: 󰝦
+  - generic: Cài đặt AI
+  - generic: 󰗠
+  - generic: Tạo công việc phân tích
+  - generic: 󰝦
+  - generic: Chạy thử phân tích
+  - button:
+    - generic: 󰅖
+  - heading "Ca cần can thiệp" [level=1]
+  - link "Về hàng đợi":
+    - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/intervention-cases
+    - generic: Về hàng đợi
+  - alert:
+    - generic: 󰋼
+    - generic: "Nguồn dữ liệu: Chưa xác nhận đủ nội dung từ kênh. Chưa xác nhận đầy đủ nội dung từ kênh. Vui lòng đối chiếu trước khi xử lý."
+  - generic: Mã ca 4806D8CD
+  - paragraph: "Trạng thái xử lý: Chờ duyệt hoặc giao việc · Đánh giá của người duyệt: Chưa duyệt · Lần cập nhật 4"
+  - generic: Đề xuất hiện tại
+  - alert:
+    - generic: 󰋼
+    - generic: Đây là dữ liệu minh họa để thử quy trình, không phải kết quả từ AI trực tiếp.
+  - paragraph: "Loại đề xuất: Khiếu nại"
+  - paragraph: "Giải thích trong đề xuất: Minh họa: khách đang chờ phản hồi về đơn hàng."
+  - paragraph: "Bước tiếp theo được gợi ý: Kiểm tra đơn hàng và phản hồi khách."
+  - paragraph: "Dẫn chứng:"
+  - list:
+    - listitem: “khiếu nại”
+  - generic: Thao tác
+  - combobox:
+    - combobox "Thao tác"
+    - generic: 󰍝
+    - generic: Thao tác
+  - alert
+  - generic: Lý do (bắt buộc)
+  - textbox "Lý do (bắt buộc)"
+  - alert
+  - button "Ghi nhận thao tác" [disabled]:
+    - generic: Ghi nhận thao tác
+  - generic: Lịch sử xử lý
+  - strong: Kiểm tra thông tin bổ sung · Lần cập nhật 2
+  - text: · 07:17:33 18/10/2026 · Người duyệt minh họa
+  - paragraph: "Lý do (bắt buộc): Minh họa: đã kiểm tra dữ liệu."
+  - paragraph: "Nguồn dữ liệu: Chưa xác nhận đủ nội dung từ kênh"
+  - generic "Xem thay đổi"
+  - strong: Yêu cầu đánh giá lại · Lần cập nhật 3
+  - text: · 07:17:34 18/10/2026 · Người duyệt minh họa
+  - paragraph: "Lý do (bắt buộc): Minh họa: đã yêu cầu xem lại."
+  - paragraph: "Nguồn dữ liệu: Chưa xác nhận đủ nội dung từ kênh"
+  - generic "Xem thay đổi"
+  - strong: Đã có đánh giá mới · Lần cập nhật 4
+  - text: · 07:17:35 18/10/2026 · Người duyệt minh họa
+  - paragraph: "Lý do (bắt buộc): Đã duyệt đánh giá lại thông tin mới"
+  - paragraph: "Nguồn dữ liệu: Chưa xác nhận đủ nội dung từ kênh"
+  - generic "Xem thay đổi"

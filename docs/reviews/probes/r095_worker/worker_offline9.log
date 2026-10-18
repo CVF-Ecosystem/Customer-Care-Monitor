@@ -1,0 +1,14 @@
+test_actual_current_state_passes_source_only_authority (scripts.tests.test_r095_intervention_live_fixture.R095FixtureOfflineTests.test_actual_current_state_passes_source_only_authority) ... ok
+test_binary_never_runs_without_approval (scripts.tests.test_r095_intervention_live_fixture.R095FixtureOfflineTests.test_binary_never_runs_without_approval) ... ok
+test_exact_and_nested_key_redacted (scripts.tests.test_r095_intervention_live_fixture.R095FixtureOfflineTests.test_exact_and_nested_key_redacted) ... ok
+test_metadata_pin_rejects_other_endpoint (scripts.tests.test_r095_intervention_live_fixture.R095FixtureOfflineTests.test_metadata_pin_rejects_other_endpoint) ... ok
+test_reviewer_raw_usage_breach_blocks_second_claim (scripts.tests.test_r095_intervention_live_fixture.R095FixtureOfflineTests.test_reviewer_raw_usage_breach_blocks_second_claim) ... ok
+test_role_claim_is_exclusive_and_not_refunded (scripts.tests.test_r095_intervention_live_fixture.R095FixtureOfflineTests.test_role_claim_is_exclusive_and_not_refunded) ... ok
+test_sanitize_depth_fails_closed (scripts.tests.test_r095_intervention_live_fixture.R095FixtureOfflineTests.test_sanitize_depth_fails_closed) ... ok
+test_strict_json_duplicate_rejected (scripts.tests.test_r095_intervention_live_fixture.R095FixtureOfflineTests.test_strict_json_duplicate_rejected) ... ok
+test_unicode_escaped_and_duplicate_nested_key_fail_closed (scripts.tests.test_r095_intervention_live_fixture.R095FixtureOfflineTests.test_unicode_escaped_and_duplicate_nested_key_fail_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.723s
+
+OK

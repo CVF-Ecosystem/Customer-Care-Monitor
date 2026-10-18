@@ -1,0 +1,67 @@
+[
+  {
+    "original": "docs/reviews/probes/r114_root/browser/desktop_queue.raw.jpg",
+    "mime": "image/jpeg",
+    "bytes": 80589,
+    "sha256": "1e11f3b4cd9b7c7c51441ae033184a8f81917b699b6f6b90c360a52b53695ea2",
+    "rasterDimensions": [
+      1265,
+      889
+    ],
+    "derivedPng": "docs/reviews/probes/r114_root/browser/desktop_queue.derived.png",
+    "derivedSha256": "7efd49942cec905d2e066fefae43ab96f68dc036faadbbccecc3209a8e483512",
+    "conversion": "decoded JPEG to PNG without crop/resize; derived image is not original PNG screenshot"
+  },
+  {
+    "original": "docs/reviews/probes/r114_root/browser/desktop_queue_loaded.raw.jpg",
+    "mime": "image/jpeg",
+    "bytes": 58815,
+    "sha256": "bf1c93496d16f5813c727053ca451039f14ec651f1781f6420609754edd12596",
+    "rasterDimensions": [
+      1280,
+      900
+    ],
+    "derivedPng": "docs/reviews/probes/r114_root/browser/desktop_queue_loaded.derived.png",
+    "derivedSha256": "865dfa206805b37f6051211952f089917d0f2e0fce3cc61119c73bd33bd5d3eb",
+    "conversion": "decoded JPEG to PNG without crop/resize; derived image is not original PNG screenshot"
+  },
+  {
+    "original": "docs/reviews/probes/r114_root/browser/mobile_detail.raw.jpg",
+    "mime": "image/jpeg",
+    "bytes": 49931,
+    "sha256": "1a1bdd9300536252e0a4d5259ea98fee42bdf68a49eae9ffa9466bf07d37bc2c",
+    "rasterDimensions": [
+      375,
+      811
+    ],
+    "derivedPng": "docs/reviews/probes/r114_root/browser/mobile_detail.derived.png",
+    "derivedSha256": "7dc6c9fdb7a5b21d450e2803cd86010b51226512e054707f2d1f68f837b73a23",
+    "conversion": "decoded JPEG to PNG without crop/resize; derived image is not original PNG screenshot"
+  },
+  {
+    "original": "docs/reviews/probes/r114_root/browser/mobile_home.raw.jpg",
+    "mime": "image/jpeg",
+    "bytes": 34272,
+    "sha256": "2b78cf58cd5b274a2453d7d7ff6bbb992e79ffc4707c54917881d975a8125a34",
+    "rasterDimensions": [
+      375,
+      811
+    ],
+    "derivedPng": "docs/reviews/probes/r114_root/browser/mobile_home.derived.png",
+    "derivedSha256": "be155c18f3075db05ff8e85ba385c0bc228341572853b818ea6af562540ff5dc",
+    "conversion": "decoded JPEG to PNG without crop/resize; derived image is not original PNG screenshot"
+  },
+  {
+    "original": "docs/reviews/probes/r114_root/browser/mobile_queue.raw.jpg",
+    "mime": "image/jpeg",
+    "bytes": 32803,
+    "sha256": "4d8731ed541d5276be6af9d8a8f64c78a9935e89af7840e13876bcc000332a19",
+    "rasterDimensions": [
+      390,
+      843
+    ],
+    "derivedPng": "docs/reviews/probes/r114_root/browser/mobile_queue.derived.png",
+    "derivedSha256": "8ef98695d95ac3b6ca158e878b91d1af92858df30a261870bd41aa4dcb477588",
+    "conversion": "decoded JPEG to PNG without crop/resize; derived image is not original PNG screenshot"
+  }
+]

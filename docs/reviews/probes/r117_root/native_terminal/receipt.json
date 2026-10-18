@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r117_execution\\bin\\handlers.test.exe",
+    "-test.run=^TestR116WaitDataNative[A-Za-z0-9_]+$",
+    "-test.v",
+    "-test.count=1",
+    "-test.timeout=180s"
+  ],
+  "cwd": "backend",
+  "startedAt": "2026-10-17T13:52:23.302429+00:00",
+  "finishedAt": "2026-10-17T13:52:56.988340+00:00",
+  "exitCode": 0,
+  "pid": 16920,
+  "failure": "",
+  "sourceAdmissionSha256": "02f0cef7fb1cc0f8ffeaa276cfad04b12d49fd75d460903fdbb3a702387f7ae1",
+  "runtimeAdmissionSha256": "c53583e328c454617521a3c18273becc2bb5339bcd5db2cb4b9968ad76de85bc",
+  "binarySha256": "80e66674335a02ca153e5e2c6c6bfcca03b7908bc9dd1fe9eaeae78fbbf0b4e4",
+  "binaryAfterSha256": "80e66674335a02ca153e5e2c6c6bfcca03b7908bc9dd1fe9eaeae78fbbf0b4e4",
+  "stdoutSha256": "c937c997820e6b96c4d25cf85fabbc73370f07a112c27c1aad77132332613d09",
+  "stderrSha256": "821bc5f1e618f569f5c61797a8d32215b7e63fb00f9e49da6604607ee5e7ecab",
+  "testSkipObserved": false,
+  "providerMode": false
+}

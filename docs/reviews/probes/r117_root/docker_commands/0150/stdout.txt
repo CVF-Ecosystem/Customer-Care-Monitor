@@ -1,0 +1,14 @@
+id
+execution_id
+tenant_id
+job_id
+run_id
+budget_id
+state
+usage_state
+input_usage_presence
+output_usage_presence
+input_tokens
+output_tokens
+response_model
+created_at

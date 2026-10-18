@@ -1,0 +1,26 @@
+2026-10-14 R096 pre-effect worker tool output (copied from command result)
+gofmt -w backend/api/handlers/intervention_live_r096_test.go: exit 0, stdout empty
+python -B -m unittest scripts.tests.test_r096_intervention_live_fixture -v: exit 0
+test_actual_current_state_passes_source_only_authority ... ok
+test_actual_parent_manifest_proves_known_zero ... ok
+test_binary_never_runs_without_approval ... ok
+test_current_provider_shape_uses_owner_model_not_presets ... ok
+test_exact_and_nested_key_redacted ... ok
+test_inactive_phase_rejected ... ok
+test_metadata_pin_rejects_other_endpoint ... ok
+test_old_config_shape_rejected ... ok
+test_preset_object_id_is_observation_only ... ok
+test_reviewer_raw_usage_breach_blocks_second_claim ... ok
+test_role_claim_is_exclusive_and_not_refunded ... ok
+test_sanitize_depth_fails_closed ... ok
+test_strict_json_duplicate_rejected ... ok
+test_unicode_escaped_and_duplicate_nested_key_fail_closed ... ok
+Ran 14 tests in 0.389s
+OK
+python -B scripts/r096_intervention_live_fixture.py offline: exit 0; frozen12 and new source3 hashes recorded in command result
+git diff --check: exit 0; warning: in working copy of CVF_SESSION/tranches/CCMAI-RUNTIME-095.json, LF will be replaced by CRLF next time Git touches it
+GOPROXY=off GOSUMDB=off go test -c -o ../.cvf/runtime/r096_live/intervention_r096.test.exe ./api/handlers: exit 0, stdout empty; worker Go invocation 1/4
+Binary SHA256 dec0ba5c83474b23e0748a03b142616eabb34112af36968581ba16e24f063b5e
+Go source SHA256 37073914e995819415153a9e3f87f362e7a43c74990d2fd03de117f21c9aaeaf
+Python source SHA256 5b1dec9ff3ade01cb9ca22e88e557e8b59876488ba76e98fc77c698be4c5969d
+Python tests SHA256 1fd61db390928044e69157e6f96e34d2e4f8b267266f659e3670050618cd6b23

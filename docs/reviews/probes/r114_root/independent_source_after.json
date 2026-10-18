@@ -1,0 +1,12 @@
+{
+  "reviewer": "Codex /root",
+  "observedAtUTC": "2026-10-17T07:38:08.906791+00:00",
+  "head": "954013408715cb0213d37bb7d51b714f29b900f8",
+  "reviewedSourceCommit": "aa92c149f47efaec391fb001b0d23ee0dff67f25",
+  "allAdmissionSourceAndEvidenceAndNewPinsMatchNow": true,
+  "wholeFrontendGitDiffAndWorktree": "CLEAN",
+  "backendWorktree": "CLEAN",
+  "binaryHashMatches": true,
+  "originalSupervisorSourceAfter": "MISSING",
+  "qualification": "Independent later readback, not reconstructed original supervisor receipt"
+}

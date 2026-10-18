@@ -1,0 +1,11 @@
+[PASS] CVF-DG-INST-01 PASS
+[PASS] CVF-DG-CONT-01 PASS
+[PASS] CVF-DG-RANGE-01 PASS
+       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=de3eba55c36644a99e0bfe67fbdb9764dd67232a candidates=29 deleted=0
+[PASS] CVF-DG-APPL-01 PASS
+       note: checked: docs/work_orders/CCMAI_RUNTIME_118_CURRENT_PROPOSAL_UI.md
+[PASS] CVF-DG-ROLE-01 NOT_APPLICABLE_WITH_REASON - no role-bearing review artifact in scope
+       note: docs/reviews/R118_IMPLEMENTATION_WORKER_RETURN_2026-10-18.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)
+[PASS] CVF-DG-CLAIM-01 PASS
+       note: 0 explicit claim line(s) and 2 document(s) scanned
+RESULT: PASS phase=worker-return mandatoryControls=6 failed=0

@@ -1,0 +1,10 @@
+[PASS] CVF-DG-INST-01 PASS
+[PASS] CVF-DG-CONT-01 PASS
+[PASS] CVF-DG-RANGE-01 PASS
+       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=041274966c515d598cd4e32549a4349ee7b91aaa candidates=21 deleted=0
+[PASS] CVF-DG-APPL-01 PASS
+       note: checked: docs/work_orders/CCMAI_RUNTIME_111_REMAINING_UI.md
+       note: docs/work_orders/CCMAI_RUNTIME_110_REMAINING_UI.md: status BLOCKED_WITH_REASON is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract
+[PASS] CVF-DG-ROUTE-01 PASS
+       note: checked: docs/work_orders/CCMAI_RUNTIME_110_REMAINING_UI.md, docs/work_orders/CCMAI_RUNTIME_111_REMAINING_UI.md
+RESULT: PASS phase=pre-dispatch mandatoryControls=5 failed=0

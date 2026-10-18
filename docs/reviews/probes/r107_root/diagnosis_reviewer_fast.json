@@ -1,0 +1,19 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+    "run",
+    "--phase",
+    "reviewer-fast",
+    "--project-root",
+    ".",
+    "--packet",
+    "docs/work_orders/CCMAI_RUNTIME_107_CODEX_R101_UI_EVIDENCE.md",
+    "--packet",
+    "docs/reviews/R107_REOPEN_DIAGNOSIS_AND_R108_PROPOSAL_2026-10-16.md"
+  ],
+  "exitCode": 0,
+  "elapsedSeconds": 0.8924104000034276,
+  "recordedAtUTC": "2026-10-16T12:05:25.934506+00:00"
+}

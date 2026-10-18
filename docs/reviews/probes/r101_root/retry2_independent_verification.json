@@ -1,0 +1,337 @@
+{
+  "reviewedAt": "2026-10-15T13:29:53.387708+00:00",
+  "reviewer": "Codex /root",
+  "scope": "Read-only file integrity/current safe Docker state; no browser/server/native/provider replay",
+  "reportSha256": "f2c7157b367045a2c7581ef8f20da3d4cd05e98814fe159843d5879ef7ab44da",
+  "manifestSha256": "0204de347eb3c60597f1d3507ebd976ffb6fa7a23af45fd010c1c0757afde2b1",
+  "manifestEntries": [
+    {
+      "path": "docs/reviews/R101_CLAUDE_BROWSER_RETRY2_RETURN_2026-10-15.md",
+      "exists": true,
+      "sha256Matches": true,
+      "sizeMatches": true,
+      "gitIgnoredRuntimeDuplicate": false
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/owner_supplemental_authorization.txt",
+      "exists": true,
+      "sha256Matches": true,
+      "sizeMatches": true,
+      "gitIgnoredRuntimeDuplicate": false
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/pre_browser_acknowledgment_receipt.json",
+      "exists": true,
+      "sha256Matches": true,
+      "sizeMatches": true,
+      "gitIgnoredRuntimeDuplicate": false
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/browser_capability_subagent_attempt.json",
+      "exists": true,
+      "sha256Matches": true,
+      "sizeMatches": true,
+      "gitIgnoredRuntimeDuplicate": false
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/browser_capability_subagent_error.txt",
+      "exists": true,
+      "sha256Matches": true,
+      "sizeMatches": true,
+      "gitIgnoredRuntimeDuplicate": false
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/browser_capability_main_thread_attempt.json",
+      "exists": true,
+      "sha256Matches": true,
+      "sizeMatches": true,
+      "gitIgnoredRuntimeDuplicate": false
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/browser_capability_main_thread_error.txt",
+      "exists": true,
+      "sha256Matches": true,
+      "sizeMatches": true,
+      "gitIgnoredRuntimeDuplicate": false
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/browser_capability_playwright_subagent_attempt.json",
+      "exists": true,
+      "sha256Matches": true,
+      "sizeMatches": true,
+      "gitIgnoredRuntimeDuplicate": false
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/browser_capability_playwright_subagent_error.txt",
+      "exists": true,
+      "sha256Matches": true,
+      "sizeMatches": true,
+      "gitIgnoredRuntimeDuplicate": false
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/retry_counters_after.json",
+      "exists": true,
+      "sha256Matches": true,
+      "sizeMatches": true,
+      "gitIgnoredRuntimeDuplicate": false
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/cleanup_receipt.json",
+      "exists": true,
+      "sha256Matches": true,
+      "sizeMatches": true,
+      "gitIgnoredRuntimeDuplicate": false
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/source_binding.json",
+      "exists": true,
+      "sha256Matches": true,
+      "sizeMatches": true,
+      "gitIgnoredRuntimeDuplicate": false
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/git_status_after.json",
+      "exists": true,
+      "sha256Matches": true,
+      "sizeMatches": true,
+      "gitIgnoredRuntimeDuplicate": false
+    },
+    {
+      "path": ".cvf/runtime/r101_claude_retry2/browser_capability_subagent_error.txt",
+      "exists": true,
+      "sha256Matches": true,
+      "sizeMatches": true,
+      "gitIgnoredRuntimeDuplicate": true
+    },
+    {
+      "path": ".cvf/runtime/r101_claude_retry2/browser_capability_main_thread_error.txt",
+      "exists": true,
+      "sha256Matches": true,
+      "sizeMatches": true,
+      "gitIgnoredRuntimeDuplicate": true
+    },
+    {
+      "path": ".cvf/runtime/r101_claude_retry2/browser_capability_playwright_subagent_error.txt",
+      "exists": true,
+      "sha256Matches": true,
+      "sizeMatches": true,
+      "gitIgnoredRuntimeDuplicate": true
+    }
+  ],
+  "imageFilesDeclared": [],
+  "sourceChecks": [
+    {
+      "path": "backend/api/handlers/intervention.go",
+      "matchesR101": true
+    },
+    {
+      "path": "backend/api/handlers/intervention_m3.go",
+      "matchesR101": true
+    },
+    {
+      "path": "backend/api/handlers/intervention_m3_test.go",
+      "matchesR101": true
+    },
+    {
+      "path": "backend/api/router.go",
+      "matchesR101": false
+    },
+    {
+      "path": "backend/db/models/intervention.go",
+      "matchesR101": false
+    },
+    {
+      "path": "backend/db/mysql.go",
+      "matchesR101": false
+    },
+    {
+      "path": "backend/engine/intervention.go",
+      "matchesR101": true
+    },
+    {
+      "path": "backend/engine/intervention_m3.go",
+      "matchesR101": true
+    },
+    {
+      "path": "frontend/src/__tests__/intervention-api.test.ts",
+      "matchesR101": true
+    },
+    {
+      "path": "frontend/src/__tests__/intervention-ui.test.ts",
+      "matchesR101": true
+    },
+    {
+      "path": "frontend/src/api/intervention.ts",
+      "matchesR101": true
+    },
+    {
+      "path": "frontend/src/i18n/en.ts",
+      "matchesR101": true
+    },
+    {
+      "path": "frontend/src/i18n/vi.ts",
+      "matchesR101": true
+    },
+    {
+      "path": "frontend/src/layouts/DefaultLayout.vue",
+      "matchesR101": true
+    },
+    {
+      "path": "frontend/src/router/index.ts",
+      "matchesR101": true
+    },
+    {
+      "path": "frontend/src/views/InterventionCases.vue",
+      "matchesR101": true
+    },
+    {
+      "path": "frontend/src/views/Users.vue",
+      "matchesR101": true
+    }
+  ],
+  "r101Binary": {
+    "path": ".cvf\\runtime\\r101_worker\\r101_handlers.test.exe",
+    "exists": true,
+    "sha256": "4c7575e180dd198d995bfe09bdc45061740a987be8ec0765f02b203e1c251f31"
+  },
+  "sharedCounters": {
+    "workerGo": 1,
+    "reviewerGo": 2,
+    "aggregateGo": 3,
+    "fixtureReservations": 2,
+    "nodeChecks": 3,
+    "frontendBuilds": 1,
+    "providerCalls": 0,
+    "mockProviderCalls": 0,
+    "launches": [
+      "six_native_human_tests",
+      "real_router_browser_fixture"
+    ]
+  },
+  "counterValuesMatchReturn": true,
+  "sourceTrackedDiff": [],
+  "safeProtectedComparisons": [
+    {
+      "current": {
+        "id": "0770fa03aee1c748425e03dcc6a3e3a8413ef2365a6981dc3fc5259e66b2fe3e",
+        "name": "/ccma-nginx-1",
+        "image": "sha256:ea146e630ecce789e6ebd966d9fd82f89a678db76aab768724e784cd91e092d8",
+        "status": "running",
+        "mounts": [
+          {
+            "Destination": "/etc/lego",
+            "Driver": "local",
+            "Mode": "rw",
+            "Name": "ccma_lego_certs",
+            "Propagation": "",
+            "RW": true,
+            "Source": "/var/lib/docker/volumes/ccma_lego_certs/_data",
+            "Type": "volume"
+          },
+          {
+            "Destination": "/var/www/acme",
+            "Driver": "local",
+            "Mode": "rw",
+            "Name": "ccma_lego_webroot",
+            "Propagation": "",
+            "RW": true,
+            "Source": "/var/lib/docker/volumes/ccma_lego_webroot/_data",
+            "Type": "volume"
+          }
+        ]
+      },
+      "equalsR102ProtectedBaseline": true,
+      "exit": 0
+    },
+    {
+      "current": {
+        "id": "07822f249ff071e4f9f08463da804279a57b151901345b7560047d1b23662027",
+        "name": "/ccma-app-1",
+        "image": "sha256:4de9a938fb4d1bef55c4f3beb777e95c3333c644b80e8cd1798f804835e444a4",
+        "status": "running",
+        "mounts": [
+          {
+            "Destination": "/var/lib/cqa/files",
+            "Driver": "local",
+            "Mode": "rw",
+            "Name": "ccma_file_storage",
+            "Propagation": "",
+            "RW": true,
+            "Source": "/var/lib/docker/volumes/ccma_file_storage/_data",
+            "Type": "volume"
+          }
+        ]
+      },
+      "equalsR102ProtectedBaseline": true,
+      "exit": 0
+    },
+    {
+      "current": {
+        "id": "e1555e03d69360e1cd7729afd9e52856443f5172d76454653beec981a7d6477a",
+        "name": "/ccmai-r101-review-final-20261015",
+        "image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+        "status": "exited",
+        "mounts": [
+          {
+            "Destination": "/var/lib/mysql",
+            "Driver": "local",
+            "Mode": "z",
+            "Name": "ccmai-r101-review-final-20261015",
+            "Propagation": "",
+            "RW": true,
+            "Source": "/var/lib/docker/volumes/ccmai-r101-review-final-20261015/_data",
+            "Type": "volume"
+          }
+        ]
+      },
+      "equalsR102ProtectedBaseline": true,
+      "exit": 0
+    },
+    {
+      "current": {
+        "id": "ee1fc7f682631ac3c0ca57b80aff7e233ddde405c2618f35ca0aae6e60e23314",
+        "name": "/ccma-db-1",
+        "image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+        "status": "running",
+        "mounts": [
+          {
+            "Destination": "/var/lib/mysql",
+            "Driver": "local",
+            "Mode": "rw",
+            "Name": "ccma_mysql_data",
+            "Propagation": "",
+            "RW": true,
+            "Source": "/var/lib/docker/volumes/ccma_mysql_data/_data",
+            "Type": "volume"
+          }
+        ]
+      },
+      "equalsR102ProtectedBaseline": true,
+      "exit": 0
+    }
+  ],
+  "r102CurrentSafeState": {
+    "id": "e0beb8f8946adba643d2fded6971818b0d9b3848958a0ef0a234e3d03a5b1076",
+    "name": "/ccmai-r102-review-20261015",
+    "image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "status": "exited",
+    "mounts": [
+      {
+        "Destination": "/var/lib/mysql",
+        "Driver": "local",
+        "Mode": "z",
+        "Name": "ccmai-r102-review-20261015",
+        "Propagation": "",
+        "RW": true,
+        "Source": "/var/lib/docker/volumes/ccmai-r102-review-20261015/_data",
+        "Type": "volume"
+      }
+    ]
+  },
+  "limitations": [
+    "Hashes do not authenticate tool execution, actor identity or timestamps.",
+    "Current Docker equality cannot establish historical noninterference.",
+    "Runtime duplicate manifest entries are ignored local files; portable copies exist under docs.",
+    "This reviewer did not repeat screenshot/CDN/browser checks."
+  ]
+}

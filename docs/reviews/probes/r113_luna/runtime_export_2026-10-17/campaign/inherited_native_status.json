@@ -1,0 +1,8 @@
+{
+  "actionCount": 0,
+  "actions": [],
+  "claim": "R109 native diagnostic evidence is inherited only; R113 executed no native invocation or action POST.",
+  "classification": "INHERITED_NOT_RUN",
+  "exitCode": null,
+  "lifecycleAccepted": null
+}

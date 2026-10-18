@@ -1,0 +1,6 @@
+id
+tenant_id
+job_id
+cap
+consumed
+created_at

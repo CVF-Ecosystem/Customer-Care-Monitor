@@ -1,0 +1,21 @@
+{
+  "kind": "ROOT_OPERATION_TRANSCRIPTION_NOT_RAW_TOOL_EXPORT",
+  "tabId": "1",
+  "browserId": "2",
+  "source": "Actual CUA calls and saved DOM/original JPG outputs in this conversation",
+  "loginPostsIntended": 1,
+  "logoutObservedLoginPage": true,
+  "caseActions": 0,
+  "providerCalls": 0,
+  "viewportObserved": {
+    "width": 390,
+    "height": 844
+  },
+  "offline": "NOT_RUN_UNSUPPORTED",
+  "qualifications": [
+    "Vite auto-optimized dependencies/reloaded; first SPA queue click did not persist; one direct goto to observed queue href succeeded, no service restart/auth replay",
+    "locator main.press(End) could not focus main; tab.pressKey(End/Home/PageDown) succeeded",
+    "first desktop history screenshot captured mid-scroll; settled original saved separately",
+    "original JPEG/raster and CSS dimensions are recorded separately; no resize/conversion"
+  ]
+}

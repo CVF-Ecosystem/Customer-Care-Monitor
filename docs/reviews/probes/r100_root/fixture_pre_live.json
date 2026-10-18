@@ -1,0 +1,52 @@
+{
+  "reviewer": "Codex /root",
+  "recordedAt": "2026-10-14T20:57:54Z",
+  "ownership": {
+    "createdAt": "2026-10-14T20:56:02Z",
+    "imageId": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "name": "ccmai-r100-live-20261015",
+    "network": "ccmai-r100-isolated-20261015",
+    "port": 64944,
+    "protectedIds": {
+      "ccma-app-1": "07822f249ff071e4f9f08463da804279a57b151901345b7560047d1b23662027",
+      "ccma-db-1": "ee1fc7f682631ac3c0ca57b80aff7e233ddde405c2618f35ca0aae6e60e23314",
+      "ccma-nginx-1": "0770fa03aee1c748425e03dcc6a3e3a8413ef2365a6981dc3fc5259e66b2fe3e"
+    },
+    "containerId": "88c14ee97ffd41d8ab61da3679e2c6b97cc15033c16c35a1e246e0cbe298385f",
+    "networkId": "090f219443a916efb7881b2d5f16a91f63e312cd48705bee9f4d00244fe5b274",
+    "volumeIds": [
+      "8af062efad37cb17e29b4b17841867b88eaf74fb920d034385dca6e2e9a1216e"
+    ]
+  },
+  "fixture": {
+    "channel": "fe905a2e-a332-4a03-bb6f-b74b8602351c",
+    "conversations": [
+      "d1210498-1369-4f8b-818d-095cc949b8da",
+      "000677ed-1fbb-4142-adaf-428b949b2d43",
+      "3fbe94f7-1efe-496b-8b48-112ba21611e0",
+      "5c657697-b05a-45e9-be62-0fd6c25a24cf"
+    ],
+    "deny_conversation": "c19ac74b-8c36-414e-bbe6-a61603d9b421",
+    "deny_job": "84739d36-8f7d-426f-bdf7-3b8f8c4c4d26",
+    "job": "dd49663a-61d3-46a1-a71e-9d91583d65e9",
+    "tenant": "ff34e5cd-8ba6-4784-820b-1582b1e4f2e2",
+    "user": "76039cd8-e473-45fc-aa2c-e19cfc66a0ea",
+    "wait_conversation": "05c5488a-d76e-45b6-bbd0-5c7a93529001"
+  },
+  "manifestHashes": {
+    ".cvf/runtime/r100_live/ownership.json": "1e7f804765978e9e408c1f8aeb02a98f52863a1c9cc7ea7815701ff8d05a6c47",
+    ".cvf/runtime/r100_live/container_pin.json": "a050b3781fd7bcb7fa9afcecb70508c4419bdf86ab1b864b332bcdc4961b41ac",
+    ".cvf/runtime/r100_live/fixture.json": "1e16fb10672a5edd6893ad2580850340dcc465829e48004d6de674b910affdb8"
+  },
+  "dbReadback": {
+    "cap": 4,
+    "consumed": 0,
+    "attempts": 0,
+    "proposals": 0
+  },
+  "protectedContainerIdsVerified": true,
+  "binaryPin": "a111c0b62394ea5497bae2e272151d5fc195d8a4dca3787cc152970b09817f7d",
+  "providerCallsUsed": 0,
+  "goUsed": 2,
+  "liveAdmission": "ADMITTED_MAX4_UNTILFIRSTVALID_OR_HARDSTOP_ROOTCONTINUATION"
+}

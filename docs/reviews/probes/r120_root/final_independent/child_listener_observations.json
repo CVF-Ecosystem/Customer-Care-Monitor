@@ -1,0 +1,58 @@
+[
+  {
+    "observer": "backend-independent",
+    "port": 64408,
+    "listenerAbsent": true,
+    "evidenceKind": "HOST_LISTENER_ABSENT_MAPPING_REMOVED",
+    "argv": [
+      "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "-NoLogo",
+      "-NoProfile",
+      "-NonInteractive",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-Command",
+      "$ErrorActionPreference='Stop'; $p=[int]64408; $rows=@(Get-NetTCPConnection -State Listen -ErrorAction Stop | Where-Object { [int]$_.LocalPort -eq $p } | Select-Object -Property LocalAddress,LocalPort,OwningProcess); ConvertTo-Json -InputObject $rows -Compress"
+    ],
+    "powershellSha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f",
+    "powershellPath": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "commandSha256": "ab7627808883b2af2bb10d7578bb5f11535f74a9ac061a1d6c9244c3ff700571",
+    "rows": [],
+    "capturedAtEpochSeconds": 1792283343.4946818,
+    "raw": {
+      "directory": ".cvf/runtime/r120_ui/listener_observations/0001-backend-independent-64408",
+      "stdout": "stdout.bin",
+      "stderr": "stderr.bin",
+      "exit": "exit.json",
+      "command": "command.json"
+    }
+  },
+  {
+    "observer": "vite-independent",
+    "port": 3019,
+    "listenerAbsent": true,
+    "evidenceKind": "HOST_LISTENER_ABSENT_MAPPING_REMOVED",
+    "argv": [
+      "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "-NoLogo",
+      "-NoProfile",
+      "-NonInteractive",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-Command",
+      "$ErrorActionPreference='Stop'; $p=[int]3019; $rows=@(Get-NetTCPConnection -State Listen -ErrorAction Stop | Where-Object { [int]$_.LocalPort -eq $p } | Select-Object -Property LocalAddress,LocalPort,OwningProcess); ConvertTo-Json -InputObject $rows -Compress"
+    ],
+    "powershellSha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f",
+    "powershellPath": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "commandSha256": "1b014bb9d2530cc3e89011f6c350b01d000c47a35284ba0e836ebe4883beff3d",
+    "rows": [],
+    "capturedAtEpochSeconds": 1792283344.486343,
+    "raw": {
+      "directory": ".cvf/runtime/r120_ui/listener_observations/0001-vite-independent-3019",
+      "stdout": "stdout.bin",
+      "stderr": "stderr.bin",
+      "exit": "exit.json",
+      "command": "command.json"
+    }
+  }
+]

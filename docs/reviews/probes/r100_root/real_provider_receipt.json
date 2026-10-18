@@ -1,0 +1,16 @@
+{
+  "provider": "Alibaba",
+  "model": "qwen3.7-flash",
+  "providerCall": true,
+  "mock": false,
+  "inputDataClass": "synthetic",
+  "request": "{\"enable_thinking\":false,\"max_completion_tokens\":758,\"messages\":[{\"role\":\"system\",\"content\":\"Analyze only the fabricated Vietnamese customer complaint. Return exactly one compact JSON object without markdown or aliases. Required top-level keys: schema, conversation_id, snapshot_digest, kind, explanation, next_action, evidence_refs. Set schema to ccma.intervention.v1; kind to complaint. Set conversation_id and snapshot_digest to the exact values in the next instruction. evidence_refs must be an array with exactly one object using keys message_id and quote. Copy the canonical customer message_id and a short exact Unicode quote containing 'khiếu nại' from the transcript. Give a short explanation and next_action. Do not invent IDs or quotes.\\nReturn one JSON object with schema ccma.intervention.v1, conversation_id d1210498-1369-4f8b-818d-095cc949b8da, snapshot_digest 49c656cc441e1b9d5995f5ff33d1e52e820b9709e28fe48f0503a51d5384642b, kind complaint or waiting, explanation, next_action, and evidence_refs with canonical message_id and exact quote.\"},{\"role\":\"user\",\"content\":\"[2026-10-15T03:56:26+07:00 | msg:e0236338-6b7e-4546-8c06-a6d9bdb60a02] customer (customer): Tôi khiếu nại đơn SYN-201 giao sai hàng.\\n\"}],\"model\":\"qwen3.7-flash\"}",
+  "response": "{\"id\":\"chatcmpl-025eb283-e098-9881-9d79-5d89b4406d10\",\"object\":\"chat.completion\",\"created\":1792011580,\"model\":\"qwen3.7-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"schema\\\": \\\"ccma.intervention.v1\\\",\\n  \\\"conversation_id\\\": \\\"d1210498-1369-4f8b-818d-095cc949b8da\\\",\\n  \\\"snapshot_digest\\\": \\\"49c656cc441e1b9d5995f5ff33d1e52e820b9709e28fe48f0503a51d5384642b\\\",\\n  \\\"kind\\\": \\\"complaint\\\",\\n  \\\"explanation\\\": \\\"Customer explicitly states a complaint regarding incorrect delivery for order SYN-201.\\\",\\n  \\\"next_action\\\": \\\"Investigate shipping records and initiate return or replacement process for order SYN-201.\\\",\\n  \\\"evidence_refs\\\": [\\n    {\\n      \\\"message_id\\\": \\\"e0236338-6b7e-4546-8c06-a6d9bdb60a02\\\",\\n      \\\"quote\\\": \\\"Tôi khiếu nại đơn SYN-201 giao sai hàng.\\\"\\n    }\\n  ]\\n}\"},\"finish_reason\":\"stop\",\"logprobs\":null}],\"usage\":{\"prompt_tokens\":360,\"total_tokens\":621,\"completion_tokens\":261,\"prompt_tokens_details\":{\"cached_tokens\":0,\"text_tokens\":360}}}",
+  "sourceCommit": "a5eb32d8ae5ce8abe3413cafcba3fc620543689d",
+  "receiptSha256": "c3cf9a8cad78cbfed4b784a802cd17b65e5814e966232755f3c158d9bf0c6c70",
+  "httpStatus": 200,
+  "inputTokens": 360,
+  "outputTokens": 261,
+  "enableThinking": false,
+  "scope": "One bounded complaint proposal andfaithfulusage; nofullM2/M3/quality/pilot/billing/hosted/deployed proof"
+}

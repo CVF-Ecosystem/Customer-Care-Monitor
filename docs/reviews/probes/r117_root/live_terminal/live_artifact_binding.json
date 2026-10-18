@@ -1,0 +1,11 @@
+{
+  "physicalMarkerCount": 1,
+  "physicalMarkers": {
+    "slot-1.effect": "44bccd52f9c893c59e7b6da9cca34294b2f194137caec8fb5b842737d5ef9403"
+  },
+  "artifacts": {
+    "docs/reviews/probes/r117_root/live/r116_live_wire.json": "69bb136a2967f7c538e3eed8e8ab04cefaf7262654ad2cf36fff1d9a22e1b632"
+  },
+  "unsafeFilesRedacted": [],
+  "requiresIndependentProviderUsageAndDBCounterReview": true
+}

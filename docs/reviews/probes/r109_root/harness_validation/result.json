@@ -1,0 +1,17 @@
+{
+  "regressionTests": 3,
+  "regressionsPassed": true,
+  "sourcePins": {
+    "docs\\reviews\\probes\\r109_luna\\r109_workflow_runner.py": "fa502b56fdef4c51712d0fe2be5f66705f05a7cd6564e3b28505fec960e5eaf0",
+    "docs\\reviews\\probes\\r109_luna\\r109_vite_config.mjs.template": "a07f20c1a825aa14e0772069a466d3f49c34bd0e3628523b2cabad71474d3c68"
+  },
+  "configImportCommand": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r109_root\\assert_config.mjs",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r109_root\\harness_validation\\vite.config.mjs",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\frontend"
+  ],
+  "configImportExitCode": 0,
+  "nodeSha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+  "scope": "OFFLINE_HARNESS_AND_MODULE_IMPORT_ONLY; product runtime NOT_RUN"
+}

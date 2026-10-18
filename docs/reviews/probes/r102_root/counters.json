@@ -1,0 +1,54 @@
+{
+  "workerGo": 4,
+  "reviewerGo": 3,
+  "aggregateGo": 7,
+  "fixtureReservations": 1,
+  "providerCalls": 0,
+  "mockProviderCalls": 0,
+  "launches": [
+    {
+      "role": "worker",
+      "kind": "offline_handlers_compile",
+      "commandReceipt": "docs/reviews/probes/r102_worker/handlers_compile_command.json",
+      "exit": 0,
+      "counterAlreadyConsumed": true,
+      "reconciledAfterExecutionByRoot": true
+    },
+    {
+      "kind": "offline_handlers_r2_compile",
+      "role": "worker",
+      "exit": 0,
+      "counterAlreadyConsumed": true,
+      "commandReceipt": "docs/reviews/probes/r102_worker/handlers_r2_compile_command.json"
+    },
+    {
+      "role": "worker",
+      "kind": "offline_engine_compile",
+      "counterAlreadyConsumed": true,
+      "commandReceipt": "docs/reviews/probes/r102_worker/engine_compile_command.json",
+      "exit": 0
+    },
+    {
+      "role": "reviewer",
+      "kind": "native_binary",
+      "pattern": "^TestR102"
+    },
+    {
+      "role": "reviewer",
+      "kind": "native_binary",
+      "pattern": "^TestR102"
+    },
+    {
+      "commandReceipt": "docs/reviews/probes/r102_worker/handlers_r3_compile_command.json",
+      "exit": 0,
+      "kind": "offline_handlers_r3_compile",
+      "counterAlreadyConsumed": true,
+      "role": "worker"
+    },
+    {
+      "role": "reviewer",
+      "kind": "native_binary",
+      "pattern": "^TestR102"
+    }
+  ]
+}

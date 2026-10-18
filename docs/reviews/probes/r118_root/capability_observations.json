@@ -1,0 +1,49 @@
+{
+  "recordKind": "ROOT_TRANSCRIPTION_OF_TOOL_OBSERVATIONS_NOT_RAW_TOOL_EXPORT",
+  "date": "2026-10-18",
+  "checkpoint": "efa456a98f2a43ec13cfbc79b394be86d63a1efa",
+  "browser": {
+    "inventory": "apps empty; IAB id2 and MCP Apps id1, no tabs",
+    "capabilities": [
+      "visibility",
+      "viewport"
+    ],
+    "tabCapabilities": [
+      "pageAssets",
+      "webmcp"
+    ],
+    "blankDiagnostic": {
+      "cssWidth": 390,
+      "cssHeight": 844,
+      "originalMime": "image/jpeg",
+      "originalBytes": 2271,
+      "jpegWidth": 390,
+      "jpegHeight": 843,
+      "cleanup": "viewport reset and exact diagnostic tab closed; final tabs empty"
+    },
+    "offline": "NOT_RUN_UNSUPPORTED",
+    "claim": "capability only, no product screenshot or B08 PASS"
+  },
+  "docker": {
+    "command": [
+      "docker",
+      "version",
+      "--format",
+      "{{.Server.Version}}"
+    ],
+    "timeoutSeconds": 15,
+    "exit": 0,
+    "stdout": "29.8.2",
+    "stderr": "",
+    "elapsedSeconds": 0.25
+  },
+  "effects": {
+    "blankDiagnosticTabsOpenedAndClosed": 1,
+    "productRuntimeStarts": 0,
+    "dockerMutations": 0,
+    "dbAccess": 0,
+    "providerCalls": 0
+  },
+  "r117": "Spent authority unchanged; no replay",
+  "sourceUi": "R118 source/component scope, actual changed-screen proof remains NOT_RUN"
+}

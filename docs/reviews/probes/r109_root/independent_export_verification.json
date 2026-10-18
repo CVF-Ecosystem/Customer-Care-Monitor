@@ -1,0 +1,18 @@
+{
+  "result": "PASS",
+  "includedSourceCopiesVerified": 306,
+  "actualUiPostsFromGin": 11,
+  "uiActionAttempts": 7,
+  "uiAction409": 1,
+  "uiAcceptedHumanWrites": 6,
+  "authPosts": 4,
+  "originalSupervisorCleanup": "NOT_OBSERVED",
+  "rootExactFixtureRecovery": "PASS_SEPARATE_RECEIPT",
+  "goBinaryExcluded": {
+    "source": ".cvf/runtime/r108_native/campaign/r108_handlers.test.exe",
+    "copied": false,
+    "bytes": 58031616,
+    "sha256": "cb73ee13e0369cca75ea276cc668f30c3ced42cead5f62c56d68f3c1eaa66f93",
+    "reason": "Admitted reused binary is retained in its original ignored runtime path; the 58 MB binary is excluded from this evidence export."
+  }
+}

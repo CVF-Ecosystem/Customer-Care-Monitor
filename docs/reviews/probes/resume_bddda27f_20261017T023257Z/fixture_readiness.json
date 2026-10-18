@@ -1,0 +1,154 @@
+{
+  "status": "READINESS_PASS",
+  "fixture": {
+    "Id": "e1555e03d69360e1cd7729afd9e52856443f5172d76454653beec981a7d6477a",
+    "Name": "/ccmai-r101-review-final-20261015",
+    "Image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "Status": "exited",
+    "FixtureLabel": "CCMAI-RUNTIME-101",
+    "Mounts": [
+      {
+        "Type": "volume",
+        "Name": "ccmai-r101-review-final-20261015",
+        "Destination": "/var/lib/mysql",
+        "RW": true
+      }
+    ],
+    "PortBindings": {
+      "3306/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": ""
+        }
+      ]
+    },
+    "Networks": [
+      {
+        "Name": "ccmai-r101-review-final-20261015",
+        "NetworkID": "35c3959ac41517050defad05cbad7a08717b24c8879683e25baf3e2702625e98"
+      }
+    ],
+    "Ports": {}
+  },
+  "network": {
+    "Id": "35c3959ac41517050defad05cbad7a08717b24c8879683e25baf3e2702625e98",
+    "Name": "ccmai-r101-review-final-20261015",
+    "Containers": []
+  },
+  "volumeUsers": [
+    "e1555e03d69360e1cd7729afd9e52856443f5172d76454653beec981a7d6477a"
+  ],
+  "protected": [
+    {
+      "Id": "0770fa03aee1c748425e03dcc6a3e3a8413ef2365a6981dc3fc5259e66b2fe3e",
+      "Name": "/ccma-nginx-1",
+      "Image": "sha256:ea146e630ecce789e6ebd966d9fd82f89a678db76aab768724e784cd91e092d8",
+      "Status": "running",
+      "Mounts": [
+        {
+          "Type": "volume",
+          "Name": "ccma_lego_certs",
+          "Destination": "/etc/lego",
+          "RW": true
+        },
+        {
+          "Type": "volume",
+          "Name": "ccma_lego_webroot",
+          "Destination": "/var/www/acme",
+          "RW": true
+        }
+      ],
+      "PortBindings": {
+        "443/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "8443"
+          }
+        ],
+        "80/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "8088"
+          }
+        ]
+      },
+      "Networks": [
+        {
+          "Name": "ccma_default",
+          "NetworkID": "0a8211cc7d1c5e368d21e4fd788af74683e784a913214c6d5da4c693277b48b3"
+        }
+      ]
+    },
+    {
+      "Id": "07822f249ff071e4f9f08463da804279a57b151901345b7560047d1b23662027",
+      "Name": "/ccma-app-1",
+      "Image": "sha256:4de9a938fb4d1bef55c4f3beb777e95c3333c644b80e8cd1798f804835e444a4",
+      "Status": "running",
+      "Mounts": [
+        {
+          "Type": "volume",
+          "Name": "ccma_file_storage",
+          "Destination": "/var/lib/cqa/files",
+          "RW": true
+        }
+      ],
+      "PortBindings": {},
+      "Networks": [
+        {
+          "Name": "ccma_default",
+          "NetworkID": "0a8211cc7d1c5e368d21e4fd788af74683e784a913214c6d5da4c693277b48b3"
+        }
+      ]
+    },
+    {
+      "Id": "e0beb8f8946adba643d2fded6971818b0d9b3848958a0ef0a234e3d03a5b1076",
+      "Name": "/ccmai-r102-review-20261015",
+      "Image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+      "Status": "exited",
+      "Mounts": [
+        {
+          "Type": "volume",
+          "Name": "ccmai-r102-review-20261015",
+          "Destination": "/var/lib/mysql",
+          "RW": true
+        }
+      ],
+      "PortBindings": {
+        "3306/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": ""
+          }
+        ]
+      },
+      "Networks": [
+        {
+          "Name": "ccmai-r102-review-20261015",
+          "NetworkID": "519895bcc067ebaa133faee70ada1ebc16d091ee83588daead22b229932ce954"
+        }
+      ]
+    },
+    {
+      "Id": "ee1fc7f682631ac3c0ca57b80aff7e233ddde405c2618f35ca0aae6e60e23314",
+      "Name": "/ccma-db-1",
+      "Image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+      "Status": "running",
+      "Mounts": [
+        {
+          "Type": "volume",
+          "Name": "ccma_mysql_data",
+          "Destination": "/var/lib/mysql",
+          "RW": true
+        }
+      ],
+      "PortBindings": {},
+      "Networks": [
+        {
+          "Name": "ccma_default",
+          "NetworkID": "0a8211cc7d1c5e368d21e4fd788af74683e784a913214c6d5da4c693277b48b3"
+        }
+      ]
+    }
+  ],
+  "effects": 0
+}

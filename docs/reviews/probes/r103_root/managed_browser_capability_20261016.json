@@ -1,0 +1,18 @@
+{
+  "clientDate": "2026-10-16",
+  "reviewer": "Codex /root",
+  "earlierDiscovery": {
+    "apps": [],
+    "browsers": []
+  },
+  "command": "cua.createBrowserTab(\"iab\", \"about:blank\", { visible: true })",
+  "result": "BLOCKED_BROWSER_PROVIDER_UNAVAILABLE",
+  "rawError": "Browser is not available: iab",
+  "tabHandleReturned": false,
+  "ownedTabsCreated": 0,
+  "applicationUrlOpened": false,
+  "screenshotAttempted": false,
+  "AntigravityBrowserSubagent": "NOT_EXPOSED_IN_THIS_CODEX_SESSION",
+  "standaloneDriver": "PASS_SEPARATE_HEALTH_TEST",
+  "fixtureServerLaunches": 0
+}

@@ -1,0 +1,42 @@
+{
+  "result": {
+    "containerState": "exited",
+    "containerPid": 0,
+    "containerPorts": {},
+    "dockerTerminalObserved": true,
+    "listenerAbsent": true,
+    "evidenceKind": "HOST_LISTENER_ABSENT_MAPPING_REMOVED",
+    "listenerObservation": {
+      "observer": "fixture",
+      "port": 64629,
+      "listenerAbsent": true,
+      "evidenceKind": "HOST_LISTENER_ABSENT_MAPPING_REMOVED",
+      "argv": [
+        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "-NoLogo",
+        "-NoProfile",
+        "-NonInteractive",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-Command",
+        "$ErrorActionPreference='Stop'; $p=[int]64629; $rows=@(Get-NetTCPConnection -State Listen -ErrorAction Stop | Where-Object { [int]$_.LocalPort -eq $p } | Select-Object -Property LocalAddress,LocalPort,OwningProcess); ConvertTo-Json -InputObject $rows -Compress"
+      ],
+      "powershellSha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f",
+      "powershellPath": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "commandSha256": "af1924a5de77c793554b2ed72df4b01b4cc98d879f96a34df6e08a86279cec2b",
+      "rows": [],
+      "capturedAtEpochSeconds": 1792283318.9952996,
+      "raw": {
+        "directory": ".cvf/runtime/r120_ui/listener_observations/0001-fixture-64629",
+        "stdout": "stdout.bin",
+        "stderr": "stderr.bin",
+        "exit": "exit.json",
+        "command": "command.json"
+      }
+    },
+    "protectedEqual": true
+  },
+  "at": 1792283319.2392156,
+  "originalSupervisorTerminal": "MISSING",
+  "claim": "Separate actual Root cleanup; never substitutes original terminal or effect fingerprint proof"
+}

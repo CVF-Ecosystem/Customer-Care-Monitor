@@ -1,0 +1,8 @@
+{
+  "frontend/src/__tests__/intervention-ui.test.ts": "4f4b02763208ddae13d0699de601fa9a786996eeb0ec3ce45aa8f0ffc4cc3f0c",
+  "frontend/src/api/intervention.ts": "9177f0c9b805ca277c35c05bc7052954d272a3bb8df457ed3cb3822ef5f4d9ef",
+  "frontend/src/i18n/en.ts": "fdef63db782a2aaa6b2b07f61c86df78b7edc04006062afff8cdb040ddb9db30",
+  "frontend/src/i18n/vi.ts": "bddd1cf50e69566991ffa0124909c860754cc7b3460add3ccaec4f0007287764",
+  "frontend/src/utils/interventionPresentation.ts": "7855913e6f249b905a1f6b8df1b409c55a3e71a12a9f8745fa2350a1acd38e71",
+  "frontend/src/views/InterventionCases.vue": "ef16c32177138a4d8acc65bfbd8403a0ef30b1b61602e65c6d246e5b6b5542d9"
+}

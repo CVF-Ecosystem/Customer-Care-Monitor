@@ -1,0 +1,14 @@
+{
+  "containerAbsent": true,
+  "anonymousVolumesChecked": [
+    "de794dcadfdbb235c7c58a592c6b6d66d7e78f1eccae62890a80f03b421a7cfd"
+  ],
+  "protectedContainerIdsUnchanged": true,
+  "removedContainerId": "99f703cbbb661ec03f037ab2c05560d791b98d55c00626a681bfd8988404e880",
+  "remainingVolumes": [],
+  "removedNetworks": [
+    "ccmai-r094-root-net-3440bc463318",
+    "ccmai-r094-root-net-3440bc463318-bridge"
+  ],
+  "providerRequests": 0
+}

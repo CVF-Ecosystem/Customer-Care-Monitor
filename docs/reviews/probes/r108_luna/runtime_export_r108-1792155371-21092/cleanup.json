@@ -1,0 +1,167 @@
+{
+  "elapsedSeconds": 60.721,
+  "errors": [
+    "fixture cleanup: fixture stop identity mismatch"
+  ],
+  "fixtureCleanup": {
+    "stopAttempted": false
+  },
+  "fixtureStartAttempted": true,
+  "ownedProcessStates": [
+    {
+      "exitCode": 0,
+      "failureType": null,
+      "label": "target_inspect",
+      "ownedChildTreeTermination": null,
+      "pid": 11964,
+      "timedOut": false
+    },
+    {
+      "exitCode": 0,
+      "failureType": null,
+      "label": "target_network_inspect",
+      "ownedChildTreeTermination": null,
+      "pid": 19564,
+      "timedOut": false
+    },
+    {
+      "exitCode": 0,
+      "failureType": null,
+      "label": "fixture_volume_users",
+      "ownedChildTreeTermination": null,
+      "pid": 23624,
+      "timedOut": false
+    },
+    {
+      "exitCode": 0,
+      "failureType": null,
+      "label": "all_container_ids",
+      "ownedChildTreeTermination": null,
+      "pid": 25136,
+      "timedOut": false
+    },
+    {
+      "exitCode": 0,
+      "failureType": null,
+      "label": "protected_container_inspect",
+      "ownedChildTreeTermination": null,
+      "pid": 25388,
+      "timedOut": false
+    },
+    {
+      "exitCode": 0,
+      "failureType": null,
+      "label": "compile",
+      "ownedChildTreeTermination": null,
+      "pid": 8988,
+      "timedOut": false
+    },
+    {
+      "exitCode": 0,
+      "failureType": null,
+      "label": "target_inspect",
+      "ownedChildTreeTermination": null,
+      "pid": 18792,
+      "timedOut": false
+    },
+    {
+      "exitCode": 0,
+      "failureType": null,
+      "label": "target_network_inspect",
+      "ownedChildTreeTermination": null,
+      "pid": 15644,
+      "timedOut": false
+    },
+    {
+      "exitCode": 0,
+      "failureType": null,
+      "label": "fixture_volume_users",
+      "ownedChildTreeTermination": null,
+      "pid": 6792,
+      "timedOut": false
+    },
+    {
+      "exitCode": 0,
+      "failureType": null,
+      "label": "all_container_ids",
+      "ownedChildTreeTermination": null,
+      "pid": 24968,
+      "timedOut": false
+    },
+    {
+      "exitCode": 0,
+      "failureType": null,
+      "label": "protected_container_inspect",
+      "ownedChildTreeTermination": null,
+      "pid": 7040,
+      "timedOut": false
+    },
+    {
+      "exitCode": 0,
+      "failureType": null,
+      "label": "fixture_start",
+      "ownedChildTreeTermination": null,
+      "pid": 16020,
+      "timedOut": false
+    },
+    {
+      "exitCode": 0,
+      "failureType": null,
+      "label": "target_inspect",
+      "ownedChildTreeTermination": null,
+      "pid": 18504,
+      "timedOut": false
+    },
+    {
+      "exitCode": 0,
+      "failureType": null,
+      "label": "target_network_inspect",
+      "ownedChildTreeTermination": null,
+      "pid": 10972,
+      "timedOut": false
+    },
+    {
+      "exitCode": 0,
+      "failureType": null,
+      "label": "fixture_volume_users",
+      "ownedChildTreeTermination": null,
+      "pid": 28872,
+      "timedOut": false
+    },
+    {
+      "exitCode": 0,
+      "failureType": null,
+      "label": "target_inspect",
+      "ownedChildTreeTermination": null,
+      "pid": 16552,
+      "timedOut": false
+    },
+    {
+      "exitCode": 0,
+      "failureType": null,
+      "label": "fixture_stop",
+      "ownedChildTreeTermination": null,
+      "pid": 17760,
+      "timedOut": false
+    },
+    {
+      "exitCode": 0,
+      "failureType": null,
+      "label": "all_container_ids",
+      "ownedChildTreeTermination": null,
+      "pid": 10036,
+      "timedOut": false
+    },
+    {
+      "exitCode": 0,
+      "failureType": null,
+      "label": "protected_container_inspect",
+      "ownedChildTreeTermination": null,
+      "pid": 21136,
+      "timedOut": false
+    }
+  ],
+  "ownedProcessStopAttempted": false,
+  "processHandleCleanupChecked": true,
+  "protectedInventoryUnchanged": true
+}

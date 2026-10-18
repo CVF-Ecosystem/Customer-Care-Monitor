@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "WORKER_TOOL_SESSION_RECEIPT",
+  "command": "python -B docs/reviews/probes/r106_root/r106_ui_runner.py start --project-root .",
+  "cwd": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+  "worker": "/root/r105_successor_route",
+  "sessionId": 99507,
+  "startedAtUnix": 1792134910.7974155,
+  "initialExecObservation": {
+    "waitSeconds": 10.0059125,
+    "output": "",
+    "returnedSessionId": 99507
+  },
+  "finalExecObservation": {
+    "tool": "functions.exec -> write_stdin",
+    "output": "{\"reason\": \"owned Vite process exited before readiness\", \"result\": \"HOLD\", \"stage\": \"start\"}",
+    "exitCode": 1,
+    "sessionClosed": true,
+    "streamNote": "Tool result exposes combined command output, not independently separated stdout/stderr channels. Runner-captured child stdout/stderr logs and their metadata are preserved in runtime/ and runtime_export_manifest.json."
+  },
+  "readiness": {
+    "readyJsonPresent": true,
+    "runningJsonPresent": false,
+    "cleanupJsonPresent": true,
+    "productBrowserOpened": false,
+    "applicationActions": 0
+  },
+  "disposition": "ONE_ATTEMPT_CONSUMED_NO_RETRY"
+}

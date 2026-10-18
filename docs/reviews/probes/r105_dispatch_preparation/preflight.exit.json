@@ -1,0 +1,10 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "scripts/cvf_downstream_gate.py",
+    "preflight"
+  ],
+  "exitCode": 0,
+  "scope": "Local document state; not dispatch/runtime acceptance"
+}

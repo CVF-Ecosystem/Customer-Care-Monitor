@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-101",
+  "sourceBase": "4424e9d22521ded2be1a6fe0463c0ddccf9bc931",
+  "reviewer": "Codex /root",
+  "worker": "/root/m3_design",
+  "gofmt": "worker reported standalone exit0 on eight admitted files; formatted diff independently inspected",
+  "scope": "SOURCE_ONLY_COMPILE_NATIVE_BROWSER_NOT_RUN",
+  "goInvocations": 0,
+  "providerCalls": 0,
+  "files": [
+    {
+      "path": "backend/api/handlers/intervention.go",
+      "sha256": "72b4cd64edcfb87cac83cb0e21febe3f49fd2ecd5615c68c048bdbd26ccf7da4"
+    },
+    {
+      "path": "backend/api/handlers/intervention_m3.go",
+      "sha256": "e705ff907d408a3e0c3224e9284586bd61f86aad850a57451b45b75dc6ba038c"
+    },
+    {
+      "path": "backend/api/handlers/intervention_m3_test.go",
+      "sha256": "affe89cda3cdab1c0b3b8f365a6cce953977b0277ae153da5593953b5e7687bc"
+    },
+    {
+      "path": "backend/api/router.go",
+      "sha256": "08d568cb2fb370e7ca616e05ae0f0ac4e5408dab7f7229e6dd93b7eb03749c21"
+    },
+    {
+      "path": "backend/db/models/intervention.go",
+      "sha256": "ad81997042e9f9815aded39c1d772068c9286d82b7dfec7a5021d7177addac63"
+    },
+    {
+      "path": "backend/db/mysql.go",
+      "sha256": "190ad7d513200fac27770b87098dba98f43804a1206856f1817f73d9ad900700"
+    },
+    {
+      "path": "backend/engine/intervention.go",
+      "sha256": "7a729301958d448ac7847486a88675bf19b0fb6e13c6bbfec4a601a9024c6a97"
+    },
+    {
+      "path": "backend/engine/intervention_m3.go",
+      "sha256": "4b9ea8114e28285d2300b1c8b8db08589d1289cd5787231436268e504bd20dd6"
+    },
+    {
+      "path": "frontend/src/__tests__/intervention-api.test.ts",
+      "sha256": "06851bd2e20080165c69cbb224872b86c7d559dcc627863e9a4268cffaf464d8"
+    },
+    {
+      "path": "frontend/src/__tests__/intervention-ui.test.ts",
+      "sha256": "d1ed5788e74d1c2949006d37d55c96b16dfdef35393fc4a3e52a5edeaf81d6ba"
+    },
+    {
+      "path": "frontend/src/api/intervention.ts",
+      "sha256": "92061d56a4d3d98b7336b026c0c11e7f667e01961a22570f398f40728f8d4ada"
+    },
+    {
+      "path": "frontend/src/i18n/en.ts",
+      "sha256": "1a12bf64a05c2213d254cef6939357e814128795b3e03651fdf92b1a0ba15c71"
+    },
+    {
+      "path": "frontend/src/i18n/vi.ts",
+      "sha256": "c8f0b486879e168f59a83b0b47a2c863a622cc01d8a97b0ef79c22687a887343"
+    },
+    {
+      "path": "frontend/src/layouts/DefaultLayout.vue",
+      "sha256": "8af479143c96aead13d86cf3b7c99b969bd4c1a92303c78a402f3d5f245839be"
+    },
+    {
+      "path": "frontend/src/router/index.ts",
+      "sha256": "1640e1b52071032a599bc5db03f96e616f2af7d3532eafd1645707bc851fadcc"
+    },
+    {
+      "path": "frontend/src/views/InterventionCases.vue",
+      "sha256": "df388273c4fe84f05c12ab658f38c70bd79ab93b119c76af15e191f1ef5f8c55"
+    },
+    {
+      "path": "frontend/src/views/Users.vue",
+      "sha256": "1381df7511262b417cf4b79b248391736620a87dcf431def50c36864198cc03e"
+    }
+  ]
+}

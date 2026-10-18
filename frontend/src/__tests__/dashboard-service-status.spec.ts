@@ -24,7 +24,10 @@ const g = globalThis as unknown as { visualViewport?: unknown }
 g.visualViewport ??= { width: 1280, height: 800, offsetLeft: 0, offsetTop: 0, pageLeft: 0, pageTop: 0, scale: 1, addEventListener() {}, removeEventListener() {} }
 vi.setConfig({ testTimeout: 30_000 })
 
-const SERVICES = ['API Server', 'Database', 'Scheduler']
+const SERVICES = {
+  vi: ['Ứng dụng', 'Kho dữ liệu', 'Lịch chạy tự động'],
+  en: ['Application', 'Data storage', 'Automated schedule'],
+}
 const mounted: VueWrapper[] = []
 let dashboardResponse: () => Promise<{ data: Record<string, unknown> }>
 
@@ -66,11 +69,14 @@ function expectUnknownAndNeutral(w: VueWrapper, locale: 'vi' | 'en' = 'vi') {
   const text = card.text()
   // names and order persist
   let last = -1
-  for (const name of SERVICES) {
+  for (const name of SERVICES[locale]) {
     const at = text.indexOf(name)
     expect(at, `${name} present`).toBeGreaterThan(-1)
     expect(at, `${name} order`).toBeGreaterThan(last)
     last = at
+  }
+  for (const technicalName of ['API Server', 'Database', 'Scheduler']) {
+    expect(text).not.toContain(technicalName)
   }
   // exactly three unknown chips and one explanation, with visible text (not color or a tooltip)
   expect((text.match(new RegExp(UNKNOWN[locale], 'g')) ?? []).length).toBe(3)

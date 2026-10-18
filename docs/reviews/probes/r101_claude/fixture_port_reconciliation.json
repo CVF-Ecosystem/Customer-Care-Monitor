@@ -1,0 +1,9 @@
+{
+  "containerId": "e1555e03d69360e1cd7729afd9e52856443f5172d76454653beec981a7d6477a",
+  "name": "ccmai-r101-review-final-20261015",
+  "oldPort": "54884",
+  "newPort": "56039",
+  "hostIp": "127.0.0.1",
+  "reconciledAt": "2026-10-15T14:24:25+07:00",
+  "reason": "Docker dynamically assigned new ephemeral published port 56039 upon container restart. Identity, container ID, labels, image, network, volume and loopback binding verified before updating fixture_owner.json port field."
+}

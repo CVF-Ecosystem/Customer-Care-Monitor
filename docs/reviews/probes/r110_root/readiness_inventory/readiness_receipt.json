@@ -1,0 +1,46 @@
+{
+  "effects": "Read-only safe Docker inspection; fixture start0/stop0",
+  "fixture": {
+    "FixtureLabel": "CCMAI-RUNTIME-101",
+    "Id": "e1555e03d69360e1cd7729afd9e52856443f5172d76454653beec981a7d6477a",
+    "Image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "Mounts": [
+      {
+        "Destination": "/var/lib/mysql",
+        "Name": "ccmai-r101-review-final-20261015",
+        "RW": true,
+        "Type": "volume"
+      }
+    ],
+    "Name": "/ccmai-r101-review-final-20261015",
+    "Networks": [
+      {
+        "Name": "ccmai-r101-review-final-20261015",
+        "NetworkID": "35c3959ac41517050defad05cbad7a08717b24c8879683e25baf3e2702625e98"
+      }
+    ],
+    "PortBindings": {
+      "3306/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": ""
+        }
+      ]
+    },
+    "Ports": {},
+    "Status": "exited"
+  },
+  "network": {
+    "Containers": [],
+    "Id": "35c3959ac41517050defad05cbad7a08717b24c8879683e25baf3e2702625e98",
+    "Name": "ccmai-r101-review-final-20261015"
+  },
+  "observedAtUTC": "2026-10-16T17:55:23.478448+00:00",
+  "port3011Available": true,
+  "protectedMatchesPrevious": true,
+  "result": "PASS",
+  "runtimeAdmission": "NOT_ADMITTED",
+  "volumeUsers": [
+    "e1555e03d69360e1cd7729afd9e52856443f5172d76454653beec981a7d6477a"
+  ]
+}

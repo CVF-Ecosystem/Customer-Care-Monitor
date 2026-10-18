@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "docs\\reviews\\probes\\r107_root",
+    "-p",
+    "test_r107_ui_runner.py",
+    "-v"
+  ],
+  "exitCode": 0,
+  "scope": "Injected offline tests only; actual module import separately recorded"
+}

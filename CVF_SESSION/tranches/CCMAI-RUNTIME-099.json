@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-099",
+  "authorityKind": "DISPATCHER_OWNED_OWNER_LOCAL_CONTINUATION_PRODUCT_RESPONSE_REPAIR",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "/root/m2_worker",
+    "repairWorker": "/root/m2_worker",
+    "reviewer": "Codex /root",
+    "commitSteward": "Codex /root",
+    "closer": "Codex /root"
+  },
+  "allowedPaths": [
+    "backend/ai/openai_compatible.go",
+    "backend/ai/chat_once_response*.go",
+    "backend/engine/intervention.go",
+    "docs/specs/R099_OBSERVED_RESPONSE_REPAIR_SPEC_2026-10-14.md",
+    "docs/work_orders/CCMAI_RUNTIME_099_OBSERVED_RESPONSE_REPAIR.md",
+    "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md"
+  ],
+  "prohibitedEffects": [
+    "provider_or_other_external_network_or_secret_read_DB_fixture_customer_channel_account_effects",
+    "R093_R094_R095_R096_R097_R098_seed_marker_budget_receipt_or_harness_changes",
+    "more_than_one_Go_build_invocation_or_any_test_binary_launch_or_runtime_test",
+    "mocked_provider_output_as_AI_governance_or_current_live_proof",
+    "default_legacy_batch_analyze_request_behavior_changes_or_unapproved_global_startup_activation",
+    "prompt_tuning_new_model_higher_tokens_retry_redirect_fallback_existing_app_DB_or_outbound_changes",
+    "core_gate_workflow_policy_dependency_install_download_pull_push_merge_deploy_or_workercommit_selfreview"
+  ],
+  "ownerAuthorization": "Original owner continueunfinishedCCMA localwork and Rootorchestrator/reviewer authority persists; this repairs independently observed R098 product defects with0newprovider/key/runtime effects. Owner R0982/2 exhausted neverreset. Any changed future request/livecall requires fresh owner approval before effect.",
+  "entryDecision": "Independent new cause F01metadataearlyerror/settlement and F02thinkingdefault capmismatch after actualR098responses; finite product source repair not additional generic prerequisite. Historical R094 acceptance remains exactoldsource only, dependencies changednotpromoted to current runtime proof.",
+  "executionBudget": {
+    "physicalProviderRequestsTotal": 0,
+    "providerSecretReads": 0,
+    "DBFixtureOperations": 0,
+    "goInvocationsTotal": 1,
+    "workerGoInvocations": 1,
+    "reviewerGoInvocations": 0,
+    "buildCommand": "go -C backend build ./ai ./engine ./api/handlers",
+    "goproxy": "off",
+    "gosumdb": "off",
+    "runtimeTests": 0,
+    "sameScopeRepairs": "max2 consolidated SOURCE precompile repairs withinunchangedbudget, source review before one compile; no newcompile/replay on failure; third withoutindependentcause stops cost escalation"
+  },
+  "claimScope": "Source-only candidate and compile/static review. No changed-source runtime AI governance/outputvalidation/usage settlement/liveproposal/fullM2/M3/pilot/deployed proof; new thinkingfalse option untested live.",
+  "status": "REVIEW_PASS",
+  "phase": "REVIEW",
+  "baseCommit": "e9b4cefc9ca09cc4c72210ac39d436349e0cccab",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_099_OBSERVED_RESPONSE_REPAIR.md",
+  "buildCommit": "0640431dc3c31b3b8403d775ae50a6bc6dfdf601",
+  "reviewEvidence": [
+    "docs/reviews/R099_FINAL_INDEPENDENT_SOURCE_COMPILE_REVIEW_2026-10-14.md"
+  ],
+  "disposition": "REVIEW_PASS",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
+  ],
+  "planningPhaseTrace": [
+    "INTAKE",
+    "DESIGN",
+    "SPEC",
+    "WORK_ORDER"
+  ],
+  "dispatcher": "Codex /root",
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "REVIEWER_ACCEPTED",
+  "x-actualExecution": {
+    "workerGo": 1,
+    "reviewerGo": 0,
+    "providerCalls": 0,
+    "runtimeTests": 0,
+    "DBFixtureOperations": 0
+  }
+}

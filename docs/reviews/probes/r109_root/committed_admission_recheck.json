@@ -1,0 +1,10 @@
+{
+  "command": [
+    "python",
+    "-B",
+    ".cvf/runtime/verify109_admission.py"
+  ],
+  "exitCode": 0,
+  "elapsedSeconds": 9.222519200004172,
+  "recordedAtUTC": "2026-10-16T17:13:06.571044+00:00"
+}

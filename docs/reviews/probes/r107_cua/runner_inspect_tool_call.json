@@ -1,0 +1,8 @@
+{
+  "tool": "exec_command",
+  "command": "python -B docs/reviews/probes/r107_root/r107_ui_runner.py inspect --project-root .",
+  "stdout": "{\"binarySha256\": \"4c7575e180dd198d995bfe09bdc45061740a987be8ec0765f02b203e1c251f31\", \"frontendFiles\": 137, \"runtime\": \"HOLD\", \"stage\": \"OFFLINE_INSPECT\"}\r\n",
+  "stderr": "",
+  "exitCode": 0,
+  "wallTimeSeconds": 7.8647481
+}

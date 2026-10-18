@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-16",
+  "scope": "HISTORICAL_R101_UI_RUNNER_SOURCE_ONLY",
+  "disposition": "SOURCE_REVIEW_PASS_RUNTIME_NOT_RUN",
+  "reviewer": "Codex /root",
+  "sourceCandidateAuthor": "/root/r105_runner_candidate",
+  "runtimePins": {
+    "docs/reviews/probes/r105_root/r105_ui_runner.py": "f27c5bfc729c67bf717473a7dbc894352446c9f74813be08243350e46a4d478a",
+    "docs/reviews/probes/r105_root/r105_vite_config.mjs.template": "8c8a40d463247443044578a16cdd2452f44c090d6f5c7fdf5a6068e67c5efbda",
+    "docs/reviews/probes/r105_dispatch_preparation/frontend_input_manifest.json": "9bc280a50432f56f9a12272b138e26831106bc7fa0002aa3b825f73ece58b8df",
+    "docs/reviews/probes/r101_root/formatted_source_manifest.json": "61c57a5ed0613626327dd92fae352feae23c78e1d3e8ea45c06c86bd2e7660d3"
+  },
+  "testSha256": "92924900b0c39b068babdb769d5e57048ea7dd948486215e2401e8289d5d3c40",
+  "independentReview": "docs/reviews/R105_RUNNER_INDEPENDENT_SOURCE_REVIEW_2026-10-16.md",
+  "offlineEvidence": "docs/reviews/probes/r105_dispatch_preparation/candidate_final_offline_verification.json",
+  "formalRuntimeAuthority": "NOT_ACTIVATED",
+  "claimBoundary": "Source review and static software checks only; no product/server lifecycle or AI governance claim"
+}

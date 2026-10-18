@@ -1,0 +1,10 @@
+{
+  "apiOrigin": "http://127.0.0.1:65467",
+  "case": "e0dc3d36-f01d-4047-a8b7-7e6445ac71c3",
+  "observedAtUnix": 1792205117.5396752,
+  "owner": "015de475-267e-4dd0-9385-ef32a8596609@example.invalid",
+  "reader": "40ff5bb4-51bd-4dcd-a052-37aff650155e",
+  "startupSeconds": 2.725,
+  "syntheticCredentialsIncluded": false,
+  "tenant": "ad5f12e9-72fa-4f52-9c9d-63b3a0855cf7"
+}

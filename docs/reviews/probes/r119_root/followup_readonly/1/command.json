@@ -1,0 +1,10 @@
+{
+  "args": [
+    "inspect",
+    "--format",
+    "{\"Id\":{{json .Id}},\"State\":{{json .State}},\"Ports\":{{json .NetworkSettings.Ports}}}",
+    "714f2f0c85ee5e01b7219fa77fae35d6da40b8d2c89c178cd86a882ee4681d52"
+  ],
+  "kind": "READ_ONLY_POST_FAILURE",
+  "timeoutSeconds": 15
+}

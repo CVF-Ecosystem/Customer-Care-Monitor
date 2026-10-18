@@ -1,0 +1,7 @@
+{
+  "chunk_id": "fa039c",
+  "wall_time_seconds": 0.0199494,
+  "exit_code": 17,
+  "original_token_count": 74,
+  "output": "{\"parentPid\": 18976, \"childPid\": 3020, \"childCreationIdentity\": \"windows-filetime-01dd5ebd5409b8bd\", \"waitObserved\": true, \"childExit\": 0, \"childEnd\": {\"pid\": 3020, \"endedAt\": 1792299529.1336658, \"stopObserved\": true}, \"declaredParentExit\": 17, \"finishedAt\": 1792299529.1846266, \"valid\": true}\r\n"
+}

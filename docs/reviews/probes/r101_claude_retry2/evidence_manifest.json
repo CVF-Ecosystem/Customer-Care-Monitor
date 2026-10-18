@@ -1,0 +1,120 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-10-15T20:25:00+07:00",
+  "disposition": "BLOCKED_WITH_REASON",
+  "screenshotFiles": [],
+  "files": [
+    {
+      "path": "docs/reviews/R101_CLAUDE_BROWSER_RETRY2_RETURN_2026-10-15.md",
+      "sha256": "f2c7157b367045a2c7581ef8f20da3d4cd05e98814fe159843d5879ef7ab44da",
+      "sizeBytes": 11181,
+      "mediaType": "text/markdown",
+      "kind": "return_report"
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/owner_supplemental_authorization.txt",
+      "sha256": "7c5be1b82dd04af3d72015ea2ee991b0c31606a7718b960730756ab319016306",
+      "sizeBytes": 588,
+      "mediaType": "text/plain",
+      "kind": "supporting_evidence"
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/pre_browser_acknowledgment_receipt.json",
+      "sha256": "7707b017ed577116c8f0ddb263ab111617a04546432b3ba186c4b97e0aaece12",
+      "sizeBytes": 689,
+      "mediaType": "application/json",
+      "kind": "supporting_evidence"
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/browser_capability_subagent_attempt.json",
+      "sha256": "ce42e334d6652c4d894c5d2327712d7215486380830e8399de0a73a15dfa93ac",
+      "sizeBytes": 528,
+      "mediaType": "application/json",
+      "kind": "supporting_evidence"
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/browser_capability_subagent_error.txt",
+      "sha256": "d9855f330d1ca077e1b34a8d6358c6ab5fc125cd3cc1548fee74fcb1a9f4549a",
+      "sizeBytes": 52,
+      "mediaType": "text/plain",
+      "kind": "raw_browser_error"
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/browser_capability_main_thread_attempt.json",
+      "sha256": "de296eaf3a92e9c69bfc30d76caef332ba230be954d05bdeb756f70d202f5630",
+      "sizeBytes": 850,
+      "mediaType": "application/json",
+      "kind": "supporting_evidence"
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/browser_capability_main_thread_error.txt",
+      "sha256": "32ded6f5e90857c3d230ba79feabbd04708c8390c94755e00de99757d1cca2c4",
+      "sizeBytes": 28,
+      "mediaType": "text/plain",
+      "kind": "raw_browser_error"
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/browser_capability_playwright_subagent_attempt.json",
+      "sha256": "4d3c30be295b690bb3617bd1c4d68527520a5925a38cfbb1c4385aa0c667343c",
+      "sizeBytes": 736,
+      "mediaType": "application/json",
+      "kind": "supporting_evidence"
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/browser_capability_playwright_subagent_error.txt",
+      "sha256": "eb86b647458e4538d0914914a2e02e0c2688cfa2e81fa9be58713bdf09157138",
+      "sizeBytes": 573,
+      "mediaType": "text/plain",
+      "kind": "raw_browser_error"
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/retry_counters_after.json",
+      "sha256": "c413a6ff73cfd36edb4673d48c61333a6350df4dcd93aed217bc6403194fb467",
+      "sizeBytes": 738,
+      "mediaType": "application/json",
+      "kind": "supporting_evidence"
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/cleanup_receipt.json",
+      "sha256": "4a63d81fcd69baa0a06c0b40265d2489c0c47b35a20c10a19bef7a495ce89c50",
+      "sizeBytes": 832,
+      "mediaType": "application/json",
+      "kind": "supporting_evidence"
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/source_binding.json",
+      "sha256": "7f7bdc49d1c6ac2b5b7ed37a5d1396ae92cbd491d7489f082b8e2058e046fd04",
+      "sizeBytes": 1137,
+      "mediaType": "application/json",
+      "kind": "supporting_evidence"
+    },
+    {
+      "path": "docs/reviews/probes/r101_claude_retry2/git_status_after.json",
+      "sha256": "d91b3c381609657cfa2d52d80f951fcf7e9657627ea06c18e112cbfb71c9fefa",
+      "sizeBytes": 366,
+      "mediaType": "application/json",
+      "kind": "supporting_evidence"
+    },
+    {
+      "path": ".cvf/runtime/r101_claude_retry2/browser_capability_subagent_error.txt",
+      "sha256": "d9855f330d1ca077e1b34a8d6358c6ab5fc125cd3cc1548fee74fcb1a9f4549a",
+      "sizeBytes": 52,
+      "mediaType": "text/plain",
+      "kind": "raw_browser_error"
+    },
+    {
+      "path": ".cvf/runtime/r101_claude_retry2/browser_capability_main_thread_error.txt",
+      "sha256": "32ded6f5e90857c3d230ba79feabbd04708c8390c94755e00de99757d1cca2c4",
+      "sizeBytes": 28,
+      "mediaType": "text/plain",
+      "kind": "raw_browser_error"
+    },
+    {
+      "path": ".cvf/runtime/r101_claude_retry2/browser_capability_playwright_subagent_error.txt",
+      "sha256": "eb86b647458e4538d0914914a2e02e0c2688cfa2e81fa9be58713bdf09157138",
+      "sizeBytes": 573,
+      "mediaType": "text/plain",
+      "kind": "raw_browser_error"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "scripts/tests",
+    "-p",
+    "test_cvf_downstream_gate*.py"
+  ],
+  "startedAtUTC": "2026-10-17T13:10:16.543345+00:00",
+  "claimScope": "Static repository gate tooling only; no runtime AI/governance proof"
+}

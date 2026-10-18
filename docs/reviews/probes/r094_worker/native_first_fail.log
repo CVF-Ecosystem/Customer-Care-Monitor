@@ -1,0 +1,375 @@
+=== RUN   TestR094InterventionRouteNative
+2026/10/14 07:39:15 Database connected successfully
+
+2026/10/14 07:39:15 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.150ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:15 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[5.502ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:15 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.873ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:15 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[32.499ms] [34;1m[rows:0][0m CREATE TABLE `users` (`id` char(36),`email` varchar(255) NOT NULL,`password_hash` varchar(255) NOT NULL,`name` varchar(255),`is_admin` boolean DEFAULT false,`token_version` bigint DEFAULT 0,`language` varchar(10) DEFAULT 'vi',`created_at` datetime(3) NOT NULL,`updated_at` datetime(3) NOT NULL,PRIMARY KEY (`id`),UNIQUE INDEX `idx_users_email` (`email`))
+
+2026/10/14 07:39:15 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.622ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:15 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.784ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:15 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[4.549ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'user_tenants' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:15 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[46.956ms] [34;1m[rows:0][0m CREATE TABLE `user_tenants` (`user_id` char(36),`tenant_id` char(36),`role` varchar(20) DEFAULT 'member',`permissions` text,PRIMARY KEY (`user_id`,`tenant_id`))
+
+2026/10/14 07:39:15 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.579ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:15 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.245ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:15 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.957ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'tenants' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:15 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[28.520ms] [34;1m[rows:0][0m CREATE TABLE `tenants` (`id` char(36),`name` varchar(255) NOT NULL,`slug` varchar(100) NOT NULL,`settings` json,`created_at` datetime(3) NOT NULL,`updated_at` datetime(3) NOT NULL,PRIMARY KEY (`id`),UNIQUE INDEX `idx_tenants_slug` (`slug`))
+
+2026/10/14 07:39:15 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.069ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:15 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.734ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:15 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.227ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'channels' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:15 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[28.301ms] [34;1m[rows:0][0m CREATE TABLE `channels` (`id` char(36),`tenant_id` char(36) NOT NULL,`channel_type` varchar(20) NOT NULL,`name` varchar(255) NOT NULL,`external_id` varchar(255),`credentials_encrypted` varbinary(2048) NOT NULL,`is_active` boolean DEFAULT true,`last_sync_at` datetime(3) NULL,`last_sync_status` varchar(20),`last_sync_error` text,`metadata` json,`created_at` datetime(3) NOT NULL,`updated_at` datetime(3) NOT NULL,`sync_run_id` varchar(36),`sync_lease_until` datetime(3),`is_demo_fixture` boolean NOT NULL DEFAULT false,PRIMARY KEY (`id`),INDEX `idx_channel_tenant_active` (`tenant_id`,`is_active`),CONSTRAINT `fk_tenants_channels` FOREIGN KEY (`tenant_id`) REFERENCES `tenants`(`id`))
+
+2026/10/14 07:39:15 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[6.583ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:15 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.865ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:15 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.208ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'conversations' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[45.851ms] [34;1m[rows:0][0m CREATE TABLE `conversations` (`id` char(36),`tenant_id` char(36) NOT NULL,`channel_id` char(36) NOT NULL,`external_conversation_id` varchar(255) NOT NULL,`external_user_id` varchar(255),`customer_name` varchar(500),`last_message_at` datetime(3) NULL,`message_count` bigint DEFAULT 0,`metadata` json,`created_at` datetime(3) NOT NULL,`updated_at` datetime(3) NOT NULL,PRIMARY KEY (`id`),INDEX `idx_conv_tenant_last_msg` (`tenant_id`,`last_message_at`),INDEX `idx_conv_channel` (`channel_id`),CONSTRAINT `fk_conversations_channel` FOREIGN KEY (`channel_id`) REFERENCES `channels`(`id`))
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.585ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.832ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[4.167ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'messages' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[43.173ms] [34;1m[rows:0][0m CREATE TABLE `messages` (`id` char(36),`tenant_id` char(36) NOT NULL,`conversation_id` char(36) NOT NULL,`external_message_id` varchar(255) NOT NULL,`sender_type` varchar(20) NOT NULL,`sender_name` varchar(500),`sender_external_id` varchar(255),`content` text,`content_type` varchar(50) DEFAULT 'text',`attachments` json,`sent_at` datetime(3) NOT NULL,`raw_data` json,`created_at` datetime(3) NOT NULL,PRIMARY KEY (`id`),INDEX `idx_msg_conv_time` (`conversation_id`,`sent_at`),CONSTRAINT `fk_conversations_messages` FOREIGN KEY (`conversation_id`) REFERENCES `conversations`(`id`))
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.581ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.428ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.784ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'jobs' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[40.107ms] [34;1m[rows:0][0m CREATE TABLE `jobs` (`id` char(36),`tenant_id` char(36) NOT NULL,`name` varchar(255) NOT NULL,`description` text,`job_type` varchar(30) NOT NULL,`input_channel_ids` json NOT NULL,`rules_content` text,`rules_config` json,`skip_conditions` text,`ai_provider` varchar(20) DEFAULT 'claude',`ai_model` varchar(100),`outputs` json NOT NULL,`output_schedule` varchar(20) DEFAULT 'instant',`output_cron` varchar(100),`output_at` datetime(3) NULL,`schedule_type` varchar(20) DEFAULT 'cron',`schedule_cron` varchar(100),`is_active` boolean DEFAULT true,`last_run_at` datetime(3) NULL,`last_run_status` varchar(20),`created_at` datetime(3) NOT NULL,`updated_at` datetime(3) NOT NULL,PRIMARY KEY (`id`),INDEX `idx_job_tenant_active` (`tenant_id`,`is_active`),CONSTRAINT `fk_jobs_tenant` FOREIGN KEY (`tenant_id`) REFERENCES `tenants`(`id`))
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.710ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.441ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.721ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'job_runs' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[30.145ms] [34;1m[rows:0][0m CREATE TABLE `job_runs` (`id` char(36),`job_id` char(36) NOT NULL,`tenant_id` char(36) NOT NULL,`started_at` datetime(3) NOT NULL,`finished_at` datetime(3) NULL,`status` varchar(20) DEFAULT 'running',`summary` json,`error_message` text,`created_at` datetime(3) NOT NULL,PRIMARY KEY (`id`),INDEX `idx_jobrun_job_started` (`job_id`,`started_at`),CONSTRAINT `fk_job_runs_job` FOREIGN KEY (`job_id`) REFERENCES `jobs`(`id`))
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.876ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.197ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.234ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'job_results' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[61.267ms] [34;1m[rows:0][0m CREATE TABLE `job_results` (`id` char(36),`job_run_id` char(36) NOT NULL,`tenant_id` char(36) NOT NULL,`conversation_id` char(36) NOT NULL,`analysis_snapshot_id` char(36),`result_type` varchar(30) NOT NULL,`severity` varchar(30),`rule_name` varchar(255),`evidence` text,`detail` json,`ai_raw_response` text,`notified_at` datetime(3) NULL,`created_at` datetime(3) NOT NULL,`confidence` double,`confidence_basis` varchar(40),PRIMARY KEY (`id`),INDEX `idx_result_run` (`job_run_id`),INDEX `idx_result_tenant_type` (`tenant_id`,`result_type`,`created_at`),INDEX `idx_result_tenant_conv` (`conversation_id`),INDEX `idx_job_results_analysis_snapshot_id` (`analysis_snapshot_id`))
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.182ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.281ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.768ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'analysis_snapshots' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[46.983ms] [34;1m[rows:0][0m CREATE TABLE `analysis_snapshots` (`id` char(36),`tenant_id` char(36) NOT NULL,`job_run_id` char(36) NOT NULL,`conversation_id` char(36) NOT NULL,`schema_version` varchar(40) NOT NULL,`digest` char(64) NOT NULL,`coverage` varchar(20) NOT NULL,`coverage_reasons` json NOT NULL,`message_count` bigint NOT NULL,`manifest` mediumtext NOT NULL,`created_at` datetime(3) NOT NULL,PRIMARY KEY (`id`),INDEX `idx_snapshot_tenant_conv` (`tenant_id`,`conversation_id`),UNIQUE INDEX `idx_snapshot_run_conv` (`job_run_id`,`conversation_id`),INDEX `idx_analysis_snapshots_digest` (`digest`))
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.623ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[4.513ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.811ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'intervention_budgets' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[41.649ms] [34;1m[rows:0][0m CREATE TABLE `intervention_budgets` (`id` char(36),`tenant_id` char(36) NOT NULL,`job_id` char(36) NOT NULL,`cap` bigint NOT NULL,`consumed` bigint NOT NULL DEFAULT 0,`created_at` datetime(3) NULL,PRIMARY KEY (`id`),UNIQUE INDEX `uq_intervention_budget` (`tenant_id`,`job_id`))
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.623ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[4.318ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.831ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'intervention_attempts' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[31.582ms] [34;1m[rows:0][0m CREATE TABLE `intervention_attempts` (`id` char(36),`tenant_id` char(36) NOT NULL,`job_id` char(36) NOT NULL,`run_id` char(36) NOT NULL,`budget_id` char(36) NOT NULL,`state` varchar(30) NOT NULL,`usage_state` varchar(16) NOT NULL,`created_at` datetime(3) NULL,PRIMARY KEY (`id`),INDEX `idx_intervention_attempts_tenant_id` (`tenant_id`),UNIQUE INDEX `idx_intervention_attempts_run_id` (`run_id`))
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.142ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.766ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.205ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'intervention_cases' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[31.616ms] [34;1m[rows:0][0m CREATE TABLE `intervention_cases` (`id` char(36),`tenant_id` char(36) NOT NULL,`job_id` char(36) NOT NULL,`run_id` char(36) NOT NULL,`conversation_id` char(36) NOT NULL,`use_case` varchar(40) NOT NULL,`version` bigint NOT NULL,`snapshot_id` char(36),`snapshot_digest` char(64),`eligibility` varchar(20) NOT NULL,`execution` varchar(24) NOT NULL,`disposition` varchar(24) NOT NULL,`work_state` varchar(24) NOT NULL,`reason_code` varchar(60),`next_action` varchar(120),`data_owner_id` char(36),`due_at` datetime(3) NULL,`actor_id` char(36) NOT NULL,`policy_version` varchar(40) NOT NULL,`created_at` datetime(3) NOT NULL,`updated_at` datetime(3) NOT NULL,PRIMARY KEY (`id`),INDEX `idx_intervention_queue` (`tenant_id`,`work_state`,`created_at`),UNIQUE INDEX `uq_intervention_case` (`tenant_id`,`job_id`,`conversation_id`,`use_case`))
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.644ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.379ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.263ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'intervention_proposals' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[34.223ms] [34;1m[rows:0][0m CREATE TABLE `intervention_proposals` (`id` char(36),`tenant_id` char(36) NOT NULL,`case_id` char(36) NOT NULL,`revision` bigint NOT NULL,`run_id` char(36) NOT NULL,`snapshot_id` char(36) NOT NULL,`snapshot_digest` char(64) NOT NULL,`kind` varchar(40) NOT NULL,`explanation` text NOT NULL,`next_action` text NOT NULL,`evidence` json NOT NULL,`provider` varchar(40),`model` varchar(100),`usage_state` varchar(16) NOT NULL,`created_at` datetime(3) NOT NULL,PRIMARY KEY (`id`),INDEX `idx_intervention_proposals_tenant_id` (`tenant_id`),UNIQUE INDEX `uq_intervention_proposal_revision` (`case_id`,`revision`),UNIQUE INDEX `idx_intervention_proposals_run_id` (`run_id`))
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.647ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.812ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.813ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'intervention_receipts' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[28.607ms] [34;1m[rows:0][0m CREATE TABLE `intervention_receipts` (`id` char(36),`tenant_id` char(36) NOT NULL,`case_id` char(36) NOT NULL,`run_id` char(36) NOT NULL,`code` varchar(60) NOT NULL,`usage_state` varchar(16) NOT NULL,`created_at` datetime(3) NOT NULL,PRIMARY KEY (`id`),INDEX `idx_intervention_receipts_tenant_id` (`tenant_id`),INDEX `idx_intervention_receipts_case_id` (`case_id`))
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.084ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[4.538ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.627ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'app_settings' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[34.331ms] [34;1m[rows:0][0m CREATE TABLE `app_settings` (`id` char(36),`tenant_id` char(36) NOT NULL,`setting_key` varchar(255) NOT NULL,`value_encrypted` varbinary(2048),`value_plain` text,`created_at` datetime(3) NOT NULL,`updated_at` datetime(3) NOT NULL,PRIMARY KEY (`id`),UNIQUE INDEX `idx_setting_tenant_key` (`tenant_id`,`setting_key`))
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.080ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.199ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.267ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'notification_logs' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[40.445ms] [34;1m[rows:0][0m CREATE TABLE `notification_logs` (`id` char(36),`tenant_id` char(36) NOT NULL,`job_id` char(36),`job_run_id` char(36),`channel_type` varchar(20) NOT NULL,`recipient` varchar(500) NOT NULL,`subject` varchar(500),`body` text NOT NULL,`status` varchar(20) NOT NULL,`error_message` text,`delivery_output_key` char(64),`delivery_attempt` bigint NOT NULL DEFAULT 0,`sent_at` datetime(3) NOT NULL,`created_at` datetime(3) NOT NULL,PRIMARY KEY (`id`),INDEX `idx_notiflog_tenant_sent` (`tenant_id`,`sent_at`),INDEX `idx_notiflog_delivery_output` (`delivery_output_key`))
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.138ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.762ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.237ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'notification_delivery_manifests' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[46.598ms] [34;1m[rows:0][0m CREATE TABLE `notification_delivery_manifests` (`id` char(36),`tenant_id` char(36) NOT NULL,`job_run_id` char(36) NOT NULL,`job_id` char(36) NOT NULL,`manifest_hash` char(64) NOT NULL,`configuration_hash` char(64) NOT NULL,`captured_result_ids` json NOT NULL,`required_output_keys` json NOT NULL,`created_at` datetime(3) NOT NULL,PRIMARY KEY (`id`),INDEX `idx_delivery_manifest_tenant_run` (`tenant_id`),UNIQUE INDEX `uq_delivery_manifest_run` (`job_run_id`))
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.593ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.408ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[2.957ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'notification_delivery_receipts' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[38.624ms] [34;1m[rows:0][0m CREATE TABLE `notification_delivery_receipts` (`id` char(36),`tenant_id` char(36) NOT NULL,`job_id` char(36) NOT NULL,`job_run_id` char(36) NOT NULL,`manifest_hash` char(64) NOT NULL,`output_key` char(64) NOT NULL,`channel_type` varchar(20) NOT NULL,`status` varchar(20) NOT NULL,`attempt_count` bigint NOT NULL DEFAULT 0,`active_attempt_id` char(36),`safe_error` varchar(255),`sent_at` datetime(3) NULL,`created_at` datetime(3) NOT NULL,`updated_at` datetime(3) NOT NULL,PRIMARY KEY (`id`),INDEX `idx_delivery_receipt_tenant_run` (`tenant_id`),UNIQUE INDEX `uq_delivery_receipt_run_output` (`job_run_id`,`output_key`),INDEX `idx_delivery_receipt_run_status` (`status`))
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.630ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.235ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.298ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'ai_usage_logs' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[42.446ms] [34;1m[rows:0][0m CREATE TABLE `ai_usage_logs` (`id` char(36),`tenant_id` char(36) NOT NULL,`job_id` char(36),`job_run_id` char(36),`provider` varchar(20),`model` varchar(100),`input_tokens` bigint DEFAULT 0,`output_tokens` bigint DEFAULT 0,`cost_usd` decimal(10,6),`created_at` datetime(3) NOT NULL,PRIMARY KEY (`id`),INDEX `idx_aiusage_tenant_created` (`tenant_id`,`created_at`))
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.143ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.237ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[6.186ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'o_auth_clients' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[39.358ms] [34;1m[rows:0][0m CREATE TABLE `o_auth_clients` (`id` char(36),`client_id` varchar(255) NOT NULL,`client_secret_hash` varchar(255) NOT NULL,`name` varchar(255),`redirect_uris` json,`scopes` json,`user_id` char(36),`created_at` datetime(3) NOT NULL,PRIMARY KEY (`id`),UNIQUE INDEX `idx_o_auth_clients_client_id` (`client_id`))
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.572ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.211ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.678ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'o_auth_authorization_codes' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[47.397ms] [34;1m[rows:0][0m CREATE TABLE `o_auth_authorization_codes` (`id` char(36),`code` varchar(255) NOT NULL,`client_id` varchar(255) NOT NULL,`user_id` char(36) NOT NULL,`redirect_uri` varchar(1024),`scopes` json,`code_challenge` varchar(255),`code_challenge_method` varchar(10),`expires_at` datetime(3) NOT NULL,`used` boolean NOT NULL DEFAULT false,`created_at` datetime(3) NOT NULL,PRIMARY KEY (`id`),UNIQUE INDEX `idx_o_auth_authorization_codes_code` (`code`),INDEX `idx_o_auth_authorization_codes_client_id` (`client_id`),INDEX `idx_o_auth_authorization_codes_expires_at` (`expires_at`))
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.795ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.850ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.223ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'o_auth_tokens' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[38.373ms] [34;1m[rows:0][0m CREATE TABLE `o_auth_tokens` (`id` char(36),`client_id` varchar(255) NOT NULL,`user_id` char(36) NOT NULL,`access_token_hash` varchar(255) NOT NULL,`refresh_token_hash` varchar(255),`scopes` json,`expires_at` datetime(3) NOT NULL,`created_at` datetime(3) NOT NULL,PRIMARY KEY (`id`),INDEX `idx_oauth_access` (`access_token_hash`))
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[1.597ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[5.059ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[3.626ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'r094' AND table_name = 'activity_logs' AND table_type = 'BASE TABLE'
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:42
+[0m[33m[49.922ms] [34;1m[rows:0][0m CREATE TABLE `activity_logs` (`id` char(36),`tenant_id` char(36) NOT NULL,`user_id` char(36),`user_email` varchar(255),`action` varchar(50) NOT NULL,`resource_type` varchar(50),`resource_id` varchar(100),`detail` text,`error_message` text,`ip_address` varchar(45),`created_at` datetime(3) NOT NULL,PRIMARY KEY (`id`),INDEX `idx_activity_tenant_created` (`tenant_id`,`created_at`),INDEX `idx_activity_logs_action` (`action`))
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:98
+[0m[33m[1.903ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:98
+[0m[33m[3.193ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:16 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:98
+[0m[33m[4.600ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r094' AND table_name = 'channels' AND index_name = 'uq_channel_tenant_type_ext'
+
+2026/10/14 07:39:17 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:106
+[0m[33m[39.045ms] [34;1m[rows:0][0m ALTER TABLE `channels` ADD UNIQUE INDEX `uq_channel_tenant_type_ext` (tenant_id, channel_type, external_id)
+
+2026/10/14 07:39:17 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:98
+[0m[33m[1.576ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:17 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:98
+[0m[33m[4.048ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:17 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:98
+[0m[33m[5.003ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r094' AND table_name = 'conversations' AND index_name = 'uq_conv_tenant_channel_ext'
+
+2026/10/14 07:39:17 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:106
+[0m[33m[33.362ms] [34;1m[rows:0][0m ALTER TABLE `conversations` ADD UNIQUE INDEX `uq_conv_tenant_channel_ext` (tenant_id, channel_id, external_conversation_id)
+
+2026/10/14 07:39:17 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:98
+[0m[33m[2.411ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2026/10/14 07:39:17 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:98
+[0m[33m[3.252ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'r094%' ORDER BY SCHEMA_NAME='r094' DESC,SCHEMA_NAME limit 1
+
+2026/10/14 07:39:17 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:98
+[0m[33m[4.309ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'r094' AND table_name = 'messages' AND index_name = 'uq_msg_tenant_conv_ext'
+
+2026/10/14 07:39:17 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:106
+[0m[33m[91.159ms] [34;1m[rows:0][0m ALTER TABLE `messages` ADD UNIQUE INDEX `uq_msg_tenant_conv_ext` (tenant_id, conversation_id, external_message_id)
+
+2026/10/14 07:39:17 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:134
+[0m[33m[3.738ms] [34;1m[rows:0][0m UPDATE channels c JOIN tenants t ON t.id = c.tenant_id
+			SET c.is_demo_fixture = TRUE
+			WHERE c.is_demo_fixture = FALSE
+			  AND ((BINARY c.channel_type = 'zalo_oa' AND BINARY c.external_id = 'demo-zalo-oa')
+			    OR (BINARY c.channel_type = 'facebook' AND BINARY c.external_id = 'demo-fb-page'))
+			  AND c.credentials_encrypted = '{"demo":true}'
+			  AND JSON_EXTRACT(t.settings, '$.is_demo_data') = TRUE
+
+2026/10/14 07:39:17 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/db/mysql.go:143
+[0m[33m[1.697ms] [34;1m[rows:0][0m UPDATE channels
+			SET last_sync_status = '', last_sync_error = ''
+			WHERE is_demo_fixture = TRUE
+			  AND last_sync_at IS NULL
+			  AND BINARY last_sync_status = 'error'
+			  AND BINARY last_sync_error LIKE 'decrypt failed:%'
+			  AND sync_run_id IS NULL
+			  AND sync_lease_until IS NULL
+2026/10/14 07:39:17 Database migration completed
+
+2026/10/14 07:39:17 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/api/handlers/intervention_route_test.go:51
+[0m[33m[12.915ms] [34;1m[rows:1][0m INSERT INTO `tenants` (`id`,`name`,`slug`,`settings`,`created_at`,`updated_at`) VALUES ('0722983c-4195-41ea-a2ef-1e00aef83d0e','R094 Synthetic','r094-0722983c-4195-41ea-a2ef-1e00aef83d0e','{}','2026-10-14 00:39:17.188','2026-10-14 00:39:17.188')
+
+2026/10/14 07:39:17 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/api/handlers/intervention_route_test.go:51
+[0m[33m[8.238ms] [34;1m[rows:1][0m INSERT INTO `users` (`id`,`email`,`password_hash`,`name`,`is_admin`,`token_version`,`language`,`created_at`,`updated_at`) VALUES ('6e0d7d26-2049-4873-b2d9-33e12168acc9','6e0d7d26-2049-4873-b2d9-33e12168acc9@example.invalid','fixture','',false,0,'vi','2026-10-14 00:39:17.188','2026-10-14 00:39:17.188')
+
+2026/10/14 07:39:17 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/api/handlers/intervention_route_test.go:51
+[0m[33m[9.095ms] [34;1m[rows:1][0m INSERT INTO `user_tenants` (`user_id`,`tenant_id`,`role`,`permissions`) VALUES ('6e0d7d26-2049-4873-b2d9-33e12168acc9','0722983c-4195-41ea-a2ef-1e00aef83d0e','owner','{}')
+
+2026/10/14 07:39:17 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/api/handlers/intervention_route_test.go:51
+[0m[33m[8.497ms] [34;1m[rows:1][0m INSERT INTO `channels` (`id`,`tenant_id`,`channel_type`,`name`,`external_id`,`credentials_encrypted`,`is_active`,`last_sync_at`,`last_sync_status`,`last_sync_error`,`metadata`,`created_at`,`updated_at`,`sync_run_id`,`sync_lease_until`,`is_demo_fixture`) VALUES ('873573e7-ab56-4d67-a3f8-2ce3a315c6c6','0722983c-4195-41ea-a2ef-1e00aef83d0e','pancake','R094 fixture','r094-873573e7-ab56-4d67-a3f8-2ce3a315c6c6','fixture',true,NULL,'','','{}','2026-10-14 00:39:17.188','2026-10-14 00:39:17.188',NULL,NULL,true)
+
+2026/10/14 07:39:17 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/api/handlers/intervention_route_test.go:51
+[0m[33m[11.169ms] [34;1m[rows:1][0m INSERT INTO `jobs` (`id`,`tenant_id`,`name`,`description`,`job_type`,`input_channel_ids`,`rules_content`,`rules_config`,`skip_conditions`,`ai_provider`,`ai_model`,`outputs`,`output_schedule`,`output_cron`,`output_at`,`schedule_type`,`schedule_cron`,`is_active`,`last_run_at`,`last_run_status`,`created_at`,`updated_at`) VALUES ('cb7600cd-48a3-4f24-9393-a922199a1dbb','0722983c-4195-41ea-a2ef-1e00aef83d0e','R094 Intervention','','intervention','["873573e7-ab56-4d67-a3f8-2ce3a315c6c6"]','','{}','','claude','','[]','instant','',NULL,'manual','',true,NULL,'','2026-10-14 00:39:17.188','2026-10-14 00:39:17.188')
+
+2026/10/14 07:39:17 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/api/handlers/intervention_route_test.go:51
+[0m[33m[9.282ms] [34;1m[rows:1][0m INSERT INTO `intervention_budgets` (`id`,`tenant_id`,`job_id`,`cap`,`consumed`,`created_at`) VALUES ('9e5eabec-1db2-48d8-965f-0051dd46683c','0722983c-4195-41ea-a2ef-1e00aef83d0e','cb7600cd-48a3-4f24-9393-a922199a1dbb',1,0,'2026-10-14 00:39:17.188')
+
+2026/10/14 07:39:17 [32mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/api/handlers/intervention_route_test.go:57
+[0m[33m[8.229ms] [34;1m[rows:1][0m INSERT INTO `conversations` (`id`,`tenant_id`,`channel_id`,`external_conversation_id`,`external_user_id`,`customer_name`,`last_message_at`,`message_count`,`metadata`,`created_at`,`updated_at`) VALUES ('990efc35-b1ff-4404-8b06-dba6a3116fcc','0722983c-4195-41ea-a2ef-1e00aef83d0e','873573e7-ab56-4d67-a3f8-2ce3a315c6c6','990efc35-b1ff-4404-8b06-dba6a3116fcc','','',NULL,0,'{}','2026-10-14 00:39:17.188','2026-10-14 00:39:17.188')
+
+2026/10/14 07:39:17 [31;1mD:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/backend/api/handlers/intervention_route_test.go:61 [35;1mError 3140 (22032): Invalid JSON text: "The document is empty." at position 0 in value for column 'messages.raw_data'.
+[0m[33m[4.457ms] [34;1m[rows:0][0m INSERT INTO `messages` (`id`,`tenant_id`,`conversation_id`,`external_message_id`,`sender_type`,`sender_name`,`sender_external_id`,`content`,`content_type`,`attachments`,`sent_at`,`raw_data`,`created_at`) VALUES ('d9c1e41b-2d02-49d6-bfc4-5df9641a5371','0722983c-4195-41ea-a2ef-1e00aef83d0e','990efc35-b1ff-4404-8b06-dba6a3116fcc','d9c1e41b-2d02-49d6-bfc4-5df9641a5371','customer','','','Tôi đang chờ đơn hàng ba ngày','text','[]','2026-10-14 00:39:17.188','','2026-10-14 00:39:17.188')
+    intervention_route_test.go:62: Error 3140 (22032): Invalid JSON text: "The document is empty." at position 0 in value for column 'messages.raw_data'.
+--- FAIL: TestR094InterventionRouteNative (1.47s)
+FAIL
+FAIL	github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers	6.584s
+FAIL

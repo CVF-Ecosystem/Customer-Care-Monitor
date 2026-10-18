@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-16",
+  "tranche": "CCMAI-RUNTIME-103",
+  "phase": "BUILD",
+  "role": "IMPLEMENTATION_WORKER",
+  "roleAcknowledgment": "Re-read canonical R103 continuity and browser admission; reaffirm implementation role for this single admitted install-browser action.",
+  "authority": "docs/reviews/R103_BROWSER_INSTALL_ADMISSION_2026-10-15.md",
+  "script": "docs/reviews/probes/r103_tooling/repair_driver.py",
+  "scriptSha256": "c0fb1ee114db689e8cd71eb310534569de1514378c8f6fbf272a78ec40b2e15a",
+  "sourceCommit": "7efc308f19a845918f0ca2901746781e9b4bfaf7",
+  "driverInstallCampaigns": 1,
+  "browserInstallCampaigns": 1,
+  "browserCampaignState": "PASS",
+  "runtimeStarted": true,
+  "baseline": "docs/reviews/probes/r103_root/browser_cache_before_install.json",
+  "baselineSha256": "1fd5289855450c5175aec3e2a1a757b634acc83f728206d310158fcec2e141a3",
+  "baselineFiles": 610,
+  "preRunInventoryComparison": {
+    "currentFiles": 610,
+    "missing": 0,
+    "extra": 0,
+    "changed": 0
+  },
+  "doctor": "PASS 27/27; manifest pin warning e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba vs verified core fa34ed49e56648acafe8b0388e48e0aa0523f007",
+  "noRetries": true,
+  "browserGC": "PLAYWRIGHT_SKIP_BROWSER_GC=1 set by admitted script per process",
+  "browserInstallStarted": true,
+  "retryCount": 0,
+  "startedAtLocal": "2026-10-16T05:13:34+07:00",
+  "runtimeReceipt": ".cvf/runtime/r103_tooling/20261015T221339Z_install-browser_e1edf681",
+  "completedAtLocal": "2026-10-16T05:15:26+07:00",
+  "scriptExitCode": 0,
+  "cliSeconds": 39.98,
+  "browserDownloadAttemptsObserved": 2,
+  "retriesObserved": 0,
+  "actualHttpRequestCount": "UNOBSERVED_BY_BROWSER_CLI",
+  "redirectCount": "UNOBSERVED_BY_BROWSER_CLI",
+  "finalResponseStatusObserved": [
+    200,
+    200
+  ],
+  "downloadBytesObserved": 290468407,
+  "expandedNewFileCount": 603,
+  "expandedNewFileBytes": 669761836,
+  "preexistingFilesMissing": 0,
+  "preexistingFilesChanged": 0,
+  "cacheNewTopLevel": [
+    "chromium-1200",
+    "chromium_headless_shell-1200"
+  ],
+  "existingArtifactsReused": [
+    "ffmpeg-1011",
+    "winldd-1007"
+  ],
+  "redirectAndByteGuardClaim": "No enforcement claim; CLI output reports attempts, final HTTP status and bytes only; redirects/aggregate network bytes are not intercepted."
+}

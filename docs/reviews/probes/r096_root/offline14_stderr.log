@@ -1,0 +1,19 @@
+test_actual_current_state_passes_source_only_authority (test_r096_intervention_live_fixture.R096FixtureOfflineTests.test_actual_current_state_passes_source_only_authority) ... ok
+test_actual_parent_manifest_proves_known_zero (test_r096_intervention_live_fixture.R096FixtureOfflineTests.test_actual_parent_manifest_proves_known_zero) ... ok
+test_binary_never_runs_without_approval (test_r096_intervention_live_fixture.R096FixtureOfflineTests.test_binary_never_runs_without_approval) ... ok
+test_current_provider_shape_uses_owner_model_not_presets (test_r096_intervention_live_fixture.R096FixtureOfflineTests.test_current_provider_shape_uses_owner_model_not_presets) ... ok
+test_exact_and_nested_key_redacted (test_r096_intervention_live_fixture.R096FixtureOfflineTests.test_exact_and_nested_key_redacted) ... ok
+test_inactive_phase_rejected (test_r096_intervention_live_fixture.R096FixtureOfflineTests.test_inactive_phase_rejected) ... ok
+test_metadata_pin_rejects_other_endpoint (test_r096_intervention_live_fixture.R096FixtureOfflineTests.test_metadata_pin_rejects_other_endpoint) ... ok
+test_old_config_shape_rejected (test_r096_intervention_live_fixture.R096FixtureOfflineTests.test_old_config_shape_rejected) ... ok
+test_preset_object_id_is_observation_only (test_r096_intervention_live_fixture.R096FixtureOfflineTests.test_preset_object_id_is_observation_only) ... ok
+test_reviewer_raw_usage_breach_blocks_second_claim (test_r096_intervention_live_fixture.R096FixtureOfflineTests.test_reviewer_raw_usage_breach_blocks_second_claim) ... ok
+test_role_claim_is_exclusive_and_not_refunded (test_r096_intervention_live_fixture.R096FixtureOfflineTests.test_role_claim_is_exclusive_and_not_refunded) ... ok
+test_sanitize_depth_fails_closed (test_r096_intervention_live_fixture.R096FixtureOfflineTests.test_sanitize_depth_fails_closed) ... ok
+test_strict_json_duplicate_rejected (test_r096_intervention_live_fixture.R096FixtureOfflineTests.test_strict_json_duplicate_rejected) ... ok
+test_unicode_escaped_and_duplicate_nested_key_fail_closed (test_r096_intervention_live_fixture.R096FixtureOfflineTests.test_unicode_escaped_and_duplicate_nested_key_fail_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.410s
+
+OK

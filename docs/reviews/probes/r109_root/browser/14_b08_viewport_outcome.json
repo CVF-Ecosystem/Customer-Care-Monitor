@@ -1,0 +1,15 @@
+{
+  "requested": {
+    "width": 390,
+    "height": 844
+  },
+  "observedBeforeAndAfterReload": {
+    "width": 1280,
+    "height": 720
+  },
+  "toolCall": "(await r109Browser.capabilities.get(\"viewport\")).set({width:390,height:844})",
+  "callReturnedWithoutError": true,
+  "result": "NOT_RUN_REQUESTED_VIEWPORT_NOT_OBSERVED",
+  "screenshots": "14_b08_narrow_detail_history.png is actual desktop capture, not mobile evidence",
+  "retry": "One documented reload; still1280x720; no alternate automation"
+}

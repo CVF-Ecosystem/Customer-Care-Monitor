@@ -1,0 +1,14 @@
+{
+  "invocation": 1,
+  "startedAtUtc": "2026-10-18T05:03:53.9176819Z",
+  "finishedAtUtc": "2026-10-18T05:03:56.6948158Z",
+  "elapsedSeconds": 2.745,
+  "exitCode": 0,
+  "stdoutBytes": 0,
+  "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderrBytes": 123,
+  "stderrSha256": "6931c70652245de253330856bd3efbbbe782d0b285a05d78ad2ac5054fbd851b",
+  "status": "PASS",
+  "testCommand": "python -B scripts/tests/test_r121_ui_supervisor.py",
+  "retries": 0
+}

@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\ms-playwright-go\\1.57.0\\node.exe",
+    "C:\\Users\\tiennm\\AppData\\Local\\ms-playwright-go\\1.57.0\\package\\cli.js",
+    "install",
+    "chromium"
+  ],
+  "environmentOverrides": {
+    "DEBUG": "pw:install,pw:download",
+    "PLAYWRIGHT_BROWSERS_PATH": "C:\\Users\\tiennm\\AppData\\Local\\ms-playwright",
+    "PLAYWRIGHT_SKIP_BROWSER_GC": "1"
+  },
+  "exitCode": 0,
+  "stderr": "chromium-install.stderr.txt",
+  "stderrSha256": "736904bcd5cb694ce65b6c7c032d7fe9e8728c6dd06e0fae577704641073b94f",
+  "stdout": "chromium-install.stdout.txt",
+  "stdoutSha256": "ee1c31c3cf36ea1acd83d7072568399033c333f3ac26acf51782ceade69cc343",
+  "timedOut": false
+}

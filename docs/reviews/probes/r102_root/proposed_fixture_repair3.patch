@@ -1,0 +1,17 @@
+Proposed review-only diff; NOT APPLIED, NOT AUTHORIZED.
+Target: backend/api/handlers/intervention_waitdata_test.go
+Function: TestR102NativeRevisionIntent
+
+After r102Must(t, &legacy), before the first API mutation:
+
++ var storedLegacy models.InterventionHumanEvent
++ r102DB(t, db.DB.Where("id = ?", legacy.ID).Take(&storedLegacy).Error)
+
+In the historical event preservation assertion only:
+
+- events[0].Before != legacy.Before || events[0].After != legacy.After
++ events[0].Before != storedLegacy.Before || events[0].After != storedLegacy.After
+
+Retain count==3, historical ID, nullable-reference checks and both new event references.
+Retain actual storage-byte equality; do not replace preservation assertions with a weaker count-only pass.
+Do not change application behavior, fixture ownership, seed, budgets or failed receipts.

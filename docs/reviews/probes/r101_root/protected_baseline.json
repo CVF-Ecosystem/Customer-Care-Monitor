@@ -1,0 +1,66 @@
+[
+  {
+    "id": "0770fa03aee1c748425e03dcc6a3e3a8413ef2365a6981dc3fc5259e66b2fe3e",
+    "name": "/ccma-nginx-1",
+    "image": "sha256:ea146e630ecce789e6ebd966d9fd82f89a678db76aab768724e784cd91e092d8",
+    "status": "running",
+    "mounts": [
+      {
+        "Destination": "/etc/lego",
+        "Driver": "local",
+        "Mode": "rw",
+        "Name": "ccma_lego_certs",
+        "Propagation": "",
+        "RW": true,
+        "Source": "/var/lib/docker/volumes/ccma_lego_certs/_data",
+        "Type": "volume"
+      },
+      {
+        "Destination": "/var/www/acme",
+        "Driver": "local",
+        "Mode": "rw",
+        "Name": "ccma_lego_webroot",
+        "Propagation": "",
+        "RW": true,
+        "Source": "/var/lib/docker/volumes/ccma_lego_webroot/_data",
+        "Type": "volume"
+      }
+    ]
+  },
+  {
+    "id": "07822f249ff071e4f9f08463da804279a57b151901345b7560047d1b23662027",
+    "name": "/ccma-app-1",
+    "image": "sha256:4de9a938fb4d1bef55c4f3beb777e95c3333c644b80e8cd1798f804835e444a4",
+    "status": "running",
+    "mounts": [
+      {
+        "Destination": "/var/lib/cqa/files",
+        "Driver": "local",
+        "Mode": "rw",
+        "Name": "ccma_file_storage",
+        "Propagation": "",
+        "RW": true,
+        "Source": "/var/lib/docker/volumes/ccma_file_storage/_data",
+        "Type": "volume"
+      }
+    ]
+  },
+  {
+    "id": "ee1fc7f682631ac3c0ca57b80aff7e233ddde405c2618f35ca0aae6e60e23314",
+    "name": "/ccma-db-1",
+    "image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "status": "running",
+    "mounts": [
+      {
+        "Destination": "/var/lib/mysql",
+        "Driver": "local",
+        "Mode": "rw",
+        "Name": "ccma_mysql_data",
+        "Propagation": "",
+        "RW": true,
+        "Source": "/var/lib/docker/volumes/ccma_mysql_data/_data",
+        "Type": "volume"
+      }
+    ]
+  }
+]

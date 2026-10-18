@@ -1,0 +1,6 @@
+{
+  "invocation": 1,
+  "maxSeconds": 90,
+  "declaredExit": 17,
+  "effects": "one harmless local short parent/child only; no listener/DB/Docker/browser/provider"
+}

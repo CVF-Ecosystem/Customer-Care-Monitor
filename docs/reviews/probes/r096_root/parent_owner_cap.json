@@ -1,0 +1,18 @@
+{
+  "approvedBy": "Codex /root",
+  "ownerCap": 2,
+  "predecessorPhysicalCallsKnown": 0,
+  "predecessorTranche": "CCMAI-RUNTIME-095",
+  "predecessorReceipt": "docs/reviews/probes/r095_root/r095_worker_receipt.json",
+  "predecessorReceiptSha256": "11992afae3a097520d040662cfe427713f803bc98b4dfc819f93da6679874421",
+  "provider": "Alibaba",
+  "model": "qwen3.7-flash",
+  "region": "ap-southeast-1",
+  "endpointSha256": "b22a15b6e8aa4113c2816acae6935a84d052a2d7b81db734ccdc4f5be81b4f8f",
+  "ownerAuthorization": "2026-10-14 Cho phép tối đa 2 call mới; same aggregate NEW physical requests across R095+R096, no oldmarkerreset",
+  "roleSlots": {
+    "worker": 1,
+    "reviewer": 2
+  },
+  "automaticRetries": 0
+}

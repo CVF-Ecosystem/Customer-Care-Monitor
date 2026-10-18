@@ -1,0 +1,9 @@
+{
+  "observedAtUTC": "2026-10-16T17:19:44.295Z",
+  "tool": "mcp__cua_repl",
+  "tabId": "2",
+  "url": "http://127.0.0.1:3011/4b44be84-86fc-47ef-a018-e515b5ae74ea/intervention-cases/632e7ad1-ca55-4f3f-96a0-40d4223d9116",
+  "operatorRecordedAction": "Reopen exact prior Vietnamese reason with a new future deadline",
+  "dom": "12_b06_before_reopen.dom.txt",
+  "screenshot": "12_b06_before_reopen.png"
+}

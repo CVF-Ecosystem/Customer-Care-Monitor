@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "--config",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r117_execution\\docker-cli-config",
+    "inspect",
+    "--format",
+    "{\"Id\":{{json .Id}},\"Image\":{{json .Image}},\"Name\":{{json .Name}},\"State\":{{json .State.Status}},\"Labels\":{{json .Config.Labels}},\"Mounts\":{{json .Mounts}},\"Networks\":{{json .NetworkSettings.Networks}},\"Ports\":{{json .NetworkSettings.Ports}}}",
+    "033e0151bb4805cce1ce6dc347ab79ab8275e016c8ace371cfda158297a2c352"
+  ],
+  "startedAt": "2026-10-17T18:04:55.896392+00:00",
+  "timeoutSeconds": 15
+}

@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\ms-playwright-go\\1.57.0\\node.exe",
+    "C:\\Users\\tiennm\\AppData\\Local\\ms-playwright-go\\1.57.0\\package\\cli.js",
+    "--version"
+  ],
+  "environmentOverrides": {
+    "DEBUG": "pw:install,pw:download",
+    "PLAYWRIGHT_BROWSERS_PATH": "C:\\Users\\tiennm\\AppData\\Local\\ms-playwright",
+    "PLAYWRIGHT_SKIP_BROWSER_GC": "1"
+  },
+  "exitCode": 0,
+  "stderr": "driver-version.stderr.txt",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout": "driver-version.stdout.txt",
+  "stdoutSha256": "77ebd41d77d4bd472f0e6c2ebe55184cadf50d3b8626e3c9971c39cf7bf8e2bb",
+  "timedOut": false
+}

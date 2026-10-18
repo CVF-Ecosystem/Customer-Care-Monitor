@@ -1,0 +1,7 @@
+{
+  "classification": "MYSQL_SERVER_ERROR",
+  "elapsedSeconds": 0.0,
+  "probe": 1,
+  "safeServerErrorNumber": 1130,
+  "state": "FAILED"
+}

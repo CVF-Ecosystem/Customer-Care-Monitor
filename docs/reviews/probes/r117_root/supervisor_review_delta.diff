@@ -1,0 +1,267 @@
+--- accepted_R116
++++ R117
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env python3
+-"""Root-only R116 fixture supervisor. No implicit provider or installed activation.
++"""Root-only R117 fixture supervisor. No implicit provider or installed activation.
+ 
+ cvf-allow-secret-fixture: DB_PASSWORD is a disposable synthetic fixture value.
+ The actual Alibaba key is read only after committed live admission and is passed
+@@ -21,14 +21,14 @@
+ from datetime import datetime, timezone
+ 
+ ROOT = Path(__file__).resolve().parent.parent
+-RUN = ROOT / ".cvf/runtime/r116_execution"
+-EVIDENCE = ROOT / "docs/reviews/probes/r116_root"
++RUN = ROOT / ".cvf/runtime/r117_execution"
++EVIDENCE = ROOT / "docs/reviews/probes/r117_root"
+ DOCKER = Path("C:/Users/tiennm/AppData/Local/Programs/DockerDesktop/resources/bin/docker.exe")
+ DOCKER_SHA = "6c699720bb9523dedb9eb5d22a49951ea9210dbdb1314a3554029eee9be76896"
+ IMAGE = "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+-NAME = "ccmai-r116-root-20261017"
+-DB_PASSWORD = "r116-synthetic-only"
+-LABEL = "ccmai.tranche=CCMAI-RUNTIME-116"
++NAME = "ccmai-r117-root-20261017"
++DB_PASSWORD = "r117-synthetic-only"
++LABEL = "ccmai.tranche=CCMAI-RUNTIME-117"
+ SOURCE_ADMISSION = EVIDENCE / "source_binary_admission.json"
+ RUNTIME_ADMISSION = EVIDENCE / "runtime_admission.json"
+ LIVE_ADMISSION = EVIDENCE / "live_admission.json"
+@@ -121,13 +121,13 @@
+ 
+ def verify_source():
+     value = committed(SOURCE_ADMISSION)
+-    if value.get("schemaVersion") != 1 or value.get("trancheId") != "CCMAI-RUNTIME-116" or value.get("reviewDisposition") != "ROOT_ACCEPTED_FOR_ISOLATED_PROOF":
++    if value.get("schemaVersion") != 1 or value.get("trancheId") != "CCMAI-RUNTIME-117" or value.get("reviewDisposition") != "ROOT_ACCEPTED_FOR_ISOLATED_PROOF":
+         raise RuntimeError("SOURCE_NOT_ADMITTED")
+-    required = {"backend/engine/intervention_waitdata_executor.go", "backend/api/handlers/intervention_waitdata_executor_r116_test.go", "backend/db/models/intervention_waitdata.go", "backend/db/models/intervention.go", "backend/db/mysql.go", "backend/api/router.go", "backend/engine/intervention_m3.go", "backend/engine/job_run_ownership.go", "backend/api/handlers/channels.go", "backend/api/handlers/demo.go", "backend/api/handlers/jobs.go", "backend/go.mod", "backend/go.sum", "scripts/r116_waitdata_fixture.py"}
++    required = {"backend/engine/intervention_waitdata_executor.go", "backend/api/handlers/intervention_waitdata_executor_r116_test.go", "backend/db/models/intervention_waitdata.go", "backend/db/models/intervention.go", "backend/db/mysql.go", "backend/api/router.go", "backend/engine/intervention_m3.go", "backend/engine/job_run_ownership.go", "backend/api/handlers/channels.go", "backend/api/handlers/demo.go", "backend/api/handlers/jobs.go", "backend/go.mod", "backend/go.sum", "scripts/r117_waitdata_fixture.py"}
+     if not isinstance(value.get("sourceSha256"), dict) or not required.issubset(value["sourceSha256"]) or not isinstance(value.get("binarySha256"), dict) or not value["binarySha256"]:
+         raise RuntimeError("ADMISSION_PINS_INCOMPLETE")
+     for path, digest in value["sourceSha256"].items():
+-        target = safe_relative(path, "backend/" if path.startswith("backend/") else "scripts/r116_waitdata_fixture.py")
++        target = safe_relative(path, "backend/" if path.startswith("backend/") else "scripts/r117_waitdata_fixture.py")
+         if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest) or sha(target) != digest:
+             raise RuntimeError("SOURCE_CHANGED")
+         blob = subprocess.run(["git", "show", "HEAD:" + path], cwd=ROOT, capture_output=True, timeout=15)
+@@ -138,7 +138,7 @@
+     if pinned_go != actual_go:
+         raise RuntimeError("BACKEND_SOURCE_SET_CHANGED")
+     for path, digest in value["binarySha256"].items():
+-        if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest) or sha(safe_relative(path, ".cvf/runtime/r116_execution/bin/")) != digest:
++        if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest) or sha(safe_relative(path, ".cvf/runtime/r117_execution/bin/")) != digest:
+             raise RuntimeError("BINARY_CHANGED")
+     if value.get("sourceVerifiedOnlyLoopbackR116DSN") is not True or value.get("osNetworkConfinement") != "NOT_CLAIMED_SOURCE_BOUND_CONNECTOR":
+         raise RuntimeError("CONNECTOR_NOT_REVIEWED")
+@@ -148,32 +148,60 @@
+ def verify_resources(pin):
+     volume = json.loads(docker("volume", "inspect", "--format", "{{json .}}", NAME).stdout)
+     network = json.loads(docker("network", "inspect", "--format", "{{json .}}", pin["networkId"]).stdout)
+-    expected = {"ccmai.tranche": "CCMAI-RUNTIME-116", "ccmai.owner": pin["ownerNonce"]}
++    expected = {"ccmai.tranche": "CCMAI-RUNTIME-117", "ccmai.owner": pin["ownerNonce"]}
+     if volume["Name"] != NAME or volume.get("Driver") != "local" or volume.get("Labels") != expected or volume.get("Options") not in (None, {}):
+         raise RuntimeError("VOLUME_OWNERSHIP_CHANGED")
+     if "volumeIdentity" in pin and {k: volume.get(k) for k in ("Name", "CreatedAt", "Mountpoint", "Driver", "Labels", "Options")} != pin["volumeIdentity"]:
+         raise RuntimeError("VOLUME_REPLACED")
+-    if network["Id"] != pin["networkId"] or network["Name"] != NAME or network.get("Labels") != expected or network.get("Internal") is not True or network.get("Driver") != "bridge":
++    options = network.get("Options")
++    if (network["Id"] != pin["networkId"] or network["Name"] != NAME or network.get("Labels") != expected
++            or network.get("Internal") is not False or network.get("Driver") != "bridge"
++            or not isinstance(options, dict)
++            or options.get("com.docker.network.bridge.gateway_mode_ipv4") != "nat"
++            or options.get("com.docker.network.bridge.host_binding_ipv4") != "127.0.0.1"):
+         raise RuntimeError("NETWORK_OWNERSHIP_CHANGED")
+     return {"containers": network.get("Containers", {}), "volume": {k: volume.get(k) for k in ("Name", "CreatedAt", "Mountpoint", "Driver", "Labels", "Options")},
+-            "network": {k: network.get(k) for k in ("Id", "Name", "Created", "Driver", "Internal", "Labels")}}
++            "network": {k: network.get(k) for k in ("Id", "Name", "Created", "Driver", "Internal", "Labels", "Options")}}
+ 
+ 
+ def verify_network_only(pin):
+     value = json.loads(docker("network", "inspect", "--format", "{{json .}}", pin["networkId"]).stdout)
+-    if value["Id"] != pin["networkId"] or value["Name"] != NAME or value.get("Internal") is not True or value.get("Labels") != {"ccmai.tranche": "CCMAI-RUNTIME-116", "ccmai.owner": pin["ownerNonce"]}:
++    options = value.get("Options")
++    if (value["Id"] != pin["networkId"] or value["Name"] != NAME or value.get("Internal") is not False
++            or value.get("Driver") != "bridge"
++            or value.get("Labels") != {"ccmai.tranche": "CCMAI-RUNTIME-117", "ccmai.owner": pin["ownerNonce"]}
++            or not isinstance(options, dict)
++            or options.get("com.docker.network.bridge.gateway_mode_ipv4") != "nat"
++            or options.get("com.docker.network.bridge.host_binding_ipv4") != "127.0.0.1"):
+         raise RuntimeError("PARTIAL_NETWORK_OWNERSHIP_CHANGED")
+-    return {k: value.get(k) for k in ("Id", "Name", "Created", "Driver", "Internal", "Labels", "Containers")}
+-
+-
+-def inspect_fixture(pin, check_protected=True):
++    return {k: value.get(k) for k in ("Id", "Name", "Created", "Driver", "Internal", "Labels", "Options", "Containers")}
++
++
++def published_port(ports):
++    """Accept exactly one complete localhost MySQL publication."""
++    if not isinstance(ports, dict) or set(ports) != {"3306/tcp"}:
++        raise RuntimeError("FIXTURE_PORT_INVALID")
++    bindings = ports["3306/tcp"]
++    if not isinstance(bindings, list) or len(bindings) != 1 or not isinstance(bindings[0], dict):
++        raise RuntimeError("FIXTURE_PORT_INVALID")
++    binding = bindings[0]
++    if set(binding) != {"HostIp", "HostPort"} or binding["HostIp"] != "127.0.0.1":
++        raise RuntimeError("FIXTURE_PORT_INVALID")
++    value = binding["HostPort"]
++    if (not isinstance(value, str) or len(value) > 5 or not re.fullmatch(r"[0-9]+", value)
++            or not 1024 <= int(value) <= 65535):
++        raise RuntimeError("FIXTURE_PORT_INVALID")
++    return int(value)
++
++
++def inspect_fixture(pin, check_protected=True, require_port=True):
+     ident = pin["containerId"]
+     if not re.fullmatch(r"[0-9a-f]{64}", ident):
+         raise RuntimeError("INVALID_CONTAINER_ID")
+     # Never expose Config.Env or unrestricted inspect JSON.
+     fmt = '{"Id":{{json .Id}},"Image":{{json .Image}},"Name":{{json .Name}},"State":{{json .State.Status}},"Labels":{{json .Config.Labels}},"Mounts":{{json .Mounts}},"Networks":{{json .NetworkSettings.Networks}},"Ports":{{json .NetworkSettings.Ports}}}'
+     value = json.loads(docker("inspect", "--format", fmt, ident).stdout)
+-    if value["Id"] != ident or value["Image"] != IMAGE or value["Name"] != "/" + NAME or value["Labels"].get("ccmai.tranche") != "CCMAI-RUNTIME-116" or value["Labels"].get("ccmai.owner") != pin["ownerNonce"]:
++    if value["Id"] != ident or value["Image"] != IMAGE or value["Name"] != "/" + NAME or value["Labels"].get("ccmai.tranche") != "CCMAI-RUNTIME-117" or value["Labels"].get("ccmai.owner") != pin["ownerNonce"]:
+         raise RuntimeError("FIXTURE_IDENTITY_CHANGED")
+     mounts = value["Mounts"]
+     if len(mounts) != 1 or mounts[0].get("Type") != "volume" or mounts[0].get("Name") != NAME or mounts[0].get("Destination") != "/var/lib/mysql":
+@@ -185,9 +213,9 @@
+     network_users = docker("ps", "-aq", "--no-trunc", "--filter", "network=" + NAME).stdout.decode().split()
+     if users != [ident] or network_users != [ident]:
+         raise RuntimeError("FIXTURE_NOT_EXCLUSIVE")
+-    ports = value["Ports"].get("3306/tcp")
+-    if value["State"] == "running" and ports != [{"HostIp": "127.0.0.1", "HostPort": str(pin["port"])}]:
+-        raise RuntimeError("FIXTURE_PORT_CHANGED")
++    if require_port:
++        if value["State"] != "running" or published_port(value.get("Ports")) != pin.get("port"):
++            raise RuntimeError("FIXTURE_PORT_CHANGED")
+     resources = verify_resources(pin)
+     if check_protected and (inventory() != pin["protectedBaseline"] or resource_inventory() != pin["protectedResources"]):
+         raise RuntimeError("PROTECTED_INVENTORY_CHANGED")
+@@ -209,7 +237,10 @@
+     nonce = str(uuid.uuid4())
+     owner = {"at": utc(), "name": NAME, "ownerNonce": nonce, "protectedBaseline": before, "protectedResources": protected_resources}
+     exclusive(RUN / "fixture-start.effect", {**owner, "maxStarts": 1})
+-    network = docker("network", "create", "--internal", "--label", LABEL, "--label", "ccmai.owner=" + nonce, NAME).stdout.decode().strip()
++    network = docker("network", "create", "--driver", "bridge",
++                     "--opt", "com.docker.network.bridge.gateway_mode_ipv4=nat",
++                     "--opt", "com.docker.network.bridge.host_binding_ipv4=127.0.0.1",
++                     "--label", LABEL, "--label", "ccmai.owner=" + nonce, NAME).stdout.decode().strip()
+     owner["networkId"] = network
+     exclusive(RUN / "network-created.json", owner)
+     docker("volume", "create", "--label", LABEL, "--label", "ccmai.owner=" + nonce, NAME)
+@@ -225,11 +256,10 @@
+     owner["containerId"] = created
+     exclusive(RUN / "container-created.json", owner)
+     docker("start", created, timeout=30)
+-    fmt = '{{(index (index .NetworkSettings.Ports "3306/tcp") 0).HostPort}}'
+-    port = docker("inspect", "--format", fmt, created).stdout.decode().strip()
+-    if not port.isdigit() or not 1024 <= int(port) <= 65535:
+-        raise RuntimeError("PORT_INVALID")
+-    owner["port"] = int(port)
++    fmt = '{{json .NetworkSettings.Ports}}'
++    ports = json.loads(docker("inspect", "--format", fmt, created).stdout)
++    exclusive(RUN / "port-observation.json", {"at": utc(), "containerId": created, "ports": ports})
++    owner["port"] = published_port(ports)
+     exclusive(RUN / "fixture.json", owner)
+     inspect_fixture(owner)
+     deadline = time.monotonic() + 60
+@@ -239,7 +269,7 @@
+                        checked=False)
+         if ready.returncode == 0 and ready.stdout.strip() == b"r116_fixture":
+             exclusive(EVIDENCE / "fixture_ready.json", {**owner, "imageId": IMAGE, "readyAt": utc(), "state": "running", "exclusive": True})
+-            print("R116_FIXTURE_READY")
++            print("R117_FIXTURE_READY")
+             return
+         time.sleep(1)
+     raise RuntimeError("FIXTURE_NOT_READY_STOP_NO_RESTART")
+@@ -249,12 +279,12 @@
+     source = verify_source()
+     admission = committed(RUNTIME_ADMISSION)
+     pin = load(RUN / "fixture.json")
+-    if admission.get("schemaVersion") != 1 or admission.get("trancheId") != "CCMAI-RUNTIME-116" or admission.get("fixtureSha256") != sha(RUN / "fixture.json") or admission.get("sourceAdmissionSha256") != sha(SOURCE_ADMISSION):
++    if admission.get("schemaVersion") != 1 or admission.get("trancheId") != "CCMAI-RUNTIME-117" or admission.get("fixtureSha256") != sha(RUN / "fixture.json") or admission.get("sourceAdmissionSha256") != sha(SOURCE_ADMISSION):
+         raise RuntimeError("RUNTIME_ADMISSION_CHANGED")
+     if inspect_fixture(pin)["State"] != "running":
+         raise RuntimeError("FIXTURE_NOT_RUNNING")
+     binary_relative = admission["reviewerTestBinary"] if mode == "reviewer" else admission["testBinary"]
+-    binary = safe_relative(binary_relative, ".cvf/runtime/r116_execution/bin/")
++    binary = safe_relative(binary_relative, ".cvf/runtime/r117_execution/bin/")
+     if binary_relative not in source["binarySha256"]:
+         raise RuntimeError("BINARY_NOT_ADMITTED")
+     if mode not in admission["testModes"]:
+@@ -272,7 +302,7 @@
+     key = ""
+     if mode == "live":
+         live = committed(LIVE_ADMISSION)
+-        expected_live = {"schemaVersion": 1, "trancheId": "CCMAI-RUNTIME-116", "grantId": "CCMAI-RUNTIME-116-OWNER-NEW2-20261017", "provider": "alibaba_maas", "model": "qwen3.7-flash", "endpointSha256": ENDPOINT_SHA, "maxCompletionTokens": 768, "maxRequestBytes": 6000, "enableThinking": False, "physicalCallCap": 2, "stopFirstValid": True, "stopAnyUncertainty": True, "runtimeAdmissionSha256": sha(RUNTIME_ADMISSION), "sourceAdmissionSha256": sha(SOURCE_ADMISSION), "testBinarySha256": expected_binary}
++        expected_live = {"schemaVersion": 1, "trancheId": "CCMAI-RUNTIME-117", "grantId": "CCMAI-RUNTIME-117-OWNER-NEW1-20261017", "provider": "alibaba_maas", "model": "qwen3.7-flash", "endpointSha256": ENDPOINT_SHA, "maxCompletionTokens": 768, "maxRequestBytes": 6000, "enableThinking": False, "physicalCallCap": 1, "stopFirstValid": True, "stopAnyUncertainty": True, "runtimeAdmissionSha256": sha(RUNTIME_ADMISSION), "sourceAdmissionSha256": sha(SOURCE_ADMISSION), "testBinarySha256": expected_binary}
+         if any(live.get(k) != v for k, v in expected_live.items()) or not live.get("configRef") or not live.get("promptVersion") or not live.get("promptSha256"):
+             raise RuntimeError("LIVE_ADMISSION_INVALID")
+         deadline = datetime.fromisoformat(live["expiresAtUTC"])
+@@ -288,7 +318,7 @@
+             raise RuntimeError("SECRET_OR_ENDPOINT_INVALID")
+         (RUN / "physical_calls").mkdir(exist_ok=False)
+         (EVIDENCE / "live").mkdir(exist_ok=False)
+-        env.update(CCMAI_R116_LIVE="1", CCMAI_R116_PRESERVE="1", CCMAI_R116_OWNER_GRANT="CCMAI-RUNTIME-116-OWNER-NEW2-20261017",
++        env.update(CCMAI_R116_LIVE="1", CCMAI_R116_PRESERVE="1", CCMAI_R116_OWNER_GRANT="CCMAI-RUNTIME-117-OWNER-NEW1-20261017",
+                    CCMAI_R116_ADMISSION_SHA=sha(LIVE_ADMISSION), CCMAI_R116_ALIBABA_KEY=key, CCMAI_R116_ALIBABA_ENDPOINT=endpoint,
+                    CCMAI_R116_EVIDENCE_DIR=str(EVIDENCE / "live"), CCMAI_R116_EFFECT_DIR=str(RUN / "physical_calls"))
+     argv = [str(binary), "-test.run=" + pattern, "-test.v", "-test.count=1", "-test.timeout=180s"]
+@@ -316,7 +346,7 @@
+                 if parent_safe:
+                     # Replace the directory entry, never write through a link
+                     # or a possibly shared inode supplied by the child.
+-                    replacement = path.with_name(path.name + ".r116-redacted-" + uuid.uuid4().hex)
++                    replacement = path.with_name(path.name + ".r117-redacted-" + uuid.uuid4().hex)
+                     with replacement.open("xb") as stream:
+                         stream.write(b"REDACTED_SECRET_GUARD\n")
+                     os.replace(replacement, path)
+@@ -343,7 +373,7 @@
+             raise RuntimeError("LIVE_EVIDENCE_INCOMPLETE")
+     after = inspect_fixture(pin)
+     exclusive(directory / "post_inventory.json", after)
+-    print("R116_" + mode.upper() + "_TERMINAL exit=" + str(child.returncode) + " failure=" + failure)
++    print("R117_" + mode.upper() + "_TERMINAL exit=" + str(child.returncode) + " failure=" + failure)
+     if child.returncode != 0 or failure or b"--- SKIP:" in stdout:
+         raise RuntimeError("TEST_FAILED_OR_SKIPPED_STOP")
+ 
+@@ -371,8 +401,6 @@
+         pin = load(RUN / "fixture.json")
+     elif (RUN / "container-created.json").exists():
+         pin = load(RUN / "container-created.json")
+-        port = docker("inspect", "--format", '{{if index .NetworkSettings.Ports "3306/tcp"}}{{(index (index .NetworkSettings.Ports "3306/tcp") 0).HostPort}}{{end}}', pin["containerId"]).stdout.decode().strip()
+-        pin["port"] = int(port) if port.isdigit() else None
+     else:
+         owner = load(RUN / "network-created.json") if (RUN / "network-created.json").exists() else None
+         if (RUN / "fixture-start.effect").exists() and owner is None:
+@@ -390,12 +418,12 @@
+         receipt = load(EVIDENCE / "cleanup_receipt.json")
+         if owner and (receipt["protectedBaselineEquals"] is not True or receipt["protectedResourcesEqual"] is not True or (resources and (resources.get("containers") or resources.get("Containers")))):
+             raise RuntimeError("PARTIAL_CLEANUP_INVENTORY_HOLD")
+-        print("R116_PARTIAL_SETUP_NO_CONTAINER")
++        print("R117_PARTIAL_SETUP_NO_CONTAINER")
+         return
+-    before = inspect_fixture(pin, check_protected=False)
++    before = inspect_fixture(pin, check_protected=False, require_port=False)
+     exclusive(RUN / "cleanup.effect", {"at": utc(), "containerId": pin["containerId"]})
+     stopped = docker("stop", "-t", "10", pin["containerId"], timeout=30)
+-    after = inspect_fixture(pin, check_protected=False)
++    after = inspect_fixture(pin, check_protected=False, require_port=False)
+     if after["State"] != "exited":
+         raise RuntimeError("CLEANUP_NOT_EXITED")
+     exclusive(EVIDENCE / "cleanup_receipt.json", {"at": utc(), "before": before, "after": after,
+@@ -405,7 +433,7 @@
+     receipt = load(EVIDENCE / "cleanup_receipt.json")
+     if receipt["protectedBaselineEquals"] is not True or receipt["protectedResourcesEqual"] is not True:
+         raise RuntimeError("CLEANUP_PROTECTED_INVENTORY_HOLD")
+-    print("R116_CLEANUP_STOPPED_PRESERVED")
++    print("R117_CLEANUP_STOPPED_PRESERVED")
+ 
+ 
+ def main():
+@@ -424,5 +452,5 @@
+         RUN.mkdir(parents=True, exist_ok=True)
+         hold = RUN / ("hold-" + str(time.time_ns()) + ".json")
+         exclusive(hold, {"at": utc(), "code": code, "automaticRetry": False})
+-        print("R116_HOLD " + code)
++        print("R117_HOLD " + code)
+         sys.exit(1)

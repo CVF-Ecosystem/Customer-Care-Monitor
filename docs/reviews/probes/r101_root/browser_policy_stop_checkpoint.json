@@ -1,0 +1,22 @@
+{
+  "tranche": "CCMAI-RUNTIME-101",
+  "browserDisposition": "BLOCKED_RUNTIME_URL_POLICY_WINDOWS_BROWSER",
+  "toolMessage": "Computer Use has been stopped for this turn because browser URL policy enforcement is not yet supported for the current Windows browser.",
+  "native": "PASS_SIX_TOP_LEVEL_FOUR_NESTED_NO_SKIP",
+  "source": "200df3e4a7bc2a326425922a5230508a4fd9b0fe",
+  "binarySha256": "4c7575e180dd198d995bfe09bdc45061740a987be8ec0765f02b203e1c251f31",
+  "containerId": "e1555e03d69360e1cd7729afd9e52856443f5172d76454653beec981a7d6477a",
+  "containerStatus": "exited",
+  "volumePreserved": "ccmai-r101-review-final-20261015",
+  "networkPreserved": "35c3959ac41517050defad05cbad7a08717b24c8879683e25baf3e2702625e98",
+  "fixtureReservations": 2,
+  "workerGo": 1,
+  "reviewerGo": 1,
+  "aggregateGo": 2,
+  "providerCalls": 0,
+  "mockProviderCalls": 0,
+  "frontendFull": "3_PREEXISTING_FAILURES_REPRODUCED_PRIOR_SOURCE",
+  "freeze": "OPEN",
+  "applicationBrowserNavigation": "NOT_RUN",
+  "applicationServer": "NOT_STARTED"
+}

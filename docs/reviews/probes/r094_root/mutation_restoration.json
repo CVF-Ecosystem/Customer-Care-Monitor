@@ -1,0 +1,10 @@
+{
+  "mutation": "evidence",
+  "source": "backend/engine/intervention.go",
+  "originalSHA256": "1349833280b4ee6170729c921a7e37ee0f4302fd6a5638e114f2cd425f280cb2",
+  "mutatedSHA256": "4876aa1e7d9e087f65f681d401a3d6d00394a2c69c9006df3ca0df8bdb108806",
+  "restoredSHA256": "1349833280b4ee6170729c921a7e37ee0f4302fd6a5638e114f2cd425f280cb2",
+  "restoredExact": true,
+  "testExit": 1,
+  "expectedNamedDetector": "bad ref"
+}

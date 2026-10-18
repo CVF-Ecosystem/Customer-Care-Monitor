@@ -1,0 +1,11 @@
+[PASS] CVF-DG-INST-01 PASS
+[PASS] CVF-DG-CONT-01 PASS
+[PASS] CVF-DG-RANGE-01 PASS
+       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=e409e4ec75168895e40f0f222037e06594dd3d04 candidates=25 deleted=0
+[PASS] CVF-DG-APPL-01 PASS
+       note: checked: docs/work_orders/CCMAI_RUNTIME_109_HUMAN_UI_COMPLETION.md
+[PASS] CVF-DG-ROLE-01 PASS
+       note: checked: docs/reviews/R109_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-16.md, docs/reviews/R109_ROOT_UI_VERIFICATION_PLAN_2026-10-16.md, docs/reviews/R109_WORKER_ACKNOWLEDGMENT_2026-10-16.md
+[PASS] CVF-DG-CLAIM-01 PASS
+       note: 0 explicit claim line(s) and 4 document(s) scanned
+RESULT: PASS phase=pre-commit mandatoryControls=6 failed=0

@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "--config",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r117_execution\\docker-cli-config",
+    "exec",
+    "-e",
+    "MYSQL_PWD=r117-synthetic-only",
+    "033e0151bb4805cce1ce6dc347ab79ab8275e016c8ace371cfda158297a2c352",
+    "mysql",
+    "-h",
+    "127.0.0.1",
+    "-u",
+    "root",
+    "-N",
+    "-B",
+    "-e",
+    "SELECT SCHEMA_NAME FROM information_schema.SCHEMATA WHERE SCHEMA_NAME='r116_fixture'"
+  ],
+  "startedAt": "2026-10-17T13:51:01.319090+00:00",
+  "timeoutSeconds": 15
+}
