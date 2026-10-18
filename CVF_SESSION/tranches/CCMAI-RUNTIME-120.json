@@ -114,7 +114,7 @@
     "conditionalRootFrontendChecks": 0,
     "sourceRepairRounds": 2,
     "campaignStarts": 0,
-    "newFixtureStarts": 0,
+    "newFixtureStarts": 1,
     "fixtureFinalStops": 0,
     "backendStarts": 0,
     "viteStarts": 0,
@@ -125,5 +125,6 @@
     "automaticRetries": 0,
     "campaignSeconds": 0
   },
-  "cleanupReserveSeconds": 180
+  "cleanupReserveSeconds": 180,
+  "setupInvocationsUsed": 1
 }

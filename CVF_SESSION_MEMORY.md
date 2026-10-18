@@ -13,7 +13,7 @@ Memory class: POINTER_RECORD
 
 CCMAI-RUNTIME-120 source-only readiness BUILD after committed seed/pre-dispatch; fix bounded MySQL greeting and explicit Windows host-listener proof, offline discrimination and Root independent review before one exact admitted current-UI campaign. R119 remains CHANGES_REQUIRED/start-stop consumed, no replay/reset. New sole setup/start/stop/backend/Vite/tab1/auth2/caseActions0/provider0, failure stops with no automatic successor. B07 inherited/B08 raster/B09 unsupported/fullM2/M3/pilot/release OPEN; Facebook/ZaloOA parked; no push/merge/deploy.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna source/repair worker returned idle; final source accepted for offline compile, runtime HOLD
+Codex /root ORCHESTRATOR / independent REVIEWER / owned runtime executor / SESSION_SYNC_STEWARD / COMMIT_STEWARD; workers idle; fresh fixture SETUP admitted, backend/Vite/UI HOLD for resource commit
 
 R119 CHANGES_REQUIRED18a45eda, start1/stop1 consumed; source/compile accepted, UI NOT_RUN/listener predicate notproven. Read-only cause review and exact old listener absence do not alter failed evidence. R120 finite two-readiness fixes then direct M3 current-proposal/history UI proof only; no provider. R118source7f74a75f24tests/typecheck, R117real1spent inherited.
 

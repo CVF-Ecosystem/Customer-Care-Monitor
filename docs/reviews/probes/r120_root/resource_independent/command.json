@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+    "--host",
+    "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "--config",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r120_ui\\docker-config",
+    "inspect",
+    "--format",
+    "{\"Id\":{{json .Id}},\"Image\":{{json .Image}},\"Name\":{{json .Name}},\"State\":{{json .State.Status}},\"Pid\":{{json .State.Pid}},\"Labels\":{{json .Config.Labels}},\"Mounts\":{{json .Mounts}},\"NetworkMode\":{{json .HostConfig.NetworkMode}},\"Networks\":{{json .NetworkSettings.Networks}},\"Ports\":{{json .NetworkSettings.Ports}}}",
+    "a341f7ffa523a3196b63469402d6a4f643511324cdadcbfa03732ade2d845dda"
+  ],
+  "kind": "ROOT_INDEPENDENT_RESOURCE_ADMISSION",
+  "timeoutSeconds": 15
+}

@@ -6,7 +6,7 @@ Status: ACTIVE
 
 - Current mode: BUILD
 - Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna source/repair worker returned idle; final source accepted for offline compile, runtime HOLD
+- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / owned runtime executor / SESSION_SYNC_STEWARD / COMMIT_STEWARD; workers idle; fresh fixture SETUP admitted, backend/Vite/UI HOLD for resource commit
 - Active tranche: CCMAI-RUNTIME-120
 - Next allowed move: CCMAI-RUNTIME-120 source-only readiness BUILD after committed seed/pre-dispatch; fix bounded MySQL greeting and explicit Windows host-listener proof, offline discrimination and Root independent review before one exact admitted current-UI campaign. R119 remains CHANGES_REQUIRED/start-stop consumed, no replay/reset. New sole setup/start/stop/backend/Vite/tab1/auth2/caseActions0/provider0, failure stops with no automatic successor. B07 inherited/B08 raster/B09 unsupported/fullM2/M3/pilot/release OPEN; Facebook/ZaloOA parked; no push/merge/deploy.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
@@ -30,3 +30,5 @@ Source timing review round2 acknowledgment BEFORE edit: Root caught remaining -7
 Final source6a70d1f3 accepted after exact independent preimage comparison: sole cleanup constant75->180, other3source hashes unchanged; no unit rerun.19PASS at55447e89 with unchanged critical greeting/listener code; timing delta separately static-reviewed. Worker/RootPython2of2 each, repair2of2, Go/runtime0. Root owns next compile/admissions; worker idle.
 
 Root sole offline compile1of1 PASS exit0/10.708s, binary116fe924668e081bca621cedd5344defa12157a2c259bec6a01666304671d67d (58419200bytes),400source pins unchanged fromdb9c4aa6aaabef5181c48cc4ee28d1cc0a2e515e. Every pinned source compared via Git cat-file batch/normalizedLF before compile; offline envGOPROXYoff/GOSUMDBoff/GOTOOLCHAINlocal/GOENVoff. Exact source/binary/Node/Docker/PowerShell admission prepared; no setup until committed. No new unit invocation; runtime/provider0.
+
+Root SETUP1 PASS exit0/36.213s after source admissionb8aa321c; MySQL readiness16attempts,15transientEOF then5byteprotocolREADY, no restart. Exact owned a341f7ffa523a3196b63469402d6a4f643511324cdadcbfa03732ade2d845dda /networkdeb79fe44d34df02048b3c0a47839695ccfa4c9fc7bd1b9255b334f3f91f47df /volumeccmai-r120-ui-20261018 /loopback64629. Root independently safe-inspected actual exact ID/image/nonce/mount/network/port runningPid>0; resource admission prepared. Protected baseline counts {'containers': 8, 'networks': 9, 'volumes': 471}. Start1spent/stop0; backend/Vite/tab/auth/actions/provider0. No serve until committedresource.
