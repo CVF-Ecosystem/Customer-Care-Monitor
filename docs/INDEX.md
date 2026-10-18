@@ -4236,6 +4236,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/probes/r121_root/capability_confirmation/manifest.json`
 - Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/probes/r121_root/capability_confirmation/original_bytes.zip`
 - Owner local resume bounded M3 seed; no BUILD/runtime before activation/admission.: `CVF_SESSION/authority/CCMAI-RUNTIME-121.json`
+- R121 repaired source5cf1244/new binarycb52235c actual offline compile and candidate admission; initial failed source/admission immutable in archive/Git.: `docs/reviews/probes/r121_root/source_binary_admission_candidate_002.json`
+- R121 repaired source5cf1244/new binarycb52235c actual offline compile and candidate admission; initial failed source/admission immutable in archive/Git.: `docs/reviews/probes/r121_root/compile_002/receipt.json`
+- R121 repaired source5cf1244/new binarycb52235c actual offline compile and candidate admission; initial failed source/admission immutable in archive/Git.: `docs/reviews/probes/r121_root/compile_002/reservation.json`
+- R121 repaired source5cf1244/new binarycb52235c actual offline compile and candidate admission; initial failed source/admission immutable in archive/Git.: `docs/reviews/probes/r121_root/compile_002/stderr.bin`
+- R121 repaired source5cf1244/new binarycb52235c actual offline compile and candidate admission; initial failed source/admission immutable in archive/Git.: `docs/reviews/probes/r121_root/compile_002/stdout.bin`
 - R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `CVF_SESSION/authority/CCMAI-RUNTIME-121-POSTREPAIR-ADMISSION.json`
 - R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/R121_R1_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md`
 - R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_root/source_unit_002/static_identity_proof.json`

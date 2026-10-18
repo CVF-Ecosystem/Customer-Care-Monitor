@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "x-roadmapTracking": {
     "updatedAt": "2026-10-18",
-    "status": "M3_R121_REPAIRED_SOURCE_POSTREPAIR_ADMISSION_PENDING",
+    "status": "M3_R121_REPAIRED_BINARY_ADMISSION",
     "currentCheckpoint": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
     "stages": {
       "S0": "PARTIAL_LIVE_BASELINE_OPEN",
@@ -2971,9 +2971,9 @@
     "expectedExecExit": 17,
     "heldChildExit": 0,
     "heldChildWaitObserved": true,
-    "source": "REPAIRED_SOURCE_ACCEPTED_UNCOMPILED",
+    "source": "REPAIRED_SOURCE_COMMITTED_BINARY_PINNED",
     "productRuntime": "NOT_RUN",
-    "compile": "PASS_OFFLINE_1OF1",
+    "compile": "POSTREPAIR_OFFLINE_COMPILE_PASS",
     "sourcePins": 405,
     "setup": "EXIT1_SOURCE_ADMISSION_IDENTITY",
     "actualFixtureStarts": 0,
@@ -2984,6 +2984,8 @@
     "runtimeDirectoryPresent": false,
     "setupWaitObserved": true,
     "setupWrapperMetadataError": null,
+    "postRepairSetup": "NOT_RUN",
+    "newBinarySha256": "cb52235ceafee389f52a3fcc80ff9685887e4d7cef6035ea8a5428e30a582162",
     "status": "BUILD",
     "freeze": "OPEN"
   },
@@ -2995,10 +2997,10 @@
       "newFixtureStart": 1
     },
     "used": {
-      "offlineCompile": 0,
+      "offlineCompile": 1,
       "setupInvocation": 0,
       "newFixtureStart": 0
     },
-    "status": "SOURCE_ACCEPTED_ADMISSION_PENDING"
+    "status": "COMPILED_ADMISSION_COMMIT_PENDING"
   }
 }

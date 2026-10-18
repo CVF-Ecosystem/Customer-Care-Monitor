@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-121",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-121 repaired-source accepted:8exact full-ID changes/3files, Vite and old400pins unchanged, worker/Root final19PASS with2/2checks exhausted, repair1/2. Fresh dispatcher postrepair admission grants one additional offline compile/setup only with separate counters; source commit then new exact source-binary admission before setup002, resource admission before original unspent sole campaign. No provider/case actions or scope/effect expansion, old evidence/caps unchanged/full milestones OPEN/accounts parked/no push-merge-deploy.",
+  "nextAllowedMove": "CCMAI-RUNTIME-121 fixed source5cf1244f/new binarycb52235c independently pinned405unchanged; postrepair compile1of1PASS, original compile/setup evidence/caps immutable. Root commits revised source-binary admission then sole postrepair setup002 using explicit recorder slot002; commit exact resource admission before original unspent sole M3 UI campaign/terminal review. No more units/provider/case actions; full milestones OPEN/accounts parked/no push-merge-deploy.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD and authorized runtime operator; Sol repair worker returned idle, independent static recorder recheck pending",
+  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD and authorized runtime operator; Sol repair worker and independent static recorder assessor returned idle",
   "updatedAt": "2026-10-18",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {
@@ -2289,9 +2289,9 @@
     "expectedExecExit": 17,
     "heldChildExit": 0,
     "heldChildWaitObserved": true,
-    "source": "REPAIRED_SOURCE_ACCEPTED_UNCOMPILED",
+    "source": "REPAIRED_SOURCE_COMMITTED_BINARY_PINNED",
     "productRuntime": "NOT_RUN",
-    "compile": "PASS_OFFLINE_1OF1",
+    "compile": "POSTREPAIR_OFFLINE_COMPILE_PASS",
     "sourcePins": 405,
     "setup": "EXIT1_SOURCE_ADMISSION_IDENTITY",
     "actualFixtureStarts": 0,
@@ -2301,7 +2301,9 @@
     "actualProviderCalls": 0,
     "runtimeDirectoryPresent": false,
     "setupWaitObserved": true,
-    "setupWrapperMetadataError": null
+    "setupWrapperMetadataError": null,
+    "postRepairSetup": "NOT_RUN",
+    "newBinarySha256": "cb52235ceafee389f52a3fcc80ff9685887e4d7cef6035ea8a5428e30a582162"
   },
   "x-r121CapabilityContinuation": {
     "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-121-CAPABILITY-CONTINUATION.json",
@@ -2319,10 +2321,10 @@
       "newFixtureStart": 1
     },
     "used": {
-      "offlineCompile": 0,
+      "offlineCompile": 1,
       "setupInvocation": 0,
       "newFixtureStart": 0
     },
-    "status": "SOURCE_ACCEPTED_ADMISSION_PENDING"
+    "status": "COMPILED_ADMISSION_COMMIT_PENDING"
   }
 }

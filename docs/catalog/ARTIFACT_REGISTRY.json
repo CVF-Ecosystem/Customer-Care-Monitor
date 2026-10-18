@@ -33953,6 +33953,41 @@
       "path": "docs/reviews/probes/r121_root/source_unit_002/stdout.bin",
       "status": "ACTIVE",
       "description": "R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS."
+    },
+    {
+      "id": "r121-postrepair-admission-0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/source_binary_admission_candidate_002.json",
+      "status": "ACTIVE",
+      "description": "R121 repaired source5cf1244/new binarycb52235c actual offline compile and candidate admission; initial failed source/admission immutable in archive/Git."
+    },
+    {
+      "id": "r121-postrepair-admission-1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/compile_002/receipt.json",
+      "status": "ACTIVE",
+      "description": "R121 repaired source5cf1244/new binarycb52235c actual offline compile and candidate admission; initial failed source/admission immutable in archive/Git."
+    },
+    {
+      "id": "r121-postrepair-admission-2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/compile_002/reservation.json",
+      "status": "ACTIVE",
+      "description": "R121 repaired source5cf1244/new binarycb52235c actual offline compile and candidate admission; initial failed source/admission immutable in archive/Git."
+    },
+    {
+      "id": "r121-postrepair-admission-3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/compile_002/stderr.bin",
+      "status": "ACTIVE",
+      "description": "R121 repaired source5cf1244/new binarycb52235c actual offline compile and candidate admission; initial failed source/admission immutable in archive/Git."
+    },
+    {
+      "id": "r121-postrepair-admission-4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/compile_002/stdout.bin",
+      "status": "ACTIVE",
+      "description": "R121 repaired source5cf1244/new binarycb52235c actual offline compile and candidate admission; initial failed source/admission immutable in archive/Git."
     }
   ]
 }

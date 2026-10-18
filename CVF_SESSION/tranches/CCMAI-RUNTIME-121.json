@@ -66,7 +66,7 @@
   "status": "BUILD",
   "phase": "BUILD",
   "workOrderStatus": "ACTIVE",
-  "buildCommit": "9e392d985dfed3f8dcdd179819a546464115a619",
+  "buildCommit": "5cf1244f73a29dfff9ab987d4fe8ae51c67abb38",
   "reviewEvidence": [
     "docs/reviews/R121_CAPABILITY_HOLD_2026-10-18.md",
     "docs/reviews/R121_CAPABILITY_CONFIRMATION_REVIEW_2026-10-18.md",
@@ -118,9 +118,9 @@
     "expectedExecExit": 17,
     "heldChildExit": 0,
     "heldChildWaitObserved": true,
-    "source": "REPAIRED_SOURCE_ACCEPTED_UNCOMPILED",
+    "source": "REPAIRED_SOURCE_COMMITTED_BINARY_PINNED",
     "productRuntime": "NOT_RUN",
-    "compile": "PASS_OFFLINE_1OF1",
+    "compile": "POSTREPAIR_OFFLINE_COMPILE_PASS",
     "sourcePins": 405,
     "setup": "EXIT1_SOURCE_ADMISSION_IDENTITY",
     "actualFixtureStarts": 0,
@@ -130,7 +130,9 @@
     "actualProviderCalls": 0,
     "runtimeDirectoryPresent": false,
     "setupWaitObserved": true,
-    "setupWrapperMetadataError": null
+    "setupWrapperMetadataError": null,
+    "postRepairSetup": "NOT_RUN",
+    "newBinarySha256": "cb52235ceafee389f52a3fcc80ff9685887e4d7cef6035ea8a5428e30a582162"
   },
   "x-capabilityContinuation": {
     "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-121-CAPABILITY-CONTINUATION.json",
@@ -159,10 +161,10 @@
       "newFixtureStart": 1
     },
     "used": {
-      "offlineCompile": 0,
+      "offlineCompile": 1,
       "setupInvocation": 0,
       "newFixtureStart": 0
     },
-    "status": "SOURCE_ACCEPTED_ADMISSION_PENDING"
+    "status": "COMPILED_ADMISSION_COMMIT_PENDING"
   }
 }
