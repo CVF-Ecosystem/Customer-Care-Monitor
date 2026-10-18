@@ -1,5 +1,11 @@
 # CCMA — Roadmap phát triển sản phẩm và tiếp quản giữa các agent
 
+## Current R120 observed UI / terminal evidence hold — 2026-10-18
+
+R120 actual current UI observation: correct active rev2 over later off-lineage rev3; three readable Vietnamese history events/system reason, synthetic notice. CSS390x844 has no horizontal overflow, original JPEG375x811 (not exact-raster390x844/PNG); B09 unsupported NOT_RUN and B07 inherited. Overall CHANGES_REQUIRED: original supervisor terminal/held-child wait-exit/final fingerprint-effect counters MISSING after session loss, cause UNKNOWN. Root separate identity-proven sole fixture stop succeeded: EXITED/Pid0/Ports{}, listeners3019/64408/64629absent, protected8containers/9networks/471volumesequal, source400/binary/executablesunchanged. UI observation is not AI governance or actual workflow proof. Runtime stopped; no replay/repair/automatic successor/provider. Read-only failed-terminal/lifetime review/transfer only before separate governed runtime decision. FullM2/M3/M1business/pilot/release OPEN, accountsparked/no push-merge-deploy. Review: docs/reviews/R120_FINAL_INDEPENDENT_UI_REVIEW_2026-10-18.md.
+
+Earlier checkpoint sections are historical.
+
 ## Current R120 finite UI route — 2026-10-18
 
 Read-only Root/Sol diagnosis confirms fatal readiness during MySQL initialization (exact greeting bytes UNKNOWN); Docker responds, old owned container EXITED/Pid0/Ports{} and host listener absent now, without retroactive R119 cleanup PASS. R119 start/stop/checks remain consumed. Separately bounded R120 fixes only accumulated pre-auth greeting and explicit Windows listener-table proof, with unit discriminators/Root independent review before one new exact-admitted current-proposal/history UI observation. New seed precedes BUILD; runtime HOLD for source/binary and resource commits. No provider/lifecycle replay/product redesign/automatic support successor. First prerequisite failure stops. Current UI still NOT_RUN, B07inherited/B08raster/B09unsupported/fullM2/M3/M1business/pilot/release OPEN; accountsparked, no push/merge/deploy. Decision: docs/reviews/R119_READONLY_CAUSE_AND_R120_DECISION_2026-10-18.md. Earlier checkpoints historical.

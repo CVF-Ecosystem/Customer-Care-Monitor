@@ -1,0 +1,10 @@
+{
+  "count": 400,
+  "allEqual": true,
+  "binaryEqual": true,
+  "executablesEqual": {
+    "node": true,
+    "docker": true,
+    "powershell": true
+  }
+}

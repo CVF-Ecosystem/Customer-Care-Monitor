@@ -1,0 +1,100 @@
+- navigation:
+  - generic: Customer Care Monitor AI
+  - button:
+    - generic: 󰅁
+  - separator
+  - generic: Minh họa R120
+  - separator
+  - list:
+    - link "Trang chủ":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751
+      - generic: 󰕮
+      - generic: Trang chủ
+    - link "Kênh chat":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/channels
+      - generic: 󱘖
+      - generic: Kênh chat
+    - link "Tin nhắn":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/messages
+      - generic: 󰊌
+      - generic: Tin nhắn
+    - link "Tác vụ AI":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/jobs
+      - generic: 󰚩
+      - generic: Tác vụ AI
+    - link "Kết quả":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/results
+      - generic: 󱃔
+      - generic: Kết quả
+    - link "Ca cần can thiệp":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/intervention-cases
+      - generic: 󰀈
+      - generic: Ca cần can thiệp
+    - link "Nhật ký hệ thống":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/activity-logs
+      - generic: 󰺮
+      - generic: Nhật ký hệ thống
+    - link "Nhật ký chi phí":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/cost-logs
+      - generic: 󰇁
+      - generic: Nhật ký chi phí
+    - link "Lịch sử thông báo":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/notifications
+      - generic: 󰂞
+      - generic: Lịch sử thông báo
+    - link "Kết nối trợ lý AI":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/mcp
+      - generic: 󱂛
+      - generic: Kết nối trợ lý AI
+    - link "Người dùng":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/users
+      - generic: 󰡉
+      - generic: Người dùng
+    - link "Cài đặt":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/settings
+      - generic: 󰒓
+      - generic: Cài đặt
+  - separator
+  - button:
+    - generic: 󰖔
+  - button "Tiếng Việt":
+    - generic: 󰗊
+    - text: Tiếng Việt
+    - generic: 󰍝
+  - generic: "N"
+  - generic: Người duyệt minh họa
+  - button:
+    - generic: 󰍃
+- main:
+  - generic: 󱓞
+  - generic: "Bắt đầu:"
+  - generic: 󰗠
+  - generic: Kết nối kênh chat
+  - generic: 󰗠
+  - generic: Đồng bộ tin nhắn
+  - generic: 󰝦
+  - generic: Cài đặt AI
+  - generic: 󰗠
+  - generic: Tạo công việc phân tích
+  - generic: 󰝦
+  - generic: Chạy thử phân tích
+  - button:
+    - generic: 󰅖
+  - heading "Ca cần can thiệp" [level=1]
+  - generic: Hàng đợi xử lý
+  - combobox:
+    - generic: Đang xử lý
+    - combobox "Trạng thái": Đang xử lý
+    - generic: 󰍝
+    - generic: Trạng thái
+  - alert
+  - paragraph: "Tổng số ca theo bộ lọc: 2 · Sắp xếp theo thời điểm tạo"
+  - list:
+    - link "Mã ca 4806D8CD Chờ duyệt hoặc giao việc · 07:17:30 18/10/2026":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/intervention-cases/04147ec4-331f-4414-a863-412e449a5848
+      - generic: Mã ca 4806D8CD
+      - generic: Chờ duyệt hoặc giao việc · 07:17:30 18/10/2026
+    - link "Mã ca 6160157C Chờ bổ sung dữ liệu · 07:17:30 18/10/2026":
+      - /url: /6b03517d-6e15-4784-bf45-91d3c5852751/intervention-cases/6f1d3796-a632-4459-937d-4e7cdcf0a4f3
+      - generic: Mã ca 6160157C
+      - generic: Chờ bổ sung dữ liệu · 07:17:30 18/10/2026

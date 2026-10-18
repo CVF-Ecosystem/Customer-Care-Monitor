@@ -1,0 +1,15 @@
+{
+  "client": {
+    "height": 720,
+    "width": 1265
+  },
+  "cssViewport": {
+    "height": 720,
+    "width": 1280
+  },
+  "scroll": {
+    "height": 1550,
+    "width": 1265,
+    "y": 829.5999755859375
+  }
+}

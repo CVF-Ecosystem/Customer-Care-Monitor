@@ -78,16 +78,17 @@
   "baseCommit": "5aa100c6f5a798ee17c9ba0465f070980fe8a6d4",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_120_CURRENT_UI_PROOF.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "status": "BUILD",
-  "phase": "BUILD",
-  "workOrderStatus": "ACTIVE",
-  "buildCommit": null,
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
+  "buildCommit": "db9c4aa6aaabef5181c48cc4ee28d1cc0a2e515e",
   "reviewEvidence": [
     "docs/reviews/R119_READONLY_CAUSE_AND_R120_DECISION_2026-10-18.md",
     "docs/reviews/R120_SOURCE_REVIEW_ROUND1_2026-10-18.md",
-    "docs/reviews/R120_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md"
+    "docs/reviews/R120_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md",
+    "docs/reviews/R120_FINAL_INDEPENDENT_UI_REVIEW_2026-10-18.md"
   ],
-  "disposition": "OPEN",
+  "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -98,7 +99,9 @@
     "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -113,18 +116,26 @@
     "conditionalWorkerFrontendChecks": 0,
     "conditionalRootFrontendChecks": 0,
     "sourceRepairRounds": 2,
-    "campaignStarts": 0,
+    "campaignStarts": 1,
     "newFixtureStarts": 1,
-    "fixtureFinalStops": 0,
-    "backendStarts": 0,
-    "viteStarts": 0,
-    "productTabs": 0,
-    "authPosts": 0,
+    "fixtureFinalStops": 1,
+    "backendStarts": 1,
+    "viteStarts": 1,
+    "productTabs": 1,
+    "authPosts": 2,
     "caseActions": 0,
     "providerCalls": 0,
-    "automaticRetries": 0,
-    "campaignSeconds": 0
+    "automaticRetries": 0
   },
   "cleanupReserveSeconds": 180,
-  "setupInvocationsUsed": 1
+  "setupInvocationsUsed": 1,
+  "runtimeObservation": {
+    "campaignReadyAt": 1792282653.476921,
+    "stopRequestedAt": 1792283155.0144844,
+    "observedReadyToStopSeconds": 501.5375634,
+    "originalTotalDuration": "NOT_OBSERVED",
+    "finalDurableAccounting": "NOT_OBSERVED",
+    "separateRootCleanup": true,
+    "campaignDeadlineCompliance": "NOT_PROVEN_WITHOUT_ORIGINAL_TERMINAL"
+  }
 }

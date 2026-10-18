@@ -1,0 +1,26 @@
+{
+  "cssViewport": {
+    "height": 844,
+    "width": 390
+  },
+  "currentProposalTextPresent": true,
+  "historyLabels": [
+    {
+      "present": true,
+      "text": "Kiểm tra thông tin bổ sung"
+    },
+    {
+      "present": true,
+      "text": "Yêu cầu đánh giá lại"
+    },
+    {
+      "present": true,
+      "text": "Đã có đánh giá mới"
+    }
+  ],
+  "horizontalOverflow": false,
+  "laterOffLineageTextAbsent": true,
+  "localizedSystemReasonPresent": true,
+  "rawEnumsAbsent": true,
+  "syntheticNoticePresent": true
+}

@@ -1,0 +1,68 @@
+Customer Care Monitor AI
+Minh họa R120
+Trang chủ
+Kênh chat
+Tin nhắn
+Tác vụ AI
+Kết quả
+Ca cần can thiệp
+Nhật ký hệ thống
+Nhật ký chi phí
+Lịch sử thông báo
+Kết nối trợ lý AI
+Người dùng
+Cài đặt
+Tiếng Việt
+N
+Người duyệt minh họa
+Bắt đầu:
+Kết nối kênh chat
+Đồng bộ tin nhắn
+Cài đặt AI
+Tạo công việc phân tích
+Chạy thử phân tích
+Ca cần can thiệp
+Về hàng đợi
+Nguồn dữ liệu: Chưa xác nhận đủ nội dung từ kênh. Chưa xác nhận đầy đủ nội dung từ kênh. Vui lòng đối chiếu trước khi xử lý.
+Mã ca 4806D8CD
+
+Trạng thái xử lý: Chờ duyệt hoặc giao việc · Đánh giá của người duyệt: Chưa duyệt · Lần cập nhật 4
+
+Đề xuất hiện tại
+Đây là dữ liệu minh họa để thử quy trình, không phải kết quả từ AI trực tiếp.
+
+Loại đề xuất: Khiếu nại
+
+Giải thích trong đề xuất: Minh họa: khách đang chờ phản hồi về đơn hàng.
+
+Bước tiếp theo được gợi ý: Kiểm tra đơn hàng và phản hồi khách.
+
+Dẫn chứng:
+
+“khiếu nại”
+Thao tác
+Thao tác
+Lý do (bắt buộc)
+Ghi nhận thao tác
+Lịch sử xử lý
+Kiểm tra thông tin bổ sung · Lần cập nhật 2 · 07:17:33 18/10/2026 · Người duyệt minh họa
+
+Lý do (bắt buộc): Minh họa: đã kiểm tra dữ liệu.
+
+Nguồn dữ liệu: Chưa xác nhận đủ nội dung từ kênh
+
+Xem thay đổi
+Yêu cầu đánh giá lại · Lần cập nhật 3 · 07:17:34 18/10/2026 · Người duyệt minh họa
+
+Lý do (bắt buộc): Minh họa: đã yêu cầu xem lại.
+
+Nguồn dữ liệu: Chưa xác nhận đủ nội dung từ kênh
+
+Xem thay đổi
+Đã có đánh giá mới · Lần cập nhật 4 · 07:17:35 18/10/2026 · Người duyệt minh họa
+
+Lý do (bắt buộc): Đã duyệt đánh giá lại thông tin mới
+
+Nguồn dữ liệu: Chưa xác nhận đủ nội dung từ kênh
+
+Xem thay đổi

@@ -10,12 +10,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-058.json`
 - Separate R1 seed for accepted R061 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-062.json`
 - GitHub project-branch material publication receipt for the M1-M5 delivery roadmap; remote SHA readback, no product/runtime acceptance.: `docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json`
-- R118 current proposal UI source checked and R117 bounded real backend inherited; current UI/full milestones OPEN.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
+- R120 current proposal/history observed bounded; terminal/durable accounting missing, full milestones OPEN.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
 - All seven selected inheritance findings independently accepted bounded and material exported atd121c9e; full product exits remain open.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R120 two-readiness fixes then conditional direct current UI proof; runtime requires committed admissions.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R120_CURRENT_UI_2026-10-18.md`
+- Active R120 observed synthetic UI, overall CHANGES_REQUIRED: missing original terminal/durable accounting; stopped and transfer only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R120_CURRENT_UI_2026-10-18.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -4152,6 +4152,70 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R120 actual sole setup and exact independent resource admission; backend/browser pending, provider0.: `docs/reviews/probes/r120_root/setup_001/stdout.bin`
 - Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `docs/reviews/probes/r119_root/followup_readonly/3/stdout.bin`
 - Finite R120 two-readiness fixes and conditional direct current UI proof; no runtime/provider before admissions.: `CVF_SESSION/authority/CCMAI-RUNTIME-120.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/final_source_recheck.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_history_settled.rendered.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_detail.dom.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/process_inventory_command.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/owned_before.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_detail.main.html`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/stop_001/stderr.bin`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/cleanup_reservation.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_detail.jpg`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_proposal.metrics.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_history.main.html`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_proposal.main.html`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_history.metrics.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/serve_001/stderr.bin`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_history.dom.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_proposal.rendered.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_detail.jpg`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_proposal.dom.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/queue.dom.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/source_recheck.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/after_login.dom.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/ui_assertions.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_history.rendered.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_history.main.html`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/logout.dom.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/protected_final.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_detail.main.html`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/serve_001/reservation.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_history_settled.dom.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/operations.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/owned_after.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/orphan_cleanup_receipt.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/native_image_manifest.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_proposal.jpg`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_runtime_original.zip`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/login.dom.txt`
+- Actual final static pre-commit profile receipt; not runtime acceptance, APPL explicitly not applicable.: `docs/reviews/probes/r120_root/final_gate_receipt.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/viewport_reset.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/stop_001/reservation.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/serve_001/stdout.bin`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/stop_001/stdout.bin`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/process_inventory_stderr.bin`
+- Actual final static pre-commit profile receipt; not runtime acceptance, APPL explicitly not applicable.: `docs/reviews/probes/r120_root/final_gate_stderr.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/route_accounting.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_detail.metrics.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/child_listener_observations.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_history.jpg`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_history.jpg`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_detail.dom.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_detail.rendered.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_history.dom.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_independent/process_inventory_stdout.bin`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_detail.rendered.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_history_settled.main.html`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_detail.metrics.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_history.rendered.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_history_settled.metrics.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/stop_001/receipt.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/logout.jpg`
+- Actual final static pre-commit profile receipt; not runtime acceptance, APPL explicitly not applicable.: `docs/reviews/probes/r120_root/final_gate_stdout.txt`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/desktop_history_settled.jpg`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/R120_FINAL_INDEPENDENT_UI_REVIEW_2026-10-18.md`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_history.metrics.json`
+- R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_runtime_manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

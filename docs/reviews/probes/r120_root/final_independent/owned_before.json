@@ -1,0 +1,82 @@
+{
+  "Id": "a341f7ffa523a3196b63469402d6a4f643511324cdadcbfa03732ade2d845dda",
+  "Image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+  "Name": "/ccmai-r120-ui-20261018",
+  "State": "running",
+  "Pid": 8796,
+  "Labels": {
+    "ccmai.owner": "95fcb04abcfede08611090a87837f89f",
+    "ccmai.tranche": "CCMAI-RUNTIME-120"
+  },
+  "Mounts": [
+    {
+      "Destination": "/var/lib/mysql",
+      "Driver": "local",
+      "Mode": "z",
+      "Name": "ccmai-r120-ui-20261018",
+      "Propagation": "",
+      "RW": true,
+      "Source": "/var/lib/docker/volumes/ccmai-r120-ui-20261018/_data",
+      "Type": "volume"
+    }
+  ],
+  "NetworkMode": "ccmai-r120-ui-20261018",
+  "Networks": {
+    "ccmai-r120-ui-20261018": {
+      "Aliases": null,
+      "DNSNames": [
+        "ccmai-r120-ui-20261018",
+        "a341f7ffa523"
+      ],
+      "DriverOpts": null,
+      "EndpointID": "d84586f8105ffd51f81f064150d89a98a05d72b87546f84822a33b60eddb5a4e",
+      "Gateway": "172.24.0.1",
+      "GlobalIPv6Address": "",
+      "GlobalIPv6PrefixLen": 0,
+      "GwPriority": 0,
+      "IPAMConfig": null,
+      "IPAddress": "172.24.0.2",
+      "IPPrefixLen": 16,
+      "IPv6Gateway": "",
+      "Links": null,
+      "MacAddress": "4a:a2:a4:e8:c1:9e",
+      "NetworkID": "deb79fe44d34df02048b3c0a47839695ccfa4c9fc7bd1b9255b334f3f91f47df"
+    }
+  },
+  "Ports": {
+    "3306/tcp": [
+      {
+        "HostIp": "127.0.0.1",
+        "HostPort": "64629"
+      }
+    ]
+  },
+  "networkIdentity": {
+    "Id": "deb79fe44d34df02048b3c0a47839695ccfa4c9fc7bd1b9255b334f3f91f47df",
+    "Name": "ccmai-r120-ui-20261018",
+    "Created": "2026-10-18T00:15:26.04244839Z",
+    "Driver": "bridge",
+    "Internal": false,
+    "Labels": {
+      "ccmai.owner": "95fcb04abcfede08611090a87837f89f",
+      "ccmai.tranche": "CCMAI-RUNTIME-120"
+    },
+    "Options": {
+      "com.docker.network.bridge.gateway_mode_ipv4": "nat",
+      "com.docker.network.bridge.host_binding_ipv4": "127.0.0.1",
+      "com.docker.network.enable_ipv4": "true",
+      "com.docker.network.enable_ipv6": "false"
+    }
+  },
+  "volumeIdentity": {
+    "Name": "ccmai-r120-ui-20261018",
+    "CreatedAt": "2026-10-18T00:15:26Z",
+    "Mountpoint": "/var/lib/docker/volumes/ccmai-r120-ui-20261018/_data",
+    "Driver": "local",
+    "Labels": {
+      "ccmai.owner": "95fcb04abcfede08611090a87837f89f",
+      "ccmai.tranche": "CCMAI-RUNTIME-120"
+    },
+    "Options": null
+  }
+}

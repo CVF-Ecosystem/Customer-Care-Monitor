@@ -1,6 +1,6 @@
 # R120 current proposal/history finite browser proof
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 dispatchKind: INITIAL
 Worker: /root/r120_ui_readiness_luna
@@ -66,3 +66,7 @@ A8. Replace generic closed-port boolean with explicit listenerAbsent/evidence ki
 Budget: workerPython2, RootPython2, Rootcompile1, sourceRepair2, sole setup/start/stop/backend/Vite/tab/campaign1, auth2/caseActions0/provider0/noautomaticretry. Worker may create only four R120 source files plus own return/probes, no runtime/compile/seed/commit. Root source-only pre-dispatch/readiness admission precedes BUILD; runtime still conditional on reviewed source + committed exact current admissions. Any prerequisite failure stops affected branch; no automatic tool successor. Include closeability recheck and exact spent counters/hashes in return.
 
 Cleanup accounting: reserve180seconds of1200 for the inherited full-source rechecks and owned shutdown/listener observations; no increase to total campaign ceiling. This is bounded timing allocation for A5/A8, not another product/tooling feature.
+
+## Final independent disposition
+
+CHANGES_REQUIRED: bounded current proposal/history wording observed, but original supervisor terminal, held-child wait/exit and final durable fingerprint/effect counters missing. Root separate exact orphan cleanup settled owned fixture/listeners/protected inventory only. Sole runtime/start/stop budgets consumed; no replay or automatic successor. Review: docs/reviews/R120_FINAL_INDEPENDENT_UI_REVIEW_2026-10-18.md.

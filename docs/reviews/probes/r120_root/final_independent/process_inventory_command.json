@@ -1,0 +1,6 @@
+{
+  "command": "Get-CimInstance Win32_Process | Where-Object { $_.ProcessId -in @(20204,21580) -or $_.Name -match '^(python|python3|handlers.test)\\.exe$' } | Select-Object ProcessId,Name,CreationDate | ConvertTo-Json -AsArray -Compress",
+  "exit": 0,
+  "at": 1792283345.157178,
+  "qualification": "Absence at observation does not prove original held-child wait/exit or cause"
+}

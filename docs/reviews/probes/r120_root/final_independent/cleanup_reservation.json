@@ -1,0 +1,9 @@
+{
+  "purpose": "IDENTITY_PROVEN_ORPHAN_CLEANUP_ONLY_NOT_CAMPAIGN_REPLAY",
+  "fixtureStopCap": 1,
+  "priorDockerStops": 0,
+  "at": 1792283315.6423004,
+  "containerId": "a341f7ffa523a3196b63469402d6a4f643511324cdadcbfa03732ade2d845dda",
+  "supervisorTerminal": "MISSING",
+  "heldChildWaitExit": "NOT_OBSERVED"
+}
