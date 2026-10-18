@@ -2,7 +2,7 @@
 
 Status: COMPLETE_PENDING_REVIEW
 Risk: R2
-Worker: Sol inherited summary fixture; Luna historical response fixture
+Worker: Sol inherited summary fixture; Luna historical response fixture and CI timeout alignment
 Reviewer: Root independent source and terminal evidence review
 
 ## Source review
@@ -17,6 +17,8 @@ R123 Root-authored test fixture was independently reviewed by Luna, including ad
 
 Frontend Docker: npm ci0, 45files/474tests PASS, vue-tsc/Vite build0. Root inspected actual exits/logs and container exit0. Docs build0 (nonfatal inherited env syntax/chunk warnings). Preflight7/7 and profile pre-commit6 controls PASS at review-pending checkpoint. Static controls are not runtime/governance acceptance. No Python source changed after R122 discovery231PASS.
 
-Final stable270-file full Go run and sentinel gate pending. Prior first full Go exited1 with inherited tests/default10m timeout; R124 rerun exposes historical R094 response and summary fixture drift. Those complete logs are retained. One host frontend RUN-only raw log was overwritten by the Docker runner; there is no separate preserved copy. Current Docker PASS log is authentic and separate from R122 historical incomplete archives. No reconstruction of missing raw evidence.
+Final stable270-file full Go run and sentinel gate pending. Prior first full Go exited1 with inherited tests/default10m timeout; R124 rerun exposes historical R094 response and summary fixture drift. The first complete failing log is retained; Root stopped the superseded R124 run after its confirmed failures to remove duplicate DB contention, copied its partial log, and saved the actual termination state separately. It has no original wrapper exit receipt and is not a completed full-suite run. One host frontend RUN-only raw log was overwritten by the Docker runner; there is no separate preserved copy. Current Docker PASS log is authentic and separate from R122 historical incomplete archives. No reconstruction of missing raw evidence.
 
 No full M3, real-provider quality/availability, governance, hosted CI, pilot or release acceptance is inferred. No push/merge/deploy.
+
+CI alignment: Root independently reviewed Luna one-line backend workflow diff; it adds only `-timeout 30m` to the existing serial full-suite command. This matches the current native command and prevents the observed default10m package ceiling from cutting off the expanded DB suite. All assertions/DB sentinels/permissions remain. This is source/local verification, not a hosted CI result.

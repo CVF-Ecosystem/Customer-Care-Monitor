@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R125_FINAL_VERIFICATION_2026-10-18.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R126_DB_VERIFICATION_2026-10-18.md",
       "status": "ACTIVE",
-      "description": "Current R125 final local source/verification handoff."
+      "description": "Current R126 DB fixture lifetime and current-package verification handoff."
     },
     {
       "id": "r060-work-order",
@@ -34310,6 +34310,55 @@
       "path": "docs/reviews/R125_FINAL_LOCAL_FIX_REVIEW_2026-10-18.md",
       "status": "ACTIVE",
       "description": "Final bounded local fixture compatibility and verification record."
+    },
+    {
+      "id": "r125ci-cd48087d019bd7f9e2",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-125-CI.json",
+      "status": "ACTIVE",
+      "description": "Bounded CI timeout alignment with locally verified native command."
+    },
+    {
+      "id": "r125ci-7491ae069c0154bdaa",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-125-CI.json",
+      "status": "ACTIVE",
+      "description": "Bounded CI timeout alignment with locally verified native command."
+    },
+    {
+      "id": "r126-d15f96b71ac7abace0",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R125_FINAL_VERIFICATION_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Bounded test fixture repair and honest current-package validation record."
+    },
+    {
+      "id": "r126-4b8946aba6b6bef053",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-126.json",
+      "status": "ACTIVE",
+      "description": "Bounded test fixture repair and honest current-package validation record."
+    },
+    {
+      "id": "r126-d5771df265765ef44c",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-126.json",
+      "status": "ACTIVE",
+      "description": "Bounded test fixture repair and honest current-package validation record."
+    },
+    {
+      "id": "r126-a9bff07160fc720480",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_126_DB_FIXTURE_LIFETIME.md",
+      "status": "ACTIVE",
+      "description": "Bounded test fixture repair and honest current-package validation record."
+    },
+    {
+      "id": "r126-b356af4115b4ac003b",
+      "family": "continuity",
+      "path": "docs/reviews/R126_FINAL_CURRENT_PACKAGE_REVIEW_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Bounded test fixture repair and honest current-package validation record."
     }
   ]
 }

@@ -631,8 +631,8 @@ func (f *mcpFixture) notificationRows(t *testing.T, runID string, sentOnly bool)
 
 // JE-07/JE-10: with a configured (synthetic) notification the accepted run is already terminal while
 // its send is in flight, yet the single ownership slot stays held. A second mounted request is busy
-// without a new reservation, worker start or provider call. The log and the notified marks appear
-// only after the send returns, bound to the accepted run; then the slot is reusable.
+// without a new reservation, worker start or provider call. One durable attempt log stays in
+// "sending" with no sent log or notified marks until the send returns; then the slot is reusable.
 func TestMountedTriggerOwnershipHeldThroughNotificationTail(t *testing.T) {
 	f := newMCPFixture(t)
 	f.admit(t)
@@ -658,9 +658,12 @@ func TestMountedTriggerOwnershipHeldThroughNotificationTail(t *testing.T) {
 	if f.countRows(t, `SELECT COUNT(*) FROM job_runs WHERE job_id = ?`, f.jobID()) != runsBefore || runsBefore != 1 || env.startCount() != startsBefore || startsBefore != 1 || prov.callCount() != callsBefore || callsBefore != 1 {
 		t.Fatalf("the busy call changed state: runs %d starts %d provider calls %d (before 1/1/1)", f.countRows(t, `SELECT COUNT(*) FROM job_runs WHERE job_id = ?`, f.jobID()), env.startCount(), prov.callCount())
 	}
-	var marked int64
-	if err := db.DB.Raw(`SELECT COUNT(*) FROM job_results WHERE job_run_id = ? AND notified_at IS NOT NULL`, acc.RunID).Scan(&marked).Error; err != nil || marked != 0 || f.notificationRows(t, acc.RunID, false) != 0 {
-		t.Fatalf("a log or notified mark exists before the send returned: marked %d err %v", marked, err)
+	var sending, marked int64
+	sendingErr := db.DB.Raw(`SELECT COUNT(*) FROM notification_logs WHERE job_run_id = ? AND status = 'sending'`, acc.RunID).Scan(&sending).Error
+	markErr := db.DB.Raw(`SELECT COUNT(*) FROM job_results WHERE job_run_id = ? AND notified_at IS NOT NULL`, acc.RunID).Scan(&marked).Error
+	attempts, sent := f.notificationRows(t, acc.RunID, false), f.notificationRows(t, acc.RunID, true)
+	if sendingErr != nil || markErr != nil || attempts != 1 || sending != 1 || sent != 0 || marked != 0 {
+		t.Fatalf("in-flight notification state: attempts=%d sending=%d sent=%d notified=%d (query errors %v/%v); want 1/1/0/0", attempts, sending, sent, marked, sendingErr, markErr)
 	}
 
 	tr.open()

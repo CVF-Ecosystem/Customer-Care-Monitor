@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R125_FINAL_VERIFICATION_2026-10-18.md", "activeTranche": "CCMAI-RUNTIME-125", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R126_DB_VERIFICATION_2026-10-18.md", "activeTranche": "CCMAI-RUNTIME-126", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R125_FINAL_VERIFICATION_2026-10-18.md
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R126_DB_VERIFICATION_2026-10-18.md
 
-CCMAI-RUNTIME-125 final stable-source full Go verification and DB sentinel gate pending; frontend474/build/docs and ordinary-binary zero-provider smoke passed, current UI original terminal passed. Final source fixes are test compatibility only. Complete evidence/cleanup/review; no paid call/customer data/push/deploy, full M3/pilot/release remain open.
+CCMAI-RUNTIME-126 verify complete engine/MCP package reruns after test pool and pending-log fixes, then validate current whole-package coverage with source identity and DB sentinels. R125 complete full command exited1 and is never relabeled PASS. Unchanged packages retain their actual passed runs. Frontend474/build/docs, ordinary-binary zero-provider smoke and UI terminal passed. No paid call/customer data/push/deploy; M3/pilot/release remain open.
 
-Root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; Sol summary fixture, Luna response fixture returned
+Root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; Sol DB fixture pool and Luna MCP fixture returned
 
 R122 N03 was reproduced and repaired with native negative/recovery evidence. R123 ordinary-binary smoke exposed single-workspace tenant incompatibility; original failure retained. R120/R121 terminal failures remain historical and are not rewritten by the new completed browser proof. Facebook/ZaloOA remain parked.
 

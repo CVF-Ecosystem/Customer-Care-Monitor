@@ -98,6 +98,7 @@ func connectTestDB(t *testing.T) {
 	if dsn == "" {
 		t.Skip("bo qua: TEST_DB_DSN chua duoc thiet lap")
 	}
+	db.Close()
 	if err := db.Connect(dsn, false); err != nil {
 		t.Skipf("bo qua: khong ket noi duoc DB test: %v", err)
 	}

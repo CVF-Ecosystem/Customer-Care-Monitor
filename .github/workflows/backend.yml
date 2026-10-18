@@ -53,7 +53,7 @@ jobs:
         run: |
           set -uo pipefail
           test -n "${TEST_DB_DSN:-}" || { echo "TEST_DB_DSN is not set" >&2; exit 1; }
-          go test ./... -json -count=1 -p 1 > "$RUNNER_TEMP/gotest.json"
+          go test -timeout 30m ./... -json -count=1 -p 1 > "$RUNNER_TEMP/gotest.json"
           test_status=$?
           python3 "$GITHUB_WORKSPACE/scripts/ci_db_test_gate.py" "$RUNNER_TEMP/gotest.json"
           gate_status=$?
