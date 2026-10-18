@@ -7,7 +7,8 @@
     "workOrderAuthor": "Codex /root",
     "implementationWorker": "/root/r121_isolation_luna",
     "reviewer": "Codex /root",
-    "commitSteward": "Codex /root"
+    "commitSteward": "Codex /root",
+    "repairWorker": "/root/r121_namespace_audit_sol"
   },
   "allowedPaths": [
     "backend/api/handlers/intervention_ui_r121_test.go",
@@ -70,13 +71,17 @@
     "docs/reviews/R121_CAPABILITY_HOLD_2026-10-18.md",
     "docs/reviews/R121_CAPABILITY_CONFIRMATION_REVIEW_2026-10-18.md",
     "docs/reviews/R121_IMPLEMENTATION_WORKER_RETURN_2026-10-18.md",
-    "docs/reviews/R121_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md"
+    "docs/reviews/R121_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md",
+    "docs/reviews/R121_IDENTITY_CONSOLIDATED_REPAIR_DECISION_2026-10-18.md"
   ],
   "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
     "BUILD"
@@ -94,8 +99,8 @@
     "sourceRepairRounds": 0,
     "rootCompileInvocations": 1,
     "campaignStarts": 0,
-    "newFixtureStarts": 0,
-    "setupInvocations": 0,
+    "newFixtureStarts": 1,
+    "setupInvocations": 1,
     "fixtureFinalStops": 0,
     "backendStarts": 0,
     "viteStarts": 0,
@@ -111,11 +116,19 @@
     "expectedExecExit": 17,
     "heldChildExit": 0,
     "heldChildWaitObserved": true,
-    "source": "COMMITTED_REVIEWED",
+    "source": "SOURCE_REPAIR1_PENDING_ACK",
     "productRuntime": "NOT_RUN",
     "compile": "PASS_OFFLINE_1OF1",
     "sourcePins": 405,
-    "setup": "NOT_RUN"
+    "setup": "EXIT1_SOURCE_ADMISSION_IDENTITY",
+    "actualFixtureStarts": 0,
+    "actualBackendStarts": 0,
+    "actualViteStarts": 0,
+    "actualProductTabs": 0,
+    "actualProviderCalls": 0,
+    "runtimeDirectoryPresent": false,
+    "setupWaitObserved": true,
+    "setupWrapperMetadataError": null
   },
   "x-capabilityContinuation": {
     "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-121-CAPABILITY-CONTINUATION.json",
@@ -134,5 +147,6 @@
     "source": "NOT_STARTED",
     "productRuntime": "NOT_RUN",
     "automaticRetry": false
-  }
+  },
+  "fixtureStartReservationQualification": "budgetUsed.newFixtureStarts1 is conservative reservation; actual Docker start0, not reset or reused."
 }

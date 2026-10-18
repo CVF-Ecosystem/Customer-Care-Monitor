@@ -11,9 +11,9 @@ Memory class: POINTER_RECORD
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md
 
-CCMAI-RUNTIME-121 source/binary admission ready: source9e392d98, sole offline compilePASS/405pins unchanged, binary3853a899; Root commits exact admission before sole fresh setup. Commit exact new resource admission before sole original foreground UI campaign and actual terminal/fingerprint/effect review. No provider/case actions, old failed evidence/caps unchanged; full milestones OPEN/accounts parked/no push-merge-deploy.
+CCMAI-RUNTIME-121 BUILD source-only namespace repair1 after committed acknowledgment: Sol exact full CCMAI-RUNTIME-120->121 token correction at8sites/3newfiles, Vite unchanged, no logic/product changes. Worker/Root one remaining Python check each; compile/setup caps consumed and repaired source/binary inadmissible, no runtime retry before fresh explicit budget decision. Old evidence/caps unchanged, full milestones OPEN/accounts parked/no provider-push-merge-deploy.
 
-Codex /root ORCHESTRATOR / independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD and authorized runtime operator; Luna source worker/static recorder assessor returned idle
+Codex /root ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol /root/r121_namespace_audit_sol REPAIR_WORKER pending committed acknowledgment; runtime HOLD
 
 R120 UI accepted bounded, original terminal/durable accounting missing, stopped/CHANGES_REQUIRED and consumed caps immutable. R121 separate local route per owner instruction, no new product implementation claim.
 
@@ -971,3 +971,7 @@ Explicit owner capability continuation succeeded actual originalexec17/heldchild
 Source-only independent acceptance: four byte-exact mechanical copies/400oldpins unchanged; worker19PASS1/2, Root19PASS1/2, repair0/2. Root-authored foreground recorder metadata-error gap independently found by Luna, fixed by Root try/finally and read-only rechecked accepted for that interval only; no OS-kill/wait-failure guarantee. Source worker idle; Root sole offline compile/exact admissions next, runtime still absent. Review: docs/reviews/R121_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md.
 
 Root sole offline compile1of1 PASS exit0/35.019sec atsource9e392d985dfed3f8dcdd179819a546464115a619;405pins unchanged, binary3853a899ccbe03c51e9c47b428221b6d302d2df746fd14fa55733f15464b798d/58448384bytes. Git cat-file batch normalizedLF verifies committed source; offline GOPROXYoff/GOSUMDBoff/GOTOOLCHAINlocal/GOENVoff. Read-only Docker29.8.2 responds and IAB inventory available0tabs. No setup/product effects before committed admission.
+
+Sole setup child10408 original wrapper held/waitObserved true/exit1/metadataErrornull; stderr Hold:SOURCE_ADMISSION_IDENTITY. R121 runtime directory absent and source fails identity before any Docker command. Root omitted full CCMAI-RUNTIME-120 token from mechanical contract; new copies still expect old fulltranche while admission121. Compile/setup consumed, actual fixture/backend/Vite/tab/provider0, no rerun. Root commissions Sol Medium consolidated read-only cross-file namespace/dependency audit before first same-scope source repair; no resource/runtime authority expanded.
+
+Consolidated Sol read-only audit before first repair found8 full-ID sites across3newcopies; other paths/env/DSN/symbols/template and intentional R101 helper aligned. Root SPEC_AUTHOR/WORK_ORDER_AUTHOR corrects copying recipe, unchanged product identity acceptance/scope/risk/effects/commit owner. Sol REPAIR_WORKER acknowledgment and committed grant precede8exact literal changes; worker/Root checks1/2 each remain one, source repair1/2 planned. No compile/setup/runtime from this repair; consumed caps preserved and old binary inadmissible after edit. Decision: docs/reviews/R121_IDENTITY_CONSOLIDATED_REPAIR_DECISION_2026-10-18.md.

@@ -4236,6 +4236,15 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/probes/r121_root/capability_confirmation/manifest.json`
 - Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/probes/r121_root/capability_confirmation/original_bytes.zip`
 - Owner local resume bounded M3 seed; no BUILD/runtime before activation/admission.: `CVF_SESSION/authority/CCMAI-RUNTIME-121.json`
+- R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/R121_IDENTITY_CONSOLIDATED_REPAIR_DECISION_2026-10-18.md`
+- R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/probes/r121_root/setup_001/child_started.json`
+- R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/probes/r121_root/setup_001/receipt.json`
+- R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/probes/r121_root/setup_001/reservation.json`
+- R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/probes/r121_root/setup_001/stderr.bin`
+- R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/probes/r121_root/setup_001/stdout.bin`
+- R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/probes/r121_root/setup_001/tool_result.json`
+- R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/probes/r121_root/identity_repair/preimage.zip`
+- R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/probes/r121_root/identity_repair/preimage_manifest.json`
 - R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run.: `docs/reviews/probes/r121_root/source_binary_admission.json`
 - R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run.: `docs/reviews/probes/r121_root/compile_001/receipt.json`
 - R121 actual offline compile/source-binary/tool admission or read-only Docker readiness; product runtime not yet run.: `docs/reviews/probes/r121_root/compile_001/reservation.json`

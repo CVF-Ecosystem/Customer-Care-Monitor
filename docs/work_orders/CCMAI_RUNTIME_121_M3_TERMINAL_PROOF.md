@@ -16,7 +16,7 @@ INTAKE -> DESIGN -> SPEC -> WORK_ORDER inherited/consolidated decision: retain r
 
 ## Acceptance
 
-A1. Worker creates exactly four new source files: backend/api/handlers/intervention_ui_r121_test.go, scripts/r121_ui_supervisor.py, scripts/r121_vite_config.mjs.template, scripts/tests/test_r121_ui_supervisor.py. Each equals R120 preimage after exact case-sensitive replacements R120->R121 and r120->r121 only. No other differences (including cleanup180 reserve). No shared/product edits. New admission, paths, name, DSN, env and Go symbols all isolated. Worker records hashes and one focused Python check. No worker compile/runtime/seed/commit.
+A1. Worker creates exactly four new source files: backend/api/handlers/intervention_ui_r121_test.go, scripts/r121_ui_supervisor.py, scripts/r121_vite_config.mjs.template, scripts/tests/test_r121_ui_supervisor.py. Each equals R120 preimage after exact case-sensitive replacements R120->R121, r120->r121 and CCMAI-RUNTIME-120->CCMAI-RUNTIME-121 only. No other differences (including cleanup180 reserve). No shared/product edits. New admission, paths, name, DSN, env and Go symbols all isolated. Worker records hashes and one focused Python check. No worker compile/runtime/seed/commit.
 
 A2. Root one harmless local capability admission <=90seconds, parent+short child, one file stop request, original process object retained, observed child wait/exit/end marker and actual ORIGINAL exec session exit17 matching durable receipt. No listener/Docker/DB/browser/network/provider. One invocation/no retry. Demonstrates only its short uninterrupted lifetime, not1200second or restart survival. Failure stops product route. Root accepts applicability explicitly before any product setup.
 
@@ -70,3 +70,11 @@ Root sole short capability check observed cooperative child stop/wait exit0 and 
 ## Explicit owner continuation and successful confirmation
 
 Owner grants harmless confirmation until complete, supplementary authority CCMAI-RUNTIME-121-CAPABILITY-CONTINUATION. Original cap/failed attempt unchanged. Fresh actual originalexec17/retainedchildwait0 observed, short uninterrupted lifecycle only; independent capability assessment required. Existing source/runtime budgets unused and unchanged. Root reactivates same bounded source BUILD after committed acknowledgment, then exact admissions; no product start from the supplementary grant itself. Original campaign stop/acceptance limits continue unchanged.
+
+## Setup identity failure before resource effects
+
+Sole setup exited1 Hold:SOURCE_ADMISSION_IDENTITY with actual original wrapper wait receipt/exit1, metadataErrornull. No R121 runtime directory/Docker/resource/backend/Vite/browser/provider effects. Root original two-token mechanical contract omitted full CCMAI-RUNTIME-120 string, so both new supervisor and Go fixture still compare old tranche120 with new admission121. Root contract/source review miss, not unexplained lifecycle loss. Source-only consolidated namespace audit before first bounded repair; compile/setup caps consumed, no automatic rerun.
+
+## Bounded source-only namespace repair1
+
+Consolidated decision: docs/reviews/R121_IDENTITY_CONSOLIDATED_REPAIR_DECISION_2026-10-18.md. Root corrects A1 copy recipe to include exact full CCMAI-RUNTIME-120->CCMAI-RUNTIME-121 identity. Repair worker /root/r121_namespace_audit_sol, one remaining worker/Root Python check each, no source logic changes beyond eight full-token substitutions. Existing risk/path/effect/commit-owner scope unchanged. Compile/setup budgets consumed; runtime HOLD pending fresh explicit decision, no automatic rerun. Root-recorded committed current repair acknowledgment precedes edits.
