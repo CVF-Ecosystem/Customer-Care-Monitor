@@ -4216,6 +4216,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/R120_FINAL_INDEPENDENT_UI_REVIEW_2026-10-18.md`
 - R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/browser/mobile_history.metrics.json`
 - R120 actual bounded synthetic UI/raw evidence or separate cleanup; original terminal and durable accounting MISSING, CHANGES_REQUIRED.: `docs/reviews/probes/r120_root/final_runtime_manifest.json`
+- Read-only lifetime diagnosis and finite transfer decision; original terminal/accounting missing, no source repair or new runtime authority.: `docs/reviews/R120_READONLY_LIFETIME_REVIEW_AND_DECISION_2026-10-18.md`
+- Existing303archive members verified against sizes/hashes; no recovered terminal/accounting and no runtime execution.: `docs/reviews/probes/r120_root/lifetime_review_20261018.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

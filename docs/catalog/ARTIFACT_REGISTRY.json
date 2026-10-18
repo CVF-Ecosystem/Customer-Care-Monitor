@@ -33498,6 +33498,20 @@
       "path": "docs/reviews/probes/r120_root/final_gate_stderr.txt",
       "status": "ACTIVE",
       "description": "Actual final static pre-commit profile receipt; not runtime acceptance, APPL explicitly not applicable."
+    },
+    {
+      "id": "r120-readonly-lifetime-review",
+      "family": "continuity",
+      "path": "docs/reviews/R120_READONLY_LIFETIME_REVIEW_AND_DECISION_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Read-only lifetime diagnosis and finite transfer decision; original terminal/accounting missing, no source repair or new runtime authority."
+    },
+    {
+      "id": "r120-readonly-lifetime-verification",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r120_root/lifetime_review_20261018.json",
+      "status": "ACTIVE",
+      "description": "Existing303archive members verified against sizes/hashes; no recovered terminal/accounting and no runtime execution."
     }
   ]
 }

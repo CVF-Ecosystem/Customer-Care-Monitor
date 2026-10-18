@@ -4,6 +4,8 @@
 
 R120 actual current UI observation: correct active rev2 over later off-lineage rev3; three readable Vietnamese history events/system reason, synthetic notice. CSS390x844 has no horizontal overflow, original JPEG375x811 (not exact-raster390x844/PNG); B09 unsupported NOT_RUN and B07 inherited. Overall CHANGES_REQUIRED: original supervisor terminal/held-child wait-exit/final fingerprint-effect counters MISSING after session loss, cause UNKNOWN. Root separate identity-proven sole fixture stop succeeded: EXITED/Pid0/Ports{}, listeners3019/64408/64629absent, protected8containers/9networks/471volumesequal, source400/binary/executablesunchanged. UI observation is not AI governance or actual workflow proof. Runtime stopped; no replay/repair/automatic successor/provider. Read-only failed-terminal/lifetime review/transfer only before separate governed runtime decision. FullM2/M3/M1business/pilot/release OPEN, accountsparked/no push-merge-deploy. Review: docs/reviews/R120_FINAL_INDEPENDENT_UI_REVIEW_2026-10-18.md.
 
+Read-only Luna Max diagnosis independently verified by Root: the stop command acknowledges a request only; terminal publication depends on the original supervisor reaching cleanup. Existing303member archive matches its manifest but contains no final markers/terminal/serve receipt. Actual disappearance cause UNKNOWN; no product source defect or repair established. Transfer decision: docs/reviews/R120_READONLY_LIFETIME_REVIEW_AND_DECISION_2026-10-18.md. Current implementation projection aligned to this R120 hold. No new runtime authority or automatic successor.
+
 Earlier checkpoint sections are historical.
 
 ## Current R120 finite UI route — 2026-10-18

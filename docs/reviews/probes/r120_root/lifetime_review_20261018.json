@@ -1,0 +1,32 @@
+{
+  "kind": "READ_ONLY_EXISTING_ARTIFACT_VERIFICATION",
+  "date": "2026-10-18",
+  "archive": "docs/reviews/probes/r120_root/final_runtime_original.zip",
+  "archiveSha256": "37193f0a8d6bc88e935be0aec99fbdc539d6cb5e7d4c4f33cff7169c3eb85151",
+  "membersVerified": 303,
+  "finalMarkerCounts": {
+    "R120_BROWSER_FINAL": 0,
+    "R120_EFFECT_COUNTS": 0,
+    "--- PASS: TestR120BrowserFixture": 0,
+    "--- FAIL: TestR120BrowserFixture": 0,
+    "panic: test timed out": 0
+  },
+  "serveToStopRequestSeconds": 507.9878158569336,
+  "supervisorFinallyStopReservations": 0,
+  "childTerminateReservations": 0,
+  "missingFiles": {
+    ".cvf/runtime/r120_ui/terminal.json": {
+      "archivePresent": false,
+      "localPresent": false
+    },
+    "docs/reviews/probes/r120_root/serve_001/receipt.json": {
+      "archivePresent": false,
+      "localPresent": false
+    }
+  },
+  "actualDisappearanceCause": "UNKNOWN",
+  "newRuntimeInvocations": 0,
+  "newSoftwareTestInvocations": 0,
+  "providerCalls": 0,
+  "claimBoundary": "Checks existing artifact bytes only; does not prove runtime governance or terminal success."
+}

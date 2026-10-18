@@ -86,7 +86,8 @@
     "docs/reviews/R119_READONLY_CAUSE_AND_R120_DECISION_2026-10-18.md",
     "docs/reviews/R120_SOURCE_REVIEW_ROUND1_2026-10-18.md",
     "docs/reviews/R120_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md",
-    "docs/reviews/R120_FINAL_INDEPENDENT_UI_REVIEW_2026-10-18.md"
+    "docs/reviews/R120_FINAL_INDEPENDENT_UI_REVIEW_2026-10-18.md",
+    "docs/reviews/R120_READONLY_LIFETIME_REVIEW_AND_DECISION_2026-10-18.md"
   ],
   "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
@@ -137,5 +138,17 @@
     "finalDurableAccounting": "NOT_OBSERVED",
     "separateRootCleanup": true,
     "campaignDeadlineCompliance": "NOT_PROVEN_WITHOUT_ORIGINAL_TERMINAL"
+  },
+  "x-readOnlyLifetimeReview": {
+    "status": "READ_ONLY_REVIEW_COMPLETE_RUNTIME_HOLD",
+    "review": "docs/reviews/R120_READONLY_LIFETIME_REVIEW_AND_DECISION_2026-10-18.md",
+    "verification": "docs/reviews/probes/r120_root/lifetime_review_20261018.json",
+    "diagnosticWorker": "/root/r120_lifetime_audit_luna (Luna Max, read-only)",
+    "independentReviewer": "Codex /root",
+    "actualDisappearanceCause": "UNKNOWN",
+    "runtimeAuthorized": false,
+    "sourceRepairAuthorized": false,
+    "newRuntimeInvocations": 0,
+    "providerCalls": 0
   }
 }
