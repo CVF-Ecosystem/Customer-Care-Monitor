@@ -1,0 +1,29 @@
+{
+  "oldSourcePinsUnchanged": 400,
+  "mechanicalCopies": [
+    {
+      "preimage": "backend/api/handlers/intervention_ui_r120_test.go",
+      "path": "backend/api/handlers/intervention_ui_r121_test.go",
+      "exactMechanical": true,
+      "sha256": "9189b27519afb033a5740d5fdc477dcf9c33aca1d9618448d52009de37e294a9"
+    },
+    {
+      "preimage": "scripts/r120_ui_supervisor.py",
+      "path": "scripts/r121_ui_supervisor.py",
+      "exactMechanical": true,
+      "sha256": "686a75b1f766960a1e8d223bc8cc80b1776d09a95d4518eff0cfca9b97c9d989"
+    },
+    {
+      "preimage": "scripts/r120_vite_config.mjs.template",
+      "path": "scripts/r121_vite_config.mjs.template",
+      "exactMechanical": true,
+      "sha256": "9f2b970e414a1947c9ce78b06a35cf1af5778283d3c50e2ba4edc643a03e13c3"
+    },
+    {
+      "preimage": "scripts/tests/test_r120_ui_supervisor.py",
+      "path": "scripts/tests/test_r121_ui_supervisor.py",
+      "exactMechanical": true,
+      "sha256": "39a67b509d4e653f02d551d3a0d8824ecaa446c114374d3babfe9959a42bfd4b"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+// R121 synthetic UI fixture only. The supervisor replaces the three JSON placeholders.
+import { createRequire } from 'node:module'
+import { openSync, writeSync, fsyncSync, closeSync } from 'node:fs'
+import { join } from 'node:path'
+import { pathToFileURL } from 'node:url'
+
+const root = __R121_FRONTEND_ROOT__
+const runtime = __R121_RUNTIME__
+const apiOrigin = __R121_API_ORIGIN__
+const nonce = __R121_NONCE__
+if (!/^http:\/\/127\.0\.0\.1:[1-9][0-9]{0,4}$/.test(apiOrigin)) throw new Error('R121 loopback API required')
+const requireFrontend = createRequire(join(root, 'package.json'))
+const load = async name => import(pathToFileURL(requireFrontend.resolve(name)).href)
+const { defineConfig } = await load('vite')
+const { default: vue } = await load('@vitejs/plugin-vue')
+const { default: vuetify } = await load('vite-plugin-vuetify')
+let authAttempts = 0
+let authAllowed = 0
+let routeSequence = 0
+function append(row) {
+  const fd = openSync(join(runtime, 'vite_routes.jsonl'), 'a')
+  try { writeSync(fd, JSON.stringify(row) + '\n'); fsyncSync(fd) } finally { closeSync(fd) }
+}
+export default defineConfig({
+  root,
+  envDir: false,
+  envPrefix: ['R121_DISABLED_AMBIENT_PREFIX_'],
+  plugins: [vue(), vuetify({ autoImport: true }), { name:'r121-read-only-proxy', enforce:'pre', configureServer(server) {
+    server.middlewares.use((req,res,next) => {
+      const path = (req.url || '').split('?',1)[0]
+      if (path === '/__r121_health') {
+        if (req.method !== 'GET') { res.statusCode=405; res.end(); return }
+        res.setHeader('Content-Type','text/plain'); res.end(nonce); return
+      }
+      if (path !== '/api' && !path.startsWith('/api/')) { next(); return }
+      let allowed = req.method === 'GET' || req.method === 'HEAD'
+      if (req.method === 'POST' && (path === '/api/v1/auth/login' || path === '/api/v1/auth/logout')) {
+        authAttempts++
+        if (authAllowed < 2) { authAllowed++; allowed=true }
+      }
+      const sequence = ++routeSequence
+      const event = { sequence, method:req.method, path, allowed,
+        authAttemptCount:authAttempts, authAllowedCount:authAllowed }
+      try { append({ phase:'attempt', ...event }) }
+      catch { res.statusCode=503; res.end(); return }
+      res.once('finish', () => {
+        try { append({ phase:'response', sequence, method:req.method, path, status:res.statusCode }) }
+        catch { /* The supervisor requires a matching response record before terminal success. */ }
+      })
+      if (!allowed) { res.statusCode=405; res.end(); return }
+      next()
+    })
+  }}],
+  server: { host:'127.0.0.1', port:3019, strictPort:true,
+    proxy:{ '/api':{ target:apiOrigin, changeOrigin:true }} },
+})

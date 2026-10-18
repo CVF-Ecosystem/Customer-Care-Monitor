@@ -1,0 +1,14 @@
+{
+  "rootPythonCheck": 1,
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "scripts/tests",
+    "-p",
+    "test_r121_ui_supervisor.py"
+  ]
+}

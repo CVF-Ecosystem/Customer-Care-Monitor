@@ -11,9 +11,9 @@ Memory class: POINTER_RECORD
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md
 
-CCMAI-RUNTIME-121 BUILD source-only after committed Root acknowledgment of Luna current rehydration and successful short capability assessment. Four mechanical R120->R121 copies only; original failed cap immutable, explicit owner continuation actualexec17/childwait0. Root independent source review/compile and committed exact source-binary/resource admissions before any sole product campaign; no provider/case actions, full milestones OPEN/accounts parked/no push-merge-deploy.
+CCMAI-RUNTIME-121 source-only reviewed: four exact mechanical copies, worker19/Root19 focusedPASS, no product source changes. Root commits source then sole offline compile and exact source-binary admission before setup; committed exact resource admission before sole original-foreground-session M3 UI campaign/terminal review. Original failed cap and owner continuation separate; provider/case actions0, full milestones OPEN/accounts parked/no push-merge-deploy.
 
-Codex /root ORCHESTRATOR / independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna /root/r121_isolation_luna IMPLEMENTATION_WORKER pending committed source acknowledgment
+Codex /root ORCHESTRATOR / independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD and authorized runtime operator; Luna source worker/static recorder assessor returned idle
 
 R120 UI accepted bounded, original terminal/durable accounting missing, stopped/CHANGES_REQUIRED and consumed caps immutable. R121 separate local route per owner instruction, no new product implementation claim.
 
@@ -967,3 +967,5 @@ R121 capability evidence and smallest prospective invocation correction independ
 Owner explicitly replies “cho phép dùng đến khi hoàn tất” to the harmless process confirmation request. Root records supplementary capability-only authority CVF_SESSION/authority/CCMAI-RUNTIME-121-CAPABILITY-CONTINUATION.json before effect, no old seed/cap/evidence reset. First continuation attempt reserved; source BUILD/product effects remain unadmitted until actual review.
 
 Explicit owner capability continuation succeeded actual originalexec17/heldchildwait0, scope short uninterrupted only. Supplementary authority and raw confirmation separate from unchanged failed first attempt. Root reactivates same bounded R121 source BUILD pending independent capability review/current worker acknowledgment and committed grant; source/runtime still unstarted. Review: docs/reviews/R121_CAPABILITY_CONFIRMATION_REVIEW_2026-10-18.md.
+
+Source-only independent acceptance: four byte-exact mechanical copies/400oldpins unchanged; worker19PASS1/2, Root19PASS1/2, repair0/2. Root-authored foreground recorder metadata-error gap independently found by Luna, fixed by Root try/finally and read-only rechecked accepted for that interval only; no OS-kill/wait-failure guarantee. Source worker idle; Root sole offline compile/exact admissions next, runtime still absent. Review: docs/reviews/R121_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md.

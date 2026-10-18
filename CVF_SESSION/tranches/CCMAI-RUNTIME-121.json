@@ -68,7 +68,9 @@
   "buildCommit": null,
   "reviewEvidence": [
     "docs/reviews/R121_CAPABILITY_HOLD_2026-10-18.md",
-    "docs/reviews/R121_CAPABILITY_CONFIRMATION_REVIEW_2026-10-18.md"
+    "docs/reviews/R121_CAPABILITY_CONFIRMATION_REVIEW_2026-10-18.md",
+    "docs/reviews/R121_IMPLEMENTATION_WORKER_RETURN_2026-10-18.md",
+    "docs/reviews/R121_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md"
   ],
   "disposition": "PENDING",
   "freeze": "OPEN",
@@ -87,8 +89,8 @@
   ],
   "budgetUsed": {
     "capabilityInvocations": 1,
-    "workerPythonChecks": 0,
-    "rootPythonChecks": 0,
+    "workerPythonChecks": 1,
+    "rootPythonChecks": 1,
     "sourceRepairRounds": 0,
     "rootCompileInvocations": 0,
     "campaignStarts": 0,
@@ -109,7 +111,7 @@
     "expectedExecExit": 17,
     "heldChildExit": 0,
     "heldChildWaitObserved": true,
-    "source": "NOT_STARTED_PENDING_ACK",
+    "source": "ACCEPTED_SOURCE_ONLY_COMPILE_PENDING",
     "productRuntime": "NOT_RUN"
   },
   "x-capabilityContinuation": {

@@ -33652,6 +33652,97 @@
       "path": "docs/reviews/probes/r121_root/capability_confirmation/original_bytes.zip",
       "status": "ACTIVE",
       "description": "Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion."
+    },
+    {
+      "id": "r121-source-return-0",
+      "family": "continuity",
+      "path": "docs/reviews/R121_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance."
+    },
+    {
+      "id": "r121-source-return-1",
+      "family": "continuity",
+      "path": "docs/reviews/R121_IMPLEMENTATION_WORKER_RETURN_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance."
+    },
+    {
+      "id": "r121-source-return-2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/foreground_wrapper.py",
+      "status": "ACTIVE",
+      "description": "R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance."
+    },
+    {
+      "id": "r121-source-return-3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_worker/python_check_01/command.json",
+      "status": "ACTIVE",
+      "description": "R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance."
+    },
+    {
+      "id": "r121-source-return-4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_worker/python_check_01/receipt.json",
+      "status": "ACTIVE",
+      "description": "R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance."
+    },
+    {
+      "id": "r121-source-return-5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_worker/python_check_01/stderr.bin",
+      "status": "ACTIVE",
+      "description": "R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance."
+    },
+    {
+      "id": "r121-source-return-6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_worker/python_check_01/stdout.bin",
+      "status": "ACTIVE",
+      "description": "R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance."
+    },
+    {
+      "id": "r121-source-return-7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_worker/source_copy_manifest.json",
+      "status": "ACTIVE",
+      "description": "R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance."
+    },
+    {
+      "id": "r121-source-return-8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/source_unit_001/receipt.json",
+      "status": "ACTIVE",
+      "description": "R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance."
+    },
+    {
+      "id": "r121-source-return-9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/source_unit_001/reservation.json",
+      "status": "ACTIVE",
+      "description": "R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance."
+    },
+    {
+      "id": "r121-source-return-10",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/source_unit_001/source_verification.json",
+      "status": "ACTIVE",
+      "description": "R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance."
+    },
+    {
+      "id": "r121-source-return-11",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/source_unit_001/stderr.bin",
+      "status": "ACTIVE",
+      "description": "R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance."
+    },
+    {
+      "id": "r121-source-return-12",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/source_unit_001/stdout.bin",
+      "status": "ACTIVE",
+      "description": "R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance."
     }
   ]
 }

@@ -4236,6 +4236,19 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/probes/r121_root/capability_confirmation/manifest.json`
 - Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/probes/r121_root/capability_confirmation/original_bytes.zip`
 - Owner local resume bounded M3 seed; no BUILD/runtime before activation/admission.: `CVF_SESSION/authority/CCMAI-RUNTIME-121.json`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/R121_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/R121_IMPLEMENTATION_WORKER_RETURN_2026-10-18.md`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_root/source_unit_001/source_verification.json`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_root/source_unit_001/stderr.bin`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_root/source_unit_001/stdout.bin`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_root/foreground_wrapper.py`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_worker/python_check_01/command.json`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_worker/python_check_01/receipt.json`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_worker/python_check_01/stderr.bin`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_worker/python_check_01/stdout.bin`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_worker/source_copy_manifest.json`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_root/source_unit_001/receipt.json`
+- R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_root/source_unit_001/reservation.json`
 - R121 finite active record, old budgets immutable.: `CVF_SESSION/tranches/CCMAI-RUNTIME-121.json`
 - Finite mechanical isolation and original-session M3 terminal proof; no runtime before admissions.: `docs/work_orders/CCMAI_RUNTIME_121_M3_TERMINAL_PROOF.md`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
