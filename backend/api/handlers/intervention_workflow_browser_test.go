@@ -124,6 +124,14 @@ func TestM3WorkflowBrowserFixture(t *testing.T) {
 	}
 
 	f := m3FixtureStart(t)
+	if err := db.DB.Model(&models.InterventionCase{}).Where("id = ?", f.caseID).Update("active_proposal_id", f.proposal).Error; err != nil {
+		t.Fatal(err)
+	}
+	for id, name := range map[string]string{f.assignee: "Người xử lý minh họa", f.reader: "Người xem minh họa"} {
+		if err := db.DB.Model(&models.User{}).Where("id = ?", id).Update("name", name).Error; err != nil {
+			t.Fatal(err)
+		}
+	}
 	initialCase, _ := m3WorkflowObserve(t, f.caseID)
 	initialWait, _ := m3WorkflowObserve(t, f.waitID)
 	var proposal models.InterventionProposal
