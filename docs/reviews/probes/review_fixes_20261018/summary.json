@@ -1,0 +1,48 @@
+{
+  "N01": "TEST_FIXTURES_REPAIRED_PYTHON231_PASS_FULL_BACKEND_SUITE_NOT_COMPLETED",
+  "N02": "CAPABILITY_NOTICE_AND_CONTRACT_DONE_ACTIVATION_NOT_IMPLEMENTED",
+  "N03": "REPRODUCED_REPAIRED_ROOT3_NATIVE_PASS_WORKER_R101_AND_COMPONENT18_PASS",
+  "N04": "ENCODING20_TESTS_PASS_UI_OBSERVED_NEW_WRAPPER_TERMINAL_MISSING_EXTERNAL_INTERRUPTION",
+  "N05": "NPM_CI_DOCS_BUILD_PASS_LINK_CHECK_NOT_DISABLED",
+  "backendBuild": "PASS_EXIT0",
+  "frontendBuild": "PASS_EXIT0",
+  "frontendSuite": {
+    "pass": 470,
+    "fail": 3,
+    "file": "src/__tests__/dashboard-service-status.spec.ts",
+    "qualification": "pre-existing fixture/permission drift, not modified or skipped"
+  },
+  "pythonSuite": {
+    "pass": 231,
+    "fail": 0
+  },
+  "rootN03": {
+    "exit": 0,
+    "tests": 3,
+    "elapsedSeconds": 13.342
+  },
+  "providerCalls": 0,
+  "ordinaryActivation": "DISABLED",
+  "cleanup": {
+    "ownedContainer": "39b8638d14613eb035c4039f29b276137f81d712772d38f46739ce6c1d5d319e",
+    "dockerStopExit": 0,
+    "state": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-10-18T09:39:18.734392781Z",
+      "FinishedAt": "2026-10-18T10:24:29.450038258Z"
+    },
+    "browserFinalCaseReadExit": 0,
+    "qualification": "Independent cleanup/readback after external interruption; not original wrapper terminal or initial/final fingerprint proof."
+  },
+  "listeners": [],
+  "fullGo": "INTERRUPTED_INCOMPLETE_NOT_PASS",
+  "browser": "Two observations/login/logout captured; original parents externally interrupted, exact final case independently verified, all child/listener resources absent. No original-wait/fingerprint claim."
+}

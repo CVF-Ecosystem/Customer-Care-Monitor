@@ -61,12 +61,12 @@ Kỳ vọng: doctor `RESULT: PASS`, preflight `PASS (7/7 executed gates passed)`
 
 ## 5. Tiếp tục công việc (đọc theo từng bước, không đọc toàn bộ lịch sử)
 
-1. [AGENTS.md](../../AGENTS.md): giao thức khởi động, vai trò, và bảng lệnh phase của profile đã cài.
-2. [Mô hình khởi động nhanh](../../CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json): chế độ, phase, handoff đang hoạt động, bước đi kế tiếp được phép, checkpoint bị park.
-3. [CVF_SESSION_MEMORY.md](../../CVF_SESSION_MEMORY.md): phần "Current Truth" và chỉ thị roadmap hiện hành của owner.
+1. `AGENTS.md`: giao thức khởi động, vai trò, và bảng lệnh phase của profile đã cài.
+2. `CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json` (mô hình khởi động nhanh): chế độ, phase, handoff đang hoạt động, bước đi kế tiếp được phép, checkpoint bị park.
+3. `CVF_SESSION_MEMORY.md`: phần "Current Truth" và chỉ thị roadmap hiện hành của owner.
 4. Handoff đang hoạt động do mô hình khởi động ở bước 2 chỉ ra (trường `activeHandoff`; đừng giả định một tên file cố định, vì tên thay đổi theo tranche), cùng [IMPLEMENTATION_STATUS.json](../../IMPLEMENTATION_STATUS.json) khi cần sự thật về năng lực.
 5. Chỉ khi một sự thật hiện tại bị thiếu hoặc mâu thuẫn mới tra cứu có mục tiêu `CVF_SESSION/ACTIVE_SESSION_STATE.json` đầy đủ hoặc handoff lịch sử. Nếu bốn bề mặt (state, memory, handoff, implementation status) mâu thuẫn nhau, dừng và báo `BLOCKED_CONTINUITY_DRIFT`.
-6. Trước khi chọn phạm vi kế tiếp, đọc phần checkpoint S0–S7 và P0–P4 của [roadmap runtime](../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md) và bài học [kiểm soát roadmap của orchestrator](../reviews/learnings/feedback_orchestrator_roadmap_control.md). Kho bài học chung nằm ở [docs/reviews/learnings](../reviews/learnings/README.md); bản mẫu record mới là [LEARNING_RECORD_TEMPLATE.md](../reviews/learnings/LEARNING_RECORD_TEMPLATE.md).
+6. Trước khi chọn phạm vi kế tiếp, đọc phần checkpoint S0–S7 và P0–P4 của `docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md` và bài học [kiểm soát roadmap của orchestrator](../reviews/learnings/feedback_orchestrator_roadmap_control.md). Kho bài học chung nằm ở [docs/reviews/learnings](../reviews/learnings/README.md); bản mẫu record mới là [LEARNING_RECORD_TEMPLATE.md](../reviews/learnings/LEARNING_RECORD_TEMPLATE.md).
 
 Trước hành động vật chất đầu tiên, agent phát `CVF Agent Declaration` theo AGENTS.md từ giá trị file hiện tại, không dựa vào lịch sử chat hay bộ nhớ riêng của provider (bộ nhớ riêng chỉ là nguồn bổ sung, không phải authority).
 

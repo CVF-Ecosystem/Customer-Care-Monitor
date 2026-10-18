@@ -1,5 +1,12 @@
 # CCMA — Roadmap phát triển sản phẩm và tiếp quản giữa các agent
 
+## R122 — kết quả sửa local, 2026-10-18
+
+N01 đã sửa test fixture độc lập ledger/history, Python discovery231PASS; N05 sửa parser và72liên kết, `npm ci` + docs build PASS; N03 đã tái hiện nguồn đổi sau giao việc và thêm xác nhận phiên bản nguồn mới giữ nguyên đề xuất/quyết định/lịch sử, native MySQL + component tests PASS; N04 sửa encoding/ready ordering và đã quan sát đúng active proposal/lịch sử/đăng xuất trên UI synthetic. Các lượt kiểm thử bị ngắt khi môi trường phiên đổi phải giữ nhãn INCOMPLETE, không thay bằng PASS.
+
+N02 chỉ hoàn tất trạng thái capability trên UI/API và [contract kích hoạt synthetic](../../reference/INTERVENTION_SYNTHETIC_ACTIVATION_CONTRACT.md); ordinary activation/budget/grant/clean-install chưa triển khai. Full Go suite chưa hoàn tất; frontend full suite470PASS/3lỗi Dashboard kế thừa, build PASS. Chưa có full M3/pilot/release hoặc runtime governance acceptance. Chi tiết: `docs/reviews/R122_LOCAL_FIX_REVIEW_2026-10-18.md`. Tiếp theo là chốt review/commit phần sửa có bằng chứng, rồi xử lý các gap trên đúng phạm vi; không tự gọi provider/bật dữ liệu thật. Các phần kế hoạch bên dưới là checkpoint trước sửa, disposition hiện hành theo mục này.
+
+
 ## Kế hoạch sửa sau thẩm định local — 2026-10-18
 
 Đây là kế hoạch hiện hành, được owner yêu cầu cập nhật sau khi local đối chiếu bản review bên ngoài `CCM_Independent_Review_d7a6f76_2026-10-18.md`. Báo cáo bên ngoài là đầu vào; source, test và log được local kiểm tra mới quyết định tiếp thu. Chưa mục nào dưới đây được coi là đã sửa hoặc đã nghiệm thu. M1–M5 giữ nguyên; trọng tâm sản phẩm vẫn là M3.
@@ -172,7 +179,7 @@ R097 independent review accepted bounded local TLS proof; FREEZE local tooling o
 Đây là kế hoạch thực thi sản phẩm hiện hành, chuyển đánh giá độc lập ngày 2026-10-13 thành mốc hữu hạn và điều kiện bàn giao. Agent mới đọc bootstrap → memory → active handoff → tài liệu này → SPEC/work order của mốc được giao. Không đọc toàn bộ lịch sử mặc định. Roadmap cho phép chuẩn bị kế hoạch trong phạm vi owner đã giao; không phải work order cấp BUILD, provider, dữ liệu khách hàng, account, push hoặc deploy.
 
 - [Định hướng sản phẩm](../../PRODUCT_DIRECTION.md) giữ mục tiêu và ranh giới nghiệp vụ.
-- [Roadmap S0–S7](../../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md) giữ kiến trúc đích, hợp đồng exit toàn stage và lịch sử bằng chứng. M1–M5 là cách tổ chức delivery xuyên stage; hoàn tất một mốc không tự đóng cả stage.
+- Roadmap S0–S7 (`docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md`) giữ kiến trúc đích, hợp đồng exit toàn stage và lịch sử bằng chứng. M1–M5 là cách tổ chức delivery xuyên stage; hoàn tất một mốc không tự đóng cả stage.
 - Tài liệu này cập nhật thứ tự planning P0–P4 thành M1–M5; đưa quyết định dữ liệu/tiêu chí S0 lên trước implementation và đưa an toàn dữ liệu tối thiểu lên trước pilot. Không hạ các exit S0–S7 đã có.
 - [Roadmap kế thừa CVF](CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md) đã đóng bảy finding trong phạm vi riêng. Không mở lại nếu không có regression hoặc mâu thuẫn bằng chứng cụ thể. ID F01–F07 của kế thừa khác ID finding sản phẩm.
 - [Implementation truth](../../../IMPLEMENTATION_STATUS.json) và review gắn đúng source revision quyết định việc gì đã làm. Các câu “next” trong checkpoint lịch sử không phải lệnh hiện hành.
@@ -316,7 +323,7 @@ S4 tối ưu là nhánh có điều kiện: chỉ thử sau khi có vòng phản
 | M5-05 | Release/deploy | Artifact/image/version và cấu hình deploy đúng scope được phép; smoke check, rollback drill; không merge/release/deploy ngoài authority |
 | M5-06 | Bàn giao | Runbook người vận hành, known limitations, cửa vào agent, evidence/index cập nhật; người tiếp quản tái tạo đường cài và một luồng nghiệp vụ |
 
-Owner cho phép đồng bộ repo không đồng nghĩa bật production. Nếu chỉ chuyển máy để code, có thể clone và tiếp tục trước M5 theo [AGENTS.md](../../../AGENTS.md); phải giữ nhãn development và các gap. M5 là nghiệm thu bản phát hành/vận hành, không phải prerequisite để mở IDE trên máy mới.
+Owner cho phép đồng bộ repo không đồng nghĩa bật production. Nếu chỉ chuyển máy để code, có thể clone và tiếp tục trước M5 theo `AGENTS.md`; phải giữ nhãn development và các gap. M5 là nghiệm thu bản phát hành/vận hành, không phải prerequisite để mở IDE trên máy mới.
 
 ## 10. Dependency và backlog: cái gì chặn, cái gì để sau
 

@@ -4,6 +4,7 @@ export interface InterventionCase {
   id: string; tenant_id: string; job_id: string; conversation_id: string
   version: number; run_id: string; snapshot_id: string | null; snapshot_digest: string
   active_execution_id?: string | null; active_proposal_id?: string | null
+  reviewed_data_revision_id?: string | null
   disposition: string; work_state: string; reason_code: string; next_action: string
   human_assessment: string; human_explanation: string; human_next_action: string
   data_owner_id: string | null; assignee_id: string | null; due_at: string | null
@@ -21,11 +22,13 @@ export interface InterventionEvent {
 export interface InterventionDetail {
   case: InterventionCase; proposals: InterventionProposal[]
   active_proposal_id?: string | null; human_events: InterventionEvent[]; source_status: string
+  current_source_digest?: string; reviewed_source_current?: boolean
 }
 export interface InterventionAction {
   action: string; expected_version: number; expected_snapshot_id: string
   expected_snapshot_digest: string; expected_proposal_id: string; expected_revision: number
   reason: string; explanation?: string; next_action?: string
+  expected_current_digest?: string
   assignee_id?: string; due_at?: string; outcome?: string
 }
 export class InterventionHttpError extends Error {

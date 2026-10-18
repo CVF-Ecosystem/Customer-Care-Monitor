@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R122_LOCAL_REVIEW_FIXES_2026-10-18.md",
       "status": "ACTIVE",
-      "description": "R121 repaired full namespace accepted source-only; fresh finite postrepair admission, runtime not yet proven."
+      "description": "Current R122 local source fixes and qualified verification handoff; not release acceptance."
     },
     {
       "id": "r060-work-order",
@@ -34128,6 +34128,83 @@
       "path": "docs/reviews/probes/r121_root/browser/capture_readiness.json",
       "status": "ACTIVE",
       "description": "R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim."
+    },
+    {
+      "id": "r122-local-fix-0",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-122.json",
+      "status": "ACTIVE",
+      "description": "Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open."
+    },
+    {
+      "id": "r122-local-fix-1",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-122.json",
+      "status": "ACTIVE",
+      "description": "Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open."
+    },
+    {
+      "id": "r122-local-fix-2",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open."
+    },
+    {
+      "id": "r122-local-fix-3",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_122_LOCAL_REVIEW_FIXES.md",
+      "status": "ACTIVE",
+      "description": "Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open."
+    },
+    {
+      "id": "r122-local-fix-4",
+      "family": "continuity",
+      "path": "docs/reviews/R122_LOCAL_FIX_REVIEW_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open."
+    },
+    {
+      "id": "r122-local-fix-5",
+      "family": "continuity",
+      "path": "docs/reference/INTERVENTION_SYNTHETIC_ACTIVATION_CONTRACT.md",
+      "status": "ACTIVE",
+      "description": "Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open."
+    },
+    {
+      "id": "r122-local-fix-6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/review_fixes_20261018/current_ui.jpg",
+      "status": "ACTIVE",
+      "description": "Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open."
+    },
+    {
+      "id": "r122-local-fix-7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/review_fixes_20261018/manifest.json",
+      "status": "ACTIVE",
+      "description": "Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open."
+    },
+    {
+      "id": "r122-local-fix-8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/review_fixes_20261018/source_hashes.json",
+      "status": "ACTIVE",
+      "description": "Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open."
+    },
+    {
+      "id": "r122-local-fix-9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/review_fixes_20261018/summary.json",
+      "status": "ACTIVE",
+      "description": "Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open."
+    },
+    {
+      "id": "r122-local-fix-10",
+      "family": "continuity",
+      "path": "docs/reviews/probes/review_fixes_20261018/verification_raw.zip",
+      "status": "ACTIVE",
+      "description": "Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open."
     }
   ]
 }

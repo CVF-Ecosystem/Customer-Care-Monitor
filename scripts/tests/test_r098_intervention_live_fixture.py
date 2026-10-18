@@ -7,6 +7,15 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
+try:
+    from ._live_fixture_test_support import (
+        isolated_authority, isolated_parent_manifest, write_json,
+    )
+except ImportError:
+    from _live_fixture_test_support import (
+        isolated_authority, isolated_parent_manifest, write_json,
+    )
+
 
 SOURCE = Path(__file__).resolve().parents[1] / "r098_intervention_live_fixture.py"
 SPEC = importlib.util.spec_from_file_location("r098_fixture", SOURCE)
@@ -87,33 +96,41 @@ class R098FixtureOfflineTests(unittest.TestCase):
             with self.assertRaises(r098.AdmissionError):
                 r098.admission()
 
-    def test_actual_current_state_passes_source_only_authority(self):
-        # This check reads no approval, credential, fixture or provider path.
-        state = r098.read_object(r098.ROOT / "CVF_SESSION/ACTIVE_SESSION_STATE.json", "STATE", 256 << 10)
-        role = "reviewer" if state.get("currentMode") == "REVIEW" else "worker"
-        if state.get("currentMode") in ("BUILD", "REVIEW"):
-            r098.canonical_authority(role)
-        else:
-            with self.assertRaises(r098.AdmissionError):
-                r098.canonical_authority(role)
-
-    def test_inactive_phase_rejected(self):
-        original = r098.read_object
-        def inactive(path, code, max_bytes=65536):
-            value = original(path, code, max_bytes)
-            if str(path).endswith("ACTIVE_SESSION_STATE.json"):
-                value = dict(value, currentMode="FREEZE", activePhase="FREEZE")
-            return value
-        with patch.object(r098, "read_object", side_effect=inactive):
-            with self.assertRaises(r098.AdmissionError):
+    def test_synthetic_active_worker_passes_source_only_authority(self):
+        with tempfile.TemporaryDirectory() as directory:
+            with isolated_authority(r098, Path(directory)):
                 r098.canonical_authority("worker")
 
-    def test_fresh_grant_manifest_is_distinct_from_historical_calls(self):
-        self.assertEqual(len(r098.parent_manifest()), 64)
-        parent = r098.read_object(r098.PARENT, "PARENT")
-        self.assertEqual(parent["freshOwnerGrantId"], r098.FRESH_OWNER_GRANT_ID)
-        self.assertEqual(parent["freshGrantCap"], 2)
-        self.assertEqual(parent["historicalR096Calls"], 2)
+    def test_inactive_phase_rejected(self):
+        with tempfile.TemporaryDirectory() as directory:
+            with isolated_authority(r098, Path(directory)) as fixture:
+                fixture["state"].update(currentMode="FREEZE", activePhase="FREEZE")
+                write_json(fixture["state_path"], fixture["state"])
+                with self.assertRaises(r098.AdmissionError) as caught:
+                    r098.canonical_authority("worker")
+                self.assertEqual(caught.exception.code, "ACTIVE_CONTINUITY_MISMATCH")
+
+    def test_synthetic_fresh_grant_manifest_is_distinct_from_history(self):
+        with tempfile.TemporaryDirectory() as directory:
+            with isolated_parent_manifest(r098, Path(directory)) as fixture:
+                self.assertEqual(r098.parent_manifest(), r098.digest(fixture["ledger_path"].read_bytes()))
+                self.assertEqual(fixture["ledger"]["freshOwnerGrantId"], r098.FRESH_OWNER_GRANT_ID)
+                self.assertEqual(fixture["ledger"]["freshGrantCap"], 2)
+                self.assertEqual(fixture["ledger"]["historicalR096Calls"], 2)
+
+                fixture["ledger"]["freshGrantCap"] = 3
+                write_json(fixture["ledger_path"], fixture["ledger"])
+                with self.assertRaises(r098.AdmissionError) as caught:
+                    r098.parent_manifest()
+                self.assertEqual(caught.exception.code, "PARENT_LEDGER_MISMATCH")
+
+    def test_parent_ledger_must_be_ignored_and_untracked(self):
+        for options in ({"ignored": False}, {"tracked": True}):
+            with self.subTest(options=options), tempfile.TemporaryDirectory() as directory:
+                with isolated_parent_manifest(r098, Path(directory), **options):
+                    with self.assertRaises(r098.AdmissionError) as caught:
+                        r098.parent_manifest()
+                    self.assertEqual(caught.exception.code, "SECRET_OR_APPROVAL_PATH_NOT_IGNORED_UNTRACKED")
 
     def test_reviewer_raw_usage_breach_blocks_second_claim(self):
         with tempfile.TemporaryDirectory() as directory:

@@ -5,6 +5,7 @@
       <v-spacer />
       <v-btn v-if="caseId" variant="text" :to="`/${tenantId}/intervention-cases`">{{ $t('iv_back') }}</v-btn>
     </div>
+    <InterventionCapabilityNotice :tenant-id="tenantId" :token="auth.accessToken" />
     <v-alert v-if="error" type="error" class="mb-4" role="alert">{{ error }}</v-alert>
     <v-btn v-if="caseId && !loading && !detail && error" class="mb-4" variant="outlined" @click="load">{{ $t('iv_reload_case') }}</v-btn>
     <v-progress-linear v-if="loading" indeterminate :aria-label="$t('iv_loading')" />
@@ -31,6 +32,10 @@
     <template v-else-if="detail">
       <v-alert :type="detail.source_status === 'LOCAL_MATCH_CURRENTNESS_UNVERIFIED' ? 'info' : 'warning'" class="mb-4">
         {{ $t('iv_source') }}: {{ sourceLabel(detail.source_status) }}. {{ $t('iv_local_only') }}
+      </v-alert>
+      <v-alert v-if="detail.source_status === 'CHANGED'" type="warning" class="mb-4">
+        {{ detail.reviewed_source_current ? $t('iv_changed_reviewed') : $t('iv_changed_review_required') }}
+        <v-btn v-if="auth.canView('messages')" variant="text" :to="`/${tenantId}/messages?conv=${encodeURIComponent(detail.case.conversation_id)}`">{{ $t('iv_open_updated_conversation') }}</v-btn>
       </v-alert>
       <v-card class="mb-4">
         <v-card-title>{{ caseReference(detail.case.conversation_id, detail.case.id) }}</v-card-title>
@@ -107,6 +112,7 @@ import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useAuthStore } from '../stores/auth'
+import InterventionCapabilityNotice from '../components/InterventionCapabilityNotice.vue'
 import { applyInterventionAction, getInterventionCase, listInterventionAssignees, listInterventionCases, InterventionHttpError, type InterventionCase, type InterventionDetail, type InterventionEvent } from '../api/intervention'
 import {
   interventionActionKey,
@@ -145,12 +151,13 @@ const availableActions = computed(() => {
   else if (c.disposition === 'PENDING_REVIEW' && c.work_state === 'OPEN') names = ['CONFIRM','CORRECT','REJECT']
   else if (c.work_state === 'OPEN' || c.work_state === 'ASSIGNED') names = c.work_state === 'ASSIGNED' ? ['ASSIGN','RESOLVE'] : ['ASSIGN']
   else if (c.work_state === 'RESOLVED') names = ['REOPEN']
+  if (detail.value?.source_status === 'CHANGED' && !detail.value.reviewed_source_current && auth.canView('messages') && ['OPEN','ASSIGNED','RESOLVED'].includes(c.work_state) && ['CONFIRM','CORRECT'].includes(c.human_assessment)) names.unshift('ACKNOWLEDGE_SOURCE_CHANGE')
   return names.map(value => ({title:t('iv_act_'+value.toLowerCase()),value}))
 })
 const needsDue = computed(() => ['ASSIGN','ASSIGN_DATA','REOPEN'].includes(action.value))
 const proposalLessAction = computed(() => ['ASSIGN_DATA','ESCALATE_DATA'].includes(action.value))
 const requiresProposal = computed(() => availableActions.value.some(item => !['ASSIGN_DATA','ESCALATE_DATA'].includes(item.value)))
-const sourceAllowsAction = computed(() => ['ASSIGN_DATA','ESCALATE_DATA'].includes(action.value) || detail.value?.source_status === 'LOCAL_MATCH_CURRENTNESS_UNVERIFIED')
+const sourceAllowsAction = computed(() => ['ASSIGN_DATA','ESCALATE_DATA'].includes(action.value) || (action.value === 'ACKNOWLEDGE_SOURCE_CHANGE' && !!detail.value?.current_source_digest) || detail.value?.source_status === 'LOCAL_MATCH_CURRENTNESS_UNVERIFIED' || (['ASSIGN','RESOLVE','REOPEN'].includes(action.value) && !!detail.value?.reviewed_source_current))
 const canSubmit = computed(() => !!detail.value && !!action.value && sourceAllowsAction.value && !!reason.value.trim() && reason.value.length <= 500 && !busy.value &&
   (proposalLessAction.value || !!proposal.value) &&
   (!needsDue.value || !!dueLocal.value) && (!['ASSIGN','ASSIGN_DATA'].includes(action.value) || !!assigneeId.value) &&
@@ -242,7 +249,7 @@ async function submit() {
   busy.value=true; error.value=''
   let actionRecorded = false
   try {
-    await applyInterventionAction(tenant,id,token,signal,{action:action.value,expected_version:c.version,expected_snapshot_id:c.snapshot_id || '',expected_snapshot_digest:c.snapshot_digest,expected_proposal_id:p?.id || '',expected_revision:p?.revision || 0,reason:reason.value,explanation:explanation.value,next_action:nextAction.value,assignee_id:assigneeId.value,due_at:due,outcome:outcome.value})
+    await applyInterventionAction(tenant,id,token,signal,{action:action.value,expected_version:c.version,expected_snapshot_id:c.snapshot_id || '',expected_snapshot_digest:c.snapshot_digest,expected_proposal_id:p?.id || '',expected_revision:p?.revision || 0,expected_current_digest:detail.value.current_source_digest || '',reason:reason.value,explanation:explanation.value,next_action:nextAction.value,assignee_id:assigneeId.value,due_at:due,outcome:outcome.value})
     actionRecorded = true
     if (!stillCurrent(mine,key,signal)) return
     resetForm()

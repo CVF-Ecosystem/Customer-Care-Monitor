@@ -186,6 +186,146 @@ func (f *m3Fixture) action(id, caseID, name string, version int, more map[string
 	return req
 }
 
+// A human-owned case must retain a way to act after a supported local source
+// writer adds a message; the old AI proposal remains bound to its first source.
+func TestM3ChangedSourceAfterAssignmentRequiresExplicitReview(t *testing.T) {
+	f := m3FixtureStart(t)
+	path := "/intervention-cases/" + f.caseID
+	due := time.Now().UTC().Add(24 * time.Hour).Format(time.RFC3339)
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "CONFIRM", 1, nil)); rec.Code != 200 {
+		t.Fatalf("confirm: %d %s", rec.Code, rec.Body.String())
+	}
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "ASSIGN", 2, map[string]any{"assignee_id": f.assignee, "due_at": due})); rec.Code != 200 {
+		t.Fatalf("assign: %d %s", rec.Code, rec.Body.String())
+	}
+	now := time.Now().UTC().Add(time.Second)
+	m3MustCreate(t, &models.Message{ID: pkg.NewUUID(), TenantID: f.tenant, ConversationID: f.conversation, ExternalMessageID: pkg.NewUUID(), SenderType: "customer", Content: "Tôi vẫn chờ phản hồi", ContentType: "text", Attachments: "[]", RawData: "{}", SentAt: now, CreatedAt: now})
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "RESOLVE", 3, map[string]any{"outcome": "Đã xử lý"})); rec.Code != 409 {
+		t.Fatalf("stale resolution: %d %s", rec.Code, rec.Body.String())
+	}
+	var after models.InterventionCase
+	if err := db.DB.Where("id = ?", f.caseID).Take(&after).Error; err != nil {
+		t.Fatal(err)
+	}
+	if after.Version != 3 || after.WorkState != "ASSIGNED" || after.AssigneeID == nil || *after.AssigneeID != f.assignee {
+		t.Fatalf("source guard changed owner/state: %+v", after)
+	}
+	var events int64
+	if err := db.DB.Model(&models.InterventionHumanEvent{}).Where("case_id = ?", f.caseID).Count(&events).Error; err != nil || events != 2 {
+		t.Fatalf("guard history count=%d err=%v", events, err)
+	}
+	var detail struct {
+		CurrentSourceDigest   string `json:"current_source_digest"`
+		ReviewedSourceCurrent bool   `json:"reviewed_source_current"`
+	}
+	if rec := f.send("GET", f.tenant, f.owner, path, nil); rec.Code != 200 || json.Unmarshal(rec.Body.Bytes(), &detail) != nil || len(detail.CurrentSourceDigest) != 64 || detail.ReviewedSourceCurrent {
+		t.Fatalf("changed detail: %d %s", rec.Code, rec.Body.String())
+	}
+	ack := f.action(f.owner, f.caseID, "ACKNOWLEDGE_SOURCE_CHANGE", 3, map[string]any{"expected_current_digest": strings.Repeat("0", 64)})
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", ack); rec.Code != 409 {
+		t.Fatalf("blind acknowledgement: %d %s", rec.Code, rec.Body.String())
+	}
+	ack["expected_current_digest"] = detail.CurrentSourceDigest
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "ACKNOWLEDGE_SOURCE_CHANGE", 2, map[string]any{"expected_current_digest": detail.CurrentSourceDigest})); rec.Code != 409 {
+		t.Fatalf("stale acknowledgement version: %d %s", rec.Code, rec.Body.String())
+	}
+	if rec := f.send("POST", f.tenant, f.reader, path+"/actions", ack); rec.Code != 403 {
+		t.Fatalf("reader acknowledgement: %d %s", rec.Code, rec.Body.String())
+	}
+	if rec := f.send("POST", f.tenant, f.member, path+"/actions", ack); rec.Code != 403 {
+		t.Fatalf("reviewer without source access: %d %s", rec.Code, rec.Body.String())
+	}
+	if rec := f.send("POST", f.otherTenant, f.owner, path+"/actions", ack); rec.Code != 403 {
+		t.Fatalf("foreign tenant acknowledgement: %d %s", rec.Code, rec.Body.String())
+	}
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", ack); rec.Code != 200 {
+		t.Fatalf("acknowledgement: %d %s", rec.Code, rec.Body.String())
+	}
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "RESOLVE", 4, map[string]any{"outcome": "Đã xử lý"})); rec.Code != 200 {
+		t.Fatalf("resolution after review: %d %s", rec.Code, rec.Body.String())
+	}
+	if err := db.DB.Where("id = ?", f.caseID).Take(&after).Error; err != nil || after.Version != 5 || after.WorkState != "RESOLVED" || after.AssigneeID == nil || *after.AssigneeID != f.assignee || after.ReviewedDataRevisionID == nil {
+		t.Fatalf("recovered state: %+v err=%v", after, err)
+	}
+	var review models.InterventionDataRevision
+	if err := db.DB.Where("id = ?", *after.ReviewedDataRevisionID).Take(&review).Error; err != nil || !engine.VerifyInterventionDataRevision(review) || review.Digest != detail.CurrentSourceDigest {
+		t.Fatalf("reviewed revision invalid: %+v err=%v", review, err)
+	}
+	if err := db.DB.Model(&models.InterventionHumanEvent{}).Where("case_id = ?", f.caseID).Count(&events).Error; err != nil || events != 4 {
+		t.Fatalf("recovered history count=%d err=%v", events, err)
+	}
+	var original models.InterventionProposal
+	if err := db.DB.Where("id = ?", f.proposal).Take(&original).Error; err != nil || original.SnapshotID != f.snapshot || original.SnapshotDigest != after.SnapshotDigest || after.HumanAssessment != "CONFIRM" || after.Disposition != "HUMAN_CONFIRM" {
+		t.Fatalf("original AI proposal or human decision changed: case=%+v proposal=%+v err=%v", after, original, err)
+	}
+	var reviewEvent models.InterventionHumanEvent
+	if err := db.DB.Where("case_id = ? AND action = ?", f.caseID, "ACKNOWLEDGE_SOURCE_CHANGE").Order("case_version ASC").Take(&reviewEvent).Error; err != nil || reviewEvent.DataRevisionID == nil || *reviewEvent.DataRevisionID != review.ID || reviewEvent.SourceStatus != "CHANGED" {
+		t.Fatalf("review audit event missing: %+v err=%v", reviewEvent, err)
+	}
+	// A second source change invalidates the acknowledgement, including after
+	// resolution. The reviewer can explicitly bind the newer version to reopen.
+	newer := time.Now().UTC().Add(2 * time.Second)
+	m3MustCreate(t, &models.Message{ID: pkg.NewUUID(), TenantID: f.tenant, ConversationID: f.conversation, ExternalMessageID: pkg.NewUUID(), SenderType: "customer", Content: "Tôi vẫn chưa nhận được kết quả", ContentType: "text", Attachments: "[]", RawData: "{}", SentAt: newer, CreatedAt: newer})
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "REOPEN", 5, map[string]any{"due_at": due})); rec.Code != 409 {
+		t.Fatalf("reopen after newer change: %d %s", rec.Code, rec.Body.String())
+	}
+	if rec := f.send("GET", f.tenant, f.owner, path, nil); rec.Code != 200 || json.Unmarshal(rec.Body.Bytes(), &detail) != nil || detail.ReviewedSourceCurrent || detail.CurrentSourceDigest == review.Digest {
+		t.Fatalf("newer source detail: %d %s", rec.Code, rec.Body.String())
+	}
+	ack = f.action(f.owner, f.caseID, "ACKNOWLEDGE_SOURCE_CHANGE", 5, map[string]any{"expected_current_digest": detail.CurrentSourceDigest})
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", ack); rec.Code != 200 {
+		t.Fatalf("newer source acknowledgement: %d %s", rec.Code, rec.Body.String())
+	}
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "REOPEN", 6, map[string]any{"due_at": due})); rec.Code != 200 {
+		t.Fatalf("reopen after newer review: %d %s", rec.Code, rec.Body.String())
+	}
+}
+
+func TestM3ChangedSourceBeforeAssessmentStillConflicts(t *testing.T) {
+	f := m3FixtureStart(t)
+	path := "/intervention-cases/" + f.caseID
+	now := time.Now().UTC().Add(time.Second)
+	m3MustCreate(t, &models.Message{ID: pkg.NewUUID(), TenantID: f.tenant, ConversationID: f.conversation, ExternalMessageID: pkg.NewUUID(), SenderType: "customer", Content: "Tôi vẫn chờ", ContentType: "text", Attachments: "[]", RawData: "{}", SentAt: now, CreatedAt: now})
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "CONFIRM", 1, nil)); rec.Code != 409 {
+		t.Fatalf("confirm on changed source: %d %s", rec.Code, rec.Body.String())
+	}
+	var detail struct {
+		CurrentSourceDigest string `json:"current_source_digest"`
+	}
+	if rec := f.send("GET", f.tenant, f.owner, path, nil); rec.Code != 200 || json.Unmarshal(rec.Body.Bytes(), &detail) != nil {
+		t.Fatalf("changed detail: %d %s", rec.Code, rec.Body.String())
+	}
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "ACKNOWLEDGE_SOURCE_CHANGE", 1, map[string]any{"expected_current_digest": detail.CurrentSourceDigest})); rec.Code != 409 {
+		t.Fatalf("acknowledgement before assessment: %d %s", rec.Code, rec.Body.String())
+	}
+}
+
+func TestM3ChangedSourceAfterAssessmentBeforeAssignmentCanRecover(t *testing.T) {
+	f := m3FixtureStart(t)
+	path := "/intervention-cases/" + f.caseID
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "CONFIRM", 1, nil)); rec.Code != 200 {
+		t.Fatalf("confirm: %d %s", rec.Code, rec.Body.String())
+	}
+	now := time.Now().UTC().Add(time.Second)
+	m3MustCreate(t, &models.Message{ID: pkg.NewUUID(), TenantID: f.tenant, ConversationID: f.conversation, ExternalMessageID: pkg.NewUUID(), SenderType: "customer", Content: "Tôi vẫn chờ", ContentType: "text", Attachments: "[]", RawData: "{}", SentAt: now, CreatedAt: now})
+	due := time.Now().UTC().Add(24 * time.Hour).Format(time.RFC3339)
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "ASSIGN", 2, map[string]any{"assignee_id": f.assignee, "due_at": due})); rec.Code != 409 {
+		t.Fatalf("assign before review: %d %s", rec.Code, rec.Body.String())
+	}
+	var detail struct {
+		CurrentSourceDigest string `json:"current_source_digest"`
+	}
+	if rec := f.send("GET", f.tenant, f.owner, path, nil); rec.Code != 200 || json.Unmarshal(rec.Body.Bytes(), &detail) != nil {
+		t.Fatalf("changed detail: %d %s", rec.Code, rec.Body.String())
+	}
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "ACKNOWLEDGE_SOURCE_CHANGE", 2, map[string]any{"expected_current_digest": detail.CurrentSourceDigest})); rec.Code != 200 {
+		t.Fatalf("ack after assessment: %d %s", rec.Code, rec.Body.String())
+	}
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "ASSIGN", 3, map[string]any{"assignee_id": f.assignee, "due_at": due})); rec.Code != 200 {
+		t.Fatalf("assign after review: %d %s", rec.Code, rec.Body.String())
+	}
+}
+
 func TestR101HumanWorkflowNative(t *testing.T) {
 	f := m3FixtureStart(t)
 	prefix := "/intervention-cases/" + f.caseID

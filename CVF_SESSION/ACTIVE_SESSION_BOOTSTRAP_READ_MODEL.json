@@ -1,10 +1,10 @@
 {
   "currentMode": "REVIEW",
   "activePhase": "REVIEW",
-  "activeTranche": "CCMAI-RUNTIME-121",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md",
-  "nextAllowedMove": "Owner-approved local roadmap update only: prepare bounded work orders for confirmed N01 CI portability and N05 docs/README, then reproduce N03 before any repair decision, finish N04 UI evidence and define N02 synthetic startup contract. Local source/log decides external findings. CCMAI-RUNTIME-121 remains CHANGES_REQUIRED/caps consumed; no BUILD/runtime/provider dispatch, full milestones OPEN/accounts parked/no push-merge-deploy.",
-  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; implementation and repair workers idle",
+  "activeTranche": "CCMAI-RUNTIME-122",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R122_LOCAL_REVIEW_FIXES_2026-10-18.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-122 source fixes independently reviewed and saved; remaining delivery checks are full Go suite, three inherited Dashboard tests, complete new browser terminal/accounting and ordinary synthetic activation. N02 capability/contract only; no provider/customer data/push/deploy. R121 failures/caps remain historical, accounts parked.",
+  "activeRole": "Root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; Luna reviews Root-authored capability/browser fixture; workers returned",
   "updatedAt": "2026-10-18",
   "schemaVersion": "1.0",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
@@ -263,5 +263,15 @@
     "providerAuthority": "NONE_NEW",
     "productChecksThisUpdate": "NOT_RUN",
     "externalReportRole": "INPUT_ONLY_LOCAL_DISPOSITION_CONTROLS"
+  },
+  "x-localReviewFixes": {
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_122_LOCAL_REVIEW_FIXES.md",
+    "review": "docs/reviews/R122_LOCAL_FIX_REVIEW_2026-10-18.md",
+    "ownerRevokedPreviousAgents": true,
+    "N01": "SOURCE_FIXED_PYTHON231_PASS_FULL_BACKEND_OPEN",
+    "N03": "REPRODUCED_REPAIRED_NATIVE_AND_COMPONENT_PASS",
+    "N04": "ENCODING_FIXED_UI_OBSERVED_TERMINAL_INTERRUPTED",
+    "N05": "DOCS_NPM_CI_BUILD_PASS",
+    "N02": "CAPABILITY_AND_CONTRACT_ONLY_ACTIVATION_OPEN"
   }
 }

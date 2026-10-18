@@ -29,6 +29,7 @@ type M3Action struct {
 	ExpectedSnapshotDigest string     `json:"expected_snapshot_digest"`
 	ExpectedProposalID     string     `json:"expected_proposal_id"`
 	ExpectedRevision       int        `json:"expected_revision"`
+	ExpectedCurrentDigest  string     `json:"expected_current_digest"`
 	Reason                 string     `json:"reason"`
 	Explanation            string     `json:"explanation"`
 	NextAction             string     `json:"next_action"`
@@ -39,6 +40,34 @@ type M3Action struct {
 
 func boundedM3(s string, max int) bool {
 	return strings.TrimSpace(s) != "" && len([]rune(s)) <= max
+}
+
+// M3CurrentSourceObservation uses the same canonical source digest as an
+// acknowledgement. It exposes no transcript or provider result.
+func M3CurrentSourceObservation(conv models.Conversation, messages []models.Message) (string, string, error) {
+	s, err := m3ObservedSource(conv, messages)
+	if err != nil {
+		return "", "", err
+	}
+	return s.Digest, s.Manifest.Coverage, nil
+}
+
+func m3ObservedSource(conv models.Conversation, messages []models.Message) (*conversationSnapshot, error) {
+	if len(messages) > waitDataMaxMessages {
+		return nil, ErrM3Unavailable
+	}
+	contentBytes := 0
+	for _, m := range messages {
+		contentBytes += len(m.Content)
+		if contentBytes > waitDataMaxContentBytes {
+			return nil, ErrM3Unavailable
+		}
+	}
+	s, err := buildConversationSnapshot(conv, messages, 0)
+	if err != nil || len(s.ManifestJSON) > waitDataMaxManifestBytes {
+		return nil, ErrM3Unavailable
+	}
+	return s, nil
 }
 
 func m3Permitted(ut models.UserTenant) bool {
@@ -57,6 +86,14 @@ func m3Permitted(ut models.UserTenant) bool {
 	}
 }
 
+func m3CanReadMessages(ut models.UserTenant) bool {
+	if ut.Role == "owner" || ut.Role == "admin" {
+		return true
+	}
+	var perms map[string]string
+	return json.Unmarshal([]byte(ut.Permissions), &perms) == nil && strings.Contains(perms["messages"], "r")
+}
+
 func m3Projection(c models.InterventionCase) map[string]any {
 	return map[string]any{
 		"version": c.Version, "disposition": c.Disposition,
@@ -64,6 +101,7 @@ func m3Projection(c models.InterventionCase) map[string]any {
 		"human_explanation": c.HumanExplanation, "human_next_action": c.HumanNextAction,
 		"assignee_id": c.AssigneeID, "data_owner_id": c.DataOwnerID,
 		"due_at": c.DueAt, "outcome_text": c.OutcomeText,
+		"reviewed_data_revision_id": c.ReviewedDataRevisionID,
 	}
 }
 
@@ -128,7 +166,7 @@ func M3ApplyAction(ctx context.Context, tenantID, actorID, caseID string, a M3Ac
 		provenanceOK := snapErr == nil && snap.Digest == current.SnapshotDigest && VerifySnapshotProvenance(snap, tenantID, conv.ID, current.RunID)
 		// Data ownership may proceed on incomplete source. It never certifies
 		// source currentness; assessment/assignment/outcome require complete.
-		needsCurrent := a.Action != "ASSIGN_DATA" && a.Action != "ESCALATE_DATA"
+		needsCurrent := a.Action != "ASSIGN_DATA" && a.Action != "ESCALATE_DATA" && a.Action != "ACKNOWLEDGE_SOURCE_CHANGE"
 		sourceStatus := "UNAVAILABLE"
 		if provenanceOK {
 			if snap.Coverage != coverageComplete {
@@ -138,7 +176,19 @@ func M3ApplyAction(ctx context.Context, tenantID, actorID, caseID string, a M3Ac
 			}
 		}
 		if needsCurrent && sourceStatus != SourceIntegrityBoundCurrentnessUnverified {
-			return ErrM3Conflict
+			// A reviewer may explicitly bind a later local source revision to an
+			// already assessed case. The AI proposal remains tied to the original.
+			if sourceStatus != SourceIntegrityChangedSinceAnalysis || current.ReviewedDataRevisionID == nil || (a.Action != "ASSIGN" && a.Action != "RESOLVE" && a.Action != "REOPEN") {
+				return ErrM3Conflict
+			}
+			var reviewed models.InterventionDataRevision
+			if tx.Where("id = ? AND tenant_id = ? AND case_id = ?", *current.ReviewedDataRevisionID, tenantID, caseID).Take(&reviewed).Error != nil || !VerifyInterventionDataRevision(reviewed) || reviewed.JobID != current.JobID || reviewed.ConversationID != conv.ID || reviewed.OriginalSnapshotID != snap.ID || reviewed.OriginalSnapshotDigest != snap.Digest || reviewed.Coverage != coverageComplete {
+				return ErrM3Conflict
+			}
+			observed, err := m3ObservedSource(conv, messages)
+			if err != nil || observed.Digest != reviewed.Digest {
+				return ErrM3Conflict
+			}
 		}
 		var proposal models.InterventionProposal
 		hasProposal := a.Action != "ASSIGN_DATA" && a.Action != "ESCALATE_DATA"
@@ -178,6 +228,7 @@ func M3ApplyAction(ctx context.Context, tenantID, actorID, caseID string, a M3Ac
 			return ErrM3Unavailable
 		}
 		change := map[string]any{}
+		var reviewedRevisionID *string
 		now := time.Now().UTC()
 		validDue := a.DueAt != nil && a.DueAt.After(now)
 		if a.DueAt != nil {
@@ -204,6 +255,31 @@ func M3ApplyAction(ctx context.Context, tenantID, actorID, caseID string, a M3Ac
 			return nil
 		}
 		switch a.Action {
+		case "ACKNOWLEDGE_SOURCE_CHANGE":
+			if !m3CanReadMessages(actor) {
+				return ErrM3Forbidden
+			}
+			if sourceStatus != SourceIntegrityChangedSinceAnalysis || current.HumanAssessment != "CONFIRM" && current.HumanAssessment != "CORRECT" || (current.WorkState != "OPEN" && current.WorkState != "ASSIGNED" && current.WorkState != "RESOLVED") {
+				return ErrM3Conflict
+			}
+			observed, err := m3ObservedSource(conv, messages)
+			if err != nil || observed.Manifest.Coverage != coverageComplete || observed.Digest != a.ExpectedCurrentDigest {
+				return ErrM3Conflict
+			}
+			if current.ReviewedDataRevisionID != nil {
+				var prior models.InterventionDataRevision
+				if tx.Where("id = ? AND tenant_id = ? AND case_id = ?", *current.ReviewedDataRevisionID, tenantID, caseID).Take(&prior).Error != nil || !VerifyInterventionDataRevision(prior) || prior.Digest == observed.Digest {
+					return ErrM3Conflict
+				}
+			}
+			reasons, _ := json.Marshal(observed.Manifest.CoverageReasons)
+			revision := models.InterventionDataRevision{ID: pkg.NewUUID(), TenantID: tenantID, CaseID: caseID, JobID: current.JobID, ConversationID: conv.ID, ActorID: actorID, OriginatingCaseVersion: current.Version, CaseVersion: current.Version + 1, OriginalSnapshotID: snap.ID, OriginalSnapshotDigest: snap.Digest, Digest: observed.Digest, Manifest: string(observed.ManifestJSON), Coverage: observed.Manifest.Coverage, CoverageReasons: string(reasons), MessageCount: len(observed.Manifest.Messages), ObservationStatus: "LOCAL_MATCH_CURRENTNESS_UNVERIFIED", Reason: strings.TrimSpace(a.Reason), CreatedAt: now}
+			if tx.Create(&revision).Error != nil {
+				return ErrM3Unavailable
+			}
+			current.ReviewedDataRevisionID = &revision.ID
+			reviewedRevisionID = &revision.ID
+			change["reviewed_data_revision_id"] = revision.ID
 		case "CONFIRM", "CORRECT", "REJECT":
 			if current.Disposition != "PENDING_REVIEW" || current.WorkState != "OPEN" || current.HumanAssessment != "" {
 				return ErrM3Conflict
@@ -296,7 +372,7 @@ func M3ApplyAction(ctx context.Context, tenantID, actorID, caseID string, a M3Ac
 		if sourceStatus == SourceIntegrityChangedSinceAnalysis {
 			sourceStatus = "CHANGED"
 		}
-		event := models.InterventionHumanEvent{ID: pkg.NewUUID(), TenantID: tenantID, CaseID: caseID, CaseVersion: current.Version, ActorID: actorID, Action: a.Action, Reason: strings.TrimSpace(a.Reason), ProposalID: proposalID, SnapshotID: a.ExpectedSnapshotID, SnapshotDigest: a.ExpectedSnapshotDigest, SourceStatus: sourceStatus, Before: string(before), After: string(after), CreatedAt: now}
+		event := models.InterventionHumanEvent{ID: pkg.NewUUID(), TenantID: tenantID, CaseID: caseID, CaseVersion: current.Version, ActorID: actorID, Action: a.Action, Reason: strings.TrimSpace(a.Reason), ProposalID: proposalID, DataRevisionID: reviewedRevisionID, SnapshotID: a.ExpectedSnapshotID, SnapshotDigest: a.ExpectedSnapshotDigest, SourceStatus: sourceStatus, Before: string(before), After: string(after), CreatedAt: now}
 		if tx.Create(&event).Error != nil {
 			return ErrM3Unavailable
 		}

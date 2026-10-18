@@ -6,7 +6,7 @@ Ngày: 2026-10-12. Project: Customer-Care-Monitor-AI. Maintainer: ORCHESTRATOR. 
 
 Owner phải hỏi vì sao liên tục có tranche sửa, có lệch roadmap không, rồi yêu cầu ghi chỉ đạo vào handoff/memory và learning. Owner nhận định đây là lỗi orchestrator tự mất kiểm soát: người không viết code không thể biết bao giờ roadmap hoàn tất. Đây là phản hồi trực tiếp của owner trong phiên 2026-10-12, chưa có nghiên cứu độc lập về trải nghiệm người dùng.
 
-Root nhận trách nhiệm điều phối: tập trung vào acceptance của từng scope nhỏ nhưng không duy trì đường đi hữu hạn tới kết quả sản phẩm. Các việc hỗ trợ có lý do kỹ thuật vẫn có thể cộng lại thành trì hoãn kéo dài. Người dùng phải phát hiện và điều chỉnh thay cho orchestrator. Điều này đi ngược mục tiêu điều phối có trách nhiệm của dự án: [roadmap](../../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md) ưu tiên hoàn thiện một luồng CSKH từ nguồn tới hành động có bằng chứng. Không quy lỗi chung cho Luna hoặc viện CVF như lý do cho mọi tranche mới.
+Root nhận trách nhiệm điều phối: tập trung vào acceptance của từng scope nhỏ nhưng không duy trì đường đi hữu hạn tới kết quả sản phẩm. Các việc hỗ trợ có lý do kỹ thuật vẫn có thể cộng lại thành trì hoãn kéo dài. Người dùng phải phát hiện và điều chỉnh thay cho orchestrator. Điều này đi ngược mục tiêu điều phối có trách nhiệm của dự án: `docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md` ưu tiên hoàn thiện một luồng CSKH từ nguồn tới hành động có bằng chứng. Không quy lỗi chung cho Luna hoặc viện CVF như lý do cho mọi tranche mới.
 
 ## Nguồn và phần đã kiểm chứng
 

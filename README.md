@@ -11,7 +11,7 @@ Customer Care Monitor AI là sản phẩm của [Blackbird081](https://github.co
 - Xem kết quả, tìm cuộc hội thoại cần chú ý, theo dõi chi phí AI và nhật ký hoạt động.
 - Mời người cùng làm việc và phân quyền trong **một workspace** của bản cài đặt.
 
-Kết quả AI là **gợi ý để con người xem xét**. Ứng dụng hiện chưa có bước xác nhận chính thức của người duyệt; không nên dùng điểm số hoặc nhãn AI làm quyết định cuối cùng khi chưa kiểm tra hội thoại và bằng chứng.
+Kết quả AI là **gợi ý để con người xem xét**. Mã nguồn hiện có quy trình con người rà soát, nhưng tính năng này chưa được bật trong luồng khởi động thông thường. Bằng chứng giao diện hiện giới hạn ở fixture tổng hợp và kiểm thử chấp nhận đầy đủ vẫn còn mở. Không dùng điểm số hoặc nhãn AI làm quyết định cuối cùng khi chưa kiểm tra hội thoại và bằng chứng.
 
 ## Bắt đầu
 

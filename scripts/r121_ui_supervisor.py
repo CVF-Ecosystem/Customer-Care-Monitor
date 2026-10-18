@@ -79,6 +79,19 @@ def write_bytes_new(path, data):
         stream.flush(); os.fsync(stream.fileno())
 
 
+def publish_campaign_ready(api_origin, manifest):
+    ready = {
+        'uiOrigin':'http://127.0.0.1:3019',
+        'apiOrigin':api_origin,
+        'manifest':manifest,
+        'startedAt':time.time(),
+    }
+    # Emit before publishing the ready file: a console encoding/pipe failure
+    # must not leave a readiness marker for a supervisor that is exiting.
+    print(json.dumps({'result':'CAMPAIGN_READY','uiOrigin':ready['uiOrigin'],'manifest':manifest},ensure_ascii=True),flush=True)
+    write_new(RUNTIME/'campaign_ready.json',ready)
+
+
 def append(path, value):
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open('a', encoding='utf-8') as stream:
@@ -817,8 +830,8 @@ def serve():
                     if response.read().decode() == expected: break
             except OSError: time.sleep(.2)
         else: raise Hold('VITE_HEALTH_TIMEOUT')
-        write_new(RUNTIME/'campaign_ready.json',{'uiOrigin':'http://127.0.0.1:3019','apiOrigin':origin,'manifest':manifest,'startedAt':time.time()})
-        print(json.dumps({'result':'CAMPAIGN_READY','uiOrigin':'http://127.0.0.1:3019','manifest':manifest},ensure_ascii=False),flush=True)
+        require(backend.poll() is None and vite.poll() is None, 'CHILD_EXITED_BEFORE_CAMPAIGN_READY')
+        publish_campaign_ready(origin,manifest)
         while time.monotonic() < deadline:
             require(backend.poll() is None and vite.poll() is None,'CHILD_EXITED_DURING_CAMPAIGN')
             if (RUNTIME/'stop_requested').is_file(): break

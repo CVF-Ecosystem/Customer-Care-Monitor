@@ -1053,6 +1053,9 @@ export default {
   iv_assessment_reject: 'Đã từ chối',
   iv_source_local_match_currentness_unverified: 'Chưa xác nhận đủ nội dung từ kênh',
   iv_source_changed: 'Nguồn nội bộ đã thay đổi',
+  iv_changed_review_required: 'Kiểm tra hội thoại đã cập nhật trước khi ghi thao tác tiếp theo. Xác nhận sẽ ghi nhận phiên bản nguồn nội bộ hiện tại; đề xuất AI vẫn dựa trên nguồn trước đó.',
+  iv_changed_reviewed: 'Đã kiểm tra nguồn nội bộ mới. Đề xuất AI vẫn dựa trên nguồn trước đó.',
+  iv_open_updated_conversation: 'Mở hội thoại đã cập nhật',
   iv_source_incomplete: 'Chưa đủ thông tin để xử lý',
   iv_source_unavailable: 'Không thể xác minh nguồn',
   iv_completion_unknown: 'Chưa xác nhận được thao tác đã được ghi nhận hay chưa. Hãy tải lại ca và kiểm tra lịch sử trước khi thử lại.',
@@ -1067,4 +1070,5 @@ export default {
   iv_act_observe_data: 'Kiểm tra thông tin bổ sung',
   iv_act_request_rerun: 'Yêu cầu đánh giá lại',
   iv_act_execute_rerun: 'Đã có đánh giá mới',
+  iv_act_acknowledge_source_change: 'Xác nhận đã kiểm tra nguồn mới',
 }

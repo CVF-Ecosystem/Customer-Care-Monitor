@@ -1,5 +1,12 @@
 # Roadmap CSKH: dữ liệu đáng tin, bộ lọc hỗ trợ AI và xử lý có trách nhiệm
 
+## R122 — kết quả sửa local, 2026-10-18
+
+N01 đã sửa test fixture độc lập ledger/history, Python discovery231PASS; N05 sửa parser và72liên kết, `npm ci` + docs build PASS; N03 đã tái hiện nguồn đổi sau giao việc và thêm xác nhận phiên bản nguồn mới giữ nguyên đề xuất/quyết định/lịch sử, native MySQL + component tests PASS; N04 sửa encoding/ready ordering và đã quan sát đúng active proposal/lịch sử/đăng xuất trên UI synthetic. Các lượt kiểm thử bị ngắt khi môi trường phiên đổi phải giữ nhãn INCOMPLETE, không thay bằng PASS.
+
+N02 chỉ hoàn tất trạng thái capability trên UI/API và [contract kích hoạt synthetic](../reference/INTERVENTION_SYNTHETIC_ACTIVATION_CONTRACT.md); ordinary activation/budget/grant/clean-install chưa triển khai. Full Go suite chưa hoàn tất; frontend full suite470PASS/3lỗi Dashboard kế thừa, build PASS. Chưa có full M3/pilot/release hoặc runtime governance acceptance. Chi tiết: `docs/reviews/R122_LOCAL_FIX_REVIEW_2026-10-18.md`. Tiếp theo là chốt review/commit phần sửa có bằng chứng, rồi xử lý các gap trên đúng phạm vi; không tự gọi provider/bật dữ liệu thật. Các phần kế hoạch bên dưới là checkpoint trước sửa, disposition hiện hành theo mục này.
+
+
 ## Kế hoạch sửa đã được local thẩm định — 2026-10-18
 
 Kế hoạch hiện hành ở [roadmap giao sản phẩm](../reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md). Báo cáo agent ngoài chỉ là đầu vào: local source/log quyết định disposition. N01 CI portability và N05 docs/README đã xác nhận → sửa nhỏ trước; N03 nguồn đổi sau human action có căn cứ source nhưng phải tái hiện trước quyết định sửa; N04 encoding/UI evidence đã xác nhận → sửa biên process và nghiệm thu đúng phần còn thiếu; N02 ordinary startup disabled là giới hạn có chủ đích → contract kích hoạt synthetic tối thiểu trước clean-install acceptance. Mỗi mục có exit cụ thể, chưa mục nào FIXED/PASS.

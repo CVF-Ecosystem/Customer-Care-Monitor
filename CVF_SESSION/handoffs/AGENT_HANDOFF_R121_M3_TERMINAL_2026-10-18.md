@@ -1,6 +1,6 @@
 # R121 finite M3 terminal proof handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 
@@ -58,3 +58,6 @@ Root fresh REVIEW acknowledgment after compaction. Original exec30261 returned1;
 Owner requests local authority over external review and roadmap correction for validated findings. Root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD records planning-only scope: Owner-approved local roadmap update only: prepare bounded work orders for confirmed N01 CI portability and N05 docs/README, then reproduce N03 before any repair decision, finish N04 UI evidence and define N02 synthetic startup contract. Local source/log decides external findings. CCMAI-RUNTIME-121 remains CHANGES_REQUIRED/caps consumed; no BUILD/runtime/provider dispatch, full milestones OPEN/accounts parked/no push-merge-deploy.
 
 Roadmap: docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md. N01/N05/N04 source/log confirmed; N02 intentional startup limitation needs contract; N03 source-supported hypothesis, HTTP/DB reproduction NOT_RUN. No source/seed/status/cap changes or product tests; old R121 terminal outcome remains authoritative. No new tranche/worker/runtime dispatch.
+
+
+Pointer superseded by CVF_SESSION/handoffs/AGENT_HANDOFF_R122_LOCAL_REVIEW_FIXES_2026-10-18.md for owner-directed source fixes. R121 outcome/caps unchanged.

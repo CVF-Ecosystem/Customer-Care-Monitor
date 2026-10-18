@@ -1053,6 +1053,9 @@ export default {
   iv_assessment_reject: 'Rejected',
   iv_source_local_match_currentness_unverified: 'Channel content not fully verified',
   iv_source_changed: 'Local source changed',
+  iv_changed_review_required: 'Review the updated conversation before recording another case action. Acknowledgement records the current local source version; the AI proposal remains based on the earlier source.',
+  iv_changed_reviewed: 'Updated local source reviewed. The AI proposal remains based on the earlier source.',
+  iv_open_updated_conversation: 'Open updated conversation',
   iv_source_incomplete: 'Not enough information to continue',
   iv_source_unavailable: 'Source verification unavailable',
   iv_completion_unknown: 'We could not confirm whether the action was recorded. Reload the case and check history before trying again.',
@@ -1067,4 +1070,5 @@ export default {
   iv_act_observe_data: 'Review updated information',
   iv_act_request_rerun: 'Request a new assessment',
   iv_act_execute_rerun: 'Updated assessment prepared',
+  iv_act_acknowledge_source_change: 'Acknowledge updated source',
 }

@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md", "activeTranche": "CCMAI-RUNTIME-121", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R122_LOCAL_REVIEW_FIXES_2026-10-18.md", "activeTranche": "CCMAI-RUNTIME-122", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R122_LOCAL_REVIEW_FIXES_2026-10-18.md
 
-Owner-approved local roadmap update only: prepare bounded work orders for confirmed N01 CI portability and N05 docs/README, then reproduce N03 before any repair decision, finish N04 UI evidence and define N02 synthetic startup contract. Local source/log decides external findings. CCMAI-RUNTIME-121 remains CHANGES_REQUIRED/caps consumed; no BUILD/runtime/provider dispatch, full milestones OPEN/accounts parked/no push-merge-deploy.
+CCMAI-RUNTIME-122 source fixes independently reviewed and saved; remaining delivery checks are full Go suite, three inherited Dashboard tests, complete new browser terminal/accounting and ordinary synthetic activation. N02 capability/contract only; no provider/customer data/push/deploy. R121 failures/caps remain historical, accounts parked.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; implementation and repair workers idle
+Root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; Luna reviews Root-authored capability/browser fixture; workers returned
 
 R120 UI accepted bounded, original terminal/durable accounting missing, stopped/CHANGES_REQUIRED and consumed caps immutable. R121 separate local route per owner instruction, no new product implementation claim.
 

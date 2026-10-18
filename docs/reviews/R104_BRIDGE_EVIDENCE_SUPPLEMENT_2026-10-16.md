@@ -11,7 +11,7 @@ Commit mode: WORKER_MUST_NOT_COMMIT
 
 ## 1. Mục đích và Tuyên bố CVF (CVF Agent Declaration)
 
-Báo cáo này bổ sung hồ sơ bằng chứng gốc đã có từ phiên kiểm tra Antigravity integrated browser bridge (nhãn R104) nhằm cung cấp provenance cho Codex /root review độc lập và giải quyết các điểm HOLD trong [docs/reviews/R104_BRIDGE_RECHECK_INDEPENDENT_REVIEW_2026-10-16.md](docs/reviews/R104_BRIDGE_RECHECK_INDEPENDENT_REVIEW_2026-10-16.md) và [docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md](docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md).
+Báo cáo này bổ sung hồ sơ bằng chứng gốc đã có từ phiên kiểm tra Antigravity integrated browser bridge (nhãn R104) nhằm cung cấp provenance cho Codex /root review độc lập và giải quyết các điểm HOLD trong [R104 bridge recheck independent review](./R104_BRIDGE_RECHECK_INDEPENDENT_REVIEW_2026-10-16.md) và [bài học về dispatch readiness và browser evidence](./learnings/feedback_dispatch_readiness_and_browser_evidence.md).
 
 - **Project**: Customer-Care-Monitor-AI
 - **CVF Core path**: `D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\.Controlled-Vibe-Framework-CVF` (Core commit pinned: `e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba`, actual public Core: `fa34ed49...`, doctor-confirmed tracking origin/main)
@@ -29,7 +29,7 @@ Báo cáo này bổ sung hồ sơ bằng chứng gốc đã có từ phiên ki�
 
 1. **Xác nhận nhãn R104**: "R104" chỉ là nhãn đặt tên cho nhóm artifact chẩn đoán (`docs/reviews/probes/r104_bridge_check/`, `R104_BRIDGE_RECHECK_WORKER_RETURN_2026-10-16.md`, v.v.), **KHÔNG PHẢI** là một tranche được worker tự ý mở hay tự phê duyệt. Không có `CVF_SESSION/authority/CCMAI-RUNTIME-104.json` hay `CVF_SESSION/tranches/CCMAI-RUNTIME-104.json`. Tranche có hiệu lực gần nhất đã được đóng là CCMAI-RUNTIME-103 (CLOSED tooling recovery).
 2. **Không có quyền chạy R101**: Tất cả các bước B01–B10 của R101 UI vẫn giữ nguyên trạng thái **NOT_RUN**. Worker không coi prompt này là sự cho phép chạy R101, kích hoạt tranche hay tự sửa authority.
-3. **Draft R105**: File [docs/reviews/planning/R105_R101_UI_EVIDENCE_WORK_ORDER_DRAFT_2026-10-16.md](docs/reviews/planning/R105_R101_UI_EVIDENCE_WORK_ORDER_DRAFT_2026-10-16.md) là bản dự thảo quy hoạch (DRAFT / NOT_DISPATCHABLE) thuộc thẩm quyền của Root.
+3. **Draft R105**: File [R105 R101 UI evidence work-order draft](./planning/R105_R101_UI_EVIDENCE_WORK_ORDER_DRAFT_2026-10-16.md) là bản dự thảo quy hoạch (DRAFT / NOT_DISPATCHABLE) thuộc thẩm quyền của Root.
 
 ---
 

@@ -15,7 +15,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- R121 repaired full namespace accepted source-only; fresh finite postrepair admission, runtime not yet proven.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md`
+- Current R122 local source fixes and qualified verification handoff; not release acceptance.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R122_LOCAL_REVIEW_FIXES_2026-10-18.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -4306,6 +4306,17 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_root/source_unit_001/reservation.json`
 - R121 finite active record, old budgets immutable.: `CVF_SESSION/tranches/CCMAI-RUNTIME-121.json`
 - Finite mechanical isolation and original-session M3 terminal proof; no runtime before admissions.: `docs/work_orders/CCMAI_RUNTIME_121_M3_TERMINAL_PROOF.md`
+- Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open.: `CVF_SESSION/authority/CCMAI-RUNTIME-122.json`
+- Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open.: `CVF_SESSION/tranches/CCMAI-RUNTIME-122.json`
+- Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open.: `docs/reviews/probes/review_fixes_20261018/verification_raw.zip`
+- Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md`
+- Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open.: `docs/work_orders/CCMAI_RUNTIME_122_LOCAL_REVIEW_FIXES.md`
+- Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open.: `docs/reviews/R122_LOCAL_FIX_REVIEW_2026-10-18.md`
+- Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open.: `docs/reference/INTERVENTION_SYNTHETIC_ACTIVATION_CONTRACT.md`
+- Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open.: `docs/reviews/probes/review_fixes_20261018/current_ui.jpg`
+- Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open.: `docs/reviews/probes/review_fixes_20261018/manifest.json`
+- Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open.: `docs/reviews/probes/review_fixes_20261018/source_hashes.json`
+- Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open.: `docs/reviews/probes/review_fixes_20261018/summary.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

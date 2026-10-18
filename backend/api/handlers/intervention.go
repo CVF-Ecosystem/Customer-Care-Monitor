@@ -128,5 +128,23 @@ func GetInterventionCase(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "detail_failed"})
 		return
 	}
-	c.JSON(http.StatusOK, gin.H{"case": row, "active_proposal_id": row.ActiveProposalID, "proposals": proposals, "receipts": receipts, "human_events": events, "source_status": m3SourceStatus(row)})
+	sourceStatus := m3SourceStatus(row)
+	currentDigest := ""
+	reviewedCurrent := false
+	if sourceStatus == "CHANGED" {
+		var conv models.Conversation
+		var messages []models.Message
+		if db.DB.Where("id = ? AND tenant_id = ?", row.ConversationID, tenantID).Take(&conv).Error == nil && db.DB.Where("conversation_id = ? AND tenant_id = ?", row.ConversationID, tenantID).Order("sent_at ASC, id ASC").Find(&messages).Error == nil {
+			if digest, coverage, err := engine.M3CurrentSourceObservation(conv, messages); err == nil && coverage == "complete" {
+				currentDigest = digest
+				if row.ReviewedDataRevisionID != nil {
+					var revision models.InterventionDataRevision
+					if db.DB.Where("id = ? AND tenant_id = ? AND case_id = ?", *row.ReviewedDataRevisionID, tenantID, row.ID).Take(&revision).Error == nil && engine.VerifyInterventionDataRevision(revision) && revision.JobID == row.JobID && revision.ConversationID == row.ConversationID && revision.Coverage == "complete" && revision.Digest == digest && row.SnapshotID != nil && revision.OriginalSnapshotID == *row.SnapshotID && revision.OriginalSnapshotDigest == row.SnapshotDigest {
+						reviewedCurrent = true
+					}
+				}
+			}
+		}
+	}
+	c.JSON(http.StatusOK, gin.H{"case": row, "active_proposal_id": row.ActiveProposalID, "proposals": proposals, "receipts": receipts, "human_events": events, "source_status": sourceStatus, "current_source_digest": currentDigest, "reviewed_source_current": reviewedCurrent})
 }
