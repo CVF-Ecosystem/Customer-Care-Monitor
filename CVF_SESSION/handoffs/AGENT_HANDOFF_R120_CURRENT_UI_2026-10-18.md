@@ -1,6 +1,6 @@
 # R120 finite current UI proof after readiness cause review
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 
@@ -44,3 +44,5 @@ After cooperative stop exit0, original exec session16748 was unavailable (Unknow
 ## Read-only lifetime review continuation — 2026-10-18
 
 Owner renews roadmap adherence, Root ORCHESTRATOR / independent REVIEWER and Luna Max worker (Sol Medium only if difficulty warrants). Root fresh rehydration/declaration and doctor27/27PASS preceded read-only delegation; no BUILD or runtime reopening. Luna /root/r120_lifetime_audit_luna read existing source/evidence only, returned idle; Root independently verified inline-finally dependency, stop-request-only semantics and303archive members against hashes/sizes. No final markers, terminal or serve receipt recovered; actual disappearance cause UNKNOWN. Review/transfer decision: docs/reviews/R120_READONLY_LIFETIME_REVIEW_AND_DECISION_2026-10-18.md. Receipt: docs/reviews/probes/r120_root/lifetime_review_20261018.json. Stale current IMPLEMENTATION_STATUS roadmap projection corrected to R120 bounded UI observed/terminal hold, no historical evidence rewrite. R120 CHANGES_REQUIRED/FREEZE OPEN and consumed budgets unchanged; no source repair, new runtime/provider grant or automatic successor. Root transitions REVIEWER -> SESSION_SYNC_STEWARD -> COMMIT_STEWARD for this records-only packet; no product acceptance or closure.
+
+Pointer superseded by R121 handoff after owner local continuation; R120 CHANGES_REQUIRED/evidence/counters unchanged.

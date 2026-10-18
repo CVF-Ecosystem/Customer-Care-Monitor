@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R120_CURRENT_UI_2026-10-18.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md",
       "status": "ACTIVE",
-      "description": "Active R120 observed synthetic UI, overall CHANGES_REQUIRED: missing original terminal/durable accounting; stopped and transfer only."
+      "description": "Active R121 finite original-terminal M3 proof; source-only dispatch, runtime conditional on admissions."
     },
     {
       "id": "r060-work-order",
@@ -33533,6 +33533,27 @@
       "path": "docs/reviews/planning/R120_DESKTOP_EXECUTION_TRANSFER_PROPOSAL_2026-10-18.md",
       "status": "ACTIVE",
       "description": "Existing unmodified read-only Desktop capability proposal; short lifetime applicability unverified."
+    },
+    {
+      "id": "r121-work-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_121_M3_TERMINAL_PROOF.md",
+      "status": "ACTIVE",
+      "description": "Finite mechanical isolation and original-session M3 terminal proof; no runtime before admissions."
+    },
+    {
+      "id": "r121-tranche",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-121.json",
+      "status": "ACTIVE",
+      "description": "R121 finite active record, old budgets immutable."
+    },
+    {
+      "id": "r120-superseded-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R120_CURRENT_UI_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Superseded R120 pointer; original CHANGES_REQUIRED/evidence/caps unchanged."
     }
   ]
 }

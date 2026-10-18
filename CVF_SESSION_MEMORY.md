@@ -2,22 +2,20 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R120_CURRENT_UI_2026-10-18.md", "activeTranche": "CCMAI-RUNTIME-120", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md", "activeTranche": "CCMAI-RUNTIME-121", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R120_CURRENT_UI_2026-10-18.md
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md
 
-CCMAI-RUNTIME-120 CHANGES_REQUIRED: preserve accepted bounded current-proposal/history UI observations and exact Root orphan cleanup; original supervisor terminal, held-child wait/exit and final durable fingerprint/effect counters MISSING. Runtime stopped, sole fixture/campaign/start-stop budgets consumed; no replay, source repair, automatic successor or provider call. Read-only lifetime review completed; transfer decision packet only before any separately governed runtime decision. B07 inherited bounded; B08 CSS390x844/originalJPEG375x811 qualified; B09 unsupported NOT_RUN; fullM2/M3/M1business/pilot/release OPEN, Facebook/ZaloOA parked; no push/merge/deploy.
+CCMAI-RUNTIME-121 DISPATCH_READY: Luna source-only four mechanical R120->R121 copies after current rehydration and Root-recorded acknowledgment. Root one short capability admission; no product setup before independent source/capability acceptance and committed source-binary/resource admissions. Old R120 immutable/CHANGES_REQUIRED, all full milestones OPEN, accounts parked; no provider/case actions/push/merge/deploy.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; implementation worker idle; R120 runtime stopped and transfer packet preserved
+Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna /root/r121_isolation_luna source worker pending acknowledgment
 
-Actual UI shows active rev2 and three readable localized history events; synthetic data only, no AI governance proof. Root separately stopped exact owned fixture after original supervisor/exit receipt missing; actual protected equality and listener absence do not replace missing durable accounting or held-child completion. Raw archive303 original files; full review: docs/reviews/R120_FINAL_INDEPENDENT_UI_REVIEW_2026-10-18.md.
-
-Read-only lifetime review completed by Luna Max and independently checked by Root: missing terminal/final accounting cannot be recovered from available files; actual disappearance cause UNKNOWN. All303 original archive members verified; no source repair or runtime grant. Decision: docs/reviews/R120_READONLY_LIFETIME_REVIEW_AND_DECISION_2026-10-18.md. Current roadmap projection corrected from stale R119 blocker to R120 bounded UI/terminal hold.
+R120 UI accepted bounded, original terminal/durable accounting missing, stopped/CHANGES_REQUIRED and consumed caps immutable. R121 separate local route per owner instruction, no new product implementation claim.
 
 ## Historical R114 bounded UI result
 
