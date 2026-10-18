@@ -1,6 +1,8 @@
 # R124 clean-install compatibility handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
+
+Superseded by: CVF_SESSION/handoffs/AGENT_HANDOFF_R125_FINAL_VERIFICATION_2026-10-18.md
 
 ## Current State
 

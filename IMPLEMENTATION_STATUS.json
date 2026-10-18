@@ -34,7 +34,7 @@
     "deliveryRoadmapPublication": "d72de76984e4aad9c208cc82e6093578797b5340",
     "m1BusinessPilotAcceptance": "OPEN",
     "currentPublication": "BASE_1e3db8b1_PUSHED_AND_MERGED_d7a6f76_THIS_ROADMAP_UPDATE_LOCAL_ONLY",
-    "nextPlannedWork": "CCMAI-RUNTIME-124 fixes actual single-workspace grant/executor compatibility and two confirmed inherited test drifts. Finish stable-source full Go with adequate timeout, durable bounded-worker frontend, ordinary-binary zero-provider smoke and independent review; current UI terminal passed. No paid call/customer source/push/deploy; full M3/pilot/release remain open."
+    "nextPlannedWork": "CCMAI-RUNTIME-125 final stable-source full Go verification and DB sentinel gate pending; frontend474/build/docs and ordinary-binary zero-provider smoke passed, current UI original terminal passed. Final source fixes are test compatibility only. Complete evidence/cleanup/review; no paid call/customer data/push/deploy, full M3/pilot/release remain open."
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
@@ -2017,7 +2017,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-124",
+  "activeTranche": "CCMAI-RUNTIME-125",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
@@ -2597,7 +2597,7 @@
     "nextGate": "Separate SPEC/work order for actual AI executor/integration or M1 business decisions",
     "actualRerun": "OPEN_EXECUTOR_NOT_INCLUDED"
   },
-  "x-activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R124_CLEAN_INSTALL_2026-10-18.md",
+  "x-activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R125_FINAL_VERIFICATION_2026-10-18.md",
   "x-ownerRepairContinuation": "CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json",
   "x-r102Current": {
     "status": "FROZEN_LOCAL_ONLY",
@@ -3037,7 +3037,7 @@
     "providerCalls": 0
   },
   "x-pendingReviewWorkOrders": [
-    "docs/work_orders/CCMAI_RUNTIME_124_CLEAN_INSTALL_COMPATIBILITY.md"
+    "docs/work_orders/CCMAI_RUNTIME_125_FINAL_FIXTURE_COMPATIBILITY.md"
   ],
   "x-r124CurrentOutcome": {
     "status": "REVIEW_PENDING",
@@ -3045,5 +3045,14 @@
     "providerCalls": 0,
     "currentUI": "PASS_ORIGINAL_TERMINAL_EQUAL_FINGERPRINTS",
     "fullSuites": "PENDING"
+  },
+  "x-r125CurrentOutcome": {
+    "status": "REVIEW_PENDING",
+    "review": "docs/reviews/R125_FINAL_LOCAL_FIX_REVIEW_2026-10-18.md",
+    "providerCalls": 0,
+    "frontend": "474_PASS_BUILD_PASS",
+    "fullGo": "PENDING",
+    "currentUI": "ORIGINAL_TERMINAL_PASS",
+    "ordinaryBinary": "GRANT_ISSUED_ZERO_CALLS"
   }
 }

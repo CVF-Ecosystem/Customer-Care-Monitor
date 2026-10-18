@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R124_CLEAN_INSTALL_2026-10-18.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R125_FINAL_VERIFICATION_2026-10-18.md",
       "status": "ACTIVE",
-      "description": "Current R124 clean-install compatibility and final verification handoff."
+      "description": "Current R125 final local source/verification handoff."
     },
     {
       "id": "r060-work-order",
@@ -34275,6 +34275,41 @@
       "path": "docs/reference/INTERVENTION_SYNTHETIC_RUNBOOK.md",
       "status": "ACTIVE",
       "description": "Local review-fix delivery and clean-install compatibility evidence/record."
+    },
+    {
+      "id": "r125-5ffad3ecfa65c25551",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R124_CLEAN_INSTALL_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Final bounded local fixture compatibility and verification record."
+    },
+    {
+      "id": "r125-5684cabc8a5302a6eb",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-125.json",
+      "status": "ACTIVE",
+      "description": "Final bounded local fixture compatibility and verification record."
+    },
+    {
+      "id": "r125-06e3512cd23c522ab2",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-125.json",
+      "status": "ACTIVE",
+      "description": "Final bounded local fixture compatibility and verification record."
+    },
+    {
+      "id": "r125-c34912ee0689e5e524",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_125_FINAL_FIXTURE_COMPATIBILITY.md",
+      "status": "ACTIVE",
+      "description": "Final bounded local fixture compatibility and verification record."
+    },
+    {
+      "id": "r125-73c00caffeeb7013fa",
+      "family": "continuity",
+      "path": "docs/reviews/R125_FINAL_LOCAL_FIX_REVIEW_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Final bounded local fixture compatibility and verification record."
     }
   ]
 }
