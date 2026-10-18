@@ -1,5 +1,12 @@
 # CCMA — Roadmap phát triển sản phẩm và tiếp quản giữa các agent
 
+## Current R121 terminal hold — 2026-10-18
+
+CCMAI-RUNTIME-121 CHANGES_REQUIRED: original serve exit1/wait observed; Unicode console encoding failure before browser, terminal HOLD/FINAL_EVIDENCE_MISSING. Owned fixture/backend/Vite stopped, three listeners absent, protected9containers10networks472volumes and405sourcepins unchanged. Preserve consumed campaign/caps and raw evidence; read-only bounded follow-up decision only, no automatic retry/successor/provider. FullM2/M3/M1business/pilot/release OPEN/accounts parked/no push-merge-deploy. Review: docs/reviews/R121_FINAL_TERMINAL_REVIEW_2026-10-18.md.
+
+Earlier checkpoint sections are historical.
+
+
 ## Current R121 local capability hold — 2026-10-18
 
 Owner chose local continuation after R120 read-only lifetime review. One harmless local parent/child admission observed cooperative stop/wait exit0 and receipt; original outer exec returned1 vs declared17, so A2 NOT_MET. Source BUILD/compile/product runtime all NOT_STARTED, capability1of1 consumed/no retry. Root execution command lacked explicit native exit propagation; exact shell mapping cause not reproduced. Minimal prospective correction is explicit PowerShell exit propagation, not supervisor redesign; needs separately granted confirmation before product admission. R120 UI bounded acceptance/terminal gaps preserved, no oldcap reset or automatic successor. FullM2/M3/M1business/pilot/release OPEN/accountsparked.

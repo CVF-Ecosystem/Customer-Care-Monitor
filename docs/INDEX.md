@@ -4235,6 +4235,17 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/probes/r121_root/capability_confirmation/invocation.json`
 - Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/probes/r121_root/capability_confirmation/manifest.json`
 - Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/probes/r121_root/capability_confirmation/original_bytes.zip`
+- R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim.: `docs/reviews/R121_FINAL_TERMINAL_REVIEW_2026-10-18.md`
+- R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim.: `docs/reviews/probes/r121_root/campaign_terminal_raw.zip`
+- R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim.: `docs/reviews/probes/r121_root/browser/capture_readiness.json`
+- R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim.: `docs/reviews/probes/r121_root/campaign_terminal_manifest.json`
+- R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim.: `docs/reviews/probes/r121_root/campaign_terminal_summary.json`
+- R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim.: `docs/reviews/probes/r121_root/serve_001/child_started.json`
+- R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim.: `docs/reviews/probes/r121_root/serve_001/receipt.json`
+- R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim.: `docs/reviews/probes/r121_root/serve_001/reservation.json`
+- R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim.: `docs/reviews/probes/r121_root/serve_001/stderr.bin`
+- R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim.: `docs/reviews/probes/r121_root/serve_001/stdout.bin`
+- R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim.: `docs/reviews/probes/r121_root/serve_001/tool_observations.json`
 - Owner local resume bounded M3 seed; no BUILD/runtime before activation/admission.: `CVF_SESSION/authority/CCMAI-RUNTIME-121.json`
 - R121 repaired source5cf1244/new binarycb52235c actual offline compile and candidate admission; initial failed source/admission immutable in archive/Git.: `docs/reviews/probes/r121_root/source_binary_admission_candidate_002.json`
 - R121 repaired source5cf1244/new binarycb52235c actual offline compile and candidate admission; initial failed source/admission immutable in archive/Git.: `docs/reviews/probes/r121_root/compile_002/receipt.json`

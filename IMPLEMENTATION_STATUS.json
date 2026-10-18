@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "x-roadmapTracking": {
     "updatedAt": "2026-10-18",
-    "status": "M3_R121_SETUP_READY_RESOURCE_ADMISSION",
+    "status": "M3_R121_TERMINAL_HOLD_UI_NOT_RUN",
     "currentCheckpoint": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
     "stages": {
       "S0": "PARTIAL_LIVE_BASELINE_OPEN",
@@ -23,7 +23,7 @@
       "M5 release/portable operations"
     ],
     "currentBlockers": [
-      "R121 sole setup exited1 SOURCE_ADMISSION_IDENTITY before resource/app effects; full tranche old120 survived two-token rename. Original foreground wait/exit1 observed. Source-only consolidated repair pending; compile/setup caps consumed/no rerun.",
+      "R121 original serve exit1 due Unicode console encoding before browser. Cleanup/held waits proven, UI and combined route/final accounting incomplete. CHANGES_REQUIRED, no automatic retry.",
       "R117 actual WAIT_DATA executor bounded source/native/one real synthetic flow accepted with faithful usage and synthetic API confirmation; ordinary installed activation/current UI flow/fullM2/M3 stage exit remain OPEN.",
       "R114 original terminal evidence MISSING/noFREEZE; B08rasterqualified/B09unsupported",
       "Dashboard3known failures, ordinary installed rerun activation/fullM2/M3/pilot/release and M1business acceptance OPEN; current R120 UI observations remain bounded synthetic presentation only."
@@ -39,7 +39,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "R118 REVIEW_PASS SOURCE_COMPONENT_ONLY at7f74a75f93671973bcfe55b5cb491076c0d2bdf9: current proposal pointer/lineage binding, safe legacy fallback and proposal-less data actions, VN/EN WAIT_DATA history. Root24tests/app typecheckPASS, original byte archive/source pins verified; changed-screen UI proof NOT_RUN/FREEZE OPEN. docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md",
     "R117 bounded WAIT_DATA backend real synthetic flow independently accepted: new same-case proposal after source revision, faithful realAlibaba340/297tokens, synthetic CONFIRM persisted, one call/debit, native11top11nested+engine1PASS. Exact owned owner-authorized restart/finalstop and operational protected equality observed; original interruption/cleanupHOLD retained. Current UI/fullM2/M3/pilot/release remain OPEN. docs/reviews/R117_FINAL_INDEPENDENT_REVIEW_2026-10-18.md",
@@ -2966,37 +2966,27 @@
     "providerCalls": 0
   },
   "x-r121CurrentOutcome": {
-    "capability": "PASS_SHORT_UNINTERRUPTED_LIFECYCLE_ONLY",
-    "originalExecExit": 17,
-    "expectedExecExit": 17,
-    "heldChildExit": 0,
+    "status": "CHANGES_REQUIRED",
+    "review": "docs/reviews/R121_FINAL_TERMINAL_REVIEW_2026-10-18.md",
+    "sourceCommit": "5cf1244f73a29dfff9ab987d4fe8ae51c67abb38",
+    "originalServeExit": 1,
     "heldChildWaitObserved": true,
-    "source": "REPAIRED_SOURCE_COMMITTED_BINARY_PINNED",
-    "productRuntime": "NOT_RUN",
-    "compile": "POSTREPAIR_OFFLINE_COMPILE_PASS",
-    "sourcePins": 405,
-    "setup": "POSTREPAIR_READY_EXIT0",
-    "actualFixtureStarts": 1,
-    "actualBackendStarts": 0,
-    "actualViteStarts": 0,
+    "supervisorTerminal": "HOLD_UNICODE_ENCODING_BEFORE_BROWSER",
+    "terminalErrors": [
+      "FINAL_EVIDENCE_MISSING"
+    ],
+    "currentUi": "NOT_RUN",
+    "actualBackendStarts": 1,
+    "actualViteStarts": 1,
     "actualProductTabs": 0,
-    "actualProviderCalls": 0,
-    "runtimeDirectoryPresent": true,
-    "setupWaitObserved": true,
-    "setupWrapperMetadataError": null,
-    "postRepairSetup": "READY_EXIT0_WAIT_OBSERVED",
-    "newBinarySha256": "cb52235ceafee389f52a3fcc80ff9685887e4d7cef6035ea8a5428e30a582162",
-    "initialSetup": "EXIT1_SOURCE_ADMISSION_IDENTITY_NO_RESOURCE_EFFECT",
-    "containerId": "e8386c20fc1a4d3f3ebf11f05b2ec491eb968b15e28bb101b6a46b6ee0afca77",
-    "networkId": "c36815bdd5d46788c6194b95bfa0585618a8ec0d8b9a2d9a7344f8aea12bda3b",
-    "volumeName": "ccmai-r121-ui-20261018",
-    "port": 56961,
-    "protectedCounts": {
-      "containers": 9,
-      "networks": 10,
-      "volumes": 472
-    },
-    "status": "BUILD",
+    "authPosts": 0,
+    "caseActions": 0,
+    "providerCalls": 0,
+    "finalAccounting": "RAW_BACKEND_EQUAL_MARKERS_PRESENT_COMBINED_VALIDATION_NOT_RUN",
+    "fixture": "EXITED_PID0_PORTS_EMPTY_PRESERVED",
+    "listeners": "3019_62861_56961_ABSENT_PS_EXIT0_EMPTY_TABLES",
+    "protected": "EQUAL_9_CONTAINERS_10_NETWORKS_472_VOLUMES",
+    "sourcePins": "405_UNCHANGED",
     "freeze": "OPEN"
   },
   "x-r121PostRepairAdmission": {
@@ -3011,6 +3001,6 @@
       "setupInvocation": 1,
       "newFixtureStart": 1
     },
-    "status": "SETUP_READY_RESOURCE_ADMISSION_COMMIT_PENDING"
+    "status": "CONSUMED_SETUP_READY_CAMPAIGN_HOLD"
   }
 }

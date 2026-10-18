@@ -63,9 +63,9 @@
   "baseCommit": "33186d0133fdf7272fe61f20ee1c9ac17bb5b11f",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_121_M3_TERMINAL_PROOF.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "status": "BUILD",
-  "phase": "BUILD",
-  "workOrderStatus": "ACTIVE",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
   "buildCommit": "5cf1244f73a29dfff9ab987d4fe8ae51c67abb38",
   "reviewEvidence": [
     "docs/reviews/R121_CAPABILITY_HOLD_2026-10-18.md",
@@ -74,9 +74,10 @@
     "docs/reviews/R121_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md",
     "docs/reviews/R121_IDENTITY_CONSOLIDATED_REPAIR_DECISION_2026-10-18.md",
     "docs/reviews/R121_R1_NAMESPACE_REPAIR_RETURN_2026-10-18.md",
-    "docs/reviews/R121_R1_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md"
+    "docs/reviews/R121_R1_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md",
+    "docs/reviews/R121_FINAL_TERMINAL_REVIEW_2026-10-18.md"
   ],
-  "disposition": "PENDING",
+  "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -86,7 +87,9 @@
     "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -100,12 +103,12 @@
     "rootPythonChecks": 2,
     "sourceRepairRounds": 1,
     "rootCompileInvocations": 1,
-    "campaignStarts": 0,
+    "campaignStarts": 1,
     "newFixtureStarts": 1,
     "setupInvocations": 1,
-    "fixtureFinalStops": 0,
-    "backendStarts": 0,
-    "viteStarts": 0,
+    "fixtureFinalStops": 1,
+    "backendStarts": 1,
+    "viteStarts": 1,
     "productTabs": 0,
     "authPosts": 0,
     "caseActions": 0,
@@ -121,11 +124,11 @@
     "source": "REPAIRED_SOURCE_COMMITTED_BINARY_PINNED",
     "productRuntime": "NOT_RUN",
     "compile": "POSTREPAIR_OFFLINE_COMPILE_PASS",
-    "sourcePins": 405,
+    "sourcePins": "405_UNCHANGED",
     "setup": "POSTREPAIR_READY_EXIT0",
     "actualFixtureStarts": 1,
-    "actualBackendStarts": 0,
-    "actualViteStarts": 0,
+    "actualBackendStarts": 1,
+    "actualViteStarts": 1,
     "actualProductTabs": 0,
     "actualProviderCalls": 0,
     "runtimeDirectoryPresent": true,
@@ -142,7 +145,24 @@
       "containers": 9,
       "networks": 10,
       "volumes": 472
-    }
+    },
+    "status": "CHANGES_REQUIRED",
+    "review": "docs/reviews/R121_FINAL_TERMINAL_REVIEW_2026-10-18.md",
+    "sourceCommit": "5cf1244f73a29dfff9ab987d4fe8ae51c67abb38",
+    "originalServeExit": 1,
+    "supervisorTerminal": "HOLD_UNICODE_ENCODING_BEFORE_BROWSER",
+    "terminalErrors": [
+      "FINAL_EVIDENCE_MISSING"
+    ],
+    "currentUi": "NOT_RUN",
+    "authPosts": 0,
+    "caseActions": 0,
+    "providerCalls": 0,
+    "finalAccounting": "RAW_BACKEND_EQUAL_MARKERS_PRESENT_COMBINED_VALIDATION_NOT_RUN",
+    "fixture": "EXITED_PID0_PORTS_EMPTY_PRESERVED",
+    "listeners": "3019_62861_56961_ABSENT_PS_EXIT0_EMPTY_TABLES",
+    "protected": "EQUAL_9_CONTAINERS_10_NETWORKS_472_VOLUMES",
+    "freeze": "OPEN"
   },
   "x-capabilityContinuation": {
     "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-121-CAPABILITY-CONTINUATION.json",
@@ -175,6 +195,6 @@
       "setupInvocation": 1,
       "newFixtureStart": 1
     },
-    "status": "SETUP_READY_RESOURCE_ADMISSION_COMMIT_PENDING"
+    "status": "CONSUMED_SETUP_READY_CAMPAIGN_HOLD"
   }
 }

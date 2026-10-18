@@ -34051,6 +34051,83 @@
       "path": "docs/reviews/probes/r121_root/setup_002/tool_initial.json",
       "status": "ACTIVE",
       "description": "Actual postrepair setup002 originalwait/exit0 and exact fresh owned resource/source/protection admission, no UI campaign yet."
+    },
+    {
+      "id": "r121-final-terminal-0",
+      "family": "continuity",
+      "path": "docs/reviews/R121_FINAL_TERMINAL_REVIEW_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim."
+    },
+    {
+      "id": "r121-final-terminal-1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/campaign_terminal_raw.zip",
+      "status": "ACTIVE",
+      "description": "R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim."
+    },
+    {
+      "id": "r121-final-terminal-2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/campaign_terminal_manifest.json",
+      "status": "ACTIVE",
+      "description": "R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim."
+    },
+    {
+      "id": "r121-final-terminal-3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/campaign_terminal_summary.json",
+      "status": "ACTIVE",
+      "description": "R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim."
+    },
+    {
+      "id": "r121-final-terminal-4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/serve_001/child_started.json",
+      "status": "ACTIVE",
+      "description": "R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim."
+    },
+    {
+      "id": "r121-final-terminal-5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/serve_001/receipt.json",
+      "status": "ACTIVE",
+      "description": "R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim."
+    },
+    {
+      "id": "r121-final-terminal-6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/serve_001/reservation.json",
+      "status": "ACTIVE",
+      "description": "R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim."
+    },
+    {
+      "id": "r121-final-terminal-7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/serve_001/stderr.bin",
+      "status": "ACTIVE",
+      "description": "R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim."
+    },
+    {
+      "id": "r121-final-terminal-8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/serve_001/stdout.bin",
+      "status": "ACTIVE",
+      "description": "R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim."
+    },
+    {
+      "id": "r121-final-terminal-9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/serve_001/tool_observations.json",
+      "status": "ACTIVE",
+      "description": "R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim."
+    },
+    {
+      "id": "r121-final-terminal-10",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/browser/capture_readiness.json",
+      "status": "ACTIVE",
+      "description": "R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim."
     }
   ]
 }

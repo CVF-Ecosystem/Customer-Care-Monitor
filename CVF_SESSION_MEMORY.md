@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md", "activeTranche": "CCMAI-RUNTIME-121", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md", "activeTranche": "CCMAI-RUNTIME-121", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md
 
-CCMAI-RUNTIME-121 setup002READY/original exit0/wait observed; owned e8386c20/loopback56961 verified running, protected9containers10networks472volumes equal,405sourcepins unchanged. Root commits exact resource admission before original unspent sole foreground M3 proposal/history UI campaign; keep original exec polled through logout/immediate stop/final accounting and owned cleanup. No provider/case actions, old failure/caps unchanged/full milestones OPEN/accounts parked/no push-merge-deploy.
+CCMAI-RUNTIME-121 CHANGES_REQUIRED: original serve exit1/wait observed; Unicode console encoding failure before browser, terminal HOLD/FINAL_EVIDENCE_MISSING. Owned fixture/backend/Vite stopped, three listeners absent, protected9containers10networks472volumes and405sourcepins unchanged. Preserve consumed campaign/caps and raw evidence; read-only bounded follow-up decision only, no automatic retry/successor/provider. FullM2/M3/M1business/pilot/release OPEN/accounts parked/no push-merge-deploy.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD and authorized runtime operator; Sol repair worker and independent static recorder assessor returned idle
+Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; implementation and repair workers idle
 
 R120 UI accepted bounded, original terminal/durable accounting missing, stopped/CHANGES_REQUIRED and consumed caps immutable. R121 separate local route per owner instruction, no new product implementation claim.
 

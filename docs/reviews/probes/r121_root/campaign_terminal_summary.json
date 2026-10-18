@@ -1,0 +1,141 @@
+{
+  "result": "HOLD",
+  "terminal": true,
+  "error": "UnicodeEncodeError:'charmap' codec can't encode character '\\u1ecd' in position 107: character maps to <undefined>",
+  "children": [
+    {
+      "name": "vite",
+      "pid": 25940,
+      "creationIdentity": "windows-filetime-01dd5ec32034047a",
+      "exit": 1,
+      "waitObserved": true,
+      "listenerPort": 3019,
+      "listenerAbsent": true,
+      "evidenceKind": "HOST_LISTENER_ABSENT_MAPPING_REMOVED",
+      "listenerObservation": {
+        "observer": "vite",
+        "port": 3019,
+        "listenerAbsent": true,
+        "evidenceKind": "HOST_LISTENER_ABSENT_MAPPING_REMOVED",
+        "argv": [
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "-NoLogo",
+          "-NoProfile",
+          "-NonInteractive",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-Command",
+          "$ErrorActionPreference='Stop'; $p=[int]3019; $rows=@(Get-NetTCPConnection -State Listen -ErrorAction Stop | Where-Object { [int]$_.LocalPort -eq $p } | Select-Object -Property LocalAddress,LocalPort,OwningProcess); ConvertTo-Json -InputObject $rows -Compress"
+        ],
+        "powershellSha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f",
+        "powershellPath": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "commandSha256": "1b014bb9d2530cc3e89011f6c350b01d000c47a35284ba0e836ebe4883beff3d",
+        "rows": [],
+        "capturedAtEpochSeconds": 1792302019.8462248,
+        "raw": {
+          "directory": ".cvf/runtime/r121_ui/listener_observations/0001-vite-3019",
+          "stdout": "stdout.bin",
+          "stderr": "stderr.bin",
+          "exit": "exit.json",
+          "command": "command.json"
+        }
+      }
+    },
+    {
+      "name": "backend",
+      "pid": 27804,
+      "creationIdentity": "windows-filetime-01dd5ec31d04c8c8",
+      "exit": 0,
+      "waitObserved": true,
+      "listenerPort": 62861,
+      "listenerAbsent": true,
+      "evidenceKind": "HOST_LISTENER_ABSENT_MAPPING_REMOVED",
+      "listenerObservation": {
+        "observer": "backend",
+        "port": 62861,
+        "listenerAbsent": true,
+        "evidenceKind": "HOST_LISTENER_ABSENT_MAPPING_REMOVED",
+        "argv": [
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "-NoLogo",
+          "-NoProfile",
+          "-NonInteractive",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-Command",
+          "$ErrorActionPreference='Stop'; $p=[int]62861; $rows=@(Get-NetTCPConnection -State Listen -ErrorAction Stop | Where-Object { [int]$_.LocalPort -eq $p } | Select-Object -Property LocalAddress,LocalPort,OwningProcess); ConvertTo-Json -InputObject $rows -Compress"
+        ],
+        "powershellSha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f",
+        "powershellPath": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "commandSha256": "b9056a89197769c430fbee6b0b6216ac995193c276a117e0863df45461787f6d",
+        "rows": [],
+        "capturedAtEpochSeconds": 1792302022.378618,
+        "raw": {
+          "directory": ".cvf/runtime/r121_ui/listener_observations/0001-backend-62861",
+          "stdout": "stdout.bin",
+          "stderr": "stderr.bin",
+          "exit": "exit.json",
+          "command": "command.json"
+        }
+      }
+    }
+  ],
+  "fixture": {
+    "containerState": "exited",
+    "containerPid": 0,
+    "containerPorts": {},
+    "dockerTerminalObserved": true,
+    "listenerAbsent": true,
+    "evidenceKind": "HOST_LISTENER_ABSENT_MAPPING_REMOVED",
+    "listenerObservation": {
+      "observer": "fixture",
+      "port": 56961,
+      "listenerAbsent": true,
+      "evidenceKind": "HOST_LISTENER_ABSENT_MAPPING_REMOVED",
+      "argv": [
+        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "-NoLogo",
+        "-NoProfile",
+        "-NonInteractive",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-Command",
+        "$ErrorActionPreference='Stop'; $p=[int]56961; $rows=@(Get-NetTCPConnection -State Listen -ErrorAction Stop | Where-Object { [int]$_.LocalPort -eq $p } | Select-Object -Property LocalAddress,LocalPort,OwningProcess); ConvertTo-Json -InputObject $rows -Compress"
+      ],
+      "powershellSha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f",
+      "powershellPath": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "commandSha256": "bca133724eec42a3e210b2fcd7fa11f5526a2d5bf3a30e66ca51aeb69f052227",
+      "rows": [],
+      "capturedAtEpochSeconds": 1792302059.611336,
+      "raw": {
+        "directory": ".cvf/runtime/r121_ui/listener_observations/0001-fixture-56961",
+        "stdout": "stdout.bin",
+        "stderr": "stderr.bin",
+        "exit": "exit.json",
+        "command": "command.json"
+      }
+    },
+    "protectedEqual": true
+  },
+  "terminalErrors": [
+    "FINAL_EVIDENCE_MISSING"
+  ],
+  "finishedAt": 1792302090.6106815,
+  "sourcePinsEqualAfterCleanup": true,
+  "sourcePinCount": 405,
+  "binarySha256": "cb52235ceafee389f52a3fcc80ff9685887e4d7cef6035ea8a5428e30a582162",
+  "resourceAdmissionStable": true,
+  "originalExecExit": 1,
+  "wrapperReceipt": {
+    "exit": 1,
+    "waitObserved": true,
+    "childPid": 25580,
+    "metadataError": null,
+    "finishedAt": 1792302090.6723163
+  },
+  "browserTabsOpened": 0,
+  "authPostsPerformed": 0,
+  "caseActionsPerformed": 0,
+  "providerCallsPerformed": 0,
+  "finalAccountingQualification": "Backend raw final fingerprint/effect markers exist and equal; supervisor skipped validators because vite_routes.jsonl absent, so combined accounting NOT ACCEPTED."
+}

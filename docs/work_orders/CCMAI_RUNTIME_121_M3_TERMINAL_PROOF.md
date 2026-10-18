@@ -1,6 +1,6 @@
 # R121 finite M3 original terminal and current UI proof
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 dispatchKind: INITIAL
 Worker: /root/r121_isolation_luna
@@ -82,3 +82,10 @@ Consolidated decision: docs/reviews/R121_IDENTITY_CONSOLIDATED_REPAIR_DECISION_2
 ## Explicit same-scope postrepair admission decision
 
 After repaired-source independent review, CVF_SESSION/authority/CCMAI-RUNTIME-121-POSTREPAIR-ADMISSION.json grants exactly one additional offline compile/setup/new-fixture-start, separate from immutable spent original counts. No new campaign/backend/Vite/tab/auth/provider/action budget. Root records fresh source/binary and resource admissions before respective effects. Original failed setup had zero resource effects. Recording slot002 preserves setup001; first new uncertainty stops, no automatic successor. This is dispatcher reassessment within standing owner localM3 scope and same-scope policy; harmless-capability owner continuation is not misrepresented as provider/product-effect expansion.
+
+
+## Final return
+
+CCMAI-RUNTIME-121 CHANGES_REQUIRED: original serve exit1/wait observed; Unicode console encoding failure before browser, terminal HOLD/FINAL_EVIDENCE_MISSING. Owned fixture/backend/Vite stopped, three listeners absent, protected9containers10networks472volumes and405sourcepins unchanged. Preserve consumed campaign/caps and raw evidence; read-only bounded follow-up decision only, no automatic retry/successor/provider. FullM2/M3/M1business/pilot/release OPEN/accounts parked/no push-merge-deploy.
+
+Review: docs/reviews/R121_FINAL_TERMINAL_REVIEW_2026-10-18.md. No implementation changes after source5cf1244f.

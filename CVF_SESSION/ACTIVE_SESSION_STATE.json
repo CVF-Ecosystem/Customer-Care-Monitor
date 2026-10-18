@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-121",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-121 setup002READY/original exit0/wait observed; owned e8386c20/loopback56961 verified running, protected9containers10networks472volumes equal,405sourcepins unchanged. Root commits exact resource admission before original unspent sole foreground M3 proposal/history UI campaign; keep original exec polled through logout/immediate stop/final accounting and owned cleanup. No provider/case actions, old failure/caps unchanged/full milestones OPEN/accounts parked/no push-merge-deploy.",
+  "nextAllowedMove": "CCMAI-RUNTIME-121 CHANGES_REQUIRED: original serve exit1/wait observed; Unicode console encoding failure before browser, terminal HOLD/FINAL_EVIDENCE_MISSING. Owned fixture/backend/Vite stopped, three listeners absent, protected9containers10networks472volumes and405sourcepins unchanged. Preserve consumed campaign/caps and raw evidence; read-only bounded follow-up decision only, no automatic retry/successor/provider. FullM2/M3/M1business/pilot/release OPEN/accounts parked/no push-merge-deploy.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD and authorized runtime operator; Sol repair worker and independent static recorder assessor returned idle",
+  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; implementation and repair workers idle",
   "updatedAt": "2026-10-18",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {
@@ -2284,36 +2284,28 @@
     "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; implementation worker idle; R120 runtime stopped and transfer packet preserved"
   },
   "x-r121CurrentOutcome": {
-    "capability": "PASS_SHORT_UNINTERRUPTED_LIFECYCLE_ONLY",
-    "originalExecExit": 17,
-    "expectedExecExit": 17,
-    "heldChildExit": 0,
+    "status": "CHANGES_REQUIRED",
+    "review": "docs/reviews/R121_FINAL_TERMINAL_REVIEW_2026-10-18.md",
+    "sourceCommit": "5cf1244f73a29dfff9ab987d4fe8ae51c67abb38",
+    "originalServeExit": 1,
     "heldChildWaitObserved": true,
-    "source": "REPAIRED_SOURCE_COMMITTED_BINARY_PINNED",
-    "productRuntime": "NOT_RUN",
-    "compile": "POSTREPAIR_OFFLINE_COMPILE_PASS",
-    "sourcePins": 405,
-    "setup": "POSTREPAIR_READY_EXIT0",
-    "actualFixtureStarts": 1,
-    "actualBackendStarts": 0,
-    "actualViteStarts": 0,
+    "supervisorTerminal": "HOLD_UNICODE_ENCODING_BEFORE_BROWSER",
+    "terminalErrors": [
+      "FINAL_EVIDENCE_MISSING"
+    ],
+    "currentUi": "NOT_RUN",
+    "actualBackendStarts": 1,
+    "actualViteStarts": 1,
     "actualProductTabs": 0,
-    "actualProviderCalls": 0,
-    "runtimeDirectoryPresent": true,
-    "setupWaitObserved": true,
-    "setupWrapperMetadataError": null,
-    "postRepairSetup": "READY_EXIT0_WAIT_OBSERVED",
-    "newBinarySha256": "cb52235ceafee389f52a3fcc80ff9685887e4d7cef6035ea8a5428e30a582162",
-    "initialSetup": "EXIT1_SOURCE_ADMISSION_IDENTITY_NO_RESOURCE_EFFECT",
-    "containerId": "e8386c20fc1a4d3f3ebf11f05b2ec491eb968b15e28bb101b6a46b6ee0afca77",
-    "networkId": "c36815bdd5d46788c6194b95bfa0585618a8ec0d8b9a2d9a7344f8aea12bda3b",
-    "volumeName": "ccmai-r121-ui-20261018",
-    "port": 56961,
-    "protectedCounts": {
-      "containers": 9,
-      "networks": 10,
-      "volumes": 472
-    }
+    "authPosts": 0,
+    "caseActions": 0,
+    "providerCalls": 0,
+    "finalAccounting": "RAW_BACKEND_EQUAL_MARKERS_PRESENT_COMBINED_VALIDATION_NOT_RUN",
+    "fixture": "EXITED_PID0_PORTS_EMPTY_PRESERVED",
+    "listeners": "3019_62861_56961_ABSENT_PS_EXIT0_EMPTY_TABLES",
+    "protected": "EQUAL_9_CONTAINERS_10_NETWORKS_472_VOLUMES",
+    "sourcePins": "405_UNCHANGED",
+    "freeze": "OPEN"
   },
   "x-r121CapabilityContinuation": {
     "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-121-CAPABILITY-CONTINUATION.json",
@@ -2335,6 +2327,6 @@
       "setupInvocation": 1,
       "newFixtureStart": 1
     },
-    "status": "SETUP_READY_RESOURCE_ADMISSION_COMMIT_PENDING"
+    "status": "CONSUMED_SETUP_READY_CAMPAIGN_HOLD"
   }
 }

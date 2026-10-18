@@ -1,5 +1,12 @@
 # Roadmap CSKH: dữ liệu đáng tin, bộ lọc hỗ trợ AI và xử lý có trách nhiệm
 
+## Current R121 terminal hold — 2026-10-18
+
+CCMAI-RUNTIME-121 CHANGES_REQUIRED: original serve exit1/wait observed; Unicode console encoding failure before browser, terminal HOLD/FINAL_EVIDENCE_MISSING. Owned fixture/backend/Vite stopped, three listeners absent, protected9containers10networks472volumes and405sourcepins unchanged. Preserve consumed campaign/caps and raw evidence; read-only bounded follow-up decision only, no automatic retry/successor/provider. FullM2/M3/M1business/pilot/release OPEN/accounts parked/no push-merge-deploy. Review: docs/reviews/R121_FINAL_TERMINAL_REVIEW_2026-10-18.md.
+
+Earlier checkpoint sections are historical.
+
+
 ## Current R120 observed UI / terminal evidence hold — 2026-10-18
 
 R120 actual current UI observation: correct active rev2 over later off-lineage rev3; three readable Vietnamese history events/system reason, synthetic notice. CSS390x844 has no horizontal overflow, original JPEG375x811 (not exact-raster390x844/PNG); B09 unsupported NOT_RUN and B07 inherited. Overall CHANGES_REQUIRED: original supervisor terminal/held-child wait-exit/final fingerprint-effect counters MISSING after session loss, cause UNKNOWN. Root separate identity-proven sole fixture stop succeeded: EXITED/Pid0/Ports{}, listeners3019/64408/64629absent, protected8containers/9networks/471volumesequal, source400/binary/executablesunchanged. UI observation is not AI governance or actual workflow proof. Runtime stopped; no replay/repair/automatic successor/provider. Read-only failed-terminal/lifetime review/transfer only before separate governed runtime decision. FullM2/M3/M1business/pilot/release OPEN, accountsparked/no push-merge-deploy. Review: docs/reviews/R120_FINAL_INDEPENDENT_UI_REVIEW_2026-10-18.md.

@@ -4,11 +4,11 @@ Status: ACTIVE
 
 ## Current State
 
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD and authorized runtime operator; Sol repair worker and independent static recorder assessor returned idle
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; implementation and repair workers idle
 - Active tranche: CCMAI-RUNTIME-121
-- Next allowed move: CCMAI-RUNTIME-121 setup002READY/original exit0/wait observed; owned e8386c20/loopback56961 verified running, protected9containers10networks472volumes equal,405sourcepins unchanged. Root commits exact resource admission before original unspent sole foreground M3 proposal/history UI campaign; keep original exec polled through logout/immediate stop/final accounting and owned cleanup. No provider/case actions, old failure/caps unchanged/full milestones OPEN/accounts parked/no push-merge-deploy.
+- Next allowed move: CCMAI-RUNTIME-121 CHANGES_REQUIRED: original serve exit1/wait observed; Unicode console encoding failure before browser, terminal HOLD/FINAL_EVIDENCE_MISSING. Owned fixture/backend/Vite stopped, three listeners absent, protected9containers10networks472volumes and405sourcepins unchanged. Preserve consumed campaign/caps and raw evidence; read-only bounded follow-up decision only, no automatic retry/successor/provider. FullM2/M3/M1business/pilot/release OPEN/accounts parked/no push-merge-deploy.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 Seed33186d0133fdf7272fe61f20ee1c9ac17bb5b11f precedes BUILD. New owner-directed local route after completed R120 lifetime review, not automatic support chain. INTAKE/DESIGN/SPEC/WORK_ORDER consolidated in decision and inherited contract. Four isolation copies only; Root capability admission then exact admissions before sole new product campaign. No product code repair, old cause UNKNOWN. Worker acknowledgment and actual pre-dispatch gate required before edits. Root retains independent review/runtime/commit ownership. FullM2/M3/M1business/pilot/release OPEN. Original untracked Desktop proposal preserved verbatim in seed commit.
@@ -44,3 +44,10 @@ Sol independently statically rechecked Root recorder slot002 delta: separate fre
 Postrepair sole fresh offline compile PASS exit0/17.683sec at5cf1244f/405pins unchanged; binarycb52235ceafee389f52a3fcc80ff9685887e4d7cef6035ea8a5428e30a582162 under r121_build/after_repair/handlers.test.exe. Original source/admission/first binary preserved in Git+preimage ZIP; current canonical admission revised from candidate002 only after byte-preservation check. Root commits this before setup002; runtime directory/resource effects still absent. Original unspent sole campaign caps not renewed.
 
 Postrepair SETUP002 actual wrapper exit0/waitObserved/metadataErrornull. Exact new owned e8386c20fc1a4d3f3ebf11f05b2ec491eb968b15e28bb101b6a46b6ee0afca77 /networkc36815bdd5d46788c6194b95bfa0585618a8ec0d8b9a2d9a7344f8aea12bda3b /volumeccmai-r121-ui-20261018 /loopback56961 runningPID>0 independently verified; protected9containers10networks472volumesequal,405pins unchanged. MySQL31transientEOF then attempt32 five-byteREADY, no restart. Setup receipts/toolreturns preserved. Root commits exact resource admission before serve/backend/Vite/tab/auth; all those budgets0, provider/case0. Original failed setup001 and conservative old start reservation remain historical, actual fixture starts1 from continuation.
+
+
+## Original campaign final review
+
+CCMAI-RUNTIME-121 CHANGES_REQUIRED: original serve exit1/wait observed; Unicode console encoding failure before browser, terminal HOLD/FINAL_EVIDENCE_MISSING. Owned fixture/backend/Vite stopped, three listeners absent, protected9containers10networks472volumes and405sourcepins unchanged. Preserve consumed campaign/caps and raw evidence; read-only bounded follow-up decision only, no automatic retry/successor/provider. FullM2/M3/M1business/pilot/release OPEN/accounts parked/no push-merge-deploy.
+
+Root fresh REVIEW acknowledgment after compaction. Original exec30261 returned1; held supervisor25580 wait/exit1, metadataError null. No browser opened. Sol independent read-only diagnosis confirmed readiness print encoding cause and cleanup, raw final backend markers equal but supervisor combined validator skipped absent route ledger. Final stop consumed by supervisor finally, no duplicate stop. Review: docs/reviews/R121_FINAL_TERMINAL_REVIEW_2026-10-18.md. Not FREEZE or closure.
