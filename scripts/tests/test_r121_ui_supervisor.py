@@ -228,7 +228,7 @@ class R121SupervisorTests(unittest.TestCase):
         container_id = 'a'*64
         network_id = 'b'*64
         owner_nonce = 'nonce'
-        labels = {'ccmai.tranche':'CCMAI-RUNTIME-120','ccmai.owner':owner_nonce}
+        labels = {'ccmai.tranche':'CCMAI-RUNTIME-121','ccmai.owner':owner_nonce}
         row = {
             'Id':container_id,'Image':module.IMAGE,'Name':'/'+module.NAME,
             'State':'exited','Pid':0,'Labels':labels,

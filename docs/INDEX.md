@@ -15,7 +15,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- R121 owner continuation short capability confirmed; source-only pending acknowledgment and exact product admissions.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md`
+- R121 repaired full namespace accepted source-only; fresh finite postrepair admission, runtime not yet proven.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -4236,6 +4236,19 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/probes/r121_root/capability_confirmation/manifest.json`
 - Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/probes/r121_root/capability_confirmation/original_bytes.zip`
 - Owner local resume bounded M3 seed; no BUILD/runtime before activation/admission.: `CVF_SESSION/authority/CCMAI-RUNTIME-121.json`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `CVF_SESSION/authority/CCMAI-RUNTIME-121-POSTREPAIR-ADMISSION.json`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/R121_R1_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_root/source_unit_002/static_identity_proof.json`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_root/source_unit_002/stderr.bin`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_root/source_unit_002/stdout.bin`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/R121_R1_NAMESPACE_REPAIR_RETURN_2026-10-18.md`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_worker/namespace_repair/command.json`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_worker/namespace_repair/receipt.json`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_worker/namespace_repair/static_identity_proof.json`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_worker/namespace_repair/stderr.bin`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_worker/namespace_repair/stdout.bin`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_root/source_unit_002/receipt.json`
+- R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS.: `docs/reviews/probes/r121_root/source_unit_002/reservation.json`
 - R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/R121_IDENTITY_CONSOLIDATED_REPAIR_DECISION_2026-10-18.md`
 - R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/probes/r121_root/setup_001/child_started.json`
 - R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant.: `docs/reviews/probes/r121_root/setup_001/receipt.json`

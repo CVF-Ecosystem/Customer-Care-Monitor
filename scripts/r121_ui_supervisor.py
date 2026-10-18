@@ -107,7 +107,7 @@ def committed(path):
 
 def source_admission():
     value = committed(SOURCE)
-    require(value.get('trancheId') == 'CCMAI-RUNTIME-120' and value.get('image') == IMAGE, 'SOURCE_ADMISSION_IDENTITY')
+    require(value.get('trancheId') == 'CCMAI-RUNTIME-121' and value.get('image') == IMAGE, 'SOURCE_ADMISSION_IDENTITY')
     commit = value.get('sourceCommit','')
     require(isinstance(commit,str) and HEX40.fullmatch(commit), 'SOURCE_COMMIT_INVALID')
     ancestor = subprocess.run(['git','merge-base','--is-ancestor',commit,'HEAD'],cwd=ROOT,capture_output=True,timeout=15)
@@ -185,7 +185,7 @@ def owner_identity(value, receipt, require_port=False, require_network=True):
     fields = '{"Id":{{json .Id}},"Image":{{json .Image}},"Name":{{json .Name}},"State":{{json .State.Status}},"Pid":{{json .State.Pid}},"Labels":{{json .Config.Labels}},"Mounts":{{json .Mounts}},"NetworkMode":{{json .HostConfig.NetworkMode}},"Networks":{{json .NetworkSettings.Networks}},"Ports":{{json .NetworkSettings.Ports}}}'
     row = json.loads(docker(value,'inspect','--format',fields,receipt['containerId']))
     require(row['Id'] == receipt['containerId'] and row['Image'] == IMAGE and row['Name'] == '/'+NAME, 'OWNED_CONTAINER_CHANGED')
-    labels = {'ccmai.tranche':'CCMAI-RUNTIME-120','ccmai.owner':receipt['ownerNonce']}
+    labels = {'ccmai.tranche':'CCMAI-RUNTIME-121','ccmai.owner':receipt['ownerNonce']}
     require(all(row['Labels'].get(k) == v for k,v in labels.items()), 'OWNED_LABEL_CHANGED')
     mounts = row['Mounts']
     require(len(mounts) == 1 and mounts[0].get('Type') == 'volume' and mounts[0].get('Name') == NAME and mounts[0].get('Destination') == '/var/lib/mysql', 'OWNED_MOUNT_CHANGED')
@@ -634,7 +634,7 @@ def setup():
     require(not any(x.get('Names') == NAME for x in before['containers']), 'R121_CONTAINER_NAME_EXISTS')
     require(not any(x.get('Name') == NAME for x in before['networks']+before['volumes']), 'R121_RESOURCE_NAME_EXISTS')
     nonce = secrets.token_hex(16)
-    labels = ['--label','ccmai.tranche=CCMAI-RUNTIME-120','--label','ccmai.owner='+nonce]
+    labels = ['--label','ccmai.tranche=CCMAI-RUNTIME-121','--label','ccmai.owner='+nonce]
     partial = {'ownerNonce':nonce,'protectedBefore':before,'volumeName':NAME}
     write_new(RUNTIME/'setup_intent.json',partial)
     try:
@@ -693,7 +693,7 @@ def stop_fixture(value, receipt):
 
 def resource_admission(setup_receipt):
     value = committed(RESOURCE)
-    for key,expected in {'trancheId':'CCMAI-RUNTIME-120','database':DATABASE,'host':'127.0.0.1','port':setup_receipt['port'],'containerId':setup_receipt['containerId'],'networkId':setup_receipt['networkId'],'volumeName':NAME,'ownerNonce':setup_receipt['ownerNonce'],'networkIdentity':setup_receipt['networkIdentity'],'volumeIdentity':setup_receipt['volumeIdentity']}.items():
+    for key,expected in {'trancheId':'CCMAI-RUNTIME-121','database':DATABASE,'host':'127.0.0.1','port':setup_receipt['port'],'containerId':setup_receipt['containerId'],'networkId':setup_receipt['networkId'],'volumeName':NAME,'ownerNonce':setup_receipt['ownerNonce'],'networkIdentity':setup_receipt['networkIdentity'],'volumeIdentity':setup_receipt['volumeIdentity']}.items():
         require(value.get(key) == expected, 'RESOURCE_ADMISSION_MISMATCH_'+key)
     require(value.get('protectedBefore') == setup_receipt['protectedBefore'], 'PROTECTED_BASELINE_MISMATCH')
     return value
@@ -707,7 +707,7 @@ def wait_ready(process, output, deadline):
                 match = READY.fullmatch(line)
                 if match:
                     manifest = json.loads(match.group(2))
-                    require(manifest.get('tranche') == 'CCMAI-RUNTIME-120' and manifest.get('synthetic') is True, 'BROWSER_MANIFEST_INVALID')
+                    require(manifest.get('tranche') == 'CCMAI-RUNTIME-121' and manifest.get('synthetic') is True, 'BROWSER_MANIFEST_INVALID')
                     return match.group(1),manifest
         time.sleep(.2)
     raise Hold('BACKEND_READY_TIMEOUT')

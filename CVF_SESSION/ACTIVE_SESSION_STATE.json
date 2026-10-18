@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-121",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-121 BUILD source-only namespace repair1 after committed acknowledgment: Sol exact full CCMAI-RUNTIME-120->121 token correction at8sites/3newfiles, Vite unchanged, no logic/product changes. Worker/Root one remaining Python check each; compile/setup caps consumed and repaired source/binary inadmissible, no runtime retry before fresh explicit budget decision. Old evidence/caps unchanged, full milestones OPEN/accounts parked/no provider-push-merge-deploy.",
+  "nextAllowedMove": "CCMAI-RUNTIME-121 repaired-source accepted:8exact full-ID changes/3files, Vite and old400pins unchanged, worker/Root final19PASS with2/2checks exhausted, repair1/2. Fresh dispatcher postrepair admission grants one additional offline compile/setup only with separate counters; source commit then new exact source-binary admission before setup002, resource admission before original unspent sole campaign. No provider/case actions or scope/effect expansion, old evidence/caps unchanged/full milestones OPEN/accounts parked/no push-merge-deploy.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Codex /root ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol /root/r121_namespace_audit_sol REPAIR_WORKER pending committed acknowledgment; runtime HOLD",
+  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD and authorized runtime operator; Sol repair worker returned idle, independent static recorder recheck pending",
   "updatedAt": "2026-10-18",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {
@@ -2289,7 +2289,7 @@
     "expectedExecExit": 17,
     "heldChildExit": 0,
     "heldChildWaitObserved": true,
-    "source": "SOURCE_REPAIR1_PENDING_ACK",
+    "source": "REPAIRED_SOURCE_ACCEPTED_UNCOMPILED",
     "productRuntime": "NOT_RUN",
     "compile": "PASS_OFFLINE_1OF1",
     "sourcePins": 405,
@@ -2310,5 +2310,19 @@
     "status": "PASS_SHORT_UNINTERRUPTED_LIFECYCLE_ONLY",
     "originalCapUsedUnchanged": 1,
     "evidence": "docs/reviews/probes/r121_root/capability_confirmation/manifest.json"
+  },
+  "x-r121PostRepairAdmission": {
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-121-POSTREPAIR-ADMISSION.json",
+    "budget": {
+      "offlineCompile": 1,
+      "setupInvocation": 1,
+      "newFixtureStart": 1
+    },
+    "used": {
+      "offlineCompile": 0,
+      "setupInvocation": 0,
+      "newFixtureStart": 0
+    },
+    "status": "SOURCE_ACCEPTED_ADMISSION_PENDING"
   }
 }

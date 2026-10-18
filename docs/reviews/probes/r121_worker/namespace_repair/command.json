@@ -1,0 +1,10 @@
+{
+  "workingDirectory": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+  "argv": [
+    "python",
+    "-B",
+    "scripts/tests/test_r121_ui_supervisor.py"
+  ],
+  "purpose": "sole remaining focused offline worker software check",
+  "authorizedBudget": "workerPythonChecks 2 of 2"
+}

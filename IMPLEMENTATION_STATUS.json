@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "x-roadmapTracking": {
     "updatedAt": "2026-10-18",
-    "status": "M3_R121_SOURCE_ONLY_NAMESPACE_REPAIR",
+    "status": "M3_R121_REPAIRED_SOURCE_POSTREPAIR_ADMISSION_PENDING",
     "currentCheckpoint": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
     "stages": {
       "S0": "PARTIAL_LIVE_BASELINE_OPEN",
@@ -2971,7 +2971,7 @@
     "expectedExecExit": 17,
     "heldChildExit": 0,
     "heldChildWaitObserved": true,
-    "source": "SOURCE_REPAIR1_PENDING_ACK",
+    "source": "REPAIRED_SOURCE_ACCEPTED_UNCOMPILED",
     "productRuntime": "NOT_RUN",
     "compile": "PASS_OFFLINE_1OF1",
     "sourcePins": 405,
@@ -2986,5 +2986,19 @@
     "setupWrapperMetadataError": null,
     "status": "BUILD",
     "freeze": "OPEN"
+  },
+  "x-r121PostRepairAdmission": {
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-121-POSTREPAIR-ADMISSION.json",
+    "budget": {
+      "offlineCompile": 1,
+      "setupInvocation": 1,
+      "newFixtureStart": 1
+    },
+    "used": {
+      "offlineCompile": 0,
+      "setupInvocation": 0,
+      "newFixtureStart": 0
+    },
+    "status": "SOURCE_ACCEPTED_ADMISSION_PENDING"
   }
 }

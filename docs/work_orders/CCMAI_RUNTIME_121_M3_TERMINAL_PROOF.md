@@ -78,3 +78,7 @@ Sole setup exited1 Hold:SOURCE_ADMISSION_IDENTITY with actual original wrapper w
 ## Bounded source-only namespace repair1
 
 Consolidated decision: docs/reviews/R121_IDENTITY_CONSOLIDATED_REPAIR_DECISION_2026-10-18.md. Root corrects A1 copy recipe to include exact full CCMAI-RUNTIME-120->CCMAI-RUNTIME-121 identity. Repair worker /root/r121_namespace_audit_sol, one remaining worker/Root Python check each, no source logic changes beyond eight full-token substitutions. Existing risk/path/effect/commit-owner scope unchanged. Compile/setup budgets consumed; runtime HOLD pending fresh explicit decision, no automatic rerun. Root-recorded committed current repair acknowledgment precedes edits.
+
+## Explicit same-scope postrepair admission decision
+
+After repaired-source independent review, CVF_SESSION/authority/CCMAI-RUNTIME-121-POSTREPAIR-ADMISSION.json grants exactly one additional offline compile/setup/new-fixture-start, separate from immutable spent original counts. No new campaign/backend/Vite/tab/auth/provider/action budget. Root records fresh source/binary and resource admissions before respective effects. Original failed setup had zero resource effects. Recording slot002 preserves setup001; first new uncertainty stops, no automatic successor. This is dispatcher reassessment within standing owner localM3 scope and same-scope policy; harmless-capability owner continuation is not misrepresented as provider/product-effect expansion.

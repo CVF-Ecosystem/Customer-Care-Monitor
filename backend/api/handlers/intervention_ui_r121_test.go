@@ -40,7 +40,7 @@ func r121StrictDSN(t *testing.T) string {
 	data, err := os.ReadFile(path)
 	if err != nil { t.Fatal("R121 resource admission missing") }
 	var admission r121Admission
-	if json.Unmarshal(data, &admission) != nil || admission.TrancheID != "CCMAI-RUNTIME-120" || admission.Database != "r121_fixture" || admission.Host != "127.0.0.1" || admission.Port < 1024 || admission.Port > 65535 {
+	if json.Unmarshal(data, &admission) != nil || admission.TrancheID != "CCMAI-RUNTIME-121" || admission.Database != "r121_fixture" || admission.Host != "127.0.0.1" || admission.Port < 1024 || admission.Port > 65535 {
 		t.Fatal("R121 resource admission invalid")
 	}
 	dsn := os.Getenv("R121_MYSQL_DSN")
@@ -217,7 +217,7 @@ func TestR121BrowserFixture(t *testing.T) {
 	server := &http.Server{Handler:r121GuardForCase(f.router,f.tenant,f.caseID)}
 	defer server.Close()
 	go func(){ _ = server.Serve(listener) }()
-	manifest := map[string]any{"tranche":"CCMAI-RUNTIME-120","synthetic":true,"tenant":f.tenant,"case":f.caseID,"reader":f.reader,"ownerEmail":f.owner+"@example.invalid","activeProposalId":activeID,"historicalProposalId":f.proposal,"laterOffLineageProposalId":laterID,"activeExplanation":active.Explanation,"laterExplanation":later.Explanation,"eventActions":actions,"initialFingerprint":initial,"initialEffectCounts":initialEffects}
+	manifest := map[string]any{"tranche":"CCMAI-RUNTIME-121","synthetic":true,"tenant":f.tenant,"case":f.caseID,"reader":f.reader,"ownerEmail":f.owner+"@example.invalid","activeProposalId":activeID,"historicalProposalId":f.proposal,"laterOffLineageProposalId":laterID,"activeExplanation":active.Explanation,"laterExplanation":later.Explanation,"eventActions":actions,"initialFingerprint":initial,"initialEffectCounts":initialEffects}
 	encoded,_ := json.Marshal(manifest)
 	fmt.Printf("R121_BROWSER_READY http://127.0.0.1:%d %s\n",listener.Addr().(*net.TCPAddr).Port,encoded)
 	deadline := time.After(20*time.Minute)

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-121",
+  "authorityKind": "DISPATCHER_OWNED_SAME_SCOPE_POSTREPAIR_ADMISSION_DECISION",
+  "riskCeiling": "R2",
+  "basis": [
+    "Standing owner instruction to continue local M3, retain Root ORCHESTRATOR/independent REVIEWER, use Luna Max/Sol Medium, avoid drift/overengineering.",
+    "AGENTS same-scope repair continuity: objective, allowed artifact class, risk, local synthetic effect class and commit owner unchanged.",
+    "Independent Sol consolidated root cause and Root byte/unit review establish exact8fullnamespace corrections; first setup had zero resource/app effects."
+  ],
+  "scope": "One additional offline compile and one additional setup for repaired R121 source only, then original unused sole campaign if exact admissions pass. This is explicit reassessed dispatcher decision, not automatic retry/successor or old-cap reset.",
+  "ownerGrantSeparation": "Owner harmless capability-until-complete grant remains capability-only; product effect class derives from standing bounded local M3 authority. No provider/customer/channel/network scope expansion.",
+  "newBudget": {
+    "offlineCompile": 1,
+    "setupInvocation": 1,
+    "newFixtureStart": 1
+  },
+  "originalBudget": "Original compile1/setup1/start-reservation1 remain spent. Original actual fixture/backend/Vite/tab/provider0 preserved. No additional campaign/backend/Vite/tab/auth/action/provider budget; use original unspent caps only.",
+  "sourceGate": "Exact8fullID-only change, old400pins unchanged, worker/Root final19PASS, source commit and new binary/tool/source admission before setup.",
+  "recording": "Preserve setup_001 and initial binary/admission/source. New setup_002 recording slot; fresh binary under existing allowed r121_build/after_repair prefix, current admission revision only after original preserved in Git/preimage archive.",
+  "stopCondition": "Any new source/tool/runtime/resource/evidence uncertainty stops; exact owned cleanup only. No blind retry, general redesign or automatic successor.",
+  "prohibitedEffects": [
+    "Provider/key/real data/channel/production/installed activation",
+    "Old seed/evidence/resource writes or counter reset",
+    "Extra unit tests beyond consumed worker2/Root2, new source logic, push/merge/deploy"
+  ],
+  "roles": {
+    "dispatcher": "Codex /root",
+    "repairWorker": "/root/r121_namespace_audit_sol",
+    "sourceReviewer": "Codex /root",
+    "runtimeOperator": "Codex /root",
+    "operationalRecorderStaticAssessor": "/root/r121_namespace_audit_sol"
+  }
+}

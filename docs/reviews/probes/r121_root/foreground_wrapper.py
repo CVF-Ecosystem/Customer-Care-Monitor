@@ -14,9 +14,11 @@ def creation(handle):
 def main():
  mode=sys.argv[1]
  if mode not in {'setup','serve','stop'}:raise SystemExit('INVALID_MODE')
- out=ROOT/'docs/reviews/probes/r121_root'/(mode+'_001');out.mkdir(exist_ok=False)
+ slot=sys.argv[2] if len(sys.argv)==3 else '001'
+ if slot not in {'001','002'}:raise SystemExit('INVALID_RECORDING_SLOT')
+ out=ROOT/'docs/reviews/probes/r121_root'/(mode+'_'+slot);out.mkdir(exist_ok=False)
  argv=[sys.executable,'-B',str(ROOT/'scripts/r121_ui_supervisor.py'),mode]
- write(out/'reservation.json',{'mode':mode,'argv':argv,'wrapperPid':os.getpid(),'startedAt':time.time(),'invocation':1})
+ write(out/'reservation.json',{'mode':mode,'argv':argv,'wrapperPid':os.getpid(),'startedAt':time.time(),'invocation':int(slot)})
  env={k:v for k,v in os.environ.items() if k.upper() in {'SYSTEMROOT','WINDIR','TEMP','TMP','PATH','USERPROFILE','LOCALAPPDATA'}}
  with (out/'stdout.bin').open('xb') as stdout,(out/'stderr.bin').open('xb') as stderr:
   child=subprocess.Popen(argv,cwd=ROOT,env=env,stdout=stdout,stderr=stderr,creationflags=subprocess.CREATE_NO_WINDOW)

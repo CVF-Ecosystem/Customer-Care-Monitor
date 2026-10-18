@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md",
       "status": "ACTIVE",
-      "description": "R121 owner continuation short capability confirmed; source-only pending acknowledgment and exact product admissions."
+      "description": "R121 repaired full namespace accepted source-only; fresh finite postrepair admission, runtime not yet proven."
     },
     {
       "id": "r060-work-order",
@@ -33862,6 +33862,97 @@
       "path": "docs/reviews/probes/r121_root/identity_repair/preimage_manifest.json",
       "status": "ACTIVE",
       "description": "R121 actual setup identity failure before resource effects, original wait/exit1 and bounded source-only repair decision/preimages; no rerun grant."
+    },
+    {
+      "id": "r121-repair-return-0",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-121-POSTREPAIR-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS."
+    },
+    {
+      "id": "r121-repair-return-1",
+      "family": "continuity",
+      "path": "docs/reviews/R121_R1_INDEPENDENT_SOURCE_REVIEW_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS."
+    },
+    {
+      "id": "r121-repair-return-2",
+      "family": "continuity",
+      "path": "docs/reviews/R121_R1_NAMESPACE_REPAIR_RETURN_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS."
+    },
+    {
+      "id": "r121-repair-return-3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_worker/namespace_repair/command.json",
+      "status": "ACTIVE",
+      "description": "R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS."
+    },
+    {
+      "id": "r121-repair-return-4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_worker/namespace_repair/receipt.json",
+      "status": "ACTIVE",
+      "description": "R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS."
+    },
+    {
+      "id": "r121-repair-return-5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_worker/namespace_repair/static_identity_proof.json",
+      "status": "ACTIVE",
+      "description": "R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS."
+    },
+    {
+      "id": "r121-repair-return-6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_worker/namespace_repair/stderr.bin",
+      "status": "ACTIVE",
+      "description": "R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS."
+    },
+    {
+      "id": "r121-repair-return-7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_worker/namespace_repair/stdout.bin",
+      "status": "ACTIVE",
+      "description": "R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS."
+    },
+    {
+      "id": "r121-repair-return-8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/source_unit_002/receipt.json",
+      "status": "ACTIVE",
+      "description": "R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS."
+    },
+    {
+      "id": "r121-repair-return-9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/source_unit_002/reservation.json",
+      "status": "ACTIVE",
+      "description": "R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS."
+    },
+    {
+      "id": "r121-repair-return-10",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/source_unit_002/static_identity_proof.json",
+      "status": "ACTIVE",
+      "description": "R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS."
+    },
+    {
+      "id": "r121-repair-return-11",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/source_unit_002/stderr.bin",
+      "status": "ACTIVE",
+      "description": "R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS."
+    },
+    {
+      "id": "r121-repair-return-12",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r121_root/source_unit_002/stdout.bin",
+      "status": "ACTIVE",
+      "description": "R121 exact full-ID-only source repair/offline proof and separate finite postrepair admission; old compile/setup failure preserved, no runtime PASS."
     }
   ]
 }
