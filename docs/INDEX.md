@@ -4339,6 +4339,13 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Bounded test fixture repair and honest current-package validation record.: `docs/reviews/R126_FINAL_CURRENT_PACKAGE_REVIEW_2026-10-18.md`
 - Bounded test fixture repair and honest current-package validation record.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R125_FINAL_VERIFICATION_2026-10-18.md`
 - Bounded test fixture repair and honest current-package validation record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-126.json`
+- Actual final local checks and docs build, including initial metadata spelling failure; not hosted CI or closeability proof.: `docs/reviews/probes/review_completion_20261018/final_checks.json`
+- Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance.: `docs/reviews/probes/review_completion_20261018/cleanup_receipt.json`
+- Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance.: `docs/reviews/probes/review_completion_20261018/current_ui.jpg`
+- Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance.: `docs/reviews/probes/review_completion_20261018/evidence_manifest.json`
+- Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance.: `docs/reviews/probes/review_completion_20261018/latest_package_coverage_manifest.json`
+- Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance.: `docs/reviews/probes/review_completion_20261018/local_verification_originals.zip`
+- Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance.: `docs/reviews/probes/review_completion_20261018/verification_summary.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

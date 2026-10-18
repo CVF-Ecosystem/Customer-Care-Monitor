@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "x-roadmapTracking": {
     "updatedAt": "2026-10-18",
-    "status": "LOCAL_REVIEW_FIXES_IMPLEMENTED_VALIDATION_QUALIFIED",
+    "status": "LOCAL_REVIEW_FIXES_ACCEPTED_QUALIFIED_CURRENT_PACKAGE_COVERAGE",
     "currentCheckpoint": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
     "stages": {
       "S0": "PARTIAL_LIVE_BASELINE_OPEN",
@@ -23,8 +23,8 @@
       "M5 release/portable operations"
     ],
     "currentBlockers": [
-      "Final full suites and ordinary-binary smoke/review are pending.",
-      "Full M3/pilot/release and parked Facebook/ZaloOA remain open."
+      "Full M3 acceptance/pilot/release and parked Facebook/ZaloOA remain open.",
+      "Hosted CI and a fresh post-repair single full Go invocation have not run; current whole-package coverage is qualified and proven."
     ],
     "executionAuthorityExpanded": false,
     "eta": "NOT_ESTABLISHED",
@@ -34,7 +34,7 @@
     "deliveryRoadmapPublication": "d72de76984e4aad9c208cc82e6093578797b5340",
     "m1BusinessPilotAcceptance": "OPEN",
     "currentPublication": "BASE_1e3db8b1_PUSHED_AND_MERGED_d7a6f76_THIS_ROADMAP_UPDATE_LOCAL_ONLY",
-    "nextPlannedWork": "CCMAI-RUNTIME-126 verify complete engine/MCP package reruns after test pool and pending-log fixes, then validate current whole-package coverage with source identity and DB sentinels. R125 complete full command exited1 and is never relabeled PASS. Unchanged packages retain their actual passed runs. Frontend474/build/docs, ordinary-binary zero-provider smoke and UI terminal passed. No paid call/customer data/push/deploy; M3/pilot/release remain open."
+    "nextPlannedWork": "CCMAI-RUNTIME-126 REVIEW_PASS for local feedback repairs: current whole-package Go coverage and DB sentinels PASS with source/provenance guards; original R125 full exit1 retained, no fresh post-repair single full invocation. Frontend474/build/docs, ordinary-binary zero-provider smoke and completed UI evidence accepted. Next follow existing M3 acceptance gaps; full M3/pilot/release and hosted CI remain open, Facebook/ZaloOA parked. No push/deploy or paid provider call."
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
@@ -3036,36 +3036,36 @@
     "frontendFullSuite": "470_PASS_3_PREEXISTING_DASHBOARD_FAIL",
     "providerCalls": 0
   },
-  "x-pendingReviewWorkOrders": [
-    "docs/work_orders/CCMAI_RUNTIME_126_DB_FIXTURE_LIFETIME.md"
-  ],
+  "x-pendingReviewWorkOrders": [],
   "x-r124CurrentOutcome": {
-    "status": "REVIEW_PENDING",
+    "status": "SUPERSEDED_BY_R126_QUALIFIED_REVIEW",
     "review": "docs/reviews/R124_CLEAN_INSTALL_REVIEW_2026-10-18.md",
     "providerCalls": 0,
     "currentUI": "PASS_ORIGINAL_TERMINAL_EQUAL_FINGERPRINTS",
     "fullSuites": "PENDING"
   },
   "x-r125CurrentOutcome": {
-    "status": "REVIEW_PENDING",
+    "status": "SUPERSEDED_BY_R126_QUALIFIED_REVIEW",
     "review": "docs/reviews/R125_FINAL_LOCAL_FIX_REVIEW_2026-10-18.md",
     "providerCalls": 0,
     "frontend": "474_PASS_BUILD_PASS",
-    "fullGo": "PENDING",
+    "fullGo": "EXIT_1_PRESERVED",
     "currentUI": "ORIGINAL_TERMINAL_PASS",
     "ordinaryBinary": "GRANT_ISSUED_ZERO_CALLS"
   },
   "x-r125CIAlignment": {
-    "status": "REVIEW_PENDING",
+    "status": "SOURCE_REVIEW_PASS_HOSTED_CI_NOT_RUN",
     "scope": "One workflow argument: -timeout30m, same as the full native run already authorized under R125",
     "hostedCI": "NOT_RUN"
   },
   "x-r126CurrentOutcome": {
-    "status": "REVIEW_PENDING",
+    "status": "REVIEW_PASS",
     "review": "docs/reviews/R126_FINAL_CURRENT_PACKAGE_REVIEW_2026-10-18.md",
     "originalFullR125": "EXIT_1_DB_UNAVAILABLE_SKIPS_AND_MCP_FIXTURE_FAILURE",
-    "currentPackageCoverage": "PENDING_ENGINE_MCP_RECHECK",
+    "currentPackageCoverage": "PASS_DERIVED_WHOLE_PACKAGES_SOURCE_GUARDED",
     "providerCalls": 0,
-    "hostedCI": "NOT_RUN"
+    "hostedCI": "NOT_RUN",
+    "dbGate": "PASS_5_SENTINELS_NO_DB_UNAVAILABLE_SKIP",
+    "freshPostRepairSingleFullInvocation": "NOT_REPEATED"
   }
 }

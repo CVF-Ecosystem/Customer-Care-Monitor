@@ -63,19 +63,20 @@
   "baseCommit": "36a1cfd5ede3fc9885ac26ffae049e617a5c20c6",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_126_DB_FIXTURE_LIFETIME.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "status": "REVIEW_PENDING",
+  "status": "REVIEW_PASS",
   "phase": "REVIEW",
-  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
-  "buildCommit": null,
+  "workOrderStatus": "REVIEWER_ACCEPTED",
+  "buildCommit": "9ab54062976de181ffbb910be44393021d1bc3db",
   "reviewEvidence": [
     "docs/reviews/R126_FINAL_CURRENT_PACKAGE_REVIEW_2026-10-18.md"
   ],
-  "disposition": "PENDING",
+  "disposition": "REVIEW_PASS",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
   ]
 }

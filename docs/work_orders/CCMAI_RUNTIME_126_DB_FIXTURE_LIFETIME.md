@@ -1,6 +1,6 @@
 # Test DB pool lifetime and MCP pending attempt fixture
 
-Status: COMPLETE_PENDING_REVIEW
+Status: REVIEWER_ACCEPTED
 Risk: R2
 Worker: Sol engine test DB pool lifecycle; Luna MCP pending notification assertion
 Reviewer: Root independent source and terminal evidence review

@@ -1,5 +1,14 @@
 # CCMA — Roadmap phát triển sản phẩm và tiếp quản giữa các agent
 
+## R126 — chốt sửa góp ý local, 2026-10-18
+
+Các mục N01/N03/N04/N05 đã sửa và được kiểm tra local; N02 có đường chạy synthetic qua binary thông thường, setup/CLI/hạn mức/grant, không gọi provider. N03 giữ lịch sử khi người dùng xác nhận nguồn đã đổi; UI mới có mã thoát0 và fingerprint trước/sau bằng nhau. Frontend45file/474test và build PASS; Python231PASS.
+
+Go: lượt full R125 vẫn là exit1. Sau sửa vòng đời pool test và assertion MCP, đã chạy lại trọn engine/MCP; kết hợp kết quả nguyên package của các phần nguồn không đổi cho current-package coverage PASS, gate DB đủ5sentinel và không có DB-unavailable skip. Đây là kết quả tổng hợp có kiểm tra hash/provenance, không phải một lượt full mới sau sửa. Hosted CI chưa chạy. Xem [review R126](../R126_FINAL_CURRENT_PACKAGE_REVIEW_2026-10-18.md).
+
+Phạm vi sửa góp ý đã được nghiệm thu local; tiếp theo đối chiếu các điều kiện còn thiếu của M3 hiện có. Full M3/pilot/release và tài khoản Facebook/ZaloOA còn mở; không tự mở thêm tooling hay gọi AI trả phí. Các checkpoint phía dưới là lịch sử.
+
+
 ## R124 — hoàn thiện đường chạy synthetic và kiểm tra cuối, 2026-10-18
 
 N02 đã triển khai startup mặc định tắt, cấu hình synthetic rõ ràng và CLI tạo fixture, bổ sung dữ liệu giả, tăng trần hạn mức không đặt lại phần đã dùng, cấp grant đúng yêu cầu/người dùng/nguồn/cấu hình/hạn dùng. Smoke bằng binary thông thường trên cài đặt mới đã tìm và sửa lỗi tenant `single-workspace`; luồng từ setup đến cấp grant PASS, attempts/executions/consumed đều0, không gọi provider. Kiểm tra thực thi dùng stub, không suy ra chất lượng AI thật. Xem [runbook](../../reference/INTERVENTION_SYNTHETIC_RUNBOOK.md).
