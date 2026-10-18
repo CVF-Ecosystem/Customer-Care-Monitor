@@ -1,6 +1,12 @@
 # Roadmap CSKH: dữ liệu đáng tin, bộ lọc hỗ trợ AI và xử lý có trách nhiệm
 
-## Current R121 terminal hold — 2026-10-18
+## Kế hoạch sửa đã được local thẩm định — 2026-10-18
+
+Kế hoạch hiện hành ở [roadmap giao sản phẩm](../reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md). Báo cáo agent ngoài chỉ là đầu vào: local source/log quyết định disposition. N01 CI portability và N05 docs/README đã xác nhận → sửa nhỏ trước; N03 nguồn đổi sau human action có căn cứ source nhưng phải tái hiện trước quyết định sửa; N04 encoding/UI evidence đã xác nhận → sửa biên process và nghiệm thu đúng phần còn thiếu; N02 ordinary startup disabled là giới hạn có chủ đích → contract kích hoạt synthetic tối thiểu trước clean-install acceptance. Mỗi mục có exit cụ thể, chưa mục nào FIXED/PASS.
+
+Đây là cập nhật kế hoạch do owner yêu cầu, chưa dispatch BUILD hoặc cho phép runtime/provider. R121 CHANGES_REQUIRED và mọi cap/evidence cũ giữ nguyên; không replay để lấp bằng chứng cũ. M3 vẫn là trọng tâm, frontend full suite/ba lỗi Dashboard và M1 business/fullM2/M3/pilot/release còn OPEN. Mock không thay real-provider proof cho governance. Facebook/Zalo OA parked. Checkpoint bên dưới là lịch sử; next move hiện hành theo roadmap trên và continuity.
+
+## Historical R121 terminal hold — 2026-10-18
 
 CCMAI-RUNTIME-121 CHANGES_REQUIRED: original serve exit1/wait observed; Unicode console encoding failure before browser, terminal HOLD/FINAL_EVIDENCE_MISSING. Owned fixture/backend/Vite stopped, three listeners absent, protected9containers10networks472volumes and405sourcepins unchanged. Preserve consumed campaign/caps and raw evidence; read-only bounded follow-up decision only, no automatic retry/successor/provider. FullM2/M3/M1business/pilot/release OPEN/accounts parked/no push-merge-deploy. Review: docs/reviews/R121_FINAL_TERMINAL_REVIEW_2026-10-18.md.
 

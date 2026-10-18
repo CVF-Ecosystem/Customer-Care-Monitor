@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "x-roadmapTracking": {
     "updatedAt": "2026-10-18",
-    "status": "M3_R121_TERMINAL_HOLD_UI_NOT_RUN",
+    "status": "M3_LOCAL_VALIDATED_FIX_PLAN_NOT_DISPATCHED",
     "currentCheckpoint": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
     "stages": {
       "S0": "PARTIAL_LIVE_BASELINE_OPEN",
@@ -23,19 +23,22 @@
       "M5 release/portable operations"
     ],
     "currentBlockers": [
-      "R121 original serve exit1 due Unicode console encoding before browser. Cleanup/held waits proven, UI and combined route/final accounting incomplete. CHANGES_REQUIRED, no automatic retry.",
-      "R117 actual WAIT_DATA executor bounded source/native/one real synthetic flow accepted with faithful usage and synthetic API confirmation; ordinary installed activation/current UI flow/fullM2/M3 stage exit remain OPEN.",
-      "R114 original terminal evidence MISSING/noFREEZE; B08rasterqualified/B09unsupported",
-      "Dashboard3known failures, ordinary installed rerun activation/fullM2/M3/pilot/release and M1business acceptance OPEN; current R120 UI observations remain bounded synthetic presentation only."
+      "N01 confirmed hosted backend preflight6errors blocks MySQL/Go/build; historical campaign tests depend on local state/ledger/history. Reproducible isolated logic fixtures planned, not fixed.",
+      "N05 confirmed hosted docs parser failure and stale README capability wording; minimal markup/wording fix planned, docs/deploy not accepted.",
+      "N03 source-supported changed-source case recovery gap; HTTP/DB reproduction required before repair decision, not yet a reproduced product defect.",
+      "R121 CHANGES_REQUIRED: encoding failure before browser; original waits/cleanup proven, current UI/combined accounting incomplete. N04 bounded fix/evidence planned, no replay authority.",
+      "N02 intentional ordinary startup runner/executor disabled and synthetic-only scope; configuration contract/clean-install acceptance pending.",
+      "Dashboard3known failures, R114/R120 historical terminal gaps, B08raster/B09unsupported, M1business/fullM2/M3/pilot/release remain OPEN."
     ],
-    "executionAuthorityExpanded": true,
+    "executionAuthorityExpanded": false,
     "eta": "NOT_ESTABLISHED",
     "deliveryRoadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
     "currentMilestone": "M3",
     "milestoneAcceptance": "R117_BOUNDED_BACKEND_REAL_R118_SOURCE_R120_SYNTHETIC_UI_OBSERVED_TERMINAL_MISSING_FULL_M3_OPEN",
     "deliveryRoadmapPublication": "d72de76984e4aad9c208cc82e6093578797b5340",
     "m1BusinessPilotAcceptance": "OPEN",
-    "currentPublication": "LOCAL_ONLY_NOT_PUSHED"
+    "currentPublication": "BASE_1e3db8b1_PUSHED_AND_MERGED_d7a6f76_THIS_ROADMAP_UPDATE_LOCAL_ONLY",
+    "nextPlannedWork": "N01/N05 bounded work orders; no BUILD dispatch in this update"
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
@@ -3002,5 +3005,31 @@
       "newFixtureStart": 1
     },
     "status": "CONSUMED_SETUP_READY_CAMPAIGN_HOLD"
+  },
+  "x-localReviewRoadmapIntake": {
+    "status": "PLANNING_ONLY_NOT_DISPATCHED",
+    "ownerInstruction": "Local decides which external feedback is valid; update roadmap for confirmed fixes.",
+    "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "localSource": "1e3db8b12d8576b33429fa3ece158786ee0b4f7e",
+    "reviewedMerge": "d7a6f7635608d1ad44169372a6b5e0fbcbcd09c4",
+    "sourceTreesEqual": true,
+    "findings": {
+      "N01": "CONFIRMED_FIX_PLANNED",
+      "N05": "CONFIRMED_FIX_PLANNED",
+      "N03": "SOURCE_SUPPORTED_REPRO_REQUIRED",
+      "N04": "CONFIRMED_FIX_PLANNED",
+      "N02": "CONFIRMED_LIMIT_CONTRACT_REQUIRED"
+    },
+    "order": [
+      "N01",
+      "N05",
+      "N03_REPRO_FIRST",
+      "N04",
+      "N02_SYNTHETIC_CONTRACT"
+    ],
+    "runtimeAuthority": "NONE_NEW",
+    "providerAuthority": "NONE_NEW",
+    "productChecksThisUpdate": "NOT_RUN",
+    "externalReportRole": "INPUT_ONLY_LOCAL_DISPOSITION_CONTROLS"
   }
 }
