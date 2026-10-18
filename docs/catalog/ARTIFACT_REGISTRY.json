@@ -3920,7 +3920,7 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R126_DB_VERIFICATION_2026-10-18.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R127_M3_BROWSER_ACTIONS_2026-10-19.md",
       "status": "ACTIVE",
       "description": "Current R126 DB fixture lifetime and current-package verification handoff."
     },
@@ -34408,6 +34408,27 @@
       "path": "docs/reviews/probes/review_completion_20261018/final_checks.json",
       "status": "ACTIVE",
       "description": "Actual final local checks and docs build, including initial metadata spelling failure; not hosted CI or closeability proof."
+    },
+    {
+      "id": "r126-accepted-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R126_DB_VERIFICATION_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "M3 current bounded browser workflow, synthetic only; original failed evidence preserved."
+    },
+    {
+      "id": "r127-browser-workorder",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_127_M3_BROWSER_ACTIONS.md",
+      "status": "ACTIVE",
+      "description": "M3 current bounded browser workflow, synthetic only; original failed evidence preserved."
+    },
+    {
+      "id": "r127-browser-review",
+      "family": "continuity",
+      "path": "docs/reviews/R127_M3_BROWSER_ACTIONS_REVIEW_2026-10-19.md",
+      "status": "ACTIVE",
+      "description": "M3 current bounded browser workflow, synthetic only; original failed evidence preserved."
     }
   ]
 }

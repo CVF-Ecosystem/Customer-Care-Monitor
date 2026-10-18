@@ -34,11 +34,11 @@
     "deliveryRoadmapPublication": "d72de76984e4aad9c208cc82e6093578797b5340",
     "m1BusinessPilotAcceptance": "OPEN",
     "currentPublication": "BASE_1e3db8b1_PUSHED_AND_MERGED_d7a6f76_THIS_ROADMAP_UPDATE_LOCAL_ONLY",
-    "nextPlannedWork": "CCMAI-RUNTIME-126 REVIEW_PASS for local feedback repairs: current whole-package Go coverage and DB sentinels PASS with source/provenance guards; original R125 full exit1 retained, no fresh post-repair single full invocation. Frontend474/build/docs, ordinary-binary zero-provider smoke and completed UI evidence accepted. Next follow existing M3 acceptance gaps; full M3/pilot/release and hosted CI remain open, Facebook/ZaloOA parked. No push/deploy or paid provider call."
+    "nextPlannedWork": "CCMAI-RUNTIME-127 complete one bounded synthetic browser human workflow: correction, assignment, outcome/reopen, WAIT_DATA ownership/escalation, stale and reader controls, reload and narrow viewport. Reuse accepted source/native evidence; Root reviews Sol fixture before runtime. No provider/customer data/installed app mutation/push/deploy. Full M3 exit only for evidenced criteria."
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "BUILD",
   "completedCapabilities": [
     "R118 REVIEW_PASS SOURCE_COMPONENT_ONLY at7f74a75f93671973bcfe55b5cb491076c0d2bdf9: current proposal pointer/lineage binding, safe legacy fallback and proposal-less data actions, VN/EN WAIT_DATA history. Root24tests/app typecheckPASS, original byte archive/source pins verified; changed-screen UI proof NOT_RUN/FREEZE OPEN. docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md",
     "R117 bounded WAIT_DATA backend real synthetic flow independently accepted: new same-case proposal after source revision, faithful realAlibaba340/297tokens, synthetic CONFIRM persisted, one call/debit, native11top11nested+engine1PASS. Exact owned owner-authorized restart/finalstop and operational protected equality observed; original interruption/cleanupHOLD retained. Current UI/fullM2/M3/pilot/release remain OPEN. docs/reviews/R117_FINAL_INDEPENDENT_REVIEW_2026-10-18.md",
@@ -2033,7 +2033,9 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [],
+  "activeWorkOrders": [
+    "docs/work_orders/CCMAI_RUNTIME_127_M3_BROWSER_ACTIONS.md"
+  ],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -2597,7 +2599,7 @@
     "nextGate": "Separate SPEC/work order for actual AI executor/integration or M1 business decisions",
     "actualRerun": "OPEN_EXECUTOR_NOT_INCLUDED"
   },
-  "x-activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R126_DB_VERIFICATION_2026-10-18.md",
+  "x-activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R127_M3_BROWSER_ACTIONS_2026-10-19.md",
   "x-ownerRepairContinuation": "CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json",
   "x-r102Current": {
     "status": "FROZEN_LOCAL_ONLY",
@@ -3067,5 +3069,11 @@
     "hostedCI": "NOT_RUN",
     "dbGate": "PASS_5_SENTINELS_NO_DB_UNAVAILABLE_SKIP",
     "freshPostRepairSingleFullInvocation": "NOT_REPEATED"
+  },
+  "x-r127CurrentOutcome": {
+    "status": "BUILD",
+    "review": "docs/reviews/R127_M3_BROWSER_ACTIONS_REVIEW_2026-10-19.md",
+    "browser": "PENDING",
+    "providerCalls": 0
   }
 }

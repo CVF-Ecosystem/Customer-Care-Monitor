@@ -1,6 +1,7 @@
 # R126 current package verification handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
+Successor: CVF_SESSION/handoffs/AGENT_HANDOFF_R127_M3_BROWSER_ACTIONS_2026-10-19.md
 
 ## Current State
 

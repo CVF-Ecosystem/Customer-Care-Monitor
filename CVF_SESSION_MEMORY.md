@@ -2,20 +2,20 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R126_DB_VERIFICATION_2026-10-18.md", "activeTranche": "CCMAI-RUNTIME-126", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R127_M3_BROWSER_ACTIONS_2026-10-19.md", "activeTranche": "CCMAI-RUNTIME-127", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R126_DB_VERIFICATION_2026-10-18.md
+- Current mode: BUILD
+- Active phase: BUILD
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R127_M3_BROWSER_ACTIONS_2026-10-19.md
 
-CCMAI-RUNTIME-126 REVIEW_PASS for local feedback repairs: current whole-package Go coverage and DB sentinels PASS with source/provenance guards; original R125 full exit1 retained, no fresh post-repair single full invocation. Frontend474/build/docs, ordinary-binary zero-provider smoke and completed UI evidence accepted. Next follow existing M3 acceptance gaps; full M3/pilot/release and hosted CI remain open, Facebook/ZaloOA parked. No push/deploy or paid provider call.
+CCMAI-RUNTIME-127 complete one bounded synthetic browser human workflow: correction, assignment, outcome/reopen, WAIT_DATA ownership/escalation, stale and reader controls, reload and narrow viewport. Reuse accepted source/native evidence; Root reviews Sol fixture before runtime. No provider/customer data/installed app mutation/push/deploy. Full M3 exit only for evidenced criteria.
 
-Root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; bounded local feedback fixes accepted
+Root ORCHESTRATOR / independent REVIEWER; Sol Medium browser fixture worker; Luna Max acceptance inventory
 
-R122 N03 was reproduced and repaired with native negative/recovery evidence. R123 ordinary-binary smoke exposed single-workspace tenant incompatibility; original failure retained. R120/R121 terminal failures remain historical and are not rewritten by the new completed browser proof. Facebook/ZaloOA remain parked.
+R126 accepted local feedback fixes with qualified whole-package proof at90bc02ed; original failed full runs remain failed.
 
 ## Historical R114 bounded UI result
 
