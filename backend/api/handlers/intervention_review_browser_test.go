@@ -12,7 +12,9 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"regexp"
 	"strconv"
+	"strings"
 	"testing"
 	"time"
 
@@ -65,7 +67,7 @@ func TestReviewFixBrowserFixture(t *testing.T) {
 		Nonce    string `json:"nonce"`
 	}
 	identityBytes, err := os.ReadFile(filepath.Join(directory, "fixture_identity.json"))
-	if err != nil || json.Unmarshal(identityBytes, &identity) != nil || identity.Host != "127.0.0.1" || identity.Port < 1024 || identity.Database != "review_fix_ui" || len(identity.Nonce) != 32 {
+	if err != nil || json.Unmarshal(identityBytes, &identity) != nil || (identity.Host != "127.0.0.1" || identity.Port < 1024) && !(os.Getenv("REVIEW_FIX_DOCKER") == "1" && regexp.MustCompile(`^ccma-r123-mysql-[a-f0-9]{8}$`).MatchString(identity.Host) && identity.Port == 3306) || identity.Database != "review_fix_ui" || len(identity.Nonce) != 32 {
 		t.Fatal("owned disposable fixture identity required")
 	}
 	parsed, err := mysqlDriver.ParseDSN(os.Getenv("R101_MYSQL_DSN"))
@@ -135,18 +137,50 @@ func TestReviewFixBrowserFixture(t *testing.T) {
 	}
 	initial := r121Fingerprint(t, f.caseID)
 	effects := r121EffectCounts(t)
-	ln, err := net.Listen("tcp", "127.0.0.1:0")
+	listenAddress := "127.0.0.1:0"
+	if os.Getenv("REVIEW_FIX_DOCKER") == "1" {
+		listenAddress = "0.0.0.0:51111"
+	}
+	ln, err := net.Listen("tcp", listenAddress)
 	if err != nil {
 		t.Fatal(err)
 	}
-	server := &http.Server{Handler: r121GuardForCase(f.router, f.tenant, f.caseID), ReadHeaderTimeout: 5 * time.Second}
+	defer ln.Close()
+	var handler http.Handler = f.router
+	if root := os.Getenv("REVIEW_FIX_FRONTEND"); root != "" {
+		if !filepath.IsAbs(root) {
+			t.Fatal("absolute frontend build directory required")
+		}
+		if info, err := os.Stat(filepath.Join(root, "index.html")); err != nil || !info.Mode().IsRegular() {
+			t.Fatal("frontend build missing")
+		}
+		files := http.FileServer(http.Dir(root))
+		handler = http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			if strings.HasPrefix(r.URL.Path, "/api/") || r.URL.Path == "/health" {
+				f.router.ServeHTTP(w, r)
+				return
+			}
+			if r.Method != http.MethodGet && r.Method != http.MethodHead {
+				w.WriteHeader(http.StatusMethodNotAllowed)
+				return
+			}
+			target := filepath.Join(root, filepath.FromSlash(r.URL.Path))
+			if info, err := os.Stat(target); err == nil && info.Mode().IsRegular() {
+				files.ServeHTTP(w, r)
+				return
+			}
+			http.ServeFile(w, r, filepath.Join(root, "index.html"))
+		})
+	}
+	server := &http.Server{Handler: r121GuardForCase(handler, f.tenant, f.caseID), ReadHeaderTimeout: 5 * time.Second}
 	defer server.Close()
 	done := make(chan error, 1)
 	go func() { done <- server.Serve(ln) }()
-	manifest := map[string]any{"apiOrigin": "http://" + ln.Addr().String(), "tenant": f.tenant, "case": f.caseID, "ownerEmail": f.owner + "@example.invalid", "activeProposalId": active.ID, "offLineageProposalId": later.ID, "synthetic": true}
+	origin := "http://" + net.JoinHostPort("127.0.0.1", strconv.Itoa(ln.Addr().(*net.TCPAddr).Port))
+	manifest := map[string]any{"apiOrigin": origin, "tenant": f.tenant, "case": f.caseID, "ownerEmail": f.owner + "@example.invalid", "activeProposalId": active.ID, "offLineageProposalId": later.ID, "synthetic": true}
 	b, _ := json.Marshal(manifest)
 	client := &http.Client{Timeout: 3 * time.Second}
-	health, err := client.Get("http://" + ln.Addr().String() + "/health")
+	health, err := client.Get(origin + "/health")
 	if err != nil {
 		t.Fatal("browser API did not become healthy")
 	}

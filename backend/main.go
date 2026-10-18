@@ -35,6 +35,10 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to load config: %v", err)
 	}
+	interventionService, err := engine.LoadSyntheticInterventionService(cfg, engine.ReadSyntheticInterventionKeyFile)
+	if err != nil {
+		log.Fatalf("Synthetic intervention startup rejected: %v", err)
+	}
 
 	// Initialize JWT
 	middleware.SetJWTSecret(cfg.JWTSecret)
@@ -52,6 +56,8 @@ func main() {
 	if err := db.EnsureSingleWorkspace(); err != nil {
 		log.Fatalf("Single-workspace check failed: %v", err)
 	}
+	handlers.InterventionRunner = interventionService
+	engine.WaitDataExecutor = interventionService
 
 	// Nơi cất file đính kèm do từng công ty tự cấu hình trong giao diện, đọc
 	// theo yêu cầu chứ không dựng sẵn một kho dùng chung.
@@ -105,6 +111,11 @@ func runCommand(name string, args []string) {
 		}
 	case "version":
 		fmt.Println(version)
+	case "intervention-prepare-demo", "intervention-complete-demo-data", "intervention-set-budget", "intervention-issue-grant":
+		if err := cli.SyntheticInterventionOperator(name, args); err != nil {
+			fmt.Fprintf(os.Stderr, "Intervention command rejected: %v\n", err)
+			os.Exit(1)
+		}
 	default:
 		fmt.Fprintf(os.Stderr, "Lệnh không hợp lệ: %s\n\n", name)
 		fmt.Fprintln(os.Stderr, "Các lệnh có sẵn:")
@@ -112,6 +123,10 @@ func runCommand(name string, args []string) {
 		fmt.Fprintln(os.Stderr, "  prune-duplicate-results [-apply] Dọn bản đánh giá trùng, giữ lượt chạy mới nhất")
 		fmt.Fprintln(os.Stderr, "  migrate-files [-apply]           Chuyển file đính kèm từ đĩa lên S3")
 		fmt.Fprintln(os.Stderr, "  version                         In phiên bản")
+		fmt.Fprintln(os.Stderr, "  intervention-prepare-demo       Tạo fixture Pancake giả và job thủ công")
+		fmt.Fprintln(os.Stderr, "  intervention-complete-demo-data Thêm dữ liệu khiếu nại giả cho WAIT_DATA")
+		fmt.Fprintln(os.Stderr, "  intervention-set-budget         Tăng trần gọi AI cho job giả")
+		fmt.Fprintln(os.Stderr, "  intervention-issue-grant        Cấp quyền chạy lại cho đúng yêu cầu")
 		fmt.Fprintln(os.Stderr, "\nChạy không kèm lệnh để khởi động web server.")
 		os.Exit(1)
 	}

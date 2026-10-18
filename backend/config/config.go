@@ -34,6 +34,17 @@ type Config struct {
 
 	// AI
 	AIMaxTokens int // max tokens for AI responses
+	// Synthetic intervention is opt-in. These server-owned values are never
+	// accepted from an HTTP request; the key is loaded from a file at startup.
+	InterventionMode         string
+	InterventionProvider     string
+	InterventionModel        string
+	InterventionEndpoint     string
+	InterventionKeyFile      string
+	InterventionConfigRef    string
+	InterventionRequestBytes string
+	InterventionOutputTokens string
+	InterventionTimeoutSecs  string
 
 	// Đồng bộ bảng giá model từ nguồn ngoài
 	// StorageLocalDir là thư mục cất file khi công ty chưa bật S3. Nơi cất file
@@ -57,18 +68,27 @@ type Config struct {
 
 func Load() (*Config, error) {
 	cfg := &Config{
-		ServerPort:       getEnv("SERVER_PORT", "8080"),
-		ServerHost:       getEnv("SERVER_HOST", "127.0.0.1"),
-		DBHost:           getEnv("DB_HOST", "localhost"),
-		DBPort:           getEnv("DB_PORT", "3306"),
-		DBUser:           getEnv("DB_USER", "ccma"),
-		DBPassword:       getEnv("DB_PASSWORD", ""),
-		DBName:           getEnv("DB_NAME", "CCMA"),
-		JWTSecret:        getEnv("JWT_SECRET", ""),
-		EncryptionKey:    getEnv("ENCRYPTION_KEY", ""),
-		RateLimitPerIP:   getEnvInt("RATE_LIMIT_PER_IP", 500),
-		RateLimitPerUser: getEnvInt("RATE_LIMIT_PER_USER", 1000),
-		AIMaxTokens:      getEnvInt("AI_MAX_TOKENS", 16384),
+		ServerPort:               getEnv("SERVER_PORT", "8080"),
+		ServerHost:               getEnv("SERVER_HOST", "127.0.0.1"),
+		DBHost:                   getEnv("DB_HOST", "localhost"),
+		DBPort:                   getEnv("DB_PORT", "3306"),
+		DBUser:                   getEnv("DB_USER", "ccma"),
+		DBPassword:               getEnv("DB_PASSWORD", ""),
+		DBName:                   getEnv("DB_NAME", "CCMA"),
+		JWTSecret:                getEnv("JWT_SECRET", ""),
+		EncryptionKey:            getEnv("ENCRYPTION_KEY", ""),
+		RateLimitPerIP:           getEnvInt("RATE_LIMIT_PER_IP", 500),
+		RateLimitPerUser:         getEnvInt("RATE_LIMIT_PER_USER", 1000),
+		AIMaxTokens:              getEnvInt("AI_MAX_TOKENS", 16384),
+		InterventionMode:         getEnv("INTERVENTION_MODE", "disabled"),
+		InterventionProvider:     getEnv("INTERVENTION_PROVIDER", ""),
+		InterventionModel:        getEnv("INTERVENTION_MODEL", ""),
+		InterventionEndpoint:     getEnv("INTERVENTION_ENDPOINT", ""),
+		InterventionKeyFile:      getEnv("INTERVENTION_API_KEY_FILE", ""),
+		InterventionConfigRef:    getEnv("INTERVENTION_CONFIG_REF", ""),
+		InterventionRequestBytes: getEnv("INTERVENTION_REQUEST_BYTES", ""),
+		InterventionOutputTokens: getEnv("INTERVENTION_OUTPUT_TOKENS", ""),
+		InterventionTimeoutSecs:  getEnv("INTERVENTION_TIMEOUT_SECONDS", ""),
 
 		StorageLocalDir: getEnv("STORAGE_LOCAL_DIR", storage.DefaultBaseDir),
 

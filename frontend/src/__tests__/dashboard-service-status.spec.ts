@@ -30,6 +30,8 @@ const SERVICES = {
 }
 const mounted: VueWrapper[] = []
 let dashboardResponse: () => Promise<{ data: Record<string, unknown> }>
+let tenantRole: string
+let tenantPermissions: string
 
 const payload = (extra: Record<string, unknown> = {}) => ({
   data: { total_conversations: 4242, active_channels: 2, active_jobs: 3, issues: 1, qc_violation_count: 1, qc_alerts: [], classification_recent: [], cost_by_day: [], messages_by_day: [], conversations_by_channel: [], ...extra },
@@ -99,8 +101,15 @@ describe('Dashboard service status is an explicit unknown (F07)', () => {
   beforeEach(() => {
     apiGet.mockReset()
     apiPost.mockReset()
+    tenantRole = 'member'
+    tenantPermissions = JSON.stringify({ channels: 'r', messages: 'r', jobs: 'r', settings: 'r' })
     dashboardResponse = () => Promise.resolve(payload())
-    apiGet.mockImplementation((url: string) => url.endsWith('/dashboard') ? dashboardResponse() : Promise.resolve({ data: { has_data: true, is_demo: false } }))
+    apiGet.mockImplementation((url: string) => {
+      if (url === '/tenants/t1/me') return Promise.resolve({ data: { role: tenantRole, permissions: tenantPermissions } })
+      if (url === '/tenants/t1/dashboard') return dashboardResponse()
+      if (url === '/tenants/t1/demo/status') return Promise.resolve({ data: { has_data: true, is_demo: false } })
+      return Promise.reject(new Error(`unexpected Dashboard read: ${url}`))
+    })
   })
   afterEach(() => {
     mounted.forEach((w) => w.unmount())
@@ -171,6 +180,15 @@ describe('Dashboard service status is an explicit unknown (F07)', () => {
     }
   })
 
+  it('does not request Dashboard data when a member has no read permission', async () => {
+    tenantPermissions = '{}'
+    const w = await mountDashboard()
+    expectUnknownAndNeutral(w)
+    expect(w.text()).not.toContain('4242')
+    const urls = apiGet.mock.calls.map((c) => String(c[0]))
+    expect(new Set(urls)).toEqual(new Set(['/tenants/t1/me', '/tenants/t1/demo/status']))
+  })
+
   // D: untrusted hints, scheduler metrics and the request boundary
   it('D: ignores incidental health-like payload fields and scheduler metrics, and makes no health call', async () => {
     vi.useFakeTimers({ toFake: ['setTimeout', 'setInterval', 'clearTimeout', 'clearInterval'] })
@@ -192,7 +210,13 @@ describe('Dashboard service status is an explicit unknown (F07)', () => {
     expectUnknownAndNeutral(w)
     const urls = apiGet.mock.calls.map((c) => String(c[0]))
     expect(urls.length).toBeGreaterThan(0)
-    for (const u of urls) expect(u, `unexpected request ${u}`).toMatch(/\/tenants\/t1\/(dashboard|demo\/status)$/)
+    const allowedReadPaths = new Set([
+      '/tenants/t1/me',
+      '/tenants/t1/dashboard',
+      '/tenants/t1/demo/status',
+    ])
+    for (const u of urls) expect(allowedReadPaths.has(u), `unexpected request ${u}`).toBe(true)
+    expect(new Set(urls)).toEqual(allowedReadPaths)
     expect(urls.some((u) => /health/i.test(u))).toBe(false)
     expect(apiPost.mock.calls.length).toBe(0)
   })
