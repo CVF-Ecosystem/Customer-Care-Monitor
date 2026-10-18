@@ -15,8 +15,8 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// InterventionRunner is deliberately nil in ordinary startup. A future
-// server-owned source-reviewed configuration must install it explicitly.
+// InterventionRunner defaults to nil. Ordinary startup installs it only when
+// the server-owned synthetic configuration has been validated.
 var InterventionRunner *engine.InterventionService
 
 type interventionRunRequest struct {

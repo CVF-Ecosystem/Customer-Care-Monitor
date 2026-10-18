@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R122_LOCAL_REVIEW_FIXES_2026-10-18.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R124_CLEAN_INSTALL_2026-10-18.md",
       "status": "ACTIVE",
-      "description": "Current R122 local source fixes and qualified verification handoff; not release acceptance."
+      "description": "Current R124 clean-install compatibility and final verification handoff."
     },
     {
       "id": "r060-work-order",
@@ -34205,6 +34205,76 @@
       "path": "docs/reviews/probes/review_fixes_20261018/verification_raw.zip",
       "status": "ACTIVE",
       "description": "Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open."
+    },
+    {
+      "id": "r124-1a1c39ba8ef6b076fd",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R122_LOCAL_REVIEW_FIXES_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Local review-fix delivery and clean-install compatibility evidence/record."
+    },
+    {
+      "id": "r124-dce556b29f24bafb64",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-123.json",
+      "status": "ACTIVE",
+      "description": "Local review-fix delivery and clean-install compatibility evidence/record."
+    },
+    {
+      "id": "r124-283a246b4eca9cb1ce",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-123.json",
+      "status": "ACTIVE",
+      "description": "Local review-fix delivery and clean-install compatibility evidence/record."
+    },
+    {
+      "id": "r124-9cc5166aee3a99292c",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-124.json",
+      "status": "ACTIVE",
+      "description": "Local review-fix delivery and clean-install compatibility evidence/record."
+    },
+    {
+      "id": "r124-4b581099e0340ab444",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-124.json",
+      "status": "ACTIVE",
+      "description": "Local review-fix delivery and clean-install compatibility evidence/record."
+    },
+    {
+      "id": "r124-557905084a310e4e6e",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_123_DELIVERY_COMPLETION.md",
+      "status": "ACTIVE",
+      "description": "Local review-fix delivery and clean-install compatibility evidence/record."
+    },
+    {
+      "id": "r124-1280b1c9ee3de8e96f",
+      "family": "continuity",
+      "path": "docs/reviews/R123_DELIVERY_COMPLETION_REVIEW_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Local review-fix delivery and clean-install compatibility evidence/record."
+    },
+    {
+      "id": "r124-551b94eb8588755217",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_124_CLEAN_INSTALL_COMPATIBILITY.md",
+      "status": "ACTIVE",
+      "description": "Local review-fix delivery and clean-install compatibility evidence/record."
+    },
+    {
+      "id": "r124-08248eb1028ebf8584",
+      "family": "continuity",
+      "path": "docs/reviews/R124_CLEAN_INSTALL_REVIEW_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Local review-fix delivery and clean-install compatibility evidence/record."
+    },
+    {
+      "id": "r124-e96293ebe9299ab73c",
+      "family": "continuity",
+      "path": "docs/reference/INTERVENTION_SYNTHETIC_RUNBOOK.md",
+      "status": "ACTIVE",
+      "description": "Local review-fix delivery and clean-install compatibility evidence/record."
     }
   ]
 }

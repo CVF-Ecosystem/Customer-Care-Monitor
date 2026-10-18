@@ -1,6 +1,8 @@
 # R122 local review fixes handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
+
+Superseded by: CVF_SESSION/handoffs/AGENT_HANDOFF_R124_CLEAN_INSTALL_2026-10-18.md
 
 ## Current State
 

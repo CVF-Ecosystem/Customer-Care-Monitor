@@ -3,6 +3,7 @@ package engine_test
 import (
 	"context"
 	"os"
+	"sync/atomic"
 	"testing"
 	"time"
 
@@ -15,10 +16,10 @@ import (
 	"gorm.io/gorm/logger"
 )
 
-type noCallActivationTransport struct{ calls int }
+type noCallActivationTransport struct{ calls atomic.Int32 }
 
 func (p *noCallActivationTransport) AnalyzeChatOnce(context.Context, string, string, int64) (ai.AIResponse, error) {
-	p.calls++
+	p.calls.Add(1)
 	return ai.AIResponse{}, nil
 }
 
@@ -92,8 +93,8 @@ func TestSyntheticOperatorProvisionBudgetGrant(t *testing.T) {
 		t.Fatalf("raising cap reset consumption: %+v %v", raised, err)
 	}
 	wait, err := service.RunManual(ctx, tenant, owner, ids.JobID, ids.WaitConversation)
-	if err != nil || wait.WorkState != "WAITING_ON_DATA" || transport.calls != 0 {
-		t.Fatalf("WAIT_DATA invoked transport: case=%+v err=%v calls=%d", wait, err, transport.calls)
+	if err != nil || wait.WorkState != "WAITING_ON_DATA" || transport.calls.Load() != 0 {
+		t.Fatalf("WAIT_DATA invoked transport: case=%+v err=%v calls=%d", wait, err, transport.calls.Load())
 	}
 	if _, err := cli.CompleteSyntheticInterventionDemoData(ctx, db.DB, tenant, member); err == nil {
 		t.Fatal("member completed fixture")
@@ -148,7 +149,38 @@ func TestSyntheticOperatorProvisionBudgetGrant(t *testing.T) {
 	if _, _, err := engine.IssueSyntheticInterventionGrant(ctx, tenant, owner, owner, wait.ID, request.ID, "changed approval", deadline, service); err == nil {
 		t.Fatal("changed grant reused request")
 	}
-	if transport.calls != 0 {
-		t.Fatalf("provider called during provision: %d", transport.calls)
+	if transport.calls.Load() != 0 {
+		t.Fatalf("provider called during provision: %d", transport.calls.Load())
+	}
+	input := engine.WaitDataExecuteInput{ExpectedCaseVersion: request.CaseVersion, GrantID: grant.ID}
+	for _, badTenant := range []string{"malformed", pkg.NewUUID()} {
+		if _, _, err := engine.ClaimWaitDataExecution(ctx, badTenant, owner, wait.ID, request.ID, input, service); err == nil {
+			t.Fatalf("invalid tenant %q admitted", badTenant)
+		}
+	}
+	if transport.calls.Load() != 0 {
+		t.Fatal("invalid tenant invoked transport")
+	}
+	claim, replayed, err := engine.ClaimWaitDataExecution(ctx, tenant, owner, wait.ID, request.ID, input, service)
+	if err != nil || replayed || claim == nil || claim.ID == "" {
+		t.Fatalf("single-workspace claim: %+v replay=%v err=%v", claim, replayed, err)
+	}
+	end := time.Now().Add(5 * time.Second)
+	var execution models.InterventionExecution
+	for time.Now().Before(end) {
+		if err := db.DB.Where("id = ?", claim.ID).Take(&execution).Error; err == nil && execution.State == "PROVIDER_UNKNOWN" && !engine.JobRunActive(tenant, ids.JobID) {
+			break
+		}
+		time.Sleep(20 * time.Millisecond)
+	}
+	if execution.State != "PROVIDER_UNKNOWN" || engine.JobRunActive(tenant, ids.JobID) {
+		t.Fatalf("stub execution did not settle: state=%s active=%v", execution.State, engine.JobRunActive(tenant, ids.JobID))
+	}
+	if got := transport.calls.Load(); got != 1 {
+		t.Fatalf("expected one in-memory stub call, got %d", got)
+	}
+	var finalBudget models.InterventionBudget
+	if err := db.DB.Where("id = ?", budget.ID).Take(&finalBudget).Error; err != nil || finalBudget.Consumed != 2 {
+		t.Fatalf("claim consumption=%+v err=%v", finalBudget, err)
 	}
 }

@@ -607,16 +607,18 @@ func TestHTTPTriggerIsBusyWhileMCPHoldsTheNotificationTail(t *testing.T) {
 	if fx.jobRunCount(t) != rows || rows != 1 || fx.prov.callCount() != calls || calls != 1 {
 		t.Fatalf("a busy request changed state: runs %d->%d provider calls %d->%d (want 1/1)", rows, fx.jobRunCount(t), calls, fx.prov.callCount())
 	}
-	var logged, marked int64
-	db.DB.Raw(`SELECT COUNT(*) FROM notification_logs WHERE job_run_id = ?`, runID).Scan(&logged)
+	var attempts, sending, sent, marked int64
+	db.DB.Raw(`SELECT COUNT(*) FROM notification_logs WHERE job_run_id = ?`, runID).Scan(&attempts)
+	db.DB.Raw(`SELECT COUNT(*) FROM notification_logs WHERE job_run_id = ? AND status = 'sending'`, runID).Scan(&sending)
+	db.DB.Raw(`SELECT COUNT(*) FROM notification_logs WHERE job_run_id = ? AND status = 'sent'`, runID).Scan(&sent)
 	db.DB.Raw(`SELECT COUNT(*) FROM job_results WHERE job_run_id = ? AND notified_at IS NOT NULL`, runID).Scan(&marked)
-	if logged != 0 || marked != 0 {
-		t.Fatalf("a log (%d) or notified mark (%d) exists before the send returned", logged, marked)
+	if attempts != 1 || sending != 1 || sent != 0 || marked != 0 {
+		t.Fatalf("in-flight notification state: attempts=%d sending=%d sent=%d notified=%d; want 1/1/0/0", attempts, sending, sent, marked)
 	}
 
 	tr.open()
 	fx.waitIdle(t)
-	var total int64
+	var logged, total int64
 	db.DB.Raw(`SELECT COUNT(*) FROM notification_logs WHERE job_run_id = ? AND tenant_id = ? AND job_id = ? AND channel_type = 'telegram' AND recipient = ? AND status = 'sent'`, runID, fx.tenantID, fx.jobID, hNotifyChat).Scan(&logged)
 	db.DB.Raw(`SELECT COUNT(*) FROM job_results WHERE job_run_id = ?`, runID).Scan(&total)
 	db.DB.Raw(`SELECT COUNT(*) FROM job_results WHERE job_run_id = ? AND notified_at IS NOT NULL`, runID).Scan(&marked)

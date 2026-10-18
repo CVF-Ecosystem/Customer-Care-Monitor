@@ -2,22 +2,20 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R122_LOCAL_REVIEW_FIXES_2026-10-18.md", "activeTranche": "CCMAI-RUNTIME-122", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R124_CLEAN_INSTALL_2026-10-18.md", "activeTranche": "CCMAI-RUNTIME-124", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R122_LOCAL_REVIEW_FIXES_2026-10-18.md
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R124_CLEAN_INSTALL_2026-10-18.md
 
-CCMAI-RUNTIME-122 source fixes independently reviewed and saved; remaining delivery checks are full Go suite, three inherited Dashboard tests, complete new browser terminal/accounting and ordinary synthetic activation. N02 capability/contract only; no provider/customer data/push/deploy. R121 failures/caps remain historical, accounts parked.
+CCMAI-RUNTIME-124 fixes actual single-workspace grant/executor compatibility and two confirmed inherited test drifts. Finish stable-source full Go with adequate timeout, durable bounded-worker frontend, ordinary-binary zero-provider smoke and independent review; current UI terminal passed. No paid call/customer source/push/deploy; full M3/pilot/release remain open.
 
-Root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; Luna reviews Root-authored capability/browser fixture; workers returned
+Root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; Sol startup integration, Luna executor/test fixtures
 
-R120 UI accepted bounded, original terminal/durable accounting missing, stopped/CHANGES_REQUIRED and consumed caps immutable. R121 separate local route per owner instruction, no new product implementation claim.
-
-Local disposition and finite fix exits: docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md. External report is input only; local source/log controls. N03 not reproduced; no fixes claimed.
+R122 N03 was reproduced and repaired with native negative/recovery evidence. R123 ordinary-binary smoke exposed single-workspace tenant incompatibility; original failure retained. R120/R121 terminal failures remain historical and are not rewritten by the new completed browser proof. Facebook/ZaloOA remain parked.
 
 ## Historical R114 bounded UI result
 

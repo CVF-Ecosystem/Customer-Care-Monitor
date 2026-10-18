@@ -1,5 +1,14 @@
 # CCMA — Roadmap phát triển sản phẩm và tiếp quản giữa các agent
 
+## R124 — hoàn thiện đường chạy synthetic và kiểm tra cuối, 2026-10-18
+
+N02 đã triển khai startup mặc định tắt, cấu hình synthetic rõ ràng và CLI tạo fixture, bổ sung dữ liệu giả, tăng trần hạn mức không đặt lại phần đã dùng, cấp grant đúng yêu cầu/người dùng/nguồn/cấu hình/hạn dùng. Smoke bằng binary thông thường trên cài đặt mới đã tìm và sửa lỗi tenant `single-workspace`; luồng từ setup đến cấp grant PASS, attempts/executions/consumed đều0, không gọi provider. Kiểm tra thực thi dùng stub, không suy ra chất lượng AI thật. Xem [runbook](../../reference/INTERVENTION_SYNTHETIC_RUNBOOK.md).
+
+N04 đã có lượt UI mới hoàn tất: đúng active proposal/lịch sử tiếng Việt, logout, exit0, fingerprint và effect counts trước/sau bằng nhau, server đã dừng. Không sửa lại các biên bản R120/R121 thiếu bằng chứng trước đây. Fixture Dashboard đã sửa đúng quyền đọc; hai lỗi Go kế thừa được sửa ở test context/trạng thái sending, không hạ kiểm tra quyền hay bỏ cơ chế bền vững của thông báo.
+
+Full Go/frontend lượt cuối đang được kiểm tra trên nguồn cố định; chưa ghi PASS trước mã thoát cuối. Sau kết quả, cập nhật review `docs/reviews/R124_CLEAN_INSTALL_REVIEW_2026-10-18.md` và các điều kiện còn mở. Không tự mở dữ liệu thật, gọi AI trả phí, pilot hoặc release. Các mục R122 và kế hoạch bên dưới là lịch sử; checkpoint hiện hành theo mục này.
+
+
 ## R122 — kết quả sửa local, 2026-10-18
 
 N01 đã sửa test fixture độc lập ledger/history, Python discovery231PASS; N05 sửa parser và72liên kết, `npm ci` + docs build PASS; N03 đã tái hiện nguồn đổi sau giao việc và thêm xác nhận phiên bản nguồn mới giữ nguyên đề xuất/quyết định/lịch sử, native MySQL + component tests PASS; N04 sửa encoding/ready ordering và đã quan sát đúng active proposal/lịch sử/đăng xuất trên UI synthetic. Các lượt kiểm thử bị ngắt khi môi trường phiên đổi phải giữ nhãn INCOMPLETE, không thay bằng PASS.
