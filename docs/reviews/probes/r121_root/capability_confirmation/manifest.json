@@ -1,0 +1,54 @@
+{
+  "archive": "docs/reviews/probes/r121_root/capability_confirmation/original_bytes.zip",
+  "sha256": "ebf36a509ed911d4af24b8b2528c245346204153974fe07a64104f538fa9af60",
+  "files": [
+    {
+      "path": ".cvf/runtime/r121_capability_confirmation/child_end.json",
+      "bytes": 80,
+      "sha256": "9bcde5b4796b90274b68737b29e5507ea371c79ca52f4176e27038131b23c846"
+    },
+    {
+      "path": ".cvf/runtime/r121_capability_confirmation/child_started.json",
+      "bytes": 56,
+      "sha256": "c502addcf96cc8e828f0a8c20a5d65ded303e3c4575ae611203c87e4576811fe"
+    },
+    {
+      "path": ".cvf/runtime/r121_capability_confirmation/lifecycle.py",
+      "bytes": 2164,
+      "sha256": "f3ac8617fcc0cc2f5d81f8c9ce277039cfa3148cd641e7e9e825e5df199a877b"
+    },
+    {
+      "path": ".cvf/runtime/r121_capability_confirmation/parent_ready.json",
+      "bytes": 135,
+      "sha256": "076feea2875639f22d3329b0cbd8996ad721ee59d979bbacf2a93cc4c4dbd877"
+    },
+    {
+      "path": ".cvf/runtime/r121_capability_confirmation/parent_receipt.json",
+      "bytes": 345,
+      "sha256": "e644694a32caaedfad4555fe38fac2753eaddb86c25f59683346e59194adb306"
+    },
+    {
+      "path": ".cvf/runtime/r121_capability_confirmation/reservation.json",
+      "bytes": 105,
+      "sha256": "ef866affc9f28f513dda6d50a576beecdccae6976121daed50bd58e37c0de6df"
+    },
+    {
+      "path": ".cvf/runtime/r121_capability_confirmation/stop_requested",
+      "bytes": 18,
+      "sha256": "816dc319b6b05651e21c01faf8ed3f0f731060b5dd1bd5f530c030a3c99e0131"
+    }
+  ],
+  "actualOriginalExecExit": 17,
+  "expectedOriginalExecExit": 17,
+  "status": "PASS_SHORT_UNINTERRUPTED_LIFECYCLE_ONLY",
+  "childWaitObserved": true,
+  "childExit": 0,
+  "newProductStarts": 0,
+  "ownerContinuationAttempt": 1,
+  "notProven": [
+    "1200second retention",
+    "restart/interruption retention",
+    "old R120 disappearance cause",
+    "product campaign completion"
+  ]
+}

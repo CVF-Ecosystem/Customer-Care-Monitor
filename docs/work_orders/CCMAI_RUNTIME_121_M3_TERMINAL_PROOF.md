@@ -1,6 +1,6 @@
 # R121 finite M3 original terminal and current UI proof
 
-Status: BLOCKED_WITH_REASON
+Status: ACTIVE
 Risk: R2
 dispatchKind: INITIAL
 Worker: /root/r121_isolation_luna
@@ -63,6 +63,10 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 
 Material-SHA marker: 33186d0133fdf7272fe61f20ee1c9ac17bb5b11f. Source-only dispatch; exact admissions required.
 
-## Capability disposition
+## Historical first capability disposition
 
 Root sole short capability check observed cooperative child stop/wait exit0 and durable receipt, but original outer exec returned1 rather than declared17. A2 NOT_MET; no source BUILD, worker checks, compile or product starts occurred. Capability1of1 consumed; no retry or product runtime under this record. Proposed explicit PowerShell exit propagation requires a separately granted confirmation; old evidence stays unchanged.
+
+## Explicit owner continuation and successful confirmation
+
+Owner grants harmless confirmation until complete, supplementary authority CCMAI-RUNTIME-121-CAPABILITY-CONTINUATION. Original cap/failed attempt unchanged. Fresh actual originalexec17/retainedchildwait0 observed, short uninterrupted lifecycle only; independent capability assessment required. Existing source/runtime budgets unused and unchanged. Root reactivates same bounded source BUILD after committed acknowledgment, then exact admissions; no product start from the supplementary grant itself. Original campaign stop/acceptance limits continue unchanged.

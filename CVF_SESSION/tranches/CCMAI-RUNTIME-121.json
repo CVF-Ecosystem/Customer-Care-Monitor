@@ -62,20 +62,22 @@
   "baseCommit": "33186d0133fdf7272fe61f20ee1c9ac17bb5b11f",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_121_M3_TERMINAL_PROOF.md",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "status": "CHANGES_REQUIRED",
-  "phase": "REVIEW",
-  "workOrderStatus": "BLOCKED_WITH_REASON",
+  "status": "BUILD",
+  "phase": "BUILD",
+  "workOrderStatus": "ACTIVE",
   "buildCommit": null,
   "reviewEvidence": [
-    "docs/reviews/R121_CAPABILITY_HOLD_2026-10-18.md"
+    "docs/reviews/R121_CAPABILITY_HOLD_2026-10-18.md",
+    "docs/reviews/R121_CAPABILITY_CONFIRMATION_REVIEW_2026-10-18.md"
   ],
-  "disposition": "CHANGES_REQUIRED",
+  "disposition": "PENDING",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
     "REVIEW_PENDING",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "planningPhaseTrace": [
     "INTAKE",
@@ -102,6 +104,23 @@
     "automaticRetries": 0
   },
   "runtimeObservation": {
+    "capability": "PASS_SHORT_UNINTERRUPTED_LIFECYCLE_ONLY",
+    "originalExecExit": 17,
+    "expectedExecExit": 17,
+    "heldChildExit": 0,
+    "heldChildWaitObserved": true,
+    "source": "NOT_STARTED_PENDING_ACK",
+    "productRuntime": "NOT_RUN"
+  },
+  "x-capabilityContinuation": {
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-121-CAPABILITY-CONTINUATION.json",
+    "ownerInstruction": "cho phép dùng đến khi hoàn tất",
+    "attemptsUsed": 1,
+    "status": "PASS_SHORT_UNINTERRUPTED_LIFECYCLE_ONLY",
+    "originalCapUsedUnchanged": 1,
+    "evidence": "docs/reviews/probes/r121_root/capability_confirmation/manifest.json"
+  },
+  "x-initialCapabilityFailure": {
     "capability": "HOLD_EXIT_DISCRIMINATOR_MISMATCH",
     "originalExecExit": 1,
     "expectedExecExit": 17,

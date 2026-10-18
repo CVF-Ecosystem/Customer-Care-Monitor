@@ -1,0 +1,9 @@
+{
+  "invocation": 1,
+  "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-121-CAPABILITY-CONTINUATION.json",
+  "command": "python -B .cvf/runtime/r121_capability_confirmation/lifecycle.py; exit $LASTEXITCODE",
+  "probeSha256": "f3ac8617fcc0cc2f5d81f8c9ce277039cfa3148cd641e7e9e825e5df199a877b",
+  "originalProbeBytesUnchanged": true,
+  "maxSeconds": 90,
+  "expectedExit": 17
+}

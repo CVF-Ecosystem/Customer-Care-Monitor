@@ -15,7 +15,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- R121 capability exit mismatch HOLD; no source BUILD or product runtime.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md`
+- R121 owner continuation short capability confirmed; source-only pending acknowledgment and exact product admissions.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -4228,6 +4228,13 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R121 original short capability evidence or hold decision; expectedexec17/actual1, childwait0, no product runtime or retry.: `docs/reviews/probes/r121_root/capability/original_bytes.zip`
 - R121 original short capability evidence or hold decision; expectedexec17/actual1, childwait0, no product runtime or retry.: `docs/reviews/probes/r121_root/capability/reservation.json`
 - Root transcription of invocation command, explicitly not raw tool export; mismatch cause remains inferred.: `docs/reviews/probes/r121_root/capability/invocation_record.json`
+- Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `CVF_SESSION/authority/CCMAI-RUNTIME-121-CAPABILITY-CONTINUATION.json`
+- Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/R121_CAPABILITY_CONFIRMATION_REVIEW_2026-10-18.md`
+- Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/probes/r121_root/capability_confirmation/exec_final.json`
+- Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/probes/r121_root/capability_confirmation/exec_initial.json`
+- Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/probes/r121_root/capability_confirmation/invocation.json`
+- Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/probes/r121_root/capability_confirmation/manifest.json`
+- Explicit owner harmless continuation and actual originalexec17/childwait0 proof; short uninterrupted only, no product completion.: `docs/reviews/probes/r121_root/capability_confirmation/original_bytes.zip`
 - Owner local resume bounded M3 seed; no BUILD/runtime before activation/admission.: `CVF_SESSION/authority/CCMAI-RUNTIME-121.json`
 - R121 finite active record, old budgets immutable.: `CVF_SESSION/tranches/CCMAI-RUNTIME-121.json`
 - Finite mechanical isolation and original-session M3 terminal proof; no runtime before admissions.: `docs/work_orders/CCMAI_RUNTIME_121_M3_TERMINAL_PROOF.md`

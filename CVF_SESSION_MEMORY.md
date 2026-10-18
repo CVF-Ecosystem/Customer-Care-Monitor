@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md", "activeTranche": "CCMAI-RUNTIME-121", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md", "activeTranche": "CCMAI-RUNTIME-121", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: BUILD
+- Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md
 
-CCMAI-RUNTIME-121 CHANGES_REQUIRED: sole short capability original exec returned1 vs declared17, despite actual child wait/exit0. Source BUILD and product runtime NOT_STARTED; no retry or product start under consumed capability cap. Preserve exact evidence and review minimal explicit PowerShell exit propagation proposal before separately granted confirmation. Old R120 evidence/caps immutable; fullM2/M3/M1business/pilot/release OPEN, accounts parked; no provider/push/merge/deploy.
+CCMAI-RUNTIME-121 BUILD source-only after committed Root acknowledgment of Luna current rehydration and successful short capability assessment. Four mechanical R120->R121 copies only; original failed cap immutable, explicit owner continuation actualexec17/childwait0. Root independent source review/compile and committed exact source-binary/resource admissions before any sole product campaign; no provider/case actions, full milestones OPEN/accounts parked/no push-merge-deploy.
 
-Codex /root ORCHESTRATOR / independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Root capability operator; Luna independent static assessment returned idle, source NOT_STARTED
+Codex /root ORCHESTRATOR / independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna /root/r121_isolation_luna IMPLEMENTATION_WORKER pending committed source acknowledgment
 
 R120 UI accepted bounded, original terminal/durable accounting missing, stopped/CHANGES_REQUIRED and consumed caps immutable. R121 separate local route per owner instruction, no new product implementation claim.
 
@@ -963,3 +963,7 @@ Owner: continue, audit carefully and update roadmap to avoid drift. Root consoli
 Product-facing labels, statuses, help and errors must use end-user language, not Dev jargon, raw enums/API codes/stack traces or tooling details. Verify rendered UI under the bounded active product scope. Root cause diagnostics remain in logs/review artifacts. Recorded with owner audit authority and browser-stop instruction in docs/reviews/R107_R108_BROWSER_STOP_HANDOFF_2026-10-16.md.
 
 R121 capability evidence and smallest prospective invocation correction independently assessed read-only by Luna; no source BUILD and no acceptance. Full report: docs/reviews/R121_CAPABILITY_HOLD_2026-10-18.md.
+
+Owner explicitly replies “cho phép dùng đến khi hoàn tất” to the harmless process confirmation request. Root records supplementary capability-only authority CVF_SESSION/authority/CCMAI-RUNTIME-121-CAPABILITY-CONTINUATION.json before effect, no old seed/cap/evidence reset. First continuation attempt reserved; source BUILD/product effects remain unadmitted until actual review.
+
+Explicit owner capability continuation succeeded actual originalexec17/heldchildwait0, scope short uninterrupted only. Supplementary authority and raw confirmation separate from unchanged failed first attempt. Root reactivates same bounded R121 source BUILD pending independent capability review/current worker acknowledgment and committed grant; source/runtime still unstarted. Review: docs/reviews/R121_CAPABILITY_CONFIRMATION_REVIEW_2026-10-18.md.
