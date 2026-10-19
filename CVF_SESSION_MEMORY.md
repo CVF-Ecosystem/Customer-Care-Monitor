@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R130_BRANCH_HISTORY_REWRITE_2026-10-19.md", "activeTranche": "CCMAI-RUNTIME-130", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R130_BRANCH_HISTORY_REWRITE_2026-10-19.md", "activeTranche": "CCMAI-RUNTIME-130", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: FREEZE
+- Active phase: FREEZE
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R130_BRANCH_HISTORY_REWRITE_2026-10-19.md
 
-CCMAI-RUNTIME-130 BUILD: create a local replacement history from 90bc02ed onward; preserve its parent and all tip tree contents except the omitted ZIP. Verify all commits and the local backup; request owner independent graph review before force-with-lease. Do not update main.
+CCMAI-RUNTIME-130 FROZEN: owner approved candidate 74bbd4ce1e4b58607d6aa071b039a73856b4deef; force-with-lease and GitHub ref readback confirm codex/ccma-m2-intervention at that SHA, with the ZIP absent and origin/main unchanged at d7a6f7635608d1ad44169372a6b5e0fbcbcd09c4. Local archive backup retained; R130 is closed with no merge.
 
-Root IMPLEMENTATION_WORKER / COMMIT_STEWARD; role transition from ORCHESTRATOR recorded before BUILD; R130 owner-authorized branch history rewrite
+Root CLOSER / COMMIT_STEWARD; owner independent review accepted
 
 R126 accepted local feedback fixes with qualified whole-package proof at90bc02ed; original failed full runs remain failed.
 
@@ -985,4 +985,6 @@ Postrepair SETUP002 actual wrapper exit0/waitObserved/metadataErrornull. Exact n
 
 ## R130 branch history cleanup
 
-Owner explicitly requested retracting the just-pushed feature branch history and pushing a replacement, with main untouched. The existing R129 no-history-rewrite boundary is superseded for this bounded R130 action only. The 75,961,107-byte verification archive remains preserved in the workspace-level local backup. Independent owner review is required before the force-with-lease publication.
+Owner explicitly requested retracting the just-pushed feature branch history and pushing a replacement, with main untouched. The existing R129 no-history-rewrite boundary is superseded for this bounded R130 action only. The 75,961,107-byte verification archive remains preserved in the workspace-level local backup. The owner independently approved candidate 74bbd4ce1e4b58607d6aa071b039a73856b4deef before force-with-lease publication.
+
+R130 replacement history was published with force-with-lease to codex/ccma-m2-intervention at 74bbd4ce1e4b58607d6aa071b039a73856b4deef after owner approval. GitHub readback confirms main stayed at d7a6f7635608d1ad44169372a6b5e0fbcbcd09c4; the ZIP is absent from reachable history, the tip tree comparison passed, and the local archive SHA-256 matches the preserved original.

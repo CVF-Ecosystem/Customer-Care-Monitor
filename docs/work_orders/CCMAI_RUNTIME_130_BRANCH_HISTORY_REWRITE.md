@@ -1,9 +1,9 @@
 # Feature branch history cleanup — R130
 
-Status: ACTIVE
+Status: CLOSED
 Risk: R2
 Worker: Codex /root Git history maintenance
-Reviewer: Owner independent review of the rewritten graph required before force-push
+Reviewer: Project owner (independent; approved the exact rewritten graph before force-push)
 
 ## Objective
 
@@ -46,3 +46,8 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 | terminal_completion_review | POST_MATERIAL | reviewer | POST_MATERIAL | all reachable branch commits free of ZIP and actual rewritten SHA | EXACT_PATHS | commit-steward | CONTINUITY_COMMIT | pre_commit |
 | continuity | CONTINUITY_COMMIT | session-sync-steward | CONTINUITY_COMMIT | state, memory, handoff, tranche and catalog | BOUNDED_PATH_FAMILIES | session-sync-steward | CONTINUITY_COMMIT | terminal_completion_review |
 | committed_range_closure | POST_MATERIAL_CLOSURE | reviewer | POST_MATERIAL_CLOSURE | force-with-lease feature ref readback and unchanged main | EXACT_PATHS | session-sync-steward | CONTINUITY_COMMIT | continuity |
+
+
+## Publication receipt
+
+Owner approved `74bbd4ce1e4b58607d6aa071b039a73856b4deef`. The force-with-lease replaced `eb94f622c31fa8717677ba6090074c30a7381ef4` on `codex/ccma-m2-intervention`; GitHub ref readback confirmed `74bbd4ce1e4b58607d6aa071b039a73856b4deef`. `main` remained `d7a6f7635608d1ad44169372a6b5e0fbcbcd09c4`. Reachable ZIP scan is empty, the old/new tree comparison passed, and the local backup remains intact. R130 is CLOSED; no merge was performed.

@@ -34542,5 +34542,13 @@
       "status": "ACTIVE",
       "description": "Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open."
     }
+,
+    {
+      "id": "r130-branch-history-review",
+      "family": "continuity",
+      "path": "docs/reviews/R130_BRANCH_HISTORY_REWRITE_REVIEW_2026-10-19.md",
+      "status": "ACTIVE",
+      "description": "R130 owner-approved review and verified publication receipt for the feature-branch history rewrite."
+    }
   ]
 }

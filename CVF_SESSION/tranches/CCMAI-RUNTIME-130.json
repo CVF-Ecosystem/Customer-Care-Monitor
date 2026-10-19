@@ -163,19 +163,25 @@
   "verification": "Compare original and rewritten tip trees, excluding the ZIP path; verify the ZIP is absent from all commits reachable from the remote feature ref; verify origin/main SHA unchanged; compare local backup hash with pre-rewrite Git blob; owner reviews graph before publication.",
   "claimBoundary": "Feature branch history hygiene only. GitHub unreachable-object retention and garbage-collection timing are outside this proof.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_130_BRANCH_HISTORY_REWRITE.md",
-  "baseCommit": "663e8e0e280dbc1ae2f2e68a2b6e57db7f3943f1",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "baseCommit": "f9d4fdff4e1ee60ff392470e2c96fe589ddd8f4f",
+  "status": "FROZEN",
+  "phase": "FREEZE",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
-  "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "PENDING_DISPATCH",
-  "freeze": "OPEN",
+  "workOrderStatus": "CLOSED",
+  "buildCommit": "74bbd4ce1e4b58607d6aa071b039a73856b4deef",
+  "reviewEvidence": [
+    "docs/reviews/R130_BRANCH_HISTORY_REWRITE_REVIEW_2026-10-19.md"
+  ],
+  "disposition": "REVIEW_PASS",
+  "freeze": "FROZEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS",
+    "FROZEN"
   ],
-  "bootstrapException": "Owner directly authorized a corrective history rewrite after R129 was published; seed enters before the rewrite BUILD and R129 explicitly prohibits this newly authorized effect."
+  "bootstrapException": "Owner directly authorized a corrective history rewrite after R129 was published; seed enters before the rewrite BUILD and R129 explicitly prohibits this newly authorized effect.",
+  "closer": "Root CLOSER"
 }
