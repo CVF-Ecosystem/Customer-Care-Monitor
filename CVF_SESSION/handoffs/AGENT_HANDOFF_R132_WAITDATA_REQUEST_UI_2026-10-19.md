@@ -1,6 +1,6 @@
 # R132 — WAIT_DATA request-only UI
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 
@@ -38,3 +38,5 @@ Root transitions from COMMIT_STEWARD back to independent REVIEWER. Source materi
 ## Runtime review — CHANGES_REQUIRED, not closed
 
 R132_RUNTIME_REVIEW_2026-10-19.md records real exit1, false post-save refresh error and fixture missing required complaint anchor (request409/no row). Protected25 unchanged; owned MySQL/server stopped preserved, provider0, no replay. R132 remains OPEN; Root ORCHESTRATOR prepares separately seeded R133 for the independently observed runtime causes, not a third repair of the earlier type/5xx/fault findings.
+
+Successor active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R133_WAITDATA_RUNTIME_REPAIR_2026-10-19.md. R132 stays CHANGES_REQUIRED/OPEN; no closure or original failure deletion.

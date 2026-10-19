@@ -15,7 +15,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R132 WAIT_DATA request-only UI handoff.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R132_WAITDATA_REQUEST_UI_2026-10-19.md`
+- Current R133 stable-refresh/eligible-fixture handoff.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R133_WAITDATA_RUNTIME_REPAIR_2026-10-19.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -4374,6 +4374,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Immutable R2 request-only UI/owned synthetic proof authority; provider0.: `CVF_SESSION/authority/CCMAI-RUNTIME-132.json`
 - R132 fixture worker return, source and compile only; Root runtime admission pending.: `docs/reviews/R132_FIXTURE_WORKER_RETURN_2026-10-19.md`
 - R132 frontend source worker return; initial build failure and bounded repairs disclosed; Root final verification separate.: `docs/reviews/R132_FRONTEND_WORKER_RETURN_2026-10-19.md`
+- Historical R132 CHANGES_REQUIRED, failed original runtime retained and exact cleanup; successorR133.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R132_WAITDATA_REQUEST_UI_2026-10-19.md`
 - R132 compact actual browser/native/terminal/effect/cleanup failure receipt; no acceptance.: `docs/reviews/probes/r132_waitdata_request_20261019/runtime_review.json`
 - R132 actual runtime exit1, defects and exact owned cleanup; CHANGES_REQUIRED, no replay.: `docs/reviews/R132_RUNTIME_REVIEW_2026-10-19.md`
 - R132 compact exact source hashes and actual source-check exits; no AI governance or runtime acceptance.: `docs/reviews/probes/r132_waitdata_request_20261019/source_checks.json`
@@ -4382,6 +4383,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R132 bounded worker and independent review lifecycle.: `CVF_SESSION/tranches/CCMAI-RUNTIME-132.json`
 - Direct M3-05 WAIT_DATA followup UI and one owned native/browser proof.: `docs/work_orders/CCMAI_RUNTIME_132_WAITDATA_REQUEST_UI.md`
 - Separate finite R133 authority for two actual R132 runtime causes; old failure/budgets preserved, provider0.: `CVF_SESSION/authority/CCMAI-RUNTIME-133.json`
+- R133 finite Sol Medium worker dispatch, Root independent reviewer.: `docs/work_orders/CCMAI_RUNTIME_133_WAITDATA_RUNTIME_REPAIR.md`
+- R133 bounded runtime-defect repair tranche, fresh budgets.: `CVF_SESSION/tranches/CCMAI-RUNTIME-133.json`
+- R133 stable reactive identity, stale continuation and eligible synthetic proof contract.: `docs/specs/M3_WAITDATA_RUNTIME_REPAIR_R133_SPEC_2026-10-19.md`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

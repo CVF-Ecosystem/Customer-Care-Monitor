@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R132_WAITDATA_REQUEST_UI_2026-10-19.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R133_WAITDATA_RUNTIME_REPAIR_2026-10-19.md",
       "status": "ACTIVE",
-      "description": "Current R132 WAIT_DATA request-only UI handoff."
+      "description": "Current R133 stable-refresh/eligible-fixture handoff."
     },
     {
       "id": "r060-work-order",
@@ -34660,6 +34660,34 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-133.json",
       "status": "ACTIVE",
       "description": "Separate finite R133 authority for two actual R132 runtime causes; old failure/budgets preserved, provider0."
+    },
+    {
+      "id": "r133-record",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-133.json",
+      "status": "ACTIVE",
+      "description": "R133 bounded runtime-defect repair tranche, fresh budgets."
+    },
+    {
+      "id": "r133-spec",
+      "family": "continuity",
+      "path": "docs/specs/M3_WAITDATA_RUNTIME_REPAIR_R133_SPEC_2026-10-19.md",
+      "status": "ACTIVE",
+      "description": "R133 stable reactive identity, stale continuation and eligible synthetic proof contract."
+    },
+    {
+      "id": "r133-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_133_WAITDATA_RUNTIME_REPAIR.md",
+      "status": "ACTIVE",
+      "description": "R133 finite Sol Medium worker dispatch, Root independent reviewer."
+    },
+    {
+      "id": "r132-handoff-history",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R132_WAITDATA_REQUEST_UI_2026-10-19.md",
+      "status": "ACTIVE",
+      "description": "Historical R132 CHANGES_REQUIRED, failed original runtime retained and exact cleanup; successorR133."
     }
   ]
 }

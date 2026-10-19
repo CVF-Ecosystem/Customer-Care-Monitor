@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R132_WAITDATA_REQUEST_UI_2026-10-19.md", "activeTranche": "CCMAI-RUNTIME-132", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R133_WAITDATA_RUNTIME_REPAIR_2026-10-19.md", "activeTranche": "CCMAI-RUNTIME-133", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R132_WAITDATA_REQUEST_UI_2026-10-19.md
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R133_WAITDATA_RUNTIME_REPAIR_2026-10-19.md
 
-CCMAI-RUNTIME-132 CHANGES_REQUIRED: preserve failed original exit1 and stopped owned fixture; Root ORCHESTRATOR prepares separate R133 stable-refresh/eligible-fixture repair for two new runtime root causes. No R132 replay, provider, execute/grant/publication.
+CCMAI-RUNTIME-133 WORK_ORDER: Root ORCHESTRATOR dispatches Sol Medium for stable same-case refresh and eligible synthetic fixture repairs after pre-dispatch checks; independent source audit before any fresh runtime, provider0 and no execute/grant/publication.
 
-Root independent REVIEWER; Luna Max frontend and Sol Medium fixture source workers returned
+Root ORCHESTRATOR / independent REVIEWER; Sol Medium designated IMPLEMENTATION_WORKER
 
 ## Historical R114 bounded UI result
 

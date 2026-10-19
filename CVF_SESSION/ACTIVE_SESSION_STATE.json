@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,11 +12,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-132",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R132_WAITDATA_REQUEST_UI_2026-10-19.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-132 CHANGES_REQUIRED: preserve failed original exit1 and stopped owned fixture; Root ORCHESTRATOR prepares separate R133 stable-refresh/eligible-fixture repair for two new runtime root causes. No R132 replay, provider, execute/grant/publication.",
+  "activeTranche": "CCMAI-RUNTIME-133",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R133_WAITDATA_RUNTIME_REPAIR_2026-10-19.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-133 WORK_ORDER: Root ORCHESTRATOR dispatches Sol Medium for stable same-case refresh and eligible synthetic fixture repairs after pre-dispatch checks; independent source audit before any fresh runtime, provider0 and no execute/grant/publication.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root independent REVIEWER; Luna Max frontend and Sol Medium fixture source workers returned",
+  "activeRole": "Root ORCHESTRATOR / independent REVIEWER; Sol Medium designated IMPLEMENTATION_WORKER",
   "updatedAt": "2026-10-19",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {
