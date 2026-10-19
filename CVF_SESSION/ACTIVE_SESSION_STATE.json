@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-132",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R132_WAITDATA_REQUEST_UI_2026-10-19.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-132 BUILD: Luna Max owns frontend request-only followup; Sol Medium owns the opt-in synthetic fixture. Root ORCHESTRATOR / independent REVIEWER audits source before runtime admission; provider0 and no execute/grant/publication.",
+  "nextAllowedMove": "CCMAI-RUNTIME-132 REVIEW: Root independent REVIEWER verifies source51e0b85c in one nonce-owned synthetic MySQL/browser campaign, checks real request-only persistence/failure/reader behavior and owned terminal/cleanup; provider0, no execute/grant/publication.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / independent REVIEWER; Luna Max frontend and Sol Medium fixture IMPLEMENTATION_WORKERS",
+  "activeRole": "Root independent REVIEWER; Luna Max frontend and Sol Medium fixture source workers returned",
   "updatedAt": "2026-10-19",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {

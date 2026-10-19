@@ -4,11 +4,11 @@ Status: ACTIVE
 
 ## Current State
 
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Root ORCHESTRATOR / independent REVIEWER; Luna Max frontend and Sol Medium fixture IMPLEMENTATION_WORKERS
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Root independent REVIEWER; Luna Max frontend and Sol Medium fixture source workers returned
 - Active tranche: CCMAI-RUNTIME-132
-- Next allowed move: CCMAI-RUNTIME-132 BUILD: Luna Max owns frontend request-only followup; Sol Medium owns the opt-in synthetic fixture. Root ORCHESTRATOR / independent REVIEWER audits source before runtime admission; provider0 and no execute/grant/publication.
+- Next allowed move: CCMAI-RUNTIME-132 REVIEW: Root independent REVIEWER verifies source51e0b85c in one nonce-owned synthetic MySQL/browser campaign, checks real request-only persistence/failure/reader behavior and owned terminal/cleanup; provider0, no execute/grant/publication.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 Root ORCHESTRATOR / SPEC_AUTHOR accepts intended F01..F08 after INTAKE/DESIGN, and remains independent REVIEWER for Luna frontend/Sol fixture work. Root COMMIT_STEWARD owns dispatcher/accepted material commits. Source worker never commits or edits seeds. Seed base fc4cc961b58c011f305d22045e2ccd2fef2c7865 exists before BUILD.
@@ -30,3 +30,7 @@ Role transition: Luna Max accepts FRONTEND IMPLEMENTATION_WORKER for R132; Root 
 I will edit only the seven frontend paths authorized by the R132 seed and `docs/reviews/R132_FRONTEND_WORKER_RETURN_2026-10-19.md`. I will use at most two cached Node invocations and keep raw evidence outside Git. No backend fixture, shared state/authority/catalog, provider, grant/execute/job-run, database, browser/server, external channel, download, or commit action is part of my worker scope; Root retains source review and any runtime admission.
 
 Sol Medium IMPLEMENTATION_WORKER acknowledgment (2026-10-19): Rehydrated current BUILD/R132 state, compact bootstrap, current memory, this handoff, implementation status/index, immutable seed/record, full SPEC and order. I own only the opt-in synthetic fixture and its worker return. I will not start DB/server/browser, call a provider, edit dispatcher authority, or commit. Root remains independent reviewer and runtime admission owner.
+
+## REVIEW transition and runtime admission
+
+Root transitions from COMMIT_STEWARD back to independent REVIEWER. Source material51e0b85c448c46ba45717b042901d0c4cae136f4 committed after source acceptance, final28 UI tests/typecheck/build and static gates passed. Worker code is unchanged. Runtime admission is only the existing finite single fresh synthetic campaign. Current counters: Go2/4, Node4/4, MySQL0/1, finalStop0/1, browser0/1, auth0/4, capture0/2, request0/1, provider0/0; consolidated source repair rounds2.

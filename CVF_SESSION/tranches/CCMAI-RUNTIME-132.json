@@ -63,17 +63,20 @@
     "runtimePrerequisite": "Root source acceptance and exact nonce/DSN ownership proof; cached dependencies/images only; no real credentials. Runtime/browser unsupported => stop and report, no workaround or unbounded replay."
   },
   "baseCommit": "fc4cc961b58c011f305d22045e2ccd2fef2c7865",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
-  "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "PENDING_WORKER_RETURN",
+  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
+  "buildCommit": "51e0b85c448c46ba45717b042901d0c4cae136f4",
+  "reviewEvidence": [
+    "docs/reviews/R132_SOURCE_REVIEW_2026-10-19.md"
+  ],
+  "disposition": "PENDING_INDEPENDENT_RUNTIME_REVIEW",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ]
 }
