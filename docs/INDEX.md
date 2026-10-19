@@ -15,7 +15,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- R121 repaired full namespace accepted source-only; fresh finite postrepair admission, runtime not yet proven.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md`
+- Current R126 DB fixture lifetime and current-package verification handoff.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R130_BRANCH_HISTORY_REWRITE_2026-10-19.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -4306,6 +4306,66 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R121 mechanical source/offline helper evidence or independently reviewed foreground recorder; no product/runtime acceptance.: `docs/reviews/probes/r121_root/source_unit_001/reservation.json`
 - R121 finite active record, old budgets immutable.: `CVF_SESSION/tranches/CCMAI-RUNTIME-121.json`
 - Finite mechanical isolation and original-session M3 terminal proof; no runtime before admissions.: `docs/work_orders/CCMAI_RUNTIME_121_M3_TERMINAL_PROOF.md`
+- Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open.: `CVF_SESSION/authority/CCMAI-RUNTIME-122.json`
+- Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open.: `CVF_SESSION/tranches/CCMAI-RUNTIME-122.json`
+- Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open.: `docs/reviews/probes/review_fixes_20261018/verification_raw.zip`
+- Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md`
+- Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open.: `docs/work_orders/CCMAI_RUNTIME_122_LOCAL_REVIEW_FIXES.md`
+- Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open.: `docs/reviews/R122_LOCAL_FIX_REVIEW_2026-10-18.md`
+- Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open.: `docs/reference/INTERVENTION_SYNTHETIC_ACTIVATION_CONTRACT.md`
+- Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open.: `docs/reviews/probes/review_fixes_20261018/current_ui.jpg`
+- Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open.: `docs/reviews/probes/review_fixes_20261018/manifest.json`
+- Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open.: `docs/reviews/probes/review_fixes_20261018/source_hashes.json`
+- Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open.: `docs/reviews/probes/review_fixes_20261018/summary.json`
+- Local review-fix delivery and clean-install compatibility evidence/record.: `docs/reviews/R124_CLEAN_INSTALL_REVIEW_2026-10-18.md`
+- Local review-fix delivery and clean-install compatibility evidence/record.: `docs/reviews/R123_DELIVERY_COMPLETION_REVIEW_2026-10-18.md`
+- Local review-fix delivery and clean-install compatibility evidence/record.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R122_LOCAL_REVIEW_FIXES_2026-10-18.md`
+- Local review-fix delivery and clean-install compatibility evidence/record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-123.json`
+- Local review-fix delivery and clean-install compatibility evidence/record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-124.json`
+- Local review-fix delivery and clean-install compatibility evidence/record.: `docs/work_orders/CCMAI_RUNTIME_124_CLEAN_INSTALL_COMPATIBILITY.md`
+- Local review-fix delivery and clean-install compatibility evidence/record.: `docs/work_orders/CCMAI_RUNTIME_123_DELIVERY_COMPLETION.md`
+- Local review-fix delivery and clean-install compatibility evidence/record.: `CVF_SESSION/authority/CCMAI-RUNTIME-124.json`
+- Local review-fix delivery and clean-install compatibility evidence/record.: `CVF_SESSION/authority/CCMAI-RUNTIME-123.json`
+- Local review-fix delivery and clean-install compatibility evidence/record.: `docs/reference/INTERVENTION_SYNTHETIC_RUNBOOK.md`
+- Final bounded local fixture compatibility and verification record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-125.json`
+- Final bounded local fixture compatibility and verification record.: `CVF_SESSION/authority/CCMAI-RUNTIME-125.json`
+- Final bounded local fixture compatibility and verification record.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R124_CLEAN_INSTALL_2026-10-18.md`
+- Final bounded local fixture compatibility and verification record.: `docs/reviews/R125_FINAL_LOCAL_FIX_REVIEW_2026-10-18.md`
+- Final bounded local fixture compatibility and verification record.: `docs/work_orders/CCMAI_RUNTIME_125_FINAL_FIXTURE_COMPATIBILITY.md`
+- Bounded CI timeout alignment with locally verified native command.: `CVF_SESSION/tranches/CCMAI-RUNTIME-125-CI.json`
+- Bounded CI timeout alignment with locally verified native command.: `CVF_SESSION/authority/CCMAI-RUNTIME-125-CI.json`
+- Bounded test fixture repair and honest current-package validation record.: `CVF_SESSION/authority/CCMAI-RUNTIME-126.json`
+- Bounded test fixture repair and honest current-package validation record.: `docs/work_orders/CCMAI_RUNTIME_126_DB_FIXTURE_LIFETIME.md`
+- M3 current bounded browser workflow, synthetic only; original failed evidence preserved.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R126_DB_VERIFICATION_2026-10-18.md`
+- Bounded test fixture repair and honest current-package validation record.: `docs/reviews/R126_FINAL_CURRENT_PACKAGE_REVIEW_2026-10-18.md`
+- Bounded test fixture repair and honest current-package validation record.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R125_FINAL_VERIFICATION_2026-10-18.md`
+- Bounded test fixture repair and honest current-package validation record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-126.json`
+- Actual final local checks and docs build, including initial metadata spelling failure; not hosted CI or closeability proof.: `docs/reviews/probes/review_completion_20261018/final_checks.json`
+- Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance.: `docs/reviews/probes/review_completion_20261018/cleanup_receipt.json`
+- Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance.: `docs/reviews/probes/review_completion_20261018/current_ui.jpg`
+- Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance.: `docs/reviews/probes/review_completion_20261018/evidence_manifest.json`
+- Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance.: `docs/reviews/probes/review_completion_20261018/latest_package_coverage_manifest.json`
+- Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance.: `docs/reviews/probes/review_completion_20261018/verification_summary.json`
+- Concrete case-scoped reader display-name fix; preserves permissions and historical browser evidence.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R127_M3_BROWSER_ACTIONS_2026-10-19.md`
+- Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open.: `docs/reviews/probes/m3_workflow_20261019/backend_terminal.json`
+- Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open.: `docs/reviews/probes/m3_workflow_20261019/evidence_manifest.json`
+- Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open.: `docs/reviews/probes/m3_workflow_20261019/original_verification.zip`
+- Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open.: `docs/reviews/probes/m3_workflow_20261019/reopened.jpg`
+- M3 current bounded browser workflow, synthetic only; original failed evidence preserved.: `docs/reviews/R127_M3_BROWSER_ACTIONS_REVIEW_2026-10-19.md`
+- Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open.: `docs/reviews/probes/m3_workflow_20261019/review_summary.json`
+- Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open.: `docs/reviews/probes/m3_workflow_20261019/wait_escalated_narrow.jpg`
+- M3 current bounded browser workflow, synthetic only; original failed evidence preserved.: `docs/work_orders/CCMAI_RUNTIME_127_M3_BROWSER_ACTIONS.md`
+- Actual local final gate/build receipts, preserving initial stale-tranche metadata failure; not hosted CI proof.: `docs/reviews/probes/m3_workflow_20261019/final_checks.json`
+- Concrete case-scoped reader display-name fix; preserves permissions and historical browser evidence.: `docs/reviews/R128_CASE_PARTICIPANT_NAMES_REVIEW_2026-10-19.md`
+- Concrete case-scoped reader display-name fix; preserves permissions and historical browser evidence.: `docs/work_orders/CCMAI_RUNTIME_128_CASE_PARTICIPANT_NAMES.md`
+- Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open.: `docs/reviews/probes/reader_names_20261019/backend_terminal.json`
+- Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open.: `docs/reviews/probes/reader_names_20261019/cleanup_receipt.json`
+- Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open.: `docs/reviews/probes/reader_names_20261019/evidence_manifest.json`
+- Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open.: `docs/reviews/probes/reader_names_20261019/original_verification.zip`
+- Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open.: `docs/reviews/probes/reader_names_20261019/reader_history.jpg`
+- Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open.: `docs/reviews/probes/reader_names_20261019/reader_names.jpg`
+- Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open.: `docs/reviews/probes/reader_names_20261019/verification_summary.json`
+- R130 owner-approved review and verified publication receipt for the feature-branch history rewrite.: `docs/reviews/R130_BRANCH_HISTORY_REWRITE_REVIEW_2026-10-19.md`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

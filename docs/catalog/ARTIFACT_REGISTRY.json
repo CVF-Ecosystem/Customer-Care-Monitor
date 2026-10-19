@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R130_BRANCH_HISTORY_REWRITE_2026-10-19.md",
       "status": "ACTIVE",
-      "description": "R121 repaired full namespace accepted source-only; fresh finite postrepair admission, runtime not yet proven."
+      "description": "Current R126 DB fixture lifetime and current-package verification handoff."
     },
     {
       "id": "r060-work-order",
@@ -34128,6 +34128,427 @@
       "path": "docs/reviews/probes/r121_root/browser/capture_readiness.json",
       "status": "ACTIVE",
       "description": "R121 original serve HOLD, actual waits/cleanup, UI not run; no governance claim."
+    },
+    {
+      "id": "r122-local-fix-0",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-122.json",
+      "status": "ACTIVE",
+      "description": "Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open."
+    },
+    {
+      "id": "r122-local-fix-1",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-122.json",
+      "status": "ACTIVE",
+      "description": "Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open."
+    },
+    {
+      "id": "r122-local-fix-2",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open."
+    },
+    {
+      "id": "r122-local-fix-3",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_122_LOCAL_REVIEW_FIXES.md",
+      "status": "ACTIVE",
+      "description": "Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open."
+    },
+    {
+      "id": "r122-local-fix-4",
+      "family": "continuity",
+      "path": "docs/reviews/R122_LOCAL_FIX_REVIEW_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open."
+    },
+    {
+      "id": "r122-local-fix-5",
+      "family": "continuity",
+      "path": "docs/reference/INTERVENTION_SYNTHETIC_ACTIVATION_CONTRACT.md",
+      "status": "ACTIVE",
+      "description": "Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open."
+    },
+    {
+      "id": "r122-local-fix-6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/review_fixes_20261018/current_ui.jpg",
+      "status": "ACTIVE",
+      "description": "Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open."
+    },
+    {
+      "id": "r122-local-fix-7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/review_fixes_20261018/manifest.json",
+      "status": "ACTIVE",
+      "description": "Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open."
+    },
+    {
+      "id": "r122-local-fix-8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/review_fixes_20261018/source_hashes.json",
+      "status": "ACTIVE",
+      "description": "Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open."
+    },
+    {
+      "id": "r122-local-fix-9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/review_fixes_20261018/summary.json",
+      "status": "ACTIVE",
+      "description": "Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open."
+    },
+    {
+      "id": "r122-local-fix-10",
+      "family": "continuity",
+      "path": "docs/reviews/probes/review_fixes_20261018/verification_raw.zip",
+      "status": "ACTIVE",
+      "description": "Locally reviewed repairs and qualified software evidence; activation/full suites/terminal acceptance remain open."
+    },
+    {
+      "id": "r124-1a1c39ba8ef6b076fd",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R122_LOCAL_REVIEW_FIXES_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Local review-fix delivery and clean-install compatibility evidence/record."
+    },
+    {
+      "id": "r124-dce556b29f24bafb64",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-123.json",
+      "status": "ACTIVE",
+      "description": "Local review-fix delivery and clean-install compatibility evidence/record."
+    },
+    {
+      "id": "r124-283a246b4eca9cb1ce",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-123.json",
+      "status": "ACTIVE",
+      "description": "Local review-fix delivery and clean-install compatibility evidence/record."
+    },
+    {
+      "id": "r124-9cc5166aee3a99292c",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-124.json",
+      "status": "ACTIVE",
+      "description": "Local review-fix delivery and clean-install compatibility evidence/record."
+    },
+    {
+      "id": "r124-4b581099e0340ab444",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-124.json",
+      "status": "ACTIVE",
+      "description": "Local review-fix delivery and clean-install compatibility evidence/record."
+    },
+    {
+      "id": "r124-557905084a310e4e6e",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_123_DELIVERY_COMPLETION.md",
+      "status": "ACTIVE",
+      "description": "Local review-fix delivery and clean-install compatibility evidence/record."
+    },
+    {
+      "id": "r124-1280b1c9ee3de8e96f",
+      "family": "continuity",
+      "path": "docs/reviews/R123_DELIVERY_COMPLETION_REVIEW_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Local review-fix delivery and clean-install compatibility evidence/record."
+    },
+    {
+      "id": "r124-551b94eb8588755217",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_124_CLEAN_INSTALL_COMPATIBILITY.md",
+      "status": "ACTIVE",
+      "description": "Local review-fix delivery and clean-install compatibility evidence/record."
+    },
+    {
+      "id": "r124-08248eb1028ebf8584",
+      "family": "continuity",
+      "path": "docs/reviews/R124_CLEAN_INSTALL_REVIEW_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Local review-fix delivery and clean-install compatibility evidence/record."
+    },
+    {
+      "id": "r124-e96293ebe9299ab73c",
+      "family": "continuity",
+      "path": "docs/reference/INTERVENTION_SYNTHETIC_RUNBOOK.md",
+      "status": "ACTIVE",
+      "description": "Local review-fix delivery and clean-install compatibility evidence/record."
+    },
+    {
+      "id": "r125-5ffad3ecfa65c25551",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R124_CLEAN_INSTALL_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Final bounded local fixture compatibility and verification record."
+    },
+    {
+      "id": "r125-5684cabc8a5302a6eb",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-125.json",
+      "status": "ACTIVE",
+      "description": "Final bounded local fixture compatibility and verification record."
+    },
+    {
+      "id": "r125-06e3512cd23c522ab2",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-125.json",
+      "status": "ACTIVE",
+      "description": "Final bounded local fixture compatibility and verification record."
+    },
+    {
+      "id": "r125-c34912ee0689e5e524",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_125_FINAL_FIXTURE_COMPATIBILITY.md",
+      "status": "ACTIVE",
+      "description": "Final bounded local fixture compatibility and verification record."
+    },
+    {
+      "id": "r125-73c00caffeeb7013fa",
+      "family": "continuity",
+      "path": "docs/reviews/R125_FINAL_LOCAL_FIX_REVIEW_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Final bounded local fixture compatibility and verification record."
+    },
+    {
+      "id": "r125ci-cd48087d019bd7f9e2",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-125-CI.json",
+      "status": "ACTIVE",
+      "description": "Bounded CI timeout alignment with locally verified native command."
+    },
+    {
+      "id": "r125ci-7491ae069c0154bdaa",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-125-CI.json",
+      "status": "ACTIVE",
+      "description": "Bounded CI timeout alignment with locally verified native command."
+    },
+    {
+      "id": "r126-d15f96b71ac7abace0",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R125_FINAL_VERIFICATION_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Bounded test fixture repair and honest current-package validation record."
+    },
+    {
+      "id": "r126-4b8946aba6b6bef053",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-126.json",
+      "status": "ACTIVE",
+      "description": "Bounded test fixture repair and honest current-package validation record."
+    },
+    {
+      "id": "r126-d5771df265765ef44c",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-126.json",
+      "status": "ACTIVE",
+      "description": "Bounded test fixture repair and honest current-package validation record."
+    },
+    {
+      "id": "r126-a9bff07160fc720480",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_126_DB_FIXTURE_LIFETIME.md",
+      "status": "ACTIVE",
+      "description": "Bounded test fixture repair and honest current-package validation record."
+    },
+    {
+      "id": "r126-b356af4115b4ac003b",
+      "family": "continuity",
+      "path": "docs/reviews/R126_FINAL_CURRENT_PACKAGE_REVIEW_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "Bounded test fixture repair and honest current-package validation record."
+    },
+    {
+      "id": "r126-final-cleanup-receipt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/review_completion_20261018/cleanup_receipt.json",
+      "status": "ACTIVE",
+      "description": "Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance."
+    },
+    {
+      "id": "r126-final-current-ui",
+      "family": "continuity",
+      "path": "docs/reviews/probes/review_completion_20261018/current_ui.jpg",
+      "status": "ACTIVE",
+      "description": "Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance."
+    },
+    {
+      "id": "r126-final-evidence-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/review_completion_20261018/evidence_manifest.json",
+      "status": "ACTIVE",
+      "description": "Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance."
+    },
+    {
+      "id": "r126-final-latest-package-coverage-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/review_completion_20261018/latest_package_coverage_manifest.json",
+      "status": "ACTIVE",
+      "description": "Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance."
+    },
+    {
+      "id": "r126-final-verification-summary",
+      "family": "continuity",
+      "path": "docs/reviews/probes/review_completion_20261018/verification_summary.json",
+      "status": "ACTIVE",
+      "description": "Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance."
+    },
+    {
+      "id": "r126-final-check-receipts",
+      "family": "continuity",
+      "path": "docs/reviews/probes/review_completion_20261018/final_checks.json",
+      "status": "ACTIVE",
+      "description": "Actual final local checks and docs build, including initial metadata spelling failure; not hosted CI or closeability proof."
+    },
+    {
+      "id": "r126-accepted-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R126_DB_VERIFICATION_2026-10-18.md",
+      "status": "ACTIVE",
+      "description": "M3 current bounded browser workflow, synthetic only; original failed evidence preserved."
+    },
+    {
+      "id": "r127-browser-workorder",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_127_M3_BROWSER_ACTIONS.md",
+      "status": "ACTIVE",
+      "description": "M3 current bounded browser workflow, synthetic only; original failed evidence preserved."
+    },
+    {
+      "id": "r127-browser-review",
+      "family": "continuity",
+      "path": "docs/reviews/R127_M3_BROWSER_ACTIONS_REVIEW_2026-10-19.md",
+      "status": "ACTIVE",
+      "description": "M3 current bounded browser workflow, synthetic only; original failed evidence preserved."
+    },
+    {
+      "id": "r127-browser-backend-terminal",
+      "family": "continuity",
+      "path": "docs/reviews/probes/m3_workflow_20261019/backend_terminal.json",
+      "status": "ACTIVE",
+      "description": "Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open."
+    },
+    {
+      "id": "r127-browser-evidence-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/m3_workflow_20261019/evidence_manifest.json",
+      "status": "ACTIVE",
+      "description": "Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open."
+    },
+    {
+      "id": "r127-browser-original-verification",
+      "family": "continuity",
+      "path": "docs/reviews/probes/m3_workflow_20261019/original_verification.zip",
+      "status": "ACTIVE",
+      "description": "Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open."
+    },
+    {
+      "id": "r127-browser-reopened",
+      "family": "continuity",
+      "path": "docs/reviews/probes/m3_workflow_20261019/reopened.jpg",
+      "status": "ACTIVE",
+      "description": "Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open."
+    },
+    {
+      "id": "r127-browser-review-summary",
+      "family": "continuity",
+      "path": "docs/reviews/probes/m3_workflow_20261019/review_summary.json",
+      "status": "ACTIVE",
+      "description": "Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open."
+    },
+    {
+      "id": "r127-browser-wait-escalated-narrow",
+      "family": "continuity",
+      "path": "docs/reviews/probes/m3_workflow_20261019/wait_escalated_narrow.jpg",
+      "status": "ACTIVE",
+      "description": "Original current synthetic M3 browser/action and terminal proof; first failure retained, full M3 remains open."
+    },
+    {
+      "id": "r127-final-check-receipts",
+      "family": "continuity",
+      "path": "docs/reviews/probes/m3_workflow_20261019/final_checks.json",
+      "status": "ACTIVE",
+      "description": "Actual local final gate/build receipts, preserving initial stale-tranche metadata failure; not hosted CI proof."
+    },
+    {
+      "id": "r127-browser-accepted-handoff",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R127_M3_BROWSER_ACTIONS_2026-10-19.md",
+      "status": "ACTIVE",
+      "description": "Concrete case-scoped reader display-name fix; preserves permissions and historical browser evidence."
+    },
+    {
+      "id": "r128-participant-workorder",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_128_CASE_PARTICIPANT_NAMES.md",
+      "status": "ACTIVE",
+      "description": "Concrete case-scoped reader display-name fix; preserves permissions and historical browser evidence."
+    },
+    {
+      "id": "r128-participant-review",
+      "family": "continuity",
+      "path": "docs/reviews/R128_CASE_PARTICIPANT_NAMES_REVIEW_2026-10-19.md",
+      "status": "ACTIVE",
+      "description": "Concrete case-scoped reader display-name fix; preserves permissions and historical browser evidence."
+    },
+    {
+      "id": "r128-reader-backend-terminal",
+      "family": "continuity",
+      "path": "docs/reviews/probes/reader_names_20261019/backend_terminal.json",
+      "status": "ACTIVE",
+      "description": "Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open."
+    },
+    {
+      "id": "r128-reader-cleanup-receipt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/reader_names_20261019/cleanup_receipt.json",
+      "status": "ACTIVE",
+      "description": "Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open."
+    },
+    {
+      "id": "r128-reader-evidence-manifest",
+      "family": "continuity",
+      "path": "docs/reviews/probes/reader_names_20261019/evidence_manifest.json",
+      "status": "ACTIVE",
+      "description": "Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open."
+    },
+    {
+      "id": "r128-reader-original-verification",
+      "family": "continuity",
+      "path": "docs/reviews/probes/reader_names_20261019/original_verification.zip",
+      "status": "ACTIVE",
+      "description": "Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open."
+    },
+    {
+      "id": "r128-reader-reader-history",
+      "family": "continuity",
+      "path": "docs/reviews/probes/reader_names_20261019/reader_history.jpg",
+      "status": "ACTIVE",
+      "description": "Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open."
+    },
+    {
+      "id": "r128-reader-reader-names",
+      "family": "continuity",
+      "path": "docs/reviews/probes/reader_names_20261019/reader_names.jpg",
+      "status": "ACTIVE",
+      "description": "Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open."
+    },
+    {
+      "id": "r128-reader-verification-summary",
+      "family": "continuity",
+      "path": "docs/reviews/probes/reader_names_20261019/verification_summary.json",
+      "status": "ACTIVE",
+      "description": "Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open."
+    }
+,
+    {
+      "id": "r130-branch-history-review",
+      "family": "continuity",
+      "path": "docs/reviews/R130_BRANCH_HISTORY_REWRITE_REVIEW_2026-10-19.md",
+      "status": "ACTIVE",
+      "description": "R130 owner-approved review and verified publication receipt for the feature-branch history rewrite."
     }
   ]
 }

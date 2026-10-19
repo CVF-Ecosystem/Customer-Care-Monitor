@@ -1,11 +1,11 @@
 {
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
-  "activeTranche": "CCMAI-RUNTIME-121",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-121 CHANGES_REQUIRED: original serve exit1/wait observed; Unicode console encoding failure before browser, terminal HOLD/FINAL_EVIDENCE_MISSING. Owned fixture/backend/Vite stopped, three listeners absent, protected9containers10networks472volumes and405sourcepins unchanged. Preserve consumed campaign/caps and raw evidence; read-only bounded follow-up decision only, no automatic retry/successor/provider. FullM2/M3/M1business/pilot/release OPEN/accounts parked/no push-merge-deploy.",
-  "activeRole": "Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; implementation and repair workers idle",
-  "updatedAt": "2026-10-18",
+  "currentMode": "FREEZE",
+  "activePhase": "FREEZE",
+  "activeTranche": "CCMAI-RUNTIME-130",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R130_BRANCH_HISTORY_REWRITE_2026-10-19.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-130 FROZEN: owner approved candidate 74bbd4ce1e4b58607d6aa071b039a73856b4deef; force-with-lease and GitHub ref readback confirm codex/ccma-m2-intervention at that SHA, with the ZIP absent and origin/main unchanged at d7a6f7635608d1ad44169372a6b5e0fbcbcd09c4. Local archive backup retained; R130 is closed with no merge.",
+  "activeRole": "Root CLOSER / COMMIT_STEWARD; owner independent review accepted",
+  "updatedAt": "2026-10-19",
   "schemaVersion": "1.0",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
   "x-r107DiagnosisProposal": "docs/reviews/R107_REOPEN_DIAGNOSIS_AND_R108_PROPOSAL_2026-10-16.md",
@@ -237,5 +237,41 @@
       "newFixtureStart": 1
     },
     "status": "CONSUMED_SETUP_READY_CAMPAIGN_HOLD"
+  },
+  "x-localReviewRoadmapIntake": {
+    "status": "PLANNING_ONLY_NOT_DISPATCHED",
+    "ownerInstruction": "Local decides which external feedback is valid; update roadmap for confirmed fixes.",
+    "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "localSource": "1e3db8b12d8576b33429fa3ece158786ee0b4f7e",
+    "reviewedMerge": "d7a6f7635608d1ad44169372a6b5e0fbcbcd09c4",
+    "sourceTreesEqual": true,
+    "findings": {
+      "N01": "CONFIRMED_FIX_PLANNED",
+      "N05": "CONFIRMED_FIX_PLANNED",
+      "N03": "SOURCE_SUPPORTED_REPRO_REQUIRED",
+      "N04": "CONFIRMED_FIX_PLANNED",
+      "N02": "CONFIRMED_LIMIT_CONTRACT_REQUIRED"
+    },
+    "order": [
+      "N01",
+      "N05",
+      "N03_REPRO_FIRST",
+      "N04",
+      "N02_SYNTHETIC_CONTRACT"
+    ],
+    "runtimeAuthority": "NONE_NEW",
+    "providerAuthority": "NONE_NEW",
+    "productChecksThisUpdate": "NOT_RUN",
+    "externalReportRole": "INPUT_ONLY_LOCAL_DISPOSITION_CONTROLS"
+  },
+  "x-localReviewFixes": {
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_122_LOCAL_REVIEW_FIXES.md",
+    "review": "docs/reviews/R122_LOCAL_FIX_REVIEW_2026-10-18.md",
+    "ownerRevokedPreviousAgents": true,
+    "N01": "SOURCE_FIXED_PYTHON231_PASS_FULL_BACKEND_OPEN",
+    "N03": "REPRODUCED_REPAIRED_NATIVE_AND_COMPONENT_PASS",
+    "N04": "ENCODING_FIXED_UI_OBSERVED_TERMINAL_INTERRUPTED",
+    "N05": "DOCS_NPM_CI_BUILD_PASS",
+    "N02": "CAPABILITY_AND_CONTRACT_ONLY_ACTIVATION_OPEN"
   }
 }

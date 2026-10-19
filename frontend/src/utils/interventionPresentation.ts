@@ -85,6 +85,7 @@ const ACTION_KEYS: Record<string, string> = {
   OBSERVE_DATA: 'iv_act_observe_data',
   REQUEST_RERUN: 'iv_act_request_rerun',
   EXECUTE_RERUN: 'iv_act_execute_rerun',
+  ACKNOWLEDGE_SOURCE_CHANGE: 'iv_act_acknowledge_source_change',
 }
 
 export const interventionEventReasonKey = (action: string, reason: string): string | null =>

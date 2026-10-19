@@ -227,8 +227,11 @@ func TestFullAndDateCapReEvaluateAlreadyEvaluatedConversation(t *testing.T) {
 			}
 			// the exact full local snapshot: both messages, the early one outside the date bound
 			f.assertSavedSnapshotMatches(t, run.ID, x, p.transcripts()[0], 2)
-			var sum map[string]int
-			if err := jsonUnmarshalSummary(run.ID, &sum); err != nil || sum["conversations_found"] != 1 || sum["conversations_analyzed"] != 1 {
+			var sum struct {
+				ConversationsFound    int `json:"conversations_found"`
+				ConversationsAnalyzed int `json:"conversations_analyzed"`
+			}
+			if err := jsonUnmarshalSummary(run.ID, &sum); err != nil || sum.ConversationsFound != 1 || sum.ConversationsAnalyzed != 1 {
 				t.Fatalf("%s: summary %v %v", c.name, sum, err)
 			}
 			if cp := f.checkpoint(t); cp == nil || !cp.Equal(sentinel) {
@@ -410,7 +413,7 @@ func (f *incFixture) firstConvID(t *testing.T, label string) string {
 	return id
 }
 
-func jsonUnmarshalSummary(runID string, out *map[string]int) error {
+func jsonUnmarshalSummary(runID string, out any) error {
 	var raw string
 	if err := db.DB.Raw("SELECT CAST(summary AS CHAR) FROM job_runs WHERE id = ?", runID).Scan(&raw).Error; err != nil {
 		return err

@@ -1,0 +1,127 @@
+{
+  "kind": "DERIVED_LATEST_WHOLE_PACKAGE_STREAM",
+  "originalFullRunExit": 1,
+  "originalFullRunReclassified": false,
+  "freshPostRepairSingleFullInvocation": false,
+  "rerunWholePackages": [
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine",
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp"
+  ],
+  "sourceDelta": [
+    "backend/engine/snapshot_db_test.go",
+    "backend/mcp/trigger_execution_test.go"
+  ],
+  "allOtherBackendSourcesUnchanged": true,
+  "sourceCommitAtAssembly": "9ab54062976de181ffbb910be44393021d1bc3db",
+  "packageTerminal": {
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend": "skip",
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/ai": "pass",
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/ai/catalog": "pass",
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/ai/pricing": "pass",
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api": "pass",
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers": "pass",
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/middleware": "pass",
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/channels": "pass",
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/cli": "pass",
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/cmd/pancake-proof": "pass",
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/config": "pass",
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db": "pass",
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models": "skip",
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/jobdispatch": "pass",
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/notifications": "pass",
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/pkg": "pass",
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/pkg/password": "pass",
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/storage": "pass",
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/storagecfg": "pass",
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine": "pass",
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp": "pass"
+  },
+  "packageProvenance": {
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend": {
+      "rawFile": "go-test-r125.json",
+      "rawSHA256": "a5f7abd409d6319cfe1b351c8d444f9641c6e11c5f1ecfa27138192c5cab2ff0"
+    },
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/ai": {
+      "rawFile": "go-test-r125.json",
+      "rawSHA256": "a5f7abd409d6319cfe1b351c8d444f9641c6e11c5f1ecfa27138192c5cab2ff0"
+    },
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/ai/catalog": {
+      "rawFile": "go-test-r125.json",
+      "rawSHA256": "a5f7abd409d6319cfe1b351c8d444f9641c6e11c5f1ecfa27138192c5cab2ff0"
+    },
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/ai/pricing": {
+      "rawFile": "go-test-r125.json",
+      "rawSHA256": "a5f7abd409d6319cfe1b351c8d444f9641c6e11c5f1ecfa27138192c5cab2ff0"
+    },
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api": {
+      "rawFile": "go-test-r125.json",
+      "rawSHA256": "a5f7abd409d6319cfe1b351c8d444f9641c6e11c5f1ecfa27138192c5cab2ff0"
+    },
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/handlers": {
+      "rawFile": "go-test-r125.json",
+      "rawSHA256": "a5f7abd409d6319cfe1b351c8d444f9641c6e11c5f1ecfa27138192c5cab2ff0"
+    },
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/api/middleware": {
+      "rawFile": "go-test-r125.json",
+      "rawSHA256": "a5f7abd409d6319cfe1b351c8d444f9641c6e11c5f1ecfa27138192c5cab2ff0"
+    },
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/channels": {
+      "rawFile": "go-test-r125.json",
+      "rawSHA256": "a5f7abd409d6319cfe1b351c8d444f9641c6e11c5f1ecfa27138192c5cab2ff0"
+    },
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/cli": {
+      "rawFile": "go-test-r125.json",
+      "rawSHA256": "a5f7abd409d6319cfe1b351c8d444f9641c6e11c5f1ecfa27138192c5cab2ff0"
+    },
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/cmd/pancake-proof": {
+      "rawFile": "go-test-r125.json",
+      "rawSHA256": "a5f7abd409d6319cfe1b351c8d444f9641c6e11c5f1ecfa27138192c5cab2ff0"
+    },
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/config": {
+      "rawFile": "go-test-r125.json",
+      "rawSHA256": "a5f7abd409d6319cfe1b351c8d444f9641c6e11c5f1ecfa27138192c5cab2ff0"
+    },
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db": {
+      "rawFile": "go-test-r125.json",
+      "rawSHA256": "a5f7abd409d6319cfe1b351c8d444f9641c6e11c5f1ecfa27138192c5cab2ff0"
+    },
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/db/models": {
+      "rawFile": "go-test-r125.json",
+      "rawSHA256": "a5f7abd409d6319cfe1b351c8d444f9641c6e11c5f1ecfa27138192c5cab2ff0"
+    },
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/jobdispatch": {
+      "rawFile": "go-test-r125.json",
+      "rawSHA256": "a5f7abd409d6319cfe1b351c8d444f9641c6e11c5f1ecfa27138192c5cab2ff0"
+    },
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/notifications": {
+      "rawFile": "go-test-r125.json",
+      "rawSHA256": "a5f7abd409d6319cfe1b351c8d444f9641c6e11c5f1ecfa27138192c5cab2ff0"
+    },
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/pkg": {
+      "rawFile": "go-test-r125.json",
+      "rawSHA256": "a5f7abd409d6319cfe1b351c8d444f9641c6e11c5f1ecfa27138192c5cab2ff0"
+    },
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/pkg/password": {
+      "rawFile": "go-test-r125.json",
+      "rawSHA256": "a5f7abd409d6319cfe1b351c8d444f9641c6e11c5f1ecfa27138192c5cab2ff0"
+    },
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/storage": {
+      "rawFile": "go-test-r125.json",
+      "rawSHA256": "a5f7abd409d6319cfe1b351c8d444f9641c6e11c5f1ecfa27138192c5cab2ff0"
+    },
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/storagecfg": {
+      "rawFile": "go-test-r125.json",
+      "rawSHA256": "a5f7abd409d6319cfe1b351c8d444f9641c6e11c5f1ecfa27138192c5cab2ff0"
+    },
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/engine": {
+      "rawFile": "go-test-r126-packages.json",
+      "rawSHA256": "6afe84ab9bf3300721c76f85a2eef1bef362c7bb8b7c2b2c54b07fa5e1c34f70"
+    },
+    "github.com/CVF-Ecosystem/Customer-Care-Monitor/backend/mcp": {
+      "rawFile": "go-test-r126-packages.json",
+      "rawSHA256": "6afe84ab9bf3300721c76f85a2eef1bef362c7bb8b7c2b2c54b07fa5e1c34f70"
+    }
+  },
+  "derivedFile": "latest_package_coverage.jsonl",
+  "derivedSHA256": "da0c9e8674a613aae229e7b0bc2ca578ab7d91aaf349e4d2ec118ee3d576675a"
+}

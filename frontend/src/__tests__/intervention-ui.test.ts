@@ -21,14 +21,66 @@ vi.mock('../api/intervention', () => ({
   applyInterventionAction: (...args: unknown[]) => calls.action(...args),
   InterventionHttpError: class extends Error { status:number; code:string; constructor(status:number,code:string){super(code);this.status=status;this.code=code} },
 }))
+vi.mock('../api/interventionCapability', () => ({
+  getInterventionCapability: vi.fn().mockResolvedValue({generation_configured:false,rerun_configured:false}),
+}))
 
 function deferred<T>() { let resolve!: (v:T)=>void; const promise=new Promise<T>(r=>{resolve=r}); return {promise,resolve} }
 function detail(id:string): InterventionDetail { return {case:{id,tenant_id:'t',job_id:'job',conversation_id:id,version:1,run_id:'r',snapshot_id:'s',snapshot_digest:'d',disposition:'PENDING_REVIEW',work_state:'OPEN',reason_code:'',next_action:'',human_assessment:'',human_explanation:'',human_next_action:'',outcome_text:'',data_owner_id:null,assignee_id:null,due_at:null,created_at:'2026-10-15T00:00:00Z',updated_at:'2026-10-15T00:00:00Z'},proposals:[{id:'p',revision:1,run_id:'r',snapshot_id:'s',snapshot_digest:'d',kind:'complaint',explanation:'Original '+id,next_action:'Check',evidence:'[]',provider:'private-provider',model:'private-model',prompt_version:'r101-direct-seed',created_at:'2026-10-15T00:00:00Z'}],human_events:[],source_status:'LOCAL_MATCH_CURRENTNESS_UNVERIFIED'} }
 
-async function mounted(initial:string|null='A', locale:'en'|'vi'='en') {
+describe('changed source review action', () => {
+  beforeEach(() => { calls.detail.mockReset(); calls.assignees.mockReset(); calls.list.mockReset(); calls.action.mockReset(); localStorage.setItem('cqa_access_token','synthetic-session'); calls.assignees.mockResolvedValue({items:[]}) })
+
+  it('binds the exact changed digest and version, then enables the reviewed resolution', async () => {
+    const changed=detail('CASE-A')
+    changed.case.version=3; changed.case.work_state='ASSIGNED'; changed.case.disposition='HUMAN_CONFIRM'; changed.case.human_assessment='CONFIRM'; changed.case.assignee_id='owner'; changed.source_status='CHANGED'; changed.current_source_digest='a'.repeat(64); changed.reviewed_source_current=false
+    const reviewed: InterventionDetail=structuredClone(changed)
+    reviewed.case.version=4; reviewed.case.reviewed_data_revision_id='revision'; reviewed.reviewed_source_current=true
+    calls.detail.mockResolvedValueOnce(changed).mockResolvedValueOnce(reviewed)
+    calls.action.mockResolvedValue({case:reviewed.case})
+    const {wrapper}=await mounted(); await flushPromises()
+    const vm=wrapper.vm as unknown as { availableActions:{value:string}[]; action:string; reason:string; outcome:string; canSubmit:boolean; submit:()=>Promise<void> }
+    expect(vm.availableActions.map(item=>item.value)).toContain('ACKNOWLEDGE_SOURCE_CHANGE')
+    vm.action='RESOLVE'; vm.reason='Reviewed'; vm.outcome='Handled'; await flushPromises()
+    expect(vm.canSubmit).toBe(false)
+    vm.action='ACKNOWLEDGE_SOURCE_CHANGE'; await flushPromises()
+    expect(vm.canSubmit).toBe(true)
+    await vm.submit(); await flushPromises()
+    expect(calls.action).toHaveBeenCalledWith('t','A','synthetic-session',expect.any(AbortSignal),expect.objectContaining({action:'ACKNOWLEDGE_SOURCE_CHANGE',expected_version:3,expected_snapshot_id:'s',expected_snapshot_digest:'d',expected_proposal_id:'p',expected_revision:1,expected_current_digest:'a'.repeat(64),reason:'Reviewed'}))
+    vm.action='RESOLVE'; vm.reason='Reviewed new source'; vm.outcome='Handled'; await flushPromises()
+    expect(vm.canSubmit).toBe(true)
+    wrapper.unmount()
+  })
+
+  it('offers recovery after assessment in OPEN, but not before assessment or for a reader', async () => {
+    const changed=detail('CASE-A')
+    changed.source_status='CHANGED'; changed.current_source_digest='b'.repeat(64)
+    changed.case.version=2; changed.case.disposition='HUMAN_CONFIRM'; changed.case.human_assessment='CONFIRM'
+    calls.detail.mockResolvedValue(changed)
+    const first=await mounted(); await flushPromises()
+    const vm=first.wrapper.vm as unknown as { availableActions:{value:string}[] }
+    expect(vm.availableActions.map(item=>item.value)).toContain('ACKNOWLEDGE_SOURCE_CHANGE')
+    first.wrapper.unmount()
+
+    const unassessed=structuredClone(changed); unassessed.case.version=1; unassessed.case.disposition='PENDING_REVIEW'; unassessed.case.human_assessment=''
+    calls.detail.mockResolvedValue(unassessed)
+    const second=await mounted(); await flushPromises()
+    const pending=second.wrapper.vm as unknown as { availableActions:{value:string}[] }
+    expect(pending.availableActions.map(item=>item.value)).not.toContain('ACKNOWLEDGE_SOURCE_CHANGE')
+    second.wrapper.unmount()
+
+    calls.detail.mockResolvedValue(changed)
+    const third=await mounted(); await flushPromises()
+    third.auth.tenantPerms={role:'member',permissions:{intervention_cases:'r',messages:'r'}}; await flushPromises()
+    expect(third.wrapper.text()).not.toContain('Acknowledge updated source')
+    third.wrapper.unmount()
+  })
+})
+
+async function mounted(initial:string|null='A', locale:'en'|'vi'='en', reader=false) {
   const pinia=createPinia(); setActivePinia(pinia)
-  const auth=useAuthStore(); auth.tenantPerms={role:'owner',permissions:{}}
-  const router=createRouter({history:createMemoryHistory(),routes:[{path:'/:tenantId/intervention-cases/:caseId?',component:InterventionCases}]})
+  const auth=useAuthStore(); auth.tenantPerms=reader ? {role:'member',permissions:{intervention_cases:'r'}} : {role:'owner',permissions:{}}
+  const router=createRouter({history:createMemoryHistory(),routes:[{path:'/:tenantId/intervention-cases/:caseId?',component:InterventionCases},{path:'/:tenantId/messages',component:{template:'<div />'}}]})
   const i18n=createI18n({legacy:false,locale,messages:{en:enMessages,vi:viMessages}})
   await router.push(initial ? `/t/intervention-cases/${initial}` : '/t/intervention-cases'); await router.isReady()
   const wrapper=mount(InterventionCases,{attachTo:document.body,global:{plugins:[router,pinia,i18n,createVuetify({components,directives})]}})
@@ -51,6 +103,59 @@ describe('R101 route lifetime', () => {
     a.resolve(detail('CASE-A')); await flushPromises()
     expect(wrapper.text()).toContain('CASE-B')
     expect(wrapper.text()).not.toContain('CASE-A')
+    wrapper.unmount()
+  })
+
+  it('renders only the current reader case participant names, including history, without loading the assignee directory', async () => {
+    const a=deferred<InterventionDetail>(), b=deferred<InterventionDetail>()
+    const withParticipants=(id:string, prefix:string):InterventionDetail => {
+      const data=detail(id)
+      data.case.data_owner_id=`${prefix}-owner`
+      data.case.assignee_id=`${prefix}-current`
+      data.human_events=[{
+        id:`${prefix}-event`,case_version:2,actor_id:`${prefix}-actor`,action:'CONFIRM',reason:'Reviewed',
+        before:JSON.stringify({version:1,disposition:'PENDING_REVIEW',work_state:'ASSIGNED',human_assessment:'',human_explanation:'',human_next_action:'',assignee_id:`${prefix}-previous`,data_owner_id:`${prefix}-owner`,due_at:null,outcome_text:''}),
+        after:JSON.stringify({version:2,disposition:'HUMAN_CONFIRM',work_state:'ASSIGNED',human_assessment:'CONFIRM',human_explanation:'',human_next_action:'',assignee_id:`${prefix}-current`,data_owner_id:`${prefix}-owner`,due_at:null,outcome_text:''}),
+        source_status:'LOCAL_MATCH_CURRENTNESS_UNVERIFIED',created_at:'2026-10-16T08:00:00Z',
+      }]
+      data.participants=[
+        {user_id:`${prefix}-owner`,name:`${prefix} data owner`},
+        {user_id:`${prefix}-current`,name:`${prefix} current assignee`},
+        {user_id:`${prefix}-previous`,name:`${prefix} previous assignee`},
+        {user_id:`${prefix}-actor`,name:`${prefix} history actor`},
+      ]
+      return data
+    }
+    calls.detail.mockImplementation((_tenant:string,id:string) => id==='A' ? a.promise : b.promise)
+    const {wrapper,router}=await mounted('A','en',true)
+    await flushPromises()
+    expect(calls.detail).toHaveBeenCalledWith('t','A','synthetic-session',expect.any(AbortSignal))
+    await router.push('/t/intervention-cases/B'); await flushPromises()
+    b.resolve(withParticipants('CASE-B','B')); await flushPromises()
+    let text=wrapper.text()
+    expect(text).toContain('B data owner')
+    expect(text).toContain('B current assignee')
+    expect(text).toContain('B previous assignee')
+    expect(text).toContain('B history actor')
+    expect(text).not.toContain('A data owner')
+    expect(text).not.toContain('A current assignee')
+    expect(text).not.toContain('A previous assignee')
+    expect(text).not.toContain('A history actor')
+    expect(text).not.toContain('Record action')
+    expect(calls.assignees).not.toHaveBeenCalled()
+
+    a.resolve(withParticipants('CASE-A','A')); await flushPromises()
+    text=wrapper.text()
+    expect(text).toContain('B data owner')
+    expect(text).toContain('B current assignee')
+    expect(text).toContain('B previous assignee')
+    expect(text).toContain('B history actor')
+    expect(text).not.toContain('A data owner')
+    expect(text).not.toContain('A current assignee')
+    expect(text).not.toContain('A previous assignee')
+    expect(text).not.toContain('A history actor')
+    expect(text).not.toContain('Record action')
+    expect(calls.assignees).not.toHaveBeenCalled()
     wrapper.unmount()
   })
 

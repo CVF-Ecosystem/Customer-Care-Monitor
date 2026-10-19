@@ -1,0 +1,22 @@
+# Independent current-package review and local feedback completion — R126
+
+Status: REVIEWER_ACCEPTED
+Risk: R2
+Worker: Sol engine test DB pool lifecycle; Luna MCP pending notification assertion
+Reviewer: Root independent source and terminal evidence review
+
+Root independently inspected the exact two test-only repairs. connectTestDB now closes the preceding global pool after confirming the test DSN and before reconnecting, matching existing setupIncFixture. Production db.Connect is unchanged; max_connections stays151. No new cleanup callback may close a later fixture handle before earlier teardown. The MCP held-send test now requires one attempt in sending, zero sent and zero notified, retaining post-release/owner/busy/provider-count assertions. Focused native pool tests3 and MCP pending-send test passed on separate schemas.
+
+The R125 complete full command honestly exited1:1635passed test/subtest events,112skipped,2failed roots (engine integration unable to connect after pool exhaustion; MCP stale log assertion). There were DB-unavailable skips, so it is NOT accepted as a green full run. Current rerun covers complete engine and MCP packages. backend source delta against R125 is exactly snapshot_db_test.go and mcp/trigger_execution_test.go; all production files and other package sources are unchanged. At the source checkpoint, final source identity, package terminal events and DB sentinel gate were pending; their completed disposition is below. An aggregate current-package result must be labeled derived, preserve whole selected package streams, and keep original raw logs/hashes. A fresh post-repair single full-suite invocation is not claimed.
+
+Inherited R122 fixes/N03 native recovery and Python231PASS remain documented. R123/R124 ordinary startup/CLI implementation, canonical tenant fix, strict grant/budget checks, binary smoke and original complete browser terminal are reviewed in R125 and earlier records. Frontend45files/474tests, frontend/Go build and docs build passed locally. Actual provider calls0, hosted CI NOT_RUN, full M3/pilot/release OPEN. No push/merge/deploy.
+
+## Final disposition
+
+REVIEW_PASS for the bounded local feedback repairs at source `9ab54062976de181ffbb910be44393021d1bc3db`. Complete engine and MCP rerun exited0 with Docker exited0. All other package sources match the original complete R125 run byte-for-byte; only the two test files changed. The clearly derived whole-package stream has {'skip': 2, 'pass': 19} package terminals and {'pass': 1689, 'skip': 60} test/subtest terminals. Existing DB gate passed all five required sentinels and found no DB-unavailable skip. Optional/live skips remain visible. No raw events inside a selected package were filtered. Original R125 full exit1 is unchanged; a fresh post-repair single full invocation was NOT_REPEATED.
+
+Root reviewed worker source changes and terminal/source evidence. Luna independently audited Root assembly selection/provenance and exact270-file backend inventory; no blocker found. Root additionally guarded current inventory equality. Frontend143-file identity was checked against the passed45-file/474-test run. The ordinary binary receipt and original browser terminal establish only synthetic behavior and zero-provider effects.
+
+Evidence: [verification summary](probes/review_completion_20261018/verification_summary.json), [package provenance](probes/review_completion_20261018/latest_package_coverage_manifest.json), [file hashes](probes/review_completion_20261018/evidence_manifest.json), [cleanup receipt](probes/review_completion_20261018/cleanup_receipt.json), [original UI capture](probes/review_completion_20261018/current_ui.jpg). The 72 MB original log archive is retained in the workspace's local evidence backup and is excluded from the Git branch snapshot because it expands to about 1.6 GB of raw test logs and result streams. Failed/partial earlier Go runs remain preserved locally. The earlier host frontend RUN-only log was overwritten by the completed Docker run; that unavailable host log is not claimed preserved. Keys, executables, caches and snapshots are excluded from the archive.
+
+The known owned startup and MySQL fixtures are stopped after verification; their containers/volumes/networks are preserved. The three original application containers remain running, observed by exact IDs only; no installed/customer DB content comparison is claimed. No push/merge/deploy. Full M3, real provider quality, hosted CI, pilot and release remain OPEN.

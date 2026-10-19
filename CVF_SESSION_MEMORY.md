@@ -2,20 +2,20 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md", "activeTranche": "CCMAI-RUNTIME-121", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R130_BRANCH_HISTORY_REWRITE_2026-10-19.md", "activeTranche": "CCMAI-RUNTIME-130", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md
+- Current mode: FREEZE
+- Active phase: FREEZE
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R130_BRANCH_HISTORY_REWRITE_2026-10-19.md
 
-CCMAI-RUNTIME-121 CHANGES_REQUIRED: original serve exit1/wait observed; Unicode console encoding failure before browser, terminal HOLD/FINAL_EVIDENCE_MISSING. Owned fixture/backend/Vite stopped, three listeners absent, protected9containers10networks472volumes and405sourcepins unchanged. Preserve consumed campaign/caps and raw evidence; read-only bounded follow-up decision only, no automatic retry/successor/provider. FullM2/M3/M1business/pilot/release OPEN/accounts parked/no push-merge-deploy.
+CCMAI-RUNTIME-130 FROZEN: owner approved candidate 74bbd4ce1e4b58607d6aa071b039a73856b4deef; force-with-lease and GitHub ref readback confirm codex/ccma-m2-intervention at that SHA, with the ZIP absent and origin/main unchanged at d7a6f7635608d1ad44169372a6b5e0fbcbcd09c4. Local archive backup retained; R130 is closed with no merge.
 
-Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; implementation and repair workers idle
+Root CLOSER / COMMIT_STEWARD; owner independent review accepted
 
-R120 UI accepted bounded, original terminal/durable accounting missing, stopped/CHANGES_REQUIRED and consumed caps immutable. R121 separate local route per owner instruction, no new product implementation claim.
+R126 accepted local feedback fixes with qualified whole-package proof at90bc02ed; original failed full runs remain failed.
 
 ## Historical R114 bounded UI result
 
@@ -981,3 +981,10 @@ Repair1 independently accepted exact8ID-only delta/3files, Vite unchanged/old400
 Postrepair sole fresh offline compile PASS exit0/17.683sec at5cf1244f/405pins unchanged; binarycb52235ceafee389f52a3fcc80ff9685887e4d7cef6035ea8a5428e30a582162 under r121_build/after_repair/handlers.test.exe. Original source/admission/first binary preserved in Git+preimage ZIP; current canonical admission revised from candidate002 only after byte-preservation check. Root commits this before setup002; runtime directory/resource effects still absent. Original unspent sole campaign caps not renewed.
 
 Postrepair SETUP002 actual wrapper exit0/waitObserved/metadataErrornull. Exact new owned e8386c20fc1a4d3f3ebf11f05b2ec491eb968b15e28bb101b6a46b6ee0afca77 /networkc36815bdd5d46788c6194b95bfa0585618a8ec0d8b9a2d9a7344f8aea12bda3b /volumeccmai-r121-ui-20261018 /loopback56961 runningPID>0 independently verified; protected9containers10networks472volumesequal,405pins unchanged. MySQL31transientEOF then attempt32 five-byteREADY, no restart. Setup receipts/toolreturns preserved. Root commits exact resource admission before serve/backend/Vite/tab/auth; all those budgets0, provider/case0. Original failed setup001 and conservative old start reservation remain historical, actual fixture starts1 from continuation.
+
+
+## R130 branch history cleanup
+
+Owner explicitly requested retracting the just-pushed feature branch history and pushing a replacement, with main untouched. The existing R129 no-history-rewrite boundary is superseded for this bounded R130 action only. The 75,961,107-byte verification archive remains preserved in the workspace-level local backup. The owner independently approved candidate 74bbd4ce1e4b58607d6aa071b039a73856b4deef before force-with-lease publication.
+
+R130 replacement history was published with force-with-lease to codex/ccma-m2-intervention at 74bbd4ce1e4b58607d6aa071b039a73856b4deef after owner approval. GitHub readback confirms main stayed at d7a6f7635608d1ad44169372a6b5e0fbcbcd09c4; the ZIP is absent from reachable history, the tip tree comparison passed, and the local archive SHA-256 matches the preserved original.

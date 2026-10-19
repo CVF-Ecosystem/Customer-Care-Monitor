@@ -158,6 +158,7 @@ func bizGet(h gin.HandlerFunc, tenantID, path, rawQuery string) *httptest.Respon
 	rec := httptest.NewRecorder()
 	c, _ := gin.CreateTestContext(rec)
 	c.Set("tenant_id", tenantID)
+	c.Set("tenant_role", "owner")
 	target := path
 	if rawQuery != "" {
 		target += "?" + rawQuery

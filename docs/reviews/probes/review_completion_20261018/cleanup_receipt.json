@@ -1,0 +1,57 @@
+{
+  "observedAt": "2026-10-18T23:03:39.0476471+07:00",
+  "containers": [
+    {
+      "id": "bde4ff8dae6f76a4f3a093ac78ecfc1e3672727dce12d236c9ab5c54a0e2d4e5",
+      "name": "/ccma-r123-startup-smoke",
+      "status": "exited",
+      "exitCode": 2,
+      "pid": 0
+    },
+    {
+      "id": "6bb3e504cbed92627f65e526c28c7f60f725442983c03ada63913fa0cc9be251",
+      "name": "/ccma-r123-mysql-54bc229d",
+      "status": "exited",
+      "exitCode": 0,
+      "pid": 0
+    },
+    {
+      "id": "cf6b3a55a4cd068df41a7f9e44d576cc41c78374d08ec39e2c0bee0e75511a1d",
+      "name": "/ccma-r126-packages-54bc229d",
+      "status": "exited",
+      "exitCode": 0,
+      "pid": 0
+    },
+    {
+      "id": "0c4a9b9608aa01386a662391fc78bd4cb0a5eab8e91a48e32dd8b2a9618d88cf",
+      "name": "/ccma-r123-browser-54bc229d",
+      "status": "exited",
+      "exitCode": 0,
+      "pid": 0
+    },
+    {
+      "id": "0770fa03aee1c748425e03dcc6a3e3a8413ef2365a6981dc3fc5259e66b2fe3e",
+      "name": "/ccma-nginx-1",
+      "status": "running",
+      "exitCode": 0,
+      "pid": 693
+    },
+    {
+      "id": "07822f249ff071e4f9f08463da804279a57b151901345b7560047d1b23662027",
+      "name": "/ccma-app-1",
+      "status": "running",
+      "exitCode": 0,
+      "pid": 1257
+    },
+    {
+      "id": "ee1fc7f682631ac3c0ca57b80aff7e233ddde405c2618f35ca0aae6e60e23314",
+      "name": "/ccma-db-1",
+      "status": "running",
+      "exitCode": 0,
+      "pid": 702
+    }
+  ],
+  "fixturePortListeners": [],
+  "volumesNetworksContainersPreserved": true,
+  "scope": "Only known owned synthetic startup/MySQL fixtures stopped. Original application status observed by ID; installed DB contents not read or compared."
+}

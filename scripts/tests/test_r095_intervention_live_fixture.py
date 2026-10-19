@@ -7,6 +7,11 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
+try:
+    from ._live_fixture_test_support import isolated_authority, write_json
+except ImportError:
+    from _live_fixture_test_support import isolated_authority, write_json
+
 
 SOURCE = Path(__file__).resolve().parents[1] / "r095_intervention_live_fixture.py"
 SPEC = importlib.util.spec_from_file_location("r095_fixture", SOURCE)
@@ -62,9 +67,19 @@ class R095FixtureOfflineTests(unittest.TestCase):
             with self.assertRaises(r095.AdmissionError):
                 r095.admission()
 
-    def test_actual_current_state_passes_source_only_authority(self):
-        # This check reads no approval, credential, fixture or provider path.
-        r095.canonical_authority("worker")
+    def test_synthetic_active_worker_passes_source_only_authority(self):
+        with tempfile.TemporaryDirectory() as directory:
+            with isolated_authority(r095, Path(directory)):
+                r095.canonical_authority("worker")
+
+    def test_inactive_synthetic_phase_is_rejected(self):
+        with tempfile.TemporaryDirectory() as directory:
+            with isolated_authority(r095, Path(directory)) as fixture:
+                fixture["state"]["activePhase"] = "FREEZE"
+                write_json(fixture["state_path"], fixture["state"])
+                with self.assertRaises(r095.AdmissionError) as caught:
+                    r095.canonical_authority("worker")
+                self.assertEqual(caught.exception.code, "ACTIVE_CONTINUITY_MISMATCH")
 
     def test_reviewer_raw_usage_breach_blocks_second_claim(self):
         with tempfile.TemporaryDirectory() as directory:

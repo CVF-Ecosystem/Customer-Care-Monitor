@@ -196,5 +196,31 @@
       "newFixtureStart": 1
     },
     "status": "CONSUMED_SETUP_READY_CAMPAIGN_HOLD"
+  },
+  "x-ownerRoadmapPlanning": {
+    "status": "PLANNING_ONLY_NOT_DISPATCHED",
+    "ownerInstruction": "Local decides which external feedback is valid; update roadmap for confirmed fixes.",
+    "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "localSource": "1e3db8b12d8576b33429fa3ece158786ee0b4f7e",
+    "reviewedMerge": "d7a6f7635608d1ad44169372a6b5e0fbcbcd09c4",
+    "sourceTreesEqual": true,
+    "findings": {
+      "N01": "CONFIRMED_FIX_PLANNED",
+      "N05": "CONFIRMED_FIX_PLANNED",
+      "N03": "SOURCE_SUPPORTED_REPRO_REQUIRED",
+      "N04": "CONFIRMED_FIX_PLANNED",
+      "N02": "CONFIRMED_LIMIT_CONTRACT_REQUIRED"
+    },
+    "order": [
+      "N01",
+      "N05",
+      "N03_REPRO_FIRST",
+      "N04",
+      "N02_SYNTHETIC_CONTRACT"
+    ],
+    "runtimeAuthority": "NONE_NEW",
+    "providerAuthority": "NONE_NEW",
+    "productChecksThisUpdate": "NOT_RUN",
+    "externalReportRole": "INPUT_ONLY_LOCAL_DISPOSITION_CONTROLS"
   }
 }

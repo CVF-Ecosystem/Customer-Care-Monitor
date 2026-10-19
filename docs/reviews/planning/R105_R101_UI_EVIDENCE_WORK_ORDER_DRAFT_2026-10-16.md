@@ -145,7 +145,7 @@ python -B docs/reviews/probes/r105_root/r105_ui_runner.py inspect --project-root
 python -B docs/reviews/probes/r105_root/r105_ui_runner.py start --project-root .
 ```
 
-Start is a foreground supervisor, not a detached command. Keep its original tool/session alive while the browser operator works. Wait for BOTH .cvf/runtime/r105_claude/ready.json AND running.json, with the supervisor still alive. ready.json alone establishes backend readiness, not Vite readiness. Open only http://127.0.0.1:3011 through Antigravity. Read new ready fields apiOrigin,tenant,case,reader,owner; never reuse old browser_ready.json. New owner is an email; reader email is <new reader UUID>@example.invalid. Use the pinned synthetic test password only. Avoid preexisting browser sessions/tokens; verify the exact new tenant/case before mutations. Do not clear or reuse another app's stored session.
+Start is a foreground supervisor, not a detached command. Keep its original tool/session alive while the browser operator works. Wait for BOTH .cvf/runtime/r105_claude/ready.json AND running.json, with the supervisor still alive. ready.json alone establishes backend readiness, not Vite readiness. Open only http://127.0.0.1:3011 through Antigravity. Read new ready fields apiOrigin,tenant,case,reader,owner; never reuse old browser_ready.json. New owner is an email; reader email is `<new reader UUID>@example.invalid`. Use the pinned synthetic test password only. Avoid preexisting browser sessions/tokens; verify the exact new tenant/case before mutations. Do not clear or reuse another app's stored session.
 
 To request cleanup in a separate project-root terminal:
 

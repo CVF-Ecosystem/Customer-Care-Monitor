@@ -1,0 +1,28 @@
+{
+  "sourceCommit": "9ab54062976de181ffbb910be44393021d1bc3db",
+  "currentWholePackageCoverage": "PASS_DERIVED_WITH_PROVENANCE",
+  "testAndSubtestTerminalCounts": {
+    "pass": 1689,
+    "skip": 60
+  },
+  "packageTerminalCounts": {
+    "skip": 2,
+    "pass": 19
+  },
+  "dbSentinelGate": "PASS_5_REQUIRED_NO_DB_UNAVAILABLE_SKIP",
+  "originalFullR125Exit": 1,
+  "freshPostRepairSingleFullInvocation": false,
+  "frontend": {
+    "files": 45,
+    "tests": 474,
+    "build": "PASS"
+  },
+  "goBuild": "PASS_PRODUCTION_SOURCES_UNCHANGED",
+  "pythonDiscovery": 231,
+  "ordinaryBinary": "SYNTHETIC_GRANT_ISSUED_ZERO_PROVIDER_CALLS",
+  "browser": "PASS_ORIGINAL_EXIT0_EQUAL_FINGERPRINTS_SERVER_STOPPED",
+  "providerCalls": 0,
+  "hostedCI": "NOT_RUN",
+  "fullM3PilotRelease": "OPEN",
+  "independentReview": "Root reviewed Sol/Luna test fixes; Luna independently audited Root whole-package assembly, no blocking findings; Root added current source inventory guard."
+}

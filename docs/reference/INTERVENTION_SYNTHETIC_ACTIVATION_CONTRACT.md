@@ -1,0 +1,11 @@
+# Hợp đồng kích hoạt can thiệp synthetic
+
+Status: SOFTWARE_PATH_IMPLEMENTED; PROVIDER_AND_RELEASE_NOT_VERIFIED
+
+Ordinary backend startup loads one server-owned intervention service and installs it for initial manual runs and WAIT_DATA reruns. The default `INTERVENTION_MODE=disabled` installs neither. Any non-disabled value other than `synthetic`, missing limit, invalid endpoint, or unreadable key fails startup. A disabled process does not read the key file.
+
+The synthetic policy is fixed at `ccma.synthetic.intervention.v1` with prompt version `synthetic-activation-v1`. Server configuration chooses exactly one provider, model, HTTPS endpoint, key file, request byte cap, output token cap, timeout, and config reference. OpenAI uses `https://api.openai.com/v1`; Alibaba uses the existing validated `qwen3.7-flash` thinking-disabled single-call helper. There is no provider fallback. A digest of the transport and policy configuration is included in the grant config reference, so changing those settings invalidates old grants.
+
+The capability endpoint reports process configuration, not tenant permission, remaining budget, or provider health. HTTP callers cannot set transport, model, key, cap, or grant fields. A permitted owner/admin provisions a marked Pancake demo channel, two invented conversations, and one manual job with the operator CLI. The empty conversation yields WAIT_DATA; the fixed completion command adds one invented customer message so an authenticated actor can capture a data revision and request a rerun. The operator then raises a finite job cap and issues a grant for the exact current request, actor, revision, provider, policy, configuration, and deadline. The server rechecks permission, source, grant, and budget at admission. Consumed budget is monotone, including uncertain outcomes and restarts.
+
+The synthetic marker is a server-owned column. Real channels and unmarked sources remain denied. The workflow does not send to customers or make an employee decision. A local stub/database test establishes the software path; it does not establish provider response quality, live provider availability, paid-call authorization, pilot readiness, or release readiness. See [operator runbook](INTERVENTION_SYNTHETIC_RUNBOOK.md).

@@ -1,6 +1,51 @@
 # Roadmap CSKH: dữ liệu đáng tin, bộ lọc hỗ trợ AI và xử lý có trách nhiệm
 
-## Current R121 terminal hold — 2026-10-18
+## R128 — tên người tham gia ca cho tài khoản chỉ đọc, 2026-10-19
+
+Đã sửa và nghiệm thu local: reader thấy tên người xử lý, người bổ sung dữ liệu và người ghi lịch sử sau reload; API chỉ trả user_id/name của người cùng workspace được ca/lịch sử ca tham chiếu. Không trả người ngoài ca/khác workspace; danh sách chọn người xử lý yêu cầu quyền đọc và ghi. Reader vẫn không có thao tác ghi hoặc yêu cầu danh bạ đầy đủ.
+
+Native MySQL7test, UI/API21test, build và lượt browser hiện tại exit0 PASS; luồng sửa/giao/kết quả/mở lại và WAIT_DATA không hồi quy, không gọi provider. Không nhận full Go/frontend suite mới. Xem [review](../reviews/R128_CASE_PARTICIPANT_NAMES_REVIEW_2026-10-19.md). Tiếp theo chốt bảng acceptance M3 từ bằng chứng hiện có; B09 offline chưa có điều khiển hỗ trợ, full M3/business/pilot/hosted/release còn mở. Không mở chuỗi tooling/polish mới nếu không có gap sản phẩm cụ thể. Các checkpoint dưới là lịch sử.
+
+
+## R127-A — luồng thao tác M3 trên trình duyệt, 2026-10-19
+
+Đã nghiệm thu phạm vi synthetic hiện tại: sửa đánh giá → giao việc → ghi kết quả → mở lại, giữ lịch sử qua tải lại; giao người bổ sung và chuyển cấp vẫn giữ ca chờ dữ liệu; tab cũ409; backend chặn reader403 và UI reader không có nút ghi. Bản chạy lại exit0, nguồn/đề xuất giữ nguyên, đúng6event, không gọi provider. Lượt đầu exit1 do baseline fixture chưa seed con trỏ đề xuất hiện tại được giữ nguyên; không sửa lịch sử lỗi.
+
+CSS390x844 được quan sát thực tế; ảnh gốc có raster nội dung375px, không nhận exact-raster390. Offline B09 chưa chạy vì thiếu điều khiển offline. Còn lỗi đọc hiểu cụ thể: reader thấy fallback tên người xử lý/lịch sử dù người dùng có tên; bước tiếp theo chỉ bổ sung nhãn người tham gia ca, giữ quyền ghi/danh bạ. Full M3/pilot/release còn mở. Xem [review](../reviews/R127_M3_BROWSER_ACTIONS_REVIEW_2026-10-19.md). Các checkpoint dưới đây là lịch sử.
+
+
+## R126 — chốt sửa góp ý local, 2026-10-18
+
+Các mục N01/N03/N04/N05 đã sửa và được kiểm tra local; N02 có đường chạy synthetic qua binary thông thường, setup/CLI/hạn mức/grant, không gọi provider. N03 giữ lịch sử khi người dùng xác nhận nguồn đã đổi; UI mới có mã thoát0 và fingerprint trước/sau bằng nhau. Frontend45file/474test và build PASS; Python231PASS.
+
+Go: lượt full R125 vẫn là exit1. Sau sửa vòng đời pool test và assertion MCP, đã chạy lại trọn engine/MCP; kết hợp kết quả nguyên package của các phần nguồn không đổi cho current-package coverage PASS, gate DB đủ5sentinel và không có DB-unavailable skip. Đây là kết quả tổng hợp có kiểm tra hash/provenance, không phải một lượt full mới sau sửa. Hosted CI chưa chạy. Xem [review R126](../reviews/R126_FINAL_CURRENT_PACKAGE_REVIEW_2026-10-18.md).
+
+Phạm vi sửa góp ý đã được nghiệm thu local; tiếp theo đối chiếu các điều kiện còn thiếu của M3 hiện có. Full M3/pilot/release và tài khoản Facebook/ZaloOA còn mở; không tự mở thêm tooling hay gọi AI trả phí. Các checkpoint phía dưới là lịch sử.
+
+
+## R124 — hoàn thiện đường chạy synthetic và kiểm tra cuối, 2026-10-18
+
+N02 đã triển khai startup mặc định tắt, cấu hình synthetic rõ ràng và CLI tạo fixture, bổ sung dữ liệu giả, tăng trần hạn mức không đặt lại phần đã dùng, cấp grant đúng yêu cầu/người dùng/nguồn/cấu hình/hạn dùng. Smoke bằng binary thông thường trên cài đặt mới đã tìm và sửa lỗi tenant `single-workspace`; luồng từ setup đến cấp grant PASS, attempts/executions/consumed đều0, không gọi provider. Kiểm tra thực thi dùng stub, không suy ra chất lượng AI thật. Xem [runbook](../reference/INTERVENTION_SYNTHETIC_RUNBOOK.md).
+
+N04 đã có lượt UI mới hoàn tất: đúng active proposal/lịch sử tiếng Việt, logout, exit0, fingerprint và effect counts trước/sau bằng nhau, server đã dừng. Không sửa lại các biên bản R120/R121 thiếu bằng chứng trước đây. Fixture Dashboard đã sửa đúng quyền đọc; hai lỗi Go kế thừa được sửa ở test context/trạng thái sending, không hạ kiểm tra quyền hay bỏ cơ chế bền vững của thông báo.
+
+Full Go/frontend lượt cuối đang được kiểm tra trên nguồn cố định; chưa ghi PASS trước mã thoát cuối. Sau kết quả, cập nhật review `docs/reviews/R124_CLEAN_INSTALL_REVIEW_2026-10-18.md` và các điều kiện còn mở. Không tự mở dữ liệu thật, gọi AI trả phí, pilot hoặc release. Các mục R122 và kế hoạch bên dưới là lịch sử; checkpoint hiện hành theo mục này.
+
+
+## R122 — kết quả sửa local, 2026-10-18
+
+N01 đã sửa test fixture độc lập ledger/history, Python discovery231PASS; N05 sửa parser và72liên kết, `npm ci` + docs build PASS; N03 đã tái hiện nguồn đổi sau giao việc và thêm xác nhận phiên bản nguồn mới giữ nguyên đề xuất/quyết định/lịch sử, native MySQL + component tests PASS; N04 sửa encoding/ready ordering và đã quan sát đúng active proposal/lịch sử/đăng xuất trên UI synthetic. Các lượt kiểm thử bị ngắt khi môi trường phiên đổi phải giữ nhãn INCOMPLETE, không thay bằng PASS.
+
+N02 chỉ hoàn tất trạng thái capability trên UI/API và [contract kích hoạt synthetic](../reference/INTERVENTION_SYNTHETIC_ACTIVATION_CONTRACT.md); ordinary activation/budget/grant/clean-install chưa triển khai. Full Go suite chưa hoàn tất; frontend full suite470PASS/3lỗi Dashboard kế thừa, build PASS. Chưa có full M3/pilot/release hoặc runtime governance acceptance. Chi tiết: `docs/reviews/R122_LOCAL_FIX_REVIEW_2026-10-18.md`. Tiếp theo là chốt review/commit phần sửa có bằng chứng, rồi xử lý các gap trên đúng phạm vi; không tự gọi provider/bật dữ liệu thật. Các phần kế hoạch bên dưới là checkpoint trước sửa, disposition hiện hành theo mục này.
+
+
+## Kế hoạch sửa đã được local thẩm định — 2026-10-18
+
+Kế hoạch hiện hành ở [roadmap giao sản phẩm](../reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md). Báo cáo agent ngoài chỉ là đầu vào: local source/log quyết định disposition. N01 CI portability và N05 docs/README đã xác nhận → sửa nhỏ trước; N03 nguồn đổi sau human action có căn cứ source nhưng phải tái hiện trước quyết định sửa; N04 encoding/UI evidence đã xác nhận → sửa biên process và nghiệm thu đúng phần còn thiếu; N02 ordinary startup disabled là giới hạn có chủ đích → contract kích hoạt synthetic tối thiểu trước clean-install acceptance. Mỗi mục có exit cụ thể, chưa mục nào FIXED/PASS.
+
+Đây là cập nhật kế hoạch do owner yêu cầu, chưa dispatch BUILD hoặc cho phép runtime/provider. R121 CHANGES_REQUIRED và mọi cap/evidence cũ giữ nguyên; không replay để lấp bằng chứng cũ. M3 vẫn là trọng tâm, frontend full suite/ba lỗi Dashboard và M1 business/fullM2/M3/pilot/release còn OPEN. Mock không thay real-provider proof cho governance. Facebook/Zalo OA parked. Checkpoint bên dưới là lịch sử; next move hiện hành theo roadmap trên và continuity.
+
+## Historical R121 terminal hold — 2026-10-18
 
 CCMAI-RUNTIME-121 CHANGES_REQUIRED: original serve exit1/wait observed; Unicode console encoding failure before browser, terminal HOLD/FINAL_EVIDENCE_MISSING. Owned fixture/backend/Vite stopped, three listeners absent, protected9containers10networks472volumes and405sourcepins unchanged. Preserve consumed campaign/caps and raw evidence; read-only bounded follow-up decision only, no automatic retry/successor/provider. FullM2/M3/M1business/pilot/release OPEN/accounts parked/no push-merge-deploy. Review: docs/reviews/R121_FINAL_TERMINAL_REVIEW_2026-10-18.md.
 

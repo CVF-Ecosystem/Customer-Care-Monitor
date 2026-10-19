@@ -181,7 +181,7 @@ func waitDataOwner(tenantID, jobID string, timeout time.Duration) (*JobRunOwner,
 // ClaimWaitDataExecution is transaction-aware admission. Only a returned new
 // claim may be driven by its local owner. An uncertain commit never starts a call.
 func ClaimWaitDataExecution(ctx context.Context, tenantID, actorID, caseID, requestID string, in WaitDataExecuteInput, s *InterventionService) (*models.InterventionExecution, bool, error) {
-	if in.ExpectedCaseVersion < 1 || !waitDataUUIDPattern.MatchString(tenantID) || !waitDataUUIDPattern.MatchString(caseID) || !waitDataUUIDPattern.MatchString(requestID) || !waitDataUUIDPattern.MatchString(in.GrantID) {
+	if in.ExpectedCaseVersion < 1 || (tenantID != models.SingleWorkspaceID && !waitDataUUIDPattern.MatchString(tenantID)) || !waitDataUUIDPattern.MatchString(caseID) || !waitDataUUIDPattern.MatchString(requestID) || !waitDataUUIDPattern.MatchString(in.GrantID) {
 		return nil, false, ErrWaitDataInvalid
 	}
 	tenantID, actorID, caseID, requestID = strings.ToLower(tenantID), strings.ToLower(actorID), strings.ToLower(caseID), strings.ToLower(requestID)

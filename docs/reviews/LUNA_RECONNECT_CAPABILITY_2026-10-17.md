@@ -14,9 +14,9 @@ The current R109 interrupted campaign remains stopped. Its earlier actions, spen
 
 The exact UI text is split across four source files that form the minimal proposed edit set:
 
-- [vi.ts](../../frontend/src/i18n/vi.ts) and [en.ts](../../frontend/src/i18n/en.ts): translated keys for `ai_provider`, `nav_mcp`, `mcp_connections`, `mc_sub`, `api_key`, and `iv_local_only`.
-- [JobDetail.vue](../../frontend/src/views/Jobs/JobDetail.vue): hard-coded “Chưa cấu hình AI Provider” and the instruction to configure an API key.
-- [Dashboard.vue](../../frontend/src/views/Dashboard.vue): visible “API Server”, “Database”, and “Scheduler” service names.
+- `frontend/src/i18n/vi.ts` and `frontend/src/i18n/en.ts`: translated keys for `ai_provider`, `nav_mcp`, `mcp_connections`, `mc_sub`, `api_key`, and `iv_local_only`.
+- `frontend/src/views/Jobs/JobDetail.vue`: hard-coded “Chưa cấu hình AI Provider” and the instruction to configure an API key.
+- `frontend/src/views/Dashboard.vue`: visible “API Server”, “Database”, and “Scheduler” service names.
 
 The visible labels are consumed by `DefaultLayout.vue`, `Settings.vue`, `StepAnalysisSchedule.vue`, `MCPConnections.vue`, and `InterventionCases.vue`; those consumers need no edits if the translated values are corrected. No source file was changed in this audit.
 

@@ -16,7 +16,7 @@ Owner on2026-10-13 authorizes Local to finish review/repairs without returning w
 
 Kết quả hữu hạn dự kiến: đóng bảy finding đã xác định trên các đường auth, dữ liệu dashboard, hiển thị hội thoại và outbound; người dùng không xem nhầm hội thoại, người thiếu quyền không lấy dữ liệu, thất bại gửi không biến thành thành công và job không bị giữ vô hạn bởi SMTP. Đây là hỗ trợ an toàn cho S1/S3/S5/S7, không phải nghiệm thu toàn bộ các stage hoặc luồng CSKH human review/assignment/outcome.
 
-Nguồn chương trình: [điểm kiểm S0–S7 và P0–P4](../../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md), [learning điều phối](../learnings/feedback_orchestrator_roadmap_control.md), [learning repair](../learnings/feedback_cvf_repair_workflow.md). Giữ route sản phẩm một-job gate/proposal rồi human workflow. Không chuyển roadmap sản phẩm thành chuỗi cải thiện framework vô hạn.
+Nguồn chương trình: `docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md` (điểm kiểm S0–S7 và P0–P4), [learning điều phối](../learnings/feedback_orchestrator_roadmap_control.md), [learning repair](../learnings/feedback_cvf_repair_workflow.md). Giữ route sản phẩm một-job gate/proposal rồi human workflow. Không chuyển roadmap sản phẩm thành chuỗi cải thiện framework vô hạn.
 
 ## Current disposition và điều kiện chuyển bước
 

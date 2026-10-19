@@ -1,0 +1,51 @@
+{
+  "observedAt": "2026-10-19T05:32:48.9778697+07:00",
+  "containers": [
+    {
+      "id": "6bb3e504cbed92627f65e526c28c7f60f725442983c03ada63913fa0cc9be251",
+      "name": "/ccma-r123-mysql-54bc229d",
+      "status": "exited",
+      "exitCode": 0,
+      "pid": 0
+    },
+    {
+      "id": "8a1fca3cea585b25fc1b01c76e59bbee7e749437160f29f1d6f0625e66a09898",
+      "name": "/ccma-r128-backend-54bc229d",
+      "status": "exited",
+      "exitCode": 0,
+      "pid": 0
+    },
+    {
+      "id": "9b7303805b69e6c6db654f06a9b1b44dcfbc0804005ee960dbf3c5f1e9095bc8",
+      "name": "/ccma-r128-frontend-54bc229d",
+      "status": "exited",
+      "exitCode": 0,
+      "pid": 0
+    },
+    {
+      "id": "0770fa03aee1c748425e03dcc6a3e3a8413ef2365a6981dc3fc5259e66b2fe3e",
+      "name": "/ccma-nginx-1",
+      "status": "running",
+      "exitCode": 0,
+      "pid": 670
+    },
+    {
+      "id": "07822f249ff071e4f9f08463da804279a57b151901345b7560047d1b23662027",
+      "name": "/ccma-app-1",
+      "status": "running",
+      "exitCode": 0,
+      "pid": 1250
+    },
+    {
+      "id": "ee1fc7f682631ac3c0ca57b80aff7e233ddde405c2618f35ca0aae6e60e23314",
+      "name": "/ccma-db-1",
+      "status": "running",
+      "exitCode": 0,
+      "pid": 673
+    }
+  ],
+  "fixtureListeners": [],
+  "containersVolumesNetworksPreserved": true,
+  "browser": "Current two R128 HTTP tabs closed after logout. Two pre-existing expired fixture error tabs left unchanged after browser URL policy rejected access; no workaround attempted.",
+  "scope": "Only known owned synthetic MySQL stopped after backend completion. Original app states observed by exact IDs, no customer DB content comparison."
+}

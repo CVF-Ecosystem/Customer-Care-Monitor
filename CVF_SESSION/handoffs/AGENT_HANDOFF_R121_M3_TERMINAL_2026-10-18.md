@@ -1,6 +1,6 @@
 # R121 finite M3 terminal proof handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 
@@ -8,7 +8,7 @@ Status: ACTIVE
 - Active phase: REVIEW
 - Active role: Codex /root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; implementation and repair workers idle
 - Active tranche: CCMAI-RUNTIME-121
-- Next allowed move: CCMAI-RUNTIME-121 CHANGES_REQUIRED: original serve exit1/wait observed; Unicode console encoding failure before browser, terminal HOLD/FINAL_EVIDENCE_MISSING. Owned fixture/backend/Vite stopped, three listeners absent, protected9containers10networks472volumes and405sourcepins unchanged. Preserve consumed campaign/caps and raw evidence; read-only bounded follow-up decision only, no automatic retry/successor/provider. FullM2/M3/M1business/pilot/release OPEN/accounts parked/no push-merge-deploy.
+- Next allowed move: Owner-approved local roadmap update only: prepare bounded work orders for confirmed N01 CI portability and N05 docs/README, then reproduce N03 before any repair decision, finish N04 UI evidence and define N02 synthetic startup contract. Local source/log decides external findings. CCMAI-RUNTIME-121 remains CHANGES_REQUIRED/caps consumed; no BUILD/runtime/provider dispatch, full milestones OPEN/accounts parked/no push-merge-deploy.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.
 
 Seed33186d0133fdf7272fe61f20ee1c9ac17bb5b11f precedes BUILD. New owner-directed local route after completed R120 lifetime review, not automatic support chain. INTAKE/DESIGN/SPEC/WORK_ORDER consolidated in decision and inherited contract. Four isolation copies only; Root capability admission then exact admissions before sole new product campaign. No product code repair, old cause UNKNOWN. Worker acknowledgment and actual pre-dispatch gate required before edits. Root retains independent review/runtime/commit ownership. FullM2/M3/M1business/pilot/release OPEN. Original untracked Desktop proposal preserved verbatim in seed commit.
@@ -51,3 +51,13 @@ Postrepair SETUP002 actual wrapper exit0/waitObserved/metadataErrornull. Exact n
 CCMAI-RUNTIME-121 CHANGES_REQUIRED: original serve exit1/wait observed; Unicode console encoding failure before browser, terminal HOLD/FINAL_EVIDENCE_MISSING. Owned fixture/backend/Vite stopped, three listeners absent, protected9containers10networks472volumes and405sourcepins unchanged. Preserve consumed campaign/caps and raw evidence; read-only bounded follow-up decision only, no automatic retry/successor/provider. FullM2/M3/M1business/pilot/release OPEN/accounts parked/no push-merge-deploy.
 
 Root fresh REVIEW acknowledgment after compaction. Original exec30261 returned1; held supervisor25580 wait/exit1, metadataError null. No browser opened. Sol independent read-only diagnosis confirmed readiness print encoding cause and cleanup, raw final backend markers equal but supervisor combined validator skipped absent route ledger. Final stop consumed by supervisor finally, no duplicate stop. Review: docs/reviews/R121_FINAL_TERMINAL_REVIEW_2026-10-18.md. Not FREEZE or closure.
+
+
+## Owner-directed roadmap disposition, 2026-10-18
+
+Owner requests local authority over external review and roadmap correction for validated findings. Root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD records planning-only scope: Owner-approved local roadmap update only: prepare bounded work orders for confirmed N01 CI portability and N05 docs/README, then reproduce N03 before any repair decision, finish N04 UI evidence and define N02 synthetic startup contract. Local source/log decides external findings. CCMAI-RUNTIME-121 remains CHANGES_REQUIRED/caps consumed; no BUILD/runtime/provider dispatch, full milestones OPEN/accounts parked/no push-merge-deploy.
+
+Roadmap: docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md. N01/N05/N04 source/log confirmed; N02 intentional startup limitation needs contract; N03 source-supported hypothesis, HTTP/DB reproduction NOT_RUN. No source/seed/status/cap changes or product tests; old R121 terminal outcome remains authoritative. No new tranche/worker/runtime dispatch.
+
+
+Pointer superseded by CVF_SESSION/handoffs/AGENT_HANDOFF_R122_LOCAL_REVIEW_FIXES_2026-10-18.md for owner-directed source fixes. R121 outcome/caps unchanged.

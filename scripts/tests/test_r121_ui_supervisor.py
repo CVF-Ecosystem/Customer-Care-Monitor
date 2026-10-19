@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import socket
 import subprocess
+import sys
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -52,6 +53,44 @@ class FakeSocket:
 
 
 class R121SupervisorTests(unittest.TestCase):
+    def test_campaign_ready_stdout_is_ascii_safe_on_cp1252_and_readiness_follows_output(self):
+        with tempfile.TemporaryDirectory() as directory:
+            runtime = Path(directory) / 'runtime'
+            code = '''
+import importlib.util, json, sys
+from pathlib import Path
+spec = importlib.util.spec_from_file_location("r121_ui_supervisor", sys.argv[1])
+module = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(module)
+module.RUNTIME = Path(sys.argv[2])
+module.RUNTIME.mkdir(parents=True)
+sys.stdout.reconfigure(encoding="cp1252", errors="strict")
+write_new = module.write_new
+def tracked_write(path, value):
+    if Path(path).name == "campaign_ready.json":
+        print("READY_FILE_WRITE", flush=True)
+    return write_new(path, value)
+module.write_new = tracked_write
+manifest = {"tranche":"CCMAI-RUNTIME-121", "synthetic":True, "note":"Cần kiểm tra hội thoại"}
+module.publish_campaign_ready("http://127.0.0.1:4321", manifest)
+print("SUPERVISOR_CONTINUES", flush=True)
+'''
+            completed = subprocess.run(
+                [sys.executable,'-c',code,str(SCRIPT),str(runtime)],
+                capture_output=True,
+                timeout=10,
+                env={**module.minimal_env(),'PYTHONIOENCODING':'cp1252:strict'},
+            )
+            self.assertEqual(completed.returncode,0,completed.stderr.decode('ascii','replace'))
+            self.assertTrue(completed.stdout.isascii())
+            lines = completed.stdout.decode('ascii').splitlines()
+            self.assertEqual(lines[1:],["READY_FILE_WRITE",'SUPERVISOR_CONTINUES'])
+            announced = json.loads(lines[0])
+            ready = json.loads((runtime/'campaign_ready.json').read_text(encoding='utf-8'))
+            self.assertEqual(announced['result'],'CAMPAIGN_READY')
+            self.assertEqual(announced['manifest']['note'],'Cần kiểm tra hội thoại')
+            self.assertEqual(ready['manifest'],announced['manifest'])
+
     def test_published_port_requires_one_complete_loopback_binding(self):
         self.assertEqual(module.published_port({'3306/tcp':[{'HostIp':'127.0.0.1','HostPort':'49152'}]}),49152)
         for ports in ({}, {'3306/tcp':None}, {'3306/tcp':[]},

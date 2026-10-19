@@ -1,0 +1,211 @@
+{
+  "scope": "Actual local software/synthetic evidence, including interrupted attempts; not runtime governance proof. cvf-allow-secret-fixture",
+  "archiveSha256": "80518553a2dc0f7e5b8798d008cca5550f69ea4b3fd6220fe3753cbb6d22fcca",
+  "files": [
+    {
+      "path": "browser/backend.log",
+      "bytes": 12027,
+      "sha256": "374928ed6664d8b4432967e167d430c495b9fc25a529da6e13649647aac71d1d"
+    },
+    {
+      "path": "browser/detail.dom.txt",
+      "bytes": 5071,
+      "sha256": "9890c4d6632b2739f3409d069200bb97cdf3672d874b7ca402de0b70004b66f7"
+    },
+    {
+      "path": "browser/detail.jpg",
+      "bytes": 98521,
+      "sha256": "63a8dc4298ecf3b9be699dad844275fa5354f9911d9ca826f45cc87e0d08e60d"
+    },
+    {
+      "path": "browser/fixture_identity.json",
+      "bytes": 193,
+      "sha256": "6917e712ec78c03aeddd7deaed4526a0b29d94b4233e05b99aae316ae73e03a1"
+    },
+    {
+      "path": "browser/logout.dom.txt",
+      "bytes": 473,
+      "sha256": "314e746c5f94462d8f25c4d6d5d80f5235d0cc16b3ad5989b9ab9cfdcd622ee3"
+    },
+    {
+      "path": "browser/ready.json",
+      "bytes": 337,
+      "sha256": "c6406a743d5d59ce3c831a2ae4467dbb552b02121576a4bb3025a9ff22d46ea4"
+    },
+    {
+      "path": "browser/stop",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "browser/ui_assertions.json",
+      "bytes": 2611,
+      "sha256": "8513edef0a5a0a67942e6ada6bc007c3708a35d5279dce12756c4391cfdcc88d"
+    },
+    {
+      "path": "browser/ui_ready.json",
+      "bytes": 440,
+      "sha256": "8dc3030895b583f5f1ebe6ca7283ecbcde16d370364c2a58c164bdfba73bfb3a"
+    },
+    {
+      "path": "browser/vite.log",
+      "bytes": 2362,
+      "sha256": "fdf34eb3b295b8826d3b72239a8425f85bd40bb0e2765d8550a1d2d9441faf84"
+    },
+    {
+      "path": "browser/vite_config.mjs",
+      "bytes": 2904,
+      "sha256": "88f90ee3eb3a3d68de6f8f6f40a5d3683b14d544c02f986b94db7df554fa7fd9"
+    },
+    {
+      "path": "browser/vite_routes.jsonl",
+      "bytes": 11518,
+      "sha256": "1e091b80845d3b019c13695d7cdc8ef1620740f0cec091696e4a724428cab149"
+    },
+    {
+      "path": "browser002/backend.log",
+      "bytes": 7605,
+      "sha256": "d8510ccbc81c0fe62ba6ee1e693d6ee58a0a540604e37b0c4b0bdf0985ffe8a8"
+    },
+    {
+      "path": "browser002/detail.dom.txt",
+      "bytes": 5071,
+      "sha256": "1aa63b6438aeacde33f40efa13198dfbb0251a1805b3f14a548e533cf43daff4"
+    },
+    {
+      "path": "browser002/detail.jpg",
+      "bytes": 98269,
+      "sha256": "0379ce3a7164dd9e77967ceb68a31f619f738d388ba3fdf9ac1c2242479bcec7"
+    },
+    {
+      "path": "browser002/fixture_identity.json",
+      "bytes": 193,
+      "sha256": "6917e712ec78c03aeddd7deaed4526a0b29d94b4233e05b99aae316ae73e03a1"
+    },
+    {
+      "path": "browser002/independent_final_case.json",
+      "bytes": 227,
+      "sha256": "3a77376549936b5f00d09bacb5481a280424caa03b46d2793c65c17b0ed05369"
+    },
+    {
+      "path": "browser002/logout.dom.txt",
+      "bytes": 473,
+      "sha256": "314e746c5f94462d8f25c4d6d5d80f5235d0cc16b3ad5989b9ab9cfdcd622ee3"
+    },
+    {
+      "path": "browser002/ready.json",
+      "bytes": 337,
+      "sha256": "de186d375304d6542c383c2759a23f0762dfbcd21aa9a10687a13554749308c1"
+    },
+    {
+      "path": "browser002/runner.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "browser002/runner.stdout",
+      "bytes": 30,
+      "sha256": "f18f35f8c84e26537e15b18fbebb064cdf658e729c87a99eb16ef985c0fd89fa"
+    },
+    {
+      "path": "browser002/stop",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "browser002/ui_observation.json",
+      "bytes": 2390,
+      "sha256": "44a06a77959e14423f52abdee49665755d540aec24d0c7a071c633840a59ca53"
+    },
+    {
+      "path": "browser002/ui_ready.json",
+      "bytes": 440,
+      "sha256": "08f8ece67402e12cde3df5342fd45392eaabaf688de39b27bc67c1c7b0d06974"
+    },
+    {
+      "path": "browser002/vite.log",
+      "bytes": 568,
+      "sha256": "81298e1c541f768c187cd905a2120e6b54d6dce6ca43440c5ec144975e8df949"
+    },
+    {
+      "path": "browser002/vite_config.mjs",
+      "bytes": 2906,
+      "sha256": "c4b9eb7bc363f92bb7b273826ad800ba0b51c9c43c605501b65be8fa6c7db19a"
+    },
+    {
+      "path": "browser002/vite_routes.jsonl",
+      "bytes": 5806,
+      "sha256": "bd5d1606b59e6de2005c8569df8a9c6d738200e42429f4328324f3a2c0c9b2d5"
+    },
+    {
+      "path": "browser_runner.py",
+      "bytes": 3429,
+      "sha256": "22585f5551b31eceb91fd61e67a6d6d766ba6e07301a010f8c7ecec6b8a4200b"
+    },
+    {
+      "path": "browser_runner002.py",
+      "bytes": 3432,
+      "sha256": "7575daf9306ab348c2ac23b237d2c78a984c595bcc4131868895c3627b0f7a85"
+    },
+    {
+      "path": "cleanup.json",
+      "bytes": 615,
+      "sha256": "721af76585b235f351ccd36a56748ccbe745a11b3e0cb555192ef07e55a5c271"
+    },
+    {
+      "path": "docs-build.log",
+      "bytes": 803,
+      "sha256": "b9938f9968d3bea390d88c47677c838c8f4bfd52fc9a445c46fc2b2683a7c1fb"
+    },
+    {
+      "path": "docs-install.log",
+      "bytes": 338,
+      "sha256": "623852b7e21de24f395afdd19c9c2fcb42b82721850b4495ca4744b0f1726a6a"
+    },
+    {
+      "path": "frontend-build.log",
+      "bytes": 13637,
+      "sha256": "9e6e25423e4e9b25c7fe2b7ea94a5f1a65a07be75711b4c608be017e0a255015"
+    },
+    {
+      "path": "frontend-test.log",
+      "bytes": 6411,
+      "sha256": "3a0ebd1079759ecfb37784f41eb28a0581a6ac77529ae5c1c52131341767703e"
+    },
+    {
+      "path": "go-focused.json",
+      "bytes": 507707,
+      "sha256": "9d42446aa2a7e384945dca230ad177a431933dcc7fa8fe31089788c05892158a"
+    },
+    {
+      "path": "go-test-interrupted.json",
+      "bytes": 35463749,
+      "sha256": "418d9b03ee0ded6dbab8c2d1de014795ecd245e9e7ef6fb3ee6e3f42422798e7"
+    },
+    {
+      "path": "interruption.json",
+      "bytes": 301,
+      "sha256": "207feda8aee5163bb51e5d8089725d8da3160dfe93feaf4f7914bffa3e5cbe1d"
+    },
+    {
+      "path": "listeners_after.json",
+      "bytes": 4,
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "path": "python-test.log",
+      "bytes": 37722,
+      "sha256": "066aaabb2dcca6577d65f45c1b235fb9b5cd554d95cd86d4eb0eb01824770439"
+    },
+    {
+      "path": "root-n03.log",
+      "bytes": 56757,
+      "sha256": "ed74b3f16a88fd7193efb506d398ce9a307644c14f89b6eedacde4f3da93a20a"
+    },
+    {
+      "path": "validation_runner.py",
+      "bytes": 1883,
+      "sha256": "8d40f3a4fb18c89492f7ee298cda2d1de18aa8254c6d9de4b5ed0bc4f7348d5e"
+    }
+  ]
+}

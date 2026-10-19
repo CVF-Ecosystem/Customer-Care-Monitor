@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "x-roadmapTracking": {
     "updatedAt": "2026-10-18",
-    "status": "M3_R121_TERMINAL_HOLD_UI_NOT_RUN",
+    "status": "LOCAL_REVIEW_FIXES_ACCEPTED_QUALIFIED_CURRENT_PACKAGE_COVERAGE",
     "currentCheckpoint": "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
     "stages": {
       "S0": "PARTIAL_LIVE_BASELINE_OPEN",
@@ -23,23 +23,22 @@
       "M5 release/portable operations"
     ],
     "currentBlockers": [
-      "R121 original serve exit1 due Unicode console encoding before browser. Cleanup/held waits proven, UI and combined route/final accounting incomplete. CHANGES_REQUIRED, no automatic retry.",
-      "R117 actual WAIT_DATA executor bounded source/native/one real synthetic flow accepted with faithful usage and synthetic API confirmation; ordinary installed activation/current UI flow/fullM2/M3 stage exit remain OPEN.",
-      "R114 original terminal evidence MISSING/noFREEZE; B08rasterqualified/B09unsupported",
-      "Dashboard3known failures, ordinary installed rerun activation/fullM2/M3/pilot/release and M1business acceptance OPEN; current R120 UI observations remain bounded synthetic presentation only."
+      "B09 offline browser control is unavailable; full M3 acceptance requires its remaining explicit dispositions.",
+      "Business/pilot/account and hosted release acceptance remain open."
     ],
-    "executionAuthorityExpanded": true,
+    "executionAuthorityExpanded": false,
     "eta": "NOT_ESTABLISHED",
     "deliveryRoadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
     "currentMilestone": "M3",
-    "milestoneAcceptance": "R117_BOUNDED_BACKEND_REAL_R118_SOURCE_R120_SYNTHETIC_UI_OBSERVED_TERMINAL_MISSING_FULL_M3_OPEN",
+    "milestoneAcceptance": "R128_CURRENT_SYNTHETIC_HUMAN_WORKFLOW_AND_READER_NAMES_ACCEPTED_FULL_M3_OPEN",
     "deliveryRoadmapPublication": "d72de76984e4aad9c208cc82e6093578797b5340",
     "m1BusinessPilotAcceptance": "OPEN",
-    "currentPublication": "LOCAL_ONLY_NOT_PUSHED"
+    "currentPublication": "R130_FEATURE_BRANCH_REWRITE_PUBLISHED_FORCE_WITH_LEASE_VERIFIED",
+    "nextPlannedWork": "CCMAI-RUNTIME-130 FROZEN: owner approved candidate 74bbd4ce1e4b58607d6aa071b039a73856b4deef; force-with-lease and GitHub ref readback confirm codex/ccma-m2-intervention at that SHA, with the ZIP absent and origin/main unchanged at d7a6f7635608d1ad44169372a6b5e0fbcbcd09c4. Local archive backup retained; R130 is closed with no merge."
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "FREEZE",
   "completedCapabilities": [
     "R118 REVIEW_PASS SOURCE_COMPONENT_ONLY at7f74a75f93671973bcfe55b5cb491076c0d2bdf9: current proposal pointer/lineage binding, safe legacy fallback and proposal-less data actions, VN/EN WAIT_DATA history. Root24tests/app typecheckPASS, original byte archive/source pins verified; changed-screen UI proof NOT_RUN/FREEZE OPEN. docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md",
     "R117 bounded WAIT_DATA backend real synthetic flow independently accepted: new same-case proposal after source revision, faithful realAlibaba340/297tokens, synthetic CONFIRM persisted, one call/debit, native11top11nested+engine1PASS. Exact owned owner-authorized restart/finalstop and operational protected equality observed; original interruption/cleanupHOLD retained. Current UI/fullM2/M3/pilot/release remain OPEN. docs/reviews/R117_FINAL_INDEPENDENT_REVIEW_2026-10-18.md",
@@ -2018,7 +2017,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-121",
+  "activeTranche": "CCMAI-RUNTIME-130",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
@@ -2598,7 +2597,7 @@
     "nextGate": "Separate SPEC/work order for actual AI executor/integration or M1 business decisions",
     "actualRerun": "OPEN_EXECUTOR_NOT_INCLUDED"
   },
-  "x-activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R121_M3_TERMINAL_2026-10-18.md",
+  "x-activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R130_BRANCH_HISTORY_REWRITE_2026-10-19.md",
   "x-ownerRepairContinuation": "CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json",
   "x-r102Current": {
     "status": "FROZEN_LOCAL_ONLY",
@@ -3002,5 +3001,86 @@
       "newFixtureStart": 1
     },
     "status": "CONSUMED_SETUP_READY_CAMPAIGN_HOLD"
+  },
+  "x-localReviewRoadmapIntake": {
+    "status": "PLANNING_ONLY_NOT_DISPATCHED",
+    "ownerInstruction": "Local decides which external feedback is valid; update roadmap for confirmed fixes.",
+    "roadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "localSource": "1e3db8b12d8576b33429fa3ece158786ee0b4f7e",
+    "reviewedMerge": "d7a6f7635608d1ad44169372a6b5e0fbcbcd09c4",
+    "sourceTreesEqual": true,
+    "findings": {
+      "N01": "CONFIRMED_FIX_PLANNED",
+      "N05": "CONFIRMED_FIX_PLANNED",
+      "N03": "SOURCE_SUPPORTED_REPRO_REQUIRED",
+      "N04": "CONFIRMED_FIX_PLANNED",
+      "N02": "CONFIRMED_LIMIT_CONTRACT_REQUIRED"
+    },
+    "order": [
+      "N01",
+      "N05",
+      "N03_REPRO_FIRST",
+      "N04",
+      "N02_SYNTHETIC_CONTRACT"
+    ],
+    "runtimeAuthority": "NONE_NEW",
+    "providerAuthority": "NONE_NEW",
+    "productChecksThisUpdate": "NOT_RUN",
+    "externalReportRole": "INPUT_ONLY_LOCAL_DISPOSITION_CONTROLS"
+  },
+  "x-localReviewFixes": {
+    "status": "REVIEW_PENDING",
+    "review": "docs/reviews/R122_LOCAL_FIX_REVIEW_2026-10-18.md",
+    "scope": "N01/N03/N04/N05 source repairs; N02 visibility/contract only",
+    "fullGoSuite": "INTERRUPTED_NOT_PASS",
+    "frontendFullSuite": "470_PASS_3_PREEXISTING_DASHBOARD_FAIL",
+    "providerCalls": 0
+  },
+  "x-pendingReviewWorkOrders": [],
+  "x-r124CurrentOutcome": {
+    "status": "SUPERSEDED_BY_R126_QUALIFIED_REVIEW",
+    "review": "docs/reviews/R124_CLEAN_INSTALL_REVIEW_2026-10-18.md",
+    "providerCalls": 0,
+    "currentUI": "PASS_ORIGINAL_TERMINAL_EQUAL_FINGERPRINTS",
+    "fullSuites": "PENDING"
+  },
+  "x-r125CurrentOutcome": {
+    "status": "SUPERSEDED_BY_R126_QUALIFIED_REVIEW",
+    "review": "docs/reviews/R125_FINAL_LOCAL_FIX_REVIEW_2026-10-18.md",
+    "providerCalls": 0,
+    "frontend": "474_PASS_BUILD_PASS",
+    "fullGo": "EXIT_1_PRESERVED",
+    "currentUI": "ORIGINAL_TERMINAL_PASS",
+    "ordinaryBinary": "GRANT_ISSUED_ZERO_CALLS"
+  },
+  "x-r125CIAlignment": {
+    "status": "SOURCE_REVIEW_PASS_HOSTED_CI_NOT_RUN",
+    "scope": "One workflow argument: -timeout30m, same as the full native run already authorized under R125",
+    "hostedCI": "NOT_RUN"
+  },
+  "x-r126CurrentOutcome": {
+    "status": "REVIEW_PASS",
+    "review": "docs/reviews/R126_FINAL_CURRENT_PACKAGE_REVIEW_2026-10-18.md",
+    "originalFullR125": "EXIT_1_DB_UNAVAILABLE_SKIPS_AND_MCP_FIXTURE_FAILURE",
+    "currentPackageCoverage": "PASS_DERIVED_WHOLE_PACKAGES_SOURCE_GUARDED",
+    "providerCalls": 0,
+    "hostedCI": "NOT_RUN",
+    "dbGate": "PASS_5_SENTINELS_NO_DB_UNAVAILABLE_SKIP",
+    "freshPostRepairSingleFullInvocation": "NOT_REPEATED"
+  },
+  "x-r127CurrentOutcome": {
+    "status": "REVIEW_PASS_BOUNDED_SYNTHETIC",
+    "review": "docs/reviews/R127_M3_BROWSER_ACTIONS_REVIEW_2026-10-19.md",
+    "browser": "PASS_R2_ORIGINAL_EXIT0",
+    "providerCalls": 0,
+    "firstRun": "EXIT1_RETAINED_FIXTURE_POINTER_BASELINE",
+    "fullM3": "OPEN"
+  },
+  "x-r128CurrentOutcome": {
+    "status": "REVIEW_PASS",
+    "review": "docs/reviews/R128_CASE_PARTICIPANT_NAMES_REVIEW_2026-10-19.md",
+    "providerCalls": 0,
+    "currentVerification": "NATIVE7_UI21_BUILD_BROWSER_EXIT0",
+    "sourceCommit": "bc5333946ddefcfa137db4f3c253ea507bdf06e5"
   }
 }

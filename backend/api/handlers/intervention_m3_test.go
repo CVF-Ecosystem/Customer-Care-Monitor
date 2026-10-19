@@ -6,6 +6,7 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"net"
 	"net/http"
@@ -184,6 +185,284 @@ func (f *m3Fixture) action(id, caseID, name string, version int, more map[string
 		req[k] = v
 	}
 	return req
+}
+
+func TestM3CaseParticipantsAreScopedToHistory(t *testing.T) {
+	f := m3FixtureStart(t)
+	for id, name := range map[string]string{f.owner: "Case owner", f.member: "Current assignee", f.assignee: "Previous assignee"} {
+		if err := db.DB.Model(&models.User{}).Where("id = ?", id).Update("name", name).Error; err != nil {
+			t.Fatal(err)
+		}
+	}
+	foreignID := pkg.NewUUID()
+	m3MustCreate(t, &models.User{ID: foreignID, Email: foreignID + "@example.invalid", Name: "Foreign private name", PasswordHash: "synthetic", CreatedAt: time.Now(), UpdatedAt: time.Now()}, &models.UserTenant{UserID: foreignID, TenantID: f.otherTenant, Role: "member", Permissions: `{"intervention_cases":"r"}`})
+	casePath := "/intervention-cases/" + f.caseID
+	waitPath := "/intervention-cases/" + f.waitID
+	due := time.Now().UTC().Add(24 * time.Hour).Format(time.RFC3339)
+	steps := []struct {
+		path, actor, caseID, action string
+		version                     int
+		fields                      map[string]any
+	}{
+		{casePath, f.member, f.caseID, "CORRECT", 1, map[string]any{"explanation": "Human correction", "next_action": "Check order"}},
+		{casePath, f.owner, f.caseID, "ASSIGN", 2, map[string]any{"assignee_id": f.assignee, "due_at": due}},
+		{casePath, f.owner, f.caseID, "ASSIGN", 3, map[string]any{"assignee_id": f.member, "due_at": due}},
+		{casePath, f.member, f.caseID, "RESOLVE", 4, map[string]any{"outcome": "Completed"}},
+		{waitPath, f.owner, f.waitID, "ASSIGN_DATA", 1, map[string]any{"assignee_id": f.assignee, "due_at": due, "next_action": "Collect source"}},
+		{waitPath, f.owner, f.waitID, "ASSIGN_DATA", 2, map[string]any{"assignee_id": f.member, "due_at": due, "next_action": "Collect missing source"}},
+	}
+	for _, step := range steps {
+		if rec := f.send(http.MethodPost, f.tenant, step.actor, step.path+"/actions", f.action(step.actor, step.caseID, step.action, step.version, step.fields)); rec.Code != http.StatusOK {
+			t.Fatalf("%s: %d %s", step.action, rec.Code, rec.Body.String())
+		}
+	}
+	var event models.InterventionHumanEvent
+	if err := db.DB.Where("case_id = ?", f.caseID).Order("case_version ASC").First(&event).Error; err != nil {
+		t.Fatal(err)
+	}
+	var before map[string]any
+	if err := json.Unmarshal([]byte(event.Before), &before); err != nil {
+		t.Fatal(err)
+	}
+	before["assignee_id"], before["data_owner_id"] = foreignID, "malformed-id"
+	forged, _ := json.Marshal(before)
+	if err := db.DB.Model(&event).Update("before", string(forged)).Error; err != nil {
+		t.Fatal(err)
+	}
+	check := func(path string, want map[string]string) {
+		t.Helper()
+		rec := f.send(http.MethodGet, f.tenant, f.reader, path, nil)
+		if rec.Code != http.StatusOK {
+			t.Fatalf("reader detail: %d %s", rec.Code, rec.Body.String())
+		}
+		var detail struct {
+			Participants []map[string]any `json:"participants"`
+		}
+		if err := json.Unmarshal(rec.Body.Bytes(), &detail); err != nil {
+			t.Fatal(err)
+		}
+		got := map[string]string{}
+		for _, item := range detail.Participants {
+			if len(item) != 2 {
+				t.Fatalf("participant exposed extra fields: %v", item)
+			}
+			id, idOK := item["user_id"].(string)
+			name, nameOK := item["name"].(string)
+			if !idOK || !nameOK {
+				t.Fatalf("invalid participant: %v", item)
+			}
+			got[id] = name
+		}
+		if len(got) != len(want) {
+			t.Fatalf("participants = %v, want %v", got, want)
+		}
+		for id, name := range want {
+			if got[id] != name {
+				t.Fatalf("participant %s = %q, want %q", id, got[id], name)
+			}
+		}
+		if _, found := got[foreignID]; found {
+			t.Fatal("foreign tenant name leaked")
+		}
+	}
+	check(casePath, map[string]string{f.owner: "Case owner", f.member: "Current assignee", f.assignee: "Previous assignee"})
+	check(waitPath, map[string]string{f.owner: "Case owner", f.member: "Current assignee", f.assignee: "Previous assignee"})
+	for _, id := range []string{f.owner, f.member} {
+		if rec := f.send(http.MethodGet, f.tenant, id, "/intervention-assignees", nil); rec.Code != http.StatusOK {
+			t.Fatalf("editor assignees: %d", rec.Code)
+		}
+	}
+	if rec := f.send(http.MethodGet, f.tenant, f.reader, "/intervention-assignees", nil); rec.Code != http.StatusForbidden {
+		t.Fatalf("reader assignees: %d", rec.Code)
+	}
+}
+
+func TestM3CaseParticipantLookupFailureIsClosed(t *testing.T) {
+	f := m3FixtureStart(t)
+	path := "/intervention-cases/" + f.caseID
+	if rec := f.send(http.MethodPost, f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "CORRECT", 1, map[string]any{"explanation": "Reviewed", "next_action": "Follow up"})); rec.Code != http.StatusOK {
+		t.Fatalf("seed actor event: %d %s", rec.Code, rec.Body.String())
+	}
+	const hook = "m3:participant_batch_failure"
+	fired := 0
+	if err := db.DB.Callback().Row().Before("gorm:row").Register(hook, func(tx *gorm.DB) {
+		if tx.Statement.TableExpr == nil || tx.Statement.TableExpr.SQL != "user_tenants AS ut" || len(tx.Statement.Selects) != 1 || tx.Statement.Selects[0] != "ut.user_id, users.name" {
+			return
+		}
+		where, ok := tx.Statement.Clauses["WHERE"].Expression.(clause.Where)
+		if !ok {
+			return
+		}
+		for _, condition := range where.Exprs {
+			if expression, ok := condition.(clause.Expr); ok && strings.Contains(expression.SQL, "ut.user_id IN") {
+				fired++
+				tx.AddError(errors.New("forced participant lookup failure"))
+				return
+			}
+		}
+	}); err != nil {
+		t.Fatal(err)
+	}
+	removed := false
+	t.Cleanup(func() {
+		if !removed {
+			_ = db.DB.Callback().Row().Remove(hook)
+		}
+	})
+	rec := f.send(http.MethodGet, f.tenant, f.reader, path, nil)
+	if fired != 1 {
+		t.Fatalf("participant batch failure callback fired %d times", fired)
+	}
+	if rec.Code != http.StatusServiceUnavailable || strings.TrimSpace(rec.Body.String()) != `{"error":"participants_unavailable"}` {
+		t.Fatalf("lookup failure returned %d %s", rec.Code, rec.Body.String())
+	}
+	if err := db.DB.Callback().Row().Remove(hook); err != nil {
+		t.Fatal(err)
+	}
+	removed = true
+	if rec := f.send(http.MethodGet, f.tenant, f.reader, path, nil); rec.Code != http.StatusOK {
+		t.Fatalf("detail after hook removal: %d %s", rec.Code, rec.Body.String())
+	}
+}
+
+// A human-owned case must retain a way to act after a supported local source
+// writer adds a message; the old AI proposal remains bound to its first source.
+func TestM3ChangedSourceAfterAssignmentRequiresExplicitReview(t *testing.T) {
+	f := m3FixtureStart(t)
+	path := "/intervention-cases/" + f.caseID
+	due := time.Now().UTC().Add(24 * time.Hour).Format(time.RFC3339)
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "CONFIRM", 1, nil)); rec.Code != 200 {
+		t.Fatalf("confirm: %d %s", rec.Code, rec.Body.String())
+	}
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "ASSIGN", 2, map[string]any{"assignee_id": f.assignee, "due_at": due})); rec.Code != 200 {
+		t.Fatalf("assign: %d %s", rec.Code, rec.Body.String())
+	}
+	now := time.Now().UTC().Add(time.Second)
+	m3MustCreate(t, &models.Message{ID: pkg.NewUUID(), TenantID: f.tenant, ConversationID: f.conversation, ExternalMessageID: pkg.NewUUID(), SenderType: "customer", Content: "Tôi vẫn chờ phản hồi", ContentType: "text", Attachments: "[]", RawData: "{}", SentAt: now, CreatedAt: now})
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "RESOLVE", 3, map[string]any{"outcome": "Đã xử lý"})); rec.Code != 409 {
+		t.Fatalf("stale resolution: %d %s", rec.Code, rec.Body.String())
+	}
+	var after models.InterventionCase
+	if err := db.DB.Where("id = ?", f.caseID).Take(&after).Error; err != nil {
+		t.Fatal(err)
+	}
+	if after.Version != 3 || after.WorkState != "ASSIGNED" || after.AssigneeID == nil || *after.AssigneeID != f.assignee {
+		t.Fatalf("source guard changed owner/state: %+v", after)
+	}
+	var events int64
+	if err := db.DB.Model(&models.InterventionHumanEvent{}).Where("case_id = ?", f.caseID).Count(&events).Error; err != nil || events != 2 {
+		t.Fatalf("guard history count=%d err=%v", events, err)
+	}
+	var detail struct {
+		CurrentSourceDigest   string `json:"current_source_digest"`
+		ReviewedSourceCurrent bool   `json:"reviewed_source_current"`
+	}
+	if rec := f.send("GET", f.tenant, f.owner, path, nil); rec.Code != 200 || json.Unmarshal(rec.Body.Bytes(), &detail) != nil || len(detail.CurrentSourceDigest) != 64 || detail.ReviewedSourceCurrent {
+		t.Fatalf("changed detail: %d %s", rec.Code, rec.Body.String())
+	}
+	ack := f.action(f.owner, f.caseID, "ACKNOWLEDGE_SOURCE_CHANGE", 3, map[string]any{"expected_current_digest": strings.Repeat("0", 64)})
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", ack); rec.Code != 409 {
+		t.Fatalf("blind acknowledgement: %d %s", rec.Code, rec.Body.String())
+	}
+	ack["expected_current_digest"] = detail.CurrentSourceDigest
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "ACKNOWLEDGE_SOURCE_CHANGE", 2, map[string]any{"expected_current_digest": detail.CurrentSourceDigest})); rec.Code != 409 {
+		t.Fatalf("stale acknowledgement version: %d %s", rec.Code, rec.Body.String())
+	}
+	if rec := f.send("POST", f.tenant, f.reader, path+"/actions", ack); rec.Code != 403 {
+		t.Fatalf("reader acknowledgement: %d %s", rec.Code, rec.Body.String())
+	}
+	if rec := f.send("POST", f.tenant, f.member, path+"/actions", ack); rec.Code != 403 {
+		t.Fatalf("reviewer without source access: %d %s", rec.Code, rec.Body.String())
+	}
+	if rec := f.send("POST", f.otherTenant, f.owner, path+"/actions", ack); rec.Code != 403 {
+		t.Fatalf("foreign tenant acknowledgement: %d %s", rec.Code, rec.Body.String())
+	}
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", ack); rec.Code != 200 {
+		t.Fatalf("acknowledgement: %d %s", rec.Code, rec.Body.String())
+	}
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "RESOLVE", 4, map[string]any{"outcome": "Đã xử lý"})); rec.Code != 200 {
+		t.Fatalf("resolution after review: %d %s", rec.Code, rec.Body.String())
+	}
+	if err := db.DB.Where("id = ?", f.caseID).Take(&after).Error; err != nil || after.Version != 5 || after.WorkState != "RESOLVED" || after.AssigneeID == nil || *after.AssigneeID != f.assignee || after.ReviewedDataRevisionID == nil {
+		t.Fatalf("recovered state: %+v err=%v", after, err)
+	}
+	var review models.InterventionDataRevision
+	if err := db.DB.Where("id = ?", *after.ReviewedDataRevisionID).Take(&review).Error; err != nil || !engine.VerifyInterventionDataRevision(review) || review.Digest != detail.CurrentSourceDigest {
+		t.Fatalf("reviewed revision invalid: %+v err=%v", review, err)
+	}
+	if err := db.DB.Model(&models.InterventionHumanEvent{}).Where("case_id = ?", f.caseID).Count(&events).Error; err != nil || events != 4 {
+		t.Fatalf("recovered history count=%d err=%v", events, err)
+	}
+	var original models.InterventionProposal
+	if err := db.DB.Where("id = ?", f.proposal).Take(&original).Error; err != nil || original.SnapshotID != f.snapshot || original.SnapshotDigest != after.SnapshotDigest || after.HumanAssessment != "CONFIRM" || after.Disposition != "HUMAN_CONFIRM" {
+		t.Fatalf("original AI proposal or human decision changed: case=%+v proposal=%+v err=%v", after, original, err)
+	}
+	var reviewEvent models.InterventionHumanEvent
+	if err := db.DB.Where("case_id = ? AND action = ?", f.caseID, "ACKNOWLEDGE_SOURCE_CHANGE").Order("case_version ASC").Take(&reviewEvent).Error; err != nil || reviewEvent.DataRevisionID == nil || *reviewEvent.DataRevisionID != review.ID || reviewEvent.SourceStatus != "CHANGED" {
+		t.Fatalf("review audit event missing: %+v err=%v", reviewEvent, err)
+	}
+	// A second source change invalidates the acknowledgement, including after
+	// resolution. The reviewer can explicitly bind the newer version to reopen.
+	newer := time.Now().UTC().Add(2 * time.Second)
+	m3MustCreate(t, &models.Message{ID: pkg.NewUUID(), TenantID: f.tenant, ConversationID: f.conversation, ExternalMessageID: pkg.NewUUID(), SenderType: "customer", Content: "Tôi vẫn chưa nhận được kết quả", ContentType: "text", Attachments: "[]", RawData: "{}", SentAt: newer, CreatedAt: newer})
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "REOPEN", 5, map[string]any{"due_at": due})); rec.Code != 409 {
+		t.Fatalf("reopen after newer change: %d %s", rec.Code, rec.Body.String())
+	}
+	if rec := f.send("GET", f.tenant, f.owner, path, nil); rec.Code != 200 || json.Unmarshal(rec.Body.Bytes(), &detail) != nil || detail.ReviewedSourceCurrent || detail.CurrentSourceDigest == review.Digest {
+		t.Fatalf("newer source detail: %d %s", rec.Code, rec.Body.String())
+	}
+	ack = f.action(f.owner, f.caseID, "ACKNOWLEDGE_SOURCE_CHANGE", 5, map[string]any{"expected_current_digest": detail.CurrentSourceDigest})
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", ack); rec.Code != 200 {
+		t.Fatalf("newer source acknowledgement: %d %s", rec.Code, rec.Body.String())
+	}
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "REOPEN", 6, map[string]any{"due_at": due})); rec.Code != 200 {
+		t.Fatalf("reopen after newer review: %d %s", rec.Code, rec.Body.String())
+	}
+}
+
+func TestM3ChangedSourceBeforeAssessmentStillConflicts(t *testing.T) {
+	f := m3FixtureStart(t)
+	path := "/intervention-cases/" + f.caseID
+	now := time.Now().UTC().Add(time.Second)
+	m3MustCreate(t, &models.Message{ID: pkg.NewUUID(), TenantID: f.tenant, ConversationID: f.conversation, ExternalMessageID: pkg.NewUUID(), SenderType: "customer", Content: "Tôi vẫn chờ", ContentType: "text", Attachments: "[]", RawData: "{}", SentAt: now, CreatedAt: now})
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "CONFIRM", 1, nil)); rec.Code != 409 {
+		t.Fatalf("confirm on changed source: %d %s", rec.Code, rec.Body.String())
+	}
+	var detail struct {
+		CurrentSourceDigest string `json:"current_source_digest"`
+	}
+	if rec := f.send("GET", f.tenant, f.owner, path, nil); rec.Code != 200 || json.Unmarshal(rec.Body.Bytes(), &detail) != nil {
+		t.Fatalf("changed detail: %d %s", rec.Code, rec.Body.String())
+	}
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "ACKNOWLEDGE_SOURCE_CHANGE", 1, map[string]any{"expected_current_digest": detail.CurrentSourceDigest})); rec.Code != 409 {
+		t.Fatalf("acknowledgement before assessment: %d %s", rec.Code, rec.Body.String())
+	}
+}
+
+func TestM3ChangedSourceAfterAssessmentBeforeAssignmentCanRecover(t *testing.T) {
+	f := m3FixtureStart(t)
+	path := "/intervention-cases/" + f.caseID
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "CONFIRM", 1, nil)); rec.Code != 200 {
+		t.Fatalf("confirm: %d %s", rec.Code, rec.Body.String())
+	}
+	now := time.Now().UTC().Add(time.Second)
+	m3MustCreate(t, &models.Message{ID: pkg.NewUUID(), TenantID: f.tenant, ConversationID: f.conversation, ExternalMessageID: pkg.NewUUID(), SenderType: "customer", Content: "Tôi vẫn chờ", ContentType: "text", Attachments: "[]", RawData: "{}", SentAt: now, CreatedAt: now})
+	due := time.Now().UTC().Add(24 * time.Hour).Format(time.RFC3339)
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "ASSIGN", 2, map[string]any{"assignee_id": f.assignee, "due_at": due})); rec.Code != 409 {
+		t.Fatalf("assign before review: %d %s", rec.Code, rec.Body.String())
+	}
+	var detail struct {
+		CurrentSourceDigest string `json:"current_source_digest"`
+	}
+	if rec := f.send("GET", f.tenant, f.owner, path, nil); rec.Code != 200 || json.Unmarshal(rec.Body.Bytes(), &detail) != nil {
+		t.Fatalf("changed detail: %d %s", rec.Code, rec.Body.String())
+	}
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "ACKNOWLEDGE_SOURCE_CHANGE", 2, map[string]any{"expected_current_digest": detail.CurrentSourceDigest})); rec.Code != 200 {
+		t.Fatalf("ack after assessment: %d %s", rec.Code, rec.Body.String())
+	}
+	if rec := f.send("POST", f.tenant, f.owner, path+"/actions", f.action(f.owner, f.caseID, "ASSIGN", 3, map[string]any{"assignee_id": f.assignee, "due_at": due})); rec.Code != 200 {
+		t.Fatalf("assign after review: %d %s", rec.Code, rec.Body.String())
+	}
 }
 
 func TestR101HumanWorkflowNative(t *testing.T) {

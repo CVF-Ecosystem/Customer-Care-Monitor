@@ -1,0 +1,25 @@
+{
+  "scope": "Actual local checks/build. Initial reviewer control failed because IMPLEMENTATION_STATUS.activeTranche was stale; corrected without product change. N/A controls do not claim closeability/dispatch acceptance.",
+  "checks": {
+    "final-preflight": {
+      "exit": 0,
+      "output": "[PASS] provenance\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\n[PASS] continuity\n[PASS] tranche\n[PASS] claims\n[PASS] secrets\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\n[PASS] workflows\n[PASS] catalog\nCVF downstream preflight: PASS (7/7 executed gates passed)\n"
+    },
+    "initial-reviewer": {
+      "exit": 2,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[FAIL] CVF-DG-CONT-01 FAIL\n       SURFACE_MISMATCH @ CVF_SESSION/ACTIVE_SESSION_STATE.json#/activeTranche: activeTranche differs across surfaces: CVF_SESSION/ACTIVE_SESSION_STATE.json#/activeTranche='CCMAI-RUNTIME-127-A'; IMPLEMENTATION_STATUS.json#/activeTranche='CCMAI-RUNTIME-126'; CVF_SESSION/handoffs/AGENT_HANDOFF_R127_M3_BROWSER_ACTIONS_2026-10-19.md#Active tranche='CCMAI-RUNTIME-127-A'\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=dadcdca07c3d44fd71a38314b1888a7e4003e092 candidates=19 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\n       note: docs/work_orders/CCMAI_RUNTIME_127_M3_BROWSER_ACTIONS.md: status REVIEWER_ACCEPTED is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\n[PASS] CVF-DG-ROUTE-01 NOT_APPLICABLE_WITH_REASON - no dispatch packet declares dispatchKind in scope\n[PASS] CVF-DG-ROLE-01 PASS\n       note: checked: docs/reviews/R127_M3_BROWSER_ACTIONS_REVIEW_2026-10-19.md\n       note: docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 3 document(s) scanned\nRESULT: FAIL phase=reviewer-fast mandatoryControls=7 failed=1\n"
+    },
+    "final-reviewer": {
+      "exit": 0,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=dadcdca07c3d44fd71a38314b1888a7e4003e092 candidates=19 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\n       note: docs/work_orders/CCMAI_RUNTIME_127_M3_BROWSER_ACTIONS.md: status REVIEWER_ACCEPTED is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\n[PASS] CVF-DG-ROUTE-01 NOT_APPLICABLE_WITH_REASON - no dispatch packet declares dispatchKind in scope\n[PASS] CVF-DG-ROLE-01 PASS\n       note: checked: docs/reviews/R127_M3_BROWSER_ACTIONS_REVIEW_2026-10-19.md\n       note: docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 3 document(s) scanned\nRESULT: PASS phase=reviewer-fast mandatoryControls=7 failed=0\n"
+    },
+    "final-precommit": {
+      "exit": 0,
+      "output": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=dadcdca07c3d44fd71a38314b1888a7e4003e092 candidates=19 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\n       note: docs/work_orders/CCMAI_RUNTIME_127_M3_BROWSER_ACTIONS.md: status REVIEWER_ACCEPTED is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\n[PASS] CVF-DG-ROLE-01 PASS\n       note: checked: docs/reviews/R127_M3_BROWSER_ACTIONS_REVIEW_2026-10-19.md\n       note: docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 3 document(s) scanned\nRESULT: PASS phase=pre-commit mandatoryControls=6 failed=0\n"
+    },
+    "final-docs": {
+      "exit": 0,
+      "output": "\n> docs:build\n> vitepress build\n\n\n  vitepress v1.6.4\n\n- building client + server bundles...\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\nThe language 'env' is not loaded, falling back to 'txt' for syntax highlighting.\n\u2713 building client + server bundles...\n- rendering pages...\n\u2713 rendering pages...\nbuild complete in 78.68s.\n"
+    }
+  }
+}

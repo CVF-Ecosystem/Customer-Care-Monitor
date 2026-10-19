@@ -1,6 +1,67 @@
 # CCMA — Roadmap phát triển sản phẩm và tiếp quản giữa các agent
 
-## Current R121 terminal hold — 2026-10-18
+## R128 — tên người tham gia ca cho tài khoản chỉ đọc, 2026-10-19
+
+Đã sửa và nghiệm thu local: reader thấy tên người xử lý, người bổ sung dữ liệu và người ghi lịch sử sau reload; API chỉ trả user_id/name của người cùng workspace được ca/lịch sử ca tham chiếu. Không trả người ngoài ca/khác workspace; danh sách chọn người xử lý yêu cầu quyền đọc và ghi. Reader vẫn không có thao tác ghi hoặc yêu cầu danh bạ đầy đủ.
+
+Native MySQL7test, UI/API21test, build và lượt browser hiện tại exit0 PASS; luồng sửa/giao/kết quả/mở lại và WAIT_DATA không hồi quy, không gọi provider. Không nhận full Go/frontend suite mới. Xem [review](../R128_CASE_PARTICIPANT_NAMES_REVIEW_2026-10-19.md). Tiếp theo chốt bảng acceptance M3 từ bằng chứng hiện có; B09 offline chưa có điều khiển hỗ trợ, full M3/business/pilot/hosted/release còn mở. Không mở chuỗi tooling/polish mới nếu không có gap sản phẩm cụ thể. Các checkpoint dưới là lịch sử.
+
+
+## R127-A — luồng thao tác M3 trên trình duyệt, 2026-10-19
+
+Đã nghiệm thu phạm vi synthetic hiện tại: sửa đánh giá → giao việc → ghi kết quả → mở lại, giữ lịch sử qua tải lại; giao người bổ sung và chuyển cấp vẫn giữ ca chờ dữ liệu; tab cũ409; backend chặn reader403 và UI reader không có nút ghi. Bản chạy lại exit0, nguồn/đề xuất giữ nguyên, đúng6event, không gọi provider. Lượt đầu exit1 do baseline fixture chưa seed con trỏ đề xuất hiện tại được giữ nguyên; không sửa lịch sử lỗi.
+
+CSS390x844 được quan sát thực tế; ảnh gốc có raster nội dung375px, không nhận exact-raster390. Offline B09 chưa chạy vì thiếu điều khiển offline. Còn lỗi đọc hiểu cụ thể: reader thấy fallback tên người xử lý/lịch sử dù người dùng có tên; bước tiếp theo chỉ bổ sung nhãn người tham gia ca, giữ quyền ghi/danh bạ. Full M3/pilot/release còn mở. Xem [review](../R127_M3_BROWSER_ACTIONS_REVIEW_2026-10-19.md). Các checkpoint dưới đây là lịch sử.
+
+
+## R126 — chốt sửa góp ý local, 2026-10-18
+
+Các mục N01/N03/N04/N05 đã sửa và được kiểm tra local; N02 có đường chạy synthetic qua binary thông thường, setup/CLI/hạn mức/grant, không gọi provider. N03 giữ lịch sử khi người dùng xác nhận nguồn đã đổi; UI mới có mã thoát0 và fingerprint trước/sau bằng nhau. Frontend45file/474test và build PASS; Python231PASS.
+
+Go: lượt full R125 vẫn là exit1. Sau sửa vòng đời pool test và assertion MCP, đã chạy lại trọn engine/MCP; kết hợp kết quả nguyên package của các phần nguồn không đổi cho current-package coverage PASS, gate DB đủ5sentinel và không có DB-unavailable skip. Đây là kết quả tổng hợp có kiểm tra hash/provenance, không phải một lượt full mới sau sửa. Hosted CI chưa chạy. Xem [review R126](../R126_FINAL_CURRENT_PACKAGE_REVIEW_2026-10-18.md).
+
+Phạm vi sửa góp ý đã được nghiệm thu local; tiếp theo đối chiếu các điều kiện còn thiếu của M3 hiện có. Full M3/pilot/release và tài khoản Facebook/ZaloOA còn mở; không tự mở thêm tooling hay gọi AI trả phí. Các checkpoint phía dưới là lịch sử.
+
+
+## R124 — hoàn thiện đường chạy synthetic và kiểm tra cuối, 2026-10-18
+
+N02 đã triển khai startup mặc định tắt, cấu hình synthetic rõ ràng và CLI tạo fixture, bổ sung dữ liệu giả, tăng trần hạn mức không đặt lại phần đã dùng, cấp grant đúng yêu cầu/người dùng/nguồn/cấu hình/hạn dùng. Smoke bằng binary thông thường trên cài đặt mới đã tìm và sửa lỗi tenant `single-workspace`; luồng từ setup đến cấp grant PASS, attempts/executions/consumed đều0, không gọi provider. Kiểm tra thực thi dùng stub, không suy ra chất lượng AI thật. Xem [runbook](../../reference/INTERVENTION_SYNTHETIC_RUNBOOK.md).
+
+N04 đã có lượt UI mới hoàn tất: đúng active proposal/lịch sử tiếng Việt, logout, exit0, fingerprint và effect counts trước/sau bằng nhau, server đã dừng. Không sửa lại các biên bản R120/R121 thiếu bằng chứng trước đây. Fixture Dashboard đã sửa đúng quyền đọc; hai lỗi Go kế thừa được sửa ở test context/trạng thái sending, không hạ kiểm tra quyền hay bỏ cơ chế bền vững của thông báo.
+
+Full Go/frontend lượt cuối đang được kiểm tra trên nguồn cố định; chưa ghi PASS trước mã thoát cuối. Sau kết quả, cập nhật review `docs/reviews/R124_CLEAN_INSTALL_REVIEW_2026-10-18.md` và các điều kiện còn mở. Không tự mở dữ liệu thật, gọi AI trả phí, pilot hoặc release. Các mục R122 và kế hoạch bên dưới là lịch sử; checkpoint hiện hành theo mục này.
+
+
+## R122 — kết quả sửa local, 2026-10-18
+
+N01 đã sửa test fixture độc lập ledger/history, Python discovery231PASS; N05 sửa parser và72liên kết, `npm ci` + docs build PASS; N03 đã tái hiện nguồn đổi sau giao việc và thêm xác nhận phiên bản nguồn mới giữ nguyên đề xuất/quyết định/lịch sử, native MySQL + component tests PASS; N04 sửa encoding/ready ordering và đã quan sát đúng active proposal/lịch sử/đăng xuất trên UI synthetic. Các lượt kiểm thử bị ngắt khi môi trường phiên đổi phải giữ nhãn INCOMPLETE, không thay bằng PASS.
+
+N02 chỉ hoàn tất trạng thái capability trên UI/API và [contract kích hoạt synthetic](../../reference/INTERVENTION_SYNTHETIC_ACTIVATION_CONTRACT.md); ordinary activation/budget/grant/clean-install chưa triển khai. Full Go suite chưa hoàn tất; frontend full suite470PASS/3lỗi Dashboard kế thừa, build PASS. Chưa có full M3/pilot/release hoặc runtime governance acceptance. Chi tiết: `docs/reviews/R122_LOCAL_FIX_REVIEW_2026-10-18.md`. Tiếp theo là chốt review/commit phần sửa có bằng chứng, rồi xử lý các gap trên đúng phạm vi; không tự gọi provider/bật dữ liệu thật. Các phần kế hoạch bên dưới là checkpoint trước sửa, disposition hiện hành theo mục này.
+
+
+## Kế hoạch sửa sau thẩm định local — 2026-10-18
+
+Đây là kế hoạch hiện hành, được owner yêu cầu cập nhật sau khi local đối chiếu bản review bên ngoài `CCM_Independent_Review_d7a6f76_2026-10-18.md`. Báo cáo bên ngoài là đầu vào; source, test và log được local kiểm tra mới quyết định tiếp thu. Chưa mục nào dưới đây được coi là đã sửa hoặc đã nghiệm thu. M1–M5 giữ nguyên; trọng tâm sản phẩm vẫn là M3.
+
+Local kiểm tra tại `1e3db8b12d8576b33429fa3ece158786ee0b4f7e`, working tree sạch trước cập nhật; `git diff --name-only HEAD origin/main` không có khác biệt với bản merge `d7a6f7635608d1ad44169372a6b5e0fbcbcd09c4`. Local đã đọc source và tải lại job/log CI đúng SHA; chưa tái chạy Go/MySQL/frontend/docs hoặc HTTP/DB/browser cho các finding này.
+
+| Thứ tự / mục | Kết luận local và căn cứ | Đầu ra sửa / điều kiện nghiệm thu |
+|---|---|---|
+| 1a — N01: CI backend tái lập | **CONFIRMED / FIX_PLANNED.** Backend job117600583070 có224 test/6errors; MySQL, Go test và build SKIPPED. `scripts/tests/test_r096_intervention_live_fixture.py:90,111` đọc trạng thái/ledger chiến dịch thật; fixture dùng seed lịch sử và ignored ledger. | Tách test logic guard bằng root/history/ledger cố định trong thư mục tạm khỏi admission của chiến dịch lịch sử; kiểm tra cả chấp nhận và từ chối. Clean checkout không cần `.cvf/runtime`/secret; Python suite chạy, MySQL sẵn sàng, Go `-json -count=1` và DB skip gate thực sự chạy, backend build có exit/log gắn SHA. Không chỉ tăng fetch-depth, bỏ test/guard hoặc dùng continue-on-error. |
+| 1b — N05: docs và capability wording | **CONFIRMED / FIX_PLANNED.** Docs job117600606612 lỗi Vue parser tại R105 draft; deploy SKIPPED. Markdown có `<new reader UUID>` chưa bọc code; cần xác nhận bằng build sau sửa. README dòng14 nói chưa có bước xác nhận dù source M3 đã có. | Sửa markup tối thiểu và mô tả chính xác implementation / synthetic evidence / ordinary startup disabled / full acceptance OPEN. Clean `npm ci` + `npm run docs:build` thành công, link gate chạy hết. Không bỏ kiểm tra link hoặc sửa lịch sử bằng chứng; không mặc định số dead link cũ còn đúng. Deploy là acceptance riêng. |
+| 2 — N03: nguồn đổi sau human action | **SOURCE_SUPPORTED / REPRO_REQUIRED.** `intervention_m3.go:131–141` chặn source lệch; `intervention.go:156–161` bảo vệ human ownership; `intervention_waitdata.go:209` chỉ nhận WAIT_DATA chưa human assessment. Chưa có HTTP/DB tái hiện. | Trước hết tạo test synthetic: CONFIRM → ASSIGN → thêm/sửa message qua writer được hỗ trợ → RESOLVE; ghi HTTP/version/state/event và thử đường phục hồi hiện hành. Đối chứng nguồn không đổi; kiểm tra đổi trước CONFIRM/sau RESOLVED. Chỉ khi xác nhận thiếu lối ra mới chốt transition nhỏ giữ lịch sử/người chịu trách nhiệm và test hồi quy. Không tắt source guard hoặc ghi đè human decision. |
+| 3 — N04: phần UI/terminal còn thiếu | **CONFIRMED / FIX_PLANNED**, lỗi harness R121, không phải UI crash. Readiness print `ensure_ascii=False` ở `scripts/r121_ui_supervisor.py:821` thất bại trước browser; terminal có waits/cleanup nhưng thiếu route ledger/accounting. | Sửa encoding ở biên process với thay đổi nhỏ; test redirected stdout có tiếng Việt trước runtime. Readiness cần process còn sống và endpoint sẵn sàng. Sau work order/admission mới, thu đúng active proposal/history, login/logout và original exit/waits/final accounting/cleanup. Không replay provider/lifecycle; R120/R121 failure và cap cũ giữ nguyên. Full workflow actions kiểm tra trong acceptance M3 riêng, không nhồi vào campaign đọc UI. |
+| 4 — N02: kích hoạt synthetic thông thường | **CONFIRMED_LIMIT / CONTRACT_REQUIRED.** Runner/executor chưa được cài trong ordinary startup; service yêu cầu synthetic policy + demo Pancake. Đây là giới hạn có chủ đích. | Chốt contract server-owned tối thiểu cho synthetic, provider/model/endpoint/budget/quyền và capability disabled/not-configured rõ trên UI. Sau work order mới, clean install có cấu hình hợp lệ chạy được luồng cho phép; thiếu/sai cấu hình bị từ chối; không cần test binary/sửa DB thủ công. Không chỉ gán global/bỏ marker; nguồn thật/pilot cần quyết định riêng. |
+
+Nguồn CI do local tải lại: [backend run39102198980](https://github.com/CVF-Ecosystem/Customer-Care-Monitor/actions/runs/39102198980), [docs run39102198991](https://github.com/CVF-Ecosystem/Customer-Care-Monitor/actions/runs/39102198991). Đây là log thực thi hosted đã đọc, không phải test ứng dụng local mới chạy. Các kiểm tra repository/doctor không chứng minh sản phẩm hoặc AI governance đã đạt.
+
+Root ORCHESTRATOR lập work order nhỏ cho1a/1b trước, independent REVIEWER quyết định kết quả; Luna Max làm worker thông thường, Sol Medium cho phần transaction/state khó nếu được dispatch. Có thể chuẩn bị test N03 sau1a; nghiệm thu UI sau khi các prerequisite liên quan đạt. Acceptance clean-install cuối cùng phụ thuộc contract N02; test service bằng harness không thay được acceptance đó. Frontend test/typecheck/build phải có log gắn SHA; ba lỗi Dashboard đã biết giữ OPEN và được định danh, không bị bỏ qua hoặc tự nhận full-green.
+
+Ủy quyền hiện tại chỉ cập nhật roadmap/continuity và commit tài liệu; **chưa dispatch BUILD, chưa cấp runtime/provider hoặc tái dùng campaign đã tiêu thụ**. Không tạo chuỗi tooling/biên bản mới ngoài prerequisite có lỗi cụ thể; không viết lại toàn bộ hoặc mở lại F01–F08 chỉ theo báo cáo ngoài. Mock/stub chỉ dùng cho UI structure không khẳng định AI governance; mọi acceptance governance cần provider thật theo AGENTS. Full M2/M3, M1 business, pilot/release vẫn OPEN; Facebook/Zalo OA vẫn parked. Mốc kết thúc là build tái lập và một luồng M3 dùng được với phạm vi cấu hình công bố, không phải số lượng review/campaign.
+
+Các checkpoint bên dưới là lịch sử; không dùng dòng “next” cũ làm chỉ dẫn hiện hành.
+
+## Historical R121 terminal hold — 2026-10-18
 
 CCMAI-RUNTIME-121 CHANGES_REQUIRED: original serve exit1/wait observed; Unicode console encoding failure before browser, terminal HOLD/FINAL_EVIDENCE_MISSING. Owned fixture/backend/Vite stopped, three listeners absent, protected9containers10networks472volumes and405sourcepins unchanged. Preserve consumed campaign/caps and raw evidence; read-only bounded follow-up decision only, no automatic retry/successor/provider. FullM2/M3/M1business/pilot/release OPEN/accounts parked/no push-merge-deploy. Review: docs/reviews/R121_FINAL_TERMINAL_REVIEW_2026-10-18.md.
 
@@ -150,7 +211,7 @@ R097 independent review accepted bounded local TLS proof; FREEZE local tooling o
 Đây là kế hoạch thực thi sản phẩm hiện hành, chuyển đánh giá độc lập ngày 2026-10-13 thành mốc hữu hạn và điều kiện bàn giao. Agent mới đọc bootstrap → memory → active handoff → tài liệu này → SPEC/work order của mốc được giao. Không đọc toàn bộ lịch sử mặc định. Roadmap cho phép chuẩn bị kế hoạch trong phạm vi owner đã giao; không phải work order cấp BUILD, provider, dữ liệu khách hàng, account, push hoặc deploy.
 
 - [Định hướng sản phẩm](../../PRODUCT_DIRECTION.md) giữ mục tiêu và ranh giới nghiệp vụ.
-- [Roadmap S0–S7](../../roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md) giữ kiến trúc đích, hợp đồng exit toàn stage và lịch sử bằng chứng. M1–M5 là cách tổ chức delivery xuyên stage; hoàn tất một mốc không tự đóng cả stage.
+- Roadmap S0–S7 (`docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md`) giữ kiến trúc đích, hợp đồng exit toàn stage và lịch sử bằng chứng. M1–M5 là cách tổ chức delivery xuyên stage; hoàn tất một mốc không tự đóng cả stage.
 - Tài liệu này cập nhật thứ tự planning P0–P4 thành M1–M5; đưa quyết định dữ liệu/tiêu chí S0 lên trước implementation và đưa an toàn dữ liệu tối thiểu lên trước pilot. Không hạ các exit S0–S7 đã có.
 - [Roadmap kế thừa CVF](CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md) đã đóng bảy finding trong phạm vi riêng. Không mở lại nếu không có regression hoặc mâu thuẫn bằng chứng cụ thể. ID F01–F07 của kế thừa khác ID finding sản phẩm.
 - [Implementation truth](../../../IMPLEMENTATION_STATUS.json) và review gắn đúng source revision quyết định việc gì đã làm. Các câu “next” trong checkpoint lịch sử không phải lệnh hiện hành.
@@ -294,7 +355,7 @@ S4 tối ưu là nhánh có điều kiện: chỉ thử sau khi có vòng phản
 | M5-05 | Release/deploy | Artifact/image/version và cấu hình deploy đúng scope được phép; smoke check, rollback drill; không merge/release/deploy ngoài authority |
 | M5-06 | Bàn giao | Runbook người vận hành, known limitations, cửa vào agent, evidence/index cập nhật; người tiếp quản tái tạo đường cài và một luồng nghiệp vụ |
 
-Owner cho phép đồng bộ repo không đồng nghĩa bật production. Nếu chỉ chuyển máy để code, có thể clone và tiếp tục trước M5 theo [AGENTS.md](../../../AGENTS.md); phải giữ nhãn development và các gap. M5 là nghiệm thu bản phát hành/vận hành, không phải prerequisite để mở IDE trên máy mới.
+Owner cho phép đồng bộ repo không đồng nghĩa bật production. Nếu chỉ chuyển máy để code, có thể clone và tiếp tục trước M5 theo `AGENTS.md`; phải giữ nhãn development và các gap. M5 là nghiệm thu bản phát hành/vận hành, không phải prerequisite để mở IDE trên máy mới.
 
 ## 10. Dependency và backlog: cái gì chặn, cái gì để sau
 

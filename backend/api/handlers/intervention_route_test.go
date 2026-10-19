@@ -157,7 +157,7 @@ func TestR094InterventionRouteNative(t *testing.T) {
 		if responseMode.Load() == 10 {
 			raw = []byte(`{"unfinished":`)
 		}
-		_ = json.NewEncoder(w).Encode(map[string]any{"model": "fixture-model", "choices": []map[string]any{{"message": map[string]string{"content": string(raw)}}}, "usage": map[string]int{"prompt_tokens": 5, "completion_tokens": 7}})
+		_ = json.NewEncoder(w).Encode(map[string]any{"model": "fixture-model", "choices": []map[string]any{{"message": map[string]string{"content": string(raw)}, "finish_reason": "stop"}}, "usage": map[string]int{"prompt_tokens": 5, "completion_tokens": 7}})
 	}))
 	defer server.Close()
 	handlers.InterventionRunner = &engine.InterventionService{Transport: ai.NewOpenAIProvider("synthetic", "fixture-model", 128, server.URL+"/v1"), PolicyVersion: "ccma.synthetic.intervention.v1", PromptVersion: "r094-v1", Prompt: "Synthetic complaint/waiting analysis", MaxRequestBytes: 6000, Timeout: 5 * time.Second}

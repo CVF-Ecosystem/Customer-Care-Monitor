@@ -31,7 +31,7 @@ Acceptance is a real application receipt with actual provider request/response a
 
 ## Vì sao cần ngân sách mới
 
-[AGENTS.md](../../../AGENTS.md), Governance Latency and Approval Continuity: “Escalate only at a real boundary change” including “secret/credential use, provider/network use”. Owner đã duyệt max2, parent ledger R095/R096 hiện2/2 exhausted. Local continuation không cấp call thứ ba. Packet này chỉ là đề xuất, chưa có seed thực thi hoặc quyền gọi provider mới.
+`AGENTS.md`, Governance Latency and Approval Continuity: “Escalate only at a real boundary change” including “secret/credential use, provider/network use”. Owner đã duyệt max2, parent ledger R095/R096 hiện2/2 exhausted. Local continuation không cấp call thứ ba. Packet này chỉ là đề xuất, chưa có seed thực thi hoặc quyền gọi provider mới.
 
 Public Export Disposition: DEFERRED_PRIVATE_ONLY.
 
