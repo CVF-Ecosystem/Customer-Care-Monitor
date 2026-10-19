@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R132_WAITDATA_REQUEST_UI_2026-10-19.md", "activeTranche": "CCMAI-RUNTIME-132", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R132_WAITDATA_REQUEST_UI_2026-10-19.md", "activeTranche": "CCMAI-RUNTIME-132", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
+- Current mode: BUILD
+- Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R132_WAITDATA_REQUEST_UI_2026-10-19.md
 
-CCMAI-RUNTIME-132 DISPATCH_READY: Luna Max implements request-only WAIT_DATA frontend; Sol Medium implements one opt-in owned synthetic fixture. Root independently reviews source before bounded zero-provider runtime admission. No grant/execute, installed app, provider or publication effects.
+CCMAI-RUNTIME-132 BUILD: Luna Max owns frontend request-only followup; Sol Medium owns the opt-in synthetic fixture. Root ORCHESTRATOR / independent REVIEWER audits source before runtime admission; provider0 and no execute/grant/publication.
 
-Root ORCHESTRATOR / SPEC_AUTHOR / independent REVIEWER; Luna Max frontend and Sol Medium fixture workers pending
+Root ORCHESTRATOR / independent REVIEWER; Luna Max frontend and Sol Medium fixture IMPLEMENTATION_WORKERS
 
 ## Historical R114 bounded UI result
 

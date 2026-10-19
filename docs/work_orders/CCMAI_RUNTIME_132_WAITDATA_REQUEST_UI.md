@@ -1,6 +1,6 @@
 # R132 — WAIT_DATA request-only user workflow
 
-Status: DISPATCH_READY
+Status: ACTIVE
 Risk: R2
 Worker: Luna Max frontend followup; Sol Medium owned synthetic fixture
 Reviewer: Root independent source/browser reviewer
