@@ -34541,8 +34541,7 @@
       "path": "docs/reviews/probes/reader_names_20261019/verification_summary.json",
       "status": "ACTIVE",
       "description": "Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open."
-    }
-,
+    },
     {
       "id": "r130-branch-history-review",
       "family": "continuity",
@@ -34612,6 +34611,34 @@
       "path": "docs/specs/M3_WAITDATA_REQUEST_UI_R132_SPEC_2026-10-19.md",
       "status": "ACTIVE",
       "description": "Intended F01..F08 request-only UI contract; no execution authority."
+    },
+    {
+      "id": "r132-fixture-worker-return",
+      "family": "continuity",
+      "path": "docs/reviews/R132_FIXTURE_WORKER_RETURN_2026-10-19.md",
+      "status": "ACTIVE",
+      "description": "R132 fixture worker return, source and compile only; Root runtime admission pending."
+    },
+    {
+      "id": "r132-source-review",
+      "family": "continuity",
+      "path": "docs/reviews/R132_SOURCE_REVIEW_2026-10-19.md",
+      "status": "ACTIVE",
+      "description": "R132 independent source findings and bounded runtime admission; in progress, no product runtime claim."
+    },
+    {
+      "id": "r132-frontend-worker-return",
+      "family": "continuity",
+      "path": "docs/reviews/R132_FRONTEND_WORKER_RETURN_2026-10-19.md",
+      "status": "ACTIVE",
+      "description": "R132 frontend source worker return; initial build failure and bounded repairs disclosed; Root final verification separate."
+    },
+    {
+      "id": "r132-source-checks",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r132_waitdata_request_20261019/source_checks.json",
+      "status": "ACTIVE",
+      "description": "R132 compact exact source hashes and actual source-check exits; no AI governance or runtime acceptance."
     }
   ]
 }

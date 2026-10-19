@@ -64,6 +64,22 @@
       <v-alert v-if="detail.case.work_state === 'WAITING_ON_DATA'" type="warning" class="mb-4">
         {{ $t('iv_wait_data') }} {{ $t('iv_rerun_manual') }}
       </v-alert>
+      <InterventionDataFollowup
+        v-if="detail.case.work_state === 'WAITING_ON_DATA'"
+        :key="currentLifetime()"
+        :tenant-id="tenantId"
+        :token="auth.accessToken"
+        :role="auth.tenantPerms.role"
+        :case-record="detail.case"
+        :can-read="canReadCase"
+        :can-capture="canCaptureFollowup"
+        :can-request="canRequestFollowup"
+        :parent-busy="busy"
+        :lifetime-key="currentLifetime()"
+        :signal="followupSignal"
+        :refresh-case="refreshFollowupCase"
+        @write-busy="busy = $event"
+      />
       <v-card v-if="canEdit" class="mb-4">
         <v-card-title>{{ $t('iv_action') }}</v-card-title>
         <v-card-text>
@@ -113,6 +129,7 @@ import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useAuthStore } from '../stores/auth'
 import InterventionCapabilityNotice from '../components/InterventionCapabilityNotice.vue'
+import InterventionDataFollowup from '../components/InterventionDataFollowup.vue'
 import { applyInterventionAction, getInterventionCase, listInterventionAssignees, listInterventionCases, InterventionHttpError, type InterventionCase, type InterventionDetail, type InterventionEvent } from '../api/intervention'
 import {
   interventionActionKey,
@@ -131,7 +148,11 @@ import {
 const route = useRoute(); const auth = useAuthStore(); const { t, locale } = useI18n()
 const tenantId = computed(() => String(route.params.tenantId || ''))
 const caseId = computed(() => String(route.params.caseId || ''))
-const canEdit = computed(() => auth.canEdit('intervention_cases') && auth.canView('intervention_cases'))
+const knownRole = computed(() => ['owner','admin','member'].includes(auth.tenantPerms.role))
+const canReadCase = computed(() => knownRole.value && auth.canView('intervention_cases'))
+const canEdit = computed(() => knownRole.value && auth.canEdit('intervention_cases') && canReadCase.value)
+const canCaptureFollowup = computed(() => canEdit.value)
+const canRequestFollowup = computed(() => canCaptureFollowup.value && auth.canEdit('jobs'))
 const items = ref<InterventionCase[]>([]); const detail = ref<InterventionDetail | null>(null)
 const assignees = ref<{user_id: string; name: string}[]>([])
 const filter = ref(''); const total = ref(0); const nextCursor = ref('')
@@ -139,6 +160,7 @@ const loading = ref(false); const busy = ref(false); const error = ref('')
 const action = ref(''); const reason = ref(''); const explanation = ref(''); const nextAction = ref('')
 const assigneeId = ref(''); const dueLocal = ref(''); const outcome = ref('')
 let generation = 0; let controller: AbortController | null = null
+const followupSignal = ref<AbortSignal>()
 const currentLifetime = () => JSON.stringify([tenantId.value,caseId.value,auth.accessToken,auth.tenantPerms.role,auth.tenantPerms.permissions])
 const stillCurrent = (mine:number,key:string,signal:AbortSignal) => mine===generation && key===currentLifetime() && !signal.aborted
 const filters = computed(() => [{title:t('iv_active'),value:''}, ...['OPEN','ASSIGNED','WAITING_ON_DATA','RESOLVED','REJECTED'].map(value=>({title:stateLabel(value),value}))])
@@ -212,11 +234,11 @@ function message(e: unknown, context: 'load' | 'write' = 'write') {
   if (e.status === 400 || e.status === 422) return t('iv_review_details')
   return t(fallback)
 }
-function freshController() { controller?.abort(); controller = new AbortController(); return controller.signal }
+function freshController() { controller?.abort(); controller = new AbortController(); followupSignal.value = controller.signal; return controller.signal }
 async function load() {
   const mine=++generation, tenant=tenantId.value, id=caseId.value, token=auth.accessToken
   const signal=freshController(), key=currentLifetime(); items.value=[]; detail.value=null; assignees.value=[]; nextCursor.value=''; total.value=0; error.value=''; busy.value=false; loading.value=false; resetForm()
-  if (!tenant || !token || !auth.canView('intervention_cases')) return
+  if (!tenant || !token || !canReadCase.value) return
   loading.value=true
   try {
     if (id) {
@@ -239,6 +261,15 @@ async function more() {
   try { const page=await listInterventionCases(tenant,token,signal,filter.value,nextCursor.value); if (stillCurrent(mine,key,signal)) { items.value.push(...page.items); nextCursor.value=page.next_cursor; total.value=page.total } }
   catch(e) { if (stillCurrent(mine,key,signal)) error.value=message(e, 'load') }
   finally { if (stillCurrent(mine,key,signal)) loading.value=false }
+}
+async function refreshFollowupCase(): Promise<InterventionDetail | null> {
+  const signal=controller?.signal, tenant=tenantId.value, id=caseId.value, token=auth.accessToken
+  if (!signal || !tenant || !id || !token || !canReadCase.value) return null
+  const mine=generation, key=currentLifetime()
+  const data=await getInterventionCase(tenant,id,token,signal)
+  if (!stillCurrent(mine,key,signal)) return null
+  detail.value=data
+  return data
 }
 async function submit() {
   if (!canSubmit.value || !detail.value || !canEdit.value) return
@@ -266,5 +297,5 @@ async function submit() {
 }
 watch(() => [route.params.tenantId,route.params.caseId,auth.accessToken,auth.tenantPerms.role,JSON.stringify(auth.tenantPerms.permissions)], load, {immediate:true})
 watch(filter, () => { if (!caseId.value) void load() })
-onBeforeUnmount(() => { generation++; controller?.abort(); detail.value=null; items.value=[] })
+onBeforeUnmount(() => { generation++; controller?.abort(); followupSignal.value=undefined; detail.value=null; items.value=[] })
 </script>

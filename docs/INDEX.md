@@ -4372,6 +4372,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R131 dispatch and independent review lifecycle record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-131.json`
 - Bounded eight-row M3 evidence reconciliation; no new runtime.: `docs/work_orders/CCMAI_RUNTIME_131_M3_ACCEPTANCE.md`
 - Immutable R2 request-only UI/owned synthetic proof authority; provider0.: `CVF_SESSION/authority/CCMAI-RUNTIME-132.json`
+- R132 fixture worker return, source and compile only; Root runtime admission pending.: `docs/reviews/R132_FIXTURE_WORKER_RETURN_2026-10-19.md`
+- R132 frontend source worker return; initial build failure and bounded repairs disclosed; Root final verification separate.: `docs/reviews/R132_FRONTEND_WORKER_RETURN_2026-10-19.md`
+- R132 compact exact source hashes and actual source-check exits; no AI governance or runtime acceptance.: `docs/reviews/probes/r132_waitdata_request_20261019/source_checks.json`
+- R132 independent source findings and bounded runtime admission; in progress, no product runtime claim.: `docs/reviews/R132_SOURCE_REVIEW_2026-10-19.md`
 - Intended F01..F08 request-only UI contract; no execution authority.: `docs/specs/M3_WAITDATA_REQUEST_UI_R132_SPEC_2026-10-19.md`
 - R132 bounded worker and independent review lifecycle.: `CVF_SESSION/tranches/CCMAI-RUNTIME-132.json`
 - Direct M3-05 WAIT_DATA followup UI and one owned native/browser proof.: `docs/work_orders/CCMAI_RUNTIME_132_WAITDATA_REQUEST_UI.md`

@@ -32,6 +32,27 @@ export interface InterventionAction {
   expected_current_digest?: string
   assignee_id?: string; due_at?: string; outcome?: string
 }
+export interface InterventionDataRevision {
+  id: string; case_id: string; originating_case_version: number; case_version: number
+  original_snapshot_id: string; original_snapshot_digest: string; digest: string
+  coverage: string; coverage_reasons: string[]; message_count: number
+  observation_status: string; reason: string; created_at: string
+}
+export interface InterventionRerunRequest {
+  id: string; case_id: string; data_revision_id: string; data_revision_digest: string
+  original_snapshot_id: string; original_snapshot_digest: string; reason: string
+  status: string; execution: string; case_version: number; created_at: string
+}
+export interface InterventionWaitDataPage<T> {
+  items: T[]; has_more: boolean; next_cursor: string
+}
+export interface CaptureInterventionDataRevisionInput {
+  expected_version: number; expected_snapshot_id: string; expected_snapshot_digest: string; reason: string
+}
+export interface RequestInterventionRerunInput {
+  expected_version: number; expected_snapshot_id: string; expected_snapshot_digest: string
+  data_revision_id: string; data_revision_digest: string; reason: string; request_key: string
+}
 export class InterventionHttpError extends Error {
   readonly status: number
   readonly code: string
@@ -103,4 +124,22 @@ export function listInterventionAssignees(tenant: string, token: string, signal:
 }
 export function applyInterventionAction(tenant: string, id: string, token: string, signal: AbortSignal, action: InterventionAction) {
   return once<{case: InterventionCase}>(`${root(tenant)}/intervention-cases/${encodeURIComponent(id)}/actions`, token, signal, action)
+}
+const waitDataCase = (tenant: string, id: string) => `${root(tenant)}/intervention-cases/${encodeURIComponent(id)}`
+function waitDataListPath(tenant: string, id: string, collection: 'data-revisions' | 'rerun-requests', cursor = '') {
+  const q = new URLSearchParams({ limit: '20' })
+  if (cursor) q.set('cursor', cursor)
+  return `${waitDataCase(tenant,id)}/${collection}?${q}`
+}
+export function listInterventionDataRevisions(tenant: string, id: string, token: string, signal: AbortSignal, cursor = '') {
+  return once<InterventionWaitDataPage<InterventionDataRevision>>(waitDataListPath(tenant,id,'data-revisions',cursor), token, signal)
+}
+export function createInterventionDataRevision(tenant: string, id: string, token: string, signal: AbortSignal, input: CaptureInterventionDataRevisionInput) {
+  return once<{revision: InterventionDataRevision; case_version: number}>(`${waitDataCase(tenant,id)}/data-revisions`, token, signal, input)
+}
+export function listInterventionRerunRequests(tenant: string, id: string, token: string, signal: AbortSignal, cursor = '') {
+  return once<InterventionWaitDataPage<InterventionRerunRequest>>(waitDataListPath(tenant,id,'rerun-requests',cursor), token, signal)
+}
+export function createInterventionRerunRequest(tenant: string, id: string, token: string, signal: AbortSignal, input: RequestInterventionRerunInput) {
+  return once<{request: InterventionRerunRequest; case_version: number; replayed: boolean}>(`${waitDataCase(tenant,id)}/rerun-requests`, token, signal, input)
 }
