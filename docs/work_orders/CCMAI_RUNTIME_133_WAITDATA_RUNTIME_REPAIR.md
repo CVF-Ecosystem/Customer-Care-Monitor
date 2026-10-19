@@ -1,6 +1,6 @@
 # R133 — repair observed WAIT_DATA runtime defects
 
-Status: DISPATCH_READY
+Status: ACTIVE
 Risk: R2
 Worker: Sol Medium stable-refresh and eligible fixture worker
 Reviewer: Root independent source/browser reviewer

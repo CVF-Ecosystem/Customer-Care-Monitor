@@ -59,16 +59,17 @@
     "runtimePrerequisite": "Root source acceptance and exact nonce/DSN ownership proof; cached dependencies/images only; no real credentials. Runtime/browser unsupported => stop and report, no workaround or unbounded replay."
   },
   "baseCommit": "6fc1a00e79d537f4a558051a76dabfd16795064e",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "DISPATCH_READY",
+  "workOrderStatus": "ACTIVE",
   "buildCommit": null,
   "reviewEvidence": [],
-  "disposition": "PENDING_WORKER_DISPATCH",
+  "disposition": "PENDING_WORKER_RETURN",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ]
 }
