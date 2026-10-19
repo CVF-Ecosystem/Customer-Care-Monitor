@@ -4367,6 +4367,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open.: `docs/reviews/probes/reader_names_20261019/verification_summary.json`
 - R130 owner-approved review and verified publication receipt for the feature-branch history rewrite.: `docs/reviews/R130_BRANCH_HISTORY_REWRITE_REVIEW_2026-10-19.md`
 - Immutable R1 documentation-only M3 acceptance authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-131.json`
+- Worker eight-row M3 acceptance matrix; corrected inherited concurrency evidence; full M3 partial.: `docs/reviews/R131_M3_ACCEPTANCE_MATRIX_2026-10-19.md`
+- Independent source/original-receipt review and finite M3-05 UI continuation.: `docs/reviews/R131_M3_ACCEPTANCE_REVIEW_2026-10-19.md`
 - R131 dispatch and independent review lifecycle record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-131.json`
 - Bounded eight-row M3 evidence reconciliation; no new runtime.: `docs/work_orders/CCMAI_RUNTIME_131_M3_ACCEPTANCE.md`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`

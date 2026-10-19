@@ -1,5 +1,12 @@
 # Roadmap CSKH: dữ liệu đáng tin, bộ lọc hỗ trợ AI và xử lý có trách nhiệm
 
+## R131 — đối chiếu acceptance M3, 2026-10-19
+
+Đã chốt bảng 8 tiêu chí bằng bằng chứng hiện có và review độc lập. Cạnh tranh hai người duyệt đã có PASS trong package handlers kế thừa R126, không phải gap cần chạy lại; full run R125 exit1 vẫn được giữ. Source R128 hiện tại khớp nội dung 414 bản ghi (411 byte/hash nguyên gốc, 3 chỉ khác CRLF/LF).
+
+M3 vẫn PARTIAL: còn bằng chứng queue nhiều trang, REJECT thành công, UI ghi nhận dữ liệu bổ sung/yêu cầu đánh giá lại và một lỗi thực hiển thị qua browser. B09 offline không được hỗ trợ vẫn NOT_RUN; không coi đó là blocker duy nhất. Bước sản phẩm kế tiếp R132: UI request-only trên API revision/request đã có; không tự chạy AI hoặc mở lại ngân sách cũ. M1 nghiệp vụ, M2 live, M4 pilot, hosted/release và tài khoản Facebook/ZaloOA giữ nguyên. Xem [review R131](../reviews/R131_M3_ACCEPTANCE_REVIEW_2026-10-19.md). Các mục dưới là lịch sử.
+
+
 ## R128 — tên người tham gia ca cho tài khoản chỉ đọc, 2026-10-19
 
 Đã sửa và nghiệm thu local: reader thấy tên người xử lý, người bổ sung dữ liệu và người ghi lịch sử sau reload; API chỉ trả user_id/name của người cùng workspace được ca/lịch sử ca tham chiếu. Không trả người ngoài ca/khác workspace; danh sách chọn người xử lý yêu cầu quyền đọc và ghi. Reader vẫn không có thao tác ghi hoặc yêu cầu danh bạ đầy đủ.

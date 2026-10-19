@@ -1,6 +1,6 @@
 # R131 — M3 acceptance reconciliation
 
-Status: ACTIVE
+Status: CLOSED
 Risk: R1
 Worker: Luna Max evidence analyst
 Reviewer: Root independent reviewer
@@ -50,3 +50,7 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 ## Public export
 
 Disposition: LOCAL_ONLY. This roadmap instruction supplies no new push, merge, deployment, data or paid-provider authority. Evidence reconciliation does not re-run or upgrade inherited product/runtime claims.
+
+## Disposition
+
+Root independently accepted corrected worker matrix bae7a8182fefabbf76f7882b212ce2cb114b877d after one consolidated documentation repair; R131 FROZEN. Full M3 remains PARTIAL. Next finite product action is the separately seeded R132 request-only WAIT_DATA UI; no R131 runtime, provider, push or deployment occurred.

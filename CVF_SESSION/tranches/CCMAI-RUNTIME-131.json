@@ -39,17 +39,23 @@
   "claimBoundary": "Static acceptance reconciliation and reused bounded software/synthetic evidence only. No new live governance, quality, hosted CI, full M3, pilot or release proof.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_131_M3_ACCEPTANCE.md",
   "baseCommit": "11bf48fd7d43bf0465b2c78ec057dfffe6997fc1",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "FROZEN",
+  "phase": "FREEZE",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
-  "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "PENDING_WORKER_RETURN",
-  "freeze": "OPEN",
+  "workOrderStatus": "CLOSED",
+  "buildCommit": "bae7a8182fefabbf76f7882b212ce2cb114b877d",
+  "reviewEvidence": [
+    "docs/reviews/R131_M3_ACCEPTANCE_REVIEW_2026-10-19.md"
+  ],
+  "disposition": "REVIEW_PASS",
+  "freeze": "FROZEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
-  ]
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS",
+    "FROZEN"
+  ],
+  "closer": "Root CLOSER"
 }

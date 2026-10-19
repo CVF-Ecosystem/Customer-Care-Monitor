@@ -34570,6 +34570,20 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_131_M3_ACCEPTANCE.md",
       "status": "ACTIVE",
       "description": "Bounded eight-row M3 evidence reconciliation; no new runtime."
+    },
+    {
+      "id": "r131-m3-acceptance-matrix",
+      "family": "continuity",
+      "path": "docs/reviews/R131_M3_ACCEPTANCE_MATRIX_2026-10-19.md",
+      "status": "ACTIVE",
+      "description": "Worker eight-row M3 acceptance matrix; corrected inherited concurrency evidence; full M3 partial."
+    },
+    {
+      "id": "r131-m3-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/R131_M3_ACCEPTANCE_REVIEW_2026-10-19.md",
+      "status": "ACTIVE",
+      "description": "Independent source/original-receipt review and finite M3-05 UI continuation."
     }
   ]
 }

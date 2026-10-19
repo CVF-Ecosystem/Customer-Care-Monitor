@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R131_M3_ACCEPTANCE_2026-10-19.md", "activeTranche": "CCMAI-RUNTIME-131", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R131_M3_ACCEPTANCE_2026-10-19.md", "activeTranche": "CCMAI-RUNTIME-131", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: FREEZE
+- Active phase: FREEZE
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R131_M3_ACCEPTANCE_2026-10-19.md
 
-CCMAI-RUNTIME-131 BUILD: Luna Max writes the bounded M3-01 through M3-08 evidence matrix after rehydration acknowledgment; Root remains ORCHESTRATOR / REVIEWER and independently verifies the return. No product/runtime/provider/publication action.
+CCMAI-RUNTIME-131 FROZEN: independently accepted eight-row M3 reconciliation; M3 remains PARTIAL. Next is R132 bounded request-only WAIT_DATA UI over existing revision/request APIs, with Root ORCHESTRATOR / REVIEWER and Luna Max / Sol Medium workers; no provider execution or publication.
 
-Root ORCHESTRATOR / REVIEWER; Luna Max IMPLEMENTATION_WORKER (documentation only)
+Root ORCHESTRATOR / REVIEWER / CLOSER / COMMIT_STEWARD
 
 ## Historical R114 bounded UI result
 
