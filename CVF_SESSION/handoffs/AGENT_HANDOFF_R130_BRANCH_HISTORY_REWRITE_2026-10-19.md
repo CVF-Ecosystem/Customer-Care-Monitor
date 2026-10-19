@@ -18,4 +18,4 @@ Target archive was introduced by `90bc02ed14c5e3997ec97fe400a64cf06cae6f70`, par
 Work order: `docs/work_orders/CCMAI_RUNTIME_130_BRANCH_HISTORY_REWRITE.md`. Require independent owner review of rewritten commit graph and exact tree comparison before force-with-lease.
 
 
-Role transition before BUILD: Root moves from ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR to IMPLEMENTATION_WORKER / COMMIT_STEWARD for the bounded Git history rewrite. Material-SHA marker: pending dispatch continuity commit; no source history edit until that commit is recorded.
+Role transition before BUILD: Root moves from ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR to IMPLEMENTATION_WORKER / COMMIT_STEWARD for the bounded Git history rewrite. Material-SHA marker: 9bd62d0d43b0fc71a4e7ef6d7320d0e65d157534. This committed dispatch authorizes only local R130 history maintenance; force-with-lease waits for independent owner review.
