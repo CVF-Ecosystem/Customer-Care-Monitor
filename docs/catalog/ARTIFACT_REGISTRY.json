@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R130_BRANCH_HISTORY_REWRITE_2026-10-19.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R131_M3_ACCEPTANCE_2026-10-19.md",
       "status": "ACTIVE",
-      "description": "Current R126 DB fixture lifetime and current-package verification handoff."
+      "description": "Current R131 M3 acceptance reconciliation handoff."
     },
     {
       "id": "r060-work-order",
@@ -34549,6 +34549,27 @@
       "path": "docs/reviews/R130_BRANCH_HISTORY_REWRITE_REVIEW_2026-10-19.md",
       "status": "ACTIVE",
       "description": "R130 owner-approved review and verified publication receipt for the feature-branch history rewrite."
+    },
+    {
+      "id": "r131-dispatcher-seed",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-131.json",
+      "status": "ACTIVE",
+      "description": "Immutable R1 documentation-only M3 acceptance authority."
+    },
+    {
+      "id": "r131-tranche",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-131.json",
+      "status": "ACTIVE",
+      "description": "R131 dispatch and independent review lifecycle record."
+    },
+    {
+      "id": "r131-work-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_131_M3_ACCEPTANCE.md",
+      "status": "ACTIVE",
+      "description": "Bounded eight-row M3 evidence reconciliation; no new runtime."
     }
   ]
 }

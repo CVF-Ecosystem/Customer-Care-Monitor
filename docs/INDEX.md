@@ -15,7 +15,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R126 DB fixture lifetime and current-package verification handoff.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R130_BRANCH_HISTORY_REWRITE_2026-10-19.md`
+- Current R131 M3 acceptance reconciliation handoff.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R131_M3_ACCEPTANCE_2026-10-19.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -4366,6 +4366,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open.: `docs/reviews/probes/reader_names_20261019/reader_names.jpg`
 - Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open.: `docs/reviews/probes/reader_names_20261019/verification_summary.json`
 - R130 owner-approved review and verified publication receipt for the feature-branch history rewrite.: `docs/reviews/R130_BRANCH_HISTORY_REWRITE_REVIEW_2026-10-19.md`
+- Immutable R1 documentation-only M3 acceptance authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-131.json`
+- R131 dispatch and independent review lifecycle record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-131.json`
+- Bounded eight-row M3 evidence reconciliation; no new runtime.: `docs/work_orders/CCMAI_RUNTIME_131_M3_ACCEPTANCE.md`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

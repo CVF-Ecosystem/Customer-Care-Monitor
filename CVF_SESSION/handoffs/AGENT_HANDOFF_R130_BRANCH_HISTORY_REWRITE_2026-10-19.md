@@ -1,6 +1,6 @@
 # Feature branch history cleanup — R130
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 
@@ -49,3 +49,5 @@ Review packet: `docs/reviews/R130_BRANCH_HISTORY_REWRITE_REVIEW_2026-10-19.md`. 
 2026-10-19: The REVIEW_PENDING paragraph above is a historical pre-publication checkpoint, not current authority. Owner accepted the rewrite; the verified closure commit is 1d7c374fbd7df8d4e662fd0f9008a60ac140762f, a direct child of 74bbd4ce1e4b58607d6aa071b039a73856b4deef. The resumed roadmap starts at INTAKE under Root ORCHESTRATOR / REVIEWER; no product BUILD follows from R130.
 
 Role acknowledgment: Root ORCHESTRATOR also assumes COMMIT_STEWARD for the R131 dispatcher seed and continuity commits; Root remains the independent REVIEWER for worker-authored material, not its implementation worker.
+
+Superseded by R131 roadmap acceptance handoff on 2026-10-19; R130 remains FROZEN.
