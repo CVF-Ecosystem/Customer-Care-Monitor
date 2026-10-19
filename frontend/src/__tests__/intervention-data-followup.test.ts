@@ -196,4 +196,35 @@ describe('WAIT_DATA follow-up panel', () => {
     expect(vm.historyLoading).toBe(false)
     wrapper.unmount()
   })
+
+  it('ignores an old post-write refresh after navigation without releasing the new case write', async () => {
+    let finishOldRefresh!: (value:InterventionDetail|null)=>void
+    let finishNewCapture!: (value:{revision:InterventionDataRevision;case_version:number})=>void
+    const oldRefresh=new Promise<InterventionDetail|null>(resolve=>{finishOldRefresh=resolve})
+    const newCapture=new Promise<{revision:InterventionDataRevision;case_version:number}>(resolve=>{finishNewCapture=resolve})
+    calls.capture.mockResolvedValueOnce({revision:revision(),case_version:8}).mockReturnValueOnce(newCapture)
+    const oldSignal=new AbortController().signal
+    const wrapper=await mounted({signal:oldSignal,refreshCase:()=>oldRefresh})
+    const vm=wrapper.vm as unknown as {captureReason:string;capture:()=>Promise<void>;writingKind:string;error:string;savedCapture:InterventionDataRevision|null}
+    vm.captureReason='Original case update'
+    const oldWrite=vm.capture(); await flushPromises()
+    const nextCaseId='f4f4f4f4-f4f4-44f4-84f4-f4f4f4f4f4f4'
+    const nextRecord=caseRecord({id:nextCaseId,conversation_id:'conversation-two'})
+    await wrapper.setProps({caseRecord:nextRecord,lifetimeKey:'tenant-one|case-two|session-token|owner|rw',signal:new AbortController().signal,refreshCase:()=>Promise.resolve(detail(caseRecord({id:nextCaseId,conversation_id:'conversation-two',version:8})))})
+    await flushPromises()
+    vm.captureReason='New case update'
+    const newWrite=vm.capture(); await flushPromises()
+    expect(vm.writingKind).toBe('capture')
+    finishOldRefresh(detail(caseRecord({version:8}))); await oldWrite; await flushPromises()
+    expect(vm.writingKind).toBe('capture')
+    expect(vm.savedCapture).toBeNull()
+    expect(vm.error).toBe('')
+    expect(wrapper.text()).not.toContain('could not be refreshed')
+    const newRevision=revision({case_id:nextCaseId,reason:'New case update'})
+    finishNewCapture({revision:newRevision,case_version:8}); await newWrite; await flushPromises()
+    expect(vm.writingKind).toBe('')
+    expect(vm.savedCapture?.case_id).toBe(nextCaseId)
+    expect(wrapper.text()).not.toContain('Original case update')
+    wrapper.unmount()
+  })
 })

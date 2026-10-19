@@ -421,6 +421,38 @@ describe('R132 WAIT_DATA follow-up integration', () => {
     return {id:'b8b8b8b8-b8b8-48b8-88b8-b8b8b8b8b8b8',case_id:'CASE-WAIT',originating_case_version:1,case_version:2,original_snapshot_id:'s',original_snapshot_digest:'d',digest:'b'.repeat(64),coverage:'complete',coverage_reasons:[],message_count:1,observation_status:'LOCAL_MATCH_CURRENTNESS_UNVERIFIED',reason:'New information',created_at:'2026-10-19T09:00:00Z'}
   }
 
+  it('keeps saved capture and request notices when the mounted parent replaces the same case detail', async () => {
+    const atVersion=(version:number)=>waitingDetail(version)
+    calls.detail.mockResolvedValueOnce(atVersion(1)).mockResolvedValueOnce(atVersion(2)).mockResolvedValueOnce(atVersion(3))
+    calls.dataRevisions.mockResolvedValueOnce({items:[],has_more:false,next_cursor:''}).mockResolvedValue({items:[waitRevision()],has_more:false,next_cursor:''})
+    const savedRequest={id:'c7c7c7c7-c7c7-47c7-87c7-c7c7c7c7c7c7',case_id:'CASE-WAIT',data_revision_id:waitRevision().id,data_revision_digest:waitRevision().digest,original_snapshot_id:'s',original_snapshot_digest:'d',reason:'Review the complaint',status:'AWAITING_EXECUTION_AUTHORITY',execution:'NOT_RUN',case_version:3,created_at:'2026-10-19T09:10:00Z'}
+    calls.rerunRequests.mockResolvedValueOnce({items:[],has_more:false,next_cursor:''}).mockResolvedValueOnce({items:[],has_more:false,next_cursor:''}).mockResolvedValue({items:[savedRequest],has_more:false,next_cursor:''})
+    calls.capture.mockResolvedValue({revision:waitRevision(),case_version:2})
+    calls.rerun.mockResolvedValue({request:savedRequest,case_version:3,replayed:false})
+    vi.stubGlobal('crypto',{randomUUID:()=> 'r133-intent-unique-1'})
+    const {wrapper}=await mounted('A','en',false,{role:'owner',permissions:{}})
+    await flushPromises()
+    const child=wrapper.findComponent(InterventionDataFollowup).vm as unknown as {captureReason:string;capture:()=>Promise<void>;requestReason:string;requestRerun:()=>Promise<void>}
+    child.captureReason='New local complaint information'
+    await child.capture(); await flushPromises()
+    expect(calls.detail).toHaveBeenCalledTimes(2)
+    expect(wrapper.findComponent(InterventionDataFollowup).text()).toContain('Updated information was recorded locally.')
+    expect(wrapper.findComponent(InterventionDataFollowup).text()).not.toContain('could not be refreshed')
+    child.requestReason='Review the updated complaint'
+    await child.requestRerun(); await flushPromises()
+    expect(calls.rerun).toHaveBeenCalledTimes(1)
+    expect(calls.detail).toHaveBeenCalledTimes(3)
+    const followup=wrapper.findComponent(InterventionDataFollowup).text()
+    expect(followup).toContain('Updated information was recorded locally.')
+    expect(followup).toContain('Request saved.')
+    expect(followup).toContain('Waiting for separate authorization')
+    expect(followup).toContain('No new assessment has started')
+    expect(followup).not.toContain('could not be refreshed')
+    expect(wrapper.findComponent(InterventionDataFollowup).props('caseRecord')).toMatchObject({version:3,work_state:'WAITING_ON_DATA'})
+    wrapper.unmount()
+    vi.unstubAllGlobals()
+  })
+
   it('rejects unknown roles and hides request creation when jobs write is absent', async () => {
     const unknown=await mounted('A','en',false,{role:'operator',permissions:{intervention_cases:'rw',jobs:'w'}})
     await flushPromises()

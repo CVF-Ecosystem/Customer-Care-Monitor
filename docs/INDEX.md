@@ -4385,7 +4385,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate finite R133 authority for two actual R132 runtime causes; old failure/budgets preserved, provider0.: `CVF_SESSION/authority/CCMAI-RUNTIME-133.json`
 - R133 finite Sol Medium worker dispatch, Root independent reviewer.: `docs/work_orders/CCMAI_RUNTIME_133_WAITDATA_RUNTIME_REPAIR.md`
 - R133 bounded runtime-defect repair tranche, fresh budgets.: `CVF_SESSION/tranches/CCMAI-RUNTIME-133.json`
+- R133 compact current source/dist hashes and actual offline check outcomes.: `docs/reviews/probes/r133_waitdata_repair_20261019/source_checks.json`
+- R133 independent stable-refresh/eligible-fixture source audit and bounded runtime admission.: `docs/reviews/R133_SOURCE_REVIEW_2026-10-19.md`
 - R133 stable reactive identity, stale continuation and eligible synthetic proof contract.: `docs/specs/M3_WAITDATA_RUNTIME_REPAIR_R133_SPEC_2026-10-19.md`
+- R133 Sol worker source,30 focused UI tests/typecheck/build; actual runtime not claimed.: `docs/reviews/R133_REPAIR_WORKER_RETURN_2026-10-19.md`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

@@ -225,6 +225,7 @@ function setupSignal() {
   }
 }
 async function readPage(kind: Kind, mine: number, key: string, signal: AbortSignal, reset = false): Promise<boolean> {
+  if (!current(mine,key,signal)) return false
   if (reset) {
     if (kind === 'revision') { revisions.value=[]; revisionCursor.value=''; revisionHasMore.value=false; revisionPageCount.value=0; revisionLoaded.value=false; revisionComplete.value=false; revisionCursors=new Set<string>() }
     else { requests.value=[]; requestCursor.value=''; requestHasMore.value=false; requestPageCount.value=0; requestLoaded.value=false; requestComplete.value=false; requestCursors=new Set<string>() }
@@ -260,8 +261,7 @@ async function readPage(kind: Kind, mine: number, key: string, signal: AbortSign
     if (current(mine,key,signal)) setSafeError(err,'load')
     return false
   } finally {
-    activeReads.delete(readToken)
-    if (current(mine,key,signal)) historyLoading.value=activeReads.size>0
+    if (current(mine,key,signal)) { activeReads.delete(readToken); historyLoading.value=activeReads.size>0 }
   }
 }
 async function loadInitial(mine: number, key: string, signal: AbortSignal) {
@@ -354,6 +354,7 @@ async function capture() {
     savedCapture.value=result.revision; savedCaptureCaseVersion.value=result.case_version; captureReason.value=''
     clearHistory()
     const refreshed=await refreshAfterWrite(mine,key,signal)
+    if (!current(mine,key,signal)) return
     if (!refreshed) { error.value=t('iv_followup_refresh_failed'); reloadRequired.value=true; return }
     await loadInitial(mine,key,signal)
   } catch (err) {
@@ -380,6 +381,7 @@ async function requestRerun() {
     }
     savedRequest.value=result.request; requestReason.value=''
     const refreshed=await refreshAfterWrite(mine,key,signal)
+    if (!current(mine,key,signal)) return
     if (!refreshed) { error.value=t('iv_followup_refresh_failed'); reloadRequired.value=true; return }
     await readPage('request',mine,key,signal,true)
   } catch (err) {
@@ -398,6 +400,7 @@ async function reloadExplicitly() {
       error.value=t('iv_followup_refresh_failed'); reloadRequired.value=true; return
     }
     await Promise.all([readPage('revision',mine,key,signal,true),readPage('request',mine,key,signal,true)])
+    if (!current(mine,key,signal)) return
     if (!revisionLoaded.value || !requestLoaded.value) reloadRequired.value=true
   } catch { if (current(mine,key,signal)) { error.value=t('iv_followup_refresh_failed'); reloadRequired.value=true } }
   finally { if (current(mine,key,signal)) historyLoading.value=activeReads.size>0 }
@@ -410,6 +413,11 @@ function initialize() {
   void loadInitial(mine,key,signal)
 }
 
-watch(() => [props.lifetimeKey,props.signal,props.caseRecord.id,props.caseRecord.snapshot_id,props.caseRecord.snapshot_digest,props.role,props.canRead,props.canCapture,props.canRequest], initialize, {immediate:true})
+// Compare each identity value: a same-case detail refresh replaces caseRecord.
+watch([
+  () => props.lifetimeKey, () => props.signal, () => props.tenantId, () => props.token,
+  () => props.caseRecord.id, () => props.caseRecord.snapshot_id, () => props.caseRecord.snapshot_digest,
+  () => props.role, () => props.canRead, () => props.canCapture, () => props.canRequest,
+], initialize, {immediate:true})
 onBeforeUnmount(() => { active=false; generation++; controller.abort(); detachExternal?.(); detachExternal=null; if (writing.value) emit('write-busy',false) })
 </script>

@@ -34688,6 +34688,27 @@
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R132_WAITDATA_REQUEST_UI_2026-10-19.md",
       "status": "ACTIVE",
       "description": "Historical R132 CHANGES_REQUIRED, failed original runtime retained and exact cleanup; successorR133."
+    },
+    {
+      "id": "r133-worker-return",
+      "family": "continuity",
+      "path": "docs/reviews/R133_REPAIR_WORKER_RETURN_2026-10-19.md",
+      "status": "ACTIVE",
+      "description": "R133 Sol worker source,30 focused UI tests/typecheck/build; actual runtime not claimed."
+    },
+    {
+      "id": "r133-source-review",
+      "family": "continuity",
+      "path": "docs/reviews/R133_SOURCE_REVIEW_2026-10-19.md",
+      "status": "ACTIVE",
+      "description": "R133 independent stable-refresh/eligible-fixture source audit and bounded runtime admission."
+    },
+    {
+      "id": "r133-source-checks",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r133_waitdata_repair_20261019/source_checks.json",
+      "status": "ACTIVE",
+      "description": "R133 compact current source/dist hashes and actual offline check outcomes."
     }
   ]
 }
