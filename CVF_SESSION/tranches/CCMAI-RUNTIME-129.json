@@ -42,7 +42,7 @@
   "phase": "REVIEW",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
   "workOrderStatus": "COMPLETE_PENDING_REVIEW",
-  "buildCommit": null,
+  "buildCommit": "26ee9688a8a1a7d0ec7e0b54a46cc50817f886a6",
   "reviewEvidence": [
     "docs/reviews/R129_GIT_ARTIFACT_HYGIENE_REVIEW_2026-10-19.md"
   ],
