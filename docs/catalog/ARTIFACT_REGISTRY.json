@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R131_M3_ACCEPTANCE_2026-10-19.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R132_WAITDATA_REQUEST_UI_2026-10-19.md",
       "status": "ACTIVE",
-      "description": "Current R131 M3 acceptance reconciliation handoff."
+      "description": "Current R132 WAIT_DATA request-only UI handoff."
     },
     {
       "id": "r060-work-order",
@@ -34584,6 +34584,34 @@
       "path": "docs/reviews/R131_M3_ACCEPTANCE_REVIEW_2026-10-19.md",
       "status": "ACTIVE",
       "description": "Independent source/original-receipt review and finite M3-05 UI continuation."
+    },
+    {
+      "id": "r132-dispatcher-seed",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-132.json",
+      "status": "ACTIVE",
+      "description": "Immutable R2 request-only UI/owned synthetic proof authority; provider0."
+    },
+    {
+      "id": "r132-tranche",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-132.json",
+      "status": "ACTIVE",
+      "description": "R132 bounded worker and independent review lifecycle."
+    },
+    {
+      "id": "r132-work-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_132_WAITDATA_REQUEST_UI.md",
+      "status": "ACTIVE",
+      "description": "Direct M3-05 WAIT_DATA followup UI and one owned native/browser proof."
+    },
+    {
+      "id": "r132-spec",
+      "family": "continuity",
+      "path": "docs/specs/M3_WAITDATA_REQUEST_UI_R132_SPEC_2026-10-19.md",
+      "status": "ACTIVE",
+      "description": "Intended F01..F08 request-only UI contract; no execution authority."
     }
   ]
 }

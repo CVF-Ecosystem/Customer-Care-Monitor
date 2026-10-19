@@ -1,6 +1,6 @@
 # R131 — M3 acceptance reconciliation
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 
@@ -35,3 +35,5 @@ Root enters independent REVIEW of worker material bae7a8182fefabbf76f7882b212ce2
 After independent reviewer-fast PASS, Root REVIEWER assumes CLOSER and COMMIT_STEWARD for the settled R131 documentation scope. Worker build bae7a8182fefabbf76f7882b212ce2cb114b877d is accepted after one consolidated repair. Root ORCHESTRATOR selects the direct M3-05 request-only UI slice and prepares a separate R132 dispatcher seed; no R131 authority is widened.
 
 R131 disposition: FROZEN documentation reconciliation only. The matrix and independent review preserve original failed runs, unsupported offline control and current-source hash qualifications. No product/runtime/provider effect or full milestone acceptance.
+
+Superseded by R132 request-only UI handoff; R131 remains FROZEN.

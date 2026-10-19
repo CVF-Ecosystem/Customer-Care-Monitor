@@ -34,11 +34,11 @@
     "deliveryRoadmapPublication": "d72de76984e4aad9c208cc82e6093578797b5340",
     "m1BusinessPilotAcceptance": "OPEN",
     "currentPublication": "R130_FEATURE_BRANCH_REWRITE_PUBLISHED_FORCE_WITH_LEASE_VERIFIED",
-    "nextPlannedWork": "CCMAI-RUNTIME-131 FROZEN: independently accepted eight-row M3 reconciliation; M3 remains PARTIAL. Next is R132 bounded request-only WAIT_DATA UI over existing revision/request APIs, with Root ORCHESTRATOR / REVIEWER and Luna Max / Sol Medium workers; no provider execution or publication."
+    "nextPlannedWork": "CCMAI-RUNTIME-132 DISPATCH_READY: Luna Max implements request-only WAIT_DATA frontend; Sol Medium implements one opt-in owned synthetic fixture. Root independently reviews source before bounded zero-provider runtime admission. No grant/execute, installed app, provider or publication effects."
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "FREEZE",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "R118 REVIEW_PASS SOURCE_COMPONENT_ONLY at7f74a75f93671973bcfe55b5cb491076c0d2bdf9: current proposal pointer/lineage binding, safe legacy fallback and proposal-less data actions, VN/EN WAIT_DATA history. Root24tests/app typecheckPASS, original byte archive/source pins verified; changed-screen UI proof NOT_RUN/FREEZE OPEN. docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md",
     "R117 bounded WAIT_DATA backend real synthetic flow independently accepted: new same-case proposal after source revision, faithful realAlibaba340/297tokens, synthetic CONFIRM persisted, one call/debit, native11top11nested+engine1PASS. Exact owned owner-authorized restart/finalstop and operational protected equality observed; original interruption/cleanupHOLD retained. Current UI/fullM2/M3/pilot/release remain OPEN. docs/reviews/R117_FINAL_INDEPENDENT_REVIEW_2026-10-18.md",
@@ -2017,7 +2017,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-131",
+  "activeTranche": "CCMAI-RUNTIME-132",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
@@ -2597,7 +2597,7 @@
     "nextGate": "Separate SPEC/work order for actual AI executor/integration or M1 business decisions",
     "actualRerun": "OPEN_EXECUTOR_NOT_INCLUDED"
   },
-  "x-activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R131_M3_ACCEPTANCE_2026-10-19.md",
+  "x-activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R132_WAITDATA_REQUEST_UI_2026-10-19.md",
   "x-ownerRepairContinuation": "CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json",
   "x-r102Current": {
     "status": "FROZEN_LOCAL_ONLY",

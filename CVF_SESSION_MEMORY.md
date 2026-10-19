@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R131_M3_ACCEPTANCE_2026-10-19.md", "activeTranche": "CCMAI-RUNTIME-131", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R132_WAITDATA_REQUEST_UI_2026-10-19.md", "activeTranche": "CCMAI-RUNTIME-132", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: FREEZE
-- Active phase: FREEZE
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R131_M3_ACCEPTANCE_2026-10-19.md
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R132_WAITDATA_REQUEST_UI_2026-10-19.md
 
-CCMAI-RUNTIME-131 FROZEN: independently accepted eight-row M3 reconciliation; M3 remains PARTIAL. Next is R132 bounded request-only WAIT_DATA UI over existing revision/request APIs, with Root ORCHESTRATOR / REVIEWER and Luna Max / Sol Medium workers; no provider execution or publication.
+CCMAI-RUNTIME-132 DISPATCH_READY: Luna Max implements request-only WAIT_DATA frontend; Sol Medium implements one opt-in owned synthetic fixture. Root independently reviews source before bounded zero-provider runtime admission. No grant/execute, installed app, provider or publication effects.
 
-Root ORCHESTRATOR / REVIEWER / CLOSER / COMMIT_STEWARD
+Root ORCHESTRATOR / SPEC_AUTHOR / independent REVIEWER; Luna Max frontend and Sol Medium fixture workers pending
 
 ## Historical R114 bounded UI result
 
