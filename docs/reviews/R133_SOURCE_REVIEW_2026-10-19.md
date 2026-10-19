@@ -1,6 +1,6 @@
 # R133 independent source and admission review
 
-Status: ACCEPTED_FOR_OWNED_RUNTIME_ONLY
+Status: SOURCE_ACCEPTED_RUNTIME_HOLD
 Risk: R2
 Worker: Sol Medium stable-refresh and eligible fixture worker
 Reviewer: Root independent source/browser reviewer
@@ -18,3 +18,7 @@ Root read both worker regressions: the real mounted parent replaces same-case de
 Root reversed the R133/R132 protocol rename and compared the entire fixture to its previously audited implementation: the only remaining semantic difference is the intentionally eligible customer complaint/wait seed. All133identity/ready/stop/terminal checks, exact external path, DBprefix/nonce table/env/test names agree, with no132protocol residue. Existing pre-connect ownership, real-route permission probes, request-scoped503 fault, budgets/effects, failure terminal, owned close/join remain unchanged. Source is accepted FOR_OFFLINE_COMPILE_ONLY; runtime still0 pending exact compile and static material commit.
 
 Root exact-final offline Go compile exit0, sharedGo1/3, sourceF5F8E4B3856C447694BAF48CB06DAEC6AD3B2F40668A7DAA1525CAFF19080D59. Source accepted for the already bounded single fresh R133 campaign after static/material commit. Node2/4 used (worker tests/build), runtime/provider0. No further source repair finding; no product milestone or AI governance acceptance is inferred.
+
+## Runtime hold
+
+Supported IAB browser unavailable before any tab/action; Root stopped per owner instruction. Native permission probes403/403 accepted bounded, actual fixture exit1 reflects unperformed browser assertions, not end-to-end acceptance. Exact owned server/test/MySQL stopped preserved; prior26 containers equal baseline; zero provider. See R133_RUNTIME_TRANSFER_PACKET_2026-10-19.md and compact runtime_hold.json. Source acceptance stands; runtime/FREEZE remains OPEN; no replay or alternative automation.

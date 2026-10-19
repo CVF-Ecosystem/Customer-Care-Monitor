@@ -1528,7 +1528,7 @@
       "family": "continuity",
       "path": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
       "status": "ACTIVE",
-      "description": "R120 current proposal/history observed bounded; terminal/durable accounting missing, full milestones OPEN."
+      "description": "Current R133 source repaired, browser transfer required; M3 partial and original failures retained."
     },
     {
       "id": "ccma-product-delivery-publication-20261013",
@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R133_WAITDATA_RUNTIME_REPAIR_2026-10-19.md",
       "status": "ACTIVE",
-      "description": "Current R133 stable-refresh/eligible-fixture handoff."
+      "description": "Current R133 source accepted/browser unavailable transfer hold; stopped runtime, no replay."
     },
     {
       "id": "r060-work-order",
@@ -34709,6 +34709,20 @@
       "path": "docs/reviews/probes/r133_waitdata_repair_20261019/source_checks.json",
       "status": "ACTIVE",
       "description": "R133 compact current source/dist hashes and actual offline check outcomes."
+    },
+    {
+      "id": "r133-runtime-transfer",
+      "family": "continuity",
+      "path": "docs/reviews/R133_RUNTIME_TRANSFER_PACKET_2026-10-19.md",
+      "status": "ACTIVE",
+      "description": "R133 concrete browser-unavailable transfer packet; source accepted, actual runtime not accepted, stopped cleanup."
+    },
+    {
+      "id": "r133-runtime-hold",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r133_waitdata_repair_20261019/runtime_hold.json",
+      "status": "ACTIVE",
+      "description": "R133 actual native/terminal/exit1 and exact26-resource cleanup, zero browser writes/provider; no runtime PASS."
     }
   ]
 }

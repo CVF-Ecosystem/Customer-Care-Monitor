@@ -1,6 +1,6 @@
 # R133 — repair observed WAIT_DATA runtime defects
 
-Status: COMPLETE_PENDING_REVIEW
+Status: BLOCKED_WITH_REASON
 Risk: R2
 Worker: Sol Medium stable-refresh and eligible fixture worker
 Reviewer: Root independent source/browser reviewer

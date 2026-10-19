@@ -3082,5 +3082,24 @@
     "providerCalls": 0,
     "currentVerification": "NATIVE7_UI21_BUILD_BROWSER_EXIT0",
     "sourceCommit": "bc5333946ddefcfa137db4f3c253ea507bdf06e5"
+  },
+  "x-r133CurrentOutcome": {
+    "status": "BROWSER_UNAVAILABLE_OWNER_TRANSFER_REQUIRED",
+    "sourceCommit": "372980e5cbdc9efdf81c39211c4a82772fffb3c1",
+    "sourceReview": "ACCEPTED_BOUNDED",
+    "focusedTests": 30,
+    "typecheckBuildExit": 0,
+    "offlineCompileExit": 0,
+    "actualOwnedGoExit": 1,
+    "browser": "NOT_RUN_UNAVAILABLE",
+    "browserTabs": 0,
+    "nativeReaderCapture": 403,
+    "nativeNoJobsRequest": 403,
+    "ownedRuntime": "EXITED_PRESERVED",
+    "protectedOldContainers": 26,
+    "protectedOldContainersEqual": true,
+    "providerCalls": 0,
+    "freeze": "OPEN",
+    "transferPacket": "docs/reviews/R133_RUNTIME_TRANSFER_PACKET_2026-10-19.md"
   }
 }

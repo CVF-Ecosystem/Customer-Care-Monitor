@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-133",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R133_WAITDATA_RUNTIME_REPAIR_2026-10-19.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-133 REVIEW: Root independent REVIEWER verifies source372980e5 in one fresh nonce-owned synthetic MySQL/browser campaign, including honest post-save notices,503/201/201 persistence, reader controls, terminal/exit and exact owned cleanup; provider0 and no execute/grant/publication.",
+  "nextAllowedMove": "CCMAI-RUNTIME-133 CHANGES_REQUIRED / BROWSER_UNAVAILABLE: owner transfers runtime proof to an agent with a connected browser using R133_RUNTIME_TRANSFER_PACKET_2026-10-19.md. Source372980e5 accepted; all owned runtime stopped and old budgets preserved. No automatic successor/replay, provider, execute/grant or publication.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root independent REVIEWER; Sol Medium source worker returned",
+  "activeRole": "Root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD; owner runtime transfer required",
   "updatedAt": "2026-10-19",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {
@@ -2364,5 +2364,24 @@
     "N04": "ENCODING_FIXED_UI_OBSERVED_TERMINAL_INTERRUPTED",
     "N05": "DOCS_NPM_CI_BUILD_PASS",
     "N02": "CAPABILITY_AND_CONTRACT_ONLY_ACTIVATION_OPEN"
+  },
+  "x-r133CurrentOutcome": {
+    "status": "BROWSER_UNAVAILABLE_OWNER_TRANSFER_REQUIRED",
+    "sourceCommit": "372980e5cbdc9efdf81c39211c4a82772fffb3c1",
+    "sourceReview": "ACCEPTED_BOUNDED",
+    "focusedTests": 30,
+    "typecheckBuildExit": 0,
+    "offlineCompileExit": 0,
+    "actualOwnedGoExit": 1,
+    "browser": "NOT_RUN_UNAVAILABLE",
+    "browserTabs": 0,
+    "nativeReaderCapture": 403,
+    "nativeNoJobsRequest": 403,
+    "ownedRuntime": "EXITED_PRESERVED",
+    "protectedOldContainers": 26,
+    "protectedOldContainersEqual": true,
+    "providerCalls": 0,
+    "freeze": "OPEN",
+    "transferPacket": "docs/reviews/R133_RUNTIME_TRANSFER_PACKET_2026-10-19.md"
   }
 }

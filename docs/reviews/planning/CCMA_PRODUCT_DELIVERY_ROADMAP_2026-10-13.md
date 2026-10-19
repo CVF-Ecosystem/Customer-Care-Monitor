@@ -1,5 +1,9 @@
 # CCMA — Roadmap phát triển sản phẩm và tiếp quản giữa các agent
 
+## R133 — sửa mã xong, kiểm chứng browser cần chuyển agent
+
+Đã sửa refresh cùng ca và điều kiện dữ liệu synthetic;30 kiểm tra UI, typecheck/build và offline Go compile PASS. Browser hiện không khả dụng nên chưa kiểm chứng luồng mới; lượt fixture kết thúc exit1 do không chạy browser, không nhận PASS. Native quyền403/403,26 container cũ không đổi; server/MySQL thử dừng và giữ nguyên, provider0. Theo chỉ thị owner, dừng và bàn giao agent có browser, không đổi stack/tự chạy lại. M3 vẫn PARTIAL. [Gói bàn giao](../R133_RUNTIME_TRANSFER_PACKET_2026-10-19.md). Các mục dưới là lịch sử.
+
 ## R132 — lưu thông tin được, yêu cầu đánh giá lại chưa nghiệm thu
 
 Lượt browser synthetic thực tế ghi nhận503 rồi201, lịch sử bản ghi còn sau reload và reader không có nút ghi. Chưa nghiệm thu: lỗi refresh sau lưu và fixture thiếu nội dung khiếu nại khiến request409; test exit1 giữ nguyên. Server/MySQL thử đã dừng,25 container cũ không đổi, provider0. R133 chỉ sửa hai nguyên nhân mới này, có seed và proof riêng; M3 vẫn PARTIAL. Xem [review R132](../R132_RUNTIME_REVIEW_2026-10-19.md). Các mục dưới là lịch sử.
