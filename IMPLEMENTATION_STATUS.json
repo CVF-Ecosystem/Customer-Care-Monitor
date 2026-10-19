@@ -33,8 +33,8 @@
     "milestoneAcceptance": "R128_CURRENT_SYNTHETIC_HUMAN_WORKFLOW_AND_READER_NAMES_ACCEPTED_FULL_M3_OPEN",
     "deliveryRoadmapPublication": "d72de76984e4aad9c208cc82e6093578797b5340",
     "m1BusinessPilotAcceptance": "OPEN",
-    "currentPublication": "BASE_1e3db8b1_PUSHED_AND_MERGED_d7a6f76_THIS_ROADMAP_UPDATE_LOCAL_ONLY",
-    "nextPlannedWork": "CCMAI-RUNTIME-128 REVIEW_PASS: readers see case-scoped participant names after reload without write controls or full-directory requests; native7/UI21/build/current browser exit0 accepted. Consolidate remaining M3 acceptance from these receipts; B09 offline unsupported and business/pilot/hosted release remain open. No generic helper scope or provider/customer/push/deploy action without a concrete roadmap need."
+    "currentPublication": "FEATURE_BRANCH_CLEANUP_PENDING_OWNER_REVIEW_NO_MAIN_MERGE",
+    "nextPlannedWork": "CCMAI-RUNTIME-129 REVIEW_PENDING: exact R126 raw ZIP is ignored and absent from the current feature branch tree; intact local backup retained at ../.ccmai_local_evidence/review_completion_20261018/local_verification_originals.zip. Owner independent review pending. No merge/main/history rewrite/deploy; prior Git history still contains the blob."
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
@@ -2017,7 +2017,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-128",
+  "activeTranche": "CCMAI-RUNTIME-129",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
@@ -2597,7 +2597,7 @@
     "nextGate": "Separate SPEC/work order for actual AI executor/integration or M1 business decisions",
     "actualRerun": "OPEN_EXECUTOR_NOT_INCLUDED"
   },
-  "x-activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R128_CASE_PARTICIPANT_NAMES_2026-10-19.md",
+  "x-activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R129_GIT_ARTIFACT_HYGIENE_2026-10-19.md",
   "x-ownerRepairContinuation": "CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json",
   "x-r102Current": {
     "status": "FROZEN_LOCAL_ONLY",

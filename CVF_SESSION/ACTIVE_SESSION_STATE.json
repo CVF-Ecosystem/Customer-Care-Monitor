@@ -12,11 +12,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-128",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R128_CASE_PARTICIPANT_NAMES_2026-10-19.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-128 REVIEW_PASS: readers see case-scoped participant names after reload without write controls or full-directory requests; native7/UI21/build/current browser exit0 accepted. Consolidate remaining M3 acceptance from these receipts; B09 offline unsupported and business/pilot/hosted release remain open. No generic helper scope or provider/customer/push/deploy action without a concrete roadmap need.",
+  "activeTranche": "CCMAI-RUNTIME-129",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R129_GIT_ARTIFACT_HYGIENE_2026-10-19.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-129 REVIEW_PENDING: exact R126 raw ZIP is ignored and absent from the current feature branch tree; intact local backup retained at ../.ccmai_local_evidence/review_completion_20261018/local_verification_originals.zip. Owner independent review pending. No merge/main/history rewrite/deploy; prior Git history still contains the blob.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; reader participant-name fix accepted",
+  "activeRole": "Root ORCHESTRATOR / COMMIT_STEWARD; owner independent review pending",
   "updatedAt": "2026-10-19",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {

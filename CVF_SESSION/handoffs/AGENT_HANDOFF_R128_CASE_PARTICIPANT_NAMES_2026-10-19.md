@@ -1,6 +1,6 @@
 # Case participant reader-name fix
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 

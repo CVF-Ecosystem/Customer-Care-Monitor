@@ -3920,7 +3920,7 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R128_CASE_PARTICIPANT_NAMES_2026-10-19.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R129_GIT_ARTIFACT_HYGIENE_2026-10-19.md",
       "status": "ACTIVE",
       "description": "Current R126 DB fixture lifetime and current-package verification handoff."
     },
@@ -34385,13 +34385,6 @@
       "id": "r126-final-latest-package-coverage-manifest",
       "family": "continuity",
       "path": "docs/reviews/probes/review_completion_20261018/latest_package_coverage_manifest.json",
-      "status": "ACTIVE",
-      "description": "Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance."
-    },
-    {
-      "id": "r126-final-local-verification-originals",
-      "family": "continuity",
-      "path": "docs/reviews/probes/review_completion_20261018/local_verification_originals.zip",
       "status": "ACTIVE",
       "description": "Qualified local review completion: original synthetic receipts and source-guarded whole-package verification; no fresh single full invocation or hosted/provider acceptance."
     },

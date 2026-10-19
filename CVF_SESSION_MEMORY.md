@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R128_CASE_PARTICIPANT_NAMES_2026-10-19.md", "activeTranche": "CCMAI-RUNTIME-128", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R129_GIT_ARTIFACT_HYGIENE_2026-10-19.md", "activeTranche": "CCMAI-RUNTIME-129", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R128_CASE_PARTICIPANT_NAMES_2026-10-19.md
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R129_GIT_ARTIFACT_HYGIENE_2026-10-19.md
 
-CCMAI-RUNTIME-128 REVIEW_PASS: readers see case-scoped participant names after reload without write controls or full-directory requests; native7/UI21/build/current browser exit0 accepted. Consolidate remaining M3 acceptance from these receipts; B09 offline unsupported and business/pilot/hosted release remain open. No generic helper scope or provider/customer/push/deploy action without a concrete roadmap need.
+CCMAI-RUNTIME-129 REVIEW_PENDING: exact R126 raw ZIP is ignored and absent from the current feature branch tree; intact local backup retained at ../.ccmai_local_evidence/review_completion_20261018/local_verification_originals.zip. Owner independent review pending. No merge/main/history rewrite/deploy; prior Git history still contains the blob.
 
-Root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; reader participant-name fix accepted
+Root ORCHESTRATOR / COMMIT_STEWARD; R129 owner independent review pending
 
 R126 accepted local feedback fixes with qualified whole-package proof at90bc02ed; original failed full runs remain failed.
 

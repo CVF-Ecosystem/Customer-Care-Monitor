@@ -49,3 +49,6 @@ HANDOFF.md
 
 # Local provider secrets — KHÔNG commit; đặt ở đây để agent đọc khi cần
 CVF_SESSION/LOCAL_PROVIDER_SECRETS.json
+
+# Local verification originals can contain very large raw logs and test outputs
+docs/reviews/probes/review_completion_20261018/local_verification_originals.zip

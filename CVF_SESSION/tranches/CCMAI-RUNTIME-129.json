@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-129",
+  "authorityKind": "DISPATCHER_OWNED_GIT_ARTIFACT_HYGIENE",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Codex /root",
+    "implementationWorker": "Codex /root repository artifact hygiene",
+    "reviewer": "Owner independent review pending",
+    "commitSteward": "Codex /root"
+  },
+  "allowedPaths": [
+    ".gitignore",
+    "docs/reviews/probes/review_completion_20261018/local_verification_originals.zip",
+    "docs/reviews/R126_FINAL_CURRENT_PACKAGE_REVIEW_2026-10-18.md",
+    "docs/INDEX.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/work_orders/CCMAI_RUNTIME_129_GIT_ARTIFACT_HYGIENE.md",
+    "docs/reviews/R129_*.md",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-129.json",
+    "CVF_SESSION/tranches/CCMAI-RUNTIME-129.json",
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_R129_GIT_ARTIFACT_HYGIENE_2026-10-19.md",
+    "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+    "CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_R128_CASE_PARTICIPANT_NAMES_2026-10-19.md"
+  ],
+  "prohibitedEffects": [
+    "Merge or push to main",
+    "Rewrite published branch history or force-push",
+    "Delete the local backup archive",
+    "Provider, customer, installed application, or deployment effects"
+  ],
+  "ownerAuthorization": "Owner explicitly requested adding the archive to gitignore, excluding the already tracked archive from the new branch snapshot, and pushing the current feature branch. Owner explicitly stated there is no authorization to merge into main.",
+  "scope": "Exclude only the R126 local_verification_originals.zip from the current feature branch tree while preserving its local backup and updating direct current-tree catalog/index/review references.",
+  "verification": "Verify ignored path, local backup size/hash, catalog and continuity gates, feature branch commit/push, and remote HEAD. No history rewrite.",
+  "claimBoundary": "Repository hygiene only. Existing review evidence remains locally preserved; its 72 MB archive is absent from the current branch tree but remains in prior Git history.",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_129_GIT_ARTIFACT_HYGIENE.md",
+  "baseCommit": "7b39eac88d9c61b95c4b2dc8312ed8c603259f39",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
+  "buildCommit": null,
+  "reviewEvidence": [
+    "docs/reviews/R129_GIT_ARTIFACT_HYGIENE_REVIEW_2026-10-19.md"
+  ],
+  "disposition": "PENDING_OWNER_REVIEW",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "BUILD",
+    "REVIEW_PENDING"
+  ],
+  "bootstrapException": "Owner requested same-scope cleanup and feature branch publication after R128 was already REVIEW_PASS; the R129 seed and bounded work order are introduced in this cleanup commit, before any new application effects."
+}
