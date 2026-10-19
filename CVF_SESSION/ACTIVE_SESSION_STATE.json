@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-131",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R131_M3_ACCEPTANCE_2026-10-19.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-131 DISPATCH_READY: Luna Max consolidates M3-01 through M3-08 using current source and existing receipts; Root independently reviews the matrix and selects the next finite product gap. No new runtime, provider or publication authority.",
+  "nextAllowedMove": "CCMAI-RUNTIME-131 BUILD: Luna Max writes the bounded M3-01 through M3-08 evidence matrix after rehydration acknowledgment; Root remains ORCHESTRATOR / REVIEWER and independently verifies the return. No product/runtime/provider/publication action.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / REVIEWER; Luna Max evidence worker pending dispatch",
+  "activeRole": "Root ORCHESTRATOR / REVIEWER; Luna Max IMPLEMENTATION_WORKER (documentation only)",
   "updatedAt": "2026-10-19",
   "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
   "x-ownerRoadmapDiscipline": {

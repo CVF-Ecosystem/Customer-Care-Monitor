@@ -2,20 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R131_M3_ACCEPTANCE_2026-10-19.md", "activeTranche": "CCMAI-RUNTIME-131", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R131_M3_ACCEPTANCE_2026-10-19.md", "activeTranche": "CCMAI-RUNTIME-131", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
+- Current mode: BUILD
+- Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R131_M3_ACCEPTANCE_2026-10-19.md
 
-CCMAI-RUNTIME-131 DISPATCH_READY: Luna Max consolidates M3-01 through M3-08 using current source and existing receipts; Root independently reviews the matrix and selects the next finite product gap. No new runtime, provider or publication authority.
+CCMAI-RUNTIME-131 BUILD: Luna Max writes the bounded M3-01 through M3-08 evidence matrix after rehydration acknowledgment; Root remains ORCHESTRATOR / REVIEWER and independently verifies the return. No product/runtime/provider/publication action.
 
-Root ORCHESTRATOR / REVIEWER; Luna Max evidence worker pending dispatch
-
-R130 is frozen at closure commit 1d7c374f; the product roadmap resumes from the R128 acceptance checkpoint.
+Root ORCHESTRATOR / REVIEWER; Luna Max IMPLEMENTATION_WORKER (documentation only)
 
 ## Historical R114 bounded UI result
 

@@ -1,6 +1,6 @@
 # R131 — M3 acceptance reconciliation
 
-Status: DISPATCH_READY
+Status: ACTIVE
 Risk: R1
 Worker: Luna Max evidence analyst
 Reviewer: Root independent reviewer
