@@ -4374,11 +4374,14 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Immutable R2 request-only UI/owned synthetic proof authority; provider0.: `CVF_SESSION/authority/CCMAI-RUNTIME-132.json`
 - R132 fixture worker return, source and compile only; Root runtime admission pending.: `docs/reviews/R132_FIXTURE_WORKER_RETURN_2026-10-19.md`
 - R132 frontend source worker return; initial build failure and bounded repairs disclosed; Root final verification separate.: `docs/reviews/R132_FRONTEND_WORKER_RETURN_2026-10-19.md`
+- R132 compact actual browser/native/terminal/effect/cleanup failure receipt; no acceptance.: `docs/reviews/probes/r132_waitdata_request_20261019/runtime_review.json`
+- R132 actual runtime exit1, defects and exact owned cleanup; CHANGES_REQUIRED, no replay.: `docs/reviews/R132_RUNTIME_REVIEW_2026-10-19.md`
 - R132 compact exact source hashes and actual source-check exits; no AI governance or runtime acceptance.: `docs/reviews/probes/r132_waitdata_request_20261019/source_checks.json`
 - R132 independent source findings and bounded runtime admission; in progress, no product runtime claim.: `docs/reviews/R132_SOURCE_REVIEW_2026-10-19.md`
 - Intended F01..F08 request-only UI contract; no execution authority.: `docs/specs/M3_WAITDATA_REQUEST_UI_R132_SPEC_2026-10-19.md`
 - R132 bounded worker and independent review lifecycle.: `CVF_SESSION/tranches/CCMAI-RUNTIME-132.json`
 - Direct M3-05 WAIT_DATA followup UI and one owned native/browser proof.: `docs/work_orders/CCMAI_RUNTIME_132_WAITDATA_REQUEST_UI.md`
+- Separate finite R133 authority for two actual R132 runtime causes; old failure/budgets preserved, provider0.: `CVF_SESSION/authority/CCMAI-RUNTIME-133.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

@@ -11,7 +11,7 @@ Memory class: POINTER_RECORD
 - Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R132_WAITDATA_REQUEST_UI_2026-10-19.md
 
-CCMAI-RUNTIME-132 REVIEW: Root independent REVIEWER verifies source51e0b85c in one nonce-owned synthetic MySQL/browser campaign, checks real request-only persistence/failure/reader behavior and owned terminal/cleanup; provider0, no execute/grant/publication.
+CCMAI-RUNTIME-132 CHANGES_REQUIRED: preserve failed original exit1 and stopped owned fixture; Root ORCHESTRATOR prepares separate R133 stable-refresh/eligible-fixture repair for two new runtime root causes. No R132 replay, provider, execute/grant/publication.
 
 Root independent REVIEWER; Luna Max frontend and Sol Medium fixture source workers returned
 

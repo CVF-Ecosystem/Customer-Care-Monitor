@@ -8,7 +8,7 @@ Status: ACTIVE
 - Active phase: REVIEW
 - Active role: Root independent REVIEWER; Luna Max frontend and Sol Medium fixture source workers returned
 - Active tranche: CCMAI-RUNTIME-132
-- Next allowed move: CCMAI-RUNTIME-132 REVIEW: Root independent REVIEWER verifies source51e0b85c in one nonce-owned synthetic MySQL/browser campaign, checks real request-only persistence/failure/reader behavior and owned terminal/cleanup; provider0, no execute/grant/publication.
+- Next allowed move: CCMAI-RUNTIME-132 CHANGES_REQUIRED: preserve failed original exit1 and stopped owned fixture; Root ORCHESTRATOR prepares separate R133 stable-refresh/eligible-fixture repair for two new runtime root causes. No R132 replay, provider, execute/grant/publication.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 Root ORCHESTRATOR / SPEC_AUTHOR accepts intended F01..F08 after INTAKE/DESIGN, and remains independent REVIEWER for Luna frontend/Sol fixture work. Root COMMIT_STEWARD owns dispatcher/accepted material commits. Source worker never commits or edits seeds. Seed base fc4cc961b58c011f305d22045e2ccd2fef2c7865 exists before BUILD.
@@ -34,3 +34,7 @@ Sol Medium IMPLEMENTATION_WORKER acknowledgment (2026-10-19): Rehydrated current
 ## REVIEW transition and runtime admission
 
 Root transitions from COMMIT_STEWARD back to independent REVIEWER. Source material51e0b85c448c46ba45717b042901d0c4cae136f4 committed after source acceptance, final28 UI tests/typecheck/build and static gates passed. Worker code is unchanged. Runtime admission is only the existing finite single fresh synthetic campaign. Current counters: Go2/4, Node4/4, MySQL0/1, finalStop0/1, browser0/1, auth0/4, capture0/2, request0/1, provider0/0; consolidated source repair rounds2.
+
+## Runtime review — CHANGES_REQUIRED, not closed
+
+R132_RUNTIME_REVIEW_2026-10-19.md records real exit1, false post-save refresh error and fixture missing required complaint anchor (request409/no row). Protected25 unchanged; owned MySQL/server stopped preserved, provider0, no replay. R132 remains OPEN; Root ORCHESTRATOR prepares separately seeded R133 for the independently observed runtime causes, not a third repair of the earlier type/5xx/fault findings.

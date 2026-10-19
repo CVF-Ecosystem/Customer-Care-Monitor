@@ -1,0 +1,127 @@
+{
+  "trancheId": "CCMAI-RUNTIME-132",
+  "buildCommit": "51e0b85c448c46ba45717b042901d0c4cae136f4",
+  "status": "CHANGES_REQUIRED",
+  "terminal": {
+    "authPosts": 4,
+    "capturePosts": 2,
+    "captureStatuses": [
+      503,
+      201
+    ],
+    "caseVersion": 2,
+    "countsAfter": {
+      "ai_usage_logs": 0,
+      "attempts": 0,
+      "budgets": 0,
+      "executions_claims": 0,
+      "grants": 0,
+      "human_events": 1,
+      "proposals": 1,
+      "receipts": 0,
+      "requests": 0,
+      "revisions": 1,
+      "runs": 0,
+      "snapshots": 2
+    },
+    "countsBefore": {
+      "ai_usage_logs": 0,
+      "attempts": 0,
+      "budgets": 0,
+      "executions_claims": 0,
+      "grants": 0,
+      "human_events": 0,
+      "proposals": 1,
+      "receipts": 0,
+      "requests": 0,
+      "revisions": 0,
+      "runs": 0,
+      "snapshots": 2
+    },
+    "deniedRoutes": 0,
+    "disposition": "WAIT_DATA",
+    "execution": "NOT_RUN",
+    "finishedAt": "2026-10-19T11:47:28.7494143Z",
+    "firstCaptureNoWrite": true,
+    "injectedSourceRead": true,
+    "nativeNoJobsRequestStatus": 403,
+    "nativeReaderCaptureStatus": 403,
+    "nonce": "0a40e89f2df6869d87e0ee536a2794eb",
+    "observationErrors": null,
+    "requestPosts": 1,
+    "requestStatus": "missing",
+    "serveJoined": true,
+    "serveResult": "http: Server closed",
+    "stopReason": "owned_stop",
+    "testFailed": true,
+    "trancheId": "CCMAI-RUNTIME-132",
+    "workState": "WAITING_ON_DATA"
+  },
+  "actualGoExit": 1,
+  "ownedFixtureStoppedPreserved": true,
+  "oldContainerCount": 25,
+  "oldContainersEqual": true,
+  "oldNetworkIDsEqual": true,
+  "addedVolumes": [
+    "5479415d6fe5f00e3e3b6338abdbf0ca72961cb1d38820785fb13ba6ea203070"
+  ],
+  "ownedVolumes": [
+    "5479415d6fe5f00e3e3b6338abdbf0ca72961cb1d38820785fb13ba6ea203070"
+  ],
+  "oldVolumesPreserved": true,
+  "listenerConnectEx": 10035,
+  "browserPOSTs": [
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/login",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/tenants/fe87013a-6deb-4d84-8fdb-c6c7d1f801c6/intervention-cases/a390d239-3c54-4cad-8007-5a830bfbbfd3/data-revisions",
+      "status": 503
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/tenants/fe87013a-6deb-4d84-8fdb-c6c7d1f801c6/intervention-cases/a390d239-3c54-4cad-8007-5a830bfbbfd3/data-revisions",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/tenants/fe87013a-6deb-4d84-8fdb-c6c7d1f801c6/intervention-cases/a390d239-3c54-4cad-8007-5a830bfbbfd3/rerun-requests",
+      "status": 409
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/logout",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/login",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/logout",
+      "status": 200
+    }
+  ],
+  "readerObservation": "Saved revision and human history after fresh reader login/reload, no capture/request/action controls; no saved request because409",
+  "safeErrorObservation": "Actual503 friendly VN error, disabled write controls, explicit reload before manual201 retry; no auto resubmit",
+  "defects": [
+    "False refresh failure after successful capture: array-returning watch reinitializes on same-identity case object refresh; post-await stale continuation writes error",
+    "Fixture new message lacks required complaint/wait anchor: request409, no request row; no backend defect inferred"
+  ],
+  "providerCalls": 0,
+  "sourceHashPreserved": true,
+  "rawEvidence": "../.ccmai_local_evidence/r132_waitdata_request_20261019",
+  "rawHashes": {
+    "fixture/backend_terminal.json": "55c26afc518b574c06904e26b659ef134ef1246d7f006836dfcc85cd413e75e1",
+    "fixture/route_journal.jsonl": "a1b700ce68d3438e9ac32f28e618d883fa17956d3dc108bf35cedaf22b825740",
+    "root_runtime/go-test.jsonl": "905f6567522d09b3a1730a1d382afe986a8bfd0bb49d20eb57a73153c9dce129",
+    "root_runtime/test_exit.json": "fb54aba628092150fedeb211daa5fd810c7b598ae1bca3696c476f0de7a1f7a5",
+    "reader-observation.png": "623a315c31817ade362bc1c32d404440878d7fd0556e0cbb97b9ef8a0690cb64"
+  },
+  "listenerObservation": "Serve joined http: Server closed; Get-NetTCPConnection -LocalPort60459 -StateListen returned no listener rows. connect_ex10035 alone is inconclusive."
+}

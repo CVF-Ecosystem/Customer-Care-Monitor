@@ -1,6 +1,6 @@
 # R132 — WAIT_DATA request-only user workflow
 
-Status: COMPLETE_PENDING_REVIEW
+Status: BLOCKED_WITH_REASON
 Risk: R2
 Worker: Luna Max frontend followup; Sol Medium owned synthetic fixture
 Reviewer: Root independent source/browser reviewer

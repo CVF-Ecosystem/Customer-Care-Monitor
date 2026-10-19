@@ -3,7 +3,7 @@
   "activePhase": "REVIEW",
   "activeTranche": "CCMAI-RUNTIME-132",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R132_WAITDATA_REQUEST_UI_2026-10-19.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-132 REVIEW: Root independent REVIEWER verifies source51e0b85c in one nonce-owned synthetic MySQL/browser campaign, checks real request-only persistence/failure/reader behavior and owned terminal/cleanup; provider0, no execute/grant/publication.",
+  "nextAllowedMove": "CCMAI-RUNTIME-132 CHANGES_REQUIRED: preserve failed original exit1 and stopped owned fixture; Root ORCHESTRATOR prepares separate R133 stable-refresh/eligible-fixture repair for two new runtime root causes. No R132 replay, provider, execute/grant/publication.",
   "activeRole": "Root independent REVIEWER; Luna Max frontend and Sol Medium fixture source workers returned",
   "updatedAt": "2026-10-19",
   "schemaVersion": "1.0",
