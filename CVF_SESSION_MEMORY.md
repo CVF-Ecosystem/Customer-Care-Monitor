@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R129_GIT_ARTIFACT_HYGIENE_2026-10-19.md", "activeTranche": "CCMAI-RUNTIME-129", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R130_BRANCH_HISTORY_REWRITE_2026-10-19.md", "activeTranche": "CCMAI-RUNTIME-130", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R129_GIT_ARTIFACT_HYGIENE_2026-10-19.md
+- Current mode: BUILD
+- Active phase: BUILD
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R130_BRANCH_HISTORY_REWRITE_2026-10-19.md
 
-CCMAI-RUNTIME-129 REVIEW_PENDING: exact R126 raw ZIP is ignored and absent from the current feature branch tree; intact local backup retained at ../.ccmai_local_evidence/review_completion_20261018/local_verification_originals.zip. Owner independent review pending. No merge/main/history rewrite/deploy; prior Git history still contains the blob.
+CCMAI-RUNTIME-130 BUILD: create a local replacement history from 90bc02ed onward; preserve its parent and all tip tree contents except the omitted ZIP. Verify all commits and the local backup; request owner independent graph review before force-with-lease. Do not update main.
 
-Root ORCHESTRATOR / COMMIT_STEWARD; R129 owner independent review pending
+Root IMPLEMENTATION_WORKER / COMMIT_STEWARD; role transition from ORCHESTRATOR recorded before BUILD; R130 owner-authorized branch history rewrite
 
 R126 accepted local feedback fixes with qualified whole-package proof at90bc02ed; original failed full runs remain failed.
 
@@ -981,3 +981,8 @@ Repair1 independently accepted exact8ID-only delta/3files, Vite unchanged/old400
 Postrepair sole fresh offline compile PASS exit0/17.683sec at5cf1244f/405pins unchanged; binarycb52235ceafee389f52a3fcc80ff9685887e4d7cef6035ea8a5428e30a582162 under r121_build/after_repair/handlers.test.exe. Original source/admission/first binary preserved in Git+preimage ZIP; current canonical admission revised from candidate002 only after byte-preservation check. Root commits this before setup002; runtime directory/resource effects still absent. Original unspent sole campaign caps not renewed.
 
 Postrepair SETUP002 actual wrapper exit0/waitObserved/metadataErrornull. Exact new owned e8386c20fc1a4d3f3ebf11f05b2ec491eb968b15e28bb101b6a46b6ee0afca77 /networkc36815bdd5d46788c6194b95bfa0585618a8ec0d8b9a2d9a7344f8aea12bda3b /volumeccmai-r121-ui-20261018 /loopback56961 runningPID>0 independently verified; protected9containers10networks472volumesequal,405pins unchanged. MySQL31transientEOF then attempt32 five-byteREADY, no restart. Setup receipts/toolreturns preserved. Root commits exact resource admission before serve/backend/Vite/tab/auth; all those budgets0, provider/case0. Original failed setup001 and conservative old start reservation remain historical, actual fixture starts1 from continuation.
+
+
+## R130 branch history cleanup
+
+Owner explicitly requested retracting the just-pushed feature branch history and pushing a replacement, with main untouched. The existing R129 no-history-rewrite boundary is superseded for this bounded R130 action only. The 75,961,107-byte verification archive remains preserved in the workspace-level local backup. Independent owner review is required before the force-with-lease publication.

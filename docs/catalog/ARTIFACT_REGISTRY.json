@@ -3920,7 +3920,7 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R129_GIT_ARTIFACT_HYGIENE_2026-10-19.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R130_BRANCH_HISTORY_REWRITE_2026-10-19.md",
       "status": "ACTIVE",
       "description": "Current R126 DB fixture lifetime and current-package verification handoff."
     },

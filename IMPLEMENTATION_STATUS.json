@@ -33,12 +33,12 @@
     "milestoneAcceptance": "R128_CURRENT_SYNTHETIC_HUMAN_WORKFLOW_AND_READER_NAMES_ACCEPTED_FULL_M3_OPEN",
     "deliveryRoadmapPublication": "d72de76984e4aad9c208cc82e6093578797b5340",
     "m1BusinessPilotAcceptance": "OPEN",
-    "currentPublication": "FEATURE_BRANCH_CLEANUP_PENDING_OWNER_REVIEW_NO_MAIN_MERGE",
-    "nextPlannedWork": "CCMAI-RUNTIME-129 REVIEW_PENDING: exact R126 raw ZIP is ignored and absent from the current feature branch tree; intact local backup retained at ../.ccmai_local_evidence/review_completion_20261018/local_verification_originals.zip. Owner independent review pending. No merge/main/history rewrite/deploy; prior Git history still contains the blob."
+    "currentPublication": "R129_CLEANUP_PUSHED_R130_HISTORY_REWRITE_WORK_ORDER",
+    "nextPlannedWork": "CCMAI-RUNTIME-130 BUILD: perform the local bounded rebase from 90bc02ed onward; preserve all tree content except the omitted ZIP. Verify every reachable commit and exact tip tree. Hold force-with-lease publication for independent owner review; do not change main."
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "BUILD",
   "completedCapabilities": [
     "R118 REVIEW_PASS SOURCE_COMPONENT_ONLY at7f74a75f93671973bcfe55b5cb491076c0d2bdf9: current proposal pointer/lineage binding, safe legacy fallback and proposal-less data actions, VN/EN WAIT_DATA history. Root24tests/app typecheckPASS, original byte archive/source pins verified; changed-screen UI proof NOT_RUN/FREEZE OPEN. docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md",
     "R117 bounded WAIT_DATA backend real synthetic flow independently accepted: new same-case proposal after source revision, faithful realAlibaba340/297tokens, synthetic CONFIRM persisted, one call/debit, native11top11nested+engine1PASS. Exact owned owner-authorized restart/finalstop and operational protected equality observed; original interruption/cleanupHOLD retained. Current UI/fullM2/M3/pilot/release remain OPEN. docs/reviews/R117_FINAL_INDEPENDENT_REVIEW_2026-10-18.md",
@@ -2017,7 +2017,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-129",
+  "activeTranche": "CCMAI-RUNTIME-130",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
@@ -2597,7 +2597,7 @@
     "nextGate": "Separate SPEC/work order for actual AI executor/integration or M1 business decisions",
     "actualRerun": "OPEN_EXECUTOR_NOT_INCLUDED"
   },
-  "x-activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R129_GIT_ARTIFACT_HYGIENE_2026-10-19.md",
+  "x-activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R130_BRANCH_HISTORY_REWRITE_2026-10-19.md",
   "x-ownerRepairContinuation": "CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json",
   "x-r102Current": {
     "status": "FROZEN_LOCAL_ONLY",
