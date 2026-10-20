@@ -1,5 +1,11 @@
 # Roadmap CSKH: dữ liệu đáng tin, bộ lọc hỗ trợ AI và xử lý có trách nhiệm
 
+## R137 — đã có mã API/trạng thái đánh giá và kiểm thử component, 2026-10-21
+
+Review độc lập chấp nhận phần source: hai GET chỉ đọc về điều kiện/trạng thái, lịch sử theo request vẫn hiển thị khi ca sang OPEN, thao tác chạy có xác nhận và lưu dấu trước khi gửi; mất kết nối/đổi phiên không tự gửi lại. Vòng quan sát dùng hạn hủy một phút và vẫn cho kiểm tra thủ công. Root kiểm tra36/36frontend,4pure Go và typecheck/build đạt; api/handlers chỉ compile, không có test route phù hợp được chạy. Một lượt sửa cùng scope đã xử lý fixture parent và hạn hủy; lỗi ban đầu giữ trong [review](../reviews/R137_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md).
+
+Đây là source/component evidence, chưa chạy DB/browser/provider/grant/execute; chưa bật bản cài đang dùng. M3-05 và full M3 vẫn PARTIAL, E01..E06 runtime OPEN. Đường tiếp theo hữu hạn: chuẩn bị một gói proof tích hợp gắn source đã commit, quyền/resource/budget cụ thể -> xin quyền effect mới khi cần -> kiểm tra native/browser và một luồng AI thật có request/response -> review kết quả hoặc giữ hold trung thực. Không tái dùng R1171/1; Facebook/Zalo OA, M1 business/pilot/release vẫn mở. Các mục dưới là lịch sử.
+
 ## R136 — đã chốt hợp đồng màn hình đánh giá lại, chưa triển khai mã, 2026-10-20
 
 Review độc lập chấp nhận thiết kế: hai API chỉ đọc về điều kiện chạy/trạng thái, dùng POST thực thi hiện có và giấy phép máy chủ cấp riêng; không nhập mã giấy phép hoặc cấu hình provider trên UI. Lưu marker trước khi gửi, khóa gửi lại khi mất kết nối/reload, đọc trạng thái thay cho suy đoán; giữ lịch sử khi ca chuyển sang OPEN. Có13hash nguồn đối chiếu khớp và danh sách file/tiêu chí cụ thể cho một work order R2 tích hợp. [Review](../reviews/R136_DESIGN_REVIEW_2026-10-20.md).

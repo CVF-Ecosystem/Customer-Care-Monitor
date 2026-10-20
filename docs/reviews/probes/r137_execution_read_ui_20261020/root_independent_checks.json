@@ -74,5 +74,15 @@
   "originalFailures": "PRESERVED",
   "nativeRouterDB": "NOT_RUN",
   "genuineBrowser": "NOT_RUN",
-  "executionEvidenceE06": "OPEN"
+  "executionEvidenceE06": "OPEN",
+  "buildCommit": "4cce40f2495f571b612122121d377c10499b4b02",
+  "staticPrerequisites": {
+    "workspaceDoctor": "27_PASS_MANIFEST_PIN_WARN_ONLY",
+    "gateUnits": "89_PASS",
+    "localPreflight": "7_OF_7_PASS",
+    "workerReturn": "PASS_ROLE_CLAIM_CONTINUITY_APPL_COMPLETED_NOT_APPLICABLE",
+    "reviewerFast": "PASS",
+    "precommit": "PASS",
+    "activeDispatchCloseability": "APPL_ROUTE_CHECKED_PASS"
+  }
 }

@@ -4,11 +4,11 @@ Status: ACTIVE
 
 ## Current State
 
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Root independent REVIEWER / COMMIT_STEWARD; Sol Medium returned after round1 repair
+- Current mode: FREEZE
+- Active phase: FREEZE
+- Active role: Root CLOSER / SESSION_SYNC_STEWARD / COMMIT_STEWARD
 - Active tranche: CCMAI-RUNTIME-137
-- Next allowed move: CCMAI-RUNTIME-137 REVIEW_PENDING: Root independently verifies final source/component36tests,4pureGo tests and frontend build after round1 repairs, then commits bounded source evidence and synchronizes source-only closure. Real-router DB/browser/provider/credential/grant/execute effects NOT_AUTHORIZED; E06/full M3 OPEN. Next prepare one bounded integrated native/browser/real-provider proof packet before fresh effects. Facebook/Zalo OA parked; no publication.
+- Next allowed move: CCMAI-RUNTIME-137 FROZEN / REVIEW_PASS_SOURCE_COMPONENT_ONLY at4cce40f2: read-only readiness/status APIs and request-linked execution UI source accepted; Root36frontend/4pureGo/typecheck-buildPASS, protected14source unchanged, one formal repair round. Native real-router DB/browser/E01..E06 execution acceptance OPEN, provider/credential/grant/execute effects0. Next prepare one integrated source-bound native/browser/real-provider proof work order with exact resource ownership and finite budgets; obtain fresh applicable effect authority before use, never reuse R1171/1. No automatic runtime/publication; Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## INTAKE / DESIGN / SPEC / WORK_ORDER acknowledgment
@@ -50,3 +50,7 @@ Sol Medium /root/r137_scope_sol rehydrated current compact/canonical state, memo
 ## Independent round1 re-review acknowledgment
 
 Root re-read compact/canonical state/memory/handoff/status/index and final worker return13source hashes. Worker pre-REPAIR acknowledgment precedes F1/F2 source edits; one consolidated formal repair round. Root remains independent REVIEWER. Final Node2PASS36/36; earlier root33/34failure and worker2initial fixture failures preserved. Four pure Go tests accepted with api/handlers compile-only, no matching native tests; protected14source unchanged. Final build/profile/local gates and commit required before source-only acceptance/closure; real-router/browser/execution E06 OPEN.
+
+## Source-only closure acknowledgment
+
+2026-10-21 Root rehydrated manifest/policy/current compact/state/memory/handoff/status/index (initial UTF-8 JSON read hit BOM, corrected utf-8-sig before action; no missing authority). Root independently accepts material 4cce40f2495f571b612122121d377c10499b4b02 and transitions REVIEWER -> CLOSER/SESSION_SYNC_STEWARD/COMMIT_STEWARD. Final36frontend tests/4engine pure tests/typecheck-buildPASS, api/handlers compile-only; worker13source and protected14hashes match. Legacy7/7 and profile worker-return/reviewer/precommitPASS; active-dispatch APPL/ROUTE was checked, completed-status APPL not applicable. Source-only REVIEW_PASS -> FREEZE; closure artifacts/gates/commit still required before final handback. E01..E06 native/browser/AI/runtime acceptance and fullM3 OPEN, actual provider/credential/grant/execute/runtime0, historical budgets unchanged. Next one bounded integrated proof packet before fresh effects, no helper chain/publication, accounts parked.
