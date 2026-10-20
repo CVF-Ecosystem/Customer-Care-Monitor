@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,13 +12,13 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-133",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R133_WAITDATA_RUNTIME_REPAIR_2026-10-19.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-133 CHANGES_REQUIRED / BROWSER_UNAVAILABLE: owner transfers runtime proof to an agent with a connected browser using R133_RUNTIME_TRANSFER_PACKET_2026-10-19.md. Source372980e5 accepted; all owned runtime stopped and old budgets preserved. No automatic successor/replay, provider, execute/grant or publication.",
+  "activeTranche": "CCMAI-RUNTIME-134",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R134_WAITDATA_BROWSER_PROOF_2026-10-20.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-134 BUILD: delegated fixture protocol worker retargets only the authorized fixture after rehydration; Root independent source/browser review follows. No provider, execute/grant, push/merge/deploy.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD; owner runtime transfer required",
-  "updatedAt": "2026-10-19",
-  "x-resolvedCoreCommit": "fa34ed49e56648acafe8b0388e48e0aa0523f007",
+  "activeRole": "Root ORCHESTRATOR / independent REVIEWER",
+  "updatedAt": "2026-10-20",
+  "x-resolvedCoreCommit": "b69e1088978e8c90ac58a2243fcf8f90d0f857ed",
   "x-ownerRoadmapDiscipline": {
     "date": "2026-10-12",
     "source": "Explicit owner instruction to record roadmap correction in handoff/memory and apply without reminders",
@@ -2383,5 +2383,11 @@
     "providerCalls": 0,
     "freeze": "OPEN",
     "transferPacket": "docs/reviews/R133_RUNTIME_TRANSFER_PACKET_2026-10-19.md"
+  },
+  "x-r134OwnerResume": {
+    "instruction": "tiep, ban chay xem co vuong khong",
+    "browser": "Connected IAB id2; about:blank opened before fixture",
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-134.json",
+    "oldBudgets": "PRESERVED"
   }
 }

@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R133_WAITDATA_RUNTIME_REPAIR_2026-10-19.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R134_WAITDATA_BROWSER_PROOF_2026-10-20.md",
       "status": "ACTIVE",
-      "description": "Current R133 source accepted/browser unavailable transfer hold; stopped runtime, no replay."
+      "description": "Current R134 fresh browser proof handoff; prior failed budgets preserved."
     },
     {
       "id": "r060-work-order",
@@ -34723,6 +34723,34 @@
       "path": "docs/reviews/probes/r133_waitdata_repair_20261019/runtime_hold.json",
       "status": "ACTIVE",
       "description": "R133 actual native/terminal/exit1 and exact26-resource cleanup, zero browser writes/provider; no runtime PASS."
+    },
+    {
+      "id": "r134-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-134.json",
+      "status": "ACTIVE",
+      "description": "R134 finite fresh request-only browser proof, no provider or full M3 claim."
+    },
+    {
+      "id": "r134-tranche",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-134.json",
+      "status": "ACTIVE",
+      "description": "R134 finite fresh request-only browser proof, no provider or full M3 claim."
+    },
+    {
+      "id": "r134-spec",
+      "family": "continuity",
+      "path": "docs/specs/M3_WAITDATA_BROWSER_PROOF_R134_SPEC_2026-10-20.md",
+      "status": "ACTIVE",
+      "description": "R134 finite fresh request-only browser proof, no provider or full M3 claim."
+    },
+    {
+      "id": "r134-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_134_WAITDATA_BROWSER_PROOF.md",
+      "status": "ACTIVE",
+      "description": "R134 finite fresh request-only browser proof, no provider or full M3 claim."
     }
   ]
 }

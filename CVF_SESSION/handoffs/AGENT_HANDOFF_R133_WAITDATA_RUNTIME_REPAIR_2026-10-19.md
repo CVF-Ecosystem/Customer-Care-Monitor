@@ -1,6 +1,6 @@
 # R133 — WAIT_DATA runtime defect repair
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 
@@ -32,3 +32,5 @@ Root leaves COMMIT_STEWARD and resumes independent REVIEWER. Source372980e5cbdc9
 ## Runtime transfer hold — not FREEZE
 
 Source372980e5 accepted30 UI tests/typecheck/build/offlineGo; actual native permission probes403/403. IAB unavailable before tab/auth/action; Root obeyed owner stop, no alternate automation. Owned server Serve joined and held Go exit1 observed; MySQL stopped once preserved; all26 old containers unchanged, network IDs equal/old volumes preserved, no owned listeners, provider0. Transfer packet: docs/reviews/R133_RUNTIME_TRANSFER_PACKET_2026-10-19.md. Budgets Go2/3 Node2/4 MySQLstart/stop1/1, browsercreateattempt1/tabs0/auth0/capture0/request0. No R133 restart/replay or automatic successor. Root SESSION_SYNC_STEWARD records this hold; COMMIT_STEWARD may commit only the review/continuity evidence. Owner transfers runtime proof to a connected agent; R133 remains CHANGES_REQUIRED/OPEN.
+
+2026-10-20 owner explicitly resumes; connected browser id2 checked before runtime. Current authority moves to R134 fresh finite proof; all R133 results/budgets preserved.
