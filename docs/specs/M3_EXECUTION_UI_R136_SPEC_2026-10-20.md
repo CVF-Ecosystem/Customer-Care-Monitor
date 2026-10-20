@@ -1,6 +1,6 @@
 # R136 intended execution UI contract
 
-Status: INTENDED_DESIGN_PENDING_INDEPENDENT_REVIEW
+Status: ACCEPTED_INTENDED_CONTRACT
 Risk of this document: R1. Any implementation, authorization, provider or security effect requires a separate R2 work order.
 Source identity: `docs/reviews/probes/r136_execution_ui_design_20261020/source_identity.json`, repository HEAD `b09b8033627b129c9d37fc3c28fea04f4c6294fa`. This is a source reading, not an implemented or tested UI.
 

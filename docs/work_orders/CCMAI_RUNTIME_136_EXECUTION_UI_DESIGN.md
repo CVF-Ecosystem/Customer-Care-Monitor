@@ -1,6 +1,6 @@
 # R136 — source-based execution UI design
 
-Status: COMPLETE_PENDING_REVIEW
+Status: CLOSED
 Risk: R1
 Worker: Delegated source/design worker
 Reviewer: Root independent source/design reviewer

@@ -1,6 +1,6 @@
 # R136 independent documentary design review
 
-Status: INTENDED_CONTRACT_ACCEPTED_PENDING_MATERIAL_COMMIT
+Status: REVIEW_PASS_INTENDED_CONTRACT_ONLY
 Risk: R1
 Worker: Delegated source/design worker
 Reviewer: Root independent source/design reviewer
@@ -30,3 +30,5 @@ Proposed next R2 route is one integrated source/read API/UI and evidence work or
 Initial profile worker-return failed CVF-DG-ROLE-01 / RISK_INVALID because the worker header used Risk: R1 DOCUMENTARY rather than exact R1. Root performed the declared REVIEWER_LOCAL_REPAIR of that one metadata token only; the R1 documentary scope/risk did not change, and no design/source implementation was altered. Original failed gate is retained here; rerun required before material commit.
 
 The same steward formatting pass also caught two Markdown hard-break trailing spaces when the previously untracked spec was finally staged. Earlier git diff --check did not cover untracked content. Root removed only those spaces, updated the compact spec hash and reran the staged check; no contract/source behavior changed. Worker-return/reviewer-fast/precommit profile gates passed after the exact R1 header repair.
+
+Material buildCommit: 82bd229411b9be9f275f523d1cf25dac13d86a4b. Root CLOSER accepts only documentary D01..D06, not E01..E06 implementation/runtime. SPEC lifecycle status synchronized to ACCEPTED_INTENDED_CONTRACT; no contract substance changed. Closure artifacts/gates/commit required before declaring R136 frozen.

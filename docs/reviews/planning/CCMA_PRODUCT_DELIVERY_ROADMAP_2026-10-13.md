@@ -1,5 +1,11 @@
 # CCMA — Roadmap phát triển sản phẩm và tiếp quản giữa các agent
 
+## R136 — đã chốt hợp đồng màn hình đánh giá lại, chưa triển khai mã, 2026-10-20
+
+Review độc lập chấp nhận thiết kế: hai API chỉ đọc về điều kiện chạy/trạng thái, dùng POST thực thi hiện có và giấy phép máy chủ cấp riêng; không nhập mã giấy phép hoặc cấu hình provider trên UI. Lưu marker trước khi gửi, khóa gửi lại khi mất kết nối/reload, đọc trạng thái thay cho suy đoán; giữ lịch sử khi ca chuyển sang OPEN. Có13hash nguồn đối chiếu khớp và danh sách file/tiêu chí cụ thể cho một work order R2 tích hợp. [Review](../R136_DESIGN_REVIEW_2026-10-20.md).
+
+Đây là intended contract, không phải tính năng đã làm hoặc bằng chứng AI/CVF runtime. Mã/API/UI chưa thay đổi, provider/grant/execute0; E01..E06 chưa chạy. M3 vẫn PARTIAL_IMPLEMENTATION_OPEN. Bước tới là một gói R2 triển khai API đọc/UI và kiểm chứng có giới hạn; mọi cuộc gọi thật/quyền/secret cần authority mới trước khi dùng, không tái dùng R1171/1. Các mốc dưới là lịch sử.
+
 ## R135 — hàng đợi nhiều trang và từ chối thành công đã có bằng chứng local, 2026-10-20
 
 Lượt thực tế exit0:13API GET kiểm tra phân trang/lọc/thứ tự/quyền;10trạng thái DOM và10phản hồi queue khớp chính xác. Mặc định20->26, chờ duyệt20->24; đổi bộ lọc thay đúng danh sách. REJECT200 có lý do/lịch sử sau reload; tổng mặc định26->25, chờ duyệt24->23, từ chối1->2; reader không có nút ghi. Nguồn/đề xuất/snapshot và ca khác giữ nguyên; chỉ1sự kiện người duyệt, provider0. Server/MySQL thử dừng,28container cũ không đổi. [Review](../R135_RUNTIME_REVIEW_2026-10-20.md).

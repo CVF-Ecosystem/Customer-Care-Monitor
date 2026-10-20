@@ -13,7 +13,7 @@
     "F4": "CORRECTED_EXACT_CANDIDATE_PATHS",
     "F5": "CORRECTED_CONFIG_PIN"
   },
-  "specSHA256": "f42b4986947aa2e17be10cea8b80ef1e7512d823de2b043f7ffdd6c9b26f271e",
+  "specSHA256": "a907d63cd64fc1eae09164a6a1e9ec18533c55c4b2e8e7d609ff408a353be6b2",
   "providerCalls": 0,
   "runtimeInvocations": 0,
   "goInvocations": 0,
@@ -21,5 +21,10 @@
   "gateUnits": 89,
   "gateUnitsPassed": 89,
   "productImplementation": "NOT_IMPLEMENTED",
-  "runtimeGovernanceProof": "NOT_RUN_NOT_CLAIMED"
+  "runtimeGovernanceProof": "NOT_RUN_NOT_CLAIMED",
+  "status": "REVIEW_PASS_INTENDED_CONTRACT_ONLY",
+  "buildCommit": "82bd229411b9be9f275f523d1cf25dac13d86a4b",
+  "specStatusUpdatedBy": "Root CLOSER lifecycle metadata only",
+  "staticReturnHeaderInitialFailure": "RISK_INVALID_R1_DOCUMENTARY_CORRECTED_TO_R1",
+  "stagedWhitespaceInitialFailure": "TWO_MARKDOWN_HARD_BREAK_SPACES_REMOVED"
 }

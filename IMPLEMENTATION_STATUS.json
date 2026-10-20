@@ -23,23 +23,23 @@
       "M5 release/portable operations"
     ],
     "currentBlockers": [
-      "M3-05 request-only UI accepted R134; execution UI requirement and user/authority contract remain undecided.",
-      "R135 closes queue multi-page/filter/count/order and positive REJECT proof gaps within synthetic chronological contract; business urgency remains M1 decision.",
-      "Prior mobile/raster qualification and unsupported offline check retained; business/live-channel/pilot/hosted release remain open."
+      "R136 settles M3-05 execution-UI requirement/authority design; proposed readiness/status GETs and execution UI are not implemented.",
+      "Fresh real-provider/credential/grant authority and bounded disposable proof required before any actual new execution evidence; historical R1171/1 consumed.",
+      "Prior viewport/raster qualification and unsupported offline check retained; M1 business/live channels/pilot/hosted/release remain open."
     ],
     "executionAuthorityExpanded": false,
     "eta": "NOT_ESTABLISHED",
     "deliveryRoadmap": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
     "currentMilestone": "M3",
-    "milestoneAcceptance": "R134_REQUEST_ONLY_UI_AND_R135_QUEUE_REJECT_ACCEPTED_BOUNDED_FULL_M3_PARTIAL",
+    "milestoneAcceptance": "R136_EXECUTION_UI_INTENDED_CONTRACT_ACCEPTED_IMPLEMENTATION_OPEN",
     "deliveryRoadmapPublication": "d72de76984e4aad9c208cc82e6093578797b5340",
     "m1BusinessPilotAcceptance": "OPEN",
     "currentPublication": "R130_FEATURE_BRANCH_REWRITE_PUBLISHED_FORCE_WITH_LEASE_VERIFIED",
-    "nextPlannedWork": "CCMAI-RUNTIME-136 REVIEW_PENDING: Root independently accepted D01..D06 intended contract and13source pins; commit documentary material then close design only. Next separate R2 work order may bound read API/execution UI and fresh evidence; no source/runtime/provider/grant/execute/publication authority in R136."
+    "nextPlannedWork": "Prepare one bounded R2 read-API/execution-UI implementation/evidence work order from accepted R136 SPEC; no automatic provider/credential/grant effects or historical cap reuse."
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "FREEZE",
   "completedCapabilities": [
     "R118 REVIEW_PASS SOURCE_COMPONENT_ONLY at7f74a75f93671973bcfe55b5cb491076c0d2bdf9: current proposal pointer/lineage binding, safe legacy fallback and proposal-less data actions, VN/EN WAIT_DATA history. Root24tests/app typecheckPASS, original byte archive/source pins verified; changed-screen UI proof NOT_RUN/FREEZE OPEN. docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md",
     "R117 bounded WAIT_DATA backend real synthetic flow independently accepted: new same-case proposal after source revision, faithful realAlibaba340/297tokens, synthetic CONFIRM persisted, one call/debit, native11top11nested+engine1PASS. Exact owned owner-authorized restart/finalstop and operational protected equality observed; original interruption/cleanupHOLD retained. Current UI/fullM2/M3/pilot/release remain OPEN. docs/reviews/R117_FINAL_INDEPENDENT_REVIEW_2026-10-18.md",
@@ -3154,5 +3154,25 @@
     "providerCalls": 0,
     "freeze": "FROZEN",
     "fullM3": "PARTIAL_EXECUTION_UI_DISPOSITION_OPEN"
+  },
+  "x-r136CurrentOutcome": {
+    "status": "REVIEW_PASS_INTENDED_CONTRACT_ONLY",
+    "sourceCommit": "82bd229411b9be9f275f523d1cf25dac13d86a4b",
+    "review": "docs/reviews/R136_DESIGN_REVIEW_2026-10-20.md",
+    "spec": "docs/specs/M3_EXECUTION_UI_R136_SPEC_2026-10-20.md",
+    "sourcePins": 13,
+    "sourcePinsMatch": true,
+    "consolidatedDesignRepairRounds": 1,
+    "stewardFormattingRepairs": "EXACT_R1_HEADER_AND_TWO_MARKDOWN_SPACES",
+    "productImplementation": "NOT_IMPLEMENTED",
+    "futureAcceptance": "E01_E06_NOT_RUN",
+    "runtime": "NOT_RUN_NOT_AUTHORIZED",
+    "goInvocations": 0,
+    "nodeInvocations": 0,
+    "providerCalls": 0,
+    "grantEffects": 0,
+    "executeEffects": 0,
+    "freeze": "FROZEN",
+    "fullM3": "PARTIAL_IMPLEMENTATION_OPEN"
   }
 }
