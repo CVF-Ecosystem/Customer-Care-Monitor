@@ -34975,6 +34975,55 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_138_DELIVERY_ACCEPTANCE_PLAN.md",
       "status": "ACTIVE",
       "description": "R138 owner-requested documentary acceptance roadmap only; no runtime/product closure."
+    },
+    {
+      "id": "r138-plan",
+      "family": "continuity",
+      "path": "docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "Canonical detailed9gate acceptance route with37M1-M5/6Ecriteria; planning only, product/runtime gaps remain."
+    },
+    {
+      "id": "r138-worker-return",
+      "family": "continuity",
+      "path": "docs/reviews/R138_ROADMAP_WORKER_RETURN_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "R138 documentary worker handback; Root independent review controls planning acceptance."
+    },
+    {
+      "id": "r138-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/R138_INDEPENDENT_ACCEPTANCE_PLAN_REVIEW_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "Independent Root acceptance-plan review; no product/runtime/governance claim."
+    },
+    {
+      "id": "r138-worker-identity",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r138_acceptance_plan_20261021/luna_document_identity.json",
+      "status": "ACTIVE",
+      "description": "Worker handback document/source pins before Root metadata synchronization."
+    },
+    {
+      "id": "r138-worker-checks",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r138_acceptance_plan_20261021/luna_static_checks.json",
+      "status": "ACTIVE",
+      "description": "Worker static documentary coverage/links only; canonical count discrepancy qualified by independent Root recheck."
+    },
+    {
+      "id": "r138-root-baseline",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r138_acceptance_plan_20261021/root_documentary_baseline.json",
+      "status": "ACTIVE",
+      "description": "Protected backend/frontend Git trees at R137 source; no runtime proof."
+    },
+    {
+      "id": "r138-root-checks",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r138_acceptance_plan_20261021/root_independent_document_checks.json",
+      "status": "ACTIVE",
+      "description": "Root final37acceptance/6E/9gates/213local targets verification, documentary only."
     }
   ]
 }

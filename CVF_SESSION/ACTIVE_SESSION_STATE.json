@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-138",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R138_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-138 BUILD: Luna Max documents detailed evidence-linked acceptance route from R137 source-only through M3, parallel M1/M2 decisions, M4 pilot and M5 release; reconcile stale roadmap status and persist owner anti-drift directive. Documentation only, no product acceptance or runtime/provider/credential/grant/execute effects; independent Root review before planning closure. Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-138 REVIEW_PENDING: Root independently accepts documentary plan coverage37M1-M5/6E/9gates and current roadmap synchronization, then commits and closes planning only. Product R137 source-only/fullM3 partial and all runtime/provider limits unchanged. Next G0-M3-SOURCE-AND-READINESS prepares one integrated source-bound R2 G0/G1/G2 proof packet, with M1 decisions and early applicability/M2 consolidation parallel; fresh effect authority before use. Facebook/Zalo OA parked; no automatic runtime/publication.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / independent roadmap REVIEWER; Luna Max IMPLEMENTATION_WORKER",
+  "activeRole": "Root independent roadmap REVIEWER / COMMIT_STEWARD; Luna Max returned documentary work",
   "updatedAt": "2026-10-21",
   "x-resolvedCoreCommit": "b69e1088978e8c90ac58a2243fcf8f90d0f857ed",
   "x-ownerRoadmapDiscipline": {
@@ -2487,6 +2487,19 @@
     "date": "2026-10-21",
     "instruction": "Không cam kết ngày hoàn thành nhưng phải vạch rõ lộ trình chi tiết, mốc đạt để nghiệm thu. Nếu không trước sau gì cũng đi lạc",
     "contract": "Each planned milestone must carry deliverable, predecessor/parallel dependency, measurable acceptance, evidence tier and source, decision owner, current disposition and next allowed action; no date or percentage inferred from tests/tranches.",
-    "authority": "DOCUMENTARY_PLANNING_ONLY"
+    "authority": "DOCUMENTARY_PLANNING_ONLY",
+    "canonicalPlan": "docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md",
+    "requiredReadOnResume": true,
+    "currentAcceptanceGate": "G0-M3-SOURCE-AND-READINESS",
+    "beforeEachDispatchOrReturn": [
+      "milestone/acceptance IDs",
+      "user observable capability",
+      "current evidence tier/source binding",
+      "remaining acceptance gap and prerequisite necessity",
+      "preparer and acceptance decision owner",
+      "PASS/FAIL/HOLD/N/A criteria",
+      "remaining authorized budget and next move"
+    ],
+    "planningAcceptanceIsNotProductAcceptance": true
   }
 }

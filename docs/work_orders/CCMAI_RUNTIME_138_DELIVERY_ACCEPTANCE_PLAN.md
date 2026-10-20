@@ -1,6 +1,6 @@
 # R138 — detailed delivery acceptance plan
 
-Status: ACTIVE
+Status: COMPLETE_PENDING_REVIEW
 Risk: R1
 Worker: Luna Max delegated roadmap author
 Reviewer: Root independent roadmap REVIEWER

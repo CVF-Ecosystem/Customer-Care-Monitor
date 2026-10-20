@@ -4,7 +4,7 @@
 
 Review độc lập chấp nhận phần source: hai GET chỉ đọc về điều kiện/trạng thái, lịch sử theo request vẫn hiển thị khi ca sang OPEN, thao tác chạy có xác nhận và lưu dấu trước khi gửi; mất kết nối/đổi phiên không tự gửi lại. Vòng quan sát dùng hạn hủy một phút và vẫn cho kiểm tra thủ công. Root kiểm tra36/36frontend,4pure Go và typecheck/build đạt; api/handlers chỉ compile, không có test route phù hợp được chạy. Một lượt sửa cùng scope đã xử lý fixture parent và hạn hủy; lỗi ban đầu giữ trong [review](../reviews/R137_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md).
 
-Đây là source/component evidence, chưa chạy DB/browser/provider/grant/execute; chưa bật bản cài đang dùng. M3-05 và full M3 vẫn PARTIAL, E01..E06 runtime OPEN. Đường tiếp theo hữu hạn: chuẩn bị một gói proof tích hợp gắn source đã commit, quyền/resource/budget cụ thể -> xin quyền effect mới khi cần -> kiểm tra native/browser và một luồng AI thật có request/response -> review kết quả hoặc giữ hold trung thực. Không tái dùng R1171/1; Facebook/Zalo OA, M1 business/pilot/release vẫn mở. Các mục dưới là lịch sử.
+Đây là source/component evidence, chưa chạy DB/browser/provider/grant/execute; chưa bật bản cài đang dùng. M3-05 là `SOURCE_COMPONENT_ACCEPTED_RUNTIME_OPEN`; full M3 `PARTIAL_IMPLEMENTATION_OPEN`, E01..E06 runtime OPEN. Sau khi R138 được review độc lập, route bắt đầu bằng `G0-M3-SOURCE-AND-READINESS`, gồm source pin và browser capability check được cho phép trước fixture, rồi một proof packet tích hợp cho G1/G2. R138 không cấp quyền probe hoặc runtime; budget/effect tương lai phải được packet/authority riêng chấp thuận. Xem [kế hoạch nghiệm thu chi tiết](CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md). Không tái dùng R1171/1; Facebook/Zalo OA, quyết định M1/pilot/release vẫn mở. Các mục dưới là lịch sử.
 
 ## R136 — đã chốt hợp đồng màn hình đánh giá lại, chưa triển khai mã, 2026-10-20
 
@@ -191,7 +191,7 @@ R097 independent review accepted bounded local TLS proof; FREEZE local tooling o
 
 ## Roadmap delivery hiện hành — M1–M5 (2026-10-13)
 
-[Roadmap phát triển chi tiết và tiếp quản giữa agent](../reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md) là cửa vào để chọn việc tiếp theo: M1 khóa bản đầu tiên và dependency; M2 đường phân tích có kiểm soát; M3 người duyệt/giao việc/kết quả; M4 shadow/pilot có đo lường; M5 release và tiếp quản. Kế hoạch đưa quyết định S0 lên trước implementation và an toàn dữ liệu tối thiểu lên trước pilot. Nó cụ thể hóa thứ tự P0–P4 bên dưới, giữ toàn bộ hợp đồng exit S0–S7; không đóng stage hoặc cấp runtime authority. M1 business/pilot còn mở; M2 source/local đã dispatch và accepted bounded, live outcome chưa đạt; M3–M5 chưa dispatch.
+[Roadmap phát triển chi tiết và tiếp quản giữa agent](../reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md) giữ acceptance M1–M5; [kế hoạch nghiệm thu 2026-10-21](CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md) là đường hiện hành từ R137 qua M3 đến pilot/release, với gate, tầng evidence, owner và điều kiện HOLD. Quyết định nghiệp vụ M1 còn OPEN. M2 hiện chỉ có receipt bounded tại source lịch sử; full M2/S2/S3 và live outcome còn OPEN. M3-05 là `SOURCE_COMPONENT_ACCEPTED_RUNTIME_OPEN` tại R137; full M3 còn `PARTIAL_IMPLEMENTATION_OPEN`, runtime E01–E06 mở. M4 pilot và M5 release còn OPEN. Roadmap không đóng stage S0–S7 hoặc cấp runtime authority.
 
 ## Historical M1 checkpoint — R092/R093
 

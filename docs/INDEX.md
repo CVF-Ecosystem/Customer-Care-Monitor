@@ -4425,8 +4425,15 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R137 source/component worker return; original failures preserved, independent review controls acceptance.: `docs/reviews/R137_SOURCE_WORKER_RETURN_2026-10-21.md`
 - Worker source hashes/counters only, no runtime AI/governance proof.: `docs/reviews/probes/r137_execution_read_ui_20261020/worker_source_identity.json`
 - R138 owner-requested documentary acceptance roadmap only; no runtime/product closure.: `CVF_SESSION/authority/CCMAI-RUNTIME-138.json`
+- Independent Root acceptance-plan review; no product/runtime/governance claim.: `docs/reviews/R138_INDEPENDENT_ACCEPTANCE_PLAN_REVIEW_2026-10-21.md`
 - R138 owner-requested documentary acceptance roadmap only; no runtime/product closure.: `docs/work_orders/CCMAI_RUNTIME_138_DELIVERY_ACCEPTANCE_PLAN.md`
+- Canonical detailed9gate acceptance route with37M1-M5/6Ecriteria; planning only, product/runtime gaps remain.: `docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md`
+- Protected backend/frontend Git trees at R137 source; no runtime proof.: `docs/reviews/probes/r138_acceptance_plan_20261021/root_documentary_baseline.json`
+- Root final37acceptance/6E/9gates/213local targets verification, documentary only.: `docs/reviews/probes/r138_acceptance_plan_20261021/root_independent_document_checks.json`
 - R138 owner-requested documentary acceptance roadmap only; no runtime/product closure.: `CVF_SESSION/tranches/CCMAI-RUNTIME-138.json`
+- Worker static documentary coverage/links only; canonical count discrepancy qualified by independent Root recheck.: `docs/reviews/probes/r138_acceptance_plan_20261021/luna_static_checks.json`
+- Worker handback document/source pins before Root metadata synchronization.: `docs/reviews/probes/r138_acceptance_plan_20261021/luna_document_identity.json`
+- R138 documentary worker handback; Root independent review controls planning acceptance.: `docs/reviews/R138_ROADMAP_WORKER_RETURN_2026-10-21.md`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

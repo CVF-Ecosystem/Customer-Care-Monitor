@@ -1,0 +1,43 @@
+{
+  "reviewer": "Root independent roadmap REVIEWER",
+  "scope": "DOCUMENTARY_ONLY",
+  "workerSourceReferenceAndOutputPinsMatch": true,
+  "originalAcceptanceIds": 37,
+  "executionAcceptanceIds": 6,
+  "routeGates": [
+    "G0-M3-SOURCE-AND-READINESS",
+    "G1-E01-E03-BACKEND",
+    "G2-E04-E06-BROWSER",
+    "G3-M3-EXIT",
+    "G-M1-DECISIONS",
+    "G-M2-CONSOLIDATED",
+    "G-PREPILOT-APPLICABILITY",
+    "G-M4-SHADOW-PILOT",
+    "G-M5-CLEAN-RELEASE"
+  ],
+  "canonicalPlanLocalLinks": 18,
+  "allThreeRoadmapLocalLinks": 213,
+  "missingLocalFileTargets": 0,
+  "trailingWhitespace": 0,
+  "sourceBaseline": "4cce40f2495f571b612122121d377c10499b4b02",
+  "backendFrontendWorktreeUnchanged": true,
+  "formalRepairRounds": 0,
+  "effects": {
+    "go": 0,
+    "node": 0,
+    "runtime": 0,
+    "browser": 0,
+    "database": 0,
+    "provider": 0,
+    "credentials": 0,
+    "grants": 0,
+    "execute": 0,
+    "publication": 0
+  },
+  "claimBoundary": "Coverage, hashes and local-file links only; anchor rendering, whole docs-site historical55 links and runtime/product/governance/CI proof are not claimed.",
+  "workerPinsVerifiedBeforeStewardSync": true,
+  "finalPlanSha256": "f83997f4271d73066369c75dbb2ee72f4efd09d38c946ccb4951388fab224316",
+  "stewardPlanChange": "STATUS_ACCEPTED_AND_METADATA_LABEL_ONLY_NO_ACCEPTANCE_CRITERIA_CHANGE",
+  "workerCanonicalLinkCountQualification": "COUNT_METADATA_DISCREPANCY: worker reports14, Root final verifies18occurrences/12unique targets; provenance of14 not independently established, original retained and not adopted as finaltotal",
+  "finalDisposition": "REVIEW_PASS_DOCUMENTARY_ACCEPTANCE_PLAN_ONLY"
+}

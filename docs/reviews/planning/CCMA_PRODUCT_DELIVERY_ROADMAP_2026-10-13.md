@@ -4,7 +4,7 @@
 
 Review độc lập chấp nhận phần source: hai GET chỉ đọc về điều kiện/trạng thái, lịch sử theo request vẫn hiển thị khi ca sang OPEN, thao tác chạy có xác nhận và lưu dấu trước khi gửi; mất kết nối/đổi phiên không tự gửi lại. Vòng quan sát dùng hạn hủy một phút và vẫn cho kiểm tra thủ công. Root kiểm tra36/36frontend,4pure Go và typecheck/build đạt; api/handlers chỉ compile, không có test route phù hợp được chạy. Một lượt sửa cùng scope đã xử lý fixture parent và hạn hủy; lỗi ban đầu giữ trong [review](../R137_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md).
 
-Đây là source/component evidence, chưa chạy DB/browser/provider/grant/execute; chưa bật bản cài đang dùng. M3-05 và full M3 vẫn PARTIAL, E01..E06 runtime OPEN. Đường tiếp theo hữu hạn: chuẩn bị một gói proof tích hợp gắn source đã commit, quyền/resource/budget cụ thể -> xin quyền effect mới khi cần -> kiểm tra native/browser và một luồng AI thật có request/response -> review kết quả hoặc giữ hold trung thực. Không tái dùng R1171/1; Facebook/Zalo OA, M1 business/pilot/release vẫn mở. Các mục dưới là lịch sử.
+Đây là source/component evidence, chưa chạy DB/browser/provider/grant/execute; chưa bật bản cài đang dùng. M3-05 là `SOURCE_COMPONENT_ACCEPTED_RUNTIME_OPEN`; full M3 vẫn PARTIAL, E01..E06 runtime OPEN. Đường nghiệm thu hữu hạn, các tiêu chí hiện tại và hold points nằm trong [kế hoạch nghiệm thu 2026-10-21](../../roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md). Kế hoạch yêu cầu gói proof tích hợp gắn source đã commit, quyền/resource/budget cụ thể và authority mới trước effect; không tái dùng R1171/1. Facebook/Zalo OA, M1 business/pilot/release vẫn mở. Các mục dưới là lịch sử.
 
 ## R136 — đã chốt hợp đồng màn hình đánh giá lại, chưa triển khai mã, 2026-10-20
 
@@ -302,11 +302,11 @@ Sol Medium source plus one consolidated repair reviewed independently by Root. A
 
 | Mốc | Kết quả nghiệm thu | Stage liên quan | Dependency | Trạng thái hiện hành |
 |---|---|---|---|---|
-| M1 | Hợp đồng bản đầu tiên và route an toàn hữu hạn | S0, một phần S1/S7 | Nguồn/review hiện hành | R092 local synthetic intended contract accepted historically; current M1 business/pilot acceptance OPEN. Does not block bounded synthetic M2 |
-| M2 | Một đường phân tích có quyết định và đề xuất gắn nguồn | S1/S2/S3 | M1 contract; prerequisite thật sự chặn | R100boundedrealpathREVIEW_PASS/FROZEN: actual1call validproposal, faithfulKNOWN360/261usage, consumed1of4, cleanup/protectedPASS. FullM2/S2/S3 OPEN; M3planning next |
-| M3 | Người dùng hoàn tất review → giao việc → kết quả | S5 và an toàn S7 tối thiểu | M2 contract/data; một phần UI/API có thể chuẩn bị song song sau khóa contract | PLANNED — chưa dispatch |
-| M4 | Chất lượng và lợi ích được đo trong shadow/pilot giới hạn | S0/S6; S4 nếu tối ưu | M2/M3, live readiness và an toàn dữ liệu | PLANNED — chưa dispatch |
-| M5 | Bản phát hành có thể cài, vận hành và tiếp quản | S7 | M4 GO và proof release | PLANNED — chưa dispatch |
+| M1 | Hợp đồng bản đầu tiên và route an toàn hữu hạn | S0, một phần S1/S7 | Nguồn/review hiện hành | Hợp đồng synthetic R092 được chấp nhận trong scope lịch sử; quyết định nghiệp vụ/pilot M1 hiện OPEN. Không chặn bounded synthetic M2. |
+| M2 | Một đường phân tích có quyết định và đề xuất gắn nguồn | S1/S2/S3 | M1 contract; prerequisite thật sự chặn | R100 là `HISTORICAL_EXACT_SOURCE_ONLY`; full M2/S2/S3 OPEN. `G-M2-CONSOLIDATED` cần proof current-source cho M2-01..09; chỉ M2-04 được disposition path ngoài scope là disabled/N/A có evidence và Owner/reviewer chấp nhận; M2-09 cần real allowed-call và denied/WAIT zero-call proof. |
+| M3 | Người dùng hoàn tất review → giao việc → kết quả | S5 và an toàn S7 tối thiểu | M2 contract/data; một phần UI/API có thể chuẩn bị song song | M3-05 `SOURCE_COMPONENT_ACCEPTED_RUNTIME_OPEN` tại R137; full M3 `PARTIAL_IMPLEMENTATION_OPEN`. E01..E06 runtime và disposition cuối cho M3-01..08 còn mở. |
+| M4 | Chất lượng và lợi ích được đo trong shadow/pilot giới hạn | S0/S6; S4 nếu tối ưu | M1/M2/M3, live readiness và an toàn dữ liệu | OPEN; chưa có shadow/pilot hay Owner GO được chấp nhận. Cần quyết định M1, `G-M2-CONSOLIDATED`, `G3-M3-EXIT` và disposition pre-pilot. |
+| M5 | Bản phát hành có thể cài, vận hành và tiếp quản | S7 | M4 GO và proof release | OPEN; chưa có clean install/hosted CI/recovery/release acceptance. Cần release authority riêng. |
 
 Không gán phần trăm tiến độ từ số tranche/test/commit. Mỗi mốc có thể gồm backend và frontend work order phối hợp nhưng chỉ báo hoàn thành khi khả năng sản phẩm được nghiệm thu. Không bắt buộc một work order cho từng helper/receipt. Nếu chưa có account hoặc dữ liệu thật, tiếp tục phần source/UI hợp lệ; giữ M4 phần live mở.
 
@@ -458,7 +458,7 @@ Next allowed move / parked checkpoint:
 
 Mẫu báo owner: “Dùng được X trong môi trường Y. Mốc M còn thiếu A/B. Bị chặn bởi Z, người giải quyết là R. Còn N bước đã lập kế hoạch; hoàn tất khi C. ETA chưa xác lập nếu chưa có dữ liệu.” Không ghi COMPLETE khi chỉ worker return; review phải phân biệt accepted local scope với full milestone, live và release.
 
-## 14. Decision register khi bắt đầu
+## 14. Historical decision register khi bắt đầu — superseded by current route
 
 | Quyết định | Hiện trạng | Hành động kế tiếp / người xử lý | Chặn phần nào |
 |---|---|---|---|
@@ -471,7 +471,7 @@ Mẫu báo owner: “Dùng được X trong môi trường Y. Mốc M còn thi�
 | D07 Facebook/Zalo OA | OWNER_DEFERRED | Chỉ owner mở lại; không đưa vào prerequisite của Pancake synthetic; giữ nguyên evidence đã chấp nhận | Live riêng hai kênh |
 | D08 release target và vận hành | OPEN | Chốt môi trường/người vận hành trước M5; không tự deploy | M5 release |
 
-**Next allowed planning action:** R100 boundedrealproposal+faithfulusage accepted; Root commits finalreview/cleanup/roadmap then prepares M3sourceinventory, testablehumanreview/correction/assignment/deadline/outcome contract andboundedSPEC/workorder. Browser/backend negativeproof required. M1people/SLA/corpus/threshold decisions parallel, pilot/releaseOPEN; no generic prerequisite successor orfurtherR100call.
+**Current route — 2026-10-21:** use the [canonical delivery acceptance plan](../../roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md). R137 is source/component accepted only; E01–E06 runtime, full M3, M1 business decisions, full M2, M4 pilot and M5 release remain open. After R138 documentary review, the next route begins with `G0-M3-SOURCE` and one integrated current-source proof packet for the applicable backend/browser phases; the dispatcher must issue separate effect authority before any runtime/provider use. No R100 follow-up or old budget reuse is implied.
 
 ## 15. Source Authority và Evidence Comparison
 
