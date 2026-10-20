@@ -1,6 +1,6 @@
 # R137 — execution read APIs and UI source
 
-Status: ACTIVE
+Status: COMPLETE_PENDING_REVIEW
 Risk: R2
 Worker: Sol Medium delegated implementation worker
 Reviewer: Root independent REVIEWER
@@ -58,8 +58,3 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 | terminal_completion_review | POST_MATERIAL | reviewer | POST_MATERIAL | committed source/component evidence and remaining runtime acceptance | EXACT_PATHS | commit-steward | CONTINUITY_COMMIT | pre_commit |
 | continuity | CONTINUITY_COMMIT | session-sync-steward | CONTINUITY_COMMIT | state/memory/handoff/status/roadmap/catalog | BOUNDED_PATH_FAMILIES | session-sync-steward | CONTINUITY_COMMIT | terminal_completion_review |
 | committed_range_closure | POST_MATERIAL_CLOSURE | reviewer | POST_MATERIAL_CLOSURE | local committed R137 range and pinned static gates | EXACT_PATHS | session-sync-steward | CONTINUITY_COMMIT | continuity |
-
-
-
-
-

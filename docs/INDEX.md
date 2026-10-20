@@ -4417,8 +4417,13 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R136 source-based intended execution-UI contract only, all runtime/provider0.: `CVF_SESSION/tranches/CCMAI-RUNTIME-136.json`
 - R136 intended execution-UI contract/source verification only; no implementation or runtime evidence.: `docs/reviews/R136_DESIGN_WORKER_RETURN_2026-10-20.md`
 - R137 bounded R2 source/local software scope; no DB/browser/provider/grant/execute authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-137.json`
+- Root independent R2 source/component review; real-router/browser/execution proof open.: `docs/reviews/R137_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md`
 - R137 bounded R2 source/local software scope; no DB/browser/provider/grant/execute authority.: `docs/work_orders/CCMAI_RUNTIME_137_EXECUTION_READ_UI.md`
+- Root bounded independent software check results; failed initial UI regression retained.: `docs/reviews/probes/r137_execution_read_ui_20261020/root_independent_checks.json`
+- Root protected14source identity baseline; no runtime effects.: `docs/reviews/probes/r137_execution_read_ui_20261020/root_protected_source_baseline.json`
 - R137 bounded R2 source/local software scope; no DB/browser/provider/grant/execute authority.: `CVF_SESSION/tranches/CCMAI-RUNTIME-137.json`
+- R137 source/component worker return; original failures preserved, independent review controls acceptance.: `docs/reviews/R137_SOURCE_WORKER_RETURN_2026-10-21.md`
+- Worker source hashes/counters only, no runtime AI/governance proof.: `docs/reviews/probes/r137_execution_read_ui_20261020/worker_source_identity.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

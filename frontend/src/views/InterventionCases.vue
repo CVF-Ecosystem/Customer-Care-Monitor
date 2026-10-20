@@ -80,6 +80,19 @@
         :refresh-case="refreshFollowupCase"
         @write-busy="busy = $event"
       />
+      <InterventionExecutionStatus
+        :tenant-id="tenantId"
+        :token="auth.accessToken"
+        :actor-id="auth.user?.id || ''"
+        :role="auth.tenantPerms.role"
+        :permissions-key="JSON.stringify(auth.tenantPerms.permissions)"
+        :case-record="detail.case"
+        :can-read="canReadCase"
+        :can-execute="canRequestFollowup && !!auth.user?.id"
+        :parent-busy="busy"
+        :signal="followupSignal"
+        :refresh-case="refreshFollowupCase"
+      />
       <v-card v-if="canEdit" class="mb-4">
         <v-card-title>{{ $t('iv_action') }}</v-card-title>
         <v-card-text>
@@ -130,6 +143,7 @@ import { useI18n } from 'vue-i18n'
 import { useAuthStore } from '../stores/auth'
 import InterventionCapabilityNotice from '../components/InterventionCapabilityNotice.vue'
 import InterventionDataFollowup from '../components/InterventionDataFollowup.vue'
+import InterventionExecutionStatus from '../components/InterventionExecutionStatus.vue'
 import { applyInterventionAction, getInterventionCase, listInterventionAssignees, listInterventionCases, InterventionHttpError, type InterventionCase, type InterventionDetail, type InterventionEvent } from '../api/intervention'
 import {
   interventionActionKey,
@@ -161,7 +175,7 @@ const action = ref(''); const reason = ref(''); const explanation = ref(''); con
 const assigneeId = ref(''); const dueLocal = ref(''); const outcome = ref('')
 let generation = 0; let controller: AbortController | null = null
 const followupSignal = ref<AbortSignal>()
-const currentLifetime = () => JSON.stringify([tenantId.value,caseId.value,auth.accessToken,auth.tenantPerms.role,auth.tenantPerms.permissions])
+const currentLifetime = () => JSON.stringify([tenantId.value,caseId.value,auth.accessToken,auth.user?.id,auth.tenantPerms.role,auth.tenantPerms.permissions])
 const stillCurrent = (mine:number,key:string,signal:AbortSignal) => mine===generation && key===currentLifetime() && !signal.aborted
 const filters = computed(() => [{title:t('iv_active'),value:''}, ...['OPEN','ASSIGNED','WAITING_ON_DATA','RESOLVED','REJECTED'].map(value=>({title:stateLabel(value),value}))])
 const proposal = computed(() => currentInterventionProposal(detail.value))
@@ -295,7 +309,7 @@ async function submit() {
     }
   } finally { if (stillCurrent(mine,key,signal)) busy.value=false }
 }
-watch(() => [route.params.tenantId,route.params.caseId,auth.accessToken,auth.tenantPerms.role,JSON.stringify(auth.tenantPerms.permissions)], load, {immediate:true})
+watch(() => [route.params.tenantId,route.params.caseId,auth.accessToken,auth.user?.id,auth.tenantPerms.role,JSON.stringify(auth.tenantPerms.permissions)], load, {immediate:true})
 watch(filter, () => { if (!caseId.value) void load() })
 onBeforeUnmount(() => { generation++; controller?.abort(); followupSignal.value=undefined; detail.value=null; items.value=[] })
 </script>

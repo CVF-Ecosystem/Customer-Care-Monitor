@@ -46,6 +46,20 @@ export interface InterventionRerunRequest {
 export interface InterventionWaitDataPage<T> {
   items: T[]; has_more: boolean; next_cursor: string
 }
+export type InterventionReadinessState = 'READY' | 'AWAITING_OPERATOR_AUTHORITY' | 'PROCESS_DISABLED' | 'STALE_OR_INELIGIBLE' | 'ALREADY_STARTED'
+export interface InterventionExecutionReadiness {
+  state: InterventionReadinessState; request_id: string; server_now: string
+  expected_case_version?: number; expires_at?: string; grant_handle?: string
+}
+export type InterventionExecutionPhase = 'NOT_STARTED' | 'CLAIMED' | 'CALL_MAY_HAVE_STARTED' | 'RESPONSE_RECORDED' | 'PUBLISHED' | 'MANUAL_HOLD'
+export interface InterventionExecutionStatus {
+  request_id: string; request_intent: string; execution_present: boolean
+  phase: InterventionExecutionPhase; observed_at: string
+  terminal_code?: string; published_case_version?: number; proposal_available?: boolean
+}
+export interface InterventionExecuteInput {
+  expected_case_version: number; grant_id: string
+}
 export interface CaptureInterventionDataRevisionInput {
   expected_version: number; expected_snapshot_id: string; expected_snapshot_digest: string; reason: string
 }
@@ -142,4 +156,14 @@ export function listInterventionRerunRequests(tenant: string, id: string, token:
 }
 export function createInterventionRerunRequest(tenant: string, id: string, token: string, signal: AbortSignal, input: RequestInterventionRerunInput) {
   return once<{request: InterventionRerunRequest; case_version: number; replayed: boolean}>(`${waitDataCase(tenant,id)}/rerun-requests`, token, signal, input)
+}
+const executionPath = (tenant: string, id: string, requestId: string) => `${waitDataCase(tenant,id)}/rerun-requests/${encodeURIComponent(requestId)}`
+export function getInterventionExecutionReadiness(tenant: string, id: string, requestId: string, token: string, signal: AbortSignal) {
+  return once<InterventionExecutionReadiness>(`${executionPath(tenant,id,requestId)}/execution-readiness`, token, signal)
+}
+export function getInterventionExecutionStatus(tenant: string, id: string, requestId: string, token: string, signal: AbortSignal) {
+  return once<InterventionExecutionStatus>(`${executionPath(tenant,id,requestId)}/execution-status`, token, signal)
+}
+export function executeInterventionRerun(tenant: string, id: string, requestId: string, token: string, signal: AbortSignal, input: InterventionExecuteInput) {
+  return once<{execution: {id: string; state: string; terminal_code: string; run_id: string; snapshot_id: string}; replayed: boolean}>(`${executionPath(tenant,id,requestId)}/execute`, token, signal, {expected_case_version: input.expected_case_version, grant_id: input.grant_id})
 }

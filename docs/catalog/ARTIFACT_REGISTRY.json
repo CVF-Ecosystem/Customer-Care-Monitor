@@ -34919,6 +34919,41 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_137_EXECUTION_READ_UI.md",
       "status": "ACTIVE",
       "description": "R137 bounded R2 source/local software scope; no DB/browser/provider/grant/execute authority."
+    },
+    {
+      "id": "r137-worker-return",
+      "family": "continuity",
+      "path": "docs/reviews/R137_SOURCE_WORKER_RETURN_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "R137 source/component worker return; original failures preserved, independent review controls acceptance."
+    },
+    {
+      "id": "r137-independent-source-review",
+      "family": "continuity",
+      "path": "docs/reviews/R137_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "Root independent R2 source/component review; real-router/browser/execution proof open."
+    },
+    {
+      "id": "r137-worker-source-identity",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r137_execution_read_ui_20261020/worker_source_identity.json",
+      "status": "ACTIVE",
+      "description": "Worker source hashes/counters only, no runtime AI/governance proof."
+    },
+    {
+      "id": "r137-root-protected-source-baseline",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r137_execution_read_ui_20261020/root_protected_source_baseline.json",
+      "status": "ACTIVE",
+      "description": "Root protected14source identity baseline; no runtime effects."
+    },
+    {
+      "id": "r137-root-independent-checks",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r137_execution_read_ui_20261020/root_independent_checks.json",
+      "status": "ACTIVE",
+      "description": "Root bounded independent software check results; failed initial UI regression retained."
     }
   ]
 }

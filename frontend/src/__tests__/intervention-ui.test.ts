@@ -14,7 +14,7 @@ import InterventionDataFollowup from '../components/InterventionDataFollowup.vue
 import { useAuthStore } from '../stores/auth'
 import { InterventionHttpError, type InterventionDetail } from '../api/intervention'
 
-const calls = vi.hoisted(() => ({ detail:vi.fn(), assignees:vi.fn(), list:vi.fn(), action:vi.fn(), dataRevisions:vi.fn(), rerunRequests:vi.fn(), capture:vi.fn(), rerun:vi.fn() }))
+const calls = vi.hoisted(() => ({ detail:vi.fn(), assignees:vi.fn(), list:vi.fn(), action:vi.fn(), dataRevisions:vi.fn(), rerunRequests:vi.fn(), capture:vi.fn(), rerun:vi.fn(), executionStatus:vi.fn(), executionReadiness:vi.fn(), execute:vi.fn() }))
 vi.mock('../api/intervention', () => ({
   getInterventionCase: (...args: unknown[]) => calls.detail(...args),
   listInterventionAssignees: (...args: unknown[]) => calls.assignees(...args),
@@ -24,6 +24,9 @@ vi.mock('../api/intervention', () => ({
   listInterventionRerunRequests: (...args: unknown[]) => calls.rerunRequests(...args),
   createInterventionDataRevision: (...args: unknown[]) => calls.capture(...args),
   createInterventionRerunRequest: (...args: unknown[]) => calls.rerun(...args),
+  getInterventionExecutionStatus: (...args: unknown[]) => calls.executionStatus(...args),
+  getInterventionExecutionReadiness: (...args: unknown[]) => calls.executionReadiness(...args),
+  executeInterventionRerun: (...args: unknown[]) => calls.execute(...args),
   InterventionHttpError: class extends Error { status:number; code:string; constructor(status:number,code:string){super(code);this.status=status;this.code=code} },
 }))
 vi.mock('../api/interventionCapability', () => ({
@@ -35,6 +38,8 @@ function resetFollowupMocks() {
   calls.dataRevisions.mockReset().mockResolvedValue({items:[],has_more:false,next_cursor:''})
   calls.rerunRequests.mockReset().mockResolvedValue({items:[],has_more:false,next_cursor:''})
   calls.capture.mockReset(); calls.rerun.mockReset()
+  calls.executionStatus.mockReset().mockImplementation(async (_tenant:string,_case:string,requestId:string)=>({request_id:requestId,request_intent:'AWAITING_EXECUTION_AUTHORITY',execution_present:false,phase:'NOT_STARTED',observed_at:'2026-10-21T00:00:00Z'}))
+  calls.executionReadiness.mockReset(); calls.execute.mockReset()
 }
 function detail(id:string): InterventionDetail { return {case:{id,tenant_id:'t',job_id:'job',conversation_id:id,version:1,run_id:'r',snapshot_id:'s',snapshot_digest:'d',disposition:'PENDING_REVIEW',work_state:'OPEN',reason_code:'',next_action:'',human_assessment:'',human_explanation:'',human_next_action:'',outcome_text:'',data_owner_id:null,assignee_id:null,due_at:null,created_at:'2026-10-15T00:00:00Z',updated_at:'2026-10-15T00:00:00Z'},proposals:[{id:'p',revision:1,run_id:'r',snapshot_id:'s',snapshot_digest:'d',kind:'complaint',explanation:'Original '+id,next_action:'Check',evidence:'[]',provider:'private-provider',model:'private-model',prompt_version:'r101-direct-seed',created_at:'2026-10-15T00:00:00Z'}],human_events:[],source_status:'LOCAL_MATCH_CURRENTNESS_UNVERIFIED'} }
 
@@ -424,11 +429,12 @@ describe('R132 WAIT_DATA follow-up integration', () => {
   it('keeps saved capture and request notices when the mounted parent replaces the same case detail', async () => {
     const atVersion=(version:number)=>waitingDetail(version)
     calls.detail.mockResolvedValueOnce(atVersion(1)).mockResolvedValueOnce(atVersion(2)).mockResolvedValueOnce(atVersion(3))
-    calls.dataRevisions.mockResolvedValueOnce({items:[],has_more:false,next_cursor:''}).mockResolvedValue({items:[waitRevision()],has_more:false,next_cursor:''})
     const savedRequest={id:'c7c7c7c7-c7c7-47c7-87c7-c7c7c7c7c7c7',case_id:'CASE-WAIT',data_revision_id:waitRevision().id,data_revision_digest:waitRevision().digest,original_snapshot_id:'s',original_snapshot_digest:'d',reason:'Review the complaint',status:'AWAITING_EXECUTION_AUTHORITY',execution:'NOT_RUN',case_version:3,created_at:'2026-10-19T09:10:00Z'}
-    calls.rerunRequests.mockResolvedValueOnce({items:[],has_more:false,next_cursor:''}).mockResolvedValueOnce({items:[],has_more:false,next_cursor:''}).mockResolvedValue({items:[savedRequest],has_more:false,next_cursor:''})
-    calls.capture.mockResolvedValue({revision:waitRevision(),case_version:2})
-    calls.rerun.mockResolvedValue({request:savedRequest,case_version:3,replayed:false})
+    let revisionPersisted=false, requestPersisted=false
+    calls.dataRevisions.mockImplementation(async()=>({items:revisionPersisted?[waitRevision()]:[],has_more:false,next_cursor:''}))
+    calls.rerunRequests.mockImplementation(async()=>({items:requestPersisted?[savedRequest]:[],has_more:false,next_cursor:''}))
+    calls.capture.mockImplementation(async()=>{revisionPersisted=true;return {revision:waitRevision(),case_version:2}})
+    calls.rerun.mockImplementation(async()=>{requestPersisted=true;return {request:savedRequest,case_version:3,replayed:false}})
     vi.stubGlobal('crypto',{randomUUID:()=> 'r133-intent-unique-1'})
     const {wrapper}=await mounted('A','en',false,{role:'owner',permissions:{}})
     await flushPromises()
@@ -451,6 +457,20 @@ describe('R132 WAIT_DATA follow-up integration', () => {
     expect(wrapper.findComponent(InterventionDataFollowup).props('caseRecord')).toMatchObject({version:3,work_state:'WAITING_ON_DATA'})
     wrapper.unmount()
     vi.unstubAllGlobals()
+  })
+
+  it('keeps request status on the OPEN parent detail for a reader without execute controls',async()=>{
+    const opened=detail('CASE-OPEN')
+    opened.case.work_state='OPEN'
+    calls.detail.mockResolvedValue(opened)
+    calls.rerunRequests.mockResolvedValue({items:[{id:'c7c7c7c7-c7c7-47c7-87c7-c7c7c7c7c7c7',case_id:'CASE-OPEN',data_revision_id:waitRevision().id,data_revision_digest:waitRevision().digest,original_snapshot_id:'old-snapshot',original_snapshot_digest:'old-digest',reason:'Saved earlier',status:'AWAITING_EXECUTION_AUTHORITY',execution:'NOT_RUN',case_version:2,created_at:'2026-10-19T09:10:00Z'}],has_more:false,next_cursor:''})
+    const {wrapper}=await mounted('A','en',true);await flushPromises()
+    expect(wrapper.findComponent(InterventionDataFollowup).exists()).toBe(false)
+    expect(wrapper.text()).toContain('New assessment request')
+    expect(wrapper.text()).toContain('No processing record observed')
+    expect(wrapper.text()).not.toContain('Start assessment')
+    expect(calls.executionReadiness).not.toHaveBeenCalled()
+    wrapper.unmount()
   })
 
   it('rejects unknown roles and hides request creation when jobs write is absent', async () => {

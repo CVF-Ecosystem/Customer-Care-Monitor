@@ -4,11 +4,11 @@ Status: ACTIVE
 
 ## Current State
 
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Root ORCHESTRATOR / independent REVIEWER; Sol Medium IMPLEMENTATION_WORKER
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Root independent REVIEWER / COMMIT_STEWARD; Sol Medium returned after round1 repair
 - Active tranche: CCMAI-RUNTIME-137
-- Next allowed move: CCMAI-RUNTIME-137 BUILD: Sol Medium implements accepted R136 read-only readiness/status APIs and execution-status UI within committed source authority; Root independently reviews source/component evidence. Local pure/component/compile checks only; DB/browser/provider/credential/grant/execute effects NOT_AUTHORIZED and E06 execution proof OPEN. No historical budget reuse or publication; Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-137 REVIEW_PENDING: Root independently verifies final source/component36tests,4pureGo tests and frontend build after round1 repairs, then commits bounded source evidence and synchronizes source-only closure. Real-router DB/browser/provider/credential/grant/execute effects NOT_AUTHORIZED; E06/full M3 OPEN. Next prepare one bounded integrated native/browser/real-provider proof packet before fresh effects. Facebook/Zalo OA parked; no publication.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## INTAKE / DESIGN / SPEC / WORK_ORDER acknowledgment
@@ -32,3 +32,21 @@ Legacy preflight initially rejected INTAKE/DESIGN/SPEC as tranche status-history
 ## Root BUILD dispatch acknowledgment
 
 2026-10-21 Root re-read current compact/state/memory/active handoff/status/index and accepted source contract. INTAKE/DESIGN/SPEC inherited R136; WORK_ORDER pre-dispatch APPL/ROUTE checked PASS after recorded metadata corrections, legacy7/7 and89units PASS. Root transitions WORK_ORDER_AUTHOR/COMMIT_STEWARD -> ORCHESTRATOR/independent REVIEWER. Sol Medium worker must rehydrate and append its own acknowledgment before source; no actual runtime/provider/grant/execute effects. Seed7d468de3 predates source BUILD. Material dispatch commit must exist before worker acts.
+
+Root dispatch formatting note: staged diff check reported excess blank lines at work-order EOF, but the PowerShell sequence continued to commit. Root corrected EOF before source review; this nonzero check was not a passing validation and the original event is retained. Subsequent commands must fail closed on prerequisite exit.
+
+## Delegated worker BUILD acknowledgment — 2026-10-21
+
+Sol Medium /root/r137_scope_sol rehydrated current manifest/policy/compact bootstrap/canonical state/memory/R137 handoff/status/index, immutable seed/record/full work order and accepted R136 contract. I acknowledge IMPLEMENTATION_WORKER responsibility after dispatch commit aca012104d04db2847b2d1c04efd34bfc3e87537. Root remains independent REVIEWER and sole COMMIT_STEWARD. I will edit only authorized source/test paths and worker return evidence, use offline compile/pure/component checks within worker caps, and make zero DB/browser/server/provider/network/credential/grant/execute effects. E06 real-router/browser/live proof remains NOT_RUN/OPEN.
+
+## Independent REVIEW / same-scope repair round1
+
+Root rehydrated current canonical surfaces and worker return/source, transitions ORCHESTRATOR -> independent REVIEWER. Independent Go1PASS four pure tests; api/handlers compile-only(no matching tests), frontend build1PASS. Expanded Node1FAIL1/34: mounted R132 saved-notice fixture uses global call-count sequencing incompatible with new sibling reads (expected rerun1 got0). Consolidated F1 requires state-based persisted fixture, new API mock exports and parent OPEN/reader assertions; no weakened follow-up checks. F2 requires monotonic bounded polling plus poll-local abort deadline and cleanup to obey strict1minute despite slow response/clock rollback, retaining manual refresh. Return Risk/Worker/Reviewer metadata also required. Root records CHANGES_REQUIRED; worker REPAIR acknowledgment must precede edits. Same objective/paths/R2/effects/commit owner and caps unchanged; round1/2, no repeat owner permission. Original failures retained, no runtime/provider effect.
+
+## Delegated REPAIR_WORKER acknowledgment — round 1, 2026-10-21
+
+Sol Medium /root/r137_scope_sol rehydrated current compact/canonical state, memory, active handoff, implementation status, index, R137 order/seed and CHANGES_REQUIRED record. I transition IMPLEMENTATION_WORKER -> REPAIR_WORKER for Root consolidated F1 mounted-parent fixture and F2 monotonic one-minute polling cancellation only, within unchanged source authority and remaining worker caps Node2/Go4/build1. Root remains independent REVIEWER and COMMIT_STEWARD. Original failed checks stay recorded; DB/browser/server/provider/network/credential/grant/execute effects remain zero.
+
+## Independent round1 re-review acknowledgment
+
+Root re-read compact/canonical state/memory/handoff/status/index and final worker return13source hashes. Worker pre-REPAIR acknowledgment precedes F1/F2 source edits; one consolidated formal repair round. Root remains independent REVIEWER. Final Node2PASS36/36; earlier root33/34failure and worker2initial fixture failures preserved. Four pure Go tests accepted with api/handlers compile-only, no matching native tests; protected14source unchanged. Final build/profile/local gates and commit required before source-only acceptance/closure; real-router/browser/execution E06 OPEN.
