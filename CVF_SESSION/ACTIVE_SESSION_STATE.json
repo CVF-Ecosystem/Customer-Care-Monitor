@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "FREEZE",
-  "activePhase": "FREEZE",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,11 +12,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-135",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R135_QUEUE_REJECT_PROOF_2026-10-20.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-135 FROZEN / REVIEW_PASS_BOUNDED: current queue pagination/filter/count/order and positive REJECT/history/reader proof accepted; owned runtime stopped,28 prior containers unchanged, provider0. Next INTAKE/DESIGN: settle remaining M3 execution-UI requirement/authority and acceptance boundaries using R135_M3_ACCEPTANCE_DELTA_2026-10-20.md; no automatic BUILD/runtime/provider/publication. Facebook/Zalo OA parked.",
+  "activeTranche": "CCMAI-RUNTIME-136",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R136_EXECUTION_UI_DESIGN_2026-10-20.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-136 BUILD: delegated source/design worker authors only source-pinned execution-UI intended contract and return; Root independent review follows. Documentation only, all source/runtime/provider/grant/execute/publication effects0.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root CLOSER / SESSION_SYNC_STEWARD / COMMIT_STEWARD",
+  "activeRole": "Root ORCHESTRATOR / independent source-design REVIEWER",
   "updatedAt": "2026-10-20",
   "x-resolvedCoreCommit": "b69e1088978e8c90ac58a2243fcf8f90d0f857ed",
   "x-ownerRoadmapDiscipline": {

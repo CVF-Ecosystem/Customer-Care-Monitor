@@ -1,6 +1,6 @@
 # R135 — M3 queue and positive reject proof
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 
@@ -30,3 +30,5 @@ Root re-read bootstrap/state/memory/current handoff/status/index and full worker
 ## Independent review and bounded closure
 
 Root actual supported browser default20->26/OPEN20->24/terminal1; REJECT200/version2/reason persisted; default25/OPEN23/REJECTED2, exact10DOM/10API page comparisons PASS. Reader history/no write controls, both logout. Native13GETs pass. Original held Go exit0, Serve joined/owned_stop, exact1event/protected complete source rows/non-target cases/effects PASS; audit delta exactly2synthetic user.login independently read before DBstop. Owned MySQL stopped once/preserved;28 old containers equal/networkIDs equal/oldvolumes preserved/no owned listeners/provider0. Source3695941ecb6eec6d3746088b2fa03f1f8fda66a1; docs/reviews/R135_RUNTIME_REVIEW_2026-10-20.md; docs/reviews/R135_M3_ACCEPTANCE_DELTA_2026-10-20.md. Root REVIEWER -> CLOSER/SESSION_SYNC_STEWARD/COMMIT_STEWARD, REVIEW_PASS then FREEZE for R135 only after synchronized artifacts/gates/commit. M3PARTIAL execution-UI disposition next INTAKE/DESIGN; no new BUILD/runtime/provider/push/merge/deploy.
+
+Owner continues2026-10-20; current handoff becomes R136 execution-UI documentary design. R135 accepted source/runtime/budgets remain frozen unchanged.

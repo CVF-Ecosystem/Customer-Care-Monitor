@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R135_QUEUE_REJECT_PROOF_2026-10-20.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R136_EXECUTION_UI_DESIGN_2026-10-20.md",
       "status": "ACTIVE",
-      "description": "Current R135 bounded queue/reject evidence handoff."
+      "description": "Current R136 documentary execution-UI contract handoff."
     },
     {
       "id": "r060-work-order",
@@ -34842,6 +34842,27 @@
       "path": "docs/reviews/probes/r135_queue_reject_20261020/runtime_review.json",
       "status": "ACTIVE",
       "description": "R135 accepted bounded synthetic queue/reject proof and current M3 gap disposition; provider0."
+    },
+    {
+      "id": "r136-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-136.json",
+      "status": "ACTIVE",
+      "description": "R136 source-based intended execution-UI contract only, all runtime/provider0."
+    },
+    {
+      "id": "r136-tranche",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-136.json",
+      "status": "ACTIVE",
+      "description": "R136 source-based intended execution-UI contract only, all runtime/provider0."
+    },
+    {
+      "id": "r136-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_136_EXECUTION_UI_DESIGN.md",
+      "status": "ACTIVE",
+      "description": "R136 source-based intended execution-UI contract only, all runtime/provider0."
     }
   ]
 }

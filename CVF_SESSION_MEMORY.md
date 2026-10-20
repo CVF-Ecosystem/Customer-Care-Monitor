@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R135_QUEUE_REJECT_PROOF_2026-10-20.md", "activeTranche": "CCMAI-RUNTIME-135", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R136_EXECUTION_UI_DESIGN_2026-10-20.md", "activeTranche": "CCMAI-RUNTIME-136", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: FREEZE
-- Active phase: FREEZE
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R135_QUEUE_REJECT_PROOF_2026-10-20.md
+- Current mode: BUILD
+- Active phase: BUILD
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R136_EXECUTION_UI_DESIGN_2026-10-20.md
 
-CCMAI-RUNTIME-135 FROZEN / REVIEW_PASS_BOUNDED: current queue pagination/filter/count/order and positive REJECT/history/reader proof accepted; owned runtime stopped,28 prior containers unchanged, provider0. Next INTAKE/DESIGN: settle remaining M3 execution-UI requirement/authority and acceptance boundaries using R135_M3_ACCEPTANCE_DELTA_2026-10-20.md; no automatic BUILD/runtime/provider/publication. Facebook/Zalo OA parked.
+CCMAI-RUNTIME-136 BUILD: delegated source/design worker authors only source-pinned execution-UI intended contract and return; Root independent review follows. Documentation only, all source/runtime/provider/grant/execute/publication effects0.
 
-Root CLOSER / SESSION_SYNC_STEWARD / COMMIT_STEWARD
+Root ORCHESTRATOR / independent source-design REVIEWER
 
 ## Historical R114 bounded UI result
 
