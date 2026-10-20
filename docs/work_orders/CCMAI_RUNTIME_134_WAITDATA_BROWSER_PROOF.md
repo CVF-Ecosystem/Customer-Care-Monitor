@@ -1,6 +1,6 @@
 # R134 — fresh WAIT_DATA browser proof
 
-Status: ACTIVE
+Status: COMPLETE_PENDING_REVIEW
 Risk: R2
 Worker: Delegated fixture protocol worker
 Reviewer: Root independent source/browser reviewer
