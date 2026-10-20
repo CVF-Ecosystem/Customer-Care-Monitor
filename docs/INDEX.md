@@ -15,7 +15,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R138 detailed delivery acceptance planning handoff; product/runtime acceptance unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R138_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md`
+- Current R139 integrated proof preparation handoff; source-only dispatch, runtime/provider HOLD.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -4425,6 +4425,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R137 source/component worker return; original failures preserved, independent review controls acceptance.: `docs/reviews/R137_SOURCE_WORKER_RETURN_2026-10-21.md`
 - Worker source hashes/counters only, no runtime AI/governance proof.: `docs/reviews/probes/r137_execution_read_ui_20261020/worker_source_identity.json`
 - R138 owner-requested documentary acceptance roadmap only; no runtime/product closure.: `CVF_SESSION/authority/CCMAI-RUNTIME-138.json`
+- Superseded R138 frozen documentary acceptance-plan handoff; current R139 via continuity-initial-handoff.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R138_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md`
 - Independent Root acceptance-plan review; no product/runtime/governance claim.: `docs/reviews/R138_INDEPENDENT_ACCEPTANCE_PLAN_REVIEW_2026-10-21.md`
 - R138 owner-requested documentary acceptance roadmap only; no runtime/product closure.: `docs/work_orders/CCMAI_RUNTIME_138_DELIVERY_ACCEPTANCE_PLAN.md`
 - Canonical detailed9gate acceptance route with37M1-M5/6Ecriteria; planning only, product/runtime gaps remain.: `docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md`
@@ -4434,6 +4435,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Worker static documentary coverage/links only; canonical count discrepancy qualified by independent Root recheck.: `docs/reviews/probes/r138_acceptance_plan_20261021/luna_static_checks.json`
 - Worker handback document/source pins before Root metadata synchronization.: `docs/reviews/probes/r138_acceptance_plan_20261021/luna_document_identity.json`
 - R138 documentary worker handback; Root independent review controls planning acceptance.: `docs/reviews/R138_ROADMAP_WORKER_RETURN_2026-10-21.md`
+- Immutable integrated G0/G1/G2 source-preparation seed; runtime/provider authority absent.: `CVF_SESSION/authority/CCMAI-RUNTIME-139.json`
+- ONE integrated G0/G1/G2 proof work order; active source preparation, runtime annex proposed only.: `docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md`
+- R139 source preparation only; E01-E06 runtime and G0 admission remain open.: `CVF_SESSION/tranches/CCMAI-RUNTIME-139.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

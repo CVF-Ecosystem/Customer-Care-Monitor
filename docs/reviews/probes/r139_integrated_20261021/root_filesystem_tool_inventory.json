@@ -1,0 +1,46 @@
+{
+  "go": {
+    "path": "C:\\Program Files\\Go\\bin\\go.EXE",
+    "sha256": "7d828191ba32519a9c9361789ab647486236ed45c660889196c7770a8ff1985c",
+    "observed": "FILESYSTEM_ONLY_NOT_EXECUTED"
+  },
+  "python": {
+    "path": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.EXE",
+    "sha256": "a2a4eff8d0b0c845284c607d50a3b5b966ac5a3121736a2e38e165bd6644d9fe",
+    "observed": "FILESYSTEM_ONLY_NOT_EXECUTED"
+  },
+  "node": {
+    "path": "C:\\Program Files\\nodejs\\node.EXE",
+    "sha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+    "observed": "FILESYSTEM_ONLY_NOT_EXECUTED"
+  },
+  "docker": {
+    "path": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+    "sha256": "0df52bb089985681771c874575a199438e6721814e682d74176e7444d40e1957",
+    "observed": "FILESYSTEM_ONLY_NOT_EXECUTED"
+  },
+  "powershell": {
+    "path": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+    "sha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f",
+    "observed": "FILESYSTEM_ONLY_NOT_EXECUTED"
+  },
+  "frontend/node_modules/vite/bin/vite.js": {
+    "exists": true,
+    "sha256": "fa03478846d229651a3c6aa64833ba2c6cbf580a798b92bd8f47c7480bafb5d8"
+  },
+  "frontend/dist/index.html": {
+    "exists": true,
+    "sha256": "aec6e84d644933cef794c102d281923202390b4ebf6a6a500a7013436f0e16b7"
+  },
+  "backend/go.sum": {
+    "exists": true,
+    "sha256": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b"
+  },
+  "frontend/package-lock.json": {
+    "exists": true,
+    "sha256": "da41e1de5d5b853295a303092aab9433aeea8168fda2cf0420dd94e9f579fb00"
+  },
+  "mysqlImageCache": "UNVERIFIED_NOT_INSPECTED",
+  "browser": "IAB id2 inventory only; control/capture pending",
+  "claimBoundary": "filesystem availability only; no executable/runtime/tool capability proof"
+}

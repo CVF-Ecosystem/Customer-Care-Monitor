@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "updatedAt": "2026-10-16",
+  "updatedAt": "2026-10-21",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R138_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Current R138 detailed delivery acceptance planning handoff; product/runtime acceptance unchanged."
+      "description": "Current R139 integrated proof preparation handoff; source-only dispatch, runtime/provider HOLD."
     },
     {
       "id": "r060-work-order",
@@ -35024,6 +35024,34 @@
       "path": "docs/reviews/probes/r138_acceptance_plan_20261021/root_independent_document_checks.json",
       "status": "ACTIVE",
       "description": "Root final37acceptance/6E/9gates/213local targets verification, documentary only."
+    },
+    {
+      "id": "r139-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139.json",
+      "status": "ACTIVE",
+      "description": "Immutable integrated G0/G1/G2 source-preparation seed; runtime/provider authority absent."
+    },
+    {
+      "id": "r139-tranche",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-139.json",
+      "status": "ACTIVE",
+      "description": "R139 source preparation only; E01-E06 runtime and G0 admission remain open."
+    },
+    {
+      "id": "r139-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+      "status": "ACTIVE",
+      "description": "ONE integrated G0/G1/G2 proof work order; active source preparation, runtime annex proposed only."
+    },
+    {
+      "id": "r138-handoff-history",
+      "family": "continuity",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R138_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "Superseded R138 frozen documentary acceptance-plan handoff; current R139 via continuity-initial-handoff."
     }
   ]
 }

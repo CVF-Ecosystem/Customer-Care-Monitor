@@ -1,0 +1,25 @@
+{
+  "status": "PRE_DISPATCH_FINDINGS_RESOLVED_PENDING_GATES",
+  "observations": [
+    {
+      "check": "catalog write",
+      "result": "FAIL",
+      "reason": "continuity-initial-handoff still pointed to R138",
+      "repair": "canonical pointer updated to R139; no product effect"
+    },
+    {
+      "check": "read-only Sol consolidated intake",
+      "result": "FINITE_PROPOSAL_CONFLICT_FOUND",
+      "reason": "one total executePOST cannot cover native negative and browser positive",
+      "repair": "immutable seed proposal retained; order proposes native8/browser1/total9 plus grant3; effective effects0"
+    },
+    {
+      "check": "catalog write second attempt",
+      "result": "FAIL",
+      "reason": "same current handoff path registered twice",
+      "repair": "current handoff kept only in mandatory continuity surface; separate row preserves historical R138 handoff; all registry ids/paths independently checked unique"
+    }
+  ],
+  "providerCalls": 0,
+  "runtimeStarts": 0
+}

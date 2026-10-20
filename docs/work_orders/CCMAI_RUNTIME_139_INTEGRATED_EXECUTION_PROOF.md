@@ -1,0 +1,89 @@
+# R139 — one integrated source-bound G0 / G1 / G2 execution proof
+
+Status: DISPATCH_READY
+Risk: R2
+Worker: Sol Medium delegated fixture worker
+Reviewer: Root independent source/evidence REVIEWER
+Commit mode: WORKER_MUST_NOT_COMMIT
+providerExecutionAuthority: NONE
+dispatchKind: INITIAL
+
+## Current authority and acceptance target
+
+Owner `tiếp` continues G0 in the canonical delivery plan. Immutable dispatcher seed `642f5bd026dfe31e6dda6441dd25704eb3ececa3` precedes source BUILD. This is ONE work order containing G0 preparation, G1 native/backend proof and G2 browser proof, with explicit stage admission. Only source preparation/offline checks and Root's bounded pure-UI tool diagnostic are admitted now. G1/G2 runtime and provider use are HOLD. R117 physical allowance1/1 is consumed; no historical counter or slot transfers. No standalone helper successor follows automatically.
+
+User capability sought: a writer deliberately reruns one current WAIT_DATA request once, sees durable progress and a same-case new proposal after OPEN; a reader can inspect safe history without execute controls; uncertainty never silently repeats the action. Target M3-05/M3-08 and R136 E01–E06. Current evidence is T0/T1 source/component at product source `4cce40f2495f571b612122121d377c10499b4b02`; E01–E06 runtime/full M3 remain OPEN. Root decides source readiness independently; runtime acceptance requires actual source-bound T2/T3/T4 receipts. Owner alone grants fresh external-effect boundaries. Full M1/M2/M3 exit, pilot/release and Facebook/Zalo OA remain open/parked.
+
+## Required read-ahead and worker ownership
+
+Rehydrate manifest/policy/compact/state/memory/active handoff/status/index; read seed, record, this order, canonical acceptance plan G0/G1/G2, R136 SPEC, R137 independent source review and identity; inspect R137 reads/router/UI, actual executor/startup/grant/transport APIs, R134/R135 opt-in fixture patterns, R117 resource guards and R121 held-child lifecycle. Read dispatch-readiness, repair, shell cleanup and roadmap-control learnings. Inherit Root doctor27/27, current public Coreb69e1088, manifest/profilee9ddcb warning and89gate units PASS. Root owns order/seeds/record/shared continuity/catalog/commits; worker only appends pre-BUILD acknowledgment to current handoff, writes the four named new source/helper paths and worker return/compact JSON under R139 evidence. No worker delegation/commit/key/browser/runtime/network/DB/Docker.
+
+Do not invoke or edit historical runners. Do not alter product router/engine/frontend/executor/issuer/schema. If a native failure identifies a product defect, record its exact root cause; Root must judge the separate path/effect boundary before source repair. Do not embed fake provider output as governance proof. Native no-call software checks cannot establish runtime AI governance; the positive claim needs the separately admitted real provider receipt.
+
+## S01 — source-bound opt-in fixture and G1 matrix
+
+Add `backend/api/handlers/intervention_execution_browser_test.go` with a single explicitly selected `TestR139IntegratedExecutionProof`. Absent opt-in skips only in ordinary suites; the admitted dedicated campaign must fail if it skips or expected subtests are absent. With opt-in, missing or contradictory admission must fail BEFORE DB connect/migration/seed. Require absolute fresh external evidence directory under sibling `.ccmai_local_evidence/r139_execution_proof_20261021/fixture`, no symlink/reparse substitution, exact fixture identity/nonce, DSN host127.0.0.1/database/port match and owned nonce table checked before compatibility helper/migration. Do not connect to ambient DB/config or inherited fixtures. Validate committed source/binary/admission identities.
+
+Use actual application router/middleware and disposable MySQL, synthetic tenant/job/case/request actors. The same Go process first runs serial native matrix and, only if all required checks pass, holds the backend for G2; count one native invocation, not an unrecorded second suite. Distinguish fixture-authorized synthetic preparation writes from measured application GET/no-call effects. Fingerprint relevant durable tables around GETs and denied routes, inspect transaction results and provider physical-call ledger. No mock/synthetic AI response is accepted as governance proof.
+
+G1 requirements mapped to R136: E01 writer current READY with at most actor-bound opaque handle; reader, missing jobs permission and foreign tenant no handle/no execute. E02 status works with executor disabled; no-row versus unreadable503 and safe request/history DTO; no-store on permission/errors; immutable original request. E03 expired/consumed/foreign-actor grant, changed source/version/permission/budget/config/disabled transport disable readiness; strict/stale POST rejects, and a controlled pre-call race can be202 then DENIED with zero call/debit. Reject unknown/malformed body without writes. Real configured transport/secret prerequisites stay runtime-admitted; do not invent dummy credentials to assert READY. Carefully isolate negative test cases so no poisoned grant/config carries to the single positive case. Source preparation must make each missing runtime dependency an explicit HOLD, never a successful skip or fake READY.
+
+## S02 — G2 same-process genuine browser campaign
+
+After native pass, publish exact bound loopback origin and synthetic browser actor/case identities without key/token leaks in committed receipts. Use supported CUA IAB only. Product browser campaign is Root-executed under future admission; worker never controls it. Route ledger records auth/GET/mutation counts, two-field execute-body shape, pre-send UI hold evidence, actual results, and durable same-request lineage. Any browser denial/unavailability stops before fixture if precheck, or triggers owned cleanup if runtime already active; no alternate browser stack or blind retry.
+
+E04: observe local non-secret IN_FLIGHT before ONE deliberate two-field execute POST; storage failure sends0. Concurrent click, uncertainty/no-row, session switch and reload cannot resend. Extra browser execute POSTs are forbidden, so destructive uncertainty experiments needing another POST must be tested on the sole POST via a predeclared observation plan or remain explicitly OPEN; inherited component tests do not become browser runtime proof. Separate passive reload/session/reader checks may use the same already-published request. E05: observe202 then bounded read-only status through actual publication and WAITING_ON_DATA→OPEN, request→execution→jobrun→proposal→event identity, original request preserved, immutable published version and reload/history; reader safe history and0execute controls. If provider outcome is uncertain, report HOLD, never infer no-call/refund/success. E06 requires native no-skip exit, genuine browser/tool before/after/capture provenance and safe real provider request/response/usage ledger for any AI claim. If one sole POST cannot cover mutually exclusive E04 branches, final E04 disposition is PARTIAL/HOLD with exact uncovered cases; do not widen caps.
+
+## S03 — finite supervisor and source admission
+
+Add `scripts/r139_execution_supervisor.py` (and only if needed `scripts/r139_vite_config.mjs.template`) adapted from source patterns, not a blind rename. Import/inspect/pure checks perform no effects. No automatic downloads, setup side effect on import, Docker daemon restart, ambient credentials or alternate stack. Standalone `--help` must be harmless. No executable runtime mode can bypass missing committed runtime/effect admission. Source/tool admission pins full sourceCommit, changed test/helper hashes, product trees, Go binary, frontend source/build, Node/Vite/Docker/PowerShell binaries/config and public scheme/tool readiness; verify before and after effects. Do not hard-code obsolete R117/R121 source admission names/ports/keys.
+
+Before any fixture: fresh append-only reservation, actual supported-browser control/capture/close receipt, cached-tools verification, exact local Docker pipe and protected inventory. One newly owned MySQL container/network/volume only, image `sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b` verified locally before launch, loopback ephemeral DB port/unique nonce database; preserve all existing resources and never delete ambiguous identities. No OS/container egress-confinement claim. Runtime paths must be fresh and not source/archive dumps.
+
+Hold original Go/Vite child handles for whole finite lifecycle. Record process wait/exit and original terminal, route/effect counters, source pins and final DB fingerprint before termination; cleanup exact owned processes and finally the proven owned fixture only, stop and preserve volume. Bound every command/read and global lifecycle; maintain cleanup even if evidence writing/stream reader fails; terminal errors cannot look like success. Verify protected inventory equality, exact listener absence with reliable connect semantics, stopped container PID0/empty exposed ports and child exits. Missing cleanup evidence is HOLD. Add focused meaningful pure supervisor admission/lifecycle tests in `scripts/tests/test_r139_execution_supervisor.py`, with no real subprocess/network/DB in those tests.
+
+## S04 — current caps and truthful source return
+
+Current preparation caps from seed: worker offline Go compile3; Root compile1; worker purePython invocations3, Root2; Root owned pureUI capability1campaign/1tab. Frontend build0, DB/Docker/server/provider/key/grant/execute0. Offline Go from project root with `go -C backend`, GOPROXY=off/GOSUMDB=off/GOTOOLCHAIN=local. Compile only, do not run the opt-in fixture or broad historical DB suites. No dependency install/download. Count failed attempts. Same-scope repair maximum2; round3 without independent root cause records REVIEW_COST_ESCALATION_REQUIRED. Static repository gates are separate required checks.
+
+Worker return `docs/reviews/R139_SOURCE_WORKER_RETURN_2026-10-21.md` includes Risk/Worker/Reviewer, changed paths/hashes, source/tree pins, exact command/exits/skips/counters, all failures, test definitions versus actual runtime, remaining blockers, per-S01–S04 and E01–E06 disposition, and closeability recheck. No worker self-approval or FREEZE. Root collects findings once before repair and owns aggregate source readiness.
+
+## Runtime annex — PROPOSED, NOT AUTHORIZED
+
+One fresh immutable `CVF_SESSION/authority/CCMAI-RUNTIME-139-*-ADMISSION.json` may admit runtime under this SAME work order only after source review and explicit owner grant of the concrete boundary. Worker cannot author or edit admission. Preserve all original counters; no helper tranche or reset. Actual source/binary/frontend/config/resource/capability identities must be verified in admission, not placeholders treated as PASS. Missing cached tools/resource ownership means HOLD before fixture.
+
+Proposed runtime maxima: owned fixture start1/final stop1; native Go1 containing serial G1 and held G2server; backend1/Vite1; frontend build1; browser product campaign1; authPOST4; native negative executePOST8 and browser executePOST1 (aggregate executePOST9); server grant issuances3 (native-read baseline1, sacrificial denied execution1, positive browser1); physical Alibaba provider attempt1; automatic retry0; global lifecycle20minutes; UI status reads maximum12, spacing≥5seconds, lifetime≤60seconds. Authentication/GET counts must be separated from mutation/provider counts. A route rejection still consumes its reserved native/browser POST attempt. Eight native slots are finite: malformed JSON, unknown field, missing version, stale version, foreign-actor grant, expired grant, foreign-case access, accepted-then-pre-call DENIED race. Source review must settle exact expected codes and fixture identities before admission; any omitted or additional scenario is HOLD, not an implicit ninth native slot. Native mutations use sacrificial cases, never consume the browser-positive grant/request. Compile/build costs and any effect before provider are recorded, never refunded by an error.
+
+Proposed provider boundary from historical source (not current readiness): `alibaba_maas`, `qwen3.7-flash`, endpoint must match SHA256 `b22a15b6e8aa4113c2816acae6935a84d052a2d7b81db734ccdc4f5be81b4f8f`; actual endpoint identity/availability verified by authorized custodian without extra smoke call. Max request6000bytes, completion768tokens, thinkingfalse, synthetic Vietnamese complaint only, no customer/channel data. Root secret custodian; only admitted process memory/environment/private external runtime storage, no key in Git/stdout/browser/evidence. Budget amount, current pricing/currency authorization, synthetic IDs, independent server issuer, actor/request/grant deadline/config/policy/source binding and secret lookup path are OWNER/OPERATIONAL_DECISION_REQUIRED before use. Do not invent a monetary budget or read secrets to finish this annex. Stop after first physical call or any uncertainty; no direct provider smoke bypass.
+
+Future G0 PASS requires all eight dispatcher-readiness controls evidenced, source review accepted, committed fresh authority/caps and actual supported browser proof before fixture. G1 PASS requires current-source native matrix/no skipped cases and no-write/zero-call facts. G2 PASS requires current-source genuine browser/one-real-call receipt with all applicable Ecriteria actually observed and terminal cleanup. FAIL means observed contradiction; HOLD means missing prerequisite/uncertainty or cap exhausted; N/A requires accepted scope reason. Source preparation review cannot close G0/G1/G2 or fullM3. Proceed G3 only after explicit aggregate M3 applicability/exit review; M1 decisions/M2 consolidated proof/early prepilot applicability remain parallel dependencies in canonical plan.
+
+## Gate-To-Role Closeability Contract
+
+closeabilityContractVersion: cvf.gate-role-closeability@1.0.0
+closeabilityDisposition: CLOSEABLE
+returnTimeRecheck: REQUIRED_BEFORE_REPAIR
+implementationTopologyPolicy: BOUNDED_PATH_FAMILIES
+foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
+
+| gateId | mustPassBy | repairOwner | repairPhase | mutationSurface | topology | commitOwner | commitPhase | dependsOn |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| authorization_review | PRE_DISPATCH | orchestrator | PRE_DISPATCH | R139 immutable seed, current roadmap and exact owner request | EXACT_PATHS | commit-steward | DISPATCH_COMMIT | NONE |
+| pre_dispatch_gate | PRE_DISPATCH | orchestrator | PRE_DISPATCH | order and synchronized continuity/catalog | BOUNDED_PATH_FAMILIES | commit-steward | DISPATCH_COMMIT | authorization_review |
+| dispatch_continuity | IMPLEMENTATION | session-sync-steward | IMPLEMENTATION | CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md material-SHA marker | EXACT_PATHS | session-sync-steward | DISPATCH_CONTINUITY_COMMIT | pre_dispatch_gate |
+| focused_checker_tests | WORKER_RETURN | implementation-worker | WORKER_RETURN | bounded source, pure/component tests and acceptance contract | BOUNDED_PATH_FAMILIES | commit-steward | MATERIAL_COMMIT | dispatch_continuity |
+| adif_integrity | WORKER_RETURN | implementation-worker | WORKER_RETURN | original outcomes and current applicability limitations | EXACT_PATHS | commit-steward | MATERIAL_COMMIT | focused_checker_tests |
+| pre_implementation_autorun | IMPLEMENTATION | implementation-worker | IMPLEMENTATION | pre-BUILD rehydration/role acknowledgment | EXACT_PATHS | commit-steward | MATERIAL_COMMIT | dispatch_continuity |
+| worker_return_fast | WORKER_RETURN | implementation-worker | WORKER_RETURN | source/test identity and exact worker return | EXACT_PATHS | commit-steward | MATERIAL_COMMIT | focused_checker_tests,adif_integrity,pre_implementation_autorun |
+| reviewer_fast | REVIEW | reviewer | REVIEW | independent fixture/supervisor source-readiness review | BOUNDED_PATH_FAMILIES | commit-steward | MATERIAL_COMMIT | worker_return_fast |
+| pre_commit | PRE_MATERIAL_COMMIT | reviewer | PRE_MATERIAL_COMMIT | reviewed source, software evidence, scope, continuity and catalog | BOUNDED_PATH_FAMILIES | commit-steward | MATERIAL_COMMIT | reviewer_fast |
+| terminal_completion_review | POST_MATERIAL | reviewer | POST_MATERIAL | committed source-preparation evidence and remaining runtime acceptance | EXACT_PATHS | commit-steward | CONTINUITY_COMMIT | pre_commit |
+| continuity | CONTINUITY_COMMIT | session-sync-steward | CONTINUITY_COMMIT | state/memory/handoff/status/roadmap/catalog | BOUNDED_PATH_FAMILIES | session-sync-steward | CONTINUITY_COMMIT | terminal_completion_review |
+| committed_range_closure | POST_MATERIAL_CLOSURE | reviewer | POST_MATERIAL_CLOSURE | local committed R139 range and pinned static gates | EXACT_PATHS | session-sync-steward | CONTINUITY_COMMIT | continuity |
+
+
+The active contract is closeable for SOURCE_PREPARATION_ONLY; runtime gates above are explicitly HOLD and are not worker-return completion requirements until admitted. The integrated runtime acceptance remains open and cannot be silently relabeled completed.
+
+## Consolidated intake findings retained
+
+Sol read-only intake caught that the original seed future proposal executePOST1 was insufficient for both native E03 and browser success. That seed field is an immutable NOT_AUTHORITY proposal, not an admitted runtime cap; do not rewrite it. This order now proposes native8/browser1/aggregate9 and grant3 for fresh explicit owner admission; CURRENTLY ADMITTED effects remain0. One native process runs G1 then holds the same backend for G2. R134/R135 entrypoints reject configured executor and cannot be invoked unchanged; copied admission must bind fresh R139 identities. Preserve final DB evidence before fixture helper cleanup. No current provider/key permission is inferred from these corrections.

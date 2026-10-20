@@ -1,6 +1,6 @@
 # R138 — owner-requested delivery acceptance route
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 
@@ -40,3 +40,7 @@ Root re-read compact/state/memory/handoff/status/index before role/phase transit
 ## Interrupted closure resume verification
 
 Owner next resumes the interrupted final synchronization. Root re-read manifest/policy/current compact/state/memory/handoff/status/index; closure Python updates had completed but no closure commit existed. Current surfaces agree and plan hash37+6criteria/9gates/product-source preservation rechecked. Fresh doctor27/27 retains known manifest pin warning, knowledge ingestion complete, local preflight7/7 and profile precommitPASS. Root remains CLOSER/SESSION_SYNC_STEWARD/COMMIT_STEWARD. No product/runtime authority or acceptance changes; commit pending closure metadata then check exact committed range before final handback.
+
+## Successor
+
+R138 remains FROZEN documentary only; active G0 source-preparation moves to `CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md` under seed642f5bd0. Product/runtime acceptance unchanged.
