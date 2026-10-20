@@ -1,10 +1,10 @@
 {
-  "currentMode": "FREEZE",
-  "activePhase": "FREEZE",
-  "activeTranche": "CCMAI-RUNTIME-137",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R137_EXECUTION_READ_UI_2026-10-20.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-137 FROZEN / REVIEW_PASS_SOURCE_COMPONENT_ONLY at4cce40f2: read-only readiness/status APIs and request-linked execution UI source accepted; Root36frontend/4pureGo/typecheck-buildPASS, protected14source unchanged, one formal repair round. Native real-router DB/browser/E01..E06 execution acceptance OPEN, provider/credential/grant/execute effects0. Next prepare one integrated source-bound native/browser/real-provider proof work order with exact resource ownership and finite budgets; obtain fresh applicable effect authority before use, never reuse R1171/1. No automatic runtime/publication; Facebook/Zalo OA parked.",
-  "activeRole": "Root CLOSER / SESSION_SYNC_STEWARD / COMMIT_STEWARD",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
+  "activeTranche": "CCMAI-RUNTIME-138",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R138_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-138 BUILD: Luna Max documents detailed evidence-linked acceptance route from R137 source-only through M3, parallel M1/M2 decisions, M4 pilot and M5 release; reconcile stale roadmap status and persist owner anti-drift directive. Documentation only, no product acceptance or runtime/provider/credential/grant/execute effects; independent Root review before planning closure. Facebook/Zalo OA parked.",
+  "activeRole": "Root ORCHESTRATOR / independent roadmap REVIEWER; Luna Max IMPLEMENTATION_WORKER",
   "updatedAt": "2026-10-21",
   "schemaVersion": "1.0",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
@@ -392,5 +392,11 @@
     "runtimeAcceptanceE01E06": "OPEN",
     "freeze": "FROZEN_SOURCE_ONLY",
     "fullM3": "PARTIAL_IMPLEMENTATION_OPEN"
+  },
+  "x-ownerDetailedAcceptanceDirective": {
+    "date": "2026-10-21",
+    "instruction": "Không cam kết ngày hoàn thành nhưng phải vạch rõ lộ trình chi tiết, mốc đạt để nghiệm thu. Nếu không trước sau gì cũng đi lạc",
+    "contract": "Each planned milestone must carry deliverable, predecessor/parallel dependency, measurable acceptance, evidence tier and source, decision owner, current disposition and next allowed action; no date or percentage inferred from tests/tranches.",
+    "authority": "DOCUMENTARY_PLANNING_ONLY"
   }
 }

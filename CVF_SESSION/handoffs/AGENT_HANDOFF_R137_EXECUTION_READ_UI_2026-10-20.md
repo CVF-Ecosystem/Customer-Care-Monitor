@@ -1,6 +1,6 @@
 # R137 — execution read APIs and UI source
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 
@@ -54,3 +54,7 @@ Root re-read compact/canonical state/memory/handoff/status/index and final worke
 ## Source-only closure acknowledgment
 
 2026-10-21 Root rehydrated manifest/policy/current compact/state/memory/handoff/status/index (initial UTF-8 JSON read hit BOM, corrected utf-8-sig before action; no missing authority). Root independently accepts material 4cce40f2495f571b612122121d377c10499b4b02 and transitions REVIEWER -> CLOSER/SESSION_SYNC_STEWARD/COMMIT_STEWARD. Final36frontend tests/4engine pure tests/typecheck-buildPASS, api/handlers compile-only; worker13source and protected14hashes match. Legacy7/7 and profile worker-return/reviewer/precommitPASS; active-dispatch APPL/ROUTE was checked, completed-status APPL not applicable. Source-only REVIEW_PASS -> FREEZE; closure artifacts/gates/commit still required before final handback. E01..E06 native/browser/AI/runtime acceptance and fullM3 OPEN, actual provider/credential/grant/execute/runtime0, historical budgets unchanged. Next one bounded integrated proof packet before fresh effects, no helper chain/publication, accounts parked.
+
+## Current documentary successor
+
+2026-10-21 owner requires detailed acceptance roadmap. Root moves active continuity to R138 planning; R137 source/component acceptance remains unchanged, runtime E01..E06/fullM3 OPEN. No new runtime authority.

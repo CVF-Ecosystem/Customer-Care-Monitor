@@ -2,18 +2,20 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R137_EXECUTION_READ_UI_2026-10-20.md", "activeTranche": "CCMAI-RUNTIME-137", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R138_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-138", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: FREEZE
-- Active phase: FREEZE
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R137_EXECUTION_READ_UI_2026-10-20.md
+- Current mode: BUILD
+- Active phase: BUILD
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R138_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md
 
-CCMAI-RUNTIME-137 FROZEN / REVIEW_PASS_SOURCE_COMPONENT_ONLY at4cce40f2: read-only readiness/status APIs and request-linked execution UI source accepted; Root36frontend/4pureGo/typecheck-buildPASS, protected14source unchanged, one formal repair round. Native real-router DB/browser/E01..E06 execution acceptance OPEN, provider/credential/grant/execute effects0. Next prepare one integrated source-bound native/browser/real-provider proof work order with exact resource ownership and finite budgets; obtain fresh applicable effect authority before use, never reuse R1171/1. No automatic runtime/publication; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-138 BUILD: Luna Max documents detailed evidence-linked acceptance route from R137 source-only through M3, parallel M1/M2 decisions, M4 pilot and M5 release; reconcile stale roadmap status and persist owner anti-drift directive. Documentation only, no product acceptance or runtime/provider/credential/grant/execute effects; independent Root review before planning closure. Facebook/Zalo OA parked.
 
-Root CLOSER / SESSION_SYNC_STEWARD / COMMIT_STEWARD
+Root ORCHESTRATOR / independent roadmap REVIEWER; Luna Max IMPLEMENTATION_WORKER
+
+Owner2026-10-21 requires detailed acceptance milestones and finite route rather than completion-date promises. Root must report capability/gap/blocker/next acceptance and preserve R137 source-only limits; roadmap planning is not product completion.
 
 ## Historical R114 bounded UI result
 

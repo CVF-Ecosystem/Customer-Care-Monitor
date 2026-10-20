@@ -10,12 +10,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-058.json`
 - Separate R1 seed for accepted R061 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-062.json`
 - GitHub project-branch material publication receipt for the M1-M5 delivery roadmap; remote SHA readback, no product/runtime acceptance.: `docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json`
-- Current R133 source repaired, browser transfer required; M3 partial and original failures retained.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
+- M1-M5 product delivery roadmap with current R137 source-only/M3 partial truth and owner-required acceptance route.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
 - All seven selected inheritance findings independently accepted bounded and material exported atd121c9e; full product exits remain open.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R137 bounded execution read API/UI source handoff; runtime proof open.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R137_EXECUTION_READ_UI_2026-10-20.md`
+- Current R138 detailed delivery acceptance planning handoff; product/runtime acceptance unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R138_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -4424,6 +4424,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R137 bounded R2 source/local software scope; no DB/browser/provider/grant/execute authority.: `CVF_SESSION/tranches/CCMAI-RUNTIME-137.json`
 - R137 source/component worker return; original failures preserved, independent review controls acceptance.: `docs/reviews/R137_SOURCE_WORKER_RETURN_2026-10-21.md`
 - Worker source hashes/counters only, no runtime AI/governance proof.: `docs/reviews/probes/r137_execution_read_ui_20261020/worker_source_identity.json`
+- R138 owner-requested documentary acceptance roadmap only; no runtime/product closure.: `CVF_SESSION/authority/CCMAI-RUNTIME-138.json`
+- R138 owner-requested documentary acceptance roadmap only; no runtime/product closure.: `docs/work_orders/CCMAI_RUNTIME_138_DELIVERY_ACCEPTANCE_PLAN.md`
+- R138 owner-requested documentary acceptance roadmap only; no runtime/product closure.: `CVF_SESSION/tranches/CCMAI-RUNTIME-138.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

@@ -1528,7 +1528,7 @@
       "family": "continuity",
       "path": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
       "status": "ACTIVE",
-      "description": "Current R133 source repaired, browser transfer required; M3 partial and original failures retained."
+      "description": "M1-M5 product delivery roadmap with current R137 source-only/M3 partial truth and owner-required acceptance route."
     },
     {
       "id": "ccma-product-delivery-publication-20261013",
@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R137_EXECUTION_READ_UI_2026-10-20.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R138_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Current R137 bounded execution read API/UI source handoff; runtime proof open."
+      "description": "Current R138 detailed delivery acceptance planning handoff; product/runtime acceptance unchanged."
     },
     {
       "id": "r060-work-order",
@@ -34954,6 +34954,27 @@
       "path": "docs/reviews/probes/r137_execution_read_ui_20261020/root_independent_checks.json",
       "status": "ACTIVE",
       "description": "Root bounded independent software check results; failed initial UI regression retained."
+    },
+    {
+      "id": "r138-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-138.json",
+      "status": "ACTIVE",
+      "description": "R138 owner-requested documentary acceptance roadmap only; no runtime/product closure."
+    },
+    {
+      "id": "r138-tranche",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-138.json",
+      "status": "ACTIVE",
+      "description": "R138 owner-requested documentary acceptance roadmap only; no runtime/product closure."
+    },
+    {
+      "id": "r138-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_138_DELIVERY_ACCEPTANCE_PLAN.md",
+      "status": "ACTIVE",
+      "description": "R138 owner-requested documentary acceptance roadmap only; no runtime/product closure."
     }
   ]
 }
