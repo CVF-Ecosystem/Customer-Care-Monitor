@@ -34807,6 +34807,20 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_135_QUEUE_REJECT_PROOF.md",
       "status": "ACTIVE",
       "description": "R135 finite synthetic queue/reject proof; provider0, no full M3 claim."
+    },
+    {
+      "id": "r135-worker-return",
+      "family": "continuity",
+      "path": "docs/reviews/R135_FIXTURE_WORKER_RETURN_2026-10-20.md",
+      "status": "ACTIVE",
+      "description": "R135 independent source admission; runtime pending, provider0."
+    },
+    {
+      "id": "r135-source-review",
+      "family": "continuity",
+      "path": "docs/reviews/R135_SOURCE_REVIEW_2026-10-20.md",
+      "status": "ACTIVE",
+      "description": "R135 independent source admission; runtime pending, provider0."
     }
   ]
 }

@@ -4401,8 +4401,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R134 bounded synthetic request-only UI acceptance; provider0, full M3 remains partial.: `docs/reviews/R134_FIXTURE_WORKER_RETURN_2026-10-20.md`
 - R135 finite synthetic queue/reject proof; provider0, no full M3 claim.: `CVF_SESSION/authority/CCMAI-RUNTIME-135.json`
 - R135 finite synthetic queue/reject proof; provider0, no full M3 claim.: `docs/work_orders/CCMAI_RUNTIME_135_QUEUE_REJECT_PROOF.md`
+- R135 independent source admission; runtime pending, provider0.: `docs/reviews/R135_SOURCE_REVIEW_2026-10-20.md`
 - R135 finite synthetic queue/reject proof; provider0, no full M3 claim.: `docs/specs/M3_QUEUE_REJECT_PROOF_R135_SPEC_2026-10-20.md`
 - R135 finite synthetic queue/reject proof; provider0, no full M3 claim.: `CVF_SESSION/tranches/CCMAI-RUNTIME-135.json`
+- R135 independent source admission; runtime pending, provider0.: `docs/reviews/R135_FIXTURE_WORKER_RETURN_2026-10-20.md`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

@@ -1,9 +1,9 @@
 {
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "activeTranche": "CCMAI-RUNTIME-135",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R135_QUEUE_REJECT_PROOF_2026-10-20.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-135 BUILD: delegated worker owns only the opt-in queue/reject acceptance fixture and one offline compile; Root independently reviews then owns the single fresh synthetic browser proof. No provider, production edits, execute/grant or publication.",
+  "nextAllowedMove": "CCMAI-RUNTIME-135 REVIEW_PENDING: Root independently runs one fresh owned synthetic queue/reject browser proof after source material commit; final source/compile and inherited frontend/dist accepted. No provider, production edits, execute/grant or publication.",
   "activeRole": "Root ORCHESTRATOR / independent REVIEWER",
   "updatedAt": "2026-10-20",
   "schemaVersion": "1.0",

@@ -2,16 +2,16 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R135_QUEUE_REJECT_PROOF_2026-10-20.md", "activeTranche": "CCMAI-RUNTIME-135", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R135_QUEUE_REJECT_PROOF_2026-10-20.md", "activeTranche": "CCMAI-RUNTIME-135", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R135_QUEUE_REJECT_PROOF_2026-10-20.md
 
-CCMAI-RUNTIME-135 BUILD: delegated worker owns only the opt-in queue/reject acceptance fixture and one offline compile; Root independently reviews then owns the single fresh synthetic browser proof. No provider, production edits, execute/grant or publication.
+CCMAI-RUNTIME-135 REVIEW_PENDING: Root independently runs one fresh owned synthetic queue/reject browser proof after source material commit; final source/compile and inherited frontend/dist accepted. No provider, production edits, execute/grant or publication.
 
 Root ORCHESTRATOR / independent REVIEWER
 

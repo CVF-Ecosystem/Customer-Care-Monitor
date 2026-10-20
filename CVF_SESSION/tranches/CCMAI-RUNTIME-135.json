@@ -55,17 +55,20 @@
     "runtimePrerequisite": "Connected supported browser checked before provisioning; Root source/hash acceptance before runtime; only cached tools/images. Browser unavailable=>stop/report, no alternate stack or blind replay."
   },
   "baseCommit": "a3cf08bf2e4d835538b674b76fd5e703cac7154e",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
   "buildCommit": null,
-  "reviewEvidence": [],
+  "reviewEvidence": [
+    "docs/reviews/R135_SOURCE_REVIEW_2026-10-20.md"
+  ],
   "disposition": "OPEN",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ]
 }
