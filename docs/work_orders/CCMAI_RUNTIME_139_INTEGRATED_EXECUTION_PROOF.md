@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: DISPATCH_READY
+Status: PARKED
 Risk: R2
 Worker: Sol Medium delegated fixture worker
 Reviewer: Root independent source/evidence REVIEWER
@@ -87,3 +87,9 @@ The active contract is closeable for SOURCE_PREPARATION_ONLY; runtime gates abov
 ## Consolidated intake findings retained
 
 Sol read-only intake caught that the original seed future proposal executePOST1 was insufficient for both native E03 and browser success. That seed field is an immutable NOT_AUTHORITY proposal, not an admitted runtime cap; do not rewrite it. This order now proposes native8/browser1/aggregate9 and grant3 for fresh explicit owner admission; CURRENTLY ADMITTED effects remain0. One native process runs G1 then holds the same backend for G2. R134/R135 entrypoints reject configured executor and cannot be invoked unchanged; copied admission must bind fresh R139 identities. Preserve final DB evidence before fixture helper cleanup. No current provider/key permission is inferred from these corrections.
+
+## G0 stop disposition — 2026-10-21
+
+PARKED before source BUILD or fixture. Root reserved the sole pureUI diagnostic after seed642f5bd0/dispatch7c35f868 and attempted supported CUA IABid2 `createBrowserTab` on a local static `data:` document. Browser URL policy denied the protocol; allowed protocols are HTTP/HTTPS. The denial does not prove HTTP or product browser capability unavailable. No navigation/control/screenshot or E01–E06 proof completed. Inventory revealed one partially created owned about:blank tab1; Root acquired that exact observed tab, closed it successfully, and final IAB inventory was[]. No alternative navigation, HTTP server, lower-level browser stack or retry was attempted. Source worker never received BUILD authorization; new Go/Python/product build/runtime/DB/provider/key/grant/execute effects0.
+
+Per persisted owner browser stop/transfer instruction and canonical prerequisite-failure rule, Root consolidates the packet and stops dependent work rather than launching a helper successor. Source contract/finite native8+browser1 total9 proposal remains prepared but unimplemented/unadmitted. Required next decision: transfer this SAME R139 packet to an authorized connected browser executor, or explicitly authorize/review a materially safer supported diagnostic with fresh bounded admission. Neither user `tiếp` nor transfer may reset the reserved diagnostic budget or old provider cap. G0 HOLD, G1/G2 NOT_RUN, E01–E06/fullM3 OPEN. See R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md.

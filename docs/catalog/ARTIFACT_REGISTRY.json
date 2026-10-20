@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Current R139 integrated proof preparation handoff; source-only dispatch, runtime/provider HOLD."
+      "description": "Current R139 PARKED G0 browser capability hold/transfer; source BUILD and G1/G2 not run."
     },
     {
       "id": "r060-work-order",
@@ -35037,14 +35037,14 @@
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-139.json",
       "status": "ACTIVE",
-      "description": "R139 source preparation only; E01-E06 runtime and G0 admission remain open."
+      "description": "R139 PARKED before source BUILD/fixture; G0 HOLD, G1/G2 not run, provider/runtime0."
     },
     {
       "id": "r139-order",
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
       "status": "ACTIVE",
-      "description": "ONE integrated G0/G1/G2 proof work order; active source preparation, runtime annex proposed only."
+      "description": "ONE integrated G0/G1/G2 proof packet PARKED; runtime annex proposed only, no retry."
     },
     {
       "id": "r138-handoff-history",
@@ -35052,6 +35052,41 @@
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R138_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md",
       "status": "ACTIVE",
       "description": "Superseded R138 frozen documentary acceptance-plan handoff; current R139 via continuity-initial-handoff."
+    },
+    {
+      "id": "r139-stop-report",
+      "family": "continuity",
+      "path": "docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "G0 data-scheme diagnostic denied; exact partial-tab cleanup and owner-transfer hold, HTTP untested."
+    },
+    {
+      "id": "r139-browser-reservation",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/browser_capability_reservation.json",
+      "status": "ACTIVE",
+      "description": "Sole pureUI capability diagnostic reserved before effect; consumed, no reset."
+    },
+    {
+      "id": "r139-browser-outcome",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/browser_capability_outcome.json",
+      "status": "ACTIVE",
+      "description": "Root transcript of browser URL-policy denial and partial owned tab cleanup; no control/capture proof."
+    },
+    {
+      "id": "r139-tool-filesystem",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/root_filesystem_tool_inventory.json",
+      "status": "ACTIVE",
+      "description": "Filesystem-only executable/cache pins; not runtime capability or image cache proof."
+    },
+    {
+      "id": "r139-preparation-findings",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/root_preparation_findings.json",
+      "status": "ACTIVE",
+      "description": "Original two catalog failures and finite proposed native/browser POST correction retained."
     }
   ]
 }

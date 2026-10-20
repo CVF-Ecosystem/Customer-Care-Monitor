@@ -1,0 +1,59 @@
+{
+  "status": "PARKED_G0_BROWSER_CAPABILITY_HOLD_OWNER_TRANSFER",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+  "report": "docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md",
+  "productSource": "4cce40f2495f571b612122121d377c10499b4b02",
+  "currentGate": "G0-M3-SOURCE-AND-READINESS",
+  "G0": "HOLD",
+  "G1": "NOT_RUN",
+  "G2": "NOT_RUN",
+  "sourcePreparation": "NOT_STARTED_NO_WORKER_BUILD_DISPATCH",
+  "pureUiDiagnosticAttempts": 1,
+  "ownedTabsCreatedPartially": 1,
+  "ownedTabsClosed": 1,
+  "finalOwnedTabs": 0,
+  "diagnosticNavigation": "DENIED_DATA_SCHEME",
+  "HTTPApplicationCapability": "UNTESTED",
+  "workerGoInvocations": 0,
+  "workerPythonChecks": 0,
+  "newFixtureStarts": 0,
+  "DBEffects": 0,
+  "backendStarts": 0,
+  "viteStarts": 0,
+  "providerCalls": 0,
+  "credentialReads": 0,
+  "grantEffects": 0,
+  "executePOST": 0,
+  "productSourceUnchanged": true,
+  "productMilestones": "UNCHANGED",
+  "toolTranscript": [
+    {
+      "tool": "mcp__cua_repl.js",
+      "action": "createBrowserTab browser2 data:text/html;charset=utf-8 static R139 button; visiblefalse",
+      "result": "REJECTED by Browser URL policy; requested protocol not allowed; only http/https; no bypass permitted"
+    },
+    {
+      "tool": "mcp__cua_repl.js",
+      "action": "listTabs browser2",
+      "result": [
+        {
+          "id": "1",
+          "providerTabId": "browser-use:e1a495a5-6008-4156-ae82-751b188d81b8",
+          "title": "about:blank",
+          "url": "about:blank"
+        }
+      ]
+    },
+    {
+      "tool": "mcp__cua_repl.js",
+      "action": "getTab observed1 browser2",
+      "result": "AXWebArea about:blank"
+    },
+    {
+      "tool": "mcp__cua_repl.js",
+      "action": "close owned tab1; listTabs browser2",
+      "result": []
+    }
+  ],
+  "receiptProvenance": "Root-authored transcription of original tool calls/results visible in conversation; not a provider-signed export/recording. No screenshot was captured; no UI control success claimed."
+}

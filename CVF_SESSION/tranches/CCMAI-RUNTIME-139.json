@@ -82,16 +82,49 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "642f5bd026dfe31e6dda6441dd25704eb3ececa3",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "status": "PARKED",
+  "phase": "REVIEW",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "DISPATCH_READY",
+  "workOrderStatus": "PARKED",
   "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "SOURCE_PREPARATION_ONLY_RUNTIME_HOLD",
+  "reviewEvidence": [
+    "docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md",
+    "docs/reviews/probes/r139_integrated_20261021/browser_capability_outcome.json"
+  ],
+  "disposition": "HOLD_BEFORE_SOURCE_BUILD_AND_FIXTURE",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
-    "DISPATCH_READY"
-  ]
+    "DISPATCH_READY",
+    "PARKED"
+  ],
+  "actualUse": {
+    "status": "PARKED_G0_BROWSER_CAPABILITY_HOLD_OWNER_TRANSFER",
+    "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+    "report": "docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md",
+    "productSource": "4cce40f2495f571b612122121d377c10499b4b02",
+    "currentGate": "G0-M3-SOURCE-AND-READINESS",
+    "G0": "HOLD",
+    "G1": "NOT_RUN",
+    "G2": "NOT_RUN",
+    "sourcePreparation": "NOT_STARTED_NO_WORKER_BUILD_DISPATCH",
+    "pureUiDiagnosticAttempts": 1,
+    "ownedTabsCreatedPartially": 1,
+    "ownedTabsClosed": 1,
+    "finalOwnedTabs": 0,
+    "diagnosticNavigation": "DENIED_DATA_SCHEME",
+    "HTTPApplicationCapability": "UNTESTED",
+    "workerGoInvocations": 0,
+    "workerPythonChecks": 0,
+    "newFixtureStarts": 0,
+    "DBEffects": 0,
+    "backendStarts": 0,
+    "viteStarts": 0,
+    "providerCalls": 0,
+    "credentialReads": 0,
+    "grantEffects": 0,
+    "executePOST": 0,
+    "productSourceUnchanged": true,
+    "productMilestones": "UNCHANGED"
+  }
 }
