@@ -34758,6 +34758,27 @@
       "path": "docs/reviews/R134_SOURCE_REVIEW_2026-10-20.md",
       "status": "ACTIVE",
       "description": "Independent fixture/source/build admission only; actual runtime pending."
+    },
+    {
+      "id": "r134-worker-return",
+      "family": "continuity",
+      "path": "docs/reviews/R134_FIXTURE_WORKER_RETURN_2026-10-20.md",
+      "status": "ACTIVE",
+      "description": "R134 bounded synthetic request-only UI acceptance; provider0, full M3 remains partial."
+    },
+    {
+      "id": "r134-runtime-review",
+      "family": "continuity",
+      "path": "docs/reviews/R134_RUNTIME_REVIEW_2026-10-20.md",
+      "status": "ACTIVE",
+      "description": "R134 bounded synthetic request-only UI acceptance; provider0, full M3 remains partial."
+    },
+    {
+      "id": "r134-runtime-receipt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r134_waitdata_proof_20261020/runtime_review.json",
+      "status": "ACTIVE",
+      "description": "R134 bounded synthetic request-only UI acceptance; provider0, full M3 remains partial."
     }
   ]
 }

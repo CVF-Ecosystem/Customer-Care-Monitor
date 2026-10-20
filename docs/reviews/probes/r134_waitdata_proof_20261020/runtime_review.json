@@ -1,0 +1,144 @@
+{
+  "trancheId": "CCMAI-RUNTIME-134",
+  "buildCommit": "bb8fcffc6b5c9713d32e3c8b1e906bae0cd35ebb",
+  "status": "REVIEW_PASS_BOUNDED_REQUEST_ONLY",
+  "runtimeGoExit": 0,
+  "terminal": {
+    "authPosts": 4,
+    "capturePosts": 2,
+    "captureStatuses": [
+      503,
+      201
+    ],
+    "caseVersion": 3,
+    "countsAfter": {
+      "ai_usage_logs": 0,
+      "attempts": 0,
+      "budgets": 0,
+      "executions_claims": 0,
+      "grants": 0,
+      "human_events": 2,
+      "proposals": 1,
+      "receipts": 0,
+      "requests": 1,
+      "revisions": 1,
+      "runs": 0,
+      "snapshots": 2
+    },
+    "countsBefore": {
+      "ai_usage_logs": 0,
+      "attempts": 0,
+      "budgets": 0,
+      "executions_claims": 0,
+      "grants": 0,
+      "human_events": 0,
+      "proposals": 1,
+      "receipts": 0,
+      "requests": 0,
+      "revisions": 0,
+      "runs": 0,
+      "snapshots": 2
+    },
+    "deniedRoutes": 0,
+    "disposition": "WAIT_DATA",
+    "execution": "NOT_RUN",
+    "finishedAt": "2026-10-20T12:04:39.6312779Z",
+    "firstCaptureNoWrite": true,
+    "injectedSourceRead": true,
+    "nativeNoJobsRequestStatus": 403,
+    "nativeReaderCaptureStatus": 403,
+    "nonce": "a5615d7a505a808628226c6c22e20804",
+    "observationErrors": null,
+    "requestPosts": 1,
+    "requestStatus": "AWAITING_EXECUTION_AUTHORITY",
+    "serveJoined": true,
+    "serveResult": "http: Server closed",
+    "stopReason": "owned_stop",
+    "testFailed": false,
+    "trancheId": "CCMAI-RUNTIME-134",
+    "workState": "WAITING_ON_DATA"
+  },
+  "cleanup": {
+    "priorContainerCount": 27,
+    "priorContainersEqual": true,
+    "networkIDsEqual": true,
+    "priorVolumesPreserved": true,
+    "newVolumes": [
+      "4c57d4630c352ede175a4319266201c108c6065f0b772e0832d462bf5702e318"
+    ],
+    "ownedStopped": true,
+    "ownedPreserved": true
+  },
+  "listenerClosure": {
+    "observedAt": "2026-10-20T12:04:56.0377033Z",
+    "listenerRows": [],
+    "checkedPorts": [
+      63716,
+      58791
+    ]
+  },
+  "sourceBuildBinding": {
+    "trancheId": "CCMAI-RUNTIME-134",
+    "frontendSHA256": {
+      "frontend/src/api/intervention.ts": "0f4bf139e78a68d0e2dc64d1d09b02ad8024d0dd232170657ae3dfd9cf102725",
+      "frontend/src/components/InterventionDataFollowup.vue": "1e90b2e5baffd8426c271eaf1fabb717170b2dbfce39b08ccf71358b64757803",
+      "frontend/src/views/InterventionCases.vue": "f0cd8b6f0852896f3390c320afa750da1b23817677554f4cfa359d2ba8ba1a75",
+      "frontend/src/i18n/en.ts": "6f18c6796051581f4f1305fb8585bf63280ce425195e1e87668ba60aa00f6114",
+      "frontend/src/i18n/vi.ts": "dcf49d23e088ede7b86f2e78f84509c33d5d7338504002b2cf96e48dd7c97962",
+      "frontend/src/__tests__/intervention-data-followup.test.ts": "9b3fbd2244c4ff60d4ca4a963905986cc10ee6ced02bc1bc8b50411e13ea0993",
+      "frontend/src/__tests__/intervention-ui.test.ts": "522ec0788732ca39de9e4660d10e75139bc74f727043458efb80b78c0ad9ffa3"
+    },
+    "inheritedBuildManifestSHA256": "51eed37d3fb08e25ca9f56c031ebc1265b888baaa5869f8ccccdb614eeede5e6",
+    "manifestEncoding": "sorted posix relative path:lowercase SHA256, joined LF, no trailing LF",
+    "distFileCount": 143,
+    "protectedContainers": 27,
+    "browserReadiness": "IAB id2 about:blank opened through supported CUA",
+    "providerCalls": 0,
+    "runtimeStarts": 0
+  },
+  "usedBudget": {
+    "go": 2,
+    "node": 0,
+    "ownedMySQL": 1,
+    "ownedFinalStops": 1,
+    "browserCampaigns": 1,
+    "browserTabs": 1,
+    "authPosts": 4,
+    "capturePosts": 2,
+    "requestPosts": 1,
+    "providerCalls": 0
+  },
+  "rawSHA256": {
+    "readiness.json": "671f99a5712ba821bb035b71772bff5233b6e041a76e2b5bb445d4531f932e89",
+    "protected_baseline.json": "04bab16797ed0f601ac2df9e2c4a4a37aac316f700b93297035fc41a56d7c368",
+    "provision.json": "b2e336af2a1c3bd4716ebbb22bd5e6cff19403f574038d96ba65bb9729e1d075",
+    "fixture/fixture_identity.json": "1d3437ddf5208c58179e3ba11ca4eec87047c86ca989e3e9bc80d055fe2f0920",
+    "fixture/route_journal.jsonl": "94e44d1f8b3c3fbf810d0b4f8468a565c94d07af3628df6731d45aff1a08582c",
+    "fixture/ready.json": "3abb9a5b6b19da1dd8ed0f1141ec82dec54fe9756c7bfa2658eeba34a5e50411",
+    "fixture/stop.json": "cf6f234348baf1bccd06e40903e77a57d5b282ac8b175b330081563493a19dec",
+    "fixture/backend_terminal.json": "a721eb92d8e093b988fafc739607073ee42adef8e96f99f3127b4b5b2104c92a",
+    "root_compile/compile_receipt.json": "17053be81c067a150088ddaf76a57caaa6f77798b27f487c82385d962e4a8698",
+    "root_compile/compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "root_runtime/go-test.jsonl": "fa9d4aed72d58d58895641771615167da7333c3f4e8d16efcbdb596d82ee5c6b",
+    "root_runtime/test_exit.json": "8f773de36acc7f4f07f21fc2726f1dfb96868132dc1c0673a1c0ee75c8b3c9ec",
+    "cleanup.json": "d4e1e49d90bd8ec57d22d9bf439e05cbab802409d7abaf99595f56d80ade9794",
+    "listener_closure.json": "54a4930e85745923fe25abc92f1dff121d61da8bd98f84cd3fa347464311f070",
+    "capture-error.png": "11004e61d3eed61127a95835aef9a7d489cac194fc1032dedff422681efaa15c",
+    "capture-saved.png": "de246377e2dbe33317cbececc1afde998596a289f2a934b7820ddfa80e171a43",
+    "request-saved.png": "603a29246ac3af6acb90da7b6f4bbca689910000e9cebbe5bc640b08cd93c173",
+    "request-saved-dom.txt": "b0703f291884a81c3b27417f6eaa9a67b22e83ab195756901d946c437974f305",
+    "owner-reload-dom.txt": "4ad3e2d1f9c8650d09d4ef6db8a8075daa7ff106c6bcdb4cbe499c35a3aca6a8",
+    "reader-history.png": "336db9700813fc03401ceb50f3a57815a3489fa157ff36ff95a027da77845b79",
+    "reader-history-dom.txt": "13d924527f72156729345a1553311a8b69905728d5e4d6fc772e38b688dc1a0f"
+  },
+  "fixtureSHA256": "25259593c078b50d358a0e4149252a8a90fade10b8002f75e3fc760d3448144a",
+  "browserObservations": [
+    "Owner503 friendly error; disabled submit; explicit reload",
+    "Owner201 capture version2 retained saved notice after parent refresh",
+    "Owner201 request version3 retained saved/waiting/not-started notice",
+    "Reload retained revision and request history",
+    "Fresh reader login retained both histories; capture/request/action controls0",
+    "Owner and reader logout completed"
+  ],
+  "claimBoundary": "Synthetic request-only product UI/API proof; no AI execution or CVF governance proof, full M3/hosted CI/pilot/release claim"
+}

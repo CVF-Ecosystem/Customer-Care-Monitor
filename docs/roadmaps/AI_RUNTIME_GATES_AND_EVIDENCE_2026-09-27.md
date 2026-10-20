@@ -1,5 +1,11 @@
 # Roadmap CSKH: dữ liệu đáng tin, bộ lọc hỗ trợ AI và xử lý có trách nhiệm
 
+## R134 — luồng bổ sung thông tin và lưu yêu cầu đã nghiệm thu local, 2026-10-20
+
+Browser hoạt động trở lại. Lượt thử thực tế: lỗi503 có thông báo dễ hiểu/không ghi dữ liệu, tải lại thủ công rồi201 ghi nhận,201 lưu yêu cầu giữ thông báo đúng/lần cập nhật3. Tải lại và tài khoản chỉ đọc vẫn thấy hai lịch sử, không có nút ghi; Go exit0, đúng1bản bổ sung/1yêu cầu/2sự kiện, chưa chạy AI. Server/MySQL thử đã dừng;27container cũ giữ nguyên, provider0. [Review](../reviews/R134_RUNTIME_REVIEW_2026-10-20.md).
+
+M3 vẫn PARTIAL: còn queue nhiều trang/filter/count/order và REJECT thành công; UI chạy đánh giá thực cần hợp đồng/quyền riêng. Khoảng trống hiển thị lỗi backend thực đã có bằng chứng503; qualification mobile/raster và offline NOT_RUN giữ nguyên. Bước tới chỉ INTAKE/SPEC cho bằng chứng còn thiếu, chưa dispatch/runtime; Facebook/ZaloOA, business/pilot/hosted/release vẫn mở. R132/R133 lỗi lịch sử và ngân sách cũ giữ nguyên. Các mục dưới là lịch sử.
+
 ## R133 — sửa mã xong, kiểm chứng browser cần chuyển agent
 
 Đã sửa refresh cùng ca và điều kiện dữ liệu synthetic;30 kiểm tra UI, typecheck/build và offline Go compile PASS. Browser hiện không khả dụng nên chưa kiểm chứng luồng mới; lượt fixture kết thúc exit1 do không chạy browser, không nhận PASS. Native quyền403/403,26 container cũ không đổi; server/MySQL thử dừng và giữ nguyên, provider0. Theo chỉ thị owner, dừng và bàn giao agent có browser, không đổi stack/tự chạy lại. M3 vẫn PARTIAL. [Gói bàn giao](../reviews/R133_RUNTIME_TRANSFER_PACKET_2026-10-19.md). Các mục dưới là lịch sử.
