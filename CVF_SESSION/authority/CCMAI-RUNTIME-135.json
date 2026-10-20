@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-135",
+  "authorityKind": "DISPATCHER_OWNED_M3_QUEUE_REJECT_EVIDENCE",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Root ORCHESTRATOR / SPEC_AUTHOR",
+    "implementationWorker": "Delegated synthetic acceptance fixture worker",
+    "reviewer": "Root independent source/browser reviewer",
+    "commitSteward": "Root COMMIT_STEWARD"
+  },
+  "allowedPaths": [
+    "backend/api/handlers/intervention_queue_browser_test.go",
+    "docs/specs/M3_QUEUE_REJECT_PROOF_R135_SPEC_2026-10-20.md",
+    "docs/work_orders/CCMAI_RUNTIME_135_QUEUE_REJECT_PROOF.md",
+    "docs/reviews/R135_*.md",
+    "docs/reviews/probes/r135_queue_reject_20261020/*.json",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-135.json",
+    "CVF_SESSION/tranches/CCMAI-RUNTIME-135.json",
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_R135_QUEUE_REJECT_PROOF_2026-10-20.md",
+    "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+    "CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md",
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_R134_WAITDATA_BROWSER_PROOF_2026-10-20.md"
+  ],
+  "prohibitedEffects": [
+    "Provider/paid API call, grant or execute action; no historical budget reuse",
+    "Installed/customer app, database or external channel mutation; no real credentials",
+    "Production backend behavior, schema, policy/gate/toolchain or dispatcher-seed changes",
+    "Automatic retries/replays, automatic rerun, customer messages or employee decisions",
+    "Unowned resource/process cleanup, Docker prune/remove or image/dependency downloads",
+    "Push, merge, history rewrite or deployment",
+    "Raw archives, binaries, source snapshots or bulky logs added to Git"
+  ],
+  "ownerAuthorization": "Owner tiep after accepted R134 authorizes the next finite roadmap scope. Root orchestrator/independent reviewer, Sol Medium/Luna Max delegated workers authorized; no prior seed/budget reset.",
+  "scope": "Add only an opt-in R135 synthetic acceptance fixture for real-router queue pagination/filter/count/order and one positive REJECT via current browser; preserve unchanged production source and inherited built frontend. Root independently reviews source, controls runtime and commits.",
+  "verification": "One fresh cached-image nonce-owned fixture, native read-only queue pagination/filter/count/order/tenant checks plus browser default and OPEN multi-page queues, positive REJECT with reason, reload/history and reader no-write. Exact old-source/effect preservation, owned terminal/exit/cleanup and protection.",
+  "claimBoundary": "Frontend followup/request software slice only. Saving a request is not AI execution approval or CVF governance proof. No fresh provider/live-channel, full M3, hosted CI, pilot or release claim.",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_135_QUEUE_REJECT_PROOF.md",
+  "executionBudget": {
+    "newOwnedMySQLFixtures": 1,
+    "ownedFixtureFinalStops": 1,
+    "goBuildOrTestInvocations": 4,
+    "nodeTestOrBuildInvocations": 0,
+    "browserCampaigns": 1,
+    "browserAuthPosts": 4,
+    "browserActionPosts": 1,
+    "providerCalls": 0,
+    "sameScopeRepairRounds": 2,
+    "runtimePrerequisite": "Connected supported browser checked before provisioning; Root source/hash acceptance before runtime; only cached tools/images. Browser unavailable=>stop/report, no alternate stack or blind replay."
+  }
+}
