@@ -4409,8 +4409,13 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R135 finite synthetic queue/reject proof; provider0, no full M3 claim.: `CVF_SESSION/tranches/CCMAI-RUNTIME-135.json`
 - R135 independent source admission; runtime pending, provider0.: `docs/reviews/R135_FIXTURE_WORKER_RETURN_2026-10-20.md`
 - R136 source-based intended execution-UI contract only, all runtime/provider0.: `CVF_SESSION/authority/CCMAI-RUNTIME-136.json`
+- R136 intended execution-UI contract/source verification only; no implementation or runtime evidence.: `docs/reviews/R136_DESIGN_REVIEW_2026-10-20.md`
+- R136 intended execution-UI contract/source verification only; no implementation or runtime evidence.: `docs/reviews/probes/r136_execution_ui_design_20261020/independent_review.json`
 - R136 source-based intended execution-UI contract only, all runtime/provider0.: `docs/work_orders/CCMAI_RUNTIME_136_EXECUTION_UI_DESIGN.md`
+- R136 intended execution-UI contract/source verification only; no implementation or runtime evidence.: `docs/reviews/probes/r136_execution_ui_design_20261020/source_identity.json`
+- R136 intended execution-UI contract/source verification only; no implementation or runtime evidence.: `docs/specs/M3_EXECUTION_UI_R136_SPEC_2026-10-20.md`
 - R136 source-based intended execution-UI contract only, all runtime/provider0.: `CVF_SESSION/tranches/CCMAI-RUNTIME-136.json`
+- R136 intended execution-UI contract/source verification only; no implementation or runtime evidence.: `docs/reviews/R136_DESIGN_WORKER_RETURN_2026-10-20.md`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

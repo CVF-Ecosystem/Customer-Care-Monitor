@@ -34863,6 +34863,41 @@
       "path": "docs/work_orders/CCMAI_RUNTIME_136_EXECUTION_UI_DESIGN.md",
       "status": "ACTIVE",
       "description": "R136 source-based intended execution-UI contract only, all runtime/provider0."
+    },
+    {
+      "id": "r136-spec",
+      "family": "continuity",
+      "path": "docs/specs/M3_EXECUTION_UI_R136_SPEC_2026-10-20.md",
+      "status": "ACTIVE",
+      "description": "R136 intended execution-UI contract/source verification only; no implementation or runtime evidence."
+    },
+    {
+      "id": "r136-worker-return",
+      "family": "continuity",
+      "path": "docs/reviews/R136_DESIGN_WORKER_RETURN_2026-10-20.md",
+      "status": "ACTIVE",
+      "description": "R136 intended execution-UI contract/source verification only; no implementation or runtime evidence."
+    },
+    {
+      "id": "r136-design-review",
+      "family": "continuity",
+      "path": "docs/reviews/R136_DESIGN_REVIEW_2026-10-20.md",
+      "status": "ACTIVE",
+      "description": "R136 intended execution-UI contract/source verification only; no implementation or runtime evidence."
+    },
+    {
+      "id": "r136-source-pins",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r136_execution_ui_design_20261020/source_identity.json",
+      "status": "ACTIVE",
+      "description": "R136 intended execution-UI contract/source verification only; no implementation or runtime evidence."
+    },
+    {
+      "id": "r136-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r136_execution_ui_design_20261020/independent_review.json",
+      "status": "ACTIVE",
+      "description": "R136 intended execution-UI contract/source verification only; no implementation or runtime evidence."
     }
   ]
 }

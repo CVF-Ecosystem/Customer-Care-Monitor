@@ -1,9 +1,9 @@
 {
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "activeTranche": "CCMAI-RUNTIME-136",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R136_EXECUTION_UI_DESIGN_2026-10-20.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-136 BUILD: delegated source/design worker authors only source-pinned execution-UI intended contract and return; Root independent review follows. Documentation only, all source/runtime/provider/grant/execute/publication effects0.",
+  "nextAllowedMove": "CCMAI-RUNTIME-136 REVIEW_PENDING: Root independently accepted D01..D06 intended contract and13source pins; commit documentary material then close design only. Next separate R2 work order may bound read API/execution UI and fresh evidence; no source/runtime/provider/grant/execute/publication authority in R136.",
   "activeRole": "Root ORCHESTRATOR / independent source-design REVIEWER",
   "updatedAt": "2026-10-20",
   "schemaVersion": "1.0",

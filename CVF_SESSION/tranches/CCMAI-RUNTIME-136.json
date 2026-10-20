@@ -48,17 +48,20 @@
     "sameScopeRepairRounds": 2
   },
   "baseCommit": "6ec8c124b1b5fa32ed6e68a0f7366fb2513ddf3f",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
   "buildCommit": null,
-  "reviewEvidence": [],
+  "reviewEvidence": [
+    "docs/reviews/R136_DESIGN_REVIEW_2026-10-20.md"
+  ],
   "disposition": "OPEN",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ]
 }

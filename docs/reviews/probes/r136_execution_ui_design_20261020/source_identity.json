@@ -1,0 +1,24 @@
+{
+  "trancheId": "CCMAI-RUNTIME-136",
+  "kind": "READ_ONLY_SOURCE_IDENTITY",
+  "sourceHead": "b09b8033627b129c9d37fc3c28fea04f4c6294fa",
+  "authorityBase": "6ec8c124b1b5fa32ed6e68a0f7366fb2513ddf3f",
+  "observedDate": "2026-10-20",
+  "hashAlgorithm": "SHA-256",
+  "files": {
+    "backend/main.go": "5a0698fcfb2a3399723c1c0911b165b064897c2f338cbf46c656eee65a118ab0",
+    "backend/config/config.go": "c03b0fceaba869144d2aaadc6785d01b16c9a46dd84e4507e45adffcbf982577",
+    "backend/api/router.go": "c0887c3884cf0696d7bcb419ffd8d061174db5287e9819056fb6f06985792eb5",
+    "backend/api/handlers/intervention_waitdata.go": "cd93360e52c6dd13fc62d3d3c1bc8f18aeaf55c7c359d2e6f026db01fe3e9a0f",
+    "backend/api/handlers/intervention_capability.go": "5289148e4e6ab31666b0d8f1fd256cf2681142ddb5b7781846a54f018148b332",
+    "backend/engine/intervention_waitdata_executor.go": "14726fbc3ea31cddb1cf14742543e221c910ee9082308c733d4cbabf92ab3faf",
+    "backend/engine/intervention_startup_grant.go": "bab5a846e40879eba5f3bb848d633771c51bd0d895f69fa11465c36be1b2b5b3",
+    "backend/engine/intervention_startup.go": "25c92311b88fc7a1fa9c31a0de48b3ebc8c749ecec56e4998eab0446b8a3c18d",
+    "backend/db/models/intervention_waitdata.go": "bce04e4fd9bae54af464874bfffdbfb2b02019c19b315622e1e7f66f7b676f20",
+    "backend/cli/intervention_synthetic.go": "c0eca94002d74a92c090a6c1f646f3c83b48c038707f25fb14d3cd8af30af5a4",
+    "frontend/src/views/InterventionCases.vue": "f0cd8b6f0852896f3390c320afa750da1b23817677554f4cfa359d2ba8ba1a75",
+    "frontend/src/components/InterventionDataFollowup.vue": "1e90b2e5baffd8426c271eaf1fabb717170b2dbfce39b08ccf71358b64757803",
+    "frontend/src/api/intervention.ts": "0f4bf139e78a68d0e2dc64d1d09b02ad8024d0dd232170657ae3dfd9cf102725"
+  },
+  "claimBoundary": "Static source identity only; no runtime, provider, governance or implementation proof."
+}

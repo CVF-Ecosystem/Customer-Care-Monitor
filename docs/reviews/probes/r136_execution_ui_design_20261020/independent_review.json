@@ -1,0 +1,25 @@
+{
+  "trancheId": "CCMAI-RUNTIME-136",
+  "scope": "DOCUMENTARY_INTENDED_CONTRACT_ONLY",
+  "sourceHead": "b09b8033627b129c9d37fc3c28fea04f4c6294fa",
+  "sourcePinsChecked": 13,
+  "allMatch": true,
+  "productionPathsChanged": [],
+  "consolidatedRounds": 1,
+  "findings": {
+    "F1": "CORRECTED_PRE_SEND_HOLD",
+    "F2": "CORRECTED_DTOS_AND_PUBLISHED_LINEAGE",
+    "F3": "CORRECTED_ASYNC_BUDGET_TIMING",
+    "F4": "CORRECTED_EXACT_CANDIDATE_PATHS",
+    "F5": "CORRECTED_CONFIG_PIN"
+  },
+  "specSHA256": "f42b4986947aa2e17be10cea8b80ef1e7512d823de2b043f7ffdd6c9b26f271e",
+  "providerCalls": 0,
+  "runtimeInvocations": 0,
+  "goInvocations": 0,
+  "nodeInvocations": 0,
+  "gateUnits": 89,
+  "gateUnitsPassed": 89,
+  "productImplementation": "NOT_IMPLEMENTED",
+  "runtimeGovernanceProof": "NOT_RUN_NOT_CLAIMED"
+}

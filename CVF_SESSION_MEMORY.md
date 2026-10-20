@@ -2,16 +2,16 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R136_EXECUTION_UI_DESIGN_2026-10-20.md", "activeTranche": "CCMAI-RUNTIME-136", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R136_EXECUTION_UI_DESIGN_2026-10-20.md", "activeTranche": "CCMAI-RUNTIME-136", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R136_EXECUTION_UI_DESIGN_2026-10-20.md
 
-CCMAI-RUNTIME-136 BUILD: delegated source/design worker authors only source-pinned execution-UI intended contract and return; Root independent review follows. Documentation only, all source/runtime/provider/grant/execute/publication effects0.
+CCMAI-RUNTIME-136 REVIEW_PENDING: Root independently accepted D01..D06 intended contract and13source pins; commit documentary material then close design only. Next separate R2 work order may bound read API/execution UI and fresh evidence; no source/runtime/provider/grant/execute/publication authority in R136.
 
 Root ORCHESTRATOR / independent source-design REVIEWER
 
