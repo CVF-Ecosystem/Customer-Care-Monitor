@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R136_EXECUTION_UI_DESIGN_2026-10-20.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R137_EXECUTION_READ_UI_2026-10-20.md",
       "status": "ACTIVE",
-      "description": "Current R136 documentary execution-UI contract handoff."
+      "description": "Current R137 bounded execution read API/UI source handoff; runtime proof open."
     },
     {
       "id": "r060-work-order",
@@ -34898,6 +34898,27 @@
       "path": "docs/reviews/probes/r136_execution_ui_design_20261020/independent_review.json",
       "status": "ACTIVE",
       "description": "R136 intended execution-UI contract/source verification only; no implementation or runtime evidence."
+    },
+    {
+      "id": "r137-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-137.json",
+      "status": "ACTIVE",
+      "description": "R137 bounded R2 source/local software scope; no DB/browser/provider/grant/execute authority."
+    },
+    {
+      "id": "r137-tranche",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-137.json",
+      "status": "ACTIVE",
+      "description": "R137 bounded R2 source/local software scope; no DB/browser/provider/grant/execute authority."
+    },
+    {
+      "id": "r137-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_137_EXECUTION_READ_UI.md",
+      "status": "ACTIVE",
+      "description": "R137 bounded R2 source/local software scope; no DB/browser/provider/grant/execute authority."
     }
   ]
 }

@@ -1,6 +1,6 @@
 # R136 — execution UI contract design
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 
@@ -30,3 +30,7 @@ Root rehydrated compact/canonical state/memory/handoff/status/index and full wor
 ## Documentary review and bounded closure
 
 Root independently accepts D01..D06 at material82bd229411b9be9f275f523d1cf25dac13d86a4b; final13source pins match, no software paths changed. R1 header and2Markdown trailing spaces corrected as steward metadata/formatting, original failures retained in review; source/design substance unchanged after worker round1. Static gate units89/89, local preflight7/7 and profile return/reviewer/precommit pass; APPL was checked at ACTIVE dispatch, current completed status not applicable. Root REVIEWER -> CLOSER/SESSION_SYNC_STEWARD/COMMIT_STEWARD, REVIEW_PASS then FREEZE for documentary design only after synchronized artifacts/gates/commit. Product APIs/UI not implemented; E01..E06/runtime/AI proof NOT_RUN; all Go/Node/provider/grant/execute0. Next one integrated R2 code/evidence packet, no helper chain or old slot reuse; accounts parked, no push/merge/deploy.
+
+## Successor pointer
+
+2026-10-21 Root SESSION_SYNC_STEWARD moves current pointer to R137 execution read API/UI source work. R136 intended-contract acceptance and all runtime/provider limits remain unchanged. This header-only supersession uses the AGENTS continuity/session-record allowance; R137 worker has no authority over this historical handoff.
