@@ -38,3 +38,7 @@ Root xác minh sourceRefs/output hashes của worker trước khi sửa shared c
 Formal repair rounds0: feedback gộp được xử lý trong initial BUILD. Chỉ D01..D07 tài liệu được chấp nhận; effectiveness điều phối, M1 business, fullM2/M3, M4/M5 vẫn OPEN. Go/Node/runtime/DB/browser/provider/network/credential/grant/execute/publication0. Gate units89, doctor27/27 và repository gates không là bằng chứng AI/CVF runtime governance hay hosted CI.
 
 Root chuyển sang SESSION_SYNC_STEWARD/COMMIT_STEWARD cho metadata lifecycle của kế hoạch (Status accepted sau review, không đổi acceptance criteria), catalog và continuity. Worker handoff hash chỉ chứng minh bản handback trước steward sync, không phải hash current mutable handoff. Material SHA và kết quả gates/closure phải được ghi trước final handback.
+
+## Material và bounded closure
+
+Material buildCommit: c606d00a4d4c8d91fd2215737068acd267647185. D01..D07 planning contract được chấp nhận độc lập, REVIEW_PASS/FREEZE chỉ tài liệu. Code sản phẩm/R137acceptance, M1business/fullM2/fullM3/M4/M5 và các quyền/budget lịch sử không thay đổi. Doctor27/27,89gate units, legacy7/7 và profile worker-return/reviewer-fast/precommit đã PASS trước material; completed APPL không áp dụng, ACTIVE dispatch APPL/ROUTE có proof riêng. Root đã rehydrate các current surfaces trước chuyển CLOSER/SESSION_SYNC_STEWARD/COMMIT_STEWARD. Closure/range gates và commit còn phải hoàn tất trước handback; không claim hosted CI/runtime/governance.

@@ -39,5 +39,26 @@
   "finalPlanSha256": "f83997f4271d73066369c75dbb2ee72f4efd09d38c946ccb4951388fab224316",
   "stewardPlanChange": "STATUS_ACCEPTED_AND_METADATA_LABEL_ONLY_NO_ACCEPTANCE_CRITERIA_CHANGE",
   "workerCanonicalLinkCountQualification": "COUNT_METADATA_DISCREPANCY: worker reports14, Root final verifies18occurrences/12unique targets; provenance of14 not independently established, original retained and not adopted as finaltotal",
-  "finalDisposition": "REVIEW_PASS_DOCUMENTARY_ACCEPTANCE_PLAN_ONLY"
+  "finalDisposition": "REVIEW_PASS_DOCUMENTARY_ACCEPTANCE_PLAN_ONLY",
+  "buildCommit": "c606d00a4d4c8d91fd2215737068acd267647185",
+  "staticPrerequisites": {
+    "workspaceDoctor": "27_PASS_MANIFEST_PIN_WARN_ONLY",
+    "gateUnits": "89_PASS",
+    "localPreflight": "7_OF_7_PASS",
+    "workerReturn": "PASS",
+    "reviewerFast": "PASS",
+    "precommit": "PASS",
+    "activeDispatchCloseability": "APPL_ROUTE_CHECKED_PASS",
+    "completedStatusCloseability": "NOT_APPLICABLE_NOT_A_PASS_OF_CONTRACT"
+  },
+  "interruptedClosureResume": {
+    "date": "2026-10-21",
+    "surfacesAgree": true,
+    "finalPlanHashMatch": true,
+    "productSourceUnchanged": true,
+    "doctor": "27_PASS_KNOWN_MANIFEST_PIN_WARNING",
+    "localPreflight": "7_OF_7_PASS",
+    "precommitProfile": "PASS",
+    "newRuntimeProviderEffects": 0
+  }
 }
