@@ -4399,8 +4399,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R134 finite fresh request-only browser proof, no provider or full M3 claim.: `docs/specs/M3_WAITDATA_BROWSER_PROOF_R134_SPEC_2026-10-20.md`
 - R134 finite fresh request-only browser proof, no provider or full M3 claim.: `CVF_SESSION/tranches/CCMAI-RUNTIME-134.json`
 - R134 bounded synthetic request-only UI acceptance; provider0, full M3 remains partial.: `docs/reviews/R134_FIXTURE_WORKER_RETURN_2026-10-20.md`
+- R135 accepted bounded synthetic queue/reject proof and current M3 gap disposition; provider0.: `docs/reviews/R135_M3_ACCEPTANCE_DELTA_2026-10-20.md`
 - R135 finite synthetic queue/reject proof; provider0, no full M3 claim.: `CVF_SESSION/authority/CCMAI-RUNTIME-135.json`
 - R135 finite synthetic queue/reject proof; provider0, no full M3 claim.: `docs/work_orders/CCMAI_RUNTIME_135_QUEUE_REJECT_PROOF.md`
+- R135 accepted bounded synthetic queue/reject proof and current M3 gap disposition; provider0.: `docs/reviews/probes/r135_queue_reject_20261020/runtime_review.json`
+- R135 accepted bounded synthetic queue/reject proof and current M3 gap disposition; provider0.: `docs/reviews/R135_RUNTIME_REVIEW_2026-10-20.md`
 - R135 independent source admission; runtime pending, provider0.: `docs/reviews/R135_SOURCE_REVIEW_2026-10-20.md`
 - R135 finite synthetic queue/reject proof; provider0, no full M3 claim.: `docs/specs/M3_QUEUE_REJECT_PROOF_R135_SPEC_2026-10-20.md`
 - R135 finite synthetic queue/reject proof; provider0, no full M3 claim.: `CVF_SESSION/tranches/CCMAI-RUNTIME-135.json`

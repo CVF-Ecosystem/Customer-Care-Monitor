@@ -1,5 +1,11 @@
 # Roadmap CSKH: dữ liệu đáng tin, bộ lọc hỗ trợ AI và xử lý có trách nhiệm
 
+## R135 — hàng đợi nhiều trang và từ chối thành công đã có bằng chứng local, 2026-10-20
+
+Lượt thực tế exit0:13API GET kiểm tra phân trang/lọc/thứ tự/quyền;10trạng thái DOM và10phản hồi queue khớp chính xác. Mặc định20->26, chờ duyệt20->24; đổi bộ lọc thay đúng danh sách. REJECT200 có lý do/lịch sử sau reload; tổng mặc định26->25, chờ duyệt24->23, từ chối1->2; reader không có nút ghi. Nguồn/đề xuất/snapshot và ca khác giữ nguyên; chỉ1sự kiện người duyệt, provider0. Server/MySQL thử dừng,28container cũ không đổi. [Review](../reviews/R135_RUNTIME_REVIEW_2026-10-20.md).
+
+Hai gap queue và REJECT đã đóng trong phạm vi synthetic/thứ tự thời gian. M3 vẫn PARTIAL: cần chốt yêu cầu/quyền cho UI thực thi đánh giá lại; giữ qualification mobile/raster/offline chưa hỗ trợ, business/channel/pilot/hosted/release mở. Tiếp theo chỉ INTAKE/DESIGN đối chiếu acceptance, không tự mở thêm fixture/tooling hay gọi provider. Các mục dưới là lịch sử.
+
 ## R134 — luồng bổ sung thông tin và lưu yêu cầu đã nghiệm thu local, 2026-10-20
 
 Browser hoạt động trở lại. Lượt thử thực tế: lỗi503 có thông báo dễ hiểu/không ghi dữ liệu, tải lại thủ công rồi201 ghi nhận,201 lưu yêu cầu giữ thông báo đúng/lần cập nhật3. Tải lại và tài khoản chỉ đọc vẫn thấy hai lịch sử, không có nút ghi; Go exit0, đúng1bản bổ sung/1yêu cầu/2sự kiện, chưa chạy AI. Server/MySQL thử đã dừng;27container cũ giữ nguyên, provider0. [Review](../reviews/R134_RUNTIME_REVIEW_2026-10-20.md).

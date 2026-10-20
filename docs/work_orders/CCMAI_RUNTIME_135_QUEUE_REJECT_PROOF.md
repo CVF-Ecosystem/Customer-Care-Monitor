@@ -1,6 +1,6 @@
 # R135 — current synthetic queue/reject proof
 
-Status: COMPLETE_PENDING_REVIEW
+Status: CLOSED
 Risk: R2
 Worker: Delegated synthetic acceptance fixture worker
 Reviewer: Root independent source/browser reviewer
