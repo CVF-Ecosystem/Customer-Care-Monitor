@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "FREEZE",
-  "activePhase": "FREEZE",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -12,11 +12,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-134",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R134_WAITDATA_BROWSER_PROOF_2026-10-20.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-134 FROZEN / REVIEW_PASS_BOUNDED: request-only supplement/request UI and actual503 recovery/persistence/reader proof accepted; owned runtime stopped,27 prior containers unchanged, provider0. Next INTAKE/SPEC: remaining M3 queue multi-page/filter/count and positive REJECT proof; no automatic runtime/provider or push/merge/deploy. Facebook/Zalo OA parked.",
+  "activeTranche": "CCMAI-RUNTIME-135",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R135_QUEUE_REJECT_PROOF_2026-10-20.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-135 BUILD: delegated worker owns only the opt-in queue/reject acceptance fixture and one offline compile; Root independently reviews then owns the single fresh synthetic browser proof. No provider, production edits, execute/grant or publication.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root CLOSER / SESSION_SYNC_STEWARD / COMMIT_STEWARD",
+  "activeRole": "Root ORCHESTRATOR / independent REVIEWER",
   "updatedAt": "2026-10-20",
   "x-resolvedCoreCommit": "b69e1088978e8c90ac58a2243fcf8f90d0f857ed",
   "x-ownerRoadmapDiscipline": {

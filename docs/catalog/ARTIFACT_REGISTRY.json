@@ -3920,9 +3920,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R134_WAITDATA_BROWSER_PROOF_2026-10-20.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R135_QUEUE_REJECT_PROOF_2026-10-20.md",
       "status": "ACTIVE",
-      "description": "Current R134 fresh browser proof handoff; prior failed budgets preserved."
+      "description": "Current R135 bounded queue/reject evidence handoff."
     },
     {
       "id": "r060-work-order",
@@ -34779,6 +34779,34 @@
       "path": "docs/reviews/probes/r134_waitdata_proof_20261020/runtime_review.json",
       "status": "ACTIVE",
       "description": "R134 bounded synthetic request-only UI acceptance; provider0, full M3 remains partial."
+    },
+    {
+      "id": "r135-authority",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-135.json",
+      "status": "ACTIVE",
+      "description": "R135 finite synthetic queue/reject proof; provider0, no full M3 claim."
+    },
+    {
+      "id": "r135-tranche",
+      "family": "continuity",
+      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-135.json",
+      "status": "ACTIVE",
+      "description": "R135 finite synthetic queue/reject proof; provider0, no full M3 claim."
+    },
+    {
+      "id": "r135-spec",
+      "family": "continuity",
+      "path": "docs/specs/M3_QUEUE_REJECT_PROOF_R135_SPEC_2026-10-20.md",
+      "status": "ACTIVE",
+      "description": "R135 finite synthetic queue/reject proof; provider0, no full M3 claim."
+    },
+    {
+      "id": "r135-order",
+      "family": "continuity",
+      "path": "docs/work_orders/CCMAI_RUNTIME_135_QUEUE_REJECT_PROOF.md",
+      "status": "ACTIVE",
+      "description": "R135 finite synthetic queue/reject proof; provider0, no full M3 claim."
     }
   ]
 }

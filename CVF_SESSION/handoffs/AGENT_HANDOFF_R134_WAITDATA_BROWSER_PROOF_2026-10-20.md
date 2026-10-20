@@ -1,6 +1,6 @@
 # R134 — fresh WAIT_DATA browser proof
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 
@@ -30,3 +30,5 @@ Root re-read current bootstrap/state/memory/handoff/status/index and worker retu
 ## Independent review and bounded closure
 
 Root actual browser503->explicit reload->201capture(version2/saved notice)->201request(version3/saved/waiting/not-started), reload persisted, fresh reader histories/no write controls; both logout. Original Go exit0/Serve joined/owned stop, exact counts1/1/2 and protected effect/source invariants PASS. Only owned MySQL stopped/preserved;27 old containers equal/networkIDs equal/oldvolumes preserved, owned listeners absent, provider0. Sourcebb8fcffc6b5c9713d32e3c8b1e906bae0cd35ebb; review docs/reviews/R134_RUNTIME_REVIEW_2026-10-20.md. Root transitions REVIEWER -> CLOSER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; REVIEW_PASS then FREEZE for R134 only, all artifacts synchronized before final commit. R132/R133 failures remain. M3PARTIAL, next queue/filter/count and positive REJECT contract, no dispatch.
+
+Owner continues on2026-10-20; active handoff moves to R135 queue/reject proof. R134 bounded acceptance/budgets remain frozen unchanged.

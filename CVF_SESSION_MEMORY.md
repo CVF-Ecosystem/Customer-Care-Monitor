@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R134_WAITDATA_BROWSER_PROOF_2026-10-20.md", "activeTranche": "CCMAI-RUNTIME-134", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R135_QUEUE_REJECT_PROOF_2026-10-20.md", "activeTranche": "CCMAI-RUNTIME-135", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: FREEZE
-- Active phase: FREEZE
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R134_WAITDATA_BROWSER_PROOF_2026-10-20.md
+- Current mode: BUILD
+- Active phase: BUILD
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R135_QUEUE_REJECT_PROOF_2026-10-20.md
 
-CCMAI-RUNTIME-134 FROZEN / REVIEW_PASS_BOUNDED: request-only supplement/request UI and actual503 recovery/persistence/reader proof accepted; owned runtime stopped,27 prior containers unchanged, provider0. Next INTAKE/SPEC: remaining M3 queue multi-page/filter/count and positive REJECT proof; no automatic runtime/provider or push/merge/deploy. Facebook/Zalo OA parked.
+CCMAI-RUNTIME-135 BUILD: delegated worker owns only the opt-in queue/reject acceptance fixture and one offline compile; Root independently reviews then owns the single fresh synthetic browser proof. No provider, production edits, execute/grant or publication.
 
-Root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD; owner runtime transfer required
+Root ORCHESTRATOR / independent REVIEWER
 
 ## Historical R114 bounded UI result
 
