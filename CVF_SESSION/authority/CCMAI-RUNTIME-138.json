@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-138",
+  "authorityKind": "DISPATCHER_OWNED_DELIVERY_ACCEPTANCE_PLAN",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR",
+    "implementationWorker": "Luna Max delegated roadmap author",
+    "reviewer": "Root independent roadmap REVIEWER",
+    "commitSteward": "Root COMMIT_STEWARD"
+  },
+  "allowedPaths": [
+    "docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md",
+    "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/reviews/R138_*.md",
+    "docs/reviews/probes/r138_acceptance_plan_20261021/*.json",
+    "docs/work_orders/CCMAI_RUNTIME_138_DELIVERY_ACCEPTANCE_PLAN.md",
+    "docs/reviews/learnings/feedback_orchestrator_roadmap_control.md",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-138.json",
+    "CVF_SESSION/tranches/CCMAI-RUNTIME-138.json",
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_R138_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md",
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_R137_EXECUTION_READ_UI_2026-10-20.md",
+    "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+    "CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md"
+  ],
+  "prohibitedEffects": [
+    "Any backend/frontend/product/tooling/workflow/gate/profile/policy/dependency/source behavior edit",
+    "Runtime/DB/container/server/browser/provider/network/credential/grant/execute effects beyond inherited workspace doctor prerequisite",
+    "Historical seed, budget or accepted evidence reset; worker commits or seed edits",
+    "Push, merge, history rewrite, deployment or public release",
+    "Raw logs/archives/binaries/source snapshots or secrets committed; fabricated product/governance/CI acceptance"
+  ],
+  "ownerAuthorization": "Owner 2026-10-21 explicitly requires a detailed route with acceptance milestones instead of a completion-date promise, to prevent roadmap drift. Documentation/continuity synchronization only; previous Sol Medium/Luna Max support permission persists.",
+  "scope": "Produce one detailed, evidence-linked delivery acceptance plan from current R137 source-only truth through M3, business/pilot and release; reconcile stale master roadmap status and persist owner discipline. Plan does not execute or authorize future effects.",
+  "verification": "Independent Root review of coverage, testable thresholds/decisions, dependencies, evidence inheritance, finite next route, anti-drift controls and truthful status; static repository gates only.",
+  "claimBoundary": "Planning/documentary acceptance only; no new product/runtime/AI/CVF-governance/hosted-CI proof, no closure of M1-M5.",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_138_DELIVERY_ACCEPTANCE_PLAN.md",
+  "executionBudget": {
+    "goInvocations": 0,
+    "nodeInvocations": 0,
+    "runtimeStarts": 0,
+    "browserCampaigns": 0,
+    "providerCalls": 0,
+    "grantEffects": 0,
+    "executeEffects": 0,
+    "sameScopeRepairRounds": 2
+  }
+}
