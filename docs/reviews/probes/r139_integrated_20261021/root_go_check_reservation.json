@@ -1,0 +1,28 @@
+{
+  "role": "Root independent REVIEWER",
+  "kind": "go",
+  "attempt": 1,
+  "cap": 1,
+  "state": "RESERVED_BEFORE_INVOCATION",
+  "atUTC": "2026-10-21T05:16:39.231283+00:00",
+  "head": "7fbf312d20fb3d30af7d6ea445b4d5c13eeefe3b",
+  "argv": [
+    "go",
+    "-C",
+    "backend",
+    "test",
+    "-c",
+    "-o",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_root_source_checks\\r139_root_handlers.exe",
+    "./api/handlers"
+  ],
+  "cwd": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+  "sourceSHA256": {
+    "backend/api/handlers/intervention_execution_browser_test.go": "a9887dac65bfec655e7a4a9d2166bd6aacfe0b7d730d7ccaee7783925da44167",
+    "scripts/r139_execution_supervisor.py": "ba848d62e60333d6a2b323639f4f0b8c8d1b69d374d86fca8d6081656758247f",
+    "scripts/r139_vite_config.mjs.template": "f52dccb6f8806eadbad3b78f39402f8b30afa473ea7b714ed5baf6a911cc55d5",
+    "scripts/tests/test_r139_execution_supervisor.py": "bd6071dd2587babde467eb2f9da4d5c9aa71404e4e1bd261fcdf780701da5ec6"
+  },
+  "runtimeEffects": 0,
+  "claimBoundary": "Offline software check only; no native fixture, browser, DB, provider or AI governance proof"
+}

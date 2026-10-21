@@ -15,7 +15,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current same-R139 final source repair handover; Root independent review, no new runtime/browser authority.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md`
+- Current R139 source-preparation accepted only; overall PARKED REVIEW, browser/runtime HOLD, no FREEZE.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -4442,7 +4442,16 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Consolidated initial source defects F01-F08; no runtime/AI governance proof.: `docs/reviews/R139_INITIAL_SOURCE_BUILD_FINDINGS_2026-10-21.md`
 - ONE integrated G0/G1/G2 packet: source-only BUILD; runtime annex still proposed/unadmitted.: `docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md`
 - Original two catalog failures and finite proposed native/browser POST correction retained.: `docs/reviews/probes/r139_integrated_20261021/root_preparation_findings.json`
+- Retained failed handback metadata checks and Root corrections; source unchanged.: `docs/reviews/probes/r139_integrated_20261021/root_handback_metadata_corrections.json`
 - Root27R137 source/protected matches plus2authority protection pins; no runtime proof.: `docs/reviews/probes/r139_integrated_20261021/root_source_preparation_baseline.json`
+- R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN.: `docs/reviews/probes/r139_integrated_20261021/source_worker_return_2026-10-21.json`
+- R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN.: `docs/reviews/R139_SOURCE_WORKER_RETURN_2026-10-21.md`
+- R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN.: `docs/reviews/probes/r139_integrated_20261021/root_go_check_result.json`
+- R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN.: `docs/reviews/probes/r139_integrated_20261021/root_python_check_reservation.json`
+- R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN.: `docs/reviews/probes/r139_integrated_20261021/root_python_check_result.json`
+- R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN.: `docs/reviews/probes/r139_integrated_20261021/root_final_source_review.json`
+- R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN.: `docs/reviews/probes/r139_integrated_20261021/root_go_check_reservation.json`
+- R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN.: `docs/reviews/R139_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md`
 - Immutable same-scope source-repair handover; original remaining shared caps only.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-REPAIR-ADMISSION.json`
 - Immutable unused source-cap continuation only; no new browser/runtime/provider authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-RESUME-ADMISSION.json`
 - G0 data-scheme diagnostic denied; exact partial-tab cleanup and owner-transfer hold, HTTP untested.: `docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md`

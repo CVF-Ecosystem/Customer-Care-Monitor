@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Current same-R139 final source repair handover; Root independent review, no new runtime/browser authority."
+      "description": "Current R139 source-preparation accepted only; overall PARKED REVIEW, browser/runtime HOLD, no FREEZE."
     },
     {
       "id": "r060-work-order",
@@ -35122,6 +35122,69 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/root_source_preparation_baseline.json",
       "status": "ACTIVE",
       "description": "Root27R137 source/protected matches plus2authority protection pins; no runtime proof."
+    },
+    {
+      "id": "r139-source-8723686163d5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/root_final_source_review.json",
+      "status": "ACTIVE",
+      "description": "R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN."
+    },
+    {
+      "id": "r139-source-ee2123937794",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/root_go_check_reservation.json",
+      "status": "ACTIVE",
+      "description": "R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN."
+    },
+    {
+      "id": "r139-source-2d01a0c70624",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/root_go_check_result.json",
+      "status": "ACTIVE",
+      "description": "R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN."
+    },
+    {
+      "id": "r139-source-3ba17821b9a5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/root_python_check_reservation.json",
+      "status": "ACTIVE",
+      "description": "R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN."
+    },
+    {
+      "id": "r139-source-6763e4ebbbf8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/root_python_check_result.json",
+      "status": "ACTIVE",
+      "description": "R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN."
+    },
+    {
+      "id": "r139-source-20f94174fd70",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/source_worker_return_2026-10-21.json",
+      "status": "ACTIVE",
+      "description": "R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN."
+    },
+    {
+      "id": "r139-source-2c7f75fd48bc",
+      "family": "continuity",
+      "path": "docs/reviews/R139_SOURCE_WORKER_RETURN_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN."
+    },
+    {
+      "id": "r139-source-f4b4f9b95bfe",
+      "family": "continuity",
+      "path": "docs/reviews/R139_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN."
+    },
+    {
+      "id": "r139-root-metadata-corrections",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/root_handback_metadata_corrections.json",
+      "status": "ACTIVE",
+      "description": "Retained failed handback metadata checks and Root corrections; source unchanged."
     }
   ]
 }
