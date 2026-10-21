@@ -1,10 +1,10 @@
 {
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 fresh-r3 runtime admission independently REVIEWED_PROCEED_TO_COMMIT_AND_CLEAN_PIN_RECHECK: source8bb54637/9pins/Go990390/Docker89442e/outer020b2e/publicpricingPASS/r3fresh/deadline16:40:16Z. Root must pass activepacketgates, commit immutableadmission and recheckclean/pins/deadline immediately before ONE outerinvocation; no additionalOwnerapproval needed inside combinedgrant. Keycontents/fixture/browser/API0; oldslot1MAYconsumed preserved, NEWAPI1/USD1 unused. FirstuncertaintyHOLD/no retry; E05/E06/M3OPEN/FacebookZaloOAparked.",
-  "activeRole": "Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; bounded runtime EXECUTOR only after commit/clean-pin recheck; independent Sol runtime REVIEWER",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 fresh-r3 independently HOLD/CHANGES_REQUIRED: campaign699e72fb1/1 spent/deadline expired; native8POST/18reads software-only, browserlogin only/refresh405/execute0/newAPI0. Originalterminal/childwaits missing; protected bridgeID/RunningFor drift and unknownStatus HOLD; exactownedcontainer exited/3listenersabsent observed late. Browserclose securitypolicyDENIED: Owner manually closes remaining localhost3019 login tab. Root records evidence/staticgates/commit only; no source/runtime/key/API/replay or helperchain. Next documentary decision must consolidate stable execution ownership, bootstrap405 and protectedinventory contract before proposing any new effects. OldMAYslot1 consumed/unknown retained; G2/G3/E05/E06/fullM3OPEN, FacebookZaloOAparked.",
+  "activeRole": "Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD after independent Sol runtime REVIEW; no further runtime execution",
   "updatedAt": "2026-10-21",
   "schemaVersion": "1.0",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
@@ -432,14 +432,15 @@
     "freeze": "FROZEN_DOCUMENTARY_ONLY"
   },
   "x-r139CurrentOutcome": {
-    "status": "HOLD_MANUAL_HOLD_PROVIDER_OUTCOME_UNKNOWN",
-    "report": "docs/reviews/R139_REPLACEMENT_RUNTIME_INDEPENDENT_REVIEW_2026-10-21.md",
-    "evidence": "docs/reviews/probes/r139_integrated_20261021/r2_integrated_runtime_outcome.json",
+    "status": "HOLD_INTERRUPTED_RUNTIME",
+    "report": "docs/reviews/R139_FRESH_R3_INTERRUPTED_RUNTIME_REVIEW_2026-10-22.md",
+    "evidence": "docs/reviews/probes/r139_integrated_20261021/r6_fresh_r3_interrupted_runtime_outcome.json",
     "G0": "BOUNDED_READINESS_OBSERVED",
-    "G1": "PREBROWSER_SOFTWARE_MATRIX_ACCEPTED_ONLY_FULL_GO_EXIT1",
-    "G2": "HOLD_MANUAL_HOLD_NO_PUBLICATION",
+    "G1": "BOUNDED_NATIVE_SOFTWARE_ONLY",
+    "G2": "NOT_EXECUTED_LOGIN_ONLY",
     "providerSlotsConsumed": 1,
-    "providerResponseOutcome": "UNKNOWN",
+    "newProviderSlotsConsumed": 0,
+    "providerResponseOutcome": "OLD_UNKNOWN_NEW_NOT_CALLED",
     "freeze": "OPEN"
   },
   "x-r139HttpsDiagnostic": {
@@ -661,7 +662,7 @@
   },
   "x-r139FreshR3": {
     "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-COMBINED-ADMISSION.json",
-    "status": "RUNTIME_ADMISSION_INDEPENDENT_REVIEW_PASS_PENDING_COMMIT",
+    "status": "HOLD_INTERRUPTED_RUNTIME_CAMPAIGN_SPENT_DEADLINE_EXPIRED",
     "ownerReply": "duyệt",
     "sourceCaps": {
       "consolidatedSourceRound": 1,
@@ -678,10 +679,13 @@
       "independentRootPurePython": 1
     },
     "runtimeActualUse": {
-      "supervisorInvocation": 0,
-      "fixtureStarts": 0,
-      "keyContentsRead": 0,
-      "newPhysicalSlotUsedOrUncertain": 0
+      "supervisorInvocation": 1,
+      "fixtureStarts": 1,
+      "keyContentsRead": 1,
+      "newPhysicalSlotUsedOrUncertain": 0,
+      "browserCampaigns": 1,
+      "browserExecutePOST": 0,
+      "grantIssuances": 2
     },
     "newBudgetUSD": 1,
     "newAPICap": 1,
@@ -703,6 +707,31 @@
     "pricingStatus": "PASS_PUBLIC_STANDARD_TARIFF_READINESS_ONLY",
     "runtimeAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-RUNTIME-ADMISSION.json",
     "runtimePreparation": "docs/reviews/probes/r139_integrated_20261021/r5_runtime_preparation.json",
-    "independentRuntimeAdmissionReview": "docs/reviews/R139_FRESH_R3_RUNTIME_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md"
+    "independentRuntimeAdmissionReview": "docs/reviews/R139_FRESH_R3_RUNTIME_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md",
+    "actualOutcome": "docs/reviews/probes/r139_integrated_20261021/r6_fresh_r3_interrupted_runtime_outcome.json"
+  },
+  "x-r139FreshR3ActualOutcome": {
+    "status": "HOLD_INTERRUPTED_RUNTIME",
+    "campaignCommit": "699e72fb46c61171c6dafe69ed348a3b68b75536",
+    "outcome": "docs/reviews/probes/r139_integrated_20261021/r6_fresh_r3_interrupted_runtime_outcome.json",
+    "newAPIUsed": 0,
+    "campaignsUsed": 1,
+    "providerOldSlot": "MAY_HAVE_STARTED_CONSUMED",
+    "fullM3": "OPEN",
+    "independentReview": "docs/reviews/R139_FRESH_R3_INTERRUPTED_RUNTIME_REVIEW_2026-10-22.md",
+    "disposition": "CHANGES_REQUIRED",
+    "protectedResources": "DRIFT_NETWORK_ID_RUNNINGFOR_UNKNOWN_STATUS",
+    "browserTab": "MANUAL_CLOSE_REQUIRED_POLICY_DENIED"
+  },
+  "x-r139PriorReplacementOutcome": {
+    "status": "HOLD_MANUAL_HOLD_PROVIDER_OUTCOME_UNKNOWN",
+    "report": "docs/reviews/R139_REPLACEMENT_RUNTIME_INDEPENDENT_REVIEW_2026-10-21.md",
+    "evidence": "docs/reviews/probes/r139_integrated_20261021/r2_integrated_runtime_outcome.json",
+    "G0": "BOUNDED_READINESS_OBSERVED",
+    "G1": "PREBROWSER_SOFTWARE_MATRIX_ACCEPTED_ONLY_FULL_GO_EXIT1",
+    "G2": "HOLD_MANUAL_HOLD_NO_PUBLICATION",
+    "providerSlotsConsumed": 1,
+    "providerResponseOutcome": "UNKNOWN",
+    "freeze": "OPEN"
   }
 }

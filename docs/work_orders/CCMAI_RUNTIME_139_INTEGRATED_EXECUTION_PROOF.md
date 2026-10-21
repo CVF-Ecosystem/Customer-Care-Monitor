@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 Worker: Sol Medium delegated fixture worker
 Reviewer: Root independent source/evidence REVIEWER
@@ -12,7 +12,7 @@ dispatchKind: INITIAL
 
 ## Current authority and acceptance target
 
-Current stage: CCMAI-RUNTIME-139 fresh-r3 runtime admission independently REVIEWED_PROCEED_TO_COMMIT_AND_CLEAN_PIN_RECHECK: source8bb54637/9pins/Go990390/Docker89442e/outer020b2e/publicpricingPASS/r3fresh/deadline16:40:16Z. Root must pass activepacketgates, commit immutableadmission and recheckclean/pins/deadline immediately before ONE outerinvocation; no additionalOwnerapproval needed inside combinedgrant. Keycontents/fixture/browser/API0; oldslot1MAYconsumed preserved, NEWAPI1/USD1 unused. FirstuncertaintyHOLD/no retry; E05/E06/M3OPEN/FacebookZaloOAparked.
+Current stage: CCMAI-RUNTIME-139 fresh-r3 independently HOLD/CHANGES_REQUIRED: campaign699e72fb1/1 spent/deadline expired; native8POST/18reads software-only, browserlogin only/refresh405/execute0/newAPI0. Originalterminal/childwaits missing; protected bridgeID/RunningFor drift and unknownStatus HOLD; exactownedcontainer exited/3listenersabsent observed late. Browserclose securitypolicyDENIED: Owner manually closes remaining localhost3019 login tab. Root records evidence/staticgates/commit only; no source/runtime/key/API/replay or helperchain. Next documentary decision must consolidate stable execution ownership, bootstrap405 and protectedinventory contract before proposing any new effects. OldMAYslot1 consumed/unknown retained; G2/G3/E05/E06/fullM3OPEN, FacebookZaloOAparked.
 
 Historical initial preparation boundary: Owner `tiếp` continues G0 in the canonical delivery plan. Immutable dispatcher seed `642f5bd026dfe31e6dda6441dd25704eb3ececa3` precedes source BUILD. This is ONE work order containing G0 preparation, G1 native/backend proof and G2 browser proof, with explicit stage admission. Only source preparation/offline checks and Root's bounded pure-UI tool diagnostic are admitted now. G1/G2 runtime and provider use are HOLD. R117 physical allowance1/1 is consumed; no historical counter or slot transfers. No standalone helper successor follows automatically.
 

@@ -83,10 +83,10 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
   "buildCommit": "8bb5463748eeb5f8802947cd3157918d479d8443",
   "reviewEvidence": [
     "docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md",
@@ -109,9 +109,11 @@
     "docs/reviews/R139_FRESH_R3_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md",
     "docs/reviews/R139_FRESH_R3_SOURCE_WORKER_RETURN_2026-10-21.md",
     "docs/reviews/probes/r139_integrated_20261021/r5_fresh_source_checks.json",
-    "docs/reviews/R139_FRESH_R3_RUNTIME_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md"
+    "docs/reviews/R139_FRESH_R3_RUNTIME_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md",
+    "docs/reviews/probes/r139_integrated_20261021/r6_fresh_r3_interrupted_runtime_outcome.json",
+    "docs/reviews/R139_FRESH_R3_INTERRUPTED_RUNTIME_REVIEW_2026-10-22.md"
   ],
-  "disposition": "CCMAI-RUNTIME-139 fresh-r3 runtime admission independently REVIEWED_PROCEED_TO_COMMIT_AND_CLEAN_PIN_RECHECK: source8bb54637/9pins/Go990390/Docker89442e/outer020b2e/publicpricingPASS/r3fresh/deadline16:40:16Z. Root must pass activepacketgates, commit immutableadmission and recheckclean/pins/deadline immediately before ONE outerinvocation; no additionalOwnerapproval needed inside combinedgrant. Keycontents/fixture/browser/API0; oldslot1MAYconsumed preserved, NEWAPI1/USD1 unused. FirstuncertaintyHOLD/no retry; E05/E06/M3OPEN/FacebookZaloOAparked.",
+  "disposition": "CCMAI-RUNTIME-139 fresh-r3 independently HOLD/CHANGES_REQUIRED: campaign699e72fb1/1 spent/deadline expired; native8POST/18reads software-only, browserlogin only/refresh405/execute0/newAPI0. Originalterminal/childwaits missing; protected bridgeID/RunningFor drift and unknownStatus HOLD; exactownedcontainer exited/3listenersabsent observed late. Browserclose securitypolicyDENIED: Owner manually closes remaining localhost3019 login tab. Root records evidence/staticgates/commit only; no source/runtime/key/API/replay or helperchain. Next documentary decision must consolidate stable execution ownership, bootstrap405 and protectedinventory contract before proposing any new effects. OldMAYslot1 consumed/unknown retained; G2/G3/E05/E06/fullM3OPEN, FacebookZaloOAparked.",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -141,7 +143,9 @@
     "REVIEW_PENDING",
     "REVIEW_PASS",
     "PARKED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "actualUse": {
     "status": "HOLD_MANUAL_HOLD_PROVIDER_OUTCOME_UNKNOWN",
@@ -452,5 +456,7 @@
     "runtimeAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-RUNTIME-ADMISSION.json",
     "runtimePreparation": "docs/reviews/probes/r139_integrated_20261021/r5_runtime_preparation.json",
     "independentRuntimeAdmissionReview": "docs/reviews/R139_FRESH_R3_RUNTIME_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md"
-  }
+  },
+  "runtimeCampaignCommit": "699e72fb46c61171c6dafe69ed348a3b68b75536",
+  "runtimeDisposition": "HOLD_INTERRUPTED_RUNTIME_NO_FREEZE"
 }

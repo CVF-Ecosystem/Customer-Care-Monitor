@@ -1,0 +1,214 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "status": "HOLD_INTERRUPTED_RUNTIME",
+  "recordedAtUTC": "2026-10-21T22:59:54.606019+00:00",
+  "campaignCommit": "699e72fb46c61171c6dafe69ed348a3b68b75536",
+  "sourceCommit": "8bb5463748eeb5f8802947cd3157918d479d8443",
+  "sourcePinsMatch": {
+    "backend/api/handlers/intervention_execution_browser_test.go": true,
+    "scripts/r139_execution_supervisor.py": true,
+    "scripts/r139_vite_config.mjs.template": true,
+    "scripts/tests/test_r139_execution_supervisor.py": true,
+    "backend/go.mod": true,
+    "backend/go.sum": true,
+    "frontend/package.json": true,
+    "frontend/package-lock.json": true,
+    "frontend/vite.config.ts": true
+  },
+  "outerExit": {
+    "exitCode": 1073807364,
+    "originalWaitObserved": true,
+    "recorderErrors": [],
+    "independentOuterTimeout": false,
+    "elapsedSeconds": 165.81658460001927,
+    "endedAtUTC": "2026-10-21T16:09:53.722400+00:00"
+  },
+  "native": {
+    "grantIssuancesBeforeBrowser": 2,
+    "kind": "SOFTWARE_ONLY_NO_AI_OUTPUT",
+    "nativeExecutePOST": 8,
+    "negativeReadCount": 9,
+    "positiveReadCount": 9,
+    "rejectionSlots": 7,
+    "transportCalls": 0
+  },
+  "browser": {
+    "campaignsUsed": 1,
+    "productTabsOpened": 1,
+    "observedPage": "login",
+    "credentialSubmission": 0,
+    "executePOST": 0,
+    "publication": "NOT_RUN",
+    "screenshot": "NOT_CAPTURED",
+    "bootstrapDeniedRequests": [
+      {
+        "phase": "attempt",
+        "id": 4,
+        "method": "POST",
+        "path": "/api/v1/auth/refresh",
+        "allowed": false,
+        "authPosts": 0,
+        "executePosts": 0
+      }
+    ],
+    "authLoginPOST": 0,
+    "remainingTabObservation": {
+      "id": "1",
+      "url": "http://127.0.0.1:3019/login",
+      "title": "This site can't be reached"
+    },
+    "cleanup": "GET_TAB_DENIED_BY_BROWSER_SECURITY_POLICY_NO_WORKAROUND",
+    "manualCloseRequired": true
+  },
+  "missingEvidence": [
+    "go_terminal.json",
+    "go_evidence_final.json",
+    "provider_wire_private.json"
+  ],
+  "supervisorTerminalPresent": false,
+  "newEffectSlotsObserved": 0,
+  "newProviderCall": "NO_EXECUTE_NO_EFFECT_SLOT_NO_WIRE_OBSERVED; not live governance proof",
+  "oldSlot": "MAY_HAVE_STARTED_CONSUMED_RESPONSE_USAGE_BILLING_UNKNOWN",
+  "newCampaignReplay": "PROHIBITED_CAMPAIGN_SPENT_DEADLINE_EXPIRED",
+  "newAPIAllowance": "UNUSED_NOT_PORTABLE_TO_NEW_CAMPAIGN",
+  "recovery": {
+    "apiListener": {
+      "connectEx": 10035,
+      "evidenceSource": "pinned_powershell_tcp_listener_inventory",
+      "host": "127.0.0.1",
+      "listenerAbsent": true,
+      "port": 58851,
+      "powershellBinarySha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f",
+      "queryExitCode": 0,
+      "queryListenerCount": 0,
+      "queryMatchedPort": 58851,
+      "queryReceiptPath": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\listener_query_58851_result.json",
+      "queryReceiptSha256": "84d1db3beaed5da25b5e6e170309bf19713fc0d3884a9dd03b346dcd17fc714b"
+    },
+    "cleanupErrors": [],
+    "completedWithin180Seconds": true,
+    "databaseListener": {
+      "connectEx": 10035,
+      "evidenceSource": "pinned_powershell_tcp_listener_inventory",
+      "host": "127.0.0.1",
+      "listenerAbsent": true,
+      "port": 64588,
+      "powershellBinarySha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f",
+      "queryExitCode": 0,
+      "queryListenerCount": 0,
+      "queryMatchedPort": 64588,
+      "queryReceiptPath": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\listener_query_64588_result.json",
+      "queryReceiptSha256": "fdf872bcf27d8ea920817df3826f6ec334964902decd522d137ee9dc845b00d0"
+    },
+    "endedAtUTC": "2026-10-21T22:58:45.418870+00:00",
+    "errors": [
+      "Hold:PROTECTED_STATUS_UNKNOWN_FORMAT"
+    ],
+    "kind": "EXACT_OWNED_INTERRUPTION_RECOVERY_ONLY",
+    "originalChildWaitsRecovered": false,
+    "originalTerminalMissing": true,
+    "startedAtUTC": "2026-10-21T22:58:28.642546+00:00",
+    "viteListener": {
+      "connectEx": 10035,
+      "evidenceSource": "pinned_powershell_tcp_listener_inventory",
+      "host": "127.0.0.1",
+      "listenerAbsent": true,
+      "port": 3019,
+      "powershellBinarySha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f",
+      "queryExitCode": 0,
+      "queryListenerCount": 0,
+      "queryMatchedPort": 3019,
+      "queryReceiptPath": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\listener_query_3019_result.json",
+      "queryReceiptSha256": "0fd8b139e288a1bd28fc63fa845b7ce1ea439ff823859f77943201d8781c2b8e"
+    }
+  },
+  "finalOwnedContainer": {
+    "receipt": ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0004.json",
+    "state": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 255,
+      "Error": "",
+      "StartedAt": "2026-10-21T16:07:13.638898241Z",
+      "FinishedAt": "2026-10-21T22:56:37.001333041Z"
+    },
+    "id": "e1ce79542bd154a5f606649353b097024a68e851472c538d716b3e29693dc965"
+  },
+  "originalChildrenWaits": "MISSING_NOT_RECONSTRUCTABLE",
+  "processObservation": {
+    "observedAbsentPids": [
+      6324,
+      9940,
+      20148
+    ],
+    "method": "Get-Process IDs on resumption; absence is not original wait proof"
+  },
+  "protectedComparison": "HOLD_UNKNOWN_STATUS_AND_INDEPENDENTLY_OBSERVED_NON_STATUS_NETWORK_ID_RUNNINGFOR_DRIFT",
+  "milestones": {
+    "G1": "BOUNDED_NATIVE_SOFTWARE_CHECKS_ONLY",
+    "G2": "HOLD_BEFORE_LOGIN_EXECUTE",
+    "G3_M3": "OPEN",
+    "E05_E06": "OPEN"
+  },
+  "claimBoundary": "No runtime AI governance, product readiness, hosted CI, pilot, release or full M3 acceptance. No source repair/recompile/retry/new key read/API on resumption. Recovery began after original campaign expiry; delayed recovery does not repair missing original lifecycle evidence.",
+  "rawEvidenceHashes": {
+    ".cvf\\runtime\\r139_integrated_outer_r3_20261021\\command.json": "2e2b5a0dc8a0c109a0e2a4d84567a9172879dbbce9ef2e94a5d79bf809fd9d39",
+    ".cvf\\runtime\\r139_integrated_outer_r3_20261021\\process.json": "5e99d42c0d60c12c992b4295259ae6bfb4bb5e2c40d79bf912a9d9b64ee96da2",
+    ".cvf\\runtime\\r139_integrated_outer_r3_20261021\\exit.json": "6921cc0d56c7c2849bac50d1da8dedd773333766f6098af3acd6653221e0bb9f",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\native_evidence_validation.json": "4a0bac18232ad1e0e4c56b8d398c0f52391f2f4cf67896e3fd13dbfe9147102a",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\browser_ready.json": "587f33918fcf25613dc206fa5cfde19b884371fd4e6b8546c885b06570f8dada",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\mysql_ready.json": "ac7ed507a78a937dadc41387232cce5e8656b881a8a74b13c547b3d02aa1a0cd",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\vite_routes.jsonl": "78218620906d0953e62cf8ce9e69e9bad2c661f33729579b501956c534b88f2a",
+    "PRIVATE_FIXTURE_R3/go_routes.jsonl": "1c20e34cbaed42a9b66ff9a10e4a5b7cc6f54d5bfdb493039a8171f30245a350",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\receipt.json": "ffce8032f548e662509b6365c28629289fddb5877bd6d9a3d851e7c818eda51f",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0001.exit.json": "da40fab5f2e3cfdf8514962d429ad494bab392c909fb4b9a7920a1683bf09efd",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0001.json": "13a1ed7e19a79fa4d97d7d53aeb89c6d34eb3d048a826060dfe0d5e145b2271d",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0001.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0001.stdout": "f469b153578b4103a88c64c1d3b037da460eeab6fca363d9c3d716a65b027761",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0002.exit.json": "da40fab5f2e3cfdf8514962d429ad494bab392c909fb4b9a7920a1683bf09efd",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0002.json": "bcaa1a84c5439f25584342c23d344d7fe2e60c0ec9de5a09fe791182811f0855",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0002.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0002.stdout": "8fad809fc5bb18a469ba2a4dd0c5a35be99481c44cee7af012a18ed3d2674b8f",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0003.exit.json": "da40fab5f2e3cfdf8514962d429ad494bab392c909fb4b9a7920a1683bf09efd",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0003.json": "3c1119666fb21fececaa22493a9c29a6d0dd42f8a6436dbc9890a295ad19de44",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0003.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0003.stdout": "75e9d90e5bc9397ff06fbf3bde790ed0cac486c8aef4a5fef11260f3d9e89178",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0004.exit.json": "da40fab5f2e3cfdf8514962d429ad494bab392c909fb4b9a7920a1683bf09efd",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0004.json": "9eb6beaa5fd68110dd1ce96f56a0800ea662ff2913448f7b29a8b952965c50f3",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0004.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0004.stdout": "75e9d90e5bc9397ff06fbf3bde790ed0cac486c8aef4a5fef11260f3d9e89178",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0005.exit.json": "da40fab5f2e3cfdf8514962d429ad494bab392c909fb4b9a7920a1683bf09efd",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0005.json": "977fe3b08097613e756e6b33ee588385cc5e676abc563d4054526897af55b424",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0005.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0005.stdout": "b684e1e280e9d92e982b7e564f5f6d69e00d51b7516e29f002d99f86aaeb3065",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0006.exit.json": "da40fab5f2e3cfdf8514962d429ad494bab392c909fb4b9a7920a1683bf09efd",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0006.json": "83bd68a281cf4bb55c9283a9fb707d5e3a94f2fb132ed99fcf5395d9bcb3f898",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0006.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0006.stdout": "99fee678bc461f936dcd4dfa008dea2c509f6b636378ff0b8e885477c7aaa7df",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0007.exit.json": "da40fab5f2e3cfdf8514962d429ad494bab392c909fb4b9a7920a1683bf09efd",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0007.json": "210c72c245e147e632810e7c128349478ff49926af781d92de0f62cccb020808",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0007.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cvf\\runtime\\r139_integrated_execution_r3_20261021\\interruption_recovery\\cleanup_commands\\0007.stdout": "0138665d9d703c4bffadcc6c0f56e1cb283d8560f0764742dd03d802d9b86ee0"
+  },
+  "protectedDrift": "Reviewer observed protected network identity replacement and RunningFor drift in retained raw inventories; exact details in independent report. Attribution unknown; no equality claim.",
+  "independentReview": "docs/reviews/R139_FRESH_R3_INTERRUPTED_RUNTIME_REVIEW_2026-10-22.md",
+  "disposition": "CHANGES_REQUIRED",
+  "protectedDifferences": {
+    "bridgeNetworkIdentity": "CHANGED",
+    "containerRunningFor": "CHANGED",
+    "threeRunningStatus": "Up About an hour -> Up About a minute",
+    "attribution": "UNKNOWN",
+    "equality": false
+  },
+  "governanceGateUnits": {
+    "count": 89,
+    "result": "PASS",
+    "scope": "STATIC_REPOSITORY_GATE_TESTS_ONLY"
+  }
+}

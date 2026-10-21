@@ -35612,6 +35612,20 @@
       "path": "docs/reviews/R139_FRESH_R3_RUNTIME_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md",
       "status": "ACTIVE",
       "description": "Independent Sol exact fresh-r3 runtime admission review: proceed to commit/clean-pin recheck only; no effects or runtime PASS."
+    },
+    {
+      "id": "r139-r6-fresh-r3-interrupted-runtime-outcome",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r6_fresh_r3_interrupted_runtime_outcome.json",
+      "status": "ACTIVE",
+      "description": "Fresh-r3 actual interrupted runtime HOLD; native only, no browser execute/new API; terminal/cleanup qualifications retained."
+    },
+    {
+      "id": "r139-r139-fresh-r3-interrupted-runtime-review-2026-10-22",
+      "family": "continuity",
+      "path": "docs/reviews/R139_FRESH_R3_INTERRUPTED_RUNTIME_REVIEW_2026-10-22.md",
+      "status": "ACTIVE",
+      "description": "Independent fresh-r3 interrupted-runtime HOLD; original waits missing, protected resource drift, browser closure blocked; no new API."
     }
   ]
 }

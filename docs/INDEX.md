@@ -4465,6 +4465,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Proposed ONE combined R139 fresh r3 source/check/campaign grant with new1USD/API1; NOT_AUTHORIZED, original holds/counters preserved.: `docs/reviews/R139_FRESH_CAMPAIGN_COMBINED_PROPOSAL_2026-10-21.md`
 - Independent Sol documentary review: fresh-r3 combined proposal ready for Owner review only; no source/effect authority.: `docs/reviews/R139_FRESH_CAMPAIGN_PROPOSAL_INDEPENDENT_REVIEW_2026-10-21.md`
 - Fresh-r3 exact identity/path source accepted bounded after compile/Go6/Python30+30; pricing/exact independent runtime admission still required.: `docs/reviews/R139_FRESH_R3_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md`
+- Independent fresh-r3 interrupted-runtime HOLD; original waits missing, protected resource drift, browser closure blocked; no new API.: `docs/reviews/R139_FRESH_R3_INTERRUPTED_RUNTIME_REVIEW_2026-10-22.md`
 - Independent Sol exact fresh-r3 runtime admission review: proceed to commit/clean-pin recheck only; no effects or runtime PASS.: `docs/reviews/R139_FRESH_R3_RUNTIME_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md`
 - Fresh-r3 exact identity/path source accepted bounded after compile/Go6/Python30+30; pricing/exact independent runtime admission still required.: `docs/reviews/R139_FRESH_R3_SOURCE_WORKER_RETURN_2026-10-21.md`
 - Independent read-only acceptance of exact replacement admission/pins/caps for commit and clean recheck; actual runtime unproved.: `docs/reviews/R139_REPLACEMENT_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md`
@@ -4493,6 +4494,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Fresh-r3 exact identity/path source accepted bounded after compile/Go6/Python30+30; pricing/exact independent runtime admission still required.: `docs/reviews/probes/r139_integrated_20261021/r5_fresh_source_checks.json`
 - One approved secret-free official public pricing/model readiness read reserved after source8bb54637, before any key/fixture/provider.: `docs/reviews/probes/r139_integrated_20261021/r5_public_pricing_read.json`
 - Exact fresh-r3 conditional runtime admission draft after source8bb54637 and publicpricingPASS; independent review/commit before effects; NEWAPI1/USD1, oldslot preserved.: `docs/reviews/probes/r139_integrated_20261021/r5_runtime_preparation.json`
+- Fresh-r3 actual interrupted runtime HOLD; native only, no browser execute/new API; terminal/cleanup qualifications retained.: `docs/reviews/probes/r139_integrated_20261021/r6_fresh_r3_interrupted_runtime_outcome.json`
 - Retained failed handback metadata checks and Root corrections; source unchanged.: `docs/reviews/probes/r139_integrated_20261021/root_handback_metadata_corrections.json`
 - Root27R137 source/protected matches plus2authority protection pins; no runtime proof.: `docs/reviews/probes/r139_integrated_20261021/root_source_preparation_baseline.json`
 - Observed local metadata or reviewed draft; Owner1USD/one-call approved, credential/deadline/final admission pending, no live claim.: `docs/reviews/probes/r139_integrated_20261021/local_readiness_outcome.json`
