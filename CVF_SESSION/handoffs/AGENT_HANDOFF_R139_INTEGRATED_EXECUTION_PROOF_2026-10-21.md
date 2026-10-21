@@ -4,11 +4,11 @@ Status: ACTIVE
 
 ## Current State
 
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Root ORCHESTRATOR / independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna Max REPAIR_WORKER
 - Active tranche: CCMAI-RUNTIME-139
-- Next allowed move: CCMAI-RUNTIME-139 HOLD_SETUP before native/browser/provider: six MySQL probes ended during initialization; fixture start1/1 and finalstop1/1 consumed, original supervisor exit1/cleanupHOLD preserved. Owned container observed stoppedPID0/ports{}, later OS exactlistenerabsent; raw protected diff is Networks order only. G1G2/E01E06 NOT_RUN/provider0. REVIEW_COST_ESCALATION_REQUIRED: source2rounds exhausted; approve concrete one-round repair/one freshfixture continuation proposal before further BUILD/replay. Existing1USD/R139oneAPI cumulative ceiling unchanged, no budget reset/helper tranche. Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-139 Owner approved one consolidated RF1-RF4 source repair and one replacement fixture campaign, cumulative max1USD/one actual API unchanged(provider0). Luna repairs only three admitted source paths with workerGo1/Python1; Root independent source review and remainingPython1. Runtime remains0 until new exact committed admission and independent review; old setupHOLD/fixture1/1 preserved, no old restart/reset/helper tranche. Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## INTAKE / DESIGN / SPEC / WORK_ORDER acknowledgment
@@ -86,3 +86,7 @@ Final immutable INTEGRATED-RUNTIME-ADMISSION and campaign reservation must commi
 Committed4dfba9a3 preceded sole supervisor invocation; original process wait/exit1 recorded. MYSQL_READY_NOT_PROVEN before Go/backend/Vite/browser, native/grant/execute/provider0. Readiness probes end05:59:14 while final MySQL TCP readiness05:59:21 after temporary initialization;1045 not proof of bad credential. Original cleanup stop0/ownedPID0/ports{} but terminalHOLD due raw Networks order and socket10035; later successful OS exactport52402 query has0listeners. Preserve originalHOLD and qualified later stopped proof. No restart or additionalstop. Key stays outsideproject/private, never published; configRead1/rawkeyWrite1/supervisorKeyRead1.
 
 Root transitions runtimeEXECUTOR -> ORCHESTRATOR/SESSION_SYNC/COMMIT_STEWARD after independent /root/r139_admission_review_sol read-only review. Same current continuity/status/index rehydrated before disposition; source34facc34 acceptance preserved onlyT0/T1, runtimeG0HOLD/G1G2NOT_RUN. REVIEW_COST_ESCALATION_REQUIRED recorded because source2rounds and fixture1/1 consumed. Concrete same-R139 one-round source repair + freshfixture proposal prepared, NOTAUTHORIZED; no more source changes or replay. Existing1USD/max1actualAPI ceiling stays, observed0; unused slot not replay permission. Owner must approve this real source/resource boundary; no helpertranche, date promise or productclosure. Exact proposal/failure report linked in canonical state; failed fixture/resources/evidence preserved.
+
+## Explicit owner continuation / consolidated repair acknowledgment
+
+Owner explicitly approved one repair and one replacement fixture according to the concrete RF1-RF4 proposal. Root rehydrated canonical manifest/policy/compact/state/memory/handoff/status/index and required workspace/Core refs; fresh doctor27/27/publicCoreb69e1088/originmain with inherited e9 pin warning. INTAKE bounds same R139 and unchanged R2/provider ceiling; DESIGN/SPEC inherit exact RF1-RF4; WORK_ORDER grants only three source paths, one compile/one workerPython plus Root existingPython1. REVIEW_COST_ESCALATION_REQUIRED resolved only for this single explicitly approved round; old failures/counters remain. Root ORCHESTRATOR authorizes Luna REPAIR_WORKER only after new immutable continuation admission and gated dispatch commit. Root independent source REVIEWER, independent Sol runtime REVIEWER, workers never seed/commit. Runtime/key/provider0 until new exact admission; fresh fixture_r2, no restart/delete of prior fixture. Worker must append fresh current-value acknowledgment before writes. No full M3/date claim.

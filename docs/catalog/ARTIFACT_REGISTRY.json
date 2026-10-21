@@ -35325,6 +35325,13 @@
       "path": "docs/reviews/R139_RUNTIME_SETUP_FAILURE_AND_COST_DISPOSITION_2026-10-21.md",
       "status": "ACTIVE",
       "description": "Actual pre-native setup HOLD, qualified owned stop/OS listener proof and explicit cost/boundary continuation proposal; provider0/no replay."
+    },
+    {
+      "id": "r139-ccmai-runtime-139-owner-continuation-admission",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-OWNER-CONTINUATION-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Explicit Owner single RF1-RF4 repair/replacement-fixture continuation; cumulative1USD/one API unchanged; runtime still needs exact admission."
     }
   ]
 }

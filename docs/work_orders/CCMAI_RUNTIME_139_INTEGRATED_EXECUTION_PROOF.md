@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: BLOCKED_WITH_REASON
+Status: ACTIVE
 Risk: R2
 Worker: Sol Medium delegated fixture worker
 Reviewer: Root independent source/evidence REVIEWER
@@ -12,7 +12,7 @@ dispatchKind: INITIAL
 
 ## Current authority and acceptance target
 
-Current stage: integrated runtime BUILD after source acceptance, observed HTTPS tool/cache readiness, explicit Owner1USD/NEW1 call grant, actual Root credential staging and independent final admission review. Exact INTEGRATED-RUNTIME-ADMISSION must be committed and clean/fresh preflight must pass before the one supervisor invocation. Source Worker/Reviewer header values retain original implementation/source-review attribution; runtimeExecutor/runtimeReviewer above own execution and independent runtime evaluation. G1/G2 are not yet run or accepted. All earlier no-runtime paragraphs below describe historical stage admission; the final active runtime section and immutable current admission govern this new explicitly approved stage.
+Current stage: CCMAI-RUNTIME-139 Owner approved one consolidated RF1-RF4 source repair and one replacement fixture campaign, cumulative max1USD/one actual API unchanged(provider0). Luna repairs only three admitted source paths with workerGo1/Python1; Root independent source review and remainingPython1. Runtime remains0 until new exact committed admission and independent review; old setupHOLD/fixture1/1 preserved, no old restart/reset/helper tranche. Facebook/Zalo OA parked.
 
 Historical initial preparation boundary: Owner `tiếp` continues G0 in the canonical delivery plan. Immutable dispatcher seed `642f5bd026dfe31e6dda6441dd25704eb3ececa3` precedes source BUILD. This is ONE work order containing G0 preparation, G1 native/backend proof and G2 browser proof, with explicit stage admission. Only source preparation/offline checks and Root's bounded pure-UI tool diagnostic are admitted now. G1/G2 runtime and provider use are HOLD. R117 physical allowance1/1 is consumed; no historical counter or slot transfers. No standalone helper successor follows automatically.
 
@@ -139,3 +139,7 @@ Stage BUILD for the ONE source-bound runtime campaign under exact INTEGRATED-RUN
 ## Current actual outcome — HOLD_SETUP / REVIEW_COST_ESCALATION_REQUIRED
 
 Sole runtime invocation failed during MySQL initialization before native/backend/browser/provider. Original supervisor exit1/cleanupHOLD retained; ownedstop0/PID0/ports{} and later OS exactlistenerabsence observed. Actual fixture start1/finalstop1 consumed, allGo/native/browser/grant/execute/provider0. Runtime failure and independent review: R139_RUNTIME_SETUP_FAILURE_AND_COST_DISPOSITION_2026-10-21.md. Source2repairrounds exhausted; no third repair or second campaign authorized. Proposed bounded source repair and one freshfixture continuation are explicit in bounded_repair_and_fixture_continuation_proposal.json, require new approval; cumulative1USD/oneactualAPI remains unchanged. Current earlier ACTIVE sections are historical dispatch, not permission to replay.
+
+## Current owner-approved single repair continuation
+
+Supersedes the no-approval next step in the preceding HOLD section only. Explicit owner reply and immutable OWNER-CONTINUATION-ADMISSION authorize exactly RF1-RF4 in the original proposal: final TCP readiness60s/max45probes/1s; normalize only Networks list ordering; bounded exact Windows listener query for10035; fresh fixture_r2 path with Go constant change only. Luna repair worker, Root independent source reviewer; original source authors remain attributed. Worker new offlineGo1/purePython1, Root remainingPython1; reserve before checks, no tests initialize DB. Return R139_CONTINUATION_SOURCE_RETURN_2026-10-21.md with all failures/raw hashes/closeability recheck. Source-stage runtime/key/provider effects0. After independent source acceptance, a new pinned committed runtime admission may admit the single replacement campaign under owner-approved unchanged cumulative1USD/one API. No more source rounds/fixture replay on uncertainty. OriginalHOLD/firstfixture and oldbudgets remain unchanged.

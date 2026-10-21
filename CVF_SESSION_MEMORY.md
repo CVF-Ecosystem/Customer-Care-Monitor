@@ -2,20 +2,20 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: BUILD
+- Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
 
-CCMAI-RUNTIME-139 HOLD_SETUP before native/browser/provider: six MySQL probes ended during initialization; fixture start1/1 and finalstop1/1 consumed, original supervisor exit1/cleanupHOLD preserved. Owned container observed stoppedPID0/ports{}, later OS exactlistenerabsent; raw protected diff is Networks order only. G1G2/E01E06 NOT_RUN/provider0. REVIEW_COST_ESCALATION_REQUIRED: source2rounds exhausted; approve concrete one-round repair/one freshfixture continuation proposal before further BUILD/replay. Existing1USD/R139oneAPI cumulative ceiling unchanged, no budget reset/helper tranche. Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 Owner approved one consolidated RF1-RF4 source repair and one replacement fixture campaign, cumulative max1USD/one actual API unchanged(provider0). Luna repairs only three admitted source paths with workerGo1/Python1; Root independent source review and remainingPython1. Runtime remains0 until new exact committed admission and independent review; old setupHOLD/fixture1/1 preserved, no old restart/reset/helper tranche. Facebook/Zalo OA parked.
 
-Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD
+Root ORCHESTRATOR / independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna Max REPAIR_WORKER
 
-R139 source-only review: docs/reviews/R139_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md. Worker and independent Root Python16PASS/Go compile-only exit0. Product source R137 unchanged;29protected hashes match. Detailed finite roadmap remains docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md; no dates/percentages, no full M3/runtime claim. Shared roadmap-control directive applies; current next move resolves real browser/effect boundary in SAME R139, not another source helper chain.
+Canonical roadmap: docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md. R137 product source unchanged; R139 original setup HOLD retained; no full M3 acceptance.
 
 ## Historical R114 bounded UI result
 

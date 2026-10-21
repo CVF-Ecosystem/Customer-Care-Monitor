@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "authorityKind": "OWNER_APPROVED_ONE_ROUND_REPAIR_AND_REPLACEMENT_FIXTURE_CONTINUATION",
+  "parentAuthority": "CVF_SESSION/authority/CCMAI-RUNTIME-139.json",
+  "parentAuthorityCommit": "642f5bd026dfe31e6dda6441dd25704eb3ececa3",
+  "baseCommit": "61cc5901eaaf34856811253e05326bd659121c2c",
+  "ownerApproved": true,
+  "ownerReply": "Duyệt 1 vòng sửa và 1 fixture thay thế theo phương án",
+  "questionReference": "request_user_input_async/call_12db51be0bce45618f265009f55e1aa7/item0",
+  "riskCeiling": "R2",
+  "costDisposition": "REVIEW_COST_ESCALATION_REQUIRED_RESOLVED_BY_EXPLICIT_OWNER_ONE_ROUND_GRANT",
+  "repairWorker": "Luna Max delegated source repair worker",
+  "sourceReviewer": "Root independent source/evidence REVIEWER",
+  "runtimeExecutor": "Root bounded runtime evidence EXECUTOR",
+  "runtimeReviewer": "/root/r139_admission_review_sol independent runtime REVIEWER",
+  "commitSteward": "Root COMMIT_STEWARD",
+  "consolidatedFixes": [
+    {
+      "id": "R139-RF1",
+      "change": "Use final MySQL TCP readiness, not temporary initialization socket; bounded startup window60seconds/max45probes/1second spacing, each command bounded, campaign deadline/cleanup reserve retained.",
+      "evidence": "Original six probes ended05:59:14; final server readiness05:59:21."
+    },
+    {
+      "id": "R139-RF2",
+      "change": "Canonicalize only the unordered Docker Networks membership list while retaining all resource identities and other protected fields; preserve original failure/raw comparison."
+    },
+    {
+      "id": "R139-RF3",
+      "change": "Reliable exact Windows listener absence via pinned bounded OS query when socket result is10035; never infer absence from timeout, preservefailclosed."
+    },
+    {
+      "id": "R139-RF4",
+      "change": "Fresh second-campaign external evidence path fixture_r2 in same private evidence root, preserving original failed fixture directory/resources; only fixture path constant changes in Go, compileonce."
+    }
+  ],
+  "allowedSourcePaths": [
+    "scripts/r139_execution_supervisor.py",
+    "scripts/tests/test_r139_execution_supervisor.py",
+    "backend/api/handlers/intervention_execution_browser_test.go"
+  ],
+  "newCaps": {
+    "oneConsolidatedRepairRound": 1,
+    "workerOfflineCompile": 1,
+    "workerPurePythonCheck": 1,
+    "rootPurePythonCheckFromUnspentExistingSlot": 1,
+    "newSupervisorInvocation": 1,
+    "newOwnedFixtureStart": 1,
+    "newOwnedFixtureFinalStop": 1,
+    "backend": 1,
+    "vite": 1,
+    "browserCampaign": 1,
+    "nativeExecutePOST": 8,
+    "browserExecutePOST": 1,
+    "grants": 3
+  },
+  "providerCumulativeCeilingUnchanged": {
+    "amount": 1,
+    "currency": "USD",
+    "physicalCallsTotalR139Max": 1,
+    "observedSoFar": 0,
+    "automaticRetry": 0
+  },
+  "prohibitions": [
+    "No old counter/reset or old resource restart",
+    "No product/Core/dependency/gate changes",
+    "No extra paid-call budget or provider smoke call",
+    "No source/fixture replay before explicit continuation authority and independent review",
+    "First uncertainty stops new campaign; no further repair chain"
+  ],
+  "sourceStageEffects": {
+    "runtime": 0,
+    "keyRead": 0,
+    "network": 0,
+    "Docker": 0,
+    "provider": 0
+  },
+  "sourceReturn": "docs/reviews/R139_CONTINUATION_SOURCE_RETURN_2026-10-21.md",
+  "runtimeActivation": "Not yet executable: separate exact source/binary/resource/deadline-pinned runtime admission committed after independent review. Fresh fixture_r2 only; old fixture/resources/admissions/counters preserved.",
+  "credentialContinuation": "At runtime only, one existing private staged raw-key read by supervisor; no original-config reread or key restaging.",
+  "stop": "One consolidated repair only; first uncertainty HOLD; no further repair chain or blind replay."
+}

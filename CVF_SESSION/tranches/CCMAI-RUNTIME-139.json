@@ -83,10 +83,10 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "CHANGES_REQUIRED",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "BLOCKED_WITH_REASON",
+  "workOrderStatus": "ACTIVE",
   "buildCommit": "4dfba9a3b5330c1b775b7e20d8e66cb8789a229d",
   "reviewEvidence": [
     "docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md",
@@ -97,7 +97,7 @@
     "docs/reviews/R139_RUNTIME_SETUP_FAILURE_AND_COST_DISPOSITION_2026-10-21.md",
     "docs/reviews/probes/r139_integrated_20261021/integrated_runtime_failure.json"
   ],
-  "disposition": "HOLD_SETUP_REVIEW_COST_ESCALATION_REQUIRED",
+  "disposition": "CCMAI-RUNTIME-139 Owner approved one consolidated RF1-RF4 source repair and one replacement fixture campaign, cumulative max1USD/one actual API unchanged(provider0). Luna repairs only three admitted source paths with workerGo1/Python1; Root independent source review and remainingPython1. Runtime remains0 until new exact committed admission and independent review; old setupHOLD/fixture1/1 preserved, no old restart/reset/helper tranche. Facebook/Zalo OA parked.",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -109,7 +109,8 @@
     "PARKED",
     "BUILD",
     "REVIEW_PENDING",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "actualUse": {
     "status": "HOLD_SETUP_NATIVE_BROWSER_NOT_RUN",
