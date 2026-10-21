@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 Owner explicitly approved NEW1Alibaba synthetic call at maximum1USD, native8/browser1/grant3 and one owned fixture; no retries or old-budget reset. After committed CREDENTIAL-STAGING-ADMISSION, Root reads existing ignored Alibaba config once, verifies endpoint hash and exclusively stages external raw key without output. Then issue independently reviewed immutable runtime admission with fresh deadline/clean pins before fixture. Source34facc34 accepted, tool/cache prerequisites PASS; G0 aggregate HOLD/G1G2 NOT_RUN. Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 integrated runtime BUILD after committed exact runtime admission/final independent review/active packet gates: Root invokes finite supervisor once, serial G1 native8 then same-process G2 supported CUA browser1/execute1, grant3/providerNEW1 maximum1USD, noretry. Source34facc34/tool/cache/browser proof accepted; credential staged outsideproject once. Stop firstfailure/uncertainty, exact-owned cleanup180s and preserve evidence; G1G2/E01-E06 acceptance only from actual receipts. Old budgets unchanged, Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / secret CUSTODIAN / WORK_ORDER_AUTHOR",
+  "activeRole": "Root ORCHESTRATOR / bounded runtime evidence EXECUTOR",
   "updatedAt": "2026-10-21",
   "x-resolvedCoreCommit": "b69e1088978e8c90ac58a2243fcf8f90d0f857ed",
   "x-ownerRoadmapDiscipline": {
@@ -2544,7 +2544,7 @@
     "backendStarts": 0,
     "viteStarts": 0,
     "providerCalls": 0,
-    "credentialReads": 0,
+    "credentialReads": 1,
     "grantEffects": 0,
     "executePOST": 0,
     "productSourceUnchanged": true,
@@ -2591,14 +2591,16 @@
     "outcome": "docs/reviews/probes/r139_integrated_20261021/local_readiness_outcome.json"
   },
   "x-r139RuntimeAdmissionPreparation": {
-    "status": "MONETARY_CEILING_APPROVED_CUSTODIAN_STAGE_PENDING",
+    "status": "EXACT_RUNTIME_ADMISSION_PENDING_COMMIT_AND_FINAL_REVIEW",
     "draft": "docs/reviews/probes/r139_integrated_20261021/runtime_admission_draft.json",
     "independentReview": "docs/reviews/R139_RUNTIME_ADMISSION_READONLY_REVIEW_2026-10-21.md",
-    "keyContentsRead": 0,
+    "keyContentsRead": 1,
     "credentialConfigMetadataVerified": true,
     "providerCalls": 0,
-    "budgetQuestion": "Answered explicitly: maximum1USD for exactly1new synthetic Alibaba call.",
-    "applicationRoleNotHumanAuthority": true
+    "budgetQuestion": "Answered maximum1USD/one NEW call.",
+    "applicationRoleNotHumanAuthority": true,
+    "runtimeAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTEGRATED-RUNTIME-ADMISSION.json",
+    "credentialStagingOutcome": "docs/reviews/probes/r139_integrated_20261021/credential_staging_outcome.json"
   },
   "x-r139OwnerLiveGrant": {
     "status": "OWNER_APPROVED_NEW_R139_ONE_CALL",

@@ -35044,7 +35044,7 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
       "status": "ACTIVE",
-      "description": "Same R139 source accepted; HTTPS tool/local cache metadata PASS, integrated runtime admission and G1G2 still open."
+      "description": "Active same-R139 integrated native/browser runtime dispatch under Owner1USD/NEW1 call; actual acceptance pending."
     },
     {
       "id": "r138-handoff-history",
@@ -35276,6 +35276,27 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/provider_pricing_reference.json",
       "status": "ACTIVE",
       "description": "Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim."
+    },
+    {
+      "id": "r139-runtime-issued-0",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTEGRATED-RUNTIME-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Exact Owner1USD/onecall runtime authority, sanitized credential staging or one-shot pre-effect reservation; no outcome claim."
+    },
+    {
+      "id": "r139-runtime-issued-1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/credential_staging_outcome.json",
+      "status": "ACTIVE",
+      "description": "Exact Owner1USD/onecall runtime authority, sanitized credential staging or one-shot pre-effect reservation; no outcome claim."
+    },
+    {
+      "id": "r139-runtime-issued-2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/integrated_runtime_reservation.json",
+      "status": "ACTIVE",
+      "description": "Exact Owner1USD/onecall runtime authority, sanitized credential staging or one-shot pre-effect reservation; no outcome claim."
     }
   ]
 }

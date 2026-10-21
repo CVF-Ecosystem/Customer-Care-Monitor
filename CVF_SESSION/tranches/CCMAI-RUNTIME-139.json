@@ -83,10 +83,10 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "PARKED",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "PARKED",
+  "workOrderStatus": "ACTIVE",
   "buildCommit": "34facc34c26ae8eb8737ec0f8384139e832949af",
   "reviewEvidence": [
     "docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md",
@@ -95,7 +95,7 @@
     "docs/reviews/R139_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md",
     "docs/reviews/probes/r139_integrated_20261021/root_final_source_review.json"
   ],
-  "disposition": "REVIEW_PASS_SOURCE_PREPARATION_ONLY_RUNTIME_HOLD",
+  "disposition": "RUNTIME_BUILD_ADMITTED_PENDING_COMMIT",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -104,7 +104,8 @@
     "BUILD",
     "REVIEW_PENDING",
     "REVIEW_PASS",
-    "PARKED"
+    "PARKED",
+    "BUILD"
   ],
   "actualUse": {
     "status": "PARKED_SOURCE_PREPARATION_ACCEPTED_RUNTIME_HOLD",
@@ -129,7 +130,7 @@
     "backendStarts": 0,
     "viteStarts": 0,
     "providerCalls": 0,
-    "credentialReads": 0,
+    "credentialReads": 1,
     "grantEffects": 0,
     "executePOST": 0,
     "productSourceUnchanged": true,
@@ -176,14 +177,16 @@
     "outcome": "docs/reviews/probes/r139_integrated_20261021/local_readiness_outcome.json"
   },
   "x-runtimeAdmissionPreparation": {
-    "status": "MONETARY_CEILING_APPROVED_CUSTODIAN_STAGE_PENDING",
+    "status": "EXACT_RUNTIME_ADMISSION_PENDING_COMMIT_AND_FINAL_REVIEW",
     "draft": "docs/reviews/probes/r139_integrated_20261021/runtime_admission_draft.json",
     "independentReview": "docs/reviews/R139_RUNTIME_ADMISSION_READONLY_REVIEW_2026-10-21.md",
-    "keyContentsRead": 0,
+    "keyContentsRead": 1,
     "credentialConfigMetadataVerified": true,
     "providerCalls": 0,
-    "budgetQuestion": "Answered explicitly: maximum1USD for exactly1new synthetic Alibaba call.",
-    "applicationRoleNotHumanAuthority": true
+    "budgetQuestion": "Answered maximum1USD/one NEW call.",
+    "applicationRoleNotHumanAuthority": true,
+    "runtimeAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTEGRATED-RUNTIME-ADMISSION.json",
+    "credentialStagingOutcome": "docs/reviews/probes/r139_integrated_20261021/credential_staging_outcome.json"
   },
   "x-ownerLiveGrant": {
     "status": "OWNER_APPROVED_NEW_R139_ONE_CALL",
@@ -204,5 +207,10 @@
     "grantIssuances": 3,
     "keyCustodian": "Root existing Alibaba credential",
     "oldBudgets": "Original/new HTTPS diagnostic and historical R117 provider counters remain consumed, no reset."
+  },
+  "runtimeAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTEGRATED-RUNTIME-ADMISSION.json",
+  "runtimeRoles": {
+    "executor": "Root bounded runtime evidence EXECUTOR",
+    "reviewer": "/root/r139_admission_review_sol independent runtime REVIEWER"
   }
 }

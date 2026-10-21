@@ -1,16 +1,20 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: PARKED
+Status: ACTIVE
 Risk: R2
 Worker: Sol Medium delegated fixture worker
 Reviewer: Root independent source/evidence REVIEWER
 Commit mode: WORKER_MUST_NOT_COMMIT
-providerExecutionAuthority: NONE
+providerExecutionAuthority: EXACT_COMMITTED_R139_RUNTIME_ADMISSION_MAX1USD_NEW1_CALL
+runtimeExecutor: Root bounded runtime evidence EXECUTOR
+runtimeReviewer: /root/r139_admission_review_sol independent runtime REVIEWER
 dispatchKind: INITIAL
 
 ## Current authority and acceptance target
 
-Owner `tiếp` continues G0 in the canonical delivery plan. Immutable dispatcher seed `642f5bd026dfe31e6dda6441dd25704eb3ececa3` precedes source BUILD. This is ONE work order containing G0 preparation, G1 native/backend proof and G2 browser proof, with explicit stage admission. Only source preparation/offline checks and Root's bounded pure-UI tool diagnostic are admitted now. G1/G2 runtime and provider use are HOLD. R117 physical allowance1/1 is consumed; no historical counter or slot transfers. No standalone helper successor follows automatically.
+Current stage: integrated runtime BUILD after source acceptance, observed HTTPS tool/cache readiness, explicit Owner1USD/NEW1 call grant, actual Root credential staging and independent final admission review. Exact INTEGRATED-RUNTIME-ADMISSION must be committed and clean/fresh preflight must pass before the one supervisor invocation. Source Worker/Reviewer header values retain original implementation/source-review attribution; runtimeExecutor/runtimeReviewer above own execution and independent runtime evaluation. G1/G2 are not yet run or accepted. All earlier no-runtime paragraphs below describe historical stage admission; the final active runtime section and immutable current admission govern this new explicitly approved stage.
+
+Historical initial preparation boundary: Owner `tiếp` continues G0 in the canonical delivery plan. Immutable dispatcher seed `642f5bd026dfe31e6dda6441dd25704eb3ececa3` precedes source BUILD. This is ONE work order containing G0 preparation, G1 native/backend proof and G2 browser proof, with explicit stage admission. Only source preparation/offline checks and Root's bounded pure-UI tool diagnostic are admitted now. G1/G2 runtime and provider use are HOLD. R117 physical allowance1/1 is consumed; no historical counter or slot transfers. No standalone helper successor follows automatically.
 
 User capability sought: a writer deliberately reruns one current WAIT_DATA request once, sees durable progress and a same-case new proposal after OPEN; a reader can inspect safe history without execute controls; uncertainty never silently repeats the action. Target M3-05/M3-08 and R136 E01–E06. Current evidence is T0/T1 source/component at product source `4cce40f2495f571b612122121d377c10499b4b02`; E01–E06 runtime/full M3 remain OPEN. Root decides source readiness independently; runtime acceptance requires actual source-bound T2/T3/T4 receipts. Owner alone grants fresh external-effect boundaries. Full M1/M2/M3 exit, pilot/release and Facebook/Zalo OA remain open/parked.
 
@@ -127,3 +131,7 @@ Browser supported HTTPS/control/capture/close PASS; local read-only metadata5/5/
 ## Owner runtime grant now settled
 
 Owner explicitly approves maximum1USD for exactly1NEW Alibaba synthetic API call in the previously proposed integrated scope (native8/browser1/grant3/one ownedfixture/noretry/request6000/completion768). See owner_one_usd_runtime_grant.json. Root may perform committed bounded credential staging using existing ignored Alibaba config; no new credential requested. Final exact runtime admission must follow before any fixture/native/provider effect. Old budgets remain consumed; application owner role is distinct from this human grant. No blanket paid-call expansion.
+
+## Active integrated runtime dispatch
+
+Stage BUILD for the ONE source-bound runtime campaign under exact INTEGRATED-RUNTIME-ADMISSION. Owner max1USD/NEW1 physical Alibaba call, existing Root-custodied key staged externally, actual endpoint hash and fresh grant deadline bound. Root bounded runtime EXECUTOR; /root/r139_admission_review_sol independent runtime REVIEWER authored/repaired no source/admission. Original source roles/history remain. Before invocation commit immutable admission/reservation and require active packet APPL/ROUTE/precommit gates plus final independent acceptance of named facts. Caps nativeGo1/fixture1/backend1/Vite1/browsercampaign1/auth4/nativePOST8/browserPOST1/grant3/provider1/noretry. Runtime return is closeable as a bounded truthful PASS/FAIL/HOLD/evidence/cleanup disposition; mutually exclusive uncovered E04 rows remain OPEN and do not justify extra POST. Overall M3/G3 and freeze not implied.

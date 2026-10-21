@@ -4,11 +4,11 @@ Status: ACTIVE
 
 ## Current State
 
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Root ORCHESTRATOR / secret CUSTODIAN / WORK_ORDER_AUTHOR
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Root ORCHESTRATOR / bounded runtime evidence EXECUTOR
 - Active tranche: CCMAI-RUNTIME-139
-- Next allowed move: CCMAI-RUNTIME-139 Owner explicitly approved NEW1Alibaba synthetic call at maximum1USD, native8/browser1/grant3 and one owned fixture; no retries or old-budget reset. After committed CREDENTIAL-STAGING-ADMISSION, Root reads existing ignored Alibaba config once, verifies endpoint hash and exclusively stages external raw key without output. Then issue independently reviewed immutable runtime admission with fresh deadline/clean pins before fixture. Source34facc34 accepted, tool/cache prerequisites PASS; G0 aggregate HOLD/G1G2 NOT_RUN. Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-139 integrated runtime BUILD after committed exact runtime admission/final independent review/active packet gates: Root invokes finite supervisor once, serial G1 native8 then same-process G2 supported CUA browser1/execute1, grant3/providerNEW1 maximum1USD, noretry. Source34facc34/tool/cache/browser proof accepted; credential staged outsideproject once. Stop firstfailure/uncertainty, exact-owned cleanup180s and preserve evidence; G1G2/E01-E06 acceptance only from actual receipts. Old budgets unchanged, Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## INTAKE / DESIGN / SPEC / WORK_ORDER acknowledgment
@@ -74,3 +74,9 @@ Root transitions read-onlyAUDITOR -> ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_
 ## Explicit Owner1USD grant / custodian acknowledgment
 
 Owner answered the concrete runtime question: Duyệt tối đa 1 USD cho 1 lượt API này. NEW R139 physicalAlibaba1 only, request6000bytes/completion768/thinkingfalse, native8/browser1/grant3/ownedfixture1, noretry and synthetic complaint only; historical slots unchanged. Root rehydrated current manifest/policy/compact/state/memory/handoff/status/index and required workspace/Core refs; freshdoctor27/27/currentCoreb69e1088 matchesoriginmain/e9warning. Root transitions ORCHESTRATOR -> secretCUSTODIAN/WORK_ORDER_AUTHOR. Independent draft review already READY_AFTER_NAMED_FACTS; budget now settled. Bounded credential admission must commit before one existing config read and exclusive outsideproject rawkey staging, endpoint hash check, no contents exposed. Actual runtime still cannot launch until exact final admission committed, deadline/pins/source clean and reviewer disposition confirmed. No source change or helper tranche. Current G0aggregateHOLD/G1G2NOT_RUN/provider0.
+
+## Runtime tranche transition acknowledgment before BUILD effects
+
+Root re-read current compact/canonical state/memory/handoff/implementation/index and inherited current doctor27/27/publicCoreb69e1088/e9warning. Credential authorityefdcfa86 committed before one config read/one exclusive outsideproject key write. Staging PASS, endpoint hash exact; no keyvalue/hash exposed; no provider/fixture effects yet. Owner1USD/onecall explicitly settled. Root transitions secretCUSTODIAN -> bounded runtime EXECUTOR after new same-order runtime admission, inherits settled source/design/spec/workorder evidence, earliest open stage BUILD for actual G1/G2. Original Sol/Luna source roles preserved; new independent Sol reviewer authored/repaired none of this source/admission and reviews actual runtime separately from Root execution. Source repair caps unchanged, no compile/new source work.
+
+Final immutable INTEGRATED-RUNTIME-ADMISSION and campaign reservation must commit after final independent review and active APPL/ROUTE/precommit gates before invoking supervisor once. Caps ownedfixture1/nativeGo1/backend1/Vite1/browser1/auth4/nativePOST8/browserPOST1/grant3/providerNEW1/max1USD/noretry.20min campaign and finite180sec exact-owned cleanup grace, overrunsHOLD. Native failure stops G2/provider; no blind retry. Native/publication/browser/E04 uncovered branches and runtime acceptance remain based on actual receipts only; no all-M3 claim. G2 uses supported IAB only and same held backend, no extra smoke. After outcome Root syncs truth and independent reviewer dispositions; FREEZEOPEN until settled.
