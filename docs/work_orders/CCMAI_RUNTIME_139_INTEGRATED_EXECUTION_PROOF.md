@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: ACTIVE
+Status: COMPLETE_PENDING_REVIEW
 Risk: R2
 Worker: Sol Medium delegated fixture worker
 Reviewer: Root independent source/evidence REVIEWER
@@ -12,7 +12,7 @@ dispatchKind: INITIAL
 
 ## Current authority and acceptance target
 
-Current stage: CCMAI-RUNTIME-139 Owner approved one consolidated RF1-RF4 source repair and one replacement fixture campaign, cumulative max1USD/one actual API unchanged(provider0). Luna repairs only three admitted source paths with workerGo1/Python1; Root independent source review and remainingPython1. Runtime remains0 until new exact committed admission and independent review; old setupHOLD/fixture1/1 preserved, no old restart/reset/helper tranche. Facebook/Zalo OA parked.
+Current stage: CCMAI-RUNTIME-139 replacement source review ready: RootPython28/28PASS and workerGo compile-onlyPASS, original workerPython27/28FAIL/testsetup correction retained. One approved RF1-RF4 round complete; prepare exact fresh source/binary/runtime/name/database/deadline admission and independent runtime review before sole replacement campaign. Provider0/cumulative1USD-oneAPI unchanged; original setupHOLD/firstfixture preserved. No extra source round/check or helper tranche; Facebook/Zalo OA parked.
 
 Historical initial preparation boundary: Owner `tiếp` continues G0 in the canonical delivery plan. Immutable dispatcher seed `642f5bd026dfe31e6dda6441dd25704eb3ececa3` precedes source BUILD. This is ONE work order containing G0 preparation, G1 native/backend proof and G2 browser proof, with explicit stage admission. Only source preparation/offline checks and Root's bounded pure-UI tool diagnostic are admitted now. G1/G2 runtime and provider use are HOLD. R117 physical allowance1/1 is consumed; no historical counter or slot transfers. No standalone helper successor follows automatically.
 
@@ -143,3 +143,5 @@ Sole runtime invocation failed during MySQL initialization before native/backend
 ## Current owner-approved single repair continuation
 
 Supersedes the no-approval next step in the preceding HOLD section only. Explicit owner reply and immutable OWNER-CONTINUATION-ADMISSION authorize exactly RF1-RF4 in the original proposal: final TCP readiness60s/max45probes/1s; normalize only Networks list ordering; bounded exact Windows listener query for10035; fresh fixture_r2 path with Go constant change only. Luna repair worker, Root independent source reviewer; original source authors remain attributed. Worker new offlineGo1/purePython1, Root remainingPython1; reserve before checks, no tests initialize DB. Return R139_CONTINUATION_SOURCE_RETURN_2026-10-21.md with all failures/raw hashes/closeability recheck. Source-stage runtime/key/provider effects0. After independent source acceptance, a new pinned committed runtime admission may admit the single replacement campaign under owner-approved unchanged cumulative1USD/one API. No more source rounds/fixture replay on uncertainty. OriginalHOLD/firstfixture and oldbudgets remain unchanged.
+
+RF4 integration identities fixed before this single repair: external `fixture_r2`; fresh ignored runtimeRoot `.cvf/runtime/r139_integrated_execution_r2_20261021`; fresh owned fixtureName `ccmai-r139-r2-20261021`; fresh database `ccma_r139_r2_20261021`. Go changes only its exact external path constant; Python exact external guard aligns. Runtime admission re-pins repaired source/new compile binary/fresh deadline and commits before invocation. Old resources and paths remain preserved. Root retains independent source review; new independent Sol runtime reviewer may inherit the read-only review role if the prior tool session is unavailable, without any new check/effect cap.

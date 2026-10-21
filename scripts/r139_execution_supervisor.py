@@ -34,8 +34,16 @@ EXPECTED_BROWSER = 1
 EXPECTED_GRANTS = 3
 MAX_SECONDS = 20 * 60
 MIN_CLEANUP_SECONDS = 180
+MYSQL_STARTUP_WINDOW_SECONDS = 60
+MYSQL_MAX_PROBES = 45
+MYSQL_PROBE_SPACING_SECONDS = 1
+MYSQL_PROBE_TIMEOUT_SECONDS = 8
+WINDOWS_LISTENER_QUERY_TIMEOUT_SECONDS = 5
 GRANT_MIN_SECONDS = 60
 GRANT_MAX_SECONDS = 24 * 60 * 60
+R139_REPLACEMENT_FIXTURE_NAME = "ccmai-r139-r2-20261021"
+R139_REPLACEMENT_DATABASE = "ccma_r139_r2_20261021"
+R139_REPLACEMENT_RUNTIME_ROOT = Path(".cvf/runtime/r139_integrated_execution_r2_20261021")
 PROMPT_TEXT = "Analyze only fabricated Vietnamese complaint; return the required JSON."
 PROMPT_SHA256 = hashlib.sha256(PROMPT_TEXT.encode("utf-8")).hexdigest()
 ACTIVE_HARD_DEADLINE: float | None = None
@@ -106,6 +114,10 @@ def project_path(relative: str) -> Path:
     return path
 
 
+def replacement_external_evidence_dir() -> Path:
+    return ROOT.parent / ".ccmai_local_evidence" / "r139_execution_proof_20261021" / "fixture_r2"
+
+
 def committed(relative: str) -> Path:
     path = project_path(relative)
     result = subprocess.run(["git", "show", "HEAD:" + relative], cwd=ROOT, capture_output=True, timeout=15)
@@ -149,8 +161,8 @@ def fresh_runtime_admission(relative: str, *, expect_fresh_external: bool = True
     require(value.get("nativeExecutePOST") == EXPECTED_NATIVE and value.get("browserExecutePOST") == EXPECTED_BROWSER and value.get("grantCap") == EXPECTED_GRANTS and value.get("providerCap") == 1 and value.get("automaticRetry") == 0, "EFFECT_CAPS_INVALID")
     verify_browser_receipt(value)
     require(value.get("image") == IMAGE, "IMAGE_MISMATCH")
-    require(value.get("fixtureName", "").startswith("ccmai-r139-"), "FIXTURE_NAME_INVALID")
-    require(value.get("database", "").startswith("ccma_r139_"), "DATABASE_NAME_INVALID")
+    require(value.get("fixtureName") == R139_REPLACEMENT_FIXTURE_NAME, "FIXTURE_NAME_INVALID")
+    require(value.get("database") == R139_REPLACEMENT_DATABASE, "DATABASE_NAME_INVALID")
     require(value.get("dockerHost") == "npipe:////./pipe/dockerDesktopLinuxEngine", "DOCKER_HOST_INVALID")
     require(value.get("deadlineSeconds") == MAX_SECONDS, "LIFECYCLE_LIMIT_INVALID")
     verify_source_pins(value.get("sourceSha256"))
@@ -159,8 +171,13 @@ def fresh_runtime_admission(relative: str, *, expect_fresh_external: bool = True
     for field in ("dockerBinary", "nodeBinary", "powershellBinary"):
         binary_path = Path(value.get(field, ""))
         require(binary_path.is_absolute() and binary_path.is_file() and digest(binary_path) == value.get(field + "Sha256"), field.upper() + "_PIN_MISMATCH")
-    require(Path(value.get("runtimeRoot", "")).resolve().is_relative_to((ROOT / ".cvf/runtime").resolve()), "RUNTIME_ROOT_OUTSIDE_IGNORED_AREA")
-    external = ROOT.parent / ".ccmai_local_evidence" / "r139_execution_proof_20261021" / "fixture"
+    runtime_root_value = value.get("runtimeRoot")
+    require(isinstance(runtime_root_value, str) and runtime_root_value, "RUNTIME_ROOT_INVALID")
+    runtime_root = Path(runtime_root_value)
+    expected_runtime_root = (ROOT / R139_REPLACEMENT_RUNTIME_ROOT).resolve()
+    require(runtime_root.is_absolute() and runtime_root == expected_runtime_root and runtime_root.resolve() == expected_runtime_root, "RUNTIME_ROOT_INVALID")
+    require(runtime_root.resolve().is_relative_to((ROOT / ".cvf/runtime").resolve()), "RUNTIME_ROOT_OUTSIDE_IGNORED_AREA")
+    external = replacement_external_evidence_dir()
     require(value.get("externalEvidenceDir") == str(external), "EXTERNAL_EVIDENCE_PATH_INVALID")
     if expect_fresh_external:
         require(not external.exists(), "EXTERNAL_EVIDENCE_NOT_FRESH")
@@ -192,7 +209,9 @@ def fresh_runtime_admission(relative: str, *, expect_fresh_external: bool = True
 def docker(admission: dict, runtime: Path, *args: str, timeout: int = 20) -> str:
     global COMMAND_SEQUENCE
     cleanup = ACTIVE_CLEANUP_DEADLINE is not None
-    deadline = ACTIVE_CLEANUP_DEADLINE if cleanup else ACTIVE_HARD_DEADLINE
+    deadline = ACTIVE_CLEANUP_DEADLINE if cleanup else (
+        None if ACTIVE_HARD_DEADLINE is None else ACTIVE_HARD_DEADLINE - MIN_CLEANUP_SECONDS
+    )
     if deadline is not None:
         remaining = deadline - time.monotonic()
         require(remaining > 0.05, "CLEANUP_DEADLINE_EXPIRED" if cleanup else "GLOBAL_LIFECYCLE_DEADLINE")
@@ -252,6 +271,22 @@ def excluded_owned(observed: dict, owner: dict) -> dict:
     return {"containers": [row for row in observed["containers"] if row.get("ID") != owner.get("containerId")], "networks": [row for row in observed["networks"] if row.get("ID") != owner.get("networkId")], "volumes": [row for row in observed["volumes"] if row.get("Name") != owner.get("volumeName")]}
 
 
+def canonicalize_protected_inventory(value: dict) -> dict:
+    require(isinstance(value, dict) and set(value) == {"containers", "networks", "volumes"}, "PROTECTED_INVENTORY_INVALID")
+    normalized: dict[str, list[dict]] = {}
+    for collection, rows in value.items():
+        require(isinstance(rows, list) and all(isinstance(row, dict) for row in rows), "PROTECTED_INVENTORY_INVALID")
+        copied_rows = []
+        for row in rows:
+            copied = dict(row)
+            networks = copied.get("Networks")
+            if collection == "containers" and isinstance(networks, str) and "," in networks:
+                copied["Networks"] = ",".join(sorted(member.strip() for member in networks.split(",")))
+            copied_rows.append(copied)
+        normalized[collection] = sorted(copied_rows, key=lambda row: json.dumps(row, sort_keys=True))
+    return normalized
+
+
 def verify_owned_resources(admission: dict, runtime: Path, owner: dict) -> dict:
     name, nonce = owner["fixtureName"], owner["nonce"]
     found = {}
@@ -304,6 +339,66 @@ def recover_partial_owner(admission: dict, runtime: Path, owner: dict) -> dict:
     return owner
 
 
+def wait_mysql_tcp_ready(admission: dict, runtime: Path, owner: dict) -> dict:
+    started = time.monotonic()
+    deadline = started + MYSQL_STARTUP_WINDOW_SECONDS
+    if ACTIVE_HARD_DEADLINE is not None:
+        deadline = min(deadline, ACTIVE_HARD_DEADLINE - MIN_CLEANUP_SECONDS)
+    require(deadline - started > 0.05, "MYSQL_READY_WINDOW_UNAVAILABLE")
+    probes = 0
+    for _ in range(MYSQL_MAX_PROBES):
+        now = time.monotonic()
+        if now >= deadline:
+            break
+        timeout = min(MYSQL_PROBE_TIMEOUT_SECONDS, deadline - now)
+        if timeout <= 0.05:
+            break
+        probes += 1
+        try:
+            result = docker(
+                admission,
+                runtime,
+                "exec",
+                "-e",
+                "MYSQL_PWD=" + owner["fixturePassword"],
+                owner["containerId"],
+                "mysql",
+                "--protocol=tcp",
+                "--host=127.0.0.1",
+                "--port=3306",
+                "--connect-timeout=3",
+                "-uroot",
+                "-D",
+                admission["database"],
+                "-N",
+                "-B",
+                "-e",
+                "SELECT 1",
+                timeout=timeout,
+            )
+        except Hold as exc:
+            if str(exc) == "DOCKER_TIMEOUT_NO_RETRY":
+                raise Hold("MYSQL_TCP_READY_PROBE_TIMEOUT_NO_RETRY") from None
+            if str(exc) != "DOCKER_COMMAND_FAILED":
+                raise
+        else:
+            require(result == "1", "MYSQL_TCP_READY_RESULT_INVALID")
+            require(time.monotonic() <= deadline, "MYSQL_TCP_READY_WINDOW_EXPIRED")
+            return {
+                "status": "PASS_TCP_SELECT_1",
+                "database": admission["database"],
+                "host": "127.0.0.1",
+                "port": 3306,
+                "probeCount": probes,
+                "elapsedSeconds": round(time.monotonic() - started, 3),
+            }
+        remaining = deadline - time.monotonic()
+        if probes >= MYSQL_MAX_PROBES or remaining <= 0:
+            break
+        time.sleep(min(MYSQL_PROBE_SPACING_SECONDS, remaining))
+    raise Hold("MYSQL_TCP_READY_NOT_PROVEN")
+
+
 def start_fixture(admission: dict, runtime: Path, external: Path, owner: dict) -> dict:
     before = inventory(admission, runtime)
     name = admission["fixtureName"]
@@ -330,21 +425,10 @@ def start_fixture(admission: dict, runtime: Path, external: Path, owner: dict) -
     require(len(ports) == 1 and ports[0].get("HostIp") == "127.0.0.1" and str(ports[0].get("HostPort", "")).isdigit(), "OWNED_LOOPBACK_PORT_INVALID")
     owner["port"] = int(ports[0]["HostPort"])
     require(1024 <= owner["port"] <= 65535, "OWNED_PORT_INVALID")
-    # A fresh server can publish its port before MySQL accepts statements.
-    # Bound readiness to six owned container probes; no ambient SQL endpoint.
-    for attempt in range(6):
-        try:
-            result = docker(admission, runtime, "exec", "-e", "MYSQL_PWD=" + owner["fixturePassword"], owner["containerId"], "mysql", "-uroot", "-D", admission["database"], "-N", "-B", "-e", "SELECT 1", timeout=8)
-            if result == "1":
-                break
-        except Hold:
-            if attempt == 5:
-                raise Hold("MYSQL_READY_NOT_PROVEN") from None
-            time.sleep(2)
-    else:
-        raise Hold("MYSQL_READY_NOT_PROVEN")
+    readiness = wait_mysql_tcp_ready(admission, runtime, owner)
+    write_new(runtime / "mysql_ready.json", readiness)
     sql = "CREATE TABLE ccma_r139_fixture_owner (nonce CHAR(32) NOT NULL); INSERT INTO ccma_r139_fixture_owner (nonce) VALUES ('" + nonce + "');"
-    docker(admission, runtime, "exec", "-e", "MYSQL_PWD=" + owner["fixturePassword"], owner["containerId"], "mysql", "-uroot", "-D", admission["database"], "-e", sql, timeout=8)
+    docker(admission, runtime, "exec", "-e", "MYSQL_PWD=" + owner["fixturePassword"], owner["containerId"], "mysql", "--protocol=tcp", "--host=127.0.0.1", "--port=3306", "--connect-timeout=3", "-uroot", "-D", admission["database"], "-e", sql, timeout=8)
     write_new(external / "fixture_identity.json", {"trancheId": "CCMAI-RUNTIME-139", "host": "127.0.0.1", "port": owner["port"], "database": admission["database"], "name": name, "nonce": nonce})
     write_new(runtime / "fixture_started.json", owner)
     return owner
@@ -389,13 +473,109 @@ def process_creation_identity(process: subprocess.Popen) -> str:
     return f"proc-start-ticks-{fields[19]}"
 
 
-def listener_absent(port: int | None) -> dict:
+def windows_listener_absent(port: int, admission: dict, runtime: Path, *, connect_code: int) -> dict:
+    binary = Path(admission.get("powershellBinary", ""))
+    expected_hash = admission.get("powershellBinarySha256")
+    require(binary.is_absolute() and binary.is_file(), "POWERSHELL_BINARY_INVALID")
+    require(isinstance(expected_hash, str) and HEX64.fullmatch(expected_hash) and digest(binary) == expected_hash, "POWERSHELL_BINARY_CHANGED")
+    deadline = ACTIVE_CLEANUP_DEADLINE if ACTIVE_CLEANUP_DEADLINE is not None else ACTIVE_HARD_DEADLINE
+    remaining = WINDOWS_LISTENER_QUERY_TIMEOUT_SECONDS if deadline is None else deadline - time.monotonic()
+    require(remaining > 0.05, "WINDOWS_LISTENER_QUERY_DEADLINE_EXPIRED")
+    timeout = min(WINDOWS_LISTENER_QUERY_TIMEOUT_SECONDS, remaining)
+    script = (
+        "$ErrorActionPreference='Stop';try{"
+        "$found=@(Get-NetTCPConnection -State Listen -ErrorAction Stop | "
+        "Where-Object {$_.LocalPort -eq " + str(port) + "} | "
+        "ForEach-Object {[pscustomobject]@{port=[int]$_.LocalPort;state=[string]$_.State}});"
+        "$receipt=[pscustomobject]@{queryOk=$true;port=" + str(port) + ";listeners=$found};"
+        "$receipt | ConvertTo-Json -Compress -Depth 3;exit 0"
+        "}catch{[Console]::Error.WriteLine('listener_inventory_query_failed');exit 2}"
+    )
+    argv = [str(binary), "-NoProfile", "-NonInteractive", "-Command", script]
+    intent = runtime / f"listener_query_{port}_intent.json"
+    result_path = runtime / f"listener_query_{port}_result.json"
+    write_new(intent, {"argv": argv, "port": port, "timeoutSeconds": timeout, "powershellBinarySha256": expected_hash})
+    try:
+        result = subprocess.run(
+            argv,
+            cwd=ROOT,
+            env=minimal_environment(),
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=timeout,
+            creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0),
+        )
+    except subprocess.TimeoutExpired as exc:
+        stdout = exc.stdout.decode("utf-8", errors="replace") if isinstance(exc.stdout, bytes) else (exc.stdout or "")
+        stderr = exc.stderr.decode("utf-8", errors="replace") if isinstance(exc.stderr, bytes) else (exc.stderr or "")
+        write_new(result_path, {"status": "TIMEOUT_NO_RETRY", "argv": argv, "port": port, "timeoutSeconds": timeout, "stdout": stdout, "stderr": stderr})
+        raise Hold("WINDOWS_LISTENER_QUERY_TIMEOUT_NO_RETRY") from None
+    except OSError as exc:
+        write_new(result_path, {"status": "LAUNCH_FAILED", "argv": argv, "port": port, "timeoutSeconds": timeout, "errorType": type(exc).__name__})
+        raise Hold("WINDOWS_LISTENER_QUERY_FAILED") from None
+
+    raw_stdout = result.stdout.decode("utf-8", errors="replace") if isinstance(result.stdout, bytes) else (result.stdout or "")
+    raw_stderr = result.stderr.decode("utf-8", errors="replace") if isinstance(result.stderr, bytes) else (result.stderr or "")
+    payload = None
+    parse_error = None
+    try:
+        payload = json.loads(raw_stdout)
+    except (TypeError, json.JSONDecodeError):
+        parse_error = "JSON_INVALID"
+    valid_shape = (
+        isinstance(payload, dict)
+        and set(payload) == {"queryOk", "port", "listeners"}
+        and payload.get("queryOk") is True
+        and type(payload.get("port")) is int
+        and payload.get("port") == port
+        and isinstance(payload.get("listeners"), list)
+    )
+    status = "PASS_ZERO_LISTENERS" if result.returncode == 0 and not raw_stderr and valid_shape and payload["listeners"] == [] else "HOLD"
+    write_new(
+        result_path,
+        {
+            "status": status,
+            "argv": argv,
+            "port": port,
+            "timeoutSeconds": timeout,
+            "returnCode": result.returncode,
+            "stdout": raw_stdout,
+            "stderr": raw_stderr,
+            "parseError": parse_error,
+            "parsed": payload,
+        },
+    )
+    require(result.returncode == 0, "WINDOWS_LISTENER_QUERY_FAILED")
+    require(not raw_stderr, "WINDOWS_LISTENER_QUERY_STDERR")
+    require(valid_shape, "WINDOWS_LISTENER_QUERY_INVALID")
+    require(payload["listeners"] == [], "WINDOWS_LISTENER_PRESENT")
+    return {
+        "host": "127.0.0.1",
+        "port": port,
+        "connectEx": connect_code,
+        "listenerAbsent": True,
+        "evidenceSource": "pinned_powershell_tcp_listener_inventory",
+        "powershellBinarySha256": expected_hash,
+        "queryExitCode": result.returncode,
+        "queryMatchedPort": payload["port"],
+        "queryListenerCount": 0,
+        "queryReceiptPath": str(result_path),
+        "queryReceiptSha256": digest(result_path),
+    }
+
+
+def listener_absent(port: int | None, admission: dict | None = None, runtime: Path | None = None) -> dict:
     require(isinstance(port, int) and 1024 <= port <= 65535, "LISTENER_PORT_UNKNOWN")
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:
         client.settimeout(2)
         code = client.connect_ex(("127.0.0.1", port))
-    require(code in (errno.ECONNREFUSED, 10061), "LISTENER_ABSENCE_UNPROVEN")
-    return {"host": "127.0.0.1", "port": port, "connectEx": code, "listenerAbsent": True}
+    if code in (errno.ECONNREFUSED, 10061):
+        return {"host": "127.0.0.1", "port": port, "connectEx": code, "listenerAbsent": True, "evidenceSource": "tcp_connect_refused"}
+    require(code == 10035, "LISTENER_ABSENCE_UNPROVEN")
+    require(isinstance(admission, dict) and isinstance(runtime, Path), "WINDOWS_LISTENER_QUERY_CONTEXT_MISSING")
+    return windows_listener_absent(port, admission, runtime, connect_code=code)
 
 
 def stop_child(runtime: Path, name: str, process: subprocess.Popen | None) -> dict:
@@ -446,11 +626,31 @@ def stop_fixture(admission: dict, runtime: Path, owner: dict) -> dict:
     state = after.get("State", {})
     require(state.get("Running") is False and state.get("Pid") == 0, "CONTAINER_NOT_TERMINAL")
     require(after.get("NetworkSettings", {}).get("Ports", {}).get("3306/tcp") in (None, []), "CONTAINER_PORT_STILL_PUBLISHED")
-    protected = excluded_owned(inventory(admission, runtime), owner)
-    require(protected == owner["protectedBefore"], "PROTECTED_INVENTORY_CHANGED")
+    protected_before_raw = owner["protectedBefore"]
+    protected_after_raw = excluded_owned(inventory(admission, runtime), owner)
+    protected_before = canonicalize_protected_inventory(protected_before_raw)
+    protected_after = canonicalize_protected_inventory(protected_after_raw)
+    comparison = {
+        "kind": "PROTECTED_INVENTORY_RAW_AND_NETWORKS_ORDER_COMPARISON",
+        "rawBefore": protected_before_raw,
+        "rawAfter": protected_after_raw,
+        "canonicalBefore": protected_before,
+        "canonicalAfter": protected_after,
+        "canonicalEqual": protected_before == protected_after,
+    }
+    comparison_path = runtime / "protected_inventory_comparison.json"
+    write_new(comparison_path, comparison)
+    require(comparison["canonicalEqual"], "PROTECTED_INVENTORY_CHANGED")
     if ownership_error is not None:
         raise Hold("RELATED_RESOURCE_OWNERSHIP_UNPROVEN") from ownership_error
-    return {"containerId": owner["containerId"], "running": False, "pid": 0, "protectedEqual": True}
+    return {
+        "containerId": owner["containerId"],
+        "running": False,
+        "pid": 0,
+        "protectedEqual": True,
+        "protectedComparisonPath": str(comparison_path),
+        "protectedComparisonSha256": digest(comparison_path),
+    }
 
 
 def wait_go_ready(process: subprocess.Popen, log: Path, deadline: float) -> str:
@@ -701,12 +901,12 @@ def run(relative: str) -> None:
         if children.get("vite") is not None and not outcome.get("vite", {}).get("waitObserved"):
             errors.append("VITE_EXIT_UNOBSERVED")
         try:
-            outcome["apiListener"] = listener_absent(api_port)
+            outcome["apiListener"] = listener_absent(api_port, admission, runtime)
         except Exception as exc:
             errors.append("API_LISTENER_CLOSE_UNPROVEN:" + type(exc).__name__)
         if children.get("vite") is not None:
             try:
-                outcome["viteListener"] = listener_absent(admission["vitePort"])
+                outcome["viteListener"] = listener_absent(admission["vitePort"], admission, runtime)
             except Exception as exc:
                 errors.append("VITE_LISTENER_CLOSE_UNPROVEN:" + type(exc).__name__)
         if children.get("go") is None or not (external / "go_terminal.json").is_file():
@@ -739,7 +939,7 @@ def run(relative: str) -> None:
             errors.append("PARTIAL_RESOURCE_PRESERVED_HOLD")
         if owner.get("port"):
             try:
-                outcome["dbListener"] = listener_absent(owner["port"])
+                outcome["dbListener"] = listener_absent(owner["port"], admission, runtime)
             except Exception as exc:
                 errors.append("DB_LISTENER_CLOSE_UNPROVEN:" + type(exc).__name__)
         try:

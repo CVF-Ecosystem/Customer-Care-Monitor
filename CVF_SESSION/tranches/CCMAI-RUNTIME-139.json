@@ -83,10 +83,10 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
   "buildCommit": "4dfba9a3b5330c1b775b7e20d8e66cb8789a229d",
   "reviewEvidence": [
     "docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md",
@@ -95,9 +95,11 @@
     "docs/reviews/R139_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md",
     "docs/reviews/probes/r139_integrated_20261021/root_final_source_review.json",
     "docs/reviews/R139_RUNTIME_SETUP_FAILURE_AND_COST_DISPOSITION_2026-10-21.md",
-    "docs/reviews/probes/r139_integrated_20261021/integrated_runtime_failure.json"
+    "docs/reviews/probes/r139_integrated_20261021/integrated_runtime_failure.json",
+    "docs/reviews/R139_CONTINUATION_SOURCE_REVIEW_2026-10-21.md",
+    "docs/reviews/probes/r139_integrated_20261021/r2_root_source_review.json"
   ],
-  "disposition": "CCMAI-RUNTIME-139 Owner approved one consolidated RF1-RF4 source repair and one replacement fixture campaign, cumulative max1USD/one actual API unchanged(provider0). Luna repairs only three admitted source paths with workerGo1/Python1; Root independent source review and remainingPython1. Runtime remains0 until new exact committed admission and independent review; old setupHOLD/fixture1/1 preserved, no old restart/reset/helper tranche. Facebook/Zalo OA parked.",
+  "disposition": "CCMAI-RUNTIME-139 replacement source review ready: RootPython28/28PASS and workerGo compile-onlyPASS, original workerPython27/28FAIL/testsetup correction retained. One approved RF1-RF4 round complete; prepare exact fresh source/binary/runtime/name/database/deadline admission and independent runtime review before sole replacement campaign. Provider0/cumulative1USD-oneAPI unchanged; original setupHOLD/firstfixture preserved. No extra source round/check or helper tranche; Facebook/Zalo OA parked.",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -110,7 +112,8 @@
     "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "actualUse": {
     "status": "HOLD_SETUP_NATIVE_BROWSER_NOT_RUN",
@@ -247,5 +250,18 @@
     "reviewCostDisposition": "REVIEW_COST_ESCALATION_REQUIRED",
     "proposal": "docs/reviews/probes/r139_integrated_20261021/bounded_repair_and_fixture_continuation_proposal.json"
   },
-  "sourceBuildCommit": "34facc34c26ae8eb8737ec0f8384139e832949af"
+  "sourceBuildCommit": "34facc34c26ae8eb8737ec0f8384139e832949af",
+  "x-replacementSourceReview": {
+    "evidence": "docs/reviews/probes/r139_integrated_20261021/r2_root_source_review.json",
+    "report": "docs/reviews/R139_CONTINUATION_SOURCE_REVIEW_2026-10-21.md",
+    "sourceCheckCapsSpent": {
+      "workerGo": 1,
+      "workerPython": 1,
+      "rootRemainingPython": 1
+    },
+    "rootPython": "28PASS",
+    "workerPythonOriginal": "27PASS1ERROR preserved",
+    "repairRound": "one owner-approved continuation round completed; previous2 rounds preserved",
+    "runtime": "NOT_RUN"
+  }
 }

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 Owner approved one consolidated RF1-RF4 source repair and one replacement fixture campaign, cumulative max1USD/one actual API unchanged(provider0). Luna repairs only three admitted source paths with workerGo1/Python1; Root independent source review and remainingPython1. Runtime remains0 until new exact committed admission and independent review; old setupHOLD/fixture1/1 preserved, no old restart/reset/helper tranche. Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 replacement source review ready: RootPython28/28PASS and workerGo compile-onlyPASS, original workerPython27/28FAIL/testsetup correction retained. One approved RF1-RF4 round complete; prepare exact fresh source/binary/runtime/name/database/deadline admission and independent runtime review before sole replacement campaign. Provider0/cumulative1USD-oneAPI unchanged; original setupHOLD/firstfixture preserved. No extra source round/check or helper tranche; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna Max REPAIR_WORKER",
+  "activeRole": "Root independent source REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD",
   "updatedAt": "2026-10-21",
   "x-resolvedCoreCommit": "b69e1088978e8c90ac58a2243fcf8f90d0f857ed",
   "x-ownerRoadmapDiscipline": {
@@ -2654,7 +2654,20 @@
   "x-r139OwnerContinuation": {
     "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-OWNER-CONTINUATION-ADMISSION.json",
     "ownerReply": "Duyệt 1 vòng sửa và 1 fixture thay thế theo phương án",
-    "status": "AUTHORIZED_SOURCE_REPAIR_RUNTIME_PENDING_EXACT_ADMISSION",
+    "status": "SOURCE_REVIEW_READY_RUNTIME_PENDING_EXACT_ADMISSION",
     "providerCallsSoFar": 0
+  },
+  "x-r139ReplacementSourceReview": {
+    "evidence": "docs/reviews/probes/r139_integrated_20261021/r2_root_source_review.json",
+    "report": "docs/reviews/R139_CONTINUATION_SOURCE_REVIEW_2026-10-21.md",
+    "sourceCheckCapsSpent": {
+      "workerGo": 1,
+      "workerPython": 1,
+      "rootRemainingPython": 1
+    },
+    "rootPython": "28PASS",
+    "workerPythonOriginal": "27PASS1ERROR preserved",
+    "repairRound": "one owner-approved continuation round completed; previous2 rounds preserved",
+    "runtime": "NOT_RUN"
   }
 }

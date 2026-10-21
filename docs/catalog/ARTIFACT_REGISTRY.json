@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Current R139 source-preparation accepted only; overall PARKED REVIEW, browser/runtime HOLD, no FREEZE."
+      "description": "Current R139 replacement source review ready; runtime needs new exact admission; original setupHOLD preserved, fullM3 OPEN."
     },
     {
       "id": "r060-work-order",
@@ -35332,6 +35332,48 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-OWNER-CONTINUATION-ADMISSION.json",
       "status": "ACTIVE",
       "description": "Explicit Owner single RF1-RF4 repair/replacement-fixture continuation; cumulative1USD/one API unchanged; runtime still needs exact admission."
+    },
+    {
+      "id": "r139-r139-continuation-source-review-2026-10-21",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CONTINUATION_SOURCE_REVIEW_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance."
+    },
+    {
+      "id": "r139-r2-root-source-review",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r2_root_source_review.json",
+      "status": "ACTIVE",
+      "description": "R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance."
+    },
+    {
+      "id": "r139-r139-continuation-source-return-2026-10-21",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CONTINUATION_SOURCE_RETURN_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance."
+    },
+    {
+      "id": "r139-r2-worker-check-reservation",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r2_worker_check_reservation.json",
+      "status": "ACTIVE",
+      "description": "R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance."
+    },
+    {
+      "id": "r139-r2-worker-source-return",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r2_worker_source_return.json",
+      "status": "ACTIVE",
+      "description": "R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance."
+    },
+    {
+      "id": "r139-r2-root-check-reservation",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r2_root_check_reservation.json",
+      "status": "ACTIVE",
+      "description": "R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance."
     }
   ]
 }

@@ -1,0 +1,28 @@
+{
+  "reservedAtUTC": "2026-10-21T10:21:13.207121+00:00",
+  "rootExistingPythonSlot": {
+    "previousUsed": 1,
+    "totalOriginalCap": 2,
+    "thisReserved": 1,
+    "remainingAfterReservation": 0
+  },
+  "workerPythonSpent": 1,
+  "workerOriginalFailureRetained": true,
+  "sameUnreturnedConsolidatedRepair": "Minimal test-journal directory setup correction only; independent Sol agrees same authority, no additional cap or new repair round.",
+  "sourceSha256": {
+    "scripts/r139_execution_supervisor.py": "f71a54140d310102defc1b0b05ca65c9692e3380553b60b3a865c4974e7bb571",
+    "scripts/tests/test_r139_execution_supervisor.py": "97ddcee736912650b88bbbc4f1b5fe91eebe3345deb8944c4780082a64b33765",
+    "backend/api/handlers/intervention_execution_browser_test.go": "061088a9cd45b7e24c4bea5c0861819a8f9bb384d25d0ef5d76b2181e9f7e88d"
+  },
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "scripts/tests",
+    "-p",
+    "test_r139_execution_supervisor.py"
+  ]
+}

@@ -4,6 +4,7 @@ from __future__ import annotations
 import importlib.util
 import json
 from pathlib import Path
+import subprocess
 import tempfile
 import time
 import unittest
@@ -46,6 +47,246 @@ class R139SupervisorPureTests(unittest.TestCase):
         result = module.excluded_owned(observed, {"containerId": "new", "networkId": "new-net", "volumeName": "ccmai-r139-owned"})
         self.assertEqual(result, {"containers": observed["containers"][:1], "networks": observed["networks"][:1], "volumes": observed["volumes"][:1]})
         self.assertEqual(len(observed["containers"]), 2)
+
+    def test_protected_inventory_normalizes_only_network_membership_order(self):
+        before = {
+            "containers": [{"ID": "protected-id", "Networks": "bridge, custom", "Status": "Up 2 minutes", "RunningFor": "3 minutes"}],
+            "networks": [{"ID": "network-id", "Name": "protected"}],
+            "volumes": [{"Name": "protected-volume"}],
+        }
+        after = {
+            "containers": [{"ID": "protected-id", "Networks": "custom,bridge", "Status": "Up 2 minutes", "RunningFor": "3 minutes"}],
+            "networks": [{"ID": "network-id", "Name": "protected"}],
+            "volumes": [{"Name": "protected-volume"}],
+        }
+        original_before = json.loads(json.dumps(before))
+        self.assertEqual(module.canonicalize_protected_inventory(before), module.canonicalize_protected_inventory(after))
+        self.assertEqual(before, original_before)
+        changed_status = json.loads(json.dumps(after))
+        changed_status["containers"][0]["Status"] = "Up 4 minutes"
+        self.assertNotEqual(module.canonicalize_protected_inventory(before), module.canonicalize_protected_inventory(changed_status))
+
+    def test_mysql_readiness_uses_tcp_matching_database_and_retries_not_ready_only(self):
+        admission = {"database": "ccma_r139_r2_20261021"}
+        owner = {"containerId": "owned-container", "fixturePassword": "synthetic-password"}
+        with patch.object(module, "ACTIVE_HARD_DEADLINE", None), patch.object(
+            module, "docker", side_effect=[module.Hold("DOCKER_COMMAND_FAILED"), "1"]
+        ) as docker, patch.object(module.time, "sleep") as sleep:
+            result = module.wait_mysql_tcp_ready(admission, Path("ignored-runtime"), owner)
+        self.assertEqual(result["status"], "PASS_TCP_SELECT_1")
+        self.assertEqual(result["database"], admission["database"])
+        self.assertEqual(result["probeCount"], 2)
+        self.assertEqual(docker.call_count, 2)
+        args = docker.call_args_list[0].args
+        self.assertIn("--protocol=tcp", args)
+        self.assertIn("--host=127.0.0.1", args)
+        self.assertIn("--port=3306", args)
+        self.assertIn(admission["database"], args)
+        self.assertIn("SELECT 1", args)
+        self.assertLessEqual(docker.call_args_list[0].kwargs["timeout"], module.MYSQL_PROBE_TIMEOUT_SECONDS)
+        sleep.assert_called_once_with(module.MYSQL_PROBE_SPACING_SECONDS)
+
+    def test_mysql_readiness_stops_on_probe_timeout_without_retry(self):
+        with patch.object(module, "ACTIVE_HARD_DEADLINE", None), patch.object(
+            module, "docker", side_effect=module.Hold("DOCKER_TIMEOUT_NO_RETRY")
+        ) as docker, patch.object(module.time, "sleep") as sleep:
+            with self.assertRaisesRegex(module.Hold, "MYSQL_TCP_READY_PROBE_TIMEOUT_NO_RETRY"):
+                module.wait_mysql_tcp_ready({"database": "ccma_r139_r2_20261021"}, Path("ignored-runtime"), {"containerId": "owned", "fixturePassword": "synthetic"})
+        docker.assert_called_once()
+        sleep.assert_not_called()
+
+    def test_mysql_readiness_late_success_is_not_accepted(self):
+        class FakeClock:
+            now = 0.0
+            def monotonic(self): return self.now
+        clock = FakeClock()
+        def late_success(*args, **kwargs):
+            clock.now = module.MYSQL_STARTUP_WINDOW_SECONDS + 0.01
+            return "1"
+        with patch.object(module, "ACTIVE_HARD_DEADLINE", None), patch.object(
+            module.time, "monotonic", side_effect=clock.monotonic
+        ), patch.object(module, "docker", side_effect=late_success) as docker:
+            with self.assertRaisesRegex(module.Hold, "MYSQL_TCP_READY_WINDOW_EXPIRED"):
+                module.wait_mysql_tcp_ready(
+                    {"database": "ccma_r139_r2_20261021"},
+                    Path("ignored-runtime"),
+                    {"containerId": "owned", "fixturePassword": "synthetic"},
+                )
+        docker.assert_called_once()
+
+    def test_mysql_readiness_enforces_probe_cap_and_global_cleanup_reserve(self):
+        class FakeClock:
+            def __init__(self, now): self.now = now
+            def monotonic(self): return self.now
+            def sleep(self, seconds): self.now += seconds
+        clock = FakeClock(0.0)
+        with patch.object(module, "ACTIVE_HARD_DEADLINE", None), patch.object(module, "MYSQL_MAX_PROBES", 45), patch.object(
+            module.time, "monotonic", side_effect=clock.monotonic
+        ), patch.object(module.time, "sleep", side_effect=clock.sleep), patch.object(
+            module, "docker", side_effect=module.Hold("DOCKER_COMMAND_FAILED")
+        ) as docker:
+            with self.assertRaisesRegex(module.Hold, "MYSQL_TCP_READY_NOT_PROVEN"):
+                module.wait_mysql_tcp_ready({"database": "ccma_r139_r2_20261021"}, Path("ignored-runtime"), {"containerId": "owned", "fixturePassword": "synthetic"})
+        self.assertEqual(docker.call_count, 45)
+
+        clock = FakeClock(100.0)
+        with patch.object(module, "ACTIVE_HARD_DEADLINE", 280.5), patch.object(
+            module.time, "monotonic", side_effect=clock.monotonic
+        ), patch.object(module.time, "sleep", side_effect=clock.sleep), patch.object(
+            module, "docker", side_effect=module.Hold("DOCKER_COMMAND_FAILED")
+        ) as docker:
+            with self.assertRaisesRegex(module.Hold, "MYSQL_TCP_READY_NOT_PROVEN"):
+                module.wait_mysql_tcp_ready({"database": "ccma_r139_r2_20261021"}, Path("ignored-runtime"), {"containerId": "owned", "fixturePassword": "synthetic"})
+        docker.assert_called_once()
+        self.assertLessEqual(docker.call_args.kwargs["timeout"], 0.5)
+
+    def test_windows_listener_inventory_accepts_only_pinned_exact_zero(self):
+        class FakeSocket:
+            def __enter__(self): return self
+            def __exit__(self, *args): return False
+            def settimeout(self, timeout): self.timeout = timeout
+            def connect_ex(self, address): self.address = address; return 10035
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            binary = root / "powershell.exe"
+            binary.write_bytes(b"pinned powershell fixture executable")
+            runtime = root / "runtime"
+            runtime.mkdir()
+            port = 52402
+            output = json.dumps({"queryOk": True, "port": port, "listeners": []})
+            result = SimpleNamespace(returncode=0, stdout=output, stderr="")
+            admission = {"powershellBinary": str(binary), "powershellBinarySha256": module.digest(binary)}
+            with patch.object(module.socket, "socket", return_value=FakeSocket()), patch.object(
+                module.subprocess, "run", return_value=result
+            ) as run, patch.object(module, "ACTIVE_CLEANUP_DEADLINE", None), patch.object(module, "ACTIVE_HARD_DEADLINE", None):
+                observed = module.listener_absent(port, admission, runtime)
+            self.assertTrue(observed["listenerAbsent"])
+            self.assertEqual(observed["evidenceSource"], "pinned_powershell_tcp_listener_inventory")
+            command = run.call_args.args[0]
+            self.assertEqual(command[0], str(binary))
+            self.assertIn("-NoProfile", command)
+            self.assertIn("-NonInteractive", command)
+            script = command[-1]
+            self.assertIn("Get-NetTCPConnection -State Listen", script)
+            self.assertNotIn("-LocalPort", script)
+            self.assertIn(f"$_.LocalPort -eq {port}", script)
+            self.assertTrue((runtime / f"listener_query_{port}_intent.json").is_file())
+            receipt = json.loads((runtime / f"listener_query_{port}_result.json").read_text(encoding="utf-8"))
+            self.assertEqual(receipt["status"], "PASS_ZERO_LISTENERS")
+            self.assertEqual(receipt["stdout"], output)
+
+    def test_windows_listener_inventory_nonzero_result_holds(self):
+        class FakeSocket:
+            def __enter__(self): return self
+            def __exit__(self, *args): return False
+            def settimeout(self, timeout): pass
+            def connect_ex(self, address): return 10035
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            binary = root / "powershell.exe"
+            binary.write_bytes(b"pinned powershell fixture executable")
+            runtime = root / "runtime"
+            runtime.mkdir()
+            port = 52402
+            output = json.dumps({"queryOk": True, "port": port, "listeners": [{"port": port, "state": "Listen"}]})
+            admission = {"powershellBinary": str(binary), "powershellBinarySha256": module.digest(binary)}
+            with patch.object(module.socket, "socket", return_value=FakeSocket()), patch.object(
+                module.subprocess, "run", return_value=SimpleNamespace(returncode=0, stdout=output, stderr="")
+            ) as run, patch.object(module, "ACTIVE_CLEANUP_DEADLINE", None), patch.object(module, "ACTIVE_HARD_DEADLINE", None):
+                with self.assertRaisesRegex(module.Hold, "WINDOWS_LISTENER_PRESENT"):
+                    module.listener_absent(port, admission, runtime)
+            run.assert_called_once()
+            receipt = json.loads((runtime / f"listener_query_{port}_result.json").read_text(encoding="utf-8"))
+            self.assertEqual(receipt["status"], "HOLD")
+
+    def test_windows_listener_inventory_malformed_or_error_result_holds(self):
+        class FakeSocket:
+            def __enter__(self): return self
+            def __exit__(self, *args): return False
+            def settimeout(self, timeout): pass
+            def connect_ex(self, address): return 10035
+        port = 52402
+        valid_zero = json.dumps({"queryOk": True, "port": port, "listeners": []})
+        cases = [
+            (SimpleNamespace(returncode=0, stdout="not-json", stderr=""), "WINDOWS_LISTENER_QUERY_INVALID"),
+            (SimpleNamespace(returncode=0, stdout=valid_zero, stderr="warning"), "WINDOWS_LISTENER_QUERY_STDERR"),
+            (SimpleNamespace(returncode=2, stdout=valid_zero, stderr="query failed"), "WINDOWS_LISTENER_QUERY_FAILED"),
+        ]
+        for result, error in cases:
+            with self.subTest(error=error), tempfile.TemporaryDirectory() as name:
+                root = Path(name)
+                binary = root / "powershell.exe"
+                binary.write_bytes(b"pinned powershell fixture executable")
+                runtime = root / "runtime"
+                runtime.mkdir()
+                admission = {"powershellBinary": str(binary), "powershellBinarySha256": module.digest(binary)}
+                with patch.object(module.socket, "socket", return_value=FakeSocket()), patch.object(
+                    module.subprocess, "run", return_value=result
+                ) as run, patch.object(module, "ACTIVE_CLEANUP_DEADLINE", None), patch.object(module, "ACTIVE_HARD_DEADLINE", None):
+                    with self.assertRaisesRegex(module.Hold, error):
+                        module.listener_absent(port, admission, runtime)
+                run.assert_called_once()
+
+    def test_windows_listener_inventory_timeout_holds_without_retry(self):
+        class FakeSocket:
+            def __enter__(self): return self
+            def __exit__(self, *args): return False
+            def settimeout(self, timeout): pass
+            def connect_ex(self, address): return 10035
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            binary = root / "powershell.exe"
+            binary.write_bytes(b"pinned powershell fixture executable")
+            runtime = root / "runtime"
+            runtime.mkdir()
+            admission = {"powershellBinary": str(binary), "powershellBinarySha256": module.digest(binary)}
+            with patch.object(module.socket, "socket", return_value=FakeSocket()), patch.object(
+                module.subprocess, "run", side_effect=subprocess.TimeoutExpired(["powershell.exe"], 5)
+            ) as run, patch.object(module, "ACTIVE_CLEANUP_DEADLINE", None), patch.object(module, "ACTIVE_HARD_DEADLINE", None):
+                with self.assertRaisesRegex(module.Hold, "WINDOWS_LISTENER_QUERY_TIMEOUT_NO_RETRY"):
+                    module.listener_absent(52402, admission, runtime)
+            run.assert_called_once()
+            receipt = json.loads((runtime / "listener_query_52402_result.json").read_text(encoding="utf-8"))
+            self.assertEqual(receipt["status"], "TIMEOUT_NO_RETRY")
+
+    def test_windows_listener_receipts_are_port_qualified(self):
+        class FakeSocket:
+            def __enter__(self): return self
+            def __exit__(self, *args): return False
+            def settimeout(self, timeout): pass
+            def connect_ex(self, address): return 10035
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            binary = root / "powershell.exe"
+            binary.write_bytes(b"pinned powershell fixture executable")
+            runtime = root / "runtime"
+            runtime.mkdir()
+            ports = (52402, 56961)
+            admission = {"powershellBinary": str(binary), "powershellBinarySha256": module.digest(binary)}
+            def query(argv, **kwargs):
+                port = next(port for port in ports if f"LocalPort -eq {port}" in argv[-1])
+                stdout = json.dumps({"queryOk": True, "port": port, "listeners": []})
+                return SimpleNamespace(returncode=0, stdout=stdout, stderr="")
+            with patch.object(module.socket, "socket", side_effect=[FakeSocket(), FakeSocket()]), patch.object(
+                module.subprocess, "run", side_effect=query
+            ) as run, patch.object(module, "ACTIVE_CLEANUP_DEADLINE", None), patch.object(module, "ACTIVE_HARD_DEADLINE", None):
+                results = [module.listener_absent(port, admission, runtime) for port in ports]
+            self.assertEqual(run.call_count, 2)
+            self.assertTrue(all(result["listenerAbsent"] for result in results))
+            for port in ports:
+                self.assertTrue((runtime / f"listener_query_{port}_intent.json").is_file())
+                receipt = json.loads((runtime / f"listener_query_{port}_result.json").read_text(encoding="utf-8"))
+                self.assertEqual(receipt["status"], "PASS_ZERO_LISTENERS")
+
+    def test_replacement_evidence_path_is_fixture_r2(self):
+        with tempfile.TemporaryDirectory() as name:
+            project = Path(name) / "Customer-Care-Monitor-AI"
+            project.mkdir()
+            with patch.object(module, "ROOT", project):
+                self.assertEqual(
+                    module.replacement_external_evidence_dir(),
+                    project.parent / ".ccmai_local_evidence" / "r139_execution_proof_20261021" / "fixture_r2",
+                )
 
     def test_owned_container_rejects_label_or_id_mismatch(self):
         observed = [{"Id": "a" * 64, "Name": "/ccmai-r139-owned", "Config": {"Labels": {"ccmai.tranche": "CCMAI-RUNTIME-139", "ccmai.owner": "wrong"}}}]
@@ -154,11 +395,33 @@ class R139SupervisorPureTests(unittest.TestCase):
                 self.assertNotIn("HTTP_PROXY", env)
                 self.assertTrue(module.CLEANUP_ERRORS)
                 module.ACTIVE_CLEANUP_DEADLINE = None
-                module.ACTIVE_HARD_DEADLINE = time.monotonic() + 5
+                module.ACTIVE_HARD_DEADLINE = time.monotonic() + module.MIN_CLEANUP_SECONDS + 5
                 with patch.object(module, "digest", return_value="a" * 64), patch.object(module, "write_new", side_effect=OSError("disk full")), patch.object(module.subprocess, "run") as run:
                     with self.assertRaises(OSError):
                         module.docker(admission, runtime, "create", "owned-container")
                     run.assert_not_called()
+            finally:
+                module.ACTIVE_CLEANUP_DEADLINE, module.ACTIVE_HARD_DEADLINE = old_cleanup, old_hard
+
+    def test_non_cleanup_docker_command_preserves_cleanup_reserve(self):
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            binary = root / "docker.exe"
+            binary.write_bytes(b"pinned synthetic executable placeholder")
+            runtime = root / "runtime"
+            runtime.mkdir()
+            (runtime / "commands").mkdir()
+            admission = {"dockerBinary": str(binary), "dockerBinarySha256": "a" * 64, "dockerHost": "npipe:////./pipe/dockerDesktopLinuxEngine"}
+            result = SimpleNamespace(returncode=0, stdout=b"ok", stderr=b"")
+            old_cleanup, old_hard = module.ACTIVE_CLEANUP_DEADLINE, module.ACTIVE_HARD_DEADLINE
+            try:
+                module.ACTIVE_CLEANUP_DEADLINE = None
+                module.ACTIVE_HARD_DEADLINE = time.monotonic() + module.MIN_CLEANUP_SECONDS + 5
+                with patch.object(module, "digest", return_value="a" * 64), patch.object(module, "write_new"), patch.object(
+                    module.subprocess, "run", return_value=result
+                ) as run:
+                    self.assertEqual(module.docker(admission, runtime, "inspect", "owned-container", timeout=20), "ok")
+                self.assertLessEqual(run.call_args.kwargs["timeout"], 5)
             finally:
                 module.ACTIVE_CLEANUP_DEADLINE, module.ACTIVE_HARD_DEADLINE = old_cleanup, old_hard
 

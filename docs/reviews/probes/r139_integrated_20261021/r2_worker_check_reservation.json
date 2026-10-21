@@ -1,0 +1,44 @@
+{
+  "kind": "R139_R2_WORKER_OFFLINE_CHECK_RESERVATION",
+  "reservedAtUTC": "2026-10-21 10:15:59 UTC",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-OWNER-CONTINUATION-ADMISSION.json",
+  "authorityCommit": "8415842cedd8abae76676df7b107119c4f3a009b",
+  "worker": "Luna Max delegated source repair worker",
+  "sourcePaths": {
+    "scripts/r139_execution_supervisor.py": "f71a54140d310102defc1b0b05ca65c9692e3380553b60b3a865c4974e7bb571",
+    "scripts/tests/test_r139_execution_supervisor.py": "1e706203de5a380b1a18cd2cfd436438533e2e9b10993ae19965630a6e1c3ece",
+    "backend/api/handlers/intervention_execution_browser_test.go": "061088a9cd45b7e24c4bea5c0861819a8f9bb384d25d0ef5d76b2181e9f7e88d"
+  },
+  "checks": {
+    "purePythonUnittest": {
+      "remainingInvocations": 1,
+      "command": "python -B -m unittest discover -s scripts/tests -p \"test_r139_execution_supervisor.py\"",
+      "pythonPath": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+      "pythonSha256": "a2a4eff8d0b0c845284c607d50a3b5b966ac5a3121736a2e38e165bd6644d9fe",
+      "rawLog": ".cvf/runtime/r139_integrated_execution_r2_20261021_source_checks/python_unittest.log"
+    },
+    "offlineGoCompileOnly": {
+      "remainingInvocations": 1,
+      "command": "$env:GOPROXY='off'; $env:GOSUMDB='off'; $env:GOTOOLCHAIN='local'; go -C backend test -c -o ../.cvf/runtime/r139_integrated_execution_r2_20261021_source_checks/intervention_execution_browser.test.exe ./api/handlers",
+      "goPath": "C:\\Program Files\\Go\\bin\\go.exe",
+      "goSha256": "7d828191ba32519a9c9361789ab647486236ed45c660889196c7770a8ff1985c",
+      "binary": ".cvf/runtime/r139_integrated_execution_r2_20261021_source_checks/intervention_execution_browser.test.exe",
+      "rawLog": ".cvf/runtime/r139_integrated_execution_r2_20261021_source_checks/go_compile.log"
+    }
+  },
+  "sourceCheckOutputDirectory": ".cvf/runtime/r139_integrated_execution_r2_20261021_source_checks",
+  "reservedForFutureRuntimeAdmissionAndLeftFresh": ".cvf/runtime/r139_integrated_execution_r2_20261021",
+  "checksExecutedAtReservation": 0,
+  "automaticRetry": 0,
+  "sourceStageEffects": {
+    "runtime": 0,
+    "keyRead": 0,
+    "network": 0,
+    "Docker": 0,
+    "provider": 0,
+    "database": 0,
+    "browser": 0
+  },
+  "firstCheckFailureDisposition": "HOLD; no retry or replacement invocation"
+}
