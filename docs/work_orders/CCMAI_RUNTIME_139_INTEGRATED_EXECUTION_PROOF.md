@@ -12,7 +12,7 @@ dispatchKind: INITIAL
 
 ## Current authority and acceptance target
 
-Current stage: CCMAI-RUNTIME-139 ACCEPTED_BOUNDED_SOURCE_ONLY at b8ba2522: correctedGo6/6 zero skips, workerPython30/30 and independentRootPython30/30 PASS; check-only caps consumed, source edits/recompile0. Integrated tranche stays CHANGES_REQUIRED/REVIEW/FREEZE OPEN: original MANUAL_HOLD/cleanupHOLD retained, API slot1/1 MAY_HAVE_STARTED consumed,response/billing UNKNOWN. Documentary next-runtime readiness only: used fixture_r2 path still pinned, fresh path source/effect/cost authority needed before any new source/check/resource/key/DB/browser/network/provider. E05/E06/fullM3 OPEN; Facebook/Zalo OA parked.
+Current stage: CCMAI-RUNTIME-139 accepted source/IO preserved at b8ba2522, runtime CHANGES_REQUIRED. Root/Sol documentary consolidated fresh-r3 proposal only: exact7 identity/path/test literals in3sources, finite checks, one conditional fresh campaign/native8/browser1 and proposedNEW API1/additionalUSD1. No new source/check/key/DB/Docker/fixture/browser/network/provider authority until explicit Owner combined grant and committed stages. Old API1/1 MAY_HAVE_STARTED consumed/unknownbillingresponse and all HOLDs immutable. E05/E06/fullM3 OPEN, Facebook/Zalo OA parked.
 
 Historical initial preparation boundary: Owner `tiếp` continues G0 in the canonical delivery plan. Immutable dispatcher seed `642f5bd026dfe31e6dda6441dd25704eb3ececa3` precedes source BUILD. This is ONE work order containing G0 preparation, G1 native/backend proof and G2 browser proof, with explicit stage admission. Only source preparation/offline checks and Root's bounded pure-UI tool diagnostic are admitted now. G1/G2 runtime and provider use are HOLD. R117 physical allowance1/1 is consumed; no historical counter or slot transfers. No standalone helper successor follows automatically.
 
@@ -169,3 +169,7 @@ Authority: `CVF_SESSION/authority/CCMAI-RUNTIME-139-CHECK-ONLY-ADMISSION.json`. 
 ## Check-only independent acceptance / runtime remains open
 
 R139_CHECK_ONLY_INDEPENDENT_REVIEW_2026-10-21.md accepts exact b8ba2522 source/IO candidate: correctedGo6/6 no skips, workerPython30/30 and independentRootPython30/30 PASS; no source/recompile/runtime/API. Check caps consumed and all old failures preserved. Integrated status remainsBLOCKED_WITH_REASON/CHANGES_REQUIRED with FREEZE OPEN. Documentary next-readiness packet pins source/binary and known freshpath/new-effect-authority blockers; it grants no source/runtime/API. E05/E06/M3 remainOPEN.
+
+## Proposed fresh-r3 conditional continuation (not authority)
+
+R139_FRESH_CAMPAIGN_COMBINED_PROPOSAL_2026-10-21.md and r5_fresh_campaign_proposal.json consolidate exact fresh identity/path/test patch, one bounded source round/checks and one conditional integrated campaign with new proposedAPI1/additionalUSD1. Not executable: no newOwnergrant yet; old1/1MAY consumed/unknownbillingresponse remains. Independent documentary review does not admit source or effects. ExplicitOwnergrant then immutable pre-BUILD authority, source checks/review/commit, exact independent runtime admission/pins/commit required before campaign. Sourcefailure/uncertainty stops chain. FullM3/E04coverage/hostedCI never inferred from one positive campaign.

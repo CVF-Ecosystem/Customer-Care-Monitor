@@ -4460,6 +4460,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R139 source/IO accepted bounded after Go6/Python30+30; integrated runtime still HOLD, no new source/API authority.: `docs/reviews/R139_CHECK_ONLY_WORKER_RETURN_2026-10-21.md`
 - R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance.: `docs/reviews/R139_CONTINUATION_SOURCE_RETURN_2026-10-21.md`
 - R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance.: `docs/reviews/R139_CONTINUATION_SOURCE_REVIEW_2026-10-21.md`
+- Proposed ONE combined R139 fresh r3 source/check/campaign grant with new1USD/API1; NOT_AUTHORIZED, original holds/counters preserved.: `docs/reviews/R139_FRESH_CAMPAIGN_COMBINED_PROPOSAL_2026-10-21.md`
+- Independent Sol documentary review: fresh-r3 combined proposal ready for Owner review only; no source/effect authority.: `docs/reviews/R139_FRESH_CAMPAIGN_PROPOSAL_INDEPENDENT_REVIEW_2026-10-21.md`
 - Independent read-only acceptance of exact replacement admission/pins/caps for commit and clean recheck; actual runtime unproved.: `docs/reviews/R139_REPLACEMENT_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md`
 - Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry.: `docs/reviews/R139_REPLACEMENT_RUNTIME_INDEPENDENT_REVIEW_2026-10-21.md`
 - R139 source-evidence candidate HOLD: compilePASS, binary flag failure before tests; no runtime/API; explicit check-only proposal pending.: `docs/reviews/R139_SOURCE_EVIDENCE_INDEPENDENT_REVIEW_2026-10-21.md`
@@ -4481,6 +4483,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R139 source-evidence candidate HOLD: compilePASS, binary flag failure before tests; no runtime/API; explicit check-only proposal pending.: `docs/reviews/probes/r139_integrated_20261021/r3_source_checks.json`
 - R139 source/IO accepted bounded after Go6/Python30+30; integrated runtime still HOLD, no new source/API authority.: `docs/reviews/probes/r139_integrated_20261021/r4_check_only_results.json`
 - R139 source/IO accepted bounded after Go6/Python30+30; integrated runtime still HOLD, no new source/API authority.: `docs/reviews/probes/r139_integrated_20261021/r4_next_runtime_readiness.json`
+- Proposed ONE combined R139 fresh r3 source/check/campaign grant with new1USD/API1; NOT_AUTHORIZED, original holds/counters preserved.: `docs/reviews/probes/r139_integrated_20261021/r5_fresh_campaign_proposal.json`
+- Proposed ONE combined R139 fresh r3 source/check/campaign grant with new1USD/API1; NOT_AUTHORIZED, original holds/counters preserved.: `docs/reviews/probes/r139_integrated_20261021/r5_fresh_campaign_source_proposal.patch`
 - Retained failed handback metadata checks and Root corrections; source unchanged.: `docs/reviews/probes/r139_integrated_20261021/root_handback_metadata_corrections.json`
 - Root27R137 source/protected matches plus2authority protection pins; no runtime proof.: `docs/reviews/probes/r139_integrated_20261021/root_source_preparation_baseline.json`
 - Observed local metadata or reviewed draft; Owner1USD/one-call approved, credential/deadline/final admission pending, no live claim.: `docs/reviews/probes/r139_integrated_20261021/local_readiness_outcome.json`

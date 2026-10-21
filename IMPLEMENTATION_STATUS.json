@@ -3528,5 +3528,16 @@
     "sourceAcceptance": "ACCEPTED_BOUNDED_SOURCE_ONLY",
     "runtimeAcceptance": "HOLD_OPEN",
     "nextRuntimeReadiness": "docs/reviews/probes/r139_integrated_20261021/r4_next_runtime_readiness.json"
+  },
+  "x-r139FreshCampaignProposal": {
+    "status": "DESIGN_READY_FOR_OWNER_REVIEW_ONLY_NOT_AUTHORIZED",
+    "proposal": "docs/reviews/probes/r139_integrated_20261021/r5_fresh_campaign_proposal.json",
+    "patch": "docs/reviews/probes/r139_integrated_20261021/r5_fresh_campaign_source_proposal.patch",
+    "explanation": "docs/reviews/R139_FRESH_CAMPAIGN_COMBINED_PROPOSAL_2026-10-21.md",
+    "newBudgetApproved": null,
+    "newAPIApproved": 0,
+    "sourceEditsApproved": 0,
+    "effectsApproved": 0,
+    "independentReview": "docs/reviews/R139_FRESH_CAMPAIGN_PROPOSAL_INDEPENDENT_REVIEW_2026-10-21.md"
   }
 }
