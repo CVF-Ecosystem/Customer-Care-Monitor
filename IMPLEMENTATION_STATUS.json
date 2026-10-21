@@ -3293,5 +3293,12 @@
     "rootGoCompile": "PASS_COMPILE_ONLY",
     "priorCheckProvenance": "Original Go2FAIL/Python2 latest12PASS reported, raw unavailable; final worker and Root checks observed with raw hashes.",
     "sourceCommit": "34facc34c26ae8eb8737ec0f8384139e832949af"
+  },
+  "x-r139HttpsDiagnostic": {
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-HTTPS-BROWSER-ADMISSION.json",
+    "status": "RESERVED_BEFORE_TOOL_INVOCATION",
+    "freshBudget": 1,
+    "usedOrReserved": 1,
+    "oldBudgetConsumed": 1
   }
 }

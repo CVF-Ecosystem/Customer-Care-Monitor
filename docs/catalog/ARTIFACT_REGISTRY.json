@@ -35185,6 +35185,20 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/root_handback_metadata_corrections.json",
       "status": "ACTIVE",
       "description": "Retained failed handback metadata checks and Root corrections; source unchanged."
+    },
+    {
+      "id": "r139-https-browser-admission",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-HTTPS-BROWSER-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "New owner-approved supported HTTPS UI diagnostic only; old consumed counters unchanged, no runtime/provider authority."
+    },
+    {
+      "id": "r139-https-browser-reservation",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/https_browser_reservation.json",
+      "status": "ACTIVE",
+      "description": "Fresh owner-approved one-campaign HTTPS UI slot reserved before effect; no refund/retry."
     }
   ]
 }

@@ -4439,6 +4439,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Root transcript of browser URL-policy denial and partial owned tab cleanup; no control/capture proof.: `docs/reviews/probes/r139_integrated_20261021/browser_capability_outcome.json`
 - Sole pureUI capability diagnostic reserved before effect; consumed, no reset.: `docs/reviews/probes/r139_integrated_20261021/browser_capability_reservation.json`
 - Remaining source corrections and bounded final repair; source not yet accepted.: `docs/reviews/R139_FINAL_STATIC_SOURCE_CORRECTIONS_2026-10-21.md`
+- New owner-approved supported HTTPS UI diagnostic only; old consumed counters unchanged, no runtime/provider authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-HTTPS-BROWSER-ADMISSION.json`
+- Fresh owner-approved one-campaign HTTPS UI slot reserved before effect; no refund/retry.: `docs/reviews/probes/r139_integrated_20261021/https_browser_reservation.json`
 - Consolidated initial source defects F01-F08; no runtime/AI governance proof.: `docs/reviews/R139_INITIAL_SOURCE_BUILD_FINDINGS_2026-10-21.md`
 - ONE integrated G0/G1/G2 packet: source-only BUILD; runtime annex still proposed/unadmitted.: `docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md`
 - Original two catalog failures and finite proposed native/browser POST correction retained.: `docs/reviews/probes/r139_integrated_20261021/root_preparation_findings.json`
