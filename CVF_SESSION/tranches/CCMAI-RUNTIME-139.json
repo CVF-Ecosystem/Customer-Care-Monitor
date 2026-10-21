@@ -83,11 +83,11 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "REVIEW_PENDING",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
-  "buildCommit": "4dfba9a3b5330c1b775b7e20d8e66cb8789a229d",
+  "workOrderStatus": "ACTIVE",
+  "buildCommit": "03e967a450d85cc81e7fbfa22b8c4f290fe72d37",
   "reviewEvidence": [
     "docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md",
     "docs/reviews/probes/r139_integrated_20261021/browser_capability_outcome.json",
@@ -99,7 +99,7 @@
     "docs/reviews/R139_CONTINUATION_SOURCE_REVIEW_2026-10-21.md",
     "docs/reviews/probes/r139_integrated_20261021/r2_root_source_review.json"
   ],
-  "disposition": "CCMAI-RUNTIME-139 replacement source review ready: RootPython28/28PASS and workerGo compile-onlyPASS, original workerPython27/28FAIL/testsetup correction retained. One approved RF1-RF4 round complete; prepare exact fresh source/binary/runtime/name/database/deadline admission and independent runtime review before sole replacement campaign. Provider0/cumulative1USD-oneAPI unchanged; original setupHOLD/firstfixture preserved. No extra source round/check or helper tranche; Facebook/Zalo OA parked.",
+  "disposition": "CCMAI-RUNTIME-139 replacement admission independently accepted: commit exact REPLACEMENT-RUNTIME-ADMISSION then clean source/binary/tool/deadline/recorder pins recheck and invoke sole replacement supervisor. NativeG1 must pass before genuine supportedIAB G2/one deliberate execute; cumulativeR139 provider0/max1API/max1USD/no retry. One replacement start-stop only; oldsetupHOLD/resources/counters preserved, source checks exhausted. Missing evidence or uncertaintyHOLD, uncoveredE04 OPEN; Facebook/Zalo OA parked.",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -113,7 +113,10 @@
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "REVIEW_PASS",
+    "PARKED",
+    "BUILD"
   ],
   "actualUse": {
     "status": "HOLD_SETUP_NATIVE_BROWSER_NOT_RUN",
@@ -167,7 +170,7 @@
   "sourceResumeAuthority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-RESUME-ADMISSION.json",
   "repairAuthority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-REPAIR-ADMISSION.json",
   "sourceRevisionRounds": 2,
-  "reviewPassScope": "SOURCE_PREPARATION_ONLY; G0 runtime HOLD/G1G2 NOT_RUN; no integrated/runtime acceptance",
+  "reviewPassScope": "REPLACEMENT_SOURCE_PREPARATION_ONLY; runtime still unproved",
   "x-httpsDiagnostic": {
     "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-HTTPS-BROWSER-ADMISSION.json",
     "status": "PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE",
@@ -216,10 +219,10 @@
     "keyCustodian": "Root existing Alibaba credential",
     "oldBudgets": "Original/new HTTPS diagnostic and historical R117 provider counters remain consumed, no reset."
   },
-  "runtimeAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTEGRATED-RUNTIME-ADMISSION.json",
+  "runtimeAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-REPLACEMENT-RUNTIME-ADMISSION.json",
   "runtimeRoles": {
     "executor": "Root bounded runtime evidence EXECUTOR",
-    "reviewer": "/root/r139_admission_review_sol independent runtime REVIEWER"
+    "reviewer": "/root/r139_r2_runtime_reviewer independent runtime REVIEWER (source/admission author0)"
   },
   "x-integratedRuntime": {
     "status": "HOLD_SETUP_BEFORE_NATIVE_AND_BROWSER",
@@ -250,7 +253,7 @@
     "reviewCostDisposition": "REVIEW_COST_ESCALATION_REQUIRED",
     "proposal": "docs/reviews/probes/r139_integrated_20261021/bounded_repair_and_fixture_continuation_proposal.json"
   },
-  "sourceBuildCommit": "34facc34c26ae8eb8737ec0f8384139e832949af",
+  "sourceBuildCommit": "03e967a450d85cc81e7fbfa22b8c4f290fe72d37",
   "x-replacementSourceReview": {
     "evidence": "docs/reviews/probes/r139_integrated_20261021/r2_root_source_review.json",
     "report": "docs/reviews/R139_CONTINUATION_SOURCE_REVIEW_2026-10-21.md",

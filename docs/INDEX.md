@@ -4439,6 +4439,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Root transcript of browser URL-policy denial and partial owned tab cleanup; no control/capture proof.: `docs/reviews/probes/r139_integrated_20261021/browser_capability_outcome.json`
 - Sole pureUI capability diagnostic reserved before effect; consumed, no reset.: `docs/reviews/probes/r139_integrated_20261021/browser_capability_reservation.json`
 - Explicit Owner single RF1-RF4 repair/replacement-fixture continuation; cumulative1USD/one API unchanged; runtime still needs exact admission.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-OWNER-CONTINUATION-ADMISSION.json`
+- Exact R139 replacement runtime admission preparation; independent review/commit required, cumulative1USD/oneAPI unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-REPLACEMENT-RUNTIME-ADMISSION.json`
 - Remaining source corrections and bounded final repair; source not yet accepted.: `docs/reviews/R139_FINAL_STATIC_SOURCE_CORRECTIONS_2026-10-21.md`
 - New owner-approved supported HTTPS UI diagnostic only; old consumed counters unchanged, no runtime/provider authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-HTTPS-BROWSER-ADMISSION.json`
 - Fresh owner-approved one-campaign HTTPS UI slot reserved before effect; no refund/retry.: `docs/reviews/probes/r139_integrated_20261021/https_browser_reservation.json`
@@ -4455,8 +4456,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Original two catalog failures and finite proposed native/browser POST correction retained.: `docs/reviews/probes/r139_integrated_20261021/root_preparation_findings.json`
 - R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance.: `docs/reviews/R139_CONTINUATION_SOURCE_RETURN_2026-10-21.md`
 - R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance.: `docs/reviews/R139_CONTINUATION_SOURCE_REVIEW_2026-10-21.md`
+- Independent read-only acceptance of exact replacement admission/pins/caps for commit and clean recheck; actual runtime unproved.: `docs/reviews/R139_REPLACEMENT_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md`
 - R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/r2_root_check_reservation.json`
 - R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/r2_root_source_review.json`
+- Exact R139 replacement runtime admission preparation; independent review/commit required, cumulative1USD/oneAPI unchanged.: `docs/reviews/probes/r139_integrated_20261021/r2_runtime_preparation.json`
 - R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/r2_worker_check_reservation.json`
 - R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/r2_worker_source_return.json`
 - Retained failed handback metadata checks and Root corrections; source unchanged.: `docs/reviews/probes/r139_integrated_20261021/root_handback_metadata_corrections.json`

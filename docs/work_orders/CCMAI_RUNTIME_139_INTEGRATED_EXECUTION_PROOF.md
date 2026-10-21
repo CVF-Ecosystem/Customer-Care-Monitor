@@ -1,18 +1,18 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: COMPLETE_PENDING_REVIEW
+Status: ACTIVE
 Risk: R2
 Worker: Sol Medium delegated fixture worker
 Reviewer: Root independent source/evidence REVIEWER
 Commit mode: WORKER_MUST_NOT_COMMIT
 providerExecutionAuthority: EXACT_COMMITTED_R139_RUNTIME_ADMISSION_MAX1USD_NEW1_CALL
 runtimeExecutor: Root bounded runtime evidence EXECUTOR
-runtimeReviewer: /root/r139_admission_review_sol independent runtime REVIEWER
+runtimeReviewer: /root/r139_r2_runtime_reviewer independent runtime REVIEWER
 dispatchKind: INITIAL
 
 ## Current authority and acceptance target
 
-Current stage: CCMAI-RUNTIME-139 replacement source review ready: RootPython28/28PASS and workerGo compile-onlyPASS, original workerPython27/28FAIL/testsetup correction retained. One approved RF1-RF4 round complete; prepare exact fresh source/binary/runtime/name/database/deadline admission and independent runtime review before sole replacement campaign. Provider0/cumulative1USD-oneAPI unchanged; original setupHOLD/firstfixture preserved. No extra source round/check or helper tranche; Facebook/Zalo OA parked.
+Current stage: CCMAI-RUNTIME-139 replacement admission independently accepted: commit exact REPLACEMENT-RUNTIME-ADMISSION then clean source/binary/tool/deadline/recorder pins recheck and invoke sole replacement supervisor. NativeG1 must pass before genuine supportedIAB G2/one deliberate execute; cumulativeR139 provider0/max1API/max1USD/no retry. One replacement start-stop only; oldsetupHOLD/resources/counters preserved, source checks exhausted. Missing evidence or uncertaintyHOLD, uncoveredE04 OPEN; Facebook/Zalo OA parked.
 
 Historical initial preparation boundary: Owner `tiếp` continues G0 in the canonical delivery plan. Immutable dispatcher seed `642f5bd026dfe31e6dda6441dd25704eb3ececa3` precedes source BUILD. This is ONE work order containing G0 preparation, G1 native/backend proof and G2 browser proof, with explicit stage admission. Only source preparation/offline checks and Root's bounded pure-UI tool diagnostic are admitted now. G1/G2 runtime and provider use are HOLD. R117 physical allowance1/1 is consumed; no historical counter or slot transfers. No standalone helper successor follows automatically.
 
@@ -145,3 +145,7 @@ Sole runtime invocation failed during MySQL initialization before native/backend
 Supersedes the no-approval next step in the preceding HOLD section only. Explicit owner reply and immutable OWNER-CONTINUATION-ADMISSION authorize exactly RF1-RF4 in the original proposal: final TCP readiness60s/max45probes/1s; normalize only Networks list ordering; bounded exact Windows listener query for10035; fresh fixture_r2 path with Go constant change only. Luna repair worker, Root independent source reviewer; original source authors remain attributed. Worker new offlineGo1/purePython1, Root remainingPython1; reserve before checks, no tests initialize DB. Return R139_CONTINUATION_SOURCE_RETURN_2026-10-21.md with all failures/raw hashes/closeability recheck. Source-stage runtime/key/provider effects0. After independent source acceptance, a new pinned committed runtime admission may admit the single replacement campaign under owner-approved unchanged cumulative1USD/one API. No more source rounds/fixture replay on uncertainty. OriginalHOLD/firstfixture and oldbudgets remain unchanged.
 
 RF4 integration identities fixed before this single repair: external `fixture_r2`; fresh ignored runtimeRoot `.cvf/runtime/r139_integrated_execution_r2_20261021`; fresh owned fixtureName `ccmai-r139-r2-20261021`; fresh database `ccma_r139_r2_20261021`. Go changes only its exact external path constant; Python exact external guard aligns. Runtime admission re-pins repaired source/new compile binary/fresh deadline and commits before invocation. Old resources and paths remain preserved. Root retains independent source review; new independent Sol runtime reviewer may inherit the read-only review role if the prior tool session is unavailable, without any new check/effect cap.
+
+## Current replacement runtime dispatch
+
+Source material03e967a4 accepted for preparing this one replacement run; source checks exhausted. Exact REPLACEMENT-RUNTIME-ADMISSION is new and must be committed after final independent review, then byte/pin/clean verification before invoking Root recorder once. Owner continuation8415842c and original1USD/oneAPI grant remain cumulative; firstcampaignactual0/fixture1consumed unchanged. Actual reviewer /root/r139_r2_runtime_reviewer succeeds unavailable oldhandle without changing ownership/caps. Native failure stops before G2/provider. Root supported IAB only, one writer execute/confirm then passive publication/reload/history and reader no-control checks. Missing E04 mutually exclusive evidence remainsOPEN/PARTIAL; no second POST. Finite cleanup180seconds; strict non-Networks inventory differencesHOLD; recorder no independentoutertimeout is explicit and never a fullhangguarantee.

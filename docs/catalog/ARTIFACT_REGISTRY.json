@@ -35374,6 +35374,27 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/r2_root_check_reservation.json",
       "status": "ACTIVE",
       "description": "R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance."
+    },
+    {
+      "id": "r139-ccmai-runtime-139-replacement-runtime-admission",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-REPLACEMENT-RUNTIME-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Exact R139 replacement runtime admission preparation; independent review/commit required, cumulative1USD/oneAPI unchanged."
+    },
+    {
+      "id": "r139-r2-runtime-preparation",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r2_runtime_preparation.json",
+      "status": "ACTIVE",
+      "description": "Exact R139 replacement runtime admission preparation; independent review/commit required, cumulative1USD/oneAPI unchanged."
+    },
+    {
+      "id": "r139-r139-replacement-admission-independent-review-2026-10-21",
+      "family": "continuity",
+      "path": "docs/reviews/R139_REPLACEMENT_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "Independent read-only acceptance of exact replacement admission/pins/caps for commit and clean recheck; actual runtime unproved."
     }
   ]
 }

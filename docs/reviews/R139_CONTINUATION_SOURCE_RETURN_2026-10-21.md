@@ -1,8 +1,8 @@
 # R139 continuation source return — 2026-10-21
 
-Status: SOURCE PATCH RETURNED; WORKER PYTHON CHECK FAILED ON A TEST FIXTURE; ROOT VERIFICATION PENDING  
-Risk: R2  
-Worker: Luna Max delegated source repair worker  
+Status: SOURCE PATCH RETURNED; WORKER PYTHON CHECK FAILED ON A TEST FIXTURE; ROOT VERIFICATION PENDING
+Risk: R2
+Worker: Luna Max delegated source repair worker
 Reviewer: Root
 
 The consolidated RF1–RF4 changes are limited to the three authorized source paths. The exact source hashes, check reservations, result details, prelaunch Go wrapper transcript, and raw output hashes are recorded in [the compact source return](probes/r139_integrated_20261021/r2_worker_source_return.json), with the pre-check reservation at [r2_worker_check_reservation.json](probes/r139_integrated_20261021/r2_worker_check_reservation.json).

@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: BUILD
+- Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
 
-CCMAI-RUNTIME-139 replacement source review ready: RootPython28/28PASS and workerGo compile-onlyPASS, original workerPython27/28FAIL/testsetup correction retained. One approved RF1-RF4 round complete; prepare exact fresh source/binary/runtime/name/database/deadline admission and independent runtime review before sole replacement campaign. Provider0/cumulative1USD-oneAPI unchanged; original setupHOLD/firstfixture preserved. No extra source round/check or helper tranche; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 replacement admission independently accepted: commit exact REPLACEMENT-RUNTIME-ADMISSION then clean source/binary/tool/deadline/recorder pins recheck and invoke sole replacement supervisor. NativeG1 must pass before genuine supportedIAB G2/one deliberate execute; cumulativeR139 provider0/max1API/max1USD/no retry. One replacement start-stop only; oldsetupHOLD/resources/counters preserved, source checks exhausted. Missing evidence or uncertaintyHOLD, uncoveredE04 OPEN; Facebook/Zalo OA parked.
 
-Root independent source REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD
+Root COMMIT_STEWARD / ORCHESTRATOR; bounded runtime EXECUTOR after committed clean-pin recheck; independent Sol runtime REVIEWER
 
 Canonical roadmap: docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md. R137 product source unchanged; R139 original setup HOLD retained; no full M3 acceptance.
 

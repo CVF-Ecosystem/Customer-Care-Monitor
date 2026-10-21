@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 replacement source review ready: RootPython28/28PASS and workerGo compile-onlyPASS, original workerPython27/28FAIL/testsetup correction retained. One approved RF1-RF4 round complete; prepare exact fresh source/binary/runtime/name/database/deadline admission and independent runtime review before sole replacement campaign. Provider0/cumulative1USD-oneAPI unchanged; original setupHOLD/firstfixture preserved. No extra source round/check or helper tranche; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 replacement admission independently accepted: commit exact REPLACEMENT-RUNTIME-ADMISSION then clean source/binary/tool/deadline/recorder pins recheck and invoke sole replacement supervisor. NativeG1 must pass before genuine supportedIAB G2/one deliberate execute; cumulativeR139 provider0/max1API/max1USD/no retry. One replacement start-stop only; oldsetupHOLD/resources/counters preserved, source checks exhausted. Missing evidence or uncertaintyHOLD, uncoveredE04 OPEN; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root independent source REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD",
+  "activeRole": "Root COMMIT_STEWARD / ORCHESTRATOR; bounded runtime EXECUTOR after committed clean-pin recheck; independent Sol runtime REVIEWER",
   "updatedAt": "2026-10-21",
   "x-resolvedCoreCommit": "b69e1088978e8c90ac58a2243fcf8f90d0f857ed",
   "x-ownerRoadmapDiscipline": {
@@ -2669,5 +2669,16 @@
     "workerPythonOriginal": "27PASS1ERROR preserved",
     "repairRound": "one owner-approved continuation round completed; previous2 rounds preserved",
     "runtime": "NOT_RUN"
+  },
+  "x-r139ReplacementRuntime": {
+    "status": "INDEPENDENT_REVIEW_ACCEPTED_READY_AFTER_COMMIT_AND_CLEAN_PIN_RECHECK",
+    "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-REPLACEMENT-RUNTIME-ADMISSION.json",
+    "sourceCommit": "03e967a450d85cc81e7fbfa22b8c4f290fe72d37",
+    "providerCalls": 0,
+    "replacementSupervisorUsed": 0,
+    "replacementFixtureStartsUsed": 0,
+    "replacementFinalStopsUsed": 0,
+    "sourceChecksSpent": true,
+    "reviewer": "/root/r139_r2_runtime_reviewer independent runtime REVIEWER (source/admission author0)"
   }
 }
