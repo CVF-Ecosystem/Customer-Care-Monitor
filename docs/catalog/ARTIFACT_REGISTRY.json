@@ -35199,6 +35199,41 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/https_browser_reservation.json",
       "status": "ACTIVE",
       "description": "Fresh owner-approved one-campaign HTTPS UI slot reserved before effect; no refund/retry."
+    },
+    {
+      "id": "r139-https-readiness-0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/https_browser_outcome.json",
+      "status": "ACTIVE",
+      "description": "Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open."
+    },
+    {
+      "id": "r139-https-readiness-1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/https_browser_before.jpg",
+      "status": "ACTIVE",
+      "description": "Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open."
+    },
+    {
+      "id": "r139-https-readiness-2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/https_browser_after.jpg",
+      "status": "ACTIVE",
+      "description": "Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open."
+    },
+    {
+      "id": "r139-https-readiness-3",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-LOCAL-READINESS-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open."
+    },
+    {
+      "id": "r139-https-readiness-4",
+      "family": "continuity",
+      "path": "docs/reviews/R139_HTTPS_BROWSER_AND_LOCAL_READINESS_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open."
     }
   ]
 }

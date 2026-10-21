@@ -115,3 +115,7 @@ Source material commit: `34facc34c26ae8eb8737ec0f8384139e832949af`. Local prefli
 ## Owner-approved new HTTPS UI diagnostic (same R139)
 
 Latest owner instruction: cho phép chủ động làm để đạt kết quả theo roadmap. Concrete immediately preceding proposal approved: supported CUA IAB, fresh1campaign/1tab at https://example.com, at most1observed HTTPS link click to IANA, two original captures and exact close/post-close inventory, finite5minutes. See immutable HTTPS-BROWSER-ADMISSION; old browser1/1 remains consumed. This admission does not enable the opt-in Go/runtime supervisor or grant DB/Docker/server/key/provider effects. Overall order stays PARKED/REVIEW until actual G0 prerequisites pass; source accepted34facc34 unchanged. Root records diagnostic provenance, qualifies tool proof versus app reachability and continues necessary same-R139 admission preparation under owner autonomy.
+
+## Current G0 tool result and local inspection admission
+
+HTTPS supported CUA diagnostic observed PASS at https_browser_outcome.json: one tab/oneclick/two original captures/closed/finaltabs0. G0 aggregate remains HOLD; localapp and runtime unproved. Under owner proactive roadmap authority, LOCAL-READINESS-ADMISSION permits only five bounded read-only local Docker/cache/inventory inspections after committed admission, firstfailureSTOP/no retry. No fixture creation/start/DB/key/provider or additional browser campaign is inferred. Same R139 only; prepare concrete runtime from real prerequisites.
