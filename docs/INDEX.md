@@ -4447,7 +4447,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-LOCAL-READINESS-ADMISSION.json`
 - Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open.: `docs/reviews/R139_HTTPS_BROWSER_AND_LOCAL_READINESS_2026-10-21.md`
 - Consolidated initial source defects F01-F08; no runtime/AI governance proof.: `docs/reviews/R139_INITIAL_SOURCE_BUILD_FINDINGS_2026-10-21.md`
-- Active same-R139 integrated native/browser runtime dispatch under Owner1USD/NEW1 call; actual acceptance pending.: `docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md`
+- R139 BLOCKED_WITH_REASON: MySQL setupHOLD/nativebrowserprovider0; cost escalation and explicit fresh continuation needed.: `docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md`
 - Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim.: `docs/reviews/probes/r139_integrated_20261021/owner_one_usd_runtime_grant.json`
 - Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-CREDENTIAL-STAGING-ADMISSION.json`
 - Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim.: `docs/reviews/probes/r139_integrated_20261021/provider_pricing_reference.json`
@@ -4457,6 +4457,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Observed local metadata or reviewed draft; Owner1USD/one-call approved, credential/deadline/final admission pending, no live claim.: `docs/reviews/probes/r139_integrated_20261021/local_readiness_outcome.json`
 - Observed local metadata or reviewed draft; Owner1USD/one-call approved, credential/deadline/final admission pending, no live claim.: `docs/reviews/probes/r139_integrated_20261021/runtime_admission_draft.json`
 - Observed local metadata or reviewed draft; Owner1USD/one-call approved, credential/deadline/final admission pending, no live claim.: `docs/reviews/R139_RUNTIME_ADMISSION_READONLY_REVIEW_2026-10-21.md`
+- Actual pre-native setup HOLD, qualified owned stop/OS listener proof and explicit cost/boundary continuation proposal; provider0/no replay.: `docs/reviews/probes/r139_integrated_20261021/root_post_run_verification.json`
+- Actual pre-native setup HOLD, qualified owned stop/OS listener proof and explicit cost/boundary continuation proposal; provider0/no replay.: `docs/reviews/probes/r139_integrated_20261021/integrated_runtime_failure.json`
+- Actual pre-native setup HOLD, qualified owned stop/OS listener proof and explicit cost/boundary continuation proposal; provider0/no replay.: `docs/reviews/probes/r139_integrated_20261021/bounded_repair_and_fixture_continuation_proposal.json`
+- Actual pre-native setup HOLD, qualified owned stop/OS listener proof and explicit cost/boundary continuation proposal; provider0/no replay.: `docs/reviews/R139_RUNTIME_SETUP_FAILURE_AND_COST_DISPOSITION_2026-10-21.md`
 - Exact Owner1USD/onecall runtime authority, sanitized credential staging or one-shot pre-effect reservation; no outcome claim.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-INTEGRATED-RUNTIME-ADMISSION.json`
 - Exact Owner1USD/onecall runtime authority, sanitized credential staging or one-shot pre-effect reservation; no outcome claim.: `docs/reviews/probes/r139_integrated_20261021/credential_staging_outcome.json`
 - Exact Owner1USD/onecall runtime authority, sanitized credential staging or one-shot pre-effect reservation; no outcome claim.: `docs/reviews/probes/r139_integrated_20261021/integrated_runtime_reservation.json`

@@ -83,19 +83,21 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
-  "buildCommit": "34facc34c26ae8eb8737ec0f8384139e832949af",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
+  "buildCommit": "4dfba9a3b5330c1b775b7e20d8e66cb8789a229d",
   "reviewEvidence": [
     "docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md",
     "docs/reviews/probes/r139_integrated_20261021/browser_capability_outcome.json",
     "docs/reviews/R139_SOURCE_WORKER_RETURN_2026-10-21.md",
     "docs/reviews/R139_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md",
-    "docs/reviews/probes/r139_integrated_20261021/root_final_source_review.json"
+    "docs/reviews/probes/r139_integrated_20261021/root_final_source_review.json",
+    "docs/reviews/R139_RUNTIME_SETUP_FAILURE_AND_COST_DISPOSITION_2026-10-21.md",
+    "docs/reviews/probes/r139_integrated_20261021/integrated_runtime_failure.json"
   ],
-  "disposition": "RUNTIME_BUILD_ADMITTED_PENDING_COMMIT",
+  "disposition": "HOLD_SETUP_REVIEW_COST_ESCALATION_REQUIRED",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -105,12 +107,14 @@
     "REVIEW_PENDING",
     "REVIEW_PASS",
     "PARKED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "actualUse": {
-    "status": "PARKED_SOURCE_PREPARATION_ACCEPTED_RUNTIME_HOLD",
+    "status": "HOLD_SETUP_NATIVE_BROWSER_NOT_RUN",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
-    "report": "docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md",
+    "report": "docs/reviews/R139_RUNTIME_SETUP_FAILURE_AND_COST_DISPOSITION_2026-10-21.md",
     "productSource": "4cce40f2495f571b612122121d377c10499b4b02",
     "currentGate": "G0-M3-SOURCE-AND-READINESS",
     "G0": "HOLD",
@@ -125,12 +129,12 @@
     "HTTPApplicationCapability": "PUBLIC_HTTPS_TOOL_ONLY_PASS_LOCAL_APP_UNTESTED",
     "workerGoInvocations": 3,
     "workerPythonChecks": 3,
-    "newFixtureStarts": 0,
-    "DBEffects": 0,
+    "newFixtureStarts": 1,
+    "DBEffects": "DISPOSABLE_MYSQL_INITIALIZATION_ONLY_NO_PRODUCT_FIXTURE_SEED",
     "backendStarts": 0,
     "viteStarts": 0,
     "providerCalls": 0,
-    "credentialReads": 1,
+    "credentialReads": 2,
     "grantEffects": 0,
     "executePOST": 0,
     "productSourceUnchanged": true,
@@ -177,10 +181,10 @@
     "outcome": "docs/reviews/probes/r139_integrated_20261021/local_readiness_outcome.json"
   },
   "x-runtimeAdmissionPreparation": {
-    "status": "EXACT_RUNTIME_ADMISSION_PENDING_COMMIT_AND_FINAL_REVIEW",
+    "status": "CONSUMED_CAMPAIGN_SETUP_HOLD_COST_ESCALATION_REQUIRED",
     "draft": "docs/reviews/probes/r139_integrated_20261021/runtime_admission_draft.json",
     "independentReview": "docs/reviews/R139_RUNTIME_ADMISSION_READONLY_REVIEW_2026-10-21.md",
-    "keyContentsRead": 1,
+    "keyContentsRead": 2,
     "credentialConfigMetadataVerified": true,
     "providerCalls": 0,
     "budgetQuestion": "Answered maximum1USD/one NEW call.",
@@ -212,5 +216,35 @@
   "runtimeRoles": {
     "executor": "Root bounded runtime evidence EXECUTOR",
     "reviewer": "/root/r139_admission_review_sol independent runtime REVIEWER"
-  }
+  },
+  "x-integratedRuntime": {
+    "status": "HOLD_SETUP_BEFORE_NATIVE_AND_BROWSER",
+    "report": "docs/reviews/R139_RUNTIME_SETUP_FAILURE_AND_COST_DISPOSITION_2026-10-21.md",
+    "evidence": "docs/reviews/probes/r139_integrated_20261021/integrated_runtime_failure.json",
+    "actualUse": {
+      "supervisorInvocation": 1,
+      "fixtureStarts": 1,
+      "fixtureFinalStops": 1,
+      "newNetworks": 1,
+      "newVolumes": 1,
+      "nativeGo": 0,
+      "backend": 0,
+      "vite": 0,
+      "productBrowserCampaign": 0,
+      "authPOST": 0,
+      "grantIssuances": 0,
+      "nativeExecutePOST": 0,
+      "browserExecutePOST": 0,
+      "providerPhysicalCalls": 0,
+      "originalConfigReads": 1,
+      "supervisorRawKeyReads": 1
+    },
+    "originalSupervisorExit": 1,
+    "originalCleanup": "HOLD",
+    "ownedContainer": "STOPPED_PID0_PORTS_EMPTY_OBSERVED",
+    "laterListener": "OS_QUERY_ABSENT",
+    "reviewCostDisposition": "REVIEW_COST_ESCALATION_REQUIRED",
+    "proposal": "docs/reviews/probes/r139_integrated_20261021/bounded_repair_and_fixture_continuation_proposal.json"
+  },
+  "sourceBuildCommit": "34facc34c26ae8eb8737ec0f8384139e832949af"
 }

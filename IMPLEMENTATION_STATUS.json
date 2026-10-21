@@ -59,7 +59,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "R118 REVIEW_PASS SOURCE_COMPONENT_ONLY at7f74a75f93671973bcfe55b5cb491076c0d2bdf9: current proposal pointer/lineage binding, safe legacy fallback and proposal-less data actions, VN/EN WAIT_DATA history. Root24tests/app typecheckPASS, original byte archive/source pins verified; changed-screen UI proof NOT_RUN/FREEZE OPEN. docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md",
     "R117 bounded WAIT_DATA backend real synthetic flow independently accepted: new same-case proposal after source revision, faithful realAlibaba340/297tokens, synthetic CONFIRM persisted, one call/debit, native11top11nested+engine1PASS. Exact owned owner-authorized restart/finalstop and operational protected equality observed; original interruption/cleanupHOLD retained. Current UI/fullM2/M3/pilot/release remain OPEN. docs/reviews/R117_FINAL_INDEPENDENT_REVIEW_2026-10-18.md",
@@ -2054,9 +2054,7 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [
-    "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md"
-  ],
+  "activeWorkOrders": [],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -3248,9 +3246,9 @@
     "freeze": "FROZEN_DOCUMENTARY_ONLY"
   },
   "x-r139CurrentOutcome": {
-    "status": "PARKED_SOURCE_PREPARATION_ACCEPTED_RUNTIME_HOLD",
+    "status": "HOLD_SETUP_NATIVE_BROWSER_NOT_RUN",
     "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
-    "report": "docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md",
+    "report": "docs/reviews/R139_RUNTIME_SETUP_FAILURE_AND_COST_DISPOSITION_2026-10-21.md",
     "productSource": "4cce40f2495f571b612122121d377c10499b4b02",
     "currentGate": "G0-M3-SOURCE-AND-READINESS",
     "G0": "HOLD",
@@ -3265,12 +3263,12 @@
     "HTTPApplicationCapability": "PUBLIC_HTTPS_TOOL_ONLY_PASS_LOCAL_APP_UNTESTED",
     "workerGoInvocations": 3,
     "workerPythonChecks": 3,
-    "newFixtureStarts": 0,
-    "DBEffects": 0,
+    "newFixtureStarts": 1,
+    "DBEffects": "DISPOSABLE_MYSQL_INITIALIZATION_ONLY_NO_PRODUCT_FIXTURE_SEED",
     "backendStarts": 0,
     "viteStarts": 0,
     "providerCalls": 0,
-    "credentialReads": 1,
+    "credentialReads": 2,
     "grantEffects": 0,
     "executePOST": 0,
     "productSourceUnchanged": true,
@@ -3313,10 +3311,10 @@
     "outcome": "docs/reviews/probes/r139_integrated_20261021/local_readiness_outcome.json"
   },
   "x-r139RuntimeAdmissionPreparation": {
-    "status": "EXACT_RUNTIME_ADMISSION_PENDING_COMMIT_AND_FINAL_REVIEW",
+    "status": "CONSUMED_CAMPAIGN_SETUP_HOLD_COST_ESCALATION_REQUIRED",
     "draft": "docs/reviews/probes/r139_integrated_20261021/runtime_admission_draft.json",
     "independentReview": "docs/reviews/R139_RUNTIME_ADMISSION_READONLY_REVIEW_2026-10-21.md",
-    "keyContentsRead": 1,
+    "keyContentsRead": 2,
     "credentialConfigMetadataVerified": true,
     "providerCalls": 0,
     "budgetQuestion": "Answered maximum1USD/one NEW call.",
@@ -3343,5 +3341,34 @@
     "grantIssuances": 3,
     "keyCustodian": "Root existing Alibaba credential",
     "oldBudgets": "Original/new HTTPS diagnostic and historical R117 provider counters remain consumed, no reset."
+  },
+  "x-r139IntegratedRuntime": {
+    "status": "HOLD_SETUP_BEFORE_NATIVE_AND_BROWSER",
+    "report": "docs/reviews/R139_RUNTIME_SETUP_FAILURE_AND_COST_DISPOSITION_2026-10-21.md",
+    "evidence": "docs/reviews/probes/r139_integrated_20261021/integrated_runtime_failure.json",
+    "actualUse": {
+      "supervisorInvocation": 1,
+      "fixtureStarts": 1,
+      "fixtureFinalStops": 1,
+      "newNetworks": 1,
+      "newVolumes": 1,
+      "nativeGo": 0,
+      "backend": 0,
+      "vite": 0,
+      "productBrowserCampaign": 0,
+      "authPOST": 0,
+      "grantIssuances": 0,
+      "nativeExecutePOST": 0,
+      "browserExecutePOST": 0,
+      "providerPhysicalCalls": 0,
+      "originalConfigReads": 1,
+      "supervisorRawKeyReads": 1
+    },
+    "originalSupervisorExit": 1,
+    "originalCleanup": "HOLD",
+    "ownedContainer": "STOPPED_PID0_PORTS_EMPTY_OBSERVED",
+    "laterListener": "OS_QUERY_ABSENT",
+    "reviewCostDisposition": "REVIEW_COST_ESCALATION_REQUIRED",
+    "proposal": "docs/reviews/probes/r139_integrated_20261021/bounded_repair_and_fixture_continuation_proposal.json"
   }
 }

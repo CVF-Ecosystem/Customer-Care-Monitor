@@ -35044,7 +35044,7 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
       "status": "ACTIVE",
-      "description": "Active same-R139 integrated native/browser runtime dispatch under Owner1USD/NEW1 call; actual acceptance pending."
+      "description": "R139 BLOCKED_WITH_REASON: MySQL setupHOLD/nativebrowserprovider0; cost escalation and explicit fresh continuation needed."
     },
     {
       "id": "r138-handoff-history",
@@ -35297,6 +35297,34 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/integrated_runtime_reservation.json",
       "status": "ACTIVE",
       "description": "Exact Owner1USD/onecall runtime authority, sanitized credential staging or one-shot pre-effect reservation; no outcome claim."
+    },
+    {
+      "id": "r139-runtime-failure-0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/root_post_run_verification.json",
+      "status": "ACTIVE",
+      "description": "Actual pre-native setup HOLD, qualified owned stop/OS listener proof and explicit cost/boundary continuation proposal; provider0/no replay."
+    },
+    {
+      "id": "r139-runtime-failure-1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/integrated_runtime_failure.json",
+      "status": "ACTIVE",
+      "description": "Actual pre-native setup HOLD, qualified owned stop/OS listener proof and explicit cost/boundary continuation proposal; provider0/no replay."
+    },
+    {
+      "id": "r139-runtime-failure-2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/bounded_repair_and_fixture_continuation_proposal.json",
+      "status": "ACTIVE",
+      "description": "Actual pre-native setup HOLD, qualified owned stop/OS listener proof and explicit cost/boundary continuation proposal; provider0/no replay."
+    },
+    {
+      "id": "r139-runtime-failure-3",
+      "family": "continuity",
+      "path": "docs/reviews/R139_RUNTIME_SETUP_FAILURE_AND_COST_DISPOSITION_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "Actual pre-native setup HOLD, qualified owned stop/OS listener proof and explicit cost/boundary continuation proposal; provider0/no replay."
     }
   ]
 }

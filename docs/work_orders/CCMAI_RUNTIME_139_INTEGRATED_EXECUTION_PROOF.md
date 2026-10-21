@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 Worker: Sol Medium delegated fixture worker
 Reviewer: Root independent source/evidence REVIEWER
@@ -135,3 +135,7 @@ Owner explicitly approves maximum1USD for exactly1NEW Alibaba synthetic API call
 ## Active integrated runtime dispatch
 
 Stage BUILD for the ONE source-bound runtime campaign under exact INTEGRATED-RUNTIME-ADMISSION. Owner max1USD/NEW1 physical Alibaba call, existing Root-custodied key staged externally, actual endpoint hash and fresh grant deadline bound. Root bounded runtime EXECUTOR; /root/r139_admission_review_sol independent runtime REVIEWER authored/repaired no source/admission. Original source roles/history remain. Before invocation commit immutable admission/reservation and require active packet APPL/ROUTE/precommit gates plus final independent acceptance of named facts. Caps nativeGo1/fixture1/backend1/Vite1/browsercampaign1/auth4/nativePOST8/browserPOST1/grant3/provider1/noretry. Runtime return is closeable as a bounded truthful PASS/FAIL/HOLD/evidence/cleanup disposition; mutually exclusive uncovered E04 rows remain OPEN and do not justify extra POST. Overall M3/G3 and freeze not implied.
+
+## Current actual outcome — HOLD_SETUP / REVIEW_COST_ESCALATION_REQUIRED
+
+Sole runtime invocation failed during MySQL initialization before native/backend/browser/provider. Original supervisor exit1/cleanupHOLD retained; ownedstop0/PID0/ports{} and later OS exactlistenerabsence observed. Actual fixture start1/finalstop1 consumed, allGo/native/browser/grant/execute/provider0. Runtime failure and independent review: R139_RUNTIME_SETUP_FAILURE_AND_COST_DISPOSITION_2026-10-21.md. Source2repairrounds exhausted; no third repair or second campaign authorized. Proposed bounded source repair and one freshfixture continuation are explicit in bounded_repair_and_fixture_continuation_proposal.json, require new approval; cumulative1USD/oneactualAPI remains unchanged. Current earlier ACTIVE sections are historical dispatch, not permission to replay.

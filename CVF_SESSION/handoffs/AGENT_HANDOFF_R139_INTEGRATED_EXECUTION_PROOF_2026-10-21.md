@@ -4,11 +4,11 @@ Status: ACTIVE
 
 ## Current State
 
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Root ORCHESTRATOR / bounded runtime evidence EXECUTOR
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD
 - Active tranche: CCMAI-RUNTIME-139
-- Next allowed move: CCMAI-RUNTIME-139 integrated runtime BUILD after committed exact runtime admission/final independent review/active packet gates: Root invokes finite supervisor once, serial G1 native8 then same-process G2 supported CUA browser1/execute1, grant3/providerNEW1 maximum1USD, noretry. Source34facc34/tool/cache/browser proof accepted; credential staged outsideproject once. Stop firstfailure/uncertainty, exact-owned cleanup180s and preserve evidence; G1G2/E01-E06 acceptance only from actual receipts. Old budgets unchanged, Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-139 HOLD_SETUP before native/browser/provider: six MySQL probes ended during initialization; fixture start1/1 and finalstop1/1 consumed, original supervisor exit1/cleanupHOLD preserved. Owned container observed stoppedPID0/ports{}, later OS exactlistenerabsent; raw protected diff is Networks order only. G1G2/E01E06 NOT_RUN/provider0. REVIEW_COST_ESCALATION_REQUIRED: source2rounds exhausted; approve concrete one-round repair/one freshfixture continuation proposal before further BUILD/replay. Existing1USD/R139oneAPI cumulative ceiling unchanged, no budget reset/helper tranche. Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## INTAKE / DESIGN / SPEC / WORK_ORDER acknowledgment
@@ -80,3 +80,9 @@ Owner answered the concrete runtime question: Duyệt tối đa 1 USD cho 1 lư�
 Root re-read current compact/canonical state/memory/handoff/implementation/index and inherited current doctor27/27/publicCoreb69e1088/e9warning. Credential authorityefdcfa86 committed before one config read/one exclusive outsideproject key write. Staging PASS, endpoint hash exact; no keyvalue/hash exposed; no provider/fixture effects yet. Owner1USD/onecall explicitly settled. Root transitions secretCUSTODIAN -> bounded runtime EXECUTOR after new same-order runtime admission, inherits settled source/design/spec/workorder evidence, earliest open stage BUILD for actual G1/G2. Original Sol/Luna source roles preserved; new independent Sol reviewer authored/repaired none of this source/admission and reviews actual runtime separately from Root execution. Source repair caps unchanged, no compile/new source work.
 
 Final immutable INTEGRATED-RUNTIME-ADMISSION and campaign reservation must commit after final independent review and active APPL/ROUTE/precommit gates before invoking supervisor once. Caps ownedfixture1/nativeGo1/backend1/Vite1/browser1/auth4/nativePOST8/browserPOST1/grant3/providerNEW1/max1USD/noretry.20min campaign and finite180sec exact-owned cleanup grace, overrunsHOLD. Native failure stops G2/provider; no blind retry. Native/publication/browser/E04 uncovered branches and runtime acceptance remain based on actual receipts only; no all-M3 claim. G2 uses supported IAB only and same held backend, no extra smoke. After outcome Root syncs truth and independent reviewer dispositions; FREEZEOPEN until settled.
+
+## Actual runtime HOLD / independent review / cost escalation
+
+Committed4dfba9a3 preceded sole supervisor invocation; original process wait/exit1 recorded. MYSQL_READY_NOT_PROVEN before Go/backend/Vite/browser, native/grant/execute/provider0. Readiness probes end05:59:14 while final MySQL TCP readiness05:59:21 after temporary initialization;1045 not proof of bad credential. Original cleanup stop0/ownedPID0/ports{} but terminalHOLD due raw Networks order and socket10035; later successful OS exactport52402 query has0listeners. Preserve originalHOLD and qualified later stopped proof. No restart or additionalstop. Key stays outsideproject/private, never published; configRead1/rawkeyWrite1/supervisorKeyRead1.
+
+Root transitions runtimeEXECUTOR -> ORCHESTRATOR/SESSION_SYNC/COMMIT_STEWARD after independent /root/r139_admission_review_sol read-only review. Same current continuity/status/index rehydrated before disposition; source34facc34 acceptance preserved onlyT0/T1, runtimeG0HOLD/G1G2NOT_RUN. REVIEW_COST_ESCALATION_REQUIRED recorded because source2rounds and fixture1/1 consumed. Concrete same-R139 one-round source repair + freshfixture proposal prepared, NOTAUTHORIZED; no more source changes or replay. Existing1USD/max1actualAPI ceiling stays, observed0; unused slot not replay permission. Owner must approve this real source/resource boundary; no helpertranche, date promise or productclosure. Exact proposal/failure report linked in canonical state; failed fixture/resources/evidence preserved.
