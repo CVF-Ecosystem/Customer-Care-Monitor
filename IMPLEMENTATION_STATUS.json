@@ -59,7 +59,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "BUILD",
   "completedCapabilities": [
     "R118 REVIEW_PASS SOURCE_COMPONENT_ONLY at7f74a75f93671973bcfe55b5cb491076c0d2bdf9: current proposal pointer/lineage binding, safe legacy fallback and proposal-less data actions, VN/EN WAIT_DATA history. Root24tests/app typecheckPASS, original byte archive/source pins verified; changed-screen UI proof NOT_RUN/FREEZE OPEN. docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md",
     "R117 bounded WAIT_DATA backend real synthetic flow independently accepted: new same-case proposal after source revision, faithful realAlibaba340/297tokens, synthetic CONFIRM persisted, one call/debit, native11top11nested+engine1PASS. Exact owned owner-authorized restart/finalstop and operational protected equality observed; original interruption/cleanupHOLD retained. Current UI/fullM2/M3/pilot/release remain OPEN. docs/reviews/R117_FINAL_INDEPENDENT_REVIEW_2026-10-18.md",
@@ -2054,7 +2054,9 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [],
+  "activeWorkOrders": [
+    "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md"
+  ],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -3542,7 +3544,7 @@
   },
   "x-r139FreshR3": {
     "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-COMBINED-ADMISSION.json",
-    "status": "SOURCE_ACCEPTED_BOUNDED_PENDING_COMMIT_AND_PRICING",
+    "status": "RUNTIME_ADMISSION_INDEPENDENT_REVIEW_PASS_PENDING_COMMIT",
     "ownerReply": "duyệt",
     "sourceCaps": {
       "consolidatedSourceRound": 1,
@@ -3558,7 +3560,12 @@
       "workerPurePython": 1,
       "independentRootPurePython": 1
     },
-    "runtimeActualUse": {},
+    "runtimeActualUse": {
+      "supervisorInvocation": 0,
+      "fixtureStarts": 0,
+      "keyContentsRead": 0,
+      "newPhysicalSlotUsedOrUncertain": 0
+    },
     "newBudgetUSD": 1,
     "newAPICap": 1,
     "newUsedOrUncertainSlots": 0,
@@ -3573,6 +3580,12 @@
     },
     "goBinary": ".cvf/runtime/r139_integrated_execution_r3_20261021_source_checks/intervention_execution_browser.test.exe",
     "goBinarySha256": "990390a82f8b18046079b01c9f0558d4dc43b3b93c4312e5ec7637b7ce269826",
-    "pricingReadUsed": 0
+    "pricingReadUsed": 1,
+    "sourceCommit": "8bb5463748eeb5f8802947cd3157918d479d8443",
+    "pricingEvidence": "docs/reviews/probes/r139_integrated_20261021/r5_public_pricing_read.json",
+    "pricingStatus": "PASS_PUBLIC_STANDARD_TARIFF_READINESS_ONLY",
+    "runtimeAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-RUNTIME-ADMISSION.json",
+    "runtimePreparation": "docs/reviews/probes/r139_integrated_20261021/r5_runtime_preparation.json",
+    "independentRuntimeAdmissionReview": "docs/reviews/R139_FRESH_R3_RUNTIME_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md"
   }
 }

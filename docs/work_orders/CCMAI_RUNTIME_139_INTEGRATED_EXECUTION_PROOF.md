@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: COMPLETE_PENDING_REVIEW
+Status: ACTIVE
 Risk: R2
 Worker: Sol Medium delegated fixture worker
 Reviewer: Root independent source/evidence REVIEWER
@@ -12,7 +12,7 @@ dispatchKind: INITIAL
 
 ## Current authority and acceptance target
 
-Current stage: CCMAI-RUNTIME-139 fresh-r3 source ACCEPTED_BOUNDED pendingcommit: exact7literals/3files; offlinecompilePASS, Go6/6 zero skips, workerPython30/30 and RootPython30/30 PASS; source/checkcaps1/1 spent. After sourcecommit, ONE approved secret-free publicpricing/modelread; pricinguncertain HOLD beforekey/fixture. Only pricingPASS+NEW exact independent runtimeadmissionreview/commit enables Owner-approvedfreshcampaign1/native8/browser1/NEWAPI1/additionalUSD1. Oldslot1/1MAYconsumed/unknownbillresponse and allHOLDs retained. E05/E06/M3OPEN; Facebook/ZaloOAparked.
+Current stage: CCMAI-RUNTIME-139 fresh-r3 runtime admission independently REVIEWED_PROCEED_TO_COMMIT_AND_CLEAN_PIN_RECHECK: source8bb54637/9pins/Go990390/Docker89442e/outer020b2e/publicpricingPASS/r3fresh/deadline16:40:16Z. Root must pass activepacketgates, commit immutableadmission and recheckclean/pins/deadline immediately before ONE outerinvocation; no additionalOwnerapproval needed inside combinedgrant. Keycontents/fixture/browser/API0; oldslot1MAYconsumed preserved, NEWAPI1/USD1 unused. FirstuncertaintyHOLD/no retry; E05/E06/M3OPEN/FacebookZaloOAparked.
 
 Historical initial preparation boundary: Owner `tiếp` continues G0 in the canonical delivery plan. Immutable dispatcher seed `642f5bd026dfe31e6dda6441dd25704eb3ececa3` precedes source BUILD. This is ONE work order containing G0 preparation, G1 native/backend proof and G2 browser proof, with explicit stage admission. Only source preparation/offline checks and Root's bounded pure-UI tool diagnostic are admitted now. G1/G2 runtime and provider use are HOLD. R117 physical allowance1/1 is consumed; no historical counter or slot transfers. No standalone helper successor follows automatically.
 
@@ -181,3 +181,7 @@ Owner duyệt explicitly approves combined2e9cecbf packet. New immutable FRESH-R
 ## Fresh-r3 source return and independent acceptance
 
 Exact7literal/3source candidate acceptedbounded by Root independentreview: compilePASS/Go6zeroSKIP/workerPython30/RootPython30. Evidence R139_FRESH_R3_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md and r5_fresh_source_checks.json; no runtime/key/provider effect. Source commit beforepublicpricing1read; ifpricinguncertainHOLD beforekey/fixture. Only exactnewruntimeadmission independentlyreviewed/committed mayactivate conditionalOwnercampaign. Source/checkcaps exhausted, no retries. IntegratedE05/E06/M3OPEN/FREEZEOPEN, oldAPI1MAYconsumed immutable.
+
+## Current fresh-r3 runtime preparation (not executable before final review/commit)
+
+Source8bb54637 accepted bounded; pricing1officialpage readPASS (publishedstandard/inferencebound, notinvoice). NEW FRESH-R3-RUNTIME-ADMISSION pins all9source/tree/binary/tool/Vite/browserproof/r3resources/deadline/newOwnerAPI1/USD1/cumulativeold+newledger. Separate Sol finalruntimeadmissionreview, activepacketgates, immutablecommit/cleanpins required BEFORE sole Rootr3recorder invocation. Keymetadataonlyatpreparation; one existingstagedkeycontentread bysupervisoratruntime, nocfg/restage. PreserveoldallHOLD/resources; strict Up/Exited-only Statuselapsed/Networks order comparison asapproved, unknown/differenceHOLD. NewslotMAY consumesNEW1/1 evenuncertain; no retry. Originalwait/ownedstop/3listenerabsence/captures required; E04branches/fullM3 notautoclosed.

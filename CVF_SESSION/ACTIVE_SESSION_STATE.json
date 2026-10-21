@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 fresh-r3 source ACCEPTED_BOUNDED pendingcommit: exact7literals/3files; offlinecompilePASS, Go6/6 zero skips, workerPython30/30 and RootPython30/30 PASS; source/checkcaps1/1 spent. After sourcecommit, ONE approved secret-free publicpricing/modelread; pricinguncertain HOLD beforekey/fixture. Only pricingPASS+NEW exact independent runtimeadmissionreview/commit enables Owner-approvedfreshcampaign1/native8/browser1/NEWAPI1/additionalUSD1. Oldslot1/1MAYconsumed/unknownbillresponse and allHOLDs retained. E05/E06/M3OPEN; Facebook/ZaloOAparked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 fresh-r3 runtime admission independently REVIEWED_PROCEED_TO_COMMIT_AND_CLEAN_PIN_RECHECK: source8bb54637/9pins/Go990390/Docker89442e/outer020b2e/publicpricingPASS/r3fresh/deadline16:40:16Z. Root must pass activepacketgates, commit immutableadmission and recheckclean/pins/deadline immediately before ONE outerinvocation; no additionalOwnerapproval needed inside combinedgrant. Keycontents/fixture/browser/API0; oldslot1MAYconsumed preserved, NEWAPI1/USD1 unused. FirstuncertaintyHOLD/no retry; E05/E06/M3OPEN/FacebookZaloOAparked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; then ORCHESTRATOR for conditional readiness after source commit",
+  "activeRole": "Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; bounded runtime EXECUTOR only after commit/clean-pin recheck; independent Sol runtime REVIEWER",
   "updatedAt": "2026-10-21",
   "x-resolvedCoreCommit": "b69e1088978e8c90ac58a2243fcf8f90d0f857ed",
   "x-ownerRoadmapDiscipline": {
@@ -2751,7 +2751,7 @@
   },
   "x-r139FreshR3": {
     "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-COMBINED-ADMISSION.json",
-    "status": "SOURCE_ACCEPTED_BOUNDED_PENDING_COMMIT_AND_PRICING",
+    "status": "RUNTIME_ADMISSION_INDEPENDENT_REVIEW_PASS_PENDING_COMMIT",
     "ownerReply": "duyệt",
     "sourceCaps": {
       "consolidatedSourceRound": 1,
@@ -2767,7 +2767,12 @@
       "workerPurePython": 1,
       "independentRootPurePython": 1
     },
-    "runtimeActualUse": {},
+    "runtimeActualUse": {
+      "supervisorInvocation": 0,
+      "fixtureStarts": 0,
+      "keyContentsRead": 0,
+      "newPhysicalSlotUsedOrUncertain": 0
+    },
     "newBudgetUSD": 1,
     "newAPICap": 1,
     "newUsedOrUncertainSlots": 0,
@@ -2782,6 +2787,12 @@
     },
     "goBinary": ".cvf/runtime/r139_integrated_execution_r3_20261021_source_checks/intervention_execution_browser.test.exe",
     "goBinarySha256": "990390a82f8b18046079b01c9f0558d4dc43b3b93c4312e5ec7637b7ce269826",
-    "pricingReadUsed": 0
+    "pricingReadUsed": 1,
+    "sourceCommit": "8bb5463748eeb5f8802947cd3157918d479d8443",
+    "pricingEvidence": "docs/reviews/probes/r139_integrated_20261021/r5_public_pricing_read.json",
+    "pricingStatus": "PASS_PUBLIC_STANDARD_TARIFF_READINESS_ONLY",
+    "runtimeAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-RUNTIME-ADMISSION.json",
+    "runtimePreparation": "docs/reviews/probes/r139_integrated_20261021/r5_runtime_preparation.json",
+    "independentRuntimeAdmissionReview": "docs/reviews/R139_FRESH_R3_RUNTIME_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md"
   }
 }

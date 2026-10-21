@@ -4440,6 +4440,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Sole pureUI capability diagnostic reserved before effect; consumed, no reset.: `docs/reviews/probes/r139_integrated_20261021/browser_capability_reservation.json`
 - Explicit Owner check-only literal-argv continuation; no source/recompile/runtime/API; original failure preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-CHECK-ONLY-ADMISSION.json`
 - Explicit Owner combined fresh-r3 grant: exact source/check round and conditional freshcampaign/newAPI1/additionalUSD1; not executable runtime yet.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-COMBINED-ADMISSION.json`
+- Exact fresh-r3 conditional runtime admission draft after source8bb54637 and publicpricingPASS; independent review/commit before effects; NEWAPI1/USD1, oldslot preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-RUNTIME-ADMISSION.json`
 - Explicit Owner single RF1-RF4 repair/replacement-fixture continuation; cumulative1USD/one API unchanged; runtime still needs exact admission.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-OWNER-CONTINUATION-ADMISSION.json`
 - Exact R139 replacement runtime admission preparation; independent review/commit required, cumulative1USD/oneAPI unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-REPLACEMENT-RUNTIME-ADMISSION.json`
 - Owner-approved ONE R139 source-evidence round; no runtime/provider authority; old HOLDs preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-EVIDENCE-ADMISSION.json`
@@ -4464,6 +4465,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Proposed ONE combined R139 fresh r3 source/check/campaign grant with new1USD/API1; NOT_AUTHORIZED, original holds/counters preserved.: `docs/reviews/R139_FRESH_CAMPAIGN_COMBINED_PROPOSAL_2026-10-21.md`
 - Independent Sol documentary review: fresh-r3 combined proposal ready for Owner review only; no source/effect authority.: `docs/reviews/R139_FRESH_CAMPAIGN_PROPOSAL_INDEPENDENT_REVIEW_2026-10-21.md`
 - Fresh-r3 exact identity/path source accepted bounded after compile/Go6/Python30+30; pricing/exact independent runtime admission still required.: `docs/reviews/R139_FRESH_R3_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md`
+- Independent Sol exact fresh-r3 runtime admission review: proceed to commit/clean-pin recheck only; no effects or runtime PASS.: `docs/reviews/R139_FRESH_R3_RUNTIME_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md`
 - Fresh-r3 exact identity/path source accepted bounded after compile/Go6/Python30+30; pricing/exact independent runtime admission still required.: `docs/reviews/R139_FRESH_R3_SOURCE_WORKER_RETURN_2026-10-21.md`
 - Independent read-only acceptance of exact replacement admission/pins/caps for commit and clean recheck; actual runtime unproved.: `docs/reviews/R139_REPLACEMENT_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md`
 - Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry.: `docs/reviews/R139_REPLACEMENT_RUNTIME_INDEPENDENT_REVIEW_2026-10-21.md`
@@ -4489,6 +4491,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Proposed ONE combined R139 fresh r3 source/check/campaign grant with new1USD/API1; NOT_AUTHORIZED, original holds/counters preserved.: `docs/reviews/probes/r139_integrated_20261021/r5_fresh_campaign_proposal.json`
 - Proposed ONE combined R139 fresh r3 source/check/campaign grant with new1USD/API1; NOT_AUTHORIZED, original holds/counters preserved.: `docs/reviews/probes/r139_integrated_20261021/r5_fresh_campaign_source_proposal.patch`
 - Fresh-r3 exact identity/path source accepted bounded after compile/Go6/Python30+30; pricing/exact independent runtime admission still required.: `docs/reviews/probes/r139_integrated_20261021/r5_fresh_source_checks.json`
+- One approved secret-free official public pricing/model readiness read reserved after source8bb54637, before any key/fixture/provider.: `docs/reviews/probes/r139_integrated_20261021/r5_public_pricing_read.json`
+- Exact fresh-r3 conditional runtime admission draft after source8bb54637 and publicpricingPASS; independent review/commit before effects; NEWAPI1/USD1, oldslot preserved.: `docs/reviews/probes/r139_integrated_20261021/r5_runtime_preparation.json`
 - Retained failed handback metadata checks and Root corrections; source unchanged.: `docs/reviews/probes/r139_integrated_20261021/root_handback_metadata_corrections.json`
 - Root27R137 source/protected matches plus2authority protection pins; no runtime proof.: `docs/reviews/probes/r139_integrated_20261021/root_source_preparation_baseline.json`
 - Observed local metadata or reviewed draft; Owner1USD/one-call approved, credential/deadline/final admission pending, no live claim.: `docs/reviews/probes/r139_integrated_20261021/local_readiness_outcome.json`

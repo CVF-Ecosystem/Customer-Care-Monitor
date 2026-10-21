@@ -83,11 +83,11 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "REVIEW_PENDING",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
-  "buildCommit": "915bc9c62256d528062b00f1d16565bbbbab967e",
+  "workOrderStatus": "ACTIVE",
+  "buildCommit": "8bb5463748eeb5f8802947cd3157918d479d8443",
   "reviewEvidence": [
     "docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md",
     "docs/reviews/probes/r139_integrated_20261021/browser_capability_outcome.json",
@@ -108,9 +108,10 @@
     "docs/reviews/probes/r139_integrated_20261021/r4_check_only_results.json",
     "docs/reviews/R139_FRESH_R3_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md",
     "docs/reviews/R139_FRESH_R3_SOURCE_WORKER_RETURN_2026-10-21.md",
-    "docs/reviews/probes/r139_integrated_20261021/r5_fresh_source_checks.json"
+    "docs/reviews/probes/r139_integrated_20261021/r5_fresh_source_checks.json",
+    "docs/reviews/R139_FRESH_R3_RUNTIME_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md"
   ],
-  "disposition": "CCMAI-RUNTIME-139 fresh-r3 source ACCEPTED_BOUNDED pendingcommit: exact7literals/3files; offlinecompilePASS, Go6/6 zero skips, workerPython30/30 and RootPython30/30 PASS; source/checkcaps1/1 spent. After sourcecommit, ONE approved secret-free publicpricing/modelread; pricinguncertain HOLD beforekey/fixture. Only pricingPASS+NEW exact independent runtimeadmissionreview/commit enables Owner-approvedfreshcampaign1/native8/browser1/NEWAPI1/additionalUSD1. Oldslot1/1MAYconsumed/unknownbillresponse and allHOLDs retained. E05/E06/M3OPEN; Facebook/ZaloOAparked.",
+  "disposition": "CCMAI-RUNTIME-139 fresh-r3 runtime admission independently REVIEWED_PROCEED_TO_COMMIT_AND_CLEAN_PIN_RECHECK: source8bb54637/9pins/Go990390/Docker89442e/outer020b2e/publicpricingPASS/r3fresh/deadline16:40:16Z. Root must pass activepacketgates, commit immutableadmission and recheckclean/pins/deadline immediately before ONE outerinvocation; no additionalOwnerapproval needed inside combinedgrant. Keycontents/fixture/browser/API0; oldslot1MAYconsumed preserved, NEWAPI1/USD1 unused. FirstuncertaintyHOLD/no retry; E05/E06/M3OPEN/FacebookZaloOAparked.",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -137,7 +138,10 @@
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "REVIEW_PASS",
+    "PARKED",
+    "BUILD"
   ],
   "actualUse": {
     "status": "HOLD_MANUAL_HOLD_PROVIDER_OUTCOME_UNKNOWN",
@@ -201,7 +205,7 @@
   "sourceResumeAuthority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-RESUME-ADMISSION.json",
   "repairAuthority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-REPAIR-ADMISSION.json",
   "sourceRevisionRounds": 5,
-  "reviewPassScope": "REPLACEMENT_SOURCE_PREPARATION_ONLY; runtime still unproved",
+  "reviewPassScope": "FRESH_R3_SOURCE_PREPARATION_ONLY; runtime unproved",
   "x-httpsDiagnostic": {
     "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-HTTPS-BROWSER-ADMISSION.json",
     "status": "PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE",
@@ -250,10 +254,10 @@
     "keyCustodian": "Root existing Alibaba credential",
     "oldBudgets": "Original/new HTTPS diagnostic and historical R117 provider counters remain consumed, no reset."
   },
-  "runtimeAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-REPLACEMENT-RUNTIME-ADMISSION.json",
+  "runtimeAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-RUNTIME-ADMISSION.json",
   "runtimeRoles": {
     "executor": "Root bounded runtime evidence EXECUTOR",
-    "reviewer": "/root/r139_r2_runtime_reviewer independent runtime REVIEWER (source/admission author0)"
+    "reviewer": "/root/r139_r2_runtime_reviewer independent runtime REVIEWER (source/admission/execution author0)"
   },
   "x-integratedRuntime": {
     "status": "HOLD_SETUP_BEFORE_NATIVE_AND_BROWSER",
@@ -284,7 +288,7 @@
     "reviewCostDisposition": "REVIEW_COST_ESCALATION_REQUIRED",
     "proposal": "docs/reviews/probes/r139_integrated_20261021/bounded_repair_and_fixture_continuation_proposal.json"
   },
-  "sourceBuildCommit": "b8ba25225c3732f092f2c16eb91107c0bf75fea8",
+  "sourceBuildCommit": "8bb5463748eeb5f8802947cd3157918d479d8443",
   "x-replacementSourceReview": {
     "evidence": "docs/reviews/probes/r139_integrated_20261021/r2_root_source_review.json",
     "report": "docs/reviews/R139_CONTINUATION_SOURCE_REVIEW_2026-10-21.md",
@@ -405,7 +409,7 @@
   },
   "x-r139FreshR3": {
     "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-COMBINED-ADMISSION.json",
-    "status": "SOURCE_ACCEPTED_BOUNDED_PENDING_COMMIT_AND_PRICING",
+    "status": "RUNTIME_ADMISSION_INDEPENDENT_REVIEW_PASS_PENDING_COMMIT",
     "ownerReply": "duyệt",
     "sourceCaps": {
       "consolidatedSourceRound": 1,
@@ -421,7 +425,12 @@
       "workerPurePython": 1,
       "independentRootPurePython": 1
     },
-    "runtimeActualUse": {},
+    "runtimeActualUse": {
+      "supervisorInvocation": 0,
+      "fixtureStarts": 0,
+      "keyContentsRead": 0,
+      "newPhysicalSlotUsedOrUncertain": 0
+    },
     "newBudgetUSD": 1,
     "newAPICap": 1,
     "newUsedOrUncertainSlots": 0,
@@ -436,6 +445,12 @@
     },
     "goBinary": ".cvf/runtime/r139_integrated_execution_r3_20261021_source_checks/intervention_execution_browser.test.exe",
     "goBinarySha256": "990390a82f8b18046079b01c9f0558d4dc43b3b93c4312e5ec7637b7ce269826",
-    "pricingReadUsed": 0
+    "pricingReadUsed": 1,
+    "sourceCommit": "8bb5463748eeb5f8802947cd3157918d479d8443",
+    "pricingEvidence": "docs/reviews/probes/r139_integrated_20261021/r5_public_pricing_read.json",
+    "pricingStatus": "PASS_PUBLIC_STANDARD_TARIFF_READINESS_ONLY",
+    "runtimeAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-RUNTIME-ADMISSION.json",
+    "runtimePreparation": "docs/reviews/probes/r139_integrated_20261021/r5_runtime_preparation.json",
+    "independentRuntimeAdmissionReview": "docs/reviews/R139_FRESH_R3_RUNTIME_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md"
   }
 }

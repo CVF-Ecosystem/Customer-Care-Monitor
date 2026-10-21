@@ -35584,6 +35584,34 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/r5_fresh_source_checks.json",
       "status": "ACTIVE",
       "description": "Fresh-r3 exact identity/path source accepted bounded after compile/Go6/Python30+30; pricing/exact independent runtime admission still required."
+    },
+    {
+      "id": "r139-r5-public-pricing-read",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r5_public_pricing_read.json",
+      "status": "ACTIVE",
+      "description": "One approved secret-free official public pricing/model readiness read reserved after source8bb54637, before any key/fixture/provider."
+    },
+    {
+      "id": "r139-ccmai-runtime-139-fresh-r3-runtime-admission",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-RUNTIME-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Exact fresh-r3 conditional runtime admission draft after source8bb54637 and publicpricingPASS; independent review/commit before effects; NEWAPI1/USD1, oldslot preserved."
+    },
+    {
+      "id": "r139-r5-runtime-preparation",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r5_runtime_preparation.json",
+      "status": "ACTIVE",
+      "description": "Exact fresh-r3 conditional runtime admission draft after source8bb54637 and publicpricingPASS; independent review/commit before effects; NEWAPI1/USD1, oldslot preserved."
+    },
+    {
+      "id": "r139-r139-fresh-r3-runtime-admission-independent-review-2026-10-21",
+      "family": "continuity",
+      "path": "docs/reviews/R139_FRESH_R3_RUNTIME_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "Independent Sol exact fresh-r3 runtime admission review: proceed to commit/clean-pin recheck only; no effects or runtime PASS."
     }
   ]
 }
