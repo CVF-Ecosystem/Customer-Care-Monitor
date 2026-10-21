@@ -83,10 +83,10 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
   "buildCommit": "915bc9c62256d528062b00f1d16565bbbbab967e",
   "reviewEvidence": [
     "docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md",
@@ -102,9 +102,12 @@
     "docs/reviews/probes/r139_integrated_20261021/r2_integrated_runtime_outcome.json",
     "docs/reviews/R139_SOURCE_EVIDENCE_INDEPENDENT_REVIEW_2026-10-21.md",
     "docs/reviews/R139_SOURCE_EVIDENCE_WORKER_RETURN_2026-10-21.md",
-    "docs/reviews/probes/r139_integrated_20261021/r3_source_checks.json"
+    "docs/reviews/probes/r139_integrated_20261021/r3_source_checks.json",
+    "docs/reviews/R139_CHECK_ONLY_INDEPENDENT_REVIEW_2026-10-21.md",
+    "docs/reviews/R139_CHECK_ONLY_WORKER_RETURN_2026-10-21.md",
+    "docs/reviews/probes/r139_integrated_20261021/r4_check_only_results.json"
   ],
-  "disposition": "CCMAI-RUNTIME-139 Owner approved check-only recovery: Sol Medium one corrected literal-argv invocation of pinned existing Go binary(6 pureIO tests,30s); only ifPASS resume unused workerPython1 then Root independent Python1. Source edits0/recompile0/runtime/key/DB/Docker/fixture/browser/network/provider0. Root independent review/commit; firstfailure HOLD/no retry. Old Go flag failure and all original runtime/manual/cleanup HOLDs preserved; API slot1/1 MAY_HAVE_STARTED consumed,response/billing UNKNOWN. FullM3/E05/E06 OPEN, Facebook/Zalo OA parked.",
+  "disposition": "CCMAI-RUNTIME-139 ACCEPTED_BOUNDED_SOURCE_ONLY at b8ba2522: correctedGo6/6 zero skips, workerPython30/30 and independentRootPython30/30 PASS; check-only caps consumed, source edits/recompile0. Integrated tranche stays CHANGES_REQUIRED/REVIEW/FREEZE OPEN: original MANUAL_HOLD/cleanupHOLD retained, API slot1/1 MAY_HAVE_STARTED consumed,response/billing UNKNOWN. Documentary next-runtime readiness only: used fixture_r2 path still pinned, fresh path source/effect/cost authority needed before any new source/check/resource/key/DB/browser/network/provider. E05/E06/fullM3 OPEN; Facebook/Zalo OA parked.",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -127,7 +130,9 @@
     "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "actualUse": {
     "status": "HOLD_MANUAL_HOLD_PROVIDER_OUTCOME_UNKNOWN",
@@ -274,7 +279,7 @@
     "reviewCostDisposition": "REVIEW_COST_ESCALATION_REQUIRED",
     "proposal": "docs/reviews/probes/r139_integrated_20261021/bounded_repair_and_fixture_continuation_proposal.json"
   },
-  "sourceBuildCommit": "03e967a450d85cc81e7fbfa22b8c4f290fe72d37",
+  "sourceBuildCommit": "b8ba25225c3732f092f2c16eb91107c0bf75fea8",
   "x-replacementSourceReview": {
     "evidence": "docs/reviews/probes/r139_integrated_20261021/r2_root_source_review.json",
     "report": "docs/reviews/R139_CONTINUATION_SOURCE_REVIEW_2026-10-21.md",
@@ -304,7 +309,7 @@
   },
   "x-r139SourceEvidenceRound": {
     "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-EVIDENCE-ADMISSION.json",
-    "status": "HOLD_REQUIRED_CHECKS_INCOMPLETE_NO_RETRY",
+    "status": "ACCEPTED_BOUNDED_SOURCE_ONLY_AFTER_CHECK_CONTINUATION",
     "ownerReply": "Duyệt một vòng source-only theo phương án; không API/runtime",
     "worker": "/root/r139_source_evidence_sol Sol Medium",
     "reviewer": "Root independent source REVIEWER; no source authorship",
@@ -319,8 +324,8 @@
       "consolidatedSourceRound": 1,
       "workerOfflineGoCompile": 1,
       "workerPureGoIOCheck": 1,
-      "workerPurePythonCheck": 0,
-      "rootPurePythonCheck": 0
+      "workerPurePythonCheck": 1,
+      "rootPurePythonCheck": 1
     },
     "runtimeEffects": 0,
     "providerSlot": "1/1 consumed MAY_HAVE_STARTED; no retry",
@@ -333,7 +338,53 @@
     "binarySha256": "6b1cbfc6e5eaba7d40c085a9008c22715682abfef8a820c506e1591b7c04d86e",
     "workerReturn": "docs/reviews/R139_SOURCE_EVIDENCE_WORKER_RETURN_2026-10-21.md",
     "independentReview": "docs/reviews/R139_SOURCE_EVIDENCE_INDEPENDENT_REVIEW_2026-10-21.md",
-    "checkOutcome": "Go compilePASS; binary exit2 before tests; Python NOT_RUN",
-    "nextProposal": "docs/reviews/probes/r139_integrated_20261021/r3_check_only_recovery_proposal.json"
+    "checkOutcome": "OriginalGoFlagFailure retained; separately approved correctedGo6/6 PASS, workerPython30/30 and RootPython30/30 PASS",
+    "nextProposal": "docs/reviews/probes/r139_integrated_20261021/r3_check_only_recovery_proposal.json",
+    "sourceCommit": "b8ba25225c3732f092f2c16eb91107c0bf75fea8",
+    "latestIndependentReview": "docs/reviews/R139_CHECK_ONLY_INDEPENDENT_REVIEW_2026-10-21.md",
+    "resolvedCheckFinding": "R139-SRC-CHECK-01 resolved by separately approved check-only continuation; original failed invocation retained",
+    "initialCheckOutcome": "Go compilePASS; binary exit2 before tests; Python NOT_RUN"
+  },
+  "x-r139CheckOnlyContinuation": {
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CHECK-ONLY-ADMISSION.json",
+    "status": "COMPLETE_ACCEPTED_BOUNDED_SOURCE_ONLY",
+    "ownerReply": "Duyệt check-only theo phương án; không source/runtime/API",
+    "sourceCommit": "b8ba25225c3732f092f2c16eb91107c0bf75fea8",
+    "sourceSha256": {
+      "backend/api/handlers/intervention_execution_browser_test.go": "543da3b5542d88ab353ab18b7b57e005d949b5ecc921658f2543dd5c07ffdebf",
+      "scripts/r139_execution_supervisor.py": "3904cb9100615ba6ecbcffb51d78f8f26d2103ae3f34e958ed27a4adfbd9ba9b",
+      "scripts/tests/test_r139_execution_supervisor.py": "7c873b6f97005e7d35229550c8218abb1e1f4586afa53bc06ff6dfec9acfc65a"
+    },
+    "binarySha256": "6b1cbfc6e5eaba7d40c085a9008c22715682abfef8a820c506e1591b7c04d86e",
+    "newCaps": {
+      "correctedPureGoBinaryInvocation": 1
+    },
+    "resumedUnspentCaps": {
+      "workerPurePythonCheck": 1,
+      "rootPurePythonCheck": 1
+    },
+    "actualUse": {
+      "correctedPureGoBinaryInvocation": 1,
+      "workerPurePythonCheck": 1,
+      "rootPurePythonCheck": 1
+    },
+    "sourceEdits": 0,
+    "compile": 0,
+    "effects": {
+      "keyRead": 0,
+      "DB": 0,
+      "Docker": 0,
+      "fixture": 0,
+      "browser": 0,
+      "network": 0,
+      "provider": 0,
+      "grant": 0,
+      "executePOST": 0
+    },
+    "receipt": "docs/reviews/probes/r139_integrated_20261021/r4_check_only_results.json",
+    "independentReview": "docs/reviews/R139_CHECK_ONLY_INDEPENDENT_REVIEW_2026-10-21.md",
+    "sourceAcceptance": "ACCEPTED_BOUNDED_SOURCE_ONLY",
+    "runtimeAcceptance": "HOLD_OPEN",
+    "nextRuntimeReadiness": "docs/reviews/probes/r139_integrated_20261021/r4_next_runtime_readiness.json"
   }
 }

@@ -4,11 +4,11 @@ Status: ACTIVE
 
 ## Current State
 
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Root ORCHESTRATOR / independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol Medium CHECK_WORKER (no source edits)
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Root independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol check worker returned, all approved checks consumed
 - Active tranche: CCMAI-RUNTIME-139
-- Next allowed move: CCMAI-RUNTIME-139 Owner approved check-only recovery: Sol Medium one corrected literal-argv invocation of pinned existing Go binary(6 pureIO tests,30s); only ifPASS resume unused workerPython1 then Root independent Python1. Source edits0/recompile0/runtime/key/DB/Docker/fixture/browser/network/provider0. Root independent review/commit; firstfailure HOLD/no retry. Old Go flag failure and all original runtime/manual/cleanup HOLDs preserved; API slot1/1 MAY_HAVE_STARTED consumed,response/billing UNKNOWN. FullM3/E05/E06 OPEN, Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-139 ACCEPTED_BOUNDED_SOURCE_ONLY at b8ba2522: correctedGo6/6 zero skips, workerPython30/30 and independentRootPython30/30 PASS; check-only caps consumed, source edits/recompile0. Integrated tranche stays CHANGES_REQUIRED/REVIEW/FREEZE OPEN: original MANUAL_HOLD/cleanupHOLD retained, API slot1/1 MAY_HAVE_STARTED consumed,response/billing UNKNOWN. Documentary next-runtime readiness only: used fixture_r2 path still pinned, fresh path source/effect/cost authority needed before any new source/check/resource/key/DB/browser/network/provider. E05/E06/fullM3 OPEN; Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## INTAKE / DESIGN / SPEC / WORK_ORDER acknowledgment
@@ -124,3 +124,11 @@ Root fresh rehydration/declaration transitions BUILD -> REVIEW_PENDING -> CHANGE
 ## Explicit Owner check-only continuation / dispatcher acknowledgment
 
 Root fresh manifest/policy/compact/state/memory/handoff/implementation/index rehydration and doctor27/27 PASS; publicCoreb69e1088/originmain, inherited e9pin warning. No continuity drift. Owner explicitly approved check-only proposal, no source/runtime/API. INTAKE/DESIGN/SPEC inherit exact pinned source/binary and literal argv; WORK_ORDER new immutable CHECK-ONLY-ADMISSION committed before execution. Sol CHECK_WORKER (no source authorship), Root independent source REVIEWER and COMMIT_STEWARD. Source edits0/compile0; corrected binary invocation1 new separately counted, then remaining workerPython1/RootPython1 only on priorPASS. Root launcher uses subprocess argv list shellFalse/minimal noncredential env; worker audits it before run. First failure stops/no retry. Old failedGo and runtime/manual/cleanup HOLDs/API1/1 consumed retained, no M3 closure. Worker records fresh acknowledgment in new return before checks.
+
+## Check-only worker return / Root REVIEW acknowledgment
+
+Root fresh rehydration confirms current continuity, unchanged R2/Core/source pins. Transition BUILD to REVIEW_PENDING before independent Root Python. Worker correctedGo6/6 zero skips and Python30/30 PASS; Root independently verified raw hashes/source/binary/launcher without rerunning checks. Root no source authorship, uses sole remaining Python slot through pinned launcher only. Old flag failure and runtime/manual/cleanup HOLDs remain. No runtime/API grant.
+
+## Check-only completion / independent bounded source acceptance
+
+Root independently verified source/binary/launcher/raw hashes. CorrectedGo6/6 zero skips and workerPython30/30 PASS; Root solePython30/30 PASS. Source b8ba2522 accepted bounded source/IO only, old failedflag/HOLD retained. Root REVIEWER transitions SESSION_SYNC/COMMIT_STEWARD to synchronize this outcome; integrated status remainsCHANGES_REQUIRED/REVIEW/FREEZE OPEN, no runtime/AI/hostedCI claim. Newcheck1/1 and both remainingPython1/1 consumed; no source/recompile or runtime/key/DB/Docker/fixture/browser/network/provider. Freshpath still required because bothsourcepin usedfixture_r2; new effects/API authority absent, old1/1MAYconsumed unknownbillingresponse. Documentary readiness only before new authority; E05/E06/M3OPEN and Facebook/ZaloOAparked.

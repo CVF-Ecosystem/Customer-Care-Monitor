@@ -35500,6 +35500,34 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CHECK-ONLY-ADMISSION.json",
       "status": "ACTIVE",
       "description": "Explicit Owner check-only literal-argv continuation; no source/recompile/runtime/API; original failure preserved."
+    },
+    {
+      "id": "r139-r139-check-only-independent-review-2026-10-21",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CHECK_ONLY_INDEPENDENT_REVIEW_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "R139 source/IO accepted bounded after Go6/Python30+30; integrated runtime still HOLD, no new source/API authority."
+    },
+    {
+      "id": "r139-r139-check-only-worker-return-2026-10-21",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CHECK_ONLY_WORKER_RETURN_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "R139 source/IO accepted bounded after Go6/Python30+30; integrated runtime still HOLD, no new source/API authority."
+    },
+    {
+      "id": "r139-r4-check-only-results",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r4_check_only_results.json",
+      "status": "ACTIVE",
+      "description": "R139 source/IO accepted bounded after Go6/Python30+30; integrated runtime still HOLD, no new source/API authority."
+    },
+    {
+      "id": "r139-r4-next-runtime-readiness",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r4_next_runtime_readiness.json",
+      "status": "ACTIVE",
+      "description": "R139 source/IO accepted bounded after Go6/Python30+30; integrated runtime still HOLD, no new source/API authority."
     }
   ]
 }
