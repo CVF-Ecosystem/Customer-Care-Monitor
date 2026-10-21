@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Current R139 replacement source review ready; runtime needs new exact admission; original setupHOLD preserved, fullM3 OPEN."
+      "description": "Current R139 HOLD after one browserexecute/manualhold; slot1 consumed outcomeUNKNOWN; source/replacement budgets exhausted, no retry; fullM3 OPEN."
     },
     {
       "id": "r060-work-order",
@@ -35395,6 +35395,62 @@
       "path": "docs/reviews/R139_REPLACEMENT_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md",
       "status": "ACTIVE",
       "description": "Independent read-only acceptance of exact replacement admission/pins/caps for commit and clean recheck; actual runtime unproved."
+    },
+    {
+      "id": "r139-r2-integrated-runtime-outcome",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r2_integrated_runtime_outcome.json",
+      "status": "ACTIVE",
+      "description": "Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry."
+    },
+    {
+      "id": "r139-r139-replacement-runtime-independent-review-2026-10-21",
+      "family": "continuity",
+      "path": "docs/reviews/R139_REPLACEMENT_RUNTIME_INDEPENDENT_REVIEW_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry."
+    },
+    {
+      "id": "r139-r2-after-send-hold",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r2_after_send_hold.jpg",
+      "status": "ACTIVE",
+      "description": "Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry."
+    },
+    {
+      "id": "r139-r2-before-execute",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r2_before_execute.jpg",
+      "status": "ACTIVE",
+      "description": "Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry."
+    },
+    {
+      "id": "r139-r2-manual-hold",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r2_manual_hold.jpg",
+      "status": "ACTIVE",
+      "description": "Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry."
+    },
+    {
+      "id": "r139-r2-ready-execution",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r2_ready_execution.jpg",
+      "status": "ACTIVE",
+      "description": "Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry."
+    },
+    {
+      "id": "r139-r2-ready-visible",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r2_ready_visible.jpg",
+      "status": "ACTIVE",
+      "description": "Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry."
+    },
+    {
+      "id": "r139-r2-next-source-only-proposal",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r2_next_source_only_proposal.json",
+      "status": "ACTIVE",
+      "description": "Concrete source-only next proposal after actual HOLD; no runtime/key/API or budget reset; explicit further source authority required."
     }
   ]
 }

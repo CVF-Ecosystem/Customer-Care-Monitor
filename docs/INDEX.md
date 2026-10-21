@@ -15,7 +15,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R139 replacement source review ready; runtime needs new exact admission; original setupHOLD preserved, fullM3 OPEN.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md`
+- Current R139 HOLD after one browserexecute/manualhold; slot1 consumed outcomeUNKNOWN; source/replacement budgets exhausted, no retry; fullM3 OPEN.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -4457,6 +4457,14 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance.: `docs/reviews/R139_CONTINUATION_SOURCE_RETURN_2026-10-21.md`
 - R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance.: `docs/reviews/R139_CONTINUATION_SOURCE_REVIEW_2026-10-21.md`
 - Independent read-only acceptance of exact replacement admission/pins/caps for commit and clean recheck; actual runtime unproved.: `docs/reviews/R139_REPLACEMENT_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md`
+- Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry.: `docs/reviews/R139_REPLACEMENT_RUNTIME_INDEPENDENT_REVIEW_2026-10-21.md`
+- Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry.: `docs/reviews/probes/r139_integrated_20261021/r2_after_send_hold.jpg`
+- Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry.: `docs/reviews/probes/r139_integrated_20261021/r2_before_execute.jpg`
+- Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry.: `docs/reviews/probes/r139_integrated_20261021/r2_integrated_runtime_outcome.json`
+- Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry.: `docs/reviews/probes/r139_integrated_20261021/r2_manual_hold.jpg`
+- Concrete source-only next proposal after actual HOLD; no runtime/key/API or budget reset; explicit further source authority required.: `docs/reviews/probes/r139_integrated_20261021/r2_next_source_only_proposal.json`
+- Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry.: `docs/reviews/probes/r139_integrated_20261021/r2_ready_execution.jpg`
+- Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry.: `docs/reviews/probes/r139_integrated_20261021/r2_ready_visible.jpg`
 - R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/r2_root_check_reservation.json`
 - R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/r2_root_source_review.json`
 - Exact R139 replacement runtime admission preparation; independent review/commit required, cumulative1USD/oneAPI unchanged.: `docs/reviews/probes/r139_integrated_20261021/r2_runtime_preparation.json`

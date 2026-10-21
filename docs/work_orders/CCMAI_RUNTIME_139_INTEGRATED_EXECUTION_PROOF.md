@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 Worker: Sol Medium delegated fixture worker
 Reviewer: Root independent source/evidence REVIEWER
@@ -12,7 +12,7 @@ dispatchKind: INITIAL
 
 ## Current authority and acceptance target
 
-Current stage: CCMAI-RUNTIME-139 replacement admission independently accepted: commit exact REPLACEMENT-RUNTIME-ADMISSION then clean source/binary/tool/deadline/recorder pins recheck and invoke sole replacement supervisor. NativeG1 must pass before genuine supportedIAB G2/one deliberate execute; cumulativeR139 provider0/max1API/max1USD/no retry. One replacement start-stop only; oldsetupHOLD/resources/counters preserved, source checks exhausted. Missing evidence or uncertaintyHOLD, uncoveredE04 OPEN; Facebook/Zalo OA parked.
+Current stage: CCMAI-RUNTIME-139 HOLD/CHANGES_REQUIRED after sole replacement: one browserexecute202 then MANUAL_HOLD/no publication; physicalslot1/1 MAY_HAVE_STARTED consumed, provider response/usage/billing UNKNOWN, no retry. FullGoexit1/finalwire+durable receipts missing; prebrowser8POST/18reads software-only bounded. Original child waits/stoppedPID0/three exactlistenersabsent observed; strict protectedStatus clocktext4diff keeps originalcleanupHOLD. Source/check/replacementcaps exhausted; documentary diagnosis/cost proposal only before any new source/resource/API authority. FullM3/G3 OPEN, Facebook/Zalo OA parked.
 
 Historical initial preparation boundary: Owner `tiếp` continues G0 in the canonical delivery plan. Immutable dispatcher seed `642f5bd026dfe31e6dda6441dd25704eb3ececa3` precedes source BUILD. This is ONE work order containing G0 preparation, G1 native/backend proof and G2 browser proof, with explicit stage admission. Only source preparation/offline checks and Root's bounded pure-UI tool diagnostic are admitted now. G1/G2 runtime and provider use are HOLD. R117 physical allowance1/1 is consumed; no historical counter or slot transfers. No standalone helper successor follows automatically.
 
@@ -149,3 +149,7 @@ RF4 integration identities fixed before this single repair: external `fixture_r2
 ## Current replacement runtime dispatch
 
 Source material03e967a4 accepted for preparing this one replacement run; source checks exhausted. Exact REPLACEMENT-RUNTIME-ADMISSION is new and must be committed after final independent review, then byte/pin/clean verification before invoking Root recorder once. Owner continuation8415842c and original1USD/oneAPI grant remain cumulative; firstcampaignactual0/fixture1consumed unchanged. Actual reviewer /root/r139_r2_runtime_reviewer succeeds unavailable oldhandle without changing ownership/caps. Native failure stops before G2/provider. Root supported IAB only, one writer execute/confirm then passive publication/reload/history and reader no-control checks. Missing E04 mutually exclusive evidence remainsOPEN/PARTIAL; no second POST. Finite cleanup180seconds; strict non-Networks inventory differencesHOLD; recorder no independentoutertimeout is explicit and never a fullhangguarantee.
+
+## Current replacement outcome — HOLD / CHANGES_REQUIRED
+
+One replacement campaign consumed: nativeprebrowser8POST/18reads/transport0, genuineIABwriteroneexecute202 thenmanualhold. No published result. Physicalslot1/1MAY_HAVE_STARTED consumed; providerresponse/usage/billingUNKNOWN, no furthercall/retry. Goexit1 before wire/finalreceipt export, so E05/E06/integratedG1G2unaccepted. Ownedstop/waits/three exactlistenerabsence observed; strictprotectedStatus4clockdifferences preserveoriginalHOLD. See R139_REPLACEMENT_RUNTIME_INDEPENDENT_REVIEW_2026-10-21.md. No newsource/runtime/key/API authority; nextdocumentarydiagnosisproposalonly.
