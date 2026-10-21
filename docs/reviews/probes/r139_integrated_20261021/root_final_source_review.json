@@ -40,5 +40,17 @@
     "explanation": "Root misread nested JSON escaping; direct bytes show correct single escapes. No repair round3 or escalation occurred."
   },
   "runtimeEffects": 0,
-  "claimBoundary": "Static source and effect-free software checks only. G0 runtime HOLD; G1/G2 and E01-E06 NOT_RUN; no runtime AI governance or product acceptance."
+  "claimBoundary": "Static source and effect-free software checks only. G0 runtime HOLD; G1/G2 and E01-E06 NOT_RUN; no runtime AI governance or product acceptance.",
+  "sourceCommit": "34facc34c26ae8eb8737ec0f8384139e832949af",
+  "repositoryGates": {
+    "legacyPreflight": "PASS_7_OF_7",
+    "workerReturn": "PASS",
+    "reviewerFast": "PASS",
+    "preCommit": "PASS",
+    "gateUnits": 89,
+    "gateUnitsSeconds": 42.919,
+    "APPL": "NOT_APPLICABLE_WITH_REASON_COMPLETED_RETURN_STATUS_NOT_ACTIVE_CLOSEABILITY_PASS",
+    "hostedCiObserved": false
+  },
+  "overallDisposition": "PARKED_REVIEW_FREEZE_OPEN_RUNTIME_HOLD"
 }
