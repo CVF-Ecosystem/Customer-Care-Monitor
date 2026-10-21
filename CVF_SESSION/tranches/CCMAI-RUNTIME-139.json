@@ -81,22 +81,23 @@
   "browserDiagnosticContract": "Root only, supported CUA IAB route, one owned about:blank/data document containing a local static button; observe before, one deliberate click, observe after and original screenshot, close with post-close observation. No network/auth/app/AI/DB; no alternate scheme/stack or retry after capability failure. Diagnostic is UI-tool proof only.",
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
-  "baseCommit": "642f5bd026dfe31e6dda6441dd25704eb3ececa3",
-  "status": "PARKED",
-  "phase": "REVIEW",
+  "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "PARKED",
+  "workOrderStatus": "ACTIVE",
   "buildCommit": null,
   "reviewEvidence": [
     "docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md",
     "docs/reviews/probes/r139_integrated_20261021/browser_capability_outcome.json"
   ],
-  "disposition": "HOLD_BEFORE_SOURCE_BUILD_AND_FIXTURE",
+  "disposition": "SOURCE_ONLY_BUILD_RUNTIME_HOLD",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "PARKED"
+    "PARKED",
+    "BUILD"
   ],
   "actualUse": {
     "status": "PARKED_G0_BROWSER_CAPABILITY_HOLD_OWNER_TRANSFER",
@@ -107,7 +108,7 @@
     "G0": "HOLD",
     "G1": "NOT_RUN",
     "G2": "NOT_RUN",
-    "sourcePreparation": "NOT_STARTED_NO_WORKER_BUILD_DISPATCH",
+    "sourcePreparation": "AUTHORIZED_PENDING_WORKER_ACK",
     "pureUiDiagnosticAttempts": 1,
     "ownedTabsCreatedPartially": 1,
     "ownedTabsClosed": 1,
@@ -126,5 +127,6 @@
     "executePOST": 0,
     "productSourceUnchanged": true,
     "productMilestones": "UNCHANGED"
-  }
+  },
+  "sourceResumeAuthority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-RESUME-ADMISSION.json"
 }

@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: PARKED
+Status: ACTIVE
 Risk: R2
 Worker: Sol Medium delegated fixture worker
 Reviewer: Root independent source/evidence REVIEWER
@@ -93,3 +93,9 @@ Sol read-only intake caught that the original seed future proposal executePOST1 
 PARKED before source BUILD or fixture. Root reserved the sole pureUI diagnostic after seed642f5bd0/dispatch7c35f868 and attempted supported CUA IABid2 `createBrowserTab` on a local static `data:` document. Browser URL policy denied the protocol; allowed protocols are HTTP/HTTPS. The denial does not prove HTTP or product browser capability unavailable. No navigation/control/screenshot or E01–E06 proof completed. Inventory revealed one partially created owned about:blank tab1; Root acquired that exact observed tab, closed it successfully, and final IAB inventory was[]. No alternative navigation, HTTP server, lower-level browser stack or retry was attempted. Source worker never received BUILD authorization; new Go/Python/product build/runtime/DB/provider/key/grant/execute effects0.
 
 Per persisted owner browser stop/transfer instruction and canonical prerequisite-failure rule, Root consolidates the packet and stops dependent work rather than launching a helper successor. Source contract/finite native8+browser1 total9 proposal remains prepared but unimplemented/unadmitted. Required next decision: transfer this SAME R139 packet to an authorized connected browser executor, or explicitly authorize/review a materially safer supported diagnostic with fresh bounded admission. Neither user `tiếp` nor transfer may reset the reserved diagnostic budget or old provider cap. G0 HOLD, G1/G2 NOT_RUN, E01–E06/fullM3 OPEN. See R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md.
+
+## Source-only resume — current 2026-10-21 instruction
+
+Owner `tiếp` resumes independent offline source preparation in this SAME R139 under immutable SOURCE-RESUME-ADMISSION committed6fc951a84c54cd31f20f2404d6dc8957d97bc339. Primary seed642f5bd0 remains unchanged. PARKED→BUILD is source-only, not an effect grant or a budget reset. The prior stop section/report remains historical truth at e47c9fd1; the runtime/browser branch stays HOLD. Root reassessed dependency: supported-browser capability is required before fixture, not before authoring/compiling offline test/supervisor source. Worker source caps remain unused3Go/3purePython, Root1Go/2purePython; the sole browser diagnostic remains consumed1/1, newly admitted0. No Docker/DB/server/frontend-build/network/key/grant/execute/provider effects.
+
+Current deliverable S01–S04 is reviewable source that fails closed until future committed runtime/effect admission. Source admission must reject missing/contradictory primary or runtime authority, unproven browser readiness and source/resource identity; keep proposed native8/browser1/aggregate9 and grant3 distinct from actual effects0. Root's initial dispatch must pass explicit active packet APPL/ROUTE plus continuity/scope gates and be committed before worker acknowledgment/writes. A source-ready return is not G0/G1/G2 PASS. No source product path widening or helper successor. Do not rewrite old browser reservation/outcome or consumed cap.

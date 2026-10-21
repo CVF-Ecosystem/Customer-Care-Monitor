@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Current R139 PARKED G0 browser capability hold/transfer; source BUILD and G1/G2 not run."
+      "description": "Current R139 source-only BUILD resume under unused source caps; G0 browser/runtime HOLD, no retry."
     },
     {
       "id": "r060-work-order",
@@ -35037,14 +35037,14 @@
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-139.json",
       "status": "ACTIVE",
-      "description": "R139 PARKED before source BUILD/fixture; G0 HOLD, G1/G2 not run, provider/runtime0."
+      "description": "Same R139 source preparation BUILD only; browser cap consumed1/1 and runtime effects0."
     },
     {
       "id": "r139-order",
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
       "status": "ACTIVE",
-      "description": "ONE integrated G0/G1/G2 proof packet PARKED; runtime annex proposed only, no retry."
+      "description": "ONE integrated G0/G1/G2 packet: source-only BUILD; runtime annex still proposed/unadmitted."
     },
     {
       "id": "r138-handoff-history",
@@ -35087,6 +35087,13 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/root_preparation_findings.json",
       "status": "ACTIVE",
       "description": "Original two catalog failures and finite proposed native/browser POST correction retained."
+    },
+    {
+      "id": "r139-source-resume-admission",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-RESUME-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Immutable unused source-cap continuation only; no new browser/runtime/provider authority."
     }
   ]
 }
