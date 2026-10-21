@@ -1,0 +1,176 @@
+{
+  "status": "PASS_LOCAL_READ_ONLY_METADATA_AND_IMAGE_CACHE",
+  "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-LOCAL-READINESS-ADMISSION.json",
+  "admissionSha256": "3080b7194b7c1814951cf86ba46a3c1ac0501576a4548dd7e37cac7118c467f4",
+  "head": "74c200b711a09e87e17023ca95153338584396dd",
+  "startedAtUTC": "2026-10-21T05:38:04.510090+00:00",
+  "commandCap": 5,
+  "used": 5,
+  "commands": [
+    {
+      "number": 1,
+      "args": [
+        "version",
+        "--format",
+        "{{json .Server}}"
+      ],
+      "exitCode": 0,
+      "raw": {
+        "stdout": {
+          "path": ".cvf/runtime/r139_local_readiness_20261021/1/stdout",
+          "sha256": "f248b4d3fe9ffdffd0adc466ac50fdf861f2cfb6d3677ae3e2b010de80ceb46b"
+        },
+        "stderr": {
+          "path": ".cvf/runtime/r139_local_readiness_20261021/1/stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "intent.json": {
+          "path": ".cvf/runtime/r139_local_readiness_20261021/1/intent.json",
+          "sha256": "ae6c49063266c4cb42349c3c8af3520267b0d83929c244bf54c3f4892405bded"
+        }
+      }
+    },
+    {
+      "number": 2,
+      "args": [
+        "image",
+        "inspect",
+        "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+      ],
+      "exitCode": 0,
+      "raw": {
+        "stdout": {
+          "path": ".cvf/runtime/r139_local_readiness_20261021/2/stdout",
+          "sha256": "409583bb28ab2ca3244c9b50e1b218eb1afafe08372016cac3e0839544b52b54"
+        },
+        "stderr": {
+          "path": ".cvf/runtime/r139_local_readiness_20261021/2/stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "intent.json": {
+          "path": ".cvf/runtime/r139_local_readiness_20261021/2/intent.json",
+          "sha256": "227069796d31c1da26e6d3881e188fc88bf7d00dcf451741388902961aecc58b"
+        }
+      }
+    },
+    {
+      "number": 3,
+      "args": [
+        "ps",
+        "-a",
+        "--no-trunc",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "raw": {
+        "stdout": {
+          "path": ".cvf/runtime/r139_local_readiness_20261021/3/stdout",
+          "sha256": "80aa7b4768e670a7781b8608349872d8b2a69231c2698ec53eb7277a670472de"
+        },
+        "stderr": {
+          "path": ".cvf/runtime/r139_local_readiness_20261021/3/stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "intent.json": {
+          "path": ".cvf/runtime/r139_local_readiness_20261021/3/intent.json",
+          "sha256": "7c389cb216e93155042592c2715cd855c6228176d7b865a8acc84a97fad787b1"
+        }
+      }
+    },
+    {
+      "number": 4,
+      "args": [
+        "network",
+        "ls",
+        "--no-trunc",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "raw": {
+        "stdout": {
+          "path": ".cvf/runtime/r139_local_readiness_20261021/4/stdout",
+          "sha256": "b3705a8ddffe191419b8b2a8a65f406dacd36d899da3c002352c7cee1ba0ca72"
+        },
+        "stderr": {
+          "path": ".cvf/runtime/r139_local_readiness_20261021/4/stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "intent.json": {
+          "path": ".cvf/runtime/r139_local_readiness_20261021/4/intent.json",
+          "sha256": "28b46fe893006574494c63ea3334a62d2bb47b9e64433860a5f400d3d42231dd"
+        }
+      }
+    },
+    {
+      "number": 5,
+      "args": [
+        "volume",
+        "ls",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "raw": {
+        "stdout": {
+          "path": ".cvf/runtime/r139_local_readiness_20261021/5/stdout",
+          "sha256": "a7ad79cf2900062b09f9541711a440f13fc61fb308e6447cafb488ba495b81b8"
+        },
+        "stderr": {
+          "path": ".cvf/runtime/r139_local_readiness_20261021/5/stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "intent.json": {
+          "path": ".cvf/runtime/r139_local_readiness_20261021/5/intent.json",
+          "sha256": "6a5ff5734d9975fc32e3ca2afc8b5d17af665e808bd45b63a0216c6b2525f6c3"
+        }
+      }
+    }
+  ],
+  "mutations": 0,
+  "credentialReads": 0,
+  "providerCalls": 0,
+  "claimBoundary": "Read-only local metadata/cache readiness only; no fixture/runtime AI governance or product acceptance",
+  "serverVersion": "29.9.1",
+  "pinnedImageCached": true,
+  "containersCount": 29,
+  "networksCount": 13,
+  "volumesCount": 481,
+  "elapsedSeconds": 2.35,
+  "existingTools": {
+    "go": {
+      "exists": true,
+      "hashMatches": true
+    },
+    "python": {
+      "exists": true,
+      "hashMatches": true
+    },
+    "node": {
+      "exists": true,
+      "hashMatches": true
+    },
+    "docker": {
+      "exists": true,
+      "hashMatches": true
+    },
+    "powershell": {
+      "exists": true,
+      "hashMatches": true
+    }
+  },
+  "externalEvidenceFresh": true,
+  "remainingOperationalDecisions": [
+    "Concrete paid-call budget amount/currency and authorized credential lookup before runtime admission",
+    "Actual same-R139 runtime resource/issuer/deadline/source pins and campaign admission",
+    "Loopback application/browser/native/provider proof not run"
+  ],
+  "credentialConfigMetadata": {
+    "present": true,
+    "gitIgnored": true,
+    "gitTracked": false,
+    "contentsRead": false,
+    "schemaReference": "Existing accepted r117 source uses providers/alibaba_maas/api_key and base_url; current contents not inspected."
+  }
+}

@@ -3305,8 +3305,19 @@
   },
   "x-r139LocalReadiness": {
     "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-LOCAL-READINESS-ADMISSION.json",
-    "status": "ADMITTED_NOT_INVOKED",
+    "status": "PASS_LOCAL_READ_ONLY_METADATA_AND_IMAGE_CACHE",
     "commandCap": 5,
-    "used": 0
+    "used": 5,
+    "outcome": "docs/reviews/probes/r139_integrated_20261021/local_readiness_outcome.json"
+  },
+  "x-r139RuntimeAdmissionPreparation": {
+    "status": "READY_AFTER_NAMED_FACTS_MONETARY_CEILING_PENDING",
+    "draft": "docs/reviews/probes/r139_integrated_20261021/runtime_admission_draft.json",
+    "independentReview": "docs/reviews/R139_RUNTIME_ADMISSION_READONLY_REVIEW_2026-10-21.md",
+    "keyContentsRead": 0,
+    "credentialConfigMetadataVerified": true,
+    "providerCalls": 0,
+    "budgetQuestion": "Pending owner choice of0.10USD/1USD/or no paid call; no preselected choice assumed approved.",
+    "applicationRoleNotHumanAuthority": true
   }
 }

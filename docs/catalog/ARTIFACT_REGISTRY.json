@@ -35037,14 +35037,14 @@
       "family": "continuity",
       "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-139.json",
       "status": "ACTIVE",
-      "description": "Same R139 source preparation BUILD only; browser cap consumed1/1 and runtime effects0."
+      "description": "Same R139 PARKED REVIEW: source accepted, tool/cache prerequisites observed; no integrated runtime or FREEZE."
     },
     {
       "id": "r139-order",
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
       "status": "ACTIVE",
-      "description": "ONE integrated G0/G1/G2 packet: source-only BUILD; runtime annex still proposed/unadmitted."
+      "description": "Same R139 source accepted; HTTPS tool/local cache metadata PASS, integrated runtime admission and G1G2 still open."
     },
     {
       "id": "r138-handoff-history",
@@ -35234,6 +35234,27 @@
       "path": "docs/reviews/R139_HTTPS_BROWSER_AND_LOCAL_READINESS_2026-10-21.md",
       "status": "ACTIVE",
       "description": "Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open."
+    },
+    {
+      "id": "r139-runtime-admission-preparation-0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/local_readiness_outcome.json",
+      "status": "ACTIVE",
+      "description": "Observed local read-only metadata or independently reviewed non-executable runtime draft; monetary ceiling/key/deadline/admission pending, no live claim."
+    },
+    {
+      "id": "r139-runtime-admission-preparation-1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/runtime_admission_draft.json",
+      "status": "ACTIVE",
+      "description": "Observed local read-only metadata or independently reviewed non-executable runtime draft; monetary ceiling/key/deadline/admission pending, no live claim."
+    },
+    {
+      "id": "r139-runtime-admission-preparation-2",
+      "family": "continuity",
+      "path": "docs/reviews/R139_RUNTIME_ADMISSION_READONLY_REVIEW_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "Observed local read-only metadata or independently reviewed non-executable runtime draft; monetary ceiling/key/deadline/admission pending, no live claim."
     }
   ]
 }

@@ -121,7 +121,7 @@
     "ownedTabsClosed": 1,
     "finalOwnedTabs": 0,
     "diagnosticNavigation": "DENIED_DATA_SCHEME",
-    "HTTPApplicationCapability": "UNTESTED",
+    "HTTPApplicationCapability": "PUBLIC_HTTPS_TOOL_ONLY_PASS_LOCAL_APP_UNTESTED",
     "workerGoInvocations": 3,
     "workerPythonChecks": 3,
     "newFixtureStarts": 0,
@@ -158,5 +158,31 @@
   "sourceResumeAuthority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-RESUME-ADMISSION.json",
   "repairAuthority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-REPAIR-ADMISSION.json",
   "sourceRevisionRounds": 2,
-  "reviewPassScope": "SOURCE_PREPARATION_ONLY; G0 runtime HOLD/G1G2 NOT_RUN; no integrated/runtime acceptance"
+  "reviewPassScope": "SOURCE_PREPARATION_ONLY; G0 runtime HOLD/G1G2 NOT_RUN; no integrated/runtime acceptance",
+  "x-httpsDiagnostic": {
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-HTTPS-BROWSER-ADMISSION.json",
+    "status": "PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE",
+    "freshBudget": 1,
+    "usedOrReserved": 1,
+    "oldBudgetConsumed": 1,
+    "outcome": "docs/reviews/probes/r139_integrated_20261021/https_browser_outcome.json",
+    "ownedTabsFinal": 0
+  },
+  "x-localReadiness": {
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-LOCAL-READINESS-ADMISSION.json",
+    "status": "PASS_LOCAL_READ_ONLY_METADATA_AND_IMAGE_CACHE",
+    "commandCap": 5,
+    "used": 5,
+    "outcome": "docs/reviews/probes/r139_integrated_20261021/local_readiness_outcome.json"
+  },
+  "x-runtimeAdmissionPreparation": {
+    "status": "READY_AFTER_NAMED_FACTS_MONETARY_CEILING_PENDING",
+    "draft": "docs/reviews/probes/r139_integrated_20261021/runtime_admission_draft.json",
+    "independentReview": "docs/reviews/R139_RUNTIME_ADMISSION_READONLY_REVIEW_2026-10-21.md",
+    "keyContentsRead": 0,
+    "credentialConfigMetadataVerified": true,
+    "providerCalls": 0,
+    "budgetQuestion": "Pending owner choice of0.10USD/1USD/or no paid call; no preselected choice assumed approved.",
+    "applicationRoleNotHumanAuthority": true
+  }
 }

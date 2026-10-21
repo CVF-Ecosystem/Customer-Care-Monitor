@@ -119,3 +119,7 @@ Latest owner instruction: cho phép chủ động làm để đạt kết quả 
 ## Current G0 tool result and local inspection admission
 
 HTTPS supported CUA diagnostic observed PASS at https_browser_outcome.json: one tab/oneclick/two original captures/closed/finaltabs0. G0 aggregate remains HOLD; localapp and runtime unproved. Under owner proactive roadmap authority, LOCAL-READINESS-ADMISSION permits only five bounded read-only local Docker/cache/inventory inspections after committed admission, firstfailureSTOP/no retry. No fixture creation/start/DB/key/provider or additional browser campaign is inferred. Same R139 only; prepare concrete runtime from real prerequisites.
+
+## Concrete runtime admission preparation result
+
+Browser supported HTTPS/control/capture/close PASS; local read-only metadata5/5/cache PASS. runtime_admission_draft.json is NON_EXECUTABLE and binds actual source/binary/tree/tool/receipt/resource facts. Independent new /root/r139_admission_review_sol returned READY_AFTER_NAMED_FACTS. Specific monetary ceiling is the one owner datum still pending; Root must not invent it. Existing credential file is ignored/untracked/present by metadata only; no contents read. Final endpoint/key staging, fresh deadline and exact immutable committed admission remain before effects. No further browser/Docker readiness loop/helper tranche; no source or paid-call budget reset. G0aggregateHOLD/G1G2/E01-E06NOT_RUN.
