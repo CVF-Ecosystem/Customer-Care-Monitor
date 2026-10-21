@@ -83,10 +83,10 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "CHANGES_REQUIRED",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "BLOCKED_WITH_REASON",
+  "workOrderStatus": "ACTIVE",
   "buildCommit": "915bc9c62256d528062b00f1d16565bbbbab967e",
   "reviewEvidence": [
     "docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md",
@@ -107,7 +107,7 @@
     "docs/reviews/R139_CHECK_ONLY_WORKER_RETURN_2026-10-21.md",
     "docs/reviews/probes/r139_integrated_20261021/r4_check_only_results.json"
   ],
-  "disposition": "CCMAI-RUNTIME-139 accepted source/IO preserved at b8ba2522, runtime CHANGES_REQUIRED. Root/Sol documentary consolidated fresh-r3 proposal only: exact7 identity/path/test literals in3sources, finite checks, one conditional fresh campaign/native8/browser1 and proposedNEW API1/additionalUSD1. No new source/check/key/DB/Docker/fixture/browser/network/provider authority until explicit Owner combined grant and committed stages. Old API1/1 MAY_HAVE_STARTED consumed/unknownbillingresponse and all HOLDs immutable. E05/E06/fullM3 OPEN, Facebook/Zalo OA parked.",
+  "disposition": "CCMAI-RUNTIME-139 Owner APPROVED combined fresh-r3 packet2e9cecbf: Sol applies exact7literal/3source patch, newsourceRound1/offlineCompile1/pureGo6check1/workerPython1/RootPython1. Root independent source REVIEWER; runtime/key/DB/Docker/fixture/browser/network/provider0 until sourcePASS/commit, publicpricing1readPASS and NEW exact independent runtime admission/commit. Conditionalfreshcampaign1/native8/browser1/NEWAPI1/additionalUSD1 approved, no retry; oldAPI1/1MAY consumed/billingresponseUNKNOWN, aggregateapprovedceilingsUSD2 not actualspend. FirstfailureHOLD/no extra rounds. FullM3/E05/E06 OPEN, Facebook/Zalo OA parked.",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -132,7 +132,8 @@
     "CHANGES_REQUIRED",
     "BUILD",
     "REVIEW_PENDING",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "actualUse": {
     "status": "HOLD_MANUAL_HOLD_PROVIDER_OUTCOME_UNKNOWN",

@@ -35556,6 +35556,13 @@
       "path": "docs/reviews/R139_FRESH_CAMPAIGN_PROPOSAL_INDEPENDENT_REVIEW_2026-10-21.md",
       "status": "ACTIVE",
       "description": "Independent Sol documentary review: fresh-r3 combined proposal ready for Owner review only; no source/effect authority."
+    },
+    {
+      "id": "r139-ccmai-runtime-139-fresh-r3-combined-admission",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-COMBINED-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Explicit Owner combined fresh-r3 grant: exact source/check round and conditional freshcampaign/newAPI1/additionalUSD1; not executable runtime yet."
     }
   ]
 }

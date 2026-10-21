@@ -4439,6 +4439,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Root transcript of browser URL-policy denial and partial owned tab cleanup; no control/capture proof.: `docs/reviews/probes/r139_integrated_20261021/browser_capability_outcome.json`
 - Sole pureUI capability diagnostic reserved before effect; consumed, no reset.: `docs/reviews/probes/r139_integrated_20261021/browser_capability_reservation.json`
 - Explicit Owner check-only literal-argv continuation; no source/recompile/runtime/API; original failure preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-CHECK-ONLY-ADMISSION.json`
+- Explicit Owner combined fresh-r3 grant: exact source/check round and conditional freshcampaign/newAPI1/additionalUSD1; not executable runtime yet.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-COMBINED-ADMISSION.json`
 - Explicit Owner single RF1-RF4 repair/replacement-fixture continuation; cumulative1USD/one API unchanged; runtime still needs exact admission.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-OWNER-CONTINUATION-ADMISSION.json`
 - Exact R139 replacement runtime admission preparation; independent review/commit required, cumulative1USD/oneAPI unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-REPLACEMENT-RUNTIME-ADMISSION.json`
 - Owner-approved ONE R139 source-evidence round; no runtime/provider authority; old HOLDs preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-EVIDENCE-ADMISSION.json`

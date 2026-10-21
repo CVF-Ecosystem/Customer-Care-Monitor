@@ -1,10 +1,10 @@
 {
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 accepted source/IO preserved at b8ba2522, runtime CHANGES_REQUIRED. Root/Sol documentary consolidated fresh-r3 proposal only: exact7 identity/path/test literals in3sources, finite checks, one conditional fresh campaign/native8/browser1 and proposedNEW API1/additionalUSD1. No new source/check/key/DB/Docker/fixture/browser/network/provider authority until explicit Owner combined grant and committed stages. Old API1/1 MAY_HAVE_STARTED consumed/unknownbillingresponse and all HOLDs immutable. E05/E06/fullM3 OPEN, Facebook/Zalo OA parked.",
-  "activeRole": "Root ORCHESTRATOR / SPEC_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol Medium independent documentary REVIEWER",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 Owner APPROVED combined fresh-r3 packet2e9cecbf: Sol applies exact7literal/3source patch, newsourceRound1/offlineCompile1/pureGo6check1/workerPython1/RootPython1. Root independent source REVIEWER; runtime/key/DB/Docker/fixture/browser/network/provider0 until sourcePASS/commit, publicpricing1readPASS and NEW exact independent runtime admission/commit. Conditionalfreshcampaign1/native8/browser1/NEWAPI1/additionalUSD1 approved, no retry; oldAPI1/1MAY consumed/billingresponseUNKNOWN, aggregateapprovedceilingsUSD2 not actualspend. FirstfailureHOLD/no extra rounds. FullM3/E05/E06 OPEN, Facebook/Zalo OA parked.",
+  "activeRole": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol Medium SOURCE_WORKER; separate Sol runtime REVIEWER",
   "updatedAt": "2026-10-21",
   "schemaVersion": "1.0",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
@@ -649,7 +649,7 @@
     "nextRuntimeReadiness": "docs/reviews/probes/r139_integrated_20261021/r4_next_runtime_readiness.json"
   },
   "x-r139FreshCampaignProposal": {
-    "status": "DESIGN_READY_FOR_OWNER_REVIEW_ONLY_NOT_AUTHORIZED",
+    "status": "OWNER_APPROVED_COMBINED_SOURCE_DISPATCH_RUNTIME_CONDITIONAL",
     "proposal": "docs/reviews/probes/r139_integrated_20261021/r5_fresh_campaign_proposal.json",
     "patch": "docs/reviews/probes/r139_integrated_20261021/r5_fresh_campaign_source_proposal.patch",
     "explanation": "docs/reviews/R139_FRESH_CAMPAIGN_COMBINED_PROPOSAL_2026-10-21.md",
@@ -658,5 +658,30 @@
     "sourceEditsApproved": 0,
     "effectsApproved": 0,
     "independentReview": "docs/reviews/R139_FRESH_CAMPAIGN_PROPOSAL_INDEPENDENT_REVIEW_2026-10-21.md"
+  },
+  "x-r139FreshR3": {
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-COMBINED-ADMISSION.json",
+    "status": "OWNER_APPROVED_SOURCE_BUILD_RUNTIME_CONDITIONAL",
+    "ownerReply": "duyệt",
+    "sourceCaps": {
+      "consolidatedSourceRound": 1,
+      "offlineGoCompile": 1,
+      "workerPureGoIO": 1,
+      "workerPurePython": 1,
+      "independentRootPurePython": 1
+    },
+    "sourceActualUse": {
+      "consolidatedSourceRound": 0,
+      "offlineGoCompile": 0,
+      "workerPureGoIO": 0,
+      "workerPurePython": 0,
+      "independentRootPurePython": 0
+    },
+    "runtimeActualUse": {},
+    "newBudgetUSD": 1,
+    "newAPICap": 1,
+    "newUsedOrUncertainSlots": 0,
+    "oldSlot": "1/1 MAY_HAVE_STARTED_CONSUMED; response/billingUNKNOWN",
+    "runtimeExecutableNow": false
   }
 }

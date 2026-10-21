@@ -1,0 +1,199 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "authorityKind": "OWNER_APPROVED_EXACT_FRESH_R3_SOURCE_AND_CONDITIONAL_SINGLE_CAMPAIGN",
+  "parentAuthority": "CVF_SESSION/authority/CCMAI-RUNTIME-139.json",
+  "parentAuthorityCommit": "642f5bd026dfe31e6dda6441dd25704eb3ececa3",
+  "baseCommit": "2e9cecbfd679d46136bf2932ebc94ae895b34cf0",
+  "ownerApproved": true,
+  "ownerReply": "duyệt",
+  "ownerApprovalContext": "Direct answer to the preceding async combined R139 approval question, also restated as user message; exact packet committed at2e9cecbfd679d46136bf2932ebc94ae895b34cf0.",
+  "approvedQuestion": "7 exact path/identity/test literals in3files,1source/check round; after sourcePASS+independent review/admission,1fresh r3 fixture/campaign native8/browser1/atmost1new Alibaba syntheticAPI6000bytes768tokens/no retry/additional maxUSD1; old+new approvedceilingsUSD2, old billingUNKNOWN.",
+  "proposal": "docs/reviews/probes/r139_integrated_20261021/r5_fresh_campaign_proposal.json",
+  "proposalSha256": "990f6dd8ecb0da8cf489305ee218e8550e25ef47ec80a8f6d75c76bdb3fe046f",
+  "riskCeiling": "R2",
+  "allowedSourcePaths": [
+    "backend/api/handlers/intervention_execution_browser_test.go",
+    "scripts/r139_execution_supervisor.py",
+    "scripts/tests/test_r139_execution_supervisor.py"
+  ],
+  "baselineSourceSha256": {
+    "backend/api/handlers/intervention_execution_browser_test.go": "543da3b5542d88ab353ab18b7b57e005d949b5ecc921658f2543dd5c07ffdebf",
+    "scripts/r139_execution_supervisor.py": "3904cb9100615ba6ecbcffb51d78f8f26d2103ae3f34e958ed27a4adfbd9ba9b",
+    "scripts/tests/test_r139_execution_supervisor.py": "7c873b6f97005e7d35229550c8218abb1e1f4586afa53bc06ff6dfec9acfc65a"
+  },
+  "expectedNormalizedSourceSha256": {
+    "backend/api/handlers/intervention_execution_browser_test.go": "cbea08fd43d265a4978cf0584eb6302b8810aa77e57a205e79a1df015f48240a",
+    "scripts/r139_execution_supervisor.py": "91dea71327081b9bdf92e759a333dc8467a2b7f82134f6a4fd04f68b8515bde9",
+    "scripts/tests/test_r139_execution_supervisor.py": "6e19ab818e17fdb3c0ca511985d9a9c99b5a6213d7527f1d4517a90cc0d7ecd8"
+  },
+  "exactPatch": "docs/reviews/probes/r139_integrated_20261021/r5_fresh_campaign_source_proposal.patch",
+  "patchSha256": "36571a2ff9dcd06f10014f71f86c611b5c95972b76c10f387b4d3c4415b3063a",
+  "sourceCaps": {
+    "consolidatedSourceRound": 1,
+    "offlineGoCompile": 1,
+    "workerPureGoIO": 1,
+    "workerPurePython": 1,
+    "independentRootPurePython": 1
+  },
+  "sourceStageEffects": {
+    "keyRead": 0,
+    "DB": 0,
+    "Docker": 0,
+    "fixture": 0,
+    "browser": 0,
+    "network": 0,
+    "provider": 0
+  },
+  "sourceLauncher": ".cvf/runtime/r139_r3_source_launcher.py",
+  "sourceLauncherSha256": "5bb304528d846e3eb2dbc94dee777b06be7131ec945b00cebced8a812573c579",
+  "inheritedPureGoSafetyAudit": "docs/reviews/probes/r139_integrated_20261021/r3_root_go_init_audit.json",
+  "pureGoSafety": "Root independently confirms approved patch changes only runtime identity/path/testname/assertion literals; no Go import/init/TestMain/pure6helper/test changes. Revalidate exact normalized delta before checks; no network/DB/key admitted in source stage.",
+  "resources": {
+    "fixtureName": "ccmai-r139-r3-20261021",
+    "database": "ccma_r139_r3_20261021",
+    "runtimeRoot": ".cvf/runtime/r139_integrated_execution_r3_20261021",
+    "outerRoot": ".cvf/runtime/r139_integrated_outer_r3_20261021",
+    "externalEvidenceRoot": "../.ccmai_local_evidence/r139_execution_proof_20261021/fixture_r3",
+    "sourceCheckRoot": ".cvf/runtime/r139_integrated_execution_r3_20261021_source_checks",
+    "syntheticNamespace": "ccma_r139_synthetic_r3_20261021",
+    "image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+    "dockerHost": "npipe:////./pipe/dockerDesktopLinuxEngine",
+    "vitePort": 3019,
+    "apiAndDBPorts": "Supervisor-owned dynamic loopback ports, exact values recorded before browser; never release unrelated listener.",
+    "freshness": "No live freshness probe authorized by this draft. Before mutation, admitted supervisor must prove all exact new names/paths unused; collision HOLD, no fallback/reuse/delete."
+  },
+  "approvedCampaignCaps": {
+    "supervisorInvocation": 1,
+    "ownedContainerCreateStart": 1,
+    "ownedContainerFinalStop": 1,
+    "ownedNetworkCreate": 1,
+    "ownedVolumeCreate": 1,
+    "nativeGoRun": 1,
+    "backendHeldInSameGoProcess": 1,
+    "viteStart": 1,
+    "supportedIABProductTab": 1,
+    "browserCampaign": 1,
+    "authPOST": 4,
+    "nativeExecutePOST": 8,
+    "browserExecutePOST": 1,
+    "grants": 3,
+    "newPhysicalProviderCall": 1,
+    "automaticRetry": 0,
+    "passiveStatusReadStarts": 12,
+    "passiveStatusSpacingSecondsMin": 5,
+    "passiveStatusLifetimeSecondsMax": 60,
+    "keyReadExistingStagedRaw": 1,
+    "originalConfigRead": 0,
+    "keyRestage": 0,
+    "officialPublicPricingReadBeforeKeyFixture": 1
+  },
+  "approvedTimeBounds": {
+    "campaignSeconds": 1200,
+    "exactOwnedCleanupSeconds": 180,
+    "mysqlFinalTCPWindowSeconds": 60,
+    "mysqlMaxProbes": 45,
+    "mysqlProbeSpacingSeconds": 1,
+    "mysqlProbeTimeoutSeconds": 8,
+    "goNativeReadySecondsMax": 90,
+    "viteReadySecondsMax": 45,
+    "goFinalWaitSecondsMax": 30,
+    "outer": "Original process handle/wait retained; no independent outer timeout. Supervisor finite cleanup owns children. Missing wait is HOLD, never inferred PASS."
+  },
+  "newApprovedBudget": {
+    "amount": 1,
+    "currency": "USD",
+    "per": "ONE new synthetic physical API slot; max6000 requestbytes/768completiontokens/no thinking/no retry"
+  },
+  "provider": {
+    "provider": "alibaba_maas",
+    "model": "qwen3.7-flash",
+    "endpointSha256": "b22a15b6e8aa4113c2816acae6935a84d052a2d7b81db734ccdc4f5be81b4f8f",
+    "maxRequestBytes": 6000,
+    "maxCompletionTokens": 768,
+    "thinking": false,
+    "syntheticOnly": true,
+    "oldSlot": "R139 prior1/1 MAY_HAVE_STARTED consumed; response/usage/billing UNKNOWN, never reused or reset.",
+    "keyCustodian": "Root at runtime only; existing private staged raw key one supervisor read, no source-stage key/config reads, no key hash/echo/publication.",
+    "tariff": "No fresh tariff/account invoice verified in this documentary packet. No cost estimate or free-quota assumption; an exact new cost authority must precede any provider attempt.",
+    "costReadiness": "After source acceptance, one secret-free official public pricing/model-page read allowed only under future combined grant; confirm matching provider/model and bounded-request cost fits new USD1. If unavailable/mismatched/uncertain, HOLD before key/fixture/paid call. No private account/config/billing read or retry."
+  },
+  "cumulativeLedger": {
+    "priorR139UsedOrUncertainSlots": 1,
+    "priorSlotState": "MAY_HAVE_STARTED_CONSUMED",
+    "priorProviderResponseUsageBilling": "UNKNOWN",
+    "newR3PhysicalSlotCap": 1,
+    "newR3UsedOrUncertainSlots": 0,
+    "totalR139SlotCeiling": 2,
+    "historicalApprovedUSD": 1,
+    "newApprovedUSD": 1,
+    "aggregateApprovedCeilingsUSD": 2,
+    "actualBilling": "UNKNOWN; no claim of actualUSD2 spend",
+    "noSlotResetOrRefundInference": true
+  },
+  "activation": [
+    "Explicit Owner combined grant recorded in a NEW immutable admission committed before source BUILD. Existing admissions/seeds/counters unchanged.",
+    "Delegated worker applies only exact reviewed patch and bounded checks; Root independent source review PASS before source candidate accepted/committed. First failure stops source/campaign chain.",
+    "Fresh exact runtime admission committed AFTER source acceptance and independent runtime reviewer: new source40hex, all9source hashes, backend/frontend trees, binary/executable/Vite/browser proof hashes, new resources, new cost/key authority. No unpinned placeholder enters executable admission.",
+    "GrantDeadlineUTC generated immediately before dispatch with meaningful time remaining, exact UTC admitted within60s..24h parser contract; stale deadline HOLD, no automatic reissue after any effect.",
+    "Source-clean/metadata/tool/browser capability/current cached-image readiness evaluated inside admitted read-only/supervisor preflight, not hidden diagnostic campaigns. No fresh standalone browser/provider smoke probe."
+  ],
+  "milestones": [
+    {
+      "id": "P1",
+      "acceptance": "Exact seven literal fresh bindings/test literals independently reviewed; original failures unchanged; new source/binary committed and all focused checksPASS."
+    },
+    {
+      "id": "P2",
+      "acceptance": "Independent source/runtime admission review, exact pins/fresh identities/deadline/cost/key/browser authority; all prerequisites PASS before fixture."
+    },
+    {
+      "id": "G1",
+      "acceptance": "Native8POST, rejection7, negative9/positive9 reads before browser, trap0 and full tenant no-write comparisons recorded; no real call before sole browser action."
+    },
+    {
+      "id": "G2",
+      "acceptance": "One real authorized provider request/response, usage or explicit unknown classification, publication lineage and durable receipt; browser OPEN/status/history/reload/reader facts recorded. Nonpublication remainsHOLD."
+    },
+    {
+      "id": "CLEANUP_REVIEW",
+      "acceptance": "Original Go/supervisor/Vite waits, exact owned containerstoppedPID0 and three listenerabsence proofs, raw protected resources retained; only admitted Networks-order/Status-elapsed normalization. Independent reviewer grades full receipt; any missing terminal/ownership/wait remainsHOLD."
+    },
+    {
+      "id": "G3",
+      "acceptance": "Map actual E01-E06 coverage against R136/M3 roadmap. E04 crash/storage/concurrency/error branches and M1/M2 decisions do not auto-close from one positive campaign; fullM3 only if independently supported."
+    }
+  ],
+  "browserPlan": [
+    "Supported CUA IAB only, one product tab after native matrix and owned health PASS; no alternate browser stack.",
+    "Synthetic writer login, observe READY/no execution, original capture; one deliberate two-field execute click+confirmation only.",
+    "Passive status only within12/5s/60s bounds. Manual hold/error/timeout stops all further actions; never retry execute.",
+    "Only on observed publication: reload same case, inspect OPEN detail/status/history, logout/writer then reader login within authPOST4, reader no execute controls, original captures; no second execute.",
+    "Capture original before/after/terminal, exact owned tab close and final inventory; record unsupported/unrun branches rather than claiming coverage."
+  ],
+  "roles": {
+    "sourceWorker": "/root/r139_source_evidence_sol Sol Medium",
+    "sourceReviewer": "Root independent; no source authorship",
+    "runtimeAdmissionAuthor": "Root ORCHESTRATOR",
+    "runtimeExecutor": "Root bounded runtime evidence EXECUTOR",
+    "runtimeReviewer": "/root/r139_r2_runtime_reviewer independent Sol; no source/admission/execution authorship",
+    "commitSteward": "Root"
+  },
+  "workerReturn": "docs/reviews/R139_FRESH_R3_SOURCE_WORKER_RETURN_2026-10-21.md",
+  "sourceReceipt": "docs/reviews/probes/r139_integrated_20261021/r5_fresh_source_checks.json",
+  "costEscalationDisposition": "REVIEW_COST_ESCALATION_REQUIRED resolved only for this explicitly Owner-approved ONE exact identity/path round and conditionalNEWAPI1/USD1; no extra repair/check/fixture chain.",
+  "runtimeExecutableNow": false,
+  "runtimeActivation": "Only after source checks/independent review/PASS/commit and secret-free publicpricing1read PASS, NEW exact independently reviewed committed runtime effect admission. This combined supplement alone is not accepted by supervisor.run because it has no runtime kind/source/binary/deadline executable packet.",
+  "stops": [
+    "Any source/check/pin/resource/tool/readiness failure or new uncertainty stops before dependent effects, no extra repairs/check reset/retry/alternate stack.",
+    "Slot marker MAY_HAVE_STARTED permanently consumes the NEW1/1 slot even if transport/response/usage unknown; no recovery call.",
+    "If source round fails, proposed runtime/API authority cannot activate; record HOLD/cost disposition.",
+    "Preserve firstfixture/replacementfixture/r3 failure evidence, never restart/delete old resources to create freshness.",
+    "No production/customer data, external channel account work, auto-send, product/Core/dependency/gate changes, push/merge/deploy."
+  ],
+  "limitations": [
+    "Forced termination can bypass Go t.Cleanup: per-capture journals/raw log/effect marker may survive but final receipt may remain missing; this remains HOLD.",
+    "Only Up/Exited protected Status elapsed formats are recognized; other status/state/health/exitcode or RunningFor differences HOLD. No relaxed cleanup.",
+    "One successful campaign cannot cover mutually exclusive E04 crash/storage/concurrency/error branches or itself accept full M3."
+  ]
+}

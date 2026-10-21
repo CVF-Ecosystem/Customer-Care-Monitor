@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: BLOCKED_WITH_REASON
+Status: ACTIVE
 Risk: R2
 Worker: Sol Medium delegated fixture worker
 Reviewer: Root independent source/evidence REVIEWER
@@ -12,7 +12,7 @@ dispatchKind: INITIAL
 
 ## Current authority and acceptance target
 
-Current stage: CCMAI-RUNTIME-139 accepted source/IO preserved at b8ba2522, runtime CHANGES_REQUIRED. Root/Sol documentary consolidated fresh-r3 proposal only: exact7 identity/path/test literals in3sources, finite checks, one conditional fresh campaign/native8/browser1 and proposedNEW API1/additionalUSD1. No new source/check/key/DB/Docker/fixture/browser/network/provider authority until explicit Owner combined grant and committed stages. Old API1/1 MAY_HAVE_STARTED consumed/unknownbillingresponse and all HOLDs immutable. E05/E06/fullM3 OPEN, Facebook/Zalo OA parked.
+Current stage: CCMAI-RUNTIME-139 Owner APPROVED combined fresh-r3 packet2e9cecbf: Sol applies exact7literal/3source patch, newsourceRound1/offlineCompile1/pureGo6check1/workerPython1/RootPython1. Root independent source REVIEWER; runtime/key/DB/Docker/fixture/browser/network/provider0 until sourcePASS/commit, publicpricing1readPASS and NEW exact independent runtime admission/commit. Conditionalfreshcampaign1/native8/browser1/NEWAPI1/additionalUSD1 approved, no retry; oldAPI1/1MAY consumed/billingresponseUNKNOWN, aggregateapprovedceilingsUSD2 not actualspend. FirstfailureHOLD/no extra rounds. FullM3/E05/E06 OPEN, Facebook/Zalo OA parked.
 
 Historical initial preparation boundary: Owner `tiếp` continues G0 in the canonical delivery plan. Immutable dispatcher seed `642f5bd026dfe31e6dda6441dd25704eb3ececa3` precedes source BUILD. This is ONE work order containing G0 preparation, G1 native/backend proof and G2 browser proof, with explicit stage admission. Only source preparation/offline checks and Root's bounded pure-UI tool diagnostic are admitted now. G1/G2 runtime and provider use are HOLD. R117 physical allowance1/1 is consumed; no historical counter or slot transfers. No standalone helper successor follows automatically.
 
@@ -173,3 +173,7 @@ R139_CHECK_ONLY_INDEPENDENT_REVIEW_2026-10-21.md accepts exact b8ba2522 source/I
 ## Proposed fresh-r3 conditional continuation (not authority)
 
 R139_FRESH_CAMPAIGN_COMBINED_PROPOSAL_2026-10-21.md and r5_fresh_campaign_proposal.json consolidate exact fresh identity/path/test patch, one bounded source round/checks and one conditional integrated campaign with new proposedAPI1/additionalUSD1. Not executable: no newOwnergrant yet; old1/1MAY consumed/unknownbillingresponse remains. Independent documentary review does not admit source or effects. ExplicitOwnergrant then immutable pre-BUILD authority, source checks/review/commit, exact independent runtime admission/pins/commit required before campaign. Sourcefailure/uncertainty stops chain. FullM3/E04coverage/hostedCI never inferred from one positive campaign.
+
+## CURRENT Owner-approved fresh-r3 source and conditional campaign
+
+Owner duyệt explicitly approves combined2e9cecbf packet. New immutable FRESH-R3-COMBINED-ADMISSION binds exact7literal patch36571a/3paths; ONEsourceRound/offlinecompile/pureGo6/workerPython/RootPython each1, no retry. SourceworkerSol, RootindependentReviewer; workersnoseed/commit. CommittedgitblobLFpatch/defaultapplycheck; exactnormalizedresultpin inlauncher. Sourceeffects0. Only aftersourcePASS/review/commit, onepublicpricingreadPASS/no secret, thenNEW exactsource/binary/deadline/resources/cost/key/browserproof pinnedruntimeadmission+independentSolreview+commit mayactivate conditionalcampaign1/native8/browser1/NEWAPI1/additionalUSD1. Oldslot1/1MAY remainsconsumed; totalauthorizedceilings2USD notactualspend. Firstfailure/mismatchHOLD stopschain/norepair/replay. Freshnamesr3 only; preserveoldresources/evidence. E05/E06/fullM3 notaccepted bythisgrant; no push/merge/deploy.

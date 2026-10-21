@@ -4,11 +4,11 @@ Status: ACTIVE
 
 ## Current State
 
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Root ORCHESTRATOR / SPEC_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol Medium independent documentary REVIEWER
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol Medium SOURCE_WORKER; separate Sol runtime REVIEWER
 - Active tranche: CCMAI-RUNTIME-139
-- Next allowed move: CCMAI-RUNTIME-139 accepted source/IO preserved at b8ba2522, runtime CHANGES_REQUIRED. Root/Sol documentary consolidated fresh-r3 proposal only: exact7 identity/path/test literals in3sources, finite checks, one conditional fresh campaign/native8/browser1 and proposedNEW API1/additionalUSD1. No new source/check/key/DB/Docker/fixture/browser/network/provider authority until explicit Owner combined grant and committed stages. Old API1/1 MAY_HAVE_STARTED consumed/unknownbillingresponse and all HOLDs immutable. E05/E06/fullM3 OPEN, Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-139 Owner APPROVED combined fresh-r3 packet2e9cecbf: Sol applies exact7literal/3source patch, newsourceRound1/offlineCompile1/pureGo6check1/workerPython1/RootPython1. Root independent source REVIEWER; runtime/key/DB/Docker/fixture/browser/network/provider0 until sourcePASS/commit, publicpricing1readPASS and NEW exact independent runtime admission/commit. Conditionalfreshcampaign1/native8/browser1/NEWAPI1/additionalUSD1 approved, no retry; oldAPI1/1MAY consumed/billingresponseUNKNOWN, aggregateapprovedceilingsUSD2 not actualspend. FirstfailureHOLD/no extra rounds. FullM3/E05/E06 OPEN, Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## INTAKE / DESIGN / SPEC / WORK_ORDER acknowledgment
@@ -138,3 +138,7 @@ Root independently verified source/binary/launcher/raw hashes. CorrectedGo6/6 ze
 Owner tiếp continues documentary next-runtime planning only under current exhausted source/check/API authority. Root fresh rehydration/declaration (doctor27/27 publicCoreb69/originmain with inherited e9pin warning) transitions REVIEWER to ORCHESTRATOR/SPEC_AUTHOR; no source BUILD dispatch. Consolidated source read and independent Sol audit found5fresh resource/path bindings plus2Pythonpuretestliterals across3sources. Root wrote exact proposed patch (not applied) and conditional fresh-r3 packet with finite checks/campaign, NEWproposedAPI1/additionalUSD1 not approved. Sol reviews Root documentary design independently; different independent runtime reviewer remains mandatory after futureOwnergrant/sourceacceptance. Record statuses remainREVIEW/CHANGES_REQUIRED/FREEZEOPEN. Old1/1MAY consumed, cost/responseunknown; no originalevidence/counter/reset/replay. No new source/check/secret/resource/browser/network/provider effect. G3/E05/E06/M3OPEN, Facebook/ZaloOAparked.
 
 Independent Sol documentary verdict DESIGN_READY_FOR_OWNER_REVIEW_ONLY on exact7literal/3source fresh-r3 packet. Initial proposedpatch CRLF/defaultapplyFAIL corrected toLF; defaultapplycheckPASS, source untouched. Reviewer/root agree source/check/campaign/API1/newUSD1 needs explicitOwnercombinedgrant; neither review nor thiscommit activates effects. All old sourceacceptance/failures/HOLDs remain.
+
+## Explicit Owner combined fresh-r3 grant / pre-BUILD acknowledgment
+
+Root fresh rehydration/declaration and doctor27/27 publicCoreb69/originmain with inherited e9pin warning. Owner direct duyệt answers exact combinedquestion for packet2e9cecbf: ONE7literal/3source round/checks and conditionalONEfreshcampaign/NEWAPI1/additionalUSD1/no retry; totalauthorizedceilingsUSD2 notactualbill. OldAPI1/1MAY consumed/unknownbillingresponse/evidence immutable. INTAKE sameR139/R2; DESIGN/SPEC exact independently reviewedpatch36571a; WORK_ORDER newimmutable FRESH-R3-COMBINED-ADMISSION beforeBUILD. SolSOURCE_WORKER mayact onlyaftercommit; Root independent sourceREVIEWER/no sourceauthoring; separateSol runtimeReviewer; Root commitsteward. Inherited pureGo init/testaudit valid sincepatchchangesnoimports/init/helper/puretestbehavior, launcher enforcesexactnormalizeddelta. Source effects key/DB/Docker/browser/network/provider0. Runtime conditional aftersourcePASS/commit, publicpricing1PASS thennewexactindependentlyreviewedruntimeadmissioncommit. Firstfailure stopschain. Workerfreshack innewreturn beforepatch. E05/E06/M3OPEN/FacebookZaloOAparked.
