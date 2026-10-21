@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "authorityKind": "OWNER_APPROVED_ONE_SOURCE_EVIDENCE_ROUND_NO_RUNTIME",
+  "parentAuthority": "CVF_SESSION/authority/CCMAI-RUNTIME-139.json",
+  "parentAuthorityCommit": "642f5bd026dfe31e6dda6441dd25704eb3ececa3",
+  "baseCommit": "3f747a3368250e8e927b3911f4c3be3a6583dca8",
+  "ownerApproved": true,
+  "ownerReply": "Duyệt một vòng source-only theo phương án; không API/runtime",
+  "questionReference": "request_user_input_async/call_16d96bda6829479a9852c2b8fa302631/item0",
+  "proposal": "docs/reviews/probes/r139_integrated_20261021/r2_next_source_only_proposal.json",
+  "riskCeiling": "R2",
+  "repairWorker": "/root/r139_source_evidence_sol Sol Medium",
+  "sourceReviewer": "Root independent source REVIEWER; no source authorship",
+  "commitSteward": "Root",
+  "allowedSourcePaths": [
+    "backend/api/handlers/intervention_execution_browser_test.go",
+    "scripts/r139_execution_supervisor.py",
+    "scripts/tests/test_r139_execution_supervisor.py"
+  ],
+  "consolidatedScope": [
+    "Export request/response only if actually captured, effect intent/outcome and final state/failure before assertions on every success/fatal/uncertain path. Do not fabricate/recover missing old response. Test nonpublication/fatal path as well as success and I/O failure.",
+    "Preserve all raw inventory. Explicitly extend Networks-only comparison to strictly parsed elapsed portion of Status; preserve State/health/exitcode/IDs/all other fields; unknown format or meaningful difference HOLD; old original holds unchanged.",
+    "Source-only review of retained logs and potential manual-hold causes. Do not claim provider root cause without actual data; no DB restart/read or new API to diagnose under this source-only proposal."
+  ],
+  "goScopeChange": "R139 test-file evidence finalizer/wire journaling beyond former fixture-path-constant-only restriction; no historical shared helper edit.",
+  "newCaps": {
+    "consolidatedSourceRound": 1,
+    "workerOfflineGoCompile": 1,
+    "workerPureGoIOCheck": 1,
+    "workerPurePythonCheck": 1,
+    "rootPurePythonCheck": 1
+  },
+  "goPureCheckPrerequisite": "Independent preflight confirms package init and selected pure IO tests perform no network/DB/provider work; otherwise do not invoke and return HOLD. No successful skips.",
+  "sourceStageEffects": {
+    "runtime": 0,
+    "fixture": 0,
+    "DB": 0,
+    "network": 0,
+    "keyRead": 0,
+    "grant": 0,
+    "executePOST": 0,
+    "provider": 0
+  },
+  "providerBudget": "No new money or paid-call grant; R139 slot1/1 consumed, actual billing UNKNOWN; no reuse/reset/retry.",
+  "acceptance": "One consolidated source return; preserve all original failures; actual focused checks pass and independent source review accepts before commit. Then present a separately pinned runtime proposal only; no automatic campaign.",
+  "stop": "A failed final check/new uncertainty stops, no further source chain/check reset.",
+  "workerReturn": "docs/reviews/R139_SOURCE_EVIDENCE_WORKER_RETURN_2026-10-21.md",
+  "workerEvidence": "docs/reviews/probes/r139_integrated_20261021/r3_source_checks.json",
+  "prohibitions": [
+    "No historical shared helper/product/Core/dependency/gate/Vite edits",
+    "No worker authority/continuity/catalog edits or commits",
+    "No key/config reads, Docker, DB, fixture, browser, runtime, network or provider",
+    "No retry, cap reset, old evidence amendment or runtime activation"
+  ],
+  "initialUse": {
+    "consolidatedSourceRound": 0,
+    "workerOfflineGoCompile": 0,
+    "workerPureGoIOCheck": 0,
+    "workerPurePythonCheck": 0,
+    "rootPurePythonCheck": 0
+  }
+}

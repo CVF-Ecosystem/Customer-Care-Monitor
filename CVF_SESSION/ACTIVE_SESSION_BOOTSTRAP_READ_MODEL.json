@@ -1,10 +1,10 @@
 {
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 HOLD/CHANGES_REQUIRED after sole replacement: one browserexecute202 then MANUAL_HOLD/no publication; physicalslot1/1 MAY_HAVE_STARTED consumed, provider response/usage/billing UNKNOWN, no retry. FullGoexit1/finalwire+durable receipts missing; prebrowser8POST/18reads software-only bounded. Original child waits/stoppedPID0/three exactlistenersabsent observed; strict protectedStatus clocktext4diff keeps originalcleanupHOLD. Source/check/replacementcaps exhausted; documentary diagnosis/cost proposal only before any new source/resource/API authority. FullM3/G3 OPEN, Facebook/Zalo OA parked.",
-  "activeRole": "Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD after independent Sol runtime REVIEW",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 Owner approved ONE source-only evidence round: Sol Medium repairs only R139 Go finalizer/journal and Python strict Status elapsed comparison/tests; offline compile1/pureGoIO1 after Root init-safety audit/workerPython1/RootPython1, no retries. Root independent source REVIEWER. Runtime/key/DB/fixture/browser/network/provider0; slot1/1 MAY_HAVE_STARTED consumed, billing/response UNKNOWN. Original replacement/manualHOLD and cleanupHOLD retained; fullM3/E05/E06 OPEN, Facebook/Zalo OA parked. After source acceptance only a separately pinned runtime proposal, no automatic campaign.",
+  "activeRole": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol Medium REPAIR_WORKER",
   "updatedAt": "2026-10-21",
   "schemaVersion": "1.0",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
@@ -559,8 +559,32 @@
     "runtime": "NOT_RUN"
   },
   "x-r139NextSourceOnlyProposal": {
-    "status": "PROPOSED_NOT_AUTHORIZED_OWNER_ANSWER_PENDING",
-    "path": "docs/reviews/probes/r139_integrated_20261021/r2_next_source_only_proposal.json",
-    "runtimeProviderAuthority": 0
+    "proposal": "docs/reviews/probes/r139_integrated_20261021/r2_next_source_only_proposal.json",
+    "status": "OWNER_APPROVED_SOURCE_ONLY_SUPPLEMENT_COMMITTED_BEFORE_BUILD",
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-EVIDENCE-ADMISSION.json"
+  },
+  "x-r139SourceEvidenceRound": {
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-EVIDENCE-ADMISSION.json",
+    "status": "AUTHORIZED_ONE_SOURCE_ONLY_ROUND",
+    "ownerReply": "Duyệt một vòng source-only theo phương án; không API/runtime",
+    "worker": "/root/r139_source_evidence_sol Sol Medium",
+    "reviewer": "Root independent source REVIEWER; no source authorship",
+    "newCaps": {
+      "consolidatedSourceRound": 1,
+      "workerOfflineGoCompile": 1,
+      "workerPureGoIOCheck": 1,
+      "workerPurePythonCheck": 1,
+      "rootPurePythonCheck": 1
+    },
+    "actualUse": {
+      "consolidatedSourceRound": 0,
+      "workerOfflineGoCompile": 0,
+      "workerPureGoIOCheck": 0,
+      "workerPurePythonCheck": 0,
+      "rootPurePythonCheck": 0
+    },
+    "runtimeEffects": 0,
+    "providerSlot": "1/1 consumed MAY_HAVE_STARTED; no retry",
+    "goPureCheckSafety": "PENDING_ROOT_STATIC_AUDIT"
   }
 }

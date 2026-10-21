@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: BLOCKED_WITH_REASON
+Status: ACTIVE
 Risk: R2
 Worker: Sol Medium delegated fixture worker
 Reviewer: Root independent source/evidence REVIEWER
@@ -12,7 +12,7 @@ dispatchKind: INITIAL
 
 ## Current authority and acceptance target
 
-Current stage: CCMAI-RUNTIME-139 HOLD/CHANGES_REQUIRED after sole replacement: one browserexecute202 then MANUAL_HOLD/no publication; physicalslot1/1 MAY_HAVE_STARTED consumed, provider response/usage/billing UNKNOWN, no retry. FullGoexit1/finalwire+durable receipts missing; prebrowser8POST/18reads software-only bounded. Original child waits/stoppedPID0/three exactlistenersabsent observed; strict protectedStatus clocktext4diff keeps originalcleanupHOLD. Source/check/replacementcaps exhausted; documentary diagnosis/cost proposal only before any new source/resource/API authority. FullM3/G3 OPEN, Facebook/Zalo OA parked.
+Current stage: CCMAI-RUNTIME-139 Owner approved ONE source-only evidence round: Sol Medium repairs only R139 Go finalizer/journal and Python strict Status elapsed comparison/tests; offline compile1/pureGoIO1 after Root init-safety audit/workerPython1/RootPython1, no retries. Root independent source REVIEWER. Runtime/key/DB/fixture/browser/network/provider0; slot1/1 MAY_HAVE_STARTED consumed, billing/response UNKNOWN. Original replacement/manualHOLD and cleanupHOLD retained; fullM3/E05/E06 OPEN, Facebook/Zalo OA parked. After source acceptance only a separately pinned runtime proposal, no automatic campaign.
 
 Historical initial preparation boundary: Owner `tiếp` continues G0 in the canonical delivery plan. Immutable dispatcher seed `642f5bd026dfe31e6dda6441dd25704eb3ececa3` precedes source BUILD. This is ONE work order containing G0 preparation, G1 native/backend proof and G2 browser proof, with explicit stage admission. Only source preparation/offline checks and Root's bounded pure-UI tool diagnostic are admitted now. G1/G2 runtime and provider use are HOLD. R117 physical allowance1/1 is consumed; no historical counter or slot transfers. No standalone helper successor follows automatically.
 
@@ -153,3 +153,7 @@ Source material03e967a4 accepted for preparing this one replacement run; source 
 ## Current replacement outcome — HOLD / CHANGES_REQUIRED
 
 One replacement campaign consumed: nativeprebrowser8POST/18reads/transport0, genuineIABwriteroneexecute202 thenmanualhold. No published result. Physicalslot1/1MAY_HAVE_STARTED consumed; providerresponse/usage/billingUNKNOWN, no furthercall/retry. Goexit1 before wire/finalreceipt export, so E05/E06/integratedG1G2unaccepted. Ownedstop/waits/three exactlistenerabsence observed; strictprotectedStatus4clockdifferences preserveoriginalHOLD. See R139_REPLACEMENT_RUNTIME_INDEPENDENT_REVIEW_2026-10-21.md. No newsource/runtime/key/API authority; nextdocumentarydiagnosisproposalonly.
+
+## Current Owner-approved source-evidence round (no runtime)
+
+Authority: `CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-EVIDENCE-ADMISSION.json`. Owner reply: Duyệt một vòng source-only theo phương án; không API/runtime. This supersedes only the previous pending-source-proposal prohibition. Exactly three source paths from the approved proposal; expanded Go scope is R139-only actual wire journaling/deferred evidence finalization before fatal assertions, success/nonpublication/IO-failure pure checks. No shared historical helper change, fabricated old response, product change or old HOLD rewrite. Python normalizes only strictly parsed Status elapsed text, preserves State/health/exitcode/IDs/other fields and all raw inventory; unknown formats fail closed. Sol Medium REPAIR_WORKER; Root independent source REVIEWER/no source edits; Root commits. Checks: offline Go compile1, selected pure Go IO1 only after independent Root init/import safety audit, worker pure Python1, Root pure Python1. Reserve each before invocation; preserve failed outputs, no retries or cap reset. Worker-return R139_SOURCE_EVIDENCE_WORKER_RETURN_2026-10-21.md plus r3_source_checks.json; actual invocation results and closeability recheck required. No worker seed/continuity/catalog/commit. Existing API slot1/1 MAY_HAVE_STARTED consumed; response/billing UNKNOWN. No key, DB, fixture, Docker, browser, runtime, network or API. Source acceptance cannot accept E05/E06/M3 or enable runtime; a separately pinned future proposal only.

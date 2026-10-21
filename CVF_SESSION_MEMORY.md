@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: BUILD
+- Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
 
-CCMAI-RUNTIME-139 HOLD/CHANGES_REQUIRED after sole replacement: one browserexecute202 then MANUAL_HOLD/no publication; physicalslot1/1 MAY_HAVE_STARTED consumed, provider response/usage/billing UNKNOWN, no retry. FullGoexit1/finalwire+durable receipts missing; prebrowser8POST/18reads software-only bounded. Original child waits/stoppedPID0/three exactlistenersabsent observed; strict protectedStatus clocktext4diff keeps originalcleanupHOLD. Source/check/replacementcaps exhausted; documentary diagnosis/cost proposal only before any new source/resource/API authority. FullM3/G3 OPEN, Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 Owner approved ONE source-only evidence round: Sol Medium repairs only R139 Go finalizer/journal and Python strict Status elapsed comparison/tests; offline compile1/pureGoIO1 after Root init-safety audit/workerPython1/RootPython1, no retries. Root independent source REVIEWER. Runtime/key/DB/fixture/browser/network/provider0; slot1/1 MAY_HAVE_STARTED consumed, billing/response UNKNOWN. Original replacement/manualHOLD and cleanupHOLD retained; fullM3/E05/E06 OPEN, Facebook/Zalo OA parked. After source acceptance only a separately pinned runtime proposal, no automatic campaign.
 
-Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD after independent Sol runtime REVIEW
+Root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol Medium REPAIR_WORKER
 
 Canonical roadmap: docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md. R137 product source unchanged; R139 original setup HOLD retained; no full M3 acceptance.
 

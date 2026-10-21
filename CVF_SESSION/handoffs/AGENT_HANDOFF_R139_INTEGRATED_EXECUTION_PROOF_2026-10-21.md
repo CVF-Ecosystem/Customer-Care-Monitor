@@ -4,11 +4,11 @@ Status: ACTIVE
 
 ## Current State
 
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD after independent Sol runtime REVIEW
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol Medium REPAIR_WORKER
 - Active tranche: CCMAI-RUNTIME-139
-- Next allowed move: CCMAI-RUNTIME-139 HOLD/CHANGES_REQUIRED after sole replacement: one browserexecute202 then MANUAL_HOLD/no publication; physicalslot1/1 MAY_HAVE_STARTED consumed, provider response/usage/billing UNKNOWN, no retry. FullGoexit1/finalwire+durable receipts missing; prebrowser8POST/18reads software-only bounded. Original child waits/stoppedPID0/three exactlistenersabsent observed; strict protectedStatus clocktext4diff keeps originalcleanupHOLD. Source/check/replacementcaps exhausted; documentary diagnosis/cost proposal only before any new source/resource/API authority. FullM3/G3 OPEN, Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-139 Owner approved ONE source-only evidence round: Sol Medium repairs only R139 Go finalizer/journal and Python strict Status elapsed comparison/tests; offline compile1/pureGoIO1 after Root init-safety audit/workerPython1/RootPython1, no retries. Root independent source REVIEWER. Runtime/key/DB/fixture/browser/network/provider0; slot1/1 MAY_HAVE_STARTED consumed, billing/response UNKNOWN. Original replacement/manualHOLD and cleanupHOLD retained; fullM3/E05/E06 OPEN, Facebook/Zalo OA parked. After source acceptance only a separately pinned runtime proposal, no automatic campaign.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## INTAKE / DESIGN / SPEC / WORK_ORDER acknowledgment
@@ -112,3 +112,7 @@ Independent Sol final draft verdict10:27:08Z: PROCEED_TO_COMMIT_AND_CLEAN_PIN_RE
 ## Actual replacement outcome / independent REVIEW acknowledgment
 
 Root rehydrated current compact/canonical state/memory/handoff/status/index after terminal and transitions bounded runtime EXECUTOR→ORCHESTRATOR/SESSION_SYNC/COMMIT_STEWARD. Independent Sol actual-review verdict HOLD/CHANGES_REQUIRED: one execute202 then UI manualhold, slot1MAY_HAVE_STARTED consumed, provider result/usage/billing UNKNOWN. No final wire/durable export because Go fatal at published-read assertion before finalizer. Native prebrowser software matrix accepted only, fullGoexit1. Original waits observed; ownedPID0/portsnull and three exactlistenersabsent, strictStatus clocktext4diff retains cleanupHOLD. Source9pins/binary unchanged; firstfailedfixture remains. All source/check/replacement allowance spent, no more source/API/runtime. Documentary postmortem/cost proposal only; freezeOPEN, no fullM3 acceptance.
+
+## Owner-approved source-evidence round / fresh dispatch acknowledgment
+
+Root rehydrated manifest/policy/current compact+canonical state/memory/handoff/status/index and required workspace/Core refs. Doctor27/27: public Core b69e1088 matches origin/main; inherited e9ddcb profile-pin warning retained. No continuity drift; parkedOperatorCheckpoint/parkedCheckpoint are canonical aliases. Owner explicitly approved one source-only round, no API/runtime. Root ORCHESTRATOR/WORK_ORDER_AUTHOR records INTAKE same R139/R2; DESIGN/SPEC exactly approved finalizer+journal and strict Status elapsed parser; WORK_ORDER immutable SOURCE-EVIDENCE-ADMISSION before BUILD. Sol Medium delegated REPAIR_WORKER, Root independent source REVIEWER/no source authorship and COMMIT_STEWARD. Worker fresh acknowledgment is recorded in its return before source writes. One compile, one pure Go IO after Root static init-safety clearance, one worker Python, one Root Python; failures preserved/no retry/reset. Runtime/key/DB/fixture/browser/network/provider0. Original manualHOLD/cleanupHOLD and consumed uncertain physicalslot1/1 preserved; no M3/E05/E06 closure.

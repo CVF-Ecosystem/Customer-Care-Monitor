@@ -35451,6 +35451,13 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/r2_next_source_only_proposal.json",
       "status": "ACTIVE",
       "description": "Concrete source-only next proposal after actual HOLD; no runtime/key/API or budget reset; explicit further source authority required."
+    },
+    {
+      "id": "r139-ccmai-runtime-139-source-evidence-admission",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-EVIDENCE-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Owner-approved ONE R139 source-evidence round; no runtime/provider authority; old HOLDs preserved."
     }
   ]
 }

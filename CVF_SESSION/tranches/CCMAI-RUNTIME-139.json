@@ -83,10 +83,10 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "CHANGES_REQUIRED",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "BLOCKED_WITH_REASON",
+  "workOrderStatus": "ACTIVE",
   "buildCommit": "915bc9c62256d528062b00f1d16565bbbbab967e",
   "reviewEvidence": [
     "docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md",
@@ -101,7 +101,7 @@
     "docs/reviews/R139_REPLACEMENT_RUNTIME_INDEPENDENT_REVIEW_2026-10-21.md",
     "docs/reviews/probes/r139_integrated_20261021/r2_integrated_runtime_outcome.json"
   ],
-  "disposition": "CCMAI-RUNTIME-139 HOLD/CHANGES_REQUIRED after sole replacement: one browserexecute202 then MANUAL_HOLD/no publication; physicalslot1/1 MAY_HAVE_STARTED consumed, provider response/usage/billing UNKNOWN, no retry. FullGoexit1/finalwire+durable receipts missing; prebrowser8POST/18reads software-only bounded. Original child waits/stoppedPID0/three exactlistenersabsent observed; strict protectedStatus clocktext4diff keeps originalcleanupHOLD. Source/check/replacementcaps exhausted; documentary diagnosis/cost proposal only before any new source/resource/API authority. FullM3/G3 OPEN, Facebook/Zalo OA parked.",
+  "disposition": "CCMAI-RUNTIME-139 Owner approved ONE source-only evidence round: Sol Medium repairs only R139 Go finalizer/journal and Python strict Status elapsed comparison/tests; offline compile1/pureGoIO1 after Root init-safety audit/workerPython1/RootPython1, no retries. Root independent source REVIEWER. Runtime/key/DB/fixture/browser/network/provider0; slot1/1 MAY_HAVE_STARTED consumed, billing/response UNKNOWN. Original replacement/manualHOLD and cleanupHOLD retained; fullM3/E05/E06 OPEN, Facebook/Zalo OA parked. After source acceptance only a separately pinned runtime proposal, no automatic campaign.",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -120,7 +120,8 @@
     "PARKED",
     "BUILD",
     "REVIEW_PENDING",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "actualUse": {
     "status": "HOLD_MANUAL_HOLD_PROVIDER_OUTCOME_UNKNOWN",
