@@ -41,9 +41,9 @@ MYSQL_PROBE_TIMEOUT_SECONDS = 8
 WINDOWS_LISTENER_QUERY_TIMEOUT_SECONDS = 5
 GRANT_MIN_SECONDS = 60
 GRANT_MAX_SECONDS = 24 * 60 * 60
-R139_REPLACEMENT_FIXTURE_NAME = "ccmai-r139-r2-20261021"
-R139_REPLACEMENT_DATABASE = "ccma_r139_r2_20261021"
-R139_REPLACEMENT_RUNTIME_ROOT = Path(".cvf/runtime/r139_integrated_execution_r2_20261021")
+R139_REPLACEMENT_FIXTURE_NAME = "ccmai-r139-r3-20261021"
+R139_REPLACEMENT_DATABASE = "ccma_r139_r3_20261021"
+R139_REPLACEMENT_RUNTIME_ROOT = Path(".cvf/runtime/r139_integrated_execution_r3_20261021")
 PROMPT_TEXT = "Analyze only fabricated Vietnamese complaint; return the required JSON."
 PROMPT_SHA256 = hashlib.sha256(PROMPT_TEXT.encode("utf-8")).hexdigest()
 ACTIVE_HARD_DEADLINE: float | None = None
@@ -115,7 +115,7 @@ def project_path(relative: str) -> Path:
 
 
 def replacement_external_evidence_dir() -> Path:
-    return ROOT.parent / ".ccmai_local_evidence" / "r139_execution_proof_20261021" / "fixture_r2"
+    return ROOT.parent / ".ccmai_local_evidence" / "r139_execution_proof_20261021" / "fixture_r3"
 
 
 def committed(relative: str) -> Path:

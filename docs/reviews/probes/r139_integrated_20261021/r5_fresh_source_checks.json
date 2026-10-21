@@ -1,0 +1,133 @@
+{
+  "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-COMBINED-ADMISSION.json",
+  "checks": {
+    "compile": {
+      "mode": "compile",
+      "state": "RESERVED_BEFORE_INVOCATION",
+      "argv": [
+        "go",
+        "-C",
+        "backend",
+        "test",
+        "-c",
+        "-o",
+        "../.cvf/runtime/r139_integrated_execution_r3_20261021_source_checks/intervention_execution_browser.test.exe",
+        "./api/handlers"
+      ],
+      "shell": false,
+      "timeoutSeconds": 180,
+      "atUTC": "2026-10-21T15:40:44.105032+00:00",
+      "stdoutPath": ".cvf\\runtime\\r139_integrated_execution_r3_20261021_source_checks\\compile.stdout.txt",
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrPath": ".cvf\\runtime\\r139_integrated_execution_r3_20261021_source_checks\\compile.stderr.txt",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exitCode": 0,
+      "elapsedSeconds": 50.14044509996893,
+      "failure": null,
+      "binarySha256": "990390a82f8b18046079b01c9f0558d4dc43b3b93c4312e5ec7637b7ce269826",
+      "status": "PASS"
+    },
+    "go": {
+      "mode": "go",
+      "state": "RESERVED_BEFORE_INVOCATION",
+      "argv": [
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_integrated_execution_r3_20261021_source_checks\\intervention_execution_browser.test.exe",
+        "-test.run=^TestR139Pure(FinalEvidence(Success|FatalGoexit|IOFailure)|Journal(RequestIOFailureBlocksNext|CapturedResponseSurvivesGoexit|UnsafeResponseHasNoInventedReceipt))$",
+        "-test.count=1",
+        "-test.timeout=30s",
+        "-test.v"
+      ],
+      "shell": false,
+      "timeoutSeconds": 45,
+      "atUTC": "2026-10-21T15:41:44.405225+00:00",
+      "stdoutPath": ".cvf\\runtime\\r139_integrated_execution_r3_20261021_source_checks\\go.stdout.txt",
+      "stdoutSha256": "089e18983173d4c93d03b40faed4d3ba40af023906db80be46eed2a14abdd898",
+      "stderrPath": ".cvf\\runtime\\r139_integrated_execution_r3_20261021_source_checks\\go.stderr.txt",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exitCode": 0,
+      "elapsedSeconds": 3.7609387999982573,
+      "failure": null,
+      "testsStarted": 6,
+      "testsPassed": 6,
+      "testsSkipped": 0,
+      "passedTests": [
+        "TestR139PureFinalEvidenceSuccess",
+        "TestR139PureFinalEvidenceFatalGoexit",
+        "TestR139PureFinalEvidenceIOFailure",
+        "TestR139PureJournalRequestIOFailureBlocksNext",
+        "TestR139PureJournalCapturedResponseSurvivesGoexit",
+        "TestR139PureJournalUnsafeResponseHasNoInventedReceipt"
+      ],
+      "status": "PASS"
+    },
+    "worker-python": {
+      "mode": "worker-python",
+      "state": "RESERVED_BEFORE_INVOCATION",
+      "argv": [
+        "python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts/tests",
+        "-p",
+        "test_r139_execution_supervisor.py"
+      ],
+      "shell": false,
+      "timeoutSeconds": 180,
+      "atUTC": "2026-10-21T15:42:01.987349+00:00",
+      "stdoutPath": ".cvf\\runtime\\r139_integrated_execution_r3_20261021_source_checks\\worker-python.stdout.txt",
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrPath": ".cvf\\runtime\\r139_integrated_execution_r3_20261021_source_checks\\worker-python.stderr.txt",
+      "stderrSha256": "4c65f667ac1a65f98bfa8327db03b3fc70881179940a1acd0864f6b33a74b2ea",
+      "exitCode": 0,
+      "elapsedSeconds": 2.344858500000555,
+      "failure": null,
+      "testsRun": 30,
+      "status": "PASS"
+    },
+    "root-python": {
+      "mode": "root-python",
+      "state": "RESERVED_BEFORE_INVOCATION",
+      "argv": [
+        "python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts/tests",
+        "-p",
+        "test_r139_execution_supervisor.py"
+      ],
+      "shell": false,
+      "timeoutSeconds": 180,
+      "atUTC": "2026-10-21T15:43:07.000668+00:00",
+      "stdoutPath": ".cvf\\runtime\\r139_integrated_execution_r3_20261021_source_checks\\root-python.stdout.txt",
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrPath": ".cvf\\runtime\\r139_integrated_execution_r3_20261021_source_checks\\root-python.stderr.txt",
+      "stderrSha256": "6a0e8379ed0e56115db5fa2a18e8c595e66d967e38b9eb08ab260ebb98b2f394",
+      "exitCode": 0,
+      "elapsedSeconds": 2.1665274999686517,
+      "failure": null,
+      "testsRun": 30,
+      "status": "PASS"
+    }
+  },
+  "sourceSha256": {
+    "backend/api/handlers/intervention_execution_browser_test.go": "cbea08fd43d265a4978cf0584eb6302b8810aa77e57a205e79a1df015f48240a",
+    "scripts/r139_execution_supervisor.py": "4f8423d397462df5d53e94e8ead9cc3c4375c6ecbd4acc8798de1e8c2bd06976",
+    "scripts/tests/test_r139_execution_supervisor.py": "63cd84737d32e620ee6715cc476213dc6e9eb25548f386e0b66d49a2c455e402"
+  },
+  "sourceStageEffects": {
+    "keyRead": 0,
+    "DB": 0,
+    "Docker": 0,
+    "fixture": 0,
+    "browser": 0,
+    "network": 0,
+    "provider": 0
+  },
+  "oldFailuresPreserved": true
+}

@@ -191,7 +191,7 @@ func r139Admit(t *testing.T) (r139Admission, string) {
 	if err != nil || runtimeRel == "." || strings.HasPrefix(runtimeRel, "..") {
 		t.Fatal("R139 runtime root outside ignored area")
 	}
-	expectedEvidence := filepath.Join(filepath.Dir(root), ".ccmai_local_evidence", "r139_execution_proof_20261021", "fixture_r2")
+	expectedEvidence := filepath.Join(filepath.Dir(root), ".ccmai_local_evidence", "r139_execution_proof_20261021", "fixture_r3")
 	if a.ExternalEvidenceDir != expectedEvidence || os.Getenv("R139_EVIDENCE_DIR") != expectedEvidence {
 		t.Fatal("R139 external evidence location mismatch")
 	}

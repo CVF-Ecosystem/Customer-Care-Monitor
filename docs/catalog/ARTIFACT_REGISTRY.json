@@ -35563,6 +35563,27 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-COMBINED-ADMISSION.json",
       "status": "ACTIVE",
       "description": "Explicit Owner combined fresh-r3 grant: exact source/check round and conditional freshcampaign/newAPI1/additionalUSD1; not executable runtime yet."
+    },
+    {
+      "id": "r139-r139-fresh-r3-independent-source-review-2026-10-21",
+      "family": "continuity",
+      "path": "docs/reviews/R139_FRESH_R3_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "Fresh-r3 exact identity/path source accepted bounded after compile/Go6/Python30+30; pricing/exact independent runtime admission still required."
+    },
+    {
+      "id": "r139-r139-fresh-r3-source-worker-return-2026-10-21",
+      "family": "continuity",
+      "path": "docs/reviews/R139_FRESH_R3_SOURCE_WORKER_RETURN_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "Fresh-r3 exact identity/path source accepted bounded after compile/Go6/Python30+30; pricing/exact independent runtime admission still required."
+    },
+    {
+      "id": "r139-r5-fresh-source-checks",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r5_fresh_source_checks.json",
+      "status": "ACTIVE",
+      "description": "Fresh-r3 exact identity/path source accepted bounded after compile/Go6/Python30+30; pricing/exact independent runtime admission still required."
     }
   ]
 }

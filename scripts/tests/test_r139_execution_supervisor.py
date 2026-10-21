@@ -306,14 +306,14 @@ class R139SupervisorPureTests(unittest.TestCase):
                 receipt = json.loads((runtime / f"listener_query_{port}_result.json").read_text(encoding="utf-8"))
                 self.assertEqual(receipt["status"], "PASS_ZERO_LISTENERS")
 
-    def test_replacement_evidence_path_is_fixture_r2(self):
+    def test_replacement_evidence_path_is_fixture_r3(self):
         with tempfile.TemporaryDirectory() as name:
             project = Path(name) / "Customer-Care-Monitor-AI"
             project.mkdir()
             with patch.object(module, "ROOT", project):
                 self.assertEqual(
                     module.replacement_external_evidence_dir(),
-                    project.parent / ".ccmai_local_evidence" / "r139_execution_proof_20261021" / "fixture_r2",
+                    project.parent / ".ccmai_local_evidence" / "r139_execution_proof_20261021" / "fixture_r3",
                 )
 
     def test_owned_container_rejects_label_or_id_mismatch(self):

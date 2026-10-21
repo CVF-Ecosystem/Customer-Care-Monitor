@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: ACTIVE
+Status: COMPLETE_PENDING_REVIEW
 Risk: R2
 Worker: Sol Medium delegated fixture worker
 Reviewer: Root independent source/evidence REVIEWER
@@ -12,7 +12,7 @@ dispatchKind: INITIAL
 
 ## Current authority and acceptance target
 
-Current stage: CCMAI-RUNTIME-139 Owner APPROVED combined fresh-r3 packet2e9cecbf: Sol applies exact7literal/3source patch, newsourceRound1/offlineCompile1/pureGo6check1/workerPython1/RootPython1. Root independent source REVIEWER; runtime/key/DB/Docker/fixture/browser/network/provider0 until sourcePASS/commit, publicpricing1readPASS and NEW exact independent runtime admission/commit. Conditionalfreshcampaign1/native8/browser1/NEWAPI1/additionalUSD1 approved, no retry; oldAPI1/1MAY consumed/billingresponseUNKNOWN, aggregateapprovedceilingsUSD2 not actualspend. FirstfailureHOLD/no extra rounds. FullM3/E05/E06 OPEN, Facebook/Zalo OA parked.
+Current stage: CCMAI-RUNTIME-139 fresh-r3 source ACCEPTED_BOUNDED pendingcommit: exact7literals/3files; offlinecompilePASS, Go6/6 zero skips, workerPython30/30 and RootPython30/30 PASS; source/checkcaps1/1 spent. After sourcecommit, ONE approved secret-free publicpricing/modelread; pricinguncertain HOLD beforekey/fixture. Only pricingPASS+NEW exact independent runtimeadmissionreview/commit enables Owner-approvedfreshcampaign1/native8/browser1/NEWAPI1/additionalUSD1. Oldslot1/1MAYconsumed/unknownbillresponse and allHOLDs retained. E05/E06/M3OPEN; Facebook/ZaloOAparked.
 
 Historical initial preparation boundary: Owner `tiếp` continues G0 in the canonical delivery plan. Immutable dispatcher seed `642f5bd026dfe31e6dda6441dd25704eb3ececa3` precedes source BUILD. This is ONE work order containing G0 preparation, G1 native/backend proof and G2 browser proof, with explicit stage admission. Only source preparation/offline checks and Root's bounded pure-UI tool diagnostic are admitted now. G1/G2 runtime and provider use are HOLD. R117 physical allowance1/1 is consumed; no historical counter or slot transfers. No standalone helper successor follows automatically.
 
@@ -177,3 +177,7 @@ R139_FRESH_CAMPAIGN_COMBINED_PROPOSAL_2026-10-21.md and r5_fresh_campaign_propos
 ## CURRENT Owner-approved fresh-r3 source and conditional campaign
 
 Owner duyệt explicitly approves combined2e9cecbf packet. New immutable FRESH-R3-COMBINED-ADMISSION binds exact7literal patch36571a/3paths; ONEsourceRound/offlinecompile/pureGo6/workerPython/RootPython each1, no retry. SourceworkerSol, RootindependentReviewer; workersnoseed/commit. CommittedgitblobLFpatch/defaultapplycheck; exactnormalizedresultpin inlauncher. Sourceeffects0. Only aftersourcePASS/review/commit, onepublicpricingreadPASS/no secret, thenNEW exactsource/binary/deadline/resources/cost/key/browserproof pinnedruntimeadmission+independentSolreview+commit mayactivate conditionalcampaign1/native8/browser1/NEWAPI1/additionalUSD1. Oldslot1/1MAY remainsconsumed; totalauthorizedceilings2USD notactualspend. Firstfailure/mismatchHOLD stopschain/norepair/replay. Freshnamesr3 only; preserveoldresources/evidence. E05/E06/fullM3 notaccepted bythisgrant; no push/merge/deploy.
+
+## Fresh-r3 source return and independent acceptance
+
+Exact7literal/3source candidate acceptedbounded by Root independentreview: compilePASS/Go6zeroSKIP/workerPython30/RootPython30. Evidence R139_FRESH_R3_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md and r5_fresh_source_checks.json; no runtime/key/provider effect. Source commit beforepublicpricing1read; ifpricinguncertainHOLD beforekey/fixture. Only exactnewruntimeadmission independentlyreviewed/committed mayactivate conditionalOwnercampaign. Source/checkcaps exhausted, no retries. IntegratedE05/E06/M3OPEN/FREEZEOPEN, oldAPI1MAYconsumed immutable.

@@ -83,10 +83,10 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
   "buildCommit": "915bc9c62256d528062b00f1d16565bbbbab967e",
   "reviewEvidence": [
     "docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md",
@@ -105,9 +105,12 @@
     "docs/reviews/probes/r139_integrated_20261021/r3_source_checks.json",
     "docs/reviews/R139_CHECK_ONLY_INDEPENDENT_REVIEW_2026-10-21.md",
     "docs/reviews/R139_CHECK_ONLY_WORKER_RETURN_2026-10-21.md",
-    "docs/reviews/probes/r139_integrated_20261021/r4_check_only_results.json"
+    "docs/reviews/probes/r139_integrated_20261021/r4_check_only_results.json",
+    "docs/reviews/R139_FRESH_R3_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md",
+    "docs/reviews/R139_FRESH_R3_SOURCE_WORKER_RETURN_2026-10-21.md",
+    "docs/reviews/probes/r139_integrated_20261021/r5_fresh_source_checks.json"
   ],
-  "disposition": "CCMAI-RUNTIME-139 Owner APPROVED combined fresh-r3 packet2e9cecbf: Sol applies exact7literal/3source patch, newsourceRound1/offlineCompile1/pureGo6check1/workerPython1/RootPython1. Root independent source REVIEWER; runtime/key/DB/Docker/fixture/browser/network/provider0 until sourcePASS/commit, publicpricing1readPASS and NEW exact independent runtime admission/commit. Conditionalfreshcampaign1/native8/browser1/NEWAPI1/additionalUSD1 approved, no retry; oldAPI1/1MAY consumed/billingresponseUNKNOWN, aggregateapprovedceilingsUSD2 not actualspend. FirstfailureHOLD/no extra rounds. FullM3/E05/E06 OPEN, Facebook/Zalo OA parked.",
+  "disposition": "CCMAI-RUNTIME-139 fresh-r3 source ACCEPTED_BOUNDED pendingcommit: exact7literals/3files; offlinecompilePASS, Go6/6 zero skips, workerPython30/30 and RootPython30/30 PASS; source/checkcaps1/1 spent. After sourcecommit, ONE approved secret-free publicpricing/modelread; pricinguncertain HOLD beforekey/fixture. Only pricingPASS+NEW exact independent runtimeadmissionreview/commit enables Owner-approvedfreshcampaign1/native8/browser1/NEWAPI1/additionalUSD1. Oldslot1/1MAYconsumed/unknownbillresponse and allHOLDs retained. E05/E06/M3OPEN; Facebook/ZaloOAparked.",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -133,7 +136,8 @@
     "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "actualUse": {
     "status": "HOLD_MANUAL_HOLD_PROVIDER_OUTCOME_UNKNOWN",
@@ -196,7 +200,7 @@
   },
   "sourceResumeAuthority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-RESUME-ADMISSION.json",
   "repairAuthority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-REPAIR-ADMISSION.json",
-  "sourceRevisionRounds": 4,
+  "sourceRevisionRounds": 5,
   "reviewPassScope": "REPLACEMENT_SOURCE_PREPARATION_ONLY; runtime still unproved",
   "x-httpsDiagnostic": {
     "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-HTTPS-BROWSER-ADMISSION.json",
@@ -398,5 +402,40 @@
     "sourceEditsApproved": 0,
     "effectsApproved": 0,
     "independentReview": "docs/reviews/R139_FRESH_CAMPAIGN_PROPOSAL_INDEPENDENT_REVIEW_2026-10-21.md"
+  },
+  "x-r139FreshR3": {
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-COMBINED-ADMISSION.json",
+    "status": "SOURCE_ACCEPTED_BOUNDED_PENDING_COMMIT_AND_PRICING",
+    "ownerReply": "duyệt",
+    "sourceCaps": {
+      "consolidatedSourceRound": 1,
+      "offlineGoCompile": 1,
+      "workerPureGoIO": 1,
+      "workerPurePython": 1,
+      "independentRootPurePython": 1
+    },
+    "sourceActualUse": {
+      "consolidatedSourceRound": 1,
+      "offlineGoCompile": 1,
+      "workerPureGoIO": 1,
+      "workerPurePython": 1,
+      "independentRootPurePython": 1
+    },
+    "runtimeActualUse": {},
+    "newBudgetUSD": 1,
+    "newAPICap": 1,
+    "newUsedOrUncertainSlots": 0,
+    "oldSlot": "1/1 MAY_HAVE_STARTED_CONSUMED; response/billingUNKNOWN",
+    "runtimeExecutableNow": false,
+    "sourceReceipt": "docs/reviews/probes/r139_integrated_20261021/r5_fresh_source_checks.json",
+    "sourceReview": "docs/reviews/R139_FRESH_R3_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md",
+    "sourceSha256": {
+      "backend/api/handlers/intervention_execution_browser_test.go": "cbea08fd43d265a4978cf0584eb6302b8810aa77e57a205e79a1df015f48240a",
+      "scripts/r139_execution_supervisor.py": "4f8423d397462df5d53e94e8ead9cc3c4375c6ecbd4acc8798de1e8c2bd06976",
+      "scripts/tests/test_r139_execution_supervisor.py": "63cd84737d32e620ee6715cc476213dc6e9eb25548f386e0b66d49a2c455e402"
+    },
+    "goBinary": ".cvf/runtime/r139_integrated_execution_r3_20261021_source_checks/intervention_execution_browser.test.exe",
+    "goBinarySha256": "990390a82f8b18046079b01c9f0558d4dc43b3b93c4312e5ec7637b7ce269826",
+    "pricingReadUsed": 0
   }
 }
