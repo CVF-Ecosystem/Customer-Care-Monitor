@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: BLOCKED_WITH_REASON
+Status: ACTIVE
 Risk: R2
 Worker: Sol Medium delegated fixture worker
 Reviewer: Root independent source/evidence REVIEWER
@@ -12,7 +12,7 @@ dispatchKind: INITIAL
 
 ## Current authority and acceptance target
 
-Current stage: CCMAI-RUNTIME-139 source-evidence candidate HOLD/CHANGES_REQUIRED: offlineGoCompile1/1 PASS, pureGoInvocation1/1 exit2 flag error before tests(0 started); workerPython0/1 and RootPython0/1 stopped. Root independent review/source hashes complete; no source acceptance/FREEZE. Check-only literal-argv recovery proposal awaits explicit Owner new-check approval; no source/recompile/runtime/key/DB/Docker/fixture/browser/network/provider. Original runtime MANUAL_HOLD/cleanupHOLD retained, API slot1/1 MAY_HAVE_STARTED consumed with response/billing UNKNOWN. FullM3/E05/E06 OPEN; Facebook/Zalo OA parked.
+Current stage: CCMAI-RUNTIME-139 Owner approved check-only recovery: Sol Medium one corrected literal-argv invocation of pinned existing Go binary(6 pureIO tests,30s); only ifPASS resume unused workerPython1 then Root independent Python1. Source edits0/recompile0/runtime/key/DB/Docker/fixture/browser/network/provider0. Root independent review/commit; firstfailure HOLD/no retry. Old Go flag failure and all original runtime/manual/cleanup HOLDs preserved; API slot1/1 MAY_HAVE_STARTED consumed,response/billing UNKNOWN. FullM3/E05/E06 OPEN, Facebook/Zalo OA parked.
 
 Historical initial preparation boundary: Owner `tiếp` continues G0 in the canonical delivery plan. Immutable dispatcher seed `642f5bd026dfe31e6dda6441dd25704eb3ececa3` precedes source BUILD. This is ONE work order containing G0 preparation, G1 native/backend proof and G2 browser proof, with explicit stage admission. Only source preparation/offline checks and Root's bounded pure-UI tool diagnostic are admitted now. G1/G2 runtime and provider use are HOLD. R117 physical allowance1/1 is consumed; no historical counter or slot transfers. No standalone helper successor follows automatically.
 
@@ -161,3 +161,7 @@ Authority: `CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-EVIDENCE-ADMISSION.js
 ## Source-evidence return disposition
 
 One Owner source round consumed. Independent review R139_SOURCE_EVIDENCE_INDEPENDENT_REVIEW_2026-10-21.md returns HOLD: compilePASS but sole selected binary exit2 before tests; both Python checks uninvoked under first-failure stop. No candidate source acceptance or FREEZE. Exact hashes and failed output preserved in r3_source_checks.json. New check-only recovery proposal is documentary, not authority; no source/recompile/runtime/API permitted. Existing actual provider slot remains1/1 MAY_HAVE_STARTED consumed.
+
+## Owner-approved check-only continuation
+
+Authority: `CVF_SESSION/authority/CCMAI-RUNTIME-139-CHECK-ONLY-ADMISSION.json`. Owner reply: Duyệt check-only theo phương án; không source/runtime/API. One new separately counted corrected Go binary invocation, joined literal argv through Python shellFalse, exact pinned binary/source; no compile/source edits. Six actual pureIO PASS/zero skips required before unused workerPython1; Root unusedPython1 only after independent worker-result/hash review. Stop on any mismatch/failure, no retry. Sol worker return R139_CHECK_ONLY_WORKER_RETURN_2026-10-21.md and r4_check_only_results.json; Root owns continuity/seeds/catalog/commit. All runtime/key/DB/Docker/fixture/browser/network/provider effects0; no money/API grant. Original old checks/HOLDs retained. Focused source acceptance only; integrated E05/E06/M3/FREEZE stayOPEN.

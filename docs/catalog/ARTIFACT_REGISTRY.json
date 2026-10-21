@@ -35493,6 +35493,13 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/r3_check_only_recovery_proposal.json",
       "status": "ACTIVE",
       "description": "R139 source-evidence candidate HOLD: compilePASS, binary flag failure before tests; no runtime/API; explicit check-only proposal pending."
+    },
+    {
+      "id": "r139-ccmai-runtime-139-check-only-admission",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CHECK-ONLY-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Explicit Owner check-only literal-argv continuation; no source/recompile/runtime/API; original failure preserved."
     }
   ]
 }

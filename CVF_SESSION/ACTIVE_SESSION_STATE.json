@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 source-evidence candidate HOLD/CHANGES_REQUIRED: offlineGoCompile1/1 PASS, pureGoInvocation1/1 exit2 flag error before tests(0 started); workerPython0/1 and RootPython0/1 stopped. Root independent review/source hashes complete; no source acceptance/FREEZE. Check-only literal-argv recovery proposal awaits explicit Owner new-check approval; no source/recompile/runtime/key/DB/Docker/fixture/browser/network/provider. Original runtime MANUAL_HOLD/cleanupHOLD retained, API slot1/1 MAY_HAVE_STARTED consumed with response/billing UNKNOWN. FullM3/E05/E06 OPEN; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 Owner approved check-only recovery: Sol Medium one corrected literal-argv invocation of pinned existing Go binary(6 pureIO tests,30s); only ifPASS resume unused workerPython1 then Root independent Python1. Source edits0/recompile0/runtime/key/DB/Docker/fixture/browser/network/provider0. Root independent review/commit; firstfailure HOLD/no retry. Old Go flag failure and all original runtime/manual/cleanup HOLDs preserved; API slot1/1 MAY_HAVE_STARTED consumed,response/billing UNKNOWN. FullM3/E05/E06 OPEN, Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol Medium source worker stopped after check invocation failure",
+  "activeRole": "Root ORCHESTRATOR / independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol Medium CHECK_WORKER (no source edits)",
   "updatedAt": "2026-10-21",
   "x-resolvedCoreCommit": "b69e1088978e8c90ac58a2243fcf8f90d0f857ed",
   "x-ownerRoadmapDiscipline": {
@@ -2689,6 +2689,44 @@
   },
   "x-r139CheckOnlyRecoveryProposal": {
     "path": "docs/reviews/probes/r139_integrated_20261021/r3_check_only_recovery_proposal.json",
-    "status": "PROPOSED_NOT_AUTHORIZED"
+    "status": "OWNER_APPROVED_CHECK_CONTINUATION",
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CHECK-ONLY-ADMISSION.json"
+  },
+  "x-r139CheckOnlyContinuation": {
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CHECK-ONLY-ADMISSION.json",
+    "status": "AUTHORIZED_PENDING_COMMITTED_DISPATCH",
+    "ownerReply": "Duyệt check-only theo phương án; không source/runtime/API",
+    "sourceCommit": "b8ba25225c3732f092f2c16eb91107c0bf75fea8",
+    "sourceSha256": {
+      "backend/api/handlers/intervention_execution_browser_test.go": "543da3b5542d88ab353ab18b7b57e005d949b5ecc921658f2543dd5c07ffdebf",
+      "scripts/r139_execution_supervisor.py": "3904cb9100615ba6ecbcffb51d78f8f26d2103ae3f34e958ed27a4adfbd9ba9b",
+      "scripts/tests/test_r139_execution_supervisor.py": "7c873b6f97005e7d35229550c8218abb1e1f4586afa53bc06ff6dfec9acfc65a"
+    },
+    "binarySha256": "6b1cbfc6e5eaba7d40c085a9008c22715682abfef8a820c506e1591b7c04d86e",
+    "newCaps": {
+      "correctedPureGoBinaryInvocation": 1
+    },
+    "resumedUnspentCaps": {
+      "workerPurePythonCheck": 1,
+      "rootPurePythonCheck": 1
+    },
+    "actualUse": {
+      "correctedPureGoBinaryInvocation": 0,
+      "workerPurePythonCheck": 0,
+      "rootPurePythonCheck": 0
+    },
+    "sourceEdits": 0,
+    "compile": 0,
+    "effects": {
+      "keyRead": 0,
+      "DB": 0,
+      "Docker": 0,
+      "fixture": 0,
+      "browser": 0,
+      "network": 0,
+      "provider": 0,
+      "grant": 0,
+      "executePOST": 0
+    }
   }
 }

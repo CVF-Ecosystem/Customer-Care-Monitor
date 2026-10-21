@@ -4,11 +4,11 @@ Status: ACTIVE
 
 ## Current State
 
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Root independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol Medium source worker stopped after check invocation failure
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Root ORCHESTRATOR / independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol Medium CHECK_WORKER (no source edits)
 - Active tranche: CCMAI-RUNTIME-139
-- Next allowed move: CCMAI-RUNTIME-139 source-evidence candidate HOLD/CHANGES_REQUIRED: offlineGoCompile1/1 PASS, pureGoInvocation1/1 exit2 flag error before tests(0 started); workerPython0/1 and RootPython0/1 stopped. Root independent review/source hashes complete; no source acceptance/FREEZE. Check-only literal-argv recovery proposal awaits explicit Owner new-check approval; no source/recompile/runtime/key/DB/Docker/fixture/browser/network/provider. Original runtime MANUAL_HOLD/cleanupHOLD retained, API slot1/1 MAY_HAVE_STARTED consumed with response/billing UNKNOWN. FullM3/E05/E06 OPEN; Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-139 Owner approved check-only recovery: Sol Medium one corrected literal-argv invocation of pinned existing Go binary(6 pureIO tests,30s); only ifPASS resume unused workerPython1 then Root independent Python1. Source edits0/recompile0/runtime/key/DB/Docker/fixture/browser/network/provider0. Root independent review/commit; firstfailure HOLD/no retry. Old Go flag failure and all original runtime/manual/cleanup HOLDs preserved; API slot1/1 MAY_HAVE_STARTED consumed,response/billing UNKNOWN. FullM3/E05/E06 OPEN, Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## INTAKE / DESIGN / SPEC / WORK_ORDER acknowledgment
@@ -120,3 +120,7 @@ Root rehydrated manifest/policy/current compact+canonical state/memory/handoff/s
 ## Source-evidence round return / independent HOLD
 
 Root fresh rehydration/declaration transitions BUILD -> REVIEW_PENDING -> CHANGES_REQUIRED after Sol return. Root independently reviewed source (no authorship), exact six-test init safety and source/binary/log hashes. Offline compile1/1 PASS; selected binary1/1 exit2 before tests, flag provided but not defined: -test. Shell/native splitting is inference only; zero tests started/passed/skipped, Pythonworker0/1/Root0/1 remain stopped. No rerun/source edit/new effect. Root records HOLD/source-not-accepted/FREEZE OPEN and check-only proposal for explicit new-check approval. Original runtime/manual/cleanup HOLDs and paidslot1/1 MAY_HAVE_STARTED consumed/unknown billing-response preserved. No roadmap closure/date claim.
+
+## Explicit Owner check-only continuation / dispatcher acknowledgment
+
+Root fresh manifest/policy/compact/state/memory/handoff/implementation/index rehydration and doctor27/27 PASS; publicCoreb69e1088/originmain, inherited e9pin warning. No continuity drift. Owner explicitly approved check-only proposal, no source/runtime/API. INTAKE/DESIGN/SPEC inherit exact pinned source/binary and literal argv; WORK_ORDER new immutable CHECK-ONLY-ADMISSION committed before execution. Sol CHECK_WORKER (no source authorship), Root independent source REVIEWER and COMMIT_STEWARD. Source edits0/compile0; corrected binary invocation1 new separately counted, then remaining workerPython1/RootPython1 only on priorPASS. Root launcher uses subprocess argv list shellFalse/minimal noncredential env; worker audits it before run. First failure stops/no retry. Old failedGo and runtime/manual/cleanup HOLDs/API1/1 consumed retained, no M3 closure. Worker records fresh acknowledgment in new return before checks.

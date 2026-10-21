@@ -59,7 +59,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "currentPhase": "BUILD",
   "completedCapabilities": [
     "R118 REVIEW_PASS SOURCE_COMPONENT_ONLY at7f74a75f93671973bcfe55b5cb491076c0d2bdf9: current proposal pointer/lineage binding, safe legacy fallback and proposal-less data actions, VN/EN WAIT_DATA history. Root24tests/app typecheckPASS, original byte archive/source pins verified; changed-screen UI proof NOT_RUN/FREEZE OPEN. docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md",
     "R117 bounded WAIT_DATA backend real synthetic flow independently accepted: new same-case proposal after source revision, faithful realAlibaba340/297tokens, synthetic CONFIRM persisted, one call/debit, native11top11nested+engine1PASS. Exact owned owner-authorized restart/finalstop and operational protected equality observed; original interruption/cleanupHOLD retained. Current UI/fullM2/M3/pilot/release remain OPEN. docs/reviews/R117_FINAL_INDEPENDENT_REVIEW_2026-10-18.md",
@@ -2054,7 +2054,9 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [],
+  "activeWorkOrders": [
+    "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md"
+  ],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -3480,6 +3482,44 @@
   },
   "x-r139CheckOnlyRecoveryProposal": {
     "path": "docs/reviews/probes/r139_integrated_20261021/r3_check_only_recovery_proposal.json",
-    "status": "PROPOSED_NOT_AUTHORIZED"
+    "status": "OWNER_APPROVED_CHECK_CONTINUATION",
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CHECK-ONLY-ADMISSION.json"
+  },
+  "x-r139CheckOnlyContinuation": {
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CHECK-ONLY-ADMISSION.json",
+    "status": "AUTHORIZED_PENDING_COMMITTED_DISPATCH",
+    "ownerReply": "Duyệt check-only theo phương án; không source/runtime/API",
+    "sourceCommit": "b8ba25225c3732f092f2c16eb91107c0bf75fea8",
+    "sourceSha256": {
+      "backend/api/handlers/intervention_execution_browser_test.go": "543da3b5542d88ab353ab18b7b57e005d949b5ecc921658f2543dd5c07ffdebf",
+      "scripts/r139_execution_supervisor.py": "3904cb9100615ba6ecbcffb51d78f8f26d2103ae3f34e958ed27a4adfbd9ba9b",
+      "scripts/tests/test_r139_execution_supervisor.py": "7c873b6f97005e7d35229550c8218abb1e1f4586afa53bc06ff6dfec9acfc65a"
+    },
+    "binarySha256": "6b1cbfc6e5eaba7d40c085a9008c22715682abfef8a820c506e1591b7c04d86e",
+    "newCaps": {
+      "correctedPureGoBinaryInvocation": 1
+    },
+    "resumedUnspentCaps": {
+      "workerPurePythonCheck": 1,
+      "rootPurePythonCheck": 1
+    },
+    "actualUse": {
+      "correctedPureGoBinaryInvocation": 0,
+      "workerPurePythonCheck": 0,
+      "rootPurePythonCheck": 0
+    },
+    "sourceEdits": 0,
+    "compile": 0,
+    "effects": {
+      "keyRead": 0,
+      "DB": 0,
+      "Docker": 0,
+      "fixture": 0,
+      "browser": 0,
+      "network": 0,
+      "provider": 0,
+      "grant": 0,
+      "executePOST": 0
+    }
   }
 }
