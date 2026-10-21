@@ -7,7 +7,8 @@
     "workOrderAuthor": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR",
     "implementationWorker": "Sol Medium delegated fixture worker",
     "reviewer": "Root independent source/evidence REVIEWER",
-    "commitSteward": "Root COMMIT_STEWARD"
+    "commitSteward": "Root COMMIT_STEWARD",
+    "repairWorker": "Luna Max delegated source repair worker"
   },
   "allowedPaths": [
     "backend/api/handlers/intervention_execution_browser_test.go",
@@ -108,15 +109,15 @@
     "G0": "HOLD",
     "G1": "NOT_RUN",
     "G2": "NOT_RUN",
-    "sourcePreparation": "AUTHORIZED_PENDING_WORKER_ACK",
+    "sourcePreparation": "FINAL_SOURCE_REPAIR_PENDING_WORKER_ACK",
     "pureUiDiagnosticAttempts": 1,
     "ownedTabsCreatedPartially": 1,
     "ownedTabsClosed": 1,
     "finalOwnedTabs": 0,
     "diagnosticNavigation": "DENIED_DATA_SCHEME",
     "HTTPApplicationCapability": "UNTESTED",
-    "workerGoInvocations": 0,
-    "workerPythonChecks": 0,
+    "workerGoInvocations": 2,
+    "workerPythonChecks": 2,
     "newFixtureStarts": 0,
     "DBEffects": 0,
     "backendStarts": 0,
@@ -126,7 +127,12 @@
     "grantEffects": 0,
     "executePOST": 0,
     "productSourceUnchanged": true,
-    "productMilestones": "UNCHANGED"
+    "productMilestones": "UNCHANGED",
+    "workerGoCompileSuccesses": 0,
+    "workerGoCompileFailures": 2,
+    "workerPurePythonTestsPassed": 12
   },
-  "sourceResumeAuthority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-RESUME-ADMISSION.json"
+  "sourceResumeAuthority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-RESUME-ADMISSION.json",
+  "repairAuthority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-REPAIR-ADMISSION.json",
+  "sourceRevisionRounds": 2
 }

@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Current R139 source-only BUILD resume under unused source caps; G0 browser/runtime HOLD, no retry."
+      "description": "Current same-R139 final source repair handover; Root independent review, no new runtime/browser authority."
     },
     {
       "id": "r060-work-order",
@@ -35094,6 +35094,34 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-RESUME-ADMISSION.json",
       "status": "ACTIVE",
       "description": "Immutable unused source-cap continuation only; no new browser/runtime/provider authority."
+    },
+    {
+      "id": "r139-source-repair-admission",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-REPAIR-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Immutable same-scope source-repair handover; original remaining shared caps only."
+    },
+    {
+      "id": "r139-initial-source-findings",
+      "family": "continuity",
+      "path": "docs/reviews/R139_INITIAL_SOURCE_BUILD_FINDINGS_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "Consolidated initial source defects F01-F08; no runtime/AI governance proof."
+    },
+    {
+      "id": "r139-final-source-corrections",
+      "family": "continuity",
+      "path": "docs/reviews/R139_FINAL_STATIC_SOURCE_CORRECTIONS_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "Remaining source corrections and bounded final repair; source not yet accepted."
+    },
+    {
+      "id": "r139-root-source-baseline",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/root_source_preparation_baseline.json",
+      "status": "ACTIVE",
+      "description": "Root27R137 source/protected matches plus2authority protection pins; no runtime proof."
     }
   ]
 }
