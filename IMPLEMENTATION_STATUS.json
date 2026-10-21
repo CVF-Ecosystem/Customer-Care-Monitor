@@ -3311,13 +3311,33 @@
     "outcome": "docs/reviews/probes/r139_integrated_20261021/local_readiness_outcome.json"
   },
   "x-r139RuntimeAdmissionPreparation": {
-    "status": "READY_AFTER_NAMED_FACTS_MONETARY_CEILING_PENDING",
+    "status": "MONETARY_CEILING_APPROVED_CUSTODIAN_STAGE_PENDING",
     "draft": "docs/reviews/probes/r139_integrated_20261021/runtime_admission_draft.json",
     "independentReview": "docs/reviews/R139_RUNTIME_ADMISSION_READONLY_REVIEW_2026-10-21.md",
     "keyContentsRead": 0,
     "credentialConfigMetadataVerified": true,
     "providerCalls": 0,
-    "budgetQuestion": "Pending owner choice of0.10USD/1USD/or no paid call; no preselected choice assumed approved.",
+    "budgetQuestion": "Answered explicitly: maximum1USD for exactly1new synthetic Alibaba call.",
     "applicationRoleNotHumanAuthority": true
+  },
+  "x-r139OwnerLiveGrant": {
+    "status": "OWNER_APPROVED_NEW_R139_ONE_CALL",
+    "ownerReply": "Duyệt tối đa 1 USD cho 1 lượt API này",
+    "questionReference": "request_user_input_async/call_b2de3a17f2ba4cda8ed49185d8c4bae3/item0",
+    "amount": 1,
+    "currency": "USD",
+    "provider": "alibaba_maas",
+    "model": "qwen3.7-flash",
+    "physicalCallCap": 1,
+    "automaticRetry": 0,
+    "inputBytesMax": 6000,
+    "completionTokensMax": 768,
+    "data": "synthetic Vietnamese complaint only",
+    "fixtureStarts": 1,
+    "nativeExecutePOST": 8,
+    "browserExecutePOST": 1,
+    "grantIssuances": 3,
+    "keyCustodian": "Root existing Alibaba credential",
+    "oldBudgets": "Original/new HTTPS diagnostic and historical R117 provider counters remain consumed, no reset."
   }
 }

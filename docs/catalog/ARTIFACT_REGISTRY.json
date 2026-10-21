@@ -35240,21 +35240,42 @@
       "family": "continuity",
       "path": "docs/reviews/probes/r139_integrated_20261021/local_readiness_outcome.json",
       "status": "ACTIVE",
-      "description": "Observed local read-only metadata or independently reviewed non-executable runtime draft; monetary ceiling/key/deadline/admission pending, no live claim."
+      "description": "Observed local metadata or reviewed draft; Owner1USD/one-call approved, credential/deadline/final admission pending, no live claim."
     },
     {
       "id": "r139-runtime-admission-preparation-1",
       "family": "continuity",
       "path": "docs/reviews/probes/r139_integrated_20261021/runtime_admission_draft.json",
       "status": "ACTIVE",
-      "description": "Observed local read-only metadata or independently reviewed non-executable runtime draft; monetary ceiling/key/deadline/admission pending, no live claim."
+      "description": "Observed local metadata or reviewed draft; Owner1USD/one-call approved, credential/deadline/final admission pending, no live claim."
     },
     {
       "id": "r139-runtime-admission-preparation-2",
       "family": "continuity",
       "path": "docs/reviews/R139_RUNTIME_ADMISSION_READONLY_REVIEW_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Observed local read-only metadata or independently reviewed non-executable runtime draft; monetary ceiling/key/deadline/admission pending, no live claim."
+      "description": "Observed local metadata or reviewed draft; Owner1USD/one-call approved, credential/deadline/final admission pending, no live claim."
+    },
+    {
+      "id": "r139-owner-live-preparation-0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/owner_one_usd_runtime_grant.json",
+      "status": "ACTIVE",
+      "description": "Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim."
+    },
+    {
+      "id": "r139-owner-live-preparation-1",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CREDENTIAL-STAGING-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim."
+    },
+    {
+      "id": "r139-owner-live-preparation-2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/provider_pricing_reference.json",
+      "status": "ACTIVE",
+      "description": "Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim."
     }
   ]
 }

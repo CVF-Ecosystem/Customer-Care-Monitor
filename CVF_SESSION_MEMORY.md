@@ -11,9 +11,9 @@ Memory class: POINTER_RECORD
 - Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
 
-CCMAI-RUNTIME-139 browser HTTPS tool proof PASS and local Docker/cache metadata5/5 PASS; source34facc34 accepted. Independent draft review READY_AFTER_NAMED_FACTS, no extra readiness/helper loop. Await specific human monetary ceiling already requested; then Root verifies/stages existing Alibaba credential and endpoint, sets fresh deadline, commits immutable exact runtime admission before fixture. G0 aggregate HOLD/G1G2/E01-E06 NOT_RUN; fixture/key/provider0. Original browser1/1, fresh HTTPS1/1 and local inspection5/5 consumed; no resets. Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 Owner explicitly approved NEW1Alibaba synthetic call at maximum1USD, native8/browser1/grant3 and one owned fixture; no retries or old-budget reset. After committed CREDENTIAL-STAGING-ADMISSION, Root reads existing ignored Alibaba config once, verifies endpoint hash and exclusively stages external raw key without output. Then issue independently reviewed immutable runtime admission with fresh deadline/clean pins before fixture. Source34facc34 accepted, tool/cache prerequisites PASS; G0 aggregate HOLD/G1G2 NOT_RUN. Facebook/Zalo OA parked.
 
-Root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD
+Root ORCHESTRATOR / secret CUSTODIAN / WORK_ORDER_AUTHOR
 
 R139 source-only review: docs/reviews/R139_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md. Worker and independent Root Python16PASS/Go compile-only exit0. Product source R137 unchanged;29protected hashes match. Detailed finite roadmap remains docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md; no dates/percentages, no full M3/runtime claim. Shared roadmap-control directive applies; current next move resolves real browser/effect boundary in SAME R139, not another source helper chain.
 

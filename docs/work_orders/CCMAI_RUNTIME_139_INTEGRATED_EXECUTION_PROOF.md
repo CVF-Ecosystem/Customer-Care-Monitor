@@ -123,3 +123,7 @@ HTTPS supported CUA diagnostic observed PASS at https_browser_outcome.json: one 
 ## Concrete runtime admission preparation result
 
 Browser supported HTTPS/control/capture/close PASS; local read-only metadata5/5/cache PASS. runtime_admission_draft.json is NON_EXECUTABLE and binds actual source/binary/tree/tool/receipt/resource facts. Independent new /root/r139_admission_review_sol returned READY_AFTER_NAMED_FACTS. Specific monetary ceiling is the one owner datum still pending; Root must not invent it. Existing credential file is ignored/untracked/present by metadata only; no contents read. Final endpoint/key staging, fresh deadline and exact immutable committed admission remain before effects. No further browser/Docker readiness loop/helper tranche; no source or paid-call budget reset. G0aggregateHOLD/G1G2/E01-E06NOT_RUN.
+
+## Owner runtime grant now settled
+
+Owner explicitly approves maximum1USD for exactly1NEW Alibaba synthetic API call in the previously proposed integrated scope (native8/browser1/grant3/one ownedfixture/noretry/request6000/completion768). See owner_one_usd_runtime_grant.json. Root may perform committed bounded credential staging using existing ignored Alibaba config; no new credential requested. Final exact runtime admission must follow before any fixture/native/provider effect. Old budgets remain consumed; application owner role is distinct from this human grant. No blanket paid-call expansion.

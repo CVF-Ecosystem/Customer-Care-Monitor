@@ -3,8 +3,8 @@
   "activePhase": "REVIEW",
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 browser HTTPS tool proof PASS and local Docker/cache metadata5/5 PASS; source34facc34 accepted. Independent draft review READY_AFTER_NAMED_FACTS, no extra readiness/helper loop. Await specific human monetary ceiling already requested; then Root verifies/stages existing Alibaba credential and endpoint, sets fresh deadline, commits immutable exact runtime admission before fixture. G0 aggregate HOLD/G1G2/E01-E06 NOT_RUN; fixture/key/provider0. Original browser1/1, fresh HTTPS1/1 and local inspection5/5 consumed; no resets. Facebook/Zalo OA parked.",
-  "activeRole": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 Owner explicitly approved NEW1Alibaba synthetic call at maximum1USD, native8/browser1/grant3 and one owned fixture; no retries or old-budget reset. After committed CREDENTIAL-STAGING-ADMISSION, Root reads existing ignored Alibaba config once, verifies endpoint hash and exclusively stages external raw key without output. Then issue independently reviewed immutable runtime admission with fresh deadline/clean pins before fixture. Source34facc34 accepted, tool/cache prerequisites PASS; G0 aggregate HOLD/G1G2 NOT_RUN. Facebook/Zalo OA parked.",
+  "activeRole": "Root ORCHESTRATOR / secret CUSTODIAN / WORK_ORDER_AUTHOR",
   "updatedAt": "2026-10-21",
   "schemaVersion": "1.0",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
@@ -501,13 +501,33 @@
     "outcome": "docs/reviews/probes/r139_integrated_20261021/local_readiness_outcome.json"
   },
   "x-r139RuntimeAdmissionPreparation": {
-    "status": "READY_AFTER_NAMED_FACTS_MONETARY_CEILING_PENDING",
+    "status": "MONETARY_CEILING_APPROVED_CUSTODIAN_STAGE_PENDING",
     "draft": "docs/reviews/probes/r139_integrated_20261021/runtime_admission_draft.json",
     "independentReview": "docs/reviews/R139_RUNTIME_ADMISSION_READONLY_REVIEW_2026-10-21.md",
     "keyContentsRead": 0,
     "credentialConfigMetadataVerified": true,
     "providerCalls": 0,
-    "budgetQuestion": "Pending owner choice of0.10USD/1USD/or no paid call; no preselected choice assumed approved.",
+    "budgetQuestion": "Answered explicitly: maximum1USD for exactly1new synthetic Alibaba call.",
     "applicationRoleNotHumanAuthority": true
+  },
+  "x-r139OwnerLiveGrant": {
+    "status": "OWNER_APPROVED_NEW_R139_ONE_CALL",
+    "ownerReply": "Duyệt tối đa 1 USD cho 1 lượt API này",
+    "questionReference": "request_user_input_async/call_b2de3a17f2ba4cda8ed49185d8c4bae3/item0",
+    "amount": 1,
+    "currency": "USD",
+    "provider": "alibaba_maas",
+    "model": "qwen3.7-flash",
+    "physicalCallCap": 1,
+    "automaticRetry": 0,
+    "inputBytesMax": 6000,
+    "completionTokensMax": 768,
+    "data": "synthetic Vietnamese complaint only",
+    "fixtureStarts": 1,
+    "nativeExecutePOST": 8,
+    "browserExecutePOST": 1,
+    "grantIssuances": 3,
+    "keyCustodian": "Root existing Alibaba credential",
+    "oldBudgets": "Original/new HTTPS diagnostic and historical R117 provider counters remain consumed, no reset."
   }
 }

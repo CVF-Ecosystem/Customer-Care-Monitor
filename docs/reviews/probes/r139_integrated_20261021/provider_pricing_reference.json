@@ -1,0 +1,10 @@
+{
+  "source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+  "retrieval": "2026-10-21 via official documentation",
+  "model": "qwen3.7-flash",
+  "internationalSingaporeUpTo32K": {
+    "inputUSDPerMillion": 0.03,
+    "outputUSDPerMillion": 0.13
+  },
+  "qualification": "Published rate reference, not observed account invoice. Limit1physical call/request6000bytes/completion768; actual usage/billing reconciled after if present; no free-quota assumption."
+}
