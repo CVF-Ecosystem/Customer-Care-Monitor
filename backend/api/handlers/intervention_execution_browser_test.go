@@ -20,6 +20,7 @@ import (
 	"path/filepath"
 	"reflect"
 	"regexp"
+	"runtime"
 	"strings"
 	"sync"
 	"sync/atomic"
@@ -293,21 +294,223 @@ func r139SendRaw(f *r102Fixture, actor, tenant, caseID, requestID, body string) 
 
 func r139JSONNew(t *testing.T, path string, value any) {
 	t.Helper()
+	if err := r139WriteNew(path, value); err != nil {
+		t.Fatal(err)
+	}
+}
+
+func r139WriteNew(path string, value any) error {
 	raw, err := json.MarshalIndent(value, "", "  ")
 	if err != nil {
-		t.Fatal(err)
+		return err
 	}
 	f, err := os.OpenFile(path, os.O_CREATE|os.O_EXCL|os.O_WRONLY, 0600)
 	if err != nil {
-		t.Fatal(err)
+		return err
 	}
-	defer f.Close()
 	if _, err = f.Write(append(raw, '\n')); err != nil {
-		t.Fatal(err)
+		_ = f.Close()
+		return err
 	}
 	if err = f.Sync(); err != nil {
+		_ = f.Close()
+		return err
+	}
+	return f.Close()
+}
+
+// A final receipt reports only observations already made. Incomplete tests
+// keep a separate HOLD receipt; they cannot produce the completed terminal.
+type r139FinalEvidence struct {
+	Phase                 string `json:"phase"`
+	Disposition           string `json:"disposition"`
+	Failed                bool   `json:"failed"`
+	PhysicalSlot          string `json:"physicalSlot"`
+	RequestCaptured       bool   `json:"requestCaptured"`
+	ResponseCaptured      bool   `json:"responseCaptured"`
+	ProviderHTTPStatus    int    `json:"providerHTTPStatus"`
+	ExecutePOSTObserved   int32  `json:"executePOSTObserved"`
+	AuthPOSTObserved      int32  `json:"authPOSTObserved"`
+	NativeExecutePOST     int    `json:"nativeExecutePOST"`
+	NativeNegativeReads   int    `json:"nativeNegativeReads"`
+	NativePositiveReads   int    `json:"nativePositiveReads"`
+	GrantIssuances        int    `json:"grantIssuances"`
+	DurableFingerprint    string `json:"durableFingerprint,omitempty"`
+	FingerprintError      string `json:"fingerprintError,omitempty"`
+	ExecutionQueryPresent bool   `json:"executionQueryPresent"`
+	CaseQueryPresent      bool   `json:"caseQueryPresent"`
+	ExecutionState        string `json:"executionState,omitempty"`
+	ExecutionTerminal     string `json:"executionTerminal,omitempty"`
+	CaseWorkState         string `json:"caseWorkState,omitempty"`
+}
+
+func r139WriteFinalEvidence(path string, evidence r139FinalEvidence) error {
+	if evidence.Phase == "" || evidence.Disposition == "" || evidence.PhysicalSlot == "" {
+		return errors.New("r139 final evidence incomplete")
+	}
+	return r139WriteNew(path, evidence)
+}
+
+func TestR139PureFinalEvidenceSuccess(t *testing.T) {
+	path := filepath.Join(t.TempDir(), "final.json")
+	evidence := r139FinalEvidence{Phase: "VALIDATED_PUBLICATION", Disposition: "PASS", PhysicalSlot: "MAY_HAVE_STARTED", RequestCaptured: true, ResponseCaptured: true, ExecutionState: "PUBLISHED"}
+	if err := r139WriteFinalEvidence(path, evidence); err != nil {
 		t.Fatal(err)
 	}
+	raw, err := os.ReadFile(path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	var saved r139FinalEvidence
+	if json.Unmarshal(raw, &saved) != nil || saved != evidence {
+		t.Fatal("R139 pure final success evidence mismatch")
+	}
+}
+
+func TestR139PureFinalEvidenceFatalGoexit(t *testing.T) {
+	path := filepath.Join(t.TempDir(), "final.json")
+	done := make(chan error, 1)
+	go func() {
+		defer close(done)
+		defer func() {
+			done <- r139WriteFinalEvidence(path, r139FinalEvidence{Phase: "BROWSER_STOPPED_TERMINAL_OBSERVATION", Disposition: "HOLD", Failed: true, PhysicalSlot: "MAY_HAVE_STARTED", RequestCaptured: true, ResponseCaptured: false, ExecutionState: "MANUAL_HOLD"})
+		}()
+		runtime.Goexit()
+	}()
+	if err := <-done; err != nil {
+		t.Fatal(err)
+	}
+	raw, err := os.ReadFile(path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	var saved r139FinalEvidence
+	if json.Unmarshal(raw, &saved) != nil || saved.Disposition != "HOLD" || !saved.Failed || saved.ExecutionState != "MANUAL_HOLD" || saved.ResponseCaptured {
+		t.Fatal("R139 pure fatal evidence mismatch")
+	}
+}
+
+func TestR139PureFinalEvidenceIOFailure(t *testing.T) {
+	root := t.TempDir()
+	path := filepath.Join(root, "final.json")
+	if err := os.WriteFile(path, []byte("original"), 0600); err != nil {
+		t.Fatal(err)
+	}
+	if err := r139WriteFinalEvidence(path, r139FinalEvidence{Phase: "ANY", Disposition: "HOLD", PhysicalSlot: "NOT_RESERVED"}); !errors.Is(err, os.ErrExist) {
+		t.Fatalf("R139 pure final IO failure missing: %v", err)
+	}
+	raw, err := os.ReadFile(path)
+	if err != nil || string(raw) != "original" {
+		t.Fatal("R139 pure final IO failure changed original")
+	}
+}
+
+type r139PureRoundTrip func(*http.Request) (*http.Response, error)
+
+func (fn r139PureRoundTrip) RoundTrip(req *http.Request) (*http.Response, error) {
+	return fn(req)
+}
+
+func TestR139PureJournalRequestIOFailureBlocksNext(t *testing.T) {
+	dir := t.TempDir()
+	requestPath := filepath.Join(dir, "provider_request_captured_private.json")
+	if err := os.WriteFile(requestPath, []byte("existing"), 0600); err != nil {
+		t.Fatal(err)
+	}
+	called := false
+	journal := r139JournalTransport{evidenceDir: dir, key: "synthetic-secret", next: r139PureRoundTrip(func(*http.Request) (*http.Response, error) {
+		called = true
+		return nil, errors.New("should not execute")
+	})}
+	req := httptest.NewRequest(http.MethodPost, "https://example.invalid/chat/completions", strings.NewReader(`{"synthetic":true}`))
+	if response, err := journal.RoundTrip(req); err == nil || response != nil || called {
+		t.Fatal("R139 pure journal IO failure allowed next effect")
+	}
+}
+
+func TestR139PureJournalCapturedResponseSurvivesGoexit(t *testing.T) {
+	dir := t.TempDir()
+	done := make(chan error, 1)
+	go func() {
+		defer close(done)
+		journal := r139JournalTransport{evidenceDir: dir, key: "synthetic-secret", next: r139PureRoundTrip(func(*http.Request) (*http.Response, error) {
+			return &http.Response{StatusCode: 202, Body: io.NopCloser(strings.NewReader(`{"actual":"captured"}`))}, nil
+		})}
+		req := httptest.NewRequest(http.MethodPost, "https://example.invalid/chat/completions", strings.NewReader(`{"synthetic":true}`))
+		response, err := journal.RoundTrip(req)
+		if response != nil && response.Body != nil {
+			_ = response.Body.Close()
+		}
+		done <- err
+		runtime.Goexit()
+	}()
+	if err := <-done; err != nil {
+		t.Fatal(err)
+	}
+	raw, err := os.ReadFile(filepath.Join(dir, "provider_response_captured_private.json"))
+	var saved struct {
+		HTTPStatus int    `json:"httpStatus"`
+		Response   string `json:"response"`
+	}
+	if err != nil || json.Unmarshal(raw, &saved) != nil || saved.HTTPStatus != 202 || saved.Response != `{"actual":"captured"}` {
+		t.Fatal("R139 pure journal lost captured response after fatal exit")
+	}
+}
+
+func TestR139PureJournalUnsafeResponseHasNoInventedReceipt(t *testing.T) {
+	dir := t.TempDir()
+	journal := r139JournalTransport{evidenceDir: dir, key: "synthetic-secret", next: r139PureRoundTrip(func(*http.Request) (*http.Response, error) {
+		return &http.Response{StatusCode: 503, Body: io.NopCloser(strings.NewReader("not-json"))}, nil
+	})}
+	req := httptest.NewRequest(http.MethodPost, "https://example.invalid/chat/completions", strings.NewReader(`{"synthetic":true}`))
+	if response, err := journal.RoundTrip(req); err == nil || response != nil {
+		t.Fatal("R139 pure journal accepted unsafe response")
+	}
+	if _, err := os.Stat(filepath.Join(dir, "provider_response_captured_private.json")); !os.IsNotExist(err) {
+		t.Fatal("R139 pure journal invented unsafe response")
+	}
+}
+
+// The inner transport is invoked only after a durable, secret-free request
+// journal. A response is journaled only when its actual bytes are readable
+// and safe. The historical one-slot transport still owns slot reservation.
+type r139JournalTransport struct {
+	next        http.RoundTripper
+	evidenceDir string
+	key         string
+}
+
+func (j r139JournalTransport) RoundTrip(req *http.Request) (*http.Response, error) {
+	raw, err := io.ReadAll(io.LimitReader(req.Body, 6001))
+	if err != nil || len(raw) > 6000 || !r116SafeJSON(raw, j.key) {
+		return nil, errors.New("r139 journal request invalid")
+	}
+	h := sha256.Sum256(raw)
+	if err := r139WriteNew(filepath.Join(j.evidenceDir, "provider_request_captured_private.json"), map[string]any{"provider": "alibaba_maas", "model": "qwen3.7-flash", "request": string(raw), "requestSha256": hex.EncodeToString(h[:]), "state": "MAY_HAVE_STARTED"}); err != nil {
+		return nil, fmt.Errorf("r139 request journal: %w", err)
+	}
+	req.Body = io.NopCloser(bytes.NewReader(raw))
+	response, err := j.next.RoundTrip(req)
+	if err != nil {
+		if response != nil && response.Body != nil {
+			_ = response.Body.Close()
+		}
+		return nil, err
+	}
+	if response == nil || response.Body == nil {
+		return nil, errors.New("r139 response missing")
+	}
+	body, readErr := io.ReadAll(io.LimitReader(response.Body, (1<<20)+1))
+	_ = response.Body.Close()
+	if readErr != nil || !r116SafeJSON(body, j.key) {
+		return nil, errors.New("r139 response unreadable or unsafe")
+	}
+	response.Body = io.NopCloser(bytes.NewReader(body))
+	responseHash := sha256.Sum256(body)
+	if err := r139WriteNew(filepath.Join(j.evidenceDir, "provider_response_captured_private.json"), map[string]any{"provider": "alibaba_maas", "model": "qwen3.7-flash", "httpStatus": response.StatusCode, "response": string(body), "responseSha256": hex.EncodeToString(responseHash[:])}); err != nil {
+		return nil, fmt.Errorf("r139 response journal: %w", err)
+	}
+	return response, nil
 }
 
 func r139Append(path string, value any) error {
@@ -463,12 +666,48 @@ func r139PostDeniedNoWrite(t *testing.T, f *r102Fixture, actor, tenant, caseID, 
 
 func TestR139IntegratedExecutionProof(t *testing.T) {
 	a, dsn := r139Admit(t)
+	evidenceDir := os.Getenv("R139_EVIDENCE_DIR")
+	final := r139FinalEvidence{Phase: "ADMITTED_BEFORE_NATIVE", Disposition: "HOLD", PhysicalSlot: "NOT_RESERVED"}
+	r139JSONNew(t, filepath.Join(evidenceDir, "go_evidence_started.json"), final)
+	var executeCount, authCount atomic.Int32
+	var wire *r116WireTransport
+	nativeNegativeReadCount, nativePositiveReadCount := 0, 0
+	nativeGrantIssuances, nativeExecutePostCount := 0, 0
+	t.Cleanup(func() {
+		final.Failed = t.Failed()
+		final.ExecutePOSTObserved = executeCount.Load()
+		final.AuthPOSTObserved = authCount.Load()
+		final.NativeExecutePOST = nativeExecutePostCount
+		final.NativeNegativeReads = nativeNegativeReadCount
+		final.NativePositiveReads = nativePositiveReadCount
+		final.GrantIssuances = nativeGrantIssuances
+		if _, err := os.Stat(filepath.Join(os.Getenv("R139_EFFECT_DIR"), "slot-1.effect")); err == nil {
+			final.PhysicalSlot = "MAY_HAVE_STARTED"
+		} else if !os.IsNotExist(err) {
+			final.PhysicalSlot = "UNKNOWN"
+		}
+		if _, err := os.Stat(filepath.Join(evidenceDir, "provider_request_captured_private.json")); err == nil {
+			final.RequestCaptured = true
+		}
+		if _, err := os.Stat(filepath.Join(evidenceDir, "provider_response_captured_private.json")); err == nil {
+			final.ResponseCaptured = true
+		}
+		if wire != nil {
+			wire.mu.Lock()
+			final.ProviderHTTPStatus = wire.status
+			wire.mu.Unlock()
+		}
+		if final.Failed {
+			final.Disposition = "HOLD"
+		}
+		if err := r139WriteFinalEvidence(filepath.Join(evidenceDir, "go_evidence_final.json"), final); err != nil {
+			t.Errorf("R139 final evidence write: %v", err)
+		}
+	})
 	if a.FixtureName == "" {
 		t.Fatal("R139 fixture identity absent")
 	}
 	trap := &r139Trap{}
-	nativeNegativeReadCount, nativePositiveReadCount := 0, 0
-	nativeGrantIssuances, nativeExecutePostCount := 0, 0
 	issueGrant := func(t *testing.T, f *r102Fixture, request models.InterventionRerunRequest, service *engine.InterventionService) models.InterventionExecutionGrant {
 		grant := r139Grant(t, f, request, service, a.GrantDeadlineUTC)
 		nativeGrantIssuances++
@@ -631,6 +870,7 @@ func TestR139IntegratedExecutionProof(t *testing.T) {
 	if trap.calls.Load() != 0 {
 		t.Fatal("R139 native call trap reached")
 	}
+	final.Phase = "NATIVE_SOFTWARE_MATRIX_COMPLETE"
 	// The positive case is a new tenant/request/grant. Only its browser POST
 	// reaches the real one-call wire wrapper. Its server is held in this process.
 	f := r139Start(t, dsn)
@@ -652,7 +892,7 @@ func TestR139IntegratedExecutionProof(t *testing.T) {
 		t.Fatal(err)
 	}
 	defer isolation.CloseIdleConnections()
-	wire := &r116WireTransport{next: isolation, key: key, endpoint: endpoint, effectDir: os.Getenv("R139_EFFECT_DIR")}
+	wire = &r116WireTransport{next: r139JournalTransport{next: isolation, evidenceDir: evidenceDir, key: key}, key: key, endpoint: endpoint, effectDir: os.Getenv("R139_EFFECT_DIR")}
 	oldTransport := http.DefaultTransport
 	http.DefaultTransport = wire
 	defer func() { http.DefaultTransport = oldTransport }()
@@ -703,7 +943,6 @@ func TestR139IntegratedExecutionProof(t *testing.T) {
 	addRead("status-unreadable-503", map[string]any{"status": unreadable.Code, "error": "status_unavailable", "durableBefore": beforeFault, "durableAfter": afterFault, "bodySha256": hex.EncodeToString(statusFaultHash[:]), "grantHandlePresent": false, "deniedHandleAbsent": !bytes.Contains(unreadable.Body.Bytes(), []byte(grant.ID)), "noStore": strings.Contains(unreadable.Header().Get("Cache-Control"), "no-store")})
 	addRead("readiness-unreadable-503", map[string]any{"status": unreadableReadiness.Code, "error": "readiness_unavailable", "durableBefore": beforeFault, "durableAfter": afterFault, "bodySha256": hex.EncodeToString(readinessFaultHash[:]), "grantHandlePresent": false, "deniedHandleAbsent": !bytes.Contains(unreadableReadiness.Body.Bytes(), []byte(grant.ID)), "noStore": strings.Contains(unreadableReadiness.Header().Get("Cache-Control"), "no-store")})
 	r139JSONNew(t, filepath.Join(os.Getenv("R139_EVIDENCE_DIR"), "native_reads_positive_pre_browser.json"), map[string]any{"kind": "SOFTWARE_ONLY_NO_AI_OUTPUT", "reads": positiveReads})
-	var executeCount, authCount atomic.Int32
 	var routeSequence atomic.Int64
 	var routeLock sync.Mutex
 	routePath := filepath.Join(os.Getenv("R139_EVIDENCE_DIR"), "go_routes.jsonl")
@@ -759,6 +998,7 @@ func TestR139IntegratedExecutionProof(t *testing.T) {
 	}
 	manifest := map[string]any{"tranche": "CCMAI-RUNTIME-139", "apiOrigin": server.URL, "tenant": f.tenant, "writerEmail": f.writer + "@example.invalid", "readerEmail": f.reader + "@example.invalid", "syntheticPassword": "R101SyntheticOnly!123", "caseId": f.caseID, "requestId": request.ID, "expectedCaseVersion": 3, "browserExecuteCap": 1}
 	r139JSONNew(t, filepath.Join(os.Getenv("R139_EVIDENCE_DIR"), "browser_manifest_private.json"), manifest)
+	final.Phase = "BROWSER_READY_AWAITING_STOP"
 	fmt.Printf("R139_BROWSER_READY %s\n", server.URL)
 	stop := os.Getenv("R139_STOP_FILE")
 	if !filepath.IsAbs(stop) {
@@ -774,12 +1014,28 @@ func TestR139IntegratedExecutionProof(t *testing.T) {
 	if _, err := os.Stat(stop); err != nil {
 		t.Error("R139 supervisor stop deadline")
 	}
+	final.Phase = "BROWSER_STOPPED_TERMINAL_OBSERVATION"
+	wire.mu.Lock()
+	capturedCalls, capturedRequest, capturedResponse, capturedStatus := wire.attempts, wire.request, wire.response, wire.status
+	wire.mu.Unlock()
+	if capturedCalls > 0 && capturedRequest != "" && capturedResponse != "" {
+		r139JSONNew(t, filepath.Join(evidenceDir, "provider_wire_private.json"), map[string]any{"provider": "alibaba_maas", "model": "qwen3.7-flash", "httpStatus": capturedStatus, "request": capturedRequest, "response": capturedResponse, "physicalCalls": capturedCalls})
+	}
 	var row models.InterventionExecution
 	rowErr := db.DB.Where("tenant_id = ? AND request_id = ?", f.tenant, request.ID).Take(&row).Error
 	var storedRequest models.InterventionRerunRequest
 	requestErr := db.DB.Where("id = ?", request.ID).Take(&storedRequest).Error
 	var current models.InterventionCase
 	caseErr := db.DB.Where("id = ?", f.caseID).Take(&current).Error
+	final.ExecutionQueryPresent = rowErr == nil
+	final.CaseQueryPresent = caseErr == nil
+	if rowErr == nil {
+		final.ExecutionState = row.State
+		final.ExecutionTerminal = row.TerminalCode
+	}
+	if caseErr == nil {
+		final.CaseWorkState = current.WorkState
+	}
 	var snapshotAfter models.AnalysisSnapshot
 	snapshotErr := db.DB.Where("id = ?", f.snap).Take(&snapshotAfter).Error
 	var run models.JobRun
@@ -801,6 +1057,13 @@ func TestR139IntegratedExecutionProof(t *testing.T) {
 	originalRequestUnchanged := requestErr == nil && reflect.DeepEqual(storedRequest, request)
 	originalSnapshotUnchanged := snapshotErr == nil && reflect.DeepEqual(snapshotAfter, originalSnapshot)
 	lineage := rowErr == nil && runErr == nil && newSnapshotErr == nil && proposalErr == nil && eventErr == nil && receiptErr == nil && attemptErr == nil && budgetErr == nil && jsonErr == nil && caseErr == nil && row.RequestID == request.ID && row.CaseID == f.caseID && row.GrantID == grant.ID && row.RunID == run.ID && row.SnapshotID == newSnapshot.ID && row.SnapshotDigest == newSnapshot.Digest && proposal.RunID == row.RunID && proposal.SnapshotID == row.SnapshotID && event.ProposalID != nil && *event.ProposalID == proposal.ID && event.RerunRequestID != nil && *event.RerunRequestID == request.ID && event.CaseVersion == proposal.Revision && current.ActiveProposalID != nil && *current.ActiveProposalID == proposal.ID && current.Version == proposal.Revision && run.Status == "success" && run.FinishedAt != nil && receipt.RunID == run.ID && attempt.RunID == run.ID && attempt.ExecutionID != nil && *attempt.ExecutionID == row.ID && budget.Consumed == 1 && after["execution_id"] == row.ID && after["request_id"] == request.ID && after["run_id"] == run.ID && after["snapshot_id"] == newSnapshot.ID
+	// Export the observed state before any publication assertion can terminate
+	// this test. A failed expectation leaves the separate partial HOLD receipt.
+	fingerprint, fingerprintErr := r139FingerprintRaw(f.tenant)
+	final.DurableFingerprint = fingerprint
+	if fingerprintErr != nil {
+		final.FingerprintError = fingerprintErr.Error()
+	}
 	readerStatus := r139ReadNoWrite(t, f, f.reader, f.tenant, statusPath, 200, grant.ID, false, `"phase":"PUBLISHED"`, `"proposal_available":true`, fmt.Sprintf(`"published_case_version":%d`, proposal.Revision))
 	writerStatus := r139ReadNoWrite(t, f, f.writer, f.tenant, statusPath, 200, grant.ID, false, `"phase":"PUBLISHED"`)
 	history := r139ReadNoWrite(t, f, f.reader, f.tenant, "/rerun-requests?limit=10", 200, grant.ID, false, request.ID)
@@ -816,13 +1079,11 @@ func TestR139IntegratedExecutionProof(t *testing.T) {
 	wire.mu.Lock()
 	calls, requestWire, responseWire, providerStatus := wire.attempts, wire.request, wire.response, wire.status
 	wire.mu.Unlock()
-	if calls > 0 {
-		r139JSONNew(t, filepath.Join(os.Getenv("R139_EVIDENCE_DIR"), "provider_wire_private.json"), map[string]any{"provider": "alibaba_maas", "model": "qwen3.7-flash", "httpStatus": providerStatus, "request": requestWire, "response": responseWire, "physicalCalls": calls})
-	}
-	fingerprint, fingerprintErr := r139FingerprintRaw(f.tenant)
 	terminal := map[string]any{"nativeExecutePOST": nativeExecutePostCount, "nativeNegativeReadCount": nativeNegativeReadCount, "nativePositiveReadCount": nativePositiveReadCount, "grantIssuances": nativeGrantIssuances, "executePOST": executeCount.Load(), "authPOST": authCount.Load(), "providerPhysicalCalls": calls, "provider": service.Provider, "model": service.Model, "configRef": service.ConfigRef, "promptVersion": service.PromptVersion, "promptSha256": a.PromptSHA256, "completionTokens": a.CompletionTokens, "maxRequestBytes": a.MaxRequestBytes, "thinkingDisabled": true, "syntheticNamespace": a.SyntheticNamespace, "issuerRole": a.IssuerRole, "actorRole": a.ActorRole, "grantDeadlineUTC": a.GrantDeadlineUTC, "grantId": grant.ID, "requestSha256": func() string { h := sha256.Sum256([]byte(requestWire)); return hex.EncodeToString(h[:]) }(), "responseSha256": func() string { h := sha256.Sum256([]byte(responseWire)); return hex.EncodeToString(h[:]) }(), "providerHTTPStatus": providerStatus, "originalRequestUnchanged": originalRequestUnchanged, "originalSnapshotUnchanged": originalSnapshotUnchanged, "lineageVerified": lineage, "readerWriterPublishedStatus": statusPublished, "readerHistoryAndOpenDetail": historyVisible, "caseWorkState": current.WorkState, "executionPresent": rowErr == nil, "executionTerminal": row.TerminalCode, "executionState": row.State, "caseId": f.caseID, "requestId": request.ID, "storedRequestId": storedRequest.ID, "storedRequestCaseId": storedRequest.CaseID, "executionId": row.ID, "executionRequestId": row.RequestID, "executionCaseId": row.CaseID, "executionGrantId": row.GrantID, "executionRunId": row.RunID, "executionSnapshotId": row.SnapshotID, "jobRunId": run.ID, "snapshotId": newSnapshot.ID, "snapshotDigest": newSnapshot.Digest, "proposalId": proposal.ID, "proposalRunId": proposal.RunID, "proposalSnapshotId": proposal.SnapshotID, "proposalRevision": proposal.Revision, "eventId": event.ID, "eventRequestId": event.RerunRequestID, "eventProposalId": event.ProposalID, "eventCaseVersion": event.CaseVersion, "attemptId": attempt.ID, "attemptRunId": attempt.RunID, "attemptExecutionId": attempt.ExecutionID, "receiptId": receipt.ID, "receiptRunId": receipt.RunID, "budgetConsumed": budget.Consumed, "usageState": attempt.UsageState, "inputUsagePresence": attempt.InputUsagePresence, "outputUsagePresence": attempt.OutputUsagePresence, "inputTokens": attempt.InputTokens, "outputTokens": attempt.OutputTokens, "responseModel": attempt.ResponseModel, "durableFingerprint": fingerprint, "fingerprintError": fingerprintErr != nil}
-	r139JSONNew(t, filepath.Join(os.Getenv("R139_EVIDENCE_DIR"), "go_terminal.json"), terminal)
 	if executeCount.Load() != 1 || calls != 1 || responseWire == "" || requestWire == "" || providerStatus != 200 || rowErr != nil || row.State != "PUBLISHED" || current.WorkState != "OPEN" || !originalRequestUnchanged || !originalSnapshotUnchanged || !lineage || !statusPublished || !historyVisible || fingerprintErr != nil {
 		t.Fatal("R139 positive publication HOLD")
 	}
+	r139JSONNew(t, filepath.Join(os.Getenv("R139_EVIDENCE_DIR"), "go_terminal.json"), terminal)
+	final.Phase = "VALIDATED_PUBLICATION"
+	final.Disposition = "PASS"
 }

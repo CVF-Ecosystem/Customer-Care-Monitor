@@ -271,6 +271,22 @@ def excluded_owned(observed: dict, owner: dict) -> dict:
     return {"containers": [row for row in observed["containers"] if row.get("ID") != owner.get("containerId")], "networks": [row for row in observed["networks"] if row.get("ID") != owner.get("networkId")], "volumes": [row for row in observed["volumes"] if row.get("Name") != owner.get("volumeName")]}
 
 
+_STATUS_ELAPSED = r"[1-9][0-9]* (?:second|minute|hour|day|week|month|year)s?"
+_UP_STATUS = re.compile(rf"^Up (?P<elapsed>{_STATUS_ELAPSED})(?P<health> \((?:healthy|unhealthy|health: starting)\))?$")
+_EXITED_STATUS = re.compile(rf"^Exited \((?P<exitcode>[0-9]+)\) (?P<elapsed>{_STATUS_ELAPSED}) ago$")
+
+
+def canonicalize_container_status(status: str) -> str:
+    require(isinstance(status, str), "PROTECTED_STATUS_UNKNOWN_FORMAT")
+    up = _UP_STATUS.fullmatch(status)
+    if up:
+        return "Up <elapsed>" + (up.group("health") or "")
+    exited = _EXITED_STATUS.fullmatch(status)
+    if exited:
+        return f"Exited ({exited.group('exitcode')}) <elapsed> ago"
+    raise Hold("PROTECTED_STATUS_UNKNOWN_FORMAT")
+
+
 def canonicalize_protected_inventory(value: dict) -> dict:
     require(isinstance(value, dict) and set(value) == {"containers", "networks", "volumes"}, "PROTECTED_INVENTORY_INVALID")
     normalized: dict[str, list[dict]] = {}
@@ -282,6 +298,11 @@ def canonicalize_protected_inventory(value: dict) -> dict:
             networks = copied.get("Networks")
             if collection == "containers" and isinstance(networks, str) and "," in networks:
                 copied["Networks"] = ",".join(sorted(member.strip() for member in networks.split(",")))
+            if collection == "containers":
+                original_status = copied.get("Status")
+                copied["Status"] = canonicalize_container_status(original_status)
+                expected_state = "running" if original_status.startswith("Up ") else "exited"
+                require(copied.get("State") == expected_state, "PROTECTED_STATUS_STATE_MISMATCH")
             copied_rows.append(copied)
         normalized[collection] = sorted(copied_rows, key=lambda row: json.dumps(row, sort_keys=True))
     return normalized

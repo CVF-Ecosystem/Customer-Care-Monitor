@@ -4459,6 +4459,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance.: `docs/reviews/R139_CONTINUATION_SOURCE_REVIEW_2026-10-21.md`
 - Independent read-only acceptance of exact replacement admission/pins/caps for commit and clean recheck; actual runtime unproved.: `docs/reviews/R139_REPLACEMENT_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md`
 - Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry.: `docs/reviews/R139_REPLACEMENT_RUNTIME_INDEPENDENT_REVIEW_2026-10-21.md`
+- R139 source-evidence candidate HOLD: compilePASS, binary flag failure before tests; no runtime/API; explicit check-only proposal pending.: `docs/reviews/R139_SOURCE_EVIDENCE_INDEPENDENT_REVIEW_2026-10-21.md`
+- R139 source-evidence candidate HOLD: compilePASS, binary flag failure before tests; no runtime/API; explicit check-only proposal pending.: `docs/reviews/R139_SOURCE_EVIDENCE_WORKER_RETURN_2026-10-21.md`
 - Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry.: `docs/reviews/probes/r139_integrated_20261021/r2_after_send_hold.jpg`
 - Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry.: `docs/reviews/probes/r139_integrated_20261021/r2_before_execute.jpg`
 - Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry.: `docs/reviews/probes/r139_integrated_20261021/r2_integrated_runtime_outcome.json`
@@ -4471,6 +4473,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Exact R139 replacement runtime admission preparation; independent review/commit required, cumulative1USD/oneAPI unchanged.: `docs/reviews/probes/r139_integrated_20261021/r2_runtime_preparation.json`
 - R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/r2_worker_check_reservation.json`
 - R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/r2_worker_source_return.json`
+- R139 source-evidence candidate HOLD: compilePASS, binary flag failure before tests; no runtime/API; explicit check-only proposal pending.: `docs/reviews/probes/r139_integrated_20261021/r3_check_only_recovery_proposal.json`
+- R139 source-evidence candidate HOLD: compilePASS, binary flag failure before tests; no runtime/API; explicit check-only proposal pending.: `docs/reviews/probes/r139_integrated_20261021/r3_root_go_init_audit.json`
+- R139 source-evidence candidate HOLD: compilePASS, binary flag failure before tests; no runtime/API; explicit check-only proposal pending.: `docs/reviews/probes/r139_integrated_20261021/r3_source_checks.json`
 - Retained failed handback metadata checks and Root corrections; source unchanged.: `docs/reviews/probes/r139_integrated_20261021/root_handback_metadata_corrections.json`
 - Root27R137 source/protected matches plus2authority protection pins; no runtime proof.: `docs/reviews/probes/r139_integrated_20261021/root_source_preparation_baseline.json`
 - Observed local metadata or reviewed draft; Owner1USD/one-call approved, credential/deadline/final admission pending, no live claim.: `docs/reviews/probes/r139_integrated_20261021/local_readiness_outcome.json`

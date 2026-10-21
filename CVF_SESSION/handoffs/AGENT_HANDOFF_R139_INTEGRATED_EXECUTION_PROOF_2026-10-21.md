@@ -4,11 +4,11 @@ Status: ACTIVE
 
 ## Current State
 
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol Medium REPAIR_WORKER
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: Root independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol Medium source worker stopped after check invocation failure
 - Active tranche: CCMAI-RUNTIME-139
-- Next allowed move: CCMAI-RUNTIME-139 Owner approved ONE source-only evidence round: Sol Medium repairs only R139 Go finalizer/journal and Python strict Status elapsed comparison/tests; offline compile1/pureGoIO1 after Root init-safety audit/workerPython1/RootPython1, no retries. Root independent source REVIEWER. Runtime/key/DB/fixture/browser/network/provider0; slot1/1 MAY_HAVE_STARTED consumed, billing/response UNKNOWN. Original replacement/manualHOLD and cleanupHOLD retained; fullM3/E05/E06 OPEN, Facebook/Zalo OA parked. After source acceptance only a separately pinned runtime proposal, no automatic campaign.
+- Next allowed move: CCMAI-RUNTIME-139 source-evidence candidate HOLD/CHANGES_REQUIRED: offlineGoCompile1/1 PASS, pureGoInvocation1/1 exit2 flag error before tests(0 started); workerPython0/1 and RootPython0/1 stopped. Root independent review/source hashes complete; no source acceptance/FREEZE. Check-only literal-argv recovery proposal awaits explicit Owner new-check approval; no source/recompile/runtime/key/DB/Docker/fixture/browser/network/provider. Original runtime MANUAL_HOLD/cleanupHOLD retained, API slot1/1 MAY_HAVE_STARTED consumed with response/billing UNKNOWN. FullM3/E05/E06 OPEN; Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## INTAKE / DESIGN / SPEC / WORK_ORDER acknowledgment
@@ -116,3 +116,7 @@ Root rehydrated current compact/canonical state/memory/handoff/status/index afte
 ## Owner-approved source-evidence round / fresh dispatch acknowledgment
 
 Root rehydrated manifest/policy/current compact+canonical state/memory/handoff/status/index and required workspace/Core refs. Doctor27/27: public Core b69e1088 matches origin/main; inherited e9ddcb profile-pin warning retained. No continuity drift; parkedOperatorCheckpoint/parkedCheckpoint are canonical aliases. Owner explicitly approved one source-only round, no API/runtime. Root ORCHESTRATOR/WORK_ORDER_AUTHOR records INTAKE same R139/R2; DESIGN/SPEC exactly approved finalizer+journal and strict Status elapsed parser; WORK_ORDER immutable SOURCE-EVIDENCE-ADMISSION before BUILD. Sol Medium delegated REPAIR_WORKER, Root independent source REVIEWER/no source authorship and COMMIT_STEWARD. Worker fresh acknowledgment is recorded in its return before source writes. One compile, one pure Go IO after Root static init-safety clearance, one worker Python, one Root Python; failures preserved/no retry/reset. Runtime/key/DB/fixture/browser/network/provider0. Original manualHOLD/cleanupHOLD and consumed uncertain physicalslot1/1 preserved; no M3/E05/E06 closure.
+
+## Source-evidence round return / independent HOLD
+
+Root fresh rehydration/declaration transitions BUILD -> REVIEW_PENDING -> CHANGES_REQUIRED after Sol return. Root independently reviewed source (no authorship), exact six-test init safety and source/binary/log hashes. Offline compile1/1 PASS; selected binary1/1 exit2 before tests, flag provided but not defined: -test. Shell/native splitting is inference only; zero tests started/passed/skipped, Pythonworker0/1/Root0/1 remain stopped. No rerun/source edit/new effect. Root records HOLD/source-not-accepted/FREEZE OPEN and check-only proposal for explicit new-check approval. Original runtime/manual/cleanup HOLDs and paidslot1/1 MAY_HAVE_STARTED consumed/unknown billing-response preserved. No roadmap closure/date claim.

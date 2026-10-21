@@ -48,14 +48,14 @@ class R139SupervisorPureTests(unittest.TestCase):
         self.assertEqual(result, {"containers": observed["containers"][:1], "networks": observed["networks"][:1], "volumes": observed["volumes"][:1]})
         self.assertEqual(len(observed["containers"]), 2)
 
-    def test_protected_inventory_normalizes_only_network_membership_order(self):
+    def test_protected_inventory_normalizes_network_order_and_status_elapsed_only(self):
         before = {
-            "containers": [{"ID": "protected-id", "Networks": "bridge, custom", "Status": "Up 2 minutes", "RunningFor": "3 minutes"}],
+            "containers": [{"ID": "protected-id", "Networks": "bridge, custom", "Status": "Up 2 minutes", "State": "running", "RunningFor": "3 minutes"}],
             "networks": [{"ID": "network-id", "Name": "protected"}],
             "volumes": [{"Name": "protected-volume"}],
         }
         after = {
-            "containers": [{"ID": "protected-id", "Networks": "custom,bridge", "Status": "Up 2 minutes", "RunningFor": "3 minutes"}],
+            "containers": [{"ID": "protected-id", "Networks": "custom,bridge", "Status": "Up 2 minutes", "State": "running", "RunningFor": "3 minutes"}],
             "networks": [{"ID": "network-id", "Name": "protected"}],
             "volumes": [{"Name": "protected-volume"}],
         }
@@ -64,7 +64,35 @@ class R139SupervisorPureTests(unittest.TestCase):
         self.assertEqual(before, original_before)
         changed_status = json.loads(json.dumps(after))
         changed_status["containers"][0]["Status"] = "Up 4 minutes"
-        self.assertNotEqual(module.canonicalize_protected_inventory(before), module.canonicalize_protected_inventory(changed_status))
+        self.assertEqual(module.canonicalize_protected_inventory(before), module.canonicalize_protected_inventory(changed_status))
+        self.assertEqual(changed_status["containers"][0]["Status"], "Up 4 minutes")
+
+    def test_protected_status_preserves_state_health_exitcode_and_other_fields(self):
+        base = {"containers": [{"ID": "x", "Status": "Up 29 minutes (healthy)", "RunningFor": "fixed", "State": "running", "ExitCode": 0}], "networks": [], "volumes": []}
+        elapsed = json.loads(json.dumps(base))
+        elapsed["containers"][0]["Status"] = "Up 36 minutes (healthy)"
+        self.assertEqual(module.canonicalize_protected_inventory(base), module.canonicalize_protected_inventory(elapsed))
+        for field, value in (("Status", "Up 36 minutes (unhealthy)"), ("ExitCode", 1), ("RunningFor", "changed"), ("ID", "y")):
+            changed = json.loads(json.dumps(elapsed))
+            changed["containers"][0][field] = value
+            self.assertNotEqual(module.canonicalize_protected_inventory(base), module.canonicalize_protected_inventory(changed), field)
+        exited = json.loads(json.dumps(base))
+        exited["containers"][0]["Status"] = "Exited (0) 22 hours ago"
+        exited["containers"][0]["State"] = "exited"
+        exited_later = json.loads(json.dumps(exited))
+        exited_later["containers"][0]["Status"] = "Exited (0) 23 hours ago"
+        self.assertEqual(module.canonicalize_protected_inventory(exited), module.canonicalize_protected_inventory(exited_later))
+        exited_later["containers"][0]["Status"] = "Exited (137) 23 hours ago"
+        self.assertNotEqual(module.canonicalize_protected_inventory(exited), module.canonicalize_protected_inventory(exited_later))
+        mismatch = json.loads(json.dumps(base))
+        mismatch["containers"][0]["State"] = "exited"
+        with self.assertRaisesRegex(module.Hold, "PROTECTED_STATUS_STATE_MISMATCH"):
+            module.canonicalize_protected_inventory(mismatch)
+
+    def test_protected_status_unknown_formats_hold(self):
+        for status in ("Restarting (1) 3 seconds ago", "Dead", "Up About a minute", "Exited (0) unknown ago", "Up 2 minutes (health: unknown)", ""):
+            with self.subTest(status=status), self.assertRaisesRegex(module.Hold, "PROTECTED_STATUS_UNKNOWN_FORMAT"):
+                module.canonicalize_protected_inventory({"containers": [{"ID": "x", "Status": status, "State": "running"}], "networks": [], "volumes": []})
 
     def test_mysql_readiness_uses_tcp_matching_database_and_retries_not_ready_only(self):
         admission = {"database": "ccma_r139_r2_20261021"}

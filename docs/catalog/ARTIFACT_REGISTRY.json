@@ -35458,6 +35458,41 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-EVIDENCE-ADMISSION.json",
       "status": "ACTIVE",
       "description": "Owner-approved ONE R139 source-evidence round; no runtime/provider authority; old HOLDs preserved."
+    },
+    {
+      "id": "r139-r139-source-evidence-independent-review-2026-10-21",
+      "family": "continuity",
+      "path": "docs/reviews/R139_SOURCE_EVIDENCE_INDEPENDENT_REVIEW_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "R139 source-evidence candidate HOLD: compilePASS, binary flag failure before tests; no runtime/API; explicit check-only proposal pending."
+    },
+    {
+      "id": "r139-r139-source-evidence-worker-return-2026-10-21",
+      "family": "continuity",
+      "path": "docs/reviews/R139_SOURCE_EVIDENCE_WORKER_RETURN_2026-10-21.md",
+      "status": "ACTIVE",
+      "description": "R139 source-evidence candidate HOLD: compilePASS, binary flag failure before tests; no runtime/API; explicit check-only proposal pending."
+    },
+    {
+      "id": "r139-r3-root-go-init-audit",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r3_root_go_init_audit.json",
+      "status": "ACTIVE",
+      "description": "R139 source-evidence candidate HOLD: compilePASS, binary flag failure before tests; no runtime/API; explicit check-only proposal pending."
+    },
+    {
+      "id": "r139-r3-source-checks",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r3_source_checks.json",
+      "status": "ACTIVE",
+      "description": "R139 source-evidence candidate HOLD: compilePASS, binary flag failure before tests; no runtime/API; explicit check-only proposal pending."
+    },
+    {
+      "id": "r139-r3-check-only-recovery-proposal",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r3_check_only_recovery_proposal.json",
+      "status": "ACTIVE",
+      "description": "R139 source-evidence candidate HOLD: compilePASS, binary flag failure before tests; no runtime/API; explicit check-only proposal pending."
     }
   ]
 }

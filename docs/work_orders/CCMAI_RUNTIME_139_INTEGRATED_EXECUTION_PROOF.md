@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 Worker: Sol Medium delegated fixture worker
 Reviewer: Root independent source/evidence REVIEWER
@@ -12,7 +12,7 @@ dispatchKind: INITIAL
 
 ## Current authority and acceptance target
 
-Current stage: CCMAI-RUNTIME-139 Owner approved ONE source-only evidence round: Sol Medium repairs only R139 Go finalizer/journal and Python strict Status elapsed comparison/tests; offline compile1/pureGoIO1 after Root init-safety audit/workerPython1/RootPython1, no retries. Root independent source REVIEWER. Runtime/key/DB/fixture/browser/network/provider0; slot1/1 MAY_HAVE_STARTED consumed, billing/response UNKNOWN. Original replacement/manualHOLD and cleanupHOLD retained; fullM3/E05/E06 OPEN, Facebook/Zalo OA parked. After source acceptance only a separately pinned runtime proposal, no automatic campaign.
+Current stage: CCMAI-RUNTIME-139 source-evidence candidate HOLD/CHANGES_REQUIRED: offlineGoCompile1/1 PASS, pureGoInvocation1/1 exit2 flag error before tests(0 started); workerPython0/1 and RootPython0/1 stopped. Root independent review/source hashes complete; no source acceptance/FREEZE. Check-only literal-argv recovery proposal awaits explicit Owner new-check approval; no source/recompile/runtime/key/DB/Docker/fixture/browser/network/provider. Original runtime MANUAL_HOLD/cleanupHOLD retained, API slot1/1 MAY_HAVE_STARTED consumed with response/billing UNKNOWN. FullM3/E05/E06 OPEN; Facebook/Zalo OA parked.
 
 Historical initial preparation boundary: Owner `tiếp` continues G0 in the canonical delivery plan. Immutable dispatcher seed `642f5bd026dfe31e6dda6441dd25704eb3ececa3` precedes source BUILD. This is ONE work order containing G0 preparation, G1 native/backend proof and G2 browser proof, with explicit stage admission. Only source preparation/offline checks and Root's bounded pure-UI tool diagnostic are admitted now. G1/G2 runtime and provider use are HOLD. R117 physical allowance1/1 is consumed; no historical counter or slot transfers. No standalone helper successor follows automatically.
 
@@ -157,3 +157,7 @@ One replacement campaign consumed: nativeprebrowser8POST/18reads/transport0, gen
 ## Current Owner-approved source-evidence round (no runtime)
 
 Authority: `CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-EVIDENCE-ADMISSION.json`. Owner reply: Duyệt một vòng source-only theo phương án; không API/runtime. This supersedes only the previous pending-source-proposal prohibition. Exactly three source paths from the approved proposal; expanded Go scope is R139-only actual wire journaling/deferred evidence finalization before fatal assertions, success/nonpublication/IO-failure pure checks. No shared historical helper change, fabricated old response, product change or old HOLD rewrite. Python normalizes only strictly parsed Status elapsed text, preserves State/health/exitcode/IDs/other fields and all raw inventory; unknown formats fail closed. Sol Medium REPAIR_WORKER; Root independent source REVIEWER/no source edits; Root commits. Checks: offline Go compile1, selected pure Go IO1 only after independent Root init/import safety audit, worker pure Python1, Root pure Python1. Reserve each before invocation; preserve failed outputs, no retries or cap reset. Worker-return R139_SOURCE_EVIDENCE_WORKER_RETURN_2026-10-21.md plus r3_source_checks.json; actual invocation results and closeability recheck required. No worker seed/continuity/catalog/commit. Existing API slot1/1 MAY_HAVE_STARTED consumed; response/billing UNKNOWN. No key, DB, fixture, Docker, browser, runtime, network or API. Source acceptance cannot accept E05/E06/M3 or enable runtime; a separately pinned future proposal only.
+
+## Source-evidence return disposition
+
+One Owner source round consumed. Independent review R139_SOURCE_EVIDENCE_INDEPENDENT_REVIEW_2026-10-21.md returns HOLD: compilePASS but sole selected binary exit2 before tests; both Python checks uninvoked under first-failure stop. No candidate source acceptance or FREEZE. Exact hashes and failed output preserved in r3_source_checks.json. New check-only recovery proposal is documentary, not authority; no source/recompile/runtime/API permitted. Existing actual provider slot remains1/1 MAY_HAVE_STARTED consumed.
