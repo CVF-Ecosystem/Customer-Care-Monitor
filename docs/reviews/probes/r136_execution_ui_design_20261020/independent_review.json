@@ -1,0 +1,30 @@
+{
+  "trancheId": "CCMAI-RUNTIME-136",
+  "scope": "DOCUMENTARY_INTENDED_CONTRACT_ONLY",
+  "sourceHead": "b09b8033627b129c9d37fc3c28fea04f4c6294fa",
+  "sourcePinsChecked": 13,
+  "allMatch": true,
+  "productionPathsChanged": [],
+  "consolidatedRounds": 1,
+  "findings": {
+    "F1": "CORRECTED_PRE_SEND_HOLD",
+    "F2": "CORRECTED_DTOS_AND_PUBLISHED_LINEAGE",
+    "F3": "CORRECTED_ASYNC_BUDGET_TIMING",
+    "F4": "CORRECTED_EXACT_CANDIDATE_PATHS",
+    "F5": "CORRECTED_CONFIG_PIN"
+  },
+  "specSHA256": "a907d63cd64fc1eae09164a6a1e9ec18533c55c4b2e8e7d609ff408a353be6b2",
+  "providerCalls": 0,
+  "runtimeInvocations": 0,
+  "goInvocations": 0,
+  "nodeInvocations": 0,
+  "gateUnits": 89,
+  "gateUnitsPassed": 89,
+  "productImplementation": "NOT_IMPLEMENTED",
+  "runtimeGovernanceProof": "NOT_RUN_NOT_CLAIMED",
+  "status": "REVIEW_PASS_INTENDED_CONTRACT_ONLY",
+  "buildCommit": "82bd229411b9be9f275f523d1cf25dac13d86a4b",
+  "specStatusUpdatedBy": "Root CLOSER lifecycle metadata only",
+  "staticReturnHeaderInitialFailure": "RISK_INVALID_R1_DOCUMENTARY_CORRECTED_TO_R1",
+  "stagedWhitespaceInitialFailure": "TWO_MARKDOWN_HARD_BREAK_SPACES_REMOVED"
+}

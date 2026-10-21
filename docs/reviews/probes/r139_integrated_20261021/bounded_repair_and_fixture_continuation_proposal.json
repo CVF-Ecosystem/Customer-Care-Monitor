@@ -1,0 +1,60 @@
+{
+  "status": "PROPOSED_NOT_AUTHORIZED",
+  "sameWorkOrder": "CCMAI-RUNTIME-139",
+  "costDisposition": "REVIEW_COST_ESCALATION_REQUIRED",
+  "consolidatedFixes": [
+    {
+      "id": "R139-RF1",
+      "change": "Use final MySQL TCP readiness, not temporary initialization socket; bounded startup window60seconds/max45probes/1second spacing, each command bounded, campaign deadline/cleanup reserve retained.",
+      "evidence": "Original six probes ended05:59:14; final server readiness05:59:21."
+    },
+    {
+      "id": "R139-RF2",
+      "change": "Canonicalize only the unordered Docker Networks membership list while retaining all resource identities and other protected fields; preserve original failure/raw comparison."
+    },
+    {
+      "id": "R139-RF3",
+      "change": "Reliable exact Windows listener absence via pinned bounded OS query when socket result is10035; never infer absence from timeout, preservefailclosed."
+    },
+    {
+      "id": "R139-RF4",
+      "change": "Fresh second-campaign external evidence path fixture_r2 in same private evidence root, preserving original failed fixture directory/resources; only fixture path constant changes in Go, compileonce."
+    }
+  ],
+  "allowedSourcePaths": [
+    "scripts/r139_execution_supervisor.py",
+    "scripts/tests/test_r139_execution_supervisor.py",
+    "backend/api/handlers/intervention_execution_browser_test.go"
+  ],
+  "newCapsRequested": {
+    "oneConsolidatedRepairRound": 1,
+    "workerOfflineCompile": 1,
+    "workerPurePythonCheck": 1,
+    "rootPurePythonCheckFromUnspentExistingSlot": 1,
+    "newSupervisorInvocation": 1,
+    "newOwnedFixtureStart": 1,
+    "newOwnedFixtureFinalStop": 1,
+    "backend": 1,
+    "vite": 1,
+    "browserCampaign": 1,
+    "nativeExecutePOST": 8,
+    "browserExecutePOST": 1,
+    "grants": 3
+  },
+  "providerCumulativeCeilingUnchanged": {
+    "amount": 1,
+    "currency": "USD",
+    "physicalCallsTotalR139Max": 1,
+    "observedSoFar": 0,
+    "automaticRetry": 0
+  },
+  "prohibitions": [
+    "No old counter/reset or old resource restart",
+    "No product/Core/dependency/gate changes",
+    "No extra paid-call budget or provider smoke call",
+    "No source/fixture replay before explicit continuation authority and independent review",
+    "First uncertainty stops new campaign; no further repair chain"
+  ],
+  "acceptance": "Focused pure tests and offlinecompile accepted independently; fresh source/binary/admission committed; then nativeG1 before genuineG2 in sameR139; truthfully disposition partialE04 and terminalcleanup.",
+  "reviewOwner": "Root independent source review plus independent runtime reviewer distinct from repair worker"
+}

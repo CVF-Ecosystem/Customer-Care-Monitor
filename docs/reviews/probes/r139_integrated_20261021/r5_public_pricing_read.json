@@ -1,0 +1,59 @@
+{
+  "status": "PASS_PUBLIC_STANDARD_TARIFF_READINESS_ONLY",
+  "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-COMBINED-ADMISSION.json",
+  "sourceCommit": "8bb5463748eeb5f8802947cd3157918d479d8443",
+  "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+  "model": "qwen3.7-flash",
+  "pageReadCap": 1,
+  "pageReadUsedOrUncertain": 1,
+  "reservedAtUTC": "2026-10-21T15:48:52.384216+00:00",
+  "credentialReads": 0,
+  "fixtureStarts": 0,
+  "paidProviderCalls": 0,
+  "acceptance": "Matching provider/model and current official public tariff for bounded request under additionalUSD1; otherwise HOLD before key/fixture. No private account/config/billing or retry.",
+  "completedAtUTC": "2026-10-21T15:50:11.937464+00:00",
+  "publicDocumentLastUpdated": "2026-10-21",
+  "provider": "Alibaba Cloud Model Studio",
+  "region": "Singapore / International",
+  "matchedModel": "qwen3.7-flash",
+  "publishedAlias": "qwen3.7-flash-2026-07-15",
+  "publicPageUniqueURLs": 1,
+  "publicPageFetches": 1,
+  "cachedReferenceFinds": 1,
+  "cachedInspection": "Find within the same already fetched page for exactmodel; no secondURL/search/retry/account access.",
+  "publishedInputOutputUSDPerMillion": [
+    {
+      "inputTier": "0<t<=32000",
+      "input": 0.03,
+      "output": 0.13
+    },
+    {
+      "inputTier": "32000<t<=256000",
+      "input": 0.1,
+      "output": 0.4
+    },
+    {
+      "inputTier": "256000<t<=1000000",
+      "input": 0.2,
+      "output": 0.8
+    }
+  ],
+  "admittedRequestBytesMax": 6000,
+  "admittedCompletionTokensMax": 768,
+  "conservativeTariffBound": {
+    "inputTokensBound": 1000000,
+    "reason": "Use entire largest published accepted input tier rather than assume a byte-to-token conversion; actual request still max6000bytes.",
+    "highestPublishedInputUSDPerMillion": 0.2,
+    "highestPublishedOutputUSDPerMillion": 0.8,
+    "calculation": "1000000*0.2/1000000 + 768*0.8/1000000",
+    "standardInferenceUSD": 0.2006144,
+    "ownerNewUSDMax": 1,
+    "withinBudget": true
+  },
+  "qualifications": [
+    "Public standard token-inference tariff only, not an account invoice or observed billing; no free-quota/discount assumption.",
+    "Endpoint region ap-southeast-1 and exact admitted model are mapped to Singapore International standard pricing for readiness; runtime response/model/usage still must be observed.",
+    "No key/config/account/billing file or provider endpoint was accessed; source/runtime/API effects0.",
+    "Prior consumedslot1/1 and unknown billing remain independent from new approvedslot1/USD1."
+  ]
+}

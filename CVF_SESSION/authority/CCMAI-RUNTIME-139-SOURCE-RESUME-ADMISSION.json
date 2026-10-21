@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "authorityKind": "DISPATCHER_OWNED_R139_SOURCE_PREPARATION_RESUME_ONLY",
+  "parentAuthority": "CVF_SESSION/authority/CCMAI-RUNTIME-139.json",
+  "parentAuthorityCommit": "642f5bd026dfe31e6dda6441dd25704eb3ececa3",
+  "parentAuthoritySha256": "e964eb62a27b3bc7cf1b188640969baeffe4fa80f7627a8b627e08b239ec7aa0",
+  "priorParkCommit": "e47c9fd1c1870dc44a5447b8dc9ea372d0fcbb3c",
+  "ownerInstruction": "tiếp (2026-10-21, current turn)",
+  "scopeInterpretation": "Resume independent source preparation within the original unused source budget and existing allowed paths, SAME R139 work order. The browser diagnostic prerequisite is before fixture/runtime, not a dependency of authoring offline fixture source. Keep owner browser stop/transfer instruction and prior URL-policy denial intact. No retry or alternative browser/server path. This is no new runtime/effect authority.",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR",
+    "implementationWorker": "Sol Medium delegated fixture worker",
+    "reviewer": "Root independent source/evidence REVIEWER",
+    "commitSteward": "Root COMMIT_STEWARD"
+  },
+  "allowedPaths": "UNCHANGED_PARENT_AUTHORITY",
+  "prohibitedEffects": "ALL_PARENT_PROHIBITIONS_PRESERVED",
+  "remainingSourceBudget": {
+    "workerOfflineGoCompileInvocations": 3,
+    "reviewerOfflineGoCompileInvocations": 1,
+    "workerPurePythonCheckInvocations": 3,
+    "reviewerPurePythonCheckInvocations": 2,
+    "sameScopeRepairRounds": 2
+  },
+  "browserBudget": {
+    "originalCap": 1,
+    "alreadyConsumed": 1,
+    "newlyAdmitted": 0,
+    "retries": 0,
+    "tabCreation": 0
+  },
+  "newRuntimeAdmission": {
+    "fixtureStart": 0,
+    "DB": 0,
+    "server": 0,
+    "frontendBuild": 0,
+    "credentialRead": 0,
+    "grant": 0,
+    "executePOST": 0,
+    "providerCall": 0,
+    "network": 0
+  },
+  "entryPhase": "BUILD_ONLY_AFTER_COMMITTED_DISPATCH_AND_EXPLICIT_PACKET_GATES",
+  "acceptance": "Independent source review S01-S04 only; E01-E06/G0/G1/G2 runtime and M3 exit remain HOLD/OPEN. No source acceptance from compile alone.",
+  "counterPolicy": "Unspent original source caps only, no reset or refund of old browser/provider/fixture counters. Preserve all historical failed evidence.",
+  "stop": "Any source defect requiring product path/effect widening, missing cached dependency or exceeded compile/check cap stops that dependent work for consolidated Root disposition. No automatic helper successor. Future runtime still requires supported browser proof, source review and fresh explicit owner effect authority."
+}

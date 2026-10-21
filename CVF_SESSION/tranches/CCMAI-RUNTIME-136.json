@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-136",
+  "authorityKind": "DISPATCHER_OWNED_M3_EXECUTION_UI_DESIGN",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR",
+    "implementationWorker": "Delegated source/design worker",
+    "reviewer": "Root independent source/design reviewer",
+    "commitSteward": "Root COMMIT_STEWARD"
+  },
+  "allowedPaths": [
+    "docs/specs/M3_EXECUTION_UI_R136_SPEC_2026-10-20.md",
+    "docs/work_orders/CCMAI_RUNTIME_136_EXECUTION_UI_DESIGN.md",
+    "docs/reviews/R136_*.md",
+    "docs/reviews/probes/r136_execution_ui_design_20261020/*.json",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-136.json",
+    "CVF_SESSION/tranches/CCMAI-RUNTIME-136.json",
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_R136_EXECUTION_UI_DESIGN_2026-10-20.md",
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_R135_QUEUE_REJECT_PROOF_2026-10-20.md",
+    "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+    "CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md"
+  ],
+  "prohibitedEffects": [
+    "Any production/backend/frontend/tooling/workflow/schema/policy/source behavior edit",
+    "Runtime/DB/container/browser start, grant issue/consume, execute action, provider/API/secret/network use beyond inherited doctor prerequisite",
+    "Installed/customer/channel mutation, dependency/image download, old seed or budget reset",
+    "Push, merge, history rewrite, deployment or public release",
+    "Raw logs/archives/binaries/source snapshots added to Git"
+  ],
+  "ownerAuthorization": "Owner tiep after R135 authorizes current next INTAKE/DESIGN of execution UI requirement/authority; Root orchestrator/independent reviewer and authorized Sol Medium/Luna Max workers. Documentation grant only; no paid/provider or historical budget reuse.",
+  "scope": "Documentation/source inspection only: settle M3-05 execution UI intended contract and finite next R2 implementation/evidence route, preserving separately server-provisioned grant issuance and current synthetic-only startup. No executable/source behavior change.",
+  "verification": "Independent source-pinned design review with testable API/UI/permission/no-retry/uncertainty contracts, clear current-vs-proposed truth and bounded next-work plan. Static repository gates only, no runtime/governance proof.",
+  "claimBoundary": "Frontend followup/request software slice only. Saving a request is not AI execution approval or CVF governance proof. No fresh provider/live-channel, full M3, hosted CI, pilot or release claim.",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_136_EXECUTION_UI_DESIGN.md",
+  "executionBudget": {
+    "goBuildOrTestInvocations": 0,
+    "nodeTestOrBuildInvocations": 0,
+    "newOwnedMySQLFixtures": 0,
+    "browserCampaigns": 0,
+    "providerCalls": 0,
+    "sameScopeRepairRounds": 2
+  },
+  "baseCommit": "6ec8c124b1b5fa32ed6e68a0f7366fb2513ddf3f",
+  "status": "FROZEN",
+  "phase": "FREEZE",
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "CLOSED",
+  "buildCommit": "82bd229411b9be9f275f523d1cf25dac13d86a4b",
+  "reviewEvidence": [
+    "docs/reviews/R136_DESIGN_REVIEW_2026-10-20.md",
+    "docs/reviews/probes/r136_execution_ui_design_20261020/independent_review.json"
+  ],
+  "disposition": "REVIEW_PASS",
+  "freeze": "FROZEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS",
+    "FROZEN"
+  ],
+  "closer": "Root independent documentary CLOSER"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "OWNER_APPROVED_NEW_R139_ONE_CALL",
+  "ownerReply": "Duyệt tối đa 1 USD cho 1 lượt API này",
+  "questionReference": "request_user_input_async/call_b2de3a17f2ba4cda8ed49185d8c4bae3/item0",
+  "amount": 1,
+  "currency": "USD",
+  "provider": "alibaba_maas",
+  "model": "qwen3.7-flash",
+  "physicalCallCap": 1,
+  "automaticRetry": 0,
+  "inputBytesMax": 6000,
+  "completionTokensMax": 768,
+  "data": "synthetic Vietnamese complaint only",
+  "fixtureStarts": 1,
+  "nativeExecutePOST": 8,
+  "browserExecutePOST": 1,
+  "grantIssuances": 3,
+  "keyCustodian": "Root existing Alibaba credential",
+  "oldBudgets": "Original/new HTTPS diagnostic and historical R117 provider counters remain consumed, no reset."
+}

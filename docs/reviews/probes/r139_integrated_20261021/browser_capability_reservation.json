@@ -1,0 +1,17 @@
+{
+  "status": "RESERVED_BEFORE_EFFECT",
+  "authoritySeed": "642f5bd026dfe31e6dda6441dd25704eb3ececa3",
+  "dispatchCommit": "7c35f8683aa6c4cbc0044e507d8ebb421340060a",
+  "actor": "Root ORCHESTRATOR",
+  "browserId": "2",
+  "campaignCap": 1,
+  "campaignReserved": 1,
+  "ownedTabCap": 1,
+  "clickCap": 1,
+  "network": 0,
+  "auth": 0,
+  "DB": 0,
+  "provider": 0,
+  "timeUTC": "2026-10-20T23:17:21.480148+00:00",
+  "claimBoundary": "Pure supported-tool capability only; not application/HTTP/runtime/governance proof"
+}

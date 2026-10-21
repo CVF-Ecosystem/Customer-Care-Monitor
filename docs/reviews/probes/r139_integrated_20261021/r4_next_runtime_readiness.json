@@ -1,0 +1,42 @@
+{
+  "status": "DOCUMENTARY_NOT_EXECUTABLE_NO_RUNTIME_AUTHORITY",
+  "sameWorkOrder": "CCMAI-RUNTIME-139",
+  "sourceCommit": "b8ba25225c3732f092f2c16eb91107c0bf75fea8",
+  "sourceSha256": {
+    "backend/api/handlers/intervention_execution_browser_test.go": "543da3b5542d88ab353ab18b7b57e005d949b5ecc921658f2543dd5c07ffdebf",
+    "scripts/r139_execution_supervisor.py": "3904cb9100615ba6ecbcffb51d78f8f26d2103ae3f34e958ed27a4adfbd9ba9b",
+    "scripts/tests/test_r139_execution_supervisor.py": "7c873b6f97005e7d35229550c8218abb1e1f4586afa53bc06ff6dfec9acfc65a"
+  },
+  "binaryPath": ".cvf/runtime/r139_r3_source_checks/handlers_pure_io.test.exe",
+  "binarySha256": "6b1cbfc6e5eaba7d40c085a9008c22715682abfef8a820c506e1591b7c04d86e",
+  "sourceAcceptance": "R139 evidence finalizer/journal and strict Status elapsed comparison accepted source/pure IO only after independent review.",
+  "roadmap": {
+    "G0": "SOURCE_CHECKS_ACCEPTED_BOUND_EFFECT_READINESS_OPEN",
+    "G1": "Historical prebrowser8POST/18reads software-only; full campaign Go exit1 retained",
+    "G2": "Historical one execute202 then MANUAL_HOLD; E05/E06 runtime acceptance OPEN",
+    "G3": "M3 aggregate acceptance OPEN"
+  },
+  "blockers": [
+    {
+      "id": "FRESH_EVIDENCE_PATH_REQUIRED",
+      "sourceLocations": [
+        "scripts/r139_execution_supervisor.py:118",
+        "backend/api/handlers/intervention_execution_browser_test.go:194"
+      ],
+      "finding": "Both sources still pin fixture_r2, already consumed by the preserved replacement. Supervisor requires fresh external directory. New campaign cannot replay/remove/rename old evidence. No fresh path source delta was authorized by check-only.",
+      "next": "Define and independently review a bounded fresh evidence-path source/admission change in same R139 before pinning a new runtime campaign."
+    },
+    {
+      "id": "NEW_EFFECT_AND_PAID_CALL_AUTHORITY_REQUIRED",
+      "finding": "Old R139 physicalslot1/1 MAY_HAVE_STARTED is consumed; response/usage/billing unknown. Previous USD1 is not transferable fresh authority.",
+      "next": "Separate explicit new provider/key/resource/browser/fixture/cost authority after exact source/binary/readiness pins. No automatic campaign or diagnostic call."
+    }
+  ],
+  "futureCampaignContract": "Preserve same R139 integrated G0/G1/G2 contract; bounded synthetic fixture/native8/browser1/at most1 separately approved API, no retry; actual request/response/terminal and cleanup evidence required. Counters and all original HOLDs remain immutable.",
+  "newBudgetApproved": null,
+  "newAPIApproved": 0,
+  "sourceEditsApproved": 0,
+  "effectsApproved": 0,
+  "firstAllowedMove": "Documentary scope/readiness/cost planning only; no source edit, compile, check rerun, key/config access, fixture/DB/browser/network/provider before new authority.",
+  "parked": "Facebook/Zalo OA"
+}

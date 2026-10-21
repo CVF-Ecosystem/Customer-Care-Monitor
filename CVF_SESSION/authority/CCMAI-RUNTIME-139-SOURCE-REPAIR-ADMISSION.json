@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "authorityKind": "DISPATCHER_OWNED_SAME_SCOPE_SOURCE_REPAIR_HANDOVER",
+  "parentAuthority": "CVF_SESSION/authority/CCMAI-RUNTIME-139.json",
+  "parentAuthorityCommit": "642f5bd026dfe31e6dda6441dd25704eb3ececa3",
+  "sourceResumeAdmissionCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
+  "ownerInstruction": "tiếp; standing explicit Luna Max / Sol Medium assistance permission",
+  "reason": "Sol implementation worker stopped on usage limit after preserving current source; finish bounded source corrections and evidence without changing objective/paths/risk/effects/commit owner.",
+  "originalImplementationAuthor": "Sol Medium delegated fixture worker",
+  "repairWorker": "Luna Max delegated source repair worker",
+  "reviewer": "Root independent source/evidence REVIEWER",
+  "commitSteward": "Root COMMIT_STEWARD",
+  "riskCeiling": "R2",
+  "allowedPaths": "UNCHANGED_PARENT_AUTHORITY_FOUR_NEW_SOURCE_FILES_PLUS_WORKER_RETURN_AND_COMPACT_EVIDENCE",
+  "prohibitedEffects": "ALL_PARENT_PROHIBITIONS_PRESERVED",
+  "priorUseReported": {
+    "workerOfflineGoCompile": 2,
+    "workerOfflineGoCompileFailures": 2,
+    "workerPurePythonChecks": 2,
+    "latestWorkerPurePythonTestsPassed": 12,
+    "browserDiagnosticConsumed": 1,
+    "runtimeEffects": 0
+  },
+  "remainingSharedWorkerBudget": {
+    "offlineGoCompile": 1,
+    "purePythonChecks": 1
+  },
+  "reviewerBudgetUnspent": {
+    "offlineGoCompile": 1,
+    "purePythonChecks": 2
+  },
+  "budgetPolicy": "Continue original shared worker caps; no per-agent refresh. Reserve remaining attempt before invocation. Preserve reported failures; original compiler outputs were not persisted by interrupted worker, so mark unavailable rather than fabricate raw receipts.",
+  "sourceRevisionLimit": {
+    "coordinatedInitialRevisionUsed": 1,
+    "thisFinalSameScopeRevision": 2,
+    "thirdSameRootCause": "STOP_REVIEW_COST_ESCALATION_REQUIRED"
+  },
+  "newEffectAllowance": {
+    "browser": 0,
+    "network": 0,
+    "DB": 0,
+    "Docker": 0,
+    "server": 0,
+    "frontendBuild": 0,
+    "keyRead": 0,
+    "grant": 0,
+    "executePOST": 0,
+    "provider": 0
+  },
+  "beforeWrites": "Admission and active repair dispatch committed; rehydrate canonical continuity and append REPAIR_WORKER acknowledgment. Root authored supplements; workers never edit seeds/record/shared state or commit.",
+  "claimBoundary": "Source repairs and offline evidence only. G0 runtime HOLD; E01-E06/G1/G2 and full M3 remain unproved. Root independently reviews both Sol implementation and Luna repairs; Luna prior advisory review is not independent final acceptance of its own repair."
+}

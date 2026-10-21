@@ -1,0 +1,42 @@
+{
+  "status": "CLEARED_SELECTED_SIX_PURE_IO_TESTS_ONLY",
+  "reviewer": "Root independent source REVIEWER (no source authorship)",
+  "dispatchCommit": "a1c1b22b262660690d997079d26c4141dad54f68",
+  "metadataCommand": {
+    "cwd": "backend",
+    "argv": [
+      "go",
+      "list",
+      "-deps",
+      "-test",
+      "-json",
+      "./api/handlers"
+    ],
+    "environment": {
+      "GOPROXY": "off",
+      "GOSUMDB": "off",
+      "GOTOOLCHAIN": "local"
+    },
+    "exitCode": 0,
+    "compilesOrTestsExecuted": 0
+  },
+  "packageRecords": 625,
+  "effectiveInitOrTestMainEntries": 137,
+  "method": "Read effective GoFiles/CgoFiles only; do not treat dependency TestGoFiles/XTestGoFiles as compiled. Inspect project initialization and effect-sensitive dependency initialization/constructors. Metadata command does not execute package initialization.",
+  "findings": [
+    "No handlers TestMain or package init. Project pkg initializer loads timezone/fallback; mcp OAuth initializer starts in-memory cleanup timer only.",
+    "db.DB is an uninitialized pointer; ai client constructor creates http.Client with timeout, no connection. Job coordinator creates map/mutex only.",
+    "Dependency initializers register codecs, protocols, descriptors, SQL driver, HTTP handlers and DNS builder without opening DB, listener, DNS lookup or provider connection.",
+    "OpenCensus worker starts with empty exporter registry; local timer/CPU/entropy/timezone/logging initialization does not perform provider/DB work.",
+    "Selected pure Go test/helper source still requires final independent audit before the ONE binary invocation; no runtime or key environment permitted."
+  ],
+  "privateRaw": {
+    ".cvf/runtime/r139_r3_go_deps.json": "3b0ec74d73fa40d273166abd0fc985da4dccb0438759a30559bf15894334d6b2",
+    ".cvf/runtime/r139_r3_init_scan.json": "55d6e129c05f018c989586ba91e447f5502eb481a529bc7e20e3002afe2f1805"
+  },
+  "claimBoundary": "Static source prerequisite only; no AI governance, runtime acceptance, hosted CI, E05/E06 or M3 proof.",
+  "selectedTestRegex": "^TestR139Pure(FinalEvidence|Journal)(Success|FatalGoexit|IOFailure|RequestIOFailureBlocksNext|CapturedResponseSurvivesGoexit|UnsafeResponseHasNoInventedReceipt)$",
+  "selectedSourceSHA256": "543da3b5542d88ab353ab18b7b57e005d949b5ecc921658f2543dd5c07ffdebf",
+  "selectedTestFinding": "Six test bodies/helpers independently read by Root: TempDir, exclusive local JSON IO, channels/deferred Goexit, httptest.NewRequest creates in-memory request only, r139PureRoundTrip returns in-memory bytes/errors. No network transport/server, DB, config/key read or runtime admission call; exact regex excludes TestR139IntegratedExecutionProof and all historical tests.",
+  "executionLimit": "Single compiled binary invocation; count1 timeout30s; no R139_RUN/admission/key env, no retries. Source/helper changes require refreshed static audit before invocation."
+}

@@ -1,0 +1,309 @@
+{
+  "trancheId": "CCMAI-RUNTIME-135",
+  "status": "REVIEW_PASS_BOUNDED_QUEUE_REJECT",
+  "buildCommit": "3695941ecb6eec6d3746088b2fa03f1f8fda66a1",
+  "fixtureSHA256": "1545939b3a0dc4e421522a8297da8f204599716f9c25614ba0cdac9cddda9e9b",
+  "runtimeGoExit": 0,
+  "terminal": {
+    "actionPosts": 1,
+    "actionStatuses": [
+      200
+    ],
+    "auditActivityAfter": 2,
+    "auditActivityBefore": 0,
+    "authPosts": 4,
+    "caseVersion": 2,
+    "countsAfter": {
+      "activity_logs": 2,
+      "ai_usage_logs": 0,
+      "attempts": 0,
+      "budgets": 0,
+      "executions": 0,
+      "grants": 0,
+      "human_events": 1,
+      "messages": 1,
+      "proposals": 1,
+      "receipts": 0,
+      "runs": 0,
+      "snapshots": 2
+    },
+    "countsBefore": {
+      "activity_logs": 0,
+      "ai_usage_logs": 0,
+      "attempts": 0,
+      "budgets": 0,
+      "executions": 0,
+      "grants": 0,
+      "human_events": 0,
+      "messages": 1,
+      "proposals": 1,
+      "receipts": 0,
+      "runs": 0,
+      "snapshots": 2
+    },
+    "deniedRoutes": 0,
+    "disposition": "HUMAN_REJECT",
+    "eventCount": 1,
+    "finishedAt": "2026-10-20T12:41:32.7097314Z",
+    "nativeGETs": 13,
+    "nonce": "b8b965ae0842384b49b6283d3be03e9d",
+    "observationErrors": null,
+    "serveJoined": true,
+    "serveResult": "http: Server closed",
+    "stopReason": "owned_stop",
+    "testFailed": false,
+    "trancheId": "CCMAI-RUNTIME-135",
+    "workState": "REJECTED"
+  },
+  "cleanup": {
+    "priorContainerCount": 28,
+    "priorContainersEqual": true,
+    "networkIDsEqual": true,
+    "priorVolumesPreserved": true,
+    "newVolumes": [
+      "a2dee31dd01549bcb358b60d57e642abfe9fe8a57012a34b2d35d968ad236ee8"
+    ],
+    "ownedStopped": true,
+    "ownedPreserved": true
+  },
+  "listenerClosure": {
+    "observedAt": "2026-10-20T12:42:15.7022728Z",
+    "listenerRows": [],
+    "checkedPorts": [
+      55435,
+      61635
+    ]
+  },
+  "queueComparison": {
+    "domChecks": [
+      {
+        "stage": "default-page1",
+        "rows": 20,
+        "total": 26,
+        "exactMembershipOrder": true,
+        "more": true
+      },
+      {
+        "stage": "default-all",
+        "rows": 26,
+        "total": 26,
+        "exactMembershipOrder": true,
+        "more": false
+      },
+      {
+        "stage": "open-page1",
+        "rows": 20,
+        "total": 24,
+        "exactMembershipOrder": true,
+        "more": true
+      },
+      {
+        "stage": "open-all",
+        "rows": 24,
+        "total": 24,
+        "exactMembershipOrder": true,
+        "more": false
+      },
+      {
+        "stage": "rejected-before",
+        "rows": 1,
+        "total": 1,
+        "exactMembershipOrder": true,
+        "more": false
+      },
+      {
+        "stage": "default-after-page1",
+        "rows": 20,
+        "total": 25,
+        "exactMembershipOrder": true,
+        "more": true
+      },
+      {
+        "stage": "default-after-all",
+        "rows": 25,
+        "total": 25,
+        "exactMembershipOrder": true,
+        "more": false
+      },
+      {
+        "stage": "open-after-page1",
+        "rows": 20,
+        "total": 23,
+        "exactMembershipOrder": true,
+        "more": true
+      },
+      {
+        "stage": "open-after-all",
+        "rows": 23,
+        "total": 23,
+        "exactMembershipOrder": true,
+        "more": false
+      },
+      {
+        "stage": "rejected-after",
+        "rows": 2,
+        "total": 2,
+        "exactMembershipOrder": true,
+        "more": false
+      }
+    ],
+    "apiQueueChecks": [
+      {
+        "state": "default",
+        "afterReject": false,
+        "rows": 20,
+        "total": 26,
+        "cursorVerified": true
+      },
+      {
+        "state": "default",
+        "afterReject": false,
+        "rows": 6,
+        "total": 26,
+        "cursorVerified": true
+      },
+      {
+        "state": "OPEN",
+        "afterReject": false,
+        "rows": 20,
+        "total": 24,
+        "cursorVerified": true
+      },
+      {
+        "state": "OPEN",
+        "afterReject": false,
+        "rows": 4,
+        "total": 24,
+        "cursorVerified": true
+      },
+      {
+        "state": "REJECTED",
+        "afterReject": false,
+        "rows": 1,
+        "total": 1,
+        "cursorVerified": true
+      },
+      {
+        "state": "default",
+        "afterReject": true,
+        "rows": 20,
+        "total": 25,
+        "cursorVerified": true
+      },
+      {
+        "state": "default",
+        "afterReject": true,
+        "rows": 5,
+        "total": 25,
+        "cursorVerified": true
+      },
+      {
+        "state": "OPEN",
+        "afterReject": true,
+        "rows": 20,
+        "total": 23,
+        "cursorVerified": true
+      },
+      {
+        "state": "OPEN",
+        "afterReject": true,
+        "rows": 3,
+        "total": 23,
+        "cursorVerified": true
+      },
+      {
+        "state": "REJECTED",
+        "afterReject": true,
+        "rows": 2,
+        "total": 2,
+        "cursorVerified": true
+      }
+    ],
+    "readerWriteControls": 0,
+    "readerReasonPersistent": true
+  },
+  "auditLoginReview": {
+    "rows": [
+      {
+        "action": "user.login",
+        "userId": "2c9a3930-106c-4fd4-9a26-44a6da6a4e3a",
+        "resourceId": "2c9a3930-106c-4fd4-9a26-44a6da6a4e3a",
+        "resourceType": "user"
+      },
+      {
+        "action": "user.login",
+        "userId": "acc3944f-d78c-4109-a838-76e52cab1e6e",
+        "resourceId": "acc3944f-d78c-4109-a838-76e52cab1e6e",
+        "resourceType": "user"
+      }
+    ],
+    "expectedOnlyTwoSyntheticLogins": true
+  },
+  "sourceBuildBinding": {
+    "trancheId": "CCMAI-RUNTIME-135",
+    "frontendSHA256": {
+      "frontend/src/api/intervention.ts": "0f4bf139e78a68d0e2dc64d1d09b02ad8024d0dd232170657ae3dfd9cf102725",
+      "frontend/src/components/InterventionDataFollowup.vue": "1e90b2e5baffd8426c271eaf1fabb717170b2dbfce39b08ccf71358b64757803",
+      "frontend/src/views/InterventionCases.vue": "f0cd8b6f0852896f3390c320afa750da1b23817677554f4cfa359d2ba8ba1a75",
+      "frontend/src/i18n/en.ts": "6f18c6796051581f4f1305fb8585bf63280ce425195e1e87668ba60aa00f6114",
+      "frontend/src/i18n/vi.ts": "dcf49d23e088ede7b86f2e78f84509c33d5d7338504002b2cf96e48dd7c97962",
+      "frontend/src/__tests__/intervention-data-followup.test.ts": "9b3fbd2244c4ff60d4ca4a963905986cc10ee6ced02bc1bc8b50411e13ea0993",
+      "frontend/src/__tests__/intervention-ui.test.ts": "522ec0788732ca39de9e4660d10e75139bc74f727043458efb80b78c0ad9ffa3"
+    },
+    "inheritedBuildManifestSHA256": "51eed37d3fb08e25ca9f56c031ebc1265b888baaa5869f8ccccdb614eeede5e6",
+    "distFileCount": 143,
+    "protectedContainers": 28,
+    "browserReadiness": "IAB id4 about:blank opened before provisioning",
+    "providerCalls": 0,
+    "runtimeStarts": 0
+  },
+  "usedBudget": {
+    "go": 3,
+    "node": 0,
+    "ownedMySQL": 1,
+    "ownedFinalStops": 1,
+    "browserCampaigns": 1,
+    "browserTabs": 1,
+    "authPosts": 4,
+    "actionPosts": 1,
+    "providerCalls": 0
+  },
+  "rawSHA256": {
+    "readiness.json": "a953f774cb653f3cfd81854e6238522d8567c97b9a073ab125b9cba53aefb83b",
+    "protected_baseline.json": "f49e301a83cf28fe032019fb5c1f236f5b54e5eb923aec2560071d6e3affccdf",
+    "provision.json": "8ed4e82ef8f982a1a2a62a86d588be0868b942aca75b99f6860adb532dabd6d5",
+    "fixture/fixture_identity.json": "b86f6f895483326cab9dae2de76929e78f02a18789e8c18cdc800fbf98e1d899",
+    "fixture/expected_queue.json": "3e9dae162773c43a3f79e3b422d834aa9fe8b67dd43778d5e2ba15e69095420b",
+    "fixture/ready.json": "9d8238a92dec418fb7237c095f136480f6f7765b0522c1a11dce58dd285c01d3",
+    "fixture/stop.json": "2424d07f8ca44dab49670e189ff2168e3d18b26080ad64c01d312712dab1c069",
+    "fixture/route_journal.jsonl": "b159e8b86a1186028adb445adeaf5efb54a86149e688c250455be90eca340720",
+    "fixture/backend_terminal.json": "17a7d00ddc1de8f122bc98dee4a5c55f2df60dfade79e0d2e8a8bc184678256f",
+    "worker_compile/offline_compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "root_compile/compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "root_compile/compile_receipt.json": "9d3e3bfeda9cfb920193fd507331e1f5ef207f1a9b992bdb5a57687ad2f5a167",
+    "root_runtime/go-test.jsonl": "564e39a68316e4dbb43fe21f5c2999800c22e147920ee8093f75dfdc253c51b9",
+    "root_runtime/test_exit.json": "b78c46a42903824a76273f8abb66fbb464af82b35cc9281d0396db6b35500f50",
+    "audit_login_review.json": "6936cca7de4f59f85a1ec2d8ebc23293d18590d9b96c55c82da03e914994034b",
+    "cleanup.json": "cf414d32b1610b30afc88adf7849d55ca2e7cbc0114ed909efb8b4f3e3b9933e",
+    "listener_closure.json": "68c2877dbe28b7e684b903b0bfb2d3734c33cd4609e1ae611aaba013b11615cd",
+    "queue_dom_api_comparison.json": "381e0a14b9ba08442b36ed4fd6a1da836c48f36b0b7913b18898a6aaddd79274",
+    "queue-default.png": "9ff462573c5382aada3ea40465003235fcaf782132136b91ffa6aaa03253df93",
+    "reject-saved.png": "cdef7484adb518282f0909c5c1868e74037589af55655d1a239b10738d59506a",
+    "reader-reject.png": "2be33d69d7a77c2b1dd2f428f34699466dbc22c73f7559213aff707b038f8831",
+    "reject-reason-required-dom.txt": "9a24abd116c23b40be6a31b995f167cbacc3325c622c6f0759abc923a76fe1b1",
+    "reject-saved-dom.txt": "5a410b382b4acd3e69b2788505dfc5921578cdca449e9e396ce59caab681a243",
+    "reject-reload-dom.txt": "5a410b382b4acd3e69b2788505dfc5921578cdca449e9e396ce59caab681a243",
+    "reader-reject-dom.txt": "964975d638e5e458778cf2466a8b411189f10a4d18823c96a9c3343d3171bfbc",
+    "default-page1.json": "4458f8b7a2ef1e9695ffca5d2937e7bf3e20ead72ae02a49b6d5b1d4cafad58f",
+    "default-all.json": "d477ccbda1a7ea4dc3ee9c230d9ae1b12e40758da11a3e5f20e7df6fef4979d4",
+    "open-page1.json": "39706d1a701638b302a74cf5595930744dbda5ac63dc04b8f7b0cd3b8e43966c",
+    "open-all.json": "120af3b6380d29d0953bd689cc8b0abb33e4083a0859eb94ee4729f7f1ca3147",
+    "rejected-before.json": "9d6e37b6b5611258025b9a71a4f6d7f1013d60434e267e7993985d8477b91337",
+    "default-after-page1.json": "ca21c802e826ffe013a4b100ceffe2a067d2da95d4bcaf59cc9896e6fe9dab37",
+    "default-after-all.json": "da702d3aa2f5b6f0c703765c614884fd9625666cdac1d60cc22247dabbb3da7e",
+    "open-after-page1.json": "08b11dc55a8560bc81ac6ef8cd773a2bff378d25df145e3db8a321a15e52a58c",
+    "open-after-all.json": "6b9d3f1d0aa1e360072acd1abc9a6cb944527752136f6d634a73d5e734f931f6",
+    "rejected-after.json": "7230573daaa2d0fb940a2501d3ebb8a5ac584bc968b9e4158f8ec6b2a05936ea"
+  },
+  "claimBoundary": "Current synthetic queue/filter/count/order and positive REJECT/persistence/reader software proof only; no AI/CVF governance/full M3/business/pilot/hosted/release claim"
+}

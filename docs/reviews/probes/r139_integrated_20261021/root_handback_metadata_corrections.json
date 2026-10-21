@@ -1,0 +1,36 @@
+{
+  "status": "ROOT_METADATA_FAILURES_RETAINED_AND_CORRECTED",
+  "failures": [
+    {
+      "gate": "worker-return",
+      "result": "FAIL",
+      "details": [
+        "HANDOFF_NOT_ACTIVE: Root incorrectly changed active-pointer handoff header to PARKED; corrected ACTIVE, work-order/tranche parking separate.",
+        "ROLE_FIELD_INVALID: worker return omitted exact Worker/Reviewer labels; Root normalized metadata only."
+      ]
+    },
+    {
+      "gate": "legacy preflight",
+      "result": "FAIL_6_OF_7",
+      "details": [
+        "Invalid REVIEW_PENDING -> PARKED transition; keep material stage REVIEW_PENDING, then after source commit record bounded source REVIEW_PASS -> PARKED with buildCommit."
+      ]
+    },
+    {
+      "gate": "worker-return retry",
+      "result": "FAIL_CONTINUITY_ONLY",
+      "details": [
+        "ACTIVE_WORK_ORDER_NOT_ACTIVE: Root listed COMPLETE_PENDING_REVIEW in implementation activeWorkOrders; corrected empty, canonical tranche retained."
+      ]
+    },
+    {
+      "gate": "git diff --cached --check",
+      "result": "FAIL",
+      "details": [
+        "Worker Markdown two-space linebreaks rejected as trailing whitespace; Root stripped line-end whitespace only and updated worker return hash. No source edit."
+      ]
+    }
+  ],
+  "sourceChanged": false,
+  "runtimeEffects": 0
+}

@@ -1,0 +1,22 @@
+{
+  "observedDate": "2026-10-21",
+  "reviewer": "Root independent REVIEWER",
+  "sourceDispatch": "aca012104d04db2847b2d1c04efd34bfc3e87537",
+  "protectedSourceSHA256": {
+    "backend/engine/intervention_waitdata_executor.go": "14726fbc3ea31cddb1cf14742543e221c910ee9082308c733d4cbabf92ab3faf",
+    "backend/engine/intervention_startup_grant.go": "bab5a846e40879eba5f3bb848d633771c51bd0d895f69fa11465c36be1b2b5b3",
+    "backend/engine/intervention_startup.go": "25c92311b88fc7a1fa9c31a0de48b3ebc8c749ecec56e4998eab0446b8a3c18d",
+    "backend/api/handlers/intervention_waitdata.go": "cd93360e52c6dd13fc62d3d3c1bc8f18aeaf55c7c359d2e6f026db01fe3e9a0f",
+    "backend/db/models/intervention_waitdata.go": "bce04e4fd9bae54af464874bfffdbfb2b02019c19b315622e1e7f66f7b676f20",
+    "backend/db/models/intervention.go": "06f361c0352d9840cdcbe0638239d3c4a1564c48e57c0fb24959ada07d5a1f66",
+    "backend/main.go": "5a0698fcfb2a3399723c1c0911b165b064897c2f338cbf46c656eee65a118ab0",
+    "backend/config/config.go": "c03b0fceaba869144d2aaadc6785d01b16c9a46dd84e4507e45adffcbf982577",
+    ".cvf/policy.json": "3dbde143840876a642a2885f66015e13d0fe5f6ce25b2e29d8b1241e5632998c",
+    ".cvf/gate-profile.lock.json": "5a58fe82ea57fbd89af2ed42d8a31d6c279aab2b7eb1349d01c0d65cbc2357c2",
+    "frontend/package.json": "d16bea0b83ad7eb871576061f7ea91534a2dd2fdc7eef26eb20ec908e4fca24d",
+    "frontend/package-lock.json": "da41e1de5d5b853295a303092aab9433aeea8168fda2cf0420dd94e9f579fb00",
+    "backend/go.mod": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+    "backend/go.sum": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b"
+  },
+  "claimBoundary": "Protected source identity only; no runtime, DB, provider, grant or execution check."
+}

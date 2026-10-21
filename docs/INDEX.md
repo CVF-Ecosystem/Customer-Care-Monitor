@@ -10,12 +10,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-058.json`
 - Separate R1 seed for accepted R061 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-062.json`
 - GitHub project-branch material publication receipt for the M1-M5 delivery roadmap; remote SHA readback, no product/runtime acceptance.: `docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json`
-- R120 current proposal/history observed bounded; terminal/durable accounting missing, full milestones OPEN.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
+- M1-M5 product delivery roadmap with current R137 source-only/M3 partial truth and owner-required acceptance route.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
 - All seven selected inheritance findings independently accepted bounded and material exported atd121c9e; full product exits remain open.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R126 DB fixture lifetime and current-package verification handoff.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R130_BRANCH_HISTORY_REWRITE_2026-10-19.md`
+- Current R139 HOLD after one browserexecute/manualhold; slot1 consumed outcomeUNKNOWN; source/replacement budgets exhausted, no retry; fullM3 OPEN.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -4366,6 +4366,160 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open.: `docs/reviews/probes/reader_names_20261019/reader_names.jpg`
 - Current reader case-participant scope/privacy, UI/build/browser and original terminal proof; full M3 remains open.: `docs/reviews/probes/reader_names_20261019/verification_summary.json`
 - R130 owner-approved review and verified publication receipt for the feature-branch history rewrite.: `docs/reviews/R130_BRANCH_HISTORY_REWRITE_REVIEW_2026-10-19.md`
+- Immutable R1 documentation-only M3 acceptance authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-131.json`
+- Worker eight-row M3 acceptance matrix; corrected inherited concurrency evidence; full M3 partial.: `docs/reviews/R131_M3_ACCEPTANCE_MATRIX_2026-10-19.md`
+- Independent source/original-receipt review and finite M3-05 UI continuation.: `docs/reviews/R131_M3_ACCEPTANCE_REVIEW_2026-10-19.md`
+- R131 dispatch and independent review lifecycle record.: `CVF_SESSION/tranches/CCMAI-RUNTIME-131.json`
+- Bounded eight-row M3 evidence reconciliation; no new runtime.: `docs/work_orders/CCMAI_RUNTIME_131_M3_ACCEPTANCE.md`
+- Immutable R2 request-only UI/owned synthetic proof authority; provider0.: `CVF_SESSION/authority/CCMAI-RUNTIME-132.json`
+- R132 fixture worker return, source and compile only; Root runtime admission pending.: `docs/reviews/R132_FIXTURE_WORKER_RETURN_2026-10-19.md`
+- R132 frontend source worker return; initial build failure and bounded repairs disclosed; Root final verification separate.: `docs/reviews/R132_FRONTEND_WORKER_RETURN_2026-10-19.md`
+- Historical R132 CHANGES_REQUIRED, failed original runtime retained and exact cleanup; successorR133.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R132_WAITDATA_REQUEST_UI_2026-10-19.md`
+- R132 compact actual browser/native/terminal/effect/cleanup failure receipt; no acceptance.: `docs/reviews/probes/r132_waitdata_request_20261019/runtime_review.json`
+- R132 actual runtime exit1, defects and exact owned cleanup; CHANGES_REQUIRED, no replay.: `docs/reviews/R132_RUNTIME_REVIEW_2026-10-19.md`
+- R132 compact exact source hashes and actual source-check exits; no AI governance or runtime acceptance.: `docs/reviews/probes/r132_waitdata_request_20261019/source_checks.json`
+- R132 independent source findings and bounded runtime admission; in progress, no product runtime claim.: `docs/reviews/R132_SOURCE_REVIEW_2026-10-19.md`
+- Intended F01..F08 request-only UI contract; no execution authority.: `docs/specs/M3_WAITDATA_REQUEST_UI_R132_SPEC_2026-10-19.md`
+- R132 bounded worker and independent review lifecycle.: `CVF_SESSION/tranches/CCMAI-RUNTIME-132.json`
+- Direct M3-05 WAIT_DATA followup UI and one owned native/browser proof.: `docs/work_orders/CCMAI_RUNTIME_132_WAITDATA_REQUEST_UI.md`
+- Separate finite R133 authority for two actual R132 runtime causes; old failure/budgets preserved, provider0.: `CVF_SESSION/authority/CCMAI-RUNTIME-133.json`
+- R133 finite Sol Medium worker dispatch, Root independent reviewer.: `docs/work_orders/CCMAI_RUNTIME_133_WAITDATA_RUNTIME_REPAIR.md`
+- R133 bounded runtime-defect repair tranche, fresh budgets.: `CVF_SESSION/tranches/CCMAI-RUNTIME-133.json`
+- R133 actual native/terminal/exit1 and exact26-resource cleanup, zero browser writes/provider; no runtime PASS.: `docs/reviews/probes/r133_waitdata_repair_20261019/runtime_hold.json`
+- R133 concrete browser-unavailable transfer packet; source accepted, actual runtime not accepted, stopped cleanup.: `docs/reviews/R133_RUNTIME_TRANSFER_PACKET_2026-10-19.md`
+- R133 compact current source/dist hashes and actual offline check outcomes.: `docs/reviews/probes/r133_waitdata_repair_20261019/source_checks.json`
+- R133 independent stable-refresh/eligible-fixture source audit and bounded runtime admission.: `docs/reviews/R133_SOURCE_REVIEW_2026-10-19.md`
+- R133 stable reactive identity, stale continuation and eligible synthetic proof contract.: `docs/specs/M3_WAITDATA_RUNTIME_REPAIR_R133_SPEC_2026-10-19.md`
+- R133 Sol worker source,30 focused UI tests/typecheck/build; actual runtime not claimed.: `docs/reviews/R133_REPAIR_WORKER_RETURN_2026-10-19.md`
+- R134 finite fresh request-only browser proof, no provider or full M3 claim.: `CVF_SESSION/authority/CCMAI-RUNTIME-134.json`
+- R134 finite fresh request-only browser proof, no provider or full M3 claim.: `docs/work_orders/CCMAI_RUNTIME_134_WAITDATA_BROWSER_PROOF.md`
+- R134 bounded synthetic request-only UI acceptance; provider0, full M3 remains partial.: `docs/reviews/probes/r134_waitdata_proof_20261020/runtime_review.json`
+- R134 bounded synthetic request-only UI acceptance; provider0, full M3 remains partial.: `docs/reviews/R134_RUNTIME_REVIEW_2026-10-20.md`
+- Independent fixture/source/build admission only; actual runtime pending.: `docs/reviews/R134_SOURCE_REVIEW_2026-10-20.md`
+- R134 finite fresh request-only browser proof, no provider or full M3 claim.: `docs/specs/M3_WAITDATA_BROWSER_PROOF_R134_SPEC_2026-10-20.md`
+- R134 finite fresh request-only browser proof, no provider or full M3 claim.: `CVF_SESSION/tranches/CCMAI-RUNTIME-134.json`
+- R134 bounded synthetic request-only UI acceptance; provider0, full M3 remains partial.: `docs/reviews/R134_FIXTURE_WORKER_RETURN_2026-10-20.md`
+- R135 accepted bounded synthetic queue/reject proof and current M3 gap disposition; provider0.: `docs/reviews/R135_M3_ACCEPTANCE_DELTA_2026-10-20.md`
+- R135 finite synthetic queue/reject proof; provider0, no full M3 claim.: `CVF_SESSION/authority/CCMAI-RUNTIME-135.json`
+- R135 finite synthetic queue/reject proof; provider0, no full M3 claim.: `docs/work_orders/CCMAI_RUNTIME_135_QUEUE_REJECT_PROOF.md`
+- R135 accepted bounded synthetic queue/reject proof and current M3 gap disposition; provider0.: `docs/reviews/probes/r135_queue_reject_20261020/runtime_review.json`
+- R135 accepted bounded synthetic queue/reject proof and current M3 gap disposition; provider0.: `docs/reviews/R135_RUNTIME_REVIEW_2026-10-20.md`
+- R135 independent source admission; runtime pending, provider0.: `docs/reviews/R135_SOURCE_REVIEW_2026-10-20.md`
+- R135 finite synthetic queue/reject proof; provider0, no full M3 claim.: `docs/specs/M3_QUEUE_REJECT_PROOF_R135_SPEC_2026-10-20.md`
+- R135 finite synthetic queue/reject proof; provider0, no full M3 claim.: `CVF_SESSION/tranches/CCMAI-RUNTIME-135.json`
+- R135 independent source admission; runtime pending, provider0.: `docs/reviews/R135_FIXTURE_WORKER_RETURN_2026-10-20.md`
+- R136 source-based intended execution-UI contract only, all runtime/provider0.: `CVF_SESSION/authority/CCMAI-RUNTIME-136.json`
+- R136 intended execution-UI contract/source verification only; no implementation or runtime evidence.: `docs/reviews/R136_DESIGN_REVIEW_2026-10-20.md`
+- R136 intended execution-UI contract/source verification only; no implementation or runtime evidence.: `docs/reviews/probes/r136_execution_ui_design_20261020/independent_review.json`
+- R136 source-based intended execution-UI contract only, all runtime/provider0.: `docs/work_orders/CCMAI_RUNTIME_136_EXECUTION_UI_DESIGN.md`
+- R136 intended execution-UI contract/source verification only; no implementation or runtime evidence.: `docs/reviews/probes/r136_execution_ui_design_20261020/source_identity.json`
+- R136 intended execution-UI contract/source verification only; no implementation or runtime evidence.: `docs/specs/M3_EXECUTION_UI_R136_SPEC_2026-10-20.md`
+- R136 source-based intended execution-UI contract only, all runtime/provider0.: `CVF_SESSION/tranches/CCMAI-RUNTIME-136.json`
+- R136 intended execution-UI contract/source verification only; no implementation or runtime evidence.: `docs/reviews/R136_DESIGN_WORKER_RETURN_2026-10-20.md`
+- R137 bounded R2 source/local software scope; no DB/browser/provider/grant/execute authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-137.json`
+- Root independent R2 source/component review; real-router/browser/execution proof open.: `docs/reviews/R137_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md`
+- R137 bounded R2 source/local software scope; no DB/browser/provider/grant/execute authority.: `docs/work_orders/CCMAI_RUNTIME_137_EXECUTION_READ_UI.md`
+- Root bounded independent software check results; failed initial UI regression retained.: `docs/reviews/probes/r137_execution_read_ui_20261020/root_independent_checks.json`
+- Root protected14source identity baseline; no runtime effects.: `docs/reviews/probes/r137_execution_read_ui_20261020/root_protected_source_baseline.json`
+- R137 bounded R2 source/local software scope; no DB/browser/provider/grant/execute authority.: `CVF_SESSION/tranches/CCMAI-RUNTIME-137.json`
+- R137 source/component worker return; original failures preserved, independent review controls acceptance.: `docs/reviews/R137_SOURCE_WORKER_RETURN_2026-10-21.md`
+- Worker source hashes/counters only, no runtime AI/governance proof.: `docs/reviews/probes/r137_execution_read_ui_20261020/worker_source_identity.json`
+- R138 owner-requested documentary acceptance roadmap only; no runtime/product closure.: `CVF_SESSION/authority/CCMAI-RUNTIME-138.json`
+- Superseded R138 frozen documentary acceptance-plan handoff; current R139 via continuity-initial-handoff.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R138_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md`
+- Independent Root acceptance-plan review; no product/runtime/governance claim.: `docs/reviews/R138_INDEPENDENT_ACCEPTANCE_PLAN_REVIEW_2026-10-21.md`
+- R138 owner-requested documentary acceptance roadmap only; no runtime/product closure.: `docs/work_orders/CCMAI_RUNTIME_138_DELIVERY_ACCEPTANCE_PLAN.md`
+- Canonical detailed9gate acceptance route with37M1-M5/6Ecriteria; planning only, product/runtime gaps remain.: `docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md`
+- Protected backend/frontend Git trees at R137 source; no runtime proof.: `docs/reviews/probes/r138_acceptance_plan_20261021/root_documentary_baseline.json`
+- Root final37acceptance/6E/9gates/213local targets verification, documentary only.: `docs/reviews/probes/r138_acceptance_plan_20261021/root_independent_document_checks.json`
+- R138 owner-requested documentary acceptance roadmap only; no runtime/product closure.: `CVF_SESSION/tranches/CCMAI-RUNTIME-138.json`
+- Worker static documentary coverage/links only; canonical count discrepancy qualified by independent Root recheck.: `docs/reviews/probes/r138_acceptance_plan_20261021/luna_static_checks.json`
+- Worker handback document/source pins before Root metadata synchronization.: `docs/reviews/probes/r138_acceptance_plan_20261021/luna_document_identity.json`
+- R138 documentary worker handback; Root independent review controls planning acceptance.: `docs/reviews/R138_ROADMAP_WORKER_RETURN_2026-10-21.md`
+- Immutable integrated G0/G1/G2 source-preparation seed; runtime/provider authority absent.: `CVF_SESSION/authority/CCMAI-RUNTIME-139.json`
+- Root transcript of browser URL-policy denial and partial owned tab cleanup; no control/capture proof.: `docs/reviews/probes/r139_integrated_20261021/browser_capability_outcome.json`
+- Sole pureUI capability diagnostic reserved before effect; consumed, no reset.: `docs/reviews/probes/r139_integrated_20261021/browser_capability_reservation.json`
+- Explicit Owner check-only literal-argv continuation; no source/recompile/runtime/API; original failure preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-CHECK-ONLY-ADMISSION.json`
+- Explicit Owner combined fresh-r3 grant: exact source/check round and conditional freshcampaign/newAPI1/additionalUSD1; not executable runtime yet.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-COMBINED-ADMISSION.json`
+- Exact fresh-r3 conditional runtime admission draft after source8bb54637 and publicpricingPASS; independent review/commit before effects; NEWAPI1/USD1, oldslot preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-RUNTIME-ADMISSION.json`
+- Explicit Owner single RF1-RF4 repair/replacement-fixture continuation; cumulative1USD/one API unchanged; runtime still needs exact admission.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-OWNER-CONTINUATION-ADMISSION.json`
+- Exact R139 replacement runtime admission preparation; independent review/commit required, cumulative1USD/oneAPI unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-REPLACEMENT-RUNTIME-ADMISSION.json`
+- Owner-approved ONE R139 source-evidence round; no runtime/provider authority; old HOLDs preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-EVIDENCE-ADMISSION.json`
+- Remaining source corrections and bounded final repair; source not yet accepted.: `docs/reviews/R139_FINAL_STATIC_SOURCE_CORRECTIONS_2026-10-21.md`
+- New owner-approved supported HTTPS UI diagnostic only; old consumed counters unchanged, no runtime/provider authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-HTTPS-BROWSER-ADMISSION.json`
+- Fresh owner-approved one-campaign HTTPS UI slot reserved before effect; no refund/retry.: `docs/reviews/probes/r139_integrated_20261021/https_browser_reservation.json`
+- Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open.: `docs/reviews/probes/r139_integrated_20261021/https_browser_outcome.json`
+- Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open.: `docs/reviews/probes/r139_integrated_20261021/https_browser_before.jpg`
+- Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open.: `docs/reviews/probes/r139_integrated_20261021/https_browser_after.jpg`
+- Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-LOCAL-READINESS-ADMISSION.json`
+- Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open.: `docs/reviews/R139_HTTPS_BROWSER_AND_LOCAL_READINESS_2026-10-21.md`
+- Consolidated initial source defects F01-F08; no runtime/AI governance proof.: `docs/reviews/R139_INITIAL_SOURCE_BUILD_FINDINGS_2026-10-21.md`
+- R139 BLOCKED_WITH_REASON: MySQL setupHOLD/nativebrowserprovider0; cost escalation and explicit fresh continuation needed.: `docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md`
+- Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim.: `docs/reviews/probes/r139_integrated_20261021/owner_one_usd_runtime_grant.json`
+- Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-CREDENTIAL-STAGING-ADMISSION.json`
+- Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim.: `docs/reviews/probes/r139_integrated_20261021/provider_pricing_reference.json`
+- Original two catalog failures and finite proposed native/browser POST correction retained.: `docs/reviews/probes/r139_integrated_20261021/root_preparation_findings.json`
+- R139 source/IO accepted bounded after Go6/Python30+30; integrated runtime still HOLD, no new source/API authority.: `docs/reviews/R139_CHECK_ONLY_INDEPENDENT_REVIEW_2026-10-21.md`
+- R139 source/IO accepted bounded after Go6/Python30+30; integrated runtime still HOLD, no new source/API authority.: `docs/reviews/R139_CHECK_ONLY_WORKER_RETURN_2026-10-21.md`
+- R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance.: `docs/reviews/R139_CONTINUATION_SOURCE_RETURN_2026-10-21.md`
+- R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance.: `docs/reviews/R139_CONTINUATION_SOURCE_REVIEW_2026-10-21.md`
+- Proposed ONE combined R139 fresh r3 source/check/campaign grant with new1USD/API1; NOT_AUTHORIZED, original holds/counters preserved.: `docs/reviews/R139_FRESH_CAMPAIGN_COMBINED_PROPOSAL_2026-10-21.md`
+- Independent Sol documentary review: fresh-r3 combined proposal ready for Owner review only; no source/effect authority.: `docs/reviews/R139_FRESH_CAMPAIGN_PROPOSAL_INDEPENDENT_REVIEW_2026-10-21.md`
+- Fresh-r3 exact identity/path source accepted bounded after compile/Go6/Python30+30; pricing/exact independent runtime admission still required.: `docs/reviews/R139_FRESH_R3_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md`
+- Independent fresh-r3 interrupted-runtime HOLD; original waits missing, protected resource drift, browser closure blocked; no new API.: `docs/reviews/R139_FRESH_R3_INTERRUPTED_RUNTIME_REVIEW_2026-10-22.md`
+- Independent Sol exact fresh-r3 runtime admission review: proceed to commit/clean-pin recheck only; no effects or runtime PASS.: `docs/reviews/R139_FRESH_R3_RUNTIME_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md`
+- Fresh-r3 exact identity/path source accepted bounded after compile/Go6/Python30+30; pricing/exact independent runtime admission still required.: `docs/reviews/R139_FRESH_R3_SOURCE_WORKER_RETURN_2026-10-21.md`
+- Independent read-only acceptance of exact replacement admission/pins/caps for commit and clean recheck; actual runtime unproved.: `docs/reviews/R139_REPLACEMENT_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md`
+- Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry.: `docs/reviews/R139_REPLACEMENT_RUNTIME_INDEPENDENT_REVIEW_2026-10-21.md`
+- R139 source-evidence candidate HOLD: compilePASS, binary flag failure before tests; no runtime/API; explicit check-only proposal pending.: `docs/reviews/R139_SOURCE_EVIDENCE_INDEPENDENT_REVIEW_2026-10-21.md`
+- R139 source-evidence candidate HOLD: compilePASS, binary flag failure before tests; no runtime/API; explicit check-only proposal pending.: `docs/reviews/R139_SOURCE_EVIDENCE_WORKER_RETURN_2026-10-21.md`
+- Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry.: `docs/reviews/probes/r139_integrated_20261021/r2_after_send_hold.jpg`
+- Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry.: `docs/reviews/probes/r139_integrated_20261021/r2_before_execute.jpg`
+- Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry.: `docs/reviews/probes/r139_integrated_20261021/r2_integrated_runtime_outcome.json`
+- Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry.: `docs/reviews/probes/r139_integrated_20261021/r2_manual_hold.jpg`
+- Concrete source-only next proposal after actual HOLD; no runtime/key/API or budget reset; explicit further source authority required.: `docs/reviews/probes/r139_integrated_20261021/r2_next_source_only_proposal.json`
+- Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry.: `docs/reviews/probes/r139_integrated_20261021/r2_ready_execution.jpg`
+- Actual R139 replacement HOLD: oneexecute202/manualhold; slot1uncertain consumed; no finalwire/durableproof, ownedstopped/listenersabsent qualified, no retry.: `docs/reviews/probes/r139_integrated_20261021/r2_ready_visible.jpg`
+- R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/r2_root_check_reservation.json`
+- R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/r2_root_source_review.json`
+- Exact R139 replacement runtime admission preparation; independent review/commit required, cumulative1USD/oneAPI unchanged.: `docs/reviews/probes/r139_integrated_20261021/r2_runtime_preparation.json`
+- R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/r2_worker_check_reservation.json`
+- R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/r2_worker_source_return.json`
+- R139 source-evidence candidate HOLD: compilePASS, binary flag failure before tests; no runtime/API; explicit check-only proposal pending.: `docs/reviews/probes/r139_integrated_20261021/r3_check_only_recovery_proposal.json`
+- R139 source-evidence candidate HOLD: compilePASS, binary flag failure before tests; no runtime/API; explicit check-only proposal pending.: `docs/reviews/probes/r139_integrated_20261021/r3_root_go_init_audit.json`
+- R139 source-evidence candidate HOLD: compilePASS, binary flag failure before tests; no runtime/API; explicit check-only proposal pending.: `docs/reviews/probes/r139_integrated_20261021/r3_source_checks.json`
+- R139 source/IO accepted bounded after Go6/Python30+30; integrated runtime still HOLD, no new source/API authority.: `docs/reviews/probes/r139_integrated_20261021/r4_check_only_results.json`
+- R139 source/IO accepted bounded after Go6/Python30+30; integrated runtime still HOLD, no new source/API authority.: `docs/reviews/probes/r139_integrated_20261021/r4_next_runtime_readiness.json`
+- Proposed ONE combined R139 fresh r3 source/check/campaign grant with new1USD/API1; NOT_AUTHORIZED, original holds/counters preserved.: `docs/reviews/probes/r139_integrated_20261021/r5_fresh_campaign_proposal.json`
+- Proposed ONE combined R139 fresh r3 source/check/campaign grant with new1USD/API1; NOT_AUTHORIZED, original holds/counters preserved.: `docs/reviews/probes/r139_integrated_20261021/r5_fresh_campaign_source_proposal.patch`
+- Fresh-r3 exact identity/path source accepted bounded after compile/Go6/Python30+30; pricing/exact independent runtime admission still required.: `docs/reviews/probes/r139_integrated_20261021/r5_fresh_source_checks.json`
+- One approved secret-free official public pricing/model readiness read reserved after source8bb54637, before any key/fixture/provider.: `docs/reviews/probes/r139_integrated_20261021/r5_public_pricing_read.json`
+- Exact fresh-r3 conditional runtime admission draft after source8bb54637 and publicpricingPASS; independent review/commit before effects; NEWAPI1/USD1, oldslot preserved.: `docs/reviews/probes/r139_integrated_20261021/r5_runtime_preparation.json`
+- Fresh-r3 actual interrupted runtime HOLD; native only, no browser execute/new API; terminal/cleanup qualifications retained.: `docs/reviews/probes/r139_integrated_20261021/r6_fresh_r3_interrupted_runtime_outcome.json`
+- Retained failed handback metadata checks and Root corrections; source unchanged.: `docs/reviews/probes/r139_integrated_20261021/root_handback_metadata_corrections.json`
+- Root27R137 source/protected matches plus2authority protection pins; no runtime proof.: `docs/reviews/probes/r139_integrated_20261021/root_source_preparation_baseline.json`
+- Observed local metadata or reviewed draft; Owner1USD/one-call approved, credential/deadline/final admission pending, no live claim.: `docs/reviews/probes/r139_integrated_20261021/local_readiness_outcome.json`
+- Observed local metadata or reviewed draft; Owner1USD/one-call approved, credential/deadline/final admission pending, no live claim.: `docs/reviews/probes/r139_integrated_20261021/runtime_admission_draft.json`
+- Observed local metadata or reviewed draft; Owner1USD/one-call approved, credential/deadline/final admission pending, no live claim.: `docs/reviews/R139_RUNTIME_ADMISSION_READONLY_REVIEW_2026-10-21.md`
+- Actual pre-native setup HOLD, qualified owned stop/OS listener proof and explicit cost/boundary continuation proposal; provider0/no replay.: `docs/reviews/probes/r139_integrated_20261021/root_post_run_verification.json`
+- Actual pre-native setup HOLD, qualified owned stop/OS listener proof and explicit cost/boundary continuation proposal; provider0/no replay.: `docs/reviews/probes/r139_integrated_20261021/integrated_runtime_failure.json`
+- Actual pre-native setup HOLD, qualified owned stop/OS listener proof and explicit cost/boundary continuation proposal; provider0/no replay.: `docs/reviews/probes/r139_integrated_20261021/bounded_repair_and_fixture_continuation_proposal.json`
+- Actual pre-native setup HOLD, qualified owned stop/OS listener proof and explicit cost/boundary continuation proposal; provider0/no replay.: `docs/reviews/R139_RUNTIME_SETUP_FAILURE_AND_COST_DISPOSITION_2026-10-21.md`
+- Exact Owner1USD/onecall runtime authority, sanitized credential staging or one-shot pre-effect reservation; no outcome claim.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-INTEGRATED-RUNTIME-ADMISSION.json`
+- Exact Owner1USD/onecall runtime authority, sanitized credential staging or one-shot pre-effect reservation; no outcome claim.: `docs/reviews/probes/r139_integrated_20261021/credential_staging_outcome.json`
+- Exact Owner1USD/onecall runtime authority, sanitized credential staging or one-shot pre-effect reservation; no outcome claim.: `docs/reviews/probes/r139_integrated_20261021/integrated_runtime_reservation.json`
+- R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN.: `docs/reviews/probes/r139_integrated_20261021/source_worker_return_2026-10-21.json`
+- R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN.: `docs/reviews/R139_SOURCE_WORKER_RETURN_2026-10-21.md`
+- R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN.: `docs/reviews/probes/r139_integrated_20261021/root_go_check_result.json`
+- R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN.: `docs/reviews/probes/r139_integrated_20261021/root_python_check_reservation.json`
+- R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN.: `docs/reviews/probes/r139_integrated_20261021/root_python_check_result.json`
+- R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN.: `docs/reviews/probes/r139_integrated_20261021/root_final_source_review.json`
+- R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN.: `docs/reviews/probes/r139_integrated_20261021/root_go_check_reservation.json`
+- R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN.: `docs/reviews/R139_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md`
+- Immutable same-scope source-repair handover; original remaining shared caps only.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-REPAIR-ADMISSION.json`
+- Immutable unused source-cap continuation only; no new browser/runtime/provider authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-RESUME-ADMISSION.json`
+- G0 data-scheme diagnostic denied; exact partial-tab cleanup and owner-transfer hold, HTTP untested.: `docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md`
+- Filesystem-only executable/cache pins; not runtime capability or image cache proof.: `docs/reviews/probes/r139_integrated_20261021/root_filesystem_tool_inventory.json`
+- Same R139 PARKED REVIEW: source accepted, tool/cache prerequisites observed; no integrated runtime or FREEZE.: `CVF_SESSION/tranches/CCMAI-RUNTIME-139.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

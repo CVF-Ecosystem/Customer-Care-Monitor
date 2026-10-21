@@ -1,0 +1,18 @@
+{
+  "tranche": "CCMAI-RUNTIME-138",
+  "worker": "Luna Max",
+  "scope": "Markdown/document consistency only",
+  "checks": {
+    "originalAcceptanceIds": { "covered": 37, "expected": 37, "result": "PASS" },
+    "runtimeAcceptanceIds": { "covered": 6, "expected": 6, "result": "PASS" },
+    "routeGates": { "defined": 9, "expected": 9, "result": "PASS" },
+    "canonicalPlanLocalLinks": { "checked": 14, "missing": 0, "result": "PASS" },
+    "allThreeRoadmapLocalLinks": { "checked": 213, "missing": 0, "result": "PASS" },
+    "riskHeader": "R1 exact",
+    "workerReviewerHeaders": "present",
+    "trailingWhitespace": 0,
+    "targetedGitDiffCheck": "PASS"
+  },
+  "notRun": ["tests", "Go", "Node", "runtime", "browser", "database", "provider", "network"],
+  "claimBoundary": "Static documentary checks do not prove product, runtime, provider, hosted-CI, pilot, release, or CVF governance behavior."
+}

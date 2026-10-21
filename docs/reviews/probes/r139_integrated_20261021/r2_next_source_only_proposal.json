@@ -1,0 +1,43 @@
+{
+  "status": "PROPOSED_NOT_AUTHORIZED",
+  "sameWorkOrder": "CCMAI-RUNTIME-139",
+  "reason": "Observed final evidence export skipped by Go fatal; strict Status elapsed text produces hold. Underlying manual-hold/provider cause remains UNKNOWN.",
+  "allowedSourcePaths": [
+    "backend/api/handlers/intervention_execution_browser_test.go",
+    "scripts/r139_execution_supervisor.py",
+    "scripts/tests/test_r139_execution_supervisor.py"
+  ],
+  "goScopeChange": "R139 test-file evidence finalizer/wire journaling beyond former fixture-path-constant-only restriction; no historical shared helper edit.",
+  "consolidatedScope": [
+    "Export request/response only if actually captured, effect intent/outcome and final state/failure before assertions on every success/fatal/uncertain path. Do not fabricate/recover missing old response. Test nonpublication/fatal path as well as success and I/O failure.",
+    "Preserve all raw inventory. Explicitly extend Networks-only comparison to strictly parsed elapsed portion of Status; preserve State/health/exitcode/IDs/all other fields; unknown format or meaningful difference HOLD; old original holds unchanged.",
+    "Source-only review of retained logs and potential manual-hold causes. Do not claim provider root cause without actual data; no DB restart/read or new API to diagnose under this source-only proposal."
+  ],
+  "newCapsProposed": {
+    "consolidatedSourceRound": 1,
+    "workerOfflineGoCompile": 1,
+    "workerPureGoIOCheck": 1,
+    "workerPurePythonCheck": 1,
+    "rootPurePythonCheck": 1
+  },
+  "goPureCheckPrerequisite": "Independent preflight confirms package init and selected pure IO tests perform no network/DB/provider work; otherwise do not invoke and return HOLD. No successful skips.",
+  "effectsAdmittedByProposal": {
+    "runtime": 0,
+    "fixture": 0,
+    "DB": 0,
+    "network": 0,
+    "keyRead": 0,
+    "grant": 0,
+    "executePOST": 0,
+    "provider": 0
+  },
+  "providerBudget": "No new money or paid-call grant; R139 slot1/1 consumed, actual billing UNKNOWN; no reuse/reset/retry.",
+  "roles": {
+    "repairWorker": "Delegated Luna Max or Sol Medium",
+    "independentSourceReviewer": "Root (no source authoring)",
+    "commitSteward": "Root"
+  },
+  "acceptance": "One consolidated source return; preserve all original failures; actual focused checks pass and independent source review accepts before commit. Then present a separately pinned runtime proposal only; no automatic campaign.",
+  "stop": "A failed final check/new uncertainty stops, no further source chain/check reset.",
+  "authorityRequired": "Explicit Owner approval of this additional source round/checks/Status comparison scope and Go delta before dispatch. No current source effect is authorized by this draft."
+}

@@ -10,15 +10,23 @@ import * as directives from 'vuetify/directives'
 import enMessages from '../i18n/en'
 import viMessages from '../i18n/vi'
 import InterventionCases from '../views/InterventionCases.vue'
+import InterventionDataFollowup from '../components/InterventionDataFollowup.vue'
 import { useAuthStore } from '../stores/auth'
 import { InterventionHttpError, type InterventionDetail } from '../api/intervention'
 
-const calls = vi.hoisted(() => ({ detail:vi.fn(), assignees:vi.fn(), list:vi.fn(), action:vi.fn() }))
+const calls = vi.hoisted(() => ({ detail:vi.fn(), assignees:vi.fn(), list:vi.fn(), action:vi.fn(), dataRevisions:vi.fn(), rerunRequests:vi.fn(), capture:vi.fn(), rerun:vi.fn(), executionStatus:vi.fn(), executionReadiness:vi.fn(), execute:vi.fn() }))
 vi.mock('../api/intervention', () => ({
   getInterventionCase: (...args: unknown[]) => calls.detail(...args),
   listInterventionAssignees: (...args: unknown[]) => calls.assignees(...args),
   listInterventionCases: (...args: unknown[]) => calls.list(...args),
   applyInterventionAction: (...args: unknown[]) => calls.action(...args),
+  listInterventionDataRevisions: (...args: unknown[]) => calls.dataRevisions(...args),
+  listInterventionRerunRequests: (...args: unknown[]) => calls.rerunRequests(...args),
+  createInterventionDataRevision: (...args: unknown[]) => calls.capture(...args),
+  createInterventionRerunRequest: (...args: unknown[]) => calls.rerun(...args),
+  getInterventionExecutionStatus: (...args: unknown[]) => calls.executionStatus(...args),
+  getInterventionExecutionReadiness: (...args: unknown[]) => calls.executionReadiness(...args),
+  executeInterventionRerun: (...args: unknown[]) => calls.execute(...args),
   InterventionHttpError: class extends Error { status:number; code:string; constructor(status:number,code:string){super(code);this.status=status;this.code=code} },
 }))
 vi.mock('../api/interventionCapability', () => ({
@@ -26,10 +34,17 @@ vi.mock('../api/interventionCapability', () => ({
 }))
 
 function deferred<T>() { let resolve!: (v:T)=>void; const promise=new Promise<T>(r=>{resolve=r}); return {promise,resolve} }
+function resetFollowupMocks() {
+  calls.dataRevisions.mockReset().mockResolvedValue({items:[],has_more:false,next_cursor:''})
+  calls.rerunRequests.mockReset().mockResolvedValue({items:[],has_more:false,next_cursor:''})
+  calls.capture.mockReset(); calls.rerun.mockReset()
+  calls.executionStatus.mockReset().mockImplementation(async (_tenant:string,_case:string,requestId:string)=>({request_id:requestId,request_intent:'AWAITING_EXECUTION_AUTHORITY',execution_present:false,phase:'NOT_STARTED',observed_at:'2026-10-21T00:00:00Z'}))
+  calls.executionReadiness.mockReset(); calls.execute.mockReset()
+}
 function detail(id:string): InterventionDetail { return {case:{id,tenant_id:'t',job_id:'job',conversation_id:id,version:1,run_id:'r',snapshot_id:'s',snapshot_digest:'d',disposition:'PENDING_REVIEW',work_state:'OPEN',reason_code:'',next_action:'',human_assessment:'',human_explanation:'',human_next_action:'',outcome_text:'',data_owner_id:null,assignee_id:null,due_at:null,created_at:'2026-10-15T00:00:00Z',updated_at:'2026-10-15T00:00:00Z'},proposals:[{id:'p',revision:1,run_id:'r',snapshot_id:'s',snapshot_digest:'d',kind:'complaint',explanation:'Original '+id,next_action:'Check',evidence:'[]',provider:'private-provider',model:'private-model',prompt_version:'r101-direct-seed',created_at:'2026-10-15T00:00:00Z'}],human_events:[],source_status:'LOCAL_MATCH_CURRENTNESS_UNVERIFIED'} }
 
 describe('changed source review action', () => {
-  beforeEach(() => { calls.detail.mockReset(); calls.assignees.mockReset(); calls.list.mockReset(); calls.action.mockReset(); localStorage.setItem('cqa_access_token','synthetic-session'); calls.assignees.mockResolvedValue({items:[]}) })
+  beforeEach(() => { calls.detail.mockReset(); calls.assignees.mockReset(); calls.list.mockReset(); calls.action.mockReset(); resetFollowupMocks(); localStorage.setItem('cqa_access_token','synthetic-session'); calls.assignees.mockResolvedValue({items:[]}) })
 
   it('binds the exact changed digest and version, then enables the reviewed resolution', async () => {
     const changed=detail('CASE-A')
@@ -77,9 +92,9 @@ describe('changed source review action', () => {
   })
 })
 
-async function mounted(initial:string|null='A', locale:'en'|'vi'='en', reader=false) {
+async function mounted(initial:string|null='A', locale:'en'|'vi'='en', reader=false, permissions?:{role:string;permissions:Record<string,string>}) {
   const pinia=createPinia(); setActivePinia(pinia)
-  const auth=useAuthStore(); auth.tenantPerms=reader ? {role:'member',permissions:{intervention_cases:'r'}} : {role:'owner',permissions:{}}
+  const auth=useAuthStore(); auth.tenantPerms=permissions || (reader ? {role:'member',permissions:{intervention_cases:'r'}} : {role:'owner',permissions:{}})
   const router=createRouter({history:createMemoryHistory(),routes:[{path:'/:tenantId/intervention-cases/:caseId?',component:InterventionCases},{path:'/:tenantId/messages',component:{template:'<div />'}}]})
   const i18n=createI18n({legacy:false,locale,messages:{en:enMessages,vi:viMessages}})
   await router.push(initial ? `/t/intervention-cases/${initial}` : '/t/intervention-cases'); await router.isReady()
@@ -88,7 +103,7 @@ async function mounted(initial:string|null='A', locale:'en'|'vi'='en', reader=fa
 }
 
 describe('R101 route lifetime', () => {
-  beforeEach(() => { calls.detail.mockReset(); calls.assignees.mockReset(); calls.list.mockReset(); calls.action.mockReset(); localStorage.setItem('cqa_access_token','synthetic-session') })
+  beforeEach(() => { calls.detail.mockReset(); calls.assignees.mockReset(); calls.list.mockReset(); calls.action.mockReset(); resetFollowupMocks(); localStorage.setItem('cqa_access_token','synthetic-session') })
 
   it('does not show a late case A response after navigation to case B', async () => {
     const a=deferred<ReturnType<typeof detail>>(), b=deferred<ReturnType<typeof detail>>()
@@ -202,7 +217,7 @@ describe('R101 route lifetime', () => {
 })
 
 describe('intervention case presentation', () => {
-  beforeEach(() => { calls.detail.mockReset(); calls.assignees.mockReset(); calls.list.mockReset(); calls.action.mockReset(); localStorage.setItem('cqa_access_token','synthetic-session') })
+  beforeEach(() => { calls.detail.mockReset(); calls.assignees.mockReset(); calls.list.mockReset(); calls.action.mockReset(); resetFollowupMocks(); localStorage.setItem('cqa_access_token','synthetic-session') })
 
   it('keeps wire filter values while showing Vietnamese labels', async () => {
     calls.list.mockResolvedValue({items:[],total:0,next_cursor:''})
@@ -299,7 +314,7 @@ describe('intervention case presentation', () => {
 })
 
 describe('R118 current proposal and history', () => {
-  beforeEach(() => { calls.detail.mockReset(); calls.assignees.mockReset(); calls.list.mockReset(); calls.action.mockReset(); localStorage.setItem('cqa_access_token','synthetic-session'); calls.assignees.mockResolvedValue({items:[]}) })
+  beforeEach(() => { calls.detail.mockReset(); calls.assignees.mockReset(); calls.list.mockReset(); calls.action.mockReset(); resetFollowupMocks(); localStorage.setItem('cqa_access_token','synthetic-session'); calls.assignees.mockResolvedValue({items:[]}) })
 
   it('shows and submits the pointed current proposal even when an older array item follows it', async () => {
     const data=detail('CASE-A')
@@ -396,5 +411,113 @@ describe('R118 current proposal and history', () => {
     expect(translated).toContain('approved execution')
     expect(translated).not.toContain('EXECUTE_RERUN')
     next.wrapper.unmount()
+  })
+})
+
+describe('R132 WAIT_DATA follow-up integration', () => {
+  beforeEach(() => { calls.detail.mockReset(); calls.assignees.mockReset(); calls.list.mockReset(); calls.action.mockReset(); resetFollowupMocks(); localStorage.setItem('cqa_access_token','synthetic-session'); calls.assignees.mockResolvedValue({items:[{user_id:'person-one',name:'Person'}]}) })
+
+  function waitingDetail(version=1) {
+    const data=detail('CASE-WAIT')
+    data.case.version=version; data.case.work_state='WAITING_ON_DATA'; data.case.disposition='WAIT_DATA'
+    return data
+  }
+  function waitRevision() {
+    return {id:'b8b8b8b8-b8b8-48b8-88b8-b8b8b8b8b8b8',case_id:'CASE-WAIT',originating_case_version:1,case_version:2,original_snapshot_id:'s',original_snapshot_digest:'d',digest:'b'.repeat(64),coverage:'complete',coverage_reasons:[],message_count:1,observation_status:'LOCAL_MATCH_CURRENTNESS_UNVERIFIED',reason:'New information',created_at:'2026-10-19T09:00:00Z'}
+  }
+
+  it('keeps saved capture and request notices when the mounted parent replaces the same case detail', async () => {
+    const atVersion=(version:number)=>waitingDetail(version)
+    calls.detail.mockResolvedValueOnce(atVersion(1)).mockResolvedValueOnce(atVersion(2)).mockResolvedValueOnce(atVersion(3))
+    const savedRequest={id:'c7c7c7c7-c7c7-47c7-87c7-c7c7c7c7c7c7',case_id:'CASE-WAIT',data_revision_id:waitRevision().id,data_revision_digest:waitRevision().digest,original_snapshot_id:'s',original_snapshot_digest:'d',reason:'Review the complaint',status:'AWAITING_EXECUTION_AUTHORITY',execution:'NOT_RUN',case_version:3,created_at:'2026-10-19T09:10:00Z'}
+    let revisionPersisted=false, requestPersisted=false
+    calls.dataRevisions.mockImplementation(async()=>({items:revisionPersisted?[waitRevision()]:[],has_more:false,next_cursor:''}))
+    calls.rerunRequests.mockImplementation(async()=>({items:requestPersisted?[savedRequest]:[],has_more:false,next_cursor:''}))
+    calls.capture.mockImplementation(async()=>{revisionPersisted=true;return {revision:waitRevision(),case_version:2}})
+    calls.rerun.mockImplementation(async()=>{requestPersisted=true;return {request:savedRequest,case_version:3,replayed:false}})
+    vi.stubGlobal('crypto',{randomUUID:()=> 'r133-intent-unique-1'})
+    const {wrapper}=await mounted('A','en',false,{role:'owner',permissions:{}})
+    await flushPromises()
+    const child=wrapper.findComponent(InterventionDataFollowup).vm as unknown as {captureReason:string;capture:()=>Promise<void>;requestReason:string;requestRerun:()=>Promise<void>}
+    child.captureReason='New local complaint information'
+    await child.capture(); await flushPromises()
+    expect(calls.detail).toHaveBeenCalledTimes(2)
+    expect(wrapper.findComponent(InterventionDataFollowup).text()).toContain('Updated information was recorded locally.')
+    expect(wrapper.findComponent(InterventionDataFollowup).text()).not.toContain('could not be refreshed')
+    child.requestReason='Review the updated complaint'
+    await child.requestRerun(); await flushPromises()
+    expect(calls.rerun).toHaveBeenCalledTimes(1)
+    expect(calls.detail).toHaveBeenCalledTimes(3)
+    const followup=wrapper.findComponent(InterventionDataFollowup).text()
+    expect(followup).toContain('Updated information was recorded locally.')
+    expect(followup).toContain('Request saved.')
+    expect(followup).toContain('Waiting for separate authorization')
+    expect(followup).toContain('No new assessment has started')
+    expect(followup).not.toContain('could not be refreshed')
+    expect(wrapper.findComponent(InterventionDataFollowup).props('caseRecord')).toMatchObject({version:3,work_state:'WAITING_ON_DATA'})
+    wrapper.unmount()
+    vi.unstubAllGlobals()
+  })
+
+  it('keeps request status on the OPEN parent detail for a reader without execute controls',async()=>{
+    const opened=detail('CASE-OPEN')
+    opened.case.work_state='OPEN'
+    calls.detail.mockResolvedValue(opened)
+    calls.rerunRequests.mockResolvedValue({items:[{id:'c7c7c7c7-c7c7-47c7-87c7-c7c7c7c7c7c7',case_id:'CASE-OPEN',data_revision_id:waitRevision().id,data_revision_digest:waitRevision().digest,original_snapshot_id:'old-snapshot',original_snapshot_digest:'old-digest',reason:'Saved earlier',status:'AWAITING_EXECUTION_AUTHORITY',execution:'NOT_RUN',case_version:2,created_at:'2026-10-19T09:10:00Z'}],has_more:false,next_cursor:''})
+    const {wrapper}=await mounted('A','en',true);await flushPromises()
+    expect(wrapper.findComponent(InterventionDataFollowup).exists()).toBe(false)
+    expect(wrapper.text()).toContain('New assessment request')
+    expect(wrapper.text()).toContain('No processing record observed')
+    expect(wrapper.text()).not.toContain('Start assessment')
+    expect(calls.executionReadiness).not.toHaveBeenCalled()
+    wrapper.unmount()
+  })
+
+  it('rejects unknown roles and hides request creation when jobs write is absent', async () => {
+    const unknown=await mounted('A','en',false,{role:'operator',permissions:{intervention_cases:'rw',jobs:'w'}})
+    await flushPromises()
+    expect(calls.detail).not.toHaveBeenCalled()
+    expect(unknown.wrapper.text()).not.toContain('Updated information follow-up')
+    expect(unknown.wrapper.text()).not.toContain('Record action')
+    unknown.wrapper.unmount()
+
+    calls.detail.mockResolvedValue(waitingDetail())
+    const noJobs=await mounted('A','en',false,{role:'member',permissions:{intervention_cases:'rw',jobs:''}})
+    await flushPromises()
+    expect(noJobs.wrapper.text()).toContain('Updated information follow-up')
+    expect(noJobs.wrapper.text()).toContain('cannot send a reassessment request')
+    expect(noJobs.wrapper.findAll('button').some(button=>button.text().includes('Record updated information'))).toBe(true)
+    expect(noJobs.wrapper.findAll('button').some(button=>button.text().includes('Save reassessment request'))).toBe(false)
+    noJobs.wrapper.unmount()
+  })
+
+  it('shares the parent action busy lock with a capture and prevents concurrent writes', async () => {
+    const capture=deferred<{revision:ReturnType<typeof waitRevision>;case_version:number}>()
+    calls.detail.mockResolvedValueOnce(waitingDetail(1)).mockResolvedValue(waitingDetail(2))
+    calls.dataRevisions.mockResolvedValueOnce({items:[],has_more:false,next_cursor:''}).mockResolvedValue({items:[waitRevision()],has_more:false,next_cursor:''})
+    calls.rerunRequests.mockResolvedValue({items:[],has_more:false,next_cursor:''})
+    calls.capture.mockReturnValue(capture.promise)
+    const {wrapper}=await mounted('A','en',false,{role:'member',permissions:{intervention_cases:'rw',jobs:'w'}})
+    await flushPromises()
+    const parent=wrapper.vm as unknown as {action:string;reason:string;nextAction:string;assigneeId:string;dueLocal:string;canSubmit:boolean;busy:boolean;submit:()=>Promise<void>}
+    parent.action='ASSIGN_DATA'; parent.reason='Follow up on source'; parent.nextAction='Ask the data owner'; parent.assigneeId='person-one'; parent.dueLocal='2999-01-01T00:00'
+    await flushPromises()
+    expect(parent.canSubmit).toBe(true)
+    const actionButton=wrapper.findAll('button').find(button=>button.text().includes('Record action'))
+    expect(actionButton?.attributes('disabled')).toBeUndefined()
+    const child=wrapper.findComponent(InterventionDataFollowup).vm as unknown as {captureReason:string;capture:()=>Promise<void>}
+    child.captureReason='More local conversation content'
+    const pending=child.capture(); await flushPromises()
+    expect(parent.busy).toBe(true)
+    expect(parent.canSubmit).toBe(false)
+    expect(actionButton?.attributes('disabled')).toBeDefined()
+    await parent.submit()
+    expect(calls.action).not.toHaveBeenCalled()
+    expect(calls.capture).toHaveBeenCalledTimes(1)
+    capture.resolve({revision:waitRevision(),case_version:2})
+    await pending; await flushPromises()
+    expect(parent.busy).toBe(false)
+    expect(calls.action).not.toHaveBeenCalled()
+    wrapper.unmount()
   })
 })

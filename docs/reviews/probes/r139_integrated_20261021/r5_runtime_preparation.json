@@ -1,0 +1,30 @@
+{
+  "status": "INDEPENDENT_REVIEW_ACCEPTED_PENDING_GATES_COMMIT_CLEAN_PIN_RECHECK",
+  "sourceCommit": "8bb5463748eeb5f8802947cd3157918d479d8443",
+  "sourcePinsVerified": 9,
+  "binarySha256": "990390a82f8b18046079b01c9f0558d4dc43b3b93c4312e5ec7637b7ce269826",
+  "toolPinsVerified": true,
+  "browserReceiptVerifiedHistoricalSupportedRouteOnly": true,
+  "credentialMetadataPresent": true,
+  "credentialContentsReadThisPreparation": 0,
+  "runtimeExternalOuterFresh": true,
+  "pricingEvidence": "docs/reviews/probes/r139_integrated_20261021/r5_public_pricing_read.json",
+  "pricingUniqueURL1": true,
+  "paidProviderCalls": 0,
+  "newSlotUsedOrUncertain": 0,
+  "oldSlotConsumed": 1,
+  "deadline": "2026-10-21T16:40:16Z",
+  "outerRecorderSha256": "020b2e64c3891c052c8dd298f4aec81dd520898ee41e219ed85d8959a86ee4bf",
+  "noIndependentOuterTimeout": true,
+  "independentReview": "docs/reviews/R139_FRESH_R3_RUNTIME_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md",
+  "historicalToolComparisonFinding": "Stale r2DockerSHA assertion failed before effects; independentreview permits newcurrent same-pathDocker89442e pin underfreshcombinedauthority, oldadmission unchanged.",
+  "toolMetadataDisposition": {
+    "status": "CURRENT_SAME_PATH_TOOL_ALLOWED_BY_FRESH_COMBINED_AUTHORITY_AFTER_INDEPENDENT_METADATA_REVIEW",
+    "reviewer": "/root/r139_r2_runtime_reviewer",
+    "historicalR2DockerSha256": "0df52bb089985681771c874575a199438e6721814e682d74176e7444d40e1957",
+    "freshR3DockerSha256": "89442e29c80fec5a68df264ca0c17a8b72b42065d2a56a45eb0d574e582139e8",
+    "metadata": "Docker Client / Docker Inc;29.9.2;44,922,800bytes;lastWriteUTC2026-10-21T15:02:30 before freshcombinedauthority/source stage. Same installedDockerDesktop path; no CLI invoked.",
+    "initialPreparationFinding": "Root helper initially asserted historicalr2 SHA as prerequisite and failed beforekeymetadata/fixture. Newcombinedauthority does not pin oldDockerSHA; independentreview permits fresh currenttoolpin in NEWruntimeadmission. Oldadmission untouched.",
+    "condition": "Rehash immediately prelaunch; any additionaldrift/provenancecontradiction HOLD; no alternativebinary or automaticoldslot reuse."
+  }
+}

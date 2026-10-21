@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-131",
+  "authorityKind": "DISPATCHER_OWNED_M3_ACCEPTANCE_RECONCILIATION",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Root ORCHESTRATOR",
+    "implementationWorker": "Luna Max evidence analyst",
+    "reviewer": "Root independent reviewer",
+    "commitSteward": "Root COMMIT_STEWARD"
+  },
+  "allowedPaths": [
+    "CVF_SESSION/authority/CCMAI-RUNTIME-131.json",
+    "CVF_SESSION/tranches/CCMAI-RUNTIME-131.json",
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_R131_M3_ACCEPTANCE_2026-10-19.md",
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_R130_BRANCH_HISTORY_REWRITE_2026-10-19.md",
+    "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+    "CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/work_orders/CCMAI_RUNTIME_131_M3_ACCEPTANCE.md",
+    "docs/reviews/R131_M3_ACCEPTANCE_MATRIX_2026-10-19.md",
+    "docs/reviews/R131_M3_ACCEPTANCE_REVIEW_2026-10-19.md",
+    "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/INDEX.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json"
+  ],
+  "prohibitedEffects": [
+    "Product source or test implementation changes",
+    "Provider calls, credentials, customer data or external channel access",
+    "Runtime/browser/container mutation or new product test campaign",
+    "Rewrite prior evidence, authority seeds or consumed budgets",
+    "Push, merge or deployment under this roadmap request"
+  ],
+  "ownerAuthorization": "Owner continues the roadmap under the existing rules, with Root orchestrator/reviewer and explicit permission to dispatch Luna Max or Sol Medium workers. This tranche follows the R128 next move: reconcile M3 acceptance using existing source and evidence before any new implementation scope.",
+  "scope": "Read current M3 source/tests and accepted R094-R128 evidence selectively; write an eight-row M3-01..08 acceptance matrix, exact evidence applicability and finite next product gap. Update roadmap/continuity from independently reviewed conclusions. No new product behavior or runtime.",
+  "verification": "Root independently checks all eight rows against exact source/tests/original receipts, distinguishes implementation, executed evidence, limits, business decisions and unsupported controls, and runs repository continuity/profile/catalog gates.",
+  "claimBoundary": "Static acceptance reconciliation and reused bounded software/synthetic evidence only. No new live governance, quality, hosted CI, full M3, pilot or release proof.",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_131_M3_ACCEPTANCE.md",
+  "baseCommit": "11bf48fd7d43bf0465b2c78ec057dfffe6997fc1",
+  "status": "FROZEN",
+  "phase": "FREEZE",
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "CLOSED",
+  "buildCommit": "bae7a8182fefabbf76f7882b212ce2cb114b877d",
+  "reviewEvidence": [
+    "docs/reviews/R131_M3_ACCEPTANCE_REVIEW_2026-10-19.md"
+  ],
+  "disposition": "REVIEW_PASS",
+  "freeze": "FROZEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS",
+    "FROZEN"
+  ],
+  "closer": "Root CLOSER"
+}

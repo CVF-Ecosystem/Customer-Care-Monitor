@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "OWNER_AUTONOMY_BOUNDED_LOCAL_READINESS_INSPECTION_ONLY",
+  "ownerInstruction": "cho phép chủ động làm để đạt kết quả theo roadmap",
+  "ownerApproved": true,
+  "riskCeiling": "R2",
+  "actualRisk": "R1_READ_ONLY_NONPRODUCTION_METADATA",
+  "baselineCommit": "09e3356c9d48ec7650dd8099ece27021bc81c2b8",
+  "sourceCommit": "34facc34c26ae8eb8737ec0f8384139e832949af",
+  "browserReceiptPath": "docs/reviews/probes/r139_integrated_20261021/https_browser_outcome.json",
+  "browserReceiptSha256": "b6311dd0cee956cd896e16d8807ca8e493e1ee35730468cd7ee36ef91e9190a9",
+  "executor": "Root read-only local readiness auditor",
+  "dockerBinary": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+  "dockerBinarySha256": "0df52bb089985681771c874575a199438e6721814e682d74176e7444d40e1957",
+  "dockerHost": "npipe:////./pipe/dockerDesktopLinuxEngine",
+  "image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+  "commands": [
+    [
+      "version",
+      "--format",
+      "{{json .Server}}"
+    ],
+    [
+      "image",
+      "inspect",
+      "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+    ],
+    [
+      "ps",
+      "-a",
+      "--no-trunc",
+      "--format",
+      "{{json .}}"
+    ],
+    [
+      "network",
+      "ls",
+      "--no-trunc",
+      "--format",
+      "{{json .}}"
+    ],
+    [
+      "volume",
+      "ls",
+      "--format",
+      "{{json .}}"
+    ]
+  ],
+  "commandCap": 5,
+  "perCommandTimeoutSeconds": 15,
+  "totalSecondsMax": 90,
+  "automaticRetry": 0,
+  "environment": "Explicit local pipe, dedicated empty Docker config and minimal process environment; no ambient Docker context/proxy credentials.",
+  "runtimeRoot": ".cvf/runtime/r139_local_readiness_20261021",
+  "allowedReads": "Five Docker metadata inspections plus filesystem/hash reads of existing source/tool/binary/Vite assets; no database/content/container exec.",
+  "prohibitedEffects": [
+    "No Docker create/start/stop/restart/exec/build/pull/remove or daemon settings",
+    "No server/fixture/DB/provider/network external request",
+    "No credential contents, grant, execute POST or frontend build",
+    "No source/authority seed edit or old-budget reset"
+  ],
+  "stop": "Stop at first failed command, timeout or malformed evidence; retain exact raw output/exit; no retry or alternate stack.",
+  "claimBoundary": "Local tool/cache/resource metadata readiness only; no runtime/product/AI governance acceptance."
+}

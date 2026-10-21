@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "OWNER_APPROVED_BOUNDED_HTTPS_BROWSER_DIAGNOSTIC_ONLY",
+  "ownerInstruction": "cho phép chủ động làm để đạt kết quả theo roadmap",
+  "ownerApproved": true,
+  "proposalAccepted": "One new supported CUA IAB HTTPS diagnostic proposed immediately before owner approval.",
+  "parentAuthorityCommit": "642f5bd026dfe31e6dda6441dd25704eb3ececa3",
+  "baselineCommit": "cac7cf9c50cb3ee57daa119ff79b7c539b7df4cb",
+  "sourceCommit": "34facc34c26ae8eb8737ec0f8384139e832949af",
+  "executor": "Root supported CUA IAB pure UI diagnostic executor",
+  "riskCeiling": "R2",
+  "diagnosticRisk": "R1_PUBLIC_STATIC_UI_ONLY",
+  "freshBudget": {
+    "campaign": 1,
+    "ownedTab": 1,
+    "initialNavigation": 1,
+    "deliberateLinkClick": 1,
+    "captures": 2,
+    "lifetimeSeconds": 300,
+    "automaticRetry": 0
+  },
+  "target": "https://example.com",
+  "allowedNavigationHosts": [
+    "example.com",
+    "iana.org",
+    "www.iana.org"
+  ],
+  "interaction": "Inspect initial owned page, original screenshot; if an observed HTTPS link targets iana.org/www.iana.org, click it once, observe URL and original screenshot; close exact owned tab and verify no owned tabs. Missing or denied step means HOLD; no alternate stack, form, login, download or retry.",
+  "oldBudget": "Original browser1/1 and R117provider1/1 permanently consumed; this is a distinct owner-approved new diagnostic, no refund/reset.",
+  "newEffectAllowance": {
+    "publicHttpsBrowser": "one campaign only",
+    "DB": 0,
+    "Docker": 0,
+    "server": 0,
+    "credential": 0,
+    "grant": 0,
+    "executePOST": 0,
+    "provider": 0,
+    "productBrowserCampaign": 0
+  },
+  "futureAutonomy": "Owner authorizes proactive roadmap handling; prepare concrete bounded same-R139 runtime admission after actual browser proof and verified operational prerequisites. No invented monetary budget or secret value; no production/channel activation/public release inferred.",
+  "claimBoundary": "Browser tool structure/control/capture/close proof only; not loopback/application reachability, G0 aggregate, E01-E06 or AI governance."
+}

@@ -1,0 +1,31 @@
+{
+  "trancheId": "CCMAI-RUNTIME-132",
+  "sourceSHA256": {
+    "frontend/src/api/intervention.ts": "0f4bf139e78a68d0e2dc64d1d09b02ad8024d0dd232170657ae3dfd9cf102725",
+    "frontend/src/components/InterventionDataFollowup.vue": "5c75cb70d1d43bb593115ba21aeb7ab4b32e3dbd12db665e86bfd6d8524a2697",
+    "frontend/src/views/InterventionCases.vue": "f0cd8b6f0852896f3390c320afa750da1b23817677554f4cfa359d2ba8ba1a75",
+    "frontend/src/i18n/en.ts": "6f18c6796051581f4f1305fb8585bf63280ce425195e1e87668ba60aa00f6114",
+    "frontend/src/i18n/vi.ts": "dcf49d23e088ede7b86f2e78f84509c33d5d7338504002b2cf96e48dd7c97962",
+    "frontend/src/__tests__/intervention-data-followup.test.ts": "695eab63fe91a26dca8f15d8e468f3cd373c384d79755ca65367abe1205da8f4",
+    "frontend/src/__tests__/intervention-ui.test.ts": "e03af2b588d121042f8d2965156dbd48774bf8896265e1e5397a86d95d3f48e2",
+    "backend/api/handlers/intervention_followup_browser_test.go": "d1b8d14d5826c9d8032beea131955f7d59aaeabfd9d74b5f944462c9eb46aa22"
+  },
+  "workerNodeExits": [
+    0,
+    2
+  ],
+  "workerFocusedTestsBeforeRepairs": 26,
+  "rootFocusedExit": 0,
+  "rootFocusedTests": 28,
+  "rootBuild": 0,
+  "goCompileExits": [
+    0,
+    0
+  ],
+  "goUsed": 2,
+  "nodeUsed": 4,
+  "providerCalls": 0,
+  "runtime": "SOURCE_ACCEPTED_SINGLE_OWNED_CAMPAIGN",
+  "distFileCount": 143,
+  "distManifestSHA256": "b16e4ab968bfabf9b52d1e12f0d03bc588f60ce6c18d27e25d3074822b6181a3"
+}

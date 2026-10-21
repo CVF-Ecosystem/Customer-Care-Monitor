@@ -1,0 +1,56 @@
+{
+  "observedAtUTC": "2026-10-21T05:18:02.091216+00:00",
+  "sourceSHA256": {
+    "backend/api/handlers/intervention_execution_browser_test.go": "a9887dac65bfec655e7a4a9d2166bd6aacfe0b7d730d7ccaee7783925da44167",
+    "scripts/r139_execution_supervisor.py": "ba848d62e60333d6a2b323639f4f0b8c8d1b69d374d86fca8d6081656758247f",
+    "scripts/r139_vite_config.mjs.template": "f52dccb6f8806eadbad3b78f39402f8b30afa473ea7b714ed5baf6a911cc55d5",
+    "scripts/tests/test_r139_execution_supervisor.py": "bd6071dd2587babde467eb2f9da4d5c9aa71404e4e1bd261fcdf780701da5ec6"
+  },
+  "protectedMatches": 29,
+  "protectedMismatches": [],
+  "repairAdmissionSha256": "608cd1dd54d0fc8370ff4ec022fd17582cc5137d8ad4ae91ccdde33a2d2519f5",
+  "rootPython": {
+    "used": 1,
+    "cap": 2,
+    "testsPassed": 16,
+    "result": "PASS",
+    "receipt": "docs/reviews/probes/r139_integrated_20261021/root_python_check_result.json"
+  },
+  "rootGo": {
+    "used": 1,
+    "cap": 1,
+    "result": "PASS_COMPILE_ONLY",
+    "receipt": "docs/reviews/probes/r139_integrated_20261021/root_go_check_result.json"
+  },
+  "viteReviewCorrection": {
+    "status": "FALSE_POSITIVE_RETRACTED_SOURCE_UNCHANGED",
+    "consecutiveBackslashPairs": 0,
+    "line11EscapeBytes": [
+      92,
+      47,
+      92,
+      47
+    ],
+    "line22StringBytes": [
+      39,
+      92,
+      110,
+      39
+    ],
+    "explanation": "Root misread nested JSON escaping; direct bytes show correct single escapes. No repair round3 or escalation occurred."
+  },
+  "runtimeEffects": 0,
+  "claimBoundary": "Static source and effect-free software checks only. G0 runtime HOLD; G1/G2 and E01-E06 NOT_RUN; no runtime AI governance or product acceptance.",
+  "sourceCommit": "34facc34c26ae8eb8737ec0f8384139e832949af",
+  "repositoryGates": {
+    "legacyPreflight": "PASS_7_OF_7",
+    "workerReturn": "PASS",
+    "reviewerFast": "PASS",
+    "preCommit": "PASS",
+    "gateUnits": 89,
+    "gateUnitsSeconds": 42.919,
+    "APPL": "NOT_APPLICABLE_WITH_REASON_COMPLETED_RETURN_STATUS_NOT_ACTIVE_CLOSEABILITY_PASS",
+    "hostedCiObserved": false
+  },
+  "overallDisposition": "PARKED_REVIEW_FREEZE_OPEN_RUNTIME_HOLD"
+}

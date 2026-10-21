@@ -41,3 +41,15 @@ Upstream: PROPOSED_FOR_CVF_INTAKE / NOT_SENT / NOT_ACCEPTED. Đề xuất CVF ch
 ## Related recurrence — 2026-10-16
 
 Root dispatch chưa sẵn sàng khiến hai lượt UI không đạt mục tiêu; xem [learning readiness](feedback_dispatch_readiness_and_browser_evidence.md). Checklist8 điều kiện phải được Root xử lý trước dispatch, phân biệt tool bridge/source/fixture/authority. Chưa có bằng chứng effectiveness qua lần chạy tiếp theo.
+
+## Owner directive — lộ trình chi tiết và mốc nghiệm thu, 2026-10-21
+
+Owner yêu cầu: “Không cam kết ngày hoàn thành nhưng phải vạch rõ lộ trình chi tiết, mốc đạt để nghiệm thu. Nếu không trước sau gì cũng đi lạc”. Root ghi đây là chỉ đạo thường trực cho điều phối và bàn giao, không chỉ là một câu trả lời trạng thái trong chat.
+
+R138 lập [kế hoạch nghiệm thu chi tiết](../../roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md) từ hiện trạng R137 source/component-only. Tài liệu kế hoạch không đóng M1–M5, không cấp quyền chạy provider/runtime và không chứng minh hiệu quả điều phối đã cải thiện. Các review/budget/qualification cũ được giữ nguyên.
+
+Trước dispatch và mỗi handback, Root phải chỉ rõ ID mốc/tiêu chí đang xử lý; khả năng người dùng cần nghiệm thu; bằng chứng đã có ở tầng nào; gap và dependency thực sự chặn; người chuẩn bị/người quyết định; điều kiện PASS/FAIL/HOLD/N/A; bước được phép tiếp theo và ngân sách còn lại. Quyết định nghiệp vụ chưa được chốt phải có người nhận và mốc bị giữ, không tự điền ngưỡng/SLA/sample/budget để tạo PASS.
+
+Chỉ báo mốc đạt sau khi bằng chứng đúng revision/phạm vi và người có trách nhiệm chấp nhận; số test, commit, model hoặc tranche không là tiến độ sản phẩm. Nếu source/unit đã đạt mà native/browser/live chưa đạt thì mốc tương ứng vẫn mở. Kế hoạch phải chỉ rõ thứ tự phụ thuộc và nhánh song song, không cam kết lịch hoặc số vòng sửa chưa biết.
+
+Sau hai scope hỗ trợ liên tiếp chưa đạt acceptance sản phẩm, hoặc ngay khi prerequisite thất bại, Root rà lại và ghi quyết định gộp/thu hẹp/hoãn/tiếp tục cùng lý do trước khi chọn scope mới. Không tự tạo chuỗi helper; sửa cùng scope trong authority/budget còn hiệu lực và giữ quy tắc escalation round three. Thay đổi route phải đồng bộ kế hoạch chi tiết, bảng roadmap hiện hành, implementation truth, memory/state/handoff và catalog. Effectiveness vẫn OPEN cho tới khi những lần delivery tiếp theo cho thấy đạt mốc sản phẩm; không tự đóng bằng gate tài liệu.

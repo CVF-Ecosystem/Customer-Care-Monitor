@@ -1,0 +1,12 @@
+{
+  "status": "RESERVED_BEFORE_TOOL_INVOCATION",
+  "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-HTTPS-BROWSER-ADMISSION.json",
+  "ownerApproved": true,
+  "freshCampaignSlot": 1,
+  "freshCampaignCap": 1,
+  "originalDiagnosticUsed": 1,
+  "newAttemptWillRemainConsumedOnFailure": true,
+  "fixtureEffects": 0,
+  "providerCalls": 0,
+  "sourceCommit": "34facc34c26ae8eb8737ec0f8384139e832949af"
+}

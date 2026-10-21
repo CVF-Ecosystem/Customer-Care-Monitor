@@ -1,5 +1,44 @@
 # Roadmap CSKH: dữ liệu đáng tin, bộ lọc hỗ trợ AI và xử lý có trách nhiệm
 
+## R137 — đã có mã API/trạng thái đánh giá và kiểm thử component, 2026-10-21
+
+Review độc lập chấp nhận phần source: hai GET chỉ đọc về điều kiện/trạng thái, lịch sử theo request vẫn hiển thị khi ca sang OPEN, thao tác chạy có xác nhận và lưu dấu trước khi gửi; mất kết nối/đổi phiên không tự gửi lại. Vòng quan sát dùng hạn hủy một phút và vẫn cho kiểm tra thủ công. Root kiểm tra36/36frontend,4pure Go và typecheck/build đạt; api/handlers chỉ compile, không có test route phù hợp được chạy. Một lượt sửa cùng scope đã xử lý fixture parent và hạn hủy; lỗi ban đầu giữ trong [review](../reviews/R137_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md).
+
+Đây là source/component evidence, chưa chạy DB/browser/provider/grant/execute; chưa bật bản cài đang dùng. M3-05 là `SOURCE_COMPONENT_ACCEPTED_RUNTIME_OPEN`; full M3 `PARTIAL_IMPLEMENTATION_OPEN`, E01..E06 runtime OPEN. Sau khi R138 được review độc lập, route bắt đầu bằng `G0-M3-SOURCE-AND-READINESS`, gồm source pin và browser capability check được cho phép trước fixture, rồi một proof packet tích hợp cho G1/G2. R138 không cấp quyền probe hoặc runtime; budget/effect tương lai phải được packet/authority riêng chấp thuận. Xem [kế hoạch nghiệm thu chi tiết](CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md). Không tái dùng R1171/1; Facebook/Zalo OA, quyết định M1/pilot/release vẫn mở. Các mục dưới là lịch sử.
+
+## R136 — đã chốt hợp đồng màn hình đánh giá lại, chưa triển khai mã, 2026-10-20
+
+Review độc lập chấp nhận thiết kế: hai API chỉ đọc về điều kiện chạy/trạng thái, dùng POST thực thi hiện có và giấy phép máy chủ cấp riêng; không nhập mã giấy phép hoặc cấu hình provider trên UI. Lưu marker trước khi gửi, khóa gửi lại khi mất kết nối/reload, đọc trạng thái thay cho suy đoán; giữ lịch sử khi ca chuyển sang OPEN. Có13hash nguồn đối chiếu khớp và danh sách file/tiêu chí cụ thể cho một work order R2 tích hợp. [Review](../reviews/R136_DESIGN_REVIEW_2026-10-20.md).
+
+Đây là intended contract, không phải tính năng đã làm hoặc bằng chứng AI/CVF runtime. Mã/API/UI chưa thay đổi, provider/grant/execute0; E01..E06 chưa chạy. M3 vẫn PARTIAL_IMPLEMENTATION_OPEN. Bước tới là một gói R2 triển khai API đọc/UI và kiểm chứng có giới hạn; mọi cuộc gọi thật/quyền/secret cần authority mới trước khi dùng, không tái dùng R1171/1. Các mốc dưới là lịch sử.
+
+## R135 — hàng đợi nhiều trang và từ chối thành công đã có bằng chứng local, 2026-10-20
+
+Lượt thực tế exit0:13API GET kiểm tra phân trang/lọc/thứ tự/quyền;10trạng thái DOM và10phản hồi queue khớp chính xác. Mặc định20->26, chờ duyệt20->24; đổi bộ lọc thay đúng danh sách. REJECT200 có lý do/lịch sử sau reload; tổng mặc định26->25, chờ duyệt24->23, từ chối1->2; reader không có nút ghi. Nguồn/đề xuất/snapshot và ca khác giữ nguyên; chỉ1sự kiện người duyệt, provider0. Server/MySQL thử dừng,28container cũ không đổi. [Review](../reviews/R135_RUNTIME_REVIEW_2026-10-20.md).
+
+Hai gap queue và REJECT đã đóng trong phạm vi synthetic/thứ tự thời gian. M3 vẫn PARTIAL: cần chốt yêu cầu/quyền cho UI thực thi đánh giá lại; giữ qualification mobile/raster/offline chưa hỗ trợ, business/channel/pilot/hosted/release mở. Tiếp theo chỉ INTAKE/DESIGN đối chiếu acceptance, không tự mở thêm fixture/tooling hay gọi provider. Các mục dưới là lịch sử.
+
+## R134 — luồng bổ sung thông tin và lưu yêu cầu đã nghiệm thu local, 2026-10-20
+
+Browser hoạt động trở lại. Lượt thử thực tế: lỗi503 có thông báo dễ hiểu/không ghi dữ liệu, tải lại thủ công rồi201 ghi nhận,201 lưu yêu cầu giữ thông báo đúng/lần cập nhật3. Tải lại và tài khoản chỉ đọc vẫn thấy hai lịch sử, không có nút ghi; Go exit0, đúng1bản bổ sung/1yêu cầu/2sự kiện, chưa chạy AI. Server/MySQL thử đã dừng;27container cũ giữ nguyên, provider0. [Review](../reviews/R134_RUNTIME_REVIEW_2026-10-20.md).
+
+M3 vẫn PARTIAL: còn queue nhiều trang/filter/count/order và REJECT thành công; UI chạy đánh giá thực cần hợp đồng/quyền riêng. Khoảng trống hiển thị lỗi backend thực đã có bằng chứng503; qualification mobile/raster và offline NOT_RUN giữ nguyên. Bước tới chỉ INTAKE/SPEC cho bằng chứng còn thiếu, chưa dispatch/runtime; Facebook/ZaloOA, business/pilot/hosted/release vẫn mở. R132/R133 lỗi lịch sử và ngân sách cũ giữ nguyên. Các mục dưới là lịch sử.
+
+## R133 — sửa mã xong, kiểm chứng browser cần chuyển agent
+
+Đã sửa refresh cùng ca và điều kiện dữ liệu synthetic;30 kiểm tra UI, typecheck/build và offline Go compile PASS. Browser hiện không khả dụng nên chưa kiểm chứng luồng mới; lượt fixture kết thúc exit1 do không chạy browser, không nhận PASS. Native quyền403/403,26 container cũ không đổi; server/MySQL thử dừng và giữ nguyên, provider0. Theo chỉ thị owner, dừng và bàn giao agent có browser, không đổi stack/tự chạy lại. M3 vẫn PARTIAL. [Gói bàn giao](../reviews/R133_RUNTIME_TRANSFER_PACKET_2026-10-19.md). Các mục dưới là lịch sử.
+
+## R132 — lưu thông tin được, yêu cầu đánh giá lại chưa nghiệm thu
+
+Lượt browser synthetic thực tế ghi nhận503 rồi201, lịch sử bản ghi còn sau reload và reader không có nút ghi. Chưa nghiệm thu: lỗi refresh sau lưu và fixture thiếu nội dung khiếu nại khiến request409; test exit1 giữ nguyên. Server/MySQL thử đã dừng,25 container cũ không đổi, provider0. R133 chỉ sửa hai nguyên nhân mới này, có seed và proof riêng; M3 vẫn PARTIAL. Xem [review R132](../reviews/R132_RUNTIME_REVIEW_2026-10-19.md). Các mục dưới là lịch sử.
+
+## R131 — đối chiếu acceptance M3, 2026-10-19
+
+Đã chốt bảng 8 tiêu chí bằng bằng chứng hiện có và review độc lập. Cạnh tranh hai người duyệt đã có PASS trong package handlers kế thừa R126, không phải gap cần chạy lại; full run R125 exit1 vẫn được giữ. Source R128 hiện tại khớp nội dung 414 bản ghi (411 byte/hash nguyên gốc, 3 chỉ khác CRLF/LF).
+
+M3 vẫn PARTIAL: còn bằng chứng queue nhiều trang, REJECT thành công, UI ghi nhận dữ liệu bổ sung/yêu cầu đánh giá lại và một lỗi thực hiển thị qua browser. B09 offline không được hỗ trợ vẫn NOT_RUN; không coi đó là blocker duy nhất. Bước sản phẩm kế tiếp R132: UI request-only trên API revision/request đã có; không tự chạy AI hoặc mở lại ngân sách cũ. M1 nghiệp vụ, M2 live, M4 pilot, hosted/release và tài khoản Facebook/ZaloOA giữ nguyên. Xem [review R131](../reviews/R131_M3_ACCEPTANCE_REVIEW_2026-10-19.md). Các mục dưới là lịch sử.
+
+
 ## R128 — tên người tham gia ca cho tài khoản chỉ đọc, 2026-10-19
 
 Đã sửa và nghiệm thu local: reader thấy tên người xử lý, người bổ sung dữ liệu và người ghi lịch sử sau reload; API chỉ trả user_id/name của người cùng workspace được ca/lịch sử ca tham chiếu. Không trả người ngoài ca/khác workspace; danh sách chọn người xử lý yêu cầu quyền đọc và ghi. Reader vẫn không có thao tác ghi hoặc yêu cầu danh bạ đầy đủ.
@@ -152,7 +191,7 @@ R097 independent review accepted bounded local TLS proof; FREEZE local tooling o
 
 ## Roadmap delivery hiện hành — M1–M5 (2026-10-13)
 
-[Roadmap phát triển chi tiết và tiếp quản giữa agent](../reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md) là cửa vào để chọn việc tiếp theo: M1 khóa bản đầu tiên và dependency; M2 đường phân tích có kiểm soát; M3 người duyệt/giao việc/kết quả; M4 shadow/pilot có đo lường; M5 release và tiếp quản. Kế hoạch đưa quyết định S0 lên trước implementation và an toàn dữ liệu tối thiểu lên trước pilot. Nó cụ thể hóa thứ tự P0–P4 bên dưới, giữ toàn bộ hợp đồng exit S0–S7; không đóng stage hoặc cấp runtime authority. M1 business/pilot còn mở; M2 source/local đã dispatch và accepted bounded, live outcome chưa đạt; M3–M5 chưa dispatch.
+[Roadmap phát triển chi tiết và tiếp quản giữa agent](../reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md) giữ acceptance M1–M5; [kế hoạch nghiệm thu 2026-10-21](CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md) là đường hiện hành từ R137 qua M3 đến pilot/release, với gate, tầng evidence, owner và điều kiện HOLD. Quyết định nghiệp vụ M1 còn OPEN. M2 hiện chỉ có receipt bounded tại source lịch sử; full M2/S2/S3 và live outcome còn OPEN. M3-05 là `SOURCE_COMPONENT_ACCEPTED_RUNTIME_OPEN` tại R137; full M3 còn `PARTIAL_IMPLEMENTATION_OPEN`, runtime E01–E06 mở. M4 pilot và M5 release còn OPEN. Roadmap không đóng stage S0–S7 hoặc cấp runtime authority.
 
 ## Historical M1 checkpoint — R092/R093
 

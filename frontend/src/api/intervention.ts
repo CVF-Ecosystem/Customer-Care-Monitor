@@ -32,6 +32,41 @@ export interface InterventionAction {
   expected_current_digest?: string
   assignee_id?: string; due_at?: string; outcome?: string
 }
+export interface InterventionDataRevision {
+  id: string; case_id: string; originating_case_version: number; case_version: number
+  original_snapshot_id: string; original_snapshot_digest: string; digest: string
+  coverage: string; coverage_reasons: string[]; message_count: number
+  observation_status: string; reason: string; created_at: string
+}
+export interface InterventionRerunRequest {
+  id: string; case_id: string; data_revision_id: string; data_revision_digest: string
+  original_snapshot_id: string; original_snapshot_digest: string; reason: string
+  status: string; execution: string; case_version: number; created_at: string
+}
+export interface InterventionWaitDataPage<T> {
+  items: T[]; has_more: boolean; next_cursor: string
+}
+export type InterventionReadinessState = 'READY' | 'AWAITING_OPERATOR_AUTHORITY' | 'PROCESS_DISABLED' | 'STALE_OR_INELIGIBLE' | 'ALREADY_STARTED'
+export interface InterventionExecutionReadiness {
+  state: InterventionReadinessState; request_id: string; server_now: string
+  expected_case_version?: number; expires_at?: string; grant_handle?: string
+}
+export type InterventionExecutionPhase = 'NOT_STARTED' | 'CLAIMED' | 'CALL_MAY_HAVE_STARTED' | 'RESPONSE_RECORDED' | 'PUBLISHED' | 'MANUAL_HOLD'
+export interface InterventionExecutionStatus {
+  request_id: string; request_intent: string; execution_present: boolean
+  phase: InterventionExecutionPhase; observed_at: string
+  terminal_code?: string; published_case_version?: number; proposal_available?: boolean
+}
+export interface InterventionExecuteInput {
+  expected_case_version: number; grant_id: string
+}
+export interface CaptureInterventionDataRevisionInput {
+  expected_version: number; expected_snapshot_id: string; expected_snapshot_digest: string; reason: string
+}
+export interface RequestInterventionRerunInput {
+  expected_version: number; expected_snapshot_id: string; expected_snapshot_digest: string
+  data_revision_id: string; data_revision_digest: string; reason: string; request_key: string
+}
 export class InterventionHttpError extends Error {
   readonly status: number
   readonly code: string
@@ -103,4 +138,32 @@ export function listInterventionAssignees(tenant: string, token: string, signal:
 }
 export function applyInterventionAction(tenant: string, id: string, token: string, signal: AbortSignal, action: InterventionAction) {
   return once<{case: InterventionCase}>(`${root(tenant)}/intervention-cases/${encodeURIComponent(id)}/actions`, token, signal, action)
+}
+const waitDataCase = (tenant: string, id: string) => `${root(tenant)}/intervention-cases/${encodeURIComponent(id)}`
+function waitDataListPath(tenant: string, id: string, collection: 'data-revisions' | 'rerun-requests', cursor = '') {
+  const q = new URLSearchParams({ limit: '20' })
+  if (cursor) q.set('cursor', cursor)
+  return `${waitDataCase(tenant,id)}/${collection}?${q}`
+}
+export function listInterventionDataRevisions(tenant: string, id: string, token: string, signal: AbortSignal, cursor = '') {
+  return once<InterventionWaitDataPage<InterventionDataRevision>>(waitDataListPath(tenant,id,'data-revisions',cursor), token, signal)
+}
+export function createInterventionDataRevision(tenant: string, id: string, token: string, signal: AbortSignal, input: CaptureInterventionDataRevisionInput) {
+  return once<{revision: InterventionDataRevision; case_version: number}>(`${waitDataCase(tenant,id)}/data-revisions`, token, signal, input)
+}
+export function listInterventionRerunRequests(tenant: string, id: string, token: string, signal: AbortSignal, cursor = '') {
+  return once<InterventionWaitDataPage<InterventionRerunRequest>>(waitDataListPath(tenant,id,'rerun-requests',cursor), token, signal)
+}
+export function createInterventionRerunRequest(tenant: string, id: string, token: string, signal: AbortSignal, input: RequestInterventionRerunInput) {
+  return once<{request: InterventionRerunRequest; case_version: number; replayed: boolean}>(`${waitDataCase(tenant,id)}/rerun-requests`, token, signal, input)
+}
+const executionPath = (tenant: string, id: string, requestId: string) => `${waitDataCase(tenant,id)}/rerun-requests/${encodeURIComponent(requestId)}`
+export function getInterventionExecutionReadiness(tenant: string, id: string, requestId: string, token: string, signal: AbortSignal) {
+  return once<InterventionExecutionReadiness>(`${executionPath(tenant,id,requestId)}/execution-readiness`, token, signal)
+}
+export function getInterventionExecutionStatus(tenant: string, id: string, requestId: string, token: string, signal: AbortSignal) {
+  return once<InterventionExecutionStatus>(`${executionPath(tenant,id,requestId)}/execution-status`, token, signal)
+}
+export function executeInterventionRerun(tenant: string, id: string, requestId: string, token: string, signal: AbortSignal, input: InterventionExecuteInput) {
+  return once<{execution: {id: string; state: string; terminal_code: string; run_id: string; snapshot_id: string}; replayed: boolean}>(`${executionPath(tenant,id,requestId)}/execute`, token, signal, {expected_case_version: input.expected_case_version, grant_id: input.grant_id})
 }

@@ -1,0 +1,54 @@
+--- a/backend/api/handlers/intervention_execution_browser_test.go
++++ b/backend/api/handlers/intervention_execution_browser_test.go
+@@ -191,7 +191,7 @@
+ 	if err != nil || runtimeRel == "." || strings.HasPrefix(runtimeRel, "..") {
+ 		t.Fatal("R139 runtime root outside ignored area")
+ 	}
+-	expectedEvidence := filepath.Join(filepath.Dir(root), ".ccmai_local_evidence", "r139_execution_proof_20261021", "fixture_r2")
++	expectedEvidence := filepath.Join(filepath.Dir(root), ".ccmai_local_evidence", "r139_execution_proof_20261021", "fixture_r3")
+ 	if a.ExternalEvidenceDir != expectedEvidence || os.Getenv("R139_EVIDENCE_DIR") != expectedEvidence {
+ 		t.Fatal("R139 external evidence location mismatch")
+ 	}
+--- a/scripts/r139_execution_supervisor.py
++++ b/scripts/r139_execution_supervisor.py
+@@ -41,9 +41,9 @@
+ WINDOWS_LISTENER_QUERY_TIMEOUT_SECONDS = 5
+ GRANT_MIN_SECONDS = 60
+ GRANT_MAX_SECONDS = 24 * 60 * 60
+-R139_REPLACEMENT_FIXTURE_NAME = "ccmai-r139-r2-20261021"
+-R139_REPLACEMENT_DATABASE = "ccma_r139_r2_20261021"
+-R139_REPLACEMENT_RUNTIME_ROOT = Path(".cvf/runtime/r139_integrated_execution_r2_20261021")
++R139_REPLACEMENT_FIXTURE_NAME = "ccmai-r139-r3-20261021"
++R139_REPLACEMENT_DATABASE = "ccma_r139_r3_20261021"
++R139_REPLACEMENT_RUNTIME_ROOT = Path(".cvf/runtime/r139_integrated_execution_r3_20261021")
+ PROMPT_TEXT = "Analyze only fabricated Vietnamese complaint; return the required JSON."
+ PROMPT_SHA256 = hashlib.sha256(PROMPT_TEXT.encode("utf-8")).hexdigest()
+ ACTIVE_HARD_DEADLINE: float | None = None
+@@ -115,7 +115,7 @@
+ 
+ 
+ def replacement_external_evidence_dir() -> Path:
+-    return ROOT.parent / ".ccmai_local_evidence" / "r139_execution_proof_20261021" / "fixture_r2"
++    return ROOT.parent / ".ccmai_local_evidence" / "r139_execution_proof_20261021" / "fixture_r3"
+ 
+ 
+ def committed(relative: str) -> Path:
+--- a/scripts/tests/test_r139_execution_supervisor.py
++++ b/scripts/tests/test_r139_execution_supervisor.py
+@@ -306,14 +306,14 @@
+                 receipt = json.loads((runtime / f"listener_query_{port}_result.json").read_text(encoding="utf-8"))
+                 self.assertEqual(receipt["status"], "PASS_ZERO_LISTENERS")
+ 
+-    def test_replacement_evidence_path_is_fixture_r2(self):
++    def test_replacement_evidence_path_is_fixture_r3(self):
+         with tempfile.TemporaryDirectory() as name:
+             project = Path(name) / "Customer-Care-Monitor-AI"
+             project.mkdir()
+             with patch.object(module, "ROOT", project):
+                 self.assertEqual(
+                     module.replacement_external_evidence_dir(),
+-                    project.parent / ".ccmai_local_evidence" / "r139_execution_proof_20261021" / "fixture_r2",
++                    project.parent / ".ccmai_local_evidence" / "r139_execution_proof_20261021" / "fixture_r3",
+                 )
+ 
+     def test_owned_container_rejects_label_or_id_mismatch(self):

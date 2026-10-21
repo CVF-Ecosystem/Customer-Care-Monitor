@@ -1,0 +1,11 @@
+{
+  "tranche": "CCMAI-RUNTIME-138",
+  "reviewer": "Root independent roadmap REVIEWER",
+  "sourceBaseline": "4cce40f2495f571b612122121d377c10499b4b02",
+  "dispatchCommit": "63c1118b7979406aab86870c036e16103c84d34f",
+  "productTrees": {
+    "backend": "4533511e667751e122247308201f1a72c74ebdb1",
+    "frontend": "b23c158a3740ee97b30d17d0a52f5133d4ed5eff"
+  },
+  "claimBoundary": "Documentary identity baseline only; no runtime or AI/CVF governance proof."
+}

@@ -1,0 +1,69 @@
+{
+  "tranche": "CCMAI-RUNTIME-137",
+  "sourceHead": "aca012104d04db2847b2d1c04efd34bfc3e87537",
+  "workerRole": "REPAIR_WORKER_ROUND1",
+  "files": [
+    {
+      "path": "backend/api/router.go",
+      "sha256": "fbe99fee8c4def1e87373ac6068bd9e8406409939a3172e54a5717e86e934177"
+    },
+    {
+      "path": "backend/api/handlers/intervention_execution_read.go",
+      "sha256": "5ddb91cf18fa29d70979a62667fc4c7da234719581529952a6ee462bf5da1572"
+    },
+    {
+      "path": "backend/engine/intervention_execution_read.go",
+      "sha256": "9e2097c7d0d27a1e166667c4777c43c32d6c111f63bf467eaea7528650fc2798"
+    },
+    {
+      "path": "backend/engine/intervention_execution_read_test.go",
+      "sha256": "456fb7fbacca2be00f107d3be585ec616d6c1ddd36aa99e818720239436fa024"
+    },
+    {
+      "path": "frontend/src/api/intervention.ts",
+      "sha256": "697f757fdffc81ad841616841a52f935ae552f90c11ecffaa61de65ec007f8de"
+    },
+    {
+      "path": "frontend/src/views/InterventionCases.vue",
+      "sha256": "7c674fe2f3cfc8886ee05122af9b49984f0c68984e497de192c1fe58e062ffc7"
+    },
+    {
+      "path": "frontend/src/components/InterventionExecutionStatus.vue",
+      "sha256": "756cba7b19b347e72315ef1490255c9413e46c933844a6f9d69f0400df36c81a"
+    },
+    {
+      "path": "frontend/src/components/interventionExecutionHold.ts",
+      "sha256": "51b16dfef44d6fd0d293499c6f11068d00b17b18022df637a51c57372f8e3c7c"
+    },
+    {
+      "path": "frontend/src/i18n/vi.ts",
+      "sha256": "6f2968e8929631d5a14deb010ebc2b468234596ec6b9696673fca95055da020f"
+    },
+    {
+      "path": "frontend/src/i18n/en.ts",
+      "sha256": "11f220d2228a6d755f91815745fd7838c9a926a0d947d1d9496983ce2953e1b7"
+    },
+    {
+      "path": "frontend/src/__tests__/intervention-api.test.ts",
+      "sha256": "7317f4aad91a4747029421baf334f37ce2afd1e7499d25e0a617b64cab01495e"
+    },
+    {
+      "path": "frontend/src/__tests__/intervention-execution-status.test.ts",
+      "sha256": "85c12c8d1023c19cbf120232c52af46b255dfcc0321537ae7875bcd157fd61e4"
+    },
+    {
+      "path": "frontend/src/__tests__/intervention-ui.test.ts",
+      "sha256": "55ef82cbc37d5b48674e69743df10881663029f8d5b7ae5d3ecbff29ebbc0c65"
+    }
+  ],
+  "goInvocations": 2,
+  "nodeInvocations": 5,
+  "frontendBuildInvocations": 2,
+  "dbStarts": 0,
+  "browserCampaigns": 0,
+  "providerCalls": 0,
+  "grantEffects": 0,
+  "executeEffects": 0,
+  "runtimeProof": "NOT_RUN",
+  "governanceProof": "NOT_RUN"
+}

@@ -34,12 +34,25 @@ func requireKnownTenantPermission(resource, action string) gin.HandlerFunc {
 	}
 }
 
+func executionReadNoStore(c *gin.Context) {
+	c.Header("Cache-Control", "no-store")
+	c.Next()
+}
+
 func SetupRouter(cfg *config.Config) *gin.Engine {
 	if cfg.IsProduction() {
 		gin.SetMode(gin.ReleaseMode)
 	}
 
 	r := gin.New()
+	// Set this before every abort-capable middleware so all read results,
+	// including authentication and rate-limit failures, stay uncached.
+	r.Use(func(c *gin.Context) {
+		if c.Request.Method == http.MethodGet && (strings.HasSuffix(c.Request.URL.Path, "/execution-readiness") || strings.HasSuffix(c.Request.URL.Path, "/execution-status")) {
+			c.Header("Cache-Control", "no-store")
+		}
+		c.Next()
+	})
 	r.Use(gin.Logger())
 	r.Use(gin.Recovery())
 
@@ -207,6 +220,8 @@ func SetupRouter(cfg *config.Config) *gin.Engine {
 			tenant.GET("/intervention-cases/:caseId/data-revisions/:revisionId", requireKnownTenantPermission("intervention_cases", "r"), handlers.GetInterventionDataRevision)
 			tenant.POST("/intervention-cases/:caseId/rerun-requests", requireKnownTenantPermission("intervention_cases", "r"), requireKnownTenantPermission("intervention_cases", "w"), requireKnownTenantPermission("jobs", "w"), handlers.CreateInterventionRerunRequest)
 			tenant.GET("/intervention-cases/:caseId/rerun-requests", requireKnownTenantPermission("intervention_cases", "r"), handlers.ListInterventionRerunRequests)
+			tenant.GET("/intervention-cases/:caseId/rerun-requests/:requestId/execution-readiness", executionReadNoStore, requireKnownTenantPermission("intervention_cases", "r"), requireKnownTenantPermission("intervention_cases", "w"), requireKnownTenantPermission("jobs", "w"), handlers.GetInterventionExecutionReadiness)
+			tenant.GET("/intervention-cases/:caseId/rerun-requests/:requestId/execution-status", executionReadNoStore, requireKnownTenantPermission("intervention_cases", "r"), handlers.GetInterventionExecutionStatus)
 			tenant.POST("/intervention-cases/:caseId/rerun-requests/:requestId/execute", requireKnownTenantPermission("intervention_cases", "r"), requireKnownTenantPermission("intervention_cases", "w"), requireKnownTenantPermission("jobs", "w"), handlers.ExecuteInterventionRerun)
 			tenant.POST("/jobs/:jobId/cancel", middleware.RequirePermission("jobs", "w"), handlers.CancelJob)
 			tenant.GET("/jobs/:jobId/runs", middleware.RequirePermission("jobs", "r"), handlers.ListJobRuns)

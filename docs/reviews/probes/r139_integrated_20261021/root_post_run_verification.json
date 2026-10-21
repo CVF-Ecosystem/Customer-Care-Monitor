@@ -1,0 +1,53 @@
+{
+  "status": "ROOT_READ_ONLY_POST_RUN_REVIEW",
+  "atUTC": "2026-10-21T06:01:32.475504+00:00",
+  "sourceSupervisorTerminal": "HOLD_MYSQL_READY_NOT_PROVEN_AND_CLEANUP_PROTECTED_COMPARISON_HOLD",
+  "cachedOwnedContainer": {
+    "id": "f9f907c29f594c14a92ffb059058576b82861b2503e572b3b6da8ae494852638",
+    "ownershipImageNonceVerified": true,
+    "running": false,
+    "pid": 0,
+    "exitCode": 137,
+    "ports": {},
+    "ownedStopExitCode": 0
+  },
+  "exactDbListener": {
+    "host": "127.0.0.1",
+    "port": 52402,
+    "connectEx": 10035,
+    "absent": false,
+    "socketStatus": "INCONCLUSIVE_10035_NOT_PRESENCE_PROOF",
+    "laterOsQuery": {
+      "status": "PASS_EXACT_LOCAL_LISTENER_ABSENT",
+      "port": 52402,
+      "matchingListenerCount": 0,
+      "querySucceeded": true,
+      "atUtc": "2026-10-21T06:02:41.4904812Z",
+      "method": "Get-NetTCPConnection successful OS inventory, filtered exact port and Listen state"
+    },
+    "absenceProvenByOsQuery": true
+  },
+  "protectedRawDifferences": [
+    {
+      "kind": "containers",
+      "id": "6bb3e504cbed92627f65e526c28c7f60f725442983c03ada63913fa0cc9be251",
+      "changedFields": [
+        "Networks"
+      ],
+      "changes": {
+        "Networks": {
+          "before": "ccma-r123-host-54bc229d,ccma-r123-54bc229d",
+          "after": "ccma-r123-54bc229d,ccma-r123-host-54bc229d"
+        }
+      }
+    }
+  ],
+  "providerCalls": 0,
+  "nativeGoStarted": false,
+  "backendStarted": false,
+  "viteStarted": false,
+  "browserCampaignStarted": false,
+  "rootAdditionalStopOrRestart": 0,
+  "qualification": "Cached original stopped inspect/stop results plus later actual host listener probe; original supervisor HOLD preserved. Stable-field interpretation needs independent review, not raw-equality PASS.",
+  "protectedInterpretation": "Exactly one raw difference: Networks comma-list order, normalized membership equal; original supervisor raw comparison HOLD remains."
+}

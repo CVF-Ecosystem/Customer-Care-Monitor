@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "authorityKind": "OWNER_APPROVED_CHECK_ONLY_CORRECTED_ARGV_NO_SOURCE_OR_RUNTIME",
+  "parentAuthority": "CVF_SESSION/authority/CCMAI-RUNTIME-139.json",
+  "parentAuthorityCommit": "642f5bd026dfe31e6dda6441dd25704eb3ececa3",
+  "baseCommit": "b8ba25225c3732f092f2c16eb91107c0bf75fea8",
+  "ownerApproved": true,
+  "ownerReply": "Duyệt check-only theo phương án; không source/runtime/API",
+  "questionReference": "request_user_input_async/call_a9922e8fa58e4212bcbd1cd64d0c179e/item0",
+  "riskCeiling": "R2",
+  "proposal": "docs/reviews/probes/r139_integrated_20261021/r3_check_only_recovery_proposal.json",
+  "proposalSha256": "d68a2ad038aee7e518fcb8f8dd78ed15765b233fc6e4df6ec91d305d58342600",
+  "launcher": ".cvf/runtime/r139_check_only_launcher.py",
+  "launcherSha256": "4cdfc9e5715fe5a50e9e90990fb5979b78596668fc476c2d51270469e9fbc87a",
+  "checkWorker": "/root/r139_source_evidence_sol Sol Medium",
+  "independentReviewer": "Root independent source REVIEWER; no source authorship",
+  "commitSteward": "Root",
+  "sourceEdits": 0,
+  "compile": 0,
+  "sourceSha256": {
+    "backend/api/handlers/intervention_execution_browser_test.go": "543da3b5542d88ab353ab18b7b57e005d949b5ecc921658f2543dd5c07ffdebf",
+    "scripts/r139_execution_supervisor.py": "3904cb9100615ba6ecbcffb51d78f8f26d2103ae3f34e958ed27a4adfbd9ba9b",
+    "scripts/tests/test_r139_execution_supervisor.py": "7c873b6f97005e7d35229550c8218abb1e1f4586afa53bc06ff6dfec9acfc65a"
+  },
+  "binaryPath": ".cvf/runtime/r139_r3_source_checks/handlers_pure_io.test.exe",
+  "binarySha256": "6b1cbfc6e5eaba7d40c085a9008c22715682abfef8a820c506e1591b7c04d86e",
+  "newCaps": {
+    "correctedPureGoBinaryInvocation": 1
+  },
+  "resumedUnspentCaps": {
+    "workerPurePythonCheck": 1,
+    "rootPurePythonCheck": 1
+  },
+  "goArgv": [
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_r3_source_checks\\handlers_pure_io.test.exe",
+    "-test.run=^TestR139Pure(FinalEvidence(Success|FatalGoexit|IOFailure)|Journal(RequestIOFailureBlocksNext|CapturedResponseSurvivesGoexit|UnsafeResponseHasNoInventedReceipt))$",
+    "-test.count=1",
+    "-test.timeout=30s",
+    "-test.v"
+  ],
+  "goTimeoutSeconds": 45,
+  "pythonArgv": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "scripts/tests",
+    "-p",
+    "test_r139_execution_supervisor.py"
+  ],
+  "pythonTimeoutSecondsEach": 180,
+  "effects": {
+    "keyRead": 0,
+    "DB": 0,
+    "Docker": 0,
+    "fixture": 0,
+    "browser": 0,
+    "network": 0,
+    "provider": 0,
+    "grant": 0,
+    "executePOST": 0
+  },
+  "priorUsagePreserved": "Source round1/1, compile1/1, pureGo1/1 failedflag. This requests a separately counted corrected invocation, never reset of the old attempt. Original two Python slots0/1 remain unused.",
+  "provider": "R139 physicalslot1/1 consumed MAY_HAVE_STARTED; response/billing UNKNOWN, no new money/API.",
+  "acceptance": "No source changes/recompile. Exact pinned binary, six actual Go PASS/zero skips plus both Python suites PASS; independent source review and commit. No E05/E06/M3/runtime acceptance.",
+  "stop": "First failure/mismatch/uncertainty stops, no retry/source repair/recompile/runtime. Worker executes go then worker-python only if go PASS; Root executes root-python only after independent result/hash review of both worker checks.",
+  "workerReturn": "docs/reviews/R139_CHECK_ONLY_WORKER_RETURN_2026-10-21.md",
+  "checkReceipt": "docs/reviews/probes/r139_integrated_20261021/r4_check_only_results.json"
+}

@@ -1,0 +1,19 @@
+{
+  "trancheId": "CCMAI-RUNTIME-139",
+  "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-EVIDENCE-ADMISSION.json",
+  "stage": "BUILD_SOURCE_ONLY",
+  "checks": {
+    "workerOfflineGoCompile": {"cap": 1, "status": "PASS_EXIT_0_CONSUMED_1_OF_1", "command": "go -C backend test -c -o ../.cvf/runtime/r139_r3_source_checks/handlers_pure_io.test.exe ./api/handlers", "offline": "GOPROXY=off GOSUMDB=off GOTOOLCHAIN=local", "rawLog": ".cvf/runtime/r139_r3_source_checks/go_compile.log", "rawLogSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "binarySha256": "6b1cbfc6e5eaba7d40c085a9008c22715682abfef8a820c506e1591b7c04d86e"},
+    "workerPureGoIOCheck": {"cap": 1, "status": "FAIL_EXIT_2_CONSUMED_1_OF_1_NO_RETRY", "rootAudit": "docs/reviews/probes/r139_integrated_20261021/r3_root_go_init_audit.json", "binarySha256": "6b1cbfc6e5eaba7d40c085a9008c22715682abfef8a820c506e1591b7c04d86e", "rawLog": ".cvf/runtime/r139_r3_source_checks/go_pure_io.log", "rawLogSha256": "1c38c6e9e228686c318abe94b136541804a96e6eff5d35fcd5c9fb8b7e7e1d32", "selection": "^TestR139Pure(FinalEvidence(Success|FatalGoexit|IOFailure)|Journal(RequestIOFailureBlocksNext|CapturedResponseSurvivesGoexit|UnsafeResponseHasNoInventedReceipt))$", "timeout": "30s", "failure": "flag provided but not defined: -test", "testsStarted": 0, "testsPassed": 0, "testsSkipped": 0},
+    "workerPurePythonCheck": {"cap": 1, "status": "NOT_INVOKED_AFTER_FAILED_GO_CHECK"},
+    "rootPurePythonCheck": {"cap": 1, "status": "ROOT_OWNED_NOT_USED_BY_WORKER"}
+  },
+  "sourceEffects": {"DB": 0, "fixture": 0, "browser": 0, "network": 0, "provider": 0, "keyRead": 0},
+  "oldPhysicalSlot": "1/1 MAY_HAVE_STARTED consumed; response, usage, billing UNKNOWN",
+  "oldHoldsPreserved": true,
+  "sourceSha256": {
+    "backend/api/handlers/intervention_execution_browser_test.go": "543da3b5542d88ab353ab18b7b57e005d949b5ecc921658f2543dd5c07ffdebf",
+    "scripts/r139_execution_supervisor.py": "3904cb9100615ba6ecbcffb51d78f8f26d2103ae3f34e958ed27a4adfbd9ba9b",
+    "scripts/tests/test_r139_execution_supervisor.py": "7c873b6f97005e7d35229550c8218abb1e1f4586afa53bc06ff6dfec9acfc65a"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-134",
+  "authorityKind": "DISPATCHER_OWNED_WAITDATA_FRESH_BROWSER_PROOF",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Root ORCHESTRATOR / SPEC_AUTHOR",
+    "implementationWorker": "Delegated fixture protocol worker",
+    "reviewer": "Root independent source/browser reviewer",
+    "commitSteward": "Root COMMIT_STEWARD"
+  },
+  "allowedPaths": [
+    "backend/api/handlers/intervention_followup_browser_test.go",
+    "docs/specs/M3_WAITDATA_BROWSER_PROOF_R134_SPEC_2026-10-20.md",
+    "docs/work_orders/CCMAI_RUNTIME_134_WAITDATA_BROWSER_PROOF.md",
+    "docs/reviews/R134_*.md",
+    "docs/reviews/probes/r134_waitdata_proof_20261020/*.json",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-134.json",
+    "CVF_SESSION/tranches/CCMAI-RUNTIME-134.json",
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_R134_WAITDATA_BROWSER_PROOF_2026-10-20.md",
+    "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+    "CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "docs/roadmaps/AI_RUNTIME_GATES_AND_EVIDENCE_2026-09-27.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md"
+  ],
+  "prohibitedEffects": [
+    "Provider/paid API call, grant or execute action; no historical budget reuse",
+    "Installed/customer app, database or external channel mutation; no real credentials",
+    "Production backend behavior, schema, policy/gate/toolchain or dispatcher-seed changes",
+    "Automatic retries/replays, automatic rerun, customer messages or employee decisions",
+    "Unowned resource/process cleanup, Docker prune/remove or image/dependency downloads",
+    "Push, merge, history rewrite or deployment",
+    "Raw archives, binaries, source snapshots or bulky logs added to Git"
+  ],
+  "ownerAuthorization": "2026-10-20 owner: tiep, ban chay xem co vuong khong. Supported connected browser id2 successfully opened about:blank before any runtime. Explicit continuation lifts browser-transfer hold for one separately bounded fresh proof only; old seeds, failures and consumed budgets preserved.",
+  "scope": "Retarget only the audited opt-in synthetic fixture R133 to R134 unique identity/env/database/evidence protocol. Inherit unchanged accepted frontend source372980e5 and verified external dist. Independently execute the previously unperformed request-only browser contract; no production behavior repair.",
+  "verification": "Focused structural/presentation/lifetime tests plus typecheck/Vite; independent source review before one fresh cached-image nonce-owned real API/browser campaign:503/no write, explicit reload,201 capture,201 request, reload persistence, reader no controls, exact terminal/exit/effects and protected resources. No mocked AI governance proof.",
+  "claimBoundary": "Frontend followup/request software slice only. Saving a request is not AI execution approval or CVF governance proof. No fresh provider/live-channel, full M3, hosted CI, pilot or release claim.",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_134_WAITDATA_BROWSER_PROOF.md",
+  "executionBudget": {
+    "newOwnedMySQLFixtures": 1,
+    "ownedFixtureFinalStops": 1,
+    "goBuildOrTestInvocations": 3,
+    "nodeTestOrBuildInvocations": 0,
+    "browserCampaigns": 1,
+    "browserAuthPosts": 4,
+    "browserDataRevisionPosts": 2,
+    "browserRerunRequestPosts": 1,
+    "providerCalls": 0,
+    "sameScopeRepairRounds": 2,
+    "runtimePrerequisite": "Root source acceptance and exact nonce/DSN ownership proof; cached dependencies/images only; no real credentials. Runtime/browser unsupported => stop and report, no workaround or unbounded replay."
+  },
+  "baseCommit": "0a52abfc88d956ac4a4e6ecddf34a7d977ba336e",
+  "status": "FROZEN",
+  "phase": "FREEZE",
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "CLOSED",
+  "buildCommit": "bb8fcffc6b5c9713d32e3c8b1e906bae0cd35ebb",
+  "reviewEvidence": [
+    "docs/reviews/R134_SOURCE_REVIEW_2026-10-20.md",
+    "docs/reviews/R134_RUNTIME_REVIEW_2026-10-20.md"
+  ],
+  "disposition": "REVIEW_PASS",
+  "freeze": "FROZEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS",
+    "FROZEN"
+  ],
+  "closer": "Root independent CLOSER"
+}

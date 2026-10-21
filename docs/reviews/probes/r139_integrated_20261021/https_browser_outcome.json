@@ -1,0 +1,75 @@
+{
+  "status": "PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE",
+  "browserTool": "supported_CUA_IAB",
+  "browserId": "iab",
+  "observedInventoryBrowserId": "2",
+  "protocol": "https",
+  "controlObserved": true,
+  "captureObserved": true,
+  "closeObserved": true,
+  "ownedTabsInitial": 0,
+  "ownedTabsCreated": 1,
+  "ownedTabsClosed": 1,
+  "ownedTabsFinal": 0,
+  "initialUrl": "https://example.com/",
+  "observedLinkName": "Learn more",
+  "observedLinkHref": "https://iana.org/help/example-domains",
+  "afterClickUrl": "https://www.iana.org/help/example-domains",
+  "clicks": 1,
+  "captureCount": 2,
+  "startedAtUTC": "2026-10-21T05:33:01.715Z",
+  "finishedAtUTC": "2026-10-21T05:33:52.443Z",
+  "elapsedSeconds": 50.728,
+  "captures": [
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/https_browser_before.jpg",
+      "sha256": "0c51dc1aa403a647eda2b9453f6292b54568a8c4ba8324d7fd9f9f14333e32ba",
+      "bytes": 52152,
+      "originalUnmodified": true
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/https_browser_after.jpg",
+      "sha256": "61c1862b38ae3c1095b36e907b858c0bf12fca2b1378e4c5884187a0f142ed6f",
+      "bytes": 69818,
+      "originalUnmodified": true
+    }
+  ],
+  "admissionCommit": "09e3356",
+  "freshCampaignUsed": 1,
+  "freshCampaignCap": 1,
+  "originalCampaignUsed": 1,
+  "originalCampaignCap": 1,
+  "provenance": "Root transcript of original supported CUA tool results plus original unmodified screenshot bytes saved from the exact two getScreenshot return values. Not a signed tool export.",
+  "toolTranscript": [
+    {
+      "tool": "cua.getState",
+      "result": "IAB browser2 tabs[] observed"
+    },
+    {
+      "tool": "cua.createBrowserTab",
+      "target": "https://example.com",
+      "result": "owned tab1 Example Domain HTTPS loaded"
+    },
+    {
+      "tool": "tab.getScreenshot",
+      "result": "original before JPEG52152bytes"
+    },
+    {
+      "tool": "tab.playwright.getByRole(link,Learn more).getAttribute(href)",
+      "result": "https://iana.org/help/example-domains"
+    },
+    {
+      "tool": "tab.playwright.getByRole(link,Learn more).click",
+      "result": "one click; AX Example Domains https://www.iana.org/help/example-domains"
+    },
+    {
+      "tool": "tab.getScreenshot",
+      "result": "original after JPEG69818bytes"
+    },
+    {
+      "tool": "tab.close; cua.listTabs(browser2)",
+      "result": "[]"
+    }
+  ],
+  "claimBoundary": "Supported public HTTPS browser navigation/control/capture/close only; app/loopback reachability and G0 aggregate/G1G2/E01E06 NOT proven. No provider or AI governance claim."
+}

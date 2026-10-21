@@ -1,0 +1,50 @@
+// Opt-in R139 same-origin browser proxy. Substituted only by the admitted supervisor.
+import { createRequire } from 'node:module'
+import { openSync, writeSync, fsyncSync, closeSync } from 'node:fs'
+import { join } from 'node:path'
+import { pathToFileURL } from 'node:url'
+
+const root = __R139_FRONTEND_ROOT__
+const runtime = __R139_RUNTIME__
+const apiOrigin = __R139_API_ORIGIN__
+const nonce = __R139_NONCE__
+if (!/^http:\/\/127\.0\.0\.1:[1-9][0-9]{0,4}$/.test(apiOrigin)) throw new Error('R139_LOOPBACK_API_REQUIRED')
+const requireFrontend = createRequire(join(root, 'package.json'))
+const load = async name => import(pathToFileURL(requireFrontend.resolve(name)).href)
+const { defineConfig } = await load('vite')
+const { default: vue } = await load('@vitejs/plugin-vue')
+const { default: vuetify } = await load('vite-plugin-vuetify')
+let authPosts = 0
+let executePosts = 0
+let sequence = 0
+function append(row) {
+  const fd = openSync(join(runtime, 'vite_routes.jsonl'), 'a')
+  try { writeSync(fd, JSON.stringify(row) + '\n'); fsyncSync(fd) } finally { closeSync(fd) }
+}
+export default defineConfig({
+  root,
+  envDir: false,
+  envPrefix: ['R139_DISABLED_AMBIENT_PREFIX_'],
+  plugins: [vue(), vuetify({autoImport:true}), { name:'r139-one-execute-proxy', enforce:'pre', configureServer(server) {
+    server.middlewares.use((req,res,next) => {
+      const path = (req.url || '').split('?',1)[0]
+      if (path === '/__r139_health') {
+        if (req.method !== 'GET') {res.statusCode=405; res.end(); return}
+        res.setHeader('Content-Type','text/plain'); res.end(nonce); return
+      }
+      if (path !== '/api' && !path.startsWith('/api/')) {next(); return}
+      const auth = path === '/api/v1/auth/login' || path === '/api/v1/auth/logout'
+      const execute = /^\/api\/v1\/tenants\/[^/]+\/intervention-cases\/[^/]+\/rerun-requests\/[^/]+\/execute$/.test(path)
+      let allowed = req.method === 'GET' || req.method === 'HEAD'
+      if (req.method === 'POST' && auth) {authPosts++; allowed=authPosts<=4}
+      if (req.method === 'POST' && execute) {executePosts++; allowed=executePosts<=1}
+      const id = ++sequence
+      try {append({phase:'attempt',id,method:req.method,path,allowed,authPosts,executePosts})}
+      catch {res.statusCode=503; res.end(); return}
+      res.once('finish',()=>{try {append({phase:'response',id,method:req.method,path,status:res.statusCode})} catch {}})
+      if (!allowed) {res.statusCode=405; res.end(); return}
+      next()
+    })
+  }}],
+  server: {host:'127.0.0.1', port:3019, strictPort: true, proxy:{'/api':{target:apiOrigin,changeOrigin:true}}},
+})

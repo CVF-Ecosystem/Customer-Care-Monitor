@@ -1,0 +1,22 @@
+{
+  "status": "RESERVED_BEFORE_RUNTIME_INVOCATION",
+  "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTEGRATED-RUNTIME-ADMISSION.json",
+  "ownedFixtureStartCap": 1,
+  "nativeGoInvocationCap": 1,
+  "backendCap": 1,
+  "viteCap": 1,
+  "browserCampaignCap": 1,
+  "authPOSTCap": 4,
+  "nativeExecutePOSTCap": 8,
+  "browserExecutePOSTCap": 1,
+  "grantIssuanceCap": 3,
+  "providerPhysicalCallCap": 1,
+  "approvedBudget": {
+    "amount": 1,
+    "currency": "USD"
+  },
+  "automaticRetry": 0,
+  "providerCallsObserved": 0,
+  "fixtureStartsObserved": 0,
+  "failurePolicy": "Stop first uncertainty; actual resource/provider counters retained, no automatic refund/reset/replay."
+}

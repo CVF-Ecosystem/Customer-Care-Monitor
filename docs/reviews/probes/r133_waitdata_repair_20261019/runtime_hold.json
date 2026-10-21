@@ -1,0 +1,100 @@
+{
+  "trancheId": "CCMAI-RUNTIME-133",
+  "buildCommit": "372980e5cbdc9efdf81c39211c4a82772fffb3c1",
+  "status": "BROWSER_UNAVAILABLE_OWNER_TRANSFER_REQUIRED",
+  "browserFailure": "cua.createBrowserTab(iab, fresh owned URL) returned Browser is not available: iab; no tab/auth/action occurred, no alternate stack attempted",
+  "terminal": {
+    "authPosts": 0,
+    "capturePosts": 0,
+    "captureStatuses": [],
+    "caseVersion": 1,
+    "countsAfter": {
+      "ai_usage_logs": 0,
+      "attempts": 0,
+      "budgets": 0,
+      "executions_claims": 0,
+      "grants": 0,
+      "human_events": 0,
+      "proposals": 1,
+      "receipts": 0,
+      "requests": 0,
+      "revisions": 0,
+      "runs": 0,
+      "snapshots": 2
+    },
+    "countsBefore": {
+      "ai_usage_logs": 0,
+      "attempts": 0,
+      "budgets": 0,
+      "executions_claims": 0,
+      "grants": 0,
+      "human_events": 0,
+      "proposals": 1,
+      "receipts": 0,
+      "requests": 0,
+      "revisions": 0,
+      "runs": 0,
+      "snapshots": 2
+    },
+    "deniedRoutes": 0,
+    "disposition": "WAIT_DATA",
+    "execution": "NOT_RUN",
+    "finishedAt": "2026-10-19T16:00:16.9365149Z",
+    "firstCaptureNoWrite": false,
+    "injectedSourceRead": false,
+    "nativeNoJobsRequestStatus": 403,
+    "nativeReaderCaptureStatus": 403,
+    "nonce": "4eaa01863347acce72b6562203091f46",
+    "observationErrors": null,
+    "requestPosts": 0,
+    "requestStatus": "missing",
+    "serveJoined": true,
+    "serveResult": "http: Server closed",
+    "stopReason": "owned_stop",
+    "testFailed": true,
+    "trancheId": "CCMAI-RUNTIME-133",
+    "workState": "WAITING_ON_DATA"
+  },
+  "actualGoExit": 1,
+  "exitQualification": "Final browser invariants fail because campaign NOT_RUN; no fresh product failure inferred",
+  "ownedFixtureStoppedPreserved": true,
+  "ownedContainerId": "627ddb4a0faa8af73bc5463b4af8cde50e540a1ca5db7260d5e20cada0ce1db3",
+  "oldContainerCount": 26,
+  "oldContainersEqual": true,
+  "oldNetworkIDsEqual": true,
+  "addedVolumes": [
+    "606bfad6db394f7b4f10bb4d8da4d0e3cec57804b8489eb7b96c3ffc00698c26"
+  ],
+  "ownedVolumes": [
+    "606bfad6db394f7b4f10bb4d8da4d0e3cec57804b8489eb7b96c3ffc00698c26"
+  ],
+  "oldVolumesPreserved": true,
+  "browserPOSTs": [],
+  "nativePermissionProbes": {
+    "readerCapture": 403,
+    "noJobsRequest": 403
+  },
+  "sourceHashPreserved": true,
+  "budgetUsed": {
+    "go": 2,
+    "node": 2,
+    "mysql": 1,
+    "mysqlFinalStop": 1,
+    "browserCreateAttempts": 1,
+    "browserTabsCreated": 0,
+    "auth": 0,
+    "capture": 0,
+    "request": 0,
+    "provider": 0
+  },
+  "rawEvidence": "../.ccmai_local_evidence/r133_waitdata_repair_20261019",
+  "rawHashes": {
+    "fixture/backend_terminal.json": "a408ce6b175e27d4c5908db017c1e7049fdaa954824b6e801a13f93f1b6d50fc",
+    "fixture/route_journal.jsonl": "5de78d67001e25f9cb499d5d1fc9b8ab90f17ca2823ef1b245d2b612283e031c",
+    "root_runtime/go-test.jsonl": "2fb282395ed7b4a11302adff975f51fc83b1f4a6d04d4833e58bcf7201fbf6e7",
+    "root_runtime/test_exit.json": "4b88c8eee7372459b1aa8b4539cb96ab75030d95e1273242399565f98a523baf",
+    "provision.json": "4b6d06c9a4afa0e83d024ba1d7b9ffd7988915061880ce6eb93c614e492a6444",
+    "protected_baseline.json": "8aa55ea207348fd557ff8eace37f136348d30811bcc4934e23af987abf758a32"
+  },
+  "osListenerRows": []
+}
