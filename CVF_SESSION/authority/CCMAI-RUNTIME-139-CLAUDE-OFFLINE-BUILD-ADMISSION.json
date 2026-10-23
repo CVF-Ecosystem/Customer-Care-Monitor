@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "DISPATCHER_OWNED_CLAUDE_RECEIVING_OFFLINE_BUILD_ONLY",
+  "date": "2026-10-23",
+  "riskCeiling": "R2",
+  "ownerReply": "chủ động xử lý đi",
+  "ownerGrantInterpretation": "Approves the immediately presented bounded proposal: one receiving offline compile, one conditional exact pure-Go check and conditional native-browser topology amendment. No browser control, inert server/process probe, product runtime, credentials, provider/network or cost authority inferred.",
+  "baseCommit": "51ed56b302292420f362833459be43f78f2fec89",
+  "sourceMaterialCommit": "0ac2661825ff0c85bbdb74805d8086bca68991a7",
+  "productTrees": {
+    "backend": "d8c468c1c77dcadda0db167dcbc26480f1846d11",
+    "frontend": "b23c158a3740ee97b30d17d0a52f5133d4ed5eff"
+  },
+  "proposal": "docs/reviews/R139_CLAUDE_RECEIVING_ADMISSION_PROPOSAL_2026-10-23.md",
+  "proposalSha256": "604af72a73759e33fd906730159603feff0297c984ec5b2d18b132f93c42e394",
+  "proposalBlob": "e078d16755821c14e632d2aab2674fc98ad8c6fe",
+  "roles": {
+    "implementationWorker": "Claude owner-designated receiving worker",
+    "reviewer": "Root independent reviewer of Claude work",
+    "admissionReviewer": "Luna Max independent read-only reviewer; no admission authorship",
+    "commitSteward": "Root"
+  },
+  "sourceSha256": {
+    "scripts/r139_vite_config.mjs.template": "82a1d9ae8576fcd46718945d0a5cb44eb963a2a14d436a16e2bcdfb72b26bee9",
+    "scripts/r139_execution_supervisor.py": "2382b07efe1aa235045ee0ae98e8c7b9ed26378a8233c911b254acbed6ed5053",
+    "scripts/tests/test_r139_execution_supervisor.py": "ed1d50de8c297130b6101e2de3f3def8376dfd8ddd3fe80dfd0dd24485d5b9ec",
+    "backend/api/handlers/intervention_execution_browser_test.go": "fe3f5441c5fe1875ad6a81972fef30b02a857337d9950193f302d6bcf326d6dd"
+  },
+  "dependencySha256": {
+    "backend/go.mod": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+    "backend/go.sum": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b"
+  },
+  "compiler": {
+    "path": "C:/Users/tiennm/AppData/Local/Programs/Go-1.26.7/go/bin/go.exe",
+    "sha256": "5463fe58fa999d74420f00ee1b36d31c3da90a57ff204159f159859567ad61fc",
+    "goroot": "C:/Users/tiennm/AppData/Local/Programs/Go-1.26.7/go"
+  },
+  "caps": {
+    "offlineCompileAttempts": 1,
+    "pureGoInvocations": 1,
+    "browserControl": 0,
+    "inertProbe": 0,
+    "productServer": 0,
+    "DockerDB": 0,
+    "credentialRead": 0,
+    "providerCall": 0,
+    "externalNetwork": 0,
+    "sourceEdits": 0
+  },
+  "runtimeRoot": ".cvf/runtime/r139_claude_receiving_20261023",
+  "compileTimeoutSeconds": 120,
+  "compileArgv": [
+    "-C",
+    "backend",
+    "test",
+    "-c",
+    "-mod=readonly",
+    "-o",
+    "../.cvf/runtime/r139_claude_receiving_20261023/handlers.test.exe",
+    "./api/handlers"
+  ],
+  "testTimeoutSeconds": 30,
+  "pureGoArgv": [
+    "-test.v",
+    "-test.count=1",
+    "-test.timeout=25s",
+    "-test.run=^TestR139Pure(FinalEvidenceSuccess|FinalEvidenceFatalGoexit|FinalEvidenceIOFailure|JournalRequestIOFailureBlocksNext|JournalCapturedResponseSurvivesGoexit|JournalUnsafeResponseHasNoInventedReceipt|RouteAdmission)$"
+  ],
+  "environment": {
+    "inheritAllowlist": [
+      "SYSTEMROOT",
+      "WINDIR",
+      "USERPROFILE",
+      "LOCALAPPDATA"
+    ],
+    "PATH": "Exact compiler bin plus C:/Windows/System32 only",
+    "GOROOT": "compiler.goroot",
+    "GOPROXY": "off",
+    "GOSUMDB": "off",
+    "GOTOOLCHAIN": "local",
+    "CGO_ENABLED": "0",
+    "GOMODCACHE": "C:/Users/tiennm/go/pkg/mod (existing dependency cache; no installs/downloads or mutation admitted)",
+    "TEMP": "runtimeRoot/temp absolute",
+    "TMP": "runtimeRoot/temp absolute",
+    "GOCACHE": "runtimeRoot/gocache absolute",
+    "GOTMPDIR": "runtimeRoot/gotmp absolute",
+    "GOWORK": "off",
+    "GOENV": "off"
+  },
+  "workerAllowedPaths": [
+    "docs/reviews/probes/r139_integrated_20261021/claude_receiving_20261023/build_*",
+    "docs/reviews/R139_CLAUDE_RECEIVING_BUILD_RETURN_2026-10-23.md",
+    ".cvf/runtime/r139_claude_receiving_20261023/**"
+  ],
+  "preLaunch": "Root final dispatch message must name exact committed dispatch HEAD (40hex). Require HEAD equals that value, clean tracked tree, this admission byte-identical to committed blob, accepted product tree IDs/source/dependency/compiler/proposal pins unchanged, fresh runtimeRoot absent and all new paths resolve inside project with no reparse/junction escape. Missing/mismatch HOLD before launch. This self-commit-neutral protocol binds exact final dispatch HEAD in Root handoff message after admission commit; never insert a self-referential hash into this seed. Source-input closure: git status --porcelain is insufficient. Require backend physical file set and tracked bytes to match pinned backend tree; git ls-files --others --exclude-standard -- backend and git ls-files --others --ignored --exclude-standard -- backend must both return empty before compile. This fails closed for ANY untracked/ignored backend input including Go/assembly/syso/embed payloads; no selective extension bypass. Also reject backend symlink/reparse/junction escape and set GOWORK=off, GOENV=off so ambient workspace/user Go config cannot add inputs. Any extra input is HOLD; worker cannot remove/rename it to obtain readiness.",
+  "dependencyCacheContract": "Use only already-extracted cached dependencies; do not download, unpack/install modules, run go env configuration writes or change go.mod/go.sum. Any cache readiness uncertainty HOLD before compile. No fallback toolchain. Cache mutation not admitted; report any unexpected change as HOLD.",
+  "reservation": "Before attempted launch write build_reservation.json exclusively with grant ID, exact dispatch HEAD/tool/source pins, cap1 and usedOrUncertain=1. Slot remains consumed on error/timeout. Append result without deleting original reservation. No second launch under same admission.",
+  "compileReturn": "Store original stdout/stderr and build_compile_receipt.json with actual argv/env allowlist/time/exit/timeout/source/compiler/new binary SHA256 and post-source checks; update build return. No pure test until Root separately records review of actual binary and releases the reserved pure invocation.",
+  "pureRelease": "Root-owned committed docs/reviews/R139_CLAUDE_RECEIVING_BINARY_ADMISSION_2026-10-23.md must name actual compile receipt digest/new binary hash/exact source/compiler pins/selector and explicit RELEASE_PURE_GO_1. Without release pureGo remains HOLD. Release records fresh dispatch HEAD protocol and does not renew caps.",
+  "pureReceipt": "Exclusive build_test_reservation.json then original stdout/stderr and test result receipt; all seven exact tests PASS, no skip/unexpected test, exit0 and post-pins required. Unknown/failed/timedout consumes slot and HOLD/no retry.",
+  "browserTopology": "Owner approves conditional S02 amendment: native browser_subagent may be considered only where its documented policy supports the intended use. Metadata/capability documentation only now; no tool invocation, denied-route retry, fallback stack or assumption of equivalence to CUA. Exact operational admission still required before inert proof or product browser action.",
+  "prohibitions": [
+    "No worker commit/self-review/authority edit",
+    "No source/product/dependency/workflow/gate/Core/history/old-budget edit",
+    "No key/credential/provider/DB/Docker/server/browser/network/inert process effects",
+    "No source helper/controller authored or installed; inline orchestration only for admitted compiler processes and evidence, no reusable helper",
+    "No inferred full M3/runtime/AI-governance/CI/release proof"
+  ],
+  "status": "READY_FOR_COMMITTED_COMPILE_DISPATCH",
+  "claimBoundary": "Offline build/pure file IO software evidence only. Overall product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; historical budgets/drift/tab uncertainty/accounts unchanged.",
+  "independentReview": "docs/reviews/R139_CLAUDE_OFFLINE_ADMISSION_INDEPENDENT_REVIEW_2026-10-23.md"
+}

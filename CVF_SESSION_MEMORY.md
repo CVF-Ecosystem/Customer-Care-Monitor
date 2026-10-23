@@ -11,9 +11,9 @@ Memory class: POINTER_RECORD
 - Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
 
-CCMAI-RUNTIME-139 HOLD_TRANSFER: Claude Revision1 accepted as bounded documentary intake; worker IDE logs not independently verified. Root prepared docs/reviews/R139_CLAUDE_RECEIVING_ADMISSION_PROPOSAL_2026-10-23.md for independent review and owner decision on one offline compile/check plus receiving-browser topology only. Draft is non-effective; no build/browser probe/process fixture/key/API admission now. Current product G0/G1/G2/G3/E05/E06/full M3 OPEN; old r3 spent/expired/newAPI0, older uncertain slot consumed/unknown, protected drift HOLD and old-tab UNKNOWN retained. Facebook/Zalo OA parked; no helper tranche or counter reset.
+CCMAI-RUNTIME-139: owner approved bounded receiving packet (chủ động xử lý đi). Root finalizes independently reviewed committed CCMAI-RUNTIME-139-CLAUDE-OFFLINE-BUILD-ADMISSION before Claude compile1. Claude returns original compile receipt/new binary; Root reviews and commits binary release before conditional pureGo1. No repeated owner confirmation within this scope. Conditional native-browser topology is metadata-only; browser/probe/product fixture/key/API remain0. Overall B BLOCKED_PENDING_OPERATIONAL_ADMISSION; old spent/uncertain counters, protected drift HOLD, old-tab UNKNOWN and Facebook/Zalo OA parked retained.
 
-Root ORCHESTRATOR / WORK_ORDER_AUTHOR after independent REVIEWER acceptance of bounded Claude A documentary revision; no effect execution
+Root ORCHESTRATOR / WORK_ORDER_AUTHOR / COMMIT_STEWARD dispatching owner-approved bounded Claude offline work; Root independent reviewer of Claude execution
 
 Canonical roadmap: docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md. R137 product source unchanged; R139 original setup HOLD retained; no full M3 acceptance.
 
@@ -26,6 +26,8 @@ Claude receiving-worker annex prepared in `docs/work_orders/CCMAI_RUNTIME_139_IN
 Claude A report received; independent review `docs/reviews/R139_CLAUDE_RECEIVING_READINESS_REVIEW_2026-10-23.md`: CHANGES_REQUIRED documentary clarification (HEAD/provenance, command evidence, browser contract, real provider wording, bounded readiness proposal). Four source hashes corroborated; receiving ignored binary/toolchain absent. One consolidated report repair only; B BLOCKED_PENDING_ADMISSION and old counters unchanged.
 
 Claude Revision1 independently ACCEPTED_BOUNDED_DOCUMENTARY_INTAKE; original findings preserved in review supplement. Session logs remain worker-reported/unverified. Proposed next packet: `docs/reviews/R139_CLAUDE_RECEIVING_ADMISSION_PROPOSAL_2026-10-23.md` (one offline build/check and explicit browser topology decision; no effect granted). B remains BLOCKED_PENDING_ADMISSION; no further report-repair loop.
+
+Owner-approved Claude offline admission independently accepted by Luna after one consolidated source-input repair. Admission `CVF_SESSION/authority/CCMAI-RUNTIME-139-CLAUDE-OFFLINE-BUILD-ADMISSION.json`: ready after Root commit for compile1 only; return actual binary receipt to Root before pure1 release. Root final message pins exact dispatch HEAD. No browser/probe/runtime/key/API authority; B still blocked.
 
 ## Historical R114 bounded UI result
 

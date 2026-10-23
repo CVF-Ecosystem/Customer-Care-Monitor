@@ -12,9 +12,9 @@ dispatchKind: INITIAL
 
 ## Current authority and acceptance target
 
-Current dispatch instruction: read the **Claude receiving-worker annex — 2026-10-23** at the end of this order first. Historical runtime authority fields above do not activate a new campaign. Current runtime/key/API authority remains HOLD.
+Current dispatch instruction: read **Owner-approved Claude offline receiving dispatch — 2026-10-23** at the end of this order and its committed CLAUDE-OFFLINE-BUILD-ADMISSION first; the older intake annex is context. Only the bounded compile substage can activate after independent review/commit; pure test requires Root binary release. Historical runtime authority fields above do not activate a new campaign. Product runtime/key/API authority remains HOLD.
 
-Current stage: CCMAI-RUNTIME-139 HOLD_TRANSFER: Claude Revision1 accepted as bounded documentary intake; worker IDE logs not independently verified. Root prepared docs/reviews/R139_CLAUDE_RECEIVING_ADMISSION_PROPOSAL_2026-10-23.md for independent review and owner decision on one offline compile/check plus receiving-browser topology only. Draft is non-effective; no build/browser probe/process fixture/key/API admission now. Current product G0/G1/G2/G3/E05/E06/full M3 OPEN; old r3 spent/expired/newAPI0, older uncertain slot consumed/unknown, protected drift HOLD and old-tab UNKNOWN retained. Facebook/Zalo OA parked; no helper tranche or counter reset.
+Current stage: CCMAI-RUNTIME-139: owner approved bounded receiving packet (chủ động xử lý đi). Root finalizes independently reviewed committed CCMAI-RUNTIME-139-CLAUDE-OFFLINE-BUILD-ADMISSION before Claude compile1. Claude returns original compile receipt/new binary; Root reviews and commits binary release before conditional pureGo1. No repeated owner confirmation within this scope. Conditional native-browser topology is metadata-only; browser/probe/product fixture/key/API remain0. Overall B BLOCKED_PENDING_OPERATIONAL_ADMISSION; old spent/uncertain counters, protected drift HOLD, old-tab UNKNOWN and Facebook/Zalo OA parked retained.
 
 Historical initial preparation boundary: Owner `tiếp` continues G0 in the canonical delivery plan. Immutable dispatcher seed `642f5bd026dfe31e6dda6441dd25704eb3ececa3` precedes source BUILD. This is ONE work order containing G0 preparation, G1 native/backend proof and G2 browser proof, with explicit stage admission. Only source preparation/offline checks and Root's bounded pure-UI tool diagnostic are admitted now. G1/G2 runtime and provider use are HOLD. R117 physical allowance1/1 is consumed; no historical counter or slot transfers. No standalone helper successor follows automatically.
 
@@ -251,3 +251,18 @@ Read docs/reviews/R139_CLAUDE_RECEIVING_READINESS_REVIEW_2026-10-23.md. One cons
 ### Claude Revision1 accepted with qualifications — 2026-10-23
 
 Root accepts A as bounded documentary intake under the revision supplement in R139_CLAUDE_RECEIVING_READINESS_REVIEW_2026-10-23.md. No further report repair requested. See R139_CLAUDE_RECEIVING_ADMISSION_PROPOSAL_2026-10-23.md for the non-effective next decision packet. No build/probe/runtime/provider authority is active; B remains BLOCKED_PENDING_ADMISSION.
+
+
+### Owner-approved Claude offline receiving dispatch — 2026-10-23
+
+Owner replied “chủ động xử lý đi” to the independently reviewed bounded proposal. The new dispatcher-owned admission is `CVF_SESSION/authority/CCMAI-RUNTIME-139-CLAUDE-OFFLINE-BUILD-ADMISSION.json`. It activates only after independent admission review and Root commit. Overall order BLOCKED_WITH_REASON/product B remains blocked; this is a separately bounded same-R139 G0 offline compile/check substage, not a fresh product campaign or helper tranche.
+
+Claude receiving worker instructions:
+
+1. Rehydrate continuity and declare IMPLEMENTATION_WORKER for the offline substage; acknowledge exact admitted roles and original aggregate product HOLD. Verify Root's final 40-hex dispatch commit against HEAD, clean tracked tree and every admission/proposal/source/tree/compiler pin. Check runtime root absent, dependency cache readiness and owned path resolution. Any discrepancy: report HOLD, no launch or repair.
+2. Reserve and perform exactly ONE compile under admission env/timeout/argv; capture original command/stdout/stderr/time/exit and hashes in the admitted build_* evidence paths. Failures/timeouts count; no download, install, fallback, source edit or rerun. Root is commit steward; worker never commits.
+3. Return `docs/reviews/R139_CLAUDE_RECEIVING_BUILD_RETURN_2026-10-23.md` and compile receipt/new binary hash to Root. STOP BEFORE PURE TEST until Root commits the exact binary release artifact specified in admission. This review dependency uses the existing one-check slot and requires no new owner confirmation.
+4. Browser-subagent declaration/policy metadata may be documented without invoking the tool. Conditional S02 topology amendment permits consideration of that tool only under its own supported policy; no browser-control/probe/server/runtime/key/API permission is granted. Policy denial or missing capability remains HOLD, no alternate-stack retry.
+5. After Root binary release only, use the single reserved pure-Go invocation and exact selector, emit original test receipts and per-test counts; otherwise do not test. Final offline check acceptance requires7PASS0SKIP/exit0 and reviewed pins. Product B remains blocked pending exact operational admission.
+
+Return-time closeability: compiler subprocess ownership, timeout and raw receipts must be retained; missing provenance/exit/hash is HOLD. No broad suites. Root independently reviews all actual effects and synchronizes evidence/continuity/catalog. Original R139 source evidence and budgets, protected drift/tab uncertainty and parked accounts retained.

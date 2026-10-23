@@ -35829,6 +35829,20 @@
       "path": "docs/reviews/R139_CLAUDE_RECEIVING_ADMISSION_PROPOSAL_2026-10-23.md",
       "status": "ACTIVE",
       "description": "Non-effective draft for one receiving offline build/check and browser topology decision; no product/runtime/provider grant."
+    },
+    {
+      "id": "r139-claude-offline-build-admission",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CLAUDE-OFFLINE-BUILD-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Owner-approved bounded Claude compile1/conditional pure1 dispatcher admission; no browser control/product runtime/key/API grant."
+    },
+    {
+      "id": "r139-claude-offline-admission-independent-review",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CLAUDE_OFFLINE_ADMISSION_INDEPENDENT_REVIEW_2026-10-23.md",
+      "status": "ACTIVE",
+      "description": "Independent Luna accepts compile-only admission after source-input closure repair; no actual build/runtime proof."
     }
   ]
 }
