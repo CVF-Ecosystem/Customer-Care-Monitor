@@ -3,8 +3,8 @@
   "activePhase": "REVIEW",
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 HOLD_TRANSFER; Owner reiterates no fragmented tranches, follow canonical M3-05/M3-08 roadmap. Keep ONE integrated existing R139 G0 readiness -> G1 backend -> G2 browser -> G3 aggregate disposition; Root consolidates all remaining environment/source/effect/budget/cleanup/review dependencies before redispatch. No new helper tranche/order, repeated metadata/discovery/repair prompt chain or per-check Owner relay. Current environment prerequisites unresolved, so no worker dispatch/effect now; supported environment is a prerequisite inside R139. Inherit accepted source/offline evidence; compile1/1 and pure1/1 spent, no reset. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; runtime/key/API remain0. G0actual/G1integrated/G2/G3/E05/E06/fullM3 OPEN; old provider uncertainty/spent caps, protected drift HOLD, old-tab UNKNOWN and Facebook/Zalo OA parked retained.",
-  "activeRole": "Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD applying Owner roadmap consolidation within existing R139; independent worker review retained",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 HOLD_TRANSFER. MANDATORY Owner directive OWNER-ROADMAP-SINGLE-SCOPE-20261023 applies proactively at every resume/dispatch/repair/review/handoff; never wait for Owner reminder. Root keeps ONE existing integrated M3-05/M3-08 G0->G1->G2->G3 order and consolidated readiness/acceptance matrix; no helper tranche/order, repeated metadata/discovery or per-check relay prompt. Root owns complete redispatch preparation; actual supported environment and exact operational/provider/effect admission remain unresolved, so no worker/runtime dispatch now. Inherit accepted source/offline compile1/1 and pure1/1 spent. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; G0actual/G1integrated/G2/G3/E05/E06/fullM3 OPEN. Old provider spent/unknown counters, protected drift HOLD, old-tab UNKNOWN and Facebook/Zalo OA parked retained.",
+  "activeRole": "Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD consolidating whole R139 roadmap outcome under mandatory standing Owner directive; no worker/runtime dispatch",
   "updatedAt": "2026-10-23",
   "schemaVersion": "1.0",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
@@ -906,5 +906,30 @@
     "newEffectsGranted": false,
     "oldCountersUnchanged": true,
     "effectiveness": "NOT_YET_VERIFIED_BY_PRODUCT_DELIVERY"
+  },
+  "x-mandatoryOwnerRoadmapDirective": {
+    "id": "OWNER-ROADMAP-SINGLE-SCOPE-20261023",
+    "status": "MANDATORY_STANDING_INSTRUCTION",
+    "ownerInstruction": "ghi nhận rõ vào phải thực hiện theo, đừng có để tôi nhắc lần nữa; tiếp tục",
+    "requiresOwnerReminder": false,
+    "appliesAt": [
+      "session rehydration",
+      "scope selection",
+      "work-order dispatch",
+      "failure/repair decision",
+      "review",
+      "handoff"
+    ],
+    "owner": "Root ORCHESTRATOR",
+    "requirements": [
+      "Keep one outcome-based existing R139 order for M3-05/M3-08 G0/G1/G2/G3",
+      "Consolidate prerequisites/effects/cleanup/evidence before redispatch",
+      "Do not create helper tranches/orders or per-check Owner relay prompts",
+      "Continue admitted same-scope dependent work without redundant Owner confirmation",
+      "Report product acceptance and real blocker; never replace progress with document/test/commit counts",
+      "Preserve genuine authority boundaries, spent caps and runtime HOLD until prerequisites change"
+    ],
+    "control": "Documented mandatory manual orchestration contract; no machine-enforcement or behavioral-effectiveness claim",
+    "effectiveness": "OPEN_UNTIL_PRODUCT_DELIVERY"
   }
 }

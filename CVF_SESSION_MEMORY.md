@@ -4,6 +4,10 @@ Memory class: POINTER_RECORD
 
 <!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
 
+## Mandatory standing Owner directive — apply without reminders
+
+`OWNER-ROADMAP-SINGLE-SCOPE-20261023` — **MUST APPLY; Root must not wait for Owner to repeat it.** At every rehydration, scope selection, dispatch, failure/repair decision, review and handoff: keep ONE existing R139 outcome-based order across G0/G1/G2/G3; bind work to roadmap M3-05/M3-08; consolidate all prerequisites/effects/cleanup/acceptance before redispatch; no helper tranches/orders or per-check Owner relay prompt chain. Continue authorized same-scope dependencies without redundant confirmation. Report user capability achieved, exact remaining acceptance gap, genuine blocker and one consolidated route. Mandatory human process contract; effectiveness remains unproved until product acceptance. Existing phase/risk/effect limits, independent review and spent caps remain binding.
+
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
@@ -11,9 +15,9 @@ Memory class: POINTER_RECORD
 - Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
 
-CCMAI-RUNTIME-139 HOLD_TRANSFER; Owner reiterates no fragmented tranches, follow canonical M3-05/M3-08 roadmap. Keep ONE integrated existing R139 G0 readiness -> G1 backend -> G2 browser -> G3 aggregate disposition; Root consolidates all remaining environment/source/effect/budget/cleanup/review dependencies before redispatch. No new helper tranche/order, repeated metadata/discovery/repair prompt chain or per-check Owner relay. Current environment prerequisites unresolved, so no worker dispatch/effect now; supported environment is a prerequisite inside R139. Inherit accepted source/offline evidence; compile1/1 and pure1/1 spent, no reset. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; runtime/key/API remain0. G0actual/G1integrated/G2/G3/E05/E06/fullM3 OPEN; old provider uncertainty/spent caps, protected drift HOLD, old-tab UNKNOWN and Facebook/Zalo OA parked retained.
+CCMAI-RUNTIME-139 HOLD_TRANSFER. MANDATORY Owner directive OWNER-ROADMAP-SINGLE-SCOPE-20261023 applies proactively at every resume/dispatch/repair/review/handoff; never wait for Owner reminder. Root keeps ONE existing integrated M3-05/M3-08 G0->G1->G2->G3 order and consolidated readiness/acceptance matrix; no helper tranche/order, repeated metadata/discovery or per-check relay prompt. Root owns complete redispatch preparation; actual supported environment and exact operational/provider/effect admission remain unresolved, so no worker/runtime dispatch now. Inherit accepted source/offline compile1/1 and pure1/1 spent. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; G0actual/G1integrated/G2/G3/E05/E06/fullM3 OPEN. Old provider spent/unknown counters, protected drift HOLD, old-tab UNKNOWN and Facebook/Zalo OA parked retained.
 
-Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD applying Owner roadmap consolidation within existing R139; independent worker review retained
+Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD consolidating whole R139 roadmap outcome under mandatory standing Owner directive; no worker/runtime dispatch
 
 Owner reiteration2026-10-23: no fragmented tranches; follow roadmap. Root keeps ONE existing R139 outcome-based order across G0/G1/G2/G3; no helper/metadata prompt chain or repeated Owner relay. Complete consolidated readiness/admission before redispatch. Historical substep instructions are completed/spent context; current HOLD_TRANSFER remains. Directive recorded in existing order/continuity, no new learning artifact or tranche. Effectiveness must be judged by product acceptance.
 

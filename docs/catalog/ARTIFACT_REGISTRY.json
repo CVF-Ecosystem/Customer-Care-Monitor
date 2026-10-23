@@ -35044,7 +35044,7 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
       "status": "ACTIVE",
-      "description": "Single integrated R139 M3-05/M3-08 G0/G1/G2/G3 order; Owner consolidation directive, no helper/prompt chain; HOLD_TRANSFER and no current runtime/provider grant."
+      "description": "One integrated R139 roadmap order with mandatory no-reminder Owner directive and consolidated G0-G3/E01-E06 acceptance/dependency matrix; operational HOLD unchanged."
     },
     {
       "id": "r138-handoff-history",

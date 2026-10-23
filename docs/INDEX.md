@@ -4467,7 +4467,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-LOCAL-READINESS-ADMISSION.json`
 - Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open.: `docs/reviews/R139_HTTPS_BROWSER_AND_LOCAL_READINESS_2026-10-21.md`
 - Consolidated initial source defects F01-F08; no runtime/AI governance proof.: `docs/reviews/R139_INITIAL_SOURCE_BUILD_FINDINGS_2026-10-21.md`
-- Single integrated R139 M3-05/M3-08 G0/G1/G2/G3 order; Owner consolidation directive, no helper/prompt chain; HOLD_TRANSFER and no current runtime/provider grant.: `docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md`
+- One integrated R139 roadmap order with mandatory no-reminder Owner directive and consolidated G0-G3/E01-E06 acceptance/dependency matrix; operational HOLD unchanged.: `docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md`
 - Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim.: `docs/reviews/probes/r139_integrated_20261021/owner_one_usd_runtime_grant.json`
 - Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-CREDENTIAL-STAGING-ADMISSION.json`
 - Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim.: `docs/reviews/probes/r139_integrated_20261021/provider_pricing_reference.json`
