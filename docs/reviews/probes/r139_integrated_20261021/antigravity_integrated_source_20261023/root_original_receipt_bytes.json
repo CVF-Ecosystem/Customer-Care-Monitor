@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ROOT_LOSSLESS_PRESERVATION_OF_RECEIVED_WORKER_TEXT_ARTIFACTS",
+  "claimBoundary": "Preserves exact bytes of five received worker files before Git text newline filtering; does not independently prove the underlying process launch/env/exit or runtime behavior. Decode base64 and verify originalSha256 for exact original raw bytes. Existing files are not rewritten.",
+  "files": [
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/antigravity_integrated_source_20261023/python_check_reservation.json",
+      "originalByteLength": 1019,
+      "originalSha256": "f339a1fb15073c3276a386656918df8002c97adfb6b404264645b883b615ce56",
+      "originalBytesBase64": "ew0KICAic3RhdHVzIjogIlJFU0VSVkVEIiwNCiAgInRyYW5jaGVJZCI6ICJDQ01BSS1SVU5USU1FLTEzOSIsDQogICJjaGVjayI6ICJ3b3JrZXJGb2N1c2VkUHl0aG9uIiwNCiAgImNhcCI6IDEsDQogICJ0b29sIjogIkM6XFxVc2Vyc1xcdGllbm5tXFxBcHBEYXRhXFxMb2NhbFxcUHJvZ3JhbXNcXFB5dGhvblxcUHl0aG9uMzEzXFxweXRob24uZXhlIiwNCiAgInRvb2xTaGEyNTYiOiAiYTJhNGVmZjhkMGIwYzg0NTI4NGM2MDdkNTBhM2I1Yjk2NmFjNWEzMTIxNzM2YTJlMzhlMTY1YmQ2NjQ0ZDlmZSIsDQogICJhcmd2IjogWw0KICAgICJDOlxcVXNlcnNcXHRpZW5ubVxcQXBwRGF0YVxcTG9jYWxcXFByb2dyYW1zXFxQeXRob25cXFB5dGhvbjMxM1xccHl0aG9uLmV4ZSIsDQogICAgIi1CIiwNCiAgICAic2NyaXB0cy90ZXN0cy90ZXN0X3IxMzlfZXhlY3V0aW9uX3N1cGVydmlzb3IucHkiDQogIF0sDQogICJjd2QiOiAiRDpcXFVORyBEVU5HIEFJXFxUT09MIEFJIDIwMjZcXENWRi1Xb3Jrc3BhY2VcXEN1c3RvbWVyLUNhcmUtTW9uaXRvci1BSSIsDQogICJ0aW1lb3V0U2Vjb25kcyI6IDYwLA0KICAic291cmNlU2hhMjU2Ijogew0KICAgICJzY3JpcHRzL3IxMzlfZXhlY3V0aW9uX3N1cGVydmlzb3IucHkiOiAiODViNjYxNTM4M2EzMWRhNjViNTUzMzU3NjhjOWYxOTk3ZDFmM2EyMjI4ZWEyNTIxODIwMzU0N2MxMTZkZjhkNyIsDQogICAgInNjcmlwdHMvdGVzdHMvdGVzdF9yMTM5X2V4ZWN1dGlvbl9zdXBlcnZpc29yLnB5IjogIjY3NmFhN2VlOWUwMGFhYWVjOWE1ZGRlNjVmMjI5ZDQ4NGY0YWE5NzJhNzIzMDBkMDg5YzRkNTM0ZTc0NmEyYjYiLA0KICAgICJiYWNrZW5kL2FwaS9oYW5kbGVycy9pbnRlcnZlbnRpb25fZXhlY3V0aW9uX2Jyb3dzZXJfdGVzdC5nbyI6ICIxODM3MjlkZWRjODQ5MGI3ZDFhM2M5NzgzYTZhYWE0ZjNkMzZjYmNiNjZhNWJjNjJmODIxZWEwNzg1OTBlMjQyIg0KICB9LA0KICAicmVzZXJ2ZWRBdFVUQyI6ICIyMDI2LTEwLTIzVDE0OjQzOjQ5LjE3NDcwOCswMDowMCINCn0=",
+      "gitTextBlobSha256": "149869c807a317e7e40defb62078befd19c81f70c201f975cd8a4e46077cf78e",
+      "gitTextByteLength": 999,
+      "workingEqualsGitBlob": false
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/antigravity_integrated_source_20261023/worker_compile_held.json",
+      "originalByteLength": 425,
+      "originalSha256": "a3a21689cd3078da7b1be5f8b4f21b44731fd210807b6bd9d3f8681ea6bd7f8f",
+      "originalBytesBase64": "ewogICJjaGVjayI6ICJ3b3JrZXJPZmZsaW5lR29Db21waWxlIiwKICAic3RhdHVzIjogIkhFTERfRFVFX1RPX1BSSU9SX0NIRUNLX0ZBSUxVUkUiLAogICJyZWFzb24iOiAiRmlyc3QgZmFpbHVyZSAod29ya2VyRm9jdXNlZFB5dGhvbiBleGl0Q29kZSAxKSBzdG9wcyBkZXBlbmRlbnQgY2hlY2tzIGFuZCBwcmVzZXJ2ZXMgcmF3IG91dHB1dCB1bmRlciBmYWlsLWNsb3NlZCBydWxlOyBubyBhdXRvbWF0aWMgcmV0cnkgb3IgdW5hcHByb3ZlZCBjb21waWxlIiwKICAiYXR0ZW1wdHNVc2VkIjogMCwKICAiYXR0ZW1wdHNSZW1haW5pbmciOiAxLAogICJiaW5hcnlQcm9kdWNlZCI6IGZhbHNlLAogICJiaW5hcnlQYXRoIjogbnVsbCwKICAiYmluYXJ5U2hhMjU2IjogbnVsbCwKICAicmVjb3JkZWRBdFVUQyI6ICIyMDI2LTEwLTIzVDE0OjQ1OjAwWiIKfQo=",
+      "gitTextBlobSha256": "a3a21689cd3078da7b1be5f8b4f21b44731fd210807b6bd9d3f8681ea6bd7f8f",
+      "gitTextByteLength": 425,
+      "workingEqualsGitBlob": true
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/antigravity_integrated_source_20261023/worker_python_result.json",
+      "originalByteLength": 248,
+      "originalSha256": "af2edc65a5b8b0dda7798a2ab1bbebbdc28a86acd68ee61f322ca95fd885bd1a",
+      "originalBytesBase64": "ew0KICAiY2hlY2siOiAid29ya2VyRm9jdXNlZFB5dGhvbiIsDQogICJleGl0Q29kZSI6IDEsDQogICJzdGFydFVUQyI6ICIyMDI2LTEwLTIzVDE0OjQzOjQ5LjE3NTY4MyswMDowMCIsDQogICJlbmRVVEMiOiAiMjAyNi0xMC0yM1QxNDo0Mzo1MC4xODkzNzMrMDA6MDAiLA0KICAiZWxhcHNlZFNlY29uZHMiOiAxLjAxNCwNCiAgInN0ZG91dEJ5dGVzIjogMCwNCiAgInN0ZGVyckJ5dGVzIjogODkwLA0KICAicGFzc2VkIjogZmFsc2UNCn0=",
+      "gitTextBlobSha256": "7419b1f0588f02c33b42aa1ca3f065d030c98d1db7f69c6065f20103fe38a3bf",
+      "gitTextByteLength": 239,
+      "workingEqualsGitBlob": false
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/antigravity_integrated_source_20261023/worker_python_stderr.log",
+      "originalByteLength": 890,
+      "originalSha256": "0afa053a451525de0fce9fe87f492e5e1dae36ef623bb4256862e7aa5f84fe28",
+      "originalBytesBase64": "Li4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uRi4uLi4uDQo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09DQpGQUlMOiB0ZXN0X3ZlcmlmeV9icm93c2VyX3Rlcm1pbmFsX2Nsb3NlX3Bvc2l0aXZlX2FuZF9yZWplY3Rpb25zIChfX21haW5fXy5SMTM5U3VwZXJ2aXNvclB1cmVUZXN0cy50ZXN0X3ZlcmlmeV9icm93c2VyX3Rlcm1pbmFsX2Nsb3NlX3Bvc2l0aXZlX2FuZF9yZWplY3Rpb25zKQ0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQ0KVHJhY2ViYWNrIChtb3N0IHJlY2VudCBjYWxsIGxhc3QpOg0KICBGaWxlICJEOlxVTkcgRFVORyBBSVxUT09MIEFJIDIwMjZcQ1ZGLVdvcmtzcGFjZVxDdXN0b21lci1DYXJlLU1vbml0b3ItQUlcc2NyaXB0c1x0ZXN0c1x0ZXN0X3IxMzlfZXhlY3V0aW9uX3N1cGVydmlzb3IucHkiLCBsaW5lIDgxMCwgaW4gdGVzdF92ZXJpZnlfYnJvd3Nlcl90ZXJtaW5hbF9jbG9zZV9wb3NpdGl2ZV9hbmRfcmVqZWN0aW9ucw0KICAgIHdpdGggc2VsZi5hc3NlcnRSYWlzZXNSZWdleChtb2R1bGUuSG9sZCwgIkJST1dTRVJfQ0xPU0VfQUZURVJfREVBRExJTkUiKToNCiAgICAgICAgIH5+fn5+fn5+fn5+fn5+fn5+fn5+fn5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl4NCkFzc2VydGlvbkVycm9yOiBIb2xkIG5vdCByYWlzZWQNCg0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQ0KUmFuIDM5IHRlc3RzIGluIDAuNjk2cw0KDQpGQUlMRUQgKGZhaWx1cmVzPTEpDQo=",
+      "gitTextBlobSha256": "a00da7f4154686eb922265746eb8572ee35b4d16da90b89f8f7576d559ef2979",
+      "gitTextByteLength": 876,
+      "workingEqualsGitBlob": false
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/antigravity_integrated_source_20261023/worker_python_stdout.log",
+      "originalByteLength": 0,
+      "originalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "originalBytesBase64": "",
+      "gitTextBlobSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitTextByteLength": 0,
+      "workingEqualsGitBlob": true
+    }
+  ]
+}

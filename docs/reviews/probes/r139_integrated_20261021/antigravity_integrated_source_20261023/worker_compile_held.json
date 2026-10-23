@@ -1,0 +1,11 @@
+{
+  "check": "workerOfflineGoCompile",
+  "status": "HELD_DUE_TO_PRIOR_CHECK_FAILURE",
+  "reason": "First failure (workerFocusedPython exitCode 1) stops dependent checks and preserves raw output under fail-closed rule; no automatic retry or unapproved compile",
+  "attemptsUsed": 0,
+  "attemptsRemaining": 1,
+  "binaryProduced": false,
+  "binaryPath": null,
+  "binarySha256": null,
+  "recordedAtUTC": "2026-10-23T14:45:00Z"
+}

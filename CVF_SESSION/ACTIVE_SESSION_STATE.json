@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 Owner explicitly APPROVED combined Antigravity continuation (duyet2026-10-23 at proposal91abea4d). Source-stage admission permits ONE three-file native-browser validator correction, workerPython1/offlineCompile1 then Root independentPython1/sharedPureGo1 after audit. Independent Luna admission PASS; source tools/pins and unchanged retired G0 section verified. Worker starts ONLY from exact committed dispatch HEAD named in Root message, rehydrates/acknowledges source role, then returns once; no worker commit/seed/continuity edits. Same existing M3-05/M3-08 G0->G1->G2->G3 order; no helper tranche/toy retry/per-check Owner relay. Fresh integrated runtime/API1/USD1 and Owner exact-tab manual-close fallback APPROVED, conditional on accepted source/actual pins/ownership and committed independently reviewed runtime supplement; not executable now, no renewed generic permission. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; G1/G2/G3/E05/E06/fullM3 OPEN. Old G0 campaign1/1, old provider uncertainty, protected drift/old-tab UNKNOWN and Facebook/Zalo OA parked retained.",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 source return CHANGES_REQUIRED: workerPython39tests38PASS1FAIL, authoring1/1 and workerPython1/1 spent; compile0/1, RootPython0/1 and pureGo0/1 unused. Root+Sol consolidated F01-F08 native identity/evidence/deadline/type/terminal gaps, no known-failing rerun. ONE manual reviewer-directed three-file repair under standing same-scope continuation, independent Luna admission PASS; use only exact committed dispatch HEAD from Root after gates/commit; worker edits once and returns with NO source checks. Root retains existing unused Python1->compile1->auditedPureGo1; no added check/API/USD/resource slots. Same R139 M3-05/M3-08 G0->G3 order, no helper tranche/automatic retry/Owner relay. Future campaign/API1/USD1/Owner exact-page close remains approved conditional, not executable now. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; E05/E06/G1/G2/G3/fullM3 OPEN; old G0 spent/provider uncertainty/protected drift/old-tab UNKNOWN and Facebook/ZaloOA parked retained.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD dispatching admitted source stage; Root independent source/runtime REVIEWER, external Antigravity worker implements",
+  "activeRole": "Root independent source REVIEWER / ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD returning consolidated defects; external Antigravity repair worker, no runtime",
   "updatedAt": "2026-10-23",
   "x-resolvedCoreCommit": "b69e1088978e8c90ac58a2243fcf8f90d0f857ed",
   "x-ownerRoadmapDiscipline": {
@@ -3097,7 +3097,7 @@
     "date": "2026-10-23",
     "ownerReply": "duyệt",
     "approvedProposalCommit": "91abea4d5e1ac6aab3073da62d97f55912bb7cc0",
-    "status": "INDEPENDENTLY_REVIEWED_SOURCE_READY_ON_COMMITTED_DISPATCH",
+    "status": "SOURCE_RETURN_CHANGES_REQUIRED_MANUAL_REPAIR_PENDING_DISPATCH",
     "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-INTEGRATED-SOURCE-ADMISSION.json",
     "admissionReview": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_ADMISSION_REVIEW_2026-10-23.md",
     "sourceGranted": true,
@@ -3109,7 +3109,7 @@
     "runtimeExecutableNow": false,
     "providerExecutableNow": false,
     "sourceUse": {
-      "workerPython": 0,
+      "workerPython": 1,
       "workerCompile": 0,
       "rootPython": 0,
       "sharedPureGoCustodiedByRoot": 0
@@ -3119,5 +3119,36 @@
     "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
     "admissionSha256": "b729dd061ffd1ae2400bd1ff500802723a6ac7a2c798b7eb630feb3eba198fb0",
     "dispatchBinding": "Exact committed HEAD in Root final dispatch message; worker requires exact match before any writes. No self-referential HEAD in immutable seed."
+  },
+  "x-antigravityIntegratedSourceReturn20261023": {
+    "date": "2026-10-23",
+    "status": "CHANGES_REQUIRED_MANUAL_REPAIR_READY_ON_COMMITTED_DISPATCH",
+    "workerReturn": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_SOURCE_WORKER_RETURN_2026-10-23.md",
+    "rootReview": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_SOURCE_ROOT_REVIEW_2026-10-23.md",
+    "repairAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-INTEGRATED-REPAIR-ADMISSION.json",
+    "repairAdmissionReview": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_REPAIR_ADMISSION_REVIEW_2026-10-23.md",
+    "workerPythonTests": 39,
+    "workerPythonPass": 38,
+    "workerPythonFail": 1,
+    "workerPythonExit": 1,
+    "checksUsed": {
+      "workerPython": 1,
+      "compile": 0,
+      "rootPython": 0,
+      "pureGo": 0
+    },
+    "manualRepairRoundsUsed": 0,
+    "newVerificationSlots": 0,
+    "runtimeExecutableNow": false,
+    "providerExecutableNow": false,
+    "originalFailuresPreserved": true,
+    "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+    "repairAdmissionSha256": "2dea7e9ebc15146f49928833dee2b699c73f92080f441f954cf41279e239661a",
+    "repairRound": "One manual reviewer-directed round, unused until external repair acknowledgment; no worker checks",
+    "remainingCheckCustody": {
+      "RootPython": 1,
+      "RootOfflineCompile": 1,
+      "RootPureGo": 1
+    }
   }
 }

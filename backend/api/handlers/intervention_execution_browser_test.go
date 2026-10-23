@@ -37,37 +37,265 @@ import (
 )
 
 type r139Admission struct {
-	TrancheID            string            `json:"trancheId"`
-	Kind                 string            `json:"kind"`
-	SourceCommit         string            `json:"sourceCommit"`
-	FixtureName          string            `json:"fixtureName"`
-	BrowserReceiptSHA256 string            `json:"browserReceiptSha256"`
-	BrowserReceiptPath   string            `json:"browserReceiptPath"`
-	GoTestBinarySHA256   string            `json:"goTestBinarySha256"`
-	SourceSHA256         map[string]string `json:"sourceSha256"`
-	RuntimeRoot          string            `json:"runtimeRoot"`
-	ExternalEvidenceDir  string            `json:"externalEvidenceDir"`
-	BrowserSupported     bool              `json:"browserSupported"`
-	OwnerApproved        bool              `json:"ownerApproved"`
-	NativeExecutePOST    int               `json:"nativeExecutePOST"`
-	BrowserExecutePOST   int               `json:"browserExecutePOST"`
-	GrantCap             int               `json:"grantCap"`
-	ProviderCap          int               `json:"providerCap"`
-	GrantDeadlineUTC     string            `json:"grantDeadlineUTC"`
-	Provider             string            `json:"provider"`
-	Model                string            `json:"model"`
-	Endpoint             string            `json:"endpoint"`
-	CompletionTokens     int               `json:"completionTokens"`
-	MaxRequestBytes      int64             `json:"maxRequestBytes"`
-	Thinking             bool              `json:"thinking"`
-	SyntheticNamespace   string            `json:"syntheticNamespace"`
-	IssuerRole           string            `json:"issuerRole"`
-	ActorRole            string            `json:"actorRole"`
-	ConfigRef            string            `json:"configRef"`
-	PromptVersion        string            `json:"promptVersion"`
-	PromptSHA256         string            `json:"promptSha256"`
-	BackendTree          string            `json:"backendTree"`
-	FrontendTree         string            `json:"frontendTree"`
+	TrancheID                 string            `json:"trancheId"`
+	Kind                      string            `json:"kind"`
+	SourceCommit              string            `json:"sourceCommit"`
+	FixtureName               string            `json:"fixtureName"`
+	BrowserTool               string            `json:"browserTool"`
+	BrowserReceiptSHA256      string            `json:"browserReceiptSha256"`
+	BrowserReceiptPath        string            `json:"browserReceiptPath"`
+	BrowserCloseReceiptPath   string            `json:"browserCloseReceiptPath"`
+	BrowserCloseReceiptSHA256 string            `json:"browserCloseReceiptSha256"`
+	CampaignNonce             string            `json:"campaignNonce"`
+	BrowserSessionID          string            `json:"browserSessionId"`
+	PageID                    string            `json:"pageId"`
+	FallbackCloseOperator     string            `json:"fallbackCloseOperator"`
+	GoTestBinarySHA256        string            `json:"goTestBinarySha256"`
+	SourceSHA256              map[string]string `json:"sourceSha256"`
+	RuntimeRoot               string            `json:"runtimeRoot"`
+	ExternalEvidenceDir       string            `json:"externalEvidenceDir"`
+	BrowserSupported          bool              `json:"browserSupported"`
+	OwnerApproved             bool              `json:"ownerApproved"`
+	NativeExecutePOST         int               `json:"nativeExecutePOST"`
+	BrowserExecutePOST        int               `json:"browserExecutePOST"`
+	GrantCap                  int               `json:"grantCap"`
+	ProviderCap               int               `json:"providerCap"`
+	GrantDeadlineUTC          string            `json:"grantDeadlineUTC"`
+	Provider                  string            `json:"provider"`
+	Model                     string            `json:"model"`
+	Endpoint                  string            `json:"endpoint"`
+	CompletionTokens          int               `json:"completionTokens"`
+	MaxRequestBytes           int64             `json:"maxRequestBytes"`
+	Thinking                  bool              `json:"thinking"`
+	SyntheticNamespace        string            `json:"syntheticNamespace"`
+	IssuerRole                string            `json:"issuerRole"`
+	ActorRole                 string            `json:"actorRole"`
+	ConfigRef                 string            `json:"configRef"`
+	PromptVersion             string            `json:"promptVersion"`
+	PromptSHA256              string            `json:"promptSha256"`
+	BackendTree               string            `json:"backendTree"`
+	FrontendTree              string            `json:"frontendTree"`
+}
+
+func r139VerifyBrowserReservation(a r139Admission, browserRaw []byte) error {
+	if !a.BrowserSupported {
+		return errors.New("browserSupported is false")
+	}
+	var proof map[string]any
+	if err := json.Unmarshal(browserRaw, &proof); err != nil {
+		return fmt.Errorf("invalid json in browser proof: %w", err)
+	}
+
+	tool := a.BrowserTool
+	if tool == "" || tool == "supported_CUA_IAB" {
+		status, _ := proof["status"].(string)
+		browserID, _ := proof["browserId"].(string)
+		ctrl, _ := proof["controlObserved"].(bool)
+		capt, _ := proof["captureObserved"].(bool)
+		closed, _ := proof["closeObserved"].(bool)
+		ownedTabs, _ := proof["ownedTabsFinal"].(float64)
+		proto, _ := proof["protocol"].(string)
+
+		if status != "PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE" ||
+			browserID != "iab" ||
+			!ctrl || !capt || !closed ||
+			ownedTabs != 0 ||
+			(proto != "http" && proto != "https") {
+			return errors.New("legacy IAB browser proof content incomplete")
+		}
+		return nil
+	}
+
+	if tool == "antigravity_native" {
+		status, _ := proof["status"].(string)
+		if status == "CLOSED_EXACT_OWNED_PAGE" {
+			return errors.New("final-close evidence rejected as prefixture reservation")
+		}
+		if status != "RESERVED_NATIVE_PAGE_CONTROL_CAPTURE" {
+			return fmt.Errorf("unexpected reservation status: %s", status)
+		}
+
+		browserID, _ := proof["browserId"].(string)
+		if browserID != "antigravity_native" {
+			return fmt.Errorf("unexpected browserId: %s", browserID)
+		}
+
+		excl, _ := proof["exclusiveReservation"].(bool)
+		if !excl {
+			return errors.New("exclusiveReservation must be true")
+		}
+
+		ctrl, _ := proof["controlObserved"].(bool)
+		if !ctrl {
+			return errors.New("controlObserved must be true")
+		}
+
+		capt, _ := proof["captureObserved"].(bool)
+		if !capt {
+			return errors.New("captureObserved must be true")
+		}
+
+		if closed, ok := proof["closeObserved"].(bool); ok && closed {
+			return errors.New("early closeObserved is forbidden in reservation")
+		}
+
+		proto, _ := proof["protocol"].(string)
+		if proto != "http" && proto != "https" {
+			return fmt.Errorf("unsupported protocol: %s", proto)
+		}
+
+		closeMode, _ := proof["closeMode"].(string)
+		if closeMode != "api" && closeMode != "operator" && closeMode != "operator_fallback" {
+			return fmt.Errorf("invalid closeMode: %s", closeMode)
+		}
+
+		pageID, _ := proof["pageId"].(string)
+		if strings.TrimSpace(pageID) == "" {
+			return errors.New("pageId is required in reservation")
+		}
+		if a.PageID != "" && pageID != a.PageID {
+			return fmt.Errorf("pageId mismatch: expected %s, got %s", a.PageID, pageID)
+		}
+
+		nonce, _ := proof["campaignNonce"].(string)
+		if strings.TrimSpace(nonce) == "" {
+			return errors.New("campaignNonce is required in reservation")
+		}
+		if a.CampaignNonce != "" && nonce != a.CampaignNonce {
+			return fmt.Errorf("campaignNonce mismatch: expected %s, got %s", a.CampaignNonce, nonce)
+		}
+
+		sessionID, _ := proof["browserSessionId"].(string)
+		if strings.TrimSpace(sessionID) == "" {
+			return errors.New("browserSessionId is required in reservation")
+		}
+		if a.BrowserSessionID != "" && sessionID != a.BrowserSessionID {
+			return fmt.Errorf("browserSessionId mismatch: expected %s, got %s", a.BrowserSessionID, sessionID)
+		}
+
+		trancheID, _ := proof["trancheId"].(string)
+		if trancheID != "" && a.TrancheID != "" && trancheID != a.TrancheID {
+			return fmt.Errorf("trancheId mismatch: expected %s, got %s", a.TrancheID, trancheID)
+		}
+
+		op, _ := proof["operator"].(string)
+		if strings.TrimSpace(op) == "" {
+			return errors.New("operator is required in reservation")
+		}
+		expectedOp := a.FallbackCloseOperator
+		if a.FallbackCloseOperator == "" {
+			expectedOp = a.ActorRole
+		}
+		if a.FallbackCloseOperator != "" && op != a.FallbackCloseOperator {
+			return fmt.Errorf("operator mismatch: expected %s, got %s", expectedOp, op)
+		}
+
+		if strings.TrimSpace(a.BrowserCloseReceiptPath) == "" {
+			return errors.New("browserCloseReceiptPath is required in admission")
+		}
+
+		return nil
+	}
+
+	return fmt.Errorf("unsupported browserTool: %s", tool)
+}
+
+func r139VerifyBrowserTerminalClose(a r139Admission, closeRaw []byte) error {
+	var receipt map[string]any
+	if err := json.Unmarshal(closeRaw, &receipt); err != nil {
+		return fmt.Errorf("invalid json in terminal close receipt: %w", err)
+	}
+
+	status, _ := receipt["status"].(string)
+	if status != "CLOSED_EXACT_OWNED_PAGE" {
+		return fmt.Errorf("status must be CLOSED_EXACT_OWNED_PAGE, got %s", status)
+	}
+
+	browserID, _ := receipt["browserId"].(string)
+	if browserID != "antigravity_native" {
+		return fmt.Errorf("browserId must be antigravity_native, got %s", browserID)
+	}
+
+	closeObserved, _ := receipt["closeObserved"].(bool)
+	if !closeObserved {
+		return errors.New("closeObserved must be true")
+	}
+
+	ownedTabs, ok := receipt["ownedTabsFinal"].(float64)
+	if !ok || ownedTabs != 0 {
+		return fmt.Errorf("ownedTabsFinal must be 0, got %v", receipt["ownedTabsFinal"])
+	}
+
+	pageID, _ := receipt["pageId"].(string)
+	if strings.TrimSpace(pageID) == "" {
+		return errors.New("pageId is required in terminal close receipt")
+	}
+	if a.PageID != "" && pageID != a.PageID {
+		return fmt.Errorf("pageId mismatch: expected %s, got %s", a.PageID, pageID)
+	}
+
+	nonce, _ := receipt["campaignNonce"].(string)
+	if strings.TrimSpace(nonce) == "" {
+		return errors.New("campaignNonce is required in terminal close receipt")
+	}
+	if a.CampaignNonce != "" && nonce != a.CampaignNonce {
+		return fmt.Errorf("campaignNonce mismatch: expected %s, got %s", a.CampaignNonce, nonce)
+	}
+
+	sessionID, _ := receipt["browserSessionId"].(string)
+	if strings.TrimSpace(sessionID) == "" {
+		return errors.New("browserSessionId is required in terminal close receipt")
+	}
+	if a.BrowserSessionID != "" && sessionID != a.BrowserSessionID {
+		return fmt.Errorf("browserSessionId mismatch: expected %s, got %s", a.BrowserSessionID, sessionID)
+	}
+
+	closeMode, _ := receipt["closeMode"].(string)
+	if closeMode != "api" && closeMode != "operator" && closeMode != "operator_fallback" {
+		return fmt.Errorf("invalid closeMode: %s", closeMode)
+	}
+
+	op, _ := receipt["operator"].(string)
+	if strings.TrimSpace(op) == "" {
+		return errors.New("operator is required in terminal close receipt")
+	}
+	expectedOp := a.FallbackCloseOperator
+	if a.FallbackCloseOperator == "" {
+		expectedOp = a.ActorRole
+	}
+	if a.FallbackCloseOperator != "" && op != a.FallbackCloseOperator {
+		return fmt.Errorf("operator mismatch: expected %s, got %s", expectedOp, op)
+	}
+
+	closedAtStr, _ := receipt["closedAtUTC"].(string)
+	if strings.TrimSpace(closedAtStr) == "" || !strings.HasSuffix(closedAtStr, "Z") {
+		return errors.New("closedAtUTC must be non-empty ISO 8601 ending in Z")
+	}
+
+	closedAt, err := time.Parse(time.RFC3339Nano, closedAtStr)
+	if err != nil {
+		closedAt, err = time.Parse(time.RFC3339, closedAtStr)
+	}
+	if err != nil {
+		return fmt.Errorf("invalid closedAtUTC: %w", err)
+	}
+
+	now := time.Now().UTC()
+	if closedAt.After(now.Add(time.Minute)) {
+		return errors.New("closedAtUTC cannot be in the future")
+	}
+
+	if a.GrantDeadlineUTC != "" {
+		deadline, dErr := time.Parse(time.RFC3339Nano, a.GrantDeadlineUTC)
+		if dErr != nil {
+			deadline, dErr = time.Parse(time.RFC3339, a.GrantDeadlineUTC)
+		}
+		if dErr == nil && closedAt.After(deadline) {
+			return errors.New("closedAtUTC cannot be after grant deadline")
+		}
+	}
+
+	return nil
 }
 
 func r139BrowserRoute(method, path string) (auth, execute, read bool) {
@@ -88,6 +316,259 @@ func TestR139PureRouteAdmission(t *testing.T) {
 	}
 	auth, execute, read := r139BrowserRoute(http.MethodPost, "/api/v1/tenants/t/intervention-cases/c/rerun-requests/r/execute")
 	if auth || !execute || read { t.Fatal("R139 execute route") }
+}
+
+func TestR139PureBrowserReservationAdmission(t *testing.T) {
+	iabAdmission := r139Admission{
+		BrowserSupported: true,
+		BrowserTool:      "supported_CUA_IAB",
+	}
+	validIABRaw := []byte(`{
+		"status": "PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE",
+		"browserId": "iab",
+		"controlObserved": true,
+		"captureObserved": true,
+		"closeObserved": true,
+		"ownedTabsFinal": 0,
+		"protocol": "http"
+	}`)
+	if err := r139VerifyBrowserReservation(iabAdmission, validIABRaw); err != nil {
+		t.Fatalf("expected legacy IAB pass, got: %v", err)
+	}
+
+	nativeAdmission := r139Admission{
+		TrancheID:               "CCMAI-RUNTIME-139",
+		BrowserSupported:        true,
+		BrowserTool:             "antigravity_native",
+		PageID:                  "page-test-123",
+		CampaignNonce:           "nonce-abc-456",
+		BrowserSessionID:        "session-xyz-789",
+		FallbackCloseOperator:   "Owner",
+		BrowserCloseReceiptPath: "docs/reviews/probes/close.json",
+	}
+	validNativeRaw := []byte(`{
+		"status": "RESERVED_NATIVE_PAGE_CONTROL_CAPTURE",
+		"browserId": "antigravity_native",
+		"exclusiveReservation": true,
+		"controlObserved": true,
+		"captureObserved": true,
+		"closeObserved": false,
+		"protocol": "http",
+		"closeMode": "operator_fallback",
+		"pageId": "page-test-123",
+		"campaignNonce": "nonce-abc-456",
+		"browserSessionId": "session-xyz-789",
+		"trancheId": "CCMAI-RUNTIME-139",
+		"operator": "Owner"
+	}`)
+	if err := r139VerifyBrowserReservation(nativeAdmission, validNativeRaw); err != nil {
+		t.Fatalf("expected native reservation pass, got: %v", err)
+	}
+
+	finalCloseAsReservation := []byte(`{
+		"status": "CLOSED_EXACT_OWNED_PAGE",
+		"browserId": "antigravity_native",
+		"exclusiveReservation": true,
+		"controlObserved": true,
+		"captureObserved": true,
+		"closeObserved": true,
+		"ownedTabsFinal": 0,
+		"protocol": "http",
+		"closeMode": "operator_fallback",
+		"pageId": "page-test-123",
+		"campaignNonce": "nonce-abc-456",
+		"browserSessionId": "session-xyz-789",
+		"operator": "Owner"
+	}`)
+	if err := r139VerifyBrowserReservation(nativeAdmission, finalCloseAsReservation); err == nil {
+		t.Fatal("expected rejection of final-close receipt as prefixture reservation")
+	}
+
+	earlyCloseRaw := []byte(`{
+		"status": "RESERVED_NATIVE_PAGE_CONTROL_CAPTURE",
+		"browserId": "antigravity_native",
+		"exclusiveReservation": true,
+		"controlObserved": true,
+		"captureObserved": true,
+		"closeObserved": true,
+		"protocol": "http",
+		"closeMode": "operator_fallback",
+		"pageId": "page-test-123",
+		"campaignNonce": "nonce-abc-456",
+		"browserSessionId": "session-xyz-789",
+		"operator": "Owner"
+	}`)
+	if err := r139VerifyBrowserReservation(nativeAdmission, earlyCloseRaw); err == nil {
+		t.Fatal("expected rejection of early closeObserved=true in reservation")
+	}
+
+	for _, tc := range []struct {
+		name string
+		raw  []byte
+	}{
+		{"wrong-pageId", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"wrong-page","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","operator":"Owner"}`)},
+		{"wrong-nonce", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"wrong-nonce","browserSessionId":"session-xyz-789","operator":"Owner"}`)},
+		{"wrong-session", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"wrong-session","operator":"Owner"}`)},
+		{"wrong-operator", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","operator":"wrong-operator"}`)},
+		{"unsupported-protocol", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"ftp","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","operator":"Owner"}`)},
+		{"invalid-closeMode", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"invalid_mode","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","operator":"Owner"}`)},
+		{"missing-exclusive", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":false,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","operator":"Owner"}`)},
+	} {
+		if err := r139VerifyBrowserReservation(nativeAdmission, tc.raw); err == nil {
+			t.Fatalf("expected error for %s, got nil", tc.name)
+		}
+	}
+
+	missingClosePathAdmission := nativeAdmission
+	missingClosePathAdmission.BrowserCloseReceiptPath = ""
+	if err := r139VerifyBrowserReservation(missingClosePathAdmission, validNativeRaw); err == nil {
+		t.Fatal("expected rejection when admission lacks browserCloseReceiptPath")
+	}
+
+	unsupportedAdmission := nativeAdmission
+	unsupportedAdmission.BrowserSupported = false
+	if err := r139VerifyBrowserReservation(unsupportedAdmission, validNativeRaw); err == nil {
+		t.Fatal("expected rejection when browserSupported is false")
+	}
+
+	unknownToolAdmission := nativeAdmission
+	unknownToolAdmission.BrowserTool = "unknown_tool"
+	if err := r139VerifyBrowserReservation(unknownToolAdmission, validNativeRaw); err == nil {
+		t.Fatal("expected rejection for unsupported browserTool")
+	}
+}
+
+func TestR139PureBrowserTerminalClose(t *testing.T) {
+	deadline := time.Now().UTC().Add(2 * time.Hour).Format(time.RFC3339)
+	nativeAdmission := r139Admission{
+		TrancheID:             "CCMAI-RUNTIME-139",
+		BrowserSupported:      true,
+		BrowserTool:           "antigravity_native",
+		PageID:                "page-test-123",
+		CampaignNonce:         "nonce-abc-456",
+		BrowserSessionID:      "session-xyz-789",
+		FallbackCloseOperator: "Owner",
+		GrantDeadlineUTC:      deadline,
+	}
+
+	validCloseRaw := []byte(`{
+		"status": "CLOSED_EXACT_OWNED_PAGE",
+		"browserId": "antigravity_native",
+		"closeObserved": true,
+		"ownedTabsFinal": 0,
+		"pageId": "page-test-123",
+		"campaignNonce": "nonce-abc-456",
+		"browserSessionId": "session-xyz-789",
+		"closeMode": "operator_fallback",
+		"operator": "Owner",
+		"closedAtUTC": "` + time.Now().UTC().Format(time.RFC3339) + `"
+	}`)
+
+	if err := r139VerifyBrowserTerminalClose(nativeAdmission, validCloseRaw); err != nil {
+		t.Fatalf("expected terminal close pass, got: %v", err)
+	}
+
+	notClosedRaw := []byte(`{
+		"status": "CLOSED_EXACT_OWNED_PAGE",
+		"browserId": "antigravity_native",
+		"closeObserved": false,
+		"ownedTabsFinal": 0,
+		"pageId": "page-test-123",
+		"campaignNonce": "nonce-abc-456",
+		"browserSessionId": "session-xyz-789",
+		"closeMode": "operator_fallback",
+		"operator": "Owner",
+		"closedAtUTC": "` + time.Now().UTC().Format(time.RFC3339) + `"
+	}`)
+	if err := r139VerifyBrowserTerminalClose(nativeAdmission, notClosedRaw); err == nil {
+		t.Fatal("expected rejection when closeObserved is false")
+	}
+
+	tabsRemainingRaw := []byte(`{
+		"status": "CLOSED_EXACT_OWNED_PAGE",
+		"browserId": "antigravity_native",
+		"closeObserved": true,
+		"ownedTabsFinal": 1,
+		"pageId": "page-test-123",
+		"campaignNonce": "nonce-abc-456",
+		"browserSessionId": "session-xyz-789",
+		"closeMode": "operator_fallback",
+		"operator": "Owner",
+		"closedAtUTC": "` + time.Now().UTC().Format(time.RFC3339) + `"
+	}`)
+	if err := r139VerifyBrowserTerminalClose(nativeAdmission, tabsRemainingRaw); err == nil {
+		t.Fatal("expected rejection when ownedTabsFinal != 0")
+	}
+
+	wrongStatusRaw := []byte(`{
+		"status": "RESERVED_NATIVE_PAGE_CONTROL_CAPTURE",
+		"browserId": "antigravity_native",
+		"closeObserved": true,
+		"ownedTabsFinal": 0,
+		"pageId": "page-test-123",
+		"campaignNonce": "nonce-abc-456",
+		"browserSessionId": "session-xyz-789",
+		"closeMode": "operator_fallback",
+		"operator": "Owner",
+		"closedAtUTC": "` + time.Now().UTC().Format(time.RFC3339) + `"
+	}`)
+	if err := r139VerifyBrowserTerminalClose(nativeAdmission, wrongStatusRaw); err == nil {
+		t.Fatal("expected rejection for non-closed status")
+	}
+
+	for _, tc := range []struct {
+		name string
+		raw  []byte
+	}{
+		{"wrong-pageId", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"pageId":"wrong","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
+		{"wrong-nonce", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"pageId":"page-test-123","campaignNonce":"wrong","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
+		{"wrong-session", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"wrong","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
+		{"wrong-operator", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"wrong","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
+		{"invalid-closeMode", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"bad","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
+	} {
+		if err := r139VerifyBrowserTerminalClose(nativeAdmission, tc.raw); err == nil {
+			t.Fatalf("expected error for %s, got nil", tc.name)
+		}
+	}
+
+	futureTime := time.Now().UTC().Add(10 * time.Minute).Format(time.RFC3339)
+	futureRaw := []byte(`{
+		"status": "CLOSED_EXACT_OWNED_PAGE",
+		"browserId": "antigravity_native",
+		"closeObserved": true,
+		"ownedTabsFinal": 0,
+		"pageId": "page-test-123",
+		"campaignNonce": "nonce-abc-456",
+		"browserSessionId": "session-xyz-789",
+		"closeMode": "operator_fallback",
+		"operator": "Owner",
+		"closedAtUTC": "` + futureTime + `"
+	}`)
+	if err := r139VerifyBrowserTerminalClose(nativeAdmission, futureRaw); err == nil {
+		t.Fatal("expected rejection for future timestamp")
+	}
+
+	pastDeadlineAdmission := nativeAdmission
+	pastDeadlineAdmission.GrantDeadlineUTC = time.Now().UTC().Add(-10 * time.Minute).Format(time.RFC3339)
+	if err := r139VerifyBrowserTerminalClose(pastDeadlineAdmission, validCloseRaw); err == nil {
+		t.Fatal("expected rejection when closedAtUTC is after grantDeadlineUTC")
+	}
+
+	badTimeRaw := []byte(`{
+		"status": "CLOSED_EXACT_OWNED_PAGE",
+		"browserId": "antigravity_native",
+		"closeObserved": true,
+		"ownedTabsFinal": 0,
+		"pageId": "page-test-123",
+		"campaignNonce": "nonce-abc-456",
+		"browserSessionId": "session-xyz-789",
+		"closeMode": "operator_fallback",
+		"operator": "Owner",
+		"closedAtUTC": "invalid-time"
+	}`)
+	if err := r139VerifyBrowserTerminalClose(nativeAdmission, badTimeRaw); err == nil {
+		t.Fatal("expected rejection for invalid closedAtUTC")
+	}
 }
 
 func r139Admit(t *testing.T) (r139Admission, string) {
@@ -200,9 +681,8 @@ func r139Admit(t *testing.T) (r139Admission, string) {
 	if err != nil || readErr != nil || browserResolved != browserPath || hex.EncodeToString(browserSum[:]) != a.BrowserReceiptSHA256 {
 		t.Fatal("R139 browser proof receipt mismatch")
 	}
-	var browserProof map[string]any
-	if json.Unmarshal(browserRaw, &browserProof) != nil || !a.BrowserSupported || browserProof["status"] != "PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE" || browserProof["browserId"] != "iab" || browserProof["controlObserved"] != true || browserProof["captureObserved"] != true || browserProof["closeObserved"] != true || browserProof["ownedTabsFinal"] != float64(0) || (browserProof["protocol"] != "http" && browserProof["protocol"] != "https") {
-		t.Fatal("R139 supported browser proof absent")
+	if err := r139VerifyBrowserReservation(a, browserRaw); err != nil {
+		t.Fatalf("R139 supported browser proof absent: %v", err)
 	}
 	if !filepath.IsAbs(a.RuntimeRoot) || filepath.Clean(a.RuntimeRoot) != a.RuntimeRoot || os.Getenv("R139_RUNTIME_ROOT") != a.RuntimeRoot {
 		t.Fatal("R139 runtime evidence root mismatch")

@@ -1,0 +1,21 @@
+{
+  "status": "RESERVED",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "check": "workerFocusedPython",
+  "cap": 1,
+  "tool": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+  "toolSha256": "a2a4eff8d0b0c845284c607d50a3b5b966ac5a3121736a2e38e165bd6644d9fe",
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-B",
+    "scripts/tests/test_r139_execution_supervisor.py"
+  ],
+  "cwd": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+  "timeoutSeconds": 60,
+  "sourceSha256": {
+    "scripts/r139_execution_supervisor.py": "85b6615383a31da65b55335768c9f1997d1f3a2228ea25218203547c116df8d7",
+    "scripts/tests/test_r139_execution_supervisor.py": "676aa7ee9e00aaaec9a5dde65f229d484f4aa972a72300d089c4d534e746a2b6",
+    "backend/api/handlers/intervention_execution_browser_test.go": "183729dedc8490b7d1a3c9783a6aaa4f3d36cbcb66a5bc62f821ea078590e242"
+  },
+  "reservedAtUTC": "2026-10-23T14:43:49.174708+00:00"
+}

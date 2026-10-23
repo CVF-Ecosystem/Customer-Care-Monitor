@@ -3938,7 +3938,7 @@
     "date": "2026-10-23",
     "ownerReply": "duyệt",
     "approvedProposalCommit": "91abea4d5e1ac6aab3073da62d97f55912bb7cc0",
-    "status": "INDEPENDENTLY_REVIEWED_SOURCE_READY_ON_COMMITTED_DISPATCH",
+    "status": "SOURCE_RETURN_CHANGES_REQUIRED_MANUAL_REPAIR_PENDING_DISPATCH",
     "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-INTEGRATED-SOURCE-ADMISSION.json",
     "admissionReview": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_ADMISSION_REVIEW_2026-10-23.md",
     "sourceGranted": true,
@@ -3950,7 +3950,7 @@
     "runtimeExecutableNow": false,
     "providerExecutableNow": false,
     "sourceUse": {
-      "workerPython": 0,
+      "workerPython": 1,
       "workerCompile": 0,
       "rootPython": 0,
       "sharedPureGoCustodiedByRoot": 0
@@ -3960,5 +3960,36 @@
     "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
     "admissionSha256": "b729dd061ffd1ae2400bd1ff500802723a6ac7a2c798b7eb630feb3eba198fb0",
     "dispatchBinding": "Exact committed HEAD in Root final dispatch message; worker requires exact match before any writes. No self-referential HEAD in immutable seed."
+  },
+  "x-antigravityIntegratedSourceReturn20261023": {
+    "date": "2026-10-23",
+    "status": "CHANGES_REQUIRED_MANUAL_REPAIR_READY_ON_COMMITTED_DISPATCH",
+    "workerReturn": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_SOURCE_WORKER_RETURN_2026-10-23.md",
+    "rootReview": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_SOURCE_ROOT_REVIEW_2026-10-23.md",
+    "repairAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-INTEGRATED-REPAIR-ADMISSION.json",
+    "repairAdmissionReview": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_REPAIR_ADMISSION_REVIEW_2026-10-23.md",
+    "workerPythonTests": 39,
+    "workerPythonPass": 38,
+    "workerPythonFail": 1,
+    "workerPythonExit": 1,
+    "checksUsed": {
+      "workerPython": 1,
+      "compile": 0,
+      "rootPython": 0,
+      "pureGo": 0
+    },
+    "manualRepairRoundsUsed": 0,
+    "newVerificationSlots": 0,
+    "runtimeExecutableNow": false,
+    "providerExecutableNow": false,
+    "originalFailuresPreserved": true,
+    "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+    "repairAdmissionSha256": "2dea7e9ebc15146f49928833dee2b699c73f92080f441f954cf41279e239661a",
+    "repairRound": "One manual reviewer-directed round, unused until external repair acknowledgment; no worker checks",
+    "remainingCheckCustody": {
+      "RootPython": 1,
+      "RootOfflineCompile": 1,
+      "RootPureGo": 1
+    }
   }
 }

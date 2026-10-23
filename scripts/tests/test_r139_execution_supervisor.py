@@ -606,6 +606,210 @@ class R139SupervisorPureTests(unittest.TestCase):
             with self.assertRaisesRegex(module.Hold, "EFFECT_ROUTE_MISMATCH"):
                 module._validate_route_rows(rows, "TEST", {"executePOST": 1, "authPOST": 3})
 
+    def test_native_antigravity_reservation_admission_positive(self):
+        with tempfile.TemporaryDirectory() as name:
+            receipt = Path(name) / "reservation.json"
+            receipt.write_text(json.dumps({
+                "status": "RESERVED_NATIVE_PAGE_CONTROL_CAPTURE",
+                "browserId": "antigravity_native",
+                "exclusiveReservation": True,
+                "controlObserved": True,
+                "captureObserved": True,
+                "closeObserved": False,
+                "protocol": "http",
+                "closeMode": "operator_fallback",
+                "pageId": "page-123",
+                "campaignNonce": "nonce-456",
+                "browserSessionId": "session-789",
+                "trancheId": "CCMAI-RUNTIME-139",
+                "operator": "Owner"
+            }), encoding="utf-8")
+            admission = {
+                "browserTool": "antigravity_native",
+                "browserSupported": True,
+                "browserReceiptPath": "reservation.json",
+                "browserReceiptSha256": module.digest(receipt),
+                "browserCloseReceiptPath": "close.json",
+                "pageId": "page-123",
+                "campaignNonce": "nonce-456",
+                "browserSessionId": "session-789",
+                "fallbackCloseOperator": "Owner"
+            }
+            with patch.object(module, "project_path", return_value=receipt):
+                module.verify_browser_receipt(admission)
+
+    def test_native_antigravity_early_close_rejected(self):
+        with tempfile.TemporaryDirectory() as name:
+            receipt = Path(name) / "reservation.json"
+            receipt.write_text(json.dumps({
+                "status": "RESERVED_NATIVE_PAGE_CONTROL_CAPTURE",
+                "browserId": "antigravity_native",
+                "exclusiveReservation": True,
+                "controlObserved": True,
+                "captureObserved": True,
+                "closeObserved": True,
+                "protocol": "http",
+                "closeMode": "operator_fallback",
+                "pageId": "page-123",
+                "campaignNonce": "nonce-456",
+                "browserSessionId": "session-789",
+                "operator": "Owner"
+            }), encoding="utf-8")
+            admission = {
+                "browserTool": "antigravity_native",
+                "browserSupported": True,
+                "browserReceiptPath": "reservation.json",
+                "browserReceiptSha256": module.digest(receipt),
+                "browserCloseReceiptPath": "close.json",
+                "pageId": "page-123",
+                "campaignNonce": "nonce-456",
+                "browserSessionId": "session-789",
+                "fallbackCloseOperator": "Owner"
+            }
+            with patch.object(module, "project_path", return_value=receipt):
+                with self.assertRaisesRegex(module.Hold, "EARLY_CLOSE_FORBIDDEN"):
+                    module.verify_browser_receipt(admission)
+
+    def test_native_antigravity_final_close_cannot_be_prefixture_reservation(self):
+        with tempfile.TemporaryDirectory() as name:
+            receipt = Path(name) / "reservation.json"
+            receipt.write_text(json.dumps({
+                "status": "CLOSED_EXACT_OWNED_PAGE",
+                "browserId": "antigravity_native",
+                "exclusiveReservation": True,
+                "controlObserved": True,
+                "captureObserved": True,
+                "closeObserved": True,
+                "ownedTabsFinal": 0,
+                "protocol": "http",
+                "closeMode": "operator_fallback",
+                "pageId": "page-123",
+                "campaignNonce": "nonce-456",
+                "browserSessionId": "session-789",
+                "operator": "Owner"
+            }), encoding="utf-8")
+            admission = {
+                "browserTool": "antigravity_native",
+                "browserSupported": True,
+                "browserReceiptPath": "reservation.json",
+                "browserReceiptSha256": module.digest(receipt),
+                "browserCloseReceiptPath": "close.json",
+                "pageId": "page-123",
+                "campaignNonce": "nonce-456",
+                "browserSessionId": "session-789",
+                "fallbackCloseOperator": "Owner"
+            }
+            with patch.object(module, "project_path", return_value=receipt):
+                with self.assertRaisesRegex(module.Hold, "TERMINAL_CLOSE_RECEIPT_CANNOT_BE_PREFIXTURE_RESERVATION"):
+                    module.verify_browser_receipt(admission)
+
+    def test_native_antigravity_identity_mismatches_and_missing_close_path_rejected(self):
+        with tempfile.TemporaryDirectory() as name:
+            receipt = Path(name) / "reservation.json"
+            base_data = {
+                "status": "RESERVED_NATIVE_PAGE_CONTROL_CAPTURE",
+                "browserId": "antigravity_native",
+                "exclusiveReservation": True,
+                "controlObserved": True,
+                "captureObserved": True,
+                "closeObserved": False,
+                "protocol": "http",
+                "closeMode": "operator_fallback",
+                "pageId": "page-123",
+                "campaignNonce": "nonce-456",
+                "browserSessionId": "session-789",
+                "operator": "Owner"
+            }
+            receipt.write_text(json.dumps(base_data), encoding="utf-8")
+            admission = {
+                "browserTool": "antigravity_native",
+                "browserSupported": True,
+                "browserReceiptPath": "reservation.json",
+                "browserReceiptSha256": module.digest(receipt),
+                "browserCloseReceiptPath": "close.json",
+                "pageId": "page-123",
+                "campaignNonce": "nonce-456",
+                "browserSessionId": "session-789",
+                "fallbackCloseOperator": "Owner"
+            }
+            with patch.object(module, "project_path", return_value=receipt):
+                bad_adm = dict(admission, browserCloseReceiptPath="")
+                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_RECEIPT_PATH_MISSING"):
+                    module.verify_browser_receipt(bad_adm)
+                bad_adm = dict(admission, pageId="other-page")
+                with self.assertRaisesRegex(module.Hold, "BROWSER_PROOF_IDENTITY_MISMATCH"):
+                    module.verify_browser_receipt(bad_adm)
+                bad_adm = dict(admission, campaignNonce="other-nonce")
+                with self.assertRaisesRegex(module.Hold, "BROWSER_PROOF_IDENTITY_MISMATCH"):
+                    module.verify_browser_receipt(bad_adm)
+                bad_adm = dict(admission, browserSessionId="other-session")
+                with self.assertRaisesRegex(module.Hold, "BROWSER_PROOF_IDENTITY_MISMATCH"):
+                    module.verify_browser_receipt(bad_adm)
+                bad_adm = dict(admission, fallbackCloseOperator="other-operator")
+                with self.assertRaisesRegex(module.Hold, "BROWSER_PROOF_IDENTITY_MISMATCH"):
+                    module.verify_browser_receipt(bad_adm)
+
+    def test_verify_browser_terminal_close_positive_and_rejections(self):
+        deadline = (datetime.now(timezone.utc) + timedelta(hours=1)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        admission = {
+            "browserTool": "antigravity_native",
+            "browserCloseReceiptPath": "close.json",
+            "pageId": "page-123",
+            "campaignNonce": "nonce-456",
+            "browserSessionId": "session-789",
+            "fallbackCloseOperator": "Owner",
+            "grantDeadlineUTC": deadline
+        }
+        with tempfile.TemporaryDirectory() as name:
+            close_file = Path(name) / "close.json"
+            valid_close = {
+                "status": "CLOSED_EXACT_OWNED_PAGE",
+                "browserId": "antigravity_native",
+                "closeObserved": True,
+                "ownedTabsFinal": 0,
+                "pageId": "page-123",
+                "campaignNonce": "nonce-456",
+                "browserSessionId": "session-789",
+                "closeMode": "operator_fallback",
+                "operator": "Owner",
+                "closedAtUTC": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            }
+            close_file.write_text(json.dumps(valid_close), encoding="utf-8")
+            with patch.object(module, "project_path", return_value=close_file):
+                result = module.verify_browser_terminal_close(admission, Path(name), Path(name))
+                self.assertEqual(result["status"], "CLOSED_EXACT_OWNED_PAGE")
+
+                bad = dict(valid_close, closeObserved=False)
+                close_file.write_text(json.dumps(bad), encoding="utf-8")
+                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_NOT_OBSERVED"):
+                    module.verify_browser_terminal_close(admission, Path(name), Path(name))
+
+                bad = dict(valid_close, ownedTabsFinal=1)
+                close_file.write_text(json.dumps(bad), encoding="utf-8")
+                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_OWNED_TABS_REMAINING"):
+                    module.verify_browser_terminal_close(admission, Path(name), Path(name))
+
+                bad = dict(valid_close, status="RESERVED_NATIVE_PAGE_CONTROL_CAPTURE")
+                close_file.write_text(json.dumps(bad), encoding="utf-8")
+                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_STATUS_INVALID"):
+                    module.verify_browser_terminal_close(admission, Path(name), Path(name))
+
+                bad = dict(valid_close, pageId="wrong")
+                close_file.write_text(json.dumps(bad), encoding="utf-8")
+                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_PAGE_ID_MISMATCH"):
+                    module.verify_browser_terminal_close(admission, Path(name), Path(name))
+
+                future_ts = (datetime.now(timezone.utc) + timedelta(minutes=10)).strftime("%Y-%m-%dT%H:%M:%SZ")
+                bad = dict(valid_close, closedAtUTC=future_ts)
+                close_file.write_text(json.dumps(bad), encoding="utf-8")
+                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_TIMESTAMP_IN_FUTURE"):
+                    module.verify_browser_terminal_close(admission, Path(name), Path(name))
+
+                past_deadline_adm = dict(admission, grantDeadlineUTC=(datetime.now(timezone.utc) - timedelta(minutes=10)).strftime("%Y-%m-%dT%H:%M:%SZ"))
+                close_file.write_text(json.dumps(valid_close), encoding="utf-8")
+                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_AFTER_DEADLINE"):
+                    module.verify_browser_terminal_close(past_deadline_adm, Path(name), Path(name))
+
 
 if __name__ == "__main__":
     unittest.main()

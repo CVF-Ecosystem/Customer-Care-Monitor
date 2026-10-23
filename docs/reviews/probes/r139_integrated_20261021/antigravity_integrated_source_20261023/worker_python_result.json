@@ -1,0 +1,10 @@
+{
+  "check": "workerFocusedPython",
+  "exitCode": 1,
+  "startUTC": "2026-10-23T14:43:49.175683+00:00",
+  "endUTC": "2026-10-23T14:43:50.189373+00:00",
+  "elapsedSeconds": 1.014,
+  "stdoutBytes": 0,
+  "stderrBytes": 890,
+  "passed": false
+}

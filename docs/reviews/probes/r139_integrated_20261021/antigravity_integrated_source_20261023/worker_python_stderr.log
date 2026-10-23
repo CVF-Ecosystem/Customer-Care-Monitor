@@ -1,0 +1,14 @@
+.................................F.....
+======================================================================
+FAIL: test_verify_browser_terminal_close_positive_and_rejections (__main__.R139SupervisorPureTests.test_verify_browser_terminal_close_positive_and_rejections)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI\scripts\tests\test_r139_execution_supervisor.py", line 810, in test_verify_browser_terminal_close_positive_and_rejections
+    with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_AFTER_DEADLINE"):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Hold not raised
+
+----------------------------------------------------------------------
+Ran 39 tests in 0.696s
+
+FAILED (failures=1)

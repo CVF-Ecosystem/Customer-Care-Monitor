@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "DISPATCHER_OWNED_MANUAL_REVIEW_DIRECTED_SOURCE_REPAIR",
+  "date": "2026-10-23",
+  "riskCeiling": "R2",
+  "baseCommit": "ea6b4fdf3e1fb7e6c03ae401b1bdd8f5312b2361",
+  "parentAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-INTEGRATED-SOURCE-ADMISSION.json",
+  "parentAdmissionSha256": "b729dd061ffd1ae2400bd1ff500802723a6ac7a2c798b7eb630feb3eba198fb0",
+  "review": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_SOURCE_ROOT_REVIEW_2026-10-23.md",
+  "authorityBasis": "Owner-approved combined R139 correction and standing user-provided AGENTS.md Governance Latency/Approval Continuity: continue dependent same-scope repairs without renewed confirmation while objective/allowed paths/risk/external-effect class/commit owner unchanged. Worker obeyed old stop/no-self-repair. Root now grants ONE manual consolidated reviewer-directed repair, not automatic retry, old seed edit or counter reset. Independent admission review required before dispatch.",
+  "objectiveUnchanged": "Same native Antigravity reservation/actual-close predicate correction for existing R139 M3-05/M3-08 G0-G3; acceptance already in the approved original source section.",
+  "roles": {
+    "repairWorker": "Owner-designated Antigravity agent/worker",
+    "reviewer": "Root independent source REVIEWER",
+    "admissionReviewer": "Luna Max independent read-only REVIEWER",
+    "commitSteward": "Root"
+  },
+  "allowedSourcePaths": [
+    "scripts/r139_execution_supervisor.py",
+    "scripts/tests/test_r139_execution_supervisor.py",
+    "backend/api/handlers/intervention_execution_browser_test.go"
+  ],
+  "sourceBeforeRepairSha256": {
+    "scripts/r139_execution_supervisor.py": "85b6615383a31da65b55335768c9f1997d1f3a2228ea25218203547c116df8d7",
+    "scripts/tests/test_r139_execution_supervisor.py": "676aa7ee9e00aaaec9a5dde65f229d484f4aa972a72300d089c4d534e746a2b6",
+    "backend/api/handlers/intervention_execution_browser_test.go": "183729dedc8490b7d1a3c9783a6aaa4f3d36cbcb66a5bc62f821ea078590e242"
+  },
+  "protectedSourceSha256": {
+    "scripts/r139_vite_config.mjs.template": "82a1d9ae8576fcd46718945d0a5cb44eb963a2a14d436a16e2bcdfb72b26bee9",
+    "backend/go.mod": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+    "backend/go.sum": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b"
+  },
+  "repairBudget": {
+    "manualConsolidatedRepairRounds": 1,
+    "workerChecks": 0,
+    "additionalCompileSlots": 0,
+    "additionalPythonSlots": 0,
+    "additionalPureGoSlots": 0,
+    "automaticRetry": 0,
+    "furtherRepairRounds": 0
+  },
+  "existingUnspentChecksCustody": {
+    "rootFocusedPython": 1,
+    "offlineGoCompileMovedFromWorkerToRoot": 1,
+    "sharedPureGoCustodiedByRoot": 1,
+    "order": "Root static acceptance, RootPython once, then offline compile once, audit selected tests/package init/new binary and pureGo once. First failure stops dependent checks. Do not rerun known failing pre-repair tests. Exact tools/argv/timeouts/env/output remain parent admission; only executor custody of unused compile changes."
+  },
+  "unchangedOldUse": {
+    "sourceAuthoring": 1,
+    "workerPython": 1,
+    "compile": 0,
+    "rootPython": 0,
+    "pureGo": 0
+  },
+  "workerReturn": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_SOURCE_REPAIR_RETURN_2026-10-23.md",
+  "workerEvidenceRoot": "docs/reviews/probes/r139_integrated_20261021/antigravity_integrated_source_20261023",
+  "dispatchBinding": "Root final exact committed HEAD, clean tracked starting tree, repair seed matches committed bytes; reviewed three-file failure baseline at this dispatch matches sourceBeforeRepairSha256. No self-referential HEAD. Old failed source is committed explicitly CHANGES_REQUIRED, not accepted.",
+  "requirements": "Repair ALL F01-F08 in Root review within these three paths, preserve original failure/raw worker report unchanged. Acknowledge repair role in new return before edits. No source test/check, runtime/browser/schema probe or compiler/binary invocation; ordinary file reading/editing and mandatory repository governance preflight remain allowed. No environment discovery beyond read-only source/admission metadata. Return one diff/hash/evidence accounting set for independent Root checks.",
+  "futureEvidenceDesign": "Bind future output paths/identities (not unknowable future content digests) in runtime admission; collect/seal actual close/action/final inventory bytes and hashes at terminal; independently inspect tool provenance. Use ignored owned runtime paths, preflight freshness separate from terminal-source recheck, tracked/source pin checks unchanged. Do not create runtime receipts or claim native capability during repair.",
+  "prohibitedEffects": [
+    "No product/Vite/dependency/Core/policy/gate/profile/history/old-seed/old-counter edits",
+    "No worker commit, self-review, authority or continuity/catalog/workorder edit",
+    "No browser/inertprobe/network/Docker/DB/key/credential/provider/grant/execute/runtime-server invocation in source stage",
+    "No old binary evidence used for new Go source; no fake IAB or forged closure proof",
+    "No helper tranche, toyG0retry, ambient input or scope widening, no automatic retry or unapproved repair round",
+    "No worker Python/Go/other source checks or further self-repair; Root owns still-unused verification slots",
+    "No current runtime/key/provider activation, no new API/USD/resource/browser cap, no old counter reset"
+  ],
+  "runtimeExecutableNow": false,
+  "providerExecutableNow": false,
+  "oldCountersUnchanged": true,
+  "independentAdmissionReview": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_REPAIR_ADMISSION_REVIEW_2026-10-23.md",
+  "status": "MANUAL_REPAIR_READY_AFTER_INDEPENDENT_REVIEW_GATES_COMMIT",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+  "repairContractSection": "Antigravity consolidated reviewer-directed repair — 2026-10-23",
+  "repairContractSectionSha256": "cbf38184317376ef6ca4c932c07ef2e99048af820186236343e15d249477cc6e",
+  "repairContractDigestRule": "Normalize CRLF to LF; exact heading inclusive to next ## Antigravity integrated source dispatch — 2026-10-23 exclusive; rstrip then one finalLF; UTF8 SHA256."
+}

@@ -126,12 +126,105 @@ def committed(relative: str) -> Path:
 
 
 def verify_browser_receipt(value: dict) -> None:
-    require(value.get("browserTool") == "supported_CUA_IAB" and value.get("browserSupported") is True, "BROWSER_CAPABILITY_UNPROVEN")
-    browser = project_path(value.get("browserReceiptPath", ""))
+    tool = value.get("browserTool")
+    require(tool in ("supported_CUA_IAB", "antigravity_native") and value.get("browserSupported") is True, "BROWSER_CAPABILITY_UNPROVEN")
+    browser_rel = value.get("browserReceiptPath", "")
+    require(isinstance(browser_rel, str) and browser_rel.strip(), "BROWSER_RECEIPT_PATH_MISSING")
+    browser = project_path(browser_rel)
     expected = value.get("browserReceiptSha256", "")
     require(isinstance(expected, str) and HEX64.fullmatch(expected) and digest(browser) == expected, "BROWSER_RECEIPT_MISMATCH")
     proof = read_json(browser)
-    require(proof.get("status") == "PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE" and proof.get("browserId") == "iab" and proof.get("controlObserved") is True and proof.get("captureObserved") is True and proof.get("closeObserved") is True and proof.get("ownedTabsFinal") == 0 and proof.get("protocol") in ("http", "https"), "BROWSER_PROOF_CONTENT_INCOMPLETE")
+    if tool == "supported_CUA_IAB":
+        require(proof.get("status") == "PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE" and proof.get("browserId") == "iab" and proof.get("controlObserved") is True and proof.get("captureObserved") is True and proof.get("closeObserved") is True and proof.get("ownedTabsFinal") == 0 and proof.get("protocol") in ("http", "https"), "BROWSER_PROOF_CONTENT_INCOMPLETE")
+    elif tool == "antigravity_native":
+        require(proof.get("status") != "CLOSED_EXACT_OWNED_PAGE", "TERMINAL_CLOSE_RECEIPT_CANNOT_BE_PREFIXTURE_RESERVATION")
+        require(proof.get("status") == "RESERVED_NATIVE_PAGE_CONTROL_CAPTURE", "BROWSER_PROOF_CONTENT_INCOMPLETE")
+        require(proof.get("browserId") == "antigravity_native", "BROWSER_PROOF_CONTENT_INCOMPLETE")
+        require(proof.get("exclusiveReservation") is True, "BROWSER_PROOF_CONTENT_INCOMPLETE")
+        require(proof.get("controlObserved") is True, "BROWSER_PROOF_CONTENT_INCOMPLETE")
+        require(proof.get("captureObserved") is True, "BROWSER_PROOF_CONTENT_INCOMPLETE")
+        require(proof.get("closeObserved") is not True, "EARLY_CLOSE_FORBIDDEN")
+        require(proof.get("protocol") in ("http", "https"), "BROWSER_PROOF_CONTENT_INCOMPLETE")
+        require(proof.get("closeMode") in ("api", "operator", "operator_fallback"), "BROWSER_PROOF_CONTENT_INCOMPLETE")
+        page_id = proof.get("pageId")
+        require(isinstance(page_id, str) and page_id.strip(), "BROWSER_PROOF_CONTENT_INCOMPLETE")
+        if value.get("pageId"):
+            require(page_id == value["pageId"], "BROWSER_PROOF_IDENTITY_MISMATCH")
+        nonce = proof.get("campaignNonce")
+        require(isinstance(nonce, str) and nonce.strip(), "BROWSER_PROOF_CONTENT_INCOMPLETE")
+        if value.get("campaignNonce"):
+            require(nonce == value["campaignNonce"], "BROWSER_PROOF_IDENTITY_MISMATCH")
+        session_id = proof.get("browserSessionId")
+        require(isinstance(session_id, str) and session_id.strip(), "BROWSER_PROOF_CONTENT_INCOMPLETE")
+        if value.get("browserSessionId"):
+            require(session_id == value["browserSessionId"], "BROWSER_PROOF_IDENTITY_MISMATCH")
+        tranche_id = proof.get("trancheId")
+        if tranche_id:
+            require(tranche_id == value.get("trancheId", "CCMAI-RUNTIME-139"), "BROWSER_PROOF_IDENTITY_MISMATCH")
+        expected_op = value.get("fallbackCloseOperator") or value.get("operator")
+        op = proof.get("operator")
+        require(isinstance(op, str) and op.strip(), "BROWSER_PROOF_CONTENT_INCOMPLETE")
+        if expected_op:
+            require(op == expected_op, "BROWSER_PROOF_IDENTITY_MISMATCH")
+        close_path_rel = value.get("browserCloseReceiptPath")
+        require(isinstance(close_path_rel, str) and close_path_rel.strip(), "BROWSER_CLOSE_RECEIPT_PATH_MISSING")
+    else:
+        raise Hold("BROWSER_TOOL_UNSUPPORTED")
+
+
+def verify_browser_terminal_close(admission: dict, runtime: Path, external: Path) -> dict:
+    close_rel = admission.get("browserCloseReceiptPath")
+    require(isinstance(close_rel, str) and close_rel.strip(), "BROWSER_CLOSE_RECEIPT_PATH_MISSING")
+    close_path = project_path(close_rel)
+    expected_sha = admission.get("browserCloseReceiptSha256")
+    if expected_sha:
+        require(isinstance(expected_sha, str) and HEX64.fullmatch(expected_sha) and digest(close_path) == expected_sha, "BROWSER_CLOSE_RECEIPT_SHA_MISMATCH")
+    receipt = read_json(close_path)
+    require(receipt.get("status") == "CLOSED_EXACT_OWNED_PAGE", "BROWSER_CLOSE_STATUS_INVALID")
+    require(receipt.get("browserId") == "antigravity_native", "BROWSER_CLOSE_BROWSER_ID_INVALID")
+    require(receipt.get("closeObserved") is True, "BROWSER_CLOSE_NOT_OBSERVED")
+    require(receipt.get("ownedTabsFinal") == 0, "BROWSER_CLOSE_OWNED_TABS_REMAINING")
+    page_id = receipt.get("pageId")
+    require(isinstance(page_id, str) and page_id.strip(), "BROWSER_CLOSE_PAGE_ID_MISSING")
+    if admission.get("pageId"):
+        require(page_id == admission["pageId"], "BROWSER_CLOSE_PAGE_ID_MISMATCH")
+    nonce = receipt.get("campaignNonce")
+    require(isinstance(nonce, str) and nonce.strip(), "BROWSER_CLOSE_NONCE_MISSING")
+    if admission.get("campaignNonce"):
+        require(nonce == admission["campaignNonce"], "BROWSER_CLOSE_NONCE_MISMATCH")
+    session_id = receipt.get("browserSessionId")
+    require(isinstance(session_id, str) and session_id.strip(), "BROWSER_CLOSE_SESSION_MISSING")
+    if admission.get("browserSessionId"):
+        require(session_id == admission["browserSessionId"], "BROWSER_CLOSE_SESSION_MISMATCH")
+    close_mode = receipt.get("closeMode")
+    require(close_mode in ("api", "operator", "operator_fallback"), "BROWSER_CLOSE_MODE_INVALID")
+    expected_op = admission.get("fallbackCloseOperator") or admission.get("operator")
+    operator = receipt.get("operator")
+    require(isinstance(operator, str) and operator.strip(), "BROWSER_CLOSE_OPERATOR_MISSING")
+    if expected_op:
+        require(operator == expected_op, "BROWSER_CLOSE_OPERATOR_MISMATCH")
+    closed_at_str = receipt.get("closedAtUTC")
+    require(isinstance(closed_at_str, str) and closed_at_str.endswith("Z"), "BROWSER_CLOSE_TIMESTAMP_INVALID")
+    try:
+        closed_dt = datetime.fromisoformat(closed_at_str[:-1] + "+00:00")
+    except Exception:
+        raise Hold("BROWSER_CLOSE_TIMESTAMP_INVALID")
+    now_utc = datetime.now(timezone.utc)
+    require(closed_dt <= now_utc + timedelta(seconds=60), "BROWSER_CLOSE_TIMESTAMP_IN_FUTURE")
+    deadline_str = admission.get("grantDeadlineUTC")
+    if deadline_str and deadline_str.endswith("Z"):
+        try:
+            deadline_dt = datetime.fromisoformat(deadline_str[:-1] + "+00:00")
+            require(closed_dt <= deadline_dt, "BROWSER_CLOSE_AFTER_DEADLINE")
+        except Exception:
+            pass
+    evidence_rel = receipt.get("evidencePath") or receipt.get("actionEvidencePath")
+    if evidence_rel:
+        ev_path = project_path(evidence_rel)
+        ev_sha = receipt.get("evidenceSha256")
+        if ev_sha:
+            require(digest(ev_path) == ev_sha, "BROWSER_CLOSE_EVIDENCE_SHA_MISMATCH")
+    return receipt
 
 
 SOURCE_PIN_REQUIRED = {"backend/api/handlers/intervention_execution_browser_test.go", "scripts/r139_execution_supervisor.py", "scripts/r139_vite_config.mjs.template", "scripts/tests/test_r139_execution_supervisor.py", "backend/go.mod", "backend/go.sum", "frontend/package.json", "frontend/package-lock.json", "frontend/vite.config.ts"}
@@ -1082,6 +1175,11 @@ def run(relative: str) -> None:
             fresh_runtime_admission(relative, expect_fresh_external=False, validate_live_deadline=False)
         except Exception as exc:
             errors.append("SOURCE_RECHECK_FAILED:" + type(exc).__name__)
+        if admission.get("browserTool") == "antigravity_native":
+            try:
+                outcome["browserTerminalClose"] = verify_browser_terminal_close(admission, runtime, external)
+            except Exception as exc:
+                errors.append("BROWSER_TERMINAL_CLOSE_FAILED:" + type(exc).__name__)
         errors.extend("CLEANUP_BEST_EFFORT_ERROR:" + issue for issue in CLEANUP_ERRORS)
         cleanup_finished = time.monotonic()
         outcome["cleanup"].update({"finishedAt": time.time(), "elapsedSeconds": round(cleanup_finished - cleanup_started, 3), "completedBeforeDeadline": cleanup_finished <= ACTIVE_CLEANUP_DEADLINE})
