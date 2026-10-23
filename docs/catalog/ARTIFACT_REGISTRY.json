@@ -36032,6 +36032,20 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/antigravity_g0_20261023/ready.json",
       "status": "ACTIVE",
       "description": "Original inert G0 raw artifact, campaign HOLD/spent; placeholder WebP is not UI proof and probe.py is preserved evidence only, never execute."
+    },
+    {
+      "id": "r139-antigravity-integrated-continuation-contract",
+      "family": "continuity",
+      "path": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_CONTINUATION_CONTRACT_2026-10-23.md",
+      "status": "ACTIVE",
+      "description": "One same-R139 Antigravity source compatibility and G0-G3 proposal; fresh source/operator/runtime/API1/USD1 decision pending, no execution authority."
+    },
+    {
+      "id": "r139-antigravity-integrated-continuation-root-review",
+      "family": "continuity",
+      "path": "docs/reviews/R139_ANTIGRAVITY_CONTINUATION_ROOT_REVIEW_2026-10-23.md",
+      "status": "ACTIVE",
+      "description": "Independent Root source finding and proposal acceptance only; native browser predicates require closed IAB proof; no new effects."
     }
   ]
 }

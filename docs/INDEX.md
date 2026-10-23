@@ -4450,6 +4450,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent Luna admission acceptance/Root code review; actual capability not yet run, original false drift finding corrected.: `docs/reviews/R139_ANTIGRAVITY_G0_ADMISSION_REVIEW_2026-10-23.md`
 - Independent qualified G0 HOLD: bounded child wait only, parent missing-marker/null-listener, placeholder video; campaign spent; Antigravity retained.: `docs/reviews/R139_ANTIGRAVITY_G0_RUNTIME_REVIEW_2026-10-23.md`
 - Original worker G0 return; broad PROVEN claims qualified by independent review, no combined capability pass.: `docs/reviews/R139_ANTIGRAVITY_G0_WORKER_RETURN_2026-10-23.md`
+- One same-R139 Antigravity source compatibility and G0-G3 proposal; fresh source/operator/runtime/API1/USD1 decision pending, no execution authority.: `docs/reviews/R139_ANTIGRAVITY_INTEGRATED_CONTINUATION_CONTRACT_2026-10-23.md`
+- Independent Root source finding and proposal acceptance only; native browser predicates require closed IAB proof; no new effects.: `docs/reviews/R139_ANTIGRAVITY_CONTINUATION_ROOT_REVIEW_2026-10-23.md`
 - Immutable integrated G0/G1/G2 source-preparation seed; runtime/provider authority absent.: `CVF_SESSION/authority/CCMAI-RUNTIME-139.json`
 - Root transcript of browser URL-policy denial and partial owned tab cleanup; no control/capture proof.: `docs/reviews/probes/r139_integrated_20261021/browser_capability_outcome.json`
 - Sole pureUI capability diagnostic reserved before effect; consumed, no reset.: `docs/reviews/probes/r139_integrated_20261021/browser_capability_reservation.json`
