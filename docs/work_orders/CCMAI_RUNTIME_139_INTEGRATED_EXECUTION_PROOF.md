@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 Worker: Sol Medium delegated fixture worker
 Reviewer: Root independent source/evidence REVIEWER
@@ -12,7 +12,7 @@ dispatchKind: INITIAL
 
 ## Current authority and acceptance target
 
-Current stage: CCMAI-RUNTIME-139 recovery source BUILD under Owner cho phép chạy cho hoàn tất and committed RECOVERY-SOURCE-ADMISSION: Sol Medium changes four existing source paths only; Root independently reviews. New source/check caps bounded; no runtime/key/network/browser/provider before separate operational/effect admission. Old r3 campaign spent/expired, old MAY slot consumed/unknown and protected/browser HOLDs unchanged. After source acceptance, establish supported persistent execution owner and browser capability before any fixture; then one bounded integrated G0/G1/G2 route. Full M3 OPEN; Facebook/Zalo OA parked.
+Current stage: CCMAI-RUNTIME-139 HOLD_TRANSFER: recovery source accepted bounded at pinned four hashes (offline compile2/2PASS, pureGo7PASS0SKIP, worker/RootPython34PASS each); original PATH failure preserved. Sole supported cua.getState inventory returned apps[]/browsers[]; independent Luna HOLD/TRANSFER, no product browser-control proof or old-tab closure inference; process ownership untested. Owner-designated supported browser/execution environment must receive same-R139 transfer packet before new fixture/effect admission. No retry/alternate stack, runtime/key/API or helper tranche now. Old r3 campaign spent/expired/newAPI0, old MAY slot1 consumed/unknown and protected driftHOLD retained; G1 integrated/G2/G3/E05/E06/full M3 OPEN, Facebook/Zalo OA parked.
 
 Historical initial preparation boundary: Owner `tiếp` continues G0 in the canonical delivery plan. Immutable dispatcher seed `642f5bd026dfe31e6dda6441dd25704eb3ececa3` precedes source BUILD. This is ONE work order containing G0 preparation, G1 native/backend proof and G2 browser proof, with explicit stage admission. Only source preparation/offline checks and Root's bounded pure-UI tool diagnostic are admitted now. G1/G2 runtime and provider use are HOLD. R117 physical allowance1/1 is consumed; no historical counter or slot transfers. No standalone helper successor follows automatically.
 
@@ -193,3 +193,7 @@ Current authority remains BLOCKED_WITH_REASON. See `docs/reviews/R139_CONSOLIDAT
 ## Owner-approved recovery source round — 2026-10-23
 
 Latest authority: `CVF_SESSION/authority/CCMAI-RUNTIME-139-RECOVERY-SOURCE-ADMISSION.json`, source-only; Owner cho phép chạy cho hoàn tất approves independently reviewed four-path proposal and bounded new caps/cost escalation. This annex governs current source BUILD over historical exhausted sections. Sol Medium worker, Root independent source reviewer/commit owner. One authoring round plus at most one same-scope repair; worker2offlinecompile/2purePython/2pureGo after Root no-I/O audit, Root1purePython. No other runtime/network/key/provider effect. Exact four paths and strict acceptance are defined in admission and design review. Fresh r4 constants within those paths are prospective only. Preserve original failures and caps; no new tranche/helper. Worker return `docs/reviews/R139_RECOVERY_SOURCE_WORKER_RETURN_2026-10-23.md` must carry closeability recheck and actual effect/check ledger.
+
+## Current recovery return / operational transfer — 2026-10-23
+
+Recovery source accepted bounded only: see `docs/reviews/R139_RECOVERY_SOURCE_INDEPENDENT_REVIEW_2026-10-23.md`. Cached offline compile2/2PASS, exactGo7PASS0skip, worker/RootPython34PASS each; original PATH failure and incomplete receipt preserved. Source check counters are recorded without reset. The one post-acceptance supported inventory exposes no browser/apps; independent operational disposition HOLD_TRANSFER. Current order remains BLOCKED_WITH_REASON: no fresh runtime/provider admission, no source/live replay or alternate stack. Receiving environment follows `docs/reviews/R139_RECOVERY_SOURCE_AND_RUNTIME_TRANSFER_2026-10-23.md` within sameR139. No product acceptance, tranche closure or FREEZE.

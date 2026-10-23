@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "R139_OPERATIONAL_CAPABILITY_PROPOSAL_NOT_AUTHORITY",
+  "date": "2026-10-23",
+  "ownerReply": "cho phép chạy cho hoàn tất",
+  "sourceAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-RECOVERY-SOURCE-ADMISSION.json",
+  "purpose": "Before any fixture, bound a supported process-handle lifetime observation and supported browser inventory/access readiness. Does not prove host survival under every interruption or explain r3.",
+  "riskCeiling": "R2",
+  "executor": "Root bounded operational EXECUTOR",
+  "reviewer": "Independent Luna Max reviewer; source/admission/execution author0",
+  "newCaps": {
+    "inertParentInvocation": 1,
+    "inertChildInvocation": 1,
+    "childLifetimeSeconds": 45,
+    "parentHardDeadlineSeconds": 90,
+    "browserInventory": 1,
+    "supportedIabSelection": 1,
+    "existingObservedTabAcquisition": 0,
+    "tabNavigation": 0,
+    "browserClick": 0,
+    "server": 0,
+    "fixture": 0,
+    "Docker": 0,
+    "credentialRead": 0,
+    "providerCall": 0
+  },
+  "processContract": "Use supported exec_command process session with held original subprocess handle. Child sleeps45s only; parent records start/heartbeat/wait/exit then terminal in a fresh ignored receipt. No detached/background/window workaround or new persistent controller. Parent deadline90s, exact held child terminate/wait only if needed; receipt absence or wait uncertainty HOLD. No daemon/server/network or shell side effects in inert child.",
+  "browserContract": "Revised candidate must contain inventory/metadata only; no getTab retry, no denied URL acquisition, navigation, tab creation, workaround, server or fixture. Inventory alone cannot pass product browser capability.",
+  "evidence": "docs/reviews/probes/r139_integrated_20261021/r7_operational_capability.json",
+  "ignoredProcessReceipt": ".cvf/runtime/r139_recovery_owner_capability_20261023.json",
+  "acceptance": "Original inert child wait/exit and deadline observed; supported tool availability/access recorded honestly. No product-browser/campaign PASS from metadata or inert process alone. Must independently review outcome before any later effect.",
+  "stop": "First failure/policy denial stops dependent runtime; no retry/alternate stack/cap reset. Old process causeUNKNOWN, bridge driftHOLD, oldMAYslot consumed and r3 spent preserved.",
+  "sourceWorkerIsolation": "Source worker cannot execute or modify this admission. Four-file source work may continue while independent capability is assessed.",
+  "status": "DRAFT_NOT_EFFECTIVE_CHANGES_REQUIRED",
+  "independentReview": {
+    "reviewer": "/root/r139_operational_reviewer Luna Max; author0/execution0",
+    "verdict": "CHANGES_REQUIRED",
+    "findings": [
+      "Sequence mismatch: accepted design requires source acceptance before operational capability; source BUILD still in progress.",
+      "Owner reply answers source-only proposal; broader effect authority must be reconciled before activation.",
+      "Proposed prior getTab acquisition repeats a policy-denied URL action; no retry accepted without explicit safe boundary."
+    ],
+    "actualEffects": 0,
+    "rootDisposition": "Accepted sequencing and denied-URL findings. Proposal withheld, no process/CUA calls. Continue independent source repair first; no effective operational admission committed."
+  },
+  "independentReadOnlyClarification": {
+    "reviewer": "/root/r139_operational_reviewer Luna Max",
+    "decision": "After source acceptance, one supported cua.getState inventory-only call is ordinary read-only prerequisite discovery under the current task, with no repeated approval needed.",
+    "permitted": "One inventory snapshot only after source acceptance",
+    "notGranted": [
+      "Browser selection",
+      "Tab access or prior denied URL retry",
+      "Navigation/tab creation/click/close",
+      "Inert process invocation",
+      "Application runtime/provider effects"
+    ],
+    "claimBoundary": "Record only snapshot facts. Absent/unclear product access remains NOT_PROVEN. No product browser-control capability or runtime acceptance inferred."
+  }
+}

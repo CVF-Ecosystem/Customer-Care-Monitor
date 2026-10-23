@@ -41,9 +41,9 @@ MYSQL_PROBE_TIMEOUT_SECONDS = 8
 WINDOWS_LISTENER_QUERY_TIMEOUT_SECONDS = 5
 GRANT_MIN_SECONDS = 60
 GRANT_MAX_SECONDS = 24 * 60 * 60
-R139_REPLACEMENT_FIXTURE_NAME = "ccmai-r139-r3-20261021"
-R139_REPLACEMENT_DATABASE = "ccma_r139_r3_20261021"
-R139_REPLACEMENT_RUNTIME_ROOT = Path(".cvf/runtime/r139_integrated_execution_r3_20261021")
+R139_REPLACEMENT_FIXTURE_NAME = "ccmai-r139-r4-20261023"
+R139_REPLACEMENT_DATABASE = "ccma_r139_r4_20261023"
+R139_REPLACEMENT_RUNTIME_ROOT = Path(".cvf/runtime/r139_integrated_execution_r4_20261023")
 PROMPT_TEXT = "Analyze only fabricated Vietnamese complaint; return the required JSON."
 PROMPT_SHA256 = hashlib.sha256(PROMPT_TEXT.encode("utf-8")).hexdigest()
 ACTIVE_HARD_DEADLINE: float | None = None
@@ -115,7 +115,7 @@ def project_path(relative: str) -> Path:
 
 
 def replacement_external_evidence_dir() -> Path:
-    return ROOT.parent / ".ccmai_local_evidence" / "r139_execution_proof_20261021" / "fixture_r3"
+    return ROOT.parent / ".ccmai_local_evidence" / "r139_execution_proof_20261023" / "fixture_r4"
 
 
 def committed(relative: str) -> Path:
@@ -264,16 +264,98 @@ def inventory(admission: dict, runtime: Path) -> dict:
     def rows(*args: str) -> list[dict]:
         raw = docker(admission, runtime, *args)
         return sorted((json.loads(line) for line in raw.splitlines() if line), key=lambda row: json.dumps(row, sort_keys=True))
-    return {"containers": rows("ps", "-a", "--no-trunc", "--format", "{{json .}}"), "networks": rows("network", "ls", "--no-trunc", "--format", "{{json .}}"), "volumes": rows("volume", "ls", "--format", "{{json .}}")}
+    observed = {"containers": rows("ps", "-a", "--no-trunc", "--format", "{{json .}}"), "networks": rows("network", "ls", "--no-trunc", "--format", "{{json .}}"), "volumes": rows("volume", "ls", "--format", "{{json .}}")}
+    # Inspect only explicitly selected safe fields. Never request Config.Env,
+    # commands, labels, mounts or health probe logs from protected containers.
+    projection = ('{"Id":{{json .Id}},"Name":{{json .Name}},"Image":{{json .Image}},"Created":{{json .Created}},'
+                  '"RestartCount":{{json .RestartCount}},"State":{"Status":{{json .State.Status}},"Running":{{json .State.Running}},'
+                  '"Paused":{{json .State.Paused}},"Restarting":{{json .State.Restarting}},"OOMKilled":{{json .State.OOMKilled}},'
+                  '"Dead":{{json .State.Dead}},"Pid":{{json .State.Pid}},"ExitCode":{{json .State.ExitCode}},'
+                  '"StartedAt":{{json .State.StartedAt}},"FinishedAt":{{json .State.FinishedAt}}},'
+                  '"Health":{{if .State.Health}}{"Status":{{json .State.Health.Status}},"FailingStreak":{{json .State.Health.FailingStreak}}}{{else}}null{{end}},'
+                  '"NetworkIdentity":{{json .NetworkSettings.Networks}}}')
+    ids = [row.get("ID") for row in observed["containers"]]
+    require(all(isinstance(item, str) and HEX64.fullmatch(item) for item in ids) and len(set(ids)) == len(ids), "PROTECTED_INSPECT_ID_INVALID")
+    indexed = {}
+    for offset in range(0, len(ids), 16):
+        chunk = ids[offset:offset + 16]
+        raw = docker(admission, runtime, "inspect", "--format", projection, *chunk)
+        for line in raw.splitlines():
+            item = json.loads(line)
+            require(isinstance(item, dict) and item.get("Id") in chunk and item["Id"] not in indexed, "PROTECTED_INSPECT_ID_MISMATCH")
+            indexed[item["Id"]] = item
+    require(set(indexed) == set(ids), "PROTECTED_INSPECT_SET_INVALID")
+    for row in observed["containers"]:
+        row["_typed"] = indexed[row["ID"]]
+    for row in observed["networks"]:
+        require(isinstance(row.get("ID"), str) and row["ID"] and isinstance(row.get("Name"), str) and row["Name"], "PROTECTED_NETWORK_ID_INVALID")
+        row["_typed"] = {field: row.get(field) for field in ("Name", "Driver", "Scope")}
+        row["_typed"]["Id"] = row["ID"]
+    for row in observed["volumes"]:
+        require(isinstance(row.get("Name"), str) and row["Name"], "PROTECTED_VOLUME_ID_INVALID")
+        row["_typed"] = {field: row.get(field) for field in ("Name", "Driver", "Scope")}
+    observed["capturedMonotonic"] = time.monotonic()
+    observed["capturedAtUTC"] = datetime.now(timezone.utc).isoformat()
+    return observed
 
 
 def excluded_owned(observed: dict, owner: dict) -> dict:
-    return {"containers": [row for row in observed["containers"] if row.get("ID") != owner.get("containerId")], "networks": [row for row in observed["networks"] if row.get("ID") != owner.get("networkId")], "volumes": [row for row in observed["volumes"] if row.get("Name") != owner.get("volumeName")]}
+    return {"containers": [row for row in observed["containers"] if row.get("ID") != owner.get("containerId")], "networks": [row for row in observed["networks"] if row.get("ID") != owner.get("networkId")], "volumes": [row for row in observed["volumes"] if row.get("Name") != owner.get("volumeName")], "capturedMonotonic": observed["capturedMonotonic"], "capturedAtUTC": observed["capturedAtUTC"]}
 
 
 _STATUS_ELAPSED = r"[1-9][0-9]* (?:second|minute|hour|day|week|month|year)s?"
 _UP_STATUS = re.compile(rf"^Up (?P<elapsed>{_STATUS_ELAPSED})(?P<health> \((?:healthy|unhealthy|health: starting)\))?$")
 _EXITED_STATUS = re.compile(rf"^Exited \((?P<exitcode>[0-9]+)\) (?P<elapsed>{_STATUS_ELAPSED}) ago$")
+_AUTH_POST_PATHS = {"/api/v1/auth/login", "/api/v1/auth/logout", "/api/v1/auth/refresh"}
+_EXECUTE_POST_PATH = re.compile(r"^/api/v1/tenants/[^/]+/intervention-cases/[^/]+/rerun-requests/[^/]+/execute$")
+_ELAPSED_VALUE = re.compile(r"^(?P<count>[1-9][0-9]*) (?P<unit>second|minute|hour|day|week|month|year)s?(?: ago)?$")
+_UNIT_SECONDS = {"second": 1, "minute": 60, "hour": 3600, "day": 86400, "week": 604800, "month": 2592000, "year": 31536000}
+
+
+def _anchored_elapsed(display: str, anchor: str, capture: datetime) -> None:
+    match = _ELAPSED_VALUE.fullmatch(display)
+    require(match is not None, "PROTECTED_ELAPSED_UNKNOWN_FORMAT")
+    try:
+        anchored = datetime.fromisoformat(anchor.replace("Z", "+00:00"))
+    except ValueError as exc:
+        raise Hold("PROTECTED_TIME_ANCHOR_INVALID") from exc
+    require(anchored.tzinfo is not None, "PROTECTED_TIME_ANCHOR_INVALID")
+    seconds = (capture - anchored).total_seconds()
+    unit = _UNIT_SECONDS[match.group("unit")]
+    count = int(match.group("count"))
+    # Docker rounds display units; tolerate one display bucket, never a reset.
+    require(max(0, (count - 1) * unit) <= seconds <= (count + 2) * unit, "PROTECTED_ELAPSED_ANCHOR_MISMATCH")
+
+
+def _route_kind(method: object, path: object) -> str:
+    require(isinstance(method, str) and isinstance(path, str), "ROUTE_IDENTITY_INVALID")
+    if method == "POST" and path in _AUTH_POST_PATHS:
+        return "auth"
+    if method == "POST" and _EXECUTE_POST_PATH.fullmatch(path):
+        return "execute"
+    if method in ("GET", "HEAD") and (path == "/api" or path.startswith("/api/")):
+        return "read"
+    raise Hold("UNLISTED_ROUTE_ATTEMPTED")
+
+
+def _validate_route_rows(rows: list, label: str, terminal: dict) -> dict:
+    require(all(isinstance(row, dict) for row in rows), label + "_ROUTE_ROW_INVALID")
+    attempts = [row for row in rows if row.get("phase") == "attempt"]
+    responses = [row for row in rows if row.get("phase") == "response"]
+    require(len(attempts) + len(responses) == len(rows) and len(attempts) == len(responses), label + "_ROUTE_RESPONSE_GAP")
+    ids = [row.get("id") for row in attempts]
+    response_ids = [row.get("id") for row in responses]
+    require(all(type(i) is int and i > 0 for i in ids + response_ids) and len(ids) == len(set(ids)) and len(response_ids) == len(set(response_ids)) and set(ids) == set(response_ids), label + "_ROUTE_RESPONSE_GAP")
+    by_id = {row["id"]: row for row in attempts}
+    require(all(row.get("method") == by_id[row["id"]].get("method") and row.get("path") == by_id[row["id"]].get("path") and type(row.get("status")) is int and 100 <= row["status"] <= 599 for row in responses), label + "_ROUTE_RESPONSE_IDENTITY_MISMATCH")
+    require(all(row.get("allowed") is True for row in attempts), label + "_BLOCKED_ROUTE_ATTEMPTED")
+    require(all(row["status"] != 405 for row in responses), label + "_ROUTE_DENIAL_OBSERVED")
+    kinds = [_route_kind(row.get("method"), row.get("path")) for row in attempts]
+    auth = kinds.count("auth")
+    execute = kinds.count("execute")
+    require(execute == terminal.get("executePOST") == 1 and auth == terminal.get("authPOST") and auth <= 4, label + "_EFFECT_ROUTE_MISMATCH")
+    return {"attempts": len(attempts), "responses": len(responses), "executePOST": execute, "authPOST": auth,
+            "authRoutes": [row["path"] for row, kind in zip(attempts, kinds) if kind == "auth"]}
 
 
 def canonicalize_container_status(status: str) -> str:
@@ -288,9 +370,15 @@ def canonicalize_container_status(status: str) -> str:
 
 
 def canonicalize_protected_inventory(value: dict) -> dict:
-    require(isinstance(value, dict) and set(value) == {"containers", "networks", "volumes"}, "PROTECTED_INVENTORY_INVALID")
+    require(isinstance(value, dict) and set(value) == {"containers", "networks", "volumes", "capturedMonotonic", "capturedAtUTC"} and type(value["capturedMonotonic"]) in (float, int) and value["capturedMonotonic"] >= 0, "PROTECTED_INVENTORY_INVALID")
+    try:
+        captured = datetime.fromisoformat(value["capturedAtUTC"].replace("Z", "+00:00"))
+    except (ValueError, AttributeError, TypeError) as exc:
+        raise Hold("PROTECTED_CAPTURE_TIME_INVALID") from exc
+    require(captured.tzinfo is not None and captured.utcoffset() == timedelta(0), "PROTECTED_CAPTURE_TIME_INVALID")
     normalized: dict[str, list[dict]] = {}
-    for collection, rows in value.items():
+    for collection in ("containers", "networks", "volumes"):
+        rows = value[collection]
         require(isinstance(rows, list) and all(isinstance(row, dict) for row in rows), "PROTECTED_INVENTORY_INVALID")
         copied_rows = []
         for row in rows:
@@ -299,10 +387,36 @@ def canonicalize_protected_inventory(value: dict) -> dict:
             if collection == "containers" and isinstance(networks, str) and "," in networks:
                 copied["Networks"] = ",".join(sorted(member.strip() for member in networks.split(",")))
             if collection == "containers":
+                typed = copied.get("_typed")
+                require(isinstance(typed, dict) and typed.get("Id") == copied.get("ID") and isinstance(typed.get("Name"), str) and isinstance(typed.get("Image"), str) and isinstance(typed.get("Created"), str) and type(typed.get("RestartCount")) is int and typed["RestartCount"] >= 0, "PROTECTED_CONTAINER_ANCHOR_INVALID")
+                state = typed.get("State")
+                require(isinstance(state, dict) and all(field in state for field in ("Status", "Running", "Paused", "Restarting", "OOMKilled", "Dead", "Pid", "ExitCode", "StartedAt", "FinishedAt")) and isinstance(state["StartedAt"], str) and isinstance(state["FinishedAt"], str) and all(type(state[field]) is bool for field in ("Running", "Paused", "Restarting", "OOMKilled", "Dead")) and type(state["Pid"]) is int and state["Pid"] >= 0 and type(state["ExitCode"]) is int and isinstance(typed.get("NetworkIdentity"), dict), "PROTECTED_STATE_ANCHOR_INVALID")
+                for field in ("StartedAt", "FinishedAt"):
+                    try:
+                        require(datetime.fromisoformat(state[field].replace("Z", "+00:00")).tzinfo is not None, "PROTECTED_TIME_ANCHOR_INVALID")
+                    except ValueError as exc:
+                        raise Hold("PROTECTED_TIME_ANCHOR_INVALID") from exc
+                health = typed.get("Health")
+                require(health is None or (isinstance(health, dict) and isinstance(health.get("Status"), str) and type(health.get("FailingStreak")) is int and health["FailingStreak"] >= 0), "PROTECTED_HEALTH_ANCHOR_INVALID")
                 original_status = copied.get("Status")
                 copied["Status"] = canonicalize_container_status(original_status)
                 expected_state = "running" if original_status.startswith("Up ") else "exited"
-                require(copied.get("State") == expected_state, "PROTECTED_STATUS_STATE_MISMATCH")
+                require(copied.get("State") == expected_state and state["Status"] == expected_state and state["Running"] is (expected_state == "running"), "PROTECTED_STATUS_STATE_MISMATCH")
+                status_health = _UP_STATUS.fullmatch(original_status).group("health") if expected_state == "running" else None
+                if status_health:
+                    display_health = status_health.strip(" ()").removeprefix("health: ")
+                    require(isinstance(health, dict) and display_health == health.get("Status"), "PROTECTED_HEALTH_MISMATCH")
+                running_for = copied.get("RunningFor")
+                require(isinstance(running_for, str), "PROTECTED_RUNNING_FOR_UNKNOWN_FORMAT")
+                status_elapsed = _UP_STATUS.fullmatch(original_status).group("elapsed") if expected_state == "running" else _EXITED_STATUS.fullmatch(original_status).group("elapsed")
+                _anchored_elapsed(status_elapsed, state["StartedAt"] if expected_state == "running" else state["FinishedAt"], captured)
+                _anchored_elapsed(running_for, typed["Created"], captured)
+                copied["RunningFor"] = "<elapsed>"
+            else:
+                typed = copied.get("_typed")
+                identity = "Id" if collection == "networks" else "Name"
+                listing = "ID" if collection == "networks" else "Name"
+                require(isinstance(typed, dict) and typed.get(identity) == copied.get(listing) and isinstance(typed.get("Name"), str) and typed["Name"] and isinstance(typed.get("Driver"), str) and typed["Driver"] and isinstance(typed.get("Scope"), str) and typed["Scope"], "PROTECTED_RESOURCE_ANCHOR_INVALID")
             copied_rows.append(copied)
         normalized[collection] = sorted(copied_rows, key=lambda row: json.dumps(row, sort_keys=True))
     return normalized
@@ -420,8 +534,9 @@ def wait_mysql_tcp_ready(admission: dict, runtime: Path, owner: dict) -> dict:
     raise Hold("MYSQL_TCP_READY_NOT_PROVEN")
 
 
-def start_fixture(admission: dict, runtime: Path, external: Path, owner: dict) -> dict:
-    before = inventory(admission, runtime)
+def start_fixture(admission: dict, runtime: Path, external: Path, owner: dict, *, before: dict | None = None) -> dict:
+    before = inventory(admission, runtime) if before is None else before
+    canonicalize_protected_inventory(before)
     name = admission["fixtureName"]
     require(not any(row.get("Names") == name for row in before["containers"]), "CONTAINER_NAME_EXISTS")
     require(not any(row.get("Name") == name for row in before["networks"] + before["volumes"]), "RESOURCE_NAME_EXISTS")
@@ -649,6 +764,10 @@ def stop_fixture(admission: dict, runtime: Path, owner: dict) -> dict:
     require(after.get("NetworkSettings", {}).get("Ports", {}).get("3306/tcp") in (None, []), "CONTAINER_PORT_STILL_PUBLISHED")
     protected_before_raw = owner["protectedBefore"]
     protected_after_raw = excluded_owned(inventory(admission, runtime), owner)
+    require(protected_after_raw["capturedMonotonic"] >= protected_before_raw["capturedMonotonic"], "PROTECTED_CAPTURE_TIME_REVERSED")
+    wall_elapsed = (datetime.fromisoformat(protected_after_raw["capturedAtUTC"]) - datetime.fromisoformat(protected_before_raw["capturedAtUTC"])).total_seconds()
+    monotonic_elapsed = protected_after_raw["capturedMonotonic"] - protected_before_raw["capturedMonotonic"]
+    require(wall_elapsed >= 0 and abs(wall_elapsed - monotonic_elapsed) <= 5, "PROTECTED_CAPTURE_CLOCK_DRIFT")
     protected_before = canonicalize_protected_inventory(protected_before_raw)
     protected_after = canonicalize_protected_inventory(protected_after_raw)
     comparison = {
@@ -764,34 +883,14 @@ def validate_vite_ledger(runtime: Path, terminal: dict) -> dict:
     path = runtime / "vite_routes.jsonl"
     require(path.is_file(), "VITE_ROUTE_LEDGER_MISSING")
     rows = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line]
-    attempts = [row for row in rows if row.get("phase") == "attempt"]
-    responses = [row for row in rows if row.get("phase") == "response"]
-    attempt_ids = [row.get("id") for row in attempts]
-    response_ids = [row.get("id") for row in responses]
-    require(len(attempts) == len(responses) and len(set(attempt_ids)) == len(attempt_ids) and len(set(response_ids)) == len(response_ids) and set(attempt_ids) == set(response_ids), "VITE_ROUTE_RESPONSE_GAP")
-    attempt_by_id = {row["id"]: row for row in attempts}
-    require(all(row.get("method") == attempt_by_id[row["id"]].get("method") and row.get("path") == attempt_by_id[row["id"]].get("path") for row in responses), "VITE_ROUTE_RESPONSE_IDENTITY_MISMATCH")
-    execute = [row for row in attempts if row.get("method") == "POST" and str(row.get("path", "")).endswith("/execute")]
-    auth = [row for row in attempts if row.get("method") == "POST" and "/auth/" in str(row.get("path", ""))]
-    require(len(execute) == terminal.get("executePOST") == 1 and execute[0].get("allowed") is True, "BROWSER_EXECUTE_LEDGER_MISMATCH")
-    require(len(auth) == terminal.get("authPOST") and len(auth) <= 4, "BROWSER_AUTH_LEDGER_MISMATCH")
-    require(all(row.get("allowed") is True for row in attempts), "BLOCKED_ROUTE_ATTEMPTED")
-    return {"attempts": len(attempts), "responses": len(responses), "executePOST": len(execute), "authPOST": len(auth)}
+    return _validate_route_rows(rows, "VITE", terminal)
 
 
 def validate_go_ledger(external: Path, terminal: dict) -> dict:
     path = external / "go_routes.jsonl"
     require(path.is_file(), "GO_ROUTE_LEDGER_MISSING")
     rows = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line]
-    attempts = {row.get("id"): row for row in rows if row.get("phase") == "attempt"}
-    responses = {row.get("id"): row for row in rows if row.get("phase") == "response"}
-    require(len(attempts) + len(responses) == len(rows) and len(attempts) == len(responses) and None not in attempts and attempts.keys() == responses.keys(), "GO_ROUTE_RESPONSE_GAP")
-    require(all(responses[key].get("method") == row.get("method") and responses[key].get("path") == row.get("path") and isinstance(responses[key].get("status"), int) for key, row in attempts.items()), "GO_ROUTE_RESPONSE_IDENTITY_MISMATCH")
-    require(all(row.get("allowed") is True for row in attempts.values()), "GO_BLOCKED_ROUTE_ATTEMPTED")
-    execute = [row for row in attempts.values() if row.get("method") == "POST" and str(row.get("path", "")).endswith("/execute")]
-    auth = [row for row in attempts.values() if row.get("method") == "POST" and "/auth/" in str(row.get("path", ""))]
-    require(len(execute) == terminal.get("executePOST") == 1 and len(auth) == terminal.get("authPOST") and len(auth) <= 4, "GO_EFFECT_ROUTE_MISMATCH")
-    return {"attempts": len(attempts), "responses": len(responses), "executePOST": len(execute), "authPOST": len(auth)}
+    return _validate_route_rows(rows, "GO", terminal)
 
 
 def validate_go_terminal(external: Path, terminal: dict, admission: dict | None = None, native_validation: dict | None = None) -> dict:
@@ -835,6 +934,7 @@ def run(relative: str) -> None:
     runtime.mkdir(parents=True, exist_ok=False)
     external.mkdir(parents=True, exist_ok=False)
     write_new(runtime / "run_intent.json", {"admissionSha256": digest(path), "sourceCommit": admission["sourceCommit"], "startedAt": time.time(), "deadlineSeconds": MAX_SECONDS})
+    append(runtime / "progress.jsonl", {"phase": "admitted", "monotonic": time.monotonic(), "atUTC": datetime.now(timezone.utc).isoformat()})
     owner: dict = {}
     children: dict[str, subprocess.Popen] = {}
     go = vite = None
@@ -844,11 +944,16 @@ def run(relative: str) -> None:
     try:
         image_rows = json.loads(docker(admission, runtime, "image", "inspect", IMAGE))
         require(isinstance(image_rows, list) and len(image_rows) == 1 and image_rows[0].get("Id") == IMAGE, "PINNED_IMAGE_NOT_CACHED")
+        protected_baseline = inventory(admission, runtime)
+        canonicalize_protected_inventory(protected_baseline)
+        write_new(runtime / "protected_inventory_baseline.json", protected_baseline)
+        append(runtime / "progress.jsonl", {"phase": "protected_baseline_validated", "monotonic": time.monotonic()})
         key_file = Path(admission["keyPath"])
         key = key_file.read_text(encoding="utf-8").strip()
         require(len(key) >= 16 and "\n" not in key, "KEY_INVALID")
         require(time.monotonic() < hard_deadline - 180, "PREFLIGHT_DEADLINE")
-        start_fixture(admission, runtime, external, owner)
+        start_fixture(admission, runtime, external, owner, before=protected_baseline)
+        append(runtime / "progress.jsonl", {"phase": "fixture_started", "monotonic": time.monotonic(), "atUTC": datetime.now(timezone.utc).isoformat()})
         minimal = minimal_environment()
         env = dict(minimal)
         env.update({"R139_RUN": "1", "R139_RUNTIME_ADMISSION": str(path), "R139_RUNTIME_ADMISSION_SHA256": digest(path), "R139_SOURCE_COMMIT": admission["sourceCommit"], "R139_FIXTURE_IDENTITY": str(external / "fixture_identity.json"), "R139_MYSQL_DSN": f'root:{owner["fixturePassword"]}@tcp(127.0.0.1:{owner["port"]})/{admission["database"]}?parseTime=true', "R139_RUNTIME_ROOT": str(runtime), "R139_EVIDENCE_DIR": str(external), "R139_EFFECT_DIR": str(external / "effect_slots"), "R139_ALIBABA_KEY": key, "R139_ALIBABA_ENDPOINT": admission["endpoint"], "R139_GRANT_DEADLINE_UTC": admission["grantDeadlineUTC"], "R139_STOP_FILE": str(runtime / "stop_requested")})
@@ -857,6 +962,7 @@ def run(relative: str) -> None:
         api_port = urlsplit(origin).port
         native_validation = validate_native_evidence(external)
         write_new(runtime / "native_evidence_validation.json", native_validation)
+        append(runtime / "progress.jsonl", {"phase": "native_validated", "monotonic": time.monotonic(), "atUTC": datetime.now(timezone.utc).isoformat()})
         template = project_path("scripts/r139_vite_config.mjs.template").read_text(encoding="utf-8")
         for token, replacement in {"__R139_FRONTEND_ROOT__": str(ROOT / "frontend"), "__R139_RUNTIME__": str(runtime), "__R139_API_ORIGIN__": origin, "__R139_NONCE__": secrets.token_hex(16)}.items():
             template = template.replace(token, json.dumps(replacement))
@@ -880,11 +986,16 @@ def run(relative: str) -> None:
             raise Hold("VITE_HEALTH_TIMEOUT")
         write_new(runtime / "browser_ready.json", {"apiOrigin": origin, "uiOrigin": f'http://127.0.0.1:{admission["vitePort"]}', "sourceCommit": admission["sourceCommit"], "admissionSha256": digest(path)})
         print(json.dumps({"result": "BROWSER_READY", "apiOrigin": origin, "uiOrigin": f'http://127.0.0.1:{admission["vitePort"]}'}, sort_keys=True), flush=True)
+        append(runtime / "progress.jsonl", {"phase": "browser_ready", "monotonic": time.monotonic(), "atUTC": datetime.now(timezone.utc).isoformat()})
         deadline = hard_deadline - min(120, MIN_CLEANUP_SECONDS)
+        next_progress = time.monotonic() + 10
         while time.monotonic() < deadline:
             require(go.poll() is None and vite.poll() is None, "CHILD_EXIT_DURING_CAMPAIGN")
             if (runtime / "stop_requested").is_file():
                 break
+            if time.monotonic() >= next_progress:
+                append(runtime / "progress.jsonl", {"phase": "children_held", "monotonic": time.monotonic(), "goPid": go.pid, "vitePid": vite.pid})
+                next_progress = time.monotonic() + 10
             time.sleep(0.25)
         else:
             raise Hold("CAMPAIGN_DEADLINE")
@@ -893,6 +1004,10 @@ def run(relative: str) -> None:
         outcome["error"] = type(exc).__name__ + ":" + str(exc)
     finally:
         cleanup_started = time.monotonic()
+        try:
+            append(runtime / "progress.jsonl", {"phase": "cleanup_entered", "monotonic": cleanup_started, "atUTC": datetime.now(timezone.utc).isoformat(), "reason": outcome.get("error", outcome["result"])})
+        except Exception as exc:
+            outcome["progressError"] = type(exc).__name__
         cleanup_wall_started = time.time()
         ACTIVE_CLEANUP_DEADLINE = cleanup_started + MIN_CLEANUP_SECONDS
         errors: list[str] = []

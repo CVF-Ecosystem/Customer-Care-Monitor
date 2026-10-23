@@ -70,6 +70,26 @@ type r139Admission struct {
 	FrontendTree         string            `json:"frontendTree"`
 }
 
+func r139BrowserRoute(method, path string) (auth, execute, read bool) {
+	auth = method == http.MethodPost && (path == "/api/v1/auth/login" || path == "/api/v1/auth/logout" || path == "/api/v1/auth/refresh")
+	execute = method == http.MethodPost && regexp.MustCompile(`^/api/v1/tenants/[^/]+/intervention-cases/[^/]+/rerun-requests/[^/]+/execute$`).MatchString(path)
+	read = method == http.MethodGet || method == http.MethodHead
+	return
+}
+
+func TestR139PureRouteAdmission(t *testing.T) {
+	for _, path := range []string{"/api/v1/auth/login", "/api/v1/auth/logout", "/api/v1/auth/refresh"} {
+		auth, execute, read := r139BrowserRoute(http.MethodPost, path)
+		if !auth || execute || read { t.Fatalf("R139 auth route %q", path) }
+	}
+	for _, path := range []string{"/api/v1/auth/refresh/extra", "/api/v1/auth/reset", "/api/v1/tenants/t/intervention-cases/c/rerun-requests/r/execute/extra"} {
+		auth, execute, read := r139BrowserRoute(http.MethodPost, path)
+		if auth || execute || read { t.Fatalf("R139 mutation route %q", path) }
+	}
+	auth, execute, read := r139BrowserRoute(http.MethodPost, "/api/v1/tenants/t/intervention-cases/c/rerun-requests/r/execute")
+	if auth || !execute || read { t.Fatal("R139 execute route") }
+}
+
 func r139Admit(t *testing.T) (r139Admission, string) {
 	t.Helper()
 	if os.Getenv("R139_RUN") != "1" {
@@ -191,7 +211,7 @@ func r139Admit(t *testing.T) (r139Admission, string) {
 	if err != nil || runtimeRel == "." || strings.HasPrefix(runtimeRel, "..") {
 		t.Fatal("R139 runtime root outside ignored area")
 	}
-	expectedEvidence := filepath.Join(filepath.Dir(root), ".ccmai_local_evidence", "r139_execution_proof_20261021", "fixture_r3")
+	expectedEvidence := filepath.Join(filepath.Dir(root), ".ccmai_local_evidence", "r139_execution_proof_20261023", "fixture_r4")
 	if a.ExternalEvidenceDir != expectedEvidence || os.Getenv("R139_EVIDENCE_DIR") != expectedEvidence {
 		t.Fatal("R139 external evidence location mismatch")
 	}
@@ -950,10 +970,8 @@ func TestR139IntegratedExecutionProof(t *testing.T) {
 		wrapped := &r139ResponseWriter{ResponseWriter: w, status: 200}
 		path := r.URL.Path
 		id := routeSequence.Add(1)
-		allowed := r.Method == http.MethodGet || r.Method == http.MethodHead
-		auth := path == "/api/v1/auth/login" || path == "/api/v1/auth/logout"
-		execute := r.Method == http.MethodPost && strings.HasSuffix(path, "/execute")
-		if r.Method == http.MethodPost && auth {
+		auth, execute, allowed := r139BrowserRoute(r.Method, path)
+		if auth {
 			allowed = authCount.Add(1) <= 4
 		}
 		if execute {
@@ -977,7 +995,7 @@ func TestR139IntegratedExecutionProof(t *testing.T) {
 			http.Error(wrapped, "r139_route_not_allowed", 405)
 			return
 		}
-		if r.Method == http.MethodPost && strings.HasSuffix(r.URL.Path, "/execute") {
+		if execute {
 			body, err := io.ReadAll(io.LimitReader(r.Body, 513))
 			if err != nil || len(body) > 512 {
 				http.Error(wrapped, "r139_body_invalid", http.StatusBadRequest)

@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
 
-CCMAI-RUNTIME-139 recovery source BUILD under Owner cho phép chạy cho hoàn tất and committed RECOVERY-SOURCE-ADMISSION: Sol Medium changes four existing source paths only; Root independently reviews. New source/check caps bounded; no runtime/key/network/browser/provider before separate operational/effect admission. Old r3 campaign spent/expired, old MAY slot consumed/unknown and protected/browser HOLDs unchanged. After source acceptance, establish supported persistent execution owner and browser capability before any fixture; then one bounded integrated G0/G1/G2 route. Full M3 OPEN; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 HOLD_TRANSFER: recovery source accepted bounded at pinned four hashes (offline compile2/2PASS, pureGo7PASS0SKIP, worker/RootPython34PASS each); original PATH failure preserved. Sole supported cua.getState inventory returned apps[]/browsers[]; independent Luna HOLD/TRANSFER, no product browser-control proof or old-tab closure inference; process ownership untested. Owner-designated supported browser/execution environment must receive same-R139 transfer packet before new fixture/effect admission. No retry/alternate stack, runtime/key/API or helper tranche now. Old r3 campaign spent/expired/newAPI0, old MAY slot1 consumed/unknown and protected driftHOLD retained; G1 integrated/G2/G3/E05/E06/full M3 OPEN, Facebook/Zalo OA parked.
 
-Root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent source REVIEWER / COMMIT_STEWARD; Sol Medium IMPLEMENTATION_WORKER; source-only BUILD
+Root SESSION_SYNC_STEWARD / COMMIT_STEWARD / ORCHESTRATOR after independent bounded source and Luna operational review; runtime stopped before effects
 
 Canonical roadmap: docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md. R137 product source unchanged; R139 original setup HOLD retained; no full M3 acceptance.
 

@@ -19,6 +19,16 @@ module = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(module)
 
 
+def protected_snapshot(*, status="Up 2 minutes (healthy)", running_for="2 minutes ago", network_id="network-id", started="2026-10-23T00:00:00Z", restarts=0, captured=100.0, captured_at="2026-10-23T00:02:30Z"):
+    state = {"Status": "running", "Running": True, "Paused": False, "Restarting": False, "OOMKilled": False, "Dead": False, "Pid": 123, "ExitCode": 0, "Error": "", "StartedAt": started, "FinishedAt": "0001-01-01T00:00:00Z"}
+    typed = {"Id": "protected-id", "Name": "/protected", "Image": "sha256:image", "Created": "2026-10-23T00:00:00Z", "RestartCount": restarts, "State": state, "Health": {"Status": "healthy", "FailingStreak": 0}, "NetworkIdentity": {"bridge": {"NetworkID": network_id}}}
+    return {"containers": [{"ID": "protected-id", "Networks": "bridge, custom", "Status": status, "State": "running", "RunningFor": running_for,
+                            "_typed": typed}],
+            "networks": [{"ID": network_id, "Name": "protected", "Driver": "bridge", "Scope": "local", "_typed": {"Id": network_id, "Name": "protected", "Driver": "bridge", "Scope": "local"}}],
+            "volumes": [{"Name": "protected-volume", "Driver": "local", "Scope": "local", "_typed": {"Name": "protected-volume", "Driver": "local", "Scope": "local"}}],
+            "capturedMonotonic": captured, "capturedAtUTC": captured_at}
+
+
 class R139SupervisorPureTests(unittest.TestCase):
     def test_source_resume_admission_cannot_enable_runtime(self):
         with patch.object(module, "committed") as committed:
@@ -43,47 +53,44 @@ class R139SupervisorPureTests(unittest.TestCase):
             "containers": [{"ID": "old", "Names": "protected"}, {"ID": "new", "Names": "ccmai-r139-owned"}],
             "networks": [{"ID": "old-net", "Name": "protected"}, {"ID": "new-net", "Name": "ccmai-r139-owned"}],
             "volumes": [{"Name": "protected"}, {"Name": "ccmai-r139-owned"}],
+            "capturedMonotonic": 10.0,
+            "capturedAtUTC": "2026-10-23T00:00:00Z",
         }
         result = module.excluded_owned(observed, {"containerId": "new", "networkId": "new-net", "volumeName": "ccmai-r139-owned"})
-        self.assertEqual(result, {"containers": observed["containers"][:1], "networks": observed["networks"][:1], "volumes": observed["volumes"][:1]})
+        self.assertEqual(result, {"containers": observed["containers"][:1], "networks": observed["networks"][:1], "volumes": observed["volumes"][:1], "capturedMonotonic": 10.0, "capturedAtUTC": "2026-10-23T00:00:00Z"})
         self.assertEqual(len(observed["containers"]), 2)
 
-    def test_protected_inventory_normalizes_network_order_and_status_elapsed_only(self):
-        before = {
-            "containers": [{"ID": "protected-id", "Networks": "bridge, custom", "Status": "Up 2 minutes", "State": "running", "RunningFor": "3 minutes"}],
-            "networks": [{"ID": "network-id", "Name": "protected"}],
-            "volumes": [{"Name": "protected-volume"}],
-        }
-        after = {
-            "containers": [{"ID": "protected-id", "Networks": "custom,bridge", "Status": "Up 2 minutes", "State": "running", "RunningFor": "3 minutes"}],
-            "networks": [{"ID": "network-id", "Name": "protected"}],
-            "volumes": [{"Name": "protected-volume"}],
-        }
+    def test_protected_inventory_normalizes_network_order_and_elapsed_only_with_stable_anchors(self):
+        before = protected_snapshot()
+        after = protected_snapshot(status="Up 4 minutes (healthy)", running_for="4 minutes ago", captured=220.0, captured_at="2026-10-23T00:04:30Z")
+        after["containers"][0]["Networks"] = "custom,bridge"
         original_before = json.loads(json.dumps(before))
         self.assertEqual(module.canonicalize_protected_inventory(before), module.canonicalize_protected_inventory(after))
         self.assertEqual(before, original_before)
-        changed_status = json.loads(json.dumps(after))
-        changed_status["containers"][0]["Status"] = "Up 4 minutes"
-        self.assertEqual(module.canonicalize_protected_inventory(before), module.canonicalize_protected_inventory(changed_status))
-        self.assertEqual(changed_status["containers"][0]["Status"], "Up 4 minutes")
+        self.assertEqual(after["containers"][0]["RunningFor"], "4 minutes ago")
 
     def test_protected_status_preserves_state_health_exitcode_and_other_fields(self):
-        base = {"containers": [{"ID": "x", "Status": "Up 29 minutes (healthy)", "RunningFor": "fixed", "State": "running", "ExitCode": 0}], "networks": [], "volumes": []}
+        base = protected_snapshot(status="Up 29 minutes (healthy)", running_for="29 minutes ago", captured_at="2026-10-23T00:29:30Z")
         elapsed = json.loads(json.dumps(base))
         elapsed["containers"][0]["Status"] = "Up 36 minutes (healthy)"
+        elapsed["containers"][0]["RunningFor"] = "36 minutes ago"
+        elapsed["capturedAtUTC"] = "2026-10-23T00:36:30Z"
         self.assertEqual(module.canonicalize_protected_inventory(base), module.canonicalize_protected_inventory(elapsed))
-        for field, value in (("Status", "Up 36 minutes (unhealthy)"), ("ExitCode", 1), ("RunningFor", "changed"), ("ID", "y")):
+        for field, value in (("Status", "Up 36 minutes (unhealthy)"), ("ID", "y")):
             changed = json.loads(json.dumps(elapsed))
             changed["containers"][0][field] = value
+            with self.assertRaises(module.Hold):
+                module.canonicalize_protected_inventory(changed)
+        for field, value in (("RestartCount", 1), ("Image", "sha256:changed")):
+            changed = json.loads(json.dumps(elapsed))
+            changed["containers"][0]["_typed"][field] = value
             self.assertNotEqual(module.canonicalize_protected_inventory(base), module.canonicalize_protected_inventory(changed), field)
-        exited = json.loads(json.dumps(base))
-        exited["containers"][0]["Status"] = "Exited (0) 22 hours ago"
-        exited["containers"][0]["State"] = "exited"
-        exited_later = json.loads(json.dumps(exited))
-        exited_later["containers"][0]["Status"] = "Exited (0) 23 hours ago"
-        self.assertEqual(module.canonicalize_protected_inventory(exited), module.canonicalize_protected_inventory(exited_later))
-        exited_later["containers"][0]["Status"] = "Exited (137) 23 hours ago"
-        self.assertNotEqual(module.canonicalize_protected_inventory(exited), module.canonicalize_protected_inventory(exited_later))
+        changed = json.loads(json.dumps(elapsed))
+        changed["containers"][0]["_typed"]["State"]["StartedAt"] = "2026-10-23T00:30:00Z"
+        with self.assertRaisesRegex(module.Hold, "PROTECTED_ELAPSED_ANCHOR_MISMATCH"):
+            module.canonicalize_protected_inventory(changed)
+        bridge = protected_snapshot(network_id="replacement-id")
+        self.assertNotEqual(module.canonicalize_protected_inventory(base), module.canonicalize_protected_inventory(bridge))
         mismatch = json.loads(json.dumps(base))
         mismatch["containers"][0]["State"] = "exited"
         with self.assertRaisesRegex(module.Hold, "PROTECTED_STATUS_STATE_MISMATCH"):
@@ -92,10 +99,61 @@ class R139SupervisorPureTests(unittest.TestCase):
     def test_protected_status_unknown_formats_hold(self):
         for status in ("Restarting (1) 3 seconds ago", "Dead", "Up About a minute", "Exited (0) unknown ago", "Up 2 minutes (health: unknown)", ""):
             with self.subTest(status=status), self.assertRaisesRegex(module.Hold, "PROTECTED_STATUS_UNKNOWN_FORMAT"):
-                module.canonicalize_protected_inventory({"containers": [{"ID": "x", "Status": status, "State": "running"}], "networks": [], "volumes": []})
+                module.canonicalize_protected_inventory(protected_snapshot(status=status))
+
+    def test_protected_old_r3_rows_and_running_for_reset_hold(self):
+        old = {"containers": [{"ID": "old", "Status": "Up 2 minutes", "State": "running", "RunningFor": "2 minutes"}], "networks": [], "volumes": [], "capturedMonotonic": 1.0, "capturedAtUTC": "2026-10-23T00:02:30Z"}
+        with self.assertRaisesRegex(module.Hold, "PROTECTED_CONTAINER_ANCHOR_INVALID"):
+            module.canonicalize_protected_inventory(old)
+        restarted = protected_snapshot(status="Up 1 minute (healthy)", running_for="2 minutes ago", started="2026-10-23T00:01:00Z", restarts=1)
+        self.assertNotEqual(module.canonicalize_protected_inventory(protected_snapshot()), module.canonicalize_protected_inventory(restarted))
+
+    def test_protected_elapsed_anchor_and_capture_clock_hold(self):
+        fresh = protected_snapshot(status="Up 4 seconds (healthy)", running_for="4 seconds ago", started="2026-10-23T00:00:00Z", captured_at="2026-10-23T00:00:04Z")
+        self.assertEqual(module.canonicalize_protected_inventory(fresh), module.canonicalize_protected_inventory(fresh))
+        reset = protected_snapshot(status="Up 2 minutes (healthy)", running_for="2 minutes ago", captured_at="2026-10-23T01:00:00Z")
+        with self.assertRaisesRegex(module.Hold, "PROTECTED_ELAPSED_ANCHOR_MISMATCH"):
+            module.canonicalize_protected_inventory(reset)
+        missing = protected_snapshot()
+        del missing["containers"][0]["_typed"]["State"]["StartedAt"]
+        with self.assertRaisesRegex(module.Hold, "PROTECTED_STATE_ANCHOR_INVALID"):
+            module.canonicalize_protected_inventory(missing)
+        for location, field in (("_typed", "RestartCount"), ("_typed", "Image")):
+            absent = protected_snapshot()
+            del absent["containers"][0][location][field]
+            with self.assertRaisesRegex(module.Hold, "PROTECTED_CONTAINER_ANCHOR_INVALID"):
+                module.canonicalize_protected_inventory(absent)
+        absent = protected_snapshot()
+        del absent["networks"][0]["_typed"]["Driver"]
+        with self.assertRaisesRegex(module.Hold, "PROTECTED_RESOURCE_ANCHOR_INVALID"):
+            module.canonicalize_protected_inventory(absent)
+        absent = protected_snapshot()
+        absent["containers"][0]["_typed"]["Health"]["FailingStreak"] = "unknown"
+        with self.assertRaisesRegex(module.Hold, "PROTECTED_HEALTH_ANCHOR_INVALID"):
+            module.canonicalize_protected_inventory(absent)
+
+    def test_inventory_projects_safe_typed_fields_only(self):
+        identifier = "a" * 64
+        listing = json.dumps({"ID": identifier, "Name": "protected", "Status": "Up 4 seconds", "State": "running", "RunningFor": "4 seconds ago"})
+        projected = protected_snapshot(status="Up 4 seconds (healthy)", running_for="4 seconds ago", captured_at="2026-10-23T00:00:04Z")["containers"][0]["_typed"]
+        projected["Id"] = identifier
+        calls = []
+        def fake_docker(_admission, _runtime, *args):
+            calls.append(args)
+            if args[:1] == ("ps",): return listing
+            if args[:2] == ("network", "ls") or args[:2] == ("volume", "ls"): return ""
+            if args[:1] == ("inspect",): return json.dumps(projected)
+            raise AssertionError(args)
+        with patch.object(module, "docker", side_effect=fake_docker):
+            observed = module.inventory({}, Path("ignored"))
+        self.assertEqual(observed["containers"][0]["_typed"]["Id"], identifier)
+        projected_template = calls[-1][2]
+        self.assertNotIn("Config.Env", projected_template)
+        self.assertNotIn(".Log", projected_template)
+        self.assertNotIn("Config.Cmd", projected_template)
 
     def test_mysql_readiness_uses_tcp_matching_database_and_retries_not_ready_only(self):
-        admission = {"database": "ccma_r139_r2_20261021"}
+        admission = {"database": "ccma_r139_r4_20261023"}
         owner = {"containerId": "owned-container", "fixturePassword": "synthetic-password"}
         with patch.object(module, "ACTIVE_HARD_DEADLINE", None), patch.object(
             module, "docker", side_effect=[module.Hold("DOCKER_COMMAND_FAILED"), "1"]
@@ -119,7 +177,7 @@ class R139SupervisorPureTests(unittest.TestCase):
             module, "docker", side_effect=module.Hold("DOCKER_TIMEOUT_NO_RETRY")
         ) as docker, patch.object(module.time, "sleep") as sleep:
             with self.assertRaisesRegex(module.Hold, "MYSQL_TCP_READY_PROBE_TIMEOUT_NO_RETRY"):
-                module.wait_mysql_tcp_ready({"database": "ccma_r139_r2_20261021"}, Path("ignored-runtime"), {"containerId": "owned", "fixturePassword": "synthetic"})
+                module.wait_mysql_tcp_ready({"database": "ccma_r139_r4_20261023"}, Path("ignored-runtime"), {"containerId": "owned", "fixturePassword": "synthetic"})
         docker.assert_called_once()
         sleep.assert_not_called()
 
@@ -136,7 +194,7 @@ class R139SupervisorPureTests(unittest.TestCase):
         ), patch.object(module, "docker", side_effect=late_success) as docker:
             with self.assertRaisesRegex(module.Hold, "MYSQL_TCP_READY_WINDOW_EXPIRED"):
                 module.wait_mysql_tcp_ready(
-                    {"database": "ccma_r139_r2_20261021"},
+                    {"database": "ccma_r139_r4_20261023"},
                     Path("ignored-runtime"),
                     {"containerId": "owned", "fixturePassword": "synthetic"},
                 )
@@ -154,7 +212,7 @@ class R139SupervisorPureTests(unittest.TestCase):
             module, "docker", side_effect=module.Hold("DOCKER_COMMAND_FAILED")
         ) as docker:
             with self.assertRaisesRegex(module.Hold, "MYSQL_TCP_READY_NOT_PROVEN"):
-                module.wait_mysql_tcp_ready({"database": "ccma_r139_r2_20261021"}, Path("ignored-runtime"), {"containerId": "owned", "fixturePassword": "synthetic"})
+                module.wait_mysql_tcp_ready({"database": "ccma_r139_r4_20261023"}, Path("ignored-runtime"), {"containerId": "owned", "fixturePassword": "synthetic"})
         self.assertEqual(docker.call_count, 45)
 
         clock = FakeClock(100.0)
@@ -164,7 +222,7 @@ class R139SupervisorPureTests(unittest.TestCase):
             module, "docker", side_effect=module.Hold("DOCKER_COMMAND_FAILED")
         ) as docker:
             with self.assertRaisesRegex(module.Hold, "MYSQL_TCP_READY_NOT_PROVEN"):
-                module.wait_mysql_tcp_ready({"database": "ccma_r139_r2_20261021"}, Path("ignored-runtime"), {"containerId": "owned", "fixturePassword": "synthetic"})
+                module.wait_mysql_tcp_ready({"database": "ccma_r139_r4_20261023"}, Path("ignored-runtime"), {"containerId": "owned", "fixturePassword": "synthetic"})
         docker.assert_called_once()
         self.assertLessEqual(docker.call_args.kwargs["timeout"], 0.5)
 
@@ -306,14 +364,14 @@ class R139SupervisorPureTests(unittest.TestCase):
                 receipt = json.loads((runtime / f"listener_query_{port}_result.json").read_text(encoding="utf-8"))
                 self.assertEqual(receipt["status"], "PASS_ZERO_LISTENERS")
 
-    def test_replacement_evidence_path_is_fixture_r3(self):
+    def test_replacement_evidence_path_is_fixture_r4(self):
         with tempfile.TemporaryDirectory() as name:
             project = Path(name) / "Customer-Care-Monitor-AI"
             project.mkdir()
             with patch.object(module, "ROOT", project):
                 self.assertEqual(
                     module.replacement_external_evidence_dir(),
-                    project.parent / ".ccmai_local_evidence" / "r139_execution_proof_20261021" / "fixture_r3",
+                    project.parent / ".ccmai_local_evidence" / "r139_execution_proof_20261023" / "fixture_r4",
                 )
 
     def test_owned_container_rejects_label_or_id_mismatch(self):
@@ -363,7 +421,7 @@ class R139SupervisorPureTests(unittest.TestCase):
             external = Path(name) / "external"
             runtime.mkdir(); external.mkdir()
             owner = {}
-            before = {"containers": [], "networks": [], "volumes": []}
+            before = {"containers": [], "networks": [], "volumes": [], "capturedMonotonic": 1.0, "capturedAtUTC": "2026-10-23T00:00:00Z"}
             with patch.object(module, "inventory", return_value=before), patch.object(module, "docker", side_effect=["a" * 64, module.Hold("VOLUME_CREATE_FAILED")]):
                 with self.assertRaisesRegex(module.Hold, "VOLUME_CREATE_FAILED"):
                     module.start_fixture({"fixtureName": "ccmai-r139-one", "database": "ccma_r139_one"}, runtime, external, owner)
@@ -510,15 +568,43 @@ class R139SupervisorPureTests(unittest.TestCase):
     def test_out_of_order_route_responses_correlate_by_id(self):
         with tempfile.TemporaryDirectory() as name:
             root = Path(name)
+            execute_path = "/api/v1/tenants/t/intervention-cases/c/rerun-requests/r/execute"
             rows = [{"phase": "attempt", "id": 1, "method": "GET", "path": "/api/v1/status", "allowed": True},
-                    {"phase": "attempt", "id": 2, "method": "POST", "path": "/api/v1/x/execute", "allowed": True},
-                    {"phase": "response", "id": 2, "method": "POST", "path": "/api/v1/x/execute", "status": 202},
+                    {"phase": "attempt", "id": 2, "method": "POST", "path": execute_path, "allowed": True},
+                    {"phase": "response", "id": 2, "method": "POST", "path": execute_path, "status": 202},
                     {"phase": "response", "id": 1, "method": "GET", "path": "/api/v1/status", "status": 200}]
             (root / "vite_routes.jsonl").write_text("".join(json.dumps(row) + "\n" for row in rows), encoding="utf-8")
             (root / "go_routes.jsonl").write_text("".join(json.dumps(row) + "\n" for row in rows), encoding="utf-8")
             terminal = {"executePOST": 1, "authPOST": 0}
             self.assertEqual(module.validate_vite_ledger(root, terminal)["responses"], 2)
             self.assertEqual(module.validate_go_ledger(root, terminal)["responses"], 2)
+
+    def test_refresh_route_ledger_exact_pair_and_cap(self):
+        execute_path = "/api/v1/tenants/t/intervention-cases/c/rerun-requests/r/execute"
+        paths = ["/api/v1/auth/refresh", "/api/v1/auth/login", "/api/v1/auth/logout", "/api/v1/auth/refresh", execute_path]
+        rows = []
+        for number, path in enumerate(paths, 1):
+            rows.extend(({"phase": "attempt", "id": number, "method": "POST", "path": path, "allowed": True},
+                         {"phase": "response", "id": number, "method": "POST", "path": path, "status": 401 if path.endswith("refresh") else 200}))
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            for ledger in ("vite_routes.jsonl", "go_routes.jsonl"):
+                (root / ledger).write_text("".join(json.dumps(row) + "\n" for row in rows), encoding="utf-8")
+            terminal = {"executePOST": 1, "authPOST": 4}
+            self.assertEqual(module.validate_vite_ledger(root, terminal)["authPOST"], 4)
+            self.assertEqual(module.validate_go_ledger(root, terminal)["authRoutes"].count("/api/v1/auth/refresh"), 2)
+            for bad in ("/api/v1/auth/reset", "/api/v1/tenants/t/intervention-cases/c/rerun-requests/r/execute/extra"):
+                changed = json.loads(json.dumps(rows))
+                changed[0]["path"] = bad; changed[1]["path"] = bad
+                with self.assertRaisesRegex(module.Hold, "UNLISTED_ROUTE_ATTEMPTED"):
+                    module._validate_route_rows(changed, "TEST", terminal)
+            denied = json.loads(json.dumps(rows)); denied[1]["status"] = 405
+            with self.assertRaisesRegex(module.Hold, "ROUTE_DENIAL_OBSERVED"):
+                module._validate_route_rows(denied, "TEST", terminal)
+            with self.assertRaisesRegex(module.Hold, "ROUTE_RESPONSE_GAP"):
+                module._validate_route_rows(rows[:-1], "TEST", terminal)
+            with self.assertRaisesRegex(module.Hold, "EFFECT_ROUTE_MISMATCH"):
+                module._validate_route_rows(rows, "TEST", {"executePOST": 1, "authPOST": 3})
 
 
 if __name__ == "__main__":

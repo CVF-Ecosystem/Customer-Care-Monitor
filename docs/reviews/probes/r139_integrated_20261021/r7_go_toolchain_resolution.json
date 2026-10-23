@@ -1,0 +1,23 @@
+{
+  "status": "CACHED_PROJECT_LOCAL_TOOLCHAIN_RESOLVED",
+  "reviewer": "Root independent source REVIEWER",
+  "originalFailure": "PATH command missing; no Go process started. Attempt1/2 remains consumed, original null receipt preserved.",
+  "toolPath": ".cvf/runtime/toolchain/go/bin/go.exe",
+  "versionMetadata": "go1.26.0",
+  "exeSha256": "c2f0bc63168a96e854e6e5dd32493cc00a415ddcd4bf94580e302c103b23adfe",
+  "archiveSha256": "9bbe0fc64236b2b51f6255c05c4232532b8ecc0e6d2e00950bd3021d8a4d07d4",
+  "historicalProvenance": "docs/reviews/probes/r089_readiness/go-toolchain.json",
+  "archiveMatchesHistoricalExpected": true,
+  "exeMatchesArchivedEntry": true,
+  "newDownloads": 0,
+  "newInstalls": 0,
+  "newNetwork": 0,
+  "disposition": "Root authorizes worker remaining already-granted offline compile1 using verified absolute cached executable, then only exact seven pure tests cleared by r7_go_safety_audit. This is a diagnosed path correction within existing caps, no cap reset or new effect class. Source hashes fixed; no source repair or broad test.",
+  "remainingWorkerCapsBeforeContinuation": {
+    "compile": 1,
+    "pureGoBinary": 2,
+    "Python": 1
+  },
+  "rootPython": "34PASS cap1/1 consumed",
+  "stop": "On any failure stop; no additional compile admitted."
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "OFFLINE_GO_COMPILE_ATTEMPT",
+  "status": "FAILED_PRELAUNCH_COMMAND_NOT_FOUND",
+  "attempt": 1,
+  "cap": 2,
+  "goProcessStarted": false,
+  "argv": [
+    "go",
+    "-C",
+    "backend",
+    "test",
+    "-c",
+    "-mod=readonly",
+    "-o",
+    "../.cvf/runtime/r139_source_pure_20261023.test.exe",
+    "./api/handlers"
+  ],
+  "environment": {
+    "GOPROXY": "off",
+    "GOTOOLCHAIN": "local",
+    "GOSUMDB": "off"
+  },
+  "sourceSha256": {
+    "scripts/tests/test_r139_execution_supervisor.py": "ed1d50de8c297130b6101e2de3f3def8376dfd8ddd3fe80dfd0dd24485d5b9ec",
+    "scripts/r139_vite_config.mjs.template": "82a1d9ae8576fcd46718945d0a5cb44eb963a2a14d436a16e2bcdfb72b26bee9",
+    "backend/api/handlers/intervention_execution_browser_test.go": "fe3f5441c5fe1875ad6a81972fef30b02a857337d9950193f302d6bcf326d6dd",
+    "scripts/r139_execution_supervisor.py": "2382b07efe1aa235045ee0ae98e8c7b9ed26378a8233c911b254acbed6ed5053"
+  },
+  "toolChunkId": "4d5e5b",
+  "observedError": "The term 'go' is not recognized as a name of a cmdlet, function, script file, or executable program.",
+  "toolShellExitCode": 0,
+  "actualGoExitCode": null,
+  "stdoutFileProduced": false,
+  "stderrFileProduced": false,
+  "binaryProduced": false,
+  "initialReceipt": "r7_source_worker_go_compile_1_incomplete_receipt.txt",
+  "effects": 0,
+  "dependentGoBinaryChecks": "NOT_RUN_STOP_ON_FAILURE"
+}

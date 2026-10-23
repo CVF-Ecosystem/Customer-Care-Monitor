@@ -35654,6 +35654,160 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-RECOVERY-SOURCE-ADMISSION.json",
       "status": "ACTIVE",
       "description": "Owner-approved bounded four-path source-only recovery round; no runtime/key/provider admission or historical counter reset."
+    },
+    {
+      "id": "r139-recovery-r7-browser-inventory-outcome-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r7_browser_inventory_outcome.json",
+      "status": "ACTIVE",
+      "description": "R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance."
+    },
+    {
+      "id": "r139-recovery-r7-go-safety-audit-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r7_go_safety_audit.json",
+      "status": "ACTIVE",
+      "description": "R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance."
+    },
+    {
+      "id": "r139-recovery-r7-go-toolchain-resolution-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r7_go_toolchain_resolution.json",
+      "status": "ACTIVE",
+      "description": "R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance."
+    },
+    {
+      "id": "r139-recovery-r7-operational-capability-proposal-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r7_operational_capability_proposal.json",
+      "status": "ACTIVE",
+      "description": "R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance."
+    },
+    {
+      "id": "r139-recovery-r7-root-source-review-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r7_root_source_review.json",
+      "status": "ACTIVE",
+      "description": "R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance."
+    },
+    {
+      "id": "r139-recovery-r7-source-root-python-1-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r7_source_root_python_1.json",
+      "status": "ACTIVE",
+      "description": "R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance."
+    },
+    {
+      "id": "r139-recovery-r7-source-root-python-1-stderr-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r7_source_root_python_1.stderr.txt",
+      "status": "ACTIVE",
+      "description": "R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance."
+    },
+    {
+      "id": "r139-recovery-r7-source-root-python-1-stdout-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r7_source_root_python_1.stdout.txt",
+      "status": "ACTIVE",
+      "description": "R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance."
+    },
+    {
+      "id": "r139-recovery-r7-source-worker-go-binary-1-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r7_source_worker_go_binary_1.json",
+      "status": "ACTIVE",
+      "description": "R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance."
+    },
+    {
+      "id": "r139-recovery-r7-source-worker-go-binary-1-stderr-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r7_source_worker_go_binary_1.stderr.txt",
+      "status": "ACTIVE",
+      "description": "R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance."
+    },
+    {
+      "id": "r139-recovery-r7-source-worker-go-binary-1-stdout-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r7_source_worker_go_binary_1.stdout.txt",
+      "status": "ACTIVE",
+      "description": "R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance."
+    },
+    {
+      "id": "r139-recovery-r7-source-worker-go-compile-1-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r7_source_worker_go_compile_1.json",
+      "status": "ACTIVE",
+      "description": "R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance."
+    },
+    {
+      "id": "r139-recovery-r7-source-worker-go-compile-1-incomplete-receipt-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r7_source_worker_go_compile_1_incomplete_receipt.txt",
+      "status": "ACTIVE",
+      "description": "R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance."
+    },
+    {
+      "id": "r139-recovery-r7-source-worker-go-compile-2-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r7_source_worker_go_compile_2.json",
+      "status": "ACTIVE",
+      "description": "R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance."
+    },
+    {
+      "id": "r139-recovery-r7-source-worker-go-compile-2-stderr-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r7_source_worker_go_compile_2.stderr.txt",
+      "status": "ACTIVE",
+      "description": "R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance."
+    },
+    {
+      "id": "r139-recovery-r7-source-worker-go-compile-2-stdout-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r7_source_worker_go_compile_2.stdout.txt",
+      "status": "ACTIVE",
+      "description": "R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance."
+    },
+    {
+      "id": "r139-recovery-r7-source-worker-python-1-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r7_source_worker_python_1.json",
+      "status": "ACTIVE",
+      "description": "R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance."
+    },
+    {
+      "id": "r139-recovery-r7-source-worker-python-1-stderr-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r7_source_worker_python_1.stderr.txt",
+      "status": "ACTIVE",
+      "description": "R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance."
+    },
+    {
+      "id": "r139-recovery-r7-source-worker-python-1-stdout-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r7_source_worker_python_1.stdout.txt",
+      "status": "ACTIVE",
+      "description": "R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance."
+    },
+    {
+      "id": "r139-recovery-r139-recovery-source-worker-return-2026-10-23-md",
+      "family": "continuity",
+      "path": "docs/reviews/R139_RECOVERY_SOURCE_WORKER_RETURN_2026-10-23.md",
+      "status": "ACTIVE",
+      "description": "R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance."
+    },
+    {
+      "id": "r139-recovery-r139-recovery-source-independent-review-2026-10-23-md",
+      "family": "continuity",
+      "path": "docs/reviews/R139_RECOVERY_SOURCE_INDEPENDENT_REVIEW_2026-10-23.md",
+      "status": "ACTIVE",
+      "description": "R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance."
+    },
+    {
+      "id": "r139-recovery-r139-recovery-source-and-runtime-transfer-2026-10-23-md",
+      "family": "continuity",
+      "path": "docs/reviews/R139_RECOVERY_SOURCE_AND_RUNTIME_TRANSFER_2026-10-23.md",
+      "status": "ACTIVE",
+      "description": "R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance."
     }
   ]
 }
