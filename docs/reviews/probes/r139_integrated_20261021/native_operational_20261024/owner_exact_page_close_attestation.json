@@ -1,0 +1,17 @@
+{
+  "status": "OWNER_REPORTED_EXACT_PAGE_CLOSED_NATIVE_INVENTORY_UNPROVEN",
+  "observedAtUTC": "2026-10-23T19:23:52.503752+00:00",
+  "source": "Owner explicit reply to Root cleanup factual question in this conversation",
+  "question": "Tab example.com chứa nonce a64a7a07c35e9fe30e4cb8574a32b831 đã được đóng đúng trang chưa? Đây là xác nhận cleanup; worker vẫn cần lưu bằng chứng close và inventory.",
+  "ownerReply": "Đã đóng đúng tab",
+  "campaignNonce": "a64a7a07c35e9fe30e4cb8574a32b831",
+  "workerReportedPageId": "95B03BC1A084B240BC6C88D67BD0D511",
+  "actualCloseAtUTC": null,
+  "actualCloseTimeBasis": "Owner did not supply exact action time; observedAtUTC is report receipt time, not backdated action time",
+  "nativeFinalInventoryProven": false,
+  "finalOwnedCount": null,
+  "nativeSessionIsolationProven": false,
+  "canRestoreExpiredG0Acceptance": false,
+  "runtimeAdmissionIssued": false,
+  "providerCalls": 0
+}
