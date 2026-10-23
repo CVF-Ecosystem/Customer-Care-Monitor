@@ -2865,7 +2865,7 @@
     "verification": "docs/reviews/probes/r139_integrated_20261021/r7_root_source_review.json",
     "transfer": "docs/reviews/R139_RECOVERY_SOURCE_AND_RUNTIME_TRANSFER_2026-10-23.md",
     "browserOutcome": "docs/reviews/probes/r139_integrated_20261021/r7_browser_inventory_outcome.json",
-    "sourceCommitPending": true,
+    "sourceCommitPending": false,
     "runtimeGranted": false,
     "providerGranted": false,
     "effects": {
@@ -2878,6 +2878,7 @@
     "browserInventoryCalls": 1,
     "browserActions": 0,
     "oldCountersUnchanged": true,
-    "newTranches": 0
+    "newTranches": 0,
+    "sourceCommit": "0ac2661825ff0c85bbdb74805d8086bca68991a7"
   }
 }

@@ -87,7 +87,7 @@
   "phase": "REVIEW",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
   "workOrderStatus": "BLOCKED_WITH_REASON",
-  "buildCommit": "8bb5463748eeb5f8802947cd3157918d479d8443",
+  "buildCommit": "0ac2661825ff0c85bbdb74805d8086bca68991a7",
   "reviewEvidence": [
     "docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md",
     "docs/reviews/probes/r139_integrated_20261021/browser_capability_outcome.json",
@@ -511,7 +511,7 @@
     "verification": "docs/reviews/probes/r139_integrated_20261021/r7_root_source_review.json",
     "transfer": "docs/reviews/R139_RECOVERY_SOURCE_AND_RUNTIME_TRANSFER_2026-10-23.md",
     "browserOutcome": "docs/reviews/probes/r139_integrated_20261021/r7_browser_inventory_outcome.json",
-    "sourceCommitPending": true,
+    "sourceCommitPending": false,
     "runtimeGranted": false,
     "providerGranted": false,
     "effects": {
@@ -525,6 +525,7 @@
     "browserActions": 0,
     "oldCountersUnchanged": true,
     "newTranches": 0,
-    "historyCorrection": "Precommit gate found missing REVIEW_PENDING history token at Root entry to actual independent review; inserted now before CHANGES_REQUIRED. Original uncommitted marker omission retained in root review receipt; no claim of earlier persistence or gate pass."
+    "historyCorrection": "Precommit gate found missing REVIEW_PENDING history token at Root entry to actual independent review; inserted now before CHANGES_REQUIRED. Original uncommitted marker omission retained in root review receipt; no claim of earlier persistence or gate pass.",
+    "sourceCommit": "0ac2661825ff0c85bbdb74805d8086bca68991a7"
   }
 }

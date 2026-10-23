@@ -19,6 +19,8 @@ Canonical roadmap: docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md. R1
 
 Current decision packet: `docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_REVIEW_2026-10-23.md`; Sol design independently reviewed by Root. Core restored to public b69e1088/origin/main; doctor27/27 PASS, inherited e9ddcb pin warning. Owner delegation preferences retained: Luna Max ordinarily, Sol Medium for difficult work; Alibaba permission requires bounded applicable admission and never renews spent campaigns. No new tranche or effect.
 
+Recovery source/evidence commit: `0ac2661825ff0c85bbdb74805d8086bca68991a7`; independent source acceptance only, runtime HOLD_TRANSFER. Latest transfer packet: `docs/reviews/R139_RECOVERY_SOURCE_AND_RUNTIME_TRANSFER_2026-10-23.md`.
+
 ## Historical R114 bounded UI result
 
 Sourceaa92c149/campaign95401340 onboarding wording/full5labels acceptedCSS390x844; original supervisor terminal/cleanup/source-afterMISSING, CHANGES_REQUIRED/noFREEZE. Final exactfixtureexited/protected4equal; B07inherited, B08rasterqualified/B09unsupported. No further114runtime; handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R114_ONBOARDING_UI_2026-10-17.md.
