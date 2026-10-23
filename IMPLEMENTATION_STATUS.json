@@ -56,7 +56,24 @@
       "G-M4-SHADOW-PILOT",
       "G-M5-CLEAN-RELEASE"
     ],
-    "x-r139RecoveryDecision": "docs/reviews/R139_RECOVERY_SOURCE_AND_RUNTIME_TRANSFER_2026-10-23.md"
+    "x-r139RecoveryDecision": "docs/reviews/R139_RECOVERY_SOURCE_AND_RUNTIME_TRANSFER_2026-10-23.md",
+    "x-r139ReceivingOfflineCheckpoint": {
+      "date": "2026-10-23",
+      "status": "ACCEPTED_BOUNDED_LOCAL_CHECKS",
+      "review": "docs/reviews/R139_WORKER_OFFLINE_FINAL_REVIEW_2026-10-23.md",
+      "compileUsed": 1,
+      "pureGoUsed": 1,
+      "testPass": 7,
+      "testFail": 0,
+      "testSkip": 0,
+      "testExit": 0,
+      "testDurationSeconds": 3.518,
+      "testReceipt": "docs/reviews/probes/r139_integrated_20261021/claude_receiving_20261023/build_test_receipt.json",
+      "testReceiptSha256": "4d17e97358f75b7a48f271c00eea746a79eaad772eb471a8b15a9f388219c867",
+      "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+      "next": "Browser/process capability documentation only; exact inert admission before any probe",
+      "oldCountersUnchanged": true
+    }
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
@@ -3740,6 +3757,23 @@
     "release": "docs/reviews/R139_CLAUDE_RECEIVING_BINARY_ADMISSION_2026-10-23.md",
     "reviewer": "Root independent reviewer; Claude compile worker",
     "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+    "oldCountersUnchanged": true
+  },
+  "x-r139ReceivingOfflineResult": {
+    "date": "2026-10-23",
+    "status": "ACCEPTED_BOUNDED_LOCAL_CHECKS",
+    "review": "docs/reviews/R139_WORKER_OFFLINE_FINAL_REVIEW_2026-10-23.md",
+    "compileUsed": 1,
+    "pureGoUsed": 1,
+    "testPass": 7,
+    "testFail": 0,
+    "testSkip": 0,
+    "testExit": 0,
+    "testDurationSeconds": 3.518,
+    "testReceipt": "docs/reviews/probes/r139_integrated_20261021/claude_receiving_20261023/build_test_receipt.json",
+    "testReceiptSha256": "4d17e97358f75b7a48f271c00eea746a79eaad772eb471a8b15a9f388219c867",
+    "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+    "next": "Browser/process capability documentation only; exact inert admission before any probe",
     "oldCountersUnchanged": true
   }
 }

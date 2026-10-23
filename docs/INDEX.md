@@ -4557,6 +4557,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - G0 data-scheme diagnostic denied; exact partial-tab cleanup and owner-transfer hold, HTTP untested.: `docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md`
 - Filesystem-only executable/cache pins; not runtime capability or image cache proof.: `docs/reviews/probes/r139_integrated_20261021/root_filesystem_tool_inventory.json`
 - Same R139 PARKED REVIEW: source accepted, tool/cache prerequisites observed; no integrated runtime or FREEZE.: `CVF_SESSION/tranches/CCMAI-RUNTIME-139.json`
+- Original single released pure-Go test reservation/receipt/raw log; bounded local software evidence.: `docs/reviews/probes/r139_integrated_20261021/claude_receiving_20261023/build_test_receipt.json`
+- Original single released pure-Go test reservation/receipt/raw log; bounded local software evidence.: `docs/reviews/probes/r139_integrated_20261021/claude_receiving_20261023/build_test_reservation.json`
+- Original single released pure-Go test reservation/receipt/raw log; bounded local software evidence.: `docs/reviews/probes/r139_integrated_20261021/claude_receiving_20261023/build_test.stderr.txt`
+- Original single released pure-Go test reservation/receipt/raw log; bounded local software evidence.: `docs/reviews/probes/r139_integrated_20261021/claude_receiving_20261023/build_test.stdout.txt`
+- Root independent bounded local-check acceptance: compile1/1 and pure7PASS0SKIP; no runtime/provider/M3 acceptance.: `docs/reviews/R139_WORKER_OFFLINE_FINAL_REVIEW_2026-10-23.md`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`
