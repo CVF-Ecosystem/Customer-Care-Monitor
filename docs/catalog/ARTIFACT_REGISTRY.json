@@ -35647,6 +35647,13 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/r7_core_reconciliation_20261023.json",
       "status": "ACTIVE",
       "description": "Authorized public Core reconciliation and doctor27/27 static readiness with unchanged profile pin warning."
+    },
+    {
+      "id": "r139-recovery-source-admission-20261023",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-RECOVERY-SOURCE-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Owner-approved bounded four-path source-only recovery round; no runtime/key/provider admission or historical counter reset."
     }
   ]
 }

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "DISPATCHER_OWNED_R139_RECOVERY_SOURCE_ONLY",
+  "date": "2026-10-23",
+  "ownerReply": "cho phép chạy cho hoàn tất",
+  "ownerGrantInterpretation": "Approves the concrete reviewed four-path source-only recovery proposal and finite renewed source/check caps, expressly disposing cost escalation for this round. Continue roadmap work; runtime/provider capability and precise effects remain separately admitted. No historical counter resets.",
+  "baseCommit": "19fd3b6cc90b7e5860ec67bf422738a4dd2b2da8",
+  "design": "docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_2026-10-23.md",
+  "independentDesignReview": "docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_REVIEW_2026-10-23.md",
+  "riskCeiling": "R2",
+  "roles": {
+    "implementationWorker": "Sol Medium recovery source worker",
+    "reviewer": "Root independent source REVIEWER",
+    "commitSteward": "Root"
+  },
+  "allowedSourcePaths": [
+    "scripts/r139_execution_supervisor.py",
+    "scripts/tests/test_r139_execution_supervisor.py",
+    "scripts/r139_vite_config.mjs.template",
+    "backend/api/handlers/intervention_execution_browser_test.go"
+  ],
+  "sourceBeforeSha256": {
+    "scripts/r139_execution_supervisor.py": "4f8423d397462df5d53e94e8ead9cc3c4375c6ecbd4acc8798de1e8c2bd06976",
+    "scripts/tests/test_r139_execution_supervisor.py": "63cd84737d32e620ee6715cc476213dc6e9eb25548f386e0b66d49a2c455e402",
+    "scripts/r139_vite_config.mjs.template": "471819b232e974599e6fdee18012d3cdfa27b346847df7b90a6c13f0681ae6f4",
+    "backend/api/handlers/intervention_execution_browser_test.go": "cbea08fd43d265a4978cf0584eb6302b8810aa77e57a205e79a1df015f48240a"
+  },
+  "newCaps": {
+    "sourceAuthoringRounds": 1,
+    "sameScopeRepairRounds": 1,
+    "workerOfflineGoCompile": 2,
+    "workerPurePython": 2,
+    "workerPureGoBinary": 2,
+    "rootPurePython": 1
+  },
+  "executionContract": "Stop dependent chain on failed check. Consolidate predictable findings before sole same-scope repair; failed attempts consume caps. Pure Go checks only after Root audits init and exact selected tests for no DB/network/provider or opt-in runtime execution. Compile offline via go -C backend GOPROXY=off GOSUMDB=off GOTOOLCHAIN=local; no dependency install or broad suites. Gate checks separate.",
+  "intendedChanges": [
+    "Exact refresh route at Vite and Go gates, aggregate auth4 and execute1 remain; explicit ledger route sets and paired counters/responses; no intervention replay.",
+    "Prospective strict protected identity/state/health/raw rows plus typed StartedAt/FinishedAt/RestartCount anchors and monotonic capture; ordinary display elapsed aging narrowly normalized; any identity/restart/meaningful/unknown drift HOLD. Do not retroactively accept old r3 drift.",
+    "Improve existing process/progress evidence only; no new controller/helper or process survival promise. Stable supported execution owner remains separate operational prerequisite.",
+    "Prospective fresh r4 fixture/database/runtime constants and corresponding pure test literals may change within four paths to avoid reused r3 namespace. They confer no runtime authority."
+  ],
+  "workerReturn": "docs/reviews/R139_RECOVERY_SOURCE_WORKER_RETURN_2026-10-23.md",
+  "workerEvidencePrefix": "docs/reviews/probes/r139_integrated_20261021/r7_source_",
+  "workerAck": "Fresh continuity/role acknowledgment in worker return before first source write; Root pre-BUILD acknowledgment already in active handoff.",
+  "prohibitions": [
+    "No worker commit or authority/continuity/catalog edit",
+    "No product/dependency/schema/gate/profile/Core/historical evidence edit",
+    "No Docker/DB/server/browser/key/credential/network/provider/grant/execute effects",
+    "No new controller/helper source, detached stack, replay or old budget reset"
+  ],
+  "runtimeAdmissionGranted": false,
+  "providerAdmissionGranted": false,
+  "oldEvidence": "R3 campaign1/1 spent/deadline expired/newAPI0; old r2 MAY slot1 consumed response/billing unknown. Protected drift and browser manual-close/URL-policy HOLD unchanged."
+}

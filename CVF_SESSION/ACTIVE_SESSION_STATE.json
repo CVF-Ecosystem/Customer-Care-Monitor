@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 consolidated recovery design READY_FOR_OWNER_SOURCE_ONLY_DECISION: four existing source paths only; proposed finite source/check renewal and cost-escalation disposition await Owner approval and committed admission. No source/runtime/key/API/browser/replay or helper chain now. Before any later fixture, prove persistent supported execution ownership and settle browser URL-policy/manual-close prerequisites; protected identity/time drift stays HOLD. Fresh-r3 campaign1/1 spent/deadline expired/newAPI0; old MAY slot1 consumed/outcome unknown retained. G2/G3/E05/E06/full M3 OPEN; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 recovery source BUILD under Owner cho phép chạy cho hoàn tất and committed RECOVERY-SOURCE-ADMISSION: Sol Medium changes four existing source paths only; Root independently reviews. New source/check caps bounded; no runtime/key/network/browser/provider before separate operational/effect admission. Old r3 campaign spent/expired, old MAY slot consumed/unknown and protected/browser HOLDs unchanged. After source acceptance, establish supported persistent execution owner and browser capability before any fixture; then one bounded integrated G0/G1/G2 route. Full M3 OPEN; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / independent documentary REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; no source or runtime execution",
+  "activeRole": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent source REVIEWER / COMMIT_STEWARD; Sol Medium IMPLEMENTATION_WORKER; source-only BUILD",
   "updatedAt": "2026-10-23",
   "x-resolvedCoreCommit": "b69e1088978e8c90ac58a2243fcf8f90d0f857ed",
   "x-ownerRoadmapDiscipline": {
@@ -2841,5 +2841,20 @@
     "providerCalls": 0,
     "oldCountersUnchanged": true,
     "designSha256": "ae1fe59c49a118448772fcc7e16585b10ec6a834391f12a8e4af175276a9283b"
+  },
+  "x-r139RecoverySource": {
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-RECOVERY-SOURCE-ADMISSION.json",
+    "status": "OWNER_APPROVED_SOURCE_BUILD",
+    "ownerReply": "cho phép chạy cho hoàn tất",
+    "actualUse": {
+      "sourceAuthoringRounds": 0,
+      "sameScopeRepairRounds": 0,
+      "workerOfflineGoCompile": 0,
+      "workerPurePython": 0,
+      "workerPureGoBinary": 0,
+      "rootPurePython": 0
+    },
+    "runtimeGranted": false,
+    "providerGranted": false
   }
 }

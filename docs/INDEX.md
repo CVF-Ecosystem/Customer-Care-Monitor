@@ -4498,6 +4498,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - One approved secret-free official public pricing/model readiness read reserved after source8bb54637, before any key/fixture/provider.: `docs/reviews/probes/r139_integrated_20261021/r5_public_pricing_read.json`
 - Exact fresh-r3 conditional runtime admission draft after source8bb54637 and publicpricingPASS; independent review/commit before effects; NEWAPI1/USD1, oldslot preserved.: `docs/reviews/probes/r139_integrated_20261021/r5_runtime_preparation.json`
 - Fresh-r3 actual interrupted runtime HOLD; native only, no browser execute/new API; terminal/cleanup qualifications retained.: `docs/reviews/probes/r139_integrated_20261021/r6_fresh_r3_interrupted_runtime_outcome.json`
+- Owner-approved bounded four-path source-only recovery round; no runtime/key/provider admission or historical counter reset.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-RECOVERY-SOURCE-ADMISSION.json`
 - Retained failed handback metadata checks and Root corrections; source unchanged.: `docs/reviews/probes/r139_integrated_20261021/root_handback_metadata_corrections.json`
 - Root27R137 source/protected matches plus2authority protection pins; no runtime proof.: `docs/reviews/probes/r139_integrated_20261021/root_source_preparation_baseline.json`
 - Observed local metadata or reviewed draft; Owner1USD/one-call approved, credential/deadline/final admission pending, no live claim.: `docs/reviews/probes/r139_integrated_20261021/local_readiness_outcome.json`

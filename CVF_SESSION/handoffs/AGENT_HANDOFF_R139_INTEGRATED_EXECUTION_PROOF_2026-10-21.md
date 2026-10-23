@@ -4,11 +4,11 @@ Status: ACTIVE
 
 ## Current State
 
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Root ORCHESTRATOR / independent documentary REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; no source or runtime execution
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent source REVIEWER / COMMIT_STEWARD; Sol Medium IMPLEMENTATION_WORKER; source-only BUILD
 - Active tranche: CCMAI-RUNTIME-139
-- Next allowed move: CCMAI-RUNTIME-139 consolidated recovery design READY_FOR_OWNER_SOURCE_ONLY_DECISION: four existing source paths only; proposed finite source/check renewal and cost-escalation disposition await Owner approval and committed admission. No source/runtime/key/API/browser/replay or helper chain now. Before any later fixture, prove persistent supported execution ownership and settle browser URL-policy/manual-close prerequisites; protected identity/time drift stays HOLD. Fresh-r3 campaign1/1 spent/deadline expired/newAPI0; old MAY slot1 consumed/outcome unknown retained. G2/G3/E05/E06/full M3 OPEN; Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-139 recovery source BUILD under Owner cho phép chạy cho hoàn tất and committed RECOVERY-SOURCE-ADMISSION: Sol Medium changes four existing source paths only; Root independently reviews. New source/check caps bounded; no runtime/key/network/browser/provider before separate operational/effect admission. Old r3 campaign spent/expired, old MAY slot consumed/unknown and protected/browser HOLDs unchanged. After source acceptance, establish supported persistent execution owner and browser capability before any fixture; then one bounded integrated G0/G1/G2 route. Full M3 OPEN; Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## INTAKE / DESIGN / SPEC / WORK_ORDER acknowledgment
@@ -172,3 +172,7 @@ SeparateSol reviewed retained raw evidence/source9pins/binary without effects; H
 ## Core reconciliation and consolidated design acknowledgment — 2026-10-23
 
 Owner directs core repair and continuation. Root rehydrated manifest/policy, compact/canonical state, memory, current handoff, implementation and index; matching parked checkpoint resolved through canonical parkedOperatorCheckpoint. Public reconciler preserved old Core in backup, cloned public b69e1088978e8c90ac58a2243fcf8f90d0f857ed and refreshed workspace wrappers/rules. Doctor27/27 PASS with unchanged e9ddcb manifest/profile warning; local knowledge ingest completed without HTTP. Root ORCHESTRATOR delegated documentary DESIGN_ANALYST to Sol Medium, then independently reviewed actual source and design. One consolidated review removed an unsupported new-controller/helper route. Four-file source-only proposal and finite new caps await Owner decision; this is not source BUILD or renewed runtime authority. Existing REVIEW_COST_ESCALATION_REQUIRED, r3 interrupted outcome, all consumed counters and protected/browser HOLDs remain. No new tranche, source edits, credential/browser/Docker/application/provider effects. Root transitions to SESSION_SYNC_STEWARD/COMMIT_STEWARD for gated documentary commit only; no closure/FREEZE. Design and independent review are linked by x-r139ConsolidatedRecoveryDesign in current state/status; canonical M3 route unchanged.
+
+## Owner recovery source grant / pre-BUILD acknowledgment — 2026-10-23
+
+Root fresh manifest/policy/compact+state/memory/handoff/status/index and accepted design rehydrated; doctor27/27 publicCoreb69/originmain with inherited e9pin warning. Owner cho phép chạy cho hoàn tất answers the concrete four-path source-only proposal. INTAKE sameR139/R2; DESIGN/SPEC independently accepted documentary design; WORK_ORDER new immutable RECOVERY-SOURCE-ADMISSION disposes recorded cost escalation only for one consolidated source round and one bounded dependent repair with explicit new compile/Python/pureGo caps. Root ORCHESTRATOR/WORK_ORDER_AUTHOR, independent source REVIEWER and COMMIT_STEWARD; Sol Medium IMPLEMENTATION_WORKER. State/memory/handoff/status/order synchronized before source. Source dispatch only after gates/commit. Runtime/key/DB/Docker/browser/network/provider0 until separate operational/effect admission; no originalcounterreset/newtranche/helper. Worker writes fresh acknowledgment in return before source and waits for Root no-I/O audit before running exact pure Go tests. Original process causeUNKNOWN and oldprotected/browser HOLD preserved.

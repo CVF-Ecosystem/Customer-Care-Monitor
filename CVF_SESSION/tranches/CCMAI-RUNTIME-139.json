@@ -83,10 +83,10 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "CHANGES_REQUIRED",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "BLOCKED_WITH_REASON",
+  "workOrderStatus": "ACTIVE",
   "buildCommit": "8bb5463748eeb5f8802947cd3157918d479d8443",
   "reviewEvidence": [
     "docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md",
@@ -148,7 +148,8 @@
     "PARKED",
     "BUILD",
     "REVIEW_PENDING",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "actualUse": {
     "status": "HOLD_MANUAL_HOLD_PROVIDER_OUTCOME_UNKNOWN",
@@ -479,5 +480,27 @@
     "providerCalls": 0,
     "oldCountersUnchanged": true,
     "designSha256": "ae1fe59c49a118448772fcc7e16585b10ec6a834391f12a8e4af175276a9283b"
+  },
+  "x-r139RecoverySource": {
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-RECOVERY-SOURCE-ADMISSION.json",
+    "status": "OWNER_APPROVED_SOURCE_BUILD",
+    "newCaps": {
+      "sourceAuthoringRounds": 1,
+      "sameScopeRepairRounds": 1,
+      "workerOfflineGoCompile": 2,
+      "workerPurePython": 2,
+      "workerPureGoBinary": 2,
+      "rootPurePython": 1
+    },
+    "actualUse": {
+      "sourceAuthoringRounds": 0,
+      "sameScopeRepairRounds": 0,
+      "workerOfflineGoCompile": 0,
+      "workerPurePython": 0,
+      "workerPureGoBinary": 0,
+      "rootPurePython": 0
+    },
+    "runtimeGranted": false,
+    "providerGranted": false
   }
 }

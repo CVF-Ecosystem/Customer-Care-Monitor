@@ -2,18 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
 
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: BUILD
+- Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
 
-CCMAI-RUNTIME-139 consolidated recovery design READY_FOR_OWNER_SOURCE_ONLY_DECISION: four existing source paths only; proposed finite source/check renewal and cost-escalation disposition await Owner approval and committed admission. No source/runtime/key/API/browser/replay or helper chain now. Before any later fixture, prove persistent supported execution ownership and settle browser URL-policy/manual-close prerequisites; protected identity/time drift stays HOLD. Fresh-r3 campaign1/1 spent/deadline expired/newAPI0; old MAY slot1 consumed/outcome unknown retained. G2/G3/E05/E06/full M3 OPEN; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 recovery source BUILD under Owner cho phép chạy cho hoàn tất and committed RECOVERY-SOURCE-ADMISSION: Sol Medium changes four existing source paths only; Root independently reviews. New source/check caps bounded; no runtime/key/network/browser/provider before separate operational/effect admission. Old r3 campaign spent/expired, old MAY slot consumed/unknown and protected/browser HOLDs unchanged. After source acceptance, establish supported persistent execution owner and browser capability before any fixture; then one bounded integrated G0/G1/G2 route. Full M3 OPEN; Facebook/Zalo OA parked.
 
-Root ORCHESTRATOR / independent documentary REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; no source or runtime execution
+Root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent source REVIEWER / COMMIT_STEWARD; Sol Medium IMPLEMENTATION_WORKER; source-only BUILD
 
 Canonical roadmap: docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md. R137 product source unchanged; R139 original setup HOLD retained; no full M3 acceptance.
 

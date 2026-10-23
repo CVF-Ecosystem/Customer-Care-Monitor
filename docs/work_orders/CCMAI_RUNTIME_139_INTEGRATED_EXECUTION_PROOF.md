@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: BLOCKED_WITH_REASON
+Status: ACTIVE
 Risk: R2
 Worker: Sol Medium delegated fixture worker
 Reviewer: Root independent source/evidence REVIEWER
@@ -12,7 +12,7 @@ dispatchKind: INITIAL
 
 ## Current authority and acceptance target
 
-Current stage: CCMAI-RUNTIME-139 consolidated recovery design READY_FOR_OWNER_SOURCE_ONLY_DECISION: four existing source paths only; proposed finite source/check renewal and cost-escalation disposition await Owner approval and committed admission. No source/runtime/key/API/browser/replay or helper chain now. Before any later fixture, prove persistent supported execution ownership and settle browser URL-policy/manual-close prerequisites; protected identity/time drift stays HOLD. Fresh-r3 campaign1/1 spent/deadline expired/newAPI0; old MAY slot1 consumed/outcome unknown retained. G2/G3/E05/E06/full M3 OPEN; Facebook/Zalo OA parked.
+Current stage: CCMAI-RUNTIME-139 recovery source BUILD under Owner cho phép chạy cho hoàn tất and committed RECOVERY-SOURCE-ADMISSION: Sol Medium changes four existing source paths only; Root independently reviews. New source/check caps bounded; no runtime/key/network/browser/provider before separate operational/effect admission. Old r3 campaign spent/expired, old MAY slot consumed/unknown and protected/browser HOLDs unchanged. After source acceptance, establish supported persistent execution owner and browser capability before any fixture; then one bounded integrated G0/G1/G2 route. Full M3 OPEN; Facebook/Zalo OA parked.
 
 Historical initial preparation boundary: Owner `tiếp` continues G0 in the canonical delivery plan. Immutable dispatcher seed `642f5bd026dfe31e6dda6441dd25704eb3ececa3` precedes source BUILD. This is ONE work order containing G0 preparation, G1 native/backend proof and G2 browser proof, with explicit stage admission. Only source preparation/offline checks and Root's bounded pure-UI tool diagnostic are admitted now. G1/G2 runtime and provider use are HOLD. R117 physical allowance1/1 is consumed; no historical counter or slot transfers. No standalone helper successor follows automatically.
 
@@ -189,3 +189,7 @@ Source8bb54637 accepted bounded; pricing1officialpage readPASS (publishedstandar
 ## Consolidated recovery decision — 2026-10-23
 
 Current authority remains BLOCKED_WITH_REASON. See `docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_REVIEW_2026-10-23.md` for the independently reviewed four-path source-only renewal proposal. No old admission, source/check cap, repair counter or campaign is reset. Owner decision and a new committed source-only admission precede BUILD. Persistent supported host/session ownership and browser-policy/manual-close prerequisites must be settled before a later fresh runtime packet. No additional controller/helper tranche or product path edit.
+
+## Owner-approved recovery source round — 2026-10-23
+
+Latest authority: `CVF_SESSION/authority/CCMAI-RUNTIME-139-RECOVERY-SOURCE-ADMISSION.json`, source-only; Owner cho phép chạy cho hoàn tất approves independently reviewed four-path proposal and bounded new caps/cost escalation. This annex governs current source BUILD over historical exhausted sections. Sol Medium worker, Root independent source reviewer/commit owner. One authoring round plus at most one same-scope repair; worker2offlinecompile/2purePython/2pureGo after Root no-I/O audit, Root1purePython. No other runtime/network/key/provider effect. Exact four paths and strict acceptance are defined in admission and design review. Fresh r4 constants within those paths are prospective only. Preserve original failures and caps; no new tranche/helper. Worker return `docs/reviews/R139_RECOVERY_SOURCE_WORKER_RETURN_2026-10-23.md` must carry closeability recheck and actual effect/check ledger.
