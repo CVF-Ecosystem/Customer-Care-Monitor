@@ -1,0 +1,185 @@
+# Prepared orchestration design; extract only under Root's actual runtime release.
+import argparse, hashlib, json, math, os, subprocess, sys, time
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+
+def sha(p):
+    return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def readj(p):
+    return json.loads(Path(p).read_text(encoding="utf-8"))
+def parse_utc(s):
+    return datetime.fromisoformat(s.replace("Z", "+00:00"))
+def clock_sample(g0, g0_mono):
+    utc_now, mono_now = datetime.now(timezone.utc), time.monotonic()
+    elapsed_utc = (utc_now - g0).total_seconds()
+    elapsed_mono = mono_now - g0_mono
+    return (elapsed_utc < 0 or elapsed_mono < 0 or
+            abs(elapsed_utc - elapsed_mono) > 2), utc_now, mono_now, elapsed_utc, elapsed_mono
+def confined(project, runtime, value):
+    p = Path(value)
+    p = (p if p.is_absolute() else project / p).resolve()
+    if runtime not in p.parents:
+        raise ValueError("EVIDENCE_PATH_OUTSIDE_RUNTIME")
+    return p
+def write_new(path, data):
+    fd = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+    with os.fdopen(fd, "wb") as f:
+        f.write((json.dumps(data, sort_keys=True) + "\n").encode())
+        f.flush()
+        os.fsync(f.fileno())
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--project", required=True)
+    ap.add_argument("--admission", required=True)
+    ap.add_argument("--admission-sha256", required=True)
+    ap.add_argument("--campaign-reservation", required=True)
+    x = ap.parse_args()
+    project = Path(x.project).resolve()
+    admission = (project / x.admission).resolve()
+    if sha(admission) != x.admission_sha256:
+        raise SystemExit("ADMISSION_HASH_MISMATCH")
+    a = readj(admission)
+    reservation = (project / x.campaign_reservation).resolve()
+    if sha(reservation) != a["campaignReservationSha256"]:
+        raise SystemExit("CAMPAIGN_RESERVATION_HASH_MISMATCH")
+    clock = readj(reservation)
+    g0 = parse_utc(clock["g0StartUTC"])
+    deadline = parse_utc(clock["deadlineUTC"])
+    if deadline != g0 + timedelta(seconds=1200):
+        raise SystemExit("CAMPAIGN_CLOCK_INVALID")
+    pins = a["rootPins"]
+    py = Path(pins["python"]).resolve()
+    g0_mono = clock.get("g0Monotonic")
+    if isinstance(g0_mono, bool) or not isinstance(g0_mono, (int, float)) or not math.isfinite(g0_mono):
+        raise SystemExit("RESERVATION_MONOTONIC_INVALID")
+    if (clock.get("monotonicSource") != "python.time.monotonic" or
+            Path(clock.get("pythonPath", "")).resolve() != py or
+            not pins.get("hostBootId") or clock.get("hostBootId") != pins["hostBootId"] or
+            Path(sys.executable).resolve() != py):
+        raise SystemExit("RESERVATION_CLOCK_IDENTITY_MISMATCH")
+    clock_bad, utc0, mono0, elapsed_utc0, elapsed_mono0 = clock_sample(g0, g0_mono)
+    if clock_bad:
+        raise SystemExit("CAMPAIGN_CLOCK_HOLD")
+    stop_mono, deadline_mono = g0_mono + 1020, g0_mono + 1200
+    if mono0 >= stop_mono:
+        raise SystemExit("CAMPAIGN_CUTOFF_PASSED")
+    runtime = (project / a["runtimeRoot"]).resolve()
+    if project not in runtime.parents:
+        raise SystemExit("RUNTIME_ROOT_OUTSIDE_PROJECT")
+    supervisor = project / "scripts/r139_execution_supervisor.py"
+    if sha(supervisor) != a["supervisorSha256"]:
+        raise SystemExit("ACCEPTED_SOURCE_MISMATCH")
+    paths = a["recorderPaths"]
+    outdir = (project / paths["outputDir"]).resolve()
+    if project not in outdir.parents:
+        raise SystemExit("OUTPUT_DIR_OUTSIDE_PROJECT")
+    outdir.mkdir(exist_ok=False)
+    temp = (outdir / paths["tempDir"]).resolve()
+    if outdir not in temp.parents:
+        raise SystemExit("TEMP_OUTSIDE_OWNED_OUTPUT_DIR")
+    temp.mkdir(exist_ok=False)
+    argv = [str(py), "-B", "scripts/r139_execution_supervisor.py", "run", "--admission", x.admission]
+    env = {k: os.environ[k] for k in ("SYSTEMROOT", "WINDIR", "USERPROFILE", "LOCALAPPDATA") if k in os.environ}
+    env["PATH"] = os.pathsep.join((str(py.parent), str(Path(pins["gitDir"]).resolve()),
+        str(Path(pins["system32"]).resolve()), str(Path(pins["node"]).resolve().parent)))
+    env["TEMP"] = env["TMP"] = str(temp)
+    write_new(outdir / "intent.json", {"status": "RESERVED_CONSUMED", "atUTC": utc0.isoformat(), "mono": mono0,
+        "admissionPath": x.admission, "admissionSha256": x.admission_sha256,
+        "campaignReservationPath": x.campaign_reservation, "campaignReservationSha256": sha(reservation),
+        "sourceCommit": a["sourceCommit"], "supervisorSha256": a["supervisorSha256"],
+        "argv": argv, "cwd": str(project), "env": env,
+        "clock": {"g0StartUTC": g0.isoformat(), "deadlineUTC": deadline.isoformat(),
+                  "g0Mono": g0_mono, "stopMono": stop_mono, "deadlineMono": deadline_mono,
+                  "elapsedUTCAtPreflight": elapsed_utc0, "elapsedMonoAtPreflight": elapsed_mono0,
+                  "monotonicSource": clock["monotonicSource"], "hostBootId": clock["hostBootId"]}, "pins": pins})
+    holds, proc, stop_sent = [], None, False
+    rc, wait_completed = None, False
+    events = open(outdir / "events.jsonl", "xb", buffering=0)
+    def emit(kind, **fields):
+        try:
+            events.write((json.dumps({"kind": kind, **fields}, sort_keys=True) + "\n").encode())
+            os.fsync(events.fileno())
+        except OSError:
+            holds.append("RECORDER_LOG_FAILURE")
+    files = [confined(project, runtime, a[k]) for k in
+             ("browserCloseReceiptPath", "actionEvidencePath", "finalInventoryPath", "rawNativeInventoryPath")]
+    done = confined(project, runtime, a["browserDoneSignalPath"])
+    def browser_done():
+        return done.is_file() and (runtime / "browser_ready.json").is_file() and all(p.is_file() for p in files)
+    def request_stop(reason):
+        nonlocal stop_sent
+        try:
+            write_new(runtime / "stop_requested", {"reason": reason, "at": time.time()})
+        except FileExistsError:
+            holds.append("STOPFILE_ALREADY_EXISTS_NO_REWRITE")
+        except OSError:
+            holds.append("OWNED_STOPFILE_NOT_WRITTEN")
+        stop_sent = True
+        emit("stop_requested", atUTC=datetime.now(timezone.utc).isoformat(), reason=reason)
+    try:
+        with open(outdir / "stdout.bin", "xb", buffering=0) as out, open(outdir / "stderr.bin", "xb", buffering=0) as err:
+            emit("intent", argv=argv, cwd=str(project), atUTC=datetime.now(timezone.utc).isoformat(), mono=time.monotonic())
+            pre_bad, pre_utc, pre_mono, pre_eutc, pre_emono = clock_sample(g0, g0_mono)
+            if pre_bad:
+                holds.append("CAMPAIGN_CLOCK_MISMATCH")
+                emit("clock_hold_before_popen", utc=pre_utc.isoformat(), mono=pre_mono,
+                     elapsedUTC=pre_eutc, elapsedMono=pre_emono)
+                raise RuntimeError("CAMPAIGN_CLOCK_HOLD")
+            if pre_mono >= stop_mono:
+                holds.append("CAMPAIGN_CUTOFF_PASSED_BEFORE_POPEN")
+                emit("cutoff_hold_before_popen", utc=pre_utc.isoformat(), mono=pre_mono,
+                     stopMono=stop_mono)
+                raise RuntimeError("CAMPAIGN_CUTOFF_PASSED")
+            proc = subprocess.Popen(argv, cwd=project, env=env, stdin=subprocess.DEVNULL,
+                                    stdout=out, stderr=err, shell=False, close_fds=True)
+            emit("popen_started", atUTC=datetime.now(timezone.utc).isoformat(), mono=time.monotonic())
+            while proc.poll() is None:
+                clock_bad, utc_now, now, elapsed_utc, elapsed_mono = clock_sample(g0, g0_mono)
+                if clock_bad:
+                    if "CAMPAIGN_CLOCK_MISMATCH" not in holds:
+                        holds.append("CAMPAIGN_CLOCK_MISMATCH")
+                        emit("clock_mismatch", utc=utc_now.isoformat(), mono=now,
+                             elapsedUTC=elapsed_utc, elapsedMono=elapsed_mono)
+                    if not stop_sent:
+                        request_stop("clock_mismatch")
+                elif not stop_sent and browser_done():
+                    request_stop("antigravity_browser_done")
+                elif not stop_sent and now >= stop_mono:
+                    if not browser_done():
+                        holds.append("BROWSER_CLOSE_OR_RAW_EVIDENCE_MISSING")
+                    request_stop("global_deadline_minus_cleanup")
+                if now > deadline_mono and "GLOBAL_1200S_OVERRUN" not in holds:
+                    holds.append("GLOBAL_1200S_OVERRUN")
+                    emit("deadline_overrun", mono=now)
+                time.sleep(0.25)
+    except Exception as e:
+        holds.append("RECORDER_FAILURE:" + type(e).__name__)
+    finally:
+        if proc is not None:
+            if not stop_sent and proc.poll() is None:
+                try:
+                    request_stop("recorder_failure_best_effort")
+                except Exception:
+                    holds.append("BEST_EFFORT_STOP_FAILED")
+            wait_start = {"utc": datetime.now(timezone.utc).isoformat(), "mono": time.monotonic()}
+            try:
+                rc = proc.wait()
+                wait_completed = True
+                wait_exit = {"utc": datetime.now(timezone.utc).isoformat(), "mono": time.monotonic(), "exitCode": rc}
+                emit("original_wait", started=wait_start, returned=wait_exit)
+                final_clock_bad, final_utc, final_mono, final_eutc, final_emono = clock_sample(g0, g0_mono)
+                if final_clock_bad and "CAMPAIGN_CLOCK_MISMATCH" not in holds:
+                    holds.append("CAMPAIGN_CLOCK_MISMATCH")
+                    emit("clock_mismatch_after_wait", utc=final_utc.isoformat(), mono=final_mono,
+                         elapsedUTC=final_eutc, elapsedMono=final_emono)
+                if wait_exit["mono"] - g0_mono > 1200:
+                    holds.append("GLOBAL_1200S_OVERRUN")
+                if rc != 0:
+                    holds.append("SUPERVISOR_EXIT_NONZERO")
+            except Exception as e:
+                holds.append("ORIGINAL_WAIT_FAILURE:" + type(e).__name__)
+        emit("final", status="HOLD" if holds else "RECORDER_EXIT_OBSERVED_PENDING_SOURCE_REVIEW", holdReasons=holds)
+        events.close()
+    return 0 if proc is not None and wait_completed and rc == 0 and not holds else 1
+if __name__ == "__main__":
+    raise SystemExit(main())
