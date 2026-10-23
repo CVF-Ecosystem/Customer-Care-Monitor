@@ -4444,6 +4444,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Explicit Owner single RF1-RF4 repair/replacement-fixture continuation; cumulative1USD/one API unchanged; runtime still needs exact admission.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-OWNER-CONTINUATION-ADMISSION.json`
 - Exact R139 replacement runtime admission preparation; independent review/commit required, cumulative1USD/oneAPI unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-REPLACEMENT-RUNTIME-ADMISSION.json`
 - Owner-approved ONE R139 source-evidence round; no runtime/provider authority; old HOLDs preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-EVIDENCE-ADMISSION.json`
+- Non-effective draft for one receiving offline build/check and browser topology decision; no product/runtime/provider grant.: `docs/reviews/R139_CLAUDE_RECEIVING_ADMISSION_PROPOSAL_2026-10-23.md`
 - Claude receiving A report as submitted; worker-reported readiness, independent review requests documentary clarification; B blocked.: `docs/reviews/R139_CLAUDE_RECEIVING_READINESS_2026-10-23.md`
 - Root independent A review: five consolidated clarification findings; source hashes corroborated, no new effect admission.: `docs/reviews/R139_CLAUDE_RECEIVING_READINESS_REVIEW_2026-10-23.md`
 - Four-path intended recovery design only; source renewal pending Owner decision; no new helper or effect.: `docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_2026-10-23.md`

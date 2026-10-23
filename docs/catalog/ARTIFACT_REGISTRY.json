@@ -35822,6 +35822,13 @@
       "path": "docs/reviews/R139_CLAUDE_RECEIVING_READINESS_REVIEW_2026-10-23.md",
       "status": "ACTIVE",
       "description": "Root independent A review: five consolidated clarification findings; source hashes corroborated, no new effect admission."
+    },
+    {
+      "id": "r139-claude-receiving-admission-proposal",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CLAUDE_RECEIVING_ADMISSION_PROPOSAL_2026-10-23.md",
+      "status": "ACTIVE",
+      "description": "Non-effective draft for one receiving offline build/check and browser topology decision; no product/runtime/provider grant."
     }
   ]
 }

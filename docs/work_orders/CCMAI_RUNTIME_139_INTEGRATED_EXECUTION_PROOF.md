@@ -14,7 +14,7 @@ dispatchKind: INITIAL
 
 Current dispatch instruction: read the **Claude receiving-worker annex — 2026-10-23** at the end of this order first. Historical runtime authority fields above do not activate a new campaign. Current runtime/key/API authority remains HOLD.
 
-Current stage: CCMAI-RUNTIME-139 HOLD_TRANSFER: recovery source accepted bounded at pinned four hashes (offline compile2/2PASS, pureGo7PASS0SKIP, worker/RootPython34PASS each); original PATH failure preserved. Sole supported cua.getState inventory returned apps[]/browsers[]; independent Luna HOLD/TRANSFER, no product browser-control proof or old-tab closure inference; process ownership untested. Owner-designated supported browser/execution environment must receive same-R139 transfer packet before new fixture/effect admission. No retry/alternate stack, runtime/key/API or helper tranche now. Old r3 campaign spent/expired/newAPI0, old MAY slot1 consumed/unknown and protected driftHOLD retained; G1 integrated/G2/G3/E05/E06/full M3 OPEN, Facebook/Zalo OA parked.
+Current stage: CCMAI-RUNTIME-139 HOLD_TRANSFER: Claude Revision1 accepted as bounded documentary intake; worker IDE logs not independently verified. Root prepared docs/reviews/R139_CLAUDE_RECEIVING_ADMISSION_PROPOSAL_2026-10-23.md for independent review and owner decision on one offline compile/check plus receiving-browser topology only. Draft is non-effective; no build/browser probe/process fixture/key/API admission now. Current product G0/G1/G2/G3/E05/E06/full M3 OPEN; old r3 spent/expired/newAPI0, older uncertain slot consumed/unknown, protected drift HOLD and old-tab UNKNOWN retained. Facebook/Zalo OA parked; no helper tranche or counter reset.
 
 Historical initial preparation boundary: Owner `tiếp` continues G0 in the canonical delivery plan. Immutable dispatcher seed `642f5bd026dfe31e6dda6441dd25704eb3ececa3` precedes source BUILD. This is ONE work order containing G0 preparation, G1 native/backend proof and G2 browser proof, with explicit stage admission. Only source preparation/offline checks and Root's bounded pure-UI tool diagnostic are admitted now. G1/G2 runtime and provider use are HOLD. R117 physical allowance1/1 is consumed; no historical counter or slot transfers. No standalone helper successor follows automatically.
 
@@ -246,3 +246,8 @@ Closeability for A: intake/readiness is reviewable through the single report; it
 ### Claude A review return — 2026-10-23
 
 Read docs/reviews/R139_CLAUDE_RECEIVING_READINESS_REVIEW_2026-10-23.md. One consolidated documentary repair of the existing A report is allowed for findings A-01 through A-05 using retained records and non-secret metadata. Missing raw evidence must be marked unavailable, never invented or replaced by test replay. Root independently corroborated source hashes and absent local binary/toolchain; receiving browser mechanism differs from the current CUA IAB contract and is not admitted. Part B remains BLOCKED_PENDING_ADMISSION; no build, browser/probe, product process, fixture, key or provider action. Return all finding dispositions together; no worker commit.
+
+
+### Claude Revision1 accepted with qualifications — 2026-10-23
+
+Root accepts A as bounded documentary intake under the revision supplement in R139_CLAUDE_RECEIVING_READINESS_REVIEW_2026-10-23.md. No further report repair requested. See R139_CLAUDE_RECEIVING_ADMISSION_PROPOSAL_2026-10-23.md for the non-effective next decision packet. No build/probe/runtime/provider authority is active; B remains BLOCKED_PENDING_ADMISSION.

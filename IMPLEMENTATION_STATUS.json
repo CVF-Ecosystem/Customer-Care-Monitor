@@ -3698,5 +3698,17 @@
     "newEffectsGranted": false,
     "repair": "One consolidated report clarification only; no rerun/build/browser/runtime/key/API",
     "oldCountersUnchanged": true
+  },
+  "x-r139ClaudeReceivingRevision1": {
+    "date": "2026-10-23",
+    "revision": "Claude Revision1",
+    "disposition": "ACCEPTED_BOUNDED_DOCUMENTARY_INTAKE",
+    "evidenceQualification": "IDE logs worker-reported/not independently verified; topology/probe/runtime remain open",
+    "proposal": "docs/reviews/R139_CLAUDE_RECEIVING_ADMISSION_PROPOSAL_2026-10-23.md",
+    "proposalStatus": "INDEPENDENTLY_REVIEWED_DRAFT_PENDING_OWNER_DECISION",
+    "runtimeGranted": false,
+    "providerGranted": false,
+    "oldCountersUnchanged": true,
+    "proposalReviewer": "Luna Max /root/r139_admission_review; no authorship/effects"
   }
 }

@@ -6,9 +6,9 @@ Status: ACTIVE
 
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: Root SESSION_SYNC_STEWARD / COMMIT_STEWARD / ORCHESTRATOR after independent bounded source and Luna operational review; runtime stopped before effects
+- Active role: Root ORCHESTRATOR / WORK_ORDER_AUTHOR after independent REVIEWER acceptance of bounded Claude A documentary revision; no effect execution
 - Active tranche: CCMAI-RUNTIME-139
-- Next allowed move: CCMAI-RUNTIME-139 HOLD_TRANSFER: recovery source accepted bounded at pinned four hashes (offline compile2/2PASS, pureGo7PASS0SKIP, worker/RootPython34PASS each); original PATH failure preserved. Sole supported cua.getState inventory returned apps[]/browsers[]; independent Luna HOLD/TRANSFER, no product browser-control proof or old-tab closure inference; process ownership untested. Owner-designated supported browser/execution environment must receive same-R139 transfer packet before new fixture/effect admission. No retry/alternate stack, runtime/key/API or helper tranche now. Old r3 campaign spent/expired/newAPI0, old MAY slot1 consumed/unknown and protected driftHOLD retained; G1 integrated/G2/G3/E05/E06/full M3 OPEN, Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-139 HOLD_TRANSFER: Claude Revision1 accepted as bounded documentary intake; worker IDE logs not independently verified. Root prepared docs/reviews/R139_CLAUDE_RECEIVING_ADMISSION_PROPOSAL_2026-10-23.md for independent review and owner decision on one offline compile/check plus receiving-browser topology only. Draft is non-effective; no build/browser probe/process fixture/key/API admission now. Current product G0/G1/G2/G3/E05/E06/full M3 OPEN; old r3 spent/expired/newAPI0, older uncertain slot consumed/unknown, protected drift HOLD and old-tab UNKNOWN retained. Facebook/Zalo OA parked; no helper tranche or counter reset.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## INTAKE / DESIGN / SPEC / WORK_ORDER acknowledgment
@@ -210,3 +210,10 @@ Documentary verification: Core doctor PASS27/27 with inherited manifest-pin warn
 ## Claude A independent review — 2026-10-23
 
 Root rehydrated canonical continuity/authority before review; Core doctor PASS27/27 (inherited manifest-pin warning), knowledge ingestion successful. Role: independent REVIEWER / ORCHESTRATOR; no implementation authorship. A report delivered but CHANGES_REQUIRED documentary clarification; see R139_CLAUDE_RECEIVING_READINESS_REVIEW_2026-10-23.md for five consolidated findings. Four hashes corroborated; binary/toolchain absent in relocated receiving project. Allow one same-scope report clarification using existing records/non-secret metadata only; B remains BLOCKED_PENDING_ADMISSION, no build/browser/process/fixture/key/API admission or old-counter reset. Root owns original annex readiness/evidence-retention gap and commits; no new tranche/product acceptance.
+
+
+## Claude Revision1 acceptance / next-admission proposal — 2026-10-23
+
+Root rehydrated current manifest/policy/compact/state/memory/handoff/status/index; doctor PASS27/27 with inherited pin warning, knowledge ingested via Core -KnowledgePath. Independent REVIEWER accepts revised A as bounded documentary intake with explicit worker-reported IDE logs, unverified knowledge invocation, plausible-but-unproved relocation causality and open browser/probe dependencies. Preferred compiler hash/go.mod independently corroborated without executing compiler. No further A report repair. Root transitions to ORCHESTRATOR / WORK_ORDER_AUTHOR to prepare docs/reviews/R139_CLAUDE_RECEIVING_ADMISSION_PROPOSAL_2026-10-23.md; Luna Max independent read-only review requested. This DRAFT proposes one offline compile/check plus conditional browser-contract decision only, no browser/process probe/runtime/API effects. All old budgets, drift/tab uncertainty, product acceptance gaps and parked accounts retained; B BLOCKED_PENDING_ADMISSION.
+
+Independent Luna Max /root/r139_admission_review accepts the non-effective owner-decision draft with three pre-dispatch clarifications; Root incorporated owned TEMP/TMP/cache for both commands, exact final source/HEAD/proposal binding and explicit bounded-check/HOLD/slot accounting. Reviewer no edits/effects. No new authority. Root documentary static verification: legacy preflight7/7 PASS, profile reviewer-fast PASS with closeability NOT_APPLICABLE because order blocked,89 gate units PASS14.484s; this is repository-only evidence. Root COMMIT_STEWARD owns the documentary commit; no product closure.
