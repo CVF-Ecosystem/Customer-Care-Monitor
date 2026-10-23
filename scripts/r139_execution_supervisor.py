@@ -125,7 +125,100 @@ def committed(relative: str) -> Path:
     return path
 
 
-def verify_browser_receipt(value: dict) -> None:
+NATIVE_ID_FIELDS = ("nativeContractId", "trancheId", "campaignNonce", "pageId", "browserSessionId", "operator", "closeMode")
+NATIVE_EVENT_FIELDS = ("creation", "control", "capture")
+
+
+def native_text(value: object, code: str) -> str:
+    require(type(value) is str and 1 <= len(value) <= 128 and value == value.strip() and
+            all(32 <= ord(character) < 127 for character in value), code)
+    return value
+
+
+def native_path_text(value: object, code: str) -> str:
+    require(type(value) is str and 1 <= len(value) <= 512 and value == value.strip() and
+            all(32 <= ord(character) < 127 for character in value), code)
+    return value
+
+
+def native_time(value: object, code: str) -> datetime:
+    require(type(value) is str and re.fullmatch(r"\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ", value) is not None, code)
+    try:
+        parsed = datetime.strptime(value, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+    except ValueError as exc:
+        raise Hold(code) from exc
+    require(parsed <= datetime.now(timezone.utc), code)
+    return parsed
+
+
+def native_root(value: dict, field: str) -> Path:
+    rel = native_path_text(value.get(field), "NATIVE_ROOT_INVALID")
+    if field == "runtimeRoot":
+        require(Path(rel).is_absolute(), "NATIVE_ROOT_INVALID")
+        candidate = Path(rel)
+    else:
+        require(not Path(rel).is_absolute() and "\\" not in rel and ".." not in Path(rel).parts and
+                rel.startswith(".cvf/runtime/"), "NATIVE_ROOT_INVALID")
+        candidate = ROOT / rel
+    root = candidate.resolve()
+    require(candidate == root and root.is_relative_to((ROOT / ".cvf/runtime").resolve()), "NATIVE_ROOT_INVALID")
+    return root
+
+
+def native_file(rel: object, sha: object, root: Path, code: str) -> tuple[Path, dict]:
+    relative = native_path_text(rel, code)
+    require(not Path(relative).is_absolute() and "\\" not in relative and ".." not in Path(relative).parts,
+            code)
+    require(type(sha) is str and HEX64.fullmatch(sha) is not None, code)
+    candidate = ROOT / relative
+    path = candidate.resolve()
+    require(candidate == path and path.is_relative_to(root) and path != root and path.is_file(), code)
+    try:
+        require(digest(path) == sha, code)
+        return path, read_json(path)
+    except (OSError, ValueError) as exc:
+        raise Hold(code) from exc
+
+
+def native_identity(admission: dict, record: dict, code: str) -> None:
+    expected = {field: admission.get(field) for field in NATIVE_ID_FIELDS}
+    require(expected["closeMode"] in ("api", "operator", "operator_fallback"), code)
+    if expected["closeMode"] == "operator_fallback":
+        require(admission.get("fallbackCloseOperator") == expected["operator"], code)
+    for field in NATIVE_ID_FIELDS:
+        native_text(expected[field], code)
+        require(type(record.get(field)) is str and record[field] == expected[field], code)
+
+
+def native_event(admission: dict, path: object, sha: object, root: Path, event: str) -> dict:
+    _, data = native_file(path, sha, root, "NATIVE_EVIDENCE_INVALID")
+    native_identity(admission, data, "NATIVE_EVIDENCE_IDENTITY_MISMATCH")
+    require(data.get("event") == event, "NATIVE_EVIDENCE_EVENT_INVALID")
+    native_time(data.get("atUTC"), "NATIVE_EVIDENCE_TIME_INVALID")
+    return data
+
+
+def native_roots(admission: dict) -> tuple[Path, Path]:
+    readiness = native_root(admission, "browserReadinessRoot")
+    runtime = native_root(admission, "runtimeRoot")
+    require(readiness != runtime and not readiness.is_relative_to(runtime) and
+            not runtime.is_relative_to(readiness), "NATIVE_ROOTS_OVERLAP")
+    require(readiness.is_dir(), "READINESS_ROOT_MISSING")
+    return readiness, runtime
+
+
+def native_future_path(admission: dict, field: str, root: Path, *, absent: bool) -> Path:
+    rel = native_path_text(admission.get(field), "FUTURE_EVIDENCE_PATH_INVALID")
+    require(not Path(rel).is_absolute() and "\\" not in rel and ".." not in Path(rel).parts,
+            "FUTURE_EVIDENCE_PATH_INVALID")
+    candidate = ROOT / rel
+    resolved = candidate.resolve()
+    require(candidate == resolved and resolved.is_relative_to(root) and resolved != root and
+            (not absent or not resolved.exists()), "FUTURE_EVIDENCE_PATH_INVALID")
+    return resolved
+
+
+def verify_browser_receipt(value: dict, *, require_runtime_absent: bool = True) -> None:
     tool = value.get("browserTool")
     require(tool in ("supported_CUA_IAB", "antigravity_native") and value.get("browserSupported") is True, "BROWSER_CAPABILITY_UNPROVEN")
     browser_rel = value.get("browserReceiptPath", "")
@@ -142,159 +235,110 @@ def verify_browser_receipt(value: dict) -> None:
         require(type(proof.get("ownedTabsFinal")) is int and not isinstance(proof.get("ownedTabsFinal"), bool) and proof["ownedTabsFinal"] == 0, "BROWSER_PROOF_CONTENT_INCOMPLETE")
         require(proof.get("protocol") in ("http", "https"), "BROWSER_PROOF_CONTENT_INCOMPLETE")
     elif tool == "antigravity_native":
+        readiness, runtime = native_roots(value)
+        _, proof = native_file(browser_rel, expected, ROOT.resolve(), "RESERVATION_RECEIPT_INVALID")
         require(proof.get("status") != "CLOSED_EXACT_OWNED_PAGE", "TERMINAL_CLOSE_RECEIPT_CANNOT_BE_PREFIXTURE_RESERVATION")
         require(proof.get("status") == "RESERVED_NATIVE_PAGE_CONTROL_CAPTURE", "BROWSER_PROOF_CONTENT_INCOMPLETE")
         require(proof.get("browserId") == "antigravity_native", "BROWSER_PROOF_CONTENT_INCOMPLETE")
         require(type(proof.get("exclusiveReservation")) is bool and proof["exclusiveReservation"] is True, "BROWSER_PROOF_CONTENT_INCOMPLETE")
         require(type(proof.get("controlObserved")) is bool and proof["controlObserved"] is True, "BROWSER_PROOF_CONTENT_INCOMPLETE")
         require(type(proof.get("captureObserved")) is bool and proof["captureObserved"] is True, "BROWSER_PROOF_CONTENT_INCOMPLETE")
-        close_obs = proof.get("closeObserved")
-        require(close_obs is None or (type(close_obs) is bool and close_obs is False), "EARLY_CLOSE_FORBIDDEN")
+        require("closeObserved" not in proof or proof["closeObserved"] is False, "EARLY_CLOSE_FORBIDDEN")
         require(proof.get("protocol") in ("http", "https"), "BROWSER_PROOF_CONTENT_INCOMPLETE")
-        require(proof.get("closeMode") in ("api", "operator", "operator_fallback"), "BROWSER_PROOF_CONTENT_INCOMPLETE")
-
-        tranche_id = value.get("trancheId")
-        require(isinstance(tranche_id, str) and tranche_id.strip(), "BROWSER_PROOF_IDENTITY_MISMATCH")
-        require(proof.get("trancheId") == tranche_id, "BROWSER_PROOF_IDENTITY_MISMATCH")
-
-        page_id = value.get("pageId")
-        require(isinstance(page_id, str) and page_id.strip(), "BROWSER_PROOF_IDENTITY_MISMATCH")
-        require(proof.get("pageId") == page_id, "BROWSER_PROOF_IDENTITY_MISMATCH")
-
-        nonce = value.get("campaignNonce")
-        require(isinstance(nonce, str) and nonce.strip(), "BROWSER_PROOF_IDENTITY_MISMATCH")
-        require(proof.get("campaignNonce") == nonce, "BROWSER_PROOF_IDENTITY_MISMATCH")
-
-        session_id = value.get("browserSessionId")
-        require(isinstance(session_id, str) and session_id.strip(), "BROWSER_PROOF_IDENTITY_MISMATCH")
-        require(proof.get("browserSessionId") == session_id, "BROWSER_PROOF_IDENTITY_MISMATCH")
-
-        expected_op = value.get("fallbackCloseOperator") or value.get("operator")
-        require(isinstance(expected_op, str) and expected_op.strip(), "BROWSER_PROOF_IDENTITY_MISMATCH")
-        require(proof.get("operator") == expected_op, "BROWSER_PROOF_IDENTITY_MISMATCH")
-
-        close_path_rel = value.get("browserCloseReceiptPath")
-        require(isinstance(close_path_rel, str) and close_path_rel.strip(), "BROWSER_CLOSE_RECEIPT_PATH_MISSING")
-        require(not close_path_rel.startswith("docs/"), "BROWSER_CLOSE_RECEIPT_PATH_MUST_NOT_BE_TRACKED_DOCS")
-
-        reserved_str = proof.get("reservedAtUTC")
-        if reserved_str is not None:
-            require(isinstance(reserved_str, str) and reserved_str.endswith("Z"), "RESERVATION_TIMESTAMP_INVALID")
-            try:
-                reserved_dt = datetime.fromisoformat(reserved_str[:-1] + "+00:00")
-            except Exception:
-                raise Hold("RESERVATION_TIMESTAMP_INVALID")
-            now_utc = datetime.now(timezone.utc)
-            require(reserved_dt <= now_utc + timedelta(seconds=60), "RESERVATION_TIMESTAMP_IN_FUTURE")
-
-        ev_rel = proof.get("actionEvidencePath") or proof.get("evidencePath") or proof.get("controlEvidencePath")
-        if ev_rel is not None:
-            require(isinstance(ev_rel, str) and ev_rel.strip(), "RESERVATION_EVIDENCE_PATH_INVALID")
-            require(not ev_rel.startswith("docs/"), "EVIDENCE_PATH_MUST_NOT_BE_TRACKED_DOCS")
-            ev_path = project_path(ev_rel)
-            ev_sha = proof.get("actionEvidenceSha256") or proof.get("evidenceSha256") or proof.get("controlEvidenceSha256")
-            require(isinstance(ev_sha, str) and HEX64.fullmatch(ev_sha) and digest(ev_path) == ev_sha, "RESERVATION_EVIDENCE_SHA_MISMATCH")
+        native_identity(value, proof, "BROWSER_PROOF_IDENTITY_MISMATCH")
+        if require_runtime_absent:
+            require(not runtime.exists(), "PRODUCT_RUNTIME_ROOT_PREEXISTING")
+        reserved = native_time(proof.get("reservedAtUTC"), "RESERVATION_TIMESTAMP_INVALID")
+        previous_evidence = None
+        for event in NATIVE_EVENT_FIELDS:
+            data = native_event(value, proof.get(event + "EvidencePath"),
+                                proof.get(event + "EvidenceSha256"), readiness, event)
+            at = native_time(data["atUTC"], "NATIVE_EVIDENCE_TIME_INVALID")
+            require(at <= reserved and (previous_evidence is None or previous_evidence <= at),
+                    "RESERVATION_EVIDENCE_CHRONOLOGY_INVALID")
+            previous_evidence = at
+        for field in ("browserCloseReceiptPath", "actionEvidencePath", "finalInventoryPath", "rawNativeInventoryPath"):
+            native_future_path(value, field, runtime, absent=require_runtime_absent)
     else:
         raise Hold("BROWSER_TOOL_UNSUPPORTED")
 
 
 def verify_browser_terminal_close(admission: dict, runtime: Path, external: Path) -> dict:
-    close_rel = admission.get("browserCloseReceiptPath")
-    require(isinstance(close_rel, str) and close_rel.strip(), "BROWSER_CLOSE_RECEIPT_PATH_MISSING")
-    require(not close_rel.startswith("docs/"), "BROWSER_CLOSE_RECEIPT_PATH_MUST_NOT_BE_TRACKED_DOCS")
-    close_path = project_path(close_rel)
-    expected_sha = admission.get("browserCloseReceiptSha256")
-    if expected_sha:
-        require(isinstance(expected_sha, str) and HEX64.fullmatch(expected_sha) and digest(close_path) == expected_sha, "BROWSER_CLOSE_RECEIPT_SHA_MISMATCH")
-    receipt = read_json(close_path)
+    verify_browser_receipt(admission, require_runtime_absent=False)
+    readiness, product_root = native_roots(admission)
+    require(runtime.resolve() == product_root, "PRODUCT_RUNTIME_ROOT_MISMATCH")
+    _, reservation = native_file(admission.get("browserReceiptPath"), admission.get("browserReceiptSha256"),
+                                  ROOT.resolve(), "RESERVATION_RECEIPT_INVALID")
+    native_identity(admission, reservation, "RESERVATION_IDENTITY_MISMATCH")
+    close_path = native_future_path(admission, "browserCloseReceiptPath", product_root, absent=False)
+    require(close_path.is_file(), "BROWSER_CLOSE_RECEIPT_INVALID")
+    try:
+        receipt = read_json(close_path)
+        close_sha = digest(close_path)
+    except (OSError, ValueError) as exc:
+        raise Hold("BROWSER_CLOSE_RECEIPT_INVALID") from exc
+    native_identity(admission, receipt, "BROWSER_CLOSE_IDENTITY_MISMATCH")
     require(receipt.get("status") == "CLOSED_EXACT_OWNED_PAGE", "BROWSER_CLOSE_STATUS_INVALID")
     require(receipt.get("browserId") == "antigravity_native", "BROWSER_CLOSE_BROWSER_ID_INVALID")
-    close_obs = receipt.get("closeObserved")
-    require(type(close_obs) is bool and close_obs is True, "BROWSER_CLOSE_NOT_OBSERVED")
+    require(receipt.get("closeObserved") is True, "BROWSER_CLOSE_NOT_OBSERVED")
     owned_tabs = receipt.get("ownedTabsFinal")
-    require(type(owned_tabs) is int and not isinstance(owned_tabs, bool) and owned_tabs == 0, "BROWSER_CLOSE_OWNED_TABS_REMAINING")
-
-    tranche_id = admission.get("trancheId")
-    require(isinstance(tranche_id, str) and tranche_id.strip(), "BROWSER_CLOSE_IDENTITY_MISSING")
-    require(receipt.get("trancheId") == tranche_id, "BROWSER_CLOSE_TRANCHE_ID_MISMATCH")
-
-    page_id = admission.get("pageId")
-    require(isinstance(page_id, str) and page_id.strip(), "BROWSER_CLOSE_PAGE_ID_MISSING")
-    require(receipt.get("pageId") == page_id, "BROWSER_CLOSE_PAGE_ID_MISMATCH")
-
-    nonce = admission.get("campaignNonce")
-    require(isinstance(nonce, str) and nonce.strip(), "BROWSER_CLOSE_NONCE_MISSING")
-    require(receipt.get("campaignNonce") == nonce, "BROWSER_CLOSE_NONCE_MISMATCH")
-
-    session_id = admission.get("browserSessionId")
-    require(isinstance(session_id, str) and session_id.strip(), "BROWSER_CLOSE_SESSION_MISSING")
-    require(receipt.get("browserSessionId") == session_id, "BROWSER_CLOSE_SESSION_MISMATCH")
-
-    close_mode = receipt.get("closeMode")
-    require(close_mode in ("api", "operator", "operator_fallback"), "BROWSER_CLOSE_MODE_INVALID")
-    expected_op = admission.get("fallbackCloseOperator") or admission.get("operator")
-    operator = receipt.get("operator")
-    require(isinstance(operator, str) and operator.strip(), "BROWSER_CLOSE_OPERATOR_MISSING")
-    require(operator == expected_op, "BROWSER_CLOSE_OPERATOR_MISMATCH")
-
-    closed_at_str = receipt.get("closedAtUTC")
-    require(isinstance(closed_at_str, str) and closed_at_str.endswith("Z"), "BROWSER_CLOSE_TIMESTAMP_INVALID")
+    require(type(owned_tabs) is int and owned_tabs == 0, "BROWSER_CLOSE_OWNED_TABS_REMAINING")
+    reserved = native_time(reservation.get("reservedAtUTC"), "RESERVATION_TIMESTAMP_INVALID")
+    require(receipt.get("reservedAtUTC") == reservation.get("reservedAtUTC"), "RESERVATION_TIME_MISMATCH")
+    action_at = native_time(receipt.get("actionAtUTC"), "ACTION_TIMESTAMP_INVALID")
+    closed = native_time(receipt.get("closedAtUTC"), "BROWSER_CLOSE_TIMESTAMP_INVALID")
     try:
-        closed_dt = datetime.fromisoformat(closed_at_str[:-1] + "+00:00")
-    except Exception:
-        raise Hold("BROWSER_CLOSE_TIMESTAMP_INVALID")
-    now_utc = datetime.now(timezone.utc)
-    require(closed_dt <= now_utc + timedelta(seconds=60), "BROWSER_CLOSE_TIMESTAMP_IN_FUTURE")
-
-    deadline_str = admission.get("grantDeadlineUTC")
-    require(isinstance(deadline_str, str) and deadline_str.endswith("Z"), "GRANT_DEADLINE_INVALID")
-    try:
-        deadline_dt = datetime.fromisoformat(deadline_str[:-1] + "+00:00")
-    except (ValueError, TypeError):
-        raise Hold("GRANT_DEADLINE_INVALID")
-    require(closed_dt <= deadline_dt, "BROWSER_CLOSE_AFTER_DEADLINE")
-
-    reserved_str = receipt.get("reservedAtUTC")
-    if reserved_str:
-        require(isinstance(reserved_str, str) and reserved_str.endswith("Z"), "RESERVATION_TIMESTAMP_INVALID")
-        try:
-            reserved_dt = datetime.fromisoformat(reserved_str[:-1] + "+00:00")
-        except Exception:
-            raise Hold("RESERVATION_TIMESTAMP_INVALID")
-        require(reserved_dt <= closed_dt, "BROWSER_CLOSE_BEFORE_RESERVATION")
-
-    action_rel = receipt.get("actionEvidencePath") or receipt.get("evidencePath")
-    if action_rel:
-        require(isinstance(action_rel, str) and action_rel.strip(), "BROWSER_CLOSE_ACTION_EVIDENCE_PATH_INVALID")
-        require(not action_rel.startswith("docs/"), "EVIDENCE_PATH_MUST_NOT_BE_TRACKED_DOCS")
-        action_path = project_path(action_rel)
-        action_sha = receipt.get("actionEvidenceSha256") or receipt.get("evidenceSha256")
-        require(isinstance(action_sha, str) and HEX64.fullmatch(action_sha), "BROWSER_CLOSE_ACTION_EVIDENCE_SHA_MISSING")
-        require(digest(action_path) == action_sha, "BROWSER_CLOSE_ACTION_EVIDENCE_SHA_MISMATCH")
-
-    inv_rel = receipt.get("finalInventoryPath") or receipt.get("inventoryPath")
-    if inv_rel:
-        require(isinstance(inv_rel, str) and inv_rel.strip(), "BROWSER_CLOSE_FINAL_INVENTORY_PATH_INVALID")
-        require(not inv_rel.startswith("docs/"), "INVENTORY_PATH_MUST_NOT_BE_TRACKED_DOCS")
-        inv_path = project_path(inv_rel)
-        inv_sha = receipt.get("finalInventorySha256") or receipt.get("inventorySha256")
-        require(isinstance(inv_sha, str) and HEX64.fullmatch(inv_sha), "BROWSER_CLOSE_FINAL_INVENTORY_SHA_MISSING")
-        require(digest(inv_path) == inv_sha, "BROWSER_CLOSE_FINAL_INVENTORY_SHA_MISMATCH")
-        inv_data = read_json(inv_path)
-        open_pages = inv_data.get("openPages", [])
-        open_tabs = inv_data.get("openTabs", [])
-        require(page_id not in open_pages and page_id not in open_tabs, "PAGE_STILL_OPEN_IN_FINAL_INVENTORY")
-        if "ownedTabsFinal" in inv_data:
-            require(inv_data["ownedTabsFinal"] == 0, "BROWSER_CLOSE_OWNED_TABS_REMAINING")
-        if "inventoryAtUTC" in inv_data:
-            inv_ts = inv_data["inventoryAtUTC"]
-            require(isinstance(inv_ts, str) and inv_ts.endswith("Z"), "INVENTORY_TIMESTAMP_INVALID")
-            try:
-                inv_dt = datetime.fromisoformat(inv_ts[:-1] + "+00:00")
-            except Exception:
-                raise Hold("INVENTORY_TIMESTAMP_INVALID")
-            require(closed_dt <= inv_dt <= deadline_dt, "BROWSER_INVENTORY_CHRONOLOGY_INVALID")
-    return receipt
+        deadline_text = admission.get("grantDeadlineUTC")
+        require(type(deadline_text) is str and re.fullmatch(r"\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ", deadline_text), "GRANT_DEADLINE_INVALID")
+        deadline = datetime.strptime(deadline_text, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+    except ValueError as exc:
+        raise Hold("GRANT_DEADLINE_INVALID") from exc
+    require(reserved <= action_at <= closed <= deadline, "BROWSER_CHRONOLOGY_INVALID")
+    require(receipt.get("actionEvidencePath") == admission.get("actionEvidencePath") and
+            receipt.get("finalInventoryPath") == admission.get("finalInventoryPath"), "FUTURE_EVIDENCE_PATH_MISMATCH")
+    native_future_path(admission, "actionEvidencePath", product_root, absent=False)
+    native_future_path(admission, "finalInventoryPath", product_root, absent=False)
+    native_future_path(admission, "rawNativeInventoryPath", product_root, absent=False)
+    action = native_event(admission, receipt.get("actionEvidencePath"), receipt.get("actionEvidenceSha256"),
+                          product_root, "action_sequence")
+    actions = action.get("actions")
+    require(type(actions) is list and len(actions) >= 2, "ACTION_SEQUENCE_INVALID")
+    previous = reserved
+    close_index = None
+    for index, row in enumerate(actions):
+        require(type(row) is dict and type(row.get("pageId")) is str and row["pageId"] == admission["pageId"] and
+                row.get("action") in ("control", "capture", "close"), "ACTION_SEQUENCE_INVALID")
+        at = native_time(row.get("atUTC"), "ACTION_SEQUENCE_TIME_INVALID")
+        require(previous <= at <= closed, "ACTION_SEQUENCE_CHRONOLOGY_INVALID")
+        previous = at
+        if row["action"] == "close":
+            require(close_index is None and at == closed, "ACTION_SEQUENCE_CLOSE_INVALID")
+            close_index = index
+    require(close_index == len(actions) - 1 and native_time(action["atUTC"], "ACTION_TIMESTAMP_INVALID") == action_at,
+            "POST_CLOSE_ACTION_OR_ACTION_TIME_MISMATCH")
+    _, inventory = native_file(receipt.get("finalInventoryPath"), receipt.get("finalInventorySha256"),
+                               product_root, "FINAL_INVENTORY_INVALID")
+    native_identity(admission, inventory, "FINAL_INVENTORY_IDENTITY_MISMATCH")
+    observed = native_time(inventory.get("inventoryAtUTC"), "INVENTORY_TIMESTAMP_INVALID")
+    require(closed <= observed <= deadline, "INVENTORY_CHRONOLOGY_INVALID")
+    pages = inventory.get("pageIds")
+    require(type(pages) is list and all(type(page) is str and native_text(page, "PAGE_ID_INVALID") for page in pages) and
+            len(pages) == len(set(pages)) and admission["pageId"] not in pages, "FINAL_PAGE_LIST_INVALID")
+    require(type(inventory.get("ownedCount")) is int and inventory["ownedCount"] == 0,
+            "FINAL_OWNED_COUNT_INVALID")
+    require(inventory.get("rawNativeInventoryPath") == admission.get("rawNativeInventoryPath"),
+            "RAW_NATIVE_INVENTORY_PATH_MISMATCH")
+    _, raw_inventory = native_file(inventory.get("rawNativeInventoryPath"), inventory.get("rawNativeInventorySha256"),
+                                   product_root, "RAW_NATIVE_INVENTORY_INVALID")
+    native_identity(admission, raw_inventory, "RAW_NATIVE_INVENTORY_IDENTITY_MISMATCH")
+    require(raw_inventory.get("event") == "native_inventory" and
+            raw_inventory.get("atUTC") == inventory.get("inventoryAtUTC") and
+            raw_inventory.get("pageIds") == pages and
+            type(raw_inventory.get("ownedCount")) is int and raw_inventory["ownedCount"] == inventory["ownedCount"],
+            "RAW_NATIVE_INVENTORY_MISMATCH")
+    return {"receipt": receipt, "closeReceiptSha256": close_sha,
+            "actionEvidenceSha256": receipt["actionEvidenceSha256"],
+            "finalInventorySha256": receipt["finalInventorySha256"]}
 
 
 SOURCE_PIN_REQUIRED = {"backend/api/handlers/intervention_execution_browser_test.go", "scripts/r139_execution_supervisor.py", "scripts/r139_vite_config.mjs.template", "scripts/tests/test_r139_execution_supervisor.py", "backend/go.mod", "backend/go.sum", "frontend/package.json", "frontend/package-lock.json", "frontend/vite.config.ts"}
@@ -322,7 +366,7 @@ def fresh_runtime_admission(relative: str, *, expect_fresh_external: bool = True
     dirty = subprocess.run(["git", "status", "--porcelain", "--untracked-files=all"], cwd=ROOT, capture_output=True, timeout=10)
     require(dirty.returncode == 0 and not dirty.stdout.strip(), "SOURCE_WORKTREE_DIRTY")
     require(value.get("nativeExecutePOST") == EXPECTED_NATIVE and value.get("browserExecutePOST") == EXPECTED_BROWSER and value.get("grantCap") == EXPECTED_GRANTS and value.get("providerCap") == 1 and value.get("automaticRetry") == 0, "EFFECT_CAPS_INVALID")
-    verify_browser_receipt(value)
+    verify_browser_receipt(value, require_runtime_absent=expect_fresh_external)
     if expect_fresh_external and value.get("browserTool") == "antigravity_native":
         close_path_rel = value.get("browserCloseReceiptPath")
         if close_path_rel:

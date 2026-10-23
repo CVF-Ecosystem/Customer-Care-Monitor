@@ -37,6 +37,14 @@ import (
 )
 
 type r139Admission struct {
+	NativeContractID          string            `json:"nativeContractId"`
+	CloseMode                 string            `json:"closeMode"`
+	Operator                  string            `json:"operator"`
+	BrowserReadinessRoot      string            `json:"browserReadinessRoot"`
+	ActionEvidencePath        string            `json:"actionEvidencePath"`
+	FinalInventoryPath        string            `json:"finalInventoryPath"`
+	RawNativeInventoryPath    string            `json:"rawNativeInventoryPath"`
+	nativeProjectRoot         string
 	TrancheID                 string            `json:"trancheId"`
 	Kind                      string            `json:"kind"`
 	SourceCommit              string            `json:"sourceCommit"`
@@ -78,375 +86,231 @@ type r139Admission struct {
 }
 
 func r139VerifyBrowserReservation(a r139Admission, browserRaw []byte) error {
-	if !a.BrowserSupported {
-		return errors.New("browserSupported is false")
-	}
-	var proof map[string]any
-	if err := json.Unmarshal(browserRaw, &proof); err != nil {
-		return fmt.Errorf("invalid json in browser proof: %w", err)
-	}
-
-	tool := a.BrowserTool
-	if tool == "supported_CUA_IAB" {
-		status, _ := proof["status"].(string)
-		browserID, _ := proof["browserId"].(string)
-		ctrl, _ := proof["controlObserved"].(bool)
-		capt, _ := proof["captureObserved"].(bool)
-		closed, _ := proof["closeObserved"].(bool)
-		proto, _ := proof["protocol"].(string)
-
-		ownedTabsVal, ok := proof["ownedTabsFinal"]
-		if !ok {
-			return errors.New("ownedTabsFinal missing in legacy IAB proof")
-		}
-		ownedTabs, isFloat := ownedTabsVal.(float64)
-		if !isFloat || ownedTabs != 0 {
-			return errors.New("ownedTabsFinal must be numeric 0 in legacy IAB proof")
-		}
-
-		if status != "PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE" ||
-			browserID != "iab" ||
-			!ctrl || !capt || !closed ||
-			(proto != "http" && proto != "https") {
-			return errors.New("legacy IAB browser proof content incomplete")
-		}
-		return nil
-	}
-
-	if tool == "antigravity_native" {
-		status, _ := proof["status"].(string)
-		if status == "CLOSED_EXACT_OWNED_PAGE" {
-			return errors.New("final-close evidence rejected as prefixture reservation")
-		}
-		if status != "RESERVED_NATIVE_PAGE_CONTROL_CAPTURE" {
-			return fmt.Errorf("unexpected reservation status: %s", status)
-		}
-
-		browserID, _ := proof["browserId"].(string)
-		if browserID != "antigravity_native" {
-			return fmt.Errorf("unexpected browserId: %s", browserID)
-		}
-
-		excl, _ := proof["exclusiveReservation"].(bool)
-		if !excl {
-			return errors.New("exclusiveReservation must be true")
-		}
-
-		ctrl, _ := proof["controlObserved"].(bool)
-		if !ctrl {
-			return errors.New("controlObserved must be true")
-		}
-
-		capt, _ := proof["captureObserved"].(bool)
-		if !capt {
-			return errors.New("captureObserved must be true")
-		}
-
-		if closedVal, exists := proof["closeObserved"]; exists {
-			closed, isBool := closedVal.(bool)
-			if !isBool || closed {
-				return errors.New("early closeObserved is forbidden in reservation")
-			}
-		}
-
-		proto, _ := proof["protocol"].(string)
-		if proto != "http" && proto != "https" {
-			return fmt.Errorf("unsupported protocol: %s", proto)
-		}
-
-		closeMode, _ := proof["closeMode"].(string)
-		if closeMode != "api" && closeMode != "operator" && closeMode != "operator_fallback" {
-			return fmt.Errorf("invalid closeMode: %s", closeMode)
-		}
-
-		if strings.TrimSpace(a.TrancheID) == "" {
-			return errors.New("trancheId required in admission")
-		}
-		trancheID, _ := proof["trancheId"].(string)
-		if trancheID != a.TrancheID {
-			return fmt.Errorf("trancheId mismatch: expected %s, got %s", a.TrancheID, trancheID)
-		}
-
-		if strings.TrimSpace(a.PageID) == "" {
-			return errors.New("pageId required in admission")
-		}
-		pageID, _ := proof["pageId"].(string)
-		if pageID != a.PageID {
-			return fmt.Errorf("pageId mismatch: expected %s, got %s", a.PageID, pageID)
-		}
-
-		if strings.TrimSpace(a.CampaignNonce) == "" {
-			return errors.New("campaignNonce required in admission")
-		}
-		nonce, _ := proof["campaignNonce"].(string)
-		if nonce != a.CampaignNonce {
-			return fmt.Errorf("campaignNonce mismatch: expected %s, got %s", a.CampaignNonce, nonce)
-		}
-
-		if strings.TrimSpace(a.BrowserSessionID) == "" {
-			return errors.New("browserSessionId required in admission")
-		}
-		sessionID, _ := proof["browserSessionId"].(string)
-		if sessionID != a.BrowserSessionID {
-			return fmt.Errorf("browserSessionId mismatch: expected %s, got %s", a.BrowserSessionID, sessionID)
-		}
-
-		expectedOp := a.FallbackCloseOperator
-		if expectedOp == "" {
-			expectedOp = a.ActorRole
-		}
-		if strings.TrimSpace(expectedOp) == "" {
-			return errors.New("operator required in admission")
-		}
-		op, _ := proof["operator"].(string)
-		if op != expectedOp {
-			return fmt.Errorf("operator mismatch: expected %s, got %s", expectedOp, op)
-		}
-
-		if strings.TrimSpace(a.BrowserCloseReceiptPath) == "" {
-			return errors.New("browserCloseReceiptPath is required in admission")
-		}
-		if strings.HasPrefix(a.BrowserCloseReceiptPath, "docs/") {
-			return errors.New("browserCloseReceiptPath must be in ignored runtime path, not tracked docs/")
-		}
-
-		if reservedStr, ok := proof["reservedAtUTC"].(string); ok && reservedStr != "" {
-			if !strings.HasSuffix(reservedStr, "Z") {
-				return errors.New("reservedAtUTC must end in Z")
-			}
-			reservedAt, rErr := time.Parse(time.RFC3339, reservedStr)
-			if rErr != nil {
-				reservedAt, rErr = time.Parse(time.RFC3339Nano, reservedStr)
-			}
-			if rErr != nil {
-				return fmt.Errorf("invalid reservedAtUTC: %w", rErr)
-			}
-			if reservedAt.After(time.Now().UTC().Add(time.Minute)) {
-				return errors.New("reservedAtUTC cannot be in the future")
-			}
-		}
-
-		evRel, _ := proof["actionEvidencePath"].(string)
-		if evRel == "" {
-			evRel, _ = proof["evidencePath"].(string)
-		}
-		if evRel != "" {
-			if strings.HasPrefix(evRel, "docs/") {
-				return errors.New("actionEvidencePath must not be in tracked docs/")
-			}
-			evSha, _ := proof["actionEvidenceSha256"].(string)
-			if evSha == "" {
-				evSha, _ = proof["evidenceSha256"].(string)
-			}
-			if len(evSha) != 64 {
-				return errors.New("actionEvidenceSha256 must be 64-hex string")
-			}
-			if data, readErr := os.ReadFile(evRel); readErr == nil {
-				sum := sha256.Sum256(data)
-				if hex.EncodeToString(sum[:]) != evSha {
-					return errors.New("action evidence sha mismatch")
-				}
-			}
-		}
-
-		return nil
-	}
-
-	return fmt.Errorf("unsupported browserTool: %s", tool)
+	return r139StrictBrowserReservation(a, browserRaw)
 }
 
 func r139VerifyBrowserTerminalClose(a r139Admission, closeRaw []byte) error {
-	var receipt map[string]any
-	if err := json.Unmarshal(closeRaw, &receipt); err != nil {
-		return fmt.Errorf("invalid json in terminal close receipt: %w", err)
-	}
+	return r139StrictBrowserTerminalClose(a, closeRaw)
+}
 
-	status, _ := receipt["status"].(string)
-	if status != "CLOSED_EXACT_OWNED_PAGE" {
-		return fmt.Errorf("status must be CLOSED_EXACT_OWNED_PAGE, got %s", status)
+func r139NativeRoot(a r139Admission, field string) (string, string, error) {
+	project := a.nativeProjectRoot
+	if project == "" {
+		_, file, _, ok := runtime.Caller(0)
+		if !ok { return "", "", errors.New("source root unavailable") }
+		project = filepath.Dir(filepath.Dir(filepath.Dir(filepath.Dir(file))))
 	}
+	project, err := filepath.Abs(project)
+	if err != nil { return "", "", err }
+	var selected string
+	switch field {
+	case "browserReadinessRoot": selected = a.BrowserReadinessRoot
+	case "runtimeRoot": selected = a.RuntimeRoot
+	default: return "", "", errors.New("invalid root field")
+	}
+	if selected == "" || strings.Contains(selected, "\\") && field == "browserReadinessRoot" { return "", "", errors.New("native root missing or invalid") }
+	var root string
+	if field == "runtimeRoot" {
+		if !filepath.IsAbs(selected) { return "", "", errors.New("runtimeRoot must be absolute") }
+		root = filepath.Clean(selected)
+	} else {
+		if filepath.IsAbs(selected) || !strings.HasPrefix(selected, ".cvf/runtime/") { return "", "", errors.New("readiness root must be ignored project-relative") }
+		for _, part := range strings.Split(selected, "/") { if part == ".." || part == "" { return "", "", errors.New("root traversal") } }
+		root = filepath.Join(project, filepath.FromSlash(selected))
+	}
+	ignored := filepath.Join(project, ".cvf", "runtime")
+	if rel, err := filepath.Rel(ignored, root); err != nil || rel == "." || rel == ".." || strings.HasPrefix(rel, ".."+string(os.PathSeparator)) { return "", "", errors.New("native root outside ignored area") }
+	return project, root, nil
+}
 
-	browserID, _ := receipt["browserId"].(string)
-	if browserID != "antigravity_native" {
-		return fmt.Errorf("browserId must be antigravity_native, got %s", browserID)
+func r139NativePath(a r139Admission, field, selected string, root string, existing bool) (string, error) {
+	if selected == "" || filepath.IsAbs(selected) || strings.Contains(selected, "\\") { return "", fmt.Errorf("%s invalid path", field) }
+	for _, part := range strings.Split(selected, "/") { if part == ".." || part == "" { return "", fmt.Errorf("%s traversal", field) } }
+	project, _, err := r139NativeRoot(a, "runtimeRoot")
+	if err != nil { return "", err }
+	path := filepath.Join(project, filepath.FromSlash(selected))
+	rel, err := filepath.Rel(root, path)
+	if err != nil || rel == "." || rel == ".." || strings.HasPrefix(rel, ".."+string(os.PathSeparator)) { return "", fmt.Errorf("%s outside selected root", field) }
+	// Resolve every existing ancestor as well as an existing final file. A junction or symlink alias is rejected.
+	ancestor := path
+	for {
+		if _, statErr := os.Lstat(ancestor); statErr == nil {
+			resolved, resolveErr := filepath.EvalSymlinks(ancestor)
+			if resolveErr != nil || !strings.EqualFold(filepath.Clean(resolved), filepath.Clean(ancestor)) { return "", fmt.Errorf("%s reparse alias", field) }
+		} else if !os.IsNotExist(statErr) { return "", statErr }
+		if strings.EqualFold(ancestor, project) { break }
+		parent := filepath.Dir(ancestor)
+		if parent == ancestor { return "", errors.New("project ancestor unavailable") }
+		ancestor = parent
 	}
+	if existing {
+		info, statErr := os.Stat(path)
+		if statErr != nil || !info.Mode().IsRegular() { return "", fmt.Errorf("%s missing file", field) }
+	} else if _, statErr := os.Lstat(path); statErr == nil || !os.IsNotExist(statErr) { return "", fmt.Errorf("%s must be absent", field) }
+	return path, nil
+}
 
-	closeObservedVal, exists := receipt["closeObserved"]
-	if !exists {
-		return errors.New("closeObserved is required in terminal close receipt")
-	}
-	closeObserved, isBool := closeObservedVal.(bool)
-	if !isBool || !closeObserved {
-		return errors.New("closeObserved must be exact boolean true")
-	}
+func r139NativeObject(raw []byte) (map[string]any, error) {
+	var value map[string]any
+	decoder := json.NewDecoder(bytes.NewReader(raw))
+	decoder.UseNumber()
+	if err := decoder.Decode(&value); err != nil || value == nil { return nil, errors.New("native JSON object invalid") }
+	var extra any
+	if err := decoder.Decode(&extra); err != io.EOF { return nil, errors.New("native JSON trailing content") }
+	return value, nil
+}
 
-	ownedTabsVal, ok := receipt["ownedTabsFinal"]
-	if !ok {
-		return errors.New("ownedTabsFinal is required in terminal close receipt")
-	}
-	ownedTabs, isFloat := ownedTabsVal.(float64)
-	if !isFloat || ownedTabs != 0 {
-		return fmt.Errorf("ownedTabsFinal must be numeric 0, got %v", ownedTabsVal)
-	}
+func r139NativeZeroInteger(value any) bool {
+	number, ok := value.(json.Number)
+	if !ok { return false }
+	parsed, err := number.Int64()
+	return err == nil && parsed == 0
+}
 
-	if strings.TrimSpace(a.TrancheID) == "" {
-		return errors.New("trancheId required in admission")
-	}
-	if trancheID, _ := receipt["trancheId"].(string); trancheID != a.TrancheID {
-		return fmt.Errorf("trancheId mismatch: expected %s, got %s", a.TrancheID, trancheID)
-	}
+func r139NativeText(value any) (string, error) {
+	text, ok := value.(string)
+	if !ok || len(text) == 0 || len(text) > 128 || strings.TrimSpace(text) != text { return "", errors.New("native text invalid") }
+	for _, ch := range text { if ch < 32 || ch >= 127 { return "", errors.New("native text invalid") } }
+	return text, nil
+}
 
-	if strings.TrimSpace(a.PageID) == "" {
-		return errors.New("pageId required in admission")
+func r139NativeIdentity(a r139Admission, record map[string]any) error {
+	if a.CloseMode != "api" && a.CloseMode != "operator" && a.CloseMode != "operator_fallback" { return errors.New("selected closeMode invalid") }
+	op := a.Operator
+	if a.CloseMode == "operator_fallback" && a.FallbackCloseOperator != op { return errors.New("fallback close operator mismatch") }
+	expected := map[string]string{"nativeContractId": a.NativeContractID, "trancheId": a.TrancheID, "campaignNonce": a.CampaignNonce, "pageId": a.PageID, "browserSessionId": a.BrowserSessionID, "operator": op, "closeMode": a.CloseMode}
+	for field, want := range expected {
+		if _, err := r139NativeText(want); err != nil { return fmt.Errorf("admission %s: %w", field, err) }
+		got, err := r139NativeText(record[field])
+		if err != nil || got != want { return fmt.Errorf("native %s mismatch", field) }
 	}
-	if pageID, _ := receipt["pageId"].(string); pageID != a.PageID {
-		return fmt.Errorf("pageId mismatch: expected %s, got %s", a.PageID, pageID)
-	}
+	return nil
+}
 
-	if strings.TrimSpace(a.CampaignNonce) == "" {
-		return errors.New("campaignNonce required in admission")
-	}
-	if nonce, _ := receipt["campaignNonce"].(string); nonce != a.CampaignNonce {
-		return fmt.Errorf("campaignNonce mismatch: expected %s, got %s", a.CampaignNonce, nonce)
-	}
+func r139NativeTime(value any) (time.Time, error) {
+	text, ok := value.(string)
+	if !ok || !regexp.MustCompile("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$").MatchString(text) { return time.Time{}, errors.New("native UTC time invalid") }
+	at, err := time.Parse("2006-01-02T15:04:05Z", text)
+	if err != nil || at.After(time.Now().UTC()) { return time.Time{}, errors.New("native UTC time future or invalid") }
+	return at, nil
+}
 
-	if strings.TrimSpace(a.BrowserSessionID) == "" {
-		return errors.New("browserSessionId required in admission")
-	}
-	if sessionID, _ := receipt["browserSessionId"].(string); sessionID != a.BrowserSessionID {
-		return fmt.Errorf("browserSessionId mismatch: expected %s, got %s", a.BrowserSessionID, sessionID)
-	}
+func r139NativeFile(a r139Admission, field string, rel any, sha any, root string) (map[string]any, error) {
+	selected, err := r139NativeText(rel)
+	if err != nil { return nil, err }
+	digestText, ok := sha.(string)
+	if !ok || !regexp.MustCompile("^[0-9a-f]{64}$").MatchString(digestText) { return nil, fmt.Errorf("%s SHA invalid", field) }
+	path, err := r139NativePath(a, field, selected, root, true)
+	if err != nil { return nil, err }
+	raw, err := os.ReadFile(path)
+	if err != nil { return nil, err }
+	sum := sha256.Sum256(raw)
+	if hex.EncodeToString(sum[:]) != digestText { return nil, fmt.Errorf("%s SHA mismatch", field) }
+	return r139NativeObject(raw)
+}
 
-	closeMode, _ := receipt["closeMode"].(string)
-	if closeMode != "api" && closeMode != "operator" && closeMode != "operator_fallback" {
-		return fmt.Errorf("invalid closeMode: %s", closeMode)
+func r139StrictBrowserReservation(a r139Admission, browserRaw []byte) error {
+	proof, err := r139NativeObject(browserRaw)
+	if err != nil { return err }
+	if !a.BrowserSupported { return errors.New("browser unsupported") }
+	if a.BrowserTool == "supported_CUA_IAB" {
+		if proof["status"] != "PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE" || proof["browserId"] != "iab" || proof["controlObserved"] != true || proof["captureObserved"] != true || proof["closeObserved"] != true || proof["protocol"] != "http" && proof["protocol"] != "https" || !r139NativeZeroInteger(proof["ownedTabsFinal"]) { return errors.New("IAB proof invalid") }
+		return nil
 	}
+	if a.BrowserTool != "antigravity_native" { return errors.New("unsupported browser tool") }
+	if proof["status"] != "RESERVED_NATIVE_PAGE_CONTROL_CAPTURE" || proof["browserId"] != "antigravity_native" || proof["exclusiveReservation"] != true || proof["controlObserved"] != true || proof["captureObserved"] != true || proof["protocol"] != "http" && proof["protocol"] != "https" { return errors.New("native reservation incomplete") }
+	if observed, exists := proof["closeObserved"]; exists && observed != false { return errors.New("early closeObserved forbidden") }
+	if err := r139NativeIdentity(a, proof); err != nil { return err }
+	project, readiness, err := r139NativeRoot(a, "browserReadinessRoot"); if err != nil { return err }
+	_, product, err := r139NativeRoot(a, "runtimeRoot"); if err != nil { return err }
+	sealed, err := r139NativeFile(a, "browserReceipt", a.BrowserReceiptPath, a.BrowserReceiptSHA256, project)
+	if err != nil || !reflect.DeepEqual(sealed, proof) { return errors.New("reservation file or digest mismatch") }
+	if strings.HasPrefix(readiness+string(os.PathSeparator), product+string(os.PathSeparator)) || strings.HasPrefix(product+string(os.PathSeparator), readiness+string(os.PathSeparator)) { return errors.New("native roots overlap") }
+	if info, err := os.Stat(readiness); err != nil || !info.IsDir() { return errors.New("readiness root missing") }
+	if _, err := os.Stat(product); err == nil {
+		if os.Getenv("R139_RUN") != "1" || os.Getenv("R139_RUNTIME_ROOT") != product { return errors.New("product runtime root preexisting outside admitted run") }
+	} else if !os.IsNotExist(err) { return err }
+	reserved, err := r139NativeTime(proof["reservedAtUTC"]); if err != nil { return err }
+	previousEvidence := time.Time{}
+	for _, event := range []string{"creation", "control", "capture"} {
+		data, err := r139NativeFile(a, event, proof[event+"EvidencePath"], proof[event+"EvidenceSha256"], readiness)
+		if err != nil { return err }
+		if err := r139NativeIdentity(a, data); err != nil || data["event"] != event { return fmt.Errorf("%s original event invalid", event) }
+		at, err := r139NativeTime(data["atUTC"])
+		if err != nil || at.After(reserved) || !previousEvidence.IsZero() && at.Before(previousEvidence) { return fmt.Errorf("%s chronology invalid", event) }
+		previousEvidence = at
+	}
+	for field, selected := range map[string]string{"browserCloseReceiptPath": a.BrowserCloseReceiptPath, "actionEvidencePath": a.ActionEvidencePath, "finalInventoryPath": a.FinalInventoryPath, "rawNativeInventoryPath": a.RawNativeInventoryPath} {
+		if _, err := r139NativePath(a, field, selected, product, false); err != nil { return err }
+	}
+	return nil
+}
 
-	expectedOp := a.FallbackCloseOperator
-	if expectedOp == "" {
-		expectedOp = a.ActorRole
+func r139StrictBrowserTerminalClose(a r139Admission, closeRaw []byte) error {
+	receipt, err := r139NativeObject(closeRaw); if err != nil { return err }
+	if receipt["status"] != "CLOSED_EXACT_OWNED_PAGE" || receipt["browserId"] != "antigravity_native" || receipt["closeObserved"] != true || !r139NativeZeroInteger(receipt["ownedTabsFinal"]) { return errors.New("terminal close incomplete") }
+	if err := r139NativeIdentity(a, receipt); err != nil { return err }
+	project, readiness, err := r139NativeRoot(a, "browserReadinessRoot"); if err != nil { return err }
+	_, product, err := r139NativeRoot(a, "runtimeRoot"); if err != nil { return err }
+	closePath, err := r139NativePath(a, "browserCloseReceipt", a.BrowserCloseReceiptPath, product, true)
+	if err != nil { return err }
+	storedClose, err := os.ReadFile(closePath)
+	if err != nil || !bytes.Equal(storedClose, closeRaw) { return errors.New("terminal close file differs from validated bytes") }
+	reservation, err := r139NativeFile(a, "browserReceipt", a.BrowserReceiptPath, a.BrowserReceiptSHA256, project)
+	if err != nil { return err }
+	if err := r139NativeIdentity(a, reservation); err != nil { return err }
+	reservedEvidence := time.Time{}
+	for _, event := range []string{"creation", "control", "capture"} {
+		data, err := r139NativeFile(a, event, reservation[event+"EvidencePath"], reservation[event+"EvidenceSha256"], readiness)
+		if err != nil { return err }
+		if err := r139NativeIdentity(a, data); err != nil || data["event"] != event { return errors.New("original readiness evidence invalid") }
+		at, err := r139NativeTime(data["atUTC"])
+		if err != nil || !reservedEvidence.IsZero() && at.Before(reservedEvidence) { return errors.New("original readiness chronology invalid") }
+		reservedEvidence = at
 	}
-	if strings.TrimSpace(expectedOp) == "" {
-		return errors.New("operator required in admission")
+	reserved, err := r139NativeTime(reservation["reservedAtUTC"]); if err != nil { return err }
+	receiptReserved, err := r139NativeTime(receipt["reservedAtUTC"]); if err != nil { return err }
+	if !receiptReserved.Equal(reserved) { return errors.New("reservation time mismatch") }
+	if reservedEvidence.After(reserved) { return errors.New("readiness after reservation") }
+	actionAt, err := r139NativeTime(receipt["actionAtUTC"]); if err != nil { return err }
+	closed, err := r139NativeTime(receipt["closedAtUTC"]); if err != nil { return err }
+	deadline, err := time.Parse("2006-01-02T15:04:05Z", a.GrantDeadlineUTC); if err != nil { return err }
+	if reserved.After(actionAt) || actionAt.After(closed) || closed.After(deadline) { return errors.New("native chronology invalid") }
+	if receipt["actionEvidencePath"] != a.ActionEvidencePath || receipt["finalInventoryPath"] != a.FinalInventoryPath { return errors.New("future evidence path mismatch") }
+	action, err := r139NativeFile(a, "action", receipt["actionEvidencePath"], receipt["actionEvidenceSha256"], product)
+	if err != nil { return err }
+	if err := r139NativeIdentity(a, action); err != nil || action["event"] != "action_sequence" || action["atUTC"] != receipt["actionAtUTC"] { return errors.New("action evidence mismatch") }
+	rows, ok := action["actions"].([]any)
+	if !ok || len(rows) < 2 { return errors.New("action sequence missing") }
+	previous := reserved
+	for index, item := range rows {
+		row, ok := item.(map[string]any)
+		if !ok || row["pageId"] != a.PageID { return errors.New("action page invalid") }
+		kind := row["action"]
+		if kind != "control" && kind != "capture" && kind != "close" { return errors.New("action kind invalid") }
+		at, err := r139NativeTime(row["atUTC"])
+		if err != nil || at.Before(previous) || at.After(closed) { return errors.New("action sequence time invalid") }
+		if kind == "close" && (index != len(rows)-1 || !at.Equal(closed)) || kind != "close" && index == len(rows)-1 { return errors.New("post-close action or missing close") }
+		previous = at
 	}
-	if op, _ := receipt["operator"].(string); op != expectedOp {
-		return fmt.Errorf("operator mismatch: expected %s, got %s", expectedOp, op)
+	inv, err := r139NativeFile(a, "finalInventory", receipt["finalInventoryPath"], receipt["finalInventorySha256"], product)
+	if err != nil { return err }
+	if err := r139NativeIdentity(a, inv); err != nil { return err }
+	observed, err := r139NativeTime(inv["inventoryAtUTC"])
+	if err != nil || observed.Before(closed) || observed.After(deadline) { return errors.New("inventory time invalid") }
+	pages, ok := inv["pageIds"].([]any)
+	if !ok || !r139NativeZeroInteger(inv["ownedCount"]) { return errors.New("inventory list or count invalid") }
+	seen := map[string]bool{}
+	for _, page := range pages {
+		name, err := r139NativeText(page)
+		if err != nil || seen[name] || name == a.PageID { return errors.New("inventory page invalid") }
+		seen[name] = true
 	}
-
-	closedAtStr, _ := receipt["closedAtUTC"].(string)
-	if strings.TrimSpace(closedAtStr) == "" || !strings.HasSuffix(closedAtStr, "Z") {
-		return errors.New("closedAtUTC must be non-empty ISO 8601 ending in Z")
-	}
-
-	closedAt, err := time.Parse(time.RFC3339Nano, closedAtStr)
-	if err != nil {
-		closedAt, err = time.Parse(time.RFC3339, closedAtStr)
-	}
-	if err != nil {
-		return fmt.Errorf("invalid closedAtUTC: %w", err)
-	}
-
-	now := time.Now().UTC()
-	if closedAt.After(now.Add(time.Minute)) {
-		return errors.New("closedAtUTC cannot be in the future")
-	}
-
-	if strings.TrimSpace(a.GrantDeadlineUTC) == "" || !strings.HasSuffix(a.GrantDeadlineUTC, "Z") {
-		return errors.New("grantDeadlineUTC must be non-empty ISO 8601 ending in Z")
-	}
-	deadline, dErr := time.Parse(time.RFC3339Nano, a.GrantDeadlineUTC)
-	if dErr != nil {
-		deadline, dErr = time.Parse(time.RFC3339, a.GrantDeadlineUTC)
-	}
-	if dErr != nil {
-		return fmt.Errorf("invalid grantDeadlineUTC: %w", dErr)
-	}
-	if closedAt.After(deadline) {
-		return errors.New("closedAtUTC cannot be after grant deadline")
-	}
-
-	if reservedStr, ok := receipt["reservedAtUTC"].(string); ok && reservedStr != "" {
-		if !strings.HasSuffix(reservedStr, "Z") {
-			return errors.New("reservedAtUTC must end in Z")
-		}
-		reservedAt, rErr := time.Parse(time.RFC3339, reservedStr)
-		if rErr != nil {
-			reservedAt, rErr = time.Parse(time.RFC3339Nano, reservedStr)
-		}
-		if rErr != nil {
-			return fmt.Errorf("invalid reservedAtUTC: %w", rErr)
-		}
-		if reservedAt.After(closedAt) {
-			return errors.New("closedAtUTC cannot be before reservedAtUTC")
-		}
-	}
-
-	actionRel, _ := receipt["actionEvidencePath"].(string)
-	if actionRel == "" {
-		actionRel, _ = receipt["evidencePath"].(string)
-	}
-	if actionRel != "" {
-		if strings.HasPrefix(actionRel, "docs/") {
-			return errors.New("actionEvidencePath must not be in tracked docs/")
-		}
-		actionSha, _ := receipt["actionEvidenceSha256"].(string)
-		if actionSha == "" {
-			actionSha, _ = receipt["evidenceSha256"].(string)
-		}
-		if len(actionSha) != 64 {
-			return errors.New("actionEvidenceSha256 must be 64-hex string")
-		}
-		if data, readErr := os.ReadFile(actionRel); readErr == nil {
-			sum := sha256.Sum256(data)
-			if hex.EncodeToString(sum[:]) != actionSha {
-				return errors.New("action evidence sha mismatch")
-			}
-		}
-	}
-
-	invRel, _ := receipt["finalInventoryPath"].(string)
-	if invRel == "" {
-		invRel, _ = receipt["inventoryPath"].(string)
-	}
-	if invRel != "" {
-		if strings.HasPrefix(invRel, "docs/") {
-			return errors.New("finalInventoryPath must not be in tracked docs/")
-		}
-		invSha, _ := receipt["finalInventorySha256"].(string)
-		if invSha == "" {
-			invSha, _ = receipt["inventorySha256"].(string)
-		}
-		if len(invSha) != 64 {
-			return errors.New("finalInventorySha256 must be 64-hex string")
-		}
-		if data, readErr := os.ReadFile(invRel); readErr == nil {
-			sum := sha256.Sum256(data)
-			if hex.EncodeToString(sum[:]) != invSha {
-				return errors.New("final inventory sha mismatch")
-			}
-			var invData map[string]any
-			if jsonErr := json.Unmarshal(data, &invData); jsonErr == nil {
-				if openPages, ok := invData["openPages"].([]any); ok {
-					for _, p := range openPages {
-						if pStr, ok := p.(string); ok && pStr == a.PageID {
-							return errors.New("page still present in final inventory openPages")
-						}
-					}
-				}
-				if openTabs, ok := invData["openTabs"].([]any); ok {
-					for _, p := range openTabs {
-						if pStr, ok := p.(string); ok && pStr == a.PageID {
-							return errors.New("page still present in final inventory openTabs")
-						}
-					}
-				}
-				if ownedTabs, ok := invData["ownedTabsFinal"].(float64); ok && ownedTabs != 0 {
-					return errors.New("ownedTabsFinal in inventory must be 0")
-				}
-			}
-		}
-	}
-
+	if inv["rawNativeInventoryPath"] != a.RawNativeInventoryPath { return errors.New("raw inventory path mismatch") }
+	rawInventory, err := r139NativeFile(a, "rawNativeInventory", inv["rawNativeInventoryPath"], inv["rawNativeInventorySha256"], product)
+	if err != nil { return err }
+	if err := r139NativeIdentity(a, rawInventory); err != nil { return err }
+	if rawInventory["event"] != "native_inventory" || rawInventory["atUTC"] != inv["inventoryAtUTC"] || !reflect.DeepEqual(rawInventory["pageIds"], inv["pageIds"]) || rawInventory["ownedCount"] != inv["ownedCount"] { return errors.New("raw native inventory mismatch") }
 	return nil
 }
 
@@ -470,350 +334,254 @@ func TestR139PureRouteAdmission(t *testing.T) {
 	if auth || !execute || read { t.Fatal("R139 execute route") }
 }
 
-func TestR139PureBrowserReservationAdmission(t *testing.T) {
-	iabAdmission := r139Admission{
-		BrowserSupported: true,
-		BrowserTool:      "supported_CUA_IAB",
-	}
-	validIABRaw := []byte(`{
-		"status": "PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE",
-		"browserId": "iab",
-		"controlObserved": true,
-		"captureObserved": true,
-		"closeObserved": true,
-		"ownedTabsFinal": 0,
-		"protocol": "http"
-	}`)
-	if err := r139VerifyBrowserReservation(iabAdmission, validIABRaw); err != nil {
-		t.Fatalf("expected legacy IAB pass, got: %v", err)
-	}
+func r139NativeTestWrite(t *testing.T, path string, value any) string {
+	t.Helper()
+	if err := os.MkdirAll(filepath.Dir(path), 0755); err != nil { t.Fatal(err) }
+	raw, err := json.Marshal(value)
+	if err != nil { t.Fatal(err) }
+	if err := os.WriteFile(path, raw, 0644); err != nil { t.Fatal(err) }
+	sum := sha256.Sum256(raw)
+	return hex.EncodeToString(sum[:])
+}
 
-	badIABRaw := []byte(`{
-		"status": "PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE",
-		"browserId": "iab",
-		"controlObserved": true,
-		"captureObserved": true,
-		"closeObserved": true,
-		"ownedTabsFinal": 1,
-		"protocol": "http"
-	}`)
-	if err := r139VerifyBrowserReservation(iabAdmission, badIABRaw); err == nil {
-		t.Fatal("expected legacy IAB rejection for ownedTabsFinal != 0")
-	}
-
-	emptyToolAdmission := r139Admission{
-		BrowserSupported: true,
-		BrowserTool:      "",
-	}
-	if err := r139VerifyBrowserReservation(emptyToolAdmission, validIABRaw); err == nil {
-		t.Fatal("expected rejection when browserTool is empty (no empty string fallback)")
-	}
-
-	nativeAdmission := r139Admission{
-		TrancheID:               "CCMAI-RUNTIME-139",
-		BrowserSupported:        true,
-		BrowserTool:             "antigravity_native",
-		PageID:                  "page-test-123",
-		CampaignNonce:           "nonce-abc-456",
-		BrowserSessionID:        "session-xyz-789",
-		FallbackCloseOperator:   "Owner",
-		BrowserCloseReceiptPath: ".cvf/runtime/test/close.json",
-	}
-	validNativeRaw := []byte(`{
-		"status": "RESERVED_NATIVE_PAGE_CONTROL_CAPTURE",
-		"browserId": "antigravity_native",
-		"exclusiveReservation": true,
-		"controlObserved": true,
-		"captureObserved": true,
-		"closeObserved": false,
-		"protocol": "http",
-		"closeMode": "operator_fallback",
-		"pageId": "page-test-123",
-		"campaignNonce": "nonce-abc-456",
-		"browserSessionId": "session-xyz-789",
-		"trancheId": "CCMAI-RUNTIME-139",
-		"operator": "Owner",
-		"reservedAtUTC": "2026-10-23T12:00:00Z"
-	}`)
-	if err := r139VerifyBrowserReservation(nativeAdmission, validNativeRaw); err != nil {
-		t.Fatalf("expected native reservation pass, got: %v", err)
-	}
-
-	finalCloseAsReservation := []byte(`{
-		"status": "CLOSED_EXACT_OWNED_PAGE",
-		"browserId": "antigravity_native",
-		"exclusiveReservation": true,
-		"controlObserved": true,
-		"captureObserved": true,
-		"closeObserved": true,
-		"ownedTabsFinal": 0,
-		"protocol": "http",
-		"closeMode": "operator_fallback",
-		"pageId": "page-test-123",
-		"campaignNonce": "nonce-abc-456",
-		"browserSessionId": "session-xyz-789",
-		"operator": "Owner"
-	}`)
-	if err := r139VerifyBrowserReservation(nativeAdmission, finalCloseAsReservation); err == nil {
-		t.Fatal("expected rejection of final-close receipt as prefixture reservation")
-	}
-
-	earlyCloseRaw := []byte(`{
-		"status": "RESERVED_NATIVE_PAGE_CONTROL_CAPTURE",
-		"browserId": "antigravity_native",
-		"exclusiveReservation": true,
-		"controlObserved": true,
-		"captureObserved": true,
-		"closeObserved": true,
-		"protocol": "http",
-		"closeMode": "operator_fallback",
-		"pageId": "page-test-123",
-		"campaignNonce": "nonce-abc-456",
-		"browserSessionId": "session-xyz-789",
-		"operator": "Owner"
-	}`)
-	if err := r139VerifyBrowserReservation(nativeAdmission, earlyCloseRaw); err == nil {
-		t.Fatal("expected rejection of early closeObserved=true in reservation")
-	}
-
-	for _, tc := range []struct {
-		name string
-		raw  []byte
-	}{
-		{"wrong-trancheId", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","trancheId":"wrong-tranche","operator":"Owner"}`)},
-		{"wrong-pageId", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"wrong-page","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","trancheId":"CCMAI-RUNTIME-139","operator":"Owner"}`)},
-		{"wrong-nonce", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"wrong-nonce","browserSessionId":"session-xyz-789","trancheId":"CCMAI-RUNTIME-139","operator":"Owner"}`)},
-		{"wrong-session", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"wrong-session","trancheId":"CCMAI-RUNTIME-139","operator":"Owner"}`)},
-		{"wrong-operator", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","trancheId":"CCMAI-RUNTIME-139","operator":"wrong-operator"}`)},
-		{"unsupported-protocol", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"ftp","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","trancheId":"CCMAI-RUNTIME-139","operator":"Owner"}`)},
-		{"invalid-closeMode", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"invalid_mode","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","trancheId":"CCMAI-RUNTIME-139","operator":"Owner"}`)},
-		{"missing-exclusive", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":false,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","trancheId":"CCMAI-RUNTIME-139","operator":"Owner"}`)},
-		{"future-reservation-time", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","trancheId":"CCMAI-RUNTIME-139","operator":"Owner","reservedAtUTC":"2099-01-01T00:00:00Z"}`)},
-	} {
-		if err := r139VerifyBrowserReservation(nativeAdmission, tc.raw); err == nil {
-			t.Fatalf("expected error for %s, got nil", tc.name)
-		}
-	}
-
-	missingClosePathAdmission := nativeAdmission
-	missingClosePathAdmission.BrowserCloseReceiptPath = ""
-	if err := r139VerifyBrowserReservation(missingClosePathAdmission, validNativeRaw); err == nil {
-		t.Fatal("expected rejection when admission lacks browserCloseReceiptPath")
-	}
-
-	docsClosePathAdmission := nativeAdmission
-	docsClosePathAdmission.BrowserCloseReceiptPath = "docs/reviews/probes/close.json"
-	if err := r139VerifyBrowserReservation(docsClosePathAdmission, validNativeRaw); err == nil {
-		t.Fatal("expected rejection when browserCloseReceiptPath is under tracked docs/")
-	}
-
-	unsupportedAdmission := nativeAdmission
-	unsupportedAdmission.BrowserSupported = false
-	if err := r139VerifyBrowserReservation(unsupportedAdmission, validNativeRaw); err == nil {
-		t.Fatal("expected rejection when browserSupported is false")
-	}
-
-	unknownToolAdmission := nativeAdmission
-	unknownToolAdmission.BrowserTool = "unknown_tool"
-	if err := r139VerifyBrowserReservation(unknownToolAdmission, validNativeRaw); err == nil {
-		t.Fatal("expected rejection for unsupported browserTool")
+func r139NativeTestIdentity(a r139Admission) map[string]any {
+	return map[string]any{
+		"nativeContractId": a.NativeContractID, "trancheId": a.TrancheID,
+		"campaignNonce": a.CampaignNonce, "pageId": a.PageID,
+		"browserSessionId": a.BrowserSessionID, "operator": a.FallbackCloseOperator,
+		"closeMode": a.CloseMode,
 	}
 }
 
-func TestR139PureBrowserTerminalClose(t *testing.T) {
-	tempDir := t.TempDir()
-	actionFile := filepath.Join(tempDir, "action.json")
-	actionContent := []byte(`{"action":"click","pageId":"page-test-123"}`)
-	if err := os.WriteFile(actionFile, actionContent, 0644); err != nil {
-		t.Fatal(err)
+func r139NativeTestFixture(t *testing.T) (r139Admission, map[string]any, func(int) string) {
+	t.Helper()
+	project := t.TempDir()
+	readiness := filepath.Join(project, ".cvf", "runtime", "readiness")
+	product := filepath.Join(project, ".cvf", "runtime", "product")
+	if err := os.MkdirAll(readiness, 0755); err != nil { t.Fatal(err) }
+	now := time.Now().UTC().Truncate(time.Second)
+	stamp := func(offset int) string { return now.Add(time.Duration(offset) * time.Second).Format(time.RFC3339) }
+	a := r139Admission{
+		NativeContractID: "r139-native-v1", TrancheID: "CCMAI-RUNTIME-139",
+		CampaignNonce: "nonce-456", PageID: "page-123",
+		BrowserSessionID: "session-789", Operator: "Owner", FallbackCloseOperator: "Owner",
+		CloseMode: "operator_fallback", BrowserSupported: true,
+		BrowserTool: "antigravity_native", BrowserReadinessRoot: ".cvf/runtime/readiness",
+		RuntimeRoot: product, BrowserReceiptPath: ".cvf/runtime/readiness/reservation.json",
+		BrowserCloseReceiptPath: ".cvf/runtime/product/close.json",
+		ActionEvidencePath: ".cvf/runtime/product/action.json",
+		FinalInventoryPath: ".cvf/runtime/product/inventory.json",
+		RawNativeInventoryPath: ".cvf/runtime/product/raw_inventory.json",
+		GrantDeadlineUTC: stamp(3600), nativeProjectRoot: project,
 	}
-	actionShaBytes := sha256.Sum256(actionContent)
-	actionSha := hex.EncodeToString(actionShaBytes[:])
-
-	invFile := filepath.Join(tempDir, "inventory.json")
-	invContent := []byte(`{"openPages":[],"openTabs":[],"ownedTabsFinal":0}`)
-	if err := os.WriteFile(invFile, invContent, 0644); err != nil {
-		t.Fatal(err)
+	reservation := r139NativeTestIdentity(a)
+	reservation["status"] = "RESERVED_NATIVE_PAGE_CONTROL_CAPTURE"
+	reservation["browserId"] = "antigravity_native"
+	reservation["exclusiveReservation"] = true
+	reservation["controlObserved"] = true
+	reservation["captureObserved"] = true
+	reservation["closeObserved"] = false
+	reservation["protocol"] = "http"
+	reservation["reservedAtUTC"] = stamp(-15)
+	for index, event := range []string{"creation", "control", "capture"} {
+		evidence := r139NativeTestIdentity(a)
+		evidence["event"] = event
+		evidence["atUTC"] = stamp(-30 + index*5)
+		rel := ".cvf/runtime/readiness/" + event + ".json"
+		reservation[event+"EvidencePath"] = rel
+		reservation[event+"EvidenceSha256"] = r139NativeTestWrite(t, filepath.Join(readiness, event+".json"), evidence)
 	}
-	invShaBytes := sha256.Sum256(invContent)
-	invSha := hex.EncodeToString(invShaBytes[:])
+	a.BrowserReceiptSHA256 = r139NativeTestWrite(t, filepath.Join(readiness, "reservation.json"), reservation)
+	return a, reservation, stamp
+}
 
-	deadline := time.Now().UTC().Add(2 * time.Hour).Format(time.RFC3339)
-	nativeAdmission := r139Admission{
-		TrancheID:             "CCMAI-RUNTIME-139",
-		BrowserSupported:      true,
-		BrowserTool:           "antigravity_native",
-		PageID:                "page-test-123",
-		CampaignNonce:         "nonce-abc-456",
-		BrowserSessionID:      "session-xyz-789",
-		FallbackCloseOperator: "Owner",
-		GrantDeadlineUTC:      deadline,
+func r139NativeTestTerminal(t *testing.T, a r139Admission, reservation map[string]any, stamp func(int) string) map[string]any {
+	t.Helper()
+	product := a.RuntimeRoot
+	raw := r139NativeTestIdentity(a)
+	raw["event"] = "native_inventory"
+	raw["atUTC"] = stamp(-4)
+	raw["pageIds"] = []string{}
+	raw["ownedCount"] = 0
+	rawSHA := r139NativeTestWrite(t, filepath.Join(product, "raw_inventory.json"), raw)
+	action := r139NativeTestIdentity(a)
+	action["event"] = "action_sequence"
+	action["atUTC"] = stamp(-8)
+	action["actions"] = []map[string]any{
+		{"pageId": a.PageID, "action": "control", "atUTC": stamp(-10)},
+		{"pageId": a.PageID, "action": "close", "atUTC": stamp(-5)},
 	}
+	actionSHA := r139NativeTestWrite(t, filepath.Join(product, "action.json"), action)
+	inv := r139NativeTestIdentity(a)
+	inv["inventoryAtUTC"] = stamp(-4)
+	inv["pageIds"] = []string{}
+	inv["ownedCount"] = 0
+	inv["rawNativeInventoryPath"] = a.RawNativeInventoryPath
+	inv["rawNativeInventorySha256"] = rawSHA
+	invSHA := r139NativeTestWrite(t, filepath.Join(product, "inventory.json"), inv)
+	close := r139NativeTestIdentity(a)
+	close["status"] = "CLOSED_EXACT_OWNED_PAGE"
+	close["browserId"] = "antigravity_native"
+	close["closeObserved"] = true
+	close["ownedTabsFinal"] = 0
+	close["reservedAtUTC"] = reservation["reservedAtUTC"]
+	close["actionAtUTC"] = stamp(-8)
+	close["closedAtUTC"] = stamp(-5)
+	close["actionEvidencePath"] = a.ActionEvidencePath
+	close["actionEvidenceSha256"] = actionSHA
+	close["finalInventoryPath"] = a.FinalInventoryPath
+	close["finalInventorySha256"] = invSHA
+	r139NativeTestWrite(t, filepath.Join(product, "close.json"), close)
+	return close
+}
 
-	validCloseRaw := []byte(`{
-		"status": "CLOSED_EXACT_OWNED_PAGE",
-		"browserId": "antigravity_native",
-		"closeObserved": true,
-		"ownedTabsFinal": 0,
-		"trancheId": "CCMAI-RUNTIME-139",
-		"pageId": "page-test-123",
-		"campaignNonce": "nonce-abc-456",
-		"browserSessionId": "session-xyz-789",
-		"closeMode": "operator_fallback",
-		"operator": "Owner",
-		"closedAtUTC": "` + time.Now().UTC().Format(time.RFC3339) + `",
-		"actionEvidencePath": ` + fmt.Sprintf("%q", filepath.ToSlash(actionFile)) + `,
-		"actionEvidenceSha256": "` + actionSha + `",
-		"finalInventoryPath": ` + fmt.Sprintf("%q", filepath.ToSlash(invFile)) + `,
-		"finalInventorySha256": "` + invSha + `"
-	}`)
-
-	if err := r139VerifyBrowserTerminalClose(nativeAdmission, validCloseRaw); err != nil {
-		t.Fatalf("expected terminal close pass, got: %v", err)
-	}
-
-	notClosedRaw := []byte(`{
-		"status": "CLOSED_EXACT_OWNED_PAGE",
-		"browserId": "antigravity_native",
-		"closeObserved": false,
-		"ownedTabsFinal": 0,
-		"trancheId": "CCMAI-RUNTIME-139",
-		"pageId": "page-test-123",
-		"campaignNonce": "nonce-abc-456",
-		"browserSessionId": "session-xyz-789",
-		"closeMode": "operator_fallback",
-		"operator": "Owner",
-		"closedAtUTC": "` + time.Now().UTC().Format(time.RFC3339) + `"
-	}`)
-	if err := r139VerifyBrowserTerminalClose(nativeAdmission, notClosedRaw); err == nil {
-		t.Fatal("expected rejection when closeObserved is false")
-	}
-
-	tabsRemainingRaw := []byte(`{
-		"status": "CLOSED_EXACT_OWNED_PAGE",
-		"browserId": "antigravity_native",
-		"closeObserved": true,
-		"ownedTabsFinal": 1,
-		"trancheId": "CCMAI-RUNTIME-139",
-		"pageId": "page-test-123",
-		"campaignNonce": "nonce-abc-456",
-		"browserSessionId": "session-xyz-789",
-		"closeMode": "operator_fallback",
-		"operator": "Owner",
-		"closedAtUTC": "` + time.Now().UTC().Format(time.RFC3339) + `"
-	}`)
-	if err := r139VerifyBrowserTerminalClose(nativeAdmission, tabsRemainingRaw); err == nil {
-		t.Fatal("expected rejection when ownedTabsFinal != 0")
-	}
-
-	wrongStatusRaw := []byte(`{
-		"status": "RESERVED_NATIVE_PAGE_CONTROL_CAPTURE",
-		"browserId": "antigravity_native",
-		"closeObserved": true,
-		"ownedTabsFinal": 0,
-		"trancheId": "CCMAI-RUNTIME-139",
-		"pageId": "page-test-123",
-		"campaignNonce": "nonce-abc-456",
-		"browserSessionId": "session-xyz-789",
-		"closeMode": "operator_fallback",
-		"operator": "Owner",
-		"closedAtUTC": "` + time.Now().UTC().Format(time.RFC3339) + `"
-	}`)
-	if err := r139VerifyBrowserTerminalClose(nativeAdmission, wrongStatusRaw); err == nil {
-		t.Fatal("expected rejection for non-closed status")
-	}
-
-	for _, tc := range []struct {
-		name string
-		raw  []byte
-	}{
-		{"wrong-trancheId", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"wrong-tranche","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
-		{"wrong-pageId", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"CCMAI-RUNTIME-139","pageId":"wrong","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
-		{"wrong-nonce", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"CCMAI-RUNTIME-139","pageId":"page-test-123","campaignNonce":"wrong","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
-		{"wrong-session", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"CCMAI-RUNTIME-139","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"wrong","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
-		{"wrong-operator", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"CCMAI-RUNTIME-139","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"wrong","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
-		{"invalid-closeMode", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"CCMAI-RUNTIME-139","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"bad","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
-		{"wrong-action-sha", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"CCMAI-RUNTIME-139","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `","actionEvidencePath":` + fmt.Sprintf("%q", filepath.ToSlash(actionFile)) + `,"actionEvidenceSha256":"0000000000000000000000000000000000000000000000000000000000000000"}`)},
-		{"docs-action-path", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"CCMAI-RUNTIME-139","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `","actionEvidencePath":"docs/action.json","actionEvidenceSha256":"` + actionSha + `"}`)},
+func TestR139PureBrowserReservationAdmission(t *testing.T) {
+	iab := r139Admission{BrowserSupported: true, BrowserTool: "supported_CUA_IAB"}
+	validIAB := []byte("{\"status\":\"PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE\",\"browserId\":\"iab\",\"controlObserved\":true,\"captureObserved\":true,\"closeObserved\":true,\"ownedTabsFinal\":0,\"protocol\":\"http\"}")
+	if err := r139VerifyBrowserReservation(iab, validIAB); err != nil { t.Fatalf("legacy IAB parity: %v", err) }
+	for _, raw := range [][]byte{
+		[]byte("{\"status\":\"PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE\",\"browserId\":\"iab\",\"controlObserved\":true,\"captureObserved\":true,\"closeObserved\":true,\"ownedTabsFinal\":false,\"protocol\":\"http\"}"),
+		[]byte("{\"status\":\"PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE\",\"browserId\":\"iab\",\"controlObserved\":true,\"captureObserved\":true,\"closeObserved\":true,\"ownedTabsFinal\":0.5,\"protocol\":\"http\"}"),
+		[]byte("{\"status\":\"PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE\",\"browserId\":\"iab\",\"controlObserved\":true,\"captureObserved\":true,\"closeObserved\":true,\"ownedTabsFinal\":0.0,\"protocol\":\"http\"}"),
+		[]byte("{\"status\":\"PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE\",\"browserId\":\"iab\",\"controlObserved\":true,\"captureObserved\":true,\"closeObserved\":true,\"ownedTabsFinal\":0e0,\"protocol\":\"http\"}"),
 	} {
-		if err := r139VerifyBrowserTerminalClose(nativeAdmission, tc.raw); err == nil {
-			t.Fatalf("expected error for %s, got nil", tc.name)
+		if err := r139VerifyBrowserReservation(iab, raw); err == nil { t.Fatal("IAB noninteger count accepted") }
+	}
+	a, reservation, _ := r139NativeTestFixture(t)
+	raw, _ := json.Marshal(reservation)
+	if err := r139VerifyBrowserReservation(a, raw); err != nil { t.Fatalf("complete reservation rejected: %v", err) }
+	tracked := a
+	tracked.BrowserReceiptPath = "docs/reviews/probes/reservation.json"
+	tracked.BrowserReceiptSHA256 = r139NativeTestWrite(t, filepath.Join(a.nativeProjectRoot, filepath.FromSlash(tracked.BrowserReceiptPath)), reservation)
+	if err := r139VerifyBrowserReservation(tracked, raw); err != nil { t.Fatalf("tracked readiness receipt rejected: %v", err) }
+	for name, changed := range map[string]any{
+		"missing_contract": nil, "wrong_mode": "api", "wrong_type_time": false,
+	} {
+		copy := map[string]any{}
+		for key, value := range reservation { copy[key] = value }
+		switch name {
+		case "missing_contract": copy["nativeContractId"] = changed
+		case "wrong_mode": copy["closeMode"] = changed
+		case "wrong_type_time": copy["reservedAtUTC"] = changed
 		}
+		bad, _ := json.Marshal(copy)
+		modified := a
+		modified.BrowserReceiptSHA256 = r139NativeTestWrite(t, filepath.Join(a.nativeProjectRoot, filepath.FromSlash(a.BrowserReceiptPath)), copy)
+		if err := r139VerifyBrowserReservation(modified, bad); err == nil { t.Fatalf("%s accepted", name) }
 	}
+	for _, field := range []string{"creationEvidencePath", "controlEvidenceSha256", "captureEvidencePath"} {
+		copy := map[string]any{}
+		for key, value := range reservation { copy[key] = value }
+		delete(copy, field)
+		bad, _ := json.Marshal(copy)
+		modified := a
+		modified.BrowserReceiptSHA256 = r139NativeTestWrite(t, filepath.Join(a.nativeProjectRoot, filepath.FromSlash(a.BrowserReceiptPath)), copy)
+		if err := r139VerifyBrowserReservation(modified, bad); err == nil { t.Fatalf("missing %s accepted", field) }
+	}
+	for _, field := range []string{"trancheId", "campaignNonce", "pageId", "browserSessionId", "operator"} {
+		copy := map[string]any{}
+		for key, value := range reservation { copy[key] = value }
+		copy[field] = "wrong"
+		bad, _ := json.Marshal(copy)
+		modified := a
+		modified.BrowserReceiptSHA256 = r139NativeTestWrite(t, filepath.Join(a.nativeProjectRoot, filepath.FromSlash(a.BrowserReceiptPath)), copy)
+		if err := r139VerifyBrowserReservation(modified, bad); err == nil { t.Fatalf("wrong %s accepted", field) }
+	}
+	r139NativeTestWrite(t, filepath.Join(a.nativeProjectRoot, filepath.FromSlash(a.BrowserReceiptPath)), reservation)
+	badRoot := a
+	badRoot.BrowserReadinessRoot = ".cvf/runtime/../escape"
+	if err := r139VerifyBrowserReservation(badRoot, raw); err == nil { t.Fatal("root traversal accepted") }
+}
 
-	futureTime := time.Now().UTC().Add(10 * time.Minute).Format(time.RFC3339)
-	futureRaw := []byte(`{
-		"status": "CLOSED_EXACT_OWNED_PAGE",
-		"browserId": "antigravity_native",
-		"closeObserved": true,
-		"ownedTabsFinal": 0,
-		"trancheId": "CCMAI-RUNTIME-139",
-		"pageId": "page-test-123",
-		"campaignNonce": "nonce-abc-456",
-		"browserSessionId": "session-xyz-789",
-		"closeMode": "operator_fallback",
-		"operator": "Owner",
-		"closedAtUTC": "` + futureTime + `"
-	}`)
-	if err := r139VerifyBrowserTerminalClose(nativeAdmission, futureRaw); err == nil {
-		t.Fatal("expected rejection for future timestamp")
+func TestR139PureBrowserTerminalClose(t *testing.T) {
+	a, reservation, stamp := r139NativeTestFixture(t)
+	a.BrowserReceiptPath = "docs/reviews/probes/reservation.json"
+	a.BrowserReceiptSHA256 = r139NativeTestWrite(t, filepath.Join(a.nativeProjectRoot, filepath.FromSlash(a.BrowserReceiptPath)), reservation)
+	rawReservation, _ := json.Marshal(reservation)
+	if err := r139VerifyBrowserReservation(a, rawReservation); err != nil { t.Fatal(err) }
+	close := r139NativeTestTerminal(t, a, reservation, stamp)
+	raw, _ := json.Marshal(close)
+	if err := r139VerifyBrowserTerminalClose(a, raw); err != nil { t.Fatalf("complete terminal rejected: %v", err) }
+	for _, spelling := range []string{"0.0", "0e0"} {
+		fractional := bytes.Replace(raw, []byte("\"ownedTabsFinal\":0"), []byte("\"ownedTabsFinal\":"+spelling), 1)
+		if bytes.Equal(fractional, raw) { t.Fatal("terminal numeric fixture replacement missing") }
+		if err := os.WriteFile(filepath.Join(a.RuntimeRoot, "close.json"), fractional, 0644); err != nil { t.Fatal(err) }
+		if err := r139VerifyBrowserTerminalClose(a, fractional); err == nil { t.Fatalf("terminal count %s accepted", spelling) }
 	}
-
-	pastDeadlineAdmission := nativeAdmission
-	pastDeadlineAdmission.GrantDeadlineUTC = time.Now().UTC().Add(-10 * time.Minute).Format(time.RFC3339)
-	if err := r139VerifyBrowserTerminalClose(pastDeadlineAdmission, validCloseRaw); err == nil {
-		t.Fatal("expected rejection when closedAtUTC is after grantDeadlineUTC")
+	r139NativeTestWrite(t, filepath.Join(a.RuntimeRoot, "close.json"), close)
+	for name, changed := range map[string]any{
+		"missing_action_time": nil, "future_close": stamp(60),
+		"wrong_inventory_sha": strings.Repeat("x", 64), "wrong_mode": "api",
+		"false_count": false,
+	} {
+		copy := map[string]any{}
+		for key, value := range close { copy[key] = value }
+		switch name {
+		case "missing_action_time": copy["actionAtUTC"] = changed
+		case "future_close": copy["closedAtUTC"] = changed
+		case "wrong_inventory_sha": copy["finalInventorySha256"] = changed
+		case "wrong_mode": copy["closeMode"] = changed
+		case "false_count": copy["ownedTabsFinal"] = changed
+		}
+		bad, _ := json.Marshal(copy)
+		r139NativeTestWrite(t, filepath.Join(a.RuntimeRoot, "close.json"), copy)
+		if err := r139VerifyBrowserTerminalClose(a, bad); err == nil { t.Fatalf("%s accepted", name) }
 	}
-
-	missingDeadlineAdmission := nativeAdmission
-	missingDeadlineAdmission.GrantDeadlineUTC = ""
-	if err := r139VerifyBrowserTerminalClose(missingDeadlineAdmission, validCloseRaw); err == nil {
-		t.Fatal("expected rejection when grantDeadlineUTC is missing in admission")
+	for _, field := range []string{"trancheId", "campaignNonce", "pageId", "browserSessionId", "operator", "nativeContractId"} {
+		copy := map[string]any{}
+		for key, value := range close { copy[key] = value }
+		copy[field] = "wrong"
+		bad, _ := json.Marshal(copy)
+		r139NativeTestWrite(t, filepath.Join(a.RuntimeRoot, "close.json"), copy)
+		if err := r139VerifyBrowserTerminalClose(a, bad); err == nil { t.Fatalf("wrong terminal %s accepted", field) }
 	}
-
-	badTimeRaw := []byte(`{
-		"status": "CLOSED_EXACT_OWNED_PAGE",
-		"browserId": "antigravity_native",
-		"closeObserved": true,
-		"ownedTabsFinal": 0,
-		"trancheId": "CCMAI-RUNTIME-139",
-		"pageId": "page-test-123",
-		"campaignNonce": "nonce-abc-456",
-		"browserSessionId": "session-xyz-789",
-		"closeMode": "operator_fallback",
-		"operator": "Owner",
-		"closedAtUTC": "invalid-time"
-	}`)
-	if err := r139VerifyBrowserTerminalClose(nativeAdmission, badTimeRaw); err == nil {
-		t.Fatal("expected rejection for invalid closedAtUTC")
+	r139NativeTestWrite(t, filepath.Join(a.RuntimeRoot, "close.json"), close)
+	inventoryPath := filepath.Join(a.RuntimeRoot, "inventory.json")
+	inventory, err := r139NativeObject(func() []byte { raw, readErr := os.ReadFile(inventoryPath); if readErr != nil { t.Fatal(readErr) }; return raw }())
+	if err != nil { t.Fatal(err) }
+	for _, spelling := range []string{"0.0", "0e0"} {
+		original, readErr := os.ReadFile(inventoryPath); if readErr != nil { t.Fatal(readErr) }
+		fractional := bytes.Replace(original, []byte("\"ownedCount\":0"), []byte("\"ownedCount\":"+spelling), 1)
+		if bytes.Equal(fractional, original) { t.Fatal("inventory numeric fixture replacement missing") }
+		if err := os.WriteFile(inventoryPath, fractional, 0644); err != nil { t.Fatal(err) }
+		sum := sha256.Sum256(fractional)
+		mutated := map[string]any{}
+		for key, value := range close { mutated[key] = value }
+		mutated["finalInventorySha256"] = hex.EncodeToString(sum[:])
+		bad, _ := json.Marshal(mutated)
+		r139NativeTestWrite(t, filepath.Join(a.RuntimeRoot, "close.json"), mutated)
+		if err := r139VerifyBrowserTerminalClose(a, bad); err == nil { t.Fatalf("inventory count %s accepted", spelling) }
+		if err := os.WriteFile(inventoryPath, original, 0644); err != nil { t.Fatal(err) }
 	}
-
-	dirtyInvFile := filepath.Join(tempDir, "dirty_inv.json")
-	dirtyInvContent := []byte(`{"openPages":["page-test-123"],"openTabs":[],"ownedTabsFinal":0}`)
-	if err := os.WriteFile(dirtyInvFile, dirtyInvContent, 0644); err != nil {
-		t.Fatal(err)
+	r139NativeTestWrite(t, filepath.Join(a.RuntimeRoot, "close.json"), close)
+	for name, changed := range map[string]any{"missing_pages": nil, "page_open": []string{a.PageID}, "wrong_count": false, "missing_time": nil} {
+		copy := map[string]any{}
+		for key, value := range inventory { copy[key] = value }
+		switch name {
+		case "missing_pages", "page_open": copy["pageIds"] = changed
+		case "wrong_count": copy["ownedCount"] = changed
+		case "missing_time": copy["inventoryAtUTC"] = changed
+		}
+		sha := r139NativeTestWrite(t, inventoryPath, copy)
+		mutated := map[string]any{}
+		for key, value := range close { mutated[key] = value }
+		mutated["finalInventorySha256"] = sha
+		bad, _ := json.Marshal(mutated)
+		r139NativeTestWrite(t, filepath.Join(a.RuntimeRoot, "close.json"), mutated)
+		if err := r139VerifyBrowserTerminalClose(a, bad); err == nil { t.Fatalf("%s inventory accepted", name) }
 	}
-	dirtyInvShaBytes := sha256.Sum256(dirtyInvContent)
-	dirtyInvSha := hex.EncodeToString(dirtyInvShaBytes[:])
-
-	dirtyInvRaw := []byte(`{
-		"status": "CLOSED_EXACT_OWNED_PAGE",
-		"browserId": "antigravity_native",
-		"closeObserved": true,
-		"ownedTabsFinal": 0,
-		"trancheId": "CCMAI-RUNTIME-139",
-		"pageId": "page-test-123",
-		"campaignNonce": "nonce-abc-456",
-		"browserSessionId": "session-xyz-789",
-		"closeMode": "operator_fallback",
-		"operator": "Owner",
-		"closedAtUTC": "` + time.Now().UTC().Format(time.RFC3339) + `",
-		"finalInventoryPath": ` + fmt.Sprintf("%q", filepath.ToSlash(dirtyInvFile)) + `,
-		"finalInventorySha256": "` + dirtyInvSha + `"
-	}`)
-	if err := r139VerifyBrowserTerminalClose(nativeAdmission, dirtyInvRaw); err == nil {
-		t.Fatal("expected rejection when target page is still present in inventory")
-	}
+	r139NativeTestWrite(t, inventoryPath, inventory)
+	actionPath := filepath.Join(a.RuntimeRoot, "action.json")
+	actionRaw, err := os.ReadFile(actionPath); if err != nil { t.Fatal(err) }
+	action, err := r139NativeObject(actionRaw); if err != nil { t.Fatal(err) }
+	action["actions"] = append(action["actions"].([]any), map[string]any{"pageId": a.PageID, "action": "control", "atUTC": stamp(-4)})
+	sha := r139NativeTestWrite(t, actionPath, action)
+	mutated := map[string]any{}
+	for key, value := range close { mutated[key] = value }
+	mutated["actionEvidenceSha256"] = sha
+	bad, _ := json.Marshal(mutated)
+	r139NativeTestWrite(t, filepath.Join(a.RuntimeRoot, "close.json"), mutated)
+	if err := r139VerifyBrowserTerminalClose(a, bad); err == nil { t.Fatal("post-close action accepted") }
 }
 
 func r139Admit(t *testing.T) (r139Admission, string) {

@@ -3,9 +3,9 @@
   "activePhase": "REVIEW",
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139: Owner assigns internal subagent /root/r139_internal_contract_repair (Sol Medium) to the existing ONE C1-C4 source correction; Antigravity reserved for browser work only. Root commits actor-only assignment then releases supplementary source BUILD on exact dispatch HEAD; worker edits three admitted files once, returns once, runs ZERO source checks and never commits. Root independent static acceptance precedes existing unused Python1 -> offlineCompile1 -> audited pureGo1. No new tranche/order/check/effect slots or reset; old failures and spent caps retained. Aggregate REVIEW/CHANGES_REQUIRED; Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION. G0 readiness and G1-G3/E05/E06/fullM3 open; future campaign/API1/USD1/Owner exact-page close conditional, not executable; Facebook/ZaloOA parked and old-tab/protected/provider UNKNOWN retained.",
-  "activeRole": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; internal Sol Medium REPAIR_WORKER for C1-C4 only, Antigravity browser-only",
-  "updatedAt": "2026-10-23",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 C1-C4 internal source correction ACCEPTED_BOUNDED_SOURCE_AND_SOFTWARE_CHECKS: Python37/37, offlineCompilePASS179.418s, pureGo9/9, all existing Root slots1/1 consumed with original wait/exit0 and source pins unchanged. Root review binds actual current hashes and qualifies crossed C2 handback; old worker report preserved with stale hashes/diff. Internal agents handle non-browser work; Antigravity browser-only. Continue ONE existing M3-05/M3-08 G0->G1->G2->G3 order: consolidate actual operational pins/ownership/browser evidence and committed runtime supplement before activating existing conditional campaign/API1/USD1/Owner exact-page close envelope. No new tranche/check/retry/reset or effects. Aggregate REVIEW/CHANGES_REQUIRED, Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; G0 aggregate/G1-G3/E05/E06/fullM3 OPEN; old spent/uncertain provider/protected/old-tab UNKNOWN retained, Facebook/ZaloOA parked.",
+  "activeRole": "Root independent source REVIEWER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD after internal source acceptance; Sol Medium worker stopped, Antigravity reserved for browser segment",
+  "updatedAt": "2026-10-24",
   "schemaVersion": "1.0",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
   "x-r107DiagnosisProposal": "docs/reviews/R107_REOPEN_DIAGNOSIS_AND_R108_PROPOSAL_2026-10-16.md",
@@ -1089,20 +1089,48 @@
   },
   "x-r139InternalWorkerAssignment20261023": {
     "date": "2026-10-23",
-    "status": "ASSIGNED_PENDING_COMMITTED_BUILD_RELEASE",
+    "status": "RETURNED_INDEPENDENTLY_ACCEPTED_SOURCE_ONLY",
     "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-WORKER-ASSIGNMENT-ADMISSION.json",
     "authoritySha256": "5b5d1dc4af4c669255867d3334c75a145587ac923f35cefb4bc043a1654d3a9b",
     "worker": "/root/r139_internal_contract_repair",
     "ownerInstruction": "bạn tạo sub agent xử lý đi, ko giao cho antigravity nữa, chỉ khi nào cần chạy browser mới giao",
     "sourceStage": "SUPPLEMENTARY_BUILD_AFTER_COMMITTED_DISPATCH",
-    "correctionRoundsUsed": 0,
+    "correctionRoundsUsed": 1,
     "newSlots": 0,
     "checksUsed": {
-      "Python": 0,
-      "compile": 0,
-      "pureGo": 0
+      "Python": 1,
+      "compile": 1,
+      "pureGo": 1
     },
     "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
     "runtimeExecutableNow": false
+  },
+  "x-r139InternalSourceReview20261024": {
+    "date": "2026-10-24",
+    "status": "ACCEPTED_BOUNDED_SOURCE_AND_SOFTWARE_CHECKS",
+    "review": "docs/reviews/R139_INTERNAL_CONTRACT_CORRECTION_ROOT_REVIEW_2026-10-24.md",
+    "workerReturn": "docs/reviews/R139_INTERNAL_CONTRACT_CORRECTION_RETURN_2026-10-23.md",
+    "workerReturnQualification": "Frozen report retained; subsequent Root-issued C2 timing crossed handback. Root actual hashes/diff and independent checks bind accepted source.",
+    "sourceSha256": {
+      "scripts/r139_execution_supervisor.py": "160ffd51ac6d82ae906b9070f16b06f0f703eed31d2360aab14577bbf4c79de1",
+      "scripts/tests/test_r139_execution_supervisor.py": "e28546a7cc8ebde7c4d9482097e015662b1b87eb83d0dedf775914360764a9f9",
+      "backend/api/handlers/intervention_execution_browser_test.go": "25085f86bcce25e3bbf1cf8841c8c5e72284aec0f5adf0675038f81d435852b6"
+    },
+    "pythonPass": 37,
+    "pureGoPass": 9,
+    "compileSeconds": 179.418,
+    "binarySha256": "a1027ac676eb68527c636781432a1cd22129d70f1e6ac968f0843e87bc1df825",
+    "existingRootChecksUsed": {
+      "Python": 1,
+      "compile": 1,
+      "pureGo": 1
+    },
+    "correctionRoundsUsed": 1,
+    "workerSourceChecks": 0,
+    "newSlots": 0,
+    "runtimeExecutableNow": false,
+    "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+    "routing": "Internal agents non-browser; Antigravity browser-only; Root independent review/commit",
+    "sourceCommitBinding": "Actual accepted blobs and review are committed together by Root; exact material commit reported in Root final message."
   }
 }

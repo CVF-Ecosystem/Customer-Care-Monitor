@@ -1,0 +1,16 @@
+{
+  "status": "CLEARED_EXACT_PURE_SELECTOR",
+  "atUTC": "2026-10-23T17:11:09.451996+00:00",
+  "reviewer": "Root independent source REVIEWER",
+  "sourceSha256": {
+    "scripts/r139_execution_supervisor.py": "160ffd51ac6d82ae906b9070f16b06f0f703eed31d2360aab14577bbf4c79de1",
+    "scripts/tests/test_r139_execution_supervisor.py": "e28546a7cc8ebde7c4d9482097e015662b1b87eb83d0dedf775914360764a9f9",
+    "backend/api/handlers/intervention_execution_browser_test.go": "25085f86bcce25e3bbf1cf8841c8c5e72284aec0f5adf0675038f81d435852b6"
+  },
+  "binarySha256": "a1027ac676eb68527c636781432a1cd22129d70f1e6ac968f0843e87bc1df825",
+  "binaryBytes": 59310592,
+  "selector": "-test.run=^TestR139Pure(FinalEvidenceSuccess|FinalEvidenceFatalGoexit|FinalEvidenceIOFailure|JournalRequestIOFailureBlocksNext|JournalCapturedResponseSurvivesGoexit|JournalUnsafeResponseHasNoInventedReceipt|RouteAdmission|BrowserReservationAdmission|BrowserTerminalClose)$",
+  "topLevelExpected": 9,
+  "audit": "Selected9 test bodies/helpers and unchanged package init inspected; temporary file I/O, local JSON/path/time predicates and injected HTTP transport only. No real network/DB/provider/key or process launch in selected tests. No R139_RUN/DSN/secret environment. Actual integration test excluded. Go terminal helper remains software-test-only; Python run is operational close enforcement. Compile original handle/wait exit0/179.418s within180; no output/errors.",
+  "compileReceiptSha256": "ba38d98177869f488678b270fd72082c79e2153f4506db4fb68ceb117bb91024"
+}

@@ -1,0 +1,19 @@
+=== RUN   TestR139PureRouteAdmission
+--- PASS: TestR139PureRouteAdmission (0.00s)
+=== RUN   TestR139PureBrowserReservationAdmission
+--- PASS: TestR139PureBrowserReservationAdmission (0.40s)
+=== RUN   TestR139PureBrowserTerminalClose
+--- PASS: TestR139PureBrowserTerminalClose (1.16s)
+=== RUN   TestR139PureFinalEvidenceSuccess
+--- PASS: TestR139PureFinalEvidenceSuccess (0.05s)
+=== RUN   TestR139PureFinalEvidenceFatalGoexit
+--- PASS: TestR139PureFinalEvidenceFatalGoexit (0.04s)
+=== RUN   TestR139PureFinalEvidenceIOFailure
+--- PASS: TestR139PureFinalEvidenceIOFailure (0.03s)
+=== RUN   TestR139PureJournalRequestIOFailureBlocksNext
+--- PASS: TestR139PureJournalRequestIOFailureBlocksNext (0.00s)
+=== RUN   TestR139PureJournalCapturedResponseSurvivesGoexit
+--- PASS: TestR139PureJournalCapturedResponseSurvivesGoexit (0.04s)
+=== RUN   TestR139PureJournalUnsafeResponseHasNoInventedReceipt
+--- PASS: TestR139PureJournalUnsafeResponseHasNoInventedReceipt (0.01s)
+PASS
