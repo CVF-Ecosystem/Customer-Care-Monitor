@@ -36130,6 +36130,41 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/antigravity_integrated_source_20261023/root_original_receipt_bytes.json",
       "status": "ACTIVE",
       "description": "Lossless exact-byte snapshot of five original worker text receipts, including raw failed stderr, before Git newline filtering; no extra source check or runtime proof."
+    },
+    {
+      "id": "r139-native-contract-correction-f5e98ae4f85b",
+      "family": "continuity",
+      "path": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_SOURCE_REPAIR_RETURN_2026-10-23.md",
+      "status": "ACTIVE",
+      "description": "Original first manual repair return; actual hashes match, zero worker source checks, all-fixed claims qualified by Root static CHANGES_REQUIRED."
+    },
+    {
+      "id": "r139-native-contract-correction-29e3156ac5d9",
+      "family": "continuity",
+      "path": "docs/reviews/R139_ANTIGRAVITY_REPAIR_RESULT_REVIEW_AND_COST_DECISION_2026-10-23.md",
+      "status": "ACTIVE",
+      "description": "Actual repair result, corrected advisory false drift finding, cost escalation before third source pass and concrete C1-C4 same-scope acceptance method."
+    },
+    {
+      "id": "r139-native-contract-correction-d22add2b6e2e",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-CONTRACT-CORRECTION-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Conditional dispatcher-controlled C1-C4 correction after independent source-cost disposition; no new check/effect slots, no current runtime."
+    },
+    {
+      "id": "r139-native-contract-correction-887888a9c9ed",
+      "family": "continuity",
+      "path": "docs/reviews/R139_ANTIGRAVITY_CONTRACT_CORRECTION_ADMISSION_REVIEW_2026-10-23.md",
+      "status": "ACTIVE",
+      "description": "Independent authority and source-cost disposition review for same-R139 exact contract correction only."
+    },
+    {
+      "id": "r139-root-observed-first-repair-diff",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/antigravity_integrated_source_20261023/root_observed_repair.diff",
+      "status": "ACTIVE",
+      "description": "Root captured actual git diff from66bae8d dispatch to first repair; authoritative observed source delta, source CHANGES_REQUIRED, not a successful test/runtime receipt."
     }
   ]
 }

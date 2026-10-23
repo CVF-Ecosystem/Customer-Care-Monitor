@@ -3938,7 +3938,7 @@
     "date": "2026-10-23",
     "ownerReply": "duyệt",
     "approvedProposalCommit": "91abea4d5e1ac6aab3073da62d97f55912bb7cc0",
-    "status": "SOURCE_RETURN_CHANGES_REQUIRED_MANUAL_REPAIR_PENDING_DISPATCH",
+    "status": "REPAIRED_SOURCE_STATIC_ACCEPTANCE_FAILED_ROOT_CHECKS_WITHHELD",
     "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-INTEGRATED-SOURCE-ADMISSION.json",
     "admissionReview": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_ADMISSION_REVIEW_2026-10-23.md",
     "sourceGranted": true,
@@ -3963,7 +3963,7 @@
   },
   "x-antigravityIntegratedSourceReturn20261023": {
     "date": "2026-10-23",
-    "status": "CHANGES_REQUIRED_MANUAL_REPAIR_READY_ON_COMMITTED_DISPATCH",
+    "status": "FIRST_MANUAL_REPAIR_RETURN_CHANGES_REQUIRED",
     "workerReturn": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_SOURCE_WORKER_RETURN_2026-10-23.md",
     "rootReview": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_SOURCE_ROOT_REVIEW_2026-10-23.md",
     "repairAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-INTEGRATED-REPAIR-ADMISSION.json",
@@ -3978,7 +3978,7 @@
       "rootPython": 0,
       "pureGo": 0
     },
-    "manualRepairRoundsUsed": 0,
+    "manualRepairRoundsUsed": 1,
     "newVerificationSlots": 0,
     "runtimeExecutableNow": false,
     "providerExecutableNow": false,
@@ -3991,5 +3991,31 @@
       "RootOfflineCompile": 1,
       "RootPureGo": 1
     }
+  },
+  "x-antigravityNativeContractCorrection20261023": {
+    "date": "2026-10-23",
+    "status": "CHANGES_REQUIRED_C1_C4_CORRECTION_ADMITTED_READY_ON_COMMITTED_DISPATCH",
+    "repairReturn": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_SOURCE_REPAIR_RETURN_2026-10-23.md",
+    "rootReviewAndCostDecision": "docs/reviews/R139_ANTIGRAVITY_REPAIR_RESULT_REVIEW_AND_COST_DECISION_2026-10-23.md",
+    "correctionAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-CONTRACT-CORRECTION-ADMISSION.json",
+    "independentReview": "docs/reviews/R139_ANTIGRAVITY_CONTRACT_CORRECTION_ADMISSION_REVIEW_2026-10-23.md",
+    "hashDrift": false,
+    "sourceAuthoringPassesCompleted": 2,
+    "manualRepairRoundsCompleted": 1,
+    "proposedCorrectionRoundsUsed": 0,
+    "reviewCostStatus": "ESCALATION_RECORDED_DISPOSED_BY_ROOT_REPLAN_AND_INDEPENDENT_LUNA_REVIEW",
+    "RootSourceChecksUsed": {
+      "Python": 0,
+      "compile": 0,
+      "pureGo": 0
+    },
+    "newCheckOrEffectSlots": 0,
+    "runtimeExecutableNow": false,
+    "providerExecutableNow": false,
+    "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+    "correctionAdmissionSha256": "4a7e2d30b13c783dda1248e148908e11c6ebbab418e61280d1cc3fd0fc26317a",
+    "RootObservedDiff": "docs/reviews/probes/r139_integrated_20261021/antigravity_integrated_source_20261023/root_observed_repair.diff",
+    "RootObservedDiffSha256": "b66b4e2b49a0bc25ae25a28627b4715faf50817f57d60473e59a961602b93209",
+    "correctionRoundsUsed": 0
   }
 }

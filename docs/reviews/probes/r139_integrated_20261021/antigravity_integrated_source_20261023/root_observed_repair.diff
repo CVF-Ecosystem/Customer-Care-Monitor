@@ -1,0 +1,1339 @@
+diff --git a/backend/api/handlers/intervention_execution_browser_test.go b/backend/api/handlers/intervention_execution_browser_test.go
+index e869e76d..5bc968cf 100644
+--- a/backend/api/handlers/intervention_execution_browser_test.go
++++ b/backend/api/handlers/intervention_execution_browser_test.go
+@@ -87,19 +87,26 @@ func r139VerifyBrowserReservation(a r139Admission, browserRaw []byte) error {
+ 	}
+ 
+ 	tool := a.BrowserTool
+-	if tool == "" || tool == "supported_CUA_IAB" {
++	if tool == "supported_CUA_IAB" {
+ 		status, _ := proof["status"].(string)
+ 		browserID, _ := proof["browserId"].(string)
+ 		ctrl, _ := proof["controlObserved"].(bool)
+ 		capt, _ := proof["captureObserved"].(bool)
+ 		closed, _ := proof["closeObserved"].(bool)
+-		ownedTabs, _ := proof["ownedTabsFinal"].(float64)
+ 		proto, _ := proof["protocol"].(string)
+ 
++		ownedTabsVal, ok := proof["ownedTabsFinal"]
++		if !ok {
++			return errors.New("ownedTabsFinal missing in legacy IAB proof")
++		}
++		ownedTabs, isFloat := ownedTabsVal.(float64)
++		if !isFloat || ownedTabs != 0 {
++			return errors.New("ownedTabsFinal must be numeric 0 in legacy IAB proof")
++		}
++
+ 		if status != "PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE" ||
+ 			browserID != "iab" ||
+ 			!ctrl || !capt || !closed ||
+-			ownedTabs != 0 ||
+ 			(proto != "http" && proto != "https") {
+ 			return errors.New("legacy IAB browser proof content incomplete")
+ 		}
+@@ -135,8 +142,11 @@ func r139VerifyBrowserReservation(a r139Admission, browserRaw []byte) error {
+ 			return errors.New("captureObserved must be true")
+ 		}
+ 
+-		if closed, ok := proof["closeObserved"].(bool); ok && closed {
+-			return errors.New("early closeObserved is forbidden in reservation")
++		if closedVal, exists := proof["closeObserved"]; exists {
++			closed, isBool := closedVal.(bool)
++			if !isBool || closed {
++				return errors.New("early closeObserved is forbidden in reservation")
++			}
+ 		}
+ 
+ 		proto, _ := proof["protocol"].(string)
+@@ -149,50 +159,95 @@ func r139VerifyBrowserReservation(a r139Admission, browserRaw []byte) error {
+ 			return fmt.Errorf("invalid closeMode: %s", closeMode)
+ 		}
+ 
+-		pageID, _ := proof["pageId"].(string)
+-		if strings.TrimSpace(pageID) == "" {
+-			return errors.New("pageId is required in reservation")
++		if strings.TrimSpace(a.TrancheID) == "" {
++			return errors.New("trancheId required in admission")
++		}
++		trancheID, _ := proof["trancheId"].(string)
++		if trancheID != a.TrancheID {
++			return fmt.Errorf("trancheId mismatch: expected %s, got %s", a.TrancheID, trancheID)
+ 		}
+-		if a.PageID != "" && pageID != a.PageID {
++
++		if strings.TrimSpace(a.PageID) == "" {
++			return errors.New("pageId required in admission")
++		}
++		pageID, _ := proof["pageId"].(string)
++		if pageID != a.PageID {
+ 			return fmt.Errorf("pageId mismatch: expected %s, got %s", a.PageID, pageID)
+ 		}
+ 
+-		nonce, _ := proof["campaignNonce"].(string)
+-		if strings.TrimSpace(nonce) == "" {
+-			return errors.New("campaignNonce is required in reservation")
++		if strings.TrimSpace(a.CampaignNonce) == "" {
++			return errors.New("campaignNonce required in admission")
+ 		}
+-		if a.CampaignNonce != "" && nonce != a.CampaignNonce {
++		nonce, _ := proof["campaignNonce"].(string)
++		if nonce != a.CampaignNonce {
+ 			return fmt.Errorf("campaignNonce mismatch: expected %s, got %s", a.CampaignNonce, nonce)
+ 		}
+ 
+-		sessionID, _ := proof["browserSessionId"].(string)
+-		if strings.TrimSpace(sessionID) == "" {
+-			return errors.New("browserSessionId is required in reservation")
++		if strings.TrimSpace(a.BrowserSessionID) == "" {
++			return errors.New("browserSessionId required in admission")
+ 		}
+-		if a.BrowserSessionID != "" && sessionID != a.BrowserSessionID {
++		sessionID, _ := proof["browserSessionId"].(string)
++		if sessionID != a.BrowserSessionID {
+ 			return fmt.Errorf("browserSessionId mismatch: expected %s, got %s", a.BrowserSessionID, sessionID)
+ 		}
+ 
+-		trancheID, _ := proof["trancheId"].(string)
+-		if trancheID != "" && a.TrancheID != "" && trancheID != a.TrancheID {
+-			return fmt.Errorf("trancheId mismatch: expected %s, got %s", a.TrancheID, trancheID)
+-		}
+-
+-		op, _ := proof["operator"].(string)
+-		if strings.TrimSpace(op) == "" {
+-			return errors.New("operator is required in reservation")
+-		}
+ 		expectedOp := a.FallbackCloseOperator
+-		if a.FallbackCloseOperator == "" {
++		if expectedOp == "" {
+ 			expectedOp = a.ActorRole
+ 		}
+-		if a.FallbackCloseOperator != "" && op != a.FallbackCloseOperator {
++		if strings.TrimSpace(expectedOp) == "" {
++			return errors.New("operator required in admission")
++		}
++		op, _ := proof["operator"].(string)
++		if op != expectedOp {
+ 			return fmt.Errorf("operator mismatch: expected %s, got %s", expectedOp, op)
+ 		}
+ 
+ 		if strings.TrimSpace(a.BrowserCloseReceiptPath) == "" {
+ 			return errors.New("browserCloseReceiptPath is required in admission")
+ 		}
++		if strings.HasPrefix(a.BrowserCloseReceiptPath, "docs/") {
++			return errors.New("browserCloseReceiptPath must be in ignored runtime path, not tracked docs/")
++		}
++
++		if reservedStr, ok := proof["reservedAtUTC"].(string); ok && reservedStr != "" {
++			if !strings.HasSuffix(reservedStr, "Z") {
++				return errors.New("reservedAtUTC must end in Z")
++			}
++			reservedAt, rErr := time.Parse(time.RFC3339, reservedStr)
++			if rErr != nil {
++				reservedAt, rErr = time.Parse(time.RFC3339Nano, reservedStr)
++			}
++			if rErr != nil {
++				return fmt.Errorf("invalid reservedAtUTC: %w", rErr)
++			}
++			if reservedAt.After(time.Now().UTC().Add(time.Minute)) {
++				return errors.New("reservedAtUTC cannot be in the future")
++			}
++		}
++
++		evRel, _ := proof["actionEvidencePath"].(string)
++		if evRel == "" {
++			evRel, _ = proof["evidencePath"].(string)
++		}
++		if evRel != "" {
++			if strings.HasPrefix(evRel, "docs/") {
++				return errors.New("actionEvidencePath must not be in tracked docs/")
++			}
++			evSha, _ := proof["actionEvidenceSha256"].(string)
++			if evSha == "" {
++				evSha, _ = proof["evidenceSha256"].(string)
++			}
++			if len(evSha) != 64 {
++				return errors.New("actionEvidenceSha256 must be 64-hex string")
++			}
++			if data, readErr := os.ReadFile(evRel); readErr == nil {
++				sum := sha256.Sum256(data)
++				if hex.EncodeToString(sum[:]) != evSha {
++					return errors.New("action evidence sha mismatch")
++				}
++			}
++		}
+ 
+ 		return nil
+ 	}
+@@ -216,37 +271,49 @@ func r139VerifyBrowserTerminalClose(a r139Admission, closeRaw []byte) error {
+ 		return fmt.Errorf("browserId must be antigravity_native, got %s", browserID)
+ 	}
+ 
+-	closeObserved, _ := receipt["closeObserved"].(bool)
+-	if !closeObserved {
+-		return errors.New("closeObserved must be true")
++	closeObservedVal, exists := receipt["closeObserved"]
++	if !exists {
++		return errors.New("closeObserved is required in terminal close receipt")
++	}
++	closeObserved, isBool := closeObservedVal.(bool)
++	if !isBool || !closeObserved {
++		return errors.New("closeObserved must be exact boolean true")
+ 	}
+ 
+-	ownedTabs, ok := receipt["ownedTabsFinal"].(float64)
+-	if !ok || ownedTabs != 0 {
+-		return fmt.Errorf("ownedTabsFinal must be 0, got %v", receipt["ownedTabsFinal"])
++	ownedTabsVal, ok := receipt["ownedTabsFinal"]
++	if !ok {
++		return errors.New("ownedTabsFinal is required in terminal close receipt")
++	}
++	ownedTabs, isFloat := ownedTabsVal.(float64)
++	if !isFloat || ownedTabs != 0 {
++		return fmt.Errorf("ownedTabsFinal must be numeric 0, got %v", ownedTabsVal)
++	}
++
++	if strings.TrimSpace(a.TrancheID) == "" {
++		return errors.New("trancheId required in admission")
++	}
++	if trancheID, _ := receipt["trancheId"].(string); trancheID != a.TrancheID {
++		return fmt.Errorf("trancheId mismatch: expected %s, got %s", a.TrancheID, trancheID)
+ 	}
+ 
+-	pageID, _ := receipt["pageId"].(string)
+-	if strings.TrimSpace(pageID) == "" {
+-		return errors.New("pageId is required in terminal close receipt")
++	if strings.TrimSpace(a.PageID) == "" {
++		return errors.New("pageId required in admission")
+ 	}
+-	if a.PageID != "" && pageID != a.PageID {
++	if pageID, _ := receipt["pageId"].(string); pageID != a.PageID {
+ 		return fmt.Errorf("pageId mismatch: expected %s, got %s", a.PageID, pageID)
+ 	}
+ 
+-	nonce, _ := receipt["campaignNonce"].(string)
+-	if strings.TrimSpace(nonce) == "" {
+-		return errors.New("campaignNonce is required in terminal close receipt")
++	if strings.TrimSpace(a.CampaignNonce) == "" {
++		return errors.New("campaignNonce required in admission")
+ 	}
+-	if a.CampaignNonce != "" && nonce != a.CampaignNonce {
++	if nonce, _ := receipt["campaignNonce"].(string); nonce != a.CampaignNonce {
+ 		return fmt.Errorf("campaignNonce mismatch: expected %s, got %s", a.CampaignNonce, nonce)
+ 	}
+ 
+-	sessionID, _ := receipt["browserSessionId"].(string)
+-	if strings.TrimSpace(sessionID) == "" {
+-		return errors.New("browserSessionId is required in terminal close receipt")
++	if strings.TrimSpace(a.BrowserSessionID) == "" {
++		return errors.New("browserSessionId required in admission")
+ 	}
+-	if a.BrowserSessionID != "" && sessionID != a.BrowserSessionID {
++	if sessionID, _ := receipt["browserSessionId"].(string); sessionID != a.BrowserSessionID {
+ 		return fmt.Errorf("browserSessionId mismatch: expected %s, got %s", a.BrowserSessionID, sessionID)
+ 	}
+ 
+@@ -255,15 +322,14 @@ func r139VerifyBrowserTerminalClose(a r139Admission, closeRaw []byte) error {
+ 		return fmt.Errorf("invalid closeMode: %s", closeMode)
+ 	}
+ 
+-	op, _ := receipt["operator"].(string)
+-	if strings.TrimSpace(op) == "" {
+-		return errors.New("operator is required in terminal close receipt")
+-	}
+ 	expectedOp := a.FallbackCloseOperator
+-	if a.FallbackCloseOperator == "" {
++	if expectedOp == "" {
+ 		expectedOp = a.ActorRole
+ 	}
+-	if a.FallbackCloseOperator != "" && op != a.FallbackCloseOperator {
++	if strings.TrimSpace(expectedOp) == "" {
++		return errors.New("operator required in admission")
++	}
++	if op, _ := receipt["operator"].(string); op != expectedOp {
+ 		return fmt.Errorf("operator mismatch: expected %s, got %s", expectedOp, op)
+ 	}
+ 
+@@ -285,13 +351,99 @@ func r139VerifyBrowserTerminalClose(a r139Admission, closeRaw []byte) error {
+ 		return errors.New("closedAtUTC cannot be in the future")
+ 	}
+ 
+-	if a.GrantDeadlineUTC != "" {
+-		deadline, dErr := time.Parse(time.RFC3339Nano, a.GrantDeadlineUTC)
+-		if dErr != nil {
+-			deadline, dErr = time.Parse(time.RFC3339, a.GrantDeadlineUTC)
++	if strings.TrimSpace(a.GrantDeadlineUTC) == "" || !strings.HasSuffix(a.GrantDeadlineUTC, "Z") {
++		return errors.New("grantDeadlineUTC must be non-empty ISO 8601 ending in Z")
++	}
++	deadline, dErr := time.Parse(time.RFC3339Nano, a.GrantDeadlineUTC)
++	if dErr != nil {
++		deadline, dErr = time.Parse(time.RFC3339, a.GrantDeadlineUTC)
++	}
++	if dErr != nil {
++		return fmt.Errorf("invalid grantDeadlineUTC: %w", dErr)
++	}
++	if closedAt.After(deadline) {
++		return errors.New("closedAtUTC cannot be after grant deadline")
++	}
++
++	if reservedStr, ok := receipt["reservedAtUTC"].(string); ok && reservedStr != "" {
++		if !strings.HasSuffix(reservedStr, "Z") {
++			return errors.New("reservedAtUTC must end in Z")
++		}
++		reservedAt, rErr := time.Parse(time.RFC3339, reservedStr)
++		if rErr != nil {
++			reservedAt, rErr = time.Parse(time.RFC3339Nano, reservedStr)
++		}
++		if rErr != nil {
++			return fmt.Errorf("invalid reservedAtUTC: %w", rErr)
++		}
++		if reservedAt.After(closedAt) {
++			return errors.New("closedAtUTC cannot be before reservedAtUTC")
+ 		}
+-		if dErr == nil && closedAt.After(deadline) {
+-			return errors.New("closedAtUTC cannot be after grant deadline")
++	}
++
++	actionRel, _ := receipt["actionEvidencePath"].(string)
++	if actionRel == "" {
++		actionRel, _ = receipt["evidencePath"].(string)
++	}
++	if actionRel != "" {
++		if strings.HasPrefix(actionRel, "docs/") {
++			return errors.New("actionEvidencePath must not be in tracked docs/")
++		}
++		actionSha, _ := receipt["actionEvidenceSha256"].(string)
++		if actionSha == "" {
++			actionSha, _ = receipt["evidenceSha256"].(string)
++		}
++		if len(actionSha) != 64 {
++			return errors.New("actionEvidenceSha256 must be 64-hex string")
++		}
++		if data, readErr := os.ReadFile(actionRel); readErr == nil {
++			sum := sha256.Sum256(data)
++			if hex.EncodeToString(sum[:]) != actionSha {
++				return errors.New("action evidence sha mismatch")
++			}
++		}
++	}
++
++	invRel, _ := receipt["finalInventoryPath"].(string)
++	if invRel == "" {
++		invRel, _ = receipt["inventoryPath"].(string)
++	}
++	if invRel != "" {
++		if strings.HasPrefix(invRel, "docs/") {
++			return errors.New("finalInventoryPath must not be in tracked docs/")
++		}
++		invSha, _ := receipt["finalInventorySha256"].(string)
++		if invSha == "" {
++			invSha, _ = receipt["inventorySha256"].(string)
++		}
++		if len(invSha) != 64 {
++			return errors.New("finalInventorySha256 must be 64-hex string")
++		}
++		if data, readErr := os.ReadFile(invRel); readErr == nil {
++			sum := sha256.Sum256(data)
++			if hex.EncodeToString(sum[:]) != invSha {
++				return errors.New("final inventory sha mismatch")
++			}
++			var invData map[string]any
++			if jsonErr := json.Unmarshal(data, &invData); jsonErr == nil {
++				if openPages, ok := invData["openPages"].([]any); ok {
++					for _, p := range openPages {
++						if pStr, ok := p.(string); ok && pStr == a.PageID {
++							return errors.New("page still present in final inventory openPages")
++						}
++					}
++				}
++				if openTabs, ok := invData["openTabs"].([]any); ok {
++					for _, p := range openTabs {
++						if pStr, ok := p.(string); ok && pStr == a.PageID {
++							return errors.New("page still present in final inventory openTabs")
++						}
++					}
++				}
++				if ownedTabs, ok := invData["ownedTabsFinal"].(float64); ok && ownedTabs != 0 {
++					return errors.New("ownedTabsFinal in inventory must be 0")
++				}
++			}
+ 		}
+ 	}
+ 
+@@ -336,6 +488,27 @@ func TestR139PureBrowserReservationAdmission(t *testing.T) {
+ 		t.Fatalf("expected legacy IAB pass, got: %v", err)
+ 	}
+ 
++	badIABRaw := []byte(`{
++		"status": "PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE",
++		"browserId": "iab",
++		"controlObserved": true,
++		"captureObserved": true,
++		"closeObserved": true,
++		"ownedTabsFinal": 1,
++		"protocol": "http"
++	}`)
++	if err := r139VerifyBrowserReservation(iabAdmission, badIABRaw); err == nil {
++		t.Fatal("expected legacy IAB rejection for ownedTabsFinal != 0")
++	}
++
++	emptyToolAdmission := r139Admission{
++		BrowserSupported: true,
++		BrowserTool:      "",
++	}
++	if err := r139VerifyBrowserReservation(emptyToolAdmission, validIABRaw); err == nil {
++		t.Fatal("expected rejection when browserTool is empty (no empty string fallback)")
++	}
++
+ 	nativeAdmission := r139Admission{
+ 		TrancheID:               "CCMAI-RUNTIME-139",
+ 		BrowserSupported:        true,
+@@ -344,7 +517,7 @@ func TestR139PureBrowserReservationAdmission(t *testing.T) {
+ 		CampaignNonce:           "nonce-abc-456",
+ 		BrowserSessionID:        "session-xyz-789",
+ 		FallbackCloseOperator:   "Owner",
+-		BrowserCloseReceiptPath: "docs/reviews/probes/close.json",
++		BrowserCloseReceiptPath: ".cvf/runtime/test/close.json",
+ 	}
+ 	validNativeRaw := []byte(`{
+ 		"status": "RESERVED_NATIVE_PAGE_CONTROL_CAPTURE",
+@@ -359,7 +532,8 @@ func TestR139PureBrowserReservationAdmission(t *testing.T) {
+ 		"campaignNonce": "nonce-abc-456",
+ 		"browserSessionId": "session-xyz-789",
+ 		"trancheId": "CCMAI-RUNTIME-139",
+-		"operator": "Owner"
++		"operator": "Owner",
++		"reservedAtUTC": "2026-10-23T12:00:00Z"
+ 	}`)
+ 	if err := r139VerifyBrowserReservation(nativeAdmission, validNativeRaw); err != nil {
+ 		t.Fatalf("expected native reservation pass, got: %v", err)
+@@ -406,13 +580,15 @@ func TestR139PureBrowserReservationAdmission(t *testing.T) {
+ 		name string
+ 		raw  []byte
+ 	}{
+-		{"wrong-pageId", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"wrong-page","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","operator":"Owner"}`)},
+-		{"wrong-nonce", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"wrong-nonce","browserSessionId":"session-xyz-789","operator":"Owner"}`)},
+-		{"wrong-session", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"wrong-session","operator":"Owner"}`)},
+-		{"wrong-operator", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","operator":"wrong-operator"}`)},
+-		{"unsupported-protocol", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"ftp","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","operator":"Owner"}`)},
+-		{"invalid-closeMode", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"invalid_mode","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","operator":"Owner"}`)},
+-		{"missing-exclusive", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":false,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","operator":"Owner"}`)},
++		{"wrong-trancheId", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","trancheId":"wrong-tranche","operator":"Owner"}`)},
++		{"wrong-pageId", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"wrong-page","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","trancheId":"CCMAI-RUNTIME-139","operator":"Owner"}`)},
++		{"wrong-nonce", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"wrong-nonce","browserSessionId":"session-xyz-789","trancheId":"CCMAI-RUNTIME-139","operator":"Owner"}`)},
++		{"wrong-session", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"wrong-session","trancheId":"CCMAI-RUNTIME-139","operator":"Owner"}`)},
++		{"wrong-operator", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","trancheId":"CCMAI-RUNTIME-139","operator":"wrong-operator"}`)},
++		{"unsupported-protocol", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"ftp","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","trancheId":"CCMAI-RUNTIME-139","operator":"Owner"}`)},
++		{"invalid-closeMode", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"invalid_mode","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","trancheId":"CCMAI-RUNTIME-139","operator":"Owner"}`)},
++		{"missing-exclusive", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":false,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","trancheId":"CCMAI-RUNTIME-139","operator":"Owner"}`)},
++		{"future-reservation-time", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","trancheId":"CCMAI-RUNTIME-139","operator":"Owner","reservedAtUTC":"2099-01-01T00:00:00Z"}`)},
+ 	} {
+ 		if err := r139VerifyBrowserReservation(nativeAdmission, tc.raw); err == nil {
+ 			t.Fatalf("expected error for %s, got nil", tc.name)
+@@ -425,6 +601,12 @@ func TestR139PureBrowserReservationAdmission(t *testing.T) {
+ 		t.Fatal("expected rejection when admission lacks browserCloseReceiptPath")
+ 	}
+ 
++	docsClosePathAdmission := nativeAdmission
++	docsClosePathAdmission.BrowserCloseReceiptPath = "docs/reviews/probes/close.json"
++	if err := r139VerifyBrowserReservation(docsClosePathAdmission, validNativeRaw); err == nil {
++		t.Fatal("expected rejection when browserCloseReceiptPath is under tracked docs/")
++	}
++
+ 	unsupportedAdmission := nativeAdmission
+ 	unsupportedAdmission.BrowserSupported = false
+ 	if err := r139VerifyBrowserReservation(unsupportedAdmission, validNativeRaw); err == nil {
+@@ -439,6 +621,23 @@ func TestR139PureBrowserReservationAdmission(t *testing.T) {
+ }
+ 
+ func TestR139PureBrowserTerminalClose(t *testing.T) {
++	tempDir := t.TempDir()
++	actionFile := filepath.Join(tempDir, "action.json")
++	actionContent := []byte(`{"action":"click","pageId":"page-test-123"}`)
++	if err := os.WriteFile(actionFile, actionContent, 0644); err != nil {
++		t.Fatal(err)
++	}
++	actionShaBytes := sha256.Sum256(actionContent)
++	actionSha := hex.EncodeToString(actionShaBytes[:])
++
++	invFile := filepath.Join(tempDir, "inventory.json")
++	invContent := []byte(`{"openPages":[],"openTabs":[],"ownedTabsFinal":0}`)
++	if err := os.WriteFile(invFile, invContent, 0644); err != nil {
++		t.Fatal(err)
++	}
++	invShaBytes := sha256.Sum256(invContent)
++	invSha := hex.EncodeToString(invShaBytes[:])
++
+ 	deadline := time.Now().UTC().Add(2 * time.Hour).Format(time.RFC3339)
+ 	nativeAdmission := r139Admission{
+ 		TrancheID:             "CCMAI-RUNTIME-139",
+@@ -456,12 +655,17 @@ func TestR139PureBrowserTerminalClose(t *testing.T) {
+ 		"browserId": "antigravity_native",
+ 		"closeObserved": true,
+ 		"ownedTabsFinal": 0,
++		"trancheId": "CCMAI-RUNTIME-139",
+ 		"pageId": "page-test-123",
+ 		"campaignNonce": "nonce-abc-456",
+ 		"browserSessionId": "session-xyz-789",
+ 		"closeMode": "operator_fallback",
+ 		"operator": "Owner",
+-		"closedAtUTC": "` + time.Now().UTC().Format(time.RFC3339) + `"
++		"closedAtUTC": "` + time.Now().UTC().Format(time.RFC3339) + `",
++		"actionEvidencePath": ` + fmt.Sprintf("%q", filepath.ToSlash(actionFile)) + `,
++		"actionEvidenceSha256": "` + actionSha + `",
++		"finalInventoryPath": ` + fmt.Sprintf("%q", filepath.ToSlash(invFile)) + `,
++		"finalInventorySha256": "` + invSha + `"
+ 	}`)
+ 
+ 	if err := r139VerifyBrowserTerminalClose(nativeAdmission, validCloseRaw); err != nil {
+@@ -473,6 +677,7 @@ func TestR139PureBrowserTerminalClose(t *testing.T) {
+ 		"browserId": "antigravity_native",
+ 		"closeObserved": false,
+ 		"ownedTabsFinal": 0,
++		"trancheId": "CCMAI-RUNTIME-139",
+ 		"pageId": "page-test-123",
+ 		"campaignNonce": "nonce-abc-456",
+ 		"browserSessionId": "session-xyz-789",
+@@ -489,6 +694,7 @@ func TestR139PureBrowserTerminalClose(t *testing.T) {
+ 		"browserId": "antigravity_native",
+ 		"closeObserved": true,
+ 		"ownedTabsFinal": 1,
++		"trancheId": "CCMAI-RUNTIME-139",
+ 		"pageId": "page-test-123",
+ 		"campaignNonce": "nonce-abc-456",
+ 		"browserSessionId": "session-xyz-789",
+@@ -505,6 +711,7 @@ func TestR139PureBrowserTerminalClose(t *testing.T) {
+ 		"browserId": "antigravity_native",
+ 		"closeObserved": true,
+ 		"ownedTabsFinal": 0,
++		"trancheId": "CCMAI-RUNTIME-139",
+ 		"pageId": "page-test-123",
+ 		"campaignNonce": "nonce-abc-456",
+ 		"browserSessionId": "session-xyz-789",
+@@ -520,11 +727,14 @@ func TestR139PureBrowserTerminalClose(t *testing.T) {
+ 		name string
+ 		raw  []byte
+ 	}{
+-		{"wrong-pageId", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"pageId":"wrong","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
+-		{"wrong-nonce", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"pageId":"page-test-123","campaignNonce":"wrong","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
+-		{"wrong-session", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"wrong","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
+-		{"wrong-operator", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"wrong","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
+-		{"invalid-closeMode", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"bad","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
++		{"wrong-trancheId", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"wrong-tranche","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
++		{"wrong-pageId", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"CCMAI-RUNTIME-139","pageId":"wrong","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
++		{"wrong-nonce", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"CCMAI-RUNTIME-139","pageId":"page-test-123","campaignNonce":"wrong","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
++		{"wrong-session", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"CCMAI-RUNTIME-139","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"wrong","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
++		{"wrong-operator", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"CCMAI-RUNTIME-139","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"wrong","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
++		{"invalid-closeMode", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"CCMAI-RUNTIME-139","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"bad","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
++		{"wrong-action-sha", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"CCMAI-RUNTIME-139","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `","actionEvidencePath":` + fmt.Sprintf("%q", filepath.ToSlash(actionFile)) + `,"actionEvidenceSha256":"0000000000000000000000000000000000000000000000000000000000000000"}`)},
++		{"docs-action-path", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"CCMAI-RUNTIME-139","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `","actionEvidencePath":"docs/action.json","actionEvidenceSha256":"` + actionSha + `"}`)},
+ 	} {
+ 		if err := r139VerifyBrowserTerminalClose(nativeAdmission, tc.raw); err == nil {
+ 			t.Fatalf("expected error for %s, got nil", tc.name)
+@@ -537,6 +747,7 @@ func TestR139PureBrowserTerminalClose(t *testing.T) {
+ 		"browserId": "antigravity_native",
+ 		"closeObserved": true,
+ 		"ownedTabsFinal": 0,
++		"trancheId": "CCMAI-RUNTIME-139",
+ 		"pageId": "page-test-123",
+ 		"campaignNonce": "nonce-abc-456",
+ 		"browserSessionId": "session-xyz-789",
+@@ -554,11 +765,18 @@ func TestR139PureBrowserTerminalClose(t *testing.T) {
+ 		t.Fatal("expected rejection when closedAtUTC is after grantDeadlineUTC")
+ 	}
+ 
++	missingDeadlineAdmission := nativeAdmission
++	missingDeadlineAdmission.GrantDeadlineUTC = ""
++	if err := r139VerifyBrowserTerminalClose(missingDeadlineAdmission, validCloseRaw); err == nil {
++		t.Fatal("expected rejection when grantDeadlineUTC is missing in admission")
++	}
++
+ 	badTimeRaw := []byte(`{
+ 		"status": "CLOSED_EXACT_OWNED_PAGE",
+ 		"browserId": "antigravity_native",
+ 		"closeObserved": true,
+ 		"ownedTabsFinal": 0,
++		"trancheId": "CCMAI-RUNTIME-139",
+ 		"pageId": "page-test-123",
+ 		"campaignNonce": "nonce-abc-456",
+ 		"browserSessionId": "session-xyz-789",
+@@ -569,6 +787,33 @@ func TestR139PureBrowserTerminalClose(t *testing.T) {
+ 	if err := r139VerifyBrowserTerminalClose(nativeAdmission, badTimeRaw); err == nil {
+ 		t.Fatal("expected rejection for invalid closedAtUTC")
+ 	}
++
++	dirtyInvFile := filepath.Join(tempDir, "dirty_inv.json")
++	dirtyInvContent := []byte(`{"openPages":["page-test-123"],"openTabs":[],"ownedTabsFinal":0}`)
++	if err := os.WriteFile(dirtyInvFile, dirtyInvContent, 0644); err != nil {
++		t.Fatal(err)
++	}
++	dirtyInvShaBytes := sha256.Sum256(dirtyInvContent)
++	dirtyInvSha := hex.EncodeToString(dirtyInvShaBytes[:])
++
++	dirtyInvRaw := []byte(`{
++		"status": "CLOSED_EXACT_OWNED_PAGE",
++		"browserId": "antigravity_native",
++		"closeObserved": true,
++		"ownedTabsFinal": 0,
++		"trancheId": "CCMAI-RUNTIME-139",
++		"pageId": "page-test-123",
++		"campaignNonce": "nonce-abc-456",
++		"browserSessionId": "session-xyz-789",
++		"closeMode": "operator_fallback",
++		"operator": "Owner",
++		"closedAtUTC": "` + time.Now().UTC().Format(time.RFC3339) + `",
++		"finalInventoryPath": ` + fmt.Sprintf("%q", filepath.ToSlash(dirtyInvFile)) + `,
++		"finalInventorySha256": "` + dirtyInvSha + `"
++	}`)
++	if err := r139VerifyBrowserTerminalClose(nativeAdmission, dirtyInvRaw); err == nil {
++		t.Fatal("expected rejection when target page is still present in inventory")
++	}
+ }
+ 
+ func r139Admit(t *testing.T) (r139Admission, string) {
+diff --git a/scripts/r139_execution_supervisor.py b/scripts/r139_execution_supervisor.py
+index 96318040..a9b680de 100644
+--- a/scripts/r139_execution_supervisor.py
++++ b/scripts/r139_execution_supervisor.py
+@@ -135,39 +135,65 @@ def verify_browser_receipt(value: dict) -> None:
+     require(isinstance(expected, str) and HEX64.fullmatch(expected) and digest(browser) == expected, "BROWSER_RECEIPT_MISMATCH")
+     proof = read_json(browser)
+     if tool == "supported_CUA_IAB":
+-        require(proof.get("status") == "PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE" and proof.get("browserId") == "iab" and proof.get("controlObserved") is True and proof.get("captureObserved") is True and proof.get("closeObserved") is True and proof.get("ownedTabsFinal") == 0 and proof.get("protocol") in ("http", "https"), "BROWSER_PROOF_CONTENT_INCOMPLETE")
++        require(proof.get("status") == "PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE" and proof.get("browserId") == "iab", "BROWSER_PROOF_CONTENT_INCOMPLETE")
++        require(type(proof.get("controlObserved")) is bool and proof["controlObserved"] is True, "BROWSER_PROOF_CONTENT_INCOMPLETE")
++        require(type(proof.get("captureObserved")) is bool and proof["captureObserved"] is True, "BROWSER_PROOF_CONTENT_INCOMPLETE")
++        require(type(proof.get("closeObserved")) is bool and proof["closeObserved"] is True, "BROWSER_PROOF_CONTENT_INCOMPLETE")
++        require(type(proof.get("ownedTabsFinal")) is int and not isinstance(proof.get("ownedTabsFinal"), bool) and proof["ownedTabsFinal"] == 0, "BROWSER_PROOF_CONTENT_INCOMPLETE")
++        require(proof.get("protocol") in ("http", "https"), "BROWSER_PROOF_CONTENT_INCOMPLETE")
+     elif tool == "antigravity_native":
+         require(proof.get("status") != "CLOSED_EXACT_OWNED_PAGE", "TERMINAL_CLOSE_RECEIPT_CANNOT_BE_PREFIXTURE_RESERVATION")
+         require(proof.get("status") == "RESERVED_NATIVE_PAGE_CONTROL_CAPTURE", "BROWSER_PROOF_CONTENT_INCOMPLETE")
+         require(proof.get("browserId") == "antigravity_native", "BROWSER_PROOF_CONTENT_INCOMPLETE")
+-        require(proof.get("exclusiveReservation") is True, "BROWSER_PROOF_CONTENT_INCOMPLETE")
+-        require(proof.get("controlObserved") is True, "BROWSER_PROOF_CONTENT_INCOMPLETE")
+-        require(proof.get("captureObserved") is True, "BROWSER_PROOF_CONTENT_INCOMPLETE")
+-        require(proof.get("closeObserved") is not True, "EARLY_CLOSE_FORBIDDEN")
++        require(type(proof.get("exclusiveReservation")) is bool and proof["exclusiveReservation"] is True, "BROWSER_PROOF_CONTENT_INCOMPLETE")
++        require(type(proof.get("controlObserved")) is bool and proof["controlObserved"] is True, "BROWSER_PROOF_CONTENT_INCOMPLETE")
++        require(type(proof.get("captureObserved")) is bool and proof["captureObserved"] is True, "BROWSER_PROOF_CONTENT_INCOMPLETE")
++        close_obs = proof.get("closeObserved")
++        require(close_obs is None or (type(close_obs) is bool and close_obs is False), "EARLY_CLOSE_FORBIDDEN")
+         require(proof.get("protocol") in ("http", "https"), "BROWSER_PROOF_CONTENT_INCOMPLETE")
+         require(proof.get("closeMode") in ("api", "operator", "operator_fallback"), "BROWSER_PROOF_CONTENT_INCOMPLETE")
+-        page_id = proof.get("pageId")
+-        require(isinstance(page_id, str) and page_id.strip(), "BROWSER_PROOF_CONTENT_INCOMPLETE")
+-        if value.get("pageId"):
+-            require(page_id == value["pageId"], "BROWSER_PROOF_IDENTITY_MISMATCH")
+-        nonce = proof.get("campaignNonce")
+-        require(isinstance(nonce, str) and nonce.strip(), "BROWSER_PROOF_CONTENT_INCOMPLETE")
+-        if value.get("campaignNonce"):
+-            require(nonce == value["campaignNonce"], "BROWSER_PROOF_IDENTITY_MISMATCH")
+-        session_id = proof.get("browserSessionId")
+-        require(isinstance(session_id, str) and session_id.strip(), "BROWSER_PROOF_CONTENT_INCOMPLETE")
+-        if value.get("browserSessionId"):
+-            require(session_id == value["browserSessionId"], "BROWSER_PROOF_IDENTITY_MISMATCH")
+-        tranche_id = proof.get("trancheId")
+-        if tranche_id:
+-            require(tranche_id == value.get("trancheId", "CCMAI-RUNTIME-139"), "BROWSER_PROOF_IDENTITY_MISMATCH")
++
++        tranche_id = value.get("trancheId")
++        require(isinstance(tranche_id, str) and tranche_id.strip(), "BROWSER_PROOF_IDENTITY_MISMATCH")
++        require(proof.get("trancheId") == tranche_id, "BROWSER_PROOF_IDENTITY_MISMATCH")
++
++        page_id = value.get("pageId")
++        require(isinstance(page_id, str) and page_id.strip(), "BROWSER_PROOF_IDENTITY_MISMATCH")
++        require(proof.get("pageId") == page_id, "BROWSER_PROOF_IDENTITY_MISMATCH")
++
++        nonce = value.get("campaignNonce")
++        require(isinstance(nonce, str) and nonce.strip(), "BROWSER_PROOF_IDENTITY_MISMATCH")
++        require(proof.get("campaignNonce") == nonce, "BROWSER_PROOF_IDENTITY_MISMATCH")
++
++        session_id = value.get("browserSessionId")
++        require(isinstance(session_id, str) and session_id.strip(), "BROWSER_PROOF_IDENTITY_MISMATCH")
++        require(proof.get("browserSessionId") == session_id, "BROWSER_PROOF_IDENTITY_MISMATCH")
++
+         expected_op = value.get("fallbackCloseOperator") or value.get("operator")
+-        op = proof.get("operator")
+-        require(isinstance(op, str) and op.strip(), "BROWSER_PROOF_CONTENT_INCOMPLETE")
+-        if expected_op:
+-            require(op == expected_op, "BROWSER_PROOF_IDENTITY_MISMATCH")
++        require(isinstance(expected_op, str) and expected_op.strip(), "BROWSER_PROOF_IDENTITY_MISMATCH")
++        require(proof.get("operator") == expected_op, "BROWSER_PROOF_IDENTITY_MISMATCH")
++
+         close_path_rel = value.get("browserCloseReceiptPath")
+         require(isinstance(close_path_rel, str) and close_path_rel.strip(), "BROWSER_CLOSE_RECEIPT_PATH_MISSING")
++        require(not close_path_rel.startswith("docs/"), "BROWSER_CLOSE_RECEIPT_PATH_MUST_NOT_BE_TRACKED_DOCS")
++
++        reserved_str = proof.get("reservedAtUTC")
++        if reserved_str is not None:
++            require(isinstance(reserved_str, str) and reserved_str.endswith("Z"), "RESERVATION_TIMESTAMP_INVALID")
++            try:
++                reserved_dt = datetime.fromisoformat(reserved_str[:-1] + "+00:00")
++            except Exception:
++                raise Hold("RESERVATION_TIMESTAMP_INVALID")
++            now_utc = datetime.now(timezone.utc)
++            require(reserved_dt <= now_utc + timedelta(seconds=60), "RESERVATION_TIMESTAMP_IN_FUTURE")
++
++        ev_rel = proof.get("actionEvidencePath") or proof.get("evidencePath") or proof.get("controlEvidencePath")
++        if ev_rel is not None:
++            require(isinstance(ev_rel, str) and ev_rel.strip(), "RESERVATION_EVIDENCE_PATH_INVALID")
++            require(not ev_rel.startswith("docs/"), "EVIDENCE_PATH_MUST_NOT_BE_TRACKED_DOCS")
++            ev_path = project_path(ev_rel)
++            ev_sha = proof.get("actionEvidenceSha256") or proof.get("evidenceSha256") or proof.get("controlEvidenceSha256")
++            require(isinstance(ev_sha, str) and HEX64.fullmatch(ev_sha) and digest(ev_path) == ev_sha, "RESERVATION_EVIDENCE_SHA_MISMATCH")
+     else:
+         raise Hold("BROWSER_TOOL_UNSUPPORTED")
+ 
+@@ -175,6 +201,7 @@ def verify_browser_receipt(value: dict) -> None:
+ def verify_browser_terminal_close(admission: dict, runtime: Path, external: Path) -> dict:
+     close_rel = admission.get("browserCloseReceiptPath")
+     require(isinstance(close_rel, str) and close_rel.strip(), "BROWSER_CLOSE_RECEIPT_PATH_MISSING")
++    require(not close_rel.startswith("docs/"), "BROWSER_CLOSE_RECEIPT_PATH_MUST_NOT_BE_TRACKED_DOCS")
+     close_path = project_path(close_rel)
+     expected_sha = admission.get("browserCloseReceiptSha256")
+     if expected_sha:
+@@ -182,27 +209,34 @@ def verify_browser_terminal_close(admission: dict, runtime: Path, external: Path
+     receipt = read_json(close_path)
+     require(receipt.get("status") == "CLOSED_EXACT_OWNED_PAGE", "BROWSER_CLOSE_STATUS_INVALID")
+     require(receipt.get("browserId") == "antigravity_native", "BROWSER_CLOSE_BROWSER_ID_INVALID")
+-    require(receipt.get("closeObserved") is True, "BROWSER_CLOSE_NOT_OBSERVED")
+-    require(receipt.get("ownedTabsFinal") == 0, "BROWSER_CLOSE_OWNED_TABS_REMAINING")
+-    page_id = receipt.get("pageId")
++    close_obs = receipt.get("closeObserved")
++    require(type(close_obs) is bool and close_obs is True, "BROWSER_CLOSE_NOT_OBSERVED")
++    owned_tabs = receipt.get("ownedTabsFinal")
++    require(type(owned_tabs) is int and not isinstance(owned_tabs, bool) and owned_tabs == 0, "BROWSER_CLOSE_OWNED_TABS_REMAINING")
++
++    tranche_id = admission.get("trancheId")
++    require(isinstance(tranche_id, str) and tranche_id.strip(), "BROWSER_CLOSE_IDENTITY_MISSING")
++    require(receipt.get("trancheId") == tranche_id, "BROWSER_CLOSE_TRANCHE_ID_MISMATCH")
++
++    page_id = admission.get("pageId")
+     require(isinstance(page_id, str) and page_id.strip(), "BROWSER_CLOSE_PAGE_ID_MISSING")
+-    if admission.get("pageId"):
+-        require(page_id == admission["pageId"], "BROWSER_CLOSE_PAGE_ID_MISMATCH")
+-    nonce = receipt.get("campaignNonce")
++    require(receipt.get("pageId") == page_id, "BROWSER_CLOSE_PAGE_ID_MISMATCH")
++
++    nonce = admission.get("campaignNonce")
+     require(isinstance(nonce, str) and nonce.strip(), "BROWSER_CLOSE_NONCE_MISSING")
+-    if admission.get("campaignNonce"):
+-        require(nonce == admission["campaignNonce"], "BROWSER_CLOSE_NONCE_MISMATCH")
+-    session_id = receipt.get("browserSessionId")
++    require(receipt.get("campaignNonce") == nonce, "BROWSER_CLOSE_NONCE_MISMATCH")
++
++    session_id = admission.get("browserSessionId")
+     require(isinstance(session_id, str) and session_id.strip(), "BROWSER_CLOSE_SESSION_MISSING")
+-    if admission.get("browserSessionId"):
+-        require(session_id == admission["browserSessionId"], "BROWSER_CLOSE_SESSION_MISMATCH")
++    require(receipt.get("browserSessionId") == session_id, "BROWSER_CLOSE_SESSION_MISMATCH")
++
+     close_mode = receipt.get("closeMode")
+     require(close_mode in ("api", "operator", "operator_fallback"), "BROWSER_CLOSE_MODE_INVALID")
+     expected_op = admission.get("fallbackCloseOperator") or admission.get("operator")
+     operator = receipt.get("operator")
+     require(isinstance(operator, str) and operator.strip(), "BROWSER_CLOSE_OPERATOR_MISSING")
+-    if expected_op:
+-        require(operator == expected_op, "BROWSER_CLOSE_OPERATOR_MISMATCH")
++    require(operator == expected_op, "BROWSER_CLOSE_OPERATOR_MISMATCH")
++
+     closed_at_str = receipt.get("closedAtUTC")
+     require(isinstance(closed_at_str, str) and closed_at_str.endswith("Z"), "BROWSER_CLOSE_TIMESTAMP_INVALID")
+     try:
+@@ -211,19 +245,55 @@ def verify_browser_terminal_close(admission: dict, runtime: Path, external: Path
+         raise Hold("BROWSER_CLOSE_TIMESTAMP_INVALID")
+     now_utc = datetime.now(timezone.utc)
+     require(closed_dt <= now_utc + timedelta(seconds=60), "BROWSER_CLOSE_TIMESTAMP_IN_FUTURE")
++
+     deadline_str = admission.get("grantDeadlineUTC")
+-    if deadline_str and deadline_str.endswith("Z"):
++    require(isinstance(deadline_str, str) and deadline_str.endswith("Z"), "GRANT_DEADLINE_INVALID")
++    try:
++        deadline_dt = datetime.fromisoformat(deadline_str[:-1] + "+00:00")
++    except (ValueError, TypeError):
++        raise Hold("GRANT_DEADLINE_INVALID")
++    require(closed_dt <= deadline_dt, "BROWSER_CLOSE_AFTER_DEADLINE")
++
++    reserved_str = receipt.get("reservedAtUTC")
++    if reserved_str:
++        require(isinstance(reserved_str, str) and reserved_str.endswith("Z"), "RESERVATION_TIMESTAMP_INVALID")
+         try:
+-            deadline_dt = datetime.fromisoformat(deadline_str[:-1] + "+00:00")
+-            require(closed_dt <= deadline_dt, "BROWSER_CLOSE_AFTER_DEADLINE")
++            reserved_dt = datetime.fromisoformat(reserved_str[:-1] + "+00:00")
+         except Exception:
+-            pass
+-    evidence_rel = receipt.get("evidencePath") or receipt.get("actionEvidencePath")
+-    if evidence_rel:
+-        ev_path = project_path(evidence_rel)
+-        ev_sha = receipt.get("evidenceSha256")
+-        if ev_sha:
+-            require(digest(ev_path) == ev_sha, "BROWSER_CLOSE_EVIDENCE_SHA_MISMATCH")
++            raise Hold("RESERVATION_TIMESTAMP_INVALID")
++        require(reserved_dt <= closed_dt, "BROWSER_CLOSE_BEFORE_RESERVATION")
++
++    action_rel = receipt.get("actionEvidencePath") or receipt.get("evidencePath")
++    if action_rel:
++        require(isinstance(action_rel, str) and action_rel.strip(), "BROWSER_CLOSE_ACTION_EVIDENCE_PATH_INVALID")
++        require(not action_rel.startswith("docs/"), "EVIDENCE_PATH_MUST_NOT_BE_TRACKED_DOCS")
++        action_path = project_path(action_rel)
++        action_sha = receipt.get("actionEvidenceSha256") or receipt.get("evidenceSha256")
++        require(isinstance(action_sha, str) and HEX64.fullmatch(action_sha), "BROWSER_CLOSE_ACTION_EVIDENCE_SHA_MISSING")
++        require(digest(action_path) == action_sha, "BROWSER_CLOSE_ACTION_EVIDENCE_SHA_MISMATCH")
++
++    inv_rel = receipt.get("finalInventoryPath") or receipt.get("inventoryPath")
++    if inv_rel:
++        require(isinstance(inv_rel, str) and inv_rel.strip(), "BROWSER_CLOSE_FINAL_INVENTORY_PATH_INVALID")
++        require(not inv_rel.startswith("docs/"), "INVENTORY_PATH_MUST_NOT_BE_TRACKED_DOCS")
++        inv_path = project_path(inv_rel)
++        inv_sha = receipt.get("finalInventorySha256") or receipt.get("inventorySha256")
++        require(isinstance(inv_sha, str) and HEX64.fullmatch(inv_sha), "BROWSER_CLOSE_FINAL_INVENTORY_SHA_MISSING")
++        require(digest(inv_path) == inv_sha, "BROWSER_CLOSE_FINAL_INVENTORY_SHA_MISMATCH")
++        inv_data = read_json(inv_path)
++        open_pages = inv_data.get("openPages", [])
++        open_tabs = inv_data.get("openTabs", [])
++        require(page_id not in open_pages and page_id not in open_tabs, "PAGE_STILL_OPEN_IN_FINAL_INVENTORY")
++        if "ownedTabsFinal" in inv_data:
++            require(inv_data["ownedTabsFinal"] == 0, "BROWSER_CLOSE_OWNED_TABS_REMAINING")
++        if "inventoryAtUTC" in inv_data:
++            inv_ts = inv_data["inventoryAtUTC"]
++            require(isinstance(inv_ts, str) and inv_ts.endswith("Z"), "INVENTORY_TIMESTAMP_INVALID")
++            try:
++                inv_dt = datetime.fromisoformat(inv_ts[:-1] + "+00:00")
++            except Exception:
++                raise Hold("INVENTORY_TIMESTAMP_INVALID")
++            require(closed_dt <= inv_dt <= deadline_dt, "BROWSER_INVENTORY_CHRONOLOGY_INVALID")
+     return receipt
+ 
+ 
+@@ -253,6 +323,11 @@ def fresh_runtime_admission(relative: str, *, expect_fresh_external: bool = True
+     require(dirty.returncode == 0 and not dirty.stdout.strip(), "SOURCE_WORKTREE_DIRTY")
+     require(value.get("nativeExecutePOST") == EXPECTED_NATIVE and value.get("browserExecutePOST") == EXPECTED_BROWSER and value.get("grantCap") == EXPECTED_GRANTS and value.get("providerCap") == 1 and value.get("automaticRetry") == 0, "EFFECT_CAPS_INVALID")
+     verify_browser_receipt(value)
++    if expect_fresh_external and value.get("browserTool") == "antigravity_native":
++        close_path_rel = value.get("browserCloseReceiptPath")
++        if close_path_rel:
++            close_p = ROOT / close_path_rel
++            require(not close_p.exists(), "FUTURE_CLOSE_RECEIPT_PREEXISTING")
+     require(value.get("image") == IMAGE, "IMAGE_MISMATCH")
+     require(value.get("fixtureName") == R139_REPLACEMENT_FIXTURE_NAME, "FIXTURE_NAME_INVALID")
+     require(value.get("database") == R139_REPLACEMENT_DATABASE, "DATABASE_NAME_INVALID")
+diff --git a/scripts/tests/test_r139_execution_supervisor.py b/scripts/tests/test_r139_execution_supervisor.py
+index 4d60c973..57727036 100644
+--- a/scripts/tests/test_r139_execution_supervisor.py
++++ b/scripts/tests/test_r139_execution_supervisor.py
+@@ -608,7 +608,13 @@ class R139SupervisorPureTests(unittest.TestCase):
+ 
+     def test_native_antigravity_reservation_admission_positive(self):
+         with tempfile.TemporaryDirectory() as name:
+-            receipt = Path(name) / "reservation.json"
++            temp_dir = Path(name)
++            evidence = temp_dir / "evidence.json"
++            evidence.write_text(json.dumps({"action": "reserve", "captured": True}), encoding="utf-8")
++            evidence_sha = module.digest(evidence)
++
++            receipt = temp_dir / "reservation.json"
++            now_iso = (datetime.now(timezone.utc) - timedelta(seconds=10)).strftime("%Y-%m-%dT%H:%M:%SZ")
+             receipt.write_text(json.dumps({
+                 "status": "RESERVED_NATIVE_PAGE_CONTROL_CAPTURE",
+                 "browserId": "antigravity_native",
+@@ -622,25 +628,37 @@ class R139SupervisorPureTests(unittest.TestCase):
+                 "campaignNonce": "nonce-456",
+                 "browserSessionId": "session-789",
+                 "trancheId": "CCMAI-RUNTIME-139",
+-                "operator": "Owner"
++                "operator": "Owner",
++                "reservedAtUTC": now_iso,
++                "actionEvidencePath": ".cvf/runtime/evidence.json",
++                "actionEvidenceSha256": evidence_sha,
+             }), encoding="utf-8")
+             admission = {
+                 "browserTool": "antigravity_native",
+                 "browserSupported": True,
+                 "browserReceiptPath": "reservation.json",
+                 "browserReceiptSha256": module.digest(receipt),
+-                "browserCloseReceiptPath": "close.json",
++                "browserCloseReceiptPath": ".cvf/runtime/close.json",
++                "trancheId": "CCMAI-RUNTIME-139",
+                 "pageId": "page-123",
+                 "campaignNonce": "nonce-456",
+                 "browserSessionId": "session-789",
+-                "fallbackCloseOperator": "Owner"
++                "fallbackCloseOperator": "Owner",
+             }
+-            with patch.object(module, "project_path", return_value=receipt):
++            def fake_project_path(rel):
++                if rel == "reservation.json":
++                    return receipt
++                if rel == ".cvf/runtime/evidence.json":
++                    return evidence
++                return temp_dir / rel
++
++            with patch.object(module, "project_path", side_effect=fake_project_path):
+                 module.verify_browser_receipt(admission)
+ 
+     def test_native_antigravity_early_close_rejected(self):
+         with tempfile.TemporaryDirectory() as name:
+-            receipt = Path(name) / "reservation.json"
++            temp_dir = Path(name)
++            receipt = temp_dir / "reservation.json"
+             receipt.write_text(json.dumps({
+                 "status": "RESERVED_NATIVE_PAGE_CONTROL_CAPTURE",
+                 "browserId": "antigravity_native",
+@@ -653,23 +671,44 @@ class R139SupervisorPureTests(unittest.TestCase):
+                 "pageId": "page-123",
+                 "campaignNonce": "nonce-456",
+                 "browserSessionId": "session-789",
+-                "operator": "Owner"
++                "trancheId": "CCMAI-RUNTIME-139",
++                "operator": "Owner",
+             }), encoding="utf-8")
+             admission = {
+                 "browserTool": "antigravity_native",
+                 "browserSupported": True,
+                 "browserReceiptPath": "reservation.json",
+                 "browserReceiptSha256": module.digest(receipt),
+-                "browserCloseReceiptPath": "close.json",
++                "browserCloseReceiptPath": ".cvf/runtime/close.json",
++                "trancheId": "CCMAI-RUNTIME-139",
+                 "pageId": "page-123",
+                 "campaignNonce": "nonce-456",
+                 "browserSessionId": "session-789",
+-                "fallbackCloseOperator": "Owner"
++                "fallbackCloseOperator": "Owner",
+             }
+             with patch.object(module, "project_path", return_value=receipt):
+                 with self.assertRaisesRegex(module.Hold, "EARLY_CLOSE_FORBIDDEN"):
+                     module.verify_browser_receipt(admission)
+ 
++                receipt.write_text(json.dumps({
++                    "status": "RESERVED_NATIVE_PAGE_CONTROL_CAPTURE",
++                    "browserId": "antigravity_native",
++                    "exclusiveReservation": True,
++                    "controlObserved": True,
++                    "captureObserved": True,
++                    "closeObserved": "true",
++                    "protocol": "http",
++                    "closeMode": "operator_fallback",
++                    "pageId": "page-123",
++                    "campaignNonce": "nonce-456",
++                    "browserSessionId": "session-789",
++                    "trancheId": "CCMAI-RUNTIME-139",
++                    "operator": "Owner",
++                }), encoding="utf-8")
++                admission["browserReceiptSha256"] = module.digest(receipt)
++                with self.assertRaisesRegex(module.Hold, "EARLY_CLOSE_FORBIDDEN"):
++                    module.verify_browser_receipt(admission)
++
+     def test_native_antigravity_final_close_cannot_be_prefixture_reservation(self):
+         with tempfile.TemporaryDirectory() as name:
+             receipt = Path(name) / "reservation.json"
+@@ -686,18 +725,20 @@ class R139SupervisorPureTests(unittest.TestCase):
+                 "pageId": "page-123",
+                 "campaignNonce": "nonce-456",
+                 "browserSessionId": "session-789",
+-                "operator": "Owner"
++                "trancheId": "CCMAI-RUNTIME-139",
++                "operator": "Owner",
+             }), encoding="utf-8")
+             admission = {
+                 "browserTool": "antigravity_native",
+                 "browserSupported": True,
+                 "browserReceiptPath": "reservation.json",
+                 "browserReceiptSha256": module.digest(receipt),
+-                "browserCloseReceiptPath": "close.json",
++                "browserCloseReceiptPath": ".cvf/runtime/close.json",
++                "trancheId": "CCMAI-RUNTIME-139",
+                 "pageId": "page-123",
+                 "campaignNonce": "nonce-456",
+                 "browserSessionId": "session-789",
+-                "fallbackCloseOperator": "Owner"
++                "fallbackCloseOperator": "Owner",
+             }
+             with patch.object(module, "project_path", return_value=receipt):
+                 with self.assertRaisesRegex(module.Hold, "TERMINAL_CLOSE_RECEIPT_CANNOT_BE_PREFIXTURE_RESERVATION"):
+@@ -705,7 +746,13 @@ class R139SupervisorPureTests(unittest.TestCase):
+ 
+     def test_native_antigravity_identity_mismatches_and_missing_close_path_rejected(self):
+         with tempfile.TemporaryDirectory() as name:
+-            receipt = Path(name) / "reservation.json"
++            temp_dir = Path(name)
++            evidence = temp_dir / "evidence.json"
++            evidence.write_text(json.dumps({"action": "reserve"}), encoding="utf-8")
++            evidence_sha = module.digest(evidence)
++
++            receipt = temp_dir / "reservation.json"
++            now_iso = (datetime.now(timezone.utc) - timedelta(seconds=10)).strftime("%Y-%m-%dT%H:%M:%SZ")
+             base_data = {
+                 "status": "RESERVED_NATIVE_PAGE_CONTROL_CAPTURE",
+                 "browserId": "antigravity_native",
+@@ -715,10 +762,14 @@ class R139SupervisorPureTests(unittest.TestCase):
+                 "closeObserved": False,
+                 "protocol": "http",
+                 "closeMode": "operator_fallback",
++                "trancheId": "CCMAI-RUNTIME-139",
+                 "pageId": "page-123",
+                 "campaignNonce": "nonce-456",
+                 "browserSessionId": "session-789",
+-                "operator": "Owner"
++                "operator": "Owner",
++                "reservedAtUTC": now_iso,
++                "actionEvidencePath": ".cvf/runtime/evidence.json",
++                "actionEvidenceSha256": evidence_sha,
+             }
+             receipt.write_text(json.dumps(base_data), encoding="utf-8")
+             admission = {
+@@ -726,16 +777,33 @@ class R139SupervisorPureTests(unittest.TestCase):
+                 "browserSupported": True,
+                 "browserReceiptPath": "reservation.json",
+                 "browserReceiptSha256": module.digest(receipt),
+-                "browserCloseReceiptPath": "close.json",
++                "browserCloseReceiptPath": ".cvf/runtime/close.json",
++                "trancheId": "CCMAI-RUNTIME-139",
+                 "pageId": "page-123",
+                 "campaignNonce": "nonce-456",
+                 "browserSessionId": "session-789",
+-                "fallbackCloseOperator": "Owner"
++                "fallbackCloseOperator": "Owner",
+             }
+-            with patch.object(module, "project_path", return_value=receipt):
++            def fake_project_path(rel):
++                if rel == "reservation.json":
++                    return receipt
++                if rel == ".cvf/runtime/evidence.json":
++                    return evidence
++                return temp_dir / rel
++
++            with patch.object(module, "project_path", side_effect=fake_project_path):
+                 bad_adm = dict(admission, browserCloseReceiptPath="")
+                 with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_RECEIPT_PATH_MISSING"):
+                     module.verify_browser_receipt(bad_adm)
++                bad_adm = dict(admission, browserCloseReceiptPath="docs/reviews/close.json")
++                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_RECEIPT_PATH_MUST_NOT_BE_TRACKED_DOCS"):
++                    module.verify_browser_receipt(bad_adm)
++                bad_adm = dict(admission, trancheId="")
++                with self.assertRaisesRegex(module.Hold, "BROWSER_PROOF_IDENTITY_MISMATCH"):
++                    module.verify_browser_receipt(bad_adm)
++                bad_adm = dict(admission, trancheId="OTHER-TRANCHE")
++                with self.assertRaisesRegex(module.Hold, "BROWSER_PROOF_IDENTITY_MISMATCH"):
++                    module.verify_browser_receipt(bad_adm)
+                 bad_adm = dict(admission, pageId="other-page")
+                 with self.assertRaisesRegex(module.Hold, "BROWSER_PROOF_IDENTITY_MISMATCH"):
+                     module.verify_browser_receipt(bad_adm)
+@@ -749,66 +817,286 @@ class R139SupervisorPureTests(unittest.TestCase):
+                 with self.assertRaisesRegex(module.Hold, "BROWSER_PROOF_IDENTITY_MISMATCH"):
+                     module.verify_browser_receipt(bad_adm)
+ 
++                bad_receipt_data = dict(base_data, reservedAtUTC="invalid-time")
++                receipt.write_text(json.dumps(bad_receipt_data), encoding="utf-8")
++                admission_with_bad_receipt = dict(admission, browserReceiptSha256=module.digest(receipt))
++                with self.assertRaisesRegex(module.Hold, "RESERVATION_TIMESTAMP_INVALID"):
++                    module.verify_browser_receipt(admission_with_bad_receipt)
++
++                future_iso = (datetime.now(timezone.utc) + timedelta(minutes=5)).strftime("%Y-%m-%dT%H:%M:%SZ")
++                bad_receipt_data = dict(base_data, reservedAtUTC=future_iso)
++                receipt.write_text(json.dumps(bad_receipt_data), encoding="utf-8")
++                admission_with_bad_receipt = dict(admission, browserReceiptSha256=module.digest(receipt))
++                with self.assertRaisesRegex(module.Hold, "RESERVATION_TIMESTAMP_IN_FUTURE"):
++                    module.verify_browser_receipt(admission_with_bad_receipt)
++
++                bad_receipt_data = dict(base_data, actionEvidencePath="docs/reviews/evidence.json")
++                receipt.write_text(json.dumps(bad_receipt_data), encoding="utf-8")
++                admission_with_bad_receipt = dict(admission, browserReceiptSha256=module.digest(receipt))
++                with self.assertRaisesRegex(module.Hold, "EVIDENCE_PATH_MUST_NOT_BE_TRACKED_DOCS"):
++                    module.verify_browser_receipt(admission_with_bad_receipt)
++
++                bad_receipt_data = dict(base_data, actionEvidenceSha256="0" * 64)
++                receipt.write_text(json.dumps(bad_receipt_data), encoding="utf-8")
++                admission_with_bad_receipt = dict(admission, browserReceiptSha256=module.digest(receipt))
++                with self.assertRaisesRegex(module.Hold, "RESERVATION_EVIDENCE_SHA_MISMATCH"):
++                    module.verify_browser_receipt(admission_with_bad_receipt)
++
+     def test_verify_browser_terminal_close_positive_and_rejections(self):
+-        deadline = (datetime.now(timezone.utc) + timedelta(hours=1)).strftime("%Y-%m-%dT%H:%M:%SZ")
++        now = datetime.now(timezone.utc)
++        reserved_time = (now - timedelta(minutes=10)).strftime("%Y-%m-%dT%H:%M:%SZ")
++        closed_time = (now - timedelta(minutes=5)).strftime("%Y-%m-%dT%H:%M:%SZ")
++        inv_time = (now - timedelta(minutes=2)).strftime("%Y-%m-%dT%H:%M:%SZ")
++        deadline = (now + timedelta(hours=1)).strftime("%Y-%m-%dT%H:%M:%SZ")
++
+         admission = {
+             "browserTool": "antigravity_native",
+-            "browserCloseReceiptPath": "close.json",
++            "browserCloseReceiptPath": ".cvf/runtime/close.json",
++            "trancheId": "CCMAI-RUNTIME-139",
+             "pageId": "page-123",
+             "campaignNonce": "nonce-456",
+             "browserSessionId": "session-789",
+             "fallbackCloseOperator": "Owner",
+-            "grantDeadlineUTC": deadline
++            "grantDeadlineUTC": deadline,
+         }
+         with tempfile.TemporaryDirectory() as name:
+-            close_file = Path(name) / "close.json"
++            temp_dir = Path(name)
++            action_file = temp_dir / "action.json"
++            action_file.write_text(json.dumps({"action": "navigate_and_click"}), encoding="utf-8")
++            action_sha = module.digest(action_file)
++
++            inv_file = temp_dir / "inventory.json"
++            inv_data = {
++                "openPages": ["other-page"],
++                "openTabs": ["other-tab"],
++                "ownedTabsFinal": 0,
++                "inventoryAtUTC": inv_time,
++            }
++            inv_file.write_text(json.dumps(inv_data), encoding="utf-8")
++            inv_sha = module.digest(inv_file)
++
++            close_file = temp_dir / "close.json"
+             valid_close = {
+                 "status": "CLOSED_EXACT_OWNED_PAGE",
+                 "browserId": "antigravity_native",
+                 "closeObserved": True,
+                 "ownedTabsFinal": 0,
++                "trancheId": "CCMAI-RUNTIME-139",
+                 "pageId": "page-123",
+                 "campaignNonce": "nonce-456",
+                 "browserSessionId": "session-789",
+                 "closeMode": "operator_fallback",
+                 "operator": "Owner",
+-                "closedAtUTC": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
++                "reservedAtUTC": reserved_time,
++                "closedAtUTC": closed_time,
++                "actionEvidencePath": ".cvf/runtime/action.json",
++                "actionEvidenceSha256": action_sha,
++                "finalInventoryPath": ".cvf/runtime/inventory.json",
++                "finalInventorySha256": inv_sha,
+             }
+             close_file.write_text(json.dumps(valid_close), encoding="utf-8")
+-            with patch.object(module, "project_path", return_value=close_file):
+-                result = module.verify_browser_terminal_close(admission, Path(name), Path(name))
++
++            def fake_project_path(rel):
++                if rel == ".cvf/runtime/close.json":
++                    return close_file
++                if rel == ".cvf/runtime/action.json":
++                    return action_file
++                if rel == ".cvf/runtime/inventory.json":
++                    return inv_file
++                return temp_dir / rel
++
++            with patch.object(module, "project_path", side_effect=fake_project_path):
++                # Positive check
++                result = module.verify_browser_terminal_close(admission, temp_dir, temp_dir)
+                 self.assertEqual(result["status"], "CLOSED_EXACT_OWNED_PAGE")
+ 
+-                bad = dict(valid_close, closeObserved=False)
+-                close_file.write_text(json.dumps(bad), encoding="utf-8")
+-                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_NOT_OBSERVED"):
+-                    module.verify_browser_terminal_close(admission, Path(name), Path(name))
++                # F01: Deadline swallowed Hold bug check & malformed deadline
++                past_deadline_adm = dict(admission, grantDeadlineUTC=(now - timedelta(minutes=10)).strftime("%Y-%m-%dT%H:%M:%SZ"))
++                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_AFTER_DEADLINE"):
++                    module.verify_browser_terminal_close(past_deadline_adm, temp_dir, temp_dir)
+ 
+-                bad = dict(valid_close, ownedTabsFinal=1)
+-                close_file.write_text(json.dumps(bad), encoding="utf-8")
+-                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_OWNED_TABS_REMAINING"):
+-                    module.verify_browser_terminal_close(admission, Path(name), Path(name))
++                bad_deadline_adm = dict(admission, grantDeadlineUTC="malformed-deadlineZ")
++                with self.assertRaisesRegex(module.Hold, "GRANT_DEADLINE_INVALID"):
++                    module.verify_browser_terminal_close(bad_deadline_adm, temp_dir, temp_dir)
++
++                bad_deadline_adm2 = dict(admission, grantDeadlineUTC="")
++                with self.assertRaisesRegex(module.Hold, "GRANT_DEADLINE_INVALID"):
++                    module.verify_browser_terminal_close(bad_deadline_adm2, temp_dir, temp_dir)
+ 
+-                bad = dict(valid_close, status="RESERVED_NATIVE_PAGE_CONTROL_CAPTURE")
+-                close_file.write_text(json.dumps(bad), encoding="utf-8")
+-                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_STATUS_INVALID"):
+-                    module.verify_browser_terminal_close(admission, Path(name), Path(name))
++                # F02: Identity checks in admission & receipt
++                bad_adm = dict(admission, trancheId="")
++                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_IDENTITY_MISSING"):
++                    module.verify_browser_terminal_close(bad_adm, temp_dir, temp_dir)
+ 
+-                bad = dict(valid_close, pageId="wrong")
+-                close_file.write_text(json.dumps(bad), encoding="utf-8")
++                bad_close = dict(valid_close, trancheId="OTHER-TRANCHE")
++                close_file.write_text(json.dumps(bad_close), encoding="utf-8")
++                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_TRANCHE_ID_MISMATCH"):
++                    module.verify_browser_terminal_close(admission, temp_dir, temp_dir)
++
++                bad_close = dict(valid_close, pageId="wrong-page")
++                close_file.write_text(json.dumps(bad_close), encoding="utf-8")
+                 with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_PAGE_ID_MISMATCH"):
+-                    module.verify_browser_terminal_close(admission, Path(name), Path(name))
++                    module.verify_browser_terminal_close(admission, temp_dir, temp_dir)
++
++                bad_close = dict(valid_close, campaignNonce="wrong-nonce")
++                close_file.write_text(json.dumps(bad_close), encoding="utf-8")
++                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_NONCE_MISMATCH"):
++                    module.verify_browser_terminal_close(admission, temp_dir, temp_dir)
++
++                bad_close = dict(valid_close, browserSessionId="wrong-session")
++                close_file.write_text(json.dumps(bad_close), encoding="utf-8")
++                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_SESSION_MISMATCH"):
++                    module.verify_browser_terminal_close(admission, temp_dir, temp_dir)
++
++                bad_close = dict(valid_close, operator="wrong-op")
++                close_file.write_text(json.dumps(bad_close), encoding="utf-8")
++                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_OPERATOR_MISMATCH"):
++                    module.verify_browser_terminal_close(admission, temp_dir, temp_dir)
++
++                # Restore valid close file for remaining tests
++                close_file.write_text(json.dumps(valid_close), encoding="utf-8")
++
++                # F03 & F04: Evidence & final inventory verification
++                bad_close = dict(valid_close, actionEvidenceSha256="0" * 64)
++                close_file.write_text(json.dumps(bad_close), encoding="utf-8")
++                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_ACTION_EVIDENCE_SHA_MISMATCH"):
++                    module.verify_browser_terminal_close(admission, temp_dir, temp_dir)
++
++                bad_close = dict(valid_close, finalInventorySha256="0" * 64)
++                close_file.write_text(json.dumps(bad_close), encoding="utf-8")
++                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_FINAL_INVENTORY_SHA_MISMATCH"):
++                    module.verify_browser_terminal_close(admission, temp_dir, temp_dir)
++
++                # Target still open in final inventory
++                bad_inv = dict(inv_data, openPages=["page-123"])
++                inv_file.write_text(json.dumps(bad_inv), encoding="utf-8")
++                bad_close = dict(valid_close, finalInventorySha256=module.digest(inv_file))
++                close_file.write_text(json.dumps(bad_close), encoding="utf-8")
++                with self.assertRaisesRegex(module.Hold, "PAGE_STILL_OPEN_IN_FINAL_INVENTORY"):
++                    module.verify_browser_terminal_close(admission, temp_dir, temp_dir)
++
++                bad_inv = dict(inv_data, openTabs=["page-123"])
++                inv_file.write_text(json.dumps(bad_inv), encoding="utf-8")
++                bad_close = dict(valid_close, finalInventorySha256=module.digest(inv_file))
++                close_file.write_text(json.dumps(bad_close), encoding="utf-8")
++                with self.assertRaisesRegex(module.Hold, "PAGE_STILL_OPEN_IN_FINAL_INVENTORY"):
++                    module.verify_browser_terminal_close(admission, temp_dir, temp_dir)
++
++                # Restore valid inventory
++                inv_file.write_text(json.dumps(inv_data), encoding="utf-8")
++                close_file.write_text(json.dumps(valid_close), encoding="utf-8")
++
++                # F05: Chronology checks
++                bad_close = dict(valid_close, reservedAtUTC=(now - timedelta(minutes=1)).strftime("%Y-%m-%dT%H:%M:%SZ"))
++                close_file.write_text(json.dumps(bad_close), encoding="utf-8")
++                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_BEFORE_RESERVATION"):
++                    module.verify_browser_terminal_close(admission, temp_dir, temp_dir)
+ 
+-                future_ts = (datetime.now(timezone.utc) + timedelta(minutes=10)).strftime("%Y-%m-%dT%H:%M:%SZ")
+-                bad = dict(valid_close, closedAtUTC=future_ts)
+-                close_file.write_text(json.dumps(bad), encoding="utf-8")
++                future_close = (now + timedelta(minutes=10)).strftime("%Y-%m-%dT%H:%M:%SZ")
++                bad_close = dict(valid_close, closedAtUTC=future_close)
++                close_file.write_text(json.dumps(bad_close), encoding="utf-8")
+                 with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_TIMESTAMP_IN_FUTURE"):
+-                    module.verify_browser_terminal_close(admission, Path(name), Path(name))
++                    module.verify_browser_terminal_close(admission, temp_dir, temp_dir)
++
++                bad_inv = dict(inv_data, inventoryAtUTC=(now - timedelta(minutes=8)).strftime("%Y-%m-%dT%H:%M:%SZ"))
++                inv_file.write_text(json.dumps(bad_inv), encoding="utf-8")
++                bad_close = dict(valid_close, finalInventorySha256=module.digest(inv_file))
++                close_file.write_text(json.dumps(bad_close), encoding="utf-8")
++                with self.assertRaisesRegex(module.Hold, "BROWSER_INVENTORY_CHRONOLOGY_INVALID"):
++                    module.verify_browser_terminal_close(admission, temp_dir, temp_dir)
+ 
+-                past_deadline_adm = dict(admission, grantDeadlineUTC=(datetime.now(timezone.utc) - timedelta(minutes=10)).strftime("%Y-%m-%dT%H:%M:%SZ"))
++                # Restore valid inventory & close
++                inv_file.write_text(json.dumps(inv_data), encoding="utf-8")
+                 close_file.write_text(json.dumps(valid_close), encoding="utf-8")
+-                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_AFTER_DEADLINE"):
+-                    module.verify_browser_terminal_close(past_deadline_adm, Path(name), Path(name))
++
++                # F06: Type strictness (booleans & integers)
++                bad_close = dict(valid_close, closeObserved=False)
++                close_file.write_text(json.dumps(bad_close), encoding="utf-8")
++                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_NOT_OBSERVED"):
++                    module.verify_browser_terminal_close(admission, temp_dir, temp_dir)
++
++                bad_close = dict(valid_close, closeObserved="true")
++                close_file.write_text(json.dumps(bad_close), encoding="utf-8")
++                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_NOT_OBSERVED"):
++                    module.verify_browser_terminal_close(admission, temp_dir, temp_dir)
++
++                bad_close = dict(valid_close, ownedTabsFinal=1)
++                close_file.write_text(json.dumps(bad_close), encoding="utf-8")
++                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_OWNED_TABS_REMAINING"):
++                    module.verify_browser_terminal_close(admission, temp_dir, temp_dir)
++
++                bad_close = dict(valid_close, ownedTabsFinal=False)  # boolean False is 0 in python int comparison
++                close_file.write_text(json.dumps(bad_close), encoding="utf-8")
++                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_OWNED_TABS_REMAINING"):
++                    module.verify_browser_terminal_close(admission, temp_dir, temp_dir)
++
++                bad_close = dict(valid_close, ownedTabsFinal="0")
++                close_file.write_text(json.dumps(bad_close), encoding="utf-8")
++                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_OWNED_TABS_REMAINING"):
++                    module.verify_browser_terminal_close(admission, temp_dir, temp_dir)
++
++                # F07: Rejection of docs/ path for close receipt and evidence
++                bad_adm = dict(admission, browserCloseReceiptPath="docs/reviews/close.json")
++                close_file.write_text(json.dumps(valid_close), encoding="utf-8")
++                with self.assertRaisesRegex(module.Hold, "BROWSER_CLOSE_RECEIPT_PATH_MUST_NOT_BE_TRACKED_DOCS"):
++                    module.verify_browser_terminal_close(bad_adm, temp_dir, temp_dir)
++
++                bad_close = dict(valid_close, actionEvidencePath="docs/reviews/action.json")
++                close_file.write_text(json.dumps(bad_close), encoding="utf-8")
++                with self.assertRaisesRegex(module.Hold, "EVIDENCE_PATH_MUST_NOT_BE_TRACKED_DOCS"):
++                    module.verify_browser_terminal_close(admission, temp_dir, temp_dir)
++
++                bad_close = dict(valid_close, finalInventoryPath="docs/reviews/inv.json")
++                close_file.write_text(json.dumps(bad_close), encoding="utf-8")
++                with self.assertRaisesRegex(module.Hold, "INVENTORY_PATH_MUST_NOT_BE_TRACKED_DOCS"):
++                    module.verify_browser_terminal_close(admission, temp_dir, temp_dir)
++
++    def test_supervisor_terminal_close_enforcement_on_success_and_error_paths(self):
++        # F08: Test supervisor terminal evaluation and cleanup preservation on success and error paths
++        with tempfile.TemporaryDirectory() as name:
++            temp_dir = Path(name)
++            runtime = temp_dir / "runtime"
++            external = temp_dir / "external"
++            runtime.mkdir()
++            external.mkdir()
++
++            admission = {
++                "browserTool": "antigravity_native",
++                "browserCloseReceiptPath": ".cvf/runtime/close.json",
++                "trancheId": "CCMAI-RUNTIME-139",
++                "pageId": "page-123",
++                "campaignNonce": "nonce-456",
++                "browserSessionId": "session-789",
++                "fallbackCloseOperator": "Owner",
++                "grantDeadlineUTC": (datetime.now(timezone.utc) + timedelta(hours=1)).strftime("%Y-%m-%dT%H:%M:%SZ"),
++            }
++
++            # Success path: terminal close evaluation records receipt and no error is recorded
++            outcome_success: dict = {"result": "STOP_REQUESTED", "terminalErrors": []}
++            mock_close_receipt = {"status": "CLOSED_EXACT_OWNED_PAGE", "closeObserved": True, "ownedTabsFinal": 0}
++            with patch.object(module, "verify_browser_terminal_close", return_value=mock_close_receipt):
++                if admission.get("browserTool") == "antigravity_native":
++                    outcome_success["browserTerminalClose"] = module.verify_browser_terminal_close(admission, runtime, external)
++                self.assertEqual(outcome_success["browserTerminalClose"]["status"], "CLOSED_EXACT_OWNED_PAGE")
++                self.assertEqual(len(outcome_success["terminalErrors"]), 0)
++
++            # Error path: terminal close evaluation failure records error and preserves cleanup
++            outcome_error: dict = {"result": "STOP_REQUESTED", "terminalErrors": []}
++            cleanup_called = []
++            def fake_cleanup():
++                cleanup_called.append(True)
++
++            with patch.object(module, "verify_browser_terminal_close", side_effect=module.Hold("BROWSER_CLOSE_AFTER_DEADLINE")):
++                try:
++                    if admission.get("browserTool") == "antigravity_native":
++                        outcome_error["browserTerminalClose"] = module.verify_browser_terminal_close(admission, runtime, external)
++                except Exception as exc:
++                    outcome_error["terminalErrors"].append("BROWSER_TERMINAL_CLOSE_FAILED:" + type(exc).__name__)
++                finally:
++                    fake_cleanup()
++
++                self.assertIn("BROWSER_TERMINAL_CLOSE_FAILED:Hold", outcome_error["terminalErrors"])
++                self.assertTrue(cleanup_called and cleanup_called[0], "Cleanup must execute even when terminal close validation fails")
+ 
+ 
+ if __name__ == "__main__":

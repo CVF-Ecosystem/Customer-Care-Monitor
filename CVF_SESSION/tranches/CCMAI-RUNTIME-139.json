@@ -130,7 +130,11 @@
     "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_SOURCE_WORKER_RETURN_2026-10-23.md",
     "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_SOURCE_ROOT_REVIEW_2026-10-23.md",
     "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-INTEGRATED-REPAIR-ADMISSION.json",
-    "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_REPAIR_ADMISSION_REVIEW_2026-10-23.md"
+    "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_REPAIR_ADMISSION_REVIEW_2026-10-23.md",
+    "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_SOURCE_REPAIR_RETURN_2026-10-23.md",
+    "docs/reviews/R139_ANTIGRAVITY_REPAIR_RESULT_REVIEW_AND_COST_DECISION_2026-10-23.md",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-CONTRACT-CORRECTION-ADMISSION.json",
+    "docs/reviews/R139_ANTIGRAVITY_CONTRACT_CORRECTION_ADMISSION_REVIEW_2026-10-23.md"
   ],
   "disposition": "Current Antigravity G0 campaign1/1 spent, independent HOLD_MISSING_BROWSER_OWNED_TAB_PRIMITIVES with qualifications: bounded child startup/wait/self-stop observed, parent HOLD/missing stop marker/null original listener check, recording placeholder, raw native terminal/env/timing/postmortem gaps retained. No combined G0 pass/replay/new effects. Antigravity remains Owner-selected; Root consolidates exact PageId/dedicated-page operator-close proposal with remaining integrated R139 requirements before any fresh authority. Product B/G1/G2/G3/E05/E06/fullM3 OPEN/blocked; all old spent/uncertain counters/resources/tab/accounts retained.",
   "freeze": "OPEN",
@@ -742,7 +746,7 @@
   },
   "x-antigravityIntegratedSourceReturn20261023": {
     "date": "2026-10-23",
-    "status": "CHANGES_REQUIRED_MANUAL_REPAIR_READY_ON_COMMITTED_DISPATCH",
+    "status": "FIRST_MANUAL_REPAIR_RETURN_CHANGES_REQUIRED",
     "workerReturn": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_SOURCE_WORKER_RETURN_2026-10-23.md",
     "rootReview": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_SOURCE_ROOT_REVIEW_2026-10-23.md",
     "repairAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-INTEGRATED-REPAIR-ADMISSION.json",
@@ -757,7 +761,7 @@
       "rootPython": 0,
       "pureGo": 0
     },
-    "manualRepairRoundsUsed": 0,
+    "manualRepairRoundsUsed": 1,
     "newVerificationSlots": 0,
     "runtimeExecutableNow": false,
     "providerExecutableNow": false,
@@ -770,5 +774,31 @@
       "RootOfflineCompile": 1,
       "RootPureGo": 1
     }
+  },
+  "x-antigravityNativeContractCorrection20261023": {
+    "date": "2026-10-23",
+    "status": "CHANGES_REQUIRED_C1_C4_CORRECTION_ADMITTED_READY_ON_COMMITTED_DISPATCH",
+    "repairReturn": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_SOURCE_REPAIR_RETURN_2026-10-23.md",
+    "rootReviewAndCostDecision": "docs/reviews/R139_ANTIGRAVITY_REPAIR_RESULT_REVIEW_AND_COST_DECISION_2026-10-23.md",
+    "correctionAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-CONTRACT-CORRECTION-ADMISSION.json",
+    "independentReview": "docs/reviews/R139_ANTIGRAVITY_CONTRACT_CORRECTION_ADMISSION_REVIEW_2026-10-23.md",
+    "hashDrift": false,
+    "sourceAuthoringPassesCompleted": 2,
+    "manualRepairRoundsCompleted": 1,
+    "proposedCorrectionRoundsUsed": 0,
+    "reviewCostStatus": "ESCALATION_RECORDED_DISPOSED_BY_ROOT_REPLAN_AND_INDEPENDENT_LUNA_REVIEW",
+    "RootSourceChecksUsed": {
+      "Python": 0,
+      "compile": 0,
+      "pureGo": 0
+    },
+    "newCheckOrEffectSlots": 0,
+    "runtimeExecutableNow": false,
+    "providerExecutableNow": false,
+    "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+    "correctionAdmissionSha256": "4a7e2d30b13c783dda1248e148908e11c6ebbab418e61280d1cc3fd0fc26317a",
+    "RootObservedDiff": "docs/reviews/probes/r139_integrated_20261021/antigravity_integrated_source_20261023/root_observed_repair.diff",
+    "RootObservedDiffSha256": "b66b4e2b49a0bc25ae25a28627b4715faf50817f57d60473e59a961602b93209",
+    "correctionRoundsUsed": 0
   }
 }

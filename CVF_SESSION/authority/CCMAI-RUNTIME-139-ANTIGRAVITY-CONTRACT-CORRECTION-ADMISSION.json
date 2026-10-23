@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "DISPATCHER_OWNED_REVIEW_COST_CONTROLLED_CONTRACT_CORRECTION",
+  "date": "2026-10-23",
+  "baseCommit": "66bae8d21f86042f35198d911399d7e8147188af",
+  "riskCeiling": "R2",
+  "parentRepairAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-INTEGRATED-REPAIR-ADMISSION.json",
+  "parentRepairAdmissionSha256": "2dea7e9ebc15146f49928833dee2b699c73f92080f441f954cf41279e239661a",
+  "parentSourceAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-INTEGRATED-SOURCE-ADMISSION.json",
+  "rootReviewAndCostDecision": "docs/reviews/R139_ANTIGRAVITY_REPAIR_RESULT_REVIEW_AND_COST_DECISION_2026-10-23.md",
+  "reviewCostStatus": "ESCALATION_RECORDED_REQUIRES_INDEPENDENT_DISPOSITION",
+  "authorityBasis": "Standing user AGENTS Governance Latency / Approval Continuity and Owner-approved one R139 native predicate correction. This is a proposed explicit manual scope-preserving correction after cost escalation, not parent self-repair permission/counter reset. Independent reviewer must accept authority/cost disposition before committed dispatch; otherwise HOLD for exact genuine boundary.",
+  "roles": {
+    "implementationWorker": "Owner-designated Antigravity worker",
+    "reviewer": "Root independent source REVIEWER",
+    "admissionReviewer": "Luna Max independent admission REVIEWER",
+    "commitSteward": "Root"
+  },
+  "allowedSourcePaths": [
+    "scripts/r139_execution_supervisor.py",
+    "scripts/tests/test_r139_execution_supervisor.py",
+    "backend/api/handlers/intervention_execution_browser_test.go"
+  ],
+  "sourceBeforeCorrectionSha256": {
+    "scripts/r139_execution_supervisor.py": "830d12f5d36e849daf9558163ecf16ae5e74a5e3926a28fa164cadc5b0f7d023",
+    "scripts/tests/test_r139_execution_supervisor.py": "d882c5f90356a87fd1da491ba137ed290bcc5cfb40e40082366ee1dba775223f",
+    "backend/api/handlers/intervention_execution_browser_test.go": "19f923bc0b261d7e6279de302d55bf79e990abb1a96a5c16a2ae144788d68cf1"
+  },
+  "protectedSourceSha256": {
+    "scripts/r139_vite_config.mjs.template": "82a1d9ae8576fcd46718945d0a5cb44eb963a2a14d436a16e2bcdfb72b26bee9",
+    "backend/go.mod": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+    "backend/go.sum": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b"
+  },
+  "manualCorrectionRoundCap": 1,
+  "workerSourceCheckCap": 0,
+  "newPythonSlots": 0,
+  "newCompileSlots": 0,
+  "newPureGoSlots": 0,
+  "newProviderOrResourceSlots": 0,
+  "automaticRetry": 0,
+  "furtherCorrectionRounds": 0,
+  "oldUseUnchanged": {
+    "initialAuthoring": 1,
+    "initialWorkerPython": 1,
+    "firstManualRepair": 1,
+    "RootPython": 0,
+    "compile": 0,
+    "pureGo": 0
+  },
+  "existingCheckCustody": "Root only: original unused Python1 -> offlineCompile1 -> exact audited pureGo1, parent source seed tools/argv/env/timeouts. Static acceptance precedes any source check; no reset or new invocation.",
+  "workerReturn": "docs/reviews/R139_ANTIGRAVITY_NATIVE_CONTRACT_CORRECTION_RETURN_2026-10-23.md",
+  "workerEvidenceRoot": "docs/reviews/probes/r139_integrated_20261021/antigravity_integrated_source_20261023",
+  "requirements": "Implement C1-C4 as one complete correction within the three paths; include actual acceptance tests but execute none. No source/runtime tool discovery, compiler/binary/browser/probe/Docker/DB/key/provider/server invocation. Ordinary editing/read-only metadata/mandatory repository governance gates allowed. No helper file or third-party stack, source product/Vite/dependency/Core/gate/history/old-receipt/seed/continuity/catalog edits, commit or delegation by worker.",
+  "dispatchBinding": "Independent admission/cost decision plus gates and exact committed Root dispatch HEAD required. Initial clean tracked tree, current source/protected hashes and immutable parents must match. Worker acknowledges role in new return before any source edit. Source in dispatch is explicitly CHANGES_REQUIRED, not accepted.",
+  "runtimeExecutableNow": false,
+  "providerExecutableNow": false,
+  "ownerFutureEnvelopeUnchanged": "Existing combined approval: one prospective Antigravity campaign/API1/USD1/Owner exact-page close fallback, conditional on accepted source/operational pins and committed runtime supplement. No new effects activated here.",
+  "independentAdmissionReview": "docs/reviews/R139_ANTIGRAVITY_CONTRACT_CORRECTION_ADMISSION_REVIEW_2026-10-23.md",
+  "status": "MANUAL_CORRECTION_READY_ONLY_AFTER_INDEPENDENT_COST_REVIEW_GATES_COMMIT",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+  "contractSection": "Antigravity native contract correction after cost review — 2026-10-23",
+  "contractSectionSha256": "f13c54a4c10879f760944d4b7e3f21bd89f2d378cefb5f2542f89478ed19fcc7",
+  "contractDigestRule": "UTF8 LF-normalized exact section heading inclusive to next ## Antigravity consolidated reviewer-directed repair — 2026-10-23 exclusive; rstrip then exactly one finalLF."
+}

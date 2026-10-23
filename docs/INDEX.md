@@ -4486,6 +4486,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-LOCAL-READINESS-ADMISSION.json`
 - Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open.: `docs/reviews/R139_HTTPS_BROWSER_AND_LOCAL_READINESS_2026-10-21.md`
 - Consolidated initial source defects F01-F08; no runtime/AI governance proof.: `docs/reviews/R139_INITIAL_SOURCE_BUILD_FINDINGS_2026-10-21.md`
+- Actual repair result, corrected advisory false drift finding, cost escalation before third source pass and concrete C1-C4 same-scope acceptance method.: `docs/reviews/R139_ANTIGRAVITY_REPAIR_RESULT_REVIEW_AND_COST_DECISION_2026-10-23.md`
+- Independent authority and source-cost disposition review for same-R139 exact contract correction only.: `docs/reviews/R139_ANTIGRAVITY_CONTRACT_CORRECTION_ADMISSION_REVIEW_2026-10-23.md`
+- Conditional dispatcher-controlled C1-C4 correction after independent source-cost disposition; no new check/effect slots, no current runtime.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-CONTRACT-CORRECTION-ADMISSION.json`
+- Original first manual repair return; actual hashes match, zero worker source checks, all-fixed claims qualified by Root static CHANGES_REQUIRED.: `docs/reviews/R139_ANTIGRAVITY_INTEGRATED_SOURCE_REPAIR_RETURN_2026-10-23.md`
 - Original failed worker Python/source-check artifact, preserved unchanged; compile not run, no runtime proof.: `docs/reviews/probes/r139_integrated_20261021/antigravity_integrated_source_20261023/worker_python_stderr.log`
 - Original source worker return: Python39 tests38PASS1FAIL, compile held/no binary, reported no runtime effects; source CHANGES_REQUIRED.: `docs/reviews/R139_ANTIGRAVITY_INTEGRATED_SOURCE_WORKER_RETURN_2026-10-23.md`
 - Original failed worker Python/source-check artifact, preserved unchanged; compile not run, no runtime proof.: `docs/reviews/probes/r139_integrated_20261021/antigravity_integrated_source_20261023/worker_compile_held.json`
@@ -4562,6 +4566,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance.: `docs/reviews/probes/r139_integrated_20261021/r7_source_worker_python_1.stdout.txt`
 - Owner-approved bounded four-path source-only recovery round; no runtime/key/provider admission or historical counter reset.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-RECOVERY-SOURCE-ADMISSION.json`
 - Retained failed handback metadata checks and Root corrections; source unchanged.: `docs/reviews/probes/r139_integrated_20261021/root_handback_metadata_corrections.json`
+- Root captured actual git diff from66bae8d dispatch to first repair; authoritative observed source delta, source CHANGES_REQUIRED, not a successful test/runtime receipt.: `docs/reviews/probes/r139_integrated_20261021/antigravity_integrated_source_20261023/root_observed_repair.diff`
 - Root27R137 source/protected matches plus2authority protection pins; no runtime proof.: `docs/reviews/probes/r139_integrated_20261021/root_source_preparation_baseline.json`
 - Observed local metadata or reviewed draft; Owner1USD/one-call approved, credential/deadline/final admission pending, no live claim.: `docs/reviews/probes/r139_integrated_20261021/local_readiness_outcome.json`
 - Observed local metadata or reviewed draft; Owner1USD/one-call approved, credential/deadline/final admission pending, no live claim.: `docs/reviews/probes/r139_integrated_20261021/runtime_admission_draft.json`

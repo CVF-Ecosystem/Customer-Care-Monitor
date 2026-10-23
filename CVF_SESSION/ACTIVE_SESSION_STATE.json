@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 source return CHANGES_REQUIRED: workerPython39tests38PASS1FAIL, authoring1/1 and workerPython1/1 spent; compile0/1, RootPython0/1 and pureGo0/1 unused. Root+Sol consolidated F01-F08 native identity/evidence/deadline/type/terminal gaps, no known-failing rerun. ONE manual reviewer-directed three-file repair under standing same-scope continuation, independent Luna admission PASS; use only exact committed dispatch HEAD from Root after gates/commit; worker edits once and returns with NO source checks. Root retains existing unused Python1->compile1->auditedPureGo1; no added check/API/USD/resource slots. Same R139 M3-05/M3-08 G0->G3 order, no helper tranche/automatic retry/Owner relay. Future campaign/API1/USD1/Owner exact-page close remains approved conditional, not executable now. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; E05/E06/G1/G2/G3/fullM3 OPEN; old G0 spent/provider uncertainty/protected drift/old-tab UNKNOWN and Facebook/ZaloOA parked retained.",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 first manual repair returned CHANGES_REQUIRED: actual post-repair hashes match, no drift. Deadline Hold swallowing fixed statically, but mandatory evidence/time/inventory/root/parity and production-test gaps remain. Initial authoring1/1, workerPython1/1 FAIL and manual repair1/1 used; RootPython0/1/compile0/1/pureGo0/1 preserved because static acceptance failed. REVIEW_COST_ESCALATION_REQUIRED recorded before proposed third source-authoring pass; Root replaced abstract findings with exact C1-C4 schema/counterexamples and independent Luna cost/admission disposition accepts ONE same-scope manual correction, no new check/API/USD/resource slots, no helper tranche or blind repeat. Correction only on exact committed Root dispatch HEAD after gates; worker edits once and returns with zero source checks. Same Antigravity R139 M3-05/M3-08 G0->G3; future campaign/API1/USD1/Owner exact-page close remains approved conditional, not executable. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; G1-G3/E05/E06/fullM3 OPEN, old G0/provider/protected/old-tab UNKNOWN and Facebook/ZaloOA parked retained.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root independent source REVIEWER / ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD returning consolidated defects; external Antigravity repair worker, no runtime",
+  "activeRole": "Root independent source REVIEWER / SPEC_AUTHOR / WORK_ORDER_AUTHOR / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD replanning C1-C4 after source-cost escalation, no runtime",
   "updatedAt": "2026-10-23",
   "x-resolvedCoreCommit": "b69e1088978e8c90ac58a2243fcf8f90d0f857ed",
   "x-ownerRoadmapDiscipline": {
@@ -3097,7 +3097,7 @@
     "date": "2026-10-23",
     "ownerReply": "duyệt",
     "approvedProposalCommit": "91abea4d5e1ac6aab3073da62d97f55912bb7cc0",
-    "status": "SOURCE_RETURN_CHANGES_REQUIRED_MANUAL_REPAIR_PENDING_DISPATCH",
+    "status": "REPAIRED_SOURCE_STATIC_ACCEPTANCE_FAILED_ROOT_CHECKS_WITHHELD",
     "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-INTEGRATED-SOURCE-ADMISSION.json",
     "admissionReview": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_ADMISSION_REVIEW_2026-10-23.md",
     "sourceGranted": true,
@@ -3122,7 +3122,7 @@
   },
   "x-antigravityIntegratedSourceReturn20261023": {
     "date": "2026-10-23",
-    "status": "CHANGES_REQUIRED_MANUAL_REPAIR_READY_ON_COMMITTED_DISPATCH",
+    "status": "FIRST_MANUAL_REPAIR_RETURN_CHANGES_REQUIRED",
     "workerReturn": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_SOURCE_WORKER_RETURN_2026-10-23.md",
     "rootReview": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_SOURCE_ROOT_REVIEW_2026-10-23.md",
     "repairAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-INTEGRATED-REPAIR-ADMISSION.json",
@@ -3137,7 +3137,7 @@
       "rootPython": 0,
       "pureGo": 0
     },
-    "manualRepairRoundsUsed": 0,
+    "manualRepairRoundsUsed": 1,
     "newVerificationSlots": 0,
     "runtimeExecutableNow": false,
     "providerExecutableNow": false,
@@ -3150,5 +3150,31 @@
       "RootOfflineCompile": 1,
       "RootPureGo": 1
     }
+  },
+  "x-antigravityNativeContractCorrection20261023": {
+    "date": "2026-10-23",
+    "status": "CHANGES_REQUIRED_C1_C4_CORRECTION_ADMITTED_READY_ON_COMMITTED_DISPATCH",
+    "repairReturn": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_SOURCE_REPAIR_RETURN_2026-10-23.md",
+    "rootReviewAndCostDecision": "docs/reviews/R139_ANTIGRAVITY_REPAIR_RESULT_REVIEW_AND_COST_DECISION_2026-10-23.md",
+    "correctionAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-CONTRACT-CORRECTION-ADMISSION.json",
+    "independentReview": "docs/reviews/R139_ANTIGRAVITY_CONTRACT_CORRECTION_ADMISSION_REVIEW_2026-10-23.md",
+    "hashDrift": false,
+    "sourceAuthoringPassesCompleted": 2,
+    "manualRepairRoundsCompleted": 1,
+    "proposedCorrectionRoundsUsed": 0,
+    "reviewCostStatus": "ESCALATION_RECORDED_DISPOSED_BY_ROOT_REPLAN_AND_INDEPENDENT_LUNA_REVIEW",
+    "RootSourceChecksUsed": {
+      "Python": 0,
+      "compile": 0,
+      "pureGo": 0
+    },
+    "newCheckOrEffectSlots": 0,
+    "runtimeExecutableNow": false,
+    "providerExecutableNow": false,
+    "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+    "correctionAdmissionSha256": "4a7e2d30b13c783dda1248e148908e11c6ebbab418e61280d1cc3fd0fc26317a",
+    "RootObservedDiff": "docs/reviews/probes/r139_integrated_20261021/antigravity_integrated_source_20261023/root_observed_repair.diff",
+    "RootObservedDiffSha256": "b66b4e2b49a0bc25ae25a28627b4715faf50817f57d60473e59a961602b93209",
+    "correctionRoundsUsed": 0
   }
 }

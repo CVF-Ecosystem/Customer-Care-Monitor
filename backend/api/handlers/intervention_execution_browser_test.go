@@ -87,19 +87,26 @@ func r139VerifyBrowserReservation(a r139Admission, browserRaw []byte) error {
 	}
 
 	tool := a.BrowserTool
-	if tool == "" || tool == "supported_CUA_IAB" {
+	if tool == "supported_CUA_IAB" {
 		status, _ := proof["status"].(string)
 		browserID, _ := proof["browserId"].(string)
 		ctrl, _ := proof["controlObserved"].(bool)
 		capt, _ := proof["captureObserved"].(bool)
 		closed, _ := proof["closeObserved"].(bool)
-		ownedTabs, _ := proof["ownedTabsFinal"].(float64)
 		proto, _ := proof["protocol"].(string)
+
+		ownedTabsVal, ok := proof["ownedTabsFinal"]
+		if !ok {
+			return errors.New("ownedTabsFinal missing in legacy IAB proof")
+		}
+		ownedTabs, isFloat := ownedTabsVal.(float64)
+		if !isFloat || ownedTabs != 0 {
+			return errors.New("ownedTabsFinal must be numeric 0 in legacy IAB proof")
+		}
 
 		if status != "PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE" ||
 			browserID != "iab" ||
 			!ctrl || !capt || !closed ||
-			ownedTabs != 0 ||
 			(proto != "http" && proto != "https") {
 			return errors.New("legacy IAB browser proof content incomplete")
 		}
@@ -135,8 +142,11 @@ func r139VerifyBrowserReservation(a r139Admission, browserRaw []byte) error {
 			return errors.New("captureObserved must be true")
 		}
 
-		if closed, ok := proof["closeObserved"].(bool); ok && closed {
-			return errors.New("early closeObserved is forbidden in reservation")
+		if closedVal, exists := proof["closeObserved"]; exists {
+			closed, isBool := closedVal.(bool)
+			if !isBool || closed {
+				return errors.New("early closeObserved is forbidden in reservation")
+			}
 		}
 
 		proto, _ := proof["protocol"].(string)
@@ -149,49 +159,94 @@ func r139VerifyBrowserReservation(a r139Admission, browserRaw []byte) error {
 			return fmt.Errorf("invalid closeMode: %s", closeMode)
 		}
 
-		pageID, _ := proof["pageId"].(string)
-		if strings.TrimSpace(pageID) == "" {
-			return errors.New("pageId is required in reservation")
+		if strings.TrimSpace(a.TrancheID) == "" {
+			return errors.New("trancheId required in admission")
 		}
-		if a.PageID != "" && pageID != a.PageID {
-			return fmt.Errorf("pageId mismatch: expected %s, got %s", a.PageID, pageID)
-		}
-
-		nonce, _ := proof["campaignNonce"].(string)
-		if strings.TrimSpace(nonce) == "" {
-			return errors.New("campaignNonce is required in reservation")
-		}
-		if a.CampaignNonce != "" && nonce != a.CampaignNonce {
-			return fmt.Errorf("campaignNonce mismatch: expected %s, got %s", a.CampaignNonce, nonce)
-		}
-
-		sessionID, _ := proof["browserSessionId"].(string)
-		if strings.TrimSpace(sessionID) == "" {
-			return errors.New("browserSessionId is required in reservation")
-		}
-		if a.BrowserSessionID != "" && sessionID != a.BrowserSessionID {
-			return fmt.Errorf("browserSessionId mismatch: expected %s, got %s", a.BrowserSessionID, sessionID)
-		}
-
 		trancheID, _ := proof["trancheId"].(string)
-		if trancheID != "" && a.TrancheID != "" && trancheID != a.TrancheID {
+		if trancheID != a.TrancheID {
 			return fmt.Errorf("trancheId mismatch: expected %s, got %s", a.TrancheID, trancheID)
 		}
 
-		op, _ := proof["operator"].(string)
-		if strings.TrimSpace(op) == "" {
-			return errors.New("operator is required in reservation")
+		if strings.TrimSpace(a.PageID) == "" {
+			return errors.New("pageId required in admission")
 		}
+		pageID, _ := proof["pageId"].(string)
+		if pageID != a.PageID {
+			return fmt.Errorf("pageId mismatch: expected %s, got %s", a.PageID, pageID)
+		}
+
+		if strings.TrimSpace(a.CampaignNonce) == "" {
+			return errors.New("campaignNonce required in admission")
+		}
+		nonce, _ := proof["campaignNonce"].(string)
+		if nonce != a.CampaignNonce {
+			return fmt.Errorf("campaignNonce mismatch: expected %s, got %s", a.CampaignNonce, nonce)
+		}
+
+		if strings.TrimSpace(a.BrowserSessionID) == "" {
+			return errors.New("browserSessionId required in admission")
+		}
+		sessionID, _ := proof["browserSessionId"].(string)
+		if sessionID != a.BrowserSessionID {
+			return fmt.Errorf("browserSessionId mismatch: expected %s, got %s", a.BrowserSessionID, sessionID)
+		}
+
 		expectedOp := a.FallbackCloseOperator
-		if a.FallbackCloseOperator == "" {
+		if expectedOp == "" {
 			expectedOp = a.ActorRole
 		}
-		if a.FallbackCloseOperator != "" && op != a.FallbackCloseOperator {
+		if strings.TrimSpace(expectedOp) == "" {
+			return errors.New("operator required in admission")
+		}
+		op, _ := proof["operator"].(string)
+		if op != expectedOp {
 			return fmt.Errorf("operator mismatch: expected %s, got %s", expectedOp, op)
 		}
 
 		if strings.TrimSpace(a.BrowserCloseReceiptPath) == "" {
 			return errors.New("browserCloseReceiptPath is required in admission")
+		}
+		if strings.HasPrefix(a.BrowserCloseReceiptPath, "docs/") {
+			return errors.New("browserCloseReceiptPath must be in ignored runtime path, not tracked docs/")
+		}
+
+		if reservedStr, ok := proof["reservedAtUTC"].(string); ok && reservedStr != "" {
+			if !strings.HasSuffix(reservedStr, "Z") {
+				return errors.New("reservedAtUTC must end in Z")
+			}
+			reservedAt, rErr := time.Parse(time.RFC3339, reservedStr)
+			if rErr != nil {
+				reservedAt, rErr = time.Parse(time.RFC3339Nano, reservedStr)
+			}
+			if rErr != nil {
+				return fmt.Errorf("invalid reservedAtUTC: %w", rErr)
+			}
+			if reservedAt.After(time.Now().UTC().Add(time.Minute)) {
+				return errors.New("reservedAtUTC cannot be in the future")
+			}
+		}
+
+		evRel, _ := proof["actionEvidencePath"].(string)
+		if evRel == "" {
+			evRel, _ = proof["evidencePath"].(string)
+		}
+		if evRel != "" {
+			if strings.HasPrefix(evRel, "docs/") {
+				return errors.New("actionEvidencePath must not be in tracked docs/")
+			}
+			evSha, _ := proof["actionEvidenceSha256"].(string)
+			if evSha == "" {
+				evSha, _ = proof["evidenceSha256"].(string)
+			}
+			if len(evSha) != 64 {
+				return errors.New("actionEvidenceSha256 must be 64-hex string")
+			}
+			if data, readErr := os.ReadFile(evRel); readErr == nil {
+				sum := sha256.Sum256(data)
+				if hex.EncodeToString(sum[:]) != evSha {
+					return errors.New("action evidence sha mismatch")
+				}
+			}
 		}
 
 		return nil
@@ -216,37 +271,49 @@ func r139VerifyBrowserTerminalClose(a r139Admission, closeRaw []byte) error {
 		return fmt.Errorf("browserId must be antigravity_native, got %s", browserID)
 	}
 
-	closeObserved, _ := receipt["closeObserved"].(bool)
-	if !closeObserved {
-		return errors.New("closeObserved must be true")
+	closeObservedVal, exists := receipt["closeObserved"]
+	if !exists {
+		return errors.New("closeObserved is required in terminal close receipt")
+	}
+	closeObserved, isBool := closeObservedVal.(bool)
+	if !isBool || !closeObserved {
+		return errors.New("closeObserved must be exact boolean true")
 	}
 
-	ownedTabs, ok := receipt["ownedTabsFinal"].(float64)
-	if !ok || ownedTabs != 0 {
-		return fmt.Errorf("ownedTabsFinal must be 0, got %v", receipt["ownedTabsFinal"])
+	ownedTabsVal, ok := receipt["ownedTabsFinal"]
+	if !ok {
+		return errors.New("ownedTabsFinal is required in terminal close receipt")
+	}
+	ownedTabs, isFloat := ownedTabsVal.(float64)
+	if !isFloat || ownedTabs != 0 {
+		return fmt.Errorf("ownedTabsFinal must be numeric 0, got %v", ownedTabsVal)
 	}
 
-	pageID, _ := receipt["pageId"].(string)
-	if strings.TrimSpace(pageID) == "" {
-		return errors.New("pageId is required in terminal close receipt")
+	if strings.TrimSpace(a.TrancheID) == "" {
+		return errors.New("trancheId required in admission")
 	}
-	if a.PageID != "" && pageID != a.PageID {
+	if trancheID, _ := receipt["trancheId"].(string); trancheID != a.TrancheID {
+		return fmt.Errorf("trancheId mismatch: expected %s, got %s", a.TrancheID, trancheID)
+	}
+
+	if strings.TrimSpace(a.PageID) == "" {
+		return errors.New("pageId required in admission")
+	}
+	if pageID, _ := receipt["pageId"].(string); pageID != a.PageID {
 		return fmt.Errorf("pageId mismatch: expected %s, got %s", a.PageID, pageID)
 	}
 
-	nonce, _ := receipt["campaignNonce"].(string)
-	if strings.TrimSpace(nonce) == "" {
-		return errors.New("campaignNonce is required in terminal close receipt")
+	if strings.TrimSpace(a.CampaignNonce) == "" {
+		return errors.New("campaignNonce required in admission")
 	}
-	if a.CampaignNonce != "" && nonce != a.CampaignNonce {
+	if nonce, _ := receipt["campaignNonce"].(string); nonce != a.CampaignNonce {
 		return fmt.Errorf("campaignNonce mismatch: expected %s, got %s", a.CampaignNonce, nonce)
 	}
 
-	sessionID, _ := receipt["browserSessionId"].(string)
-	if strings.TrimSpace(sessionID) == "" {
-		return errors.New("browserSessionId is required in terminal close receipt")
+	if strings.TrimSpace(a.BrowserSessionID) == "" {
+		return errors.New("browserSessionId required in admission")
 	}
-	if a.BrowserSessionID != "" && sessionID != a.BrowserSessionID {
+	if sessionID, _ := receipt["browserSessionId"].(string); sessionID != a.BrowserSessionID {
 		return fmt.Errorf("browserSessionId mismatch: expected %s, got %s", a.BrowserSessionID, sessionID)
 	}
 
@@ -255,15 +322,14 @@ func r139VerifyBrowserTerminalClose(a r139Admission, closeRaw []byte) error {
 		return fmt.Errorf("invalid closeMode: %s", closeMode)
 	}
 
-	op, _ := receipt["operator"].(string)
-	if strings.TrimSpace(op) == "" {
-		return errors.New("operator is required in terminal close receipt")
-	}
 	expectedOp := a.FallbackCloseOperator
-	if a.FallbackCloseOperator == "" {
+	if expectedOp == "" {
 		expectedOp = a.ActorRole
 	}
-	if a.FallbackCloseOperator != "" && op != a.FallbackCloseOperator {
+	if strings.TrimSpace(expectedOp) == "" {
+		return errors.New("operator required in admission")
+	}
+	if op, _ := receipt["operator"].(string); op != expectedOp {
 		return fmt.Errorf("operator mismatch: expected %s, got %s", expectedOp, op)
 	}
 
@@ -285,13 +351,99 @@ func r139VerifyBrowserTerminalClose(a r139Admission, closeRaw []byte) error {
 		return errors.New("closedAtUTC cannot be in the future")
 	}
 
-	if a.GrantDeadlineUTC != "" {
-		deadline, dErr := time.Parse(time.RFC3339Nano, a.GrantDeadlineUTC)
-		if dErr != nil {
-			deadline, dErr = time.Parse(time.RFC3339, a.GrantDeadlineUTC)
+	if strings.TrimSpace(a.GrantDeadlineUTC) == "" || !strings.HasSuffix(a.GrantDeadlineUTC, "Z") {
+		return errors.New("grantDeadlineUTC must be non-empty ISO 8601 ending in Z")
+	}
+	deadline, dErr := time.Parse(time.RFC3339Nano, a.GrantDeadlineUTC)
+	if dErr != nil {
+		deadline, dErr = time.Parse(time.RFC3339, a.GrantDeadlineUTC)
+	}
+	if dErr != nil {
+		return fmt.Errorf("invalid grantDeadlineUTC: %w", dErr)
+	}
+	if closedAt.After(deadline) {
+		return errors.New("closedAtUTC cannot be after grant deadline")
+	}
+
+	if reservedStr, ok := receipt["reservedAtUTC"].(string); ok && reservedStr != "" {
+		if !strings.HasSuffix(reservedStr, "Z") {
+			return errors.New("reservedAtUTC must end in Z")
 		}
-		if dErr == nil && closedAt.After(deadline) {
-			return errors.New("closedAtUTC cannot be after grant deadline")
+		reservedAt, rErr := time.Parse(time.RFC3339, reservedStr)
+		if rErr != nil {
+			reservedAt, rErr = time.Parse(time.RFC3339Nano, reservedStr)
+		}
+		if rErr != nil {
+			return fmt.Errorf("invalid reservedAtUTC: %w", rErr)
+		}
+		if reservedAt.After(closedAt) {
+			return errors.New("closedAtUTC cannot be before reservedAtUTC")
+		}
+	}
+
+	actionRel, _ := receipt["actionEvidencePath"].(string)
+	if actionRel == "" {
+		actionRel, _ = receipt["evidencePath"].(string)
+	}
+	if actionRel != "" {
+		if strings.HasPrefix(actionRel, "docs/") {
+			return errors.New("actionEvidencePath must not be in tracked docs/")
+		}
+		actionSha, _ := receipt["actionEvidenceSha256"].(string)
+		if actionSha == "" {
+			actionSha, _ = receipt["evidenceSha256"].(string)
+		}
+		if len(actionSha) != 64 {
+			return errors.New("actionEvidenceSha256 must be 64-hex string")
+		}
+		if data, readErr := os.ReadFile(actionRel); readErr == nil {
+			sum := sha256.Sum256(data)
+			if hex.EncodeToString(sum[:]) != actionSha {
+				return errors.New("action evidence sha mismatch")
+			}
+		}
+	}
+
+	invRel, _ := receipt["finalInventoryPath"].(string)
+	if invRel == "" {
+		invRel, _ = receipt["inventoryPath"].(string)
+	}
+	if invRel != "" {
+		if strings.HasPrefix(invRel, "docs/") {
+			return errors.New("finalInventoryPath must not be in tracked docs/")
+		}
+		invSha, _ := receipt["finalInventorySha256"].(string)
+		if invSha == "" {
+			invSha, _ = receipt["inventorySha256"].(string)
+		}
+		if len(invSha) != 64 {
+			return errors.New("finalInventorySha256 must be 64-hex string")
+		}
+		if data, readErr := os.ReadFile(invRel); readErr == nil {
+			sum := sha256.Sum256(data)
+			if hex.EncodeToString(sum[:]) != invSha {
+				return errors.New("final inventory sha mismatch")
+			}
+			var invData map[string]any
+			if jsonErr := json.Unmarshal(data, &invData); jsonErr == nil {
+				if openPages, ok := invData["openPages"].([]any); ok {
+					for _, p := range openPages {
+						if pStr, ok := p.(string); ok && pStr == a.PageID {
+							return errors.New("page still present in final inventory openPages")
+						}
+					}
+				}
+				if openTabs, ok := invData["openTabs"].([]any); ok {
+					for _, p := range openTabs {
+						if pStr, ok := p.(string); ok && pStr == a.PageID {
+							return errors.New("page still present in final inventory openTabs")
+						}
+					}
+				}
+				if ownedTabs, ok := invData["ownedTabsFinal"].(float64); ok && ownedTabs != 0 {
+					return errors.New("ownedTabsFinal in inventory must be 0")
+				}
+			}
 		}
 	}
 
@@ -336,6 +488,27 @@ func TestR139PureBrowserReservationAdmission(t *testing.T) {
 		t.Fatalf("expected legacy IAB pass, got: %v", err)
 	}
 
+	badIABRaw := []byte(`{
+		"status": "PASS_SUPPORTED_CUA_IAB_CONTROL_CAPTURE_CLOSE",
+		"browserId": "iab",
+		"controlObserved": true,
+		"captureObserved": true,
+		"closeObserved": true,
+		"ownedTabsFinal": 1,
+		"protocol": "http"
+	}`)
+	if err := r139VerifyBrowserReservation(iabAdmission, badIABRaw); err == nil {
+		t.Fatal("expected legacy IAB rejection for ownedTabsFinal != 0")
+	}
+
+	emptyToolAdmission := r139Admission{
+		BrowserSupported: true,
+		BrowserTool:      "",
+	}
+	if err := r139VerifyBrowserReservation(emptyToolAdmission, validIABRaw); err == nil {
+		t.Fatal("expected rejection when browserTool is empty (no empty string fallback)")
+	}
+
 	nativeAdmission := r139Admission{
 		TrancheID:               "CCMAI-RUNTIME-139",
 		BrowserSupported:        true,
@@ -344,7 +517,7 @@ func TestR139PureBrowserReservationAdmission(t *testing.T) {
 		CampaignNonce:           "nonce-abc-456",
 		BrowserSessionID:        "session-xyz-789",
 		FallbackCloseOperator:   "Owner",
-		BrowserCloseReceiptPath: "docs/reviews/probes/close.json",
+		BrowserCloseReceiptPath: ".cvf/runtime/test/close.json",
 	}
 	validNativeRaw := []byte(`{
 		"status": "RESERVED_NATIVE_PAGE_CONTROL_CAPTURE",
@@ -359,7 +532,8 @@ func TestR139PureBrowserReservationAdmission(t *testing.T) {
 		"campaignNonce": "nonce-abc-456",
 		"browserSessionId": "session-xyz-789",
 		"trancheId": "CCMAI-RUNTIME-139",
-		"operator": "Owner"
+		"operator": "Owner",
+		"reservedAtUTC": "2026-10-23T12:00:00Z"
 	}`)
 	if err := r139VerifyBrowserReservation(nativeAdmission, validNativeRaw); err != nil {
 		t.Fatalf("expected native reservation pass, got: %v", err)
@@ -406,13 +580,15 @@ func TestR139PureBrowserReservationAdmission(t *testing.T) {
 		name string
 		raw  []byte
 	}{
-		{"wrong-pageId", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"wrong-page","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","operator":"Owner"}`)},
-		{"wrong-nonce", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"wrong-nonce","browserSessionId":"session-xyz-789","operator":"Owner"}`)},
-		{"wrong-session", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"wrong-session","operator":"Owner"}`)},
-		{"wrong-operator", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","operator":"wrong-operator"}`)},
-		{"unsupported-protocol", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"ftp","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","operator":"Owner"}`)},
-		{"invalid-closeMode", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"invalid_mode","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","operator":"Owner"}`)},
-		{"missing-exclusive", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":false,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","operator":"Owner"}`)},
+		{"wrong-trancheId", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","trancheId":"wrong-tranche","operator":"Owner"}`)},
+		{"wrong-pageId", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"wrong-page","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","trancheId":"CCMAI-RUNTIME-139","operator":"Owner"}`)},
+		{"wrong-nonce", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"wrong-nonce","browserSessionId":"session-xyz-789","trancheId":"CCMAI-RUNTIME-139","operator":"Owner"}`)},
+		{"wrong-session", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"wrong-session","trancheId":"CCMAI-RUNTIME-139","operator":"Owner"}`)},
+		{"wrong-operator", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","trancheId":"CCMAI-RUNTIME-139","operator":"wrong-operator"}`)},
+		{"unsupported-protocol", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"ftp","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","trancheId":"CCMAI-RUNTIME-139","operator":"Owner"}`)},
+		{"invalid-closeMode", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"invalid_mode","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","trancheId":"CCMAI-RUNTIME-139","operator":"Owner"}`)},
+		{"missing-exclusive", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":false,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","trancheId":"CCMAI-RUNTIME-139","operator":"Owner"}`)},
+		{"future-reservation-time", []byte(`{"status":"RESERVED_NATIVE_PAGE_CONTROL_CAPTURE","browserId":"antigravity_native","exclusiveReservation":true,"controlObserved":true,"captureObserved":true,"protocol":"http","closeMode":"operator_fallback","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","trancheId":"CCMAI-RUNTIME-139","operator":"Owner","reservedAtUTC":"2099-01-01T00:00:00Z"}`)},
 	} {
 		if err := r139VerifyBrowserReservation(nativeAdmission, tc.raw); err == nil {
 			t.Fatalf("expected error for %s, got nil", tc.name)
@@ -423,6 +599,12 @@ func TestR139PureBrowserReservationAdmission(t *testing.T) {
 	missingClosePathAdmission.BrowserCloseReceiptPath = ""
 	if err := r139VerifyBrowserReservation(missingClosePathAdmission, validNativeRaw); err == nil {
 		t.Fatal("expected rejection when admission lacks browserCloseReceiptPath")
+	}
+
+	docsClosePathAdmission := nativeAdmission
+	docsClosePathAdmission.BrowserCloseReceiptPath = "docs/reviews/probes/close.json"
+	if err := r139VerifyBrowserReservation(docsClosePathAdmission, validNativeRaw); err == nil {
+		t.Fatal("expected rejection when browserCloseReceiptPath is under tracked docs/")
 	}
 
 	unsupportedAdmission := nativeAdmission
@@ -439,6 +621,23 @@ func TestR139PureBrowserReservationAdmission(t *testing.T) {
 }
 
 func TestR139PureBrowserTerminalClose(t *testing.T) {
+	tempDir := t.TempDir()
+	actionFile := filepath.Join(tempDir, "action.json")
+	actionContent := []byte(`{"action":"click","pageId":"page-test-123"}`)
+	if err := os.WriteFile(actionFile, actionContent, 0644); err != nil {
+		t.Fatal(err)
+	}
+	actionShaBytes := sha256.Sum256(actionContent)
+	actionSha := hex.EncodeToString(actionShaBytes[:])
+
+	invFile := filepath.Join(tempDir, "inventory.json")
+	invContent := []byte(`{"openPages":[],"openTabs":[],"ownedTabsFinal":0}`)
+	if err := os.WriteFile(invFile, invContent, 0644); err != nil {
+		t.Fatal(err)
+	}
+	invShaBytes := sha256.Sum256(invContent)
+	invSha := hex.EncodeToString(invShaBytes[:])
+
 	deadline := time.Now().UTC().Add(2 * time.Hour).Format(time.RFC3339)
 	nativeAdmission := r139Admission{
 		TrancheID:             "CCMAI-RUNTIME-139",
@@ -456,12 +655,17 @@ func TestR139PureBrowserTerminalClose(t *testing.T) {
 		"browserId": "antigravity_native",
 		"closeObserved": true,
 		"ownedTabsFinal": 0,
+		"trancheId": "CCMAI-RUNTIME-139",
 		"pageId": "page-test-123",
 		"campaignNonce": "nonce-abc-456",
 		"browserSessionId": "session-xyz-789",
 		"closeMode": "operator_fallback",
 		"operator": "Owner",
-		"closedAtUTC": "` + time.Now().UTC().Format(time.RFC3339) + `"
+		"closedAtUTC": "` + time.Now().UTC().Format(time.RFC3339) + `",
+		"actionEvidencePath": ` + fmt.Sprintf("%q", filepath.ToSlash(actionFile)) + `,
+		"actionEvidenceSha256": "` + actionSha + `",
+		"finalInventoryPath": ` + fmt.Sprintf("%q", filepath.ToSlash(invFile)) + `,
+		"finalInventorySha256": "` + invSha + `"
 	}`)
 
 	if err := r139VerifyBrowserTerminalClose(nativeAdmission, validCloseRaw); err != nil {
@@ -473,6 +677,7 @@ func TestR139PureBrowserTerminalClose(t *testing.T) {
 		"browserId": "antigravity_native",
 		"closeObserved": false,
 		"ownedTabsFinal": 0,
+		"trancheId": "CCMAI-RUNTIME-139",
 		"pageId": "page-test-123",
 		"campaignNonce": "nonce-abc-456",
 		"browserSessionId": "session-xyz-789",
@@ -489,6 +694,7 @@ func TestR139PureBrowserTerminalClose(t *testing.T) {
 		"browserId": "antigravity_native",
 		"closeObserved": true,
 		"ownedTabsFinal": 1,
+		"trancheId": "CCMAI-RUNTIME-139",
 		"pageId": "page-test-123",
 		"campaignNonce": "nonce-abc-456",
 		"browserSessionId": "session-xyz-789",
@@ -505,6 +711,7 @@ func TestR139PureBrowserTerminalClose(t *testing.T) {
 		"browserId": "antigravity_native",
 		"closeObserved": true,
 		"ownedTabsFinal": 0,
+		"trancheId": "CCMAI-RUNTIME-139",
 		"pageId": "page-test-123",
 		"campaignNonce": "nonce-abc-456",
 		"browserSessionId": "session-xyz-789",
@@ -520,11 +727,14 @@ func TestR139PureBrowserTerminalClose(t *testing.T) {
 		name string
 		raw  []byte
 	}{
-		{"wrong-pageId", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"pageId":"wrong","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
-		{"wrong-nonce", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"pageId":"page-test-123","campaignNonce":"wrong","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
-		{"wrong-session", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"wrong","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
-		{"wrong-operator", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"wrong","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
-		{"invalid-closeMode", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"bad","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
+		{"wrong-trancheId", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"wrong-tranche","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
+		{"wrong-pageId", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"CCMAI-RUNTIME-139","pageId":"wrong","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
+		{"wrong-nonce", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"CCMAI-RUNTIME-139","pageId":"page-test-123","campaignNonce":"wrong","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
+		{"wrong-session", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"CCMAI-RUNTIME-139","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"wrong","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
+		{"wrong-operator", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"CCMAI-RUNTIME-139","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"wrong","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
+		{"invalid-closeMode", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"CCMAI-RUNTIME-139","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"bad","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `"}`)},
+		{"wrong-action-sha", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"CCMAI-RUNTIME-139","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `","actionEvidencePath":` + fmt.Sprintf("%q", filepath.ToSlash(actionFile)) + `,"actionEvidenceSha256":"0000000000000000000000000000000000000000000000000000000000000000"}`)},
+		{"docs-action-path", []byte(`{"status":"CLOSED_EXACT_OWNED_PAGE","browserId":"antigravity_native","closeObserved":true,"ownedTabsFinal":0,"trancheId":"CCMAI-RUNTIME-139","pageId":"page-test-123","campaignNonce":"nonce-abc-456","browserSessionId":"session-xyz-789","closeMode":"operator_fallback","operator":"Owner","closedAtUTC":"` + time.Now().UTC().Format(time.RFC3339) + `","actionEvidencePath":"docs/action.json","actionEvidenceSha256":"` + actionSha + `"}`)},
 	} {
 		if err := r139VerifyBrowserTerminalClose(nativeAdmission, tc.raw); err == nil {
 			t.Fatalf("expected error for %s, got nil", tc.name)
@@ -537,6 +747,7 @@ func TestR139PureBrowserTerminalClose(t *testing.T) {
 		"browserId": "antigravity_native",
 		"closeObserved": true,
 		"ownedTabsFinal": 0,
+		"trancheId": "CCMAI-RUNTIME-139",
 		"pageId": "page-test-123",
 		"campaignNonce": "nonce-abc-456",
 		"browserSessionId": "session-xyz-789",
@@ -554,11 +765,18 @@ func TestR139PureBrowserTerminalClose(t *testing.T) {
 		t.Fatal("expected rejection when closedAtUTC is after grantDeadlineUTC")
 	}
 
+	missingDeadlineAdmission := nativeAdmission
+	missingDeadlineAdmission.GrantDeadlineUTC = ""
+	if err := r139VerifyBrowserTerminalClose(missingDeadlineAdmission, validCloseRaw); err == nil {
+		t.Fatal("expected rejection when grantDeadlineUTC is missing in admission")
+	}
+
 	badTimeRaw := []byte(`{
 		"status": "CLOSED_EXACT_OWNED_PAGE",
 		"browserId": "antigravity_native",
 		"closeObserved": true,
 		"ownedTabsFinal": 0,
+		"trancheId": "CCMAI-RUNTIME-139",
 		"pageId": "page-test-123",
 		"campaignNonce": "nonce-abc-456",
 		"browserSessionId": "session-xyz-789",
@@ -568,6 +786,33 @@ func TestR139PureBrowserTerminalClose(t *testing.T) {
 	}`)
 	if err := r139VerifyBrowserTerminalClose(nativeAdmission, badTimeRaw); err == nil {
 		t.Fatal("expected rejection for invalid closedAtUTC")
+	}
+
+	dirtyInvFile := filepath.Join(tempDir, "dirty_inv.json")
+	dirtyInvContent := []byte(`{"openPages":["page-test-123"],"openTabs":[],"ownedTabsFinal":0}`)
+	if err := os.WriteFile(dirtyInvFile, dirtyInvContent, 0644); err != nil {
+		t.Fatal(err)
+	}
+	dirtyInvShaBytes := sha256.Sum256(dirtyInvContent)
+	dirtyInvSha := hex.EncodeToString(dirtyInvShaBytes[:])
+
+	dirtyInvRaw := []byte(`{
+		"status": "CLOSED_EXACT_OWNED_PAGE",
+		"browserId": "antigravity_native",
+		"closeObserved": true,
+		"ownedTabsFinal": 0,
+		"trancheId": "CCMAI-RUNTIME-139",
+		"pageId": "page-test-123",
+		"campaignNonce": "nonce-abc-456",
+		"browserSessionId": "session-xyz-789",
+		"closeMode": "operator_fallback",
+		"operator": "Owner",
+		"closedAtUTC": "` + time.Now().UTC().Format(time.RFC3339) + `",
+		"finalInventoryPath": ` + fmt.Sprintf("%q", filepath.ToSlash(dirtyInvFile)) + `,
+		"finalInventorySha256": "` + dirtyInvSha + `"
+	}`)
+	if err := r139VerifyBrowserTerminalClose(nativeAdmission, dirtyInvRaw); err == nil {
+		t.Fatal("expected rejection when target page is still present in inventory")
 	}
 }
 
