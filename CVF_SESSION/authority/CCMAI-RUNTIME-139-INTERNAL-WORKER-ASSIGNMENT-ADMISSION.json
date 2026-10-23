@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "DISPATCHER_OWNED_ACTOR_ONLY_ASSIGNMENT_SUPPLEMENT",
+  "date": "2026-10-23",
+  "baseCommit": "3c58039f49c35c30271463148ab77577d416a779",
+  "riskCeiling": "R2",
+  "ownerInstruction": "bạn tạo sub agent xử lý đi, ko giao cho antigravity nữa, chỉ khi nào cần chạy browser mới giao",
+  "parentAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-CONTRACT-CORRECTION-ADMISSION.json",
+  "parentAdmissionSha256": "4a7e2d30b13c783dda1248e148908e11c6ebbab418e61280d1cc3fd0fc26317a",
+  "supersedesOnly": "Prospective source worker identity and return path. Parent C1-C4 requirements, paths, one correction round, all counters, check custody and prohibited effects remain binding. No parent seed edit or new tranche/order.",
+  "roles": {
+    "repairWorker": "/root/r139_internal_contract_repair (Sol Medium internal delegated worker)",
+    "reviewer": "Root independent source REVIEWER",
+    "commitSteward": "Root",
+    "browserWorker": "Antigravity only when separately activated browser work is required"
+  },
+  "allowedSourcePaths": [
+    "scripts/r139_execution_supervisor.py",
+    "scripts/tests/test_r139_execution_supervisor.py",
+    "backend/api/handlers/intervention_execution_browser_test.go"
+  ],
+  "workerReturn": "docs/reviews/R139_INTERNAL_CONTRACT_CORRECTION_RETURN_2026-10-23.md",
+  "workerSourceCheckCap": 0,
+  "newCorrectionRounds": 0,
+  "newCheckOrEffectSlots": 0,
+  "existingRootChecksUsed": {
+    "Python": 0,
+    "compile": 0,
+    "pureGo": 0
+  },
+  "dispatchBinding": "Exact committed Root dispatch HEAD; worker rehydrates, verifies clean tree/source and parent hashes, records REPAIR_WORKER acknowledgment in new return before source writes. Root records this supplementary source BUILD acknowledgment in active handoff before release.",
+  "runtimeExecutableNow": false,
+  "providerExecutableNow": false,
+  "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION"
+}

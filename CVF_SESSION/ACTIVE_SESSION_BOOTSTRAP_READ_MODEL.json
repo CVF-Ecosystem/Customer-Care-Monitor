@@ -3,8 +3,8 @@
   "activePhase": "REVIEW",
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 first manual repair returned CHANGES_REQUIRED: actual post-repair hashes match, no drift. Deadline Hold swallowing fixed statically, but mandatory evidence/time/inventory/root/parity and production-test gaps remain. Initial authoring1/1, workerPython1/1 FAIL and manual repair1/1 used; RootPython0/1/compile0/1/pureGo0/1 preserved because static acceptance failed. REVIEW_COST_ESCALATION_REQUIRED recorded before proposed third source-authoring pass; Root replaced abstract findings with exact C1-C4 schema/counterexamples and independent Luna cost/admission disposition accepts ONE same-scope manual correction, no new check/API/USD/resource slots, no helper tranche or blind repeat. Correction only on exact committed Root dispatch HEAD after gates; worker edits once and returns with zero source checks. Same Antigravity R139 M3-05/M3-08 G0->G3; future campaign/API1/USD1/Owner exact-page close remains approved conditional, not executable. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; G1-G3/E05/E06/fullM3 OPEN, old G0/provider/protected/old-tab UNKNOWN and Facebook/ZaloOA parked retained.",
-  "activeRole": "Root independent source REVIEWER / SPEC_AUTHOR / WORK_ORDER_AUTHOR / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD replanning C1-C4 after source-cost escalation, no runtime",
+  "nextAllowedMove": "CCMAI-RUNTIME-139: Owner assigns internal subagent /root/r139_internal_contract_repair (Sol Medium) to the existing ONE C1-C4 source correction; Antigravity reserved for browser work only. Root commits actor-only assignment then releases supplementary source BUILD on exact dispatch HEAD; worker edits three admitted files once, returns once, runs ZERO source checks and never commits. Root independent static acceptance precedes existing unused Python1 -> offlineCompile1 -> audited pureGo1. No new tranche/order/check/effect slots or reset; old failures and spent caps retained. Aggregate REVIEW/CHANGES_REQUIRED; Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION. G0 readiness and G1-G3/E05/E06/fullM3 open; future campaign/API1/USD1/Owner exact-page close conditional, not executable; Facebook/ZaloOA parked and old-tab/protected/provider UNKNOWN retained.",
+  "activeRole": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent source REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; internal Sol Medium REPAIR_WORKER for C1-C4 only, Antigravity browser-only",
   "updatedAt": "2026-10-23",
   "schemaVersion": "1.0",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
@@ -1086,5 +1086,23 @@
     "RootObservedDiff": "docs/reviews/probes/r139_integrated_20261021/antigravity_integrated_source_20261023/root_observed_repair.diff",
     "RootObservedDiffSha256": "b66b4e2b49a0bc25ae25a28627b4715faf50817f57d60473e59a961602b93209",
     "correctionRoundsUsed": 0
+  },
+  "x-r139InternalWorkerAssignment20261023": {
+    "date": "2026-10-23",
+    "status": "ASSIGNED_PENDING_COMMITTED_BUILD_RELEASE",
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-WORKER-ASSIGNMENT-ADMISSION.json",
+    "authoritySha256": "5b5d1dc4af4c669255867d3334c75a145587ac923f35cefb4bc043a1654d3a9b",
+    "worker": "/root/r139_internal_contract_repair",
+    "ownerInstruction": "bạn tạo sub agent xử lý đi, ko giao cho antigravity nữa, chỉ khi nào cần chạy browser mới giao",
+    "sourceStage": "SUPPLEMENTARY_BUILD_AFTER_COMMITTED_DISPATCH",
+    "correctionRoundsUsed": 0,
+    "newSlots": 0,
+    "checksUsed": {
+      "Python": 0,
+      "compile": 0,
+      "pureGo": 0
+    },
+    "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+    "runtimeExecutableNow": false
   }
 }

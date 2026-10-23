@@ -36165,6 +36165,13 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/antigravity_integrated_source_20261023/root_observed_repair.diff",
       "status": "ACTIVE",
       "description": "Root captured actual git diff from66bae8d dispatch to first repair; authoritative observed source delta, source CHANGES_REQUIRED, not a successful test/runtime receipt."
+    },
+    {
+      "id": "r139-internal-worker-assignment-20261023",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-WORKER-ASSIGNMENT-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Owner actor-only assignment: internal source repair worker; Antigravity browser-only, unchanged C1-C4/caps/Root independent checks."
     }
   ]
 }

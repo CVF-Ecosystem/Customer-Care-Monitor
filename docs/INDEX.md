@@ -4486,6 +4486,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-LOCAL-READINESS-ADMISSION.json`
 - Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open.: `docs/reviews/R139_HTTPS_BROWSER_AND_LOCAL_READINESS_2026-10-21.md`
 - Consolidated initial source defects F01-F08; no runtime/AI governance proof.: `docs/reviews/R139_INITIAL_SOURCE_BUILD_FINDINGS_2026-10-21.md`
+- Owner actor-only assignment: internal source repair worker; Antigravity browser-only, unchanged C1-C4/caps/Root independent checks.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-WORKER-ASSIGNMENT-ADMISSION.json`
 - Actual repair result, corrected advisory false drift finding, cost escalation before third source pass and concrete C1-C4 same-scope acceptance method.: `docs/reviews/R139_ANTIGRAVITY_REPAIR_RESULT_REVIEW_AND_COST_DECISION_2026-10-23.md`
 - Independent authority and source-cost disposition review for same-R139 exact contract correction only.: `docs/reviews/R139_ANTIGRAVITY_CONTRACT_CORRECTION_ADMISSION_REVIEW_2026-10-23.md`
 - Conditional dispatcher-controlled C1-C4 correction after independent source-cost disposition; no new check/effect slots, no current runtime.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-CONTRACT-CORRECTION-ADMISSION.json`
