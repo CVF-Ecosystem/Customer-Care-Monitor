@@ -6,9 +6,9 @@ Status: ACTIVE
 
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active role: Root independent REVIEWER accepting worker bounded offline result, ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; worker execution stopped
+- Active role: Root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD after Sol Medium operational HOLD_TRANSFER review; no effects
 - Active tranche: CCMAI-RUNTIME-139
-- Next allowed move: CCMAI-RUNTIME-139: receiving offline checks ACCEPTED_BOUNDED_LOCAL_CHECKS, compile1/1 exit0 and pure1/1 exact7PASS0FAIL0SKIP; both caps spent, no replay. Worker provides one consolidated already-exposed native-browser policy and terminal/process lifecycle declaration in existing build return (metadata only, UNKNOWN accepted); Root prepares exact independently reviewed inert capability admission before any probe. No further source/compile helper chain. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; G0 actual capability/G1 integrated/G2/G3/E05/E06/full M3 OPEN. Browser/probe/fixture/key/API remain0; old r3 spent/expired/newAPI0, older uncertain slot consumed/unknown, protected drift HOLD, old-tab UNKNOWN and Facebook/Zalo OA parked retained.
+- Next allowed move: CCMAI-RUNTIME-139 HOLD_TRANSFER: worker Section7 native browser/process metadata ACCEPTED, no repair. Independent Sol Medium finds inert admission NOT_CLOSEABLE: loopback/own-tab-close/host-isolation/native deadline and original child cleanup unresolved; even schema-only browser_subagent call lacks documented no-launch mode. No invocation/probe/server/helper or further discovery loop. Transfer existing same-R139 packet to supported environment with documented pre-invocation ownership/close/deadline/child-wait controls; exact independent inert admission before effects. Offline compile1/1 and pure1/1 exact7PASS accepted/spent; product B BLOCKED_PENDING_OPERATIONAL_ADMISSION, G0/G1integrated/G2/G3/E05/E06/fullM3 OPEN. Old spent/uncertain provider counters, protected drift HOLD, old-tab UNKNOWN and Facebook/Zalo OA parked retained.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## INTAKE / DESIGN / SPEC / WORK_ORDER acknowledgment
@@ -234,3 +234,8 @@ Canonical rehydration completed; doctor27/27 PASS with inherited pin warning; kn
 ## Worker offline final acceptance — 2026-10-23
 
 Root fresh canonical rehydration; doctor27/27 PASS with inherited pin warning and knowledge ingestion complete. Independent REVIEWER checked21 source/binary/raw-output/selector/receipt/dispatch facts; exact7PASS0FAIL0SKIP exit0 in3.518s. docs/reviews/R139_WORKER_OFFLINE_FINAL_REVIEW_2026-10-23.md accepts only bounded local software checks. Source/compile1/1 and pure1/1 complete and spent; whole R139 not frozen. Root transitions ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD to persist evidence and route. One metadata-only browser/process capability declaration return under existing topology authority, then exact independent inert admission before any probe. No further compile repair or helper chain; all old uncertainties/caps/accounts retained. Root independent reviewer did not execute product tests.
+
+
+## Worker capability metadata acceptance / Sol operational transfer — 2026-10-23
+
+Fresh canonical rehydration, doctor27/27 PASS with inherited manifest-pin warning, knowledge ingest complete. Root independently reviews worker Section7; requirement satisfied, no repair. Independent Sol Medium read-only operational review finds next inert admission not closeable from missing own-tab/isolation/deadline/child-lifetime primitives; do not invoke schema-only native subagent to discover them. Root adopts HOLD_TRANSFER and records docs/reviews/R139_WORKER_CAPABILITY_REVIEW_AND_TRANSFER_2026-10-23.md. No candidate/admission emitted or runtime effect; sole candidate-document assembly failed IndexError before file/server/process/network and is disclosed. Same-R139 transfer only to documented supported environment, no helper/discovery/recompile chain, owner not asked to approve an incomplete contract. Accepted compile/pure spent and all old uncertainties/accounts retained.

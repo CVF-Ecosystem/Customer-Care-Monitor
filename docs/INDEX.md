@@ -4561,6 +4561,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Original single released pure-Go test reservation/receipt/raw log; bounded local software evidence.: `docs/reviews/probes/r139_integrated_20261021/claude_receiving_20261023/build_test_reservation.json`
 - Original single released pure-Go test reservation/receipt/raw log; bounded local software evidence.: `docs/reviews/probes/r139_integrated_20261021/claude_receiving_20261023/build_test.stderr.txt`
 - Original single released pure-Go test reservation/receipt/raw log; bounded local software evidence.: `docs/reviews/probes/r139_integrated_20261021/claude_receiving_20261023/build_test.stdout.txt`
+- Section7 metadata accepted; independent Sol review operational HOLD_TRANSFER due undocumented ownership/closure/deadline/child controls; no new probe admission.: `docs/reviews/R139_WORKER_CAPABILITY_REVIEW_AND_TRANSFER_2026-10-23.md`
 - Root independent bounded local-check acceptance: compile1/1 and pure7PASS0SKIP; no runtime/provider/M3 acceptance.: `docs/reviews/R139_WORKER_OFFLINE_FINAL_REVIEW_2026-10-23.md`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`

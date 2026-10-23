@@ -148,15 +148,45 @@ All pre-launch pins from the admission authority and binary release artifact wer
 
 ---
 
-## 7. Summary & Handoff to Root
+## 7. Native Browser and Process Capability Declaration
+
+In accordance with work order `CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md` and review `docs/reviews/R139_WORKER_OFFLINE_FINAL_REVIEW_2026-10-23.md`, this declaration provides the exact tool and API metadata exposed in the receiving environment to support Root's preparation of the inert capability admission. All statements are derived strictly from provided tool declarations and documentation; any unverified capability is recorded as `UNKNOWN`.
+
+### 7.1 Information Sources & Provenance
+- **Browser Automation Tool**: `default_api:browser_subagent` (Built-in Antigravity IDE tool declaration).
+- **Process & Command Execution Tools**: `default_api:run_command` and `default_api:manage_task` (Built-in Antigravity IDE tool declarations; Host OS: Windows, Shell: pwsh).
+- **Tool Availability**: No direct Chromium DevTools Protocol (CDP), Selenium, Puppeteer, or raw CUA socket API is exposed directly to the primary agent; browser interactions are encapsulated inside `browser_subagent`.
+
+### 7.2 Native Browser Capabilities & Policies (`browser_subagent`)
+
+| Capability / Aspect | Status | Provenance / Documentation Quote | Operational Assessment & Constraints |
+| --- | --- | --- | --- |
+| **Loopback Navigation Policy** (`http://localhost`, `http://127.0.0.1`) | **UNKNOWN** | `default_api:browser_subagent` schema | Neither parameter descriptions nor tool documentation state whether loopback URLs (`localhost`, `127.0.0.1`) are permitted or restricted by network policy. Must be tested via an admitted inert loopback probe before any fixture launch. |
+| **Capture Provenance & Artifacts** | **SUPPORTED** | `default_api:browser_subagent`: *"All browser interactions are automatically recorded and saved as WebP videos to the artifacts directory. This is the ONLY way you can record a browser session video/animation."* Parameter `RecordingName`. | WebP recording is automatic. Post-return DOM reading or screenshot capture is explicitly stated in description (*"After the subagent returns, you should read the DOM or capture a screenshot to see what it did"*). |
+| **Own-Tab Close Semantics** | **UNKNOWN** | `default_api:browser_subagent`: *"The subagent has access to tools for both interacting with web page content... and controlling the browser window itself (resizing, etc)."* | Explicit primitives for closing a specific tab versus terminating the subagent task are not documented in the top-level declaration. Clean tab-closure behavior remains `UNKNOWN`. |
+| **Host-Tab Isolation & Other-Tab Protection** | **UNKNOWN** | `default_api:browser_subagent` schema | Tool schema does not document whether the subagent runs in a separate, isolated browser profile or shares existing browser instances. Cross-tab isolation cannot be verified from metadata alone and is classified as `UNKNOWN`. Unrelated host tabs must never be targeted. |
+
+### 7.3 Process & Terminal Lifecycle APIs (`run_command`, `manage_task`)
+
+| Capability / Aspect | Status | Provenance / Documentation Quote | Operational Assessment & Constraints |
+| --- | --- | --- | --- |
+| **Async Parent/Child Process Handles** | **SUPPORTED (TaskId abstraction); Raw OS HANDLE UNKNOWN** | `default_api:run_command` (`WaitMsBeforeAsync`, `IsDaemon`); `default_api:manage_task` (`TaskId`) | Long-running commands transition to background tasks managed by a human-readable `TaskId`. Raw Windows process `HANDLE` or integer PID is not directly returned to the agent, but lifecycle operations are bound to `TaskId`. |
+| **Wait and Exit Observation** | **SUPPORTED** | `default_api:run_command`: synchronous return on command completion; reactive notification when background task completes. `default_api:manage_task(Action='status')`. | Synchronous commands return exit code and stdout/stderr directly. Background tasks push completion notifications reactively without polling; status can be checked via `manage_task`. |
+| **Timeout Handling** | **SUPPORTED (via script wrapper); run_command kill-timeout NOT_PRESENT** | `default_api:run_command` parameter `WaitMsBeforeAsync` (max 10000ms) | `WaitMsBeforeAsync` controls when execution transitions to async, not a hard process-termination timeout. Hard timeouts must be enforced within the invoked command (e.g., PowerShell timeout, Go `-test.timeout`, Python wrapper) or via scheduled `manage_task(Action='kill')`. |
+| **Exact-Owned Process Termination** | **SUPPORTED (TaskId level); Process Tree Cleanup UNKNOWN** | `default_api:manage_task(Action='kill', TaskId=...)`: *"Cancel the task's execution"* | Calling `kill` terminates the background task for the exact `TaskId`. However, on Windows/pwsh, child subprocesses spawned by a script might not be automatically tree-killed without explicit job objects or tree-termination commands (`taskkill /F /T` or `Stop-Process`). Script-level cleanup logic must be verified in inert admission. |
+
+---
+
+## 8. Summary & Handoff to Root
 
 1. **Offline Substage Completed**:
    - Single offline compilation: consumed 1/1, successful (`COMPILE_SUCCESS`).
    - Single pure-Go binary test: consumed 1/1, successful (`TEST_PASS`: 7 PASS, 0 FAIL, 0 SKIP, exit 0).
 2. **Caps Accounting**: Both offline substage caps are now fully consumed (1/1 compile, 1/1 pure test). No further test or compile invocations are admitted under this authority.
-3. **Product B Disposition**: Remains strictly **BLOCKED_PENDING_OPERATIONAL_ADMISSION**. No runtime effects, browser flows, or provider calls have been executed.
-4. **Artifacts Submitted for Root Review**:
+3. **Capability Declaration Added**: Section 7 above provides the consolidated native browser and process lifecycle metadata to inform Root's preparation of the inert capability admission.
+4. **Product B Disposition**: Remains strictly **BLOCKED_PENDING_OPERATIONAL_ADMISSION**. No runtime effects, browser flows, or provider calls have been executed.
+5. **Artifacts Submitted for Root Review**:
    - Compile reservation & receipt: `build_reservation.json`, `build_compile_receipt.json`, stdout/stderr
    - Test reservation & receipt: `build_test_reservation.json`, `build_test_receipt.json`, stdout/stderr
    - Build return: This document (`docs/reviews/R139_CLAUDE_RECEIVING_BUILD_RETURN_2026-10-23.md`)
-5. **Worker Non-Commit**: In strict adherence to role separation, the worker does NOT commit any files. Root independently reviews the return, verifies evidence artifacts, and commits repository state.
+6. **Worker Non-Commit**: In strict adherence to role separation, the worker does NOT commit any files. Root independently reviews the return, verifies evidence artifacts, and commits repository state.
