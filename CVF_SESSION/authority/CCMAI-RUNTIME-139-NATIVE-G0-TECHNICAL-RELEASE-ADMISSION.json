@@ -1,0 +1,255 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "DISPATCHER_OWNED_NATIVE_G0_TECHNICAL_RELEASE",
+  "status": "G0_RELEASE_CONDITIONAL_ON_COMMIT_AND_SINGLE_RESERVATION",
+  "date": "2026-10-24",
+  "issuedAtUTC": "2026-10-23T18:45:24.814172+00:00",
+  "riskCeiling": "R2",
+  "baseCommit": "405bd9908132d5a41981abc98bca07a215603d6e",
+  "parentGate": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-OPERATIONAL-GATE-ADMISSION.json",
+  "parentGateSha256": "926ef08264f0ec5d788a4578d35dee8ef362ae7c90634acc03c0b05475599ea3",
+  "packet": "docs/reviews/R139_OPERATIONAL_HANDOFF_PACKET_2026-10-24.md",
+  "packetSha256": "102cff128ac70d8ce8f2ab1bc734c50d66fe5a45033dc46f21d564ad94fdc888",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+  "sourceCommit": "a718da33d6448af225a2a1b2f0a222f5e05d26b4",
+  "sourceSha256": {
+    "backend/api/handlers/intervention_execution_browser_test.go": "25085f86bcce25e3bbf1cf8841c8c5e72284aec0f5adf0675038f81d435852b6",
+    "scripts/r139_execution_supervisor.py": "160ffd51ac6d82ae906b9070f16b06f0f703eed31d2360aab14577bbf4c79de1",
+    "scripts/r139_vite_config.mjs.template": "82a1d9ae8576fcd46718945d0a5cb44eb963a2a14d436a16e2bcdfb72b26bee9",
+    "scripts/tests/test_r139_execution_supervisor.py": "e28546a7cc8ebde7c4d9482097e015662b1b87eb83d0dedf775914360764a9f9",
+    "backend/go.mod": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+    "backend/go.sum": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b",
+    "frontend/package.json": "d16bea0b83ad7eb871576061f7ea91534a2dd2fdc7eef26eb20ec908e4fca24d",
+    "frontend/package-lock.json": "da41e1de5d5b853295a303092aab9433aeea8168fda2cf0420dd94e9f579fb00",
+    "frontend/vite.config.ts": "736c63d3a72a5b126841ceedeac4b4a01854a2bec71bd57d2f46a23ec3cf68de"
+  },
+  "sourceAndToolPins": "All binary/tools/Vite/backend/frontend-tree pins inherited exactly from hash-bound parentGate; revalidate before first effect. No edits/checks/rebuilds granted.",
+  "ownerInstruction": "Owner đã sẵn sàng cho campaign R139. Hãy thực hiện technical release và reservation cho G0.",
+  "ownerBrowserChannelReply": "Đã mở; phối hợp qua file trong workspace",
+  "roles": {
+    "dispatcherAndCommitSteward": "Root",
+    "internalWorker": "Codex delegated worker /root/r139_runtime_recorder_design",
+    "browserWorker": "Antigravity native browser worker",
+    "independentAdmissionReviewer": "/root/r139_operational_admission_review",
+    "independentRuntimeResultReviewer": "Root"
+  },
+  "browserWorkerAck": {
+    "path": ".cvf/runtime/r139_native_integrated_20261024_readiness/coordination/browser_worker_ready.json",
+    "sha256": "67f0898864f6c5a22ea1f7d761379ce86b672fbd892ce146d61ac3e69585ec87"
+  },
+  "internalWorkerAck": {
+    "path": ".cvf/runtime/r139_native_integrated_20261024_readiness/coordination/internal_worker_ready.json",
+    "sha256": "d0d503803f6470c1152ef562dc28a02960b63fa88fc74b834eb7083a0e3c967c"
+  },
+  "browserDocumentationReceipt": {
+    "path": ".cvf/runtime/r139_native_integrated_20261024_readiness/coordination/browser_tool_documentation_receipt.json",
+    "sha256": "b2fe9e9c3338920b3fd0c83f50c81c7cee1c561937402606c2a2e24480946c39"
+  },
+  "coordinationSnapshot": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/root_coordination_metadata_snapshot.json",
+    "sha256": "7e1d9ca1ebeaf52b409540816e02b05c957f62511c72aec8d87a98551bb0d158"
+  },
+  "technicalPrerequisites": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/root_current_release_prerequisites.json",
+    "sha256": "eceb488da964e609f896dc6766d40f353cf2d5313a535dd0d008a5855cdd01a4"
+  },
+  "publicPricingReceipt": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/root_current_public_price_read.json",
+    "sha256": "644bcd0e97ed259b4c1fb80782911d9dab337dbaff04ae8df067f77d5ef67424",
+    "used": 1,
+    "cap": 1,
+    "status": "PASS_CURRENT_PUBLIC_STANDARD_TARIFF_READINESS_ONLY",
+    "providerCalls": 0
+  },
+  "nativeContractId": "r139-native-integrated-20261024",
+  "campaignNonce": "a64a7a07c35e9fe30e4cb8574a32b831",
+  "selectedCloseMode": "operator_fallback",
+  "operator": "Owner in this conversation, explicitly available now; close ONLY exact nonce/native-page-bound page when requested, actual close proof required",
+  "operatorAvailabilityBasis": "Owner explicit campaign-ready instruction and shared-file coordination reply2026-10-24; no guessed keyboard/window/process kill",
+  "nativeRoute": "default_api:browser_subagent in external Antigravity worker; Root has no such endpoint and uses shared files only",
+  "capabilityDiscovery": "After reservation, exactly one new owned native managed browser campaign for G0 discovery/control/capture and same context reused for G2. ReusedSubagentId is a documented CONTEXT resume parameter, not proof of native page or browser-session identity. Worker must discover actual PageId/equivalent/session/persistent-target/scoped inventory. Failure or uncertainty consumes campaign and HOLD before fixture; no claim PASS from automatic WebP or context ID.",
+  "g0CreationURL": "https://example.com/#r139_nonce=a64a7a07c35e9fe30e4cb8574a32b831&phase=created",
+  "g0ControlURL": "https://example.com/#r139_nonce=a64a7a07c35e9fe30e4cb8574a32b831&phase=controlled",
+  "browserReadinessRoot": ".cvf/runtime/r139_native_integrated_20261024_readiness",
+  "coordinationRoot": ".cvf/runtime/r139_native_integrated_20261024_readiness/coordination",
+  "reservationPath": ".cvf/runtime/r139_native_integrated_20261024_readiness/campaign_reservation.json",
+  "campaignClock": {
+    "g0StartUTC": "Actual UTC sampled at original reservation only",
+    "g0Monotonic": "Finite numeric non-bool pinned-Python time.monotonic() from same Windows host/boot; never regenerated",
+    "deadlineSeconds": 1200,
+    "stopSeconds": 1020,
+    "utcMonotonicToleranceSeconds": 2,
+    "invalid": "Negative elapsed, mismatched host/boot or UTC-monotonic mismatch => HOLD; no wall-clock rebasing",
+    "identityFields": [
+      "g0Monotonic",
+      "monotonicSource=python.time.monotonic",
+      "pythonPath",
+      "hostBootId actual OS read-only boot identity, verified by Root at reservation and runtime release"
+    ]
+  },
+  "hostBootId": "TT-DOICONT-LT1|2026-10-23T05:48:27.5006730Z",
+  "pythonPath": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+  "g0Caps": {
+    "nativeCampaigns": 1,
+    "newOwnedPages": 1,
+    "creationNavigation": 1,
+    "samePageControlNavigation": 1,
+    "pageReadObservations": 4,
+    "originalCaptures": 2,
+    "actualFinalClose": 1,
+    "automaticRetry": 0,
+    "sourceChecksOrEdits": 0,
+    "antigravityCLIQueries": 0,
+    "productProcesses": 0,
+    "dockerMutations": 0,
+    "databaseConnections": 0,
+    "keyContentReads": 0,
+    "providerCalls": 0,
+    "internalReadOnlyDockerQueries": "Only the4 exact internalG0Readiness Docker queries; no other Docker invocation in G0"
+  },
+  "internalG0Readiness": {
+    "status": "PREPARED_NOT_EXECUTED",
+    "actor": "Internal worker only after Root G0 technical release and original campaign reservation",
+    "binaryPinSource": "tools.dockerBinary and tools.powershellBinary (path and sha256); exact argv arrays below; shell false, cwd project root",
+    "dockerConfigDir": ".cvf/runtime/r139_native_integrated_20261024_readiness/docker_config",
+    "dockerConfigContent": "{}\n",
+    "configCustody": "Exclusive owned directory and config.json only; no ambient credentials/config; create after campaign reservation",
+    "queries": [
+      {
+        "id": "cached-image",
+        "argv": [
+          "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_native_integrated_20261024_readiness/docker_config",
+          "image",
+          "inspect",
+          "--format",
+          "{{json .Id}}",
+          "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+        "comparison": "Decode stdout as exactly one JSON string (only surrounding whitespace); require decoded string exactly equals expected; no extra stdout content. Original stderr/exit retained."
+      },
+      {
+        "id": "container-name",
+        "argv": [
+          "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_native_integrated_20261024_readiness/docker_config",
+          "ps",
+          "-a",
+          "--filter",
+          "name=ccmai-r139-r4-20261023",
+          "--format",
+          "{{json .Names}}"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "EMPTY"
+      },
+      {
+        "id": "network-name",
+        "argv": [
+          "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_native_integrated_20261024_readiness/docker_config",
+          "network",
+          "ls",
+          "--filter",
+          "name=ccmai-r139-r4-20261023",
+          "--format",
+          "{{json .Name}}"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "EMPTY"
+      },
+      {
+        "id": "volume-name",
+        "argv": [
+          "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_native_integrated_20261024_readiness/docker_config",
+          "volume",
+          "ls",
+          "--filter",
+          "name=ccmai-r139-r4-20261023",
+          "--format",
+          "{{json .Name}}"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "EMPTY"
+      },
+      {
+        "id": "vite-port",
+        "argv": [
+          "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+          "-NoLogo",
+          "-NoProfile",
+          "-NonInteractive",
+          "-Command",
+          "$ErrorActionPreference='Stop'; $r139Listeners = @(Get-NetTCPConnection -State Listen -ErrorAction Stop | Where-Object { $_.LocalPort -eq 3519 } | Select-Object -Property LocalAddress,LocalPort,OwningProcess); [pscustomobject]@{ port = 3519; listeners = $r139Listeners } | ConvertTo-Json -Depth 4 -Compress; exit 0"
+        ],
+        "timeoutSeconds": 5,
+        "cap": 1,
+        "expected": {
+          "port": 3519,
+          "listeners": []
+        }
+      }
+    ],
+    "automaticRetry": 0,
+    "used": 0,
+    "vitePort": 3519,
+    "failure": "Any error/timeout/nonzero/ambiguous or occupied result HOLD, campaign consumed; no mutation/cleanup of ambient resources or replacement namespace/port",
+    "clock": "Reserve before first query or browser invocation; same original1200seconds includes all5queries and G0/G1/G2/cleanup",
+    "processCustody": "Capture original argv/stdout/stderr/start/end/wait/exit. Timeout must request cancellation of only the exact held query child and observe original wait; no new command/retry/host process kill. Unreturned original wait means UNKNOWN/HOLD, not bounded lifetime proof."
+  },
+  "executionOrder": [
+    "Root commits this exact reviewed supplement and current continuity; verifies clean HEAD and immutable pins.",
+    "Root exclusively creates campaign_reservation.json using actual pinned-Python UTC+monotonic/same-host-boot anchors; cap1/usedOrUncertain1; deadlineUTC start+1200seconds, stopMono start+1020.",
+    "Root publishes coordination/g0_release.json bound to actual committed dispatch HEAD and reservation hash. No worker self-reservation/release.",
+    "Internal worker executes exactly5 pinned read-only service queries with original handle/wait/output/timing; no retries. No browser invocation until all5 pass and Root writes coordination/internal_g0_preflight_pass.json.",
+    "Antigravity invokes ONE reserved native campaign for discovery. If supported, creates ONE fresh exact nonce HTTPS page, controls to exact second fragment, captures originals and writes genuine G0_READY/reservation receipt; otherwise HOLD with original diagnostics and exact owned cleanup only.",
+    "Root independently reviews actual G0 evidence/manual exact URL matching and commits separate runtime admission before any fixture/product/key/provider action."
+  ],
+  "noninterferenceExclusion": {
+    "oldEvidence": [
+      "docs/reviews/R139_ANTIGRAVITY_G0_RUNTIME_REVIEW_2026-10-23.md",
+      "docs/reviews/R139_RECOVERY_SOURCE_AND_RUNTIME_TRANSFER_2026-10-23.md"
+    ],
+    "historicalState": "All old-tab/protected drift/provider uncertainty UNKNOWN retained; older campaigns/check slots spent.",
+    "excludedTargets": "Every pre-existing browser tab/window/session and every pre-existing Docker resource is excluded from control/cleanup. No protected-resource/old-tab mutation, window/keyboard shortcut or process kill.",
+    "newOwnershipPlan": "Native discovery must establish independent dedicated owned page/session scope and exact new page identity. If tool cannot separate it from Host tabs or enumerate only owned scope, HOLD before creating/control effects that could touch Host tabs. Internal G0 checks only pinned image and exact prospective-name/port absence.",
+    "runtimeNamespace": "Product r139_integrated_execution_r4_20261023, fixture ccmai-r139-r4-20261023, db ccma_r139_r4_20261023; all absent before product admission; exact namespace from parent gate.",
+    "unprovedUntilG0": "Context resume ID does not establish native session isolation. Before product fixture, genuine G0 ownership/exclusion and fresh protected baseline references must be accepted and bound in actual runtime admission."
+  },
+  "releaseLimits": {
+    "newCampaignCap": 1,
+    "newProviderGrant": false,
+    "productProcesses": 0,
+    "databaseConnections": 0,
+    "dockerMutations": 0,
+    "keyContentReads": 0,
+    "providerCalls": 0,
+    "sourceEditsAndChecks": 0,
+    "automaticRetry": 0,
+    "newTranches": 0
+  },
+  "productRuntimeExecutableNow": false,
+  "providerExecutableNow": false,
+  "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+  "claimBoundary": "Technical release enables only conditional G0 proof after committed record+exclusive reservation+Root dispatch signal. No native capability/runtime/AI governance/product readiness PASS and no full M3 closure."
+}

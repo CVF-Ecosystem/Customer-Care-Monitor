@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Current R139 operational handoff PREPARED_NOT_RELEASED; accepted source a718da33, same G0-G3 order, campaign/API0; internal runtime and Antigravity browser-only awaiting coordinated readiness."
+      "description": "Current R139 all-three-roles-ready conditional G0 technical release; Root reserves once after committed release; actual native capability proof pending, no product/key/provider release."
     },
     {
       "id": "r060-work-order",
@@ -36340,6 +36340,34 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/root_preparation_metadata.json",
       "status": "ACTIVE",
       "description": "R139 consolidated operational handoff preparation only; internal non-browser agents, Antigravity browser-only. Campaign/provider0, source accepted; no runtime/product/governance acceptance."
+    },
+    {
+      "id": "r139-g0-current-35ef63b4a169",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/root_current_release_prerequisites.json",
+      "status": "ACTIVE",
+      "description": "R139 current Owner-ready technical-release prerequisites and bounded public tariff read; metadata-only worker coordination, no G0 reservation/effects until actual browser-worker handshake. No product/governance acceptance."
+    },
+    {
+      "id": "r139-g0-current-797a813fdc17",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/root_coordination_metadata_snapshot.json",
+      "status": "ACTIVE",
+      "description": "R139 current Owner-ready technical-release prerequisites and bounded public tariff read; metadata-only worker coordination, no G0 reservation/effects until actual browser-worker handshake. No product/governance acceptance."
+    },
+    {
+      "id": "r139-g0-current-61250f18a718",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/root_current_public_price_read.json",
+      "status": "ACTIVE",
+      "description": "R139 current Owner-ready technical-release prerequisites and bounded public tariff read; metadata-only worker coordination, no G0 reservation/effects until actual browser-worker handshake. No product/governance acceptance."
+    },
+    {
+      "id": "r139-native-g0-technical-release",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-G0-TECHNICAL-RELEASE-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "R139 independently reviewed conditional G0 technical release binding actual worker ACKs, source/tool/tariff/boot pins; single reservation required before effects; no product/key/provider release."
     }
   ]
 }

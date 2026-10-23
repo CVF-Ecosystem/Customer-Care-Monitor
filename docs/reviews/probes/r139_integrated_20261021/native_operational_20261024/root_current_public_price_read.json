@@ -1,0 +1,66 @@
+{
+  "status": "PASS_CURRENT_PUBLIC_STANDARD_TARIFF_READINESS_ONLY",
+  "reservedAtUTC": "2026-10-23T18:37:46.824211+00:00",
+  "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-OPERATIONAL-GATE-ADMISSION.json",
+  "authoritySha256": "926ef08264f0ec5d788a4578d35dee8ef362ae7c90634acc03c0b05475599ea3",
+  "ownerCurrentInstruction": "Perform R139 technical release and reservation for G0; Owner ready and AG opened shared workspace",
+  "rootTechnicalRelease": "Release ONLY the one public pricing readiness fetch expressly allowed in committed gate.publicPriceReadiness; campaign/browser/service/product/key/provider still NOT released. This ledger reserves public page fetch, not G0 campaign.",
+  "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+  "newFetchCap": 1,
+  "usedOrUncertain": 1,
+  "retry": 0,
+  "cachedSameResultInspectionOnly": true,
+  "provider": "Alibaba Cloud Model Studio",
+  "requiredModel": "qwen3.7-flash",
+  "requiredRegion": "Singapore / International (ap-southeast-1 from inherited endpoint-hash mapping; no private config reread)",
+  "maximumUSD": 1,
+  "requestBytesMax": 6000,
+  "outputTokensMax": 768,
+  "thinking": false,
+  "campaignUse": 0,
+  "providerAttempts": 0,
+  "credentialReads": 0,
+  "prohibited": "No second URL/search/retry/account/key/provider request/model substitution; unavailable/mismatch means HOLD before campaign.",
+  "completedAtUTC": "2026-10-23T18:38:21.675784+00:00",
+  "publicDocumentLastUpdated": "2026-10-22",
+  "matchedModel": "qwen3.7-flash",
+  "publishedAlias": "qwen3.7-flash-2026-07-15",
+  "region": "Singapore / International",
+  "uniqueURLsFetched": 1,
+  "cachedFinds": 1,
+  "sourceReference": "Official Alibaba Cloud Model Studio model-pricing page, fetched once and searched within same cached result; Singapore table Qwen-Flash",
+  "publishedInputOutputUSDPerMillion": [
+    {
+      "inputTokensMax": 32000,
+      "input": 0.03,
+      "output": 0.13
+    },
+    {
+      "inputTokensMax": 256000,
+      "input": 0.1,
+      "output": 0.4
+    },
+    {
+      "inputTokensMax": 1000000,
+      "input": 0.2,
+      "output": 0.8
+    }
+  ],
+  "conservativeTariffBound": {
+    "inputTokensBound": 1000000,
+    "reason": "Entire highest accepted published input tier, no byte-to-token inference; actual request still <=6000bytes",
+    "inputUSDPerMillion": 0.2,
+    "outputUSDPerMillion": 0.8,
+    "completionTokensBound": 768,
+    "calculation": "1000000*0.2/1000000 + 768*0.8/1000000",
+    "standardInferenceUSD": 0.2006144,
+    "ownerLimitUSD": 1,
+    "withinBudget": true
+  },
+  "qualifications": [
+    "Standard token-inference list tariff only; no free quota/batch/cache/discount assumption.",
+    "Public tariff supports readiness, not observed billing/account validity/provider response.",
+    "Endpoint region inherited exact hash mapping; no key/config/account/provider endpoint access.",
+    "All earlier spent/uncertain effects preserved; this one public fetch is now spent, cached result only/no retry."
+  ]
+}
