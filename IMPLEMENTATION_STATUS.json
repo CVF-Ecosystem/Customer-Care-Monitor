@@ -4092,12 +4092,12 @@
     "date": "2026-10-24",
     "ownerInstruction": "Owner đã sẵn sàng cho campaign R139. Hãy thực hiện technical release và reservation cho G0.",
     "ownerChannelReply": "Đã mở; phối hợp qua file trong workspace",
-    "status": "ALL_THREE_ROLES_READY_PENDING_COMMITTED_TECHNICAL_RELEASE_AND_SINGLE_RESERVATION",
+    "status": "G0_TECHNICAL_RELEASE_COMMITTED_CAMPAIGN_RESERVED",
     "prerequisiteReceipt": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/root_current_release_prerequisites.json",
     "oneExistingOrder": true,
     "newTranches": 0,
-    "campaignReserved": false,
-    "campaignUsed": 0,
+    "campaignReserved": true,
+    "campaignUsed": 1,
     "providerAttemptsUsed": 0,
     "publicPricingFetchUsed": 1,
     "publicPricingFetchCap": 1,
@@ -4115,6 +4115,16 @@
     "internalWorkerAckSha256": "d0d503803f6470c1152ef562dc28a02960b63fa88fc74b834eb7083a0e3c967c",
     "selectedCloseMode": "operator_fallback",
     "operator": "Owner in this conversation; actual availability confirmed",
-    "nativeCapabilityStatus": "RESERVED_DISCOVERY_REQUIRED_NOT_PASS"
+    "nativeCapabilityStatus": "RESERVED_DISCOVERY_REQUIRED_NOT_PASS",
+    "technicalReleaseCommit": "3106cdcd9a3f678829d0994cc7d04343bcfa8d26",
+    "reservationPath": ".cvf/runtime/r139_native_integrated_20261024_readiness/campaign_reservation.json",
+    "reservationSha256": "9d0db9d178ecebc62471c4f3f732c019fe7c4dcfa0ee85c9853ec39a15e3080b",
+    "reservationReceipt": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/root_g0_actual_reservation_receipt.json",
+    "g0StartUTC": "2026-10-23T18:53:19.328991+00:00",
+    "deadlineUTC": "2026-10-23T19:13:19.328991+00:00",
+    "stopRequestedByUTC": "2026-10-23T19:10:19.328991+00:00",
+    "internalServiceQueriesUsedAtTransition": 0,
+    "browserInvocationsObservedAtTransition": 0,
+    "continuityDisposition": "Dispatch-stage plan advanced to actual reservation; original clock/budgets unchanged, no first query executed before sync."
   }
 }
