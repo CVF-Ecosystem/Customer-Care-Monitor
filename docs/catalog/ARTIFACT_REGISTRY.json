@@ -35044,7 +35044,7 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
       "status": "ACTIVE",
-      "description": "One integrated R139 roadmap order; Owner-selected bounded Antigravity G0 trial after commit, exact inert contract and mandatory no-reminder directive; product/provider HOLD."
+      "description": "One R139 roadmap order; Antigravity G0 spent/qualified HOLD, no replay; revised ownership proposal to be consolidated with remaining integrated acceptance."
     },
     {
       "id": "r138-handoff-history",
@@ -35941,6 +35941,97 @@
       "path": "docs/reviews/R139_ANTIGRAVITY_G0_ADMISSION_REVIEW_2026-10-23.md",
       "status": "ACTIVE",
       "description": "Independent Luna admission acceptance/Root code review; actual capability not yet run, original false drift finding corrected."
+    },
+    {
+      "id": "r139-antigravity-g0-runtime-review",
+      "family": "continuity",
+      "path": "docs/reviews/R139_ANTIGRAVITY_G0_RUNTIME_REVIEW_2026-10-23.md",
+      "status": "ACTIVE",
+      "description": "Independent qualified G0 HOLD: bounded child wait only, parent missing-marker/null-listener, placeholder video; campaign spent; Antigravity retained."
+    },
+    {
+      "id": "r139-antigravity-g0-worker-return",
+      "family": "continuity",
+      "path": "docs/reviews/R139_ANTIGRAVITY_G0_WORKER_RETURN_2026-10-23.md",
+      "status": "ACTIVE",
+      "description": "Original worker G0 return; broad PROVEN claims qualified by independent review, no combined capability pass."
+    },
+    {
+      "id": "r139-ag-g0-browser-subagent-scratchpad-md",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/antigravity_g0_20261023/browser_subagent_scratchpad.md",
+      "status": "ACTIVE",
+      "description": "Original inert G0 raw artifact, campaign HOLD/spent; placeholder WebP is not UI proof and probe.py is preserved evidence only, never execute."
+    },
+    {
+      "id": "r139-ag-g0-child-final-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/antigravity_g0_20261023/child.final.json",
+      "status": "ACTIVE",
+      "description": "Original inert G0 raw artifact, campaign HOLD/spent; placeholder WebP is not UI proof and probe.py is preserved evidence only, never execute."
+    },
+    {
+      "id": "r139-ag-g0-child-stderr-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/antigravity_g0_20261023/child.stderr.log",
+      "status": "ACTIVE",
+      "description": "Original inert G0 raw artifact, campaign HOLD/spent; placeholder WebP is not UI proof and probe.py is preserved evidence only, never execute."
+    },
+    {
+      "id": "r139-ag-g0-child-stdout-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/antigravity_g0_20261023/child.stdout.log",
+      "status": "ACTIVE",
+      "description": "Original inert G0 raw artifact, campaign HOLD/spent; placeholder WebP is not UI proof and probe.py is preserved evidence only, never execute."
+    },
+    {
+      "id": "r139-ag-g0-child-stop",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/antigravity_g0_20261023/child.stop",
+      "status": "ACTIVE",
+      "description": "Original inert G0 raw artifact, campaign HOLD/spent; placeholder WebP is not UI proof and probe.py is preserved evidence only, never execute."
+    },
+    {
+      "id": "r139-ag-g0-g0-reservation-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/antigravity_g0_20261023/g0_reservation.json",
+      "status": "ACTIVE",
+      "description": "Original inert G0 raw artifact, campaign HOLD/spent; placeholder WebP is not UI proof and probe.py is preserved evidence only, never execute."
+    },
+    {
+      "id": "r139-ag-g0-parent-result-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/antigravity_g0_20261023/parent.result.json",
+      "status": "ACTIVE",
+      "description": "Original inert G0 raw artifact, campaign HOLD/spent; placeholder WebP is not UI proof and probe.py is preserved evidence only, never execute."
+    },
+    {
+      "id": "r139-ag-g0-parent-task-77-log",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/antigravity_g0_20261023/parent_task-77.log",
+      "status": "ACTIVE",
+      "description": "Original inert G0 raw artifact, campaign HOLD/spent; placeholder WebP is not UI proof and probe.py is preserved evidence only, never execute."
+    },
+    {
+      "id": "r139-ag-g0-probe-py",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/antigravity_g0_20261023/probe.py",
+      "status": "ACTIVE",
+      "description": "Original inert G0 raw artifact, campaign HOLD/spent; placeholder WebP is not UI proof and probe.py is preserved evidence only, never execute."
+    },
+    {
+      "id": "r139-ag-g0-r139-g0-20261023-1792761819938-webp",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/antigravity_g0_20261023/r139_g0_20261023_1792761819938.webp",
+      "status": "ACTIVE",
+      "description": "Original inert G0 raw artifact, campaign HOLD/spent; placeholder WebP is not UI proof and probe.py is preserved evidence only, never execute."
+    },
+    {
+      "id": "r139-ag-g0-ready-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/antigravity_g0_20261023/ready.json",
+      "status": "ACTIVE",
+      "description": "Original inert G0 raw artifact, campaign HOLD/spent; placeholder WebP is not UI proof and probe.py is preserved evidence only, never execute."
     }
   ]
 }

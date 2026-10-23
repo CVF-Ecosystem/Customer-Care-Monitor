@@ -1,0 +1,1 @@
+{"accepted_connections": null, "child_exit": 0, "child_pid": 18160, "elapsed_seconds": 85.589, "errors": ["RuntimeError: stop marker missing or child exited early"], "listener_connect_code": null, "listener_refused": null, "nonce": "9003fe736a33d5649b40c390", "original_wait_observed": true, "status": "HOLD", "stop_marker_consumed": false}

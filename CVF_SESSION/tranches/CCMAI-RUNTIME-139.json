@@ -119,9 +119,12 @@
     "docs/reviews/probes/r139_integrated_20261021/r7_root_source_review.json",
     "docs/reviews/R139_RECOVERY_SOURCE_AND_RUNTIME_TRANSFER_2026-10-23.md",
     "docs/reviews/probes/r139_integrated_20261021/r7_browser_inventory_outcome.json",
-    "docs/reviews/R139_RECOVERY_SOURCE_WORKER_RETURN_2026-10-23.md"
+    "docs/reviews/R139_RECOVERY_SOURCE_WORKER_RETURN_2026-10-23.md",
+    "docs/reviews/R139_ANTIGRAVITY_G0_RUNTIME_REVIEW_2026-10-23.md",
+    "docs/reviews/R139_ANTIGRAVITY_G0_WORKER_RETURN_2026-10-23.md",
+    "docs/reviews/probes/r139_integrated_20261021/antigravity_g0_20261023/parent.result.json"
   ],
-  "disposition": "CCMAI-RUNTIME-139 fresh-r3 independently HOLD/CHANGES_REQUIRED: campaign699e72fb1/1 spent/deadline expired; native8POST/18reads software-only, browserlogin only/refresh405/execute0/newAPI0. Originalterminal/childwaits missing; protected bridgeID/RunningFor drift and unknownStatus HOLD; exactownedcontainer exited/3listenersabsent observed late. Browserclose securitypolicyDENIED: Owner manually closes remaining localhost3019 login tab. Root records evidence/staticgates/commit only; no source/runtime/key/API/replay or helperchain. Next documentary decision must consolidate stable execution ownership, bootstrap405 and protectedinventory contract before proposing any new effects. OldMAYslot1 consumed/unknown retained; G2/G3/E05/E06/fullM3OPEN, FacebookZaloOAparked.",
+  "disposition": "Current Antigravity G0 campaign1/1 spent, independent HOLD_MISSING_BROWSER_OWNED_TAB_PRIMITIVES with qualifications: bounded child startup/wait/self-stop observed, parent HOLD/missing stop marker/null original listener check, recording placeholder, raw native terminal/env/timing/postmortem gaps retained. No combined G0 pass/replay/new effects. Antigravity remains Owner-selected; Root consolidates exact PageId/dedicated-page operator-close proposal with remaining integrated R139 requirements before any fresh authority. Product B/G1/G2/G3/E05/E06/fullM3 OPEN/blocked; all old spent/uncertain counters/resources/tab/accounts retained.",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -648,18 +651,40 @@
     "date": "2026-10-23",
     "ownerReply": "tiếp tục dùng antigravity",
     "environment": "ANTIGRAVITY_OWNER_SELECTED",
-    "status": "READY_FOR_COMMITTED_G0_DISPATCH",
+    "status": "CONSUMED_REVIEWED_HOLD",
     "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-G0-ADMISSION.json",
     "admissionSha256": "c9731a4ad9b6588b24f3ed1a0d7bf8691697850a078fba4ff9aec1386379e2cd",
     "review": "docs/reviews/R139_ANTIGRAVITY_G0_ADMISSION_REVIEW_2026-10-23.md",
     "campaignCap": 1,
-    "campaignUsed": 0,
-    "browserUsed": 0,
+    "campaignUsed": 1,
+    "browserUsed": 1,
     "harnessSha256": "64df8ddd49869dc86dfb5cb1ccb41ee43c0132af6fb5d688cc46cee3f8701ed8",
     "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
     "newProductOrProviderEffectsGranted": false,
     "oldCountersUnchanged": true,
     "newTranches": 0,
-    "priorTransferRecommendation": "Superseded for this explicit bounded real-test route; historical observations/policy denials not overridden"
-  }
+    "priorTransferRecommendation": "Superseded for this explicit bounded real-test route; historical observations/policy denials not overridden",
+    "counterBasis": "Native/browser use reported or uncertain is counted consumed; not system-wide runtime telemetry",
+    "outcomeReview": "docs/reviews/R139_ANTIGRAVITY_G0_RUNTIME_REVIEW_2026-10-23.md"
+  },
+  "x-antigravityG0RuntimeReview20261023": {
+    "date": "2026-10-23",
+    "outcome": "HOLD_MISSING_BROWSER_OWNED_TAB_PRIMITIVES",
+    "review": "docs/reviews/R139_ANTIGRAVITY_G0_RUNTIME_REVIEW_2026-10-23.md",
+    "campaignUsed": 1,
+    "campaignCap": 1,
+    "browserSubagentUsedWorkerReported": 1,
+    "browserPageActionsWorkerReported": 0,
+    "parentOutcome": "HOLD_MISSING_STOP_MARKER_NULL_LISTENER_CHECK",
+    "boundedChildWaitEvidence": "OBSERVED_CHILD_EXIT0_WAIT_TRUE_85_589S",
+    "recording": "ONE_FRAME_PLACEHOLDER_NOT_UI_PROOF",
+    "postmortemListener": "WORKER_REPORTED_NO_RAW_RECEIPT",
+    "environmentChoice": "CONTINUE_ANTIGRAVITY",
+    "nextRoute": "CONSOLIDATED_OWNERSHIP_AND_OPERATIONAL_CONTRACT_IN_EXISTING_R139_NO_MICRO_RETRY",
+    "newEffectsGranted": false,
+    "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+    "oldCountersUnchanged": true,
+    "newTranches": 0
+  },
+  "x-priorDispositionBeforeAntigravityG0Review20261023": "CCMAI-RUNTIME-139 fresh-r3 independently HOLD/CHANGES_REQUIRED: campaign699e72fb1/1 spent/deadline expired; native8POST/18reads software-only, browserlogin only/refresh405/execute0/newAPI0. Originalterminal/childwaits missing; protected bridgeID/RunningFor drift and unknownStatus HOLD; exactownedcontainer exited/3listenersabsent observed late. Browserclose securitypolicyDENIED: Owner manually closes remaining localhost3019 login tab. Root records evidence/staticgates/commit only; no source/runtime/key/API/replay or helperchain. Next documentary decision must consolidate stable execution ownership, bootstrap405 and protectedinventory contract before proposing any new effects. OldMAYslot1 consumed/unknown retained; G2/G3/E05/E06/fullM3OPEN, FacebookZaloOAparked."
 }
