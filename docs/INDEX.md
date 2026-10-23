@@ -4456,7 +4456,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-LOCAL-READINESS-ADMISSION.json`
 - Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open.: `docs/reviews/R139_HTTPS_BROWSER_AND_LOCAL_READINESS_2026-10-21.md`
 - Consolidated initial source defects F01-F08; no runtime/AI governance proof.: `docs/reviews/R139_INITIAL_SOURCE_BUILD_FINDINGS_2026-10-21.md`
-- R139 BLOCKED_WITH_REASON: MySQL setupHOLD/nativebrowserprovider0; cost escalation and explicit fresh continuation needed.: `docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md`
+- R139 integrated order with owner-designated Claude receiving-intake annex; source accepted bounded, runtime/provider HOLD pending fresh committed admission.: `docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md`
 - Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim.: `docs/reviews/probes/r139_integrated_20261021/owner_one_usd_runtime_grant.json`
 - Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-CREDENTIAL-STAGING-ADMISSION.json`
 - Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim.: `docs/reviews/probes/r139_integrated_20261021/provider_pricing_reference.json`

@@ -2,7 +2,7 @@
 
 Status: BLOCKED_WITH_REASON
 Risk: R2
-Worker: Sol Medium delegated fixture worker
+Worker: Historical source worker Sol Medium; Claude designated by owner for receiving-environment intake under the 2026-10-23 annex
 Reviewer: Root independent source/evidence REVIEWER
 Commit mode: WORKER_MUST_NOT_COMMIT
 providerExecutionAuthority: EXACT_COMMITTED_R139_RUNTIME_ADMISSION_MAX1USD_NEW1_CALL
@@ -11,6 +11,8 @@ runtimeReviewer: /root/r139_r2_runtime_reviewer independent runtime REVIEWER
 dispatchKind: INITIAL
 
 ## Current authority and acceptance target
+
+Current dispatch instruction: read the **Claude receiving-worker annex — 2026-10-23** at the end of this order first. Historical runtime authority fields above do not activate a new campaign. Current runtime/key/API authority remains HOLD.
 
 Current stage: CCMAI-RUNTIME-139 HOLD_TRANSFER: recovery source accepted bounded at pinned four hashes (offline compile2/2PASS, pureGo7PASS0SKIP, worker/RootPython34PASS each); original PATH failure preserved. Sole supported cua.getState inventory returned apps[]/browsers[]; independent Luna HOLD/TRANSFER, no product browser-control proof or old-tab closure inference; process ownership untested. Owner-designated supported browser/execution environment must receive same-R139 transfer packet before new fixture/effect admission. No retry/alternate stack, runtime/key/API or helper tranche now. Old r3 campaign spent/expired/newAPI0, old MAY slot1 consumed/unknown and protected driftHOLD retained; G1 integrated/G2/G3/E05/E06/full M3 OPEN, Facebook/Zalo OA parked.
 
@@ -197,3 +199,45 @@ Latest authority: `CVF_SESSION/authority/CCMAI-RUNTIME-139-RECOVERY-SOURCE-ADMIS
 ## Current recovery return / operational transfer — 2026-10-23
 
 Recovery source accepted bounded only: see `docs/reviews/R139_RECOVERY_SOURCE_INDEPENDENT_REVIEW_2026-10-23.md`. Cached offline compile2/2PASS, exactGo7PASS0skip, worker/RootPython34PASS each; original PATH failure and incomplete receipt preserved. Source check counters are recorded without reset. The one post-acceptance supported inventory exposes no browser/apps; independent operational disposition HOLD_TRANSFER. Current order remains BLOCKED_WITH_REASON: no fresh runtime/provider admission, no source/live replay or alternate stack. Receiving environment follows `docs/reviews/R139_RECOVERY_SOURCE_AND_RUNTIME_TRANSFER_2026-10-23.md` within sameR139. No product acceptance, tranche closure or FREEZE.
+
+
+## Claude receiving-worker annex — 2026-10-23
+
+### Intake, responsibility and bounded entry
+
+Owner instruction: Root acts as orchestrator/reviewer, may consult Luna Max (Sol Medium for difficult work), and prepares the work order for owner to hand to Claude. Claude is the designated receiving implementation worker; Root remains independent reviewer and commit steward. This annex records transfer/intake within the SAME CCMAI-RUNTIME-139. It does not replace immutable seeds, appoint Claude to historical completed work, or grant a new runtime/credential/provider campaign. Existing Status BLOCKED_WITH_REASON and tranche CHANGES_REQUIRED remain truthful. Claude must not commit, edit authority, self-approve, freeze, push, merge or deploy.
+
+Entry is INTAKE for the receiving environment, inheriting accepted DESIGN/SPEC/source evidence. Before BUILD, Root must record the role transfer and commit a fresh applicable admission with exact identities and independently reviewed caps. No new helper tranche. This is a concrete handoff contract with two returns: A receiving readiness return now; B integrated execution return only after admission.
+
+### Product outcome and finite route
+
+Roadmap M3-05/M3-08: a writer reruns the current WAIT_DATA request once, observes durable execution and a new proposal/history on the same case; reload preserves the result and a reader sees safe history without execute controls. Accepted source is a prerequisite, not completion of this outcome.
+
+Route: A establish receiving-environment readiness and name unresolved boundaries -> Root reviews and prepares exact committed operational admission -> B execute one source-bound G0/G1/G2 campaign -> Root evaluates G3 and the remaining M3 applicability. A failure returns one consolidated blocker report; do not open another source-repair chain. No ETA is established before A.
+
+### A — authorized receiving intake; no product effects
+
+1. Complete AGENTS first-request rehydration and emit a fresh declaration. Read the canonical acceptance plan, R136 SPEC, this order, active handoff, R139_RECOVERY_SOURCE_AND_RUNTIME_TRANSFER_2026-10-23.md and R139_RECOVERY_SOURCE_INDEPENDENT_REVIEW_2026-10-23.md. Run Core doctor and applicable repository static gates from project root. Read knowledge through the Core ingestion script if the downstream wrapper is absent. Report missing authority or continuity drift before implementation.
+2. Verify HEAD/cleanliness and accepted source material 0ac2661825ff0c85bbdb74805d8086bca68991a7. Compare four source SHA256 values and binary identity from the recovery transfer/source review and r7_root_source_review.json; record Git identity and local byte/line-ending differences separately. Do not normalize, rebuild, rerun spent pure checks, install dependencies or change source to manufacture a match. Binary absent/mismatch is a blocker requiring a bounded build admission.
+3. Inspect only tool capabilities already exposed in Claude's receiving session and non-secret local tool/file metadata. Identify the supported browser API, capture/close capabilities, supported loopback policy and original process/child ownership mechanism. Record what is listed versus actually demonstrated. This annex does not authorize a browser-control probe, inert process launch or fixture. If no supported browser is exposed, return HOLD_TRANSFER immediately. Never retry denied URLs or switch automation stacks to evade restrictions. Old tab closure is UNKNOWN unless supported evidence establishes it; never close unrelated tabs.
+4. Produce exactly docs/reviews/R139_CLAUDE_RECEIVING_READINESS_2026-10-23.md. Include environment/tool provenance, verified hashes, every missing readiness item, old-tab disposition, protected-drift issue, proposed finite capability proof and one integrated runtime admission proposal. A plan is not a PASS. Do not read .env/key/config secret contents, query Docker/DB, contact a provider, fetch dependencies or start backend/Vite/container/processes in A. Ordinary file/Git/static-gate commands are allowed. Source edits and product effects remain zero.
+
+A budget: one consolidated metadata/intake pass, one return, no product source repair. Required repository gates may run; report exact commands/exits and applicability. Predictable findings must be consolidated. If unresolved, return all findings together; avoid speculative retries. At repair round three without an independent new root cause, record REVIEW_COST_ESCALATION_REQUIRED.
+
+### B — implementation target after fresh admission only
+
+Root must first bind Claude's actual environment/role, exact source/binary/frontend/config hashes, safe inventory reads, an inert browser/process capability proof, exclusive resources, credentials custodian, synthetic actor/case/request identities, current cost ceiling and execution/cleanup counters in committed same-R139 admission. Root independently reviews the admission before effects. Missing applicable permission remains HOLD; time elapsed and the current owner designation do not renew old budgets. The next approval, if needed, must concern this concrete packet rather than a generic request to continue.
+
+The original integrated S01-S04/E01-E06 contract remains the implementation target. Proposed ceilings are maxima for review, not granted counters: fixture start/final stop 1 each; held native Go process 1; backend/Vite 1 each; browser campaign 1; native negative execute POST 8 and positive browser execute POST 1; grant issuance 3; physical provider attempt 1, retry 0; auth POST 4; finite 20-minute lifecycle; at most 12 status reads spaced at least 5 seconds within 60 seconds. Fresh admission must settle any prerequisite/build/probe costs separately and cannot silently exceed these values. Historical USD1/new-call approval was tied to the spent/expired r3 campaign and is not active here.
+
+Execute only after G0 actual readiness, then G1 current-source native matrix without skipped cases, then G2 genuine browser flow using the same held backend. Preserve original supervisor/child handles and wait/exit receipts; gather final durable fingerprint, effect counts and source pins before exact-owned shutdown. Preserve volume; verify stopped owned fixture, listener absence and protected equality. Prior protected drift stays HOLD until independently resolved or explicitly dispositioned by its owner. Do not delete ambiguous resources.
+
+For AI governance claims use an admitted real provider call and sanitized request/response/model/usage evidence. Mock output cannot close governance criteria. No direct provider smoke bypass. Any uncertain send consumes its slot and stops; never infer no-call/refund. UI must use ordinary Vietnamese language; technical diagnostics belong in logs/evidence. E04 branches not covered by the sole POST remain explicitly partial/open.
+
+### Return and review contract
+
+B return path: docs/reviews/R139_CLAUDE_EXECUTION_RETURN_2026-10-23.md; supporting evidence only under docs/reviews/probes/r139_integrated_20261021/claude_receiving_20261023/. These are proposed B artifact paths; admission must expressly authorize their creation before B. A may create only its readiness report. Both returns name Risk, Worker, Reviewer, HEAD/source hashes, exact changed paths, commands/exits/skips, consumed/uncertain counts, failures, source/native/browser/provider distinctions, per-G0/G1/G2 and E01-E06 dispositions, cleanup and unresolved acceptance. Return COMPLETE_PENDING_REVIEW only for the admitted scope; do not mark the active order complete.
+
+Root owns continuity/catalog updates and all commits. Root reviews Claude evidence independently, consolidates defects and permits same-scope repair only within the applicable authority. Luna Max may assist read-only review; Sol Medium may assist difficult analysis. No subagent may become independent reviewer of its own implementation. Hosted CI, deployment, full M3 and product release remain unclaimed. Facebook/Zalo OA remains parked.
+
+Closeability for A: intake/readiness is reviewable through the single report; it cannot close runtime or product gates. Closeability for B is CONDITIONAL_ON_COMMITTED_ADMISSION, not DISPATCH_READY now. The existing gate-to-role table applies to an eventual admitted B campaign; worker-return must recheck it against actual role/path/tool/commit dependencies.
