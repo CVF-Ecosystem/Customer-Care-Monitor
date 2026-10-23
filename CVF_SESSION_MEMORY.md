@@ -11,11 +11,13 @@ Memory class: POINTER_RECORD
 - Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
 
-CCMAI-RUNTIME-139 fresh-r3 independently HOLD/CHANGES_REQUIRED: campaign699e72fb1/1 spent/deadline expired; native8POST/18reads software-only, browserlogin only/refresh405/execute0/newAPI0. Originalterminal/childwaits missing; protected bridgeID/RunningFor drift and unknownStatus HOLD; exactownedcontainer exited/3listenersabsent observed late. Browserclose securitypolicyDENIED: Owner manually closes remaining localhost3019 login tab. Root records evidence/staticgates/commit only; no source/runtime/key/API/replay or helperchain. Next documentary decision must consolidate stable execution ownership, bootstrap405 and protectedinventory contract before proposing any new effects. OldMAYslot1 consumed/unknown retained; G2/G3/E05/E06/fullM3OPEN, FacebookZaloOAparked.
+CCMAI-RUNTIME-139 consolidated recovery design READY_FOR_OWNER_SOURCE_ONLY_DECISION: four existing source paths only; proposed finite source/check renewal and cost-escalation disposition await Owner approval and committed admission. No source/runtime/key/API/browser/replay or helper chain now. Before any later fixture, prove persistent supported execution ownership and settle browser URL-policy/manual-close prerequisites; protected identity/time drift stays HOLD. Fresh-r3 campaign1/1 spent/deadline expired/newAPI0; old MAY slot1 consumed/outcome unknown retained. G2/G3/E05/E06/full M3 OPEN; Facebook/Zalo OA parked.
 
-Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD after independent Sol runtime REVIEW; no further runtime execution
+Root ORCHESTRATOR / independent documentary REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; no source or runtime execution
 
 Canonical roadmap: docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md. R137 product source unchanged; R139 original setup HOLD retained; no full M3 acceptance.
+
+Current decision packet: `docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_REVIEW_2026-10-23.md`; Sol design independently reviewed by Root. Core restored to public b69e1088/origin/main; doctor27/27 PASS, inherited e9ddcb pin warning. Owner delegation preferences retained: Luna Max ordinarily, Sol Medium for difficult work; Alibaba permission requires bounded applicable admission and never renews spent campaigns. No new tranche or effect.
 
 ## Historical R114 bounded UI result
 

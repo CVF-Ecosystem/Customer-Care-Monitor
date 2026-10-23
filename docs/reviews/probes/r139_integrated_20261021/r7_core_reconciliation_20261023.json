@@ -1,0 +1,61 @@
+{
+  "status": "PUBLIC_CORE_RECONCILED_DOCTOR_PASS",
+  "date": "2026-10-23",
+  "ownerInstruction": "xử lý core rồi làm tiếp.",
+  "executor": "Root ORCHESTRATOR",
+  "project": "Customer-Care-Monitor-AI",
+  "corePath": "../.Controlled-Vibe-Framework-CVF",
+  "publicRemote": "https://github.com/Blackbird081/Controlled-Vibe-Framework-CVF.git",
+  "previousCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
+  "resolvedCoreCommit": "b69e1088978e8c90ac58a2243fcf8f90d0f857ed",
+  "backupRelativeToWorkspace": "_cvf-core-backups/.Controlled-Vibe-Framework-CVF-20261023-155032",
+  "reconciler": "../.Controlled-Vibe-Framework-CVF/scripts/update_cvf_workspace_public_core.ps1 -WorkspaceRoot <workspace-root>",
+  "reconcilerExitCode": 0,
+  "doctorCommand": "powershell -ExecutionPolicy Bypass -File ../.Controlled-Vibe-Framework-CVF/scripts/check_cvf_workspace_agent_enforcement.ps1 -ProjectPath .",
+  "doctorBefore": {
+    "exitCode": 1,
+    "checksPassed": 26,
+    "checksTotal": 27,
+    "failure": "BEHIND_PUBLIC_REMOTE"
+  },
+  "doctorAfter": {
+    "exitCode": 0,
+    "checksPassed": 27,
+    "checksTotal": 27,
+    "matchesOriginMain": true,
+    "coreWorktreeClean": true,
+    "publicWorkspaceKitComplete": true
+  },
+  "retainedWarning": "Manifest and installed gate-profile retain e9ddcb pin; doctor reports current-core mismatch as warn only. No profile/lock/manifest reinstall or edit performed.",
+  "workspaceEffects": "Reviewed reconciler backed up old Core, cloned public Core and refreshed workspace rules/wrappers/guides. UpdateProjectManifests and overlay options were not used.",
+  "knowledgeIngestion": "Completed local README-only index generation. No ingestion HTTP request. Generated local index is not repository evidence.",
+  "claimBoundary": "Static workspace readiness only. No application runtime, browser, credential access, provider call, product acceptance, hosted CI or runtime AI governance claim. Existing R139 evidence and consumed counters unchanged.",
+  "staticVerification": {
+    "gateUnitTests": {
+      "command": "python -B -m unittest discover -s scripts/tests -p test_cvf_downstream_gate*.py",
+      "exitCode": 0,
+      "passed": 89,
+      "seconds": 25.58
+    },
+    "legacyPreflight": {
+      "exitCode": 0,
+      "passed": 7,
+      "total": 7
+    },
+    "profileFirstAttempt": {
+      "exitCode": 1,
+      "failedControl": "CVF-DG-ROLE-01",
+      "reason": "Root wrote explanatory text on Risk field; exact R2 token required",
+      "repair": "Moved explanation to prose; Risk now exact R2. No source/runtime or contract change."
+    },
+    "profileCloseability": "NOT_APPLICABLE_WITH_REASON because order remains BLOCKED_WITH_REASON; not checked or passed",
+    "claimBoundary": "Static checks only; no runtime/provider proof.",
+    "profileCorrectedAttempt": {
+      "exitCode": 0,
+      "phase": "pre-commit",
+      "mandatoryControls": 6,
+      "failed": 0,
+      "closeabilityContractChecked": false
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "updatedAt": "2026-10-21",
+  "updatedAt": "2026-10-23",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
@@ -35626,6 +35626,27 @@
       "path": "docs/reviews/R139_FRESH_R3_INTERRUPTED_RUNTIME_REVIEW_2026-10-22.md",
       "status": "ACTIVE",
       "description": "Independent fresh-r3 interrupted-runtime HOLD; original waits missing, protected resource drift, browser closure blocked; no new API."
+    },
+    {
+      "id": "r139-consolidated-recovery-design-20261023",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_2026-10-23.md",
+      "status": "ACTIVE",
+      "description": "Four-path intended recovery design only; source renewal pending Owner decision; no new helper or effect."
+    },
+    {
+      "id": "r139-consolidated-recovery-design-review-20261023",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_REVIEW_2026-10-23.md",
+      "status": "ACTIVE",
+      "description": "Independent Root documentary review; finite source-only proposal ready for Owner, M3 runtime remains OPEN."
+    },
+    {
+      "id": "r139-core-reconciliation-20261023",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/r7_core_reconciliation_20261023.json",
+      "status": "ACTIVE",
+      "description": "Authorized public Core reconciliation and doctor27/27 static readiness with unchanged profile pin warning."
     }
   ]
 }

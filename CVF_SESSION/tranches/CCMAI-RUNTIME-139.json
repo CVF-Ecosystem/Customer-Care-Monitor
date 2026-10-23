@@ -111,7 +111,10 @@
     "docs/reviews/probes/r139_integrated_20261021/r5_fresh_source_checks.json",
     "docs/reviews/R139_FRESH_R3_RUNTIME_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md",
     "docs/reviews/probes/r139_integrated_20261021/r6_fresh_r3_interrupted_runtime_outcome.json",
-    "docs/reviews/R139_FRESH_R3_INTERRUPTED_RUNTIME_REVIEW_2026-10-22.md"
+    "docs/reviews/R139_FRESH_R3_INTERRUPTED_RUNTIME_REVIEW_2026-10-22.md",
+    "docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_2026-10-23.md",
+    "docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_REVIEW_2026-10-23.md",
+    "docs/reviews/probes/r139_integrated_20261021/r7_core_reconciliation_20261023.json"
   ],
   "disposition": "CCMAI-RUNTIME-139 fresh-r3 independently HOLD/CHANGES_REQUIRED: campaign699e72fb1/1 spent/deadline expired; native8POST/18reads software-only, browserlogin only/refresh405/execute0/newAPI0. Originalterminal/childwaits missing; protected bridgeID/RunningFor drift and unknownStatus HOLD; exactownedcontainer exited/3listenersabsent observed late. Browserclose securitypolicyDENIED: Owner manually closes remaining localhost3019 login tab. Root records evidence/staticgates/commit only; no source/runtime/key/API/replay or helperchain. Next documentary decision must consolidate stable execution ownership, bootstrap405 and protectedinventory contract before proposing any new effects. OldMAYslot1 consumed/unknown retained; G2/G3/E05/E06/fullM3OPEN, FacebookZaloOAparked.",
   "freeze": "OPEN",
@@ -458,5 +461,23 @@
     "independentRuntimeAdmissionReview": "docs/reviews/R139_FRESH_R3_RUNTIME_ADMISSION_INDEPENDENT_REVIEW_2026-10-21.md"
   },
   "runtimeCampaignCommit": "699e72fb46c61171c6dafe69ed348a3b68b75536",
-  "runtimeDisposition": "HOLD_INTERRUPTED_RUNTIME_NO_FREEZE"
+  "runtimeDisposition": "HOLD_INTERRUPTED_RUNTIME_NO_FREEZE",
+  "x-r139ConsolidatedRecoveryDesign": {
+    "date": "2026-10-23",
+    "status": "READY_FOR_OWNER_SOURCE_ONLY_DECISION",
+    "design": "docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_2026-10-23.md",
+    "review": "docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_REVIEW_2026-10-23.md",
+    "coreReceipt": "docs/reviews/probes/r139_integrated_20261021/r7_core_reconciliation_20261023.json",
+    "designWorker": "/root/r139_consolidated_design Sol Medium",
+    "reviewer": "Root independent REVIEWER",
+    "sourceAdmissionGranted": false,
+    "newSourceChecksGranted": false,
+    "newRuntimeGranted": false,
+    "newProviderGranted": false,
+    "newTranches": 0,
+    "sourceEdits": 0,
+    "providerCalls": 0,
+    "oldCountersUnchanged": true,
+    "designSha256": "ae1fe59c49a118448772fcc7e16585b10ec6a834391f12a8e4af175276a9283b"
+  }
 }

@@ -55,7 +55,8 @@
       "G-PREPILOT-APPLICABILITY",
       "G-M4-SHADOW-PILOT",
       "G-M5-CLEAN-RELEASE"
-    ]
+    ],
+    "x-r139RecoveryDecision": "docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_REVIEW_2026-10-23.md"
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
@@ -3614,5 +3615,23 @@
     "providerSlotsConsumed": 1,
     "providerResponseOutcome": "UNKNOWN",
     "freeze": "OPEN"
+  },
+  "x-r139ConsolidatedRecoveryDesign": {
+    "date": "2026-10-23",
+    "status": "READY_FOR_OWNER_SOURCE_ONLY_DECISION",
+    "design": "docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_2026-10-23.md",
+    "review": "docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_REVIEW_2026-10-23.md",
+    "coreReceipt": "docs/reviews/probes/r139_integrated_20261021/r7_core_reconciliation_20261023.json",
+    "designWorker": "/root/r139_consolidated_design Sol Medium",
+    "reviewer": "Root independent REVIEWER",
+    "sourceAdmissionGranted": false,
+    "newSourceChecksGranted": false,
+    "newRuntimeGranted": false,
+    "newProviderGranted": false,
+    "newTranches": 0,
+    "sourceEdits": 0,
+    "providerCalls": 0,
+    "oldCountersUnchanged": true,
+    "designSha256": "ae1fe59c49a118448772fcc7e16585b10ec6a834391f12a8e4af175276a9283b"
   }
 }

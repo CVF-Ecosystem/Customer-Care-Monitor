@@ -4444,6 +4444,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Explicit Owner single RF1-RF4 repair/replacement-fixture continuation; cumulative1USD/one API unchanged; runtime still needs exact admission.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-OWNER-CONTINUATION-ADMISSION.json`
 - Exact R139 replacement runtime admission preparation; independent review/commit required, cumulative1USD/oneAPI unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-REPLACEMENT-RUNTIME-ADMISSION.json`
 - Owner-approved ONE R139 source-evidence round; no runtime/provider authority; old HOLDs preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-EVIDENCE-ADMISSION.json`
+- Four-path intended recovery design only; source renewal pending Owner decision; no new helper or effect.: `docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_2026-10-23.md`
+- Independent Root documentary review; finite source-only proposal ready for Owner, M3 runtime remains OPEN.: `docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_REVIEW_2026-10-23.md`
+- Authorized public Core reconciliation and doctor27/27 static readiness with unchanged profile pin warning.: `docs/reviews/probes/r139_integrated_20261021/r7_core_reconciliation_20261023.json`
 - Remaining source corrections and bounded final repair; source not yet accepted.: `docs/reviews/R139_FINAL_STATIC_SOURCE_CORRECTIONS_2026-10-21.md`
 - New owner-approved supported HTTPS UI diagnostic only; old consumed counters unchanged, no runtime/provider authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-HTTPS-BROWSER-ADMISSION.json`
 - Fresh owner-approved one-campaign HTTPS UI slot reserved before effect; no refund/retry.: `docs/reviews/probes/r139_integrated_20261021/https_browser_reservation.json`

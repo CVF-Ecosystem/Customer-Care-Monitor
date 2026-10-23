@@ -3,9 +3,9 @@
   "activePhase": "REVIEW",
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 fresh-r3 independently HOLD/CHANGES_REQUIRED: campaign699e72fb1/1 spent/deadline expired; native8POST/18reads software-only, browserlogin only/refresh405/execute0/newAPI0. Originalterminal/childwaits missing; protected bridgeID/RunningFor drift and unknownStatus HOLD; exactownedcontainer exited/3listenersabsent observed late. Browserclose securitypolicyDENIED: Owner manually closes remaining localhost3019 login tab. Root records evidence/staticgates/commit only; no source/runtime/key/API/replay or helperchain. Next documentary decision must consolidate stable execution ownership, bootstrap405 and protectedinventory contract before proposing any new effects. OldMAYslot1 consumed/unknown retained; G2/G3/E05/E06/fullM3OPEN, FacebookZaloOAparked.",
-  "activeRole": "Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD after independent Sol runtime REVIEW; no further runtime execution",
-  "updatedAt": "2026-10-21",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 consolidated recovery design READY_FOR_OWNER_SOURCE_ONLY_DECISION: four existing source paths only; proposed finite source/check renewal and cost-escalation disposition await Owner approval and committed admission. No source/runtime/key/API/browser/replay or helper chain now. Before any later fixture, prove persistent supported execution ownership and settle browser URL-policy/manual-close prerequisites; protected identity/time drift stays HOLD. Fresh-r3 campaign1/1 spent/deadline expired/newAPI0; old MAY slot1 consumed/outcome unknown retained. G2/G3/E05/E06/full M3 OPEN; Facebook/Zalo OA parked.",
+  "activeRole": "Root ORCHESTRATOR / independent documentary REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; no source or runtime execution",
+  "updatedAt": "2026-10-23",
   "schemaVersion": "1.0",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
   "x-r107DiagnosisProposal": "docs/reviews/R107_REOPEN_DIAGNOSIS_AND_R108_PROPOSAL_2026-10-16.md",
@@ -733,5 +733,23 @@
     "providerSlotsConsumed": 1,
     "providerResponseOutcome": "UNKNOWN",
     "freeze": "OPEN"
+  },
+  "x-r139ConsolidatedRecoveryDesign": {
+    "date": "2026-10-23",
+    "status": "READY_FOR_OWNER_SOURCE_ONLY_DECISION",
+    "design": "docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_2026-10-23.md",
+    "review": "docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_REVIEW_2026-10-23.md",
+    "coreReceipt": "docs/reviews/probes/r139_integrated_20261021/r7_core_reconciliation_20261023.json",
+    "designWorker": "/root/r139_consolidated_design Sol Medium",
+    "reviewer": "Root independent REVIEWER",
+    "sourceAdmissionGranted": false,
+    "newSourceChecksGranted": false,
+    "newRuntimeGranted": false,
+    "newProviderGranted": false,
+    "newTranches": 0,
+    "sourceEdits": 0,
+    "providerCalls": 0,
+    "oldCountersUnchanged": true,
+    "designSha256": "ae1fe59c49a118448772fcc7e16585b10ec6a834391f12a8e4af175276a9283b"
   }
 }
