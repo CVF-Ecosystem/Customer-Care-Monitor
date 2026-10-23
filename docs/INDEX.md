@@ -4444,6 +4444,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Explicit Owner single RF1-RF4 repair/replacement-fixture continuation; cumulative1USD/one API unchanged; runtime still needs exact admission.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-OWNER-CONTINUATION-ADMISSION.json`
 - Exact R139 replacement runtime admission preparation; independent review/commit required, cumulative1USD/oneAPI unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-REPLACEMENT-RUNTIME-ADMISSION.json`
 - Owner-approved ONE R139 source-evidence round; no runtime/provider authority; old HOLDs preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-EVIDENCE-ADMISSION.json`
+- Root independent binary/receipt review and release of original single pure-Go slot; no runtime/API grant.: `docs/reviews/R139_CLAUDE_RECEIVING_BINARY_ADMISSION_2026-10-23.md`
+- Original Claude bounded compile reservation/receipt/raw output; offline compile evidence only.: `docs/reviews/probes/r139_integrated_20261021/claude_receiving_20261023/build_compile_receipt.json`
+- Original Claude bounded compile reservation/receipt/raw output; offline compile evidence only.: `docs/reviews/probes/r139_integrated_20261021/claude_receiving_20261023/build_compile.stderr.txt`
+- Original Claude bounded compile reservation/receipt/raw output; offline compile evidence only.: `docs/reviews/probes/r139_integrated_20261021/claude_receiving_20261023/build_compile.stdout.txt`
+- Original Claude bounded compile reservation/receipt/raw output; offline compile evidence only.: `docs/reviews/probes/r139_integrated_20261021/claude_receiving_20261023/build_reservation.json`
+- Claude actual offline compile return; Root accepts compile only; pure test not executed.: `docs/reviews/R139_CLAUDE_RECEIVING_BUILD_RETURN_2026-10-23.md`
 - Independent Luna accepts compile-only admission after source-input closure repair; no actual build/runtime proof.: `docs/reviews/R139_CLAUDE_OFFLINE_ADMISSION_INDEPENDENT_REVIEW_2026-10-23.md`
 - Owner-approved bounded Claude compile1/conditional pure1 dispatcher admission; no browser control/product runtime/key/API grant.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-CLAUDE-OFFLINE-BUILD-ADMISSION.json`
 - Non-effective draft for one receiving offline build/check and browser topology decision; no product/runtime/provider grant.: `docs/reviews/R139_CLAUDE_RECEIVING_ADMISSION_PROPOSAL_2026-10-23.md`

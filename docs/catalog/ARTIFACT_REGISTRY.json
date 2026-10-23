@@ -35843,6 +35843,48 @@
       "path": "docs/reviews/R139_CLAUDE_OFFLINE_ADMISSION_INDEPENDENT_REVIEW_2026-10-23.md",
       "status": "ACTIVE",
       "description": "Independent Luna accepts compile-only admission after source-input closure repair; no actual build/runtime proof."
+    },
+    {
+      "id": "r139-claude-compile-return",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CLAUDE_RECEIVING_BUILD_RETURN_2026-10-23.md",
+      "status": "ACTIVE",
+      "description": "Claude actual offline compile return; Root accepts compile only; pure test not executed."
+    },
+    {
+      "id": "r139-claude-binary-release",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CLAUDE_RECEIVING_BINARY_ADMISSION_2026-10-23.md",
+      "status": "ACTIVE",
+      "description": "Root independent binary/receipt review and release of original single pure-Go slot; no runtime/API grant."
+    },
+    {
+      "id": "r139-claude-build-compile-stderr-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/claude_receiving_20261023/build_compile.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Original Claude bounded compile reservation/receipt/raw output; offline compile evidence only."
+    },
+    {
+      "id": "r139-claude-build-compile-stdout-txt",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/claude_receiving_20261023/build_compile.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Original Claude bounded compile reservation/receipt/raw output; offline compile evidence only."
+    },
+    {
+      "id": "r139-claude-build-compile-receipt-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/claude_receiving_20261023/build_compile_receipt.json",
+      "status": "ACTIVE",
+      "description": "Original Claude bounded compile reservation/receipt/raw output; offline compile evidence only."
+    },
+    {
+      "id": "r139-claude-build-reservation-json",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/claude_receiving_20261023/build_reservation.json",
+      "status": "ACTIVE",
+      "description": "Original Claude bounded compile reservation/receipt/raw output; offline compile evidence only."
     }
   ]
 }
