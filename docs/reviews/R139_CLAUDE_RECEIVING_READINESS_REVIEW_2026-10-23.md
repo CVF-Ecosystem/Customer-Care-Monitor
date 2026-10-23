@@ -1,0 +1,27 @@
+# R139 Claude receiving-readiness independent review
+
+Status: CHANGES_REQUIRED
+Risk: R2
+Worker: Claude receiving implementation worker
+Reviewer: Root independent REVIEWER (no Claude report authorship)
+Scope: Annex A report only; Part B BLOCKED_PENDING_ADMISSION
+
+## Disposition
+
+A report was delivered; receiving readiness is not yet accepted for admission. Root independently corroborates four source hashes against r7_root_source_review.json, no diff in these four files against accepted source commit 0ac2661825ff0c85bbdb74805d8086bca68991a7, and absence of the reported binary/toolchain paths in this receiving workspace. Root doctor now PASS27/27 with inherited manifest-pin warning; these are current Root checks, not verification of Claude execution history. No product runtime, key, API or compile invoked by Root.
+
+Root review baseline: HEAD 9dd063997d3b3a95e01373a80f7244db8a866a17. Submitted report was the sole untracked path. Report SHA256 at intake: 7cf5e3856104710843f78203f1a0f8ea0e89aa52033e3dc4a24d4ad54c7e427b.
+
+## Consolidated findings and one bounded report repair
+
+1. R139-A-01 — provenance: report cites clean HEAD7d01001a, but the Claude annex was committed later at9dd06399. Clarify actual start/end HEAD, worktree state and how the annex was read. Preserve the original observation and explicitly mark any correction; do not backdate evidence. Historical compile receipts point at sibling Customer-Care-Monitor, whereas this receiving root is Customer-Care-Monitor-AI. Record this environment relocation explicitly; missing ignored tool/binary does not invalidate historical accepted source evidence.
+2. R139-A-02 — command evidence: sections4/6 list success/version/tool claims without original stdout/stderr, exit codes, timestamps or capability declaration provenance. Link retained original session records if available and identify worker-reported facts separately. If unavailable, label NOT_RETAINED / NOT_INDEPENDENTLY_VERIFIED; do not reconstruct logs or rerun tests to manufacture them. Knowledge command uses unsupported -ProjectPath; actual Core script parameter is -KnowledgePath. Recover actual original command or mark the claimed command unverified. Root independently used -KnowledgePath ./knowledge successfully; that does not establish Claude's claimed invocation.
+3. R139-A-03 — browser boundary: browser_subagent is a listed receiving capability only; runtime work order S02 still requires supported CUA IAB and prohibits an alternate stack. Owner designation of Claude does not by itself amend this contract. State tool name/capability provenance, policy-supported loopback/close and capture scope as UNKNOWN unless documented. No inert probe yet. Root must explicitly resolve a contract amendment and obtain applicable approval before adopting another browser mechanism; no policy-denied URL retry or evasion. A blank page alone would not prove loopback or held-process lifetime.
+4. R139-A-04 — provider boundary: remove the proposal's ambiguous 'or designated synthetic provider'. Synthetic refers to complaint data; governance proof requires an explicitly admitted real provider API, exact model/endpoint, fresh monetary cap and request/response/usage receipts. Mock/synthetic provider output cannot close G2/E06/governance. Historical one-call budgets remain spent/expired; no call admitted by this review.
+5. R139-A-05 — executable readiness proposal: specify one preferred compiler with executable hash/version provenance and go.mod compatibility; offline/no-download flags must include GOPROXY=off, GOSUMDB=off, GOTOOLCHAIN=local, CGO_ENABLED=0, -mod=readonly and timeout. A new compiler may produce a new binary hash: admit/review that identity rather than force the old hash. Seven tests include temporary file/journal I/O; correct 'without I/O' to no external DB/network/provider effects and retain the exact audited selector. Inert proof must separately demonstrate browser capture/close and original supervisor/child wait/exit, owned listener cleanup, finite counts/deadline and stop conditions. Proposal only, no launch/compile permitted. Prior drift and old tab remain HOLD/UNKNOWN; no invented owner security policy or closure assertion.
+
+Claude may make ONE consolidated documentary repair in the same readiness report using existing records and non-secret metadata. No product source, authority, core, workflow, gate, test replay, build, browser probe, process/container/DB, key or API effect. Ordinary bounded file/Git metadata reads allowed. If evidence cannot be recovered, honest UNKNOWN is acceptable; unresolved capability/authority facts continue to block B. Return all five finding dispositions together. Root owns catalog/continuity/commits; worker must not commit or self-approve.
+
+## Roadmap and next move
+
+M3-05/M3-08 product outcome remains durable same-case rerun/history through actual browser/backend with safe reader view. Source accepted bounded; native/current browser/provider acceptance OPEN. Root's annex did not settle receiving browser topology or specify evidence retention sufficiently; Root owns that orchestration gap. Do not open a helper tranche or repeated test chain. Next: one documentary clarification return; then Root can decide the exact tool-contract/capability/build admission boundaries from a consolidated packet. No fresh effect admission is issued now. ETA unknown. Facebook/Zalo OA parked; no FREEZE, hosted CI, deployment or runtime AI governance success claim.

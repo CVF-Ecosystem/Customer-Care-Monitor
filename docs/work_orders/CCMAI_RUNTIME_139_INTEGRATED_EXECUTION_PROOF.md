@@ -241,3 +241,8 @@ B return path: docs/reviews/R139_CLAUDE_EXECUTION_RETURN_2026-10-23.md; supporti
 Root owns continuity/catalog updates and all commits. Root reviews Claude evidence independently, consolidates defects and permits same-scope repair only within the applicable authority. Luna Max may assist read-only review; Sol Medium may assist difficult analysis. No subagent may become independent reviewer of its own implementation. Hosted CI, deployment, full M3 and product release remain unclaimed. Facebook/Zalo OA remains parked.
 
 Closeability for A: intake/readiness is reviewable through the single report; it cannot close runtime or product gates. Closeability for B is CONDITIONAL_ON_COMMITTED_ADMISSION, not DISPATCH_READY now. The existing gate-to-role table applies to an eventual admitted B campaign; worker-return must recheck it against actual role/path/tool/commit dependencies.
+
+
+### Claude A review return — 2026-10-23
+
+Read docs/reviews/R139_CLAUDE_RECEIVING_READINESS_REVIEW_2026-10-23.md. One consolidated documentary repair of the existing A report is allowed for findings A-01 through A-05 using retained records and non-secret metadata. Missing raw evidence must be marked unavailable, never invented or replaced by test replay. Root independently corroborated source hashes and absent local binary/toolchain; receiving browser mechanism differs from the current CUA IAB contract and is not admitted. Part B remains BLOCKED_PENDING_ADMISSION; no build, browser/probe, product process, fixture, key or provider action. Return all finding dispositions together; no worker commit.

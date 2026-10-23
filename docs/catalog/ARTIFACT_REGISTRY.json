@@ -35808,6 +35808,20 @@
       "path": "docs/reviews/R139_RECOVERY_SOURCE_AND_RUNTIME_TRANSFER_2026-10-23.md",
       "status": "ACTIVE",
       "description": "R139 bounded recovery source/check evidence or independent browser-transfer HOLD; retained failures, no runtime/provider/M3 acceptance."
+    },
+    {
+      "id": "r139-claude-receiving-readiness",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CLAUDE_RECEIVING_READINESS_2026-10-23.md",
+      "status": "ACTIVE",
+      "description": "Claude receiving A report as submitted; worker-reported readiness, independent review requests documentary clarification; B blocked."
+    },
+    {
+      "id": "r139-claude-receiving-readiness-review",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CLAUDE_RECEIVING_READINESS_REVIEW_2026-10-23.md",
+      "status": "ACTIVE",
+      "description": "Root independent A review: five consolidated clarification findings; source hashes corroborated, no new effect admission."
     }
   ]
 }
