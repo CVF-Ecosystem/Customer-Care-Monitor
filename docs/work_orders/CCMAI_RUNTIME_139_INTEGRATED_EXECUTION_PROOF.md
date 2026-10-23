@@ -5,14 +5,14 @@ Risk: R2
 Worker: Historical source worker Sol Medium; Claude designated by owner for receiving-environment intake under the 2026-10-23 annex
 Reviewer: Root independent source/evidence REVIEWER
 Commit mode: WORKER_MUST_NOT_COMMIT
-providerExecutionAuthority: EXACT_COMMITTED_R139_RUNTIME_ADMISSION_MAX1USD_NEW1_CALL
-runtimeExecutor: Root bounded runtime evidence EXECUTOR
-runtimeReviewer: /root/r139_r2_runtime_reviewer independent runtime REVIEWER
+providerExecutionAuthority: NONE_CURRENT_HISTORICAL_CAMPAIGNS_SPENT_OR_EXPIRED
+runtimeExecutor: UNASSIGNED_UNTIL_SUPPORTED_ENVIRONMENT_AND_COMMITTED_ADMISSION
+runtimeReviewer: INDEPENDENT_REVIEWER_TO_BE_BOUND_IN_CURRENT_ADMISSION; historical reviews retained
 dispatchKind: INITIAL
 
 ## Current authority and acceptance target
 
-Current dispatch instruction: read **Owner-approved Claude offline receiving dispatch — 2026-10-23** at the end of this order and its committed CLAUDE-OFFLINE-BUILD-ADMISSION first; the older intake annex is context. Only the bounded compile substage can activate after independent review/commit; pure test requires Root binary release. Historical runtime authority fields above do not activate a new campaign. Product runtime/key/API authority remains HOLD.
+Current dispatch instruction: **NO NEW WORKER DISPATCH while HOLD_TRANSFER.** Read the current stage and “Owner roadmap discipline correction — 2026-10-23” below. Historical compile/test/intake instructions are completed/spent context; do not execute them again. Keep ONE integrated R139 work order from G0 readiness through G1 backend/G2 browser and aggregate G3 disposition. Root must consolidate the complete remaining readiness/effect/cleanup/acceptance packet before any redispatch; no supporting-task prompt chain. Product runtime/key/API authority remains HOLD.
 
 Current stage: CCMAI-RUNTIME-139 HOLD_TRANSFER: worker Section7 native browser/process metadata ACCEPTED, no repair. Independent Sol Medium finds inert admission NOT_CLOSEABLE: loopback/own-tab-close/host-isolation/native deadline and original child cleanup unresolved; even schema-only browser_subagent call lacks documented no-launch mode. No invocation/probe/server/helper or further discovery loop. Transfer existing same-R139 packet to supported environment with documented pre-invocation ownership/close/deadline/child-wait controls; exact independent inert admission before effects. Offline compile1/1 and pure1/1 exact7PASS accepted/spent; product B BLOCKED_PENDING_OPERATIONAL_ADMISSION, G0/G1integrated/G2/G3/E05/E06/fullM3 OPEN. Old spent/uncertain provider counters, protected drift HOLD, old-tab UNKNOWN and Facebook/Zalo OA parked retained.
 
@@ -285,3 +285,28 @@ Do not invoke browser tools, start an inert/product process/server/fixture, use 
 Section7 metadata task is accepted; no further worker repair/discovery. Read docs/reviews/R139_WORKER_CAPABILITY_REVIEW_AND_TRANSFER_2026-10-23.md. Independent Sol Medium and Root disposition HOLD_TRANSFER: current declarations do not make inert browser/process admission closeable. Do not call browser_subagent even for inner-schema discovery, navigate, open an inert server/process, write helper source, rerun compile/test or ask for broad owner approval as a workaround. Existing worker should stop.
 
 Receiving environment must provide documented pre-invocation policy/own-tab/isolation/close/deadline/capture and original child-process lifecycle controls from already-exposed documentation, once, without effects. Otherwise HOLD. Root then prepares the exact independently reviewed same-R139 operational packet. Offline acceptance remains bounded and spent; full product B and M3 stay blocked/open.
+
+
+## Owner roadmap discipline correction — 2026-10-23
+
+Owner reiterates: “không được chia nhỏ thành nhiều tranche; bám sát roadmap”. This is binding orchestration direction, already present in canonical acceptance plan section4: the nine gates are acceptance checkpoints, not nine work orders; G0/G1/G2 belong to ONE integrated proof order. Do not treat administrative labels, per-test returns, metadata declarations, admission fragments or supporting commits as product delivery milestones.
+
+### Single objective and acceptance
+
+Keep CCMAI-RUNTIME-139 and this existing work order. Target M3-05/M3-08 under R136 E01-E06: a writer deliberately reruns the current WAIT_DATA request once, sees durable execution and a same-case new proposal/history after OPEN, reload retains the result, and a reader has safe history without execute controls. Exit is a source-bound integrated result plus G3 aggregate M3-01..08 disposition, with uncovered criteria explicitly OPEN/HOLD; do not falsely close full M3 or other roadmap gates.
+
+G0 readiness/source/effects/resources/browser/process ownership, G1 real-router/disposable DB negatives/lineage, G2 genuine browser/backend/provider proof where applicable, and G3 aggregate review are phases/checkpoints of the SAME package. Technical verification and same-scope repair belong inside that order; do not promote each into a new tranche/work order or recurring Owner relay prompt. Root coordinates workers/reviewers and owns consolidated handoffs. Workflow/evidence requirements and independent R2 review remain; only genuine objective/path/risk/effect/credential/provider/cost/destructive/publication/commit-owner boundaries require renewed authority. Existing spent/immutable caps cannot be silently reset.
+
+### Reassessment and consolidated remaining route
+
+Prerequisite/environment failure and multiple supporting slices without product acceptance triggered roadmap reassessment. Decision: CONSOLIDATE within R139; stop the supporting-task/discovery/repair chain. Accepted source/offline compile/pure evidence remains inherited; no replay. M1 decisions, M2 consolidated proof and prepilot applicability remain the canonical parallel/dependency rows; do not claim them closed or make unrelated business rows block independent technical work.
+
+Root must prepare ONE consolidated redispatch package only after a genuinely supported receiving environment is designated/documented. It must state all remaining G0/G1/G2/G3 criteria, exact current-source/config/binary/tool identities, operational ownership/deadlines, synthetic identities, allowed/prohibited effects and remaining/fresh caps, provider/cost authority if required, native/browser original receipts, exact-owned cleanup, independent reviewer and all predictable failure conditions together. Root settles foreseeable dependencies before worker dispatch; missing fundamental environment controls means continue HOLD_TRANSFER, not another metadata assignment or helper. An environment switch is a prerequisite within R139, not a milestone/new tranche.
+
+Execution after actual admission should proceed through admitted dependent checkpoints without repeated Owner confirmation while objective/path/risk/effect/commit ownership and caps remain valid. A hard blocker yields ONE consolidated report with root cause, consumed/unknown effects, preserved evidence and a bounded repair-or-transfer decision covering the remaining product route. No automatic successor tranche, no source-only consolation closure, no substitute stack/policy-denial bypass. Repair round3 without independent new root cause still stops under REVIEW_COST_ESCALATION_REQUIRED.
+
+### Current truth and accountability
+
+Current status unchanged: Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; R139 HOLD_TRANSFER, source/offline bounded checks accepted, compile1/1 and pure1/1 spent. G0 actual capability/G1 integrated/G2/G3/E05/E06/fullM3 open; protected drift and old-tab uncertainty retained; Facebook/Zalo OA parked. No executable admission, new effect, provider call or new tranche granted by this correction. No ETA or percentage claimed.
+
+Root acknowledges orchestration fragmentation: recent steps remained under R139, but separate prompts/returns/admission microsteps imposed repeated Owner relays without product acceptance. This correction changes delivery/dispatch discipline; recording it does not prove effective recovery. Next handback must report user capability achieved, exact remaining roadmap gap, real blocker and one consolidated route—not counts of commits/tests/documents. Worker should receive a single outcome-based package once execution is viable; no new prompt is issued now.
