@@ -35044,7 +35044,7 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
       "status": "ACTIVE",
-      "description": "One integrated R139 roadmap order with mandatory no-reminder Owner directive and consolidated G0-G3/E01-E06 acceptance/dependency matrix; operational HOLD unchanged."
+      "description": "One integrated R139 roadmap order; Owner-selected bounded Antigravity G0 trial after commit, exact inert contract and mandatory no-reminder directive; product/provider HOLD."
     },
     {
       "id": "r138-handoff-history",
@@ -35927,6 +35927,20 @@
       "path": "docs/reviews/R139_WORKER_CAPABILITY_REVIEW_AND_TRANSFER_2026-10-23.md",
       "status": "ACTIVE",
       "description": "Section7 metadata accepted; independent Sol review operational HOLD_TRANSFER due undocumented ownership/closure/deadline/child controls; no new probe admission."
+    },
+    {
+      "id": "r139-antigravity-g0-admission",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-G0-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Owner-selected one bounded Antigravity inert G0 campaign; exact reviewed seed, no product/provider grant."
+    },
+    {
+      "id": "r139-antigravity-g0-admission-review",
+      "family": "continuity",
+      "path": "docs/reviews/R139_ANTIGRAVITY_G0_ADMISSION_REVIEW_2026-10-23.md",
+      "status": "ACTIVE",
+      "description": "Independent Luna admission acceptance/Root code review; actual capability not yet run, original false drift finding corrected."
     }
   ]
 }

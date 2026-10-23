@@ -4435,6 +4435,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Worker static documentary coverage/links only; canonical count discrepancy qualified by independent Root recheck.: `docs/reviews/probes/r138_acceptance_plan_20261021/luna_static_checks.json`
 - Worker handback document/source pins before Root metadata synchronization.: `docs/reviews/probes/r138_acceptance_plan_20261021/luna_document_identity.json`
 - R138 documentary worker handback; Root independent review controls planning acceptance.: `docs/reviews/R138_ROADMAP_WORKER_RETURN_2026-10-21.md`
+- Owner-selected one bounded Antigravity inert G0 campaign; exact reviewed seed, no product/provider grant.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-G0-ADMISSION.json`
+- Independent Luna admission acceptance/Root code review; actual capability not yet run, original false drift finding corrected.: `docs/reviews/R139_ANTIGRAVITY_G0_ADMISSION_REVIEW_2026-10-23.md`
 - Immutable integrated G0/G1/G2 source-preparation seed; runtime/provider authority absent.: `CVF_SESSION/authority/CCMAI-RUNTIME-139.json`
 - Root transcript of browser URL-policy denial and partial owned tab cleanup; no control/capture proof.: `docs/reviews/probes/r139_integrated_20261021/browser_capability_outcome.json`
 - Sole pureUI capability diagnostic reserved before effect; consumed, no reset.: `docs/reviews/probes/r139_integrated_20261021/browser_capability_reservation.json`
@@ -4467,7 +4469,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-LOCAL-READINESS-ADMISSION.json`
 - Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open.: `docs/reviews/R139_HTTPS_BROWSER_AND_LOCAL_READINESS_2026-10-21.md`
 - Consolidated initial source defects F01-F08; no runtime/AI governance proof.: `docs/reviews/R139_INITIAL_SOURCE_BUILD_FINDINGS_2026-10-21.md`
-- One integrated R139 roadmap order with mandatory no-reminder Owner directive and consolidated G0-G3/E01-E06 acceptance/dependency matrix; operational HOLD unchanged.: `docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md`
+- One integrated R139 roadmap order; Owner-selected bounded Antigravity G0 trial after commit, exact inert contract and mandatory no-reminder directive; product/provider HOLD.: `docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md`
 - Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim.: `docs/reviews/probes/r139_integrated_20261021/owner_one_usd_runtime_grant.json`
 - Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-CREDENTIAL-STAGING-ADMISSION.json`
 - Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim.: `docs/reviews/probes/r139_integrated_20261021/provider_pricing_reference.json`

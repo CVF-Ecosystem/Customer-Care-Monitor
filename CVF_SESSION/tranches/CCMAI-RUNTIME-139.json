@@ -630,5 +630,36 @@
     ],
     "control": "Documented mandatory manual orchestration contract; no machine-enforcement or behavioral-effectiveness claim",
     "effectiveness": "OPEN_UNTIL_PRODUCT_DELIVERY"
+  },
+  "x-ownerAntigravityContinuation20261023": {
+    "date": "2026-10-23",
+    "ownerReply": "tiếp tục dùng antigravity",
+    "environment": "ANTIGRAVITY_OWNER_SELECTED",
+    "supersedes": "Prospective HOLD_TRANSFER recommendation only; original metadata/unknown/failed evidence preserved",
+    "rootCorrection": "Missing top-level documentation did not prove native browser failure; one constrained actual capability attempt is the selected route",
+    "scope": "Prepare and independently review one bounded inert loopback/browser/original-process G0 campaign inside existing R139 before committed effect admission; no product/provider grant",
+    "status": "CONTRACT_PREPARATION_PENDING_REVIEW_AND_COMMIT",
+    "newProductEffects": 0,
+    "newProviderGrant": false,
+    "oldCountersUnchanged": true,
+    "newTranches": 0
+  },
+  "x-antigravityG0Dispatch20261023": {
+    "date": "2026-10-23",
+    "ownerReply": "tiếp tục dùng antigravity",
+    "environment": "ANTIGRAVITY_OWNER_SELECTED",
+    "status": "READY_FOR_COMMITTED_G0_DISPATCH",
+    "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-G0-ADMISSION.json",
+    "admissionSha256": "c9731a4ad9b6588b24f3ed1a0d7bf8691697850a078fba4ff9aec1386379e2cd",
+    "review": "docs/reviews/R139_ANTIGRAVITY_G0_ADMISSION_REVIEW_2026-10-23.md",
+    "campaignCap": 1,
+    "campaignUsed": 0,
+    "browserUsed": 0,
+    "harnessSha256": "64df8ddd49869dc86dfb5cb1ccb41ee43c0132af6fb5d688cc46cee3f8701ed8",
+    "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+    "newProductOrProviderEffectsGranted": false,
+    "oldCountersUnchanged": true,
+    "newTranches": 0,
+    "priorTransferRecommendation": "Superseded for this explicit bounded real-test route; historical observations/policy denials not overridden"
   }
 }

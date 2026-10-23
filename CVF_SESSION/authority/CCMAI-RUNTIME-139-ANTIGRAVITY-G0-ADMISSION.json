@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "DISPATCHER_OWNED_ANTIGRAVITY_INERT_G0_CAPABILITY",
+  "date": "2026-10-23",
+  "riskCeiling": "R2",
+  "status": "READY_FOR_COMMITTED_G0_DISPATCH",
+  "baseCommit": "ecf7be24837e1d5be4d28b2dbba91f9227c05fec",
+  "ownerReply": "tiếp tục dùng antigravity",
+  "ownerGrantInterpretation": "Owner chooses continued Antigravity after Root proposed one bounded actual capability test. This seed bounds that single G0 inert local browser/process test. It does not infer production/product/credential/provider/cost authority or old-budget reset. Root corrects premature transfer recommendation; original metadata observations remain.",
+  "roles": {
+    "dispatcher": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR",
+    "contractAuthor": "Sol Medium /root/r139_antigravity_g0_contract document-only fenced harness",
+    "contractReviewer": "Root independent source/contract REVIEWER; no harness authorship/execution",
+    "implementationWorker": "Owner-designated Antigravity worker",
+    "independentAdmissionReviewer": "Luna Max independent reviewer; no contract/admission authorship",
+    "runtimeEvidenceReviewer": "Root independent reviewer of external worker execution",
+    "commitSteward": "Root"
+  },
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+  "contractSection": "Antigravity G0 bounded capability contract — 2026-10-23",
+  "contractCanonicalization": "UTF8 decoded text, CRLF normalized to LF; exact section from heading through end of work order with final LF. The fenced Python body independently normalized to LF and exactly one final LF. No exec/import of body during preparation.",
+  "contractSectionSha256": "70d8e76ce92e598dd60c4aae531b4c3edbd9792536b0155ded49f96ddd2b9f46",
+  "harnessSha256": "64df8ddd49869dc86dfb5cb1ccb41ee43c0132af6fb5d688cc46cee3f8701ed8",
+  "sourceSha256": {
+    "scripts/r139_vite_config.mjs.template": "82a1d9ae8576fcd46718945d0a5cb44eb963a2a14d436a16e2bcdfb72b26bee9",
+    "scripts/r139_execution_supervisor.py": "2382b07efe1aa235045ee0ae98e8c7b9ed26378a8233c911b254acbed6ed5053",
+    "scripts/tests/test_r139_execution_supervisor.py": "ed1d50de8c297130b6101e2de3f3def8376dfd8ddd3fe80dfd0dd24485d5b9ec",
+    "backend/api/handlers/intervention_execution_browser_test.go": "fe3f5441c5fe1875ad6a81972fef30b02a857337d9950193f302d6bcf326d6dd"
+  },
+  "dependencySha256": {
+    "backend/go.mod": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+    "backend/go.sum": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b"
+  },
+  "productTrees": {
+    "backend": "d8c468c1c77dcadda0db167dcbc26480f1846d11",
+    "frontend": "b23c158a3740ee97b30d17d0a52f5133d4ed5eff"
+  },
+  "acceptedBinary": {
+    "path": ".cvf/runtime/r139_claude_receiving_20261023/handlers.test.exe",
+    "sha256": "0a850f76a79c2c9c7ed4d37f47e878f5ac6e1c777b1608a2c603680d89c364bd",
+    "executionAdmitted": false
+  },
+  "python": {
+    "path": "C:/Users/tiennm/AppData/Local/Programs/Python/Python313/python.exe",
+    "sha256": "a2a4eff8d0b0c845284c607d50a3b5b966ac5a3121736a2e38e165bd6644d9fe"
+  },
+  "runtimeRoot": ".cvf/runtime/r139_antigravity_g0_20261023",
+  "evidenceRoot": "docs/reviews/probes/r139_integrated_20261021/antigravity_g0_20261023",
+  "workerReturn": "docs/reviews/R139_ANTIGRAVITY_G0_WORKER_RETURN_2026-10-23.md",
+  "caps": {
+    "campaignReservations": 1,
+    "nativeManagedParentTasks": 1,
+    "pythonParentProcesses": 1,
+    "pythonChildHTTPListeners": 1,
+    "browserSubagentInvocations": 1,
+    "newOwnedTabs": 1,
+    "navigationToExactOwnedURL": 1,
+    "buttonClicks": 1,
+    "DOMReadObservationsMax": 4,
+    "beforeAfterCapturesMax": 2,
+    "automaticNativeRecordingsMax": 1,
+    "ownTabCloses": 1,
+    "acceptedHTTPConnectionsMax": 8,
+    "automaticRetry": 0,
+    "sourceEdits": 0,
+    "compileOrPureReplay": 0,
+    "productServerFixtureDockerDB": 0,
+    "credentialsProviderExternalNetwork": 0
+  },
+  "deadlines": {
+    "readinessSecondsMax": 10,
+    "childControlLoopSeconds": 85,
+    "acceptedSocketTimeoutSeconds": 0.5,
+    "parentObservationLoopSeconds": 90,
+    "sameHandleCleanupWaitEachSeconds": 2,
+    "parentOrdinaryControlFlowEnvelopeSeconds": 100,
+    "browserRequestedSeconds": 60,
+    "campaignObservationEnvelopeSeconds": 120,
+    "nativeBrowserHardCancellation": "UNKNOWN; 60s is instruction only, not mechanical cancellation guarantee. Parent/child independently terminate. Any late/unobservable browser return/close is HOLD, no repeated call; only exact owned-tab cleanup permitted after deadline."
+  },
+  "parentLaunch": {
+    "cwd": "absolute current project root",
+    "argv": [
+      "exact pinned Python executable",
+      "-I",
+      "-X",
+      "utf8",
+      "-u",
+      "absolute runtimeRoot/probe.py",
+      "--run",
+      "absolute runtimeRoot"
+    ],
+    "environment": "Explicit SYSTEMROOT/WINDIR only, plus TEMP/TMP absolute runtimeRoot and PATH=exact Python directory; no ambient proxy/credential/DSN/provider variables. Child sets its own minimal env in exact harness; no provider/client imports. Native IsDaemon=false/WaitMsBeforeAsync<=10000ms is asynchronous task management, not hard timeout.",
+    "extraction": "After exclusive reservation only, create fresh runtimeRoot with ONLY exact probe.py. Extract exact fenced body by heading, LF canonicalization and verify harnessSha256; do not hand-edit/repair. No reusable source helper installed."
+  },
+  "prelaunch": "After Root final dispatch message names exact40hex committed HEAD, require current HEAD equals it, tracked tree clean, committed seed/contract/source/dependency/product-tree/Python/binary pins unchanged. Fresh runtime/evidence roots absent, resolved absolute descendants of project with no symlink/junction/reparse escape. Both backend untracked/ignored file lists empty. No browser invocation before exclusive reservation. Native manager must support original managed parent output while running and actual eventual exit observation; if not, HOLD before parent. Unknown tool documentation is not silently upgraded to proof.",
+  "reservation": "Exclusively create evidenceRoot/g0_reservation.json with committed authority digest, contract/harness/Python/source pins, exact dispatch HEAD, cap1/usedOrUncertain1 and timestamp before effects. Keep original reservation, append separate results; failure or unknown consumes campaign. No retry, even if browser never navigates.",
+  "browserTask": "Use ONLY native Antigravity browser_subagent, RecordingName r139_g0_20261023; one invocation after original parent READY_URL nonce. The managed native browser may initialize during that admitted call. Inside it inspect actual exposed primitive declarations once; do not interact with pages unless explicit NEW owned-tab ID and exact close of that ID are supported. Then one exact nonce loopback navigation, before nonce/Chưa bấm capture, one Bấm thử click, after Đã bấm capture, and close exact owned tab. Follow tool policy: denial/missing primitive stops, no guess, fallback origin/scheme/port/stack or retry. Do not select/read/change/close existing host tabs. Preserve original native tool/task result, returned own-tab ID and original capture/video provenance; no unrelated host content committed. Late task may only clean exact owned tab and return HOLD. Do not claim old-tab closure or complete host-isolation proof.",
+  "stopAndCleanup": "After any browser return create exclusive runtimeRoot/stop.marker containing exactly parent nonce; original parent consumes it and waits original child. If native stalls, do not kill parent; independently bounded child/parent stop. Observe original native parent TaskId completion, actual parent exit, child original wait/exit, child.final accepted connection count and explicit ECONNREFUSED code. Task cancellation or killing by process name/port is not a substitute. Capture late/unknown cleanup truthfully and do not infer PASS.",
+  "evidence": "Keep original native parent stdout/stderr/TaskId/actual exit, exact argv/env allowlist/times/timeout, full raw child stdout/stderr, ready/child.final/parent.result/marker files, browser exact task return/tool steps/owned tab ID, original two captures/video refs/hashes, request/accepted-connection count and post source/hash/diff facts. Copy exact raw runtime files into evidenceRoot; no binaries/caches/secrets or unrelated page content. Ordinary receipt errors are HOLD, original output remains evidence.",
+  "workerAllowedPaths": [
+    ".cvf/runtime/r139_antigravity_g0_20261023/**",
+    "docs/reviews/probes/r139_integrated_20261021/antigravity_g0_20261023/**",
+    "docs/reviews/R139_ANTIGRAVITY_G0_WORKER_RETURN_2026-10-23.md"
+  ],
+  "workerProhibitions": [
+    "No commit/self-approval/authority/continuity/catalog edit",
+    "No product/source/dependency/Core/gate/workflow edits or downloads",
+    "No key/config/DSN/customer data reads or provider/API call",
+    "No product fixture/backend/Vite/Docker/DB or old test/compile replay",
+    "No substitute browser stack or policy-denial retry",
+    "No guessed host-tab close, browser-process kill, process-name/port kill or deletion of ambiguous resources"
+  ],
+  "passCriteria": "Only combined genuine own-tab nonce before/click/after/close plus original parent task actual exit0, parent cleanup-pass JSON, original child wait/exit0, accepted count1..8, actual ECONNREFUSED and all pins/caps/envelope produce PASS_BOUNDED_G0_CAPABILITY. Missing/late/uncertain facts HOLD; observed contradiction FAIL. Neither parent success nor browser success alone passes. Root independently evaluates after return; worker COMPLETE_PENDING_REVIEW only.",
+  "unchanged": "Offline compile1/1 and pure1/1 spent/accepted, old r3 campaign spent/expired/newAPI0, uncertain old physical slot consumed/response-billing unknown, protected drift HOLD, old-tab UNKNOWN, Facebook/Zalo OA parked. No new tranche.",
+  "claimBoundary": "Pure static UI/local process capability only, no runtime AI/CVF governance assertion. Product B remains BLOCKED_PENDING_OPERATIONAL_ADMISSION; no G1/G2/G3/full M3/CI/deployment acceptance from this probe.",
+  "independentReview": "docs/reviews/R139_ANTIGRAVITY_G0_ADMISSION_REVIEW_2026-10-23.md"
+}
