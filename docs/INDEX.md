@@ -4450,8 +4450,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent Luna admission acceptance/Root code review; actual capability not yet run, original false drift finding corrected.: `docs/reviews/R139_ANTIGRAVITY_G0_ADMISSION_REVIEW_2026-10-23.md`
 - Independent qualified G0 HOLD: bounded child wait only, parent missing-marker/null-listener, placeholder video; campaign spent; Antigravity retained.: `docs/reviews/R139_ANTIGRAVITY_G0_RUNTIME_REVIEW_2026-10-23.md`
 - Original worker G0 return; broad PROVEN claims qualified by independent review, no combined capability pass.: `docs/reviews/R139_ANTIGRAVITY_G0_WORKER_RETURN_2026-10-23.md`
+- Independent Luna source-stage admission review; same R139, not source implementation or runtime/governance acceptance.: `docs/reviews/R139_ANTIGRAVITY_INTEGRATED_ADMISSION_REVIEW_2026-10-23.md`
 - One same-R139 Antigravity source compatibility and G0-G3 proposal; fresh source/operator/runtime/API1/USD1 decision pending, no execution authority.: `docs/reviews/R139_ANTIGRAVITY_INTEGRATED_CONTINUATION_CONTRACT_2026-10-23.md`
 - Independent Root source finding and proposal acceptance only; native browser predicates require closed IAB proof; no new effects.: `docs/reviews/R139_ANTIGRAVITY_CONTINUATION_ROOT_REVIEW_2026-10-23.md`
+- Owner-approved combined Antigravity route; exact source-stage tools/check caps, runtime/API1/USD1 envelope conditional on later source/pin/operational admission, old budgets retained.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-INTEGRATED-SOURCE-ADMISSION.json`
 - Immutable integrated G0/G1/G2 source-preparation seed; runtime/provider authority absent.: `CVF_SESSION/authority/CCMAI-RUNTIME-139.json`
 - Root transcript of browser URL-policy denial and partial owned tab cleanup; no control/capture proof.: `docs/reviews/probes/r139_integrated_20261021/browser_capability_outcome.json`
 - Sole pureUI capability diagnostic reserved before effect; consumed, no reset.: `docs/reviews/probes/r139_integrated_20261021/browser_capability_reservation.json`
@@ -4484,7 +4486,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-LOCAL-READINESS-ADMISSION.json`
 - Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open.: `docs/reviews/R139_HTTPS_BROWSER_AND_LOCAL_READINESS_2026-10-21.md`
 - Consolidated initial source defects F01-F08; no runtime/AI governance proof.: `docs/reviews/R139_INITIAL_SOURCE_BUILD_FINDINGS_2026-10-21.md`
-- One R139 roadmap order; Antigravity G0 spent/qualified HOLD, no replay; revised ownership proposal to be consolidated with remaining integrated acceptance.: `docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md`
+- One R139 G0-G3 order: Owner-approved Antigravity source-stage dispatch; future API1/USD1 runtime envelope conditional on actual reviewed source/pins/operational supplement; old G0 HOLD/spent retained.: `docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md`
 - Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim.: `docs/reviews/probes/r139_integrated_20261021/owner_one_usd_runtime_grant.json`
 - Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-CREDENTIAL-STAGING-ADMISSION.json`
 - Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim.: `docs/reviews/probes/r139_integrated_20261021/provider_pricing_reference.json`

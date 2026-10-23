@@ -3917,7 +3917,7 @@
   },
   "x-antigravityIntegratedContinuation20261023": {
     "date": "2026-10-23",
-    "status": "INDEPENDENTLY_REVIEWED_PROPOSAL_PENDING_OWNER_BOUNDARY_DECISION",
+    "status": "OWNER_APPROVED_SOURCE_STAGE_RUNTIME_CONDITIONAL",
     "proposal": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_CONTINUATION_CONTRACT_2026-10-23.md",
     "review": "docs/reviews/R139_ANTIGRAVITY_CONTINUATION_ROOT_REVIEW_2026-10-23.md",
     "sourceRootCause": "PYTHON_AND_GO_ADMISSION_HARDCODE_CLOSED_IAB_RECEIPT_INCOMPATIBLE_WITH_NATIVE_ANTIGRAVITY",
@@ -3927,10 +3927,38 @@
       "backend/api/handlers/intervention_execution_browser_test.go"
     ],
     "newRuntimeGranted": false,
-    "newSourceGranted": false,
+    "newSourceGranted": true,
     "newProviderGranted": false,
     "newTranches": 0,
     "oldCountersUnchanged": true,
-    "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION"
+    "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+    "approvalRecord": "x-antigravityIntegratedOwnerAdmission20261023 (future runtime envelope approved, activation separate)"
+  },
+  "x-antigravityIntegratedOwnerAdmission20261023": {
+    "date": "2026-10-23",
+    "ownerReply": "duyệt",
+    "approvedProposalCommit": "91abea4d5e1ac6aab3073da62d97f55912bb7cc0",
+    "status": "INDEPENDENTLY_REVIEWED_SOURCE_READY_ON_COMMITTED_DISPATCH",
+    "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-INTEGRATED-SOURCE-ADMISSION.json",
+    "admissionReview": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_ADMISSION_REVIEW_2026-10-23.md",
+    "sourceGranted": true,
+    "runtimeEnvelopeApproved": true,
+    "providerEnvelopeApproved": true,
+    "maximumNewUSD": 1,
+    "newPhysicalCallCap": 1,
+    "manualCloseOperator": "Owner in this conversation, only exact dedicated page if native API absent; actual action receipt required",
+    "runtimeExecutableNow": false,
+    "providerExecutableNow": false,
+    "sourceUse": {
+      "workerPython": 0,
+      "workerCompile": 0,
+      "rootPython": 0,
+      "sharedPureGoCustodiedByRoot": 0
+    },
+    "newTranches": 0,
+    "oldCountersUnchanged": true,
+    "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+    "admissionSha256": "b729dd061ffd1ae2400bd1ff500802723a6ac7a2c798b7eb630feb3eba198fb0",
+    "dispatchBinding": "Exact committed HEAD in Root final dispatch message; worker requires exact match before any writes. No self-referential HEAD in immutable seed."
   }
 }

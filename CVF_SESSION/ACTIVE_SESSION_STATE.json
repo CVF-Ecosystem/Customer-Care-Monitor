@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 ONE Antigravity integrated continuation proposal independently reviewed: three-file native-browser admission compatibility correction, actual PageId reservation versus final observed close, then G0->G1->G2->G3 for M3-05/M3-08. Await ONE explicit Owner boundary decision on proposed source/check caps, supported exact-page close or named operator duty, and fresh runtime/API1/USD1 ceiling; generic tiep does not renew spent effects. No source/runtime/provider grant now. Original G0 HOLD/campaign1/1, old uncertain provider slot, protected drift/old-tab UNKNOWN retained. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; G1/G2/G3/E05/E06/fullM3 OPEN; Facebook/Zalo OA parked. No helper tranche, toy retry, metadata task or automatic transfer.",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 Owner explicitly APPROVED combined Antigravity continuation (duyet2026-10-23 at proposal91abea4d). Source-stage admission permits ONE three-file native-browser validator correction, workerPython1/offlineCompile1 then Root independentPython1/sharedPureGo1 after audit. Independent Luna admission PASS; source tools/pins and unchanged retired G0 section verified. Worker starts ONLY from exact committed dispatch HEAD named in Root message, rehydrates/acknowledges source role, then returns once; no worker commit/seed/continuity edits. Same existing M3-05/M3-08 G0->G1->G2->G3 order; no helper tranche/toy retry/per-check Owner relay. Fresh integrated runtime/API1/USD1 and Owner exact-tab manual-close fallback APPROVED, conditional on accepted source/actual pins/ownership and committed independently reviewed runtime supplement; not executable now, no renewed generic permission. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; G1/G2/G3/E05/E06/fullM3 OPEN. Old G0 campaign1/1, old provider uncertainty, protected drift/old-tab UNKNOWN and Facebook/Zalo OA parked retained.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / independent proposal REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; consolidated Owner decision pending, no execution",
+  "activeRole": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD dispatching admitted source stage; Root independent source/runtime REVIEWER, external Antigravity worker implements",
   "updatedAt": "2026-10-23",
   "x-resolvedCoreCommit": "b69e1088978e8c90ac58a2243fcf8f90d0f857ed",
   "x-ownerRoadmapDiscipline": {
@@ -3076,7 +3076,7 @@
   },
   "x-antigravityIntegratedContinuation20261023": {
     "date": "2026-10-23",
-    "status": "INDEPENDENTLY_REVIEWED_PROPOSAL_PENDING_OWNER_BOUNDARY_DECISION",
+    "status": "OWNER_APPROVED_SOURCE_STAGE_RUNTIME_CONDITIONAL",
     "proposal": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_CONTINUATION_CONTRACT_2026-10-23.md",
     "review": "docs/reviews/R139_ANTIGRAVITY_CONTINUATION_ROOT_REVIEW_2026-10-23.md",
     "sourceRootCause": "PYTHON_AND_GO_ADMISSION_HARDCODE_CLOSED_IAB_RECEIPT_INCOMPATIBLE_WITH_NATIVE_ANTIGRAVITY",
@@ -3086,10 +3086,38 @@
       "backend/api/handlers/intervention_execution_browser_test.go"
     ],
     "newRuntimeGranted": false,
-    "newSourceGranted": false,
+    "newSourceGranted": true,
     "newProviderGranted": false,
     "newTranches": 0,
     "oldCountersUnchanged": true,
-    "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION"
+    "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+    "approvalRecord": "x-antigravityIntegratedOwnerAdmission20261023 (future runtime envelope approved, activation separate)"
+  },
+  "x-antigravityIntegratedOwnerAdmission20261023": {
+    "date": "2026-10-23",
+    "ownerReply": "duyệt",
+    "approvedProposalCommit": "91abea4d5e1ac6aab3073da62d97f55912bb7cc0",
+    "status": "INDEPENDENTLY_REVIEWED_SOURCE_READY_ON_COMMITTED_DISPATCH",
+    "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-INTEGRATED-SOURCE-ADMISSION.json",
+    "admissionReview": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_ADMISSION_REVIEW_2026-10-23.md",
+    "sourceGranted": true,
+    "runtimeEnvelopeApproved": true,
+    "providerEnvelopeApproved": true,
+    "maximumNewUSD": 1,
+    "newPhysicalCallCap": 1,
+    "manualCloseOperator": "Owner in this conversation, only exact dedicated page if native API absent; actual action receipt required",
+    "runtimeExecutableNow": false,
+    "providerExecutableNow": false,
+    "sourceUse": {
+      "workerPython": 0,
+      "workerCompile": 0,
+      "rootPython": 0,
+      "sharedPureGoCustodiedByRoot": 0
+    },
+    "newTranches": 0,
+    "oldCountersUnchanged": true,
+    "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+    "admissionSha256": "b729dd061ffd1ae2400bd1ff500802723a6ac7a2c798b7eb630feb3eba198fb0",
+    "dispatchBinding": "Exact committed HEAD in Root final dispatch message; worker requires exact match before any writes. No self-referential HEAD in immutable seed."
   }
 }

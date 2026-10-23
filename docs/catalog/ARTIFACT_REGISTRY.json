@@ -35044,7 +35044,7 @@
       "family": "continuity",
       "path": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
       "status": "ACTIVE",
-      "description": "One R139 roadmap order; Antigravity G0 spent/qualified HOLD, no replay; revised ownership proposal to be consolidated with remaining integrated acceptance."
+      "description": "One R139 G0-G3 order: Owner-approved Antigravity source-stage dispatch; future API1/USD1 runtime envelope conditional on actual reviewed source/pins/operational supplement; old G0 HOLD/spent retained."
     },
     {
       "id": "r138-handoff-history",
@@ -36046,6 +36046,20 @@
       "path": "docs/reviews/R139_ANTIGRAVITY_CONTINUATION_ROOT_REVIEW_2026-10-23.md",
       "status": "ACTIVE",
       "description": "Independent Root source finding and proposal acceptance only; native browser predicates require closed IAB proof; no new effects."
+    },
+    {
+      "id": "r139-antigravity-integrated-source-admission",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-INTEGRATED-SOURCE-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Owner-approved combined Antigravity route; exact source-stage tools/check caps, runtime/API1/USD1 envelope conditional on later source/pin/operational admission, old budgets retained."
+    },
+    {
+      "id": "r139-antigravity-integrated-admission-review",
+      "family": "continuity",
+      "path": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_ADMISSION_REVIEW_2026-10-23.md",
+      "status": "ACTIVE",
+      "description": "Independent Luna source-stage admission review; same R139, not source implementation or runtime/governance acceptance."
     }
   ]
 }

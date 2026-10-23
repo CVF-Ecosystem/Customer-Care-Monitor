@@ -124,7 +124,9 @@
     "docs/reviews/R139_ANTIGRAVITY_G0_WORKER_RETURN_2026-10-23.md",
     "docs/reviews/probes/r139_integrated_20261021/antigravity_g0_20261023/parent.result.json",
     "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_CONTINUATION_CONTRACT_2026-10-23.md",
-    "docs/reviews/R139_ANTIGRAVITY_CONTINUATION_ROOT_REVIEW_2026-10-23.md"
+    "docs/reviews/R139_ANTIGRAVITY_CONTINUATION_ROOT_REVIEW_2026-10-23.md",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-INTEGRATED-SOURCE-ADMISSION.json",
+    "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_ADMISSION_REVIEW_2026-10-23.md"
   ],
   "disposition": "Current Antigravity G0 campaign1/1 spent, independent HOLD_MISSING_BROWSER_OWNED_TAB_PRIMITIVES with qualifications: bounded child startup/wait/self-stop observed, parent HOLD/missing stop marker/null original listener check, recording placeholder, raw native terminal/env/timing/postmortem gaps retained. No combined G0 pass/replay/new effects. Antigravity remains Owner-selected; Root consolidates exact PageId/dedicated-page operator-close proposal with remaining integrated R139 requirements before any fresh authority. Product B/G1/G2/G3/E05/E06/fullM3 OPEN/blocked; all old spent/uncertain counters/resources/tab/accounts retained.",
   "freeze": "OPEN",
@@ -706,5 +708,32 @@
     "newTranches": 0,
     "oldCountersUnchanged": true,
     "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION"
+  },
+  "x-antigravityIntegratedOwnerAdmission20261023": {
+    "date": "2026-10-23",
+    "ownerReply": "duyệt",
+    "approvedProposalCommit": "91abea4d5e1ac6aab3073da62d97f55912bb7cc0",
+    "status": "INDEPENDENTLY_REVIEWED_SOURCE_READY_ON_COMMITTED_DISPATCH",
+    "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-INTEGRATED-SOURCE-ADMISSION.json",
+    "admissionReview": "docs/reviews/R139_ANTIGRAVITY_INTEGRATED_ADMISSION_REVIEW_2026-10-23.md",
+    "sourceGranted": true,
+    "runtimeEnvelopeApproved": true,
+    "providerEnvelopeApproved": true,
+    "maximumNewUSD": 1,
+    "newPhysicalCallCap": 1,
+    "manualCloseOperator": "Owner in this conversation, only exact dedicated page if native API absent; actual action receipt required",
+    "runtimeExecutableNow": false,
+    "providerExecutableNow": false,
+    "sourceUse": {
+      "workerPython": 0,
+      "workerCompile": 0,
+      "rootPython": 0,
+      "sharedPureGoCustodiedByRoot": 0
+    },
+    "newTranches": 0,
+    "oldCountersUnchanged": true,
+    "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+    "admissionSha256": "b729dd061ffd1ae2400bd1ff500802723a6ac7a2c798b7eb630feb3eba198fb0",
+    "dispatchBinding": "Exact committed HEAD in Root final dispatch message; worker requires exact match before any writes. No self-referential HEAD in immutable seed."
   }
 }
