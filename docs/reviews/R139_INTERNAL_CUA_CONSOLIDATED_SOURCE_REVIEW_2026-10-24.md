@@ -1,0 +1,22 @@
+# R139 internal CUA consolidated source review
+
+Status: CHANGES_REQUIRED_BEFORE_CHECKS
+Risk: R2
+Worker: Internal Sol Medium /root/r139_sol_worker_transition
+Reviewer: Root independent REVIEWER, with independent Sol Medium /root/r139_cua_source_independent_review and Luna Max API documentation/operation assessment
+
+Source dispatch63742e11 under immutable Owner CUA amendment0ee21ae6. Candidate six paths only, one primary authoring pass; the single consolidated repair has not begun. Four old software checks remain spent; four newly approved future attempts are all unused. No source test/parser/import/compile, campaign reservation, service query, owned tab, fixture/key/provider effect in this adaptation. One docs-only selection and one documentation redisplay recorded separately from campaign evidence.
+
+## Consolidated findings
+
+- F01: Keep the admitted HTTPS example.com nonce-created/controlled goto route. The draft Luna operation plan wrongly revives the historically policy-denied data: page/click diagnostic and puts Root at G2. Repair that draft plan; it is uncommitted and not an admitted contract. The producer and G2 worker are internal Luna; a distinct internal observer reclaims the exact tab. Actual capture method is getScreenshot, not screenshot. Align Python, Go, tests and current CUA payload.
+- F02: Terminal cleanup must admit an honest owner-close-report-only action sequence when the fixture fails before G2. Do not invent a post-prefix control/product action or take an extra G0 read solely to satisfy a two-row minimum. Preserve chronology, final metadata target absence, protected baseline and four-hash marker.
+- F03: creation_ledger and action_sequence are derived aggregates, not a single original CUA return. Give them explicit derived provenance with hashes/references to actual source rows; each underlying CUA event retains actual original-return provenance. Owner report keeps report-received time and physical close time UNKNOWN.
+- F04: Bind both committed owner grants at the actual Python runtime entry point and Go opt-in runtime admission, not only in the controller's later product-binding helper. Reject missing/mismatched grant hashes, wrong parent link, or non-current lineage before fixture/key/provider. Pure structural fixtures must not masquerade as live governance evidence.
+- F05: New Go CUA references currently use the old128-character identity-text validator while Python allows512 for original-return/call paths. Align new CUA path/reference validators without weakening old native identity validators; test a legitimate long reference and malformed/over-limit references in allocated checks.
+- F06: Current documented Tab exposes ID, optional goto/close and AX/screenshot, not a URL property. A distinct observer cannot claim independently observed URL merely from the expected caller URL. Its proposed intermediate listTabs is outside inherited baseline/final-only permission. A separate precise readonly-cap amendment is proposed before any clock; otherwise G0 stays HOLD.
+- F07: The actual UI may perform12 post-send polls plus initial writer load, publication version reload, deliberate writer reload and reader load. Global12 reads with five-second spacing cannot cover this unmodified UI. Proposed finite amendment16 total (12 automatic,4 event-driven) scopes spacing5/lifetime60 to the automatic polling loop. No frontend/business change or extra POST/provider effect is authorized. If the amendment is declined, keep runtime HOLD; source adaptation alone is not runtime acceptance.
+
+Source repair, metadata plan repair and cap semantics are consolidated before any allocated check. Optional DOM-only locator/confirm-handler acquisition and actual cross-agent ownership remain explicit preclock/G0 capability conditions. No guessed API call, getTab URL property, native identity alias, third inventory or widened status allowance may be used without the proper admitted contract.
+
+Owner approved both readonly-cap amendments (`call_9c716867`, reply `Duyệt hai giới hạn chỉ đọc`) before final candidate/checks. First cap-dispatch pre-commit profile failed ROLE_FIELD_INVALID because worker return used an informal reviewer heading; Root normalized only that assignee heading to the required Reviewer line, preserving worker findings/checkpoint hashes. Repository preflight7/7 and doctor27/27 passed. This is no source test or runtime evidence.

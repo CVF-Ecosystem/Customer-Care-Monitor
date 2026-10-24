@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Current R139 Owner-approved internal Luna/Sol CUA source BUILD; four future offline checks, old4spent retained, campaign0/API0; Antigravity withdrawn and product runtime blocked."
+      "description": "R139 Luna/Sol same consolidated CUA source repair resumed after Owner readonly-cap approval; four future softwarechecks unused, old4spent retained, campaign/API0."
     },
     {
       "id": "r060-work-order",
@@ -36669,6 +36669,34 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_root_actor_ack.json",
       "status": "ACTIVE",
       "description": "R139 Owner-directed internal worker transition; old Antigravity dispatch withdrawn before reservation; replacement source/check proposal pending, no runtime or product acceptance."
+    },
+    {
+      "id": "r139-cua-repair-20261024-1",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Owner-approved readonly cap amendment: baseline/handoff/final metadata1each, G2status16=12automaticpolls+4eventloads; all other allowances unchanged; no live release."
+    },
+    {
+      "id": "r139-cua-repair-20261024-2",
+      "family": "continuity",
+      "path": "docs/reviews/R139_INTERNAL_CUA_CONSOLIDATED_SOURCE_REVIEW_2026-10-24.md",
+      "status": "ACTIVE",
+      "description": "R139 internal CUA consolidated source repair/evidence plan; readonly-cap decision pending, softwarechecks0of4, no campaign or runtime acceptance."
+    },
+    {
+      "id": "r139-cua-repair-20261024-3",
+      "family": "continuity",
+      "path": "docs/reviews/R139_INTERNAL_CUA_SOURCE_WORKER_RETURN_2026-10-24.md",
+      "status": "ACTIVE",
+      "description": "R139 internal CUA consolidated source repair/evidence plan; readonly-cap decision pending, softwarechecks0of4, no campaign or runtime acceptance."
+    },
+    {
+      "id": "r139-cua-repair-20261024-4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/cua_browser_operation_plan.json",
+      "status": "ACTIVE",
+      "description": "R139 internal CUA consolidated source repair/evidence plan; readonly-cap decision pending, softwarechecks0of4, no campaign or runtime acceptance."
     }
   ]
 }

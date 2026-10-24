@@ -15,7 +15,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R139 Owner-approved internal Luna/Sol CUA source BUILD; four future offline checks, old4spent retained, campaign0/API0; Antigravity withdrawn and product runtime blocked.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md`
+- R139 Luna/Sol same consolidated CUA source repair resumed after Owner readonly-cap approval; four future softwarechecks unused, old4spent retained, campaign/API0.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -4479,6 +4479,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Four-path intended recovery design only; source renewal pending Owner decision; no new helper or effect.: `docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_2026-10-23.md`
 - Independent Root documentary review; finite source-only proposal ready for Owner, M3 runtime remains OPEN.: `docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_REVIEW_2026-10-23.md`
 - Authorized public Core reconciliation and doctor27/27 static readiness with unchanged profile pin warning.: `docs/reviews/probes/r139_integrated_20261021/r7_core_reconciliation_20261023.json`
+- Owner-approved readonly cap amendment: baseline/handoff/final metadata1each, G2status16=12automaticpolls+4eventloads; all other allowances unchanged; no live release.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json`
+- R139 internal CUA consolidated source repair/evidence plan; readonly-cap decision pending, softwarechecks0of4, no campaign or runtime acceptance.: `docs/reviews/R139_INTERNAL_CUA_CONSOLIDATED_SOURCE_REVIEW_2026-10-24.md`
+- R139 internal CUA consolidated source repair/evidence plan; readonly-cap decision pending, softwarechecks0of4, no campaign or runtime acceptance.: `docs/reviews/R139_INTERNAL_CUA_SOURCE_WORKER_RETURN_2026-10-24.md`
+- R139 internal CUA consolidated source repair/evidence plan; readonly-cap decision pending, softwarechecks0of4, no campaign or runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/cua_browser_operation_plan.json`
 - Remaining source corrections and bounded final repair; source not yet accepted.: `docs/reviews/R139_FINAL_STATIC_SOURCE_CORRECTIONS_2026-10-21.md`
 - Actual one-use R139 G0 reservation raw bytes/UTC/monotonic/boot/dispatch SHA; clock unchanged through continuity synchronization; native/product proof pending.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/root_g0_actual_reservation_receipt.json`
 - R139 current Owner-ready technical-release prerequisites and bounded public tariff read; metadata-only worker coordination, no G0 reservation/effects until actual browser-worker handshake. No product/governance acceptance.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/root_current_release_prerequisites.json`

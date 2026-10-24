@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 internal CUA SOURCE BUILD under Owner amendment committed09e433e9; Sol Medium edits exactly3sourcepaths and3existingmetadata designs for honest cua_page_target_v1. One coordinated authoring/one consolidated repair; reserve and execute exactly workerPython1/compile1 and RootPython1/auditedPureGo1 only after full candidate review; old4spent retained, total8maximum. Root independent REVIEWER/COMMIT_STEWARD, Luna Max prospective browser producer and separate observer after sourceacceptance. No browser/service/fixture/key/provider/campaign effects during sourceBUILD. Repin binary/controller/payloads and prepare exact64-CUA-method/4stage ledger with globalstatus12 cap before conditional single1200s G0-G3 launch; fivequeries/onepage/oneproductAPI<=USD1 unchanged. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; Facebook/ZaloOA parked; Antigravity withdrawn; no helper tranche, retries or repeated Owner relay.",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 Owner APPROVED readonly CUA cap amendment call_9c716867: metadata baseline1/handoff1/final1; G2status16 total=12automaticpolls5s/60s plus4eventloads. Root commits cap record then Sol resumes and completes SAME single consolidated F01-F07 repair under sourceauthority09e433e9/dispatch63742e11; Root independently reviews ONE final candidate before exactly workerPython1/compile1 and RootPython1/pureGo1. Allfourfuturechecks0used, old4spent retained,total8max. Actual target-bound DOMlocator/ConfirmDialog acquisition and separate-agent exact-tab ownership remain UNPROVEN; require actual bounded G0 docs/evidence beforefixture/key/provider, no guessed APIs. No clock/servicequeries/newtab/fixture/key/provider release, freshcampaign0/API0; sameone1200s/5servicequeries/onepage/64CUAmethods/oneAPI<=USD1. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; Facebook/ZaloOA parked; Antigravity withdrawn; sameONE M3-05/M3-08 G0-G3 order, no extra pass/tranche/reset/approval relay.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Sol Medium IMPLEMENTATION_WORKER for bounded CUA source/metadata; Root independent REVIEWER / ORCHESTRATOR / COMMIT_STEWARD; Luna Max future browser only, effects blocked",
+  "activeRole": "Sol Medium REPAIR_WORKER completing same consolidated CUA repair; Root independent REVIEWER / ORCHESTRATOR / COMMIT_STEWARD; Luna Max future browser only, effects blocked",
   "updatedAt": "2026-10-24",
   "x-resolvedCoreCommit": "b69e1088978e8c90ac58a2243fcf8f90d0f857ed",
   "x-ownerRoadmapDiscipline": {
@@ -3447,5 +3447,27 @@
       "rootFocusedPython": 0,
       "rootAuditedPureGo": 0
     }
+  },
+  "x-r139InternalCuaSourceRepair": {
+    "status": "SOURCE_REPAIR_RESUMED_OWNER_READONLY_CAPS_APPROVED",
+    "consolidatedReview": "docs/reviews/R139_INTERNAL_CUA_CONSOLIDATED_SOURCE_REVIEW_2026-10-24.md",
+    "observationCapsDraft": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
+    "authoringPassesUsed": 1,
+    "consolidatedRepairPassesStarted": 1,
+    "oldSoftwareChecksSpent": 4,
+    "futureSoftwareCheckUse": {
+      "workerFocusedPython": 0,
+      "workerOfflineGoCompile": 0,
+      "rootFocusedPython": 0,
+      "rootAuditedPureGo": 0
+    },
+    "campaignUse": 0,
+    "serviceQueries": 0,
+    "providerUse": 0,
+    "clockStarted": false,
+    "g2DomLocatorAndConfirmAcquisition": "UNKNOWN_UNTIL_ACTUAL_TARGET_BOUND_DOCS",
+    "sourceAcceptance": "NOT_YET_CHECKED_OR_ACCEPTED",
+    "readonlyCapOwnerApproved": true,
+    "ownerApprovalReference": "request_user_input_async/call_9c716867f19d48d186d4dabf4f059836/item0"
   }
 }
