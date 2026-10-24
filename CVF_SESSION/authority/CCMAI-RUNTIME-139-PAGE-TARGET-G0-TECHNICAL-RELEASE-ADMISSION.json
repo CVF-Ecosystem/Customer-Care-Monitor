@@ -1,0 +1,233 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ROOT_R139_PAGE_TARGET_G0_TECHNICAL_RELEASE_WITHIN_OWNER_ENVELOPE",
+  "status": "WITHDRAWN_OWNER_BROWSER_WORKER_CHANGE",
+  "date": "2026-10-24",
+  "riskCeiling": "R2",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "baseCommit": "e88038c5c4e3ebc4205debe751d0a621837b5173",
+  "ownerEnvelopePath": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-AND-CONDITIONAL-REENTRY-ADMISSION.json",
+  "ownerEnvelopeSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "sourceCommit": "3f9b393e5b64dbf44eefd4779e9bc8ca210657ee",
+  "acceptedBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "88f26ffc7c7864e331054ae9d2c8011517ba10d360bb9b54c9bd617796d9fdd2"
+  },
+  "oneExistingOrder": true,
+  "roadmap": [
+    "M3-05",
+    "M3-08"
+  ],
+  "newTranches": 0,
+  "nativeContractId": "r139-page-target-v1-reentry-20261024",
+  "campaignNonce": "e168d31ce8364c532c38b61b370dba19",
+  "actorAcks": {
+    "root": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_root_actor_ack.json",
+      "sha256": "8d4258cc1c301d80ca37eacc0361d4dfc609b62a68297d024d7915d99d788bad"
+    },
+    "internal": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/internal_runtime_actor_ack_candidate.json",
+      "sha256": "7e3ce2e30d581c41e441b95f5435917403e336f8ae70b752b2e3a632c3222b46"
+    },
+    "antigravity": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_browser_actor_ack.json",
+      "sha256": "c47b49383e3184009f97d00d3b592a5927bbc5978b6257fe480d27ad4e87fff2"
+    }
+  },
+  "operator": "Owner in this conversation",
+  "closeMode": "operator_fallback",
+  "operatorAvailabilityRef": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_owner_operator_availability.json",
+  "recipePath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_recipe.json",
+  "recipeSha256": "SET_AFTER_FINAL_RECIPE_SEAL",
+  "controllerDesignPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt",
+  "controllerDesignSha256": "6df45acd58a657a19ffaf2e70a064d217c3de8ebda7c67b1fcb89a36b78bcb89",
+  "controllerScriptPath": ".cvf/runtime/r139_page_target_reentry_20261024_readiness/activation_controller.py",
+  "outerControlReceiptRoot": ".cvf/runtime/r139_page_target_reentry_20261024_readiness/control_outer",
+  "coordinationRoot": ".cvf/runtime/r139_page_target_reentry_20261024_readiness/coordination",
+  "reservationPath": ".cvf/runtime/r139_page_target_reentry_20261024_readiness/campaign_reservation.json",
+  "signalPath": ".cvf/runtime/r139_page_target_reentry_20261024_readiness/coordination/root_g0_release.json",
+  "caps": {
+    "campaigns": 1,
+    "lifecycleSeconds": 1200,
+    "cleanupReserveSeconds": 180,
+    "readonlyQueries": 5,
+    "dockerQuerySecondsMax": 20,
+    "powershellQuerySecondsMax": 5,
+    "ownedExplicitPages": 1,
+    "browserTaskCalls": 4,
+    "g0ReadObservations": 4,
+    "g0Captures": 2,
+    "creationNavigation": 1,
+    "samePageControlNavigation": 1,
+    "baselineMetadataEnumeration": 1,
+    "finalMetadataEnumeration": 1,
+    "finalExactPageClose": 1,
+    "nativeExecutePOST": 8,
+    "browserExecutePOST": 1,
+    "grants": 3,
+    "authPOST": 4,
+    "statusReadStarts": 12,
+    "statusReadSpacingSecondsMin": 5,
+    "statusReadLifetimeSecondsMax": 60,
+    "providerPhysicalCalls": 1,
+    "maximumUSD": 1,
+    "keyContentReads": 1,
+    "requestBytes": 6000,
+    "completionTokens": 768,
+    "automaticRetry": 0,
+    "fixtureStarts": 1,
+    "fixtureFinalStops": 1,
+    "backendStarts": 1,
+    "viteStarts": 1,
+    "publicTariffRefreshIfNeeded": 1
+  },
+  "internalG0Readiness": {
+    "status": "PREPARED_UNEXECUTED_NEW_OWNER_ENVELOPE_ROOT_RELEASE_REQUIRED",
+    "actor": "Internal worker only after Root G0 technical release and original campaign reservation",
+    "binaryPinSource": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "sha256": "88f26ffc7c7864e331054ae9d2c8011517ba10d360bb9b54c9bd617796d9fdd2",
+      "dockerField": "pins.tools.docker"
+    },
+    "dockerConfigDir": ".cvf/runtime/r139_page_target_reentry_20261024_readiness/docker_config",
+    "dockerConfigContent": "{}\n",
+    "configCustody": "Exclusive owned directory and config.json only; no ambient credentials/config; create after campaign reservation",
+    "queries": [
+      {
+        "id": "cached-image",
+        "argv": [
+          "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_page_target_reentry_20261024_readiness/docker_config",
+          "image",
+          "inspect",
+          "--format",
+          "{{json .Id}}",
+          "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+        "comparison": "Decode stdout as exactly one JSON string (only surrounding whitespace); require decoded string exactly equals expected; no extra stdout content. Original stderr/exit retained."
+      },
+      {
+        "id": "container-name",
+        "argv": [
+          "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_page_target_reentry_20261024_readiness/docker_config",
+          "ps",
+          "-a",
+          "--filter",
+          "name=ccmai-r139-r4-20261023",
+          "--format",
+          "{{json .Names}}"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "EMPTY"
+      },
+      {
+        "id": "network-name",
+        "argv": [
+          "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_page_target_reentry_20261024_readiness/docker_config",
+          "network",
+          "ls",
+          "--filter",
+          "name=ccmai-r139-r4-20261023",
+          "--format",
+          "{{json .Name}}"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "EMPTY"
+      },
+      {
+        "id": "volume-name",
+        "argv": [
+          "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_page_target_reentry_20261024_readiness/docker_config",
+          "volume",
+          "ls",
+          "--filter",
+          "name=ccmai-r139-r4-20261023",
+          "--format",
+          "{{json .Name}}"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "EMPTY"
+      },
+      {
+        "id": "vite-port",
+        "argv": [
+          "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+          "-NoLogo",
+          "-NoProfile",
+          "-NonInteractive",
+          "-Command",
+          "$ErrorActionPreference='Stop'; $r139Listeners = @(Get-NetTCPConnection -State Listen -ErrorAction Stop | Where-Object { $_.LocalPort -eq 3519 } | Select-Object -Property LocalAddress,LocalPort,OwningProcess); [pscustomobject]@{ port = 3519; listeners = $r139Listeners } | ConvertTo-Json -Depth 4 -Compress; exit 0"
+        ],
+        "timeoutSeconds": 5,
+        "cap": 1,
+        "expected": {
+          "port": 3519,
+          "listeners": []
+        }
+      }
+    ],
+    "automaticRetry": 0,
+    "used": 0,
+    "vitePort": 3519,
+    "failure": "Any error/timeout/nonzero/ambiguous or occupied result HOLD, campaign consumed; no mutation/cleanup of ambient resources or replacement namespace/port",
+    "clock": "Reserve before first query or browser invocation; same original1200seconds includes all5queries and G0/G1/G2/cleanup",
+    "processCustody": "Capture original argv/stdout/stderr/start/end/wait/exit. Timeout must request cancellation of only the exact held query child and observe original wait; no new command/retry/host process kill. Unreturned original wait means UNKNOWN/HOLD, not bounded lifetime proof."
+  },
+  "g0Protocol": [
+    "Original Root-held control Popen verifies exact clean committed recipe/tools/source/boot/actor pins before one original reservation.",
+    "Within original clock: canonical sync/gates/exact commit/clean HEAD then new release signal. No worker effects before it.",
+    "Internal worker reserves and executes exactly5read-only service queries; stop first failure, no retry. Root must accept actual service receipts before browser task1.",
+    "Antigravity tasks1+2 prove one new exact native PageId, approved metadata baseline, exact nonce URLs/capture and separate cross-task handoff. No product action.",
+    "Root authenticates original evidence/URLs; unsupported or missing capability is HOLD before fixture/key/provider.",
+    "Product G1/G2 needs a separate actual Runtime Effect Admission and independent review/commit. Task3 is product-only after that admission; task4 final native metadata after exact Owner close.",
+    "Automatic original-clock +1020 cleanup/+1200 expiry remain managed even G0-only abort; retain original waits/exits, late/UNKNOWN evidence, no blind Host/browser/product-parent kills."
+  ],
+  "independentReviewApproved": false,
+  "campaignReserved": false,
+  "campaignUse": 0,
+  "providerUse": 0,
+  "runtimeExecutableNow": false,
+  "browserExecutableNow": false,
+  "serviceQueriesExecutableNow": false,
+  "keyContentReadExecutableNow": false,
+  "providerExecutableNow": false,
+  "effectReleaseCondition": "Only G0 may run after Root original held reservation transaction publishes exact fresh signal and the named stage signal; no paid/product/credential authority from this technical record.",
+  "historicalAccounting": "Prior1campaign/5queries spent and earlier provider UNKNOWN retained, no refund/reset/stacking/retry.",
+  "publicTariffRefreshUsed": 1,
+  "publicTariffReceipt": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_public_tariff_result.json",
+  "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+  "withdrawal": {
+    "ownerDirective": "Continue; no Antigravity; internal Luna Max, Sol Medium for difficult work",
+    "substitutionAuthorized": true,
+    "antigravityDispatchWithdrawn": true,
+    "proposal": "docs/reviews/R139_INTERNAL_BROWSER_TRANSITION_2026-10-24.md",
+    "sourceAdaptationReleased": false,
+    "campaignUse": 0,
+    "providerUse": 0,
+    "clockStarted": false,
+    "sourceChecksPreviouslyUsed": 4,
+    "ownerExactPageFallbackAvailable": true
+  }
+}

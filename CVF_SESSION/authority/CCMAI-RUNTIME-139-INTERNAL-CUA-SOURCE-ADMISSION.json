@@ -1,0 +1,156 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "OWNER_APPROVED_R139_INTERNAL_CUA_SOURCE_AND_CONDITIONAL_CONTINUATION",
+  "status": "APPROVED_SOURCE_PENDING_COMMITTED_DISPATCH",
+  "riskCeiling": "R2",
+  "date": "2026-10-24",
+  "ownerApproved": true,
+  "actorSubstitutionAlreadyAuthorized": true,
+  "ownerDirective": "No Antigravity; internal Luna Max, Sol Medium if difficult",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+  "proposal": "docs/reviews/R139_INTERNAL_BROWSER_TRANSITION_2026-10-24.md",
+  "oneExistingOrder": true,
+  "newTranches": 0,
+  "roadmap": [
+    "M3-05",
+    "M3-08"
+  ],
+  "previousOwnerEnvelope": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-AND-CONDITIONAL-REENTRY-ADMISSION.json",
+    "sha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f"
+  },
+  "previousAcceptedSource": "3f9b393e5b64dbf44eefd4779e9bc8ca210657ee",
+  "sourcePaths": [
+    "scripts/r139_execution_supervisor.py",
+    "scripts/tests/test_r139_execution_supervisor.py",
+    "backend/api/handlers/intervention_execution_browser_test.go"
+  ],
+  "metadataDesignPaths": [
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_payload_templates.json",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/recorder_design.py.txt"
+  ],
+  "authoringPassesProposed": 1,
+  "consolidatedRepairPassesProposed": 1,
+  "checkAccounting": {
+    "oldSpent": {
+      "workerFocusedPython": 1,
+      "workerOfflineGoCompile": 1,
+      "rootFocusedPython": 1,
+      "rootAuditedPureGo": 1
+    },
+    "oldUnspentWorkerSlotsProposedForNewCandidate": {
+      "workerFocusedPython": 1,
+      "workerOfflineGoCompile": 1
+    },
+    "newAdditionalSlotsProposed": {
+      "rootFocusedPython": 1,
+      "rootAuditedPureGo": 1
+    },
+    "futureAttemptsTotal": 4,
+    "totalOldAndNewAttemptsMaximum": 8,
+    "oldMaximum": 6,
+    "automaticRetry": 0,
+    "reservationAndOriginalWaitExitRequired": true
+  },
+  "roles": {
+    "implementationWorker": "Internal Sol Medium",
+    "browserProducer": "Internal Luna Max",
+    "independentBrowserObserver": "Separate internal Luna Max subagent, exact same owned tab",
+    "sourceReviewer": "Root independent REVIEWER",
+    "commitSteward": "Root"
+  },
+  "browserContractProposed": {
+    "proofContract": "cua_page_target_v1",
+    "browserTool": "supported_CUA_page_target",
+    "honestBrowserAndTabIdentityRequired": true,
+    "noAntigravityNativeProvenanceClaims": true,
+    "actualDistinctCollaborationTaskIdentitiesRequired": true,
+    "actualOriginalCuaReturnsAndCaptureReferencesRequired": true,
+    "callerRecordedProvenanceLimitationExplicit": true,
+    "rootActualEvidenceReviewRequired": true,
+    "crossActorExactTabOwnershipMustBeProvedInG0": true,
+    "failure": "HOLD before fixture/key/provider; no replacement page, retry, or alternate stack"
+  },
+  "oneDocumentationSelectionObserved": {
+    "method": "cua.getBrowser",
+    "url": "https://example.com",
+    "returnedBrowserId": "2",
+    "tabCreation": 0,
+    "inventory": 0,
+    "contentRead": 0,
+    "g0EvidenceClaim": false
+  },
+  "unchangedCampaignCaps": {
+    "freshCampaigns": 1,
+    "oldSpentCampaigns": 1,
+    "lineageCumulativeCap": 2,
+    "seconds": 1200,
+    "cleanupStartsAtSecond": 1020,
+    "readonlyServiceQueries": 5,
+    "ownedPages": 1,
+    "browserWorkerStages": 4,
+    "g0Reads": 4,
+    "g0Captures": 2,
+    "baselineMetadataInventories": 1,
+    "finalMetadataInventories": 1,
+    "providerPhysicalCalls": 1,
+    "maximumUSD": 1,
+    "keyContentReads": 1,
+    "retry": 0
+  },
+  "preconditions": [
+    "Owner accepts this specific additional authoring/check/tool-contract boundary; worker choice already authorized",
+    "Complete one consolidated source/metadata adaptation and independently reviewed checks with newly pinned binary before clock",
+    "Root authenticates actual G0 CUA evidence and separate-actor exact-tab handoff before separately committed Runtime Effect Admission",
+    "Original Root-held controller, same campaign clock, exact owned cleanup and final inventory; no host or unrelated tab action"
+  ],
+  "sourceExecutableNow": false,
+  "browserExecutableNow": false,
+  "campaignReserved": false,
+  "providerExecutableNow": false,
+  "keyExecutableNow": false,
+  "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+  "browserOperationBudgetProposed": {
+    "maximumAttemptedCuaInvocations": 64,
+    "stages": {
+      "g0Producer": 8,
+      "g0IndependentObserver": 4,
+      "g2ProductUi": 48,
+      "terminal": 4
+    },
+    "alreadyObservedDocumentationSelections": 1,
+    "additionalDocumentationSelections": 0,
+    "allAttemptedOrUncertainConsume": true,
+    "exactInteractionPlanReviewedBeforeClock": true,
+    "uncoveredE04BranchesRemainOpen": true,
+    "countEachCuaApiMethod": true,
+    "batchingDoesNotHideCalls": true,
+    "g2CapturesMaximum": 4,
+    "windowConfirmResponseIncluded": true,
+    "statusReadBudgetReconciliationRequiredBeforeClock": true,
+    "browserFollowupMutationPostCap": 0
+  },
+  "proposalSha256": "c20ddaf29aec014954a015abe23ff40e7dfffbdad4d2cff3ee2e54052452eb59",
+  "ownerApprovalReference": "request_user_input_async/call_db1f326a06f0494aa85c7504c3dba61f/item0",
+  "ownerReply": "Duyệt gói chuyển sang Luna/Sol",
+  "sourceGranted": true,
+  "sourceBudget": {
+    "authoringPasses": 1,
+    "consolidatedRepairPasses": 1,
+    "workerFocusedPython": 1,
+    "workerOfflineGoCompile": 1,
+    "rootFocusedPython": 1,
+    "rootAuditedPureGo": 1
+  },
+  "commitOwner": "Root",
+  "sourceBaseCommit": "3f9b393e5b64dbf44eefd4779e9bc8ca210657ee",
+  "prohibitedEffects": [
+    "Worker commits or authority/sharedcontinuity/catalog changes",
+    "Extra source/check/compile/import/parser attempts beyond four approved future checks",
+    "Any campaign/browser/service/fixture/key/provider effects before separate Root reviewed committed stage admission",
+    "Reset or refund old spent/unknown counters; extra page/campaign/API/stack/retry",
+    "Frontend/business/dependency/Core/gate changes or old Antigravity branch repair"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "trancheId": "CCMAI-RUNTIME-139",
+  "ready": true,
+  "freshGrantSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "sourceCommit": "3f9b393e5b64dbf44eefd4779e9bc8ca210657ee",
+  "acceptedBuildPinsSha256": "88f26ffc7c7864e331054ae9d2c8011517ba10d360bb9b54c9bd617796d9fdd2",
+  "payloadSha256": "f0996b831f0ab53989af8ce079306059fc1cc30eb962194b7485ea6f5e7b4b05",
+  "nativeContractId": "r139-page-target-v1-reentry-20261024",
+  "campaignNonce": "e168d31ce8364c532c38b61b370dba19",
+  "observedAtUTC": "2026-10-24T05:34:47.619716+00:00",
+  "roleBoundary": "Metadata readiness only; no campaign reservation, service query, browser, product, key or provider release.",
+  "kind": "ROOT_R139_PRECLOCK_ACTOR_ACK",
+  "workerIdentity": "Root",
+  "originalControlPopenCustodian": "Root",
+  "originalControlWaitExitReceiptPlanned": true,
+  "ownerExactPageOperatorAvailable": true,
+  "operatorAvailabilityReference": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_owner_operator_availability.json"
+}

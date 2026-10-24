@@ -83,11 +83,11 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "REVIEW_PASS",
+  "status": "CHANGES_REQUIRED",
   "phase": "REVIEW",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "REVIEWER_ACCEPTED",
-  "buildCommit": "3f9b393e5b64dbf44eefd4779e9bc8ca210657ee",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
+  "buildCommit": null,
   "reviewEvidence": [
     "docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md",
     "docs/reviews/probes/r139_integrated_20261021/browser_capability_outcome.json",
@@ -143,9 +143,10 @@
     "docs/reviews/R139_INTEGRATED_REENTRY_DECISION_2026-10-24.md",
     "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/root_original_return_check.json",
     "docs/reviews/R139_PAGE_TARGET_CONSOLIDATED_SOURCE_REVIEW_2026-10-24.md",
-    "docs/reviews/R139_PRECLOCK_OPERATIONAL_PREPARATION_REVIEW_2026-10-24.md"
+    "docs/reviews/R139_PRECLOCK_OPERATIONAL_PREPARATION_REVIEW_2026-10-24.md",
+    "docs/reviews/R139_PAGE_TARGET_G0_TECHNICAL_RELEASE_REVIEW_2026-10-24.md"
   ],
-  "disposition": "REVIEW_PASS",
+  "disposition": "CCMAI-RUNTIME-139 Owner APPROVED internal Luna/Sol CUA amendment call_db1f326a; Root commits successor source authority before same-order source BUILD. Sol Medium adapts3sourcepaths and3metadata designs to honest cua_page_target_v1, one authoring/one consolidated repair, four future offline checks (workerPython1/compile1 and newRootPython1/pureGo1), total lineagechecks<=8 with old4spent retained. Root independently reviews source/binary/controller then binds fresh CUA actor evidence/recipe before ONE existing1200s G0-G3 campaign. No clock, service query, live page, fixture/key/provider release now; freshcampaign0/API0, historicalspent/UNKNOWN unchanged. CUA max64methodcalls/4worker stages after conditional admission only, five servicequeries/onepage/oneproductAPI<=USD1 unchanged. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; Facebook/ZaloOA parked; Antigravity withdrawn; no helper tranche or repeat Owner relay.",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -183,7 +184,8 @@
     "CHANGES_REQUIRED",
     "BUILD",
     "REVIEW_PENDING",
-    "REVIEW_PASS"
+    "REVIEW_PASS",
+    "CHANGES_REQUIRED"
   ],
   "actualUse": {
     "status": "HOLD_MANUAL_HOLD_PROVIDER_OUTCOME_UNKNOWN",
@@ -1046,5 +1048,28 @@
     "runtimeExecutableNow": false,
     "browserExecutableNow": false,
     "providerExecutableNow": false
+  },
+  "x-lastAcceptedSourceBuildCommit": "3f9b393e5b64dbf44eefd4779e9bc8ca210657ee",
+  "x-internalBrowserTransition": {
+    "ownerDirective": "Continue; no Antigravity; internal Luna Max, Sol Medium for difficult work",
+    "substitutionAuthorized": true,
+    "antigravityDispatchWithdrawn": true,
+    "proposal": "docs/reviews/R139_INTERNAL_BROWSER_TRANSITION_2026-10-24.md",
+    "sourceAdaptationReleased": false,
+    "campaignUse": 0,
+    "providerUse": 0,
+    "clockStarted": false,
+    "sourceChecksPreviouslyUsed": 4,
+    "ownerExactPageFallbackAvailable": true,
+    "ownerSourceAmendmentApproved": true,
+    "sourceAuthority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-CUA-SOURCE-ADMISSION.json"
+  },
+  "x-withdrawnUncommittedDispatchHistory": {
+    "proposedButNotGatedOrCommitted": [
+      "WORK_ORDER",
+      "DISPATCH_READY"
+    ],
+    "firstGateFailure": "invalid status transition REVIEW_PASS -> WORK_ORDER",
+    "disposition": "Unexecuted dispatch draft withdrawn on Owner worker change; canonical recorded transition is committed REVIEW_PASS -> CHANGES_REQUIRED. Original draft statuses retained here, not asserted as accepted lifecycle events."
   }
 }
