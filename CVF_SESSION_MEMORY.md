@@ -2,7 +2,7 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
 
 ## Mandatory standing Owner directive — apply without reminders
 
@@ -11,13 +11,13 @@ Memory class: POINTER_RECORD
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: BUILD
+- Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
 
-CCMAI-RUNTIME-139 original return CHECKED: actual transcriptstep98 records same-PageId G0 inputs but returnedSubagentId blank, nativeSession/scopedinventory/cross-taskhandoff unproved. Unchanged-contract rerun BLOCKED_NATIVE_CONTRACT_GAP. ONEsource-and-conditional-reentry proposal docs/reviews/R139_INTEGRATED_REENTRY_DECISION_2026-10-24.md is ready for Owner scope review, NOT runtime dispatch: same3sourcepaths/page-target proof variant, boundedfreshofflinechecks, activation/deadlinecontrol acceptance BEFORE any timer, oneconditionalG0-G3 campaign andproductAPI<=USD1 onlyafterfreshapproval+G0+runtimeadmission. No new grant inferred from tiep/check; oldcampaign1/1+queries5/5/sourcecaps spent, currentnative-lineageAPI0 and oldhistoricaluncertainty retained. Ownerclosedoldnoncepageattested; nativefinalinventoryUNKNOWN/excluded. No newsource/browser/service/key/provider/campaign now; sameM3-05/M3-08 order, Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION, REVIEW/CHANGES_REQUIRED/noFREEZE; accountsparked.
+CCMAI-RUNTIME-139 Owner APPROVED985dacbb combined source-and-conditional-reentry. SOURCE BUILD only after committed admission CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-AND-CONDITIONAL-REENTRY-ADMISSION.json; internalSourceWorker owns3sourcepaths+page-targetpayload, separateinternalMetadataWorker ownsactivation/recorder/deadlinecontrol; Root independentreview/commit. Newofflinecaps WorkerPy2/compile2 RootPy1/auditedpureGo1, reserveeachattempt; no other sourcecheck. Finishsource/binary/activation/coordinator acceptance and allslowprep BEFORE any new1200sclock. Runtime/browser/service/key/provider NOT executable now; freshcampaignused0 andAPI0; old1/1campaign/5queries/unknownhistory retained. SameONE M3-05/M3-08 G0-G3 order, Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; no furtherOwnerrelay withinapprovedscope, accountsparked.
 
-Root independent original-return/design REVIEWER / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol inert design author stopped; Luna independent admission reviewer; Antigravity no new execution
+Root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; internal source and activation workers BUILD; Antigravity browser-only NOT released
 
 Owner reiteration2026-10-23: no fragmented tranches; follow roadmap. Root keeps ONE existing R139 outcome-based order across G0/G1/G2/G3; no helper/metadata prompt chain or repeated Owner relay. Complete consolidated readiness/admission before redispatch. Historical substep instructions are completed/spent context; current HOLD_TRANSFER remains. Directive recorded in existing order/continuity, no new learning artifact or tranche. Effectiveness must be judged by product acceptance.
 
@@ -1096,3 +1096,7 @@ Owner continuation accepted at INTAKE for consolidated DESIGN/SPEC in existingR1
 CCMAI-RUNTIME-139 original return CHECKED: actual transcriptstep98 records same-PageId G0 inputs but returnedSubagentId blank, nativeSession/scopedinventory/cross-taskhandoff unproved. Unchanged-contract rerun BLOCKED_NATIVE_CONTRACT_GAP. ONEsource-and-conditional-reentry proposal docs/reviews/R139_INTEGRATED_REENTRY_DECISION_2026-10-24.md is ready for Owner scope review, NOT runtime dispatch: same3sourcepaths/page-target proof variant, boundedfreshofflinechecks, activation/deadlinecontrol acceptance BEFORE any timer, oneconditionalG0-G3 campaign andproductAPI<=USD1 onlyafterfreshapproval+G0+runtimeadmission. No new grant inferred from tiep/check; oldcampaign1/1+queries5/5/sourcecaps spent, currentnative-lineageAPI0 and oldhistoricaluncertainty retained. Ownerclosedoldnoncepageattested; nativefinalinventoryUNKNOWN/excluded. No newsource/browser/service/key/provider/campaign now; sameM3-05/M3-08 order, Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION, REVIEW/CHANGES_REQUIRED/noFREEZE; accountsparked.
 
 Root read actual original external transcriptstep98 and source/code-as-data statically. One native tool error was view_file allowlist, not navigation. Same-tasktarget evidence is bounded; absentreturnedID is not proof cross-taskPageId routing is impossible, but that route remains unproved. Currentnativeprovider0 and workerunqualifiedhistoricalcounter1 retained separately. IndependentLuna accepts ONEcombinedsource-and-conditionaleffectproposal as reviewable, notlaunchready; Sol concurs unchangedsessioncontract cannotpass. Sourceadaptation/deadlinecontroller/currentrecipe/newacceptedbuild must be implemented and independentlyaccepted under freshOwnerScope beforeanyreservation. Current source/software/native/network effects0; oldfailedreceipts and authority untouched.
+
+## Owner-approved integrated source BUILD acknowledgment — 2026-10-24
+
+Owner explicitly approves985dacbb via questioncall_e8fa2f4f42d146a48ead41a2c102af04. Root rehydrates current canonical truth, doctor27/27publicCoreb69e1088/origin-main with inheritede9ddcb warning. INTAKE accepted; DESIGN/SPEC985dacbb inherited; WORK_ORDER this fresh immutable CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-AND-CONDITIONAL-REENTRY-ADMISSION.json must be independently reviewed/gated/committed before source BUILD. Internal Sol source worker owns only3source/testpaths and adaptedpayload; separateinternal worker owns activation/recorder/deadline metadata. Root independent source/runtime reviewer and commitsteward; no worker seeds/sharedstate/catalog/commit. Worker ownreturn current-value roleack precedes writes; Root dispatch materialSHA supplied aftercommit and verified in bothreturns. Six source check slots are fresh explicitly allocated/custodied, alloldcaps/history retained. ActualRuntimeEffectAdmission/sourceacceptance/activation/clock are NOT preapproved facts; no browser/service/key/provider action or reservation now. Same existingR139/M3-05/M3-08 full G0-G3, no helpertranche/Ownerrelay.

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 original return CHECKED: actual transcriptstep98 records same-PageId G0 inputs but returnedSubagentId blank, nativeSession/scopedinventory/cross-taskhandoff unproved. Unchanged-contract rerun BLOCKED_NATIVE_CONTRACT_GAP. ONEsource-and-conditional-reentry proposal docs/reviews/R139_INTEGRATED_REENTRY_DECISION_2026-10-24.md is ready for Owner scope review, NOT runtime dispatch: same3sourcepaths/page-target proof variant, boundedfreshofflinechecks, activation/deadlinecontrol acceptance BEFORE any timer, oneconditionalG0-G3 campaign andproductAPI<=USD1 onlyafterfreshapproval+G0+runtimeadmission. No new grant inferred from tiep/check; oldcampaign1/1+queries5/5/sourcecaps spent, currentnative-lineageAPI0 and oldhistoricaluncertainty retained. Ownerclosedoldnoncepageattested; nativefinalinventoryUNKNOWN/excluded. No newsource/browser/service/key/provider/campaign now; sameM3-05/M3-08 order, Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION, REVIEW/CHANGES_REQUIRED/noFREEZE; accountsparked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 Owner APPROVED985dacbb combined source-and-conditional-reentry. SOURCE BUILD only after committed admission CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-AND-CONDITIONAL-REENTRY-ADMISSION.json; internalSourceWorker owns3sourcepaths+page-targetpayload, separateinternalMetadataWorker ownsactivation/recorder/deadlinecontrol; Root independentreview/commit. Newofflinecaps WorkerPy2/compile2 RootPy1/auditedpureGo1, reserveeachattempt; no other sourcecheck. Finishsource/binary/activation/coordinator acceptance and allslowprep BEFORE any new1200sclock. Runtime/browser/service/key/provider NOT executable now; freshcampaignused0 andAPI0; old1/1campaign/5queries/unknownhistory retained. SameONE M3-05/M3-08 G0-G3 order, Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; no furtherOwnerrelay withinapprovedscope, accountsparked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root independent original-return/design REVIEWER / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol inert design author stopped; Luna independent admission reviewer; Antigravity no new execution",
+  "activeRole": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; internal source and activation workers BUILD; Antigravity browser-only NOT released",
   "updatedAt": "2026-10-24",
   "x-resolvedCoreCommit": "b69e1088978e8c90ac58a2243fcf8f90d0f857ed",
   "x-ownerRoadmapDiscipline": {
@@ -3349,5 +3349,48 @@
     "workerUnqualifiedHistoricalProviderCounter": 1,
     "historicalProviderCounterLineage": "UNSPECIFIED/olduncertaintyretained; no refund/reset/inferrednewcall",
     "sourceBuildAuthorized": false
+  },
+  "x-r139OwnerApprovedReentry20261024": {
+    "date": "2026-10-24",
+    "status": "OWNER_APPROVED_SOURCE_BUILD_RUNTIME_CONDITIONAL",
+    "ownerReply": "Duyệt gói R139",
+    "approvedProposalCommit": "985dacbb795f128af2fb1266484ca3e51f113702",
+    "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-AND-CONDITIONAL-REENTRY-ADMISSION.json",
+    "admissionSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+    "sourceGranted": true,
+    "sourceBudget": {
+      "workerFocusedPython": 2,
+      "workerOfflineGoCompile": 2,
+      "rootFocusedPython": 1,
+      "rootAuditedPureGo": 1
+    },
+    "sourceUse": {
+      "workerFocusedPython": 0,
+      "workerOfflineGoCompile": 0,
+      "rootFocusedPython": 0,
+      "rootAuditedPureGo": 0
+    },
+    "sourcePasses": {
+      "authoringMax": 1,
+      "consolidatedRepairMax": 1
+    },
+    "freshCampaignCap": 1,
+    "freshCampaignUse": 0,
+    "nativeOperationalLineageCumulativeCap": 2,
+    "nativeOperationalLineagePriorCampaignUse": 1,
+    "freshReadonlyQueriesCap": 5,
+    "freshReadonlyQueriesUse": 0,
+    "providerPhysicalCap": 1,
+    "providerUse": 0,
+    "maximumNewUSD": 1,
+    "runtimeExecutableNow": false,
+    "browserExecutableNow": false,
+    "serviceQueriesExecutableNow": false,
+    "providerExecutableNow": false,
+    "keyReadExecutableNow": false,
+    "newTranches": 0,
+    "timerStarted": false,
+    "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+    "oldEvidenceAndCountersUnchanged": true
   }
 }

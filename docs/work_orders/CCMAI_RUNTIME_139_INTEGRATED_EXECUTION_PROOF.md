@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: BLOCKED_WITH_REASON
+Status: ACTIVE
 Risk: R2
 Worker: Owner-designated Antigravity implementation worker; historical source authors retained in evidence
 Reviewer: Root independent source/evidence REVIEWER
@@ -355,6 +355,16 @@ The next real execution decision must cover remaining process stop/error-path/li
 ## Antigravity integrated continuation decision — 2026-10-23
 
 Prospective integrated contract: `docs/reviews/R139_ANTIGRAVITY_INTEGRATED_CONTINUATION_CONTRACT_2026-10-23.md`. Independent Root review: `docs/reviews/R139_ANTIGRAVITY_CONTINUATION_ROOT_REVIEW_2026-10-23.md`. One existing R139 order for M3-05/M3-08, no helper tranche or toy G0 replay. Three-file native-browser validator adaptation proposed; pre-fixture exact-page reservation/control evidence must be distinct from the final observed close receipt. Existing IAB predicates must not be satisfied by fabricated Antigravity labels. Source/check caps, exact-target/operator close route, fresh runtime/API1/USD1 and exact-owned cleanup are one pending Owner boundary decision. NOT DISPATCH_READY; no effects currently granted. After explicit approval Root authors and commits bounded source admission before writes; accepted source/pins and actual operational facts precede a committed runtime supplement. No worker commits or authority edits.
+
+## Approved source-and-conditional-reentry dispatch — 2026-10-24
+
+Owner **Duyệt gói R139** approves committed985dacbb as ONE existing R139/M3-05/M3-08 source-and-conditional-G0-G3 envelope. Immutable admission `CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-AND-CONDITIONAL-REENTRY-ADMISSION.json` SHA2560ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f governs. This SOURCE BUILD starts only after Root independent admission review/gates/commit. Runtime/service/browser/key/provider remain blocked until source/newbinary/metadata/controller acceptance and the later technical/runtime admissions; no1200secondclock yet.
+
+Source worker: ONLY scripts/r139_execution_supervisor.py, scripts/tests/test_r139_execution_supervisor.py, backend/api/handlers/intervention_execution_browser_test.go plus adapted reentry_payload_templates.json and ownreturn/evidence. Metadata worker: ONLY reentry_activation_design.py.txt and recorder_design.py.txt plus ownreturn/evidence under existing native_operational_20261024. No old evidence/authority/sharedcontinuity/catalog/order edits by workers; Root owns all commits. One authoring pass and one consolidated same-scope repair. Hold check commands until Root coordinates the combined candidate; authorized total workerPython2/compile2, RootPython1/pureGo1. Reserve each attempted/uncertain slot before actual child launch and retain original wait/exit/stdout/stderr; no incidental parse/import/compiler/binary check outside these6slots. Repository governance checks are separate.
+
+Implement explicit browserTool **antigravity_page_target**, proofContract **native_page_target_v1** while retaining legacy branches unchanged. Root-owned scope is NOT a native session. Proposed common page identity: nativeContractId,trancheId,campaignNonce,pageId,ownedScopeId,operator,closeMode, scopeOrigin caller_owned_explicit_page_target; ownedPageIds exactly[pageId]. Prefix/events bind real original native run transcript/call reference/content hash, exactURLs, creation/control/capture and separate cross-task handoff evidence BEFORE fixture/key/provider. Event timestamps are actual observations with declared basis in strict UTC-Z; native seal follows evidence and remains distinct from immutablecampaignstart. No assumption absentSubagentId canresume; no oldHOLD reinterpretation. Baseline andfinal nativeIDinventory plus onecreationledger/protectedIDs/exactcloseproof required; ifsafeScope/handoff/provenance missing, HOLD before product. Owner privacy approval covers baseline/final metadata enumeration only; no unrelatedtabDOM/content/capture/control; preserveoriginalreferencesprivately andredactprojectfacts.
+
+Metadata worker must complete managed automatic+1020/+1200 controller for G0-only and runningproduct, synchronizedreserve->canonicalsync->gates->commit->signal, honest observeddeadline/failure/originalhandles, no blindHost/browser/productparentkills. Do not disable configuredGit hooks or eraseglobal/systemidentity/policy; scrub ambientGIT_* overrides, validate identity/hooks readiness BEFOREclock, preserve configured policy. FreshOwnergrant authorizes adaptation; acceptedbuild truth belongs in laterRoot-reviewedpinrecord, never immutableownergrant.sourceAdaptationAccepted. Both workers coordinate exactschema via payload file; no source helper/import/tests by metadataworker. No clock begins until Root independentacceptance and actual actors/pins/recipe ready.
 
 ## Original-return check / proposed source-capability boundary — 2026-10-24
 

@@ -15,7 +15,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R139 original return CHECKED; unchangednativecontract blocked, one source-and-conditional-reentry Ownerdecision prepared; source/activation/runtime not authorized, oldcaps/HOLD unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md`
+- Current R139 Ownerapproved985 sourceBUILD/internalworkers and6boundedofflinechecks; conditionaloneG0-G3 campaign notstarted, product/key/provider blocked, oldHOLD/capsretained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -4454,6 +4454,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - One same-R139 Antigravity source compatibility and G0-G3 proposal; fresh source/operator/runtime/API1/USD1 decision pending, no execution authority.: `docs/reviews/R139_ANTIGRAVITY_INTEGRATED_CONTINUATION_CONTRACT_2026-10-23.md`
 - Independent Root source finding and proposal acceptance only; native browser predicates require closed IAB proof; no new effects.: `docs/reviews/R139_ANTIGRAVITY_CONTINUATION_ROOT_REVIEW_2026-10-23.md`
 - Owner-approved combined Antigravity route; exact source-stage tools/check caps, runtime/API1/USD1 envelope conditional on later source/pin/operational admission, old budgets retained.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-INTEGRATED-SOURCE-ADMISSION.json`
+- Owner-approved R139 bounded source BUILD and one conditional future G0-G3 campaign;6offlinechecks, no liveclock/runtime/key/provider authority before acceptance.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-AND-CONDITIONAL-REENTRY-ADMISSION.json`
+- Owner-approved R139 bounded source BUILD and one conditional future G0-G3 campaign;6offlinechecks, no liveclock/runtime/key/provider authority before acceptance.: `docs/reviews/R139_SOURCE_AND_CONDITIONAL_REENTRY_ADMISSION_REVIEW_2026-10-24.md`
 - Immutable integrated G0/G1/G2 source-preparation seed; runtime/provider authority absent.: `CVF_SESSION/authority/CCMAI-RUNTIME-139.json`
 - Root transcript of browser URL-policy denial and partial owned tab cleanup; no control/capture proof.: `docs/reviews/probes/r139_integrated_20261021/browser_capability_outcome.json`
 - Sole pureUI capability diagnostic reserved before effect; consumed, no reset.: `docs/reviews/probes/r139_integrated_20261021/browser_capability_reservation.json`

@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Current R139 original return CHECKED; unchangednativecontract blocked, one source-and-conditional-reentry Ownerdecision prepared; source/activation/runtime not authorized, oldcaps/HOLD unchanged."
+      "description": "Current R139 Ownerapproved985 sourceBUILD/internalworkers and6boundedofflinechecks; conditionaloneG0-G3 campaign notstarted, product/key/provider blocked, oldHOLD/capsretained."
     },
     {
       "id": "r060-work-order",
@@ -36424,6 +36424,20 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/root_original_return_check.json",
       "status": "ACTIVE",
       "description": "Root direct check of original native transcript and returned blank subagent/session/inventory evidence; currentlineageprovider0 versus unqualifiedhistoricalcounter1; no neweffects, source-capability scope proposal only."
+    },
+    {
+      "id": "r139-approved-reentry-79d8092ae4c9",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-AND-CONDITIONAL-REENTRY-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Owner-approved R139 bounded source BUILD and one conditional future G0-G3 campaign;6offlinechecks, no liveclock/runtime/key/provider authority before acceptance."
+    },
+    {
+      "id": "r139-approved-reentry-a6a15e9182db",
+      "family": "continuity",
+      "path": "docs/reviews/R139_SOURCE_AND_CONDITIONAL_REENTRY_ADMISSION_REVIEW_2026-10-24.md",
+      "status": "ACTIVE",
+      "description": "Owner-approved R139 bounded source BUILD and one conditional future G0-G3 campaign;6offlinechecks, no liveclock/runtime/key/provider authority before acceptance."
     }
   ]
 }

@@ -1,0 +1,201 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "OWNER_APPROVED_R139_SOURCE_AND_CONDITIONAL_REENTRY",
+  "date": "2026-10-24",
+  "riskCeiling": "R2",
+  "baseCommit": "985dacbb795f128af2fb1266484ca3e51f113702",
+  "proposal": "docs/reviews/R139_INTEGRATED_REENTRY_DECISION_2026-10-24.md",
+  "proposalSha256": "4b80e97e4bc42b6da2acdc42c1f4c1bbf05686a8ac9b3ef5bc2dd317509db830",
+  "ownerApproved": true,
+  "ownerReply": "Duyệt gói R139",
+  "ownerApprovalReference": "request_user_input_async/call_e8fa2f4f42d146a48ead41a2c102af04/item0; explicit approval of committed985dacbb combinedsource+conditionalG0-G3 scope",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+  "oneExistingOrder": true,
+  "roadmap": [
+    "M3-05",
+    "M3-08"
+  ],
+  "newTranches": 0,
+  "sourceGranted": true,
+  "sourceAdaptationAccepted": false,
+  "sourceBaseCommit": "a718da33d6448af225a2a1b2f0a222f5e05d26b4",
+  "sourceBaselineSha256": {
+    "backend/api/handlers/intervention_execution_browser_test.go": "25085f86bcce25e3bbf1cf8841c8c5e72284aec0f5adf0675038f81d435852b6",
+    "scripts/r139_execution_supervisor.py": "160ffd51ac6d82ae906b9070f16b06f0f703eed31d2360aab14577bbf4c79de1",
+    "scripts/r139_vite_config.mjs.template": "82a1d9ae8576fcd46718945d0a5cb44eb963a2a14d436a16e2bcdfb72b26bee9",
+    "scripts/tests/test_r139_execution_supervisor.py": "e28546a7cc8ebde7c4d9482097e015662b1b87eb83d0dedf775914360764a9f9",
+    "backend/go.mod": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+    "backend/go.sum": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b",
+    "frontend/package.json": "d16bea0b83ad7eb871576061f7ea91534a2dd2fdc7eef26eb20ec908e4fca24d",
+    "frontend/package-lock.json": "da41e1de5d5b853295a303092aab9433aeea8168fda2cf0420dd94e9f579fb00",
+    "frontend/vite.config.ts": "736c63d3a72a5b126841ceedeac4b4a01854a2bec71bd57d2f46a23ec3cf68de"
+  },
+  "sourcePaths": [
+    "scripts/r139_execution_supervisor.py",
+    "scripts/tests/test_r139_execution_supervisor.py",
+    "backend/api/handlers/intervention_execution_browser_test.go"
+  ],
+  "metadataDesignPaths": [
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_payload_templates.json",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/recorder_design.py.txt"
+  ],
+  "workerReturnPaths": [
+    "docs/reviews/R139_PAGE_TARGET_SOURCE_WORKER_RETURN_2026-10-24.md",
+    "docs/reviews/R139_ACTIVATION_COORDINATOR_WORKER_RETURN_2026-10-24.md"
+  ],
+  "evidenceFamily": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/**",
+  "roles": {
+    "sourceWorker": "Internal Sol Medium page-target source worker",
+    "metadataWorker": "Internal Sol Medium activation/deadline/recorder design worker",
+    "reviewer": "Root independent source/runtime REVIEWER",
+    "admissionReviewer": "Independent Luna Max",
+    "browserWorker": "Antigravity native browser worker ONLY",
+    "commitSteward": "Root"
+  },
+  "sourceBudget": {
+    "authoringPasses": 1,
+    "consolidatedRepairPasses": 1,
+    "workerFocusedPython": 2,
+    "workerOfflineGoCompile": 2,
+    "rootFocusedPython": 1,
+    "rootAuditedPureGo": 1
+  },
+  "sourceCheckCustody": "Worker may reserve/check only its authorized slots after Root coordinates full source+metadata candidate. Root owns independent Python and audited no-I/O pureGo. Every attempt/uncertainty consumes slot; immutable reservation/raw output/originalwait/exit required. No extra checker/parser/import/compile/diagnostic outside these6 slots. Repository governance gates separate.",
+  "freshCampaignCap": 1,
+  "oldCampaignSpent": 1,
+  "nativeOperationalLineageCumulativeCap": 2,
+  "oldQueriesSpent": 5,
+  "freshReadonlyQueries": 5,
+  "providerPhysicalCap": 1,
+  "maximumNewUSD": 1,
+  "priorUnusedProspectiveAllowanceSupersededNotStacked": true,
+  "olderUnknownProviderOutcomeRetained": true,
+  "currentLineageProviderAttemptsObserved": 0,
+  "historicalAggregateUnattributedProviderAttempts": 1,
+  "historicalLineage": "UNKNOWN",
+  "caps": {
+    "campaigns": 1,
+    "lifecycleSeconds": 1200,
+    "cleanupReserveSeconds": 180,
+    "readonlyQueries": 5,
+    "dockerQuerySecondsMax": 20,
+    "powershellQuerySecondsMax": 5,
+    "ownedExplicitPages": 1,
+    "browserTaskCalls": 4,
+    "g0ReadObservations": 4,
+    "g0Captures": 2,
+    "creationNavigation": 1,
+    "samePageControlNavigation": 1,
+    "baselineMetadataEnumeration": 1,
+    "finalMetadataEnumeration": 1,
+    "finalExactPageClose": 1,
+    "nativeExecutePOST": 8,
+    "browserExecutePOST": 1,
+    "grants": 3,
+    "authPOST": 4,
+    "statusReadStarts": 12,
+    "statusReadSpacingSecondsMin": 5,
+    "statusReadLifetimeSecondsMax": 60,
+    "providerPhysicalCalls": 1,
+    "maximumUSD": 1,
+    "keyContentReads": 1,
+    "requestBytes": 6000,
+    "completionTokens": 768,
+    "automaticRetry": 0,
+    "fixtureStarts": 1,
+    "fixtureFinalStops": 1,
+    "backendStarts": 1,
+    "viteStarts": 1,
+    "publicTariffRefreshIfNeeded": 1
+  },
+  "privacyScope": {
+    "tabMetadataOnly": true,
+    "baselineAndFinalOnly": true,
+    "unrelatedTabDOMContent": false,
+    "unrelatedTabScreenshotsOrControl": false,
+    "toolMayReturn": [
+      "id",
+      "title",
+      "url"
+    ],
+    "projectEvidence": "Only necessary IDs/digests/redacted facts; original raw references private. No Host metadata in synthetic product-provider request."
+  },
+  "browserContract": {
+    "newVariant": "native_page_target_v1",
+    "legacyUnchanged": true,
+    "noInventedBrowserSessionId": true,
+    "callerOwnedScopeExplicitlyLabeled": true,
+    "actualNativePageIdAndOriginalRunProvenanceRequired": true,
+    "crossTaskExactPageIdNonceProofBeforeFixture": true,
+    "baselineCreationLedgerFinalInventoryRequired": true,
+    "ownerCloseObservationHonestBasisRequired": true,
+    "failure": "HOLD before fixture/key/provider on missing ownership/handoff/provenance; no replacement page/session/stack or retry."
+  },
+  "provider": {
+    "provider": "alibaba_maas",
+    "model": "qwen3.7-flash",
+    "endpointSha256": "b22a15b6e8aa4113c2816acae6935a84d052a2d7b81db734ccdc4f5be81b4f8f",
+    "thinking": false,
+    "data": "Synthetic Vietnamese complaint only",
+    "kind": "One actual product flow; no provider probe/smoke/test"
+  },
+  "preReservationConditions": [
+    "Independent acceptance of adapted3sourcepaths, fresh compiledbinary and boundedsoftwarechecks; newRoot-reviewed acceptedbuildpinrecord (not owner self-claim).",
+    "Completed exact source-compatible page-target payloads/runtime draft/currentrecipes; no legacy session placeholders or invented native facts.",
+    "Root-held synchronized reservation->actualcanonicalsync->gates->exactcommit->worker signal operation; all slow reviews/89repo units/actors/pins/tariff before clock.",
+    "Independent+1020 cleanup coordinator for G0-only and runningproduct; original managedcontrolprocesswait/exit, honest unknown/late status, no blind browser/Host/product parent kills.",
+    "Pinned tools/currentboot/freshpaths/cleanHEAD and all three actors+closeoperator in samewindow; exactoldresourceexclusion.",
+    "Actual G0 two-task ownership/handoff/manualURL/provenance acceptance and separately committed RuntimeEffectAdmission BEFORE any product fixture/key/provider action."
+  ],
+  "grantTiming": "No live UTC deadline, campaign reservation or runtime authority until all preconditions accepted. Source metadata and tests occur before campaign clock.",
+  "runtimeExecutableNow": false,
+  "browserExecutableNow": false,
+  "serviceQueriesExecutableNow": false,
+  "providerExecutableNow": false,
+  "keyContentReadExecutableNow": false,
+  "campaignUse": 0,
+  "sourceUse": {
+    "workerFocusedPython": 0,
+    "workerOfflineGoCompile": 0,
+    "rootFocusedPython": 0,
+    "rootAuditedPureGo": 0
+  },
+  "prohibitedEffects": [
+    "Worker seed/authority/sharedcontinuity/catalog edits or commits",
+    "Frontend/business/dependency/Core/gate changes",
+    "Any browser/service/Docker/DB/key/provider effect during source phase",
+    "Rewriting old evidence/counters, refunding unknown attempts, reviving oldpage or campaignclock",
+    "Disabling/bypassing configured Git hooks/policies or silently dropping commit identity",
+    "Additional source/check/campaign/paidcall/retry beyond this bound"
+  ],
+  "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+  "pathOwnership": {
+    "sourceWorker": [
+      "scripts/r139_execution_supervisor.py",
+      "scripts/tests/test_r139_execution_supervisor.py",
+      "backend/api/handlers/intervention_execution_browser_test.go",
+      "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_payload_templates.json",
+      "docs/reviews/R139_PAGE_TARGET_SOURCE_WORKER_RETURN_2026-10-24.md"
+    ],
+    "metadataWorker": [
+      "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt",
+      "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/recorder_design.py.txt",
+      "docs/reviews/R139_ACTIVATION_COORDINATOR_WORKER_RETURN_2026-10-24.md"
+    ],
+    "rootOnly": [
+      "CVF_SESSION/authority/**",
+      "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+      "CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json",
+      "CVF_SESSION_MEMORY.md",
+      "CVF_SESSION/handoffs/**",
+      "CVF_SESSION/tranches/**",
+      "IMPLEMENTATION_STATUS.json",
+      "docs/work_orders/**",
+      "docs/catalog/**",
+      "docs/INDEX.md"
+    ],
+    "evidence": "Workers write only own uniquely named return/source-vs-metadata evidence under reentry_source_checks; Source checker reservations only allocated custody. No shared evidence overwrite."
+  }
+}
