@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Current R139 Owner-directed internal Luna/Sol transition; honest CUA source/check amendment pending; no campaign clock or product/key/provider release; historical caps retained."
+      "description": "Current R139 Owner-approved internal Luna/Sol CUA source BUILD; four future offline checks, old4spent retained, campaign0/API0; Antigravity withdrawn and product runtime blocked."
     },
     {
       "id": "r060-work-order",
@@ -36626,7 +36626,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-CUA-SOURCE-ADMISSION.json",
       "status": "ACTIVE",
-      "description": "R139 Owner-directed internal worker transition; old Antigravity dispatch withdrawn before reservation; replacement source/check proposal pending, no runtime or product acceptance."
+      "description": "Owner-approved single R139 CUA source/conditional continuation amendment: future4offline checks, total8; conditional64CUAcalls/4stages; unchanged singlecampaign/oneprovider<=USD1."
     },
     {
       "id": "r139-internal-transition-20261024-2",

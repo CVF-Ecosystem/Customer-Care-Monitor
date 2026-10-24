@@ -83,10 +83,10 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "CHANGES_REQUIRED",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "BLOCKED_WITH_REASON",
+  "workOrderStatus": "ACTIVE",
   "buildCommit": null,
   "reviewEvidence": [
     "docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md",
@@ -146,7 +146,7 @@
     "docs/reviews/R139_PRECLOCK_OPERATIONAL_PREPARATION_REVIEW_2026-10-24.md",
     "docs/reviews/R139_PAGE_TARGET_G0_TECHNICAL_RELEASE_REVIEW_2026-10-24.md"
   ],
-  "disposition": "CCMAI-RUNTIME-139 Owner APPROVED internal Luna/Sol CUA amendment call_db1f326a; Root commits successor source authority before same-order source BUILD. Sol Medium adapts3sourcepaths and3metadata designs to honest cua_page_target_v1, one authoring/one consolidated repair, four future offline checks (workerPython1/compile1 and newRootPython1/pureGo1), total lineagechecks<=8 with old4spent retained. Root independently reviews source/binary/controller then binds fresh CUA actor evidence/recipe before ONE existing1200s G0-G3 campaign. No clock, service query, live page, fixture/key/provider release now; freshcampaign0/API0, historicalspent/UNKNOWN unchanged. CUA max64methodcalls/4worker stages after conditional admission only, five servicequeries/onepage/oneproductAPI<=USD1 unchanged. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; Facebook/ZaloOA parked; Antigravity withdrawn; no helper tranche or repeat Owner relay.",
+  "disposition": "CCMAI-RUNTIME-139 internal CUA SOURCE BUILD under Owner amendment committed09e433e9; Sol Medium edits exactly3sourcepaths and3existingmetadata designs for honest cua_page_target_v1. One coordinated authoring/one consolidated repair; reserve and execute exactly workerPython1/compile1 and RootPython1/auditedPureGo1 only after full candidate review; old4spent retained, total8maximum. Root independent REVIEWER/COMMIT_STEWARD, Luna Max prospective browser producer and separate observer after sourceacceptance. No browser/service/fixture/key/provider/campaign effects during sourceBUILD. Repin binary/controller/payloads and prepare exact64-CUA-method/4stage ledger with globalstatus12 cap before conditional single1200s G0-G3 launch; fivequeries/onepage/oneproductAPI<=USD1 unchanged. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; Facebook/ZaloOA parked; Antigravity withdrawn; no helper tranche, retries or repeated Owner relay.",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -185,7 +185,8 @@
     "BUILD",
     "REVIEW_PENDING",
     "REVIEW_PASS",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "actualUse": {
     "status": "HOLD_MANUAL_HOLD_PROVIDER_OUTCOME_UNKNOWN",
@@ -1062,7 +1063,9 @@
     "sourceChecksPreviouslyUsed": 4,
     "ownerExactPageFallbackAvailable": true,
     "ownerSourceAmendmentApproved": true,
-    "sourceAuthority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-CUA-SOURCE-ADMISSION.json"
+    "sourceAuthority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-CUA-SOURCE-ADMISSION.json",
+    "sourceBuildDispatched": true,
+    "sourceAuthorityCommit": "09e433e93d4406a901f90666f0e7ec5aa3631828"
   },
   "x-withdrawnUncommittedDispatchHistory": {
     "proposedButNotGatedOrCommitted": [

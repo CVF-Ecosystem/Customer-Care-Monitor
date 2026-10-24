@@ -1,8 +1,8 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: BLOCKED_WITH_REASON
+Status: ACTIVE
 Risk: R2
-Worker: Internal Luna Max browser worker; Sol Medium for difficult bounded source work; historical authors retained
+Worker: Internal Sol Medium source/metadata IMPLEMENTATION_WORKER; Luna Max future browser only
 Reviewer: Root independent source/evidence REVIEWER
 Commit mode: WORKER_MUST_NOT_COMMIT
 providerExecutionAuthority: NONE_CURRENT_HISTORICAL_CAMPAIGNS_SPENT_OR_EXPIRED
@@ -10,9 +10,15 @@ runtimeExecutor: UNASSIGNED_UNTIL_SUPPORTED_ENVIRONMENT_AND_COMMITTED_ADMISSION
 runtimeReviewer: INDEPENDENT_REVIEWER_TO_BE_BOUND_IN_CURRENT_ADMISSION; historical reviews retained
 dispatchKind: INITIAL
 
+## Active internal CUA source dispatch — 2026-10-24
+
+Owner-approved authority committed at `09e433e93d4406a901f90666f0e7ec5aa3631828`: `CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-CUA-SOURCE-ADMISSION.json`. BUILD means source/metadata only. Allowed source: `scripts/r139_execution_supervisor.py`, `scripts/tests/test_r139_execution_supervisor.py`, `backend/api/handlers/intervention_execution_browser_test.go`; matching existing payload, activation and recorder code-as-data designs. One authoring/one consolidated repair; four offline checks workerPython1/compile1 then RootPython1/pureGo1 with original reservations/waits/exits. Worker return `docs/reviews/R139_INTERNAL_CUA_SOURCE_WORKER_RETURN_2026-10-24.md`, uniquely named evidence under existing reentry_source_checks. Root performs independent consolidated source review before any checks, accepted build/pins before conditional runtime; no worker commits, authority/catalog/shared state edits. Missing live ownership/current browser proof is a future G0 requirement and does not block offline authoring/compile. Runtime effects remain blocked.
+
+The consolidated transition proposal and unchanged original budgets remain binding. Source acceptance never claims G0/product readiness. No helper tranche/order or additional Owner relay.
+
 ## Current internal browser transition — 2026-10-24
 
-CCMAI-RUNTIME-139 Owner APPROVED internal Luna/Sol CUA amendment call_db1f326a; Root commits successor source authority before same-order source BUILD. Sol Medium adapts3sourcepaths and3metadata designs to honest cua_page_target_v1, one authoring/one consolidated repair, four future offline checks (workerPython1/compile1 and newRootPython1/pureGo1), total lineagechecks<=8 with old4spent retained. Root independently reviews source/binary/controller then binds fresh CUA actor evidence/recipe before ONE existing1200s G0-G3 campaign. No clock, service query, live page, fixture/key/provider release now; freshcampaign0/API0, historicalspent/UNKNOWN unchanged. CUA max64methodcalls/4worker stages after conditional admission only, five servicequeries/onepage/oneproductAPI<=USD1 unchanged. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; Facebook/ZaloOA parked; Antigravity withdrawn; no helper tranche or repeat Owner relay.
+CCMAI-RUNTIME-139 internal CUA SOURCE BUILD under Owner amendment committed09e433e9; Sol Medium edits exactly3sourcepaths and3existingmetadata designs for honest cua_page_target_v1. One coordinated authoring/one consolidated repair; reserve and execute exactly workerPython1/compile1 and RootPython1/auditedPureGo1 only after full candidate review; old4spent retained, total8maximum. Root independent REVIEWER/COMMIT_STEWARD, Luna Max prospective browser producer and separate observer after sourceacceptance. No browser/service/fixture/key/provider/campaign effects during sourceBUILD. Repin binary/controller/payloads and prepare exact64-CUA-method/4stage ledger with globalstatus12 cap before conditional single1200s G0-G3 launch; fivequeries/onepage/oneproductAPI<=USD1 unchanged. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; Facebook/ZaloOA parked; Antigravity withdrawn; no helper tranche, retries or repeated Owner relay.
 
 Consolidated proposal: `docs/reviews/R139_INTERNAL_BROWSER_TRANSITION_2026-10-24.md`. Owner worker substitution is already authorized. The superseded unexecuted technical draft below cannot release effects.
 
@@ -22,7 +28,7 @@ Technical authority: `CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-G0-TEC
 
 ## Current accepted source and preclock preparation — 2026-10-24
 
-CCMAI-RUNTIME-139 Owner APPROVED internal Luna/Sol CUA amendment call_db1f326a; Root commits successor source authority before same-order source BUILD. Sol Medium adapts3sourcepaths and3metadata designs to honest cua_page_target_v1, one authoring/one consolidated repair, four future offline checks (workerPython1/compile1 and newRootPython1/pureGo1), total lineagechecks<=8 with old4spent retained. Root independently reviews source/binary/controller then binds fresh CUA actor evidence/recipe before ONE existing1200s G0-G3 campaign. No clock, service query, live page, fixture/key/provider release now; freshcampaign0/API0, historicalspent/UNKNOWN unchanged. CUA max64methodcalls/4worker stages after conditional admission only, five servicequeries/onepage/oneproductAPI<=USD1 unchanged. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; Facebook/ZaloOA parked; Antigravity withdrawn; no helper tranche or repeat Owner relay.
+CCMAI-RUNTIME-139 internal CUA SOURCE BUILD under Owner amendment committed09e433e9; Sol Medium edits exactly3sourcepaths and3existingmetadata designs for honest cua_page_target_v1. One coordinated authoring/one consolidated repair; reserve and execute exactly workerPython1/compile1 and RootPython1/auditedPureGo1 only after full candidate review; old4spent retained, total8maximum. Root independent REVIEWER/COMMIT_STEWARD, Luna Max prospective browser producer and separate observer after sourceacceptance. No browser/service/fixture/key/provider/campaign effects during sourceBUILD. Repin binary/controller/payloads and prepare exact64-CUA-method/4stage ledger with globalstatus12 cap before conditional single1200s G0-G3 launch; fivequeries/onepage/oneproductAPI<=USD1 unchanged. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; Facebook/ZaloOA parked; Antigravity withdrawn; no helper tranche, retries or repeated Owner relay.
 
 Accepted build pins: `CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-ACCEPTED-BUILD-PINS-ADMISSION.json`. This section supersedes earlier current-stage source instructions below; historical bound sections and spent counters remain unchanged. No runtime admission or live deadline is issued here.
 
@@ -687,3 +693,5 @@ Extraction creates the directory with only `probe.py`; any other pre-existing fi
 **Evidence and decision.** Retain native task original stdout/stderr, tool-call transcript/returned tab IDs, exact URL/nonce, two original captures and their hashes if obtained, marker consumption, child raw logs, parent final result, original managed parent wait/exit, HTTP count and timeline, and post-close owned-tab inventory only if supported. An ordinary error still requires original-handle cleanup and a truthful HOLD receipt. PASS_BOUNDED_G0_CAPABILITY requires documented owned-tab policy, exact before/click/after, exact owned close, parent terminal and child original exit/refused listener, all within caps; any missing fact is HOLD or observed FAIL as appropriate. Root independently reviews this within R139, then updates the consolidated G0→G3 admission/acceptance route. A short inert pass cannot certify old-tab closure, protected-resource equality, real provider behavior, current product UI or 20-minute process survival. Product B stays blocked until separately committed operational/provider/effect admission and actual integrated evidence.
 
 Owner approved the consolidated internal CUA source/check amendment (`call_db1f326a`, exact reply `Duyệt gói chuyển sang Luna/Sol`). Source BUILD still awaits committed dispatcher transition; no campaign/effect release.
+
+Source BUILD acknowledgment2026-10-24: Owner amendment09e433e9 grants the consolidated internal CUA adaptation, old4checks spent retained, four future checks unused. Root transitions ORCHESTRATOR/WORK_ORDER_AUTHOR to independent REVIEWER; Sol Medium transitions SPEC_AUTHOR to IMPLEMENTATION_WORKER after fresh rehydration and committed dispatch. Antigravity remains withdrawn; browser/runtime/key/provider/campaign0.
