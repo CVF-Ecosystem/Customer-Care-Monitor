@@ -1,0 +1,383 @@
+# PROPOSED_NOT_AUTHORIZED / UNEXECUTED code-as-data. Future Root-only extraction
+# needs exact-byte pin, independent R2 review and a NEW committed Owner grant.
+# Recipe JSON (committed exact bytes): kind=R139_ROOT_ACTIVATION_RECIPE,
+# status=COMMITTED_PRECLOCK, trancheId, nonce, nativeContractId,
+# freshGrant{path,sha256}, acceptedBuildPinsRef{path,sha256},
+# bootProof{path,sha256,hostBootId}, childLogRoot,
+# actorAcks{root,internal,antigravity:{path,sha256}}, operatorAvailable,
+# coordinationRoot,coordinationOwnerSha256 (exclusive precreated owner.json),
+# oldResourceExclusionReviewed, reservationPath, signalPath, failurePath,
+# reviewed build pin record (not the legacy G0 gate) carries nine source hashes,
+# two trees, binary, Vite CLI and five tool {path,sha256,size} records.
+# oldSha256 and canonicalTemplates keyed by exact CANON paths below, including
+# ARTIFACT_REGISTRY full content with the new activation receipt entry.
+# Exact clean dispatch HEAD is the THIRD Root CLI argument. Embedding its own
+# future commit SHA in a committed recipe would be self-referential.
+# Complete UTF-8 templates contain only late fixed tokens from TOKENS.
+# 89 gate units, payload/schema review, pricing, actor coordination and
+# exact command review finish BEFORE this design is ever extracted/run.
+
+import hashlib, json, os, re, stat, subprocess, sys, time
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+
+ROOT = Path(r"D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI")
+PROBE = "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024"
+CANON = ("CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json",
+ "CVF_SESSION/ACTIVE_SESSION_STATE.json", "CVF_SESSION_MEMORY.md",
+ "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
+ "IMPLEMENTATION_STATUS.json", "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+ "CVF_SESSION/tranches/CCMAI-RUNTIME-139.json", "docs/catalog/ARTIFACT_REGISTRY.json")
+CATALOG = ("docs/INDEX.md", "docs/catalog/MODULE_REGISTRY.json", "docs/catalog/MODULE_CATALOG.md")
+RECEIPT = PROBE + "/reentry_activation_receipt.json"
+ALLOWED = set(CANON + CATALOG + (RECEIPT,))
+SOURCE_NINE = {"backend/api/handlers/intervention_execution_browser_test.go",
+ "scripts/r139_execution_supervisor.py", "scripts/r139_vite_config.mjs.template",
+ "scripts/tests/test_r139_execution_supervisor.py", "backend/go.mod", "backend/go.sum",
+ "frontend/package.json", "frontend/package-lock.json", "frontend/vite.config.ts"}
+TOKENS = {"{{G0_UTC}}", "{{G0_MONO}}", "{{STOP_UTC}}", "{{DEADLINE_UTC}}",
+ "{{RESERVATION_SHA256}}", "{{RESERVATION_PATH}}", "{{BASE_HEAD}}", "{{NONCE}}"}
+GIT = None
+ENV = None
+OP_END = None
+LOG_ROOT = None
+CHILD_N = 0
+HELD_CHILDREN = []
+
+def hold(reason): raise RuntimeError(reason)
+def sha(data): return hashlib.sha256(data).hexdigest()
+def no_reparse(path):
+    p = Path(path)
+    if not p.is_absolute(): hold("ABSOLUTE_PATH_REQUIRED")
+    for q in (*reversed(p.parents), p):
+        if q.exists() or q.is_symlink():
+            a = q.lstat()
+            if a.st_file_attributes & stat.FILE_ATTRIBUTE_REPARSE_POINT:
+                hold("REPARSE_COMPONENT:" + str(q))
+def read(path):
+    no_reparse(path)
+    return path.read_bytes()
+def inside(rel, allowed):
+    if not isinstance(rel, str) or rel not in allowed or "\\" in rel or Path(rel).is_absolute() or ".." in Path(rel).parts:
+        hold("PATH_NOT_ALLOWED")
+    p = ROOT / rel
+    no_reparse(p)
+    if p.resolve() != p or not p.is_relative_to(ROOT): hold("PATH_ESCAPE_REPARSE")
+    return p
+def child(argv, seconds=10):
+    global CHILD_N
+    if ENV is None or LOG_ROOT is None: hold("CHILD_ENV_OR_LOG_NOT_PINNED")
+    if OP_END is not None: seconds = min(seconds, OP_END - time.monotonic())
+    if seconds <= 0: hold("OPERATION_BUDGET_EXPIRED")
+    CHILD_N += 1
+    name = f"child_{CHILD_N:03d}"
+    begin_utc, begin_mono = datetime.now(timezone.utc).isoformat(), time.monotonic()
+    p, outcome, out, err = None, "START_FAILED", b"", b""
+    try:
+        p = subprocess.Popen(argv, cwd=ROOT, env=ENV, shell=False, stdin=subprocess.DEVNULL,
+                             stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        out, err = p.communicate(timeout=seconds)
+        outcome = "WAIT_RETURNED"
+    except subprocess.TimeoutExpired as timeout_exc:
+        out, err = timeout_exc.stdout or b"", timeout_exc.stderr or b""
+        outcome = "TIMED_OUT_TERMINATION_ATTEMPTED_WAIT_UNKNOWN"
+        p.terminate()
+        try:
+            out, err = p.communicate(timeout=min(5, max(0, seconds)))
+            outcome = "TIMED_OUT_ORIGINAL_WAIT_RETURNED"
+        except subprocess.TimeoutExpired:
+            outcome = "TIMED_OUT_ORIGINAL_WAIT_UNKNOWN"
+            HELD_CHILDREN.append((name, p))
+    finally:
+        # Owned ignored logs contain only fixed argv and scrubbed environment.
+        no_reparse(LOG_ROOT)
+        (LOG_ROOT / (name + ".stdout.bin")).write_bytes(out)
+        (LOG_ROOT / (name + ".stderr.bin")).write_bytes(err)
+        ledger = {"argv": argv, "cwd": str(ROOT), "environment": ENV,
+          "startUTC": begin_utc, "startMonotonic": begin_mono,
+          "endUTC": datetime.now(timezone.utc).isoformat(), "endMonotonic": time.monotonic(),
+          "stdoutBytes": len(out), "stdoutSha256": sha(out),
+          "stderrBytes": len(err), "stderrSha256": sha(err),
+          "originalWait": outcome, "exitCode": None if p is None else p.returncode}
+        put_new(LOG_ROOT / (name + ".json"), ledger)
+    if outcome != "WAIT_RETURNED": hold(outcome)
+    if p.returncode: hold("COMMAND_EXIT_" + str(p.returncode))
+    return out
+def git(*args, seconds=10): return child([GIT, *args], seconds)
+def clean():
+    if git("status", "--porcelain", "--untracked-files=all", "-z"): hold("WORKTREE_DIRTY")
+def committed(rel, expected, parse=True):
+    p = inside(rel, {rel}); data = read(p)
+    if not re.fullmatch(r"[0-9a-f]{64}", expected) or sha(data) != expected: hold("HASH_PIN")
+    if git("show", "HEAD:" + rel) != data: hold("NOT_COMMITTED_EXACT_BYTES")
+    return json.loads(data) if parse else data
+def put_new(path, obj):
+    no_reparse(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    no_reparse(path)
+    data = (json.dumps(obj, sort_keys=True, separators=(",", ":")) + "\n").encode()
+    with path.open("xb") as f: f.write(data); f.flush(); os.fsync(f.fileno())
+    return sha(data)
+def replace(path, data):
+    temp = path.with_name(path.name + ".r139-pending")
+    no_reparse(path); no_reparse(temp)
+    with temp.open("xb") as f: f.write(data); f.flush(); os.fsync(f.fileno())
+    no_reparse(path); no_reparse(temp)
+    os.replace(temp, path)
+def signal_once(path, obj):
+    temp = path.with_name(path.name + ".r139-pending")
+    no_reparse(path); no_reparse(temp)
+    if path.exists() or temp.exists(): hold("SIGNAL_PATH_OCCUPIED")
+    put_new(temp, obj)
+    no_reparse(path); no_reparse(temp)
+    if path.exists(): hold("SIGNAL_RACE")
+    os.replace(temp, path)
+def clock_check(start_utc, start_mono):
+    if OP_END is not None and time.monotonic() >= OP_END: hold("POST_RESERVATION_60S_EXPIRED")
+    elapsed_utc = (datetime.now(timezone.utc) - start_utc).total_seconds()
+    elapsed_mono = time.monotonic() - start_mono
+    if elapsed_utc < 0 or elapsed_mono < 0 or abs(elapsed_utc - elapsed_mono) > 2:
+        hold("CAMPAIGN_CLOCK_DRIFT")
+
+def preclock(recipe_path, recipe_sha, expected_head):
+    global GIT, ENV, LOG_ROOT
+    no_reparse(ROOT)
+    if Path.cwd().resolve() != ROOT: hold("PROJECT_CWD_REQUIRED")
+    if not recipe_path.startswith(PROBE + "/"): hold("RECIPE_SCOPE")
+    # Root passes the exact recipe SHA out of band. Pure file I/O precedes Git.
+    recipe_bytes = read(inside(recipe_path, {recipe_path}))
+    if not re.fullmatch(r"[0-9a-f]{64}", recipe_sha) or sha(recipe_bytes) != recipe_sha:
+        hold("RECIPE_SHA")
+    r = json.loads(recipe_bytes)
+    if (r.get("kind") != "R139_ROOT_ACTIVATION_RECIPE" or r.get("status") != "COMMITTED_PRECLOCK"
+        or r.get("trancheId") != "CCMAI-RUNTIME-139"): hold("RECIPE_KIND")
+    ref = r["acceptedBuildPinsRef"]
+    if not re.fullmatch(r"CVF_SESSION/authority/CCMAI-RUNTIME-139-[A-Za-z0-9_-]+\.json", ref["path"]):
+        hold("BUILD_PIN_RECORD_PATH")
+    record_bytes = read(inside(ref["path"], {ref["path"]}))
+    if sha(record_bytes) != ref["sha256"]: hold("BUILD_PIN_RECORD_SHA")
+    build = json.loads(record_bytes)
+    if (build.get("kind") != "ROOT_REVIEWED_R139_ACCEPTED_BUILD_PINS" or
+        build.get("rootReviewApproved") is not True or
+        build.get("ownerEnvelopeSha256") != r["freshGrant"]["sha256"] or
+        not re.fullmatch(r"[0-9a-f]{40}", build.get("sourceCommit", ""))):
+        hold("BUILD_PIN_RECORD_NOT_ACCEPTED")
+    pins = build["pins"]
+    if set(pins["sourceSha256"]) != SOURCE_NINE: hold("SOURCE_SET")
+    if set(pins["tools"]) != {"python", "git", "powershell", "docker", "node"}:
+        hold("TOOL_SET")
+    for key in ("python", "git", "powershell", "docker", "node"):
+        t = pins["tools"][key]; p = Path(t["path"])
+        if not p.is_absolute() or len(read(p)) != t["size"] or sha(read(p)) != t["sha256"]:
+            hold("TOOL_PIN")
+    if Path(pins["tools"]["python"]["path"]).resolve() != Path(sys.executable).resolve(): hold("PYTHON_PIN")
+    GIT = pins["tools"]["git"]["path"]
+    LOG_ROOT = inside(r["childLogRoot"], {r["childLogRoot"]})
+    if not r["childLogRoot"].startswith(".cvf/runtime/r139_") or LOG_ROOT.exists():
+        hold("CHILD_LOG_ROOT_NOT_EXCLUSIVE")
+    LOG_ROOT.mkdir(parents=True, exist_ok=False)
+    no_reparse(LOG_ROOT)
+    empty_hooks = LOG_ROOT / "empty_hooks"
+    empty_hooks.mkdir(exist_ok=False)
+    ENV = {k: os.environ[k] for k in ("SYSTEMROOT", "WINDIR", "USERPROFILE", "LOCALAPPDATA") if k in os.environ}
+    ENV["PATH"] = os.pathsep.join((str(Path(GIT).parent), str(Path(sys.executable).parent), r"C:\Windows\System32"))
+    ENV["GIT_CONFIG_NOSYSTEM"] = "1"
+    ENV["GIT_CONFIG_GLOBAL"] = os.devnull
+    ENV["GIT_TERMINAL_PROMPT"] = "0"
+    ENV["GIT_NO_REPLACE_OBJECTS"] = "1"
+    ENV["GIT_CONFIG_COUNT"] = "1"
+    ENV["GIT_CONFIG_KEY_0"] = "core.hooksPath"
+    ENV["GIT_CONFIG_VALUE_0"] = str(empty_hooks)
+    committed(recipe_path, recipe_sha)
+    committed(ref["path"], ref["sha256"])
+    if not re.fullmatch(r"[0-9a-f]{40}", expected_head) or git("rev-parse", "HEAD").decode().strip() != expected_head:
+        hold("HEAD_DRIFT")
+    clean()
+    if not re.fullmatch(r"CVF_SESSION/authority/CCMAI-RUNTIME-139-[A-Za-z0-9_-]+-ADMISSION\.json", r["freshGrant"]["path"]):
+        hold("FRESH_GRANT_PATH")
+    grant = committed(r["freshGrant"]["path"], r["freshGrant"]["sha256"])
+    if (grant.get("kind") != "OWNER_APPROVED_R139_SOURCE_AND_CONDITIONAL_REENTRY" or
+        grant.get("ownerApproved") is not True or grant.get("trancheId") != "CCMAI-RUNTIME-139" or
+        grant.get("freshCampaignCap") != 1 or grant.get("oldCampaignSpent") != 1 or
+        grant.get("oldQueriesSpent") != 5 or grant.get("sourceAdaptationAccepted") is not True or
+        grant.get("providerPhysicalCap") != 1 or grant.get("maximumNewUSD") != 1 or
+        grant.get("approvedRecipePath") != recipe_path or
+        grant.get("priorUnusedProspectiveAllowanceSupersededNotStacked") is not True or
+        grant.get("olderUnknownProviderOutcomeRetained") is not True or
+        grant.get("currentLineageProviderAttemptsObserved") != 0 or
+        grant.get("historicalAggregateUnattributedProviderAttempts") != 1 or
+        grant.get("historicalLineage") != "UNKNOWN"): hold("FRESH_GRANT")
+    if not git("merge-base", "--is-ancestor", build["sourceCommit"], "HEAD") == b"":
+        hold("BUILD_COMMIT_ANCESTRY")
+    boot = committed(r["bootProof"]["path"], r["bootProof"]["sha256"])
+    if (boot.get("hostBootId") != r["bootProof"]["hostBootId"] or
+        boot.get("pythonPath") != pins["tools"]["python"]["path"] or
+        boot.get("rootVerifiedReadOnlyOSMetadata") is not True): hold("BOOT_PROOF")
+    os_query = ("$x=Get-CimInstance Win32_OperatingSystem -ErrorAction Stop; "
+                "$h=$env:COMPUTERNAME; "
+                "$b=$x.LastBootUpTime.ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ss.fffffffZ'); "
+                "Write-Output ($h+'|'+$b)")
+    actual_boot = child([pins["tools"]["powershell"]["path"], "-NoProfile", "-NonInteractive",
+                         "-Command", os_query], 10).decode("utf-8").strip()
+    if actual_boot != boot["hostBootId"]: hold("CURRENT_HOST_BOOT_DRIFT")
+    for who in ("root", "internal", "antigravity"):
+        item = r["actorAcks"][who]; ack = committed(item["path"], item["sha256"])
+        if ack.get("ready") is not True or ack.get("freshGrantSha256") != r["freshGrant"]["sha256"]:
+            hold("ACTOR_ACK")
+    if (r.get("operator") != "Owner in this conversation" or r.get("operatorAvailable") is not True or
+        r.get("oldResourceExclusionReviewed") is not True): hold("OWNERSHIP")
+    coord = r["coordinationRoot"]
+    if not coord.startswith(".cvf/runtime/r139_"): hold("COORD_SCOPE")
+    cpath = inside(coord, {coord})
+    if not cpath.is_dir() or {p.name for p in cpath.iterdir()} != {"owner.json"}:
+        hold("COORD_NOT_EXCLUSIVE")
+    owner = json.loads(read(cpath / "owner.json"))
+    if (sha(read(cpath / "owner.json")) != r["coordinationOwnerSha256"] or
+        owner.get("freshGrantSha256") != r["freshGrant"]["sha256"] or
+        owner.get("rootExclusive") is not True): hold("COORD_OWNER")
+    if set(r["oldSha256"]) != set(CANON) or set(r["canonicalTemplates"]) != set(CANON): hold("CANON_SET")
+    for rel in CANON:
+        if sha(read(inside(rel, ALLOWED))) != r["oldSha256"][rel]: hold("CANON_DRIFT")
+        template = r["canonicalTemplates"][rel]
+        if not isinstance(template, str) or set(re.findall(r"\{\{[^{}]+\}\}", template)) - TOKENS:
+            hold("TEMPLATE_TOKENS")
+    for rel, value in pins["sourceSha256"].items():
+        if sha(read(inside(rel, {rel}))) != value: hold("SOURCE_PIN")
+    for tree in ("backend", "frontend"):
+        if git("rev-parse", "HEAD:" + tree).decode().strip() != pins[tree + "Tree"]: hold("TREE_PIN")
+    item = pins["binary"]
+    binary = read(inside(item["path"], {item["path"]}))
+    if len(binary) != item["size"] or sha(binary) != item["sha256"]: hold("BINARY_PIN")
+    if pins["viteCli"]["path"] != "frontend/node_modules/vite/bin/vite.js": hold("VITE_PATH")
+    vite = read(inside(pins["viteCli"]["path"], {pins["viteCli"]["path"]}))
+    if len(vite) != pins["viteCli"]["size"] or sha(vite) != pins["viteCli"]["sha256"]:
+        hold("VITE_PIN")
+    for key in ("reservation", "signal", "failure"):
+        rel = r[key + "Path"]
+        if not rel.startswith(".cvf/runtime/r139_") or not rel.endswith(".json") or inside(rel, {rel}).exists():
+            hold("OWNED_PATH_OCCUPIED")
+    if inside(RECEIPT, ALLOWED).exists(): hold("RECEIPT_OCCUPIED")
+    source_budget = {"workerPythonMax": 2,
+         "workerOfflineCompileMax": 2, "rootPythonMax": 1, "rootPureGoMax": 1,
+         "allowedSourcePathsOnly": sorted(("backend/api/handlers/intervention_execution_browser_test.go",
+             "scripts/r139_execution_supervisor.py", "scripts/tests/test_r139_execution_supervisor.py"))}
+    if (r["freshGrant"]["sha256"] != ref["ownerEnvelopeSha256"] or
+        r["freshSourceCheckBudgetOutsideClock"] != source_budget or
+        grant.get("approvedSourceCheckBudgetOutsideClock") != source_budget or
+        build.get("sourceChecksAccepted") is not True): hold("SOURCE_BUDGET_BOUNDARY")
+    cap = r["newBudget"]
+    required = {"oneCampaign": 1, "internalReadOnlyQueries": 5,
+      "browserSubagentInvocationsMax": 4, "newOwnedPages": 1, "creationNavigation": 1,
+      "samePageControlNavigation": 1, "pageReadObservationsMax": 4,
+      "originalCapturesMax": 2, "exactFinalCloseMax": 1,
+      "globalMetadataListsMax": 2, "nativeExecutePOSTMax": 8,
+      "browserExecutePOSTMax": 1, "grantsMax": 3, "authPOSTMax": 4,
+      "statusReadStartsMax": 12, "statusReadSpacingSecondsMin": 5,
+      "statusReadLifetimeSecondsMax": 60, "physicalProviderAttemptsMax": 1,
+      "newUSDMax": 1, "automaticRetry": 0, "sourceChecksDuringCampaign": 0,
+      "wholeCampaignSeconds": 1200, "stopBeforeSeconds": 1020,
+      "cleanupReserveSeconds": 180, "oldUnusedProviderAllowanceSupersededNotStacked": True}
+    if cap != required or grant.get("approvedCaps") != cap: hold("EFFECT_CAPS")
+    if (r["globalHostListScopeApproved"] is not True or
+        grant.get("globalHostListScopeApproved") is not True or
+        not r.get("protectedBaselineReference") or not r.get("nativePageTargetPlanReference")):
+        hold("NATIVE_SCOPE_NOT_ADMITTED")
+    for key in ("protectedBaselineReference", "nativePageTargetPlanReference"):
+        item = r[key]
+        if not item["path"].startswith("docs/reviews/"): hold("REFERENCE_SCOPE")
+        committed(item["path"], item["sha256"], parse=False)
+    for rel, value in r["protectedUnchangedHashes"]["files"].items():
+        if not rel.startswith(("CVF_SESSION/authority/", "docs/reviews/", "scripts/", "backend/", "frontend/", ".cvf/")):
+            hold("PROTECTED_SCOPE")
+        if sha(read(inside(rel, {rel}))) != value: hold("PROTECTED_FILE_DRIFT")
+    sections = r["protectedUnchangedHashes"].get("workOrderPinnedSections")
+    if not sections: hold("PINNED_SECTIONS_NOT_REVIEWED")
+    order = read(inside("docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md", ALLOWED)).replace(b"\r\n", b"\n")
+    for section in sections.values():
+        begin, finish = section["startMarker"].encode(), section["endMarker"].encode()
+        if order.count(begin) != 1 or order.count(finish) != 1 or order.index(begin) >= order.index(finish):
+            hold("PINNED_SECTION_MARKER")
+        if sha(order[order.index(begin):order.index(finish)].rstrip() + b"\n") != section["sha256"]:
+            hold("PINNED_SECTION_DRIFT")
+    return r, expected_head, pins
+
+def activate(r, base, pins):
+    global OP_END
+    clean()
+    if git("rev-parse", "HEAD").decode().strip() != base: hold("HEAD_BEFORE_RESERVE")
+    nonce = r["nonce"]
+    if not isinstance(nonce, str) or not re.fullmatch(r"[0-9a-f]{32}", nonce): hold("NONCE")
+    now, mono = datetime.now(timezone.utc), time.monotonic()
+    stamp = lambda d: d.strftime("%Y-%m-%dT%H:%M:%S.%fZ")
+    start, stop, end = stamp(now), stamp(now + timedelta(seconds=1020)), stamp(now + timedelta(seconds=1200))
+    reservation = {"status": "RESERVED_CONSUMED_PENDING_G0_PROOF", "trancheId": "CCMAI-RUNTIME-139",
+      "nativeContractId": r["nativeContractId"], "campaignNonce": nonce, "cap": 1, "usedOrUncertain": 1,
+      "g0StartUTC": start, "reservedAtUTC": start, "g0Monotonic": mono,
+      "monotonicSource": "python.time.monotonic", "pythonPath": pins["tools"]["python"]["path"],
+      "hostBootId": r["bootProof"]["hostBootId"], "deadlineUTC": end, "stopRequestedByUTC": stop,
+      "stopMonotonic": mono + 1020, "deadlineMonotonic": mono + 1200,
+      "cleanupReserveSeconds": 180, "committedDispatchHead": base,
+      "freshGrantSha256": r["freshGrant"]["sha256"]}
+    OP_END = mono + 60
+    reserve_sha = None
+    # Reservation creation itself is in the consumed/uncertain failure envelope.
+    try:
+        reserve_sha = put_new(inside(r["reservationPath"], {r["reservationPath"]}), reservation)
+        clock_check(now, mono)
+        values = {"{{G0_UTC}}": start, "{{G0_MONO}}": str(mono), "{{STOP_UTC}}": stop,
+          "{{DEADLINE_UTC}}": end, "{{RESERVATION_SHA256}}": reserve_sha,
+          "{{RESERVATION_PATH}}": r["reservationPath"], "{{BASE_HEAD}}": base, "{{NONCE}}": nonce}
+        for rel in CANON:
+            clock_check(now, mono)
+            text = r["canonicalTemplates"][rel]
+            for key, val in values.items(): text = text.replace(key, val)
+            if "{{" in text or "}}" in text: hold("UNFILLED_TOKEN")
+            replace(inside(rel, ALLOWED), text.encode("utf-8"))
+        clock_check(now, mono)
+        put_new(inside(RECEIPT, ALLOWED), {"status": "RESERVED_CANONICAL_PENDING_GATES",
+          "reservationPath": r["reservationPath"], "reservationSha256": reserve_sha,
+          "originalDispatchHead": base, "g0StartUTC": start, "deadlineUTC": end})
+        fixed = (
+          [pins["tools"]["powershell"]["path"], "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File", "scripts/manage_cvf_downstream_catalog.ps1", "-Write", "-ProjectPath", str(ROOT)],
+          [sys.executable, "-B", "scripts/cvf_downstream_gate.py", "preflight"],
+          [sys.executable, "-B", "scripts/cvf_gates/cvf_downstream_gate_runner.py", "run", "--phase", "pre-commit", "--project-root", ".", "--packet", "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md", "--packet", RECEIPT])
+        for argv in fixed: child(argv, OP_END - time.monotonic())
+        changed = set(filter(None, git("diff", "--name-only", "-z").decode("utf-8").split("\0")))
+        untracked = set(filter(None, git("ls-files", "--others", "--exclude-standard", "-z").decode("utf-8").split("\0")))
+        if not (changed | untracked) or (changed | untracked) - ALLOWED: hold("CHANGED_SET")
+        child([GIT, "add", "--", *sorted(changed | untracked)], OP_END - time.monotonic())
+        staged = set(filter(None, git("diff", "--cached", "--name-only", "-z").decode("utf-8").split("\0")))
+        if staged != changed | untracked: hold("STAGED_SET")
+        child([GIT, "commit", "-m", "R139 reserve approved integrated G0 campaign"], OP_END - time.monotonic())
+        head = git("rev-parse", "HEAD").decode().strip()
+        clean()
+        clock_check(now, mono)
+        if head == base: hold("COMMIT_OR_60S")
+        signal_once(inside(r["signalPath"], {r["signalPath"]}),
+          {"status": "ROOT_G0_RELEASE", "currentHead": head,
+           "originalReservationBaseHead": base, "reservationPath": r["reservationPath"],
+           "reservationSha256": reserve_sha, "freshGrantSha256": r["freshGrant"]["sha256"],
+           "campaignNonce": nonce, "g0StartUTC": start, "g0Monotonic": mono,
+           "stopRequestedByUTC": stop, "deadlineUTC": end,
+           "productRuntimeReleased": False, "providerReleased": False})
+    except BaseException as exc:
+        try: put_new(inside(r["failurePath"], {r["failurePath"]}),
+          {"status": "CONSUMED_OR_UNCERTAIN_HOLD_NO_WORKER_SIGNAL", "reservationSha256": reserve_sha,
+           "reasonType": type(exc).__name__, "reason": str(exc),
+           "observedAtUTC": stamp(datetime.now(timezone.utc))})
+        except BaseException: pass
+        raise
+
+def main():
+    if len(sys.argv) != 4: hold("EXACT_RECIPE_PATH_SHA_AND_HEAD_REQUIRED")
+    try:
+        activate(*preclock(sys.argv[1], sys.argv[2], sys.argv[3]))
+    finally:
+        # An unreturned original child prevents normal completion. This wait
+        # has NO hard bound and never releases browser/product authority.
+        for name, process in HELD_CHILDREN:
+            exit_code = process.wait()
+            put_new(LOG_ROOT / (name + ".late_wait.json"),
+                {"originalWaitEventuallyReturned": True, "exitCode": exit_code,
+                 "atUTC": datetime.now(timezone.utc).isoformat()})
+if __name__ == "__main__": main()

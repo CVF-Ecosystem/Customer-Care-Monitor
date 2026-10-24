@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Current R139 G0 HOLD/expiredcampaign; Owner reports exactpageclosed, native finalinventory/provenance still unproven; no Runtime Effect Admission, product/key/provider0."
+      "description": "Current R139 original return CHECKED; unchangednativecontract blocked, one source-and-conditional-reentry Ownerdecision prepared; source/activation/runtime not authorized, oldcaps/HOLD unchanged."
     },
     {
       "id": "r060-work-order",
@@ -36396,6 +36396,34 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/owner_exact_page_close_attestation.json",
       "status": "ACTIVE",
       "description": "Owner direct attestation exactnoncepage closed; report time not action time; native final inventory/session still unproven, no expiredG0 acceptance/runtime release."
+    },
+    {
+      "id": "r139-reentry-design-13c080022b81",
+      "family": "continuity",
+      "path": "docs/reviews/R139_INTEGRATED_REENTRY_DECISION_2026-10-24.md",
+      "status": "ACTIVE",
+      "description": "R139 integrated non-effect reentry design/payload/activation data only; fresh campaign/effects not authorized; original HOLD/caps unchanged, no product/governance acceptance."
+    },
+    {
+      "id": "r139-reentry-design-a7a9d5ec33dc",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_payload_templates.json",
+      "status": "ACTIVE",
+      "description": "R139 integrated non-effect reentry design/payload/activation data only; fresh campaign/effects not authorized; original HOLD/caps unchanged, no product/governance acceptance."
+    },
+    {
+      "id": "r139-reentry-design-b3ff756a1cf8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt",
+      "status": "ACTIVE",
+      "description": "R139 integrated non-effect reentry design/payload/activation data only; fresh campaign/effects not authorized; original HOLD/caps unchanged, no product/governance acceptance."
+    },
+    {
+      "id": "r139-original-return-check",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/root_original_return_check.json",
+      "status": "ACTIVE",
+      "description": "Root direct check of original native transcript and returned blank subagent/session/inventory evidence; currentlineageprovider0 versus unqualifiedhistoricalcounter1; no neweffects, source-capability scope proposal only."
     }
   ]
 }

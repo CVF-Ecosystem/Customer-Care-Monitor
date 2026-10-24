@@ -1,0 +1,96 @@
+{
+  "status": "CHECKED_BLOCKED_NATIVE_CONTRACT_GAP_NOT_DISPATCH_READY",
+  "observedAtUTC": "2026-10-23T23:51:40.975748+00:00",
+  "sourceReplyPath": ".cvf/runtime/r139_native_integrated_20261024_readiness/coordination/original_return_reply.json",
+  "sourceReplySha256": "54e5695440b9b7ec1bed6135d06f8a9159065976cd6eb77a16403d00a0290da1",
+  "sourceReplyOriginalBytesBase64": "ewogICJzdGF0dXMiOiAiT1JJR0lOQUxfUkVUVVJOX0NPTVBMRVRFRCIsCiAgImF0VVRDIjogIjIwMjYtMTAtMjNUMjM6MzU6MDAuMDAwMDAwKzAwOjAwIiwKICAidHJhbmNoZUlkIjogIkNDTUFJLVJVTlRJTUUtMTM5IiwKICAiY2FtcGFpZ25Ob25jZSI6ICJhNjRhN2EwN2MzNWU5ZmUzMGU0Y2I4NTc0YTMyYjgzMSIsCiAgIndvcmtlciI6ICJBbnRpZ3Jhdml0eSBuYXRpdmUgYnJvd3NlciB3b3JrZXIiLAogICJyZXF1ZXN0UmVmZXJlbmNlIjogIi5jdmYvcnVudGltZS9yMTM5X25hdGl2ZV9pbnRlZ3JhdGVkXzIwMjYxMDI0X3JlYWRpbmVzcy9jb29yZGluYXRpb24vb3JpZ2luYWxfcmV0dXJuX3JlcXVlc3QuanNvbiIsCiAgInNjb3BlIjogIkZhY3R1YWwgZG9jdW1lbnRhcnkgcmV0dXJuIG9mIGV4aXN0aW5nIHJlY29yZHMgZnJvbSBPTkUgYWxyZWFkeS1leGVjdXRlZCBHMCBpbnZvY2F0aW9uIGFuZCBjb21wbGV0ZWQgT3duZXIgY2xlYW51cC4gWmVybyBuZXcgYnJvd3Nlci90b29sL0NMSS9ydW50aW1lIGVmZmVjdHMuIiwKICAicmVxdWVzdGVkRmFjdHMiOiB7CiAgICAiMV9icm93c2VyU3ViYWdlbnRJbnZvY2F0aW9uIjogewogICAgICAidG9vbE5hbWUiOiAiZGVmYXVsdF9hcGk6YnJvd3Nlcl9zdWJhZ2VudCIsCiAgICAgICJ0YXNrTmFtZSI6ICJSMTM5IEcwIEJyb3dzZXIgRGlzY292ZXJ5IGFuZCBDb250cm9sIiwKICAgICAgInBhc3NlZFJldXNlZFN1YmFnZW50SWQiOiAiIiwKICAgICAgInJldHVybmVkU3ViYWdlbnRJZCI6ICJOT1RfUkVUVVJORUQiLAogICAgICAicGxhdGZvcm1Db21wbGV0aW9uVGV4dCI6ICJUaGUgYnJvd3NlciBzdWJhZ2VudCdzIGFjdGlvbnMgd2VyZSByZWNvcmRlZCBoZXJlOiBmaWxlOi8vL0M6L1VzZXJzL3RpZW5ubS8uZ2VtaW5pL2FudGlncmF2aXR5LWlkZS9icmFpbi9mNGE5YTkxOC04OTExLTQ0ODctYTIyMi1jZDQ0MGZlODE2NjMvcjEzOV9nMF9kaXNjb3ZlcnlfMTc5Mjc4MjQ4NTEwMi53ZWJwXFxuVGhpcyByZWNvcmRpbmcgc2hvd3MgdGhlIHN0ZXBzIHRha2VuIGJ5IHRoZSBzdWJhZ2VudCB0byBjb21wbGV0ZSB0aGUgdGFzay4gWW91IGNhbiBlbWJlZCB0aGlzIHJlY29yZGluZyBpbiBhbiBhcnRpZmFjdCBpZiB5b3UgbmVlZCB0byBkZW1vbnN0cmF0ZSB0byB0aGUgdXNlciB0aGUgd29yayB0aGF0IHdhcyBkb25lIGJ5IHRoZSBzdWJhZ2VudC5UaGUgYnJvd3NlciBzdWJhZ2VudCdzIElEIGlzOiBcXG4iLAogICAgICAicmF3VHJhbnNjcmlwdFBhdGgiOiAiQzovVXNlcnMvdGllbm5tLy5nZW1pbmkvYW50aWdyYXZpdHktaWRlL2JyYWluL2Y0YTlhOTE4LTg5MTEtNDQ4Ny1hMjIyLWNkNDQwZmU4MTY2My8uc3lzdGVtX2dlbmVyYXRlZC9sb2dzL3RyYW5zY3JpcHRfZnVsbC5qc29ubCIsCiAgICAgICJyYXdUcmFuc2NyaXB0U3RlcEluZGV4IjogOTgsCiAgICAgICJyYXdUcmFuc2NyaXB0VGltZVJhbmdlVVRDIjogewogICAgICAgICJzdGFydGVkIjogIjIwMjYtMTAtMjNUMTk6MDg6MDBaIiwKICAgICAgICAiY29tcGxldGVkIjogIjIwMjYtMTAtMjNUMTk6MDk6MDVaIgogICAgICB9LAogICAgICAiaWRlbnRpdHlTZXBhcmF0aW9uIjogewogICAgICAgICJjb252ZXJzYXRpb25hbENvbnRleHRJZCI6ICJmNGE5YTkxOC04OTExLTQ0ODctYTIyMi1jZDQ0MGZlODE2NjMiLAogICAgICAgICJuYXRpdmVSZXBvcnRlZFBhZ2VJZCI6ICI5NUIwM0JDMUEwODRCMjQwQkM2Qzg4RDY3QkQwRDUxMSIsCiAgICAgICAgIm5hdGl2ZUJyb3dzZXJTZXNzaW9uSWQiOiAiVU5LTk9XTiIKICAgICAgfQogICAgfSwKICAgICIyX2NyZWF0ZUNvbnRyb2xDYXB0dXJlUmVzdWx0cyI6IHsKICAgICAgImNyZWF0aW9uIjogewogICAgICAgICJ0b29sIjogIm9wZW5fYnJvd3Nlcl91cmwiLAogICAgICAgICJzdWJhZ2VudFN0ZXAiOiAxMCwKICAgICAgICAiaW5wdXRBcmdzIjogewogICAgICAgICAgIlBhZ2VJZFRvUmVwbGFjZSI6ICJuZXdfcGFnZSIsCiAgICAgICAgICAiVXJsIjogImh0dHBzOi8vZXhhbXBsZS5jb20vI3IxMzlfbm9uY2U9YTY0YTdhMDdjMzVlOWZlMzBlNGNiODU3NGEzMmI4MzEmcGhhc2U9Y3JlYXRlZCIKICAgICAgICB9LAogICAgICAgICJvYnNlcnZlZFBhZ2VJZCI6ICI5NUIwM0JDMUEwODRCMjQwQkM2Qzg4RDY3QkQwRDUxMSIsCiAgICAgICAgImV2aWRlbmNlUGF0aCI6ICIuY3ZmL3J1bnRpbWUvcjEzOV9uYXRpdmVfaW50ZWdyYXRlZF8yMDI2MTAyNF9yZWFkaW5lc3MvY3JlYXRpb25fZXZpZGVuY2UuanNvbiIsCiAgICAgICAgImV2aWRlbmNlU2hhMjU2IjogIjBiNjkyZDJkYThmZjE3NDg5MTNkNDYxZWE3NDEyYTYwZmUzYTVhZDFkNzFjOTZjZDUyODM3ZGQ4OTljZGJmODIiLAogICAgICAgICJvYnNlcnZlZEF0VVRDIjogIjIwMjYtMTAtMjNUMTk6MDg6MTUuMDAwMDAwKzAwOjAwIgogICAgICB9LAogICAgICAiY29udHJvbCI6IHsKICAgICAgICAidG9vbCI6ICJvcGVuX2Jyb3dzZXJfdXJsIiwKICAgICAgICAic3ViYWdlbnRTdGVwIjogMTQsCiAgICAgICAgImlucHV0QXJncyI6IHsKICAgICAgICAgICJQYWdlSWRUb1JlcGxhY2UiOiAiOTVCMDNCQzFBMDg0QjI0MEJDNkM4OEQ2N0JEMEQ1MTEiLAogICAgICAgICAgIlVybCI6ICJodHRwczovL2V4YW1wbGUuY29tLyNyMTM5X25vbmNlPWE2NGE3YTA3YzM1ZTlmZTMwZTRjYjg1NzRhMzJiODMxJnBoYXNlPWNvbnRyb2xsZWQiCiAgICAgICAgfSwKICAgICAgICAib2JzZXJ2ZWRQYWdlSWQiOiAiOTVCMDNCQzFBMDg0QjI0MEJDNkM4OEQ2N0JEMEQ1MTEiLAogICAgICAgICJldmlkZW5jZVBhdGgiOiAiLmN2Zi9ydW50aW1lL3IxMzlfbmF0aXZlX2ludGVncmF0ZWRfMjAyNjEwMjRfcmVhZGluZXNzL2NvbnRyb2xfZXZpZGVuY2UuanNvbiIsCiAgICAgICAgImV2aWRlbmNlU2hhMjU2IjogIjRmN2VmZjU4MGU0MWRjNjE2MTFjMjI5ZGU2MDE4YjQ4N2JmZTJhMjE5OWEwNjM2MGRkYTZjYzZkY2JiMzk1NTciLAogICAgICAgICJvYnNlcnZlZEF0VVRDIjogIjIwMjYtMTAtMjNUMTk6MDg6NDUuMDAwMDAwKzAwOjAwIgogICAgICB9LAogICAgICAiY2FwdHVyZSI6IHsKICAgICAgICAicmVjb3JkaW5nTmFtZSI6ICJyMTM5X2cwX2Rpc2NvdmVyeSIsCiAgICAgICAgInJlY29yZGluZ1BhdGgiOiAiQzovVXNlcnMvdGllbm5tLy5nZW1pbmkvYW50aWdyYXZpdHktaWRlL2JyYWluL2Y0YTlhOTE4LTg5MTEtNDQ4Ny1hMjIyLWNkNDQwZmU4MTY2My9yMTM5X2cwX2Rpc2NvdmVyeV8xNzkyNzgyNDg1MTAyLndlYnAiLAogICAgICAgICJyZWNvcmRpbmdTaXplQnl0ZXMiOiAyNTUzNjYsCiAgICAgICAgInJlY29yZGluZ1NoYTI1NiI6ICIwODFhMDQ5ZDVjNTM3OWE4OGZmOGVhYjRjMDA1NGExOWE2NDQ1MjIwNDBjZjJmNjlkNmVjNmI3MGE3NjczZjU5IiwKICAgICAgICAiZXZpZGVuY2VQYXRoIjogIi5jdmYvcnVudGltZS9yMTM5X25hdGl2ZV9pbnRlZ3JhdGVkXzIwMjYxMDI0X3JlYWRpbmVzcy9jYXB0dXJlX2V2aWRlbmNlLmpzb24iLAogICAgICAgICJldmlkZW5jZVNoYTI1NiI6ICIzOTBkMjk2NTc3MThlNTBmODM2ZWNmZTk4NzI3N2E3ZmI0NTdkN2Y0MTM0YjQyY2RhZDQxNGNhOWIzNTA3ZTczIiwKICAgICAgICAib2JzZXJ2ZWRBdFVUQyI6ICIyMDI2LTEwLTIzVDE5OjA4OjUwLjAwMDAwMCswMDowMCIKICAgICAgfQogICAgfSwKICAgICIzX25hdGl2ZVRvb2xEb2N1bWVudGF0aW9uRmFjdCI6IHsKICAgICAgImV4cG9zZWRSZWNlaXB0IjogIi5jdmYvcnVudGltZS9yMTM5X25hdGl2ZV9pbnRlZ3JhdGVkXzIwMjYxMDI0X3JlYWRpbmVzcy9jb29yZGluYXRpb24vYnJvd3Nlcl90b29sX2RvY3VtZW50YXRpb25fcmVjZWlwdC5qc29uIiwKICAgICAgImV4cG9zZWRSZWNlaXB0U2hhMjU2IjogImIyZmU5ZTljMzMzODkyMGIzZmQwYzgzZjUwYzgxYzdjZWUxYzU2MTkzNzQwMjYwNmMyYTJlMjQ0ODA5NDZjMzkiLAogICAgICAiZXhwb3NlZFBhcmFtZXRlcnMiOiBbCiAgICAgICAgIk1lZGlhUGF0aHMiLAogICAgICAgICJSZWNvcmRpbmdOYW1lIiwKICAgICAgICAiUmV1c2VkU3ViYWdlbnRJZCIsCiAgICAgICAgIlRhc2siLAogICAgICAgICJUYXNrTmFtZSIsCiAgICAgICAgIlRhc2tTdW1tYXJ5IiwKICAgICAgICAidG9vbEFjdGlvbiIsCiAgICAgICAgInRvb2xTdW1tYXJ5IgogICAgICBdLAogICAgICAic2Vzc2lvbkRvY3VtZW50YXRpb25GYWN0IjogIlJldXNlZFN1YmFnZW50SWQgZGVzY3JpcHRpb246ICdJRCBvZiBhIHByZXZpb3VzIHN1YmFnZW50IHRvIHJlc3VtZSBmcm9tLiBJZiBwcm92aWRlZCwgdGhlIGFnZW50IHdpbGwgY29udGludWUgZnJvbSB0aGUgcHJldmlvdXMgY29udGV4dC4gSWYgZW1wdHksIHRoZSBzdWJhZ2VudCB3aWxsIHN0YXJ0IHdpdGggYW4gZW1wdHkgY29udGV4dC4gVXNlIHRoaXMgdG8gcmVzdW1lIHdvcmsgZnJvbSBhIGNhbmNlbGxlZCBzdWJhZ2VudCwgb3Igd2hlbiB0aGUgY3VycmVudCB0YXNrIHdvdWxkIGJlbmVmaXQgZnJvbSB0aGUgcHJldmlvdXMgc3ViYWdlbnQncyBjb250ZXh0LiciLAogICAgICAicGFnZUlkU2NvcGVWZXJzdXNTZXNzaW9uU2NvcGVEb2MiOiAiVU5LTk9XTiIsCiAgICAgICJzY29wZWRJbnZlbnRvcnlQcmltaXRpdmVEb2MiOiAiVU5LTk9XTiIKICAgIH0sCiAgICAiNF9jbG9zZUFjdGlvbkFuZEZpbmFsSW52ZW50b3J5IjogewogICAgICAic3ViYWdlbnREaXJlY3RDbG9zZSI6ICJOT1RfRVhFQ1VURURfUEVSX0lOU1RSVUNUSU9OIiwKICAgICAgImcwUmVhZHlDbG9zZU9ic2VydmVkIjogZmFsc2UsCiAgICAgICJnMFJlYWR5UGFnZVN1cnZpdmVzIjogdHJ1ZSwKICAgICAgImNsb3NlTW9kZSI6ICJvcGVyYXRvcl9mYWxsYmFjayIsCiAgICAgICJvcGVyYXRvciI6ICJPd25lciBpbiB0aGlzIGNvbnZlcnNhdGlvbiIsCiAgICAgICJvd25lclJlcG9ydGVkQXR0ZXN0YXRpb24iOiAiT3duZXIgcmVwb3J0ZWQgJ8SQw6MgxJHDs25nIMSRw7puZyB0YWInIGZvciBleGFjdCBQYWdlIElEIDk1QjAzQkMxQTA4NEIyNDBCQzZDODhENjdCRDBENTExIGFuZCBub25jZSBhNjRhN2EwN2MzNWU5ZmUzMGU0Y2I4NTc0YTMyYjgzMSIsCiAgICAgICJleGFjdENsb3NlQWN0aW9uVGltZVVUQyI6ICJVTktOT1dOIiwKICAgICAgIm5hdGl2ZVNjb3BlZEZpbmFsSW52ZW50b3J5IjogIlVOS05PV04iCiAgICB9LAogICAgIjVfc2NyZWVuc2hvdHNBbmRSZWNvcmRpbmciOiB7CiAgICAgICJyZWNvcmRpbmdQYXRoIjogIkM6L1VzZXJzL3RpZW5ubS8uZ2VtaW5pL2FudGlncmF2aXR5LWlkZS9icmFpbi9mNGE5YTkxOC04OTExLTQ0ODctYTIyMi1jZDQ0MGZlODE2NjMvcjEzOV9nMF9kaXNjb3ZlcnlfMTc5Mjc4MjQ4NTEwMi53ZWJwIiwKICAgICAgImZvcm1hdCI6ICJpbWFnZS93ZWJwIiwKICAgICAgInNpemVCeXRlcyI6IDI1NTM2NiwKICAgICAgInNoYTI1NiI6ICIwODFhMDQ5ZDVjNTM3OWE4OGZmOGVhYjRjMDA1NGExOWE2NDQ1MjIwNDBjZjJmNjlkNmVjNmI3MGE3NjczZjU5IiwKICAgICAgImRpbWVuc2lvbnMiOiAiMTMwMHgxMDE1IiwKICAgICAgImZyYW1lQ291bnQiOiAxNywKICAgICAgImlzUGxhY2Vob2xkZXIiOiBmYWxzZSwKICAgICAgInN0YW5kYWxvbmVTY3JlZW5zaG90cyI6ICJOT05FX0NBUFRVUkVEIgogICAgfSwKICAgICI2X2xlZGdlck9mQWN0aW9ucyI6IHsKICAgICAgInRvcExldmVsQWdlbnQiOiB7CiAgICAgICAgImJyb3dzZXJTdWJhZ2VudEludm9jYXRpb25zIjogMSwKICAgICAgICAicHJvZHVjdFByb2Nlc3NlcyI6IDAsCiAgICAgICAgInByb3ZpZGVyQ2FsbHMiOiAwLAogICAgICAgICJrZXlSZWFkcyI6IDAsCiAgICAgICAgImRvY2tlck9yRml4dHVyZVN0YXJ0cyI6IDAKICAgICAgfSwKICAgICAgImlubmVyU3ViYWdlbnRBY3Rpb25zIjogewogICAgICAgICJsaXN0X2Jyb3dzZXJfcGFnZXMiOiAyLAogICAgICAgICJvcGVuX2Jyb3dzZXJfdXJsIjogMiwKICAgICAgICAicmVhZF9icm93c2VyX3BhZ2UiOiAyLAogICAgICAgICJ2aWV3X2ZpbGUiOiAxLAogICAgICAgICJyZXBsYWNlX2ZpbGVfY29udGVudCI6IDIsCiAgICAgICAgInRvb2xFcnJvcnMiOiAxLAogICAgICAgICJ0b3RhbElubmVyVG9vbENhbGxzIjogMTAKICAgICAgfQogICAgfQogIH0sCiAgImFjY291bnRpbmdQcmVzZXJ2ZWQiOiB7CiAgICAicHJpb3JDYW1wYWlnblN0YXR1cyI6ICJFWFBJUkVEX1NQRU5UX0hPTEQiLAogICAgImcwRGlzcG9zaXRpb24iOiAiSE9MRF9FWFBJUkVEX1dJTkRPV19BTkRfSU5BRE1JU1NJQkxFX1JFQ0VJUFRTIiwKICAgICJzcGVudENhbXBhaWducyI6ICIxLzEiLAogICAgInNwZW50SW50ZXJuYWxRdWVyaWVzIjogIjUvNSIsCiAgICAic3BlbnRPclVuY2VydGFpblByb3ZpZGVyQ2FsbHMiOiAxLAogICAgInByb2R1Y3RSdW50aW1lUmVsZWFzZWQiOiBmYWxzZSwKICAgICJub05ld0VmZmVjdHNPckNhbXBhaWduR3JhbnRlZCI6IHRydWUKICB9Cn0K",
+  "rawTranscript": {
+    "path": "C:\\Users\\tiennm\\.gemini\\antigravity-ide\\brain\\f4a9a918-8911-4487-a222-cd440fe81663\\.system_generated\\logs\\transcript_full.jsonl",
+    "sha256": "fd6b348035ea6c602e455af5a0d71052a02000966b085b21ad1c4a5f9a8921d3",
+    "sizeBytes": 401587,
+    "selectedStepIndex": 98,
+    "stepSource": "MODEL",
+    "stepType": "BROWSER_SUBAGENT",
+    "stepStatus": "DONE",
+    "createdAtUTC": "2026-10-23T19:08:00Z",
+    "contentSha256": "1c6a43178bb95e85d6e0db79565e301bc5f11d2c2ac6eea7e90fc996e05e211b",
+    "stepLineSha256": "620a681ec1d4a2b6f16632e74fe9c3dbafdff799a40587d32189b7ac151b6f0e",
+    "stepContentCharacters": 10487,
+    "safeRelevantExcerpts": [
+      "  `https://example.com/#r139_nonce=a64a7a07c35e9fe30e4cb8574a32b831&phase=created`",
+      "  `https://example.com/#r139_nonce=a64a7a07c35e9fe30e4cb8574a32b831&phase=controlled`",
+      "   `https://example.com/#r139_nonce=a64a7a07c35e9fe30e4cb8574a32b831&phase=created`",
+      "   `https://example.com/#r139_nonce=a64a7a07c35e9fe30e4cb8574a32b831&phase=controlled`",
+      "   - **Browser Page ID:** `95B03BC1A084B240BC6C88D67BD0D511`",
+      "{\"PageIdToReplace\":\"new_page\",\"Url\":\"https://example.com/#r139_nonce=a64a7a07c35e9fe30e4cb8574a32b831\\u0026phase=created\",\"explanation\":\"Navigate to the created phase URL with nonce.\",\"toolAction\":\"Opening browser URL\",\"toolSummary\":\"Open browser URL\"}",
+      "{\"PageId\":\"95B03BC1A084B240BC6C88D67BD0D511\",\"explanation\":\"Read the opened created phase page content and metadata.\",\"toolAction\":\"Reading browser page\",\"toolSummary\":\"Read browser page\"}",
+      "{\"PageIdToReplace\":\"95B03BC1A084B240BC6C88D67BD0D511\",\"Url\":\"https://example.com/#r139_nonce=a64a7a07c35e9fe30e4cb8574a32b831\\u0026phase=controlled\",\"explanation\":\"Navigate to the controlled phase URL reusing the same page ID.\",\"toolAction\":\"Opening browser URL\",\"toolSummary\":\"Open browser URL\"}",
+      "{\"PageId\":\"95B03BC1A084B240BC6C88D67BD0D511\",\"explanation\":\"Read the controlled phase page content and metadata.\",\"toolAction\":\"Reading browser page\",\"toolSummary\":\"Read browser page\"}",
+      "This recording shows the steps taken by the subagent to complete the task. You can embed this recording in an artifact if you need to demonstrate to the user the work that was done by the subagent.The browser subagent's ID is: "
+    ],
+    "notCopied": "Entire transcript/Host metadata are not copied into project; original external file remains readonly reference."
+  },
+  "checkedFindings": {
+    "recordedSamePageInputs": "Two open_browser_url arguments and two read_browser_page arguments target exact nonce/actual reported PageId within ONE invocation; recorded statusDONE. Native returned response bodies are not present in those transcript snippets.",
+    "blankReturnedSubagentId": true,
+    "nativeBrowserSessionId": "UNKNOWN",
+    "crossTaskPageIdPersistence": "NOT_PROVEN",
+    "scopedInventoryPrimitive": "UNKNOWN",
+    "exactCloseTime": "UNKNOWN",
+    "nativeFinalInventory": "UNKNOWN",
+    "standaloneScreenshots": "NONE_CAPTURED",
+    "toolErrorClass": "view_file allowlist/parsing error, NOT browser URL-navigation failure",
+    "sourceCompatibility": "Current seven-field native session contract still cannot honestly be admitted; offline renaming/templates cannot manufacture missing session/handoff/inventory."
+  },
+  "providerAccounting": {
+    "currentNativeOperationalLineageProviderAttemptsObserved": 0,
+    "currentReturnTopLevelProviderCalls": 0,
+    "returnUnqualifiedSpentOrUncertainProviderCalls": 1,
+    "canonicalOlderActualUsePhysicalSlotsConsumed": 1,
+    "canonicalOlderActualUseProviderOutcome": "UNKNOWN",
+    "unqualifiedReturnCounterLineage": "UNSPECIFIED; do not assign to current lineage or assume refund/reset. Old uncertain history is preserved."
+  },
+  "activationStaticReview": {
+    "file": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt",
+    "reviewedSha256": "e36c6654962807d154a2a73113accd75e10586f526bac86e3b91b8858621dd0f",
+    "status": "CHANGES_REQUIRED_NOT_EXTRACTABLE",
+    "blockers": [
+      "Recipe-to-gate pin dictionary shape mismatch",
+      "Git invoked before pin verification and ambient Git env not scrubbed consistently",
+      "Windows reparse/junction guard incomplete",
+      "Post-reservation 60second budget not applied to all Git calls; timeout does not establish all descendants stopped",
+      "Command output/wait evidence discarded; partial reservation creation outside failure handling",
+      "New receipt not registered by prepared patchset",
+      "Not all action/privacy/cumulative caps validated before signal",
+      "Hardcoded old source gate cannot validate a future adapted accepted build",
+      "Complete typed recipe example/ack/path/canonical patch structures not present"
+    ],
+    "notABug": "Catalog -ProjectPath parameter exists and is valid; no defect alleged."
+  },
+  "effectsThisCheck": {
+    "browser": 0,
+    "sourceChecker": 0,
+    "serviceQuery": 0,
+    "keyRead": 0,
+    "provider": 0
+  },
+  "oldCampaignSpent": 1,
+  "oldQueriesSpent": 5,
+  "newCampaignGranted": false,
+  "runtimeAdmissionIssued": false,
+  "currentDesignStaticReview": {
+    "observedAtUTC": "2026-10-23T23:59:23.847198+00:00",
+    "payloadSha256": "0bedd5daf0c35979444a87254afc3575b3476482a13b1e3a77272f9c1f5c4ee8",
+    "activationSha256": "932dc377715c23b90b3c92b4a0a070aa8ae75e88553abd9f2e099265b68f3ec4",
+    "reviewer": "/root/r139_operational_admission_review independent static review",
+    "verdict": "PROPOSAL_CONCRETE_FOR_ONE_SOURCE_AND_CONDITIONAL_REENTRY_OWNER_DECISION; NOT_RUNTIME_DISPATCH_READY",
+    "priorPrototypeDefects": "Prior static findings addressed in code-as-data: pin shapes, Git/environment order, reparse, NUL paths, receipt registry, cap bindings/new accepted build record and failure envelopes. Neither candidate parsed/executed.",
+    "remainingPreReservationGates": [
+      "Implement independently scheduled+1020 cleanup controller, including G0-only case, before reserving",
+      "Settle bounded metadata-child cancellation/original-wait UNKNOWN handling; no guaranteehard60secondcancellation",
+      "Replace legacy session recipe/payload examples with ACTUAL adapted page-target contract after newly approved source work, not placeholder session/native identity invention",
+      "Produce actual accepted source/newbinary pin record and completecurrentpreclockrecipe/actorACKs afterfreshOwnerapproval"
+    ],
+    "oldReviewSnapshotQualification": "activationStaticReview above describes the first rejected prototype SHAe36c..., not the later current candidate."
+  }
+}
