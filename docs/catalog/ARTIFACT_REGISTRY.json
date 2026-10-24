@@ -36515,6 +36515,13 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/source_worker_checks_2026-10-24.json",
       "status": "ACTIVE",
       "description": "Bounded R139 source check accounting and actual software evidence; runtime/provider not run."
+    },
+    {
+      "id": "r139-page-target-accepted-build-pins",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Root-reviewed committed source/binary/tool pins after4of6boundedofflinechecks; no runtime/campaign/provider release."
     }
   ]
 }

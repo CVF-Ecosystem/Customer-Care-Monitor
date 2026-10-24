@@ -4540,6 +4540,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim.: `docs/reviews/probes/r139_integrated_20261021/owner_one_usd_runtime_grant.json`
 - Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-CREDENTIAL-STAGING-ADMISSION.json`
 - Explicit human1USD/one-call scope or bounded Root credential custody preparation; no runtime claim.: `docs/reviews/probes/r139_integrated_20261021/provider_pricing_reference.json`
+- Root-reviewed committed source/binary/tool pins after4of6boundedofflinechecks; no runtime/campaign/provider release.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-ACCEPTED-BUILD-PINS-ADMISSION.json`
 - Bounded R139 source check accounting and actual software evidence; runtime/provider not run.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/root_python_01_reservation.json`
 - Bounded R139 source check accounting and actual software evidence; runtime/provider not run.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/root_python_01_result.json`
 - Bounded R139 source check accounting and actual software evidence; runtime/provider not run.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/root_combined_source_acceptance.json`

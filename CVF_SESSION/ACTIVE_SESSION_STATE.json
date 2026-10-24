@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 Owner APPROVED985dacbb combined source-and-conditional-reentry. SOURCE BUILD only after committed admission CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-AND-CONDITIONAL-REENTRY-ADMISSION.json; internalSourceWorker owns3sourcepaths+page-targetpayload, separateinternalMetadataWorker ownsactivation/recorder/deadlinecontrol; Root independentreview/commit. Newofflinecaps WorkerPy2/compile2 RootPy1/auditedpureGo1, reserveeachattempt; no other sourcecheck. Finishsource/binary/activation/coordinator acceptance and allslowprep BEFORE any new1200sclock. Runtime/browser/service/key/provider NOT executable now; freshcampaignused0 andAPI0; old1/1campaign/5queries/unknownhistory retained. SameONE M3-05/M3-08 G0-G3 order, Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; no furtherOwnerrelay withinapprovedscope, accountsparked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 page-target SOURCE ACCEPTED at3f9b393e; workerPython40/compile and RootPython40/pureGo10 PASS,4of6offlineattemptsused. Root completes exact preclock recipe/runtime draft/tool-boot-path-pricing/actor ACK preparation under existing Owner-approved985dacbb envelope; internal agents non-browser, Antigravity browser-only. No reservation until all three actors and closeoperator are current and ready; metadata-only request pending. Then ONE fresh1200s G0-G3 campaign, actual two-task native ownership/handoff and independent Runtime Effect Admission before fixture/key/provider. Campaignused0/API0, no activeclock; oldspent1campaign/5queries/UNKNOWNretained. SameONE M3-05/M3-08 order, Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION, Facebook/ZaloOA parked; no renewedOwnerapproval for unchanged approvedscope.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; internal source and activation workers BUILD; Antigravity browser-only NOT released",
+  "activeRole": "Root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; internal source/metadata workers returned; Antigravity browser-only NOT released",
   "updatedAt": "2026-10-24",
   "x-resolvedCoreCommit": "b69e1088978e8c90ac58a2243fcf8f90d0f857ed",
   "x-ownerRoadmapDiscipline": {
@@ -3352,7 +3352,7 @@
   },
   "x-r139OwnerApprovedReentry20261024": {
     "date": "2026-10-24",
-    "status": "OWNER_APPROVED_SOURCE_BUILD_RUNTIME_CONDITIONAL",
+    "status": "SOURCE_ACCEPTED_PRECLOCK_PREPARATION_RUNTIME_CONDITIONAL",
     "ownerReply": "Duyệt gói R139",
     "approvedProposalCommit": "985dacbb795f128af2fb1266484ca3e51f113702",
     "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-AND-CONDITIONAL-REENTRY-ADMISSION.json",
@@ -3394,6 +3394,9 @@
     "oldEvidenceAndCountersUnchanged": true,
     "sourceCheckStatus": "WorkerPython40PASS/compilePASS; RootPython40PASS/pureGo10PASS; 4of6attempts used, no more sourcechecks needed",
     "combinedReview": "docs/reviews/R139_PAGE_TARGET_CONSOLIDATED_SOURCE_REVIEW_2026-10-24.md",
-    "sourceAcceptanceReceipt": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/root_combined_source_acceptance.json"
+    "sourceAcceptanceReceipt": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/root_combined_source_acceptance.json",
+    "sourceAcceptedCommit": "3f9b393e5b64dbf44eefd4779e9bc8ca210657ee",
+    "acceptedBuildPins": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "acceptedBuildPinsSha256": "88f26ffc7c7864e331054ae9d2c8011517ba10d360bb9b54c9bd617796d9fdd2"
   }
 }

@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: ACTIVE
+Status: REVIEWER_ACCEPTED
 Risk: R2
 Worker: Owner-designated Antigravity implementation worker; historical source authors retained in evidence
 Reviewer: Root independent source/evidence REVIEWER
@@ -9,6 +9,12 @@ providerExecutionAuthority: NONE_CURRENT_HISTORICAL_CAMPAIGNS_SPENT_OR_EXPIRED
 runtimeExecutor: UNASSIGNED_UNTIL_SUPPORTED_ENVIRONMENT_AND_COMMITTED_ADMISSION
 runtimeReviewer: INDEPENDENT_REVIEWER_TO_BE_BOUND_IN_CURRENT_ADMISSION; historical reviews retained
 dispatchKind: INITIAL
+
+## Current accepted source and preclock preparation — 2026-10-24
+
+CCMAI-RUNTIME-139 page-target SOURCE ACCEPTED at3f9b393e; workerPython40/compile and RootPython40/pureGo10 PASS,4of6offlineattemptsused. Root completes exact preclock recipe/runtime draft/tool-boot-path-pricing/actor ACK preparation under existing Owner-approved985dacbb envelope; internal agents non-browser, Antigravity browser-only. No reservation until all three actors and closeoperator are current and ready; metadata-only request pending. Then ONE fresh1200s G0-G3 campaign, actual two-task native ownership/handoff and independent Runtime Effect Admission before fixture/key/provider. Campaignused0/API0, no activeclock; oldspent1campaign/5queries/UNKNOWNretained. SameONE M3-05/M3-08 order, Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION, Facebook/ZaloOA parked; no renewedOwnerapproval for unchanged approvedscope.
+
+Accepted build pins: `CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-ACCEPTED-BUILD-PINS-ADMISSION.json`. This section supersedes earlier current-stage source instructions below; historical bound sections and spent counters remain unchanged. No runtime admission or live deadline is issued here.
 
 ## Current authority and acceptance target
 

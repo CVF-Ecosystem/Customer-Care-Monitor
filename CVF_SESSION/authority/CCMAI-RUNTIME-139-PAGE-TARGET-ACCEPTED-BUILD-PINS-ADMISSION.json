@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ROOT_REVIEWED_R139_ACCEPTED_BUILD_PINS",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "date": "2026-10-24",
+  "riskCeiling": "R2",
+  "sourceCommit": "3f9b393e5b64dbf44eefd4779e9bc8ca210657ee",
+  "ownerEnvelopePath": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-AND-CONDITIONAL-REENTRY-ADMISSION.json",
+  "ownerEnvelopeSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "rootReviewApproved": true,
+  "sourceChecksAccepted": true,
+  "review": "docs/reviews/R139_PAGE_TARGET_CONSOLIDATED_SOURCE_REVIEW_2026-10-24.md",
+  "reviewSha256": "f8f21d32253cd503dfa7acc01c50c6d0d131c0e816ac6e39f3d0339b9e5a3de3",
+  "pins": {
+    "sourceSha256": {
+      "scripts/r139_execution_supervisor.py": "3907b6fdad76a50d804245622296891496f9e54b566d2ed24adcfc8c67ec5ebf",
+      "scripts/tests/test_r139_execution_supervisor.py": "a4d4bf8ba461eecf195683eb6f5ab2c13cea8914da3208d540d3f467c57fe6a7",
+      "scripts/r139_vite_config.mjs.template": "82a1d9ae8576fcd46718945d0a5cb44eb963a2a14d436a16e2bcdfb72b26bee9",
+      "backend/api/handlers/intervention_execution_browser_test.go": "df940dbc14dd350cbd8c2d183efcf5db23ffe0efed935231a9405c0d339f13d4",
+      "backend/go.mod": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+      "backend/go.sum": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b",
+      "frontend/package.json": "d16bea0b83ad7eb871576061f7ea91534a2dd2fdc7eef26eb20ec908e4fca24d",
+      "frontend/package-lock.json": "da41e1de5d5b853295a303092aab9433aeea8168fda2cf0420dd94e9f579fb00",
+      "frontend/vite.config.ts": "736c63d3a72a5b126841ceedeac4b4a01854a2bec71bd57d2f46a23ec3cf68de"
+    },
+    "binary": {
+      "path": ".cvf/runtime/r139_page_target_source_20261024/handlers.test.exe",
+      "sha256": "74072a5f34b94ed090520bba3b21095cc2caac18be6eb08e6b10fe9a8d1fdb61",
+      "size": 59411456
+    },
+    "viteCli": {
+      "path": "frontend/node_modules/vite/bin/vite.js",
+      "sha256": "fa03478846d229651a3c6aa64833ba2c6cbf580a798b92bd8f47c7480bafb5d8",
+      "size": 2574
+    },
+    "tools": {
+      "python": {
+        "path": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "sha256": "a2a4eff8d0b0c845284c607d50a3b5b966ac5a3121736a2e38e165bd6644d9fe",
+        "size": 105816
+      },
+      "git": {
+        "path": "C:\\Program Files\\Git\\cmd\\git.EXE",
+        "sha256": "22fead8244ef3a7225fb800099a4e43eca8bcec0466774917669599c2f19a05a",
+        "size": 46936
+      },
+      "powershell": {
+        "path": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+        "sha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f",
+        "size": 495616
+      },
+      "docker": {
+        "path": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+        "sha256": "b8f907c73a89c9bd0a88bddb0cb5008728af4dea0d773b3f3614e9f203737e04",
+        "size": 44922800
+      },
+      "node": {
+        "path": "C:\\Program Files\\nodejs\\node.EXE",
+        "sha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+        "size": 92825416
+      }
+    },
+    "backendTree": "5bf8d2da425b7fea1bd9f7b287734082beae0ca9",
+    "frontendTree": "b23c158a3740ee97b30d17d0a52f5133d4ed5eff"
+  },
+  "metadataSha256": {
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_payload_templates.json": "f0996b831f0ab53989af8ce079306059fc1cc30eb962194b7485ea6f5e7b4b05",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt": "6df45acd58a657a19ffaf2e70a064d217c3de8ebda7c67b1fcb89a36b78bcb89",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/recorder_design.py.txt": "af51faf9944ec7dce7d4240edfc24fe311887d4caa535f47e7afbffa133fb00d"
+  },
+  "sourceUse": {
+    "workerFocusedPython": 1,
+    "workerOfflineGoCompile": 1,
+    "rootFocusedPython": 1,
+    "rootAuditedPureGo": 1
+  },
+  "runtimeExecutableNow": false,
+  "browserExecutableNow": false,
+  "providerExecutableNow": false,
+  "campaignReserved": false,
+  "claimBoundary": "Accepted source/offline software only; original runtime and G0-G3 remain unproved, Product B blocked. Immutable Owner authorization is not edited."
+}
