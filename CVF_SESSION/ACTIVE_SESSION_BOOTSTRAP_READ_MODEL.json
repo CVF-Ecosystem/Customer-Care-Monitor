@@ -1275,10 +1275,10 @@
       "rootAuditedPureGo": 1
     },
     "sourceUse": {
-      "workerFocusedPython": 0,
-      "workerOfflineGoCompile": 0,
-      "rootFocusedPython": 0,
-      "rootAuditedPureGo": 0
+      "workerFocusedPython": 1,
+      "workerOfflineGoCompile": 1,
+      "rootFocusedPython": 1,
+      "rootAuditedPureGo": 1
     },
     "sourcePasses": {
       "authoringMax": 1,
@@ -1301,6 +1301,9 @@
     "newTranches": 0,
     "timerStarted": false,
     "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
-    "oldEvidenceAndCountersUnchanged": true
+    "oldEvidenceAndCountersUnchanged": true,
+    "sourceCheckStatus": "WorkerPython40PASS/compilePASS; RootPython40PASS/pureGo10PASS; 4of6attempts used, no more sourcechecks needed",
+    "combinedReview": "docs/reviews/R139_PAGE_TARGET_CONSOLIDATED_SOURCE_REVIEW_2026-10-24.md",
+    "sourceAcceptanceReceipt": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/root_combined_source_acceptance.json"
   }
 }

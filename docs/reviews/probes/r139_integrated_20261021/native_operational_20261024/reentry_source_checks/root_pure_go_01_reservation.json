@@ -1,0 +1,45 @@
+{
+  "kind": "R139_OFFLINE_SOURCE_CHECK_RESERVATION",
+  "slot": "rootAuditedPureGo",
+  "cap": 1,
+  "usedOrUncertain": 1,
+  "atUTC": "2026-10-24T04:45:47.055239+00:00",
+  "ownerAdmissionSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "argv": [
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_page_target_source_20261024\\handlers.test.exe",
+    "-test.v",
+    "-test.count=1",
+    "-test.timeout=25s",
+    "-test.run=^TestR139Pure(RouteAdmission|BrowserReservationAdmission|BrowserTerminalClose|PageTargetV1|FinalEvidenceSuccess|FinalEvidenceFatalGoexit|FinalEvidenceIOFailure|JournalRequestIOFailureBlocksNext|JournalCapturedResponseSurvivesGoexit|JournalUnsafeResponseHasNoInventedReceipt)$"
+  ],
+  "environment": {
+    "SYSTEMROOT": "C:\\windows",
+    "WINDIR": "C:\\windows",
+    "USERPROFILE": "C:\\Users\\tiennm",
+    "LOCALAPPDATA": "C:\\Users\\tiennm\\AppData\\Local",
+    "PATH": "C:/Windows/System32",
+    "TEMP": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_page_target_root_checks_20261024\\temp",
+    "TMP": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_page_target_root_checks_20261024\\temp"
+  },
+  "cwd": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+  "sourceSha256": {
+    "scripts/r139_execution_supervisor.py": "3907b6fdad76a50d804245622296891496f9e54b566d2ed24adcfc8c67ec5ebf",
+    "scripts/tests/test_r139_execution_supervisor.py": "a4d4bf8ba461eecf195683eb6f5ab2c13cea8914da3208d540d3f467c57fe6a7",
+    "backend/api/handlers/intervention_execution_browser_test.go": "df940dbc14dd350cbd8c2d183efcf5db23ffe0efed935231a9405c0d339f13d4"
+  },
+  "binarySha256": "74072a5f34b94ed090520bba3b21095cc2caac18be6eb08e6b10fe9a8d1fdb61",
+  "timeoutSeconds": 45,
+  "auditedExactTests": [
+    "TestR139PureRouteAdmission",
+    "TestR139PureBrowserReservationAdmission",
+    "TestR139PureBrowserTerminalClose",
+    "TestR139PurePageTargetV1",
+    "TestR139PureFinalEvidenceSuccess",
+    "TestR139PureFinalEvidenceFatalGoexit",
+    "TestR139PureFinalEvidenceIOFailure",
+    "TestR139PureJournalRequestIOFailureBlocksNext",
+    "TestR139PureJournalCapturedResponseSurvivesGoexit",
+    "TestR139PureJournalUnsafeResponseHasNoInventedReceipt"
+  ],
+  "effectBoundary": "Temporary file IO and pure validators/fake in-process transport only. No integrated test/DB/network/provider/browser/Docker/product process."
+}

@@ -2,9 +2,11 @@
 from __future__ import annotations
 
 import importlib.util
+import hashlib
 from contextlib import ExitStack
 import json
 from pathlib import Path
+import runpy
 import subprocess
 import tempfile
 import time
@@ -31,6 +33,85 @@ def protected_snapshot(*, status="Up 2 minutes (healthy)", running_for="2 minute
 
 
 class R139SupervisorPureTests(unittest.TestCase):
+    def test_page_target_metadata_binding_pure_helper(self):
+        design_root = SOURCE.parents[1] / "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024"
+        def no_process(*args, **kwargs):
+            raise AssertionError("metadata pure-helper check attempted a subprocess")
+        with patch.object(subprocess, "Popen", side_effect=no_process), patch.object(
+            subprocess, "run", side_effect=no_process
+        ), patch.object(subprocess, "call", side_effect=no_process), patch.object(
+            subprocess, "check_call", side_effect=no_process
+        ), patch.object(subprocess, "check_output", side_effect=no_process), patch.object(
+            subprocess, "getoutput", side_effect=no_process
+        ), patch.object(subprocess, "getstatusoutput", side_effect=no_process):
+            activation = runpy.run_path(str(design_root / "reentry_activation_design.py.txt"), run_name="r139_inert_activation_definitions")
+            recorder = runpy.run_path(str(design_root / "recorder_design.py.txt"), run_name="r139_inert_recorder_definitions")
+            self.assertTrue(callable(recorder["main"]))
+            with tempfile.TemporaryDirectory() as name:
+                root = Path(name)
+                product = root / ".cvf/runtime/r139_integrated_execution_r4_20261023"
+                product.mkdir(parents=True)
+                coord = root / ".cvf/runtime/r139_test/coord"
+                coord.mkdir(parents=True)
+                authority = root / "CVF_SESSION/authority/CCMAI-RUNTIME-139-TEST.json"
+                review = root / "docs/reviews/R139_TEST.md"
+                reservation = root / ".cvf/runtime/r139_test/reservation.json"
+                for p in (authority, review, reservation): p.parent.mkdir(parents=True, exist_ok=True)
+                def put(path, data):
+                    raw = json.dumps(data, sort_keys=True).encode() if isinstance(data, dict) else data
+                    path.write_bytes(raw)
+                    return hashlib.sha256(raw).hexdigest()
+                now = datetime.now(timezone.utc).replace(microsecond=0)
+                g0 = now - timedelta(seconds=60)
+                deadline = g0 + timedelta(seconds=1200)
+                reservation_sha = put(reservation, {"g0StartUTC": g0.strftime("%Y-%m-%dT%H:%M:%SZ"),
+                                                    "deadlineUTC": deadline.strftime("%Y-%m-%dT%H:%M:%SZ")})
+                budget = {"oneCampaign": 1, "baselineMetadataEnumeration": 1, "finalMetadataEnumeration": 1}
+                admission = {"campaignReservationSha256": reservation_sha,
+                             "browserProofContract": "native_page_target_v1", "runtimeRoot": str(product),
+                             "campaignNonce": "nonce-456", "sourceCommit": "a" * 40,
+                             "r139ApprovedEffectCaps": budget, "productRuntimeReleased": True}
+                admission_sha = put(authority, admission)
+                review_sha = put(review, b"Root independent R139 runtime review fixture")
+                intent = {"admissionSha256": admission_sha, "sourceCommit": admission["sourceCommit"],
+                          "startedAt": now.timestamp(), "deadlineSeconds": 1200}
+                intent_path = product / "run_intent.json"
+                put(intent_path, intent)
+                binding = {"trancheId": "CCMAI-RUNTIME-139", "campaignNonce": "nonce-456",
+                           "reservationSha256": reservation_sha, "freshGrantSha256": "b" * 64,
+                           "browserProofContract": "native_page_target_v1", "runtimeEffectAdmissionReviewed": True,
+                           "runtimeEffectAdmission": {"path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-TEST.json",
+                                                      "sha256": admission_sha},
+                           "independentRuntimeReview": {"path": "docs/reviews/R139_TEST.md", "sha256": review_sha},
+                           "runtimeRoot": str(product), "sourceCommit": admission["sourceCommit"]}
+                binding_path = coord / "product_runtime_binding.json"
+                put(binding_path, binding)
+                recipe = {"coordinationRoot": ".cvf/runtime/r139_test/coord", "nonce": "nonce-456",
+                          "freshGrant": {"sha256": "b" * 64}, "newBudget": budget,
+                          "reservationPath": ".cvf/runtime/r139_test/reservation.json"}
+                validator = activation["validated_product_binding"]
+                with patch.dict(validator.__globals__, {"ROOT": root, "PRODUCT_ROOT": product}):
+                    self.assertEqual(validator(recipe, reservation_sha), product)
+                    for field, wrong in (("admissionSha256", "c" * 64),
+                                         ("sourceCommit", "d" * 40),
+                                         ("startedAt", (deadline + timedelta(seconds=1)).timestamp())):
+                        with self.subTest(field=field):
+                            changed = dict(intent, **{field: wrong})
+                            put(intent_path, changed)
+                            self.assertIsNone(validator(recipe, reservation_sha))
+                            put(intent_path, intent)
+                    changed_admission = dict(admission, r139ApprovedEffectCaps={"oneCampaign": 2})
+                    changed_sha = put(authority, changed_admission)
+                    changed_binding = dict(binding, runtimeEffectAdmission={"path": binding["runtimeEffectAdmission"]["path"],
+                                                                            "sha256": changed_sha})
+                    put(binding_path, changed_binding)
+                    put(intent_path, dict(intent, admissionSha256=changed_sha))
+                    self.assertIsNone(validator(recipe, reservation_sha))
+                    put(authority, admission)
+                    put(intent_path, intent)
+                    put(binding_path, dict(binding, independentRuntimeReview={"path": "docs/reviews/R139_TEST.md", "sha256": "e" * 64}))
+                    self.assertIsNone(validator(recipe, reservation_sha))
+
     def test_source_resume_admission_cannot_enable_runtime(self):
         with patch.object(module, "committed") as committed:
             with self.assertRaisesRegex(module.Hold, "RUNTIME_ADMISSION_PATH_INVALID"):
@@ -738,6 +819,183 @@ class R139SupervisorPureTests(unittest.TestCase):
                                                       finalInventorySha256=module.digest(inventory_path))), encoding="utf-8")
                 with self.assertRaises(module.Hold):
                     module.verify_browser_terminal_close(admission, runtime, runtime)
+
+    def _page_target_fixture(self, root):
+        with patch.object(module, "ROOT", root):
+            readiness = root / ".cvf/runtime/readiness"
+            runtime = root / ".cvf/runtime/product"
+            readiness.mkdir(parents=True)
+            now = datetime.now(timezone.utc).replace(microsecond=0)
+            stamp = lambda sec: (now + timedelta(seconds=sec)).strftime("%Y-%m-%dT%H:%M:%SZ")
+            ident = {"nativeContractId": "r139-page-target-v1", "trancheId": "CCMAI-RUNTIME-139",
+                     "campaignNonce": "nonce-456", "pageId": "page-123", "ownedScopeId": "owned-scope-123",
+                     "operator": "Owner in this conversation", "closeMode": "operator_fallback",
+                     "proofContract": "native_page_target_v1", "scopeOrigin": "caller_owned_explicit_page_target",
+                     "ownedPageIds": ["page-123"]}
+            base = ".cvf/runtime/readiness/"
+            product = ".cvf/runtime/product/"
+            admission = {**ident, "browserTool": "antigravity_page_target", "browserSupported": True,
+                         "fallbackCloseOperator": "Owner in this conversation",
+                         "browserReadinessRoot": ".cvf/runtime/readiness", "runtimeRoot": str(runtime),
+                         "browserReceiptPath": base + "reservation.json",
+                         "browserCloseReceiptPath": product + "close.json",
+                         "actionEvidencePath": product + "action.json",
+                         "finalInventoryPath": product + "inventory.json",
+                         "rawNativeInventoryPath": product + "raw_inventory.json",
+                         "browserDoneSignalPath": product + "browser_done.signal",
+                         "grantDeadlineUTC": stamp(3600)}
+            origin = {"nativeToolCallRef": "original-step-10", "rawOriginalToolReference": "private/native/step-10",
+                      "rawOriginalToolSha256": "b" * 64, "timeBasis": "original_native_tool_return"}
+            created = "https://example.com/#r139_nonce=nonce-456&phase=created"
+            controlled = "https://example.com/#r139_nonce=nonce-456&phase=controlled"
+            prefix = {**ident, "status": "RESERVED_NATIVE_PAGE_TARGET_CONTROL_CAPTURE_HANDOFF",
+                      "browserId": "antigravity_native", "protocol": "https", "closeObserved": False,
+                      "reservedAtUTC": stamp(-25)}
+            rows = {
+                "baselineInventory": {**ident, **origin, "event": "baseline_inventory", "atUTC": stamp(-60),
+                                      "nativeTaskRunRef": "run-g0", "pageIds": ["host-protected"], "inventoryScope": "metadata_only"},
+                "creation": {**ident, **origin, "event": "creation", "atUTC": stamp(-50),
+                             "nativeTaskRunRef": "run-g0", "pageIdToReplace": "new_page", "observedPageId": "page-123", "observedUrl": created},
+                "creationLedger": {**ident, **origin, "event": "creation_ledger", "atUTC": stamp(-50),
+                                   "nativeTaskRunRef": "run-g0", "newPageIds": ["page-123"]},
+                "control": {**ident, **origin, "event": "control", "atUTC": stamp(-45),
+                            "nativeTaskRunRef": "run-g0", "pageIdToReplace": "page-123", "observedUrl": controlled},
+                "capture": {**ident, **origin, "event": "capture", "atUTC": stamp(-40),
+                            "nativeTaskRunRef": "run-g0", "observedPageId": "page-123", "observedUrl": controlled, "captureSha256": "c" * 64},
+                "handoff": {**ident, **origin, "event": "handoff", "atUTC": stamp(-30),
+                            "nativeTaskRunRef": "run-handoff", "observedPageId": "page-123",
+                            "observedUrl": controlled, "observedNonce": "nonce-456"},
+            }
+            for name, data in rows.items():
+                path = readiness / (name + ".json")
+                path.write_text(json.dumps(data), encoding="utf-8")
+                path_key = name + ("Path" if name in ("baselineInventory", "creationLedger") else "EvidencePath")
+                hash_key = name + ("Sha256" if name in ("baselineInventory", "creationLedger") else "EvidenceSha256")
+                prefix[path_key], prefix[hash_key] = base + name + ".json", module.digest(path)
+            rows["creationLedger"]["baselineInventorySha256"] = prefix["baselineInventorySha256"]
+            rows["creationLedger"]["creationEvidenceSha256"] = prefix["creationEvidenceSha256"]
+            ledger = readiness / "creationLedger.json"
+            ledger.write_text(json.dumps(rows["creationLedger"]), encoding="utf-8")
+            prefix["creationLedgerSha256"] = module.digest(ledger)
+            receipt = readiness / "reservation.json"
+            receipt.write_text(json.dumps(prefix), encoding="utf-8")
+            admission["browserReceiptSha256"] = module.digest(receipt)
+            return admission, prefix, rows, runtime, stamp, ident
+
+    def _page_target_terminal(self, root, admission, prefix, runtime, stamp, ident):
+        with patch.object(module, "ROOT", root):
+            runtime.mkdir(exist_ok=True)
+            origin = {"nativeToolCallRef": "original-final-step", "rawOriginalToolReference": "private/native/final-step",
+                      "rawOriginalToolSha256": "d" * 64, "timeBasis": "original_native_tool_return",
+                      "nativeTaskRunRef": "run-final"}
+            raw = {**ident, **origin, "event": "native_inventory", "atUTC": stamp(-5),
+                   "pageIds": ["host-protected"], "ownedCount": 0, "inventoryScope": "metadata_only"}
+            raw_path = runtime / "raw_inventory.json"
+            raw_path.write_text(json.dumps(raw), encoding="utf-8")
+            action = {**ident, **origin, "event": "action_sequence", "atUTC": stamp(-20),
+                      "actions": [{"pageId": "page-123", "action": "control", "atUTC": stamp(-20),
+                                   "rawOriginalToolReference": "private/native/control", "rawOriginalToolSha256": "e" * 64},
+                                  {"pageId": "page-123", "action": "owner_close_report", "atUTC": stamp(-8),
+                                   "reportSource": "owner_in_conversation", "ownerReportReferenceSha256": "a" * 64}]}
+            action_path = runtime / "action.json"
+            action_path.write_text(json.dumps(action), encoding="utf-8")
+            inventory = {**ident, **origin, "event": "final_inventory", "atUTC": stamp(-5),
+                         "pageIds": ["host-protected"], "ownedCount": 0, "inventoryScope": "metadata_only",
+                         "rawNativeInventoryPath": admission["rawNativeInventoryPath"],
+                         "rawNativeInventorySha256": module.digest(raw_path)}
+            inventory_path = runtime / "inventory.json"
+            inventory_path.write_text(json.dumps(inventory), encoding="utf-8")
+            close = {**ident, "status": "CLOSED_EXACT_OWNED_PAGE_TARGET", "browserId": "antigravity_native",
+                     "closeObserved": True, "ownedTabsFinal": 0, "closureTimeBasis": "native_final_metadata_observation",
+                     "reservedAtUTC": prefix["reservedAtUTC"], "actionAtUTC": stamp(-20),
+                     "operatorReportReceivedAtUTC": stamp(-8), "closureObservedAtUTC": stamp(-5),
+                     "ownerReportReferenceSha256": "a" * 64,
+                     "actionEvidencePath": admission["actionEvidencePath"],
+                     "actionEvidenceSha256": module.digest(action_path),
+                     "finalInventoryPath": admission["finalInventoryPath"],
+                     "finalInventorySha256": module.digest(inventory_path)}
+            close_path = runtime / "close.json"
+            close_path.write_text(json.dumps(close), encoding="utf-8")
+            marker = {"status": "TERMINAL_EVIDENCE_WRITTEN", "proofContract": "native_page_target_v1",
+                      "campaignNonce": "nonce-456", "pageId": "page-123", "ownedScopeId": "owned-scope-123",
+                      "atUTC": stamp(-4), "evidenceSha256": {
+                          "browserCloseReceiptPath": module.digest(close_path),
+                          "actionEvidencePath": close["actionEvidenceSha256"],
+                          "finalInventoryPath": close["finalInventorySha256"],
+                          "rawNativeInventoryPath": inventory["rawNativeInventorySha256"]}}
+            (runtime / "browser_done.signal").write_text(json.dumps(marker), encoding="utf-8")
+            return close
+
+    def test_page_target_prefix_handoff_and_terminal_mechanical_contract(self):
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            with patch.object(module, "ROOT", root):
+                admission, prefix, rows, runtime, stamp, ident = self._page_target_fixture(root)
+                module.verify_browser_receipt(admission)
+                close = self._page_target_terminal(root, admission, prefix, runtime, stamp, ident)
+                self.assertEqual(module.verify_browser_terminal_close(admission, runtime, runtime)["receipt"], close)
+
+    def test_page_target_missing_handoff_forged_scope_and_late_close_hold(self):
+        for bad in ("missing_handoff", "same_run", "wrong_nonce", "fake_session", "old_seal", "preexisting_page",
+                    "early_ledger", "capture_wrong_page", "baseline_scope", "prefix_outside_readiness", "preexisting_root",
+                    "missing_marker", "protected_drift", "physical_close_time", "wrong_marker_hash"):
+            with self.subTest(bad=bad), tempfile.TemporaryDirectory() as name:
+                root = Path(name)
+                with patch.object(module, "ROOT", root):
+                    admission, prefix, rows, runtime, stamp, ident = self._page_target_fixture(root)
+                    receipt_path = root / admission["browserReceiptPath"]
+                    if bad == "missing_handoff": prefix.pop("handoffEvidencePath")
+                    elif bad == "same_run": rows["handoff"]["nativeTaskRunRef"] = "run-g0"
+                    elif bad == "wrong_nonce": rows["handoff"]["observedNonce"] = "wrong"
+                    elif bad == "fake_session": admission["browserSessionId"] = "page-123"
+                    elif bad == "old_seal": prefix["reservedAtUTC"] = stamp(-55)
+                    elif bad == "preexisting_page": rows["baselineInventory"]["pageIds"].append("page-123")
+                    elif bad == "early_ledger": rows["creationLedger"]["atUTC"] = stamp(-51)
+                    elif bad == "capture_wrong_page": rows["capture"]["observedPageId"] = "other"
+                    elif bad == "baseline_scope": rows["baselineInventory"]["inventoryScope"] = "full_dom"
+                    elif bad == "preexisting_root": runtime.mkdir()
+                    if bad in ("same_run", "wrong_nonce", "preexisting_page", "early_ledger", "capture_wrong_page", "baseline_scope"):
+                        field = {"preexisting_page": "baselineInventory", "early_ledger": "creationLedger",
+                                 "capture_wrong_page": "capture", "baseline_scope": "baselineInventory"}.get(bad, "handoff")
+                        p = root / ".cvf/runtime/readiness" / (field + ".json")
+                        p.write_text(json.dumps(rows[field]), encoding="utf-8")
+                        prefix[field + ("Sha256" if field in ("baselineInventory", "creationLedger") else "EvidenceSha256")] = module.digest(p)
+                    receipt_path.write_text(json.dumps(prefix), encoding="utf-8")
+                    admission["browserReceiptSha256"] = module.digest(receipt_path)
+                    if bad == "prefix_outside_readiness":
+                        outside = root / ".cvf/runtime/outside"
+                        outside.mkdir()
+                        outside_receipt = outside / "reservation.json"
+                        outside_receipt.write_bytes(receipt_path.read_bytes())
+                        admission["browserReceiptPath"] = ".cvf/runtime/outside/reservation.json"
+                        admission["browserReceiptSha256"] = module.digest(outside_receipt)
+                    if bad in ("missing_handoff", "same_run", "wrong_nonce", "fake_session", "old_seal", "preexisting_page",
+                               "early_ledger", "capture_wrong_page", "baseline_scope", "prefix_outside_readiness", "preexisting_root"):
+                        with self.assertRaises(module.Hold): module.verify_browser_receipt(admission)
+                        continue
+                    close = self._page_target_terminal(root, admission, prefix, runtime, stamp, ident)
+                    if bad == "missing_marker": (runtime / "browser_done.signal").unlink()
+                    elif bad == "physical_close_time":
+                        close["actualCloseActionAtUTC"] = stamp(-8)
+                        (runtime / "close.json").write_text(json.dumps(close), encoding="utf-8")
+                    elif bad == "wrong_marker_hash":
+                        marker_path = runtime / "browser_done.signal"
+                        marker = json.loads(marker_path.read_text(encoding="utf-8"))
+                        marker["evidenceSha256"]["finalInventoryPath"] = "f" * 64
+                        marker_path.write_text(json.dumps(marker), encoding="utf-8")
+                    else:
+                        raw_path = runtime / "raw_inventory.json"
+                        raw = json.loads(raw_path.read_text(encoding="utf-8"))
+                        raw["pageIds"] = ["other-tab"]
+                        raw_path.write_text(json.dumps(raw), encoding="utf-8")
+                        inventory_path = runtime / "inventory.json"
+                        inventory = json.loads(inventory_path.read_text(encoding="utf-8"))
+                        inventory["pageIds"] = ["other-tab"]
+                        inventory["rawNativeInventorySha256"] = module.digest(raw_path)
+                        inventory_path.write_text(json.dumps(inventory), encoding="utf-8")
+                        close["finalInventorySha256"] = module.digest(inventory_path)
+                        (runtime / "close.json").write_text(json.dumps(close), encoding="utf-8")
+                    with self.assertRaises(module.Hold): module.verify_browser_terminal_close(admission, runtime, runtime)
 
     def test_supervisor_terminal_close_enforcement_on_success_and_error_paths(self):
         class Child:

@@ -1,0 +1,63 @@
+{
+  "status": "ROOT_ACCEPTED_BOUNDED_SOURCE_AND_OFFLINE_SOFTWARE",
+  "ownerAdmissionSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "sourceSha256": {
+    "scripts/r139_execution_supervisor.py": "3907b6fdad76a50d804245622296891496f9e54b566d2ed24adcfc8c67ec5ebf",
+    "scripts/tests/test_r139_execution_supervisor.py": "a4d4bf8ba461eecf195683eb6f5ab2c13cea8914da3208d540d3f467c57fe6a7",
+    "scripts/r139_vite_config.mjs.template": "82a1d9ae8576fcd46718945d0a5cb44eb963a2a14d436a16e2bcdfb72b26bee9",
+    "backend/api/handlers/intervention_execution_browser_test.go": "df940dbc14dd350cbd8c2d183efcf5db23ffe0efed935231a9405c0d339f13d4",
+    "backend/go.mod": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+    "backend/go.sum": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b",
+    "frontend/package.json": "d16bea0b83ad7eb871576061f7ea91534a2dd2fdc7eef26eb20ec908e4fca24d",
+    "frontend/package-lock.json": "da41e1de5d5b853295a303092aab9433aeea8168fda2cf0420dd94e9f579fb00",
+    "frontend/vite.config.ts": "736c63d3a72a5b126841ceedeac4b4a01854a2bec71bd57d2f46a23ec3cf68de"
+  },
+  "binary": {
+    "path": ".cvf/runtime/r139_page_target_source_20261024/handlers.test.exe",
+    "sha256": "74072a5f34b94ed090520bba3b21095cc2caac18be6eb08e6b10fe9a8d1fdb61",
+    "size": 59411456
+  },
+  "workerRawReceipts": {
+    "workerFocusedPython": {
+      "rawHashBindingsVerified": true,
+      "originalWaitExitObservedInReceipt": true,
+      "exitCode": 0,
+      "resultSha256": "8ee52f2131a74911bc660407686247b0b98139347fc75e96d302180db8b34ac2"
+    },
+    "workerOfflineGoCompile": {
+      "rawHashBindingsVerified": true,
+      "originalWaitExitObservedInReceipt": true,
+      "exitCode": 0,
+      "resultSha256": "bd9d80727c80704ddf4c39edc71f434a1f29c5d561883ecb6e45409fdf0f8030"
+    }
+  },
+  "checks": {
+    "workerFocusedPython": {
+      "used": 1,
+      "cap": 2,
+      "testsPass": 40
+    },
+    "workerOfflineGoCompile": {
+      "used": 1,
+      "cap": 2,
+      "exitCode": 0
+    },
+    "rootFocusedPython": {
+      "used": 1,
+      "cap": 1,
+      "testsPass": 40
+    },
+    "rootAuditedPureGo": {
+      "used": 1,
+      "cap": 1,
+      "testsPass": 10,
+      "skip": 0
+    }
+  },
+  "metadataBoundary": "Both designs loaded under non-main with subprocess blocked; actual pure binding helper positive/negative validated. Recorder lifecycle/activation/coordinator operational execution NOT_RUN.",
+  "runtimeExecutableNow": false,
+  "campaignUse": 0,
+  "providerUse": 0,
+  "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+  "claimBoundary": "Software validation only, no runtime AI governance, hosted CI, product acceptance or release."
+}

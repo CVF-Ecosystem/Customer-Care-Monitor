@@ -1,0 +1,26 @@
+{
+  "kind": "R139_METADATA_CONSOLIDATED_REPAIR_STATIC_RECEIPT",
+  "status": "COMPLETE_PENDING_INDEPENDENT_REVIEW_METADATA_ONLY",
+  "dispatchHead": "79e02f6c67b242eea4540ad4d2fdce5b42fda106",
+  "ownerAdmissionSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "findingDisposition": {
+    "F01": "exact_absent_source_root_before_supervisor; actual_run_intent_and_immutable_admission_binding_before_stop; G0_abort_no_product_root",
+    "F02": "ownerEnvelopeSha256_read_from_validated_build_record",
+    "F03": "complete_immutable_cap_mapping; separate_baseline_final_enumeration; later_runtime_admission_effect_caps; powershell_OS_metadata_5_seconds"
+  },
+  "filesSha256": {
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt": "6df45acd58a657a19ffaf2e70a064d217c3de8ebda7c67b1fcb89a36b78bcb89",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/recorder_design.py.txt": "af51faf9944ec7dce7d4240edfc24fe311887d4caa535f47e7afbffa133fb00d"
+  },
+  "execution": {
+    "prototypeParserImportTestCompileExtraction": 0,
+    "sourceChecksUsedByMetadataWorker": 0,
+    "campaignReservations": 0,
+    "browserActions": 0,
+    "productOrServiceProcesses": 0,
+    "keyReads": 0,
+    "providerCalls": 0,
+    "commits": 0
+  },
+  "claimBoundary": "Static design repair only. Root independent review and later committed admissions are required before any runtime effect."
+}

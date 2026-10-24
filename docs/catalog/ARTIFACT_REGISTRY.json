@@ -36438,6 +36438,83 @@
       "path": "docs/reviews/R139_SOURCE_AND_CONDITIONAL_REENTRY_ADMISSION_REVIEW_2026-10-24.md",
       "status": "ACTIVE",
       "description": "Owner-approved R139 bounded source BUILD and one conditional future G0-G3 campaign;6offlinechecks, no liveclock/runtime/key/provider authority before acceptance."
+    },
+    {
+      "id": "r139-reentry-worker-12717a8f5ccf",
+      "family": "continuity",
+      "path": "docs/reviews/R139_PAGE_TARGET_SOURCE_WORKER_RETURN_2026-10-24.md",
+      "status": "ACTIVE",
+      "description": "R139 approved source/activation worker candidate return; implementation/checks pending independent acceptance, no runtime/campaign activation."
+    },
+    {
+      "id": "r139-reentry-worker-ca9626cff307",
+      "family": "continuity",
+      "path": "docs/reviews/R139_ACTIVATION_COORDINATOR_WORKER_RETURN_2026-10-24.md",
+      "status": "ACTIVE",
+      "description": "R139 approved source/activation worker candidate return; implementation/checks pending independent acceptance, no runtime/campaign activation."
+    },
+    {
+      "id": "r139-page-target-review-89affeee7b85",
+      "family": "continuity",
+      "path": "docs/reviews/R139_PAGE_TARGET_CONSOLIDATED_SOURCE_REVIEW_2026-10-24.md",
+      "status": "ACTIVE",
+      "description": "R139 bounded combined source/metadata review and honest offline evidence; no runtime or product acceptance."
+    },
+    {
+      "id": "r139-page-target-review-e27f2f82dcd8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/activation_metadata_consolidated_repair_receipt_2026-10-24.json",
+      "status": "ACTIVE",
+      "description": "R139 bounded combined source/metadata review and honest offline evidence; no runtime or product acceptance."
+    },
+    {
+      "id": "r139-page-target-review-8340da86526e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/activation_metadata_static_receipt_2026-10-24.json",
+      "status": "ACTIVE",
+      "description": "R139 bounded combined source/metadata review and honest offline evidence; no runtime or product acceptance."
+    },
+    {
+      "id": "r139-page-target-check-69f1a871218f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/root_combined_source_acceptance.json",
+      "status": "ACTIVE",
+      "description": "Bounded R139 source check accounting and actual software evidence; runtime/provider not run."
+    },
+    {
+      "id": "r139-page-target-check-a9380277261f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/root_pure_go_01_reservation.json",
+      "status": "ACTIVE",
+      "description": "Bounded R139 source check accounting and actual software evidence; runtime/provider not run."
+    },
+    {
+      "id": "r139-page-target-check-a828db248adf",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/root_pure_go_01_result.json",
+      "status": "ACTIVE",
+      "description": "Bounded R139 source check accounting and actual software evidence; runtime/provider not run."
+    },
+    {
+      "id": "r139-page-target-check-1044b93b3e1b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/root_python_01_reservation.json",
+      "status": "ACTIVE",
+      "description": "Bounded R139 source check accounting and actual software evidence; runtime/provider not run."
+    },
+    {
+      "id": "r139-page-target-check-37eb37fb85d0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/root_python_01_result.json",
+      "status": "ACTIVE",
+      "description": "Bounded R139 source check accounting and actual software evidence; runtime/provider not run."
+    },
+    {
+      "id": "r139-page-target-check-88c9b5054ff7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/source_worker_checks_2026-10-24.json",
+      "status": "ACTIVE",
+      "description": "Bounded R139 source check accounting and actual software evidence; runtime/provider not run."
     }
   ]
 }

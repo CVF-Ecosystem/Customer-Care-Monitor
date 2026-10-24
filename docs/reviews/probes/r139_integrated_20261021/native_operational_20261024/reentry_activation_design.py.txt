@@ -1,5 +1,5 @@
 # PROPOSED_NOT_AUTHORIZED / UNEXECUTED code-as-data. Future Root-only extraction
-# needs exact-byte pin, independent R2 review and a NEW committed Owner grant.
+# needs exact-byte pin, independent R2 review and later Root technical release.
 # Recipe JSON (committed exact bytes): kind=R139_ROOT_ACTIVATION_RECIPE,
 # status=COMMITTED_PRECLOCK, trancheId, nonce, nativeContractId,
 # freshGrant{path,sha256}, acceptedBuildPinsRef{path,sha256},
@@ -7,7 +7,7 @@
 # actorAcks{root,internal,antigravity:{path,sha256}}, operatorAvailable,
 # coordinationRoot,coordinationOwnerSha256 (exclusive precreated owner.json),
 # oldResourceExclusionReviewed, reservationPath, signalPath, failurePath,
-# reviewed build pin record (not the legacy G0 gate) carries nine source hashes,
+# reviewed build pin record (not immutable Owner grant) carries nine source hashes,
 # two trees, binary, Vite CLI and five tool {path,sha256,size} records.
 # oldSha256 and canonicalTemplates keyed by exact CANON paths below, including
 # ARTIFACT_REGISTRY full content with the new activation receipt entry.
@@ -16,12 +16,17 @@
 # Complete UTF-8 templates contain only late fixed tokens from TOKENS.
 # 89 gate units, payload/schema review, pricing, actor coordination and
 # exact command review finish BEFORE this design is ever extracted/run.
+# Root launches this as one managed control Popen, retains that original handle,
+# records original wait/exit externally, and continues G0/G1/G2 orchestration
+# while this same process watches the unremapped +1020/+1200 campaign clock.
+# This design itself cannot guarantee OS/tool cancellation or Root's handle.
 
-import hashlib, json, os, re, stat, subprocess, sys, time
+import hashlib, json, math, os, re, stat, subprocess, sys, time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(r"D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI")
+PRODUCT_ROOT = ROOT / ".cvf/runtime/r139_integrated_execution_r4_20261023"
 PROBE = "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024"
 CANON = ("CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json",
  "CVF_SESSION/ACTIVE_SESSION_STATE.json", "CVF_SESSION_MEMORY.md",
@@ -43,6 +48,8 @@ OP_END = None
 LOG_ROOT = None
 CHILD_N = 0
 HELD_CHILDREN = []
+RESERVATION = None
+RECIPE = None
 
 def hold(reason): raise RuntimeError(reason)
 def sha(data): return hashlib.sha256(data).hexdigest()
@@ -52,7 +59,7 @@ def no_reparse(path):
     for q in (*reversed(p.parents), p):
         if q.exists() or q.is_symlink():
             a = q.lstat()
-            if a.st_file_attributes & stat.FILE_ATTRIBUTE_REPARSE_POINT:
+            if (getattr(a, "st_file_attributes", 0) & stat.FILE_ATTRIBUTE_REPARSE_POINT) or q.is_symlink():
                 hold("REPARSE_COMPONENT:" + str(q))
 def read(path):
     no_reparse(path)
@@ -62,9 +69,9 @@ def inside(rel, allowed):
         hold("PATH_NOT_ALLOWED")
     p = ROOT / rel
     no_reparse(p)
-    if p.resolve() != p or not p.is_relative_to(ROOT): hold("PATH_ESCAPE_REPARSE")
+    if p.resolve(strict=False) != p or not p.is_relative_to(ROOT): hold("PATH_ESCAPE_REPARSE")
     return p
-def child(argv, seconds=10):
+def child(argv, seconds=10, accepted=(0,), return_exit=False):
     global CHILD_N
     if ENV is None or LOG_ROOT is None: hold("CHILD_ENV_OR_LOG_NOT_PINNED")
     if OP_END is not None: seconds = min(seconds, OP_END - time.monotonic())
@@ -73,49 +80,77 @@ def child(argv, seconds=10):
     name = f"child_{CHILD_N:03d}"
     begin_utc, begin_mono = datetime.now(timezone.utc).isoformat(), time.monotonic()
     p, outcome, out, err = None, "START_FAILED", b"", b""
+    waits = []
     try:
         p = subprocess.Popen(argv, cwd=ROOT, env=ENV, shell=False, stdin=subprocess.DEVNULL,
                              stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        waits.append({"kind": "original_communicate", "timeoutSeconds": seconds,
+                      "startedMonotonic": time.monotonic()})
         out, err = p.communicate(timeout=seconds)
+        waits[-1]["returnedMonotonic"] = time.monotonic()
         outcome = "WAIT_RETURNED"
     except subprocess.TimeoutExpired as timeout_exc:
         out, err = timeout_exc.stdout or b"", timeout_exc.stderr or b""
-        outcome = "TIMED_OUT_TERMINATION_ATTEMPTED_WAIT_UNKNOWN"
-        p.terminate()
+        waits[-1]["timedOutMonotonic"] = time.monotonic()
+        outcome = "TIMED_OUT_ORIGINAL_WAIT_UNKNOWN"
+        try: p.terminate()  # exact held metadata child only
+        except OSError: pass
         try:
-            out, err = p.communicate(timeout=min(5, max(0, seconds)))
+            remaining = max(0, min(2, OP_END - time.monotonic())) if OP_END else 2
+            waits.append({"kind": "post_terminate_original_communicate", "timeoutSeconds": remaining,
+                          "startedMonotonic": time.monotonic()})
+            out, err = p.communicate(timeout=remaining)
+            waits[-1]["returnedMonotonic"] = time.monotonic()
             outcome = "TIMED_OUT_ORIGINAL_WAIT_RETURNED"
         except subprocess.TimeoutExpired:
-            outcome = "TIMED_OUT_ORIGINAL_WAIT_UNKNOWN"
-            HELD_CHILDREN.append((name, p))
+            waits[-1]["timedOutMonotonic"] = time.monotonic()
+            try: p.kill()  # still the same exact metadata child; no Host/browser/product kill
+            except OSError: pass
+            try:
+                remaining = max(0, min(2, OP_END - time.monotonic())) if OP_END else 2
+                waits.append({"kind": "post_kill_original_communicate", "timeoutSeconds": remaining,
+                              "startedMonotonic": time.monotonic()})
+                out, err = p.communicate(timeout=remaining)
+                waits[-1]["returnedMonotonic"] = time.monotonic()
+                outcome = "TIMED_OUT_POST_KILL_ORIGINAL_WAIT_RETURNED"
+            except subprocess.TimeoutExpired:
+                waits[-1]["timedOutMonotonic"] = time.monotonic()
+                outcome = "TIMED_OUT_POST_KILL_ORIGINAL_WAIT_UNKNOWN"
+                HELD_CHILDREN.append((name, p))
     finally:
         # Owned ignored logs contain only fixed argv and scrubbed environment.
         no_reparse(LOG_ROOT)
-        (LOG_ROOT / (name + ".stdout.bin")).write_bytes(out)
-        (LOG_ROOT / (name + ".stderr.bin")).write_bytes(err)
-        ledger = {"argv": argv, "cwd": str(ROOT), "environment": ENV,
+        put_bytes_new(LOG_ROOT / (name + ".stdout.bin"), out)
+        put_bytes_new(LOG_ROOT / (name + ".stderr.bin"), err)
+        ledger = {"argv": argv, "cwd": str(ROOT), "environmentKeys": sorted(ENV),
           "startUTC": begin_utc, "startMonotonic": begin_mono,
           "endUTC": datetime.now(timezone.utc).isoformat(), "endMonotonic": time.monotonic(),
           "stdoutBytes": len(out), "stdoutSha256": sha(out),
           "stderrBytes": len(err), "stderrSha256": sha(err),
-          "originalWait": outcome, "exitCode": None if p is None else p.returncode}
+          "originalWait": outcome, "waits": waits,
+          "exitCode": None if p is None else p.returncode}
         put_new(LOG_ROOT / (name + ".json"), ledger)
     if outcome != "WAIT_RETURNED": hold(outcome)
-    if p.returncode: hold("COMMAND_EXIT_" + str(p.returncode))
-    return out
+    if p.returncode not in accepted: hold("COMMAND_EXIT_" + str(p.returncode))
+    return (p.returncode, out) if return_exit else out
 def git(*args, seconds=10): return child([GIT, *args], seconds)
+def git_optional(*args, seconds=10):
+    # A missing optional config key exits 1, with the same raw child custody.
+    return child([GIT, *args], seconds, accepted=(0, 1), return_exit=True)
 def clean():
-    if git("status", "--porcelain", "--untracked-files=all", "-z"): hold("WORKTREE_DIRTY")
+    if git("status", "--porcelain=v1", "--untracked-files=all", "-z"): hold("WORKTREE_DIRTY")
 def committed(rel, expected, parse=True):
     p = inside(rel, {rel}); data = read(p)
     if not re.fullmatch(r"[0-9a-f]{64}", expected) or sha(data) != expected: hold("HASH_PIN")
     if git("show", "HEAD:" + rel) != data: hold("NOT_COMMITTED_EXACT_BYTES")
     return json.loads(data) if parse else data
 def put_new(path, obj):
+    data = (json.dumps(obj, sort_keys=True, separators=(",", ":")) + "\n").encode()
+    return put_bytes_new(path, data)
+def put_bytes_new(path, data):
     no_reparse(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     no_reparse(path)
-    data = (json.dumps(obj, sort_keys=True, separators=(",", ":")) + "\n").encode()
     with path.open("xb") as f: f.write(data); f.flush(); os.fsync(f.fileno())
     return sha(data)
 def replace(path, data):
@@ -139,10 +174,155 @@ def clock_check(start_utc, start_mono):
     if elapsed_utc < 0 or elapsed_mono < 0 or abs(elapsed_utc - elapsed_mono) > 2:
         hold("CAMPAIGN_CLOCK_DRIFT")
 
+def nul_paths(raw):
+    if not raw.endswith(b"\0") and raw: hold("GIT_PATH_STREAM_NOT_NUL_TERMINATED")
+    try: names = [part.decode("utf-8", errors="strict") for part in raw.split(b"\0") if part]
+    except UnicodeError: hold("GIT_PATH_DECODE")
+    if len(names) != len(set(names)): hold("DUPLICATE_CHANGED_PATH")
+    for name in names:
+        if "\\" in name or name.startswith("/") or "/../" in "/" + name + "/":
+            hold("GIT_CHANGED_PATH_ESCAPE")
+    return set(names)
+
+def owned_marker(parent, name, obj):
+    p = parent / name
+    no_reparse(p)
+    if p.exists(): return False
+    put_new(p, obj)
+    return True
+
+def verified_terminal(r, reserve_sha):
+    """Only Root's exact scoped terminal marker can end control early."""
+    coord = inside(r["coordinationRoot"], {r["coordinationRoot"]})
+    path = coord / "root_terminal.json"
+    if not path.is_file(): return False
+    try:
+        data = json.loads(read(path))
+        return (data.get("trancheId") == "CCMAI-RUNTIME-139" and
+                data.get("campaignNonce") == r["nonce"] and
+                data.get("reservationSha256") == reserve_sha and
+                data.get("freshGrantSha256") == r["freshGrant"]["sha256"] and
+                data.get("status") in ("ROOT_G0_HOLD_TERMINAL", "ROOT_PRODUCT_TERMINAL_OBSERVED") and
+                isinstance(data.get("atUTC"), str) and data["atUTC"].endswith("Z"))
+    except (OSError, ValueError, TypeError): return False
+
+def validated_product_binding(r, reserve_sha):
+    """Root-authored post-G0 binding, never a new product root for G0 abort."""
+    coord = inside(r["coordinationRoot"], {r["coordinationRoot"]})
+    p = coord / "product_runtime_binding.json"
+    if not p.is_file(): return None
+    try:
+        b = json.loads(read(p))
+        if (b.get("trancheId") != "CCMAI-RUNTIME-139" or b.get("campaignNonce") != r["nonce"] or
+            b.get("reservationSha256") != reserve_sha or
+            b.get("freshGrantSha256") != r["freshGrant"]["sha256"] or
+            b.get("browserProofContract") != "native_page_target_v1" or
+            b.get("runtimeEffectAdmissionReviewed") is not True): return None
+        item = b["runtimeEffectAdmission"]
+        if not re.fullmatch(r"CVF_SESSION/authority/CCMAI-RUNTIME-139-[A-Za-z0-9_-]+\.json", item["path"]):
+            return None
+        raw = read(inside(item["path"], {item["path"]}))
+        if sha(raw) != item["sha256"]: return None
+        admission = json.loads(raw)
+        review = b["independentRuntimeReview"]
+        if not review["path"].startswith("docs/reviews/R139_") or not review["path"].endswith(".md"):
+            return None
+        review_raw = read(inside(review["path"], {review["path"]}))
+        if sha(review_raw) != review["sha256"]: return None
+        if (admission.get("campaignReservationSha256") != reserve_sha or
+            admission.get("browserProofContract") != "native_page_target_v1" or
+            admission.get("runtimeRoot") != b.get("runtimeRoot") or
+            admission.get("runtimeRoot") != str(PRODUCT_ROOT) or
+            admission.get("campaignNonce") != r["nonce"] or
+            b.get("sourceCommit") != admission.get("sourceCommit") or
+            # Product/key/provider caps are enforced by the later immutable
+            # Runtime Effect Admission and source, never by activation alone.
+            admission.get("r139ApprovedEffectCaps") != r["newBudget"] or
+            admission.get("productRuntimeReleased") is not True): return None
+        root = Path(b["runtimeRoot"])
+        no_reparse(root)
+        if (not root.is_absolute() or root != PRODUCT_ROOT or
+            root.resolve(strict=False) != PRODUCT_ROOT or not root.is_dir()): return None
+        # The supervisor creates the exact root and run_intent after launch.
+        # A binding alone never authorizes a stop against an old product root.
+        intent = json.loads(read(root / "run_intent.json"))
+        reservation_path = inside(r["reservationPath"], {r["reservationPath"]})
+        reservation_raw = read(reservation_path)
+        reservation = json.loads(reservation_raw)
+        started = intent.get("startedAt")
+        g0 = datetime.fromisoformat(reservation["g0StartUTC"].replace("Z", "+00:00")).timestamp()
+        deadline = datetime.fromisoformat(reservation["deadlineUTC"].replace("Z", "+00:00")).timestamp()
+        if (sha(reservation_raw) != reserve_sha or
+            intent.get("admissionSha256") != item["sha256"] or
+            intent.get("sourceCommit") != admission.get("sourceCommit") or
+            type(intent.get("deadlineSeconds")) is not int or intent["deadlineSeconds"] != 1200 or
+            type(started) not in (int, float) or not math.isfinite(started) or
+            not g0 <= started <= deadline): return None
+        return root
+    except (OSError, ValueError, KeyError, TypeError, RuntimeError): return None
+
+def monitor_original_clock(r, reservation, reserve_sha):
+    """Root-owned original control process persists after worker release.
+
+    It records cutoff even for G0-only. It neither creates a product root on
+    abort nor controls Host/browser/parent processes. Native model cancellation
+    and OS scheduling have no hard guarantee; lateness is explicit evidence.
+    """
+    coord = inside(r["coordinationRoot"], {r["coordinationRoot"]})
+    g0_mono = reservation["g0Monotonic"]
+    stop_mono, end_mono = g0_mono + 1020, g0_mono + 1200
+    cutoff_sent = False
+    while True:
+        now = time.monotonic()
+        terminal = verified_terminal(r, reserve_sha)
+        if now >= stop_mono and not cutoff_sent:
+            cutoff_sent = True
+            runtime = validated_product_binding(r, reserve_sha)
+            stop_result = "G0_ONLY_NO_PRODUCT_ROOT"
+            if runtime is not None:
+                try:
+                    made = owned_marker(runtime, "stop_requested", {"reason": "original_campaign_cleanup_cutoff",
+                         "campaignNonce": r["nonce"], "reservationSha256": reserve_sha,
+                         "requestedAtUTC": datetime.now(timezone.utc).isoformat(),
+                         "requestedAtMonotonic": now})
+                    if made:
+                        stop_result = "OWNED_PRODUCT_STOP_REQUEST_WRITTEN"
+                    else:
+                        existing = json.loads(read(runtime / "stop_requested"))
+                        stop_result = ("OWNED_PRODUCT_STOP_ALREADY_PRESENT" if
+                            existing.get("campaignNonce") == r["nonce"] and
+                            existing.get("reservationSha256") == reserve_sha else
+                            "STOPFILE_IDENTITY_MISMATCH_HOLD")
+                except (OSError, RuntimeError) as exc:
+                    stop_result = "OWNED_PRODUCT_STOP_WRITE_HOLD:" + type(exc).__name__
+            elif (coord / "product_runtime_binding.json").exists():
+                stop_result = "PRODUCT_BINDING_INVALID_HOLD_NO_BLIND_STOP"
+            owned_marker(coord, "cleanup_cutoff.json", {"status": "CUTOFF_OBSERVED",
+                "atUTC": datetime.now(timezone.utc).isoformat(), "atMonotonic": now,
+                "lateSeconds": max(0, now-stop_mono), "reservationSha256": reserve_sha,
+                "campaignNonce": r["nonce"], "productStop": stop_result,
+                "rootTerminalVerified": terminal})
+        if now >= end_mono:
+            owned_marker(coord, "deadline_expired.json", {"status": "ORIGINAL_1200S_EXPIRED",
+                "atUTC": datetime.now(timezone.utc).isoformat(), "atMonotonic": now,
+                "lateSeconds": max(0, now-end_mono), "reservationSha256": reserve_sha,
+                "campaignNonce": r["nonce"], "rootTerminalVerified": terminal,
+                "outstandingMetadataChildren": [n for n, p in HELD_CHILDREN if p.poll() is None]})
+            return
+        # A verified Root terminal cannot make the +1020 duty disappear.
+        # Even an early verified terminal does not remap or erase the original
+        # +1200 expiration record. Remain managed until that clock expires.
+        time.sleep(min(0.25, max(0.01, stop_mono-now if not cutoff_sent else end_mono-now)))
+
 def preclock(recipe_path, recipe_sha, expected_head):
     global GIT, ENV, LOG_ROOT
     no_reparse(ROOT)
     if Path.cwd().resolve() != ROOT: hold("PROJECT_CWD_REQUIRED")
+    no_reparse(PRODUCT_ROOT)
+    if (not PRODUCT_ROOT.is_absolute() or
+        PRODUCT_ROOT.resolve(strict=False) != PRODUCT_ROOT or
+        not PRODUCT_ROOT.is_relative_to(ROOT / ".cvf" / "runtime") or
+        PRODUCT_ROOT.exists()): hold("PRODUCT_RUNTIME_ROOT_NOT_FRESH")
     if not recipe_path.startswith(PROBE + "/"): hold("RECIPE_SCOPE")
     # Root passes the exact recipe SHA out of band. Pure file I/O precedes Git.
     recipe_bytes = read(inside(recipe_path, {recipe_path}))
@@ -177,31 +357,46 @@ def preclock(recipe_path, recipe_sha, expected_head):
         hold("CHILD_LOG_ROOT_NOT_EXCLUSIVE")
     LOG_ROOT.mkdir(parents=True, exist_ok=False)
     no_reparse(LOG_ROOT)
-    empty_hooks = LOG_ROOT / "empty_hooks"
-    empty_hooks.mkdir(exist_ok=False)
-    ENV = {k: os.environ[k] for k in ("SYSTEMROOT", "WINDIR", "USERPROFILE", "LOCALAPPDATA") if k in os.environ}
+    # Remove inherited per-process Git overrides only. Keep real system/global
+    # config, identity and hooks active; do not inject core.hooksPath or skip flags.
+    ENV = {k: os.environ[k] for k in ("SYSTEMROOT", "WINDIR", "USERPROFILE", "LOCALAPPDATA",
+                                     "APPDATA", "HOME", "XDG_CONFIG_HOME", "PROGRAMDATA",
+                                     "HOMEDRIVE", "HOMEPATH", "TEMP", "TMP") if k in os.environ}
     ENV["PATH"] = os.pathsep.join((str(Path(GIT).parent), str(Path(sys.executable).parent), r"C:\Windows\System32"))
-    ENV["GIT_CONFIG_NOSYSTEM"] = "1"
-    ENV["GIT_CONFIG_GLOBAL"] = os.devnull
-    ENV["GIT_TERMINAL_PROMPT"] = "0"
-    ENV["GIT_NO_REPLACE_OBJECTS"] = "1"
-    ENV["GIT_CONFIG_COUNT"] = "1"
-    ENV["GIT_CONFIG_KEY_0"] = "core.hooksPath"
-    ENV["GIT_CONFIG_VALUE_0"] = str(empty_hooks)
+    if any(k.upper().startswith("GIT_") for k in ENV): hold("AMBIENT_GIT_OVERRIDE_NOT_SCRUBBED")
     committed(recipe_path, recipe_sha)
     committed(ref["path"], ref["sha256"])
     if not re.fullmatch(r"[0-9a-f]{40}", expected_head) or git("rev-parse", "HEAD").decode().strip() != expected_head:
         hold("HEAD_DRIFT")
     clean()
+    # These are mandatory preclock facts. Configured hooks must be allowed to
+    # run naturally at commit; their future exit/time is charged to the 60s op.
+    git("var", "GIT_AUTHOR_IDENT")
+    git("var", "GIT_COMMITTER_IDENT")
+    hook_rc, hook_value = git_optional("config", "--path", "--get", "core.hooksPath")
+    hook_path = (Path(hook_value.decode("utf-8").strip()) if hook_rc == 0 else
+                 Path(git("rev-parse", "--git-path", "hooks").decode("utf-8").strip()))
+    if not hook_path.is_absolute(): hook_path = ROOT / hook_path
+    no_reparse(hook_path)
+    if hook_path.exists() and not hook_path.is_dir(): hold("HOOK_CONFIG_NOT_DIRECTORY")
+    hook_files = {}
+    if hook_path.exists():
+        for hook in hook_path.iterdir():
+            no_reparse(hook)
+            if hook.is_file() and not hook.name.endswith(".sample"):
+                hook_files[hook.name] = sha(read(hook))
+    put_new(LOG_ROOT / "git_policy_readiness.json", {"authorIdentityObserved": True,
+        "committerIdentityObserved": True, "configuredHooksPath": str(hook_path),
+        "configuredHookHashes": hook_files, "ambientGitOverridesRemoved": True,
+        "systemGlobalConfigNotDisabled": True})
     if not re.fullmatch(r"CVF_SESSION/authority/CCMAI-RUNTIME-139-[A-Za-z0-9_-]+-ADMISSION\.json", r["freshGrant"]["path"]):
         hold("FRESH_GRANT_PATH")
     grant = committed(r["freshGrant"]["path"], r["freshGrant"]["sha256"])
     if (grant.get("kind") != "OWNER_APPROVED_R139_SOURCE_AND_CONDITIONAL_REENTRY" or
         grant.get("ownerApproved") is not True or grant.get("trancheId") != "CCMAI-RUNTIME-139" or
         grant.get("freshCampaignCap") != 1 or grant.get("oldCampaignSpent") != 1 or
-        grant.get("oldQueriesSpent") != 5 or grant.get("sourceAdaptationAccepted") is not True or
+        grant.get("oldQueriesSpent") != 5 or grant.get("sourceAdaptationAccepted") is not False or
         grant.get("providerPhysicalCap") != 1 or grant.get("maximumNewUSD") != 1 or
-        grant.get("approvedRecipePath") != recipe_path or
         grant.get("priorUnusedProspectiveAllowanceSupersededNotStacked") is not True or
         grant.get("olderUnknownProviderOutcomeRetained") is not True or
         grant.get("currentLineageProviderAttemptsObserved") != 0 or
@@ -218,12 +413,15 @@ def preclock(recipe_path, recipe_sha, expected_head):
                 "$b=$x.LastBootUpTime.ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ss.fffffffZ'); "
                 "Write-Output ($h+'|'+$b)")
     actual_boot = child([pins["tools"]["powershell"]["path"], "-NoProfile", "-NonInteractive",
-                         "-Command", os_query], 10).decode("utf-8").strip()
+                         "-Command", os_query], 5).decode("utf-8").strip()
     if actual_boot != boot["hostBootId"]: hold("CURRENT_HOST_BOOT_DRIFT")
     for who in ("root", "internal", "antigravity"):
         item = r["actorAcks"][who]; ack = committed(item["path"], item["sha256"])
         if ack.get("ready") is not True or ack.get("freshGrantSha256") != r["freshGrant"]["sha256"]:
             hold("ACTOR_ACK")
+        if who == "root" and (ack.get("originalControlPopenCustodian") != "Root" or
+                              ack.get("originalControlWaitExitReceiptPlanned") is not True):
+            hold("ROOT_MANAGED_CONTROL_HANDLE_ACK")
     if (r.get("operator") != "Owner in this conversation" or r.get("operatorAvailable") is not True or
         r.get("oldResourceExclusionReviewed") is not True): hold("OWNERSHIP")
     coord = r["coordinationRoot"]
@@ -257,29 +455,61 @@ def preclock(recipe_path, recipe_sha, expected_head):
         if not rel.startswith(".cvf/runtime/r139_") or not rel.endswith(".json") or inside(rel, {rel}).exists():
             hold("OWNED_PATH_OCCUPIED")
     if inside(RECEIPT, ALLOWED).exists(): hold("RECEIPT_OCCUPIED")
-    source_budget = {"workerPythonMax": 2,
-         "workerOfflineCompileMax": 2, "rootPythonMax": 1, "rootPureGoMax": 1,
-         "allowedSourcePathsOnly": sorted(("backend/api/handlers/intervention_execution_browser_test.go",
-             "scripts/r139_execution_supervisor.py", "scripts/tests/test_r139_execution_supervisor.py"))}
-    if (r["freshGrant"]["sha256"] != ref["ownerEnvelopeSha256"] or
+    source_budget = {"authoringPasses": 1, "consolidatedRepairPasses": 1,
+        "workerFocusedPython": 2, "workerOfflineGoCompile": 2,
+        "rootFocusedPython": 1, "rootAuditedPureGo": 1}
+    if (r["freshGrant"]["sha256"] != build["ownerEnvelopeSha256"] or
         r["freshSourceCheckBudgetOutsideClock"] != source_budget or
-        grant.get("approvedSourceCheckBudgetOutsideClock") != source_budget or
+        grant.get("sourceBudget") != source_budget or
         build.get("sourceChecksAccepted") is not True): hold("SOURCE_BUDGET_BOUNDARY")
     cap = r["newBudget"]
     required = {"oneCampaign": 1, "internalReadOnlyQueries": 5,
       "browserSubagentInvocationsMax": 4, "newOwnedPages": 1, "creationNavigation": 1,
       "samePageControlNavigation": 1, "pageReadObservationsMax": 4,
       "originalCapturesMax": 2, "exactFinalCloseMax": 1,
-      "globalMetadataListsMax": 2, "nativeExecutePOSTMax": 8,
+      "baselineMetadataEnumeration": 1, "finalMetadataEnumeration": 1,
+      "nativeExecutePOSTMax": 8,
       "browserExecutePOSTMax": 1, "grantsMax": 3, "authPOSTMax": 4,
       "statusReadStartsMax": 12, "statusReadSpacingSecondsMin": 5,
       "statusReadLifetimeSecondsMax": 60, "physicalProviderAttemptsMax": 1,
-      "newUSDMax": 1, "automaticRetry": 0, "sourceChecksDuringCampaign": 0,
+      "newUSDMax": 1, "keyContentReadsMax": 1, "requestBytesMax": 6000,
+      "completionTokensMax": 768, "fixtureStartsMax": 1,
+      "fixtureFinalStopsMax": 1, "backendStartsMax": 1, "viteStartsMax": 1,
+      "publicTariffRefreshIfNeededMax": 1, "dockerQuerySecondsMax": 20,
+      "powershellQuerySecondsMax": 5, "automaticRetry": 0,
+      "sourceChecksDuringCampaign": 0,
       "wholeCampaignSeconds": 1200, "stopBeforeSeconds": 1020,
       "cleanupReserveSeconds": 180, "oldUnusedProviderAllowanceSupersededNotStacked": True}
-    if cap != required or grant.get("approvedCaps") != cap: hold("EFFECT_CAPS")
-    if (r["globalHostListScopeApproved"] is not True or
-        grant.get("globalHostListScopeApproved") is not True or
+    if cap != required: hold("EFFECT_CAPS")
+    gc = grant["caps"]
+    grant_bound = {"oneCampaign": gc["campaigns"], "internalReadOnlyQueries": gc["readonlyQueries"],
+        "browserSubagentInvocationsMax": gc["browserTaskCalls"], "newOwnedPages": gc["ownedExplicitPages"],
+        "creationNavigation": gc["creationNavigation"], "samePageControlNavigation": gc["samePageControlNavigation"],
+        "pageReadObservationsMax": gc["g0ReadObservations"], "originalCapturesMax": gc["g0Captures"],
+         "exactFinalCloseMax": gc["finalExactPageClose"],
+         "baselineMetadataEnumeration": gc["baselineMetadataEnumeration"],
+         "finalMetadataEnumeration": gc["finalMetadataEnumeration"],
+        "nativeExecutePOSTMax": gc["nativeExecutePOST"], "browserExecutePOSTMax": gc["browserExecutePOST"],
+        "grantsMax": gc["grants"], "authPOSTMax": gc["authPOST"],
+        "statusReadStartsMax": gc["statusReadStarts"], "statusReadSpacingSecondsMin": gc["statusReadSpacingSecondsMin"],
+        "statusReadLifetimeSecondsMax": gc["statusReadLifetimeSecondsMax"],
+        "physicalProviderAttemptsMax": gc["providerPhysicalCalls"], "newUSDMax": gc["maximumUSD"],
+         "keyContentReadsMax": gc["keyContentReads"], "requestBytesMax": gc["requestBytes"],
+         "completionTokensMax": gc["completionTokens"],
+         "fixtureStartsMax": gc["fixtureStarts"], "fixtureFinalStopsMax": gc["fixtureFinalStops"],
+         "backendStartsMax": gc["backendStarts"], "viteStartsMax": gc["viteStarts"],
+         "publicTariffRefreshIfNeededMax": gc["publicTariffRefreshIfNeeded"],
+         "dockerQuerySecondsMax": gc["dockerQuerySecondsMax"],
+         "powershellQuerySecondsMax": gc["powershellQuerySecondsMax"],
+        "automaticRetry": gc["automaticRetry"], "sourceChecksDuringCampaign": 0,
+        "wholeCampaignSeconds": gc["lifecycleSeconds"], "stopBeforeSeconds": gc["lifecycleSeconds"] - gc["cleanupReserveSeconds"],
+        "cleanupReserveSeconds": gc["cleanupReserveSeconds"], "oldUnusedProviderAllowanceSupersededNotStacked":
+        grant["priorUnusedProspectiveAllowanceSupersededNotStacked"]}
+    if cap != grant_bound: hold("GRANT_EFFECT_CAPS")
+    if (grant["privacyScope"]["tabMetadataOnly"] is not True or
+        grant["privacyScope"]["baselineAndFinalOnly"] is not True or
+        grant["privacyScope"]["unrelatedTabDOMContent"] is not False or
+        grant["privacyScope"]["unrelatedTabScreenshotsOrControl"] is not False or
         not r.get("protectedBaselineReference") or not r.get("nativePageTargetPlanReference")):
         hold("NATIVE_SCOPE_NOT_ADMITTED")
     for key in ("protectedBaselineReference", "nativePageTargetPlanReference"):
@@ -302,7 +532,7 @@ def preclock(recipe_path, recipe_sha, expected_head):
     return r, expected_head, pins
 
 def activate(r, base, pins):
-    global OP_END
+    global OP_END, RESERVATION, RECIPE
     clean()
     if git("rev-parse", "HEAD").decode().strip() != base: hold("HEAD_BEFORE_RESERVE")
     nonce = r["nonce"]
@@ -318,6 +548,8 @@ def activate(r, base, pins):
       "stopMonotonic": mono + 1020, "deadlineMonotonic": mono + 1200,
       "cleanupReserveSeconds": 180, "committedDispatchHead": base,
       "freshGrantSha256": r["freshGrant"]["sha256"]}
+    RECIPE = r
+    RESERVATION = reservation
     OP_END = mono + 60
     reserve_sha = None
     # Reservation creation itself is in the consumed/uncertain failure envelope.
@@ -342,12 +574,17 @@ def activate(r, base, pins):
           [sys.executable, "-B", "scripts/cvf_downstream_gate.py", "preflight"],
           [sys.executable, "-B", "scripts/cvf_gates/cvf_downstream_gate_runner.py", "run", "--phase", "pre-commit", "--project-root", ".", "--packet", "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md", "--packet", RECEIPT])
         for argv in fixed: child(argv, OP_END - time.monotonic())
-        changed = set(filter(None, git("diff", "--name-only", "-z").decode("utf-8").split("\0")))
-        untracked = set(filter(None, git("ls-files", "--others", "--exclude-standard", "-z").decode("utf-8").split("\0")))
-        if not (changed | untracked) or (changed | untracked) - ALLOWED: hold("CHANGED_SET")
+        changed = nul_paths(git("diff", "--name-only", "-z"))
+        staged_before = nul_paths(git("diff", "--cached", "--name-only", "-z"))
+        untracked = nul_paths(git("ls-files", "--others", "--exclude-standard", "-z"))
+        if staged_before or not (changed | untracked) or (changed | untracked) - ALLOWED:
+            hold("CHANGED_SET")
+        for rel in changed | untracked: inside(rel, ALLOWED)
         child([GIT, "add", "--", *sorted(changed | untracked)], OP_END - time.monotonic())
-        staged = set(filter(None, git("diff", "--cached", "--name-only", "-z").decode("utf-8").split("\0")))
-        if staged != changed | untracked: hold("STAGED_SET")
+        staged = nul_paths(git("diff", "--cached", "--name-only", "-z"))
+        unstaged_after = nul_paths(git("diff", "--name-only", "-z"))
+        untracked_after = nul_paths(git("ls-files", "--others", "--exclude-standard", "-z"))
+        if staged != changed | untracked or unstaged_after or untracked_after: hold("STAGED_SET")
         child([GIT, "commit", "-m", "R139 reserve approved integrated G0 campaign"], OP_END - time.monotonic())
         head = git("rev-parse", "HEAD").decode().strip()
         clean()
@@ -373,11 +610,16 @@ def main():
     try:
         activate(*preclock(sys.argv[1], sys.argv[2], sys.argv[3]))
     finally:
-        # An unreturned original child prevents normal completion. This wait
-        # has NO hard bound and never releases browser/product authority.
+        # The original campaign clock survives both signal and G0-only abort.
+        # A stubborn metadata child never causes an unbounded blocking wait.
+        if RESERVATION is not None and RECIPE is not None:
+            reserve_path = inside(RECIPE["reservationPath"], {RECIPE["reservationPath"]})
+            reserve_sha = sha(read(reserve_path)) if reserve_path.is_file() else "UNWRITTEN_UNCERTAIN"
+            monitor_original_clock(RECIPE, RESERVATION, reserve_sha)
         for name, process in HELD_CHILDREN:
-            exit_code = process.wait()
+            code = process.poll()
             put_new(LOG_ROOT / (name + ".late_wait.json"),
-                {"originalWaitEventuallyReturned": True, "exitCode": exit_code,
-                 "atUTC": datetime.now(timezone.utc).isoformat()})
+                {"originalWaitEventuallyReturned": code is not None, "exitCode": code,
+                 "atUTC": datetime.now(timezone.utc).isoformat(),
+                 "unknownIfNone": code is None})
 if __name__ == "__main__": main()

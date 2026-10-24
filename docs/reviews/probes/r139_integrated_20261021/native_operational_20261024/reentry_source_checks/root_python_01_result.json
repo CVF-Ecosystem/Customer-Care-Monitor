@@ -1,0 +1,32 @@
+{
+  "slot": "rootFocusedPython",
+  "usedOrUncertain": 1,
+  "startUTC": "2026-10-24T04:43:17.991344+00:00",
+  "endUTC": "2026-10-24T04:43:26.167087+00:00",
+  "elapsedSeconds": 8.175215499999467,
+  "originalPopenWaitReturned": true,
+  "exitCode": 0,
+  "timeout": false,
+  "stdoutPath": ".cvf/runtime/r139_page_target_root_checks_20261024/python.stdout.bin",
+  "stderrPath": ".cvf/runtime/r139_page_target_root_checks_20261024/python.stderr.bin",
+  "stdoutSha256": "35d8682dcfaabe4fdfa9929e1e865d352802085167358f00999bfa5e24e5a816",
+  "stderrSha256": "67ec44a13dbfc9bac51e85d62d4292eaaecc6134df24780779ffad68d55119ff",
+  "sourceSha256Before": {
+    "scripts/r139_execution_supervisor.py": "3907b6fdad76a50d804245622296891496f9e54b566d2ed24adcfc8c67ec5ebf",
+    "scripts/tests/test_r139_execution_supervisor.py": "a4d4bf8ba461eecf195683eb6f5ab2c13cea8914da3208d540d3f467c57fe6a7",
+    "backend/api/handlers/intervention_execution_browser_test.go": "df940dbc14dd350cbd8c2d183efcf5db23ffe0efed935231a9405c0d339f13d4",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_payload_templates.json": "f0996b831f0ab53989af8ce079306059fc1cc30eb962194b7485ea6f5e7b4b05",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt": "6df45acd58a657a19ffaf2e70a064d217c3de8ebda7c67b1fcb89a36b78bcb89",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/recorder_design.py.txt": "af51faf9944ec7dce7d4240edfc24fe311887d4caa535f47e7afbffa133fb00d"
+  },
+  "sourceSha256After": {
+    "scripts/r139_execution_supervisor.py": "3907b6fdad76a50d804245622296891496f9e54b566d2ed24adcfc8c67ec5ebf",
+    "scripts/tests/test_r139_execution_supervisor.py": "a4d4bf8ba461eecf195683eb6f5ab2c13cea8914da3208d540d3f467c57fe6a7",
+    "backend/api/handlers/intervention_execution_browser_test.go": "df940dbc14dd350cbd8c2d183efcf5db23ffe0efed935231a9405c0d339f13d4",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_payload_templates.json": "f0996b831f0ab53989af8ce079306059fc1cc30eb962194b7485ea6f5e7b4b05",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt": "6df45acd58a657a19ffaf2e70a064d217c3de8ebda7c67b1fcb89a36b78bcb89",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/recorder_design.py.txt": "af51faf9944ec7dce7d4240edfc24fe311887d4caa535f47e7afbffa133fb00d"
+  },
+  "pinsUnchanged": true,
+  "claimBoundary": "Offline software and pure metadata helper only; no runtime governance proof."
+}

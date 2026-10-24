@@ -1,0 +1,39 @@
+{
+  "slot": "rootAuditedPureGo",
+  "usedOrUncertain": 1,
+  "startUTC": "2026-10-24T04:45:47.055239+00:00",
+  "endUTC": "2026-10-24T04:45:50.383989+00:00",
+  "elapsedSeconds": 3.328596799998195,
+  "originalPopenWaitReturned": true,
+  "exitCode": 0,
+  "timeout": false,
+  "stdoutPath": ".cvf/runtime/r139_page_target_root_checks_20261024/go.stdout.bin",
+  "stderrPath": ".cvf/runtime/r139_page_target_root_checks_20261024/go.stderr.bin",
+  "stdoutSha256": "94f25aac821928749940fab5f270f56d09054777cd0dff3d37cbf1d8b8dce587",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "sourceSha256Before": {
+    "scripts/r139_execution_supervisor.py": "3907b6fdad76a50d804245622296891496f9e54b566d2ed24adcfc8c67ec5ebf",
+    "scripts/tests/test_r139_execution_supervisor.py": "a4d4bf8ba461eecf195683eb6f5ab2c13cea8914da3208d540d3f467c57fe6a7",
+    "backend/api/handlers/intervention_execution_browser_test.go": "df940dbc14dd350cbd8c2d183efcf5db23ffe0efed935231a9405c0d339f13d4"
+  },
+  "sourceSha256After": {
+    "scripts/r139_execution_supervisor.py": "3907b6fdad76a50d804245622296891496f9e54b566d2ed24adcfc8c67ec5ebf",
+    "scripts/tests/test_r139_execution_supervisor.py": "a4d4bf8ba461eecf195683eb6f5ab2c13cea8914da3208d540d3f467c57fe6a7",
+    "backend/api/handlers/intervention_execution_browser_test.go": "df940dbc14dd350cbd8c2d183efcf5db23ffe0efed935231a9405c0d339f13d4"
+  },
+  "pinsUnchanged": true,
+  "binarySha256After": "74072a5f34b94ed090520bba3b21095cc2caac18be6eb08e6b10fe9a8d1fdb61",
+  "expectedTests": [
+    "TestR139PureRouteAdmission",
+    "TestR139PureBrowserReservationAdmission",
+    "TestR139PureBrowserTerminalClose",
+    "TestR139PurePageTargetV1",
+    "TestR139PureFinalEvidenceSuccess",
+    "TestR139PureFinalEvidenceFatalGoexit",
+    "TestR139PureFinalEvidenceIOFailure",
+    "TestR139PureJournalRequestIOFailureBlocksNext",
+    "TestR139PureJournalCapturedResponseSurvivesGoexit",
+    "TestR139PureJournalUnsafeResponseHasNoInventedReceipt"
+  ],
+  "claimBoundary": "Offline software only; real-provider/runtime governance NOT_RUN."
+}

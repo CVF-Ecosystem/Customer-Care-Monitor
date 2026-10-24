@@ -127,6 +127,8 @@ def committed(relative: str) -> Path:
 
 NATIVE_ID_FIELDS = ("nativeContractId", "trancheId", "campaignNonce", "pageId", "browserSessionId", "operator", "closeMode")
 NATIVE_EVENT_FIELDS = ("creation", "control", "capture")
+PAGE_TARGET_ID_FIELDS = ("nativeContractId", "trancheId", "campaignNonce", "pageId", "ownedScopeId", "operator", "closeMode")
+PAGE_TARGET_EVENTS = ("creation", "control", "capture", "handoff")
 
 
 def native_text(value: object, code: str) -> str:
@@ -198,6 +200,121 @@ def native_event(admission: dict, path: object, sha: object, root: Path, event: 
     return data
 
 
+def page_target_identity(admission: dict, record: dict, code: str) -> None:
+    require(admission.get("proofContract") == "native_page_target_v1", code)
+    require(admission.get("scopeOrigin") == "caller_owned_explicit_page_target" and
+            type(admission.get("ownedPageIds")) is list and
+            admission["ownedPageIds"] == [admission.get("pageId")], code)
+    require(admission.get("closeMode") == "operator_fallback" and
+            admission.get("fallbackCloseOperator") == admission.get("operator"), code)
+    require("browserSessionId" not in admission and "browserSessionId" not in record, code)
+    for field in PAGE_TARGET_ID_FIELDS:
+        expected = native_text(admission.get(field), code)
+        require(record.get(field) == expected and type(record.get(field)) is str, code)
+    require(record.get("proofContract") == "native_page_target_v1" and
+            record.get("scopeOrigin") == "caller_owned_explicit_page_target" and
+            type(record.get("ownedPageIds")) is list and
+            record["ownedPageIds"] == [admission["pageId"]], code)
+
+
+def page_target_origin(record: dict, code: str) -> None:
+    for field in ("nativeTaskRunRef", "nativeToolCallRef", "rawOriginalToolReference"):
+        native_path_text(record.get(field), code)
+    require(type(record.get("rawOriginalToolSha256")) is str and
+            HEX64.fullmatch(record["rawOriginalToolSha256"]) is not None, code)
+    basis = record.get("timeBasis")
+    at = native_time(record.get("atUTC"), code)
+    require(basis in ("original_native_tool_return", "normalized_from_original_native_tool_return"), code)
+    if basis == "normalized_from_original_native_tool_return":
+        raw = record.get("rawObservedAtUTC")
+        require(type(raw) is str, code)
+        try:
+            original = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        except ValueError as exc:
+            raise Hold(code) from exc
+        require(original.tzinfo is not None and original.utcoffset() == timedelta(0) and
+                original.replace(microsecond=0) == at, code)
+
+
+def page_target_ids(value: object, code: str) -> list[str]:
+    require(type(value) is list and all(type(item) is str and native_text(item, code) for item in value), code)
+    require(len(value) == len(set(value)), code)
+    return value
+
+
+def page_target_file(admission: dict, path: object, sha: object, root: Path,
+                     event: str) -> dict:
+    _, data = native_file(path, sha, root, "PAGE_TARGET_EVIDENCE_INVALID")
+    page_target_identity(admission, data, "PAGE_TARGET_IDENTITY_INVALID")
+    require(data.get("event") == event, "PAGE_TARGET_EVENT_INVALID")
+    page_target_origin(data, "PAGE_TARGET_ORIGIN_INVALID")
+    return data
+
+
+def verify_page_target_receipt(admission: dict, proof: dict, *, require_runtime_absent: bool) -> None:
+    readiness, runtime = native_roots(admission)
+    require(proof.get("status") == "RESERVED_NATIVE_PAGE_TARGET_CONTROL_CAPTURE_HANDOFF" and
+            proof.get("browserId") == "antigravity_native" and
+            proof.get("protocol") == "https" and proof.get("closeObserved") is False,
+            "PAGE_TARGET_PREFIX_INVALID")
+    page_target_identity(admission, proof, "PAGE_TARGET_PREFIX_IDENTITY_INVALID")
+    if require_runtime_absent:
+        require(not runtime.exists(), "PRODUCT_RUNTIME_ROOT_PREEXISTING")
+    sealed = native_time(proof.get("reservedAtUTC"), "PAGE_TARGET_SEAL_INVALID")
+    nonce = admission["campaignNonce"]
+    creation_url = f"https://example.com/#r139_nonce={nonce}&phase=created"
+    control_url = f"https://example.com/#r139_nonce={nonce}&phase=controlled"
+    baseline = page_target_file(admission, proof.get("baselineInventoryPath"),
+                                proof.get("baselineInventorySha256"), readiness, "baseline_inventory")
+    baseline_ids = page_target_ids(baseline.get("pageIds"), "PAGE_TARGET_BASELINE_IDS_INVALID")
+    require(admission["pageId"] not in baseline_ids, "PAGE_TARGET_PREEXISTING")
+    previous = native_time(baseline["atUTC"], "PAGE_TARGET_BASELINE_TIME_INVALID")
+    require(previous <= sealed and baseline.get("inventoryScope") == "metadata_only", "PAGE_TARGET_BASELINE_SCOPE_INVALID")
+    first_run = None
+    creation_at = None
+    for event in PAGE_TARGET_EVENTS:
+        data = page_target_file(admission, proof.get(event + "EvidencePath"),
+                                proof.get(event + "EvidenceSha256"), readiness, event)
+        at = native_time(data["atUTC"], "PAGE_TARGET_EVENT_TIME_INVALID")
+        require(previous <= at <= sealed, "PAGE_TARGET_CHRONOLOGY_INVALID")
+        previous = at
+        if event == "creation":
+            first_run = data["nativeTaskRunRef"]
+            creation_at = at
+            require(data.get("pageIdToReplace") == "new_page" and
+                    data.get("observedPageId") == admission["pageId"] and
+                    data.get("observedUrl") == creation_url, "PAGE_TARGET_CREATION_INVALID")
+        elif event == "control":
+            require(data["nativeTaskRunRef"] == first_run and
+                    data.get("pageIdToReplace") == admission["pageId"] and
+                    data.get("observedUrl") == control_url, "PAGE_TARGET_CONTROL_INVALID")
+        elif event == "capture":
+            require(data["nativeTaskRunRef"] == first_run and
+                    data.get("observedPageId") == admission["pageId"] and
+                    data.get("observedUrl") == control_url and
+                    type(data.get("captureSha256")) is str and
+                    HEX64.fullmatch(data["captureSha256"]) is not None,
+                    "PAGE_TARGET_CAPTURE_INVALID")
+        else:
+            require(data["nativeTaskRunRef"] != first_run and
+                    data.get("observedPageId") == admission["pageId"] and
+                    data.get("observedUrl") == control_url and
+                    data.get("observedNonce") == nonce,
+                    "PAGE_TARGET_CROSS_TASK_HANDOFF_INVALID")
+    ledger = page_target_file(admission, proof.get("creationLedgerPath"),
+                              proof.get("creationLedgerSha256"), readiness, "creation_ledger")
+    require(ledger.get("newPageIds") == [admission["pageId"]] and
+            ledger.get("baselineInventorySha256") == proof.get("baselineInventorySha256") and
+            ledger.get("creationEvidenceSha256") == proof.get("creationEvidenceSha256") and
+            ledger.get("nativeTaskRunRef") == first_run and
+            creation_at is not None and
+            creation_at <= native_time(ledger["atUTC"], "PAGE_TARGET_LEDGER_TIME_INVALID") <= sealed,
+            "PAGE_TARGET_CREATION_LEDGER_INVALID")
+    for field in ("browserCloseReceiptPath", "actionEvidencePath", "finalInventoryPath",
+                  "rawNativeInventoryPath", "browserDoneSignalPath"):
+        native_future_path(admission, field, runtime, absent=require_runtime_absent)
+
+
 def native_roots(admission: dict) -> tuple[Path, Path]:
     readiness = native_root(admission, "browserReadinessRoot")
     runtime = native_root(admission, "runtimeRoot")
@@ -220,7 +337,7 @@ def native_future_path(admission: dict, field: str, root: Path, *, absent: bool)
 
 def verify_browser_receipt(value: dict, *, require_runtime_absent: bool = True) -> None:
     tool = value.get("browserTool")
-    require(tool in ("supported_CUA_IAB", "antigravity_native") and value.get("browserSupported") is True, "BROWSER_CAPABILITY_UNPROVEN")
+    require(tool in ("supported_CUA_IAB", "antigravity_native", "antigravity_page_target") and value.get("browserSupported") is True, "BROWSER_CAPABILITY_UNPROVEN")
     browser_rel = value.get("browserReceiptPath", "")
     require(isinstance(browser_rel, str) and browser_rel.strip(), "BROWSER_RECEIPT_PATH_MISSING")
     browser = project_path(browser_rel)
@@ -259,11 +376,18 @@ def verify_browser_receipt(value: dict, *, require_runtime_absent: bool = True) 
             previous_evidence = at
         for field in ("browserCloseReceiptPath", "actionEvidencePath", "finalInventoryPath", "rawNativeInventoryPath"):
             native_future_path(value, field, runtime, absent=require_runtime_absent)
+    elif tool == "antigravity_page_target":
+        readiness, _ = native_roots(value)
+        _, proof = native_file(browser_rel, expected, ROOT.resolve(), "PAGE_TARGET_PREFIX_FILE_INVALID")
+        require((ROOT / browser_rel).resolve().is_relative_to(readiness), "PAGE_TARGET_PREFIX_ROOT_INVALID")
+        verify_page_target_receipt(value, proof, require_runtime_absent=require_runtime_absent)
     else:
         raise Hold("BROWSER_TOOL_UNSUPPORTED")
 
 
 def verify_browser_terminal_close(admission: dict, runtime: Path, external: Path) -> dict:
+    if admission.get("browserTool") == "antigravity_page_target":
+        return verify_page_target_terminal(admission, runtime)
     verify_browser_receipt(admission, require_runtime_absent=False)
     readiness, product_root = native_roots(admission)
     require(runtime.resolve() == product_root, "PRODUCT_RUNTIME_ROOT_MISMATCH")
@@ -341,6 +465,108 @@ def verify_browser_terminal_close(admission: dict, runtime: Path, external: Path
             "finalInventorySha256": receipt["finalInventorySha256"]}
 
 
+def verify_page_target_terminal(admission: dict, runtime: Path) -> dict:
+    verify_browser_receipt(admission, require_runtime_absent=False)
+    readiness, product_root = native_roots(admission)
+    require(runtime.resolve() == product_root, "PAGE_TARGET_RUNTIME_ROOT_MISMATCH")
+    _, prefix = native_file(admission.get("browserReceiptPath"),
+                            admission.get("browserReceiptSha256"), ROOT.resolve(),
+                            "PAGE_TARGET_PREFIX_INVALID")
+    close_path = native_future_path(admission, "browserCloseReceiptPath", product_root, absent=False)
+    require(close_path.is_file(), "PAGE_TARGET_CLOSE_FILE_MISSING")
+    receipt = read_json(close_path)
+    close_sha = digest(close_path)
+    page_target_identity(admission, receipt, "PAGE_TARGET_CLOSE_IDENTITY_INVALID")
+    require(receipt.get("status") == "CLOSED_EXACT_OWNED_PAGE_TARGET" and
+            receipt.get("browserId") == "antigravity_native" and
+            receipt.get("closeObserved") is True and
+            type(receipt.get("ownedTabsFinal")) is int and receipt["ownedTabsFinal"] == 0 and
+            "actualCloseActionAtUTC" not in receipt and "closedAtUTC" not in receipt and
+            receipt.get("closureTimeBasis") == "native_final_metadata_observation" and
+            receipt.get("reservedAtUTC") == prefix.get("reservedAtUTC"),
+            "PAGE_TARGET_CLOSE_STATUS_INVALID")
+    report_at = native_time(receipt.get("operatorReportReceivedAtUTC"), "PAGE_TARGET_REPORT_TIME_INVALID")
+    observed_at = native_time(receipt.get("closureObservedAtUTC"), "PAGE_TARGET_OBSERVATION_TIME_INVALID")
+    reserved = native_time(prefix.get("reservedAtUTC"), "PAGE_TARGET_SEAL_INVALID")
+    deadline_text = admission.get("grantDeadlineUTC")
+    require(type(deadline_text) is str and re.fullmatch(r"\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ", deadline_text),
+            "PAGE_TARGET_DEADLINE_INVALID")
+    deadline = datetime.strptime(deadline_text, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+    require(reserved <= report_at <= observed_at <= deadline, "PAGE_TARGET_CLOSE_CHRONOLOGY_INVALID")
+    require(type(receipt.get("ownerReportReferenceSha256")) is str and
+            HEX64.fullmatch(receipt["ownerReportReferenceSha256"]) is not None and
+            receipt.get("operator") == "Owner in this conversation", "PAGE_TARGET_OWNER_REPORT_INVALID")
+    require(receipt.get("actionEvidencePath") == admission.get("actionEvidencePath") and
+            receipt.get("finalInventoryPath") == admission.get("finalInventoryPath"),
+            "PAGE_TARGET_FUTURE_PATH_MISMATCH")
+    action = page_target_file(admission, receipt.get("actionEvidencePath"),
+                              receipt.get("actionEvidenceSha256"), product_root, "action_sequence")
+    rows = action.get("actions")
+    require(type(rows) is list and len(rows) >= 2 and
+            action.get("atUTC") == receipt.get("actionAtUTC"), "PAGE_TARGET_ACTIONS_MISSING")
+    previous = reserved
+    for index, row in enumerate(rows):
+        require(type(row) is dict and row.get("pageId") == admission["pageId"] and
+                row.get("action") in ("control", "capture", "handoff", "product_read",
+                                      "product_execute", "owner_close_report"),
+                "PAGE_TARGET_ACTION_INVALID")
+        at = native_time(row.get("atUTC"), "PAGE_TARGET_ACTION_TIME_INVALID")
+        require(previous <= at <= report_at, "PAGE_TARGET_ACTION_CHRONOLOGY_INVALID")
+        previous = at
+        if row["action"] == "owner_close_report":
+            require(index == len(rows) - 1 and at == report_at and
+                    row.get("reportSource") == "owner_in_conversation" and
+                    row.get("ownerReportReferenceSha256") == receipt["ownerReportReferenceSha256"],
+                    "PAGE_TARGET_OWNER_REPORT_ACTION_INVALID")
+        else:
+            require(index < len(rows) - 1 and
+                    type(row.get("rawOriginalToolSha256")) is str and
+                    HEX64.fullmatch(row["rawOriginalToolSha256"]) is not None and
+                    native_path_text(row.get("rawOriginalToolReference"), "PAGE_TARGET_ACTION_ORIGIN_INVALID"),
+                    "PAGE_TARGET_ACTION_ORIGIN_INVALID")
+    require(rows[-1]["action"] == "owner_close_report", "PAGE_TARGET_POST_CLOSE_ACTION")
+    inventory = page_target_file(admission, receipt.get("finalInventoryPath"),
+                                 receipt.get("finalInventorySha256"), product_root, "final_inventory")
+    require(inventory.get("atUTC") == receipt.get("closureObservedAtUTC") and
+            inventory.get("rawNativeInventoryPath") == admission.get("rawNativeInventoryPath") and
+            inventory.get("inventoryScope") == "metadata_only" and
+            type(inventory.get("ownedCount")) is int and inventory["ownedCount"] == 0,
+            "PAGE_TARGET_FINAL_INVENTORY_INVALID")
+    final_ids = page_target_ids(inventory.get("pageIds"), "PAGE_TARGET_FINAL_IDS_INVALID")
+    require(admission["pageId"] not in final_ids, "PAGE_TARGET_STILL_PRESENT")
+    baseline = page_target_file(admission, prefix.get("baselineInventoryPath"),
+                                prefix.get("baselineInventorySha256"), readiness, "baseline_inventory")
+    baseline_ids = page_target_ids(baseline.get("pageIds"), "PAGE_TARGET_BASELINE_IDS_INVALID")
+    require(set(final_ids) == set(baseline_ids), "PAGE_TARGET_PROTECTED_DRIFT")
+    raw = page_target_file(admission, inventory.get("rawNativeInventoryPath"),
+                           inventory.get("rawNativeInventorySha256"), product_root, "native_inventory")
+    require(raw.get("atUTC") == inventory["atUTC"] and raw.get("pageIds") == final_ids and
+            raw.get("inventoryScope") == "metadata_only" and
+            type(raw.get("ownedCount")) is int and raw["ownedCount"] == 0 and
+            raw.get("nativeTaskRunRef") != baseline.get("nativeTaskRunRef"),
+            "PAGE_TARGET_RAW_INVENTORY_MISMATCH")
+    marker_path = native_future_path(admission, "browserDoneSignalPath", product_root, absent=False)
+    require(marker_path.is_file(), "PAGE_TARGET_DONE_MARKER_MISSING")
+    marker = read_json(marker_path)
+    marker_at = native_time(marker.get("atUTC"), "PAGE_TARGET_DONE_TIME_INVALID")
+    require(marker.get("status") == "TERMINAL_EVIDENCE_WRITTEN" and
+            marker.get("proofContract") == "native_page_target_v1" and
+            marker.get("campaignNonce") == admission["campaignNonce"] and
+            marker.get("pageId") == admission["pageId"] and
+            marker.get("ownedScopeId") == admission["ownedScopeId"] and
+            observed_at <= marker_at <= deadline and
+            type(marker.get("evidenceSha256")) is dict and
+            marker["evidenceSha256"] == {
+                "browserCloseReceiptPath": close_sha,
+                "actionEvidencePath": receipt["actionEvidenceSha256"],
+                "finalInventoryPath": receipt["finalInventorySha256"],
+                "rawNativeInventoryPath": inventory["rawNativeInventorySha256"],
+            }, "PAGE_TARGET_DONE_MARKER_INVALID")
+    return {"receipt": receipt, "closeReceiptSha256": close_sha,
+            "actionEvidenceSha256": receipt["actionEvidenceSha256"],
+            "finalInventorySha256": receipt["finalInventorySha256"]}
+
+
 SOURCE_PIN_REQUIRED = {"backend/api/handlers/intervention_execution_browser_test.go", "scripts/r139_execution_supervisor.py", "scripts/r139_vite_config.mjs.template", "scripts/tests/test_r139_execution_supervisor.py", "backend/go.mod", "backend/go.sum", "frontend/package.json", "frontend/package-lock.json", "frontend/vite.config.ts"}
 
 
@@ -367,7 +593,7 @@ def fresh_runtime_admission(relative: str, *, expect_fresh_external: bool = True
     require(dirty.returncode == 0 and not dirty.stdout.strip(), "SOURCE_WORKTREE_DIRTY")
     require(value.get("nativeExecutePOST") == EXPECTED_NATIVE and value.get("browserExecutePOST") == EXPECTED_BROWSER and value.get("grantCap") == EXPECTED_GRANTS and value.get("providerCap") == 1 and value.get("automaticRetry") == 0, "EFFECT_CAPS_INVALID")
     verify_browser_receipt(value, require_runtime_absent=expect_fresh_external)
-    if expect_fresh_external and value.get("browserTool") == "antigravity_native":
+    if expect_fresh_external and value.get("browserTool") in ("antigravity_native", "antigravity_page_target"):
         close_path_rel = value.get("browserCloseReceiptPath")
         if close_path_rel:
             close_p = ROOT / close_path_rel

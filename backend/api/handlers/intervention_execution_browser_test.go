@@ -56,6 +56,11 @@ type r139Admission struct {
 	BrowserCloseReceiptSHA256 string            `json:"browserCloseReceiptSha256"`
 	CampaignNonce             string            `json:"campaignNonce"`
 	BrowserSessionID          string            `json:"browserSessionId"`
+	OwnedScopeID              string            `json:"ownedScopeId"`
+	ScopeOrigin               string            `json:"scopeOrigin"`
+	OwnedPageIDs              []string          `json:"ownedPageIds"`
+	ProofContract             string            `json:"proofContract"`
+	BrowserDoneSignalPath     string            `json:"browserDoneSignalPath"`
 	PageID                    string            `json:"pageId"`
 	FallbackCloseOperator     string            `json:"fallbackCloseOperator"`
 	GoTestBinarySHA256        string            `json:"goTestBinarySha256"`
@@ -86,10 +91,12 @@ type r139Admission struct {
 }
 
 func r139VerifyBrowserReservation(a r139Admission, browserRaw []byte) error {
+	if a.BrowserTool == "antigravity_page_target" { return r139PageTargetReservation(a, browserRaw) }
 	return r139StrictBrowserReservation(a, browserRaw)
 }
 
 func r139VerifyBrowserTerminalClose(a r139Admission, closeRaw []byte) error {
+	if a.BrowserTool == "antigravity_page_target" { return r139PageTargetTerminal(a, closeRaw) }
 	return r139StrictBrowserTerminalClose(a, closeRaw)
 }
 
@@ -311,6 +318,219 @@ func r139StrictBrowserTerminalClose(a r139Admission, closeRaw []byte) error {
 	if err != nil { return err }
 	if err := r139NativeIdentity(a, rawInventory); err != nil { return err }
 	if rawInventory["event"] != "native_inventory" || rawInventory["atUTC"] != inv["inventoryAtUTC"] || !reflect.DeepEqual(rawInventory["pageIds"], inv["pageIds"]) || rawInventory["ownedCount"] != inv["ownedCount"] { return errors.New("raw native inventory mismatch") }
+	return nil
+}
+
+func r139PageIdentity(a r139Admission, m map[string]any) error {
+	if a.ProofContract != "native_page_target_v1" || a.ScopeOrigin != "caller_owned_explicit_page_target" ||
+		a.BrowserSessionID != "" || a.CloseMode != "operator_fallback" || a.FallbackCloseOperator != a.Operator ||
+		len(a.OwnedPageIDs) != 1 || a.OwnedPageIDs[0] != a.PageID { return errors.New("page-target admission identity invalid") }
+	want := map[string]string{"nativeContractId": a.NativeContractID, "trancheId": a.TrancheID,
+		"campaignNonce": a.CampaignNonce, "pageId": a.PageID, "ownedScopeId": a.OwnedScopeID,
+		"operator": a.Operator, "closeMode": a.CloseMode}
+	for key, value := range want {
+		if _, err := r139NativeText(value); err != nil || m[key] != value { return fmt.Errorf("page-target %s mismatch", key) }
+	}
+	if _, present := m["browserSessionId"]; present { return errors.New("native session alias forbidden") }
+	if m["proofContract"] != a.ProofContract || m["scopeOrigin"] != a.ScopeOrigin { return errors.New("page-target contract mismatch") }
+	ids, ok := m["ownedPageIds"].([]any)
+	if !ok || len(ids) != 1 || ids[0] != a.PageID { return errors.New("owned target set invalid") }
+	return nil
+}
+
+func r139PageOrigin(m map[string]any) (time.Time, error) {
+	for _, key := range []string{"nativeTaskRunRef", "nativeToolCallRef", "rawOriginalToolReference"} {
+		value, ok := m[key].(string)
+		if !ok || len(value) < 1 || len(value) > 512 || strings.TrimSpace(value) != value { return time.Time{}, fmt.Errorf("original %s invalid", key) }
+		for _, ch := range value { if ch < 32 || ch >= 127 { return time.Time{}, fmt.Errorf("original %s invalid", key) } }
+	}
+	value, ok := m["rawOriginalToolSha256"].(string)
+	if !ok || !regexp.MustCompile(`^[0-9a-f]{64}$`).MatchString(value) { return time.Time{}, errors.New("original tool hash invalid") }
+	at, err := r139NativeTime(m["atUTC"])
+	if err != nil { return time.Time{}, err }
+	switch m["timeBasis"] {
+	case "original_native_tool_return":
+	case "normalized_from_original_native_tool_return":
+		raw, ok := m["rawObservedAtUTC"].(string)
+		if !ok { return time.Time{}, errors.New("original timestamp absent") }
+		original, err := time.Parse(time.RFC3339Nano, raw)
+		if err != nil || original.Location() == nil || original.UTC().Truncate(time.Second) != at || original.Format("-07:00") != "+00:00" { return time.Time{}, errors.New("normalized timestamp unsupported") }
+	default: return time.Time{}, errors.New("time basis invalid")
+	}
+	return at, nil
+}
+
+func r139PageEvent(a r139Admission, root string, prefix map[string]any, event string) (map[string]any, time.Time, error) {
+	pathField, hashField := event+"EvidencePath", event+"EvidenceSha256"
+	if event == "baselineInventory" || event == "creationLedger" { pathField, hashField = event+"Path", event+"Sha256" }
+	m, err := r139NativeFile(a, event, prefix[pathField], prefix[hashField], root)
+	if err != nil { return nil, time.Time{}, err }
+	if err := r139PageIdentity(a, m); err != nil { return nil, time.Time{}, err }
+	want := event
+	if event == "baselineInventory" { want = "baseline_inventory" }
+	if event == "creationLedger" { want = "creation_ledger" }
+	if m["event"] != want { return nil, time.Time{}, errors.New("page-target event mismatch") }
+	at, err := r139PageOrigin(m)
+	return m, at, err
+}
+
+func r139PageIDs(value any) (map[string]bool, error) {
+	items, ok := value.([]any)
+	if !ok { return nil, errors.New("page ID list missing") }
+	seen := map[string]bool{}
+	for _, item := range items {
+		text, err := r139NativeText(item)
+		if err != nil || seen[text] { return nil, errors.New("page ID invalid or duplicate") }
+		seen[text] = true
+	}
+	return seen, nil
+}
+
+func r139PageTargetReservation(a r139Admission, browserRaw []byte) error {
+	return r139PageTargetReservationWithRuntime(a, browserRaw, false)
+}
+
+func r139PageTargetReservationWithRuntime(a r139Admission, browserRaw []byte, allowRuntime bool) error {
+	proof, err := r139NativeObject(browserRaw); if err != nil { return err }
+	if !a.BrowserSupported || proof["status"] != "RESERVED_NATIVE_PAGE_TARGET_CONTROL_CAPTURE_HANDOFF" ||
+		proof["browserId"] != "antigravity_native" || proof["protocol"] != "https" || proof["closeObserved"] != false {
+		return errors.New("page-target prefix incomplete")
+	}
+	if err := r139PageIdentity(a, proof); err != nil { return err }
+	_, readiness, err := r139NativeRoot(a, "browserReadinessRoot"); if err != nil { return err }
+	_, product, err := r139NativeRoot(a, "runtimeRoot"); if err != nil { return err }
+	if strings.EqualFold(readiness, product) || strings.HasPrefix(strings.ToLower(readiness), strings.ToLower(product)+string(os.PathSeparator)) || strings.HasPrefix(strings.ToLower(product), strings.ToLower(readiness)+string(os.PathSeparator)) { return errors.New("page-target roots overlap") }
+	stored, err := r139NativeFile(a, "browserReceipt", a.BrowserReceiptPath, a.BrowserReceiptSHA256, readiness)
+	if err != nil || !reflect.DeepEqual(stored, proof) { return errors.New("page-target receipt bytes/hash differ") }
+	if _, err := os.Stat(readiness); err != nil { return errors.New("readiness root absent") }
+	if info, statErr := os.Stat(product); statErr == nil && !allowRuntime {
+		if !info.IsDir() || os.Getenv("R139_RUN") != "1" || os.Getenv("R139_RUNTIME_ROOT") != product ||
+			!regexp.MustCompile(`^[0-9a-f]{64}$`).MatchString(os.Getenv("R139_RUNTIME_ADMISSION_SHA256")) ||
+			a.SourceCommit == "" || a.SourceCommit != os.Getenv("R139_SOURCE_COMMIT") {
+			return errors.New("product root preexisting outside admitted supervisor")
+		}
+		intentRaw, readErr := os.ReadFile(filepath.Join(product, "run_intent.json"))
+		if readErr != nil { return errors.New("supervisor run intent missing") }
+		var intent struct {
+			AdmissionSHA256 string `json:"admissionSha256"`
+			SourceCommit string `json:"sourceCommit"`
+			StartedAt float64 `json:"startedAt"`
+			DeadlineSeconds int `json:"deadlineSeconds"`
+		}
+		if json.Unmarshal(intentRaw, &intent) != nil || intent.AdmissionSHA256 != os.Getenv("R139_RUNTIME_ADMISSION_SHA256") ||
+			intent.SourceCommit != a.SourceCommit || intent.DeadlineSeconds != 1200 ||
+			intent.StartedAt < float64(time.Now().Unix()-1200) || intent.StartedAt > float64(time.Now().Unix()+1) {
+			return errors.New("supervisor run intent mismatch")
+		}
+	} else if statErr != nil && !os.IsNotExist(statErr) { return statErr }
+	sealed, err := r139NativeTime(proof["reservedAtUTC"]); if err != nil { return err }
+	baseline, baseTime, err := r139PageEvent(a, readiness, proof, "baselineInventory"); if err != nil { return err }
+	baseIDs, err := r139PageIDs(baseline["pageIds"]); if err != nil || baseIDs[a.PageID] || baseline["inventoryScope"] != "metadata_only" || baseTime.After(sealed) { return errors.New("target preexisting or baseline scope invalid") }
+	previous := baseTime
+	firstRun := ""
+	creationAt := baseTime
+	created := "https://example.com/#r139_nonce=" + a.CampaignNonce + "&phase=created"
+	controlled := "https://example.com/#r139_nonce=" + a.CampaignNonce + "&phase=controlled"
+	for _, event := range []string{"creation", "control", "capture", "handoff"} {
+		data, at, err := r139PageEvent(a, readiness, proof, event)
+		if err != nil || at.Before(previous) || at.After(sealed) { return fmt.Errorf("%s page-target chronology/evidence invalid", event) }
+		previous = at
+		switch event {
+		case "creation":
+			firstRun, _ = data["nativeTaskRunRef"].(string)
+			creationAt = at
+			if data["pageIdToReplace"] != "new_page" || data["observedPageId"] != a.PageID || data["observedUrl"] != created { return errors.New("creation target invalid") }
+		case "control":
+			if data["nativeTaskRunRef"] != firstRun || data["pageIdToReplace"] != a.PageID || data["observedUrl"] != controlled { return errors.New("same-page control invalid") }
+		case "capture":
+			hash, ok := data["captureSha256"].(string)
+			if data["nativeTaskRunRef"] != firstRun || data["observedPageId"] != a.PageID || data["observedUrl"] != controlled || !ok || !regexp.MustCompile(`^[0-9a-f]{64}$`).MatchString(hash) { return errors.New("capture invalid") }
+		case "handoff":
+			if data["nativeTaskRunRef"] == firstRun || data["observedPageId"] != a.PageID || data["observedUrl"] != controlled || data["observedNonce"] != a.CampaignNonce { return errors.New("cross-task handoff unproved") }
+		}
+	}
+	ledger, at, err := r139PageEvent(a, readiness, proof, "creationLedger")
+	if err != nil || at.Before(creationAt) || at.After(sealed) || ledger["baselineInventorySha256"] != proof["baselineInventorySha256"] || ledger["creationEvidenceSha256"] != proof["creationEvidenceSha256"] || ledger["nativeTaskRunRef"] != firstRun { return errors.New("creation ledger invalid") }
+	newIDs, ok := ledger["newPageIds"].([]any)
+	if !ok || len(newIDs) != 1 || newIDs[0] != a.PageID { return errors.New("multiple/new target invalid") }
+	for field, value := range map[string]string{"browserCloseReceiptPath": a.BrowserCloseReceiptPath,
+		"actionEvidencePath": a.ActionEvidencePath, "finalInventoryPath": a.FinalInventoryPath,
+		"rawNativeInventoryPath": a.RawNativeInventoryPath, "browserDoneSignalPath": a.BrowserDoneSignalPath} {
+		if _, err := r139NativePath(a, field, value, product, allowRuntime); err != nil { return err }
+	}
+	return nil
+}
+
+func r139PageTargetTerminal(a r139Admission, closeRaw []byte) error {
+	receipt, err := r139NativeObject(closeRaw); if err != nil { return err }
+	if err := r139PageIdentity(a, receipt); err != nil { return err }
+	if receipt["status"] != "CLOSED_EXACT_OWNED_PAGE_TARGET" || receipt["browserId"] != "antigravity_native" || receipt["closeObserved"] != true || !r139NativeZeroInteger(receipt["ownedTabsFinal"]) || receipt["closureTimeBasis"] != "native_final_metadata_observation" {
+		return errors.New("page-target close status invalid")
+	}
+	if _, exists := receipt["actualCloseActionAtUTC"]; exists { return errors.New("invented physical close time") }
+	if _, exists := receipt["closedAtUTC"]; exists { return errors.New("legacy physical close time") }
+	_, readiness, err := r139NativeRoot(a, "browserReadinessRoot"); if err != nil { return err }
+	_, product, err := r139NativeRoot(a, "runtimeRoot"); if err != nil { return err }
+	closePath, err := r139NativePath(a, "browserCloseReceipt", a.BrowserCloseReceiptPath, product, true)
+	if err != nil { return err }
+	stored, err := os.ReadFile(closePath)
+	if err != nil || !bytes.Equal(stored, closeRaw) { return errors.New("close receipt bytes differ") }
+	prefix, err := r139NativeFile(a, "browserReceipt", a.BrowserReceiptPath, a.BrowserReceiptSHA256, readiness)
+	if err != nil || prefix["reservedAtUTC"] != receipt["reservedAtUTC"] { return errors.New("page-target prefix mismatch") }
+	prefixRaw, err := json.Marshal(prefix); if err != nil { return err }
+	if err := r139PageTargetReservationWithRuntime(a, prefixRaw, true); err != nil { return err }
+	reserved, err := r139NativeTime(prefix["reservedAtUTC"]); if err != nil { return err }
+	reported, err := r139NativeTime(receipt["operatorReportReceivedAtUTC"]); if err != nil { return err }
+	observed, err := r139NativeTime(receipt["closureObservedAtUTC"]); if err != nil { return err }
+	deadline, err := time.Parse("2006-01-02T15:04:05Z", a.GrantDeadlineUTC)
+	if err != nil || reserved.After(reported) || reported.After(observed) || observed.After(deadline) { return errors.New("page-target close chronology") }
+	ownerHash, ok := receipt["ownerReportReferenceSha256"].(string)
+	if !ok || !regexp.MustCompile(`^[0-9a-f]{64}$`).MatchString(ownerHash) || receipt["operator"] != "Owner in this conversation" { return errors.New("owner report invalid") }
+	if receipt["actionEvidencePath"] != a.ActionEvidencePath || receipt["finalInventoryPath"] != a.FinalInventoryPath { return errors.New("terminal path mismatch") }
+	action, err := r139NativeFile(a, "action", receipt["actionEvidencePath"], receipt["actionEvidenceSha256"], product)
+	if err != nil { return err }
+	if err := r139PageIdentity(a, action); err != nil || action["event"] != "action_sequence" || action["atUTC"] != receipt["actionAtUTC"] { return errors.New("action identity invalid") }
+	if _, err := r139PageOrigin(action); err != nil { return err }
+	rows, ok := action["actions"].([]any)
+	if !ok || len(rows) < 2 { return errors.New("action rows missing") }
+	previous := reserved
+	for index, value := range rows {
+		row, ok := value.(map[string]any)
+		if !ok || row["pageId"] != a.PageID { return errors.New("action target invalid") }
+		kind := row["action"]
+		if kind != "control" && kind != "capture" && kind != "handoff" && kind != "product_read" && kind != "product_execute" && kind != "owner_close_report" { return errors.New("action kind invalid") }
+		at, err := r139NativeTime(row["atUTC"])
+		if err != nil || at.Before(previous) || at.After(reported) { return errors.New("action time invalid") }
+		previous = at
+		if kind == "owner_close_report" {
+			if index != len(rows)-1 || !at.Equal(reported) || row["reportSource"] != "owner_in_conversation" || row["ownerReportReferenceSha256"] != ownerHash { return errors.New("report not terminal") }
+		} else {
+			hash, ok := row["rawOriginalToolSha256"].(string)
+			if index == len(rows)-1 || !ok || !regexp.MustCompile(`^[0-9a-f]{64}$`).MatchString(hash) { return errors.New("action original hash absent") }
+			if _, err := r139NativeText(row["rawOriginalToolReference"]); err != nil { return err }
+		}
+	}
+	if rows[len(rows)-1].(map[string]any)["action"] != "owner_close_report" { return errors.New("post-close action") }
+	inv, err := r139NativeFile(a, "finalInventory", receipt["finalInventoryPath"], receipt["finalInventorySha256"], product)
+	if err != nil { return err }
+	if err := r139PageIdentity(a, inv); err != nil || inv["event"] != "final_inventory" || inv["atUTC"] != receipt["closureObservedAtUTC"] || inv["rawNativeInventoryPath"] != a.RawNativeInventoryPath || inv["inventoryScope"] != "metadata_only" || !r139NativeZeroInteger(inv["ownedCount"]) { return errors.New("final inventory invalid") }
+	if _, err := r139PageOrigin(inv); err != nil { return err }
+	finalIDs, err := r139PageIDs(inv["pageIds"]); if err != nil || finalIDs[a.PageID] { return errors.New("owned target remains") }
+	baseline, _, err := r139PageEvent(a, readiness, prefix, "baselineInventory"); if err != nil { return err }
+	baselineIDs, err := r139PageIDs(baseline["pageIds"]); if err != nil || !reflect.DeepEqual(finalIDs, baselineIDs) { return errors.New("protected baseline drift") }
+	raw, err := r139NativeFile(a, "rawNativeInventory", inv["rawNativeInventoryPath"], inv["rawNativeInventorySha256"], product)
+	if err != nil { return err }
+	if err := r139PageIdentity(a, raw); err != nil || raw["event"] != "native_inventory" || raw["atUTC"] != inv["atUTC"] || !reflect.DeepEqual(raw["pageIds"], inv["pageIds"]) || raw["inventoryScope"] != "metadata_only" || !r139NativeZeroInteger(raw["ownedCount"]) || raw["nativeTaskRunRef"] == baseline["nativeTaskRunRef"] { return errors.New("raw native inventory invalid") }
+	if _, err := r139PageOrigin(raw); err != nil { return err }
+	markerPath, err := r139NativePath(a, "browserDoneSignalPath", a.BrowserDoneSignalPath, product, true)
+	if err != nil { return err }
+	markerRaw, err := os.ReadFile(markerPath); if err != nil { return err }
+	marker, err := r139NativeObject(markerRaw); if err != nil { return err }
+	if marker["status"] != "TERMINAL_EVIDENCE_WRITTEN" || marker["proofContract"] != a.ProofContract || marker["campaignNonce"] != a.CampaignNonce || marker["pageId"] != a.PageID || marker["ownedScopeId"] != a.OwnedScopeID { return errors.New("browser done marker identity invalid") }
+	markerAt, err := r139NativeTime(marker["atUTC"])
+	if err != nil || markerAt.Before(observed) || markerAt.After(deadline) { return errors.New("browser done chronology invalid") }
+	marked, ok := marker["evidenceSha256"].(map[string]any)
+	if !ok || len(marked) != 4 || marked["browserCloseReceiptPath"] != func() string { sum := sha256.Sum256(closeRaw); return hex.EncodeToString(sum[:]) }() || marked["actionEvidencePath"] != receipt["actionEvidenceSha256"] || marked["finalInventoryPath"] != receipt["finalInventorySha256"] || marked["rawNativeInventoryPath"] != inv["rawNativeInventorySha256"] { return errors.New("browser done evidence hashes invalid") }
 	return nil
 }
 
@@ -582,6 +802,146 @@ func TestR139PureBrowserTerminalClose(t *testing.T) {
 	bad, _ := json.Marshal(mutated)
 	r139NativeTestWrite(t, filepath.Join(a.RuntimeRoot, "close.json"), mutated)
 	if err := r139VerifyBrowserTerminalClose(a, bad); err == nil { t.Fatal("post-close action accepted") }
+}
+
+func TestR139PurePageTargetV1(t *testing.T) {
+	root := t.TempDir()
+	ready := filepath.Join(root, ".cvf", "runtime", "readiness")
+	product := filepath.Join(root, ".cvf", "runtime", "product")
+	if err := os.MkdirAll(ready, 0755); err != nil { t.Fatal(err) }
+	now := time.Now().UTC().Truncate(time.Second)
+	stamp := func(delta int) string { return now.Add(time.Duration(delta) * time.Second).Format("2006-01-02T15:04:05Z") }
+	a := r139Admission{NativeContractID: "r139-page-target-v1", TrancheID: "CCMAI-RUNTIME-139",
+		CampaignNonce: "nonce-456", PageID: "page-123", OwnedScopeID: "owned-scope-123",
+		ScopeOrigin: "caller_owned_explicit_page_target", OwnedPageIDs: []string{"page-123"},
+		ProofContract: "native_page_target_v1", Operator: "Owner in this conversation",
+		FallbackCloseOperator: "Owner in this conversation", CloseMode: "operator_fallback",
+		BrowserTool: "antigravity_page_target", BrowserSupported: true,
+		BrowserReadinessRoot: ".cvf/runtime/readiness", RuntimeRoot: product,
+		BrowserReceiptPath: ".cvf/runtime/readiness/reservation.json",
+		BrowserCloseReceiptPath: ".cvf/runtime/product/close.json",
+		ActionEvidencePath: ".cvf/runtime/product/action.json",
+		FinalInventoryPath: ".cvf/runtime/product/inventory.json",
+		RawNativeInventoryPath: ".cvf/runtime/product/raw_inventory.json",
+		BrowserDoneSignalPath: ".cvf/runtime/product/browser_done.signal",
+		GrantDeadlineUTC: stamp(3600), nativeProjectRoot: root}
+	identity := map[string]any{"nativeContractId": a.NativeContractID, "trancheId": a.TrancheID,
+		"campaignNonce": a.CampaignNonce, "pageId": a.PageID, "ownedScopeId": a.OwnedScopeID,
+		"operator": a.Operator, "closeMode": a.CloseMode, "proofContract": a.ProofContract,
+		"scopeOrigin": a.ScopeOrigin, "ownedPageIds": []string{a.PageID}}
+	clone := func(source map[string]any) map[string]any { copied := map[string]any{}; for k, v := range source { copied[k] = v }; return copied }
+	origin := map[string]any{"nativeToolCallRef": "step-10", "rawOriginalToolReference": "private/native/step-10",
+		"rawOriginalToolSha256": strings.Repeat("b", 64), "timeBasis": "original_native_tool_return"}
+	createURL := "https://example.com/#r139_nonce=nonce-456&phase=created"
+	controlURL := "https://example.com/#r139_nonce=nonce-456&phase=controlled"
+	prefix := clone(identity)
+	for k, v := range map[string]any{"status": "RESERVED_NATIVE_PAGE_TARGET_CONTROL_CAPTURE_HANDOFF",
+		"browserId": "antigravity_native", "protocol": "https", "closeObserved": false,
+		"reservedAtUTC": stamp(-25)} { prefix[k] = v }
+	events := map[string]map[string]any{}
+	for name, offset := range map[string]int{"baselineInventory": -60, "creation": -50, "creationLedger": -50,
+		"control": -45, "capture": -40, "handoff": -30} {
+		row := clone(identity)
+		for k, v := range origin { row[k] = v }
+		row["nativeTaskRunRef"] = "run-g0"; row["atUTC"] = stamp(offset)
+		row["event"] = name
+		if name == "baselineInventory" { row["event"] = "baseline_inventory"; row["pageIds"] = []string{"host-protected"}; row["inventoryScope"] = "metadata_only" }
+		if name == "creationLedger" { row["event"] = "creation_ledger"; row["newPageIds"] = []string{a.PageID} }
+		if name == "creation" { row["pageIdToReplace"] = "new_page"; row["observedPageId"] = a.PageID; row["observedUrl"] = createURL }
+		if name == "control" { row["pageIdToReplace"] = a.PageID; row["observedUrl"] = controlURL }
+		if name == "capture" { row["observedPageId"] = a.PageID; row["observedUrl"] = controlURL; row["captureSha256"] = strings.Repeat("c", 64) }
+		if name == "handoff" { row["nativeTaskRunRef"] = "run-handoff"; row["observedPageId"] = a.PageID; row["observedUrl"] = controlURL; row["observedNonce"] = a.CampaignNonce }
+		events[name] = row
+		pathKey, hashKey := name+"EvidencePath", name+"EvidenceSha256"
+		if name == "baselineInventory" || name == "creationLedger" { pathKey, hashKey = name+"Path", name+"Sha256" }
+		prefix[pathKey] = ".cvf/runtime/readiness/" + name + ".json"
+		prefix[hashKey] = r139NativeTestWrite(t, filepath.Join(ready, name+".json"), row)
+	}
+	events["creationLedger"]["baselineInventorySha256"] = prefix["baselineInventorySha256"]
+	events["creationLedger"]["creationEvidenceSha256"] = prefix["creationEvidenceSha256"]
+	prefix["creationLedgerSha256"] = r139NativeTestWrite(t, filepath.Join(ready, "creationLedger.json"), events["creationLedger"])
+	a.BrowserReceiptSHA256 = r139NativeTestWrite(t, filepath.Join(ready, "reservation.json"), prefix)
+	prefixRaw, _ := json.Marshal(prefix)
+	if err := r139VerifyBrowserReservation(a, prefixRaw); err != nil { t.Fatalf("page target prefix: %v", err) }
+	bad := clone(prefix); bad["reservedAtUTC"] = stamp(-55)
+	badRaw, _ := json.Marshal(bad); modified := a
+	modified.BrowserReceiptSHA256 = r139NativeTestWrite(t, filepath.Join(ready, "reservation.json"), bad)
+	if err := r139VerifyBrowserReservation(modified, badRaw); err == nil { t.Fatal("early native seal accepted") }
+	a.BrowserReceiptSHA256 = r139NativeTestWrite(t, filepath.Join(ready, "reservation.json"), prefix)
+	badHandoff := clone(events["handoff"]); badHandoff["nativeTaskRunRef"] = "run-g0"
+	bad = clone(prefix); bad["handoffEvidenceSha256"] = r139NativeTestWrite(t, filepath.Join(ready, "handoff.json"), badHandoff)
+	modified = a; modified.BrowserReceiptSHA256 = r139NativeTestWrite(t, filepath.Join(ready, "reservation.json"), bad)
+	badRaw, _ = json.Marshal(bad)
+	if err := r139VerifyBrowserReservation(modified, badRaw); err == nil { t.Fatal("same-task handoff accepted") }
+	prefix["handoffEvidenceSha256"] = r139NativeTestWrite(t, filepath.Join(ready, "handoff.json"), events["handoff"])
+	badLedger := clone(events["creationLedger"]); badLedger["atUTC"] = stamp(-51)
+	bad = clone(prefix); bad["creationLedgerSha256"] = r139NativeTestWrite(t, filepath.Join(ready, "creationLedger.json"), badLedger)
+	modified = a; modified.BrowserReceiptSHA256 = r139NativeTestWrite(t, filepath.Join(ready, "reservation.json"), bad)
+	badRaw, _ = json.Marshal(bad)
+	if err := r139VerifyBrowserReservation(modified, badRaw); err == nil { t.Fatal("ledger before creation accepted") }
+	prefix["creationLedgerSha256"] = r139NativeTestWrite(t, filepath.Join(ready, "creationLedger.json"), events["creationLedger"])
+	badCapture := clone(events["capture"]); badCapture["observedUrl"] = "https://example.com/#wrong"
+	bad = clone(prefix); bad["captureEvidenceSha256"] = r139NativeTestWrite(t, filepath.Join(ready, "capture.json"), badCapture)
+	modified = a; modified.BrowserReceiptSHA256 = r139NativeTestWrite(t, filepath.Join(ready, "reservation.json"), bad)
+	badRaw, _ = json.Marshal(bad)
+	if err := r139VerifyBrowserReservation(modified, badRaw); err == nil { t.Fatal("capture on wrong URL accepted") }
+	prefix["captureEvidenceSha256"] = r139NativeTestWrite(t, filepath.Join(ready, "capture.json"), events["capture"])
+	a.BrowserReceiptSHA256 = r139NativeTestWrite(t, filepath.Join(ready, "reservation.json"), prefix)
+	prefixRaw, _ = json.Marshal(prefix)
+	outside := filepath.Join(root, ".cvf", "runtime", "outside")
+	if err := os.MkdirAll(outside, 0755); err != nil { t.Fatal(err) }
+	modified = a; modified.BrowserReceiptPath = ".cvf/runtime/outside/reservation.json"
+	modified.BrowserReceiptSHA256 = r139NativeTestWrite(t, filepath.Join(outside, "reservation.json"), prefix)
+	if err := r139VerifyBrowserReservation(modified, prefixRaw); err == nil { t.Fatal("valid-hash prefix outside readiness accepted") }
+	if err := os.MkdirAll(product, 0755); err != nil { t.Fatal(err) }
+	if err := r139VerifyBrowserReservation(a, prefixRaw); err == nil { t.Fatal("preexisting product root accepted") }
+	a.SourceCommit = strings.Repeat("a", 40)
+	t.Setenv("R139_RUN", "1")
+	t.Setenv("R139_RUNTIME_ROOT", product)
+	t.Setenv("R139_SOURCE_COMMIT", a.SourceCommit)
+	t.Setenv("R139_RUNTIME_ADMISSION_SHA256", strings.Repeat("b", 64))
+	intent := map[string]any{"admissionSha256": strings.Repeat("c", 64), "sourceCommit": a.SourceCommit,
+		"startedAt": float64(time.Now().Unix()), "deadlineSeconds": 1200}
+	r139NativeTestWrite(t, filepath.Join(product, "run_intent.json"), intent)
+	if err := r139VerifyBrowserReservation(a, prefixRaw); err == nil { t.Fatal("wrong supervisor intent hash accepted") }
+	intent["admissionSha256"] = strings.Repeat("b", 64)
+	r139NativeTestWrite(t, filepath.Join(product, "run_intent.json"), intent)
+	if err := r139VerifyBrowserReservation(a, prefixRaw); err != nil { t.Fatalf("actual supervisor-owned product root rejected: %v", err) }
+	terminalOrigin := clone(origin); terminalOrigin["nativeTaskRunRef"] = "run-final"
+	raw := clone(identity)
+	for k, v := range terminalOrigin { raw[k] = v }
+	raw["event"] = "native_inventory"; raw["atUTC"] = stamp(-5); raw["pageIds"] = []string{"host-protected"}; raw["ownedCount"] = 0; raw["inventoryScope"] = "metadata_only"
+	rawSHA := r139NativeTestWrite(t, filepath.Join(product, "raw_inventory.json"), raw)
+	actions := clone(identity)
+	for k, v := range terminalOrigin { actions[k] = v }
+	actions["event"] = "action_sequence"; actions["atUTC"] = stamp(-20)
+	actions["actions"] = []map[string]any{{"pageId": a.PageID, "action": "control", "atUTC": stamp(-20), "rawOriginalToolReference": "private/control", "rawOriginalToolSha256": strings.Repeat("e", 64)},
+		{"pageId": a.PageID, "action": "owner_close_report", "atUTC": stamp(-8), "reportSource": "owner_in_conversation", "ownerReportReferenceSha256": strings.Repeat("a", 64)}}
+	actionSHA := r139NativeTestWrite(t, filepath.Join(product, "action.json"), actions)
+	inv := clone(identity)
+	for k, v := range terminalOrigin { inv[k] = v }
+	inv["event"] = "final_inventory"; inv["atUTC"] = stamp(-5); inv["pageIds"] = []string{"host-protected"}; inv["ownedCount"] = 0; inv["inventoryScope"] = "metadata_only"
+	inv["rawNativeInventoryPath"] = a.RawNativeInventoryPath; inv["rawNativeInventorySha256"] = rawSHA
+	invSHA := r139NativeTestWrite(t, filepath.Join(product, "inventory.json"), inv)
+	close := clone(identity)
+	for k, v := range map[string]any{"status": "CLOSED_EXACT_OWNED_PAGE_TARGET", "browserId": "antigravity_native",
+		"closeObserved": true, "ownedTabsFinal": 0, "closureTimeBasis": "native_final_metadata_observation",
+		"reservedAtUTC": prefix["reservedAtUTC"], "actionAtUTC": stamp(-20),
+		"operatorReportReceivedAtUTC": stamp(-8), "closureObservedAtUTC": stamp(-5),
+		"ownerReportReferenceSha256": strings.Repeat("a", 64), "actionEvidencePath": a.ActionEvidencePath,
+		"actionEvidenceSha256": actionSHA, "finalInventoryPath": a.FinalInventoryPath,
+		"finalInventorySha256": invSHA} { close[k] = v }
+	closeSHA := r139NativeTestWrite(t, filepath.Join(product, "close.json"), close)
+	marker := map[string]any{"status": "TERMINAL_EVIDENCE_WRITTEN", "proofContract": a.ProofContract,
+		"campaignNonce": a.CampaignNonce, "pageId": a.PageID, "ownedScopeId": a.OwnedScopeID,
+		"atUTC": stamp(-4), "evidenceSha256": map[string]any{"browserCloseReceiptPath": closeSHA,
+			"actionEvidencePath": actionSHA, "finalInventoryPath": invSHA, "rawNativeInventoryPath": rawSHA}}
+	r139NativeTestWrite(t, filepath.Join(product, "browser_done.signal"), marker)
+	closeRaw, _ := json.Marshal(close)
+	if err := r139VerifyBrowserTerminalClose(a, closeRaw); err != nil { t.Fatalf("page-target terminal: %v", err) }
+	marker["ownedScopeId"] = "wrong"
+	r139NativeTestWrite(t, filepath.Join(product, "browser_done.signal"), marker)
+	if err := r139VerifyBrowserTerminalClose(a, closeRaw); err == nil { t.Fatal("wrong done marker accepted") }
 }
 
 func r139Admit(t *testing.T) (r139Admission, string) {

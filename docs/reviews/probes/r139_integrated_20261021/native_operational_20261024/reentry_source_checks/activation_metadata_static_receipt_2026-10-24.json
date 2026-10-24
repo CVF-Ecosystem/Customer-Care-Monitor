@@ -1,0 +1,22 @@
+{
+  "status": "AUTHORING_ONLY_UNEXECUTED",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "dispatchHead": "79e02f6c67b242eea4540ad4d2fdce5b42fda106",
+  "ownerAdmissionSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "worker": "internal activation metadata IMPLEMENTATION_WORKER",
+  "designSha256": {
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt": "9c1c5fee62b68c97c4cc485e987976ac0297334122bac84ee2183b9e635a6e8a",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/recorder_design.py.txt": "be6f5f1014fe259b296cf43506d12bbb05fb330b199b50952f8266f49277e395"
+  },
+  "reviewTier": "STATIC_AUTHORING_PENDING_INDEPENDENT_ROOT_REVIEW",
+  "prototypeParseImportTestCompileInvocations": 0,
+  "sourceCheckSlotsUsedByMetadataWorker": 0,
+  "campaignsUsed": 0,
+  "browserCalls": 0,
+  "serviceQueries": 0,
+  "providerCalls": 0,
+  "keyContentReads": 0,
+  "runtimeInvocations": 0,
+  "clockStarted": false,
+  "notes": "Hashes are direct file bytes observed after authoring. This receipt is not runtime evidence or an accepted build pin record."
+}

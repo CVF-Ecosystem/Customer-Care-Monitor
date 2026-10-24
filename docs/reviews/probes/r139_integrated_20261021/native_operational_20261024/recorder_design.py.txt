@@ -1,5 +1,8 @@
-# Prepared orchestration design; extract only under Root's actual runtime release.
-import argparse, hashlib, json, math, os, subprocess, sys, time
+# PROPOSED_NOT_AUTHORIZED / UNEXECUTED code-as-data. Root-only extraction
+# requires independent R2 review, exact-byte pin and a later committed
+# Runtime Effect Admission. This process runs only AFTER G0 and reuses the
+# original activation reservation; it never starts/remaps the campaign clock.
+import argparse, hashlib, json, math, os, re, stat, subprocess, sys, time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -8,7 +11,17 @@ def sha(p):
 def readj(p):
     return json.loads(Path(p).read_text(encoding="utf-8"))
 def parse_utc(s):
+    if not isinstance(s, str) or not re.fullmatch(r"\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d(?:\.\d{1,6})?Z", s):
+        raise ValueError("STRICT_UTC_Z_REQUIRED")
     return datetime.fromisoformat(s.replace("Z", "+00:00"))
+def no_reparse(p):
+    p = Path(p)
+    if not p.is_absolute(): raise ValueError("ABSOLUTE_PATH_REQUIRED")
+    for q in (*reversed(p.parents), p):
+        if q.exists() or q.is_symlink():
+            info = q.lstat()
+            if q.is_symlink() or (getattr(info, "st_file_attributes", 0) & stat.FILE_ATTRIBUTE_REPARSE_POINT):
+                raise ValueError("REPARSE_COMPONENT")
 def clock_sample(g0, g0_mono):
     utc_now, mono_now = datetime.now(timezone.utc), time.monotonic()
     elapsed_utc = (utc_now - g0).total_seconds()
@@ -17,7 +30,9 @@ def clock_sample(g0, g0_mono):
             abs(elapsed_utc - elapsed_mono) > 2), utc_now, mono_now, elapsed_utc, elapsed_mono
 def confined(project, runtime, value):
     p = Path(value)
-    p = (p if p.is_absolute() else project / p).resolve()
+    p = p if p.is_absolute() else project / p
+    no_reparse(p)
+    p = p.resolve(strict=False)
     if runtime not in p.parents:
         raise ValueError("EVIDENCE_PATH_OUTSIDE_RUNTIME")
     return p
@@ -35,11 +50,16 @@ def main():
     ap.add_argument("--campaign-reservation", required=True)
     x = ap.parse_args()
     project = Path(x.project).resolve()
-    admission = (project / x.admission).resolve()
+    no_reparse(project)
+    admission = project / x.admission
+    no_reparse(admission)
+    admission = admission.resolve(strict=False)
     if sha(admission) != x.admission_sha256:
         raise SystemExit("ADMISSION_HASH_MISMATCH")
     a = readj(admission)
-    reservation = (project / x.campaign_reservation).resolve()
+    reservation = project / x.campaign_reservation
+    no_reparse(reservation)
+    reservation = reservation.resolve(strict=False)
     if sha(reservation) != a["campaignReservationSha256"]:
         raise SystemExit("CAMPAIGN_RESERVATION_HASH_MISMATCH")
     clock = readj(reservation)
@@ -47,8 +67,15 @@ def main():
     deadline = parse_utc(clock["deadlineUTC"])
     if deadline != g0 + timedelta(seconds=1200):
         raise SystemExit("CAMPAIGN_CLOCK_INVALID")
+    if (clock.get("status") != "RESERVED_CONSUMED_PENDING_G0_PROOF" or
+        clock.get("trancheId") != "CCMAI-RUNTIME-139" or
+        clock.get("stopMonotonic") != clock.get("g0Monotonic", 0) + 1020 or
+        clock.get("deadlineMonotonic") != clock.get("g0Monotonic", 0) + 1200 or
+        parse_utc(clock["stopRequestedByUTC"]) != g0 + timedelta(seconds=1020)):
+        raise SystemExit("ORIGINAL_CAMPAIGN_CLOCK_FIELDS_MISMATCH")
     pins = a["rootPins"]
     py = Path(pins["python"]).resolve()
+    no_reparse(py)
     g0_mono = clock.get("g0Monotonic")
     if isinstance(g0_mono, bool) or not isinstance(g0_mono, (int, float)) or not math.isfinite(g0_mono):
         raise SystemExit("RESERVATION_MONOTONIC_INVALID")
@@ -63,18 +90,39 @@ def main():
     stop_mono, deadline_mono = g0_mono + 1020, g0_mono + 1200
     if mono0 >= stop_mono:
         raise SystemExit("CAMPAIGN_CUTOFF_PASSED")
-    runtime = (project / a["runtimeRoot"]).resolve()
-    if project not in runtime.parents:
+    source_root = project / ".cvf/runtime/r139_integrated_execution_r4_20261023"
+    runtime_value = a.get("runtimeRoot")
+    if (not isinstance(runtime_value, str) or not Path(runtime_value).is_absolute() or
+        runtime_value != str(source_root)):
+        raise SystemExit("PRODUCT_RUNTIME_ROOT_SCOPE")
+    runtime = Path(runtime_value)
+    no_reparse(runtime)
+    if (runtime.resolve(strict=False) != source_root or
+        not runtime.is_relative_to(project / ".cvf" / "runtime")):
         raise SystemExit("RUNTIME_ROOT_OUTSIDE_PROJECT")
+    # Source fresh_runtime_admission requires this exact root absent; the
+    # supervisor itself creates it after the admitted Popen starts.
+    if runtime.exists():
+        raise SystemExit("PRODUCT_RUNTIME_ROOT_PREEXISTING_BEFORE_SUPERVISOR")
+    if (a.get("browserProofContract") != "native_page_target_v1" or
+        a.get("campaignReservationSha256") != sha(reservation) or
+        a.get("campaignNonce") != clock.get("campaignNonce") or
+        a.get("productRuntimeReleased") is not True):
+        raise SystemExit("ACTUAL_PAGE_TARGET_RUNTIME_ADMISSION_REQUIRED")
     supervisor = project / "scripts/r139_execution_supervisor.py"
+    no_reparse(supervisor)
     if sha(supervisor) != a["supervisorSha256"]:
         raise SystemExit("ACCEPTED_SOURCE_MISMATCH")
     paths = a["recorderPaths"]
-    outdir = (project / paths["outputDir"]).resolve()
+    outdir = project / paths["outputDir"]
+    no_reparse(outdir)
+    outdir = outdir.resolve(strict=False)
     if project not in outdir.parents:
         raise SystemExit("OUTPUT_DIR_OUTSIDE_PROJECT")
     outdir.mkdir(exist_ok=False)
-    temp = (outdir / paths["tempDir"]).resolve()
+    temp = outdir / paths["tempDir"]
+    no_reparse(temp)
+    temp = temp.resolve(strict=False)
     if outdir not in temp.parents:
         raise SystemExit("TEMP_OUTSIDE_OWNED_OUTPUT_DIR")
     temp.mkdir(exist_ok=False)
@@ -101,17 +149,69 @@ def main():
             os.fsync(events.fileno())
         except OSError:
             holds.append("RECORDER_LOG_FAILURE")
-    files = [confined(project, runtime, a[k]) for k in
-             ("browserCloseReceiptPath", "actionEvidencePath", "finalInventoryPath", "rawNativeInventoryPath")]
+    file_keys = ("browserCloseReceiptPath", "actionEvidencePath", "finalInventoryPath", "rawNativeInventoryPath")
+    files = {key: confined(project, runtime, a[key]) for key in file_keys}
     done = confined(project, runtime, a["browserDoneSignalPath"])
     def browser_done():
-        return done.is_file() and (runtime / "browser_ready.json").is_file() and all(p.is_file() for p in files)
+        # An IPC hint only. The source supervisor and independent reviewer
+        # decide native_page_target_v1 terminal validity; file presence here
+        # cannot promote close, action or inventory to PASS.
+        if not done.is_file() or not (runtime / "browser_ready.json").is_file():
+            return False
+        if not all(p.is_file() for p in files.values()): return False
+        try:
+            no_reparse(done)
+            marker = readj(done)
+            if (marker.get("status") != "TERMINAL_EVIDENCE_WRITTEN" or
+                marker.get("campaignNonce") != clock["campaignNonce"] or
+                marker.get("proofContract") != "native_page_target_v1" or
+                marker.get("pageId") != a["pageId"] or
+                marker.get("ownedScopeId") != a["ownedScopeId"]): return False
+            if parse_utc(marker.get("atUTC")) > deadline: return False
+            pinned = marker.get("evidenceSha256")
+            if not isinstance(pinned, dict) or set(pinned) != set(file_keys): return False
+            return all(sha(p) == pinned[key] for key, p in files.items())
+        except (OSError, ValueError, KeyError, TypeError): return False
     def request_stop(reason):
         nonlocal stop_sent
+        if not runtime.is_dir():
+            holds.append("OWNED_PRODUCT_ROOT_ABSENT_NO_STOPFILE")
+            stop_sent = True
+            emit("stop_not_written", reason=reason, atUTC=datetime.now(timezone.utc).isoformat())
+            return
         try:
-            write_new(runtime / "stop_requested", {"reason": reason, "at": time.time()})
+            no_reparse(runtime)
+            if runtime.resolve(strict=False) != source_root:
+                raise ValueError("PRODUCT_ROOT_CHANGED")
+            no_reparse(runtime / "run_intent.json")
+            intent = readj(runtime / "run_intent.json")
+            started = intent.get("startedAt")
+            if (intent.get("admissionSha256") != x.admission_sha256 or
+                intent.get("sourceCommit") != a["sourceCommit"] or
+                type(intent.get("deadlineSeconds")) is not int or
+                intent["deadlineSeconds"] != 1200 or
+                type(started) not in (int, float) or not math.isfinite(started) or
+                not g0.timestamp() <= started <= deadline.timestamp() or
+                a.get("campaignReservationSha256") != sha(reservation) or
+                a.get("campaignNonce") != clock.get("campaignNonce")):
+                raise ValueError("RUN_INTENT_BINDING_MISMATCH")
+        except (OSError, ValueError, TypeError, KeyError):
+            holds.append("OWNED_PRODUCT_RUN_INTENT_UNVERIFIED_NO_STOPFILE")
+            stop_sent = True
+            emit("stop_not_written", reason=reason, atUTC=datetime.now(timezone.utc).isoformat())
+            return
+        try:
+            write_new(runtime / "stop_requested", {"reason": reason, "at": time.time(),
+                "campaignNonce": clock["campaignNonce"],
+                "reservationSha256": sha(reservation)})
         except FileExistsError:
-            holds.append("STOPFILE_ALREADY_EXISTS_NO_REWRITE")
+            try:
+                existing = readj(runtime / "stop_requested")
+                if (existing.get("campaignNonce") != clock["campaignNonce"] or
+                    existing.get("reservationSha256") != sha(reservation)):
+                    holds.append("STOPFILE_ALREADY_EXISTS_IDENTITY_MISMATCH")
+            except (OSError, ValueError, TypeError):
+                holds.append("STOPFILE_ALREADY_EXISTS_UNREADABLE")
         except OSError:
             holds.append("OWNED_STOPFILE_NOT_WRITTEN")
         stop_sent = True
@@ -146,7 +246,7 @@ def main():
                     request_stop("antigravity_browser_done")
                 elif not stop_sent and now >= stop_mono:
                     if not browser_done():
-                        holds.append("BROWSER_CLOSE_OR_RAW_EVIDENCE_MISSING")
+                        holds.append("BROWSER_CLOSE_OR_RAW_EVIDENCE_MISSING_OR_INVALID")
                     request_stop("global_deadline_minus_cleanup")
                 if now > deadline_mono and "GLOBAL_1200S_OVERRUN" not in holds:
                     holds.append("GLOBAL_1200S_OVERRUN")
@@ -163,6 +263,9 @@ def main():
                     holds.append("BEST_EFFORT_STOP_FAILED")
             wait_start = {"utc": datetime.now(timezone.utc).isoformat(), "mono": time.monotonic()}
             try:
+                # Keep the original Popen handle. The separate Root control
+                # process signals +1020 even if this original wait stalls.
+                # This wait is not a hard OS cancellation guarantee.
                 rc = proc.wait()
                 wait_completed = True
                 wait_exit = {"utc": datetime.now(timezone.utc).isoformat(), "mono": time.monotonic(), "exitCode": rc}
