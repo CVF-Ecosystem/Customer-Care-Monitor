@@ -1,0 +1,32 @@
+{
+  "kind": "R139_PRECLOCK_PREPARATION_FACTS_NOT_RELEASE",
+  "observedAtUTC": "2026-10-24T04:54:16.190028+00:00",
+  "ownerAdmissionSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "acceptedSourceCommit": "3f9b393e5b64dbf44eefd4779e9bc8ca210657ee",
+  "acceptedBuildPinsSha256": "88f26ffc7c7864e331054ae9d2c8011517ba10d360bb9b54c9bd617796d9fdd2",
+  "nativeContractId": "r139-page-target-v1-reentry-20261024",
+  "campaignNonce": "e168d31ce8364c532c38b61b370dba19",
+  "paths": {
+    "browserReadinessRoot": ".cvf/runtime/r139_page_target_reentry_20261024_readiness",
+    "activationChildLogRoot": ".cvf/runtime/r139_page_target_reentry_20261024_activation_logs",
+    "recorderOutputRoot": ".cvf/runtime/r139_page_target_reentry_20261024_recorder",
+    "runtimeRoot": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_integrated_execution_r4_20261023",
+    "externalEvidenceDir": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\.ccmai_local_evidence\\r139_execution_proof_20261023\\fixture_r4"
+  },
+  "pathsAllAbsentAtObservation": true,
+  "existingAncestorsNoReparseObserved": true,
+  "keyMetadataOnly": {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\.ccmai_local_evidence\\r139_execution_proof_20261021\\credentials\\alibaba.key",
+    "exists": true,
+    "size": 114,
+    "contentRead": false,
+    "hashRead": false
+  },
+  "excludedOldNativePageId": "95B03BC1A084B240BC6C88D67BD0D511",
+  "oldCloseAndInventoryUnknownsRetained": true,
+  "campaignReserved": false,
+  "runtimeExecutableNow": false,
+  "browserExecutableNow": false,
+  "providerExecutableNow": false,
+  "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION"
+}

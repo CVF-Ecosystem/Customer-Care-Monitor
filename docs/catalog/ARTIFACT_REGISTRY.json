@@ -36522,6 +36522,104 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-ACCEPTED-BUILD-PINS-ADMISSION.json",
       "status": "ACTIVE",
       "description": "Root-reviewed committed source/binary/tool pins after4of6boundedofflinechecks; no runtime/campaign/provider release."
+    },
+    {
+      "id": "r139-preclock-ad2636f17db1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_recipe_draft.json",
+      "status": "ACTIVE",
+      "description": "R139 preclock metadata/draft preparation only; no reservation or browser/product/provider release; actual native facts and actor window still required."
+    },
+    {
+      "id": "r139-preclock-78d75dbbfa31",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_noninterference_disposition.json",
+      "status": "ACTIVE",
+      "description": "R139 preclock metadata/draft preparation only; no reservation or browser/product/provider release; actual native facts and actor window still required."
+    },
+    {
+      "id": "r139-preclock-4e3a8f6e88ce",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_preclock_boot_environment_observation.json",
+      "status": "ACTIVE",
+      "description": "R139 preclock metadata/draft preparation only; no reservation or browser/product/provider release; actual native facts and actor window still required."
+    },
+    {
+      "id": "r139-preclock-4876af98ac52",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_preclock_boot_proof.json",
+      "status": "ACTIVE",
+      "description": "R139 preclock metadata/draft preparation only; no reservation or browser/product/provider release; actual native facts and actor window still required."
+    },
+    {
+      "id": "r139-preclock-ceaab9c16894",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_preclock_controller_boot_proof_candidate.json",
+      "status": "ACTIVE",
+      "description": "R139 preclock metadata/draft preparation only; no reservation or browser/product/provider release; actual native facts and actor window still required."
+    },
+    {
+      "id": "r139-preclock-d17aaf39a566",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_preclock_facts.json",
+      "status": "ACTIVE",
+      "description": "R139 preclock metadata/draft preparation only; no reservation or browser/product/provider release; actual native facts and actor window still required."
+    },
+    {
+      "id": "r139-preclock-b84dac9271b7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_preclock_handoff_packet.json",
+      "status": "ACTIVE",
+      "description": "R139 preclock metadata/draft preparation only; no reservation or browser/product/provider release; actual native facts and actor window still required."
+    },
+    {
+      "id": "r139-preclock-46b843b6885a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_public_tariff_reservation.json",
+      "status": "ACTIVE",
+      "description": "R139 preclock metadata/draft preparation only; no reservation or browser/product/provider release; actual native facts and actor window still required."
+    },
+    {
+      "id": "r139-preclock-ea9484513564",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_public_tariff_result.json",
+      "status": "ACTIVE",
+      "description": "R139 preclock metadata/draft preparation only; no reservation or browser/product/provider release; actual native facts and actor window still required."
+    },
+    {
+      "id": "r139-preclock-4dd0119649f7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_runtime_admission_draft.json",
+      "status": "ACTIVE",
+      "description": "R139 preclock metadata/draft preparation only; no reservation or browser/product/provider release; actual native facts and actor window still required."
+    },
+    {
+      "id": "r139-preclock-80a5f8293f6d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/internal_runtime_actor_ack_candidate.json",
+      "status": "ACTIVE",
+      "description": "R139 preclock metadata/draft preparation only; no reservation or browser/product/provider release; actual native facts and actor window still required."
+    },
+    {
+      "id": "r139-preclock-9751d04b860b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_owner_operator_availability.json",
+      "status": "ACTIVE",
+      "description": "Independently reviewed R139 preclock metadata/draft preparation; Owner exact-page availability confirmed, current browser ACK pending; no campaign or runtime release."
+    },
+    {
+      "id": "r139-preclock-15ca68d49e29",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_preclock_controller_boot_proof.json",
+      "status": "ACTIVE",
+      "description": "Independently reviewed R139 preclock metadata/draft preparation; Owner exact-page availability confirmed, current browser ACK pending; no campaign or runtime release."
+    },
+    {
+      "id": "r139-preclock-d4e43bcb0b6d",
+      "family": "continuity",
+      "path": "docs/reviews/R139_PRECLOCK_OPERATIONAL_PREPARATION_REVIEW_2026-10-24.md",
+      "status": "ACTIVE",
+      "description": "Independently reviewed R139 preclock metadata/draft preparation; Owner exact-page availability confirmed, current browser ACK pending; no campaign or runtime release."
     }
   ]
 }

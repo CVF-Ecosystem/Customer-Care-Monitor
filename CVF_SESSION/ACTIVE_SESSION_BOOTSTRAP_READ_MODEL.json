@@ -3,7 +3,7 @@
   "activePhase": "REVIEW",
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 page-target SOURCE ACCEPTED at3f9b393e; workerPython40/compile and RootPython40/pureGo10 PASS,4of6offlineattemptsused. Root completes exact preclock recipe/runtime draft/tool-boot-path-pricing/actor ACK preparation under existing Owner-approved985dacbb envelope; internal agents non-browser, Antigravity browser-only. No reservation until all three actors and closeoperator are current and ready; metadata-only request pending. Then ONE fresh1200s G0-G3 campaign, actual two-task native ownership/handoff and independent Runtime Effect Admission before fixture/key/provider. Campaignused0/API0, no activeclock; oldspent1campaign/5queries/UNKNOWNretained. SameONE M3-05/M3-08 order, Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION, Facebook/ZaloOA parked; no renewedOwnerapproval for unchanged approvedscope.",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 PREPARED_NOT_RELEASED: source3f9b393e accepted; workerPython40/compile and RootPython40/pureGo10 PASS,4of6checksused. Preclock packet/source-binary-tool pins/boot facts/fresh paths/key metadata/public tariff/internal actor candidate and full8surface reservation templates prepared and independently reviewed. Owner confirms exact-page operator_fallback availability. Await actual current Antigravity browser metadata ACK via existing workspace request/reply; Root then refreshes same-window Root/internal ACKs, reseals current base hashes/registry and committed technical release before ONE original1200s reservation. No further Owner approval within accepted scope. Actual two-task G0 ownership/handoff/provenance review and separate Runtime Effect Admission precede fixture/key/provider. Campaign0/API0/no clock; oldspent1campaign/5queries/UNKNOWNretained. SameONE M3-05/M3-08 G0-G3 order, Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; Facebook/ZaloOA parked.",
   "activeRole": "Root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; internal source/metadata workers returned; Antigravity browser-only NOT released",
   "updatedAt": "2026-10-24",
   "schemaVersion": "1.0",
@@ -1308,5 +1308,20 @@
     "sourceAcceptedCommit": "3f9b393e5b64dbf44eefd4779e9bc8ca210657ee",
     "acceptedBuildPins": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-ACCEPTED-BUILD-PINS-ADMISSION.json",
     "acceptedBuildPinsSha256": "88f26ffc7c7864e331054ae9d2c8011517ba10d360bb9b54c9bd617796d9fdd2"
+  },
+  "x-r139PageTargetPreclockPreparation": {
+    "status": "PREPARED_NOT_RELEASED_WAIT_BROWSER_ACK",
+    "packet": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_preclock_handoff_packet.json",
+    "review": "docs/reviews/R139_PRECLOCK_OPERATIONAL_PREPARATION_REVIEW_2026-10-24.md",
+    "controllerBootProof": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_preclock_controller_boot_proof.json",
+    "ownerOperatorAvailable": true,
+    "ownerOperatorAvailability": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_owner_operator_availability.json",
+    "browserActorAck": "NOT_RECEIVED",
+    "publicTariffRefreshUsed": 1,
+    "publicTariffRefreshCap": 1,
+    "campaignReserved": false,
+    "runtimeExecutableNow": false,
+    "browserExecutableNow": false,
+    "providerExecutableNow": false
   }
 }

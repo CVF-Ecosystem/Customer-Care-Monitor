@@ -1,0 +1,19 @@
+{
+  "kind": "R139_ROOT_READ_ONLY_OS_BOOT_PROOF",
+  "status": "INDEPENDENTLY_ACCEPTED_ACTUAL_CONTROLLER_BOOT_CONVENTION",
+  "hostBootId": "|2026-10-23T05:48:27.5007940Z",
+  "pythonPath": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+  "rootVerifiedReadOnlyOSMetadata": true,
+  "hostBootIdConvention": "Exact stdout tuple from pinned read-only OS query under activation explicit environment; hostname component is absent in that environment.",
+  "parentHostBootIdObserved": "TT-DOICONT-LT1|2026-10-23T05:48:27.5007940Z",
+  "parentHostNameFromEnvironment": "TT-DOICONT-LT1",
+  "sameExactBootTimestamp": "2026-10-23T05:48:27.5007940Z",
+  "parentObservation": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_preclock_boot_proof.json",
+  "scrubbedChildObservation": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_preclock_boot_environment_observation.json",
+  "sameHostBasis": "Root local original held child handles, project filesystem/cwd and pinned Python identity plus equal actual OS boot timestamp; this tuple alone is not a host attestation.",
+  "qualification": "No invented hostname, timestamp or output; no cryptographic machine/boot attestation is claimed. Future Root control and product recorder must retain original same-host Popen handles and original clock.",
+  "noSourceCodeChange": true,
+  "campaignReserved": false,
+  "independentReview": "docs/reviews/R139_PRECLOCK_OPERATIONAL_PREPARATION_REVIEW_2026-10-24.md",
+  "reviewer": "Independent Sol Medium r139_preclock_packet_review_sol; authored no source or Root packet"
+}

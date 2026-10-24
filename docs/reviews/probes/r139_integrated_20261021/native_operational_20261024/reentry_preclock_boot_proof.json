@@ -1,0 +1,22 @@
+{
+  "kind": "R139_ROOT_READ_ONLY_OS_BOOT_PROOF",
+  "observedAtUTC": "2026-10-24T04:54:16.187557+00:00",
+  "hostBootId": "TT-DOICONT-LT1|2026-10-23T05:48:27.5007940Z",
+  "pythonPath": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+  "rootVerifiedReadOnlyOSMetadata": true,
+  "argv": [
+    "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+    "-NoProfile",
+    "-NonInteractive",
+    "-Command",
+    "$x=Get-CimInstance Win32_OperatingSystem -ErrorAction Stop; $h=$env:COMPUTERNAME; $b=$x.LastBootUpTime.ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ss.fffffffZ'); Write-Output ($h+'|'+$b)"
+  ],
+  "powershellSha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f",
+  "originalPopenWaitObserved": true,
+  "exitCode": 0,
+  "timeoutSeconds": 5,
+  "elapsedSeconds": 0.8025286000047345,
+  "stdoutSha256": "0a73c28f809985930de013daf8914771ad5535c5846a98f6ef365fff31562890",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "effectBoundary": "Read-only local OS metadata before clock; no service/Docker/key/provider query."
+}

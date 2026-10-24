@@ -1,0 +1,13 @@
+{
+  "kind": "R139_PRECLOCK_PUBLIC_TARIFF_REFRESH_RESERVATION",
+  "atUTC": "2026-10-24T04:51:58.728295+00:00",
+  "authoritySha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "cap": 1,
+  "usedOrUncertain": 1,
+  "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+  "reason": "Current source accepted; verify exact admitted model and standard tariff before new campaign. Old receipt belongs to spent campaign.",
+  "noSearchSecondUrlRetry": true,
+  "providerEndpointCalls": 0,
+  "keyReads": 0,
+  "campaignUse": 0
+}

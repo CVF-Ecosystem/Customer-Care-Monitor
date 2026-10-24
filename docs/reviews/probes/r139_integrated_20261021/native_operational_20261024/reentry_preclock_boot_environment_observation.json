@@ -1,0 +1,33 @@
+{
+  "kind": "R139_READ_ONLY_PRECLOCK_BOOT_IDENTITY_ENVIRONMENT_OBSERVATION",
+  "atUTC": "2026-10-24T05:18:45.358828+00:00",
+  "argv": [
+    "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+    "-NoProfile",
+    "-NonInteractive",
+    "-Command",
+    "$x=Get-CimInstance Win32_OperatingSystem -ErrorAction Stop; $h=$env:COMPUTERNAME; $b=$x.LastBootUpTime.ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ss.fffffffZ'); Write-Output ($h+'|'+$b)"
+  ],
+  "environmentKeys": [
+    "APPDATA",
+    "HOMEDRIVE",
+    "HOMEPATH",
+    "LOCALAPPDATA",
+    "PATH",
+    "PROGRAMDATA",
+    "SYSTEMROOT",
+    "TEMP",
+    "TMP",
+    "USERPROFILE",
+    "WINDIR"
+  ],
+  "COMPUTERNAMEExplicitlySupplied": false,
+  "originalWaitExitObserved": true,
+  "exitCode": 0,
+  "elapsedSeconds": 0.6243760000070324,
+  "timeoutSeconds": 5,
+  "observedHostBootId": "|2026-10-23T05:48:27.5007940Z",
+  "stdoutSha256": "0949986925ea793a9f8d735a09f7f672671691b6483324d2068493e2cd00a5b1",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scope": "Actual local OS metadata only; no activation prototype import/run or source check; no service/Docker/key/provider/campaign."
+}

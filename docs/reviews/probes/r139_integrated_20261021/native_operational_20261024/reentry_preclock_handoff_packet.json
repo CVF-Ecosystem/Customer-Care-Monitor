@@ -1,0 +1,165 @@
+{
+  "kind": "R139_PRECLOCK_HANDOFF_PACKET_NOT_RELEASE",
+  "status": "PREPARED_NOT_RELEASED_PENDING_CURRENT_BROWSER_ACK_AND_ROOT_SEALS",
+  "sourceCommit": "3f9b393e5b64dbf44eefd4779e9bc8ca210657ee",
+  "acceptedBuildPins": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "88f26ffc7c7864e331054ae9d2c8011517ba10d360bb9b54c9bd617796d9fdd2"
+  },
+  "ownerEnvelopeSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "nativeContractId": "r139-page-target-v1-reentry-20261024",
+  "campaignNonce": "e168d31ce8364c532c38b61b370dba19",
+  "runtimeDraft": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_runtime_admission_draft.json",
+  "recipeDraft": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_recipe_draft.json",
+  "fiveQueryPlan": {
+    "status": "PREPARED_UNEXECUTED_NEW_OWNER_ENVELOPE_ROOT_RELEASE_REQUIRED",
+    "actor": "Internal worker only after Root G0 technical release and original campaign reservation",
+    "binaryPinSource": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "sha256": "88f26ffc7c7864e331054ae9d2c8011517ba10d360bb9b54c9bd617796d9fdd2",
+      "dockerField": "pins.tools.docker"
+    },
+    "dockerConfigDir": ".cvf/runtime/r139_page_target_reentry_20261024_readiness/docker_config",
+    "dockerConfigContent": "{}\n",
+    "configCustody": "Exclusive owned directory and config.json only; no ambient credentials/config; create after campaign reservation",
+    "queries": [
+      {
+        "id": "cached-image",
+        "argv": [
+          "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_page_target_reentry_20261024_readiness/docker_config",
+          "image",
+          "inspect",
+          "--format",
+          "{{json .Id}}",
+          "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+        "comparison": "Decode stdout as exactly one JSON string (only surrounding whitespace); require decoded string exactly equals expected; no extra stdout content. Original stderr/exit retained."
+      },
+      {
+        "id": "container-name",
+        "argv": [
+          "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_page_target_reentry_20261024_readiness/docker_config",
+          "ps",
+          "-a",
+          "--filter",
+          "name=ccmai-r139-r4-20261023",
+          "--format",
+          "{{json .Names}}"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "EMPTY"
+      },
+      {
+        "id": "network-name",
+        "argv": [
+          "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_page_target_reentry_20261024_readiness/docker_config",
+          "network",
+          "ls",
+          "--filter",
+          "name=ccmai-r139-r4-20261023",
+          "--format",
+          "{{json .Name}}"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "EMPTY"
+      },
+      {
+        "id": "volume-name",
+        "argv": [
+          "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_page_target_reentry_20261024_readiness/docker_config",
+          "volume",
+          "ls",
+          "--filter",
+          "name=ccmai-r139-r4-20261023",
+          "--format",
+          "{{json .Name}}"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "EMPTY"
+      },
+      {
+        "id": "vite-port",
+        "argv": [
+          "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+          "-NoLogo",
+          "-NoProfile",
+          "-NonInteractive",
+          "-Command",
+          "$ErrorActionPreference='Stop'; $r139Listeners = @(Get-NetTCPConnection -State Listen -ErrorAction Stop | Where-Object { $_.LocalPort -eq 3519 } | Select-Object -Property LocalAddress,LocalPort,OwningProcess); [pscustomobject]@{ port = 3519; listeners = $r139Listeners } | ConvertTo-Json -Depth 4 -Compress; exit 0"
+        ],
+        "timeoutSeconds": 5,
+        "cap": 1,
+        "expected": {
+          "port": 3519,
+          "listeners": []
+        }
+      }
+    ],
+    "automaticRetry": 0,
+    "used": 0,
+    "vitePort": 3519,
+    "failure": "Any error/timeout/nonzero/ambiguous or occupied result HOLD, campaign consumed; no mutation/cleanup of ambient resources or replacement namespace/port",
+    "clock": "Reserve before first query or browser invocation; same original1200seconds includes all5queries and G0/G1/G2/cleanup",
+    "processCustody": "Capture original argv/stdout/stderr/start/end/wait/exit. Timeout must request cancellation of only the exact held query child and observe original wait; no new command/retry/host process kill. Unreturned original wait means UNKNOWN/HOLD, not bounded lifetime proof."
+  },
+  "browserPlan": {
+    "callsMax": 4,
+    "pageMax": 1,
+    "baselineMetadataLists": 1,
+    "finalMetadataLists": 1,
+    "task1": "Actual baseline metadata IDs only then one new_page with exact created nonce URL, same PageId controlled nonce URL, original capture and run/call/raw-byte refs.",
+    "task2": "Independent browser_subagent task addresses same exact actual PageId and observes exact controlled URL+nonce. No product before Root accepts actual provenance/handoff.",
+    "task3": "Only after actual committed Runtime Effect Admission: same exact PageId, admitted loopback UI, one deliberate execute POST and bounded status/reader/reload observations.",
+    "task4": "After actual Owner exact-page close report, native metadata final inventory; baseline unchanged and owned target absent, no other tab actions.",
+    "createdURL": "https://example.com/#r139_nonce=e168d31ce8364c532c38b61b370dba19&phase=created",
+    "controlledURL": "https://example.com/#r139_nonce=e168d31ce8364c532c38b61b370dba19&phase=controlled",
+    "fail": "HOLD before fixture/key/provider; no replacement page/task retry/stack, exact owned cleanup only."
+  },
+  "remainingBeforeReservation": [
+    "Fresh actual Antigravity metadata ACK on current accepted source/payload/nonce; no browser invocation for ACK",
+    "Browser actual ACK received, then Root refreshes same-window Root/internal actor ACKs and seals existing Owner operator availability; no renewed authority approval.",
+    "Final actor/window ACK sealing, registry/base-hash refresh and clean dispatch commit; full eight reserved-transition templates already precomputed and JSON preview parsed as metadata only.",
+    "Independent final technical-release/recipe review, exact changed-set commit and clean HEAD before Root held activation operation"
+  ],
+  "remainingAfterReservedG0": [
+    "Authenticate actual original native outputs, exactURLs/PageId/capture/two-task handoff and separate seal",
+    "Independent Runtime Effect Admission on actual original reservation/G0/binary/source before product/key/provider"
+  ],
+  "campaignReserved": false,
+  "providerCalls": 0,
+  "currentEffectRelease": false,
+  "coordinationInitialization": {
+    "metadataOnly": true,
+    "readinessRoot": ".cvf/runtime/r139_page_target_reentry_20261024_readiness",
+    "coordinationRoot": ".cvf/runtime/r139_page_target_reentry_20261024_readiness/coordination",
+    "onlyCoordinationEntry": "owner.json",
+    "ownerSha256": "cde6fc576b88f59d66048d5c3ba674b2f14c2a6b1df3ad239452143ba355cfa5",
+    "dockerConfig": "Precreated empty local config; no Docker invocation",
+    "campaignReserved": false
+  },
+  "independentReview": "docs/reviews/R139_PRECLOCK_OPERATIONAL_PREPARATION_REVIEW_2026-10-24.md",
+  "operatorAvailable": true,
+  "operatorAvailabilityRef": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_owner_operator_availability.json"
+}

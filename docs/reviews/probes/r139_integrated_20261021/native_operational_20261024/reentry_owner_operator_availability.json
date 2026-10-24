@@ -1,0 +1,15 @@
+{
+  "kind": "R139_OWNER_OPERATOR_CURRENT_AVAILABILITY",
+  "observedAtUTC": "2026-10-24T05:25:48.273694+00:00",
+  "source": "Direct Owner reply in this conversation on 2026-10-24",
+  "operator": "Owner in this conversation",
+  "closeMode": "operator_fallback",
+  "available": true,
+  "campaignNonce": "e168d31ce8364c532c38b61b370dba19",
+  "nativeContractId": "r139-page-target-v1-reentry-20261024",
+  "confirmation": "Tôi hoàn toàn sẵn sàng phối hợp đóng đúng trang riêng (exact owned PageId gắn với nonce chiến dịch) theo cơ chế operator_fallback và thu thập kiểm kê metadata cuối cùng ngay khi kết thúc hoặc có yêu cầu dọn dẹp.",
+  "scope": "Current availability and exact owned-page cleanup only. Future actual PageId must come from reserved native creation. Native final inventory still needs original actual tool evidence; availability is not a close receipt.",
+  "actualPageId": "NOT_CREATED",
+  "actualCloseActionTime": "NOT_OCCURRED",
+  "campaignReserved": false
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "R139_ROOT_PRECLOCK_NONINTERFERENCE_DISPOSITION",
+  "status": "DISPOSITION_ONLY_NEW_BASELINES_NOT_YET_OBSERVED",
+  "ownerEnvelopeSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "campaignNonce": "e168d31ce8364c532c38b61b370dba19",
+  "newScope": "caller_owned_explicit_page_target",
+  "excludedOldPageId": "95B03BC1A084B240BC6C88D67BD0D511",
+  "oldNativeSessionAndFinalInventory": "UNKNOWN_RETAINED_NO_OLD_TAB_PROBE",
+  "allPreexistingHostTabs": "Excluded from content/control/capture/cleanup; only approved baseline and final metadata IDs may be enumerated. Raw metadata stays private.",
+  "newNativeBaseline": "Must be actual metadata before sole new_page during reserved G0; no current baseline claimed.",
+  "newDockerBaseline": "Must be actual protected-resource snapshot before fixture creation after accepted G0/RuntimeEffectAdmission; preclock absent paths do not prove Docker name/port absence.",
+  "productNamespace": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_integrated_execution_r4_20261023",
+  "externalEvidenceDir": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\.ccmai_local_evidence\\r139_execution_proof_20261023\\fixture_r4",
+  "freshFilesystemPathsObserved": true,
+  "oldResourcesAndSpentCounters": "Preserve all; no deletion/restart/refund/reset or replacement namespace on collision.",
+  "providerData": "Synthetic complaint only, no Host metadata or credentials in request.",
+  "currentEffectRelease": false
+}
