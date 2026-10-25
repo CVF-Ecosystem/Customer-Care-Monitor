@@ -1,0 +1,15 @@
+{
+  "kind": "R139_CUA_FINAL_CANDIDATE_PINS_FOR_ALLOCATED_CHECKS",
+  "sourceSha256": {
+    "scripts/r139_execution_supervisor.py": "a7557917cc3ade551e78f7b4c40b0cc5aac5a312bcae2fdfbe353aba997f5203",
+    "scripts/tests/test_r139_execution_supervisor.py": "6df081a865a9afd2cc7ba5de05c1c8b5ccb63491aeb88e8d36006dd42bbffd41",
+    "backend/api/handlers/intervention_execution_browser_test.go": "0ed1148d42dcd9cb018e2a3f3cbeb9c68bdcb8904d408c365b8d05b11c2a040e",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_payload_templates.json": "ffbf475dee7a28a785c2ce543ad50cda55819c72debdf8c24e0a05104d599f19",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt": "57ae20a2bb0054e38d5a3d919f5e2997780b56981a82f2f31924eddf623e5854",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/recorder_design.py.txt": "154047cf66ffce3192b07ff4ac976f51c9a797c50b76a4dd3091f6398f207f1f"
+  },
+  "oldChecksSpent": 4,
+  "newChecksUsedAtRelease": 0,
+  "sourceAuthoritySha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
+  "observationCapsSha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491"
+}

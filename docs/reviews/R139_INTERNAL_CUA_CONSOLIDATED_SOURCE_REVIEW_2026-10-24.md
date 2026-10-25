@@ -1,6 +1,6 @@
 # R139 internal CUA consolidated source review
 
-Status: CHANGES_REQUIRED_BEFORE_CHECKS
+Status: ACCEPT_SOURCE_COMPONENTS_WITH_RETAINED_FAILED_ATTEMPT
 Risk: R2
 Worker: Internal Sol Medium /root/r139_sol_worker_transition
 Reviewer: Root independent REVIEWER, with independent Sol Medium /root/r139_cua_source_independent_review and Luna Max API documentation/operation assessment
@@ -20,3 +20,27 @@ Source dispatch63742e11 under immutable Owner CUA amendment0ee21ae6. Candidate s
 Source repair, metadata plan repair and cap semantics are consolidated before any allocated check. Optional DOM-only locator/confirm-handler acquisition and actual cross-agent ownership remain explicit preclock/G0 capability conditions. No guessed API call, getTab URL property, native identity alias, third inventory or widened status allowance may be used without the proper admitted contract.
 
 Owner approved both readonly-cap amendments (`call_9c716867`, reply `Duyệt hai giới hạn chỉ đọc`) before final candidate/checks. First cap-dispatch pre-commit profile failed ROLE_FIELD_INVALID because worker return used an informal reviewer heading; Root normalized only that assignee heading to the required Reviewer line, preserving worker findings/checkpoint hashes. Repository preflight7/7 and doctor27/27 passed. This is no source test or runtime evidence.
+
+## Final static precheck and allocated-check release — 2026-10-25
+
+Root and independent Sol reviewer `/root/r139_cua_final_static_review` PASS_STATIC_FOR_BOUNDED_CHECKS on the final six-file candidate. The last F07 positive binding fixture lacked the newly required observation fields; this deterministic inconsistency was caught statically before any attempt and completed within the same ongoing F07 repair, not a new repair pass. Updated test hash `6df081a865a9afd2cc7ba5de05c1c8b5ccb63491aeb88e8d36006dd42bbffd41`; other five candidate hashes remain as the worker return. F01–F07 static issues are settled for check execution.
+
+Root releases only worker focusedPython1 followed, on PASS, by worker offlineGoCompile1. Worker must reserve before each Popen, record original waits/exits/raw stdout/stderr/hash and unchanged source/tool pins, no retry. Root Python1 and exact audited pureGo1 remain separately Root-owned and unspent. The three new Go pure groups and ten unchanged legacy pure groups contain structural/temporary-file checks, no external process, DB/network/browser/provider effects. Git diff whitespace inspection is static repository review, not a functional Python/Go attempt, and remains disclosed.
+
+No Source REVIEW_PASS, G0 capability, runtime or live-governance behavior is accepted yet. Four old attempts remain spent and all four new attempts are zero used at this release. Target-bound locator/ConfirmDialog and separate-agent exact-tab ownership remain conditional actual G0 requirements before fixture/key/provider.
+
+## Retained worker failure and remaining original slots — 2026-10-25
+
+Worker focusedPython1 consumed FAIL44tests/1error at test hash6df081a8: mocked Path string keys used Windows backslashes against slash-form fixture dictionaries. Root inspected original stderr and independent Sol reviewer confirmed the precise two-line fixture normalization to Path(path).as_posix(), test hash e97ba027bc59965c6f1959d38566866229851203c309926d002f8ad1c49e1719. Production and five other design/source pins unchanged. This mechanical same-file consistency completion stays in the still-open consolidated repair; no new authoring/repair authority or Worker Python retry/refund.
+
+Existing Root focusedPython1 then PASS44/44, originalPID28608 wait exit0,7.572s. Existing Worker offlineGoCompile1 PASS originalPID29284 wait exit0; binary never executed,59561984bytes, SHA d1861e44be7f28b58d851e901a7d498c8460e553efbb20df6b0d92910c7208e7. Current three new attempts used = WorkerPythonFAIL + RootPythonPASS + WorkerCompilePASS; old4spent retained,total7of8. Root pureGo1 alone remains, exactly13 audited pure groups in one invocation, no integrated/native/runtime test. Passing a corrected suite does not erase the failed worker receipt.
+
+## Formal source/component disposition — 2026-10-25
+
+Root verified tracked result hashes against raw stdout/stderr and original waits/exits; corrected current six pins remain unchanged. Root Python PASS44/44; offline Go compile PASS; Root audited Go PASS13/13, no skip, exit0,7.594s. Worker Python FAIL44tests/1fixture error remains consumed and immutable. Exactly8of8lineage attempts used (old4,new4), no further software check/compile/prototype allowance. Source/component acceptance is for the current corrected source and binary, not a false claim that every attempt passed. Exact receipt `reentry_source_checks/cua_root_source_acceptance.json` binds all evidence and current pins.
+
+The Source REVIEW is settled pending material commit and a successor accepted-build pin record. No integrated/native product test, campaign, service query, live browser tab, key read or provider call has run in this CUA continuation. G0 actual API/ownership/documentation and G1/G2/G3 product evidence remain OPEN; Product B remains BLOCKED_PENDING_OPERATIONAL_ADMISSION. No FREEZE, product readiness, hosted CI or live AI governance claim.
+
+Repository-only finding during source material handback: Root promoted the operative handoff header above history but omitted its required Current State section heading; worker-return profile CONT failed missing labels. Root restored the exact section heading at the current top header and labeled the old acknowledgment section historical. Actual source/check receipts and all counters unchanged. This repaired documentary continuity, not source behavior or a software check.
+
+Material-commit repository verification: doctorPASS27/27 with inherited pin warning, legacypreflightPASS7/7, governanceunit89PASS42.717s, worker-return/reviewer-fast/pre-commit profilePASS. APPL explicitly NOT_APPLICABLE for COMPLETE_PENDING_REVIEW; closeability was not checked at this handover state. Active-source dispatch APPL/ROUTE receipts remain the checked earlier boundary. Source component evidence and failed attempt retained; no hosted CI or runtime claim.

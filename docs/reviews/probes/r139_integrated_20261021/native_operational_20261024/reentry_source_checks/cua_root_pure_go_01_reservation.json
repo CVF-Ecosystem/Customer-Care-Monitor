@@ -1,0 +1,53 @@
+{
+  "kind": "R139_CUA_OFFLINE_SOURCE_CHECK_RESERVATION",
+  "slot": "rootAuditedPureGo",
+  "cap": 1,
+  "usedOrUncertain": 1,
+  "atUTC": "2026-10-25T04:16:25.170944+00:00",
+  "ownerSourceSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
+  "observationCapsSha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491",
+  "argv": [
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_cua_source_20261025\\handlers.test.exe",
+    "-test.v",
+    "-test.count=1",
+    "-test.timeout=25s",
+    "-test.run=^TestR139Pure(RouteAdmission|BrowserReservationAdmission|BrowserTerminalClose|PageTargetV1|CuaReferenceBounds|CuaPageTargetV1|CuaGrantChainShape|FinalEvidenceSuccess|FinalEvidenceFatalGoexit|FinalEvidenceIOFailure|JournalRequestIOFailureBlocksNext|JournalCapturedResponseSurvivesGoexit|JournalUnsafeResponseHasNoInventedReceipt)$"
+  ],
+  "cwd": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+  "environment": {
+    "SYSTEMROOT": "C:\\windows",
+    "WINDIR": "C:\\windows",
+    "USERPROFILE": "C:\\Users\\tiennm",
+    "LOCALAPPDATA": "C:\\Users\\tiennm\\AppData\\Local",
+    "PATH": "C:/Windows/System32",
+    "TEMP": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_cua_root_checks_20261025\\go\\temp",
+    "TMP": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_cua_root_checks_20261025\\go\\temp"
+  },
+  "sourceBeforeSha256": {
+    "scripts/r139_execution_supervisor.py": "a7557917cc3ade551e78f7b4c40b0cc5aac5a312bcae2fdfbe353aba997f5203",
+    "scripts/tests/test_r139_execution_supervisor.py": "e97ba027bc59965c6f1959d38566866229851203c309926d002f8ad1c49e1719",
+    "backend/api/handlers/intervention_execution_browser_test.go": "0ed1148d42dcd9cb018e2a3f3cbeb9c68bdcb8904d408c365b8d05b11c2a040e",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_payload_templates.json": "ffbf475dee7a28a785c2ce543ad50cda55819c72debdf8c24e0a05104d599f19",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt": "57ae20a2bb0054e38d5a3d919f5e2997780b56981a82f2f31924eddf623e5854",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/recorder_design.py.txt": "154047cf66ffce3192b07ff4ac976f51c9a797c50b76a4dd3091f6398f207f1f"
+  },
+  "binarySha256": "d1861e44be7f28b58d851e901a7d498c8460e553efbb20df6b0d92910c7208e7",
+  "binaryBytes": 59561984,
+  "auditedExactTests": [
+    "TestR139PureRouteAdmission",
+    "TestR139PureBrowserReservationAdmission",
+    "TestR139PureBrowserTerminalClose",
+    "TestR139PurePageTargetV1",
+    "TestR139PureCuaReferenceBounds",
+    "TestR139PureCuaPageTargetV1",
+    "TestR139PureCuaGrantChainShape",
+    "TestR139PureFinalEvidenceSuccess",
+    "TestR139PureFinalEvidenceFatalGoexit",
+    "TestR139PureFinalEvidenceIOFailure",
+    "TestR139PureJournalRequestIOFailureBlocksNext",
+    "TestR139PureJournalCapturedResponseSurvivesGoexit",
+    "TestR139PureJournalUnsafeResponseHasNoInventedReceipt"
+  ],
+  "timeoutSeconds": 45,
+  "scope": "13 pure structural/temporary-file groups only. No integrated test, process/network/DB/provider/browser/Docker effect."
+}

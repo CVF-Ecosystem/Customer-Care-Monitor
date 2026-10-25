@@ -104,7 +104,14 @@ def main():
     # supervisor itself creates it after the admitted Popen starts.
     if runtime.exists():
         raise SystemExit("PRODUCT_RUNTIME_ROOT_PREEXISTING_BEFORE_SUPERVISOR")
-    if (a.get("browserProofContract") != "native_page_target_v1" or
+    if (a.get("browserProofContract") != "cua_page_target_v1" or
+        a.get("browserTool") != "supported_CUA_page_target" or
+        a.get("ownerCuaAmendmentSha256") != clock.get("freshGrantSha256") or
+        a.get("inheritedOwnerEnvelopeSha256") != clock.get("inheritedOwnerEnvelopeSha256") or
+        a.get("observationCapsRef") != {
+            "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
+            "sha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491"} or
+        clock.get("observationCapsSha256") != a["observationCapsRef"]["sha256"] or
         a.get("campaignReservationSha256") != sha(reservation) or
         a.get("campaignNonce") != clock.get("campaignNonce") or
         a.get("productRuntimeReleased") is not True):
@@ -149,12 +156,12 @@ def main():
             os.fsync(events.fileno())
         except OSError:
             holds.append("RECORDER_LOG_FAILURE")
-    file_keys = ("browserCloseReceiptPath", "actionEvidencePath", "finalInventoryPath", "rawNativeInventoryPath")
+    file_keys = ("browserCloseReceiptPath", "actionEvidencePath", "finalInventoryPath", "rawCuaInventoryPath")
     files = {key: confined(project, runtime, a[key]) for key in file_keys}
     done = confined(project, runtime, a["browserDoneSignalPath"])
     def browser_done():
         # An IPC hint only. The source supervisor and independent reviewer
-        # decide native_page_target_v1 terminal validity; file presence here
+        # decide cua_page_target_v1 terminal validity; file presence here
         # cannot promote close, action or inventory to PASS.
         if not done.is_file() or not (runtime / "browser_ready.json").is_file():
             return False
@@ -164,8 +171,9 @@ def main():
             marker = readj(done)
             if (marker.get("status") != "TERMINAL_EVIDENCE_WRITTEN" or
                 marker.get("campaignNonce") != clock["campaignNonce"] or
-                marker.get("proofContract") != "native_page_target_v1" or
-                marker.get("pageId") != a["pageId"] or
+                marker.get("proofContract") != "cua_page_target_v1" or
+                marker.get("browserId") != a["browserId"] or
+                marker.get("tabId") != a["tabId"] or
                 marker.get("ownedScopeId") != a["ownedScopeId"]): return False
             if parse_utc(marker.get("atUTC")) > deadline: return False
             pinned = marker.get("evidenceSha256")
@@ -243,7 +251,7 @@ def main():
                     if not stop_sent:
                         request_stop("clock_mismatch")
                 elif not stop_sent and browser_done():
-                    request_stop("antigravity_browser_done")
+                    request_stop("cua_browser_done")
                 elif not stop_sent and now >= stop_mono:
                     if not browser_done():
                         holds.append("BROWSER_CLOSE_OR_RAW_EVIDENCE_MISSING_OR_INVALID")

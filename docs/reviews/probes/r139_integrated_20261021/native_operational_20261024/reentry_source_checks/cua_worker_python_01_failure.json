@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "check": "workerFocusedPython",
+  "attempt": 1,
+  "status": "FAIL_CONSUMED_NO_RETRY",
+  "invocation": {
+    "R139_RUN": "UNSET",
+    "argv": [
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/tests",
+      "-p",
+      "test_r139_execution_supervisor.py"
+    ],
+    "executable": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "timeoutSeconds": 120
+  },
+  "originalProcess": {
+    "pid": 4048,
+    "waitCompleted": true,
+    "startedAtUTC": "2026-10-25T04:03:42.0446201Z",
+    "endedAtUTC": "2026-10-25T04:03:53.7497045Z",
+    "exitCode": 1
+  },
+  "result": {
+    "noGoCompileRun": true,
+    "failures": 0,
+    "noRetry": true,
+    "testsRun": 44,
+    "errorTest": "test_cua_grant_chain_requires_approved_observation_record",
+    "errors": 1,
+    "rootCause": "Windows Path(str) separator mismatch in mocked committed/read_json fixture"
+  },
+  "rawIgnored": {
+    "stdoutBytes": 4745,
+    "receiptPath": ".cvf/runtime/r139_cua_source_20261025/worker_python_01/receipt.json",
+    "stderrBytes": 2021,
+    "stdoutSha256": "bc743d7ff81f2e68164634fae218024cd221907e8d84a1b616bf13969d1c19da",
+    "stderrSha256": "a3a3ed794bea452535425ca6d46b248b76e0819631a9586483789974e0922789",
+    "stdoutPath": ".cvf/runtime/r139_cua_source_20261025/worker_python_01/stdout.log",
+    "stderrPath": ".cvf/runtime/r139_cua_source_20261025/worker_python_01/stderr.log",
+    "reservationPath": ".cvf/runtime/r139_cua_source_20261025/worker_python_01/reservation.json"
+  },
+  "integrity": {
+    "sourceBeforeSha256": {
+      "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt": "57ae20a2bb0054e38d5a3d919f5e2997780b56981a82f2f31924eddf623e5854",
+      "backend/api/handlers/intervention_execution_browser_test.go": "0ed1148d42dcd9cb018e2a3f3cbeb9c68bdcb8904d408c365b8d05b11c2a040e",
+      "scripts/tests/test_r139_execution_supervisor.py": "6df081a865a9afd2cc7ba5de05c1c8b5ccb63491aeb88e8d36006dd42bbffd41",
+      "scripts/r139_execution_supervisor.py": "a7557917cc3ade551e78f7b4c40b0cc5aac5a312bcae2fdfbe353aba997f5203",
+      "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/recorder_design.py.txt": "154047cf66ffce3192b07ff4ac976f51c9a797c50b76a4dd3091f6398f207f1f",
+      "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_payload_templates.json": "ffbf475dee7a28a785c2ce543ad50cda55819c72debdf8c24e0a05104d599f19"
+    },
+    "pythonToolUnchanged": true,
+    "sourceUnchanged": true,
+    "sourceAfterSha256": {
+      "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt": "57ae20a2bb0054e38d5a3d919f5e2997780b56981a82f2f31924eddf623e5854",
+      "backend/api/handlers/intervention_execution_browser_test.go": "0ed1148d42dcd9cb018e2a3f3cbeb9c68bdcb8904d408c365b8d05b11c2a040e",
+      "scripts/tests/test_r139_execution_supervisor.py": "6df081a865a9afd2cc7ba5de05c1c8b5ccb63491aeb88e8d36006dd42bbffd41",
+      "scripts/r139_execution_supervisor.py": "a7557917cc3ade551e78f7b4c40b0cc5aac5a312bcae2fdfbe353aba997f5203",
+      "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/recorder_design.py.txt": "154047cf66ffce3192b07ff4ac976f51c9a797c50b76a4dd3091f6398f207f1f",
+      "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_payload_templates.json": "ffbf475dee7a28a785c2ce543ad50cda55819c72debdf8c24e0a05104d599f19"
+    },
+    "pythonToolBeforeSha256": "a2a4eff8d0b0c845284c607d50a3b5b966ac5a3121736a2e38e165bd6644d9fe",
+    "pythonToolAfterSha256": "a2a4eff8d0b0c845284c607d50a3b5b966ac5a3121736a2e38e165bd6644d9fe"
+  },
+  "scope": "Pure structural tests only; not live governance proof; no browser/service/fixture/key/provider/campaign effect"
+}

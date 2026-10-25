@@ -2,9 +2,16 @@
 # needs exact-byte pin, independent R2 review and later Root technical release.
 # Recipe JSON (committed exact bytes): kind=R139_ROOT_ACTIVATION_RECIPE,
 # status=COMMITTED_PRECLOCK, trancheId, nonce, nativeContractId,
-# freshGrant{path,sha256}, acceptedBuildPinsRef{path,sha256},
+# freshGrant{path,sha256} is the committed CUA amendment;
+# inheritedOwnerEnvelope{path,sha256} is immutable 0ef818 with full old caps.
+# observationCapsRef{path,sha256} is Owner-approved fa7f2f, committed before
+# any source/runtime use; only its exact three-inventory/status16 delta overrides.
+# acceptedBuildPinsRef{path,sha256},
 # bootProof{path,sha256,hostBootId}, childLogRoot,
-# actorAcks{root,internal,antigravity:{path,sha256}}, operatorAvailable,
+# actorAcks{root,internal,cuaProducer,cuaObserver:{path,sha256}}, operatorAvailable,
+# cuaBrowserOperationPlanReference{path,sha256} records the reviewed finite
+# 64-method/four-stage plan and global 16-status-read reconciliation
+# (12 automatic post-send polls plus four event-driven loads).
 # coordinationRoot,coordinationOwnerSha256 (exclusive precreated owner.json),
 # oldResourceExclusionReviewed, reservationPath, signalPath, failurePath,
 # reviewed build pin record (not immutable Owner grant) carries nine source hashes,
@@ -35,6 +42,8 @@ CANON = ("CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json",
  "CVF_SESSION/tranches/CCMAI-RUNTIME-139.json", "docs/catalog/ARTIFACT_REGISTRY.json")
 CATALOG = ("docs/INDEX.md", "docs/catalog/MODULE_REGISTRY.json", "docs/catalog/MODULE_CATALOG.md")
 RECEIPT = PROBE + "/reentry_activation_receipt.json"
+OBS_REF = {"path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
+ "sha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491"}
 ALLOWED = set(CANON + CATALOG + (RECEIPT,))
 SOURCE_NINE = {"backend/api/handlers/intervention_execution_browser_test.go",
  "scripts/r139_execution_supervisor.py", "scripts/r139_vite_config.mjs.template",
@@ -216,7 +225,9 @@ def validated_product_binding(r, reserve_sha):
         if (b.get("trancheId") != "CCMAI-RUNTIME-139" or b.get("campaignNonce") != r["nonce"] or
             b.get("reservationSha256") != reserve_sha or
             b.get("freshGrantSha256") != r["freshGrant"]["sha256"] or
-            b.get("browserProofContract") != "native_page_target_v1" or
+            b.get("inheritedOwnerEnvelopeSha256") != r["inheritedOwnerEnvelope"]["sha256"] or
+            b.get("observationCapsSha256") != r["observationCapsRef"]["sha256"] or
+            b.get("browserProofContract") != "cua_page_target_v1" or
             b.get("runtimeEffectAdmissionReviewed") is not True): return None
         item = b["runtimeEffectAdmission"]
         if not re.fullmatch(r"CVF_SESSION/authority/CCMAI-RUNTIME-139-[A-Za-z0-9_-]+\.json", item["path"]):
@@ -230,7 +241,10 @@ def validated_product_binding(r, reserve_sha):
         review_raw = read(inside(review["path"], {review["path"]}))
         if sha(review_raw) != review["sha256"]: return None
         if (admission.get("campaignReservationSha256") != reserve_sha or
-            admission.get("browserProofContract") != "native_page_target_v1" or
+            admission.get("ownerCuaAmendmentSha256") != r["freshGrant"]["sha256"] or
+            admission.get("inheritedOwnerEnvelopeSha256") != r["inheritedOwnerEnvelope"]["sha256"] or
+            admission.get("observationCapsRef") != r["observationCapsRef"] or
+            admission.get("browserProofContract") != "cua_page_target_v1" or
             admission.get("runtimeRoot") != b.get("runtimeRoot") or
             admission.get("runtimeRoot") != str(PRODUCT_ROOT) or
             admission.get("campaignNonce") != r["nonce"] or
@@ -392,16 +406,37 @@ def preclock(recipe_path, recipe_sha, expected_head):
     if not re.fullmatch(r"CVF_SESSION/authority/CCMAI-RUNTIME-139-[A-Za-z0-9_-]+-ADMISSION\.json", r["freshGrant"]["path"]):
         hold("FRESH_GRANT_PATH")
     grant = committed(r["freshGrant"]["path"], r["freshGrant"]["sha256"])
-    if (grant.get("kind") != "OWNER_APPROVED_R139_SOURCE_AND_CONDITIONAL_REENTRY" or
+    inherited = committed(r["inheritedOwnerEnvelope"]["path"], r["inheritedOwnerEnvelope"]["sha256"])
+    if r.get("observationCapsRef") != OBS_REF: hold("OBSERVATION_CAP_REF_INVALID")
+    obs = committed(OBS_REF["path"], OBS_REF["sha256"])
+    oc = obs.get("proposedReadonlyChanges", {})
+    if (obs.get("kind") != "OWNER_APPROVED_R139_CUA_OBSERVATION_CAP_AMENDMENT" or
+        obs.get("ownerApproved") is not True or
+        obs.get("parentCuaAmendment") != r["freshGrant"] or
+        obs.get("inheritedOwnerEnvelope") != r["inheritedOwnerEnvelope"] or
+        oc.get("globalMetadataEnumerationMaximum") != 3 or
+        oc.get("baselineMetadataEnumeration") != 1 or
+        oc.get("handoffMetadataEnumeration") != 1 or
+        oc.get("finalMetadataEnumeration") != 1 or
+        oc.get("g2StatusReadStartsMaximum") != 16 or
+        oc.get("automaticPostSendStatusPollStartsMaximum") != 12 or
+        oc.get("automaticPollSpacingSecondsMinimum") != 5 or
+        oc.get("automaticPollLifetimeSecondsMaximum") != 60 or
+        oc.get("eventDrivenStatusReadsMaximum") != 4): hold("OBSERVATION_CAP_NOT_ADMITTED")
+    if (grant.get("kind") != "OWNER_APPROVED_R139_INTERNAL_CUA_SOURCE_AND_CONDITIONAL_CONTINUATION" or
         grant.get("ownerApproved") is not True or grant.get("trancheId") != "CCMAI-RUNTIME-139" or
-        grant.get("freshCampaignCap") != 1 or grant.get("oldCampaignSpent") != 1 or
-        grant.get("oldQueriesSpent") != 5 or grant.get("sourceAdaptationAccepted") is not False or
-        grant.get("providerPhysicalCap") != 1 or grant.get("maximumNewUSD") != 1 or
-        grant.get("priorUnusedProspectiveAllowanceSupersededNotStacked") is not True or
-        grant.get("olderUnknownProviderOutcomeRetained") is not True or
-        grant.get("currentLineageProviderAttemptsObserved") != 0 or
-        grant.get("historicalAggregateUnattributedProviderAttempts") != 1 or
-        grant.get("historicalLineage") != "UNKNOWN"): hold("FRESH_GRANT")
+        grant.get("sourceGranted") is not True or
+        grant.get("previousOwnerEnvelope") != r["inheritedOwnerEnvelope"] or
+        grant.get("browserContractProposed", {}).get("proofContract") != "cua_page_target_v1" or
+        grant.get("browserContractProposed", {}).get("browserTool") != "supported_CUA_page_target" or
+        inherited.get("freshCampaignCap") != 1 or inherited.get("oldCampaignSpent") != 1 or
+        inherited.get("oldQueriesSpent") != 5 or inherited.get("providerPhysicalCap") != 1 or
+        inherited.get("maximumNewUSD") != 1 or
+        inherited.get("priorUnusedProspectiveAllowanceSupersededNotStacked") is not True or
+        inherited.get("olderUnknownProviderOutcomeRetained") is not True or
+        inherited.get("currentLineageProviderAttemptsObserved") != 0 or
+        inherited.get("historicalAggregateUnattributedProviderAttempts") != 1 or
+        inherited.get("historicalLineage") != "UNKNOWN"): hold("FRESH_GRANT")
     if not git("merge-base", "--is-ancestor", build["sourceCommit"], "HEAD") == b"":
         hold("BUILD_COMMIT_ANCESTRY")
     boot = committed(r["bootProof"]["path"], r["bootProof"]["sha256"])
@@ -415,15 +450,22 @@ def preclock(recipe_path, recipe_sha, expected_head):
     actual_boot = child([pins["tools"]["powershell"]["path"], "-NoProfile", "-NonInteractive",
                          "-Command", os_query], 5).decode("utf-8").strip()
     if actual_boot != boot["hostBootId"]: hold("CURRENT_HOST_BOOT_DRIFT")
-    for who in ("root", "internal", "antigravity"):
+    cua_tasks = []
+    for who in ("root", "internal", "cuaProducer", "cuaObserver"):
         item = r["actorAcks"][who]; ack = committed(item["path"], item["sha256"])
-        if ack.get("ready") is not True or ack.get("freshGrantSha256") != r["freshGrant"]["sha256"]:
+        if (ack.get("ready") is not True or ack.get("freshGrantSha256") != r["freshGrant"]["sha256"] or
+            ack.get("inheritedOwnerEnvelopeSha256") != r["inheritedOwnerEnvelope"]["sha256"] or
+            ack.get("observationCapsSha256") != OBS_REF["sha256"]):
             hold("ACTOR_ACK")
+        if who in ("cuaProducer", "cuaObserver") and not ack.get("collaborationTaskId"):
+            hold("CUA_TASK_ID_ACK")
+        if who in ("cuaProducer", "cuaObserver"):
+            cua_tasks.append(ack["collaborationTaskId"])
         if who == "root" and (ack.get("originalControlPopenCustodian") != "Root" or
                               ack.get("originalControlWaitExitReceiptPlanned") is not True):
             hold("ROOT_MANAGED_CONTROL_HANDLE_ACK")
     if (r.get("operator") != "Owner in this conversation" or r.get("operatorAvailable") is not True or
-        r.get("oldResourceExclusionReviewed") is not True): hold("OWNERSHIP")
+        r.get("oldResourceExclusionReviewed") is not True or len(set(cua_tasks)) != 2): hold("OWNERSHIP")
     coord = r["coordinationRoot"]
     if not coord.startswith(".cvf/runtime/r139_"): hold("COORD_SCOPE")
     cpath = inside(coord, {coord})
@@ -456,22 +498,27 @@ def preclock(recipe_path, recipe_sha, expected_head):
             hold("OWNED_PATH_OCCUPIED")
     if inside(RECEIPT, ALLOWED).exists(): hold("RECEIPT_OCCUPIED")
     source_budget = {"authoringPasses": 1, "consolidatedRepairPasses": 1,
-        "workerFocusedPython": 2, "workerOfflineGoCompile": 2,
+        "workerFocusedPython": 1, "workerOfflineGoCompile": 1,
         "rootFocusedPython": 1, "rootAuditedPureGo": 1}
     if (r["freshGrant"]["sha256"] != build["ownerEnvelopeSha256"] or
+        build.get("inheritedOwnerEnvelopeSha256") != r["inheritedOwnerEnvelope"]["sha256"] or
         r["freshSourceCheckBudgetOutsideClock"] != source_budget or
         grant.get("sourceBudget") != source_budget or
         build.get("sourceChecksAccepted") is not True): hold("SOURCE_BUDGET_BOUNDARY")
     cap = r["newBudget"]
     required = {"oneCampaign": 1, "internalReadOnlyQueries": 5,
-      "browserSubagentInvocationsMax": 4, "newOwnedPages": 1, "creationNavigation": 1,
+      "browserWorkerStagesMax": 4, "cuaApiMethodsMax": 64,
+      "cuaStageMethodsMax": {"g0Producer": 8, "g0IndependentObserver": 4, "g2ProductUi": 48, "terminal": 4},
+      "g2CapturesMax": 4, "newOwnedPages": 1, "creationNavigation": 1,
       "samePageControlNavigation": 1, "pageReadObservationsMax": 4,
       "originalCapturesMax": 2, "exactFinalCloseMax": 1,
-      "baselineMetadataEnumeration": 1, "finalMetadataEnumeration": 1,
+      "baselineMetadataEnumeration": 1, "handoffMetadataEnumeration": 1,
+      "finalMetadataEnumeration": 1, "globalMetadataEnumerationMaximum": 3,
       "nativeExecutePOSTMax": 8,
       "browserExecutePOSTMax": 1, "grantsMax": 3, "authPOSTMax": 4,
-      "statusReadStartsMax": 12, "statusReadSpacingSecondsMin": 5,
-      "statusReadLifetimeSecondsMax": 60, "physicalProviderAttemptsMax": 1,
+      "statusReadStartsMax": 16, "automaticPostSendStatusPollStartsMax": 12,
+      "eventDrivenStatusReadsMax": 4, "automaticPollSpacingSecondsMin": 5,
+      "automaticPollLifetimeSecondsMax": 60, "physicalProviderAttemptsMax": 1,
       "newUSDMax": 1, "keyContentReadsMax": 1, "requestBytesMax": 6000,
       "completionTokensMax": 768, "fixtureStartsMax": 1,
       "fixtureFinalStopsMax": 1, "backendStartsMax": 1, "viteStartsMax": 1,
@@ -481,18 +528,27 @@ def preclock(recipe_path, recipe_sha, expected_head):
       "wholeCampaignSeconds": 1200, "stopBeforeSeconds": 1020,
       "cleanupReserveSeconds": 180, "oldUnusedProviderAllowanceSupersededNotStacked": True}
     if cap != required: hold("EFFECT_CAPS")
-    gc = grant["caps"]
+    gc = inherited["caps"]
     grant_bound = {"oneCampaign": gc["campaigns"], "internalReadOnlyQueries": gc["readonlyQueries"],
-        "browserSubagentInvocationsMax": gc["browserTaskCalls"], "newOwnedPages": gc["ownedExplicitPages"],
+        "browserWorkerStagesMax": gc["browserTaskCalls"],
+        "cuaApiMethodsMax": grant["browserOperationBudgetProposed"]["maximumAttemptedCuaInvocations"],
+        "cuaStageMethodsMax": grant["browserOperationBudgetProposed"]["stages"],
+        "g2CapturesMax": grant["browserOperationBudgetProposed"]["g2CapturesMaximum"],
+        "newOwnedPages": gc["ownedExplicitPages"],
         "creationNavigation": gc["creationNavigation"], "samePageControlNavigation": gc["samePageControlNavigation"],
         "pageReadObservationsMax": gc["g0ReadObservations"], "originalCapturesMax": gc["g0Captures"],
          "exactFinalCloseMax": gc["finalExactPageClose"],
-         "baselineMetadataEnumeration": gc["baselineMetadataEnumeration"],
-         "finalMetadataEnumeration": gc["finalMetadataEnumeration"],
+         "baselineMetadataEnumeration": oc["baselineMetadataEnumeration"],
+         "handoffMetadataEnumeration": oc["handoffMetadataEnumeration"],
+         "finalMetadataEnumeration": oc["finalMetadataEnumeration"],
+         "globalMetadataEnumerationMaximum": oc["globalMetadataEnumerationMaximum"],
         "nativeExecutePOSTMax": gc["nativeExecutePOST"], "browserExecutePOSTMax": gc["browserExecutePOST"],
         "grantsMax": gc["grants"], "authPOSTMax": gc["authPOST"],
-        "statusReadStartsMax": gc["statusReadStarts"], "statusReadSpacingSecondsMin": gc["statusReadSpacingSecondsMin"],
-        "statusReadLifetimeSecondsMax": gc["statusReadLifetimeSecondsMax"],
+        "statusReadStartsMax": oc["g2StatusReadStartsMaximum"],
+        "automaticPostSendStatusPollStartsMax": oc["automaticPostSendStatusPollStartsMaximum"],
+        "eventDrivenStatusReadsMax": oc["eventDrivenStatusReadsMaximum"],
+        "automaticPollSpacingSecondsMin": oc["automaticPollSpacingSecondsMinimum"],
+        "automaticPollLifetimeSecondsMax": oc["automaticPollLifetimeSecondsMaximum"],
         "physicalProviderAttemptsMax": gc["providerPhysicalCalls"], "newUSDMax": gc["maximumUSD"],
          "keyContentReadsMax": gc["keyContentReads"], "requestBytesMax": gc["requestBytes"],
          "completionTokensMax": gc["completionTokens"],
@@ -504,15 +560,25 @@ def preclock(recipe_path, recipe_sha, expected_head):
         "automaticRetry": gc["automaticRetry"], "sourceChecksDuringCampaign": 0,
         "wholeCampaignSeconds": gc["lifecycleSeconds"], "stopBeforeSeconds": gc["lifecycleSeconds"] - gc["cleanupReserveSeconds"],
         "cleanupReserveSeconds": gc["cleanupReserveSeconds"], "oldUnusedProviderAllowanceSupersededNotStacked":
-        grant["priorUnusedProspectiveAllowanceSupersededNotStacked"]}
+        inherited["priorUnusedProspectiveAllowanceSupersededNotStacked"]}
     if cap != grant_bound: hold("GRANT_EFFECT_CAPS")
-    if (grant["privacyScope"]["tabMetadataOnly"] is not True or
-        grant["privacyScope"]["baselineAndFinalOnly"] is not True or
-        grant["privacyScope"]["unrelatedTabDOMContent"] is not False or
-        grant["privacyScope"]["unrelatedTabScreenshotsOrControl"] is not False or
-        not r.get("protectedBaselineReference") or not r.get("nativePageTargetPlanReference")):
-        hold("NATIVE_SCOPE_NOT_ADMITTED")
-    for key in ("protectedBaselineReference", "nativePageTargetPlanReference"):
+    # Preserve the inherited privacy baseline while applying only the exact
+    # committed Owner exception for one metadata read at independent handoff.
+    if (inherited["privacyScope"]["tabMetadataOnly"] is not True or
+        inherited["privacyScope"]["baselineAndFinalOnly"] is not True or
+        oc.get("handoffMetadataEnumeration") != 1 or
+        oc.get("noExtraGlobalInventory") is not True or
+        oc.get("noUnrelatedTabContentCaptureOrControl") is not True or
+        oc.get("rawMetadataPrivateEvidenceIdsOrDigestsOnly") is not True or
+        oc.get("spacingAndLifetimeScope") != "automatic post-send polling only; event-driven loads recorded separately" or
+        oc.get("eventDrivenCategories") != ["initial_writer_load", "publication_version_watch_reload",
+                                            "one_deliberate_writer_reload", "reader_load"] or
+        inherited["privacyScope"]["unrelatedTabDOMContent"] is not False or
+        inherited["privacyScope"]["unrelatedTabScreenshotsOrControl"] is not False or
+        not r.get("protectedBaselineReference") or not r.get("cuaPageTargetPlanReference") or
+        not r.get("cuaBrowserOperationPlanReference")):
+        hold("CUA_SCOPE_NOT_ADMITTED")
+    for key in ("protectedBaselineReference", "cuaPageTargetPlanReference", "cuaBrowserOperationPlanReference"):
         item = r[key]
         if not item["path"].startswith("docs/reviews/"): hold("REFERENCE_SCOPE")
         committed(item["path"], item["sha256"], parse=False)
@@ -547,7 +613,9 @@ def activate(r, base, pins):
       "hostBootId": r["bootProof"]["hostBootId"], "deadlineUTC": end, "stopRequestedByUTC": stop,
       "stopMonotonic": mono + 1020, "deadlineMonotonic": mono + 1200,
       "cleanupReserveSeconds": 180, "committedDispatchHead": base,
-      "freshGrantSha256": r["freshGrant"]["sha256"]}
+      "freshGrantSha256": r["freshGrant"]["sha256"],
+      "inheritedOwnerEnvelopeSha256": r["inheritedOwnerEnvelope"]["sha256"],
+      "observationCapsSha256": OBS_REF["sha256"]}
     RECIPE = r
     RESERVATION = reservation
     OP_END = mono + 60

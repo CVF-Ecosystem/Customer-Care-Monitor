@@ -36,6 +36,11 @@ import (
 	"gorm.io/gorm"
 )
 
+type r139AuthorityRef struct {
+	Path string `json:"path"`
+	SHA256 string `json:"sha256"`
+}
+
 type r139Admission struct {
 	NativeContractID          string            `json:"nativeContractId"`
 	CloseMode                 string            `json:"closeMode"`
@@ -44,12 +49,16 @@ type r139Admission struct {
 	ActionEvidencePath        string            `json:"actionEvidencePath"`
 	FinalInventoryPath        string            `json:"finalInventoryPath"`
 	RawNativeInventoryPath    string            `json:"rawNativeInventoryPath"`
+	RawCuaInventoryPath       string            `json:"rawCuaInventoryPath"`
 	nativeProjectRoot         string
 	TrancheID                 string            `json:"trancheId"`
 	Kind                      string            `json:"kind"`
 	SourceCommit              string            `json:"sourceCommit"`
 	FixtureName               string            `json:"fixtureName"`
 	BrowserTool               string            `json:"browserTool"`
+	OwnerCuaAmendmentRef      r139AuthorityRef  `json:"ownerCuaAmendmentRef"`
+	InheritedOwnerEnvelopeRef r139AuthorityRef  `json:"inheritedOwnerEnvelopeRef"`
+	ObservationCapsRef        r139AuthorityRef  `json:"observationCapsRef"`
 	BrowserReceiptSHA256      string            `json:"browserReceiptSha256"`
 	BrowserReceiptPath        string            `json:"browserReceiptPath"`
 	BrowserCloseReceiptPath   string            `json:"browserCloseReceiptPath"`
@@ -59,6 +68,12 @@ type r139Admission struct {
 	OwnedScopeID              string            `json:"ownedScopeId"`
 	ScopeOrigin               string            `json:"scopeOrigin"`
 	OwnedPageIDs              []string          `json:"ownedPageIds"`
+	OwnedTabIDs               []string          `json:"ownedTabIds"`
+	BrowserID                 string            `json:"browserId"`
+	BrowserKind               string            `json:"browserKind"`
+	TabID                     string            `json:"tabId"`
+	ProducerAgentTaskID       string            `json:"producerAgentTaskId"`
+	ObserverAgentTaskID       string            `json:"observerAgentTaskId"`
 	ProofContract             string            `json:"proofContract"`
 	BrowserDoneSignalPath     string            `json:"browserDoneSignalPath"`
 	PageID                    string            `json:"pageId"`
@@ -92,11 +107,13 @@ type r139Admission struct {
 
 func r139VerifyBrowserReservation(a r139Admission, browserRaw []byte) error {
 	if a.BrowserTool == "antigravity_page_target" { return r139PageTargetReservation(a, browserRaw) }
+	if a.BrowserTool == "supported_CUA_page_target" { return r139CuaReservation(a, browserRaw, false) }
 	return r139StrictBrowserReservation(a, browserRaw)
 }
 
 func r139VerifyBrowserTerminalClose(a r139Admission, closeRaw []byte) error {
 	if a.BrowserTool == "antigravity_page_target" { return r139PageTargetTerminal(a, closeRaw) }
+	if a.BrowserTool == "supported_CUA_page_target" { return r139CuaTerminal(a, closeRaw) }
 	return r139StrictBrowserTerminalClose(a, closeRaw)
 }
 
@@ -534,6 +551,230 @@ func r139PageTargetTerminal(a r139Admission, closeRaw []byte) error {
 	return nil
 }
 
+// CUA evidence is caller-recorded from original CUA returns. It is deliberately
+// distinct from the native browser-subagent proof contract above.
+func r139CuaIdentity(a r139Admission, m map[string]any) error {
+	if a.BrowserTool != "supported_CUA_page_target" || a.ProofContract != "cua_page_target_v1" ||
+		a.BrowserKind != "iab" || a.ScopeOrigin != "caller_owned_explicit_cua_tab_target" ||
+		a.CloseMode != "operator_fallback" || a.FallbackCloseOperator != a.Operator ||
+		a.ProducerAgentTaskID == a.ObserverAgentTaskID || len(a.OwnedTabIDs) != 1 ||
+		a.OwnedTabIDs[0] != a.TabID || a.PageID != "" || a.BrowserSessionID != "" || len(a.OwnedPageIDs) != 0 {
+		return errors.New("CUA admission identity invalid")
+	}
+	for _, key := range []string{"pageId", "browserSessionId", "nativeTaskRunRef", "nativeToolCallRef", "ownedPageIds", "rawOriginalToolReference", "rawOriginalToolSha256"} {
+		if _, ok := m[key]; ok { return fmt.Errorf("native alias %s forbidden in CUA evidence", key) }
+	}
+	want := map[string]string{"nativeContractId": a.NativeContractID, "trancheId": a.TrancheID,
+		"campaignNonce": a.CampaignNonce, "browserId": a.BrowserID, "tabId": a.TabID,
+		"ownedScopeId": a.OwnedScopeID, "producerAgentTaskId": a.ProducerAgentTaskID,
+		"observerAgentTaskId": a.ObserverAgentTaskID, "operator": a.Operator, "closeMode": a.CloseMode}
+	for key, value := range want {
+		if _, err := r139NativeText(value); err != nil || m[key] != value { return fmt.Errorf("CUA %s mismatch", key) }
+	}
+	if m["proofContract"] != "cua_page_target_v1" || m["browserKind"] != "iab" || m["scopeOrigin"] != a.ScopeOrigin { return errors.New("CUA contract mismatch") }
+	ids, ok := m["ownedTabIds"].([]any)
+	if !ok || len(ids) != 1 || ids[0] != a.TabID { return errors.New("CUA owned tab set invalid") }
+	return nil
+}
+
+func r139CuaOrigin(m map[string]any) (time.Time, error) {
+	for _, key := range []string{"cuaCallRef", "originalCuaReturnReference"} {
+		if err := r139CuaReference(m[key]); err != nil { return time.Time{}, fmt.Errorf("CUA %s invalid", key) }
+	}
+	sha, ok := m["originalCuaReturnSha256"].(string)
+	if !ok || !regexp.MustCompile(`^[0-9a-f]{64}$`).MatchString(sha) ||
+		m["provenanceBasis"] != "caller_recorded_original_cua_return" || m["rootOriginalReturnReviewRequired"] != true ||
+		m["observedAtUTC"] != m["atUTC"] { return time.Time{}, errors.New("CUA original return provenance invalid") }
+	return r139NativeTime(m["atUTC"])
+}
+
+func r139CuaReference(value any) error {
+	text, ok := value.(string)
+	if !ok || len(text) < 1 || len(text) > 512 || strings.TrimSpace(text) != text { return errors.New("CUA reference length/trim invalid") }
+	for _, ch := range text { if ch < 32 || ch >= 127 { return errors.New("CUA reference not ASCII") } }
+	return nil
+}
+
+func TestR139PureCuaReferenceBounds(t *testing.T) {
+	if err := r139CuaReference(strings.Repeat("r", 512)); err != nil { t.Fatalf("valid long CUA reference rejected: %v", err) }
+	for _, bad := range []any{strings.Repeat("r", 513), " leading", "bad\nref", false} {
+		if err := r139CuaReference(bad); err == nil { t.Fatal("malformed CUA reference accepted") }
+	}
+}
+
+func r139CuaDerived(m map[string]any) (time.Time, error) {
+	if m["provenanceBasis"] != "derived_from_original_cua_returns" || m["rootOriginalReturnReviewRequired"] != true || m["observedAtUTC"] != m["atUTC"] { return time.Time{}, errors.New("CUA derived provenance invalid") }
+	for _, key := range []string{"cuaCallRef", "originalCuaReturnReference", "originalCuaReturnSha256"} {
+		if _, exists := m[key]; exists { return time.Time{}, errors.New("CUA aggregate cannot claim one original return") }
+	}
+	links, ok := m["sourceEvidenceSha256"].(map[string]any)
+	if !ok || len(links) == 0 { return time.Time{}, errors.New("CUA aggregate source links absent") }
+	for key, raw := range links {
+		if _, err := r139NativeText(key); err != nil { return time.Time{}, err }
+		sha, ok := raw.(string)
+		if !ok || !regexp.MustCompile(`^[0-9a-f]{64}$`).MatchString(sha) { return time.Time{}, errors.New("CUA aggregate source link hash invalid") }
+	}
+	return r139NativeTime(m["atUTC"])
+}
+
+func r139CuaEvent(a r139Admission, root string, proof map[string]any, field, event string) (map[string]any, time.Time, error) {
+	suffix := ""
+	if field != "baselineInventory" && field != "creationLedger" { suffix = "Evidence" }
+	data, err := r139NativeFile(a, field, proof[field+suffix+"Path"], proof[field+suffix+"Sha256"], root)
+	if err != nil { return nil, time.Time{}, err }
+	if err := r139CuaIdentity(a, data); err != nil || data["event"] != event { return nil, time.Time{}, errors.New("CUA event identity invalid") }
+	var at time.Time
+	if event == "creation_ledger" || event == "action_sequence" || event == "handoff" { at, err = r139CuaDerived(data) } else { at, err = r139CuaOrigin(data) }
+	return data, at, err
+}
+
+func r139CuaReservation(a r139Admission, browserRaw []byte, allowRuntime bool) error {
+	proof, err := r139NativeObject(browserRaw); if err != nil { return err }
+	if !a.BrowserSupported || proof["status"] != "RESERVED_CUA_TAB_CONTROL_CAPTURE_HANDOFF" ||
+		proof["protocol"] != "https" || proof["closeObserved"] != false || proof["rootOriginalReturnReviewed"] != true { return errors.New("CUA prefix incomplete") }
+	if err := r139CuaIdentity(a, proof); err != nil { return err }
+	_, readiness, err := r139NativeRoot(a, "browserReadinessRoot"); if err != nil { return err }
+	_, product, err := r139NativeRoot(a, "runtimeRoot"); if err != nil { return err }
+	if strings.EqualFold(readiness, product) || strings.HasPrefix(strings.ToLower(readiness), strings.ToLower(product)+string(os.PathSeparator)) || strings.HasPrefix(strings.ToLower(product), strings.ToLower(readiness)+string(os.PathSeparator)) { return errors.New("CUA roots overlap") }
+	stored, err := r139NativeFile(a, "browserReceipt", a.BrowserReceiptPath, a.BrowserReceiptSHA256, readiness)
+	if err != nil || !reflect.DeepEqual(stored, proof) { return errors.New("CUA prefix bytes/hash mismatch") }
+	if _, err := os.Stat(readiness); err != nil { return errors.New("CUA readiness absent") }
+	if info, statErr := os.Stat(product); statErr == nil && !allowRuntime {
+		if !info.IsDir() || os.Getenv("R139_RUN") != "1" || os.Getenv("R139_RUNTIME_ROOT") != product ||
+			!regexp.MustCompile(`^[0-9a-f]{64}$`).MatchString(os.Getenv("R139_RUNTIME_ADMISSION_SHA256")) ||
+			a.SourceCommit == "" || a.SourceCommit != os.Getenv("R139_SOURCE_COMMIT") { return errors.New("CUA product root preexisting") }
+		intentRaw, readErr := os.ReadFile(filepath.Join(product, "run_intent.json"))
+		if readErr != nil { return errors.New("CUA supervisor intent missing") }
+		var intent struct { AdmissionSHA256 string `json:"admissionSha256"`; SourceCommit string `json:"sourceCommit"`; StartedAt float64 `json:"startedAt"`; DeadlineSeconds int `json:"deadlineSeconds"` }
+		if json.Unmarshal(intentRaw, &intent) != nil || intent.AdmissionSHA256 != os.Getenv("R139_RUNTIME_ADMISSION_SHA256") ||
+			intent.SourceCommit != a.SourceCommit || intent.DeadlineSeconds != 1200 ||
+			intent.StartedAt < float64(time.Now().Unix()-1200) || intent.StartedAt > float64(time.Now().Unix()+1) { return errors.New("CUA supervisor intent mismatch") }
+	} else if statErr != nil && !os.IsNotExist(statErr) { return statErr }
+	sealed, err := r139NativeTime(proof["reservedAtUTC"]); if err != nil { return err }
+	baseline, baseTime, err := r139CuaEvent(a, readiness, proof, "baselineInventory", "baseline_inventory")
+	if err != nil || baseline["inventoryScope"] != "metadata_only" || baseTime.After(sealed) { return errors.New("CUA baseline invalid") }
+	baseIDs, err := r139PageIDs(baseline["tabIds"]); if err != nil || baseIDs[a.TabID] { return errors.New("CUA tab preexisting") }
+	previous := baseTime
+	creationAt := baseTime
+	created := "https://example.com/#r139_nonce=" + a.CampaignNonce + "&phase=created"
+	controlled := "https://example.com/#r139_nonce=" + a.CampaignNonce + "&phase=controlled"
+	for _, event := range []string{"creation", "control", "capture", "handoff"} {
+		row, at, err := r139CuaEvent(a, readiness, proof, event, event)
+		if err != nil || at.Before(previous) || at.After(sealed) { return fmt.Errorf("CUA %s chronology/evidence invalid", event) }
+		previous = at
+		switch event {
+		case "creation":
+			creationAt = at
+			if _, invented := row["observedUrl"]; invented { return errors.New("CUA creation URL not returned") }
+			if row["agentTaskId"] != a.ProducerAgentTaskID || row["createdTabId"] != a.TabID || row["requestedBrowserId"] != a.BrowserID || row["requestedUrl"] != created || row["callCompleted"] != true || row["method"] != "createBrowserTab" { return errors.New("CUA creation invalid") }
+		case "control":
+			if _, invented := row["observedUrl"]; invented { return errors.New("CUA void goto URL not observed") }
+			if row["agentTaskId"] != a.ProducerAgentTaskID || row["targetTabId"] != a.TabID || row["requestedUrl"] != controlled || row["callCompleted"] != true || row["method"] != "goto" { return errors.New("CUA control invalid") }
+		case "capture":
+			hash, ok := row["captureSha256"].(string)
+			if _, invented := row["observedUrl"]; invented { return errors.New("CUA screenshot URL not returned") }
+			if row["agentTaskId"] != a.ProducerAgentTaskID || row["targetTabId"] != a.TabID || row["method"] != "getScreenshot" || !ok || !regexp.MustCompile(`^[0-9a-f]{64}$`).MatchString(hash) { return errors.New("CUA capture invalid") }
+		case "handoff":
+			if row["agentTaskId"] != a.ObserverAgentTaskID || row["method"] != "getTab_then_listTabs" || row["requestedTabId"] != a.TabID || row["observedTabId"] != a.TabID || row["metadataBrowserId"] != a.BrowserID || row["metadataTabId"] != a.TabID || row["observedUrl"] != controlled || row["observedNonce"] != a.CampaignNonce { return errors.New("CUA cross-agent handoff invalid") }
+			links := map[string]any{"getTab": row["getTabReturnSha256"], "listTabs": row["metadataReturnSha256"]}
+			if !reflect.DeepEqual(row["sourceEvidenceSha256"], links) { return errors.New("CUA handoff source links invalid") }
+			for _, key := range []string{"getTabReturnReference", "metadataReturnReference", "getTabCallRef", "metadataCallRef"} {
+				if err := r139CuaReference(row[key]); err != nil { return err }
+			}
+		}
+	}
+	ledger, at, err := r139CuaEvent(a, readiness, proof, "creationLedger", "creation_ledger")
+	if err != nil || at.Before(creationAt) || at.After(sealed) || ledger["baselineInventorySha256"] != proof["baselineInventorySha256"] || ledger["creationEvidenceSha256"] != proof["creationEvidenceSha256"] || ledger["agentTaskId"] != a.ProducerAgentTaskID || !reflect.DeepEqual(ledger["sourceEvidenceSha256"], map[string]any{"baselineInventory": proof["baselineInventorySha256"], "creation": proof["creationEvidenceSha256"]}) { return errors.New("CUA creation ledger invalid") }
+	ids, ok := ledger["newTabIds"].([]any)
+	if !ok || len(ids) != 1 || ids[0] != a.TabID { return errors.New("CUA new tab set invalid") }
+	for field, value := range map[string]string{"browserCloseReceiptPath": a.BrowserCloseReceiptPath,
+		"actionEvidencePath": a.ActionEvidencePath, "finalInventoryPath": a.FinalInventoryPath,
+		"rawCuaInventoryPath": a.RawCuaInventoryPath, "browserDoneSignalPath": a.BrowserDoneSignalPath} {
+		if _, err := r139NativePath(a, field, value, product, allowRuntime); err != nil { return err }
+	}
+	return nil
+}
+
+func r139CuaTerminal(a r139Admission, closeRaw []byte) error {
+	receipt, err := r139NativeObject(closeRaw); if err != nil { return err }
+	if err := r139CuaIdentity(a, receipt); err != nil { return err }
+	if receipt["status"] != "CLOSED_EXACT_OWNED_CUA_TAB" || receipt["closeObserved"] != true ||
+		!r139NativeZeroInteger(receipt["ownedTabsFinal"]) || receipt["closureTimeBasis"] != "cua_final_metadata_observation" ||
+		receipt["rootOriginalReturnReviewed"] != true { return errors.New("CUA close status invalid") }
+	for _, key := range []string{"actualCloseActionAtUTC", "closedAtUTC"} {
+		if _, exists := receipt[key]; exists { return errors.New("invented CUA close time") }
+	}
+	_, readiness, err := r139NativeRoot(a, "browserReadinessRoot"); if err != nil { return err }
+	_, product, err := r139NativeRoot(a, "runtimeRoot"); if err != nil { return err }
+	closePath, err := r139NativePath(a, "browserCloseReceipt", a.BrowserCloseReceiptPath, product, true)
+	if err != nil { return err }
+	stored, err := os.ReadFile(closePath)
+	if err != nil || !bytes.Equal(stored, closeRaw) { return errors.New("CUA close receipt bytes differ") }
+	prefix, err := r139NativeFile(a, "browserReceipt", a.BrowserReceiptPath, a.BrowserReceiptSHA256, readiness)
+	if err != nil || prefix["reservedAtUTC"] != receipt["reservedAtUTC"] { return errors.New("CUA prefix mismatch") }
+	prefixRaw, err := json.Marshal(prefix); if err != nil { return err }
+	if err := r139CuaReservation(a, prefixRaw, true); err != nil { return err }
+	reserved, err := r139NativeTime(prefix["reservedAtUTC"]); if err != nil { return err }
+	reported, err := r139NativeTime(receipt["operatorReportReceivedAtUTC"]); if err != nil { return err }
+	observed, err := r139NativeTime(receipt["closureObservedAtUTC"]); if err != nil { return err }
+	deadline, err := time.Parse("2006-01-02T15:04:05Z", a.GrantDeadlineUTC)
+	if err != nil || reserved.After(reported) || reported.After(observed) || observed.After(deadline) { return errors.New("CUA close chronology") }
+	ownerHash, ok := receipt["ownerReportReferenceSha256"].(string)
+	if !ok || !regexp.MustCompile(`^[0-9a-f]{64}$`).MatchString(ownerHash) || receipt["operator"] != "Owner in this conversation" { return errors.New("CUA owner report invalid") }
+	if receipt["actionEvidencePath"] != a.ActionEvidencePath || receipt["finalInventoryPath"] != a.FinalInventoryPath { return errors.New("CUA terminal path mismatch") }
+	action, err := r139NativeFile(a, "action", receipt["actionEvidencePath"], receipt["actionEvidenceSha256"], product)
+	if err != nil { return err }
+	if err := r139CuaIdentity(a, action); err != nil || action["event"] != "action_sequence" || action["atUTC"] != receipt["actionAtUTC"] { return errors.New("CUA action identity invalid") }
+	if _, err := r139CuaDerived(action); err != nil { return err }
+	rows, ok := action["actions"].([]any)
+	if !ok || len(rows) < 1 { return errors.New("CUA action rows absent") }
+	links, ok := action["sourceEvidenceSha256"].(map[string]any)
+	if !ok { return errors.New("CUA action source links absent") }
+	wantLinks := map[string]any{}
+	previous := reserved
+	for index, value := range rows {
+		row, ok := value.(map[string]any)
+		if !ok || row["tabId"] != a.TabID { return errors.New("CUA action tab invalid") }
+		kind := row["action"]
+		if kind != "control" && kind != "capture" && kind != "handoff" && kind != "product_read" && kind != "product_execute" && kind != "owner_close_report" { return errors.New("CUA action kind invalid") }
+		at, err := r139NativeTime(row["atUTC"])
+		if err != nil || at.Before(previous) || at.After(reported) { return errors.New("CUA action chronology invalid") }
+		previous = at
+		if kind == "owner_close_report" {
+			if index != len(rows)-1 || !at.Equal(reported) || row["reportSource"] != "owner_in_conversation" || row["ownerReportReferenceSha256"] != ownerHash { return errors.New("CUA report not terminal") }
+		} else {
+			sha, ok := row["originalCuaReturnSha256"].(string)
+			if index == len(rows)-1 || !ok || !regexp.MustCompile(`^[0-9a-f]{64}$`).MatchString(sha) || row["provenanceBasis"] != "caller_recorded_original_cua_return" { return errors.New("CUA action original invalid") }
+			if err := r139CuaReference(row["originalCuaReturnReference"]); err != nil { return err }
+			if err := r139CuaReference(row["cuaCallRef"]); err != nil { return err }
+			wantLinks[fmt.Sprint(index)] = sha
+		}
+	}
+	if rows[len(rows)-1].(map[string]any)["action"] != "owner_close_report" { return errors.New("CUA post-close action") }
+	if len(rows) == 1 { wantLinks["prefix"] = a.BrowserReceiptSHA256 }
+	if !reflect.DeepEqual(links, wantLinks) { return errors.New("CUA action source linkage invalid") }
+	inv, err := r139NativeFile(a, "finalInventory", receipt["finalInventoryPath"], receipt["finalInventorySha256"], product)
+	if err != nil { return err }
+	if err := r139CuaIdentity(a, inv); err != nil || inv["event"] != "final_inventory" || inv["atUTC"] != receipt["closureObservedAtUTC"] || inv["rawCuaInventoryPath"] != a.RawCuaInventoryPath || inv["inventoryScope"] != "metadata_only" || !r139NativeZeroInteger(inv["ownedCount"]) { return errors.New("CUA final inventory invalid") }
+	if _, err := r139CuaOrigin(inv); err != nil { return err }
+	finalIDs, err := r139PageIDs(inv["tabIds"]); if err != nil || finalIDs[a.TabID] { return errors.New("CUA target still present") }
+	baseline, _, err := r139CuaEvent(a, readiness, prefix, "baselineInventory", "baseline_inventory"); if err != nil { return err }
+	baseIDs, err := r139PageIDs(baseline["tabIds"]); if err != nil || !reflect.DeepEqual(finalIDs, baseIDs) { return errors.New("CUA protected baseline drift") }
+	raw, err := r139NativeFile(a, "rawCuaInventory", inv["rawCuaInventoryPath"], inv["rawCuaInventorySha256"], product)
+	if err != nil { return err }
+	if err := r139CuaIdentity(a, raw); err != nil || raw["event"] != "cua_inventory" || raw["atUTC"] != inv["atUTC"] || !reflect.DeepEqual(raw["tabIds"], inv["tabIds"]) || raw["inventoryScope"] != "metadata_only" || !r139NativeZeroInteger(raw["ownedCount"]) || raw["cuaCallRef"] == baseline["cuaCallRef"] { return errors.New("CUA raw inventory invalid") }
+	if _, err := r139CuaOrigin(raw); err != nil { return err }
+	markerPath, err := r139NativePath(a, "browserDoneSignalPath", a.BrowserDoneSignalPath, product, true); if err != nil { return err }
+	markerRaw, err := os.ReadFile(markerPath); if err != nil { return err }
+	marker, err := r139NativeObject(markerRaw); if err != nil { return err }
+	if marker["status"] != "TERMINAL_EVIDENCE_WRITTEN" || marker["proofContract"] != "cua_page_target_v1" || marker["campaignNonce"] != a.CampaignNonce || marker["browserId"] != a.BrowserID || marker["tabId"] != a.TabID || marker["ownedScopeId"] != a.OwnedScopeID { return errors.New("CUA done identity invalid") }
+	markerAt, err := r139NativeTime(marker["atUTC"])
+	if err != nil || markerAt.Before(observed) || markerAt.After(deadline) { return errors.New("CUA done chronology invalid") }
+	marked, ok := marker["evidenceSha256"].(map[string]any)
+	if !ok || len(marked) != 4 || marked["browserCloseReceiptPath"] != func() string { sum := sha256.Sum256(closeRaw); return hex.EncodeToString(sum[:]) }() || marked["actionEvidencePath"] != receipt["actionEvidenceSha256"] || marked["finalInventoryPath"] != receipt["finalInventorySha256"] || marked["rawCuaInventoryPath"] != inv["rawCuaInventorySha256"] { return errors.New("CUA done hashes invalid") }
+	return nil
+}
+
 func r139BrowserRoute(method, path string) (auth, execute, read bool) {
 	auth = method == http.MethodPost && (path == "/api/v1/auth/login" || path == "/api/v1/auth/logout" || path == "/api/v1/auth/refresh")
 	execute = method == http.MethodPost && regexp.MustCompile(`^/api/v1/tenants/[^/]+/intervention-cases/[^/]+/rerun-requests/[^/]+/execute$`).MatchString(path)
@@ -562,6 +803,152 @@ func r139NativeTestWrite(t *testing.T, path string, value any) string {
 	if err := os.WriteFile(path, raw, 0644); err != nil { t.Fatal(err) }
 	sum := sha256.Sum256(raw)
 	return hex.EncodeToString(sum[:])
+}
+
+func TestR139PureCuaPageTargetV1(t *testing.T) {
+	root := t.TempDir()
+	base := ".cvf/runtime/cua_readiness/"
+	product := ".cvf/runtime/cua_product/"
+	readiness := filepath.Join(root, filepath.FromSlash(base))
+	runtime := filepath.Join(root, filepath.FromSlash(product))
+	if err := os.MkdirAll(readiness, 0755); err != nil { t.Fatal(err) }
+	now := time.Now().UTC().Truncate(time.Second)
+	stamp := func(offset int) string { return now.Add(time.Duration(offset) * time.Second).Format("2006-01-02T15:04:05Z") }
+	a := r139Admission{NativeContractID: "r139-cua-page-target-v1", TrancheID: "CCMAI-RUNTIME-139",
+		CampaignNonce: "nonce-cua", BrowserID: "2", BrowserKind: "iab", TabID: "tab-123",
+		OwnedScopeID: "owned-cua-tab", OwnedTabIDs: []string{"tab-123"},
+		ProducerAgentTaskID: "producer-task", ObserverAgentTaskID: "observer-task",
+		Operator: "Owner in this conversation", FallbackCloseOperator: "Owner in this conversation",
+		CloseMode: "operator_fallback", ScopeOrigin: "caller_owned_explicit_cua_tab_target",
+		ProofContract: "cua_page_target_v1", BrowserTool: "supported_CUA_page_target", BrowserSupported: true,
+		BrowserReadinessRoot: base[:len(base)-1], RuntimeRoot: runtime, nativeProjectRoot: root,
+		BrowserReceiptPath: base + "reservation.json", BrowserCloseReceiptPath: product + "close.json",
+		ActionEvidencePath: product + "action.json", FinalInventoryPath: product + "inventory.json",
+		RawCuaInventoryPath: product + "raw_inventory.json", BrowserDoneSignalPath: product + "browser_done.signal",
+		GrantDeadlineUTC: stamp(3600)}
+	identity := func() map[string]any { return map[string]any{
+		"nativeContractId": a.NativeContractID, "trancheId": a.TrancheID, "campaignNonce": a.CampaignNonce,
+		"browserId": a.BrowserID, "tabId": a.TabID, "ownedScopeId": a.OwnedScopeID,
+		"producerAgentTaskId": a.ProducerAgentTaskID, "observerAgentTaskId": a.ObserverAgentTaskID,
+		"operator": a.Operator, "closeMode": a.CloseMode, "proofContract": a.ProofContract,
+		"browserKind": a.BrowserKind, "scopeOrigin": a.ScopeOrigin, "ownedTabIds": []string{a.TabID}} }
+	event := func(name string, offset int) map[string]any {
+		m := identity(); m["event"] = name; m["atUTC"] = stamp(offset); m["observedAtUTC"] = m["atUTC"]
+		m["cuaCallRef"] = "cua-call-1"; m["originalCuaReturnReference"] = "private/cua/call-1"
+		m["originalCuaReturnSha256"] = strings.Repeat("b", 64)
+		m["provenanceBasis"] = "caller_recorded_original_cua_return"; m["rootOriginalReturnReviewRequired"] = true
+		return m
+	}
+	created := "https://example.com/#r139_nonce=nonce-cua&phase=created"
+	controlled := "https://example.com/#r139_nonce=nonce-cua&phase=controlled"
+	rows := map[string]map[string]any{
+		"baselineInventory": event("baseline_inventory", -60), "creation": event("creation", -50),
+		"creationLedger": event("creation_ledger", -49), "control": event("control", -45),
+		"capture": event("capture", -40), "handoff": event("handoff", -30),
+	}
+	rows["baselineInventory"]["tabIds"] = []string{"protected-tab"}; rows["baselineInventory"]["inventoryScope"] = "metadata_only"
+	rows["creation"]["agentTaskId"] = a.ProducerAgentTaskID; rows["creation"]["method"] = "createBrowserTab"
+	rows["creation"]["createdTabId"] = a.TabID; rows["creation"]["requestedBrowserId"] = a.BrowserID
+	rows["creation"]["requestedUrl"] = created; rows["creation"]["callCompleted"] = true
+	rows["creationLedger"]["agentTaskId"] = a.ProducerAgentTaskID; rows["creationLedger"]["newTabIds"] = []string{a.TabID}
+	rows["control"]["agentTaskId"] = a.ProducerAgentTaskID; rows["control"]["method"] = "goto"
+	rows["control"]["targetTabId"] = a.TabID; rows["control"]["requestedUrl"] = controlled; rows["control"]["callCompleted"] = true
+	rows["capture"]["agentTaskId"] = a.ProducerAgentTaskID; rows["capture"]["method"] = "getScreenshot"
+	rows["capture"]["targetTabId"] = a.TabID
+	rows["capture"]["captureSha256"] = strings.Repeat("c", 64)
+	rows["handoff"]["agentTaskId"] = a.ObserverAgentTaskID; rows["handoff"]["method"] = "getTab_then_listTabs"
+	rows["handoff"]["requestedTabId"] = a.TabID; rows["handoff"]["observedTabId"] = a.TabID
+	rows["handoff"]["metadataBrowserId"] = a.BrowserID; rows["handoff"]["metadataTabId"] = a.TabID
+	rows["handoff"]["observedUrl"] = controlled; rows["handoff"]["observedNonce"] = a.CampaignNonce
+	rows["handoff"]["getTabCallRef"] = "cua-gettab"; rows["handoff"]["getTabReturnReference"] = "private/cua/gettab"
+	rows["handoff"]["getTabReturnSha256"] = strings.Repeat("e", 64)
+	rows["handoff"]["metadataCallRef"] = "cua-listtabs"; rows["handoff"]["metadataReturnReference"] = "private/cua/listtabs"
+	rows["handoff"]["metadataReturnSha256"] = strings.Repeat("f", 64)
+	proof := identity(); proof["status"] = "RESERVED_CUA_TAB_CONTROL_CAPTURE_HANDOFF"
+	proof["protocol"] = "https"; proof["closeObserved"] = false; proof["rootOriginalReturnReviewed"] = true
+	proof["reservedAtUTC"] = stamp(-25)
+	writeEvent := func(name string) {
+		suffix := "Evidence"; if name == "baselineInventory" || name == "creationLedger" { suffix = "" }
+		proof[name+suffix+"Path"] = base + name + ".json"
+		proof[name+suffix+"Sha256"] = r139NativeTestWrite(t, filepath.Join(readiness, name+".json"), rows[name])
+	}
+	for name := range rows { writeEvent(name) }
+	rows["creationLedger"]["baselineInventorySha256"] = proof["baselineInventorySha256"]
+	rows["creationLedger"]["creationEvidenceSha256"] = proof["creationEvidenceSha256"]
+	delete(rows["creationLedger"], "cuaCallRef")
+	delete(rows["creationLedger"], "originalCuaReturnReference")
+	delete(rows["creationLedger"], "originalCuaReturnSha256")
+	rows["creationLedger"]["provenanceBasis"] = "derived_from_original_cua_returns"
+	rows["creationLedger"]["sourceEvidenceSha256"] = map[string]any{"baselineInventory": proof["baselineInventorySha256"], "creation": proof["creationEvidenceSha256"]}
+	writeEvent("creationLedger")
+	delete(rows["handoff"], "cuaCallRef")
+	delete(rows["handoff"], "originalCuaReturnReference")
+	delete(rows["handoff"], "originalCuaReturnSha256")
+	rows["handoff"]["provenanceBasis"] = "derived_from_original_cua_returns"
+	rows["handoff"]["sourceEvidenceSha256"] = map[string]any{"getTab": strings.Repeat("e", 64), "listTabs": strings.Repeat("f", 64)}
+	writeEvent("handoff")
+	a.BrowserReceiptSHA256 = r139NativeTestWrite(t, filepath.Join(readiness, "reservation.json"), proof)
+	encode := func(value any) []byte { raw, err := json.Marshal(value); if err != nil { t.Fatal(err) }; return raw }
+	if err := r139VerifyBrowserReservation(a, encode(proof)); err != nil { t.Fatalf("CUA prefix rejected: %v", err) }
+	bad := rows["handoff"]["agentTaskId"]
+	rows["handoff"]["agentTaskId"] = a.ProducerAgentTaskID
+	writeEvent("handoff")
+	a.BrowserReceiptSHA256 = r139NativeTestWrite(t, filepath.Join(readiness, "reservation.json"), proof)
+	if err := r139VerifyBrowserReservation(a, encode(proof)); err == nil { t.Fatal("same-agent CUA handoff accepted") }
+	rows["handoff"]["agentTaskId"] = bad; writeEvent("handoff")
+	a.BrowserReceiptSHA256 = r139NativeTestWrite(t, filepath.Join(readiness, "reservation.json"), proof)
+	if err := r139VerifyBrowserReservation(a, encode(proof)); err != nil { t.Fatalf("restored CUA prefix rejected: %v", err) }
+	badAdmission := a; badAdmission.PageID = a.TabID
+	if err := r139VerifyBrowserReservation(badAdmission, encode(proof)); err == nil { t.Fatal("fabricated native page alias accepted") }
+	if err := os.MkdirAll(runtime, 0755); err != nil { t.Fatal(err) }
+	raw := event("cua_inventory", -5); raw["tabIds"] = []string{"protected-tab"}; raw["ownedCount"] = 0; raw["inventoryScope"] = "metadata_only"; raw["cuaCallRef"] = "cua-final-call"
+	rawSHA := r139NativeTestWrite(t, filepath.Join(runtime, "raw_inventory.json"), raw)
+	actions := event("action_sequence", -20)
+	actions["actions"] = []map[string]any{{"tabId": a.TabID, "action": "control", "atUTC": stamp(-20),
+		"cuaCallRef": "cua-control", "originalCuaReturnReference": "private/cua/control",
+		"originalCuaReturnSha256": strings.Repeat("e", 64), "provenanceBasis": "caller_recorded_original_cua_return"},
+		{"tabId": a.TabID, "action": "owner_close_report", "atUTC": stamp(-8),
+		"reportSource": "owner_in_conversation", "ownerReportReferenceSha256": strings.Repeat("a", 64)}}
+	delete(actions, "cuaCallRef")
+	delete(actions, "originalCuaReturnReference")
+	delete(actions, "originalCuaReturnSha256")
+	actions["provenanceBasis"] = "derived_from_original_cua_returns"
+	actions["sourceEvidenceSha256"] = map[string]any{"0": strings.Repeat("e", 64)}
+	actionSHA := r139NativeTestWrite(t, filepath.Join(runtime, "action.json"), actions)
+	inv := event("final_inventory", -5); inv["tabIds"] = []string{"protected-tab"}; inv["ownedCount"] = 0
+	inv["inventoryScope"] = "metadata_only"; inv["rawCuaInventoryPath"] = a.RawCuaInventoryPath
+	inv["rawCuaInventorySha256"] = rawSHA
+	invSHA := r139NativeTestWrite(t, filepath.Join(runtime, "inventory.json"), inv)
+	close := identity(); close["status"] = "CLOSED_EXACT_OWNED_CUA_TAB"; close["closeObserved"] = true
+	close["ownedTabsFinal"] = 0; close["closureTimeBasis"] = "cua_final_metadata_observation"
+	close["rootOriginalReturnReviewed"] = true; close["reservedAtUTC"] = proof["reservedAtUTC"]
+	close["actionAtUTC"] = stamp(-20); close["operatorReportReceivedAtUTC"] = stamp(-8)
+	close["closureObservedAtUTC"] = stamp(-5); close["ownerReportReferenceSha256"] = strings.Repeat("a", 64)
+	close["actionEvidencePath"] = a.ActionEvidencePath; close["actionEvidenceSha256"] = actionSHA
+	close["finalInventoryPath"] = a.FinalInventoryPath; close["finalInventorySha256"] = invSHA
+	closeSHA := r139NativeTestWrite(t, filepath.Join(runtime, "close.json"), close)
+	marker := map[string]any{"status": "TERMINAL_EVIDENCE_WRITTEN", "proofContract": a.ProofContract,
+		"campaignNonce": a.CampaignNonce, "browserId": a.BrowserID, "tabId": a.TabID,
+		"ownedScopeId": a.OwnedScopeID, "atUTC": stamp(-4),
+		"evidenceSha256": map[string]any{"browserCloseReceiptPath": closeSHA, "actionEvidencePath": actionSHA,
+			"finalInventoryPath": invSHA, "rawCuaInventoryPath": rawSHA}}
+	r139NativeTestWrite(t, filepath.Join(runtime, "browser_done.signal"), marker)
+	if err := r139VerifyBrowserTerminalClose(a, encode(close)); err != nil { t.Fatalf("CUA terminal rejected: %v", err) }
+	actions["actions"] = []map[string]any{actions["actions"].([]map[string]any)[1]}
+	actions["atUTC"] = stamp(-8); actions["observedAtUTC"] = stamp(-8)
+	actions["sourceEvidenceSha256"] = map[string]any{"prefix": a.BrowserReceiptSHA256}
+	close["actionAtUTC"] = stamp(-8)
+	close["actionEvidenceSha256"] = r139NativeTestWrite(t, filepath.Join(runtime, "action.json"), actions)
+	closeSHA = r139NativeTestWrite(t, filepath.Join(runtime, "close.json"), close)
+	marker["evidenceSha256"] = map[string]any{"browserCloseReceiptPath": closeSHA,
+		"actionEvidencePath": close["actionEvidenceSha256"], "finalInventoryPath": invSHA,
+		"rawCuaInventoryPath": rawSHA}
+	r139NativeTestWrite(t, filepath.Join(runtime, "browser_done.signal"), marker)
+	if err := r139VerifyBrowserTerminalClose(a, encode(close)); err != nil { t.Fatalf("CUA owner-only terminal rejected: %v", err) }
+	inv["tabIds"] = []string{"protected-tab", a.TabID}
+	close["finalInventorySha256"] = r139NativeTestWrite(t, filepath.Join(runtime, "inventory.json"), inv)
+	r139NativeTestWrite(t, filepath.Join(runtime, "close.json"), close)
+	if err := r139VerifyBrowserTerminalClose(a, encode(close)); err == nil { t.Fatal("target still present accepted") }
 }
 
 func r139NativeTestIdentity(a r139Admission) map[string]any {
@@ -944,6 +1331,82 @@ func TestR139PurePageTargetV1(t *testing.T) {
 	if err := r139VerifyBrowserTerminalClose(a, closeRaw); err == nil { t.Fatal("wrong done marker accepted") }
 }
 
+func r139CuaGrantShape(a r139Admission, amendment, inherited, observation map[string]any) error {
+	wantAmendment := r139AuthorityRef{Path: "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-CUA-SOURCE-ADMISSION.json", SHA256: "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e"}
+	wantInherited := r139AuthorityRef{Path: "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-AND-CONDITIONAL-REENTRY-ADMISSION.json", SHA256: "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f"}
+	wantObservation := r139AuthorityRef{Path: "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json", SHA256: "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491"}
+	if a.OwnerCuaAmendmentRef != wantAmendment || a.InheritedOwnerEnvelopeRef != wantInherited ||
+		a.ObservationCapsRef != wantObservation { return errors.New("CUA owner grant refs invalid") }
+	amendParent := map[string]any{"path": wantInherited.Path, "sha256": wantInherited.SHA256}
+	if amendment["ownerApproved"] != true || amendment["sourceGranted"] != true ||
+		!reflect.DeepEqual(amendment["previousOwnerEnvelope"], amendParent) ||
+		inherited["ownerApproved"] != true || inherited["freshCampaignCap"] != float64(1) ||
+		inherited["providerPhysicalCap"] != float64(1) { return errors.New("CUA owner lineage invalid") }
+	contract, ok := amendment["browserContractProposed"].(map[string]any)
+	if !ok || contract["proofContract"] != "cua_page_target_v1" { return errors.New("CUA owner contract invalid") }
+	obsParent := map[string]any{"path": wantAmendment.Path, "sha256": wantAmendment.SHA256}
+	if observation["ownerApproved"] != true || observation["kind"] != "OWNER_APPROVED_R139_CUA_OBSERVATION_CAP_AMENDMENT" ||
+		!reflect.DeepEqual(observation["parentCuaAmendment"], obsParent) ||
+		!reflect.DeepEqual(observation["inheritedOwnerEnvelope"], amendParent) { return errors.New("CUA observation authority absent") }
+	caps, ok := observation["proposedReadonlyChanges"].(map[string]any)
+	if !ok { return errors.New("CUA observation caps absent") }
+	for key, expected := range map[string]float64{"globalMetadataEnumerationMaximum": 3,
+		"baselineMetadataEnumeration": 1, "handoffMetadataEnumeration": 1, "finalMetadataEnumeration": 1,
+		"g2StatusReadStartsMaximum": 16, "automaticPostSendStatusPollStartsMaximum": 12,
+		"automaticPollSpacingSecondsMinimum": 5, "automaticPollLifetimeSecondsMaximum": 60,
+		"eventDrivenStatusReadsMaximum": 4} {
+		if caps[key] != expected { return fmt.Errorf("CUA observation %s mismatch", key) }
+	}
+	categories := []any{"initial_writer_load", "publication_version_watch_reload", "one_deliberate_writer_reload", "reader_load"}
+	if !reflect.DeepEqual(caps["eventDrivenCategories"], categories) ||
+		caps["spacingAndLifetimeScope"] != "automatic post-send polling only; event-driven loads recorded separately" ||
+		caps["noExtraGlobalInventory"] != true || caps["noUnrelatedTabContentCaptureOrControl"] != true ||
+		caps["rawMetadataPrivateEvidenceIdsOrDigestsOnly"] != true { return errors.New("CUA observation privacy scope mismatch") }
+	return nil
+}
+
+func TestR139PureCuaGrantChainShape(t *testing.T) {
+	a := r139Admission{OwnerCuaAmendmentRef: r139AuthorityRef{Path: "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-CUA-SOURCE-ADMISSION.json", SHA256: "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e"},
+		InheritedOwnerEnvelopeRef: r139AuthorityRef{Path: "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-AND-CONDITIONAL-REENTRY-ADMISSION.json", SHA256: "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f"},
+		ObservationCapsRef: r139AuthorityRef{Path: "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json", SHA256: "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491"}}
+	oldRef := map[string]any{"path": a.InheritedOwnerEnvelopeRef.Path, "sha256": a.InheritedOwnerEnvelopeRef.SHA256}
+	newRef := map[string]any{"path": a.OwnerCuaAmendmentRef.Path, "sha256": a.OwnerCuaAmendmentRef.SHA256}
+	amendment := map[string]any{"ownerApproved": true, "sourceGranted": true, "previousOwnerEnvelope": oldRef,
+		"browserContractProposed": map[string]any{"proofContract": "cua_page_target_v1"}}
+	inherited := map[string]any{"ownerApproved": true, "freshCampaignCap": float64(1), "providerPhysicalCap": float64(1)}
+	observation := map[string]any{"ownerApproved": true, "kind": "OWNER_APPROVED_R139_CUA_OBSERVATION_CAP_AMENDMENT",
+		"parentCuaAmendment": newRef, "inheritedOwnerEnvelope": oldRef,
+		"proposedReadonlyChanges": map[string]any{"globalMetadataEnumerationMaximum": float64(3),
+			"baselineMetadataEnumeration": float64(1), "handoffMetadataEnumeration": float64(1),
+			"finalMetadataEnumeration": float64(1), "g2StatusReadStartsMaximum": float64(16),
+			"automaticPostSendStatusPollStartsMaximum": float64(12),
+			"automaticPollSpacingSecondsMinimum": float64(5),
+			"automaticPollLifetimeSecondsMaximum": float64(60), "eventDrivenStatusReadsMaximum": float64(4),
+			"eventDrivenCategories": []any{"initial_writer_load", "publication_version_watch_reload", "one_deliberate_writer_reload", "reader_load"},
+			"spacingAndLifetimeScope": "automatic post-send polling only; event-driven loads recorded separately",
+			"noExtraGlobalInventory": true, "noUnrelatedTabContentCaptureOrControl": true,
+			"rawMetadataPrivateEvidenceIdsOrDigestsOnly": true}}
+	if err := r139CuaGrantShape(a, amendment, inherited, observation); err != nil { t.Fatalf("valid CUA grant chain rejected: %v", err) }
+	observation["ownerApproved"] = false
+	if err := r139CuaGrantShape(a, amendment, inherited, observation); err == nil { t.Fatal("unapproved CUA observation record accepted") }
+	observation["ownerApproved"] = true
+	observation["parentCuaAmendment"] = oldRef
+	if err := r139CuaGrantShape(a, amendment, inherited, observation); err == nil { t.Fatal("mismatched CUA parent accepted") }
+	observation["parentCuaAmendment"] = newRef
+	caps := observation["proposedReadonlyChanges"].(map[string]any)
+	caps["g2StatusReadStartsMaximum"] = float64(12)
+	if err := r139CuaGrantShape(a, amendment, inherited, observation); err == nil { t.Fatal("old status12 cap accepted") }
+	caps["g2StatusReadStartsMaximum"] = float64(16)
+	caps["handoffMetadataEnumeration"] = float64(0)
+	if err := r139CuaGrantShape(a, amendment, inherited, observation); err == nil { t.Fatal("missing handoff metadata cap accepted") }
+	caps["handoffMetadataEnumeration"] = float64(1)
+	a.ObservationCapsRef.SHA256 = strings.Repeat("c", 64)
+	if err := r139CuaGrantShape(a, amendment, inherited, observation); err == nil { t.Fatal("wrong CUA observation SHA accepted") }
+	a.ObservationCapsRef.SHA256 = "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491"
+	a.OwnerCuaAmendmentRef.SHA256 = strings.Repeat("d", 64)
+	if err := r139CuaGrantShape(a, amendment, inherited, observation); err == nil { t.Fatal("wrong CUA grant SHA accepted") }
+}
+
 func r139Admit(t *testing.T) (r139Admission, string) {
 	t.Helper()
 	if os.Getenv("R139_RUN") != "1" {
@@ -980,6 +1443,25 @@ func r139Admit(t *testing.T) (r139Admission, string) {
 	var a r139Admission
 	if json.Unmarshal(data, &a) != nil || a.TrancheID != "CCMAI-RUNTIME-139" || a.Kind != "OWNER_APPROVED_RUNTIME_EFFECT_ADMISSION" || !a.OwnerApproved || !regexp.MustCompile(`^[0-9a-f]{40}$`).MatchString(a.SourceCommit) || a.SourceCommit != os.Getenv("R139_SOURCE_COMMIT") || a.NativeExecutePOST != 8 || a.BrowserExecutePOST != 1 || a.GrantCap != 3 || a.ProviderCap != 1 || !regexp.MustCompile(`^[0-9a-f]{64}$`).MatchString(a.BrowserReceiptSHA256) || a.GrantDeadlineUTC == "" || os.Getenv("R139_GRANT_DEADLINE_UTC") != a.GrantDeadlineUTC || a.Provider != "alibaba_maas" || a.Model != "qwen3.7-flash" || a.Endpoint == "" || os.Getenv("R139_ALIBABA_ENDPOINT") != a.Endpoint || a.CompletionTokens != 768 || a.MaxRequestBytes != 6000 || a.Thinking || !regexp.MustCompile(`^ccma_r139_[a-z0-9_-]{1,64}$`).MatchString(a.SyntheticNamespace) || a.IssuerRole != "owner" || a.ActorRole != "writer" || a.ConfigRef != "r139-owned-config" || a.PromptVersion != "r139-synthetic-v1" {
 		t.Fatal("R139 effect authority incomplete")
+	}
+	if a.BrowserTool == "supported_CUA_page_target" {
+		loadCommitted := func(ref r139AuthorityRef) map[string]any {
+			if !regexp.MustCompile(`^CVF_SESSION/authority/CCMAI-RUNTIME-139-[A-Za-z0-9_-]+-ADMISSION\.json$`).MatchString(ref.Path) ||
+				!regexp.MustCompile(`^[0-9a-f]{64}$`).MatchString(ref.SHA256) { t.Fatal("CUA authority path/hash invalid") }
+			body, readErr := os.ReadFile(filepath.Join(root, filepath.FromSlash(ref.Path)))
+			sum := sha256.Sum256(body)
+			if readErr != nil || hex.EncodeToString(sum[:]) != ref.SHA256 { t.Fatal("CUA authority file hash mismatch") }
+			show := exec.Command("git", "show", "HEAD:"+ref.Path); show.Dir = root
+			committed, showErr := show.Output()
+			if showErr != nil || !bytes.Equal(bytes.ReplaceAll(committed, []byte("\r\n"), []byte("\n")), bytes.ReplaceAll(body, []byte("\r\n"), []byte("\n"))) { t.Fatal("CUA authority not committed") }
+			var parsed map[string]any
+			if json.Unmarshal(body, &parsed) != nil { t.Fatal("CUA authority JSON invalid") }
+			return parsed
+		}
+		amendment := loadCommitted(a.OwnerCuaAmendmentRef)
+		inherited := loadCommitted(a.InheritedOwnerEnvelopeRef)
+		observation := loadCommitted(a.ObservationCapsRef)
+		if err := r139CuaGrantShape(a, amendment, inherited, observation); err != nil { t.Fatal(err) }
 	}
 	endpointDigest := sha256.Sum256([]byte(a.Endpoint))
 	if hex.EncodeToString(endpointDigest[:]) != "b22a15b6e8aa4113c2816acae6935a84d052a2d7b81db734ccdc4f5be81b4f8f" {

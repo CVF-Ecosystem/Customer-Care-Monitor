@@ -33,7 +33,294 @@ def protected_snapshot(*, status="Up 2 minutes (healthy)", running_for="2 minute
 
 
 class R139SupervisorPureTests(unittest.TestCase):
-    def test_page_target_metadata_binding_pure_helper(self):
+    def test_cua_identity_and_origin_no_io(self):
+        identity = {"nativeContractId": "r139-cua", "trancheId": "CCMAI-RUNTIME-139",
+                    "campaignNonce": "nonce-cua", "browserId": "2", "tabId": "tab-123",
+                    "ownedScopeId": "owned-tab", "producerAgentTaskId": "producer-task",
+                    "observerAgentTaskId": "observer-task", "operator": "Owner in this conversation",
+                    "closeMode": "operator_fallback", "proofContract": "cua_page_target_v1",
+                    "browserKind": "iab", "scopeOrigin": "caller_owned_explicit_cua_tab_target",
+                    "ownedTabIds": ["tab-123"]}
+        admission = {**identity, "browserTool": "supported_CUA_page_target",
+                     "fallbackCloseOperator": "Owner in this conversation"}
+        observed = datetime.now(timezone.utc).replace(microsecond=0).strftime("%Y-%m-%dT%H:%M:%SZ")
+        record = {**identity, "cuaCallRef": "cua-call", "originalCuaReturnReference": "private/cua/call",
+                  "originalCuaReturnSha256": "a" * 64,
+                  "provenanceBasis": "caller_recorded_original_cua_return",
+                  "rootOriginalReturnReviewRequired": True, "atUTC": observed, "observedAtUTC": observed}
+        module.cua_identity(admission, record, "CUA_TEST")
+        module.cua_origin(record, "CUA_TEST")
+        record["originalCuaReturnReference"] = "r" * 512
+        module.cua_origin(record, "CUA_TEST")
+        for malformed in ("r" * 513, " leading", "bad\nref"):
+            record["originalCuaReturnReference"] = malformed
+            with self.subTest(malformed=malformed[:20]), self.assertRaises(module.Hold):
+                module.cua_origin(record, "CUA_TEST")
+        record["originalCuaReturnReference"] = "private/cua/call"
+        for key, value in (("nativeTaskRunRef", "invented"), ("pageId", "tab-123"),
+                           ("ownedTabIds", ["wrong-tab"])):
+            wrong = {**record, key: value}
+            with self.subTest(key=key), self.assertRaises(module.Hold):
+                module.cua_identity(admission, wrong, "CUA_TEST")
+
+    def test_cua_grant_chain_requires_approved_observation_record(self):
+        new, old = module.CUA_AMENDMENT_REF, module.CUA_INHERITED_REF
+        obs = module.CUA_OBSERVATION_REF
+        admission = {"ownerCuaAmendmentRef": new, "inheritedOwnerEnvelopeRef": old,
+                     "observationCapsRef": obs}
+        documents = {
+            new["path"]: {"ownerApproved": True, "sourceGranted": True,
+                          "previousOwnerEnvelope": old,
+                          "browserContractProposed": {"proofContract": "cua_page_target_v1"}},
+            old["path"]: {"ownerApproved": True, "freshCampaignCap": 1,
+                          "providerPhysicalCap": 1},
+            obs["path"]: {"ownerApproved": True,
+                          "kind": "OWNER_APPROVED_R139_CUA_OBSERVATION_CAP_AMENDMENT",
+                          "parentCuaAmendment": new, "inheritedOwnerEnvelope": old,
+                          "proposedReadonlyChanges": {
+                              "globalMetadataEnumerationMaximum": 3,
+                              "baselineMetadataEnumeration": 1,
+                              "handoffMetadataEnumeration": 1,
+                              "finalMetadataEnumeration": 1,
+                              "g2StatusReadStartsMaximum": 16,
+                              "automaticPostSendStatusPollStartsMaximum": 12,
+                              "automaticPollSpacingSecondsMinimum": 5,
+                              "automaticPollLifetimeSecondsMaximum": 60,
+                              "eventDrivenStatusReadsMaximum": 4,
+                              "eventDrivenCategories": ["initial_writer_load", "publication_version_watch_reload",
+                                                        "one_deliberate_writer_reload", "reader_load"],
+                              "spacingAndLifetimeScope": "automatic post-send polling only; event-driven loads recorded separately",
+                              "noExtraGlobalInventory": True,
+                              "noUnrelatedTabContentCaptureOrControl": True,
+                              "rawMetadataPrivateEvidenceIdsOrDigestsOnly": True}}}
+        hashes = {new["path"]: new["sha256"], old["path"]: old["sha256"], obs["path"]: obs["sha256"]}
+        with patch.object(module, "committed", side_effect=lambda path: Path(path)), \
+             patch.object(module, "project_path", side_effect=lambda path: Path(path)), \
+             patch.object(module, "read_json", side_effect=lambda path: documents[Path(path).as_posix()]), \
+             patch.object(module, "digest", side_effect=lambda path: hashes[Path(path).as_posix()]):
+            module.verify_cua_grant_chain(admission)
+            documents[obs["path"]]["ownerApproved"] = False
+            with self.assertRaises(module.Hold):
+                module.verify_cua_grant_chain(admission)
+            documents[obs["path"]]["ownerApproved"] = True
+            documents[obs["path"]]["parentCuaAmendment"] = old
+            with self.assertRaises(module.Hold):
+                module.verify_cua_grant_chain(admission)
+            documents[obs["path"]]["parentCuaAmendment"] = new
+            caps = documents[obs["path"]]["proposedReadonlyChanges"]
+            caps["g2StatusReadStartsMaximum"] = 12
+            with self.assertRaises(module.Hold):
+                module.verify_cua_grant_chain(admission)
+            caps["g2StatusReadStartsMaximum"] = 16
+            caps["handoffMetadataEnumeration"] = 0
+            with self.assertRaises(module.Hold):
+                module.verify_cua_grant_chain(admission)
+            caps["handoffMetadataEnumeration"] = 1
+            admission["observationCapsRef"] = {**obs, "sha256": "c" * 64}
+            with self.assertRaises(module.Hold):
+                module.verify_cua_grant_chain(admission)
+            admission["observationCapsRef"] = obs
+            hashes[new["path"]] = "d" * 64
+            with self.assertRaises(module.Hold):
+                module.verify_cua_grant_chain(admission)
+
+    def _cua_fixture(self, root):
+        readiness = root / ".cvf/runtime/cua_readiness"
+        runtime = root / ".cvf/runtime/cua_product"
+        readiness.mkdir(parents=True)
+        now = datetime.now(timezone.utc).replace(microsecond=0)
+        stamp = lambda seconds: (now + timedelta(seconds=seconds)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        ident = {"nativeContractId": "r139-cua-page-target-v1", "trancheId": "CCMAI-RUNTIME-139",
+                 "campaignNonce": "nonce-cua", "browserId": "2", "tabId": "tab-123",
+                 "ownedScopeId": "owned-cua-tab", "producerAgentTaskId": "producer-task",
+                 "observerAgentTaskId": "observer-task", "operator": "Owner in this conversation",
+                 "closeMode": "operator_fallback", "proofContract": "cua_page_target_v1",
+                 "browserKind": "iab", "scopeOrigin": "caller_owned_explicit_cua_tab_target",
+                 "ownedTabIds": ["tab-123"]}
+        base, product = ".cvf/runtime/cua_readiness/", ".cvf/runtime/cua_product/"
+        admission = {**ident, "browserTool": "supported_CUA_page_target", "browserSupported": True,
+                     "fallbackCloseOperator": "Owner in this conversation",
+                     "browserReadinessRoot": ".cvf/runtime/cua_readiness", "runtimeRoot": str(runtime),
+                     "browserReceiptPath": base + "reservation.json",
+                     "browserCloseReceiptPath": product + "close.json",
+                     "actionEvidencePath": product + "action.json",
+                     "finalInventoryPath": product + "inventory.json",
+                     "rawCuaInventoryPath": product + "raw_inventory.json",
+                     "browserDoneSignalPath": product + "browser_done.signal",
+                     "grantDeadlineUTC": stamp(3600)}
+        created = "https://example.com/#r139_nonce=nonce-cua&phase=created"
+        controlled = "https://example.com/#r139_nonce=nonce-cua&phase=controlled"
+        origin = {"cuaCallRef": "cua-call-1", "originalCuaReturnReference": "private/cua/call-1",
+                  "originalCuaReturnSha256": "b" * 64,
+                  "provenanceBasis": "caller_recorded_original_cua_return",
+                  "rootOriginalReturnReviewRequired": True}
+        def event(name, seconds, **extra):
+            at = stamp(seconds)
+            return {**ident, **origin, "event": name, "atUTC": at, "observedAtUTC": at, **extra}
+        rows = {
+            "baselineInventory": event("baseline_inventory", -60, tabIds=["protected-tab"], inventoryScope="metadata_only"),
+            "creation": event("creation", -50, agentTaskId="producer-task", method="createBrowserTab",
+                              createdTabId="tab-123", requestedBrowserId="2", requestedUrl=created,
+                              callCompleted=True),
+            "creationLedger": event("creation_ledger", -49, agentTaskId="producer-task", newTabIds=["tab-123"]),
+            "control": event("control", -45, agentTaskId="producer-task", method="goto",
+                             targetTabId="tab-123", requestedUrl=controlled, callCompleted=True),
+            "capture": event("capture", -40, agentTaskId="producer-task", method="getScreenshot",
+                             targetTabId="tab-123", captureSha256="c" * 64),
+            "handoff": event("handoff", -30, agentTaskId="observer-task", method="getTab_then_listTabs",
+                             requestedTabId="tab-123", observedTabId="tab-123",
+                             metadataBrowserId="2", metadataTabId="tab-123",
+                             observedUrl=controlled, observedNonce="nonce-cua",
+                             getTabCallRef="cua-gettab", getTabReturnReference="private/cua/gettab",
+                             getTabReturnSha256="e" * 64,
+                             metadataCallRef="cua-listtabs", metadataReturnReference="private/cua/listtabs",
+                             metadataReturnSha256="f" * 64),
+        }
+        prefix = {**ident, "status": "RESERVED_CUA_TAB_CONTROL_CAPTURE_HANDOFF",
+                  "protocol": "https", "closeObserved": False, "rootOriginalReturnReviewed": True,
+                  "reservedAtUTC": stamp(-25)}
+        def write_row(name):
+            path = readiness / (name + ".json")
+            path.write_text(json.dumps(rows[name]), encoding="utf-8")
+            suffix = "" if name in ("baselineInventory", "creationLedger") else "Evidence"
+            prefix[name + suffix + "Path"] = base + name + ".json"
+            prefix[name + suffix + "Sha256"] = module.digest(path)
+        for name in rows:
+            write_row(name)
+        rows["creationLedger"]["baselineInventorySha256"] = prefix["baselineInventorySha256"]
+        rows["creationLedger"]["creationEvidenceSha256"] = prefix["creationEvidenceSha256"]
+        for field, links in (("creationLedger", {"baselineInventory": prefix["baselineInventorySha256"],
+                                                 "creation": prefix["creationEvidenceSha256"]}),):
+            rows[field].pop("cuaCallRef")
+            rows[field].pop("originalCuaReturnReference")
+            rows[field].pop("originalCuaReturnSha256")
+            rows[field]["provenanceBasis"] = "derived_from_original_cua_returns"
+            rows[field]["sourceEvidenceSha256"] = links
+        write_row("creationLedger")
+        rows["handoff"].pop("cuaCallRef")
+        rows["handoff"].pop("originalCuaReturnReference")
+        rows["handoff"].pop("originalCuaReturnSha256")
+        rows["handoff"]["provenanceBasis"] = "derived_from_original_cua_returns"
+        rows["handoff"]["sourceEvidenceSha256"] = {"getTab": "e" * 64, "listTabs": "f" * 64}
+        write_row("handoff")
+        receipt = readiness / "reservation.json"
+        receipt.write_text(json.dumps(prefix), encoding="utf-8")
+        admission["browserReceiptSha256"] = module.digest(receipt)
+        return admission, prefix, rows, runtime, stamp, ident
+
+    def test_cua_page_target_prefix_and_rejections(self):
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            with patch.object(module, "ROOT", root):
+                admission, prefix, rows, runtime, stamp, ident = self._cua_fixture(root)
+                module.verify_browser_receipt(admission)
+                receipt = root / admission["browserReceiptPath"]
+                def rewrite(field=None):
+                    if field:
+                        path = root / ".cvf/runtime/cua_readiness" / (field + ".json")
+                        path.write_text(json.dumps(rows[field]), encoding="utf-8")
+                        suffix = "" if field in ("baselineInventory", "creationLedger") else "Evidence"
+                        prefix[field + suffix + "Sha256"] = module.digest(path)
+                    receipt.write_text(json.dumps(prefix), encoding="utf-8")
+                    admission["browserReceiptSha256"] = module.digest(receipt)
+                for field, key, bad in (("handoff", "agentTaskId", "producer-task"),
+                                        ("handoff", "requestedTabId", "other-tab"),
+                                        ("capture", "originalCuaReturnReference", None),
+                                        ("baselineInventory", "tabIds", ["protected-tab", "tab-123"])):
+                    original = rows[field][key]
+                    rows[field][key] = bad
+                    rewrite(field)
+                    with self.subTest(field=field, key=key), self.assertRaises(module.Hold):
+                        module.verify_browser_receipt(admission)
+                    rows[field][key] = original
+                    rewrite(field)
+                for forbidden in ("pageId", "browserSessionId", "nativeTaskRunRef"):
+                    admission[forbidden] = "fabricated"
+                    with self.subTest(forbidden=forbidden), self.assertRaises(module.Hold):
+                        module.verify_browser_receipt(admission)
+                    del admission[forbidden]
+                runtime.mkdir()
+                with self.assertRaises(module.Hold):
+                    module.verify_browser_receipt(admission)
+
+    def test_cua_page_target_terminal_and_protected_inventory(self):
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            with patch.object(module, "ROOT", root):
+                admission, prefix, rows, runtime, stamp, ident = self._cua_fixture(root)
+                runtime.mkdir()
+                origin = {"cuaCallRef": "cua-final-call", "originalCuaReturnReference": "private/cua/final",
+                          "originalCuaReturnSha256": "d" * 64,
+                          "provenanceBasis": "caller_recorded_original_cua_return",
+                          "rootOriginalReturnReviewRequired": True}
+                def event(name, seconds, **extra):
+                    at = stamp(seconds)
+                    return {**ident, **origin, "event": name, "atUTC": at, "observedAtUTC": at, **extra}
+                raw = event("cua_inventory", -5, tabIds=["protected-tab"], ownedCount=0,
+                            inventoryScope="metadata_only")
+                raw_path = runtime / "raw_inventory.json"
+                raw_path.write_text(json.dumps(raw), encoding="utf-8")
+                action = event("action_sequence", -20, actions=[
+                    {"tabId": "tab-123", "action": "control", "atUTC": stamp(-20),
+                     "cuaCallRef": "cua-control", "originalCuaReturnReference": "private/cua/control",
+                     "originalCuaReturnSha256": "e" * 64,
+                     "provenanceBasis": "caller_recorded_original_cua_return"},
+                    {"tabId": "tab-123", "action": "owner_close_report", "atUTC": stamp(-8),
+                     "reportSource": "owner_in_conversation", "ownerReportReferenceSha256": "a" * 64}])
+                action.pop("cuaCallRef")
+                action.pop("originalCuaReturnReference")
+                action.pop("originalCuaReturnSha256")
+                action["provenanceBasis"] = "derived_from_original_cua_returns"
+                action["sourceEvidenceSha256"] = {"0": "e" * 64}
+                action_path = runtime / "action.json"
+                action_path.write_text(json.dumps(action), encoding="utf-8")
+                inventory = event("final_inventory", -5, tabIds=["protected-tab"], ownedCount=0,
+                                  inventoryScope="metadata_only",
+                                  rawCuaInventoryPath=admission["rawCuaInventoryPath"],
+                                  rawCuaInventorySha256=module.digest(raw_path))
+                inventory_path = runtime / "inventory.json"
+                inventory_path.write_text(json.dumps(inventory), encoding="utf-8")
+                close = {**ident, "status": "CLOSED_EXACT_OWNED_CUA_TAB", "closeObserved": True,
+                         "ownedTabsFinal": 0, "closureTimeBasis": "cua_final_metadata_observation",
+                         "rootOriginalReturnReviewed": True, "reservedAtUTC": prefix["reservedAtUTC"],
+                         "actionAtUTC": stamp(-20), "operatorReportReceivedAtUTC": stamp(-8),
+                         "closureObservedAtUTC": stamp(-5), "ownerReportReferenceSha256": "a" * 64,
+                         "actionEvidencePath": admission["actionEvidencePath"],
+                         "actionEvidenceSha256": module.digest(action_path),
+                         "finalInventoryPath": admission["finalInventoryPath"],
+                         "finalInventorySha256": module.digest(inventory_path)}
+                close_path = runtime / "close.json"
+                close_path.write_text(json.dumps(close), encoding="utf-8")
+                marker = {"status": "TERMINAL_EVIDENCE_WRITTEN", "proofContract": "cua_page_target_v1",
+                          "campaignNonce": "nonce-cua", "browserId": "2", "tabId": "tab-123",
+                          "ownedScopeId": "owned-cua-tab", "atUTC": stamp(-4),
+                          "evidenceSha256": {"browserCloseReceiptPath": module.digest(close_path),
+                                             "actionEvidencePath": close["actionEvidenceSha256"],
+                                             "finalInventoryPath": close["finalInventorySha256"],
+                                             "rawCuaInventoryPath": inventory["rawCuaInventorySha256"]}}
+                marker_path = runtime / "browser_done.signal"
+                marker_path.write_text(json.dumps(marker), encoding="utf-8")
+                self.assertEqual(module.verify_browser_terminal_close(admission, runtime, runtime)["receipt"], close)
+                action["actions"] = [action["actions"][-1]]
+                action["atUTC"] = stamp(-8)
+                action["observedAtUTC"] = stamp(-8)
+                action["sourceEvidenceSha256"] = {"prefix": admission["browserReceiptSha256"]}
+                action_path.write_text(json.dumps(action), encoding="utf-8")
+                close["actionAtUTC"] = stamp(-8)
+                close["actionEvidenceSha256"] = module.digest(action_path)
+                close_path.write_text(json.dumps(close), encoding="utf-8")
+                marker["evidenceSha256"]["browserCloseReceiptPath"] = module.digest(close_path)
+                marker["evidenceSha256"]["actionEvidencePath"] = close["actionEvidenceSha256"]
+                marker_path.write_text(json.dumps(marker), encoding="utf-8")
+                self.assertEqual(module.verify_browser_terminal_close(admission, runtime, runtime)["receipt"], close)
+                inventory["tabIds"] = ["tab-123", "protected-tab"]
+                inventory_path.write_text(json.dumps(inventory), encoding="utf-8")
+                close["finalInventorySha256"] = module.digest(inventory_path)
+                close_path.write_text(json.dumps(close), encoding="utf-8")
+                with self.assertRaises(module.Hold):
+                    module.verify_browser_terminal_close(admission, runtime, runtime)
+
+    def test_cua_metadata_binding_pure_helper(self):
         design_root = SOURCE.parents[1] / "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024"
         def no_process(*args, **kwargs):
             raise AssertionError("metadata pure-helper check attempted a subprocess")
@@ -66,9 +353,17 @@ class R139SupervisorPureTests(unittest.TestCase):
                 deadline = g0 + timedelta(seconds=1200)
                 reservation_sha = put(reservation, {"g0StartUTC": g0.strftime("%Y-%m-%dT%H:%M:%SZ"),
                                                     "deadlineUTC": deadline.strftime("%Y-%m-%dT%H:%M:%SZ")})
-                budget = {"oneCampaign": 1, "baselineMetadataEnumeration": 1, "finalMetadataEnumeration": 1}
+                observation_ref = module.CUA_OBSERVATION_REF
+                budget = {"oneCampaign": 1, "baselineMetadataEnumeration": 1,
+                          "handoffMetadataEnumeration": 1, "finalMetadataEnumeration": 1,
+                          "globalMetadataEnumerationMaximum": 3, "statusReadStartsMax": 16,
+                          "automaticPostSendStatusPollStartsMax": 12, "eventDrivenStatusReadsMax": 4}
                 admission = {"campaignReservationSha256": reservation_sha,
-                             "browserProofContract": "native_page_target_v1", "runtimeRoot": str(product),
+                             "browserProofContract": "cua_page_target_v1",
+                             "ownerCuaAmendmentSha256": "b" * 64,
+                             "inheritedOwnerEnvelopeSha256": "e" * 64,
+                             "observationCapsRef": observation_ref,
+                             "runtimeRoot": str(product),
                              "campaignNonce": "nonce-456", "sourceCommit": "a" * 40,
                              "r139ApprovedEffectCaps": budget, "productRuntimeReleased": True}
                 admission_sha = put(authority, admission)
@@ -79,7 +374,9 @@ class R139SupervisorPureTests(unittest.TestCase):
                 put(intent_path, intent)
                 binding = {"trancheId": "CCMAI-RUNTIME-139", "campaignNonce": "nonce-456",
                            "reservationSha256": reservation_sha, "freshGrantSha256": "b" * 64,
-                           "browserProofContract": "native_page_target_v1", "runtimeEffectAdmissionReviewed": True,
+                           "inheritedOwnerEnvelopeSha256": "e" * 64,
+                           "observationCapsSha256": observation_ref["sha256"],
+                           "browserProofContract": "cua_page_target_v1", "runtimeEffectAdmissionReviewed": True,
                            "runtimeEffectAdmission": {"path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-TEST.json",
                                                       "sha256": admission_sha},
                            "independentRuntimeReview": {"path": "docs/reviews/R139_TEST.md", "sha256": review_sha},
@@ -87,11 +384,25 @@ class R139SupervisorPureTests(unittest.TestCase):
                 binding_path = coord / "product_runtime_binding.json"
                 put(binding_path, binding)
                 recipe = {"coordinationRoot": ".cvf/runtime/r139_test/coord", "nonce": "nonce-456",
-                          "freshGrant": {"sha256": "b" * 64}, "newBudget": budget,
+                          "freshGrant": {"sha256": "b" * 64},
+                          "inheritedOwnerEnvelope": {"sha256": "e" * 64},
+                          "observationCapsRef": observation_ref, "newBudget": budget,
                           "reservationPath": ".cvf/runtime/r139_test/reservation.json"}
                 validator = activation["validated_product_binding"]
                 with patch.dict(validator.__globals__, {"ROOT": root, "PRODUCT_ROOT": product}):
                     self.assertEqual(validator(recipe, reservation_sha), product)
+                    put(binding_path, dict(binding, observationCapsSha256="c" * 64))
+                    self.assertIsNone(validator(recipe, reservation_sha))
+                    put(binding_path, binding)
+                    changed_admission = dict(admission, observationCapsRef={**observation_ref, "sha256": "c" * 64})
+                    changed_sha = put(authority, changed_admission)
+                    put(binding_path, dict(binding, runtimeEffectAdmission={"path": binding["runtimeEffectAdmission"]["path"],
+                                                                         "sha256": changed_sha}))
+                    put(intent_path, dict(intent, admissionSha256=changed_sha))
+                    self.assertIsNone(validator(recipe, reservation_sha))
+                    put(authority, admission)
+                    put(intent_path, intent)
+                    put(binding_path, binding)
                     for field, wrong in (("admissionSha256", "c" * 64),
                                          ("sourceCommit", "d" * 40),
                                          ("startedAt", (deadline + timedelta(seconds=1)).timestamp())):

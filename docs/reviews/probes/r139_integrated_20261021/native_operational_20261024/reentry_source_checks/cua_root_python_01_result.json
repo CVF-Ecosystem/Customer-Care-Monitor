@@ -1,0 +1,36 @@
+{
+  "kind": "R139_CUA_OFFLINE_SOURCE_CHECK_RESULT",
+  "slot": "rootFocusedPython",
+  "status": "PASS",
+  "originalPopenPid": 28608,
+  "originalWaitCompleted": true,
+  "exitCode": 0,
+  "timedOut": false,
+  "elapsedMonotonicSeconds": 7.572041399980662,
+  "testsRun": 44,
+  "sourceBeforeSha256": {
+    "scripts/r139_execution_supervisor.py": "a7557917cc3ade551e78f7b4c40b0cc5aac5a312bcae2fdfbe353aba997f5203",
+    "scripts/tests/test_r139_execution_supervisor.py": "e97ba027bc59965c6f1959d38566866229851203c309926d002f8ad1c49e1719",
+    "backend/api/handlers/intervention_execution_browser_test.go": "0ed1148d42dcd9cb018e2a3f3cbeb9c68bdcb8904d408c365b8d05b11c2a040e",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_payload_templates.json": "ffbf475dee7a28a785c2ce543ad50cda55819c72debdf8c24e0a05104d599f19",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt": "57ae20a2bb0054e38d5a3d919f5e2997780b56981a82f2f31924eddf623e5854",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/recorder_design.py.txt": "154047cf66ffce3192b07ff4ac976f51c9a797c50b76a4dd3091f6398f207f1f"
+  },
+  "sourceAfterSha256": {
+    "scripts/r139_execution_supervisor.py": "a7557917cc3ade551e78f7b4c40b0cc5aac5a312bcae2fdfbe353aba997f5203",
+    "scripts/tests/test_r139_execution_supervisor.py": "e97ba027bc59965c6f1959d38566866229851203c309926d002f8ad1c49e1719",
+    "backend/api/handlers/intervention_execution_browser_test.go": "0ed1148d42dcd9cb018e2a3f3cbeb9c68bdcb8904d408c365b8d05b11c2a040e",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_payload_templates.json": "ffbf475dee7a28a785c2ce543ad50cda55819c72debdf8c24e0a05104d599f19",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt": "57ae20a2bb0054e38d5a3d919f5e2997780b56981a82f2f31924eddf623e5854",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/recorder_design.py.txt": "154047cf66ffce3192b07ff4ac976f51c9a797c50b76a4dd3091f6398f207f1f"
+  },
+  "sourceUnchanged": true,
+  "pythonToolBeforeSha256": "a2a4eff8d0b0c845284c607d50a3b5b966ac5a3121736a2e38e165bd6644d9fe",
+  "pythonToolAfterSha256": "a2a4eff8d0b0c845284c607d50a3b5b966ac5a3121736a2e38e165bd6644d9fe",
+  "rawStdoutPath": ".cvf/runtime/r139_cua_root_checks_20261025/python/stdout.bin",
+  "rawStderrPath": ".cvf/runtime/r139_cua_root_checks_20261025/python/stderr.bin",
+  "stdoutSha256": "e1e8965d040c2e33863cfe23aff7c2599e783e66c236fcf1e3b7df4f88e3ad5e",
+  "stderrSha256": "263f1b32af495b36f422db8a0a3a4fb98b6509f85aab35db3b0d1ec4d5bdaaad",
+  "reservationSha256": "afa7895d9b72be3f4c999f0a93b057266f6ee17508d1e4966daf3dbfadaff9f1",
+  "claimBoundary": "Source/component only; retained failed worker attempt. No runtime/browser/service/key/provider/campaign or live governance proof."
+}

@@ -129,6 +129,9 @@ NATIVE_ID_FIELDS = ("nativeContractId", "trancheId", "campaignNonce", "pageId", 
 NATIVE_EVENT_FIELDS = ("creation", "control", "capture")
 PAGE_TARGET_ID_FIELDS = ("nativeContractId", "trancheId", "campaignNonce", "pageId", "ownedScopeId", "operator", "closeMode")
 PAGE_TARGET_EVENTS = ("creation", "control", "capture", "handoff")
+CUA_ID_FIELDS = ("nativeContractId", "trancheId", "campaignNonce", "browserId", "tabId",
+                 "ownedScopeId", "producerAgentTaskId", "observerAgentTaskId", "operator", "closeMode")
+CUA_EVENTS = ("creation", "control", "capture", "handoff")
 
 
 def native_text(value: object, code: str) -> str:
@@ -315,6 +318,149 @@ def verify_page_target_receipt(admission: dict, proof: dict, *, require_runtime_
         native_future_path(admission, field, runtime, absent=require_runtime_absent)
 
 
+def cua_identity(admission: dict, record: dict, code: str) -> None:
+    require(admission.get("proofContract") == "cua_page_target_v1" and
+            admission.get("browserTool") == "supported_CUA_page_target" and
+            admission.get("browserKind") == "iab" and
+            admission.get("scopeOrigin") == "caller_owned_explicit_cua_tab_target" and
+            admission.get("ownedTabIds") == [admission.get("tabId")] and
+            admission.get("closeMode") == "operator_fallback" and
+            admission.get("fallbackCloseOperator") == admission.get("operator"), code)
+    require(admission.get("producerAgentTaskId") != admission.get("observerAgentTaskId"), code)
+    for forbidden in ("pageId", "browserSessionId", "nativeTaskRunRef", "nativeToolCallRef",
+                      "ownedPageIds", "rawOriginalToolReference", "rawOriginalToolSha256"):
+        require(forbidden not in admission and forbidden not in record, code)
+    for field in CUA_ID_FIELDS:
+        expected = native_text(admission.get(field), code)
+        require(type(record.get(field)) is str and record[field] == expected, code)
+    require(record.get("proofContract") == "cua_page_target_v1" and
+            record.get("browserKind") == "iab" and
+            record.get("scopeOrigin") == "caller_owned_explicit_cua_tab_target" and
+            record.get("ownedTabIds") == [admission["tabId"]], code)
+
+
+def cua_origin(record: dict, code: str) -> datetime:
+    for field in ("cuaCallRef", "originalCuaReturnReference"):
+        native_path_text(record.get(field), code)
+    require(type(record.get("originalCuaReturnSha256")) is str and
+            HEX64.fullmatch(record["originalCuaReturnSha256"]) is not None and
+            record.get("provenanceBasis") == "caller_recorded_original_cua_return" and
+            record.get("rootOriginalReturnReviewRequired") is True, code)
+    at = native_time(record.get("atUTC"), code)
+    require(record.get("observedAtUTC") == record.get("atUTC"), code)
+    return at
+
+
+def cua_derived(record: dict, code: str) -> datetime:
+    require(record.get("provenanceBasis") == "derived_from_original_cua_returns" and
+            record.get("rootOriginalReturnReviewRequired") is True and
+            "originalCuaReturnReference" not in record and
+            "originalCuaReturnSha256" not in record and "cuaCallRef" not in record, code)
+    links = record.get("sourceEvidenceSha256")
+    require(type(links) is dict and bool(links) and
+            all(type(key) is str and native_text(key, code) and type(value) is str and
+                HEX64.fullmatch(value) is not None for key, value in links.items()), code)
+    at = native_time(record.get("atUTC"), code)
+    require(record.get("observedAtUTC") == record.get("atUTC"), code)
+    return at
+
+
+def cua_file(admission: dict, path: object, sha: object, root: Path, event: str) -> dict:
+    _, record = native_file(path, sha, root, "CUA_EVIDENCE_INVALID")
+    cua_identity(admission, record, "CUA_IDENTITY_INVALID")
+    require(record.get("event") == event, "CUA_EVENT_INVALID")
+    if event in ("creation_ledger", "action_sequence", "handoff"):
+        cua_derived(record, "CUA_DERIVED_ORIGIN_INVALID")
+    else:
+        cua_origin(record, "CUA_ORIGIN_INVALID")
+    return record
+
+
+def verify_cua_page_target_receipt(admission: dict, proof: dict, *, require_runtime_absent: bool) -> None:
+    readiness, runtime = native_roots(admission)
+    cua_identity(admission, proof, "CUA_PREFIX_IDENTITY_INVALID")
+    require(proof.get("status") == "RESERVED_CUA_TAB_CONTROL_CAPTURE_HANDOFF" and
+            proof.get("protocol") == "https" and proof.get("closeObserved") is False and
+            proof.get("rootOriginalReturnReviewed") is True, "CUA_PREFIX_INVALID")
+    if require_runtime_absent:
+        require(not runtime.exists(), "PRODUCT_RUNTIME_ROOT_PREEXISTING")
+    sealed = native_time(proof.get("reservedAtUTC"), "CUA_SEAL_INVALID")
+    nonce = admission["campaignNonce"]
+    created = f"https://example.com/#r139_nonce={nonce}&phase=created"
+    controlled = f"https://example.com/#r139_nonce={nonce}&phase=controlled"
+    baseline = cua_file(admission, proof.get("baselineInventoryPath"),
+                        proof.get("baselineInventorySha256"), readiness, "baseline_inventory")
+    baseline_ids = page_target_ids(baseline.get("tabIds"), "CUA_BASELINE_IDS_INVALID")
+    require(admission["tabId"] not in baseline_ids and
+            baseline.get("inventoryScope") == "metadata_only", "CUA_BASELINE_INVALID")
+    previous = native_time(baseline["atUTC"], "CUA_BASELINE_TIME_INVALID")
+    producer = admission["producerAgentTaskId"]
+    observer = admission["observerAgentTaskId"]
+    creation_at = None
+    for event in CUA_EVENTS:
+        row = cua_file(admission, proof.get(event + "EvidencePath"),
+                       proof.get(event + "EvidenceSha256"), readiness, event)
+        at = native_time(row["atUTC"], "CUA_EVENT_TIME_INVALID")
+        require(previous <= at <= sealed, "CUA_CHRONOLOGY_INVALID")
+        previous = at
+        if event == "creation":
+            creation_at = at
+            require(row.get("agentTaskId") == producer and
+                    row.get("createdTabId") == admission["tabId"] and
+                    row.get("requestedBrowserId") == admission["browserId"] and
+                    row.get("requestedUrl") == created and
+                    row.get("callCompleted") is True and
+                    "observedUrl" not in row and
+                    row.get("method") == "createBrowserTab", "CUA_CREATION_INVALID")
+        elif event == "control":
+            require(row.get("agentTaskId") == producer and
+                    row.get("targetTabId") == admission["tabId"] and
+                    row.get("requestedUrl") == controlled and
+                    row.get("callCompleted") is True and
+                    "observedUrl" not in row and
+                    row.get("method") == "goto", "CUA_CONTROL_INVALID")
+        elif event == "capture":
+            require(row.get("agentTaskId") == producer and
+                    row.get("targetTabId") == admission["tabId"] and
+                    "observedUrl" not in row and
+                    row.get("method") == "getScreenshot" and
+                    type(row.get("captureSha256")) is str and
+                    HEX64.fullmatch(row["captureSha256"]) is not None, "CUA_CAPTURE_INVALID")
+        else:
+            require(row.get("agentTaskId") == observer and
+                    row.get("method") == "getTab_then_listTabs" and
+                    row.get("requestedTabId") == admission["tabId"] and
+                    row.get("observedTabId") == admission["tabId"] and
+                    row.get("metadataBrowserId") == admission["browserId"] and
+                    row.get("metadataTabId") == admission["tabId"] and
+                    row.get("observedUrl") == controlled and
+                    row.get("observedNonce") == nonce,
+                    "CUA_CROSS_AGENT_HANDOFF_INVALID")
+            require(row.get("sourceEvidenceSha256") == {
+                "getTab": row.get("getTabReturnSha256"),
+                "listTabs": row.get("metadataReturnSha256")} and
+                all(type(row.get(field)) is str and HEX64.fullmatch(row[field]) is not None
+                    for field in ("getTabReturnSha256", "metadataReturnSha256")) and
+                all(native_path_text(row.get(field), "CUA_HANDOFF_ORIGIN_INVALID")
+                    for field in ("getTabReturnReference", "metadataReturnReference",
+                                  "getTabCallRef", "metadataCallRef")),
+                "CUA_HANDOFF_ORIGIN_INVALID")
+    ledger = cua_file(admission, proof.get("creationLedgerPath"),
+                      proof.get("creationLedgerSha256"), readiness, "creation_ledger")
+    require(ledger.get("newTabIds") == [admission["tabId"]] and
+            ledger.get("baselineInventorySha256") == proof.get("baselineInventorySha256") and
+            ledger.get("creationEvidenceSha256") == proof.get("creationEvidenceSha256") and
+            ledger.get("sourceEvidenceSha256") == {
+                "baselineInventory": proof.get("baselineInventorySha256"),
+                "creation": proof.get("creationEvidenceSha256")} and
+            ledger.get("agentTaskId") == producer and creation_at is not None and
+            creation_at <= native_time(ledger["atUTC"], "CUA_LEDGER_TIME_INVALID") <= sealed,
+            "CUA_CREATION_LEDGER_INVALID")
+    for field in ("browserCloseReceiptPath", "actionEvidencePath", "finalInventoryPath",
+                  "rawCuaInventoryPath", "browserDoneSignalPath"):
+        native_future_path(admission, field, runtime, absent=require_runtime_absent)
+
+
 def native_roots(admission: dict) -> tuple[Path, Path]:
     readiness = native_root(admission, "browserReadinessRoot")
     runtime = native_root(admission, "runtimeRoot")
@@ -337,7 +483,7 @@ def native_future_path(admission: dict, field: str, root: Path, *, absent: bool)
 
 def verify_browser_receipt(value: dict, *, require_runtime_absent: bool = True) -> None:
     tool = value.get("browserTool")
-    require(tool in ("supported_CUA_IAB", "antigravity_native", "antigravity_page_target") and value.get("browserSupported") is True, "BROWSER_CAPABILITY_UNPROVEN")
+    require(tool in ("supported_CUA_IAB", "supported_CUA_page_target", "antigravity_native", "antigravity_page_target") and value.get("browserSupported") is True, "BROWSER_CAPABILITY_UNPROVEN")
     browser_rel = value.get("browserReceiptPath", "")
     require(isinstance(browser_rel, str) and browser_rel.strip(), "BROWSER_RECEIPT_PATH_MISSING")
     browser = project_path(browser_rel)
@@ -376,6 +522,11 @@ def verify_browser_receipt(value: dict, *, require_runtime_absent: bool = True) 
             previous_evidence = at
         for field in ("browserCloseReceiptPath", "actionEvidencePath", "finalInventoryPath", "rawNativeInventoryPath"):
             native_future_path(value, field, runtime, absent=require_runtime_absent)
+    elif tool == "supported_CUA_page_target":
+        readiness, _ = native_roots(value)
+        _, proof = native_file(browser_rel, expected, ROOT.resolve(), "CUA_PREFIX_FILE_INVALID")
+        require((ROOT / browser_rel).resolve().is_relative_to(readiness), "CUA_PREFIX_ROOT_INVALID")
+        verify_cua_page_target_receipt(value, proof, require_runtime_absent=require_runtime_absent)
     elif tool == "antigravity_page_target":
         readiness, _ = native_roots(value)
         _, proof = native_file(browser_rel, expected, ROOT.resolve(), "PAGE_TARGET_PREFIX_FILE_INVALID")
@@ -386,6 +537,8 @@ def verify_browser_receipt(value: dict, *, require_runtime_absent: bool = True) 
 
 
 def verify_browser_terminal_close(admission: dict, runtime: Path, external: Path) -> dict:
+    if admission.get("browserTool") == "supported_CUA_page_target":
+        return verify_cua_page_target_terminal(admission, runtime)
     if admission.get("browserTool") == "antigravity_page_target":
         return verify_page_target_terminal(admission, runtime)
     verify_browser_receipt(admission, require_runtime_absent=False)
@@ -567,7 +720,161 @@ def verify_page_target_terminal(admission: dict, runtime: Path) -> dict:
             "finalInventorySha256": receipt["finalInventorySha256"]}
 
 
+def verify_cua_page_target_terminal(admission: dict, runtime: Path) -> dict:
+    verify_browser_receipt(admission, require_runtime_absent=False)
+    readiness, product_root = native_roots(admission)
+    require(runtime.resolve() == product_root, "CUA_RUNTIME_ROOT_MISMATCH")
+    _, prefix = native_file(admission.get("browserReceiptPath"),
+                            admission.get("browserReceiptSha256"), ROOT.resolve(),
+                            "CUA_PREFIX_INVALID")
+    close_path = native_future_path(admission, "browserCloseReceiptPath", product_root, absent=False)
+    require(close_path.is_file(), "CUA_CLOSE_FILE_MISSING")
+    receipt = read_json(close_path)
+    close_sha = digest(close_path)
+    cua_identity(admission, receipt, "CUA_CLOSE_IDENTITY_INVALID")
+    require(receipt.get("status") == "CLOSED_EXACT_OWNED_CUA_TAB" and
+            receipt.get("closeObserved") is True and
+            receipt.get("ownedTabsFinal") == 0 and type(receipt.get("ownedTabsFinal")) is int and
+            "actualCloseActionAtUTC" not in receipt and "closedAtUTC" not in receipt and
+            receipt.get("closureTimeBasis") == "cua_final_metadata_observation" and
+            receipt.get("reservedAtUTC") == prefix.get("reservedAtUTC") and
+            receipt.get("rootOriginalReturnReviewed") is True, "CUA_CLOSE_STATUS_INVALID")
+    report_at = native_time(receipt.get("operatorReportReceivedAtUTC"), "CUA_REPORT_TIME_INVALID")
+    observed_at = native_time(receipt.get("closureObservedAtUTC"), "CUA_OBSERVATION_TIME_INVALID")
+    reserved = native_time(prefix.get("reservedAtUTC"), "CUA_SEAL_INVALID")
+    deadline_text = admission.get("grantDeadlineUTC")
+    require(type(deadline_text) is str and re.fullmatch(r"\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ", deadline_text),
+            "CUA_DEADLINE_INVALID")
+    deadline = datetime.strptime(deadline_text, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+    require(reserved <= report_at <= observed_at <= deadline and
+            type(receipt.get("ownerReportReferenceSha256")) is str and
+            HEX64.fullmatch(receipt["ownerReportReferenceSha256"]) is not None and
+            receipt.get("operator") == "Owner in this conversation", "CUA_CLOSE_CHRONOLOGY_INVALID")
+    require(receipt.get("actionEvidencePath") == admission.get("actionEvidencePath") and
+            receipt.get("finalInventoryPath") == admission.get("finalInventoryPath"),
+            "CUA_FUTURE_PATH_MISMATCH")
+    action = cua_file(admission, receipt.get("actionEvidencePath"),
+                      receipt.get("actionEvidenceSha256"), product_root, "action_sequence")
+    rows = action.get("actions")
+    require(type(rows) is list and len(rows) >= 1 and
+            action.get("atUTC") == receipt.get("actionAtUTC"), "CUA_ACTIONS_MISSING")
+    require(action.get("sourceEvidenceSha256") == {
+        str(index): row.get("originalCuaReturnSha256") for index, row in enumerate(rows)
+        if type(row) is dict and row.get("action") != "owner_close_report"
+    } or (len(rows) == 1 and rows[0].get("action") == "owner_close_report" and
+          action.get("sourceEvidenceSha256") == {"prefix": admission["browserReceiptSha256"]}),
+        "CUA_ACTION_SOURCE_LINKS_INVALID")
+    previous = reserved
+    for index, row in enumerate(rows):
+        require(type(row) is dict and row.get("tabId") == admission["tabId"] and
+                row.get("action") in ("control", "capture", "handoff", "product_read",
+                                      "product_execute", "owner_close_report"), "CUA_ACTION_INVALID")
+        at = native_time(row.get("atUTC"), "CUA_ACTION_TIME_INVALID")
+        require(previous <= at <= report_at, "CUA_ACTION_CHRONOLOGY_INVALID")
+        previous = at
+        if row["action"] == "owner_close_report":
+            require(index == len(rows) - 1 and at == report_at and
+                    row.get("reportSource") == "owner_in_conversation" and
+                    row.get("ownerReportReferenceSha256") == receipt["ownerReportReferenceSha256"],
+                    "CUA_OWNER_REPORT_ACTION_INVALID")
+        else:
+            require(index < len(rows) - 1 and
+                    type(row.get("originalCuaReturnSha256")) is str and
+                    HEX64.fullmatch(row["originalCuaReturnSha256"]) is not None and
+                    native_path_text(row.get("originalCuaReturnReference"), "CUA_ACTION_ORIGIN_INVALID") and
+                    native_path_text(row.get("cuaCallRef"), "CUA_ACTION_ORIGIN_INVALID") and
+                    row.get("provenanceBasis") == "caller_recorded_original_cua_return",
+                    "CUA_ACTION_ORIGIN_INVALID")
+    require(rows[-1]["action"] == "owner_close_report", "CUA_POST_CLOSE_ACTION")
+    inventory = cua_file(admission, receipt.get("finalInventoryPath"),
+                         receipt.get("finalInventorySha256"), product_root, "final_inventory")
+    require(inventory.get("atUTC") == receipt.get("closureObservedAtUTC") and
+            inventory.get("rawCuaInventoryPath") == admission.get("rawCuaInventoryPath") and
+            inventory.get("inventoryScope") == "metadata_only" and
+            type(inventory.get("ownedCount")) is int and inventory["ownedCount"] == 0,
+            "CUA_FINAL_INVENTORY_INVALID")
+    final_ids = page_target_ids(inventory.get("tabIds"), "CUA_FINAL_IDS_INVALID")
+    require(admission["tabId"] not in final_ids, "CUA_TAB_STILL_PRESENT")
+    baseline = cua_file(admission, prefix.get("baselineInventoryPath"),
+                        prefix.get("baselineInventorySha256"), readiness, "baseline_inventory")
+    baseline_ids = page_target_ids(baseline.get("tabIds"), "CUA_BASELINE_IDS_INVALID")
+    require(set(final_ids) == set(baseline_ids), "CUA_PROTECTED_DRIFT")
+    raw = cua_file(admission, inventory.get("rawCuaInventoryPath"),
+                   inventory.get("rawCuaInventorySha256"), product_root, "cua_inventory")
+    require(raw.get("atUTC") == inventory["atUTC"] and raw.get("tabIds") == final_ids and
+            raw.get("inventoryScope") == "metadata_only" and
+            type(raw.get("ownedCount")) is int and raw["ownedCount"] == 0 and
+            raw.get("cuaCallRef") != baseline.get("cuaCallRef"),
+            "CUA_RAW_INVENTORY_MISMATCH")
+    marker_path = native_future_path(admission, "browserDoneSignalPath", product_root, absent=False)
+    require(marker_path.is_file(), "CUA_DONE_MARKER_MISSING")
+    marker = read_json(marker_path)
+    marker_at = native_time(marker.get("atUTC"), "CUA_DONE_TIME_INVALID")
+    require(marker.get("status") == "TERMINAL_EVIDENCE_WRITTEN" and
+            marker.get("proofContract") == "cua_page_target_v1" and
+            marker.get("campaignNonce") == admission["campaignNonce"] and
+            marker.get("browserId") == admission["browserId"] and
+            marker.get("tabId") == admission["tabId"] and
+            marker.get("ownedScopeId") == admission["ownedScopeId"] and
+            observed_at <= marker_at <= deadline and
+            marker.get("evidenceSha256") == {
+                "browserCloseReceiptPath": close_sha,
+                "actionEvidencePath": receipt["actionEvidenceSha256"],
+                "finalInventoryPath": receipt["finalInventorySha256"],
+                "rawCuaInventoryPath": inventory["rawCuaInventorySha256"],
+            }, "CUA_DONE_MARKER_INVALID")
+    return {"receipt": receipt, "closeReceiptSha256": close_sha,
+            "actionEvidenceSha256": receipt["actionEvidenceSha256"],
+            "finalInventorySha256": receipt["finalInventorySha256"]}
+
+
 SOURCE_PIN_REQUIRED = {"backend/api/handlers/intervention_execution_browser_test.go", "scripts/r139_execution_supervisor.py", "scripts/r139_vite_config.mjs.template", "scripts/tests/test_r139_execution_supervisor.py", "backend/go.mod", "backend/go.sum", "frontend/package.json", "frontend/package-lock.json", "frontend/vite.config.ts"}
+CUA_AMENDMENT_REF = {"path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-CUA-SOURCE-ADMISSION.json",
+                     "sha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e"}
+CUA_INHERITED_REF = {"path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-AND-CONDITIONAL-REENTRY-ADMISSION.json",
+                     "sha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f"}
+CUA_OBSERVATION_REF = {"path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
+                       "sha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491"}
+
+
+def verify_cua_grant_chain(value: dict) -> None:
+    require(value.get("ownerCuaAmendmentRef") == CUA_AMENDMENT_REF and
+            value.get("inheritedOwnerEnvelopeRef") == CUA_INHERITED_REF,
+            "CUA_OWNER_GRANT_REFS_INVALID")
+    amendment = read_json(committed(CUA_AMENDMENT_REF["path"]))
+    inherited = read_json(committed(CUA_INHERITED_REF["path"]))
+    require(digest(project_path(CUA_AMENDMENT_REF["path"])) == CUA_AMENDMENT_REF["sha256"] and
+            digest(project_path(CUA_INHERITED_REF["path"])) == CUA_INHERITED_REF["sha256"] and
+            amendment.get("ownerApproved") is True and amendment.get("sourceGranted") is True and
+            amendment.get("previousOwnerEnvelope") == CUA_INHERITED_REF and
+            amendment.get("browserContractProposed", {}).get("proofContract") == "cua_page_target_v1" and
+            inherited.get("ownerApproved") is True and inherited.get("freshCampaignCap") == 1 and
+            inherited.get("providerPhysicalCap") == 1, "CUA_OWNER_GRANT_CHAIN_INVALID")
+    obs_ref = value.get("observationCapsRef")
+    require(obs_ref == CUA_OBSERVATION_REF, "CUA_OBSERVATION_AUTHORITY_MISSING")
+    obs = read_json(committed(obs_ref["path"]))
+    caps = obs.get("proposedReadonlyChanges", {})
+    require(digest(project_path(obs_ref["path"])) == obs_ref["sha256"] and
+            obs.get("ownerApproved") is True and
+            obs.get("kind") == "OWNER_APPROVED_R139_CUA_OBSERVATION_CAP_AMENDMENT" and
+            obs.get("parentCuaAmendment") == CUA_AMENDMENT_REF and
+            obs.get("inheritedOwnerEnvelope") == CUA_INHERITED_REF and
+            caps.get("globalMetadataEnumerationMaximum") == 3 and
+            caps.get("baselineMetadataEnumeration") == 1 and
+            caps.get("handoffMetadataEnumeration") == 1 and
+            caps.get("finalMetadataEnumeration") == 1 and
+            caps.get("g2StatusReadStartsMaximum") == 16 and
+            caps.get("automaticPostSendStatusPollStartsMaximum") == 12 and
+            caps.get("automaticPollSpacingSecondsMinimum") == 5 and
+            caps.get("automaticPollLifetimeSecondsMaximum") == 60 and
+            caps.get("eventDrivenStatusReadsMaximum") == 4 and
+            caps.get("eventDrivenCategories") == ["initial_writer_load", "publication_version_watch_reload",
+                                                   "one_deliberate_writer_reload", "reader_load"] and
+            caps.get("spacingAndLifetimeScope") == "automatic post-send polling only; event-driven loads recorded separately" and
+            caps.get("noExtraGlobalInventory") is True and
+            caps.get("noUnrelatedTabContentCaptureOrControl") is True and
+            caps.get("rawMetadataPrivateEvidenceIdsOrDigestsOnly") is True,
+            "CUA_OBSERVATION_AUTHORITY_NOT_APPROVED")
 
 
 def verify_source_pins(pins: object) -> None:
@@ -585,6 +892,8 @@ def fresh_runtime_admission(relative: str, *, expect_fresh_external: bool = True
     require(value.get("ownerApproved") is True and value.get("sourceOnly") is not True, "OWNER_EFFECT_APPROVAL_MISSING")
     require(value.get("parentAuthorityCommit") == "642f5bd026dfe31e6dda6441dd25704eb3ececa3", "PARENT_SEED_MISMATCH")
     require(value.get("sourceResumeAdmissionCommit") == "6fc951a84c54cd31f20f2404d6dc8957d97bc339", "SOURCE_RESUME_BINDING_MISMATCH")
+    if value.get("browserTool") == "supported_CUA_page_target":
+        verify_cua_grant_chain(value)
     source = value.get("sourceCommit")
     require(isinstance(source, str) and HEX40.fullmatch(source), "SOURCE_COMMIT_INVALID")
     ancestor = subprocess.run(["git", "merge-base", "--is-ancestor", source, "HEAD"], cwd=ROOT, capture_output=True, timeout=10)
@@ -593,7 +902,7 @@ def fresh_runtime_admission(relative: str, *, expect_fresh_external: bool = True
     require(dirty.returncode == 0 and not dirty.stdout.strip(), "SOURCE_WORKTREE_DIRTY")
     require(value.get("nativeExecutePOST") == EXPECTED_NATIVE and value.get("browserExecutePOST") == EXPECTED_BROWSER and value.get("grantCap") == EXPECTED_GRANTS and value.get("providerCap") == 1 and value.get("automaticRetry") == 0, "EFFECT_CAPS_INVALID")
     verify_browser_receipt(value, require_runtime_absent=expect_fresh_external)
-    if expect_fresh_external and value.get("browserTool") in ("antigravity_native", "antigravity_page_target"):
+    if expect_fresh_external and value.get("browserTool") in ("antigravity_native", "antigravity_page_target", "supported_CUA_page_target"):
         close_path_rel = value.get("browserCloseReceiptPath")
         if close_path_rel:
             close_p = ROOT / close_path_rel
@@ -1520,7 +1829,7 @@ def run(relative: str) -> None:
             fresh_runtime_admission(relative, expect_fresh_external=False, validate_live_deadline=False)
         except Exception as exc:
             errors.append("SOURCE_RECHECK_FAILED:" + type(exc).__name__)
-        if admission.get("browserTool") == "antigravity_native":
+        if admission.get("browserTool") in ("antigravity_native", "supported_CUA_page_target"):
             try:
                 outcome["browserTerminalClose"] = verify_browser_terminal_close(admission, runtime, external)
             except Exception as exc:

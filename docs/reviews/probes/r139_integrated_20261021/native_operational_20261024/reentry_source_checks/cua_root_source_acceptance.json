@@ -1,0 +1,53 @@
+{
+  "kind": "ROOT_R139_CUA_CORRECTED_SOURCE_COMPONENT_ACCEPTANCE",
+  "status": "ACCEPT_SOURCE_COMPONENTS_WITH_RETAINED_FAILED_ATTEMPT",
+  "sourceChecksAccepted": true,
+  "acceptanceBasis": "Current corrected full Python44 suite, offline Go compile and exact13pureGo groups PASS; one earlier Windows test-fixture attempt FAIL is retained and not refunded. Not all attempts passed.",
+  "sourceSha256": {
+    "scripts/r139_execution_supervisor.py": "a7557917cc3ade551e78f7b4c40b0cc5aac5a312bcae2fdfbe353aba997f5203",
+    "scripts/tests/test_r139_execution_supervisor.py": "e97ba027bc59965c6f1959d38566866229851203c309926d002f8ad1c49e1719",
+    "backend/api/handlers/intervention_execution_browser_test.go": "0ed1148d42dcd9cb018e2a3f3cbeb9c68bdcb8904d408c365b8d05b11c2a040e",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_payload_templates.json": "ffbf475dee7a28a785c2ce543ad50cda55819c72debdf8c24e0a05104d599f19",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt": "57ae20a2bb0054e38d5a3d919f5e2997780b56981a82f2f31924eddf623e5854",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/recorder_design.py.txt": "154047cf66ffce3192b07ff4ac976f51c9a797c50b76a4dd3091f6398f207f1f"
+  },
+  "checks": [
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/cua_worker_python_01_failure.json",
+      "sha256": "0f75a123db9930df2e5d01f6635360429cd7df165c8cb7de86b98343e9493d61",
+      "status": "FAIL_CONSUMED_NO_RETRY"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/cua_root_python_01_result.json",
+      "sha256": "8764a817c8a9b35180d06cf1e80b669dba4004758ac864f73739879a504fcb8c",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/cua_worker_go_compile_01_result.json",
+      "sha256": "8ef46c61f8b9287c8d34a1166b85f5ef310acc24ea8a6b02243505c3049ffd2b",
+      "status": "PASS_COMPILE_ONLY_BINARY_NEVER_EXECUTED"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/cua_root_pure_go_01_result.json",
+      "sha256": "786509c6af44380002c6068401dbd0887ea8626f06de9d7120db630fc7b7846c",
+      "status": "PASS"
+    }
+  ],
+  "oldSpent": 4,
+  "newConsumed": 4,
+  "lineageTotalConsumed": 8,
+  "lineageCap": 8,
+  "newSourceChecksRemaining": 0,
+  "workerFailureRetained": true,
+  "runtimeGovernanceProved": false,
+  "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+  "campaignUse": 0,
+  "providerUse": 0,
+  "binary": {
+    "path": ".cvf/runtime/r139_cua_source_20261025/handlers.test.exe",
+    "sha256": "d1861e44be7f28b58d851e901a7d498c8460e553efbb20df6b0d92910c7208e7",
+    "size": 59561984,
+    "executedOnlyAuditedPureGroups": 13,
+    "integratedExecuted": false
+  }
+}
