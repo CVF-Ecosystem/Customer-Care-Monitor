@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Current R139 stable pin/clock/offline-resume source review pending material commit; checkpoints reusable, original failures retained, runtime effects unreleased."
+      "description": "Current R139 accepted b330f70b/3366eb41 offline stable-pin/clock/resume source and checkpoint continuation; G0–G3 runtime proof and Product B admission remain open."
     },
     {
       "id": "r060-work-order",
@@ -37607,6 +37607,13 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_preflight_validation_20261026.json",
       "status": "ACTIVE",
       "description": "Pinned public e9/profile1.1 static prerequisite validation with original failed metadata gate attempts retained; no latest-doctor/runtime/hosted CI claim."
+    },
+    {
+      "id": "r139-pinned-resume-v3-accepted-build-pins-20261026",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-V3-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Root accepted exact b330f70b offline stable-pin/clock/resume source; immutable thirteen source pins, all attempts/Root62 and actual local checkpoint reuse, no runtime release."
     }
   ]
 }

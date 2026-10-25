@@ -1,0 +1,310 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ROOT_REVIEWED_R139_ACCEPTED_BUILD_PINS",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "date": "2026-10-26",
+  "riskCeiling": "R2",
+  "sourceCommit": "b330f70b7e760ffee1113d57abc7133c725c57cd",
+  "ownerEnvelopePath": "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-CUA-SOURCE-ADMISSION.json",
+  "ownerEnvelopeSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
+  "inheritedOwnerEnvelopeSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "observationCapsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
+    "sha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491"
+  },
+  "rootReviewApproved": true,
+  "sourceChecksAccepted": true,
+  "review": "docs/reviews/R139_PINNED_RESUME_CONSOLIDATED_SOURCE_REVIEW_2026-10-26.md",
+  "reviewSha256": "7d154375606bfdd7797cd5da8db8045eaafe9421ed662c2b8f4a1b7d408f433c",
+  "pins": {
+    "sourceSha256": {
+      "scripts/r139_execution_supervisor.py": "a7557917cc3ade551e78f7b4c40b0cc5aac5a312bcae2fdfbe353aba997f5203",
+      "scripts/tests/test_r139_execution_supervisor.py": "3c6aafa1573880be5d3e23eed26ad5edee1a208adda23511509daa7df81262ac",
+      "scripts/r139_vite_config.mjs.template": "82a1d9ae8576fcd46718945d0a5cb44eb963a2a14d436a16e2bcdfb72b26bee9",
+      "backend/api/handlers/intervention_execution_browser_test.go": "0ed1148d42dcd9cb018e2a3f3cbeb9c68bdcb8904d408c365b8d05b11c2a040e",
+      "backend/go.mod": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+      "backend/go.sum": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b",
+      "frontend/package.json": "d16bea0b83ad7eb871576061f7ea91534a2dd2fdc7eef26eb20ec908e4fca24d",
+      "frontend/package-lock.json": "da41e1de5d5b853295a303092aab9433aeea8168fda2cf0420dd94e9f579fb00",
+      "frontend/vite.config.ts": "736c63d3a72a5b126841ceedeac4b4a01854a2bec71bd57d2f46a23ec3cf68de",
+      "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v3_design.py.txt": "acfec28024a249ac9ee20f49d37a3f53597d9fc1338164060fb2a9c3625b9ef4",
+      "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_pinned_preflight.py.txt": "81784375b6948dee973ce1dd4a3b66851786273079f4becfbdd7c7378fbca233",
+      "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_durable_resume.py.txt": "7ab2bf4c5b97009d36b932fd7aff5cf6d5b42584844f59fc02f5605f06156eda",
+      "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/test_r139_pinned_resume.py": "9dd100bae4dcfa18b5c1fd098de56fecc534ad59fd1a4361bda0cbb256b1f227"
+    },
+    "binary": {
+      "path": ".cvf/runtime/r139_cua_source_20261025/handlers.test.exe",
+      "size": 59561984,
+      "sha256": "d1861e44be7f28b58d851e901a7d498c8460e553efbb20df6b0d92910c7208e7"
+    },
+    "viteCli": {
+      "path": "frontend/node_modules/vite/bin/vite.js",
+      "sha256": "fa03478846d229651a3c6aa64833ba2c6cbf580a798b92bd8f47c7480bafb5d8",
+      "size": 2574
+    },
+    "tools": {
+      "python": {
+        "path": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "sha256": "a2a4eff8d0b0c845284c607d50a3b5b966ac5a3121736a2e38e165bd6644d9fe",
+        "size": 105816
+      },
+      "git": {
+        "path": "C:\\Program Files\\Git\\cmd\\git.EXE",
+        "sha256": "22fead8244ef3a7225fb800099a4e43eca8bcec0466774917669599c2f19a05a",
+        "size": 46936
+      },
+      "powershell": {
+        "path": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+        "sha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f",
+        "size": 495616
+      },
+      "docker": {
+        "path": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+        "sha256": "b8f907c73a89c9bd0a88bddb0cb5008728af4dea0d773b3f3614e9f203737e04",
+        "size": 44922800
+      },
+      "node": {
+        "path": "C:\\Program Files\\nodejs\\node.EXE",
+        "sha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+        "size": 92825416
+      }
+    },
+    "backendTree": "a60952bc46b7f0f30bcefc93720ba3b42529a9f8",
+    "frontendTree": "b23c158a3740ee97b30d17d0a52f5133d4ed5eff"
+  },
+  "metadataSha256": {
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_payload_templates.json": "ffbf475dee7a28a785c2ce543ad50cda55819c72debdf8c24e0a05104d599f19",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt": "57ae20a2bb0054e38d5a3d919f5e2997780b56981a82f2f31924eddf623e5854",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/recorder_design.py.txt": "154047cf66ffce3192b07ff4ac976f51c9a797c50b76a4dd3091f6398f207f1f",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v2_design.py.txt": "89d6f20eb1b80e1e5f331876886542fce7046fe010e0d6982b1b6b8f56f29454",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_contract_20261025.json": "4c90053543f1d21532fdb5c6c7487e04c7a4ee5b3369c6f24034cde285eb9e7c",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_proof_20261025.json": "10937592aaa94c4d00a89eb194fa223b9bec372b921be8a247967da235fa44e9",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_boot_identity_capability_20261025.json": "284f47404e8f8e40c5ff1f42bebaf2276dc8c1390914e56b67521a476e90346e",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_contract_20261026.json": "e3fe4ef6caeb8b197e5f358267d89a6584fb6cf10087bebb5bfca53efdc7d5da",
+    "docs/reviews/R139_PINNED_RESUME_CONSOLIDATED_SOURCE_REVIEW_2026-10-26.md": "7d154375606bfdd7797cd5da8db8045eaafe9421ed662c2b8f4a1b7d408f433c",
+    "docs/reviews/R139_CLOCK_V3_SOURCE_REVIEW_2026-10-26.md": "2625651f67d62d50ae9f692e869392056dd0683ba1a5b000f5701c63069ee7df",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_preflight_validation_20261026.json": "e149839e79bddb5763ca846f4e109dc94ef5fec905c6390426695333c8d7cdc0"
+  },
+  "checkAccounting": {
+    "historicalSourceChecksSpent": 10,
+    "newFocusedInvocations": 4,
+    "totalCountedLineage": 14,
+    "failedAttemptRetained": true,
+    "newAuthorizationRef": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+      "sha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f"
+    },
+    "additionalChecksCurrentlyNeeded": 0,
+    "noNumericalOwnerCapInvented": true
+  },
+  "runtimeExecutableNow": false,
+  "browserExecutableNow": false,
+  "providerExecutableNow": false,
+  "campaignReserved": false,
+  "claimBoundary": "Exact-source offline clock/pin/durable-checkpoint repair accepted; original failures/counters retained. No actual G0-G3, live quota/provider process, runtime governance, M3 completion, hosted CI, deployment or Product B operational acceptance.",
+  "historicalInheritedCuaChecks": {
+    "sourceCommit": "38db7e90d2344fcc2f5a6c14cf6406f192d7a1d9",
+    "sourceUse": {
+      "workerFocusedPython": 1,
+      "workerOfflineGoCompile": 1,
+      "rootFocusedPython": 1,
+      "rootAuditedPureGo": 1
+    },
+    "checkOutcomes": {
+      "workerFocusedPython": "FAIL_CONSUMED_WINDOWS_FIXTURE_RETAINED",
+      "rootFocusedPython": "PASS_44_CORRECTED_CURRENT_TESTS",
+      "workerOfflineGoCompile": "PASS",
+      "rootAuditedPureGo": "PASS_13_EXACT_NO_SKIP"
+    },
+    "checkAccounting": {
+      "oldSpent": 4,
+      "newSpent": 4,
+      "totalSpent": 8,
+      "cap": 8,
+      "remaining": 0
+    }
+  },
+  "sourceUse": {
+    "workerClockFocusedPython": 1,
+    "workerPinResumeFocusedPythonIncludingFailure": 2,
+    "rootCombinedFocusedPythonCountedOnce": 1,
+    "goCompile": 0,
+    "goTests": 0
+  },
+  "checkOutcomes": {
+    "workerClock": "PASS46",
+    "workerPinFirst": "FAIL_15_OF_16_EXPECTATION_RETAINED",
+    "workerPinRepaired": "PASS16",
+    "rootCombined": "PASS62",
+    "resume": "ACTUAL_OFFLINE_RECOVERY_AND_REUSE_NO_NEW_TEST_CHILD",
+    "pinnedPreflight": "LEGACY7_AND_TRUSTED_PINNED_PROFILE_PRECOMMIT6_PASS_APPL_NOT_APPLICABLE"
+  },
+  "bootRecoveryVerification": {
+    "ownerAdmissionRef": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json",
+      "sha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb"
+    },
+    "contractRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_contract_20261025.json",
+      "sha256": "4c90053543f1d21532fdb5c6c7487e04c7a4ee5b3369c6f24034cde285eb9e7c"
+    },
+    "sourceChecksAccepted": true,
+    "independentSourceReviewRef": {
+      "path": "docs/reviews/R139_BOOT_IDENTITY_RECOVERY_REVIEW_2026-10-25.md",
+      "sha256": "55a84ad99d6c1aae05fa117ae4f841f0e2bcc10ad9145b6a3cb9b1ad3294fff8"
+    },
+    "workerFocusedPython": {
+      "used": 1,
+      "cap": 1,
+      "outcome": "PASS",
+      "receiptRef": {
+        "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_source_checks/worker_python_01_result.json",
+        "sha256": "c2d583c703996d8bc3158709aa27994dc622964cc91e02601b14b37545bb8bab"
+      }
+    },
+    "rootFocusedPython": {
+      "used": 1,
+      "cap": 1,
+      "outcome": "PASS",
+      "receiptRef": {
+        "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_source_checks/root_python_01_result.json",
+        "sha256": "1701484d7f51fa9e6dc071c8930ccacccb3e9b5fedf7b43823dd1ab2af29815a"
+      }
+    }
+  },
+  "historicalBootV2Acceptance": {
+    "sourceCommit": "72371595cf1e650a5df074fb5b84cf5472576cec",
+    "sourceUse": {
+      "workerFocusedPython": 1,
+      "rootFocusedPython": 1,
+      "goCompile": 0,
+      "goTests": 0
+    },
+    "checkAccounting": {
+      "oldSpent": 8,
+      "newSpent": 2,
+      "totalSpent": 10,
+      "cap": 10,
+      "remaining": 0,
+      "oldFailedAttemptRetained": true
+    },
+    "checkOutcomes": {
+      "workerFocusedPython": "PASS_45_ORIGINAL_EXIT0",
+      "rootFocusedPython": "PASS_45_ORIGINAL_EXIT0",
+      "go": "NO_NEW_BUILD_OR_TEST_INHERITED_UNCHANGED_BINARY_AND_BACKEND_TREE"
+    },
+    "acceptedBuildRef": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-V2-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "sha256": "f818a976fc347340d659c13be27ff5dcd66ebe44e6a694224b0f26cba72fc5bb"
+    }
+  },
+  "bootIdentityV3Verification": {
+    "ownerAdmissionRef": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+      "sha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f"
+    },
+    "contractRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_contract_20261026.json",
+      "sha256": "e3fe4ef6caeb8b197e5f358267d89a6584fb6cf10087bebb5bfca53efdc7d5da"
+    },
+    "predecessorContractRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_contract_20261025.json",
+      "sha256": "4c90053543f1d21532fdb5c6c7487e04c7a4ee5b3369c6f24034cde285eb9e7c"
+    },
+    "predecessorProofRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_proof_20261025.json",
+      "sha256": "10937592aaa94c4d00a89eb194fa223b9bec372b921be8a247967da235fa44e9"
+    },
+    "sourceChecksAccepted": true,
+    "sourceCommit": "b330f70b7e760ffee1113d57abc7133c725c57cd",
+    "designSha256": "acfec28024a249ac9ee20f49d37a3f53597d9fc1338164060fb2a9c3625b9ef4",
+    "testSha256": "3c6aafa1573880be5d3e23eed26ad5edee1a208adda23511509daa7df81262ac",
+    "independentSourceReviewRef": {
+      "path": "docs/reviews/R139_CLOCK_V3_SOURCE_REVIEW_2026-10-26.md",
+      "sha256": "2625651f67d62d50ae9f692e869392056dd0683ba1a5b000f5701c63069ee7df"
+    },
+    "workerFocusedPython": {
+      "used": 1,
+      "acceptedAttempt": 1,
+      "outcome": "PASS",
+      "attemptReceipts": [
+        {
+          "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/worker_python_01_result.json",
+          "sha256": "e422df0f5fe8bb7456fe9af79a423912221df165d1159f940bd6fb436a8fe07a"
+        }
+      ],
+      "receiptRef": {
+        "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/worker_python_01_result.json",
+        "sha256": "e422df0f5fe8bb7456fe9af79a423912221df165d1159f940bd6fb436a8fe07a"
+      }
+    },
+    "rootFocusedPython": {
+      "used": 1,
+      "acceptedAttempt": 1,
+      "outcome": "PASS",
+      "attemptReceipts": [
+        {
+          "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/root_python_01_result.json",
+          "sha256": "b3192ad92fd19ec873f447963a71dcdab36263658485d13110ab211a72405971"
+        }
+      ],
+      "receiptRef": {
+        "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/root_python_01_result.json",
+        "sha256": "b3192ad92fd19ec873f447963a71dcdab36263658485d13110ab211a72405971"
+      }
+    }
+  },
+  "pinnedResumeVerification": {
+    "ownerAdmissionRef": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+      "sha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f"
+    },
+    "independentSourceReviewRef": {
+      "path": "docs/reviews/R139_PINNED_RESUME_CONSOLIDATED_SOURCE_REVIEW_2026-10-26.md",
+      "sha256": "7d154375606bfdd7797cd5da8db8045eaafe9421ed662c2b8f4a1b7d408f433c"
+    },
+    "sourceChecksAccepted": true,
+    "workerAttemptRefs": [
+      {
+        "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_resume_source_checks/worker_attempt1.json",
+        "sha256": "134db2c61eea8c5506a929f3bb316e81f7d69f80101ed2cb0765d58ae2d4735f"
+      },
+      {
+        "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_resume_source_checks/worker_attempt2.json",
+        "sha256": "6dc35899b7dce24772fec507c05cfd970edfb422e4068e200f3caa9eb41ee41f"
+      }
+    ],
+    "acceptedWorkerAttempt": 2,
+    "rootCombinedRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_resume_source_checks/root_combined.json",
+      "sha256": "641d6b6466e579a41efe3550bc337f10e9ca2b823f2d66ebcf727648738d8321"
+    },
+    "rootPhysicalInvocationSharedWithClockReview": true,
+    "interruptionRecoveryRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_resume_interruption_recovery_20261026.json",
+      "sha256": "3de8125840ce6e8aa5fc43a0791680a3b9c489d0084db0bc1d0d109f458b203b"
+    },
+    "completedReuseRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_resume_completed_reuse_20261026.json",
+      "sha256": "769f0f7af7e1cebef8ab0f7c92fa3f1146d0bfbabd55cd87187ee61f15ac8a83"
+    },
+    "pinnedPreflightRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_preflight_validation_20261026.json",
+      "sha256": "e149839e79bddb5763ca846f4e109dc94ef5fec905c6390426695333c8d7cdc0"
+    },
+    "liveG0G3WiringClaim": false
+  },
+  "pinnedCoreExecution": {
+    "coreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
+    "profileId": "cvf.downstreamGateProfile@1.1.0",
+    "lockRef": {
+      "path": ".cvf/gate-profile.lock.json",
+      "sha256": "5a58fe82ea57fbd89af2ed42d8a31d6c279aab2b7eb1349d01c0d65cbc2357c2"
+    },
+    "remoteFreshnessChecked": false,
+    "cachedPublicOriginMainAtReview": "b8ead4f0d1bf9224338a206b2abcd893ec1801b1",
+    "autoUpgrade": false
+  },
+  "bindingQualification": "Legacy unchanged source pins retain their approved exact worktree bytes; Git text is LF-normalized where historically configured. Initial Root metadata assertion requiring all legacy HEAD blobs to equal raw CRLF worktree bytes failed before writing any artifact; normalized text and exact approved raw hashes then independently matched. New v3/helper/test source was committed with exact raw-byte custody."
+}

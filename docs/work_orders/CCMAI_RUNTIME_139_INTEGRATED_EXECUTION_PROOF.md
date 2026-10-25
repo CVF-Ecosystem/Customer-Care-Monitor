@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: COMPLETE_PENDING_REVIEW
+Status: REVIEWER_ACCEPTED
 Risk: R2
 Worker: Internal Sol G0 service/runtime actor; internal Luna producer/independent observer for browser only
 Reviewer: Root independent source/evidence REVIEWER
@@ -738,3 +738,6 @@ Acceptance: P01 verify public e9ddcbcd/profile1.1 identity/workspace/trusted sta
 
 
 Offline repair return2026-10-26: P01/C01/R01/R02 source evidence accepted bounded by Root and independentLuna; worker46/pin16/Rootcombined62PASS with all failures/cumulativecounts retained. Root actual offline coordinator interruption/reuse verified, not liveG0–G3 quota handling. Four newfocusedinvocations plushistorical10, no budget reset. Finalpinnedprecommit/materialcommit/buildbinding precede runtime technical release.
+
+
+Accepted offline material: source `b330f70b7e760ffee1113d57abc7133c725c57cd`, accepted-build3366eb41, source-onlyREVIEW_PASS/FREEZE_OPEN. Resume from existing exact-hash checkpoints; Roottechnicalv3packet/actualG0/effectadmission remain next. No integratedproductclosure.

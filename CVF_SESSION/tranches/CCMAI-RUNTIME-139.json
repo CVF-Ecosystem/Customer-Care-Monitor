@@ -83,11 +83,11 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "REVIEW_PENDING",
+  "status": "REVIEW_PASS",
   "phase": "REVIEW",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
-  "buildCommit": "72371595cf1e650a5df074fb5b84cf5472576cec",
+  "workOrderStatus": "REVIEWER_ACCEPTED",
+  "buildCommit": "b330f70b7e760ffee1113d57abc7133c725c57cd",
   "reviewEvidence": [
     "docs/reviews/R139_INTERNAL_CUA_CONSOLIDATED_SOURCE_REVIEW_2026-10-24.md",
     "docs/reviews/R139_CUA_G0_TECHNICAL_RELEASE_REVIEW_2026-10-25.md",
@@ -99,7 +99,7 @@
     "docs/reviews/R139_CLOCK_V3_SOURCE_REVIEW_2026-10-26.md",
     "docs/reviews/R139_PINNED_RESUME_CONSOLIDATED_SOURCE_REVIEW_2026-10-26.md"
   ],
-  "disposition": "COMPLETE_PENDING_REVIEW",
+  "disposition": "REVIEW_PASS",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -156,7 +156,8 @@
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
   ],
   "actualUse": {
     "status": "HOLD_MANUAL_HOLD_PROVIDER_OUTCOME_UNKNOWN",
@@ -1141,7 +1142,7 @@
   },
   "dispositionQualification": "CCMAI-RUNTIME-139 boot-identity v2 source components REVIEW_PASS committed 72371595, exact accepted-build pins f818a976. All10source checks spent, original failures/UNKNOWNs retained, Go binary/backend unchanged. Root prepares ONE complete G0 technical recipe with v2 boot proof, fresh actual Root/internal/Luna source/build/nonce ACKs, private raw metadata custody, final independent technical review and clean normal commit before the single newly authorized original v2 preclock invocation. Same unspentcampaign1/1200s/5services/64CUA/API1<=USD1; no fixture/key/provider before actual G0 manual review plus separate Root Runtime Effect Admission. Campaign0/services0/browser0/key0/provider0, no further source checks or repair, no retry/reset/Antigravity/helpertranche/Owner relay; ProductB blocked and Facebook/Zalo OA parked.",
   "x-r139ClockProfileRecovery20261026": {
-    "status": "PROPOSED_NOT_ADMITTED",
+    "status": "SUPERSEDED_BY_OWNER_STABLE_PIN_AND_RESUME_REPAIR",
     "proposal": "docs/reviews/R139_CLOCK_AND_PROFILE_CONSOLIDATED_RECOVERY_PROPOSAL_2026-10-26.md",
     "coreHead": "b8ead4f0d1bf9224338a206b2abcd893ec1801b1",
     "coreCleanMatchesOriginMain": true,
@@ -1155,7 +1156,7 @@
     "campaignEffects": 0
   },
   "x-r139PinnedResumeRepair20261026": {
-    "status": "SOURCE_REVIEW_PASS_PENDING_MATERIAL_COMMIT",
+    "status": "SOURCE_REVIEW_PASS",
     "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
     "historicalSourceChecksSpent": 10,
     "newFocusedInvocations": 4,
@@ -1177,6 +1178,16 @@
     "activeLedgerPath": ".cvf/runtime/r139_pinned_resume_repair_20261026/session_ledger_generation2.json",
     "bindingConfigPath": ".cvf/runtime/r139_pinned_resume_repair_20261026/ledger_binding_generation2.json",
     "resumeCommand": "C:/Users/tiennm/AppData/Local/Programs/Python/Python313/python.exe -B .cvf/runtime/r139_pinned_resume_repair_20261026/run_offline_batch.py root_combined --generation2",
-    "liveG0G3ResumeProved": false
-  }
+    "liveG0G3ResumeProved": false,
+    "sourceCommit": "b330f70b7e760ffee1113d57abc7133c725c57cd",
+    "acceptedBuildRef": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-V3-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "sha256": "3366eb41379c68419b235e5295817dafa74215a94dd5bcc8b4e323a6dfc215c2"
+    },
+    "pinnedPreflight": "LEGACY7_PROFILE6_PASS_APPL_NOT_APPLICABLE",
+    "sourceVerificationComplete": true,
+    "additionalSourceChecksNeeded": 0
+  },
+  "x-executionCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
+  "sourceOnlyAcceptance": "Accepted offline stable-pin/query-local-clock/durable-resume repair; integrated operational criteria OPEN, FREEZE OPEN; not product/tranche outcome closure."
 }
