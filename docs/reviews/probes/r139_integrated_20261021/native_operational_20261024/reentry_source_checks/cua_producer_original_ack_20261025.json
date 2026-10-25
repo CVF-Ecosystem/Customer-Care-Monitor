@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "r139.cuaProducerOriginalAck@1.0.0",
+  "kind": "R139_CUA_PRODUCER_ORIGINAL_ACK",
+  "taskId": "/root/r139_cua_browser_producer",
+  "status": "METADATA_READY_ONLY_NOT_G0_PASS",
+  "ready": true,
+  "readinessScope": "Future bounded G0 producer availability after Root final committed release, reservation, and signal",
+  "freshGrantSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
+  "inheritedOwnerEnvelopeSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "observationCapsSha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491",
+  "sourceCommit": "38db7e90d2344fcc2f5a6c14cf6406f192d7a1d9",
+  "acceptedBuildPinsSha256": "bd21d9e97cca7a32f350912ec23c0d53b39ed0b61ced90a435aad7e6b8e9e32b",
+  "payloadSha256": "ffbf475dee7a28a785c2ce543ad50cda55819c72debdf8c24e0a05104d599f19",
+  "payloadByteSource": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_payload_templates.json",
+  "nativeContractId": "r139-cua-page-target-v1-20261025",
+  "campaignNonce": "8cec56e99d18817f6c4e8967c188ddd1",
+  "currentEffects": 0,
+  "effectDetails": {
+    "campaignReserved": false,
+    "serviceQueries": 0,
+    "browserCalls": 0,
+    "fixtureStarts": 0,
+    "keyContentReads": 0,
+    "providerCalls": 0,
+    "sourceChecksByThisAck": 0
+  },
+  "capabilityProven": false,
+  "finding": {
+    "type": "PRIOR_TEXTUAL_PAYLOAD_SHA256_ERROR",
+    "priorTextualPayloadSha256": "ffbf475dee7a28a785c2e6d4d4dd88c0c093a8dc02",
+    "resolution": "payloadSha256 is the SHA-256 of the original reentry_payload_templates.json bytes, computed with hashlib",
+    "passClaim": false
+  }
+}

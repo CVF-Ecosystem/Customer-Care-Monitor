@@ -2,7 +2,7 @@
   "schemaVersion": "r139.cuaBrowserOperationPlan@1.1.0",
   "planId": "r139-cua-page-target-plan-2026-10-24",
   "date": "2026-10-24",
-  "status": "DRAFT_OWNER_READONLY_CAPS_APPROVED_PENDING_SOURCE_AND_TARGET_DOCS",
+  "status": "PREPARED_NOT_RELEASED_SOURCE_ACCEPTED_PENDING_ROOT_TECHNICAL_SEAL",
   "workOrder": "CCMAI-RUNTIME-139",
   "proofContract": "cua_page_target_v1",
   "purpose": "One same-order conditional campaign; planned operations only, not runtime evidence",
@@ -16,24 +16,29 @@
     "fixtureStarted": false,
     "serviceQueriesStarted": 0,
     "providerCallsStarted": 0,
-    "pathDisposition": "Root-authorized uniquely named plan within inherited evidenceFamily reentry_source_checks/** and active source work order; does not widen source or immutable seed paths"
+    "pathDisposition": "Root-authorized uniquely named plan within inherited evidenceFamily reentry_source_checks/** and active source work order; does not widen source or immutable seed paths",
+    "sourceBuildAndRuntimeEffectAdmission": "Source/build accepted; independently reviewed committed G0 technical release plus original reservation before effects; distinct Runtime Effect Admission still required before fixture/key/provider"
   },
   "actors": {
     "g0Producer": {
-      "canonicalTaskId": "/root/r139_luna_browser_readiness",
-      "status": "metadata only, future ACK required"
+      "canonicalTaskId": "/root/r139_cua_browser_producer",
+      "status": "actual renewed original metadata ACK accepted by Root, zero effects"
     },
     "g0IndependentObserver": {
-      "canonicalTaskId": null,
-      "status": "must bind actual distinct collaboration task before clock"
+      "canonicalTaskId": "/root/r139_cua_browser_observer",
+      "status": "actual distinct renewed original metadata ACK accepted by Root, zero effects"
     },
     "g2ProductUiExecutor": {
-      "canonicalTaskId": "/root/r139_luna_browser_readiness",
+      "canonicalTaskId": "/root/r139_cua_browser_producer",
       "role": "internal browser worker, conditional separate Runtime Effect Admission"
     },
     "terminalCoordinator": {
-      "canonicalTaskId": null,
+      "canonicalTaskId": "/root/r139_cua_browser_observer",
       "role": "bound observer in same four stages; Root coordinates, Owner closes exact tab via operator_fallback"
+    },
+    "internalServiceRuntimeActor": {
+      "canonicalTaskId": "/root/r139_cua_recipe_worker",
+      "role": "five exact queries after actual Root signal; runtime only after separate admission"
     }
   },
   "documentaryBrowserSelection": {
@@ -45,7 +50,8 @@
     "additionalDocumentationSelectionsAllowed": 0,
     "runtimeBrowserId": null,
     "runtimeTabId": null,
-    "runtimeProviderTabId": null
+    "runtimeProviderTabId": null,
+    "insideReservedG0InitialSelectionAllowed": 1
   },
   "identityAndProvenance": {
     "originalIds": "Preserve actual browserId/tabId/providerTabId return values; canonical string conversion only explicitly documented with raw original unchanged. BrowserKind iab is descriptive, never a native session.",
@@ -81,48 +87,48 @@
     }
   },
   "g0": {
-    "urlCreated": "https://example.com/#r139_nonce={{NONCE}}&phase=created",
-    "urlControlled": "https://example.com/#r139_nonce={{NONCE}}&phase=controlled",
+    "urlCreated": "https://example.com/#r139_nonce=8cec56e99d18817f6c4e8967c188ddd1&phase=created",
+    "urlControlled": "https://example.com/#r139_nonce=8cec56e99d18817f6c4e8967c188ddd1&phase=controlled",
     "producerCalls": [
       {
         "slot": 1,
+        "method": "cua.getBrowser({url:'https://example.com'})",
+        "purpose": "Fresh CUA session initial documentation/selector entrypoint inside reserved G0; no tab opened. Count one of eight producer methods. Require actual selected IAB browser, not an inferred native identity."
+      },
+      {
+        "slot": 2,
         "method": "cua.listTabs({browser:<actualBrowserId>})",
         "purpose": "sole baseline metadata inventory"
       },
       {
-        "slot": 2,
+        "slot": 3,
         "method": "cua.createBrowserTab(<actualBrowserId>, <exactCreatedUrl>, {visible:true})",
         "purpose": "sole new owned tab; retain original ID and initial returned state, count automatic state toward4 reads"
       },
       {
-        "slot": 3,
+        "slot": 4,
         "method": "tab.getScreenshot()",
         "purpose": "first original capture, no claim fragment nonce is visible in body"
       },
       {
-        "slot": 4,
+        "slot": 5,
         "method": "tab.goto(<exactControlledUrl>)",
         "purpose": "single same-tab navigation; void completion is not observed URL"
       },
       {
-        "slot": 5,
+        "slot": 6,
         "method": "tab.getAXState()",
         "purpose": "one own-tab content observation if required; count state and no unrelated content"
       },
       {
-        "slot": 6,
+        "slot": 7,
         "method": "tab.getScreenshot()",
         "purpose": "second original capture; identical pixels are possible for fragment-only navigation"
       },
       {
-        "slot": 7,
-        "method": null,
-        "purpose": "unused; no substitute or retry"
-      },
-      {
         "slot": 8,
         "method": null,
-        "purpose": "unused"
+        "purpose": "Unused; no substitute/retry. Only one explicit extra own-state observation if necessary and aggregate read<=4, otherwise HOLD."
       }
     ],
     "observerCalls": [
@@ -152,7 +158,7 @@
   },
   "g2": {
     "status": "HOLD until observation-cap grant, source/build/recipe acceptance, actual G0 and separately committed Runtime Effect Admission",
-    "executor": "internal Luna worker",
+    "executor": "/root/r139_cua_browser_producer",
     "maxMethods": 48,
     "maxCaptures": 4,
     "steps": [
@@ -204,5 +210,12 @@
     "keyContentReads": 0,
     "providerCalls": 0
   },
-  "rootRepairDisposition": "Original Luna draft data: click route/intermediate unapproved inventory/Root G2 executor withdrawn before any effect. This Root plan repair is part of the one consolidated F01-F07 response, not a new tranche."
+  "rootRepairDisposition": "Original Luna draft data: click route/intermediate unapproved inventory/Root G2 executor withdrawn before any effect. This Root plan repair is part of the one consolidated F01-F07 response, not a new tranche.",
+  "sourceCommit": "38db7e90d2344fcc2f5a6c14cf6406f192d7a1d9",
+  "acceptedBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "bd21d9e97cca7a32f350912ec23c0d53b39ed0b61ced90a435aad7e6b8e9e32b"
+  },
+  "nativeContractId": "r139-cua-page-target-v1-20261025",
+  "campaignNonce": "8cec56e99d18817f6c4e8967c188ddd1"
 }

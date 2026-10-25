@@ -1,0 +1,16 @@
+{
+  "kind": "ROOT_CURRENT_SCRUBBED_CONTROLLER_BOOT_PROOF",
+  "hostBootId": "|2026-10-23T05:48:27.5010520Z",
+  "pythonPath": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+  "rootVerifiedReadOnlyOSMetadata": true,
+  "environmentBasis": "Exact accepted controller whitelist, COMPUTERNAME absent; empty hostname component is not standalone cryptographic host attestation. Parent identity/current checkout/pinned tools and actual original process custody complement this fact.",
+  "observedAtUTC": "2026-10-25T04:30:11.198373+00:00",
+  "originalPid": 14808,
+  "originalWaitCompleted": true,
+  "exitCode": 0,
+  "elapsedMonotonicSeconds": 1.3912069000070915,
+  "rawStdoutPath": ".cvf/runtime/r139_cua_reentry_20261025_readiness/boot.stdout.bin",
+  "stdoutSha256": "afa7e2955a6d74de46cb4194bdfc1b7e757e07e80c6d6841c88484b694efde8d",
+  "rawStderrPath": ".cvf/runtime/r139_cua_reentry_20261025_readiness/boot.stderr.bin",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

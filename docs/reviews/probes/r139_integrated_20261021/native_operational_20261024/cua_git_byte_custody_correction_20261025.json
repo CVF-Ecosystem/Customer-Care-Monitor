@@ -1,0 +1,45 @@
+{
+  "kind": "ROOT_GIT_EXACT_BYTE_METADATA_STORAGE_CORRECTION",
+  "status": "INDEPENDENTLY_REVIEWED_PENDING_NORMAL_COMMIT",
+  "method": "Explicit raw-byte blob staging only for existing JSON authority paths; no Git configuration/attribute/hook/policy change. Normal commit retains configured hooks/identity.",
+  "records": [
+    {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-CUA-SOURCE-ADMISSION.json",
+      "priorCommittedSha256": "6a952adb494854da29d5b182cad3ae82511fb573ace82dc79a0b2559fa75ebf9",
+      "approvedWorkingSha256Unchanged": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
+      "newIndexSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
+      "parsedAuthorizationFieldsEqual": true,
+      "workingBytesUnchanged": true,
+      "indexExactByteEqual": true,
+      "unstagedDirty": false
+    },
+    {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
+      "priorCommittedSha256": "a33adf4e374175641821d3b76572f044c88afdc0f63279eb7566ce65bc4aa9dd",
+      "approvedWorkingSha256Unchanged": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491",
+      "newIndexSha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491",
+      "parsedAuthorizationFieldsEqual": true,
+      "workingBytesUnchanged": true,
+      "indexExactByteEqual": true,
+      "unstagedDirty": false
+    },
+    {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "priorCommittedSha256": "2f73ee83d61d0eb415dfe71574a12f123c3b0419b0ed53a0da0180a2052874dd",
+      "approvedWorkingSha256Unchanged": "bd21d9e97cca7a32f350912ec23c0d53b39ed0b61ced90a435aad7e6b8e9e32b",
+      "newIndexSha256": "bd21d9e97cca7a32f350912ec23c0d53b39ed0b61ced90a435aad7e6b8e9e32b",
+      "parsedAuthorizationFieldsEqual": true,
+      "workingBytesUnchanged": true,
+      "indexExactByteEqual": true,
+      "unstagedDirty": false
+    }
+  ],
+  "sourceFilesChanged": false,
+  "binaryChanged": false,
+  "authorizationFieldsChanged": false,
+  "softwareChecksAdded": 0,
+  "campaignReserved": false,
+  "effectRelease": "NONE",
+  "historyPreserved": true,
+  "independentReview": "docs/reviews/R139_CUA_BYTE_CUSTODY_INDEPENDENT_REVIEW_2026-10-25.md"
+}

@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Current R139 CUA source REVIEW: correctedPython44/compile/pureGo13 PASS with retainedWorkerFAIL;8of8checks consumed, no campaign/API/G0 proof, materialcommit/pins next."
+      "description": "Current R139 CUA G0 technical BUILD/preclock preparation; source38db/bd21 accepted with retainedWorkerFAIL/all8checksused, actors metadata-ready, no campaign or product release."
     },
     {
       "id": "r060-work-order",
@@ -36760,6 +36760,146 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-ACCEPTED-BUILD-PINS-ADMISSION.json",
       "status": "ACTIVE",
       "description": "Root accepted CUA source38db7e90/binaryd186, correctedPython44+compile+pureGo13PASS with retainedWorkerFAIL and8of8checks consumed; no runtime/browser/AI governance proof."
+    },
+    {
+      "id": "r139-cua-preclock-4b642c03fd62",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-G0-TECHNICAL-RELEASE-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order CUA G0 technical preclock metadata: source/binary accepted, actual actor/boot/fresh paths bound; no reservation/browser/service/key/provider effect or product proof."
+    },
+    {
+      "id": "r139-cua-preclock-1710e11a08ad",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_activation_recipe_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order CUA G0 technical preclock metadata: source/binary accepted, actual actor/boot/fresh paths bound; no reservation/browser/service/key/provider effect or product proof."
+    },
+    {
+      "id": "r139-cua-preclock-9d7d55030d9c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_boot_id_stability_observation_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order CUA G0 technical preclock metadata: source/binary accepted, actual actor/boot/fresh paths bound; no reservation/browser/service/key/provider effect or product proof."
+    },
+    {
+      "id": "r139-cua-preclock-2cecf63ebacc",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_cua_observer_actor_ack_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order CUA G0 technical preclock metadata: source/binary accepted, actual actor/boot/fresh paths bound; no reservation/browser/service/key/provider effect or product proof."
+    },
+    {
+      "id": "r139-cua-preclock-5374fa1c8c67",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_cua_producer_actor_ack_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order CUA G0 technical preclock metadata: source/binary accepted, actual actor/boot/fresh paths bound; no reservation/browser/service/key/provider effect or product proof."
+    },
+    {
+      "id": "r139-cua-preclock-96ff4d67f0cf",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_internal_actor_ack_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order CUA G0 technical preclock metadata: source/binary accepted, actual actor/boot/fresh paths bound; no reservation/browser/service/key/provider effect or product proof."
+    },
+    {
+      "id": "r139-cua-preclock-907b832bb86b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_noninterference_disposition_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order CUA G0 technical preclock metadata: source/binary accepted, actual actor/boot/fresh paths bound; no reservation/browser/service/key/provider effect or product proof."
+    },
+    {
+      "id": "r139-cua-preclock-1b16d31720fb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_owner_close_availability_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order CUA G0 technical preclock metadata: source/binary accepted, actual actor/boot/fresh paths bound; no reservation/browser/service/key/provider effect or product proof."
+    },
+    {
+      "id": "r139-cua-preclock-d9a1dbada6fb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_boot_proof_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order CUA G0 technical preclock metadata: source/binary accepted, actual actor/boot/fresh paths bound; no reservation/browser/service/key/provider effect or product proof."
+    },
+    {
+      "id": "r139-cua-preclock-fbc7b68e3236",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_facts_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order CUA G0 technical preclock metadata: source/binary accepted, actual actor/boot/fresh paths bound; no reservation/browser/service/key/provider effect or product proof."
+    },
+    {
+      "id": "r139-cua-preclock-7f4b719e117e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_handoff_packet_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order CUA G0 technical preclock metadata: source/binary accepted, actual actor/boot/fresh paths bound; no reservation/browser/service/key/provider effect or product proof."
+    },
+    {
+      "id": "r139-cua-preclock-b8443eb0dd0f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_root_actor_ack_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order CUA G0 technical preclock metadata: source/binary accepted, actual actor/boot/fresh paths bound; no reservation/browser/service/key/provider effect or product proof."
+    },
+    {
+      "id": "r139-cua-preclock-b8025015594e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_runtime_admission_draft_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order CUA G0 technical preclock metadata: source/binary accepted, actual actor/boot/fresh paths bound; no reservation/browser/service/key/provider effect or product proof."
+    },
+    {
+      "id": "r139-cua-preclock-e677b32d9d96",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/cua_internal_runtime_actor_ack_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order CUA G0 technical preclock metadata: source/binary accepted, actual actor/boot/fresh paths bound; no reservation/browser/service/key/provider effect or product proof."
+    },
+    {
+      "id": "r139-cua-preclock-5793fef42519",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CUA_G0_TECHNICAL_RELEASE_REVIEW_2026-10-25.md",
+      "status": "ACTIVE",
+      "description": "R139 same-order CUA G0 technical preclock metadata: source/binary accepted, actual actor/boot/fresh paths bound; no reservation/browser/service/key/provider effect or product proof."
+    },
+    {
+      "id": "r139-cua-preclock-516cbee52dd65d85",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_git_byte_custody_correction_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 bounded CUA preclock metadata or independent review; not an effect release, runtime proof or product acceptance."
+    },
+    {
+      "id": "r139-cua-preclock-98a6f1dff58c3d81",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/cua_internal_runtime_actor_ack_r139_recipe_worker_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 bounded CUA preclock metadata or independent review; not an effect release, runtime proof or product acceptance."
+    },
+    {
+      "id": "r139-cua-preclock-35119048f593574c",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CUA_BYTE_CUSTODY_INDEPENDENT_REVIEW_2026-10-25.md",
+      "status": "ACTIVE",
+      "description": "R139 bounded CUA preclock metadata or independent review; not an effect release, runtime proof or product acceptance."
+    },
+    {
+      "id": "r139-cua-preclock-045fb19bdce3c27e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/cua_producer_original_ack_20261025.json",
+      "status": "ACTIVE",
+      "description": "Renewed actual browser actor metadata acknowledgment; zero effects and capability unproven."
+    },
+    {
+      "id": "r139-cua-preclock-719119a46b635552",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/cua_observer_original_ack_20261025.json",
+      "status": "ACTIVE",
+      "description": "Renewed actual browser actor metadata acknowledgment; zero effects and capability unproven."
     }
   ]
 }

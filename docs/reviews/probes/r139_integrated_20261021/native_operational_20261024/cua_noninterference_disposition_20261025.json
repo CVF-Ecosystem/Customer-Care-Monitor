@@ -1,0 +1,14 @@
+{
+  "kind": "R139_CUA_OLD_RESOURCE_NONINTERFERENCE_DISPOSITION",
+  "status": "DISPOSITION_ONLY_FRESH_BASELINES_PENDING_ACTUAL_G0_AND_SUPERVISOR",
+  "campaignNonce": "8cec56e99d18817f6c4e8967c188ddd1",
+  "excludedOldNativePageId": "95B03BC1A084B240BC6C88D67BD0D511",
+  "excludedOldNonce": "a64a7a07c35e9fe30e4cb8574a32b831",
+  "oldOwnerCloseReportRetained": true,
+  "oldPhysicalTimeAndNativeFinalInventory": "UNKNOWN_RETAINED_NO_REPROBE",
+  "newBrowserBaseline": "one actual IAB metadata inventory before new tab inside G0; no current baseline asserted",
+  "newDockerBaseline": "actual source supervisor after actualG0 and separately committed Runtime Effect Admission before fixture mutation",
+  "tabPrivacy": "baseline/handoff/final metadata only, no unrelated DOM/capture/control",
+  "newResourcesExact": "ccmai-r139-r4-20261023 / ccma_r139_r4_20261023 / Vite3519, no collision deletion or alternate namespace",
+  "campaignReserved": false
+}

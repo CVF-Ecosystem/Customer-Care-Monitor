@@ -1,0 +1,33 @@
+{
+  "kind": "ROOT_R139_CUA_PRECLOCK_FACTS",
+  "observedAtUTC": "2026-10-25T04:30:11.200550+00:00",
+  "sourceCommit": "38db7e90d2344fcc2f5a6c14cf6406f192d7a1d9",
+  "acceptedBuildPinsSha256": "bd21d9e97cca7a32f350912ec23c0d53b39ed0b61ced90a435aad7e6b8e9e32b",
+  "nativeContractId": "r139-cua-page-target-v1-20261025",
+  "campaignNonce": "8cec56e99d18817f6c4e8967c188ddd1",
+  "paths": {
+    "readiness": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_cua_reentry_20261025_readiness",
+    "activationLogRoot": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_cua_reentry_20261025_activation_logs",
+    "recorderOutputRoot": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_cua_reentry_20261025_recorder",
+    "productRuntimeRoot": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_integrated_execution_r4_20261023",
+    "externalEvidenceRoot": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\.ccmai_local_evidence\\r139_execution_proof_20261023\\fixture_r4"
+  },
+  "pathsAllAbsentBeforeInitialization": true,
+  "metadataOnlyReadinessCreated": true,
+  "coordinationRoot": ".cvf/runtime/r139_cua_reentry_20261025_readiness/coordination",
+  "coordinationOwnerSha256": "b375895354fe0d3b31a0957c524b54d4a335ff8e554c380b57f00bbb10782fe5",
+  "dockerConfigDir": ".cvf/runtime/r139_cua_reentry_20261025_readiness/docker_config",
+  "dockerConfigSha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+  "externalKeyMetadataOnly": {
+    "exists": true,
+    "bytes": 114,
+    "contentReads": 0,
+    "hashReads": 0
+  },
+  "campaignReserved": false,
+  "serviceQueries": 0,
+  "browserCalls": 0,
+  "providerCalls": 0,
+  "oldSpentAndUnknownHistoryRetained": true,
+  "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION"
+}

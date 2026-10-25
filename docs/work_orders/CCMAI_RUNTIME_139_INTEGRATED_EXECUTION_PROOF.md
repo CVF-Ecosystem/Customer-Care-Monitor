@@ -1,14 +1,20 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: REVIEWER_ACCEPTED
+Status: ACTIVE
 Risk: R2
-Worker: Internal Sol Medium source/metadata IMPLEMENTATION_WORKER; Luna Max future browser only
+Worker: Internal Sol G0 service/runtime actor; internal Luna producer/independent observer for browser only
 Reviewer: Root independent source/evidence REVIEWER
 Commit mode: WORKER_MUST_NOT_COMMIT
 providerExecutionAuthority: NONE_CURRENT_HISTORICAL_CAMPAIGNS_SPENT_OR_EXPIRED
 runtimeExecutor: UNASSIGNED_UNTIL_SUPPORTED_ENVIRONMENT_AND_COMMITTED_ADMISSION
 runtimeReviewer: INDEPENDENT_REVIEWER_TO_BE_BOUND_IN_CURRENT_ADMISSION; historical reviews retained
 dispatchKind: INITIAL
+
+## Current internal CUA G0 technical preparation — 2026-10-25
+
+CCMAI-RUNTIME-139 CUA G0 technical BUILD/preclockONLY: acceptedsource38db7e90/buildbd21, all8checksconsumed withWorkerFAILretained. Root seals complete8canonicaltemplates/recipe/authority andindependentreview/cleancommit beforeONEoriginalheldcontroller reserves1200s,syncs/gates/commits/signals. ActualactorsRoot/internalSol/LunaProducer/LunaObserver metadataready for nonce8cec56e99d18817f6c4e8967c188ddd1. Internal5exactservicequeries first; Rootacceptreceipts then producer/observerG0oneownedIABtab/captures/realnonceURL andactualDOMlocator/confirmdocs orHOLD. Nofixture/key/provider beforeactualG0Rootmanualreview andseparateRuntimeEffectAdmission. Currentcampaign0/services0/browser0/key0/provider0/noclock; same64CUAmethods/4stages/3meta/16status/oneAPI<=USD1, original+1020cleanup/+1200expiry, Ownerexacttabfallbackavailable, no retry/newpage/stack/Hostkill. ProductB BLOCKED_PENDING_OPERATIONAL_ADMISSION,FBZaloOAparked,Antigravitywithdrawn,sameONE M3-05/M3-08 order, no newOwnerrelay.
+
+Authority `CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-G0-TECHNICAL-RELEASE-ADMISSION.json`, independent review `docs/reviews/R139_CUA_G0_TECHNICAL_RELEASE_REVIEW_2026-10-25.md`. Source REVIEW_PASS is inherited for the bounded proof only; DESIGN/SPEC/one existing WORK_ORDER and Owner caps remain accepted. REVIEW_PASS -> PARKED(source settled) -> BUILD(G0 proof preparation) is recorded; no new tranche. Actual effects begin only through Root original committed clock transaction.
 
 ## Active internal CUA source dispatch — 2026-10-24
 
@@ -18,7 +24,7 @@ The consolidated transition proposal and unchanged original budgets remain bindi
 
 ## Current internal browser transition — 2026-10-24
 
-CCMAI-RUNTIME-139 CUA source REVIEW_PASS only: material38db7e90 and successoracceptedbuildpin bind correctedPython44/compile/13pureGoPASS, retainedWorkerFAIL,all8of8checksconsumed,no rerun. Root now prepares SAMEorder G0technicalrelease with actualLuna producer/observer/internalruntime/Rootheldclock actors, currentboot/freshpaths/64methodledger/threeOwnergrantpins; Source/binary accepted doesNOTprovebrowserownership/DOMlocator/ConfirmDialog. Before fixture/key/provider actualG0two-agent exacttab/nonce/currentURL/captures/originalreturns mustPASS orHOLD. Onefresh1200s campaign/5readonlyservicequeries/onepage/64CUAmethods/oneactualproductAPI<=USD1 remainsconditional,notreserved. Currentcampaign0/services0/browser0/key0/provider0/noclock,Antigravitywithdrawn,ProductB BLOCKED_PENDING_OPERATIONAL_ADMISSION,FBZaloOAparked,no helpertranche/newcap/reapproval.
+CCMAI-RUNTIME-139 CUA G0 technical BUILD/preclockONLY: acceptedsource38db7e90/buildbd21, all8checksconsumed withWorkerFAILretained. Root seals complete8canonicaltemplates/recipe/authority andindependentreview/cleancommit beforeONEoriginalheldcontroller reserves1200s,syncs/gates/commits/signals. ActualactorsRoot/internalSol/LunaProducer/LunaObserver metadataready for nonce8cec56e99d18817f6c4e8967c188ddd1. Internal5exactservicequeries first; Rootacceptreceipts then producer/observerG0oneownedIABtab/captures/realnonceURL andactualDOMlocator/confirmdocs orHOLD. Nofixture/key/provider beforeactualG0Rootmanualreview andseparateRuntimeEffectAdmission. Currentcampaign0/services0/browser0/key0/provider0/noclock; same64CUAmethods/4stages/3meta/16status/oneAPI<=USD1, original+1020cleanup/+1200expiry, Ownerexacttabfallbackavailable, no retry/newpage/stack/Hostkill. ProductB BLOCKED_PENDING_OPERATIONAL_ADMISSION,FBZaloOAparked,Antigravitywithdrawn,sameONE M3-05/M3-08 order, no newOwnerrelay.
 
 Consolidated proposal: `docs/reviews/R139_INTERNAL_BROWSER_TRANSITION_2026-10-24.md`. Owner worker substitution is already authorized. The superseded unexecuted technical draft below cannot release effects.
 
@@ -28,7 +34,7 @@ Technical authority: `CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-G0-TEC
 
 ## Current accepted source and preclock preparation — 2026-10-24
 
-CCMAI-RUNTIME-139 CUA source REVIEW_PASS only: material38db7e90 and successoracceptedbuildpin bind correctedPython44/compile/13pureGoPASS, retainedWorkerFAIL,all8of8checksconsumed,no rerun. Root now prepares SAMEorder G0technicalrelease with actualLuna producer/observer/internalruntime/Rootheldclock actors, currentboot/freshpaths/64methodledger/threeOwnergrantpins; Source/binary accepted doesNOTprovebrowserownership/DOMlocator/ConfirmDialog. Before fixture/key/provider actualG0two-agent exacttab/nonce/currentURL/captures/originalreturns mustPASS orHOLD. Onefresh1200s campaign/5readonlyservicequeries/onepage/64CUAmethods/oneactualproductAPI<=USD1 remainsconditional,notreserved. Currentcampaign0/services0/browser0/key0/provider0/noclock,Antigravitywithdrawn,ProductB BLOCKED_PENDING_OPERATIONAL_ADMISSION,FBZaloOAparked,no helpertranche/newcap/reapproval.
+CCMAI-RUNTIME-139 CUA G0 technical BUILD/preclockONLY: acceptedsource38db7e90/buildbd21, all8checksconsumed withWorkerFAILretained. Root seals complete8canonicaltemplates/recipe/authority andindependentreview/cleancommit beforeONEoriginalheldcontroller reserves1200s,syncs/gates/commits/signals. ActualactorsRoot/internalSol/LunaProducer/LunaObserver metadataready for nonce8cec56e99d18817f6c4e8967c188ddd1. Internal5exactservicequeries first; Rootacceptreceipts then producer/observerG0oneownedIABtab/captures/realnonceURL andactualDOMlocator/confirmdocs orHOLD. Nofixture/key/provider beforeactualG0Rootmanualreview andseparateRuntimeEffectAdmission. Currentcampaign0/services0/browser0/key0/provider0/noclock; same64CUAmethods/4stages/3meta/16status/oneAPI<=USD1, original+1020cleanup/+1200expiry, Ownerexacttabfallbackavailable, no retry/newpage/stack/Hostkill. ProductB BLOCKED_PENDING_OPERATIONAL_ADMISSION,FBZaloOAparked,Antigravitywithdrawn,sameONE M3-05/M3-08 order, no newOwnerrelay.
 
 Accepted build pins: `CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-ACCEPTED-BUILD-PINS-ADMISSION.json`. This section supersedes earlier current-stage source instructions below; historical bound sections and spent counters remain unchanged. No runtime admission or live deadline is issued here.
 

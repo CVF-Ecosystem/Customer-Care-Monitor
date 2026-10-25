@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "r139.cuaObserverOriginalAck@1.0.0",
+  "kind": "R139_CUA_G0_INDEPENDENT_OBSERVER_METADATA_ACK",
+  "canonicalTaskId": "/root/r139_cua_browser_observer",
+  "role": "G0_INDEPENDENT_OBSERVER_AND_TERMINAL_COORDINATOR",
+  "ready": true,
+  "availability": "READY_FOR_FUTURE_BOUNDED_G0_WINDOW_AFTER_ROOT_RELEASE_AND_RESERVATION",
+  "freshGrantSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
+  "inheritedOwnerEnvelopeSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "observationCapsSha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491",
+  "sourceCommit": "38db7e90d2344fcc2f5a6c14cf6406f192d7a1d9",
+  "acceptedBuildPinsSha256": "bd21d9e97cca7a32f350912ec23c0d53b39ed0b61ced90a435aad7e6b8e9e32b",
+  "payloadSha256": "ffbf475dee7a28a785c2ce543ad50cda55819c72debdf8c24e0a05104d599f19",
+  "nativeContractId": "r139-cua-page-target-v1-20261025",
+  "campaignNonce": "8cec56e99d18817f6c4e8967c188ddd1",
+  "currentEffects": 0,
+  "effectsByCategory": {
+    "campaignReserved": false,
+    "serviceQueries": 0,
+    "browserCalls": 0,
+    "fixtureStarts": 0,
+    "keyContentReads": 0,
+    "providerCalls": 0
+  },
+  "capability": false,
+  "capabilityStatus": "UNPROVEN",
+  "claimBoundary": "Metadata readiness only; actual browser ownership and G0 capability remain unproven."
+}

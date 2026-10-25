@@ -1,0 +1,14 @@
+{
+  "kind": "READONLY_CURRENT_BOOT_ID_STABILITY_OBSERVATION",
+  "priorObserved": "|2026-10-23T05:48:27.5010520Z",
+  "actualObserved": "|2026-10-23T05:48:27.5010520Z",
+  "equal": true,
+  "originalPid": 12636,
+  "originalWaitCompleted": true,
+  "exitCode": 0,
+  "elapsed": 1.0267547000257764,
+  "atUTC": "2026-10-25T04:32:18.449763+00:00",
+  "stdoutSha256": "afa7e2955a6d74de46cb4194bdfc1b7e757e07e80c6d6841c88484b694efde8d",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "purpose": "Investigate sub-millisecond difference from earlier retained host boot fact; local OS metadata only, no source checker/campaign/service/browser/key/provider call."
+}

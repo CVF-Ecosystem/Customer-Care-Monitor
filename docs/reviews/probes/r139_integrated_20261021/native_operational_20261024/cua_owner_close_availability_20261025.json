@@ -1,0 +1,13 @@
+{
+  "kind": "ROOT_REBOUND_STANDING_OWNER_EXACT_TAB_CLOSE_AVAILABILITY",
+  "operator": "Owner in this conversation",
+  "closeMode": "operator_fallback",
+  "originalAvailabilityRef": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_owner_operator_availability.json",
+  "basis": "Standing direct Owner readiness for exact owned page+campaign nonce close; latest continuation keeps scope. Root rebinds this unused CUA nonce, not a fresh human quote, and no physical closure/report is claimed.",
+  "campaignNonce": "8cec56e99d18817f6c4e8967c188ddd1",
+  "nativeContractId": "r139-cua-page-target-v1-20261025",
+  "ownerAvailable": true,
+  "actualTabId": null,
+  "actualCloseReportReceived": false,
+  "currentPhysicalCloseTime": "UNKNOWN"
+}

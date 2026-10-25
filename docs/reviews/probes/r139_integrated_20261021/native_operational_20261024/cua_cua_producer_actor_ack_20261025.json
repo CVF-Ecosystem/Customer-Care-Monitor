@@ -1,0 +1,27 @@
+{
+  "trancheId": "CCMAI-RUNTIME-139",
+  "ready": true,
+  "freshGrantSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
+  "inheritedOwnerEnvelopeSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "observationCapsSha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491",
+  "sourceCommit": "38db7e90d2344fcc2f5a6c14cf6406f192d7a1d9",
+  "acceptedBuildPinsSha256": "bd21d9e97cca7a32f350912ec23c0d53b39ed0b61ced90a435aad7e6b8e9e32b",
+  "payloadSha256": "ffbf475dee7a28a785c2ce543ad50cda55819c72debdf8c24e0a05104d599f19",
+  "nativeContractId": "r139-cua-page-target-v1-20261025",
+  "campaignNonce": "8cec56e99d18817f6c4e8967c188ddd1",
+  "rootReceivedMetadataAtUTC": "2026-10-25T04:43:49.329413+00:00",
+  "currentEffectRelease": "NONE_METADATA_ONLY",
+  "currentBrowserCapabilityPass": false,
+  "campaignReserved": false,
+  "effectsObserved": 0,
+  "kind": "ROOT_REVIEWED_ACTOR_METADATA_ACK",
+  "actor": "cua_producer",
+  "collaborationTaskId": "/root/r139_cua_browser_producer",
+  "bindingQualification": "Root compared clean original JSON with actual current pinned files; ready is renewed metadata availability only, not capability.",
+  "originalAckReference": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/cua_producer_original_ack_20261025.json",
+    "sha256": "3b87d0451eec11ae251df20e15a4c414f3b3530d7252c8e2b23bc02fe45ae11b"
+  },
+  "renewedCurrentSessionAcknowledgment": true,
+  "priorTextualHashErrorRetained": true
+}

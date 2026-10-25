@@ -1,0 +1,153 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ROOT_R139_CUA_G0_TECHNICAL_RELEASE_WITHIN_OWNER_ENVELOPE",
+  "status": "ROOT_APPROVED_G0_PRECLOCK_PENDING_NORMAL_CLEAN_COMMIT",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "date": "2026-10-25",
+  "riskCeiling": "R2",
+  "baseCommit": "e91a6bb068a179f0dec6d4d4dd88c0c093a8dc02",
+  "sourceCommit": "38db7e90d2344fcc2f5a6c14cf6406f192d7a1d9",
+  "ownerGrantRefs": [
+    {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-CUA-SOURCE-ADMISSION.json",
+      "sha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e"
+    },
+    {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-AND-CONDITIONAL-REENTRY-ADMISSION.json",
+      "sha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f"
+    },
+    {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
+      "sha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491"
+    }
+  ],
+  "acceptedBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "bd21d9e97cca7a32f350912ec23c0d53b39ed0b61ced90a435aad7e6b8e9e32b"
+  },
+  "oneExistingOrder": true,
+  "newTranches": 0,
+  "roadmap": [
+    "M3-05",
+    "M3-08"
+  ],
+  "nativeContractId": "r139-cua-page-target-v1-20261025",
+  "campaignNonce": "8cec56e99d18817f6c4e8967c188ddd1",
+  "actorAcks": {
+    "root": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_root_actor_ack_20261025.json",
+      "sha256": "91d4bb8edd055f129d805ba357bad11464836935f5a23d32d255248404a8f6f4"
+    },
+    "internal": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_internal_actor_ack_20261025.json",
+      "sha256": "9afe12961b8f6913d1b92f9b658f28470eeb4fc9d6833d58248d269723f9dd80"
+    },
+    "cuaProducer": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_cua_producer_actor_ack_20261025.json",
+      "sha256": "069ca6d4f2027992adacd64305fbe3ec916f6defa1b1029b88b7460b72a07735"
+    },
+    "cuaObserver": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_cua_observer_actor_ack_20261025.json",
+      "sha256": "a996d1d23f8f9d23c2a318b76beb7062bea7691ead3dd7edb8eadbf069029a99"
+    }
+  },
+  "operator": "Owner in this conversation",
+  "closeMode": "operator_fallback",
+  "operatorAvailabilityRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_owner_close_availability_20261025.json",
+    "sha256": "148d79a399a6a3dc0376a1a4f5073f09fc69deea7cd632b9bf0401289a9d2cdb"
+  },
+  "recipePath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_activation_recipe_20261025.json",
+  "recipeSha256": "514373d7c4d9dd0bc946e7d7088d5fb8fa541fd5cec351096f0e6d14abbee0d0",
+  "controllerDesignPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt",
+  "controllerDesignSha256": "57ae20a2bb0054e38d5a3d919f5e2997780b56981a82f2f31924eddf623e5854",
+  "controllerScriptPath": ".cvf/runtime/r139_cua_reentry_20261025_readiness/activation_controller.py",
+  "outerControlReceiptRoot": ".cvf/runtime/r139_cua_reentry_20261025_readiness/control_outer",
+  "coordinationRoot": ".cvf/runtime/r139_cua_reentry_20261025_readiness/coordination",
+  "reservationPath": ".cvf/runtime/r139_cua_reentry_20261025_readiness/campaign_reservation.json",
+  "signalPath": ".cvf/runtime/r139_cua_reentry_20261025_readiness/coordination/root_g0_release.json",
+  "caps": {
+    "oneCampaign": 1,
+    "internalReadOnlyQueries": 5,
+    "browserWorkerStagesMax": 4,
+    "cuaApiMethodsMax": 64,
+    "cuaStageMethodsMax": {
+      "g0Producer": 8,
+      "g0IndependentObserver": 4,
+      "g2ProductUi": 48,
+      "terminal": 4
+    },
+    "g2CapturesMax": 4,
+    "newOwnedPages": 1,
+    "creationNavigation": 1,
+    "samePageControlNavigation": 1,
+    "pageReadObservationsMax": 4,
+    "originalCapturesMax": 2,
+    "exactFinalCloseMax": 1,
+    "baselineMetadataEnumeration": 1,
+    "handoffMetadataEnumeration": 1,
+    "finalMetadataEnumeration": 1,
+    "globalMetadataEnumerationMaximum": 3,
+    "nativeExecutePOSTMax": 8,
+    "browserExecutePOSTMax": 1,
+    "grantsMax": 3,
+    "authPOSTMax": 4,
+    "statusReadStartsMax": 16,
+    "automaticPostSendStatusPollStartsMax": 12,
+    "eventDrivenStatusReadsMax": 4,
+    "automaticPollSpacingSecondsMin": 5,
+    "automaticPollLifetimeSecondsMax": 60,
+    "physicalProviderAttemptsMax": 1,
+    "newUSDMax": 1,
+    "keyContentReadsMax": 1,
+    "requestBytesMax": 6000,
+    "completionTokensMax": 768,
+    "fixtureStartsMax": 1,
+    "fixtureFinalStopsMax": 1,
+    "backendStartsMax": 1,
+    "viteStartsMax": 1,
+    "publicTariffRefreshIfNeededMax": 1,
+    "dockerQuerySecondsMax": 20,
+    "powershellQuerySecondsMax": 5,
+    "automaticRetry": 0,
+    "sourceChecksDuringCampaign": 0,
+    "wholeCampaignSeconds": 1200,
+    "stopBeforeSeconds": 1020,
+    "cleanupReserveSeconds": 180,
+    "oldUnusedProviderAllowanceSupersededNotStacked": true
+  },
+  "reviewPath": "docs/reviews/R139_CUA_G0_TECHNICAL_RELEASE_REVIEW_2026-10-25.md",
+  "independentReviewApproved": true,
+  "g0Protocol": [
+    "Root ONE original held controller exact-byte code starts only from clean committed sealed recipe/head; no test or retry",
+    "Controller preclock validates all hashes/tools/boot/actors; then one1200s reservation, eight canonical sync, catalog/gates/exactcommit, freshsignal within60s",
+    "Internal exactly5read-only servicequeries sequential, reservebeforeeach/originalwait/exit, stopfirstfailure; Root accepts actualreceipts beforebrowser",
+    "ProducerG0onepage/max8CUAmethods then observerexactgetTab+singlehandoffmetadata withinmax4; actualownedtabdocs/locator/confirm paths mustbeexposed andownership proven orHOLD",
+    "Root independentlyreconcilesoriginalreturns/captures/actualcontrollednonceURL; actualG0PASS plusseparatelycommittedRuntimeEffectAdmission beforefixture/key/provider/G1G2",
+    "Original+1020cleanup/+1200expiry; Ownerclosesexactid+nonce, observeronefinalmetadata verifiesabsence/protectedIDs, no extraAPI/page/retry/Hostkill"
+  ],
+  "sourceChecksAllConsumed": true,
+  "failedWorkerAttemptRetained": true,
+  "g0ServiceUse": 0,
+  "browserUse": 0,
+  "keyUse": 0,
+  "providerUse": 0,
+  "campaignReserved": false,
+  "productRuntimeReleased": false,
+  "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+  "outerControlCustodyWrapper": {
+    "path": ".cvf/runtime/r139_cua_reentry_20261025_readiness/root_original_control_custody.py",
+    "sha256": "ebe1e4a76a9c9a538ded30e9076d2d935967ddd7c3615f99111d67938a126823",
+    "rehashImmediatelyBeforeInvocation": true,
+    "ignoredFileNotNativeProvenance": true
+  },
+  "independentReviewer": "/root/r139_cua_preclock_reviewer",
+  "independentReviewRef": {
+    "path": "docs/reviews/R139_CUA_G0_TECHNICAL_RELEASE_REVIEW_2026-10-25.md",
+    "sha256": "dc2570dfd6562c2c616d627198c8efd781c8c2bd046a48ab0a19b6a67373f47b"
+  },
+  "handoffPacketRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_handoff_packet_20261025.json",
+    "sha256": "8f286ec522ed1d119a0f33b645b0bc1126350d0659e664e01fe098de074817e9"
+  }
+}
