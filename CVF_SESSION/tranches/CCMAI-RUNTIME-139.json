@@ -83,10 +83,10 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
   "buildCommit": "b330f70b7e760ffee1113d57abc7133c725c57cd",
   "reviewEvidence": [
     "docs/reviews/R139_INTERNAL_CUA_CONSOLIDATED_SOURCE_REVIEW_2026-10-24.md",
@@ -97,9 +97,10 @@
     "docs/reviews/R139_BOOT_IDENTITY_G0_TECHNICAL_REVIEW_2026-10-25.md",
     "docs/reviews/R139_BOOT_IDENTITY_PRECLOCK_CLOCK_HOLD_REVIEW_2026-10-25.md",
     "docs/reviews/R139_CLOCK_V3_SOURCE_REVIEW_2026-10-26.md",
-    "docs/reviews/R139_PINNED_RESUME_CONSOLIDATED_SOURCE_REVIEW_2026-10-26.md"
+    "docs/reviews/R139_PINNED_RESUME_CONSOLIDATED_SOURCE_REVIEW_2026-10-26.md",
+    "docs/reviews/R139_V3_ACTIVATION_ENV_SOURCE_REVIEW_2026-10-26.md"
   ],
-  "disposition": "Same-scope activation environment source repair; no runtime release.",
+  "disposition": "COMPLETE_PENDING_REVIEW",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -159,7 +160,8 @@
     "REVIEW_PENDING",
     "REVIEW_PASS",
     "CHANGES_REQUIRED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "actualUse": {
     "status": "HOLD_MANUAL_HOLD_PROVIDER_OUTCOME_UNKNOWN",
@@ -1193,15 +1195,21 @@
   "x-executionCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "sourceOnlyAcceptance": "Accepted offline stable-pin/query-local-clock/durable-resume repair; integrated operational criteria OPEN, FREEZE OPEN; not product/tranche outcome closure.",
   "x-r139V3ActivationEnvRepair20261026": {
-    "status": "BUILD_PENDING_COMMITTED_DISPATCH",
+    "status": "SOURCE_REVIEW_PASS_PENDING_MATERIAL_COMMIT",
     "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-REPAIR-ADMISSION.json",
     "precedingCountedSourceChecks": 14,
-    "newFocusedBatches": 0,
+    "newFocusedBatches": 2,
     "internalSetupSeconds": 180,
     "wholeCampaignSeconds": 1200,
     "cleanupCutoffSeconds": 1020,
     "controllerOrCampaignUsed": 0,
     "runtimeReleased": false,
-    "newRootCause": "Pinned child tool discovery plus known catalog transaction duration, not historical clock drift."
+    "newRootCause": "Pinned child tool discovery plus known catalog transaction duration, not historical clock drift.",
+    "totalCountedLineage": 16,
+    "workerTargetedTests": 2,
+    "rootSupervisorTests": 48,
+    "reusedPinResumeTests": 16,
+    "currentLedgerPath": ".cvf/runtime/r139_pinned_resume_repair_20261026/session_ledger_generation3.json",
+    "currentBindingPath": ".cvf/runtime/r139_pinned_resume_repair_20261026/ledger_binding_generation3.json"
   }
 }

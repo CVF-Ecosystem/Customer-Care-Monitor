@@ -1,10 +1,10 @@
 {
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 same-scope activation-environment repair BUILD under Root supplement177e3512 and Owner parent78ae94c6. Preserve accepted b330f70b/3366eb41 and all14 counted checks. Prerelease audit found scrubbed child PATH cannot discover pinned PS5 and the internal60s activation setup can expire during large catalog/gates/normal commit. Sol repairs only v3design and supervisor tests: pinnedPS5 PATH, bounded180s internal setup, new independent source review path; originalquery5s/drift2s/+1020cleanup/+1200deadline/provider<=USD1 all unchanged. Worker focused dependency check plus Root full supervisor regression planned, cumulative evidence/no reset. Root reviews and binds new source/build before rebasing current v3metadata/actor ACKs and technical seal. No controller/campaign/service/CUA/key/provider effects released; all remain0, v2disabled/shared future controller1. Same R139/M3-05/M3-08, no helper tranche/Antigravity/Owner relay, publice9/profile1.1 pin fixed; use pinned preflight, never latestdoctor/fetch; ProductB blocked/Facebook-ZaloOA parked.",
-  "activeRole": "Root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; Sol activation-environment IMPLEMENTATION_WORKER after committed dispatch, browser/runtime workers unreleased",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 activation-environment source REVIEW_PENDING material commit: design36f5f307/test4bbd3abb independently reviewed, worker2newtestsPASS and Root48supervisorPASS; oldpin/resume16 inherited unchanged. Countedlineage16 includesall14prior and2new, failures/ledgers retained. ChildPATH now includesexactpinnedPS5, internalsetupguard180 only; original1200campaign/1020cleanup/query5/drift2/providerUSD1 andcaps unchanged. Root commits/rebinds new acceptedsource/build then atomically rebases current v3packet/actorACKs and independenttechnicalreview beforeoneoriginalcontroller. Allcontroller/campaign/service/CUA/key/provider effects0, v2disabled/sharedfuturecontroller1. Fixedpublice9/profile1.1 pinnedpreflight(no latestdoctor/fetch), sameR139/M3-05/M3-08, nohelpertranche/Antigravity/Ownerrelay; ProductB blocked/Facebook-ZaloOA parked.",
+  "activeRole": "Root independent source/evidence REVIEWER / ORCHESTRATOR / COMMIT_STEWARD; activation environment worker returned, all browser/runtime effects unreleased",
   "updatedAt": "2026-10-25",
   "schemaVersion": "1.0",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
@@ -1520,15 +1520,21 @@
   },
   "x-executionCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "x-r139V3ActivationEnvRepair20261026": {
-    "status": "BUILD_PENDING_COMMITTED_DISPATCH",
+    "status": "SOURCE_REVIEW_PASS_PENDING_MATERIAL_COMMIT",
     "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-REPAIR-ADMISSION.json",
     "precedingCountedSourceChecks": 14,
-    "newFocusedBatches": 0,
+    "newFocusedBatches": 2,
     "internalSetupSeconds": 180,
     "wholeCampaignSeconds": 1200,
     "cleanupCutoffSeconds": 1020,
     "controllerOrCampaignUsed": 0,
     "runtimeReleased": false,
-    "newRootCause": "Pinned child tool discovery plus known catalog transaction duration, not historical clock drift."
+    "newRootCause": "Pinned child tool discovery plus known catalog transaction duration, not historical clock drift.",
+    "totalCountedLineage": 16,
+    "workerTargetedTests": 2,
+    "rootSupervisorTests": 48,
+    "reusedPinResumeTests": 16,
+    "currentLedgerPath": ".cvf/runtime/r139_pinned_resume_repair_20261026/session_ledger_generation3.json",
+    "currentBindingPath": ".cvf/runtime/r139_pinned_resume_repair_20261026/ledger_binding_generation3.json"
   }
 }

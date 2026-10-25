@@ -73,6 +73,20 @@ CHILD_N = 0
 HELD_CHILDREN = []
 RESERVATION = None
 RECIPE = None
+SETUP_SECONDS = 180
+
+def setup_deadline(start_monotonic):
+    return start_monotonic + SETUP_SECONDS
+
+def child_environment(pins, inherited):
+    env = {k: inherited[k] for k in ("SYSTEMROOT", "WINDIR", "USERPROFILE", "LOCALAPPDATA",
+                                    "APPDATA", "HOME", "XDG_CONFIG_HOME", "PROGRAMDATA",
+                                    "HOMEDRIVE", "HOMEPATH", "TEMP", "TMP") if k in inherited}
+    env["PATH"] = os.pathsep.join((str(Path(pins["tools"]["powershell"]["path"]).parent),
+                                   str(Path(pins["tools"]["git"]["path"]).parent),
+                                   str(Path(pins["tools"]["python"]["path"]).parent),
+                                   r"C:\Windows\System32"))
+    return env
 
 def hold(reason): raise RuntimeError(reason)
 def sha(data): return hashlib.sha256(data).hexdigest()
@@ -279,7 +293,7 @@ def reviewed_boot_v3_checks(r, build, pins):
         body = committed(path, ref["sha256"], parse=False)
         if b"Status: REVIEW_PASS" not in body[:320]: hold("BOOT_REVIEW_STATUS")
     review(v.get("independentSourceReviewRef"),
-           "docs/reviews/R139_CLOCK_V3_SOURCE_REVIEW_2026-10-26.md")
+           "docs/reviews/R139_V3_ACTIVATION_ENV_SOURCE_REVIEW_2026-10-26.md")
     review(r.get("bootV3TechnicalReviewRef"),
            "docs/reviews/R139_CLOCK_V3_G0_TECHNICAL_REVIEW_2026-10-26.md")
 def no_reparse(path):
@@ -409,7 +423,7 @@ def signal_once(path, obj):
     if path.exists(): hold("SIGNAL_RACE")
     os.replace(temp, path)
 def clock_check(start_utc, start_mono):
-    if OP_END is not None and time.monotonic() >= OP_END: hold("POST_RESERVATION_60S_EXPIRED")
+    if OP_END is not None and time.monotonic() >= OP_END: hold("POST_RESERVATION_180S_EXPIRED")
     elapsed_utc = (datetime.now(timezone.utc) - start_utc).total_seconds()
     elapsed_mono = time.monotonic() - start_mono
     if elapsed_utc < 0 or elapsed_mono < 0 or abs(elapsed_utc - elapsed_mono) > 2:
@@ -607,10 +621,7 @@ def preclock(recipe_path, recipe_sha, expected_head):
     no_reparse(LOG_ROOT)
     # Remove inherited per-process Git overrides only. Keep real system/global
     # config, identity and hooks active; do not inject core.hooksPath or skip flags.
-    ENV = {k: os.environ[k] for k in ("SYSTEMROOT", "WINDIR", "USERPROFILE", "LOCALAPPDATA",
-                                     "APPDATA", "HOME", "XDG_CONFIG_HOME", "PROGRAMDATA",
-                                     "HOMEDRIVE", "HOMEPATH", "TEMP", "TMP") if k in os.environ}
-    ENV["PATH"] = os.pathsep.join((str(Path(GIT).parent), str(Path(sys.executable).parent), r"C:\Windows\System32"))
+    ENV = child_environment(pins, os.environ)
     if any(k.upper().startswith("GIT_") for k in ENV): hold("AMBIENT_GIT_OVERRIDE_NOT_SCRUBBED")
     committed(recipe_path, recipe_sha)
     committed(ref["path"], ref["sha256"])
@@ -618,7 +629,7 @@ def preclock(recipe_path, recipe_sha, expected_head):
         hold("HEAD_DRIFT")
     clean()
     # These are mandatory preclock facts. Configured hooks must be allowed to
-    # run naturally at commit; their future exit/time is charged to the 60s op.
+    # run naturally at commit; their future exit/time is charged to the 180s setup guard.
     git("var", "GIT_AUTHOR_IDENT")
     git("var", "GIT_COMMITTER_IDENT")
     hook_rc, hook_value = git_optional("config", "--path", "--get", "core.hooksPath")
@@ -906,7 +917,7 @@ def activate(r, base, pins):
       "observationCapsSha256": OBS_REF["sha256"]}
     RECIPE = r
     RESERVATION = reservation
-    OP_END = mono + 60
+    OP_END = setup_deadline(mono)
     reserve_sha = None
     # Reservation creation itself is in the consumed/uncertain failure envelope.
     try:
@@ -945,7 +956,7 @@ def activate(r, base, pins):
         head = git("rev-parse", "HEAD").decode().strip()
         clean()
         clock_check(now, mono)
-        if head == base: hold("COMMIT_OR_60S")
+        if head == base: hold("COMMIT_OR_180S")
         signal_once(inside(r["signalPath"], {r["signalPath"]}),
           {"status": "ROOT_G0_RELEASE", "currentHead": head,
            "originalReservationBaseHead": base, "reservationPath": r["reservationPath"],

@@ -1,0 +1,17 @@
+{
+  "kind": "R139_BOOT_IDENTITY_V3_FOCUSED_PYTHON_CHECK",
+  "actor": "worker",
+  "status": "PASS",
+  "attempt": 2,
+  "historicalChecksSpent": 10,
+  "originalWaitReturned": true,
+  "exitCode": 0,
+  "designSha256": "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d",
+  "testSha256": "4bbd3abb54646a9bcaa691c8b29ccf49f470539475a2a87732b77e2790be2283",
+  "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderrSha256": "6e2bf50b73ac17dbe88ae25be93d03630cd0bd153324f77d7af80d6232c5976e",
+  "stdoutPath": ".cvf/runtime/r139_pinned_resume_repair_20261026/worker_activation_env/stdout.bin",
+  "stderrPath": ".cvf/runtime/r139_pinned_resume_repair_20261026/worker_activation_env/stderr.bin",
+  "startedAtUTC": "2026-10-25T23:17:53.524556+00:00",
+  "endedAtUTC": "2026-10-25T23:17:53.978827+00:00"
+}

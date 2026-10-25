@@ -5,8 +5,10 @@ import importlib.util
 import hashlib
 from contextlib import ExitStack
 import json
+import os
 from pathlib import Path
 import runpy
+import shutil
 import subprocess
 import tempfile
 import time
@@ -33,6 +35,47 @@ def protected_snapshot(*, status="Up 2 minutes (healthy)", running_for="2 minute
 
 
 class R139SupervisorPureTests(unittest.TestCase):
+    def test_boot_identity_v3_pinned_powershell_discovery_without_ambient_path(self):
+        if os.name != "nt":
+            self.skipTest("Windows PowerShell discovery requires Windows")
+        design_root = SOURCE.parents[1] / "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024"
+        build_path = SOURCE.parents[1] / "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-V3-ACCEPTED-BUILD-PINS-ADMISSION.json"
+        pins = json.loads(build_path.read_text(encoding="utf-8"))["pins"]
+        with patch.object(subprocess, "Popen", side_effect=AssertionError("no child process")):
+            design = runpy.run_path(str(design_root / "reentry_activation_boot_identity_v3_design.py.txt"),
+                                    run_name="r139_inert_activation_environment")
+            env = design["child_environment"](pins, {"SYSTEMROOT": r"C:\Windows",
+                "PATH": r"C:\ambient\pwsh", "GIT_CONFIG_COUNT": "1", "TEMP": r"C:\Temp"})
+        expected_path = os.pathsep.join((str(Path(pins["tools"]["powershell"]["path"]).parent),
+            str(Path(pins["tools"]["git"]["path"]).parent),
+            str(Path(pins["tools"]["python"]["path"]).parent), r"C:\Windows\System32"))
+        self.assertEqual(env["PATH"], expected_path)
+        self.assertNotIn("GIT_CONFIG_COUNT", env)
+        self.assertNotIn(r"C:\ambient\pwsh", env["PATH"])
+        self.assertIsNone(shutil.which("pwsh", path=env["PATH"]))
+        self.assertEqual(Path(shutil.which("powershell", path=env["PATH"])).resolve(),
+                         Path(pins["tools"]["powershell"]["path"]).resolve())
+
+    def test_boot_identity_v3_setup_guard_180_second_boundary(self):
+        design_root = SOURCE.parents[1] / "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024"
+        with patch.object(subprocess, "Popen", side_effect=AssertionError("no child process")):
+            design = runpy.run_path(str(design_root / "reentry_activation_boot_identity_v3_design.py.txt"),
+                                    run_name="r139_inert_activation_setup_guard")
+        self.assertEqual(design["SETUP_SECONDS"], 180)
+        self.assertEqual(design["setup_deadline"](1000.0), 1180.0)
+        clock_check = design["clock_check"]
+        prior_end = clock_check.__globals__["OP_END"]
+        clock_check.__globals__["OP_END"] = 1180.0
+        try:
+            start_utc = datetime.now(timezone.utc) - timedelta(seconds=179.999)
+            with patch.object(time, "monotonic", return_value=1179.999):
+                clock_check(start_utc, 1000.0)
+            with patch.object(time, "monotonic", return_value=1180.0):
+                with self.assertRaisesRegex(RuntimeError, "POST_RESERVATION_180S_EXPIRED"):
+                    clock_check(start_utc, 1000.0)
+        finally:
+            clock_check.__globals__["OP_END"] = prior_end
+
     def test_boot_identity_v3_query_local_clock_and_immutable_identity(self):
         design_root = SOURCE.parents[1] / "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024"
         def forbidden(*args, **kwargs):

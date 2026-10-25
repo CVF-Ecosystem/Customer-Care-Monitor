@@ -2,7 +2,7 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
 
 ## Mandatory standing Owner directive — apply without reminders
 
@@ -15,13 +15,13 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
 
-CCMAI-RUNTIME-139 same-scope activation-environment repair BUILD under Root supplement177e3512 and Owner parent78ae94c6. Preserve accepted b330f70b/3366eb41 and all14 counted checks. Prerelease audit found scrubbed child PATH cannot discover pinned PS5 and the internal60s activation setup can expire during large catalog/gates/normal commit. Sol repairs only v3design and supervisor tests: pinnedPS5 PATH, bounded180s internal setup, new independent source review path; originalquery5s/drift2s/+1020cleanup/+1200deadline/provider<=USD1 all unchanged. Worker focused dependency check plus Root full supervisor regression planned, cumulative evidence/no reset. Root reviews and binds new source/build before rebasing current v3metadata/actor ACKs and technical seal. No controller/campaign/service/CUA/key/provider effects released; all remain0, v2disabled/shared future controller1. Same R139/M3-05/M3-08, no helper tranche/Antigravity/Owner relay, publice9/profile1.1 pin fixed; use pinned preflight, never latestdoctor/fetch; ProductB blocked/Facebook-ZaloOA parked.
+CCMAI-RUNTIME-139 activation-environment source REVIEW_PENDING material commit: design36f5f307/test4bbd3abb independently reviewed, worker2newtestsPASS and Root48supervisorPASS; oldpin/resume16 inherited unchanged. Countedlineage16 includesall14prior and2new, failures/ledgers retained. ChildPATH now includesexactpinnedPS5, internalsetupguard180 only; original1200campaign/1020cleanup/query5/drift2/providerUSD1 andcaps unchanged. Root commits/rebinds new acceptedsource/build then atomically rebases current v3packet/actorACKs and independenttechnicalreview beforeoneoriginalcontroller. Allcontroller/campaign/service/CUA/key/provider effects0, v2disabled/sharedfuturecontroller1. Fixedpublice9/profile1.1 pinnedpreflight(no latestdoctor/fetch), sameR139/M3-05/M3-08, nohelpertranche/Antigravity/Ownerrelay; ProductB blocked/Facebook-ZaloOA parked.
 
-Root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; Sol activation-environment IMPLEMENTATION_WORKER after committed dispatch, browser/runtime workers unreleased
+Root independent source/evidence REVIEWER / ORCHESTRATOR / COMMIT_STEWARD; activation environment worker returned, all browser/runtime effects unreleased
 
 Owner reiteration2026-10-23: no fragmented tranches; follow roadmap. Root keeps ONE existing R139 outcome-based order across G0/G1/G2/G3; no helper/metadata prompt chain or repeated Owner relay. Complete consolidated readiness/admission before redispatch. Historical substep instructions and prior HOLD_TRANSFER are completed/spent context; the Current Truth instruction above governs this continuation. Directive recorded in existing order/continuity, no new learning artifact or tranche. Effectiveness must be judged by product acceptance.
 

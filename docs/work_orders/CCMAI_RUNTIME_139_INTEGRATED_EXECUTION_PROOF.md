@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: ACTIVE
+Status: COMPLETE_PENDING_REVIEW
 Risk: R2
 Worker: Internal Sol G0 service/runtime actor; internal Luna producer/independent observer for browser only
 Reviewer: Root independent source/evidence REVIEWER
@@ -746,3 +746,6 @@ Accepted offline material: source `b330f70b7e760ffee1113d57abc7133c725c57cd`, ac
 ## Same-order activation environment dependency repair — 2026-10-26
 
 Root supplement177e3512 under Owner78ae94c6 admits correction of the scrubbed childPATH to include exact pinnedPS5 and a bounded180s internal catalog/gate/normal-commit setup guard. This is an implementation guard correction; original20mincampaign/+1020cleanup/query5/drift2 and allprovider/browser/servicecaps unchanged. No installedgate/Core/workflow/supervisor/product edit. Solworker owns onlyexistingv3design+supervisortest; Root independently reviews and records new cumulative dependency checks without discarding14old. New review and accepted-build required, predecessor immutable. No newtranche or per-stepOwnerapproval.
+
+
+Activationenvironment source return: worker2targeted/Root48supervisorPASS; unchangedpin16 inherited. Source lineage16 retains14prior+2new and allfailedhistory. Revieweddesign36f5f307/test4bbd3abb; Rootnewreview `docs/reviews/R139_V3_ACTIVATION_ENV_SOURCE_REVIEW_2026-10-26.md`. Materialcommit/buildbinding/packetrebase remain before anycontroller; noeffectrelease.

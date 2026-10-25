@@ -37719,6 +37719,34 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_runtime_admission_draft_20261026.json",
       "status": "ACTIVE",
       "description": "R139 v3 prerelease metadata/source-repair authority or actor availability; predecessor source binding, no runtime effect release."
+    },
+    {
+      "id": "r139-v3-env-0f21ea540cd345",
+      "family": "continuity",
+      "path": "docs/reviews/R139_V3_ACTIVATION_ENV_SOURCE_REVIEW_2026-10-26.md",
+      "status": "ACTIVE",
+      "description": "R139 independent activation child environment/setup source review or cumulative exact offline evidence; original external caps and all failures retained."
+    },
+    {
+      "id": "r139-v3-env-e0646d90cee1c1",
+      "family": "continuity",
+      "path": "docs/reviews/R139_V3_ACTIVATION_ENV_WORKER_RETURN_2026-10-26.md",
+      "status": "ACTIVE",
+      "description": "R139 independent activation child environment/setup source review or cumulative exact offline evidence; original external caps and all failures retained."
+    },
+    {
+      "id": "r139-v3-env-0c47899e5dec81",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/root_python_02_result.json",
+      "status": "ACTIVE",
+      "description": "R139 independent activation child environment/setup source review or cumulative exact offline evidence; original external caps and all failures retained."
+    },
+    {
+      "id": "r139-v3-env-25076123ee878d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/worker_python_02_result.json",
+      "status": "ACTIVE",
+      "description": "R139 independent activation child environment/setup source review or cumulative exact offline evidence; original external caps and all failures retained."
     }
   ]
 }
