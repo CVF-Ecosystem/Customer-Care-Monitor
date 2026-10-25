@@ -1,0 +1,124 @@
+{
+  "kind": "R139_PINNED_PREFLIGHT_STATIC_VALIDATION",
+  "status": "PASS",
+  "retainedAttempts": [
+    {
+      "name": "pinned_preflight_reviewer_fast",
+      "originalReturn": {
+        "kind": "ROOT_ORIGINAL_PINNED_PREFLIGHT_RETURN",
+        "pid": 22512,
+        "originalWaitReturned": true,
+        "exitCode": 2,
+        "elapsedSeconds": 32.94357309999759,
+        "intentSha256": "3f496e0ccc455ab7fe6212b4c7324ec1143f588d7de4484754d23112f92a928e",
+        "stdoutSha256": "8d2fec6b374245093406fcd099b63799d056cf2d9f45087a9925445229c7920c",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "originalReturnRef": {
+        "path": ".cvf/runtime/r139_pinned_resume_repair_20261026/pinned_preflight_reviewer_fast/original_return.json",
+        "sha256": "6c27548efa605d187ba1b748e3eb5a80c0938b54afa9852e780f4d3bbc6470fb"
+      },
+      "pin": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
+      "remoteFreshnessChecked": false,
+      "passed": false,
+      "checks": [
+        {
+          "exitCode": 1,
+          "stdoutSha256": "9a142275e6dd6e5809acb467f4ad99e978b253a98b6df926a8c0cdfea427e7b1"
+        }
+      ]
+    },
+    {
+      "name": "pinned_preflight_reviewer_fast_02",
+      "originalReturn": {
+        "kind": "ROOT_ORIGINAL_PINNED_PREFLIGHT_RETURN",
+        "pid": 14692,
+        "originalWaitReturned": true,
+        "exitCode": 2,
+        "elapsedSeconds": 34.072558000014396,
+        "intentSha256": "c6e119e1dc4ebcd7a17e1bd9cabd5339fb886915cc81c07169b3fb06ba5f2c44",
+        "stdoutSha256": "8d2fec6b374245093406fcd099b63799d056cf2d9f45087a9925445229c7920c",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "originalReturnRef": {
+        "path": ".cvf/runtime/r139_pinned_resume_repair_20261026/pinned_preflight_reviewer_fast_02/original_return.json",
+        "sha256": "41f20cca7ad492027d136fab8a44da829d9019894e19742a7074885244a843d2"
+      },
+      "pin": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
+      "remoteFreshnessChecked": false,
+      "passed": false,
+      "checks": [
+        {
+          "exitCode": 1,
+          "stdoutSha256": "9a142275e6dd6e5809acb467f4ad99e978b253a98b6df926a8c0cdfea427e7b1"
+        }
+      ]
+    },
+    {
+      "name": "pinned_preflight_reviewer_fast_03",
+      "originalReturn": {
+        "kind": "ROOT_ORIGINAL_PINNED_PREFLIGHT_RETURN",
+        "pid": 26252,
+        "originalWaitReturned": true,
+        "exitCode": 2,
+        "elapsedSeconds": 36.19787040000665,
+        "intentSha256": "7013a851ba0dab44bfbc7280b2ce908da5f918675499f128b67a6b85e780b253",
+        "stdoutSha256": "1af4e7e347abc5d5c27ef1abb1b77e6c804f7f67357da8e78504fc2cdb6ede6d",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "originalReturnRef": {
+        "path": ".cvf/runtime/r139_pinned_resume_repair_20261026/pinned_preflight_reviewer_fast_03/original_return.json",
+        "sha256": "e9324c5a0b50a833b6e7fbdee919e206957ef8adb11c6c3ed8bf0d2738b4d81d"
+      },
+      "pin": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
+      "remoteFreshnessChecked": false,
+      "passed": false,
+      "checks": [
+        {
+          "exitCode": 0,
+          "stdoutSha256": "851c7cd96bb0ff1752e52db5309cec193f64f92a88a7b73843c061cac303c313"
+        },
+        {
+          "exitCode": 2,
+          "stdoutSha256": "9e3829ac9c19cbfe32c026aacc7423156d81e5f2fe96d226cc1147522d784f7c"
+        }
+      ]
+    }
+  ],
+  "metadataCorrections": "Render catalog using pwsh matching the gate; canonical Worker/Reviewer headers and COMPLETE_PENDING_REVIEW status. No installed-profile/Core or source change.",
+  "coreExecutionPin": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
+  "profileId": "cvf.downstreamGateProfile@1.1.0",
+  "latestCoreDoctorClaim": "NOT_PASSED_NOT_CLAIMED",
+  "networkUsed": false,
+  "finalPrecommit": {
+    "originalReturn": {
+      "kind": "ROOT_ORIGINAL_PINNED_PREFLIGHT_RETURN",
+      "pid": 4448,
+      "originalWaitReturned": true,
+      "exitCode": 0,
+      "elapsedSeconds": 24.708938099996885,
+      "intentSha256": "b5247688b068863f725c62a371a127aa7e2df827b37b66fc29c98e65d697833b",
+      "stdoutSha256": "32e4b170d9f21ccf453391b5c12405eed67e9c76b980b3e5dbbf5c7ba8f4db7b",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "originalReturnRef": {
+      "path": ".cvf/runtime/r139_pinned_resume_repair_20261026/pinned_preflight_precommit/original_return.json",
+      "sha256": "330575270cc50b7e88df05dac52ac26503e34ffd93b9ecb8cdd4dfccfae3d391"
+    },
+    "pin": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
+    "remoteFreshnessChecked": false,
+    "passed": true,
+    "checks": [
+      {
+        "exitCode": 0,
+        "stderr": "",
+        "stdout": "[PASS] provenance\n       note: required doc outside project not checked (portable mode): ..\\WORKSPACE_RULES.md\n       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core\n[PASS] continuity\n[PASS] tranche\n[PASS] claims\n[PASS] secrets\n       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read\n[PASS] workflows\n[PASS] catalog\nCVF downstream preflight: PASS (7/7 executed gates passed)\n"
+      },
+      {
+        "exitCode": 0,
+        "stderr": "",
+        "stdout": "[PASS] CVF-DG-INST-01 PASS\n[PASS] CVF-DG-CONT-01 PASS\n[PASS] CVF-DG-RANGE-01 PASS\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=594d2a66ca14bc30f1f0272216bd39a4a4a62d48 candidates=27 deleted=0\n[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked\n       note: docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract\n[PASS] CVF-DG-ROLE-01 PASS\n       note: checked: docs/reviews/R139_CLOCK_V3_SOURCE_REVIEW_2026-10-26.md, docs/reviews/R139_CLOCK_V3_WORKER_RETURN_2026-10-26.md, docs/reviews/R139_PINNED_RESUME_CONSOLIDATED_SOURCE_REVIEW_2026-10-26.md, docs/reviews/R139_PINNED_RESUME_WORKER_RETURN_2026-10-26.md\n[PASS] CVF-DG-CLAIM-01 PASS\n       note: 0 explicit claim line(s) and 5 document(s) scanned\nRESULT: PASS phase=pre-commit mandatoryControls=6 failed=0\n"
+      }
+    ]
+  }
+}

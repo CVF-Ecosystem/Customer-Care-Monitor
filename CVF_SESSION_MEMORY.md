@@ -2,22 +2,26 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
 
 ## Mandatory standing Owner directive — apply without reminders
 
 `OWNER-ROADMAP-SINGLE-SCOPE-20261023` — **MUST APPLY; Root must not wait for Owner to repeat it.** At every rehydration, scope selection, dispatch, failure/repair decision, review and handoff: keep ONE existing R139 outcome-based order across G0/G1/G2/G3; bind work to roadmap M3-05/M3-08; consolidate all prerequisites/effects/cleanup/acceptance before redispatch; no helper tranches/orders or per-check Owner relay prompt chain. Continue authorized same-scope dependencies without redundant confirmation. Report user capability achieved, exact remaining acceptance gap, genuine blocker and one consolidated route. Mandatory human process contract; effectiveness remains unproved until product acceptance. Existing phase/risk/effect limits, independent review and spent caps remain binding.
 
+## Owner standing directive — stable pin and quota resume (2026-10-26)
+
+Owner explicitly agrees: pin Core/profile for an admitted campaign, separate GitHub provenance/update availability from adoption, repair stale preparation-clock dependence, and persist validated session/results across agent/model quota interruptions. This supersedes automatic latest-origin/main adoption for R139; use admission `CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json` and the reviewed pinned preflight once accepted. Do not reinstall profile1.2 or auto-update Core merely because upstream moved. Keep all completed receipts and cumulative usage; resume only from validated source/contract/input bindings. Uncertain external effects remain UNKNOWN with no automatic replay; an expired live campaign requires cleanup/re-admission, while valid offline results remain reusable. New necessary same-scope offline repair/verification follows this explicit Owner direction, without fictitious per-step numerical approvals or resetting the historical10 spent checks. Root must distinguish provider/account quota from admitted campaign/effect caps and never bypass either.
+
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
 
-CCMAI-RUNTIME-139 Owner-directed pinned-Core/clock/resume repair BUILD under PINNED-RESUME-REPAIR-ADMISSION78ae94c6: keep public e9ddcbcd/profile1.1 execution pin, provenance/update observation separate, no latest-main auto adoption; Sol workers implement only admitted v3 clock and pinned preflight/durable checkpoint paths. Preserve prior10sourcechecks spent and all completed receipts; newly necessary focused offline verification recorded cumulatively under latest Owner repair instruction. Root independently reviews combined source/checkpoints and commits before any technical release. Shared future v2+v3 original controller slot0/1 (v2 disabled), campaign0/1, services0/5, CUA0/64, fixture/key/provider0; no runtime effects now. Existing20min/1020cleanup/provider<=USD1 bounds unchanged; quota interruption preserves results and usage, uncertain inflight effects UNKNOWN no auto replay, expired runtime requires cleanup/re-admission. Same R139/M3-05/M3-08, no helper tranche/Antigravity/Owner relay; ProductB blocked, Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 pinned-Core/clock/durable-offline-resume source REVIEW_PENDING material commit: v3acfec280/test3c6aafa1, preflight81784375/resume7ab2bf4c/pinTest9dd100ba independently reviewed; worker46PASS, pin firstFAIL retained then16PASS, Rootcombined62PASS. Actual interruption recovery reused originalFAIL without newchild; completedRootreuse kept4->4 new focused checks. Historical10 plusnew4 counted; no oldbudget or effect reset. Owner selects public e9ddcbcd/profile1.1 execution pin and separate cached provenance/update observation, no automaticlatest adoption. Use pwsh -NoProfile for catalog generation/checks to match the legacy gate engine. Root completes final pinned precommit, normal clean source commit and accepted-build binding, then prepares fresh v3 technical packet/actor acknowledgments using preserved checkpoints rather than rerunning accepted checks. Shared future controller0/1 (v2 disabled), campaign0/1, services0/5, CUA0/64, fixture/key/provider0; no runtime release yet. UNKNOWN effects never replay; expiry requires cleanup/re-admission while offline results survive. Same R139/M3-05/M3-08, no helper tranche/Antigravity/per-step Owner relay, ProductB blocked, Facebook/Zalo OA parked.
 
-Root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; Sol clock and pin/resume IMPLEMENTATION_WORKERs only after committed dispatch
+Root independent source/evidence REVIEWER / ORCHESTRATOR / COMMIT_STEWARD; implementation workers returned, all runtime effects unreleased
 
 Owner reiteration2026-10-23: no fragmented tranches; follow roadmap. Root keeps ONE existing R139 outcome-based order across G0/G1/G2/G3; no helper/metadata prompt chain or repeated Owner relay. Complete consolidated readiness/admission before redispatch. Historical substep instructions and prior HOLD_TRANSFER are completed/spent context; the Current Truth instruction above governs this continuation. Directive recorded in existing order/continuity, no new learning artifact or tranche. Effectiveness must be judged by product acceptance.
 

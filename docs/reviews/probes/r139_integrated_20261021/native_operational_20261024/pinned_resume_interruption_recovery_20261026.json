@@ -1,0 +1,26 @@
+{
+  "kind": "ROOT_OBSERVED_OFFLINE_INTERRUPTION_RECOVERY",
+  "scope": "Actual offline coordinator interrupted after original test return, before checkpoint; no actual provider quota event claimed.",
+  "originalBatch": "worker_pin_resume",
+  "originalResultRef": {
+    "path": ".cvf/runtime/r139_pinned_resume_repair_20261026/worker_pin_resume/original_return.json",
+    "sha256": "3ff5308d7f8828c41016ea0d6a59c476c176e0a3b57880b7db818ab7a03c8bd8"
+  },
+  "interruptionMarkerRef": {
+    "path": ".cvf/runtime/r139_pinned_resume_repair_20261026/worker_pin_resume/simulated_quota_interruption.json",
+    "sha256": "663d36e5d2bbc2116f4969993d17e3d77bb63a318e0662321fee6da5152e44a3"
+  },
+  "sealedEnvelopeRef": {
+    "path": ".cvf/runtime/r139_pinned_resume_repair_20261026/worker_pin_resume/checkpoint_envelope.json",
+    "sha256": "9373d863d9e8730e4d94a45ac94c403b31fda6c0f848c72d3b0c521ddfccbc0f"
+  },
+  "reused": true,
+  "recoveredUnsealedOriginalReturn": true,
+  "launchedNewChild": false,
+  "preservedStatus": "FAIL",
+  "preservedExitCode": 1,
+  "originalPid": 6296,
+  "historicalChecksSpent": 10,
+  "newSourceChecksAtRecovery": 2,
+  "noRuntimeOrProviderEffect": true
+}

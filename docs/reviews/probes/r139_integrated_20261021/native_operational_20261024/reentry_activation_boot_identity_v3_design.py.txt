@@ -1,0 +1,981 @@
+# PROPOSED_NOT_AUTHORIZED / UNEXECUTED v3 code-as-data. Future Root-only extraction
+# needs exact-byte pin, independent R2 review and later Root technical release.
+# Recipe JSON (committed exact bytes): kind=R139_ROOT_ACTIVATION_RECIPE,
+# status=COMMITTED_PRECLOCK, trancheId, nonce, nativeContractId,
+# freshGrant{path,sha256} is the committed CUA amendment;
+# inheritedOwnerEnvelope{path,sha256} is immutable 0ef818 with full old caps.
+# observationCapsRef{path,sha256} is Owner-approved fa7f2f, committed before
+# any source/runtime use; only its exact three-inventory/status16 delta overrides.
+# acceptedBuildPinsRef{path,sha256},
+# bootProof{path,sha256,hostBootId}, childLogRoot,
+# actorAcks{root,internal,cuaProducer,cuaObserver:{path,sha256}}, operatorAvailable,
+# cuaBrowserOperationPlanReference{path,sha256} records the reviewed finite
+# 64-method/four-stage plan and global 16-status-read reconciliation
+# (12 automatic post-send polls plus four event-driven loads).
+# coordinationRoot,coordinationOwnerSha256 (exclusive precreated owner.json),
+# oldResourceExclusionReviewed, reservationPath, signalPath, failurePath,
+# reviewed build pin record (not immutable Owner grant) carries nine source hashes,
+# two trees, binary, Vite CLI and five tool {path,sha256,size} records.
+# oldSha256 and canonicalTemplates keyed by exact CANON paths below, including
+# ARTIFACT_REGISTRY full content with the new activation receipt entry.
+# Exact clean dispatch HEAD is the THIRD Root CLI argument. Embedding its own
+# future commit SHA in a committed recipe would be self-referential.
+# Complete UTF-8 templates contain only late fixed tokens from TOKENS.
+# 89 gate units, payload/schema review, pricing, actor coordination and
+# exact command review finish BEFORE this design is ever extracted/run.
+# Root launches this as one managed control Popen, retains that original handle,
+# records original wait/exit externally, and continues G0/G1/G2 orchestration
+# while this same process watches the unremapped +1020/+1200 campaign clock.
+# This design itself cannot guarantee OS/tool cancellation or Root's handle.
+
+import hashlib, json, math, os, re, stat, subprocess, sys, time
+from datetime import datetime, timedelta, timezone
+from fractions import Fraction
+from pathlib import Path
+
+ROOT = Path(r"D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI")
+PRODUCT_ROOT = ROOT / ".cvf/runtime/r139_integrated_execution_r4_20261023"
+PROBE = "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024"
+CANON = ("CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json",
+ "CVF_SESSION/ACTIVE_SESSION_STATE.json", "CVF_SESSION_MEMORY.md",
+ "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
+ "IMPLEMENTATION_STATUS.json", "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+ "CVF_SESSION/tranches/CCMAI-RUNTIME-139.json", "docs/catalog/ARTIFACT_REGISTRY.json")
+CATALOG = ("docs/INDEX.md", "docs/catalog/MODULE_REGISTRY.json", "docs/catalog/MODULE_CATALOG.md")
+RECEIPT = PROBE + "/reentry_activation_receipt.json"
+OBS_REF = {"path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
+ "sha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491"}
+BOOT_RECOVERY_REF = {"path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json",
+ "sha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb"}
+BOOT_CONTRACT_REF = {"path": PROBE + "/boot_identity_v2_contract_20261025.json",
+ "sha256": "4c90053543f1d21532fdb5c6c7487e04c7a4ee5b3369c6f24034cde285eb9e7c"}
+BOOT_PROOF_REF = {"path": PROBE + "/boot_identity_v2_proof_20261025.json",
+ "sha256": "10937592aaa94c4d00a89eb194fa223b9bec372b921be8a247967da235fa44e9"}
+V3_ADMISSION_REF = {"path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+ "sha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f"}
+V3_CONTRACT_REF = {"path": PROBE + "/boot_identity_v3_contract_20261026.json",
+ "sha256": "e3fe4ef6caeb8b197e5f358267d89a6584fb6cf10087bebb5bfca53efdc7d5da"}
+ALLOWED = set(CANON + CATALOG + (RECEIPT,))
+SOURCE_NINE = {"backend/api/handlers/intervention_execution_browser_test.go",
+ "scripts/r139_execution_supervisor.py", "scripts/r139_vite_config.mjs.template",
+ "scripts/tests/test_r139_execution_supervisor.py", "backend/go.mod", "backend/go.sum",
+ "frontend/package.json", "frontend/package-lock.json", "frontend/vite.config.ts"}
+V3_SOURCE = PROBE + "/reentry_activation_boot_identity_v3_design.py.txt"
+ADMITTED_EXTRA_SOURCE = {V3_SOURCE, PROBE + "/r139_pinned_preflight.py.txt",
+ PROBE + "/r139_durable_resume.py.txt", PROBE + "/test_r139_pinned_resume.py"}
+TOKENS = {"{{G0_UTC}}", "{{G0_MONO}}", "{{STOP_UTC}}", "{{DEADLINE_UTC}}",
+ "{{RESERVATION_SHA256}}", "{{RESERVATION_PATH}}", "{{BASE_HEAD}}", "{{NONCE}}"}
+GIT = None
+ENV = None
+OP_END = None
+LOG_ROOT = None
+CHILD_N = 0
+HELD_CHILDREN = []
+RESERVATION = None
+RECIPE = None
+
+def hold(reason): raise RuntimeError(reason)
+def sha(data): return hashlib.sha256(data).hexdigest()
+def strict_json(raw):
+    """Parse one private observation, rejecting duplicate keys at every depth."""
+    def unique(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result: hold("BOOT_DUPLICATE_KEY")
+            result[key] = value
+        return result
+    try: return json.loads(raw.decode("utf-8", errors="strict"), object_pairs_hook=unique)
+    except (UnicodeError, ValueError, TypeError): hold("BOOT_JSON_INVALID")
+
+def utc_v2(value, parent=False):
+    if not isinstance(value, str): hold("BOOT_UTC_TYPE")
+    pattern = (r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{6}\+00:00" if parent else
+               r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{7}(?:Z|\+00:00)")
+    if not re.fullmatch(pattern, value, flags=re.ASCII): hold("BOOT_UTC_GRAMMAR")
+    try:
+        normalized = value.replace("Z", "+00:00")
+        if not parent:
+            prefix, tail = normalized.split(".", 1)
+            normalized = prefix + "." + tail[:6] + tail[7:]
+        parsed = datetime.fromisoformat(normalized)
+        if parsed.utcoffset() != timedelta(0): hold("BOOT_UTC_OFFSET")
+        # datetime retains microseconds only. Preserve the seventh raw digit
+        # explicitly so a 2.0000001 s boundary cannot round down to 2 s.
+        epoch = datetime(1970, 1, 1, tzinfo=timezone.utc)
+        delta = parsed - epoch
+        last_tick = 0 if parent else int(value.split(".", 1)[1][6])
+        return ((delta.days * 86400 + delta.seconds) * 10_000_000 +
+                delta.microseconds * 10 + last_tick)
+    except ValueError: hold("BOOT_UTC_INVALID")
+
+def numeric_v2(value):
+    if type(value) not in (int, float): hold("BOOT_MONOTONIC_INVALID")
+    try:
+        if not math.isfinite(value): hold("BOOT_MONOTONIC_INVALID")
+    except OverflowError: hold("BOOT_MONOTONIC_INVALID")
+    return value
+
+def validate_boot_identity_v3(proof, contract, actual_raw, parent_clock):
+    """Pure validation; no process, file, network, or campaign effect."""
+    if (not isinstance(proof, dict) or not isinstance(contract, dict) or
+        not isinstance(parent_clock, dict) or
+        contract.get("kind") != "R139_WINDOWS_BOOT_IDENTITY_V3_CONTRACT" or
+        contract.get("status") != "ROOT_ADMITTED_SPEC" or
+        contract.get("ownerAdmissionRef") != V3_ADMISSION_REF or
+        contract.get("predecessorContractRef") != BOOT_CONTRACT_REF or
+        contract.get("predecessorProofRef") != BOOT_PROOF_REF or
+        proof.get("kind") != "ROOT_CURRENT_WINDOWS_BOOT_IDENTITY_PROOF_V2" or
+        proof.get("status") != "REVIEWED_CAPABILITY_BASELINE" or
+        proof.get("ownerAdmissionRef") != BOOT_RECOVERY_REF or
+        proof.get("contractRef") != BOOT_CONTRACT_REF or
+        proof.get("rootVerifiedReadOnlyOSMetadata") is not True): hold("BOOT_CONTRACT_OR_PROOF")
+    expected_bounds = {"maxAbsoluteCimBootVsEventStartSeconds": 2,
+      "minEventCreatedVsStartSeconds": 0, "maxEventCreatedVsStartSeconds": 120,
+      "maxAbsoluteCurrentVsBaselineCimBootSeconds": 2,
+      "maxAbsoluteCurrentQueryUtcVsMonotonicElapsedDriftSeconds": 2,
+      "queryObservedUtcSlackSeconds": 2, "queryTimeoutSeconds": 5}
+    if contract.get("bounds") != expected_bounds: hold("BOOT_BOUNDS_DRIFT")
+    actual = strict_json(actual_raw)
+    top = {"schema", "observedUTC", "osComputerName", "computerSystemProductUuid", "lastBootUTC", "bootEvent"}
+    evkeys = {"logName", "providerName", "eventId", "recordId", "machineName", "timeCreatedUTC", "startTimeUTC"}
+    if not isinstance(actual, dict) or set(actual) != top or actual["schema"] != "r139.windowsBootIdentityObservation@1":
+        hold("BOOT_OBSERVATION_SHAPE")
+    event = actual["bootEvent"]
+    if not isinstance(event, dict) or set(event) != evkeys: hold("BOOT_EVENT_SHAPE")
+    name, uid, machine = actual["osComputerName"], actual["computerSystemProductUuid"], event["machineName"]
+    if any(not isinstance(v, str) or not v.isascii() for v in (name, uid, machine)):
+        hold("BOOT_HOST_TYPE")
+    name, uid, machine = name.strip().upper(), uid.strip().upper(), machine.strip().upper()
+    if (not re.fullmatch(r"[A-Z0-9][A-Z0-9._-]{0,254}", name, flags=re.ASCII) or
+        not re.fullmatch(r"[0-9A-F]{8}(?:-[0-9A-F]{4}){3}-[0-9A-F]{12}", uid, flags=re.ASCII) or
+        uid in ("00000000-0000-0000-0000-000000000000", "FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF") or
+        machine != name): hold("BOOT_HOST_INVALID")
+    if (event["logName"] != "System" or event["providerName"] != "Microsoft-Windows-Kernel-General" or
+        type(event["eventId"]) is not int or event["eventId"] != 12 or
+        type(event["recordId"]) is not int or event["recordId"] <= 0):
+        hold("BOOT_EVENT_INVALID")
+    def digest(obj):
+        return sha(json.dumps(obj, ensure_ascii=True, sort_keys=True, separators=(",", ":")).encode("utf-8"))
+    host_sha = digest({"osComputerName": name, "computerSystemProductUuid": uid})
+    boot_sha = digest({"logName": event["logName"], "providerName": event["providerName"],
+      "eventId": event["eventId"], "recordId": event["recordId"], "machineName": machine,
+      "timeCreatedUTC": event["timeCreatedUTC"], "startTimeUTC": event["startTimeUTC"]})
+    stable = "r139-hb2:" + sha((host_sha + "|" + boot_sha).encode("ascii"))
+    if (host_sha != proof.get("hostIdentitySha256") or boot_sha != proof.get("bootSessionSha256") or
+        stable != proof.get("hostBootId")): hold("BOOT_SESSION_OR_HOST_DRIFT")
+    observed = utc_v2(actual["observedUTC"])
+    cim, started, created = (utc_v2(actual["lastBootUTC"]), utc_v2(event["startTimeUTC"]),
+                             utc_v2(event["timeCreatedUTC"]))
+    baseline_cim = utc_v2(proof.get("lastBootUTC"))
+    baseline_start = utc_v2(proof.get("bootEventStartUTC"))
+    baseline_created = utc_v2(proof.get("bootEventCreatedUTC"))
+    second = 10_000_000
+    if (started != baseline_start or created != baseline_created or
+        abs(cim-started) > 2*second or
+        not 0 <= created-started <= 120*second or
+        abs(cim-baseline_cim) > 2*second or
+        max(cim, started, created) > observed): hold("BOOT_TIMESTAMP_BOUND")
+    base = proof.get("baselineClock")
+    if base != contract.get("baselineClockFromOriginalIntent") or not isinstance(base, dict):
+        hold("BOOT_BASELINE_CLOCK")
+    if set(parent_clock) != {"startUTC", "startMonotonic", "endUTC", "endMonotonic"}:
+        hold("BOOT_PARENT_SHAPE")
+    utc_v2(base.get("startUTC"), True)
+    utc_v2(base.get("endUTC"), True)
+    ps, pe = utc_v2(parent_clock["startUTC"], True), utc_v2(parent_clock["endUTC"], True)
+    numeric_v2(base.get("startMonotonic"))
+    numeric_v2(base.get("endMonotonic"))
+    pm0, pm1 = numeric_v2(parent_clock["startMonotonic"]), numeric_v2(parent_clock["endMonotonic"])
+    baseline_observed = utc_v2(proof.get("observedUTC"))
+    if (base.get("monotonicSource") != "python.time.monotonic" or
+        base.get("pythonPath") != proof.get("pythonPath") or
+        ps < baseline_observed or observed < baseline_observed or
+        pe < ps or pm1 < pm0 or Fraction(pm1)-Fraction(pm0) > 5):
+        hold("BOOT_CLOCK_REVERSED")
+    if abs(Fraction(pe-ps, second) - (Fraction(pm1)-Fraction(pm0))) > 2:
+        hold("BOOT_CLOCK_DRIFT")
+    if not ps-2*second <= observed <= pe+2*second:
+        hold("BOOT_OBSERVED_OUTSIDE_PARENT")
+    return stable
+
+def validate_v3_check_history(slot, receipts, actor, source_sha, test_sha):
+    """Pure cumulative check accounting, including failed earlier attempts."""
+    if (not isinstance(slot, dict) or set(slot) != {"used", "acceptedAttempt", "outcome",
+        "attemptReceipts", "receiptRef"} or type(slot["used"]) is not int or slot["used"] < 1 or
+        type(slot["acceptedAttempt"]) is not int or slot["acceptedAttempt"] != slot["used"] or
+        slot["outcome"] != "PASS" or not isinstance(slot["attemptReceipts"], list) or
+        len(slot["attemptReceipts"]) != slot["used"] or
+        slot["receiptRef"] != slot["attemptReceipts"][-1] or
+        not isinstance(receipts, list) or len(receipts) != slot["used"]):
+        hold("BOOT_V3_CHECK_SLOT")
+    required = {"kind", "actor", "status", "attempt", "historicalChecksSpent",
+                "originalWaitReturned", "exitCode", "designSha256", "testSha256",
+                "stdoutSha256", "stderrSha256", "stdoutPath", "stderrPath",
+                "startedAtUTC", "endedAtUTC"}
+    for number, receipt in enumerate(receipts, 1):
+        if (not isinstance(receipt, dict) or set(receipt) != required or
+            receipt.get("kind") != "R139_BOOT_IDENTITY_V3_FOCUSED_PYTHON_CHECK" or
+            receipt.get("actor") != actor or type(receipt.get("attempt")) is not int or
+            receipt["attempt"] != number or type(receipt.get("historicalChecksSpent")) is not int or
+            receipt["historicalChecksSpent"] != 10 or
+            receipt.get("status") not in {"PASS", "FAIL", "TIMEOUT", "UNKNOWN"} or
+            type(receipt.get("originalWaitReturned")) is not bool or
+            (receipt.get("exitCode") is not None and type(receipt["exitCode"]) is not int)):
+            hold("BOOT_V3_CHECK_RECEIPT_CONTENT")
+        for key in ("designSha256", "testSha256", "stdoutSha256", "stderrSha256"):
+            if not isinstance(receipt[key], str) or not re.fullmatch(r"[0-9a-f]{64}", receipt[key]):
+                hold("BOOT_V3_CHECK_HASH")
+        for key in ("stdoutPath", "stderrPath"):
+            if (not isinstance(receipt[key], str) or
+                not receipt[key].startswith(".cvf/runtime/r139_") or
+                not receipt[key].endswith(".bin")):
+                hold("BOOT_V3_CHECK_PRIVATE_PATH")
+        for key in ("startedAtUTC", "endedAtUTC"):
+            if not isinstance(receipt[key], str) or not receipt[key].endswith("+00:00"):
+                hold("BOOT_V3_CHECK_TIME_SHAPE")
+        if number < slot["used"]:
+            if (receipt["status"] == "PASS" and
+                (receipt["originalWaitReturned"] is not True or receipt["exitCode"] != 0)):
+                hold("BOOT_V3_EARLIER_PASS_CUSTODY")
+        elif (receipt["status"] != "PASS" or receipt["originalWaitReturned"] is not True or
+              receipt["exitCode"] != 0 or receipt["designSha256"] != source_sha or
+              receipt["testSha256"] != test_sha):
+            hold("BOOT_V3_ACCEPTED_CHECK_CONTENT")
+
+def reviewed_boot_v3_checks(r, build, pins):
+    """Require new v3 acceptance; the accepted v2 checks cannot release v3."""
+    v = build.get("bootIdentityV3Verification")
+    if (not isinstance(v, dict) or v.get("ownerAdmissionRef") != V3_ADMISSION_REF or
+        v.get("contractRef") != V3_CONTRACT_REF or
+        v.get("predecessorContractRef") != BOOT_CONTRACT_REF or
+        v.get("predecessorProofRef") != BOOT_PROOF_REF or
+        v.get("sourceChecksAccepted") is not True or
+        v.get("sourceCommit") != build.get("sourceCommit")):
+        hold("BOOT_V3_VERIFICATION_MISSING")
+    source_sha = sha(read(inside(V3_SOURCE, {V3_SOURCE})))
+    if git("show", "HEAD:" + V3_SOURCE) != read(inside(V3_SOURCE, {V3_SOURCE})):
+        hold("BOOT_V3_DESIGN_NOT_COMMITTED")
+    test_rel = "scripts/tests/test_r139_execution_supervisor.py"
+    test_sha = pins["sourceSha256"].get(test_rel)
+    if (v.get("designSha256") != source_sha or v.get("testSha256") != test_sha or
+        pins["sourceSha256"].get(V3_SOURCE) != source_sha or
+        not re.fullmatch(r"[0-9a-f]{64}", test_sha or "")):
+        hold("BOOT_V3_SOURCE_PIN_MISSING")
+    for actor in ("worker", "root"):
+        slot = v.get(actor + "FocusedPython")
+        if not isinstance(slot, dict): hold("BOOT_V3_CHECK_SLOT")
+        receipts = []
+        for ref in slot.get("attemptReceipts", []):
+            if (not isinstance(ref, dict) or set(ref) != {"path", "sha256"} or
+                not isinstance(ref["path"], str) or
+                not ref["path"].startswith(PROBE + "/boot_identity_v3_source_checks/") or
+                not ref["path"].endswith(".json")):
+                hold("BOOT_V3_CHECK_RECEIPT_REF")
+            receipts.append(committed(ref["path"], ref["sha256"]))
+        validate_v3_check_history(slot, receipts, actor, source_sha, test_sha)
+    def review(ref, path):
+        if not isinstance(ref, dict) or set(ref) != {"path", "sha256"} or ref.get("path") != path:
+            hold("BOOT_REVIEW_REF")
+        body = committed(path, ref["sha256"], parse=False)
+        if b"Status: REVIEW_PASS" not in body[:320]: hold("BOOT_REVIEW_STATUS")
+    review(v.get("independentSourceReviewRef"),
+           "docs/reviews/R139_CLOCK_V3_SOURCE_REVIEW_2026-10-26.md")
+    review(r.get("bootV3TechnicalReviewRef"),
+           "docs/reviews/R139_CLOCK_V3_G0_TECHNICAL_REVIEW_2026-10-26.md")
+def no_reparse(path):
+    p = Path(path)
+    if not p.is_absolute(): hold("ABSOLUTE_PATH_REQUIRED")
+    for q in (*reversed(p.parents), p):
+        if q.exists() or q.is_symlink():
+            a = q.lstat()
+            if (getattr(a, "st_file_attributes", 0) & stat.FILE_ATTRIBUTE_REPARSE_POINT) or q.is_symlink():
+                hold("REPARSE_COMPONENT:" + str(q))
+def read(path):
+    no_reparse(path)
+    return path.read_bytes()
+def inside(rel, allowed):
+    if not isinstance(rel, str) or rel not in allowed or "\\" in rel or Path(rel).is_absolute() or ".." in Path(rel).parts:
+        hold("PATH_NOT_ALLOWED")
+    p = ROOT / rel
+    no_reparse(p)
+    if p.resolve(strict=False) != p or not p.is_relative_to(ROOT): hold("PATH_ESCAPE_REPARSE")
+    return p
+def child(argv, seconds=10, accepted=(0,), return_exit=False, capture_query_clock=False):
+    global CHILD_N
+    if ENV is None or LOG_ROOT is None: hold("CHILD_ENV_OR_LOG_NOT_PINNED")
+    if OP_END is not None: seconds = min(seconds, OP_END - time.monotonic())
+    if seconds <= 0: hold("OPERATION_BUDGET_EXPIRED")
+    CHILD_N += 1
+    name = f"child_{CHILD_N:03d}"
+    begin_utc, begin_mono = datetime.now(timezone.utc).isoformat(), time.monotonic()
+    p, outcome, out, err = None, "START_FAILED", b"", b""
+    waits = []
+    query_clock = None
+    try:
+        if capture_query_clock:
+            query_clock = {"startUTC": datetime.now(timezone.utc).isoformat(timespec="microseconds"),
+                           "startMonotonic": time.monotonic()}
+        p = subprocess.Popen(argv, cwd=ROOT, env=ENV, shell=False, stdin=subprocess.DEVNULL,
+                             stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        waits.append({"kind": "original_communicate", "timeoutSeconds": seconds,
+                      "startedMonotonic": time.monotonic()})
+        out, err = p.communicate(timeout=seconds)
+        if capture_query_clock:
+            query_clock["endMonotonic"] = time.monotonic()
+            query_clock["endUTC"] = datetime.now(timezone.utc).isoformat(timespec="microseconds")
+        waits[-1]["returnedMonotonic"] = time.monotonic()
+        outcome = "WAIT_RETURNED"
+    except subprocess.TimeoutExpired as timeout_exc:
+        out, err = timeout_exc.stdout or b"", timeout_exc.stderr or b""
+        waits[-1]["timedOutMonotonic"] = time.monotonic()
+        outcome = "TIMED_OUT_ORIGINAL_WAIT_UNKNOWN"
+        try: p.terminate()  # exact held metadata child only
+        except OSError: pass
+        try:
+            remaining = max(0, min(2, OP_END - time.monotonic())) if OP_END else 2
+            waits.append({"kind": "post_terminate_original_communicate", "timeoutSeconds": remaining,
+                          "startedMonotonic": time.monotonic()})
+            out, err = p.communicate(timeout=remaining)
+            waits[-1]["returnedMonotonic"] = time.monotonic()
+            outcome = "TIMED_OUT_ORIGINAL_WAIT_RETURNED"
+        except subprocess.TimeoutExpired:
+            waits[-1]["timedOutMonotonic"] = time.monotonic()
+            try: p.kill()  # still the same exact metadata child; no Host/browser/product kill
+            except OSError: pass
+            try:
+                remaining = max(0, min(2, OP_END - time.monotonic())) if OP_END else 2
+                waits.append({"kind": "post_kill_original_communicate", "timeoutSeconds": remaining,
+                              "startedMonotonic": time.monotonic()})
+                out, err = p.communicate(timeout=remaining)
+                waits[-1]["returnedMonotonic"] = time.monotonic()
+                outcome = "TIMED_OUT_POST_KILL_ORIGINAL_WAIT_RETURNED"
+            except subprocess.TimeoutExpired:
+                waits[-1]["timedOutMonotonic"] = time.monotonic()
+                outcome = "TIMED_OUT_POST_KILL_ORIGINAL_WAIT_UNKNOWN"
+                HELD_CHILDREN.append((name, p))
+    finally:
+        # Owned ignored logs contain only fixed argv and scrubbed environment.
+        no_reparse(LOG_ROOT)
+        put_bytes_new(LOG_ROOT / (name + ".stdout.bin"), out)
+        put_bytes_new(LOG_ROOT / (name + ".stderr.bin"), err)
+        ledger = {"argv": argv, "cwd": str(ROOT), "environmentKeys": sorted(ENV),
+          "startUTC": begin_utc, "startMonotonic": begin_mono,
+          "endUTC": datetime.now(timezone.utc).isoformat(), "endMonotonic": time.monotonic(),
+          "stdoutBytes": len(out), "stdoutSha256": sha(out),
+          "stderrBytes": len(err), "stderrSha256": sha(err),
+          "originalWait": outcome, "waits": waits, "originalQueryClock": query_clock,
+          "exitCode": None if p is None else p.returncode}
+        put_new(LOG_ROOT / (name + ".json"), ledger)
+    if outcome != "WAIT_RETURNED": hold(outcome)
+    if p.returncode not in accepted: hold("COMMAND_EXIT_" + str(p.returncode))
+    if capture_query_clock:
+        if return_exit or not isinstance(query_clock, dict) or set(query_clock) != {
+            "startUTC", "startMonotonic", "endUTC", "endMonotonic"}:
+            hold("QUERY_CLOCK_CUSTODY")
+        return out, query_clock
+    return (p.returncode, out) if return_exit else out
+def git(*args, seconds=10): return child([GIT, *args], seconds)
+def git_optional(*args, seconds=10):
+    # A missing optional config key exits 1, with the same raw child custody.
+    return child([GIT, *args], seconds, accepted=(0, 1), return_exit=True)
+def clean():
+    if git("status", "--porcelain=v1", "--untracked-files=all", "-z"): hold("WORKTREE_DIRTY")
+def committed(rel, expected, parse=True):
+    p = inside(rel, {rel}); data = read(p)
+    if not re.fullmatch(r"[0-9a-f]{64}", expected) or sha(data) != expected: hold("HASH_PIN")
+    if git("show", "HEAD:" + rel) != data: hold("NOT_COMMITTED_EXACT_BYTES")
+    return json.loads(data) if parse else data
+def put_new(path, obj):
+    data = (json.dumps(obj, sort_keys=True, separators=(",", ":")) + "\n").encode()
+    return put_bytes_new(path, data)
+def put_bytes_new(path, data):
+    no_reparse(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    no_reparse(path)
+    with path.open("xb") as f: f.write(data); f.flush(); os.fsync(f.fileno())
+    return sha(data)
+def replace(path, data):
+    temp = path.with_name(path.name + ".r139-pending")
+    no_reparse(path); no_reparse(temp)
+    with temp.open("xb") as f: f.write(data); f.flush(); os.fsync(f.fileno())
+    no_reparse(path); no_reparse(temp)
+    os.replace(temp, path)
+def signal_once(path, obj):
+    temp = path.with_name(path.name + ".r139-pending")
+    no_reparse(path); no_reparse(temp)
+    if path.exists() or temp.exists(): hold("SIGNAL_PATH_OCCUPIED")
+    put_new(temp, obj)
+    no_reparse(path); no_reparse(temp)
+    if path.exists(): hold("SIGNAL_RACE")
+    os.replace(temp, path)
+def clock_check(start_utc, start_mono):
+    if OP_END is not None and time.monotonic() >= OP_END: hold("POST_RESERVATION_60S_EXPIRED")
+    elapsed_utc = (datetime.now(timezone.utc) - start_utc).total_seconds()
+    elapsed_mono = time.monotonic() - start_mono
+    if elapsed_utc < 0 or elapsed_mono < 0 or abs(elapsed_utc - elapsed_mono) > 2:
+        hold("CAMPAIGN_CLOCK_DRIFT")
+
+def nul_paths(raw):
+    if not raw.endswith(b"\0") and raw: hold("GIT_PATH_STREAM_NOT_NUL_TERMINATED")
+    try: names = [part.decode("utf-8", errors="strict") for part in raw.split(b"\0") if part]
+    except UnicodeError: hold("GIT_PATH_DECODE")
+    if len(names) != len(set(names)): hold("DUPLICATE_CHANGED_PATH")
+    for name in names:
+        if "\\" in name or name.startswith("/") or "/../" in "/" + name + "/":
+            hold("GIT_CHANGED_PATH_ESCAPE")
+    return set(names)
+
+def owned_marker(parent, name, obj):
+    p = parent / name
+    no_reparse(p)
+    if p.exists(): return False
+    put_new(p, obj)
+    return True
+
+def verified_terminal(r, reserve_sha):
+    """Only Root's exact scoped terminal marker can end control early."""
+    coord = inside(r["coordinationRoot"], {r["coordinationRoot"]})
+    path = coord / "root_terminal.json"
+    if not path.is_file(): return False
+    try:
+        data = json.loads(read(path))
+        return (data.get("trancheId") == "CCMAI-RUNTIME-139" and
+                data.get("campaignNonce") == r["nonce"] and
+                data.get("reservationSha256") == reserve_sha and
+                data.get("freshGrantSha256") == r["freshGrant"]["sha256"] and
+                data.get("status") in ("ROOT_G0_HOLD_TERMINAL", "ROOT_PRODUCT_TERMINAL_OBSERVED") and
+                isinstance(data.get("atUTC"), str) and data["atUTC"].endswith("Z"))
+    except (OSError, ValueError, TypeError): return False
+
+def validated_product_binding(r, reserve_sha):
+    """Root-authored post-G0 binding, never a new product root for G0 abort."""
+    coord = inside(r["coordinationRoot"], {r["coordinationRoot"]})
+    p = coord / "product_runtime_binding.json"
+    if not p.is_file(): return None
+    try:
+        b = json.loads(read(p))
+        if (b.get("trancheId") != "CCMAI-RUNTIME-139" or b.get("campaignNonce") != r["nonce"] or
+            b.get("reservationSha256") != reserve_sha or
+            b.get("freshGrantSha256") != r["freshGrant"]["sha256"] or
+            b.get("inheritedOwnerEnvelopeSha256") != r["inheritedOwnerEnvelope"]["sha256"] or
+            b.get("observationCapsSha256") != r["observationCapsRef"]["sha256"] or
+            b.get("browserProofContract") != "cua_page_target_v1" or
+            b.get("runtimeEffectAdmissionReviewed") is not True): return None
+        item = b["runtimeEffectAdmission"]
+        if not re.fullmatch(r"CVF_SESSION/authority/CCMAI-RUNTIME-139-[A-Za-z0-9_-]+\.json", item["path"]):
+            return None
+        raw = read(inside(item["path"], {item["path"]}))
+        if sha(raw) != item["sha256"]: return None
+        admission = json.loads(raw)
+        review = b["independentRuntimeReview"]
+        if not review["path"].startswith("docs/reviews/R139_") or not review["path"].endswith(".md"):
+            return None
+        review_raw = read(inside(review["path"], {review["path"]}))
+        if sha(review_raw) != review["sha256"]: return None
+        if (admission.get("campaignReservationSha256") != reserve_sha or
+            admission.get("ownerCuaAmendmentSha256") != r["freshGrant"]["sha256"] or
+            admission.get("inheritedOwnerEnvelopeSha256") != r["inheritedOwnerEnvelope"]["sha256"] or
+            admission.get("observationCapsRef") != r["observationCapsRef"] or
+            admission.get("browserProofContract") != "cua_page_target_v1" or
+            admission.get("runtimeRoot") != b.get("runtimeRoot") or
+            admission.get("runtimeRoot") != str(PRODUCT_ROOT) or
+            admission.get("campaignNonce") != r["nonce"] or
+            b.get("sourceCommit") != admission.get("sourceCommit") or
+            # Product/key/provider caps are enforced by the later immutable
+            # Runtime Effect Admission and source, never by activation alone.
+            admission.get("r139ApprovedEffectCaps") != r["newBudget"] or
+            admission.get("productRuntimeReleased") is not True): return None
+        root = Path(b["runtimeRoot"])
+        no_reparse(root)
+        if (not root.is_absolute() or root != PRODUCT_ROOT or
+            root.resolve(strict=False) != PRODUCT_ROOT or not root.is_dir()): return None
+        # The supervisor creates the exact root and run_intent after launch.
+        # A binding alone never authorizes a stop against an old product root.
+        intent = json.loads(read(root / "run_intent.json"))
+        reservation_path = inside(r["reservationPath"], {r["reservationPath"]})
+        reservation_raw = read(reservation_path)
+        reservation = json.loads(reservation_raw)
+        started = intent.get("startedAt")
+        g0 = datetime.fromisoformat(reservation["g0StartUTC"].replace("Z", "+00:00")).timestamp()
+        deadline = datetime.fromisoformat(reservation["deadlineUTC"].replace("Z", "+00:00")).timestamp()
+        if (sha(reservation_raw) != reserve_sha or
+            intent.get("admissionSha256") != item["sha256"] or
+            intent.get("sourceCommit") != admission.get("sourceCommit") or
+            type(intent.get("deadlineSeconds")) is not int or intent["deadlineSeconds"] != 1200 or
+            type(started) not in (int, float) or not math.isfinite(started) or
+            not g0 <= started <= deadline): return None
+        return root
+    except (OSError, ValueError, KeyError, TypeError, RuntimeError): return None
+
+def monitor_original_clock(r, reservation, reserve_sha):
+    """Root-owned original control process persists after worker release.
+
+    It records cutoff even for G0-only. It neither creates a product root on
+    abort nor controls Host/browser/parent processes. Native model cancellation
+    and OS scheduling have no hard guarantee; lateness is explicit evidence.
+    """
+    coord = inside(r["coordinationRoot"], {r["coordinationRoot"]})
+    g0_mono = reservation["g0Monotonic"]
+    stop_mono, end_mono = g0_mono + 1020, g0_mono + 1200
+    cutoff_sent = False
+    while True:
+        now = time.monotonic()
+        terminal = verified_terminal(r, reserve_sha)
+        if now >= stop_mono and not cutoff_sent:
+            cutoff_sent = True
+            runtime = validated_product_binding(r, reserve_sha)
+            stop_result = "G0_ONLY_NO_PRODUCT_ROOT"
+            if runtime is not None:
+                try:
+                    made = owned_marker(runtime, "stop_requested", {"reason": "original_campaign_cleanup_cutoff",
+                         "campaignNonce": r["nonce"], "reservationSha256": reserve_sha,
+                         "requestedAtUTC": datetime.now(timezone.utc).isoformat(),
+                         "requestedAtMonotonic": now})
+                    if made:
+                        stop_result = "OWNED_PRODUCT_STOP_REQUEST_WRITTEN"
+                    else:
+                        existing = json.loads(read(runtime / "stop_requested"))
+                        stop_result = ("OWNED_PRODUCT_STOP_ALREADY_PRESENT" if
+                            existing.get("campaignNonce") == r["nonce"] and
+                            existing.get("reservationSha256") == reserve_sha else
+                            "STOPFILE_IDENTITY_MISMATCH_HOLD")
+                except (OSError, RuntimeError) as exc:
+                    stop_result = "OWNED_PRODUCT_STOP_WRITE_HOLD:" + type(exc).__name__
+            elif (coord / "product_runtime_binding.json").exists():
+                stop_result = "PRODUCT_BINDING_INVALID_HOLD_NO_BLIND_STOP"
+            owned_marker(coord, "cleanup_cutoff.json", {"status": "CUTOFF_OBSERVED",
+                "atUTC": datetime.now(timezone.utc).isoformat(), "atMonotonic": now,
+                "lateSeconds": max(0, now-stop_mono), "reservationSha256": reserve_sha,
+                "campaignNonce": r["nonce"], "productStop": stop_result,
+                "rootTerminalVerified": terminal})
+        if now >= end_mono:
+            owned_marker(coord, "deadline_expired.json", {"status": "ORIGINAL_1200S_EXPIRED",
+                "atUTC": datetime.now(timezone.utc).isoformat(), "atMonotonic": now,
+                "lateSeconds": max(0, now-end_mono), "reservationSha256": reserve_sha,
+                "campaignNonce": r["nonce"], "rootTerminalVerified": terminal,
+                "outstandingMetadataChildren": [n for n, p in HELD_CHILDREN if p.poll() is None]})
+            return
+        # A verified Root terminal cannot make the +1020 duty disappear.
+        # Even an early verified terminal does not remap or erase the original
+        # +1200 expiration record. Remain managed until that clock expires.
+        time.sleep(min(0.25, max(0.01, stop_mono-now if not cutoff_sent else end_mono-now)))
+
+def preclock(recipe_path, recipe_sha, expected_head):
+    global GIT, ENV, LOG_ROOT
+    no_reparse(ROOT)
+    if Path.cwd().resolve() != ROOT: hold("PROJECT_CWD_REQUIRED")
+    no_reparse(PRODUCT_ROOT)
+    if (not PRODUCT_ROOT.is_absolute() or
+        PRODUCT_ROOT.resolve(strict=False) != PRODUCT_ROOT or
+        not PRODUCT_ROOT.is_relative_to(ROOT / ".cvf" / "runtime") or
+        PRODUCT_ROOT.exists()): hold("PRODUCT_RUNTIME_ROOT_NOT_FRESH")
+    if not recipe_path.startswith(PROBE + "/"): hold("RECIPE_SCOPE")
+    # Root passes the exact recipe SHA out of band. Pure file I/O precedes Git.
+    recipe_bytes = read(inside(recipe_path, {recipe_path}))
+    if not re.fullmatch(r"[0-9a-f]{64}", recipe_sha) or sha(recipe_bytes) != recipe_sha:
+        hold("RECIPE_SHA")
+    r = json.loads(recipe_bytes)
+    if (r.get("kind") != "R139_ROOT_ACTIVATION_RECIPE" or r.get("status") != "COMMITTED_PRECLOCK"
+        or r.get("trancheId") != "CCMAI-RUNTIME-139"): hold("RECIPE_KIND")
+    ref = r["acceptedBuildPinsRef"]
+    if not re.fullmatch(r"CVF_SESSION/authority/CCMAI-RUNTIME-139-[A-Za-z0-9_-]+\.json", ref["path"]):
+        hold("BUILD_PIN_RECORD_PATH")
+    record_bytes = read(inside(ref["path"], {ref["path"]}))
+    if sha(record_bytes) != ref["sha256"]: hold("BUILD_PIN_RECORD_SHA")
+    build = json.loads(record_bytes)
+    if (build.get("kind") != "ROOT_REVIEWED_R139_ACCEPTED_BUILD_PINS" or
+        build.get("rootReviewApproved") is not True or
+        build.get("ownerEnvelopeSha256") != r["freshGrant"]["sha256"] or
+        not re.fullmatch(r"[0-9a-f]{40}", build.get("sourceCommit", ""))):
+        hold("BUILD_PIN_RECORD_NOT_ACCEPTED")
+    pins = build["pins"]
+    source_set = set(pins["sourceSha256"])
+    if not SOURCE_NINE | {V3_SOURCE} <= source_set or not source_set <= SOURCE_NINE | ADMITTED_EXTRA_SOURCE:
+        hold("SOURCE_SET")
+    if set(pins["tools"]) != {"python", "git", "powershell", "docker", "node"}:
+        hold("TOOL_SET")
+    for key in ("python", "git", "powershell", "docker", "node"):
+        t = pins["tools"][key]; p = Path(t["path"])
+        if not p.is_absolute() or len(read(p)) != t["size"] or sha(read(p)) != t["sha256"]:
+            hold("TOOL_PIN")
+    if Path(pins["tools"]["python"]["path"]).resolve() != Path(sys.executable).resolve(): hold("PYTHON_PIN")
+    GIT = pins["tools"]["git"]["path"]
+    LOG_ROOT = inside(r["childLogRoot"], {r["childLogRoot"]})
+    if not r["childLogRoot"].startswith(".cvf/runtime/r139_") or LOG_ROOT.exists():
+        hold("CHILD_LOG_ROOT_NOT_EXCLUSIVE")
+    LOG_ROOT.mkdir(parents=True, exist_ok=False)
+    no_reparse(LOG_ROOT)
+    # Remove inherited per-process Git overrides only. Keep real system/global
+    # config, identity and hooks active; do not inject core.hooksPath or skip flags.
+    ENV = {k: os.environ[k] for k in ("SYSTEMROOT", "WINDIR", "USERPROFILE", "LOCALAPPDATA",
+                                     "APPDATA", "HOME", "XDG_CONFIG_HOME", "PROGRAMDATA",
+                                     "HOMEDRIVE", "HOMEPATH", "TEMP", "TMP") if k in os.environ}
+    ENV["PATH"] = os.pathsep.join((str(Path(GIT).parent), str(Path(sys.executable).parent), r"C:\Windows\System32"))
+    if any(k.upper().startswith("GIT_") for k in ENV): hold("AMBIENT_GIT_OVERRIDE_NOT_SCRUBBED")
+    committed(recipe_path, recipe_sha)
+    committed(ref["path"], ref["sha256"])
+    if not re.fullmatch(r"[0-9a-f]{40}", expected_head) or git("rev-parse", "HEAD").decode().strip() != expected_head:
+        hold("HEAD_DRIFT")
+    clean()
+    # These are mandatory preclock facts. Configured hooks must be allowed to
+    # run naturally at commit; their future exit/time is charged to the 60s op.
+    git("var", "GIT_AUTHOR_IDENT")
+    git("var", "GIT_COMMITTER_IDENT")
+    hook_rc, hook_value = git_optional("config", "--path", "--get", "core.hooksPath")
+    hook_path = (Path(hook_value.decode("utf-8").strip()) if hook_rc == 0 else
+                 Path(git("rev-parse", "--git-path", "hooks").decode("utf-8").strip()))
+    if not hook_path.is_absolute(): hook_path = ROOT / hook_path
+    no_reparse(hook_path)
+    if hook_path.exists() and not hook_path.is_dir(): hold("HOOK_CONFIG_NOT_DIRECTORY")
+    hook_files = {}
+    if hook_path.exists():
+        for hook in hook_path.iterdir():
+            no_reparse(hook)
+            if hook.is_file() and not hook.name.endswith(".sample"):
+                hook_files[hook.name] = sha(read(hook))
+    put_new(LOG_ROOT / "git_policy_readiness.json", {"authorIdentityObserved": True,
+        "committerIdentityObserved": True, "configuredHooksPath": str(hook_path),
+        "configuredHookHashes": hook_files, "ambientGitOverridesRemoved": True,
+        "systemGlobalConfigNotDisabled": True})
+    if not re.fullmatch(r"CVF_SESSION/authority/CCMAI-RUNTIME-139-[A-Za-z0-9_-]+-ADMISSION\.json", r["freshGrant"]["path"]):
+        hold("FRESH_GRANT_PATH")
+    grant = committed(r["freshGrant"]["path"], r["freshGrant"]["sha256"])
+    inherited = committed(r["inheritedOwnerEnvelope"]["path"], r["inheritedOwnerEnvelope"]["sha256"])
+    if r.get("observationCapsRef") != OBS_REF: hold("OBSERVATION_CAP_REF_INVALID")
+    obs = committed(OBS_REF["path"], OBS_REF["sha256"])
+    oc = obs.get("proposedReadonlyChanges", {})
+    if (obs.get("kind") != "OWNER_APPROVED_R139_CUA_OBSERVATION_CAP_AMENDMENT" or
+        obs.get("ownerApproved") is not True or
+        obs.get("parentCuaAmendment") != r["freshGrant"] or
+        obs.get("inheritedOwnerEnvelope") != r["inheritedOwnerEnvelope"] or
+        oc.get("globalMetadataEnumerationMaximum") != 3 or
+        oc.get("baselineMetadataEnumeration") != 1 or
+        oc.get("handoffMetadataEnumeration") != 1 or
+        oc.get("finalMetadataEnumeration") != 1 or
+        oc.get("g2StatusReadStartsMaximum") != 16 or
+        oc.get("automaticPostSendStatusPollStartsMaximum") != 12 or
+        oc.get("automaticPollSpacingSecondsMinimum") != 5 or
+        oc.get("automaticPollLifetimeSecondsMaximum") != 60 or
+        oc.get("eventDrivenStatusReadsMaximum") != 4): hold("OBSERVATION_CAP_NOT_ADMITTED")
+    if (grant.get("kind") != "OWNER_APPROVED_R139_INTERNAL_CUA_SOURCE_AND_CONDITIONAL_CONTINUATION" or
+        grant.get("ownerApproved") is not True or grant.get("trancheId") != "CCMAI-RUNTIME-139" or
+        grant.get("sourceGranted") is not True or
+        grant.get("previousOwnerEnvelope") != r["inheritedOwnerEnvelope"] or
+        grant.get("browserContractProposed", {}).get("proofContract") != "cua_page_target_v1" or
+        grant.get("browserContractProposed", {}).get("browserTool") != "supported_CUA_page_target" or
+        inherited.get("freshCampaignCap") != 1 or inherited.get("oldCampaignSpent") != 1 or
+        inherited.get("oldQueriesSpent") != 5 or inherited.get("providerPhysicalCap") != 1 or
+        inherited.get("maximumNewUSD") != 1 or
+        inherited.get("priorUnusedProspectiveAllowanceSupersededNotStacked") is not True or
+        inherited.get("olderUnknownProviderOutcomeRetained") is not True or
+        inherited.get("currentLineageProviderAttemptsObserved") != 0 or
+        inherited.get("historicalAggregateUnattributedProviderAttempts") != 1 or
+        inherited.get("historicalLineage") != "UNKNOWN"): hold("FRESH_GRANT")
+    if not git("merge-base", "--is-ancestor", build["sourceCommit"], "HEAD") == b"":
+        hold("BUILD_COMMIT_ANCESTRY")
+    if (r.get("bootRecoveryAdmission") != BOOT_RECOVERY_REF or
+        r.get("bootV3Admission") != V3_ADMISSION_REF or
+        r.get("bootIdentityContract") != V3_CONTRACT_REF or
+        r.get("bootProof") != dict(BOOT_PROOF_REF, hostBootId=r.get("bootProof", {}).get("hostBootId"))):
+        hold("BOOT_V3_REFS")
+    recovery = committed(BOOT_RECOVERY_REF["path"], BOOT_RECOVERY_REF["sha256"])
+    v3_admission = committed(V3_ADMISSION_REF["path"], V3_ADMISSION_REF["sha256"])
+    committed(BOOT_CONTRACT_REF["path"], BOOT_CONTRACT_REF["sha256"])
+    contract = committed(V3_CONTRACT_REF["path"], V3_CONTRACT_REF["sha256"])
+    if (v3_admission.get("kind") != "OWNER_DIRECTED_R139_PINNED_CORE_CLOCK_AND_RESUME_REPAIR" or
+        v3_admission.get("ownerApproved") is not True or
+        v3_admission.get("trancheId") != "CCMAI-RUNTIME-139" or
+        v3_admission.get("clockSuccessor", {}).get("singleSharedFutureControllerSlot") != 1 or
+        v3_admission.get("clockSuccessor", {}).get("v2ReleaseSupersededDisabled") is not True or
+        v3_admission.get("currentlyReleasedEffects", {}).get("controller") != 0 or
+        contract.get("predecessorProofRef") != BOOT_PROOF_REF or
+        contract.get("predecessorContractRef") != BOOT_CONTRACT_REF):
+        hold("BOOT_V3_ADMISSION_BOUNDARY")
+    source_cap = {"authoringPasses": 1, "consolidatedRepairPasses": 1,
+                  "workerFocusedPython": 1, "rootFocusedPython": 1,
+                  "goCompile": 0, "goTests": 0}
+    accounting = {"oldSpent": 8, "newCap": 2, "totalLineageCap": 10,
+                  "oldFailedAttemptRetained": True}
+    runtime_cap = {"oneUnspentCampaign": 1, "wholeCampaignSeconds": 1200,
+      "cleanupCutoffSeconds": 1020, "serviceQueries": 5, "cuaMethods": 64,
+      "cuaStages": [8, 4, 48, 4], "tabMetadataInventories": 3,
+      "ownedTabs": 1, "g2StatusStarts": 16, "physicalProviderCalls": 1,
+      "maximumUSD": 1, "automaticRetry": 0}
+    preclock_cap = {"additionalCap": 1, "oldAttempts": 1,
+      "oldAttemptOutcome": "EXIT1_CURRENT_HOST_BOOT_DRIFT_BEFORE_RESERVATION",
+      "newAttemptConditionalOn": ["usable identity capability", "accepted explicit identity contract",
+        "independent R2 source and packet review", "two bounded focused check receipts",
+        "exact clean normal commit", "fresh exclusive paths and original Popen/wait/exit custody"],
+      "oldAttemptNeverResetOrRetried": True}
+    if (recovery.get("sourceBudget") != source_cap or recovery.get("checkAccounting") != accounting or
+        recovery.get("unchangedRuntimeCaps") != runtime_cap or
+        recovery.get("preclockInvocation") != preclock_cap or
+        recovery.get("oneExistingOrder") is not True or recovery.get("newTranches") != 0):
+        hold("BOOT_RECOVERY_EFFECT_BOUNDARY")
+    reviewed_boot_v3_checks(r, build, pins)
+    boot = committed(r["bootProof"]["path"], r["bootProof"]["sha256"])
+    if (r["bootProof"]["path"] != BOOT_PROOF_REF["path"] or
+        r["bootProof"]["sha256"] != BOOT_PROOF_REF["sha256"] or
+        boot.get("hostBootId") != r["bootProof"].get("hostBootId") or
+        boot.get("pythonPath") != pins["tools"]["python"]["path"] or
+        boot.get("capabilityReceiptRef") != {"path": PROBE + "/cua_boot_identity_capability_20261025.json",
+          "sha256": "284f47404e8f8e40c5ff1f42bebaf2276dc8c1390914e56b67521a476e90346e"}):
+        hold("BOOT_PROOF")
+    committed(boot["capabilityReceiptRef"]["path"], boot["capabilityReceiptRef"]["sha256"])
+    observation = recovery.get("metadataObservation", {})
+    argv = observation.get("argv")
+    if (recovery.get("kind") != "OWNER_APPROVED_R139_BOOT_IDENTITY_RECOVERY" or
+        recovery.get("ownerApproved") is not True or recovery.get("trancheId") != "CCMAI-RUNTIME-139" or
+        observation.get("cap") != 1 or observation.get("timeoutSeconds") != 5 or
+        observation.get("automaticRetry") != 0 or not isinstance(argv, list) or len(argv) != 5 or
+        argv[:4] != [pins["tools"]["powershell"]["path"], "-NoProfile", "-NonInteractive", "-Command"] or
+        observation.get("powershellPin") != pins["tools"]["powershell"]):
+        hold("BOOT_QUERY_ADMISSION")
+    # The admission's exact command is one additional argv element after -Command.
+    if (len(argv) != 5 or not isinstance(argv[4], str) or
+        sha(argv[4].encode("utf-8")) != observation.get("queryScriptSha256")):
+        hold("BOOT_QUERY_SCRIPT_PIN")
+    actual_raw, query_clock = child(argv, 5, capture_query_clock=True)
+    actual_boot = validate_boot_identity_v3(boot, contract, actual_raw, query_clock)
+    if actual_boot != boot["hostBootId"]: hold("BOOT_DERIVED_ID_DRIFT")
+    cua_tasks = []
+    for who in ("root", "internal", "cuaProducer", "cuaObserver"):
+        item = r["actorAcks"][who]; ack = committed(item["path"], item["sha256"])
+        if (ack.get("ready") is not True or ack.get("freshGrantSha256") != r["freshGrant"]["sha256"] or
+            ack.get("inheritedOwnerEnvelopeSha256") != r["inheritedOwnerEnvelope"]["sha256"] or
+            ack.get("observationCapsSha256") != OBS_REF["sha256"]):
+            hold("ACTOR_ACK")
+        if who in ("cuaProducer", "cuaObserver") and not ack.get("collaborationTaskId"):
+            hold("CUA_TASK_ID_ACK")
+        if who in ("cuaProducer", "cuaObserver"):
+            cua_tasks.append(ack["collaborationTaskId"])
+        if who == "root" and (ack.get("originalControlPopenCustodian") != "Root" or
+                              ack.get("originalControlWaitExitReceiptPlanned") is not True):
+            hold("ROOT_MANAGED_CONTROL_HANDLE_ACK")
+    if (r.get("operator") != "Owner in this conversation" or r.get("operatorAvailable") is not True or
+        r.get("oldResourceExclusionReviewed") is not True or len(set(cua_tasks)) != 2): hold("OWNERSHIP")
+    coord = r["coordinationRoot"]
+    if not coord.startswith(".cvf/runtime/r139_"): hold("COORD_SCOPE")
+    cpath = inside(coord, {coord})
+    if not cpath.is_dir() or {p.name for p in cpath.iterdir()} != {"owner.json"}:
+        hold("COORD_NOT_EXCLUSIVE")
+    owner = json.loads(read(cpath / "owner.json"))
+    if (sha(read(cpath / "owner.json")) != r["coordinationOwnerSha256"] or
+        owner.get("freshGrantSha256") != r["freshGrant"]["sha256"] or
+        owner.get("rootExclusive") is not True): hold("COORD_OWNER")
+    if set(r["oldSha256"]) != set(CANON) or set(r["canonicalTemplates"]) != set(CANON): hold("CANON_SET")
+    for rel in CANON:
+        if sha(read(inside(rel, ALLOWED))) != r["oldSha256"][rel]: hold("CANON_DRIFT")
+        template = r["canonicalTemplates"][rel]
+        if not isinstance(template, str) or set(re.findall(r"\{\{[^{}]+\}\}", template)) - TOKENS:
+            hold("TEMPLATE_TOKENS")
+    for rel, value in pins["sourceSha256"].items():
+        if sha(read(inside(rel, {rel}))) != value: hold("SOURCE_PIN")
+    for tree in ("backend", "frontend"):
+        if git("rev-parse", "HEAD:" + tree).decode().strip() != pins[tree + "Tree"]: hold("TREE_PIN")
+    item = pins["binary"]
+    binary = read(inside(item["path"], {item["path"]}))
+    if len(binary) != item["size"] or sha(binary) != item["sha256"]: hold("BINARY_PIN")
+    if pins["viteCli"]["path"] != "frontend/node_modules/vite/bin/vite.js": hold("VITE_PATH")
+    vite = read(inside(pins["viteCli"]["path"], {pins["viteCli"]["path"]}))
+    if len(vite) != pins["viteCli"]["size"] or sha(vite) != pins["viteCli"]["sha256"]:
+        hold("VITE_PIN")
+    for key in ("reservation", "signal", "failure"):
+        rel = r[key + "Path"]
+        if not rel.startswith(".cvf/runtime/r139_") or not rel.endswith(".json") or inside(rel, {rel}).exists():
+            hold("OWNED_PATH_OCCUPIED")
+    if inside(RECEIPT, ALLOWED).exists(): hold("RECEIPT_OCCUPIED")
+    source_budget = {"authoringPasses": 1, "consolidatedRepairPasses": 1,
+        "workerFocusedPython": 1, "workerOfflineGoCompile": 1,
+        "rootFocusedPython": 1, "rootAuditedPureGo": 1}
+    if (r["freshGrant"]["sha256"] != build["ownerEnvelopeSha256"] or
+        build.get("inheritedOwnerEnvelopeSha256") != r["inheritedOwnerEnvelope"]["sha256"] or
+        r["freshSourceCheckBudgetOutsideClock"] != source_budget or
+        grant.get("sourceBudget") != source_budget or
+        build.get("sourceChecksAccepted") is not True): hold("SOURCE_BUDGET_BOUNDARY")
+    cap = r["newBudget"]
+    required = {"oneCampaign": 1, "internalReadOnlyQueries": 5,
+      "browserWorkerStagesMax": 4, "cuaApiMethodsMax": 64,
+      "cuaStageMethodsMax": {"g0Producer": 8, "g0IndependentObserver": 4, "g2ProductUi": 48, "terminal": 4},
+      "g2CapturesMax": 4, "newOwnedPages": 1, "creationNavigation": 1,
+      "samePageControlNavigation": 1, "pageReadObservationsMax": 4,
+      "originalCapturesMax": 2, "exactFinalCloseMax": 1,
+      "baselineMetadataEnumeration": 1, "handoffMetadataEnumeration": 1,
+      "finalMetadataEnumeration": 1, "globalMetadataEnumerationMaximum": 3,
+      "nativeExecutePOSTMax": 8,
+      "browserExecutePOSTMax": 1, "grantsMax": 3, "authPOSTMax": 4,
+      "statusReadStartsMax": 16, "automaticPostSendStatusPollStartsMax": 12,
+      "eventDrivenStatusReadsMax": 4, "automaticPollSpacingSecondsMin": 5,
+      "automaticPollLifetimeSecondsMax": 60, "physicalProviderAttemptsMax": 1,
+      "newUSDMax": 1, "keyContentReadsMax": 1, "requestBytesMax": 6000,
+      "completionTokensMax": 768, "fixtureStartsMax": 1,
+      "fixtureFinalStopsMax": 1, "backendStartsMax": 1, "viteStartsMax": 1,
+      "publicTariffRefreshIfNeededMax": 1, "dockerQuerySecondsMax": 20,
+      "powershellQuerySecondsMax": 5, "automaticRetry": 0,
+      "sourceChecksDuringCampaign": 0,
+      "wholeCampaignSeconds": 1200, "stopBeforeSeconds": 1020,
+      "cleanupReserveSeconds": 180, "oldUnusedProviderAllowanceSupersededNotStacked": True}
+    if cap != required: hold("EFFECT_CAPS")
+    gc = inherited["caps"]
+    grant_bound = {"oneCampaign": gc["campaigns"], "internalReadOnlyQueries": gc["readonlyQueries"],
+        "browserWorkerStagesMax": gc["browserTaskCalls"],
+        "cuaApiMethodsMax": grant["browserOperationBudgetProposed"]["maximumAttemptedCuaInvocations"],
+        "cuaStageMethodsMax": grant["browserOperationBudgetProposed"]["stages"],
+        "g2CapturesMax": grant["browserOperationBudgetProposed"]["g2CapturesMaximum"],
+        "newOwnedPages": gc["ownedExplicitPages"],
+        "creationNavigation": gc["creationNavigation"], "samePageControlNavigation": gc["samePageControlNavigation"],
+        "pageReadObservationsMax": gc["g0ReadObservations"], "originalCapturesMax": gc["g0Captures"],
+         "exactFinalCloseMax": gc["finalExactPageClose"],
+         "baselineMetadataEnumeration": oc["baselineMetadataEnumeration"],
+         "handoffMetadataEnumeration": oc["handoffMetadataEnumeration"],
+         "finalMetadataEnumeration": oc["finalMetadataEnumeration"],
+         "globalMetadataEnumerationMaximum": oc["globalMetadataEnumerationMaximum"],
+        "nativeExecutePOSTMax": gc["nativeExecutePOST"], "browserExecutePOSTMax": gc["browserExecutePOST"],
+        "grantsMax": gc["grants"], "authPOSTMax": gc["authPOST"],
+        "statusReadStartsMax": oc["g2StatusReadStartsMaximum"],
+        "automaticPostSendStatusPollStartsMax": oc["automaticPostSendStatusPollStartsMaximum"],
+        "eventDrivenStatusReadsMax": oc["eventDrivenStatusReadsMaximum"],
+        "automaticPollSpacingSecondsMin": oc["automaticPollSpacingSecondsMinimum"],
+        "automaticPollLifetimeSecondsMax": oc["automaticPollLifetimeSecondsMaximum"],
+        "physicalProviderAttemptsMax": gc["providerPhysicalCalls"], "newUSDMax": gc["maximumUSD"],
+         "keyContentReadsMax": gc["keyContentReads"], "requestBytesMax": gc["requestBytes"],
+         "completionTokensMax": gc["completionTokens"],
+         "fixtureStartsMax": gc["fixtureStarts"], "fixtureFinalStopsMax": gc["fixtureFinalStops"],
+         "backendStartsMax": gc["backendStarts"], "viteStartsMax": gc["viteStarts"],
+         "publicTariffRefreshIfNeededMax": gc["publicTariffRefreshIfNeeded"],
+         "dockerQuerySecondsMax": gc["dockerQuerySecondsMax"],
+         "powershellQuerySecondsMax": gc["powershellQuerySecondsMax"],
+        "automaticRetry": gc["automaticRetry"], "sourceChecksDuringCampaign": 0,
+        "wholeCampaignSeconds": gc["lifecycleSeconds"], "stopBeforeSeconds": gc["lifecycleSeconds"] - gc["cleanupReserveSeconds"],
+        "cleanupReserveSeconds": gc["cleanupReserveSeconds"], "oldUnusedProviderAllowanceSupersededNotStacked":
+        inherited["priorUnusedProspectiveAllowanceSupersededNotStacked"]}
+    if cap != grant_bound: hold("GRANT_EFFECT_CAPS")
+    # Preserve the inherited privacy baseline while applying only the exact
+    # committed Owner exception for one metadata read at independent handoff.
+    if (inherited["privacyScope"]["tabMetadataOnly"] is not True or
+        inherited["privacyScope"]["baselineAndFinalOnly"] is not True or
+        oc.get("handoffMetadataEnumeration") != 1 or
+        oc.get("noExtraGlobalInventory") is not True or
+        oc.get("noUnrelatedTabContentCaptureOrControl") is not True or
+        oc.get("rawMetadataPrivateEvidenceIdsOrDigestsOnly") is not True or
+        oc.get("spacingAndLifetimeScope") != "automatic post-send polling only; event-driven loads recorded separately" or
+        oc.get("eventDrivenCategories") != ["initial_writer_load", "publication_version_watch_reload",
+                                            "one_deliberate_writer_reload", "reader_load"] or
+        inherited["privacyScope"]["unrelatedTabDOMContent"] is not False or
+        inherited["privacyScope"]["unrelatedTabScreenshotsOrControl"] is not False or
+        not r.get("protectedBaselineReference") or not r.get("cuaPageTargetPlanReference") or
+        not r.get("cuaBrowserOperationPlanReference")):
+        hold("CUA_SCOPE_NOT_ADMITTED")
+    for key in ("protectedBaselineReference", "cuaPageTargetPlanReference", "cuaBrowserOperationPlanReference"):
+        item = r[key]
+        if not item["path"].startswith("docs/reviews/"): hold("REFERENCE_SCOPE")
+        committed(item["path"], item["sha256"], parse=False)
+    for rel, value in r["protectedUnchangedHashes"]["files"].items():
+        if not rel.startswith(("CVF_SESSION/authority/", "docs/reviews/", "scripts/", "backend/", "frontend/", ".cvf/")):
+            hold("PROTECTED_SCOPE")
+        if sha(read(inside(rel, {rel}))) != value: hold("PROTECTED_FILE_DRIFT")
+    sections = r["protectedUnchangedHashes"].get("workOrderPinnedSections")
+    if not sections: hold("PINNED_SECTIONS_NOT_REVIEWED")
+    order = read(inside("docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md", ALLOWED)).replace(b"\r\n", b"\n")
+    for section in sections.values():
+        begin, finish = section["startMarker"].encode(), section["endMarker"].encode()
+        if order.count(begin) != 1 or order.count(finish) != 1 or order.index(begin) >= order.index(finish):
+            hold("PINNED_SECTION_MARKER")
+        if sha(order[order.index(begin):order.index(finish)].rstrip() + b"\n") != section["sha256"]:
+            hold("PINNED_SECTION_DRIFT")
+    return r, expected_head, pins
+
+def activate(r, base, pins):
+    global OP_END, RESERVATION, RECIPE
+    clean()
+    if git("rev-parse", "HEAD").decode().strip() != base: hold("HEAD_BEFORE_RESERVE")
+    nonce = r["nonce"]
+    if not isinstance(nonce, str) or not re.fullmatch(r"[0-9a-f]{32}", nonce): hold("NONCE")
+    now, mono = datetime.now(timezone.utc), time.monotonic()
+    stamp = lambda d: d.strftime("%Y-%m-%dT%H:%M:%S.%fZ")
+    start, stop, end = stamp(now), stamp(now + timedelta(seconds=1020)), stamp(now + timedelta(seconds=1200))
+    reservation = {"status": "RESERVED_CONSUMED_PENDING_G0_PROOF", "trancheId": "CCMAI-RUNTIME-139",
+      "nativeContractId": r["nativeContractId"], "campaignNonce": nonce, "cap": 1, "usedOrUncertain": 1,
+      "g0StartUTC": start, "reservedAtUTC": start, "g0Monotonic": mono,
+      "monotonicSource": "python.time.monotonic", "pythonPath": pins["tools"]["python"]["path"],
+      "hostBootId": r["bootProof"]["hostBootId"], "deadlineUTC": end, "stopRequestedByUTC": stop,
+      "stopMonotonic": mono + 1020, "deadlineMonotonic": mono + 1200,
+      "cleanupReserveSeconds": 180, "committedDispatchHead": base,
+      "freshGrantSha256": r["freshGrant"]["sha256"],
+      "inheritedOwnerEnvelopeSha256": r["inheritedOwnerEnvelope"]["sha256"],
+      "observationCapsSha256": OBS_REF["sha256"]}
+    RECIPE = r
+    RESERVATION = reservation
+    OP_END = mono + 60
+    reserve_sha = None
+    # Reservation creation itself is in the consumed/uncertain failure envelope.
+    try:
+        reserve_sha = put_new(inside(r["reservationPath"], {r["reservationPath"]}), reservation)
+        clock_check(now, mono)
+        values = {"{{G0_UTC}}": start, "{{G0_MONO}}": str(mono), "{{STOP_UTC}}": stop,
+          "{{DEADLINE_UTC}}": end, "{{RESERVATION_SHA256}}": reserve_sha,
+          "{{RESERVATION_PATH}}": r["reservationPath"], "{{BASE_HEAD}}": base, "{{NONCE}}": nonce}
+        for rel in CANON:
+            clock_check(now, mono)
+            text = r["canonicalTemplates"][rel]
+            for key, val in values.items(): text = text.replace(key, val)
+            if "{{" in text or "}}" in text: hold("UNFILLED_TOKEN")
+            replace(inside(rel, ALLOWED), text.encode("utf-8"))
+        clock_check(now, mono)
+        put_new(inside(RECEIPT, ALLOWED), {"status": "RESERVED_CANONICAL_PENDING_GATES",
+          "reservationPath": r["reservationPath"], "reservationSha256": reserve_sha,
+          "originalDispatchHead": base, "g0StartUTC": start, "deadlineUTC": end})
+        fixed = (
+          [pins["tools"]["powershell"]["path"], "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File", "scripts/manage_cvf_downstream_catalog.ps1", "-Write", "-ProjectPath", str(ROOT)],
+          [sys.executable, "-B", "scripts/cvf_downstream_gate.py", "preflight"],
+          [sys.executable, "-B", "scripts/cvf_gates/cvf_downstream_gate_runner.py", "run", "--phase", "pre-commit", "--project-root", ".", "--packet", "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md", "--packet", RECEIPT])
+        for argv in fixed: child(argv, OP_END - time.monotonic())
+        changed = nul_paths(git("diff", "--name-only", "-z"))
+        staged_before = nul_paths(git("diff", "--cached", "--name-only", "-z"))
+        untracked = nul_paths(git("ls-files", "--others", "--exclude-standard", "-z"))
+        if staged_before or not (changed | untracked) or (changed | untracked) - ALLOWED:
+            hold("CHANGED_SET")
+        for rel in changed | untracked: inside(rel, ALLOWED)
+        child([GIT, "add", "--", *sorted(changed | untracked)], OP_END - time.monotonic())
+        staged = nul_paths(git("diff", "--cached", "--name-only", "-z"))
+        unstaged_after = nul_paths(git("diff", "--name-only", "-z"))
+        untracked_after = nul_paths(git("ls-files", "--others", "--exclude-standard", "-z"))
+        if staged != changed | untracked or unstaged_after or untracked_after: hold("STAGED_SET")
+        child([GIT, "commit", "-m", "R139 reserve approved integrated G0 campaign"], OP_END - time.monotonic())
+        head = git("rev-parse", "HEAD").decode().strip()
+        clean()
+        clock_check(now, mono)
+        if head == base: hold("COMMIT_OR_60S")
+        signal_once(inside(r["signalPath"], {r["signalPath"]}),
+          {"status": "ROOT_G0_RELEASE", "currentHead": head,
+           "originalReservationBaseHead": base, "reservationPath": r["reservationPath"],
+           "reservationSha256": reserve_sha, "freshGrantSha256": r["freshGrant"]["sha256"],
+           "campaignNonce": nonce, "g0StartUTC": start, "g0Monotonic": mono,
+           "stopRequestedByUTC": stop, "deadlineUTC": end,
+           "productRuntimeReleased": False, "providerReleased": False})
+    except BaseException as exc:
+        try: put_new(inside(r["failurePath"], {r["failurePath"]}),
+          {"status": "CONSUMED_OR_UNCERTAIN_HOLD_NO_WORKER_SIGNAL", "reservationSha256": reserve_sha,
+           "reasonType": type(exc).__name__, "reason": str(exc),
+           "observedAtUTC": stamp(datetime.now(timezone.utc))})
+        except BaseException: pass
+        raise
+
+def main():
+    if len(sys.argv) != 4: hold("EXACT_RECIPE_PATH_SHA_AND_HEAD_REQUIRED")
+    try:
+        activate(*preclock(sys.argv[1], sys.argv[2], sys.argv[3]))
+    finally:
+        # The original campaign clock survives both signal and G0-only abort.
+        # A stubborn metadata child never causes an unbounded blocking wait.
+        if RESERVATION is not None and RECIPE is not None:
+            reserve_path = inside(RECIPE["reservationPath"], {RECIPE["reservationPath"]})
+            reserve_sha = sha(read(reserve_path)) if reserve_path.is_file() else "UNWRITTEN_UNCERTAIN"
+            monitor_original_clock(RECIPE, RESERVATION, reserve_sha)
+        for name, process in HELD_CHILDREN:
+            code = process.poll()
+            put_new(LOG_ROOT / (name + ".late_wait.json"),
+                {"originalWaitEventuallyReturned": code is not None, "exitCode": code,
+                 "atUTC": datetime.now(timezone.utc).isoformat(),
+                 "unknownIfNone": code is None})
+if __name__ == "__main__": main()

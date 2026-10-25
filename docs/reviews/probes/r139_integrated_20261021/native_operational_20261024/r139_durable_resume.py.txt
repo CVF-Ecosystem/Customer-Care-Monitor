@@ -1,0 +1,380 @@
+"""R139 durable offline checkpoint ledger (code-as-data).
+
+No provider, browser or process callback is executed here. Callers must first
+persist an external effect intent, then perform only an independently admitted
+effect. An orphaned intent is UNKNOWN and cannot be replayed automatically.
+"""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import os
+from pathlib import Path
+import tempfile
+from datetime import datetime, timezone
+from copy import deepcopy
+
+SCHEMA = "r139.durableResume@1"
+RECEIPT_SCHEMA = "r139.originalReturn@1"
+STATES = {"planned", "reserved", "inflight", "complete", "unknown"}
+
+
+def digest(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def canonical(value):
+    return json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("utf-8")
+
+
+def file_digest(path):
+    return digest(Path(path).read_bytes())
+
+
+def _strict_json(data):
+    def unique(pairs):
+        obj = {}
+        for key, value in pairs:
+            if key in obj:
+                raise ValueError("duplicate ledger key")
+            obj[key] = value
+        return obj
+    return json.loads(data, object_pairs_hook=unique)
+
+
+def _atomic(path, data):
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fd, temporary = tempfile.mkstemp(prefix=".r139-", dir=path.parent)
+    try:
+        with os.fdopen(fd, "wb") as output:
+            output.write(data)
+            output.flush()
+            os.fsync(output.fileno())
+        os.replace(temporary, path)
+    finally:
+        if os.path.exists(temporary):
+            os.unlink(temporary)
+
+
+class ResumeLedger:
+    def __init__(self, path, *, binding, source_files, limits, deadline_utc):
+        self.path = Path(path).resolve()
+        self.lock_path = self.path.with_suffix(self.path.suffix + ".lock")
+        self.anchor_path = self.path.with_suffix(self.path.suffix + ".anchor")
+        self.binding = deepcopy(binding)
+        self.source_files = {str(Path(p).resolve()): expected for p, expected in source_files.items()}
+        self.limits = dict(limits)
+        self.deadline = deadline_utc
+        self._lock = None
+        self.data = None
+        self._faulted = False
+        if not isinstance(binding, dict) or set(binding) != {
+                "order", "source", "contract", "pins", "inputs", "checkpointHashes",
+                "ledgerPath", "campaignId"}:
+            raise ValueError("incomplete frozen binding")
+        if (any(not isinstance(binding[key], str) or not binding[key] for key in
+                ("order", "source", "contract", "campaignId")) or
+                any(not isinstance(binding[key], dict) for key in
+                    ("pins", "inputs", "checkpointHashes"))):
+            raise ValueError("frozen binding types invalid")
+        if binding["ledgerPath"] != str(self.path):
+            raise ValueError("ledger path differs from frozen authority")
+        if not all(isinstance(x, str) and len(x) == 64 for x in self.source_files.values()):
+            raise ValueError("source digest map invalid")
+        for group in ("inputs", "checkpointHashes"):
+            if any(self.source_files.get(str(Path(path).resolve())) != expected
+                   for path, expected in binding[group].items()):
+                raise ValueError("input or checkpoint hash lacks frozen file")
+        if not isinstance(limits, dict) or not limits or any(
+                not isinstance(v, int) or isinstance(v, bool) or v < 0 for v in limits.values()):
+            raise ValueError("limits invalid")
+        self._parse_deadline(deadline_utc)
+
+    @staticmethod
+    def _parse_deadline(value):
+        try:
+            parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+        except (TypeError, ValueError) as exc:
+            raise ValueError("deadline invalid") from exc
+        if parsed.tzinfo is None or parsed.utcoffset().total_seconds() != 0:
+            raise ValueError("deadline must be UTC")
+        return parsed
+
+    def _lock_file(self):
+        self.lock_path.parent.mkdir(parents=True, exist_ok=True)
+        handle = open(self.lock_path, "a+b")
+        try:
+            if os.name == "nt":
+                import msvcrt
+                handle.seek(0)
+                if not handle.read(1):
+                    handle.write(b"0")
+                    handle.flush()
+                handle.seek(0)
+                msvcrt.locking(handle.fileno(), msvcrt.LK_NBLCK, 1)
+            else:
+                import fcntl
+                fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except (OSError, BlockingIOError) as exc:
+            handle.close()
+            raise ValueError("another resume writer holds the ledger") from exc
+        self._lock = handle
+
+    def _unlock_file(self):
+        if self._lock is None:
+            return
+        try:
+            if os.name == "nt":
+                import msvcrt
+                self._lock.seek(0)
+                msvcrt.locking(self._lock.fileno(), msvcrt.LK_UNLCK, 1)
+            else:
+                import fcntl
+                fcntl.flock(self._lock.fileno(), fcntl.LOCK_UN)
+        finally:
+            self._lock.close()
+            self._lock = None
+
+    def _validate_sources(self):
+        for path, expected in self.source_files.items():
+            if not Path(path).is_file() or file_digest(path) != expected:
+                raise ValueError("frozen source/input changed")
+
+    def _seal(self):
+        if self._faulted:
+            raise ValueError("ledger writer failed; reopen and verify before continuing")
+        payload = dict(self.data)
+        payload.pop("selfSha256", None)
+        self.data["selfSha256"] = digest(canonical(payload))
+        try:
+            _atomic(self.path, canonical(self.data))
+        except BaseException:
+            self._faulted = True
+            raise
+
+    def _anchor_bytes(self):
+        return canonical({"schema": SCHEMA, "bindingSha256": digest(canonical(self.binding)),
+                          "sourceFiles": self.source_files, "limits": self.limits,
+                          "deadlineUTC": self.deadline})
+
+    def _create_anchor(self):
+        data = self._anchor_bytes()
+        fd = os.open(self.anchor_path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+        with os.fdopen(fd, "wb") as output:
+            output.write(data)
+            output.flush()
+            os.fsync(output.fileno())
+
+    def _validate_ledger(self):
+        data = self.data
+        if not isinstance(data, dict) or data.get("schema") != SCHEMA:
+            raise ValueError("ledger schema mismatch")
+        payload = dict(data)
+        seal = payload.pop("selfSha256", None)
+        if seal != digest(canonical(payload)):
+            raise ValueError("ledger self digest mismatch")
+        if (data.get("binding") != self.binding or data.get("sourceFiles") != self.source_files
+                or data.get("limits") != self.limits or data.get("deadlineUTC") != self.deadline):
+            raise ValueError("frozen campaign version or source changed")
+        usage = data.get("usage")
+        stages = data.get("stages")
+        if not isinstance(usage, dict) or set(usage) != set(self.limits) or not isinstance(stages, dict):
+            raise ValueError("ledger counters invalid")
+        if any(type(usage[k]) is not int or usage[k] < 0 or usage[k] > self.limits[k] for k in usage):
+            raise ValueError("ledger budget invalid")
+        calculated = {key: 0 for key in self.limits}
+        for key, stage in stages.items():
+            if not isinstance(key, str) or not isinstance(stage, dict) or stage.get("state") not in STATES:
+                raise ValueError("stage invalid")
+            if stage.get("kind") not in ("offline", "external") or not isinstance(stage.get("cost"), dict):
+                raise ValueError("stage contract invalid")
+            if set(stage["cost"]) - set(self.limits):
+                raise ValueError("unknown budget category")
+            for category, amount in stage["cost"].items():
+                if type(amount) is not int or amount < 0:
+                    raise ValueError("stage cost invalid")
+                if stage["state"] != "planned":
+                    calculated[category] += amount
+            if stage["state"] == "complete":
+                receipt = stage.get("receipt")
+                if not isinstance(receipt, dict) or set(receipt) != {"path", "sha256"}:
+                    raise ValueError("complete checkpoint lacks exact receipt")
+                path = Path(receipt["path"])
+                if not path.is_file() or file_digest(path) != receipt["sha256"]:
+                    raise ValueError("completed receipt missing or changed")
+                self._validate_receipt_envelope(key, stage, path.read_bytes())
+            if stage["state"] in ("inflight", "unknown") and stage.get("kind") != "external":
+                raise ValueError("offline stage cannot be uncertain external effect")
+        if calculated != usage:
+            raise ValueError("cumulative usage differs from reservations")
+
+    def __enter__(self):
+        self._lock_file()
+        try:
+            self._validate_sources()
+            if self.path.exists() != self.anchor_path.exists():
+                raise ValueError("one-time ledger anchor or ledger is missing; no automatic reset")
+            if self.anchor_path.exists() and self.anchor_path.read_bytes() != self._anchor_bytes():
+                raise ValueError("one-time anchor differs from frozen authority")
+            if self.path.exists():
+                self.data = _strict_json(self.path.read_bytes())
+                self._validate_ledger()
+                changed = False
+                for stage in self.data["stages"].values():
+                    if stage["state"] == "inflight":
+                        stage["state"] = "unknown"
+                        changed = True
+                if changed:
+                    self._seal()
+            else:
+                self._create_anchor()
+                self.data = {"schema": SCHEMA, "binding": self.binding,
+                             "sourceFiles": self.source_files, "limits": self.limits,
+                             "deadlineUTC": self.deadline,
+                             "usage": {key: 0 for key in self.limits}, "stages": {}}
+                self._seal()
+            return self
+        except BaseException:
+            self._unlock_file()
+            raise
+
+    def __exit__(self, *_):
+        self._unlock_file()
+
+    def _require_open(self):
+        if self._lock is None or self._faulted:
+            raise ValueError("exclusive ledger lock required")
+        self._validate_sources()
+
+    def _validate_receipt_envelope(self, stage_id, stage, receipt_bytes):
+        if not isinstance(receipt_bytes, bytes):
+            raise ValueError("exact original return bytes required")
+        try:
+            envelope = _strict_json(receipt_bytes)
+        except (UnicodeDecodeError, ValueError, json.JSONDecodeError) as exc:
+            raise ValueError("strict receipt envelope required") from exc
+        if not isinstance(envelope, dict) or set(envelope) != {
+                "schema", "stageId", "bindingSha256", "inputSha256", "kind",
+                "intentSha256", "originalReturnObserved", "resultRef"}:
+            raise ValueError("receipt envelope fields invalid")
+        result_ref = envelope["resultRef"]
+        if not isinstance(result_ref, dict) or set(result_ref) != {"path", "sha256"}:
+            raise ValueError("original result reference invalid")
+        if not isinstance(result_ref["path"], str) or not result_ref["path"]:
+            raise ValueError("original result path invalid")
+        result_path = Path(result_ref["path"]).resolve()
+        if (not result_path.is_relative_to(self.path.parent)
+                or result_path in (self.path, self.lock_path, self.anchor_path)
+                or not isinstance(result_ref["sha256"], str)
+                or len(result_ref["sha256"]) != 64
+                or not result_path.is_file()
+                or file_digest(result_path) != result_ref["sha256"]):
+            raise ValueError("original result file missing or changed")
+        if (envelope["schema"] != RECEIPT_SCHEMA or envelope["stageId"] != stage_id
+                or envelope["bindingSha256"] != digest(canonical(self.binding))
+                or envelope["inputSha256"] != stage["inputSha256"]
+                or envelope["kind"] != stage["kind"]
+                or envelope["intentSha256"] != stage.get("intentSha256")
+                or envelope["originalReturnObserved"] is not True):
+            raise ValueError("receipt does not bind original stage, intent and result")
+
+    def _require_live(self, now_utc):
+        now = self._parse_deadline(now_utc)
+        if now > self._parse_deadline(self.deadline):
+            raise ValueError("campaign expired; cleanup and separate re-admission required")
+
+    def plan(self, stage_id, *, kind, cost, input_sha256):
+        self._require_open()
+        if not stage_id or stage_id in self.data["stages"] or kind not in ("offline", "external"):
+            raise ValueError("new unique stage required")
+        if (not isinstance(input_sha256, str) or len(input_sha256) != 64
+                or input_sha256 not in self.binding["inputs"].values()
+                or set(cost) - set(self.limits)):
+            raise ValueError("stage input or cost invalid")
+        if any(type(value) is not int or value < 0 for value in cost.values()):
+            raise ValueError("stage cost invalid")
+        self.data["stages"][stage_id] = {"kind": kind, "state": "planned", "cost": cost,
+                                         "inputSha256": input_sha256}
+        self._seal()
+
+    def reserve(self, stage_id, *, now_utc):
+        self._require_open()
+        stage = self.data["stages"][stage_id]
+        if stage["state"] != "planned":
+            raise ValueError("stage is not planned")
+        if stage["kind"] == "external":
+            self._require_live(now_utc)
+        for category, amount in stage["cost"].items():
+            if self.data["usage"][category] + amount > self.limits[category]:
+                raise ValueError("cumulative budget exhausted")
+        for category, amount in stage["cost"].items():
+            self.data["usage"][category] += amount
+        stage["state"] = "reserved"
+        self._seal()
+
+    def begin_external(self, stage_id, *, now_utc, intent_sha256):
+        self._require_open()
+        stage = self.data["stages"][stage_id]
+        if stage["kind"] != "external" or stage["state"] != "reserved":
+            raise ValueError("external reserved stage required")
+        self._require_live(now_utc)
+        if not isinstance(intent_sha256, str) or len(intent_sha256) != 64:
+            raise ValueError("original dispatch intent digest required")
+        stage["intentSha256"] = intent_sha256
+        stage["state"] = "inflight"
+        self._seal()  # caller may effect only after this returns successfully
+
+    def complete(self, stage_id, *, receipt_path, receipt_bytes):
+        self._require_open()
+        stage = self.data["stages"][stage_id]
+        if stage["state"] not in ("reserved", "inflight"):
+            raise ValueError("stage cannot complete from its current state")
+        if stage["kind"] == "external" and stage["state"] != "inflight":
+            raise ValueError("external effect was never marked inflight")
+        self._validate_receipt_envelope(stage_id, stage, receipt_bytes)
+        target = Path(receipt_path).resolve()
+        if (not target.is_relative_to(self.path.parent) or target == self.path
+                or target in (self.lock_path, self.anchor_path)):
+            raise ValueError("separate exact receipt bytes required")
+        if target.exists() and target.read_bytes() != receipt_bytes:
+            raise ValueError("existing receipt differs")
+        _atomic(target, receipt_bytes)
+        stage["receipt"] = {"path": str(target), "sha256": digest(receipt_bytes)}
+        stage["state"] = "complete"
+        self._seal()
+
+    def reuse(self, stage_id, *, input_sha256):
+        self._require_open()
+        self._validate_ledger()
+        stage = self.data["stages"][stage_id]
+        if stage["state"] != "complete" or stage["inputSha256"] != input_sha256:
+            raise ValueError("checkpoint unavailable for exact input")
+        return Path(stage["receipt"]["path"]).read_bytes()
+
+    def unknown(self, stage_id):
+        self._require_open()
+        stage = self.data["stages"][stage_id]
+        if stage["kind"] != "external" or stage["state"] != "inflight":
+            raise ValueError("only inflight external effects can become unknown")
+        stage["state"] = "unknown"
+        self._seal()
+
+    def reconcile_original(self, stage_id, *, receipt_path, receipt_bytes):
+        self._require_open()
+        stage = self.data["stages"][stage_id]
+        if stage["kind"] != "external" or stage["state"] != "unknown":
+            raise ValueError("only unknown original effect may be reconciled")
+        if "intentSha256" not in stage:
+            raise ValueError("original intent missing")
+        self._validate_receipt_envelope(stage_id, stage, receipt_bytes)
+        target = Path(receipt_path).resolve()
+        if not target.is_relative_to(self.path.parent) or target in (self.path, self.lock_path, self.anchor_path):
+            raise ValueError("receipt outside owned ledger directory")
+        if target.exists() and target.read_bytes() != receipt_bytes:
+            raise ValueError("original receipt differs")
+        _atomic(target, receipt_bytes)
+        stage["receipt"] = {"path": str(target), "sha256": digest(receipt_bytes)}
+        stage["state"] = "complete"
+        self._seal()

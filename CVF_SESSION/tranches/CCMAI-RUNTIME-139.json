@@ -83,10 +83,10 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
   "buildCommit": "72371595cf1e650a5df074fb5b84cf5472576cec",
   "reviewEvidence": [
     "docs/reviews/R139_INTERNAL_CUA_CONSOLIDATED_SOURCE_REVIEW_2026-10-24.md",
@@ -95,9 +95,11 @@
     "docs/reviews/R139_BOOT_IDENTITY_RECOVERY_REVIEW_2026-10-25.md",
     "docs/reviews/R139_BOOT_IDENTITY_SOURCE_WORKER_RETURN_2026-10-25.md",
     "docs/reviews/R139_BOOT_IDENTITY_G0_TECHNICAL_REVIEW_2026-10-25.md",
-    "docs/reviews/R139_BOOT_IDENTITY_PRECLOCK_CLOCK_HOLD_REVIEW_2026-10-25.md"
+    "docs/reviews/R139_BOOT_IDENTITY_PRECLOCK_CLOCK_HOLD_REVIEW_2026-10-25.md",
+    "docs/reviews/R139_CLOCK_V3_SOURCE_REVIEW_2026-10-26.md",
+    "docs/reviews/R139_PINNED_RESUME_CONSOLIDATED_SOURCE_REVIEW_2026-10-26.md"
   ],
-  "disposition": "Owner-directed offline pinned-Core/clock/resume repair; runtime effects not released.",
+  "disposition": "COMPLETE_PENDING_REVIEW",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -153,7 +155,8 @@
     "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "actualUse": {
     "status": "HOLD_MANUAL_HOLD_PROVIDER_OUTCOME_UNKNOWN",
@@ -1152,13 +1155,28 @@
     "campaignEffects": 0
   },
   "x-r139PinnedResumeRepair20261026": {
-    "status": "BUILD_PENDING_COMMITTED_DISPATCH",
+    "status": "SOURCE_REVIEW_PASS_PENDING_MATERIAL_COMMIT",
     "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
     "historicalSourceChecksSpent": 10,
-    "newFocusedInvocations": 0,
+    "newFocusedInvocations": 4,
     "controllerInvocations": 0,
     "runtimeReleased": false,
     "oldProfileMigrationProposal": "SUPERSEDED_BY_OWNER_STABLE_PIN_DECISION_NOT_IMPLEMENTED",
-    "dispatchMetadataFinding": "Initial legacy preflight6/7 failed tranche.history because Root appended object instead of status string; corrected to BUILD, no source/effect/check reset."
+    "dispatchMetadataFinding": "Initial legacy preflight6/7 failed tranche.history because Root appended object instead of status string; corrected to BUILD, no source/effect/check reset.",
+    "totalCountedLineage": 14,
+    "workerClockTests": 46,
+    "workerPinFirst": "15PASS_1FAIL_EXPECTATION_RETAINED",
+    "workerPinRepairedTests": 16,
+    "rootCombinedTests": 62,
+    "rootCombinedCountedOnce": true,
+    "actualInterruptedOriginalRecoveredWithoutChild": true,
+    "actualCompletedReuseCountsBefore": 4,
+    "actualCompletedReuseCountsAfter": 4,
+    "pinnedCoreProfile": "e9ddcbcd/profile1.1",
+    "rawProgressPath": ".cvf/runtime/r139_pinned_resume_repair_20261026/root_progress.json",
+    "activeLedgerPath": ".cvf/runtime/r139_pinned_resume_repair_20261026/session_ledger_generation2.json",
+    "bindingConfigPath": ".cvf/runtime/r139_pinned_resume_repair_20261026/ledger_binding_generation2.json",
+    "resumeCommand": "C:/Users/tiennm/AppData/Local/Programs/Python/Python313/python.exe -B .cvf/runtime/r139_pinned_resume_repair_20261026/run_offline_batch.py root_combined --generation2",
+    "liveG0G3ResumeProved": false
   }
 }

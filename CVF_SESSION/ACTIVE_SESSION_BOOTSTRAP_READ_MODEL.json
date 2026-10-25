@@ -1,10 +1,10 @@
 {
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 Owner-directed pinned-Core/clock/resume repair BUILD under PINNED-RESUME-REPAIR-ADMISSION78ae94c6: keep public e9ddcbcd/profile1.1 execution pin, provenance/update observation separate, no latest-main auto adoption; Sol workers implement only admitted v3 clock and pinned preflight/durable checkpoint paths. Preserve prior10sourcechecks spent and all completed receipts; newly necessary focused offline verification recorded cumulatively under latest Owner repair instruction. Root independently reviews combined source/checkpoints and commits before any technical release. Shared future v2+v3 original controller slot0/1 (v2 disabled), campaign0/1, services0/5, CUA0/64, fixture/key/provider0; no runtime effects now. Existing20min/1020cleanup/provider<=USD1 bounds unchanged; quota interruption preserves results and usage, uncertain inflight effects UNKNOWN no auto replay, expired runtime requires cleanup/re-admission. Same R139/M3-05/M3-08, no helper tranche/Antigravity/Owner relay; ProductB blocked, Facebook/Zalo OA parked.",
-  "activeRole": "Root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; Sol clock and pin/resume IMPLEMENTATION_WORKERs only after committed dispatch",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 pinned-Core/clock/durable-offline-resume source REVIEW_PENDING material commit: v3acfec280/test3c6aafa1, preflight81784375/resume7ab2bf4c/pinTest9dd100ba independently reviewed; worker46PASS, pin firstFAIL retained then16PASS, Rootcombined62PASS. Actual interruption recovery reused originalFAIL without newchild; completedRootreuse kept4->4 new focused checks. Historical10 plusnew4 counted; no oldbudget or effect reset. Owner selects public e9ddcbcd/profile1.1 execution pin and separate cached provenance/update observation, no automaticlatest adoption. Use pwsh -NoProfile for catalog generation/checks to match the legacy gate engine. Root completes final pinned precommit, normal clean source commit and accepted-build binding, then prepares fresh v3 technical packet/actor acknowledgments using preserved checkpoints rather than rerunning accepted checks. Shared future controller0/1 (v2 disabled), campaign0/1, services0/5, CUA0/64, fixture/key/provider0; no runtime release yet. UNKNOWN effects never replay; expiry requires cleanup/re-admission while offline results survive. Same R139/M3-05/M3-08, no helper tranche/Antigravity/per-step Owner relay, ProductB blocked, Facebook/Zalo OA parked.",
+  "activeRole": "Root independent source/evidence REVIEWER / ORCHESTRATOR / COMMIT_STEWARD; implementation workers returned, all runtime effects unreleased",
   "updatedAt": "2026-10-25",
   "schemaVersion": "1.0",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
@@ -1487,12 +1487,27 @@
     "campaignEffects": 0
   },
   "x-r139PinnedResumeRepair20261026": {
-    "status": "BUILD_PENDING_COMMITTED_DISPATCH",
+    "status": "SOURCE_REVIEW_PASS_PENDING_MATERIAL_COMMIT",
     "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
     "historicalSourceChecksSpent": 10,
-    "newFocusedInvocations": 0,
+    "newFocusedInvocations": 4,
     "controllerInvocations": 0,
     "runtimeReleased": false,
-    "oldProfileMigrationProposal": "SUPERSEDED_BY_OWNER_STABLE_PIN_DECISION_NOT_IMPLEMENTED"
+    "oldProfileMigrationProposal": "SUPERSEDED_BY_OWNER_STABLE_PIN_DECISION_NOT_IMPLEMENTED",
+    "totalCountedLineage": 14,
+    "workerClockTests": 46,
+    "workerPinFirst": "15PASS_1FAIL_EXPECTATION_RETAINED",
+    "workerPinRepairedTests": 16,
+    "rootCombinedTests": 62,
+    "rootCombinedCountedOnce": true,
+    "actualInterruptedOriginalRecoveredWithoutChild": true,
+    "actualCompletedReuseCountsBefore": 4,
+    "actualCompletedReuseCountsAfter": 4,
+    "pinnedCoreProfile": "e9ddcbcd/profile1.1",
+    "rawProgressPath": ".cvf/runtime/r139_pinned_resume_repair_20261026/root_progress.json",
+    "activeLedgerPath": ".cvf/runtime/r139_pinned_resume_repair_20261026/session_ledger_generation2.json",
+    "bindingConfigPath": ".cvf/runtime/r139_pinned_resume_repair_20261026/ledger_binding_generation2.json",
+    "resumeCommand": "C:/Users/tiennm/AppData/Local/Programs/Python/Python313/python.exe -B .cvf/runtime/r139_pinned_resume_repair_20261026/run_offline_batch.py root_combined --generation2",
+    "liveG0G3ResumeProved": false
   }
 }

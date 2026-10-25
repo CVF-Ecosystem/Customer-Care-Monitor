@@ -1,0 +1,34 @@
+{
+  "schema": "r139.offlineCheckOriginalReturn@1",
+  "batch": "worker_pin_resume_repair",
+  "status": "PASS",
+  "originalWaitReturned": true,
+  "pid": 25072,
+  "exitCode": 0,
+  "startedAtUTC": "2026-10-25T18:26:04.624980+00:00",
+  "endedAtUTC": "2026-10-25T18:26:08.130936+00:00",
+  "elapsedMonotonicSeconds": 3.506615899997996,
+  "intentSha256": "7a505e5e4de1ad380c380008022f1dd73132b98623ea9bc96395b3b8520bd5b1",
+  "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderrSha256": "bea545f836fb56d500d97272a3d8770675239f5bccf4df71ccededa9d1fd20e5",
+  "sourceSha256": {
+    "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_contract_20261026.json": "e3fe4ef6caeb8b197e5f358267d89a6584fb6cf10087bebb5bfca53efdc7d5da",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v3_design.py.txt": "acfec28024a249ac9ee20f49d37a3f53597d9fc1338164060fb2a9c3625b9ef4",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_pinned_preflight.py.txt": "81784375b6948dee973ce1dd4a3b66851786273079f4becfbdd7c7378fbca233",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_durable_resume.py.txt": "7ab2bf4c5b97009d36b932fd7aff5cf6d5b42584844f59fc02f5605f06156eda",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/test_r139_pinned_resume.py": "9dd100bae4dcfa18b5c1fd098de56fecc534ad59fd1a4361bda0cbb256b1f227",
+    "scripts/tests/test_r139_execution_supervisor.py": "3c6aafa1573880be5d3e23eed26ad5edee1a208adda23511509daa7df81262ac",
+    "scripts/r139_execution_supervisor.py": "a7557917cc3ade551e78f7b4c40b0cc5aac5a312bcae2fdfbe353aba997f5203"
+  },
+  "sourceUnchanged": true,
+  "historicalChecksSpent": 10,
+  "automaticRetry": false,
+  "kind": "R139_PIN_RESUME_FOCUSED_PYTHON_CHECK",
+  "actor": "worker",
+  "attempt": 2,
+  "originalReceiptRef": {
+    "path": ".cvf/runtime/r139_pinned_resume_repair_20261026/worker_pin_resume_repair/original_return.json",
+    "sha256": "0f6559e2538d0de279ac71c0f564eef056b523ea474d67943552cdd29e4f6f50"
+  }
+}

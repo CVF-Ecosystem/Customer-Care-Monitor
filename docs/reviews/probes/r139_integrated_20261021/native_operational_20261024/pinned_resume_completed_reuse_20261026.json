@@ -1,0 +1,16 @@
+{
+  "kind": "ROOT_ACTUAL_COMPLETED_CHECKPOINT_REUSE",
+  "originalCoordinatorWaitReturned": true,
+  "coordinatorPid": 29232,
+  "coordinatorExitCode": 0,
+  "reused": true,
+  "launchedNewTestChild": false,
+  "recoveredUnsealedOriginalReturn": false,
+  "originalResultUnchanged": true,
+  "originalIntentUnchanged": true,
+  "focusedChecksBefore": 4,
+  "focusedChecksAfter": 4,
+  "stdoutSha256": "19888067cabe1895cb47e8b559a1dd901813c7316845efd5ed99d4d29d9c16ed",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "observedUTC": "2026-10-25T18:28:16.550120+00:00"
+}

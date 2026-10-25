@@ -1,4 +1,4 @@
-﻿# Module Catalog
+# Module Catalog
 
 Machine-readable source: `docs/catalog/MODULE_REGISTRY.json`
 

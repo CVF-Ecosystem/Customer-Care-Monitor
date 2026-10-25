@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: ACTIVE
+Status: COMPLETE_PENDING_REVIEW
 Risk: R2
 Worker: Internal Sol G0 service/runtime actor; internal Luna producer/independent observer for browser only
 Reviewer: Root independent source/evidence REVIEWER
@@ -735,3 +735,6 @@ Owner requested `xử lý đi`. Official Core reconciliation completed with back
 Latest Owner explicitly agrees stable Core/profile execution pins and directs fixes for clock and quota interruptions. Admission: `CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json` (78ae94c6). This supersedes the unadmitted profile1.2 migration branch; no installed profile/Core/gate/workflow edits. One R139 M3-05/M3-08 order, no helper tranche.
 
 Acceptance: P01 verify public e9ddcbcd/profile1.1 identity/workspace/trusted static controls separately from update availability; C01 v3 exact-identity/query-local2s agreement without a new baseline; R01 durable validated receipts/source bindings/atomic checkpoint and cumulative accounting survive agent quota interruption; R02 inflight uncertainty never replays an external effect and expired campaign never resets its20min deadline. Immutable historical proof and10spentchecks retained. Offline focused verification covers these criteria plus existing supervisor guards; no claim of runtime AI governance. Two Sol workers implement the admitted paths, Root independently reviews and commits. Additional shared v2/v3 controller slot and all product/browser/provider effects remain0 and unreleased until current source/packet review and clean commit. Owner instruction authorizes necessary same-scope offline repairs/checks, with durable intents and results rather than repeated per-check approval or hidden quota resets.
+
+
+Offline repair return2026-10-26: P01/C01/R01/R02 source evidence accepted bounded by Root and independentLuna; worker46/pin16/Rootcombined62PASS with all failures/cumulativecounts retained. Root actual offline coordinator interruption/reuse verified, not liveG0–G3 quota handling. Four newfocusedinvocations plushistorical10, no budget reset. Finalpinnedprecommit/materialcommit/buildbinding precede runtime technical release.

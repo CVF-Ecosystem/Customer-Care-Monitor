@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Current R139 Owner-directed stable pin/clock/resume offline repair BUILD; old evidence and runtime caps retained, effects unreleased."
+      "description": "Current R139 stable pin/clock/offline-resume source review pending material commit; checkpoints reusable, original failures retained, runtime effects unreleased."
     },
     {
       "id": "r060-work-order",
@@ -37495,6 +37495,118 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_contract_20261026.json",
       "status": "ACTIVE",
       "description": "Root-admitted v3 query-local temporal SPEC with immutable v2 identity/proof predecessor refs; source/runtime unproved."
+    },
+    {
+      "id": "r139-pin-resume-a18470aa183c6d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v3_design.py.txt",
+      "status": "ACTIVE",
+      "description": "R139 Owner-directed stable pin/query-local clock/durable offline resume source or exact check evidence; no product runtime acceptance."
+    },
+    {
+      "id": "r139-pin-resume-f97b038f14da53",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_pinned_preflight.py.txt",
+      "status": "ACTIVE",
+      "description": "R139 Owner-directed stable pin/query-local clock/durable offline resume source or exact check evidence; no product runtime acceptance."
+    },
+    {
+      "id": "r139-pin-resume-16032d3dec5549",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_durable_resume.py.txt",
+      "status": "ACTIVE",
+      "description": "R139 Owner-directed stable pin/query-local clock/durable offline resume source or exact check evidence; no product runtime acceptance."
+    },
+    {
+      "id": "r139-pin-resume-7019508184b42d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/test_r139_pinned_resume.py",
+      "status": "ACTIVE",
+      "description": "R139 Owner-directed stable pin/query-local clock/durable offline resume source or exact check evidence; no product runtime acceptance."
+    },
+    {
+      "id": "r139-pin-resume-596e56e8075caf",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CLOCK_V3_WORKER_RETURN_2026-10-26.md",
+      "status": "ACTIVE",
+      "description": "R139 Owner-directed stable pin/query-local clock/durable offline resume source or exact check evidence; no product runtime acceptance."
+    },
+    {
+      "id": "r139-pin-resume-593382405dd7fd",
+      "family": "continuity",
+      "path": "docs/reviews/R139_PINNED_RESUME_WORKER_RETURN_2026-10-26.md",
+      "status": "ACTIVE",
+      "description": "R139 Owner-directed stable pin/query-local clock/durable offline resume source or exact check evidence; no product runtime acceptance."
+    },
+    {
+      "id": "r139-pin-resume-f00801a2399b5b",
+      "family": "continuity",
+      "path": "docs/reviews/R139_PINNED_RESUME_CONSOLIDATED_SOURCE_REVIEW_2026-10-26.md",
+      "status": "ACTIVE",
+      "description": "R139 Owner-directed stable pin/query-local clock/durable offline resume source or exact check evidence; no product runtime acceptance."
+    },
+    {
+      "id": "r139-pin-resume-03cafb15e08a5a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_resume_interruption_recovery_20261026.json",
+      "status": "ACTIVE",
+      "description": "R139 Owner-directed stable pin/query-local clock/durable offline resume source or exact check evidence; no product runtime acceptance."
+    },
+    {
+      "id": "r139-pin-resume-ca1de792f84b1b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/worker_python_01_result.json",
+      "status": "ACTIVE",
+      "description": "R139 Owner-directed stable pin/query-local clock/durable offline resume source or exact check evidence; no product runtime acceptance."
+    },
+    {
+      "id": "r139-pin-resume-898031a8ae8a1f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_resume_source_checks/worker_attempt1.json",
+      "status": "ACTIVE",
+      "description": "R139 Owner-directed stable pin/query-local clock/durable offline resume source or exact check evidence; no product runtime acceptance."
+    },
+    {
+      "id": "r139-pin-resume-efa4ed6cf29075",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_resume_source_checks/worker_attempt2.json",
+      "status": "ACTIVE",
+      "description": "R139 Owner-directed stable pin/query-local clock/durable offline resume source or exact check evidence; no product runtime acceptance."
+    },
+    {
+      "id": "r139-pin-resume-18732faee2e1c9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_resume_completed_reuse_20261026.json",
+      "status": "ACTIVE",
+      "description": "R139 actual offline source checks or validated resume evidence, preserving all failed attempts and cumulative counts; no runtime acceptance."
+    },
+    {
+      "id": "r139-pin-resume-edf421a9d1b416",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/root_python_01_result.json",
+      "status": "ACTIVE",
+      "description": "R139 actual offline source checks or validated resume evidence, preserving all failed attempts and cumulative counts; no runtime acceptance."
+    },
+    {
+      "id": "r139-pin-resume-aa4b41f7ba422a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_resume_source_checks/root_combined.json",
+      "status": "ACTIVE",
+      "description": "R139 actual offline source checks or validated resume evidence, preserving all failed attempts and cumulative counts; no runtime acceptance."
+    },
+    {
+      "id": "r139-clock-v3-independent-source-review-20261026",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CLOCK_V3_SOURCE_REVIEW_2026-10-26.md",
+      "status": "ACTIVE",
+      "description": "Independent exact-hash v3 clock source/component review; worker46 and Rootcombined62 PASS, original historical proof and caps retained, no runtime release."
+    },
+    {
+      "id": "r139-pinned-preflight-static-validation-20261026",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_preflight_validation_20261026.json",
+      "status": "ACTIVE",
+      "description": "Pinned public e9/profile1.1 static prerequisite validation with original failed metadata gate attempts retained; no latest-doctor/runtime/hosted CI claim."
     }
   ]
 }

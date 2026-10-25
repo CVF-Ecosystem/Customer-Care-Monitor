@@ -33,6 +33,125 @@ def protected_snapshot(*, status="Up 2 minutes (healthy)", running_for="2 minute
 
 
 class R139SupervisorPureTests(unittest.TestCase):
+    def test_boot_identity_v3_query_local_clock_and_immutable_identity(self):
+        design_root = SOURCE.parents[1] / "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024"
+        def forbidden(*args, **kwargs):
+            raise AssertionError("pure v3 validation attempted a process")
+        with patch.object(subprocess, "Popen", side_effect=forbidden), patch.object(
+            subprocess, "run", side_effect=forbidden
+        ), patch.object(subprocess, "call", side_effect=forbidden), patch.object(
+            subprocess, "check_call", side_effect=forbidden
+        ), patch.object(subprocess, "check_output", side_effect=forbidden):
+            design = runpy.run_path(str(design_root / "reentry_activation_boot_identity_v3_design.py.txt"),
+                                    run_name="r139_inert_boot_identity_v3_definitions")
+            validate = design["validate_boot_identity_v3"]
+            contract = json.loads((design_root / "boot_identity_v3_contract_20261026.json").read_text(encoding="utf-8"))
+            base = contract["baselineClockFromOriginalIntent"]
+            event = {"logName": "System", "providerName": "Microsoft-Windows-Kernel-General",
+                     "eventId": 12, "recordId": 123456, "machineName": "TEST-HOST",
+                     "timeCreatedUTC": "2026-10-23T05:48:28.0990423Z",
+                     "startTimeUTC": "2026-10-23T05:48:27.5000000Z"}
+            observation = {"schema": "r139.windowsBootIdentityObservation@1",
+                           "observedUTC": "2026-10-25T13:40:24.0000000Z",
+                           "osComputerName": "TEST-HOST",
+                           "computerSystemProductUuid": "12345678-1234-1234-1234-123456789ABC",
+                           "lastBootUTC": "2026-10-23T05:48:27.5037950Z", "bootEvent": event}
+            canonical = lambda obj: json.dumps(obj, ensure_ascii=True, sort_keys=True,
+                                                separators=(",", ":")).encode("utf-8")
+            digest = lambda obj: hashlib.sha256(canonical(obj)).hexdigest()
+            host_sha = digest({"osComputerName": observation["osComputerName"],
+                               "computerSystemProductUuid": observation["computerSystemProductUuid"]})
+            boot_sha = digest(event)
+            stable = "r139-hb2:" + hashlib.sha256((host_sha + "|" + boot_sha).encode("ascii")).hexdigest()
+            proof = {"kind": "ROOT_CURRENT_WINDOWS_BOOT_IDENTITY_PROOF_V2",
+                     "status": "REVIEWED_CAPABILITY_BASELINE", "rootVerifiedReadOnlyOSMetadata": True,
+                     "ownerAdmissionRef": design["BOOT_RECOVERY_REF"],
+                     "contractRef": design["BOOT_CONTRACT_REF"], "hostIdentitySha256": host_sha,
+                     "bootSessionSha256": boot_sha, "hostBootId": stable,
+                     "lastBootUTC": observation["lastBootUTC"],
+                     "bootEventStartUTC": event["startTimeUTC"],
+                     "bootEventCreatedUTC": event["timeCreatedUTC"],
+                     "observedUTC": "2026-10-25T08:40:22.9665051Z",
+                     "baselineClock": base, "pythonPath": base["pythonPath"]}
+            start = datetime(2026, 10, 25, 13, 40, 22, tzinfo=timezone.utc)
+            def parent(utc_seconds=1, mono_seconds=1, start_at=start):
+                return {"startUTC": start_at.isoformat(timespec="microseconds"),
+                        "startMonotonic": 200000.0,
+                        "endUTC": (start_at + timedelta(seconds=utc_seconds)).isoformat(timespec="microseconds"),
+                        "endMonotonic": 200000.0 + mono_seconds}
+            def raw(value=observation): return canonical(value)
+            def stamp(value): return value.strftime("%Y-%m-%dT%H:%M:%S.%f") + "0Z"
+            # The original baseline is five hours old and has the known
+            # multi-hour offset; a fresh local bracket still qualifies.
+            self.assertEqual(validate(proof, contract, raw(), parent()), stable)
+            for utc_interval, mono_interval in ((3, 1), (1, 3), (7, 5), (5, 5), (5.000001, 5)):
+                with self.subTest(valid=(utc_interval, mono_interval)):
+                    self.assertEqual(validate(proof, contract, raw(),
+                                              parent(utc_interval, mono_interval)), stable)
+            for utc_interval, mono_interval, reason in (
+                (3.000001, 1, "BOOT_CLOCK_DRIFT"),
+                (1, 3.000001, "BOOT_CLOCK_DRIFT"),
+                (7.000001, 5, "BOOT_CLOCK_DRIFT"),
+                (1, 5.000001, "BOOT_CLOCK_REVERSED"),
+                (-0.000001, 1, "BOOT_CLOCK_REVERSED"),
+                (1, -0.000001, "BOOT_CLOCK_REVERSED")):
+                with self.subTest(invalid=(utc_interval, mono_interval)), self.assertRaisesRegex(RuntimeError, reason):
+                    validate(proof, contract, raw(), parent(utc_interval, mono_interval))
+            for field in ("startMonotonic", "endMonotonic"):
+                for invalid in (True, "1", float("nan"), float("inf"), float("-inf")):
+                    with self.subTest(field=field, invalid=invalid), self.assertRaisesRegex(RuntimeError, "BOOT_MONOTONIC_INVALID"):
+                        validate(proof, contract, raw(), dict(parent(), **{field: invalid}))
+            for observed in (start - timedelta(seconds=2), start + timedelta(seconds=3)):
+                with self.subTest(slack_edge=observed):
+                    self.assertEqual(validate(proof, contract,
+                                              raw(dict(observation, observedUTC=stamp(observed))), parent()), stable)
+            for observed in (start - timedelta(seconds=2, microseconds=1),
+                             start + timedelta(seconds=3, microseconds=1)):
+                with self.subTest(slack_over=observed), self.assertRaisesRegex(RuntimeError, "BOOT_OBSERVED_OUTSIDE_PARENT"):
+                    validate(proof, contract, raw(dict(observation, observedUTC=stamp(observed))), parent())
+            old = datetime(2026, 10, 25, 8, 40, 22, 966505, tzinfo=timezone.utc)
+            with self.assertRaisesRegex(RuntimeError, "BOOT_CLOCK_REVERSED"):
+                validate(proof, contract, raw(), parent(start_at=old-timedelta(microseconds=1)))
+            with self.assertRaisesRegex(RuntimeError, "BOOT_CLOCK_REVERSED"):
+                validate(proof, contract, raw(dict(observation, observedUTC="2026-10-25T08:40:22.9665050Z")), parent())
+            for candidate in (dict(observation, osComputerName="OTHER-HOST"),
+                              dict(observation, bootEvent=dict(event, recordId=123457)),
+                              dict(observation, lastBootUTC="2026-10-23T05:48:29.5037951Z"),
+                              dict(observation, bootEvent=dict(event, timeCreatedUTC="2026-10-26T00:00:00.0000000Z"))):
+                with self.subTest(tamper=candidate), self.assertRaises(RuntimeError):
+                    validate(proof, contract, raw(candidate), parent())
+            for changed in (dict(contract, predecessorProofRef={"path": "x", "sha256": "0" * 64}),
+                            dict(contract, ownerAdmissionRef={"path": "x", "sha256": "0" * 64})):
+                with self.assertRaisesRegex(RuntimeError, "BOOT_CONTRACT_OR_PROOF"):
+                    validate(proof, changed, raw(), parent())
+            history = design["validate_v3_check_history"]
+            ref1 = {"path": "probe/attempt1.json", "sha256": "1" * 64}
+            ref2 = {"path": "probe/attempt2.json", "sha256": "2" * 64}
+            slot = {"used": 2, "acceptedAttempt": 2, "outcome": "PASS",
+                    "attemptReceipts": [ref1, ref2], "receiptRef": ref2}
+            receipt = {"kind": "R139_BOOT_IDENTITY_V3_FOCUSED_PYTHON_CHECK",
+                       "actor": "worker", "status": "PASS", "attempt": 2,
+                       "historicalChecksSpent": 10, "originalWaitReturned": True,
+                       "exitCode": 0, "designSha256": "a" * 64, "testSha256": "b" * 64,
+                       "stdoutSha256": "c" * 64, "stderrSha256": "d" * 64,
+                       "stdoutPath": ".cvf/runtime/r139_check/stdout.bin",
+                       "stderrPath": ".cvf/runtime/r139_check/stderr.bin",
+                       "startedAtUTC": "2026-10-26T00:00:00+00:00",
+                       "endedAtUTC": "2026-10-26T00:00:01+00:00"}
+            failed = dict(receipt, status="FAIL", attempt=1, designSha256="e" * 64,
+                          exitCode=1)
+            history(slot, [failed, receipt], "worker", "a" * 64, "b" * 64)
+            earlier_pass = dict(failed, status="PASS", originalWaitReturned=True, exitCode=0)
+            history(slot, [earlier_pass, receipt], "worker", "a" * 64, "b" * 64)
+            with self.assertRaisesRegex(RuntimeError, "BOOT_V3_EARLIER_PASS_CUSTODY"):
+                history(slot, [dict(earlier_pass, originalWaitReturned=False), receipt],
+                        "worker", "a" * 64, "b" * 64)
+            with self.assertRaisesRegex(RuntimeError, "BOOT_V3_CHECK_SLOT"):
+                history(slot, [receipt], "worker", "a" * 64, "b" * 64)
+            with self.assertRaisesRegex(RuntimeError, "BOOT_V3_CHECK_RECEIPT_CONTENT"):
+                history(slot, [dict(failed, historicalChecksSpent=0), receipt],
+                        "worker", "a" * 64, "b" * 64)
+
     def test_boot_identity_v2_pure_contract_no_process(self):
         design_root = SOURCE.parents[1] / "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024"
         def no_process(*args, **kwargs):

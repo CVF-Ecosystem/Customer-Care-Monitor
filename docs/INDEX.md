@@ -1,4 +1,4 @@
-﻿# Project Documentation Index
+# Project Documentation Index
 
 Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 
@@ -15,7 +15,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R139 Owner-directed stable pin/clock/resume offline repair BUILD; old evidence and runtime caps retained, effects unreleased.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md`
+- Current R139 stable pin/clock/offline-resume source review pending material commit; checkpoints reusable, original failures retained, runtime effects unreleased.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -4508,6 +4508,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Actual prelaunch clock-metadata incompatibility against frozen two-second contract; no new controller/campaign invocation or source check.: `docs/reviews/R139_BOOT_IDENTITY_PRECLOCK_CLOCK_HOLD_REVIEW_2026-10-25.md`
 - Actual prelaunch clock-metadata incompatibility against frozen two-second contract; no new controller/campaign invocation or source check.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_prelaunch_clock_compatibility_20261025.json`
 - One proposed R139 decision: reconciled public Core; remaining installed-profile compatibility and successor query-local clock contract/check budget, not admitted or executed.: `docs/reviews/R139_CLOCK_AND_PROFILE_CONSOLIDATED_RECOVERY_PROPOSAL_2026-10-26.md`
+- Independent exact-hash v3 clock source/component review; worker46 and Rootcombined62 PASS, original historical proof and caps retained, no runtime release.: `docs/reviews/R139_CLOCK_V3_SOURCE_REVIEW_2026-10-26.md`
 - Four-path intended recovery design only; source renewal pending Owner decision; no new helper or effect.: `docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_2026-10-23.md`
 - Independent Root documentary review; finite source-only proposal ready for Owner, M3 runtime remains OPEN.: `docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_REVIEW_2026-10-23.md`
 - Authorized public Core reconciliation and doctor27/27 static readiness with unchanged profile pin warning.: `docs/reviews/probes/r139_integrated_20261021/r7_core_reconciliation_20261023.json`
@@ -4674,6 +4675,21 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R139 bounded combined source/metadata review and honest offline evidence; no runtime or product acceptance.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/activation_metadata_static_receipt_2026-10-24.json`
 - R139 bounded combined source/metadata review and honest offline evidence; no runtime or product acceptance.: `docs/reviews/R139_PAGE_TARGET_CONSOLIDATED_SOURCE_REVIEW_2026-10-24.md`
 - R139 bounded combined source/metadata review and honest offline evidence; no runtime or product acceptance.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/activation_metadata_consolidated_repair_receipt_2026-10-24.json`
+- R139 Owner-directed stable pin/query-local clock/durable offline resume source or exact check evidence; no product runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_resume_interruption_recovery_20261026.json`
+- R139 Owner-directed stable pin/query-local clock/durable offline resume source or exact check evidence; no product runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_durable_resume.py.txt`
+- R139 actual offline source checks or validated resume evidence, preserving all failed attempts and cumulative counts; no runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_resume_completed_reuse_20261026.json`
+- R139 Owner-directed stable pin/query-local clock/durable offline resume source or exact check evidence; no product runtime acceptance.: `docs/reviews/R139_PINNED_RESUME_WORKER_RETURN_2026-10-26.md`
+- R139 Owner-directed stable pin/query-local clock/durable offline resume source or exact check evidence; no product runtime acceptance.: `docs/reviews/R139_CLOCK_V3_WORKER_RETURN_2026-10-26.md`
+- R139 Owner-directed stable pin/query-local clock/durable offline resume source or exact check evidence; no product runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/test_r139_pinned_resume.py`
+- R139 Owner-directed stable pin/query-local clock/durable offline resume source or exact check evidence; no product runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_resume_source_checks/worker_attempt1.json`
+- R139 Owner-directed stable pin/query-local clock/durable offline resume source or exact check evidence; no product runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v3_design.py.txt`
+- R139 actual offline source checks or validated resume evidence, preserving all failed attempts and cumulative counts; no runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_resume_source_checks/root_combined.json`
+- R139 Owner-directed stable pin/query-local clock/durable offline resume source or exact check evidence; no product runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/worker_python_01_result.json`
+- R139 actual offline source checks or validated resume evidence, preserving all failed attempts and cumulative counts; no runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/root_python_01_result.json`
+- R139 Owner-directed stable pin/query-local clock/durable offline resume source or exact check evidence; no product runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_resume_source_checks/worker_attempt2.json`
+- R139 Owner-directed stable pin/query-local clock/durable offline resume source or exact check evidence; no product runtime acceptance.: `docs/reviews/R139_PINNED_RESUME_CONSOLIDATED_SOURCE_REVIEW_2026-10-26.md`
+- R139 Owner-directed stable pin/query-local clock/durable offline resume source or exact check evidence; no product runtime acceptance.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_pinned_preflight.py.txt`
+- Pinned public e9/profile1.1 static prerequisite validation with original failed metadata gate attempts retained; no latest-doctor/runtime/hosted CI claim.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_preflight_validation_20261026.json`
 - Owner-directed same-order stable pin/clock/durable resume repair; historical accounting and runtime caps retained.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json`
 - Independently reviewed R139 preclock metadata/draft preparation; Owner exact-page availability confirmed, current browser ACK pending; no campaign or runtime release.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_preclock_controller_boot_proof.json`
 - R139 preclock metadata/draft preparation only; no reservation or browser/product/provider release; actual native facts and actor window still required.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_public_tariff_reservation.json`

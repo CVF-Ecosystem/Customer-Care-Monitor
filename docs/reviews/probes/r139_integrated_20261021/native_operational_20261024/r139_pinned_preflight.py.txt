@@ -1,0 +1,231 @@
+"""R139 offline pinned CVF preflight. Code-as-data; execute only after review.
+
+The current Core checkout may advance. This program verifies and exports the
+manifest-pinned public Git objects, then runs the existing seven downstream
+checks and the unmodified 1.1 trusted profile. It never fetches or upgrades.
+"""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+import tempfile
+
+PIN = "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba"
+PROFILE = "cvf.downstreamGateProfile@1.1.0"
+PUBLIC = "https://github.com/Blackbird081/Controlled-Vibe-Framework-CVF.git"
+KIT = ("AGENTS.md", "AGENT_HANDOFF.md", "scripts/new-cvf-workspace.ps1",
+       "scripts/check_cvf_workspace_agent_enforcement.ps1",
+       "scripts/initialize_cvf_project_clone.ps1",
+       "scripts/initialize_cvf_repository_clone.ps1",
+       "scripts/update_cvf_workspace_public_core.ps1")
+
+
+def _sha(data):
+    return hashlib.sha256(data.replace(b"\r\n", b"\n")).hexdigest()
+
+
+def _git(core, *args):
+    cp = subprocess.run(["git", "-C", str(core), *args], stdout=subprocess.PIPE,
+                        stderr=subprocess.PIPE, timeout=20, check=False)
+    if cp.returncode:
+        raise ValueError("Git proof failed: " + " ".join(args[:2]))
+    return cp.stdout
+
+
+def _read_json(path):
+    def unique(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise ValueError("duplicate JSON key")
+            result[key] = value
+        return result
+    return json.loads(path.read_text(encoding="utf-8-sig"), object_pairs_hook=unique)
+
+
+def _no_reparse(path):
+    current = Path(path)
+    for part in (current, *current.parents):
+        if part.is_symlink() or (hasattr(part, "is_junction") and part.is_junction()):
+            raise ValueError("reparse path is not a trusted workspace boundary")
+
+
+def inspect(project, core):
+    """Return pin/provenance facts; never treat cached origin as live freshness."""
+    _no_reparse(project)
+    _no_reparse(core)
+    project, core = Path(project).resolve(), Path(core).resolve()
+    if project == core or project.parent != core.parent or core.name != ".Controlled-Vibe-Framework-CVF":
+        raise ValueError("sibling workspace boundary mismatch")
+    if not (project.parent / "WORKSPACE_RULES.md").is_file():
+        raise ValueError("workspace rules missing")
+    manifest = _read_json(project / ".cvf/manifest.json")
+    policy = _read_json(project / ".cvf/policy.json")
+    lock = _read_json(project / ".cvf/gate-profile.lock.json")
+    if (manifest.get("cvfCoreCommit") != PIN or manifest.get("cvfCoreRepository") != PUBLIC
+            or manifest.get("cvfCoreRelativePath") != "../.Controlled-Vibe-Framework-CVF"
+            or manifest.get("liveGovernanceEvidenceRequired") is not True
+            or manifest.get("mockAllowedOnlyForUi") is not True
+            or policy.get("liveGovernanceEvidenceRequired") is not True
+            or policy.get("mockAllowedOnlyForUi") is not True
+            or policy.get("workspaceIsolationRequired") is not True
+            or policy.get("cvfCoreRef") != "../.Controlled-Vibe-Framework-CVF"
+            or lock.get("coreCommit") != PIN or lock.get("profileId") != PROFILE):
+        raise ValueError("manifest, policy or locked execution pin mismatch")
+    remote = _git(core, "remote", "get-url", "origin").decode().strip()
+    if remote != PUBLIC:
+        raise ValueError("public origin mismatch")
+    head = _git(core, "rev-parse", "HEAD").decode().strip()
+    cached_origin = _git(core, "rev-parse", "refs/remotes/origin/main").decode().strip()
+    if _git(core, "status", "--porcelain", "--untracked-files=all").strip():
+        raise ValueError("Core checkout is not clean")
+    if _git(core, "rev-parse", f"{PIN}^{{commit}}").decode().strip() != PIN:
+        raise ValueError("pinned public commit is unavailable")
+    _git(core, "merge-base", "--is-ancestor", PIN, cached_origin)
+    for path in KIT:
+        if not _git(core, "show", f"{PIN}:{path}").strip():
+            raise ValueError("pinned public-safe kit missing")
+    profile_raw = _git(core, "show", f"{PIN}:scripts/lib/downstream_governance/cvf_downstream_gate_profile.json")
+    profile = json.loads(profile_raw)
+    names = profile.get("installedFiles")
+    if (profile.get("profileId") != PROFILE or not isinstance(names, list)
+            or set(names) != set(lock.get("files", {})) or len(names) != len(set(names))):
+        raise ValueError("pinned profile file set mismatch")
+    if lock.get("gatesDir") != profile.get("projectPaths", {}).get("gatesDir") \
+            or lock.get("gatesDir") != "scripts/cvf_gates":
+        raise ValueError("locked installed gate directory mismatch")
+    sources = {}
+    for name in names:
+        if Path(name).name != name:
+            raise ValueError("unsafe profile file name")
+        source = profile.get("coreSources", {}).get(name, "scripts/lib/downstream_governance/" + name)
+        if source.startswith("/") or ".." in Path(source).parts or "\\" in source:
+            raise ValueError("unsafe pinned source path")
+        data = _git(core, "show", f"{PIN}:{source}")
+        if not data or _sha(data) != lock["files"][name]:
+            raise ValueError("pinned Core source and installed lock disagree: " + name)
+        installed = project / lock["gatesDir"] / name
+        _no_reparse(installed)
+        if not installed.is_file() or _sha(installed.read_bytes()) != lock["files"][name]:
+            raise ValueError("installed profile byte identity mismatch: " + name)
+        sources[name] = (source, data)
+    gate_dir = project / lock["gatesDir"]
+    _no_reparse(gate_dir)
+    if {p.name for p in gate_dir.iterdir() if p.is_file()} != set(names):
+        raise ValueError("installed profile has missing or extra files")
+    listing = "".join(f"{name}:{lock['files'][name]}\n" for name in sorted(names))
+    if (hashlib.sha256(listing.encode()).hexdigest() != lock.get("bundleSha256")
+            or lock.get("profileSha256") != lock["files"]["cvf_downstream_gate_profile.json"]
+            or lock.get("runnerSha256") != lock["files"]["cvf_downstream_gate_runner.py"]):
+        raise ValueError("locked bundle digest mismatch")
+    return {"project": project, "core": core, "head": head, "cachedOriginMain": cached_origin,
+            "checkoutMatchesCachedOriginMain": head == cached_origin,
+            "remoteFreshnessChecked": False, "pinnedCommit": PIN, "lock": lock,
+            "sources": sources, "profile": profile}
+
+
+def export(facts):
+    """Write exact Git object bytes only beneath ignored project runtime."""
+    project = facts["project"]
+    root = project / ".cvf/runtime/r139_pinned_e9ddcbcd/core"
+    lib = root / "scripts/lib/downstream_governance"
+    if not root.resolve().is_relative_to(project):
+        raise ValueError("export escaped project")
+    _no_reparse(root)
+    expected = {source for source, _ in facts["sources"].values()}
+    if root.exists():
+        actual = {p.relative_to(root).as_posix() for p in root.rglob("*") if p.is_file()}
+        if actual - expected:
+            raise ValueError("unexpected file in immutable pinned export")
+    for name, (source, data) in facts["sources"].items():
+        target = root / source
+        _no_reparse(target)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        if target.exists():
+            if target.read_bytes() != data:
+                raise ValueError("existing export was changed")
+            continue
+        fd, temporary = tempfile.mkstemp(prefix=".pin-", dir=target.parent)
+        try:
+            with os.fdopen(fd, "wb") as handle:
+                handle.write(data)
+                handle.flush()
+                os.fsync(handle.fileno())
+            os.replace(temporary, target)
+        finally:
+            if os.path.exists(temporary):
+                os.unlink(temporary)
+    return lib / "cvf_downstream_gate_runner.py"
+
+
+def run(project, core, phase, packets, *, base=None, head=None):
+    if phase not in {"pre-dispatch", "worker-return", "reviewer-fast", "pre-commit", "pr-ci"}:
+        raise ValueError("unsupported check phase")
+    facts = inspect(project, core)
+    runner = export(facts)
+    project = facts["project"]
+    commands = [
+        [sys.executable, "-B", str(project / "scripts/cvf_downstream_gate.py"), "preflight"],
+        [sys.executable, "-B", str(runner), "run", "--phase", phase,
+         "--project-root", str(project), "--trusted", "--no-receipt",
+         "--expect-profile-sha256", facts["lock"]["profileSha256"],
+         "--expect-runner-sha256", facts["lock"]["runnerSha256"],
+         "--expect-bundle-sha256", facts["lock"]["bundleSha256"]],
+    ]
+    if phase == "pr-ci" and (not base or not head):
+        raise ValueError("pr-ci requires explicit base and head")
+    if base or head:
+        if not base or not head:
+            raise ValueError("base and head must be paired")
+        commands[0] += ["--base", base, "--head", head]
+        commands[1] += ["--base", base, "--head", head]
+    for packet in packets:
+        p = (project / packet).resolve()
+        if not p.is_file() or not p.is_relative_to(project):
+            raise ValueError("packet missing or outside project")
+        commands[1] += ["--packet", str(p.relative_to(project))]
+    results = []
+    for cmd in commands:
+        cp = subprocess.run(cmd, cwd=project, capture_output=True, text=True,
+                            timeout=120, check=False)
+        results.append({"exitCode": cp.returncode, "stdout": cp.stdout, "stderr": cp.stderr})
+        if cp.returncode:
+            break
+    return {"pin": PIN, "cachedOriginMain": facts["cachedOriginMain"],
+            "checkoutMatchesCachedOriginMain": facts["checkoutMatchesCachedOriginMain"],
+            "remoteFreshnessChecked": False, "latestDoctorClaim": "NOT_RUN_BY_THIS_TOOL",
+            "passed": len(results) == 2 and all(r["exitCode"] == 0 for r in results),
+            "checks": results}
+
+
+if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--project-root", required=True)
+    parser.add_argument("--core-root", required=True)
+    parser.add_argument("--phase", choices=["pre-dispatch", "worker-return", "reviewer-fast", "pre-commit", "pr-ci"])
+    parser.add_argument("--packet", action="append", default=[])
+    parser.add_argument("--base")
+    parser.add_argument("--head")
+    args = parser.parse_args()
+    try:
+        if args.phase:
+            result = run(args.project_root, args.core_root, args.phase, args.packet,
+                         base=args.base, head=args.head)
+        else:
+            facts = inspect(args.project_root, args.core_root)
+            result = {"pin": PIN, "cachedOriginMain": facts["cachedOriginMain"],
+                      "checkoutMatchesCachedOriginMain": facts["checkoutMatchesCachedOriginMain"],
+                      "remoteFreshnessChecked": False, "verified": True,
+                      "latestDoctorClaim": "NOT_RUN_BY_THIS_TOOL"}
+        print(json.dumps(result, sort_keys=True))
+        sys.exit(0 if result.get("passed", result.get("verified", False)) else 2)
+    except (OSError, ValueError, subprocess.TimeoutExpired) as error:
+        print(json.dumps({"verified": False, "reason": str(error),
+                          "remoteFreshnessChecked": False}, sort_keys=True))
+        sys.exit(2)
