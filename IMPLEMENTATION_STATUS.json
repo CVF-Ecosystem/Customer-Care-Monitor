@@ -109,7 +109,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
     "R118 REVIEW_PASS SOURCE_COMPONENT_ONLY at7f74a75f93671973bcfe55b5cb491076c0d2bdf9: current proposal pointer/lineage binding, safe legacy fallback and proposal-less data actions, VN/EN WAIT_DATA history. Root24tests/app typecheckPASS, original byte archive/source pins verified; changed-screen UI proof NOT_RUN/FREEZE OPEN. docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md",
     "R117 bounded WAIT_DATA backend real synthetic flow independently accepted: new same-case proposal after source revision, faithful realAlibaba340/297tokens, synthetic CONFIRM persisted, one call/debit, native11top11nested+engine1PASS. Exact owned owner-authorized restart/finalstop and operational protected equality observed; original interruption/cleanupHOLD retained. Current UI/fullM2/M3/pilot/release remain OPEN. docs/reviews/R117_FINAL_INDEPENDENT_REVIEW_2026-10-18.md",
@@ -4301,12 +4301,29 @@
     "acceptedBuildPins": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-ACCEPTED-BUILD-PINS-ADMISSION.json"
   },
   "x-r139CuaG0Technical20261025": {
-    "status": "DRAFT_NOT_EFFECT_RELEASE",
+    "status": "HOLD_CURRENT_HOST_BOOT_DRIFT_BEFORE_RESERVATION",
     "authorityPath": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-G0-TECHNICAL-RELEASE-ADMISSION.json",
     "campaignReserved": false,
     "serviceQueries": 0,
     "browserMethods": 0,
     "keyReads": 0,
-    "providerCalls": 0
+    "providerCalls": 0,
+    "review": "docs/reviews/R139_CUA_PRECLOCK_HOLD_REVIEW_2026-10-25.md",
+    "receipt": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/root_hold_receipt.json",
+    "dispatchCommit": "fd730262bd55d73d7bdc681d891f0429b912997a",
+    "originalControllerPid": 24484,
+    "originalWaitReturned": true,
+    "exitCode": 1,
+    "bootDifferenceMicroseconds": 2743,
+    "controllerAttempts": 1,
+    "controllerRetryAuthorized": false,
+    "clockStarted": false,
+    "fixtureStarts": 0,
+    "sourceChecksSpent": 8,
+    "sourceChecksRemaining": 0,
+    "nextStage": "CONSOLIDATED_STATIC_RECOVERY_DESIGN_ONLY",
+    "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+    "recoveryProposal": "docs/reviews/R139_CUA_PRECLOCK_RECOVERY_PROPOSAL_2026-10-25.md",
+    "recoveryProposalDisposition": "ROOT_REVIEWED_DECISION_PACKET_ONLY_NOT_AUTHORITY"
   }
 }

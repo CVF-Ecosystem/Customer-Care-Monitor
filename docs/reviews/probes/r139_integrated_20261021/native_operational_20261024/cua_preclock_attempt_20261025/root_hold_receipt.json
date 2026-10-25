@@ -1,0 +1,325 @@
+{
+  "kind": "R139_ACTUAL_ORIGINAL_PRECLOCK_HOLD",
+  "status": "HOLD_CURRENT_HOST_BOOT_DRIFT_BEFORE_RESERVATION",
+  "observedAtUTC": "2026-10-25T07:52:10.744357+00:00",
+  "dispatchCommit": "fd730262bd55d73d7bdc681d891f0429b912997a",
+  "recipeSha256": "514373d7c4d9dd0bc946e7d7088d5fb8fa541fd5cec351096f0e6d14abbee0d0",
+  "originalControllerPid": 24484,
+  "originalWaitReturned": true,
+  "exitCode": 1,
+  "committedBootId": "|2026-10-23T05:48:27.5010520Z",
+  "actualBootId": "|2026-10-23T05:48:27.5037950Z",
+  "differenceMicroseconds": 2743,
+  "bootInterpretation": "Exact comparison failed. Whether this is OS reporting drift or another cause is not independently established; no real reboot claim.",
+  "reservationExists": false,
+  "releaseSignalExists": false,
+  "campaignUsed": 0,
+  "serviceQueries": 0,
+  "browserMethods": 0,
+  "fixtureStarts": 0,
+  "keyReads": 0,
+  "providerCalls": 0,
+  "sourceChecksSpent": 8,
+  "sourceChecksRemaining": 0,
+  "controllerAttempts": 1,
+  "controllerRetryAuthorized": false,
+  "noDeletionPinRewriteOrRelaunch": true,
+  "rawReceiptManifest": [
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_001.json",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_001.json",
+      "sha256": "1f8b7cec48250b4d5546cd3c488080cd2e0e18545d675795489a6d02802c42e0",
+      "bytes": 917
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_001.stderr.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_001.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_001.stdout.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_001.stdout.txt",
+      "sha256": "514373d7c4d9dd0bc946e7d7088d5fb8fa541fd5cec351096f0e6d14abbee0d0",
+      "bytes": 3042432
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_002.json",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_002.json",
+      "sha256": "6982b33be8422bf526cf0411b136e921d2f8fbfdc7dab439415500c4bfcc197c",
+      "bytes": 885
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_002.stderr.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_002.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_002.stdout.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_002.stdout.txt",
+      "sha256": "bd21d9e97cca7a32f350912ec23c0d53b39ed0b61ced90a435aad7e6b8e9e32b",
+      "bytes": 5077
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_003.json",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_003.json",
+      "sha256": "a5e12f418c331ebcbf2f5e92f226454dae391994d7d1725762292569d02e155a",
+      "bytes": 810
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_003.stderr.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_003.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_003.stdout.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_003.stdout.txt",
+      "sha256": "d123b4d5725bb4abb0cd290c4a0ccb5f101a5406a9322c166ab90275469ce8dc",
+      "bytes": 41
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_004.json",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_004.json",
+      "sha256": "f56bf47e192f465a2b5c46f998719f413023361e470e89ba3cb29dcf21a54ad1",
+      "bytes": 845
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_004.stderr.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_004.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_004.stdout.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_004.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_005.json",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_005.json",
+      "sha256": "bf9ddf4326b2e83a6266af51f2beaf597099c6407af75e5e7f81812022e5215f",
+      "bytes": 814
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_005.stderr.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_005.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_005.stdout.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_005.stdout.txt",
+      "sha256": "6c6c9a6d6b992927303e171f88d0204b15559ef50a53e1ead9f696c0f58393ae",
+      "bytes": 52
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_006.json",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_006.json",
+      "sha256": "cdfec9ba7f8d76ea316a9bc4799e5b8c4c705e7c7bb284f136298c40988a7082",
+      "bytes": 817
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_006.stderr.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_006.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_006.stdout.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_006.stdout.txt",
+      "sha256": "ac8157e1fbe3bc6bb9e50ae04a0003abc4e8ab54b87d984eef9d5256175ee1c1",
+      "bytes": 52
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_007.json",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_007.json",
+      "sha256": "7d31fed7b5f16184f5dd1eb89077841d86d4c2366b3260e0f53033138344d6b8",
+      "bytes": 833
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_007.stderr.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_007.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_007.stdout.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_007.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_008.json",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_008.json",
+      "sha256": "936a9e653d3ff27b44e10699490b2a307c7553950cdf0e446ca980f3d69fbfd7",
+      "bytes": 824
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_008.stderr.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_008.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_008.stdout.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_008.stdout.txt",
+      "sha256": "0e80aa3e00491eab353c789ed23d8e6d729074f135dbf9d5803fef5986f77f70",
+      "bytes": 11
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_009.json",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_009.json",
+      "sha256": "5ead8f90abc23b595b92e9f88a9e8ecf892837b58d41348aa7a201b999393211",
+      "bytes": 882
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_009.stderr.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_009.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_009.stdout.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_009.stdout.txt",
+      "sha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
+      "bytes": 6391
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_010.json",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_010.json",
+      "sha256": "0ab5a5704cf53cb47d78b2c6b0d42d665b8945b49e7b71281c89001152506f20",
+      "bytes": 891
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_010.stderr.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_010.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_010.stdout.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_010.stdout.txt",
+      "sha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+      "bytes": 9841
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_011.json",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_011.json",
+      "sha256": "cbbdd1d0c9b4bba76671d3eddd9376b93210aa546ef587b96b7904830b4f1d87",
+      "bytes": 883
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_011.stderr.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_011.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_011.stdout.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_011.stdout.txt",
+      "sha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491",
+      "bytes": 3379
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_012.json",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_012.json",
+      "sha256": "6904a4cd8838cbabae05d62adc1266e17bbf7fa61c502c25810ba2d96061d454",
+      "bytes": 869
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_012.stderr.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_012.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_012.stdout.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_012.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_013.json",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_013.json",
+      "sha256": "9b191b5d1584f6831d93e44d6439e122dead7fa1533459d76a83e808e9ad6841",
+      "bytes": 918
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_013.stderr.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_013.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_013.stdout.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_013.stdout.txt",
+      "sha256": "5fdc0afe57c4b4c1bde7aa21387f8ee9edb3e326988a69bab8efe1b5484be711",
+      "bytes": 1047
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_014.json",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_014.json",
+      "sha256": "2d97c860dddd940877ca2842a54d026ba49e677dc686b29b480e42d452bec6df",
+      "bytes": 1048
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_014.stderr.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_014.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/child_014.stdout.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_014.stdout.txt",
+      "sha256": "e3e1bbd2bfb39f843a2ce94aa45b56d756340f4b72bdb31e05a7a1ef81fd7d26",
+      "bytes": 31
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_activation_logs/git_policy_readiness.json",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/git_policy_readiness.json",
+      "sha256": "e9af3cf6c14051abdabce966bcdcac99f60b3e730c3e8f944555ec2b80d27458",
+      "bytes": 270
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_readiness/control_outer/intent.json",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/outer_intent.json",
+      "sha256": "830d8830d6cbb2de707d845ad04423593f96b03a0f1cc8430321458f28220848",
+      "bytes": 708
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_readiness/control_outer/original_wait_exit.json",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/outer_original_wait_exit.json",
+      "sha256": "35ffc826049d3c82929c8c63c1a1b40e97933a91d424e5d2cf12c9e845955356",
+      "bytes": 162
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_readiness/control_outer/started.json",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/outer_started.json",
+      "sha256": "875f0a8e0f6ba3894fe46fc9fc89fb9056ae464d8689ca89e01046a9e391bd8e",
+      "bytes": 144
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_readiness/control_outer/stderr.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/outer_stderr.txt",
+      "sha256": "1a53afae13441a09e3d3adf183f4cf5dee7023c8196bad293d30120422569bd7",
+      "bytes": 1217
+    },
+    {
+      "originalPath": ".cvf/runtime/r139_cua_reentry_20261025_readiness/control_outer/stdout.bin",
+      "retainedPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/outer_stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ],
+  "wrapperSha256": "ebe1e4a76a9c9a538ded30e9076d2d935967ddd7c3615f99111d67938a126823",
+  "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+  "repositoryGateRepair": {
+    "firstPreCommitResult": "FAIL_CONT_HANDOFF_NOT_ACTIVE",
+    "cause": "Root used tranche CHANGES_REQUIRED as handoff Status; active pointer requires ACTIVE regardless of outcome.",
+    "repair": "Restored handoff Status ACTIVE; tranche stays CHANGES_REQUIRED, work order BLOCKED_WITH_REASON, phase REVIEW.",
+    "effectOrAuthorityChange": false
+  }
+}

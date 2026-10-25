@@ -1,0 +1,30 @@
+from pathlib import Path
+import json, hashlib, subprocess, sys, time
+from datetime import datetime, timezone
+root=Path.cwd()
+recipe_rel, recipe_sha, head=sys.argv[1:]
+recipe_path=root/recipe_rel
+raw=recipe_path.read_bytes()
+if hashlib.sha256(raw).hexdigest()!=recipe_sha: raise RuntimeError('RECIPE_SHA')
+r=json.loads(raw)
+if r.get('status')!='COMMITTED_PRECLOCK': raise RuntimeError('NOT_SEALED')
+build=json.loads((root/r['acceptedBuildPinsRef']['path']).read_bytes())
+python=build['pins']['tools']['python']['path']
+controller=root/r['invocation']['controllerScriptPath']
+design=root/'docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt'
+source=design.read_bytes()
+if hashlib.sha256(source).hexdigest()!='57ae20a2bb0054e38d5a3d919f5e2997780b56981a82f2f31924eddf623e5854': raise RuntimeError('CONTROLLER_PIN')
+if controller.exists(): raise RuntimeError('CONTROLLER_ALREADY_EXTRACTED')
+with controller.open('xb') as f: f.write(source)
+custody=root/'.cvf/runtime/r139_cua_reentry_20261025_readiness/control_outer'
+custody.mkdir(exist_ok=False)
+def put(name,obj):
+    with (custody/name).open('xb') as f: f.write((json.dumps(obj,indent=2)+'\n').encode())
+argv=[python,'-B',str(controller),recipe_rel,recipe_sha,head]
+put('intent.json',{'kind':'ROOT_ORIGINAL_CONTROL_POPEN_CUSTODY','argv':argv,'cwd':str(root),'createdAtUTC':datetime.now(timezone.utc).isoformat(),'noRetry':True})
+with (custody/'stdout.bin').open('xb') as out, (custody/'stderr.bin').open('xb') as err:
+    p=subprocess.Popen(argv,cwd=root,shell=False,stdin=subprocess.DEVNULL,stdout=out,stderr=err)
+    put('started.json',{'pid':p.pid,'originalPopenReturned':True,'startedAtUTC':datetime.now(timezone.utc).isoformat(),'startedMonotonic':time.monotonic()})
+    code=p.wait()
+put('original_wait_exit.json',{'pid':p.pid,'originalWaitReturned':True,'exitCode':code,'returnedAtUTC':datetime.now(timezone.utc).isoformat(),'returnedMonotonic':time.monotonic()})
+raise SystemExit(code)

@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 Worker: Internal Sol G0 service/runtime actor; internal Luna producer/independent observer for browser only
 Reviewer: Root independent source/evidence REVIEWER
@@ -10,9 +10,9 @@ runtimeExecutor: UNASSIGNED_UNTIL_SUPPORTED_ENVIRONMENT_AND_COMMITTED_ADMISSION
 runtimeReviewer: INDEPENDENT_REVIEWER_TO_BE_BOUND_IN_CURRENT_ADMISSION; historical reviews retained
 dispatchKind: INITIAL
 
-## Current internal CUA G0 technical preparation — 2026-10-25
+## Current internal CUA G0 preclock HOLD — 2026-10-25
 
-CCMAI-RUNTIME-139 CUA G0 technical BUILD/preclockONLY: acceptedsource38db7e90/buildbd21, all8checksconsumed withWorkerFAILretained. Root seals complete8canonicaltemplates/recipe/authority andindependentreview/cleancommit beforeONEoriginalheldcontroller reserves1200s,syncs/gates/commits/signals. ActualactorsRoot/internalSol/LunaProducer/LunaObserver metadataready for nonce8cec56e99d18817f6c4e8967c188ddd1. Internal5exactservicequeries first; Rootacceptreceipts then producer/observerG0oneownedIABtab/captures/realnonceURL andactualDOMlocator/confirmdocs orHOLD. Nofixture/key/provider beforeactualG0Rootmanualreview andseparateRuntimeEffectAdmission. Currentcampaign0/services0/browser0/key0/provider0/noclock; same64CUAmethods/4stages/3meta/16status/oneAPI<=USD1, original+1020cleanup/+1200expiry, Ownerexacttabfallbackavailable, no retry/newpage/stack/Hostkill. ProductB BLOCKED_PENDING_OPERATIONAL_ADMISSION,FBZaloOAparked,Antigravitywithdrawn,sameONE M3-05/M3-08 order, no newOwnerrelay.
+CCMAI-RUNTIME-139 HOLD_CURRENT_HOST_BOOT_DRIFT_BEFORE_RESERVATION: original controller PID24484 returned exit1 at committed fd730262; actual boot timestamp differs by 2743 microseconds from sealed proof. No reservation, clock, five service queries, CUA, fixture, key or provider effect; current campaign remains0, source checks8/8spent. Preserve exact original receipts and independent HOLD review; no re-pin, delete, controller retry or source check under current authority. Root reviews one consolidated boot-identity recovery proposal in this same M3-05/M3-08 order before any changed-contract/new-check/relaunch authority. Static source/technical review remains bounded acceptance only; actual G0/G1/G2/G3 NOT_RUN, ProductB BLOCKED_PENDING_OPERATIONAL_ADMISSION; Facebook/Zalo OA parked, no Antigravity or helper tranche.
 
 Authority `CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-G0-TECHNICAL-RELEASE-ADMISSION.json`, independent review `docs/reviews/R139_CUA_G0_TECHNICAL_RELEASE_REVIEW_2026-10-25.md`. Source REVIEW_PASS is inherited for the bounded proof only; DESIGN/SPEC/one existing WORK_ORDER and Owner caps remain accepted. REVIEW_PASS -> PARKED(source settled) -> BUILD(G0 proof preparation) is recorded; no new tranche. Actual effects begin only through Root original committed clock transaction.
 
@@ -24,7 +24,7 @@ The consolidated transition proposal and unchanged original budgets remain bindi
 
 ## Current internal browser transition — 2026-10-24
 
-CCMAI-RUNTIME-139 CUA G0 technical BUILD/preclockONLY: acceptedsource38db7e90/buildbd21, all8checksconsumed withWorkerFAILretained. Root seals complete8canonicaltemplates/recipe/authority andindependentreview/cleancommit beforeONEoriginalheldcontroller reserves1200s,syncs/gates/commits/signals. ActualactorsRoot/internalSol/LunaProducer/LunaObserver metadataready for nonce8cec56e99d18817f6c4e8967c188ddd1. Internal5exactservicequeries first; Rootacceptreceipts then producer/observerG0oneownedIABtab/captures/realnonceURL andactualDOMlocator/confirmdocs orHOLD. Nofixture/key/provider beforeactualG0Rootmanualreview andseparateRuntimeEffectAdmission. Currentcampaign0/services0/browser0/key0/provider0/noclock; same64CUAmethods/4stages/3meta/16status/oneAPI<=USD1, original+1020cleanup/+1200expiry, Ownerexacttabfallbackavailable, no retry/newpage/stack/Hostkill. ProductB BLOCKED_PENDING_OPERATIONAL_ADMISSION,FBZaloOAparked,Antigravitywithdrawn,sameONE M3-05/M3-08 order, no newOwnerrelay.
+CCMAI-RUNTIME-139 HOLD_CURRENT_HOST_BOOT_DRIFT_BEFORE_RESERVATION: original controller PID24484 returned exit1 at committed fd730262; actual boot timestamp differs by 2743 microseconds from sealed proof. No reservation, clock, five service queries, CUA, fixture, key or provider effect; current campaign remains0, source checks8/8spent. Preserve exact original receipts and independent HOLD review; no re-pin, delete, controller retry or source check under current authority. Root reviews one consolidated boot-identity recovery proposal in this same M3-05/M3-08 order before any changed-contract/new-check/relaunch authority. Static source/technical review remains bounded acceptance only; actual G0/G1/G2/G3 NOT_RUN, ProductB BLOCKED_PENDING_OPERATIONAL_ADMISSION; Facebook/Zalo OA parked, no Antigravity or helper tranche.
 
 Consolidated proposal: `docs/reviews/R139_INTERNAL_BROWSER_TRANSITION_2026-10-24.md`. Owner worker substitution is already authorized. The superseded unexecuted technical draft below cannot release effects.
 
@@ -34,7 +34,7 @@ Technical authority: `CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-G0-TEC
 
 ## Current accepted source and preclock preparation — 2026-10-24
 
-CCMAI-RUNTIME-139 CUA G0 technical BUILD/preclockONLY: acceptedsource38db7e90/buildbd21, all8checksconsumed withWorkerFAILretained. Root seals complete8canonicaltemplates/recipe/authority andindependentreview/cleancommit beforeONEoriginalheldcontroller reserves1200s,syncs/gates/commits/signals. ActualactorsRoot/internalSol/LunaProducer/LunaObserver metadataready for nonce8cec56e99d18817f6c4e8967c188ddd1. Internal5exactservicequeries first; Rootacceptreceipts then producer/observerG0oneownedIABtab/captures/realnonceURL andactualDOMlocator/confirmdocs orHOLD. Nofixture/key/provider beforeactualG0Rootmanualreview andseparateRuntimeEffectAdmission. Currentcampaign0/services0/browser0/key0/provider0/noclock; same64CUAmethods/4stages/3meta/16status/oneAPI<=USD1, original+1020cleanup/+1200expiry, Ownerexacttabfallbackavailable, no retry/newpage/stack/Hostkill. ProductB BLOCKED_PENDING_OPERATIONAL_ADMISSION,FBZaloOAparked,Antigravitywithdrawn,sameONE M3-05/M3-08 order, no newOwnerrelay.
+CCMAI-RUNTIME-139 HOLD_CURRENT_HOST_BOOT_DRIFT_BEFORE_RESERVATION: original controller PID24484 returned exit1 at committed fd730262; actual boot timestamp differs by 2743 microseconds from sealed proof. No reservation, clock, five service queries, CUA, fixture, key or provider effect; current campaign remains0, source checks8/8spent. Preserve exact original receipts and independent HOLD review; no re-pin, delete, controller retry or source check under current authority. Root reviews one consolidated boot-identity recovery proposal in this same M3-05/M3-08 order before any changed-contract/new-check/relaunch authority. Static source/technical review remains bounded acceptance only; actual G0/G1/G2/G3 NOT_RUN, ProductB BLOCKED_PENDING_OPERATIONAL_ADMISSION; Facebook/Zalo OA parked, no Antigravity or helper tranche.
 
 Accepted build pins: `CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-ACCEPTED-BUILD-PINS-ADMISSION.json`. This section supersedes earlier current-stage source instructions below; historical bound sections and spent counters remain unchanged. No runtime admission or live deadline is issued here.
 

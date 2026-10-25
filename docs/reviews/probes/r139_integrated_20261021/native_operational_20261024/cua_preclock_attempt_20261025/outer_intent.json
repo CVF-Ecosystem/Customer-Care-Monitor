@@ -1,0 +1,14 @@
+{
+  "kind": "ROOT_ORIGINAL_CONTROL_POPEN_CUSTODY",
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-B",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_cua_reentry_20261025_readiness\\activation_controller.py",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_activation_recipe_20261025.json",
+    "514373d7c4d9dd0bc946e7d7088d5fb8fa541fd5cec351096f0e6d14abbee0d0",
+    "fd730262bd55d73d7bdc681d891f0429b912997a"
+  ],
+  "cwd": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+  "createdAtUTC": "2026-10-25T07:49:26.089881+00:00",
+  "noRetry": true
+}

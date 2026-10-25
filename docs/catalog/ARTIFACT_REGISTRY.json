@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Current R139 CUA G0 technical BUILD/preclock preparation; source38db/bd21 accepted with retainedWorkerFAIL/all8checksused, actors metadata-ready, no campaign or product release."
+      "description": "Current R139 REVIEW/CHANGES_REQUIRED: actual preclock CURRENT_HOST_BOOT_DRIFT before reservation; one consolidated static recovery decision, source8spent, no runtime effects."
     },
     {
       "id": "r060-work-order",
@@ -36900,6 +36900,370 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/cua_observer_original_ack_20261025.json",
       "status": "ACTIVE",
       "description": "Renewed actual browser actor metadata acknowledgment; zero effects and capability unproven."
+    },
+    {
+      "id": "r139-cua-original-preclock-ed2c954717ee0404",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_001.json",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-230838c97d5b03d4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_001.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-be0950e669fc41cc",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_001.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-f53c5f85155e05e5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_002.json",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-ffa9120ae48a93f1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_002.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-f3e2d2a23108317b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_002.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-eda38cad728151bf",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_003.json",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-a41dd7e3e95fb30c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_003.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-33e6516f96d84651",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_003.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-ff9dd5858360444f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_004.json",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-81841e391cc504c9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_004.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-bbadc9880422ef4e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_004.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-939d633f44584e79",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_005.json",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-daeec38a24964d5d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_005.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-ae5aff556e7dca90",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_005.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-abce8efde2df1b1c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_006.json",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-96445d27dd10f037",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_006.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-72c44df5a1847ab8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_006.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-bb59bc6ad8da0cfd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_007.json",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-bcf2339a0f22d6ba",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_007.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-0c41ef56b8fa3334",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_007.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-a8d7322f4c942f3f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_008.json",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-84d24f53ee6eb552",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_008.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-44010a17b206a31b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_008.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-890ebac718b19743",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_009.json",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-72c5b390e4424b49",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_009.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-3cd7f716406a9aba",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_009.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-9441f7dd5a889232",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_010.json",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-584ff12eeff27238",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_010.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-86aad6bd22260191",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_010.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-bde1fc92a457a94c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_011.json",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-9c36f40586bcb89a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_011.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-76ce13b5aeb71c51",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_011.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-6d868d29737f8b48",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_012.json",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-5965ba47c18454d0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_012.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-da1cb82c2d1d36cb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_012.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-cfaa398222162948",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_013.json",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-d00c6656daa6d827",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_013.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-460d5291cb0a4c0e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_013.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-a93ee46ec4f0ec69",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_014.json",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-5f6234a4e3b66871",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_014.stderr.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-c520e7ca104e1903",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/child_014.stdout.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-ef07f84a5fe804eb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/git_policy_readiness.json",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-2e336b9d85976189",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/outer_intent.json",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-b95272c8ed907ecb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/outer_original_wait_exit.json",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-8b6459fe907caedb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/outer_started.json",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-9b4d029a65cd44d2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/outer_stderr.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-81aa25ff88d6f2f8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/outer_stdout.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-416b7f19faa292ba",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/root_hold_receipt.json",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-b38cc5ef5752ec79",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_preclock_attempt_20261025/root_original_control_custody.py.txt",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-11a9157aec1c403a",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CUA_PRECLOCK_HOLD_REVIEW_2026-10-25.md",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-cua-original-preclock-36b40a5e694d9f64",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CUA_PRECLOCK_RECOVERY_PROPOSAL_2026-10-25.md",
+      "status": "ACTIVE",
+      "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
     }
   ]
 }
