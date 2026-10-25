@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "r139.cuaBootIdentityV3ProducerActorOriginalAck@1.0.0",
+  "kind": "R139_CUA_BOOT_IDENTITY_V3_PRODUCER_ACTOR_ORIGINAL_ACK",
+  "workOrder": "CCMAI-RUNTIME-139",
+  "actor": "g0Producer",
+  "taskId": "/root/r139_v3_browser_producer",
+  "status": "METADATA_READY_ONLY_NOT_G0_PASS",
+  "ready": true,
+  "readyForReservedG0": true,
+  "readinessScope": "Producer availability for the bounded G0 stage after explicit Root release and reservation. This is metadata only and does not establish browser capability, G0 acceptance, or runtime success.",
+  "sourceCommit": "b330f70b7e760ffee1113d57abc7133c725c57cd",
+  "acceptedBuildCommit": "3366eb41379c68419b235e5295817dafa74215a94dd5bcc8b4e323a6dfc215c2",
+  "acceptedBuildPinsPath": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-V3-ACCEPTED-BUILD-PINS-ADMISSION.json",
+  "ownerAdmissionPath": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+  "ownerAdmissionSha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f",
+  "nativeContractPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_contract_20261026.json",
+  "nativeContractSha256": "e3fe4ef6caeb8b197e5f358267d89a6584fb6cf10087bebb5bfca53efdc7d5da",
+  "nativeContractId": "r139-cua-boot-identity-v3-20261026",
+  "campaignNonce": "319839d1bdabc006390d02cf9c7c773b",
+  "toolAvailability": {
+    "tool": "mcp__cua_repl.js",
+    "presentInCurrentTask": true,
+    "invokedForThisAck": false,
+    "browserSessionInitialized": false,
+    "browserInventoryObserved": false,
+    "actualBrowserCapabilityProven": false
+  },
+  "executionRelease": "NOT_GRANTED_BY_THIS_ACK; await explicit Root G0 release",
+  "currentEffectRelease": "NONE_METADATA_ONLY",
+  "currentBrowserCapabilityPass": false,
+  "campaignReserved": false,
+  "campaignStartedByProducer": false,
+  "producerEffectsObserved": {
+    "cuaApiMethods": 0,
+    "browserNavigation": 0,
+    "ownedTabsCreated": 0,
+    "pageObservations": 0,
+    "captures": 0,
+    "serviceQueries": 0,
+    "fixtureStarts": 0,
+    "keyContentReads": 0,
+    "providerCalls": 0
+  },
+  "preservedGlobalCaps": {
+    "maxCuaApiMethods": 64,
+    "stageCaps": {
+      "g0Producer": 8,
+      "g0IndependentObserver": 4,
+      "g2ProductUi": 48,
+      "terminal": 4
+    },
+    "maxOwnedIabTabs": 1,
+    "maxCampaignNonces": 1,
+    "maxG0PageObservations": 4,
+    "maxG0Captures": 2,
+    "maxMetadataInventoriesTotal": 3,
+    "metadataInventoryBreakdown": {
+      "baseline": 1,
+      "handoff": 1,
+      "final": 1
+    },
+    "cumulativeUsageReset": false
+  },
+  "pageCustody": {
+    "exactPageId": null,
+    "providerTabId": null,
+    "identityRule": "On a later released stage, preserve the exact native ID returned for the owned page; do not invent, infer, or reconstruct an ID.",
+    "ownedPageMaximum": 1
+  },
+  "exactOwnedPageCloseFallback": {
+    "mode": "operator_fallback",
+    "operator": "Owner",
+    "coordinationOwner": "Root",
+    "availability": "Standing exact-owned-page close fallback retained in the Root plan; not invoked by this ACK."
+  },
+  "privacyAndStaging": "No page, browser inventory, host identity, credential, key content, or service data was read or staged for this ACK. Any later action requires Root release and follows the current contract and Root plan.",
+  "claimBoundary": "Availability only. This ACK is not a browser capability result, G0 proof, live governance evidence, fixture authorization, key authorization, provider authorization, or runtime PASS."
+}

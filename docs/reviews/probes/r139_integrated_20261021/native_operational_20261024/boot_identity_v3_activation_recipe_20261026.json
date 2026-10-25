@@ -1,0 +1,217 @@
+{
+  "kind": "R139_ROOT_ACTIVATION_RECIPE",
+  "status": "DRAFT_PENDING_ROOT_SEAL_NO_EFFECT_AUTHORITY",
+  "readyForActivation": false,
+  "trancheId": "CCMAI-RUNTIME-139",
+  "route": "INTERNAL_CUA_PAGE_TARGET_G0_G3_SAME_R139",
+  "invocation": {
+    "custodian": "Root original managed Popen and original wait/exit",
+    "controllerScriptPath": ".cvf/runtime/r139_v3_preclock_20261026/activation_controller.py",
+    "argvShape": [
+      "<pinned-python>",
+      "-B",
+      "<exact-copy-controller>",
+      "<this-committed-recipe>",
+      "<actual-recipe-sha256>",
+      "<actual-clean-dispatch-HEAD>"
+    ],
+    "originalPopenWaitExitRequired": true
+  },
+  "freshGrant": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-CUA-SOURCE-ADMISSION.json",
+    "sha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e"
+  },
+  "acceptedBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-V3-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "3366eb41379c68419b235e5295817dafa74215a94dd5bcc8b4e323a6dfc215c2"
+  },
+  "bootProof": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_proof_20261025.json",
+    "sha256": "10937592aaa94c4d00a89eb194fa223b9bec372b921be8a247967da235fa44e9",
+    "hostBootId": "r139-hb2:c6b81cbdce3472f97a047a667bcfbfcf5fff39e7a8a39546e385b4b1d28b3d79"
+  },
+  "actorAcks": {
+    "root": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_root_actor_ack_20261026.json",
+      "sha256": "ce271a2007eac09566ede0810708296efa7ce554b110b9e121379bb409e52041"
+    },
+    "internal": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_internal_actor_ack_20261026.json",
+      "sha256": "b58416c5fc527556f305f00fc584d8695a53fdd9c4841d544aa32ac69a1df6c4"
+    },
+    "cuaProducer": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_producer_actor_ack_20261026.json",
+      "sha256": "7159e40bfe488c5536207759227e2d75ccd2794a65c79ad4363da476751651b1"
+    },
+    "cuaObserver": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_observer_actor_ack_20261026.json",
+      "sha256": "18509884557984466df366a5d06b7b37a3947c86e4ba20876d2786c5c7909884"
+    }
+  },
+  "operator": "Owner in this conversation",
+  "operatorAvailable": true,
+  "oldResourceExclusionReviewed": false,
+  "protectedBaselineReference": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_noninterference_disposition_20261025.json",
+    "sha256": "bb236c2fdd2242d5537842c191f2f1cc52150f37f4512a85750c60cb700049b2"
+  },
+  "globalHostListScopeApproved": true,
+  "coordinationRoot": ".cvf/runtime/r139_v3_reentry_20261026_readiness/coordination",
+  "coordinationOwnerSha256": "85915def7220357e2c0da904c7c223ee705a3ea00a95ac32b547ab85b388429a",
+  "reservationPath": ".cvf/runtime/r139_v3_reentry_20261026_readiness/campaign_reservation.json",
+  "signalPath": ".cvf/runtime/r139_v3_reentry_20261026_readiness/coordination/root_g0_release.json",
+  "failurePath": ".cvf/runtime/r139_v3_reentry_20261026_readiness/coordination/activation_failure.json",
+  "childLogRoot": ".cvf/runtime/r139_v3_reentry_20261026_activation_logs",
+  "nonce": "319839d1bdabc006390d02cf9c7c773b",
+  "nativeContractId": "r139-cua-boot-identity-v3-20261026",
+  "newBudget": {
+    "oneCampaign": 1,
+    "internalReadOnlyQueries": 5,
+    "browserWorkerStagesMax": 4,
+    "cuaApiMethodsMax": 64,
+    "cuaStageMethodsMax": {
+      "g0Producer": 8,
+      "g0IndependentObserver": 4,
+      "g2ProductUi": 48,
+      "terminal": 4
+    },
+    "g2CapturesMax": 4,
+    "newOwnedPages": 1,
+    "creationNavigation": 1,
+    "samePageControlNavigation": 1,
+    "pageReadObservationsMax": 4,
+    "originalCapturesMax": 2,
+    "exactFinalCloseMax": 1,
+    "baselineMetadataEnumeration": 1,
+    "handoffMetadataEnumeration": 1,
+    "finalMetadataEnumeration": 1,
+    "globalMetadataEnumerationMaximum": 3,
+    "nativeExecutePOSTMax": 8,
+    "browserExecutePOSTMax": 1,
+    "grantsMax": 3,
+    "authPOSTMax": 4,
+    "statusReadStartsMax": 16,
+    "automaticPostSendStatusPollStartsMax": 12,
+    "eventDrivenStatusReadsMax": 4,
+    "automaticPollSpacingSecondsMin": 5,
+    "automaticPollLifetimeSecondsMax": 60,
+    "physicalProviderAttemptsMax": 1,
+    "newUSDMax": 1,
+    "keyContentReadsMax": 1,
+    "requestBytesMax": 6000,
+    "completionTokensMax": 768,
+    "fixtureStartsMax": 1,
+    "fixtureFinalStopsMax": 1,
+    "backendStartsMax": 1,
+    "viteStartsMax": 1,
+    "publicTariffRefreshIfNeededMax": 1,
+    "dockerQuerySecondsMax": 20,
+    "powershellQuerySecondsMax": 5,
+    "automaticRetry": 0,
+    "sourceChecksDuringCampaign": 0,
+    "wholeCampaignSeconds": 1200,
+    "stopBeforeSeconds": 1020,
+    "cleanupReserveSeconds": 180,
+    "oldUnusedProviderAllowanceSupersededNotStacked": true
+  },
+  "freshSourceCheckBudgetOutsideClock": {
+    "authoringPasses": 1,
+    "consolidatedRepairPasses": 1,
+    "workerFocusedPython": 1,
+    "workerOfflineGoCompile": 1,
+    "rootFocusedPython": 1,
+    "rootAuditedPureGo": 1
+  },
+  "currentSourceCheckAuthority": "OWNER_DIRECTED_PINNED_RESUME_REPAIR_78AE94C6_HISTORICAL10_PLUS_NEW4_RETAINED_NO_NEW_CHECKS",
+  "oldSha256": {},
+  "canonicalTemplates": {},
+  "protectedUnchangedHashes": {
+    "files": {},
+    "workOrderPinnedSections": {}
+  },
+  "lateTokensOnly": [
+    "{{G0_UTC}}",
+    "{{G0_MONO}}",
+    "{{STOP_UTC}}",
+    "{{DEADLINE_UTC}}",
+    "{{RESERVATION_SHA256}}",
+    "{{RESERVATION_PATH}}",
+    "{{BASE_HEAD}}",
+    "{{NONCE}}"
+  ],
+  "currentEffectFlags": {
+    "controller": 0,
+    "campaign": 0,
+    "services": 0,
+    "cuaMethods": 0,
+    "fixture": 0,
+    "keyReads": 0,
+    "providerCalls": 0
+  },
+  "canonicalTemplatesStatus": "PENDING_ROOT_CURRENT_CANONICAL_BYTES_AND_INDEPENDENT_REVIEW",
+  "operatorAvailabilityRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_owner_close_availability_20261026.json",
+    "sha256": "a99080a2d1686a2c5ad05299e1397a99a6748129f7958605266ba28b94bf46c7"
+  },
+  "finalSealChecklist": [
+    "Actual current browser ACK must match owner envelope/source/payload/nativeContractId/campaignNonce and declare zero effects for check-in",
+    "Refresh same-window Root/internal ACKs; Owner exact-page availability already received",
+    "Final canonical template snapshot/base hashes/catalog and actual actor references must be refreshed and reviewed before reservation",
+    "Commit exact technical release/finalrecipe/ACKs and require clean HEAD; expected dispatch HEAD stays external third CLI argument",
+    "No source/check/provider probe or new clock before final original Root-held activation operation"
+  ],
+  "inheritedOwnerEnvelope": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-AND-CONDITIONAL-REENTRY-ADMISSION.json",
+    "sha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f"
+  },
+  "observationCapsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
+    "sha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491"
+  },
+  "cuaPageTargetPlanReference": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_browser_operation_plan_20261026.json",
+    "sha256": "bc8945b2f3d024041dd33f18f957008b404a3854b5cccb7deb958ad2532d49c1"
+  },
+  "cuaBrowserOperationPlanReference": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_browser_operation_plan_20261026.json",
+    "sha256": "bc8945b2f3d024041dd33f18f957008b404a3854b5cccb7deb958ad2532d49c1"
+  },
+  "bootRecoveryAdmission": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json",
+    "sha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb"
+  },
+  "bootIdentityContract": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_contract_20261026.json",
+    "sha256": "e3fe4ef6caeb8b197e5f358267d89a6584fb6cf10087bebb5bfca53efdc7d5da"
+  },
+  "bootRecoveryTechnicalReviewRef": {
+    "path": "docs/reviews/R139_BOOT_IDENTITY_G0_TECHNICAL_REVIEW_2026-10-25.md",
+    "sha256": "fae27bca6aa11dba8f78102339d1e56efa5bd34876d012998c8ef3ad50ee9f3d"
+  },
+  "sourceBudgetInterpretation": "Historical 10 plus new 4 focused invocations counted once; no further source check. Accepted build b330f70b/3366eb41.",
+  "currentClockHold": {
+    "status": "HISTORICAL_V2_HOLD_RETAINED",
+    "oldPid": 24484,
+    "oldExitCode": 1,
+    "v2Disabled": true,
+    "sharedFutureControllerUsed": 0,
+    "sharedFutureControllerCap": 1
+  },
+  "bootV3Admission": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+    "sha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f"
+  },
+  "bootV3TechnicalReviewRef": {
+    "path": "docs/reviews/R139_CLOCK_V3_G0_TECHNICAL_REVIEW_2026-10-26.md",
+    "sha256": "PENDING_ROOT_SEAL"
+  },
+  "rootSealPending": [
+    "new nonce",
+    "exclusive coordination owner.json",
+    "actor acknowledgments",
+    "current canonical byte templates",
+    "protected hashes and work order sections",
+    "independent technical review",
+    "clean committed dispatch HEAD"
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "kind": "R139_INTERNAL_CUA_V3_PRECLOCK_HANDOFF_PACKET",
+  "status": "DRAFT_PENDING_ROOT_SEAL_NO_EFFECT_AUTHORITY",
+  "sourceCommit": "b330f70b7e760ffee1113d57abc7133c725c57cd",
+  "acceptedBuildPins": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-V3-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "3366eb41379c68419b235e5295817dafa74215a94dd5bcc8b4e323a6dfc215c2"
+  },
+  "ownerEnvelopeSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
+  "nativeContractId": "r139-cua-boot-identity-v3-20261026",
+  "campaignNonce": "319839d1bdabc006390d02cf9c7c773b",
+  "runtimeDraft": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_runtime_admission_draft_20261026.json",
+  "recipeDraft": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_activation_recipe_20261026.json",
+  "fiveQueryPlan": {
+    "status": "PREPARED_UNEXECUTED_NEW_OWNER_ENVELOPE_ROOT_RELEASE_REQUIRED",
+    "actor": "Internal worker only after Root G0 technical release and original campaign reservation",
+    "binaryPinSource": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-V3-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "sha256": "3366eb41379c68419b235e5295817dafa74215a94dd5bcc8b4e323a6dfc215c2"
+    },
+    "dockerConfigDir": ".cvf/runtime/r139_v3_reentry_20261026_readiness/docker_config",
+    "dockerConfigContent": "{}\n",
+    "configCustody": "Root metadata initialized exclusive empty config before clock; no Docker/port query until original reservation+fresh Root signal. No ambient credentials.",
+    "queries": [
+      {
+        "id": "cached-image",
+        "argv": [
+          "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_v3_reentry_20261026_readiness/docker_config",
+          "image",
+          "inspect",
+          "--format",
+          "{{json .Id}}",
+          "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+        "comparison": "Decode stdout as exactly one JSON string (only surrounding whitespace); require decoded string exactly equals expected; no extra stdout content. Original stderr/exit retained."
+      },
+      {
+        "id": "container-name",
+        "argv": [
+          "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_v3_reentry_20261026_readiness/docker_config",
+          "ps",
+          "-a",
+          "--filter",
+          "name=ccmai-r139-r4-20261023",
+          "--format",
+          "{{json .Names}}"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "EMPTY"
+      },
+      {
+        "id": "network-name",
+        "argv": [
+          "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_v3_reentry_20261026_readiness/docker_config",
+          "network",
+          "ls",
+          "--filter",
+          "name=ccmai-r139-r4-20261023",
+          "--format",
+          "{{json .Name}}"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "EMPTY"
+      },
+      {
+        "id": "volume-name",
+        "argv": [
+          "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_v3_reentry_20261026_readiness/docker_config",
+          "volume",
+          "ls",
+          "--filter",
+          "name=ccmai-r139-r4-20261023",
+          "--format",
+          "{{json .Name}}"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "EMPTY"
+      },
+      {
+        "id": "vite-port",
+        "argv": [
+          "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+          "-NoLogo",
+          "-NoProfile",
+          "-NonInteractive",
+          "-Command",
+          "$ErrorActionPreference='Stop'; $r139Listeners = @(Get-NetTCPConnection -State Listen -ErrorAction Stop | Where-Object { $_.LocalPort -eq 3519 } | Select-Object -Property LocalAddress,LocalPort,OwningProcess); [pscustomobject]@{ port = 3519; listeners = $r139Listeners } | ConvertTo-Json -Depth 4 -Compress; exit 0"
+        ],
+        "timeoutSeconds": 5,
+        "cap": 1,
+        "expected": {
+          "port": 3519,
+          "listeners": []
+        }
+      }
+    ],
+    "automaticRetry": 0,
+    "used": 0,
+    "vitePort": 3519,
+    "failure": "Any error/timeout/nonzero/ambiguous or occupied result HOLD, campaign consumed; no mutation/cleanup of ambient resources or replacement namespace/port",
+    "clock": "Reserve before first query or browser invocation; same original1200seconds includes all5queries and G0/G1/G2/cleanup",
+    "processCustody": "Capture original argv/stdout/stderr/start/end/wait/exit. Timeout must request cancellation of only the exact held query child and observe original wait; no new command/retry/host process kill. Unreturned original wait means UNKNOWN/HOLD, not bounded lifetime proof."
+  },
+  "browserPlan": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_browser_operation_plan_20261026.json",
+  "remainingBeforeReservation": "Root seals all PENDING fields and completes independent technical review; no effect yet.",
+  "remainingAfterReservedG0": "Root independently reviews actual G0 and issues separate Runtime Effect Admission before fixture/key/provider.",
+  "campaignReserved": false,
+  "providerCalls": 0,
+  "currentEffectRelease": "NONE",
+  "coordinationInitialization": {
+    "root": ".cvf/runtime/r139_v3_reentry_20261026_readiness/coordination",
+    "ownerSha256": "85915def7220357e2c0da904c7c223ee705a3ea00a95ac32b547ab85b388429a",
+    "preclockOnlyEntry": "owner.json",
+    "reservationPath": ".cvf/runtime/r139_v3_reentry_20261026_readiness/campaign_reservation.json",
+    "signalPath": ".cvf/runtime/r139_v3_reentry_20261026_readiness/coordination/root_g0_release.json"
+  },
+  "independentReview": "PENDING_ROOT_SEAL",
+  "operatorAvailable": true,
+  "operatorAvailabilityRef": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_owner_close_availability_20261026.json",
+  "inheritedOwnerEnvelopeSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "observationCapsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
+    "sha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491"
+  },
+  "actualActorMetadataRenewed": true,
+  "bootIdentityRecoveryAdmissionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json",
+    "sha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb"
+  },
+  "acceptedBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-V3-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "3366eb41379c68419b235e5295817dafa74215a94dd5bcc8b4e323a6dfc215c2"
+  },
+  "liveTemporalConditionSatisfied": false,
+  "currentClockHoldReceipt": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_prelaunch_clock_compatibility_20261025.json",
+  "bootV3AdmissionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+    "sha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f"
+  },
+  "bootIdentityContractRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_contract_20261026.json",
+    "sha256": "e3fe4ef6caeb8b197e5f358267d89a6584fb6cf10087bebb5bfca53efdc7d5da"
+  },
+  "sourceCheckTotalSpent": 14,
+  "sourceChecksRemaining": 0,
+  "sharedFutureControllerUsed": 0,
+  "sharedFutureControllerCap": 1,
+  "v2ReleaseSupersededDisabled": true
+}

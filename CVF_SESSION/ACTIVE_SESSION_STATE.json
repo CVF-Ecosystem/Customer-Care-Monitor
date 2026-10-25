@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 offline pinned-Core/clock/durable-resume repair SOURCE_REVIEW_PASS at b330f70b, accepted-build3366eb41. Reuse validated checkpoints; historical10 plusnew4 focused invocations retained (clock46PASS, pin firstFAIL then16PASS, Rootcombined62PASS counted once), actual offline interrupted return recovery and completed reuse verified with no new test child/count4->4. Public e9ddcbcd/profile1.1 execution pin is fixed; cached provenance/update observation separate, no automaticlatest fetch/adoption. Final pinned preflight legacy7/profile6PASS with APPL explicitly not applicable, no closure claim; use pwsh catalogWrite/check. Root next prepares one fresh v3 G0 technical packet/actor acknowledgments from accepted source and durable progress; do not rerun accepted offline suites on session/model quota resume. Shared future controller0/1 (v2 disabled), campaign0/1, services0/5, CUA0/64, fixture/key/provider0; no runtime release or liveG0-G3-resume proof yet. UNKNOWN original effects never replay, expired live campaign needs cleanup/re-admission while offline evidence survives. Same R139/M3-05/M3-08, no helper tranche/Antigravity/per-step Owner relay; ProductB BLOCKED_PENDING_OPERATIONAL_ADMISSION, Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 same-scope activation-environment repair BUILD under Root supplement177e3512 and Owner parent78ae94c6. Preserve accepted b330f70b/3366eb41 and all14 counted checks. Prerelease audit found scrubbed child PATH cannot discover pinned PS5 and the internal60s activation setup can expire during large catalog/gates/normal commit. Sol repairs only v3design and supervisor tests: pinnedPS5 PATH, bounded180s internal setup, new independent source review path; originalquery5s/drift2s/+1020cleanup/+1200deadline/provider<=USD1 all unchanged. Worker focused dependency check plus Root full supervisor regression planned, cumulative evidence/no reset. Root reviews and binds new source/build before rebasing current v3metadata/actor ACKs and technical seal. No controller/campaign/service/CUA/key/provider effects released; all remain0, v2disabled/shared future controller1. Same R139/M3-05/M3-08, no helper tranche/Antigravity/Owner relay, publice9/profile1.1 pin fixed; use pinned preflight, never latestdoctor/fetch; ProductB blocked/Facebook-ZaloOA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; offline repair accepted, browser and runtime workers unreleased",
+  "activeRole": "Root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; Sol activation-environment IMPLEMENTATION_WORKER after committed dispatch, browser/runtime workers unreleased",
   "updatedAt": "2026-10-25",
   "x-resolvedCoreCommit": "b8ead4f0d1bf9224338a206b2abcd893ec1801b1",
   "x-ownerRoadmapDiscipline": {
@@ -3608,5 +3608,17 @@
     "sourceVerificationComplete": true,
     "additionalSourceChecksNeeded": 0
   },
-  "x-executionCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba"
+  "x-executionCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
+  "x-r139V3ActivationEnvRepair20261026": {
+    "status": "BUILD_PENDING_COMMITTED_DISPATCH",
+    "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-REPAIR-ADMISSION.json",
+    "precedingCountedSourceChecks": 14,
+    "newFocusedBatches": 0,
+    "internalSetupSeconds": 180,
+    "wholeCampaignSeconds": 1200,
+    "cleanupCutoffSeconds": 1020,
+    "controllerOrCampaignUsed": 0,
+    "runtimeReleased": false,
+    "newRootCause": "Pinned child tool discovery plus known catalog transaction duration, not historical clock drift."
+  }
 }

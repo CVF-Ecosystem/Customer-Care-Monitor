@@ -83,10 +83,10 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "REVIEW_PASS",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "REVIEWER_ACCEPTED",
+  "workOrderStatus": "ACTIVE",
   "buildCommit": "b330f70b7e760ffee1113d57abc7133c725c57cd",
   "reviewEvidence": [
     "docs/reviews/R139_INTERNAL_CUA_CONSOLIDATED_SOURCE_REVIEW_2026-10-24.md",
@@ -99,7 +99,7 @@
     "docs/reviews/R139_CLOCK_V3_SOURCE_REVIEW_2026-10-26.md",
     "docs/reviews/R139_PINNED_RESUME_CONSOLIDATED_SOURCE_REVIEW_2026-10-26.md"
   ],
-  "disposition": "REVIEW_PASS",
+  "disposition": "Same-scope activation environment source repair; no runtime release.",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -157,7 +157,9 @@
     "CHANGES_REQUIRED",
     "BUILD",
     "REVIEW_PENDING",
-    "REVIEW_PASS"
+    "REVIEW_PASS",
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "actualUse": {
     "status": "HOLD_MANUAL_HOLD_PROVIDER_OUTCOME_UNKNOWN",
@@ -1189,5 +1191,17 @@
     "additionalSourceChecksNeeded": 0
   },
   "x-executionCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
-  "sourceOnlyAcceptance": "Accepted offline stable-pin/query-local-clock/durable-resume repair; integrated operational criteria OPEN, FREEZE OPEN; not product/tranche outcome closure."
+  "sourceOnlyAcceptance": "Accepted offline stable-pin/query-local-clock/durable-resume repair; integrated operational criteria OPEN, FREEZE OPEN; not product/tranche outcome closure.",
+  "x-r139V3ActivationEnvRepair20261026": {
+    "status": "BUILD_PENDING_COMMITTED_DISPATCH",
+    "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-REPAIR-ADMISSION.json",
+    "precedingCountedSourceChecks": 14,
+    "newFocusedBatches": 0,
+    "internalSetupSeconds": 180,
+    "wholeCampaignSeconds": 1200,
+    "cleanupCutoffSeconds": 1020,
+    "controllerOrCampaignUsed": 0,
+    "runtimeReleased": false,
+    "newRootCause": "Pinned child tool discovery plus known catalog transaction duration, not historical clock drift."
+  }
 }

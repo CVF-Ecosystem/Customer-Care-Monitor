@@ -1,0 +1,18 @@
+{
+  "kind": "ROOT_RECORDED_OWNER_EXACT_OWNED_PAGE_CLOSE_AVAILABILITY",
+  "status": "STANDING_OWNER_AUTHORIZATION_ACTIVE_RESUME_NO_NEW_REPLY_INVENTED",
+  "operator": "Owner in this conversation",
+  "operatorAvailable": true,
+  "availabilityBasis": "Owner previously explicitly confirmed full availability for exact owned PageId/nonce operator_fallback and final inventory; current Owner tiếp resumes that same R139. This is retained authority plus Root current availability judgment, not a new quoted yes.",
+  "latestOwnerResume": "tiếp",
+  "sourceCommit": "b330f70b7e760ffee1113d57abc7133c725c57cd",
+  "acceptedBuildPinsSha256": "3366eb41379c68419b235e5295817dafa74215a94dd5bcc8b4e323a6dfc215c2",
+  "nativeContractId": "r139-cua-boot-identity-v3-20261026",
+  "campaignNonce": "319839d1bdabc006390d02cf9c7c773b",
+  "exactPageId": null,
+  "currentlyReserved": false,
+  "actualCloseProved": false,
+  "finalInventoryProved": false,
+  "closeMode": "operator_fallback_if_native_exact_id_close_unavailable",
+  "noOtherTabControl": true
+}

@@ -2,7 +2,7 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
 
 ## Mandatory standing Owner directive — apply without reminders
 
@@ -15,13 +15,13 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: BUILD
+- Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
 
-CCMAI-RUNTIME-139 offline pinned-Core/clock/durable-resume repair SOURCE_REVIEW_PASS at b330f70b, accepted-build3366eb41. Reuse validated checkpoints; historical10 plusnew4 focused invocations retained (clock46PASS, pin firstFAIL then16PASS, Rootcombined62PASS counted once), actual offline interrupted return recovery and completed reuse verified with no new test child/count4->4. Public e9ddcbcd/profile1.1 execution pin is fixed; cached provenance/update observation separate, no automaticlatest fetch/adoption. Final pinned preflight legacy7/profile6PASS with APPL explicitly not applicable, no closure claim; use pwsh catalogWrite/check. Root next prepares one fresh v3 G0 technical packet/actor acknowledgments from accepted source and durable progress; do not rerun accepted offline suites on session/model quota resume. Shared future controller0/1 (v2 disabled), campaign0/1, services0/5, CUA0/64, fixture/key/provider0; no runtime release or liveG0-G3-resume proof yet. UNKNOWN original effects never replay, expired live campaign needs cleanup/re-admission while offline evidence survives. Same R139/M3-05/M3-08, no helper tranche/Antigravity/per-step Owner relay; ProductB BLOCKED_PENDING_OPERATIONAL_ADMISSION, Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 same-scope activation-environment repair BUILD under Root supplement177e3512 and Owner parent78ae94c6. Preserve accepted b330f70b/3366eb41 and all14 counted checks. Prerelease audit found scrubbed child PATH cannot discover pinned PS5 and the internal60s activation setup can expire during large catalog/gates/normal commit. Sol repairs only v3design and supervisor tests: pinnedPS5 PATH, bounded180s internal setup, new independent source review path; originalquery5s/drift2s/+1020cleanup/+1200deadline/provider<=USD1 all unchanged. Worker focused dependency check plus Root full supervisor regression planned, cumulative evidence/no reset. Root reviews and binds new source/build before rebasing current v3metadata/actor ACKs and technical seal. No controller/campaign/service/CUA/key/provider effects released; all remain0, v2disabled/shared future controller1. Same R139/M3-05/M3-08, no helper tranche/Antigravity/Owner relay, publice9/profile1.1 pin fixed; use pinned preflight, never latestdoctor/fetch; ProductB blocked/Facebook-ZaloOA parked.
 
-Root ORCHESTRATOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; offline repair accepted, browser and runtime workers unreleased
+Root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; Sol activation-environment IMPLEMENTATION_WORKER after committed dispatch, browser/runtime workers unreleased
 
 Owner reiteration2026-10-23: no fragmented tranches; follow roadmap. Root keeps ONE existing R139 outcome-based order across G0/G1/G2/G3; no helper/metadata prompt chain or repeated Owner relay. Complete consolidated readiness/admission before redispatch. Historical substep instructions and prior HOLD_TRANSFER are completed/spent context; the Current Truth instruction above governs this continuation. Directive recorded in existing order/continuity, no new learning artifact or tranche. Effectiveness must be judged by product acceptance.
 

@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ROOT_DISPATCHED_SAME_SCOPE_R139_ACTIVATION_ENV_REPAIR",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "date": "2026-10-26",
+  "riskCeiling": "R2",
+  "parentOwnerAdmissionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+    "sha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f"
+  },
+  "authorityBasis": "Owner explicitly directs fixing small pin/clock/quota continuity faults and necessary same-scope offline repair/verification without per-step relay. Root found independent new prerelease activation environment root cause; no external-effect/cap/risk/path class expansion.",
+  "priorSourceCommit": "b330f70b7e760ffee1113d57abc7133c725c57cd",
+  "priorAcceptedBuildSha256": "3366eb41379c68419b235e5295817dafa74215a94dd5bcc8b4e323a6dfc215c2",
+  "newTranches": 0,
+  "allowedImplementationPaths": [
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v3_design.py.txt",
+    "scripts/tests/test_r139_execution_supervisor.py"
+  ],
+  "worker": "/root/r139_v3_activation_source_audit",
+  "independentReviewer": "Root",
+  "commitSteward": "Root",
+  "findings": [
+    {
+      "id": "ENV01",
+      "cause": "Scrubbed child PATH omits the already pinned PowerShell5 directory; legacy catalog gate cannot discover a PowerShell executable.",
+      "fix": "Add only the parent directory of pinned PowerShell to deterministic child PATH, no ambient PATH/pwsh/tool substitution. Writer and checker use the same pinned PS5."
+    },
+    {
+      "id": "ENV02",
+      "cause": "Internal 60s post-reservation setup must serialize large catalog Write+Check+profile+normal commit, a foreseeable consumed-campaign timeout.",
+      "fix": "Use bounded180s internal setup guard and explicit labels/test boundaries. This changes an implementation setup limit, not original campaign/cleanup/query/drift/provider allowances."
+    },
+    {
+      "id": "ENV03",
+      "cause": "Edited source cannot reuse old fixed-source review/check receipts or old wrapper hashes.",
+      "fix": "New independent source review path, cumulative new focused receipts, new source/build binding and wrapper/packet/actor rebindings. Preserve all predecessor records."
+    }
+  ],
+  "unchangedExternalCaps": {
+    "campaignSeconds": 1200,
+    "cleanupCutoffSeconds": 1020,
+    "queryClockSeconds": 5,
+    "queryUtcMonotonicDriftSeconds": 2,
+    "serviceQueries": 5,
+    "cuaMethods": 64,
+    "tabInventories": 3,
+    "g2StatusStarts": 16,
+    "providerCalls": 1,
+    "maximumUSD": 1,
+    "futureSharedV2V3ControllerSlots": 1,
+    "automaticRetry": 0
+  },
+  "verificationPlan": {
+    "alreadyCountedHistoricalAndRepairChecks": 14,
+    "newWorkerFocusedBatchesPlanned": 1,
+    "newRootFocusedBatchesPlanned": 1,
+    "reuseUnchangedPinResume16Evidence": true,
+    "goBuildOrTest": 0,
+    "necessarySameScopeConsolidatedRepair": "per parent Owner instruction; record every attempt, no per-agent refresh or invented Owner cap"
+  },
+  "currentlyReleasedEffects": {
+    "controller": 0,
+    "campaign": 0,
+    "serviceQueries": 0,
+    "browser": 0,
+    "key": 0,
+    "provider": 0
+  },
+  "preserve": "All old grants/accepted-builds/reviews/proofs/receipts including b330f70b and failed attempts; no Core/installed gate/workflow/dependency/product/supervisor edits."
+}
