@@ -87,13 +87,13 @@
   "phase": "REVIEW",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
   "workOrderStatus": "BLOCKED_WITH_REASON",
-  "buildCommit": "fd730262bd55d73d7bdc681d891f0429b912997a",
+  "buildCommit": null,
   "reviewEvidence": [
     "docs/reviews/R139_INTERNAL_CUA_CONSOLIDATED_SOURCE_REVIEW_2026-10-24.md",
     "docs/reviews/R139_CUA_G0_TECHNICAL_RELEASE_REVIEW_2026-10-25.md",
     "docs/reviews/R139_CUA_PRECLOCK_HOLD_REVIEW_2026-10-25.md"
   ],
-  "disposition": "CCMAI-RUNTIME-139 HOLD_CURRENT_HOST_BOOT_DRIFT_BEFORE_RESERVATION: original controller PID24484 returned exit1 at committed fd730262; actual boot timestamp differs by 2743 microseconds from sealed proof. No reservation, clock, five service queries, CUA, fixture, key or provider effect; current campaign remains0, source checks8/8spent. Preserve exact original receipts and independent HOLD review; no re-pin, delete, controller retry or source check under current authority. Root reviews one consolidated boot-identity recovery proposal in this same M3-05/M3-08 order before any changed-contract/new-check/relaunch authority. Static source/technical review remains bounded acceptance only; actual G0/G1/G2/G3 NOT_RUN, ProductB BLOCKED_PENDING_OPERATIONAL_ADMISSION; Facebook/Zalo OA parked, no Antigravity or helper tranche.",
+  "disposition": "CCMAI-RUNTIME-139 Owner-approved boot-identity recovery REVIEW/read-only discovery: commit supplemental admission then ONE exact local OS metadata observation (5s/no retry/private raw identifiers), independently assess capability and fix explicit identity contract before bounded source BUILD. New source checks workerPython1+RootPython1 only (8 spent, total ceiling10), no Go build/test; one authoring and one consolidated repair. Conditional ONE additional original preclock invocation only after independent source/packet review and clean commit. Same unspent1 campaign/1200s/5servicequeries/64CUA/oneAPI<=USD1, actual G0 plus Root Runtime Effect Admission before fixture/key/provider. Preserve original PID24484 exit1/2.743ms mismatch, all old evidence/unknowns, no helper tranche or per-stage Owner relay; ProductB blocked, Facebook/Zalo OA parked, Antigravity withdrawn.",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -1077,5 +1077,22 @@
     "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
     "recoveryProposal": "docs/reviews/R139_CUA_PRECLOCK_RECOVERY_PROPOSAL_2026-10-25.md",
     "recoveryProposalDisposition": "ROOT_REVIEWED_DECISION_PACKET_ONLY_NOT_AUTHORITY"
+  },
+  "x-r139BootIdentityRecovery20261025": {
+    "ownerApproved": true,
+    "admissionPath": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json",
+    "admissionSha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb",
+    "ownerReply": "Duyệt gói phục hồi R139",
+    "metadataObservationUsed": 0,
+    "authoringPassesUsed": 0,
+    "repairPassesUsed": 0,
+    "workerPythonUsed": 0,
+    "rootPythonUsed": 0,
+    "preclockInvocationsUsed": 0,
+    "campaignReserved": false,
+    "serviceQueries": 0,
+    "browserMethods": 0,
+    "keyReads": 0,
+    "providerCalls": 0
   }
 }

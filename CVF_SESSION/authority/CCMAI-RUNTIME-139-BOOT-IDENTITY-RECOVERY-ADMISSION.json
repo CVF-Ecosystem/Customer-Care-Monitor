@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "OWNER_APPROVED_R139_BOOT_IDENTITY_RECOVERY",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "date": "2026-10-25",
+  "riskCeiling": "R2",
+  "ownerApproved": true,
+  "ownerReply": "Duyệt gói phục hồi R139",
+  "ownerApprovalReference": "request_user_input_async/call_b2e1db511d4e40cdbc735532106bf0fc/item0",
+  "approvedProposalCommit": "faac97f5d1ba40cc03a6b7c5ee4c3c4ab0d74634",
+  "proposalPath": "docs/reviews/R139_CUA_PRECLOCK_RECOVERY_PROPOSAL_2026-10-25.md",
+  "baseCommit": "faac97f5d1ba40cc03a6b7c5ee4c3c4ab0d74634",
+  "oneExistingOrder": true,
+  "newTranches": 0,
+  "sameRoadmap": [
+    "M3-05",
+    "M3-08"
+  ],
+  "sourceBudget": {
+    "authoringPasses": 1,
+    "consolidatedRepairPasses": 1,
+    "workerFocusedPython": 1,
+    "rootFocusedPython": 1,
+    "goCompile": 0,
+    "goTests": 0
+  },
+  "checkAccounting": {
+    "oldSpent": 8,
+    "newCap": 2,
+    "totalLineageCap": 10,
+    "oldFailedAttemptRetained": true
+  },
+  "metadataObservation": {
+    "cap": 1,
+    "timeoutSeconds": 5,
+    "automaticRetry": 0,
+    "argv": [
+      "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+      "-NoProfile",
+      "-NonInteractive",
+      "-Command",
+      "$ErrorActionPreference='Stop'; $os=Get-CimInstance Win32_OperatingSystem -ErrorAction Stop; $product=Get-CimInstance Win32_ComputerSystemProduct -ErrorAction Stop; $event=Get-WinEvent -FilterHashtable @{LogName='System';ProviderName='Microsoft-Windows-Kernel-General';Id=12} -MaxEvents 1 -ErrorAction Stop; $xml=[xml]$event.ToXml(); $start=@($xml.Event.EventData.Data | Where-Object {$_.Name -eq 'StartTime'}); if($start.Count -ne 1){throw 'BOOT_EVENT_START_TIME_AMBIGUOUS'}; [pscustomobject]@{schema='r139.windowsBootIdentityObservation@1';observedUTC=[DateTime]::UtcNow.ToString('o');osComputerName=[string]$os.CSName;computerSystemProductUuid=[string]$product.UUID;lastBootUTC=$os.LastBootUpTime.ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ss.fffffffZ');bootEvent=[pscustomobject]@{logName=[string]$event.LogName;providerName=[string]$event.ProviderName;eventId=[int]$event.Id;recordId=[long]$event.RecordId;machineName=[string]$event.MachineName;timeCreatedUTC=$event.TimeCreated.ToUniversalTime().ToString('o');startTimeUTC=[string]$start[0].InnerText}} | ConvertTo-Json -Depth 5 -Compress"
+    ],
+    "queryScriptSha256": "2324b4439551b833d9d1209f187ac921f44a13552646c1a67f720bc5485b9913",
+    "stdoutPrivacy": "Raw computer name/UUID/event metadata remain only in ignored local evidence; repository stores redacted shape and digests. No raw identifiers copied into public records.",
+    "originalPopenWaitExitRequired": true,
+    "beforeSourceAuthoring": true,
+    "beforeCampaignReservation": true,
+    "missingAmbiguousOrUnusablePrimitive": "HOLD_NO_FALLBACK_NO_RETRY",
+    "powershellPin": {
+      "path": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+      "sha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f",
+      "size": 495616
+    }
+  },
+  "allowedImplementationPaths": [
+    "scripts/tests/test_r139_execution_supervisor.py",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v2_design.py.txt"
+  ],
+  "rootOwnedMetadataPaths": [
+    "CVF_SESSION/authority/CCMAI-RUNTIME-139-*-ADMISSION.json",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/**",
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+    "docs/reviews/R139_*.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md"
+  ],
+  "prohibitedChanges": [
+    "old grants/seeds/proofs/receipts/design overwritten",
+    "Go/product/supervisor/Vite/dependency/policy/gate/Core edits",
+    "raw host identifiers or credentials committed",
+    "worker commit/self-review",
+    "extra tests/checkers/OS observations or retries"
+  ],
+  "preclockInvocation": {
+    "additionalCap": 1,
+    "oldAttempts": 1,
+    "oldAttemptOutcome": "EXIT1_CURRENT_HOST_BOOT_DRIFT_BEFORE_RESERVATION",
+    "newAttemptConditionalOn": [
+      "usable identity capability",
+      "accepted explicit identity contract",
+      "independent R2 source and packet review",
+      "two bounded focused check receipts",
+      "exact clean normal commit",
+      "fresh exclusive paths and original Popen/wait/exit custody"
+    ],
+    "oldAttemptNeverResetOrRetried": true
+  },
+  "unchangedRuntimeCaps": {
+    "oneUnspentCampaign": 1,
+    "wholeCampaignSeconds": 1200,
+    "cleanupCutoffSeconds": 1020,
+    "serviceQueries": 5,
+    "cuaMethods": 64,
+    "cuaStages": [
+      8,
+      4,
+      48,
+      4
+    ],
+    "tabMetadataInventories": 3,
+    "ownedTabs": 1,
+    "g2StatusStarts": 16,
+    "physicalProviderCalls": 1,
+    "maximumUSD": 1,
+    "automaticRetry": 0
+  },
+  "effectSequence": "One Owner decision covers discovery, conditional repair/checks and later Root technical release. No per-step Owner relay. Actual G0 Root review and separate Root Runtime Effect Admission still required before fixture/key/provider.",
+  "antigravityWithdrawn": true,
+  "oldUnknownsAndSpentCapsPreserved": true
+}

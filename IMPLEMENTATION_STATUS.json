@@ -4325,5 +4325,22 @@
     "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
     "recoveryProposal": "docs/reviews/R139_CUA_PRECLOCK_RECOVERY_PROPOSAL_2026-10-25.md",
     "recoveryProposalDisposition": "ROOT_REVIEWED_DECISION_PACKET_ONLY_NOT_AUTHORITY"
+  },
+  "x-r139BootIdentityRecovery20261025": {
+    "ownerApproved": true,
+    "admissionPath": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json",
+    "admissionSha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb",
+    "ownerReply": "Duyệt gói phục hồi R139",
+    "metadataObservationUsed": 0,
+    "authoringPassesUsed": 0,
+    "repairPassesUsed": 0,
+    "workerPythonUsed": 0,
+    "rootPythonUsed": 0,
+    "preclockInvocationsUsed": 0,
+    "campaignReserved": false,
+    "serviceQueries": 0,
+    "browserMethods": 0,
+    "keyReads": 0,
+    "providerCalls": 0
   }
 }

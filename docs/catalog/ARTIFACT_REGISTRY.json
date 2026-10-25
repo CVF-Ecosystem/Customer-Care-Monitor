@@ -37264,6 +37264,20 @@
       "path": "docs/reviews/R139_CUA_PRECLOCK_RECOVERY_PROPOSAL_2026-10-25.md",
       "status": "ACTIVE",
       "description": "Actual R139 original preclock HOLD evidence or static recovery decision; no reservation, campaign/service/browser/key/provider effect or product acceptance."
+    },
+    {
+      "id": "r139-boot-identity-recovery-owner-admission-20261025",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Owner-approved one consolidated R139 boot identity discovery/repair/check/relaunch envelope; no runtime proof."
+    },
+    {
+      "id": "r139-boot-identity-recovery-independent-review-20261025",
+      "family": "continuity",
+      "path": "docs/reviews/R139_BOOT_IDENTITY_RECOVERY_REVIEW_2026-10-25.md",
+      "status": "ACTIVE",
+      "description": "Independent R2 review of admitted local metadata observation; later source/capability/relaunch not yet accepted."
     }
   ]
 }

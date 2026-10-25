@@ -4457,6 +4457,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Owner-approved R139 bounded source BUILD and one conditional future G0-G3 campaign;6offlinechecks, no liveclock/runtime/key/provider authority before acceptance.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-AND-CONDITIONAL-REENTRY-ADMISSION.json`
 - Owner-approved R139 bounded source BUILD and one conditional future G0-G3 campaign;6offlinechecks, no liveclock/runtime/key/provider authority before acceptance.: `docs/reviews/R139_SOURCE_AND_CONDITIONAL_REENTRY_ADMISSION_REVIEW_2026-10-24.md`
 - Immutable integrated G0/G1/G2 source-preparation seed; runtime/provider authority absent.: `CVF_SESSION/authority/CCMAI-RUNTIME-139.json`
+- Independent R2 review of admitted local metadata observation; later source/capability/relaunch not yet accepted.: `docs/reviews/R139_BOOT_IDENTITY_RECOVERY_REVIEW_2026-10-25.md`
+- Owner-approved one consolidated R139 boot identity discovery/repair/check/relaunch envelope; no runtime proof.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json`
 - Root transcript of browser URL-policy denial and partial owned tab cleanup; no control/capture proof.: `docs/reviews/probes/r139_integrated_20261021/browser_capability_outcome.json`
 - Sole pureUI capability diagnostic reserved before effect; consumed, no reset.: `docs/reviews/probes/r139_integrated_20261021/browser_capability_reservation.json`
 - Explicit Owner check-only literal-argv continuation; no source/recompile/runtime/API; original failure preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-CHECK-ONLY-ADMISSION.json`
