@@ -1,0 +1,159 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ROOT_REVIEWED_R139_ACCEPTED_BUILD_PINS",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "date": "2026-10-25",
+  "riskCeiling": "R2",
+  "sourceCommit": "72371595cf1e650a5df074fb5b84cf5472576cec",
+  "ownerEnvelopePath": "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-CUA-SOURCE-ADMISSION.json",
+  "ownerEnvelopeSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
+  "inheritedOwnerEnvelopeSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "observationCapsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
+    "sha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491"
+  },
+  "rootReviewApproved": true,
+  "sourceChecksAccepted": true,
+  "review": "docs/reviews/R139_BOOT_IDENTITY_RECOVERY_REVIEW_2026-10-25.md",
+  "reviewSha256": "55a84ad99d6c1aae05fa117ae4f841f0e2bcc10ad9145b6a3cb9b1ad3294fff8",
+  "pins": {
+    "sourceSha256": {
+      "scripts/r139_execution_supervisor.py": "a7557917cc3ade551e78f7b4c40b0cc5aac5a312bcae2fdfbe353aba997f5203",
+      "scripts/tests/test_r139_execution_supervisor.py": "496a34143ba036b568e211f8e9c07926f20553c1df3d1c74d59fef6be39d0e6c",
+      "scripts/r139_vite_config.mjs.template": "82a1d9ae8576fcd46718945d0a5cb44eb963a2a14d436a16e2bcdfb72b26bee9",
+      "backend/api/handlers/intervention_execution_browser_test.go": "0ed1148d42dcd9cb018e2a3f3cbeb9c68bdcb8904d408c365b8d05b11c2a040e",
+      "backend/go.mod": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+      "backend/go.sum": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b",
+      "frontend/package.json": "d16bea0b83ad7eb871576061f7ea91534a2dd2fdc7eef26eb20ec908e4fca24d",
+      "frontend/package-lock.json": "da41e1de5d5b853295a303092aab9433aeea8168fda2cf0420dd94e9f579fb00",
+      "frontend/vite.config.ts": "736c63d3a72a5b126841ceedeac4b4a01854a2bec71bd57d2f46a23ec3cf68de"
+    },
+    "binary": {
+      "path": ".cvf/runtime/r139_cua_source_20261025/handlers.test.exe",
+      "size": 59561984,
+      "sha256": "d1861e44be7f28b58d851e901a7d498c8460e553efbb20df6b0d92910c7208e7"
+    },
+    "viteCli": {
+      "path": "frontend/node_modules/vite/bin/vite.js",
+      "sha256": "fa03478846d229651a3c6aa64833ba2c6cbf580a798b92bd8f47c7480bafb5d8",
+      "size": 2574
+    },
+    "tools": {
+      "python": {
+        "path": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "sha256": "a2a4eff8d0b0c845284c607d50a3b5b966ac5a3121736a2e38e165bd6644d9fe",
+        "size": 105816
+      },
+      "git": {
+        "path": "C:\\Program Files\\Git\\cmd\\git.EXE",
+        "sha256": "22fead8244ef3a7225fb800099a4e43eca8bcec0466774917669599c2f19a05a",
+        "size": 46936
+      },
+      "powershell": {
+        "path": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+        "sha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f",
+        "size": 495616
+      },
+      "docker": {
+        "path": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+        "sha256": "b8f907c73a89c9bd0a88bddb0cb5008728af4dea0d773b3f3614e9f203737e04",
+        "size": 44922800
+      },
+      "node": {
+        "path": "C:\\Program Files\\nodejs\\node.EXE",
+        "sha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+        "size": 92825416
+      }
+    },
+    "backendTree": "a60952bc46b7f0f30bcefc93720ba3b42529a9f8",
+    "frontendTree": "b23c158a3740ee97b30d17d0a52f5133d4ed5eff"
+  },
+  "metadataSha256": {
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_payload_templates.json": "ffbf475dee7a28a785c2ce543ad50cda55819c72debdf8c24e0a05104d599f19",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt": "57ae20a2bb0054e38d5a3d919f5e2997780b56981a82f2f31924eddf623e5854",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/recorder_design.py.txt": "154047cf66ffce3192b07ff4ac976f51c9a797c50b76a4dd3091f6398f207f1f",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v2_design.py.txt": "89d6f20eb1b80e1e5f331876886542fce7046fe010e0d6982b1b6b8f56f29454",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_contract_20261025.json": "4c90053543f1d21532fdb5c6c7487e04c7a4ee5b3369c6f24034cde285eb9e7c",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_proof_20261025.json": "10937592aaa94c4d00a89eb194fa223b9bec372b921be8a247967da235fa44e9",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_boot_identity_capability_20261025.json": "284f47404e8f8e40c5ff1f42bebaf2276dc8c1390914e56b67521a476e90346e"
+  },
+  "checkAccounting": {
+    "oldSpent": 8,
+    "newSpent": 2,
+    "totalSpent": 10,
+    "cap": 10,
+    "remaining": 0,
+    "oldFailedAttemptRetained": true
+  },
+  "runtimeExecutableNow": false,
+  "browserExecutableNow": false,
+  "providerExecutableNow": false,
+  "campaignReserved": false,
+  "claimBoundary": "Accepted offline v2 guard/parser source and two focused45 checks; original worker failure and post-write orchestration exception retained. Go binary/tree/tool pins inherited unchanged, no new Go. No actual G0/runtime/AI-governance/CI/product acceptance.",
+  "historicalInheritedCuaChecks": {
+    "sourceCommit": "38db7e90d2344fcc2f5a6c14cf6406f192d7a1d9",
+    "sourceUse": {
+      "workerFocusedPython": 1,
+      "workerOfflineGoCompile": 1,
+      "rootFocusedPython": 1,
+      "rootAuditedPureGo": 1
+    },
+    "checkOutcomes": {
+      "workerFocusedPython": "FAIL_CONSUMED_WINDOWS_FIXTURE_RETAINED",
+      "rootFocusedPython": "PASS_44_CORRECTED_CURRENT_TESTS",
+      "workerOfflineGoCompile": "PASS",
+      "rootAuditedPureGo": "PASS_13_EXACT_NO_SKIP"
+    },
+    "checkAccounting": {
+      "oldSpent": 4,
+      "newSpent": 4,
+      "totalSpent": 8,
+      "cap": 8,
+      "remaining": 0
+    }
+  },
+  "sourceUse": {
+    "workerFocusedPython": 1,
+    "rootFocusedPython": 1,
+    "goCompile": 0,
+    "goTests": 0
+  },
+  "checkOutcomes": {
+    "workerFocusedPython": "PASS_45_ORIGINAL_EXIT0",
+    "rootFocusedPython": "PASS_45_ORIGINAL_EXIT0",
+    "go": "NO_NEW_BUILD_OR_TEST_INHERITED_UNCHANGED_BINARY_AND_BACKEND_TREE"
+  },
+  "bootRecoveryVerification": {
+    "ownerAdmissionRef": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json",
+      "sha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb"
+    },
+    "contractRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_contract_20261025.json",
+      "sha256": "4c90053543f1d21532fdb5c6c7487e04c7a4ee5b3369c6f24034cde285eb9e7c"
+    },
+    "sourceChecksAccepted": true,
+    "independentSourceReviewRef": {
+      "path": "docs/reviews/R139_BOOT_IDENTITY_RECOVERY_REVIEW_2026-10-25.md",
+      "sha256": "55a84ad99d6c1aae05fa117ae4f841f0e2bcc10ad9145b6a3cb9b1ad3294fff8"
+    },
+    "workerFocusedPython": {
+      "used": 1,
+      "cap": 1,
+      "outcome": "PASS",
+      "receiptRef": {
+        "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_source_checks/worker_python_01_result.json",
+        "sha256": "c2d583c703996d8bc3158709aa27994dc622964cc91e02601b14b37545bb8bab"
+      }
+    },
+    "rootFocusedPython": {
+      "used": 1,
+      "cap": 1,
+      "outcome": "PASS",
+      "receiptRef": {
+        "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_source_checks/root_python_01_result.json",
+        "sha256": "1701484d7f51fa9e6dc071c8930ccacccb3e9b5fedf7b43823dd1ab2af29815a"
+      }
+    }
+  }
+}

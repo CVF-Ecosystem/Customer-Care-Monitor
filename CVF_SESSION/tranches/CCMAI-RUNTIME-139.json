@@ -83,11 +83,11 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "REVIEW_PENDING",
+  "status": "REVIEW_PASS",
   "phase": "REVIEW",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
-  "buildCommit": null,
+  "workOrderStatus": "REVIEWER_ACCEPTED",
+  "buildCommit": "72371595cf1e650a5df074fb5b84cf5472576cec",
   "reviewEvidence": [
     "docs/reviews/R139_INTERNAL_CUA_CONSOLIDATED_SOURCE_REVIEW_2026-10-24.md",
     "docs/reviews/R139_CUA_G0_TECHNICAL_RELEASE_REVIEW_2026-10-25.md",
@@ -95,7 +95,7 @@
     "docs/reviews/R139_BOOT_IDENTITY_RECOVERY_REVIEW_2026-10-25.md",
     "docs/reviews/R139_BOOT_IDENTITY_SOURCE_WORKER_RETURN_2026-10-25.md"
   ],
-  "disposition": "CCMAI-RUNTIME-139 boot-identity v2 SOURCE REVIEW accepted offline design89d6/test496a and actual worker45+Root45 original exit0, old8+new2=10/10checks spent (old failures and worker post-write error retained). Root commits source/evidence then binds new accepted-build pins to actual material commit; preserve old38db/bd21 and failed original preclock. Next prepare ONE complete independently reviewed G0 technical recipe/actual actor ACKs/clean commit for the one newly authorized original v2 preclock invocation; no further source check or repair. Campaign0/services0/browser0/fixture0/key0/provider0; same one R139 M3-05/M3-08 order, 1200s/5queries/64CUA/API1<=USD1, actualG0 plus Root Runtime Effect Admission before product effects; no retry/reset/Antigravity/helpertranche/Owner relay, Facebook/Zalo OA parked and ProductB blocked.",
+  "disposition": "REVIEW_PASS",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -145,7 +145,8 @@
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
   ],
   "actualUse": {
     "status": "HOLD_MANUAL_HOLD_PROVIDER_OUTCOME_UNKNOWN",
@@ -1112,6 +1113,12 @@
     "sourceChecksRemaining": 0,
     "sourceAcceptanceReceipt": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_source_checks/root_source_acceptance.json",
     "independentSourceReviewSha256": "55a84ad99d6c1aae05fa117ae4f841f0e2bcc10ad9145b6a3cb9b1ad3294fff8",
-    "sourceAcceptance": "ACCEPTED_COMPONENTS_PENDING_MATERIAL_COMMIT_BINDING"
-  }
+    "sourceAcceptance": "REVIEW_PASS_OFFLINE_COMPONENTS_ONLY",
+    "sourceBuildCommit": "72371595cf1e650a5df074fb5b84cf5472576cec",
+    "acceptedBuildPinsRef": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-V2-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "sha256": "f818a976fc347340d659c13be27ff5dcd66ebe44e6a694224b0f26cba72fc5bb"
+    }
+  },
+  "dispositionQualification": "CCMAI-RUNTIME-139 boot-identity v2 source components REVIEW_PASS committed 72371595, exact accepted-build pins f818a976. All10source checks spent, original failures/UNKNOWNs retained, Go binary/backend unchanged. Root prepares ONE complete G0 technical recipe with v2 boot proof, fresh actual Root/internal/Luna source/build/nonce ACKs, private raw metadata custody, final independent technical review and clean normal commit before the single newly authorized original v2 preclock invocation. Same unspentcampaign1/1200s/5services/64CUA/API1<=USD1; no fixture/key/provider before actual G0 manual review plus separate Root Runtime Effect Admission. Campaign0/services0/browser0/key0/provider0, no further source checks or repair, no retry/reset/Antigravity/helpertranche/Owner relay; ProductB blocked and Facebook/Zalo OA parked."
 }

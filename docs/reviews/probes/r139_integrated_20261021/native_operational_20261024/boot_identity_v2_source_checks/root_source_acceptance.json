@@ -1,6 +1,6 @@
 {
   "kind": "ROOT_REVIEWED_R139_BOOT_IDENTITY_SOURCE_ACCEPTANCE",
-  "status": "ACCEPTED_COMPONENTS_PENDING_MATERIAL_COMMIT_BINDING",
+  "status": "ACCEPTED_OFFLINE_SOURCE_COMPONENTS_WITH_COMMITTED_BINDING",
   "designSha256": "89d6f20eb1b80e1e5f331876886542fce7046fe010e0d6982b1b6b8f56f29454",
   "testSha256": "496a34143ba036b568e211f8e9c07926f20553c1df3d1c74d59fef6be39d0e6c",
   "independentReviewRef": {
@@ -28,11 +28,15 @@
   "rootActual": "PID2416/45tests/originalexit0",
   "workerOrchestrationQualification": "Post-write summary-format AttributeError retained; not an orchestration-wide PASS; child/result durable and no rerun.",
   "goBuildsAdded": 0,
-  "sourceBuildCommit": null,
+  "sourceBuildCommit": "72371595cf1e650a5df074fb5b84cf5472576cec",
   "campaignReserved": false,
   "serviceQueries": 0,
   "browserMethods": 0,
   "keyReads": 0,
   "providerCalls": 0,
-  "claimBoundary": "Offline source component/parser/guard checks only; original failures preserved, no actual G0/runtime/AI governance/hosted CI/product acceptance."
+  "claimBoundary": "Offline source component/parser/guard checks only; original failures preserved, no actual G0/runtime/AI governance/hosted CI/product acceptance.",
+  "acceptedBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-V2-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "f818a976fc347340d659c13be27ff5dcd66ebe44e6a694224b0f26cba72fc5bb"
+  }
 }

@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: COMPLETE_PENDING_REVIEW
+Status: REVIEWER_ACCEPTED
 Risk: R2
 Worker: Internal Sol G0 service/runtime actor; internal Luna producer/independent observer for browser only
 Reviewer: Root independent source/evidence REVIEWER
@@ -12,7 +12,7 @@ dispatchKind: INITIAL
 
 ## Current boot-identity v2 source review — 2026-10-25
 
-CCMAI-RUNTIME-139 boot-identity v2 SOURCE REVIEW accepted offline design89d6/test496a and actual worker45+Root45 original exit0, old8+new2=10/10checks spent (old failures and worker post-write error retained). Root commits source/evidence then binds new accepted-build pins to actual material commit; preserve old38db/bd21 and failed original preclock. Next prepare ONE complete independently reviewed G0 technical recipe/actual actor ACKs/clean commit for the one newly authorized original v2 preclock invocation; no further source check or repair. Campaign0/services0/browser0/fixture0/key0/provider0; same one R139 M3-05/M3-08 order, 1200s/5queries/64CUA/API1<=USD1, actualG0 plus Root Runtime Effect Admission before product effects; no retry/reset/Antigravity/helpertranche/Owner relay, Facebook/Zalo OA parked and ProductB blocked.
+CCMAI-RUNTIME-139 boot-identity v2 source components REVIEW_PASS committed 72371595, exact accepted-build pins f818a976. All10source checks spent, original failures/UNKNOWNs retained, Go binary/backend unchanged. Root prepares ONE complete G0 technical recipe with v2 boot proof, fresh actual Root/internal/Luna source/build/nonce ACKs, private raw metadata custody, final independent technical review and clean normal commit before the single newly authorized original v2 preclock invocation. Same unspentcampaign1/1200s/5services/64CUA/API1<=USD1; no fixture/key/provider before actual G0 manual review plus separate Root Runtime Effect Admission. Campaign0/services0/browser0/key0/provider0, no further source checks or repair, no retry/reset/Antigravity/helpertranche/Owner relay; ProductB blocked and Facebook/Zalo OA parked.
 
 Authority `CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-G0-TECHNICAL-RELEASE-ADMISSION.json`, independent review `docs/reviews/R139_CUA_G0_TECHNICAL_RELEASE_REVIEW_2026-10-25.md`. Source REVIEW_PASS is inherited for the bounded proof only; DESIGN/SPEC/one existing WORK_ORDER and Owner caps remain accepted. REVIEW_PASS -> PARKED(source settled) -> BUILD(G0 proof preparation) is recorded; no new tranche. Actual effects begin only through Root original committed clock transaction.
 
@@ -24,7 +24,7 @@ The consolidated transition proposal and unchanged original budgets remain bindi
 
 ## Current internal browser transition — 2026-10-24
 
-CCMAI-RUNTIME-139 boot-identity v2 SOURCE REVIEW accepted offline design89d6/test496a and actual worker45+Root45 original exit0, old8+new2=10/10checks spent (old failures and worker post-write error retained). Root commits source/evidence then binds new accepted-build pins to actual material commit; preserve old38db/bd21 and failed original preclock. Next prepare ONE complete independently reviewed G0 technical recipe/actual actor ACKs/clean commit for the one newly authorized original v2 preclock invocation; no further source check or repair. Campaign0/services0/browser0/fixture0/key0/provider0; same one R139 M3-05/M3-08 order, 1200s/5queries/64CUA/API1<=USD1, actualG0 plus Root Runtime Effect Admission before product effects; no retry/reset/Antigravity/helpertranche/Owner relay, Facebook/Zalo OA parked and ProductB blocked.
+CCMAI-RUNTIME-139 boot-identity v2 source components REVIEW_PASS committed 72371595, exact accepted-build pins f818a976. All10source checks spent, original failures/UNKNOWNs retained, Go binary/backend unchanged. Root prepares ONE complete G0 technical recipe with v2 boot proof, fresh actual Root/internal/Luna source/build/nonce ACKs, private raw metadata custody, final independent technical review and clean normal commit before the single newly authorized original v2 preclock invocation. Same unspentcampaign1/1200s/5services/64CUA/API1<=USD1; no fixture/key/provider before actual G0 manual review plus separate Root Runtime Effect Admission. Campaign0/services0/browser0/key0/provider0, no further source checks or repair, no retry/reset/Antigravity/helpertranche/Owner relay; ProductB blocked and Facebook/Zalo OA parked.
 
 Consolidated proposal: `docs/reviews/R139_INTERNAL_BROWSER_TRANSITION_2026-10-24.md`. Owner worker substitution is already authorized. The superseded unexecuted technical draft below cannot release effects.
 
@@ -34,7 +34,7 @@ Technical authority: `CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-G0-TEC
 
 ## Current accepted source and preclock preparation — 2026-10-24
 
-CCMAI-RUNTIME-139 boot-identity v2 SOURCE REVIEW accepted offline design89d6/test496a and actual worker45+Root45 original exit0, old8+new2=10/10checks spent (old failures and worker post-write error retained). Root commits source/evidence then binds new accepted-build pins to actual material commit; preserve old38db/bd21 and failed original preclock. Next prepare ONE complete independently reviewed G0 technical recipe/actual actor ACKs/clean commit for the one newly authorized original v2 preclock invocation; no further source check or repair. Campaign0/services0/browser0/fixture0/key0/provider0; same one R139 M3-05/M3-08 order, 1200s/5queries/64CUA/API1<=USD1, actualG0 plus Root Runtime Effect Admission before product effects; no retry/reset/Antigravity/helpertranche/Owner relay, Facebook/Zalo OA parked and ProductB blocked.
+CCMAI-RUNTIME-139 boot-identity v2 source components REVIEW_PASS committed 72371595, exact accepted-build pins f818a976. All10source checks spent, original failures/UNKNOWNs retained, Go binary/backend unchanged. Root prepares ONE complete G0 technical recipe with v2 boot proof, fresh actual Root/internal/Luna source/build/nonce ACKs, private raw metadata custody, final independent technical review and clean normal commit before the single newly authorized original v2 preclock invocation. Same unspentcampaign1/1200s/5services/64CUA/API1<=USD1; no fixture/key/provider before actual G0 manual review plus separate Root Runtime Effect Admission. Campaign0/services0/browser0/key0/provider0, no further source checks or repair, no retry/reset/Antigravity/helpertranche/Owner relay; ProductB blocked and Facebook/Zalo OA parked.
 
 Accepted build pins: `CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-ACCEPTED-BUILD-PINS-ADMISSION.json`. This section supersedes earlier current-stage source instructions below; historical bound sections and spent counters remain unchanged. No runtime admission or live deadline is issued here.
 

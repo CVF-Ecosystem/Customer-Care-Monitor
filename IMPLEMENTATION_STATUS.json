@@ -4356,6 +4356,11 @@
     "sourceChecksRemaining": 0,
     "sourceAcceptanceReceipt": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_source_checks/root_source_acceptance.json",
     "independentSourceReviewSha256": "55a84ad99d6c1aae05fa117ae4f841f0e2bcc10ad9145b6a3cb9b1ad3294fff8",
-    "sourceAcceptance": "ACCEPTED_COMPONENTS_PENDING_MATERIAL_COMMIT_BINDING"
+    "sourceAcceptance": "REVIEW_PASS_OFFLINE_COMPONENTS_ONLY",
+    "sourceBuildCommit": "72371595cf1e650a5df074fb5b84cf5472576cec",
+    "acceptedBuildPinsRef": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-V2-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "sha256": "f818a976fc347340d659c13be27ff5dcd66ebe44e6a694224b0f26cba72fc5bb"
+    }
   }
 }

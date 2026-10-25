@@ -37369,6 +37369,13 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_runtime_admission_draft_20261025.json",
       "status": "ACTIVE",
       "description": "Bounded R139 boot-identity v2 source/check evidence or unexecuted operational draft; original outcomes/caps retained, no runtime acceptance."
+    },
+    {
+      "id": "r139-boot-v2-reviewed-accepted-build-pins-20261025",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-V2-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Exact committed offline v2 source/check pin binding; inherited unchanged Go binary, no G0/runtime or product release."
     }
   ]
 }
