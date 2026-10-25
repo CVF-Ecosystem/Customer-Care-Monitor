@@ -4420,7 +4420,7 @@
   },
   "x-executionCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "x-r139V3ActivationEnvRepair20261026": {
-    "status": "SOURCE_REVIEW_PASS_PENDING_MATERIAL_COMMIT",
+    "status": "SOURCE_REVIEW_PASS",
     "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-REPAIR-ADMISSION.json",
     "precedingCountedSourceChecks": 14,
     "newFocusedBatches": 2,
@@ -4435,6 +4435,12 @@
     "rootSupervisorTests": 48,
     "reusedPinResumeTests": 16,
     "currentLedgerPath": ".cvf/runtime/r139_pinned_resume_repair_20261026/session_ledger_generation3.json",
-    "currentBindingPath": ".cvf/runtime/r139_pinned_resume_repair_20261026/ledger_binding_generation3.json"
+    "currentBindingPath": ".cvf/runtime/r139_pinned_resume_repair_20261026/ledger_binding_generation3.json",
+    "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+    "acceptedBuildRef": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "sha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b"
+    },
+    "additionalSourceChecksNeeded": 0
   }
 }

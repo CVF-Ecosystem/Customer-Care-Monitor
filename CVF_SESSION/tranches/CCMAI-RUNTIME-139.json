@@ -83,11 +83,11 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "REVIEW_PENDING",
+  "status": "REVIEW_PASS",
   "phase": "REVIEW",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
-  "buildCommit": "b330f70b7e760ffee1113d57abc7133c725c57cd",
+  "workOrderStatus": "REVIEWER_ACCEPTED",
+  "buildCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
   "reviewEvidence": [
     "docs/reviews/R139_INTERNAL_CUA_CONSOLIDATED_SOURCE_REVIEW_2026-10-24.md",
     "docs/reviews/R139_CUA_G0_TECHNICAL_RELEASE_REVIEW_2026-10-25.md",
@@ -100,7 +100,7 @@
     "docs/reviews/R139_PINNED_RESUME_CONSOLIDATED_SOURCE_REVIEW_2026-10-26.md",
     "docs/reviews/R139_V3_ACTIVATION_ENV_SOURCE_REVIEW_2026-10-26.md"
   ],
-  "disposition": "COMPLETE_PENDING_REVIEW",
+  "disposition": "REVIEW_PASS",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -161,7 +161,8 @@
     "REVIEW_PASS",
     "CHANGES_REQUIRED",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
   ],
   "actualUse": {
     "status": "HOLD_MANUAL_HOLD_PROVIDER_OUTCOME_UNKNOWN",
@@ -1195,7 +1196,7 @@
   "x-executionCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
   "sourceOnlyAcceptance": "Accepted offline stable-pin/query-local-clock/durable-resume repair; integrated operational criteria OPEN, FREEZE OPEN; not product/tranche outcome closure.",
   "x-r139V3ActivationEnvRepair20261026": {
-    "status": "SOURCE_REVIEW_PASS_PENDING_MATERIAL_COMMIT",
+    "status": "SOURCE_REVIEW_PASS",
     "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-REPAIR-ADMISSION.json",
     "precedingCountedSourceChecks": 14,
     "newFocusedBatches": 2,
@@ -1210,6 +1211,12 @@
     "rootSupervisorTests": 48,
     "reusedPinResumeTests": 16,
     "currentLedgerPath": ".cvf/runtime/r139_pinned_resume_repair_20261026/session_ledger_generation3.json",
-    "currentBindingPath": ".cvf/runtime/r139_pinned_resume_repair_20261026/ledger_binding_generation3.json"
+    "currentBindingPath": ".cvf/runtime/r139_pinned_resume_repair_20261026/ledger_binding_generation3.json",
+    "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+    "acceptedBuildRef": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "sha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b"
+    },
+    "additionalSourceChecksNeeded": 0
   }
 }

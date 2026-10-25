@@ -37747,6 +37747,13 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/worker_python_02_result.json",
       "status": "ACTIVE",
       "description": "R139 independent activation child environment/setup source review or cumulative exact offline evidence; original external caps and all failures retained."
+    },
+    {
+      "id": "r139-v3-activation-env-accepted-build-20261026",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Root accepted7ef30823 activation-env source; cumulativev3attempt2 receipts, pinnedPS5/internal180ssetup, unchanged externalcaps and no runtime effects."
     }
   ]
 }

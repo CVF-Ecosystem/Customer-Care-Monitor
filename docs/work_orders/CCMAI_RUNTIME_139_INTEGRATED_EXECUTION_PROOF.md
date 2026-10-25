@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: COMPLETE_PENDING_REVIEW
+Status: REVIEWER_ACCEPTED
 Risk: R2
 Worker: Internal Sol G0 service/runtime actor; internal Luna producer/independent observer for browser only
 Reviewer: Root independent source/evidence REVIEWER
@@ -749,3 +749,6 @@ Root supplement177e3512 under Owner78ae94c6 admits correction of the scrubbed ch
 
 
 Activationenvironment source return: worker2targeted/Root48supervisorPASS; unchangedpin16 inherited. Source lineage16 retains14prior+2new and allfailedhistory. Revieweddesign36f5f307/test4bbd3abb; Rootnewreview `docs/reviews/R139_V3_ACTIVATION_ENV_SOURCE_REVIEW_2026-10-26.md`. Materialcommit/buildbinding/packetrebase remain before anycontroller; noeffectrelease.
+
+
+Activationenvironment materialaccepted: source7ef30823/buildad348196, source-onlyREVIEW_PASS,16countedchecksretained. Roottechnicalv3packetmustrebindtothisversion; noRuntimeEffectAdmissionyet.
