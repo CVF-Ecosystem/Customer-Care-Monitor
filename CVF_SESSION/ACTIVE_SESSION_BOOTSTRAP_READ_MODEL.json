@@ -1,10 +1,10 @@
 {
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 boot-identity v2 source components REVIEW_PASS committed 72371595, exact accepted-build pins f818a976. All10source checks spent, original failures/UNKNOWNs retained, Go binary/backend unchanged. Root prepares ONE complete G0 technical recipe with v2 boot proof, fresh actual Root/internal/Luna source/build/nonce ACKs, private raw metadata custody, final independent technical review and clean normal commit before the single newly authorized original v2 preclock invocation. Same unspentcampaign1/1200s/5services/64CUA/API1<=USD1; no fixture/key/provider before actual G0 manual review plus separate Root Runtime Effect Admission. Campaign0/services0/browser0/key0/provider0, no further source checks or repair, no retry/reset/Antigravity/helpertranche/Owner relay; ProductB blocked and Facebook/Zalo OA parked.",
-  "activeRole": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR / COMMIT_STEWARD after independent source REVIEW_PASS; internal Sol and Luna actors unreleased pending final technical packet",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 Owner-directed pinned-Core/clock/resume repair BUILD under PINNED-RESUME-REPAIR-ADMISSION78ae94c6: keep public e9ddcbcd/profile1.1 execution pin, provenance/update observation separate, no latest-main auto adoption; Sol workers implement only admitted v3 clock and pinned preflight/durable checkpoint paths. Preserve prior10sourcechecks spent and all completed receipts; newly necessary focused offline verification recorded cumulatively under latest Owner repair instruction. Root independently reviews combined source/checkpoints and commits before any technical release. Shared future v2+v3 original controller slot0/1 (v2 disabled), campaign0/1, services0/5, CUA0/64, fixture/key/provider0; no runtime effects now. Existing20min/1020cleanup/provider<=USD1 bounds unchanged; quota interruption preserves results and usage, uncertain inflight effects UNKNOWN no auto replay, expired runtime requires cleanup/re-admission. Same R139/M3-05/M3-08, no helper tranche/Antigravity/Owner relay; ProductB blocked, Facebook/Zalo OA parked.",
+  "activeRole": "Root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; Sol clock and pin/resume IMPLEMENTATION_WORKERs only after committed dispatch",
   "updatedAt": "2026-10-25",
   "schemaVersion": "1.0",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
@@ -1461,6 +1461,38 @@
     "acceptedBuildPinsRef": {
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-V2-ACCEPTED-BUILD-PINS-ADMISSION.json",
       "sha256": "f818a976fc347340d659c13be27ff5dcd66ebe44e6a694224b0f26cba72fc5bb"
-    }
+    },
+    "technicalStatus": "STATIC_REVIEW_PASS_LIVE_CLOCK_HOLD",
+    "campaignNonce": "2dde0dbd452e2164396c094b454fbea4",
+    "nativeContractId": "r139-cua-boot-identity-v2-20261025",
+    "currentOperationalDisposition": "HOLD_PRECLOCK_CLOCK_INCOMPATIBLE",
+    "clockHoldReceipt": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_prelaunch_clock_compatibility_20261025.json",
+    "clockHoldReview": "docs/reviews/R139_BOOT_IDENTITY_PRECLOCK_CLOCK_HOLD_REVIEW_2026-10-25.md",
+    "clockStarted": false,
+    "freshCampaignUsed": 0,
+    "fixtureStarts": 0
+  },
+  "x-r139ClockProfileRecovery20261026": {
+    "status": "PROPOSED_NOT_ADMITTED",
+    "proposal": "docs/reviews/R139_CLOCK_AND_PROFILE_CONSOLIDATED_RECOVERY_PROPOSAL_2026-10-26.md",
+    "coreHead": "b8ead4f0d1bf9224338a206b2abcd893ec1801b1",
+    "coreCleanMatchesOriginMain": true,
+    "coreBackup": "../_cvf-core-backups/.Controlled-Vibe-Framework-CVF-20261026-004532",
+    "doctor": "FAIL_27_OF_28_LOCK_INVALID_PROFILE_1_1_VS_1_2",
+    "sourceChangesThisContinuation": 0,
+    "sourceChecksThisContinuation": 0,
+    "currentLineageChecksSpent": 10,
+    "proposedLineageCapNotApproved": 12,
+    "controllerInvocationsThisContinuation": 0,
+    "campaignEffects": 0
+  },
+  "x-r139PinnedResumeRepair20261026": {
+    "status": "BUILD_PENDING_COMMITTED_DISPATCH",
+    "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+    "historicalSourceChecksSpent": 10,
+    "newFocusedInvocations": 0,
+    "controllerInvocations": 0,
+    "runtimeReleased": false,
+    "oldProfileMigrationProposal": "SUPERSEDED_BY_OWNER_STABLE_PIN_DECISION_NOT_IMPLEMENTED"
   }
 }

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "r139.bootIdentityV2ProducerOriginalAck@1.0.0",
+  "kind": "R139_BOOT_IDENTITY_V2_PRODUCER_ORIGINAL_ACK",
+  "taskId": "/root/r139_cua_browser_producer",
+  "status": "METADATA_READY_ONLY_NOT_G0_PASS",
+  "ready": true,
+  "readinessScope": "Availability for the future bounded G0 producer stage only, after Root release, reservation, and acceptance of the five service-query receipts",
+  "sourceCommit": "72371595cf1e650a5df074fb5b84cf5472576cec",
+  "acceptedBuildPinsPath": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-V2-ACCEPTED-BUILD-PINS-ADMISSION.json",
+  "acceptedBuildPinsSha256": "f818a976fc347340d659c13be27ff5dcd66ebe44e6a694224b0f26cba72fc5bb",
+  "payloadByteSource": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_payload_templates.json",
+  "payloadSha256": "ffbf475dee7a28a785c2ce543ad50cda55819c72debdf8c24e0a05104d599f19",
+  "freshGrantSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
+  "inheritedOwnerEnvelopeSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "observationCapsSha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491",
+  "recoveryOwnerAdmissionPath": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json",
+  "recoveryOwnerAdmissionSha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb",
+  "bootProofPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_proof_20261025.json",
+  "bootProofSha256": "10937592aaa94c4d00a89eb194fa223b9bec372b921be8a247967da235fa44e9",
+  "nativeContractId": "r139-cua-boot-identity-v2-20261025",
+  "campaignNonce": "2dde0dbd452e2164396c094b454fbea4",
+  "sourceChecksConsumed": 10,
+  "sourceChecksRemaining": 0,
+  "currentEffects": 0,
+  "currentEffectCounters": {
+    "campaignReserved": false,
+    "controllerInvocations": 0,
+    "serviceQueries": 0,
+    "browserMethods": 0,
+    "fixtureStarts": 0,
+    "keyReads": 0,
+    "providerCalls": 0
+  },
+  "capabilityProven": false,
+  "claimBoundary": "Metadata availability only. This ACK does not claim browser capability, G0 acceptance, or runtime PASS.",
+  "qualification": {
+    "initialIntakeHoldFinding": "The initial intake was held because the then-current handoff operative checkpoint still named source38db/bd21 and 8/8 checks while state and summary named boot-identity-v2 source72371595/buildf818a976 and 10/10 checks.",
+    "resolution": "Root synchronized the current operative handoff to boot-identity-v2; the old source and check counts remain historical.",
+    "noClaimPass": true
+  },
+  "hashMethod": "SHA-256 computed over raw metadata file bytes with hashlib; no project source imported, tested, or executed."
+}

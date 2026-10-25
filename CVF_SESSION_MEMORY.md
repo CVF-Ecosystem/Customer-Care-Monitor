@@ -2,7 +2,7 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
 
 ## Mandatory standing Owner directive — apply without reminders
 
@@ -11,15 +11,15 @@ Memory class: POINTER_RECORD
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: BUILD
+- Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
 
-CCMAI-RUNTIME-139 boot-identity v2 source components REVIEW_PASS committed 72371595, exact accepted-build pins f818a976. All10source checks spent, original failures/UNKNOWNs retained, Go binary/backend unchanged. Root prepares ONE complete G0 technical recipe with v2 boot proof, fresh actual Root/internal/Luna source/build/nonce ACKs, private raw metadata custody, final independent technical review and clean normal commit before the single newly authorized original v2 preclock invocation. Same unspentcampaign1/1200s/5services/64CUA/API1<=USD1; no fixture/key/provider before actual G0 manual review plus separate Root Runtime Effect Admission. Campaign0/services0/browser0/key0/provider0, no further source checks or repair, no retry/reset/Antigravity/helpertranche/Owner relay; ProductB blocked and Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 Owner-directed pinned-Core/clock/resume repair BUILD under PINNED-RESUME-REPAIR-ADMISSION78ae94c6: keep public e9ddcbcd/profile1.1 execution pin, provenance/update observation separate, no latest-main auto adoption; Sol workers implement only admitted v3 clock and pinned preflight/durable checkpoint paths. Preserve prior10sourcechecks spent and all completed receipts; newly necessary focused offline verification recorded cumulatively under latest Owner repair instruction. Root independently reviews combined source/checkpoints and commits before any technical release. Shared future v2+v3 original controller slot0/1 (v2 disabled), campaign0/1, services0/5, CUA0/64, fixture/key/provider0; no runtime effects now. Existing20min/1020cleanup/provider<=USD1 bounds unchanged; quota interruption preserves results and usage, uncertain inflight effects UNKNOWN no auto replay, expired runtime requires cleanup/re-admission. Same R139/M3-05/M3-08, no helper tranche/Antigravity/Owner relay; ProductB blocked, Facebook/Zalo OA parked.
 
-Root ORCHESTRATOR / WORK_ORDER_AUTHOR / COMMIT_STEWARD after independent source REVIEW_PASS; internal Sol and Luna actors unreleased pending final technical packet
+Root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; Sol clock and pin/resume IMPLEMENTATION_WORKERs only after committed dispatch
 
-Owner reiteration2026-10-23: no fragmented tranches; follow roadmap. Root keeps ONE existing R139 outcome-based order across G0/G1/G2/G3; no helper/metadata prompt chain or repeated Owner relay. Complete consolidated readiness/admission before redispatch. Historical substep instructions are completed/spent context; current HOLD_TRANSFER remains. Directive recorded in existing order/continuity, no new learning artifact or tranche. Effectiveness must be judged by product acceptance.
+Owner reiteration2026-10-23: no fragmented tranches; follow roadmap. Root keeps ONE existing R139 outcome-based order across G0/G1/G2/G3; no helper/metadata prompt chain or repeated Owner relay. Complete consolidated readiness/admission before redispatch. Historical substep instructions and prior HOLD_TRANSFER are completed/spent context; the Current Truth instruction above governs this continuation. Directive recorded in existing order/continuity, no new learning artifact or tranche. Effectiveness must be judged by product acceptance.
 
 Historical consumed G0 handoff (NOT executable again): `CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-G0-ADMISSION.json`, one bounded native G0 actual capability trial in Antigravity. Owner selection supersedes transfer recommendation, without overriding tool policy/history. Root independent code review plus Luna admission review accepted exact contract; runtime NOT_RUN. Product B/key/provider authority unchanged. Earlier transfer-only and spent compile/pure instructions below are historical.
 
@@ -1122,3 +1122,7 @@ Root rehydrated after admitted discovery. Independent R2 capability/SPEC review 
 ## Consolidated boot-identity repair acknowledgment — 2026-10-25
 
 Independent source review F01-F03 requests explicit new-preclock/source-cap binding, exact signed UTC/monotonic comparison without rounding overrun, and complete adversarial pure fixtures. Root releases ONE admitted consolidated REPAIR_WORKER pass in the same two implementation paths. Old8 checks spent; fresh workerPython0/1 and RootPython0/1; no test/import/checker/OS query or runtime effect released. Source authoring pass is complete, no new authoring pass or Owner relay.
+
+## Boot-identity v2 G0 technical preparation acknowledgment — 2026-10-25
+
+Source72371595/buildf818a976 inherits independent source REVIEW_PASS only, all10checks spent. REVIEW_PASS to PARKED(source settled) to BUILD(G0 technical metadata) uses the same R139 work order and approved package. Root now WORK_ORDER_AUTHOR/planned original-control custodian; source worker no longer edits source; internal Sol and distinct Luna producer/observer provide metadata ACKs before technical seal. Actual G0/host UI primitives remain unproved. No controller/reservation/service/browser/fixture/key/provider is released before complete independent technical review and clean commit; exact old attempt preserved.

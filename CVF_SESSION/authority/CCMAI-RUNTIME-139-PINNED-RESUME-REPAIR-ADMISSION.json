@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "OWNER_DIRECTED_R139_PINNED_CORE_CLOCK_AND_RESUME_REPAIR",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "date": "2026-10-26",
+  "riskCeiling": "R2",
+  "ownerApproved": true,
+  "ownerInstruction": "đồng ý, xử lý các lỗi lặt vặt kiểu này đi, như vụ clock, mỗi khi đang run mà đụng giới hạn quota phải dừng thì sẽ rất phí công, cần phải được tiếp tục phiên/kết quả sau đó khi chạy lại",
+  "ownerDecisionSubstance": "Pin an admitted Core/profile for the running campaign, separate public provenance/update observation from adoption, repair stale clock dependency and preserve validated checkpoints/results/cumulative usage across agent or model quota interruptions. Necessary same-scope offline implementation, review and verification are authorized; no repeated per-check approval.",
+  "oneExistingOrder": true,
+  "roadmap": [
+    "M3-05",
+    "M3-08"
+  ],
+  "newTranches": 0,
+  "corePolicy": {
+    "executionCoreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
+    "profileId": "cvf.downstreamGateProfile@1.1.0",
+    "checkoutHeadAtDecision": "b8ead4f0d1bf9224338a206b2abcd893ec1801b1",
+    "origin": "https://github.com/Blackbird081/Controlled-Vibe-Framework-CVF.git",
+    "provenance": "Verify immutable public pin through exact local Git objects and cached public ancestry, export trusted verifier bytes to ignored project runtime; no routine fetch or auto-upgrade during campaign/resume. Clearly report whether live remote freshness was checked. Latest available checkout is information, not execution contract.",
+    "latestDoctorOutcomePreserved": "FAIL27/28_LOCK_INVALID_CORE1_2_VS_PROJECT1_1",
+    "replacement": "Reviewed project-local pinned preflight retains workspace/isolation/public-origin/kit/clean/pinned profile identity and full legacy/profile controls; not a claim latest Core1.2 doctor passed.",
+    "noInstalledGateOrCoreEdits": true
+  },
+  "allowedImplementationPaths": [
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v3_design.py.txt",
+    "scripts/tests/test_r139_execution_supervisor.py",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_pinned_preflight.py.txt",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_durable_resume.py.txt",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/test_r139_pinned_resume.py"
+  ],
+  "rootMetadataPaths": [
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+    "docs/reviews/R139_*.md",
+    "docs/reviews/probes/r139_integrated_20261021/**",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md"
+  ],
+  "roles": {
+    "clockWorker": "/root/r139_clock_v3_worker",
+    "pinResumeWorker": "/root/r139_pinned_resume_worker",
+    "independentReviewer": "Root",
+    "commitSteward": "Root"
+  },
+  "offlineVerification": {
+    "historicalSourceChecksSpent": 10,
+    "historicalGrantsRemainSpent": true,
+    "plannedBatches": [
+      "worker clock focused suite",
+      "worker pin/resume focused suite",
+      "Root independent combined focused suites"
+    ],
+    "necessarySameScopeRepairAndVerification": "Allowed under this Owner instruction with pre-invocation intent, cumulative accounting and original receipts; no fabricated numerical Owner cap or per-agent reset. One consolidated repair; round-three same-root REVIEW_COST_ESCALATION_REQUIRED per AGENTS.",
+    "noIncidentalHelperExecution": true,
+    "perBatchTimeoutSeconds": 120,
+    "goCompileOrTest": 0,
+    "realProviderGovernanceClaim": false
+  },
+  "clockSuccessor": {
+    "predecessorsImmutable": true,
+    "baselineIdentityProofUnchanged": true,
+    "queryLocalUtcMonotonicAgreementSeconds": 2,
+    "singleQueryDurationSeconds": 5,
+    "noSystemClockMutation": true,
+    "noWiderTolerance": true,
+    "changedClaim": "Agreement within current original query bracket, not continuous UTC/monotonic agreement since historical preparation.",
+    "singleSharedFutureControllerSlot": 1,
+    "v2ReleaseSupersededDisabled": true,
+    "noFreshBaselineQuery": true
+  },
+  "resumeContract": {
+    "atomicCheckpointAndExclusiveWriter": true,
+    "bindSourceContractPinsInputsAndReceipts": true,
+    "reuseValidatedCompletedOfflineResults": true,
+    "persistIntentBeforeEffect": true,
+    "uncertainOriginalEffect": "UNKNOWN_NO_AUTOMATIC_REPLAY",
+    "campaignExpiry": "Preserve validated results; require cleanup/reconciliation and separate admission for additional external effects, never extend or reset deadlines on resume.",
+    "modelQuota": "Pause agent work, preserve accounting; resume from durable verified checkpoint when quota returns; no provider quota bypass."
+  },
+  "unchangedRuntimeCaps": {
+    "oneUnspentCampaign": 1,
+    "campaignSeconds": 1200,
+    "cleanupCutoffSeconds": 1020,
+    "serviceQueries": 5,
+    "cuaMethods": 64,
+    "tabMetadataInventories": 3,
+    "ownedTabs": 1,
+    "g2StatusStarts": 16,
+    "providerCalls": 1,
+    "maximumUSD": 1,
+    "automaticRetry": 0
+  },
+  "currentlyReleasedEffects": {
+    "controller": 0,
+    "campaign": 0,
+    "services": 0,
+    "browser": 0,
+    "fixture": 0,
+    "key": 0,
+    "provider": 0
+  },
+  "prohibitedChanges": [
+    "Core, installed gate modules, lock, workflow, dependencies, product or supervisor implementation edits",
+    "immutable seeds, grants, v2 contract/proof/design/reviews or historical receipts rewritten",
+    "worker commits or self-acceptance",
+    "extra campaign/provider allowance, hidden retry, uncertain effect replay, host clock mutation",
+    "raw secrets/host identifiers committed or copied into public records"
+  ],
+  "closure": "Independent source and checkpoint/pinned-preflight review, focused verification and clean normal commit required before any new technical release. G0 actual evidence and Root Runtime Effect Admission remain required before product effects. ProductB blocked; Facebook/Zalo OA parked."
+}

@@ -1,0 +1,174 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ROOT_R139_BOOT_IDENTITY_V2_G0_TECHNICAL_RELEASE",
+  "status": "HOLD_CLOCK_COMPATIBILITY_BEFORE_V2_INVOCATION",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "riskCeiling": "R2",
+  "baseCommit": "50f3540487a85e1c920ea6559aac266b17d7db85",
+  "sourceCommit": "72371595cf1e650a5df074fb5b84cf5472576cec",
+  "acceptedBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-V2-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "f818a976fc347340d659c13be27ff5dcd66ebe44e6a694224b0f26cba72fc5bb"
+  },
+  "ownerGrantRefs": [
+    {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-CUA-SOURCE-ADMISSION.json",
+      "sha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e"
+    },
+    {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-AND-CONDITIONAL-REENTRY-ADMISSION.json",
+      "sha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f"
+    },
+    {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
+      "sha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491"
+    },
+    {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json",
+      "sha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb"
+    }
+  ],
+  "bootIdentityContract": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_contract_20261025.json",
+    "sha256": "4c90053543f1d21532fdb5c6c7487e04c7a4ee5b3369c6f24034cde285eb9e7c"
+  },
+  "bootProof": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_proof_20261025.json",
+    "sha256": "10937592aaa94c4d00a89eb194fa223b9bec372b921be8a247967da235fa44e9",
+    "hostBootId": "r139-hb2:c6b81cbdce3472f97a047a667bcfbfcf5fff39e7a8a39546e385b4b1d28b3d79"
+  },
+  "nativeContractId": "r139-cua-boot-identity-v2-20261025",
+  "campaignNonce": "2dde0dbd452e2164396c094b454fbea4",
+  "oneExistingOrder": true,
+  "newTranches": 0,
+  "roadmap": [
+    "M3-05",
+    "M3-08"
+  ],
+  "recipePath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_activation_recipe_20261025.json",
+  "recipeSha256": "a52fc8c05c93e38306d73387039d4a5b6a822f0c4ed44d47597e6bf35f67d553",
+  "actorAcks": {
+    "root": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_root_actor_ack_20261025.json",
+      "sha256": "124d39a353319101dca9af6021d6b9178ed2facb326104ff44e841a8a7227ca2"
+    },
+    "internal": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_internal_actor_ack_20261025.json",
+      "sha256": "c8ef518cc07292873a74c5db605f35f5936861766b824a1cc0389fc6cf7ad38f"
+    },
+    "cuaProducer": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_producer_actor_ack_20261025.json",
+      "sha256": "08719305746aa445ab7793f99fdf126b53438eec68c859cbff1e274a7d4a2704"
+    },
+    "cuaObserver": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_observer_actor_ack_20261025.json",
+      "sha256": "bc5382540795738d5f35f4ff8da64af688b1e2d8fa4cb14b03c9972c0f9add77"
+    }
+  },
+  "caps": {
+    "oneCampaign": 1,
+    "internalReadOnlyQueries": 5,
+    "browserWorkerStagesMax": 4,
+    "cuaApiMethodsMax": 64,
+    "cuaStageMethodsMax": {
+      "g0Producer": 8,
+      "g0IndependentObserver": 4,
+      "g2ProductUi": 48,
+      "terminal": 4
+    },
+    "g2CapturesMax": 4,
+    "newOwnedPages": 1,
+    "creationNavigation": 1,
+    "samePageControlNavigation": 1,
+    "pageReadObservationsMax": 4,
+    "originalCapturesMax": 2,
+    "exactFinalCloseMax": 1,
+    "baselineMetadataEnumeration": 1,
+    "handoffMetadataEnumeration": 1,
+    "finalMetadataEnumeration": 1,
+    "globalMetadataEnumerationMaximum": 3,
+    "nativeExecutePOSTMax": 8,
+    "browserExecutePOSTMax": 1,
+    "grantsMax": 3,
+    "authPOSTMax": 4,
+    "statusReadStartsMax": 16,
+    "automaticPostSendStatusPollStartsMax": 12,
+    "eventDrivenStatusReadsMax": 4,
+    "automaticPollSpacingSecondsMin": 5,
+    "automaticPollLifetimeSecondsMax": 60,
+    "physicalProviderAttemptsMax": 1,
+    "newUSDMax": 1,
+    "keyContentReadsMax": 1,
+    "requestBytesMax": 6000,
+    "completionTokensMax": 768,
+    "fixtureStartsMax": 1,
+    "fixtureFinalStopsMax": 1,
+    "backendStartsMax": 1,
+    "viteStartsMax": 1,
+    "publicTariffRefreshIfNeededMax": 1,
+    "dockerQuerySecondsMax": 20,
+    "powershellQuerySecondsMax": 5,
+    "automaticRetry": 0,
+    "sourceChecksDuringCampaign": 0,
+    "wholeCampaignSeconds": 1200,
+    "stopBeforeSeconds": 1020,
+    "cleanupReserveSeconds": 180,
+    "oldUnusedProviderAllowanceSupersededNotStacked": true
+  },
+  "operator": "Owner in this conversation",
+  "closeMode": "operator_fallback",
+  "operatorAvailabilityRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_owner_close_availability_20261025.json",
+    "sha256": "5000e85c29a5fd1a64c7b7d3abbbbdeaecb214b490401d5e89924074b1e00bd5"
+  },
+  "controllerDesignRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v2_design.py.txt",
+    "sha256": "89d6f20eb1b80e1e5f331876886542fce7046fe010e0d6982b1b6b8f56f29454"
+  },
+  "controllerScriptPath": ".cvf/runtime/r139_boot_identity_reentry_20261025_readiness/activation_controller.py",
+  "outerControlCustodyWrapper": {
+    "path": ".cvf/runtime/r139_boot_identity_reentry_20261025_readiness/root_original_control_custody_v2.py",
+    "sha256": "3964ad4f63328c83e7425143b1b209d81a822179246d943db4ce9f143c8e155f",
+    "rehashImmediatelyBeforeInvocation": true
+  },
+  "coordinationRoot": ".cvf/runtime/r139_boot_identity_reentry_20261025_readiness/coordination",
+  "reservationPath": ".cvf/runtime/r139_boot_identity_reentry_20261025_readiness/campaign_reservation.json",
+  "signalPath": ".cvf/runtime/r139_boot_identity_reentry_20261025_readiness/coordination/root_g0_release.json",
+  "reviewPath": "docs/reviews/R139_BOOT_IDENTITY_G0_TECHNICAL_REVIEW_2026-10-25.md",
+  "independentReviewApproved": true,
+  "historicalOriginalAttempt": {
+    "used": 1,
+    "pid": 24484,
+    "originalWaitReturned": true,
+    "exitCode": 1,
+    "reservationUsed": 0,
+    "retained": true
+  },
+  "additionalOriginalPreclockInvocationCap": 1,
+  "additionalOriginalPreclockUsed": 0,
+  "sourceChecksSpent": 10,
+  "sourceChecksRemaining": 0,
+  "campaignReserved": false,
+  "serviceQueries": 0,
+  "browserMethods": 0,
+  "fixtureStarts": 0,
+  "keyReads": 0,
+  "providerCalls": 0,
+  "productRuntimeReleased": false,
+  "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+  "claimBoundary": "Technical preclock packet only; actual G0 Root raw/URL/capture/primitive review and distinct Runtime Effect Admission required before fixture/key/provider. Raw host identifiers private, no old attempt reset or retries.",
+  "staticReviewOnly": true,
+  "liveTemporalConditionSatisfied": false,
+  "independentReviewRef": {
+    "path": "docs/reviews/R139_BOOT_IDENTITY_G0_TECHNICAL_REVIEW_2026-10-25.md",
+    "sha256": "fae27bca6aa11dba8f78102339d1e56efa5bd34876d012998c8ef3ad50ee9f3d"
+  },
+  "clockHoldReviewRef": {
+    "path": "docs/reviews/R139_BOOT_IDENTITY_PRECLOCK_CLOCK_HOLD_REVIEW_2026-10-25.md",
+    "sha256": "5e1ee2fba577f2b7400b16a7d239c2b6c87962e534ff575e11254e0b968fe601"
+  },
+  "clockHoldReceiptRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_prelaunch_clock_compatibility_20261025.json",
+    "sha256": "f66deb189820926ddf6cd6b4e2d9575925600d5ebe7cfe2bdc08c7847d73d495"
+  }
+}

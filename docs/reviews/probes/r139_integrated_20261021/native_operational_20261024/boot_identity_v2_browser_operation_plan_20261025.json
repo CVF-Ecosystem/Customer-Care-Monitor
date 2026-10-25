@@ -1,0 +1,230 @@
+{
+  "schemaVersion": "r139.cuaBrowserOperationPlan@1.1.0",
+  "planId": "r139-boot-identity-v2-cua-plan-20261025",
+  "date": "2026-10-24",
+  "status": "PREPARED_UNRELEASED_PENDING_COMPLETE_TECHNICAL_REVIEW",
+  "workOrder": "CCMAI-RUNTIME-139",
+  "proofContract": "cua_page_target_v1",
+  "purpose": "One same-order conditional campaign; planned operations only, not runtime evidence",
+  "authority": {
+    "sourceAmendmentCommitted": "09e433e93d4406a901f90666f0e7ec5aa3631828",
+    "sourceDispatchCommitted": "63742e1143755db2b8fac09cb7e8a7cc3effef4d",
+    "observationCapsAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
+    "observationCapsOwnerApproved": true,
+    "campaignReserved": false,
+    "freshCampaignStarted": false,
+    "fixtureStarted": false,
+    "serviceQueriesStarted": 0,
+    "providerCallsStarted": 0,
+    "pathDisposition": "Root-authorized uniquely named plan within inherited evidenceFamily reentry_source_checks/** and active source work order; does not widen source or immutable seed paths",
+    "sourceBuildAndRuntimeEffectAdmission": "Source/build accepted; independently reviewed committed G0 technical release plus original reservation before effects; distinct Runtime Effect Admission still required before fixture/key/provider",
+    "sourceCommit": "72371595cf1e650a5df074fb5b84cf5472576cec",
+    "acceptedBuildPinsRef": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-V2-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "sha256": "f818a976fc347340d659c13be27ff5dcd66ebe44e6a694224b0f26cba72fc5bb"
+    },
+    "bootRecoveryAdmissionSha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb"
+  },
+  "actors": {
+    "g0Producer": {
+      "canonicalTaskId": "/root/r139_cua_browser_producer",
+      "status": "actual renewed original metadata ACK accepted by Root, zero effects"
+    },
+    "g0IndependentObserver": {
+      "canonicalTaskId": "/root/r139_cua_browser_observer",
+      "status": "actual distinct renewed original metadata ACK accepted by Root, zero effects"
+    },
+    "g2ProductUiExecutor": {
+      "canonicalTaskId": "/root/r139_cua_browser_producer",
+      "role": "internal browser worker, conditional separate Runtime Effect Admission"
+    },
+    "terminalCoordinator": {
+      "canonicalTaskId": "/root/r139_cua_browser_observer",
+      "role": "bound observer in same four stages; Root coordinates, Owner closes exact tab via operator_fallback"
+    },
+    "internalServiceRuntimeActor": {
+      "canonicalTaskId": "/root/r139_cua_recipe_worker",
+      "role": "five exact queries after actual Root signal; runtime only after separate admission"
+    }
+  },
+  "documentaryBrowserSelection": {
+    "countAlreadyUsedOutsideCampaign": 1,
+    "selection": "cua.getBrowser({url:'https://example.com'})",
+    "browserType": "iab",
+    "documentaryBrowserId": 2,
+    "meaning": "One documentation/browser selection only. It opened no tab, read no inventory or page content, and proves neither live page ownership nor cross-task access.",
+    "additionalDocumentationSelectionsAllowed": 0,
+    "runtimeBrowserId": null,
+    "runtimeTabId": null,
+    "runtimeProviderTabId": null,
+    "insideReservedG0InitialSelectionAllowed": 1
+  },
+  "identityAndProvenance": {
+    "originalIds": "Preserve actual browserId/tabId/providerTabId return values; canonical string conversion only explicitly documented with raw original unchanged. BrowserKind iab is descriptive, never a native session.",
+    "requestedVersusObservedUrls": "createBrowserTab/goto request URLs and successful Promise completion are request/completion evidence. Do not claim a URL was returned by Tab or goto. Actual independent controlled nonce URL must come from approved handoff metadata listing of the same exact tab.",
+    "rawReturns": "Capture actual original API results immediately, private raw bytes or original tool references with hashes; per-method ordinal plus real task identity. No reconstructed file represented as authenticated native transcript.",
+    "derivedAggregates": "creation_ledger/action_sequence/handoff composite evidence explicitly derived from referenced original events and Owner report; not an invented single raw return.",
+    "rootReview": "Root reads original returns and views actual captures before G0 acceptance; shapes/hashes alone do not prove authenticity or live governance."
+  },
+  "budget": {
+    "maximumAttemptedCuaApiMethods": 64,
+    "stageCaps": {
+      "g0Producer": 8,
+      "g0IndependentObserver": 4,
+      "g2ProductUi": 48,
+      "terminal": 4
+    },
+    "countingRule": "Every actual API method counts, including nested and batched methods; failures/uncertainty consume; no retry or extra helper stages.",
+    "g0PageStateReadsMaximum": 4,
+    "g0CapturesMaximum": 2,
+    "g2CapturesMaximum": 4,
+    "baselineMetadataInventories": 1,
+    "handoffMetadataInventoriesProposed": 1,
+    "finalMetadataInventories": 1,
+    "ownedPagesMaximum": 1,
+    "browserExecutePostMaximum": 1,
+    "authPostMaximum": 4,
+    "statusReadsProposed": {
+      "total": 16,
+      "automaticPostSend": 12,
+      "spacingSeconds": 5,
+      "pollLifetimeSeconds": 60,
+      "eventDriven": 4
+    },
+    "readAccounting": "Conservatively count each actual own-page state return, including automatic selection/creation state and each screenshot, toward global4 G0 reads. Metadata-only inventories separately capped3. Reserve one G0 read for observer initial getTab; skip explicit AX read if producer initial state+two captures already use3. Unexpected automatic reads beyond remaining cap mean HOLD before next call; no budget increase."
+  },
+  "g0": {
+    "urlCreated": "https://example.com/#r139_nonce=2dde0dbd452e2164396c094b454fbea4&phase=created",
+    "urlControlled": "https://example.com/#r139_nonce=2dde0dbd452e2164396c094b454fbea4&phase=controlled",
+    "producerCalls": [
+      {
+        "slot": 1,
+        "method": "cua.getBrowser({url:'https://example.com'})",
+        "purpose": "Fresh CUA session initial documentation/selector entrypoint inside reserved G0; no tab opened. Count one of eight producer methods. Require actual selected IAB browser, not an inferred native identity."
+      },
+      {
+        "slot": 2,
+        "method": "cua.listTabs({browser:<actualBrowserId>})",
+        "purpose": "sole baseline metadata inventory"
+      },
+      {
+        "slot": 3,
+        "method": "cua.createBrowserTab(<actualBrowserId>, <exactCreatedUrl>, {visible:true})",
+        "purpose": "sole new owned tab; retain original ID and initial returned state, count automatic state toward4 reads"
+      },
+      {
+        "slot": 4,
+        "method": "tab.getScreenshot()",
+        "purpose": "first original capture, no claim fragment nonce is visible in body"
+      },
+      {
+        "slot": 5,
+        "method": "tab.goto(<exactControlledUrl>)",
+        "purpose": "single same-tab navigation; void completion is not observed URL"
+      },
+      {
+        "slot": 6,
+        "method": "tab.getScreenshot()",
+        "purpose": "second original capture; identical pixels are possible for fragment-only navigation"
+      },
+      {
+        "slot": 7,
+        "method": null,
+        "purpose": "Unused; no substitute/retry. Only one explicit extra own-state observation if necessary and aggregate read<=4, otherwise HOLD."
+      },
+      {
+        "slot": 8,
+        "method": "OPTIONAL tab.getAXState() only if global4 read budget remains after reserving observer initial state",
+        "purpose": "Only if needed target API documentation is missing and captures+automatic states+observer leave room; otherwise omit, no retry."
+      }
+    ],
+    "observerCalls": [
+      {
+        "slot": 1,
+        "method": "cua.getTab(<exactProducerTabId>, {browser:<actualBrowserId>})",
+        "purpose": "initial observer entrypoint; must return same exact ID and original state; state counts toward4"
+      },
+      {
+        "slot": 2,
+        "method": "cua.listTabs({browser:<actualBrowserId>})",
+        "purpose": "one proposed handoff metadata inventory; only after approved observation-cap grant; extract exact target ID/browser/controlled URL/nonce without unrelated content"
+      },
+      {
+        "slot": 3,
+        "method": null,
+        "purpose": "unused unless one explicit own-tab state observation is necessary and total4 reads remains; otherwise HOLD"
+      },
+      {
+        "slot": 4,
+        "method": null,
+        "purpose": "unused"
+      }
+    ],
+    "targetBoundDocumentationGate": "Read actual owned-tab returned documentation from the admitted creation/handoff. DOM-only locator access and ConfirmDialog acquisition must be documented before any fixture/key/provider release. Do not guess methods. If missing, HOLD and exact owned cleanup.",
+    "acceptance": "One genuinely new tab, completed creation/control requests, original captures, actual independent exact-ID access plus actual controlled nonce URL from approved metadata, distinct actual tasks, Root original-return reconciliation; no data: scheme, click-button fabrication or new stack."
+  },
+  "g2": {
+    "status": "HOLD until observation-cap grant, source/build/recipe acceptance, actual G0 and separately committed Runtime Effect Admission",
+    "executor": "/root/r139_cua_browser_producer",
+    "maxMethods": 48,
+    "maxCaptures": 4,
+    "steps": [
+      "rebind same exact owned tab only if needed",
+      "navigate same tab to exact admitted loopback app",
+      "documented writer sign-in with synthetic fixture identity, private credentials never committed",
+      "open fixture-prepared WAITING_ON_DATA request; initial status load and readiness charged",
+      "capture actual pre-send UI and hold semantics",
+      "one execute click plus documented ConfirmDialog.accept using actually exposed handle; never guess handle path",
+      "observe sole two-field execute POST/202 and actual UI state; no additional mutation or follow-up form",
+      "automatic polling<=12 at>=5s within60s; route ledger total proposed<=16 including four event-driven categories",
+      "capture actual post-send and actual published writer OPEN/current-proposal view; mutually exclusive E04 experiments remain OPEN",
+      "one deliberate writer reload and one reader session switch/load; capture reader safe history with execute controls absent",
+      "no manual refresh loop or reader reload; insufficient evidence or unexpected extra request means HOLD/PARTIAL"
+    ],
+    "statusReadCategories": [
+      "writer initial load1",
+      "automatic post-send loop<=12",
+      "publication version-watch reload1",
+      "one deliberate writer reload1",
+      "reader load1"
+    ],
+    "otherRouteReads": "Root must seal finite case-detail/history/readiness/auth GET categories against fixture router and real UI before clock; no unbounded discovery or retries",
+    "apiPrimitiveStatus": {
+      "getScreenshot": "documented",
+      "goto": "optional documented; actual target support must be observed in G0",
+      "getAXState": "documented",
+      "domLocatorHandlePath": "UNKNOWN until actual target-bound docs",
+      "confirmDialogAccept": "type method documented; handle acquisition UNKNOWN until actual target-bound docs"
+    }
+  },
+  "terminal": {
+    "maxMethods": 4,
+    "closeMode": "operator_fallback",
+    "operator": "Owner in this conversation; readiness already confirmed",
+    "steps": [
+      "coordinate Owner exact ID+nonce close without extra page or unrelated action",
+      "record Owner report received UTC, not invented physical close timestamp",
+      "one final metadata inventory proves target absent and protected IDs equal baseline",
+      "seal derived action ledger (report-only permitted if G2 absent), final normalized inventory/original metadata refs, close receipt and exact four-hash done marker"
+    ],
+    "failure": "Missing report/original inventory, protected drift, inability to close or deadline miss means HOLD/UNKNOWN with actual lateness; never refund or retry"
+  },
+  "effectsObserved": {
+    "g0CampaignActions": 0,
+    "sourceChecksForThisPlan": 0,
+    "browserNavigation": 0,
+    "fixture": 0,
+    "keyContentReads": 0,
+    "providerCalls": 0
+  },
+  "rootRepairDisposition": "Original Luna draft data: click route/intermediate unapproved inventory/Root G2 executor withdrawn before any effect. This Root plan repair is part of the one consolidated F01-F07 response, not a new tranche.",
+  "sourceCommit": "72371595cf1e650a5df074fb5b84cf5472576cec",
+  "acceptedBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-V2-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "f818a976fc347340d659c13be27ff5dcd66ebe44e6a694224b0f26cba72fc5bb"
+  },
+  "nativeContractId": "r139-cua-boot-identity-v2-20261025",
+  "campaignNonce": "2dde0dbd452e2164396c094b454fbea4",
+  "acceptedBuildPinsSha256": "f818a976fc347340d659c13be27ff5dcd66ebe44e6a694224b0f26cba72fc5bb",
+  "currentSourceStatus": "REVIEW_PASS_OFFLINE_COMPONENTS_ONLY_SOURCE_CHECKS10_SPENT"
+}

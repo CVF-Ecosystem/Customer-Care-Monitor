@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Current R139 REVIEW/CHANGES_REQUIRED: actual preclock CURRENT_HOST_BOOT_DRIFT before reservation; one consolidated static recovery decision, source8spent, no runtime effects."
+      "description": "Current R139 Owner-directed stable pin/clock/resume offline repair BUILD; old evidence and runtime caps retained, effects unreleased."
     },
     {
       "id": "r060-work-order",
@@ -37376,6 +37376,125 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-V2-ACCEPTED-BUILD-PINS-ADMISSION.json",
       "status": "ACTIVE",
       "description": "Exact committed offline v2 source/check pin binding; inherited unchanged Go binary, no G0/runtime or product release."
+    },
+    {
+      "id": "r139-boot-v2-g0-700c250f26f6ca6d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_activation_recipe_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 v2 bounded G0 technical metadata, renewed actor ACK or independent review; not actual G0/runtime/product proof."
+    },
+    {
+      "id": "r139-boot-v2-g0-700eb2a7d9e66046",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_browser_operation_plan_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 v2 bounded G0 technical metadata, renewed actor ACK or independent review; not actual G0/runtime/product proof."
+    },
+    {
+      "id": "r139-boot-v2-g0-b880cf6f84c27565",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_internal_actor_ack_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 v2 bounded G0 technical metadata, renewed actor ACK or independent review; not actual G0/runtime/product proof."
+    },
+    {
+      "id": "r139-boot-v2-g0-80a56ece65ca08ea",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_internal_actor_original_ack_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 v2 bounded G0 technical metadata, renewed actor ACK or independent review; not actual G0/runtime/product proof."
+    },
+    {
+      "id": "r139-boot-v2-g0-c0640e5b1d5b9964",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_observer_actor_ack_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 v2 bounded G0 technical metadata, renewed actor ACK or independent review; not actual G0/runtime/product proof."
+    },
+    {
+      "id": "r139-boot-v2-g0-c9adee0c49a11a8e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_observer_actor_original_ack_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 v2 bounded G0 technical metadata, renewed actor ACK or independent review; not actual G0/runtime/product proof."
+    },
+    {
+      "id": "r139-boot-v2-g0-51372fd06c595734",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_owner_close_availability_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 v2 bounded G0 technical metadata, renewed actor ACK or independent review; not actual G0/runtime/product proof."
+    },
+    {
+      "id": "r139-boot-v2-g0-8b3d77610a40a23d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_producer_actor_ack_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 v2 bounded G0 technical metadata, renewed actor ACK or independent review; not actual G0/runtime/product proof."
+    },
+    {
+      "id": "r139-boot-v2-g0-a3773d3c928b467e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_producer_actor_original_ack_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 v2 bounded G0 technical metadata, renewed actor ACK or independent review; not actual G0/runtime/product proof."
+    },
+    {
+      "id": "r139-boot-v2-g0-4c73e97b7988f3fd",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_root_actor_ack_20261025.json",
+      "status": "ACTIVE",
+      "description": "R139 v2 bounded G0 technical metadata, renewed actor ACK or independent review; not actual G0/runtime/product proof."
+    },
+    {
+      "id": "r139-boot-v2-g0-a620a31653850182",
+      "family": "continuity",
+      "path": "docs/reviews/R139_BOOT_IDENTITY_G0_TECHNICAL_REVIEW_2026-10-25.md",
+      "status": "ACTIVE",
+      "description": "R139 v2 bounded G0 technical metadata, renewed actor ACK or independent review; not actual G0/runtime/product proof."
+    },
+    {
+      "id": "r139-boot-v2-g0-0a2775d49473d144",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-V2-G0-TECHNICAL-RELEASE-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "R139 v2 bounded G0 technical metadata, renewed actor ACK or independent review; not actual G0/runtime/product proof."
+    },
+    {
+      "id": "r139-clock-hold-48b24ea1a9d099af",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_prelaunch_clock_compatibility_20261025.json",
+      "status": "ACTIVE",
+      "description": "Actual prelaunch clock-metadata incompatibility against frozen two-second contract; no new controller/campaign invocation or source check."
+    },
+    {
+      "id": "r139-clock-hold-3d4ae1c558914bfa",
+      "family": "continuity",
+      "path": "docs/reviews/R139_BOOT_IDENTITY_PRECLOCK_CLOCK_HOLD_REVIEW_2026-10-25.md",
+      "status": "ACTIVE",
+      "description": "Actual prelaunch clock-metadata incompatibility against frozen two-second contract; no new controller/campaign invocation or source check."
+    },
+    {
+      "id": "r139-clock-profile-consolidated-recovery-proposal-20261026",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CLOCK_AND_PROFILE_CONSOLIDATED_RECOVERY_PROPOSAL_2026-10-26.md",
+      "status": "ACTIVE",
+      "description": "One proposed R139 decision: reconciled public Core; remaining installed-profile compatibility and successor query-local clock contract/check budget, not admitted or executed."
+    },
+    {
+      "id": "r139-pinned-resume-repair-admission-20261026",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Owner-directed same-order stable pin/clock/durable resume repair; historical accounting and runtime caps retained."
+    },
+    {
+      "id": "r139-boot-identity-v3-contract-20261026",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_contract_20261026.json",
+      "status": "ACTIVE",
+      "description": "Root-admitted v3 query-local temporal SPEC with immutable v2 identity/proof predecessor refs; source/runtime unproved."
     }
   ]
 }

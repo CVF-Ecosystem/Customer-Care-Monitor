@@ -1,0 +1,19 @@
+{
+  "kind": "ROOT_PRELAUNCH_LOCAL_CLOCK_COMPATIBILITY_METADATA",
+  "pythonPath": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+  "observedUTC": "2026-10-25T13:36:23.705490+00:00",
+  "observedMonotonic": 200893.0916406,
+  "baselineUTC": "2026-10-25T08:40:22.170780+00:00",
+  "baselineMonotonic": 183127.5810706,
+  "elapsedUTCSeconds": 17761.53471,
+  "elapsedMonotonicSeconds": 17765.510570000013,
+  "differenceSeconds": -3.975860000013199,
+  "maxAbsoluteDifferenceSeconds": 2,
+  "compatibleWithReviewedContract": false,
+  "metadataOnlyClockFunctions": true,
+  "newCimOrEventQuery": false,
+  "sourceCheckInvocation": false,
+  "controllerInvocation": false,
+  "campaignReservation": false,
+  "noClockMutation": true
+}

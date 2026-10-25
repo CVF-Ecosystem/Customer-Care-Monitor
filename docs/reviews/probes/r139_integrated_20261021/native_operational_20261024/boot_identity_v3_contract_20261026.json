@@ -1,0 +1,88 @@
+{
+  "kind": "R139_WINDOWS_BOOT_IDENTITY_V3_CONTRACT",
+  "status": "ROOT_ADMITTED_SPEC",
+  "ownerAdmissionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+    "sha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f"
+  },
+  "observationSchema": "r139.windowsBootIdentityObservation@1",
+  "actualTopLevelKeys": [
+    "schema",
+    "observedUTC",
+    "osComputerName",
+    "computerSystemProductUuid",
+    "lastBootUTC",
+    "bootEvent"
+  ],
+  "eventKeys": [
+    "logName",
+    "providerName",
+    "eventId",
+    "recordId",
+    "machineName",
+    "timeCreatedUTC",
+    "startTimeUTC"
+  ],
+  "hostCanonicalFields": {
+    "osComputerName": "strip().upper(); ASCII computer name regex [A-Z0-9][A-Z0-9._-]{0,254}",
+    "computerSystemProductUuid": "strip().upper(); UUID 8-4-4-4-12 hex; deny all-zero/all-F UUID"
+  },
+  "bootCanonicalFields": {
+    "logName": "exact System",
+    "providerName": "exact Microsoft-Windows-Kernel-General",
+    "eventId": "integer exactly12, reject bool",
+    "recordId": "positive integer, reject bool",
+    "machineName": "strip().upper(); exact canonical OS computer name",
+    "timeCreatedUTC": "original strict UTC timestamp string",
+    "startTimeUTC": "original strict UTC timestamp string"
+  },
+  "digestSerialization": "json.dumps(object, ensure_ascii=True, sort_keys=True, separators=(\",\", \":\")).encode(\"utf-8\") then sha256 lowercase hex; host object exactly two hostCanonicalFields; boot object exactly seven bootCanonicalFields",
+  "stableHostBootId": "r139-hb2: + sha256((hostIdentitySha256+\"|\"+bootSessionSha256).encode(\"ascii\")).hexdigest(); explicitly derived caller token, not an OS/native session ID",
+  "strictUtcTimestampGrammar": {
+    "rawObservationFields": [
+      "observedUTC",
+      "lastBootUTC",
+      "bootEvent.timeCreatedUTC",
+      "bootEvent.startTimeUTC"
+    ],
+    "rawObservationGrammar": "YYYY-MM-DDTHH:MM:SS.fffffffZ or YYYY-MM-DDTHH:MM:SS.fffffff+00:00 exactly7 fractional digits",
+    "parentFields": [
+      "baselineClock.startUTC",
+      "baselineClock.endUTC",
+      "actualQueryParent.startUTC",
+      "actualQueryParent.endUTC"
+    ],
+    "parentGrammar": "YYYY-MM-DDTHH:MM:SS.ffffff+00:00 exactly6 fractional digits; future parent captures use datetime.now(timezone.utc).isoformat(timespec=\"microseconds\")",
+    "commonRules": "Real calendar date; UTC only; reject naive/nonzero offset, duplicate JSON keys/missing/unknown fields or types"
+  },
+  "bounds": {
+    "maxAbsoluteCimBootVsEventStartSeconds": 2,
+    "minEventCreatedVsStartSeconds": 0,
+    "maxEventCreatedVsStartSeconds": 120,
+    "maxAbsoluteCurrentVsBaselineCimBootSeconds": 2,
+    "queryObservedUtcSlackSeconds": 2,
+    "queryTimeoutSeconds": 5,
+    "maxAbsoluteCurrentQueryUtcVsMonotonicElapsedDriftSeconds": 2
+  },
+  "clockRule": "The immutable original proof supplies host/full boot digests and historical observation identity only. Record UTC and finite numeric nonbool monotonic immediately before the single original OS child Popen and immediately after its original wait returns exit0, in the same parent process. Require nonnegative UTC and monotonic intervals, monotonic interval <=5s, and exact Fraction abs(UTC interval - monotonic interval)<=2s. Do not additionally cap UTC interval at5s; the monotonic timeout and explicit2s agreement determine its allowed bound. No comparison between elapsed UTC and monotonic across the multi-hour historical baseline, and no historical monotonic ordering requirement. Both current parent startUTC and child observedUTC must be no earlier than frozen proof observedUTC. Child observedUTC must lie in [current parent startUTC-2s,endUTC+2s]; no event boot/start/created may be after observedUTC. Preserve all original exact host/event digest, derived token, raw grammar, CIM/event and current-vs-baseline-CIM bounds. Original child identity/command pin/handle/wait/exit receipt required; timestamp checks alone cannot prove freshness. No extra query, fallback, retry, baseline rewrite or system clock mutation.",
+  "baselineClockFromOriginalIntent": {
+    "startUTC": "2026-10-25T08:40:22.170780+00:00",
+    "startMonotonic": 183127.5810706,
+    "endUTC": "2026-10-25T08:40:23.027286+00:00",
+    "endMonotonic": 183128.4375683,
+    "pythonPath": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "monotonicSource": "python.time.monotonic"
+  },
+  "privacy": "Actual host name/UUID/event machine name remain ignored locally; committed proof contains hashes and timestamps only. Later controller raw child logs also remain private; do not copy raw output into repository.",
+  "failure": "HOLD before reservation on changed/missing/placeholder/malformed/duplicate/ambiguous host/boot identity, bad timestamps, clock reversal/drift, timeout/nonzero/unknown original wait. No fallback/retry.",
+  "claimBoundary": "Single original live query custody plus explicit within-query temporal agreement and immutable identity comparison, not uninterrupted agreement since preparation, fresh baseline, OS attestation, provider governance or exclusion of cloned identifiers/tampered logs/compromised OS. Clock jumps and reversal wholly between samples remain outside this evidence.",
+  "predecessorContractRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_contract_20261025.json",
+    "sha256": "4c90053543f1d21532fdb5c6c7487e04c7a4ee5b3369c6f24034cde285eb9e7c"
+  },
+  "predecessorProofRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_proof_20261025.json",
+    "sha256": "10937592aaa94c4d00a89eb194fa223b9bec372b921be8a247967da235fa44e9"
+  },
+  "sharedInvocation": "V2 release superseded/disabled. V2 plus v3 together have at most ONE still-unused future original preclock invocation; shared cumulative counter and campaign cap; old PID24484 failure retained separately."
+}

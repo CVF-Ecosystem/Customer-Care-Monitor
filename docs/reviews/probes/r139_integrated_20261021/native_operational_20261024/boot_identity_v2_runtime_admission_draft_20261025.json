@@ -1,15 +1,15 @@
 {
-  "status": "DRAFT_PENDING_BOOT_V2_SOURCE_ACCEPTANCE_AND_ACTUAL_G0",
+  "status": "HOLD_CLOCK_COMPATIBILITY_BEFORE_V2_INVOCATION",
   "kind": "DRAFT_NOT_RUNTIME_EFFECT_ADMISSION",
   "routeStatus": "NOT_RELEASED",
   "ownerApproved": false,
   "sourceOnly": true,
-  "sourceCommit": "SET_AFTER_REVIEWED_SOURCE_COMMIT",
+  "sourceCommit": "72371595cf1e650a5df074fb5b84cf5472576cec",
   "parentAuthorityCommit": "642f5bd026dfe31e6dda6441dd25704eb3ececa3",
   "sourceResumeAdmissionCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
   "sourceSha256": {
     "scripts/r139_execution_supervisor.py": "a7557917cc3ade551e78f7b4c40b0cc5aac5a312bcae2fdfbe353aba997f5203",
-    "scripts/tests/test_r139_execution_supervisor.py": "SET_AFTER_REVIEWED_SOURCE_CHECKS",
+    "scripts/tests/test_r139_execution_supervisor.py": "496a34143ba036b568e211f8e9c07926f20553c1df3d1c74d59fef6be39d0e6c",
     "scripts/r139_vite_config.mjs.template": "82a1d9ae8576fcd46718945d0a5cb44eb963a2a14d436a16e2bcdfb72b26bee9",
     "backend/api/handlers/intervention_execution_browser_test.go": "0ed1148d42dcd9cb018e2a3f3cbeb9c68bdcb8904d408c365b8d05b11c2a040e",
     "backend/go.mod": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
@@ -189,5 +189,12 @@
   "bootIdentityRecoveryAdmissionRef": {
     "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json",
     "sha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb"
-  }
+  },
+  "acceptedBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-V2-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "f818a976fc347340d659c13be27ff5dcd66ebe44e6a694224b0f26cba72fc5bb"
+  },
+  "operatorAvailabilityRef": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_owner_close_availability_20261025.json",
+  "liveTemporalConditionSatisfied": false,
+  "currentClockHoldReceipt": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_prelaunch_clock_compatibility_20261025.json"
 }

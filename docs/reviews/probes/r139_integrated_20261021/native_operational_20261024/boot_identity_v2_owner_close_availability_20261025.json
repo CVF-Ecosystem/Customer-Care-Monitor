@@ -1,0 +1,13 @@
+{
+  "kind": "ROOT_REBOUND_STANDING_OWNER_EXACT_TAB_CLOSE_AVAILABILITY",
+  "operator": "Owner in this conversation",
+  "closeMode": "operator_fallback",
+  "originalAvailabilityRef": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_owner_operator_availability.json",
+  "basis": "Standing direct Owner exact-owned-tab operator_fallback availability plus approved complete boot recovery package. Rebound unused successor nonce only; no fresh human quote or actual tab closure report claimed.",
+  "campaignNonce": "2dde0dbd452e2164396c094b454fbea4",
+  "nativeContractId": "r139-cua-boot-identity-v2-20261025",
+  "ownerAvailable": true,
+  "actualTabId": null,
+  "actualCloseReportReceived": false,
+  "currentPhysicalCloseTime": "UNKNOWN"
+}

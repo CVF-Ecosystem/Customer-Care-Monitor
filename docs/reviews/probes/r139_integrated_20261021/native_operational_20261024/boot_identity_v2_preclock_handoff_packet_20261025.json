@@ -1,10 +1,10 @@
 {
   "kind": "R139_INTERNAL_CUA_PRECLOCK_HANDOFF_PACKET",
-  "status": "DRAFT_PENDING_BOOT_V2_SOURCE_ACCEPTANCE_AND_ACTUAL_G0",
-  "sourceCommit": "38db7e90d2344fcc2f5a6c14cf6406f192d7a1d9",
+  "status": "HOLD_CLOCK_COMPATIBILITY_BEFORE_V2_INVOCATION",
+  "sourceCommit": "72371595cf1e650a5df074fb5b84cf5472576cec",
   "acceptedBuildPins": {
-    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-ACCEPTED-BUILD-PINS-ADMISSION.json",
-    "sha256": "bd21d9e97cca7a32f350912ec23c0d53b39ed0b61ced90a435aad7e6b8e9e32b"
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-V2-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "f818a976fc347340d659c13be27ff5dcd66ebe44e6a694224b0f26cba72fc5bb"
   },
   "ownerEnvelopeSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
   "nativeContractId": "r139-cua-boot-identity-v2-20261025",
@@ -15,9 +15,8 @@
     "status": "PREPARED_UNEXECUTED_NEW_OWNER_ENVELOPE_ROOT_RELEASE_REQUIRED",
     "actor": "Internal worker only after Root G0 technical release and original campaign reservation",
     "binaryPinSource": {
-      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-ACCEPTED-BUILD-PINS-ADMISSION.json",
-      "sha256": "bd21d9e97cca7a32f350912ec23c0d53b39ed0b61ced90a435aad7e6b8e9e32b",
-      "dockerField": "pins.tools.docker"
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-V2-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "sha256": "f818a976fc347340d659c13be27ff5dcd66ebe44e6a694224b0f26cba72fc5bb"
     },
     "dockerConfigDir": ".cvf/runtime/r139_boot_identity_reentry_20261025_readiness/docker_config",
     "dockerConfigContent": "{}\n",
@@ -125,13 +124,12 @@
     "processCustody": "Capture original argv/stdout/stderr/start/end/wait/exit. Timeout must request cancellation of only the exact held query child and observe original wait; no new command/retry/host process kill. Unreturned original wait means UNKNOWN/HOLD, not bounded lifetime proof."
   },
   "browserPlan": {
-    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/cua_browser_operation_plan.json",
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_browser_operation_plan_20261025.json",
     "actualCrossAgentOwnershipProved": false
   },
   "remainingBeforeReservation": [
-    "Accepted v2 source and exact two new Python receipts",
-    "Fresh actual source/build/nonce-bound Root/internal/Luna actor ACKs",
-    "Independent complete technical recipe review and normal clean commit before newly authorized original controller invocation"
+    "Complete exact eight canonical templates and recipe",
+    "Independent final technical review and normal clean commit before original v2 controller invocation"
   ],
   "remainingAfterReservedG0": [
     "Exactly five service queries, stop first failure; Root actual receipts acceptance before browser",
@@ -148,17 +146,23 @@
     "reservationPath": ".cvf/runtime/r139_boot_identity_reentry_20261025_readiness/campaign_reservation.json",
     "signalPath": ".cvf/runtime/r139_boot_identity_reentry_20261025_readiness/coordination/root_g0_release.json"
   },
-  "independentReview": "docs/reviews/R139_BOOT_IDENTITY_RECOVERY_REVIEW_2026-10-25.md",
+  "independentReview": "docs/reviews/R139_BOOT_IDENTITY_G0_TECHNICAL_REVIEW_2026-10-25.md",
   "operatorAvailable": true,
-  "operatorAvailabilityRef": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_owner_close_availability_20261025.json",
+  "operatorAvailabilityRef": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_owner_close_availability_20261025.json",
   "inheritedOwnerEnvelopeSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
   "observationCapsRef": {
     "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
     "sha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491"
   },
-  "actualActorMetadataRenewed": false,
+  "actualActorMetadataRenewed": true,
   "bootIdentityRecoveryAdmissionRef": {
     "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json",
     "sha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb"
-  }
+  },
+  "acceptedBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-V2-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "f818a976fc347340d659c13be27ff5dcd66ebe44e6a694224b0f26cba72fc5bb"
+  },
+  "liveTemporalConditionSatisfied": false,
+  "currentClockHoldReceipt": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_prelaunch_clock_compatibility_20261025.json"
 }

@@ -1,6 +1,6 @@
 {
   "kind": "ROOT_R139_BOOT_IDENTITY_V2_PRECLOCK_FACTS",
-  "status": "METADATA_PREPARATION_SOURCE_CHECKS_PENDING",
+  "status": "HOLD_CLOCK_COMPATIBILITY_BEFORE_V2_INVOCATION",
   "preparedAtUTC": "2026-10-25T08:47:44.786143+00:00",
   "nativeContractId": "r139-cua-boot-identity-v2-20261025",
   "campaignNonce": "2dde0dbd452e2164396c094b454fbea4",
@@ -25,8 +25,24 @@
   "providerCalls": 0,
   "metadataObservationUsed": 1,
   "sourceChecksOldSpent": 8,
-  "freshWorkerPythonUsed": 0,
-  "freshRootPythonUsed": 0,
+  "freshWorkerPythonUsed": 1,
+  "freshRootPythonUsed": 1,
   "newTranches": 0,
-  "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION"
+  "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+  "sourceCommit": "72371595cf1e650a5df074fb5b84cf5472576cec",
+  "acceptedBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-V2-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "f818a976fc347340d659c13be27ff5dcd66ebe44e6a694224b0f26cba72fc5bb"
+  },
+  "payloadSha256": "ffbf475dee7a28a785c2ce543ad50cda55819c72debdf8c24e0a05104d599f19",
+  "designSha256": "89d6f20eb1b80e1e5f331876886542fce7046fe010e0d6982b1b6b8f56f29454",
+  "sourceCheckTotalSpent": 10,
+  "sourceChecksRemaining": 0,
+  "updatedAtUTC": "2026-10-25T13:06:12.535428+00:00",
+  "freshGrantSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
+  "inheritedOwnerEnvelopeSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "observationCapsSha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491",
+  "bootProofSha256": "10937592aaa94c4d00a89eb194fa223b9bec372b921be8a247967da235fa44e9",
+  "liveTemporalConditionSatisfied": false,
+  "currentClockHoldReceipt": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_prelaunch_clock_compatibility_20261025.json"
 }

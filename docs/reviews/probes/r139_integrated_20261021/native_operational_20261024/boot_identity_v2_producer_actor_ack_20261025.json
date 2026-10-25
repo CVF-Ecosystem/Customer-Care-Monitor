@@ -1,0 +1,27 @@
+{
+  "kind": "ROOT_REVIEWED_ACTOR_METADATA_ACK",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "actor": "cuaProducer",
+  "collaborationTaskId": "/root/r139_cua_browser_producer",
+  "ready": true,
+  "freshGrantSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
+  "inheritedOwnerEnvelopeSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "observationCapsSha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491",
+  "recoveryOwnerAdmissionSha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb",
+  "sourceCommit": "72371595cf1e650a5df074fb5b84cf5472576cec",
+  "payloadSha256": "ffbf475dee7a28a785c2ce543ad50cda55819c72debdf8c24e0a05104d599f19",
+  "bootProofSha256": "10937592aaa94c4d00a89eb194fa223b9bec372b921be8a247967da235fa44e9",
+  "nativeContractId": "r139-cua-boot-identity-v2-20261025",
+  "campaignNonce": "2dde0dbd452e2164396c094b454fbea4",
+  "acceptedBuildPinsSha256": "f818a976fc347340d659c13be27ff5dcd66ebe44e6a694224b0f26cba72fc5bb",
+  "currentEffectRelease": "NONE_METADATA_ONLY",
+  "currentBrowserCapabilityPass": false,
+  "campaignReserved": false,
+  "effectsObserved": 0,
+  "originalAckReference": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_producer_actor_original_ack_20261025.json",
+    "sha256": "c8a3820babb95bc8eade52d337b50f5d6ab1b4a9f7f2ca375fedf7f46cf71ee2"
+  },
+  "controllerCountQualification": "Original actor zero-controller statement means new v2 invocation only; historical original preclock attempt1/PID24484/exit1 remains preserved.",
+  "bindingQualification": "Actual renewed source/build/nonce metadata availability only; prior intake HOLD retained in original ACK."
+}

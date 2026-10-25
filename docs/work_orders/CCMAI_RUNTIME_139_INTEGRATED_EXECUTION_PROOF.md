@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: REVIEWER_ACCEPTED
+Status: ACTIVE
 Risk: R2
 Worker: Internal Sol G0 service/runtime actor; internal Luna producer/independent observer for browser only
 Reviewer: Root independent source/evidence REVIEWER
@@ -10,9 +10,9 @@ runtimeExecutor: UNASSIGNED_UNTIL_SUPPORTED_ENVIRONMENT_AND_COMMITTED_ADMISSION
 runtimeReviewer: INDEPENDENT_REVIEWER_TO_BE_BOUND_IN_CURRENT_ADMISSION; historical reviews retained
 dispatchKind: INITIAL
 
-## Current boot-identity v2 source review — 2026-10-25
+## Current boot-identity v2 prelaunch clock HOLD — 2026-10-25
 
-CCMAI-RUNTIME-139 boot-identity v2 source components REVIEW_PASS committed 72371595, exact accepted-build pins f818a976. All10source checks spent, original failures/UNKNOWNs retained, Go binary/backend unchanged. Root prepares ONE complete G0 technical recipe with v2 boot proof, fresh actual Root/internal/Luna source/build/nonce ACKs, private raw metadata custody, final independent technical review and clean normal commit before the single newly authorized original v2 preclock invocation. Same unspentcampaign1/1200s/5services/64CUA/API1<=USD1; no fixture/key/provider before actual G0 manual review plus separate Root Runtime Effect Admission. Campaign0/services0/browser0/key0/provider0, no further source checks or repair, no retry/reset/Antigravity/helpertranche/Owner relay; ProductB blocked and Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 HOLD_PRECLOCK_CLOCK_INCOMPATIBLE before any v2 controller invocation: offline source72371595/buildf818 accepted, source10/10checks spent and static technical review passed, but Root pinned-Python existing/current UTC-monotonic offsets vs immutable baseline are -3.8507008s/-3.9758600s, outside reviewed2s. Preserve exact clock receipts and independent HOLD review. Additional v2 invocation0/1, campaign0/1, services0/5, CUA0/64, fixture/key/provider0; original PID24484 exit1 retained separately. Do not launch, mutate system clock, re-pin baseline, loosen contract or add checks/retries under current authority. Continue only with separately evidenced clock compatibility under exact contract, or one separately approved consolidated contract/baseline decision within this same R139/M3-05/M3-08 order. ProductB BLOCKED_PENDING_OPERATIONAL_ADMISSION, Facebook/Zalo OA parked; no new tranche/Antigravity/Owner relay chain.
 
 Authority `CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-G0-TECHNICAL-RELEASE-ADMISSION.json`, independent review `docs/reviews/R139_CUA_G0_TECHNICAL_RELEASE_REVIEW_2026-10-25.md`. Source REVIEW_PASS is inherited for the bounded proof only; DESIGN/SPEC/one existing WORK_ORDER and Owner caps remain accepted. REVIEW_PASS -> PARKED(source settled) -> BUILD(G0 proof preparation) is recorded; no new tranche. Actual effects begin only through Root original committed clock transaction.
 
@@ -24,7 +24,7 @@ The consolidated transition proposal and unchanged original budgets remain bindi
 
 ## Current internal browser transition — 2026-10-24
 
-CCMAI-RUNTIME-139 boot-identity v2 source components REVIEW_PASS committed 72371595, exact accepted-build pins f818a976. All10source checks spent, original failures/UNKNOWNs retained, Go binary/backend unchanged. Root prepares ONE complete G0 technical recipe with v2 boot proof, fresh actual Root/internal/Luna source/build/nonce ACKs, private raw metadata custody, final independent technical review and clean normal commit before the single newly authorized original v2 preclock invocation. Same unspentcampaign1/1200s/5services/64CUA/API1<=USD1; no fixture/key/provider before actual G0 manual review plus separate Root Runtime Effect Admission. Campaign0/services0/browser0/key0/provider0, no further source checks or repair, no retry/reset/Antigravity/helpertranche/Owner relay; ProductB blocked and Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 HOLD_PRECLOCK_CLOCK_INCOMPATIBLE before any v2 controller invocation: offline source72371595/buildf818 accepted, source10/10checks spent and static technical review passed, but Root pinned-Python existing/current UTC-monotonic offsets vs immutable baseline are -3.8507008s/-3.9758600s, outside reviewed2s. Preserve exact clock receipts and independent HOLD review. Additional v2 invocation0/1, campaign0/1, services0/5, CUA0/64, fixture/key/provider0; original PID24484 exit1 retained separately. Do not launch, mutate system clock, re-pin baseline, loosen contract or add checks/retries under current authority. Continue only with separately evidenced clock compatibility under exact contract, or one separately approved consolidated contract/baseline decision within this same R139/M3-05/M3-08 order. ProductB BLOCKED_PENDING_OPERATIONAL_ADMISSION, Facebook/Zalo OA parked; no new tranche/Antigravity/Owner relay chain.
 
 Consolidated proposal: `docs/reviews/R139_INTERNAL_BROWSER_TRANSITION_2026-10-24.md`. Owner worker substitution is already authorized. The superseded unexecuted technical draft below cannot release effects.
 
@@ -34,7 +34,7 @@ Technical authority: `CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-G0-TEC
 
 ## Current accepted source and preclock preparation — 2026-10-24
 
-CCMAI-RUNTIME-139 boot-identity v2 source components REVIEW_PASS committed 72371595, exact accepted-build pins f818a976. All10source checks spent, original failures/UNKNOWNs retained, Go binary/backend unchanged. Root prepares ONE complete G0 technical recipe with v2 boot proof, fresh actual Root/internal/Luna source/build/nonce ACKs, private raw metadata custody, final independent technical review and clean normal commit before the single newly authorized original v2 preclock invocation. Same unspentcampaign1/1200s/5services/64CUA/API1<=USD1; no fixture/key/provider before actual G0 manual review plus separate Root Runtime Effect Admission. Campaign0/services0/browser0/key0/provider0, no further source checks or repair, no retry/reset/Antigravity/helpertranche/Owner relay; ProductB blocked and Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 HOLD_PRECLOCK_CLOCK_INCOMPATIBLE before any v2 controller invocation: offline source72371595/buildf818 accepted, source10/10checks spent and static technical review passed, but Root pinned-Python existing/current UTC-monotonic offsets vs immutable baseline are -3.8507008s/-3.9758600s, outside reviewed2s. Preserve exact clock receipts and independent HOLD review. Additional v2 invocation0/1, campaign0/1, services0/5, CUA0/64, fixture/key/provider0; original PID24484 exit1 retained separately. Do not launch, mutate system clock, re-pin baseline, loosen contract or add checks/retries under current authority. Continue only with separately evidenced clock compatibility under exact contract, or one separately approved consolidated contract/baseline decision within this same R139/M3-05/M3-08 order. ProductB BLOCKED_PENDING_OPERATIONAL_ADMISSION, Facebook/Zalo OA parked; no new tranche/Antigravity/Owner relay chain.
 
 Accepted build pins: `CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-ACCEPTED-BUILD-PINS-ADMISSION.json`. This section supersedes earlier current-stage source instructions below; historical bound sections and spent counters remain unchanged. No runtime admission or live deadline is issued here.
 
@@ -719,3 +719,19 @@ Root rehydrated after admitted discovery. Independent R2 capability/SPEC review 
 ## Consolidated boot-identity repair acknowledgment — 2026-10-25
 
 Independent source review F01-F03 requests explicit new-preclock/source-cap binding, exact signed UTC/monotonic comparison without rounding overrun, and complete adversarial pure fixtures. Root releases ONE admitted consolidated REPAIR_WORKER pass in the same two implementation paths. Old8 checks spent; fresh workerPython0/1 and RootPython0/1; no test/import/checker/OS query or runtime effect released. Source authoring pass is complete, no new authoring pass or Owner relay.
+
+## Boot-identity v2 G0 technical preparation acknowledgment — 2026-10-25
+
+Source72371595/buildf818a976 inherits independent source REVIEW_PASS only, all10checks spent. REVIEW_PASS to PARKED(source settled) to BUILD(G0 technical metadata) uses the same R139 work order and approved package. Root now WORK_ORDER_AUTHOR/planned original-control custodian; source worker no longer edits source; internal Sol and distinct Luna producer/observer provide metadata ACKs before technical seal. Actual G0/host UI primitives remain unproved. No controller/reservation/service/browser/fixture/key/provider is released before complete independent technical review and clean commit; exact old attempt preserved.
+
+
+## Consolidated clock/profile prerequisite decision — 2026-10-26
+
+Owner requested `xử lý đi`. Official Core reconciliation completed with backup and clean public HEAD b8ead4f; latest doctor fails only profile1.2 versus installed1.1. Current clock HOLD remains. Root prepared `docs/reviews/R139_CLOCK_AND_PROFILE_CONSOLIDATED_RECOVERY_PROPOSAL_2026-10-26.md` as one concrete DESIGN decision, not BUILD admission. Existing source10/10spent, new controller/campaign/effects unused. Profile/gate/workflow path class, changed temporal acceptance and proposed two source checks require the consolidated decision; do not split tranches, reset old counters or edit immutable grants. Product B remains BLOCKED_PENDING_OPERATIONAL_ADMISSION.
+
+
+## Owner-admitted stable pin, query-local clock and resumable evidence — 2026-10-26
+
+Latest Owner explicitly agrees stable Core/profile execution pins and directs fixes for clock and quota interruptions. Admission: `CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json` (78ae94c6). This supersedes the unadmitted profile1.2 migration branch; no installed profile/Core/gate/workflow edits. One R139 M3-05/M3-08 order, no helper tranche.
+
+Acceptance: P01 verify public e9ddcbcd/profile1.1 identity/workspace/trusted static controls separately from update availability; C01 v3 exact-identity/query-local2s agreement without a new baseline; R01 durable validated receipts/source bindings/atomic checkpoint and cumulative accounting survive agent quota interruption; R02 inflight uncertainty never replays an external effect and expired campaign never resets its20min deadline. Immutable historical proof and10spentchecks retained. Offline focused verification covers these criteria plus existing supervisor guards; no claim of runtime AI governance. Two Sol workers implement the admitted paths, Root independently reviews and commits. Additional shared v2/v3 controller slot and all product/browser/provider effects remain0 and unreleased until current source/packet review and clean commit. Owner instruction authorizes necessary same-scope offline repairs/checks, with durable intents and results rather than repeated per-check approval or hidden quota resets.
