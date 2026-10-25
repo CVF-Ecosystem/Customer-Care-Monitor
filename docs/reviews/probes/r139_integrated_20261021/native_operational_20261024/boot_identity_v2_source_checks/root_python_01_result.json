@@ -1,0 +1,17 @@
+{
+  "kind": "R139_BOOT_IDENTITY_V2_FOCUSED_PYTHON_CHECK",
+  "actor": "root",
+  "status": "PASS",
+  "attempt": 1,
+  "cap": 1,
+  "originalWaitReturned": true,
+  "exitCode": 0,
+  "designSha256": "89d6f20eb1b80e1e5f331876886542fce7046fe010e0d6982b1b6b8f56f29454",
+  "testSha256": "496a34143ba036b568e211f8e9c07926f20553c1df3d1c74d59fef6be39d0e6c",
+  "stdoutSha256": "5df71407d5d88a0963d5eb5ebee8b75292e1d23d46e56b147295463f51615357",
+  "stderrSha256": "f4e5622523afb1d2886a51ea0488e4f432bda12e5d5ee009f6b1be0ff6eed8df",
+  "stdoutPath": ".cvf/runtime/r139_boot_identity_recovery_20261025/root_python_01/stdout.bin",
+  "stderrPath": ".cvf/runtime/r139_boot_identity_recovery_20261025/root_python_01/stderr.bin",
+  "startedAtUTC": "2026-10-25T12:50:37.436310+00:00",
+  "endedAtUTC": "2026-10-25T12:50:47.757329+00:00"
+}

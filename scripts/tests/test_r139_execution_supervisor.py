@@ -33,6 +33,157 @@ def protected_snapshot(*, status="Up 2 minutes (healthy)", running_for="2 minute
 
 
 class R139SupervisorPureTests(unittest.TestCase):
+    def test_boot_identity_v2_pure_contract_no_process(self):
+        design_root = SOURCE.parents[1] / "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024"
+        def no_process(*args, **kwargs):
+            raise AssertionError("boot identity pure helper attempted a subprocess")
+        with patch.object(subprocess, "Popen", side_effect=no_process), patch.object(
+            subprocess, "run", side_effect=no_process
+        ), patch.object(subprocess, "call", side_effect=no_process), patch.object(
+            subprocess, "check_call", side_effect=no_process
+        ), patch.object(subprocess, "check_output", side_effect=no_process):
+            design = runpy.run_path(str(design_root / "reentry_activation_boot_identity_v2_design.py.txt"),
+                                    run_name="r139_inert_boot_identity_v2_definitions")
+            validate = design["validate_boot_identity_v2"]
+            contract = json.loads((design_root / "boot_identity_v2_contract_20261025.json").read_text(encoding="utf-8"))
+            base = contract["baselineClockFromOriginalIntent"]
+            event = {"logName": "System", "providerName": "Microsoft-Windows-Kernel-General",
+                     "eventId": 12, "recordId": 123456, "machineName": "TEST-HOST",
+                     "timeCreatedUTC": "2026-10-23T05:48:28.0990423Z",
+                     "startTimeUTC": "2026-10-23T05:48:27.5000000Z"}
+            observation = {"schema": "r139.windowsBootIdentityObservation@1",
+                           "observedUTC": "2026-10-25T08:40:24.9665051Z",
+                           "osComputerName": " test-host ",
+                           "computerSystemProductUuid": "12345678-1234-1234-1234-123456789ABC",
+                           "lastBootUTC": "2026-10-23T05:48:27.5037950Z",
+                           "bootEvent": event}
+            canonical = lambda value: json.dumps(value, ensure_ascii=True, sort_keys=True,
+                                                 separators=(",", ":")).encode("utf-8")
+            host_sha = hashlib.sha256(canonical({"osComputerName": "TEST-HOST",
+                "computerSystemProductUuid": observation["computerSystemProductUuid"]})).hexdigest()
+            boot_sha = hashlib.sha256(canonical(event)).hexdigest()
+            stable = "r139-hb2:" + hashlib.sha256((host_sha + "|" + boot_sha).encode("ascii")).hexdigest()
+            proof = {"kind": "ROOT_CURRENT_WINDOWS_BOOT_IDENTITY_PROOF_V2",
+                     "status": "REVIEWED_CAPABILITY_BASELINE", "rootVerifiedReadOnlyOSMetadata": True,
+                     "ownerAdmissionRef": design["BOOT_RECOVERY_REF"],
+                     "contractRef": design["BOOT_CONTRACT_REF"], "hostIdentitySha256": host_sha,
+                     "bootSessionSha256": boot_sha, "hostBootId": stable,
+                     "lastBootUTC": observation["lastBootUTC"],
+                     "bootEventStartUTC": event["startTimeUTC"],
+                     "bootEventCreatedUTC": event["timeCreatedUTC"],
+                     "baselineClock": base, "pythonPath": base["pythonPath"]}
+            parent_start = datetime.fromisoformat(base["startUTC"]) + timedelta(seconds=2)
+            parent = {"startUTC": parent_start.isoformat(timespec="microseconds"),
+                      "startMonotonic": base["startMonotonic"] + 2,
+                      "endUTC": (parent_start + timedelta(seconds=0.5)).isoformat(timespec="microseconds"),
+                      "endMonotonic": base["startMonotonic"] + 2.5}
+            raw = lambda value: canonical(value)
+            self.assertEqual(validate(proof, contract, raw(observation), parent), stable)
+            # The observed 2.743 ms raw CIM variation qualifies only with the
+            # same host and boot-session digests and independent clock bounds.
+            jitter = dict(observation, lastBootUTC="2026-10-23T05:48:27.5010520Z")
+            self.assertEqual(validate(proof, contract, raw(jitter), parent), stable)
+            # Inclusive policy edges are deliberate: 2 s from event start,
+            # 2 s from baseline CIM, and 120 s event creation delay.
+            edge_event = dict(event, timeCreatedUTC="2026-10-23T05:50:27.5000000Z")
+            edge_observation = dict(observation, bootEvent=edge_event,
+                                    lastBootUTC="2026-10-23T05:48:29.5000000Z")
+            edge_boot_sha = hashlib.sha256(canonical(edge_event)).hexdigest()
+            edge_proof = dict(proof, bootSessionSha256=edge_boot_sha,
+                              hostBootId="r139-hb2:" + hashlib.sha256((host_sha + "|" + edge_boot_sha).encode("ascii")).hexdigest(),
+                              bootEventCreatedUTC=edge_event["timeCreatedUTC"])
+            self.assertEqual(validate(edge_proof, contract, raw(edge_observation), parent),
+                             edge_proof["hostBootId"])
+            failures = [
+                (raw(dict(observation, osComputerName="OTHER-HOST")), parent),
+                (raw(dict(observation, bootEvent=dict(event, recordId=123457))), parent),
+                (raw(dict(observation, lastBootUTC="2026-10-23T05:48:29.5000001Z")), parent),
+                (raw(dict(observation, lastBootUTC="2026-10-23T05:48:29.5037951Z")), parent),
+                (raw(dict(observation, observedUTC="2026-10-25T08:40:21.0000000Z")), parent),
+                (raw(dict(observation, lastBootUTC="2026-10-26T05:48:27.5037950Z")), parent),
+                (raw(dict(observation, bootEvent=dict(event, timeCreatedUTC="2026-10-23T05:50:27.5000001Z"))), parent),
+                (raw(dict(observation, bootEvent=dict(event, eventId=True))), parent),
+                (raw(dict(observation, bootEvent=dict(event, recordId=True))), parent),
+                (raw(dict(observation, computerSystemProductUuid="00000000-0000-0000-0000-000000000000")), parent),
+                (raw({k: v for k, v in observation.items() if k != "osComputerName"}), parent),
+                (raw(dict(observation, unknown=True)), parent),
+                (raw(observation).replace(b'"observedUTC":', b'"observedUTC":"2026-10-25T08:40:24.0000000Z","observedUTC":', 1), parent),
+                (raw(observation).replace(b'"eventId":', b'"eventId":12,"eventId":', 1), parent),
+                (raw(dict(observation, bootEvent=dict(event, unknown=True))), parent),
+                (raw(observation), dict(parent, startMonotonic=True)),
+                (raw(observation), dict(parent, endUTC=(parent_start-timedelta(seconds=1)).isoformat(timespec="microseconds"))),
+                (raw(observation), dict(parent, startMonotonic=base["startMonotonic"]+9)),
+            ]
+            for index, (bad_raw, bad_parent) in enumerate(failures):
+                with self.subTest(case=index), self.assertRaises(RuntimeError):
+                    validate(proof, contract, bad_raw, bad_parent)
+            def rebound(candidate):
+                host = {"osComputerName": candidate["osComputerName"].strip().upper(),
+                        "computerSystemProductUuid": candidate["computerSystemProductUuid"].strip().upper()}
+                hs = hashlib.sha256(canonical(host)).hexdigest()
+                bs = hashlib.sha256(canonical(candidate["bootEvent"])).hexdigest()
+                return dict(proof, hostIdentitySha256=hs, bootSessionSha256=bs,
+                    hostBootId="r139-hb2:" + hashlib.sha256((hs+"|"+bs).encode("ascii")).hexdigest(),
+                    lastBootUTC=candidate["lastBootUTC"],
+                    bootEventStartUTC=candidate["bootEvent"]["startTimeUTC"],
+                    bootEventCreatedUTC=candidate["bootEvent"]["timeCreatedUTC"])
+            adversarial = [
+                (dict(observation, observedUTC="2026-10-25T08:40:24.966505Z"), "BOOT_UTC_GRAMMAR"),
+                (dict(observation, observedUTC="2026-10-25T08:40:24.96650511Z"), "BOOT_UTC_GRAMMAR"),
+                (dict(observation, observedUTC="2026-10-25T08:40:24.9665051+01:00"), "BOOT_UTC_GRAMMAR"),
+                (dict(observation, observedUTC="2026-02-30T08:40:24.9665051Z"), "BOOT_UTC_INVALID"),
+                (dict(observation, computerSystemProductUuid="FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF"), "BOOT_HOST_INVALID"),
+                (dict(observation, bootEvent=dict(event, logName="Other")), "BOOT_EVENT_INVALID"),
+                (dict(observation, bootEvent=dict(event, providerName="Other")), "BOOT_EVENT_INVALID"),
+                (dict(observation, bootEvent=dict(event, machineName="OTHER-HOST")), "BOOT_HOST_INVALID"),
+                (dict(observation, bootEvent=dict(event, timeCreatedUTC="2026-10-23T05:48:27.4999999Z")), "BOOT_TIMESTAMP_BOUND"),
+            ]
+            for index, (candidate, branch) in enumerate(adversarial):
+                with self.subTest(adversarial=index), self.assertRaisesRegex(RuntimeError, branch):
+                    validate(rebound(candidate), contract, raw(candidate), parent)
+            for numeric in (float("nan"), float("inf"), float("-inf"), True):
+                with self.subTest(monotonic=numeric), self.assertRaisesRegex(RuntimeError, "BOOT_MONOTONIC_INVALID"):
+                    validate(proof, contract, raw(observation), dict(parent, endMonotonic=numeric))
+            exact_drift = dict(parent, startMonotonic=base["startMonotonic"]+4.0,
+                               endMonotonic=base["startMonotonic"]+4.5)
+            self.assertEqual(validate(proof, contract, raw(observation), exact_drift), stable)
+            just_over = dict(exact_drift, startMonotonic=base["startMonotonic"]+4.00000004,
+                             endMonotonic=base["startMonotonic"]+4.50000004)
+            with self.assertRaisesRegex(RuntimeError, "BOOT_CLOCK_DRIFT"):
+                validate(proof, contract, raw(observation), just_over)
+            end_only_over = dict(exact_drift, endMonotonic=base["startMonotonic"]+4.50000004)
+            with self.assertRaisesRegex(RuntimeError, "BOOT_CLOCK_DRIFT"):
+                validate(proof, contract, raw(observation), end_only_over)
+            long_start = datetime.fromisoformat(base["startUTC"]) + timedelta(seconds=600)
+            long_parent = {"startUTC": long_start.isoformat(timespec="microseconds"),
+                           "startMonotonic": base["startMonotonic"]+600,
+                           "endUTC": (long_start+timedelta(seconds=0.5)).isoformat(timespec="microseconds"),
+                           "endMonotonic": base["startMonotonic"]+600.5}
+            long_observed = dict(observation, observedUTC=(long_start+timedelta(seconds=0.3)).strftime("%Y-%m-%dT%H:%M:%S.%f")+"0Z")
+            self.assertEqual(validate(proof, contract, raw(long_observed), long_parent), stable)
+            with self.assertRaisesRegex(RuntimeError, "BOOT_OBSERVED_OUTSIDE_PARENT"):
+                validate(proof, contract, raw(observation), long_parent)
+            edge_over = dict(edge_observation, bootEvent=dict(edge_event,
+                              timeCreatedUTC="2026-10-23T05:50:27.5000001Z"))
+            edge_over_sha = hashlib.sha256(canonical(edge_over["bootEvent"])).hexdigest()
+            edge_over_proof = dict(edge_proof, bootSessionSha256=edge_over_sha,
+                hostBootId="r139-hb2:" + hashlib.sha256((host_sha + "|" + edge_over_sha).encode("ascii")).hexdigest(),
+                bootEventCreatedUTC=edge_over["bootEvent"]["timeCreatedUTC"])
+            with self.assertRaises(RuntimeError):
+                validate(edge_over_proof, contract, raw(edge_over), parent)
+            future_event = dict(event, startTimeUTC="2026-10-25T08:40:24.9665052Z",
+                                timeCreatedUTC="2026-10-25T08:40:24.9665052Z")
+            future_observation = dict(observation, bootEvent=future_event,
+                                      lastBootUTC=future_event["startTimeUTC"])
+            future_boot_sha = hashlib.sha256(canonical(future_event)).hexdigest()
+            future_proof = dict(proof, bootSessionSha256=future_boot_sha,
+                hostBootId="r139-hb2:" + hashlib.sha256((host_sha + "|" + future_boot_sha).encode("ascii")).hexdigest(),
+                lastBootUTC=future_observation["lastBootUTC"],
+                bootEventStartUTC=future_event["startTimeUTC"],
+                bootEventCreatedUTC=future_event["timeCreatedUTC"])
+            with self.assertRaises(RuntimeError):
+                validate(future_proof, contract, raw(future_observation), parent)
+
     def test_cua_identity_and_origin_no_io(self):
         identity = {"nativeContractId": "r139-cua", "trancheId": "CCMAI-RUNTIME-139",
                     "campaignNonce": "nonce-cua", "browserId": "2", "tabId": "tab-123",

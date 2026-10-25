@@ -37299,6 +37299,76 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_boot_identity_capability_20261025.json",
       "status": "ACTIVE",
       "description": "One admitted local OS capability observation and reviewed v2 host/event identity specification; raw identifiers private, no runtime proof."
+    },
+    {
+      "id": "r139-boot-source-c3e9a071cad0d980",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_source_checks/root_python_01_reservation.json",
+      "status": "ACTIVE",
+      "description": "Bounded R139 boot-identity v2 source/check evidence or unexecuted operational draft; original outcomes/caps retained, no runtime acceptance."
+    },
+    {
+      "id": "r139-boot-source-b988bd0a5d481629",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_source_checks/root_python_01_result.json",
+      "status": "ACTIVE",
+      "description": "Bounded R139 boot-identity v2 source/check evidence or unexecuted operational draft; original outcomes/caps retained, no runtime acceptance."
+    },
+    {
+      "id": "r139-boot-source-9110df08c9aa988c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_source_checks/root_source_acceptance.json",
+      "status": "ACTIVE",
+      "description": "Bounded R139 boot-identity v2 source/check evidence or unexecuted operational draft; original outcomes/caps retained, no runtime acceptance."
+    },
+    {
+      "id": "r139-boot-source-f35dbc0c68a8423d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_source_checks/worker_python_01_reservation.json",
+      "status": "ACTIVE",
+      "description": "Bounded R139 boot-identity v2 source/check evidence or unexecuted operational draft; original outcomes/caps retained, no runtime acceptance."
+    },
+    {
+      "id": "r139-boot-source-f62ffbd81774b901",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_source_checks/worker_python_01_result.json",
+      "status": "ACTIVE",
+      "description": "Bounded R139 boot-identity v2 source/check evidence or unexecuted operational draft; original outcomes/caps retained, no runtime acceptance."
+    },
+    {
+      "id": "r139-boot-source-ebb5864b50a2f8fe",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v2_design.py.txt",
+      "status": "ACTIVE",
+      "description": "Bounded R139 boot-identity v2 source/check evidence or unexecuted operational draft; original outcomes/caps retained, no runtime acceptance."
+    },
+    {
+      "id": "r139-boot-source-682a48172ebc3009",
+      "family": "continuity",
+      "path": "docs/reviews/R139_BOOT_IDENTITY_SOURCE_WORKER_RETURN_2026-10-25.md",
+      "status": "ACTIVE",
+      "description": "Bounded R139 boot-identity v2 source/check evidence or unexecuted operational draft; original outcomes/caps retained, no runtime acceptance."
+    },
+    {
+      "id": "r139-boot-source-3a17b3aab7d3c719",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_preclock_facts_20261025.json",
+      "status": "ACTIVE",
+      "description": "Bounded R139 boot-identity v2 source/check evidence or unexecuted operational draft; original outcomes/caps retained, no runtime acceptance."
+    },
+    {
+      "id": "r139-boot-source-76b78a79ef8d2440",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_preclock_handoff_packet_20261025.json",
+      "status": "ACTIVE",
+      "description": "Bounded R139 boot-identity v2 source/check evidence or unexecuted operational draft; original outcomes/caps retained, no runtime acceptance."
+    },
+    {
+      "id": "r139-boot-source-f9af1d4f8fbd37c3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_runtime_admission_draft_20261025.json",
+      "status": "ACTIVE",
+      "description": "Bounded R139 boot-identity v2 source/check evidence or unexecuted operational draft; original outcomes/caps retained, no runtime acceptance."
     }
   ]
 }

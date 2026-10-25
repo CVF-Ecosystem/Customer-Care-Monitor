@@ -1,0 +1,164 @@
+{
+  "kind": "R139_INTERNAL_CUA_PRECLOCK_HANDOFF_PACKET",
+  "status": "DRAFT_PENDING_BOOT_V2_SOURCE_ACCEPTANCE_AND_ACTUAL_G0",
+  "sourceCommit": "38db7e90d2344fcc2f5a6c14cf6406f192d7a1d9",
+  "acceptedBuildPins": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "bd21d9e97cca7a32f350912ec23c0d53b39ed0b61ced90a435aad7e6b8e9e32b"
+  },
+  "ownerEnvelopeSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
+  "nativeContractId": "r139-cua-boot-identity-v2-20261025",
+  "campaignNonce": "2dde0dbd452e2164396c094b454fbea4",
+  "runtimeDraft": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_runtime_admission_draft_20261025.json",
+  "recipeDraft": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_activation_recipe_20261025.json",
+  "fiveQueryPlan": {
+    "status": "PREPARED_UNEXECUTED_NEW_OWNER_ENVELOPE_ROOT_RELEASE_REQUIRED",
+    "actor": "Internal worker only after Root G0 technical release and original campaign reservation",
+    "binaryPinSource": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "sha256": "bd21d9e97cca7a32f350912ec23c0d53b39ed0b61ced90a435aad7e6b8e9e32b",
+      "dockerField": "pins.tools.docker"
+    },
+    "dockerConfigDir": ".cvf/runtime/r139_boot_identity_reentry_20261025_readiness/docker_config",
+    "dockerConfigContent": "{}\n",
+    "configCustody": "Root metadata initialized exclusive empty config before clock; no Docker/port query until original reservation+fresh Root signal. No ambient credentials.",
+    "queries": [
+      {
+        "id": "cached-image",
+        "argv": [
+          "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_boot_identity_reentry_20261025_readiness/docker_config",
+          "image",
+          "inspect",
+          "--format",
+          "{{json .Id}}",
+          "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+        "comparison": "Decode stdout as exactly one JSON string (only surrounding whitespace); require decoded string exactly equals expected; no extra stdout content. Original stderr/exit retained."
+      },
+      {
+        "id": "container-name",
+        "argv": [
+          "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_boot_identity_reentry_20261025_readiness/docker_config",
+          "ps",
+          "-a",
+          "--filter",
+          "name=ccmai-r139-r4-20261023",
+          "--format",
+          "{{json .Names}}"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "EMPTY"
+      },
+      {
+        "id": "network-name",
+        "argv": [
+          "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_boot_identity_reentry_20261025_readiness/docker_config",
+          "network",
+          "ls",
+          "--filter",
+          "name=ccmai-r139-r4-20261023",
+          "--format",
+          "{{json .Name}}"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "EMPTY"
+      },
+      {
+        "id": "volume-name",
+        "argv": [
+          "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_boot_identity_reentry_20261025_readiness/docker_config",
+          "volume",
+          "ls",
+          "--filter",
+          "name=ccmai-r139-r4-20261023",
+          "--format",
+          "{{json .Name}}"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "EMPTY"
+      },
+      {
+        "id": "vite-port",
+        "argv": [
+          "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+          "-NoLogo",
+          "-NoProfile",
+          "-NonInteractive",
+          "-Command",
+          "$ErrorActionPreference='Stop'; $r139Listeners = @(Get-NetTCPConnection -State Listen -ErrorAction Stop | Where-Object { $_.LocalPort -eq 3519 } | Select-Object -Property LocalAddress,LocalPort,OwningProcess); [pscustomobject]@{ port = 3519; listeners = $r139Listeners } | ConvertTo-Json -Depth 4 -Compress; exit 0"
+        ],
+        "timeoutSeconds": 5,
+        "cap": 1,
+        "expected": {
+          "port": 3519,
+          "listeners": []
+        }
+      }
+    ],
+    "automaticRetry": 0,
+    "used": 0,
+    "vitePort": 3519,
+    "failure": "Any error/timeout/nonzero/ambiguous or occupied result HOLD, campaign consumed; no mutation/cleanup of ambient resources or replacement namespace/port",
+    "clock": "Reserve before first query or browser invocation; same original1200seconds includes all5queries and G0/G1/G2/cleanup",
+    "processCustody": "Capture original argv/stdout/stderr/start/end/wait/exit. Timeout must request cancellation of only the exact held query child and observe original wait; no new command/retry/host process kill. Unreturned original wait means UNKNOWN/HOLD, not bounded lifetime proof."
+  },
+  "browserPlan": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/cua_browser_operation_plan.json",
+    "actualCrossAgentOwnershipProved": false
+  },
+  "remainingBeforeReservation": [
+    "Accepted v2 source and exact two new Python receipts",
+    "Fresh actual source/build/nonce-bound Root/internal/Luna actor ACKs",
+    "Independent complete technical recipe review and normal clean commit before newly authorized original controller invocation"
+  ],
+  "remainingAfterReservedG0": [
+    "Exactly five service queries, stop first failure; Root actual receipts acceptance before browser",
+    "G0 producer and distinct observer one-page ownership/capture/currentURL provenance and actual supported locator/confirm docs",
+    "Separate Root Runtime Effect Admission before fixture/key/provider; no retries/extra page/stack"
+  ],
+  "campaignReserved": false,
+  "providerCalls": 0,
+  "currentEffectRelease": "NONE_PRECLOCK_METADATA_ONLY",
+  "coordinationInitialization": {
+    "root": ".cvf/runtime/r139_boot_identity_reentry_20261025_readiness/coordination",
+    "ownerSha256": "477f597ffa21956c3395aaa7b30adb97dbb5fd2330dc6fe31cb3a5a06c626e56",
+    "preclockOnlyEntry": "owner.json",
+    "reservationPath": ".cvf/runtime/r139_boot_identity_reentry_20261025_readiness/campaign_reservation.json",
+    "signalPath": ".cvf/runtime/r139_boot_identity_reentry_20261025_readiness/coordination/root_g0_release.json"
+  },
+  "independentReview": "docs/reviews/R139_BOOT_IDENTITY_RECOVERY_REVIEW_2026-10-25.md",
+  "operatorAvailable": true,
+  "operatorAvailabilityRef": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_owner_close_availability_20261025.json",
+  "inheritedOwnerEnvelopeSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "observationCapsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
+    "sha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491"
+  },
+  "actualActorMetadataRenewed": false,
+  "bootIdentityRecoveryAdmissionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json",
+    "sha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "kind": "ROOT_REVIEWED_R139_BOOT_IDENTITY_SOURCE_ACCEPTANCE",
+  "status": "ACCEPTED_COMPONENTS_PENDING_MATERIAL_COMMIT_BINDING",
+  "designSha256": "89d6f20eb1b80e1e5f331876886542fce7046fe010e0d6982b1b6b8f56f29454",
+  "testSha256": "496a34143ba036b568e211f8e9c07926f20553c1df3d1c74d59fef6be39d0e6c",
+  "independentReviewRef": {
+    "path": "docs/reviews/R139_BOOT_IDENTITY_RECOVERY_REVIEW_2026-10-25.md",
+    "sha256": "55a84ad99d6c1aae05fa117ae4f841f0e2bcc10ad9145b6a3cb9b1ad3294fff8"
+  },
+  "checkReceiptRefs": {
+    "worker": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_source_checks/worker_python_01_result.json",
+      "sha256": "c2d583c703996d8bc3158709aa27994dc622964cc91e02601b14b37545bb8bab"
+    },
+    "root": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_source_checks/root_python_01_result.json",
+      "sha256": "1701484d7f51fa9e6dc071c8930ccacccb3e9b5fedf7b43823dd1ab2af29815a"
+    }
+  },
+  "checkAccounting": {
+    "oldSpent": 8,
+    "newSpent": 2,
+    "totalSpent": 10,
+    "cap": 10,
+    "remaining": 0
+  },
+  "workerActual": "PID20756/45tests/originalexit0",
+  "rootActual": "PID2416/45tests/originalexit0",
+  "workerOrchestrationQualification": "Post-write summary-format AttributeError retained; not an orchestration-wide PASS; child/result durable and no rerun.",
+  "goBuildsAdded": 0,
+  "sourceBuildCommit": null,
+  "campaignReserved": false,
+  "serviceQueries": 0,
+  "browserMethods": 0,
+  "keyReads": 0,
+  "providerCalls": 0,
+  "claimBoundary": "Offline source component/parser/guard checks only; original failures preserved, no actual G0/runtime/AI governance/hosted CI/product acceptance."
+}

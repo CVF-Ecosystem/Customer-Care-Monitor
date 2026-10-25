@@ -1,0 +1,24 @@
+{
+  "kind": "R139_BOOT_IDENTITY_V2_FOCUSED_PYTHON_RESERVATION",
+  "actor": "root",
+  "attempt": 1,
+  "cap": 1,
+  "status": "RESERVED_BEFORE_POPEN",
+  "reservedAtUTC": "2026-10-25T12:50:37.387375+00:00",
+  "ownerAdmissionSha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb",
+  "designSha256": "89d6f20eb1b80e1e5f331876886542fce7046fe010e0d6982b1b6b8f56f29454",
+  "testSha256": "496a34143ba036b568e211f8e9c07926f20553c1df3d1c74d59fef6be39d0e6c",
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-B",
+    "scripts/tests/test_r139_execution_supervisor.py"
+  ],
+  "cwd": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+  "timeoutSeconds": 120,
+  "rawRoot": ".cvf/runtime/r139_boot_identity_recovery_20261025/root_python_01",
+  "noRetry": true,
+  "oldSpent": 8,
+  "workerUsed": 1,
+  "rootUsed": 1,
+  "totalCap": 10
+}
