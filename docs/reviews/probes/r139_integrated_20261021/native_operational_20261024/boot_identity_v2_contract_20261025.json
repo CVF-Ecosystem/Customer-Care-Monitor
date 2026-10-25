@@ -1,0 +1,79 @@
+{
+  "kind": "R139_WINDOWS_BOOT_IDENTITY_V2_CONTRACT",
+  "status": "REVIEWED_ACCEPTED_SPEC",
+  "ownerAdmissionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json",
+    "sha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb"
+  },
+  "observationSchema": "r139.windowsBootIdentityObservation@1",
+  "actualTopLevelKeys": [
+    "schema",
+    "observedUTC",
+    "osComputerName",
+    "computerSystemProductUuid",
+    "lastBootUTC",
+    "bootEvent"
+  ],
+  "eventKeys": [
+    "logName",
+    "providerName",
+    "eventId",
+    "recordId",
+    "machineName",
+    "timeCreatedUTC",
+    "startTimeUTC"
+  ],
+  "hostCanonicalFields": {
+    "osComputerName": "strip().upper(); ASCII computer name regex [A-Z0-9][A-Z0-9._-]{0,254}",
+    "computerSystemProductUuid": "strip().upper(); UUID 8-4-4-4-12 hex; deny all-zero/all-F UUID"
+  },
+  "bootCanonicalFields": {
+    "logName": "exact System",
+    "providerName": "exact Microsoft-Windows-Kernel-General",
+    "eventId": "integer exactly12, reject bool",
+    "recordId": "positive integer, reject bool",
+    "machineName": "strip().upper(); exact canonical OS computer name",
+    "timeCreatedUTC": "original strict UTC timestamp string",
+    "startTimeUTC": "original strict UTC timestamp string"
+  },
+  "digestSerialization": "json.dumps(object, ensure_ascii=True, sort_keys=True, separators=(\",\", \":\")).encode(\"utf-8\") then sha256 lowercase hex; host object exactly two hostCanonicalFields; boot object exactly seven bootCanonicalFields",
+  "stableHostBootId": "r139-hb2: + sha256((hostIdentitySha256+\"|\"+bootSessionSha256).encode(\"ascii\")).hexdigest(); explicitly derived caller token, not an OS/native session ID",
+  "strictUtcTimestampGrammar": {
+    "rawObservationFields": [
+      "observedUTC",
+      "lastBootUTC",
+      "bootEvent.timeCreatedUTC",
+      "bootEvent.startTimeUTC"
+    ],
+    "rawObservationGrammar": "YYYY-MM-DDTHH:MM:SS.fffffffZ or YYYY-MM-DDTHH:MM:SS.fffffff+00:00 exactly7 fractional digits",
+    "parentFields": [
+      "baselineClock.startUTC",
+      "baselineClock.endUTC",
+      "actualQueryParent.startUTC",
+      "actualQueryParent.endUTC"
+    ],
+    "parentGrammar": "YYYY-MM-DDTHH:MM:SS.ffffff+00:00 exactly6 fractional digits; future parent captures use datetime.now(timezone.utc).isoformat(timespec=\"microseconds\")",
+    "commonRules": "Real calendar date; UTC only; reject naive/nonzero offset, duplicate JSON keys/missing/unknown fields or types"
+  },
+  "bounds": {
+    "maxAbsoluteCimBootVsEventStartSeconds": 2,
+    "minEventCreatedVsStartSeconds": 0,
+    "maxEventCreatedVsStartSeconds": 120,
+    "maxAbsoluteCurrentVsBaselineCimBootSeconds": 2,
+    "maxAbsoluteParentUtcVsMonotonicElapsedDriftSeconds": 2,
+    "queryObservedUtcSlackSeconds": 2,
+    "queryTimeoutSeconds": 5
+  },
+  "clockRule": "Baseline startUTC/startMonotonic are exact Root original query intent. On future query record parent startUTC/startMonotonic then endUTC/endMonotonic, require nonnegative monotonic interval <=5s for successful observation; both parent endpoint UTC elapsed since baselineStartUTC must be nonnegative and differ from corresponding monotonic elapsed since baselineStartMonotonic by <=2s. UTC and monotonic must not reverse across actual query. actual observedUTC must lie in [parentStartUTC-2s,parentEndUTC+2s]. CIM/event start/created must not be after observedUTC. Baseline host and full boot digests must exactly match actual; independently require all raw timestamp bounds above. No raw re-pin, stale-output replay, fallback or extra query.",
+  "baselineClockFromOriginalIntent": {
+    "startUTC": "2026-10-25T08:40:22.170780+00:00",
+    "startMonotonic": 183127.5810706,
+    "endUTC": "2026-10-25T08:40:23.027286+00:00",
+    "endMonotonic": 183128.4375683,
+    "pythonPath": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "monotonicSource": "python.time.monotonic"
+  },
+  "privacy": "Actual host name/UUID/event machine name remain ignored locally; committed proof contains hashes and timestamps only. Later controller raw child logs also remain private; do not copy raw output into repository.",
+  "failure": "HOLD before reservation on changed/missing/placeholder/malformed/duplicate/ambiguous host/boot identity, bad timestamps, clock reversal/drift, timeout/nonzero/unknown original wait. No fallback/retry.",
+  "claimBoundary": "Single observed capability, not future stability or cryptographic attestation. Cannot exclude cloned/copied identities, tampered event logs or compromised OS. Small timestamp/clock changes within explicit policy bounds remain qualified. No AI governance proof."
+}

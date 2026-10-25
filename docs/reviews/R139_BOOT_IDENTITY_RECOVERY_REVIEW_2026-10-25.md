@@ -19,11 +19,27 @@ The admission preserves original controller attempt 1 and its `CURRENT_HOST_BOOT
 
 ## Later review checkpoints
 
-- Actual one-query receipt: PENDING.
-- Explicit identity contract and source candidate: PENDING.
+- Actual one-query receipt: REVIEWED_BOUNDED_CAPABILITY_PRESENT_CONTRACT_OPEN.
+- Explicit identity contract: REVIEW_PASS_BOUNDED_DESIGN_INPUT; source candidate: PENDING.
 - Worker focused Python attempt (new cap 1): NOT_RUN.
 - Root focused Python attempt (new cap 1): NOT_RUN.
 - Revised clean technical packet and original preclock attempt: NOT_RUN.
+
+### Actual single-observation capability review
+
+The one approved observation ran after committed admission `fdcbe4e3…`. Original PID 15200 returned `WAIT_RETURNED`, exit 0, in 0.8564977 monotonic seconds, below the five-second cap; attempt 1/1 is consumed. The private original intent and return files are `.cvf/runtime/r139_boot_identity_recovery_20261025/discovery/{intent.json,original_return.json}`. Original stdout is 481 bytes at SHA-256 `6227fa58b7e0adfe1274cc9a5aadbd5b347be54199f488d075509c144f436d1f`; stderr is empty at SHA-256 `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`. I read the raw output privately and did not print the computer name or UUID. The public redacted receipt is `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_boot_identity_capability_20261025.json` at SHA-256 `284f47404e8f8e40c5ff1f42bebaf2276dc8c1390914e56b67521a476e90346e`.
+
+The raw JSON has the declared schema and exact expected top-level/event fields. The OS name is present and equals event MachineName; the product UUID matches UUID shape and is neither all-zero nor all-`f`; event source is System / `Microsoft-Windows-Kernel-General` ID 12 with a positive RecordId and one XML `StartTime`. The event start precedes the current CIM last-boot value by 0.003795 seconds. Event creation follows its start by 0.599042 seconds. The raw `observedUTC` falls within the original command interval. The receipt reports no campaign reservation, service query, CUA method, key read, or provider attempt.
+
+**Capability disposition:** the candidate fields are available and internally coherent in this one observation, so an explicit fail-closed design may be written and independently reviewed. They are not yet proven stable on a later query or authenticated against a cloned/compromised host. Source BUILD and both Python checks remain on HOLD pending the exact identity contract. That contract must define canonical byte serialization for the host and boot-session digests, which raw fields are included, strict UTC parsing and signed-difference limits, baseline/current UTC-versus-monotonic comparison using the private intent's `startedMonotonic`, and behavior for missing/changed/malformed event or host data. The proposed 2-second bounds are design candidates, not current acceptance. A changed full event/host digest, ambiguous event, unavailable log, clock anomaly, or inconsistent observations must HOLD without tolerance-only fallback or retry. No second OS observation is authorized by the consumed 1/1 cap.
+
+### Independent SPEC disposition before source BUILD
+
+I reviewed the corrected `boot_identity_v2_contract_20261025.json` SHA-256 `a443b37704248fbdce95967a003736d6d19e6359de806f35d7412ccec4d7ce3f` and `boot_identity_v2_proof_20261025.json` SHA-256 `8ef2509c8397b1f2b705f8b6461fc167a164dc444c5ec2f15d36088c1d5b6784`. I independently recomputed the two-field host digest, seven-field event digest, and explicitly derived `r139-hb2:` token from the private original output; all match the proof. The raw host name satisfies the stated ASCII grammar, the canonical event MachineName equals it, and eventId/recordId are actual integers. No raw identifier is copied here.
+
+The first SPEC draft left a real grammar conflict: raw query fields had seven fractional digits, while Python parent `startUTC/endUTC` receipts had six. Root corrected the contract by naming the four raw observation fields and four parent clock fields separately, requiring strict UTC seven-digit `Z`/`+00:00` raw grammar and six-digit `+00:00` parent grammar. The observed values satisfy their respective grammars; the baseline parent end monotonic value equals the original intent start monotonic plus the retained elapsed receipt. The contract now fixes exact JSON serialization, all fields entering each digest, strict types/duplicate/unknown-field rejection, timestamp/calendar parsing, signed 2-second secondary timing bounds, event creation window, and baseline-to-future parent UTC/monotonic drift calculation. The full host and boot digests must match exactly before any timestamp variation can qualify. Missing, changed, ambiguous, malformed, delayed, or inconsistent data HOLD without fallback or retry.
+
+**SPEC verdict: REVIEW_PASS_BOUNDED_DESIGN_INPUT.** These exact contract/proof bytes may be mechanically marked accepted and committed with the existing R139 work order before bounded source BUILD. The observed one-query sample supports field availability and internal consistency only. Future stability, host authenticity, and an actual preclock PASS remain unproved; a clone, copied identifiers, tampered event log, or compromised OS is outside this proof. The worker may author only the newly admitted successor activation design and focused fixture path, within one authoring/one consolidated repair pass. Neither focused Python invocation is released until I review the source candidate and the Root records the exact attempt against the new 1+1 cap. No Go/source/product/browser/provider effect or old controller retry follows from this SPEC review.
 
 ## Root continuity preparation note
 

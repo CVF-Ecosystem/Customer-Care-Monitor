@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: BLOCKED_WITH_REASON
+Status: ACTIVE
 Risk: R2
 Worker: Internal Sol G0 service/runtime actor; internal Luna producer/independent observer for browser only
 Reviewer: Root independent source/evidence REVIEWER
@@ -12,7 +12,7 @@ dispatchKind: INITIAL
 
 ## Current internal CUA G0 preclock HOLD — 2026-10-25
 
-CCMAI-RUNTIME-139 Owner-approved boot-identity recovery REVIEW/read-only discovery: commit supplemental admission then ONE exact local OS metadata observation (5s/no retry/private raw identifiers), independently assess capability and fix explicit identity contract before bounded source BUILD. New source checks workerPython1+RootPython1 only (8 spent, total ceiling10), no Go build/test; one authoring and one consolidated repair. Conditional ONE additional original preclock invocation only after independent source/packet review and clean commit. Same unspent1 campaign/1200s/5servicequeries/64CUA/oneAPI<=USD1, actual G0 plus Root Runtime Effect Admission before fixture/key/provider. Preserve original PID24484 exit1/2.743ms mismatch, all old evidence/unknowns, no helper tranche or per-stage Owner relay; ProductB blocked, Facebook/Zalo OA parked, Antigravity withdrawn.
+CCMAI-RUNTIME-139 bounded boot-identity source BUILD under committed recovery admission: OS discovery1/1 consumed PASS_BOUNDED_CAPABILITY, exact host/event/UTC-monotonic SPEC independently accepted. Sol authors ONLY successor activation boot-identity v2 design and existing focused Python fixture; one authoring/one consolidated repair, no source check until independent candidate review and Root reservation. New workerPython1+RootPython1 (old8spent, lineagecap10), zeroGo/production/supervisor edits. Root owns pins/admissions/continuity/commits; source and technical packet review plus clean commit required before ONE newly authorized original preclock invocation. Same unspentcampaign1/1200s/5services/64CUA/API1<=USD1, actualG0 plus separate Root Runtime Effect Admission before fixture/key/provider; no oldcontrollerretry, reset, Antigravity, helpertranche or per-stage Ownerrelay. ProductB blocked and Facebook/Zalo OA parked.
 
 Authority `CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-G0-TECHNICAL-RELEASE-ADMISSION.json`, independent review `docs/reviews/R139_CUA_G0_TECHNICAL_RELEASE_REVIEW_2026-10-25.md`. Source REVIEW_PASS is inherited for the bounded proof only; DESIGN/SPEC/one existing WORK_ORDER and Owner caps remain accepted. REVIEW_PASS -> PARKED(source settled) -> BUILD(G0 proof preparation) is recorded; no new tranche. Actual effects begin only through Root original committed clock transaction.
 
@@ -24,7 +24,7 @@ The consolidated transition proposal and unchanged original budgets remain bindi
 
 ## Current internal browser transition — 2026-10-24
 
-CCMAI-RUNTIME-139 Owner-approved boot-identity recovery REVIEW/read-only discovery: commit supplemental admission then ONE exact local OS metadata observation (5s/no retry/private raw identifiers), independently assess capability and fix explicit identity contract before bounded source BUILD. New source checks workerPython1+RootPython1 only (8 spent, total ceiling10), no Go build/test; one authoring and one consolidated repair. Conditional ONE additional original preclock invocation only after independent source/packet review and clean commit. Same unspent1 campaign/1200s/5servicequeries/64CUA/oneAPI<=USD1, actual G0 plus Root Runtime Effect Admission before fixture/key/provider. Preserve original PID24484 exit1/2.743ms mismatch, all old evidence/unknowns, no helper tranche or per-stage Owner relay; ProductB blocked, Facebook/Zalo OA parked, Antigravity withdrawn.
+CCMAI-RUNTIME-139 bounded boot-identity source BUILD under committed recovery admission: OS discovery1/1 consumed PASS_BOUNDED_CAPABILITY, exact host/event/UTC-monotonic SPEC independently accepted. Sol authors ONLY successor activation boot-identity v2 design and existing focused Python fixture; one authoring/one consolidated repair, no source check until independent candidate review and Root reservation. New workerPython1+RootPython1 (old8spent, lineagecap10), zeroGo/production/supervisor edits. Root owns pins/admissions/continuity/commits; source and technical packet review plus clean commit required before ONE newly authorized original preclock invocation. Same unspentcampaign1/1200s/5services/64CUA/API1<=USD1, actualG0 plus separate Root Runtime Effect Admission before fixture/key/provider; no oldcontrollerretry, reset, Antigravity, helpertranche or per-stage Ownerrelay. ProductB blocked and Facebook/Zalo OA parked.
 
 Consolidated proposal: `docs/reviews/R139_INTERNAL_BROWSER_TRANSITION_2026-10-24.md`. Owner worker substitution is already authorized. The superseded unexecuted technical draft below cannot release effects.
 
@@ -34,7 +34,7 @@ Technical authority: `CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-G0-TEC
 
 ## Current accepted source and preclock preparation — 2026-10-24
 
-CCMAI-RUNTIME-139 Owner-approved boot-identity recovery REVIEW/read-only discovery: commit supplemental admission then ONE exact local OS metadata observation (5s/no retry/private raw identifiers), independently assess capability and fix explicit identity contract before bounded source BUILD. New source checks workerPython1+RootPython1 only (8 spent, total ceiling10), no Go build/test; one authoring and one consolidated repair. Conditional ONE additional original preclock invocation only after independent source/packet review and clean commit. Same unspent1 campaign/1200s/5servicequeries/64CUA/oneAPI<=USD1, actual G0 plus Root Runtime Effect Admission before fixture/key/provider. Preserve original PID24484 exit1/2.743ms mismatch, all old evidence/unknowns, no helper tranche or per-stage Owner relay; ProductB blocked, Facebook/Zalo OA parked, Antigravity withdrawn.
+CCMAI-RUNTIME-139 bounded boot-identity source BUILD under committed recovery admission: OS discovery1/1 consumed PASS_BOUNDED_CAPABILITY, exact host/event/UTC-monotonic SPEC independently accepted. Sol authors ONLY successor activation boot-identity v2 design and existing focused Python fixture; one authoring/one consolidated repair, no source check until independent candidate review and Root reservation. New workerPython1+RootPython1 (old8spent, lineagecap10), zeroGo/production/supervisor edits. Root owns pins/admissions/continuity/commits; source and technical packet review plus clean commit required before ONE newly authorized original preclock invocation. Same unspentcampaign1/1200s/5services/64CUA/API1<=USD1, actualG0 plus separate Root Runtime Effect Admission before fixture/key/provider; no oldcontrollerretry, reset, Antigravity, helpertranche or per-stage Ownerrelay. ProductB blocked and Facebook/Zalo OA parked.
 
 Accepted build pins: `CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-ACCEPTED-BUILD-PINS-ADMISSION.json`. This section supersedes earlier current-stage source instructions below; historical bound sections and spent counters remain unchanged. No runtime admission or live deadline is issued here.
 
@@ -711,3 +711,7 @@ Resume acknowledgment2026-10-25: Root re-read canonical continuity; doctorPASS27
 ## Owner-approved boot-identity recovery acknowledgment — 2026-10-25
 
 Owner approval `request_user_input_async/call_b2e1db511d4e40cdbc735532106bf0fc/item0`: Duyệt gói phục hồi R139. Same single order. Supplemental committed authority before ONE bounded local OS observation; source BUILD/checks/relaunch remain conditional on the reviewed contract. Old8checks/originalexit1/campaign0 preserved; no per-stage Owner relay.
+
+## Bounded boot-identity source BUILD acknowledgment — 2026-10-25
+
+Root rehydrated after admitted discovery. Independent R2 capability/SPEC review accepted exact host/event digests and separate seven-digit raw/six-digit parent UTC grammar, with explicit conservative timing/clock rules and limits. Source worker /root/r139_cua_recipe_worker receives one authoring pass in existing test path and successor code-as-data controller only. Original design/receipts/grants and source8spent stay intact. Both new focused Python checks remain unreleased until candidate review and exact reservation; no Go/import/prototype/formatter/build or runtime/browser/service/key/provider effect. Same single Owner package; Root independent reviewer and sole commit steward.

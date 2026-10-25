@@ -2,7 +2,7 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
 
 ## Mandatory standing Owner directive — apply without reminders
 
@@ -11,13 +11,13 @@ Memory class: POINTER_RECORD
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: BUILD
+- Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
 
-CCMAI-RUNTIME-139 Owner-approved boot-identity recovery REVIEW/read-only discovery: commit supplemental admission then ONE exact local OS metadata observation (5s/no retry/private raw identifiers), independently assess capability and fix explicit identity contract before bounded source BUILD. New source checks workerPython1+RootPython1 only (8 spent, total ceiling10), no Go build/test; one authoring and one consolidated repair. Conditional ONE additional original preclock invocation only after independent source/packet review and clean commit. Same unspent1 campaign/1200s/5servicequeries/64CUA/oneAPI<=USD1, actual G0 plus Root Runtime Effect Admission before fixture/key/provider. Preserve original PID24484 exit1/2.743ms mismatch, all old evidence/unknowns, no helper tranche or per-stage Owner relay; ProductB blocked, Facebook/Zalo OA parked, Antigravity withdrawn.
+CCMAI-RUNTIME-139 bounded boot-identity source BUILD under committed recovery admission: OS discovery1/1 consumed PASS_BOUNDED_CAPABILITY, exact host/event/UTC-monotonic SPEC independently accepted. Sol authors ONLY successor activation boot-identity v2 design and existing focused Python fixture; one authoring/one consolidated repair, no source check until independent candidate review and Root reservation. New workerPython1+RootPython1 (old8spent, lineagecap10), zeroGo/production/supervisor edits. Root owns pins/admissions/continuity/commits; source and technical packet review plus clean commit required before ONE newly authorized original preclock invocation. Same unspentcampaign1/1200s/5services/64CUA/API1<=USD1, actualG0 plus separate Root Runtime Effect Admission before fixture/key/provider; no oldcontrollerretry, reset, Antigravity, helpertranche or per-stage Ownerrelay. ProductB blocked and Facebook/Zalo OA parked.
 
-Root ORCHESTRATOR / WORK_ORDER_AUTHOR / COMMIT_STEWARD; Sol implementation conditional on capability review, independent Sol technical reviewer; Luna browser unreleased
+Root ORCHESTRATOR / independent source REVIEWER / COMMIT_STEWARD; Sol implementation worker /root/r139_cua_recipe_worker, independent Sol reviewer /root/r139_cua_preclock_reviewer; Luna browser unreleased
 
 Owner reiteration2026-10-23: no fragmented tranches; follow roadmap. Root keeps ONE existing R139 outcome-based order across G0/G1/G2/G3; no helper/metadata prompt chain or repeated Owner relay. Complete consolidated readiness/admission before redispatch. Historical substep instructions are completed/spent context; current HOLD_TRANSFER remains. Directive recorded in existing order/continuity, no new learning artifact or tranche. Effectiveness must be judged by product acceptance.
 
@@ -1114,3 +1114,7 @@ Resume acknowledgment2026-10-25: Root re-read canonical continuity; doctorPASS27
 ## Owner-approved boot-identity recovery acknowledgment — 2026-10-25
 
 Owner approval `request_user_input_async/call_b2e1db511d4e40cdbc735532106bf0fc/item0`: Duyệt gói phục hồi R139. Same single order. Supplemental committed authority before ONE bounded local OS observation; source BUILD/checks/relaunch remain conditional on the reviewed contract. Old8checks/originalexit1/campaign0 preserved; no per-stage Owner relay.
+
+## Bounded boot-identity source BUILD acknowledgment — 2026-10-25
+
+Root rehydrated after admitted discovery. Independent R2 capability/SPEC review accepted exact host/event digests and separate seven-digit raw/six-digit parent UTC grammar, with explicit conservative timing/clock rules and limits. Source worker /root/r139_cua_recipe_worker receives one authoring pass in existing test path and successor code-as-data controller only. Original design/receipts/grants and source8spent stay intact. Both new focused Python checks remain unreleased until candidate review and exact reservation; no Go/import/prototype/formatter/build or runtime/browser/service/key/provider effect. Same single Owner package; Root independent reviewer and sole commit steward.

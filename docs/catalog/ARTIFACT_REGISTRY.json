@@ -37278,6 +37278,27 @@
       "path": "docs/reviews/R139_BOOT_IDENTITY_RECOVERY_REVIEW_2026-10-25.md",
       "status": "ACTIVE",
       "description": "Independent R2 review of admitted local metadata observation; later source/capability/relaunch not yet accepted."
+    },
+    {
+      "id": "r139-boot-v2-64c147fdd2cf5ad5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_contract_20261025.json",
+      "status": "ACTIVE",
+      "description": "One admitted local OS capability observation and reviewed v2 host/event identity specification; raw identifiers private, no runtime proof."
+    },
+    {
+      "id": "r139-boot-v2-69b4c57611aa011f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_proof_20261025.json",
+      "status": "ACTIVE",
+      "description": "One admitted local OS capability observation and reviewed v2 host/event identity specification; raw identifiers private, no runtime proof."
+    },
+    {
+      "id": "r139-boot-v2-d5fc90da2d755085",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_boot_identity_capability_20261025.json",
+      "status": "ACTIVE",
+      "description": "One admitted local OS capability observation and reviewed v2 host/event identity specification; raw identifiers private, no runtime proof."
     }
   ]
 }

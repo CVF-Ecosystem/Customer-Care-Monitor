@@ -1,0 +1,35 @@
+{
+  "kind": "ROOT_CURRENT_WINDOWS_BOOT_IDENTITY_PROOF_V2",
+  "status": "REVIEWED_CAPABILITY_BASELINE",
+  "rootVerifiedReadOnlyOSMetadata": true,
+  "pythonPath": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+  "hostIdentitySha256": "d2e9ebde607dd6b5ae94ca60a7c3fd8075afa9f012ac19546205cbbc19483b3f",
+  "bootSessionSha256": "197b63a8ee813ad0e2752c6e86571399aaf2d199be31dfa667057414fc3bd845",
+  "hostBootId": "r139-hb2:c6b81cbdce3472f97a047a667bcfbfcf5fff39e7a8a39546e385b4b1d28b3d79",
+  "lastBootUTC": "2026-10-23T05:48:27.5037950Z",
+  "bootEventStartUTC": "2026-10-23T05:48:27.5000000Z",
+  "bootEventCreatedUTC": "2026-10-23T05:48:28.0990423Z",
+  "observedUTC": "2026-10-25T08:40:22.9665051Z",
+  "baselineClock": {
+    "startUTC": "2026-10-25T08:40:22.170780+00:00",
+    "startMonotonic": 183127.5810706,
+    "endUTC": "2026-10-25T08:40:23.027286+00:00",
+    "endMonotonic": 183128.4375683,
+    "pythonPath": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "monotonicSource": "python.time.monotonic"
+  },
+  "ownerAdmissionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json",
+    "sha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb"
+  },
+  "contractRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_contract_20261025.json",
+    "sha256": "4c90053543f1d21532fdb5c6c7487e04c7a4ee5b3369c6f24034cde285eb9e7c"
+  },
+  "capabilityReceiptRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_boot_identity_capability_20261025.json",
+    "sha256": "284f47404e8f8e40c5ff1f42bebaf2276dc8c1390914e56b67521a476e90346e"
+  },
+  "rawIdentifiersPrivate": true,
+  "claimBoundary": "Single observed capability, not future stability or cryptographic attestation. Cannot exclude cloned/copied identities, tampered event logs or compromised OS. Small timestamp/clock changes within explicit policy bounds remain qualified. No AI governance proof."
+}

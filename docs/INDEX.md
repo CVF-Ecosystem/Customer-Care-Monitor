@@ -4459,6 +4459,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Immutable integrated G0/G1/G2 source-preparation seed; runtime/provider authority absent.: `CVF_SESSION/authority/CCMAI-RUNTIME-139.json`
 - Independent R2 review of admitted local metadata observation; later source/capability/relaunch not yet accepted.: `docs/reviews/R139_BOOT_IDENTITY_RECOVERY_REVIEW_2026-10-25.md`
 - Owner-approved one consolidated R139 boot identity discovery/repair/check/relaunch envelope; no runtime proof.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json`
+- One admitted local OS capability observation and reviewed v2 host/event identity specification; raw identifiers private, no runtime proof.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_contract_20261025.json`
+- One admitted local OS capability observation and reviewed v2 host/event identity specification; raw identifiers private, no runtime proof.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_proof_20261025.json`
+- One admitted local OS capability observation and reviewed v2 host/event identity specification; raw identifiers private, no runtime proof.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_boot_identity_capability_20261025.json`
 - Root transcript of browser URL-policy denial and partial owned tab cleanup; no control/capture proof.: `docs/reviews/probes/r139_integrated_20261021/browser_capability_outcome.json`
 - Sole pureUI capability diagnostic reserved before effect; consumed, no reset.: `docs/reviews/probes/r139_integrated_20261021/browser_capability_reservation.json`
 - Explicit Owner check-only literal-argv continuation; no source/recompile/runtime/API; original failure preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-CHECK-ONLY-ADMISSION.json`

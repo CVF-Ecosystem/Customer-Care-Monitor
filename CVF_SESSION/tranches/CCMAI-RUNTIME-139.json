@@ -83,17 +83,17 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "CHANGES_REQUIRED",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "BLOCKED_WITH_REASON",
+  "workOrderStatus": "ACTIVE",
   "buildCommit": null,
   "reviewEvidence": [
     "docs/reviews/R139_INTERNAL_CUA_CONSOLIDATED_SOURCE_REVIEW_2026-10-24.md",
     "docs/reviews/R139_CUA_G0_TECHNICAL_RELEASE_REVIEW_2026-10-25.md",
     "docs/reviews/R139_CUA_PRECLOCK_HOLD_REVIEW_2026-10-25.md"
   ],
-  "disposition": "CCMAI-RUNTIME-139 Owner-approved boot-identity recovery REVIEW/read-only discovery: commit supplemental admission then ONE exact local OS metadata observation (5s/no retry/private raw identifiers), independently assess capability and fix explicit identity contract before bounded source BUILD. New source checks workerPython1+RootPython1 only (8 spent, total ceiling10), no Go build/test; one authoring and one consolidated repair. Conditional ONE additional original preclock invocation only after independent source/packet review and clean commit. Same unspent1 campaign/1200s/5servicequeries/64CUA/oneAPI<=USD1, actual G0 plus Root Runtime Effect Admission before fixture/key/provider. Preserve original PID24484 exit1/2.743ms mismatch, all old evidence/unknowns, no helper tranche or per-stage Owner relay; ProductB blocked, Facebook/Zalo OA parked, Antigravity withdrawn.",
+  "disposition": "CCMAI-RUNTIME-139 bounded boot-identity source BUILD under committed recovery admission: OS discovery1/1 consumed PASS_BOUNDED_CAPABILITY, exact host/event/UTC-monotonic SPEC independently accepted. Sol authors ONLY successor activation boot-identity v2 design and existing focused Python fixture; one authoring/one consolidated repair, no source check until independent candidate review and Root reservation. New workerPython1+RootPython1 (old8spent, lineagecap10), zeroGo/production/supervisor edits. Root owns pins/admissions/continuity/commits; source and technical packet review plus clean commit required before ONE newly authorized original preclock invocation. Same unspentcampaign1/1200s/5services/64CUA/API1<=USD1, actualG0 plus separate Root Runtime Effect Admission before fixture/key/provider; no oldcontrollerretry, reset, Antigravity, helpertranche or per-stage Ownerrelay. ProductB blocked and Facebook/Zalo OA parked.",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -141,7 +141,8 @@
     "PARKED",
     "BUILD",
     "REVIEW_PENDING",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "actualUse": {
     "status": "HOLD_MANUAL_HOLD_PROVIDER_OUTCOME_UNKNOWN",
@@ -1083,8 +1084,8 @@
     "admissionPath": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json",
     "admissionSha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb",
     "ownerReply": "Duyệt gói phục hồi R139",
-    "metadataObservationUsed": 0,
-    "authoringPassesUsed": 0,
+    "metadataObservationUsed": 1,
+    "authoringPassesUsed": 1,
     "repairPassesUsed": 0,
     "workerPythonUsed": 0,
     "rootPythonUsed": 0,
@@ -1093,6 +1094,13 @@
     "serviceQueries": 0,
     "browserMethods": 0,
     "keyReads": 0,
-    "providerCalls": 0
+    "providerCalls": 0,
+    "metadataObservationResult": "EXIT0_WAIT_RETURNED_CAPABILITY_PRESENT",
+    "capabilityReceipt": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_boot_identity_capability_20261025.json",
+    "specPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_contract_20261025.json",
+    "specSha256": "4c90053543f1d21532fdb5c6c7487e04c7a4ee5b3369c6f24034cde285eb9e7c",
+    "proofPath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_proof_20261025.json",
+    "proofSha256": "10937592aaa94c4d00a89eb194fa223b9bec372b921be8a247967da235fa44e9",
+    "sourceChecksReleased": false
   }
 }
