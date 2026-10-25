@@ -3,7 +3,7 @@
   "activePhase": "REVIEW",
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 CUA source REVIEW_PENDING materialcommit: correctedPython44PASS/GoCompilePASS/RootpureGo13PASSexit0noskips, retainedWorkerPythonFAIL(OSfixture)consumed; old4+new4=8of8no softwarechecksremain. Root independentlyaccepts current6pins/binaryd1861e44sourcecomponents and commitsmaterial then successoracceptedbuildpins. BinaryexecutedONLY13puregroups, integratedproductNOTRUN. NextsameorderG0technicalpreparation binds actualLuna producer/observer/internalruntime/Root clockactors beforeone1200s campaign/5servicequeries/onepage/64CUAmethods/oneproductAPI<=USD1; actualownedtablocator/confirm/independentaccessUNPROVENandmustHOLDbeforefixture/key/providerifunsupported. Currentcampaign0/services0/browser0/key0/provider0/noclock; approved0ee+fa7+0efunchanged,Antigravitywithdrawn,ProductB BLOCKED_PENDING_OPERATIONAL_ADMISSION,FBZaloOAparked,no helpertranche/reset/reapproval.",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 CUA source REVIEW_PASS only: material38db7e90 and successoracceptedbuildpin bind correctedPython44/compile/13pureGoPASS, retainedWorkerFAIL,all8of8checksconsumed,no rerun. Root now prepares SAMEorder G0technicalrelease with actualLuna producer/observer/internalruntime/Rootheldclock actors, currentboot/freshpaths/64methodledger/threeOwnergrantpins; Source/binary accepted doesNOTprovebrowserownership/DOMlocator/ConfirmDialog. Before fixture/key/provider actualG0two-agent exacttab/nonce/currentURL/captures/originalreturns mustPASS orHOLD. Onefresh1200s campaign/5readonlyservicequeries/onepage/64CUAmethods/oneactualproductAPI<=USD1 remainsconditional,notreserved. Currentcampaign0/services0/browser0/key0/provider0/noclock,Antigravitywithdrawn,ProductB BLOCKED_PENDING_OPERATIONAL_ADMISSION,FBZaloOAparked,no helpertranche/newcap/reapproval.",
   "activeRole": "Root independent SOURCE REVIEWER / COMMIT_STEWARD; internal Sol worker handover complete, Luna producer/observer standby metadata only",
   "updatedAt": "2026-10-24",
   "schemaVersion": "1.0",
@@ -1359,7 +1359,7 @@
     }
   },
   "x-r139InternalCuaSourceRepair": {
-    "status": "SOURCE_COMPONENTS_ACCEPTED_PENDING_MATERIAL_COMMIT",
+    "status": "REVIEW_PASS_SOURCE_COMPONENTS_ONLY",
     "consolidatedReview": "docs/reviews/R139_INTERNAL_CUA_CONSOLIDATED_SOURCE_REVIEW_2026-10-24.md",
     "observationCapsDraft": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
     "authoringPassesUsed": 1,
@@ -1389,6 +1389,8 @@
     "rootPythonDisposition": "PASS_44_TESTS",
     "workerCompileDisposition": "PASS_COMPILED_NOT_EXECUTED",
     "rootGoDisposition": "PASS_13_PURE_GROUPS_NO_SKIP",
-    "sourceAcceptanceReceipt": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/cua_root_source_acceptance.json"
+    "sourceAcceptanceReceipt": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/cua_root_source_acceptance.json",
+    "sourceBuildCommit": "38db7e90d2344fcc2f5a6c14cf6406f192d7a1d9",
+    "acceptedBuildPins": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-ACCEPTED-BUILD-PINS-ADMISSION.json"
   }
 }

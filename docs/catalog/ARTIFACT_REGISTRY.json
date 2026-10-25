@@ -36753,6 +36753,13 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/cua_worker_python_01_failure.json",
       "status": "ACTIVE",
       "description": "R139 CUA source evidence: current corrected44Python/compile/13pureGo PASS; workerPython fixture FAIL retained,8of8consumed,no runtime/AI governance proof."
+    },
+    {
+      "id": "r139-cua-accepted-build-pins-20261025",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Root accepted CUA source38db7e90/binaryd186, correctedPython44+compile+pureGo13PASS with retainedWorkerFAIL and8of8checks consumed; no runtime/browser/AI governance proof."
     }
   ]
 }

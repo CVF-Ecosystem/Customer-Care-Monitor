@@ -4275,7 +4275,7 @@
     "sourceBuildDispatched": true
   },
   "x-r139InternalCuaSourceRepair": {
-    "status": "SOURCE_COMPONENTS_ACCEPTED_PENDING_MATERIAL_COMMIT",
+    "status": "REVIEW_PASS_SOURCE_COMPONENTS_ONLY",
     "consolidatedReview": "docs/reviews/R139_INTERNAL_CUA_CONSOLIDATED_SOURCE_REVIEW_2026-10-24.md",
     "observationCapsDraft": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
     "authoringPassesUsed": 1,
@@ -4296,6 +4296,8 @@
     "readonlyCapOwnerApproved": true,
     "resumed20261025": true,
     "checkDisposition": "WorkerPythonFAIL_retained_RootPythonPASS44_WorkerCompilePASS_RootGo_unspent",
-    "rootGoDisposition": "PASS_13_PURE_GROUPS_NO_SKIP"
+    "rootGoDisposition": "PASS_13_PURE_GROUPS_NO_SKIP",
+    "sourceBuildCommit": "38db7e90d2344fcc2f5a6c14cf6406f192d7a1d9",
+    "acceptedBuildPins": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-ACCEPTED-BUILD-PINS-ADMISSION.json"
   }
 }
