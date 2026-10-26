@@ -1,0 +1,20 @@
+{
+  "kind": "ROOT_ORIGINAL_CONTROL_POPEN_CUSTODY_V3",
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-B",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_v3_preclock_20261026\\activation_controller.py",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_activation_recipe_20261026.json",
+    "4f7fbff98aebfe8626f2e6b5883e439b377f164feceb6e9fbbea20bbef15bfd1",
+    "632b7ef6931a2c772e5c104009dc43fafc1bdd92"
+  ],
+  "cwd": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+  "createdAtUTC": "2026-10-26T10:12:05.070141+00:00",
+  "noRetry": true,
+  "sharedFutureControllerAdditionalCap": 1,
+  "sharedFutureControllerAdditionalUsedAtIntent": 1,
+  "historicalPid24484Exit1Retained": true,
+  "v2ReleaseSupersededDisabled": true,
+  "v3GrantSha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f",
+  "designSha256": "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d"
+}

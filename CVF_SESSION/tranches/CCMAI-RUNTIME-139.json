@@ -83,10 +83,10 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
   "buildCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
   "reviewEvidence": [
     "docs/reviews/R139_INTERNAL_CUA_CONSOLIDATED_SOURCE_REVIEW_2026-10-24.md",
@@ -100,7 +100,7 @@
     "docs/reviews/R139_PINNED_RESUME_CONSOLIDATED_SOURCE_REVIEW_2026-10-26.md",
     "docs/reviews/R139_V3_ACTIVATION_ENV_SOURCE_REVIEW_2026-10-26.md"
   ],
-  "disposition": "V3 technical packet finalization before original clock/reservation; no effect worker released.",
+  "disposition": "HOLD_COORD_OWNER_PRECLOCK; one future controller consumed, no reservation; consolidated recovery decision pending Owner additional invocation.",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -164,7 +164,9 @@
     "REVIEW_PENDING",
     "REVIEW_PASS",
     "PARKED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "actualUse": {
     "status": "HOLD_MANUAL_HOLD_PROVIDER_OUTCOME_UNKNOWN",
@@ -1222,19 +1224,31 @@
     "additionalSourceChecksNeeded": 0
   },
   "x-r139V3OperationalTechnical20261026": {
-    "status": "PENDING_INDEPENDENT_TECHNICAL_REVIEW",
+    "status": "HOLD_COORD_OWNER_BEFORE_RESERVATION",
     "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
     "acceptedBuildSha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b",
     "campaignNonce": "319839d1bdabc006390d02cf9c7c773b",
     "nativeContractId": "r139-cua-boot-identity-v3-20261026",
-    "sharedFutureControllerUsed": 0,
+    "sharedFutureControllerUsed": 1,
+    "sharedFutureControllerCap": 1,
     "campaignUsed": 0,
+    "campaignCap": 1,
+    "originalControllerPid": 23500,
+    "originalWaitReturned": true,
+    "exitCode": 1,
+    "reservationExists": false,
+    "rootSignalExists": false,
     "serviceQueries": 0,
     "cuaMethods": 0,
     "keyReads": 0,
     "providerCalls": 0,
-    "internalSetupSeconds": 180,
+    "fixtureStarts": 0,
+    "sourceChecksTotalSpent": 16,
+    "retryAuthorized": false,
+    "runtimeEffectsReleased": false,
+    "evidence": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/root_hold_receipt.json",
+    "review": "docs/reviews/R139_V3_COORD_OWNER_HOLD_AND_RECOVERY_2026-10-26.md",
     "canonicalTemplatesPending": true,
-    "runtimeEffectsReleased": false
+    "oldTechnicalRecipeConsumedNotReusable": true
   }
 }

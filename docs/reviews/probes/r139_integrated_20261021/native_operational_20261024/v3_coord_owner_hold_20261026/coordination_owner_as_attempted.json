@@ -1,0 +1,10 @@
+{
+  "kind": "R139_ROOT_PRECLOCK_COORDINATION_OWNER",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "nativeContractId": "r139-cua-boot-identity-v3-20261026",
+  "nonce": "319839d1bdabc006390d02cf9c7c773b",
+  "owner": "Root original-control custodian",
+  "sourceCommit": "b330f70b7e760ffee1113d57abc7133c725c57cd",
+  "acceptedBuildSha256": "3366eb41379c68419b235e5295817dafa74215a94dd5bcc8b4e323a6dfc215c2",
+  "currentlyReserved": false
+}

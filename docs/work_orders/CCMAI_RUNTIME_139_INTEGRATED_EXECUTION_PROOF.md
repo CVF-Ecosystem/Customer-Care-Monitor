@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 Worker: Internal Sol G0 service/runtime actor; internal Luna producer/independent observer for browser only
 Reviewer: Root independent source/evidence REVIEWER
@@ -757,3 +757,10 @@ Activationenvironment materialaccepted: source7ef30823/buildad348196, source-onl
 ## V3 final-source operational technical dispatch — 2026-10-26
 
 Acceptedsource7ef30823/buildad348196,16checksretained; currentnonce319839d1bdabc006390d02cf9c7c773b/nativeContractId r139-cua-boot-identity-v3-20261026. Roottechnicalauthority `CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-G0-TECHNICAL-RELEASE-ADMISSION.json` remainsdraftuntilindependentreview/mechanicalseal/cleancommit. OneRoot-heldoriginalv3controller/sharedfuturecap1, before all5servicequeries/oneowned-tabG0. ActualRootG0proofreview+RuntimeEffectAdmission precedefixture/key/provider; no source testsduringcampaign. Currentdrafts/ACKs/template/protectedhashes mustallmatchfinalsource, oldoneshistorical. Root preservesOperatorstandingexact-ownedclosefallback; actualclose/finalinventoryneverinferredfromavailability. Whole1200/+1020 unchanged/internalsetup180.
+
+
+## R139 v3 actual preclock HOLD — 2026-10-26
+
+CCMAI-RUNTIME-139 HOLD_COORD_OWNER_BEFORE_RESERVATION: original controller PID23500 returned exit1; shared future controller used1/cap1, campaign0/cap1. Preserve all original receipts and source16 checks. Root has prepared one consolidated corrected-owner/fresh-path recovery decision in docs/reviews/R139_V3_COORD_OWNER_HOLD_AND_RECOVERY_2026-10-26.md. No controller retry or service/browser/fixture/key/provider effect is authorized; an explicit Owner decision for one additional original preclock invocation (cumulative cap2, used1 retained) is required before a new technical dispatch. Keep the existing single R139 order and M3-05/M3-08; fixed e9/profile1.1, no Core fetch/update, no Antigravity or helper tranche. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; Facebook/Zalo OA parked.
+
+Owner payload was pinned but missing freshGrantSha256/rootExclusive and retained old source/build; Root and independent metadata review missed this ignored-file schema. Original controller23500 exit1 and all30 child waits are retained (one optional Git config miss exit1 is expected); actual boot-query child026 exit0, then COORD_OWNER. No reservation or service/browser/runtime effect. New recovery is a concrete proposal only; no retry or allowance reset.

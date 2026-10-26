@@ -37817,6 +37817,62 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_observer_resumed_availability_20261026.json",
       "status": "ACTIVE",
       "description": "Root-recorded actual replacement actor collaboration availability; no native capability or runtime effect claimed."
+    },
+    {
+      "id": "r139-v3-hold-3a6e849d2a2bf4",
+      "family": "continuity",
+      "path": "docs/reviews/R139_V3_COORD_OWNER_HOLD_AND_RECOVERY_2026-10-26.md",
+      "status": "ACTIVE",
+      "description": "R139 original preclock COORD_OWNER HOLD evidence or consolidated recovery proposal; shared controller1/1 spent, campaign0/1, no execution authority."
+    },
+    {
+      "id": "r139-v3-hold-c56047c94a4481",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/consolidated_recovery_decision.json",
+      "status": "ACTIVE",
+      "description": "R139 original preclock COORD_OWNER HOLD evidence or consolidated recovery proposal; shared controller1/1 spent, campaign0/1, no execution authority."
+    },
+    {
+      "id": "r139-v3-hold-784699c87c280c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/coordination_owner_as_attempted.json",
+      "status": "ACTIVE",
+      "description": "R139 original preclock COORD_OWNER HOLD evidence or consolidated recovery proposal; shared controller1/1 spent, campaign0/1, no execution authority."
+    },
+    {
+      "id": "r139-v3-hold-034ed9460effdb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/corrected_owner_proposal.json",
+      "status": "ACTIVE",
+      "description": "R139 original preclock COORD_OWNER HOLD evidence or consolidated recovery proposal; shared controller1/1 spent, campaign0/1, no execution authority."
+    },
+    {
+      "id": "r139-v3-hold-fcaca9eef7de84",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/intent.json",
+      "status": "ACTIVE",
+      "description": "R139 original preclock COORD_OWNER HOLD evidence or consolidated recovery proposal; shared controller1/1 spent, campaign0/1, no execution authority."
+    },
+    {
+      "id": "r139-v3-hold-8bec8ef3bac8d9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/original_wait_exit.json",
+      "status": "ACTIVE",
+      "description": "R139 original preclock COORD_OWNER HOLD evidence or consolidated recovery proposal; shared controller1/1 spent, campaign0/1, no execution authority."
+    },
+    {
+      "id": "r139-v3-hold-96f056d3b9585d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/root_hold_receipt.json",
+      "status": "ACTIVE",
+      "description": "R139 original preclock COORD_OWNER HOLD evidence or consolidated recovery proposal; shared controller1/1 spent, campaign0/1, no execution authority."
+    },
+    {
+      "id": "r139-v3-hold-5b86fdba6b294b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/started.json",
+      "status": "ACTIVE",
+      "description": "R139 original preclock COORD_OWNER HOLD evidence or consolidated recovery proposal; shared controller1/1 spent, campaign0/1, no execution authority."
     }
   ]
 }

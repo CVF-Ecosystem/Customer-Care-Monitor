@@ -1,0 +1,57 @@
+{
+  "kind": "R139_CONSOLIDATED_PRECLOCK_RECOVERY_DECISION_PACKET",
+  "status": "PROPOSED_NOT_ADMITTED",
+  "sameWorkOrder": "CCMAI-RUNTIME-139",
+  "roadmap": [
+    "M3-05",
+    "M3-08"
+  ],
+  "sourceUnchanged": "7ef30823746d72e935607c0bebf6ab306099eb48",
+  "sourceChecksRetained": 16,
+  "newSourceTestsPlanned": 0,
+  "ownerDecisionRequired": "One additional original preclock controller invocation: cumulative shared future cap1 to2, used1 retained. No increase or reset to campaign or other effect allowances.",
+  "additionalOriginalControllerInvocations": 1,
+  "cumulativeControllerUsed": 1,
+  "proposedCumulativeControllerCap": 2,
+  "originalBootQueryInsideNewControllerMax": 1,
+  "campaignUsed": 0,
+  "campaignCap": 1,
+  "campaignSeconds": 1200,
+  "cleanupCutoffSeconds": 1020,
+  "internalSetupSeconds": 180,
+  "serviceQueries": 5,
+  "cuaMethods": 64,
+  "cuaStageCaps": [
+    8,
+    4,
+    48,
+    4
+  ],
+  "ownedPages": 1,
+  "physicalProviderCalls": 1,
+  "maximumUSD": 1,
+  "newNonce": "4f37f37b37fa5295611c84b63d1d9910",
+  "freshProposedPaths": {
+    "controllerRoot": ".cvf/runtime/r139_v3_coord_recovery_20261026",
+    "readinessRoot": ".cvf/runtime/r139_v3_coord_recovery_20261026_readiness",
+    "childLogRoot": ".cvf/runtime/r139_v3_coord_recovery_20261026_activation_logs",
+    "recorderRoot": ".cvf/runtime/r139_v3_coord_recovery_20261026_recorder"
+  },
+  "correctedOwnerProposalRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/corrected_owner_proposal.json",
+    "sha256": "39c81812f00a0093ed3c4646c6b2015434a6e3683459f5eace5efcef6a62b695"
+  },
+  "requiredBeforeInvocation": [
+    "Actual generated owner JSON required fields, exact grant/nonce/source/build/hash and exclusive ownership verified read-only BEFORE controller extraction or OS identity query",
+    "New Root wrapper binds distinct approved supplement and cumulative old original exit receipt; one exclusive invocation only",
+    "Rebind actual actors and all dependent refs, regenerate exact8templates/currentoldhashes after HOLD state, protectedrefs and section hashes",
+    "Independent consolidated technical review; normal pinned7/profile6 gate pass; clean exact-byte commit",
+    "Root original Popen/wait/exit custody; actual reservation+signal; exact5queries before native G0",
+    "Actual Root G0 review plus separate Runtime Effect Admission before fixture/key/provider"
+  ],
+  "noRetry": true,
+  "preserveAllOriginalFailedReceipts": true,
+  "noAntigravity": true,
+  "noHelperTranche": true,
+  "runtimeExecutableNow": false
+}

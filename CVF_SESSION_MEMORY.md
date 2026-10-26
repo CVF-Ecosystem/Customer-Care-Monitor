@@ -2,7 +2,7 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
 
 ## Mandatory standing Owner directive — apply without reminders
 
@@ -15,13 +15,13 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
 
-CCMAI-RUNTIME-139 v3 operational technical dispatch BUILD before clock: source7ef30823/buildad348196 accepted,16sourcechecks retained/no new checks. Nonce319839d1bdabc006390d02cf9c7c773b, currentRoot/internal/Lunaproducer/observer metadata ACKs rebound to source, capability unproved/effects0. Root finalizes exacteightcanonicaltemplates/protectedrefs and independenttechnicalreview, then mechanicalseal/normalcleancommit beforeONEoriginalRoot-heldv3controller. V2disabled/sharedfuturecontroller1unused; original20min/+1020cleanup/query5/drift2/caps unchanged, internalsetup180/pinnedPS5 matchedwriter-checker. Root release after reservation is5exactservicequeries thenowned-tabG0; actualRootG0review+separateRuntimeEffectAdmission beforefixture/key/provider. No extra page/inventory/retry/sourcechecks or implicit quota reset; usefixedpublice9/profile1.1 pinnedpreflight, no latestdoctor/fetch. SameR139/M3-05/M3-08/nohelpertranche/Antigravity/Ownerrelay; ProductB blocked/Facebook-ZaloOA parked.
+CCMAI-RUNTIME-139 HOLD_COORD_OWNER_BEFORE_RESERVATION: original controller PID23500 returned exit1; shared future controller used1/cap1, campaign0/cap1. Preserve all original receipts and source16 checks. Root has prepared one consolidated corrected-owner/fresh-path recovery decision in docs/reviews/R139_V3_COORD_OWNER_HOLD_AND_RECOVERY_2026-10-26.md. No controller retry or service/browser/fixture/key/provider effect is authorized; an explicit Owner decision for one additional original preclock invocation (cumulative cap2, used1 retained) is required before a new technical dispatch. Keep the existing single R139 order and M3-05/M3-08; fixed e9/profile1.1, no Core fetch/update, no Antigravity or helper tranche. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; Facebook/Zalo OA parked.
 
-Root ORCHESTRATOR / technical metadata author / original-control custodian / COMMIT_STEWARD; independent technical reviewer required, all effect workers unreleased
+Root ORCHESTRATOR / failure REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; workers unreleased, effect allowance unchanged
 
 Owner reiteration2026-10-23: no fragmented tranches; follow roadmap. Root keeps ONE existing R139 outcome-based order across G0/G1/G2/G3; no helper/metadata prompt chain or repeated Owner relay. Complete consolidated readiness/admission before redispatch. Historical substep instructions and prior HOLD_TRANSFER are completed/spent context; the Current Truth instruction above governs this continuation. Directive recorded in existing order/continuity, no new learning artifact or tranche. Effectiveness must be judged by product acceptance.
 
@@ -1130,3 +1130,10 @@ Independent source review F01-F03 requests explicit new-preclock/source-cap bind
 ## Boot-identity v2 G0 technical preparation acknowledgment — 2026-10-25
 
 Source72371595/buildf818a976 inherits independent source REVIEW_PASS only, all10checks spent. REVIEW_PASS to PARKED(source settled) to BUILD(G0 technical metadata) uses the same R139 work order and approved package. Root now WORK_ORDER_AUTHOR/planned original-control custodian; source worker no longer edits source; internal Sol and distinct Luna producer/observer provide metadata ACKs before technical seal. Actual G0/host UI primitives remain unproved. No controller/reservation/service/browser/fixture/key/provider is released before complete independent technical review and clean commit; exact old attempt preserved.
+
+
+## R139 v3 actual preclock HOLD — 2026-10-26
+
+CCMAI-RUNTIME-139 HOLD_COORD_OWNER_BEFORE_RESERVATION: original controller PID23500 returned exit1; shared future controller used1/cap1, campaign0/cap1. Preserve all original receipts and source16 checks. Root has prepared one consolidated corrected-owner/fresh-path recovery decision in docs/reviews/R139_V3_COORD_OWNER_HOLD_AND_RECOVERY_2026-10-26.md. No controller retry or service/browser/fixture/key/provider effect is authorized; an explicit Owner decision for one additional original preclock invocation (cumulative cap2, used1 retained) is required before a new technical dispatch. Keep the existing single R139 order and M3-05/M3-08; fixed e9/profile1.1, no Core fetch/update, no Antigravity or helper tranche. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; Facebook/Zalo OA parked.
+
+Owner payload was pinned but missing freshGrantSha256/rootExclusive and retained old source/build; Root and independent metadata review missed this ignored-file schema. Original controller23500 exit1 and all30 child waits are retained (one optional Git config miss exit1 is expected); actual boot-query child026 exit0, then COORD_OWNER. No reservation or service/browser/runtime effect. New recovery is a concrete proposal only; no retry or allowance reset.
