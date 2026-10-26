@@ -1,0 +1,76 @@
+{
+  "kind": "R139_ONE_CONSOLIDATED_DOCKER_SNAPSHOT_STATIC_GUARD_AND_PRECLOCK_DECISION",
+  "status": "PROPOSED_NOT_ADMITTED",
+  "sameWorkOrder": "CCMAI-RUNTIME-139",
+  "roadmap": [
+    "M3-05",
+    "M3-08"
+  ],
+  "ownerDecisionNeeded": "Adopt exact current signed Docker CLI hash17cb after qualified offline provenance review; copy to campaign-owned snapshot, add full20-file static gate before invocation, authorize one additional original preclock (cumulative3,used2 retained).",
+  "dockerDesktopVersionLocal": "4.97.0.244584",
+  "dockerCliVersionLocal": "29.9.2",
+  "proposedDockerSourcePath": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+  "proposedDockerSnapshotPath": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_docker_tool_snapshot_20261026\\docker.exe",
+  "proposedDockerSize": 44922800,
+  "proposedDockerSha256": "17cbf2f5f5f7693bbeda46e35dc930050b40aff06f41f9f5a69e4e2dd7fc12aa",
+  "snapshotMustByteMatchBeforeUse": true,
+  "noOriginalBinaryOrInstallMutation": true,
+  "noAutoUpdateOrSilentOldPinEdit": true,
+  "sourceCommitUnchanged": "7ef30823746d72e935607c0bebf6ab306099eb48",
+  "acceptedSourcePinsRetained": 13,
+  "sourceChecksPreviouslySpent": 16,
+  "focusedNewGuardProcessesPlanned": 2,
+  "oldSourceSuiteReruns": 0,
+  "goBuildOrTests": 0,
+  "controllerUsed": 2,
+  "controllerCapCurrently": 2,
+  "additionalOriginalInvocationsProposed": 1,
+  "controllerTotalCapProposed": 3,
+  "campaignUsed": 0,
+  "campaignCap": 1,
+  "wholeCampaignSeconds": 1200,
+  "cleanupCutoffSeconds": 1020,
+  "internalSetupSeconds": 180,
+  "serviceQueries": 5,
+  "cuaMethods": 64,
+  "cuaStages": [
+    8,
+    4,
+    48,
+    4
+  ],
+  "inventories": 3,
+  "ownedPages": 1,
+  "physicalProviderCalls": 1,
+  "maximumUSD": 1,
+  "automaticRetry": 0,
+  "quotaResumeKeepsValidatedResultsAndSpentCounters": true,
+  "independentReviewAndCleanNormalCommitRequired": true,
+  "actualRootG0AndSeparateRuntimeEffectAdmissionBeforeFixtureKeyProvider": true,
+  "noAntigravityOrHelperTranche": true,
+  "runtimeExecutableNow": false,
+  "refs": {
+    "offline_signature_analysis.json": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/docker_provenance_20261026/offline_signature_analysis.json",
+      "sha256": "c4f0fd1454981e07232cbbbd0c38ef235fc3382d85c2ba4614f7a356b26084f4"
+    },
+    "installer_timeline.json": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/docker_provenance_20261026/installer_timeline.json",
+      "sha256": "7c1d7569d58dad433ef1f7920d2cbc4778c5ff2a731c763db183defd2877b82e"
+    },
+    "full_static_launch_guard_proposal.json": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/docker_provenance_20261026/full_static_launch_guard_proposal.json",
+      "sha256": "831848e967dfe09d0ef98626e693b987530bd6294ad8fcde964a1dffdca2ba20"
+    },
+    "accepted_build_pins_proposal.json": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/docker_provenance_20261026/accepted_build_pins_proposal.json",
+      "sha256": "91add7dab82e07751e0f45aa70fa40043fb74b6e3a6508aae417fe5098d1e0d6"
+    }
+  },
+  "limitsOfProvenance": [
+    "No online revocation or Microsoft WinVerifyTrust policy validation",
+    "No payload acquisition/initiator attribution",
+    "No observed version-to-original-b8f hash equivalence",
+    "No actual Docker/daemon compatibility command run; only future exact admitted queries may test it"
+  ]
+}

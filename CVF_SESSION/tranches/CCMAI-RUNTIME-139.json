@@ -100,7 +100,7 @@
     "docs/reviews/R139_PINNED_RESUME_CONSOLIDATED_SOURCE_REVIEW_2026-10-26.md",
     "docs/reviews/R139_V3_ACTIVATION_ENV_SOURCE_REVIEW_2026-10-26.md"
   ],
-  "disposition": "Additional controller TOOL_PIN HOLD; controllers2/2 spent, campaign0/1; Docker pin unverified, no third invocation or pin adoption.",
+  "disposition": "TOOL_PIN HOLD preserved; offline signature/install evidence and one consolidated adoption/snapshot/static-guard/preclock proposal pending Owner. No new runtime authority.",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -1288,5 +1288,37 @@
     "changeOrigin": "UNKNOWN",
     "newPinAdopted": false,
     "thirdInvocationAuthorized": false
+  },
+  "x-r139DockerProvenance20261026": {
+    "status": "QUALIFIED_OFFLINE_PROVENANCE_DECISION_PENDING_OWNER_ADOPTION",
+    "decisionRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/docker_provenance_20261026/consolidated_adoption_decision.json",
+      "sha256": "c810cb872fd35765576a8e088027e954e6ccfb158565d48e9a08b1a60816ab92"
+    },
+    "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+    "sourceChecksRetained": 16,
+    "proposedNewGuardChecks": 2,
+    "newGuardChecksUsed": 0,
+    "controllersUsed": 2,
+    "currentControllerCap": 2,
+    "proposedControllerCap": 3,
+    "thirdInvocationAuthorized": false,
+    "campaignUsed": 0,
+    "campaignCap": 1,
+    "currentDockerSha256": "17cbf2f5f5f7693bbeda46e35dc930050b40aff06f41f9f5a69e4e2dd7fc12aa",
+    "newPinAdopted": false,
+    "snapshotCreated": false,
+    "networkCalls": 0,
+    "targetExecutablesRun": 0,
+    "serviceQueries": 0,
+    "cuaMethods": 0,
+    "keyReads": 0,
+    "providerCalls": 0,
+    "revocationOrWindowsPolicyVerified": false,
+    "independentDecisionReviewRef": {
+      "path": "docs/reviews/R139_DOCKER_PROVENANCE_ADOPTION_DECISION_REVIEW_2026-10-26.md",
+      "sha256": "deabc2ac7c9e6eda5a4184183ab8b80991a29720834be404a7bbc9556a661b0a"
+    },
+    "independentDecisionReview": "REVIEW_PASS_DECISION_ONLY_QUALIFIED_NO_ACTIVATION"
   }
 }

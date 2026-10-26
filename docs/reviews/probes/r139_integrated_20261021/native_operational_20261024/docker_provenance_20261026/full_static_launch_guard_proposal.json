@@ -1,0 +1,23 @@
+{
+  "kind": "R139_FULL_READ_ONLY_PRELAUNCH_PIN_GUARD_SPECIFICATION",
+  "status": "CANDIDATE_SOURCE_AS_DATA_NOT_EXECUTED_OR_INTEGRATED",
+  "functionSourceUtf8": "def full_read_only_launch_pin_audit(project_root, pins):\n    # Specification candidate: returns all mismatches, never spawns a process.\n    specs = []\n    for name, pin in pins[\"tools\"].items():\n        specs.append((\"tool:\" + name, Path(pin[\"path\"]), pin[\"sha256\"], pin[\"size\"]))\n    for name in (\"binary\", \"viteCli\"):\n        pin = pins[name]\n        specs.append((name, project_root / pin[\"path\"], pin[\"sha256\"], pin[\"size\"]))\n    for rel, expected in pins[\"sourceSha256\"].items():\n        specs.append((\"source:\" + rel, project_root / rel, expected, None))\n    rows = []\n    for name, path, expected_sha, expected_size in specs:\n        row = {\"name\": name, \"path\": str(path), \"matches\": False}\n        try:\n            if not path.is_absolute() or path.is_symlink() or not path.is_file():\n                raise ValueError(\"STATIC_PIN_PATH_INVALID\")\n            if type(expected_sha) is not str or re.fullmatch(r\"[0-9a-f]{64}\", expected_sha) is None:\n                raise ValueError(\"STATIC_PIN_DIGEST_INVALID\")\n            if expected_size is not None and (type(expected_size) is not int or expected_size < 1):\n                raise ValueError(\"STATIC_PIN_SIZE_INVALID\")\n            raw = path.read_bytes()\n            actual_sha = hashlib.sha256(raw).hexdigest()\n            row.update(actualSha256=actual_sha, actualSize=len(raw),\n                       matches=actual_sha == expected_sha and\n                       (expected_size is None or len(raw) == expected_size))\n        except (OSError, ValueError) as error:\n            row[\"error\"] = type(error).__name__\n        rows.append(row)\n    return {\"status\": \"PASS\" if len(rows) == 20 and all(r[\"matches\"] for r in rows) else \"HOLD\",\n            \"rows\": rows, \"controllerInvoked\": False, \"osIdentityQuery\": False}\n",
+  "requiredImports": [
+    "pathlib.Path",
+    "hashlib",
+    "re"
+  ],
+  "integrationContract": [
+    "Validate exact required tool names5, accepted source set13, binary/Vite/schema and reject parent reparse/alias paths in existing outer wrapper",
+    "Run audit with actual adopted build record BEFORE extraction, counted controller Popen, OS identity query, exclusive attempt claim or campaign clock",
+    "On HOLD persist only metadata audit; no process/counter/clock advance and no automatic repair/adoption",
+    "Also retain full actual owner/schema/current-review/canonical/protected-ref/exclusive-path checks; all dependencies reviewed together",
+    "Repeat current complete pin/schema readback immediately before counted Popen; source controller still retains its own checks",
+    "Any actual counted invocation keeps original Popen/wait/exit and consumed allowance even if later source check fails"
+  ],
+  "focusedVerificationPlanned": [
+    "one worker pure metadata check process covering missing/mismatch/size/path/schema and zero launch side effects",
+    "one independent Root focused guard check process; no old source suites or Go build/test repeated"
+  ],
+  "claimBoundary": "Proposed code and integration contract only. No execution, tested guard, runtime PASS or CVF live governance claimed."
+}

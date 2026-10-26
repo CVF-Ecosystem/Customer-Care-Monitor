@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 HOLD_UNVERIFIED_DOCKER_TOOL_PIN: original additional controller PID2560 returned exit1 TOOL_PIN before any source child/boot query/reservation. Shared future controllers used2/cap2; campaign0/cap1 and service/CUA/fixture/key/provider0. Preserve source16 checks, post-quota validated review9baa, and both original wait receipts. Root may perform read-only toolchain provenance analysis and prepare one consolidated static-launch/toolchain recovery decision; no binary restoration/substitution/automatic new pin adoption, third controller, or runtime effect. Verified toolchain identity and a distinct explicit admission are required before any future runtime. Full20-file offline pin readback must precede any future controller Popen, outside its slot/clock; no reset of the two spent attempts. Same R139/M3-05/M3-08, no helper tranche/Antigravity/Core fetch/update; Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION, Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 Docker provenance decision independently reviewed; Owner adoption pending: local installer timeline supports Desktop4.96.3 to4.97.0 replacement, qualified offline Docker signer/image/chain checks match current17cb hash; revocation/Windows policy/payload origin and compatibility remain unverified. Current controllers2/2 spent, campaign0/1, all service/CUA/fixture/key/provider0; source16 checks and review9baa retained. Root prepares one explicit Owner adoption decision at docs/reviews/R139_DOCKER_PROVENANCE_AND_CONSOLIDATED_RECOVERY_2026-10-26.md: exact17cb CLI snapshot in own fresh path, distinct accepted-build record, full20 prelaunch guard and2 focused offline guard checks, one additional original controller (proposed cumulative3,used2 retained). No snapshot/binary change, pin adoption, new check process, third controller or runtime effect is admitted yet. Same R139/M3-05/M3-08; no helper tranche/Antigravity/Core fetch/update. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / failure REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; all effect workers unreleased; toolchain identity unresolved",
+  "activeRole": "Root ORCHESTRATOR / SPEC_AUTHOR / provenance metadata analyst / SESSION_SYNC_STEWARD / COMMIT_STEWARD; independent decision reviewer; all effect workers unreleased",
   "updatedAt": "2026-10-25",
   "x-resolvedCoreCommit": "b8ead4f0d1bf9224338a206b2abcd893ec1801b1",
   "x-ownerRoadmapDiscipline": {
@@ -3695,5 +3695,37 @@
     "changeOrigin": "UNKNOWN",
     "newPinAdopted": false,
     "thirdInvocationAuthorized": false
+  },
+  "x-r139DockerProvenance20261026": {
+    "status": "QUALIFIED_OFFLINE_PROVENANCE_DECISION_PENDING_OWNER_ADOPTION",
+    "decisionRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/docker_provenance_20261026/consolidated_adoption_decision.json",
+      "sha256": "c810cb872fd35765576a8e088027e954e6ccfb158565d48e9a08b1a60816ab92"
+    },
+    "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+    "sourceChecksRetained": 16,
+    "proposedNewGuardChecks": 2,
+    "newGuardChecksUsed": 0,
+    "controllersUsed": 2,
+    "currentControllerCap": 2,
+    "proposedControllerCap": 3,
+    "thirdInvocationAuthorized": false,
+    "campaignUsed": 0,
+    "campaignCap": 1,
+    "currentDockerSha256": "17cbf2f5f5f7693bbeda46e35dc930050b40aff06f41f9f5a69e4e2dd7fc12aa",
+    "newPinAdopted": false,
+    "snapshotCreated": false,
+    "networkCalls": 0,
+    "targetExecutablesRun": 0,
+    "serviceQueries": 0,
+    "cuaMethods": 0,
+    "keyReads": 0,
+    "providerCalls": 0,
+    "revocationOrWindowsPolicyVerified": false,
+    "independentDecisionReviewRef": {
+      "path": "docs/reviews/R139_DOCKER_PROVENANCE_ADOPTION_DECISION_REVIEW_2026-10-26.md",
+      "sha256": "deabc2ac7c9e6eda5a4184183ab8b80991a29720834be404a7bbc9556a661b0a"
+    },
+    "independentDecisionReview": "REVIEW_PASS_DECISION_ONLY_QUALIFIED_NO_ACTIVATION"
   }
 }

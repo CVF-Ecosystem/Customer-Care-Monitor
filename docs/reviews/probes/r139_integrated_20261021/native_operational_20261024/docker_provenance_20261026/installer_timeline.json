@@ -1,0 +1,28 @@
+{
+  "kind": "ROOT_LOCAL_INSTALLER_TIMELINE_READ_ONLY",
+  "logPath": "C:\\Users\\tiennm\\AppData\\Local\\Docker\\install-log.txt",
+  "logSha256": "de3b602caeccb4fabd956169e1054343f32bd94f7c307d1879212b43cfa2cfe4",
+  "logSize": 71074,
+  "selectedNonSecretLines": [
+    "Version: 4.97.0 (244584)",
+    "[2026-10-26T12:30:01.898153900Z][Installer][I] Existing installation found: build=244472, version=4.96.3, basePath=C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop",
+    "[2026-10-26T12:31:19.634647400Z][PatchStep][I] Running C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop.staging\\courgette64.exe -applybsdiff -nologfile \"C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop.staging\\resources\\bin\\docker.exe\" \"C:\\Users\\tiennm\\AppData\\Local\\Temp\\DockerDesktop\\h24xiq4jnwd\\resources\\bin\\docker.exe.bsdiff\" \"C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop.staging\\resources\\bin\\docker.exe_\"",
+    "[2026-10-26T12:32:23.163385700Z][InstallWorkflow][I] Uninstalling previous version in update mode",
+    "[2026-10-26T12:33:04.626627100Z][PerUserInstallHandler][I] Starting Docker Desktop: C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\Docker Desktop.exe"
+  ],
+  "installedDesktopFileVersion": "4.97.0.244584",
+  "installedDockerCliFileVersion": "29.9.2",
+  "versionMetadataBasis": "Independent Sol read-only Windows installed FileVersionInfo result, recorded in collaboration response; no executable launch.",
+  "dockerFileModifiedAtUTC": "2026-10-26T12:31:20.801173Z",
+  "inference": "Installer transaction names Docker.exe staging/patch target immediately before current file mtime and completes before failed controller. This strongly explains the proximate replacement event.",
+  "initiatorAndPayloadAcquisitionSource": "UNKNOWN",
+  "oldApprovedHashMappedDirectlyToOldVersion": false,
+  "noAutomaticUpdateAttribution": true,
+  "noNetworkOrTargetExecution": true,
+  "exactOldCandidatesCheckedAndAbsent": [
+    "C:/Users/tiennm/AppData/Local/Programs/DockerDesktop.staging/resources/bin/docker.exe",
+    "C:/Users/tiennm/AppData/Local/Temp/DockerDesktop/h24xiq4jnwd/resources/bin/docker.exe",
+    "C:/Users/tiennm/AppData/Local/Temp/DockerDesktop/itl45ov2in5/resources/bin/docker.exe"
+  ],
+  "searchBoundary": "These exact log-derived locations and prior known bin directory only; no whole-machine search."
+}
