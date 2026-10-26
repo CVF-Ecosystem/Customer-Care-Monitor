@@ -1,0 +1,148 @@
+"""Pure, import-safe prelaunch audit. This module never starts a process."""
+
+import hashlib
+import os
+import re
+import stat
+from pathlib import Path, PurePosixPath
+
+
+TOOLS = ("python", "git", "powershell", "docker", "node")
+SOURCES = (
+    "scripts/r139_execution_supervisor.py",
+    "scripts/tests/test_r139_execution_supervisor.py",
+    "scripts/r139_vite_config.mjs.template",
+    "backend/api/handlers/intervention_execution_browser_test.go",
+    "backend/go.mod",
+    "backend/go.sum",
+    "frontend/package.json",
+    "frontend/package-lock.json",
+    "frontend/vite.config.ts",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v3_design.py.txt",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_pinned_preflight.py.txt",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_durable_resume.py.txt",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/test_r139_pinned_resume.py",
+)
+NAMES = tuple("tool:" + name for name in TOOLS) + ("binary", "viteCli") + tuple("source:" + name for name in SOURCES)
+HEX64 = re.compile(r"[0-9a-f]{64}\Z", re.ASCII)
+HEX40 = re.compile(r"[0-9a-f]{40}\Z", re.ASCII)
+REPARSE = getattr(stat, "FILE_ATTRIBUTE_REPARSE_POINT", 0x400)
+
+
+def _safe_relative(value):
+    if type(value) is not str or not value or "\\" in value or ":" in value or "\x00" in value:
+        return False
+    parts = PurePosixPath(value).parts
+    return not value.startswith("/") and parts and all(part not in ("", ".", "..") for part in parts) and PurePosixPath(value).as_posix() == value
+
+
+def _no_reparse_chain(path):
+    """Reject symlinks and Windows junctions in every existing path component."""
+    path = Path(path)
+    chain = (path, *path.parents)
+    for component in reversed(chain):
+        try:
+            info = os.lstat(component)
+        except (OSError, ValueError, TypeError):
+            return False
+        if stat.S_ISLNK(info.st_mode) or (getattr(info, "st_file_attributes", 0) & REPARSE):
+            return False
+    return True
+
+
+def _pin_record(pin, size_required):
+    if type(pin) is not dict or set(pin) != ({"path", "sha256", "size"} if size_required else {"sha256"}):
+        return "SCHEMA"
+    if size_required and (type(pin.get("path")) is not str or not pin["path"] or "\x00" in pin["path"]):
+        return "PATH_SCHEMA"
+    if type(pin.get("sha256")) is not str or HEX64.fullmatch(pin["sha256"]) is None:
+        return "DIGEST_SCHEMA"
+    if size_required and (type(pin.get("size")) is not int or pin["size"] <= 0):
+        return "SIZE_SCHEMA"
+    return None
+
+
+def audit_full_twenty(project_root, pins):
+    """Return all 20 independent checks; HOLD has no launch or counter side effect."""
+    root = Path(project_root)
+    global_errors = []
+    if not root.is_absolute() or not root.is_dir() or not _no_reparse_chain(root):
+        global_errors.append("PROJECT_ROOT_INVALID")
+    if type(pins) is not dict or set(pins) != {"tools", "binary", "viteCli", "sourceSha256", "backendTree", "frontendTree"}:
+        global_errors.append("PINS_SCHEMA")
+        pins = pins if type(pins) is dict else {}
+    tools = pins.get("tools") if type(pins.get("tools")) is dict else {}
+    sources = pins.get("sourceSha256") if type(pins.get("sourceSha256")) is dict else {}
+    if set(tools) != set(TOOLS):
+        global_errors.append("TOOL_SET")
+    if set(sources) != set(SOURCES):
+        global_errors.append("SOURCE_SET")
+    for tree in ("backendTree", "frontendTree"):
+        value = pins.get(tree)
+        if type(value) is not str or HEX40.fullmatch(value) is None:
+            global_errors.append(tree + "_SCHEMA")
+    rows = []
+    seen = set()
+    seen_file_ids = set()
+    for name in NAMES:
+        kind, _, ident = name.partition(":")
+        pin = tools.get(ident) if kind == "tool" else pins.get(kind) if kind in ("binary", "viteCli") else {"sha256": sources.get(ident)}
+        row = {"name": name, "matches": False, "errors": []}
+        size_required = not name.startswith("source:")
+        failure = _pin_record(pin, size_required)
+        if failure:
+            row["errors"].append(failure)
+        if name.startswith("source:"):
+            rel = ident
+        elif failure is None:
+            rel = pin["path"]
+        else:
+            rel = None
+        if rel is not None:
+            if name.startswith("tool:"):
+                if type(rel) is not str:
+                    row["errors"].append("TOOL_PATH")
+                    path = None
+                else:
+                    path = Path(rel)
+                    if not path.is_absolute() or ".." in path.parts or "." in path.parts:
+                        row["errors"].append("TOOL_PATH")
+            else:
+                if not _safe_relative(rel):
+                    row["errors"].append("RELATIVE_PATH")
+                    path = None
+                else:
+                    path = root / rel
+            if not row["errors"]:
+                key = os.path.normcase(os.path.abspath(path))
+                if key in seen:
+                    row["errors"].append("DUPLICATE_PATH")
+                seen.add(key)
+                if not _no_reparse_chain(path):
+                    row["errors"].append("REPARSE_OR_MISSING_PARENT")
+                else:
+                    try:
+                        if not path.is_file():
+                            raise ValueError("NOT_REGULAR_FILE")
+                        info = os.stat(path, follow_symlinks=False)
+                        file_id = (info.st_dev, info.st_ino)
+                        if info.st_ino and file_id in seen_file_ids:
+                            row["errors"].append("DUPLICATE_FILE_ID")
+                        seen_file_ids.add(file_id)
+                        raw = path.read_bytes()
+                        row["actualSize"] = len(raw)
+                        row["actualSha256"] = hashlib.sha256(raw).hexdigest()
+                        if len(raw) == 0:
+                            row["errors"].append("EMPTY_FILE")
+                        if size_required and len(raw) != pin["size"]:
+                            row["errors"].append("SIZE_MISMATCH")
+                        if row["actualSha256"] != pin["sha256"]:
+                            row["errors"].append("SHA_MISMATCH")
+                    except (OSError, ValueError, TypeError):
+                        row["errors"].append("READ_FAILED")
+        row["matches"] = not row["errors"]
+        rows.append(row)
+    assert len(rows) == 20
+    return {"status": "PASS" if not global_errors and all(row["matches"] for row in rows) else "HOLD",
+            "globalErrors": global_errors, "rows": rows,
+            "controllerInvoked": False, "osIdentityQuery": False, "subprocessCalls": 0}

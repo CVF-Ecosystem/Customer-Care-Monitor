@@ -4539,7 +4539,7 @@
     "independentDecisionReview": "REVIEW_PASS_DECISION_ONLY_QUALIFIED_NO_ACTIVATION"
   },
   "x-r139DelegatedTechnical20261026": {
-    "status": "OWNER_DELEGATED_BUILD_NOT_RUNTIME_RELEASE",
+    "status": "SOURCE_COMPONENT_CHECKS_PASS_FINAL_TECHNICAL_REVIEW_PENDING",
     "authorityRef": {
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-TECHNICAL-BUDGET-AND-DOCKER-ADOPTION-ADMISSION.json",
       "sha256": "be07b72bdbd35969bd8f29979b06aa1c6d97a79a33deab1d48734d8fb9d25787"
@@ -4548,9 +4548,14 @@
     "controllerUsed": 2,
     "initialControllerCeiling": 3,
     "sourceChecksRetained": 16,
-    "newFocusedGuardProcessesUsed": 0,
+    "newFocusedGuardProcessesUsed": 2,
     "campaignUsed": 0,
-    "snapshotCreated": false,
-    "runtimeReleased": false
+    "snapshotCreated": true,
+    "runtimeReleased": false,
+    "countedFocusedLineage": 18,
+    "acceptedBuildPinsRef": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DOCKER-SNAPSHOT-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "sha256": "6b0d40e13c52b438c5ce5998e68874c4ce1f601abffc20d8b5c70175ef6cdce5"
+    }
   }
 }

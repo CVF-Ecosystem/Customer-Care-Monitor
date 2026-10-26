@@ -1,0 +1,107 @@
+"""One focused, local-only worker check for the delegated full-file cold guard."""
+
+import copy
+import hashlib
+import importlib.machinery
+import pathlib
+import tempfile
+import unittest
+from unittest import mock
+
+HERE = pathlib.Path(__file__).parent
+GUARD_SOURCE = HERE / "delegated_static_launch_guard_20261026.py.txt"
+WRAPPER_SOURCE = HERE / "delegated_root_control_wrapper_20261026.py.txt"
+guard = importlib.machinery.SourceFileLoader("r139_guard_test", str(GUARD_SOURCE)).load_module()
+wrapper = importlib.machinery.SourceFileLoader("r139_wrapper_test", str(WRAPPER_SOURCE)).load_module()
+
+
+class FullTwentyColdGuard(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory(prefix="r139-guard-")
+        self.addCleanup(self.temp.cleanup)
+        self.root = pathlib.Path(self.temp.name)
+        self.pins = {"tools": {}, "binary": {}, "viteCli": {}, "sourceSha256": {},
+                     "backendTree": "a" * 40, "frontendTree": "b" * 40}
+        for name in guard.TOOLS:
+            path = self.root / "tools" / (name + ".exe")
+            path.parent.mkdir(parents=True, exist_ok=True)
+            raw = ("tool:" + name).encode()
+            path.write_bytes(raw)
+            self.pins["tools"][name] = {"path": str(path), "sha256": hashlib.sha256(raw).hexdigest(), "size": len(raw)}
+        for key, rel in (("binary", "bin/handlers.test.exe"), ("viteCli", "frontend/node_modules/vite/bin/vite.js")):
+            path = self.root / rel
+            path.parent.mkdir(parents=True, exist_ok=True)
+            raw = key.encode()
+            path.write_bytes(raw)
+            self.pins[key] = {"path": rel, "sha256": hashlib.sha256(raw).hexdigest(), "size": len(raw)}
+        for rel in guard.SOURCES:
+            path = self.root / rel
+            path.parent.mkdir(parents=True, exist_ok=True)
+            raw = ("source:" + rel).encode()
+            path.write_bytes(raw)
+            self.pins["sourceSha256"][rel] = hashlib.sha256(raw).hexdigest()
+        self.guard_rel = pathlib.Path("guard.py.txt")
+        raw = GUARD_SOURCE.read_bytes()
+        (self.root / self.guard_rel).write_bytes(raw)
+        self.guard_sha = hashlib.sha256(raw).hexdigest()
+
+    def audit(self, pins=None):
+        return guard.audit_full_twenty(self.root, self.pins if pins is None else pins)
+
+    def assert_hold(self, pins, marker):
+        result = self.audit(pins)
+        self.assertEqual("HOLD", result["status"])
+        self.assertEqual(20, len(result["rows"]))
+        self.assertFalse(result["controllerInvoked"])
+        self.assertFalse(result["osIdentityQuery"])
+        self.assertEqual(0, result["subprocessCalls"])
+        self.assertTrue(marker in result["globalErrors"] or any(marker in row["errors"] for row in result["rows"]))
+
+    def test_complete_clean_twenty(self):
+        result = self.audit()
+        self.assertEqual("PASS", result["status"])
+        self.assertEqual(20, len(result["rows"]))
+        self.assertTrue(all(row["matches"] for row in result["rows"]))
+
+    def test_corrupt_docker_and_missing_source_both_reported(self):
+        pathlib.Path(self.pins["tools"]["docker"]["path"]).write_bytes(b"changed")
+        (self.root / guard.SOURCES[0]).unlink()
+        result = self.audit()
+        self.assertEqual("HOLD", result["status"])
+        failures = {row["name"]: row["errors"] for row in result["rows"] if not row["matches"]}
+        self.assertIn("SHA_MISMATCH", failures["tool:docker"])
+        self.assertIn("REPARSE_OR_MISSING_PARENT", failures["source:" + guard.SOURCES[0]])
+        self.assertEqual(20, len(result["rows"]))
+
+    def test_schema_path_and_size_fail_closed(self):
+        cases = (
+            (lambda p: p["tools"]["docker"].update(size=0), "SIZE_SCHEMA"),
+            (lambda p: p["tools"]["docker"].update(size=True), "SIZE_SCHEMA"),
+            (lambda p: p["tools"]["docker"].update(path=None), "PATH_SCHEMA"),
+            (lambda p: p["tools"]["docker"].update(path="bad\x00path"), "PATH_SCHEMA"),
+            (lambda p: p["binary"].update(path="../escape.exe"), "RELATIVE_PATH"),
+            (lambda p: p["tools"].pop("docker"), "TOOL_SET"),
+            (lambda p: p["sourceSha256"].pop(guard.SOURCES[-1]), "SOURCE_SET"),
+        )
+        for mutate, marker in cases:
+            with self.subTest(marker=marker):
+                pins = copy.deepcopy(self.pins)
+                mutate(pins)
+                self.assert_hold(pins, marker)
+
+    def test_postcoldgate_hook_never_calls_popen_on_mismatch(self):
+        pins = copy.deepcopy(self.pins)
+        pins["tools"]["docker"]["sha256"] = "0" * 64
+        intent_calls = []
+        with mock.patch.object(wrapper.subprocess, "Popen", side_effect=AssertionError("Popen reached")) as popen:
+            with self.assertRaises(wrapper.StaticGuardHold):
+                wrapper.postcoldgate_popen(self.root, pins, self.guard_rel, self.guard_sha,
+                                           ["never"], self.root, None, None,
+                                           self.root / "audit.json", lambda: intent_calls.append(1))
+            popen.assert_not_called()
+        self.assertEqual([], intent_calls)
+        self.assertFalse((self.root / "audit.json").exists())
+
+
+if __name__ == "__main__":
+    unittest.main()

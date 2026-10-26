@@ -1,0 +1,14 @@
+{
+  "kind": "ROOT_INDEPENDENT_FOCUSED_COLD_GUARD_RETURN",
+  "pid": 24768,
+  "originalWaitReturned": true,
+  "exitCode": 0,
+  "timedOut": false,
+  "sourceUnchanged": true,
+  "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderrSha256": "5a18da5c2d734f1b0100e8f0fe8c8ba0e9d5537f8354c9a61dc2d09882bcde64",
+  "newFocusedProcessesUsed": 2,
+  "retainedHistoricalSourceChecks": 16,
+  "countedLineage": 18,
+  "runtimeEffects": 0
+}

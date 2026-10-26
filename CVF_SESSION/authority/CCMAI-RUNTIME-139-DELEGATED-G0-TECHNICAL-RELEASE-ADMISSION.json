@@ -1,0 +1,84 @@
+{
+  "kind": "ROOT_R139_DELEGATED_SNAPSHOT_STATIC_GUARD_G0_TECHNICAL_RELEASE",
+  "status": "ROOT_CONDITIONAL_G0_RELEASE_SEALED_PENDING_GATES_AND_CLEAN_COMMIT",
+  "riskCeiling": "R2",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "delegatedAuthorityRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-TECHNICAL-BUDGET-AND-DOCKER-ADOPTION-ADMISSION.json",
+    "sha256": "be07b72bdbd35969bd8f29979b06aa1c6d97a79a33deab1d48734d8fb9d25787"
+  },
+  "acceptedBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DOCKER-SNAPSHOT-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "6b0d40e13c52b438c5ce5998e68874c4ce1f601abffc20d8b5c70175ef6cdce5"
+  },
+  "recipeRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_activation_recipe_20261026.json",
+    "sha256": "fded42e65c8d34aaf0b129110801c0e0410d9a8db925d87437fcd5bb4aad8ec9"
+  },
+  "independentReviewApproved": true,
+  "independentReviewRef": {
+    "path": "docs/reviews/R139_DELEGATED_G0_TECHNICAL_REVIEW_2026-10-26.md",
+    "sha256": "efb4610c384c8a5ed2f854ec2b45b391be3743cc799788eb085e7a02f06eded5"
+  },
+  "sourceRefs": {
+    "delegated_static_launch_guard_20261026.py.txt": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_static_launch_guard_20261026.py.txt",
+      "sha256": "4fe512c0f6ec57c6e3af69cbbd314955b493309b22afc0af7658f6cf4d42a9cc"
+    },
+    "delegated_root_control_wrapper_20261026.py.txt": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_root_control_wrapper_20261026.py.txt",
+      "sha256": "58490c1eedfcb07a1cf8645eebe90acb78d584373d63d5cc23e4b62496d182a2"
+    },
+    "delegated_test_static_launch_guard_20261026.py.txt": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_test_static_launch_guard_20261026.py.txt",
+      "sha256": "931a9758f3e0256d012affaf8d378562029e39dcf1e94558898776e03a29f445"
+    }
+  },
+  "focusedCheckRefs": {
+    "delegated_guard_worker_return_20261026.json": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_guard_worker_return_20261026.json",
+      "sha256": "6a86c3ed88afdf889d581b04da1749f96d0c05c96714f7ab7d5df3bd741acccf"
+    },
+    "delegated_guard_root_return_20261026.json": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_guard_root_return_20261026.json",
+      "sha256": "3f1e5d05a25330d257e6d05b1a3c66d9e9d33f1ba69ea6e0be1a46e5fc61dafc"
+    }
+  },
+  "retainedSourceChecks": 16,
+  "newFocusedProcesses": 2,
+  "countedLineage": 18,
+  "cumulativeControllerUsedBefore": 2,
+  "currentAllocatedControllerCeiling": 3,
+  "additionalOriginalInvocationsInThisPacket": 1,
+  "rootBudgetStewardMayReallocateUnderDelegation": true,
+  "coldGuardBeforeAnyCountedPopen": true,
+  "conditionalEffects": {
+    "oneOriginalController": 1,
+    "oneCampaign": 1,
+    "fiveExactQueries": 5,
+    "oneOwnedG0Tab": 1,
+    "g0ProducerMethods": 8,
+    "g0ObserverMethods": 4,
+    "productRuntime": false,
+    "key": false,
+    "provider": false
+  },
+  "observedNewEffects": {
+    "controller": 0,
+    "campaign": 0,
+    "services": 0,
+    "cua": 0,
+    "fixture": 0,
+    "key": 0,
+    "provider": 0
+  },
+  "staticReviewOnly": true,
+  "scope": "One current reviewed allocation original preclock then5queries andnativeG0 afteractualsignal. Actual Root G0 evidence acceptance and separate Runtime Effect Admission before fixture/key/provider; no paid/prod/destructive/unrelated expansion.",
+  "rootMechanicalSeal": {
+    "canonicalHashesChecked": 8,
+    "protectedProjectHashesChecked": 44,
+    "ownerOnlyExactFile": true,
+    "effectPathsAbsent": true,
+    "noSemanticChangesAfterReview": true
+  }
+}

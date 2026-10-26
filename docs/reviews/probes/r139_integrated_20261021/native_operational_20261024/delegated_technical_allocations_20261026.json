@@ -22,10 +22,49 @@
   ],
   "actualNewUsage": {
     "controllers": 0,
-    "focusedGuardProcesses": 0,
+    "focusedGuardProcesses": 2,
     "campaigns": 0,
     "serviceQueries": 0,
     "cuaMethods": 0,
     "providerCalls": 0
-  }
+  },
+  "workerFocusedIntent": {
+    "recordedBeforeInvocationUTC": "2026-10-26T14:40:16.533805+00:00",
+    "usedOrReserved": 1,
+    "worker": "/root/r139_coord_recovery_packet_worker",
+    "script": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_test_static_launch_guard_20261026.py.txt",
+    "sourceSha256": {
+      "delegated_static_launch_guard_20261026.py.txt": "4fe512c0f6ec57c6e3af69cbbd314955b493309b22afc0af7658f6cf4d42a9cc",
+      "delegated_root_control_wrapper_20261026.py.txt": "58490c1eedfcb07a1cf8645eebe90acb78d584373d63d5cc23e4b62496d182a2",
+      "delegated_test_static_launch_guard_20261026.py.txt": "931a9758f3e0256d012affaf8d378562029e39dcf1e94558898776e03a29f445"
+    },
+    "timeoutSeconds": 120,
+    "counting": "One worker test process reserved; original wait/exit must settle result, no quota replay."
+  },
+  "rootFocusedIntent": {
+    "recordedBeforeInvocationUTC": "2026-10-26T14:45:21.946413+00:00",
+    "usedOrReserved": 1,
+    "role": "Root independent guard checker; actual implementation bySol worker",
+    "sourceSha256": {
+      "delegated_static_launch_guard_20261026.py.txt": "4fe512c0f6ec57c6e3af69cbbd314955b493309b22afc0af7658f6cf4d42a9cc",
+      "delegated_root_control_wrapper_20261026.py.txt": "58490c1eedfcb07a1cf8645eebe90acb78d584373d63d5cc23e4b62496d182a2",
+      "delegated_test_static_launch_guard_20261026.py.txt": "931a9758f3e0256d012affaf8d378562029e39dcf1e94558898776e03a29f445"
+    },
+    "timeoutSeconds": 120
+  },
+  "workerResult": {
+    "pid": 19048,
+    "originalWaitReturned": true,
+    "exitCode": 0,
+    "tests": 4
+  },
+  "rootResult": {
+    "pid": 24768,
+    "originalWaitReturned": true,
+    "exitCode": 0,
+    "tests": 4
+  },
+  "countedFocusedLineage": 18,
+  "workerFocusedResultRef": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_guard_worker_return_20261026.json",
+  "rootFocusedResultRef": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_guard_root_return_20261026.json"
 }

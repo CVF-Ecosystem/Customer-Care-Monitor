@@ -1,0 +1,50 @@
+{
+  "kind": "R139_DELEGATED_GUARD_IMPLEMENTATION_WORKER_RETURN",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "scope": "NEW_SOURCE_AS_DATA_OFFLINE_COMPONENT_ONLY",
+  "status": "COMPLETE_PENDING_INDEPENDENT_REVIEW",
+  "dispatchCommit": "3b7b0bb8e1f0fab73f77757951a2e00fccd7ff40",
+  "ownerDelegationRef": {
+    "sha256": "be07b72bdbd35969bd8f29979b06aa1c6d97a79a33deab1d48734d8fb9d25787",
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-TECHNICAL-BUDGET-AND-DOCKER-ADOPTION-ADMISSION.json"
+  },
+  "acceptedBuildRef": {
+    "sha256": "6b0d40e13c52b438c5ce5998e68874c4ce1f601abffc20d8b5c70175ef6cdce5",
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DOCKER-SNAPSHOT-ACCEPTED-BUILD-PINS-ADMISSION.json"
+  },
+  "sourceRefs": {
+    "delegated_test_static_launch_guard_20261026.py.txt": {
+      "sha256": "931a9758f3e0256d012affaf8d378562029e39dcf1e94558898776e03a29f445",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_test_static_launch_guard_20261026.py.txt"
+    },
+    "delegated_static_launch_guard_20261026.py.txt": {
+      "sha256": "4fe512c0f6ec57c6e3af69cbbd314955b493309b22afc0af7658f6cf4d42a9cc",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_static_launch_guard_20261026.py.txt"
+    },
+    "delegated_root_control_wrapper_20261026.py.txt": {
+      "sha256": "58490c1eedfcb07a1cf8645eebe90acb78d584373d63d5cc23e4b62496d182a2",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_root_control_wrapper_20261026.py.txt"
+    }
+  },
+  "workerFocusedProcess": {
+    "originalWaitReturned": true,
+    "originalPid": 19048,
+    "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderrSha256": "54f1f31e17ec0e63ec9d5d9ad75adb822ea2e76c11c456f6b220592f68ad9777",
+    "result": "PASS",
+    "intentPath": ".cvf/runtime/r139_delegated_guard_checks_20261026/worker/intent.json",
+    "originalPopenReturned": true,
+    "startedPath": ".cvf/runtime/r139_delegated_guard_checks_20261026/worker/started.json",
+    "testsRun": 4,
+    "originalWaitExitPath": ".cvf/runtime/r139_delegated_guard_checks_20261026/worker/original_wait_exit.json",
+    "timedOut": false,
+    "exitCode": 0
+  },
+  "claimBoundary": "Pure local temp fixture software check only. No Docker command, service query, browser method, fixture, key, provider call, controller invocation, campaign reservation or live CVF governance proof.",
+  "runtimeEffectsObserved": 0,
+  "newSourceChecksUsed": 1,
+  "previousSourceChecksRetained": 16,
+  "controllerUsedRetained": 2,
+  "campaignUsed": 0,
+  "workerCommitted": false
+}

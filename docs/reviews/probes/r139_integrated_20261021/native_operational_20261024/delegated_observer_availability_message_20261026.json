@@ -1,0 +1,16 @@
+{
+  "kind": "ROOT_RECORDED_ACTUAL_COLLABORATION_AVAILABILITY",
+  "actor": "/root/r139_sol_browser_observer",
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+  "acceptedBuildPinsSha256": "6b0d40e13c52b438c5ce5998e68874c4ce1f601abffc20d8b5c70175ef6cdce5",
+  "campaignNonce": "acfcb1f2d705f1e0296e4062d7474bb5",
+  "delegatedAuthorityRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-TECHNICAL-BUDGET-AND-DOCKER-ADOPTION-ADMISSION.json",
+    "sha256": "be07b72bdbd35969bd8f29979b06aa1c6d97a79a33deab1d48734d8fb9d25787"
+  },
+  "rootReceivedAtUTC": "2026-10-26T14:50:14.274400+00:00",
+  "ready": true,
+  "effects": 0,
+  "qualification": "Root transcription of actual fresh collaboration reply, not a native browser API transcript.",
+  "message": "Ready for delegated R139 bounded G0 only after actual Root reservation/signal/release; all source/build/grant/nonce/caps confirmed; no CUA initialization/calls or file edits, effects0."
+}

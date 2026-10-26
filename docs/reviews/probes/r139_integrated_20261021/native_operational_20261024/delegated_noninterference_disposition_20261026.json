@@ -1,0 +1,61 @@
+{
+  "kind": "R139_DELEGATED_OLD_RESOURCE_NONINTERFERENCE_DISPOSITION",
+  "status": "PREPARED_FRESH_DELEGATED_BASELINES_PENDING_ACTUAL_G0_AND_SUPERVISOR",
+  "campaignNonce": "acfcb1f2d705f1e0296e4062d7474bb5",
+  "excludedOldNativePageId": "95B03BC1A084B240BC6C88D67BD0D511",
+  "excludedOldNonce": "a64a7a07c35e9fe30e4cb8574a32b831",
+  "oldOwnerCloseReportRetained": true,
+  "oldPhysicalTimeAndNativeFinalInventory": "UNKNOWN_RETAINED_NO_REPROBE",
+  "newBrowserBaseline": "NOT_OBSERVED; one exact IAB metadata inventory only within reserved G0",
+  "newDockerBaseline": "NOT_OBSERVED; five bounded queries only after reservation and Root signal",
+  "tabPrivacy": "baseline/handoff/final metadata only, no unrelated DOM/capture/control",
+  "newResourcesExact": "ccmai-r139-r4-20261023 / ccma_r139_r4_20261023 / Vite3519, no collision deletion or alternate namespace",
+  "campaignReserved": false,
+  "nativeContractId": "r139-cua-boot-identity-v3-20261026",
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+  "predecessorRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_noninterference_disposition_20261025.json",
+    "sha256": "bb236c2fdd2242d5537842c191f2f1cc52150f37f4512a85750c60cb700049b2"
+  },
+  "coordRecoveryAdmissionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-COORD-OWNER-RECOVERY-ADMISSION.json",
+    "sha256": "c6580693da837b014ac8356d3ceaf7b1317ba4970ed6a5d05c1859327d6d2431"
+  },
+  "priorOriginalWaitExitRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/original_wait_exit.json",
+    "sha256": "8f18cef19fbfadde33948b17ee08b5cfb558aee261eb538bea65e0c364e578cf"
+  },
+  "oldV3DispositionRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_noninterference_disposition_20261026.json",
+    "sha256": "0ae2bfeacf384999dfc7985c8494c53f71cbf902dc78eb9ce5a39896ba21120d"
+  },
+  "freshRootQualification": "New delegated nonce and Root-owned roots only. Previous unknown inventory remains UNKNOWN; no historical cleanup or namespace change. Actual fresh browser and Docker baselines require admitted observations.",
+  "acceptedBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DOCKER-SNAPSHOT-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "6b0d40e13c52b438c5ce5998e68874c4ce1f601abffc20d8b5c70175ef6cdce5"
+  },
+  "delegatedAuthorityRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-TECHNICAL-BUDGET-AND-DOCKER-ADOPTION-ADMISSION.json",
+    "sha256": "be07b72bdbd35969bd8f29979b06aa1c6d97a79a33deab1d48734d8fb9d25787"
+  },
+  "delegatedCoordinationOwnerRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_coordination_owner_20261026.json",
+    "sha256": "8b4f3cae8450d8016aba0db5af3d977baa1141e5aed488e9999cb4902346d7f5"
+  },
+  "priorOriginalWaitExitRefs": [
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/original_wait_exit.json",
+      "sha256": "8f18cef19fbfadde33948b17ee08b5cfb558aee261eb538bea65e0c364e578cf"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_tool_pin_hold_20261026/original_wait_exit.json",
+      "sha256": "9c653828dc1510e3f2d6505263991af407b40f3db79440873b43f04b3275f7e4"
+    }
+  ],
+  "sharedFutureControllerUsed": 2,
+  "sharedFutureControllerCap": 3,
+  "predecessorCoordRecoveryRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_noninterference_disposition_20261026.json",
+    "sha256": "e9e36c80c052256a0128d8ca414c181da89db3b2685a0282e2cb1c3dd6972dfd"
+  }
+}

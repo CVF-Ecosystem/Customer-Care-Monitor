@@ -1,0 +1,272 @@
+{
+  "kind": "ROOT_R139_DELEGATED_PRECLOCK_HANDOFF_PACKET",
+  "status": "PREPARED_CURRENT_ACTORS_AND_CHECKS_BOUND_PENDING_INDEPENDENT_REVIEW_FINAL8_AND_COMMIT_NO_EFFECT_AUTHORITY",
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+  "acceptedBuildPins": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DOCKER-SNAPSHOT-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "6b0d40e13c52b438c5ce5998e68874c4ce1f601abffc20d8b5c70175ef6cdce5"
+  },
+  "ownerEnvelopeSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
+  "nativeContractId": "r139-cua-boot-identity-v3-20261026",
+  "campaignNonce": "acfcb1f2d705f1e0296e4062d7474bb5",
+  "runtimeDraft": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_runtime_admission_draft_20261026.json",
+  "recipeDraft": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_activation_recipe_20261026.json",
+  "fiveQueryPlan": {
+    "status": "PREPARED_UNEXECUTED_NEW_OWNER_ENVELOPE_ROOT_RELEASE_REQUIRED",
+    "actor": "Internal worker only after Root G0 technical release and original campaign reservation",
+    "binaryPinSource": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DOCKER-SNAPSHOT-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "sha256": "6b0d40e13c52b438c5ce5998e68874c4ce1f601abffc20d8b5c70175ef6cdce5"
+    },
+    "dockerConfigDir": ".cvf/runtime/r139_delegated_reentry_20261026_readiness/docker_config",
+    "dockerConfigContent": "{}\n",
+    "configCustody": "Root metadata initialized exclusive empty config before clock; no Docker/port query until original reservation+fresh Root signal. No ambient credentials.",
+    "queries": [
+      {
+        "id": "cached-image",
+        "argv": [
+          "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_docker_tool_snapshot_20261026\\docker.exe",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_delegated_reentry_20261026_readiness/docker_config",
+          "image",
+          "inspect",
+          "--format",
+          "{{json .Id}}",
+          "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+        "comparison": "Decode stdout as exactly one JSON string (only surrounding whitespace); require decoded string exactly equals expected; no extra stdout content. Original stderr/exit retained."
+      },
+      {
+        "id": "container-name",
+        "argv": [
+          "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_docker_tool_snapshot_20261026\\docker.exe",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_delegated_reentry_20261026_readiness/docker_config",
+          "ps",
+          "-a",
+          "--filter",
+          "name=ccmai-r139-r4-20261023",
+          "--format",
+          "{{json .Names}}"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "EMPTY"
+      },
+      {
+        "id": "network-name",
+        "argv": [
+          "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_docker_tool_snapshot_20261026\\docker.exe",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_delegated_reentry_20261026_readiness/docker_config",
+          "network",
+          "ls",
+          "--filter",
+          "name=ccmai-r139-r4-20261023",
+          "--format",
+          "{{json .Name}}"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "EMPTY"
+      },
+      {
+        "id": "volume-name",
+        "argv": [
+          "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_docker_tool_snapshot_20261026\\docker.exe",
+          "--host",
+          "npipe:////./pipe/dockerDesktopLinuxEngine",
+          "--config",
+          ".cvf/runtime/r139_delegated_reentry_20261026_readiness/docker_config",
+          "volume",
+          "ls",
+          "--filter",
+          "name=ccmai-r139-r4-20261023",
+          "--format",
+          "{{json .Name}}"
+        ],
+        "timeoutSeconds": 20,
+        "cap": 1,
+        "expected": "EMPTY"
+      },
+      {
+        "id": "vite-port",
+        "argv": [
+          "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+          "-NoLogo",
+          "-NoProfile",
+          "-NonInteractive",
+          "-Command",
+          "$ErrorActionPreference='Stop'; $r139Listeners = @(Get-NetTCPConnection -State Listen -ErrorAction Stop | Where-Object { $_.LocalPort -eq 3519 } | Select-Object -Property LocalAddress,LocalPort,OwningProcess); [pscustomobject]@{ port = 3519; listeners = $r139Listeners } | ConvertTo-Json -Depth 4 -Compress; exit 0"
+        ],
+        "timeoutSeconds": 5,
+        "cap": 1,
+        "expected": {
+          "port": 3519,
+          "listeners": []
+        }
+      }
+    ],
+    "automaticRetry": 0,
+    "used": 0,
+    "vitePort": 3519,
+    "failure": "Any error/timeout/nonzero/ambiguous or occupied result HOLD, campaign consumed; no mutation/cleanup of ambient resources or replacement namespace/port",
+    "clock": "Reserve before first query or browser invocation; same original1200seconds includes all5queries and G0/G1/G2/cleanup",
+    "processCustody": "Capture original argv/stdout/stderr/start/end/wait/exit. Timeout must request cancellation of only the exact held query child and observe original wait; no new command/retry/host process kill. Unreturned original wait means UNKNOWN/HOLD, not bounded lifetime proof."
+  },
+  "browserPlan": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_browser_operation_plan_20261026.json",
+  "remainingBeforeReservation": "Independent delegated technical review; Root final eight canonical snapshots/protected full20 readback after settled catalog/continuity; pinned gates, clean exact-byte commit; then one Root original Popen/wait/exit under cumulative cap3.",
+  "remainingAfterReservedG0": "Actual G0 independent Root review and separate Runtime Effect Admission before fixture/key/provider.",
+  "campaignReserved": false,
+  "providerCalls": 0,
+  "currentEffectRelease": "NONE",
+  "coordinationInitialization": {
+    "root": ".cvf/runtime/r139_delegated_reentry_20261026_readiness/coordination",
+    "ownerSha256": "8b4f3cae8450d8016aba0db5af3d977baa1141e5aed488e9999cb4902346d7f5",
+    "preclockOnlyEntry": "owner.json",
+    "reservationPath": ".cvf/runtime/r139_delegated_reentry_20261026_readiness/campaign_reservation.json",
+    "signalPath": ".cvf/runtime/r139_delegated_reentry_20261026_readiness/coordination/root_g0_release.json"
+  },
+  "independentReview": "PENDING_NEW_DELEGATED_G0_TECHNICAL_REVIEW",
+  "operatorAvailable": true,
+  "operatorAvailabilityRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_owner_close_availability_20261026.json",
+    "sha256": "3c8e91e5c0d8c702a37f72c1cbfbbde833e8bfb21f9e9704f46758b85da26750"
+  },
+  "inheritedOwnerEnvelopeSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "observationCapsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
+    "sha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491"
+  },
+  "actualActorMetadataRenewed": true,
+  "bootIdentityRecoveryAdmissionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json",
+    "sha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb"
+  },
+  "acceptedBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DOCKER-SNAPSHOT-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "6b0d40e13c52b438c5ce5998e68874c4ce1f601abffc20d8b5c70175ef6cdce5"
+  },
+  "liveTemporalConditionSatisfied": false,
+  "currentClockHoldReceipt": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_prelaunch_clock_compatibility_20261025.json",
+  "bootV3AdmissionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+    "sha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f"
+  },
+  "bootIdentityContractRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_contract_20261026.json",
+    "sha256": "e3fe4ef6caeb8b197e5f358267d89a6584fb6cf10087bebb5bfca53efdc7d5da"
+  },
+  "sourceCheckTotalSpent": 18,
+  "sourceChecksRemaining": 0,
+  "sharedFutureControllerUsed": 2,
+  "sharedFutureControllerCap": 3,
+  "v2ReleaseSupersededDisabled": true,
+  "internalSetupSeconds": 180,
+  "recipeBinding": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_activation_recipe_20261026.json",
+    "qualification": "Recipe hash only after final continuity/catalog/ACK and eight exact template snapshots settle.",
+    "outOfBandBinding": "Root computes exact final recipe SHA and supplies controller CLI; no committed self hash."
+  },
+  "coordRecoveryAdmissionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-COORD-OWNER-RECOVERY-ADMISSION.json",
+    "sha256": "c6580693da837b014ac8356d3ceaf7b1317ba4970ed6a5d05c1859327d6d2431"
+  },
+  "coordRecoveryOwnerRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_coordination_owner_20261026.json",
+    "sha256": "8b4f3cae8450d8016aba0db5af3d977baa1141e5aed488e9999cb4902346d7f5"
+  },
+  "originalPreclockExitRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/original_wait_exit.json",
+    "sha256": "8f18cef19fbfadde33948b17ee08b5cfb558aee261eb538bea65e0c364e578cf"
+  },
+  "priorOriginalWaitExitRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/original_wait_exit.json",
+    "sha256": "8f18cef19fbfadde33948b17ee08b5cfb558aee261eb538bea65e0c364e578cf"
+  },
+  "actorAcks": {
+    "root": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_root_actor_ack_20261026.json",
+      "sha256": "cb0c4aae50704510dcd8474d2825f3ccb15a0f4e2e8ebcbcc9097e2b6b7af1a4"
+    },
+    "internal": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_internal_actor_ack_20261026.json",
+      "sha256": "5ca5b9a8505dff08b70f2619e37519cf4011091741b3671f7accf19f93ca4d1f"
+    },
+    "cuaProducer": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_producer_actor_ack_20261026.json",
+      "sha256": "ad3701f5dd747e6adf1766a7fab63cb3da5c3e9a09abebc9df0d7f3068871ed1"
+    },
+    "cuaObserver": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_observer_actor_ack_20261026.json",
+      "sha256": "4a34e5b1add52ea3939e1b08ed6f705ea31ebd491c8e0e3f54978fc8f0ac5871"
+    }
+  },
+  "noninterferenceDispositionRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_noninterference_disposition_20261026.json",
+    "sha256": "58a68e486f45feacc1c521d83f1b8837f5fbfce798431dbaf4fd315c85278df5"
+  },
+  "factsRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_preclock_facts_20261026.json",
+    "sha256": "0312907043165820c7d67112820f4eb8d0de3133336be35ef8b9464b4f22ef69"
+  },
+  "browserPlanRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_browser_operation_plan_20261026.json",
+    "sha256": "5525cece0ff9e1c20eef30e6fdb365b957631f699dbbcada48fc64d4e6670541"
+  },
+  "runtimeDraftRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_runtime_admission_draft_20261026.json",
+    "sha256": "0562e097f84a33504771737efcef65ae7c911171fc2b04d0a1aa852ef715bf59"
+  },
+  "delegatedAuthorityRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-TECHNICAL-BUDGET-AND-DOCKER-ADOPTION-ADMISSION.json",
+    "sha256": "be07b72bdbd35969bd8f29979b06aa1c6d97a79a33deab1d48734d8fb9d25787"
+  },
+  "delegatedCoordinationOwnerRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_coordination_owner_20261026.json",
+    "sha256": "8b4f3cae8450d8016aba0db5af3d977baa1141e5aed488e9999cb4902346d7f5"
+  },
+  "priorOriginalWaitExitRefs": [
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/original_wait_exit.json",
+      "sha256": "8f18cef19fbfadde33948b17ee08b5cfb558aee261eb538bea65e0c364e578cf"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_tool_pin_hold_20261026/original_wait_exit.json",
+      "sha256": "9c653828dc1510e3f2d6505263991af407b40f3db79440873b43f04b3275f7e4"
+    }
+  ],
+  "actorAvailabilityMessages": {
+    "cuaProducer": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_producer_availability_message_20261026.json",
+      "sha256": "d08fbc0441006c71d4b243a326da484fb0da1b9a38e7115485df2af56fca7e19"
+    },
+    "cuaObserver": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_observer_availability_message_20261026.json",
+      "sha256": "5760c8911352724372aa339311b7545e9b21176ef751d0997c03b2f67e87fcc3"
+    }
+  },
+  "historicalSourceChecksRetained": 16,
+  "delegatedFocusedGuardChecksUsed": 2,
+  "workerGuardReturnRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_guard_worker_return_20261026.json",
+    "sha256": "6a86c3ed88afdf889d581b04da1749f96d0c05c96714f7ab7d5df3bd741acccf"
+  },
+  "rootGuardReturnRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_guard_root_return_20261026.json",
+    "sha256": "3f1e5d05a25330d257e6d05b1a3c66d9e9d33f1ba69ea6e0be1a46e5fc61dafc"
+  },
+  "delegatedTechnicalAllocationsRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_technical_allocations_20261026.json",
+    "sha256": "6248708f4b3f743763db4689ce10096517bd46642404b0be14b1d81f4b686972"
+  }
+}
