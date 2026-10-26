@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Current R139 same-order activation child-environment/setup source repair before unique controller launch;14priorchecks and all zero runtime caps retained."
+      "description": "Current R139 Owner-approved coordination recovery: source7ef/buildad348,16checks retained; original controller1 used of2, campaign0/1; actual metadata review before additional invocation."
     },
     {
       "id": "r060-work-order",
@@ -37873,6 +37873,20 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/started.json",
       "status": "ACTIVE",
       "description": "R139 original preclock COORD_OWNER HOLD evidence or consolidated recovery proposal; shared controller1/1 spent, campaign0/1, no execution authority."
+    },
+    {
+      "id": "r139-coord-d542c9629d9e02",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-COORD-OWNER-RECOVERY-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Owner-approved one additional R139 preclock slot or pending independent packet review; no current effect release."
+    },
+    {
+      "id": "r139-coord-a20867d3798c73",
+      "family": "continuity",
+      "path": "docs/reviews/R139_COORD_RECOVERY_G0_TECHNICAL_REVIEW_2026-10-26.md",
+      "status": "ACTIVE",
+      "description": "Owner-approved one additional R139 preclock slot or pending independent packet review; no current effect release."
     }
   ]
 }

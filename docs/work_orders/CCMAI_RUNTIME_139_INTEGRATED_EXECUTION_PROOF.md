@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: BLOCKED_WITH_REASON
+Status: ACTIVE
 Risk: R2
 Worker: Internal Sol G0 service/runtime actor; internal Luna producer/independent observer for browser only
 Reviewer: Root independent source/evidence REVIEWER
@@ -761,6 +761,11 @@ Acceptedsource7ef30823/buildad348196,16checksretained; currentnonce319839d1bdabc
 
 ## R139 v3 actual preclock HOLD — 2026-10-26
 
-CCMAI-RUNTIME-139 HOLD_COORD_OWNER_BEFORE_RESERVATION: original controller PID23500 returned exit1; shared future controller used1/cap1, campaign0/cap1. Preserve all original receipts and source16 checks. Root has prepared one consolidated corrected-owner/fresh-path recovery decision in docs/reviews/R139_V3_COORD_OWNER_HOLD_AND_RECOVERY_2026-10-26.md. No controller retry or service/browser/fixture/key/provider effect is authorized; an explicit Owner decision for one additional original preclock invocation (cumulative cap2, used1 retained) is required before a new technical dispatch. Keep the existing single R139 order and M3-05/M3-08; fixed e9/profile1.1, no Core fetch/update, no Antigravity or helper tranche. Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 Owner-approved coordination recovery technical BUILD: additional original controller1, cumulative cap2 with previous used1 retained; source7ef30823/buildad348196 and16 checks reused, no new source tests. Root validates actual generated owner full grant/source/build/nonce/exclusivity/schema before extraction or OS query. Rebind fresh actor ACKs, distinct paths/nonce4f37f37b37fa5295611c84b63d1d9910, all refs and eight exact canonical snapshots; independent consolidated review, pinned e9/profile1.1 gates and clean commit before one additional original Root-held invocation. Campaign0/1, all other caps unchanged; no service/CUA/fixture/key/provider until respective actual signal/admission. Same R139/M3-05/M3-08, no helper tranche, Antigravity, Core fetch/update or repeated Owner relay. Product B blocked; Facebook/Zalo OA parked.
 
 Owner payload was pinned but missing freshGrantSha256/rootExclusive and retained old source/build; Root and independent metadata review missed this ignored-file schema. Original controller23500 exit1 and all30 child waits are retained (one optional Git config miss exit1 is expected); actual boot-query child026 exit0, then COORD_OWNER. No reservation or service/browser/runtime effect. New recovery is a concrete proposal only; no retry or allowance reset.
+
+
+## Owner-approved coordination recovery BUILD acknowledgment — 2026-10-26
+
+Owner replied “duyệt” to the committed consolidated recovery decision. Root rehydrated canonical continuity and corrected stale current-handoff source/count prose against accepted build and original exit evidence; no silent authority choice. Root transitions ORCHESTRATOR/technical metadata author; one existing R139, new supplement CVF_SESSION/authority/CCMAI-RUNTIME-139-COORD-OWNER-RECOVERY-ADMISSION.json. Old original receipts and source checks retained. Additional controller1 conditional on full actual metadata review/clean commit; no effect yet.

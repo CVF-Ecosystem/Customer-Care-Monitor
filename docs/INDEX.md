@@ -15,7 +15,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R139 same-order activation child-environment/setup source repair before unique controller launch;14priorchecks and all zero runtime caps retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md`
+- Current R139 Owner-approved coordination recovery: source7ef/buildad348,16checks retained; original controller1 used of2, campaign0/1; actual metadata review before additional invocation.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -4511,6 +4511,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent exact-hash v3 clock source/component review; worker46 and Rootcombined62 PASS, original historical proof and caps retained, no runtime release.: `docs/reviews/R139_CLOCK_V3_SOURCE_REVIEW_2026-10-26.md`
 - Four-path intended recovery design only; source renewal pending Owner decision; no new helper or effect.: `docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_2026-10-23.md`
 - Independent Root documentary review; finite source-only proposal ready for Owner, M3 runtime remains OPEN.: `docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_REVIEW_2026-10-23.md`
+- Owner-approved one additional R139 preclock slot or pending independent packet review; no current effect release.: `docs/reviews/R139_COORD_RECOVERY_G0_TECHNICAL_REVIEW_2026-10-26.md`
+- Owner-approved one additional R139 preclock slot or pending independent packet review; no current effect release.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-COORD-OWNER-RECOVERY-ADMISSION.json`
 - Authorized public Core reconciliation and doctor27/27 static readiness with unchanged profile pin warning.: `docs/reviews/probes/r139_integrated_20261021/r7_core_reconciliation_20261023.json`
 - Root accepted CUA source38db7e90/binaryd186, correctedPython44+compile+pureGo13PASS with retainedWorkerFAIL and8of8checks consumed; no runtime/browser/AI governance proof.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-ACCEPTED-BUILD-PINS-ADMISSION.json`
 - R139 CUA source evidence: current corrected44Python/compile/13pureGo PASS; workerPython fixture FAIL retained,8of8consumed,no runtime/AI governance proof.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_source_checks/cua_worker_python_01_failure.json`

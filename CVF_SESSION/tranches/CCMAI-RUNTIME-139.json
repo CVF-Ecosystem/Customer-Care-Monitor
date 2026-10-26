@@ -83,10 +83,10 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "CHANGES_REQUIRED",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "BLOCKED_WITH_REASON",
+  "workOrderStatus": "ACTIVE",
   "buildCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
   "reviewEvidence": [
     "docs/reviews/R139_INTERNAL_CUA_CONSOLIDATED_SOURCE_REVIEW_2026-10-24.md",
@@ -100,7 +100,7 @@
     "docs/reviews/R139_PINNED_RESUME_CONSOLIDATED_SOURCE_REVIEW_2026-10-26.md",
     "docs/reviews/R139_V3_ACTIVATION_ENV_SOURCE_REVIEW_2026-10-26.md"
   ],
-  "disposition": "HOLD_COORD_OWNER_PRECLOCK; one future controller consumed, no reservation; consolidated recovery decision pending Owner additional invocation.",
+  "disposition": "Owner-approved coordination recovery metadata BUILD; no effect dispatch.",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -166,7 +166,8 @@
     "PARKED",
     "BUILD",
     "REVIEW_PENDING",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "actualUse": {
     "status": "HOLD_MANUAL_HOLD_PROVIDER_OUTCOME_UNKNOWN",
@@ -1250,5 +1251,22 @@
     "review": "docs/reviews/R139_V3_COORD_OWNER_HOLD_AND_RECOVERY_2026-10-26.md",
     "canonicalTemplatesPending": true,
     "oldTechnicalRecipeConsumedNotReusable": true
+  },
+  "x-r139CoordRecovery20261026": {
+    "status": "OWNER_APPROVED_TECHNICAL_METADATA_BUILD_NOT_EFFECT_RELEASE",
+    "admissionRef": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-COORD-OWNER-RECOVERY-ADMISSION.json",
+      "sha256": "c6580693da837b014ac8356d3ceaf7b1317ba4970ed6a5d05c1859327d6d2431"
+    },
+    "nonce": "4f37f37b37fa5295611c84b63d1d9910",
+    "sharedFutureControllerUsed": 1,
+    "sharedFutureControllerCap": 2,
+    "campaignUsed": 0,
+    "sourceChecksTotalSpent": 16,
+    "serviceQueries": 0,
+    "cuaMethods": 0,
+    "keyReads": 0,
+    "providerCalls": 0,
+    "runtimeReleased": false
   }
 }

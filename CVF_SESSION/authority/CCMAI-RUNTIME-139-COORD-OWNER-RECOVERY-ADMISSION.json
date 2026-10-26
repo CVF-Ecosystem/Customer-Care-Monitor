@@ -1,0 +1,112 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "OWNER_APPROVED_R139_COORD_OWNER_RECOVERY_ADDITIONAL_PRECLOCK",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "riskCeiling": "R2",
+  "date": "2026-10-26",
+  "ownerApproved": true,
+  "ownerReply": "duyệt",
+  "ownerPromptSubstance": "One additional original preclock invocation, cumulative controller cap1 to2 with used1 retained; same reviewed recovery packet and unchanged campaign/effect caps.",
+  "ownerApprovalRecordedAtUTC": "2026-10-26T10:26:25.825798+00:00",
+  "decisionRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/consolidated_recovery_decision.json",
+    "sha256": "9bc911d49987ccd780f30d6e6d943a00f42e4fd6557b25409cc2b2ba377ca24f"
+  },
+  "originalFailureRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/root_hold_receipt.json",
+    "sha256": "9267d6b7cc294ff9c7ae13a847795a74c8eda738be197dab4fb8699a08493f62"
+  },
+  "originalControllerPid": 23500,
+  "originalControllerExitCode": 1,
+  "originalWaitReturned": true,
+  "sharedFutureControllerUsedBefore": 1,
+  "sharedFutureControllerTotalCap": 2,
+  "additionalOriginalControllerInvocationMax": 1,
+  "retryOldInvocationOrPaths": false,
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+  "acceptedBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b"
+  },
+  "sourceChecksRetained": 16,
+  "newSourceTests": 0,
+  "sourceChanges": 0,
+  "baseCommit": "b387221773d72bc2d252bbbd3c35e7ef3debb0d5",
+  "sameWorkOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+  "nonce": "4f37f37b37fa5295611c84b63d1d9910",
+  "freshRoots": {
+    "controllerRoot": ".cvf/runtime/r139_v3_coord_recovery_20261026",
+    "readinessRoot": ".cvf/runtime/r139_v3_coord_recovery_20261026_readiness",
+    "childLogRoot": ".cvf/runtime/r139_v3_coord_recovery_20261026_activation_logs",
+    "recorderRoot": ".cvf/runtime/r139_v3_coord_recovery_20261026_recorder"
+  },
+  "allowedMetadataPaths": [
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+    "docs/reviews/R139_*.md",
+    "docs/reviews/probes/r139_integrated_20261021/**",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md",
+    ".cvf/runtime/r139_v3_coord_recovery_20261026*/**"
+  ],
+  "roles": {
+    "metadataWorker": "/root/r139_coord_recovery_packet_worker",
+    "reviewer": "/root/r139_final_technical_review",
+    "producer": "/root/r139_live_browser_producer",
+    "observer": "/root/r139_sol_browser_observer",
+    "commitSteward": "Root",
+    "originalControlCustodian": "Root",
+    "internalQueries": "Root"
+  },
+  "unchangedEffectCaps": {
+    "campaignUsed": 0,
+    "campaignCap": 1,
+    "campaignSeconds": 1200,
+    "cleanupCutoffSeconds": 1020,
+    "internalSetupSeconds": 180,
+    "internalQueries": 5,
+    "cuaMethods": 64,
+    "cuaStages": [
+      8,
+      4,
+      48,
+      4
+    ],
+    "tabMetadataInventories": 3,
+    "ownedPages": 1,
+    "g2StatusStarts": 16,
+    "fixtureStarts": 1,
+    "fixtureFinalStops": 1,
+    "backendStarts": 1,
+    "viteStarts": 1,
+    "physicalProviderCalls": 1,
+    "maximumUSD": 1,
+    "keyContentReads": 1,
+    "originalBootQueryInsideNewControllerMax": 1,
+    "automaticRetry": 0
+  },
+  "requiredBeforeController": [
+    "Actual generated coordination owner full schema/grant/source/build/nonce/exclusivity/hash verified before controller extraction or boot query",
+    "New Root wrapper binds this distinct supplement and exact preserved previous original exit receipt",
+    "Fresh current actor acknowledgments, exclusive paths and all dependency hashes/templates",
+    "Independent complete actual packet review",
+    "Pinned preflight and normal clean exact-byte commit",
+    "One Root original Popen/wait/exit; no blind replay"
+  ],
+  "sourceControllerParentInterpretation": "Original v3 admission single-slot field remains immutable historical lineage; this distinct Owner-approved supplement adds exactly one slot, cumulative2. New Root custody wrapper must enforce supplement and prior failure before invocation; no production controller source or installed gates edited.",
+  "runtimeEffectsCurrentlyReleased": {
+    "controller": 0,
+    "campaign": 0,
+    "services": 0,
+    "cua": 0,
+    "fixture": 0,
+    "key": 0,
+    "provider": 0
+  },
+  "noHelperTranche": true,
+  "noAntigravity": true,
+  "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
+  "providerRequiresActualG0AndSeparateRuntimeEffectAdmission": true
+}
