@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 Owner-approved coordination recovery technical BUILD: additional original controller1, cumulative cap2 with previous used1 retained; source7ef30823/buildad348196 and16 checks reused, no new source tests. Root validates actual generated owner full grant/source/build/nonce/exclusivity/schema before extraction or OS query. Rebind fresh actor ACKs, distinct paths/nonce4f37f37b37fa5295611c84b63d1d9910, all refs and eight exact canonical snapshots; independent consolidated review, pinned e9/profile1.1 gates and clean commit before one additional original Root-held invocation. Campaign0/1, all other caps unchanged; no service/CUA/fixture/key/provider until respective actual signal/admission. Same R139/M3-05/M3-08, no helper tranche, Antigravity, Core fetch/update or repeated Owner relay. Product B blocked; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 HOLD_UNVERIFIED_DOCKER_TOOL_PIN: original additional controller PID2560 returned exit1 TOOL_PIN before any source child/boot query/reservation. Shared future controllers used2/cap2; campaign0/cap1 and service/CUA/fixture/key/provider0. Preserve source16 checks, post-quota validated review9baa, and both original wait receipts. Root may perform read-only toolchain provenance analysis and prepare one consolidated static-launch/toolchain recovery decision; no binary restoration/substitution/automatic new pin adoption, third controller, or runtime effect. Verified toolchain identity and a distinct explicit admission are required before any future runtime. Full20-file offline pin readback must precede any future controller Popen, outside its slot/clock; no reset of the two spent attempts. Same R139/M3-05/M3-08, no helper tranche/Antigravity/Core fetch/update; Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION, Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / technical metadata author / original-control custodian / COMMIT_STEWARD; independent reviewer and effect workers unreleased",
+  "activeRole": "Root ORCHESTRATOR / failure REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; all effect workers unreleased; toolchain identity unresolved",
   "updatedAt": "2026-10-25",
   "x-resolvedCoreCommit": "b8ead4f0d1bf9224338a206b2abcd893ec1801b1",
   "x-ownerRoadmapDiscipline": {
@@ -3662,20 +3662,38 @@
     "oldTechnicalRecipeConsumedNotReusable": true
   },
   "x-r139CoordRecovery20261026": {
-    "status": "OWNER_APPROVED_TECHNICAL_METADATA_BUILD_NOT_EFFECT_RELEASE",
+    "status": "HOLD_UNVERIFIED_DOCKER_TOOL_PIN_BEFORE_BOOT_OR_RESERVATION",
     "admissionRef": {
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-COORD-OWNER-RECOVERY-ADMISSION.json",
       "sha256": "c6580693da837b014ac8356d3ceaf7b1317ba4970ed6a5d05c1859327d6d2431"
     },
     "nonce": "4f37f37b37fa5295611c84b63d1d9910",
-    "sharedFutureControllerUsed": 1,
+    "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+    "sharedFutureControllerUsed": 2,
     "sharedFutureControllerCap": 2,
     "campaignUsed": 0,
+    "campaignCap": 1,
+    "originalControllerPid": 2560,
+    "originalWaitReturned": true,
+    "exitCode": 1,
+    "sourcePreclockChildren": 0,
+    "osIdentityQueriesThisAttempt": 0,
     "sourceChecksTotalSpent": 16,
     "serviceQueries": 0,
     "cuaMethods": 0,
+    "fixtureStarts": 0,
     "keyReads": 0,
     "providerCalls": 0,
-    "runtimeReleased": false
+    "runtimeReleased": false,
+    "actualOwnerFullSchemaPassed": true,
+    "reviewArtifactReusedAfterQuota": {
+      "path": "docs/reviews/R139_COORD_RECOVERY_G0_TECHNICAL_REVIEW_2026-10-26.md",
+      "sha256": "9baaed702e485362dae018954f2307e9d69edf30891d903f4edeb52c5a573110"
+    },
+    "rootHoldReceipt": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_tool_pin_hold_20261026/root_hold_receipt.json",
+    "toolPinReadback": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_tool_pin_hold_20261026/complete_static_pin_readback.json",
+    "changeOrigin": "UNKNOWN",
+    "newPinAdopted": false,
+    "thirdInvocationAuthorized": false
   }
 }

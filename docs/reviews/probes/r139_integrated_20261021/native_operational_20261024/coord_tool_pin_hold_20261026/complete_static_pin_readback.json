@@ -1,0 +1,226 @@
+{
+  "kind": "ROOT_COMPLETE_READ_ONLY_FILE_PIN_AUDIT_AFTER_TOOL_PIN_HOLD",
+  "recordedAtUTC": "2026-10-26T12:41:59.526797+00:00",
+  "buildPinRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b"
+  },
+  "result": "FAIL_CLOSED_TOOLCHAIN_DRIFT",
+  "fileCount": 20,
+  "matchedCount": 19,
+  "mismatches": [
+    {
+      "class": "tool",
+      "name": "docker",
+      "path": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+      "expectedSize": 44922800,
+      "actualSize": 44922800,
+      "expectedSha256": "b8f907c73a89c9bd0a88bddb0cb5008728af4dea0d773b3f3614e9f203737e04",
+      "actualSha256": "17cbf2f5f5f7693bbeda46e35dc930050b40aff06f41f9f5a69e4e2dd7fc12aa",
+      "matches": false,
+      "modifiedAtUTC": "2026-10-26T12:31:20.801173+00:00"
+    }
+  ],
+  "allChecks": [
+    {
+      "class": "tool",
+      "name": "python",
+      "path": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+      "expectedSize": 105816,
+      "actualSize": 105816,
+      "expectedSha256": "a2a4eff8d0b0c845284c607d50a3b5b966ac5a3121736a2e38e165bd6644d9fe",
+      "actualSha256": "a2a4eff8d0b0c845284c607d50a3b5b966ac5a3121736a2e38e165bd6644d9fe",
+      "matches": true,
+      "modifiedAtUTC": "2026-02-03T13:21:40+00:00"
+    },
+    {
+      "class": "tool",
+      "name": "git",
+      "path": "C:\\Program Files\\Git\\cmd\\git.EXE",
+      "expectedSize": 46936,
+      "actualSize": 46936,
+      "expectedSha256": "22fead8244ef3a7225fb800099a4e43eca8bcec0466774917669599c2f19a05a",
+      "actualSha256": "22fead8244ef3a7225fb800099a4e43eca8bcec0466774917669599c2f19a05a",
+      "matches": true,
+      "modifiedAtUTC": "2026-07-02T04:31:08+00:00"
+    },
+    {
+      "class": "tool",
+      "name": "powershell",
+      "path": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+      "expectedSize": 495616,
+      "actualSize": 495616,
+      "expectedSha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f",
+      "actualSha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f",
+      "matches": true,
+      "modifiedAtUTC": "2026-10-14T00:53:07.334890+00:00"
+    },
+    {
+      "class": "tool",
+      "name": "docker",
+      "path": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+      "expectedSize": 44922800,
+      "actualSize": 44922800,
+      "expectedSha256": "b8f907c73a89c9bd0a88bddb0cb5008728af4dea0d773b3f3614e9f203737e04",
+      "actualSha256": "17cbf2f5f5f7693bbeda46e35dc930050b40aff06f41f9f5a69e4e2dd7fc12aa",
+      "matches": false,
+      "modifiedAtUTC": "2026-10-26T12:31:20.801173+00:00"
+    },
+    {
+      "class": "tool",
+      "name": "node",
+      "path": "C:\\Program Files\\nodejs\\node.EXE",
+      "expectedSize": 92825416,
+      "actualSize": 92825416,
+      "expectedSha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+      "actualSha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+      "matches": true,
+      "modifiedAtUTC": "2026-08-03T04:18:08+00:00"
+    },
+    {
+      "class": "binary",
+      "path": ".cvf\\runtime\\r139_cua_source_20261025\\handlers.test.exe",
+      "expectedSize": 59561984,
+      "actualSize": 59561984,
+      "expectedSha256": "d1861e44be7f28b58d851e901a7d498c8460e553efbb20df6b0d92910c7208e7",
+      "actualSha256": "d1861e44be7f28b58d851e901a7d498c8460e553efbb20df6b0d92910c7208e7",
+      "matches": true
+    },
+    {
+      "class": "viteCli",
+      "path": "frontend\\node_modules\\vite\\bin\\vite.js",
+      "expectedSize": 2574,
+      "actualSize": 2574,
+      "expectedSha256": "fa03478846d229651a3c6aa64833ba2c6cbf580a798b92bd8f47c7480bafb5d8",
+      "actualSha256": "fa03478846d229651a3c6aa64833ba2c6cbf580a798b92bd8f47c7480bafb5d8",
+      "matches": true
+    },
+    {
+      "class": "acceptedSource",
+      "path": "scripts/r139_execution_supervisor.py",
+      "expectedSha256": "a7557917cc3ade551e78f7b4c40b0cc5aac5a312bcae2fdfbe353aba997f5203",
+      "actualSha256": "a7557917cc3ade551e78f7b4c40b0cc5aac5a312bcae2fdfbe353aba997f5203",
+      "matches": true
+    },
+    {
+      "class": "acceptedSource",
+      "path": "scripts/tests/test_r139_execution_supervisor.py",
+      "expectedSha256": "4bbd3abb54646a9bcaa691c8b29ccf49f470539475a2a87732b77e2790be2283",
+      "actualSha256": "4bbd3abb54646a9bcaa691c8b29ccf49f470539475a2a87732b77e2790be2283",
+      "matches": true
+    },
+    {
+      "class": "acceptedSource",
+      "path": "scripts/r139_vite_config.mjs.template",
+      "expectedSha256": "82a1d9ae8576fcd46718945d0a5cb44eb963a2a14d436a16e2bcdfb72b26bee9",
+      "actualSha256": "82a1d9ae8576fcd46718945d0a5cb44eb963a2a14d436a16e2bcdfb72b26bee9",
+      "matches": true
+    },
+    {
+      "class": "acceptedSource",
+      "path": "backend/api/handlers/intervention_execution_browser_test.go",
+      "expectedSha256": "0ed1148d42dcd9cb018e2a3f3cbeb9c68bdcb8904d408c365b8d05b11c2a040e",
+      "actualSha256": "0ed1148d42dcd9cb018e2a3f3cbeb9c68bdcb8904d408c365b8d05b11c2a040e",
+      "matches": true
+    },
+    {
+      "class": "acceptedSource",
+      "path": "backend/go.mod",
+      "expectedSha256": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+      "actualSha256": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+      "matches": true
+    },
+    {
+      "class": "acceptedSource",
+      "path": "backend/go.sum",
+      "expectedSha256": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b",
+      "actualSha256": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b",
+      "matches": true
+    },
+    {
+      "class": "acceptedSource",
+      "path": "frontend/package.json",
+      "expectedSha256": "d16bea0b83ad7eb871576061f7ea91534a2dd2fdc7eef26eb20ec908e4fca24d",
+      "actualSha256": "d16bea0b83ad7eb871576061f7ea91534a2dd2fdc7eef26eb20ec908e4fca24d",
+      "matches": true
+    },
+    {
+      "class": "acceptedSource",
+      "path": "frontend/package-lock.json",
+      "expectedSha256": "da41e1de5d5b853295a303092aab9433aeea8168fda2cf0420dd94e9f579fb00",
+      "actualSha256": "da41e1de5d5b853295a303092aab9433aeea8168fda2cf0420dd94e9f579fb00",
+      "matches": true
+    },
+    {
+      "class": "acceptedSource",
+      "path": "frontend/vite.config.ts",
+      "expectedSha256": "736c63d3a72a5b126841ceedeac4b4a01854a2bec71bd57d2f46a23ec3cf68de",
+      "actualSha256": "736c63d3a72a5b126841ceedeac4b4a01854a2bec71bd57d2f46a23ec3cf68de",
+      "matches": true
+    },
+    {
+      "class": "acceptedSource",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v3_design.py.txt",
+      "expectedSha256": "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d",
+      "actualSha256": "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d",
+      "matches": true
+    },
+    {
+      "class": "acceptedSource",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_pinned_preflight.py.txt",
+      "expectedSha256": "81784375b6948dee973ce1dd4a3b66851786273079f4becfbdd7c7378fbca233",
+      "actualSha256": "81784375b6948dee973ce1dd4a3b66851786273079f4becfbdd7c7378fbca233",
+      "matches": true
+    },
+    {
+      "class": "acceptedSource",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_durable_resume.py.txt",
+      "expectedSha256": "7ab2bf4c5b97009d36b932fd7aff5cf6d5b42584844f59fc02f5605f06156eda",
+      "actualSha256": "7ab2bf4c5b97009d36b932fd7aff5cf6d5b42584844f59fc02f5605f06156eda",
+      "matches": true
+    },
+    {
+      "class": "acceptedSource",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/test_r139_pinned_resume.py",
+      "expectedSha256": "9dd100bae4dcfa18b5c1fd098de56fecc534ad59fd1a4361bda0cbb256b1f227",
+      "actualSha256": "9dd100bae4dcfa18b5c1fd098de56fecc534ad59fd1a4361bda0cbb256b1f227",
+      "matches": true
+    }
+  ],
+  "narrowKnownDockerDirectoryMetadata": [
+    {
+      "name": "docker",
+      "size": 1359
+    },
+    {
+      "name": "docker-compose",
+      "size": 1359
+    },
+    {
+      "name": "docker-compose.exe",
+      "size": 33379760
+    },
+    {
+      "name": "docker-credential-desktop.exe",
+      "size": 15692208
+    },
+    {
+      "name": "docker-credential-wincred.exe",
+      "size": 2345904
+    },
+    {
+      "name": "docker.exe",
+      "size": 44922800,
+      "sha256": "17cbf2f5f5f7693bbeda46e35dc930050b40aff06f41f9f5a69e4e2dd7fc12aa",
+      "equalsApprovedDocker": false
+    }
+  ],
+  "unknownChangeOrigin": true,
+  "controllerInvokedEarlier": true,
+  "newControllerInvokedByThisReadOnlyAudit": false,
+  "sourceTestsRun": 0,
+  "serviceQueriesRun": 0,
+  "toolExecutionsByAudit": 0,
+  "osIdentityQueries": 0,
+  "claimBoundary": "Local file bytes and metadata only. No automatic-updater attribution, trust in current binary, restoration, substitution, new approved pin or runtime readiness asserted."
+}

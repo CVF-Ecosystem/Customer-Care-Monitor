@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Current R139 Owner-approved coordination recovery: source7ef/buildad348,16checks retained; original controller1 used of2, campaign0/1; actual metadata review before additional invocation."
+      "description": "Current R139 TOOL_PIN HOLD: controllers2/2 spent, campaign0/1; Docker executable unverified, source16 checks and quota-resumed review retained; no third invocation or auto-adoption."
     },
     {
       "id": "r060-work-order",
@@ -38006,6 +38006,62 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-COORD-RECOVERY-G0-TECHNICAL-RELEASE-ADMISSION.json",
       "status": "ACTIVE",
       "description": "R139 same-order additional-slot recovery actual metadata, draft technical packet or availability only; no runtime capability/effect claimed."
+    },
+    {
+      "id": "r139-coord-tool-hold-c2db6bdd4899ea",
+      "family": "continuity",
+      "path": "docs/reviews/R139_COORD_RECOVERY_TOOL_PIN_HOLD_REVIEW_2026-10-26.md",
+      "status": "ACTIVE",
+      "description": "R139 actual TOOL_PIN HOLD evidence/static20-file readback or nonexecuting toolchain recovery design; controllers2/2, campaign0/1, no new binary adoption or effect admission."
+    },
+    {
+      "id": "r139-coord-tool-hold-19da7f48ecb7b2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_tool_pin_hold_20261026/complete_static_pin_readback.json",
+      "status": "ACTIVE",
+      "description": "R139 actual TOOL_PIN HOLD evidence/static20-file readback or nonexecuting toolchain recovery design; controllers2/2, campaign0/1, no new binary adoption or effect admission."
+    },
+    {
+      "id": "r139-coord-tool-hold-496760b2834660",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_tool_pin_hold_20261026/consolidated_static_launch_gate_and_toolchain_decision.json",
+      "status": "ACTIVE",
+      "description": "R139 actual TOOL_PIN HOLD evidence/static20-file readback or nonexecuting toolchain recovery design; controllers2/2, campaign0/1, no new binary adoption or effect admission."
+    },
+    {
+      "id": "r139-coord-tool-hold-1c07261b6a23f4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_tool_pin_hold_20261026/intent.json",
+      "status": "ACTIVE",
+      "description": "R139 actual TOOL_PIN HOLD evidence/static20-file readback or nonexecuting toolchain recovery design; controllers2/2, campaign0/1, no new binary adoption or effect admission."
+    },
+    {
+      "id": "r139-coord-tool-hold-6d085c89767905",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_tool_pin_hold_20261026/metadata_verified_before_extraction.json",
+      "status": "ACTIVE",
+      "description": "R139 actual TOOL_PIN HOLD evidence/static20-file readback or nonexecuting toolchain recovery design; controllers2/2, campaign0/1, no new binary adoption or effect admission."
+    },
+    {
+      "id": "r139-coord-tool-hold-d0ad969efb76a0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_tool_pin_hold_20261026/original_wait_exit.json",
+      "status": "ACTIVE",
+      "description": "R139 actual TOOL_PIN HOLD evidence/static20-file readback or nonexecuting toolchain recovery design; controllers2/2, campaign0/1, no new binary adoption or effect admission."
+    },
+    {
+      "id": "r139-coord-tool-hold-1eff3c12a68008",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_tool_pin_hold_20261026/root_hold_receipt.json",
+      "status": "ACTIVE",
+      "description": "R139 actual TOOL_PIN HOLD evidence/static20-file readback or nonexecuting toolchain recovery design; controllers2/2, campaign0/1, no new binary adoption or effect admission."
+    },
+    {
+      "id": "r139-coord-tool-hold-bd608344ba82ba",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_tool_pin_hold_20261026/started.json",
+      "status": "ACTIVE",
+      "description": "R139 actual TOOL_PIN HOLD evidence/static20-file readback or nonexecuting toolchain recovery design; controllers2/2, campaign0/1, no new binary adoption or effect admission."
     }
   ]
 }

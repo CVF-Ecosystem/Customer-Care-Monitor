@@ -1,0 +1,35 @@
+{
+  "kind": "R139_CONSOLIDATED_STATIC_LAUNCH_GATE_AND_TOOLCHAIN_RECOVERY_DESIGN",
+  "status": "DESIGN_AND_READBACK_ONLY_NOT_AN_EXECUTION_ADMISSION",
+  "sameWorkOrder": "CCMAI-RUNTIME-139",
+  "roadmap": [
+    "M3-05",
+    "M3-08"
+  ],
+  "acceptedSource13Unchanged": true,
+  "sourceChecksRetained": 16,
+  "newSourceTests": 0,
+  "problem": "Mutable installed Docker.exe no longer matches approved SHA; previous wrapper checked Python/Git but deferred remaining tool checks to counted controller.",
+  "implementedReadback": "Root audited all20 pinned files as bytes:19 match, Docker mismatch; no executable from the audit was run. This is an actual current metadata check, not a future integrated-launch PASS.",
+  "requiredStructuralGuardBeforeAnyFutureController": [
+    "Read all5 tool pins, accepted binary, Vite and all13 source pins, strict expected sizes/SHA/path schema, actual owner full schema, current review/canonical/protected refs, exclusive paths; collect all failures in one offline pass",
+    "Any mismatch returns HOLD outside the original controller launcher, without controller extraction, slot consumption, OS query, service or API; do not reinterpret already consumed2/2 attempts",
+    "For any future accepted launch, recheck all approved executable bytes immediately before original Popen; Python/Git-only precheck is insufficient",
+    "Prefer a reviewed immutable campaign tool snapshot when exact approved bytes/provenance are available; any new tool path or pin must use a distinct reviewed accepted-build record and explicit toolchain-adoption authority, never edit old pins or original receipt",
+    "No controller allowance, clock, query or API budget is reset by offline validation or provider/model quota recovery"
+  ],
+  "toolProvenanceDecision": [
+    "Establish trusted original-approved Docker bytes at expectedSHA b8f907c73a89c9bd0a88bddb0cb5008728af4dea0d773b3f3614e9f203737e04; no matching copy identified in the narrow existing Docker bin directory",
+    "Or independently verify provenance of a replacement toolchain and obtain separate explicit adoption authority with a new accepted-build pin record; currentSHA17cb alone is not trust evidence"
+  ],
+  "pendingBeforeAnyFutureRuntime": [
+    "Resolve verified toolchain identity first",
+    "One consolidated source/guard/review/authority packet with actual full static pin readback and clean commit",
+    "Explicit new controller admission beyond current spent2/2; do not ask for repeated attempts while toolchain is unverified"
+  ],
+  "runtimeExecutableNow": false,
+  "ownerActionRequestedNow": "No blind third attempt. Toolchain identity/provenance must be resolved before a concrete runtime release decision.",
+  "oldFailuresAndReviewsPreserved": true,
+  "noAntigravityOrHelperTranche": true,
+  "noCoreFetchUpdateOrToolchainAutoAdoption": true
+}

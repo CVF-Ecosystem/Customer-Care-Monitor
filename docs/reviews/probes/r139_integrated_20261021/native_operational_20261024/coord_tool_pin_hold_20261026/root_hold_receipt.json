@@ -1,0 +1,102 @@
+{
+  "kind": "ROOT_OBSERVED_R139_COORD_RECOVERY_TOOL_PIN_HOLD",
+  "status": "HOLD_UNVERIFIED_DOCKER_TOOL_PIN_BEFORE_BOOT_OR_RESERVATION",
+  "observedAtUTC": "2026-10-26T12:44:13.733301+00:00",
+  "dispatchHead": "0139e3128a541901a28be5e9aca7764b92c23c0c",
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+  "recipeSha256": "7c5b9c97eed55b47195f609331a3f0255f38c8bd1ac7efc2a8a67c5ba6da3584",
+  "rootWrapperPid": 27340,
+  "controllerInvoked": true,
+  "originalControllerPid": 2560,
+  "originalWaitReturned": true,
+  "exitCode": 1,
+  "startedAtUTC": "2026-10-26T12:34:49.099752+00:00",
+  "returnedAtUTC": "2026-10-26T12:34:49.737962+00:00",
+  "reason": "TOOL_PIN",
+  "actualOwnerFullSchemaVerifiedBeforeExtraction": true,
+  "sourcePreclockChildCount": 0,
+  "osIdentityQueriesThisAttempt": 0,
+  "sharedFutureControllerUsed": 2,
+  "sharedFutureControllerCap": 2,
+  "campaignUsed": 0,
+  "campaignCap": 1,
+  "reservationExists": false,
+  "rootSignalExists": false,
+  "serviceQueries": 0,
+  "cuaMethods": 0,
+  "fixtureStarts": 0,
+  "keyReads": 0,
+  "providerCalls": 0,
+  "sourceChecksTotalSpent": 16,
+  "newSourceTests": 0,
+  "bootValidationQualification": "This attempt failed tool validation before source child-log creation, OS identity query or reservation. Prior first attempt boot validation remains historical evidence only.",
+  "readbackCorrection": {
+    "originalPrivateReadbackPath": ".cvf/runtime/r139_v3_coord_recovery_20261026/tool_pin_actual_readback_after_hold.json",
+    "originalPrivateReadbackSha256": "ab60d9a7823e2cfd076f12f0d2747abcb8439066d0a9c32b015b5465814bf59f",
+    "invalidField": "newControllerInvoked:false",
+    "correction": "Actual second original controller WAS invoked (PID2560) and returned1. The earlier readback field is incorrect; retain raw bytes, use original start/wait receipts and controllerInvoked:true here.",
+    "toolHashValuesRetained": [
+      {
+        "tool": "python",
+        "path": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "expectedSize": 105816,
+        "actualSize": 105816,
+        "expectedSha256": "a2a4eff8d0b0c845284c607d50a3b5b966ac5a3121736a2e38e165bd6644d9fe",
+        "actualSha256": "a2a4eff8d0b0c845284c607d50a3b5b966ac5a3121736a2e38e165bd6644d9fe",
+        "modifiedAtUTC": "2026-02-03T13:21:40+00:00",
+        "matches": true
+      },
+      {
+        "tool": "git",
+        "path": "C:\\Program Files\\Git\\cmd\\git.EXE",
+        "expectedSize": 46936,
+        "actualSize": 46936,
+        "expectedSha256": "22fead8244ef3a7225fb800099a4e43eca8bcec0466774917669599c2f19a05a",
+        "actualSha256": "22fead8244ef3a7225fb800099a4e43eca8bcec0466774917669599c2f19a05a",
+        "modifiedAtUTC": "2026-07-02T04:31:08+00:00",
+        "matches": true
+      },
+      {
+        "tool": "powershell",
+        "path": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+        "expectedSize": 495616,
+        "actualSize": 495616,
+        "expectedSha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f",
+        "actualSha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f",
+        "modifiedAtUTC": "2026-10-14T00:53:07.334890+00:00",
+        "matches": true
+      },
+      {
+        "tool": "docker",
+        "path": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+        "expectedSize": 44922800,
+        "actualSize": 44922800,
+        "expectedSha256": "b8f907c73a89c9bd0a88bddb0cb5008728af4dea0d773b3f3614e9f203737e04",
+        "actualSha256": "17cbf2f5f5f7693bbeda46e35dc930050b40aff06f41f9f5a69e4e2dd7fc12aa",
+        "modifiedAtUTC": "2026-10-26T12:31:20.801173+00:00",
+        "matches": false
+      },
+      {
+        "tool": "node",
+        "path": "C:\\Program Files\\nodejs\\node.EXE",
+        "expectedSize": 92825416,
+        "actualSize": 92825416,
+        "expectedSha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+        "actualSha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+        "modifiedAtUTC": "2026-08-03T04:18:08+00:00",
+        "matches": true
+      }
+    ]
+  },
+  "completeStaticReadbackRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_tool_pin_hold_20261026/complete_static_pin_readback.json",
+    "sha256": "933e628bfc2d860c206ea893430b24f969bf1f65f8bd216fb74dc6ffd4b0b5b7"
+  },
+  "changeOrigin": "UNKNOWN_NOT_ATTRIBUTED_TO_AUTO_UPDATE_OR_ATTACK",
+  "newDockerPinAdopted": false,
+  "binaryRestoredOrSubstituted": false,
+  "retryAuthorized": false,
+  "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderrSha256": "d02711b49b1008731ca7b9e261ddcb7ca0256c23ed894a237caa92598adee09a",
+  "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION"
+}

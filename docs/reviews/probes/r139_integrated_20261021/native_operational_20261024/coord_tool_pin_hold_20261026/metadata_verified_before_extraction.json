@@ -1,0 +1,19 @@
+{
+  "ownerRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_coordination_owner_20261026.json",
+    "sha256": "92b7d0a4898a55d282b0d317bbaaf725a5a4797503009daaada4c3bed36d0197"
+  },
+  "supplementSha256": "c6580693da837b014ac8356d3ceaf7b1317ba4970ed6a5d05c1859327d6d2431",
+  "previousOriginalExitRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/original_wait_exit.json",
+    "sha256": "8f18cef19fbfadde33948b17ee08b5cfb558aee261eb538bea65e0c364e578cf"
+  },
+  "currentReviewRef": {
+    "path": "docs/reviews/R139_COORD_RECOVERY_G0_TECHNICAL_REVIEW_2026-10-26.md",
+    "sha256": "9baaed702e485362dae018954f2307e9d69edf30891d903f4edeb52c5a573110"
+  },
+  "fullOwnerSchemaMatches": true,
+  "coordinationOwnerOnly": true,
+  "verifiedBeforeControllerExtractionAndBootQuery": true,
+  "effectsObserved": 0
+}

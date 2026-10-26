@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 Worker: Sol Medium /root/r139_coord_recovery_packet_worker (metadata); Root (original controller and exact queries); Luna producer and Sol observer (browser)
 Reviewer: Sol Medium /root/r139_final_technical_review (technical packet); Root (actual independent native G0 evidence)
@@ -761,7 +761,7 @@ Acceptedsource7ef30823/buildad348196,16checksretained; currentnonce319839d1bdabc
 
 ## R139 v3 actual preclock HOLD — 2026-10-26
 
-CCMAI-RUNTIME-139 Owner-approved coordination recovery technical BUILD: additional original controller1, cumulative cap2 with previous used1 retained; source7ef30823/buildad348196 and16 checks reused, no new source tests. Root validates actual generated owner full grant/source/build/nonce/exclusivity/schema before extraction or OS query. Rebind fresh actor ACKs, distinct paths/nonce4f37f37b37fa5295611c84b63d1d9910, all refs and eight exact canonical snapshots; independent consolidated review, pinned e9/profile1.1 gates and clean commit before one additional original Root-held invocation. Campaign0/1, all other caps unchanged; no service/CUA/fixture/key/provider until respective actual signal/admission. Same R139/M3-05/M3-08, no helper tranche, Antigravity, Core fetch/update or repeated Owner relay. Product B blocked; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 HOLD_UNVERIFIED_DOCKER_TOOL_PIN: original additional controller PID2560 returned exit1 TOOL_PIN before any source child/boot query/reservation. Shared future controllers used2/cap2; campaign0/cap1 and service/CUA/fixture/key/provider0. Preserve source16 checks, post-quota validated review9baa, and both original wait receipts. Root may perform read-only toolchain provenance analysis and prepare one consolidated static-launch/toolchain recovery decision; no binary restoration/substitution/automatic new pin adoption, third controller, or runtime effect. Verified toolchain identity and a distinct explicit admission are required before any future runtime. Full20-file offline pin readback must precede any future controller Popen, outside its slot/clock; no reset of the two spent attempts. Same R139/M3-05/M3-08, no helper tranche/Antigravity/Core fetch/update; Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION, Facebook/Zalo OA parked.
 
 Owner payload was pinned but missing freshGrantSha256/rootExclusive and retained old source/build; Root and independent metadata review missed this ignored-file schema. Original controller23500 exit1 and all30 child waits are retained (one optional Git config miss exit1 is expected); actual boot-query child026 exit0, then COORD_OWNER. No reservation or service/browser/runtime effect. New recovery is a concrete proposal only; no retry or allowance reset.
 
@@ -769,3 +769,10 @@ Owner payload was pinned but missing freshGrantSha256/rootExclusive and retained
 ## Owner-approved coordination recovery BUILD acknowledgment — 2026-10-26
 
 Owner replied “duyệt” to the committed consolidated recovery decision. Root rehydrated canonical continuity and corrected stale current-handoff source/count prose against accepted build and original exit evidence; no silent authority choice. Root transitions ORCHESTRATOR/technical metadata author; one existing R139, new supplement CVF_SESSION/authority/CCMAI-RUNTIME-139-COORD-OWNER-RECOVERY-ADMISSION.json. Old original receipts and source checks retained. Additional controller1 conditional on full actual metadata review/clean commit; no effect yet.
+
+
+## Actual additional preclock TOOL_PIN HOLD — 2026-10-26
+
+CCMAI-RUNTIME-139 HOLD_UNVERIFIED_DOCKER_TOOL_PIN: original additional controller PID2560 returned exit1 TOOL_PIN before any source child/boot query/reservation. Shared future controllers used2/cap2; campaign0/cap1 and service/CUA/fixture/key/provider0. Preserve source16 checks, post-quota validated review9baa, and both original wait receipts. Root may perform read-only toolchain provenance analysis and prepare one consolidated static-launch/toolchain recovery decision; no binary restoration/substitution/automatic new pin adoption, third controller, or runtime effect. Verified toolchain identity and a distinct explicit admission are required before any future runtime. Full20-file offline pin readback must precede any future controller Popen, outside its slot/clock; no reset of the two spent attempts. Same R139/M3-05/M3-08, no helper tranche/Antigravity/Core fetch/update; Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION, Facebook/Zalo OA parked.
+
+Mandatory Root launch discipline: before any future counted controller launch, perform full current file-pin readback (all5 tools, accepted binary, Vite,13 source files) plus actual owner/ref/canonical/path checks outside the launcher. Reject every mismatch without invoking a controller or starting its clock. This is a process requirement; the old wrapper did not enforce all5 tool checks before Popen, and no retroactive prevention or budget refund is claimed. Never silently adopt a changed executable hash.
