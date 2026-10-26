@@ -1,0 +1,31 @@
+{
+  "kind": "ROOT_DISPATCHER_OWNED_R139_TECHNICAL_ALLOCATIONS",
+  "authorityRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-TECHNICAL-BUDGET-AND-DOCKER-ADOPTION-ADMISSION.json",
+    "sha256": "be07b72bdbd35969bd8f29979b06aa1c6d97a79a33deab1d48734d8fb9d25787"
+  },
+  "workerMayEdit": false,
+  "spentRetained": {
+    "originalControllers": 2,
+    "sourceChecks": 16
+  },
+  "allocations": [
+    {
+      "id": "R139-DELEGATED-ALLOC-001",
+      "rootRecordedAtUTC": "2026-10-26T14:28:23.675984+00:00",
+      "reason": "Implement reviewed Docker CLI snapshot/full static launch pin guard before next original preclock.",
+      "controllerUsedBefore": 2,
+      "controllerCeiling": 3,
+      "focusedGuardProcessesPlanned": 2,
+      "paidOrRuntimeEnvelopeChanged": false
+    }
+  ],
+  "actualNewUsage": {
+    "controllers": 0,
+    "focusedGuardProcesses": 0,
+    "campaigns": 0,
+    "serviceQueries": 0,
+    "cuaMethods": 0,
+    "providerCalls": 0
+  }
+}

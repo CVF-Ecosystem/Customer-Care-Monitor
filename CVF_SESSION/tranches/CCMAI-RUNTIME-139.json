@@ -83,10 +83,10 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "CHANGES_REQUIRED",
-  "phase": "REVIEW",
+  "status": "BUILD",
+  "phase": "BUILD",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "BLOCKED_WITH_REASON",
+  "workOrderStatus": "ACTIVE",
   "buildCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
   "reviewEvidence": [
     "docs/reviews/R139_INTERNAL_CUA_CONSOLIDATED_SOURCE_REVIEW_2026-10-24.md",
@@ -100,7 +100,7 @@
     "docs/reviews/R139_PINNED_RESUME_CONSOLIDATED_SOURCE_REVIEW_2026-10-26.md",
     "docs/reviews/R139_V3_ACTIVATION_ENV_SOURCE_REVIEW_2026-10-26.md"
   ],
-  "disposition": "TOOL_PIN HOLD preserved; offline signature/install evidence and one consolidated adoption/snapshot/static-guard/preclock proposal pending Owner. No new runtime authority.",
+  "disposition": "Owner-delegated technical budget; Docker snapshot/static guard implementation in same R139, runtime unreleased.",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -169,7 +169,8 @@
     "CHANGES_REQUIRED",
     "BUILD",
     "REVIEW_PENDING",
-    "CHANGES_REQUIRED"
+    "CHANGES_REQUIRED",
+    "BUILD"
   ],
   "actualUse": {
     "status": "HOLD_MANUAL_HOLD_PROVIDER_OUTCOME_UNKNOWN",
@@ -1320,5 +1321,20 @@
       "sha256": "deabc2ac7c9e6eda5a4184183ab8b80991a29720834be404a7bbc9556a661b0a"
     },
     "independentDecisionReview": "REVIEW_PASS_DECISION_ONLY_QUALIFIED_NO_ACTIVATION"
+  },
+  "x-r139DelegatedTechnical20261026": {
+    "status": "OWNER_DELEGATED_BUILD_NOT_RUNTIME_RELEASE",
+    "authorityRef": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-TECHNICAL-BUDGET-AND-DOCKER-ADOPTION-ADMISSION.json",
+      "sha256": "be07b72bdbd35969bd8f29979b06aa1c6d97a79a33deab1d48734d8fb9d25787"
+    },
+    "allocationLedger": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_technical_allocations_20261026.json",
+    "controllerUsed": 2,
+    "initialControllerCeiling": 3,
+    "sourceChecksRetained": 16,
+    "newFocusedGuardProcessesUsed": 0,
+    "campaignUsed": 0,
+    "snapshotCreated": false,
+    "runtimeReleased": false
   }
 }

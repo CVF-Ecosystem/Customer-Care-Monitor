@@ -38111,6 +38111,20 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/docker_provenance_20261026/offline_signature_analysis.json",
       "status": "ACTIVE",
       "description": "R139 qualified offline Docker provenance or proposed snapshot/full-static-gate/additional-slot decision; no new pin, snapshot, verification process or runtime admitted."
+    },
+    {
+      "id": "r139-delegated-1b1dee0d41d013",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-TECHNICAL-BUDGET-AND-DOCKER-ADOPTION-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Owner delegation of same-R139 technical allocations and reviewed Docker snapshot/static guard package; spent usage retained, no runtime/API expansion."
+    },
+    {
+      "id": "r139-delegated-9c5d38bf12925e",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_technical_allocations_20261026.json",
+      "status": "ACTIVE",
+      "description": "Owner delegation of same-R139 technical allocations and reviewed Docker snapshot/static guard package; spent usage retained, no runtime/API expansion."
     }
   ]
 }

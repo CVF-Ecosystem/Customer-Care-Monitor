@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "OWNER_DELEGATED_R139_TECHNICAL_BUDGET_AND_QUALIFIED_DOCKER_ADOPTION",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "date": "2026-10-26",
+  "riskCeiling": "R2",
+  "ownerApproved": true,
+  "ownerInstruction": "cho phép chủ động hạn mức để làm việc",
+  "interpretation": "Direct response to the reviewed consolidated Docker snapshot/static-guard/verification/preclock proposal: authorizes implementation of that same R139 package and delegates necessary technical-budget allocation to Root without per-check or per-attempt Owner relay.",
+  "decisionRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/docker_provenance_20261026/consolidated_adoption_decision.json",
+    "sha256": "c810cb872fd35765576a8e088027e954e6ccfb158565d48e9a08b1a60816ab92"
+  },
+  "qualifiedDecisionReviewRef": {
+    "path": "docs/reviews/R139_DOCKER_PROVENANCE_ADOPTION_DECISION_REVIEW_2026-10-26.md",
+    "sha256": "deabc2ac7c9e6eda5a4184183ab8b80991a29720834be404a7bbc9556a661b0a"
+  },
+  "rootBudgetSteward": "Root",
+  "technicalDelegation": {
+    "offlineFocusedChecks": "Root may allocate necessary same-scope focused checks, retaining cumulative usage and originals; no old-suite replay just for quota reset.",
+    "metadataInspections": "Necessary local metadata/provenance/pin/source/schema checks allowed.",
+    "preclockControllers": "Root may authorize additional distinct original preclock invocations after known failure analysis and independent readiness review; retain cumulative usage and exact Popen/wait/exit; no blind or uncertain replay.",
+    "allocationRecording": "Root records each allocation before use in dispatcher-owned allocation ledger, linked to this immutable delegation; workers cannot widen budgets or seeds.",
+    "campaignSetupGuard": "Root may tune internal technical setup bounds if supported by evidence and reviewed implementation; no campaign deadline reset implied."
+  },
+  "initialAllocation": {
+    "controllersUsed": 2,
+    "controllerTotalCeiling": 3,
+    "additionalOriginalInvocations": 1,
+    "sourceChecksPreviouslySpent": 16,
+    "newFocusedGuardProcessesPlanned": 2
+  },
+  "retainedExternalEnvelope": {
+    "campaignUsed": 0,
+    "campaignCap": 1,
+    "wholeCampaignSeconds": 1200,
+    "cleanupCutoffSeconds": 1020,
+    "internalSetupSeconds": 180,
+    "serviceQueries": 5,
+    "cuaMethods": 64,
+    "cuaStages": [
+      8,
+      4,
+      48,
+      4
+    ],
+    "tabMetadataInventories": 3,
+    "ownedPages": 1,
+    "g2StatusStarts": 16,
+    "physicalProviderCalls": 1,
+    "maximumUSD": 1,
+    "keyContentReads": 1,
+    "automaticRetry": 0
+  },
+  "notDelegatedWithoutNewBoundaryAuthority": [
+    "Increase paid API attempts or USD ceiling",
+    "Production data, deployment, publication, destructive actions or unrelated scope",
+    "Secret use outside already approved existing staged provider key after actual G0/runtime admission",
+    "Blind replay of unknown external effects, refunding spent usage, implicit clock/quota reset"
+  ],
+  "dockerAdoption": {
+    "approvedQualifiedOfflineEvidence": true,
+    "installedSourcePath": "C:/Users/tiennm/AppData/Local/Programs/DockerDesktop/resources/bin/docker.exe",
+    "sha256": "17cbf2f5f5f7693bbeda46e35dc930050b40aff06f41f9f5a69e4e2dd7fc12aa",
+    "size": 44922800,
+    "snapshotPath": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_docker_tool_snapshot_20261026\\docker.exe",
+    "preserveInstalledFile": true,
+    "newAcceptedBuildRecordRequired": true,
+    "revocationAndWinVerifyTrustNotClaimed": true,
+    "noOnlineFetchOrInstaller": true
+  },
+  "allowedImplementationClass": "Same existing R139 operational custody/static metadata guard and test code-as-data under admitted review/probe family plus ignored Root runtime; accepted13 product/controller source files unchanged unless separately justified same-scope repair under standing Owner authority.",
+  "allowedPaths": [
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+    "docs/reviews/R139_*.md",
+    "docs/reviews/probes/r139_integrated_20261021/**",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md",
+    ".cvf/runtime/r139_*/**"
+  ],
+  "roles": {
+    "orchestratorBudgetCommitSteward": "Root",
+    "implementationWorker": "/root/r139_coord_recovery_packet_worker",
+    "independentReviewer": "/root/r139_toolchain_adoption_review",
+    "browserProducer": "/root/r139_live_browser_producer",
+    "browserObserver": "/root/r139_sol_browser_observer"
+  },
+  "baseCommit": "a901f53c87e8e9217d6e7b5cc46f32e8295b1a82",
+  "noNewTrancheOrAntigravity": true,
+  "currentlyReleasedRuntimeEffects": 0
+}
