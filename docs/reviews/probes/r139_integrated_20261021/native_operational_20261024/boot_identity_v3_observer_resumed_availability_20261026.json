@@ -1,0 +1,14 @@
+{
+  "kind": "ROOT_RECORDED_COLLABORATION_AVAILABILITY",
+  "actor": "/root/r139_sol_browser_observer",
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+  "acceptedBuildPinsSha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b",
+  "campaignNonce": "319839d1bdabc006390d02cf9c7c773b",
+  "nativeContractId": "r139-cua-boot-identity-v3-20261026",
+  "producerTaskId": "/root/r139_live_browser_producer",
+  "observedAtUTC": "2026-10-26T10:00:58.283572+00:00",
+  "ready": true,
+  "effects": 0,
+  "originalMessage": "I rehydrated compact/canonical continuity and v3 browser plan. My actual canonical task ID is /root/r139_sol_browser_observer. Accepted build pin SHA-256 verified locally as ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b. Availability only; effects 0.",
+  "qualification": "Root transcription of collaboration response; not native browser transcript."
+}

@@ -8,7 +8,7 @@
   "purpose": "One same-order conditional campaign; planned operations only, not runtime evidence",
   "authority": {
     "sourceAmendmentCommitted": "09e433e93d4406a901f90666f0e7ec5aa3631828",
-    "sourceDispatchCommitted": "63742e1143755db2b8fac09cb7e8a7cc3effef4d",
+    "sourceDispatchCommitted": "0eda76156fa075eaa148a36b968eb0f2dbb37622",
     "observationCapsAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
     "observationCapsOwnerApproved": true,
     "campaignReserved": false,
@@ -18,32 +18,34 @@
     "providerCallsStarted": 0,
     "pathDisposition": "Root-authorized uniquely named plan within inherited evidenceFamily reentry_source_checks/** and active source work order; does not widen source or immutable seed paths",
     "sourceBuildAndRuntimeEffectAdmission": "Source/build accepted; independently reviewed committed G0 technical release plus original reservation before effects; distinct Runtime Effect Admission still required before fixture/key/provider",
-    "sourceCommit": "b330f70b7e760ffee1113d57abc7133c725c57cd",
+    "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
     "acceptedBuildPinsRef": {
-      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-V2-ACCEPTED-BUILD-PINS-ADMISSION.json",
-      "sha256": "3366eb41379c68419b235e5295817dafa74215a94dd5bcc8b4e323a6dfc215c2"
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "sha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b"
     },
-    "bootRecoveryAdmissionSha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb"
+    "bootRecoveryAdmissionSha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb",
+    "historicalCuaSourceDispatchCommitted": "63742e1143755db2b8fac09cb7e8a7cc3effef4d",
+    "acceptedBuildBindingCommit": "20660b777941d412f11b4eeb08e4d60a3d92ab10"
   },
   "actors": {
     "g0Producer": {
-      "canonicalTaskId": "/root/r139_cua_browser_producer",
+      "canonicalTaskId": "/root/r139_live_browser_producer",
       "status": "actual renewed original metadata ACK accepted by Root, zero effects"
     },
     "g0IndependentObserver": {
-      "canonicalTaskId": "/root/r139_cua_browser_observer",
+      "canonicalTaskId": "/root/r139_sol_browser_observer",
       "status": "actual distinct renewed original metadata ACK accepted by Root, zero effects"
     },
     "g2ProductUiExecutor": {
-      "canonicalTaskId": "/root/r139_cua_browser_producer",
+      "canonicalTaskId": "/root/r139_live_browser_producer",
       "role": "internal browser worker, conditional separate Runtime Effect Admission"
     },
     "terminalCoordinator": {
-      "canonicalTaskId": "/root/r139_cua_browser_observer",
+      "canonicalTaskId": "/root/r139_sol_browser_observer",
       "role": "bound observer in same four stages; Root coordinates, Owner closes exact tab via operator_fallback"
     },
     "internalServiceRuntimeActor": {
-      "canonicalTaskId": "/root/r139_cua_recipe_worker",
+      "canonicalTaskId": "/root",
       "role": "five exact queries after actual Root signal; runtime only after separate admission"
     }
   },
@@ -165,7 +167,7 @@
   },
   "g2": {
     "status": "HOLD until observation-cap grant, source/build/recipe acceptance, actual G0 and separately committed Runtime Effect Admission",
-    "executor": "/root/r139_cua_browser_producer",
+    "executor": "/root/r139_live_browser_producer",
     "maxMethods": 48,
     "maxCaptures": 4,
     "steps": [
@@ -216,14 +218,15 @@
     "providerCalls": 0
   },
   "rootRepairDisposition": "Original Luna draft data: click route/intermediate unapproved inventory/Root G2 executor withdrawn before any effect. This Root plan repair is part of the one consolidated F01-F07 response, not a new tranche.",
-  "sourceCommit": "b330f70b7e760ffee1113d57abc7133c725c57cd",
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
   "acceptedBuildPinsRef": {
-    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-V3-ACCEPTED-BUILD-PINS-ADMISSION.json",
-    "sha256": "3366eb41379c68419b235e5295817dafa74215a94dd5bcc8b4e323a6dfc215c2"
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b"
   },
   "nativeContractId": "r139-cua-boot-identity-v3-20261026",
   "campaignNonce": "319839d1bdabc006390d02cf9c7c773b",
-  "acceptedBuildPinsSha256": "3366eb41379c68419b235e5295817dafa74215a94dd5bcc8b4e323a6dfc215c2",
-  "currentSourceStatus": "SOURCE_REVIEW_PASS_B330F70B_14_COUNTED_CHECKS",
-  "actualActorMetadataRenewed": false
+  "acceptedBuildPinsSha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b",
+  "currentSourceStatus": "ACCEPTED_7EF30823_AD348196",
+  "actualActorMetadataRenewed": false,
+  "currentSourceCheckCount": 16
 }

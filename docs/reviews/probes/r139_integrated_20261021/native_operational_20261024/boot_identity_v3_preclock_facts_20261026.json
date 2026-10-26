@@ -10,8 +10,8 @@
   "readinessRoot": ".cvf/runtime/r139_v3_reentry_20261026_readiness",
   "activationLogRoot": ".cvf/runtime/r139_v3_reentry_20261026_activation_logs",
   "recorderOutputRoot": ".cvf/runtime/r139_v3_reentry_20261026_recorder",
-  "dockerConfigDir": ".cvf/runtime/r139_v3_reentry_20261026_readiness/empty_docker_config",
-  "dockerConfigSha256": "EMPTY_DIRECTORY_NO_FILE_CONTENT_HASH",
+  "dockerConfigDir": ".cvf/runtime/r139_v3_reentry_20261026_readiness/docker_config",
+  "dockerConfigSha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
   "reservationPath": ".cvf/runtime/r139_v3_reentry_20261026_readiness/campaign_reservation.json",
   "signalPath": ".cvf/runtime/r139_v3_reentry_20261026_readiness/coordination/root_g0_release.json",
   "failurePath": ".cvf/runtime/r139_v3_reentry_20261026_readiness/coordination/activation_failure.json",
@@ -24,19 +24,19 @@
   "keyReads": 0,
   "providerCalls": 0,
   "metadataObservationUsed": 1,
-  "sourceChecksOldSpent": 8,
-  "freshWorkerPythonUsed": 1,
-  "freshRootPythonUsed": 1,
+  "sourceChecksOldSpent": 10,
+  "freshWorkerPythonUsed": 4,
+  "freshRootPythonUsed": 2,
   "newTranches": 0,
   "productB": "BLOCKED_PENDING_OPERATIONAL_ADMISSION",
-  "sourceCommit": "b330f70b7e760ffee1113d57abc7133c725c57cd",
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
   "acceptedBuildPinsRef": {
-    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-V3-ACCEPTED-BUILD-PINS-ADMISSION.json",
-    "sha256": "3366eb41379c68419b235e5295817dafa74215a94dd5bcc8b4e323a6dfc215c2"
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b"
   },
   "payloadSha256": "ffbf475dee7a28a785c2ce543ad50cda55819c72debdf8c24e0a05104d599f19",
-  "designSha256": "89d6f20eb1b80e1e5f331876886542fce7046fe010e0d6982b1b6b8f56f29454",
-  "sourceCheckTotalSpent": 14,
+  "designSha256": "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d",
+  "sourceCheckTotalSpent": 16,
   "sourceChecksRemaining": 0,
   "updatedAtUTC": "PENDING_ROOT_SEAL",
   "freshGrantSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
@@ -56,5 +56,44 @@
   "sharedFutureControllerUsed": 0,
   "sharedFutureControllerCap": 1,
   "v2ReleaseSupersededDisabled": true,
-  "runtimeExecutableNow": false
+  "runtimeExecutableNow": false,
+  "internalSetupSeconds": 180,
+  "currentSourceStatus": "ACCEPTED_7EF30823_AD348196_NO_NEW_SOURCE_CHECKS",
+  "sourceUseQualification": "10 historical plus 6 Owner repair focused invocations, including retained failure; no numerical Owner cap invented or allowance reset.",
+  "metadataRefreshedAtUTC": "2026-10-25T23:33:56.442670+00:00",
+  "freshRootsVerifiedAbsent": {
+    "productRuntimeRoot": true,
+    "externalEvidenceDir": true,
+    "controllerScript": true,
+    "custodyRoot": true
+  },
+  "keyMetadataOnly": {
+    "exists": true,
+    "bytes": 114,
+    "contentReads": 0,
+    "hashReads": 0,
+    "eligibleSize": true
+  },
+  "gitIdentityFacts": {
+    "GIT_AUTHOR_IDENT": {
+      "valid": true,
+      "sha256": "00d67981242b44602db7566ef9d9f8fac0fbe16dc95f2244dd327c5ce2a0a782"
+    },
+    "GIT_COMMITTER_IDENT": {
+      "valid": true,
+      "sha256": "00d67981242b44602db7566ef9d9f8fac0fbe16dc95f2244dd327c5ce2a0a782"
+    }
+  },
+  "effectiveHookFilesPresent": {
+    "pre-commit": false,
+    "prepare-commit-msg": false,
+    "commit-msg": false,
+    "post-commit": false
+  },
+  "cachedTariffRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_public_tariff_result.json",
+    "sha256": "65843266cc4889fb13d28082a89ed9d5636605c29846e9c3d1753a632ded1da3"
+  },
+  "tariffQualification": "Inherited one admitted public tariff fetch observed2026-10-24; used1/cap1 retained, no new fetch or live/account billing claim. Conditional runtime budget remains <=USD1; source/readiness only.",
+  "dockerConfigQualification": "Exclusive Root-owned config.json exact empty JSON object plus LF; no credential contents or Docker query read."
 }

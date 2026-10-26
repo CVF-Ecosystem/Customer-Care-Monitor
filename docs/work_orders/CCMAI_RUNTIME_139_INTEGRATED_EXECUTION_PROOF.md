@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: REVIEWER_ACCEPTED
+Status: ACTIVE
 Risk: R2
 Worker: Internal Sol G0 service/runtime actor; internal Luna producer/independent observer for browser only
 Reviewer: Root independent source/evidence REVIEWER
@@ -752,3 +752,8 @@ Activationenvironment source return: worker2targeted/Root48supervisorPASS; uncha
 
 
 Activationenvironment materialaccepted: source7ef30823/buildad348196, source-onlyREVIEW_PASS,16countedchecksretained. Roottechnicalv3packetmustrebindtothisversion; noRuntimeEffectAdmissionyet.
+
+
+## V3 final-source operational technical dispatch — 2026-10-26
+
+Acceptedsource7ef30823/buildad348196,16checksretained; currentnonce319839d1bdabc006390d02cf9c7c773b/nativeContractId r139-cua-boot-identity-v3-20261026. Roottechnicalauthority `CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-G0-TECHNICAL-RELEASE-ADMISSION.json` remainsdraftuntilindependentreview/mechanicalseal/cleancommit. OneRoot-heldoriginalv3controller/sharedfuturecap1, before all5servicequeries/oneowned-tabG0. ActualRootG0proofreview+RuntimeEffectAdmission precedefixture/key/provider; no source testsduringcampaign. Currentdrafts/ACKs/template/protectedhashes mustallmatchfinalsource, oldoneshistorical. Root preservesOperatorstandingexact-ownedclosefallback; actualclose/finalinventoryneverinferredfromavailability. Whole1200/+1020 unchanged/internalsetup180.

@@ -10,13 +10,13 @@
   "recoveryOwnerAdmissionSha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb",
   "v3OwnerAdmissionSha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f",
   "bootIdentityContractSha256": "e3fe4ef6caeb8b197e5f358267d89a6584fb6cf10087bebb5bfca53efdc7d5da",
-  "sourceCommit": "b330f70b7e760ffee1113d57abc7133c725c57cd",
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
   "payloadSha256": "ffbf475dee7a28a785c2ce543ad50cda55819c72debdf8c24e0a05104d599f19",
   "bootProofSha256": "10937592aaa94c4d00a89eb194fa223b9bec372b921be8a247967da235fa44e9",
   "nativeContractId": "r139-cua-boot-identity-v3-20261026",
   "campaignNonce": "319839d1bdabc006390d02cf9c7c773b",
-  "acceptedBuildPinsSha256": "3366eb41379c68419b235e5295817dafa74215a94dd5bcc8b4e323a6dfc215c2",
-  "rootReceivedMetadataAtUTC": "2026-10-25T23:01:21.998126+00:00",
+  "acceptedBuildPinsSha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b",
+  "rootReceivedMetadataAtUTC": "2026-10-25T23:32:26.407373+00:00",
   "currentEffectRelease": "NONE_METADATA_ONLY",
   "currentBrowserCapabilityPass": false,
   "campaignReserved": false,
@@ -24,5 +24,7 @@
   "bindingQualification": "Current actor availability and exact new source/build/nonce only; original ACK retained. No browser capability or runtime effect approval.",
   "originalControlPopenCustodian": "Root",
   "originalControlWaitExitReceiptPlanned": true,
-  "operatorAvailable": true
+  "operatorAvailable": true,
+  "sourceCheckTotalSpent": 16,
+  "internalSetupSeconds": 180
 }

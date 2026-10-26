@@ -2,7 +2,7 @@
   "kind": "ROOT_REVIEWED_ACTOR_METADATA_ACK",
   "trancheId": "CCMAI-RUNTIME-139",
   "actor": "internal",
-  "collaborationTaskId": "/root/r139_v3_technical_packet",
+  "collaborationTaskId": "/root",
   "ready": true,
   "freshGrantSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
   "inheritedOwnerEnvelopeSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
@@ -10,20 +10,22 @@
   "recoveryOwnerAdmissionSha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb",
   "v3OwnerAdmissionSha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f",
   "bootIdentityContractSha256": "e3fe4ef6caeb8b197e5f358267d89a6584fb6cf10087bebb5bfca53efdc7d5da",
-  "sourceCommit": "b330f70b7e760ffee1113d57abc7133c725c57cd",
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
   "payloadSha256": "ffbf475dee7a28a785c2ce543ad50cda55819c72debdf8c24e0a05104d599f19",
   "bootProofSha256": "10937592aaa94c4d00a89eb194fa223b9bec372b921be8a247967da235fa44e9",
   "nativeContractId": "r139-cua-boot-identity-v3-20261026",
   "campaignNonce": "319839d1bdabc006390d02cf9c7c773b",
-  "acceptedBuildPinsSha256": "3366eb41379c68419b235e5295817dafa74215a94dd5bcc8b4e323a6dfc215c2",
-  "rootReceivedMetadataAtUTC": "2026-10-25T23:01:21.998126+00:00",
+  "acceptedBuildPinsSha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b",
+  "rootReceivedMetadataAtUTC": "2026-10-26T09:57:47.086351+00:00",
   "currentEffectRelease": "NONE_METADATA_ONLY",
   "currentBrowserCapabilityPass": false,
   "campaignReserved": false,
   "effectsObserved": 0,
-  "bindingQualification": "Current actor availability and exact new source/build/nonce only; original ACK retained. No browser capability or runtime effect approval.",
-  "originalActorAckRef": {
-    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_internal_actor_original_ack_20261026.json",
-    "sha256": "9b54fb2abc642847ab7ab5031f2aeb2b1286a611b79f54ffd80b7847ac4d8e36"
+  "bindingQualification": "Root role transition: internal exact-five-query executor under independently reviewed technical release; original child Popen/wait/raw receipts retained. Availability only, no effect dispatched. Historical worker ACK is predecessor only.",
+  "sourceCheckTotalSpent": 16,
+  "internalSetupSeconds": 180,
+  "historicalActorAckRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_internal_actor_final_source_ack_20261026.json",
+    "sha256": "e1275add4f7f542da1bcd4efcc4c9cc9344aa92115c297a9801bf3a10bccd817"
   }
 }

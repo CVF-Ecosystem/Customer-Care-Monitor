@@ -1,22 +1,25 @@
 {
   "kind": "R139_INTERNAL_CUA_V3_PRECLOCK_HANDOFF_PACKET",
   "status": "DRAFT_PENDING_ROOT_SEAL_NO_EFFECT_AUTHORITY",
-  "sourceCommit": "b330f70b7e760ffee1113d57abc7133c725c57cd",
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
   "acceptedBuildPins": {
-    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-V3-ACCEPTED-BUILD-PINS-ADMISSION.json",
-    "sha256": "3366eb41379c68419b235e5295817dafa74215a94dd5bcc8b4e323a6dfc215c2"
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b"
   },
   "ownerEnvelopeSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
   "nativeContractId": "r139-cua-boot-identity-v3-20261026",
   "campaignNonce": "319839d1bdabc006390d02cf9c7c773b",
-  "runtimeDraft": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_runtime_admission_draft_20261026.json",
+  "runtimeDraft": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_runtime_admission_draft_20261026.json",
+    "sha256": "4d1ca7177cac314f30ff8a5bc6907351aa49cf08df164ca0f93cc27255785446"
+  },
   "recipeDraft": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_activation_recipe_20261026.json",
   "fiveQueryPlan": {
     "status": "PREPARED_UNEXECUTED_NEW_OWNER_ENVELOPE_ROOT_RELEASE_REQUIRED",
     "actor": "Internal worker only after Root G0 technical release and original campaign reservation",
     "binaryPinSource": {
-      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-V3-ACCEPTED-BUILD-PINS-ADMISSION.json",
-      "sha256": "3366eb41379c68419b235e5295817dafa74215a94dd5bcc8b4e323a6dfc215c2"
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "sha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b"
     },
     "dockerConfigDir": ".cvf/runtime/r139_v3_reentry_20261026_readiness/docker_config",
     "dockerConfigContent": "{}\n",
@@ -123,7 +126,10 @@
     "clock": "Reserve before first query or browser invocation; same original1200seconds includes all5queries and G0/G1/G2/cleanup",
     "processCustody": "Capture original argv/stdout/stderr/start/end/wait/exit. Timeout must request cancellation of only the exact held query child and observe original wait; no new command/retry/host process kill. Unreturned original wait means UNKNOWN/HOLD, not bounded lifetime proof."
   },
-  "browserPlan": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_browser_operation_plan_20261026.json",
+  "browserPlan": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_browser_operation_plan_20261026.json",
+    "sha256": "d6325c972cfd3fcc63bb9512289dfdad86d20da21821be771d073c445311de24"
+  },
   "remainingBeforeReservation": "Root seals all PENDING fields and completes independent technical review; no effect yet.",
   "remainingAfterReservedG0": "Root independently reviews actual G0 and issues separate Runtime Effect Admission before fixture/key/provider.",
   "campaignReserved": false,
@@ -138,7 +144,10 @@
   },
   "independentReview": "PENDING_ROOT_SEAL",
   "operatorAvailable": true,
-  "operatorAvailabilityRef": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_owner_close_availability_20261026.json",
+  "operatorAvailabilityRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_owner_close_availability_20261026.json",
+    "sha256": "e423f802e48678b3eb141ba7aa83025f98e4dac981e23a92e484d1db93f50d29"
+  },
   "inheritedOwnerEnvelopeSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
   "observationCapsRef": {
     "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
@@ -150,8 +159,8 @@
     "sha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb"
   },
   "acceptedBuildPinsRef": {
-    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-V3-ACCEPTED-BUILD-PINS-ADMISSION.json",
-    "sha256": "3366eb41379c68419b235e5295817dafa74215a94dd5bcc8b4e323a6dfc215c2"
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b"
   },
   "liveTemporalConditionSatisfied": false,
   "currentClockHoldReceipt": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_prelaunch_clock_compatibility_20261025.json",
@@ -163,9 +172,15 @@
     "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_contract_20261026.json",
     "sha256": "e3fe4ef6caeb8b197e5f358267d89a6584fb6cf10087bebb5bfca53efdc7d5da"
   },
-  "sourceCheckTotalSpent": 14,
+  "sourceCheckTotalSpent": 16,
   "sourceChecksRemaining": 0,
   "sharedFutureControllerUsed": 0,
   "sharedFutureControllerCap": 1,
-  "v2ReleaseSupersededDisabled": true
+  "v2ReleaseSupersededDisabled": true,
+  "internalSetupSeconds": 180,
+  "recipeBinding": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_activation_recipe_20261026.json",
+    "sha256": "OUT_OF_BAND_AT_ROOT_FINAL_SEAL_NO_SELF_REFERENCE",
+    "qualification": "Recipe SHA computed after this packet and actor bindings settle; controller receives recipe SHA as second input and clean dispatch HEAD as third."
+  }
 }

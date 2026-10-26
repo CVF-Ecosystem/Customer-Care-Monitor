@@ -4,12 +4,12 @@
   "routeStatus": "G0_PENDING",
   "ownerApproved": false,
   "sourceOnly": true,
-  "sourceCommit": "b330f70b7e760ffee1113d57abc7133c725c57cd",
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
   "parentAuthorityCommit": "642f5bd026dfe31e6dda6441dd25704eb3ececa3",
   "sourceResumeAdmissionCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
   "sourceSha256": {
     "scripts/r139_execution_supervisor.py": "a7557917cc3ade551e78f7b4c40b0cc5aac5a312bcae2fdfbe353aba997f5203",
-    "scripts/tests/test_r139_execution_supervisor.py": "3c6aafa1573880be5d3e23eed26ad5edee1a208adda23511509daa7df81262ac",
+    "scripts/tests/test_r139_execution_supervisor.py": "4bbd3abb54646a9bcaa691c8b29ccf49f470539475a2a87732b77e2790be2283",
     "scripts/r139_vite_config.mjs.template": "82a1d9ae8576fcd46718945d0a5cb44eb963a2a14d436a16e2bcdfb72b26bee9",
     "backend/api/handlers/intervention_execution_browser_test.go": "0ed1148d42dcd9cb018e2a3f3cbeb9c68bdcb8904d408c365b8d05b11c2a040e",
     "backend/go.mod": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
@@ -17,7 +17,7 @@
     "frontend/package.json": "d16bea0b83ad7eb871576061f7ea91534a2dd2fdc7eef26eb20ec908e4fca24d",
     "frontend/package-lock.json": "da41e1de5d5b853295a303092aab9433aeea8168fda2cf0420dd94e9f579fb00",
     "frontend/vite.config.ts": "736c63d3a72a5b126841ceedeac4b4a01854a2bec71bd57d2f46a23ec3cf68de",
-    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v3_design.py.txt": "acfec28024a249ac9ee20f49d37a3f53597d9fc1338164060fb2a9c3625b9ef4",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v3_design.py.txt": "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d",
     "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_pinned_preflight.py.txt": "81784375b6948dee973ce1dd4a3b66851786273079f4becfbdd7c7378fbca233",
     "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_durable_resume.py.txt": "7ab2bf4c5b97009d36b932fd7aff5cf6d5b42584844f59fc02f5605f06156eda",
     "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/test_r139_pinned_resume.py": "9dd100bae4dcfa18b5c1fd098de56fecc534ad59fd1a4361bda0cbb256b1f227"
@@ -102,8 +102,8 @@
   "promptSha256": "f922023fa5a69efe16a14640355f1e8123ba36e1fa16900ce4419169a5ee6658",
   "vitePort": 3519,
   "noninterferenceDisposition": {
-    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_noninterference_disposition_20261025.json",
-    "sha256": "bb236c2fdd2242d5537842c191f2f1cc52150f37f4512a85750c60cb700049b2"
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_noninterference_disposition_20261026.json",
+    "sha256": "0ae2bfeacf384999dfc7985c8494c53f71cbf902dc78eb9ce5a39896ba21120d"
   },
   "rawProvenanceReview": "PENDING_ROOT_ACTUAL_ORIGINAL_NATIVE_TRANSCRIPT_AND_URL_REVIEW",
   "runtimeExecutableNow": false,
@@ -165,7 +165,7 @@
   "productRuntimeReleased": false,
   "ownerOperatorAvailabilityRef": {
     "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_owner_close_availability_20261026.json",
-    "sha256": "a99080a2d1686a2c5ad05299e1397a99a6748129f7958605266ba28b94bf46c7"
+    "sha256": "e423f802e48678b3eb141ba7aa83025f98e4dac981e23a92e484d1db93f50d29"
   },
   "browserKind": "iab",
   "browserId": "<actual-returned-CUA-browser-id>",
@@ -173,8 +173,8 @@
   "ownedTabIds": [
     "<actual-returned-CUA-tab-id>"
   ],
-  "producerAgentTaskId": "/root/r139_cua_browser_producer",
-  "observerAgentTaskId": "/root/r139_cua_browser_observer",
+  "producerAgentTaskId": "/root/r139_live_browser_producer",
+  "observerAgentTaskId": "/root/r139_sol_browser_observer",
   "ownerCuaAmendmentRef": {
     "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-CUA-SOURCE-ADMISSION.json",
     "sha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e"
@@ -195,8 +195,8 @@
     "sha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb"
   },
   "acceptedBuildPinsRef": {
-    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-V3-ACCEPTED-BUILD-PINS-ADMISSION.json",
-    "sha256": "3366eb41379c68419b235e5295817dafa74215a94dd5bcc8b4e323a6dfc215c2"
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b"
   },
   "operatorAvailabilityRef": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_owner_close_availability_20261026.json",
   "liveTemporalConditionSatisfied": false,
@@ -211,5 +211,9 @@
   },
   "actualG0IndependentRootReview": "PENDING_ROOT_SEAL",
   "separateRuntimeEffectAdmission": "PENDING_ROOT_SEAL",
-  "noFixtureKeyProviderBeforeAdmission": true
+  "noFixtureKeyProviderBeforeAdmission": true,
+  "historicalNoninterferenceDisposition": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_noninterference_disposition_20261025.json",
+    "sha256": "bb236c2fdd2242d5537842c191f2f1cc52150f37f4512a85750c60cb700049b2"
+  }
 }

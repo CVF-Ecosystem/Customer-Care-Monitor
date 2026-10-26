@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ROOT_R139_V3_G0_TECHNICAL_RELEASE",
+  "status": "ROOT_ADMITTED_CONDITIONAL_G0_TECHNICAL_RELEASE",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "riskCeiling": "R2",
+  "ownerAuthorizationRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+    "sha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f"
+  },
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+  "acceptedBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b"
+  },
+  "recipeRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_activation_recipe_20261026.json",
+    "sha256": "4f7fbff98aebfe8626f2e6b5883e439b377f164feceb6e9fbbea20bbef15bfd1"
+  },
+  "independentReviewApproved": true,
+  "independentReviewRef": {
+    "path": "docs/reviews/R139_CLOCK_V3_G0_TECHNICAL_REVIEW_2026-10-26.md",
+    "sha256": "fda885166d7187e2d441caba64e7b240bca0245784e6cb405074f06cdc89fdfa"
+  },
+  "rootOriginalControlCustody": {
+    "path": ".cvf/runtime/r139_v3_preclock_20261026/root_original_control_custody_v3.py",
+    "sha256": "b09cf9f067bc214f07ffd9e36c53bf53b47a09a48f659183e039e9a2f18491a7",
+    "sourceDesignSha256": "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d",
+    "recheckExactBytesImmediatelyBeforeInvoke": true,
+    "popenOwner": "Root",
+    "waitExitOwner": "Root",
+    "oneSharedFutureV2V3OriginalInvocation": 1,
+    "used": 0,
+    "v2ReleaseDisabled": true,
+    "oldPid24484Exit1Retained": true,
+    "noRetry": true,
+    "noControllerExtracted": true
+  },
+  "scope": "Conditional original preclock reservation and exact five queries plus one owned-tab G0 proof only. Actual G0 independent Root review and separate Runtime Effect Admission precede fixture/key/provider. No extra campaign, source checks, refresh/reset or Owner relay.",
+  "internalSetupSeconds": 180,
+  "originalCampaignSeconds": 1200,
+  "cleanupCutoffSeconds": 1020,
+  "currentlyReleasedEffects": {
+    "controller": 0,
+    "campaign": 0,
+    "services": 0,
+    "cua": 0,
+    "fixture": 0,
+    "key": 0,
+    "provider": 0
+  },
+  "staticReviewOnly": false,
+  "operatorCloseAuthority": "Retained standing exact ownedPageId/nonce operator_fallback; actual close/inventory not yet proved.",
+  "conditionalAuthorizedEffects": {
+    "controllerOriginalInvocationsMax": 1,
+    "campaignMax": 1,
+    "serviceQueriesMax": 5,
+    "g0OwnedPageMax": 1,
+    "g0ProducerCuaMax": 8,
+    "g0ObserverCuaMax": 4,
+    "productRuntime": false,
+    "key": false,
+    "provider": false
+  },
+  "observedEffectsQualification": "currentlyReleasedEffects are actual observed zero at seal, not an effect budget; execution is conditional on committed review/recipe, clean dispatch and actual Root signal."
+}

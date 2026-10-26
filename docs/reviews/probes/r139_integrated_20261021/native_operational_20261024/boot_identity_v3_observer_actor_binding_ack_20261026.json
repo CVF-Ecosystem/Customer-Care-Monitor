@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "r139.cuaObserverActorOriginalAck@1.0.0",
+  "kind": "R139_BOOT_IDENTITY_V3_CUA_G0_OBSERVER_FINAL_SOURCE_BINDING_ACK",
+  "status": "CORRECTED_SOURCE_BINDING_ACK_READY_FOR_ROOT_TECHNICAL_DISPATCH",
+  "date": "2026-10-26",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "workOrder": "CCMAI-RUNTIME-139",
+  "project": "Customer-Care-Monitor-AI",
+  "canonicalTaskId": "/root/r139_v3_browser_observer",
+  "producerTaskId": "/root/r139_v3_browser_producer",
+  "observerTaskId": "/root/r139_v3_browser_observer",
+  "role": "G0_INDEPENDENT_OBSERVER_AND_TERMINAL_COORDINATOR",
+  "actorBindings": {
+    "g0ProducerTaskId": "/root/r139_v3_browser_producer",
+    "g0IndependentObserverTaskId": "/root/r139_v3_browser_observer",
+    "terminalCoordinatorTaskId": "/root/r139_v3_browser_observer"
+  },
+  "activePhase": "BUILD",
+  "riskCeiling": "R2",
+  "liveGovernanceEvidenceRequired": true,
+  "ready": true,
+  "readyForReservedG0": true,
+  "availabilityOnly": true,
+  "availability": "READY_FOR_RESERVED_G0_AFTER_ROOT_RELEASE_AND_CAMPAIGN_RESERVATION",
+  "predecessorFinalAckRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_observer_actor_final_source_ack_20261026.json",
+    "sha256": "46b6c0c9d1fef33ce5a846b6c51c767e70a5a59da8df2ccfe9e07b91ea59966e"
+  },
+  "ownerAdmissionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+    "sha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f"
+  },
+  "pinnedExecutionCore": {
+    "commit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
+    "profileId": "cvf.downstreamGateProfile@1.1.0",
+    "latestOriginAdoption": false
+  },
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+  "acceptedBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b",
+    "bindingCommit": "20660b777941d412f11b4eeb08e4d60a3d92ab10"
+  },
+  "acceptedSourceReview": {
+    "status": "ROOT_REVIEW_APPROVED_SOURCE_CHECKS_ACCEPTED",
+    "reviewPath": "docs/reviews/R139_V3_ACTIVATION_ENV_SOURCE_REVIEW_2026-10-26.md",
+    "reviewSha256": "0a270a0b224afbd2ce494a83df0ba72226a3684e3f39c0c9cc2293bc319ab4e8",
+    "workerNewTargetedTests": 2,
+    "rootSupervisorTests": 48,
+    "countedSourceChecksTotal": 16,
+    "unchangedPinResume16Inherited": true,
+    "additionalSourceChecksNeeded": 0,
+    "checksRunByThisObserver": 0
+  },
+  "scopeAndPreservedCaps": {
+    "sourceChangeSummary": "Deterministic pinned Windows PowerShell child PATH discovery and bounded 180-second internal activation setup.",
+    "originalCampaignSeconds": 1200,
+    "cleanupCutoffSeconds": 1020,
+    "serviceQueriesCap": 5,
+    "cuaMethodsCap": 64,
+    "metadataInventoriesCap": 3,
+    "sourceChecksRunByThisObserver": 0
+  },
+  "contractRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_contract_20261026.json",
+    "sha256": "e3fe4ef6caeb8b197e5f358267d89a6584fb6cf10087bebb5bfca53efdc7d5da"
+  },
+  "nativeContractId": "r139-cua-boot-identity-v3-20261026",
+  "campaignNonce": "319839d1bdabc006390d02cf9c7c773b",
+  "targetBinding": {
+    "producerTaskId": "/root/r139_v3_browser_producer",
+    "observerTaskId": "/root/r139_v3_browser_observer",
+    "producerOwnedPageId": null,
+    "observerPageId": null,
+    "pageIdAssigned": false,
+    "actualObserverReleaseReceived": false,
+    "requiredBeforeAnyCuaCall": "Wait for Root's explicit release bound to the exact producer-owned PageId. Only then make the single reserved getTab call with that exact ID and actual browser ID."
+  },
+  "currentCapability": {
+    "capability": false,
+    "capabilityStatus": "UNPROVEN",
+    "cuaToolEntrypointListed": true,
+    "cuaMethodsCalled": 0,
+    "claimBoundary": "Metadata availability only; no browser selection, page ownership, cross-task access, controlled URL observation, or live G0 capability is proven."
+  },
+  "currentEffects": 0,
+  "effectsByCategory": {
+    "sharedFutureControllerUsed": 0,
+    "campaignReserved": false,
+    "serviceQueries": 0,
+    "browserMethods": 0,
+    "fixtureStarts": 0,
+    "keyReads": 0,
+    "providerCalls": 0,
+    "preclockBootQueries": 0
+  },
+  "observerBudget": {
+    "stageMethodCap": 4,
+    "stageMethodsUsed": 0,
+    "metadataInventoryCallsUsed": 0,
+    "g0PageStateReadsCap": 4,
+    "g0CapturesCap": 2,
+    "retriesOrHelperStages": 0
+  },
+  "priorOutOfCampaignMetadataObservation": {
+    "ref": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_observer_actor_original_ack_20261026.json",
+    "kind": "WORKSPACE_DOCTOR_GIT_METADATA_FETCH",
+    "doctorResult": "FAIL_25_OF_28",
+    "fetchSucceeded": true,
+    "observedLocalCore": "b8ead4f0d1bf9224338a206b2abcd893ec1801b1",
+    "observedOriginMain": "b2d524bf3dff419b3e70f6e1e0468fd6748938c3",
+    "rootAuthority": false,
+    "gatePassClaim": false,
+    "outsideCampaign": true,
+    "operatingRoute": false,
+    "disposition": "Retained historical Git freshness metadata only. The Owner stable-pin decision uses e9ddcbcd/profile1.1 for R139; no further doctor or fetch was run for this ACK."
+  },
+  "claimBoundary": "Corrected actor and accepted-source binding plus availability only. This ACK does not claim G0 capability, runtime governance, provider behavior, product acceptance, campaign reservation, or release of browser actions."
+}

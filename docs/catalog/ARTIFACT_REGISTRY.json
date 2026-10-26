@@ -37754,6 +37754,69 @@
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-ACCEPTED-BUILD-PINS-ADMISSION.json",
       "status": "ACTIVE",
       "description": "Root accepted7ef30823 activation-env source; cumulativev3attempt2 receipts, pinnedPS5/internal180ssetup, unchanged externalcaps and no runtime effects."
+    },
+    {
+      "id": "r139-v3-finalsource-390168982424c0",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-G0-TECHNICAL-RELEASE-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "R139 final-source v3 technical dispatch draft or actor availability, independent review/clock/G0 proof pending and no runtime effects."
+    },
+    {
+      "id": "r139-v3-finalsource-9a3c398bdd5171",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_internal_actor_final_source_ack_20261026.json",
+      "status": "ACTIVE",
+      "description": "R139 final-source v3 technical dispatch draft or actor availability, independent review/clock/G0 proof pending and no runtime effects."
+    },
+    {
+      "id": "r139-v3-finalsource-94b205bf986edb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_observer_actor_final_source_ack_20261026.json",
+      "status": "ACTIVE",
+      "description": "R139 final-source v3 technical dispatch draft or actor availability, independent review/clock/G0 proof pending and no runtime effects."
+    },
+    {
+      "id": "r139-v3-finalsource-7aca66e05a46bf",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_producer_actor_final_source_ack_20261026.json",
+      "status": "ACTIVE",
+      "description": "R139 final-source v3 technical dispatch draft or actor availability, independent review/clock/G0 proof pending and no runtime effects."
+    },
+    {
+      "id": "r139-v3-seal-ae123b16f46aeb",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CLOCK_V3_G0_TECHNICAL_REVIEW_2026-10-26.md",
+      "status": "ACTIVE",
+      "description": "R139 v3 independent technical review placeholder or current corrected actor metadata; no runtime release until final exact review/seal."
+    },
+    {
+      "id": "r139-v3-seal-505cad73374c58",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_observer_actor_binding_ack_20261026.json",
+      "status": "ACTIVE",
+      "description": "R139 v3 independent technical review placeholder or current corrected actor metadata; no runtime release until final exact review/seal."
+    },
+    {
+      "id": "r139-v3-current-noninterference-disposition-20261026",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_noninterference_disposition_20261026.json",
+      "status": "ACTIVE",
+      "description": "Current nonce v3 scope/noninterference disposition only; actual browser and supervisor baselines pending, prior unknowns retained."
+    },
+    {
+      "id": "r139-v3-resume-producer-availability",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_producer_resumed_availability_20261026.json",
+      "status": "ACTIVE",
+      "description": "Root-recorded actual replacement actor collaboration availability; no native capability or runtime effect claimed."
+    },
+    {
+      "id": "r139-v3-resume-observer-availability",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_observer_resumed_availability_20261026.json",
+      "status": "ACTIVE",
+      "description": "Root-recorded actual replacement actor collaboration availability; no native capability or runtime effect claimed."
     }
   ]
 }

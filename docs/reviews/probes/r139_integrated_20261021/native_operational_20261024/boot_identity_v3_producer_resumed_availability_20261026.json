@@ -1,0 +1,13 @@
+{
+  "kind": "ROOT_RECORDED_COLLABORATION_AVAILABILITY",
+  "actor": "/root/r139_live_browser_producer",
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+  "acceptedBuildPinsSha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b",
+  "campaignNonce": "319839d1bdabc006390d02cf9c7c773b",
+  "nativeContractId": "r139-cua-boot-identity-v3-20261026",
+  "observedAtUTC": "2026-10-26T09:59:48.563645+00:00",
+  "ready": true,
+  "effects": 0,
+  "originalMessage": "Ready for a later reserved G0 as /root/r139_live_browser_producer. I read the current plan and contract; all effect counts remain 0, with no file edits or browser/API calls.",
+  "qualification": "Root transcription of collaboration response; not native browser transcript."
+}
