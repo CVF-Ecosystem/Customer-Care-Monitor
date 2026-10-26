@@ -1,0 +1,63 @@
+{
+  "kind": "ROOT_R139_COORD_RECOVERY_G0_TECHNICAL_RELEASE",
+  "status": "ROOT_ADMITTED_CONDITIONAL_COORD_RECOVERY_G0_TECHNICAL_RELEASE",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "riskCeiling": "R2",
+  "ownerAdditionalSlotAdmissionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-COORD-OWNER-RECOVERY-ADMISSION.json",
+    "sha256": "c6580693da837b014ac8356d3ceaf7b1317ba4970ed6a5d05c1859327d6d2431"
+  },
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+  "acceptedBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b"
+  },
+  "recipeRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_activation_recipe_20261026.json",
+    "sha256": "7c5b9c97eed55b47195f609331a3f0255f38c8bd1ac7efc2a8a67c5ba6da3584"
+  },
+  "independentReviewApproved": true,
+  "independentReviewRef": {
+    "path": "docs/reviews/R139_COORD_RECOVERY_G0_TECHNICAL_REVIEW_2026-10-26.md",
+    "sha256": "9baaed702e485362dae018954f2307e9d69edf30891d903f4edeb52c5a573110"
+  },
+  "rootOriginalControlCustody": {
+    "path": ".cvf/runtime/r139_v3_coord_recovery_20261026/root_original_control_custody_coord_recovery.py",
+    "sha256": "93cd1d0bb66f30d0da5592bc7450f51726a6fbca69036341e5142a31ba8e8bcf",
+    "sourceAsDataRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_root_control_wrapper_design_20261026.json",
+      "sha256": "5b3ff2e0ad0b6483e35ed72ca0032b69c450cf271b5a7810cfddd9b5103764c7"
+    },
+    "originalPopenWaitExitOwner": "Root",
+    "recheckActualOwnerSchemaBeforeExtractionAndBootQuery": true,
+    "sharedFutureControllerUsedBefore": 1,
+    "sharedFutureControllerTotalCap": 2,
+    "additionalOriginalInvocationsMax": 1,
+    "priorController23500Exit1Retained": true,
+    "noRetry": true
+  },
+  "conditionalAuthorizedEffects": {
+    "controllerOriginalInvocationsMax": 1,
+    "campaignMax": 1,
+    "serviceQueriesMax": 5,
+    "g0OwnedPageMax": 1,
+    "g0ProducerCuaMax": 8,
+    "g0ObserverCuaMax": 4,
+    "productRuntime": false,
+    "key": false,
+    "provider": false
+  },
+  "observedEffectsAtDraft": {
+    "additionalController": 0,
+    "campaign": 0,
+    "services": 0,
+    "cua": 0,
+    "fixture": 0,
+    "key": 0,
+    "provider": 0
+  },
+  "staticReviewOnly": false,
+  "sourceChecksRetained": 16,
+  "newSourceTests": 0,
+  "scope": "Conditional new original preclock/reservation then exact5queries and nativeone-ownedtabG0 after signal. Actual Root G0 review and separate Runtime Effect Admission precede fixture/key/provider. No additional campaign or external allowance."
+}

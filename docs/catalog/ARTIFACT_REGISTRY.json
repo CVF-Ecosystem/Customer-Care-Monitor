@@ -37887,6 +37887,125 @@
       "path": "docs/reviews/R139_COORD_RECOVERY_G0_TECHNICAL_REVIEW_2026-10-26.md",
       "status": "ACTIVE",
       "description": "Owner-approved one additional R139 preclock slot or pending independent packet review; no current effect release."
+    },
+    {
+      "id": "r139-coord-packet-2030755a027a65",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_activation_recipe_20261026.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order additional-slot recovery actual metadata, draft technical packet or availability only; no runtime capability/effect claimed."
+    },
+    {
+      "id": "r139-coord-packet-01eaef26ac9c35",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_browser_operation_plan_20261026.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order additional-slot recovery actual metadata, draft technical packet or availability only; no runtime capability/effect claimed."
+    },
+    {
+      "id": "r139-coord-packet-dee70d52ebdf0c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_coordination_owner_20261026.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order additional-slot recovery actual metadata, draft technical packet or availability only; no runtime capability/effect claimed."
+    },
+    {
+      "id": "r139-coord-packet-e4f7d2e1a8768f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_internal_actor_ack_20261026.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order additional-slot recovery actual metadata, draft technical packet or availability only; no runtime capability/effect claimed."
+    },
+    {
+      "id": "r139-coord-packet-4136670918126d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_noninterference_disposition_20261026.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order additional-slot recovery actual metadata, draft technical packet or availability only; no runtime capability/effect claimed."
+    },
+    {
+      "id": "r139-coord-packet-ce844977d522ce",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_observer_actor_ack_20261026.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order additional-slot recovery actual metadata, draft technical packet or availability only; no runtime capability/effect claimed."
+    },
+    {
+      "id": "r139-coord-packet-b24cee98d654e9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_observer_availability_message_20261026.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order additional-slot recovery actual metadata, draft technical packet or availability only; no runtime capability/effect claimed."
+    },
+    {
+      "id": "r139-coord-packet-3f8b59e7a2d095",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_owner_close_availability_20261026.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order additional-slot recovery actual metadata, draft technical packet or availability only; no runtime capability/effect claimed."
+    },
+    {
+      "id": "r139-coord-packet-c69f6fa3678b59",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_owner_readback_20261026.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order additional-slot recovery actual metadata, draft technical packet or availability only; no runtime capability/effect claimed."
+    },
+    {
+      "id": "r139-coord-packet-c096f15be45e60",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_preclock_facts_20261026.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order additional-slot recovery actual metadata, draft technical packet or availability only; no runtime capability/effect claimed."
+    },
+    {
+      "id": "r139-coord-packet-d0e5fc374d23e5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_preclock_handoff_packet_20261026.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order additional-slot recovery actual metadata, draft technical packet or availability only; no runtime capability/effect claimed."
+    },
+    {
+      "id": "r139-coord-packet-2bfd1f6c649696",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_producer_actor_ack_20261026.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order additional-slot recovery actual metadata, draft technical packet or availability only; no runtime capability/effect claimed."
+    },
+    {
+      "id": "r139-coord-packet-dab25a89710a60",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_producer_availability_message_20261026.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order additional-slot recovery actual metadata, draft technical packet or availability only; no runtime capability/effect claimed."
+    },
+    {
+      "id": "r139-coord-packet-858ae827ecf04a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_root_actor_ack_20261026.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order additional-slot recovery actual metadata, draft technical packet or availability only; no runtime capability/effect claimed."
+    },
+    {
+      "id": "r139-coord-packet-2cd0087ecc05db",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_root_control_wrapper_design_20261026.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order additional-slot recovery actual metadata, draft technical packet or availability only; no runtime capability/effect claimed."
+    },
+    {
+      "id": "r139-coord-packet-e2fc3afea31fe7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_runtime_admission_draft_20261026.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order additional-slot recovery actual metadata, draft technical packet or availability only; no runtime capability/effect claimed."
+    },
+    {
+      "id": "r139-coord-packet-f664f1be3b81d7",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-COORD-RECOVERY-G0-TECHNICAL-RELEASE-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "R139 same-order additional-slot recovery actual metadata, draft technical packet or availability only; no runtime capability/effect claimed."
     }
   ]
 }

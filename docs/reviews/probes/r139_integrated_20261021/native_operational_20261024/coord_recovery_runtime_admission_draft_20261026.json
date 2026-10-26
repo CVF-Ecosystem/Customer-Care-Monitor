@@ -1,0 +1,256 @@
+{
+  "status": "DRAFT_NOT_EFFECT_AUTHORITY",
+  "kind": "R139_COORD_RECOVERY_RUNTIME_EFFECT_ADMISSION_DRAFT",
+  "routeStatus": "PENDING_ACTUAL_G0_AND_SEPARATE_ADMISSION",
+  "ownerApproved": false,
+  "sourceOnly": true,
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+  "parentAuthorityCommit": "642f5bd026dfe31e6dda6441dd25704eb3ececa3",
+  "sourceResumeAdmissionCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
+  "sourceSha256": {
+    "scripts/r139_execution_supervisor.py": "a7557917cc3ade551e78f7b4c40b0cc5aac5a312bcae2fdfbe353aba997f5203",
+    "scripts/tests/test_r139_execution_supervisor.py": "4bbd3abb54646a9bcaa691c8b29ccf49f470539475a2a87732b77e2790be2283",
+    "scripts/r139_vite_config.mjs.template": "82a1d9ae8576fcd46718945d0a5cb44eb963a2a14d436a16e2bcdfb72b26bee9",
+    "backend/api/handlers/intervention_execution_browser_test.go": "0ed1148d42dcd9cb018e2a3f3cbeb9c68bdcb8904d408c365b8d05b11c2a040e",
+    "backend/go.mod": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+    "backend/go.sum": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b",
+    "frontend/package.json": "d16bea0b83ad7eb871576061f7ea91534a2dd2fdc7eef26eb20ec908e4fca24d",
+    "frontend/package-lock.json": "da41e1de5d5b853295a303092aab9433aeea8168fda2cf0420dd94e9f579fb00",
+    "frontend/vite.config.ts": "736c63d3a72a5b126841ceedeac4b4a01854a2bec71bd57d2f46a23ec3cf68de",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v3_design.py.txt": "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_pinned_preflight.py.txt": "81784375b6948dee973ce1dd4a3b66851786273079f4becfbdd7c7378fbca233",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_durable_resume.py.txt": "7ab2bf4c5b97009d36b932fd7aff5cf6d5b42584844f59fc02f5605f06156eda",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/test_r139_pinned_resume.py": "9dd100bae4dcfa18b5c1fd098de56fecc534ad59fd1a4361bda0cbb256b1f227"
+  },
+  "backendTree": "a60952bc46b7f0f30bcefc93720ba3b42529a9f8",
+  "frontendTree": "b23c158a3740ee97b30d17d0a52f5133d4ed5eff",
+  "goTestBinaryPath": ".cvf/runtime/r139_cua_source_20261025/handlers.test.exe",
+  "goTestBinarySha256": "d1861e44be7f28b58d851e901a7d498c8460e553efbb20df6b0d92910c7208e7",
+  "dockerBinary": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+  "dockerBinarySha256": "b8f907c73a89c9bd0a88bddb0cb5008728af4dea0d773b3f3614e9f203737e04",
+  "nodeBinary": "C:\\Program Files\\nodejs\\node.EXE",
+  "nodeBinarySha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+  "powershellBinary": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+  "powershellBinarySha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f",
+  "pythonBinary": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+  "pythonBinarySha256": "a2a4eff8d0b0c845284c607d50a3b5b966ac5a3121736a2e38e165bd6644d9fe",
+  "gitBinary": "C:\\Program Files\\Git\\cmd\\git.EXE",
+  "gitBinarySha256": "22fead8244ef3a7225fb800099a4e43eca8bcec0466774917669599c2f19a05a",
+  "viteCliSha256": "fa03478846d229651a3c6aa64833ba2c6cbf580a798b92bd8f47c7480bafb5d8",
+  "image": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+  "fixtureName": "ccmai-r139-r4-20261023",
+  "database": "ccma_r139_r4_20261023",
+  "dockerHost": "npipe:////./pipe/dockerDesktopLinuxEngine",
+  "deadlineSeconds": 1200,
+  "runtimeRoot": ".cvf/runtime/r139_integrated_execution_r4_20261023",
+  "externalEvidenceDir": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\.ccmai_local_evidence\\r139_execution_proof_20261023\\fixture_r4",
+  "browserTool": "supported_CUA_page_target",
+  "browserReceiptPath": ".cvf/runtime/r139_v3_coord_recovery_20261026_readiness/browser_prefix.json",
+  "browserReceiptSha256": "PENDING_ACTUAL_G0",
+  "campaignReservationSha256": "PENDING_ACTUAL_ORIGINAL_CONTROLLER",
+  "nativeContractId": "r139-cua-boot-identity-v3-20261026",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "campaignNonce": "4f37f37b37fa5295611c84b63d1d9910",
+  "browserSupported": false,
+  "browserReadinessRoot": ".cvf/runtime/r139_v3_coord_recovery_20261026_readiness",
+  "browserCloseReceiptPath": ".cvf/runtime/r139_integrated_execution_r4_20261023/browser_close.json",
+  "actionEvidencePath": ".cvf/runtime/r139_integrated_execution_r4_20261023/browser_actions.json",
+  "finalInventoryPath": ".cvf/runtime/r139_integrated_execution_r4_20261023/browser_final_inventory.json",
+  "browserDoneSignalPath": ".cvf/runtime/r139_integrated_execution_r4_20261023/browser_done.signal",
+  "grantDeadlineUTC": "<actual-original-campaign-deadline-UTC-Z-seconds>",
+  "fallbackCloseOperator": "Owner in this conversation",
+  "operator": "Owner in this conversation",
+  "closeMode": "operator_fallback",
+  "rootPins": {
+    "python": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "gitDir": "C:\\Program Files\\Git\\cmd",
+    "system32": "C:\\Windows\\System32",
+    "node": "C:\\Program Files\\nodejs\\node.EXE",
+    "hostBootId": "r139-hb2:c6b81cbdce3472f97a047a667bcfbfcf5fff39e7a8a39546e385b4b1d28b3d79"
+  },
+  "recorderPaths": {
+    "outputDir": ".cvf/runtime/r139_v3_coord_recovery_20261026_recorder",
+    "tempDir": "temp"
+  },
+  "supervisorSha256": "a7557917cc3ade551e78f7b4c40b0cc5aac5a312bcae2fdfbe353aba997f5203",
+  "nativeExecutePOST": 8,
+  "browserExecutePOST": 1,
+  "grantCap": 3,
+  "providerCap": 1,
+  "automaticRetry": 0,
+  "budgetAuthorized": false,
+  "syntheticIdentityApproved": true,
+  "approvedBudget": {
+    "amount": 1,
+    "currency": "USD"
+  },
+  "provider": "alibaba_maas",
+  "model": "qwen3.7-flash",
+  "completionTokens": 768,
+  "maxRequestBytes": 6000,
+  "thinking": false,
+  "endpoint": "https://ws-remplsp27g5oicq1.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1",
+  "endpointSha256Required": "b22a15b6e8aa4113c2816acae6935a84d052a2d7b81db734ccdc4f5be81b4f8f",
+  "keyCustodian": "Root; existing external staged key, one supervisor content read after actual G0/runtime admission",
+  "keyPath": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\.ccmai_local_evidence\\r139_execution_proof_20261021\\credentials\\alibaba.key",
+  "ownerApprovalReference": "Original CUA/reentry/observation grants plus Owner-approved boot recovery call_b2e1db511d4e40cdbc735532106bf0fc; actual Root Runtime Effect Admission remains required",
+  "syntheticNamespace": "ccma_r139_page_target_20261024",
+  "issuerRole": "owner",
+  "actorRole": "writer",
+  "configRef": "r139-owned-config",
+  "promptVersion": "r139-synthetic-v1",
+  "promptSha256": "f922023fa5a69efe16a14640355f1e8123ba36e1fa16900ce4419169a5ee6658",
+  "vitePort": 3519,
+  "noninterferenceDisposition": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_noninterference_disposition_20261026.json",
+    "sha256": "e9e36c80c052256a0128d8ca414c181da89db3b2685a0282e2cb1c3dd6972dfd"
+  },
+  "rawProvenanceReview": "PENDING_ROOT_ACTUAL_ORIGINAL_NATIVE_TRANSCRIPT_AND_URL_REVIEW",
+  "runtimeExecutableNow": false,
+  "providerExecutableNow": false,
+  "proofContract": "cua_page_target_v1",
+  "browserProofContract": "cua_page_target_v1",
+  "scopeOrigin": "caller_owned_explicit_cua_tab_target",
+  "ownedScopeId": "r139-cua-explicit-owned-4f37f37b37fa5295611c84b63d1d9910",
+  "r139ApprovedEffectCaps": {
+    "oneCampaign": 1,
+    "internalReadOnlyQueries": 5,
+    "browserWorkerStagesMax": 4,
+    "cuaApiMethodsMax": 64,
+    "cuaStageMethodsMax": {
+      "g0Producer": 8,
+      "g0IndependentObserver": 4,
+      "g2ProductUi": 48,
+      "terminal": 4
+    },
+    "g2CapturesMax": 4,
+    "newOwnedPages": 1,
+    "creationNavigation": 1,
+    "samePageControlNavigation": 1,
+    "pageReadObservationsMax": 4,
+    "originalCapturesMax": 2,
+    "exactFinalCloseMax": 1,
+    "baselineMetadataEnumeration": 1,
+    "handoffMetadataEnumeration": 1,
+    "finalMetadataEnumeration": 1,
+    "globalMetadataEnumerationMaximum": 3,
+    "nativeExecutePOSTMax": 8,
+    "browserExecutePOSTMax": 1,
+    "grantsMax": 3,
+    "authPOSTMax": 4,
+    "statusReadStartsMax": 16,
+    "automaticPostSendStatusPollStartsMax": 12,
+    "eventDrivenStatusReadsMax": 4,
+    "automaticPollSpacingSecondsMin": 5,
+    "automaticPollLifetimeSecondsMax": 60,
+    "physicalProviderAttemptsMax": 1,
+    "newUSDMax": 1,
+    "keyContentReadsMax": 1,
+    "requestBytesMax": 6000,
+    "completionTokensMax": 768,
+    "fixtureStartsMax": 1,
+    "fixtureFinalStopsMax": 1,
+    "backendStartsMax": 1,
+    "viteStartsMax": 1,
+    "publicTariffRefreshIfNeededMax": 1,
+    "dockerQuerySecondsMax": 20,
+    "powershellQuerySecondsMax": 5,
+    "automaticRetry": 0,
+    "sourceChecksDuringCampaign": 0,
+    "wholeCampaignSeconds": 1200,
+    "stopBeforeSeconds": 1020,
+    "cleanupReserveSeconds": 180,
+    "oldUnusedProviderAllowanceSupersededNotStacked": true
+  },
+  "productRuntimeReleased": false,
+  "ownerOperatorAvailabilityRef": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_owner_close_availability_20261026.json",
+  "browserKind": "iab",
+  "browserId": "<actual-returned-CUA-browser-id>",
+  "tabId": "<actual-returned-CUA-tab-id>",
+  "ownedTabIds": [
+    "<actual-returned-CUA-tab-id>"
+  ],
+  "producerAgentTaskId": "/root/r139_live_browser_producer",
+  "observerAgentTaskId": "/root/r139_sol_browser_observer",
+  "ownerCuaAmendmentRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-CUA-SOURCE-ADMISSION.json",
+    "sha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e"
+  },
+  "ownerCuaAmendmentSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
+  "inheritedOwnerEnvelopeRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-AND-CONDITIONAL-REENTRY-ADMISSION.json",
+    "sha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f"
+  },
+  "inheritedOwnerEnvelopeSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "observationCapsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
+    "sha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491"
+  },
+  "rawCuaInventoryPath": ".cvf/runtime/r139_integrated_execution_r4_20261023/browser_raw_inventory.json",
+  "bootIdentityRecoveryAdmissionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json",
+    "sha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb"
+  },
+  "acceptedBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b"
+  },
+  "operatorAvailabilityRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_owner_close_availability_20261026.json",
+    "sha256": "7cc88f73b547d8358ed6d0ee0c0fc7e1e17f3205a14ba0f05c0c00bf20d7b3d8"
+  },
+  "liveTemporalConditionSatisfied": false,
+  "currentClockHoldReceipt": "HISTORICAL_V2_ONLY_PID24484_EXIT1",
+  "v3ContractRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_contract_20261026.json",
+    "sha256": "e3fe4ef6caeb8b197e5f358267d89a6584fb6cf10087bebb5bfca53efdc7d5da"
+  },
+  "v3OwnerAdmissionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+    "sha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f"
+  },
+  "actualG0IndependentRootReview": false,
+  "separateRuntimeEffectAdmission": false,
+  "noFixtureKeyProviderBeforeAdmission": true,
+  "historicalNoninterferenceDisposition": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_noninterference_disposition_20261025.json",
+    "sha256": "bb236c2fdd2242d5537842c191f2f1cc52150f37f4512a85750c60cb700049b2"
+  },
+  "coordRecoveryAdmissionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-COORD-OWNER-RECOVERY-ADMISSION.json",
+    "sha256": "c6580693da837b014ac8356d3ceaf7b1317ba4970ed6a5d05c1859327d6d2431"
+  },
+  "coordRecoveryOwnerRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_coordination_owner_20261026.json",
+    "sha256": "92b7d0a4898a55d282b0d317bbaaf725a5a4797503009daaada4c3bed36d0197"
+  },
+  "originalPreclockExitRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/original_wait_exit.json",
+    "sha256": "8f18cef19fbfadde33948b17ee08b5cfb558aee261eb538bea65e0c364e578cf"
+  },
+  "sharedFutureControllerUsedBefore": 1,
+  "sharedFutureControllerTotalCap": 2,
+  "coordRecoveryQualification": "Metadata only. Additional preclock slot does not authorize service, CUA, fixture, key or provider effects before actual signal and separate admission.",
+  "priorOriginalWaitExitRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/original_wait_exit.json",
+    "sha256": "8f18cef19fbfadde33948b17ee08b5cfb558aee261eb538bea65e0c364e578cf"
+  },
+  "actorAcks": {
+    "root": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_root_actor_ack_20261026.json",
+      "sha256": "0b214418048168fbcb427f14884592a78370b13becff12068e991aafd6c03316"
+    },
+    "internal": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_internal_actor_ack_20261026.json",
+      "sha256": "1a03b85d6914484ccd75ed314ec4fd1221cc16243e773e9028679163403afffe"
+    },
+    "cuaProducer": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_producer_actor_ack_20261026.json",
+      "sha256": "dea38bfb45094c112de851e6617be5f8a851f94b006ade23c1cc8b839bfc0068"
+    },
+    "cuaObserver": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_observer_actor_ack_20261026.json",
+      "sha256": "b66bb755f4a7d242e2c4cd50d7ef60a5e2fef3dbd67e40059b90d7ca58cd4d1f"
+    }
+  }
+}

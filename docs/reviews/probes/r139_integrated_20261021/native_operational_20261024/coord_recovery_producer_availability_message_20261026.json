@@ -1,0 +1,17 @@
+{
+  "kind": "ROOT_RECORDED_ACTUAL_COLLABORATION_AVAILABILITY",
+  "actor": "/root/r139_live_browser_producer",
+  "rootReceivedAtUTC": "2026-10-26T10:33:50.530488+00:00",
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+  "acceptedBuildPinsSha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b",
+  "nativeContractId": "r139-cua-boot-identity-v3-20261026",
+  "campaignNonce": "4f37f37b37fa5295611c84b63d1d9910",
+  "coordRecoveryAdmissionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-COORD-OWNER-RECOVERY-ADMISSION.json",
+    "sha256": "c6580693da837b014ac8356d3ceaf7b1317ba4970ed6a5d05c1859327d6d2431"
+  },
+  "originalMessagePlainText": "Ready as /root/r139_live_browser_producer for the new R139 G0 plan. The grant, source/build pins, nonce, and caps are confirmed. Reservation and Root release are still absent; I made no CUA calls or file edits, and effects remain 0.",
+  "ready": true,
+  "effects": 0,
+  "qualification": "Root transcription of actual collaboration reply, with Markdown formatting removed; not authenticated native browser/API evidence."
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "ROOT_RECORDED_COORD_RECOVERY_OWNER_EXACT_PAGE_CLOSE_AVAILABILITY",
+  "status": "ROOT_REBOUND_STANDING_OWNER_CLOSE_AVAILABILITY_NO_NEW_QUOTED_REPLY",
+  "operator": "Owner in this conversation",
+  "operatorAvailable": true,
+  "availabilityBasis": "Retained explicit Owner readiness for exact owned PageId/nonce close fallback plus current approval of this concrete recovery campaign; Root current availability judgment only. No fresh quoted yes or actual close is inferred.",
+  "latestOwnerResume": "duyệt",
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+  "acceptedBuildPinsSha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b",
+  "nativeContractId": "r139-cua-boot-identity-v3-20261026",
+  "campaignNonce": "4f37f37b37fa5295611c84b63d1d9910",
+  "exactPageId": null,
+  "currentlyReserved": false,
+  "actualCloseProved": false,
+  "finalInventoryProved": false,
+  "closeMode": "operator_fallback_if_native_exact_id_close_unavailable",
+  "noOtherTabControl": true,
+  "acceptedBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b"
+  },
+  "coordRecoveryAdmissionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-COORD-OWNER-RECOVERY-ADMISSION.json",
+    "sha256": "c6580693da837b014ac8356d3ceaf7b1317ba4970ed6a5d05c1859327d6d2431"
+  },
+  "predecessorAvailabilityRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_owner_close_availability_20261026.json",
+    "sha256": "e423f802e48678b3eb141ba7aa83025f98e4dac981e23a92e484d1db93f50d29"
+  },
+  "rootBoundAtUTC": "2026-10-26T10:33:50.530488+00:00"
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "ROOT_REVIEWED_ACTOR_METADATA_ACK",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "actor": "producer",
+  "collaborationTaskId": "/root/r139_live_browser_producer",
+  "ready": true,
+  "freshGrantSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
+  "inheritedOwnerEnvelopeSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "observationCapsSha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491",
+  "recoveryOwnerAdmissionSha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb",
+  "v3OwnerAdmissionSha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f",
+  "bootIdentityContractSha256": "e3fe4ef6caeb8b197e5f358267d89a6584fb6cf10087bebb5bfca53efdc7d5da",
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+  "payloadSha256": "ffbf475dee7a28a785c2ce543ad50cda55819c72debdf8c24e0a05104d599f19",
+  "bootProofSha256": "10937592aaa94c4d00a89eb194fa223b9bec372b921be8a247967da235fa44e9",
+  "nativeContractId": "r139-cua-boot-identity-v3-20261026",
+  "campaignNonce": "4f37f37b37fa5295611c84b63d1d9910",
+  "acceptedBuildPinsSha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b",
+  "rootReceivedMetadataAtUTC": "2026-10-26T10:33:50.530488+00:00",
+  "currentEffectRelease": "NONE_AVAILABILITY_ONLY",
+  "currentBrowserCapabilityPass": false,
+  "campaignReserved": false,
+  "effectsObserved": 0,
+  "bindingQualification": "Current actual collaboration availability for new Owner-approved coordination recovery, exact new nonce/source/build; no native capability or effect. Root and internal are explicit Root responsibilities; independent browser producer and observer task IDs differ.",
+  "sourceCheckTotalSpent": 16,
+  "internalSetupSeconds": 180,
+  "historicalActorAckRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_producer_resumed_availability_20261026.json",
+    "sha256": "888ec597a7fc68dccf58dae4e09e3bf64c423775d1f3db49c343f22713c4338d"
+  },
+  "coordRecoveryAdmissionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-COORD-OWNER-RECOVERY-ADMISSION.json",
+    "sha256": "c6580693da837b014ac8356d3ceaf7b1317ba4970ed6a5d05c1859327d6d2431"
+  },
+  "sharedFutureControllerUsed": 1,
+  "sharedFutureControllerCap": 2,
+  "sourceDesignSha256": "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d",
+  "historicalPreviousWrapperRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_producer_actor_ack_20261026.json",
+    "sha256": "70790ce3abd574b6830f3b5ecef4e2b84280d957d239b5537cb8e9034b0fc410"
+  },
+  "originalActorAckRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_producer_availability_message_20261026.json",
+    "sha256": "084f62b841e211eacdc964785266a4a0b961ff0979e1579f8e8de3c06de6ec18"
+  }
+}

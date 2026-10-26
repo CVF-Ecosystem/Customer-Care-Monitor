@@ -1,0 +1,33 @@
+{
+  "kind": "R139_CUA_OLD_RESOURCE_NONINTERFERENCE_DISPOSITION",
+  "status": "PREPARED_NEW_COORD_RECOVERY_FRESH_BASELINES_PENDING_ACTUAL_G0_AND_SUPERVISOR",
+  "campaignNonce": "4f37f37b37fa5295611c84b63d1d9910",
+  "excludedOldNativePageId": "95B03BC1A084B240BC6C88D67BD0D511",
+  "excludedOldNonce": "a64a7a07c35e9fe30e4cb8574a32b831",
+  "oldOwnerCloseReportRetained": true,
+  "oldPhysicalTimeAndNativeFinalInventory": "UNKNOWN_RETAINED_NO_REPROBE",
+  "newBrowserBaseline": "one actual IAB metadata inventory before new tab inside G0; no current baseline asserted",
+  "newDockerBaseline": "actual source supervisor after actualG0 and separately committed Runtime Effect Admission before fixture mutation",
+  "tabPrivacy": "baseline/handoff/final metadata only, no unrelated DOM/capture/control",
+  "newResourcesExact": "ccmai-r139-r4-20261023 / ccma_r139_r4_20261023 / Vite3519, no collision deletion or alternate namespace",
+  "campaignReserved": false,
+  "nativeContractId": "r139-cua-boot-identity-v3-20261026",
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+  "predecessorRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_noninterference_disposition_20261025.json",
+    "sha256": "bb236c2fdd2242d5537842c191f2f1cc52150f37f4512a85750c60cb700049b2"
+  },
+  "coordRecoveryAdmissionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-COORD-OWNER-RECOVERY-ADMISSION.json",
+    "sha256": "c6580693da837b014ac8356d3ceaf7b1317ba4970ed6a5d05c1859327d6d2431"
+  },
+  "priorOriginalWaitExitRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/original_wait_exit.json",
+    "sha256": "8f18cef19fbfadde33948b17ee08b5cfb558aee261eb538bea65e0c364e578cf"
+  },
+  "oldV3DispositionRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_noninterference_disposition_20261026.json",
+    "sha256": "0ae2bfeacf384999dfc7985c8494c53f71cbf902dc78eb9ce5a39896ba21120d"
+  },
+  "freshRootQualification": "Fresh coordination roots only; current protected Docker/tab baselines remain UNKNOWN until their respectively admitted actual observations; no old resource cleanup or namespace change."
+}

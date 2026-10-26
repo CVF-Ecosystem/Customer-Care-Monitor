@@ -2,8 +2,8 @@
 
 Status: ACTIVE
 Risk: R2
-Worker: Internal Sol G0 service/runtime actor; internal Luna producer/independent observer for browser only
-Reviewer: Root independent source/evidence REVIEWER
+Worker: Sol Medium /root/r139_coord_recovery_packet_worker (metadata); Root (original controller and exact queries); Luna producer and Sol observer (browser)
+Reviewer: Sol Medium /root/r139_final_technical_review (technical packet); Root (actual independent native G0 evidence)
 Commit mode: WORKER_MUST_NOT_COMMIT
 providerExecutionAuthority: NONE_CURRENT_HISTORICAL_CAMPAIGNS_SPENT_OR_EXPIRED
 runtimeExecutor: UNASSIGNED_UNTIL_SUPPORTED_ENVIRONMENT_AND_COMMITTED_ADMISSION

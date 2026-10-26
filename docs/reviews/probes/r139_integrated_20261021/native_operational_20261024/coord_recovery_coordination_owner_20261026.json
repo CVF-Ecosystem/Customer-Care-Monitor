@@ -1,0 +1,17 @@
+{
+  "kind": "R139_ROOT_PRECLOCK_COORDINATION_OWNER",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "nativeContractId": "r139-cua-boot-identity-v3-20261026",
+  "nonce": "4f37f37b37fa5295611c84b63d1d9910",
+  "owner": "Root original-control custodian",
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+  "acceptedBuildSha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b",
+  "rootExclusive": true,
+  "freshGrantSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
+  "coordRecoveryAdmissionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-COORD-OWNER-RECOVERY-ADMISSION.json",
+    "sha256": "c6580693da837b014ac8356d3ceaf7b1317ba4970ed6a5d05c1859327d6d2431"
+  },
+  "currentlyReserved": false,
+  "effectAuthority": "OWNERSHIP_METADATA_ONLY_NOT_EFFECT_RELEASE"
+}

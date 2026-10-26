@@ -1,0 +1,43 @@
+{
+  "kind": "ROOT_ACTUAL_COORDINATION_OWNER_SCHEMA_READBACK",
+  "observedAtUTC": "2026-10-26T10:28:33.278654+00:00",
+  "freshRootsBeforeCreationVerifiedAbsent": [
+    ".cvf/runtime/r139_v3_coord_recovery_20261026",
+    ".cvf/runtime/r139_v3_coord_recovery_20261026_readiness",
+    ".cvf/runtime/r139_v3_coord_recovery_20261026_activation_logs",
+    ".cvf/runtime/r139_v3_coord_recovery_20261026_recorder"
+  ],
+  "actualOwnerPath": ".cvf/runtime/r139_v3_coord_recovery_20261026_readiness/coordination/owner.json",
+  "actualOwnerSha256": "92b7d0a4898a55d282b0d317bbaaf725a5a4797503009daaada4c3bed36d0197",
+  "publicExactByteCopy": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_coordination_owner_20261026.json",
+    "sha256": "92b7d0a4898a55d282b0d317bbaaf725a5a4797503009daaada4c3bed36d0197"
+  },
+  "fullExpectedSchema": {
+    "kind": "R139_ROOT_PRECLOCK_COORDINATION_OWNER",
+    "trancheId": "CCMAI-RUNTIME-139",
+    "nativeContractId": "r139-cua-boot-identity-v3-20261026",
+    "nonce": "4f37f37b37fa5295611c84b63d1d9910",
+    "owner": "Root original-control custodian",
+    "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+    "acceptedBuildSha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b",
+    "rootExclusive": true,
+    "freshGrantSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
+    "coordRecoveryAdmissionRef": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-COORD-OWNER-RECOVERY-ADMISSION.json",
+      "sha256": "c6580693da837b014ac8356d3ceaf7b1317ba4970ed6a5d05c1859327d6d2431"
+    },
+    "currentlyReserved": false,
+    "effectAuthority": "OWNERSHIP_METADATA_ONLY_NOT_EFFECT_RELEASE"
+  },
+  "actualReadbackEqualsExpected": true,
+  "coordinationExclusiveOwnerOnly": true,
+  "dockerConfigPath": ".cvf/runtime/r139_v3_coord_recovery_20261026_readiness/docker_config",
+  "dockerConfigFileSha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+  "controllerExtracted": false,
+  "controllerInvoked": false,
+  "serviceQueries": 0,
+  "cuaMethods": 0,
+  "providerCalls": 0,
+  "qualification": "Actual local JSON readback and filesystem metadata only; no controller source import, parser/test, OS identity query, service or browser method."
+}
