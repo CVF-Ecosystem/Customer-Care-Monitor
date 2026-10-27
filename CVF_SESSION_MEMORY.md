@@ -4,6 +4,11 @@ Memory class: POINTER_RECORD
 
 <!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
 
+## R139 delegated actual reservation — 2026-10-27T04:24:06.802756Z
+
+CCMAI-RUNTIME-139 delegated original G0 campaign reserved at 2026-10-27T04:24:06.802756Z (monotonic 340571.0407273), reservation .cvf/runtime/r139_delegated_reentry_v2_20261027_readiness/campaign_reservation.json sha256 d7633cb63282b070f95f732a29bd6a1977c4f8aea1c4dd946d8f874293c5cceb, clean dispatch 087f81f7955cf739b05b8f109881b4e91d58d129, nonce 299b601cf7509d9727de5d1de197990f. Cumulative original controller4/4 intent recorded after prior PIDs23500,2560,28928 exit1; campaign1/1 reserved, whole1200s deadline 2026-10-27T04:44:06.802756Z, cleanup starts by 2026-10-27T04:41:06.802756Z (+1020s), internal setup <=180s. Source7ef and accepted Docker snapshot build6b0d, all20 source checks retained. Root may release five exact read-only service queries only after actual signal; producer and observer may act only inside the one owned IAB page G0 envelope. Actual independent G0 review and separate Runtime Effect Admission are required before fixture/key/provider. Product B blocked; no helper tranche, no quota replay, Facebook/Zalo OA parked.
+
+
 ## Mandatory standing Owner directive — apply without reminders
 
 `OWNER-ROADMAP-SINGLE-SCOPE-20261023` — **MUST APPLY; Root must not wait for Owner to repeat it.** At every rehydration, scope selection, dispatch, failure/repair decision, review and handoff: keep ONE existing R139 outcome-based order across G0/G1/G2/G3; bind work to roadmap M3-05/M3-08; consolidate all prerequisites/effects/cleanup/acceptance before redispatch; no helper tranches/orders or per-check Owner relay prompt chain. Continue authorized same-scope dependencies without redundant confirmation. Report user capability achieved, exact remaining acceptance gap, genuine blocker and one consolidated route. Mandatory human process contract; effectiveness remains unproved until product acceptance. Existing phase/risk/effect limits, independent review and spent caps remain binding.

@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 delegated consolidated preclock repair source checks PASS: original controllers23500/2560/28928 all retained exit1 (used3), allocation002 ceiling4; cumulative checks20 include retained18 plus worker13552 and Root24424 each PASS5. Exact inherited source-budget dictionary restored, delegated accounting separate; full source preclock contracts independently audited. Finalize current v2 metadata/actor/source bindings and independent technical review, pinned gates and clean commit before one fourth original controller. Nonce299b601cf7509d9727de5d1de197990f, source7ef/build6b unchanged. Campaign0/1, services/CUA/fixture/key/provider0; one R139/M3-05/M3-08 order, API1<=USD1 and1200/+1020 unchanged, actual G0 and separate Runtime Effect Admission before fixture/key/provider. No blind retry, helper tranche or Owner relay. Product B blocked; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 delegated original G0 campaign reserved at 2026-10-27T04:24:06.802756Z (monotonic 340571.0407273), reservation .cvf/runtime/r139_delegated_reentry_v2_20261027_readiness/campaign_reservation.json sha256 d7633cb63282b070f95f732a29bd6a1977c4f8aea1c4dd946d8f874293c5cceb, clean dispatch 087f81f7955cf739b05b8f109881b4e91d58d129, nonce 299b601cf7509d9727de5d1de197990f. Cumulative original controller4/4 intent recorded after prior PIDs23500,2560,28928 exit1; campaign1/1 reserved, whole1200s deadline 2026-10-27T04:44:06.802756Z, cleanup starts by 2026-10-27T04:41:06.802756Z (+1020s), internal setup <=180s. Source7ef and accepted Docker snapshot build6b0d, all20 source checks retained. Root may release five exact read-only service queries only after actual signal; producer and observer may act only inside the one owned IAB page G0 envelope. Actual independent G0 review and separate Runtime Effect Admission are required before fixture/key/provider. Product B blocked; no helper tranche, no quota replay, Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / BUDGET_STEWARD / snapshot metadata author / COMMIT_STEWARD; Sol implementation worker and independent reviewer, browser workers unreleased",
+  "activeRole": "Root ORCHESTRATOR / original-control custodian / COMMIT_STEWARD; internal five-query worker and browser producer/observer await Root signal, independent G0 review required, product effect workers unreleased",
   "updatedAt": "2026-10-25",
   "x-resolvedCoreCommit": "b8ead4f0d1bf9224338a206b2abcd893ec1801b1",
   "x-ownerRoadmapDiscipline": {
@@ -3735,11 +3735,11 @@
       "sha256": "be07b72bdbd35969bd8f29979b06aa1c6d97a79a33deab1d48734d8fb9d25787"
     },
     "allocationLedger": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_technical_allocations_20261026.json",
-    "controllerUsed": 3,
+    "controllerUsed": 4,
     "initialControllerCeiling": 3,
     "sourceChecksRetained": 16,
     "newFocusedGuardProcessesUsed": 4,
-    "campaignUsed": 0,
+    "campaignUsed": 1,
     "snapshotCreated": true,
     "runtimeReleased": false,
     "countedFocusedLineage": 20,
@@ -3751,5 +3751,26 @@
     "lastOriginalPid": 28928,
     "lastOriginalExit": 1,
     "v2FocusedProcessesUsed": 2
+  },
+  "x-r139DelegatedActualReservation": {
+    "status": "RESERVED_CANONICAL_PENDING_GATES",
+    "campaignNonce": "299b601cf7509d9727de5d1de197990f",
+    "g0StartUTC": "2026-10-27T04:24:06.802756Z",
+    "g0StartMonotonic": "340571.0407273",
+    "cleanupCutoffUTC": "2026-10-27T04:41:06.802756Z",
+    "deadlineUTC": "2026-10-27T04:44:06.802756Z",
+    "reservationPath": ".cvf/runtime/r139_delegated_reentry_v2_20261027_readiness/campaign_reservation.json",
+    "reservationSha256": "d7633cb63282b070f95f732a29bd6a1977c4f8aea1c4dd946d8f874293c5cceb",
+    "originalDispatchHead": "087f81f7955cf739b05b8f109881b4e91d58d129",
+    "controllerUsed": 4,
+    "controllerCap": 4,
+    "sourceChecksRetained": 20,
+    "campaignUsed": 1,
+    "campaignCap": 1,
+    "servicesUsed": 0,
+    "cuaMethodsUsed": 0,
+    "fixtureUsed": 0,
+    "keyReads": 0,
+    "providerCalls": 0
   }
 }

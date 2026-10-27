@@ -38426,6 +38426,13 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_contract_root_return_v2_20261027.json",
       "status": "ACTIVE",
       "description": "R139 v2 actual bounded offline source-contract focused return with original wait; no campaign/runtime claim."
+    },
+    {
+      "id": "r139-delegated-original-activation-receipt-20261026",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_receipt.json",
+      "status": "ACTIVE",
+      "description": "Actual R139 delegated original campaign reservation receipt, when produced; G0/product/provider acceptance remains pending actual review."
     }
   ]
 }
