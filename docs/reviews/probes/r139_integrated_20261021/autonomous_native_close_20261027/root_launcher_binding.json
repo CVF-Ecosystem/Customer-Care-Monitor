@@ -1,0 +1,7 @@
+{
+  "launcher": ".cvf/runtime/r139_autonomous_native_close_20261027/run_root_slots.py",
+  "sha256": "14910935ed4c7911695b38be73b400e4ef1cce4479c5405f2efcbd81531c5c63",
+  "binarySha256": "1de2ac02c8b0fa5e135a52de38feddd597d3909705c0f9d06274c9f694b10c98",
+  "method": "Root independent narrowed2Python+2Go groups; original child process/wait/raw evidence retained; same reviewed inert child wrapper transport.",
+  "workerProof": "All3 original waits and raw digests independently matched; no repeats."
+}

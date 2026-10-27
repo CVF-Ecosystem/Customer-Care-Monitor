@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "OWNER_AUTONOMOUS_R139_NATIVE_CLOSE_TEST_ISOLATION",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "date": "2026-10-27",
+  "riskCeiling": "R2",
+  "ownerApproved": true,
+  "ownerInstruction": "cho phép bạn toàn quyền chọn phương án làm để có kết quả",
+  "baseCommit": "46c0b6949912fb27a034d3d2650f6b4cee85d044",
+  "parentAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-TOOL-CLOSE-SOURCE-ADMISSION.json",
+  "demonstratedNewRootCause": "Activation reviewed_boot_v3_checks binds the entire legacy supervisor test-file SHA to accepted original clock receipts. Appending unrelated native-close tests changes that SHA; source acceptance cannot fabricate new old-clock receipts or relabel their test hash.",
+  "roles": {
+    "implementationWorker": "Sol Medium /root/r139_autonomous_route",
+    "independentAdmissionReviewer": "Luna Max /root/r139_completion_admission_review",
+    "independentSourceReviewer": "Root",
+    "commitSteward": "Root"
+  },
+  "allowedChanges": [
+    "Restore scripts/tests/test_r139_execution_supervisor.py byte-for-byte from parent accepted build (SHA4bbd3abb54646a9bcaa691c8b29ccf49f470539475a2a87732b77e2790be2283).",
+    "Add docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/test_native_tool_close.py containing the same already-reviewed native test/fixture logic, using inert legacy test helper imports and selecting only the native test explicitly. No discovery of inherited clock or other tests.",
+    "Update existing same-R139 review/session/status/catalog and allocation artifacts only."
+  ],
+  "invariants": {
+    "supervisorSha256": "9ee7f988b5a27495fd4bd4e72975f0b2a583b8e33cea49c51ac5189285f44c64",
+    "goFixtureSha256": "4e90a7225f6fc663a3dc3493b3570bdfdc9969da0b43d70445273170c41f899d",
+    "binarySha256": "1de2ac02c8b0fa5e135a52de38feddd597d3909705c0f9d06274c9f694b10c98",
+    "noRecompileOrGoReplay": true,
+    "oldClockTestDesignReceipts": "All original bytes/hashes unchanged. No clock suite rerun or claim of new clock results.",
+    "acceptedChildSource13": "Same exact13 path set, legacy test row unchanged, only supervisor and Go fixture source rows change. New proof test pinned separately as newProofTestRef/protected hash, never inserted in source13.",
+    "acceptedVerificationBinding": "bootIdentityV3Verification.sourceCommit matches new child acceptance commit; explicit inheritedSourceCheckCommit7ef30823746d72e935607c0bebf6ab306099eb48 and original attemptRefs/design/test hashes retained. This is inheritance, not a new execution claim.",
+    "fallbackGenericPaths": "Unchanged; preserve all five original new-source checks and all older failures/UNKNOWNs."
+  },
+  "checks": {
+    "completedLineageRetained": 25,
+    "additionalWorkerPython": 1,
+    "additionalRootPython": 1,
+    "newLineageCeiling": 27,
+    "selectedMethod": "Explicit new native-close proof method only, same27cases and generic negatives already reviewed; inert imports plus temp file/hash/schema only.",
+    "originalCustody": "Intent/Popen/pid/original wait/exit/stdout/stderr plus original and final source/newtest/binary hashes; first failure stops with no automatic retry. Root owns allocations."
+  },
+  "allowedPaths": [
+    "scripts/tests/test_r139_execution_supervisor.py",
+    "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/**",
+    "docs/reviews/R139_AUTONOMOUS_COMPLETION_ROUTE_2026-10-27.md",
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md",
+    ".cvf/runtime/r139_autonomous_*/**"
+  ],
+  "prohibitedEffects": [
+    "supervisor/Go/binary/activation/source-budget or legacy receipt modification",
+    "compiler/Go/clock-suite replay",
+    "DB/Docker/browser/runtime/keys/provider/network",
+    "worker authority/seed edits or commits",
+    "extra work order/tranche/Antigravity",
+    "changing any historical usage/result to hide the pin-coupling finding"
+  ],
+  "executionPrecondition": "Independent admission review, required static gates and committed supplement before test isolation BUILD. Root checks exact isolated delta/safety before either new Python process.",
+  "claims": "Native receipt validator components checked only; runtime/G0/product/governance still NOT_RUN."
+}

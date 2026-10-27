@@ -1,0 +1,7 @@
+test_cua_page_target_terminal_and_protected_inventory (scripts.tests.test_r139_execution_supervisor.R139SupervisorPureTests.test_cua_page_target_terminal_and_protected_inventory) ... ok
+test_cua_native_tool_close_contract (scripts.tests.test_r139_execution_supervisor.R139SupervisorPureTests.test_cua_native_tool_close_contract) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 14.972s
+
+OK

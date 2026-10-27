@@ -1,7 +1,7 @@
 {
   "x-r139AutonomousDiscovery20261027": {
-    "status": "NATIVE_CLOSE_REPAIR_PLANNED_PENDING_COMMITTED_SOURCE_RELEASE",
-    "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-TOOL-CLOSE-SOURCE-ADMISSION.json",
+    "status": "COMPONENTS_PASS_LINEAGE25_TEST_ISOLATION_PENDING_COMMITTED_RELEASE",
+    "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-CLOSE-TEST-ISOLATION-ADMISSION.json",
     "actualDiscoveryCalls": 1,
     "newCampaigns": 0,
     "newProviderCalls": 0,

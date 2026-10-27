@@ -1,0 +1,23 @@
+{
+  "slot": "root_pure_go",
+  "pid": 25904,
+  "originalWaitReturned": true,
+  "exitCode": 0,
+  "timedOut": false,
+  "atUTC": "2026-10-27T10:54:24.258308+00:00",
+  "monotonic": 363990.6634783,
+  "sourceHashesBefore": {
+    "scripts/r139_execution_supervisor.py": "9ee7f988b5a27495fd4bd4e72975f0b2a583b8e33cea49c51ac5189285f44c64",
+    "scripts/tests/test_r139_execution_supervisor.py": "ffa3825587f524725939b285fd6753a21faba88757215d16c30d0bf1f59bd8ba",
+    "backend/api/handlers/intervention_execution_browser_test.go": "4e90a7225f6fc663a3dc3493b3570bdfdc9969da0b43d70445273170c41f899d"
+  },
+  "sourceHashesAfter": {
+    "scripts/r139_execution_supervisor.py": "9ee7f988b5a27495fd4bd4e72975f0b2a583b8e33cea49c51ac5189285f44c64",
+    "scripts/tests/test_r139_execution_supervisor.py": "ffa3825587f524725939b285fd6753a21faba88757215d16c30d0bf1f59bd8ba",
+    "backend/api/handlers/intervention_execution_browser_test.go": "4e90a7225f6fc663a3dc3493b3570bdfdc9969da0b43d70445273170c41f899d"
+  },
+  "stdoutSha256": "b8b9bcb2fbc6d18b60830b1265f88900d7d4c1423d10e836271f8f3aba13d314",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdoutBytes": 3975,
+  "stderrBytes": 0
+}

@@ -1,0 +1,40 @@
+{
+  "slot": "root_python",
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "scripts.tests.test_r139_execution_supervisor.R139SupervisorPureTests.test_cua_page_target_terminal_and_protected_inventory",
+    "scripts.tests.test_r139_execution_supervisor.R139SupervisorPureTests.test_cua_native_tool_close_contract"
+  ],
+  "cwd": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+  "shell": false,
+  "atUTC": "2026-10-27T10:53:58.048140+00:00",
+  "monotonic": 363964.451937,
+  "timeoutSeconds": 60,
+  "sourceHashes": {
+    "scripts/r139_execution_supervisor.py": "9ee7f988b5a27495fd4bd4e72975f0b2a583b8e33cea49c51ac5189285f44c64",
+    "scripts/tests/test_r139_execution_supervisor.py": "ffa3825587f524725939b285fd6753a21faba88757215d16c30d0bf1f59bd8ba",
+    "backend/api/handlers/intervention_execution_browser_test.go": "4e90a7225f6fc663a3dc3493b3570bdfdc9969da0b43d70445273170c41f899d"
+  },
+  "environmentKeys": [
+    "APPDATA",
+    "GOENV",
+    "GOPROXY",
+    "GOSUMDB",
+    "GOTOOLCHAIN",
+    "HOMEDRIVE",
+    "HOMEPATH",
+    "LOCALAPPDATA",
+    "PATH",
+    "PYTHONDONTWRITEBYTECODE",
+    "SystemRoot",
+    "TEMP",
+    "TMP",
+    "USERPROFILE",
+    "WINDIR"
+  ],
+  "noRuntimeCredentialVariables": true
+}

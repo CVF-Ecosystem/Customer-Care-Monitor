@@ -2,7 +2,7 @@
 
 Status: ACTIVE
 Risk: R2
-Worker: Sol Medium /root/r139_autonomous_route (three-file native-close source repair, bounded fresh custody adapter and metadata); Root (admitted no-page preclock selection); browser/product workers unreleased
+Worker: Sol Medium /root/r139_autonomous_route (native-close validator repair and bounded test isolation, then fresh custody adapter/metadata); Root (admitted no-page preclock selection); browser/product workers unreleased
 Reviewer: Root (independent Sol metadata/source review); Luna Max /root/r139_completion_admission_review (independent Root completion admission review); historical reviewers retained in dated sections
 Commit mode: WORKER_MUST_NOT_COMMIT
 providerExecutionAuthority: NONE_CURRENT_HISTORICAL_CAMPAIGNS_SPENT_OR_EXPIRED
@@ -14,7 +14,7 @@ Current continuation: the Owner autonomous discovery instruction below governs o
 
 ## R139 delegated actual reservation — 2026-10-27T04:24:06.802756Z
 
-CCMAI-RUNTIME-139 autonomous CUA completion BUILD: actual IAB2 selection/docs supports tab.close, no tab created; cumulativeCUA3 = historical1+discovery1+selection1. After independent reviewed committed native-close source supplement, Sol repairs only supervisor/tests/Go fixture to add truthful producer-tool-close plus distinct observer-final-inventory, preserving operator_fallback. Allocate five new focused offline processes above retained source20; Root audits safe pure tests and reviews source, then writes child accepted pins before final custody metadata. No page/campaign/fixture/key/provider release yet. Retain controllers4/campaign1/service5PASS and all UNKNOWNs; later one fresh G0-G3 campaign/API1<=USD1/1200+1020 only after complete readiness and Runtime Effect Admission. No blind retry or refund; Product B blocked, G1/G2/G3 NOT_RUN, FREEZE OPEN; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 native-close components independently PASS at retained20+new5=lineage25 (workerPython4/compile/Go3, RootPython2/Go2; no skip). Preserve validated supervisor9ee7/Go4e90/binary1de2 and all originals. Before child build pins, execute independently reviewed committed test-isolation supplement: restore legacy Python test bytes4bbd, move same native proof to separate allowed module, workerPython1 then RootPython1 only, planned lineage27. No compile/Go/clock replay or activation/source-budget weakening. Current actual IAB2 docs supports close; no tab/newcampaign/fixture/key/provider yet. Final child pins/custody/actors/readiness precede fresh G0-G3/API1<=USD1/1200+1020 admission; old controllers4/campaign1/service5 and all UNKNOWNs retained. Product B blocked, FREEZE OPEN; Facebook/Zalo OA parked.
 
 
 ## Historical superseded boot-identity v2 prelaunch clock HOLD — 2026-10-25 (superseded by settled 2026-10-27 result)

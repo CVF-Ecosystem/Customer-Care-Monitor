@@ -556,7 +556,7 @@ func r139PageTargetTerminal(a r139Admission, closeRaw []byte) error {
 func r139CuaIdentity(a r139Admission, m map[string]any) error {
 	if a.BrowserTool != "supported_CUA_page_target" || a.ProofContract != "cua_page_target_v1" ||
 		a.BrowserKind != "iab" || a.ScopeOrigin != "caller_owned_explicit_cua_tab_target" ||
-		a.CloseMode != "operator_fallback" || a.FallbackCloseOperator != a.Operator ||
+		(a.CloseMode != "native_tool" && (a.CloseMode != "operator_fallback" || a.FallbackCloseOperator != a.Operator)) ||
 		a.ProducerAgentTaskID == a.ObserverAgentTaskID || len(a.OwnedTabIDs) != 1 ||
 		a.OwnedTabIDs[0] != a.TabID || a.PageID != "" || a.BrowserSessionID != "" || len(a.OwnedPageIDs) != 0 {
 		return errors.New("CUA admission identity invalid")
@@ -695,7 +695,102 @@ func r139CuaReservation(a r139Admission, browserRaw []byte, allowRuntime bool) e
 	return nil
 }
 
+func r139CuaNativeCloseFields(m map[string]any) error {
+	for _, key := range []string{"actualCloseActionAtUTC", "closedAtUTC", "operatorReportReceivedAtUTC", "ownerReportReferenceSha256", "reportSource"} {
+		if _, exists := m[key]; exists { return errors.New("CUA tool close cannot claim physical time or owner report") }
+	}
+	return nil
+}
+
+func r139CuaNativeToolTerminal(a r139Admission, closeRaw []byte) error {
+	receipt, err := r139NativeObject(closeRaw); if err != nil { return err }
+	if err := r139CuaIdentity(a, receipt); err != nil { return err }
+	if err := r139CuaNativeCloseFields(receipt); err != nil { return err }
+	if receipt["status"] != "CLOSED_EXACT_OWNED_CUA_TAB" || receipt["closeObserved"] != true ||
+		!r139NativeZeroInteger(receipt["ownedTabsFinal"]) || receipt["rootOriginalReturnReviewed"] != true ||
+		receipt["closureTimeBasis"] != "cua_final_metadata_observation" || receipt["closeActorTaskId"] != a.ProducerAgentTaskID { return errors.New("CUA tool close status invalid") }
+	_, readiness, err := r139NativeRoot(a, "browserReadinessRoot"); if err != nil { return err }
+	_, product, err := r139NativeRoot(a, "runtimeRoot"); if err != nil { return err }
+	closePath, err := r139NativePath(a, "browserCloseReceiptPath", a.BrowserCloseReceiptPath, product, true); if err != nil { return err }
+	stored, err := os.ReadFile(closePath); if err != nil || !bytes.Equal(stored, closeRaw) { return errors.New("CUA tool close bytes differ") }
+	prefix, err := r139NativeFile(a, "browserReceipt", a.BrowserReceiptPath, a.BrowserReceiptSHA256, readiness); if err != nil { return err }
+	prefixRaw, err := json.Marshal(prefix); if err != nil { return err }
+	if err := r139CuaReservation(a, prefixRaw, true); err != nil { return err }
+	if receipt["reservedAtUTC"] != prefix["reservedAtUTC"] { return errors.New("CUA tool prefix mismatch") }
+	reserved, err := r139NativeTime(prefix["reservedAtUTC"]); if err != nil { return err }
+	returned, err := r139NativeTime(receipt["toolCloseReturnedAtUTC"]); if err != nil { return err }
+	observed, err := r139NativeTime(receipt["closureObservedAtUTC"]); if err != nil { return err }
+	deadline, err := time.Parse("2006-01-02T15:04:05Z", a.GrantDeadlineUTC); if err != nil { return err }
+	request, err := r139NativeFile(a, "toolCloseRequest", receipt["toolCloseRequestPath"], receipt["toolCloseRequestSha256"], product); if err != nil { return err }
+	if err := r139CuaIdentity(a, request); err != nil { return err }
+	if request["event"] != "tool_close_request" || request["provenanceBasis"] != "caller_recorded_original_cua_request" ||
+		request["rootOriginalReturnReviewRequired"] != true || request["atUTC"] != request["observedAtUTC"] { return errors.New("CUA tool request provenance invalid") }
+	if err := r139CuaReference(request["originalCuaRequestReference"]); err != nil { return err }
+	requestOrigin, ok := request["originalCuaRequestSha256"].(string)
+	if !ok || !regexp.MustCompile(`^[0-9a-f]{64}$`).MatchString(requestOrigin) { return errors.New("CUA request origin hash invalid") }
+	result, err := r139NativeFile(a, "toolCloseReturn", receipt["toolCloseReturnPath"], receipt["toolCloseReturnSha256"], product); if err != nil { return err }
+	if err := r139CuaIdentity(a, result); err != nil { return err }
+	if _, err := r139CuaOrigin(result); err != nil { return err }
+	for _, m := range []map[string]any{request, result} {
+		if err := r139CuaNativeCloseFields(m); err != nil { return err }
+		if m["method"] != "Tab.close" || m["targetTabId"] != a.TabID || m["closeActorTaskId"] != a.ProducerAgentTaskID { return errors.New("CUA close target or actor invalid") }
+	}
+	requested, err := r139NativeTime(request["atUTC"]); if err != nil { return err }
+	if requested.Before(reserved) || returned.Before(requested) || observed.Before(returned) || observed.After(deadline) ||
+		request["status"] != "REQUESTED" || result["event"] != "tool_close_return" || result["status"] != "SUCCEEDED" ||
+		result["callCompleted"] != true || result["returnType"] != "void" || result["atUTC"] != receipt["toolCloseReturnedAtUTC"] ||
+		result["requestPath"] != receipt["toolCloseRequestPath"] || result["requestSha256"] != receipt["toolCloseRequestSha256"] { return errors.New("CUA close method return invalid") }
+	if receipt["actionEvidencePath"] != a.ActionEvidencePath || receipt["finalInventoryPath"] != a.FinalInventoryPath { return errors.New("CUA terminal path mismatch") }
+	action, err := r139NativeFile(a, "action", receipt["actionEvidencePath"], receipt["actionEvidenceSha256"], product); if err != nil { return err }
+	if err := r139CuaIdentity(a, action); err != nil { return err }
+	if err := r139CuaNativeCloseFields(action); err != nil { return err }
+	if _, err := r139CuaDerived(action); err != nil { return err }
+	if action["event"] != "action_sequence" || action["atUTC"] != receipt["actionAtUTC"] { return errors.New("CUA action identity invalid") }
+	aggregated, err := r139NativeTime(action["atUTC"]); if err != nil || aggregated.Before(returned) || aggregated.After(observed) { return errors.New("CUA tool action aggregate chronology invalid") }
+	rows, ok := action["actions"].([]any); if !ok || len(rows) == 0 { return errors.New("CUA actions absent") }
+	links := map[string]any{}; previous := reserved
+	for index, value := range rows {
+		row, ok := value.(map[string]any); if !ok { return errors.New("CUA action row invalid") }
+		if err := r139CuaNativeCloseFields(row); err != nil { return err }
+		at, err := r139CuaOrigin(row); if err != nil { return err }
+		if row["tabId"] != a.TabID || at.Before(previous) || at.After(returned) { return errors.New("CUA action chronology invalid") }; previous = at
+		links[fmt.Sprint(index)] = row["originalCuaReturnSha256"]
+		if index == len(rows)-1 {
+			if row["action"] != "tool_close" || !at.Equal(returned) || row["closeActorTaskId"] != a.ProducerAgentTaskID ||
+				row["toolCloseReturnPath"] != receipt["toolCloseReturnPath"] || row["toolCloseReturnSha256"] != receipt["toolCloseReturnSha256"] { return errors.New("CUA close not terminal") }
+			for _, key := range []string{"cuaCallRef", "originalCuaReturnReference", "originalCuaReturnSha256"} { if row[key] != result[key] { return errors.New("CUA close row return mismatch") } }
+		} else {
+			kind := row["action"]
+			if at.After(requested) || (kind != "control" && kind != "capture" && kind != "handoff" && kind != "product_read" && kind != "product_execute") { return errors.New("CUA post-close action") }
+		}
+	}
+	if !reflect.DeepEqual(action["sourceEvidenceSha256"], links) { return errors.New("CUA action source linkage invalid") }
+	inv, err := r139NativeFile(a, "finalInventory", receipt["finalInventoryPath"], receipt["finalInventorySha256"], product); if err != nil { return err }
+	raw, err := r139NativeFile(a, "rawCuaInventory", inv["rawCuaInventoryPath"], inv["rawCuaInventorySha256"], product); if err != nil { return err }
+	for _, m := range []map[string]any{inv, raw} {
+		if err := r139CuaIdentity(a, m); err != nil { return err }
+		if err := r139CuaNativeCloseFields(m); err != nil { return err }
+		if _, err := r139CuaOrigin(m); err != nil { return err }
+		if m["inventoryActorTaskId"] != a.ObserverAgentTaskID || m["atUTC"] != receipt["closureObservedAtUTC"] ||
+			m["inventoryScope"] != "metadata_only" || !r139NativeZeroInteger(m["ownedCount"]) { return errors.New("CUA observing actor or inventory invalid") }
+	}
+	if inv["event"] != "final_inventory" || raw["event"] != "cua_inventory" || inv["rawCuaInventoryPath"] != a.RawCuaInventoryPath || !reflect.DeepEqual(raw["tabIds"], inv["tabIds"]) { return errors.New("CUA raw inventory mismatch") }
+	finalIDs, err := r139PageIDs(inv["tabIds"]); if err != nil || finalIDs[a.TabID] { return errors.New("CUA target still present") }
+	baseline, _, err := r139CuaEvent(a, readiness, prefix, "baselineInventory", "baseline_inventory"); if err != nil { return err }
+	baseIDs, err := r139PageIDs(baseline["tabIds"]); if err != nil || !reflect.DeepEqual(finalIDs, baseIDs) || raw["cuaCallRef"] == baseline["cuaCallRef"] { return errors.New("CUA protected baseline drift") }
+	markerPath, err := r139NativePath(a, "browserDoneSignalPath", a.BrowserDoneSignalPath, product, true); if err != nil { return err }
+	markerRaw, err := os.ReadFile(markerPath); if err != nil { return err }
+	marker, err := r139NativeObject(markerRaw); if err != nil { return err }
+	if marker["status"] != "TERMINAL_EVIDENCE_WRITTEN" { return errors.New("CUA done status invalid") }
+	for key, value := range map[string]any{"proofContract": a.ProofContract, "campaignNonce": a.CampaignNonce, "browserId": a.BrowserID, "tabId": a.TabID, "ownedScopeId": a.OwnedScopeID} { if marker[key] != value { return errors.New("CUA done identity invalid") } }
+	markerAt, err := r139NativeTime(marker["atUTC"]); if err != nil || markerAt.Before(observed) || markerAt.After(deadline) { return errors.New("CUA done chronology invalid") }
+	sum := sha256.Sum256(closeRaw)
+	if !reflect.DeepEqual(marker["evidenceSha256"], map[string]any{"browserCloseReceiptPath": hex.EncodeToString(sum[:]), "actionEvidencePath": receipt["actionEvidenceSha256"], "finalInventoryPath": receipt["finalInventorySha256"], "rawCuaInventoryPath": inv["rawCuaInventorySha256"]}) { return errors.New("CUA done evidence mismatch") }
+	return nil
+}
+
 func r139CuaTerminal(a r139Admission, closeRaw []byte) error {
+	if a.CloseMode == "native_tool" { return r139CuaNativeToolTerminal(a, closeRaw) }
 	receipt, err := r139NativeObject(closeRaw); if err != nil { return err }
 	if err := r139CuaIdentity(a, receipt); err != nil { return err }
 	if receipt["status"] != "CLOSED_EXACT_OWNED_CUA_TAB" || receipt["closeObserved"] != true ||
@@ -949,6 +1044,173 @@ func TestR139PureCuaPageTargetV1(t *testing.T) {
 	close["finalInventorySha256"] = r139NativeTestWrite(t, filepath.Join(runtime, "inventory.json"), inv)
 	r139NativeTestWrite(t, filepath.Join(runtime, "close.json"), close)
 	if err := r139VerifyBrowserTerminalClose(a, encode(close)); err == nil { t.Fatal("target still present accepted") }
+}
+
+func r139CuaNativeTestFixture(t *testing.T) (r139Admission, map[string]any, func(string, int) map[string]any, func(int) string, string) {
+	t.Helper()
+	root := t.TempDir()
+	base := ".cvf/runtime/cua_readiness/"
+	product := ".cvf/runtime/cua_product/"
+	readiness := filepath.Join(root, filepath.FromSlash(base))
+	runtime := filepath.Join(root, filepath.FromSlash(product))
+	if err := os.MkdirAll(readiness, 0755); err != nil { t.Fatal(err) }
+	now := time.Now().UTC().Truncate(time.Second)
+	stamp := func(offset int) string { return now.Add(time.Duration(offset) * time.Second).Format("2006-01-02T15:04:05Z") }
+	a := r139Admission{NativeContractID: "r139-cua-page-target-v1", TrancheID: "CCMAI-RUNTIME-139",
+		CampaignNonce: "nonce-cua", BrowserID: "2", BrowserKind: "iab", TabID: "tab-123",
+		OwnedScopeID: "owned-cua-tab", OwnedTabIDs: []string{"tab-123"},
+		ProducerAgentTaskID: "producer-task", ObserverAgentTaskID: "observer-task",
+		Operator: "Owner in this conversation", FallbackCloseOperator: "Owner in this conversation",
+		CloseMode: "native_tool", ScopeOrigin: "caller_owned_explicit_cua_tab_target",
+		ProofContract: "cua_page_target_v1", BrowserTool: "supported_CUA_page_target", BrowserSupported: true,
+		BrowserReadinessRoot: base[:len(base)-1], RuntimeRoot: runtime, nativeProjectRoot: root,
+		BrowserReceiptPath: base + "reservation.json", BrowserCloseReceiptPath: product + "close.json",
+		ActionEvidencePath: product + "action.json", FinalInventoryPath: product + "inventory.json",
+		RawCuaInventoryPath: product + "raw_inventory.json", BrowserDoneSignalPath: product + "browser_done.signal",
+		GrantDeadlineUTC: stamp(3600)}
+	identity := func() map[string]any { return map[string]any{
+		"nativeContractId": a.NativeContractID, "trancheId": a.TrancheID, "campaignNonce": a.CampaignNonce,
+		"browserId": a.BrowserID, "tabId": a.TabID, "ownedScopeId": a.OwnedScopeID,
+		"producerAgentTaskId": a.ProducerAgentTaskID, "observerAgentTaskId": a.ObserverAgentTaskID,
+		"operator": a.Operator, "closeMode": a.CloseMode, "proofContract": a.ProofContract,
+		"browserKind": a.BrowserKind, "scopeOrigin": a.ScopeOrigin, "ownedTabIds": []string{a.TabID}} }
+	event := func(name string, offset int) map[string]any {
+		m := identity(); m["event"] = name; m["atUTC"] = stamp(offset); m["observedAtUTC"] = m["atUTC"]
+		m["cuaCallRef"] = "cua-call-1"; m["originalCuaReturnReference"] = "private/cua/call-1"
+		m["originalCuaReturnSha256"] = strings.Repeat("b", 64)
+		m["provenanceBasis"] = "caller_recorded_original_cua_return"; m["rootOriginalReturnReviewRequired"] = true
+		return m
+	}
+	created := "https://example.com/#r139_nonce=nonce-cua&phase=created"
+	controlled := "https://example.com/#r139_nonce=nonce-cua&phase=controlled"
+	rows := map[string]map[string]any{
+		"baselineInventory": event("baseline_inventory", -60), "creation": event("creation", -50),
+		"creationLedger": event("creation_ledger", -49), "control": event("control", -45),
+		"capture": event("capture", -40), "handoff": event("handoff", -30),
+	}
+	rows["baselineInventory"]["tabIds"] = []string{"protected-tab"}; rows["baselineInventory"]["inventoryScope"] = "metadata_only"
+	rows["creation"]["agentTaskId"] = a.ProducerAgentTaskID; rows["creation"]["method"] = "createBrowserTab"
+	rows["creation"]["createdTabId"] = a.TabID; rows["creation"]["requestedBrowserId"] = a.BrowserID
+	rows["creation"]["requestedUrl"] = created; rows["creation"]["callCompleted"] = true
+	rows["creationLedger"]["agentTaskId"] = a.ProducerAgentTaskID; rows["creationLedger"]["newTabIds"] = []string{a.TabID}
+	rows["control"]["agentTaskId"] = a.ProducerAgentTaskID; rows["control"]["method"] = "goto"
+	rows["control"]["targetTabId"] = a.TabID; rows["control"]["requestedUrl"] = controlled; rows["control"]["callCompleted"] = true
+	rows["capture"]["agentTaskId"] = a.ProducerAgentTaskID; rows["capture"]["method"] = "getScreenshot"
+	rows["capture"]["targetTabId"] = a.TabID
+	rows["capture"]["captureSha256"] = strings.Repeat("c", 64)
+	rows["handoff"]["agentTaskId"] = a.ObserverAgentTaskID; rows["handoff"]["method"] = "getTab_then_listTabs"
+	rows["handoff"]["requestedTabId"] = a.TabID; rows["handoff"]["observedTabId"] = a.TabID
+	rows["handoff"]["metadataBrowserId"] = a.BrowserID; rows["handoff"]["metadataTabId"] = a.TabID
+	rows["handoff"]["observedUrl"] = controlled; rows["handoff"]["observedNonce"] = a.CampaignNonce
+	rows["handoff"]["getTabCallRef"] = "cua-gettab"; rows["handoff"]["getTabReturnReference"] = "private/cua/gettab"
+	rows["handoff"]["getTabReturnSha256"] = strings.Repeat("e", 64)
+	rows["handoff"]["metadataCallRef"] = "cua-listtabs"; rows["handoff"]["metadataReturnReference"] = "private/cua/listtabs"
+	rows["handoff"]["metadataReturnSha256"] = strings.Repeat("f", 64)
+	proof := identity(); proof["status"] = "RESERVED_CUA_TAB_CONTROL_CAPTURE_HANDOFF"
+	proof["protocol"] = "https"; proof["closeObserved"] = false; proof["rootOriginalReturnReviewed"] = true
+	proof["reservedAtUTC"] = stamp(-25)
+	writeEvent := func(name string) {
+		suffix := "Evidence"; if name == "baselineInventory" || name == "creationLedger" { suffix = "" }
+		proof[name+suffix+"Path"] = base + name + ".json"
+		proof[name+suffix+"Sha256"] = r139NativeTestWrite(t, filepath.Join(readiness, name+".json"), rows[name])
+	}
+	for name := range rows { writeEvent(name) }
+	rows["creationLedger"]["baselineInventorySha256"] = proof["baselineInventorySha256"]
+	rows["creationLedger"]["creationEvidenceSha256"] = proof["creationEvidenceSha256"]
+	delete(rows["creationLedger"], "cuaCallRef")
+	delete(rows["creationLedger"], "originalCuaReturnReference")
+	delete(rows["creationLedger"], "originalCuaReturnSha256")
+	rows["creationLedger"]["provenanceBasis"] = "derived_from_original_cua_returns"
+	rows["creationLedger"]["sourceEvidenceSha256"] = map[string]any{"baselineInventory": proof["baselineInventorySha256"], "creation": proof["creationEvidenceSha256"]}
+	writeEvent("creationLedger")
+	delete(rows["handoff"], "cuaCallRef")
+	delete(rows["handoff"], "originalCuaReturnReference")
+	delete(rows["handoff"], "originalCuaReturnSha256")
+	rows["handoff"]["provenanceBasis"] = "derived_from_original_cua_returns"
+	rows["handoff"]["sourceEvidenceSha256"] = map[string]any{"getTab": strings.Repeat("e", 64), "listTabs": strings.Repeat("f", 64)}
+	writeEvent("handoff")
+	a.BrowserReceiptSHA256 = r139NativeTestWrite(t, filepath.Join(readiness, "reservation.json"), proof)
+	return a, proof, event, stamp, runtime
+}
+
+func TestR139PureCuaNativeToolClose(t *testing.T) {
+	for _, bad := range []string{"", "failed_return", "unknown_return", "missing_return", "wrong_digest", "wrong_request_digest", "wrong_request_link", "missing_request", "bad_request_origin", "wrong_method", "foreign_target", "foreign_campaign", "wrong_close_actor", "wrong_receipt_actor", "same_actor", "wrong_inventory_actor", "wrong_raw_actor", "before_close", "late_close", "target_present", "baseline_drift", "post_close_action", "owner_alias", "physical_time", "wrong_mode", "aggregate_before_return", "aggregate_after_observed"} {
+		t.Run("case_"+bad, func(t *testing.T) {
+			a, prefix, event, stamp, runtime := r139CuaNativeTestFixture(t)
+			if err := os.MkdirAll(runtime, 0755); err != nil { t.Fatal(err) }
+			write := func(filename string, m map[string]any) (string, string) { return ".cvf/runtime/cua_product/"+filename, r139NativeTestWrite(t, filepath.Join(runtime, filename), m) }
+			request := event("tool_close_request", -12)
+			for _, key := range []string{"cuaCallRef", "originalCuaReturnReference", "originalCuaReturnSha256"} { delete(request, key) }
+			request["provenanceBasis"] = "caller_recorded_original_cua_request"
+			request["originalCuaRequestReference"] = "private/cua/close-request"; request["originalCuaRequestSha256"] = strings.Repeat("a", 64)
+			request["method"] = "Tab.close"; request["targetTabId"] = a.TabID; request["closeActorTaskId"] = a.ProducerAgentTaskID; request["status"] = "REQUESTED"
+			if bad == "wrong_method" { request["method"] = "Browser.close" }; if bad == "bad_request_origin" { request["originalCuaRequestSha256"] = "bad" }
+			requestPath, requestSHA := write("request.json", request)
+			result := event("tool_close_return", -10)
+			result["method"] = "Tab.close"; result["targetTabId"] = a.TabID; result["closeActorTaskId"] = a.ProducerAgentTaskID
+			result["status"] = "SUCCEEDED"; result["callCompleted"] = true; result["returnType"] = "void"
+			result["requestPath"] = requestPath; result["requestSha256"] = requestSHA
+			if bad == "failed_return" || bad == "unknown_return" { result["status"] = bad }
+			if bad == "foreign_target" { result["targetTabId"] = "foreign-tab" }; if bad == "foreign_campaign" { result["campaignNonce"] = "foreign" }
+			if bad == "wrong_close_actor" { result["closeActorTaskId"] = a.ObserverAgentTaskID }; if bad == "wrong_request_link" { result["requestSha256"] = strings.Repeat("f", 64) }
+			returnPath, returnSHA := write("return.json", result)
+			row := event("tool_close", -10); row["action"] = "tool_close"; row["closeActorTaskId"] = a.ProducerAgentTaskID
+			row["toolCloseReturnPath"] = returnPath; row["toolCloseReturnSha256"] = returnSHA
+			rows := []map[string]any{row}
+			if bad == "post_close_action" { extra := event("product_read", -9); extra["action"] = "product_read"; rows = append(rows, extra) }
+			action := event("action_sequence", -10); action["actions"] = rows
+			if bad == "aggregate_before_return" { action["atUTC"] = stamp(-11); action["observedAtUTC"] = stamp(-11) }
+			if bad == "aggregate_after_observed" { action["atUTC"] = stamp(-4); action["observedAtUTC"] = stamp(-4) }
+			for _, key := range []string{"cuaCallRef", "originalCuaReturnReference", "originalCuaReturnSha256"} { delete(action, key) }
+			action["provenanceBasis"] = "derived_from_original_cua_returns"; links := map[string]any{}
+			for i, r := range rows { links[fmt.Sprint(i)] = r["originalCuaReturnSha256"] }; action["sourceEvidenceSha256"] = links
+			actionPath, actionSHA := write("action.json", action)
+			ids := []string{"protected-tab"}; if bad == "target_present" { ids = append(ids, a.TabID) }; if bad == "baseline_drift" { ids = []string{} }
+			inventoryTime := -5; if bad == "before_close" { inventoryTime = -11 }
+			raw := event("cua_inventory", inventoryTime); raw["tabIds"] = ids; raw["ownedCount"] = 0; raw["inventoryScope"] = "metadata_only"
+			raw["inventoryActorTaskId"] = a.ObserverAgentTaskID; raw["cuaCallRef"] = "cua-independent-final"
+			if bad == "wrong_raw_actor" { raw["inventoryActorTaskId"] = a.ProducerAgentTaskID }
+			rawPath, rawSHA := write("raw_inventory.json", raw)
+			inv := event("final_inventory", inventoryTime); inv["tabIds"] = ids; inv["ownedCount"] = 0; inv["inventoryScope"] = "metadata_only"
+			inv["inventoryActorTaskId"] = a.ObserverAgentTaskID; inv["rawCuaInventoryPath"] = rawPath; inv["rawCuaInventorySha256"] = rawSHA
+			if bad == "wrong_inventory_actor" { inv["inventoryActorTaskId"] = a.ProducerAgentTaskID }
+			invPath, invSHA := write("inventory.json", inv)
+			close := event("close_receipt", -5); close["status"] = "CLOSED_EXACT_OWNED_CUA_TAB"; close["closeObserved"] = true
+			close["ownedTabsFinal"] = 0; close["closureTimeBasis"] = "cua_final_metadata_observation"; close["rootOriginalReturnReviewed"] = true
+			close["reservedAtUTC"] = prefix["reservedAtUTC"]; close["closeActorTaskId"] = a.ProducerAgentTaskID; close["toolCloseReturnedAtUTC"] = stamp(-10)
+			close["closureObservedAtUTC"] = stamp(inventoryTime); close["actionAtUTC"] = action["atUTC"]
+			close["toolCloseRequestPath"] = requestPath; close["toolCloseRequestSha256"] = requestSHA
+			close["toolCloseReturnPath"] = returnPath; close["toolCloseReturnSha256"] = returnSHA
+			close["actionEvidencePath"] = actionPath; close["actionEvidenceSha256"] = actionSHA; close["finalInventoryPath"] = invPath; close["finalInventorySha256"] = invSHA
+			if bad == "wrong_receipt_actor" { close["closeActorTaskId"] = a.ObserverAgentTaskID }; if bad == "owner_alias" { close["ownerReportReferenceSha256"] = strings.Repeat("a", 64) }
+			if bad == "physical_time" { close["closedAtUTC"] = stamp(-10) }; if bad == "wrong_digest" { close["toolCloseReturnSha256"] = strings.Repeat("f", 64) }
+			if bad == "wrong_request_digest" { close["toolCloseRequestSha256"] = strings.Repeat("f", 64) }
+			if bad == "missing_return" { if err := os.Remove(filepath.Join(runtime, "return.json")); err != nil { t.Fatal(err) } }
+			if bad == "missing_request" { if err := os.Remove(filepath.Join(runtime, "request.json")); err != nil { t.Fatal(err) } }
+			if bad == "late_close" { a.GrantDeadlineUTC = stamp(-11) }; if bad == "same_actor" { a.ObserverAgentTaskID = a.ProducerAgentTaskID }; if bad == "wrong_mode" { a.CloseMode = "api" }
+			_, closeSHA := write("close.json", close)
+			write("browser_done.signal", map[string]any{"status": "TERMINAL_EVIDENCE_WRITTEN", "proofContract": a.ProofContract,
+				"campaignNonce": a.CampaignNonce, "browserId": a.BrowserID, "tabId": a.TabID, "ownedScopeId": a.OwnedScopeID, "atUTC": stamp(-4),
+				"evidenceSha256": map[string]any{"browserCloseReceiptPath": closeSHA, "actionEvidencePath": actionSHA, "finalInventoryPath": invSHA, "rawCuaInventoryPath": rawSHA}})
+			body, err := json.Marshal(close); if err != nil { t.Fatal(err) }
+			err = r139VerifyBrowserTerminalClose(a, body)
+			if bad == "" && err != nil { t.Fatalf("valid native close rejected: %v", err) }; if bad != "" && err == nil { t.Fatal("invalid native close accepted") }
+		})
+	}
+	t.Run("non_cua_modes_unchanged", func(t *testing.T) {
+		a, _, _ := r139NativeTestFixture(t); m := r139NativeTestIdentity(a)
+		if err := r139NativeIdentity(a, m); err != nil { t.Fatal(err) }
+		a.CloseMode = "native_tool"; m["closeMode"] = a.CloseMode
+		if err := r139NativeIdentity(a, m); err == nil { t.Fatal("native_tool accepted for generic native path") }
+		a.ProofContract = "native_page_target_v1"; a.ScopeOrigin = "caller_owned_explicit_page_target"; a.BrowserSessionID = ""
+		a.OwnedScopeID = "owned-page"; a.OwnedPageIDs = []string{a.PageID}; a.Operator = a.FallbackCloseOperator; a.CloseMode = "operator_fallback"
+		m = map[string]any{"nativeContractId": a.NativeContractID, "trancheId": a.TrancheID, "campaignNonce": a.CampaignNonce,
+			"pageId": a.PageID, "ownedScopeId": a.OwnedScopeID, "ownedPageIds": []any{a.PageID}, "operator": a.Operator,
+			"closeMode": a.CloseMode, "proofContract": a.ProofContract, "scopeOrigin": a.ScopeOrigin}
+		if err := r139PageIdentity(a, m); err != nil { t.Fatal(err) }
+		a.CloseMode = "native_tool"; m["closeMode"] = a.CloseMode
+		if err := r139PageIdentity(a, m); err == nil { t.Fatal("native_tool accepted for non-CUA page target") }
+	})
 }
 
 func r139NativeTestIdentity(a r139Admission) map[string]any {

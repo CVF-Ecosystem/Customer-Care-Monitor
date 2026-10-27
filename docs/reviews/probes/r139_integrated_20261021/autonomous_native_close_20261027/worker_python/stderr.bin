@@ -1,0 +1,9 @@
+test_cua_identity_and_origin_no_io (scripts.tests.test_r139_execution_supervisor.R139SupervisorPureTests.test_cua_identity_and_origin_no_io) ... ok
+test_cua_page_target_prefix_and_rejections (scripts.tests.test_r139_execution_supervisor.R139SupervisorPureTests.test_cua_page_target_prefix_and_rejections) ... ok
+test_cua_page_target_terminal_and_protected_inventory (scripts.tests.test_r139_execution_supervisor.R139SupervisorPureTests.test_cua_page_target_terminal_and_protected_inventory) ... ok
+test_cua_native_tool_close_contract (scripts.tests.test_r139_execution_supervisor.R139SupervisorPureTests.test_cua_native_tool_close_contract) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 16.217s
+
+OK

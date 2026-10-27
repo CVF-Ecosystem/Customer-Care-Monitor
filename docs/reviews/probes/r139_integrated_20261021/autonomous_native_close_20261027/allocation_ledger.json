@@ -7,40 +7,75 @@
   "slots": [
     {
       "id": "worker_python",
-      "status": "NOT_STARTED",
-      "originalPid": null,
-      "originalWaitReturned": false,
-      "exitCode": null
+      "status": "COMPLETE_PASS",
+      "originalPid": 6324,
+      "originalWaitReturned": true,
+      "exitCode": 0,
+      "rootClearanceAtUTC": "2026-10-27T10:50:45.277564+00:00",
+      "sourceHashes": {
+        "scripts/r139_execution_supervisor.py": "9ee7f988b5a27495fd4bd4e72975f0b2a583b8e33cea49c51ac5189285f44c64",
+        "scripts/tests/test_r139_execution_supervisor.py": "ffa3825587f524725939b285fd6753a21faba88757215d16c30d0bf1f59bd8ba",
+        "backend/api/handlers/intervention_execution_browser_test.go": "4e90a7225f6fc663a3dc3493b3570bdfdc9969da0b43d70445273170c41f899d"
+      },
+      "receipt": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_python/original_wait_exit.json",
+      "receiptSha256": "45c57199c7a30c748b0f45f11d9b003f126f95fdfcce47706d50512ba942ff12"
     },
     {
       "id": "worker_compile",
-      "status": "NOT_STARTED",
-      "originalPid": null,
-      "originalWaitReturned": false,
-      "exitCode": null
+      "status": "COMPLETE_PASS",
+      "originalPid": 25368,
+      "originalWaitReturned": true,
+      "exitCode": 0,
+      "rootClearanceAtUTC": "2026-10-27T10:50:45.277564+00:00",
+      "sourceHashes": {
+        "scripts/r139_execution_supervisor.py": "9ee7f988b5a27495fd4bd4e72975f0b2a583b8e33cea49c51ac5189285f44c64",
+        "scripts/tests/test_r139_execution_supervisor.py": "ffa3825587f524725939b285fd6753a21faba88757215d16c30d0bf1f59bd8ba",
+        "backend/api/handlers/intervention_execution_browser_test.go": "4e90a7225f6fc663a3dc3493b3570bdfdc9969da0b43d70445273170c41f899d"
+      },
+      "receipt": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_compile/original_wait_exit.json",
+      "receiptSha256": "a0893e5bf62d55c049dc6de4643b3ab22a2e7839dd6b1e6e951dc81550312073"
     },
     {
       "id": "worker_pure_go",
-      "status": "NOT_STARTED",
-      "originalPid": null,
-      "originalWaitReturned": false,
-      "exitCode": null
+      "status": "COMPLETE_PASS",
+      "originalPid": 29412,
+      "originalWaitReturned": true,
+      "exitCode": 0,
+      "rootClearanceAtUTC": "2026-10-27T10:50:45.277564+00:00",
+      "sourceHashes": {
+        "scripts/r139_execution_supervisor.py": "9ee7f988b5a27495fd4bd4e72975f0b2a583b8e33cea49c51ac5189285f44c64",
+        "scripts/tests/test_r139_execution_supervisor.py": "ffa3825587f524725939b285fd6753a21faba88757215d16c30d0bf1f59bd8ba",
+        "backend/api/handlers/intervention_execution_browser_test.go": "4e90a7225f6fc663a3dc3493b3570bdfdc9969da0b43d70445273170c41f899d"
+      },
+      "receipt": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_pure_go/original_wait_exit.json",
+      "receiptSha256": "fce48b89814d3c10f60fddcc21d80b6a51e61da291930e92d4939a68e4a89808"
     },
     {
       "id": "root_python",
-      "status": "NOT_STARTED",
-      "originalPid": null,
-      "originalWaitReturned": false,
-      "exitCode": null
+      "status": "COMPLETE_PASS",
+      "originalPid": 26008,
+      "originalWaitReturned": true,
+      "exitCode": 0,
+      "rootClearanceAtUTC": "2026-10-27T10:53:57.387023+00:00",
+      "binarySha256": "1de2ac02c8b0fa5e135a52de38feddd597d3909705c0f9d06274c9f694b10c98",
+      "receipt": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_python/original_wait_exit.json",
+      "receiptSha256": "b3adbc6a0b41a8fb4362c0f1abaed492c1534840493782e59a2ca9a70ea1882f"
     },
     {
       "id": "root_pure_go",
-      "status": "NOT_STARTED",
-      "originalPid": null,
-      "originalWaitReturned": false,
-      "exitCode": null
+      "status": "COMPLETE_PASS",
+      "originalPid": 25904,
+      "originalWaitReturned": true,
+      "exitCode": 0,
+      "rootClearanceAtUTC": "2026-10-27T10:53:57.387160+00:00",
+      "binarySha256": "1de2ac02c8b0fa5e135a52de38feddd597d3909705c0f9d06274c9f694b10c98",
+      "receipt": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_pure_go/original_wait_exit.json",
+      "receiptSha256": "caf06f5ef1f1dfe9c84187d6c15fcf79c4885316ac11f9c0161ba12c5d32f549"
     }
   ],
   "custody": "Original wait/output must be retained per slot before dependent work; failed or uncertain slot remains consumed, no reset. Root owns allocations; worker reports evidence without editing this ledger.",
-  "allProductEffects": 0
+  "allProductEffects": 0,
+  "newActualProcessesCompleted": 5,
+  "currentCompletedLineage": 25,
+  "componentDisposition": "NATIVE_VALIDATOR_COMPONENT_CHECKS_PASS; TEST_FILE_PIN_ISOLATION_REQUIRED_BEFORE_CHILD_PINS"
 }

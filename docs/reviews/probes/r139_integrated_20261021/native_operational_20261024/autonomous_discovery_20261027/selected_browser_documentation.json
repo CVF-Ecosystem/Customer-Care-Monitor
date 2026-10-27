@@ -1,0 +1,48 @@
+{
+  "kind": "CALLER_RECORDED_SELECTED_BROWSER_DOCUMENTATION",
+  "atUTC": "2026-10-27T10:45:03.766909+00:00",
+  "tool": "mcp__cua_repl.js",
+  "request": "var r139SelectedBrowser = await cua.getBrowser({ id: \"2\" });",
+  "admissionCommit": "96b0fbd3670cca18d2c5000de2abdd70ad0229c4",
+  "actualSelected": {
+    "id": "2",
+    "name": "ChatGPT in-app browser",
+    "type": "iab"
+  },
+  "documentedSupportedMethods": [
+    "Tab.close():Promise<void>",
+    "Tab.screenshot(options):Promise<Uint8Array>",
+    "Browser.tabs.list()",
+    "Tab.reload()",
+    "Tab.playwright.domSnapshot()",
+    "Tab.playwright.getByRole/getByLabel/fill/click"
+  ],
+  "preclockBrowserSelectionUsed": 1,
+  "historicalCampaignCUA": 1,
+  "newDiscoveryCUA": 1,
+  "cumulativeBrowserMethods": 3,
+  "separatePackagedDocumentationReads": {
+    "count": 2,
+    "names": [
+      "screenshots",
+      "local-web-development"
+    ],
+    "sourceAdmissionCommit": "46c0b6949912fb27a034d3d2650f6b4cee85d044",
+    "facts": [
+      "Browser screenshots JPEG; use .jpg and image/jpeg.",
+      "Local app reload and fresh state after code changes when HMR unavailable."
+    ]
+  },
+  "provenance": "Caller transcription of actual original tool-visible responses; not an authenticated raw documentation export.",
+  "noPageEffects": {
+    "create": 0,
+    "read": 0,
+    "capture": 0,
+    "close": 0
+  },
+  "newCampaigns": 0,
+  "fixtureStarts": 0,
+  "keyReads": 0,
+  "providerCalls": 0,
+  "limitations": "Method documentation supports source design only. Actual origin/control/capture/export/handoff/close still unproved; no G0 PASS."
+}

@@ -1,0 +1,61 @@
+=== RUN   TestR139PureCuaPageTargetV1
+--- PASS: TestR139PureCuaPageTargetV1 (1.27s)
+=== RUN   TestR139PureCuaNativeToolClose
+=== RUN   TestR139PureCuaNativeToolClose/case_
+=== RUN   TestR139PureCuaNativeToolClose/case_failed_return
+=== RUN   TestR139PureCuaNativeToolClose/case_unknown_return
+=== RUN   TestR139PureCuaNativeToolClose/case_missing_return
+=== RUN   TestR139PureCuaNativeToolClose/case_wrong_digest
+=== RUN   TestR139PureCuaNativeToolClose/case_wrong_request_digest
+=== RUN   TestR139PureCuaNativeToolClose/case_wrong_request_link
+=== RUN   TestR139PureCuaNativeToolClose/case_missing_request
+=== RUN   TestR139PureCuaNativeToolClose/case_bad_request_origin
+=== RUN   TestR139PureCuaNativeToolClose/case_wrong_method
+=== RUN   TestR139PureCuaNativeToolClose/case_foreign_target
+=== RUN   TestR139PureCuaNativeToolClose/case_foreign_campaign
+=== RUN   TestR139PureCuaNativeToolClose/case_wrong_close_actor
+=== RUN   TestR139PureCuaNativeToolClose/case_wrong_receipt_actor
+=== RUN   TestR139PureCuaNativeToolClose/case_same_actor
+=== RUN   TestR139PureCuaNativeToolClose/case_wrong_inventory_actor
+=== RUN   TestR139PureCuaNativeToolClose/case_wrong_raw_actor
+=== RUN   TestR139PureCuaNativeToolClose/case_before_close
+=== RUN   TestR139PureCuaNativeToolClose/case_late_close
+=== RUN   TestR139PureCuaNativeToolClose/case_target_present
+=== RUN   TestR139PureCuaNativeToolClose/case_baseline_drift
+=== RUN   TestR139PureCuaNativeToolClose/case_post_close_action
+=== RUN   TestR139PureCuaNativeToolClose/case_owner_alias
+=== RUN   TestR139PureCuaNativeToolClose/case_physical_time
+=== RUN   TestR139PureCuaNativeToolClose/case_wrong_mode
+=== RUN   TestR139PureCuaNativeToolClose/case_aggregate_before_return
+=== RUN   TestR139PureCuaNativeToolClose/case_aggregate_after_observed
+=== RUN   TestR139PureCuaNativeToolClose/non_cua_modes_unchanged
+--- PASS: TestR139PureCuaNativeToolClose (7.96s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_ (0.42s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_failed_return (0.28s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_unknown_return (0.28s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_missing_return (0.29s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_wrong_digest (0.29s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_wrong_request_digest (0.28s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_wrong_request_link (0.29s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_missing_request (0.32s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_bad_request_origin (0.30s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_wrong_method (0.31s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_foreign_target (0.38s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_foreign_campaign (0.29s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_wrong_close_actor (0.32s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_wrong_receipt_actor (0.22s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_same_actor (0.10s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_wrong_inventory_actor (0.56s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_wrong_raw_actor (0.39s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_before_close (0.32s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_late_close (0.29s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_target_present (0.41s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_baseline_drift (0.39s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_post_close_action (0.31s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_owner_alias (0.11s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_physical_time (0.06s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_wrong_mode (0.05s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_aggregate_before_return (0.34s)
+    --- PASS: TestR139PureCuaNativeToolClose/case_aggregate_after_observed (0.32s)
+    --- PASS: TestR139PureCuaNativeToolClose/non_cua_modes_unchanged (0.03s)
+PASS

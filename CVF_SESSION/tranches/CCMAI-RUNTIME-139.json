@@ -177,6 +177,9 @@
   "BUILD",
   "REVIEW_PENDING",
   "CHANGES_REQUIRED",
+  "BUILD",
+  "REVIEW_PENDING",
+  "CHANGES_REQUIRED",
   "BUILD"
 ],
   "actualUse": {

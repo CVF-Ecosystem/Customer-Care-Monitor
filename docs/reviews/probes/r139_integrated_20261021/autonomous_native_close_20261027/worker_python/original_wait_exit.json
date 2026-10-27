@@ -1,0 +1,23 @@
+{
+  "slot": "worker_python",
+  "pid": 6324,
+  "originalWaitReturned": true,
+  "exitCode": 0,
+  "timedOut": false,
+  "atUTC": "2026-10-27T10:51:52.887256+00:00",
+  "monotonic": 363839.2836663,
+  "sourceHashesBefore": {
+    "scripts/r139_execution_supervisor.py": "9ee7f988b5a27495fd4bd4e72975f0b2a583b8e33cea49c51ac5189285f44c64",
+    "scripts/tests/test_r139_execution_supervisor.py": "ffa3825587f524725939b285fd6753a21faba88757215d16c30d0bf1f59bd8ba",
+    "backend/api/handlers/intervention_execution_browser_test.go": "4e90a7225f6fc663a3dc3493b3570bdfdc9969da0b43d70445273170c41f899d"
+  },
+  "sourceHashesAfter": {
+    "scripts/r139_execution_supervisor.py": "9ee7f988b5a27495fd4bd4e72975f0b2a583b8e33cea49c51ac5189285f44c64",
+    "scripts/tests/test_r139_execution_supervisor.py": "ffa3825587f524725939b285fd6753a21faba88757215d16c30d0bf1f59bd8ba",
+    "backend/api/handlers/intervention_execution_browser_test.go": "4e90a7225f6fc663a3dc3493b3570bdfdc9969da0b43d70445273170c41f899d"
+  },
+  "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderrSha256": "112a49cd19ddf271b9d60c3ebabc571321d4473ea88c7fbaafb76a8df268a80c",
+  "stdoutBytes": 0,
+  "stderrBytes": 756
+}

@@ -324,8 +324,9 @@ def cua_identity(admission: dict, record: dict, code: str) -> None:
             admission.get("browserKind") == "iab" and
             admission.get("scopeOrigin") == "caller_owned_explicit_cua_tab_target" and
             admission.get("ownedTabIds") == [admission.get("tabId")] and
-            admission.get("closeMode") == "operator_fallback" and
-            admission.get("fallbackCloseOperator") == admission.get("operator"), code)
+            (admission.get("closeMode") == "native_tool" or
+             (admission.get("closeMode") == "operator_fallback" and
+              admission.get("fallbackCloseOperator") == admission.get("operator"))), code)
     require(admission.get("producerAgentTaskId") != admission.get("observerAgentTaskId"), code)
     for forbidden in ("pageId", "browserSessionId", "nativeTaskRunRef", "nativeToolCallRef",
                       "ownedPageIds", "rawOriginalToolReference", "rawOriginalToolSha256"):
@@ -720,7 +721,127 @@ def verify_page_target_terminal(admission: dict, runtime: Path) -> dict:
             "finalInventorySha256": receipt["finalInventorySha256"]}
 
 
+def cua_native_close_fields(record: dict) -> None:
+    # Recorded tool completion is not a physical close timestamp or human report.
+    require(not any(key in record for key in (
+        "actualCloseActionAtUTC", "closedAtUTC", "operatorReportReceivedAtUTC",
+        "ownerReportReferenceSha256", "reportSource")), "CUA_TOOL_CLOSE_ALIAS")
+
+
+def verify_cua_native_tool_terminal(admission: dict, runtime: Path) -> dict:
+    verify_browser_receipt(admission, require_runtime_absent=False)
+    readiness, product = native_roots(admission)
+    require(runtime.resolve() == product, "CUA_RUNTIME_ROOT_MISMATCH")
+    _, prefix = native_file(admission.get("browserReceiptPath"),
+                            admission.get("browserReceiptSha256"), ROOT.resolve(), "CUA_PREFIX_INVALID")
+    close_path = native_future_path(admission, "browserCloseReceiptPath", product, absent=False)
+    receipt = read_json(close_path)
+    cua_identity(admission, receipt, "CUA_CLOSE_IDENTITY_INVALID")
+    cua_native_close_fields(receipt)
+    require(receipt.get("status") == "CLOSED_EXACT_OWNED_CUA_TAB" and
+            receipt.get("closeObserved") is True and type(receipt.get("ownedTabsFinal")) is int and
+            receipt["ownedTabsFinal"] == 0 and receipt.get("rootOriginalReturnReviewed") is True and
+            receipt.get("closureTimeBasis") == "cua_final_metadata_observation" and
+            receipt.get("reservedAtUTC") == prefix.get("reservedAtUTC") and
+            receipt.get("closeActorTaskId") == admission["producerAgentTaskId"], "CUA_TOOL_CLOSE_STATUS")
+    reserved = native_time(prefix.get("reservedAtUTC"), "CUA_SEAL_INVALID")
+    returned = native_time(receipt.get("toolCloseReturnedAtUTC"), "CUA_TOOL_RETURN_TIME")
+    observed = native_time(receipt.get("closureObservedAtUTC"), "CUA_OBSERVATION_TIME_INVALID")
+    deadline_text = admission.get("grantDeadlineUTC")
+    require(type(deadline_text) is str and re.fullmatch(r"\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ", deadline_text),
+            "CUA_DEADLINE_INVALID")
+    deadline = datetime.strptime(deadline_text, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+    _, request = native_file(receipt.get("toolCloseRequestPath"),
+                             receipt.get("toolCloseRequestSha256"), product, "CUA_TOOL_REQUEST_FILE")
+    cua_identity(admission, request, "CUA_TOOL_REQUEST_IDENTITY")
+    require(request.get("event") == "tool_close_request" and
+            request.get("provenanceBasis") == "caller_recorded_original_cua_request" and
+            request.get("rootOriginalReturnReviewRequired") is True and
+            request.get("observedAtUTC") == request.get("atUTC") and
+            native_path_text(request.get("originalCuaRequestReference"), "CUA_TOOL_REQUEST_ORIGIN") and
+            type(request.get("originalCuaRequestSha256")) is str and
+            HEX64.fullmatch(request["originalCuaRequestSha256"]) is not None, "CUA_TOOL_REQUEST_ORIGIN")
+    result = cua_file(admission, receipt.get("toolCloseReturnPath"),
+                      receipt.get("toolCloseReturnSha256"), product, "tool_close_return")
+    for record in (request, result):
+        cua_native_close_fields(record)
+        require(record.get("method") == "Tab.close" and record.get("targetTabId") == admission["tabId"] and
+                record.get("closeActorTaskId") == admission["producerAgentTaskId"], "CUA_TOOL_TARGET_ACTOR")
+    requested = native_time(request.get("atUTC"), "CUA_TOOL_REQUEST_TIME")
+    require(reserved <= requested <= returned <= observed <= deadline and
+            request.get("status") == "REQUESTED" and result.get("status") == "SUCCEEDED" and
+            result.get("callCompleted") is True and result.get("returnType") == "void" and
+            result.get("atUTC") == receipt["toolCloseReturnedAtUTC"] and
+            result.get("requestPath") == receipt["toolCloseRequestPath"] and
+            result.get("requestSha256") == receipt["toolCloseRequestSha256"], "CUA_TOOL_RETURN_INVALID")
+    require(receipt.get("actionEvidencePath") == admission.get("actionEvidencePath") and
+            receipt.get("finalInventoryPath") == admission.get("finalInventoryPath"), "CUA_FUTURE_PATH_MISMATCH")
+    action = cua_file(admission, receipt.get("actionEvidencePath"), receipt.get("actionEvidenceSha256"),
+                      product, "action_sequence")
+    cua_native_close_fields(action)
+    rows = action.get("actions")
+    require(type(rows) is list and bool(rows) and action.get("atUTC") == receipt.get("actionAtUTC"),
+            "CUA_ACTIONS_MISSING")
+    require(returned <= native_time(action.get("atUTC"), "CUA_ACTION_TIME_INVALID") <= observed,
+            "CUA_TOOL_ACTION_AGGREGATE_TIME")
+    links, previous = {}, reserved
+    for index, row in enumerate(rows):
+        require(type(row) is dict, "CUA_ACTION_INVALID")
+        cua_native_close_fields(row)
+        at = cua_origin(row, "CUA_ACTION_ORIGIN_INVALID")
+        require(row.get("tabId") == admission["tabId"] and previous <= at <= returned,
+                "CUA_ACTION_CHRONOLOGY_INVALID")
+        previous = at
+        links[str(index)] = row["originalCuaReturnSha256"]
+        if index == len(rows) - 1:
+            require(row.get("action") == "tool_close" and at == returned and
+                    row.get("closeActorTaskId") == admission["producerAgentTaskId"] and
+                    row.get("toolCloseReturnPath") == receipt["toolCloseReturnPath"] and
+                    row.get("toolCloseReturnSha256") == receipt["toolCloseReturnSha256"] and
+                    all(row.get(key) == result.get(key) for key in
+                        ("cuaCallRef", "originalCuaReturnReference", "originalCuaReturnSha256")),
+                    "CUA_TOOL_CLOSE_NOT_TERMINAL")
+        else:
+            require(row.get("action") in ("control", "capture", "handoff", "product_read", "product_execute")
+                    and at <= requested, "CUA_POST_CLOSE_ACTION")
+    require(action.get("sourceEvidenceSha256") == links, "CUA_ACTION_SOURCE_LINKS_INVALID")
+    inventory = cua_file(admission, receipt.get("finalInventoryPath"),
+                         receipt.get("finalInventorySha256"), product, "final_inventory")
+    raw = cua_file(admission, inventory.get("rawCuaInventoryPath"),
+                   inventory.get("rawCuaInventorySha256"), product, "cua_inventory")
+    for record in (inventory, raw):
+        cua_native_close_fields(record)
+        require(record.get("inventoryActorTaskId") == admission["observerAgentTaskId"] and
+                record.get("atUTC") == receipt["closureObservedAtUTC"] and
+                record.get("inventoryScope") == "metadata_only" and
+                type(record.get("ownedCount")) is int and record["ownedCount"] == 0,
+                "CUA_TOOL_INVENTORY_ACTOR")
+    require(inventory.get("rawCuaInventoryPath") == admission.get("rawCuaInventoryPath") and
+            raw.get("tabIds") == inventory.get("tabIds"), "CUA_RAW_INVENTORY_MISMATCH")
+    final_ids = page_target_ids(inventory.get("tabIds"), "CUA_FINAL_IDS_INVALID")
+    baseline = cua_file(admission, prefix.get("baselineInventoryPath"),
+                        prefix.get("baselineInventorySha256"), readiness, "baseline_inventory")
+    require(admission["tabId"] not in final_ids and
+            set(final_ids) == set(page_target_ids(baseline.get("tabIds"), "CUA_BASELINE_IDS_INVALID")) and
+            raw.get("cuaCallRef") != baseline.get("cuaCallRef"), "CUA_PROTECTED_DRIFT")
+    marker_path = native_future_path(admission, "browserDoneSignalPath", product, absent=False)
+    marker = read_json(marker_path)
+    require(marker.get("status") == "TERMINAL_EVIDENCE_WRITTEN" and
+            all(marker.get(key) == admission.get(key) for key in
+                ("proofContract", "campaignNonce", "browserId", "tabId", "ownedScopeId")) and
+            observed <= native_time(marker.get("atUTC"), "CUA_DONE_TIME_INVALID") <= deadline and
+            marker.get("evidenceSha256") == {
+                "browserCloseReceiptPath": digest(close_path), "actionEvidencePath": receipt["actionEvidenceSha256"],
+                "finalInventoryPath": receipt["finalInventorySha256"],
+                "rawCuaInventoryPath": inventory["rawCuaInventorySha256"]}, "CUA_DONE_MARKER_INVALID")
+    return {"receipt": receipt, "closeReceiptSha256": digest(close_path),
+            "actionEvidenceSha256": receipt["actionEvidenceSha256"],
+            "finalInventorySha256": receipt["finalInventorySha256"]}
+
+
 def verify_cua_page_target_terminal(admission: dict, runtime: Path) -> dict:
+    if admission.get("closeMode") == "native_tool":
+        return verify_cua_native_tool_terminal(admission, runtime)
     verify_browser_receipt(admission, require_runtime_absent=False)
     readiness, product_root = native_roots(admission)
     require(runtime.resolve() == product_root, "CUA_RUNTIME_ROOT_MISMATCH")

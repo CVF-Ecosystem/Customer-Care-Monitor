@@ -5,6 +5,55 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r139-native-isolation-admission-20261027",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-CLOSE-TEST-ISOLATION-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Bounded legacy test-file restoration and isolated native proof preserving accepted clock receipts; two Python checks only."
+    },
+    {
+      "id": "r139-native-component-review-20261027",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_component_review.json",
+      "status": "ACTIVE",
+      "description": "Independent Root native-validator component25-process acceptance with retained F3 whole-test-file clock-pin gap; runtime remains blocked."
+    },
+    {
+      "id": "r139-native-worker-return-20261027",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_return.json",
+      "status": "ACTIVE",
+      "description": "Sol native-close worker return: Python4, offline compile and Go3/28 PASS with original receipts; independent Root review follows."
+    },
+    {
+      "id": "r139-native-precheck-audit-20261027",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_precheck_audit.json",
+      "status": "ACTIVE",
+      "description": "Root pre-check source/import/init audit; deadline and aggregate-time findings corrected before any check."
+    },
+    {
+      "id": "r139-native-root-launcher-20261027",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_launcher_binding.json",
+      "status": "ACTIVE",
+      "description": "Root narrowed independent-check argv/launcher/binary binding; original child evidence retained."
+    },
+    {
+      "id": "r139-native-isolation-allocation-20261027",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/isolation_allocation_ledger.json",
+      "status": "ACTIVE",
+      "description": "Root two-slot Python test-isolation allocation above retained25; no compiler/Go/clock replay."
+    },
+    {
+      "id": "r139-selected-browser-docs-20261027",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_discovery_20261027/selected_browser_documentation.json",
+      "status": "ACTIVE",
+      "description": "Actual IAB2 selection documentation plus packaged JPEG/local-development guidance; no page or G0 proof."
+    },
+    {
       "id": "r139-native-close-source-admission-20261027",
       "family": "continuity",
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-TOOL-CLOSE-SOURCE-ADMISSION.json",
@@ -16,7 +65,7 @@
       "family": "continuity",
       "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/allocation_ledger.json",
       "status": "ACTIVE",
-      "description": "Root pre-invocation native-close check allocation above historical20; five slots not yet started."
+      "description": "Root native-close five original check slots completed PASS above historical20; lineage25 retained before test-isolation repair."
     },
     {
       "id": "r139-autonomous-completion-admission-20261027",
