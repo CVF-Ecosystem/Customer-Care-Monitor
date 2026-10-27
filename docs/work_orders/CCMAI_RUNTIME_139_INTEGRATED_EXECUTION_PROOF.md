@@ -10,12 +10,14 @@ runtimeExecutor: UNASSIGNED_UNTIL_SUPPORTED_ENVIRONMENT_AND_COMMITTED_ADMISSION
 runtimeReviewer: INDEPENDENT_REVIEWER_TO_BE_BOUND_IN_CURRENT_ADMISSION; historical reviews retained
 dispatchKind: INITIAL
 
+Latest settled result: the 2026-10-27 actual G0 HOLD section below governs; all older dated dispositions are historical unless explicitly standing Owner instructions.
+
 ## R139 delegated actual reservation — 2026-10-27T04:24:06.802756Z
 
 CCMAI-RUNTIME-139 settled actual G0 HOLD_BROWSER_UNAVAILABLE: independent review accepted limited HOLD and original clock custody complete, PID3728 original wait exit0, no outstanding metadata children. Preserve source20/controllers4/campaign1/service5PASS/CUA1 and all receipts; no tab creation, fixture, key or provider call. Remain REVIEW/CHANGES_REQUIRED, Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; G1/G2/G3 NOT_RUN, FREEZE OPEN. No retry, new campaign, Antigravity, alternate stack or paid-call renewal. Before any future G0 require actual admitted CUA browser connection evidence and an applicable campaign decision in this same R139/M3-05/M3-08 order; reuse validated source/snapshot/checks, retain every spent/unknown result. Facebook/Zalo OA parked.
 
 
-## Current boot-identity v2 prelaunch clock HOLD — 2026-10-25
+## Historical superseded boot-identity v2 prelaunch clock HOLD — 2026-10-25 (superseded by settled 2026-10-27 result)
 
 CCMAI-RUNTIME-139 HOLD_PRECLOCK_CLOCK_INCOMPATIBLE before any v2 controller invocation: offline source72371595/buildf818 accepted, source10/10checks spent and static technical review passed, but Root pinned-Python existing/current UTC-monotonic offsets vs immutable baseline are -3.8507008s/-3.9758600s, outside reviewed2s. Preserve exact clock receipts and independent HOLD review. Additional v2 invocation0/1, campaign0/1, services0/5, CUA0/64, fixture/key/provider0; original PID24484 exit1 retained separately. Do not launch, mutate system clock, re-pin baseline, loosen contract or add checks/retries under current authority. Continue only with separately evidenced clock compatibility under exact contract, or one separately approved consolidated contract/baseline decision within this same R139/M3-05/M3-08 order. ProductB BLOCKED_PENDING_OPERATIONAL_ADMISSION, Facebook/Zalo OA parked; no new tranche/Antigravity/Owner relay chain.
 

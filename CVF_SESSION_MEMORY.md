@@ -24,9 +24,17 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
 
+CCMAI-RUNTIME-139 settled actual G0 HOLD_BROWSER_UNAVAILABLE: independent review accepted limited HOLD and original clock custody complete, PID3728 original wait exit0, no outstanding metadata children. Preserve source20/controllers4/campaign1/service5PASS/CUA1 and all receipts; no tab creation, fixture, key or provider call. Remain REVIEW/CHANGES_REQUIRED, Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; G1/G2/G3 NOT_RUN, FREEZE OPEN. No retry, new campaign, Antigravity, alternate stack or paid-call renewal. Before any future G0 require actual admitted CUA browser connection evidence and an applicable campaign decision in this same R139/M3-05/M3-08 order; reuse validated source/snapshot/checks, retain every spent/unknown result. Facebook/Zalo OA parked.
+
+Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD after independent Sol HOLD review; original clock custody complete, no browser/product workers released
+
+### Historical pre-G0 checkpoint — superseded 2026-10-27
+
 CCMAI-RUNTIME-139 delegated consolidated preclock repair source checks PASS: original controllers23500/2560/28928 all retained exit1 (used3), allocation002 ceiling4; cumulative checks20 include retained18 plus worker13552 and Root24424 each PASS5. Exact inherited source-budget dictionary restored, delegated accounting separate; full source preclock contracts independently audited. Finalize current v2 metadata/actor/source bindings and independent technical review, pinned gates and clean commit before one fourth original controller. Nonce299b601cf7509d9727de5d1de197990f, source7ef/build6b unchanged. Campaign0/1, services/CUA/fixture/key/provider0; one R139/M3-05/M3-08 order, API1<=USD1 and1200/+1020 unchanged, actual G0 and separate Runtime Effect Admission before fixture/key/provider. No blind retry, helper tranche or Owner relay. Product B blocked; Facebook/Zalo OA parked.
 
 Root ORCHESTRATOR / BUDGET_STEWARD / snapshot metadata author / COMMIT_STEWARD; Sol implementation worker and independent reviewer, browser workers unreleased
+
+### Historical R139 instructions and progression — superseded 2026-10-27
 
 Owner reiteration2026-10-23: no fragmented tranches; follow roadmap. Root keeps ONE existing R139 outcome-based order across G0/G1/G2/G3; no helper/metadata prompt chain or repeated Owner relay. Complete consolidated readiness/admission before redispatch. Historical substep instructions and prior HOLD_TRANSFER are completed/spent context; the Current Truth instruction above governs this continuation. Directive recorded in existing order/continuity, no new learning artifact or tranche. Effectiveness must be judged by product acceptance.
 
