@@ -1,0 +1,67 @@
+{
+  "kind": "R139_DELEGATED_V2_WORKER_FOCUSED_SOURCE_CONTRACT_RETURN",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "status": "PURE_METADATA_TEST_PASS_NO_RUNTIME_RELEASE",
+  "role": "IMPLEMENTATION_WORKER",
+  "allocationId": "R139-DELEGATED-ALLOC-002",
+  "testProcessCount": 1,
+  "testCasesRun": 5,
+  "testFailures": 0,
+  "testErrors": 0,
+  "testSkips": 0,
+  "originalPid": 13552,
+  "originalWaitReturned": true,
+  "exitCode": 0,
+  "argv": [
+    "C:/Users/tiennm/AppData/Local/Programs/Python/Python313/python.exe",
+    "-B",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_test_source_contract_v2_20261027.py.txt"
+  ],
+  "cwd": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+  "timeoutSeconds": 120,
+  "wrapperRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_root_control_wrapper_v2_20261027.py.txt",
+    "sha256": "7b384e79f9bb47994c138cbbe90419f8b8d4d588d93733cb33bc40d5a2ce3d76"
+  },
+  "testRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_test_source_contract_v2_20261027.py.txt",
+    "sha256": "85e5452cd3bda421965875f046a0c7e627f5937d15feeff1c9d56bf7ed116779"
+  },
+  "sourceControllerRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v3_design.py.txt",
+    "sha256": "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d"
+  },
+  "privateOriginalEvidence": {
+    "intent": {
+      "path": ".cvf/runtime/r139_delegated_source_contract_checks_v2_20261027/worker/intent.json",
+      "sha256": "5df093a9f548e1ef07bbea990967912abf6ba83f39614c1430f03f07d676e463"
+    },
+    "started": {
+      "path": ".cvf/runtime/r139_delegated_source_contract_checks_v2_20261027/worker/started.json",
+      "sha256": "f2117d73703ef4544080d7b39e7025065eb04b95a79049c26279714f1fba8d63"
+    },
+    "originalWaitExit": {
+      "path": ".cvf/runtime/r139_delegated_source_contract_checks_v2_20261027/worker/original_wait_exit.json",
+      "sha256": "d495151ea1b6a12cd28d25371cceed2e06fb0432ff61fcbc77eb8eafd58dd5cd"
+    },
+    "stdout": {
+      "path": ".cvf/runtime/r139_delegated_source_contract_checks_v2_20261027/worker/stdout.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": ".cvf/runtime/r139_delegated_source_contract_checks_v2_20261027/worker/stderr.bin",
+      "sha256": "b6ccbd0556f2048aad88379204b74ddf7c57b4ef812c652d542bef6af6271d54"
+    }
+  },
+  "effects": {
+    "controller": 0,
+    "campaign": 0,
+    "serviceQueries": 0,
+    "cuaMethods": 0,
+    "fixtureStarts": 0,
+    "keyReads": 0,
+    "providerCalls": 0
+  },
+  "claimBoundary": "Five pure metadata tests only; no original controller or runtime campaign invoked; independent review and Root allocation accounting remain pending.",
+  "completedAtUTC": "2026-10-27T04:12:22.2907349Z"
+}

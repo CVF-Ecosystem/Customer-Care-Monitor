@@ -14,7 +14,7 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 Owner delegated technical-budget BUILD: exact17cb Docker snapshot independently identity-accepted and worker/Root focused guard processes passed4 each; finalize current metadata/actor/source bindings and independent full technical review before counted launch; Root may allocate necessary same-scope offline checks/preclock attempts with cumulative originals retained and no per-step Owner relay. Initial technical allocation controller ceiling3 with used2 retained,2 new focused guard processes; prior16 checks/source7ef reused. Root owns snapshot/allocations/commit; Sol worker implements custody guard/tests and metadata, independent Sol reviewer required. No actual controller until full pin/owner/ref/path review, gates and clean commit. Existing campaign0/1,1200/+1020,queries5,CUA64,API1<=USD1 unchanged; actual G0 plus separate Runtime Effect Admission before fixture/key/provider. No unrelated/prod/destructive/paid-scope expansion, helper tranche, Antigravity or Core fetch/update. Product B blocked; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 delegated consolidated preclock repair source checks PASS: original controllers23500/2560/28928 all retained exit1 (used3), allocation002 ceiling4; cumulative checks20 include retained18 plus worker13552 and Root24424 each PASS5. Exact inherited source-budget dictionary restored, delegated accounting separate; full source preclock contracts independently audited. Finalize current v2 metadata/actor/source bindings and independent technical review, pinned gates and clean commit before one fourth original controller. Nonce299b601cf7509d9727de5d1de197990f, source7ef/build6b unchanged. Campaign0/1, services/CUA/fixture/key/provider0; one R139/M3-05/M3-08 order, API1<=USD1 and1200/+1020 unchanged, actual G0 and separate Runtime Effect Admission before fixture/key/provider. No blind retry, helper tranche or Owner relay. Product B blocked; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
   "activeRole": "Root ORCHESTRATOR / BUDGET_STEWARD / snapshot metadata author / COMMIT_STEWARD; Sol implementation worker and independent reviewer, browser workers unreleased",
   "updatedAt": "2026-10-25",
@@ -3729,23 +3729,27 @@
     "independentDecisionReview": "REVIEW_PASS_DECISION_ONLY_QUALIFIED_NO_ACTIVATION"
   },
   "x-r139DelegatedTechnical20261026": {
-    "status": "SOURCE_COMPONENT_CHECKS_PASS_FINAL_TECHNICAL_REVIEW_PENDING",
+    "status": "V2_SOURCE_CONTRACT_CHECKS_PASS_FINAL_TECHNICAL_REVIEW_PENDING",
     "authorityRef": {
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-TECHNICAL-BUDGET-AND-DOCKER-ADOPTION-ADMISSION.json",
       "sha256": "be07b72bdbd35969bd8f29979b06aa1c6d97a79a33deab1d48734d8fb9d25787"
     },
     "allocationLedger": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_technical_allocations_20261026.json",
-    "controllerUsed": 2,
+    "controllerUsed": 3,
     "initialControllerCeiling": 3,
     "sourceChecksRetained": 16,
-    "newFocusedGuardProcessesUsed": 2,
+    "newFocusedGuardProcessesUsed": 4,
     "campaignUsed": 0,
     "snapshotCreated": true,
     "runtimeReleased": false,
-    "countedFocusedLineage": 18,
+    "countedFocusedLineage": 20,
     "acceptedBuildPinsRef": {
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DOCKER-SNAPSHOT-ACCEPTED-BUILD-PINS-ADMISSION.json",
       "sha256": "6b0d40e13c52b438c5ce5998e68874c4ce1f601abffc20d8b5c70175ef6cdce5"
-    }
+    },
+    "currentControllerCeiling": 4,
+    "lastOriginalPid": 28928,
+    "lastOriginalExit": 1,
+    "v2FocusedProcessesUsed": 2
   }
 }

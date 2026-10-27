@@ -1,0 +1,94 @@
+{
+  "kind": "ROOT_R139_DELEGATED_SNAPSHOT_STATIC_GUARD_G0_TECHNICAL_RELEASE",
+  "status": "ROOT_CONDITIONAL_V2_G0_RELEASE_SEALED_PENDING_GATES_AND_CLEAN_COMMIT",
+  "riskCeiling": "R2",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "delegatedAuthorityRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-TECHNICAL-BUDGET-AND-DOCKER-ADOPTION-ADMISSION.json",
+    "sha256": "be07b72bdbd35969bd8f29979b06aa1c6d97a79a33deab1d48734d8fb9d25787"
+  },
+  "acceptedBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DOCKER-SNAPSHOT-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "6b0d40e13c52b438c5ce5998e68874c4ce1f601abffc20d8b5c70175ef6cdce5"
+  },
+  "recipeRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_activation_recipe_20261026.json",
+    "sha256": "6577049332a487c54d6ae4a3d32d4a979574d4283128a99962444303d60c9eb1"
+  },
+  "independentReviewApproved": true,
+  "independentReviewRef": {
+    "path": "docs/reviews/R139_DELEGATED_G0_TECHNICAL_REVIEW_2026-10-26.md",
+    "sha256": "68b161fe21243f254bcfcdec868c0a9291aa13c14d32d07ab332e52bae9b3380"
+  },
+  "sourceRefs": {
+    "delegated_static_launch_guard_20261026.py.txt": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_static_launch_guard_20261026.py.txt",
+      "sha256": "4fe512c0f6ec57c6e3af69cbbd314955b493309b22afc0af7658f6cf4d42a9cc"
+    },
+    "delegated_root_control_wrapper_v2_20261027.py.txt": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_root_control_wrapper_v2_20261027.py.txt",
+      "sha256": "7b384e79f9bb47994c138cbbe90419f8b8d4d588d93733cb33bc40d5a2ce3d76"
+    },
+    "delegated_test_source_contract_v2_20261027.py.txt": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_test_source_contract_v2_20261027.py.txt",
+      "sha256": "85e5452cd3bda421965875f046a0c7e627f5937d15feeff1c9d56bf7ed116779"
+    }
+  },
+  "focusedCheckRefs": {
+    "delegated_source_contract_worker_return_v2_20261027.json": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_contract_worker_return_v2_20261027.json",
+      "sha256": "95913b6f58ca622034187da2319357b8ac504aa997e26eb02e13b99f1bfa1c55"
+    },
+    "delegated_source_contract_root_return_v2_20261027.json": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_contract_root_return_v2_20261027.json",
+      "sha256": "ccbb5e078557a73cf5b9246f2d3ce30641d7dbd00acc32ba1c52bad06548d7eb"
+    }
+  },
+  "retainedSourceChecks": 18,
+  "newFocusedProcesses": 2,
+  "countedLineage": 20,
+  "cumulativeControllerUsedBefore": 3,
+  "currentAllocatedControllerCeiling": 4,
+  "additionalOriginalInvocationsInThisPacket": 1,
+  "rootBudgetStewardMayReallocateUnderDelegation": true,
+  "coldGuardBeforeAnyCountedPopen": true,
+  "conditionalEffects": {
+    "oneOriginalController": 1,
+    "oneCampaign": 1,
+    "fiveExactQueries": 5,
+    "oneOwnedG0Tab": 1,
+    "g0ProducerMethods": 8,
+    "g0ObserverMethods": 4,
+    "productRuntime": false,
+    "key": false,
+    "provider": false
+  },
+  "observedNewEffects": {
+    "controller": 0,
+    "campaign": 0,
+    "services": 0,
+    "cua": 0,
+    "fixture": 0,
+    "key": 0,
+    "provider": 0
+  },
+  "staticReviewOnly": true,
+  "scope": "One current reviewed allocation original preclock then5queries andnativeG0 afteractualsignal. Actual Root G0 evidence acceptance and separate Runtime Effect Admission before fixture/key/provider; no paid/prod/destructive/unrelated expansion.",
+  "parentTechnicalAuthorityRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-G0-TECHNICAL-RELEASE-ADMISSION.json",
+    "sha256": "5fc46bf73443b7efb169d0c6f7c20b9bc399350288b1be8fa57077b522757cba"
+  },
+  "rootAllocationId": "R139-DELEGATED-ALLOC-002",
+  "priorThirdOriginalWaitExitRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_budget_hold_20261027/original_wait_exit.json",
+    "sha256": "7a22af8cf87352bd527b00da4b97556c545a28945719ec757ac1b384f07229f6"
+  },
+  "rootMechanicalSeal": {
+    "canonicalHashesChecked": 8,
+    "protectedProjectHashesChecked": 57,
+    "ownerOnlyExactFile": true,
+    "effectPathsAbsent": true,
+    "noSemanticChangesAfterReview": true,
+    "oneWayAuthorityToRecipeHash": true
+  }
+}

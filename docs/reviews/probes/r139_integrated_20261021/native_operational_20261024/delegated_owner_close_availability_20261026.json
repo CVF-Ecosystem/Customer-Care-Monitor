@@ -4,11 +4,11 @@
   "operator": "Owner in this conversation",
   "operatorAvailable": true,
   "availabilityBasis": "Root judgment retaining explicit Owner exact owned-tab/nonce close fallback readiness and current delegated same-R139 continuation; no new quoted yes, no actual close/inventory inferred.",
-  "latestOwnerResume": "duyệt",
+  "latestOwnerResume": "tiếp",
   "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
   "acceptedBuildPinsSha256": "6b0d40e13c52b438c5ce5998e68874c4ce1f601abffc20d8b5c70175ef6cdce5",
   "nativeContractId": "r139-cua-boot-identity-v3-20261026",
-  "campaignNonce": "acfcb1f2d705f1e0296e4062d7474bb5",
+  "campaignNonce": "299b601cf7509d9727de5d1de197990f",
   "exactPageId": null,
   "currentlyReserved": false,
   "actualCloseProved": false,
@@ -27,14 +27,14 @@
     "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_owner_close_availability_20261026.json",
     "sha256": "e423f802e48678b3eb141ba7aa83025f98e4dac981e23a92e484d1db93f50d29"
   },
-  "rootBoundAtUTC": "2026-10-26T14:50:14.274400+00:00",
+  "rootBoundAtUTC": "2026-10-26T23:12:08.659513+00:00",
   "delegatedAuthorityRef": {
     "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-TECHNICAL-BUDGET-AND-DOCKER-ADOPTION-ADMISSION.json",
     "sha256": "be07b72bdbd35969bd8f29979b06aa1c6d97a79a33deab1d48734d8fb9d25787"
   },
   "delegatedCoordinationOwnerRef": {
-    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_coordination_owner_20261026.json",
-    "sha256": "8b4f3cae8450d8016aba0db5af3d977baa1141e5aed488e9999cb4902346d7f5"
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_coordination_owner_v2_20261027.json",
+    "sha256": "0290aed176adcd6831d6d598c85f0918c3b61a3902220ca31e47bd8b81637796"
   },
   "priorOriginalWaitExitRefs": [
     {
@@ -44,8 +44,13 @@
     {
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_tool_pin_hold_20261026/original_wait_exit.json",
       "sha256": "9c653828dc1510e3f2d6505263991af407b40f3db79440873b43f04b3275f7e4"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_budget_hold_20261027/original_wait_exit.json",
+      "sha256": "7a22af8cf87352bd527b00da4b97556c545a28945719ec757ac1b384f07229f6"
     }
   ],
-  "sharedFutureControllerUsed": 2,
-  "sharedFutureControllerCap": 3
+  "sharedFutureControllerUsed": 3,
+  "sharedFutureControllerCap": 4,
+  "currentAllocation": "R139-DELEGATED-ALLOC-002"
 }

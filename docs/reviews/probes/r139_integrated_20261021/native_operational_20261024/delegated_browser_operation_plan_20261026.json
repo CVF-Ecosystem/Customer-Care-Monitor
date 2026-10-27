@@ -1,8 +1,8 @@
 {
   "schemaVersion": "r139.cuaBrowserOperationPlan@1.1.0",
-  "planId": "R139_DELEGATED_BROWSER_OPERATION_PLAN_20261026",
+  "planId": "R139_DELEGATED_V2_BROWSER_OPERATION_PLAN_20261027",
   "date": "2026-10-26",
-  "status": "PREPARED_CURRENT_DELEGATED_ACKS_BOUND_PENDING_REVIEW_NO_EFFECT_AUTHORITY",
+  "status": "PREPARED_CURRENT_V2_ACTORS_SOURCE20_PENDING_INDEPENDENT_REVIEW_NO_EFFECT_AUTHORITY",
   "workOrder": "CCMAI-RUNTIME-139",
   "proofContract": "cua_page_target_v1",
   "purpose": "One same-order conditional campaign; planned operations only, not runtime evidence",
@@ -17,7 +17,7 @@
     "serviceQueriesStarted": 0,
     "providerCallsStarted": 0,
     "pathDisposition": "Root-authorized uniquely named plan within inherited evidenceFamily reentry_source_checks/** and active source work order; does not widen source or immutable seed paths",
-    "sourceBuildAndRuntimeEffectAdmission": "Docker17cb accepted build is offline identity only. Full20 static guard, independent technical review, clean final dispatch and original preclock are required. Separate Runtime Effect Admission still required before fixture/key/provider.",
+    "sourceBuildAndRuntimeEffectAdmission": "Exact inherited six-key source budget restored; delegated guard checks separately counted. V2 custody technical review/clean commit and actual G0 still required; separate Runtime Effect Admission before fixture/key/provider.",
     "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
     "acceptedBuildPinsRef": {
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DOCKER-SNAPSHOT-ACCEPTED-BUILD-PINS-ADMISSION.json",
@@ -35,11 +35,11 @@
       "sha256": "8f18cef19fbfadde33948b17ee08b5cfb558aee261eb538bea65e0c364e578cf"
     },
     "coordRecoveryOwnerRef": {
-      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_coordination_owner_20261026.json",
-      "sha256": "8b4f3cae8450d8016aba0db5af3d977baa1141e5aed488e9999cb4902346d7f5"
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_coordination_owner_v2_20261027.json",
+      "sha256": "0290aed176adcd6831d6d598c85f0918c3b61a3902220ca31e47bd8b81637796"
     },
-    "sharedFutureControllerUsed": 2,
-    "sharedFutureControllerCap": 3,
+    "sharedFutureControllerUsed": 3,
+    "sharedFutureControllerCap": 4,
     "delegatedAuthorityRef": {
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-TECHNICAL-BUDGET-AND-DOCKER-ADOPTION-ADMISSION.json",
       "sha256": "be07b72bdbd35969bd8f29979b06aa1c6d97a79a33deab1d48734d8fb9d25787"
@@ -52,11 +52,11 @@
   "actors": {
     "g0Producer": {
       "canonicalTaskId": "/root/r139_live_browser_producer",
-      "status": "ACTUAL_CURRENT_ACK_BOUND_ZERO_EFFECT_NO_CUA_RELEASE"
+      "status": "ACTUAL_CURRENT_V2_ACK_BOUND_ZERO_CUA_NO_RELEASE"
     },
     "g0IndependentObserver": {
       "canonicalTaskId": "/root/r139_sol_browser_observer",
-      "status": "ACTUAL_CURRENT_ACK_BOUND_ZERO_EFFECT_NO_CUA_RELEASE"
+      "status": "ACTUAL_CURRENT_V2_ACK_BOUND_ZERO_CUA_NO_RELEASE"
     },
     "g2ProductUiExecutor": {
       "canonicalTaskId": "/root/r139_live_browser_producer",
@@ -118,8 +118,8 @@
     "readAccounting": "Conservatively count each actual own-page state return, including automatic selection/creation state and each screenshot, toward global4 G0 reads. Metadata-only inventories separately capped3. Reserve one G0 read for observer initial getTab; skip explicit AX read if producer initial state+two captures already use3. Unexpected automatic reads beyond remaining cap mean HOLD before next call; no budget increase."
   },
   "g0": {
-    "urlCreated": "https://example.com/#r139_nonce=acfcb1f2d705f1e0296e4062d7474bb5&phase=created",
-    "urlControlled": "https://example.com/#r139_nonce=acfcb1f2d705f1e0296e4062d7474bb5&phase=controlled",
+    "urlCreated": "https://example.com/#r139_nonce=299b601cf7509d9727de5d1de197990f&phase=created",
+    "urlControlled": "https://example.com/#r139_nonce=299b601cf7509d9727de5d1de197990f&phase=controlled",
     "producerCalls": [
       {
         "slot": 1,
@@ -246,11 +246,11 @@
     "sha256": "6b0d40e13c52b438c5ce5998e68874c4ce1f601abffc20d8b5c70175ef6cdce5"
   },
   "nativeContractId": "r139-cua-boot-identity-v3-20261026",
-  "campaignNonce": "acfcb1f2d705f1e0296e4062d7474bb5",
+  "campaignNonce": "299b601cf7509d9727de5d1de197990f",
   "acceptedBuildPinsSha256": "6b0d40e13c52b438c5ce5998e68874c4ce1f601abffc20d8b5c70175ef6cdce5",
   "currentSourceStatus": "ACCEPTED_SOURCE_7EF30823_PARENT_BUILD_AD348196_CURRENT_DOCKER_SNAPSHOT_BUILD_6B0D40",
   "actualActorMetadataRenewed": true,
-  "currentSourceCheckCount": 18,
+  "currentSourceCheckCount": 20,
   "priorOriginalWaitExitRef": {
     "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/original_wait_exit.json",
     "sha256": "8f18cef19fbfadde33948b17ee08b5cfb558aee261eb538bea65e0c364e578cf"
@@ -259,29 +259,29 @@
   "observerAgentTaskId": "/root/r139_sol_browser_observer",
   "actorAcks": {
     "root": {
-      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_root_actor_ack_20261026.json",
-      "sha256": "cb0c4aae50704510dcd8474d2825f3ccb15a0f4e2e8ebcbcc9097e2b6b7af1a4"
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_root_actor_ack_v2_20261027.json",
+      "sha256": "e058c297f2ee462251395ba2c8279f4a480e287d7655580e1694c5aeafe2c925"
     },
     "internal": {
-      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_internal_actor_ack_20261026.json",
-      "sha256": "5ca5b9a8505dff08b70f2619e37519cf4011091741b3671f7accf19f93ca4d1f"
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_internal_actor_ack_v2_20261027.json",
+      "sha256": "e0f17b577af48de01b6de0181be5f84264116581a340a4d8d045b80245e8520c"
     },
     "cuaProducer": {
-      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_producer_actor_ack_20261026.json",
-      "sha256": "ad3701f5dd747e6adf1766a7fab63cb3da5c3e9a09abebc9df0d7f3068871ed1"
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_producer_actor_ack_v2_20261027.json",
+      "sha256": "9ceb4c680e6e6a876237b31d75a8a47239f2501c3d78248d3c9e1d8e7ea10802"
     },
     "cuaObserver": {
-      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_observer_actor_ack_20261026.json",
-      "sha256": "4a34e5b1add52ea3939e1b08ed6f705ea31ebd491c8e0e3f54978fc8f0ac5871"
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_observer_actor_ack_v2_20261027.json",
+      "sha256": "9d406ed0d3783e7c4f3f5c9116aeaedbbea569d823eb3a49684d4764b10fb3f3"
     }
   },
   "operatorAvailabilityRef": {
     "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_owner_close_availability_20261026.json",
-    "sha256": "3c8e91e5c0d8c702a37f72c1cbfbbde833e8bfb21f9e9704f46758b85da26750"
+    "sha256": "f9cdf36a380b4b3fb193a712b7282d5ee6157f871be25c8a2f325aaf29c2345e"
   },
   "noninterferenceDispositionRef": {
     "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_noninterference_disposition_20261026.json",
-    "sha256": "58a68e486f45feacc1c521d83f1b8837f5fbfce798431dbaf4fd315c85278df5"
+    "sha256": "e6da04176de47c84ce2d961f33f43e497ffcc8cfa500c3f643b87423d251517f"
   },
   "delegatedAuthorityRef": {
     "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-TECHNICAL-BUDGET-AND-DOCKER-ADOPTION-ADMISSION.json",
@@ -299,24 +299,31 @@
     {
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_tool_pin_hold_20261026/original_wait_exit.json",
       "sha256": "9c653828dc1510e3f2d6505263991af407b40f3db79440873b43f04b3275f7e4"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_budget_hold_20261027/original_wait_exit.json",
+      "sha256": "7a22af8cf87352bd527b00da4b97556c545a28945719ec757ac1b384f07229f6"
     }
   ],
-  "sharedFutureControllerUsed": 2,
-  "sharedFutureControllerCap": 3,
+  "sharedFutureControllerUsed": 3,
+  "sharedFutureControllerCap": 4,
   "actorAvailabilityMessages": {
     "cuaProducer": {
-      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_producer_availability_message_20261026.json",
-      "sha256": "d08fbc0441006c71d4b243a326da484fb0da1b9a38e7115485df2af56fca7e19"
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_producer_availability_message_v2_20261027.json",
+      "sha256": "a01d065a9d5440b36a9b6cdd8d642e484fd5b23128ef7ed7320a3cc3a9e5aaf3"
     },
     "cuaObserver": {
-      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_observer_availability_message_20261026.json",
-      "sha256": "5760c8911352724372aa339311b7545e9b21176ef751d0997c03b2f67e87fcc3"
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_observer_availability_message_v2_20261027.json",
+      "sha256": "bfa4162d3558c1c45ce4fe98d9dad272fb0a636ac6b1b33f4d7ebff6f008727d"
     }
   },
   "historicalSourceChecksRetained": 16,
   "delegatedFocusedGuardChecksUsed": 2,
   "delegatedTechnicalAllocationsRef": {
     "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_technical_allocations_20261026.json",
-    "sha256": "6248708f4b3f743763db4689ce10096517bd46642404b0be14b1d81f4b686972"
-  }
+    "sha256": "e561912086d68d0ea00e17adc1923e269ae536638549e249c9af54d7a745a61f"
+  },
+  "delegatedV2FocusedChecksUsed": 2,
+  "sourceCheckTotalSpent": 20,
+  "delegatedTechnicalReviewPath": "docs/reviews/R139_DELEGATED_G0_TECHNICAL_REVIEW_2026-10-26.md"
 }

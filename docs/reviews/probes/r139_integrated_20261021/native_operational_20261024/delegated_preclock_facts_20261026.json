@@ -1,22 +1,22 @@
 {
   "kind": "ROOT_R139_DELEGATED_PRECLOCK_FACTS",
-  "status": "PREPARED_CURRENT_ACTORS_AND_CHECKS_BOUND_PENDING_INDEPENDENT_REVIEW_FINAL8_AND_COMMIT_NO_EFFECT_AUTHORITY",
-  "preparedAtUTC": "2026-10-26T23:04:14.743775+00:00",
+  "status": "PREPARED_CURRENT_V2_ACKS_SOURCE20_BOUND_PENDING_INDEPENDENT_REVIEW_NO_EFFECT_AUTHORITY",
+  "preparedAtUTC": "2026-10-26T23:14:51.255500+00:00",
   "nativeContractId": "r139-cua-boot-identity-v3-20261026",
-  "campaignNonce": "acfcb1f2d705f1e0296e4062d7474bb5",
+  "campaignNonce": "299b601cf7509d9727de5d1de197990f",
   "recoveryOwnerAdmissionSha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb",
-  "coordinationRoot": ".cvf/runtime/r139_delegated_reentry_20261026_readiness/coordination",
-  "coordinationOwnerSha256": "8b4f3cae8450d8016aba0db5af3d977baa1141e5aed488e9999cb4902346d7f5",
-  "readinessRoot": ".cvf/runtime/r139_delegated_reentry_20261026_readiness",
-  "activationLogRoot": ".cvf/runtime/r139_delegated_reentry_20261026_activation_logs",
-  "recorderOutputRoot": ".cvf/runtime/r139_delegated_reentry_20261026_recorder",
-  "dockerConfigDir": ".cvf/runtime/r139_delegated_reentry_20261026_readiness/docker_config",
+  "coordinationRoot": ".cvf/runtime/r139_delegated_reentry_v2_20261027_readiness/coordination",
+  "coordinationOwnerSha256": "0290aed176adcd6831d6d598c85f0918c3b61a3902220ca31e47bd8b81637796",
+  "readinessRoot": ".cvf/runtime/r139_delegated_reentry_v2_20261027_readiness",
+  "activationLogRoot": ".cvf/runtime/r139_delegated_reentry_v2_20261027_activation_logs",
+  "recorderOutputRoot": ".cvf/runtime/r139_delegated_reentry_v2_20261027_recorder",
+  "dockerConfigDir": ".cvf/runtime/r139_delegated_reentry_v2_20261027_readiness/docker_config",
   "dockerConfigSha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-  "reservationPath": ".cvf/runtime/r139_delegated_reentry_20261026_readiness/campaign_reservation.json",
-  "signalPath": ".cvf/runtime/r139_delegated_reentry_20261026_readiness/coordination/root_g0_release.json",
-  "failurePath": ".cvf/runtime/r139_delegated_reentry_20261026_readiness/coordination/activation_failure.json",
+  "reservationPath": ".cvf/runtime/r139_delegated_reentry_v2_20261027_readiness/campaign_reservation.json",
+  "signalPath": ".cvf/runtime/r139_delegated_reentry_v2_20261027_readiness/coordination/root_g0_release.json",
+  "failurePath": ".cvf/runtime/r139_delegated_reentry_v2_20261027_readiness/coordination/activation_failure.json",
   "originalFailedPreclockPreserved": true,
-  "oldAttemptCount": 2,
+  "oldAttemptCount": 3,
   "newPreclockUsed": 0,
   "freshCampaignUsed": 0,
   "serviceQueries": 0,
@@ -36,15 +36,15 @@
   },
   "payloadSha256": "ffbf475dee7a28a785c2ce543ad50cda55819c72debdf8c24e0a05104d599f19",
   "designSha256": "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d",
-  "sourceCheckTotalSpent": 18,
+  "sourceCheckTotalSpent": 20,
   "sourceChecksRemaining": 0,
-  "updatedAtUTC": "2026-10-26T23:04:14.743775+00:00",
+  "updatedAtUTC": "2026-10-26T23:14:51.255500+00:00",
   "freshGrantSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
   "inheritedOwnerEnvelopeSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
   "observationCapsSha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491",
   "bootProofSha256": "10937592aaa94c4d00a89eb194fa223b9bec372b921be8a247967da235fa44e9",
   "liveTemporalConditionSatisfied": false,
-  "currentClockHoldReceipt": "TWO_PRIOR_ORIGINAL_CONTROLLERS_EXIT1_RETAINED_NO_RESERVATION",
+  "currentClockHoldReceipt": "THREE_PRIOR_ORIGINAL_CONTROLLERS_EXIT1_RETAINED_NO_RESERVATION",
   "v3ContractRef": {
     "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_contract_20261026.json",
     "sha256": "e3fe4ef6caeb8b197e5f358267d89a6584fb6cf10087bebb5bfca53efdc7d5da"
@@ -53,15 +53,15 @@
     "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
     "sha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f"
   },
-  "sharedFutureControllerUsed": 2,
-  "sharedFutureControllerCap": 3,
+  "sharedFutureControllerUsed": 3,
+  "sharedFutureControllerCap": 4,
   "v2ReleaseSupersededDisabled": true,
   "runtimeExecutableNow": false,
   "internalSetupSeconds": 180,
-  "currentSourceStatus": "ACCEPTED_7EF30823_DOCKER_SNAPSHOT_6B0D40_HISTORICAL16_PLUS_GUARD2_PASS4_EACH_REVIEW_PENDING",
+  "currentSourceStatus": "ACCEPTED_SOURCE7EF_BUILD6B_LINEAGE20_RETAINED_V2_TECHNICAL_REVIEW_PENDING",
   "sourceUseQualification": "Historical16 source checks retained. Two delegated focused guard processes each passed4/4 offline with original waits/exits; cumulative18. No product/controller/source replay.",
-  "metadataRefreshedAtUTC": "2026-10-26T23:02:11.653114+00:00",
-  "freshRootsVerifiedAbsent": "ROOT_FINAL_SEAL_MUST_VERIFY_EXACT_ALLOWED_PRECLOCK_ENTRIES_AND_ABSENCE_OF_RESERVATION_SIGNAL_FAILURE_LOGS_RECORDER_OUTPUTS",
+  "metadataRefreshedAtUTC": "2026-10-27T04:15:35.707645+00:00",
+  "freshRootsVerifiedAbsent": "ROOT_FINAL_SEAL_MUST_VERIFY_V2_PRECLOCK_ONLY_OWNER_AND_EMPTY_CONFIG_NO_RESERVATION_LOGS_OR_RECORDER",
   "keyMetadataOnly": {
     "exists": true,
     "bytes": 114,
@@ -96,8 +96,8 @@
     "sha256": "c6580693da837b014ac8356d3ceaf7b1317ba4970ed6a5d05c1859327d6d2431"
   },
   "actualCoordinationOwnerRef": {
-    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_coordination_owner_20261026.json",
-    "sha256": "8b4f3cae8450d8016aba0db5af3d977baa1141e5aed488e9999cb4902346d7f5"
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_coordination_owner_v2_20261027.json",
+    "sha256": "0290aed176adcd6831d6d598c85f0918c3b61a3902220ca31e47bd8b81637796"
   },
   "previousOriginalExitRef": {
     "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/original_wait_exit.json",
@@ -110,29 +110,29 @@
   },
   "operatorAvailabilityRef": {
     "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_owner_close_availability_20261026.json",
-    "sha256": "3c8e91e5c0d8c702a37f72c1cbfbbde833e8bfb21f9e9704f46758b85da26750"
+    "sha256": "f9cdf36a380b4b3fb193a712b7282d5ee6157f871be25c8a2f325aaf29c2345e"
   },
   "actorAcks": {
     "root": {
-      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_root_actor_ack_20261026.json",
-      "sha256": "cb0c4aae50704510dcd8474d2825f3ccb15a0f4e2e8ebcbcc9097e2b6b7af1a4"
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_root_actor_ack_v2_20261027.json",
+      "sha256": "e058c297f2ee462251395ba2c8279f4a480e287d7655580e1694c5aeafe2c925"
     },
     "internal": {
-      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_internal_actor_ack_20261026.json",
-      "sha256": "5ca5b9a8505dff08b70f2619e37519cf4011091741b3671f7accf19f93ca4d1f"
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_internal_actor_ack_v2_20261027.json",
+      "sha256": "e0f17b577af48de01b6de0181be5f84264116581a340a4d8d045b80245e8520c"
     },
     "cuaProducer": {
-      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_producer_actor_ack_20261026.json",
-      "sha256": "ad3701f5dd747e6adf1766a7fab63cb3da5c3e9a09abebc9df0d7f3068871ed1"
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_producer_actor_ack_v2_20261027.json",
+      "sha256": "9ceb4c680e6e6a876237b31d75a8a47239f2501c3d78248d3c9e1d8e7ea10802"
     },
     "cuaObserver": {
-      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_observer_actor_ack_20261026.json",
-      "sha256": "4a34e5b1add52ea3939e1b08ed6f705ea31ebd491c8e0e3f54978fc8f0ac5871"
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_observer_actor_ack_v2_20261027.json",
+      "sha256": "9d406ed0d3783e7c4f3f5c9116aeaedbbea569d823eb3a49684d4764b10fb3f3"
     }
   },
   "noninterferenceDispositionRef": {
     "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_noninterference_disposition_20261026.json",
-    "sha256": "58a68e486f45feacc1c521d83f1b8837f5fbfce798431dbaf4fd315c85278df5"
+    "sha256": "e6da04176de47c84ce2d961f33f43e497ffcc8cfa500c3f643b87423d251517f"
   },
   "delegatedAuthorityRef": {
     "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-TECHNICAL-BUDGET-AND-DOCKER-ADOPTION-ADMISSION.json",
@@ -150,12 +150,12 @@
     {
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_tool_pin_hold_20261026/original_wait_exit.json",
       "sha256": "9c653828dc1510e3f2d6505263991af407b40f3db79440873b43f04b3275f7e4"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_budget_hold_20261027/original_wait_exit.json",
+      "sha256": "7a22af8cf87352bd527b00da4b97556c545a28945719ec757ac1b384f07229f6"
     }
   ],
-  "delegatedTechnicalReviewRef": {
-    "path": "docs/reviews/R139_DELEGATED_G0_TECHNICAL_REVIEW_2026-10-26.md",
-    "sha256": "PENDING_INDEPENDENT_REVIEW"
-  },
   "delegatedStaticGuardRef": {
     "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_static_launch_guard_20261026.py.txt",
     "sha256": "4fe512c0f6ec57c6e3af69cbbd314955b493309b22afc0af7658f6cf4d42a9cc"
@@ -168,12 +168,12 @@
   },
   "actorAvailabilityMessages": {
     "cuaProducer": {
-      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_producer_availability_message_20261026.json",
-      "sha256": "d08fbc0441006c71d4b243a326da484fb0da1b9a38e7115485df2af56fca7e19"
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_producer_availability_message_v2_20261027.json",
+      "sha256": "a01d065a9d5440b36a9b6cdd8d642e484fd5b23128ef7ed7320a3cc3a9e5aaf3"
     },
     "cuaObserver": {
-      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_observer_availability_message_20261026.json",
-      "sha256": "5760c8911352724372aa339311b7545e9b21176ef751d0997c03b2f67e87fcc3"
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_observer_availability_message_v2_20261027.json",
+      "sha256": "bfa4162d3558c1c45ce4fe98d9dad272fb0a636ac6b1b33f4d7ebff6f008727d"
     }
   },
   "newGuardRootReturnRef": {
@@ -182,8 +182,19 @@
   },
   "delegatedTechnicalAllocationsRef": {
     "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_technical_allocations_20261026.json",
-    "sha256": "6248708f4b3f743763db4689ce10096517bd46642404b0be14b1d81f4b686972"
+    "sha256": "e561912086d68d0ea00e17adc1923e269ae536638549e249c9af54d7a745a61f"
   },
   "actualActorMetadataRenewed": true,
-  "ownerOperatorAvailable": true
+  "ownerOperatorAvailable": true,
+  "delegatedV2TechnicalAuthorityPath": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-G0-TECHNICAL-RELEASE-V2-ADMISSION.json",
+  "delegatedTechnicalReviewPath": "docs/reviews/R139_DELEGATED_G0_TECHNICAL_REVIEW_2026-10-26.md",
+  "v2FocusedChecksUsed": 2,
+  "v2WorkerSourceContractReturnRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_contract_worker_return_v2_20261027.json",
+    "sha256": "95913b6f58ca622034187da2319357b8ac504aa997e26eb02e13b99f1bfa1c55"
+  },
+  "v2RootSourceContractReturnRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_contract_root_return_v2_20261027.json",
+    "sha256": "ccbb5e078557a73cf5b9246f2d3ce30641d7dbd00acc32ba1c52bad06548d7eb"
+  }
 }

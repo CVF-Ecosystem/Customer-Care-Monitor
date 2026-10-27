@@ -18,11 +18,22 @@
       "controllerCeiling": 3,
       "focusedGuardProcessesPlanned": 2,
       "paidOrRuntimeEnvelopeChanged": false
+    },
+    {
+      "id": "R139-DELEGATED-ALLOC-002",
+      "rootRecordedAtUTC": "2026-10-26T23:10:13.458387+00:00",
+      "reason": "Known SOURCE_BUDGET_BOUNDARY exact inherited dictionary mismatch: consolidate full source preclock contract audit plus generic cumulative outer custody accounting; no blind replay.",
+      "controllerUsedBefore": 3,
+      "controllerCeiling": 4,
+      "additionalOriginalInvocations": 1,
+      "focusedGuardProcessesPlanned": 2,
+      "newFocusedLineageCeiling": 20,
+      "paidOrRuntimeEnvelopeChanged": false
     }
   ],
   "actualNewUsage": {
-    "controllers": 0,
-    "focusedGuardProcesses": 2,
+    "controllers": 1,
+    "focusedGuardProcesses": 4,
     "campaigns": 0,
     "serviceQueries": 0,
     "cuaMethods": 0,
@@ -64,7 +75,62 @@
     "exitCode": 0,
     "tests": 4
   },
-  "countedFocusedLineage": 18,
+  "countedFocusedLineage": 20,
   "workerFocusedResultRef": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_guard_worker_return_20261026.json",
-  "rootFocusedResultRef": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_guard_root_return_20261026.json"
+  "rootFocusedResultRef": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_guard_root_return_20261026.json",
+  "thirdOriginalControllerResult": {
+    "pid": 28928,
+    "originalWaitReturned": true,
+    "exitCode": 1,
+    "reason": "SOURCE_BUDGET_BOUNDARY",
+    "publicReceiptRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_budget_hold_20261027/root_hold_receipt.json",
+      "sha256": "f5e3e3854189e854c4012ab00026f52494fe633e0f2509097b5844a005542c07"
+    },
+    "campaignUsed": 0
+  },
+  "v2WorkerFocusedIntent": {
+    "recordedBeforeInvocationUTC": "2026-10-27T04:11:44.070779+00:00",
+    "allocationId": "R139-DELEGATED-ALLOC-002",
+    "usedOrReserved": 1,
+    "sourceSha256": {
+      "delegated_root_control_wrapper_v2_20261027.py.txt": "7b384e79f9bb47994c138cbbe90419f8b8d4d588d93733cb33bc40d5a2ce3d76",
+      "delegated_test_source_contract_v2_20261027.py.txt": "85e5452cd3bda421965875f046a0c7e627f5937d15feeff1c9d56bf7ed116779"
+    },
+    "worker": "/root/r139_coord_recovery_packet_worker",
+    "timeoutSeconds": 120,
+    "counting": "One focused worker process; all original Popen/wait/exit and raw outputs retained, no automatic replay."
+  },
+  "v2WorkerResult": {
+    "pid": 13552,
+    "originalWaitReturned": true,
+    "exitCode": 0,
+    "tests": 5,
+    "publicReturnRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_contract_worker_return_v2_20261027.json",
+      "sha256": "95913b6f58ca622034187da2319357b8ac504aa997e26eb02e13b99f1bfa1c55"
+    }
+  },
+  "v2RootFocusedIntent": {
+    "recordedBeforeInvocationUTC": "2026-10-27T04:13:05.808693+00:00",
+    "allocationId": "R139-DELEGATED-ALLOC-002",
+    "usedOrReserved": 1,
+    "sourceSha256": {
+      "delegated_root_control_wrapper_v2_20261027.py.txt": "7b384e79f9bb47994c138cbbe90419f8b8d4d588d93733cb33bc40d5a2ce3d76",
+      "delegated_test_source_contract_v2_20261027.py.txt": "85e5452cd3bda421965875f046a0c7e627f5937d15feeff1c9d56bf7ed116779"
+    },
+    "timeoutSeconds": 120,
+    "role": "Root independent focused code checker; implementation by Sol worker",
+    "originalWaitRequired": true
+  },
+  "v2RootResult": {
+    "pid": 24424,
+    "originalWaitReturned": true,
+    "exitCode": 0,
+    "tests": 5,
+    "publicReturnRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_contract_root_return_v2_20261027.json",
+      "sha256": "ccbb5e078557a73cf5b9246f2d3ce30641d7dbd00acc32ba1c52bad06548d7eb"
+    }
+  }
 }

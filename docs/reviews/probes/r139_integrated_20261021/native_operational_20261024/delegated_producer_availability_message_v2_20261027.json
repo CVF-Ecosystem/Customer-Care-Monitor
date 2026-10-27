@@ -1,0 +1,11 @@
+{
+  "kind": "ROOT_TRANSCRIBED_ACTUAL_COLLABORATION_AVAILABILITY_MESSAGE",
+  "taskId": "/root/r139_live_browser_producer",
+  "recordedAtUTC": "2026-10-26T23:14:05.793267+00:00",
+  "campaignNonce": "299b601cf7509d9727de5d1de197990f",
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+  "acceptedBuildPinsSha256": "6b0d40e13c52b438c5ce5998e68874c4ce1f601abffc20d8b5c70175ef6cdce5",
+  "messageText": "READY — exact actor /root/r139_live_browser_producer for future G0 only. Current binding: source 7ef30823746d72e935607c0bebf6ab306099eb48, build 6b0d40e13c52b438c5ce5998e68874c4ce1f601abffc20d8b5c70175ef6cdce5, nonce 299b601cf7509d9727de5d1de197990f. Controller usage is 3/4; campaign, CUA, fixture, key, provider remain 0. G0 producer cap 8; one owned tab, 4 global reads with observer read reserved, 2 captures, 1 baseline inventory, no retries. Current plan is draft/no effect authority. No CUA/API call, inventory, docs/page access, OS/service/network query, or file write. Await explicit Root signal after review, commit, reservation, and five queries.",
+  "qualification": "Root transcription of actual received collaboration message; formatting normalized, not authenticated native CUA/browser transcript.",
+  "effectsObserved": 0
+}

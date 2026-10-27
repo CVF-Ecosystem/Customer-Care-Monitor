@@ -1,0 +1,20 @@
+{
+  "kind": "ROOT_INDEPENDENT_V2_FOCUSED_SOURCE_CONTRACT_RETURN",
+  "pid": 24424,
+  "originalWaitReturned": true,
+  "exitCode": 0,
+  "timedOut": false,
+  "sourceUnchanged": true,
+  "tests": 5,
+  "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderrSha256": "5f105c32a20c3fbd91b053b2b633793891b9eb46083ab698d0710a888dd26c79",
+  "privateEvidenceRoot": ".cvf/runtime/r139_delegated_source_contract_checks_v2_20261027/root",
+  "runtimeEffects": 0,
+  "retainedPriorChecks": 18,
+  "newV2FocusedProcesses": 2,
+  "countedFocusedLineage": 20,
+  "sourceSha256": {
+    "delegated_root_control_wrapper_v2_20261027.py.txt": "7b384e79f9bb47994c138cbbe90419f8b8d4d588d93733cb33bc40d5a2ce3d76",
+    "delegated_test_source_contract_v2_20261027.py.txt": "85e5452cd3bda421965875f046a0c7e627f5937d15feeff1c9d56bf7ed116779"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "kind": "ROOT_TRANSCRIBED_ACTUAL_COLLABORATION_AVAILABILITY_MESSAGE",
+  "taskId": "/root/r139_sol_browser_observer",
+  "recordedAtUTC": "2026-10-26T23:14:05.849843+00:00",
+  "campaignNonce": "299b601cf7509d9727de5d1de197990f",
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+  "acceptedBuildPinsSha256": "6b0d40e13c52b438c5ce5998e68874c4ce1f601abffc20d8b5c70175ef6cdce5",
+  "messageText": "READY for fresh nonce 299b601cf7509d9727de5d1de197990f only. Current compact/state/handoff/status agree BUILD; plan binds producer /root/r139_live_browser_producer and observer /root/r139_sol_browser_observer, source 7ef30823746d72e935607c0bebf6ab306099eb48. Original controller used3, campaign0 retained. No CUA/API initialization, tab, inventory, file edits, or effects. Await reviewed clean commit, actual reservation, five queries, Root release and producer’s exact browser/tab IDs for future two observer methods (getTab initial read4, sole handoff listTabs); caps observer4, terminal4.",
+  "qualification": "Root transcription of actual received collaboration message; formatting normalized, not authenticated native CUA/browser transcript.",
+  "effectsObserved": 0
+}

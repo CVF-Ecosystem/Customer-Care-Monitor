@@ -1,0 +1,68 @@
+{
+  "kind": "ROOT_REVIEWED_ACTOR_METADATA_ACK",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "actor": "observer",
+  "collaborationTaskId": "/root/r139_sol_browser_observer",
+  "ready": true,
+  "freshGrantSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
+  "inheritedOwnerEnvelopeSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "observationCapsSha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491",
+  "recoveryOwnerAdmissionSha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb",
+  "v3OwnerAdmissionSha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f",
+  "bootIdentityContractSha256": "e3fe4ef6caeb8b197e5f358267d89a6584fb6cf10087bebb5bfca53efdc7d5da",
+  "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+  "payloadSha256": "ffbf475dee7a28a785c2ce543ad50cda55819c72debdf8c24e0a05104d599f19",
+  "bootProofSha256": "10937592aaa94c4d00a89eb194fa223b9bec372b921be8a247967da235fa44e9",
+  "nativeContractId": "r139-cua-boot-identity-v3-20261026",
+  "campaignNonce": "299b601cf7509d9727de5d1de197990f",
+  "acceptedBuildPinsSha256": "6b0d40e13c52b438c5ce5998e68874c4ce1f601abffc20d8b5c70175ef6cdce5",
+  "rootReceivedMetadataAtUTC": "2026-10-26T23:14:05.849843+00:00",
+  "currentEffectRelease": "NONE_AVAILABILITY_ONLY",
+  "currentBrowserCapabilityPass": false,
+  "campaignReserved": false,
+  "effectsObserved": 0,
+  "bindingQualification": "Fresh actual browser actor availability reply for nonce299b/currentused3of4; zero CUA, no capability inferred.",
+  "sourceCheckTotalSpent": 20,
+  "internalSetupSeconds": 180,
+  "sharedFutureControllerUsed": 3,
+  "sharedFutureControllerCap": 4,
+  "sourceDesignSha256": "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d",
+  "delegatedAuthorityRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-TECHNICAL-BUDGET-AND-DOCKER-ADOPTION-ADMISSION.json",
+    "sha256": "be07b72bdbd35969bd8f29979b06aa1c6d97a79a33deab1d48734d8fb9d25787"
+  },
+  "priorWrapperRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_observer_actor_ack_20261026.json",
+    "sha256": "b66bb755f4a7d242e2c4cd50d7ef60a5e2fef3dbd67e40059b90d7ca58cd4d1f"
+  },
+  "historical_originalActorAckRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_recovery_observer_availability_message_20261026.json",
+    "sha256": "8fcc95ebdc962abe0939d3211da461b0923a8ace7bd7bf5820a2eda17a296f0b"
+  },
+  "historical_coordRecoveryAdmissionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-COORD-OWNER-RECOVERY-ADMISSION.json",
+    "sha256": "c6580693da837b014ac8356d3ceaf7b1317ba4970ed6a5d05c1859327d6d2431"
+  },
+  "historical_historicalActorAckRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_observer_resumed_availability_20261026.json",
+    "sha256": "8317fb4b190e0e4d20482c450363794d361190a3f1ac5f787a8cbbb3a7188b36"
+  },
+  "historical_historicalPreviousWrapperRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_observer_actor_ack_20261026.json",
+    "sha256": "dd8a482296113720101c5279deabda63c018023867c7df1fb8c7a6823221e9bf"
+  },
+  "originalActorAckRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_observer_availability_message_v2_20261027.json",
+    "sha256": "bfa4162d3558c1c45ce4fe98d9dad272fb0a636ac6b1b33f4d7ebff6f008727d"
+  },
+  "historical_previousActorAckRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_observer_actor_ack_20261026.json",
+    "sha256": "4a34e5b1add52ea3939e1b08ed6f705ea31ebd491c8e0e3f54978fc8f0ac5871"
+  },
+  "currentDelegatedAllocation": "R139-DELEGATED-ALLOC-002",
+  "delegatedCoordinationOwnerRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_coordination_owner_v2_20261027.json",
+    "sha256": "0290aed176adcd6831d6d598c85f0918c3b61a3902220ca31e47bd8b81637796"
+  },
+  "v2CheckAccountingQualification": "Root cumulative accounting after actual worker13552 and Root24424 exit0 PASS5 each; original availability reply remains at its recorded time and no browser capability inferred."
+}

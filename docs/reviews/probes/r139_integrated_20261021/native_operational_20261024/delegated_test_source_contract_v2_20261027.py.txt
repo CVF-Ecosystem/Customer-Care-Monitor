@@ -1,0 +1,101 @@
+"""Focused pure metadata checks for the fourth R139 preclock candidate."""
+
+import copy
+import importlib.machinery
+import json
+import pathlib
+import unittest
+from unittest import mock
+
+HERE = pathlib.Path(__file__).parent
+ROOT = HERE.parents[4]
+WRAPPER = HERE / "delegated_root_control_wrapper_v2_20261027.py.txt"
+CONTROLLER = HERE / "reentry_activation_boot_identity_v3_design.py.txt"
+RECIPE = HERE / "delegated_activation_recipe_20261026.json"
+BUILD = ROOT / "CVF_SESSION/authority/CCMAI-RUNTIME-139-DOCKER-SNAPSHOT-ACCEPTED-BUILD-PINS-ADMISSION.json"
+GRANT = ROOT / "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-CUA-SOURCE-ADMISSION.json"
+RECOVERY = ROOT / "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json"
+LEDGER = HERE / "delegated_technical_allocations_20261026.json"
+module = importlib.machinery.SourceFileLoader("r139_wrapper_v2_test", str(WRAPPER)).load_module()
+
+
+class ExactPreclockMetadata(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.recipe = json.loads(RECIPE.read_bytes())
+        cls.build = json.loads(BUILD.read_bytes())
+        cls.grant = json.loads(GRANT.read_bytes())
+        cls.recovery = json.loads(RECOVERY.read_bytes())
+        cls.ledger = json.loads(LEDGER.read_bytes())
+        cls.source = CONTROLLER.read_bytes()
+
+    def test_current_recipe_matches_all_source_literal_dicts(self):
+        result = module.verify_source_preclock_exact_dicts(self.recipe, self.build,
+                                                            self.grant, self.recovery, self.source)
+        self.assertEqual(8, result["checked"])
+        self.assertTrue(result["sourceBudgetRetained"])
+        self.assertTrue(result["externalEffectBudgetUnchanged"])
+        literals = module.controller_literal_contracts(self.source)
+        self.assertEqual(self.grant["sourceBudget"], literals["source_budget"])
+        self.assertEqual(self.recipe["freshSourceCheckBudgetOutsideClock"], literals["source_budget"])
+
+    def test_every_exact_dict_boundary_rejects_mutation_without_popen(self):
+        mutations = (
+            ("freshSourceCheckBudgetOutsideClock", "recipe", "source_budget"),
+            ("newBudget", "recipe", "required"),
+            ("sourceBudget", "grant", "source_budget"),
+            ("sourceBudget", "recovery", "source_cap"),
+            ("checkAccounting", "recovery", "accounting"),
+            ("unchangedRuntimeCaps", "recovery", "runtime_cap"),
+            ("preclockInvocation", "recovery", "preclock_cap"),
+        )
+        for field, target, source_name in mutations:
+            with self.subTest(field=field, target=target):
+                recipe, build = copy.deepcopy(self.recipe), copy.deepcopy(self.build)
+                grant, recovery = copy.deepcopy(self.grant), copy.deepcopy(self.recovery)
+                obj = {"recipe": recipe, "grant": grant, "recovery": recovery}[target]
+                obj[field] = {"corrupted": True, "sourceName": source_name}
+                with mock.patch.object(module.subprocess, "Popen", side_effect=AssertionError("Popen reached")) as popen:
+                    with self.assertRaisesRegex(RuntimeError, "SOURCE_PRECLOCK_EXACT_DICTS"):
+                        module.verify_source_preclock_exact_dicts(recipe, build, grant, recovery, self.source)
+                    popen.assert_not_called()
+
+    def test_current_immutable_refs_and_reviewed_plans_match_source_contract(self):
+        result = module.verify_source_preclock_refs(self.recipe, self.build)
+        self.assertEqual(6, result["fixedRefs"])
+        self.assertEqual(3, result["reviewedPlans"])
+        self.assertTrue(result["ownerEnvelopeBound"])
+        bad = copy.deepcopy(self.recipe)
+        bad["bootV3TechnicalReviewRef"]["sha256"] = "0" * 64
+        with mock.patch.object(module.subprocess, "Popen", side_effect=AssertionError("Popen reached")) as popen:
+            with self.assertRaisesRegex(RuntimeError, "SOURCE_REF_DICT"):
+                module.verify_source_preclock_refs(bad, self.build)
+            popen.assert_not_called()
+
+    def test_ledger_derives_fourth_slot_without_refunding_prior_three(self):
+        accounting = module.derive_cumulative_accounting(self.ledger)
+        self.assertEqual({"usedBefore": 3, "totalCap": 4, "additionalMax": 1, "usedAtIntent": 4}, accounting)
+        self.assertEqual(accounting, self.recipe["cumulativeControllerAccounting"])
+        refs = self.recipe["priorOriginalWaitExitRefs"]
+        self.assertEqual(3, len(refs))
+        for ref, pid in zip(refs, (23500, 2560, 28928)):
+            receipt = json.loads((ROOT / ref["path"]).read_bytes())
+            self.assertEqual(pid, receipt["pid"])
+            self.assertTrue(receipt["originalWaitReturned"])
+            self.assertEqual(1, receipt["exitCode"])
+        bad = copy.deepcopy(self.ledger)
+        bad["actualNewUsage"]["controllers"] = 0
+        with self.assertRaisesRegex(RuntimeError, "CONTROLLER_ACCOUNTING"):
+            module.derive_cumulative_accounting(bad)
+
+    def test_v2_wrapper_coldgate_is_before_git_and_extraction(self):
+        source = WRAPPER.read_text(encoding="utf-8")
+        body = source[source.index("def main():"):]
+        self.assertLess(body.index("verify_metadata(recipe, recipe_sha)"), body.index("full_guard(ROOT"))
+        self.assertLess(body.index("full_guard(ROOT"), body.index("git_read(git_binary"))
+        self.assertLess(body.index("full_guard(ROOT"), body.index('controller.open("xb")'))
+        self.assertLess(body.index("postcoldgate_popen("), body.index("process.wait()"))
+
+
+if __name__ == "__main__":
+    unittest.main()

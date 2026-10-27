@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI\.cvf\runtime\r139_delegated_reentry_20261026\activation_controller.py", line 992, in <module>
+    if __name__ == "__main__": main()
+                               ~~~~^^
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI\.cvf\runtime\r139_delegated_reentry_20261026\activation_controller.py", line 978, in main
+    activate(*preclock(sys.argv[1], sys.argv[2], sys.argv[3]))
+              ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI\.cvf\runtime\r139_delegated_reentry_20261026\activation_controller.py", line 806, in preclock
+    build.get("sourceChecksAccepted") is not True): hold("SOURCE_BUDGET_BOUNDARY")
+                                                    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI\.cvf\runtime\r139_delegated_reentry_20261026\activation_controller.py", line 91, in hold
+    def hold(reason): raise RuntimeError(reason)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: SOURCE_BUDGET_BOUNDARY

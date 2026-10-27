@@ -1,0 +1,420 @@
+"""Root-only source as data. Import is inert; main requires a reviewed clean dispatch."""
+
+import ast
+import hashlib
+import importlib.machinery
+import json
+import os
+import re
+import subprocess
+import sys
+import time
+from datetime import datetime, timezone
+from pathlib import Path
+
+ROOT = Path.cwd()
+PROBE = Path("docs/reviews/probes/r139_integrated_20261021/native_operational_20261024")
+RUNTIME = Path(".cvf/runtime/r139_delegated_reentry_v2_20261027")
+READY = Path(".cvf/runtime/r139_delegated_reentry_v2_20261027_readiness")
+BUILD_PATH = "CVF_SESSION/authority/CCMAI-RUNTIME-139-DOCKER-SNAPSHOT-ACCEPTED-BUILD-PINS-ADMISSION.json"
+DELEGATION_PATH = "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-TECHNICAL-BUDGET-AND-DOCKER-ADOPTION-ADMISSION.json"
+DELEGATION_SHA = "be07b72bdbd35969bd8f29979b06aa1c6d97a79a33deab1d48734d8fb9d25787"
+PARENT_BUILD = {"path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-ACCEPTED-BUILD-PINS-ADMISSION.json",
+                "sha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b"}
+SOURCE_COMMIT = "7ef30823746d72e935607c0bebf6ab306099eb48"
+DESIGN = PROBE / "reentry_activation_boot_identity_v3_design.py.txt"
+DESIGN_SHA = "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d"
+GUARD = PROBE / "delegated_static_launch_guard_20261026.py.txt"
+RECIPE = PROBE / "delegated_activation_recipe_20261026.json"
+OWNER_PUBLIC = PROBE / "delegated_coordination_owner_v2_20261027.json"
+TECH_REVIEW = "docs/reviews/R139_DELEGATED_G0_TECHNICAL_REVIEW_2026-10-26.md"
+PRIOR_WAITS = (PROBE / "v3_coord_owner_hold_20261026/original_wait_exit.json",
+               PROBE / "coord_tool_pin_hold_20261026/original_wait_exit.json",
+               PROBE / "delegated_source_budget_hold_20261027/original_wait_exit.json")
+LEDGER_PATH = (PROBE / "delegated_technical_allocations_20261026.json").as_posix()
+V2_AUTHORITY_PATH = "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-G0-TECHNICAL-RELEASE-V2-ADMISSION.json"
+NONCE = "299b601cf7509d9727de5d1de197990f"
+
+
+def sha(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def strict_json(raw):
+    def unique(pairs):
+        out = {}
+        for key, value in pairs:
+            if key in out:
+                raise RuntimeError("DUPLICATE_KEY")
+            out[key] = value
+        return out
+    return json.loads(raw, object_pairs_hook=unique)
+
+
+def exact_ref(ref, expected_path=None):
+    if type(ref) is not dict or set(ref) != {"path", "sha256"}:
+        raise RuntimeError("REF_SCHEMA")
+    path, expected = ref["path"], ref["sha256"]
+    if (type(path) is not str or path.startswith(("/", "\\")) or "\\" in path or
+            ":" in path or ".." in Path(path).parts or "." in Path(path).parts or
+            re.fullmatch(r"[A-Za-z0-9_./-]+", path) is None):
+        raise RuntimeError("REF_PATH")
+    if expected_path is not None and path != expected_path:
+        raise RuntimeError("REF_PATH_BINDING")
+    if type(expected) is not str or re.fullmatch(r"[0-9a-f]{64}", expected) is None:
+        raise RuntimeError("REF_SHA_SCHEMA")
+    raw = (ROOT / path).read_bytes()
+    if sha(raw) != expected:
+        raise RuntimeError("REF_SHA_MISMATCH")
+    return raw
+
+
+def write_new(path, obj):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("xb") as file:
+        file.write((json.dumps(obj, ensure_ascii=False, indent=2) + "\n").encode("utf-8"))
+
+
+def full_guard(root, pins, guard_path, guard_sha):
+    """Pure complete audit; no subprocess, counter, extraction, or OS identity query."""
+    raw = (root / guard_path).read_bytes()
+    if sha(raw) != guard_sha:
+        raise RuntimeError("GUARD_SOURCE_SHA")
+    sys.dont_write_bytecode = True
+    module = importlib.machinery.SourceFileLoader("r139_delegated_guard", str(root / guard_path)).load_module()
+    result = module.audit_full_twenty(root, pins)
+    if result.get("status") != "PASS" or len(result.get("rows", ())) != 20:
+        raise StaticGuardHold(result)
+    return result
+
+
+class StaticGuardHold(RuntimeError):
+    def __init__(self, receipt):
+        super().__init__("FULL20_STATIC_PIN_HOLD")
+        self.receipt = receipt
+
+
+def controller_literal_contracts(source):
+    """Read only exact literal dictionaries from the pinned controller preclock."""
+    tree = ast.parse(source.decode("utf-8"), filename=DESIGN.as_posix())
+    funcs = [node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == "preclock"]
+    if len(funcs) != 1:
+        raise RuntimeError("CONTROLLER_PRECLOCK_SCHEMA")
+    names = {"source_budget", "required", "source_cap", "accounting", "runtime_cap", "preclock_cap"}
+    found = {}
+    for node in ast.walk(funcs[0]):
+        if isinstance(node, ast.Assign) and len(node.targets) == 1 and isinstance(node.targets[0], ast.Name):
+            name = node.targets[0].id
+            if name in names:
+                if name in found:
+                    raise RuntimeError("CONTROLLER_CONTRACT_DUPLICATE")
+                found[name] = ast.literal_eval(node.value)
+    if set(found) != names:
+        raise RuntimeError("CONTROLLER_CONTRACT_SET")
+    return found
+
+
+def verify_source_preclock_exact_dicts(recipe, build, grant, recovery, controller_source):
+    """Catch inherited controller equality holds before a counted original Popen."""
+    contract = controller_literal_contracts(controller_source)
+    checks = (
+        ("SOURCE_BUDGET_RECIPE", recipe.get("freshSourceCheckBudgetOutsideClock"), contract["source_budget"]),
+        ("SOURCE_BUDGET_GRANT", grant.get("sourceBudget"), contract["source_budget"]),
+        ("EFFECT_BUDGET_RECIPE", recipe.get("newBudget"), contract["required"]),
+        ("BOOT_RECOVERY_SOURCE_CAP", recovery.get("sourceBudget"), contract["source_cap"]),
+        ("BOOT_RECOVERY_ACCOUNTING", recovery.get("checkAccounting"), contract["accounting"]),
+        ("BOOT_RECOVERY_RUNTIME_CAP", recovery.get("unchangedRuntimeCaps"), contract["runtime_cap"]),
+        ("BOOT_RECOVERY_PRECLOCK_CAP", recovery.get("preclockInvocation"), contract["preclock_cap"]),
+    )
+    failures = [name for name, actual, expected in checks if actual != expected]
+    if build.get("sourceChecksAccepted") is not True:
+        failures.append("SOURCE_CHECK_ACCEPTANCE")
+    if failures:
+        raise RuntimeError("SOURCE_PRECLOCK_EXACT_DICTS:" + ",".join(failures))
+    return {"checked": len(checks) + 1, "controllerSha256": sha(controller_source),
+            "sourceBudgetRetained": True, "externalEffectBudgetUnchanged": True}
+
+
+def verify_source_preclock_refs(recipe, build):
+    """Pre-read every immutable admission/reference equality checked by the source."""
+    fixed = {
+        "observationCapsRef": ("CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
+                               "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491"),
+        "bootRecoveryAdmission": ("CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json",
+                                  "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb"),
+        "bootV3Admission": ("CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+                             "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f"),
+        "bootIdentityContract": ((PROBE / "boot_identity_v3_contract_20261026.json").as_posix(),
+                                 "e3fe4ef6caeb8b197e5f358267d89a6584fb6cf10087bebb5bfca53efdc7d5da"),
+        "bootV3TechnicalReviewRef": ("docs/reviews/R139_CLOCK_V3_G0_TECHNICAL_REVIEW_2026-10-26.md",
+                                     "fda885166d7187e2d441caba64e7b240bca0245784e6cb405074f06cdc89fdfa"),
+    }
+    for key, (path, digest) in fixed.items():
+        if recipe.get(key) != {"path": path, "sha256": digest}:
+            raise RuntimeError("SOURCE_REF_DICT:" + key)
+        raw = exact_ref(recipe[key], path)
+        if key == "bootV3TechnicalReviewRef" and b"Status: REVIEW_PASS" not in raw[:320]:
+            raise RuntimeError("SOURCE_HISTORICAL_REVIEW_STATUS")
+    proof = recipe.get("bootProof", {})
+    proof_path = (PROBE / "boot_identity_v2_proof_20261025.json").as_posix()
+    if (type(proof) is not dict or set(proof) != {"path", "sha256", "hostBootId"} or
+            proof.get("path") != proof_path or
+            proof.get("sha256") != "10937592aaa94c4d00a89eb194fa223b9bec372b921be8a247967da235fa44e9"):
+        raise RuntimeError("SOURCE_BOOT_PROOF_DICT")
+    actual_proof = strict_json(exact_ref({"path": proof["path"], "sha256": proof["sha256"]}, proof_path))
+    if actual_proof.get("hostBootId") != proof["hostBootId"]:
+        raise RuntimeError("SOURCE_BOOT_PROOF_ID")
+    if build.get("ownerEnvelopeSha256") != recipe.get("freshGrant", {}).get("sha256"):
+        raise RuntimeError("SOURCE_GRANT_BUILD_BINDING")
+    inherited = strict_json(exact_ref(recipe.get("inheritedOwnerEnvelope")))
+    grant = strict_json(exact_ref(recipe.get("freshGrant")))
+    obs = strict_json(exact_ref(recipe["observationCapsRef"]))
+    if (grant.get("previousOwnerEnvelope") != recipe.get("inheritedOwnerEnvelope") or
+            obs.get("parentCuaAmendment") != recipe.get("freshGrant") or
+            obs.get("inheritedOwnerEnvelope") != recipe.get("inheritedOwnerEnvelope") or
+            inherited.get("freshCampaignCap") != 1 or inherited.get("providerPhysicalCap") != 1 or
+            inherited.get("maximumNewUSD") != 1):
+        raise RuntimeError("SOURCE_OWNER_ENVELOPE_DICT")
+    for key in ("protectedBaselineReference", "cuaPageTargetPlanReference", "cuaBrowserOperationPlanReference"):
+        ref = recipe.get(key)
+        if type(ref) is not dict or not str(ref.get("path", "")).startswith("docs/reviews/"):
+            raise RuntimeError("SOURCE_REVIEWED_PLAN_REF:" + key)
+        exact_ref(ref)
+    return {"fixedRefs": len(fixed) + 1, "reviewedPlans": 3, "ownerEnvelopeBound": True}
+
+
+def derive_cumulative_accounting(ledger):
+    """Derive one next slot from Root's immutable delegation and current allocation."""
+    delegation_ref = {"path": DELEGATION_PATH, "sha256": DELEGATION_SHA}
+    allocations = ledger.get("allocations")
+    if (ledger.get("kind") != "ROOT_DISPATCHER_OWNED_R139_TECHNICAL_ALLOCATIONS" or
+            ledger.get("authorityRef") != delegation_ref or ledger.get("workerMayEdit") is not False or
+            ledger.get("spentRetained", {}).get("originalControllers") != 2 or
+            type(allocations) is not list or len(allocations) != 2 or
+            allocations[0].get("id") != "R139-DELEGATED-ALLOC-001" or
+            allocations[0].get("controllerUsedBefore") != 2 or allocations[0].get("controllerCeiling") != 3 or
+            allocations[1].get("id") != "R139-DELEGATED-ALLOC-002" or
+            allocations[1].get("paidOrRuntimeEnvelopeChanged") is not False or
+            type(ledger.get("actualNewUsage", {}).get("controllers")) is not int):
+        raise RuntimeError("ROOT_ALLOCATION_LEDGER")
+    slot = allocations[-1]
+    used_before = ledger["spentRetained"]["originalControllers"] + ledger["actualNewUsage"]["controllers"]
+    expected = {"usedBefore": used_before, "totalCap": slot.get("controllerCeiling"),
+                "additionalMax": slot.get("additionalOriginalInvocations"),
+                "usedAtIntent": used_before + 1}
+    if (slot.get("controllerUsedBefore") != used_before or
+            type(slot.get("controllerCeiling")) is not int or
+            type(slot.get("additionalOriginalInvocations")) is not int or
+            slot["additionalOriginalInvocations"] != 1 or
+            slot["controllerCeiling"] < used_before + 1 or
+            ledger["actualNewUsage"]["controllers"] != len(PRIOR_WAITS) - ledger["spentRetained"]["originalControllers"]):
+        raise RuntimeError("CONTROLLER_ACCOUNTING")
+    return expected
+
+
+def postcoldgate_popen(root, pins, guard_path, guard_sha, argv, cwd, out, err,
+                      audit_receipt_path, intent_writer):
+    """The sole launch hook: a fresh full audit precedes intent and Popen."""
+    audit = full_guard(root, pins, guard_path, guard_sha)
+    write_new(audit_receipt_path, audit)
+    intent_writer()
+    return subprocess.Popen(argv, cwd=cwd, shell=False, stdin=subprocess.DEVNULL,
+                            stdout=out, stderr=err)
+
+
+def verify_metadata(recipe, recipe_sha):
+    if recipe.get("kind") != "R139_ROOT_ACTIVATION_RECIPE" or recipe.get("status") != "COMMITTED_PRECLOCK":
+        raise RuntimeError("RECIPE_NOT_SEALED")
+    if recipe.get("readyForActivation") is not True or recipe.get("rootSealPending") is not False:
+        raise RuntimeError("RECIPE_NOT_READY")
+    if recipe.get("nonce") != NONCE or recipe.get("nativeContractId") != "r139-cua-boot-identity-v3-20261026":
+        raise RuntimeError("CONTRACT_NONCE")
+    build_ref = recipe.get("acceptedBuildPinsRef")
+    build = strict_json(exact_ref(build_ref, BUILD_PATH))
+    if (build.get("kind") != "ROOT_REVIEWED_R139_ACCEPTED_BUILD_PINS" or
+            build.get("rootReviewApproved") is not True or build.get("sourceChecksAccepted") is not True or
+            build.get("sourceCommit") != SOURCE_COMMIT or build.get("parentAcceptedBuildRef") != PARENT_BUILD or
+            build.get("ownerDelegatedAdoptionRef") != {"path": DELEGATION_PATH, "sha256": DELEGATION_SHA}):
+        raise RuntimeError("ACCEPTED_BUILD_BINDING")
+    delegation_ref = {"path": DELEGATION_PATH, "sha256": DELEGATION_SHA}
+    if recipe.get("delegatedAuthorityRef") != delegation_ref:
+        raise RuntimeError("DELEGATION_REF")
+    delegation = strict_json(exact_ref(delegation_ref))
+    if (delegation.get("kind") != "OWNER_DELEGATED_R139_TECHNICAL_BUDGET_AND_QUALIFIED_DOCKER_ADOPTION" or
+            delegation.get("ownerApproved") is not True or
+            delegation.get("initialAllocation", {}).get("controllersUsed") != 2 or
+            delegation.get("initialAllocation", {}).get("controllerTotalCeiling") != 3):
+        raise RuntimeError("DELEGATION_BOUNDARY")
+    snapshot = delegation["dockerAdoption"]
+    docker = build["pins"]["tools"]["docker"]
+    if docker != {"path": snapshot["snapshotPath"], "sha256": snapshot["sha256"], "size": snapshot["size"]}:
+        raise RuntimeError("DOCKER_SNAPSHOT_BINDING")
+    ledger_ref = recipe.get("allocationLedgerRef")
+    ledger = strict_json(exact_ref(ledger_ref, LEDGER_PATH))
+    expected_accounting = derive_cumulative_accounting(ledger)
+    if recipe.get("cumulativeControllerAccounting") != expected_accounting:
+        raise RuntimeError("CONTROLLER_ACCOUNTING")
+    waits = recipe.get("priorOriginalWaitExitRefs")
+    if type(waits) is not list or len(waits) != 3:
+        raise RuntimeError("PRIOR_WAITS_SCHEMA")
+    for ref, path, pid in zip(waits, PRIOR_WAITS, (23500, 2560, 28928)):
+        receipt = strict_json(exact_ref(ref, path.as_posix()))
+        if receipt.get("pid") != pid or receipt.get("originalWaitReturned") is not True or receipt.get("exitCode") != 1:
+            raise RuntimeError("PRIOR_ORIGINAL_NOT_RETAINED")
+    owner_ref = recipe.get("delegatedCoordinationOwnerRef")
+    owner_raw = exact_ref(owner_ref, OWNER_PUBLIC.as_posix())
+    coord = READY / "coordination"
+    if recipe.get("coordinationRoot") != coord.as_posix() or not (ROOT / coord).is_dir():
+        raise RuntimeError("COORD_PATH")
+    if {p.name for p in (ROOT / coord).iterdir()} != {"owner.json"}:
+        raise RuntimeError("COORD_EXCLUSIVE")
+    if (ROOT / coord / "owner.json").read_bytes() != owner_raw:
+        raise RuntimeError("ACTUAL_OWNER_BYTES")
+    owner = strict_json(owner_raw)
+    expected_owner = {"kind": "R139_ROOT_PRECLOCK_COORDINATION_OWNER", "trancheId": "CCMAI-RUNTIME-139",
+                      "nativeContractId": recipe["nativeContractId"], "nonce": NONCE,
+                      "owner": "Root original-control custodian", "sourceCommit": SOURCE_COMMIT,
+                      "acceptedBuildSha256": build_ref["sha256"], "rootExclusive": True,
+                      "freshGrantSha256": recipe["freshGrant"]["sha256"],
+                      "delegatedAuthorityRef": delegation_ref, "currentlyReserved": False,
+                      "effectAuthority": "OWNERSHIP_METADATA_ONLY_NOT_RUNTIME_RELEASE"}
+    if owner != expected_owner or recipe.get("coordinationOwnerSha256") != sha(owner_raw):
+        raise RuntimeError("ACTUAL_OWNER_SCHEMA")
+    review_ref = recipe.get("delegatedTechnicalReviewRef")
+    review_raw = exact_ref(review_ref, TECH_REVIEW)
+    if b"Status: REVIEW_PASS" not in review_raw[:400]:
+        raise RuntimeError("CURRENT_REVIEW_NOT_ACCEPTED")
+    if recipe.get("delegatedV2TechnicalAuthorityPath") != V2_AUTHORITY_PATH:
+        raise RuntimeError("V2_AUTHORITY_PATH")
+    authority = strict_json((ROOT / V2_AUTHORITY_PATH).read_bytes())
+    if (authority.get("kind") != "ROOT_R139_DELEGATED_SNAPSHOT_STATIC_GUARD_G0_TECHNICAL_RELEASE" or
+            authority.get("recipeRef") != {"path": RECIPE.as_posix(), "sha256": recipe_sha} or
+            authority.get("independentReviewApproved") is not True or
+            authority.get("independentReviewRef") != review_ref or
+            authority.get("delegatedAuthorityRef") != delegation_ref or
+            authority.get("acceptedBuildPinsRef") != build_ref or
+            authority.get("rootAllocationId") != "R139-DELEGATED-ALLOC-002" or
+            authority.get("cumulativeControllerUsedBefore") != expected_accounting["usedBefore"] or
+            authority.get("currentAllocatedControllerCeiling") != expected_accounting["totalCap"] or
+            authority.get("additionalOriginalInvocationsInThisPacket") != expected_accounting["additionalMax"] or
+            any(authority.get("observedNewEffects", {}).get(key) != 0 for key in
+                ("controller", "campaign", "services", "cua", "fixture", "key", "provider"))):
+        raise RuntimeError("V2_AUTHORITY_CONTRACT")
+    for actor in ("root", "internal", "cuaProducer", "cuaObserver"):
+        ack = strict_json(exact_ref(recipe["actorAcks"][actor]))
+        if (ack.get("ready") is not True or ack.get("campaignNonce") != NONCE or
+                ack.get("sourceCommit") != SOURCE_COMMIT or
+                ack.get("acceptedBuildPinsSha256") != build_ref["sha256"] or
+                ack.get("campaignReserved") is not False or ack.get("effectsObserved") != 0):
+            raise RuntimeError("ACTOR_ACK_BINDING")
+    if recipe.get("operatorAvailable") is not True or recipe.get("oldResourceExclusionReviewed") is not True:
+        raise RuntimeError("OPERATOR_OR_OLD_SCOPE")
+    for path, expected in recipe["oldSha256"].items():
+        if sha((ROOT / path).read_bytes()) != expected:
+            raise RuntimeError("CANON_DRIFT")
+    for path, expected in recipe["protectedUnchangedHashes"]["files"].items():
+        if sha((ROOT / path).read_bytes()) != expected:
+            raise RuntimeError("PROTECTED_DRIFT")
+    if recipe.get("reservationPath") != (READY / "campaign_reservation.json").as_posix():
+        raise RuntimeError("RESERVATION_PATH")
+    if recipe.get("childLogRoot") != ".cvf/runtime/r139_delegated_reentry_v2_20261027_activation_logs":
+        raise RuntimeError("CHILD_LOG_ROOT")
+    for path in (recipe["reservationPath"], recipe["signalPath"], recipe["failurePath"], recipe["childLogRoot"]):
+        if (ROOT / path).exists():
+            raise RuntimeError("FRESH_EFFECT_PATH_OCCUPIED")
+    design = (ROOT / DESIGN).read_bytes()
+    if sha(design) != DESIGN_SHA or build["pins"]["sourceSha256"].get(DESIGN.as_posix()) != DESIGN_SHA:
+        raise RuntimeError("CONTROLLER_SOURCE_PIN")
+    grant = strict_json(exact_ref(recipe.get("freshGrant"),
+                                  "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-CUA-SOURCE-ADMISSION.json"))
+    recovery = strict_json(exact_ref(recipe.get("bootRecoveryAdmission"),
+                                     "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json"))
+    contract_audit = verify_source_preclock_exact_dicts(recipe, build, grant, recovery, design)
+    contract_audit["references"] = verify_source_preclock_refs(recipe, build)
+    return build, expected_accounting, contract_audit
+
+
+def git_read(binary, *args):
+    env = {key: value for key, value in os.environ.items() if not key.upper().startswith("GIT_")}
+    result = subprocess.run([binary, *args], cwd=ROOT, env=env, stdin=subprocess.DEVNULL,
+                            capture_output=True, shell=False, timeout=10, check=False)
+    if result.returncode != 0:
+        raise RuntimeError("GIT_PREFLIGHT")
+    return result.stdout
+
+
+def main():
+    if len(sys.argv) != 4 or Path.cwd() != ROOT or not (ROOT / ".cvf/manifest.json").is_file():
+        raise RuntimeError("ROOT_ARGS_OR_CWD")
+    recipe_path, recipe_sha, dispatch_head = sys.argv[1:]
+    if recipe_path != RECIPE.as_posix() or re.fullmatch(r"[0-9a-f]{64}", recipe_sha) is None:
+        raise RuntimeError("RECIPE_PATH_OR_SHA")
+    raw = (ROOT / recipe_path).read_bytes()
+    if sha(raw) != recipe_sha:
+        raise RuntimeError("RECIPE_SHA")
+    recipe = strict_json(raw)
+    build, accounting, source_contract_audit = verify_metadata(recipe, recipe_sha)
+    guard_ref = recipe.get("delegatedStaticGuardRef")
+    if type(guard_ref) is not dict or guard_ref.get("path") != GUARD.as_posix():
+        raise RuntimeError("GUARD_REF")
+    try:
+        first = full_guard(ROOT, build["pins"], GUARD, guard_ref["sha256"])
+    except StaticGuardHold as error:
+        write_new(ROOT / RUNTIME / "cold_guard_hold.json", error.receipt)
+        raise
+    write_new(ROOT / RUNTIME / "cold_guard_before_subprocess.json", first)
+    write_new(ROOT / RUNTIME / "source_preclock_contract_audit.json", source_contract_audit)
+    # The first full 20-file audit is complete before any subprocess, extraction or counted intent.
+    python = build["pins"]["tools"]["python"]["path"]
+    git_binary = build["pins"]["tools"]["git"]["path"]
+    if Path(sys.executable).resolve() != Path(python).resolve():
+        raise RuntimeError("PYTHON_EXECUTABLE_PIN")
+    if re.fullmatch(r"[0-9a-f]{40}", dispatch_head) is None:
+        raise RuntimeError("DISPATCH_HEAD")
+    if git_read(git_binary, "rev-parse", "HEAD").decode("ascii").strip() != dispatch_head:
+        raise RuntimeError("HEAD_DRIFT")
+    if git_read(git_binary, "status", "--porcelain=v1", "--untracked-files=all", "-z"):
+        raise RuntimeError("DIRTY_WORKTREE")
+    for path in (RECIPE.as_posix(), DESIGN.as_posix(), BUILD_PATH, DELEGATION_PATH,
+                 TECH_REVIEW, LEDGER_PATH, V2_AUTHORITY_PATH):
+        if git_read(git_binary, "show", "HEAD:" + path) != (ROOT / path).read_bytes():
+            raise RuntimeError("COMMITTED_BINDING")
+    design = (ROOT / DESIGN).read_bytes()
+    if sha(design) != DESIGN_SHA or build["pins"]["sourceSha256"].get(DESIGN.as_posix()) != DESIGN_SHA:
+        raise RuntimeError("DESIGN_PIN")
+    controller_rel = RUNTIME / "activation_controller.py"
+    if recipe.get("invocation", {}).get("controllerScriptPath") != controller_rel.as_posix():
+        raise RuntimeError("CONTROLLER_PATH")
+    controller = ROOT / controller_rel
+    if controller.exists():
+        raise RuntimeError("CONTROLLER_OCCUPIED")
+    custody = ROOT / RUNTIME / "control_outer"
+    custody.mkdir(exist_ok=False)
+    with controller.open("xb") as file:
+        file.write(design)
+    argv = [python, "-B", str(controller), recipe_path, recipe_sha, dispatch_head]
+    def intent():
+        write_new(custody / "intent.json", {"kind": "ROOT_ORIGINAL_CONTROL_POPEN_DELEGATED_V2",
+                                         "argv": argv, "usedBefore": accounting["usedBefore"],
+                                         "usedAtIntent": accounting["usedAtIntent"],
+                                         "totalCeiling": accounting["totalCap"], "noAutomaticRetry": True,
+                                         "priorPids": [23500, 2560, 28928],
+                                         "createdAtUTC": datetime.now(timezone.utc).isoformat()})
+    with (custody / "stdout.bin").open("xb") as out, (custody / "stderr.bin").open("xb") as err:
+        process = postcoldgate_popen(ROOT, build["pins"], GUARD, guard_ref["sha256"],
+                                    argv, ROOT, out, err,
+                                    custody / "cold_guard_before_popen.json", intent)
+        write_new(custody / "started.json", {"pid": process.pid, "originalPopenReturned": True,
+                                            "startedAtUTC": datetime.now(timezone.utc).isoformat(),
+                                            "startedMonotonic": time.monotonic()})
+        exit_code = process.wait()
+    write_new(custody / "original_wait_exit.json", {"pid": process.pid,
+                                                   "originalWaitReturned": True,
+                                                   "exitCode": exit_code,
+                                                   "returnedAtUTC": datetime.now(timezone.utc).isoformat(),
+                                                   "returnedMonotonic": time.monotonic()})
+    raise SystemExit(exit_code)
+
+
+if __name__ == "__main__":
+    main()

@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Current R139 Owner-delegated technical recovery: Docker snapshot identity accepted, guard checks18 retained; final independent technical review pending, campaign0, Product B blocked."
+      "description": "Current R139 consolidated SOURCE_BUDGET_BOUNDARY repair: original controllers3 retained, allocation002 ceiling4, campaign0; Docker snapshot/source checks retained; independent review required, Product B blocked."
     },
     {
       "id": "r060-work-order",
@@ -38293,6 +38293,139 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_test_static_launch_guard_20261026.py.txt",
       "status": "ACTIVE",
       "description": "R139 Owner-delegated technical preparation: snapshot, bounded guard evidence or current admission metadata; no runtime/product acceptance."
+    },
+    {
+      "id": "r139-consolidated-v2-888f4fd9faff61c9",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-G0-TECHNICAL-RELEASE-V2-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "R139 actual third-controller HOLD or delegated consolidated preclock repair evidence/metadata; no campaign/product acceptance."
+    },
+    {
+      "id": "r139-consolidated-v2-0c12711369be995d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_coordination_owner_v2_20261027.json",
+      "status": "ACTIVE",
+      "description": "R139 actual third-controller HOLD or delegated consolidated preclock repair evidence/metadata; no campaign/product acceptance."
+    },
+    {
+      "id": "r139-consolidated-v2-ef32823d29f7276f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_internal_actor_ack_v2_20261027.json",
+      "status": "ACTIVE",
+      "description": "R139 actual third-controller HOLD or delegated consolidated preclock repair evidence/metadata; no campaign/product acceptance."
+    },
+    {
+      "id": "r139-consolidated-v2-54ca06f6a9bcd4e2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_observer_actor_ack_v2_20261027.json",
+      "status": "ACTIVE",
+      "description": "R139 actual third-controller HOLD or delegated consolidated preclock repair evidence/metadata; no campaign/product acceptance."
+    },
+    {
+      "id": "r139-consolidated-v2-23408da4e8d77834",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_observer_availability_message_v2_20261027.json",
+      "status": "ACTIVE",
+      "description": "R139 actual third-controller HOLD or delegated consolidated preclock repair evidence/metadata; no campaign/product acceptance."
+    },
+    {
+      "id": "r139-consolidated-v2-f3eaf1d9af96c750",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_producer_actor_ack_v2_20261027.json",
+      "status": "ACTIVE",
+      "description": "R139 actual third-controller HOLD or delegated consolidated preclock repair evidence/metadata; no campaign/product acceptance."
+    },
+    {
+      "id": "r139-consolidated-v2-56ddfa565bb8a570",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_producer_availability_message_v2_20261027.json",
+      "status": "ACTIVE",
+      "description": "R139 actual third-controller HOLD or delegated consolidated preclock repair evidence/metadata; no campaign/product acceptance."
+    },
+    {
+      "id": "r139-consolidated-v2-0d68b9aaf0f61bf5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_root_actor_ack_v2_20261027.json",
+      "status": "ACTIVE",
+      "description": "R139 actual third-controller HOLD or delegated consolidated preclock repair evidence/metadata; no campaign/product acceptance."
+    },
+    {
+      "id": "r139-consolidated-v2-cb24248375db443d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_root_control_wrapper_v2_20261027.py.txt",
+      "status": "ACTIVE",
+      "description": "R139 actual third-controller HOLD or delegated consolidated preclock repair evidence/metadata; no campaign/product acceptance."
+    },
+    {
+      "id": "r139-consolidated-v2-d2bd50a82aa83924",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_budget_hold_20261027/cold_guard_before_popen.json",
+      "status": "ACTIVE",
+      "description": "R139 actual third-controller HOLD or delegated consolidated preclock repair evidence/metadata; no campaign/product acceptance."
+    },
+    {
+      "id": "r139-consolidated-v2-a3e08135a25e6a15",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_budget_hold_20261027/cold_guard_before_subprocess.json",
+      "status": "ACTIVE",
+      "description": "R139 actual third-controller HOLD or delegated consolidated preclock repair evidence/metadata; no campaign/product acceptance."
+    },
+    {
+      "id": "r139-consolidated-v2-d6711dad181c5096",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_budget_hold_20261027/original_wait_exit.json",
+      "status": "ACTIVE",
+      "description": "R139 actual third-controller HOLD or delegated consolidated preclock repair evidence/metadata; no campaign/product acceptance."
+    },
+    {
+      "id": "r139-consolidated-v2-ab80690a6aea5d3d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_budget_hold_20261027/root_hold_receipt.json",
+      "status": "ACTIVE",
+      "description": "R139 actual third-controller HOLD or delegated consolidated preclock repair evidence/metadata; no campaign/product acceptance."
+    },
+    {
+      "id": "r139-consolidated-v2-c949a7863b4eb3ab",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_budget_hold_20261027/started.json",
+      "status": "ACTIVE",
+      "description": "R139 actual third-controller HOLD or delegated consolidated preclock repair evidence/metadata; no campaign/product acceptance."
+    },
+    {
+      "id": "r139-consolidated-v2-0d93339c714498c0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_budget_hold_20261027/stderr.bin",
+      "status": "ACTIVE",
+      "description": "R139 actual third-controller HOLD or delegated consolidated preclock repair evidence/metadata; no campaign/product acceptance."
+    },
+    {
+      "id": "r139-consolidated-v2-5f7c25b051fa9bd7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_budget_hold_20261027/stdout.bin",
+      "status": "ACTIVE",
+      "description": "R139 actual third-controller HOLD or delegated consolidated preclock repair evidence/metadata; no campaign/product acceptance."
+    },
+    {
+      "id": "r139-consolidated-v2-179e25ef2d588696",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_test_source_contract_v2_20261027.py.txt",
+      "status": "ACTIVE",
+      "description": "R139 actual third-controller HOLD or delegated consolidated preclock repair evidence/metadata; no campaign/product acceptance."
+    },
+    {
+      "id": "r139-v2-return-877f3d7ea46fd20f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_contract_worker_return_v2_20261027.json",
+      "status": "ACTIVE",
+      "description": "R139 v2 actual bounded offline source-contract focused return with original wait; no campaign/runtime claim."
+    },
+    {
+      "id": "r139-v2-return-caf72db62155cb24",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_contract_root_return_v2_20261027.json",
+      "status": "ACTIVE",
+      "description": "R139 v2 actual bounded offline source-contract focused return with original wait; no campaign/runtime claim."
     }
   ]
 }

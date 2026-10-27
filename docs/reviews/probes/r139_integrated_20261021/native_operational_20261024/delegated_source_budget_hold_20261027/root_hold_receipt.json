@@ -1,0 +1,47 @@
+{
+  "kind": "ROOT_ACTUAL_ORIGINAL_PRECLOCK_SOURCE_BUDGET_HOLD",
+  "dispatchCommit": "ad699f8e7b586f4e526e1ee6ad2c8a0091d3d6eb",
+  "pid": 28928,
+  "originalWaitReturned": true,
+  "exitCode": 1,
+  "reason": "SOURCE_BUDGET_BOUNDARY",
+  "sourceLine": 806,
+  "rootCause": "Recipe freshSourceCheckBudgetOutsideClock replaced an exact inherited source-contract dictionary with current cumulative accounting. Keep inherited field exact; additional technical accounting belongs in separate delegated fields.",
+  "receiptRefs": {
+    "cold_guard_before_popen.json": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_budget_hold_20261027/cold_guard_before_popen.json",
+      "sha256": "d988183bafda7cf166346280ad15668d12ab347bbee1612d081a78fe399f424c"
+    },
+    "cold_guard_before_subprocess.json": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_budget_hold_20261027/cold_guard_before_subprocess.json",
+      "sha256": "d988183bafda7cf166346280ad15668d12ab347bbee1612d081a78fe399f424c"
+    },
+    "original_wait_exit.json": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_budget_hold_20261027/original_wait_exit.json",
+      "sha256": "7a22af8cf87352bd527b00da4b97556c545a28945719ec757ac1b384f07229f6"
+    },
+    "started.json": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_budget_hold_20261027/started.json",
+      "sha256": "7acb1a06ed643d22694f8c1c003ea1b5265221eeb1c3e2f698c6c612aaacb7d3"
+    },
+    "stderr.bin": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_budget_hold_20261027/stderr.bin",
+      "sha256": "0dcf6825fe5151df4178b54ddfbe41362946ee0a463edc9470ab0bbacb267071"
+    },
+    "stdout.bin": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_budget_hold_20261027/stdout.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "controllersUsed": 3,
+  "campaignReserved": false,
+  "serviceQueries": 0,
+  "cuaMethods": 0,
+  "fixtureStarts": 0,
+  "keyReads": 0,
+  "providerCalls": 0,
+  "oneOsBootQueryOccurred": true,
+  "rootReviewMissAcknowledged": true,
+  "reservationAbsent": true,
+  "sourceUnchanged": true
+}
