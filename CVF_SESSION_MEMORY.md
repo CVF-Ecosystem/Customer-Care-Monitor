@@ -2,11 +2,11 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
 
 ## R139 delegated actual reservation — 2026-10-27T04:24:06.802756Z
 
-CCMAI-RUNTIME-139 Owner autonomous completion grant: admit bounded read-only capability discovery only, CUA getState1 then conditional sky import/list_apps1 if no usable CUA browser. No page reads/creation, app launch/input, services, fixture, key or provider effect yet. Preserve source20/controllers4/campaign1/service5PASS/CUA1 and all original HOLD receipts; discovery is separately counted and not G0 PASS. Root reviews actual capability before selecting and admitting one consolidated same-order completion route; no automatic retry or campaign refund. Product B blocked, G1/G2/G3 NOT_RUN, REVIEW/CHANGES_REQUIRED, FREEZE OPEN; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 Owner autonomous completion: actual discovery returned IAB browser2 with zero tabs; choose source-compatible CUA route. BUILD limited to fresh custody adapter and operational metadata under independently reviewed committed completion admission, preserving source20/controllers4/campaign1/service5PASS/historicalCUA1 plus discoveryCUA1. One preclock getBrowser2 selection/documentation allowed after commit; no page creation yet. Prepare one new finite G0-G3 campaign and exact actual actors/pins/cleanup; no source suite replay. Actual G0 and concrete committed Runtime Effect Admission precede fixture/key/provider, API1<=USD1 and1200/+1020. No automatic campaign retry or historical refund. Product B blocked, G1/G2/G3 NOT_RUN, FREEZE OPEN; Facebook/Zalo OA parked.
 
 
 ## Mandatory standing Owner directive — apply without reminders
@@ -20,13 +20,13 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: BUILD
+- Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
 
-CCMAI-RUNTIME-139 Owner autonomous completion grant: admit bounded read-only capability discovery only, CUA getState1 then conditional sky import/list_apps1 if no usable CUA browser. No page reads/creation, app launch/input, services, fixture, key or provider effect yet. Preserve source20/controllers4/campaign1/service5PASS/CUA1 and all original HOLD receipts; discovery is separately counted and not G0 PASS. Root reviews actual capability before selecting and admitting one consolidated same-order completion route; no automatic retry or campaign refund. Product B blocked, G1/G2/G3 NOT_RUN, REVIEW/CHANGES_REQUIRED, FREEZE OPEN; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 Owner autonomous completion: actual discovery returned IAB browser2 with zero tabs; choose source-compatible CUA route. BUILD limited to fresh custody adapter and operational metadata under independently reviewed committed completion admission, preserving source20/controllers4/campaign1/service5PASS/historicalCUA1 plus discoveryCUA1. One preclock getBrowser2 selection/documentation allowed after commit; no page creation yet. Prepare one new finite G0-G3 campaign and exact actual actors/pins/cleanup; no source suite replay. Actual G0 and concrete committed Runtime Effect Admission precede fixture/key/provider, API1<=USD1 and1200/+1020. No automatic campaign retry or historical refund. Product B blocked, G1/G2/G3 NOT_RUN, FREEZE OPEN; Facebook/Zalo OA parked.
 
-Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD after independent Sol HOLD review; original clock custody complete, no browser/product workers released
+Root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; Sol metadata adapter worker; Luna independent admission reviewer; browser/product workers not yet released
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

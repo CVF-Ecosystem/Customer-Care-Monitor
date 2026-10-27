@@ -1,0 +1,153 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "OWNER_AUTONOMOUS_R139_CONSOLIDATED_COMPLETION_AUTHORITY",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "date": "2026-10-27",
+  "riskCeiling": "R2",
+  "ownerApproved": true,
+  "ownerInstruction": "cho phép bạn toàn quyền chọn phương án làm để có kết quả",
+  "baseCommit": "42ddf1f30a716e0b6d90c8db4de657aa012ff8d6",
+  "oneExistingOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+  "roadmap": [
+    "M3-05",
+    "M3-08"
+  ],
+  "purpose": "Complete the bounded current-source synthetic execution, same-case publication/history, no-resend and reader-denial proof via the actual supported CUA route, with exact honest G3 disposition. Root selects finite technical method and allocations without per-step Owner relay.",
+  "discoveryEvidence": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_discovery_20261027/inventory_result.json",
+  "chosenRoute": {
+    "surface": "cua_page_target_v1",
+    "browserId": "2",
+    "type": "iab",
+    "basis": "Actual inventory reports IAB2 with zero tabs. Actual selection/documentation, create/control/capture/observer/owned-close capability not yet established.",
+    "preclockBrowserSelectionMethods": 1,
+    "preclockSelectionEffect": "Root or admitted producer may getBrowser({id:\"2\"}) once for supported documentation/binding only after committed independent authority review; no tab/read/capture. This use is counted separately from campaign methods.",
+    "codexSessionId": "01a17cc5-c537-7681-b17f-fef9c4f1aad2",
+    "sessionMetadataMeaning": "Original metadata.codexSessionId is CUA/Codex runtime context, not browser session identity."
+  },
+  "roles": {
+    "orchestratorBudgetCommitSteward": "Root",
+    "metadataImplementationWorker": "Sol Medium /root/r139_autonomous_route",
+    "independentAdmissionReviewer": "Luna Max /root/r139_completion_admission_review",
+    "independentMetadataAndSourceReviewer": "Root",
+    "browserProducer": "Luna Max after recorded reviewer-to-producer transition and separate dispatch",
+    "browserObserver": "Sol Medium separate from producer; must not review own metadata",
+    "runtimeWorker": "Sol Medium after source-compatible committed runtime release",
+    "runtimeEvidenceReviewer": "Root independent of worker authorship"
+  },
+  "retainedUsage": {
+    "sourceChecks": 20,
+    "controllers": 4,
+    "campaigns": 1,
+    "serviceQueries": 5,
+    "historicalCampaignCUA": 1,
+    "newDiscoveryCUA": 1,
+    "fixtureStarts": 0,
+    "keyReads": 0,
+    "providerCalls": 0,
+    "priorPaidUnknown": "ALL_PRESERVED_NOT_REFUNDED"
+  },
+  "technicalPreparation": {
+    "allowed": "Necessary source-compatible metadata/nonce/path/actor/readiness/receipt binding preparation and static verification within this R139. Inherit unchanged accepted source/snapshot/binary/checks.",
+    "allocationOwner": "Root records each necessary new technical process allocation before invocation with actual original waits/results and cumulative history. No fictitious per-check owner caps.",
+    "sourceChecksDefault": 0,
+    "sourceRepairDefault": "NONE; any demonstrated new gap needs bounded Root source contract and independent review, preserving prior checks.",
+    "noAmbientRuntime": "No container/service fixture or product process before technical release and actual G0; metadata subprocesses/static repository gates are permitted.",
+    "independentReview": "Luna reviews Root authority; Root reviews Sol metadata/source. Authors cannot self-approve R2 work.",
+    "freshCustodyAdapter": {
+      "reason": "Frozen original wrapper binds old nonce/roots, three prior waits and cap4; it cannot honestly operate a distinct new campaign unchanged.",
+      "allowed": "New code-as-data wrapper/configuration and metadata builder under autonomous_completion_20261027 only, derived from frozen original while preserving its immutable file and all inherited activation/source budget validators. Prefer binding-only literal differences.",
+      "preserve": [
+        "recipe.freshGrant and exact inherited source-budget dictionary",
+        "all four prior original wait outcomes and their receipts",
+        "full20 cold accepted-source audits",
+        "original managed Popen/wait/exit, deadline and terminal custody",
+        "new operational authority separate from old source authority"
+      ],
+      "checks": {
+        "metadataGenerationPasses": 1,
+        "staticAdapterRecipeAudits": 1,
+        "workerFocusedAdapterProcessesMaxIfLogicChanges": 2,
+        "rootFocusedAdapterProcessesMaxIfLogicChanges": 2,
+        "compilerOrProductSuiteInvocations": 0
+      },
+      "review": "Root independently audits exact binding delta and meaningful targeted tests if predicates change; no unsafe import/test of live entrypoints."
+    }
+  },
+  "freshCampaign": {
+    "additionalCampaigns": 1,
+    "historicalCampaignUsed": 1,
+    "totalCampaignCeiling": 2,
+    "noAutomaticRetry": true,
+    "reservation": "Fresh nonce and resource paths, actual startUTC/monotonic reservation and immutable committed source-compatible recipe required. No live clock during static preparation.",
+    "wholeCampaignSeconds": 1200,
+    "cleanupCutoffSeconds": 1020,
+    "serviceQueries": 5,
+    "campaignCUAMethods": 64,
+    "stageCUACaps": [
+      8,
+      4,
+      48,
+      4
+    ],
+    "ownedTabs": 1,
+    "inventories": 3,
+    "g0Prerequisites": "Actual selected browser docs, current distinct actors/ACKs, exact accepted pins/resources/capture/cleanup ownership, checked cold audits and independent technical release.",
+    "productGate": "G0 actual capability proof accepted by independent Root before any fixture/key/provider effect; separate concrete committed Runtime Effect Admission mandatory.",
+    "controllerCustody": "Original managed Popen/wait/exit, exact cutoff/deadline, preserved terminal records and no outstanding children on every outcome; no expiry/quota reset.",
+    "technicalControllerAllocations": "Root may allocate necessary distinct original preclock controllers before reservation after known new cause and independent review, with history retained; no automatic campaign replay."
+  },
+  "conditionalProductEnvelope": {
+    "fixtureStarts": 1,
+    "fixtureFinalStops": 1,
+    "nativeGoProcesses": 1,
+    "backendStarts": 1,
+    "viteStarts": 1,
+    "frontendBuilds": 1,
+    "authPOST": 4,
+    "nativeNegativeExecutePOST": 8,
+    "browserPositiveExecutePOST": 1,
+    "grantIssuances": 3,
+    "keyContentReads": 1,
+    "providerPhysicalAttempts": 1,
+    "maximumUSD": 1,
+    "provider": "alibaba_maas",
+    "model": "qwen3.7-flash",
+    "data": "Existing authorized synthetic Vietnamese complaint only; no real customer data",
+    "credential": "Only existing staged private Alibaba credential, exact identity/endpoint binding reviewed without plaintext output; no new key creation",
+    "statusStarts": 16,
+    "retry": 0,
+    "effectReleaseNow": false,
+    "note": "Specific fresh Runtime Effect Admission after G0 must narrow and bind these effects before execution. This authority approves the route and finite envelope, not immediate key/provider/runtime access. Any MAY_HAVE_STARTED consumes the sole attempt and remains UNKNOWN if response missing."
+  },
+  "allowedPaths": [
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+    "docs/reviews/R139_*.md",
+    "docs/reviews/probes/r139_integrated_20261021/**",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md",
+    ".cvf/runtime/r139_*/**"
+  ],
+  "prohibitedEffects": [
+    "Antigravity or custom unsupported browser stack",
+    "historical seed/receipt/counter rewrite",
+    "unrelated app/tab content/input/closure",
+    "production/customer/account/channel data",
+    "Facebook/Zalo OA account work",
+    "new persistent credentials/security weakening",
+    "blind replay of unknown external effects",
+    "public publication/push/merge/deploy",
+    "destructive changes to ambient resources",
+    "source changes without separately bounded demonstrated need"
+  ],
+  "claims": "Static inventory/gates do not prove AI governance or product readiness. Real provider request/response and faithful usage evidence required for actual governance claim; full M3/M2/pilot/release stays open unless exact criteria satisfied.",
+  "currentRelease": "METADATA_PREPARATION_AND_ONE_PRECLOCK_BROWSER_SELECTION_ONLY_AFTER_INDEPENDENT_REVIEW_AND_COMMIT",
+  "knownNativeCloseGap": {
+    "finding": "Accepted terminal validators require in-campaign owner_close_report; inventory/standing permission cannot create that actual event.",
+    "rootSelectedMethod": "If native IAB2 docs expose supported tab.close, prepare a minimal native-close receipt alternative to eliminate mandatory human cleanup dependency.",
+    "currentSourceAuthority": "NONE. Before any supervisor/Go/test change Root must issue a concrete independently reviewed immutable bounded source supplement in the same order, with exact source paths/semantic invariants/check allocation/new build pins. No blind relabeling or weakening of terminal evidence.",
+    "fallback": "If native close unsupported, report actual capability blocker rather than force authority flags or fabricate a human report."
+  }
+}

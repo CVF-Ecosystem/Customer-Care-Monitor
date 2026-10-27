@@ -1,0 +1,40 @@
+{
+  "kind": "ACTUAL_CALLER_RECORDED_CUA_INVENTORY",
+  "observedAtUTC": "2026-10-27T10:31:09.376576+00:00",
+  "request": "await cua.getState();",
+  "tool": "mcp__cua_repl.js",
+  "admissionCommit": "42ddf1f30a716e0b6d90c8db4de657aa012ff8d6",
+  "browsers": [
+    {
+      "id": "2",
+      "name": "ChatGPT in-app browser",
+      "type": "iab",
+      "tabs": []
+    },
+    {
+      "id": "1",
+      "name": "Codex MCP Apps",
+      "type": "mcpapps",
+      "tabs": []
+    }
+  ],
+  "errorsObserved": false,
+  "nativeAppInventory": "Returned; unrelated app identities/titles omitted from repository evidence.",
+  "provenance": "Caller transcription of actual tool-visible inventory; no authenticated raw export claimed.",
+  "newDiscoveryCUA": 1,
+  "historicalCampaignCUA": 1,
+  "cumulativeCUAMethods": 2,
+  "skyCalls": 0,
+  "browserSelectionCalls": 0,
+  "pageCreates": 0,
+  "windowReads": 0,
+  "pageReads": 0,
+  "captures": 0,
+  "newCampaigns": 0,
+  "fixtureStarts": 0,
+  "keyReads": 0,
+  "providerCalls": 0,
+  "chosenCandidate": "Actual IAB browser2; native CUA route. Inventory only, not G0 PASS.",
+  "codexSessionId": "01a17cc5-c537-7681-b17f-fef9c4f1aad2",
+  "sessionMetadataMeaning": "Original metadata.codexSessionId identifies the CUA/Codex runtime context only; not browser-specific session identity."
+}

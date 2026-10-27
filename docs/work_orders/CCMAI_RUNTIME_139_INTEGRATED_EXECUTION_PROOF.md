@@ -1,9 +1,9 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: BLOCKED_WITH_REASON
+Status: ACTIVE
 Risk: R2
-Worker: Sol Medium /root/r139_coord_recovery_packet_worker (guard code); /root/r139_delegated_metadata_worker (seven metadata files); Root (snapshot, metadata, original controller and exact queries); Luna producer and Sol observer (browser)
-Reviewer: Sol Medium /root/r139_toolchain_adoption_review (current independent technical review); Root (actual independent native G0 evidence)
+Worker: Sol Medium /root/r139_autonomous_route (bounded fresh custody adapter and metadata); Root (admitted no-page preclock selection); browser/product workers unreleased
+Reviewer: Root (independent Sol metadata/source review); Luna Max /root/r139_completion_admission_review (independent Root completion admission review); historical reviewers retained in dated sections
 Commit mode: WORKER_MUST_NOT_COMMIT
 providerExecutionAuthority: NONE_CURRENT_HISTORICAL_CAMPAIGNS_SPENT_OR_EXPIRED
 runtimeExecutor: UNASSIGNED_UNTIL_SUPPORTED_ENVIRONMENT_AND_COMMITTED_ADMISSION
@@ -14,7 +14,7 @@ Current continuation: the Owner autonomous discovery instruction below governs o
 
 ## R139 delegated actual reservation — 2026-10-27T04:24:06.802756Z
 
-CCMAI-RUNTIME-139 Owner autonomous completion grant: admit bounded read-only capability discovery only, CUA getState1 then conditional sky import/list_apps1 if no usable CUA browser. No page reads/creation, app launch/input, services, fixture, key or provider effect yet. Preserve source20/controllers4/campaign1/service5PASS/CUA1 and all original HOLD receipts; discovery is separately counted and not G0 PASS. Root reviews actual capability before selecting and admitting one consolidated same-order completion route; no automatic retry or campaign refund. Product B blocked, G1/G2/G3 NOT_RUN, REVIEW/CHANGES_REQUIRED, FREEZE OPEN; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 Owner autonomous completion: actual discovery returned IAB browser2 with zero tabs; choose source-compatible CUA route. BUILD limited to fresh custody adapter and operational metadata under independently reviewed committed completion admission, preserving source20/controllers4/campaign1/service5PASS/historicalCUA1 plus discoveryCUA1. One preclock getBrowser2 selection/documentation allowed after commit; no page creation yet. Prepare one new finite G0-G3 campaign and exact actual actors/pins/cleanup; no source suite replay. Actual G0 and concrete committed Runtime Effect Admission precede fixture/key/provider, API1<=USD1 and1200/+1020. No automatic campaign retry or historical refund. Product B blocked, G1/G2/G3 NOT_RUN, FREEZE OPEN; Facebook/Zalo OA parked.
 
 
 ## Historical superseded boot-identity v2 prelaunch clock HOLD — 2026-10-25 (superseded by settled 2026-10-27 result)

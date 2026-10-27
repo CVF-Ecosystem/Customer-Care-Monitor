@@ -4,17 +4,23 @@ Status: ACTIVE
 
 ## Current State
 
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD after independent Sol HOLD review; original clock custody complete, no browser/product workers released
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Root ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD; Sol metadata adapter worker; Luna independent admission reviewer; browser/product workers not yet released
 - Active tranche: CCMAI-RUNTIME-139
-- Next allowed move: CCMAI-RUNTIME-139 Owner autonomous completion grant: admit bounded read-only capability discovery only, CUA getState1 then conditional sky import/list_apps1 if no usable CUA browser. No page reads/creation, app launch/input, services, fixture, key or provider effect yet. Preserve source20/controllers4/campaign1/service5PASS/CUA1 and all original HOLD receipts; discovery is separately counted and not G0 PASS. Root reviews actual capability before selecting and admitting one consolidated same-order completion route; no automatic retry or campaign refund. Product B blocked, G1/G2/G3 NOT_RUN, REVIEW/CHANGES_REQUIRED, FREEZE OPEN; Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-139 Owner autonomous completion: actual discovery returned IAB browser2 with zero tabs; choose source-compatible CUA route. BUILD limited to fresh custody adapter and operational metadata under independently reviewed committed completion admission, preserving source20/controllers4/campaign1/service5PASS/historicalCUA1 plus discoveryCUA1. One preclock getBrowser2 selection/documentation allowed after commit; no page creation yet. Prepare one new finite G0-G3 campaign and exact actual actors/pins/cleanup; no source suite replay. Actual G0 and concrete committed Runtime Effect Admission precede fixture/key/provider, API1<=USD1 and1200/+1020. No automatic campaign retry or historical refund. Product B blocked, G1/G2/G3 NOT_RUN, FREEZE OPEN; Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## R139 delegated actual reservation — 2026-10-27T04:24:06.802756Z
 
-CCMAI-RUNTIME-139 Owner autonomous completion grant: admit bounded read-only capability discovery only, CUA getState1 then conditional sky import/list_apps1 if no usable CUA browser. No page reads/creation, app launch/input, services, fixture, key or provider effect yet. Preserve source20/controllers4/campaign1/service5PASS/CUA1 and all original HOLD receipts; discovery is separately counted and not G0 PASS. Root reviews actual capability before selecting and admitting one consolidated same-order completion route; no automatic retry or campaign refund. Product B blocked, G1/G2/G3 NOT_RUN, REVIEW/CHANGES_REQUIRED, FREEZE OPEN; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 Owner autonomous completion: actual discovery returned IAB browser2 with zero tabs; choose source-compatible CUA route. BUILD limited to fresh custody adapter and operational metadata under independently reviewed committed completion admission, preserving source20/controllers4/campaign1/service5PASS/historicalCUA1 plus discoveryCUA1. One preclock getBrowser2 selection/documentation allowed after commit; no page creation yet. Prepare one new finite G0-G3 campaign and exact actual actors/pins/cleanup; no source suite replay. Actual G0 and concrete committed Runtime Effect Admission precede fixture/key/provider, API1<=USD1 and1200/+1020. No automatic campaign retry or historical refund. Product B blocked, G1/G2/G3 NOT_RUN, FREEZE OPEN; Facebook/Zalo OA parked.
 
+
+## Consolidated completion-preparation BUILD acknowledgment — 2026-10-27
+
+Owner grants method choice toward results. Root inherits accepted source, settled HOLD and actual inventory for INTAKE/DESIGN/SPEC; the same R139 WORK_ORDER now bounds fresh custody metadata BUILD only. Actual IAB2 inventory used discoveryCUA1 separately from historicalCUA1; no sky, tab or product effect. Luna independently reviewed Root's completion admission: PASS_METADATA_AND_ONE_PRECLOCK_SELECTION_ONLY after correcting runtime-only codexSessionId semantics and synchronizing current work-order roles. Root independently reviews Sol-authored metadata; Luna's independent authority role ends before any separately acknowledged producer role. Gates and clean committed admission precede one getBrowser2 documentation selection and worker source-compatible metadata writes. Source repair, campaign reservation, page creation, fixture, key and provider effects remain unreleased. Known autonomous-close validator gap requires its own concrete independently reviewed source supplement and new accepted pins in this same order. All spent counters, original source checks and UNKNOWN paid outcomes remain immutable. Full product acceptance and FREEZE remain open.
+
+Reviewer custody note: Luna attempted the Core doctor outside the requested pinned-only inspection boundary, captured only a header, and lost the original managed session identifier. A later process lookup found no matching process; original exit/result remains UNKNOWN, not PASS or proof of terminal custody. No repeat doctor or Core adoption is authorized by that attempt. Root retains the valid pinned preflight inspection and the admitted stable-pin exception; no product/runtime effect is attributed to the doctor, and no global zero-effect claim is made.
 
 ## Owner autonomous route selection acknowledgment — 2026-10-27
 

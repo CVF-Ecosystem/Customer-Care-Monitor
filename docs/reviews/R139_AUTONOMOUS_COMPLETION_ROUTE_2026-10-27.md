@@ -1,6 +1,6 @@
 # R139 autonomous completion route
 
-Status: CONDITIONAL_DESIGN_REVIEWED_DISCOVERY_NOT_RUN
+Status: ACTUAL_IAB2_INVENTORY_RECORDED_COMPLETION_PREPARATION
 Risk: R2
 Worker: Sol Medium /root/r139_autonomous_route, SPEC_AUTHOR / implementation planner
 Reviewer: Root, independent of the author
@@ -12,7 +12,7 @@ Project Customer-Care-Monitor-AI; read-only Core reference ../.Controlled-Vibe-F
 
 ## Independent discovery admission review
 
-Role transition: SPEC_AUTHOR to independent REVIEWER of Root-authored CVF_SESSION/authority/CCMAI-RUNTIME-139-AUTONOMOUS-DISCOVERY-ADMISSION.json, then back to SPEC_AUTHOR for this route. Verdict **PASS_DISCOVERY_DESIGN_ONLY**. The admission grants exactly one cua.getState() inventory; only if that actual inventory reports no usable browser connection, one documented @oai/sky initialization and list_apps() inventory. It grants no page selection/content/creation, window capture, app launch/input, recovery retry, service/Docker/fixture work, credential/provider use or campaign. Historical usage is retained, not refunded. Execution requires independently reviewed, clean committed admission and applicable gates. Actual discovery has not been observed by this author.
+Role transition: SPEC_AUTHOR to independent REVIEWER of Root-authored CVF_SESSION/authority/CCMAI-RUNTIME-139-AUTONOMOUS-DISCOVERY-ADMISSION.json, then back to SPEC_AUTHOR for this route. Verdict **PASS_DISCOVERY_DESIGN_ONLY**. The admission grants exactly one cua.getState() inventory; only if that actual inventory reports no usable browser connection, one documented @oai/sky initialization and list_apps() inventory. It grants no page selection/content/creation, window capture, app launch/input, recovery retry, service/Docker/fixture work, credential/provider use or campaign. Historical usage is retained, not refunded. Execution requires independently reviewed, clean committed admission and applicable gates. At initial review discovery had not run. Root subsequently supplied the actual caller-recorded inventory: IAB browser2 and MCP Apps1, both with zero tabs; Sol reviewed that reported result as inventory only, not G0 PASS.
 
 Structural comparison against HEAD found only nextAllowedMove changed in state/bootstrap; memory, handoff and work order carry the same discovery instruction and preserve REVIEW/CHANGES_REQUIRED. Root subsequently reported restoring original JSON formatting and registering the admission; final gates and committed changed-set verification belong to Root. This verdict does not approve the later route, source repair or runtime effects.
 
@@ -77,7 +77,7 @@ G3 reviews every applicable M3-01..08 disposition and inherited evidence applica
 - In that same family, reentry_source_checks/cua_browser_operation_plan.json and reentry_payload_templates.json describe the CUA operation/metadata route; they contain historical actor/nonce/deadline facts and are not executable fresh authority.
 - docs/reviews/R139_CUA_CAMPAIGN_HOLD_2026-10-27.md and the delegated_g0_capability_hold_20261027/ original receipts govern settled HOLD, service5PASS, CUA1 and original clock completion.
 
-Next action is Root review/commit and admitted inventory only. Actual capabilities will determine the final conditional route; no readiness, effect or product acceptance is asserted here.
+Current next action is independently reviewed completion metadata preparation and one committed preclock getBrowser2 documentation selection. Actual IAB2 inventory is recorded; no page creation, G0 readiness, product effect or acceptance is asserted. Native-close source change, if required, needs an exact separately bounded reviewed supplement in this same order.
 
 ## Root independent route review
 
@@ -86,3 +86,11 @@ The first discovery pre-commit legacy check passed six controls and failed catal
 The next legacy preflight passed7/7; profile pre-commit rejected this packet's noncanonical Author/Reviewer-of-this-route header labels. Root replaced them with the required single Worker/Reviewer lines, preserving the distinct discovery and route review responsibilities described above. This second static failure is retained and does not concern source or runtime execution.
 
 Root independently reviewed this Sol-authored conditional route against the existing settled HOLD and discovery admission. ACCEPTED_CONDITIONAL_DESIGN_ONLY: the exact discovery-only call limits are independently approved; CUA and Windows identities remain distinct. All later campaign, source adapter, credential and product stages require concrete actual capabilities, reviewed bindings and committed applicable admissions. The proposed runtime envelope is not released by this review. Root is independent of route authorship; Sol independently reviewed Root discovery authorship. No runtime/G0 PASS, provider outcome, hosted CI or full product acceptance is asserted.
+
+## Actual inventory and native-close dependency
+
+Luna Max independent completion authority verdict: PASS_METADATA_AND_ONE_PRECLOCK_SELECTION_ONLY after the corrected runtime-only codexSessionId binding, actual-inventory status and canonical BUILD next move. No source repair or campaign effect is approved by this verdict. Root updated the current work-order header to match the actual worker/reviewer split; old role assignments remain historical. Luna's separate doctor attempt has UNKNOWN original wait/exit, retained in the active handoff, and is not evidence of doctor PASS or an approved Core update.
+
+Root actual discovery returned browser2 (ChatGPT in-app browser, type iab, tabs empty) and browser1 (MCP Apps, tabs empty). No sky fallback, selection, tab creation, capture, fixture, key or provider call occurred. Historical campaignCUA1 and separately counted discoveryCUA1 give cumulative2. The original metadata.codexSessionId is runtime context only; no browserSessionId is inferred. Unrelated native app titles are omitted from repository evidence.
+
+Sol source inspection identified a genuine autonomous-cleanup gap: activation v3 line766 and frozen wrapper line310 require standing operator availability; more importantly supervisor terminal validation requires owner_close_report in campaign and Go validates operator_fallback. Root chooses a supported native-close alternative if actual IAB docs permit it; standing availability does not fabricate an in-campaign owner report. No source change is released by current metadata authority. A concrete narrow Python/Go/test/binary source supplement, independent review and new accepted pins must precede any such repair.

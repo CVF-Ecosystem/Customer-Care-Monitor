@@ -5,11 +5,25 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r139-autonomous-completion-admission-20261027",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-AUTONOMOUS-COMPLETION-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Owner selects one bounded source-compatible completion route; metadata and one no-page CUA selection only released before separate source/runtime admissions."
+    },
+    {
+      "id": "r139-autonomous-actual-inventory-20261027",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_discovery_20261027/inventory_result.json",
+      "status": "ACTIVE",
+      "description": "Caller-recorded actual CUA inventory: IAB2 with zero tabs; runtime-only codexSessionId, no G0 or product acceptance."
+    },
+    {
       "id": "r139-autonomous-route-20261027",
       "family": "continuity",
       "path": "docs/reviews/R139_AUTONOMOUS_COMPLETION_ROUTE_2026-10-27.md",
       "status": "ACTIVE",
-      "description": "Independent discovery-only admission review and conditional single-order completion route; actual capability and runtime NOT_RUN."
+      "description": "Independent admission reviews, actual IAB2 inventory and conditional single-order completion route; G0 and product NOT_RUN."
     },
     {
       "id": "r139-autonomous-discovery-20261027",
