@@ -4457,6 +4457,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Owner-approved R139 bounded source BUILD and one conditional future G0-G3 campaign;6offlinechecks, no liveclock/runtime/key/provider authority before acceptance.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-AND-CONDITIONAL-REENTRY-ADMISSION.json`
 - Owner-approved R139 bounded source BUILD and one conditional future G0-G3 campaign;6offlinechecks, no liveclock/runtime/key/provider authority before acceptance.: `docs/reviews/R139_SOURCE_AND_CONDITIONAL_REENTRY_ADMISSION_REVIEW_2026-10-24.md`
 - Immutable integrated G0/G1/G2 source-preparation seed; runtime/provider authority absent.: `CVF_SESSION/authority/CCMAI-RUNTIME-139.json`
+- Owner autonomous route selection: one CUA inventory and conditional Windows app inventory only; no campaign or product effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-AUTONOMOUS-DISCOVERY-ADMISSION.json`
+- Independent discovery-only admission review and conditional single-order completion route; actual capability and runtime NOT_RUN.: `docs/reviews/R139_AUTONOMOUS_COMPLETION_ROUTE_2026-10-27.md`
 - Independent R2 review of admitted local metadata observation; later source/capability/relaunch not yet accepted.: `docs/reviews/R139_BOOT_IDENTITY_RECOVERY_REVIEW_2026-10-25.md`
 - Owner-approved one consolidated R139 boot identity discovery/repair/check/relaunch envelope; no runtime proof.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json`
 - Root-admitted v3 query-local temporal SPEC with immutable v2 identity/proof predecessor refs; source/runtime unproved.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_contract_20261026.json`

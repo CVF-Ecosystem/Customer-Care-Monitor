@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "OWNER_AUTONOMOUS_R139_READONLY_ROUTE_DISCOVERY",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "date": "2026-10-27",
+  "riskCeiling": "R2",
+  "ownerApproved": true,
+  "ownerInstruction": "cho phép bạn toàn quyền chọn phương án làm để có kết quả",
+  "scope": "Select a supported feasible completion route in the same R139/M3-05/M3-08 order. This first admission grants read-only surface discovery only; broad owner choice is not a reset of spent budgets.",
+  "roles": {
+    "orchestrator": "Root",
+    "discoveryWorker": "Root",
+    "independentReviewer": "Sol Medium /root/r139_autonomous_route"
+  },
+  "baseCommit": "54d4c0d183076dd68448bbe543072e7e23f68585",
+  "executionPrecondition": "Independent discovery review and clean committed admission before calls.",
+  "allowedCalls": {
+    "cuaGetState": 1,
+    "conditionalSkyImportAndListApps": 1
+  },
+  "fallbackCondition": "Only if actual CUA inventory reports no usable browser connection; import documented @oai/sky package through node_repl then call list_apps once. No recovery retries granted in this admission.",
+  "prohibitedEffects": [
+    "page selection/content read or creation",
+    "app launch/input or window capture",
+    "services/Docker/fixture/process runtime",
+    "credentials/provider/network requests beyond local surface inventory",
+    "Antigravity or custom automation stack",
+    "campaign reservation or retry",
+    "historical receipt/counter modification"
+  ],
+  "retainedUsage": {
+    "sourceChecks": 20,
+    "controllers": 4,
+    "campaigns": 1,
+    "serviceQueries": 5,
+    "cuaMethods": 1,
+    "fixtureStarts": 0,
+    "keyReads": 0,
+    "providerCalls": 0
+  },
+  "discoveryUsageBefore": {
+    "cuaGetState": 0,
+    "skyListApps": 0
+  },
+  "evidencePath": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_discovery_20261027/",
+  "resultBoundary": "Discovery can establish inventory only, never G0 readiness, local-origin control, capture or owned close. Root reviews actual result and bounded consolidated plan before any campaign admission.",
+  "corePin": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba"
+}

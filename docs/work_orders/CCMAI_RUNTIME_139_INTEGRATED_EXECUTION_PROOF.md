@@ -10,11 +10,11 @@ runtimeExecutor: UNASSIGNED_UNTIL_SUPPORTED_ENVIRONMENT_AND_COMMITTED_ADMISSION
 runtimeReviewer: INDEPENDENT_REVIEWER_TO_BE_BOUND_IN_CURRENT_ADMISSION; historical reviews retained
 dispatchKind: INITIAL
 
-Latest settled result: the 2026-10-27 actual G0 HOLD section below governs; all older dated dispositions are historical unless explicitly standing Owner instructions.
+Current continuation: the Owner autonomous discovery instruction below governs only read-only route selection; the settled 2026-10-27 G0 HOLD and spent campaign remain unchanged. Older dated dispositions are historical unless explicitly standing Owner instructions.
 
 ## R139 delegated actual reservation — 2026-10-27T04:24:06.802756Z
 
-CCMAI-RUNTIME-139 settled actual G0 HOLD_BROWSER_UNAVAILABLE: independent review accepted limited HOLD and original clock custody complete, PID3728 original wait exit0, no outstanding metadata children. Preserve source20/controllers4/campaign1/service5PASS/CUA1 and all receipts; no tab creation, fixture, key or provider call. Remain REVIEW/CHANGES_REQUIRED, Product B BLOCKED_PENDING_OPERATIONAL_ADMISSION; G1/G2/G3 NOT_RUN, FREEZE OPEN. No retry, new campaign, Antigravity, alternate stack or paid-call renewal. Before any future G0 require actual admitted CUA browser connection evidence and an applicable campaign decision in this same R139/M3-05/M3-08 order; reuse validated source/snapshot/checks, retain every spent/unknown result. Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 Owner autonomous completion grant: admit bounded read-only capability discovery only, CUA getState1 then conditional sky import/list_apps1 if no usable CUA browser. No page reads/creation, app launch/input, services, fixture, key or provider effect yet. Preserve source20/controllers4/campaign1/service5PASS/CUA1 and all original HOLD receipts; discovery is separately counted and not G0 PASS. Root reviews actual capability before selecting and admitting one consolidated same-order completion route; no automatic retry or campaign refund. Product B blocked, G1/G2/G3 NOT_RUN, REVIEW/CHANGES_REQUIRED, FREEZE OPEN; Facebook/Zalo OA parked.
 
 
 ## Historical superseded boot-identity v2 prelaunch clock HOLD — 2026-10-25 (superseded by settled 2026-10-27 result)

@@ -1,4 +1,12 @@
 {
+  "x-r139AutonomousDiscovery20261027": {
+    "status": "INDEPENDENT_DISCOVERY_DESIGN_ACCEPTED_PENDING_COMMITTED_RELEASE",
+    "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-AUTONOMOUS-DISCOVERY-ADMISSION.json",
+    "actualDiscoveryCalls": 0,
+    "newCampaigns": 0,
+    "newProviderCalls": 0,
+    "productAcceptance": "UNCHANGED_HOLD"
+  },
   "schemaVersion": "1.0",
   "x-roadmapTracking": {
     "updatedAt": "2026-10-21",
