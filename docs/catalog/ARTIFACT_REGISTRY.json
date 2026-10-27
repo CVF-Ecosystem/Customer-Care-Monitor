@@ -5,6 +5,20 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r139-native-close-source-admission-20261027",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-TOOL-CLOSE-SOURCE-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Owner-autonomous bounded native-tool close alternative in three validator/test source files; five focused checks, no runtime release."
+    },
+    {
+      "id": "r139-native-close-source-allocation-20261027",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/allocation_ledger.json",
+      "status": "ACTIVE",
+      "description": "Root pre-invocation native-close check allocation above historical20; five slots not yet started."
+    },
+    {
       "id": "r139-autonomous-completion-admission-20261027",
       "family": "continuity",
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-AUTONOMOUS-COMPLETION-ADMISSION.json",

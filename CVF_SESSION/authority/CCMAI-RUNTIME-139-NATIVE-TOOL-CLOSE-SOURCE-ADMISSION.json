@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "OWNER_AUTONOMOUS_R139_BOUNDED_NATIVE_CLOSE_SOURCE_REPAIR",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "date": "2026-10-27",
+  "riskCeiling": "R2",
+  "ownerApproved": true,
+  "ownerInstruction": "cho phép bạn toàn quyền chọn phương án làm để có kết quả",
+  "parentAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-AUTONOMOUS-COMPLETION-ADMISSION.json",
+  "baseCommit": "96b0fbd3670cca18d2c5000de2abdd70ad0229c4",
+  "demonstratedGap": "Current terminal validators require an in-campaign owner_close_report; supported IAB2 documentation explicitly exposes Tab.close():Promise<void>. Root selects an honest native-tool-close alternative to complete autonomously without fabricating Owner reports.",
+  "documentationEvidence": {
+    "tool": "mcp__cua_repl.js",
+    "request": "var r139SelectedBrowser = await cua.getBrowser({ id: \"2\" });",
+    "actualSelection": "ChatGPT in-app browser; type iab; id2",
+    "documentedMethods": [
+      "Tab.close(): Promise<void>",
+      "Tab.screenshot(options): Promise<Uint8Array>",
+      "Browser.tabs.list()",
+      "Tab.reload()",
+      "Tab.playwright DOM locators"
+    ],
+    "preclockSelectionUsed": 1,
+    "historicalCUA": 1,
+    "discoveryCUA": 1,
+    "cumulativeCUAMethods": 3,
+    "limit": "Documentation support only; no close/capture/local-origin claim yet."
+  },
+  "roles": {
+    "workOrderAuthor": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR",
+    "implementationWorker": "Sol Medium /root/r139_autonomous_route",
+    "independentAdmissionReviewer": "Luna Max /root/r139_completion_admission_review",
+    "independentSourceReviewer": "Root",
+    "commitSteward": "Root"
+  },
+  "allowedSourcePaths": [
+    "scripts/r139_execution_supervisor.py",
+    "scripts/tests/test_r139_execution_supervisor.py",
+    "backend/api/handlers/intervention_execution_browser_test.go"
+  ],
+  "allowedArtifactPaths": [
+    "docs/reviews/R139_AUTONOMOUS_COMPLETION_ROUTE_2026-10-27.md",
+    "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/**",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/**",
+    ".cvf/runtime/r139_autonomous_*/**"
+  ],
+  "intendedDelta": {
+    "identity": "Permit native_tool only in the existing CUA-specific identity/terminal path with proofContract=cua_page_target_v1 and browserTool=supported_CUA_page_target, as an explicit alternative to unchanged operator_fallback. Generic native_identity/page_target_identity and all non-CUA/Antigravity close enums/validators remain unchanged. No other identity/origin/permission check weakening.",
+    "nativePositive": "Exact owned browserId/tabId and campaign/actor bindings; providerTabId is checked only if actually returned/documented, never invented; producer invokes documented tab.close; successful original method completion with request/result reference and hashes; separately bound observer (different actor) observes final metadata inventory after close proving exact target absent and unrelated baseline tabs preserved. Record observed method-return and inventory times within original campaign deadline, not physical close time.",
+    "provenance": "Caller-recorded original tool-visible request/return references are explicitly qualified; hashes do not authenticate the tool. Root independently checks actual conversation tool originals. No invented authenticated native export or Owner report.",
+    "rejections": [
+      "missing/malformed/cross-campaign or foreign-target identity",
+      "wrong close mode or actor, same actor for close and final inventory",
+      "missing failed unknown or late close return",
+      "missing incorrect request/response file refs or digests",
+      "final inventory before close, target still present or unrelated baseline changed",
+      "page input/action after closure or fabricated physical-close timestamp",
+      "Owner-report data silently reused as native close proof",
+      "native_tool on generic native or non-CUA page-target paths; explicit negative tests required"
+    ],
+    "preserve": [
+      "operator_fallback branch and tests unchanged",
+      "all source/activation grant-chain and exact historical source-budget dictionary invariants",
+      "all old receipts/checks/pins/binary and failed outcomes immutable",
+      "no product behavior/frontend/dependency/config/security changes",
+      "generic native/page-target and non-CUA/Antigravity validators unchanged; native_tool is CUA-contract-only"
+    ],
+    "perEventActors": "Native close row and raw close receipt require closeActorTaskId == producerAgentTaskId; final row and raw inventory require inventoryActorTaskId == observerAgentTaskId, with producer != observer. Global identity fields alone cannot establish event actor independence.",
+    "linkedArtifacts": "Close request and actual returned result are separate local caller-recorded artifacts with strict method/identity/status fields and referenced byte hashes. Existing textual originalCuaReturnReference alone cannot verify local artifact bytes. Raw inventory likewise identifies its actual observing actor. Root independently checks conversation originals; no self-authentic claim."
+  },
+  "checkAllocation": {
+    "historicalSourceProcessesRetained": 20,
+    "workerPythonFocused": 1,
+    "workerOfflineGoCompile": 1,
+    "workerSelectedPureGo": 1,
+    "rootPythonFocused": 1,
+    "rootSelectedPureGo": 1,
+    "newFocusedProcessTotalCeiling": 5,
+    "plannedLineageCeiling": 25,
+    "noFullProductSuite": true,
+    "noImplicitRetry": true,
+    "safeExecution": "Worker sends changed functions/import/init audit before binary execution. Compile-only uses GOPROXY=off GOSUMDB=off GOTOOLCHAIN=local. Root clears exact selected pure tests and dependency init before worker/root test execution. No R139_RUN/provider/DB/Docker environment or live entrypoint imports."
+  },
+  "suggestedFocusedTests": {
+    "pythonClass": "scripts.tests.test_r139_execution_supervisor.R139SupervisorPureTests",
+    "pythonMethods": [
+      "test_cua_identity_and_origin_no_io",
+      "test_cua_page_target_prefix_and_rejections",
+      "test_cua_page_target_terminal_and_protected_inventory",
+      "test_cua_native_tool_close_contract"
+    ],
+    "goPattern": "^(TestR139PureCuaReferenceBounds|TestR139PureCuaPageTargetV1|TestR139PureCuaNativeToolClose)$",
+    "goPackage": "./api/handlers",
+    "goRunTimeoutSeconds": 60,
+    "note": "Existing exact test names must be source-verified before invocation; Root may narrow selected meaningful tests without increasing process count."
+  },
+  "metadataAndWrapper": "Current completion authority permits source-compatible fresh custody binding adapter and one metadata generation/static audit. Preserve frozen original wrapper; refresh only identified nonce/paths/prior-wait/allocation/accepted-child-source literals. Any additional predicate change needs Root independent bounded review before execution.",
+  "acceptedChildPins": "After independent source PASS and material commit Root writes a separate immutable accepted build child of6b0d40e13c52b438c5ce5998e68874c4ce1f601abffc20d8b5c70175ef6cdce5. Exactly three existing source rows, resulting binary/backendTree may change; remaining ten rows and frontend/Vite/tools/snapshot remain equal. Preserve historical ownerEnvelopeSha256/recipe.freshGrant; bind new operational authority separately.",
+  "preclockDocumentation": {
+    "additionalPackagedDocsReadsMax": 2,
+    "allowed": [
+      "screenshots",
+      "local-web-development"
+    ],
+    "effect": "Read documented packaged guidance only, no page/tab/content/capture. Count separately; no extra browser selection."
+  },
+  "failureAndRepair": "First failed check stops dependent execution and preserves original wait/output/counters. Root may prepare one consolidated same-scope repair under existing Owner autonomy with explicit new technical allocation and independent review; no silent retry or old check refund. Round three without independent new root cause stops REVIEW_COST_ESCALATION_REQUIRED.",
+  "currentlyReleased": "Only after independent admission review, required gates and clean commit: bounded three-source implementation plus allowed metadata drafting and packaged docs reads. No browser page/campaign/product effects.",
+  "prohibitedEffects": [
+    "worker authority/seed edits or commits",
+    "fixture/DB/Docker/backend/Vite runtime or any product browser page",
+    "key/credential/provider/network request",
+    "historical source/counter/receipt mutation",
+    "generic bypass of close/identity/capture/cleanup checks",
+    "changing accepted activation source or source-budget validators",
+    "new tranche/workorder/Antigravity/publication/deploy"
+  ],
+  "claims": "Offline parser/receipt checks are component evidence only, never AI-governance proof; future runtime claim requires a real admitted provider request/response."
+}

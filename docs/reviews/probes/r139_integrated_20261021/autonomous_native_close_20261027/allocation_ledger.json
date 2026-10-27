@@ -1,0 +1,46 @@
+{
+  "kind": "ROOT_PREINVOCATION_NATIVE_CLOSE_SOURCE_ALLOCATION",
+  "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-TOOL-CLOSE-SOURCE-ADMISSION.json",
+  "historicalSourceProcessesRetained": 20,
+  "newProcessCeiling": 5,
+  "plannedLineageCeiling": 25,
+  "slots": [
+    {
+      "id": "worker_python",
+      "status": "NOT_STARTED",
+      "originalPid": null,
+      "originalWaitReturned": false,
+      "exitCode": null
+    },
+    {
+      "id": "worker_compile",
+      "status": "NOT_STARTED",
+      "originalPid": null,
+      "originalWaitReturned": false,
+      "exitCode": null
+    },
+    {
+      "id": "worker_pure_go",
+      "status": "NOT_STARTED",
+      "originalPid": null,
+      "originalWaitReturned": false,
+      "exitCode": null
+    },
+    {
+      "id": "root_python",
+      "status": "NOT_STARTED",
+      "originalPid": null,
+      "originalWaitReturned": false,
+      "exitCode": null
+    },
+    {
+      "id": "root_pure_go",
+      "status": "NOT_STARTED",
+      "originalPid": null,
+      "originalWaitReturned": false,
+      "exitCode": null
+    }
+  ],
+  "custody": "Original wait/output must be retained per slot before dependent work; failed or uncertain slot remains consumed, no reset. Root owns allocations; worker reports evidence without editing this ledger.",
+  "allProductEffects": 0
+}

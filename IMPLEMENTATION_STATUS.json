@@ -1,7 +1,7 @@
 {
   "x-r139AutonomousDiscovery20261027": {
-    "status": "ACTUAL_IAB2_INVENTORY_RECORDED_COMPLETION_METADATA_PREPARATION",
-    "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-AUTONOMOUS-COMPLETION-ADMISSION.json",
+    "status": "NATIVE_CLOSE_REPAIR_PLANNED_PENDING_COMMITTED_SOURCE_RELEASE",
+    "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-TOOL-CLOSE-SOURCE-ADMISSION.json",
     "actualDiscoveryCalls": 1,
     "newCampaigns": 0,
     "newProviderCalls": 0,
