@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Current R139 consolidated SOURCE_BUDGET_BOUNDARY repair: original controllers3 retained, allocation002 ceiling4, campaign0; Docker snapshot/source checks retained; independent review required, Product B blocked."
+      "description": "Current actual R139 G0 HOLD No browser available: campaign1/1, service5/5PASS, CUA1; controller4 clock still managed pending terminal receipts; product/key/provider0, independent HOLD review."
     },
     {
       "id": "r060-work-order",
@@ -38433,6 +38433,97 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_receipt.json",
       "status": "ACTIVE",
       "description": "Actual R139 delegated original campaign reservation receipt, when produced; G0/product/provider acceptance remains pending actual review."
+    },
+    {
+      "id": "r139-g0-hold-e11cfe7390084350",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/campaign_reservation.json",
+      "status": "ACTIVE",
+      "description": "R139 actual fourth controller and CUA first-selector capability HOLD evidence; no tab creation, product or provider admission."
+    },
+    {
+      "id": "r139-g0-hold-cbf7abb15a410cdb",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/cold_guard_before_popen.json",
+      "status": "ACTIVE",
+      "description": "R139 actual fourth controller and CUA first-selector capability HOLD evidence; no tab creation, product or provider admission."
+    },
+    {
+      "id": "r139-g0-hold-4098354dd8d47827",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/cold_guard_before_subprocess.json",
+      "status": "ACTIVE",
+      "description": "R139 actual fourth controller and CUA first-selector capability HOLD evidence; no tab creation, product or provider admission."
+    },
+    {
+      "id": "r139-g0-hold-8e83091b3fdb08d0",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/controller_started.json",
+      "status": "ACTIVE",
+      "description": "R139 actual fourth controller and CUA first-selector capability HOLD evidence; no tab creation, product or provider admission."
+    },
+    {
+      "id": "r139-g0-hold-35f3969ade61cc5f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/cua_call_01_intent.json",
+      "status": "ACTIVE",
+      "description": "R139 actual fourth controller and CUA first-selector capability HOLD evidence; no tab creation, product or provider admission."
+    },
+    {
+      "id": "r139-g0-hold-41e26ba97981f90d",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/cua_call_01_result.json",
+      "status": "ACTIVE",
+      "description": "R139 actual fourth controller and CUA first-selector capability HOLD evidence; no tab creation, product or provider admission."
+    },
+    {
+      "id": "r139-g0-hold-78ffe9de214ba939",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/root_current_outcome.json",
+      "status": "ACTIVE",
+      "description": "R139 actual fourth controller and CUA first-selector capability HOLD evidence; no tab creation, product or provider admission."
+    },
+    {
+      "id": "r139-g0-hold-e757ba2a664fa9da",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/root_five_query_return.json",
+      "status": "ACTIVE",
+      "description": "R139 actual fourth controller and CUA first-selector capability HOLD evidence; no tab creation, product or provider admission."
+    },
+    {
+      "id": "r139-g0-hold-be08f2447e1be599",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/root_g0_release.json",
+      "status": "ACTIVE",
+      "description": "R139 actual fourth controller and CUA first-selector capability HOLD evidence; no tab creation, product or provider admission."
+    },
+    {
+      "id": "r139-g0-hold-7b6c0cb056355b60",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/root_terminal.json",
+      "status": "ACTIVE",
+      "description": "R139 actual fourth controller and CUA first-selector capability HOLD evidence; no tab creation, product or provider admission."
+    },
+    {
+      "id": "r139-g0-hold-60308c584974cd6b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/service_query_originals.json",
+      "status": "ACTIVE",
+      "description": "R139 actual fourth controller and CUA first-selector capability HOLD evidence; no tab creation, product or provider admission."
+    },
+    {
+      "id": "r139-g0-hold-960ca7a538beea7b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/source_preclock_contract_audit.json",
+      "status": "ACTIVE",
+      "description": "R139 actual fourth controller and CUA first-selector capability HOLD evidence; no tab creation, product or provider admission."
+    },
+    {
+      "id": "r139-g0-hold-c7a48d0ad08cbecd",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CUA_CAMPAIGN_HOLD_2026-10-27.md",
+      "status": "ACTIVE",
+      "description": "R139 actual fourth controller and CUA first-selector capability HOLD evidence; no tab creation, product or provider admission."
     }
   ]
 }

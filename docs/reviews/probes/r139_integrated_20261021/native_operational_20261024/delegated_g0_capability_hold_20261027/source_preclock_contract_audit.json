@@ -1,0 +1,11 @@
+{
+  "checked": 8,
+  "controllerSha256": "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d",
+  "sourceBudgetRetained": true,
+  "externalEffectBudgetUnchanged": true,
+  "references": {
+    "fixedRefs": 6,
+    "reviewedPlans": 3,
+    "ownerEnvelopeBound": true
+  }
+}

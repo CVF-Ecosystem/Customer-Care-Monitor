@@ -32,11 +32,11 @@
     }
   ],
   "actualNewUsage": {
-    "controllers": 1,
+    "controllers": 2,
     "focusedGuardProcesses": 4,
-    "campaigns": 0,
-    "serviceQueries": 0,
-    "cuaMethods": 0,
+    "campaigns": 1,
+    "serviceQueries": 5,
+    "cuaMethods": 1,
     "providerCalls": 0
   },
   "workerFocusedIntent": {
@@ -132,5 +132,23 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_contract_root_return_v2_20261027.json",
       "sha256": "ccbb5e078557a73cf5b9246f2d3ce30641d7dbd00acc32ba1c52bad06548d7eb"
     }
-  }
+  },
+  "fourthOriginalControllerResult": {
+    "pid": 3728,
+    "originalPopenReturned": true,
+    "originalWaitReturned": false,
+    "status": "ORIGINAL_CLOCK_STILL_MANAGED",
+    "dispatchCommit": "087f81f7955cf739b05b8f109881b4e91d58d129",
+    "reservationCommit": "13f4f51fecd9ddc92b494644dc9636af1ccc026c",
+    "campaignReservationRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/campaign_reservation.json",
+      "sha256": "d7633cb63282b070f95f732a29bd6a1977c4f8aea1c4dd946d8f874293c5cceb"
+    },
+    "g0Outcome": "HOLD_NO_BROWSER_AVAILABLE",
+    "ownedTabs": 0,
+    "keyReads": 0,
+    "fixtureStarts": 0,
+    "providerCalls": 0
+  },
+  "mutableJournalQualification": "Usage journal advanced after committed dispatch snapshot; recipe ledger hash is the immutable Git dispatch-time view, not a current-launch permission or retry."
 }

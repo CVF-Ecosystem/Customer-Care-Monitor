@@ -1,0 +1,149 @@
+{
+  "status": "PASS",
+  "globalErrors": [],
+  "rows": [
+    {
+      "name": "tool:python",
+      "matches": true,
+      "errors": [],
+      "actualSize": 105816,
+      "actualSha256": "a2a4eff8d0b0c845284c607d50a3b5b966ac5a3121736a2e38e165bd6644d9fe"
+    },
+    {
+      "name": "tool:git",
+      "matches": true,
+      "errors": [],
+      "actualSize": 46936,
+      "actualSha256": "22fead8244ef3a7225fb800099a4e43eca8bcec0466774917669599c2f19a05a"
+    },
+    {
+      "name": "tool:powershell",
+      "matches": true,
+      "errors": [],
+      "actualSize": 495616,
+      "actualSha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f"
+    },
+    {
+      "name": "tool:docker",
+      "matches": true,
+      "errors": [],
+      "actualSize": 44922800,
+      "actualSha256": "17cbf2f5f5f7693bbeda46e35dc930050b40aff06f41f9f5a69e4e2dd7fc12aa"
+    },
+    {
+      "name": "tool:node",
+      "matches": true,
+      "errors": [],
+      "actualSize": 92825416,
+      "actualSha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237"
+    },
+    {
+      "name": "binary",
+      "matches": true,
+      "errors": [],
+      "actualSize": 59561984,
+      "actualSha256": "d1861e44be7f28b58d851e901a7d498c8460e553efbb20df6b0d92910c7208e7"
+    },
+    {
+      "name": "viteCli",
+      "matches": true,
+      "errors": [],
+      "actualSize": 2574,
+      "actualSha256": "fa03478846d229651a3c6aa64833ba2c6cbf580a798b92bd8f47c7480bafb5d8"
+    },
+    {
+      "name": "source:scripts/r139_execution_supervisor.py",
+      "matches": true,
+      "errors": [],
+      "actualSize": 126450,
+      "actualSha256": "a7557917cc3ade551e78f7b4c40b0cc5aac5a312bcae2fdfbe353aba997f5203"
+    },
+    {
+      "name": "source:scripts/tests/test_r139_execution_supervisor.py",
+      "matches": true,
+      "errors": [],
+      "actualSize": 127588,
+      "actualSha256": "4bbd3abb54646a9bcaa691c8b29ccf49f470539475a2a87732b77e2790be2283"
+    },
+    {
+      "name": "source:scripts/r139_vite_config.mjs.template",
+      "matches": true,
+      "errors": [],
+      "actualSize": 2681,
+      "actualSha256": "82a1d9ae8576fcd46718945d0a5cb44eb963a2a14d436a16e2bcdfb72b26bee9"
+    },
+    {
+      "name": "source:backend/api/handlers/intervention_execution_browser_test.go",
+      "matches": true,
+      "errors": [],
+      "actualSize": 157789,
+      "actualSha256": "0ed1148d42dcd9cb018e2a3f3cbeb9c68bdcb8904d408c365b8d05b11c2a040e"
+    },
+    {
+      "name": "source:backend/go.mod",
+      "matches": true,
+      "errors": [],
+      "actualSize": 3911,
+      "actualSha256": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716"
+    },
+    {
+      "name": "source:backend/go.sum",
+      "matches": true,
+      "errors": [],
+      "actualSize": 26483,
+      "actualSha256": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b"
+    },
+    {
+      "name": "source:frontend/package.json",
+      "matches": true,
+      "errors": [],
+      "actualSize": 913,
+      "actualSha256": "d16bea0b83ad7eb871576061f7ea91534a2dd2fdc7eef26eb20ec908e4fca24d"
+    },
+    {
+      "name": "source:frontend/package-lock.json",
+      "matches": true,
+      "errors": [],
+      "actualSize": 135511,
+      "actualSha256": "da41e1de5d5b853295a303092aab9433aeea8168fda2cf0420dd94e9f579fb00"
+    },
+    {
+      "name": "source:frontend/vite.config.ts",
+      "matches": true,
+      "errors": [],
+      "actualSize": 939,
+      "actualSha256": "736c63d3a72a5b126841ceedeac4b4a01854a2bec71bd57d2f46a23ec3cf68de"
+    },
+    {
+      "name": "source:docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v3_design.py.txt",
+      "matches": true,
+      "errors": [],
+      "actualSize": 62269,
+      "actualSha256": "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d"
+    },
+    {
+      "name": "source:docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_pinned_preflight.py.txt",
+      "matches": true,
+      "errors": [],
+      "actualSize": 11419,
+      "actualSha256": "81784375b6948dee973ce1dd4a3b66851786273079f4becfbdd7c7378fbca233"
+    },
+    {
+      "name": "source:docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_durable_resume.py.txt",
+      "matches": true,
+      "errors": [],
+      "actualSize": 17770,
+      "actualSha256": "7ab2bf4c5b97009d36b932fd7aff5cf6d5b42584844f59fc02f5605f06156eda"
+    },
+    {
+      "name": "source:docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/test_r139_pinned_resume.py",
+      "matches": true,
+      "errors": [],
+      "actualSize": 17475,
+      "actualSha256": "9dd100bae4dcfa18b5c1fd098de56fecc534ad59fd1a4361bda0cbb256b1f227"
+    }
+  ],
+  "controllerInvoked": false,
+  "osIdentityQuery": false,
+  "subprocessCalls": 0
+}

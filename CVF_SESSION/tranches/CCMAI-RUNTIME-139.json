@@ -83,10 +83,10 @@
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
   "claimBoundary": "Prepared/compiled source and pure-UI capability are not runtime E01-E06, AI governance, M3 exit, hosted CI, pilot or release proof.",
   "baseCommit": "6fc951a84c54cd31f20f2404d6dc8957d97bc339",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "CHANGES_REQUIRED",
+  "phase": "REVIEW",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
   "buildCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
   "reviewEvidence": [
     "docs/reviews/R139_INTERNAL_CUA_CONSOLIDATED_SOURCE_REVIEW_2026-10-24.md",
@@ -100,7 +100,7 @@
     "docs/reviews/R139_PINNED_RESUME_CONSOLIDATED_SOURCE_REVIEW_2026-10-26.md",
     "docs/reviews/R139_V3_ACTIVATION_ENV_SOURCE_REVIEW_2026-10-26.md"
   ],
-  "disposition": "Owner-delegated technical budget; Docker snapshot/static guard implementation in same R139, runtime unreleased.",
+  "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -173,7 +173,9 @@
     "BUILD",
     "REVIEW_PENDING",
     "CHANGES_REQUIRED",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "actualUse": {
     "status": "HOLD_MANUAL_HOLD_PROVIDER_OUTCOME_UNKNOWN",
@@ -1326,7 +1328,7 @@
     "independentDecisionReview": "REVIEW_PASS_DECISION_ONLY_QUALIFIED_NO_ACTIVATION"
   },
   "x-r139DelegatedTechnical20261026": {
-    "status": "V2_SOURCE_CONTRACT_CHECKS_PASS_FINAL_TECHNICAL_REVIEW_PENDING",
+    "status": "ACTUAL_G0_HOLD_NO_BROWSER_CLOCK_PENDING",
     "authorityRef": {
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-TECHNICAL-BUDGET-AND-DOCKER-ADOPTION-ADMISSION.json",
       "sha256": "be07b72bdbd35969bd8f29979b06aa1c6d97a79a33deab1d48734d8fb9d25787"
@@ -1347,7 +1349,16 @@
     "currentControllerCeiling": 4,
     "lastOriginalPid": 28928,
     "lastOriginalExit": 1,
-    "v2FocusedProcessesUsed": 2
+    "v2FocusedProcessesUsed": 2,
+    "serviceQueries": 5,
+    "cuaMethods": 1,
+    "fixtureStarts": 0,
+    "keyReads": 0,
+    "providerCalls": 0,
+    "ownedTabCreationCalls": 0,
+    "originalControllerPid": 3728,
+    "originalWaitReturned": false,
+    "actualOutcome": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/root_current_outcome.json"
   },
   "x-r139DelegatedActualReservation": {
     "status": "RESERVED_CANONICAL_PENDING_GATES",
@@ -1383,5 +1394,6 @@
       "status": "BUILD",
       "note": "Owner-delegated allocation002 cumulative3→4 and focused lineage18→20; one consolidated custody/metadata repair, no helper tranche."
     }
-  ]
+  ],
+  "x-r139ActualG0Hold": "docs/reviews/R139_CUA_CAMPAIGN_HOLD_2026-10-27.md"
 }

@@ -1,0 +1,76 @@
+{
+  "kind": "ROOT_ACTUAL_FIVE_ADMITTED_QUERY_RETURN",
+  "reservationSha256": "d7633cb63282b070f95f732a29bd6a1977c4f8aea1c4dd946d8f874293c5cceb",
+  "campaignNonce": "299b601cf7509d9727de5d1de197990f",
+  "count": 5,
+  "allFivePassed": true,
+  "rows": [
+    {
+      "id": "cached-image",
+      "ordinal": 1,
+      "pid": 29108,
+      "originalWaitReturned": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "comparisonPassed": true,
+      "startedAtUTC": "2026-10-27T04:24:48.400170+00:00",
+      "endedAtUTC": "2026-10-27T04:24:49.131504+00:00",
+      "stdoutSha256": "8afb5a6728d5d3c5f98b8f3dbf5075e477d4fe019909534d45eed1e024e8a8d1",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "container-name",
+      "ordinal": 2,
+      "pid": 2812,
+      "originalWaitReturned": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "comparisonPassed": true,
+      "startedAtUTC": "2026-10-27T04:24:49.151452+00:00",
+      "endedAtUTC": "2026-10-27T04:24:49.209319+00:00",
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "network-name",
+      "ordinal": 3,
+      "pid": 21040,
+      "originalWaitReturned": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "comparisonPassed": true,
+      "startedAtUTC": "2026-10-27T04:24:49.209908+00:00",
+      "endedAtUTC": "2026-10-27T04:24:49.264194+00:00",
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "volume-name",
+      "ordinal": 4,
+      "pid": 27344,
+      "originalWaitReturned": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "comparisonPassed": true,
+      "startedAtUTC": "2026-10-27T04:24:49.264853+00:00",
+      "endedAtUTC": "2026-10-27T04:24:49.319928+00:00",
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "vite-port",
+      "ordinal": 5,
+      "pid": 12828,
+      "originalWaitReturned": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "comparisonPassed": true,
+      "startedAtUTC": "2026-10-27T04:24:49.320917+00:00",
+      "endedAtUTC": "2026-10-27T04:24:50.586175+00:00",
+      "stdoutSha256": "55d61307b0bda17caa881370fd0bf6a5b9493d20071280731e7fd4bfba597b6d",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "browserEffects": 0,
+  "providerCalls": 0
+}

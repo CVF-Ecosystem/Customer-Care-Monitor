@@ -1,0 +1,244 @@
+{
+  "kind": "ROOT_SERIALIZED_ACTUAL_QUERY_ORIGINALS",
+  "qualification": "Exact private original request/start/wait JSON and lossless base64 stdout/stderr read by Root; not browser-native or provider-governance evidence.",
+  "rows": [
+    {
+      "ordinal": "01",
+      "intent": {
+        "query": {
+          "id": "cached-image",
+          "argv": [
+            "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_docker_tool_snapshot_20261026\\docker.exe",
+            "--host",
+            "npipe:////./pipe/dockerDesktopLinuxEngine",
+            "--config",
+            ".cvf/runtime/r139_delegated_reentry_v2_20261027_readiness/docker_config",
+            "image",
+            "inspect",
+            "--format",
+            "{{json .Id}}",
+            "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+          ],
+          "timeoutSeconds": 20,
+          "cap": 1,
+          "expected": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+          "comparison": "Decode stdout as exactly one JSON string (only surrounding whitespace); require decoded string exactly equals expected; no extra stdout content. Original stderr/exit retained."
+        },
+        "atUTC": "2026-10-27T04:24:48.400170+00:00",
+        "noRetry": true
+      },
+      "started": {
+        "pid": 29108,
+        "originalPopenReturned": true,
+        "atUTC": "2026-10-27T04:24:49.050224+00:00"
+      },
+      "originalWaitExit": {
+        "id": "cached-image",
+        "ordinal": 1,
+        "pid": 29108,
+        "originalWaitReturned": true,
+        "exitCode": 0,
+        "timedOut": false,
+        "comparisonPassed": true,
+        "startedAtUTC": "2026-10-27T04:24:48.400170+00:00",
+        "endedAtUTC": "2026-10-27T04:24:49.131504+00:00",
+        "stdoutSha256": "8afb5a6728d5d3c5f98b8f3dbf5075e477d4fe019909534d45eed1e024e8a8d1",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdoutBase64": "InNoYTI1Njo3ZGNkZGMwMWYxM2JhYjJmMTVjZGU2NzZkNDRkMDFmNjFmYzlmOTlmZTc3ODVlODYxOTZkZmMwN2QzNThhZTJiIgo=",
+      "stderrBase64": "",
+      "stdoutSha256": "8afb5a6728d5d3c5f98b8f3dbf5075e477d4fe019909534d45eed1e024e8a8d1",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ordinal": "02",
+      "intent": {
+        "query": {
+          "id": "container-name",
+          "argv": [
+            "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_docker_tool_snapshot_20261026\\docker.exe",
+            "--host",
+            "npipe:////./pipe/dockerDesktopLinuxEngine",
+            "--config",
+            ".cvf/runtime/r139_delegated_reentry_v2_20261027_readiness/docker_config",
+            "ps",
+            "-a",
+            "--filter",
+            "name=ccmai-r139-r4-20261023",
+            "--format",
+            "{{json .Names}}"
+          ],
+          "timeoutSeconds": 20,
+          "cap": 1,
+          "expected": "EMPTY"
+        },
+        "atUTC": "2026-10-27T04:24:49.151452+00:00",
+        "noRetry": true
+      },
+      "started": {
+        "pid": 2812,
+        "originalPopenReturned": true,
+        "atUTC": "2026-10-27T04:24:49.163108+00:00"
+      },
+      "originalWaitExit": {
+        "id": "container-name",
+        "ordinal": 2,
+        "pid": 2812,
+        "originalWaitReturned": true,
+        "exitCode": 0,
+        "timedOut": false,
+        "comparisonPassed": true,
+        "startedAtUTC": "2026-10-27T04:24:49.151452+00:00",
+        "endedAtUTC": "2026-10-27T04:24:49.209319+00:00",
+        "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdoutBase64": "",
+      "stderrBase64": "",
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ordinal": "03",
+      "intent": {
+        "query": {
+          "id": "network-name",
+          "argv": [
+            "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_docker_tool_snapshot_20261026\\docker.exe",
+            "--host",
+            "npipe:////./pipe/dockerDesktopLinuxEngine",
+            "--config",
+            ".cvf/runtime/r139_delegated_reentry_v2_20261027_readiness/docker_config",
+            "network",
+            "ls",
+            "--filter",
+            "name=ccmai-r139-r4-20261023",
+            "--format",
+            "{{json .Name}}"
+          ],
+          "timeoutSeconds": 20,
+          "cap": 1,
+          "expected": "EMPTY"
+        },
+        "atUTC": "2026-10-27T04:24:49.209908+00:00",
+        "noRetry": true
+      },
+      "started": {
+        "pid": 21040,
+        "originalPopenReturned": true,
+        "atUTC": "2026-10-27T04:24:49.216860+00:00"
+      },
+      "originalWaitExit": {
+        "id": "network-name",
+        "ordinal": 3,
+        "pid": 21040,
+        "originalWaitReturned": true,
+        "exitCode": 0,
+        "timedOut": false,
+        "comparisonPassed": true,
+        "startedAtUTC": "2026-10-27T04:24:49.209908+00:00",
+        "endedAtUTC": "2026-10-27T04:24:49.264194+00:00",
+        "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdoutBase64": "",
+      "stderrBase64": "",
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ordinal": "04",
+      "intent": {
+        "query": {
+          "id": "volume-name",
+          "argv": [
+            "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_docker_tool_snapshot_20261026\\docker.exe",
+            "--host",
+            "npipe:////./pipe/dockerDesktopLinuxEngine",
+            "--config",
+            ".cvf/runtime/r139_delegated_reentry_v2_20261027_readiness/docker_config",
+            "volume",
+            "ls",
+            "--filter",
+            "name=ccmai-r139-r4-20261023",
+            "--format",
+            "{{json .Name}}"
+          ],
+          "timeoutSeconds": 20,
+          "cap": 1,
+          "expected": "EMPTY"
+        },
+        "atUTC": "2026-10-27T04:24:49.264853+00:00",
+        "noRetry": true
+      },
+      "started": {
+        "pid": 27344,
+        "originalPopenReturned": true,
+        "atUTC": "2026-10-27T04:24:49.270973+00:00"
+      },
+      "originalWaitExit": {
+        "id": "volume-name",
+        "ordinal": 4,
+        "pid": 27344,
+        "originalWaitReturned": true,
+        "exitCode": 0,
+        "timedOut": false,
+        "comparisonPassed": true,
+        "startedAtUTC": "2026-10-27T04:24:49.264853+00:00",
+        "endedAtUTC": "2026-10-27T04:24:49.319928+00:00",
+        "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdoutBase64": "",
+      "stderrBase64": "",
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ordinal": "05",
+      "intent": {
+        "query": {
+          "id": "vite-port",
+          "argv": [
+            "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+            "-NoLogo",
+            "-NoProfile",
+            "-NonInteractive",
+            "-Command",
+            "$ErrorActionPreference='Stop'; $r139Listeners = @(Get-NetTCPConnection -State Listen -ErrorAction Stop | Where-Object { $_.LocalPort -eq 3519 } | Select-Object -Property LocalAddress,LocalPort,OwningProcess); [pscustomobject]@{ port = 3519; listeners = $r139Listeners } | ConvertTo-Json -Depth 4 -Compress; exit 0"
+          ],
+          "timeoutSeconds": 5,
+          "cap": 1,
+          "expected": {
+            "port": 3519,
+            "listeners": []
+          }
+        },
+        "atUTC": "2026-10-27T04:24:49.320917+00:00",
+        "noRetry": true
+      },
+      "started": {
+        "pid": 12828,
+        "originalPopenReturned": true,
+        "atUTC": "2026-10-27T04:24:49.342110+00:00"
+      },
+      "originalWaitExit": {
+        "id": "vite-port",
+        "ordinal": 5,
+        "pid": 12828,
+        "originalWaitReturned": true,
+        "exitCode": 0,
+        "timedOut": false,
+        "comparisonPassed": true,
+        "startedAtUTC": "2026-10-27T04:24:49.320917+00:00",
+        "endedAtUTC": "2026-10-27T04:24:50.586175+00:00",
+        "stdoutSha256": "55d61307b0bda17caa881370fd0bf6a5b9493d20071280731e7fd4bfba597b6d",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdoutBase64": "eyJwb3J0IjozNTE5LCJsaXN0ZW5lcnMiOltdfQ0K",
+      "stderrBase64": "",
+      "stdoutSha256": "55d61307b0bda17caa881370fd0bf6a5b9493d20071280731e7fd4bfba597b6d",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}
