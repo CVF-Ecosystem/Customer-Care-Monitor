@@ -136,8 +136,8 @@
   "fourthOriginalControllerResult": {
     "pid": 3728,
     "originalPopenReturned": true,
-    "originalWaitReturned": false,
-    "status": "ORIGINAL_CLOCK_STILL_MANAGED",
+    "originalWaitReturned": true,
+    "status": "ORIGINAL_CLOCK_COMPLETED_G0_HOLD_NO_BROWSER",
     "dispatchCommit": "087f81f7955cf739b05b8f109881b4e91d58d129",
     "reservationCommit": "13f4f51fecd9ddc92b494644dc9636af1ccc026c",
     "campaignReservationRef": {
@@ -148,7 +148,18 @@
     "ownedTabs": 0,
     "keyReads": 0,
     "fixtureStarts": 0,
-    "providerCalls": 0
+    "providerCalls": 0,
+    "exitCode": 0,
+    "cutoffObserved": true,
+    "deadlineObserved": true,
+    "originalWaitExitRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/original_wait_exit.json",
+      "sha256": "deae1743f6cd7e93bb54260e0794bc866f78386c785a73ff0bced40f2d08b820"
+    },
+    "finalIndependentHoldReviewRef": {
+      "path": "docs/reviews/R139_CUA_CAMPAIGN_HOLD_2026-10-27.md",
+      "sha256": "62d365e36f1413b9c7252c4d29d6abb05e1999a32fd72429fe72ed46a5ded6d5"
+    }
   },
   "mutableJournalQualification": "Usage journal advanced after committed dispatch snapshot; recipe ledger hash is the immutable Git dispatch-time view, not a current-launch permission or retry."
 }

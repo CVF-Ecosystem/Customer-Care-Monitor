@@ -98,7 +98,8 @@
     "docs/reviews/R139_BOOT_IDENTITY_PRECLOCK_CLOCK_HOLD_REVIEW_2026-10-25.md",
     "docs/reviews/R139_CLOCK_V3_SOURCE_REVIEW_2026-10-26.md",
     "docs/reviews/R139_PINNED_RESUME_CONSOLIDATED_SOURCE_REVIEW_2026-10-26.md",
-    "docs/reviews/R139_V3_ACTIVATION_ENV_SOURCE_REVIEW_2026-10-26.md"
+    "docs/reviews/R139_V3_ACTIVATION_ENV_SOURCE_REVIEW_2026-10-26.md",
+    "docs/reviews/R139_CUA_CAMPAIGN_HOLD_2026-10-27.md"
   ],
   "disposition": "CHANGES_REQUIRED",
   "freeze": "OPEN",
@@ -1328,7 +1329,7 @@
     "independentDecisionReview": "REVIEW_PASS_DECISION_ONLY_QUALIFIED_NO_ACTIVATION"
   },
   "x-r139DelegatedTechnical20261026": {
-    "status": "ACTUAL_G0_HOLD_NO_BROWSER_CLOCK_PENDING",
+    "status": "ACTUAL_G0_HOLD_INDEPENDENTLY_ACCEPTED_CLOCK_COMPLETE",
     "authorityRef": {
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-TECHNICAL-BUDGET-AND-DOCKER-ADOPTION-ADMISSION.json",
       "sha256": "be07b72bdbd35969bd8f29979b06aa1c6d97a79a33deab1d48734d8fb9d25787"
@@ -1357,8 +1358,16 @@
     "providerCalls": 0,
     "ownedTabCreationCalls": 0,
     "originalControllerPid": 3728,
-    "originalWaitReturned": false,
-    "actualOutcome": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/root_current_outcome.json"
+    "originalWaitReturned": true,
+    "actualOutcome": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/root_current_outcome.json",
+    "originalExitCode": 0,
+    "clockCustodyComplete": true,
+    "finalIndependentReviewRef": {
+      "path": "docs/reviews/R139_CUA_CAMPAIGN_HOLD_2026-10-27.md",
+      "sha256": "62d365e36f1413b9c7252c4d29d6abb05e1999a32fd72429fe72ed46a5ded6d5"
+    },
+    "g1g2g3": "OPEN_NOT_RUN",
+    "newRuntimeEffectAdmission": false
   },
   "x-r139DelegatedActualReservation": {
     "status": "RESERVED_CANONICAL_PENDING_GATES",
@@ -1395,5 +1404,11 @@
       "note": "Owner-delegated allocation002 cumulative3→4 and focused lineage18→20; one consolidated custody/metadata repair, no helper tranche."
     }
   ],
-  "x-r139ActualG0Hold": "docs/reviews/R139_CUA_CAMPAIGN_HOLD_2026-10-27.md"
+  "x-r139ActualG0Hold": "docs/reviews/R139_CUA_CAMPAIGN_HOLD_2026-10-27.md",
+  "updatedAt": "2026-10-27",
+  "x-r139ActualG0FinalReviewRef": {
+    "path": "docs/reviews/R139_CUA_CAMPAIGN_HOLD_2026-10-27.md",
+    "sha256": "62d365e36f1413b9c7252c4d29d6abb05e1999a32fd72429fe72ed46a5ded6d5"
+  },
+  "x-r139ActualFinalDisposition": "HOLD_ACCEPTED_BROWSER_UNAVAILABLE_CLOCK_COMPLETE_NOT_FREEZE"
 }

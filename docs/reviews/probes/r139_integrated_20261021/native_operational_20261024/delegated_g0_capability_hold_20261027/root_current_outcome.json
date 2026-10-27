@@ -1,9 +1,9 @@
 {
   "kind": "ROOT_CURRENT_R139_G0_CAPABILITY_HOLD",
-  "status": "HOLD_PENDING_ORIGINAL_CLOCK_EXPIRY",
-  "observedAtUTC": "2026-10-27T04:32:05.967057+00:00",
+  "status": "HOLD_NO_BROWSER_AVAILABLE_ORIGINAL_CLOCK_COMPLETE",
+  "observedAtUTC": "2026-10-27T04:45:04.080563+00:00",
   "originalControllerPid": 3728,
-  "originalWaitReturned": false,
+  "originalWaitReturned": true,
   "controllersUsed": 4,
   "currentControllerCeiling": 4,
   "sourceChecks": 20,
@@ -31,5 +31,15 @@
   "noRetryOrBudgetRefund": true,
   "rootTerminalWritten": true,
   "stopRequestedByUTC": "2026-10-27T04:41:06.802756Z",
-  "deadlineUTC": "2026-10-27T04:44:06.802756Z"
+  "deadlineUTC": "2026-10-27T04:44:06.802756Z",
+  "originalExitCode": 0,
+  "clockCustodyComplete": true,
+  "cleanupCutoffObserved": true,
+  "deadlineObserved": true,
+  "cutoffLateSeconds": 0.0018877999973483384,
+  "deadlineLateSeconds": 0.001867600018158555,
+  "outstandingMetadataChildren": [],
+  "controllerStdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "controllerStderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "productRootAbsent": true
 }

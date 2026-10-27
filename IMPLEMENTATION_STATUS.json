@@ -2730,7 +2730,7 @@
       "viteLaunches": 0
     }
   },
-  "updatedAt": "2026-10-24",
+  "updatedAt": "2026-10-27",
   "x-dispatchReadinessRepair": {
     "status": "R107_BROWSER_VITE_WORKED_PRODUCT_EVIDENCE_PARTIAL",
     "learning": "docs/reviews/learnings/feedback_dispatch_readiness_and_browser_evidence.md",
@@ -4539,7 +4539,7 @@
     "independentDecisionReview": "REVIEW_PASS_DECISION_ONLY_QUALIFIED_NO_ACTIVATION"
   },
   "x-r139DelegatedTechnical20261026": {
-    "status": "ACTUAL_G0_HOLD_NO_BROWSER_CLOCK_PENDING",
+    "status": "ACTUAL_G0_HOLD_INDEPENDENTLY_ACCEPTED_CLOCK_COMPLETE",
     "authorityRef": {
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-TECHNICAL-BUDGET-AND-DOCKER-ADOPTION-ADMISSION.json",
       "sha256": "be07b72bdbd35969bd8f29979b06aa1c6d97a79a33deab1d48734d8fb9d25787"
@@ -4568,8 +4568,16 @@
     "providerCalls": 0,
     "ownedTabCreationCalls": 0,
     "originalControllerPid": 3728,
-    "originalWaitReturned": false,
-    "actualOutcome": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/root_current_outcome.json"
+    "originalWaitReturned": true,
+    "actualOutcome": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/root_current_outcome.json",
+    "originalExitCode": 0,
+    "clockCustodyComplete": true,
+    "finalIndependentReviewRef": {
+      "path": "docs/reviews/R139_CUA_CAMPAIGN_HOLD_2026-10-27.md",
+      "sha256": "62d365e36f1413b9c7252c4d29d6abb05e1999a32fd72429fe72ed46a5ded6d5"
+    },
+    "g1g2g3": "OPEN_NOT_RUN",
+    "newRuntimeEffectAdmission": false
   },
   "x-r139DelegatedActualReservation": {
     "status": "RESERVED_CANONICAL_PENDING_GATES",

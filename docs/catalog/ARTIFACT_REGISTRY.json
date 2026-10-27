@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "updatedAt": "2026-10-25",
+  "updatedAt": "2026-10-27",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
@@ -3922,7 +3922,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "Current actual R139 G0 HOLD No browser available: campaign1/1, service5/5PASS, CUA1; controller4 clock still managed pending terminal receipts; product/key/provider0, independent HOLD review."
+      "description": "Settled R139 actual G0 HOLD: admitted CUA browser unavailable; independent HOLD review, PID3728 original wait exit0 and clock complete; source20/controller4/campaign1/service5PASS/CUA1, product/key/provider0, no retry."
     },
     {
       "id": "r060-work-order",
@@ -38524,6 +38524,27 @@
       "path": "docs/reviews/R139_CUA_CAMPAIGN_HOLD_2026-10-27.md",
       "status": "ACTIVE",
       "description": "R139 actual fourth controller and CUA first-selector capability HOLD evidence; no tab creation, product or provider admission."
+    },
+    {
+      "id": "r139-final-clock-e5134f16c2c1076b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/cleanup_cutoff.json",
+      "status": "ACTIVE",
+      "description": "Actual original R139 G0 HOLD clock cutoff/deadline/wait receipt; no browser/product acceptance."
+    },
+    {
+      "id": "r139-final-clock-22b54e40eaec8b97",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/deadline_expired.json",
+      "status": "ACTIVE",
+      "description": "Actual original R139 G0 HOLD clock cutoff/deadline/wait receipt; no browser/product acceptance."
+    },
+    {
+      "id": "r139-final-clock-709f273e80cb1ce7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/original_wait_exit.json",
+      "status": "ACTIVE",
+      "description": "Actual original R139 G0 HOLD clock cutoff/deadline/wait receipt; no browser/product acceptance."
     }
   ]
 }
