@@ -1,0 +1,97 @@
+{
+  "kind": "ROOT_R139_BROWSER_CAPABILITY_RECHECK",
+  "date": "2026-10-28",
+  "actor": "Root current chat",
+  "userInstruction": "kiểm lại đi",
+  "purpose": "Fresh explicit Root-context browser capability check; prior inventories were in subagent context, not a replay of its failed selector. Pure UI structure/readiness, no AI governance assertion.",
+  "risk": "R1_DIAGNOSTIC_ONLY_WITHIN_PROJECT_R2_CEILING",
+  "projectStatus": "R139 product order remains BUILD_BLOCKED, no G0/campaign/runtime release.",
+  "status": "ROOT_IAB_BASIC_OWNED_LIFECYCLE_OBSERVED_G0_NOT_PROVEN",
+  "provenance": "Caller-recorded faithful summaries of actual Root tool calls/visible outputs in this chat; not authenticated native export. Screenshot viewed inline only, not exported/hashbound.",
+  "events": [
+    {
+      "ordinal": 1,
+      "method": "cua.getState()",
+      "result": "Root browsers: IAB id2 tabs[], MCP Apps id1 tabs[]. Native Google Chrome app idChrome running, one window. Unrelated app/window titles omitted.",
+      "wallSecondsForInvocation": 4.652
+    },
+    {
+      "ordinal": 2,
+      "method": "cua.getBrowser({id:\"2\"})",
+      "result": "Selected ChatGPT in-app browser, typeiab, ID2; actual browser API documentation returned.",
+      "wallSecondsForInvocation": 0.1453
+    },
+    {
+      "ordinal": 3,
+      "method": "cua.createBrowserTab(\"2\",\"about:blank\",{visible:false})",
+      "result": "Owned tab1 created; title/about:blank URL/about:blank, AXWebArea observed.",
+      "wallSecondsForInvocation": 2.8377
+    },
+    {
+      "ordinal": 4,
+      "method": "rootBrowserProbeTab.goto(\"about:blank#r139-root-browser-check-20261028\")",
+      "result": "DENIED_BY_BROWSER_URL_POLICY: protocol not allowed; only http/https allowed. No workaround or further navigation attempted.",
+      "wallSecondsForInvocation": 0.0614,
+      "followingPlannedGetAXState": "NOT_EXECUTED_BECAUSE_GOTO_THREW_NOT_COUNTED"
+    },
+    {
+      "ordinal": 5,
+      "method": "rootBrowserProbeTab.getAXState()",
+      "result": "Owned tab1 remained about:blank, AXWebArea observed.",
+      "invocationGroup": "read_capture"
+    },
+    {
+      "ordinal": 6,
+      "method": "rootBrowserProbeTab.getScreenshot()",
+      "result": "Actual tool emitted blank viewport image1280x720. No durable image-byte export or authenticated capture artifact claimed.",
+      "invocationGroup": "read_capture",
+      "wallSecondsForInvocationGroup": 0.1928
+    },
+    {
+      "ordinal": 7,
+      "method": "rootBrowserProbeTab.close()",
+      "result": "Awaited owned-tab close returned successfully (void); no physical-close timestamp inferred.",
+      "invocationGroup": "close_final_inventory"
+    },
+    {
+      "ordinal": 8,
+      "method": "cua.listTabs({browser:\"2\"})",
+      "result": "[]",
+      "invocationGroup": "close_final_inventory",
+      "wallSecondsForInvocationGroup": 0.1448
+    }
+  ],
+  "browserMethodsThisDiagnostic": 8,
+  "priorCumulativeBrowserMethods": 5,
+  "newCumulativeBrowserMethods": 13,
+  "counting": "Counts explicit documented outer CUA methods, including denied goto and batched read/capture/close/list calls. The getAXState after denied goto did not execute and is not counted. Automatic initial state bundled in create is not a separate explicit client call.",
+  "ownedTabsCreated": 1,
+  "ownedTabId": "1",
+  "ownedTabClosed": true,
+  "baselineTabs": [],
+  "finalTabs": [],
+  "actualPageContentMutations": 0,
+  "controlledNonceNavigation": "DENIED_NOT_PROVEN",
+  "captureControlScope": "Blank about:blank only; no application/local-origin/navigation/input/handoff/independent observer proof.",
+  "rootIabConnection": "OBSERVED_AVAILABLE_ID2",
+  "nativeChromeApp": "OBSERVED_RUNNING_IN_OS_INVENTORY_ONLY",
+  "chromeExtensionOrCDPConnection": "NOT_LISTED_IN_ROOT_BROWSER_INVENTORY",
+  "chromeNativeUiControl": "NOT_ATTEMPTED",
+  "policyDenial": "Retained; no alternate browser surface, indirect execution or policy workaround attempted. Read/capture/close of already-created blank tab required no blocked navigation.",
+  "newProductCampaigns": 0,
+  "newControllers": 0,
+  "newServiceQueries": 0,
+  "newFixtureStarts": 0,
+  "newKeyReads": 0,
+  "newProviderCalls": 0,
+  "productSourceOrBinaryEdits": 0,
+  "inheritedSourceLineage": 27,
+  "historicalControllers": 4,
+  "historicalCampaigns": 1,
+  "historicalServiceQueries": 5,
+  "packagedDocsRetained": 2,
+  "publicPricingReadsRetained": 2,
+  "unknownHistory": "ALL_PRESERVED_NOT_REFUNDED",
+  "routingCorrection": "Prior global wording that Root has no browser was unsupported and is contradicted by this direct Root observation. Subagent empty inventory remains valid in its own context; Gemini tool absence remains worker-reported. Root is a demonstrated candidate browser executor, with independent review/observer contract still unresolved.",
+  "nextAllowedBoundary": "Plan Root browser execution with independent reviewers using actual available tools; explicitly review any observer-contract/actor binding changes. Do not invent cross-actor browser access or claim G0/product pass from this diagnostic."
+}

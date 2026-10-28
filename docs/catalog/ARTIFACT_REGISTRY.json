@@ -38867,6 +38867,20 @@
       "path": "docs/reviews/R139_BROWSER_TRANSFER_RETURN_ROOT_REVIEW_2026-10-28.md",
       "status": "ACTIVE",
       "description": "R139 browser-transfer documentary HOLD and independent qualified review; source pins verified, no runtime test or fresh admission."
+    },
+    {
+      "id": "r139-root-recheck-17b1f5fa7e86dde7",
+      "family": "continuity",
+      "path": "docs/reviews/R139_ROOT_BROWSER_RECHECK_2026-10-28.md",
+      "status": "ACTIVE",
+      "description": "Direct Root IAB create/read/capture/close capability observed; scoped correction to subagent-only HOLD, no R139 G0/runtime/provider acceptance."
+    },
+    {
+      "id": "r139-root-recheck-a2a2b2a7be93d030",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/root_browser_recheck_20261028/root_observation.json",
+      "status": "ACTIVE",
+      "description": "Direct Root IAB create/read/capture/close capability observed; scoped correction to subagent-only HOLD, no R139 G0/runtime/provider acceptance."
     }
   ]
 }

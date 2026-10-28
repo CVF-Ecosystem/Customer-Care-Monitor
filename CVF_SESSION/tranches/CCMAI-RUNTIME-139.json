@@ -1441,5 +1441,12 @@
     "status": "DOCUMENTARY_HOLD_ONLY",
     "review": "docs/reviews/R139_BROWSER_TRANSFER_RETURN_ROOT_REVIEW_2026-10-28.md",
     "newEffects": 0
+  },
+  "x-r139RootBrowserRecheck20261028": {
+    "status": "ROOT_IAB_BASIC_OWNED_LIFECYCLE_OBSERVED_G0_NOT_PROVEN",
+    "review": "docs/reviews/R139_ROOT_BROWSER_RECHECK_2026-10-28.md",
+    "newCuaMethods": 8,
+    "cumulativeBrowserMethods": 13,
+    "productRuntimeRelease": false
   }
 }

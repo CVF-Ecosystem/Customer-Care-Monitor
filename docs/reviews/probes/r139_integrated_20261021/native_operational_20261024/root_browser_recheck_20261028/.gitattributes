@@ -1,0 +1,2 @@
+# Preserve caller-recorded diagnostic bytes in this new owned family only.
+* -text

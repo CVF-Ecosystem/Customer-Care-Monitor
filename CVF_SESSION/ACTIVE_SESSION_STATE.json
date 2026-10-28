@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 HOLD_ACTOR_BROWSER_INVENTORY_EMPTY: actual observer-local cua.getState succeeded with browsers:[] under ce463e26; one inventory attempt spent, conditional producer NOT_RUN. No alternate browser ID returned; do not repeat inventory/selection without actual connection-state change. Preserve failedselector1, source27, cumulative browser methods5 plus docs2/pricingreads2, historicalcontrollers4/campaign1/service5 and all UNKNOWNs. Need supported browser connections exposed to actual distinct observer/producer roles and fresh independently reviewed dispatch before continuation. No page/newcampaign/controller/adaptercheck/generator/boot/fixture/key/provider use. G0/G1/G2/G3 and product B blocked; full M3/FREEZE OPEN; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 product HOLD remains, but Root direct browser recheck proves IAB2 owned blank-tab create/read/capture/close with finaltabs[]. Earlier subagent browsers:[] is not Root absence. New explicit Root methods8 (one policy-denied about:blank# goto, no bypass) above prior5 gives cumulative13; docs2/pricing2/source27/historicalcontrollers4/campaign1/service5/UNKNOWNs preserved. Prepare one consolidated Root-browser execution route with independent source/evidence review and explicit treatment of existing distinct-browser-observer contract; no fake actor access or silent validator weakening. Actual application/local-origin/input/handoff/durable capture/G0 unproved. Product campaign/controller/adapterchecks/generator/boot/fixture/key/provider remain NOT_RUN/HOLD until reviewed committed applicable release. Gemini draft return is separate uncommitted intake. Full M3/FREEZE OPEN; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / independent diagnostic REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol observer stopped after empty actor inventory; Luna conditional producer NOT_RUN; runtime effects HOLD pending actual browser-connection state change",
+  "activeRole": "Root ORCHESTRATOR / directly demonstrated IAB browser-executor candidate / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna independent diagnostic reviewer; Sol/source workers and product/runtime effects unreleased",
   "updatedAt": "2026-10-28",
   "x-resolvedCoreCommit": "b8ead4f0d1bf9224338a206b2abcd893ec1801b1",
   "x-ownerRoadmapDiscipline": {
@@ -3809,5 +3809,14 @@
     "capability": "WORKER_REPORTED_NO_CUA_NOT_INDEPENDENTLY_OBSERVED",
     "runtimeTests": "NOT_RUN",
     "newAdmission": false
+  },
+  "x-r139RootBrowserRecheck20261028": {
+    "status": "ROOT_IAB_BASIC_OWNED_LIFECYCLE_OBSERVED_G0_NOT_PROVEN",
+    "review": "docs/reviews/R139_ROOT_BROWSER_RECHECK_2026-10-28.md",
+    "receipt": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/root_browser_recheck_20261028/root_observation.json",
+    "rootIabAvailable": true,
+    "newExplicitCuaMethods": 8,
+    "cumulativeBrowserMethods": 13,
+    "newProductCampaigns": 0
   }
 }

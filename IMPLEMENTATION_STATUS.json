@@ -14,7 +14,9 @@
     "inventoryReview": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/context_inventory/root_inventory_review.json",
     "newActorInventoryAttempts": 1,
     "browserTransferReview": "docs/reviews/R139_BROWSER_TRANSFER_RETURN_ROOT_REVIEW_2026-10-28.md",
-    "browserTransferDisposition": "DOCUMENTARY_HOLD_ONLY_NO_RUNTIME_TEST"
+    "browserTransferDisposition": "DOCUMENTARY_HOLD_ONLY_NO_RUNTIME_TEST",
+    "rootBrowserRecheck": "docs/reviews/R139_ROOT_BROWSER_RECHECK_2026-10-28.md",
+    "rootBrowserAvailability": "DIRECT_ROOT_IAB_BLANK_TAB_READ_CAPTURE_CLOSE_OBSERVED_PRODUCT_STILL_HOLD"
   },
   "schemaVersion": "1.0",
   "x-roadmapTracking": {
