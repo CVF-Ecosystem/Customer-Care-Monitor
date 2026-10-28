@@ -22,14 +22,15 @@
     "controllers": 0,
     "campaigns": 0,
     "serviceQueries": 0,
-    "actorSelections": 0,
+    "actorSelections": 1,
     "focusedAdapterProcesses": 0,
     "metadataGenerations": 0,
     "pageCreates": 0,
     "fixture": 0,
     "key": 0,
     "provider": 0,
-    "hostBootQueries": 0
+    "hostBootQueries": 0,
+    "pricingReads": 2
   },
   "allocations": [
     {
@@ -44,30 +45,60 @@
   "preparationSlots": [
     {
       "id": "producer_selector",
-      "status": "NOT_STARTED"
+      "status": "NOT_RUN_NO_REDUNDANT_PROBE",
+      "dispatchCommit": "f26b356d",
+      "actualTask": "/root/r139_preparation_reviewer",
+      "attempted": 0,
+      "evidence": {
+        "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/actors/producer_not_run.txt",
+        "sha256": "dac0c1d38467417d81af982e7682f05b4a3d5c6fb089d062c2fe21a34ec78e27"
+      }
     },
     {
       "id": "observer_selector",
-      "status": "NOT_STARTED"
+      "status": "FAILED_BROWSER_NOT_AVAILABLE_ATTEMPT_SPENT",
+      "dispatchCommit": "f26b356d",
+      "actualTask": "/root/r139_custody_worker",
+      "attempted": 1,
+      "evidence": {
+        "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/actors/observer_selector.json",
+        "sha256": "4a5d55386e2d6a85c74305ae1ca169741392dc5dcf6d9fc46bb271161a1affb0"
+      }
     },
     {
       "id": "worker_adapter",
-      "status": "NOT_STARTED"
+      "status": "NOT_RUN_HELD_BROWSER_PREREQUISITE",
+      "attempted": 0
     },
     {
       "id": "root_adapter",
-      "status": "NOT_STARTED"
+      "status": "NOT_RUN_HELD_BROWSER_PREREQUISITE",
+      "attempted": 0
     },
     {
       "id": "metadata_generation",
-      "status": "NOT_STARTED"
+      "status": "NOT_RUN_HELD_BROWSER_PREREQUISITE",
+      "attempted": 0
     },
     {
       "id": "root_host_boot_query",
-      "status": "NOT_STARTED"
+      "status": "NOT_RUN_HELD_BROWSER_PREREQUISITE",
+      "attempted": 0
     }
   ],
   "freshNonce": "53e255cb7ed80e58092d66905a40bf5a",
   "actualControllerAdmissionNow": false,
-  "actualPaidRuntimeAdmissionNow": false
+  "actualPaidRuntimeAdmissionNow": false,
+  "pricingAllocation": {
+    "maxPublicDocumentationRequests": 2,
+    "usedBefore": 0,
+    "firstAttemptReserved": true,
+    "providerCompletionCalls": 0,
+    "source": "official Alibaba public docs only",
+    "secondAttemptReserved": true,
+    "status": "TWO_PUBLIC_READS_COMPLETE_NO_PROVIDER_CALL"
+  },
+  "currentDisposition": "HOLD_PRECLOCK_BROWSER_UNAVAILABLE_NO_NEW_CAMPAIGN",
+  "cumulativeBrowserMethodsObserved": 4,
+  "separatePackagedDocumentationReads": 2
 }

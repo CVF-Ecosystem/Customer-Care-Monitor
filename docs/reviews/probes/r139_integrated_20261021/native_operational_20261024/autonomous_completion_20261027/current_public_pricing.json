@@ -1,0 +1,30 @@
+{
+  "kind": "R139_CURRENT_PUBLIC_PRICING_READINESS",
+  "status": "PUBLIC_MODEL_TARIFF_VERIFIED_ENDPOINT_BINDING_STILL_REQUIRED",
+  "checkedClientDate": "2026-10-28",
+  "recordedAtUTC": "2026-10-28T12:38:00.542658+00:00",
+  "provider": "alibaba_maas",
+  "model": "qwen3.7-flash",
+  "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+  "sourceTitle": "Alibaba Cloud Model Studio:qwen3.7-flash",
+  "sourceLastUpdated": "2026-10-11",
+  "readRequests": 2,
+  "readSequence": [
+    "Official-domain search for exact model pricing",
+    "Open exact official model information page"
+  ],
+  "currency": "USD",
+  "maximumOrdinaryTokenTariffAcrossListedScopes": {
+    "inputPerMillionTokens": "0.2",
+    "outputPerMillionTokens": "0.8"
+  },
+  "conservativeBound": {
+    "inputTokens": 1000000,
+    "completionTokens": 768,
+    "calculation": "1000000*0.2/1000000 + 768*0.8/1000000",
+    "maximumUSD": "0.2006144",
+    "admittedMaximumUSD": "1",
+    "basis": "Uses whole model context as conservative input allowance, exceeding request<=6000byte contract; no byte-to-token conversion assumption. Standard text token inference only, thinkingfalse, no optional paid tools/cache creation/batch/provisioning."
+  },
+  "limits": "Exact admitted endpoint/credential/model binding remains separately verified after G0 before key/provider release. Promotional prices/actual usage/billing not asserted. No completion request, provider smoke, key or customer data sent."
+}

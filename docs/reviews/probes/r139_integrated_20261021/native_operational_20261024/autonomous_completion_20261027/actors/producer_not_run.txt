@@ -1,0 +1,2 @@
+Caller-recorded original collaboration return from /root/r139_preparation_reviewer, 2026-10-28.
+NOT_RUN_NO_REDUNDANT_PROBE. The producer selector had not started when Root reported the observer Browser is not available:2 result. No getBrowser call, producer role transition, page operation, test or other runtime action occurred. Canonical state and committed prep7fae/child094a were rehydrated/verified. This is a Root-preserved worker message, not a CUA return or browser capability proof.

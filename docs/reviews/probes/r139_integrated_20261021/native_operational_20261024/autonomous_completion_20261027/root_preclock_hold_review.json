@@ -1,0 +1,70 @@
+{
+  "kind": "ROOT_R139_PRECLOCK_BROWSER_CAPABILITY_REVIEW",
+  "status": "HOLD_BROWSER_UNAVAILABLE_NO_NEW_CAMPAIGN",
+  "date": "2026-10-28",
+  "reviewer": "Root independent of observer/source metadata worker Sol",
+  "reviewScope": "Caller-qualified original selector error record and worker returns; Root did not independently call unavailable browser or claim authenticated export.",
+  "preparationCommit": "f26b356d010ba7f729f01edb3768a4603f7c8e5b",
+  "acceptedChildBuildPinsSha256": "094a0a3678571c8ed03c2a278e50e352b645e71cd972fdc841fed9c3cacb065e",
+  "observerSelectorRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/actors/observer_selector.json",
+    "sha256": "4a5d55386e2d6a85c74305ae1ca169741392dc5dcf6d9fc46bb271161a1affb0"
+  },
+  "observerOriginalExcerptRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/actors/observer_selector_original.txt",
+    "sha256": "55ced74afcd30543c31fd6955fe62df975a11d37c749423752a1448f875c6265"
+  },
+  "producerNotRunRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/actors/producer_not_run.txt",
+    "sha256": "dac0c1d38467417d81af982e7682f05b4a3d5c6fb089d062c2fe21a34ec78e27"
+  },
+  "failure": "Actual observer getBrowser({id:\"2\"}) returned Browser is not available: 2; generic API documentation is not a successful connection. No usable browser object or browserSessionId established.",
+  "newAttempts": {
+    "observerSelector": 1,
+    "producerSelector": 0,
+    "retries": 0,
+    "pages": 0,
+    "inertAdapterChecks": 0,
+    "metadataGeneration": 0,
+    "hostBootQuery": 0,
+    "controller": 0,
+    "campaign": 0,
+    "serviceQueries": 0,
+    "fixture": 0,
+    "key": 0,
+    "provider": 0,
+    "publicPricingReads": 2
+  },
+  "retained": {
+    "sourceProcessLineage": 27,
+    "controllers": 4,
+    "campaigns": 1,
+    "historicalServiceQueries": 5,
+    "cumulativeBrowserMethods": 4,
+    "packagedDocs": 2,
+    "paidUnknownHistory": "UNCHANGED_NOT_REFUNDED"
+  },
+  "sourceDisposition": "Source components remain accepted; draft custody adapter has static safety clearance only, inert tests NOT_RUN. Recipe/runtime draft generation NOT_RUN, technical/controller release not issued.",
+  "milestoneDisposition": "G0 new campaign NOT_RUN_PRECLOCK_CAPABILITY_HOLD; G1/G2/G3 NOT_RUN; bounded M3-05/M3-08/full M3 acceptance remains OPEN. No governance/runtime/product PASS or FREEZE.",
+  "nextRequiredCapability": "A genuinely connected browser runtime accessible to distinct producer/observer roles, with actual owned-page/capture/control/handoff/close evidence. Preserve same R139 order and accepted hashes; fresh explicit applicable dispatch before another selector, never transfer Root old capability or automatically replay failure.",
+  "publicPricingReadinessRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/current_public_pricing.json",
+    "sha256": "09cd66617d7acbdd29b9f8ec149ab09814cf937f60deaea2da5def901c38697c"
+  },
+  "claimBoundary": "Read-only technical capability failure and static preparation only. No claim that CVF controls AI behavior; no real provider call made.",
+  "finalStaticVerification": {
+    "legacyPreflight": "PASS_7_OF_7",
+    "profilePreCommit": "PASS_MANDATORY_FAILURES_0",
+    "closeability": "NOT_APPLICABLE_WITH_REASON_BLOCKED_ORDER_NOT_CHECKED",
+    "checkedProfileControls": [
+      "INST",
+      "CONT",
+      "RANGE",
+      "ROLE",
+      "CLAIM"
+    ],
+    "gateUnits": "89_PASS_51.219_SECONDS_REUSED",
+    "acceptedSource13BinaryBackendFrontendTrees": "UNCHANGED_VERIFIED_NO_TEST_REPLAY",
+    "latestCoreDoctorOrFreshness": "NOT_CLAIMED"
+  }
+}

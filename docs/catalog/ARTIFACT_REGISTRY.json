@@ -4069,7 +4069,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "R139 native-close source components accepted at lineage27; actual IAB2 inventory/docs, child pins and custody preparation next; old G0 HOLD/spent results retained, product runtime unreleased."
+      "description": "R139 actual observer browser unavailable; preparation/source retained, newcampaign0, product blocked pending connected distinct actors; old G0 HOLD and spent results preserved."
     },
     {
       "id": "r060-work-order",
@@ -38762,6 +38762,41 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/root_adapter_static_clearance.json",
       "status": "ACTIVE",
       "description": "Independent static import/predicate review permits two bounded inert adapter checks; no actual check or runtime result."
+    },
+    {
+      "id": "r139-actual-preclock-de3216ae55f28b9c",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/current_public_pricing.json",
+      "status": "ACTIVE",
+      "description": "R139 actual preclock browser capability HOLD and public tariff readiness; no new campaign, fixture, key or provider call."
+    },
+    {
+      "id": "r139-actual-preclock-6c510490ed39f97f",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/root_preclock_hold_review.json",
+      "status": "ACTIVE",
+      "description": "R139 actual preclock browser capability HOLD and public tariff readiness; no new campaign, fixture, key or provider call."
+    },
+    {
+      "id": "r139-actual-preclock-c6fb732daf284c5a",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/actors/observer_selector.json",
+      "status": "ACTIVE",
+      "description": "R139 actual preclock browser capability HOLD and public tariff readiness; no new campaign, fixture, key or provider call."
+    },
+    {
+      "id": "r139-actual-preclock-bd5547e3bb13cf09",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/actors/observer_selector_original.txt",
+      "status": "ACTIVE",
+      "description": "R139 actual preclock browser capability HOLD and public tariff readiness; no new campaign, fixture, key or provider call."
+    },
+    {
+      "id": "r139-actual-preclock-08ba279b883f68de",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/actors/producer_not_run.txt",
+      "status": "ACTIVE",
+      "description": "R139 actual preclock browser capability HOLD and public tariff readiness; no new campaign, fixture, key or provider call."
     }
   ]
 }

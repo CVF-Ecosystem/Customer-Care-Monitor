@@ -1,6 +1,6 @@
 # R139 — one integrated source-bound G0 / G1 / G2 execution proof
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 Risk: R2
 Worker: Sol Medium /root/r139_autonomous_route (native-close validator repair and bounded test isolation, then fresh custody adapter/metadata); Root (admitted no-page preclock selection); browser/product workers unreleased
 Reviewer: Root (independent Sol metadata/source review); Luna Max /root/r139_completion_admission_review (independent Root completion admission review); historical reviewers retained in dated sections
@@ -14,7 +14,7 @@ Current continuation: the Owner autonomous discovery instruction below governs o
 
 ## R139 delegated actual reservation — 2026-10-27T04:24:06.802756Z
 
-CCMAI-RUNTIME-139 native-close source components accepted at lineage27 and material commit fc4bbe01; child accepted pins094a verified. Finish independently reviewed preparation grant and custody bindings, commit then actual distinct producer/observer no-page IAB2 selections and two inert adapter checks; one DRAFT metadata generation after complete actual inputs. No source/Go/clock suite replay. Preserve historical controllers4/campaign1/service5 and UNKNOWNs; additional controller1/campaign1 remain unreleased. Fresh G0 and separate concrete Runtime Effect Admission gate fixture/key/provider1<=USD1 under1200/+1020. Product B blocked, full M3/FREEZE OPEN; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 HOLD_PRECLOCK_BROWSER_UNAVAILABLE: actual Sol observer selector at preparation commit f26b356d returned Browser is not available:2; attempt1 spent, producer NOT_RUN_NO_REDUNDANT_PROBE. Child pins094a/source27 retained; custody adapter static-reviewed only, inert checks/generator/hostBoot/controller/newcampaign0. Public pricing reads2 complete; no fixture/key/provider call. Preserve historical controllers4/campaign1/service5 and all UNKNOWNs, cumulative browser methods4 plus packageddocs2. Continue same R139 only when a genuinely connected distinct-actor browser runtime is available and fresh applicable dispatch is reviewed; no automatic retry or capability transfer. G0/G1/G2/G3 and product B blocked, full M3/FREEZE OPEN; Facebook/Zalo OA parked.
 
 
 ## Historical superseded boot-identity v2 prelaunch clock HOLD — 2026-10-25 (superseded by settled 2026-10-27 result)

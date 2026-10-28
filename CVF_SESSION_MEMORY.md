@@ -6,7 +6,7 @@ Memory class: POINTER_RECORD
 
 ## R139 delegated actual reservation — 2026-10-27T04:24:06.802756Z
 
-CCMAI-RUNTIME-139 native-close source components accepted at lineage27 and material commit fc4bbe01; child accepted pins094a verified. Finish independently reviewed preparation grant and custody bindings, commit then actual distinct producer/observer no-page IAB2 selections and two inert adapter checks; one DRAFT metadata generation after complete actual inputs. No source/Go/clock suite replay. Preserve historical controllers4/campaign1/service5 and UNKNOWNs; additional controller1/campaign1 remain unreleased. Fresh G0 and separate concrete Runtime Effect Admission gate fixture/key/provider1<=USD1 under1200/+1020. Product B blocked, full M3/FREEZE OPEN; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 HOLD_PRECLOCK_BROWSER_UNAVAILABLE: actual Sol observer selector at preparation commit f26b356d returned Browser is not available:2; attempt1 spent, producer NOT_RUN_NO_REDUNDANT_PROBE. Child pins094a/source27 retained; custody adapter static-reviewed only, inert checks/generator/hostBoot/controller/newcampaign0. Public pricing reads2 complete; no fixture/key/provider call. Preserve historical controllers4/campaign1/service5 and all UNKNOWNs, cumulative browser methods4 plus packageddocs2. Continue same R139 only when a genuinely connected distinct-actor browser runtime is available and fresh applicable dispatch is reviewed; no automatic retry or capability transfer. G0/G1/G2/G3 and product B blocked, full M3/FREEZE OPEN; Facebook/Zalo OA parked.
 
 
 ## Mandatory standing Owner directive — apply without reminders
@@ -24,9 +24,9 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
 
-CCMAI-RUNTIME-139 native-close source components accepted at lineage27 and material commit fc4bbe01; child accepted pins094a verified. Finish independently reviewed preparation grant and custody bindings, commit then actual distinct producer/observer no-page IAB2 selections and two inert adapter checks; one DRAFT metadata generation after complete actual inputs. No source/Go/clock suite replay. Preserve historical controllers4/campaign1/service5 and UNKNOWNs; additional controller1/campaign1 remain unreleased. Fresh G0 and separate concrete Runtime Effect Admission gate fixture/key/provider1<=USD1 under1200/+1020. Product B blocked, full M3/FREEZE OPEN; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 HOLD_PRECLOCK_BROWSER_UNAVAILABLE: actual Sol observer selector at preparation commit f26b356d returned Browser is not available:2; attempt1 spent, producer NOT_RUN_NO_REDUNDANT_PROBE. Child pins094a/source27 retained; custody adapter static-reviewed only, inert checks/generator/hostBoot/controller/newcampaign0. Public pricing reads2 complete; no fixture/key/provider call. Preserve historical controllers4/campaign1/service5 and all UNKNOWNs, cumulative browser methods4 plus packageddocs2. Continue same R139 only when a genuinely connected distinct-actor browser runtime is available and fresh applicable dispatch is reviewed; no automatic retry or capability transfer. G0/G1/G2/G3 and product B blocked, full M3/FREEZE OPEN; Facebook/Zalo OA parked.
 
-Root ORCHESTRATOR / independent source REVIEWER / COMMIT_STEWARD; Sol custody metadata worker /root/r139_custody_worker; Luna independent admission reviewer /root/r139_preparation_reviewer; browser/product effects pending committed release
+Root ORCHESTRATOR / independent capability REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol observer stopped after one failed selector; Luna producer NOT_RUN; all remaining preparation and runtime effects HOLD
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

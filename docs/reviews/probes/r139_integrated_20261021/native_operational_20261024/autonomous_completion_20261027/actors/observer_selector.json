@@ -1,0 +1,33 @@
+{
+  "kind": "R139_PRECLOCK_SELECTOR_CALLER_RECORD",
+  "actorRole": "cuaObserver",
+  "collaborationTaskId": "/root/r139_custody_worker",
+  "campaignNonce": "53e255cb7ed80e58092d66905a40bf5a",
+  "sourceCommit": "fc4bbe01f88718e41904498bb8ab54d68f094583",
+  "acceptedBuildPinsSha256": "094a0a3678571c8ed03c2a278e50e352b645e71cd972fdc841fed9c3cacb065e",
+  "releaseCommit": "f26b356d010ba7f729f01edb3768a4603f7c8e5b",
+  "browserId": "2",
+  "method": "cua.getBrowser({id:\"2\"})",
+  "status": "HOLD_BROWSER_NOT_AVAILABLE",
+  "pageOperations": 0,
+  "callerQualified": true,
+  "originalToolReplyRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/actors/observer_selector_original.txt",
+    "sha256": "55ced74afcd30543c31fd6955fe62df975a11d37c749423752a1448f875c6265"
+  },
+  "originalToolReplyScope": "Faithful caller-visible error excerpt; generic documentation omitted; not authenticated native export",
+  "resultText": "Browser is not available: 2",
+  "genericDocumentationFollowed": true,
+  "usableBrowserObjectReturned": false,
+  "browserConnection": "UNKNOWN",
+  "browserSessionId": null,
+  "browserSessionIdBasis": "No browser session identifier returned; none inferred",
+  "selectionsUsed": 1,
+  "retry": 0,
+  "campaignReserved": false,
+  "campaignEffectsObserved": 0,
+  "inertTestsRun": 0,
+  "elapsedToolWallSeconds": 16.1056,
+  "recordedAtUTC": "2026-10-28T12:38:44.2281423Z",
+  "recordedTimeQualification": "Record creation time, not asserted exact selection action time"
+}

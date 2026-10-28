@@ -1,0 +1,12 @@
+Caller-qualified excerpt of the actual mcp__cua_repl.js tool-visible return.
+This is a faithful text excerpt, not an authenticated native export or complete tool transcript.
+
+Actual invocation:
+var r139ObserverBrowser = await cua.getBrowser({id:"2"});
+
+Exact initial result text:
+Browser is not available: 2
+
+The return continued with generic Computer Use API and confirmation documentation. It did not return browser-specific identity, selected browser documentation, a usable browser object, browserSessionId, or a successful selection. No additional API, retry, page operation or test followed.
+Tool-reported wall time: 16.1056 seconds.
+Caller: /root/r139_custody_worker, cuaObserver.
