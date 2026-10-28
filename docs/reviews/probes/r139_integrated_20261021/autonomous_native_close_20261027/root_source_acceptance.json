@@ -1,0 +1,49 @@
+{
+  "kind": "ROOT_INDEPENDENT_R139_NATIVE_CLOSE_SOURCE_ACCEPTANCE",
+  "status": "REVIEW_PASS_SOURCE_COMPONENTS_ONLY",
+  "worker": "Sol /root/r139_autonomous_route",
+  "reviewer": "Root",
+  "atUTC": "2026-10-27T11:12:14.719447+00:00",
+  "finalHashes": {
+    "scripts/r139_execution_supervisor.py": "9ee7f988b5a27495fd4bd4e72975f0b2a583b8e33cea49c51ac5189285f44c64",
+    "scripts/tests/test_r139_execution_supervisor.py": "4bbd3abb54646a9bcaa691c8b29ccf49f470539475a2a87732b77e2790be2283",
+    "backend/api/handlers/intervention_execution_browser_test.go": "4e90a7225f6fc663a3dc3493b3570bdfdc9969da0b43d70445273170c41f899d",
+    "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/test_native_tool_close.py": "5cbeba0c6e4f95c108bb09c42e47afacb6bc27851da52abb556614c294b5ee5a"
+  },
+  "binary": {
+    "path": ".cvf/runtime/r139_autonomous_native_close_20261027/handlers.test.exe",
+    "sha256": "1de2ac02c8b0fa5e135a52de38feddd597d3909705c0f9d06274c9f694b10c98",
+    "size": 59611648
+  },
+  "sourceChangeRows": [
+    "scripts/r139_execution_supervisor.py",
+    "backend/api/handlers/intervention_execution_browser_test.go"
+  ],
+  "legacyTestRestored": true,
+  "newProofTestSeparateFromSource13": true,
+  "accounting": {
+    "historicalProcessesRetained": 20,
+    "nativeImplementationProcesses": 5,
+    "testIsolationProcesses": 2,
+    "totalCountedLineage": 27,
+    "newProcessesPass": 7,
+    "fail": 0,
+    "skip": 0
+  },
+  "reviewedEvidence": [
+    "root_precheck_audit.json",
+    "root_component_review.json",
+    "root_isolation_precheck.json",
+    "allocation_ledger.json",
+    "isolation_allocation_ledger.json",
+    "worker_return.json"
+  ],
+  "rootFindingDisposition": {
+    "F1": "Future deadline parsing corrected before tests",
+    "F2": "Action aggregate chronology corrected before tests",
+    "F3": "Exact legacy test-file restore and isolated proof preserve clock receipt test hash; two explicit Python PASS, no Go/clock replay"
+  },
+  "evidenceLimits": "All original waits/raw hashes/source/binary verified. Native-close parser/receipt components only; real tab close, new campaign, fixture/key/provider not run. Old failures/UNKNOWNs retained, no source quota reset.",
+  "next": "Material commit, Root child accepted pins parent6b with inherited oldclock refs, exact final custody adapter and actor readiness before one fresh campaign.",
+  "claims": "No AI-governance/runtime/product/M3/FREEZE/CI/deployment acceptance."
+}

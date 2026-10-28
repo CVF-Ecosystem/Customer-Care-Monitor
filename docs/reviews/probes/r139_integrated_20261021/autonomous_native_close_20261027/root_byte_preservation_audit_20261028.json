@@ -1,0 +1,209 @@
+{
+  "kind": "ROOT_SCOPED_STAGED_BYTE_PRESERVATION_AUDIT",
+  "dateLocal": "2026-10-28",
+  "atUTC": "2026-10-28T09:52:54.073318+00:00",
+  "independentReviewerVerdict": "Luna PASS_SCOPED_METADATA_BYTE_PRESERVATION",
+  "comparisons": [
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/.gitattributes",
+      "sha256": "1ac74dc42b047e2d45027fd4686d264e2ace86d222b9a5c5cf5900162bd0a83b"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/allocation_ledger.json",
+      "sha256": "0a94f475501ea315b4cdd4cf67fe46e1a890c003f6a638788bd0cf5d1885c14c"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/isolation_allocation_ledger.json",
+      "sha256": "7cf96ac0024c9aa97828e30d981f331ba0197f914820e7b5e0eeb48591214390"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_component_review.json",
+      "sha256": "1d3eac1dc93603174204554aa2831acb495b3880eb2731adb3ccc5435865ebbb"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_isolation_precheck.json",
+      "sha256": "a8d7559a64943e544bc36604db20c59dd29aa4c8ad53c437b78045f67ae5a13d"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_launcher_binding.json",
+      "sha256": "1c15004c951f3ab1b3170acf166adc91408527d22e477339fa372410681597ed"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_precheck_audit.json",
+      "sha256": "348ccc46d3a1cc035f11bbbc9c29f11b81086a13548547209dbc808230b53791"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_source_acceptance.json",
+      "sha256": "124ba02d8a13a88f09d889abaabde7165bda956bd0a058c6802ea987369acec6"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/test_native_tool_close.py",
+      "sha256": "5cbeba0c6e4f95c108bb09c42e47afacb6bc27851da52abb556614c294b5ee5a"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_return.json",
+      "sha256": "2bb1ebd73cc5e1958ea5d9f42e34e8af4d5ede0dc3352193c4b5b3677aee8af3"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_isolated_python/intent.json",
+      "sha256": "6001da1364332cf43eee9562a8697107c43b61665b3391ec63ce9cba13183678"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_isolated_python/original_wait_exit.json",
+      "sha256": "6826254409b5dbc449244424e4e6c34b8334aae80bc403de4fcc4c025269c598"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_isolated_python/started.json",
+      "sha256": "5a9768ddb2efc137ef1069563a204d9a75fc74779d33e1482f945e034711ce7a"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_isolated_python/stderr.bin",
+      "sha256": "b239f8282c3447ebd8965b1706c03f94afdeadaea2d60470348cde3555ca5957"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_isolated_python/stdout.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_pure_go/intent.json",
+      "sha256": "24ba5d3a095d496f6f80f734eed1f50c1682a2aeae566ff030452c51d4f68772"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_pure_go/original_wait_exit.json",
+      "sha256": "caf06f5ef1f1dfe9c84187d6c15fcf79c4885316ac11f9c0161ba12c5d32f549"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_pure_go/started.json",
+      "sha256": "54272b7705e21fd79a315ae9033b24fe5f1a006c198f8ef39c7629e2fc2cf29e"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_pure_go/stderr.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_pure_go/stdout.bin",
+      "sha256": "b8b9bcb2fbc6d18b60830b1265f88900d7d4c1423d10e836271f8f3aba13d314"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_python/intent.json",
+      "sha256": "06675f2c39e3c4e0681dd151574cbea5ff87469b17c452f10a5e64b6d43afd4e"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_python/original_wait_exit.json",
+      "sha256": "b3adbc6a0b41a8fb4362c0f1abaed492c1534840493782e59a2ca9a70ea1882f"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_python/started.json",
+      "sha256": "74fa8d1b97b2b4f8061b6dcffb0a01fc33c2bca4be665a38d0583e1bf8c58b8c"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_python/stderr.bin",
+      "sha256": "4df6ab34e95bb72733fe86993eaa7b9b416662e8503ab4d6d13274da84256927"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_python/stdout.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_compile/intent.json",
+      "sha256": "e7fea87318d3e2869fe2704dd982dc30e550b71ed18d54a422ef027339c5dfb4"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_compile/original_wait_exit.json",
+      "sha256": "a0893e5bf62d55c049dc6de4643b3ab22a2e7839dd6b1e6e951dc81550312073"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_compile/started.json",
+      "sha256": "84baf670207f15731ead4941cd1723636fddfd7538a469552ca4212368cb296f"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_compile/stderr.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_compile/stdout.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_isolated_python/intent.json",
+      "sha256": "6bb9abd3662674a8a268805d596d2fbb6bace43c6819506b488e6dc0bc1b55cd"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_isolated_python/original_wait_exit.json",
+      "sha256": "15b6003e118863ba9f0eff0bd325ab3cb86b8346a64503ae1825aa34263cf04a"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_isolated_python/started.json",
+      "sha256": "28409a083202e56f4ee89e9c4e890e728acd031271d453d204f3acb37053b402"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_isolated_python/stderr.bin",
+      "sha256": "ae615137471eeefcfed6b05c7d4d5c69aba76fdd3b95d5293156005bdcf1180d"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_isolated_python/stdout.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_pure_go/intent.json",
+      "sha256": "4b3fc8a47d3eb5b6446556e01020fa3c214a4c6222c1cf3a674186d2684397c8"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_pure_go/original_wait_exit.json",
+      "sha256": "fce48b89814d3c10f60fddcc21d80b6a51e61da291930e92d4939a68e4a89808"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_pure_go/started.json",
+      "sha256": "bac7f77f5d354d4195994c6701d3f88c804e2a5bbf64647aadaac8078f76d2f3"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_pure_go/stderr.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_pure_go/stdout.bin",
+      "sha256": "4696abcfa0271f69691c20d604bc655e40a802cf80efd86d43fbac9a7555001a"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_python/intent.json",
+      "sha256": "fa84d04380118de55dd70e04aaaa196fe56f9994cc7d3576707d1f556d6db86a"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_python/original_wait_exit.json",
+      "sha256": "45c57199c7a30c748b0f45f11d9b003f126f95fdfcce47706d50512ba942ff12"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_python/started.json",
+      "sha256": "1d8cadd77f83491cd8a54a8219fd24a486abb03e2fa73ad18b6b34e0e337a8ee"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_python/stderr.bin",
+      "sha256": "112a49cd19ddf271b9d60c3ebabc571321d4473ea88c7fbaafb76a8df268a80c"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_python/stdout.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_discovery_20261027/.gitattributes",
+      "sha256": "9c9d2b3fafdfba9d681fda5009b9e12ec77c7e53fe6fada4e3b9618b1328d80e"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_discovery_20261027/inventory_result.json",
+      "sha256": "c840845fc9e23a0b92363ce7f136dca6dc08a7f4846269a0879d57c459d68c59"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_discovery_20261027/selected_browser_documentation.json",
+      "sha256": "a2ce330698b49bc8547274786e5d44a84dc3d4f3ac0e55b9b10512d16d85fd0b"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/.gitattributes",
+      "sha256": "e511db6d6f4eb81849b170525adc5de1ba04f8b1fd200972944daa99528d0364"
+    }
+  ],
+  "comparisonCount": 49,
+  "scope": "Three newly owned proof directories only; no global/old-receipt normalization. Current3 authority index blobs exactly HEAD after canonical-byte restoration; discovery/commonseed index blobs unchanged. Legacy test index SHA4bbd restored exactly.",
+  "firstAttempt": "Ordinary exact-path git add did not refresh all tracked normalization state; first audit stopped at allocation_ledger mismatch. Narrow explicit --renormalize of three new evidence directories then passed49 exact staged-to-original comparisons. No working original bytes edited.",
+  "history": "762844 first commit retains its normalized byte versions; later commit preserves original raw stderr CRLF and metadata working originals. No history rewrite.",
+  "limits": "Local custody evidence only; no M5/global portability/runtime/governance acceptance."
+}

@@ -1,0 +1,16 @@
+{
+  "kind": "ROOT_INDEPENDENT_ISOLATION_LAYOUT_SAFETY_AUDIT",
+  "atUTC": "2026-10-27T11:07:21.226566+00:00",
+  "sourceHashes": {
+    "scripts/r139_execution_supervisor.py": "9ee7f988b5a27495fd4bd4e72975f0b2a583b8e33cea49c51ac5189285f44c64",
+    "scripts/tests/test_r139_execution_supervisor.py": "4bbd3abb54646a9bcaa691c8b29ccf49f470539475a2a87732b77e2790be2283",
+    "backend/api/handlers/intervention_execution_browser_test.go": "4e90a7225f6fc663a3dc3493b3570bdfdc9969da0b43d70445273170c41f899d",
+    "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/test_native_tool_close.py": "5cbeba0c6e4f95c108bb09c42e47afacb6bc27851da52abb556614c294b5ee5a"
+  },
+  "legacyRestore": "Byte-exact4bbd parent accepted blob",
+  "proofAST": "Native method and mode-capable fixture AST equal the already-reviewed/PASS762844 snapshot; no new predicate behavior.",
+  "testSelection": "One unittest.TestCase native proof method only, no inherited test suite; guarded explicit TestSuite.",
+  "imports": "Only standard library and exact project-root legacy test helper module, itself inert supervisor import; no live command entrypoint, provider, DB or process execution.",
+  "retainedBinarySha256": "1de2ac02c8b0fa5e135a52de38feddd597d3909705c0f9d06274c9f694b10c98",
+  "clearance": "Worker isolatedPython1, then after PASS Root isolatedPython1. No Go/compile/clock replay."
+}

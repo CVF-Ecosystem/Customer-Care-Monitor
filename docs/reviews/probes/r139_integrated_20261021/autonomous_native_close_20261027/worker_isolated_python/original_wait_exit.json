@@ -1,0 +1,31 @@
+{
+  "slot": "worker_isolated_python",
+  "pid": 12812,
+  "originalWaitReturned": true,
+  "exitCode": 0,
+  "timedOut": false,
+  "atUTC": "2026-10-27T11:08:13.372608+00:00",
+  "monotonic": 364819.8242323,
+  "before": {
+    "sourceHashes": {
+      "scripts/r139_execution_supervisor.py": "9ee7f988b5a27495fd4bd4e72975f0b2a583b8e33cea49c51ac5189285f44c64",
+      "scripts/tests/test_r139_execution_supervisor.py": "4bbd3abb54646a9bcaa691c8b29ccf49f470539475a2a87732b77e2790be2283",
+      "backend/api/handlers/intervention_execution_browser_test.go": "4e90a7225f6fc663a3dc3493b3570bdfdc9969da0b43d70445273170c41f899d",
+      "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/test_native_tool_close.py": "5cbeba0c6e4f95c108bb09c42e47afacb6bc27851da52abb556614c294b5ee5a"
+    },
+    "binarySha256": "1de2ac02c8b0fa5e135a52de38feddd597d3909705c0f9d06274c9f694b10c98"
+  },
+  "after": {
+    "sourceHashes": {
+      "scripts/r139_execution_supervisor.py": "9ee7f988b5a27495fd4bd4e72975f0b2a583b8e33cea49c51ac5189285f44c64",
+      "scripts/tests/test_r139_execution_supervisor.py": "4bbd3abb54646a9bcaa691c8b29ccf49f470539475a2a87732b77e2790be2283",
+      "backend/api/handlers/intervention_execution_browser_test.go": "4e90a7225f6fc663a3dc3493b3570bdfdc9969da0b43d70445273170c41f899d",
+      "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/test_native_tool_close.py": "5cbeba0c6e4f95c108bb09c42e47afacb6bc27851da52abb556614c294b5ee5a"
+    },
+    "binarySha256": "1de2ac02c8b0fa5e135a52de38feddd597d3909705c0f9d06274c9f694b10c98"
+  },
+  "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderrSha256": "ae615137471eeefcfed6b05c7d4d5c69aba76fdd3b95d5293156005bdcf1180d",
+  "stdoutBytes": 0,
+  "stderrBytes": 215
+}

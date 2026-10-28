@@ -7,20 +7,39 @@
   "slots": [
     {
       "id": "worker_isolated_python",
-      "status": "NOT_STARTED",
-      "originalPid": null,
-      "originalWaitReturned": false,
-      "exitCode": null
+      "status": "COMPLETE_PASS",
+      "originalPid": 12812,
+      "originalWaitReturned": true,
+      "exitCode": 0,
+      "sourceHashes": {
+        "scripts/r139_execution_supervisor.py": "9ee7f988b5a27495fd4bd4e72975f0b2a583b8e33cea49c51ac5189285f44c64",
+        "scripts/tests/test_r139_execution_supervisor.py": "4bbd3abb54646a9bcaa691c8b29ccf49f470539475a2a87732b77e2790be2283",
+        "backend/api/handlers/intervention_execution_browser_test.go": "4e90a7225f6fc663a3dc3493b3570bdfdc9969da0b43d70445273170c41f899d",
+        "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/test_native_tool_close.py": "5cbeba0c6e4f95c108bb09c42e47afacb6bc27851da52abb556614c294b5ee5a"
+      },
+      "receipt": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/worker_isolated_python/original_wait_exit.json",
+      "receiptSha256": "15b6003e118863ba9f0eff0bd325ab3cb86b8346a64503ae1825aa34263cf04a"
     },
     {
       "id": "root_isolated_python",
-      "status": "NOT_STARTED",
-      "originalPid": null,
-      "originalWaitReturned": false,
-      "exitCode": null
+      "status": "COMPLETE_PASS",
+      "originalPid": 26980,
+      "originalWaitReturned": true,
+      "exitCode": 0,
+      "sourceHashes": {
+        "scripts/r139_execution_supervisor.py": "9ee7f988b5a27495fd4bd4e72975f0b2a583b8e33cea49c51ac5189285f44c64",
+        "scripts/tests/test_r139_execution_supervisor.py": "4bbd3abb54646a9bcaa691c8b29ccf49f470539475a2a87732b77e2790be2283",
+        "backend/api/handlers/intervention_execution_browser_test.go": "4e90a7225f6fc663a3dc3493b3570bdfdc9969da0b43d70445273170c41f899d",
+        "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/test_native_tool_close.py": "5cbeba0c6e4f95c108bb09c42e47afacb6bc27851da52abb556614c294b5ee5a"
+      },
+      "receipt": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_isolated_python/original_wait_exit.json",
+      "receiptSha256": "6826254409b5dbc449244424e4e6c34b8334aae80bc403de4fcc4c025269c598"
     }
   ],
   "retainedBinarySha256": "1de2ac02c8b0fa5e135a52de38feddd597d3909705c0f9d06274c9f694b10c98",
   "compilerGoClockBrowserProviderEffects": 0,
-  "custody": "Root owns allocation; explicit native proof method only after exact layout/safety audit; original child wait/raw required, no automatic retry."
+  "custody": "Root owns allocation; explicit native proof method only after exact layout/safety audit; original child wait/raw required, no automatic retry.",
+  "currentCompletedLineage": 27,
+  "newActualProcessesCompleted": 2,
+  "finalDisposition": "REVIEW_PASS_SOURCE_COMPONENTS_ONLY_NO_RUNTIME"
 }

@@ -1,6 +1,6 @@
 {
   "x-r139AutonomousDiscovery20261027": {
-    "status": "COMPONENTS_PASS_LINEAGE25_TEST_ISOLATION_PENDING_COMMITTED_RELEASE",
+    "status": "SOURCE_COMPONENTS_ACCEPTED_LINEAGE27_CHILD_PINS_PENDING",
     "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-CLOSE-TEST-ISOLATION-ADMISSION.json",
     "actualDiscoveryCalls": 1,
     "newCampaigns": 0,
