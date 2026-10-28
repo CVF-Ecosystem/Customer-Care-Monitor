@@ -38881,6 +38881,27 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/root_browser_recheck_20261028/root_observation.json",
       "status": "ACTIVE",
       "description": "Direct Root IAB create/read/capture/close capability observed; scoped correction to subagent-only HOLD, no R139 G0/runtime/provider acceptance."
+    },
+    {
+      "id": "r139-gemini-native-browser-b37f80d9c4650e29",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-GEMINI-NATIVE-BROWSER-CHECK-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Owner assigns Gemini browser execution and Root review; one real native-browser receiving capability check, no product G0/runtime/provider release."
+    },
+    {
+      "id": "r139-gemini-native-browser-dabbb1c5f365cf5a",
+      "family": "continuity",
+      "path": "docs/reviews/R139_GEMINI_NATIVE_BROWSER_CHECK_HANDOFF_2026-10-28.md",
+      "status": "ACTIVE",
+      "description": "Owner assigns Gemini browser execution and Root review; one real native-browser receiving capability check, no product G0/runtime/provider release."
+    },
+    {
+      "id": "r139-gemini-native-browser-053ce8dd5868661b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/gemini_native_browser_check_20261028/allocation.json",
+      "status": "ACTIVE",
+      "description": "Owner assigns Gemini browser execution and Root review; one real native-browser receiving capability check, no product G0/runtime/provider release."
     }
   ]
 }

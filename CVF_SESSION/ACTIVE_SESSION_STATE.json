@@ -14,9 +14,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 product HOLD remains, but Root direct browser recheck proves IAB2 owned blank-tab create/read/capture/close with finaltabs[]. Earlier subagent browsers:[] is not Root absence. New explicit Root methods8 (one policy-denied about:blank# goto, no bypass) above prior5 gives cumulative13; docs2/pricing2/source27/historicalcontrollers4/campaign1/service5/UNKNOWNs preserved. Prepare one consolidated Root-browser execution route with independent source/evidence review and explicit treatment of existing distinct-browser-observer contract; no fake actor access or silent validator weakening. Actual application/local-origin/input/handoff/durable capture/G0 unproved. Product campaign/controller/adapterchecks/generator/boot/fixture/key/provider remain NOT_RUN/HOLD until reviewed committed applicable release. Gemini draft return is separate uncommitted intake. Full M3/FREEZE OPEN; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 Owner assigns Gemini browser execution and Root independent result review. Review/commit then dispatch GEMINI-NATIVE-BROWSER-CHECK admission for one actual supported receiving-browser job at https://example.com/ (max8outerAPI/1ownedtab/1capture/180s/no retry;2catalog/docsreads), using real tool names rather than requiring cua APIs. Preserve actual Root IAB capability and cumulativebrowser13/source27/docs2/pricing2/historicalcontrollers4/campaign1/service5/all UNKNOWNs. Root does not take over browser execution under this assignment. Gemini must return actual open/read/capture/ownedclose evidence or exact missing-tool blocker to existing transfer report, with new owned evidence/snapshots. No fabricated CUA identities, package install, policy bypass or validator change. This is same-order receiving capability only, not product G0; source/adapters/contract and independent observer applicability remain to be settled before reviewed committed product/runtime release. Product campaign/controller/fixture/key/provider0; full M3/FREEZE OPEN; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / directly demonstrated IAB browser-executor candidate / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Luna independent diagnostic reviewer; Sol/source workers and product/runtime effects unreleased",
+  "activeRole": "Root ORCHESTRATOR / independent Gemini-result REVIEWER / COMMIT_STEWARD; Gemini designated browser executor pending committed native capability dispatch; Luna independent Root-admission reviewer; source/runtime workers unreleased",
   "updatedAt": "2026-10-28",
   "x-resolvedCoreCommit": "b8ead4f0d1bf9224338a206b2abcd893ec1801b1",
   "x-ownerRoadmapDiscipline": {
@@ -3818,5 +3818,13 @@
     "newExplicitCuaMethods": 8,
     "cumulativeBrowserMethods": 13,
     "newProductCampaigns": 0
+  },
+  "x-ownerGeminiBrowserAssignment20261028": {
+    "instruction": "browser cho Gemini chạy đi. bạn review kết quả",
+    "browserExecutor": "Gemini",
+    "resultReviewer": "Root",
+    "packet": "docs/reviews/R139_GEMINI_NATIVE_BROWSER_CHECK_HANDOFF_2026-10-28.md",
+    "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-GEMINI-NATIVE-BROWSER-CHECK-ADMISSION.json",
+    "newProductRelease": false
   }
 }

@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "OWNER_DESIGNATED_GEMINI_NATIVE_BROWSER_CAPABILITY_CHECK",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "date": "2026-10-28",
+  "baseCommit": "6448cc696f0a73ece24bceb54b7351d4c9a9c0b6",
+  "riskCeiling": "R2",
+  "ownerApproved": true,
+  "ownerInstruction": "browser cho Gemini chạy đi. bạn review kết quả",
+  "scope": "One receiving real browser capability diagnostic in the same R139/M3-05/M3-08 order. Gemini executes browser; Root reviews actual results. This is not R139 product G0/campaign/provider release.",
+  "roles": {
+    "browserExecutor": "Owner-designated Gemini in Antigravity, currently reported conversation a0e70c82-4d8c-4c90-80f8-d9a9db2b21b1; receiving worker must confirm actual identity, no fake reuse",
+    "resultReviewer": "Root independent of Gemini execution",
+    "dispatcherCommitSteward": "Root",
+    "admissionReviewer": "Luna Max /root/r139_preparation_reviewer"
+  },
+  "toolContract": "Use one existing officially exposed browser tool/browser subagent/native Chrome integration available in receiving runtime, by its actual documented name. cua.getState/getBrowser are not mandatory for this diagnostic. Inspect official tool/subagent capability catalog and docs; absence of that particular API does not establish absence of every browser tool. No package/helper/browser installation, raw CDP workaround, custom automation stack or policy bypass.",
+  "routingBoundary": "Owner now explicitly assigns Gemini browser execution. Earlier no-Antigravity routing does not prohibit this newly bounded capability check using an actually exposed supported tool. Existing R139 CUA/native product validators, source13 and distinct-observer contracts are unchanged; native evidence must never be relabeled as CUA or G0 PASS.",
+  "executionPrecondition": "Root commits this independently reviewed exact admission and packet before browser actions. Worker rehydrates canonical state and records actual actor/tool choice. If actual identity differs, report the identity to Root before effects; no impersonation.",
+  "diagnostic": {
+    "capabilityCatalogOrDocumentationReadsMax": 2,
+    "existingBrowserToolJobsMax": 1,
+    "outerBrowserApiAttemptsMax": 8,
+    "ownedNewTabsMax": 1,
+    "initialUrl": "https://example.com/",
+    "allowedNetworkOrigins": [
+      "https://example.com"
+    ],
+    "allowedSteps": [
+      "Inspect available supported tool definitions; choose actual browser integration once.",
+      "Open one owned new tab at https://example.com/, preferably in supported Chrome route when actually exposed.",
+      "Read actual visible page and actual returned target identity/URL; expect Example Domain.",
+      "Capture one actual screenshot and preserve original artifact file/receipt when tool supports export.",
+      "Close only that owned tab and record successful close plus final inventory or explicit availability limit."
+    ],
+    "capturesMax": 1,
+    "maximumBrowserWorkSeconds": 180,
+    "automaticRetries": 0,
+    "noSyntheticNonceOrPageId": "Record only actual native IDs/handles and caller-qualified provenance. No fabricated CUA/browserSessionId or authenticated export.",
+    "internalActions": "For a browser-subagent job, instruct the same one-tab/no-retry/read-capture-close limits; record its returned action trace if available. Report unobservable internal action counts UNKNOWN, not invented exact counts.",
+    "errorBoundary": "First missing tool, denial, timeout or unknown effect stops dependent browser actions. Cleanup only a proven owned tab when safely supported; retain failures/no retry/no alternate surface to evade policy.",
+    "result": "Observed actual open/read/capture/close with original receipts is bounded capability evidence only; partial results honestly qualified."
+  },
+  "retained": {
+    "sourceProcessLineage": 27,
+    "browserMethodsBefore": 13,
+    "maximumOuterCuaOrBrowserMethodsAfter": 21,
+    "packagedDocs": 2,
+    "publicPricingReads": 2,
+    "historicalControllers": 4,
+    "historicalCampaigns": 1,
+    "historicalServiceQueries": 5,
+    "paidUnknownHistory": "PRESERVED_NOT_REFUNDED"
+  },
+  "prohibitedEffects": [
+    "No current product/localhost/backend/DB/Docker/Vite/fixture/controller/campaign",
+    "No key/credential/grant/execute/provider call or customer/account/channel data",
+    "No source13/binary/tool/legacy evidence/authority seed/Root review edits",
+    "No unrelated browser tab contents, user tab closure, form submit, upload/download, extension install or security permission change",
+    "No worker commits, new work order/tranche, G0/M3/FREEZE/publication claim"
+  ],
+  "reportPath": "docs/reviews/R139_BROWSER_TRANSFER_RETURN_2026-10-28.md",
+  "evidenceRoot": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/gemini_native_browser_check_20261028",
+  "historyHandling": "Preserve previous Gemini return and three JSON as byte-exact snapshots under the new owned family before updating its mutable report; do not alter old Claude/Root evidence. Append actual test outcome to report, do not merely repeat readiness text.",
+  "allowedPaths": [
+    "docs/reviews/R139_BROWSER_TRANSFER_RETURN_2026-10-28.md",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/gemini_native_browser_check_20261028/**"
+  ],
+  "status": "PREPARED_PENDING_INDEPENDENT_REVIEW_AND_ROOT_COMMIT"
+}

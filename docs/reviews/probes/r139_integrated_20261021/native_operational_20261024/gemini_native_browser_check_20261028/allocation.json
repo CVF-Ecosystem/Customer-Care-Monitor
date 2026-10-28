@@ -1,0 +1,21 @@
+{
+  "kind": "ROOT_R139_GEMINI_NATIVE_BROWSER_CHECK_ALLOCATION",
+  "authorityRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-GEMINI-NATIVE-BROWSER-CHECK-ADMISSION.json",
+    "sha256": "955c25ecca821a1fe81cf15e58ad80e9903467a3da1b9efa2cecce058fdb1a11"
+  },
+  "workerMayEdit": false,
+  "browserMethodsBefore": 13,
+  "outerBrowserAttemptsMax": 8,
+  "outerBrowserAttemptsUsed": 0,
+  "browserJobsMax": 1,
+  "browserJobsUsed": 0,
+  "catalogOrDocsMax": 2,
+  "catalogOrDocsUsed": 0,
+  "ownedTabsMax": 1,
+  "capturesMax": 1,
+  "status": "NOT_STARTED_PENDING_COMMITTED_ROOT_DISPATCH",
+  "noRetry": true,
+  "newProductCampaigns": 0,
+  "newProviderCalls": 0
+}
