@@ -1,0 +1,69 @@
+"""DRAFT/UNEXECUTED: exact frozen activation main, one reviewed receipt binding.
+
+No import-time effects. This is not a replacement validator or clock controller.
+Root must pin this file and review its focused inert-fixture checks before use.
+"""
+import hashlib
+import importlib.machinery
+import os
+import re
+import subprocess
+import sys
+from pathlib import Path
+from types import ModuleType
+
+ROOT = Path.cwd()
+SOURCE = "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v3_design.py.txt"
+SOURCE_SHA = "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d"
+OLD_RECEIPT = "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_receipt.json"
+OLD_RECEIPT_SHA = "112fe993090c0cdf85e33716bcd20dbf0789770baf74efaaa6b454c75f37745a"
+NEW_RECEIPT = "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/actual_activation_receipt.json"
+CANON = ("CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json", "CVF_SESSION/ACTIVE_SESSION_STATE.json", "CVF_SESSION_MEMORY.md", "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "IMPLEMENTATION_STATUS.json", "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md", "CVF_SESSION/tranches/CCMAI-RUNTIME-139.json", "docs/catalog/ARTIFACT_REGISTRY.json")
+CATALOG = ("docs/INDEX.md", "docs/catalog/MODULE_REGISTRY.json", "docs/catalog/MODULE_CATALOG.md")
+GIT = r"C:\Program Files\Git\cmd\git.EXE"
+
+def bind_receipt(module, raw, git_raw, new_receipt=NEW_RECEIPT):
+    if type(module) is not ModuleType or raw != git_raw or hashlib.sha256(raw).hexdigest() != SOURCE_SHA:
+        raise RuntimeError("FROZEN_ACTIVATION_SOURCE")
+    if Path(module.__file__).resolve() != (ROOT / SOURCE).resolve():
+        raise RuntimeError("FROZEN_ACTIVATION_FILE")
+    if Path(module.ROOT).resolve() != ROOT.resolve():
+        raise RuntimeError("FROZEN_ACTIVATION_PROJECT_ROOT")
+    if (type(module.RECEIPT) is not str or module.RECEIPT != OLD_RECEIPT or
+            type(module.CANON) is not tuple or module.CANON != CANON or
+            type(module.CATALOG) is not tuple or module.CATALOG != CATALOG or
+            type(module.ALLOWED) is not set or module.ALLOWED != set(CANON + CATALOG + (OLD_RECEIPT,)) or
+            not callable(module.main)):
+        raise RuntimeError("FROZEN_ACTIVATION_CONSTANTS")
+    candidate = ROOT / new_receipt
+    if (new_receipt != NEW_RECEIPT or candidate.resolve() != candidate or
+            not candidate.is_relative_to(ROOT / Path(NEW_RECEIPT).parent) or candidate.exists()):
+        raise RuntimeError("FRESH_RECEIPT_BINDING")
+    if hashlib.sha256((ROOT / OLD_RECEIPT).read_bytes()).hexdigest() != OLD_RECEIPT_SHA:
+        raise RuntimeError("HISTORICAL_RECEIPT_BYTES")
+    # Exactly two namespace assignments. Every function and all other globals stay untouched.
+    module.RECEIPT = NEW_RECEIPT
+    module.ALLOWED = (module.ALLOWED - {OLD_RECEIPT}) | {NEW_RECEIPT}
+
+def main():
+    if len(sys.argv) != 4:
+        raise RuntimeError("BOOTSTRAP_CLI")
+    recipe, digest, head = sys.argv[1:]
+    if (recipe != str(Path(NEW_RECEIPT).parent / "activation_recipe.json").replace("\\", "/") or
+            re.fullmatch("[0-9a-f]{64}", digest) is None or re.fullmatch("[0-9a-f]{40}", head) is None):
+        raise RuntimeError("BOOTSTRAP_CLI_BINDING")
+    raw = (ROOT / SOURCE).read_bytes()
+    env = {key:os.environ[key] for key in ("SYSTEMROOT", "WINDIR", "TEMP", "TMP", "USERPROFILE",
+           "LOCALAPPDATA", "APPDATA", "PROGRAMDATA", "HOMEDRIVE", "HOMEPATH") if key in os.environ}
+    env["PATH"] = os.pathsep.join((str(Path(GIT).parent), r"C:\Windows\System32"))
+    result = subprocess.run([GIT, "show", "HEAD:" + SOURCE], cwd=ROOT, shell=False, env=env,
+                            stdin=subprocess.DEVNULL, capture_output=True, timeout=10)
+    if result.returncode != 0 or raw != result.stdout or hashlib.sha256(raw).hexdigest() != SOURCE_SHA:
+        raise RuntimeError("FROZEN_ACTIVATION_GIT_BYTES")
+    # Load with non-main name and original __file__; guarded source main is not invoked on import.
+    sys.dont_write_bytecode = True
+    module = importlib.machinery.SourceFileLoader("r139_frozen_activation_receipt_binding", str(ROOT / SOURCE)).load_module()
+    bind_receipt(module, raw, result.stdout)
+    module.main()
+
+if __name__ == "__main__": main()

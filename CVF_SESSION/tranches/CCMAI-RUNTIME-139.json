@@ -1414,5 +1414,10 @@
     "path": "docs/reviews/R139_CUA_CAMPAIGN_HOLD_2026-10-27.md",
     "sha256": "62d365e36f1413b9c7252c4d29d6abb05e1999a32fd72429fe72ed46a5ded6d5"
   },
-  "x-r139ActualFinalDisposition": "HOLD_ACCEPTED_BROWSER_UNAVAILABLE_CLOCK_COMPLETE_NOT_FREEZE"
+  "x-r139ActualFinalDisposition": "HOLD_ACCEPTED_BROWSER_UNAVAILABLE_CLOCK_COMPLETE_NOT_FREEZE",
+  "x-resumedPreparation20261028": {
+    "date": "2026-10-28",
+    "status": "BUILD",
+    "note": "Resumed canonical acknowledgment; source27 materialfc4 accepted; childpins094a and bounded preparation reviewed before commit; actual actor identities rebound because prior agents no longer live. No runtime effects."
+  }
 }

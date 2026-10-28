@@ -1,0 +1,233 @@
+"""DRAFT focused inert-module receipt-binding checks; never import activation."""
+import importlib.machinery
+import ast
+import copy
+import json
+from pathlib import Path
+import sys
+import tempfile
+from types import ModuleType, SimpleNamespace
+import unittest
+from unittest.mock import patch
+
+HERE = Path(__file__).resolve().parent
+bootstrap = importlib.machinery.SourceFileLoader("r139_receipt_binding_unit", str(HERE / "activation_receipt_bootstrap.py.txt")).load_module()
+custody = importlib.machinery.SourceFileLoader("r139_custody_binding_unit", str(HERE / "root_custody_wrapper.py.txt")).load_module()
+PROJECT = Path.cwd()
+RAW = (PROJECT / bootstrap.SOURCE).read_bytes()
+HISTORICAL = (PROJECT / bootstrap.OLD_RECEIPT).read_bytes()
+
+class ReceiptBindingTests(unittest.TestCase):
+    def actor_fixture(self):
+        recipe = {"freshGrant":{"sha256":"a"*64},"inheritedOwnerEnvelope":{"sha256":"b"*64},
+                  "observationCapsRef":{"sha256":"c"*64},"actorAcks":{},"actorSelectorReplyRefs":{},
+                  "protectedUnchangedHashes":{"files":{}}}
+        files = {}
+        def add(path, obj):
+            raw = obj if type(obj) is bytes else json.dumps(obj).encode()
+            value = {"path":path,"sha256":custody.sha(raw)}
+            files[path] = raw
+            recipe["protectedUnchangedHashes"]["files"][path] = value["sha256"]
+            return value
+        for role in ("root","internal","cuaProducer","cuaObserver"):
+            ack = {"ready":True,"actorRole":role,"campaignNonce":custody.NONCE,
+                   "sourceCommit":custody.SOURCE_COMMIT,"acceptedBuildPinsSha256":custody.CHILD_SHA,
+                   "campaignReserved":False,"effectsObserved":0,"freshGrantSha256":"a"*64,
+                   "inheritedOwnerEnvelopeSha256":"b"*64,"observationCapsSha256":"c"*64,
+                   "originalActorAckRef":add(role+"_reply.txt",b"synthetic inert ACK"),
+                   "collaborationTaskId":"/root/"+role,
+                   "originalControlPopenCustodian":"Root","originalControlWaitExitReceiptPlanned":True}
+            recipe["actorAcks"][role] = add(role+".json",ack)
+            if role.startswith("cua"):
+                selection = {"kind":"R139_PRECLOCK_SELECTOR_CALLER_RECORD","actorRole":role,
+                    "collaborationTaskId":"/root/"+role,"campaignNonce":custody.NONCE,
+                    "sourceCommit":custody.SOURCE_COMMIT,"acceptedBuildPinsSha256":custody.CHILD_SHA,
+                    "browserId":"2","method":'cua.getBrowser({id:"2"})',"status":"SELECTED_DOCUMENTATION_RETURNED",
+                    "pageOperations":0,"callerQualified":True,
+                    "originalToolReplyRef":add(role+"_selector_reply.txt",b"synthetic inert selector reply")}
+                recipe["actorSelectorReplyRefs"][role] = add(role+"_selector.json",selection)
+        def read_ref(value, expected_path=None):
+            if expected_path is not None and value["path"] != expected_path: raise RuntimeError("fixture path")
+            raw = files[value["path"]]
+            if custody.sha(raw) != value["sha256"]: raise RuntimeError("fixture sha")
+            return raw
+        return recipe,files,read_ref
+
+    def test_actual_roles_originals_and_selector_binding_fail_closed(self):
+        for bad in (None,"missing_role","extra_role","unprotected_ack","unprotected_selector_reply",
+                    "forged_selector_bytes","same_task","wrong_nonce","missing_root_custody"):
+            recipe,files,read_ref = self.actor_fixture()
+            if bad == "missing_role": recipe["actorAcks"].pop("internal")
+            if bad == "extra_role": recipe["actorAcks"]["extra"] = recipe["actorAcks"]["root"]
+            if bad == "unprotected_ack": recipe["protectedUnchangedHashes"]["files"].pop("internal_reply.txt")
+            if bad == "unprotected_selector_reply": recipe["protectedUnchangedHashes"]["files"].pop("cuaObserver_selector_reply.txt")
+            if bad == "forged_selector_bytes": files["cuaObserver_selector_reply.txt"] = b"changed"
+            if bad in ("same_task","wrong_nonce","missing_root_custody"):
+                role = "root" if bad == "missing_root_custody" else "cuaObserver"
+                path = role+".json"
+                ack = json.loads(files[path])
+                if bad == "same_task": ack["collaborationTaskId"] = "/root/cuaProducer"
+                if bad == "wrong_nonce": ack["campaignNonce"] = "0"*32
+                if bad == "missing_root_custody": ack["originalControlWaitExitReceiptPlanned"] = False
+                files[path] = json.dumps(ack).encode()
+                digest = custody.sha(files[path])
+                recipe["actorAcks"][role]["sha256"] = digest
+                recipe["protectedUnchangedHashes"]["files"][path] = digest
+            with self.subTest(case=bad), patch.object(custody,"exact_ref",side_effect=read_ref):
+                if bad:
+                    with self.assertRaises((RuntimeError,KeyError,TypeError)): custody.verify_actor_bindings(recipe)
+                else: custody.verify_actor_bindings(recipe)
+
+    def test_git_preflight_uses_noncredential_environment(self):
+        with patch.dict(custody.os.environ,{"SYNTHETIC_TEST_CREDENTIAL":"never-forward"}), \
+                patch.object(custody.subprocess,"run",return_value=SimpleNamespace(returncode=0,stdout=b"ok")) as run:
+            self.assertEqual(custody.git_read(bootstrap.GIT,"rev-parse","HEAD"),b"ok")
+        self.assertNotIn("SYNTHETIC_TEST_CREDENTIAL",run.call_args.kwargs["env"])
+        self.assertEqual(run.call_args.args[0],[bootstrap.GIT,"rev-parse","HEAD"])
+        self.assertFalse(run.call_args.kwargs["shell"])
+
+    def test_complete_old_clock_originals_and_chronology(self):
+        folder = custody.PROBE / "delegated_g0_capability_hold_20261027"
+        names = ("campaign_reservation","cleanup_cutoff","deadline_expired","root_terminal","root_current_outcome")
+        for bad in (None,"missing_cutoff","unprotected_deadline","wrong_reservation","outstanding_child","late_terminal"):
+            files = {(folder/(name+".json")).as_posix():(PROJECT/folder/(name+".json")).read_bytes() for name in names}
+            wait_path = custody.PRIOR_WAITS[3].as_posix()
+            files[wait_path] = (PROJECT/wait_path).read_bytes()
+            if bad in ("wrong_reservation","outstanding_child","late_terminal"):
+                name = "root_terminal" if bad == "late_terminal" else "deadline_expired"
+                path = (folder/(name+".json")).as_posix()
+                value = json.loads(files[path])
+                if bad == "wrong_reservation": value["reservationSha256"] = "0"*64
+                if bad == "outstanding_child": value["outstandingMetadataChildren"] = [123]
+                if bad == "late_terminal": value["atUTC"] = "2026-10-27T04:45:00Z"
+                files[path] = json.dumps(value).encode()
+            references = {path:{"path":path,"sha256":custody.sha(raw)} for path,raw in files.items()}
+            recipe = {"priorCampaignTerminalRefs":{name:references[(folder/(name+".json")).as_posix()] for name in names},
+                      "priorOriginalWaitExitRefs":[None,None,None,references[wait_path]],
+                      "protectedUnchangedHashes":{"files":{path:value["sha256"] for path,value in references.items()}}}
+            if bad == "missing_cutoff": recipe["priorCampaignTerminalRefs"].pop("cleanup_cutoff")
+            if bad == "unprotected_deadline": recipe["protectedUnchangedHashes"]["files"].pop((folder/"deadline_expired.json").as_posix())
+            def read_ref(value, expected_path=None):
+                if expected_path is not None and value["path"] != expected_path: raise RuntimeError("fixture path")
+                return files[value["path"]]
+            with self.subTest(case=bad), patch.object(custody,"exact_ref",side_effect=read_ref):
+                if bad:
+                    with self.assertRaises(RuntimeError): custody.verify_terminal_history(recipe)
+                else: custody.verify_terminal_history(recipe)
+
+    def test_new_allocation_is_separate_and_strict(self):
+        valid = {"kind":"ROOT_R139_AUTONOMOUS_TECHNICAL_ALLOCATIONS",
+                 "authorityRef":{"path":custody.AUTONOMY_PATH,"sha256":custody.AUTONOMY_SHA},
+                 "workerMayEdit":False,"spentRetained":{"originalControllers":4,"campaigns":1,"sourceChecks":27},
+                 "actualNewUsage":{"controllers":0},"allocations":[{"id":"R139-AUTONOMOUS-ALLOC-001",
+                 "controllerUsedBefore":4,"controllerCeiling":5,"additionalOriginalInvocations":1,
+                 "additionalCampaigns":1,"totalCampaignCeiling":2}]}
+        self.assertEqual(custody.derive_cumulative_accounting(valid),{"usedBefore":4,"totalCap":5,"additionalMax":1,"usedAtIntent":5})
+        for section,key,value in (("spentRetained","originalControllers",3),("spentRetained","sourceChecks",20),
+                                  ("actualNewUsage","controllers",False),("actualNewUsage","controllers",1),
+                                  ("slot","additionalOriginalInvocations",True),("slot","controllerCeiling",4),
+                                  ("slot","additionalCampaigns",2),("slot","totalCampaignCeiling",1)):
+            changed = copy.deepcopy(valid)
+            target = changed["allocations"][0] if section == "slot" else changed[section]
+            target[key] = value
+            with self.subTest(section=section,key=key,value=value), self.assertRaises(RuntimeError):
+                custody.derive_cumulative_accounting(changed)
+
+    def test_frozen_safety_helpers_are_unchanged(self):
+        old = ast.parse((PROJECT / "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_root_control_wrapper_v2_20261027.py.txt").read_text(encoding="utf-8"))
+        new = ast.parse((HERE / "root_custody_wrapper.py.txt").read_text(encoding="utf-8"))
+        for name in ("full_guard","controller_literal_contracts","verify_source_preclock_exact_dicts",
+                     "verify_source_preclock_refs","postcoldgate_popen"):
+            expected = next(item for item in old.body if isinstance(item,ast.FunctionDef) and item.name==name)
+            actual = next(item for item in new.body if isinstance(item,ast.FunctionDef) and item.name==name)
+            self.assertEqual(ast.dump(expected),ast.dump(actual),name)
+
+    def test_exact_two_bindings_and_fail_closed(self):
+        cases = (None, "source_changed", "git_mismatch", "old_constant", "allowed_type", "allowed_extra",
+                 "allowed_missing", "new_escape", "occupied", "file_alias", "root_mismatch", "main_type", "old_bytes", "extra_override")
+        for bad in cases:
+            with self.subTest(case=bad), tempfile.TemporaryDirectory() as name:
+                root = Path(name)
+                old = root / bootstrap.OLD_RECEIPT
+                old.parent.mkdir(parents=True)
+                old.write_bytes(HISTORICAL if bad != "old_bytes" else b"altered")
+                new = root / bootstrap.NEW_RECEIPT
+                new.parent.mkdir(parents=True)
+                module = ModuleType("inert_activation_fixture")
+                module.__file__ = str(root / bootstrap.SOURCE)
+                module.ROOT = root
+                module.RECEIPT = bootstrap.OLD_RECEIPT
+                module.CANON = bootstrap.CANON
+                module.CATALOG = bootstrap.CATALOG
+                module.ALLOWED = set(module.CANON + module.CATALOG + (module.RECEIPT,))
+                module.main = lambda: None
+                module.clock_guard = object()
+                source, git_source, new_name = RAW, RAW, bootstrap.NEW_RECEIPT
+                if bad == "source_changed": source = git_source = RAW+b"# changed"
+                if bad == "git_mismatch": git_source = b"different"
+                if bad == "old_constant": module.RECEIPT = "other.json"
+                if bad == "allowed_type": module.ALLOWED = frozenset(module.ALLOWED)
+                if bad == "allowed_extra": module.ALLOWED.add("unrelated.json")
+                if bad == "allowed_missing": module.ALLOWED.remove(bootstrap.OLD_RECEIPT)
+                if bad == "new_escape": new_name = "../escape.json"
+                if bad == "occupied": new.write_bytes(b"existing")
+                if bad == "file_alias": module.__file__ = str(root / "other.py")
+                if bad == "root_mismatch": module.ROOT = root / "other_project"
+                if bad == "main_type": module.main = False
+                before = dict(module.__dict__)
+                with patch.object(bootstrap, "ROOT", root):
+                    if bad == "extra_override":
+                        with self.assertRaises(TypeError): bootstrap.bind_receipt(module, source, git_source, clock_guard=False)
+                    elif bad:
+                        with self.assertRaises((RuntimeError, OSError)): bootstrap.bind_receipt(module, source, git_source, new_name)
+                    else:
+                        bootstrap.bind_receipt(module, source, git_source)
+                        changed = {key for key in before if before[key] != module.__dict__[key]}
+                        self.assertEqual(changed, {"RECEIPT", "ALLOWED"})
+                        self.assertIs(module.main, before["main"])
+                        self.assertIs(module.clock_guard, before["clock_guard"])
+                        self.assertEqual(module.ALLOWED, (before["ALLOWED"]-{bootstrap.OLD_RECEIPT})|{bootstrap.NEW_RECEIPT})
+                if bad:
+                    self.assertEqual(module.__dict__, before)
+                self.assertFalse(new.exists() and bad != "occupied")
+
+    def test_cli_rejects_before_git_or_activation(self):
+        for argv in (["bootstrap"], ["bootstrap","a","b","c","extra"],
+                     ["bootstrap","../escape","a"*64,"b"*40],
+                     ["bootstrap","recipe.json","bad","b"*40]):
+            with self.subTest(argv=argv), patch.object(sys,"argv",argv), \
+                    patch.object(bootstrap.subprocess,"run",side_effect=AssertionError("No process allowed")), \
+                    patch.object(bootstrap.importlib.machinery,"SourceFileLoader",side_effect=AssertionError("No activation load allowed")):
+                with self.assertRaises(RuntimeError): bootstrap.main()
+
+    def test_valid_cli_delegates_original_arguments_to_inert_main_once(self):
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            source = root / bootstrap.SOURCE
+            source.parent.mkdir(parents=True)
+            source.write_bytes(RAW)
+            (root / bootstrap.OLD_RECEIPT).write_bytes(HISTORICAL)
+            (root / bootstrap.NEW_RECEIPT).parent.mkdir(parents=True)
+            module = ModuleType("inert_valid_cli_fixture")
+            module.__file__, module.ROOT = str(source), root
+            module.RECEIPT, module.CANON, module.CATALOG = bootstrap.OLD_RECEIPT, bootstrap.CANON, bootstrap.CATALOG
+            module.ALLOWED = set(module.CANON + module.CATALOG + (module.RECEIPT,))
+            calls = []
+            module.main = lambda: calls.append(list(sys.argv[1:]))
+            module.validator_sentinel = object()
+            before = dict(module.__dict__)
+            args = [str(Path(bootstrap.NEW_RECEIPT).parent / "activation_recipe.json").replace("\\", "/"), "a"*64, "b"*40]
+            loader = SimpleNamespace(load_module=lambda: module)
+            with patch.object(bootstrap,"ROOT",root), patch.object(sys,"argv",["bootstrap",*args]), \
+                    patch.dict(bootstrap.os.environ,{"SYNTHETIC_TEST_CREDENTIAL":"do-not-forward"}), \
+                    patch.object(bootstrap.subprocess,"run",return_value=SimpleNamespace(returncode=0,stdout=RAW)) as run, \
+                    patch.object(bootstrap.importlib.machinery,"SourceFileLoader",return_value=loader):
+                bootstrap.main()
+            self.assertEqual(calls,[args])
+            self.assertEqual({key for key in before if before[key] != module.__dict__[key]}, {"RECEIPT","ALLOWED"})
+            self.assertEqual(run.call_args.args[0],[bootstrap.GIT,"show","HEAD:"+bootstrap.SOURCE])
+            self.assertNotIn("SYNTHETIC_TEST_CREDENTIAL",run.call_args.kwargs["env"])
+            self.assertFalse(run.call_args.kwargs["shell"])
+
+if __name__ == "__main__":
+    unittest.main(verbosity=2)

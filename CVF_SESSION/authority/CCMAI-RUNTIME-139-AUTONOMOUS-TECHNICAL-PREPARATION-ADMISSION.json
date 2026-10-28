@@ -1,0 +1,146 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "OWNER_AUTONOMOUS_R139_CONSOLIDATED_TECHNICAL_PREPARATION",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "date": "2026-10-28",
+  "riskCeiling": "R2",
+  "ownerApproved": true,
+  "ownerInstruction": "cho phép bạn toàn quyền chọn phương án làm để có kết quả",
+  "baseCommit": "fc4bbe01f88718e41904498bb8ab54d68f094583",
+  "parentAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-AUTONOMOUS-COMPLETION-ADMISSION.json",
+  "acceptedChildBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-TOOL-CLOSE-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "094a0a3678571c8ed03c2a278e50e352b645e71cd972fdc841fed9c3cacb065e"
+  },
+  "sourceCommit": "fc4bbe01f88718e41904498bb8ab54d68f094583",
+  "campaignNonce": "53e255cb7ed80e58092d66905a40bf5a",
+  "scope": "Finish all readiness/configuration/custody/actor/price inputs in one existing R139 before any live clock. No helper work order, no per-check Owner relay, no historical quota reset.",
+  "roles": {
+    "orchestratorBudgetCommitSteward": "Root",
+    "metadataImplementationWorker": "Sol /root/r139_custody_worker",
+    "independentCodeReviewer": "Root",
+    "independentAuthorityReviewer": "Luna /root/r139_preparation_reviewer",
+    "plannedBrowserProducer": "Luna /root/r139_preparation_reviewer after recorded role transition",
+    "plannedBrowserObserver": "Sol /root/r139_custody_worker after recorded role transition",
+    "runtimeEvidenceReviewer": "Root independent of Sol source/metadata authorship"
+  },
+  "readOnlyPreclockActors": {
+    "producer": {
+      "task": "/root/r139_preparation_reviewer",
+      "getBrowserId2SelectionsMax": 1
+    },
+    "observer": {
+      "task": "/root/r139_custody_worker",
+      "getBrowserId2SelectionsMax": 1
+    },
+    "method": "cua.getBrowser({id:\"2\"}) only; no getState, tab selection/creation/page read/capture/input or recovery retry.",
+    "evidence": "Actual documented selected IAB identity and original tool-visible reply ref, caller-qualified, current nonce/source/child refs; on error retain UNKNOWN/HOLD and no campaign reservation.",
+    "noCapabilityTransfer": "Root prior selection is not child capability. Both actual task IDs must be distinct; no fake ready ACK.",
+    "authorityPrecondition": "Independent authority review, pinned gates and committed release before these calls."
+  },
+  "receiptOnlyBootstrap": {
+    "allowedSource": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v3_design.py.txt",
+    "frozenSha256": "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d",
+    "oldReceipt": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_receipt.json",
+    "oldReceiptSha256": "112fe993090c0cdf85e33716bcd20dbf0789770baf74efaaa6b454c75f37745a",
+    "freshReceipt": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/actual_activation_receipt.json",
+    "allowedDelta": "Verify original frozen source Git/raw hash, original __file__/ROOT, exact CANON/CATALOG/ALLOWED; load under nonmain alias without invoking main; override exactly RECEIPT and ALLOWED (old entry removed, exact new output added); call the original main once with original three arguments unchanged.",
+    "prohibited": "No validator/function/clock/source-budget/environment/source-byte monkeypatch or old receipt deletion/overwrite. Fresh path must be owned, non-reparse, absent and exclusive; original raw receipt preserved.",
+    "childEnvironment": "Only explicit noncredential environment; pinned Git/Python/system paths, never ambient credentials.",
+    "effectNow": "Draft and inert fake-module checks only; actual original activation main requires later sealed technical release and original managed custody."
+  },
+  "custodyAdapterVerification": {
+    "retainedNativeSourceLineage": 27,
+    "workerFocusedInertProcessMax": 1,
+    "rootFocusedInertProcessMax": 1,
+    "newFocusedTechnicalProcessMax": 2,
+    "plannedCumulativeFocusedLineage": 29,
+    "tests": "Exact inert receipt/configuration/CLI and fresh allocation predicates, AST equality of preserved frozen safety helpers. No real activation import/main, service/controller/boot identity/provider/DB/Go/compiler/clock suite.",
+    "precondition": "Root static import/init/test audit and exact hashes before either process; original intent/Popen/wait/raw receipts per slot, first failure stops.",
+    "noRuntimeExtractionYet": true
+  },
+  "metadataGeneration": {
+    "invocationsMax": 1,
+    "currentUsed": 0,
+    "preconditions": "Accepted child commit; actual four role ACKs and two selector replies; Root owner/allocation/operator/source/browserplan/cold exclusion refs; all canonical files and index finalized; constructor independently reviewed and exact inputs pinned.",
+    "effects": "Public DRAFT recipe/canonical template files only, no ignored runtime roots/owner/controller/source execution; independent full audit and Root seal/clean commit afterward.",
+    "lateChanges": "Any canonical change after binding needs explicit reviewed same-scope regeneration decision, not silent refresh/retry."
+  },
+  "pricingReadiness": {
+    "publicDocumentationReadRequestsMax": 2,
+    "provider": "Existing authorized Alibaba alibaba_maas/qwen3.7-flash route only",
+    "scope": "Official public model pricing/currency and bounded worst-case budget calculation <=USD1, no key/tenant/user data or provider completion request.",
+    "noSmokeCall": true,
+    "fallback": "Unverifiable exact current price/model keeps paid runtime HOLD, not a guessed cost."
+  },
+  "rootPreclockAllocation": {
+    "historicalControllers": 4,
+    "additionalOriginalControllers": 1,
+    "newTotalControllerCeiling": 5,
+    "historicalCampaigns": 1,
+    "additionalCampaigns": 1,
+    "totalCampaignCeiling": 2,
+    "campaignSeconds": 1200,
+    "cleanupCutoffSeconds": 1020,
+    "campaignServiceQueries": 5,
+    "campaignCUAMethods": 64,
+    "providerCallsEventuallyMax": 1,
+    "maximumUSD": 1,
+    "currentControllerOrCampaignRelease": false,
+    "exactBeforeLaunch": "Later concrete technical release binds recipe/bootstrap/wrapper/source/actual actors/owner/original waits and all20 cold file hashes before any controller. ActualG0+RuntimeEffectAdmission still precede fixture/key/provider."
+  },
+  "retainedObservationUsage": {
+    "historicalCampaignCUA": 1,
+    "newDiscoveryCUA": 1,
+    "rootPreclockSelectionCUA": 1,
+    "packagedDocumentationReads": 2,
+    "newActorSelectorsAllocated": 2,
+    "newActorSelectorsUsed": 0
+  },
+  "allowedPaths": [
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+    "docs/reviews/R139_*.md",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/**",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md",
+    ".cvf/runtime/r139_autonomous_*/**"
+  ],
+  "prohibitedEffects": [
+    "accepted source13/binary/frontend/tools/legacy receipt modifications",
+    "runtime/activation/controller before separate technical release; only the separately bounded Root hostBootReadiness read is excepted",
+    "page/tab/content/capture/browser input",
+    "fixture/DB/Docker/server/Vite/key/provider completion",
+    "new persistent credentials or production data",
+    "paid-cap increase/blind replay/history rewrite",
+    "extra work order/tranche/Antigravity/publication/deploy"
+  ],
+  "status": "PREPARATION_ONLY_PENDING_INDEPENDENT_REVIEW_AND_COMMIT",
+  "hostBootReadiness": {
+    "rootReadOnlyQueriesMax": 1,
+    "purpose": "Check the frozen boot identity prerequisite before spending a new original controller/live clock; no stale substitution.",
+    "method": "Root-held exact pinned PowerShell/CIM OS boot-time read matching the already-reviewed frozen identity contract. No activation/main import or other process/service inventory.",
+    "timeoutSeconds": 5,
+    "custody": "Record intent, exact owned PID, original wait/exit/raw stdout/stderr and comparison to immutable boot proof. Timeout kills only this original owned child then records wait; no retry.",
+    "boundary": "Mismatch or UNKNOWN holds controller/campaign before reservation. Do not repin proof, mutate system clock, relax validator or invoke provider; Root must independently review a separately bounded recovery if needed."
+  },
+  "resumedActorBinding": {
+    "date": "2026-10-28",
+    "reason": "Original agents absent in actual current list_agents; replacement actual task IDs bound before any selector. Same roles, effects and caps. Historical authorship/results retained."
+  },
+  "ownerAutonomousAllocationBasis": {
+    "instruction": "cho phép bạn toàn quyền chọn phương án làm để có kết quả",
+    "currentResume": "tiếp",
+    "meaning": "Root selects the concrete finite necessary method under current standing Owner grant; this new supplement allocates two additional distinct-actor no-page selectors, not reuse of the fully spent parent chosenRoute.preclockBrowserSelectionMethods=1. No fictitious per-check Owner numerical approval is claimed.",
+    "accounting": {
+      "parentRootSelectionSpent": 1,
+      "newActorSelectorsMax": 2,
+      "historicalCampaignCUA": 1,
+      "discoveryCUA": 1,
+      "cumulativeAfterBothSelectors": 5
+    },
+    "unchangedBoundaries": "No page/tab input, no controller/campaign/service/fixture/credential/provider effect; distinct actor failure HOLD, no retry."
+  }
+}

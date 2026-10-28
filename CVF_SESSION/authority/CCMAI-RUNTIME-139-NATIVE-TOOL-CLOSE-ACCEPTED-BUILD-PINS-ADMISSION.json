@@ -1,0 +1,547 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ROOT_REVIEWED_R139_ACCEPTED_BUILD_PINS",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "date": "2026-10-28",
+  "riskCeiling": "R2",
+  "sourceCommit": "fc4bbe01f88718e41904498bb8ab54d68f094583",
+  "ownerEnvelopePath": "CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-CUA-SOURCE-ADMISSION.json",
+  "ownerEnvelopeSha256": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
+  "inheritedOwnerEnvelopeSha256": "0ef818bfa4a60b9bd1b01335996989ca4c00d63f11141d9074dd3c26befb5b4f",
+  "observationCapsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CUA-OBSERVATION-CAPS-ADMISSION.json",
+    "sha256": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491"
+  },
+  "rootReviewApproved": true,
+  "sourceChecksAccepted": true,
+  "review": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_source_acceptance.json",
+  "reviewSha256": "124ba02d8a13a88f09d889abaabde7165bda956bd0a058c6802ea987369acec6",
+  "pins": {
+    "sourceSha256": {
+      "scripts/r139_execution_supervisor.py": "9ee7f988b5a27495fd4bd4e72975f0b2a583b8e33cea49c51ac5189285f44c64",
+      "scripts/tests/test_r139_execution_supervisor.py": "4bbd3abb54646a9bcaa691c8b29ccf49f470539475a2a87732b77e2790be2283",
+      "scripts/r139_vite_config.mjs.template": "82a1d9ae8576fcd46718945d0a5cb44eb963a2a14d436a16e2bcdfb72b26bee9",
+      "backend/api/handlers/intervention_execution_browser_test.go": "4e90a7225f6fc663a3dc3493b3570bdfdc9969da0b43d70445273170c41f899d",
+      "backend/go.mod": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+      "backend/go.sum": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b",
+      "frontend/package.json": "d16bea0b83ad7eb871576061f7ea91534a2dd2fdc7eef26eb20ec908e4fca24d",
+      "frontend/package-lock.json": "da41e1de5d5b853295a303092aab9433aeea8168fda2cf0420dd94e9f579fb00",
+      "frontend/vite.config.ts": "736c63d3a72a5b126841ceedeac4b4a01854a2bec71bd57d2f46a23ec3cf68de",
+      "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v3_design.py.txt": "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d",
+      "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_pinned_preflight.py.txt": "81784375b6948dee973ce1dd4a3b66851786273079f4becfbdd7c7378fbca233",
+      "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_durable_resume.py.txt": "7ab2bf4c5b97009d36b932fd7aff5cf6d5b42584844f59fc02f5605f06156eda",
+      "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/test_r139_pinned_resume.py": "9dd100bae4dcfa18b5c1fd098de56fecc534ad59fd1a4361bda0cbb256b1f227"
+    },
+    "binary": {
+      "path": ".cvf/runtime/r139_autonomous_native_close_20261027/handlers.test.exe",
+      "sha256": "1de2ac02c8b0fa5e135a52de38feddd597d3909705c0f9d06274c9f694b10c98",
+      "size": 59611648
+    },
+    "viteCli": {
+      "path": "frontend/node_modules/vite/bin/vite.js",
+      "sha256": "fa03478846d229651a3c6aa64833ba2c6cbf580a798b92bd8f47c7480bafb5d8",
+      "size": 2574
+    },
+    "tools": {
+      "python": {
+        "path": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "sha256": "a2a4eff8d0b0c845284c607d50a3b5b966ac5a3121736a2e38e165bd6644d9fe",
+        "size": 105816
+      },
+      "git": {
+        "path": "C:\\Program Files\\Git\\cmd\\git.EXE",
+        "sha256": "22fead8244ef3a7225fb800099a4e43eca8bcec0466774917669599c2f19a05a",
+        "size": 46936
+      },
+      "powershell": {
+        "path": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+        "sha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f",
+        "size": 495616
+      },
+      "docker": {
+        "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_docker_tool_snapshot_20261026\\docker.exe",
+        "size": 44922800,
+        "sha256": "17cbf2f5f5f7693bbeda46e35dc930050b40aff06f41f9f5a69e4e2dd7fc12aa"
+      },
+      "node": {
+        "path": "C:\\Program Files\\nodejs\\node.EXE",
+        "sha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+        "size": 92825416
+      }
+    },
+    "backendTree": "d1eb457978ee78683c25cda98cd7e12a63ea423f",
+    "frontendTree": "b23c158a3740ee97b30d17d0a52f5133d4ed5eff"
+  },
+  "metadataSha256": {
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_payload_templates.json": "ffbf475dee7a28a785c2ce543ad50cda55819c72debdf8c24e0a05104d599f19",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt": "57ae20a2bb0054e38d5a3d919f5e2997780b56981a82f2f31924eddf623e5854",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/recorder_design.py.txt": "154047cf66ffce3192b07ff4ac976f51c9a797c50b76a4dd3091f6398f207f1f",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v2_design.py.txt": "89d6f20eb1b80e1e5f331876886542fce7046fe010e0d6982b1b6b8f56f29454",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_contract_20261025.json": "4c90053543f1d21532fdb5c6c7487e04c7a4ee5b3369c6f24034cde285eb9e7c",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_proof_20261025.json": "10937592aaa94c4d00a89eb194fa223b9bec372b921be8a247967da235fa44e9",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/cua_boot_identity_capability_20261025.json": "284f47404e8f8e40c5ff1f42bebaf2276dc8c1390914e56b67521a476e90346e",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_contract_20261026.json": "e3fe4ef6caeb8b197e5f358267d89a6584fb6cf10087bebb5bfca53efdc7d5da",
+    "docs/reviews/R139_PINNED_RESUME_CONSOLIDATED_SOURCE_REVIEW_2026-10-26.md": "7d154375606bfdd7797cd5da8db8045eaafe9421ed662c2b8f4a1b7d408f433c",
+    "docs/reviews/R139_CLOCK_V3_SOURCE_REVIEW_2026-10-26.md": "2625651f67d62d50ae9f692e869392056dd0683ba1a5b000f5701c63069ee7df",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_preflight_validation_20261026.json": "e149839e79bddb5763ca846f4e109dc94ef5fec905c6390426695333c8d7cdc0",
+    "docs/reviews/R139_V3_ACTIVATION_ENV_SOURCE_REVIEW_2026-10-26.md": "0a270a0b224afbd2ce494a83df0ba72226a3684e3f39c0c9cc2293bc319ab4e8",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-REPAIR-ADMISSION.json": "177e35124996062ec611e6db3620f9168a1af98ae8c2d5fcb837190a2865ae60",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/worker_python_02_result.json": "00d263b6233145649f72b0ae4c3ddd652e6659d9d32ab5802e3beabc24f1bc7d",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/root_python_02_result.json": "6290980f53aaa0876b421136f25b14ca38105b26b2e8e875d727537fe1e0dcd9"
+  },
+  "checkAccounting": {
+    "historicalSourceChecksSpent": 10,
+    "newFocusedInvocations": 6,
+    "totalCountedLineage": 16,
+    "failedAttemptRetained": true,
+    "newAuthorizationRef": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+      "sha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f"
+    },
+    "additionalChecksCurrentlyNeeded": 0,
+    "noNumericalOwnerCapInvented": true,
+    "preEnvRepairCount": 14,
+    "activationEnvNewBatches": 2
+  },
+  "runtimeExecutableNow": false,
+  "browserExecutableNow": false,
+  "providerExecutableNow": false,
+  "campaignReserved": false,
+  "claimBoundary": "Native CUA tool-close receipt validator source/pure components accepted only; no actual close/G0/G1/G2/G3/runtime/governance/product acceptance. Historical failures/UNKNOWNs and27 checks retained; no clock replay.",
+  "historicalInheritedCuaChecks": {
+    "sourceCommit": "38db7e90d2344fcc2f5a6c14cf6406f192d7a1d9",
+    "sourceUse": {
+      "workerFocusedPython": 1,
+      "workerOfflineGoCompile": 1,
+      "rootFocusedPython": 1,
+      "rootAuditedPureGo": 1
+    },
+    "checkOutcomes": {
+      "workerFocusedPython": "FAIL_CONSUMED_WINDOWS_FIXTURE_RETAINED",
+      "rootFocusedPython": "PASS_44_CORRECTED_CURRENT_TESTS",
+      "workerOfflineGoCompile": "PASS",
+      "rootAuditedPureGo": "PASS_13_EXACT_NO_SKIP"
+    },
+    "checkAccounting": {
+      "oldSpent": 4,
+      "newSpent": 4,
+      "totalSpent": 8,
+      "cap": 8,
+      "remaining": 0
+    }
+  },
+  "sourceUse": {
+    "workerClockFocusedPython": 2,
+    "workerPinResumeFocusedPythonIncludingFailure": 2,
+    "rootCombinedFocusedPythonCountedOnce": 2,
+    "goCompile": 0,
+    "goTests": 0
+  },
+  "checkOutcomes": {
+    "workerClock": "PASS46",
+    "workerPinFirst": "FAIL_15_OF_16_EXPECTATION_RETAINED",
+    "workerPinRepaired": "PASS16",
+    "rootCombined": "PASS62",
+    "resume": "ACTUAL_OFFLINE_RECOVERY_AND_REUSE_NO_NEW_TEST_CHILD",
+    "pinnedPreflight": "LEGACY7_AND_TRUSTED_PINNED_PROFILE_PRECOMMIT6_PASS_APPL_NOT_APPLICABLE",
+    "workerActivationEnv": "PASS2",
+    "rootActivationEnv": "PASS48",
+    "pinResume16": "INHERITED_EXACT_UNCHANGED_DEPENDENCIES_NO_RERUN"
+  },
+  "bootRecoveryVerification": {
+    "ownerAdmissionRef": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-RECOVERY-ADMISSION.json",
+      "sha256": "ab4b4d148b52992d562b665baae6f96e9c812d987c4d197de0024272e317ffdb"
+    },
+    "contractRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_contract_20261025.json",
+      "sha256": "4c90053543f1d21532fdb5c6c7487e04c7a4ee5b3369c6f24034cde285eb9e7c"
+    },
+    "sourceChecksAccepted": true,
+    "independentSourceReviewRef": {
+      "path": "docs/reviews/R139_BOOT_IDENTITY_RECOVERY_REVIEW_2026-10-25.md",
+      "sha256": "55a84ad99d6c1aae05fa117ae4f841f0e2bcc10ad9145b6a3cb9b1ad3294fff8"
+    },
+    "workerFocusedPython": {
+      "used": 1,
+      "cap": 1,
+      "outcome": "PASS",
+      "receiptRef": {
+        "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_source_checks/worker_python_01_result.json",
+        "sha256": "c2d583c703996d8bc3158709aa27994dc622964cc91e02601b14b37545bb8bab"
+      }
+    },
+    "rootFocusedPython": {
+      "used": 1,
+      "cap": 1,
+      "outcome": "PASS",
+      "receiptRef": {
+        "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_source_checks/root_python_01_result.json",
+        "sha256": "1701484d7f51fa9e6dc071c8930ccacccb3e9b5fedf7b43823dd1ab2af29815a"
+      }
+    }
+  },
+  "historicalBootV2Acceptance": {
+    "sourceCommit": "72371595cf1e650a5df074fb5b84cf5472576cec",
+    "sourceUse": {
+      "workerFocusedPython": 1,
+      "rootFocusedPython": 1,
+      "goCompile": 0,
+      "goTests": 0
+    },
+    "checkAccounting": {
+      "oldSpent": 8,
+      "newSpent": 2,
+      "totalSpent": 10,
+      "cap": 10,
+      "remaining": 0,
+      "oldFailedAttemptRetained": true
+    },
+    "checkOutcomes": {
+      "workerFocusedPython": "PASS_45_ORIGINAL_EXIT0",
+      "rootFocusedPython": "PASS_45_ORIGINAL_EXIT0",
+      "go": "NO_NEW_BUILD_OR_TEST_INHERITED_UNCHANGED_BINARY_AND_BACKEND_TREE"
+    },
+    "acceptedBuildRef": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-BOOT-IDENTITY-V2-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "sha256": "f818a976fc347340d659c13be27ff5dcd66ebe44e6a694224b0f26cba72fc5bb"
+    }
+  },
+  "bootIdentityV3Verification": {
+    "ownerAdmissionRef": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+      "sha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f"
+    },
+    "contractRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_contract_20261026.json",
+      "sha256": "e3fe4ef6caeb8b197e5f358267d89a6584fb6cf10087bebb5bfca53efdc7d5da"
+    },
+    "predecessorContractRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_contract_20261025.json",
+      "sha256": "4c90053543f1d21532fdb5c6c7487e04c7a4ee5b3369c6f24034cde285eb9e7c"
+    },
+    "predecessorProofRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_proof_20261025.json",
+      "sha256": "10937592aaa94c4d00a89eb194fa223b9bec372b921be8a247967da235fa44e9"
+    },
+    "sourceChecksAccepted": true,
+    "sourceCommit": "fc4bbe01f88718e41904498bb8ab54d68f094583",
+    "designSha256": "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d",
+    "testSha256": "4bbd3abb54646a9bcaa691c8b29ccf49f470539475a2a87732b77e2790be2283",
+    "independentSourceReviewRef": {
+      "path": "docs/reviews/R139_V3_ACTIVATION_ENV_SOURCE_REVIEW_2026-10-26.md",
+      "sha256": "0a270a0b224afbd2ce494a83df0ba72226a3684e3f39c0c9cc2293bc319ab4e8"
+    },
+    "workerFocusedPython": {
+      "used": 2,
+      "acceptedAttempt": 2,
+      "outcome": "PASS",
+      "attemptReceipts": [
+        {
+          "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/worker_python_01_result.json",
+          "sha256": "e422df0f5fe8bb7456fe9af79a423912221df165d1159f940bd6fb436a8fe07a"
+        },
+        {
+          "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/worker_python_02_result.json",
+          "sha256": "00d263b6233145649f72b0ae4c3ddd652e6659d9d32ab5802e3beabc24f1bc7d"
+        }
+      ],
+      "receiptRef": {
+        "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/worker_python_02_result.json",
+        "sha256": "00d263b6233145649f72b0ae4c3ddd652e6659d9d32ab5802e3beabc24f1bc7d"
+      }
+    },
+    "rootFocusedPython": {
+      "used": 2,
+      "acceptedAttempt": 2,
+      "outcome": "PASS",
+      "attemptReceipts": [
+        {
+          "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/root_python_01_result.json",
+          "sha256": "b3192ad92fd19ec873f447963a71dcdab36263658485d13110ab211a72405971"
+        },
+        {
+          "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/root_python_02_result.json",
+          "sha256": "6290980f53aaa0876b421136f25b14ca38105b26b2e8e875d727537fe1e0dcd9"
+        }
+      ],
+      "receiptRef": {
+        "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/root_python_02_result.json",
+        "sha256": "6290980f53aaa0876b421136f25b14ca38105b26b2e8e875d727537fe1e0dcd9"
+      }
+    },
+    "inheritedSourceCheckCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+    "inheritanceMeaning": "Child acceptance inherits unchanged clock design/test byte hashes and original attempts. No new clock checks or fabricated original receipt."
+  },
+  "pinnedResumeVerification": {
+    "ownerAdmissionRef": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+      "sha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f"
+    },
+    "independentSourceReviewRef": {
+      "path": "docs/reviews/R139_PINNED_RESUME_CONSOLIDATED_SOURCE_REVIEW_2026-10-26.md",
+      "sha256": "7d154375606bfdd7797cd5da8db8045eaafe9421ed662c2b8f4a1b7d408f433c"
+    },
+    "sourceChecksAccepted": true,
+    "workerAttemptRefs": [
+      {
+        "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_resume_source_checks/worker_attempt1.json",
+        "sha256": "134db2c61eea8c5506a929f3bb316e81f7d69f80101ed2cb0765d58ae2d4735f"
+      },
+      {
+        "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_resume_source_checks/worker_attempt2.json",
+        "sha256": "6dc35899b7dce24772fec507c05cfd970edfb422e4068e200f3caa9eb41ee41f"
+      }
+    ],
+    "acceptedWorkerAttempt": 2,
+    "rootCombinedRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_resume_source_checks/root_combined.json",
+      "sha256": "641d6b6466e579a41efe3550bc337f10e9ca2b823f2d66ebcf727648738d8321"
+    },
+    "rootPhysicalInvocationSharedWithClockReview": true,
+    "interruptionRecoveryRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_resume_interruption_recovery_20261026.json",
+      "sha256": "3de8125840ce6e8aa5fc43a0791680a3b9c489d0084db0bc1d0d109f458b203b"
+    },
+    "completedReuseRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_resume_completed_reuse_20261026.json",
+      "sha256": "769f0f7af7e1cebef8ab0f7c92fa3f1146d0bfbabd55cd87187ee61f15ac8a83"
+    },
+    "pinnedPreflightRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/pinned_preflight_validation_20261026.json",
+      "sha256": "e149839e79bddb5763ca846f4e109dc94ef5fec905c6390426695333c8d7cdc0"
+    },
+    "liveG0G3WiringClaim": false
+  },
+  "pinnedCoreExecution": {
+    "coreCommit": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
+    "profileId": "cvf.downstreamGateProfile@1.1.0",
+    "lockRef": {
+      "path": ".cvf/gate-profile.lock.json",
+      "sha256": "5a58fe82ea57fbd89af2ed42d8a31d6c279aab2b7eb1349d01c0d65cbc2357c2"
+    },
+    "remoteFreshnessChecked": false,
+    "cachedPublicOriginMainAtReview": "b2d524bf3dff419b3e70f6e1e0468fd6748938c3",
+    "autoUpgrade": false,
+    "checkoutHeadAtReview": "b8ead4f0d1bf9224338a206b2abcd893ec1801b1"
+  },
+  "bindingQualification": "NEW immutable Docker17cb project-owned snapshot tool binding under Owner delegation; all13 accepted source/Go/Vite/other4tools and source-check proofs retained. Independent snapshot identity accepted. Full20 outer guard/new focused checks and technical/runtime release remain separate.",
+  "historicalV3BeforeActivationEnv": {
+    "acceptedBuildRef": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-V3-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "sha256": "3366eb41379c68419b235e5295817dafa74215a94dd5bcc8b4e323a6dfc215c2"
+    },
+    "sourceCommit": "b330f70b7e760ffee1113d57abc7133c725c57cd",
+    "bootIdentityV3Verification": {
+      "ownerAdmissionRef": {
+        "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+        "sha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f"
+      },
+      "contractRef": {
+        "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_contract_20261026.json",
+        "sha256": "e3fe4ef6caeb8b197e5f358267d89a6584fb6cf10087bebb5bfca53efdc7d5da"
+      },
+      "predecessorContractRef": {
+        "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_contract_20261025.json",
+        "sha256": "4c90053543f1d21532fdb5c6c7487e04c7a4ee5b3369c6f24034cde285eb9e7c"
+      },
+      "predecessorProofRef": {
+        "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_proof_20261025.json",
+        "sha256": "10937592aaa94c4d00a89eb194fa223b9bec372b921be8a247967da235fa44e9"
+      },
+      "sourceChecksAccepted": true,
+      "sourceCommit": "7ef30823746d72e935607c0bebf6ab306099eb48",
+      "designSha256": "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d",
+      "testSha256": "4bbd3abb54646a9bcaa691c8b29ccf49f470539475a2a87732b77e2790be2283",
+      "independentSourceReviewRef": {
+        "path": "docs/reviews/R139_V3_ACTIVATION_ENV_SOURCE_REVIEW_2026-10-26.md",
+        "sha256": "0a270a0b224afbd2ce494a83df0ba72226a3684e3f39c0c9cc2293bc319ab4e8"
+      },
+      "workerFocusedPython": {
+        "used": 2,
+        "acceptedAttempt": 2,
+        "outcome": "PASS",
+        "attemptReceipts": [
+          {
+            "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/worker_python_01_result.json",
+            "sha256": "e422df0f5fe8bb7456fe9af79a423912221df165d1159f940bd6fb436a8fe07a"
+          },
+          {
+            "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/worker_python_02_result.json",
+            "sha256": "00d263b6233145649f72b0ae4c3ddd652e6659d9d32ab5802e3beabc24f1bc7d"
+          }
+        ],
+        "receiptRef": {
+          "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/worker_python_02_result.json",
+          "sha256": "00d263b6233145649f72b0ae4c3ddd652e6659d9d32ab5802e3beabc24f1bc7d"
+        }
+      },
+      "rootFocusedPython": {
+        "used": 2,
+        "acceptedAttempt": 2,
+        "outcome": "PASS",
+        "attemptReceipts": [
+          {
+            "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/root_python_01_result.json",
+            "sha256": "b3192ad92fd19ec873f447963a71dcdab36263658485d13110ab211a72405971"
+          },
+          {
+            "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/root_python_02_result.json",
+            "sha256": "6290980f53aaa0876b421136f25b14ca38105b26b2e8e875d727537fe1e0dcd9"
+          }
+        ],
+        "receiptRef": {
+          "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v3_source_checks/root_python_02_result.json",
+          "sha256": "6290980f53aaa0876b421136f25b14ca38105b26b2e8e875d727537fe1e0dcd9"
+        }
+      }
+    },
+    "checkAccounting": {
+      "historicalSourceChecksSpent": 10,
+      "newFocusedInvocations": 6,
+      "totalCountedLineage": 16,
+      "failedAttemptRetained": true,
+      "newAuthorizationRef": {
+        "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+        "sha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f"
+      },
+      "additionalChecksCurrentlyNeeded": 0,
+      "noNumericalOwnerCapInvented": true,
+      "preEnvRepairCount": 14,
+      "activationEnvNewBatches": 2
+    },
+    "sourceUse": {
+      "workerClockFocusedPython": 2,
+      "workerPinResumeFocusedPythonIncludingFailure": 2,
+      "rootCombinedFocusedPythonCountedOnce": 2,
+      "goCompile": 0,
+      "goTests": 0
+    }
+  },
+  "activationEnvironmentVerification": {
+    "rootSupplementRef": {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-REPAIR-ADMISSION.json",
+      "sha256": "177e35124996062ec611e6db3620f9168a1af98ae8c2d5fcb837190a2865ae60"
+    },
+    "independentReviewRef": {
+      "path": "docs/reviews/R139_V3_ACTIVATION_ENV_SOURCE_REVIEW_2026-10-26.md",
+      "sha256": "0a270a0b224afbd2ce494a83df0ba72226a3684e3f39c0c9cc2293bc319ab4e8"
+    },
+    "internalSetupSeconds": 180,
+    "wholeCampaignSeconds": 1200,
+    "cleanupCutoffSeconds": 1020,
+    "workerNewTests": 2,
+    "rootSupervisorTests": 48,
+    "unchangedPinResume16Inherited": true,
+    "samePinnedPs5WriterAndChecker": true,
+    "rawPrivateEvidenceRoot": ".cvf/runtime/r139_pinned_resume_repair_20261026",
+    "activeLedger": "session_ledger_generation3.json"
+  },
+  "parentAcceptedBuildRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "ad34819637bb2875098f5fb9cc6cf40e915361b097c8c28aaa30b8b1310df25b"
+  },
+  "ownerDelegatedAdoptionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DELEGATED-TECHNICAL-BUDGET-AND-DOCKER-ADOPTION-ADMISSION.json",
+    "sha256": "be07b72bdbd35969bd8f29979b06aa1c6d97a79a33deab1d48734d8fb9d25787"
+  },
+  "toolchainSnapshotVerification": {
+    "status": "INDEPENDENT_EXACT_BYTE_IDENTITY_ACCEPTED",
+    "receiptRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_docker_snapshot_receipt_20261026.json",
+      "sha256": "2d8ae69bf000bcce26cc8e141e1e393e61c92882eae52848c8317de04b78a016"
+    },
+    "independentIdentityReviewRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_snapshot_identity_review_20261026.json",
+      "sha256": "3681c85880a5c9a0fc49a46e962b1701b13252584978587fdc671fc816fc913f"
+    },
+    "offlineQualifiedProvenanceRef": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/docker_provenance_20261026/offline_signature_analysis.json",
+      "sha256": "c4f0fd1454981e07232cbbbd0c38ef235fc3382d85c2ba4614f7a356b26084f4"
+    },
+    "originalInstalledFilePreserved": true,
+    "guardAndRuntimeRelease": "NOT_ACCEPTED_BY_THIS_IDENTITY_BINDING"
+  },
+  "parentAcceptedBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-DOCKER-SNAPSHOT-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "6b0d40e13c52b438c5ce5998e68874c4ce1f601abffc20d8b5c70175ef6cdce5"
+  },
+  "newProofTestRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/test_native_tool_close.py",
+    "sha256": "5cbeba0c6e4f95c108bb09c42e47afacb6bc27851da52abb556614c294b5ee5a"
+  },
+  "nativeCloseSourceAccounting": {
+    "historicalProcessesRetained": 20,
+    "nativeImplementationProcesses": 5,
+    "testIsolationProcesses": 2,
+    "totalCountedLineage": 27,
+    "newProcessesPass": 7,
+    "fail": 0,
+    "skip": 0
+  },
+  "nativeCloseSourceChanges": [
+    "scripts/r139_execution_supervisor.py",
+    "backend/api/handlers/intervention_execution_browser_test.go"
+  ],
+  "pinBasis": "sourceSha256 pins exact current working raw bytes as inherited; backend/frontendTree are Git object trees. Existing CRLF/LF differences are separately recorded, not normalized or represented as raw Git equality. Frozen activation itself remains exact Git/working bytes.",
+  "existingEolDistinctions": [
+    {
+      "path": "scripts/r139_execution_supervisor.py",
+      "gitObjectSha256": "8334bff12870f0cd09afcefd14959a5e5ddc9f7595f0986d9762a6683e58f207",
+      "workingRawSha256": "9ee7f988b5a27495fd4bd4e72975f0b2a583b8e33cea49c51ac5189285f44c64",
+      "difference": "CRLF/LF only; inherited raw working-pin and Git-tree distinction"
+    },
+    {
+      "path": "scripts/r139_vite_config.mjs.template",
+      "gitObjectSha256": "006d2c843c983600d47f5e83baf1c20fee481e893f7dec47c6df1143c8469f9a",
+      "workingRawSha256": "82a1d9ae8576fcd46718945d0a5cb44eb963a2a14d436a16e2bcdfb72b26bee9",
+      "difference": "CRLF/LF only; inherited raw working-pin and Git-tree distinction"
+    },
+    {
+      "path": "backend/go.mod",
+      "gitObjectSha256": "a9612773d6d58bd50b404624975ef48f7c213e0498fc4b073a16afc1151f54a4",
+      "workingRawSha256": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+      "difference": "CRLF/LF only; inherited raw working-pin and Git-tree distinction"
+    },
+    {
+      "path": "backend/go.sum",
+      "gitObjectSha256": "79bb19b2950d5a893465ae6d639a9e2d5e4a8cab96e906e2b7e138dec35fbae1",
+      "workingRawSha256": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b",
+      "difference": "CRLF/LF only; inherited raw working-pin and Git-tree distinction"
+    },
+    {
+      "path": "frontend/package.json",
+      "gitObjectSha256": "e5cec0dc55ecfd1855d17e109b738351ee638897bb7080e47a4b9dfd9e073894",
+      "workingRawSha256": "d16bea0b83ad7eb871576061f7ea91534a2dd2fdc7eef26eb20ec908e4fca24d",
+      "difference": "CRLF/LF only; inherited raw working-pin and Git-tree distinction"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "gitObjectSha256": "97729b7331a38c99dd21450c0c85ce498875dc28e5b872200f3edf23bdd4a16d",
+      "workingRawSha256": "da41e1de5d5b853295a303092aab9433aeea8168fda2cf0420dd94e9f579fb00",
+      "difference": "CRLF/LF only; inherited raw working-pin and Git-tree distinction"
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "gitObjectSha256": "a0e691a009f312a526b3927d41ca02c5becb459e461a5f2c5ea77d490cd9c4be",
+      "workingRawSha256": "736c63d3a72a5b126841ceedeac4b4a01854a2bec71bd57d2f46a23ec3cf68de",
+      "difference": "CRLF/LF only; inherited raw working-pin and Git-tree distinction"
+    }
+  ],
+  "legacySourceEnvelopeFieldsMeaning": "Inherited sourceBudget/checkAccounting/sourceUse/checkOutcomes remain historical envelope fields required by activation. Current native-close checks are nativeCloseSourceAccounting, without reset.",
+  "operationalCompletionAuthorityRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-AUTONOMOUS-COMPLETION-ADMISSION.json",
+    "sha256": "16db3e4211d5b3595dba659d7810389d8aede51a6f8ab76083534c17491a1d18"
+  },
+  "sourceRepairAuthorityRefs": [
+    {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-TOOL-CLOSE-SOURCE-ADMISSION.json",
+      "sha256": "187e7a5c721c6a34a1074c3b51490bff7f635bee73f32fc12545400b9dc9daf8"
+    },
+    {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-CLOSE-TEST-ISOLATION-ADMISSION.json",
+      "sha256": "d3492e5181922e24b9c4d91086868043f747f932fb866216a9d827e156458444"
+    }
+  ]
+}

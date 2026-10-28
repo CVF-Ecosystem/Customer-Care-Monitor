@@ -1,0 +1,73 @@
+{
+  "kind": "ROOT_R139_AUTONOMOUS_TECHNICAL_ALLOCATIONS",
+  "authorityRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-AUTONOMOUS-COMPLETION-ADMISSION.json",
+    "sha256": "16db3e4211d5b3595dba659d7810389d8aede51a6f8ab76083534c17491a1d18"
+  },
+  "preparationAuthorityRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-AUTONOMOUS-TECHNICAL-PREPARATION-ADMISSION.json",
+    "sha256": "7faeb0a2629ab5afa9f200cd6e73c7f409039a638991f5063e3576325c18649e"
+  },
+  "workerMayEdit": false,
+  "spentRetained": {
+    "originalControllers": 4,
+    "campaigns": 1,
+    "sourceChecks": 27,
+    "historicalCUA": 1,
+    "newDiscoveryCUA": 1,
+    "rootSelectionCUA": 1,
+    "packagedDocs": 2
+  },
+  "actualNewUsage": {
+    "controllers": 0,
+    "campaigns": 0,
+    "serviceQueries": 0,
+    "actorSelections": 0,
+    "focusedAdapterProcesses": 0,
+    "metadataGenerations": 0,
+    "pageCreates": 0,
+    "fixture": 0,
+    "key": 0,
+    "provider": 0,
+    "hostBootQueries": 0
+  },
+  "allocations": [
+    {
+      "id": "R139-AUTONOMOUS-ALLOC-001",
+      "controllerUsedBefore": 4,
+      "controllerCeiling": 5,
+      "additionalOriginalInvocations": 1,
+      "additionalCampaigns": 1,
+      "totalCampaignCeiling": 2
+    }
+  ],
+  "preparationSlots": [
+    {
+      "id": "producer_selector",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": "observer_selector",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": "worker_adapter",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": "root_adapter",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": "metadata_generation",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": "root_host_boot_query",
+      "status": "NOT_STARTED"
+    }
+  ],
+  "freshNonce": "53e255cb7ed80e58092d66905a40bf5a",
+  "actualControllerAdmissionNow": false,
+  "actualPaidRuntimeAdmissionNow": false
+}

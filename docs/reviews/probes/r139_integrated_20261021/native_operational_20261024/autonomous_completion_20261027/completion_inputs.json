@@ -1,0 +1,63 @@
+{
+  "kind": "R139_AUTONOMOUS_COMPLETION_CONSTRUCTOR_INPUTS",
+  "status": "DRAFT_UNRESOLVED_NOT_EXECUTABLE",
+  "generatorInvoked": false,
+  "acceptedChildBuildRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-TOOL-CLOSE-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "094a0a3678571c8ed03c2a278e50e352b645e71cd972fdc841fed9c3cacb065e"
+  },
+  "completionAdmissionRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-AUTONOMOUS-COMPLETION-ADMISSION.json",
+    "sha256": "16db3e4211d5b3595dba659d7810389d8aede51a6f8ab76083534c17491a1d18"
+  },
+  "sourceCommit": "fc4bbe01f88718e41904498bb8ab54d68f094583",
+  "nonce": "53e255cb7ed80e58092d66905a40bf5a",
+  "nativeContractId": "r139-cua-boot-identity-v3-20261026",
+  "runtimeRoot": ".cvf/runtime/r139_autonomous_completion_20261028",
+  "readinessRoot": ".cvf/runtime/r139_autonomous_completion_20261028_readiness",
+  "childLogRoot": ".cvf/runtime/r139_autonomous_completion_20261028_activation_logs",
+  "productRoot": ".cvf/runtime/r139_integrated_execution_r4_20261023",
+  "actorAcks": {"root": null, "internal": null, "cuaProducer": null, "cuaObserver": null},
+  "actorSelectorReplyRefs": {"cuaProducer": null, "cuaObserver": null},
+  "actorReadiness": {
+    "preferredProducer": "Luna, actual task identity and browser connection UNKNOWN",
+    "preferredObserver": "Sol, actual distinct task identity and browser connection UNKNOWN",
+    "alternative": "Root producer only with actual distinct observer and independently assigned runtime review; no fake task IDs",
+    "preclockNoPageSelectionsProposed": {"producer": 1, "observer": 1},
+    "currentlyAdmittedWorkerBrowserCalls": 0
+  },
+  "coordinationOwnerRef": null,
+  "allocationLedgerRef": null,
+  "receiptBindingBootstrapRef": null,
+  "custodyWrapperRef": null,
+  "priorOriginalWaitPaths": [
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/v3_coord_owner_hold_20261026/original_wait_exit.json",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/coord_tool_pin_hold_20261026/original_wait_exit.json",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_budget_hold_20261027/original_wait_exit.json",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/original_wait_exit.json"
+  ],
+  "independentTechnicalReviewRef": null,
+  "priorCampaignTerminalPaths": {
+    "campaign_reservation": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/campaign_reservation.json",
+    "cleanup_cutoff": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/cleanup_cutoff.json",
+    "deadline_expired": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/deadline_expired.json",
+    "root_terminal": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/root_terminal.json",
+    "root_current_outcome": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/root_current_outcome.json"
+  },
+  "technicalReleasePath": "CVF_SESSION/authority/CCMAI-RUNTIME-139-AUTONOMOUS-G0-TECHNICAL-RELEASE-ADMISSION.json",
+  "protectedBaselineRef": null,
+  "browserPlanRef": null,
+  "operatorAvailabilityRef": null,
+  "operatorAvailable": null,
+  "operatorAvailableBasis": "Retained standing Owner exact-page fallback commitment only; no new contemporaneous reply and no mandatory human close in selected native_tool route",
+  "newControllerAccounting": {"usedBefore": 4, "totalCap": 5, "additionalMax": 1, "usedAtIntent": 5},
+  "campaignAccounting": {"historicalUsed": 1, "additionalCap": 1, "totalCeiling": 2},
+  "sourceChecksRetained": 27,
+  "separateObservationAccounting": {"historicalCua": 1, "discoveryCua": 1, "rootSelectionCua": 1, "packagedDocumentationReads": 2},
+  "receiptBindingDecision": "ROOT_REVIEWED_RECEIPT_ONLY_BINDING",
+  "screenshotApiMappingDecision": "DOCUMENTED_OUTER_CUA_WRAPPERS_NO_ALIAS",
+  "captureTransportDecision": "PROPOSED_NOT_PROVEN: original Uint8Array base64 text transport and emitImage, Root lossless decode/hash; never reencode or claim authenticated export",
+  "reservedNextAllowedMove": null,
+  "reservedActiveRole": null,
+  "allEffectsReleased": false
+}

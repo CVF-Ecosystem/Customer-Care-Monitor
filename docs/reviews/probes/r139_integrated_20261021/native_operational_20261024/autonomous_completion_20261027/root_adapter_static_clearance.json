@@ -1,0 +1,26 @@
+{
+  "status": "PASS_STATIC_SAFETY_FOR_TWO_INERT_CHECKS_ONLY",
+  "date": "2026-10-28",
+  "reviewer": "Root independent of Sol code author",
+  "files": {
+    "construct_metadata.py.txt": "e8eb0a73bdbcdef538725895bf5f3e9ed28005f193e65416938392245104d346",
+    "root_custody_wrapper.py.txt": "3bb945cbbebd5c39dcd74ab419dd2e233258ad2ee8cbe16e00c3832d74de49e0",
+    "activation_receipt_bootstrap.py.txt": "d744592370f55235cea6e5947a2fd4ca20aa0d9f882d35a11bd56f50af880023",
+    "test_receipt_binding.py.txt": "290b59ab1b5d139d4d524d9f148f363a525ef08b9c64609960652a2dc7358785"
+  },
+  "unchangedSafetyHelperASTs": [
+    "full_guard",
+    "controller_literal_contracts",
+    "verify_source_preclock_exact_dicts",
+    "verify_source_preclock_refs",
+    "postcoldgate_popen"
+  ],
+  "importAudit": "Bootstrap and wrapper top-level constants/imports/definitions only; guarded main not invoked. Test top-level loads these inert modules, reads only frozen source and historical receipt; never loads actual activation. Constructor not imported or executed.",
+  "selectedChecks": "Eight methods covering receipt-only override, CLI delegation/environment via patched subprocess+loader, exact actor/ref protection and independent task binding, original settled clock chronology, strict allocation, preserved helpers. Temporary files/synthetic inert modules are technical IO proof only, no governance behavior claim.",
+  "prohibited": "No activation/controller/clock suite, compiler/Go/service/DB/browser/key/provider effects. First failure HOLD, no automatic retry.",
+  "custody": "One worker and one Root owned Popen/wait/raw slot each; exact file hashes and explicit noncredential env before invocation.",
+  "retainedSourceProcesses": 27,
+  "newMetadataCheckProcessesMax": 2,
+  "actualNewCheckProcesses": 0,
+  "generatorInvocations": 0
+}

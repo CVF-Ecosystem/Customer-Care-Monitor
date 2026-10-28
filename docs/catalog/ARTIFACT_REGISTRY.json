@@ -38692,6 +38692,76 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_g0_capability_hold_20261027/original_wait_exit.json",
       "status": "ACTIVE",
       "description": "Actual original R139 G0 HOLD clock cutoff/deadline/wait receipt; no browser/product acceptance."
+    },
+    {
+      "id": "r139-autonomous-prep-aba709bb742d0ab7",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-AUTONOMOUS-TECHNICAL-PREPARATION-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "R139 accepted child pins and bounded technical preparation; draft custody metadata only, no actual G0 or paid runtime release."
+    },
+    {
+      "id": "r139-autonomous-prep-98eb42e8c8d87eea",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-TOOL-CLOSE-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "R139 accepted child pins and bounded technical preparation; draft custody metadata only, no actual G0 or paid runtime release."
+    },
+    {
+      "id": "r139-autonomous-prep-27934388f3dc288b",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/activation_receipt_bootstrap.py.txt",
+      "status": "ACTIVE",
+      "description": "R139 accepted child pins and bounded technical preparation; draft custody metadata only, no actual G0 or paid runtime release."
+    },
+    {
+      "id": "r139-autonomous-prep-a722e290d8b2f7bc",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/allocation_ledger.json",
+      "status": "ACTIVE",
+      "description": "R139 accepted child pins and bounded technical preparation; draft custody metadata only, no actual G0 or paid runtime release."
+    },
+    {
+      "id": "r139-autonomous-prep-16b99076523f1104",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/BINDING_MATRIX.md",
+      "status": "ACTIVE",
+      "description": "R139 accepted child pins and bounded technical preparation; draft custody metadata only, no actual G0 or paid runtime release."
+    },
+    {
+      "id": "r139-autonomous-prep-45573545fa30fc12",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/completion_inputs.json",
+      "status": "ACTIVE",
+      "description": "R139 accepted child pins and bounded technical preparation; draft custody metadata only, no actual G0 or paid runtime release."
+    },
+    {
+      "id": "r139-autonomous-prep-1eae37a9c493b321",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/construct_metadata.py.txt",
+      "status": "ACTIVE",
+      "description": "R139 accepted child pins and bounded technical preparation; draft custody metadata only, no actual G0 or paid runtime release."
+    },
+    {
+      "id": "r139-autonomous-prep-a42ada1ec3cf73ac",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/root_custody_wrapper.py.txt",
+      "status": "ACTIVE",
+      "description": "R139 accepted child pins and bounded technical preparation; draft custody metadata only, no actual G0 or paid runtime release."
+    },
+    {
+      "id": "r139-autonomous-prep-2bb49ee10fca6436",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/test_receipt_binding.py.txt",
+      "status": "ACTIVE",
+      "description": "R139 accepted child pins and bounded technical preparation; draft custody metadata only, no actual G0 or paid runtime release."
+    },
+    {
+      "id": "r139-root-adapter-static-clearance-20261028",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/root_adapter_static_clearance.json",
+      "status": "ACTIVE",
+      "description": "Independent static import/predicate review permits two bounded inert adapter checks; no actual check or runtime result."
     }
   ]
 }

@@ -1,0 +1,190 @@
+"""DRAFT metadata constructor, NOT INVOKED. No activation imports/subprocesses.
+
+Root must finalize literal inputs and accepted child pins before the single
+admitted generation. Outputs stay DRAFT; review/sealing/commit remain separate.
+This script never creates ignored runtime roots, owner.json, actors or authority.
+"""
+import hashlib
+import json
+import re
+from pathlib import Path
+
+ROOT = Path.cwd()
+FAMILY = Path("docs/reviews/probes/r139_integrated_20261021/native_operational_20261024")
+OUT = FAMILY / "autonomous_completion_20261027"
+CANON = (
+ "CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json", "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+ "CVF_SESSION_MEMORY.md", "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
+ "IMPLEMENTATION_STATUS.json", "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+ "CVF_SESSION/tranches/CCMAI-RUNTIME-139.json", "docs/catalog/ARTIFACT_REGISTRY.json")
+TOKENS = {"{{G0_UTC}}", "{{G0_MONO}}", "{{STOP_UTC}}", "{{DEADLINE_UTC}}",
+ "{{RESERVATION_SHA256}}", "{{RESERVATION_PATH}}", "{{BASE_HEAD}}", "{{NONCE}}"}
+NONCE = "53e255cb7ed80e58092d66905a40bf5a"
+CHILD_SHA = "094a0a3678571c8ed03c2a278e50e352b645e71cd972fdc841fed9c3cacb065e"
+ROLES = {"root", "internal", "cuaProducer", "cuaObserver"}
+
+def sha(raw): return hashlib.sha256(raw).hexdigest()
+def read(path): return (ROOT / path).read_bytes()
+def dump(value): return (json.dumps(value, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
+def ref(value, parse=True):
+ if type(value) is not dict or set(value) != {"path", "sha256"}: raise ValueError("REF_SCHEMA")
+ path = value["path"]
+ if type(path) is not str or path.startswith(("/", "\\")) or "\\" in path or ":" in path or ".." in Path(path).parts: raise ValueError("REF_PATH")
+ if type(value["sha256"]) is not str or re.fullmatch("[0-9a-f]{64}", value["sha256"]) is None: raise ValueError("UNRESOLVED_REF")
+ raw = read(path)
+ if sha(raw) != value["sha256"]: raise ValueError("REF_HASH")
+ return json.loads(raw) if parse else raw
+
+def main():
+ cfg = json.loads(read(OUT / "completion_inputs.json"))
+ if cfg.get("status") != "ROOT_INPUTS_READY_FOR_SINGLE_DRAFT_GENERATION": raise ValueError("DRAFT_INPUTS_UNRESOLVED")
+ if cfg.get("nonce") != NONCE: raise ValueError("NONCE")
+ if cfg.get("acceptedChildBuildRef",{}).get("sha256") != CHILD_SHA: raise ValueError("EXACT_CHILD_PIN")
+ if cfg.get("receiptBindingDecision") != "ROOT_REVIEWED_RECEIPT_ONLY_BINDING" or cfg.get("screenshotApiMappingDecision") != "DOCUMENTED_OUTER_CUA_WRAPPERS_NO_ALIAS": raise ValueError("BINDING_DECISIONS_UNRESOLVED")
+ build = ref(cfg["acceptedChildBuildRef"])
+ if build.get("sourceCommit") != cfg["sourceCommit"] or build.get("rootReviewApproved") is not True or build.get("sourceChecksAccepted") is not True: raise ValueError("CHILD_BUILD")
+ parent = ref(build["parentAcceptedBuildPinsRef"])
+ changed = {key for key,value in build["pins"]["sourceSha256"].items() if parent["pins"]["sourceSha256"].get(key) != value}
+ if changed != {"scripts/r139_execution_supervisor.py", "backend/api/handlers/intervention_execution_browser_test.go"}: raise ValueError("CHILD_SOURCE_DELTA")
+ if set(build["pins"]["sourceSha256"]) != set(parent["pins"]["sourceSha256"]): raise ValueError("SOURCE13_SET")
+ for path,digest in build["pins"]["sourceSha256"].items():
+  if sha(read(path)) != digest: raise ValueError("SOURCE_PIN")
+ ref(build["newProofTestRef"], parse=False)
+ ref(cfg["completionAdmissionRef"])
+ if cfg.get("operatorAvailable") is not True or "standing" not in cfg.get("operatorAvailableBasis", ""): raise ValueError("STANDING_OPERATOR_BASIS")
+ for key in ("coordinationOwnerRef", "allocationLedgerRef", "independentTechnicalReviewRef", "protectedBaselineRef", "browserPlanRef", "operatorAvailabilityRef", "receiptBindingBootstrapRef", "custodyWrapperRef"):
+  ref(cfg[key], parse=False)
+ waits=[]
+ if len(cfg.get("priorOriginalWaitPaths",[])) != 4: raise ValueError("FOUR_PRIOR_WAITS")
+ for path,(pid,exit_code) in zip(cfg["priorOriginalWaitPaths"],((23500,1),(2560,1),(28928,1),(3728,0))):
+  raw=read(path); wait=json.loads(raw)
+  if wait.get("pid") != pid or wait.get("originalWaitReturned") is not True or wait.get("exitCode") != exit_code: raise ValueError("PRIOR_WAIT_CUSTODY")
+  waits.append({"path":path,"sha256":sha(raw)})
+ if type(cfg.get("actorAcks")) is not dict or set(cfg["actorAcks"]) != ROLES: raise ValueError("EXACT_FOUR_ROLE_ACKS")
+ selectors = cfg.get("actorSelectorReplyRefs")
+ if type(selectors) is not dict or set(selectors) != {"cuaProducer","cuaObserver"}: raise ValueError("EXACT_TWO_SELECTOR_RECORDS")
+ actors = {name:ref(value) for name,value in cfg["actorAcks"].items()}
+ actor_original_refs=[]
+ original_ack_paths=set()
+ for name,ack in actors.items():
+  if ack.get("ready") is not True or ack.get("actorRole") != name or ack.get("campaignNonce") != cfg["nonce"] or ack.get("sourceCommit") != cfg["sourceCommit"] or ack.get("acceptedBuildPinsSha256") != CHILD_SHA or ack.get("campaignReserved") is not False or type(ack.get("effectsObserved")) is not int or ack.get("effectsObserved") != 0: raise ValueError("ACTOR_ACK:"+name)
+  original=ack.get("originalActorAckRef")
+  if not ref(original,parse=False): raise ValueError("EMPTY_ORIGINAL_ACK")
+  if original["path"] in original_ack_paths or original["path"] in {value["path"] for value in cfg["actorAcks"].values()}: raise ValueError("DISTINCT_ORIGINAL_ACK_REQUIRED")
+  original_ack_paths.add(original["path"]); actor_original_refs.append(original)
+  if name == "root" and (ack.get("originalControlPopenCustodian") != "Root" or ack.get("originalControlWaitExitReceiptPlanned") is not True): raise ValueError("ROOT_ORIGINAL_CUSTODY_ACK")
+  if name in selectors:
+   selection=ref(selectors[name])
+   if (selection.get("kind") != "R139_PRECLOCK_SELECTOR_CALLER_RECORD" or selection.get("actorRole") != name or selection.get("collaborationTaskId") != ack.get("collaborationTaskId") or selection.get("campaignNonce") != NONCE or selection.get("sourceCommit") != cfg["sourceCommit"] or selection.get("acceptedBuildPinsSha256") != CHILD_SHA or selection.get("browserId") != "2" or selection.get("method") != 'cua.getBrowser({id:"2"})' or selection.get("status") != "SELECTED_DOCUMENTATION_RETURNED" or type(selection.get("pageOperations")) is not int or selection.get("pageOperations") != 0 or selection.get("callerQualified") is not True): raise ValueError("ACTUAL_SELECTOR_BINDING")
+   if not ref(selection.get("originalToolReplyRef"),parse=False): raise ValueError("EMPTY_ORIGINAL_SELECTOR_REPLY")
+   actor_original_refs.append(selection["originalToolReplyRef"])
+ producer,observer = (actors[k].get("collaborationTaskId") for k in ("cuaProducer", "cuaObserver"))
+ if any(type(task) is not str or not task.startswith("/root/") for task in (producer,observer)) or producer == observer: raise ValueError("ACTOR_INDEPENDENCE")
+ next_move,role = cfg["reservedNextAllowedMove"],cfg["reservedActiveRole"]
+ if type(next_move) is not str or TOKENS != set(re.findall(r"\{\{[^{}]+\}\}",next_move)) or not role: raise ValueError("CANONICAL_INSTRUCTION")
+ seed = json.loads(read(FAMILY / "delegated_activation_recipe_20261026.json"))
+ recipe = dict(seed)
+ for name,ack in actors.items():
+  if any(ack.get(field) != seed[key]["sha256"] for field,key in (("freshGrantSha256","freshGrant"),("inheritedOwnerEnvelopeSha256","inheritedOwnerEnvelope"),("observationCapsSha256","observationCapsRef"))): raise ValueError("FROZEN_ACK_GRANT_BINDING:"+name)
+ terminal_paths=cfg.get("priorCampaignTerminalPaths")
+ terminal_names={"campaign_reservation","cleanup_cutoff","deadline_expired","root_terminal","root_current_outcome"}
+ if type(terminal_paths) is not dict or set(terminal_paths) != terminal_names: raise ValueError("PRIOR_CAMPAIGN_TERMINAL_SET")
+ terminals={}
+ for name,path in terminal_paths.items():
+  expected=(FAMILY/"delegated_g0_capability_hold_20261027"/(name+".json")).as_posix()
+  if path != expected: raise ValueError("PRIOR_CAMPAIGN_TERMINAL_PATH")
+  raw=read(path); json.loads(raw)
+  terminals[name]={"path":path,"sha256":sha(raw)}
+ for key in ("canonicalTemplates", "oldSha256", "protectedUnchangedHashes", "campaignNonce", "recoveryMetadataRefs", "actorAvailabilityMessages", "technicalCheckRefs", "delegatedFocusedCheckAccounting", "finalSealChecklist", "currentClockHold"):
+  recipe.pop(key,None)
+ for key in ("priorOriginalWaitExitRef","coordRecoveryRootWrapperRef","delegatedRootWrapperRef","delegatedTechnicalReviewRef","delegatedV2TechnicalAuthorityPath","currentSourceCheckAuthority","sourceBudgetInterpretation"):
+  recipe.pop(key,None)
+ recipe.update(status="DRAFT_PENDING_ROOT_REVIEW_NOT_EXECUTABLE", readyForActivation=False, rootSealPending=True,
+  nonce=cfg["nonce"], nativeContractId=cfg["nativeContractId"], sourceCommit=cfg["sourceCommit"],
+  acceptedBuildPinsRef=cfg["acceptedChildBuildRef"], actorAcks=cfg["actorAcks"], actorSelectorReplyRefs=selectors,
+  reservationPath=cfg["readinessRoot"]+"/campaign_reservation.json", coordinationRoot=cfg["readinessRoot"]+"/coordination",
+  signalPath=cfg["readinessRoot"]+"/coordination/root_g0_release.json", failurePath=cfg["readinessRoot"]+"/coordination/activation_failure.json",
+  childLogRoot=cfg["childLogRoot"], cumulativeControllerAccounting=cfg["newControllerAccounting"],
+  allocationLedgerRef=cfg["allocationLedgerRef"], autonomousCompletionAdmissionRef=cfg["completionAdmissionRef"],
+  receiptBindingBootstrapRef=cfg["receiptBindingBootstrapRef"], autonomousRootWrapperRef=cfg["custodyWrapperRef"], priorOriginalWaitExitRefs=waits, priorCampaignTerminalRefs=terminals,
+  autonomousTechnicalReviewRef=cfg["independentTechnicalReviewRef"], autonomousTechnicalReleasePath=cfg["technicalReleasePath"],
+  delegatedCoordinationOwnerRef=cfg["coordinationOwnerRef"], coordinationOwnerMetadataRef=cfg["coordinationOwnerRef"],
+  coordinationOwnerSha256=cfg["coordinationOwnerRef"]["sha256"],
+  operatorAvailable=True, operatorAvailabilityBasis=cfg["operatorAvailableBasis"], operatorAvailabilityRef=cfg["operatorAvailabilityRef"],
+  protectedBaselineReference=cfg["protectedBaselineRef"], cuaPageTargetPlanReference=cfg["browserPlanRef"], cuaBrowserOperationPlanReference=cfg["browserPlanRef"],
+  currentSourceCheckAuthority="RETAINED_NATIVE_SOURCE_LINEAGE27_ADAPTER_CHECKS_SEPARATELY_ACCOUNTED",
+  sourceBudgetInterpretation="Native source lineage27 retained; original six-key source budget dictionary unchanged. Receipt adapter checks separately accounted; no campaign source checks.",
+  historicalRecipeRef={"path":(FAMILY/"delegated_activation_recipe_20261026.json").as_posix(),"sha256":sha(read(FAMILY/"delegated_activation_recipe_20261026.json"))},
+  currentEffectFlags={"controller":0,"campaign":0,"services":0,"cuaMethods":0,"fixture":0,"keyReads":0,"providerCalls":0},
+  sharedFutureControllerUsed=4,sharedFutureControllerCap=5,canonicalTemplatesStatus="DRAFT_COMPLETE_PENDING_ROOT_SEAL")
+ recipe["invocation"] = {"custodian":"Root original managed Popen and original wait/exit", "controllerScriptPath":cfg["runtimeRoot"]+"/activation_bootstrap.py", "originalPopenWaitExitRequired":True}
+ original = {path:read(path) for path in CANON}
+ state = json.loads(original[CANON[1]])
+ templates = {}
+ actual_receipt = (OUT / "actual_activation_receipt.json").as_posix()
+ for path,raw in original.items():
+  if path.endswith(".json"):
+   value=json.loads(raw)
+   if path in CANON[:2]: value.update(nextAllowedMove=next_move,activeRole=role)
+   if path.endswith("/CCMAI-RUNTIME-139.json"): value["disposition"]=next_move
+   if path == CANON[-1]:
+    if any(row["path"]==actual_receipt for row in value["artifacts"]): raise ValueError("FUTURE_RECEIPT_ALREADY_REGISTERED")
+    value["artifacts"].append({"id":"r139-autonomous-actual-activation-receipt","family":"continuity","path":actual_receipt,"status":"ACTIVE","description":"New original autonomous campaign reservation only; historical receipts retained; not product proof."})
+   else:
+    value["x-r139AutonomousActualReservation"]={"status":"RESERVED_CANONICAL_PENDING_GATES", "campaignNonce":"{{NONCE}}", "reservationPath":"{{RESERVATION_PATH}}", "reservationSha256":"{{RESERVATION_SHA256}}", "g0StartUTC":"{{G0_UTC}}", "g0StartMonotonic":"{{G0_MONO}}", "cleanupCutoffUTC":"{{STOP_UTC}}", "deadlineUTC":"{{DEADLINE_UTC}}", "originalDispatchHead":"{{BASE_HEAD}}", "retainedSourceChecks":27,"historicalControllers":4,"newControllerUsed":1,"historicalCampaigns":1,"newCampaignUsed":1,"fixture":0,"key":0,"provider":0}
+   text=dump(value).decode("utf-8").replace('"{{G0_MONO}}"','{{G0_MONO}}')
+  else:
+   text=raw.decode("utf-8-sig").replace("\r\n","\n")
+   if state["nextAllowedMove"] not in text: raise ValueError("MISSING_CANONICAL_NEXT_MOVE:"+path)
+   text=text.replace(state["nextAllowedMove"],next_move).replace(state["activeRole"],role)
+  templates[path]=text
+ recipe["oldSha256"]={path:sha(raw) for path,raw in original.items()}
+ recipe["canonicalTemplates"]=templates
+ # Preserve immutable historical pins and add current explicit dependencies.
+ # Old protected bytes do not become current actor readiness by being retained.
+ protected=dict(seed["protectedUnchangedHashes"]["files"])
+ protected.update({path:sha(read(path)) for path in build["pins"]["sourceSha256"]})
+ protected.update({path:sha(read(path)) for path in build.get("metadataSha256",{})})
+ for value in [cfg["acceptedChildBuildRef"],cfg["completionAdmissionRef"],build["newProofTestRef"],cfg["receiptBindingBootstrapRef"],cfg["custodyWrapperRef"],*cfg["actorAcks"].values(),*selectors.values(),*actor_original_refs,*waits,*terminals.values(),recipe["historicalRecipeRef"]]: protected[value["path"]]=value["sha256"]
+ for key in ("coordinationOwnerRef","allocationLedgerRef","independentTechnicalReviewRef","protectedBaselineRef","browserPlanRef","operatorAvailabilityRef"):
+  value=cfg[key]; protected[value["path"]]=value["sha256"]
+ for value in recipe.values():
+  if type(value) is dict and set(value) == {"path","sha256"}:
+   ref(value,parse=False); protected[value["path"]]=value["sha256"]
+ order=original[CANON[5]].replace(b"\r\n",b"\n")
+ begin="## Approved source-and-conditional-reentry dispatch — 2026-10-24"
+ finish="## Original-return check / proposed source-capability boundary — 2026-10-24"
+ recipe["protectedUnchangedHashes"]={"files":protected,"workOrderPinnedSections":{"historicalApprovedDispatch":{"startMarker":begin,"endMarker":finish,"sha256":sha(order[order.index(begin.encode()):order.index(finish.encode())].rstrip()+b"\n")}}}
+ runtime=json.loads(read(FAMILY/"delegated_runtime_admission_draft_20261026.json"))
+ for key in ("parentAuthorityCommit","sourceResumeAdmissionCommit","priorOriginalWaitExitRef","coordRecoveryRootWrapperRef","delegatedRootWrapperRef","delegatedRootControlWrapperRef","actorAvailabilityMessages","technicalCheckLineage","delegatedTechnicalReviewPath","delegatedV2TechnicalAuthorityPath","coordinationOwnerMetadataRef","coordRecoveryTechnicalReviewRef","coordRecoveryAdmissionRef","coordRecoveryOwnerRef","originalPreclockExitRef","coordRecoveryQualification","sourceBudgetInterpretation","currentSourceCheckAuthority","currentClockHoldReceipt","sharedFutureControllerUsed","sharedFutureControllerCap","sharedFutureControllerUsedBefore","sharedFutureControllerTotalCap"):
+  runtime.pop(key,None)
+ runtime.update(status="DRAFT_NO_RUNTIME_RELEASE_PENDING_ACTUAL_G0", ownerApproved=False, sourceOnly=True,
+  sourceCommit=cfg["sourceCommit"],sourceSha256=build["pins"]["sourceSha256"],backendTree=build["pins"]["backendTree"],frontendTree=build["pins"]["frontendTree"],
+  goTestBinaryPath=build["pins"]["binary"]["path"],goTestBinarySha256=build["pins"]["binary"]["sha256"],campaignNonce=cfg["nonce"],
+  nativeContractId=cfg["nativeContractId"],closeMode="native_tool",producerAgentTaskId=producer,observerAgentTaskId=observer,
+  browserId="2",tabId="PENDING_ACTUAL_OWNED_TAB",browserSupported=False,browserReadinessRoot=cfg["readinessRoot"],
+  browserReceiptPath=cfg["readinessRoot"]+"/browser_prefix.json",browserReceiptSha256="PENDING_ACTUAL_G0_PREFIX",campaignReservationSha256="PENDING_ACTUAL_RESERVATION",
+  actorAcks=cfg["actorAcks"],actorSelectorReplyRefs=selectors,priorOriginalWaitExitRefs=waits,priorCampaignTerminalRefs=terminals,
+  delegatedCoordinationOwnerRef=cfg["coordinationOwnerRef"],allocationLedgerRef=cfg["allocationLedgerRef"],
+  acceptedBuildPinsRef=cfg["acceptedChildBuildRef"],supervisorSha256=build["pins"]["sourceSha256"]["scripts/r139_execution_supervisor.py"],
+  noninterferenceDisposition=cfg["protectedBaselineRef"],ownerOperatorAvailabilityRef=cfg["operatorAvailabilityRef"],operatorAvailabilityRef=cfg["operatorAvailabilityRef"],
+  ownedScopeId="r139-cua-explicit-owned-"+cfg["nonce"],ownedTabIds=[],
+  recorderPaths={"outputDir":cfg["runtimeRoot"]+"/recorder","tempDir":"temp"},
+  sharedFutureControllerUsedBefore=4,sharedFutureControllerTotalCap=5,
+  sourceCheckLineage={"retainedNativeChecks":27,"adapterChecks":"SEPARATE_ORIGINAL_RECEIPTS_REQUIRED"},
+  historicalRuntimeDraftRef={"path":(FAMILY/"delegated_runtime_admission_draft_20261026.json").as_posix(),"sha256":sha(read(FAMILY/"delegated_runtime_admission_draft_20261026.json"))})
+ # Reject an operational stale path/nonce rather than silently replacing bytes
+ # inside immutable historical/source references. Late runtime observations stay
+ # explicit PENDING fields in the unreleased runtime draft only.
+ for value in ({key:value for key,value in recipe.items() if key != "canonicalTemplates"},runtime):
+  encoded=json.dumps(value)
+  if ".cvf/runtime/r139_delegated_reentry" in encoded or '"299b601cf7509d9727de5d1de197990f"' in encoded or '"acfcb1f2d705f1e0296e4062d7474bb5"' in encoded: raise ValueError("STALE_OPERATIONAL_LITERAL")
+ outputs={"activation_recipe.json":dump(recipe),"runtime_admission_draft.json":dump(runtime)}
+ for name in (*outputs,"generation_manifest.json"):
+  if (OUT/name).exists(): raise ValueError("OUTPUT_ALREADY_EXISTS:"+name)
+ for name,raw in outputs.items():
+  with (OUT/name).open("xb") as file: file.write(raw)
+ with (OUT/"generation_manifest.json").open("xb") as file:
+  file.write(dump({"status":"ONE_DRAFT_GENERATION_NO_RELEASE","inputsSha256":sha(read(OUT/"completion_inputs.json")),"outputs":{name:sha(raw) for name,raw in outputs.items()},"runtimeEffects":0}))
+
+if __name__ == "__main__": main()

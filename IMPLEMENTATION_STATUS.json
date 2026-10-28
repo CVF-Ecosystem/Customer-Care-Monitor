@@ -1,11 +1,13 @@
 {
   "x-r139AutonomousDiscovery20261027": {
-    "status": "SOURCE_COMPONENTS_ACCEPTED_LINEAGE27_CHILD_PINS_PENDING",
+    "status": "SOURCE_COMPONENTS_ACCEPTED_CHILD_PINS_PREPARATION_REVIEW",
     "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-CLOSE-TEST-ISOLATION-ADMISSION.json",
     "actualDiscoveryCalls": 1,
     "newCampaigns": 0,
     "newProviderCalls": 0,
-    "productAcceptance": "UNCHANGED_HOLD"
+    "productAcceptance": "UNCHANGED_HOLD",
+    "childBuildPins": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-TOOL-CLOSE-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sourceMaterialCommit": "fc4bbe01f88718e41904498bb8ab54d68f094583"
   },
   "schemaVersion": "1.0",
   "x-roadmapTracking": {
