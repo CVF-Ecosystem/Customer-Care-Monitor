@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "NATIVE_BROWSER_EXECUTION_RECEIPT",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "date": "2026-10-28",
+  "executionTimestampUTC": "2026-10-28T15:13:38Z",
+  "callerActor": {
+    "platform": "Google Antigravity IDE (Antigravity 2.0 desktop / Windows workspace)",
+    "activeModel": "Gemini 3.8 Flash",
+    "conversationId": "a0e70c82-4d8c-4c90-80f8-d9a9db2b21b1",
+    "role": "Owner-designated browser executor under admission CCMAI-RUNTIME-139-GEMINI-NATIVE-BROWSER-CHECK-ADMISSION.json"
+  },
+  "subagentActor": {
+    "typeName": "browser",
+    "conversationId": "e1ef6c14-4b14-4f6c-b1f4-532a85d57746",
+    "role": "Browser Execution Worker",
+    "toolIntegration": "mcp_chrome_devtools (builtin Antigravity Chrome DevTools MCP bridge)",
+    "transcriptUri": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/gemini_native_browser_check_20261028/browser_subagent_transcript.jsonl"
+  },
+  "attemptedAction": {
+    "targetUrl": "https://example.com/",
+    "jobCap": 1,
+    "outerApiAttemptsCap": 8,
+    "allowRetry": false
+  },
+  "actionTrace": [
+    {
+      "step": 1,
+      "tool": "mcp_chrome_devtools_list_pages",
+      "args": { "toolSummary": "List open pages" },
+      "outcome": "ERROR",
+      "error": "Could not connect to Chrome. Check if Chrome is running.\nCause: Could not find DevToolsActivePort for chrome at C:\\Users\\tiennm\\AppData\\Local\\Google\\Chrome\\User Data\\DevToolsActivePort"
+    },
+    {
+      "step": 2,
+      "tool": "mcp_chrome_devtools_new_page",
+      "args": { "url": "https://example.com/" },
+      "outcome": "SKIPPED_DUE_TO_STEP1_ERROR"
+    },
+    {
+      "step": 3,
+      "tool": "mcp_chrome_devtools_take_snapshot",
+      "outcome": "SKIPPED"
+    },
+    {
+      "step": 4,
+      "tool": "mcp_chrome_devtools_take_screenshot",
+      "outcome": "SKIPPED"
+    },
+    {
+      "step": 5,
+      "tool": "mcp_chrome_devtools_close_page",
+      "outcome": "SKIPPED"
+    }
+  ],
+  "budgetAccounting": {
+    "browserJobsMax": 1,
+    "browserJobsUsed": 1,
+    "outerBrowserAttemptsMax": 8,
+    "outerBrowserAttemptsUsed": 1,
+    "ownedTabsMax": 1,
+    "ownedTabsCreated": 0,
+    "screenshotsCaptured": 0,
+    "newProductCampaigns": 0,
+    "newProviderCalls": 0
+  },
+  "survivingResources": {
+    "ownedTabsSurviving": 0,
+    "orphanedProcesses": 0,
+    "cleanupStatus": "CLEAN_NO_RESOURCES_CREATED"
+  },
+  "verdict": "BLOCKED_WITH_REASON",
+  "failureRootCause": "CHROME_REMOTE_DEBUGGING_DISCONNECTED: The builtin Chrome DevTools MCP server could not locate DevToolsActivePort at C:\\Users\\tiennm\\AppData\\Local\\Google\\Chrome\\User Data\\DevToolsActivePort. Google Chrome is either not running or running without remote debugging enabled."
+}

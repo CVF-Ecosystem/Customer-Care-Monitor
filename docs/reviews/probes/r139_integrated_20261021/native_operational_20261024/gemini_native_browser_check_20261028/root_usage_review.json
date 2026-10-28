@@ -1,0 +1,114 @@
+{
+  "kind": "ROOT_REVIEWED_R139_GEMINI_NATIVE_BROWSER_USAGE",
+  "status": "JOB_SPENT_HOLD_CHROME_CONNECTION_DISCOVERY_FAILED",
+  "date": "2026-10-28",
+  "reviewer": "Root independent of Gemini execution",
+  "initialAllocationRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/gemini_native_browser_check_20261028/allocation.json",
+    "sha256": "bf7650d1fe404fc59cae57e026e075da4cd76628484d38baa49a509b1689c97f"
+  },
+  "initialAllocationMeaning": "Immutable initial dispatch envelope with zeros; not a current unused-slot claim. This review supplies settled usage; no refund or automatic retry.",
+  "reportRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/gemini_native_browser_check_20261028/return_at_root_review.md",
+    "sha256": "f00815889834af4e7a2de8a888f43bb0ab507890ff41678e9a0f0d7871d3374d"
+  },
+  "executionReceiptRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/gemini_native_browser_check_20261028/browser_execution_receipt.json",
+    "sha256": "941ace3909f24d275ca1b461ef3c344367293694cd7ad78988ca836beeed09f9"
+  },
+  "transcriptRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/gemini_native_browser_check_20261028/browser_subagent_transcript.jsonl",
+    "sha256": "4d71a67b855d9d1cb8d8f550a16be035b95f3e70092daac014d93e5b7aee27d6"
+  },
+  "toolCatalogRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/gemini_native_browser_check_20261028/tool_catalog_audit.json",
+    "sha256": "e3c145c86f091a80c0f451fac3409a5a71851ed441aedb5f651987f8d1dfa2ec"
+  },
+  "workerManifestRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/gemini_native_browser_check_20261028/evidence_manifest.json",
+    "sha256": "a6921e5c605fa89041177d8480c2b041622300e801fa4dc8a4c07e3dc9e385dc"
+  },
+  "manifestBase": "Paths resolve relative to native_operational_20261024, not project root; all9current hashes checked.",
+  "manifestChecks": [
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/gemini_native_browser_check_20261028/.gitattributes",
+      "sha256": "96d0081ab5e1ef2b1d703334766b72eec6574fa5a65a061a4718ddac2636f981",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/gemini_native_browser_check_20261028/allocation.json",
+      "sha256": "bf7650d1fe404fc59cae57e026e075da4cd76628484d38baa49a509b1689c97f",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/gemini_native_browser_check_20261028/tool_catalog_audit.json",
+      "sha256": "e3c145c86f091a80c0f451fac3409a5a71851ed441aedb5f651987f8d1dfa2ec",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/gemini_native_browser_check_20261028/browser_subagent_transcript.jsonl",
+      "sha256": "4d71a67b855d9d1cb8d8f550a16be035b95f3e70092daac014d93e5b7aee27d6",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/gemini_native_browser_check_20261028/browser_execution_receipt.json",
+      "sha256": "941ace3909f24d275ca1b461ef3c344367293694cd7ad78988ca836beeed09f9",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/gemini_native_browser_check_20261028/snapshots/R139_BROWSER_TRANSFER_RETURN_2026-10-28.md",
+      "sha256": "9eb25ea0b1766b66ba814de5d2c8a9642f1b6360e95dcce8291a626e5c5da646",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/gemini_native_browser_check_20261028/snapshots/evidence_manifest.json",
+      "sha256": "d78c02a44cbfc076ba7969349b2ae51950a0c9acb300d102954c515322198679",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/gemini_native_browser_check_20261028/snapshots/gemini_actor_readiness_assessment.json",
+      "sha256": "bb377dfee2c399cb0a5944c3ca4634b543e78e04d31b95df20a439e5124e5c7d",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/gemini_native_browser_check_20261028/snapshots/gemini_process_audit.json",
+      "sha256": "688d5b70a354b39ba7745d87eda7f1404afc4e1c49aa8445eaf4c65bd4153b7e",
+      "match": true
+    }
+  ],
+  "traceClassification": "Worker-exported transcript, source-inspected by Root; not independent authenticated platform export. Only actual tool_calls are counted; proposed/skipped actions are not attempts.",
+  "actualBrowserCalls": [
+    "mcp_chrome_devtools_list_pages"
+  ],
+  "browserJobsUsed": 1,
+  "outerBrowserAttemptsUsed": 1,
+  "catalogOrDocumentationReadsSpent": 2,
+  "priorCumulativeBrowserMethods": 13,
+  "newCumulativeBrowserMethods": 14,
+  "ownedTabsCreatedByTrace": 0,
+  "screenshotsByTrace": 0,
+  "listPagesOutcome": "ERROR_Could_not_find_DevToolsActivePort_at_requested_default_Chrome_profile",
+  "subsequentOpenReadCaptureClose": "NOT_RUN",
+  "causeBoundary": "Confirms bridge could not discover/connect at its expected profile; does not prove Chrome globally stopped, exact browser version, MCP arguments, profile mismatch or permissions. No runtime configuration read or mutation by Root.",
+  "cleanupBoundary": "No new page action was attempted in trace, so no newly owned tab needs closure. Global orphan/server/listener absence and original OS process waits are NOT_ESTABLISHED. Native browser job completion does not prove MCP process termination.",
+  "unchangedProductEffects": {
+    "sourceLineage": 27,
+    "historicalControllers": 4,
+    "historicalCampaigns": 1,
+    "historicalServiceQueries": 5,
+    "newProductCampaigns": 0,
+    "newControllers": 0,
+    "newFixtureStarts": 0,
+    "newKeyReads": 0,
+    "newProviderCalls": 0,
+    "paidUnknownHistory": "PRESERVED_NOT_REFUNDED"
+  },
+  "nextBoundary": "Gemini remains browser executor, Root reviewer. Human-controlled supported Chrome connection/permission must change first; new independently reviewed bounded dispatch before a second browser job. Do not retry the spent1-job packet, install plugins, kill user Chrome or run raw CDP/default-profile debug flags.",
+  "officialReferences": [
+    "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/skills/troubleshooting/SKILL.md",
+    "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/advanced-usage.md",
+    "https://developer.chrome.com/blog/remote-debugging-port"
+  ],
+  "claims": "Accepted failed-connection diagnostic only; not browser open/control/capture/close capability, G0, product/governance/CI/FREEZE proof.",
+  "logicalReportPath": "docs/reviews/R139_BROWSER_TRANSFER_RETURN_2026-10-28.md"
+}

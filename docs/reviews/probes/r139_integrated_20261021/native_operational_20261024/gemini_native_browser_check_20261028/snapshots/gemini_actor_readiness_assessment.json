@@ -1,0 +1,120 @@
+{
+  "schemaVersion": "1.0",
+  "documentClass": "WORKER_READINESS_ASSESSMENT",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+  "assessedAtUTC": "2026-10-28T13:52:00Z",
+  "status": "READY_FOR_ROOT_REVIEW",
+  "operationalReadinessStatus": "BLOCKED_WITH_REASON",
+  "riskCeiling": "R2",
+  "actor": {
+    "platform": "Antigravity IDE (Windows workspace)",
+    "model": "Gemini 3.8 Flash",
+    "conversationId": "a0e70c82-4d8c-4c90-80f8-d9a9db2b21b1",
+    "activeRole": "IMPLEMENTATION_WORKER (browser readiness assessment only)",
+    "declaredTools": [
+      "read_file",
+      "edit_file",
+      "write_file",
+      "run_command",
+      "manage_task",
+      "schedule",
+      "invoke_subagent",
+      "define_subagent",
+      "manage_subagents",
+      "send_message",
+      "search_marketplace",
+      "ask_question",
+      "search_web"
+    ],
+    "cuaToolAvailable": false,
+    "browserSubagentAvailable": false,
+    "subagentTypesDeclared": [
+      "self",
+      "research",
+      "image-generator"
+    ],
+    "distinctObserverRoleAvailable": false,
+    "distinctProducerRoleAvailable": false,
+    "ownedTabCreation": "NOT_AVAILABLE",
+    "ownedTabControl": "NOT_AVAILABLE",
+    "ownedTabCapture": "NOT_AVAILABLE",
+    "ownedTabCloseProof": "NOT_AVAILABLE"
+  },
+  "headVerification": {
+    "expectedBaseline": "b9d4822a58e1fd89f5a911fcb85abb7d13e995a2",
+    "actualHead": "208c28c92b9dd98a2098bca1ad16ad270a4b4ed4",
+    "headMatchesBaseline": false,
+    "headDiffExplanation": "HEAD is commit 208c28c9 ('Review R139 browser transfer as qualified documentary hold') committed by Root, which incorporates previous transfer documentary review. Checkout was NOT reset.",
+    "workingTreeAtInspection": "CLEAN (after inspecting and removing untracked test_read.txt)",
+    "workingTreeCurrent": "MODIFIED_AND_UNTRACKED (1 modified return report, 3 untracked evidence files under browser_transfer_20261028; zero tracked product files modified)"
+  },
+  "childBuildPinsVerification": {
+    "childPinsPath": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-TOOL-CLOSE-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "childPinsSha256": "094a0a3678571c8ed03c2a278e50e352b645e71cd972fdc841fed9c3cacb065e",
+    "sourceCommit": "fc4bbe01f88718e41904498bb8ab54d68f094583",
+    "sourceFilesChecked": 13,
+    "sourceFilesPassed": 13,
+    "binaryChecked": 1,
+    "binaryPassed": 1,
+    "toolsChecked": 5,
+    "toolsPassed": 5,
+    "allPinsMatch": true
+  },
+  "authorityHashes": {
+    "AUTONOMOUS_COMPLETION_ADMISSION": "16db3e4211d5b3595dba659d7810389d8aede51a6f8ab76083534c17491a1d18",
+    "NATIVE_TOOL_CLOSE_ACCEPTED_BUILD_PINS": "094a0a3678571c8ed03c2a278e50e352b645e71cd972fdc841fed9c3cacb065e",
+    "INTERNAL_CUA_SOURCE_ADMISSION": "0ee21ae60ea9f3248b36af58ed003892f3e4c1f088c687f8683f9ae4f37ddd9e",
+    "CUA_OBSERVATION_CAPS_ADMISSION": "fa7f2f344c75b6900f1fb65d74c9327e9e53d1957714226d880fa5a30eab9491",
+    "NATIVE_CLOSE_TEST_ISOLATION_ADMISSION": "d3492e5181922e24b9c4d91086868043f747f932fb866216a9d827e156458444",
+    "NATIVE_TOOL_CLOSE_SOURCE_ADMISSION": "187e7a5c721c6a34a1074c3b51490bff7f635bee73f32fc12545400b9dc9daf8",
+    "GATE_PROFILE_LOCK": "5a58fe82ea57fbd89af2ed42d8a31d6c279aab2b7eb1349d01c0d65cbc2357c2"
+  },
+  "criteriaEvaluations": {
+    "G0": "HOLD",
+    "G1": "NOT_RUN",
+    "G2": "NOT_RUN",
+    "G3": "NOT_RUN",
+    "E01": "NOT_RUN",
+    "E02": "NOT_RUN",
+    "E03": "NOT_RUN",
+    "E04": "NOT_RUN",
+    "E05": "NOT_RUN",
+    "E06": "NOT_RUN"
+  },
+  "cumulativeUsage": {
+    "sourceLineage": 27,
+    "historicalControllers": 4,
+    "historicalCampaigns": 1,
+    "historicalServiceQueries": 5,
+    "cumulativeBrowserMethods": 5,
+    "packagedDocs": 2,
+    "publicPricingReads": 2,
+    "failedSelectorAttempts": 1,
+    "providerSlotsConsumed": 1,
+    "providerOutcome": "MAY_HAVE_STARTED_OR_UNKNOWN",
+    "newCampaigns": 0,
+    "newFixtureStarts": 0,
+    "newBrowserActions": 0,
+    "newProviderCalls": 0,
+    "newKeyReads": 0,
+    "newSourceEdits": 0
+  },
+  "processCustody": {
+    "managedProcessesStarted": 0,
+    "commandStepsCount": 16,
+    "ephemeralProcessCount": "UNKNOWN/NOT_ESTABLISHED",
+    "survivingDaemonsOrListeners": "NOT_ESTABLISHED",
+    "allEphemeralProcessesExited": "NOT_INDEPENDENTLY_VERIFIED",
+    "historicalSupervisorCleanupMissing": "PRESERVED_HISTORICAL_QUALIFICATION",
+    "historicalPid3728ClockCustody": "COMPLETE_PER_CANONICAL_ROOT_CURRENT_OUTCOME"
+  },
+  "consolidatedBlockers": [
+    "CUA_CONNECTION_MISSING: This actor (Antigravity/Gemini 3.8 Flash) has no CUA tool (cua.getState / cua.getBrowser) and no browser subagent available in its declared toolset.",
+    "ACTOR_BOUND_ADMISSION_MISSING: No committed admission identifies this actor as browser worker.",
+    "TECHNICAL_RELEASE_MISSING: No committed G0 technical release exists for this actor.",
+    "ADAPTER_INERT_CHECKS_NOT_RUN: autonomous_completion_20261027 adapter received static review only; inert checks and metadata generation have not run.",
+    "RUNTIME_EFFECT_ADMISSION_MISSING: Separate post-G0 Runtime Effect Admission for fixture/key/provider is not released."
+  ],
+  "nextAllowedMove": "Root ORCHESTRATOR reviews this return, preserves all spent counters and UNKNOWN history, and decides actor admission route; no blind retry, alternate automation stack substitution, or self-approval."
+}

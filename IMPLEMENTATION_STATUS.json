@@ -17,8 +17,10 @@
     "browserTransferDisposition": "DOCUMENTARY_HOLD_ONLY_NO_RUNTIME_TEST",
     "rootBrowserRecheck": "docs/reviews/R139_ROOT_BROWSER_RECHECK_2026-10-28.md",
     "rootBrowserAvailability": "DIRECT_ROOT_IAB_BLANK_TAB_READ_CAPTURE_CLOSE_OBSERVED_PRODUCT_STILL_HOLD",
-    "latestBrowserExecutorAssignment": "OWNER_GEMINI_BROWSER_ROOT_REVIEW_PENDING_NATIVE_DIAGNOSTIC",
-    "geminiNativeBrowserPacket": "docs/reviews/R139_GEMINI_NATIVE_BROWSER_CHECK_HANDOFF_2026-10-28.md"
+    "latestBrowserExecutorAssignment": "GEMINI_BROWSER_JOB_SPENT_CHROME_CONNECTION_HOLD_ROOT_REVIEWED",
+    "geminiNativeBrowserPacket": "docs/reviews/R139_GEMINI_NATIVE_BROWSER_CHECK_HANDOFF_2026-10-28.md",
+    "geminiNativeBrowserResultReview": "docs/reviews/R139_GEMINI_NATIVE_BROWSER_CHECK_ROOT_REVIEW_2026-10-28.md",
+    "cumulativeBrowserMethods": 14
   },
   "schemaVersion": "1.0",
   "x-roadmapTracking": {

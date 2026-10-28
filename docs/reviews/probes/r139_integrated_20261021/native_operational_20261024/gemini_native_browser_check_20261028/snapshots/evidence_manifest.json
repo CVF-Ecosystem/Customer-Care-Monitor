@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "family": "browser_transfer_20261028",
+  "generatedAtUTC": "2026-10-28T14:10:00Z",
+  "worker": "Antigravity (Gemini 3.8 Flash)",
+  "conversationId": "a0e70c82-4d8c-4c90-80f8-d9a9db2b21b1",
+  "files": [
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/browser_transfer_20261028/worker_return_original.md",
+      "sha256": "529be7c2a83136a28654235645ebfca072faee689243f5f3c9ce2d2de2f7513f",
+      "classification": "original",
+      "description": "Preserved byte-exact copy of initial Claude Sonnet 4.6 worker return from commit 208c28c9"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/browser_transfer_20261028/root_return_verification.json",
+      "sha256": "ad4c670f6537c2794e1cf406ae6ba729c75f03610b77983581f863d02b8b3c63",
+      "classification": "caller-recorded",
+      "description": "Independent Root verification record from commit 208c28c9"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/browser_transfer_20261028/actor_readiness_assessment.json",
+      "sha256": "593afbf4177b7719002f676d42d2647764fae6547bb2fd78704e6733f2b46b03",
+      "classification": "worker-reported",
+      "description": "Initial Claude Sonnet 4.6 worker readiness assessment from commit 208c28c9"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/browser_transfer_20261028/gemini_actor_readiness_assessment.json",
+      "sha256": "bb377dfee2c399cb0a5944c3ca4634b543e78e04d31b95df20a439e5124e5c7d",
+      "classification": "worker-reported",
+      "description": "Readiness assessment by designated worker Antigravity (Gemini 3.8 Flash), revised to address Root reviewer findings"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/browser_transfer_20261028/gemini_process_audit.json",
+      "sha256": "688d5b70a354b39ba7745d87eda7f1404afc4e1c49aa8445eaf4c65bd4153b7e",
+      "classification": "derived",
+      "description": "Audit of all 16 ephemeral command steps run by Gemini 3.8 Flash with custody qualifications"
+    }
+  ],
+  "secretScan": "CLEAN — zero credential literals, zero API keys, zero authorization headers present."
+}

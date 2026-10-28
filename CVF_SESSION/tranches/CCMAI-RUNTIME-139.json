@@ -1454,5 +1454,13 @@
     "packet": "docs/reviews/R139_GEMINI_NATIVE_BROWSER_CHECK_HANDOFF_2026-10-28.md",
     "newBrowserDiagnosticUsed": 0,
     "productRuntimeReleased": false
+  },
+  "x-r139GeminiNativeBrowserResult20261028": {
+    "status": "CHROME_CONNECTION_HOLD_JOB_SPENT",
+    "review": "docs/reviews/R139_GEMINI_NATIVE_BROWSER_CHECK_ROOT_REVIEW_2026-10-28.md",
+    "browserJobsUsed": 1,
+    "browserAttemptsUsed": 1,
+    "cumulativeBrowserMethods": 14,
+    "productRuntimeReleased": false
   }
 }

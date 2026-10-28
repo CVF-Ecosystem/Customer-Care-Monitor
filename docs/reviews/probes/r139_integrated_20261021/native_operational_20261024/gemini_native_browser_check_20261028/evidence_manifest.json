@@ -1,0 +1,53 @@
+{
+  "kind": "GEMINI_NATIVE_BROWSER_CHECK_EVIDENCE_MANIFEST",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "date": "2026-10-28",
+  "baseCommit": "520d4da18e522ad483ab15b5eade4ba374f83b27",
+  "files": [
+    {
+      "path": "gemini_native_browser_check_20261028/.gitattributes",
+      "sha256": "96d0081ab5e1ef2b1d703334766b72eec6574fa5a65a061a4718ddac2636f981",
+      "size": 61
+    },
+    {
+      "path": "gemini_native_browser_check_20261028/allocation.json",
+      "sha256": "bf7650d1fe404fc59cae57e026e075da4cd76628484d38baa49a509b1689c97f",
+      "size": 660
+    },
+    {
+      "path": "gemini_native_browser_check_20261028/tool_catalog_audit.json",
+      "sha256": "e3c145c86f091a80c0f451fac3409a5a71851ed441aedb5f651987f8d1dfa2ec",
+      "size": 4809
+    },
+    {
+      "path": "gemini_native_browser_check_20261028/browser_subagent_transcript.jsonl",
+      "sha256": "4d71a67b855d9d1cb8d8f550a16be035b95f3e70092daac014d93e5b7aee27d6",
+      "size": 6479
+    },
+    {
+      "path": "gemini_native_browser_check_20261028/browser_execution_receipt.json",
+      "sha256": "941ace3909f24d275ca1b461ef3c344367293694cd7ad78988ca836beeed09f9",
+      "size": 2728
+    },
+    {
+      "path": "gemini_native_browser_check_20261028/snapshots/R139_BROWSER_TRANSFER_RETURN_2026-10-28.md",
+      "sha256": "9eb25ea0b1766b66ba814de5d2c8a9642f1b6360e95dcce8291a626e5c5da646",
+      "size": 31238
+    },
+    {
+      "path": "gemini_native_browser_check_20261028/snapshots/evidence_manifest.json",
+      "sha256": "d78c02a44cbfc076ba7969349b2ae51950a0c9acb300d102954c515322198679",
+      "size": 2307
+    },
+    {
+      "path": "gemini_native_browser_check_20261028/snapshots/gemini_actor_readiness_assessment.json",
+      "sha256": "bb377dfee2c399cb0a5944c3ca4634b543e78e04d31b95df20a439e5124e5c7d",
+      "size": 5363
+    },
+    {
+      "path": "gemini_native_browser_check_20261028/snapshots/gemini_process_audit.json",
+      "sha256": "688d5b70a354b39ba7745d87eda7f1404afc4e1c49aa8445eaf4c65bd4153b7e",
+      "size": 6545
+    }
+  ]
+}
