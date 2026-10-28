@@ -1,0 +1,13 @@
+Caller-qualified browser-only excerpt of the actual mcp__cua_repl.js tool-visible return.
+This is a faithful text excerpt, not an authenticated native export or complete tool transcript.
+
+Actual invocation:
+var r139ActorInventory = await cua.getState();
+
+Exact browser-inventory member returned:
+"browsers":[]
+
+The tool returned a JSON object with a populated apps array and an empty browsers array. No errors member was present in the returned JSON. Unrelated app names, window metadata and titles are omitted. No browser connection IDs/types/names, browserSessionId, or browser-specific control documentation were returned. This observation establishes an empty returned browser inventory for this actor at this observation only; it does not establish global or permanent browser absence.
+Tool-reported wall time: 2.4850 seconds.
+Caller: /root/r139_custody_worker, bounded observer actor-context inventory worker.
+No retry, selection, page operation or producer request followed.

@@ -1429,9 +1429,12 @@
     "campaign": 0
   },
   "x-r139ActorContextInventory20261028": {
-    "status": "PREPARED_NOT_EXECUTED",
+    "status": "DIAGNOSTIC_COMPLETE_HOLD_ACTOR_BROWSER_INVENTORY_EMPTY",
     "sourceChecksRetained": 27,
     "priorSelectorFailureRetained": 1,
-    "purpose": "Actual actor-local inventory before choosing a returned browser ID; no retry/selection/runtime release."
+    "purpose": "Actual actor-local inventory before choosing a returned browser ID; no retry/selection/runtime release.",
+    "review": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/context_inventory/root_inventory_review.json",
+    "inventoryMethodsUsed": 1,
+    "conditionalProducer": "NOT_RUN_CONDITION_NOT_MET"
   }
 }

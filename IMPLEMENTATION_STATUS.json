@@ -1,6 +1,6 @@
 {
   "x-r139AutonomousDiscovery20261027": {
-    "status": "HOLD_BROWSER_UNAVAILABLE_NO_NEW_CAMPAIGN",
+    "status": "HOLD_ACTOR_BROWSER_INVENTORY_EMPTY",
     "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-CLOSE-TEST-ISOLATION-ADMISSION.json",
     "actualDiscoveryCalls": 1,
     "newCampaigns": 0,
@@ -10,7 +10,9 @@
     "sourceMaterialCommit": "fc4bbe01f88718e41904498bb8ab54d68f094583",
     "preclockReview": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/root_preclock_hold_review.json",
     "newActorSelectorAttempts": 1,
-    "currentDiagnostic": "ACTOR_CONTEXT_INVENTORY_PREPARED_NOT_EXECUTED_PRODUCT_HOLD"
+    "currentDiagnostic": "COMPLETE_CURRENT_OBSERVER_INVENTORY_EMPTY_NO_ALTERNATIVE_ID",
+    "inventoryReview": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/context_inventory/root_inventory_review.json",
+    "newActorInventoryAttempts": 1
   },
   "schemaVersion": "1.0",
   "x-roadmapTracking": {

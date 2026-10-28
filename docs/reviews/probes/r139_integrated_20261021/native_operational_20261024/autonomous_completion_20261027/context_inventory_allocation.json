@@ -9,19 +9,24 @@
   "retainedPackagedDocs": 2,
   "priorSelectorFailureSpent": 1,
   "newInventoryMethodsMax": 2,
-  "newInventoryMethodsUsed": 0,
+  "newInventoryMethodsUsed": 1,
   "cumulativeBrowserMethodsCeiling": 6,
   "observer": {
     "actor": "/root/r139_custody_worker",
     "max": 1,
-    "used": 0,
-    "status": "NOT_STARTED_PENDING_COMMITTED_DISPATCH"
+    "used": 1,
+    "status": "SUCCESS_EMPTY_BROWSER_INVENTORY_HOLD",
+    "dispatchCommit": "ce463e26",
+    "evidence": {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/context_inventory/observer_result.json",
+      "sha256": "fe084bf7ea0eee9b624c68bd0cbd0043bebda0d9b036a8d65198562924e81453"
+    }
   },
   "producer": {
     "actor": "/root/r139_preparation_reviewer",
     "max": 1,
     "used": 0,
-    "status": "CONDITIONAL_NOT_STARTED",
+    "status": "NOT_RUN_CONDITION_NOT_MET_OBSERVER_EMPTY",
     "condition": "Observer actual inventory contains supported browser and Root explicit dispatch"
   },
   "sourceProcessLineage": 27,
@@ -29,5 +34,7 @@
   "historicalCampaigns": 1,
   "historicalServiceQueries": 5,
   "newControllerCampaignFixtureKeyProvider": 0,
-  "paidUnknownHistory": "PRESERVED_NOT_REFUNDED"
+  "paidUnknownHistory": "PRESERVED_NOT_REFUNDED",
+  "cumulativeBrowserMethodsObserved": 5,
+  "disposition": "HOLD_CURRENT_OBSERVER_CONTEXT_HAS_NO_BROWSER_CONNECTION"
 }
