@@ -1,0 +1,111 @@
+{
+  "kind": "ROOT_R139_BROWSER_TRANSFER_RETURN_VERIFICATION",
+  "date": "2026-10-28",
+  "status": "PASS_FILE_BINDINGS_ONLY_RUNTIME_NOT_RUN",
+  "reviewer": "Root independent of Antigravity worker",
+  "baselineHEAD": "b9d4822a58e1fd89f5a911fcb85abb7d13e995a2",
+  "reportRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/browser_transfer_20261028/worker_return_original.md",
+    "sha256": "529be7c2a83136a28654235645ebfca072faee689243f5f3c9ce2d2de2f7513f"
+  },
+  "assessmentRef": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/browser_transfer_20261028/actor_readiness_assessment.json",
+    "sha256": "593afbf4177b7719002f676d42d2647764fae6547bb2fd78704e6733f2b46b03"
+  },
+  "acceptedBuildPinsRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-TOOL-CLOSE-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "sha256": "094a0a3678571c8ed03c2a278e50e352b645e71cd972fdc841fed9c3cacb065e"
+  },
+  "sourceAndBinaryRows": [
+    {
+      "path": "scripts/r139_execution_supervisor.py",
+      "expectedSha256": "9ee7f988b5a27495fd4bd4e72975f0b2a583b8e33cea49c51ac5189285f44c64",
+      "actualSha256": "9ee7f988b5a27495fd4bd4e72975f0b2a583b8e33cea49c51ac5189285f44c64",
+      "match": true
+    },
+    {
+      "path": "scripts/tests/test_r139_execution_supervisor.py",
+      "expectedSha256": "4bbd3abb54646a9bcaa691c8b29ccf49f470539475a2a87732b77e2790be2283",
+      "actualSha256": "4bbd3abb54646a9bcaa691c8b29ccf49f470539475a2a87732b77e2790be2283",
+      "match": true
+    },
+    {
+      "path": "scripts/r139_vite_config.mjs.template",
+      "expectedSha256": "82a1d9ae8576fcd46718945d0a5cb44eb963a2a14d436a16e2bcdfb72b26bee9",
+      "actualSha256": "82a1d9ae8576fcd46718945d0a5cb44eb963a2a14d436a16e2bcdfb72b26bee9",
+      "match": true
+    },
+    {
+      "path": "backend/api/handlers/intervention_execution_browser_test.go",
+      "expectedSha256": "4e90a7225f6fc663a3dc3493b3570bdfdc9969da0b43d70445273170c41f899d",
+      "actualSha256": "4e90a7225f6fc663a3dc3493b3570bdfdc9969da0b43d70445273170c41f899d",
+      "match": true
+    },
+    {
+      "path": "backend/go.mod",
+      "expectedSha256": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+      "actualSha256": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+      "match": true
+    },
+    {
+      "path": "backend/go.sum",
+      "expectedSha256": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b",
+      "actualSha256": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b",
+      "match": true
+    },
+    {
+      "path": "frontend/package.json",
+      "expectedSha256": "d16bea0b83ad7eb871576061f7ea91534a2dd2fdc7eef26eb20ec908e4fca24d",
+      "actualSha256": "d16bea0b83ad7eb871576061f7ea91534a2dd2fdc7eef26eb20ec908e4fca24d",
+      "match": true
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "expectedSha256": "da41e1de5d5b853295a303092aab9433aeea8168fda2cf0420dd94e9f579fb00",
+      "actualSha256": "da41e1de5d5b853295a303092aab9433aeea8168fda2cf0420dd94e9f579fb00",
+      "match": true
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "expectedSha256": "736c63d3a72a5b126841ceedeac4b4a01854a2bec71bd57d2f46a23ec3cf68de",
+      "actualSha256": "736c63d3a72a5b126841ceedeac4b4a01854a2bec71bd57d2f46a23ec3cf68de",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v3_design.py.txt",
+      "expectedSha256": "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d",
+      "actualSha256": "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_pinned_preflight.py.txt",
+      "expectedSha256": "81784375b6948dee973ce1dd4a3b66851786273079f4becfbdd7c7378fbca233",
+      "actualSha256": "81784375b6948dee973ce1dd4a3b66851786273079f4becfbdd7c7378fbca233",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_durable_resume.py.txt",
+      "expectedSha256": "7ab2bf4c5b97009d36b932fd7aff5cf6d5b42584844f59fc02f5605f06156eda",
+      "actualSha256": "7ab2bf4c5b97009d36b932fd7aff5cf6d5b42584844f59fc02f5605f06156eda",
+      "match": true
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/test_r139_pinned_resume.py",
+      "expectedSha256": "9dd100bae4dcfa18b5c1fd098de56fecc534ad59fd1a4361bda0cbb256b1f227",
+      "actualSha256": "9dd100bae4dcfa18b5c1fd098de56fecc534ad59fd1a4361bda0cbb256b1f227",
+      "match": true
+    },
+    {
+      "path": ".cvf/runtime/r139_autonomous_native_close_20261027/handlers.test.exe",
+      "expectedSha256": "1de2ac02c8b0fa5e135a52de38feddd597d3909705c0f9d06274c9f694b10c98",
+      "actualSha256": "1de2ac02c8b0fa5e135a52de38feddd597d3909705c0f9d06274c9f694b10c98",
+      "match": true
+    }
+  ],
+  "toolCapabilityEvidence": "Worker declaration only; no original tool inventory, browser invocation/capture or runtime receipt supplied. Root cannot independently establish its complete toolset or globally exclude browser capability.",
+  "workerEffects": "Reported new browser/controller/campaign/fixture/key/provider0; current tracked source unchanged. No original worker command/wait records for git/python supplied; absence of all processes cannot be verified.",
+  "claims": "No runtime/governance/product/CI pass; provider UNKNOWN history unchanged.",
+  "reviewEffects": "Read-only file/hash/Git/pinned inspection only; no browser/probe/runtime/provider/source-suite invocation.",
+  "logicalWorkerReportPath": "docs/reviews/R139_BROWSER_TRANSFER_RETURN_2026-10-28.md",
+  "originalByteCustody": "Byte-identical snapshot before Git EOL conversion; original logical report remains unchanged in working tree. Local scoped -text preserves raw assessment/report snapshot/audit bytes."
+}

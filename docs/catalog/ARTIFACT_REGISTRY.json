@@ -38832,6 +38832,41 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/context_inventory/root_inventory_review.json",
       "status": "ACTIVE",
       "description": "Actual actor-local browser inventory empty; bounded diagnostic HOLD, no alternative ID, page, campaign or provider call."
+    },
+    {
+      "id": "r139-browser-transfer-worker-original-bytes",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/browser_transfer_20261028/worker_return_original.md",
+      "status": "ACTIVE",
+      "description": "Byte-identical original worker return snapshot retained for independent documentary HOLD review; not runtime proof."
+    },
+    {
+      "id": "r139-browser-transfer-review-f500b69c9a1f5f26",
+      "family": "continuity",
+      "path": "docs/reviews/R139_BROWSER_TRANSFER_RETURN_2026-10-28.md",
+      "status": "ACTIVE",
+      "description": "R139 browser-transfer documentary HOLD and independent qualified review; source pins verified, no runtime test or fresh admission."
+    },
+    {
+      "id": "r139-browser-transfer-review-993629bd55797658",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/browser_transfer_20261028/actor_readiness_assessment.json",
+      "status": "ACTIVE",
+      "description": "R139 browser-transfer documentary HOLD and independent qualified review; source pins verified, no runtime test or fresh admission."
+    },
+    {
+      "id": "r139-browser-transfer-review-abace3825e61a191",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/browser_transfer_20261028/root_return_verification.json",
+      "status": "ACTIVE",
+      "description": "R139 browser-transfer documentary HOLD and independent qualified review; source pins verified, no runtime test or fresh admission."
+    },
+    {
+      "id": "r139-browser-transfer-review-dca4f0199e4d8c1a",
+      "family": "continuity",
+      "path": "docs/reviews/R139_BROWSER_TRANSFER_RETURN_ROOT_REVIEW_2026-10-28.md",
+      "status": "ACTIVE",
+      "description": "R139 browser-transfer documentary HOLD and independent qualified review; source pins verified, no runtime test or fresh admission."
     }
   ]
 }

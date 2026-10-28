@@ -1711,5 +1711,13 @@
     "review": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/context_inventory/root_inventory_review.json",
     "currentActorBrowserCount": 0,
     "newCampaigns": 0
+  },
+  "x-r139BrowserTransferReview20261028": {
+    "status": "ACCEPTED_BOUNDED_DOCUMENTARY_HOLD_WITH_QUALIFICATIONS",
+    "workerReturn": "docs/reviews/R139_BROWSER_TRANSFER_RETURN_2026-10-28.md",
+    "review": "docs/reviews/R139_BROWSER_TRANSFER_RETURN_ROOT_REVIEW_2026-10-28.md",
+    "capability": "WORKER_REPORTED_NO_CUA_NOT_INDEPENDENTLY_OBSERVED",
+    "runtimeTests": "NOT_RUN",
+    "newAdmission": false
   }
 }

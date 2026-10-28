@@ -1436,5 +1436,10 @@
     "review": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/context_inventory/root_inventory_review.json",
     "inventoryMethodsUsed": 1,
     "conditionalProducer": "NOT_RUN_CONDITION_NOT_MET"
+  },
+  "x-r139BrowserTransferReview20261028": {
+    "status": "DOCUMENTARY_HOLD_ONLY",
+    "review": "docs/reviews/R139_BROWSER_TRANSFER_RETURN_ROOT_REVIEW_2026-10-28.md",
+    "newEffects": 0
   }
 }
