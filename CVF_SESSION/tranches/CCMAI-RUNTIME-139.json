@@ -1427,5 +1427,11 @@
     "producer": "NOT_RUN_NO_REDUNDANT_PROBE",
     "controller": 0,
     "campaign": 0
+  },
+  "x-r139ActorContextInventory20261028": {
+    "status": "PREPARED_NOT_EXECUTED",
+    "sourceChecksRetained": 27,
+    "priorSelectorFailureRetained": 1,
+    "purpose": "Actual actor-local inventory before choosing a returned browser ID; no retry/selection/runtime release."
   }
 }

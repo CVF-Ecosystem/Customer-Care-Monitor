@@ -38797,6 +38797,20 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/actors/producer_not_run.txt",
       "status": "ACTIVE",
       "description": "R139 actual preclock browser capability HOLD and public tariff readiness; no new campaign, fixture, key or provider call."
+    },
+    {
+      "id": "r139-context-inventory-45ec2aa8df1edf6b",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ACTOR-CONTEXT-INVENTORY-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "R139 bounded actor-local inventory diagnostic; failed selector retained, no selection retry or product/runtime release."
+    },
+    {
+      "id": "r139-context-inventory-d27566cb577ebe62",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/context_inventory_allocation.json",
+      "status": "ACTIVE",
+      "description": "R139 bounded actor-local inventory diagnostic; failed selector retained, no selection retry or product/runtime release."
     }
   ]
 }

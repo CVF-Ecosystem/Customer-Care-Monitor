@@ -9,7 +9,8 @@
     "childBuildPins": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-TOOL-CLOSE-ACCEPTED-BUILD-PINS-ADMISSION.json",
     "sourceMaterialCommit": "fc4bbe01f88718e41904498bb8ab54d68f094583",
     "preclockReview": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/root_preclock_hold_review.json",
-    "newActorSelectorAttempts": 1
+    "newActorSelectorAttempts": 1,
+    "currentDiagnostic": "ACTOR_CONTEXT_INVENTORY_PREPARED_NOT_EXECUTED_PRODUCT_HOLD"
   },
   "schemaVersion": "1.0",
   "x-roadmapTracking": {

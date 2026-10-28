@@ -6,7 +6,7 @@ Memory class: POINTER_RECORD
 
 ## R139 delegated actual reservation — 2026-10-27T04:24:06.802756Z
 
-CCMAI-RUNTIME-139 HOLD_PRECLOCK_BROWSER_UNAVAILABLE: actual Sol observer selector at preparation commit f26b356d returned Browser is not available:2; attempt1 spent, producer NOT_RUN_NO_REDUNDANT_PROBE. Child pins094a/source27 retained; custody adapter static-reviewed only, inert checks/generator/hostBoot/controller/newcampaign0. Public pricing reads2 complete; no fixture/key/provider call. Preserve historical controllers4/campaign1/service5 and all UNKNOWNs, cumulative browser methods4 plus packageddocs2. Continue same R139 only when a genuinely connected distinct-actor browser runtime is available and fresh applicable dispatch is reviewed; no automatic retry or capability transfer. G0/G1/G2/G3 and product B blocked, full M3/FREEZE OPEN; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 remains BUILD_BLOCKED after failed observer ID2 selector; no new product authority. Review and commit bounded ACTOR-CONTEXT-INVENTORY admission, then observer own cua.getState once to distinguish absent surface from unverified Root-to-child ID assumption. Producer own inventory only if observer returns a supported browser and Root explicitly dispatches; no getBrowser retry/page/stack/campaign. Preserve failedselector1, cumulative browser methods4 before newinventorymax2, docs2/source27/historicalcontrollers4/campaign1/service5/all UNKNOWNs. Empty/error inventory stops. Candidate requires actual identity rebinding and independent fresh dispatch, not G0 PASS. Inert checks/generator/boot/controller/fixture/key/provider remain NOT_RUN/HOLD. Full M3/FREEZE OPEN; Facebook/Zalo OA parked.
 
 
 ## Mandatory standing Owner directive — apply without reminders
@@ -24,9 +24,9 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
 
-CCMAI-RUNTIME-139 HOLD_PRECLOCK_BROWSER_UNAVAILABLE: actual Sol observer selector at preparation commit f26b356d returned Browser is not available:2; attempt1 spent, producer NOT_RUN_NO_REDUNDANT_PROBE. Child pins094a/source27 retained; custody adapter static-reviewed only, inert checks/generator/hostBoot/controller/newcampaign0. Public pricing reads2 complete; no fixture/key/provider call. Preserve historical controllers4/campaign1/service5 and all UNKNOWNs, cumulative browser methods4 plus packageddocs2. Continue same R139 only when a genuinely connected distinct-actor browser runtime is available and fresh applicable dispatch is reviewed; no automatic retry or capability transfer. G0/G1/G2/G3 and product B blocked, full M3/FREEZE OPEN; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 remains BUILD_BLOCKED after failed observer ID2 selector; no new product authority. Review and commit bounded ACTOR-CONTEXT-INVENTORY admission, then observer own cua.getState once to distinguish absent surface from unverified Root-to-child ID assumption. Producer own inventory only if observer returns a supported browser and Root explicitly dispatches; no getBrowser retry/page/stack/campaign. Preserve failedselector1, cumulative browser methods4 before newinventorymax2, docs2/source27/historicalcontrollers4/campaign1/service5/all UNKNOWNs. Empty/error inventory stops. Candidate requires actual identity rebinding and independent fresh dispatch, not G0 PASS. Inert checks/generator/boot/controller/fixture/key/provider remain NOT_RUN/HOLD. Full M3/FREEZE OPEN; Facebook/Zalo OA parked.
 
-Root ORCHESTRATOR / independent capability REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol observer stopped after one failed selector; Luna producer NOT_RUN; all remaining preparation and runtime effects HOLD
+Root ORCHESTRATOR / independent evidence REVIEWER / COMMIT_STEWARD; Sol bounded actor-context inventory worker pending committed dispatch; Luna independent inventory-authority reviewer, conditional producer unreleased
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

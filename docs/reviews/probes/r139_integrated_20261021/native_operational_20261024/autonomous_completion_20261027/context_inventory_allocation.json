@@ -1,0 +1,33 @@
+{
+  "kind": "ROOT_R139_CONTEXT_INVENTORY_ALLOCATION",
+  "authorityRef": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ACTOR-CONTEXT-INVENTORY-ADMISSION.json",
+    "sha256": "8fcf4a8dcd2884e5507e76e3fdb721bf57891f05c0ec97c25465823fa9a79c96"
+  },
+  "workerMayEdit": false,
+  "retainedBrowserMethods": 4,
+  "retainedPackagedDocs": 2,
+  "priorSelectorFailureSpent": 1,
+  "newInventoryMethodsMax": 2,
+  "newInventoryMethodsUsed": 0,
+  "cumulativeBrowserMethodsCeiling": 6,
+  "observer": {
+    "actor": "/root/r139_custody_worker",
+    "max": 1,
+    "used": 0,
+    "status": "NOT_STARTED_PENDING_COMMITTED_DISPATCH"
+  },
+  "producer": {
+    "actor": "/root/r139_preparation_reviewer",
+    "max": 1,
+    "used": 0,
+    "status": "CONDITIONAL_NOT_STARTED",
+    "condition": "Observer actual inventory contains supported browser and Root explicit dispatch"
+  },
+  "sourceProcessLineage": 27,
+  "historicalControllers": 4,
+  "historicalCampaigns": 1,
+  "historicalServiceQueries": 5,
+  "newControllerCampaignFixtureKeyProvider": 0,
+  "paidUnknownHistory": "PRESERVED_NOT_REFUNDED"
+}
