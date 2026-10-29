@@ -1,6 +1,6 @@
 # R139 native SDK v2 — admission and independent review
 
-Status: SOURCE_DISPATCH_ADMISSION_ACCEPTED_RUNTIME_HELD
+Status: SOURCE_REVIEW_PASS_EXACT_RELEASE_PREPARED
 Risk: R2
 Worker: Terra6.1High native SDK source worker
 Reviewer: Root independent of source and execution
@@ -19,7 +19,9 @@ Preparation checks: doctor28/28, legacy7/7, explicit pre-dispatch6mandatory PASS
 
 ## Source review and conclusions
 
-Pending admission and worker source. Main R139/M3/FREEZE remains OPEN and product execution e9/profile1.1 HOLD. Source27/controllers4/campaign1/services5/cumulativebrowser16 and all UNKNOWNs remain. Facebook/ZaloOA parked.
+Exact source raw SHA256 `2644ae8c2d8a6199c57e9e85c88d9c7ae6faa7e38b68cee658cd8a59f9f7af65`: Root independent review PASS and separate Terra final source review PASS. Cleanup receipt failure no longer suppresses native client/transport close and PID observation; evidence failure forces unsuccessful result. Root final guard receipt `native_cli/v2_source_checks/root_final_guard.json` records final syntax exit0 and inert import, absent release before claim, stale source/extra-field rejection and nonthrowing injected writer failure. In-memory shape fixtures are static only, never runtime evidence. Earlier worker preflight raw-byte mismatch, previous-source checks and syntax capture loss are preserved, including one bounded capture replacement. No SDK import/connect/browser/claim yet.
+
+Root exact runtime release binds operative admission15cfb528, source2644ae8, preparation8fbc169 and unused runId. Release is executable only after its own commit is HEAD and source/authority/release raw bytes equal committed blobs. One isolated ExampleDomain lifecycle, maximum8 browser calls, one connect/server start and300seconds including cleanup; no retry. Actual ownership, snapshot, PNG and known-PID absence remain unproved. Root owns independent result review, screenshot inspection and hash-preserving ignored local archive; worker cannot self-approve or commit. Main R139/M3/FREEZE remains OPEN and product execution e9/profile1.1 HOLD. Source27/controllers4/campaign1/services5/cumulativebrowser16 and all UNKNOWNs remain. Facebook/ZaloOA parked.
 
 ## M3 coverage
 

@@ -1,0 +1,7 @@
+{
+  "action": "Materialized exact already-committed authority blob into worktree; LF/CRLF only, no Git content/approval change",
+  "beforeRawSha256": "b5607bb438692f17491c055503f71ae684e6e31b5962defa12e91b607e96eb36",
+  "afterRawSha256": "15cfb528a70b4d0a258b836b04df9a3483f01ee746d3da46b0e8dbe12d2516c6",
+  "committedHead": "8fbc1699df1a0fd2cc78329c884dd411915509e9",
+  "preservedPriorWorktree": "operative_authority_checkout_before_lf.json"
+}

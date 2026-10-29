@@ -6,9 +6,9 @@ Memory class: POINTER_RECORD
 
 ## Current native SDK v2 source-only continuation — 2026-10-29
 
-CCMAI-RUNTIME-139 Core15e/profile1.2 doctor28/28 and14native SDK pins rechecked. Root admits finite native SDK v2 SOURCE REPAIR ONLY under NATIVE-SDK-V2-ADMISSION, preserving rejected original/draft and all prior history. Terra source worker, separate Terra admission reviewer, Root independent source/result reviewer and sole commit owner; independent admission plus committed preparation precede BUILD. One future isolated ExampleDomain lifecycle only after exact source acceptance and committed release, no SDK import/Chrome/network during authoring. SDKconnect/browserused0, historicalbrowser16/source27/controllers4/campaign1/services5/UNKNOWNs preserved; updater1/fetch1/upgrade1 spent. Five inherited Core public-test gaps remain OPEN, old e9/profile1.1 product execution HOLD, fullM3/FREEZE OPEN and Facebook/ZaloOA parked.
+CCMAI-RUNTIME-139 native SDK v2 exact source2644ae8 independently accepted by Root and separate Terra reviewer; final static guard PASS. Root COMMIT_STEWARD commits exact source/release and synchronized evidence before dispatch. After commit, Terra execution worker may invoke one owned isolated ExampleDomain lifecycle under NATIVE-SDK-V2-ADMISSION, connect/start1/browser8max/300s including cleanup, no retry; Root independently reviews actual outputs, PNG and known-PID cleanup. SDK/browserused0 before dispatch; historicalbrowser16/source27/controllers4/campaign1/services5/UNKNOWNs preserved. Core15e/profile1.2 doctor28/28; five inherited public-test gaps OPEN, old e9/profile1.1 product execution HOLD, fullM3/FREEZE OPEN; Facebook/ZaloOA parked.
 
-Root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent source and result REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra6.1High SDK source worker and separate admission reviewer; source-only, runtime held
+Root ORCHESTRATOR / independent source and result REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra6.1High source and future execution worker; separate Terra source reviewer; exact committed release required
 
 ## Historical corrective setup dispatch — returned BLOCKED
 
@@ -74,9 +74,9 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
 
-CCMAI-RUNTIME-139 Core15e/profile1.2 doctor28/28 and14native SDK pins rechecked. Root admits finite native SDK v2 SOURCE REPAIR ONLY under NATIVE-SDK-V2-ADMISSION, preserving rejected original/draft and all prior history. Terra source worker, separate Terra admission reviewer, Root independent source/result reviewer and sole commit owner; independent admission plus committed preparation precede BUILD. One future isolated ExampleDomain lifecycle only after exact source acceptance and committed release, no SDK import/Chrome/network during authoring. SDKconnect/browserused0, historicalbrowser16/source27/controllers4/campaign1/services5/UNKNOWNs preserved; updater1/fetch1/upgrade1 spent. Five inherited Core public-test gaps remain OPEN, old e9/profile1.1 product execution HOLD, fullM3/FREEZE OPEN and Facebook/ZaloOA parked.
+CCMAI-RUNTIME-139 native SDK v2 exact source2644ae8 independently accepted by Root and separate Terra reviewer; final static guard PASS. Root COMMIT_STEWARD commits exact source/release and synchronized evidence before dispatch. After commit, Terra execution worker may invoke one owned isolated ExampleDomain lifecycle under NATIVE-SDK-V2-ADMISSION, connect/start1/browser8max/300s including cleanup, no retry; Root independently reviews actual outputs, PNG and known-PID cleanup. SDK/browserused0 before dispatch; historicalbrowser16/source27/controllers4/campaign1/services5/UNKNOWNs preserved. Core15e/profile1.2 doctor28/28; five inherited public-test gaps OPEN, old e9/profile1.1 product execution HOLD, fullM3/FREEZE OPEN; Facebook/ZaloOA parked.
 
-Root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent source and result REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra6.1High SDK source worker and separate admission reviewer; source-only, runtime held
+Root ORCHESTRATOR / independent source and result REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra6.1High source and future execution worker; separate Terra source reviewer; exact committed release required
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

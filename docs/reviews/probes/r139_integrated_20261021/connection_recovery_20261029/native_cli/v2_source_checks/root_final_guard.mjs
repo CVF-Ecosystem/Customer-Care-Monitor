@@ -1,0 +1,25 @@
+import assert from 'node:assert/strict';
+import {readFileSync,existsSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {spawnSync} from 'node:child_process';
+const base=new URL('../',import.meta.url), source=new URL('run_owned_stdio_v2.mjs',base);
+const hash=b=>createHash('sha256').update(b).digest('hex');
+const {fileURLToPath}=await import('node:url');
+const actualSyntax=spawnSync(process.execPath,['--check',fileURLToPath(source)],{encoding:'utf8',windowsHide:true});
+assert.equal(actualSyntax.status,0,actualSyntax.stderr);
+process.argv.push('--run');
+const m=await import(source.href);
+const a=readFileSync('CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-SDK-V2-ADMISSION.json'),s=readFileSync(source);
+const r={schemaVersion:'1.0',approved:true,admissionSha256:hash(a),adapterSha256:hash(s),preparationHead:'8fbc1699df1a0fd2cc78329c884dd411915509e9',runId:'b7a56dcf-e6a3-40d7-a213-d5acc6b15ecd',reviewer:'Root',scope:'ONE_OWNED_STDIO_CAPABILITY'};
+m.validateReleaseEnvelope(r,a,s);
+assert.throws(()=>m.validateReleaseEnvelope({...r,adapterSha256:'0'.repeat(64)},a,s));
+assert.throws(()=>m.validateReleaseEnvelope({...r,extra:true},a,s));
+let stop;try {await m.runOwnedStdio();} catch(e){stop=String(e);}
+assert.match(stop,/ENOENT.*runtime_release_v2/);
+const failure={failed:false};
+assert.equal(m.safeEvidenceWrite(()=>{throw Error('deliberate static writer failure');},failure,'static_negative',{}),false);
+assert.equal(failure.failed,true);
+assert.equal(existsSync(new URL('execution_v2',base)),false);
+const out={kind:'STATIC_SOURCE_CONSISTENCY_ONLY',sourceRawSha256:hash(s),syntax:{exit:actualSyntax.status,stdout:actualSyntax.stdout,stderr:actualSyntax.stderr},importWithRunArgInert:true,absentReleaseRejected:stop,staleSourceEnvelopeRejected:true,extraFieldRejected:true,fixtureEnvelopeShapeAccepted:true,cleanupWriterFailureNonthrowing:true,cleanupFailureFlag:true,claimDirectoryAbsent:true,releaseFileAbsent:!existsSync(new URL('runtime_release_v2.json',base)),sdkImports:0,browserCalls:0,providerCalls:0};
+writeFileSync(new URL('root_final_guard.json',import.meta.url),JSON.stringify(out,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify(out));

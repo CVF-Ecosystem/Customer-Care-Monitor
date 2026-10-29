@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "ROOT_SAME_SCOPE_SOURCE_REPAIR_AND_RECHECK",
+  "date": "2026-10-30",
+  "parent": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-SDK-V2-ADMISSION.json",
+  "ownerAuthority": "Standing explicit full browser-handling grant; same bounded native capability, no new external effect or product/provider authority. Root assigned budgets, no Owner numeric budget invented.",
+  "worker": "Terra6.1High /root/sdk_v2_worker",
+  "reviewer": "Root independent",
+  "admissionReviewer": "Terra6.1High /root/sdk_v2_admission_review",
+  "finding": "Independent peer identified new root cause: failing evidence writes inside finally can suppress transport close and PID observation. Source repair must make cleanup receipt writes nonthrowing and mark unsuccessful/UNKNOWN while independently attempting cleanup.",
+  "priorChecks": "Worker syntax1/guard1failed/rawalignment/smoke1, Rootsyntax1/guard1PASS on d2 source retained; d2 not released. No SDK/start/browser/claim.",
+  "additionalActiveWorkerMinutes": 10,
+  "additionalRootSyntaxChecks": 2,
+  "syntaxCaptureException": "First supplemental syntax invocation output was lost to tool context truncation; outcome unobserved, invocation retained as spent. One additional captured syntax check only; no runtime cap change.",
+  "additionalRootReadonlyGuardProcesses": 1,
+  "requiredStaticNegative": "Actual cleanup-safe recorder rejects writer failure without throwing; failure flag must make terminal unsuccessful, cleanup structure independently attempts native close/observation. No browser or SDK fake result may be used as runtime proof.",
+  "effects": "All runtime ceilings unchanged: SDK/start1 max, browser8,300s incl60cleanup, metadata3; runtime remainsheld until exact newsource review/committedrelease.",
+  "prohibited": "No oldauthority/originalsource/evidence edits, call resets, new network/provider/key/config/Core/product effects, workerrelease/commit."
+}

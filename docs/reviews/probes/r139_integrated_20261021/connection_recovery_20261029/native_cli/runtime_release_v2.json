@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0",
+  "approved": true,
+  "admissionSha256": "15cfb528a70b4d0a258b836b04df9a3483f01ee746d3da46b0e8dbe12d2516c6",
+  "adapterSha256": "2644ae8c2d8a6199c57e9e85c88d9c7ae6faa7e38b68cee658cd8a59f9f7af65",
+  "preparationHead": "8fbc1699df1a0fd2cc78329c884dd411915509e9",
+  "runId": "b7a56dcf-e6a3-40d7-a213-d5acc6b15ecd",
+  "reviewer": "Root",
+  "scope": "ONE_OWNED_STDIO_CAPABILITY"
+}

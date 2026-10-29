@@ -1,0 +1,2 @@
+Error: uncommitted CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-SDK-V2-ADMISSION.json
+exit=1

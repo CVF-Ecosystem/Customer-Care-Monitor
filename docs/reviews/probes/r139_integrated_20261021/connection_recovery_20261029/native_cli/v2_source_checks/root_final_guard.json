@@ -1,0 +1,21 @@
+{
+  "kind": "STATIC_SOURCE_CONSISTENCY_ONLY",
+  "sourceRawSha256": "2644ae8c2d8a6199c57e9e85c88d9c7ae6faa7e38b68cee658cd8a59f9f7af65",
+  "syntax": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "importWithRunArgInert": true,
+  "absentReleaseRejected": "Error: ENOENT: no such file or directory, open 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\connection_recovery_20261029\\native_cli\\runtime_release_v2.json'",
+  "staleSourceEnvelopeRejected": true,
+  "extraFieldRejected": true,
+  "fixtureEnvelopeShapeAccepted": true,
+  "cleanupWriterFailureNonthrowing": true,
+  "cleanupFailureFlag": true,
+  "claimDirectoryAbsent": true,
+  "releaseFileAbsent": true,
+  "sdkImports": 0,
+  "browserCalls": 0,
+  "providerCalls": 0
+}

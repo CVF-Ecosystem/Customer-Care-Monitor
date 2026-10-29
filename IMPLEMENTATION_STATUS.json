@@ -1,4 +1,5 @@
 {
+  "x-nativeSdkV2": {"status":"SOURCE_REVIEW_PASS_RELEASE_PREPARED_NOT_RUN","sourceSha256":"2644ae8c2d8a6199c57e9e85c88d9c7ae6faa7e38b68cee658cd8a59f9f7af65","review":"docs/reviews/R139_NATIVE_SDK_V2_ROOT_REVIEW_2026-10-29.md","sdkConnectUsed":0,"browserCallsUsed":0,"productRuntimeAdmission":false},
   "x-coreReconciliation20261029": {
     "status": "PROJECT_REPIN_REVIEWED_PUBLIC_SUITE_FINDINGS_OPEN",
     "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-RECONCILIATION-SCOPE-ADMISSION.json",
