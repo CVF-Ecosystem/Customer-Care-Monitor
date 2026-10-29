@@ -5,6 +5,27 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r139-sdk-v3-preparation-20261030-3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/knowledge_ingest_v3.json",
+      "status": "ACTIVE",
+      "description": "Finite v3 native response/early ownership source repair; v2 spent and runtime held until exact source acceptance/committed release."
+    },
+    {
+      "id": "r139-sdk-v3-preparation-20261030-2",
+      "family": "continuity",
+      "path": "docs/reviews/R139_NATIVE_SDK_V3_ROOT_REVIEW_2026-10-30.md",
+      "status": "ACTIVE",
+      "description": "Finite v3 native response/early ownership source repair; v2 spent and runtime held until exact source acceptance/committed release."
+    },
+    {
+      "id": "r139-sdk-v3-preparation-20261030-1",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-SDK-V3-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Finite v3 native response/early ownership source repair; v2 spent and runtime held until exact source acceptance/committed release."
+    },
+    {
       "id": "r139-sdk-v2-result-20261030-19",
       "family": "continuity",
       "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v2/worker_stdout.txt",

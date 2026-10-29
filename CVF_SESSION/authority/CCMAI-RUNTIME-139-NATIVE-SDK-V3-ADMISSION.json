@@ -1,0 +1,172 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "OWNER_DELEGATED_R139_NATIVE_SDK_FINITE_VERIFICATION",
+  "date": "2026-10-30",
+  "ownerInstruction": "cho phép toàn quyền xử lý, nếu GPT không kết nối được, cần agents trong môi trường khác/như Antigravity thì báo tôi copy qua đó",
+  "riskCeiling": "R2",
+  "roles": {
+    "dispatcherCommitSteward": "Root",
+    "executor": "Terra6.1High /root/v3_worker",
+    "admissionReviewer": "Terra6.1High /root/v3_admission_review",
+    "resultReviewer": "Root independent of source/execution"
+  },
+  "scope": "Same R139 M3-05/M3-08 native SDK capability verification. Repair actual v2 text-response and ownership-order defects in separate v3 source; old one-shot remains spent. One prospective owned isolated ExampleDomain lifecycle only after separately accepted source and committed release; no CLI daemon, custom CDP, product or provider.",
+  "sourceAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-SDK-V3-ADMISSION.json",
+  "sourceAdapter": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/run_owned_stdio_v3.mjs",
+  "effectRelease": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/runtime_release_v3.json",
+  "authoringBudgetMinutes": 20,
+  "releaseContract": "Root creates strict approved release only after independent source PASS, binding raw admission+adapter SHA256, exact committed preparationHead provided after source authority preparation commit, runId, reviewer Root, scope ONE_OWNED_STDIO_CAPABILITY. Release exact fields schemaVersion/approved/admissionSha256/adapterSha256/preparationHead/runId/reviewer/scope. All admission/adapter/release blobs must equal HEAD raw bytes; latest release commit must be HEAD and preparationHead ancestor. Require one exclusive claim before SDK import, no SDK import/child on absent/stale release. No source effects on import/help; explicit readonly preflight may inspect own source/admission/pins but must report runtime HELD until actual release. admissionSha256 always hashes the raw operative NATIVE-SDK-V3-ADMISSION.json bytes, never the historical sourceObservation receipt; exact operative authority bytes also equal committed HEAD.",
+  "runId": "3e2ccdd0-b292-4c0f-8f27-9b123e9fabed",
+  "nodePath": "C:/Program Files/nodejs/node.exe",
+  "serverPath": "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/bin/chrome-devtools-mcp.js",
+  "sdkBundlePath": "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/third_party/index.js",
+  "chromePath": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+  "pinsRawSha256": {
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/package.json": "592ef654a308edcba5fb3c2b302173650096a9487e4120b96e7adbe830429b9f",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/bin/chrome-devtools.js": "c380c15c89425bfe8e0aeb7720bf3996d681752413ef77cb3a33f769a8c70dc5",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/bin/chrome-devtools-mcp.js": "9f380d06e1ac05b257e27e708c0cc4b4ba190e285ed6eb6c8aa50978d98a12c5",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/daemon/client.js": "fc6500be58f2de1c941d66171a43fa8bf796cbea9420575bd8b299ff4e66f1a1",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/daemon/utils.js": "6769ad4523dfe5f65b7650117135393918146866ccb5f7d583afc271512e7f7b",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/daemon/daemon.js": "eab00479391fece6afe0d45afe564bf0e9e8b4f461d7ec5c9f9bfe9aefacf7fa",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/config/browser-options.js": "d172515ff92e0efdda98e84581c46e2db97ba0ff3536507bf3a9da022dcd1887",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/config/mcp-options.js": "2fc554986209b3cfadcbe70552994111aadedf2e159b3de61a12b96233f18f67",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/config/cli-options.js": "05011d9cc5fecae6f359c4aff3272eedb35796cf2e6cbf53db39fe52a49dbffb",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/browser.js": "17f861505810a9d25784fd71bf0592966f513c420b57a728b344280e97fe596c",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/utils/check-for-updates.js": "e8d5efcf2dd02ec58a8f0352a90344c8fd12229d5f48b2822bea6ebb2017a9cb",
+    "C:/Program Files/nodejs/node.exe": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+    "C:/Program Files/Google/Chrome/Application/chrome.exe": "480f275b63d1ea39113cbc8344ac395578acc25b432bd39af5fbc77005179aca",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/third_party/index.js": "fc6ae43cb8f6007eba4b0f269290ec8fea6db7670686d17967b4812d90d2cc10",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/bin/chrome-devtools-mcp-main.js": "5ca0e81196ab6b6e1481629a2dcae7f416b3b38f74555e3138ad5cdbb055e809",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/McpResponse.js": "8f4189b21fe26726cf64137a74542efd4927c21dd4c2794924af95fdaf64d761",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/tools/pages.js": "50983bd1b2f01ffa3273de3353e28fd44795d026f2b62bcc783e19156ee0147d",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/tools/snapshot.js": "d48d0b8199d0a423f899fb706ef483854d6846833f31d566bfb37891a3e3fc5c",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/tools/screenshot.js": "dd300be39bbba7bd7fd094c1c3a50aee767ff3f301f2716d66b0fe01b1318065",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/tools/ToolDefinition.js": "99a99804c660b47d469b99d60bc5ce5c21571b6bd69ceea19da289dbbc5793c5"
+  },
+  "limits": {
+    "sdkConnectCalls": 1,
+    "serverStarts": 1,
+    "browserToolCalls": 8,
+    "maxOwnedPagesTotal": 2,
+    "testTabs": 1,
+    "captures": 1,
+    "wallSecondsIncludingCleanup": 300,
+    "perToolTimeoutMilliseconds": 30000,
+    "automaticRetriesOrReconnects": 0,
+    "cleanupReserveSeconds": 60,
+    "ownedProcessObservationPasses": 3
+  },
+  "requiredEnvironment": {
+    "CHROME_DEVTOOLS_MCP_NO_UPDATE_CHECKS": "1",
+    "CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS": "1"
+  },
+  "startOptions": [
+    "--isolated",
+    "--headless",
+    "--executablePath=<exact pinned Chrome>",
+    "--no-usage-statistics",
+    "--no-performance-crux",
+    "--filesystemRoot=<absolute owned native_cli evidence directory>"
+  ],
+  "steps": [
+    "Verify committed admission and all pinned files. Use only bundled official Client and StdioClientTransport as the installed vendor daemon does; no CLI wrapper. Worker authors a small source adapter without effects; independent review and committed adapter pins precede runtime.",
+    "Construct exactly1 transport with exact Node/server/options/env/cwd and piped stderr. Call client.connect exactly once. Save actual transport.pid and lifecycle events; no reconnect, replacement or implicit restart. No shared daemon is attached or stopped.",
+    "After first native list_pages settles, capture server/Chrome ownership before parsing response. Native text response is parsed under pinned strict contract. Errors attempt bounded pre-close identity observation only for cleanup, never further test action.",
+    "Keep the owned startup about:blank support page, create1 separate https://example.com/ target tab using official new_page and actual returned IDs. Snapshot/read URL and Example Domain, capture1 actual PNG under owned evidence root.",
+    "Close only the owned target via official close_page; list_pages verifies target gone. Support blank page is allowed solely because vendor refuses closing the last page.",
+    "Always close the held SDK client/transport in finally. Its native close operates only on its exact spawned child; capture actual closure and bounded known-PID absence or UNKNOWN. No global/user Chrome interference."
+  ],
+  "errorBoundary": "First connection/tool failure or unknown outcome stops dependent test actions. Only SDK close of its own held child and bounded cleanup observations may follow. Never reconnect or replace transport after error/close. No certificate bypass, installs or extra attempts.",
+  "sdkLifecycleBinding": "Installed StdioClientTransport exposes its own native child PID. send rejects Not connected after process loss and does not auto-start. Adapter must enforce connectCount<=1, retain first PID and never reconnect. Native close ends owned stdin and may signal only its held child after the SDK waits; actual outcome is observed or qualified. RunId is an ownership label, not a fabricated returned target ID.",
+  "networkOrigins": [
+    "https://example.com"
+  ],
+  "prohibitedEffects": [
+    "Product/localhost, backend/DB/Docker/fixture/controller/campaign/provider/key/grant/execute/customer data",
+    "CLI daemon wrapper, npx/npm/package download/update, generic/custom CDP or hand-built protocol, unmanaged Chrome/debugging-port launch",
+    "Personal/default profile, existing daemon or user Chrome interference, global OS security settings or certificate bypass",
+    "User configuration edits, original evidence/seed/profile/gate/source edits, worker commit, push/merge/deploy or G0/M3/FREEZE claim"
+  ],
+  "workerAllowedPaths": [
+    "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/run_owned_stdio_v3.mjs",
+    "docs/reviews/R139_NATIVE_SDK_V3_WORKER_RETURN_2026-10-30.md",
+    "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/v3_source_checks/**",
+    "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/**"
+  ],
+  "retained": {
+    "browserMethodsBeforeNative": 17,
+    "sourceChecks": 27,
+    "controllers": 4,
+    "campaigns": 1,
+    "services": 5,
+    "correctiveObservationsChargedAsReported": 3,
+    "correctiveSetupPassChargedAsReported": 1,
+    "correctiveBrowserJobsUsed": 0,
+    "allUnknowns": "PRESERVED",
+    "v2SdkConnectUsed": 1,
+    "v2ServerStartsUsed": 1,
+    "v2BrowserCallsUsed": 1,
+    "v2Cleanup": "UNKNOWN",
+    "v3RuntimeUsed": 0
+  },
+  "accounting": "Root explicitly assigned v3 prospective finite limits under standing grant and current continuation after observed different root cause. v2 connect1/start1/browser1/cleanupUNKNOWN and cumulative17 preserved. No new runtime at source stage; release requires explicit Root review and commit. Old source27/controllers4/campaign1/services5/UNKNOWNs remain separate.",
+  "precondition": "Independent v3 admission review, all20installed pins and doctor PASS, synchronized continuity and committed preparation before source BUILD; independent source acceptance and separately committed exact Root v3 release before SDK import/connect/start/browser. Preserve all v2 evidence/authority/source/release/claim. No replay or reuse of v2 counters; same R139 M3-05/M3-08 prerequisite only.",
+  "status": "SOURCE_REPAIR_ONLY_RUNTIME_HELD",
+  "holdReason": "V3 source not yet authored/reviewed or exact released. Actual v2 text-response and late ownership defects motivate finite repair; v2 source PASS did not predict native response shape and runtime remained blocked.",
+  "supersedesProspectiveDraft": "V3 follows actual spent v2 failure; unexecuted original/CLI drafts remain historical, no revival.",
+  "baseCommit": "236f9b96739d514b9fd5014a3942b0bc4bcf73d0",
+  "coreCommit": "15e39450853184eb65dbde73398c69c3171a6241",
+  "executionDirectory": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3",
+  "runIdAccounting": "V2 b7a56dcf-e6a3-40d7-a213-d5acc6b15ecd actually spent connect1/start1/tool1; browser cumulative17, cleanupUNKNOWN. V3 3e2ccdd0-b292-4c0f-8f27-9b123e9fabed is separately assigned and unused; no reset or replay of v2. V3 source-only now, runtime requires exact reviewed committed release.",
+  "reviewBudgetMinutes": 20,
+  "sourceRepairSpec": [
+    "Create v3; preserve all original/v2 adapters, admissions, releases, claims and evidence. Correct project root depth6, direct-main guard; importing with argv --run must not trigger effects. Builtin imports only until explicit valid run release.",
+    "Use installed official Client/StdioClientTransport exactly as vendor daemon; one transport/connect/start, no CLI/custom CDP/wire/reconnect. Outer startup/connect bound plus SDK request timeout; pertool30s and total300 incl60cleanupreserve. Late connect/transport loss may never resume tool actions.",
+    "Observe actual native serverPID, direct Chrome child and creation times. Verify managed isolated temporary profile is strict descendant of actual os.tmpdir and native expected prefix, real non-reparse directory/command --remote-debugging-pipe; no default/personal path. Actual returned page IDs and exact URLs only.",
+    "PowerShell metadata helper imports known native Utility/Cim modules by system path; no user autoload/profile. Source phase permits NO native process metadata queries or smoke runs. Runtime only after exact release: scoped server/known Chrome PIDs/descendants, max3passes counted before invocation. All original v2 metadata receipts stay historical.",
+    "On any failure stop dependent browser actions; finally official SDK close held child only, bounded; inspect both original server and known Chrome PIDs after close including reparenting. Preserve actual cleanup status or UNKNOWN, not parent-only/global absence claim.",
+    "Original requests/results/errors/lifecycle/PNG actualbytes and digest must persist in owned execution directory with exclusive filenames. Report truthful process exit status; blocked result nonzero. Node warnings/late errors retained, no unhandled background exception permits actions.",
+    "Complete readonly preflight and negative absent-release/stale-source guards before effects; any SDK module import/process start forbidden during source validation. Root reviews one consolidated finding set; no third same-root repair absent new cause/cost escalation."
+  ],
+  "sourceValidationBudget": {
+    "workerSyntaxChecks": 1,
+    "workerStaticContractTestProcesses": 1,
+    "workerReadonlyNativeMetadataSmoke": 0,
+    "rootSyntaxChecks": 1,
+    "rootReadonlyGuardProcess": 1
+  },
+  "sourceObservation": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/root_source_admission.json",
+  "sourceAuthorityPath": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-SDK-V3-ADMISSION.json",
+  "captureCustody": "Actual PNG may be written in owned execution directory for Root visual review. Do not commit raw binaries; Root may preserve/move the exact PNG with hash/custody receipt into ignored .cvf/runtime/r139_native_sdk_v3/<runId>/ after review. No deletion or synthetic replacement. Original observation paths remain historical.",
+  "rootAllowedCaptureArchive": ".cvf/runtime/r139_native_sdk_v3/3e2ccdd0-b292-4c0f-8f27-9b123e9fabed/",
+  "nativeShutdownSource": "Additional pinned server entrypoint handles stdin EOF/SIGTERM/SIGINT and calls browser.close for launched mode; 5second backstop can exit0 without complete teardown, so actual known-PID absence remains required. Installed source observation, not proof of cleanup or upstream byte identity.",
+  "parentSpentAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-SDK-V2-ADMISSION.json",
+  "parentResult": "docs/reviews/R139_NATIVE_SDK_V2_ROOT_REVIEW_2026-10-29.md",
+  "repairRootCause": "Actual v2 text-only native response incompatible with structured-only adapter; ownership observation too late to identify Chrome before parser failure. Distinct evidenced runtime root cause; not a repeated same-cause repair or v2 retry.",
+  "ownerContinuation": "Owner says tiep after clean v2 failure checkpoint, under standing full browser-handling grant. Root explicitly assigns a new finite source repair contract; v2 run remains spent and unchanged. No automatic renewal or effect before source acceptance and separately committed exact v3 release.",
+  "sourceChecks": {
+    "workerActiveMinutes": 20,
+    "independentReviewActiveMinutes": 20,
+    "workerSyntaxChecks": 1,
+    "workerStaticContractTestProcesses": 1,
+    "rootSyntaxChecks": 1,
+    "rootReadonlyGuardProcesses": 1,
+    "additionalInstalledSourceFilesRead": 5,
+    "installedSourceReads": [
+      "McpResponse.js",
+      "tools/pages.js",
+      "tools/snapshot.js",
+      "tools/screenshot.js",
+      "tools/ToolDefinition.js"
+    ],
+    "networkOrSdkDuringSource": 0
+  },
+  "requiredRepairContract": [
+    "Parse actual native textual Pages section based on pinned McpResponse.js lines589-605 and original v2 response. Use actual returned positive safe-integer IDs, exactly one selected page, max2 pages, unique IDs and allowed exact URLs. Accept native title rendering Example Domain (https://example.com/) and bare URL form; reject unknown URL, duplicate/malformed/ambiguous IDs, error/reconnect notices, extra sections/entries. Never fabricate IDs or obtain pages through CDP/custom protocol.",
+    "Observe actual owned server and Chrome immediately after first native list_pages has initialized browser, before parsing/validating its page content. Keep full response first. On errors before ownership, attempt a bounded pre-close scoped cleanup identity observation, then independently close held client/transport and observe exact known PIDs or record UNKNOWN. All observation invocations count toward3; no failure suppresses close.",
+    "Preserve final evidence-safe cleanup, single-connect, exact raw HEAD bindings, exclusive new runId claim before SDK import, original outputs, no-retry and300s including60cleanup reserve.",
+    "Focused static tests use original v2 text response plus source-derived expected Example Domain form and malformed/duplicate/unexpected/error negatives; fixtures are marked STATIC, never runtime or AI governance proof. Independent source review and committed v3 release precede SDK import."
+  ],
+  "admissionReviewActiveMinutes": 15
+}
