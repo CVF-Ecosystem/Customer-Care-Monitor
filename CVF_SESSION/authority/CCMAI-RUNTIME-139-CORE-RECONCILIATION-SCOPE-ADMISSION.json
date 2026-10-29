@@ -1,0 +1,144 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "OWNER_APPROVED_SHARED_CORE_RECONCILIATION_AND_PROJECT_REPIN",
+  "date": "2026-10-29",
+  "ownerInstruction": "duyệt",
+  "approvedProposal": "Root final at c2c8ad16: maintain shared public Core and synchronize this project pin/profile according to R139_NATIVE_SDK_CAPABILITY_REVIEW_2026-10-29.md; explicitly replaces prior documentary-only boundary for this bounded maintenance, not product/browser/provider admission.",
+  "riskCeiling": "R2",
+  "roles": {
+    "dispatcher": "Root",
+    "implementationWorker": "Terra6.1High /root/sdk_source_worker",
+    "independentReviewer": "Root",
+    "admissionReviewer": "Terra6.1High /root/sdk_admission_review",
+    "commitSteward": "Root"
+  },
+  "baseCommit": "c2c8ad162933df541952c67bcc8606eb4a686459",
+  "coreRepository": "https://github.com/Blackbird081/Controlled-Vibe-Framework-CVF.git",
+  "coreFrom": "b8ead4f0d1bf9224338a206b2abcd893ec1801b1",
+  "cachedTarget": "15e39450853184eb65dbde73398c69c3171a6241",
+  "workspaceRoot": "D:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace",
+  "coreRelativePath": "../.Controlled-Vibe-Framework-CVF",
+  "sharedBackupRoot": "../_cvf-core-backups",
+  "sharedExactFiles": [
+    "New-CVF-Governed-Project.ps1",
+    "Run-CVF-NewProject-Enforcement.ps1",
+    "Update-CVF-Workspace.ps1",
+    "Update-CVF-Workspace-Public-Profile.ps1",
+    "Test-CVF-Workspace.ps1",
+    "Repair-CVF-Workspace.ps1",
+    "Manage-CVF-Workspace.ps1",
+    ".agents/workflows/cvf-onboard.md",
+    ".agents/workflows/pre-commit-check.md",
+    "WORKSPACE_RULES.md",
+    "WORKSPACE_PROJECT_ENFORCEMENT_BASELINE.json",
+    "CVF_WORKSPACE_USER_GUIDE.md",
+    "CVF_WORKSPACE_HUONG_DAN_SU_DUNG.md",
+    "CVF_WORKSPACE_CLASSIFICATION_GUIDE.md",
+    "Get-CVF-Workspace-OverlayProfiles.ps1",
+    "Update-CVF-Workspace-Overlay.ps1",
+    "CVF_WORKSPACE_OVERLAY_STATUS.json"
+  ],
+  "sharedObservedPreserve": [
+    "CVF_RULE_PACKS/ACTIVE_RULE_PACK.json",
+    "all sibling .cvf/manifest.json raw hashes"
+  ],
+  "allowedProjectPaths": [
+    ".cvf/manifest.json",
+    ".cvf/gate-profile.lock.json",
+    ".cvf/local-binding.json (ignored; local binding only)",
+    "AGENTS.md",
+    ".github/workflows/cvf-downstream-gates.yml",
+    "scripts/cvf_gates/* (public installer only)",
+    "scripts/cvf_downstream_gate.py",
+    "scripts/tests/test_cvf_downstream_gate_core_repin.py",
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/reviews/R139_*.md",
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/**",
+    "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+    "docs/catalog/**",
+    "docs/INDEX.md"
+  ],
+  "spec": [
+    "Known doctor freshness FAIL is specifically the admitted repair target; no bypass/PASS claim until actual doctor passes. Current approved pin and immutable historical authority remain evidence, not current runtime release.",
+    "One public origin fetch+target verification before effects; target changes require Root source-diff/admission review, no automatic changed target adoption. Public updater clone network only thereafter. No package/provider/key effects.",
+    "Before updater validate absolute Core/workspace/backup/shared targets and ancestors for reparse escape, verify Core clean/public origin and operator-local unchanged. Back up exact shared preimages/absence and project adoption files plus sibling hashes, ACL as applicable, verify copied hashes, record actual backup root before moves. Official updater once, no private overlay, AllowPendingCoreBackup or UpdateProjectManifests. Preserve original Core moved backup.",
+    "Updater can clone advancing branch and write shared files first. Postverify exact admitted HEAD, origin, clean tree, kit and output paths. On drift/failure stop dependent adoption and restore only approved verified preimages and Core using reviewed same-shell literal-path moves; preserve failed clone/backup. No unapproved recursive deletion; no assumed full rollback.",
+    "Installed target profile remains1.2.0 and knownfilelist verified from actual public source. Update only project manifest and AGENTS current-reference pins; historical execution e9/profile1.1 authority and AGENTS historical claims retained. Install --upgrade exclusively from actual public Core. Reconcile generated workflow through native installer if matching; edited workflow preserve and Root reconcile only its required pins.",
+    "Legacy static gate needs ONE fixed-path CORE-REPIN-MAINTENANCE-ADMISSION successor. Preserve old seed and COMMIT-MAINTENANCE-ADMISSION exact bytes. Validate predecessor first blob plus all17 payload hashes at its original first commit, seed-at-original-base and ancestry. Historical no-successor route unchanged.",
+    "Successor strict schema binds predecessor path+normalizedSHA, seed hash,risk,distinct worker/reviewer Rootcommitowner,new approved preparationbaseHEAD, publicCoreFrom/To, complete effective files map, explicit samecommitbootstrap. First creation requires HEAD==preparationbase and absent history; staged successor/payload matchworktree. After commit enforce firstblobimmutability and ancestry. No generic chains or arbitrary selector.",
+    "Effective files exactly active tranche base-to-HEAD plus worktree out-of-seed union; preserve explicit file/range failure semantics. Only manifest/lock/AGENTS/workflow/installedlockfiles/legacygate/new one test may differ or be added. All original nonrepinnable hashes unchanged. Safe paths/noaliases/duplicates/deletions/unknown fields/unsupportedprofiles fail. Lock core==manifest core==admitted publicCoreTo; installed files match lock pins.",
+    "Focused successor tests prove positive bootstrap/committed routes and reject predecessor history/payload tamper, oldnonrepinnable drift, scope/alias/duplicate/staged mismatch, unsupported profile/pin and unresolvable ranges. Full gate units, catalog check, doctor, explicit packet precommit and local PRrange before completion. No hostedCI claim."
+  ],
+  "immutablePreserve": [
+    "CVF_SESSION/authority/CCMAI-RUNTIME-139.json",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-139-COMMIT-MAINTENANCE-ADMISSION.json",
+    "old roadmap acceptance and content hashes",
+    "all received original evidence and spent counters/UNKNOWNs"
+  ],
+  "budgets": {
+    "workerMinutes": 40,
+    "rootReviewMinutes": 25,
+    "updaterInvocations": 1,
+    "publicFetchesBeforeUpdater": 1,
+    "providerCalls": 0,
+    "browserCalls": 0,
+    "productEffects": 0
+  },
+  "effectPrecondition": "Root admission independently reviewed, current continuity acknowledged and preparation committed before worker material edits/shared transaction. Root separately reviews worker source and final hash-bound successor before material commit.",
+  "prohibitedEffects": [
+    "Product/SDK/browser/provider/key/database/Docker/fixture/controller/campaign/customer/channel actions",
+    "Sibling manifest writes or public rulepack sync when profile changes",
+    "Hand edits to public Core or installed gate modules/lock",
+    "Old seed/admission/history/evidence/roadmap rewrites; worker commits; push/merge/deploy; M3/FREEZE closure"
+  ],
+  "reviewReceipt": "docs/reviews/R139_CORE_RECONCILIATION_ROOT_REVIEW_2026-10-29.md",
+  "successorContract": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-REPIN-MAINTENANCE-ADMISSION.json",
+    "exactFields": [
+      "schemaVersion",
+      "trancheId",
+      "purpose",
+      "baseCommit",
+      "predecessor",
+      "seedSha256",
+      "riskCeiling",
+      "roles",
+      "coreFrom",
+      "coreTo",
+      "files",
+      "bootstrapException",
+      "ownerInstruction"
+    ],
+    "schemaVersion": "1.0",
+    "purpose": "STATIC_PUBLIC_CORE_REPIN_ONLY",
+    "predecessorFields": [
+      "path",
+      "sha256"
+    ],
+    "rolesFields": [
+      "worker",
+      "reviewer",
+      "commitSteward"
+    ],
+    "bootstrapFields": [
+      "reason",
+      "ownerInstruction"
+    ],
+    "baseCommit": "Exact forthcoming independently-reviewed preparation commit, supplied by Root after commit and fixed in checker; no arbitrary caller base",
+    "repinnableExact": [
+      ".cvf/manifest.json",
+      ".cvf/gate-profile.lock.json",
+      "AGENTS.md",
+      ".github/workflows/cvf-downstream-gates.yml",
+      "scripts/cvf_downstream_gate.py",
+      "scripts/tests/test_cvf_downstream_gate_core_repin.py"
+    ],
+    "repinnableInstalled": "Only direct installed filenames exactly enumerated by verified public profile and lock; no nested or arbitrary files",
+    "coreFrom": "b8ead4f0d1bf9224338a206b2abcd893ec1801b1",
+    "coreTo": "Root verified actual public target; fixed admitted pin supplied after one authorized fetch; no arbitrary manifest/lock consensus alone",
+    "historicalMode": "Without successor path preserve legacy behavior exactly. With successor validate predecessor immutable history and original payload; effective map current, nonrepinnable old hashes unchanged. No second successor or generic chain."
+  }
+}

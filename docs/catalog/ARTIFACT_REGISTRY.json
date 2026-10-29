@@ -5,6 +5,27 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r139-core-reconciliation-20261029-1",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-RECONCILIATION-SCOPE-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Owner-approved shared Core/project repin maintenance with exact shared scope and bounded immutable successor SPEC."
+    },
+    {
+      "id": "r139-core-reconciliation-20261029-2",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CORE_RECONCILIATION_WORKER_RETURN_2026-10-29.md",
+      "status": "ACTIVE",
+      "description": "Read-only preparation: exact preimages, sibling pins, official installer, clone race and rollback limits."
+    },
+    {
+      "id": "r139-core-reconciliation-20261029-3",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CORE_RECONCILIATION_ROOT_REVIEW_2026-10-29.md",
+      "status": "ACTIVE",
+      "description": "Independent maintenance admission/review and full M3 dispatch coverage; product runtime remains held."
+    },
+    {
       "id": "r139-supported-setup-checkpoint-20261029-01",
       "family": "continuity",
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-OFFICIAL-CLI-ADMISSION.json",

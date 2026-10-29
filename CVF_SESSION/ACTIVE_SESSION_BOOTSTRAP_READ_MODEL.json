@@ -1,4 +1,14 @@
 {
+  "x-coreReconciliation20261029": {
+    "status": "INDEPENDENT_ADMISSION_PASS_PREPARATION_CHECKS_PENDING",
+    "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-RECONCILIATION-SCOPE-ADMISSION.json",
+    "review": "docs/reviews/R139_CORE_RECONCILIATION_ROOT_REVIEW_2026-10-29.md",
+    "priorCore": "b8ead4f0d1bf9224338a206b2abcd893ec1801b1",
+    "cachedTarget": "15e39450853184eb65dbde73398c69c3171a6241",
+    "providerCalls": 0,
+    "browserCalls": 0,
+    "productRuntimeAdmission": false
+  },
   "x-ownedStdioCapability20261029": {
     "status": "CORE_FRESHNESS_HOLD_SOURCE_CANDIDATE_REJECTED",
     "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-OFFICIAL-CLI-ADMISSION.json",
@@ -46,8 +56,8 @@
   "activePhase": "BUILD",
   "activeTranche": "CCMAI-RUNTIME-139",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-139 corrective return accepted only as qualified reported STOP: observations3/setup-pass1, browser job/API0, cumulative16 retained. Independent Terra admission review and fresh doctor FAIL27/28 identify shared Core freshness prerequisite outside the documentary/static exception. Sol SDK source candidate is REJECTED_UNEXECUTED with known root/import/timeout/cleanup defects; replacement Terra stopped before editing or syntax checks. No runtime release exists and no SDK import/connect/browser effect is admitted. Root may complete documentary evidence custody/review/continuity and clean commit only; next dependent move is explicit shared-Core reconciliation scope approval and Core maintainer handoff, then applicable doctor/gate/profile admission and independent adapter source repair/review before capability execution. Same R139/M3-05/M3-08, source27/controllers4/campaign1/service5/UNKNOWNs, execution-pin mismatch HOLD/full M3/FREEZE OPEN and Facebook/Zalo OA parked.",
-  "activeRole": "Root ORCHESTRATOR / independent return and source-readiness REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra source worker stopped; independent Terra admission reviewer HOLD; all SDK/runtime execution held",
+  "nextAllowedMove": "CCMAI-RUNTIME-139 Owner approved shared public Core maintenance and this project pin/profile adoption. Root records bounded SPEC/WORK_ORDER in CORE-RECONCILIATION-SCOPE-ADMISSION; Terra prepares verified exact backups and single-successor legacy gate compatibility, independently reviewed admission and committed preparation precede BUILD. Reconcile only shared Core/named workspace outputs and this project public pin/profile; preserve sibling manifests, original authority/maintenance admission/roadmap/evidence, historical e9/profile1.1 execution HOLD and all counters/UNKNOWNs. Verify public target/profile/files, official updater/install, doctor and static gates; no browser/SDK/provider/product effects until separate source/runtime prerequisites. Same R139/M3-05/M3-08; full M3/FREEZE OPEN and Facebook/Zalo OA parked.",
+  "activeRole": "Root ORCHESTRATOR / SPEC and WORK_ORDER AUTHOR / independent source/result REVIEWER / COMMIT_STEWARD; Terra6.1High CORE_MAINTENANCE_WORKER, separate Terra admission REVIEWER; browser/product execution held",
   "updatedAt": "2026-10-28",
   "schemaVersion": "1.0",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
