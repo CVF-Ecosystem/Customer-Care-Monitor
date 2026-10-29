@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "ROOT_SAME_SCOPE_BOUNDED_REPAIR_COST_ADMISSION",
+  "date": "2026-10-29",
+  "parent": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-RECONCILIATION-SCOPE-ADMISSION.json",
+  "parentRawSha256": "6a357d91d2071a4237294c4e875c71f06b1516dd4dfbba8810db94ec5f141e5e",
+  "ownerAuthority": "Owner explicitly approved shared Core maintenance and project pin/profile synchronization; no numeric time budget was requested by Owner. This is a Root-delegated same-scope extension, not new Owner consent or changed effect authority.",
+  "riskCeiling": "R2",
+  "roles": {
+    "worker": "Terra6.1High /root/sdk_source_worker",
+    "independentReviewer": "Root",
+    "admissionReviewer": "Terra6.1High /root/sdk_admission_review",
+    "commitSteward": "Root"
+  },
+  "priorWorkerCeilingMinutes": 40,
+  "priorCeilingDisposition": "Retain elapsed effort and all failed source/fixture/preflight evidence, do not reset. No mirror/claim/updater/Core effects yet.",
+  "additionalWorkerMinutes": 10,
+  "additionalRootReviewMinutes": 10,
+  "costReview": "REVIEW_COST_ESCALATION_RECORDED. Distinct actual root causes include immutable old-hash join, remote clone race, PowerShell5 path/function/stderr/exit-handle semantics and concrete ConvertFromJson array wrapping. No third repair is justified solely by repeating an unchanged cause. New final gate is complete read-only preflight on exact source before any fresh execution decision.",
+  "allowedRepair": "Fix exact PowerShell5 ACL array wrapping and add explicit PreflightOnly mode to existing owned supervisor; full actual-precondition read-only check, then Root independent source/peer review before any separately released physical action. Existing source/gate/test/backup paths, exact public target and one actual updater limit unchanged.",
+  "history": {
+    "wrapperCalls": 2,
+    "wrapperStopsBeforeClaimMirrorUpdater": 2,
+    "publicFetchUsed": 1,
+    "actualUpdaterUsed": 0,
+    "actualUpdaterCeiling": 1,
+    "mirrorStarts": 0,
+    "browserProviderProductCalls": 0
+  },
+  "prohibited": "No old seed/admission/roadmap/evidence edits, no spent-budget reset, no automatic retries, public fetch, broader file class, unowned process action, key/provider/product effects or worker commit."
+}

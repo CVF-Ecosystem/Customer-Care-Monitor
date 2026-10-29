@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-29T11:25:51.787485+00:00",
+  "cloneExit": 0,
+  "stdout": "",
+  "stderr": "Cloning into 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\git_local_mirror_fixture\\clone_hardened'...\n",
+  "target": "a0f32e91eddfb591ee63077ad1d5d82e40b59212",
+  "head": "a0f32e91eddfb591ee63077ad1d5d82e40b59212",
+  "originAfterClear": "https://r139-fixture.invalid/pinned.git",
+  "environment": "GIT vars cleared; system/global disabled; file-only; explicit URL rewrite; no replacements or lazy fetch; empty template/hooks",
+  "network": "NONE fixture invalid hostname maps to file URL",
+  "pass": true
+}

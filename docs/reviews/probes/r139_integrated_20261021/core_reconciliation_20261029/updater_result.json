@@ -1,0 +1,72 @@
+﻿{
+    "startUtc":  "2026-10-29T11:48:59.1022095Z",
+    "updaterPid":  23008,
+    "exitCode":  0,
+    "endUtc":  "2026-10-29T11:49:20.6543432Z",
+    "status":  "UPDATER_RETURNED_POSTCHECKS_PASS_REVIEW_REQUIRED",
+    "observedChildren":  [
+                             {
+                                 "pid":  20740,
+                                 "parent":  23008,
+                                 "created":  "\/Date(1793274549995)\/",
+                                 "executable":  "C:\\windows\\system32\\conhost.exe"
+                             },
+                             {
+                                 "pid":  13552,
+                                 "parent":  23008,
+                                 "created":  "\/Date(1793274559020)\/",
+                                 "executable":  "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+                             },
+                             {
+                                 "pid":  7356,
+                                 "parent":  15040,
+                                 "created":  "\/Date(1793274551465)\/",
+                                 "executable":  "C:\\Program Files\\Git\\mingw64\\libexec\\git-core\\git.exe"
+                             },
+                             {
+                                 "pid":  25556,
+                                 "parent":  29268,
+                                 "created":  "\/Date(1793274551372)\/",
+                                 "executable":  "C:\\Program Files\\Git\\mingw64\\bin\\git-upload-pack.exe"
+                             },
+                             {
+                                 "pid":  15040,
+                                 "parent":  28236,
+                                 "created":  "\/Date(1793274551189)\/",
+                                 "executable":  "C:\\Program Files\\Git\\mingw64\\bin\\git.exe"
+                             },
+                             {
+                                 "pid":  28388,
+                                 "parent":  25556,
+                                 "created":  "\/Date(1793274551451)\/",
+                                 "executable":  "C:\\Program Files\\Git\\mingw64\\libexec\\git-core\\git.exe"
+                             },
+                             {
+                                 "pid":  28236,
+                                 "parent":  23008,
+                                 "created":  "\/Date(1793274551146)\/",
+                                 "executable":  "C:\\Program Files\\Git\\cmd\\git.exe"
+                             },
+                             {
+                                 "pid":  29268,
+                                 "parent":  15040,
+                                 "created":  "\/Date(1793274551272)\/",
+                                 "executable":  "C:\\Program Files\\Git\\usr\\bin\\sh.exe"
+                             }
+                         ],
+    "childObservation":  "KNOWN_IDENTITIES_ABSENT_SAMPLED_NOT_EXHAUSTIVE",
+    "transport":  "LOCAL_MIRROR_FROM_PREVIOUS_PUBLIC_FETCH",
+    "sourceTree":  "27c7d337155774917dc9fa026edef25e0294b4cb",
+    "note":  "Sampled child inventory is not exhaustive; timeout or observer failure remains UNKNOWN. Mirror file handles limit concurrent writes; same-user races are not excluded.",
+    "mirrorPath":  "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-reviewed-public-15e39450.git",
+    "mirrorFiles":  {
+                        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-reviewed-public-15e39450.git\\objects\\pack\\pack-81637ab979d0bc982c18d8ec59de7e2fb24e5186.pack":  "855045ae992b054ff3c2b1f8858218e33cf2c552d5241a19d9ca472ea9fc2b60",
+                        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-reviewed-public-15e39450.git\\refs\\heads\\main":  "9d2626bf6943307952d8e6cb8ca24178c8eb22f36b7b985097e8a22ab33a6068",
+                        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-reviewed-public-15e39450.git\\packed-refs":  "3d2024873bd78e7559e22775a472b6d9646baf5fde7d0ae75f5c457d216296b0",
+                        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-reviewed-public-15e39450.git\\HEAD":  "28d25bf82af4c0e2b72f50959b2beb859e3e60b9630a5e8c603dad4ddb2b6e80",
+                        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-reviewed-public-15e39450.git\\config":  "6d4004700df9379634e851d33cac3cfdf6bc7ed2e299898fb945134e59415a87",
+                        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-reviewed-public-15e39450.git\\objects\\pack\\pack-81637ab979d0bc982c18d8ec59de7e2fb24e5186.rev":  "97e0f63c35ae2c23c6f9a909e7cc399d3f1dc43d335267ee17cde401511dd76e",
+                        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-reviewed-public-15e39450.git\\objects\\pack\\pack-81637ab979d0bc982c18d8ec59de7e2fb24e5186.idx":  "eda4a3c35cd2fb5bd0b0b6f4749f23eb419761a862574f257765211abf381d21"
+                    },
+    "originalCoreBackup":  "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\.Controlled-Vibe-Framework-CVF-20261029-184910"
+}

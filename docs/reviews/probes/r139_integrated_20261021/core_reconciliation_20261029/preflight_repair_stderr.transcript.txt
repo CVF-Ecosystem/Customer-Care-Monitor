@@ -1,0 +1,9 @@
+Get-FileHash : The term 'Get-FileHash' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI\docs\reviews\probes\r139_integrated_20261021\core
+_reconciliation_20261029\run_core_update.ps1:39 char:40
++ function Hash([string]$Path) { return (Get-FileHash -LiteralPath $Pat ...
++                                        ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Get-FileHash:String) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 

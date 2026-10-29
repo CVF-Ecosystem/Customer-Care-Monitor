@@ -28,4 +28,4 @@ jobs:
           --base-from-env CVF_DG_BASE --head HEAD
           --expect-profile-sha256 faaf9273ada3fd826e6372898d134fe7ad0157528f25b7720211c31cfc209bd5
           --expect-runner-sha256 716544aa7a38251009867a4e0150be51b79b4304a8c5f6d7afddab4e7c5d9c07
-          --expect-bundle-sha256 66808d60d443c4f8ae94ea73042140cdf8320627a632af23e529805e7607ab82
+          --expect-bundle-sha256 80edcd2e4b605f440b94df963ed304ffed0f803bfa057a951360e39f014efc2b

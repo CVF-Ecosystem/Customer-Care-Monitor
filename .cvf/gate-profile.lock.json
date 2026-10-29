@@ -1,12 +1,12 @@
 {
-  "bundleSha256": "66808d60d443c4f8ae94ea73042140cdf8320627a632af23e529805e7607ab82",
+  "bundleSha256": "80edcd2e4b605f440b94df963ed304ffed0f803bfa057a951360e39f014efc2b",
   "ciWorkflow": {
     "disposition": "CREATED",
     "ownerReconciliationRequired": false,
     "path": ".github/workflows/cvf-downstream-gates.yml",
-    "renderedSha256": "bad09e6e0562c0cc3d5aec87cb114289d74ec85c94edf7d07109ccd9cf681774"
+    "renderedSha256": "5cf931e477bc85601030c85d2c3e7cf13f3a5e7181a9fc6f68932d4548763136"
   },
-  "coreCommit": "b8ead4f0d1bf9224338a206b2abcd893ec1801b1",
+  "coreCommit": "15e39450853184eb65dbde73398c69c3171a6241",
   "files": {
     "check_gate_to_role_closeability.py": "8f00c6421eebe3c1b237e5307ac6e2b0b0343c9a35cf635bbab17aa886e00e8e",
     "cvf_dg_applicability.py": "bffde44fe38494b0dea9e658fb82eaaec31f3bd25c9964445fa837dd29b01c67",
@@ -19,7 +19,7 @@
     "cvf_dg_routing.py": "a39419336ea31ec155c285291f3d5684046e8b18d88dbf47c422b3c2c59632cf",
     "cvf_downstream_gate_profile.json": "faaf9273ada3fd826e6372898d134fe7ad0157528f25b7720211c31cfc209bd5",
     "cvf_downstream_gate_runner.py": "716544aa7a38251009867a4e0150be51b79b4304a8c5f6d7afddab4e7c5d9c07",
-    "cvf_milestone_coverage.py": "5ff2e3e0b85743d30a081a9909e015574a2578e3ce7afd7a0507b05960e5a0ef",
+    "cvf_milestone_coverage.py": "02e828a256132736e17a78440c62d633a444974ab8b69b1ed9b7227364fe6ae2",
     "git-pre-commit.template": "547c077163eb64259362a669d1fa6cca7cc4fe06090af3c9286f09557bcf937b",
     "project_learning_home.template.md": "b2982c018baedca7f076526221ad6d5d0854dab2f029390d2c7f079ded05930f",
     "project_learning_record.template.md": "559d2d50c86fbfc72967d6af5b19df23c5001c48ddaca0a2b423fc574e7250d6"

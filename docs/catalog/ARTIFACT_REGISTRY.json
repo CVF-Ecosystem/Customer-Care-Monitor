@@ -5,6 +5,426 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r139-core-maintenance-evidence-raw-policy-20261029",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/.gitattributes",
+      "status": "ACTIVE",
+      "description": "Raw Core-maintenance evidence custody: disable Git text conversion for exact original bytes."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-001",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-RECONCILIATION-REPAIR-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Same-scope bounded repair cost; old effort/call history retained, no effect-cap reset."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-002",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-REPIN-MAINTENANCE-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Root exact18file immutable repin successor, old17file authority/history preserved."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-003",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CORE_PROJECT_ADOPTION_RETURN_2026-10-29.md",
+      "status": "ACTIVE",
+      "description": "Native project pin/profile upgrade and doctor28/28 return; independent aggregate remains open."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-004",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CORE_RECONCILIATION_EXECUTION_RETURN_2026-10-29.md",
+      "status": "ACTIVE",
+      "description": "Caller-reported source/fixture preparation and retained failures before actual updater result."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-005",
+      "family": "continuity",
+      "path": "docs/reviews/R139_PUBLIC_CORE_REGRESSION_FINDINGS_2026-10-29.md",
+      "status": "ACTIVE",
+      "description": "Five failed public tests reproduced on oldb8; inherited fixture/history/Python assumptions, Core-owner remainder."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-006",
+      "family": "continuity",
+      "path": "scripts/tests/test_cvf_downstream_gate_core_repin.py",
+      "status": "ACTIVE",
+      "description": "Disposable-history positive/negative exact-successor checks; no AI/provider behavior assertion."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-007",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/fetch.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-008",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/fetch_verification.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-009",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/fixture_archive.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-010",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/git_hardened_fixture.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-011",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/git_local_mirror_feasibility.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-012",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/git_local_mirror_readonly_final.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-013",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/git_local_mirror_readonly_followup.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-014",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/git_locked_ps5_first_attempt.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-015",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/git_locked_ps5_fixture.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-016",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/git_locked_ps5_fixture_v2.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-017",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/git_native_ps5_updater_form_fixture.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-018",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/git_native_ps5_updater_form_fixture_v2.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-019",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/git_native_ps5_updater_form_fixture_v3.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-020",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/git_native_ps5_updater_form_fixture_v4.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-021",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/knowledge_ingest.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-022",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/original_stream_archive.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-023",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/preflight_repair_process.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-024",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/preflight_repair_stderr.transcript.txt",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-025",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/preflight_repair_stdout.transcript.txt",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-026",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/preimage_acls.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-027",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/preimages.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-028",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/project_adoption_doctor_result.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-029",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/project_adoption_doctor_stderr.txt",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-030",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/project_adoption_doctor_stdout.txt",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-031",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/project_adoption_hashes.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-032",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/project_adoption_installer_result.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-033",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/project_adoption_installer_stderr.txt",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-034",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/project_adoption_installer_stdout.txt",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-035",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/project_adoption_pin_delta.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-036",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/project_legacy_gate_NOT_UPSTREAMED.patch",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-037",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_artifact_custody.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-038",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_final_successor_source_check.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-039",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_full_gate_units.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-040",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_full_gate_units_stderr.txt",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-041",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_full_gate_units_stdout.txt",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-042",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_preflight_direct_result.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-043",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_public_coverage.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-044",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_public_coverage_stderr.txt",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-045",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_public_coverage_stdout.txt",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-046",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_public_profile.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-047",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_public_profile_stderr.txt",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-048",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_public_profile_stdout.txt",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-049",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_updater_result_review.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-050",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_upstream_baseline_result.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-051",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_upstream_baseline_stderr.txt",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-052",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_upstream_baseline_stdout.txt",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-053",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/run_core_update.ps1",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-054",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/supervisor_path_guard_readonly.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-055",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/update_attempt.claim",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-056",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/updater_result.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-057",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/updater_stderr.txt",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-058",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/updater_stdout.txt",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
+      "id": "r139-core-maintenance-final-20261029-059",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/wrapper_preflight_stop_20261029.json",
+      "status": "ACTIVE",
+      "description": "R139 static Core/project repin evidence, source or custody receipt; original failures and scope limits retained."
+    },
+    {
       "id": "r139-core-reconciliation-20261029-1",
       "family": "continuity",
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-RECONCILIATION-SCOPE-ADMISSION.json",
@@ -23,7 +443,7 @@
       "family": "continuity",
       "path": "docs/reviews/R139_CORE_RECONCILIATION_ROOT_REVIEW_2026-10-29.md",
       "status": "ACTIVE",
-      "description": "Independent maintenance admission/review and full M3 dispatch coverage; product runtime remains held."
+      "description": "Independent reviewed Core adoption with five inherited public-test gaps; no tranche/product closure."
     },
     {
       "id": "r139-supported-setup-checkpoint-20261029-01",
@@ -4342,7 +4762,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "R139 Gemini browser subagent invoked; list_pages connection failure reviewed, job spent, Chrome connection hold; M3/FREEZE open."
+      "description": "R139 Core/project repin15e, doctor28/local113PASS; inherited public-suite findings and product/browser HOLD retained."
     },
     {
       "id": "r060-work-order",

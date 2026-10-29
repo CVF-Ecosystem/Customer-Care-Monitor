@@ -1,0 +1,14 @@
+{
+  "powershell": "5.1.26100.9711",
+  "method": "PowerShell AST parsed source and evaluated only the extracted Assert-PathSafe function; collision checks were read-only",
+  "guard": "PASS",
+  "valid": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups",
+  "missing": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-readonly-nonexistent-probe-name",
+  "outsideRejected": true,
+  "candidateCount": 611,
+  "elapsedMilliseconds": 939,
+  "collisions": 0,
+  "wrapperExecuted": false,
+  "updaterInvocations": 0,
+  "limitations": "No reparse-point fixture, live process, clone, full wrapper, postcheck, or rollback was executed; future timing and filesystem state can differ."
+}

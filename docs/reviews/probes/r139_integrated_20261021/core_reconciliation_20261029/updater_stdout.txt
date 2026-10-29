@@ -1,0 +1,25 @@
+[INFO] Workspace root: D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace
+[INFO] Public remote:  https://github.com/Blackbird081/Controlled-Vibe-Framework-CVF.git
+[INFO] Backing up hidden core to: D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\_cvf-core-backups\.Controlled-Vibe-Framework-CVF-20261029-184910
+[OK]   Existing hidden core backed up
+[INFO] Cloning latest public core...
+[OK]   Public core ready at commit: 15e3945
+[OK]   Refreshed workspace rules: D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\WORKSPACE_RULES.md
+[OK]   Updated workspace artifact: D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\New-CVF-Governed-Project.ps1
+[OK]   Updated workspace artifact: D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Run-CVF-NewProject-Enforcement.ps1
+[OK]   Updated workspace artifact: D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Update-CVF-Workspace.ps1
+[OK]   Updated workspace artifact: D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Update-CVF-Workspace-Public-Profile.ps1
+[OK]   Updated workspace artifact: D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Test-CVF-Workspace.ps1
+[OK]   Updated workspace artifact: D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Repair-CVF-Workspace.ps1
+[OK]   Updated workspace artifact: D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Manage-CVF-Workspace.ps1
+[OK]   Updated workspace artifact: D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\.agents\workflows\cvf-onboard.md
+[OK]   Updated workspace artifact: D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\.agents\workflows\pre-commit-check.md
+[OK]   Preserved existing workspace artifact: D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\WORKSPACE_RULES.md
+[OK]   Preserved existing workspace artifact: D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\WORKSPACE_PROJECT_ENFORCEMENT_BASELINE.json
+[OK]   Updated workspace artifact: D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\CVF_WORKSPACE_USER_GUIDE.md
+[OK]   Updated workspace artifact: D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\CVF_WORKSPACE_HUONG_DAN_SU_DUNG.md
+[OK]   Updated workspace artifact: D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\CVF_WORKSPACE_CLASSIFICATION_GUIDE.md
+
+[OK]   Workspace public-core reconciliation complete.
+Run the workspace doctor for each bootstrapped project:
+  powershell -ExecutionPolicy Bypass -File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\.Controlled-Vibe-Framework-CVF\scripts\check_cvf_workspace_agent_enforcement.ps1" -ProjectPath "<project-path>"

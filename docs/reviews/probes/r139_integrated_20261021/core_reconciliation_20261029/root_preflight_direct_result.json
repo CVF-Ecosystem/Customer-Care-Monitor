@@ -1,0 +1,18 @@
+{
+  "reviewer": "Root independent direct preflight observer",
+  "provenance": "Faithful transcription of actual tools.exec_command result; not a separately authenticated raw stream export. Prior worker Python-child failure files remain unchanged.",
+  "sourceRawSha256": "7c856d14b4e4f5d0e1e73b1cb4d3f84316faa1b045e04865006bf890197dc4ed",
+  "launch": "Direct native powershell -NoProfile -NonInteractive -ExecutionPolicy Bypass -EncodedCommand from tool PowerShell shell; only child GIT_PAGER removed; Get-Command Get-FileHash/Get-Acl/Get-CimInstance before source PreflightOnly",
+  "exitCode": 0,
+  "wallSeconds": 7.6850627,
+  "stdout": "Get-FileHash:Microsoft.PowerShell.Utility\nGet-Acl:Microsoft.PowerShell.Security\nGet-CimInstance:CimCmdlets\nPREFLIGHT_PASS: complete read-only checks; no claim, mirror or updater\n",
+  "actualUpdaterCalls": 0,
+  "actualMirrorStarts": 0,
+  "claimCreated": false,
+  "observedDate": "2026-10-29",
+  "priorRootAttempt": {
+    "exitCode": 1,
+    "cause": "Root omitted already-authorized process ExecutionPolicy flag; source was refused before entry. Correct flag was supplied for this successful direct check.",
+    "effects": "No source entry, claim, mirror or updater"
+  }
+}

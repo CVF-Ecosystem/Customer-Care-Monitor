@@ -1,0 +1,190 @@
+diff --git a/scripts/cvf_downstream_gate.py b/scripts/cvf_downstream_gate.py
+index c06ec59f..6f6bbad6 100644
+--- a/scripts/cvf_downstream_gate.py
++++ b/scripts/cvf_downstream_gate.py
+@@ -92,6 +92,13 @@ _MAINTENANCE_FIELDS = frozenset((
+     "schemaVersion", "trancheId", "baseCommit", "seedSha256", "riskCeiling",
+     "purpose", "ownerInstruction", "roles", "files", "bootstrapException"))
+ _MAINTENANCE_ROLES = frozenset(("worker", "reviewer", "commitSteward"))
++_REPIN_BASE = "0812d972d7d719b3151506e321f651d51cc3ef1e"
++_REPIN_CORE_FROM = "b8ead4f0d1bf9224338a206b2abcd893ec1801b1"
++_REPIN_CORE_TO = "15e39450853184eb65dbde73398c69c3171a6241"
++_REPIN_ADMISSION = "CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-REPIN-MAINTENANCE-ADMISSION.json"
++_REPIN_FIELDS = frozenset(("schemaVersion", "trancheId", "purpose", "baseCommit", "predecessor", "seedSha256", "riskCeiling", "roles", "coreFrom", "coreTo", "files", "bootstrapException", "ownerInstruction"))
++_REPIN_EXACT = frozenset((".cvf/manifest.json", ".cvf/gate-profile.lock.json", "AGENTS.md", ".github/workflows/cvf-downstream-gates.yml", "scripts/cvf_downstream_gate.py", "scripts/tests/test_cvf_downstream_gate_core_repin.py"))
++_REPIN_INSTALLED = frozenset(("cvf_downstream_gate_profile.json", "cvf_downstream_gate_runner.py", "cvf_dg_common.py", "cvf_dg_install.py", "cvf_dg_continuity.py", "cvf_dg_applicability.py", "cvf_dg_routing.py", "cvf_dg_review.py", "cvf_dg_intake.py", "cvf_dg_coverage.py", "check_gate_to_role_closeability.py", "git-pre-commit.template", "project_learning_home.template.md", "project_learning_record.template.md", "cvf_milestone_coverage.py"))
+ _MAINTENANCE_PATH_EXACT = frozenset((
+     ".cvf/gate-profile.lock.json", ".cvf/manifest.json",
+     ".github/workflows/cvf-downstream-gates.yml", "AGENTS.md",
+@@ -404,6 +411,155 @@ def _safe_maintenance_path(path):
+     return path in _MAINTENANCE_PATH_EXACT or path.startswith("scripts/cvf_gates/")
+ 
+ 
++def check_core_repin(root, tid, seed, out_of_scope, r):
++    """One fixed successor; verify historical authority before current effective scope."""
++    def reject(message):
++        raise GateError(message)
++
++    def read_safe(rel):
++        full = os.path.join(root, *rel.split("/"))
++        expected = os.path.join(os.path.realpath(root), *rel.split("/"))
++        if not inside(root, rel) or os.path.normcase(os.path.realpath(full)) != os.path.normcase(expected) or not os.path.isfile(full):
++            reject("missing or aliased path: " + rel)
++        with open(full, "rb") as fh:
++            return fh.read()
++
++    def obj(raw):
++        return json.loads(raw.decode("utf-8-sig"), object_pairs_hook=_no_duplicate_pairs)
++
++    def ancestor(a, b):
++        if _git(root, "merge-base", "--is-ancestor", a, b, check=False).returncode != 0:
++            reject("required ancestry missing")
++
++    try:
++        raw = read_safe(_REPIN_ADMISSION)
++        admission = obj(raw)
++        if not isinstance(admission, dict) or set(admission) != _REPIN_FIELDS:
++            reject("successor field set invalid")
++        if (tid != _MAINTENANCE_TRANCHE or admission["schemaVersion"] != "1.0" or
++                admission["trancheId"] != tid or admission["purpose"] != "STATIC_PUBLIC_CORE_REPIN_ONLY" or
++                admission["baseCommit"] != _REPIN_BASE or admission["coreFrom"] != _REPIN_CORE_FROM or
++                admission["coreTo"] != _REPIN_CORE_TO or admission["riskCeiling"] != seed.get("riskCeiling") or
++                not isinstance(admission["ownerInstruction"], str) or not admission["ownerInstruction"].strip()):
++            reject("successor identity or fixed pins invalid")
++        roles, exception, predecessor = admission["roles"], admission["bootstrapException"], admission["predecessor"]
++        if (not isinstance(roles, dict) or set(roles) != _MAINTENANCE_ROLES or
++                not all(isinstance(v, str) and v.strip() for v in roles.values()) or
++                roles["worker"].strip().casefold() == roles["reviewer"].strip().casefold() or
++                roles["commitSteward"].strip().casefold() != "root"):
++            reject("successor roles invalid")
++        if (not isinstance(exception, dict) or set(exception) != {"reason", "ownerInstruction"} or
++                not isinstance(exception["reason"], str) or not exception["reason"].strip() or
++                exception["ownerInstruction"] != admission["ownerInstruction"]):
++            reject("successor bootstrap exception invalid")
++        if not isinstance(predecessor, dict) or set(predecessor) != {"path", "sha256"} or predecessor["path"] != _MAINTENANCE_ADMISSION:
++            reject("predecessor binding invalid")
++        old_raw = read_safe(_MAINTENANCE_ADMISSION)
++        old = obj(old_raw)
++        if predecessor["sha256"] != _lf_sha(old_raw) or not isinstance(old, dict) or set(old) != _MAINTENANCE_FIELDS:
++            reject("predecessor hash or schema invalid")
++        seed_rel = "CVF_SESSION/authority/" + tid + ".json"
++        seed_raw = read_safe(seed_rel)
++        if admission["seedSha256"] != _lf_sha(seed_raw) or old["seedSha256"] != _lf_sha(seed_raw):
++            reject("seed binding invalid")
++        if (_lf_sha(_git(root, "show", f"{_MAINTENANCE_BASE}:{seed_rel}").stdout) != _lf_sha(seed_raw) or
++                old["baseCommit"] != _MAINTENANCE_BASE or old["trancheId"] != tid or
++                old["purpose"] != "STATIC_REPOSITORY_MAINTENANCE_ONLY" or old["riskCeiling"] != seed.get("riskCeiling")):
++            reject("historical seed or predecessor identity invalid")
++        head = verify_commit(root, "HEAD", "HEAD")
++        verify_commit(root, _REPIN_BASE, "repin base")
++        ancestor(_MAINTENANCE_BASE, _REPIN_BASE)
++        ancestor(_REPIN_BASE, head)
++        old_added = _git(root, "log", "--diff-filter=A", "--format=%H", "--reverse", "--", _MAINTENANCE_ADMISSION).stdout.decode().split()
++        if not old_added:
++            reject("predecessor first commit absent")
++        first_old = old_added[0]
++        ancestor(_MAINTENANCE_BASE, first_old)
++        ancestor(first_old, _REPIN_BASE)
++        if _lf_sha(_git(root, "show", f"{first_old}:{_MAINTENANCE_ADMISSION}").stdout) != _lf_sha(old_raw):
++            reject("predecessor first blob changed")
++        old_files = old.get("files")
++        if not isinstance(old_files, dict) or len(old_files) != 17:
++            reject("historical payload must contain 17 files")
++        for p, digest in old_files.items():
++            if not _safe_maintenance_path(p) or not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest):
++                reject("historical payload entry invalid")
++            if _lf_sha(_git(root, "show", f"{first_old}:{p}").stdout) != digest:
++                reject("historical payload differs at first commit: " + p)
++        added = _git(root, "log", "--diff-filter=A", "--format=%H", "--reverse", "--", _REPIN_ADMISSION).stdout.decode().split()
++        if added:
++            ancestor(_REPIN_BASE, added[0])
++            ancestor(added[0], head)
++            if _lf_sha(_git(root, "show", f"{added[0]}:{_REPIN_ADMISSION}").stdout) != _lf_sha(raw):
++                reject("successor first blob changed")
++        elif head != _REPIN_BASE or _git(root, "cat-file", "-e", f"HEAD:{_REPIN_ADMISSION}", check=False).returncode == 0:
++            reject("successor bootstrap requires absent history and exact base HEAD")
++        files = admission["files"]
++        if not isinstance(files, dict) or not files or set(files) != set(out_of_scope):
++            reject("successor effective file set differs")
++        # Explicit --files cannot narrow the real active range or hide a worktree deletion.
++        record = obj(read_safe("CVF_SESSION/tranches/" + tid + ".json"))
++        base = record.get("baseCommit")
++        if not isinstance(base, str) or not HEX40.fullmatch(base):
++            reject("active range base invalid")
++        verify_commit(root, base, "active tranche base")
++        ancestor(base, head)
++        actual = set(git_z(root, "diff", "--name-only", "-z", f"{base}..HEAD")) | set(worktree_files(root))
++        actual = {p for p in actual if not path_matches(p, list(seed.get("allowedPaths") or []) + ALWAYS_ALLOWED)}
++        if set(files) != actual:
++            reject("successor differs from actual active range and worktree")
++        lock = obj(read_safe(".cvf/gate-profile.lock.json"))
++        manifest = obj(read_safe(".cvf/manifest.json"))
++        if (lock.get("profileId") != "cvf.downstreamGateProfile@1.2.0" or lock.get("profileVersion") != "1.2.0" or
++                lock.get("gatesDir") != "scripts/cvf_gates" or lock.get("coreCommit") != _REPIN_CORE_TO or
++                manifest.get("cvfCoreCommit") != _REPIN_CORE_TO or not isinstance(lock.get("files"), dict) or
++                set(lock["files"]) != _REPIN_INSTALLED):
++            reject("unsupported profile or manifest/lock target mismatch")
++        staged = set(git_z(root, "diff", "--cached", "--name-only", "-z"))
++        if not added and staged and _REPIN_ADMISSION not in staged:
++            reject("bootstrap successor must be staged with payload")
++        for rel, content in ((_MAINTENANCE_ADMISSION, old_raw), (seed_rel, seed_raw)):
++            if rel in staged and _lf_sha(_git(root, "show", f":{rel}").stdout) != _lf_sha(content):
++                reject("staged historical authority differs: " + rel)
++        if _REPIN_ADMISSION in staged and _lf_sha(_git(root, "show", f":{_REPIN_ADMISSION}").stdout) != _lf_sha(raw):
++            reject("staged successor differs")
++        for p, digest in files.items():
++            installed = p.startswith("scripts/cvf_gates/") and p[len("scripts/cvf_gates/"):] in _REPIN_INSTALLED
++            if not _safe_maintenance_path(p) and p not in _REPIN_EXACT:
++                reject("unsafe or unauthorized payload path: " + str(p))
++            if p.startswith("scripts/cvf_gates/") and not installed:
++                reject("unsupported installed file: " + p)
++            if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest):
++                reject("invalid payload digest")
++            if p in old_files and p not in _REPIN_EXACT and not installed and old_files[p] != digest:
++                reject("nonrepinnable historical digest changed: " + p)
++            if p not in old_files and p not in _REPIN_EXACT and not installed:
++                reject("new payload is outside repin scope: " + p)
++            if _lf_sha(read_safe(p)) != digest or (p in staged and _lf_sha(_git(root, "show", f":{p}").stdout) != digest):
++                reject("worktree or staged payload hash differs: " + p)
++            if not added and _REPIN_ADMISSION in staged and p not in staged:
++                previous = _git(root, "show", f"HEAD:{p}", check=False)
++                if previous.returncode != 0 or _lf_sha(previous.stdout) != digest:
++                    reject("changed bootstrap payload not staged: " + p)
++            if added and _lf_sha(_git(root, "show", f"{added[0]}:{p}").stdout) != digest:
++                reject("successor first commit payload differs: " + p)
++            if installed and lock["files"].get(p[len("scripts/cvf_gates/"):]) != digest:
++                reject("installed payload differs from lock: " + p)
++        for p, digest in old_files.items():
++            if p not in _REPIN_EXACT and not (p.startswith("scripts/cvf_gates/") and p[len("scripts/cvf_gates/"):] in _REPIN_INSTALLED):
++                if _lf_sha(read_safe(p)) != digest or (p in files and files[p] != digest):
++                    reject("nonrepinnable historical payload missing or changed: " + p)
++                if p in staged and _lf_sha(_git(root, "show", f":{p}").stdout) != digest:
++                    reject("staged nonrepinnable historical payload changed: " + p)
++        for name in _REPIN_INSTALLED:
++            if _lf_sha(read_safe("scripts/cvf_gates/" + name)) != lock["files"].get(name):
++                reject("installed file differs from lock: " + name)
++        return list(files)
++    except (GateError, OSError, UnicodeError, ValueError, TypeError, KeyError, AttributeError) as exc:
++        r.fail(f"{tid}: core repin admission invalid ({exc})")
++        return []
++
++
+ def check_maintenance_admission(root, tid, seed, out_of_scope, r):
+     """Admit only exact, hash-bound R139 static maintenance; never alter the seed.
+ 
+@@ -412,6 +568,15 @@ def check_maintenance_admission(root, tid, seed, out_of_scope, r):
+     """
+     if tid != _MAINTENANCE_TRANCHE:
+         return []
++    successor_exists = os.path.lexists(os.path.join(root, *_REPIN_ADMISSION.split("/")))
++    if not successor_exists and have_git(root):
++        try:
++            successor_exists = bool(_git(root, "log", "--diff-filter=A", "--format=%H", "--", _REPIN_ADMISSION).stdout.strip())
++        except GateError:
++            r.fail(f"{tid}: successor history could not be verified")
++            return []
++    if successor_exists:
++        return check_core_repin(root, tid, seed, out_of_scope, r)
+     rel = _MAINTENANCE_ADMISSION
+     path = os.path.join(root, *rel.split("/"))
+     if not os.path.isfile(path):

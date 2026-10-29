@@ -1,0 +1,11 @@
+{
+  "startedUtc": "2026-10-29T11:43:46.294059+00:00",
+  "endedUtc": "2026-10-29T11:43:47.775311+00:00",
+  "exitCode": 1,
+  "sourceSha256": "7c856d14b4e4f5d0e1e73b1cb4d3f84316faa1b045e04865006bf890197dc4ed",
+  "stdoutRawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderrRawSha256": "953b121aef2db5bbb4338632c6545cdfb57c65bc859210c3e904237dba97c9e8",
+  "childEnvironmentChange": "removed GIT_PAGER only",
+  "preflightOnly": true,
+  "officialUpdaterInvocations": 0
+}

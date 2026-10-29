@@ -237,6 +237,12 @@ def _pairs(pairs):
 def required_artifact(relative: str, value: str) -> bool:
     if "/archive/" in relative or not relative.endswith(".md"):
         return False
+    # Exact empty bootstrap indexes are navigation, not milestone grants.
+    # Any added content (even in README.md) still follows normal admission.
+    for family, title in (("roadmaps", "Roadmaps"), ("work_orders", "Work Orders")):
+        placeholder = f"# {title}\n\nStore project-governed {family} artifacts here. Link active artifacts from docs/INDEX.md."
+        if relative == f"docs/{family}/README.md" and value.replace("\r\n", "\n").strip() == placeholder:
+            return False
     if relative.startswith("docs/roadmaps/"):
         return True
     if not relative.startswith("docs/work_orders/"):

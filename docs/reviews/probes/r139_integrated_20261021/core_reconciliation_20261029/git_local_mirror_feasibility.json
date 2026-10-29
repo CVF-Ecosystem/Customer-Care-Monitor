@@ -1,0 +1,221 @@
+{
+  "utc": "2026-10-29T11:20:47.377403+00:00",
+  "gitVersion": "git version 2.55.0.windows.2",
+  "publicArgument": "https://r139-fixture.invalid/pinned.git",
+  "actualTransport": "process-scoped insteadOf to local file URI",
+  "mirrorUri": "file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor-AI/docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/git_local_mirror_fixture/pinned.git",
+  "target": "a0f32e91eddfb591ee63077ad1d5d82e40b59212",
+  "laterCommitNotSelected": "b36f95bd4a2b867384ff944b3720f75d3957a260",
+  "cloneHead": "a0f32e91eddfb591ee63077ad1d5d82e40b59212",
+  "cloneOriginMain": "a0f32e91eddfb591ee63077ad1d5d82e40b59212",
+  "rawOriginAfterEnvCleared": "https://r139-fixture.invalid/pinned.git",
+  "resolvedOriginAfterEnvCleared": "https://r139-fixture.invalid/pinned.git",
+  "targetFileSha256": "4a66212785c2cc76712cf011e7ca48e1dd02af5093edaedf27fb98fa7f49a06a",
+  "fixtureNoRealNetwork": true,
+  "commands": [
+    {
+      "args": [
+        "init",
+        "-q",
+        "-b",
+        "main",
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\git_local_mirror_fixture\\source"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-C",
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\git_local_mirror_fixture\\source",
+        "add",
+        "fixture.txt"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-C",
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\git_local_mirror_fixture\\source",
+        "-c",
+        "user.name=Fixture",
+        "-c",
+        "user.email=fixture@example.invalid",
+        "commit",
+        "-qm",
+        "approved"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-C",
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\git_local_mirror_fixture\\source",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "a0f32e91eddfb591ee63077ad1d5d82e40b59212\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-C",
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\git_local_mirror_fixture\\source",
+        "add",
+        "fixture.txt"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-C",
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\git_local_mirror_fixture\\source",
+        "-c",
+        "user.name=Fixture",
+        "-c",
+        "user.email=fixture@example.invalid",
+        "commit",
+        "-qm",
+        "later"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-C",
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\git_local_mirror_fixture\\source",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "b36f95bd4a2b867384ff944b3720f75d3957a260\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "clone",
+        "-q",
+        "--bare",
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\git_local_mirror_fixture\\source",
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\git_local_mirror_fixture\\pinned.git"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-C",
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\git_local_mirror_fixture\\pinned.git",
+        "update-ref",
+        "refs/heads/main",
+        "a0f32e91eddfb591ee63077ad1d5d82e40b59212"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-C",
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\git_local_mirror_fixture\\pinned.git",
+        "symbolic-ref",
+        "HEAD",
+        "refs/heads/main"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-c",
+        "core.longpaths=true",
+        "clone",
+        "https://r139-fixture.invalid/pinned.git",
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\git_local_mirror_fixture\\clone"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "Cloning into 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\git_local_mirror_fixture\\clone'...\n"
+    },
+    {
+      "args": [
+        "-C",
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\git_local_mirror_fixture\\clone",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "a0f32e91eddfb591ee63077ad1d5d82e40b59212\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-C",
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\git_local_mirror_fixture\\clone",
+        "rev-parse",
+        "origin/main"
+      ],
+      "exit": 0,
+      "stdout": "a0f32e91eddfb591ee63077ad1d5d82e40b59212\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-C",
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\git_local_mirror_fixture\\clone",
+        "config",
+        "--local",
+        "--get",
+        "remote.origin.url"
+      ],
+      "exit": 0,
+      "stdout": "https://r139-fixture.invalid/pinned.git\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-C",
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\git_local_mirror_fixture\\clone",
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "exit": 0,
+      "stdout": "https://r139-fixture.invalid/pinned.git\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-C",
+        "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\git_local_mirror_fixture\\pinned.git",
+        "fsck",
+        "--no-reflogs",
+        "--connectivity-only"
+      ],
+      "exit": 0,
+      "stdout": "dangling commit b36f95bd4a2b867384ff944b3720f75d3957a260\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "--version"
+      ],
+      "exit": 0,
+      "stdout": "git version 2.55.0.windows.2\n",
+      "stderr": ""
+    }
+  ],
+  "pass": false
+}

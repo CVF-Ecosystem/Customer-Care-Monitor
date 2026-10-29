@@ -1,0 +1,12 @@
+{
+  "startUtc": "2026-10-29T15:54:15.7658169Z",
+  "endUtc": "2026-10-29T15:54:17.0937737Z",
+  "exitCode": 1,
+  "caseCount": 5,
+  "cwd": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI",
+  "pythonNoBytecode": true,
+  "stdout": "root_upstream_baseline_stdout.txt",
+  "newCore": "15e39450853184eb65dbde73398c69c3171a6241",
+  "oldCore": "b8ead4f0d1bf9224338a206b2abcd893ec1801b1",
+  "stderr": "root_upstream_baseline_stderr.txt"
+}

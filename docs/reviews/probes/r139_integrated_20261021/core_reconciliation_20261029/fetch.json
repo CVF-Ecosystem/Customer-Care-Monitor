@@ -1,0 +1,10 @@
+{
+  "startedUtc": "2026-10-29T11:02:13.205353+00:00",
+  "attempts": 1,
+  "timeoutSeconds": 90,
+  "exitCode": 0,
+  "stdout": "",
+  "stderr": "From https://github.com/Blackbird081/Controlled-Vibe-Framework-CVF\n * branch            main       -> FETCH_HEAD\n",
+  "status": "RETURNED",
+  "endedUtc": "2026-10-29T11:02:14.376028+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "../.Controlled-Vibe-Framework-CVF/governance/compat",
+    "-p",
+    "test_milestone_coverage*.py",
+    "-v"
+  ],
+  "startUtc": "2026-10-29T15:49:09.136656+00:00",
+  "endUtc": "2026-10-29T15:49:26.617204+00:00",
+  "exitCode": 1,
+  "skipLines": []
+}

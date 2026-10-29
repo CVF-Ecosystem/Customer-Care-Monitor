@@ -1,0 +1,92 @@
+test_candidate_size_and_encoding_and_deep_json (test_milestone_coverage.CoverageTests.test_candidate_size_and_encoding_and_deep_json) ... FAIL
+test_real_read_only_authority_sets (test_milestone_coverage.CoverageTests.test_real_read_only_authority_sets) ... ERROR
+test_genuine_11_explicit_upgrade_retains_project_and_updates_generated_ci (test_milestone_coverage_inheritance.InheritanceTests.test_genuine_11_explicit_upgrade_retains_project_and_updates_generated_ci) ... FAIL
+test_upgrade_preserves_edited_ci_and_reports_required_reconciliation (test_milestone_coverage_inheritance.InheritanceTests.test_upgrade_preserves_edited_ci_and_reports_required_reconciliation) ... FAIL
+test_registry_is_parent_owned_and_links_resolve (test_downstream_gate_profile.IntakeTests.test_registry_is_parent_owned_and_links_resolve) ... ERROR
+
+======================================================================
+ERROR: test_real_read_only_authority_sets (test_milestone_coverage.CoverageTests.test_real_read_only_authority_sets)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\_cvf-core-backups\.Controlled-Vibe-Framework-CVF-20261029-184910\governance\compat\test_milestone_coverage.py", line 148, in test_real_read_only_authority_sets
+    value = cov.section((REPO / path).read_text(encoding="utf-8"), heading)
+                        ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tiennm\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tiennm\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tiennm\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\.Controlled-Vibe-Framework-CVF-20261029-184910\\docs\\roadmaps\\CVF_NCR_HTML_PILOT_DELIVERY_AND_ACCEPTANCE_PLAN_2026-10-21.md'
+
+======================================================================
+ERROR: test_registry_is_parent_owned_and_links_resolve (test_downstream_gate_profile.IntakeTests.test_registry_is_parent_owned_and_links_resolve)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\_cvf-core-backups\.Controlled-Vibe-Framework-CVF-20261029-184910\governance\compat\test_downstream_gate_profile.py", line 488, in test_registry_is_parent_owned_and_links_resolve
+    entry = json.loads((DOCS / "downstream_finding_intake_registry.json").read_text(encoding="utf-8"))["entries"][0]
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tiennm\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tiennm\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tiennm\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\.Controlled-Vibe-Framework-CVF-20261029-184910\\docs\\reference\\downstream_gate_profile\\downstream_finding_intake_registry.json'
+
+======================================================================
+FAIL: test_candidate_size_and_encoding_and_deep_json (test_milestone_coverage.CoverageTests.test_candidate_size_and_encoding_and_deep_json)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\_cvf-core-backups\.Controlled-Vibe-Framework-CVF-20261029-184910\governance\compat\test_milestone_coverage.py", line 204, in test_candidate_size_and_encoding_and_deep_json
+    self.assertEqual(cov.validate_text(self.root, p, value), ["COV_INVALID_JSON"])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['COV_OBJECT_SHAPE'] != ['COV_INVALID_JSON']
+
+First differing element 0:
+'COV_OBJECT_SHAPE'
+'COV_INVALID_JSON'
+
+- ['COV_OBJECT_SHAPE']
++ ['COV_INVALID_JSON']
+
+======================================================================
+FAIL: test_genuine_11_explicit_upgrade_retains_project_and_updates_generated_ci (test_milestone_coverage_inheritance.InheritanceTests.test_genuine_11_explicit_upgrade_retains_project_and_updates_generated_ci)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\_cvf-core-backups\.Controlled-Vibe-Framework-CVF-20261029-184910\governance\compat\test_milestone_coverage_inheritance.py", line 145, in test_genuine_11_explicit_upgrade_retains_project_and_updates_generated_ci
+    self.old_install()
+    ~~~~~~~~~~~~~~~~^^
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\_cvf-core-backups\.Controlled-Vibe-Framework-CVF-20261029-184910\governance\compat\test_milestone_coverage_inheritance.py", line 134, in old_install
+    materialize(prefix + "cvf_downstream_gate_profile.json")
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\_cvf-core-backups\.Controlled-Vibe-Framework-CVF-20261029-184910\governance\compat\test_milestone_coverage_inheritance.py", line 129, in materialize
+    self.assertEqual(result.returncode, 0, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 128 != 0 : b"fatal: path 'scripts/lib/downstream_governance/cvf_downstream_gate_profile.json' exists on disk, but not in '50b6f8d94a26d8b1014bb00f31d3493616ce9fdd'\n"
+
+======================================================================
+FAIL: test_upgrade_preserves_edited_ci_and_reports_required_reconciliation (test_milestone_coverage_inheritance.InheritanceTests.test_upgrade_preserves_edited_ci_and_reports_required_reconciliation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\_cvf-core-backups\.Controlled-Vibe-Framework-CVF-20261029-184910\governance\compat\test_milestone_coverage_inheritance.py", line 170, in test_upgrade_preserves_edited_ci_and_reports_required_reconciliation
+    self.old_install()
+    ~~~~~~~~~~~~~~~~^^
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\_cvf-core-backups\.Controlled-Vibe-Framework-CVF-20261029-184910\governance\compat\test_milestone_coverage_inheritance.py", line 134, in old_install
+    materialize(prefix + "cvf_downstream_gate_profile.json")
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\_cvf-core-backups\.Controlled-Vibe-Framework-CVF-20261029-184910\governance\compat\test_milestone_coverage_inheritance.py", line 129, in materialize
+    self.assertEqual(result.returncode, 0, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 128 != 0 : b"fatal: path 'scripts/lib/downstream_governance/cvf_downstream_gate_profile.json' exists on disk, but not in '50b6f8d94a26d8b1014bb00f31d3493616ce9fdd'\n"
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.231s
+
+FAILED (failures=3, errors=2)

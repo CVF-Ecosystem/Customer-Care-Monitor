@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "../.Controlled-Vibe-Framework-CVF/scripts/lib/downstream_governance/cvf_downstream_gate_runner.py",
+    "install",
+    "--project-root",
+    ".",
+    "--core-root",
+    "../.Controlled-Vibe-Framework-CVF",
+    "--core-commit",
+    "15e39450853184eb65dbde73398c69c3171a6241",
+    "--upgrade"
+  ],
+  "startUtc": "2026-10-29T15:49:26.738508+00:00",
+  "endUtc": "2026-10-29T15:49:27.895944+00:00",
+  "exitCode": 0
+}

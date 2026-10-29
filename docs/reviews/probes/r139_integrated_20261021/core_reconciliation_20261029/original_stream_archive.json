@@ -1,0 +1,22 @@
+{
+  "status": "ORIGINAL_BIN_EXTENSION_STREAMS_PRESERVED",
+  "rows": [
+    {
+      "sourceObservedPath": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\preflight_repair_stdout.bin",
+      "archivedPath": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-fixture-sources-20261029\\original_streams\\preflight_repair_stdout.bin",
+      "derivedTextPath": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\preflight_repair_stdout.transcript.txt",
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "textIsByteIdentical": true
+    },
+    {
+      "sourceObservedPath": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\preflight_repair_stderr.bin",
+      "archivedPath": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-fixture-sources-20261029\\original_streams\\preflight_repair_stderr.bin",
+      "derivedTextPath": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\preflight_repair_stderr.transcript.txt",
+      "rawSha256": "953b121aef2db5bbb4338632c6545cdfb57c65bc859210c3e904237dba97c9e8",
+      "bytes": 712,
+      "textIsByteIdentical": true
+    }
+  ],
+  "note": "Original .bin-named text streams retained outside repository, exact UTF-8 text copies are repository evidence; original receipts retain observed historical filenames."
+}

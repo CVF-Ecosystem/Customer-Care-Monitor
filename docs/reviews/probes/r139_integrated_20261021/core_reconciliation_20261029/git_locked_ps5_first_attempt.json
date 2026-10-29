@@ -1,0 +1,9 @@
+{
+  "status": "INTERRUPTED_OWNED_FIXTURE",
+  "processId": 22444,
+  "exit": 1,
+  "finding": "PowerShell Git function recursively resolved & git to itself; no native git child was observed. The exact owned fixture process was stopped. Wrapper helper corrected to resolve git.exe as an Application.",
+  "updaterInvocations": 0,
+  "realMirrorCreations": 0,
+  "localFixtureCloneObserved": false
+}

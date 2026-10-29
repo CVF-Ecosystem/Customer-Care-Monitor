@@ -1,0 +1,11 @@
+{
+  "status": "STATIC_BOOTSTRAP_CHECK_PASS",
+  "effectiveFiles": 18,
+  "oldAuthorityWorkingTreeLfMatchesHEAD": true,
+  "oldAuthorityCurrentRawSha256": {
+    "CVF_SESSION/authority/CCMAI-RUNTIME-139.json": "e964eb62a27b3bc7cf1b188640969baeffe4fa80f7627a8b627e08b239ec7aa0",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-139-COMMIT-MAINTENANCE-ADMISSION.json": "e79b24d3b3d10636983c6a2c659de2df7be12ed02772ae9633c08814af4f428d"
+  },
+  "note": "Existing Git checkout line endings differ from raw blobs; no original authority file edited. Native contract normalizes CRLF to LF.",
+  "notUpstreamedPatchSha256": "e78b6a9ac16e09b0c554cf8865cdbee1247bc70976b1712c5669c7f70e1a32a2"
+}

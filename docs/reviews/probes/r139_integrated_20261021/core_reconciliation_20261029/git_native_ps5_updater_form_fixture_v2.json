@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-29T11:34:14.682272+00:00",
+  "exit": 1,
+  "supervisorStdout": "{\"pid\":22332,\"exitCode\":null,\"waitReturned\":true}\n",
+  "supervisorStderr": "",
+  "childStdout": "",
+  "childStderr": "Cloning into 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\git_local_mirror_fixture\\clone_native_child_v2'...\n",
+  "realUpdaterInvocations": 0,
+  "realNetwork": false,
+  "pass": false
+}

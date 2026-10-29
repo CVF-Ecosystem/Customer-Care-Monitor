@@ -1,16 +1,29 @@
 {
   "x-coreReconciliation20261029": {
-    "status": "INDEPENDENT_ADMISSION_PASS_PREPARATION_CHECKS_PENDING",
+    "status": "PROJECT_REPIN_REVIEWED_PUBLIC_SUITE_FINDINGS_OPEN",
     "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-RECONCILIATION-SCOPE-ADMISSION.json",
     "review": "docs/reviews/R139_CORE_RECONCILIATION_ROOT_REVIEW_2026-10-29.md",
     "priorCore": "b8ead4f0d1bf9224338a206b2abcd893ec1801b1",
     "cachedTarget": "15e39450853184eb65dbde73398c69c3171a6241",
     "providerCalls": 0,
     "browserCalls": 0,
-    "productRuntimeAdmission": false
+    "productRuntimeAdmission": false,
+    "currentCore": "15e39450853184eb65dbde73398c69c3171a6241",
+    "actualUpdaterUsed": 1,
+    "publicFetchUsed": 1,
+    "nativeUpgradeUsed": 1,
+    "doctor": "PASS28/28",
+    "localGateTests": "113PASS_NO_SKIPS",
+    "publicTests": {
+      "pass": 63,
+      "fail": 3,
+      "error": 2,
+      "sameFiveReproducedOnOldCore": true
+    },
+    "closure": "OPEN_PUBLIC_FINDINGS_AND_R139_PRODUCT_HOLD"
   },
   "x-ownedStdioCapability20261029": {
-    "status": "CORE_FRESHNESS_HOLD_SOURCE_CANDIDATE_REJECTED",
+    "status": "CORE_READY_SDK_CANDIDATE_REJECTED_RUNTIME_HELD",
     "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-OFFICIAL-CLI-ADMISSION.json",
     "correctiveReturn": "docs/reviews/R139_ANTIGRAVITY_SUPPORTED_SETUP_RETURN_2026-10-29.md",
     "sdkConnectUsed": 0,

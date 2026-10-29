@@ -1,0 +1,26 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "scripts/tests",
+    "-p",
+    "test_cvf_downstream_gate*.py",
+    "-v"
+  ],
+  "startedUtc": "2026-10-29T11:30:42.518527+00:00",
+  "endedUtc": "2026-10-29T11:34:42.762553+00:00",
+  "exitCode": 0,
+  "candidateRawSha256": {
+    "scripts/cvf_downstream_gate.py": "0c677a0816ec3a8b87ab711771d0f3cd3352dbe39ddbb59369a3948545c53583",
+    "scripts/tests/test_cvf_downstream_gate_core_repin.py": "2ce778fb8f305cf9698cdb85fc83250c055ae3bc063cad9099e67c673c244330"
+  },
+  "sameCandidateAfter": true,
+  "skipLines": [],
+  "skipDetectionNote": "Initial keyword match included a test named not_skipped whose status was ok; actual skipped test status lines only are listed.",
+  "testsRun": 113,
+  "seconds": 238.937
+}

@@ -1,0 +1,15 @@
+{
+  "command": [
+    "powershell",
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "../.Controlled-Vibe-Framework-CVF/scripts/check_cvf_workspace_agent_enforcement.ps1",
+    "-ProjectPath",
+    "."
+  ],
+  "startUtc": "2026-10-29T15:49:39.761861+00:00",
+  "endUtc": "2026-10-29T15:50:26.857703+00:00",
+  "exitCode": 0
+}

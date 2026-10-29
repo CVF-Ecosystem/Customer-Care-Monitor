@@ -1,0 +1,203 @@
+{
+  "reviewer": "Root independent of updater executor",
+  "status": "CORE_RESULT_ACCEPTED_FOR_PROJECT_ADOPTION",
+  "coreTarget": "15e39450853184eb65dbde73398c69c3171a6241",
+  "coreOriginRaw": "https://github.com/Blackbird081/Controlled-Vibe-Framework-CVF.git",
+  "originalCoreBackup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\.Controlled-Vibe-Framework-CVF-20261029-184910",
+  "oldCoreClean": true,
+  "newCoreClean": true,
+  "manifestEntries": [
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Bao_gia_dich_vu_container_pkd_edit\\.cvf\\manifest.json",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Bao_gia_phu_thu_Dau DO\\.cvf\\manifest.json",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Controlled-Vibe-Framework-CVF-P3\\.cvf\\manifest.json",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Controlled-Vibe-Framework-CVF-P3-CP2\\.cvf\\manifest.json",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\manifest.json",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\CVF-Operations-Workspace\\.cvf\\manifest.json",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Dang_ky_dich_vu_container\\.cvf\\manifest.json",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Khai-bao-Cang-vu 07.2026\\.cvf\\manifest.json",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Mini_Game\\.cvf\\manifest.json",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\QD209\\.cvf\\manifest.json",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\shift-operations-workspace\\.cvf\\manifest.json",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\shift-operations-workspace-recovery-20260926\\.cvf\\manifest.json",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\tdr_processor-container-2026\\.cvf\\manifest.json",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Trading-Tools\\.cvf\\manifest.json",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\XD_App\\.cvf\\manifest.json",
+      "unchanged": true
+    }
+  ],
+  "sharedFiles": [
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\New-CVF-Governed-Project.ps1",
+      "beforeState": "PRESENT",
+      "afterPresent": true,
+      "beforeSha256": "c650d21f8491000f9d2d0dcc29afa6220eaf14d5c0ff90be5ac3dcdf2c5c89d1",
+      "afterSha256": "c650d21f8491000f9d2d0dcc29afa6220eaf14d5c0ff90be5ac3dcdf2c5c89d1"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Run-CVF-NewProject-Enforcement.ps1",
+      "beforeState": "PRESENT",
+      "afterPresent": true,
+      "beforeSha256": "95632be706ef17ce3d93bd24efd071a129a5472431e638a062666e9117470f1f",
+      "afterSha256": "95632be706ef17ce3d93bd24efd071a129a5472431e638a062666e9117470f1f"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Update-CVF-Workspace.ps1",
+      "beforeState": "PRESENT",
+      "afterPresent": true,
+      "beforeSha256": "ceb8b9ff50f31bcb8a19db28b15e01a58f18de1bcc522ebf52bfb339cb6a4d77",
+      "afterSha256": "ceb8b9ff50f31bcb8a19db28b15e01a58f18de1bcc522ebf52bfb339cb6a4d77"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Update-CVF-Workspace-Public-Profile.ps1",
+      "beforeState": "PRESENT",
+      "afterPresent": true,
+      "beforeSha256": "8ae9de4a7fcf94bc8df6b3ab72d8b747db079df06d5a980e2f9c62d9ea5d7cee",
+      "afterSha256": "8ae9de4a7fcf94bc8df6b3ab72d8b747db079df06d5a980e2f9c62d9ea5d7cee"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Test-CVF-Workspace.ps1",
+      "beforeState": "PRESENT",
+      "afterPresent": true,
+      "beforeSha256": "6d40d701d597a9d4d64dacf3e59b0c9855aafe0f84a486635d7400827a6c6c41",
+      "afterSha256": "6d40d701d597a9d4d64dacf3e59b0c9855aafe0f84a486635d7400827a6c6c41"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Repair-CVF-Workspace.ps1",
+      "beforeState": "PRESENT",
+      "afterPresent": true,
+      "beforeSha256": "eecc44650f59e2923ae69f0e08af0fc3a6fcc13853cccda051157a85129cf39b",
+      "afterSha256": "eecc44650f59e2923ae69f0e08af0fc3a6fcc13853cccda051157a85129cf39b"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Manage-CVF-Workspace.ps1",
+      "beforeState": "PRESENT",
+      "afterPresent": true,
+      "beforeSha256": "8eb098c6c6a8422e52f7beed9b32d1954b968db74e931fa79610b6e0ff2dd11c",
+      "afterSha256": "8eb098c6c6a8422e52f7beed9b32d1954b968db74e931fa79610b6e0ff2dd11c"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\.agents\\workflows\\cvf-onboard.md",
+      "beforeState": "PRESENT",
+      "afterPresent": true,
+      "beforeSha256": "d6a88de28c6585623fe8f74ae2db84849e743f984f17559914108f9da7192e80",
+      "afterSha256": "d6a88de28c6585623fe8f74ae2db84849e743f984f17559914108f9da7192e80"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\.agents\\workflows\\pre-commit-check.md",
+      "beforeState": "PRESENT",
+      "afterPresent": true,
+      "beforeSha256": "2a749cac1286ff57601807b0176d52dc08a9b292894255e76a3fcbf4d2558039",
+      "afterSha256": "2a749cac1286ff57601807b0176d52dc08a9b292894255e76a3fcbf4d2558039"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\WORKSPACE_RULES.md",
+      "beforeState": "PRESENT",
+      "afterPresent": true,
+      "beforeSha256": "996199450066797a9e0c1b10317c5b4503246404c3823ae06f7fe2c7f373d87c",
+      "afterSha256": "996199450066797a9e0c1b10317c5b4503246404c3823ae06f7fe2c7f373d87c"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\WORKSPACE_PROJECT_ENFORCEMENT_BASELINE.json",
+      "beforeState": "PRESENT",
+      "afterPresent": true,
+      "beforeSha256": "a4ac3cb61e18b136d9cb6a39dd298774d56aeb37fbab3e6864c52fa0936f29fb",
+      "afterSha256": "a4ac3cb61e18b136d9cb6a39dd298774d56aeb37fbab3e6864c52fa0936f29fb"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\CVF_WORKSPACE_USER_GUIDE.md",
+      "beforeState": "PRESENT",
+      "afterPresent": true,
+      "beforeSha256": "022feace321ebd4f0075d4eccd1e6a2485f2967c73b9e29275a2e1b19346f9f1",
+      "afterSha256": "022feace321ebd4f0075d4eccd1e6a2485f2967c73b9e29275a2e1b19346f9f1"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\CVF_WORKSPACE_HUONG_DAN_SU_DUNG.md",
+      "beforeState": "PRESENT",
+      "afterPresent": true,
+      "beforeSha256": "375f3f1fd406e41a5e37edb485e3cbbbda92ecb18d2374f34f4422f8aaa5dbf4",
+      "afterSha256": "375f3f1fd406e41a5e37edb485e3cbbbda92ecb18d2374f34f4422f8aaa5dbf4"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\CVF_WORKSPACE_CLASSIFICATION_GUIDE.md",
+      "beforeState": "PRESENT",
+      "afterPresent": true,
+      "beforeSha256": "be1ffc5008684f8915c93305021866c790e750b716ea14084b20a350791ad360",
+      "afterSha256": "be1ffc5008684f8915c93305021866c790e750b716ea14084b20a350791ad360"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Get-CVF-Workspace-OverlayProfiles.ps1",
+      "beforeState": "ABSENT",
+      "afterPresent": false,
+      "beforeSha256": null,
+      "afterSha256": null
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Update-CVF-Workspace-Overlay.ps1",
+      "beforeState": "ABSENT",
+      "afterPresent": false,
+      "beforeSha256": null,
+      "afterSha256": null
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\CVF_WORKSPACE_OVERLAY_STATUS.json",
+      "beforeState": "ABSENT",
+      "afterPresent": false,
+      "beforeSha256": null,
+      "afterSha256": null
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\CVF_RULE_PACKS\\ACTIVE_RULE_PACK.json",
+      "beforeState": "PRESENT",
+      "afterPresent": true,
+      "beforeSha256": "165cc2e30779fe863d4aad60081bf9f8e8684aadc6f72d89d5ebfac8b48e4e39",
+      "afterSha256": "165cc2e30779fe863d4aad60081bf9f8e8684aadc6f72d89d5ebfac8b48e4e39"
+    }
+  ],
+  "transport": "LOCAL_MIRROR_FROM_PREVIOUS_PUBLIC_FETCH",
+  "processClosure": "KNOWN_IDENTITIES_ABSENT_SAMPLED_NOT_EXHAUSTIVE",
+  "providerBrowserProductCalls": 0,
+  "rollback": "NOT_RUN_NOT_TESTED"
+}

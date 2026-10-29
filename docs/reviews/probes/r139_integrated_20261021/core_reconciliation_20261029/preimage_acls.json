@@ -1,0 +1,162 @@
+[
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\New-CVF-Governed-Project.ps1",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Run-CVF-NewProject-Enforcement.ps1",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Update-CVF-Workspace.ps1",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Update-CVF-Workspace-Public-Profile.ps1",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Test-CVF-Workspace.ps1",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Repair-CVF-Workspace.ps1",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Manage-CVF-Workspace.ps1",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\.agents\\workflows\\cvf-onboard.md",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\.agents\\workflows\\pre-commit-check.md",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\WORKSPACE_RULES.md",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\WORKSPACE_PROJECT_ENFORCEMENT_BASELINE.json",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\CVF_WORKSPACE_USER_GUIDE.md",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\CVF_WORKSPACE_HUONG_DAN_SU_DUNG.md",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\CVF_WORKSPACE_CLASSIFICATION_GUIDE.md",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\CVF_RULE_PACKS\\ACTIVE_RULE_PACK.json",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\manifest.json",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\gate-profile.lock.json",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\local-binding.json",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\AGENTS.md",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.github\\workflows\\cvf-downstream-gates.yml",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_downstream_gate.py",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\learnings\\README.md",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\learnings\\LEARNING_RECORD_TEMPLATE.md",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\check_gate_to_role_closeability.py",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\cvf_dg_applicability.py",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\cvf_dg_common.py",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\cvf_dg_continuity.py",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\cvf_dg_coverage.py",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\cvf_dg_install.py",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\cvf_dg_intake.py",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\cvf_dg_review.py",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\cvf_dg_routing.py",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\cvf_downstream_gate_profile.json",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\cvf_downstream_gate_runner.py",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\cvf_milestone_coverage.py",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\git-pre-commit.template",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\project_learning_home.template.md",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\project_learning_record.template.md",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\.Controlled-Vibe-Framework-CVF\\scripts\\update_cvf_workspace_public_core.ps1",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  },
+  {
+    "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\.Controlled-Vibe-Framework-CVF\\scripts\\install_cvf_workspace_root_wrappers.ps1",
+    "sddl": "O:S-1-5-21-4199127805-1820762885-1302134867-1002G:S-1-5-21-4199127805-1820762885-1302134867-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+  }
+]

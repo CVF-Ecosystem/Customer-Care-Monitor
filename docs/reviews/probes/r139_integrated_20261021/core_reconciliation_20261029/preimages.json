@@ -1,0 +1,412 @@
+{
+  "status": "BACKUPS_VERIFIED",
+  "createdUtc": "2026-10-29T11:01:56.747951+00:00",
+  "backupRoot": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z",
+  "coreOriginal": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\.Controlled-Vibe-Framework-CVF",
+  "workspace": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace",
+  "preimages": [
+    {
+      "kind": "shared",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\New-CVF-Governed-Project.ps1",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\shared\\New-CVF-Governed-Project.ps1",
+      "state": "PRESENT",
+      "sha256": "c650d21f8491000f9d2d0dcc29afa6220eaf14d5c0ff90be5ac3dcdf2c5c89d1",
+      "size": 2276
+    },
+    {
+      "kind": "shared",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Run-CVF-NewProject-Enforcement.ps1",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\shared\\Run-CVF-NewProject-Enforcement.ps1",
+      "state": "PRESENT",
+      "sha256": "95632be706ef17ce3d93bd24efd071a129a5472431e638a062666e9117470f1f",
+      "size": 926
+    },
+    {
+      "kind": "shared",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Update-CVF-Workspace.ps1",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\shared\\Update-CVF-Workspace.ps1",
+      "state": "PRESENT",
+      "sha256": "ceb8b9ff50f31bcb8a19db28b15e01a58f18de1bcc522ebf52bfb339cb6a4d77",
+      "size": 2821
+    },
+    {
+      "kind": "shared",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Update-CVF-Workspace-Public-Profile.ps1",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\shared\\Update-CVF-Workspace-Public-Profile.ps1",
+      "state": "PRESENT",
+      "sha256": "8ae9de4a7fcf94bc8df6b3ab72d8b747db079df06d5a980e2f9c62d9ea5d7cee",
+      "size": 622
+    },
+    {
+      "kind": "shared",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Test-CVF-Workspace.ps1",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\shared\\Test-CVF-Workspace.ps1",
+      "state": "PRESENT",
+      "sha256": "6d40d701d597a9d4d64dacf3e59b0c9855aafe0f84a486635d7400827a6c6c41",
+      "size": 619
+    },
+    {
+      "kind": "shared",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Repair-CVF-Workspace.ps1",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\shared\\Repair-CVF-Workspace.ps1",
+      "state": "PRESENT",
+      "sha256": "eecc44650f59e2923ae69f0e08af0fc3a6fcc13853cccda051157a85129cf39b",
+      "size": 532
+    },
+    {
+      "kind": "shared",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Manage-CVF-Workspace.ps1",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\shared\\Manage-CVF-Workspace.ps1",
+      "state": "PRESENT",
+      "sha256": "8eb098c6c6a8422e52f7beed9b32d1954b968db74e931fa79610b6e0ff2dd11c",
+      "size": 784
+    },
+    {
+      "kind": "shared",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\.agents\\workflows\\cvf-onboard.md",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\shared\\.agents\\workflows\\cvf-onboard.md",
+      "state": "PRESENT",
+      "sha256": "d6a88de28c6585623fe8f74ae2db84849e743f984f17559914108f9da7192e80",
+      "size": 4382
+    },
+    {
+      "kind": "shared",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\.agents\\workflows\\pre-commit-check.md",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\shared\\.agents\\workflows\\pre-commit-check.md",
+      "state": "PRESENT",
+      "sha256": "2a749cac1286ff57601807b0176d52dc08a9b292894255e76a3fcbf4d2558039",
+      "size": 2853
+    },
+    {
+      "kind": "shared",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\WORKSPACE_RULES.md",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\shared\\WORKSPACE_RULES.md",
+      "state": "PRESENT",
+      "sha256": "996199450066797a9e0c1b10317c5b4503246404c3823ae06f7fe2c7f373d87c",
+      "size": 2821
+    },
+    {
+      "kind": "shared",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\WORKSPACE_PROJECT_ENFORCEMENT_BASELINE.json",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\shared\\WORKSPACE_PROJECT_ENFORCEMENT_BASELINE.json",
+      "state": "PRESENT",
+      "sha256": "a4ac3cb61e18b136d9cb6a39dd298774d56aeb37fbab3e6864c52fa0936f29fb",
+      "size": 145
+    },
+    {
+      "kind": "shared",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\CVF_WORKSPACE_USER_GUIDE.md",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\shared\\CVF_WORKSPACE_USER_GUIDE.md",
+      "state": "PRESENT",
+      "sha256": "022feace321ebd4f0075d4eccd1e6a2485f2967c73b9e29275a2e1b19346f9f1",
+      "size": 5408
+    },
+    {
+      "kind": "shared",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\CVF_WORKSPACE_HUONG_DAN_SU_DUNG.md",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\shared\\CVF_WORKSPACE_HUONG_DAN_SU_DUNG.md",
+      "state": "PRESENT",
+      "sha256": "375f3f1fd406e41a5e37edb485e3cbbbda92ecb18d2374f34f4422f8aaa5dbf4",
+      "size": 6154
+    },
+    {
+      "kind": "shared",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\CVF_WORKSPACE_CLASSIFICATION_GUIDE.md",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\shared\\CVF_WORKSPACE_CLASSIFICATION_GUIDE.md",
+      "state": "PRESENT",
+      "sha256": "be1ffc5008684f8915c93305021866c790e750b716ea14084b20a350791ad360",
+      "size": 12903
+    },
+    {
+      "kind": "shared",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Get-CVF-Workspace-OverlayProfiles.ps1",
+      "state": "ABSENT"
+    },
+    {
+      "kind": "shared",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Update-CVF-Workspace-Overlay.ps1",
+      "state": "ABSENT"
+    },
+    {
+      "kind": "shared",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\CVF_WORKSPACE_OVERLAY_STATUS.json",
+      "state": "ABSENT"
+    },
+    {
+      "kind": "shared",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\CVF_RULE_PACKS\\ACTIVE_RULE_PACK.json",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\shared\\CVF_RULE_PACKS\\ACTIVE_RULE_PACK.json",
+      "state": "PRESENT",
+      "sha256": "165cc2e30779fe863d4aad60081bf9f8e8684aadc6f72d89d5ebfac8b48e4e39",
+      "size": 588
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\manifest.json",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\project\\.cvf\\manifest.json",
+      "state": "PRESENT",
+      "sha256": "dd6f64b5d01cdf5fd69bb7898fd285f42874411ba083afaa76be8511711500e5",
+      "size": 1716
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\gate-profile.lock.json",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\project\\.cvf\\gate-profile.lock.json",
+      "state": "PRESENT",
+      "sha256": "c7b1dbbd3a8d5f967d8eaa88a897d2d7149f7a1be0e5003f44340602c1b4c851",
+      "size": 2283
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\local-binding.json",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\project\\.cvf\\local-binding.json",
+      "state": "PRESENT",
+      "sha256": "994f041aad1570cb9c11c0e7394ba0d9843c46cfbd64322bcc0709553d9edcf7",
+      "size": 444
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\AGENTS.md",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\project\\AGENTS.md",
+      "state": "PRESENT",
+      "sha256": "2e3479c7cbca151a2e07d0d8e9a63679915c63cee79edc276dc2881c8dc3d4f5",
+      "size": 19090
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.github\\workflows\\cvf-downstream-gates.yml",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\project\\.github\\workflows\\cvf-downstream-gates.yml",
+      "state": "PRESENT",
+      "sha256": "bad09e6e0562c0cc3d5aec87cb114289d74ec85c94edf7d07109ccd9cf681774",
+      "size": 1477
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_downstream_gate.py",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\project\\scripts\\cvf_downstream_gate.py",
+      "state": "PRESENT",
+      "sha256": "7e3b0dbab0df7dc904b48456b07fdbd4ba8ef4600daf13df7e05f77178594951",
+      "size": 55774
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\tests\\test_cvf_downstream_gate_core_repin.py",
+      "state": "ABSENT"
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\learnings\\README.md",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\project\\docs\\reviews\\learnings\\README.md",
+      "state": "PRESENT",
+      "sha256": "1a5db44abc2bb0749ac1554ffd2b2c8549ec5e3bf5f6f072f2e2f8d5ec054d1a",
+      "size": 6099
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\learnings\\LEARNING_RECORD_TEMPLATE.md",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\project\\docs\\reviews\\learnings\\LEARNING_RECORD_TEMPLATE.md",
+      "state": "PRESENT",
+      "sha256": "a2d287ff5e54df721dc9bc7e1d7be84ba14f0319be87bce4ea7250fc188aadbb",
+      "size": 2101
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\check_gate_to_role_closeability.py",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\project\\scripts\\cvf_gates\\check_gate_to_role_closeability.py",
+      "state": "PRESENT",
+      "sha256": "8f00c6421eebe3c1b237e5307ac6e2b0b0343c9a35cf635bbab17aa886e00e8e",
+      "size": 22072
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\cvf_dg_applicability.py",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\project\\scripts\\cvf_gates\\cvf_dg_applicability.py",
+      "state": "PRESENT",
+      "sha256": "bffde44fe38494b0dea9e658fb82eaaec31f3bd25c9964445fa837dd29b01c67",
+      "size": 3271
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\cvf_dg_common.py",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\project\\scripts\\cvf_gates\\cvf_dg_common.py",
+      "state": "PRESENT",
+      "sha256": "2225b925d26a66238e6f2697873b82974cca9216491bc1eabab80ea8e836dba8",
+      "size": 11973
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\cvf_dg_continuity.py",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\project\\scripts\\cvf_gates\\cvf_dg_continuity.py",
+      "state": "PRESENT",
+      "sha256": "8ca92bd3c172638728e98f04ed652c32639280d236af5912ae479bb7c38fe571",
+      "size": 12567
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\cvf_dg_coverage.py",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\project\\scripts\\cvf_gates\\cvf_dg_coverage.py",
+      "state": "PRESENT",
+      "sha256": "d768e60435268da2c8609a928972d1912d369a67d4056924c515d552a4245467",
+      "size": 6710
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\cvf_dg_install.py",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\project\\scripts\\cvf_gates\\cvf_dg_install.py",
+      "state": "PRESENT",
+      "sha256": "4e96952ef312487e5999b0b0d4db85c2eda158e2ac1cbb336beeba6876ddc316",
+      "size": 15798
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\cvf_dg_intake.py",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\project\\scripts\\cvf_gates\\cvf_dg_intake.py",
+      "state": "PRESENT",
+      "sha256": "204aacddb1d1b64439508bcfa73c8632842b0bc1f26dcdf3422d1404e1594efc",
+      "size": 8835
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\cvf_dg_review.py",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\project\\scripts\\cvf_gates\\cvf_dg_review.py",
+      "state": "PRESENT",
+      "sha256": "2558b7635646340a73cb124121802f2f6f123ef96e240146def3e874a002034d",
+      "size": 7332
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\cvf_dg_routing.py",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\project\\scripts\\cvf_gates\\cvf_dg_routing.py",
+      "state": "PRESENT",
+      "sha256": "a39419336ea31ec155c285291f3d5684046e8b18d88dbf47c422b3c2c59632cf",
+      "size": 4508
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\cvf_downstream_gate_profile.json",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\project\\scripts\\cvf_gates\\cvf_downstream_gate_profile.json",
+      "state": "PRESENT",
+      "sha256": "faaf9273ada3fd826e6372898d134fe7ad0157528f25b7720211c31cfc209bd5",
+      "size": 9910
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\cvf_downstream_gate_runner.py",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\project\\scripts\\cvf_gates\\cvf_downstream_gate_runner.py",
+      "state": "PRESENT",
+      "sha256": "716544aa7a38251009867a4e0150be51b79b4304a8c5f6d7afddab4e7c5d9c07",
+      "size": 16671
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\cvf_milestone_coverage.py",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\project\\scripts\\cvf_gates\\cvf_milestone_coverage.py",
+      "state": "PRESENT",
+      "sha256": "5ff2e3e0b85743d30a081a9909e015574a2578e3ce7afd7a0507b05960e5a0ef",
+      "size": 13459
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\git-pre-commit.template",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\project\\scripts\\cvf_gates\\git-pre-commit.template",
+      "state": "PRESENT",
+      "sha256": "547c077163eb64259362a669d1fa6cca7cc4fe06090af3c9286f09557bcf937b",
+      "size": 398
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\project_learning_home.template.md",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\project\\scripts\\cvf_gates\\project_learning_home.template.md",
+      "state": "PRESENT",
+      "sha256": "b2982c018baedca7f076526221ad6d5d0854dab2f029390d2c7f079ded05930f",
+      "size": 3545
+    },
+    {
+      "kind": "project",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\scripts\\cvf_gates\\project_learning_record.template.md",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\project\\scripts\\cvf_gates\\project_learning_record.template.md",
+      "state": "PRESENT",
+      "sha256": "559d2d50c86fbfc72967d6af5b19df23c5001c48ddaca0a2b423fc574e7250d6",
+      "size": 2055
+    },
+    {
+      "kind": "core",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\.Controlled-Vibe-Framework-CVF\\scripts\\update_cvf_workspace_public_core.ps1",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\core\\scripts\\update_cvf_workspace_public_core.ps1",
+      "state": "PRESENT",
+      "sha256": "00069e5ac0e20694fc0540668e4973d7e4c5310a09140d9df6782ff215ea5ae3",
+      "size": 13803
+    },
+    {
+      "kind": "core",
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\.Controlled-Vibe-Framework-CVF\\scripts\\install_cvf_workspace_root_wrappers.ps1",
+      "backup": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\r139-preimage-20261029T110155487556Z\\core\\scripts\\install_cvf_workspace_root_wrappers.ps1",
+      "state": "PRESENT",
+      "sha256": "40fd7250c1e1f0e411c3d00918415a823f0e857fb8460305150acfae04b4940c",
+      "size": 32814
+    }
+  ],
+  "siblingManifestHashes": [
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Bao_gia_dich_vu_container_pkd_edit\\.cvf\\manifest.json",
+      "sha256": "f78a0398534196168999f17020fe5022dd6b1040312502d6f7112153152efcf3"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Bao_gia_phu_thu_Dau DO\\.cvf\\manifest.json",
+      "sha256": "f78a0398534196168999f17020fe5022dd6b1040312502d6f7112153152efcf3"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Controlled-Vibe-Framework-CVF-P3\\.cvf\\manifest.json",
+      "sha256": "f312d93597c25b5ec33b7dc48beb738af8d72765fb4890c0dc3e836fcfe44eb5"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Controlled-Vibe-Framework-CVF-P3-CP2\\.cvf\\manifest.json",
+      "sha256": "f312d93597c25b5ec33b7dc48beb738af8d72765fb4890c0dc3e836fcfe44eb5"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\manifest.json",
+      "sha256": "dd6f64b5d01cdf5fd69bb7898fd285f42874411ba083afaa76be8511711500e5"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\CVF-Operations-Workspace\\.cvf\\manifest.json",
+      "sha256": "83ddc32a49a57d0c44b825b628f135fe6a52acb023e4e95ebe101239d3062180"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Dang_ky_dich_vu_container\\.cvf\\manifest.json",
+      "sha256": "f78a0398534196168999f17020fe5022dd6b1040312502d6f7112153152efcf3"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Khai-bao-Cang-vu 07.2026\\.cvf\\manifest.json",
+      "sha256": "f78a0398534196168999f17020fe5022dd6b1040312502d6f7112153152efcf3"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Mini_Game\\.cvf\\manifest.json",
+      "sha256": "f78a0398534196168999f17020fe5022dd6b1040312502d6f7112153152efcf3"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\QD209\\.cvf\\manifest.json",
+      "sha256": "f78a0398534196168999f17020fe5022dd6b1040312502d6f7112153152efcf3"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\shift-operations-workspace\\.cvf\\manifest.json",
+      "sha256": "6b34278805a2dc81f4539b1c88b2e185a017ecbe4e37916e62b3e27edb501adf"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\shift-operations-workspace-recovery-20260926\\.cvf\\manifest.json",
+      "sha256": "6b34278805a2dc81f4539b1c88b2e185a017ecbe4e37916e62b3e27edb501adf"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\tdr_processor-container-2026\\.cvf\\manifest.json",
+      "sha256": "f78a0398534196168999f17020fe5022dd6b1040312502d6f7112153152efcf3"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Trading-Tools\\.cvf\\manifest.json",
+      "sha256": "f78a0398534196168999f17020fe5022dd6b1040312502d6f7112153152efcf3"
+    },
+    {
+      "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\XD_App\\.cvf\\manifest.json",
+      "sha256": "f78a0398534196168999f17020fe5022dd6b1040312502d6f7112153152efcf3"
+    }
+  ],
+  "acl": "copy2 metadata only; ACL preservation/verification required before updater release"
+}

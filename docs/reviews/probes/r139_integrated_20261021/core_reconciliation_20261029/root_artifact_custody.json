@@ -1,0 +1,217 @@
+{
+  "scope": "Current final static maintenance evidence; individual original/derivative provenance is retained in each receipt. No authenticated provider/governance proof. Raw preservation is enforced by the local .gitattributes; initial staging normalized line endings and was rejected before commit, then corrected without rewriting originals.",
+  "files": {
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/fetch.json": {
+      "bytes": 344,
+      "rawSha256": "3f74f861e718a148b63623a037ad15f812e727aa9ddb3d0a28ebf128acbab721"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/fetch_verification.json": {
+      "bytes": 1143,
+      "rawSha256": "91893304ee7bf19d18017349faaa7a2dd2c97374573c2e7cdc47e795e03974d5"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/fixture_archive.json": {
+      "bytes": 37281,
+      "rawSha256": "844489401e09279b7129257733aeb229e8b112c26a95d109bbf683a5be99cbd1"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/git_hardened_fixture.json": {
+      "bytes": 722,
+      "rawSha256": "9958eb800e24d9bdc97f3381bd05a7d56d926b8bd9bef2fbd78257ea1ed70f25"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/git_local_mirror_feasibility.json": {
+      "bytes": 8009,
+      "rawSha256": "c69bef3979e03c4803bc9f74e314f4f575575afe2c3d31a0634c0f12eb4a3078"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/git_local_mirror_readonly_final.json": {
+      "bytes": 800,
+      "rawSha256": "0966f98e4538b2efff4d69145c4f9a477b7a74340ce1a23a6a6cd752e3379a54"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/git_local_mirror_readonly_followup.json": {
+      "bytes": 707,
+      "rawSha256": "3c17db40b26360ad4a78d1c2a15b1425193377cd24a7bb480eac303c5a4e4fb5"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/git_locked_ps5_first_attempt.json": {
+      "bytes": 392,
+      "rawSha256": "602322557198982c87761c4db3161659de2bf8d921f67ff82d440b0f458c5f41"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/git_locked_ps5_fixture.json": {
+      "bytes": 469,
+      "rawSha256": "e395bc578d89a43ee186461ee40cca0deaf03e3cc1256327adbe314aba72f2fd"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/git_locked_ps5_fixture_v2.json": {
+      "bytes": 919,
+      "rawSha256": "c753073e9f56f3c3dfb8ccf3dd83dc36fbf7d289183b7ef8a63d3ff017de59bb"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/git_native_ps5_updater_form_fixture.json": {
+      "bytes": 979,
+      "rawSha256": "e02d5af2ae848a9b0e0e4f753c61ed27b7fa5a6bfe7bd7e8761a9becb10308b1"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/git_native_ps5_updater_form_fixture_v2.json": {
+      "bytes": 513,
+      "rawSha256": "9921f498ce9854e664717ea70caf1a418571178f6a92f6b09969b97f6255b254"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/git_native_ps5_updater_form_fixture_v3.json": {
+      "bytes": 509,
+      "rawSha256": "89b58140f6b975f98136dbea5ea8f2b5211b714f57de5406761af5c9476c16f1"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/git_native_ps5_updater_form_fixture_v4.json": {
+      "bytes": 509,
+      "rawSha256": "3edcdfc652f59d9af575bf7ada8434a1597c3490a432ce2d22387016065a43a1"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/knowledge_ingest.json": {
+      "bytes": 2665,
+      "rawSha256": "deb0a7fa9b2319f3cfc8e62ef8d73965289ffc8ffcc9a5922315f645207cd396"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/original_stream_archive.json": {
+      "bytes": 1773,
+      "rawSha256": "1e0898abf9fa66dd32c6f731183f23ea1dad226b4394bf2a7045a9d3d16cf083"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/preflight_repair_process.json": {
+      "bytes": 511,
+      "rawSha256": "fbb938095ced508f0f10fd0e55b568235eaf26164c0afcb679198f3bffc26aed"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/preflight_repair_stderr.transcript.txt": {
+      "bytes": 712,
+      "rawSha256": "953b121aef2db5bbb4338632c6545cdfb57c65bc859210c3e904237dba97c9e8"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/preflight_repair_stdout.transcript.txt": {
+      "bytes": 0,
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/preimage_acls.json": {
+      "bytes": 12321,
+      "rawSha256": "ea944b2377330218dc6774f6088ae75bed039d6cb7c75d399fb37caf5db915a7"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/preimages.json": {
+      "bytes": 22730,
+      "rawSha256": "c4c0ddcdd3ddf8a89ae5718b612968f0cea7885354383328d1856073bb4cee51"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/project_adoption_doctor_result.json": {
+      "bytes": 359,
+      "rawSha256": "93b9c408d92f2a07ccb729e76a254897e02b1f0e9a28b96d8342cd69da21a9f9"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/project_adoption_doctor_stderr.txt": {
+      "bytes": 0,
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/project_adoption_doctor_stdout.txt": {
+      "bytes": 2202,
+      "rawSha256": "9991508d4fb11ac431c443db866e7a852cf047b257ef71431fa1a5cc2831362f"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/project_adoption_hashes.json": {
+      "bytes": 1304,
+      "rawSha256": "c606c9fc33f61265149cf191a47a352dead770778aa15ace21c71ed44e6e500b"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/project_adoption_installer_result.json": {
+      "bytes": 476,
+      "rawSha256": "d45f0102a0c028be509e270f6c94f353d55687b26893e57d3dc19b199a2bc5c0"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/project_adoption_installer_stderr.txt": {
+      "bytes": 0,
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/project_adoption_installer_stdout.txt": {
+      "bytes": 83,
+      "rawSha256": "9c2fe02d86952de1f87b697b017e7e19ee1b1874acf20f511484ad7af057c40f"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/project_adoption_pin_delta.json": {
+      "bytes": 1039,
+      "rawSha256": "04eda68f9a2807d66f02c9afac2bf1b3cb8b8b67791cb12fcf26005e7a5e5179"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/project_legacy_gate_NOT_UPSTREAMED.patch": {
+      "bytes": 13189,
+      "rawSha256": "e78b6a9ac16e09b0c554cf8865cdbee1247bc70976b1712c5669c7f70e1a32a2"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_final_successor_source_check.json": {
+      "bytes": 681,
+      "rawSha256": "c90152806481b4e80d9cf280e4c93be160e9fc243501517302940760374234bf"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_full_gate_units.json": {
+      "bytes": 827,
+      "rawSha256": "490946f5d8522949650627677e489b718befbc87d7776e8a4a0e4d325a97da3d"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_full_gate_units_stderr.txt": {
+      "bytes": 17609,
+      "rawSha256": "2f25698f78e542cf4705d723a1939688f93a3b53974d92498a9488544fefdb3b"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_full_gate_units_stdout.txt": {
+      "bytes": 0,
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_preflight_direct_result.json": {
+      "bytes": 1231,
+      "rawSha256": "dfa31983c26e76da4787baa4f06e611904e7dd188b574913d73d5eb97b31264c"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_public_coverage.json": {
+      "bytes": 364,
+      "rawSha256": "c0dd53a28feb0681e61ea92c4a2accb16b5efd2e38c1c9a74913fbdb1d15bc19"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_public_coverage_stderr.txt": {
+      "bytes": 9462,
+      "rawSha256": "2ac07cf3a0659474282f52dfe57565730c8cf6cc56f3994461e1a36287315006"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_public_coverage_stdout.txt": {
+      "bytes": 0,
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_public_profile.json": {
+      "bytes": 368,
+      "rawSha256": "b3fe306411500ad78056cd0a9256705317da319be23cd1f55346f60afa5dfb1e"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_public_profile_stderr.txt": {
+      "bytes": 8026,
+      "rawSha256": "ea41950740f825c324d464e1624efef480ee6cb85d0fc3cdd69088a3c92a0849"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_public_profile_stdout.txt": {
+      "bytes": 0,
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_updater_result_review.json": {
+      "bytes": 8948,
+      "rawSha256": "e27fd48f291929ae577a008d595d350668522fa22cd549ff3b8e5fb8793daa8a"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_upstream_baseline_result.json": {
+      "bytes": 463,
+      "rawSha256": "1cfef11833052f429fea5992bc7c431bb768817266237c844c63ea3518bd3906"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_upstream_baseline_stderr.txt": {
+      "bytes": 8380,
+      "rawSha256": "d9e0c12d711ac2ada4cd1ec462a4c5e8349d9201a3cbd4cdd3f57e3af71f21e5"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/root_upstream_baseline_stdout.txt": {
+      "bytes": 0,
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/run_core_update.ps1": {
+      "bytes": 21777,
+      "rawSha256": "7c856d14b4e4f5d0e1e73b1cb4d3f84316faa1b045e04865006bf890197dc4ed"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/supervisor_path_guard_readonly.json": {
+      "bytes": 708,
+      "rawSha256": "20e624c25aff80b640a89322ddbb26c5720e0e11fb87ae86d082c1eda315c274"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/update_attempt.claim": {
+      "bytes": 20,
+      "rawSha256": "4b85cc1b046eeef514ddee9d792cb9551c22928f60f287a3c92657e0420eefeb"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/updater_result.json": {
+      "bytes": 5311,
+      "rawSha256": "53e32fe25e4a76777c241523744b2f90985776bed0ca9f19a4459f6376237d6c"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/updater_stderr.txt": {
+      "bytes": 3134,
+      "rawSha256": "bb49e4cdbcd1c426c61954a0ad2eb16aaffb3e0de42cd0aa10c936ae0846d073"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/updater_stdout.txt": {
+      "bytes": 2355,
+      "rawSha256": "24eec8700176b99141e733f3e4bd2fc8085e4f5e61b2b4d60870f1275b60ab41"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/wrapper_preflight_stop_20261029.json": {
+      "bytes": 851,
+      "rawSha256": "6332648e698f55cf2fa8281a90bda67e63438580d24a088b8c7c0b6e33a296b6"
+    },
+    "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/.gitattributes": {
+      "bytes": 8,
+      "rawSha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+test_each_truth_surface_drift_has_a_field_locator (test_downstream_gate_profile.ContinuityTests.test_each_truth_surface_drift_has_a_field_locator) ... ok
+test_f05_handoff_status_must_be_exactly_one_valid_active_declaration (test_downstream_gate_profile.ContinuityTests.test_f05_handoff_status_must_be_exactly_one_valid_active_declaration) ... ok
+test_f06_active_work_orders_join_existence_status_and_uniqueness (test_downstream_gate_profile.ContinuityTests.test_f06_active_work_orders_join_existence_status_and_uniqueness) ... ok
+test_legacy_state_without_contract_is_migration_required_not_pass (test_downstream_gate_profile.ContinuityTests.test_legacy_state_without_contract_is_migration_required_not_pass) ... ok
+test_missing_duplicate_and_unknown_fields_fail (test_downstream_gate_profile.ContinuityTests.test_missing_duplicate_and_unknown_fields_fail) ... ok
+test_next_move_pointer_and_conflicting_handoff (test_downstream_gate_profile.ContinuityTests.test_next_move_pointer_and_conflicting_handoff) ... ok
+test_positive_control_lf_crlf_and_bom (test_downstream_gate_profile.ContinuityTests.test_positive_control_lf_crlf_and_bom) ... ok
+test_review_pending_maps_to_review_phase_only (test_downstream_gate_profile.ContinuityTests.test_review_pending_maps_to_review_phase_only) ... ok
+test_f02_consistent_module_and_lock_edit_is_refused_by_independent_anchors (test_downstream_gate_profile.InstallTests.test_f02_consistent_module_and_lock_edit_is_refused_by_independent_anchors) ... ok
+test_f02_stage0_checks_pins_before_any_project_module_is_imported (test_downstream_gate_profile.InstallTests.test_f02_stage0_checks_pins_before_any_project_module_is_imported) ... ok
+test_fresh_install_is_idempotent_and_verifiable (test_downstream_gate_profile.InstallTests.test_fresh_install_is_idempotent_and_verifiable) ... ok
+test_missing_empty_and_tampered_files_are_rejected (test_downstream_gate_profile.InstallTests.test_missing_empty_and_tampered_files_are_rejected) ... ok
+test_no_op_local_override_and_env_override_are_refused (test_downstream_gate_profile.InstallTests.test_no_op_local_override_and_env_override_are_refused) ... ok
+test_pins_collision_and_drift_preservation (test_downstream_gate_profile.InstallTests.test_pins_collision_and_drift_preservation) ... ok
+test_project_owned_files_block_install_and_workflow_is_preserved (test_downstream_gate_profile.InstallTests.test_project_owned_files_block_install_and_workflow_is_preserved) ... ok
+test_unexpected_files_and_bundle_digest_parity (test_downstream_gate_profile.InstallTests.test_unexpected_files_and_bundle_digest_parity) ... ok
+test_deterministic_generation_is_not_acceptance (test_downstream_gate_profile.IntakeTests.test_deterministic_generation_is_not_acceptance) ... ok
+test_f07_full_record_schema_is_validated_even_when_the_digest_is_recomputed (test_downstream_gate_profile.IntakeTests.test_f07_full_record_schema_is_validated_even_when_the_digest_is_recomputed) ... ok
+test_invalid_inputs_are_refused_and_never_overwrite (test_downstream_gate_profile.IntakeTests.test_invalid_inputs_are_refused_and_never_overwrite) ... ok
+test_registry_is_parent_owned_and_links_resolve (test_downstream_gate_profile.IntakeTests.test_registry_is_parent_owned_and_links_resolve) ... ERROR
+test_claims_are_bound_to_evidence (test_downstream_gate_profile.PacketControlTests.test_claims_are_bound_to_evidence) ... ok
+test_coverage_states_are_truthful (test_downstream_gate_profile.PacketControlTests.test_coverage_states_are_truthful) ... ok
+test_f04_claim_declarations_are_collected_before_values_are_parsed (test_downstream_gate_profile.PacketControlTests.test_f04_claim_declarations_are_collected_before_values_are_parsed) ... ok
+test_not_applicable_reports_reason_and_checked_ids (test_downstream_gate_profile.PacketControlTests.test_not_applicable_reports_reason_and_checked_ids) ... ok
+test_proof_receipt_requires_matching_identity (test_downstream_gate_profile.PacketControlTests.test_proof_receipt_requires_matching_identity) ... ok
+test_reviewer_independence_and_f03_risk_grammar (test_downstream_gate_profile.PacketControlTests.test_reviewer_independence_and_f03_risk_grammar) ... ok
+test_reviewer_local_repair_routing (test_downstream_gate_profile.PacketControlTests.test_reviewer_local_repair_routing) ... ok
+test_status_grammar_table (test_downstream_gate_profile.PacketControlTests.test_status_grammar_table) ... ok
+test_bootstrap_content_projects_the_pinned_contract (test_downstream_gate_profile.ProfileContractTests.test_bootstrap_content_projects_the_pinned_contract) ... ok
+test_new_files_obey_size_budget (test_downstream_gate_profile.ProfileContractTests.test_new_files_obey_size_budget) ... ok
+test_parent_tokens_match_profile (test_downstream_gate_profile.ProfileContractTests.test_parent_tokens_match_profile) ... ok
+test_profile_is_internally_consistent (test_downstream_gate_profile.ProfileContractTests.test_profile_is_internally_consistent) ... ok
+test_schemas_agree_with_profile (test_downstream_gate_profile.ProfileContractTests.test_schemas_agree_with_profile) ... ok
+test_clean_committed_candidates_are_discovered_and_refused (test_downstream_gate_profile.RangeTests.test_clean_committed_candidates_are_discovered_and_refused) ... ok
+test_missing_or_unresolvable_range_refuses_instead_of_emptying_discovery (test_downstream_gate_profile.RangeTests.test_missing_or_unresolvable_range_refuses_instead_of_emptying_discovery) ... ok
+test_pristine_range_has_an_explicit_checked_disposition (test_downstream_gate_profile.RangeTests.test_pristine_range_has_an_explicit_checked_disposition) ... ok
+test_rename_delete_and_initial_push (test_downstream_gate_profile.RangeTests.test_rename_delete_and_initial_push) ... ok
+test_workflow_command_is_shell_free_and_pinned (test_downstream_gate_profile.RangeTests.test_workflow_command_is_shell_free_and_pinned) ... ok
+test_f08_reviewer_fast_runs_every_review_control (test_downstream_gate_profile.RunnerCliTests.test_f08_reviewer_fast_runs_every_review_control) ... ok
+test_phase_exit_codes_and_failure_propagation (test_downstream_gate_profile.RunnerCliTests.test_phase_exit_codes_and_failure_propagation) ... ok
+
+======================================================================
+ERROR: test_registry_is_parent_owned_and_links_resolve (test_downstream_gate_profile.IntakeTests.test_registry_is_parent_owned_and_links_resolve)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\.Controlled-Vibe-Framework-CVF\governance\compat\test_downstream_gate_profile.py", line 488, in test_registry_is_parent_owned_and_links_resolve
+    entry = json.loads((DOCS / "downstream_finding_intake_registry.json").read_text(encoding="utf-8"))["entries"][0]
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tiennm\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tiennm\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tiennm\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\.Controlled-Vibe-Framework-CVF\\docs\\reference\\downstream_gate_profile\\downstream_finding_intake_registry.json'
+
+----------------------------------------------------------------------
+Ran 40 tests in 74.321s
+
+FAILED (errors=1)

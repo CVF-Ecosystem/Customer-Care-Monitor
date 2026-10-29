@@ -1,0 +1,97 @@
+test_ambiguous_first_cell_and_fence_suffix (test_milestone_coverage.CoverageTests.test_ambiguous_first_cell_and_fence_suffix) ... ok
+test_authority_duplicates_and_fenced_fake_heading (test_milestone_coverage.CoverageTests.test_authority_duplicates_and_fenced_fake_heading) ... ok
+test_candidate_size_and_encoding_and_deep_json (test_milestone_coverage.CoverageTests.test_candidate_size_and_encoding_and_deep_json) ... FAIL
+test_core_uses_portable_validator (test_milestone_coverage.CoverageTests.test_core_uses_portable_validator) ... ok
+test_initial_unknown_authority_only_finite_verify (test_milestone_coverage.CoverageTests.test_initial_unknown_authority_only_finite_verify) ... ok
+test_missing_duplicate_json_nested_example_and_phase (test_milestone_coverage.CoverageTests.test_missing_duplicate_json_nested_example_and_phase) ... ok
+test_no_owner_or_destination (test_milestone_coverage.CoverageTests.test_no_owner_or_destination) ... ok
+test_omitted_extra_duplicate_rows (test_milestone_coverage.CoverageTests.test_omitted_extra_duplicate_rows) ... ok
+test_real_read_only_authority_sets (test_milestone_coverage.CoverageTests.test_real_read_only_authority_sets) ... ERROR
+test_scope_source_drift (test_milestone_coverage.CoverageTests.test_scope_source_drift) ... ok
+test_selected_slice_retains_owned_remainder (test_milestone_coverage.CoverageTests.test_selected_slice_retains_owned_remainder) ... ok
+test_stale_evidence_and_unsafe_paths (test_milestone_coverage.CoverageTests.test_stale_evidence_and_unsafe_paths) ... ok
+test_terminal_artifacts_require_review_and_both_positions (test_milestone_coverage.CoverageTests.test_terminal_artifacts_require_review_and_both_positions) ... ok
+test_tranche_complete_does_not_complete_product (test_milestone_coverage.CoverageTests.test_tranche_complete_does_not_complete_product) ... ok
+test_unbounded_supporting_work (test_milestone_coverage.CoverageTests.test_unbounded_supporting_work) ... ok
+test_unknown_independence_needs_evidence (test_milestone_coverage.CoverageTests.test_unknown_independence_needs_evidence) ... ok
+test_unknown_requires_finite_verification (test_milestone_coverage.CoverageTests.test_unknown_requires_finite_verification) ... ok
+test_unrelated_source_section_does_not_invalidate (test_milestone_coverage.CoverageTests.test_unrelated_source_section_does_not_invalidate) ... ok
+test_wrong_milestone_or_alternative_scope_table (test_milestone_coverage.CoverageTests.test_wrong_milestone_or_alternative_scope_table) ... ok
+test_active_unchanged_order_rechecks_bound_source (test_milestone_coverage_inheritance.InheritanceTests.test_active_unchanged_order_rechecks_bound_source) ... ok
+test_archived_active_order_and_invalid_encoding_refused (test_milestone_coverage_inheritance.InheritanceTests.test_archived_active_order_and_invalid_encoding_refused) ... ok
+test_fresh_discovery_then_local_scope_admission (test_milestone_coverage_inheritance.InheritanceTests.test_fresh_discovery_then_local_scope_admission) ... ok
+test_fresh_empty_intake_is_not_coverage_pass (test_milestone_coverage_inheritance.InheritanceTests.test_fresh_empty_intake_is_not_coverage_pass) ... ok
+test_fresh_installed_runner_and_missing_row_refusal (test_milestone_coverage_inheritance.InheritanceTests.test_fresh_installed_runner_and_missing_row_refusal) ... ok
+test_genuine_11_explicit_upgrade_retains_project_and_updates_generated_ci (test_milestone_coverage_inheritance.InheritanceTests.test_genuine_11_explicit_upgrade_retains_project_and_updates_generated_ci) ... FAIL
+test_missing_roadmap_coverage (test_milestone_coverage_inheritance.InheritanceTests.test_missing_roadmap_coverage) ... ok
+test_tampered_installed_validator_refused (test_milestone_coverage_inheritance.InheritanceTests.test_tampered_installed_validator_refused) ... ok
+test_upgrade_preserves_edited_ci_and_reports_required_reconciliation (test_milestone_coverage_inheritance.InheritanceTests.test_upgrade_preserves_edited_ci_and_reports_required_reconciliation) ... FAIL
+
+======================================================================
+ERROR: test_real_read_only_authority_sets (test_milestone_coverage.CoverageTests.test_real_read_only_authority_sets)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\.Controlled-Vibe-Framework-CVF\governance\compat\test_milestone_coverage.py", line 148, in test_real_read_only_authority_sets
+    value = cov.section((REPO / path).read_text(encoding="utf-8"), heading)
+                        ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tiennm\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tiennm\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tiennm\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\.Controlled-Vibe-Framework-CVF\\docs\\roadmaps\\CVF_NCR_HTML_PILOT_DELIVERY_AND_ACCEPTANCE_PLAN_2026-10-21.md'
+
+======================================================================
+FAIL: test_candidate_size_and_encoding_and_deep_json (test_milestone_coverage.CoverageTests.test_candidate_size_and_encoding_and_deep_json)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\.Controlled-Vibe-Framework-CVF\governance\compat\test_milestone_coverage.py", line 204, in test_candidate_size_and_encoding_and_deep_json
+    self.assertEqual(cov.validate_text(self.root, p, value), ["COV_INVALID_JSON"])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['COV_OBJECT_SHAPE'] != ['COV_INVALID_JSON']
+
+First differing element 0:
+'COV_OBJECT_SHAPE'
+'COV_INVALID_JSON'
+
+- ['COV_OBJECT_SHAPE']
++ ['COV_INVALID_JSON']
+
+======================================================================
+FAIL: test_genuine_11_explicit_upgrade_retains_project_and_updates_generated_ci (test_milestone_coverage_inheritance.InheritanceTests.test_genuine_11_explicit_upgrade_retains_project_and_updates_generated_ci)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\.Controlled-Vibe-Framework-CVF\governance\compat\test_milestone_coverage_inheritance.py", line 145, in test_genuine_11_explicit_upgrade_retains_project_and_updates_generated_ci
+    self.old_install()
+    ~~~~~~~~~~~~~~~~^^
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\.Controlled-Vibe-Framework-CVF\governance\compat\test_milestone_coverage_inheritance.py", line 134, in old_install
+    materialize(prefix + "cvf_downstream_gate_profile.json")
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\.Controlled-Vibe-Framework-CVF\governance\compat\test_milestone_coverage_inheritance.py", line 129, in materialize
+    self.assertEqual(result.returncode, 0, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 128 != 0 : b"fatal: path 'scripts/lib/downstream_governance/cvf_downstream_gate_profile.json' exists on disk, but not in '50b6f8d94a26d8b1014bb00f31d3493616ce9fdd'\n"
+
+======================================================================
+FAIL: test_upgrade_preserves_edited_ci_and_reports_required_reconciliation (test_milestone_coverage_inheritance.InheritanceTests.test_upgrade_preserves_edited_ci_and_reports_required_reconciliation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\.Controlled-Vibe-Framework-CVF\governance\compat\test_milestone_coverage_inheritance.py", line 170, in test_upgrade_preserves_edited_ci_and_reports_required_reconciliation
+    self.old_install()
+    ~~~~~~~~~~~~~~~~^^
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\.Controlled-Vibe-Framework-CVF\governance\compat\test_milestone_coverage_inheritance.py", line 134, in old_install
+    materialize(prefix + "cvf_downstream_gate_profile.json")
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\.Controlled-Vibe-Framework-CVF\governance\compat\test_milestone_coverage_inheritance.py", line 129, in materialize
+    self.assertEqual(result.returncode, 0, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 128 != 0 : b"fatal: path 'scripts/lib/downstream_governance/cvf_downstream_gate_profile.json' exists on disk, but not in '50b6f8d94a26d8b1014bb00f31d3493616ce9fdd'\n"
+
+----------------------------------------------------------------------
+Ran 28 tests in 15.646s
+
+FAILED (failures=3, errors=1)

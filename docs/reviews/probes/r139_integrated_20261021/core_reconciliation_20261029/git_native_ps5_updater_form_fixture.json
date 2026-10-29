@@ -1,0 +1,28 @@
+{
+  "utc": "2026-10-29T11:33:53.292937+00:00",
+  "multiRefs": {
+    "exit": 0,
+    "stdout": "{\"refs\":[\"refs/heads/main\",\"refs/heads/side\"],\"count\":2}\n",
+    "stderr": ""
+  },
+  "nativeUpdaterForm": {
+    "exit": 1,
+    "supervisorStdout": "{\"pid\":11616,\"exitCode\":null,\"waitReturned\":true}\n",
+    "supervisorStderr": "",
+    "originalChildStdout": "",
+    "originalChildStderr": "Cloning into 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\git_local_mirror_fixture\\clone_native_child'...\n",
+    "cloneHead": {
+      "exit": 0,
+      "stdout": "a0f32e91eddfb591ee63077ad1d5d82e40b59212",
+      "stderr": ""
+    },
+    "storedOriginAfterEnvClear": {
+      "exit": 0,
+      "stdout": "https://r139-fixture.invalid/pinned.git",
+      "stderr": ""
+    }
+  },
+  "realNetwork": false,
+  "realUpdaterInvocations": 0,
+  "pass": false
+}

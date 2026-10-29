@@ -1,0 +1,22 @@
+{
+  "utc": "2026-10-29T11:21:09.761593+00:00",
+  "earlierExits": [
+    1,
+    1
+  ],
+  "earlierIssue": "fixture source itself was written with CRLF on Windows; both assertions incorrectly assumed LF. Earlier receipts retained.",
+  "blobRawSha256": [
+    "4a66212785c2cc76712cf011e7ca48e1dd02af5093edaedf27fb98fa7f49a06a",
+    "4a66212785c2cc76712cf011e7ca48e1dd02af5093edaedf27fb98fa7f49a06a",
+    "4a66212785c2cc76712cf011e7ca48e1dd02af5093edaedf27fb98fa7f49a06a"
+  ],
+  "blobRepresentations": [
+    "b'approved target\\r\\n'",
+    "b'approved target\\r\\n'",
+    "b'approved target\\r\\n'"
+  ],
+  "target": "a0f32e91eddfb591ee63077ad1d5d82e40b59212",
+  "originAfterEnvCleared": "https://r139-fixture.invalid/pinned.git",
+  "noAdditionalCloneOrNetwork": true,
+  "pass": true
+}

@@ -1,0 +1,29 @@
+{
+  "observedUtc": "2026-10-29T11:06:31.768936+00:00",
+  "oldHead": "b8ead4f0d1bf9224338a206b2abcd893ec1801b1",
+  "fetchHead": "15e39450853184eb65dbde73398c69c3171a6241",
+  "originMain": "15e39450853184eb65dbde73398c69c3171a6241",
+  "expectedTarget": "15e39450853184eb65dbde73398c69c3171a6241",
+  "headClean": true,
+  "profileId": "cvf.downstreamGateProfile@1.2.0",
+  "profileVersion": "1.2.0",
+  "installedFiles": [
+    "cvf_downstream_gate_profile.json",
+    "cvf_downstream_gate_runner.py",
+    "cvf_dg_common.py",
+    "cvf_dg_install.py",
+    "cvf_dg_continuity.py",
+    "cvf_dg_applicability.py",
+    "cvf_dg_routing.py",
+    "cvf_dg_review.py",
+    "cvf_dg_intake.py",
+    "cvf_dg_coverage.py",
+    "check_gate_to_role_closeability.py",
+    "git-pre-commit.template",
+    "project_learning_home.template.md",
+    "project_learning_record.template.md",
+    "cvf_milestone_coverage.py"
+  ],
+  "matchesCurrentLockedFileSet": true,
+  "gateAndContractDiff": "M\tdocs/reference/downstream_gate_profile/CVF_MILESTONE_COVERAGE_MACHINE_CONTRACT.md\nM\tscripts/lib/downstream_governance/cvf_milestone_coverage.py\n"
+}

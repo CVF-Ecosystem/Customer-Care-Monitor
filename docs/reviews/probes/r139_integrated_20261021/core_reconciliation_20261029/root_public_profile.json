@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "../.Controlled-Vibe-Framework-CVF/governance/compat",
+    "-p",
+    "test_downstream_gate_profile.py",
+    "-v"
+  ],
+  "startUtc": "2026-10-29T15:49:09.166034+00:00",
+  "endUtc": "2026-10-29T15:50:25.290967+00:00",
+  "exitCode": 1,
+  "skipLines": []
+}

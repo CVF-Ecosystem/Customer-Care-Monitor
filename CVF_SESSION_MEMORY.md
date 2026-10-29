@@ -6,9 +6,9 @@ Memory class: POINTER_RECORD
 
 ## Current Owner-approved Core maintenance — 2026-10-29
 
-CCMAI-RUNTIME-139 Owner approved shared public Core maintenance and this project pin/profile adoption. Root records bounded SPEC/WORK_ORDER in CORE-RECONCILIATION-SCOPE-ADMISSION; Terra prepares verified exact backups and single-successor legacy gate compatibility, independently reviewed admission and committed preparation precede BUILD. Reconcile only shared Core/named workspace outputs and this project public pin/profile; preserve sibling manifests, original authority/maintenance admission/roadmap/evidence, historical e9/profile1.1 execution HOLD and all counters/UNKNOWNs. Verify public target/profile/files, official updater/install, doctor and static gates; no browser/SDK/provider/product effects until separate source/runtime prerequisites. Same R139/M3-05/M3-08; full M3/FREEZE OPEN and Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 reviewed static Core/project15e39450853184eb65dbde73398c69c3171a6241/profile1.2 checkpoint: doctor28/28, local113testsPASS and localprecommit gatesPASS; derive committed checkpoint SHA from Git. Root owns authorized local commit after final staged checks, then only separately admitted finite SDK source repair/verification may resume. Public68test suite remains63PASS/3FAIL/2ERROR; independent oldb8 baseline reproduces samefive, Coremaintainer owns fixture/history/Python gaps and re-entry, no tranche/M3/FREEZE closure. Updater1/publicfetch1/nativeupgrade1 spent, no replay or Core hand edit. Old rejectedSDKcandidate/browser/product/providerHOLD and originalseed/17admission/roadmaps/evidence/14siblings/operator-local/old e9 execution and all source27/controllers4/campaign1/services5/browser16/UNKNOWNs preserved; Facebook/ZaloOA parked.
 
-Root ORCHESTRATOR / SPEC and WORK_ORDER AUTHOR / independent source/result REVIEWER / COMMIT_STEWARD; Terra6.1High CORE_MAINTENANCE_WORKER, separate Terra admission REVIEWER; browser/product execution held
+Root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD for reviewed static checkpoint with open upstream findings; Terra adoption/audit workers returned; no Core/browser/product execution
 
 ## Historical corrective setup dispatch — returned BLOCKED
 
@@ -74,9 +74,9 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
 
-CCMAI-RUNTIME-139 Owner approved shared public Core maintenance and this project pin/profile adoption. Root records bounded SPEC/WORK_ORDER in CORE-RECONCILIATION-SCOPE-ADMISSION; Terra prepares verified exact backups and single-successor legacy gate compatibility, independently reviewed admission and committed preparation precede BUILD. Reconcile only shared Core/named workspace outputs and this project public pin/profile; preserve sibling manifests, original authority/maintenance admission/roadmap/evidence, historical e9/profile1.1 execution HOLD and all counters/UNKNOWNs. Verify public target/profile/files, official updater/install, doctor and static gates; no browser/SDK/provider/product effects until separate source/runtime prerequisites. Same R139/M3-05/M3-08; full M3/FREEZE OPEN and Facebook/Zalo OA parked.
+CCMAI-RUNTIME-139 reviewed static Core/project15e39450853184eb65dbde73398c69c3171a6241/profile1.2 checkpoint: doctor28/28, local113testsPASS and localprecommit gatesPASS; derive committed checkpoint SHA from Git. Root owns authorized local commit after final staged checks, then only separately admitted finite SDK source repair/verification may resume. Public68test suite remains63PASS/3FAIL/2ERROR; independent oldb8 baseline reproduces samefive, Coremaintainer owns fixture/history/Python gaps and re-entry, no tranche/M3/FREEZE closure. Updater1/publicfetch1/nativeupgrade1 spent, no replay or Core hand edit. Old rejectedSDKcandidate/browser/product/providerHOLD and originalseed/17admission/roadmaps/evidence/14siblings/operator-local/old e9 execution and all source27/controllers4/campaign1/services5/browser16/UNKNOWNs preserved; Facebook/ZaloOA parked.
 
-Root ORCHESTRATOR / SPEC and WORK_ORDER AUTHOR / independent source/result REVIEWER / COMMIT_STEWARD; Terra6.1High CORE_MAINTENANCE_WORKER, separate Terra admission REVIEWER; browser/product execution held
+Root independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD for reviewed static checkpoint with open upstream findings; Terra adoption/audit workers returned; no Core/browser/product execution
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

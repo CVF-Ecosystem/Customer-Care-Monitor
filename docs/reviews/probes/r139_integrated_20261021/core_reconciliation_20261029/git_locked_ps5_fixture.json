@@ -1,0 +1,9 @@
+﻿{
+    "powershell":  "5.1.26100.9711",
+    "status":  "FAIL",
+    "noNetwork":  true,
+    "updaterInvocations":  0,
+    "lockedFileCount":  26,
+    "fsck":  "dangling commit b36f95bd4a2b867384ff944b3720f75d3957a260",
+    "error":  "Cloning into \u0027D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\core_reconciliation_20261029\\git_local_mirror_fixture\\clone_locked_ps5\u0027..."
+}

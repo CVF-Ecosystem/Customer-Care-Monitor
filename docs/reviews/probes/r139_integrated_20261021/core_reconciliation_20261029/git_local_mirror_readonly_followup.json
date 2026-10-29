@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-29T11:21:01.102071+00:00",
+  "previousExit": 1,
+  "previousFailure": "fixture checkout bytes CRLF rather than LF; original result retained",
+  "canonicalTargetBlobSha256": "4a66212785c2cc76712cf011e7ca48e1dd02af5093edaedf27fb98fa7f49a06a",
+  "canonicalCloneBlobSha256": "4a66212785c2cc76712cf011e7ca48e1dd02af5093edaedf27fb98fa7f49a06a",
+  "canonicalMirrorBlobSha256": "4a66212785c2cc76712cf011e7ca48e1dd02af5093edaedf27fb98fa7f49a06a",
+  "workingTreeBytes": "b'approved target\\r\\n'",
+  "sameTargetCommit": "a0f32e91eddfb591ee63077ad1d5d82e40b59212",
+  "originAfterEnvCleared": "https://r139-fixture.invalid/pinned.git",
+  "noExtraCloneOrNetwork": true,
+  "pass": false
+}

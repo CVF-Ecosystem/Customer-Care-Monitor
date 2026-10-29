@@ -1,0 +1,18 @@
+{
+  "status": "STOP_PREFLIGHT_INHERITED_GIT_ENVIRONMENT",
+  "wrapperSha256": "d824cbf2c9321ad6d0a8b45c4b3e832e6dacce250b1a160f78c391e573880dc0",
+  "wrapperInvocations": 1,
+  "wrapperExitCode": 1,
+  "observedError": "Inherited GIT environment must be cleared before dispatch",
+  "inheritedVariableNamesOnly": ["GIT_PAGER"],
+  "variableValuesRead": false,
+  "claimExists": false,
+  "mirrorExists": false,
+  "mirrorSupportExists": false,
+  "officialUpdaterInvocations": 0,
+  "coreHead": "b8ead4f0d1bf9224338a206b2abcd893ec1801b1",
+  "coreStatusPorcelain": "",
+  "verifiedAtUtc": "2026-10-29T11:37:21.6458109Z",
+  "next": "Root reviews this stop; no retry, adoption or restore under this release.",
+  "evidenceLimit": "Structured transcription of tool-observed failure and subsequent read-only checks; not a separately captured raw process transcript."
+}
