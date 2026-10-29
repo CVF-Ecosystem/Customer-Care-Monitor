@@ -1,0 +1,4 @@
+{
+  "at": "2026-10-29T17:11:14.074Z",
+  "data": "turning off usage statistics. process.env['CI'] || process.env['CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS'] is set.\n"
+}

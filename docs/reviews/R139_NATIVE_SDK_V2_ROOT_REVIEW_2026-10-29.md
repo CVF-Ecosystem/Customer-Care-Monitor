@@ -1,6 +1,6 @@
 # R139 native SDK v2 — admission and independent review
 
-Status: SOURCE_REVIEW_PASS_EXACT_RELEASE_PREPARED
+Status: BLOCKED_NATIVE_RESPONSE_CONTRACT_AND_CHROME_CLEANUP_UNKNOWN
 Risk: R2
 Worker: Terra6.1High native SDK source worker
 Reviewer: Root independent of source and execution
@@ -23,6 +23,20 @@ Exact source raw SHA256 `2644ae8c2d8a6199c57e9e85c88d9c7ae6faa7e38b68cee658cd8a5
 
 Root exact runtime release binds operative admission15cfb528, source2644ae8, preparation8fbc169 and unused runId. Release is executable only after its own commit is HEAD and source/authority/release raw bytes equal committed blobs. One isolated ExampleDomain lifecycle, maximum8 browser calls, one connect/server start and300seconds including cleanup; no retry. Actual ownership, snapshot, PNG and known-PID absence remain unproved. Root owns independent result review, screenshot inspection and hash-preserving ignored local archive; worker cannot self-approve or commit. Main R139/M3/FREEZE remains OPEN and product execution e9/profile1.1 HOLD. Source27/controllers4/campaign1/services5/cumulativebrowser16 and all UNKNOWNs remain. Facebook/ZaloOA parked.
 
+## Actual one-shot execution / independent result review — 2026-10-30
+
+Release commit `d9cac663be224365ef9f42fc9d7181ea3bc7cc0f` matched authority/source/release raw bytes before dispatch. Worker executed once, exit1. Root read every original execution file independently: SDK connect1 and server start1 succeeded; `list_pages` call1 returned native text `## Pages\n1: about:blank [selected]`, without structuredContent. The adapter stopped at `page metadata missing`. This is an adapter response-contract defect, not evidence that this SDK cannot connect. No target page, snapshot or screenshot exists.
+
+Client close and transport close returned. Scoped process observation1 returned original raw `[]`; original serverPID9108 absent. Chrome PID was never identified because ownership observation was after the failing parser. Therefore Chrome cleanup remains UNKNOWN; do not infer absence of all browser processes or silently close this gap. No extra query, kill, retry or alternative browser stack was used. Terminal false, elapsed14543ms, connect1/tool1/metadata1, evidenceFailure false. SDK/browser historical zero is superseded for this run only: browser cumulative16+1=17, source27/controllers4/campaign1/services5 and all earlier UNKNOWNs retained. Provider/product calls0.
+
+Original stdout, stderr, claim, numbered JSON and wrapper invocation are retained byte-for-byte in `native_cli/execution_v2/`; Root raw custody map is `native_cli/root_execution_v2_review.json`. No PNG was produced, so no image inspection/archive is applicable. One-shot run identity is SPENT; the historical release remains immutable and is not renewable by replay.
+
+Root's five evidence questions: (1) Native capability reused: installed official SDK connects and one native tool returns. (2) Missing adapter work: consume pinned native text response and observe launched-process ownership before any response parsing can fail. (3) Consumer outcome: full isolated ExampleDomain lifecycle NOT_PROVED. (4) Constraints: caps held, no retry/provider/product/user-profile effects; cleanup UNKNOWN qualified. (5) Next owned move: Root consolidates source response-schema and ownership-order repair requirements, with independent review and a distinct explicit finite authority before any new source work/runtime. No user environment transfer is required by this adapter defect; Antigravity transfer remains an option only if an environment capability is actually unavailable.
+
+Bounded conclusion: native lifecycle BLOCKED. Product conclusion: full R139/M3/FREEZE OPEN/BLOCKED, old e9/profile1.1 execution HOLD and five inherited public-Core findings remain open. The roadmap criteria are not promoted by SDK connection alone.
+
+Separate Terra result reviewer independently returned PASS for bounded failure recording, explicitly not lifecycle/cleanup acceptance. Exact source/admission/release/claim, original counters, text-only response, native close returns and UNKNOWN qualification agree with Root review. Root transitions to SESSION_SYNC_STEWARD / COMMIT_STEWARD for original evidence and continuity. Source preparation unit discovery113PASS/150.567s remains applicable because gate code/tests are unchanged; fresh legacy/profile/catalog checks govern this documentary result commit. No tranche/product closure.
+
 ## M3 coverage
 
 ```cvf-milestone-coverage-json
@@ -43,18 +57,18 @@ Root exact runtime release binds operative admission15cfb528, source2644ae8, pre
       "decision": "Đối chiếu evidence và caps; tiếp tục hoặc sửa trong authority, trình Owner nếu đổi phạm vi, HOLD hoặc dừng; đưa kết quả về R139/G3."
     }
   },
-  "phase": "DISPATCH",
+  "phase": "REVIEW",
   "action": {
-    "kind": "VERIFY",
+    "kind": "REVIEW",
     "selected": [
       "M3-05",
       "M3-08"
     ],
     "owner": "Terra source worker; Root independent reviewer",
-    "output": "Source-reviewed exact SDK v2 and, only after committed release, bounded actual native capability evidence",
+    "output": "Original one-shot failure evidence, exact counters and independent qualified disposition",
     "budgetMinutes": 20,
     "stop": "Source/ownership/release/pin failure or budget; stop dependent actions, no implicit retries or product effects",
-    "next": "Root independent source review, committed exact release then one applicable native lifecycle or qualified block",
+    "next": "Root owns native response-schema and early ownership-order repair requirements; new finite authority/review before implementation or any fresh runtime; no replay.",
     "question": "Can installed native SDK provide the one owned isolated ExampleDomain lifecycle with actual custody/cleanup, without failed host bridge or CLI restart?",
     "sourceBoundary": "Pinned installed package1.9/SDK/Node/Chrome and this owned R139 evidence adapter only; no product/localhost, provider, personal profile or Core edits."
   },
@@ -122,7 +136,7 @@ Root exact runtime release binds operative admission15cfb528, source2644ae8, pre
     {
       "id": "M3-05",
       "state": "BLOCKED",
-      "gap": "E01–E06 chưa có runtime proof; Chrome connection và effect admission đang HOLD.",
+      "gap": "E01–E06 chưa có runtime proof; Chrome connection và effect admission đang HOLD. SDK v2 connects/list_pages text succeeds, but adapter requires unavailable structuredContent; no ExampleDomain/PNG, Chrome cleanup UNKNOWN.",
       "owner": "Root / Product Owner",
       "destination": "Cùng R139 G0–G3 sau thay đổi kết nối được duyệt và admission phù hợp; Owner chấp nhận user consequence.",
       "evidence": [
@@ -133,6 +147,10 @@ Root exact runtime release binds operative admission15cfb528, source2644ae8, pre
         {
           "path": "docs/reviews/R139_GEMINI_NATIVE_BROWSER_CHECK_ROOT_REVIEW_2026-10-28.md",
           "sha256": "0f434528ae218886eca1c8c68efb68d3cab164cbad57b2a2b51af79f14135d47"
+        },
+        {
+          "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/root_execution_v2_review.json",
+          "sha256": "b16c8dcba90d7c9206ac127e7d3baa64cbfa9a619d074e9044bc56d94f02a093"
         }
       ]
     },
@@ -165,7 +183,7 @@ Root exact runtime release binds operative admission15cfb528, source2644ae8, pre
     {
       "id": "M3-08",
       "state": "BLOCKED",
-      "gap": "Current-source browser/backend demo và disposition viewport/offline còn mở; Chrome connection HOLD.",
+      "gap": "Current-source browser/backend demo và disposition viewport/offline còn mở; Chrome connection HOLD. SDK v2 connects/list_pages text succeeds, but adapter requires unavailable structuredContent; no ExampleDomain/PNG, Chrome cleanup UNKNOWN.",
       "owner": "Root / Product Owner",
       "destination": "Cùng R139 G2 proof và G3; Owner chấp nhận qualification viewport/raster/offline.",
       "evidence": [
@@ -176,6 +194,10 @@ Root exact runtime release binds operative admission15cfb528, source2644ae8, pre
         {
           "path": "docs/reviews/R135_M3_ACCEPTANCE_DELTA_2026-10-20.md",
           "sha256": "cfe89ee2ddf42dcbf80edfb316ff5a05f5f364907bfb8636d9e69bfc99bd4a00"
+        },
+        {
+          "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/root_execution_v2_review.json",
+          "sha256": "b16c8dcba90d7c9206ac127e7d3baa64cbfa9a619d074e9044bc56d94f02a093"
         }
       ]
     }
@@ -193,11 +215,16 @@ Root exact runtime release binds operative admission15cfb528, source2644ae8, pre
     }
   ],
   "conclusions": {
-    "tranche": "PENDING",
-    "trancheSummary": "Source repair/admission pending; native browser NOT_RUN.",
-    "trancheEvidence": [],
-    "product": "PENDING",
-    "productSummary": "Full M3/FREEZE open and old product execution HOLD; capability slice cannot close them.",
+    "tranche": "BLOCKED",
+    "trancheSummary": "One-shot native lifecycle blocked by adapter schema; SDK connect1/tool1 established, Chrome cleanup UNKNOWN, no retry.",
+    "trancheEvidence": [
+      {
+        "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/root_execution_v2_review.json",
+        "sha256": "b16c8dcba90d7c9206ac127e7d3baa64cbfa9a619d074e9044bc56d94f02a093"
+      }
+    ],
+    "product": "BLOCKED",
+    "productSummary": "Full R139/M3/FREEZE remains open; product execution HOLD, no product/provider/AI governance proof.",
     "acceptance": [],
     "owner": "Root review kỹ thuật; Product Owner chấp nhận nghiệp vụ."
   }

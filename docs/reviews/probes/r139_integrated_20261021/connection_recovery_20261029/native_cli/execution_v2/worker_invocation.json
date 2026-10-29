@@ -1,0 +1,9 @@
+{
+  "startUtc": "2026-10-29T17:11:03.6037873Z",
+  "endUtc": "2026-10-29T17:11:18.5953787Z",
+  "nodePid": 4152,
+  "exitCode": 1,
+  "releaseHead": "d9cac663be224365ef9f42fc9d7181ea3bc7cc0f",
+  "stdout": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\connection_recovery_20261029\\native_cli\\execution_v2\\worker_stdout.txt",
+  "stderr": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\connection_recovery_20261029\\native_cli\\execution_v2\\worker_stderr.txt"
+}
