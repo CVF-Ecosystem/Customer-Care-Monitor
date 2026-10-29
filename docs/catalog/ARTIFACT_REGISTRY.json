@@ -5,6 +5,27 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r139-connection-recovery-admission-20261029",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CONNECTION-RECOVERY-20261029-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Owner-delegated supported GPT-first connection diagnostic and conditional Antigravity fallback; no product effects."
+    },
+    {
+      "id": "r139-connection-recovery-review-20261029",
+      "family": "continuity",
+      "path": "docs/reviews/R139_CONNECTION_RECOVERY_REVIEW_2026-10-29.md",
+      "status": "ACTIVE",
+      "description": "Independent Terra admission and Root connection-result review; spent history and runtime boundaries retained."
+    },
+    {
+      "id": "r139-connection-recovery-external-20261029",
+      "family": "continuity",
+      "path": "docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_HANDOFF_2026-10-29.md",
+      "status": "ACTIVE",
+      "description": "One complete conditional Antigravity handoff; release requires Root-reviewed actual local outcome."
+    },
+    {
       "id": "r139-commit-maintenance-scope-20261029",
       "family": "continuity",
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-COMMIT-MAINTENANCE-SCOPE-ADMISSION.json",

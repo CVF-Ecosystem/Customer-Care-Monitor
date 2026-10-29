@@ -1,4 +1,14 @@
 {
+  "x-connectionRecovery20261029": {
+    "status": "LOCAL_DIAGNOSTIC_REVIEWED_PENDING_COMMIT",
+    "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CONNECTION-RECOVERY-20261029-ADMISSION.json",
+    "review": "docs/reviews/R139_CONNECTION_RECOVERY_REVIEW_2026-10-29.md",
+    "externalPacket": "docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_HANDOFF_2026-10-29.md",
+    "localMethodsUsed": 0,
+    "externalJobsUsed": 0,
+    "providerCalls": 0,
+    "productRuntimeAdmission": false
+  },
   "x-roadmapDocumentaryReconciliation20261029": {
     "date": "2026-10-29",
     "status": "STATIC_MAINTENANCE_REVIEW_PASS_PRODUCT_HOLD",

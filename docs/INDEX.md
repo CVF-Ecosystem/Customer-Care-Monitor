@@ -4539,6 +4539,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent static profile/scope/catalog compatibility review and commit disposition; no product acceptance.: `docs/reviews/R139_COMMIT_MAINTENANCE_REVIEW_2026-10-29.md`
 - Owner-directed static commit compatibility SPEC; exact-path maintenance, independent review and no runtime effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-COMMIT-MAINTENANCE-SCOPE-ADMISSION.json`
 - Byte preservation for fresh same-order custody metadata/code-as-data only.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/.gitattributes`
+- Owner-delegated supported GPT-first connection diagnostic and conditional Antigravity fallback; no product effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-CONNECTION-RECOVERY-20261029-ADMISSION.json`
+- One complete conditional Antigravity handoff; release requires Root-reviewed actual local outcome.: `docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_HANDOFF_2026-10-29.md`
+- Independent Terra admission and Root connection-result review; spent history and runtime boundaries retained.: `docs/reviews/R139_CONNECTION_RECOVERY_REVIEW_2026-10-29.md`
 - Four-path intended recovery design only; source renewal pending Owner decision; no new helper or effect.: `docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_2026-10-23.md`
 - Independent Root documentary review; finite source-only proposal ready for Owner, M3 runtime remains OPEN.: `docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_REVIEW_2026-10-23.md`
 - R139 actual third-controller HOLD or delegated consolidated preclock repair evidence/metadata; no campaign/product acceptance.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_coordination_owner_v2_20261027.json`

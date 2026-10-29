@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "OWNER_DELEGATED_SUPPORTED_BROWSER_CONNECTION_RECOVERY",
+  "date": "2026-10-29",
+  "ownerInstruction": "cho phép toàn quyền xử lý, nếu GPT không kết nối được, cần agents trong môi trường khác/như Antigravity thì báo tôi copy qua đó",
+  "ownerApproved": true,
+  "riskCeiling": "R2",
+  "roles": {
+    "dispatcherCommitSteward": "Root",
+    "localExecutor": "Sol Medium in current GPT runtime",
+    "admissionReviewer": "Terra 6.1 High",
+    "resultReviewer": "Root independent of execution",
+    "externalFallback": "Owner-transferred Antigravity/Gemini actor, actual identity required"
+  },
+  "scope": "One consolidated connection recovery inside existing R139/M3-05/M3-08: current GPT worker capability check first, then one copyable external transfer if required. This is connection/capability evidence, not product G0 or a runtime effect release.",
+  "sourceBaseline": "a09b5265f8515851105fd6315637b39498317dc0",
+  "preconditions": [
+    "Read canonical continuity and this independently reviewed committed admission before browser effects",
+    "Read relevant skill/tool documentation and use only actually exposed official APIs",
+    "No cached actor/browser IDs or impersonated actor identity"
+  ],
+  "localBudget": {
+    "inventoryCalls": 1,
+    "officialBrowserApiAttemptsTotal": 10,
+    "ownedTabs": 1,
+    "captures": 1,
+    "wallSeconds": 180,
+    "automaticRetries": 0
+  },
+  "localRoute": [
+    "Use the worker actor's one official browser inventory. Record only browser-relevant metadata and actual capabilities, omitting unrelated personal surfaces.",
+    "If no browser is exposed, stop local execution and return the original bounded result. A browser failure stops dependent actions; no blind second inventory, selector or alternate automation stack.",
+    "When an actual supported browser is exposed, select it using its returned identity/documented API, create one owned tab at https://example.com/, read actual URL/title/page, capture one real screenshot, close only the owned tab, and observe closure when the API supports it.",
+    "Preserve original screenshot bytes if an official export exists; otherwise report INLINE_ONLY/NOT_EXPORTED honestly, never invent a file/hash. Record per-call outcomes and UNKNOWN effects. Cleanup only a proven owned tab using supported APIs."
+  ],
+  "externalBudget": {
+    "connectionMetadataReads": 3,
+    "supportedIsolatedProfileSetupPasses": 1,
+    "officialBrowserJobs": 1,
+    "outerApiAttemptsTotal": 10,
+    "ownedTabs": 1,
+    "captures": 1,
+    "wallSeconds": 300,
+    "automaticRetries": 0
+  },
+  "externalRoute": "Conditional on Root accepting local failure and handing off the committed packet. Confirm actual Chrome/bridge version, mode and target profile through supported non-secret metadata. Configure at most one isolated test profile via the runtime's official supported connection/launch facility if needed and available. No personal-profile exposure, user Chrome termination, raw debugging workaround, new helper/plugin installation or generic CDP client. Then one owned example.com read/capture/close check. Unsupported setup, security barrier, first denial/timeout or uncertain effects: stop and return exact blocker; do not generate another readiness/repair chain.",
+  "networkOrigins": [
+    "https://example.com"
+  ],
+  "evidenceRoot": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029",
+  "localReturn": "docs/reviews/R139_GPT_CONNECTION_RECOVERY_RETURN_2026-10-29.md",
+  "externalPacket": "docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_HANDOFF_2026-10-29.md",
+  "retained": {
+    "historicalSourceChecks": 27,
+    "historicalControllers": 4,
+    "historicalCampaigns": 1,
+    "historicalServiceQueries": 5,
+    "historicalBrowserMethods": 14,
+    "spentGeminiJobs": 1,
+    "historicalDiagnosticDocs": 2,
+    "historicalPackagedDocs": 2,
+    "historicalPricingReads": 2,
+    "allUnknownEffects": "PRESERVED"
+  },
+  "newBudgetMeaning": "Fresh Root-assigned finite limits under this explicit delegated grant, never resets or unused slots of historical packets. Count failed attempts. External stage stays unused until actual transfer.",
+  "prohibitedEffects": [
+    "Product pages/localhost, DB/Docker/server/fixture/controller/campaign",
+    "Credential/key reads, grant/execute/provider requests, account/channel/customer data",
+    "Product source, installed profile/lock, original seeds or historical evidence edits",
+    "Worker commits, new tranche/order, source/test suite replay, runtime/product/G0 acceptance, push/merge/deploy"
+  ],
+  "roleBoundary": "Root remains orchestrator/reviewer; local and external executors supply their own actual actor evidence. The new GPT-first instruction conditionally supersedes Gemini-only routing for this capability diagnostic, without rewriting old assignments or results.",
+  "runtimePinBoundary": "Existing e9ddcbcd/profile1.1 execution contract and b8ead4f0/profile1.2 static carrier are unchanged. Profile mismatch must be resolved under applicable runtime authority before product execution. Stable-pin freshness exception is retained, not doctor PASS.",
+  "allowedWorkerPaths": [
+    "docs/reviews/R139_GPT_CONNECTION_RECOVERY_RETURN_2026-10-29.md",
+    "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/local/**"
+  ],
+  "acceptance": "Root independently reviews actual actor/tool/request/result/URL/capture/closure and accounting with provenance qualifications; missing evidence remains qualified/HOLD. If local cannot connect, produce one complete committed copyable external packet instead of repeating local calls.",
+  "allowedExternalPaths": [
+    "docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_RETURN_2026-10-29.md",
+    "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/external/**"
+  ]
+}
