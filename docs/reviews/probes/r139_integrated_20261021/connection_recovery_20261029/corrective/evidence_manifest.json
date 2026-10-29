@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "CORRECTIVE_NATIVE_SETUP_EVIDENCE_MANIFEST",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "date": "2026-10-29",
+  "actor": "Antigravity Corrective Setup Executor (Conversation ID: 96ae8e84-7c8d-49b9-90f2-0cd4b98e1284, Active Model: Gemini 3.8 Flash)",
+  "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SUPPORTED-NATIVE-START-ADMISSION.json",
+  "handoff": "docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_HANDOFF_2026-10-29.md",
+  "returnReport": "docs/reviews/R139_ANTIGRAVITY_SUPPORTED_SETUP_RETURN_2026-10-29.md",
+  "files": [
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/corrective/native_observation.json",
+      "bytes": 2595,
+      "sha256": "9e5783f885da54960f83b8affc9158d3f0710fdfbf8239dac9fd4d47bc70b828",
+      "description": "Caller-recorded native observation of global config (empty mcp_config.json), workspace config (absent .agents/), and unpacked chrome-devtools-mcp 1.9.0 package metadata."
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/corrective/setup_state.json",
+      "bytes": 2110,
+      "sha256": "245dc93eaa4a7066ff9ab83644abc0a42afc4cbfaff63d527b3a0ae83dd11d00",
+      "description": "Evaluation of supported setup facilities and stop-condition enforcement per Rule 3 (stopping before browser invocation due to absent supported setup control and unevidenced state change)."
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/corrective/usage.json",
+      "bytes": 1358,
+      "sha256": "ea8b5c7c9bf6d4f331b7db2a6b737884fd49b6bf859777a256f92e14f73912a1",
+      "description": "Corrective pass usage counters: 3/3 observations used, 1/1 setup passes used, 0 browser jobs used (stopped per rule), and retained historical counters."
+    }
+  ]
+}
+

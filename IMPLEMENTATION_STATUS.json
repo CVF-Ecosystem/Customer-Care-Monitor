@@ -1,4 +1,13 @@
 {
+  "x-ownedStdioCapability20261029": {
+    "status": "CORE_FRESHNESS_HOLD_SOURCE_CANDIDATE_REJECTED",
+    "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-OFFICIAL-CLI-ADMISSION.json",
+    "correctiveReturn": "docs/reviews/R139_ANTIGRAVITY_SUPPORTED_SETUP_RETURN_2026-10-29.md",
+    "sdkConnectUsed": 0,
+    "browserCallsUsed": 0,
+    "browserCumulativeBeforeSdk": 16,
+    "providerCalls": 0
+  },
   "x-connectionRecovery20261029": {
     "status": "EXTERNAL_BOUNDED_FAILURE_WITH_FINDINGS_CORRECTIVE_SETUP_READY",
     "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CONNECTION-RECOVERY-20261029-ADMISSION.json",

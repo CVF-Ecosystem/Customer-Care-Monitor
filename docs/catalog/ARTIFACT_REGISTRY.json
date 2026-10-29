@@ -5,6 +5,83 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r139-supported-setup-checkpoint-20261029-01",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-OFFICIAL-CLI-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Prospective SDK admission held; no runtime release, Core freshness prerequisite unresolved."
+    },
+    {
+      "id": "r139-supported-setup-checkpoint-20261029-02",
+      "family": "continuity",
+      "path": "docs/reviews/R139_ANTIGRAVITY_SUPPORTED_SETUP_RETURN_2026-10-29.md",
+      "status": "ACTIVE",
+      "description": "Received original corrective setup stop; raw hash differs by one final LF from supplied digest."
+    },
+    {
+      "id": "r139-supported-setup-checkpoint-20261029-03",
+      "family": "continuity",
+      "path": "docs/reviews/R139_SUPPORTED_SETUP_ROOT_REVIEW_2026-10-29.md",
+      "status": "ACTIVE",
+      "description": "Independent qualified corrective return review; original custody and browser16 preserved."
+    },
+    {
+      "id": "r139-supported-setup-checkpoint-20261029-04",
+      "family": "continuity",
+      "path": "docs/reviews/R139_NATIVE_SDK_CAPABILITY_REVIEW_2026-10-29.md",
+      "status": "ACTIVE",
+      "description": "Independent Core prerequisite HOLD, rejected unexecuted SDK candidate and concrete maintainer scope."
+    },
+    {
+      "id": "r139-supported-setup-checkpoint-20261029-05",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/root_corrective_result_review.json",
+      "status": "ACTIVE",
+      "description": "Raw received hash audit and qualified charged usage; no browser job from corrective setup."
+    },
+    {
+      "id": "r139-supported-setup-checkpoint-20261029-06",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/root_source_admission.json",
+      "status": "ACTIVE",
+      "description": "Read-only installed native source metadata and initial CLI findings; CLI draft never executed."
+    },
+    {
+      "id": "r139-supported-setup-checkpoint-20261029-07",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/run_owned_stdio.mjs",
+      "status": "ACTIVE",
+      "description": "Rejected unexecuted Sol SDK source candidate preserved unchanged; known defects, no release."
+    },
+    {
+      "id": "r139-supported-setup-checkpoint-20261029-08",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/corrective/evidence_manifest.json",
+      "status": "ACTIVE",
+      "description": "Original corrective caller-reported evidence preserved byte-for-byte; provenance qualified."
+    },
+    {
+      "id": "r139-supported-setup-checkpoint-20261029-09",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/corrective/native_observation.json",
+      "status": "ACTIVE",
+      "description": "Original corrective caller-reported evidence preserved byte-for-byte; provenance qualified."
+    },
+    {
+      "id": "r139-supported-setup-checkpoint-20261029-10",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/corrective/setup_state.json",
+      "status": "ACTIVE",
+      "description": "Original corrective caller-reported evidence preserved byte-for-byte; provenance qualified."
+    },
+    {
+      "id": "r139-supported-setup-checkpoint-20261029-11",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/corrective/usage.json",
+      "status": "ACTIVE",
+      "description": "Original corrective caller-reported evidence preserved byte-for-byte; provenance qualified."
+    },
+    {
       "id": "r139-antigravity-return-20261029",
       "family": "continuity",
       "path": "docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_RETURN_2026-10-29.md",

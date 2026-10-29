@@ -1,0 +1,67 @@
+{
+  "status": "ACCEPTED_BOUNDED_REPORTED_STOP_WITH_CUSTODY_AND_PROVENANCE_FINDINGS",
+  "reviewer": "Root independent of Antigravity executor",
+  "reportUserSha256": "1fee59e3da3041096354a05eef68d61d68c59913d4035a87f862c22941052e63",
+  "reportActualRawSha256": "2f195781db876306485f68fafd0a5e8a03292df287117f003172de294dfd9489",
+  "reportUserRawMatches": false,
+  "reportWithoutOneFinalLfMatches": true,
+  "manifestAudit": [
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/corrective/native_observation.json",
+      "recordedSha256": "9e5783f885da54960f83b8affc9158d3f0710fdfbf8239dac9fd4d47bc70b828",
+      "actualRawSha256": "55fbc57a2507e6054ce3c474f471b2976d5e5e2a1f22af8e9e1b98332bfb5405",
+      "recordedBytes": 2595,
+      "actualBytes": 2596,
+      "rawMatch": false,
+      "withoutOneFinalLfMatches": true
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/corrective/setup_state.json",
+      "recordedSha256": "245dc93eaa4a7066ff9ab83644abc0a42afc4cbfaff63d527b3a0ae83dd11d00",
+      "actualRawSha256": "a58d099c93fafb1e8ed0739ad5150c0b14f14fbdd81e9db555a389fa63ddd718",
+      "recordedBytes": 2110,
+      "actualBytes": 2111,
+      "rawMatch": false,
+      "withoutOneFinalLfMatches": true
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/corrective/usage.json",
+      "recordedSha256": "ea8b5c7c9bf6d4f331b7db2a6b737884fd49b6bf859777a256f92e14f73912a1",
+      "actualRawSha256": "9f9521b9e8487723706ec10b87259e1e042a9827b4011c19493aa06c6f92c55f",
+      "recordedBytes": 1358,
+      "actualBytes": 1359,
+      "rawMatch": false,
+      "withoutOneFinalLfMatches": true
+    }
+  ],
+  "receivedRawSha256": {
+    "docs/reviews/R139_ANTIGRAVITY_SUPPORTED_SETUP_RETURN_2026-10-29.md": "2f195781db876306485f68fafd0a5e8a03292df287117f003172de294dfd9489",
+    "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/corrective/evidence_manifest.json": "7c3e953fde696a427211fcc70a27dcc672d4c23476e98eaff44422ab6dd34158",
+    "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/corrective/native_observation.json": "55fbc57a2507e6054ce3c474f471b2976d5e5e2a1f22af8e9e1b98332bfb5405",
+    "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/corrective/setup_state.json": "a58d099c93fafb1e8ed0739ad5150c0b14f14fbdd81e9db555a389fa63ddd718",
+    "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/corrective/usage.json": "9f9521b9e8487723706ec10b87259e1e042a9827b4011c19493aa06c6f92c55f"
+  },
+  "provenance": "Caller-recorded summaries; no actual UI/command/timing transcript supplied. Preserve received bytes; oneLF calculations explain but do not authenticate origin.",
+  "usageChargedAsReported": {
+    "observations": 3,
+    "setupPass": 1,
+    "reload": 0,
+    "browserJob": 0,
+    "browserApi": 0,
+    "capture": 0
+  },
+  "cumulativeBrowserRemains": 16,
+  "whole600Seconds": "NOT_PROVEN_BY_ORIGINAL_TIMESTAMPS",
+  "nativeUiFacilityAbsence": "NOT_ESTABLISHED",
+  "currentRootCorroboration": {
+    "emptyConfigPath": "C:/Users/tiennm/.gemini/config/mcp_config.json",
+    "emptyConfigBytes": 0,
+    "installedPackageVersion": "1.9.0",
+    "installedChromeFileVersion": "156.0.8078.48",
+    "installedNodeFileVersion": "24.19.0",
+    "scope": "Root direct named-file metadata after return, not proof of the earlier actor snapshot."
+  },
+  "nextRoute": "Actual installed official SDK managed isolated stdio. CLI draft rejected before execution. Source authoring only pending independent source acceptance/release. No user-config changes/install/new browser action yet.",
+  "allHistoricalUnknowns": "PRESERVED",
+  "providerProductEffects": 0
+}

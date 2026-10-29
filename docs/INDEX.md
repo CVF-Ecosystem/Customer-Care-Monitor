@@ -4980,6 +4980,17 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Immutable same-scope source-repair handover; original remaining shared caps only.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-REPAIR-ADMISSION.json`
 - Immutable unused source-cap continuation only; no new browser/runtime/provider authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-SOURCE-RESUME-ADMISSION.json`
 - G0 data-scheme diagnostic denied; exact partial-tab cleanup and owner-transfer hold, HTTP untested.: `docs/reviews/R139_BROWSER_CAPABILITY_HOLD_AND_TRANSFER_2026-10-21.md`
+- Prospective SDK admission held; no runtime release, Core freshness prerequisite unresolved.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-OFFICIAL-CLI-ADMISSION.json`
+- Received original corrective setup stop; raw hash differs by one final LF from supplied digest.: `docs/reviews/R139_ANTIGRAVITY_SUPPORTED_SETUP_RETURN_2026-10-29.md`
+- Independent qualified corrective return review; original custody and browser16 preserved.: `docs/reviews/R139_SUPPORTED_SETUP_ROOT_REVIEW_2026-10-29.md`
+- Independent Core prerequisite HOLD, rejected unexecuted SDK candidate and concrete maintainer scope.: `docs/reviews/R139_NATIVE_SDK_CAPABILITY_REVIEW_2026-10-29.md`
+- Raw received hash audit and qualified charged usage; no browser job from corrective setup.: `docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/root_corrective_result_review.json`
+- Read-only installed native source metadata and initial CLI findings; CLI draft never executed.: `docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/root_source_admission.json`
+- Rejected unexecuted Sol SDK source candidate preserved unchanged; known defects, no release.: `docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/run_owned_stdio.mjs`
+- Original corrective caller-reported evidence preserved byte-for-byte; provenance qualified.: `docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/corrective/evidence_manifest.json`
+- Original corrective caller-reported evidence preserved byte-for-byte; provenance qualified.: `docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/corrective/native_observation.json`
+- Original corrective caller-reported evidence preserved byte-for-byte; provenance qualified.: `docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/corrective/setup_state.json`
+- Original corrective caller-reported evidence preserved byte-for-byte; provenance qualified.: `docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/corrective/usage.json`
 - Filesystem-only executable/cache pins; not runtime capability or image cache proof.: `docs/reviews/probes/r139_integrated_20261021/root_filesystem_tool_inventory.json`
 - Same R139 PARKED REVIEW: source accepted, tool/cache prerequisites observed; no integrated runtime or FREEZE.: `CVF_SESSION/tranches/CCMAI-RUNTIME-139.json`
 - R139 v2 actual bounded offline source-contract focused return with original wait; no campaign/runtime claim.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_source_contract_worker_return_v2_20261027.json`

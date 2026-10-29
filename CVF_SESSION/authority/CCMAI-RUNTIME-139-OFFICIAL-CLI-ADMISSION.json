@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "OWNER_DELEGATED_OFFICIAL_MCP_OWNED_STDIO_CAPABILITY",
+  "date": "2026-10-29",
+  "ownerInstruction": "cho phép toàn quyền xử lý, nếu GPT không kết nối được, cần agents trong môi trường khác/như Antigravity thì báo tôi copy qua đó",
+  "riskCeiling": "R2",
+  "roles": {
+    "dispatcherCommitSteward": "Root",
+    "executor": "Terra6.1High /root/sdk_source_worker, replacement for quota-limited Sol Medium; Root independent reviewer",
+    "admissionReviewer": "Terra6.1High",
+    "resultReviewer": "Root independent of execution"
+  },
+  "scope": "One managed isolated Chrome lifecycle via official Client/StdioClientTransport SDK bundled with installed Chrome DevTools MCP1.9.0. Use the exact official server once, no CLI daemon or bespoke CDP/protocol implementation. Replaces the unexecuted CLI draft after independent review found implicit restart. Same R139/M3-05/M3-08; no installation, configuration edit or product runtime.",
+  "sourceAdmission": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/root_source_admission.json",
+  "sourceAdapter": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/run_owned_stdio.mjs",
+  "effectRelease": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/runtime_release.json",
+  "authoringBudgetMinutes": 15,
+  "releaseContract": "Root creates approved runtime_release only after independent source PASS, binding raw admission/adapter hashes, preparationHead5eccd326, actual runId and reviewer. All three committed blobs must equal HEAD; runtime release's latest commit must equal HEAD, with preparationHead ancestor. Exclusive execution attempt claim prevents process relaunch from resetting budgets. No release, source mismatch or stale HEAD means zero SDK import/connect.",
+  "runId": "b7a56dcf-e6a3-40d7-a213-d5acc6b15ecd",
+  "nodePath": "C:/Program Files/nodejs/node.exe",
+  "serverPath": "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/bin/chrome-devtools-mcp.js",
+  "sdkBundlePath": "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/third_party/index.js",
+  "chromePath": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+  "pinsRawSha256": {
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/package.json": "592ef654a308edcba5fb3c2b302173650096a9487e4120b96e7adbe830429b9f",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/bin/chrome-devtools.js": "c380c15c89425bfe8e0aeb7720bf3996d681752413ef77cb3a33f769a8c70dc5",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/bin/chrome-devtools-mcp.js": "9f380d06e1ac05b257e27e708c0cc4b4ba190e285ed6eb6c8aa50978d98a12c5",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/daemon/client.js": "fc6500be58f2de1c941d66171a43fa8bf796cbea9420575bd8b299ff4e66f1a1",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/daemon/utils.js": "6769ad4523dfe5f65b7650117135393918146866ccb5f7d583afc271512e7f7b",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/daemon/daemon.js": "eab00479391fece6afe0d45afe564bf0e9e8b4f461d7ec5c9f9bfe9aefacf7fa",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/config/browser-options.js": "d172515ff92e0efdda98e84581c46e2db97ba0ff3536507bf3a9da022dcd1887",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/config/mcp-options.js": "2fc554986209b3cfadcbe70552994111aadedf2e159b3de61a12b96233f18f67",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/config/cli-options.js": "05011d9cc5fecae6f359c4aff3272eedb35796cf2e6cbf53db39fe52a49dbffb",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/browser.js": "17f861505810a9d25784fd71bf0592966f513c420b57a728b344280e97fe596c",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/utils/check-for-updates.js": "e8d5efcf2dd02ec58a8f0352a90344c8fd12229d5f48b2822bea6ebb2017a9cb",
+    "C:/Program Files/nodejs/node.exe": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+    "C:/Program Files/Google/Chrome/Application/chrome.exe": "480f275b63d1ea39113cbc8344ac395578acc25b432bd39af5fbc77005179aca",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/third_party/index.js": "fc6ae43cb8f6007eba4b0f269290ec8fea6db7670686d17967b4812d90d2cc10"
+  },
+  "limits": {
+    "sdkConnectCalls": 1,
+    "serverStarts": 1,
+    "browserToolCalls": 8,
+    "maxOwnedPagesTotal": 2,
+    "testTabs": 1,
+    "captures": 1,
+    "wallSecondsIncludingCleanup": 300,
+    "perToolTimeoutMilliseconds": 30000,
+    "automaticRetriesOrReconnects": 0,
+    "cleanupReserveSeconds": 60,
+    "ownedProcessObservationPasses": 3
+  },
+  "requiredEnvironment": {
+    "CHROME_DEVTOOLS_MCP_NO_UPDATE_CHECKS": "1",
+    "CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS": "1"
+  },
+  "startOptions": [
+    "--isolated",
+    "--headless",
+    "--executablePath=<exact pinned Chrome>",
+    "--no-usage-statistics",
+    "--no-performance-crux",
+    "--filesystemRoot=<absolute owned native_cli evidence directory>"
+  ],
+  "steps": [
+    "Verify committed admission and all pinned files. Use only bundled official Client and StdioClientTransport as the installed vendor daemon does; no CLI wrapper. Worker authors a small source adapter without effects; independent review and committed adapter pins precede runtime.",
+    "Construct exactly1 transport with exact Node/server/options/env/cwd and piped stderr. Call client.connect exactly once. Save actual transport.pid and lifecycle events; no reconnect, replacement or implicit restart. No shared daemon is attached or stopped.",
+    "Verify actual server PID and owned descendant Chrome identity/isolated temporary profile using bounded metadata after official list_pages initializes the browser. Transport loss or uncertain ownership/isolation stops dependent actions.",
+    "Keep the owned startup about:blank support page, create1 separate https://example.com/ target tab using official new_page and actual returned IDs. Snapshot/read URL and Example Domain, capture1 actual PNG under owned evidence root.",
+    "Close only the owned target via official close_page; list_pages verifies target gone. Support blank page is allowed solely because vendor refuses closing the last page.",
+    "Always close the held SDK client/transport in finally. Its native close operates only on its exact spawned child; capture actual closure and bounded known-PID absence or UNKNOWN. No global/user Chrome interference."
+  ],
+  "errorBoundary": "First connection/tool failure or unknown outcome stops dependent test actions. Only SDK close of its own held child and bounded cleanup observations may follow. Never reconnect or replace transport after error/close. No certificate bypass, installs or extra attempts.",
+  "sdkLifecycleBinding": "Installed StdioClientTransport exposes its own native child PID. send rejects Not connected after process loss and does not auto-start. Adapter must enforce connectCount<=1, retain first PID and never reconnect. Native close ends owned stdin and may signal only its held child after the SDK waits; actual outcome is observed or qualified. RunId is an ownership label, not a fabricated returned target ID.",
+  "networkOrigins": [
+    "https://example.com"
+  ],
+  "prohibitedEffects": [
+    "Product/localhost, backend/DB/Docker/fixture/controller/campaign/provider/key/grant/execute/customer data",
+    "CLI daemon wrapper, npx/npm/package download/update, generic/custom CDP or hand-built protocol, unmanaged Chrome/debugging-port launch",
+    "Personal/default profile, existing daemon or user Chrome interference, global OS security settings or certificate bypass",
+    "User configuration edits, original evidence/seed/profile/gate/source edits, worker commit, push/merge/deploy or G0/M3/FREEZE claim"
+  ],
+  "workerAllowedPaths": [
+    "docs/reviews/R139_OFFICIAL_CLI_CAPABILITY_RETURN_2026-10-29.md",
+    "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/**",
+    ".cvf/runtime/r139_native_cli_20261029/**"
+  ],
+  "retained": {
+    "browserMethodsBeforeNative": 16,
+    "sourceChecks": 27,
+    "controllers": 4,
+    "campaigns": 1,
+    "services": 5,
+    "correctiveObservationsChargedAsReported": 3,
+    "correctiveSetupPassChargedAsReported": 1,
+    "correctiveBrowserJobsUsed": 0,
+    "allUnknowns": "PRESERVED"
+  },
+  "accounting": "Fresh internally assigned limits under existing explicit Owner grant; old unused jobs not reused. Track SDK connect, browser methods, closure and process observations separately; count failures. Root reviews original receipts, screenshot, actual ownership/isolation and cleanup independently; no authenticated export or global zero-effect claim.",
+  "precondition": "Independent Terra admission PASS; worker adapter source separately independently reviewed and pinned; current continuity synchronized and Root committed effect release before runtime. Root remains orchestrator/reviewer; no provider/product runtime release.",
+  "status": "PROSPECTIVE_DRAFT_HELD_NOT_EXECUTABLE",
+  "holdReason": "Doctor FAIL27/28 BEHIND_PUBLIC_REMOTE; prior documentary/static exception does not admit source/browser runtime. Terra replacement stopped before source edits/checks. Candidate rejected, runtime_release absent. No connect or execution authority from this draft."
+}

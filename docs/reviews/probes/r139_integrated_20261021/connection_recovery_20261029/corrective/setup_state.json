@@ -1,0 +1,35 @@
+{
+  "evidenceClass": "CALLER_RECORDED_SETUP_STATE_ASSESSMENT",
+  "actor": "Antigravity Corrective Setup Executor (Conversation ID: 96ae8e84-7c8d-49b9-90f2-0cd4b98e1284, Active Model: Gemini 3.8 Flash)",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SUPPORTED-NATIVE-START-ADMISSION.json",
+  "recordedAtLocal": "2026-10-29T15:15:30+07:00",
+  "setupPassesMax": 1,
+  "setupPassesUsed": 1,
+  "targetChromeConnectionReloadsMax": 1,
+  "targetChromeConnectionReloadsUsed": 0,
+  "setupEvaluation": {
+    "ideManagedBrowserLaunchControl": "NOT_EXPOSED_TO_AGENT",
+    "editableExistingChromeMcpDeclaration": "ABSENT_IN_GLOBAL_AND_WORKSPACE",
+    "connectionStateChanged": false,
+    "isolatedProfileOwnershipEstablished": false,
+    "prohibitedActionsAvoided": [
+      "No raw debugging CLI flags executed against host Chrome",
+      "No user Chrome processes terminated",
+      "No personal profile data accessed or exposed",
+      "No unreviewed npm package or plugin installed",
+      "No security-barrier or sandbox bypass attempted"
+    ]
+  },
+  "stopConditionResult": {
+    "rule": "R139 Corrective Handoff Rule 3 & User Directive (Verify and establish supported connection first; only call browser after evidenced state change. If control is absent or inaccessible, stop before job.)",
+    "status": "STOPPED_BEFORE_BROWSER_JOB",
+    "browserJobExecuted": false
+  },
+  "blockerAndResolution": {
+    "exactMissingNativeControl": "An agent-accessible official Antigravity IDE browser launch control or an existing editable Chrome MCP configuration declaration supporting isolated profile launch.",
+    "smallestRealHumanAction": "The operator must start Chrome with remote debugging enabled on an isolated test profile (e.g. via chrome://inspect/#remote-debugging or launching Chrome with an isolated user-data-dir and remote-debugging-port), or configure an official Chrome DevTools MCP server block with managed launch in ~/.gemini/config/mcp_config.json."
+  },
+  "provenanceLimit": "Caller-recorded setup evaluation; not an authenticated Root-native observation."
+}
+

@@ -1,0 +1,34 @@
+{
+  "class": "ROOT_NATIVE_READ_ONLY_SOURCE_AND_FILE_METADATA_OBSERVATION",
+  "configurationPath": "C:/Users/tiennm/.gemini/config/mcp_config.json",
+  "configurationBytesObserved": 0,
+  "packageName": "chrome-devtools-mcp",
+  "packageVersion": "1.9.0",
+  "chromeFileVersionObserved": "156.0.8078.48",
+  "nodeFileVersionObserved": "24.19.0",
+  "pinsRawSha256": {
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/package.json": "592ef654a308edcba5fb3c2b302173650096a9487e4120b96e7adbe830429b9f",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/bin/chrome-devtools.js": "c380c15c89425bfe8e0aeb7720bf3996d681752413ef77cb3a33f769a8c70dc5",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/bin/chrome-devtools-mcp.js": "9f380d06e1ac05b257e27e708c0cc4b4ba190e285ed6eb6c8aa50978d98a12c5",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/daemon/client.js": "fc6500be58f2de1c941d66171a43fa8bf796cbea9420575bd8b299ff4e66f1a1",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/daemon/utils.js": "6769ad4523dfe5f65b7650117135393918146866ccb5f7d583afc271512e7f7b",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/daemon/daemon.js": "eab00479391fece6afe0d45afe564bf0e9e8b4f461d7ec5c9f9bfe9aefacf7fa",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/config/browser-options.js": "d172515ff92e0efdda98e84581c46e2db97ba0ff3536507bf3a9da022dcd1887",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/config/mcp-options.js": "2fc554986209b3cfadcbe70552994111aadedf2e159b3de61a12b96233f18f67",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/config/cli-options.js": "05011d9cc5fecae6f359c4aff3272eedb35796cf2e6cbf53db39fe52a49dbffb",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/browser.js": "17f861505810a9d25784fd71bf0592966f513c420b57a728b344280e97fe596c",
+    "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/utils/check-for-updates.js": "e8d5efcf2dd02ec58a8f0352a90344c8fd12229d5f48b2822bea6ebb2017a9cb",
+    "C:/Program Files/nodejs/node.exe": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+    "C:/Program Files/Google/Chrome/Application/chrome.exe": "480f275b63d1ea39113cbc8344ac395578acc25b432bd39af5fbc77005179aca"
+  },
+  "sessionIdAssignedForNewOwnedNamespace": "b7a56dcf-e6a3-40d7-a213-d5acc6b15ecd",
+  "findings": [
+    "Official CLI supports unique session IDs, explicit start/status/stop and native MCP commands. No custom protocol client needed.",
+    "Start managed isolated headless with explicit installed Chrome, no autoConnect/browserURL/debugging-port args. Browser launch uses pipe and isolated temporary profile.",
+    "CLI starts update-check code at import; set CHROME_DEVTOOLS_MCP_NO_UPDATE_CHECKS=1 before ANY invocation. Installed source honors it.",
+    "Set CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS=1 and explicit no-usage-statistics/no-performance-crux options. Restrict filesystem with --workspace=<evidence directory>.",
+    "Official close_page cannot close last page, so retain the new owned startup blank page and allow one separate owned Example Domain tab, then stop the entire owned session.",
+    "Session ID must be hex/hyphen; assigned UUID is an ownership namespace, not a fabricated returned browser/page ID. Use actual returned page IDs only."
+  ],
+  "provenanceLimit": "Root directly read named installed public-package files and executable metadata, not a signature/provenance certification of the complete dependency tree. This does not establish prior worker snapshot or browser capability."
+}

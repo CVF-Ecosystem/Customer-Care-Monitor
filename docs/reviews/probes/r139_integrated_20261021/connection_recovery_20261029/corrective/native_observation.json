@@ -1,0 +1,41 @@
+{
+  "evidenceClass": "CALLER_RECORDED_NATIVE_OBSERVATION",
+  "actor": "Antigravity Corrective Setup Executor (Conversation ID: 96ae8e84-7c8d-49b9-90f2-0cd4b98e1284, Active Model: Gemini 3.8 Flash)",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SUPPORTED-NATIVE-START-ADMISSION.json",
+  "recordedAtLocal": "2026-10-29T15:15:00+07:00",
+  "observationsTotalMax": 3,
+  "observationsTotalUsed": 3,
+  "observations": [
+    {
+      "observationIndex": 1,
+      "surface": "Global Antigravity Customization Configuration",
+      "targetPath": "C:/Users/tiennm/.gemini/config/mcp_config.json",
+      "status": "FILE_EXISTS_EMPTY",
+      "details": "Global MCP configuration file exists at C:/Users/tiennm/.gemini/config/mcp_config.json, but is completely empty (0 bytes). No existing editable mcpServers entries or Chrome DevTools MCP declarations are present."
+    },
+    {
+      "observationIndex": 2,
+      "surface": "Workspace Project Customization Directory",
+      "targetPath": "D:/UNG DUNG AI/TOOL AI 2026/CVF-Workspace/Customer-Care-Monitor-AI/.agents/ and mcp_config.json",
+      "status": "NOT_PRESENT",
+      "details": "Neither .agents/ nor workspace-level mcp_config.json exists in the project root. No workspace-scoped Chrome MCP server declaration is defined."
+    },
+    {
+      "observationIndex": 3,
+      "surface": "Antigravity Application Resources & Host Chrome State",
+      "targetPath": "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/package.json and agy/package.json",
+      "status": "UNPACKED_PACKAGE_FOUND_BUILTIN_TOOLS_ONLY",
+      "details": "chrome-devtools-mcp package version 1.9.0 is bundled and unpacked under Antigravity application resources. The Antigravity IDE extension manifest (agy/package.json) mounts the built-in browser subagent tools directly via the language server, exposing no user-configurable browser launch parameters (e.g. --isolated or custom user-data-dir). Host Chrome process count is 0, and DevToolsActivePort is absent at C:/Users/tiennm/AppData/Local/Google/Chrome/User Data/DevToolsActivePort."
+    }
+  ],
+  "hostChromeState": {
+    "binaryPath": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+    "binaryExists": true,
+    "processCount": 0,
+    "devToolsActivePortPath": "C:/Users/tiennm/AppData/Local/Google/Chrome/User Data/DevToolsActivePort",
+    "devToolsActivePortExists": false
+  },
+  "provenanceLimit": "Caller-recorded file inspections and process counts; not an authenticated Root-native observation."
+}
+

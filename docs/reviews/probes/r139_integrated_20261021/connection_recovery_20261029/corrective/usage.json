@@ -1,0 +1,41 @@
+{
+  "trancheId": "CCMAI-RUNTIME-139",
+  "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SUPPORTED-NATIVE-START-ADMISSION.json",
+  "status": "STOPPED_BEFORE_BROWSER_JOB_MISSING_SUPPORTED_SETUP",
+  "freshRootAssignedLimits": {
+    "relevantNativeUiOrConfigurationObservationsMax": 3,
+    "relevantNativeUiOrConfigurationObservationsUsed": 3,
+    "supportedSetupPassesMax": 1,
+    "supportedSetupPassesUsed": 1,
+    "targetChromeConnectionReloadsMax": 1,
+    "targetChromeConnectionReloadsUsed": 0,
+    "conditionalBrowserJobsMax": 1,
+    "conditionalBrowserJobsUsed": 0,
+    "browserApiAttemptsMax": 10,
+    "browserApiAttemptsUsed": 0,
+    "ownedTabsMax": 1,
+    "ownedTabsCreated": 0,
+    "capturesMax": 1,
+    "capturesUsed": 0,
+    "wallSecondsCap": 600,
+    "wallSecondsElapsed": 120,
+    "automaticBrowserRetries": 0
+  },
+  "cleanup": "NOT_APPLICABLE_NO_OWNED_TAB_CREATED",
+  "browserExecutionState": "NOT_RUN_STOPPED_BEFORE_JOB_PER_RULE_3",
+  "retainedHistoricalCounters": {
+    "cumulativeBrowserMethodsBeforeCorrective": 16,
+    "oldLocalInventorySpent": 1,
+    "oldExternalMetadataSpent": 3,
+    "oldExternalJobSpent": 1,
+    "oldExternalApiSpent": 1,
+    "oldGeminiJobRetainedSpent": 1,
+    "sourceChecks": 27,
+    "controllers": 4,
+    "campaigns": 1,
+    "services": 5,
+    "allUnknowns": "PRESERVED"
+  },
+  "productAndProviderEffects": 0
+}
+
