@@ -4948,6 +4948,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independently reviewed R139 preclock metadata/draft preparation; Owner exact-page availability confirmed, current browser ACK pending; no campaign or runtime release.: `docs/reviews/R139_PRECLOCK_OPERATIONAL_PREPARATION_REVIEW_2026-10-24.md`
 - R139 preclock metadata/draft preparation only; no reservation or browser/product/provider release; actual native facts and actor window still required.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_public_tariff_result.json`
 - Original two catalog failures and finite proposed native/browser POST correction retained.: `docs/reviews/probes/r139_integrated_20261021/root_preparation_findings.json`
+- Finite source-only product admission reconciliation; nativev3 accepted but product runtime held, no effect grant.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-PRODUCT-ADMISSION-RECONCILIATION-ADMISSION.json`
+- Finite source-only product admission reconciliation; nativev3 accepted but product runtime held, no effect grant.: `docs/reviews/R139_PRODUCT_EXECUTION_ADMISSION_RECONCILIATION_ROOT_REVIEW_2026-10-30.md`
+- Finite source-only product admission reconciliation; nativev3 accepted but product runtime held, no effect grant.: `docs/reviews/probes/r139_integrated_20261021/product_admission_reconciliation_20261030/.gitattributes`
+- Finite source-only product admission reconciliation; nativev3 accepted but product runtime held, no effect grant.: `docs/reviews/probes/r139_integrated_20261021/product_admission_reconciliation_20261030/knowledge_ingest.json`
 - R139 source/IO accepted bounded after Go6/Python30+30; integrated runtime still HOLD, no new source/API authority.: `docs/reviews/R139_CHECK_ONLY_INDEPENDENT_REVIEW_2026-10-21.md`
 - R139 source/IO accepted bounded after Go6/Python30+30; integrated runtime still HOLD, no new source/API authority.: `docs/reviews/R139_CHECK_ONLY_WORKER_RETURN_2026-10-21.md`
 - R139 one-round replacement source preparation/review; actual worker failure and Root28PASS/compilePASS retained, no runtime acceptance.: `docs/reviews/R139_CONTINUATION_SOURCE_RETURN_2026-10-21.md`

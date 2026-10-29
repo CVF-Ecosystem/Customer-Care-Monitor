@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "ROOT_SOURCE_ONLY_PRODUCT_ADMISSION_RECONCILIATION",
+  "date": "2026-10-30",
+  "riskCeiling": "R2",
+  "baseCommit": "a607c894d6e9726a5162666515a415f6ca7ba67e",
+  "ownerAuthority": "Owner next after accepted native v3 capability; standing Root orchestrator/reviewer and full browser-handling grant. This contract executes only next source-only reconciliation, not fresh product/provider/runtime authority.",
+  "roles": {
+    "dispatcherCommitSteward": "Root",
+    "sourceAuditWorker": "Terra6.1High /root/v3_worker",
+    "independentReviewer": "Root; separate Terra6.1High /root/v3_admission_review checks admission and Root documentary projection"
+  },
+  "scope": "Finite reconciliation of existing R139 integrated work-order/source/runtime authorities against adopted Core15e/profile1.2 and accepted native SDK v3 public-page route. Identify exact adapter/contract gaps and concrete source-only next packet; do not create helper tranche or execution release.",
+  "question": "Which exact committed pin/actor/browser-receipt/controller/effect-contract differences still block current-source R139 E01-E06/G0-G3, and what smallest justified migration can be admitted next without reviving spent or expired grants?",
+  "output": [
+    "docs/reviews/R139_PRODUCT_EXECUTION_ADMISSION_SOURCE_AUDIT_2026-10-30.md",
+    "docs/reviews/probes/r139_integrated_20261021/product_admission_reconciliation_20261030/source_pin_inventory.json"
+  ],
+  "effort": {
+    "workerActiveMinutes": 20,
+    "semanticDomainFilesMax": 16,
+    "rootIndependentReviewActiveMinutes": 15,
+    "independentAdmissionReviewActiveMinutes": 10,
+    "nativeRuntimeOrSourceTestInvocations": 0
+  },
+  "sources": [
+    "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-139.json",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-ACTIVATION-ENV-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-139-V3-G0-TECHNICAL-RELEASE-ADMISSION.json",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-139-DOCKER-SNAPSHOT-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "docs/specs/M3_EXECUTION_UI_R136_SPEC_2026-10-20.md",
+    "docs/reviews/R139_NATIVE_SDK_V3_ROOT_REVIEW_2026-10-30.md",
+    "scripts/r139_execution_supervisor.py",
+    "backend/api/handlers/intervention_execution_browser_test.go"
+  ],
+  "dependencyReadPolicy": "Up to6additional committed source/activation/payload-design/receipt-schema files directly named by these sources, within total16; choose relevant ranges, do not read unrelated historical handoffs/fullstate. Continuity/manifest/policy/index and immutable Core contracts are startup authority, separate from semantic source cap. File hashes/git-blob comparisons are source observations only, no executable/tool invocation or environment probing. Do not open local ignored payload/config/env/key/secret files.",
+  "workerAllowedPaths": [
+    "docs/reviews/R139_PRODUCT_EXECUTION_ADMISSION_SOURCE_AUDIT_2026-10-30.md",
+    "docs/reviews/probes/r139_integrated_20261021/product_admission_reconciliation_20261030/source_pin_inventory.json"
+  ],
+  "rootAllowedDocumentaryPaths": [
+    "docs/reviews/R139_PRODUCT_EXECUTION_ADMISSION_RECONCILIATION_ROOT_REVIEW_2026-10-30.md",
+    "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+    "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+    "CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json",
+    "CVF_SESSION_MEMORY.md",
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md"
+  ],
+  "acceptance": [
+    "Exact source/ref/line/hash-backed drift inventory; distinguish raw current bytes from committed LF/CRLF and immutable historical pins.",
+    "Separate what native v3 proves from still-missing R139 product G0 session/ownership/handoff, G1/G2 receipts and real-provider effect authority.",
+    "Explicit remaining decision owner/next condition for each blocker, all8 M3 rows retained; no generic waiting-for-admission or user technical QA transfer.",
+    "Classify smallest next changes by source path/artifact/effect boundary; no implement now or widening canonical roadmap/seed.",
+    "Retain5Corepublicfindings, v2UNKNOWN and allspent budgets; no waiver from native v3 acceptance."
+  ],
+  "stop": "Stop at source limit, contradictory authority or missing material fact; name exact owned missing input and next decision, no automatic investigation renewal or runtime discovery.",
+  "prohibitedEffects": [
+    "SDK/browser/process metadata/service/controller/compile/test/server/DB/Docker/network/provider/key/env/grant calls",
+    "Product/helper implementation, existing source changes, Core/profile/lock/gate/seed/canonical-roadmap changes",
+    "Revival of v2/v3 native run or old product campaign; old counters/deadlines/unknowns unchanged",
+    "Worker edit of authority/work-order/continuity/catalog, commit/push/deploy"
+  ],
+  "retained": {
+    "browserCumulative": 23,
+    "v2SdkConnect": 1,
+    "v2BrowserCalls": 1,
+    "v2Cleanup": "UNKNOWN",
+    "v3SdkConnect": 1,
+    "v3BrowserCalls": 6,
+    "v3Cleanup": "SCOPED_KNOWN_PIDS_ABSENT_WITH_QUALIFICATIONS",
+    "sourceChecksLegacy": 27,
+    "controllersLegacy": 4,
+    "campaignLegacy": 1,
+    "servicesLegacy": 5,
+    "corePublicFindingsOpen": 5,
+    "productExecution": "HOLD_e9_profile1.1_NOT_READMITTED",
+    "fullR139M3Freeze": "OPEN",
+    "facebookZaloOA": "PARKED"
+  },
+  "precondition": "Root doctor28/28 and current continuity/coverage; independent source-only admission review and committed preparation before audit report work. Root independently checks worker report; separate reviewer checks Root-authored documentary reconciliation before final clean checkpoint."
+}

@@ -5,6 +5,34 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r139-product-admission-reconciliation-prep-20261030-4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/product_admission_reconciliation_20261030/knowledge_ingest.json",
+      "status": "ACTIVE",
+      "description": "Finite source-only product admission reconciliation; nativev3 accepted but product runtime held, no effect grant."
+    },
+    {
+      "id": "r139-product-admission-reconciliation-prep-20261030-3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/product_admission_reconciliation_20261030/.gitattributes",
+      "status": "ACTIVE",
+      "description": "Finite source-only product admission reconciliation; nativev3 accepted but product runtime held, no effect grant."
+    },
+    {
+      "id": "r139-product-admission-reconciliation-prep-20261030-2",
+      "family": "continuity",
+      "path": "docs/reviews/R139_PRODUCT_EXECUTION_ADMISSION_RECONCILIATION_ROOT_REVIEW_2026-10-30.md",
+      "status": "ACTIVE",
+      "description": "Finite source-only product admission reconciliation; nativev3 accepted but product runtime held, no effect grant."
+    },
+    {
+      "id": "r139-product-admission-reconciliation-prep-20261030-1",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PRODUCT-ADMISSION-RECONCILIATION-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Finite source-only product admission reconciliation; nativev3 accepted but product runtime held, no effect grant."
+    },
+    {
       "id": "r139-sdk-v3-result-20261030-31",
       "family": "continuity",
       "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/invocation_stdout.txt",
