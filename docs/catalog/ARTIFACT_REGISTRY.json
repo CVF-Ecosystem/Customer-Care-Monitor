@@ -5,6 +5,223 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r139-sdk-v3-result-20261030-31",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/invocation_stdout.txt",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-30",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/invocation_stderr.txt",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-29",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/invocation_exit.txt",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-28",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/claim_3e2ccdd0-b292-4c0f-8f27-9b123e9fabed.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-27",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/026_terminal.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-26",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/025_cleanup.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-25",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/024_process_observation.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-24",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/023_transport_close.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-23",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/022_client_close.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-22",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/021_client_closed.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-21",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/020_tool_result.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-20",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/019_tool_request.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-19",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/018_tool_result.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-18",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/017_tool_request.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-17",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/016_capture.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-16",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/015_tool_result.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-15",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/014_tool_request.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-14",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/013_tool_result.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-13",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/012_tool_request.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-12",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/011_tool_result.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-11",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/010_tool_request.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-10",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/009_ownership.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/008_process_observation.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/007_tool_result.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/006_tool_request.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/005_connect_result.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/004_stderr.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/003_stderr.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/002_server_pid_provisional.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/execution_v3/001_connect_request.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
+      "id": "r139-sdk-v3-result-20261030-1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/root_execution_v3_review.json",
+      "status": "ACTIVE",
+      "description": "Original bounded native SDK v3 lifecycle evidence or independent custody review; product/M3 execution remains held."
+    },
+    {
       "id": "r139-sdk-v3-release-20261030-9",
       "family": "continuity",
       "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/v3_source_checks/syntax_exit.txt",
@@ -5084,7 +5301,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
       "status": "ACTIVE",
-      "description": "R139 Core/project repin15e, doctor28/local113PASS; inherited public-suite findings and product/browser HOLD retained."
+      "description": "R139 v3 native capability accepted bounded with original evidence; cumulativebrowser23, prior v2UNKNOWN and product/Core/M3 holds retained."
     },
     {
       "id": "r060-work-order",

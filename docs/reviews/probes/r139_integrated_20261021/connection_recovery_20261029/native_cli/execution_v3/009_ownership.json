@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-29T23:09:24.221Z",
+  "data": {
+    "serverPid": 25452,
+    "serverCreationUtc": "2026-10-29T23:09:20.083Z",
+    "chromePid": 28744,
+    "chromeCreationUtc": "2026-10-29T23:09:21.713Z",
+    "profile": "C:\\Users\\tiennm\\AppData\\Local\\Temp\\puppeteer_dev_chrome_profile-YQ1Ebt"
+  }
+}

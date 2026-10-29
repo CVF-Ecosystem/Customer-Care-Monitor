@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-29T23:09:24.919Z",
+  "data": {
+    "n": 6,
+    "name": "list_pages",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "## Pages\n1: about:blank [selected]"
+        }
+      ]
+    }
+  }
+}

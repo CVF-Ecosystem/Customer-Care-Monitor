@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-29T23:09:24.906Z",
+  "data": {
+    "n": 5,
+    "name": "close_page",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Note: the previously selected page was closed. Page 1 is now selected.\n## Pages\n1: about:blank [selected]"
+        }
+      ]
+    }
+  }
+}

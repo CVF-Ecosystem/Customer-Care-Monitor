@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-29T23:09:24.653Z",
+  "data": {
+    "n": 3,
+    "name": "take_snapshot",
+    "args": {
+      "pageId": 2
+    }
+  }
+}

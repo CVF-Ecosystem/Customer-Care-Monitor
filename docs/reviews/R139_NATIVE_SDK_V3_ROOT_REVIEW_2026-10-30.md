@@ -1,6 +1,6 @@
 # R139 native SDK v3 — independent admission/source/result review
 
-Status: SOURCE_REVIEW_PASS_EXACT_RELEASE_PREPARED
+Status: ACCEPTED_BOUNDED_NATIVE_CAPABILITY_PRODUCT_HOLD
 Risk: R2
 Worker: Terra6.1High v3 source/execution worker
 Reviewer: Root independent
@@ -26,6 +26,22 @@ Final source raw SHA256 `bfcdf721409b5e464d0b47f7a5522e482f05a463bd55f918e037362
 Separate Terra final source reviewer PASS on exact raw source, no runtime effects. Root accepts source and prepares exact release binding operative admission6b442b27/sourcebfcdf721/preparation55f52e06/newunusedrunId3e2ccdd0. Release is valid only at its committed HEAD with all3rawblob equality; claim must be exclusive before SDK import. Root COMMIT_STEWARD commits source/release before Terra EXECUTION_WORKER may invoke exactly once. SDK/browser0 for v3 before release; v2 counters remain spent.
 
 Capture preexistence and vendor write are not atomic against same-user writers; custody is sampled, not authenticated origin or global writer absence. Root will independently inspect actual PNG, compare actual digest through capture/result custody, preserve bytes in ignored owned archive and qualify any mismatch. Process identity/chronology and actual known-PID absence, not close return alone, are required for cleanup. No prospective proof is promoted to runtime acceptance.
+
+## Actual one-shot execution and independent acceptance — 2026-10-30
+
+Release8676fa13 raw authority/source/release verified before dispatch; worker acknowledged EXECUTION_WORKER, invoked exact Node source once and exited0. Root independently read every original receipt and separate Terra reviewer independently returned PASS BOUNDED NATIVE CAPABILITY. Six requests/results: list blankID1; new ExampleDomainID2 from actual native text; snapshot exact title/URL; actual PNG; closeID2; final list only blankID1. Ownership observation precedes parsing/newpage. Original server25452 parent2636, Chrome28744 direct child, creation chronology, managed temp Puppeteer profile and remote-debugging-pipe recorded. Native client/transport close returned; final original scoped CIM raw[] and rows[] show both known server/Chrome PIDs absent at that observation. Terminaltrue/connect1/tool6/metadata2/8047ms, process exit0, no retry; original invocation stdout/stderr empty. Browser cumulative17+6=23; original v2used1/1/1 and ChromeUNKNOWN retained.
+
+Root and separate Terra visually inspected actual PNG and verified122941bytes SHA256 `00acc15242e854fc34597551bde473c079299deada380f8bee6ea8b4f52b58fa`, IHDR1887x2044. Image shows multilingual documentation notice and Learn more link consistent with original snapshot; title/URL proved by page/snapshot, no invented heading in the image. Root preserved exact bytes through native move to ignored `.cvf/runtime/r139_native_sdk_v3/3e2ccdd0-b292-4c0f-8f27-9b123e9fabed/example.png`; hash before/after matches, original capture path retained historically. No PNG committed. Original26numbered JSON, claim and3invocation text receipts are unchanged; custody/independent checks in `native_cli/root_execution_v3_review.json` (31original files including archivedPNG).
+
+Qualifications: no standalone adapter-PID receipt for2636; ownership is sampled and enforced by accepted source against process.pid, not independent PID attestation. Scoped final known-PID absence is not global Chrome/descendant/profile absence. PNG precheck/vendor-write is not atomic against same-user writers; custody sampled, not authenticated origin. Preview rendering was resized by viewer; originalPNG preserved. This is single headless public-page capability only, no product viewport/responsiveness, app/backend demo, generic G0, provider/AI governance or hostedCI proof.
+
+Five evidence questions: native installed SDK used directly; only demonstrated text-schema/ownership adapter gap repaired; consumer flow opens actual permitted public page, yields matching snapshot/PNG and closes target/held browser; failure/recovery bounded by prior retained v2 failure and v3 cleanup/static negatives; internal bounded acceptance complete, product acceptance and current execution-pin applicability still owned by Root before E01-E06/G2/G3. No user technical QA or environment transfer is needed for this slice.
+
+Finite v3 capability accepted and run identity SPENT, no replay. Entire R139 tranche and full M3/FREEZE remain OPEN/BLOCKED: product e9/profile1.1 execution HOLD, E01-E06/current-source applicability/viewport/offline and five inherited Core findings unresolved. Root next source-only action reconciles product execution admission/current Core/profile/native route applicability in existing R139 contract; this proof grants no product effect. FB/ZaloOA parked.
+
+## Final checkpoint stewardship
+
+Original actual execution and independent reviews settled for bounded capability only. Fresh worker-return7mandatory, reviewer-fast8mandatory and pre-commit7mandatory controls PASS; closeability NOT_CHECKED/N/A because product order remains blocked. Local gate units113PASS/199.010seconds from unchanged preparation are reused; gate source/tests unchanged. Root SESSION_SYNC_STEWARD / COMMIT_STEWARD commits original30text/JSONreceipts, raw custody map and synchronized current fronts; originalPNG preserved in ignored archive. Final legacy/catalog and commit-range checks still govern the checked repository state, not hostedCI or product acceptance.
 
 ## Claim and product boundaries
 
@@ -53,18 +69,18 @@ Separate Terra admission reviewer initially returned CHANGES_REQUIRED for copied
       "decision": "Đối chiếu evidence và caps; tiếp tục hoặc sửa trong authority, trình Owner nếu đổi phạm vi, HOLD hoặc dừng; đưa kết quả về R139/G3."
     }
   },
-  "phase": "DISPATCH",
+  "phase": "REVIEW",
   "action": {
-    "kind": "VERIFY",
+    "kind": "REVIEW",
     "selected": [
       "M3-05",
       "M3-08"
     ],
-    "owner": "Terra6.1High v3 source worker; Root independent reviewer",
-    "output": "Source-reviewed native text-response adapter and early owned-process evidence ordering, optional one future lifecycle only after committed exact release",
+    "owner": "Root independent result reviewer; separate Terra result reviewer",
+    "output": "Accepted bounded native SDK lifecycle with original snapshot/PNG, sampled ownership and known-PID cleanup qualifications",
     "budgetMinutes": 20,
     "stop": "Source or pin inconsistency, effort cap, any unexpected effect; no SDK import before release and no v2 retry",
-    "next": "Independent source acceptance; Root separate exact v3 release commit before any finite native lifecycle",
+    "next": "Root source-only reconciliation of R139 product execution admission/current pins/native route applicability before product E01-E06/G2/G3; no replay or automatic runtime authority.",
     "question": "Can smallest native SDK adapter consume actual pinned text schema and establish owned Chrome identity before parser failure, retaining bounded cleanup?",
     "sourceBoundary": "Existing v2 source/results plus20pinned installed package/SDK/executable files; five additional native response/schema files, no imports or runtime during source work"
   },
@@ -132,7 +148,7 @@ Separate Terra admission reviewer initially returned CHANGES_REQUIRED for copied
     {
       "id": "M3-05",
       "state": "BLOCKED",
-      "gap": "E01–E06 chưa có runtime proof; Chrome connection và effect admission đang HOLD. SDK v2 connects/list_pages text succeeds, but adapter requires unavailable structuredContent; no ExampleDomain/PNG, Chrome cleanup UNKNOWN.",
+      "gap": "E01-E06 product runtime proof and execution admission/current-source applicability remain HOLD. Native isolated ExampleDomain prerequisite accepted bounded on v3; original v2 Chrome cleanupUNKNOWN stays historical.",
       "owner": "Root / Product Owner",
       "destination": "Cùng R139 G0–G3 sau thay đổi kết nối được duyệt và admission phù hợp; Owner chấp nhận user consequence.",
       "evidence": [
@@ -147,6 +163,10 @@ Separate Terra admission reviewer initially returned CHANGES_REQUIRED for copied
         {
           "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/root_execution_v2_review.json",
           "sha256": "b16c8dcba90d7c9206ac127e7d3baa64cbfa9a619d074e9044bc56d94f02a093"
+        },
+        {
+          "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/root_execution_v3_review.json",
+          "sha256": "2b300463ce20c0ff1ce48241712b08ddcfa932c48440b6159a99e0a539f4e0dc"
         }
       ]
     },
@@ -179,7 +199,7 @@ Separate Terra admission reviewer initially returned CHANGES_REQUIRED for copied
     {
       "id": "M3-08",
       "state": "BLOCKED",
-      "gap": "Current-source browser/backend demo và disposition viewport/offline còn mở; Chrome connection HOLD. SDK v2 connects/list_pages text succeeds, but adapter requires unavailable structuredContent; no ExampleDomain/PNG, Chrome cleanup UNKNOWN.",
+      "gap": "Current-source product browser/backend demo and viewport/offline disposition remain OPEN. Native one-shot public-page capability accepted bounded; it does not prove app demo or responsive behavior.",
       "owner": "Root / Product Owner",
       "destination": "Cùng R139 G2 proof và G3; Owner chấp nhận qualification viewport/raster/offline.",
       "evidence": [
@@ -194,6 +214,10 @@ Separate Terra admission reviewer initially returned CHANGES_REQUIRED for copied
         {
           "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/root_execution_v2_review.json",
           "sha256": "b16c8dcba90d7c9206ac127e7d3baa64cbfa9a619d074e9044bc56d94f02a093"
+        },
+        {
+          "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/root_execution_v3_review.json",
+          "sha256": "2b300463ce20c0ff1ce48241712b08ddcfa932c48440b6159a99e0a539f4e0dc"
         }
       ]
     }
@@ -211,11 +235,16 @@ Separate Terra admission reviewer initially returned CHANGES_REQUIRED for copied
     }
   ],
   "conclusions": {
-    "tranche": "PENDING",
-    "trancheSummary": "Source-only v3 repair admitted prospectively; source and runtime pending.",
-    "trancheEvidence": [],
-    "product": "PENDING",
-    "productSummary": "Full R139/M3/FREEZE open, old product execution HOLD; v2 cleanupUNKNOWN and five Core findings retained.",
+    "tranche": "BLOCKED",
+    "trancheSummary": "Entire R139 remains open; finite supporting v3 native capability accepted bounded with custody/ownership qualifications and spent one-shot identity.",
+    "trancheEvidence": [
+      {
+        "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/root_execution_v3_review.json",
+        "sha256": "2b300463ce20c0ff1ce48241712b08ddcfa932c48440b6159a99e0a539f4e0dc"
+      }
+    ],
+    "product": "BLOCKED",
+    "productSummary": "Full M3/FREEZE open; old product execution HOLD and E01-E06/current-source/viewport/offline plus inherited Core findings need their owned re-entry, no product effect accepted.",
     "acceptance": [],
     "owner": "Root review kỹ thuật; Product Owner chấp nhận nghiệp vụ."
   }

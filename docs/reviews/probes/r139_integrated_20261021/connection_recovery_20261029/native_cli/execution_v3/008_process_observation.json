@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-29T23:09:24.218Z",
+  "data": {
+    "pass": 1,
+    "raw": "[{\"ProcessId\":25452,\"ParentProcessId\":2636,\"ExecutablePath\":\"C:\\\\Program Files\\\\nodejs\\\\node.exe\",\"CommandLine\":\"\\\"C:/Program Files/nodejs/node.exe\\\" C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/bin/chrome-devtools-mcp.js --isolated --headless \\\"--executablePath=C:/Program Files/Google/Chrome/Application/chrome.exe\\\" --no-usage-statistics --no-performance-crux \\\"--filesystemRoot=D:\\\\UNG DUNG AI\\\\TOOL AI 2026\\\\CVF-Workspace\\\\Customer-Care-Monitor-AI\\\\docs\\\\reviews\\\\probes\\\\r139_integrated_20261021\\\\connection_recovery_20261029\\\\native_cli\\\"\",\"CreationDateUtc\":\"2026-10-29T23:09:20.0837100Z\"},{\"ProcessId\":19896,\"ParentProcessId\":25452,\"ExecutablePath\":\"C:\\\\windows\\\\system32\\\\conhost.exe\",\"CommandLine\":\"\\\\??\\\\C:\\\\windows\\\\system32\\\\conhost.exe 0x4\",\"CreationDateUtc\":\"2026-10-29T23:09:20.0981710Z\"},{\"ProcessId\":28744,\"ParentProcessId\":25452,\"ExecutablePath\":\"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\",\"CommandLine\":\"\\\"C:/Program Files/Google/Chrome/Application/chrome.exe\\\" --allow-pre-commit-input --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-crash-reporter --disable-default-apps --disable-dev-shm-usage --disable-hang-monitor --disable-infobars --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-search-engine-choice-screen --disable-sync --enable-automation --export-tagged-pdf --force-color-profile=srgb --generate-pdf-document-outline --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --disable-features=Translate,AcceptCHFrame,MediaRouter,OptimizationHints,WebUIReloadButton,WebUIOmniboxPopup,WebUIOmniboxAimPopup,ProcessPerSiteUpToMainFrameThreshold,IsolateSandboxedIframes --enable-features=PdfOopif --headless=new --hide-scrollbars --mute-audio --disable-extensions about:blank --hide-crash-restore-bubble --screen-info={3840x2160} --remote-debugging-pipe --user-data-dir=C:\\\\Users\\\\tiennm\\\\AppData\\\\Local\\\\Temp\\\\puppeteer_dev_chrome_profile-YQ1Ebt\",\"CreationDateUtc\":\"2026-10-29T23:09:21.7133510Z\"}]\r\n",
+    "rows": [
+      {
+        "ProcessId": 25452,
+        "ParentProcessId": 2636,
+        "ExecutablePath": "C:\\Program Files\\nodejs\\node.exe",
+        "CommandLine": "\"C:/Program Files/nodejs/node.exe\" C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/bin/chrome-devtools-mcp.js --isolated --headless \"--executablePath=C:/Program Files/Google/Chrome/Application/chrome.exe\" --no-usage-statistics --no-performance-crux \"--filesystemRoot=D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\connection_recovery_20261029\\native_cli\"",
+        "CreationDateUtc": "2026-10-29T23:09:20.0837100Z"
+      },
+      {
+        "ProcessId": 19896,
+        "ParentProcessId": 25452,
+        "ExecutablePath": "C:\\windows\\system32\\conhost.exe",
+        "CommandLine": "\\??\\C:\\windows\\system32\\conhost.exe 0x4",
+        "CreationDateUtc": "2026-10-29T23:09:20.0981710Z"
+      },
+      {
+        "ProcessId": 28744,
+        "ParentProcessId": 25452,
+        "ExecutablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+        "CommandLine": "\"C:/Program Files/Google/Chrome/Application/chrome.exe\" --allow-pre-commit-input --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-crash-reporter --disable-default-apps --disable-dev-shm-usage --disable-hang-monitor --disable-infobars --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-search-engine-choice-screen --disable-sync --enable-automation --export-tagged-pdf --force-color-profile=srgb --generate-pdf-document-outline --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --disable-features=Translate,AcceptCHFrame,MediaRouter,OptimizationHints,WebUIReloadButton,WebUIOmniboxPopup,WebUIOmniboxAimPopup,ProcessPerSiteUpToMainFrameThreshold,IsolateSandboxedIframes --enable-features=PdfOopif --headless=new --hide-scrollbars --mute-audio --disable-extensions about:blank --hide-crash-restore-bubble --screen-info={3840x2160} --remote-debugging-pipe --user-data-dir=C:\\Users\\tiennm\\AppData\\Local\\Temp\\puppeteer_dev_chrome_profile-YQ1Ebt",
+        "CreationDateUtc": "2026-10-29T23:09:21.7133510Z"
+      }
+    ]
+  }
+}

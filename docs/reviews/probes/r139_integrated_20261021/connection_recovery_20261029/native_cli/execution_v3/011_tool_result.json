@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-29T23:09:24.652Z",
+  "data": {
+    "n": 2,
+    "name": "new_page",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "## Pages\n1: about:blank\n2: Example Domain (https://example.com/) [selected]"
+        }
+      ]
+    }
+  }
+}

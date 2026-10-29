@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-29T23:09:24.684Z",
+  "data": {
+    "n": 3,
+    "name": "take_snapshot",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "## Latest page snapshot\nuid=1_0 RootWebArea \"Example Domain\" url=\"https://example.com/\"\n  uid=1_1 StaticText \"This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.\"\n  uid=1_2 StaticText \"هذا النطاق مُخصص للاستخدام في أمثلة التوثيق دون الحاجة إلى إذن. هذه ليست خدمة، يُرجى تجنب الاعتماد عليها لأغراض الاختبار والمراقبة.\"\n  uid=1_3 StaticText \"该域名仅用于文档示例，无需获得许可。这并非一项服务，请勿将其用于测试和监控目的。\"\n  uid=1_4 StaticText \"L’usage de ce domaine est réservé à des exemples de documentation, sans autorisation préalable. Il ne s’agit pas d’un service ; son utilisation à des fins de test ou de surveillance est à éviter.\"\n  uid=1_5 StaticText \"Данный домен предназначен для использования в примерах документации без необходимости получения предварительного разрешения. Это не сервис; не рекомендуется его использование для тестирования и мониторинга.\"\n  uid=1_6 StaticText \"Este dominio está destinado al uso en ejemplos de documentación sin necesidad de permiso. Esto no es un servicio; evitar utilizarlo para realizar pruebas o monitoreos.\"\n  uid=1_7 link \"Learn more\" url=\"https://iana.org/help/example-domains\"\n    uid=1_8 StaticText \"Learn more\"\n"
+        }
+      ]
+    }
+  }
+}

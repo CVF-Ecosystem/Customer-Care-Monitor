@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-29T23:09:24.224Z",
+  "data": {
+    "n": 2,
+    "name": "new_page",
+    "args": {
+      "url": "https://example.com/",
+      "timeout": 30000
+    }
+  }
+}

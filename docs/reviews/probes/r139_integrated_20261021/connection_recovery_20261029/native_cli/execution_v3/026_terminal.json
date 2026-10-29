@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-29T23:09:26.418Z",
+  "data": {
+    "success": true,
+    "connectCount": 1,
+    "calls": 6,
+    "passes": 2,
+    "elapsedMs": 8047,
+    "serverPid": 25452,
+    "chromePid": 28744,
+    "evidenceFailure": false
+  }
+}

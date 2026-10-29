@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-29T23:09:24.686Z",
+  "data": {
+    "n": 4,
+    "name": "take_screenshot",
+    "args": {
+      "pageId": 2,
+      "format": "png",
+      "filePath": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\connection_recovery_20261029\\native_cli\\execution_v3\\example.png"
+    }
+  }
+}
