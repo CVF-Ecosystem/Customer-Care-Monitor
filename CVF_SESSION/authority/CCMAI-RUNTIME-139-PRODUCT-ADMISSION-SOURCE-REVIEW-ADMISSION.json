@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "ROOT_BOUNDED_SOURCE_REVIEW_SUPPLEMENT",
+  "date": "2026-10-30",
+  "parent": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PRODUCT-ADMISSION-RECONCILIATION-ADMISSION.json",
+  "preparationCommit": "d23c271d89caed4f57c5933f9e4cf3bbd3e95869",
+  "ownerAuthority": "Standing source-only reconciliation and delegated technical allocation within sameR139; Root explicitly bounds decision-owner followup before use, no automatic investigation renewal.",
+  "reason": "Finite audit reached its source limit and names exact later source-binding candidates. Resolve one acceptance-lineage fact for final Root disposition, rather than falsely labeling component changes unreviewed or opening another audit chain.",
+  "priorAccounting": {
+    "workerSemanticFilesBudget": 16,
+    "workerSemanticFilesActual": 17,
+    "overCap": 1,
+    "finding": "Inactive V3 project admission used as prior role context was incorrectly exempted as startup; report/inventory corrected, no retroactive approval or erasure.",
+    "sourceRuntimeTests": 0,
+    "allOldCountersAndUnknowns": "RETAINED"
+  },
+  "additionalRootReadonlySemanticFiles": 2,
+  "exactAllowedSources": [
+    "CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-ACCEPTED-BUILD-PINS-ADMISSION.json",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-TOOL-CLOSE-ACCEPTED-BUILD-PINS-ADMISSION.json"
+  ],
+  "rootLookupActiveMinutes": 5,
+  "separateFinalDocumentaryReviewActiveMinutes": 15,
+  "roles": {
+    "lookupReviewer": "Root independent of audit worker",
+    "independentSupplementAndDocumentaryReviewer": "Terra6.1High /root/v3_admission_review",
+    "workerFurtherReadsAllowed": false,
+    "commitOwner": "Root"
+  },
+  "allowedOperation": "Read exactly two named committed authority JSONs and compare their source/build pins to already observed current source bytes/Git blobs; record exact lineage and qualification in existing Root review/custody output/current-WO projection. No implementation or tests.",
+  "cumulativeSemanticAccountingAfterUse": "Worker17 + Root2 targeted distinct followup files =19; original16 budget/one overrun preserved, never presented as compliant16. Root review of existing16 is not new distinct domain source.",
+  "stop": "After two exact lookups/five active minutes, unresolved lineage stays explicitly UNKNOWN with owned reentry; no third file, broader investigation, helper tranche or runtime renewal.",
+  "prohibitedEffects": [
+    "No old authority/source/evidence rewrite or retroactive permission",
+    "No compile/test/controller/service/SDK/browser/process/network/provider/key/env/ignoredpayload/binary queries",
+    "No change to objective, allowed artifact class, R2 risk, external-effect class or Root commit ownership"
+  ],
+  "precondition": "Root recorded this explicit narrow allowance before lookup and separate Terra independently accepts it; original committed preparation still governs worker source report, lookup is Root REVIEW only, no worker BUILD renewal."
+}

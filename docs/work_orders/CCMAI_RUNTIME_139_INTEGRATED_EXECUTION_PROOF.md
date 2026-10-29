@@ -2,15 +2,31 @@
 
 Status: BLOCKED_WITH_REASON
 Risk: R2
-Worker: Gemini (Owner-designated native browser capability executor after current committed dispatch); historical Sol source workers retained, not currently released
-Reviewer: Root (independent Gemini browser-result review); Luna Max (independent Root-authored native capability admission review)
+Worker: Terra6.1High source audit complete; future implementation/runtime actor requires current committed admission
+Reviewer: Root independent source/evidence reviewer; separate Terra6.1High reviews Root-authored documentary projection
 Commit mode: WORKER_MUST_NOT_COMMIT
 providerExecutionAuthority: NONE_CURRENT_HISTORICAL_CAMPAIGNS_SPENT_OR_EXPIRED
 runtimeExecutor: UNASSIGNED_UNTIL_SUPPORTED_ENVIRONMENT_AND_COMMITTED_ADMISSION
 runtimeReviewer: INDEPENDENT_REVIEWER_TO_BE_BOUND_IN_CURRENT_ADMISSION; historical reviews retained
 dispatchKind: INITIAL
 
-Current continuation: the Owner autonomous discovery instruction below governs only read-only route selection; the settled 2026-10-27 G0 HOLD and spent campaign remain unchanged. Older dated dispositions are historical unless explicitly standing Owner instructions.
+Current continuation: source-only product admission reconciliation2026-10-30 supersedes older operational routing below. Status remains BLOCKED_WITH_REASON; current canonical fronts and reconciliation review govern the next allowed move. Normative S01-S04/E01-E06/G0-G3 requirements remain binding; earlier dated actor assignments, pins, grants, reservations and dispositions are historical, not renewed execution authority.
+
+## Current product re-entry disposition — 2026-10-30
+
+Source reconciliation: `docs/reviews/R139_PRODUCT_EXECUTION_ADMISSION_RECONCILIATION_ROOT_REVIEW_2026-10-30.md`. Accepted public-page native v3 capability is inherited, not rerun: oneSDKconnect/6tools, cumulativebrowser23; priorv2ChromeUNKNOWN retained. Latest NATIVE-TOOL-CLOSE accepted component sourcefc4bbe01 matches current supervisor/Go and backend/frontend trees; this corrects a stale7ef-only comparison, not product acceptance. Current project Core15e/profile1.2 differs from immutable product executione9/profile1.1 and its pinned preflight. Source/pure-component acceptance and current doctor do not release an integrated campaign.
+
+| Required next contract | Current disposition | Owner / re-entry |
+|---|---|---|
+| P01 current execution Core/profile/source/tool binding | Missing reviewed immutable successor; old accepted pins and spent/expired campaigns unchanged | Root DESIGN/SPEC and independent review; no profile/Core/seed hand patch or automatic product repin |
+| B01 SDK producer/independent-observer same-context ownership/handoff | Public-page lifecycle proved; current CUA/Antigravity receipt modes do not admit SDK identity | Root source-only supported-native design; actual independent same-context observation required, never fabricated CUA IDs or static-review substitution |
+| C01 coherent supervisor/Go/activation/preflight/recorder/payload receipt schema and original lifetime | Existing components accepted, integrated SDK branch not implemented/readmitted | One bounded separately committed source work order after P01/B01 design, versioned frozen-artifact successors and targeted offline checks |
+| E01-E06 product environment/effect/provider authority | HOLD; `providerExecutionAuthority` remains NONE_CURRENT_HISTORICAL_CAMPAIGNS_SPENT_OR_EXPIRED | Fresh concrete synthetic resources/custody/provider/model/endpoint/budget/deadline/cleanup admission before real execution; no secret or paid-call authority inferred here |
+| Core five public findings | OPEN; product path applicability UNKNOWN, no passing full-suite claim | Root/Core maintainers map exact controls/fixtures/Python expectation before product readmission |
+
+Current roles: Terra source audit finished; Root orchestrator/independent reviewer/commit owner, separate Terra documentary reviewer. Runtime executor remains UNASSIGNED until a current bounded effect admission. Existing originalseed/accepted-source/canonical roadmap remain immutable. Worker audit actual17files versus16cap and indirect dependency qualification, Root separately admitted2lookups/cumulative19, are retained in review; no retroapproval or further audit renewal. No product source, test, controller, service, browser, provider, DB/Docker or credential action occurred in this reconciliation.
+
+Next source-only action: bounded P01/B01 DESIGN/SPEC under same R139, then independently admitted source migration; preserve old27sourcechecks/4controllers/1campaign/5services, nativecumulative23/allUNKNOWNs, fullR139/M3/FREEZE OPEN and FB/ZaloOApark. The earlier operational sections below remain historical evidence; none overrides this current HOLD or normative acceptance controls.
 
 ## R139 delegated actual reservation — 2026-10-27T04:24:06.802756Z
 
@@ -543,7 +559,7 @@ Original source return is CHANGES_REQUIRED: workerPython1/1 failed (38PASS/1FAIL
 
 This manual repair uses `CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-INTEGRATED-REPAIR-ADMISSION.json`, subject to independent admission review and committed Root dispatch. Standing user AGENTS.md permits dependent same-scope repairs without redundant Owner confirmation. Objective, three source paths, acceptance contract, riskR2, effect class and commit owner remain unchanged. Original source seed, exhausted authoring/Python and zero-self-repair counters are not altered. Root now grants one explicit manual reviewer-directed repair after consolidated review; no automatic retry or further round. This is the same R139 order, not a helper tranche or new product scope.
 
-Worker: acknowledge REPAIR_WORKER in new `docs/reviews/R139_ANTIGRAVITY_INTEGRATED_SOURCE_REPAIR_RETURN_2026-10-23.md` before edits, verify exact committed dispatch HEAD and baseline hashes in repair admission, then repair ONLY the existing supervisor, its Python tests and opt-in Go fixture. Implement the SAME full native readiness/actual-close contract from the original section below: mandatory bounded identity/admission/operator/close-mode bindings, required original evidence paths/hashes/provenance under bound roots, strict boolean/integer/date handling and complete campaign chronology, valid legacy IAB branch, final inventory/absence and captured no-reuse sequence through terminal. Do not pretend hashes prove genuine tool origin; Root must review actual raw receipts. Do not require a precommitted digest of unknowable future close bytes: bind future paths/identities now and seal/check the produced files and referenced raw evidence after creation. Final files belong in exact ignored owned runtime paths; preflight freshness and terminal recheck differ without weakening source/authority/Git checks. Missing/invalid/late evidence fails closed, with finally cleanup preserved on success/error paths.
+Worker: Terra6.1High source audit complete; future implementation/runtime actor requires current committed admission
 
 Worker runs NO Python/Go/source checks, compiler, binary, browser/probe/DB/Docker/key/provider/server actions in this repair. Ordinary editing, read-only metadata and mandatory repository gates remain permitted. Return one complete diff/hashes and budget statement; do not modify prior receipts, authority, continuity/catalog/work order or commit. Root independently reviews the repaired source, then uses ONLY the already-unused RootPython1 -> offlineCompile1 (custody moved from worker) -> auditedPureGo1, stopping on first failure. No verification slots, API/cost/resource budgets or alternate stacks are added. Exact check commands/tools/timeouts/scrubbed environment/output remain parent admission; the baseline pre-launch source pins are the accepted repaired bytes audited by Root, not the superseded failed bytes.
 
