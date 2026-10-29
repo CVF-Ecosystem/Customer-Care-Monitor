@@ -1,0 +1,71 @@
+{
+  "evidenceClass": "CALLER_RECORDED_METADATA_AUDIT",
+  "actor": "Antigravity Browser Connection Executor (Conversation ID: 96ae8e84-7c8d-49b9-90f2-0cd4b98e1284, Active Model: Gemini 3.8 Flash)",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CONNECTION-RECOVERY-20261029-ADMISSION.json",
+  "auditDate": "2026-10-29",
+  "headCommit": "245cf5729b73bdb9be528777a2e601ba5f1557b3",
+  "metadataReadsMax": 3,
+  "metadataReadsUsed": 3,
+  "reads": [
+    {
+      "readIndex": 1,
+      "purpose": "Verify host Chrome binary existence and DevToolsActivePort path existence",
+      "chromeBinaryPath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "chromeBinaryExists": true,
+      "devToolsActivePortPath": "C:\\Users\\tiennm\\AppData\\Local\\Google\\Chrome\\User Data\\DevToolsActivePort",
+      "devToolsActivePortExists": false
+    },
+    {
+      "readIndex": 2,
+      "purpose": "Inspect host Chrome processes and version metadata",
+      "chromeProcessCount": 0,
+      "chromeFileVersion": "156.0.8078.48",
+      "state": "CHROME_NOT_RUNNING"
+    },
+    {
+      "readIndex": 3,
+      "purpose": "Inspect Antigravity runtime MCP tool definition directory",
+      "mcpPath": "C:\\Users\\tiennm\\.gemini\\antigravity\\mcp\\chrome_devtools",
+      "declaredToolSchemas": [
+        "click.json",
+        "close_page.json",
+        "drag.json",
+        "emulate.json",
+        "evaluate_script.json",
+        "fill.json",
+        "fill_form.json",
+        "get_console_message.json",
+        "get_network_request.json",
+        "handle_dialog.json",
+        "hover.json",
+        "lighthouse_audit.json",
+        "list_console_messages.json",
+        "list_network_requests.json",
+        "list_pages.json",
+        "navigate_page.json",
+        "new_page.json",
+        "performance_analyze_insight.json",
+        "performance_start_trace.json",
+        "performance_stop_trace.json",
+        "press_key.json",
+        "resize_page.json",
+        "screencast_start.json",
+        "screencast_stop.json",
+        "select_page.json",
+        "take_heapsnapshot.json",
+        "take_screenshot.json",
+        "take_snapshot.json",
+        "type_text.json",
+        "upload_file.json",
+        "wait_for.json"
+      ],
+      "isolatedProfileLaunchFacility": "NONE_AVAILABLE",
+      "note": "Antigravity provides pre-configured MCP tools connecting via autoConnect (reading DevToolsActivePort); no official facility exists to spawn an isolated browser profile, and raw debugging flags or personal profile exposure are strictly prohibited."
+    }
+  ],
+  "supportedIsolatedProfileSetupPassesMax": 1,
+  "supportedIsolatedProfileSetupPassesUsed": 0,
+  "setupPassNote": "Not attempted; no official supported isolated profile setup facility exists in runtime, and raw debugging CLI workarounds / user Chrome termination are prohibited."
+}
+

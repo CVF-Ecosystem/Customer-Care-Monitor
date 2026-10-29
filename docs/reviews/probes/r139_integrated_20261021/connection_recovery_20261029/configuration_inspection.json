@@ -1,0 +1,23 @@
+{
+  "recordType": "BOUNDED_READ_ONLY_CONFIGURATION_SOURCE_INSPECTION",
+  "recordedAtLocal": "2026-10-29T14:34:05.0961865+07:00",
+  "actor": "Sol Medium, current GPT runtime, /root/commit_gate_repair",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "scopeAuthority": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md#external-return-review-and-finite-configuration-source-intake--2026-10-29",
+  "request": "Four Test-Path -LiteralPath -PathType Leaf presence checks on the exact named candidates; no recursive search, content read, process query, browser call, package execution, or network request.",
+  "candidateResults": [
+    {"path": ".mcp.json", "present": false, "matchingDeclarationRead": false},
+    {"path": ".gemini/settings.json", "present": false, "matchingDeclarationRead": false},
+    {"path": "C:/Users/tiennm/.gemini/antigravity/mcp_config.json", "present": false, "matchingDeclarationRead": false},
+    {"path": "C:/Users/tiennm/.gemini/settings.json", "present": false, "matchingDeclarationRead": false}
+  ],
+  "redactedOriginalStdout": "{\"path\":\".mcp.json\",\"present\":false}\n{\"path\":\".gemini/settings.json\",\"present\":false}\n{\"path\":\"C:/Users/tiennm/.gemini/antigravity/mcp_config.json\",\"present\":false}\n{\"path\":\"C:/Users/tiennm/.gemini/settings.json\",\"present\":false}",
+  "observedMatchingChromeDevToolsDeclaration": false,
+  "fullConfigReads": 0,
+  "browserApiAttempts": 0,
+  "runtimeOrProductEffects": 0,
+  "configurationConclusion": "No matching user/project configuration declaration exists at the four authorized candidate paths. Actual Antigravity Chrome DevTools launch mode, browser-url flag, managed isolated mode, executable path, package availability, and built-in client configuration remain UNKNOWN. This does not prove these facilities are absent globally.",
+  "supportedNextRouteAssessment": "A documented managed isolated route may exist in Chrome DevTools MCP, but this inspection supplies no actual client launch declaration or installed-package proof. Root must decide the next governed route from this missing context; no config fabrication or browser redispatch is admitted by this record.",
+  "retainedBoundaries": "External metadata3/job1 spent as reviewed; no retry. Historical counters and UNKNOWN effects, product execution pin HOLD, full M3/FREEZE OPEN, and parked Facebook/Zalo OA accounts remain unchanged.",
+  "provenanceLimit": "Caller-recorded exact-path presence stdout; not authenticated terminal export or independent Root observation. No unrelated config or secret values were accessed."
+}

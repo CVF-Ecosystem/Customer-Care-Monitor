@@ -1,0 +1,54 @@
+{
+  "evidenceClass": "CALLER_RECORDED_BROWSER_EXECUTION_RECEIPT",
+  "actor": "Antigravity Browser Connection Executor (Caller Conversation: 96ae8e84-7c8d-49b9-90f2-0cd4b98e1284, Subagent Conversation: 6a2b7780-74b5-4961-a10e-dc663cac496c, Active Model: Gemini 3.8 Flash)",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CONNECTION-RECOVERY-20261029-ADMISSION.json",
+  "executionDate": "2026-10-29",
+  "targetUrl": "https://example.com/",
+  "executionSteps": [
+    {
+      "step": 1,
+      "action": "invoke_subagent",
+      "args": {
+        "TypeName": "browser",
+        "Role": "Browser Connection Executor",
+        "Prompt": "Mở một tab riêng tại https://example.com/, xác nhận nội dung 'Example Domain', chụp một ảnh và đóng đúng tab đó. Tối đa một browser job, không retry. Trả ảnh/recording, action trace và kết quả từng bước."
+      },
+      "subagentConversationId": "6a2b7780-74b5-4961-a10e-dc663cac496c",
+      "status": "DISPATCHED"
+    },
+    {
+      "step": 2,
+      "action": "mcp_chrome_devtools_new_page",
+      "args": {
+        "url": "https://example.com/",
+        "toolSummary": "Open Example Domain tab"
+      },
+      "status": "ERROR",
+      "error": "Could not connect to Chrome. Check if Chrome is running and remote debugging is enabled by going to chrome://inspect/#remote-debugging.\nCause: Could not find DevToolsActivePort for chrome at C:\\Users\\tiennm\\AppData\\Local\\Google\\Chrome\\User Data\\DevToolsActivePort\nCause: ENOENT: no such file or directory, open 'C:\\Users\\tiennm\\AppData\\Local\\Google\\Chrome\\User Data\\DevToolsActivePort'",
+      "note": "DevToolsActivePort does not exist in host default Chrome User Data directory; remote debugging is not enabled and Chrome is not reachable by chrome_devtools server."
+    },
+    {
+      "step": 3,
+      "action": "page_verification",
+      "status": "SKIPPED_DUE_TO_CONNECTION_ERROR"
+    },
+    {
+      "step": 4,
+      "action": "take_screenshot",
+      "status": "SKIPPED_DUE_TO_CONNECTION_ERROR"
+    },
+    {
+      "step": 5,
+      "action": "close_page",
+      "status": "SKIPPED_NO_TAB_CREATED"
+    }
+  ],
+  "haltReason": "Stopped immediately on first connection failure per non-retry instruction and safety contract.",
+  "tabCountOwned": 0,
+  "cleanup": "NOT_APPLICABLE_NO_OWNED_TAB_CREATED",
+  "screenshotExport": "NOT_EXPORTED",
+  "screenshotHash": null,
+  "provenanceLimit": "Caller-recorded subagent tool invocation and report; not an independently authenticated Root-native observation."
+}
+

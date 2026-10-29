@@ -1,16 +1,24 @@
 {
   "x-connectionRecovery20261029": {
-    "status": "LOCAL_BOUNDED_FAILURE_REVIEWED_EXTERNAL_DISPATCH_READY",
+    "status": "EXTERNAL_BOUNDED_FAILURE_WITH_FINDINGS_CORRECTIVE_SETUP_READY",
     "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CONNECTION-RECOVERY-20261029-ADMISSION.json",
     "review": "docs/reviews/R139_CONNECTION_RECOVERY_REVIEW_2026-10-29.md",
     "externalPacket": "docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_HANDOFF_2026-10-29.md",
     "localMethodsUsed": 1,
-    "externalJobsUsed": 0,
+    "externalJobsUsed": 1,
     "providerCalls": 0,
     "productRuntimeAdmission": false,
-    "cumulativeBrowserMethods": 15,
+    "cumulativeBrowserMethods": 16,
     "localReturn": "docs/reviews/R139_GPT_CONNECTION_RECOVERY_RETURN_2026-10-29.md",
-    "rootUsage": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/root_result_review.json"
+    "rootUsage": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/root_result_review.json",
+    "externalApiUsed": 1,
+    "externalMetadataUsed": 3,
+    "externalSetupUsed": 0,
+    "externalReturn": "docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_RETURN_2026-10-29.md",
+    "externalRootReview": "docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_ROOT_REVIEW_2026-10-29.md",
+    "externalRootReceipt": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/root_external_result_review.json",
+    "correctiveAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SUPPORTED-NATIVE-START-ADMISSION.json",
+    "correctiveEffectsUsed": 0
   },
   "x-roadmapDocumentaryReconciliation20261029": {
     "date": "2026-10-29",

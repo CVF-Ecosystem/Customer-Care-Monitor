@@ -1,0 +1,39 @@
+{
+  "trancheId": "CCMAI-RUNTIME-139",
+  "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CONNECTION-RECOVERY-20261029-ADMISSION.json",
+  "externalStatus": "BLOCKED_WITH_REASON_DEVTOOLS_ACTIVE_PORT_NOT_FOUND",
+  "budget": {
+    "connectionMetadataReadsMax": 3,
+    "connectionMetadataReadsUsed": 3,
+    "supportedIsolatedProfileSetupPassesMax": 1,
+    "supportedIsolatedProfileSetupPassesUsed": 0,
+    "officialBrowserJobsMax": 1,
+    "officialBrowserJobsUsed": 1,
+    "outerApiAttemptsMax": 10,
+    "outerApiAttemptsUsed": 1,
+    "ownedTabsMax": 1,
+    "ownedTabsCreated": 0,
+    "capturesMax": 1,
+    "capturesUsed": 0,
+    "wallSecondsCap": 300,
+    "wallSecondsElapsed": 18,
+    "automaticRetries": 0
+  },
+  "cleanup": "NOT_APPLICABLE_NO_OWNED_TAB_CREATED",
+  "browserHostState": "CHROME_DISCONNECTED_NO_DEVTOOLS_ACTIVE_PORT",
+  "historicalCountersRetained": {
+    "historicalBrowserMethodsRetained": 15,
+    "historicalGeminiJobsRetainedSpent": 1,
+    "historicalSolLocalInventoryCallsSpent": 1,
+    "historicalSourceChecksRetained": 27,
+    "historicalControllersRetained": 4,
+    "historicalCampaignsRetained": 1,
+    "historicalServiceQueriesRetained": 5,
+    "historicalDiagnosticDocsRetained": 2,
+    "historicalPackagedDocsRetained": 2,
+    "historicalPricingReadsRetained": 2,
+    "historicalUnknownEffects": "PRESERVED"
+  },
+  "productAndProviderEffects": 0
+}
+

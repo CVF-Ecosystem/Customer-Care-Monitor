@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "EXTERNAL_CONNECTION_RECOVERY_EVIDENCE_MANIFEST",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "date": "2026-10-29",
+  "actor": "Antigravity Browser Connection Executor (Conversation ID: 96ae8e84-7c8d-49b9-90f2-0cd4b98e1284, Subagent: 6a2b7780-74b5-4961-a10e-dc663cac496c, Model: Gemini 3.8 Flash)",
+  "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CONNECTION-RECOVERY-20261029-ADMISSION.json",
+  "handoff": "docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_HANDOFF_2026-10-29.md",
+  "returnReport": "docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_RETURN_2026-10-29.md",
+  "files": [
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/external/browser_execution.json",
+      "bytes": 2589,
+      "sha256": "0e441dc4ac5c9dc099e2d333083b1fa0f034f72a6b6470c03c059381928b9dbe",
+      "description": "Caller-recorded browser execution receipt documenting subagent tool invocation, error response, and skipped steps."
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/external/metadata_audit.json",
+      "bytes": 2885,
+      "sha256": "571ac64d31d97db901ea2d01c7fe95d6811cfd7d2b1c8ca784c43c0ed28b540a",
+      "description": "Metadata audit recording 3 non-secret reads: Chrome binary path and DevToolsActivePort check, Chrome process count and FileVersion, and runtime MCP tool schemas."
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/external/subagent_transcript.jsonl",
+      "bytes": 6718,
+      "sha256": "bfcb68b37c2033244c8f690608c89ce74db6cd9cfbd7d4bc1496dbef050d2694",
+      "description": "Complete JSONL transcript of the browser subagent 6a2b7780-74b5-4961-a10e-dc663cac496c executing mcp_chrome_devtools_new_page."
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/external/usage.json",
+      "bytes": 1377,
+      "sha256": "be7caf8fa01db8f85fc60c225be47a37a7fabe82beb8aacac4cc6ae3106310c9",
+      "description": "Usage counters recording external budget caps vs actual used, cleanup status, and retained historical counters."
+    }
+  ]
+}
+

@@ -5,6 +5,76 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r139-antigravity-return-20261029",
+      "family": "continuity",
+      "path": "docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_RETURN_2026-10-29.md",
+      "status": "ACTIVE",
+      "description": "Original external blocked return; worker-reported metadata and procedural/custody findings retained."
+    },
+    {
+      "id": "r139-antigravity-root-review-20261029",
+      "family": "continuity",
+      "path": "docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_ROOT_REVIEW_2026-10-29.md",
+      "status": "ACTIVE",
+      "description": "Independent Root/Terra external failure review with manifest/procedure/timing qualifications; product blocked."
+    },
+    {
+      "id": "r139-antigravity-root-usage-20261029",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/root_external_result_review.json",
+      "status": "ACTIVE",
+      "description": "Actual received raw hashes, four manifest discrepancies and cumulative browser16; old jobs spent."
+    },
+    {
+      "id": "r139-config-inspection-20261029",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/configuration_inspection.json",
+      "status": "ACTIVE",
+      "description": "One finite local source pass: four named config paths absent, zero config reads or browser effects."
+    },
+    {
+      "id": "r139-native-start-admission-20261029",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SUPPORTED-NATIVE-START-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Owner-delegated corrective official setup; conditional browser verification only after evidenced nonpersonal state change."
+    },
+    {
+      "id": "r139-external-metadata-audit-json-20261029",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/external/metadata_audit.json",
+      "status": "ACTIVE",
+      "description": "Original received external evidence; preserve raw bytes and Root-qualified custody/provenance findings."
+    },
+    {
+      "id": "r139-external-browser-execution-json-20261029",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/external/browser_execution.json",
+      "status": "ACTIVE",
+      "description": "Original received external evidence; preserve raw bytes and Root-qualified custody/provenance findings."
+    },
+    {
+      "id": "r139-external-subagent-transcript-jsonl-20261029",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/external/subagent_transcript.jsonl",
+      "status": "ACTIVE",
+      "description": "Original received external evidence; preserve raw bytes and Root-qualified custody/provenance findings."
+    },
+    {
+      "id": "r139-external-usage-json-20261029",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/external/usage.json",
+      "status": "ACTIVE",
+      "description": "Original received external evidence; preserve raw bytes and Root-qualified custody/provenance findings."
+    },
+    {
+      "id": "r139-external-evidence-manifest-json-20261029",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/external/evidence_manifest.json",
+      "status": "ACTIVE",
+      "description": "Original received external evidence; preserve raw bytes and Root-qualified custody/provenance findings."
+    },
+    {
       "id": "r139-gpt-local-return-20261029",
       "family": "continuity",
       "path": "docs/reviews/R139_GPT_CONNECTION_RECOVERY_RETURN_2026-10-29.md",
@@ -51,7 +121,7 @@
       "family": "continuity",
       "path": "docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_HANDOFF_2026-10-29.md",
       "status": "ACTIVE",
-      "description": "One complete Antigravity dispatch after Root-reviewed local host failure; external stage fresh, runtime unreleased."
+      "description": "Current corrective native-setup handoff; prior external job spent and verification requires actual supported state change."
     },
     {
       "id": "r139-commit-maintenance-scope-20261029",

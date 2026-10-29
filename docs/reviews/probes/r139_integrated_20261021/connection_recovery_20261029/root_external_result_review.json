@@ -1,0 +1,87 @@
+{
+  "status": "ACCEPTED_BOUNDED_EXTERNAL_FAILURE_WITH_PROCEDURE_AND_CUSTODY_FINDINGS",
+  "reviewer": "Root independent of external executor",
+  "externalReleaseCommit": "245cf5729b73bdb9be528777a2e601ba5f1557b3",
+  "evidenceClass": "SOURCE_INSPECTED_WORKER_EXPORT_NOT_AUTHENTICATED_TRANSCRIPT",
+  "receivedRawSha256": {
+    "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/external/browser_execution.json": "030aba0ef359dc8d958bb466ebba500f1f0949cdb6fae4bc4c80e677d6405bae",
+    "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/external/evidence_manifest.json": "0764c427a9557e8af36dfc7b74eee3ec22ef7e35a30f14a9447b562c10e3051d",
+    "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/external/metadata_audit.json": "4134ff1f996c52a9b9f560f0c1224fa5cced1a1d4a5e8e9ff6c74335aecd5285",
+    "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/external/subagent_transcript.jsonl": "34558ce2474a82c79ac0731642f8067a2e19c046abd4718368aedeac33cbb542",
+    "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/external/usage.json": "0d4b58b5e585b3ef569df3814b35f3614ce1543805b9b076f436db9c718cca92",
+    "docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_RETURN_2026-10-29.md": "dc3daa9f136b03cd14015901e743ee15db09c9e4176fc5859022c0d0ed847651"
+  },
+  "manifestAudit": [
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/external/browser_execution.json",
+      "recordedBytes": 2589,
+      "actualBytes": 2590,
+      "recordedSha256": "0e441dc4ac5c9dc099e2d333083b1fa0f034f72a6b6470c03c059381928b9dbe",
+      "actualRawSha256": "030aba0ef359dc8d958bb466ebba500f1f0949cdb6fae4bc4c80e677d6405bae",
+      "recordedRawMatches": false,
+      "withoutOneFinalLfMatches": true,
+      "interpretation": "Explains discrepancy only; original-byte authenticity is not established. Original received bytes preserved."
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/external/metadata_audit.json",
+      "recordedBytes": 2885,
+      "actualBytes": 2886,
+      "recordedSha256": "571ac64d31d97db901ea2d01c7fe95d6811cfd7d2b1c8ca784c43c0ed28b540a",
+      "actualRawSha256": "4134ff1f996c52a9b9f560f0c1224fa5cced1a1d4a5e8e9ff6c74335aecd5285",
+      "recordedRawMatches": false,
+      "withoutOneFinalLfMatches": true,
+      "interpretation": "Explains discrepancy only; original-byte authenticity is not established. Original received bytes preserved."
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/external/subagent_transcript.jsonl",
+      "recordedBytes": 6718,
+      "actualBytes": 6719,
+      "recordedSha256": "bfcb68b37c2033244c8f690608c89ce74db6cd9cfbd7d4bc1496dbef050d2694",
+      "actualRawSha256": "34558ce2474a82c79ac0731642f8067a2e19c046abd4718368aedeac33cbb542",
+      "recordedRawMatches": false,
+      "withoutOneFinalLfMatches": true,
+      "interpretation": "Explains discrepancy only; original-byte authenticity is not established. Original received bytes preserved."
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/external/usage.json",
+      "recordedBytes": 1377,
+      "actualBytes": 1378,
+      "recordedSha256": "be7caf8fa01db8f85fc60c225be47a37a7fabe82beb8aacac4cc6ae3106310c9",
+      "actualRawSha256": "0d4b58b5e585b3ef569df3814b35f3614ce1543805b9b076f436db9c718cca92",
+      "recordedRawMatches": false,
+      "withoutOneFinalLfMatches": true,
+      "interpretation": "Explains discrepancy only; original-byte authenticity is not established. Original received bytes preserved."
+    }
+  ],
+  "inspectedBrowserToolCalls": 1,
+  "inspectedBrowserToolNames": [
+    "mcp_chrome_devtools_new_page"
+  ],
+  "coordinationCallsNotBrowser": [
+    "send_message"
+  ],
+  "externalMetadataReadsChargedAsReported": 3,
+  "externalSetupPassesChargedAsReported": 0,
+  "externalJobsSpent": 1,
+  "externalBrowserApiSpent": 1,
+  "historicalBrowserBeforeExternal": 15,
+  "cumulativeBrowserNow": 16,
+  "unusedExternalApiSlots": "UNUSED_NOT_AUTOMATICALLY_REUSABLE",
+  "wholeWallSeconds": "UNPROVEN: claimed18; subagent42-to02 spans20s; initiatingmessage-tofinal spans63s; metadata timing absent",
+  "globalConnectionCause": "UNVERIFIED",
+  "metadataCommandsAndStdout": "NOT_SUPPLIED",
+  "claimedActualMode": "UNVERIFIED_CONFIGURATION_NOT_READ",
+  "procedureFinding": "Worker reports unsupported setup then browser job despite stop-before-dependent-actions contract; compliance not accepted, no actual personal-profile connection evidenced.",
+  "ownedTabCreatedInTrace": false,
+  "readCaptureClose": "NOT_RUN",
+  "screenshot": "NOT_SUPPLIED",
+  "recording": "MENTIONED_NOT_SUPPLIED",
+  "infrastructureCleanup": "UNPROVEN",
+  "historicalSourceChecks": 27,
+  "historicalControllers": 4,
+  "historicalCampaigns": 1,
+  "historicalServices": 5,
+  "allHistoricalUnknowns": "PRESERVED",
+  "productProviderActionsInInspectedTrace": 0,
+  "nextDecision": "No blind browser retry; one bounded actual-configuration source inspection under standing full grant and official supported-mode assessment."
+}

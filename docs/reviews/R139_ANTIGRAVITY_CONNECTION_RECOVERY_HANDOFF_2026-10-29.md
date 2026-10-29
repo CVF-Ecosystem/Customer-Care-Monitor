@@ -1,34 +1,40 @@
-# R139 — one consolidated Antigravity connection recovery handoff
+# R139 — corrective supported native browser setup
 
 Status: DISPATCH_READY
 Risk: R2
-Worker: Receiving Antigravity/Gemini actor; actual identity required
-Reviewer: Root, independent of receiving execution
-Authority: `CVF_SESSION/authority/CCMAI-RUNTIME-139-CONNECTION-RECOVERY-20261029-ADMISSION.json`
+Worker: Receiving Antigravity executor, actual identity/tool context required
+Reviewer: Root independent result reviewer; Terra6.1High independent admission reviewer
+Authority: `CVF_SESSION/authority/CCMAI-RUNTIME-139-SUPPORTED-NATIVE-START-ADMISSION.json`
 
 ## Copyable receiving instruction
 
-Work in `D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI`. Continue the ONE existing R139 order. Owner authorized full supported connection handling and this cross-environment transfer. Root remains orchestrator/result reviewer; you are only the receiving browser-connection executor. First read `AGENTS.md`, manifest/policy, compact bootstrap, current memory/state/handoff, implementation truth/index, the admission above and the existing `docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md`. Declare actual actor/tool/context; do not impersonate a previous actor or reuse cached browser IDs. Verify this packet's final committed release and Root's accepted local-failure review before effects. The earlier conditional draft was not release; use this reviewed final revision.
+Work in `D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI`. Read AGENTS.md, manifest/policy, compact/current continuity, current R139 work order, the authority above and `docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_ROOT_REVIEW_2026-10-29.md`. Confirm this exact revised packet was independently reviewed and committed by Root before effects. Declare your actual identity. Root remains orchestrator/result reviewer; do not impersonate a previous actor.
 
-Resolve the connection using the existing official browser facility in your actual runtime. Confirm actual Chrome/bridge version, connection mode and intended profile from supported non-secret metadata (at most3 reads). The previous DevToolsActivePort error does not prove version/mode or that Chrome is stopped. If setup is necessary and the actual official facility supports it, perform at most1 setup pass for a separate isolated test profile; use no personal profile, user-Chrome termination, raw debugging workaround, generic CDP client or new plugin/helper installation. Obey runtime/tool policies and stop at an unsupported setup, security barrier or unknown effect; Owner permission is not a policy bypass.
+The old external packet at245cf572 is SPENT (metadata3/job1/API1); do not repeat it or reuse its remaining slots. The received result is a bounded failure, not compliance/capability PASS. All four received manifest hashes differ by one terminal LF; preserve originals. Root total browser16, source27/controllers4/campaign1/service5 and all UNKNOWNs remain. Both prior local/external connection routes failed, so the required next action is real supported setup, not another new_page.
 
-After a real supported connection is established, perform ONE fresh browser job: create one owned tab at `https://example.com/`, verify actual URL/title and Example Domain text, capture one real screenshot, close only your own tab and verify closure through the official API if supported. Maximum10 outer browser API attempts,1 tab,1 capture,300 seconds total and0 automatic retries. A first denial/error/timeout stops dependent actions; cleanup only a proven owned tab when safely supported. No unrelated user-tab contents. Report any internal subagent actions you cannot observe as UNKNOWN. A tab title alone is not a full browser receipt.
+1. Observe the actual Antigravity browser-manager launch control or actual matching Chrome MCP declaration, at most3 relevant native UI/config observations. Use official UI/capability surfaces, not another blind API or recursive filesystem search. The documented built-in browser control is a native facility separate from MCP tool names. Absence of a `launch` tool or four local config files does not prove absence of that facility. Do not print/read unrelated server secrets.
+2. Establish one nonpersonal test browser using an existing supported official facility. Prefer the actual IDE-managed browser launcher when it targets the intended isolated test instance. If instead an actual editable Chrome MCP declaration is available and the installed version supports it, native managed launch with isolated profile is permitted through that client facility; no installation/update, guessed flags/port, generic CDP, raw-debugging CLI workaround, user-Chrome kill, personal-profile exposure or security-barrier bypass. Preserve unrelated settings and record relevant redacted before/after state. At most1 setup pass and1 targeted Chrome-connection reload.
+3. FIRST prove an actual supported connection-state change and intended test-profile ownership. If the needed control/configuration is absent, inaccessible, immutable or unsafe, STOP before any browser job. Return the exact missing native control and smallest real human action. Do not claim no facility merely from tool filenames. Do not invoke browser to see if it might work unchanged.
+4. Only after that evidence, invoke at most1 fresh browser job with `list_pages` FIRST. First error stops the job. If it succeeds, create1 owned `https://example.com/` tab, verify actual URL/Example Domain text, capture1 actual screenshot and close only your owned tab. Observe closure if supported. Maximum10 browser API attempts total,600 seconds for the whole corrective pass,0 retries. A failed preflight never earns page/capture/close PASS. Cleanup only a proven owned tab safely; infrastructure state otherwise remains UNKNOWN.
+5. Return one consolidated result in `docs/reviews/R139_ANTIGRAVITY_SUPPORTED_SETUP_RETURN_2026-10-29.md` and `docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/corrective/`. Preserve actual request/result excerpts, relevant setup-state delta and profile ownership evidence, all errors, original screenshot if export exists (otherwise honest NOT_EXPORTED), lifecycle/cleanup limits and used/unused counters. Produce manifest hashes AFTER final bytes are written, excluding the manifest itself. Distinguish caller-qualified exports from authenticated/Root-native observation. Metadata needs actual redacted requests/results/times, not unsupported summaries. Never invent model/version/mode, a screenshot path or complete wall-clock compliance.
 
-Return original caller-qualified request/result traces, actual actor/tool/IDs and timing, screenshot original file/hash if export exists (otherwise INLINE_ONLY/NOT_EXPORTED), closure/final-inventory evidence or exact missing part, and used/unused counters. Do not invent authenticated provenance, screenshot paths, cleanup or G0/product acceptance. Retain every failure and unknown outcome. The historical job is spent: this is the fresh conditional stage of the new admission, not replay/reset.
+No product/localhost/backend/DB/Docker/fixture/controller/campaign/key/provider/grant/execute/customer-account effects. Do not edit Root authority/reviews, original evidence/source/installed gates or shared continuity; no worker commit/push/merge/deploy/new order. New finite limits are Root-assigned under Owner's full-handling grant, not recycled old slots or invented numerical Owner approval. Product execution-pin mismatch HOLD, full M3/FREEZE OPEN and Facebook/Zalo OA parked remain. Return to Root for independent review; no automatic next retry or helper prompt chain.
 
-Write only `docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_RETURN_2026-10-29.md` and `docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/external/`. Do not edit Root review/authority, original source/evidence, installed profile or shared continuity; do not commit. Return COMPLETE_PENDING_REVIEW only with observed capability evidence, otherwise BLOCKED_WITH_REASON/PARTIAL with the actual blocker. Root owns final acceptance and source/runtime-contract reconciliation.
+## Primary supported capability sources
 
-Keep old source27/controllers4/campaign1/service5/browser14 and spentGemini job1, packagedDocs2/diagnosticDocs2/pricing2 and all UNKNOWNs. New local and external usage are accounted separately. Product pages/localhost, provider/key/grant/execute/DB/Docker/fixture/controller/campaign/customer-account effects remain0 for this scope. Full M3/FREEZE remains OPEN and Facebook/Zalo OA parked. Connection proof does not release product runtime; the e9/profile1.1 execution versus b8/profile1.2 carrier boundary must be resolved under its applicable authority first.
+- https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/client-configurations.md (Antigravity section)
+- https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/advanced-usage.md
+- https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/configuration.md
 
-Deliver one consolidated result to Root. Do not create helper tranches, repeat readiness prose, ask the operator to relay per-check prompts or silently retry the old job. If blocked, state the exact missing native capability and the smallest human action; preserve evidence and stop.
+These explain supported native routes; they do not prove this installation's actual configuration. Do not install packages from documentation examples.
 
-## Root release
+## Historical release preservation
 
-Root accepted the bounded local Sol result from dispatch571476018db7f06af29596fe2b6d052ed4bd7b2e: official cua.getState returned browsers:[] and "The browser access host is unavailable". No tab or browser selection followed. Source-inspected caller-qualified evidence and qualifications are in `docs/reviews/R139_CONNECTION_RECOVERY_REVIEW_2026-10-29.md`; settled usage is `docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/root_result_review.json`. Retained historical browser14 plus new local1 gives cumulative15; external metadata/setup/job/browser usage remains0 before your dispatch. This final external release must be independently reviewed and committed by Root before the user copies it; derive actual release commit with `git log -1 --format=%H -- docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_HANDOFF_2026-10-29.md`. Do not reuse the earlier draft hash as this revision's identity.
+The original failed packet and hash remain at commit245cf5729b73bdb9be528777a2e601ba5f1557b3. This current file is its explicitly governed corrective revision under the new authority, not a retroactive change to old admission, counters or evidence. Derive current committed release identity from Git history for this file. Independent review and Root commit precede operator copy.
 
-## External finite verification coverage
+## Finite verification coverage
 
-Projection of the same approved M3 criteria, not implementation or acceptance. Existing R139 order references this exact section for the receiving diagnostic.
+Projection of the same approved M3 authority; no changed product criteria or acceptance.
 
 ```cvf-milestone-coverage-json
 {
@@ -55,13 +61,13 @@ Projection of the same approved M3 criteria, not implementation or acceptance. E
       "M3-05",
       "M3-08"
     ],
-    "owner": "Actual receiving Antigravity/Gemini actor; Root independent result reviewer",
-    "output": "docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_RETURN_2026-10-29.md and original available receipts",
-    "budgetMinutes": 5,
-    "stop": "Unsupported official setup, first denial/error/timeout or uncertain effect; no blind retry, personal-profile exposure or raw debugging workaround.",
-    "next": "Return one consolidated actual result to Root for independent capability and runtime-contract review in the same R139.",
-    "question": "Can the receiving runtime establish a supported isolated browser connection and open/read/capture/close one owned example.com tab?",
-    "sourceBoundary": "Receiving official tool catalog and non-secret Chrome/bridge metadata max3 reads, at most one official isolated-profile setup and one bounded browser job; no product/provider/credential surfaces."
+    "owner": "Actual receiving Antigravity executor; Root independent result reviewer",
+    "output": "docs/reviews/R139_ANTIGRAVITY_SUPPORTED_SETUP_RETURN_2026-10-29.md and original available corrective receipts",
+    "budgetMinutes": 10,
+    "stop": "No actual supported isolated setup/profile ownership, inaccessible control, policy barrier or first browser error; no unchanged-state job or retry.",
+    "next": "Return one consolidated setup/capability result to Root within the same R139; no product/runtime effect grant.",
+    "question": "Can actual official IDE/Chrome connection setup establish a nonpersonal test browser and then verify one owned example.com lifecycle?",
+    "sourceBoundary": "Receiving official browser manager or observed existing compatible Chrome MCP declaration, one supported setup pass; list_pages first only after actual state change, one owned example.com tab."
   },
   "rows": [
     {
@@ -127,9 +133,9 @@ Projection of the same approved M3 criteria, not implementation or acceptance. E
     {
       "id": "M3-05",
       "state": "BLOCKED",
-      "gap": "Current Sol GPT actor official inventory returned no browser and browser-access-host unavailable; current product runtime proof remains blocked pending external capability and applicable runtime admission.",
+      "gap": "Both admitted connection routes failed; actual client mode/profile startup unverified and external custody/procedure findings remain. No current product runtime proof.",
       "owner": "Root / Product Owner",
-      "destination": "Same R139 external connection packet, then Root source/runtime-admission review before G0-G3; no local retry.",
+      "destination": "Same R139 supported native setup, conditional verification after actual state delta, then independent runtime/source admission review.",
       "evidence": [
         {
           "path": "docs/reviews/R137_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md",
@@ -150,6 +156,18 @@ Projection of the same approved M3 criteria, not implementation or acceptance. E
         {
           "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/local/usage.json",
           "sha256": "793009260c92c4cf3f9beeabb9e368aa634fd0524197e96710b5a7dfad7b57c2"
+        },
+        {
+          "path": "docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_RETURN_2026-10-29.md",
+          "sha256": "dc3daa9f136b03cd14015901e743ee15db09c9e4176fc5859022c0d0ed847651"
+        },
+        {
+          "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/root_external_result_review.json",
+          "sha256": "25e89fd34bc214bd3f0270ccc2512ace96cad66bf34a5c15911029f5c75392f2"
+        },
+        {
+          "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/configuration_inspection.json",
+          "sha256": "45bba264078f42786fb05e96ba768d10734af316066a82d573cb3252a1f2c8bb"
         }
       ]
     },
@@ -182,9 +200,9 @@ Projection of the same approved M3 criteria, not implementation or acceptance. E
     {
       "id": "M3-08",
       "state": "BLOCKED",
-      "gap": "Current Sol GPT actor official inventory returned no browser and browser-access-host unavailable; current product runtime proof remains blocked pending external capability and applicable runtime admission.",
+      "gap": "Both admitted connection routes failed; actual client mode/profile startup unverified and external custody/procedure findings remain. No current product runtime proof.",
       "owner": "Root / Product Owner",
-      "destination": "Same R139 external connection packet, then Root source/runtime-admission review before G0-G3; no local retry.",
+      "destination": "Same R139 supported native setup, conditional verification after actual state delta, then independent runtime/source admission review.",
       "evidence": [
         {
           "path": "docs/reviews/R139_GEMINI_NATIVE_BROWSER_CHECK_ROOT_REVIEW_2026-10-28.md",
@@ -205,6 +223,18 @@ Projection of the same approved M3 criteria, not implementation or acceptance. E
         {
           "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/local/usage.json",
           "sha256": "793009260c92c4cf3f9beeabb9e368aa634fd0524197e96710b5a7dfad7b57c2"
+        },
+        {
+          "path": "docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_RETURN_2026-10-29.md",
+          "sha256": "dc3daa9f136b03cd14015901e743ee15db09c9e4176fc5859022c0d0ed847651"
+        },
+        {
+          "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/root_external_result_review.json",
+          "sha256": "25e89fd34bc214bd3f0270ccc2512ace96cad66bf34a5c15911029f5c75392f2"
+        },
+        {
+          "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/configuration_inspection.json",
+          "sha256": "45bba264078f42786fb05e96ba768d10734af316066a82d573cb3252a1f2c8bb"
         }
       ]
     }
@@ -215,18 +245,18 @@ Projection of the same approved M3 criteria, not implementation or acceptance. E
         "M3-05",
         "M3-08"
       ],
-      "reason": "One already approved external fallback after reviewed actual local browser-host unavailability; return capability evidence to same R139.",
-      "budgetMinutes": 5,
-      "stop": "Unsupported official setup, first denial/error/timeout or uncertain effect; no blind retry, personal-profile exposure or raw debugging workaround.",
-      "returnToProduct": "Return one actual result to Root in the same R139 for capability/source/runtime review; no automatic successor or retry."
+      "reason": "Correct the evidenced missing native setup rather than repeat a failed browser request; preserve all spent usage/findings.",
+      "budgetMinutes": 10,
+      "stop": "No actual supported isolated setup/profile ownership, inaccessible control, policy barrier or first browser error; no unchanged-state job or retry.",
+      "returnToProduct": "Same R139 source/runtime admission after independent actual setup/capability review; no helper tranche."
     }
   ],
   "conclusions": {
     "tranche": "PENDING",
-    "trancheSummary": "Final external diagnostic dispatch; actual receiving outcome not yet observed.",
+    "trancheSummary": "Fresh bounded supported setup dispatch, not prior packet replay; actual result unobserved.",
     "trancheEvidence": [],
     "product": "PENDING",
-    "productSummary": "Full M3/FREEZE OPEN; connection proof alone does not release product runtime.",
+    "productSummary": "Full M3/FREEZE OPEN; connection capability does not release product runtime or close criteria.",
     "acceptance": [],
     "owner": "Root independent technical review; Product Owner business acceptance"
   }
