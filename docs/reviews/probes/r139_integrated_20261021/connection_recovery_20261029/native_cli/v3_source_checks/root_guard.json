@@ -1,0 +1,25 @@
+{
+  "kind": "STATIC_SOURCE_CONSISTENCY_ONLY",
+  "sourceRawSha256": "bfcdf721409b5e464d0b47f7a5522e482f05a463bd55f918e037362a84ce2622",
+  "syntax": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "importWithRunArgInert": true,
+  "observedNativeV2ReceiptAccepted": true,
+  "sourceRendererTitleCaseAccepted": true,
+  "parserNegativesRejected": 6,
+  "absentReleaseRejected": "Error: ENOENT: no such file or directory, open 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r139_integrated_20261021\\connection_recovery_20261029\\native_cli\\runtime_release_v3.json'",
+  "staleSourceEnvelopeRejected": true,
+  "extraFieldRejected": true,
+  "fixtureEnvelopeShapeAccepted": true,
+  "cleanupWriterFailureNonthrowing": true,
+  "cleanupFailureFlag": true,
+  "claimDirectoryAbsent": true,
+  "releaseFileAbsent": true,
+  "sdkImports": 0,
+  "browserCalls": 0,
+  "providerCalls": 0,
+  "note": "Pure fixtures and static contract only; no native process metadata or runtime AI governance proof."
+}

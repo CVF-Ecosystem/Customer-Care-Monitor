@@ -1,6 +1,6 @@
 # R139 native SDK v3 — independent admission/source/result review
 
-Status: SOURCE_ADMISSION_ACCEPTED_RUNTIME_HELD
+Status: SOURCE_REVIEW_PASS_EXACT_RELEASE_PREPARED
 Risk: R2
 Worker: Terra6.1High v3 source/execution worker
 Reviewer: Root independent
@@ -18,6 +18,14 @@ V3 authority binds20raw installed file pins (15inherited plus McpResponse/pages/
 Worker edits only new v3 source, static tests/receipts and return; Root owns authority, release, coverage, continuity/catalog and commits. Required tests consume original v2 response and pinned source-derived rendering, plus reject malformed/duplicate/unexpected/error inputs; no mocked browser success or AI governance proof. Ownership evidence must precede parsing and best-effort cleanup identity precede close on early error, with independent cleanup steps even if evidence writing fails. Missing identity remains UNKNOWN, never inferred.
 
 Preparation verification: doctor28/28, all20rawpins PASS, legacy7/7, explicit pre-dispatch6 and pre-commit7mandatory PASS; closeability N/A because product work order is blocked. Fresh local gate unit discovery113tests/199.010seconds OK, no skips. Root transitions COMMIT_STEWARD for preparation; source authoring starts only after actual commit SHA dispatch.
+
+## Exact source acceptance and prospective one-shot release
+
+Final source raw SHA256 `bfcdf721409b5e464d0b47f7a5522e482f05a463bd55f918e037362a84ce2622`, preparation55f52e06. Worker syntax1/staticcontract1 PASS; return corrected one documentary reference to absent empty-output syntax file without rerun or source change. Root independently reviewed full delta and tests, then exact final syntax1 and readonly guard1 PASS: original actual v2 text response, native title/URL case, six independent parser negatives, inert import with argv --run, absent release before claim, stale hash/extra-field rejection, evidence-writer failure nonthrowing. Root receipt `native_cli/v3_source_checks/root_guard.json`; deliberate in-memory fixtures are static only.
+
+Separate Terra final source reviewer PASS on exact raw source, no runtime effects. Root accepts source and prepares exact release binding operative admission6b442b27/sourcebfcdf721/preparation55f52e06/newunusedrunId3e2ccdd0. Release is valid only at its committed HEAD with all3rawblob equality; claim must be exclusive before SDK import. Root COMMIT_STEWARD commits source/release before Terra EXECUTION_WORKER may invoke exactly once. SDK/browser0 for v3 before release; v2 counters remain spent.
+
+Capture preexistence and vendor write are not atomic against same-user writers; custody is sampled, not authenticated origin or global writer absence. Root will independently inspect actual PNG, compare actual digest through capture/result custody, preserve bytes in ignored owned archive and qualify any mismatch. Process identity/chronology and actual known-PID absence, not close return alone, are required for cleanup. No prospective proof is promoted to runtime acceptance.
 
 ## Claim and product boundaries
 

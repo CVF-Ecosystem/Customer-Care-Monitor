@@ -5,6 +5,69 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r139-sdk-v3-release-20261030-9",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/v3_source_checks/syntax_exit.txt",
+      "status": "ACTIVE",
+      "description": "Exact reviewed native SDK v3 source/release or static evidence; no runtime/product acceptance."
+    },
+    {
+      "id": "r139-sdk-v3-release-20261030-8",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/v3_source_checks/root_guard.mjs",
+      "status": "ACTIVE",
+      "description": "Exact reviewed native SDK v3 source/release or static evidence; no runtime/product acceptance."
+    },
+    {
+      "id": "r139-sdk-v3-release-20261030-7",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/v3_source_checks/root_guard.json",
+      "status": "ACTIVE",
+      "description": "Exact reviewed native SDK v3 source/release or static evidence; no runtime/product acceptance."
+    },
+    {
+      "id": "r139-sdk-v3-release-20261030-6",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/v3_source_checks/contract_output.txt",
+      "status": "ACTIVE",
+      "description": "Exact reviewed native SDK v3 source/release or static evidence; no runtime/product acceptance."
+    },
+    {
+      "id": "r139-sdk-v3-release-20261030-5",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/v3_source_checks/contract_exit.txt",
+      "status": "ACTIVE",
+      "description": "Exact reviewed native SDK v3 source/release or static evidence; no runtime/product acceptance."
+    },
+    {
+      "id": "r139-sdk-v3-release-20261030-4",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/v3_source_checks/contract.mjs",
+      "status": "ACTIVE",
+      "description": "Exact reviewed native SDK v3 source/release or static evidence; no runtime/product acceptance."
+    },
+    {
+      "id": "r139-sdk-v3-release-20261030-3",
+      "family": "continuity",
+      "path": "docs/reviews/R139_NATIVE_SDK_V3_WORKER_RETURN_2026-10-30.md",
+      "status": "ACTIVE",
+      "description": "Exact reviewed native SDK v3 source/release or static evidence; no runtime/product acceptance."
+    },
+    {
+      "id": "r139-sdk-v3-release-20261030-2",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/runtime_release_v3.json",
+      "status": "ACTIVE",
+      "description": "Exact reviewed native SDK v3 source/release or static evidence; no runtime/product acceptance."
+    },
+    {
+      "id": "r139-sdk-v3-release-20261030-1",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/run_owned_stdio_v3.mjs",
+      "status": "ACTIVE",
+      "description": "Exact reviewed native SDK v3 source/release or static evidence; no runtime/product acceptance."
+    },
+    {
       "id": "r139-sdk-v3-preparation-20261030-3",
       "family": "continuity",
       "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/knowledge_ingest_v3.json",

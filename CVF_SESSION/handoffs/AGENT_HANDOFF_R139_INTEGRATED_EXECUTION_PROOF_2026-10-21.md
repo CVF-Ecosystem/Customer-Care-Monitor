@@ -6,10 +6,14 @@ Status: ACTIVE
 
 - Current mode: BUILD
 - Active phase: BUILD
-- Active role: Root ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / independent source and result REVIEWER / COMMIT_STEWARD; Terra6.1High v3 source worker and separate v3 admission reviewer; SOURCE ONLY runtime held
+- Active role: Root ORCHESTRATOR / independent source and result REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra6.1High v3 source/future execution worker; separate Terra reviewer; committed exact release required
 - Active tranche: CCMAI-RUNTIME-139
-- Next allowed move: CCMAI-RUNTIME-139 v3 finite SOURCE REPAIR ONLY under NATIVE-SDK-V3-ADMISSION after actual v2 text-schema/late-ownership failure. Root accepts consolidated strict native response/early ownership contract, separate Terra admission review then committed preparation precede worker BUILD. Terra6.1High v3 worker edits newv3source/checks/return only; Root independent reviewer and sole commit owner. No SDK import/start/browser until exact independent source acceptance and separate committed v3 release. V2 SPENT connect1/start1/tool1; browser cumulative17/source27/controllers4/campaign1/services5/allUNKNOWNs preserved; v3used0. Core15e/profile1.2 doctor28/28, inheritedfiveCorefindings OPEN, olde9/profile1.1 productexecutionHOLD, fullR139/M3/FREEZE OPEN; Facebook/ZaloOA parked.
+- Next allowed move: CCMAI-RUNTIME-139 v3 sourcebfcdf721 independently accepted by Root and separate Terra; worker and Root static syntax/contract guards PASS. Root COMMIT_STEWARD commits exact v3 source/release before execution. After rawHEAD binding and role acknowledgment, Terra may invoke ONE isolated ExampleDomain lifecycle under V3 admission1connect/start8toolsmax300s3observations; no retry. Root independently reviews original results/PNG/PID ownership and cleanup. V3used0 before dispatch; v2SPENT1connect1start1tool and browser cumulative17, prior27/4/1/5/allUNKNOWNs unchanged. Core15e/profile1.2 doctor28/28, fiveCorefindings OPEN, olde9/profile1.1 productexecutionHOLD, fullR139/M3/FREEZE OPEN; Facebook/ZaloOA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
+
+## SDK v3 source acceptance / exact release acknowledgment — 2026-10-30
+
+Root rehydrates source-only current mode; sourcebfcdf721 accepted by Root and separate Terra source reviewer. Worker syntax1/static1 and Root syntax1/guard1 PASS on exact source. Root transitions source REVIEWER to COMMIT_STEWARD for exact source/release, then Terra EXECUTION_WORKER only after commit/rawHEAD/runId acknowledgment. Native initial ownership observation precedes parsing; early failure attempts cleanup identity before independent close. No oldauthority/source/release/evidence changed. One new v3 finite run is conditional, not a v2 replay; all v2used1/1/1/cumulative17/cleanupUNKNOWN retained. Actual PNG custody sampled and same-user concurrent-writer limits retained. Root remains independent result reviewer; product/Core holds and FB/ZaloOApark unchanged.
 
 ## Native SDK v3 SPEC / WORK_ORDER acknowledgment — 2026-10-30
 

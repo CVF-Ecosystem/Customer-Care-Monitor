@@ -1,0 +1,2 @@
+PASS native v2 receipt, renderer cases, negatives, release binding, failure write, ownership ordering
+evidence write failed (fixture): Error: fixture
