@@ -1,8 +1,8 @@
 # Kế hoạch nghiệm thu sản phẩm CCMA: R137 đến M3, pilot và phát hành
 
-Status: ACCEPTED_DOCUMENTARY_PLAN_ONLY
-Risk: R1
-Worker: Luna Max — IMPLEMENTATION_WORKER
+Status: DOCUMENTARY_PLAN_REVIEWED_PRODUCT_OPEN
+Risk: R2 (documentary reconciliation ceiling)
+Worker: Terra 6.1 High — documentary IMPLEMENTATION_WORKER; original R138 documentary plan: Luna Max
 Reviewer: Root — independent reviewer
 Yêu cầu Owner: 2026-10-21, lộ trình mốc/evidence rõ ràng, không hứa ngày hoàn tất
 Tài liệu chi tiết chuẩn: chính file này
@@ -29,6 +29,16 @@ Phạm vi hiện hành là một bản cài cho một công ty hoặc cá nhân,
 | `N/A_WITH_REASON` | Chỉ dùng khi hợp đồng hiện hành loại trừ rõ tiêu chí và lưu lý do; phạm vi mới sẽ xét lại. |
 
 `PASS` chỉ dành cho điều kiện được chứng minh ở tầng phù hợp trên source đã ghim. Mô hình UI không chứng minh quyền hoặc hành vi runtime; test local không chứng minh kênh/provider thật; hosted CI cũ không chứng minh revision mới. Bất kỳ claim nào rằng CVF kiểm soát AI ở runtime cần provider API thật và request/response đã làm sạch theo `AGENTS.md`.
+
+## Checkpoint hiện hành — R139, 2026-10-29
+
+Bản kế hoạch R138 trước đây đã được chấp nhận ở tầng tài liệu; Root đã review độc lập bản đối chiếu tài liệu này; các lỗi tương thích static preflight đã được xử lý và review theo gói bảo trì commit R139; đây không phải nghiệm thu sản phẩm. Các mô tả R137 và G0 phía dưới là baseline lịch sử khi mâu thuẫn với checkpoint này. Một work order R139 duy nhất vẫn phục vụ M3-05/M3-08 qua G0–G3; không tạo helper tranche.
+
+Gemini đã dùng một browser job: `list_pages` thất bại vì không tìm thấy DevToolsActivePort tại profile yêu cầu; open/read/capture/close `NOT_RUN`. Root chỉ nhận failure có qualification, không nhận G0 hoặc product PASS. Giữ source 27, old controllers 4, campaign 1, service 5, browser methods 14, diagnostic docs 2, packaged docs 2, pricing 2 và mọi UNKNOWN; số 0 campaign/controller/fixture/key/provider trong packet Gemini không xóa lịch sử đã dùng. Không replay job đã hết. Cần thay đổi trạng thái kết nối/profile/permission Chrome được Owner duyệt, sau đó mới có dispatch hữu hạn mới với review độc lập. [Root review](../reviews/R139_GEMINI_NATIVE_BROWSER_CHECK_ROOT_REVIEW_2026-10-28.md) và usage gắn trong review là căn cứ hiện hành.
+
+Owner cho phép dùng Core `b8ead4f0`/profile 1.2 và ngoại lệ freshness chỉ cho đối chiếu tài liệu này theo [admission tài liệu R139](../../CVF_SESSION/authority/CCMAI-RUNTIME-139-ROADMAP-DOCS-ADMISSION.json); doctor 27/28 FAIL và pinned preflight mismatch vẫn giữ nguyên. Pin thực thi R139 `e9ddcbcd`/profile 1.1 không đổi; mismatch manifest/lock đang cài phải được giải quyết theo authority runtime áp dụng trước bất kỳ thực thi tương lai nào. Thay đổi kết nối Chrome riêng lẻ không cấp runtime release. Full M3/FREEZE OPEN; Facebook/Zalo OA và live account work vẫn parked.
+
+Checkpoint kích hoạt khi kết nối thay đổi, hết budget hoặc nguồn/evidence/phụ thuộc trọng yếu thay đổi. Root kiểm evidence và caps, Product Owner quyết định phạm vi và acceptance nghiệp vụ: tiếp tục/sửa trong authority, revise qua Owner, HOLD hoặc dừng; mọi bước hỗ trợ phải trở về R139/G3. Kết luận nội dung tài liệu đã được Root review độc lập; static preflight đã đạt trong scope bảo trì, tranche sản phẩm vẫn mở; kết luận milestone sản phẩm vẫn OPEN, cần proof và acceptance của các hàng M3 còn thiếu.
 
 ## 2. Hiện trạng được chấp nhận
 
@@ -117,18 +127,195 @@ G0, G1, G2 là các pha theo thứ tự trong một proof work order tích hợp
 
 ### M3-01–M3-08: evidence hiện tại và proof còn thiếu
 
-| ID | Bằng chứng hiện có | Quyết định áp dụng inheritance | Còn thiếu và proof chính xác | Owner/người nghiệm thu |
-|---|---|---|---|---|
-| M3-01 — queue priority/evidence | `ACCEPTED_BOUNDED_CHRONOLOGICAL_QUEUE` theo R135; đây là thứ tự thời gian, không phải business urgency. | Có thể kế thừa phân trang/filter/count/order trong đúng route/fixtures R135; Owner vẫn phải quyết định queue rule và Root xác nhận UI/API R137 không đổi hành vi kế thừa. | Owner chọn oldest-first/due/overdue hoặc định nghĩa rule. Current-source queue phải giải thích vì sao case xuất hiện và khớp page/filter/count; không gọi là priority nếu rule không hỗ trợ. | Product Owner quyết định rule; Root kiểm source/evidence. |
-| M3-02 — confirm/reject/correct | `ACCEPTED_BOUNDED_LOCAL_ACTIONS` theo R135; R117/R127/R128/R131 có phần bằng chứng riêng. | Chỉ kế thừa action/role/fixture đã ghi trong các receipt đó; kiểm current route và proposal/version binding trước khi dùng lại, không replay chỉ để refresh. | Chứng minh đúng role/reason, giữ nguyên proposal gốc, append actor/time/before-after; sửa/correct không ghi đè history. | Owner chấp nhận role/process; Root nghiệm thu source/trace. |
-| M3-03 — currentness/concurrency | `INHERITED_ACCEPTED_BOUNDED` theo R131/R135: local version/snapshot và hai reviewer trong phạm vi đã ghi. | Kế thừa nếu source snapshot/version contract và competing-reviewer path vẫn là cùng contract; Root đối chiếu current source. Nếu lineage/lock/claim đổi hoặc regression lộ ra thì inheritance không áp dụng. | E01–E03 chứng minh request/source/version/tenant hiện tại và POST recheck; nếu source route đổi, chạy đúng competing/stale negative đã lộ gap. Không đòi race exhaustive nếu không có root cause mới. | Root quyết định source applicability; Owner chấp nhận workflow effect. |
-| M3-04 — assignment/deadline/outcome | `INHERITED_ACCEPTED_BOUNDED` theo R127/R128/R131/R135; SLA/business ownership chưa chốt. | Kế thừa UI/audit actions trong exact route R127/128 nếu actor, workspace, status transitions còn đúng; không kế thừa business SLA chưa được quyết định. | M1-02/04 ghi owner/assignee/WAIT_DATA/escalation/deadline meaning. Current-source demo chứng minh assign, deadline, outcome, audit và reopen; assessment không được gọi là customer case đã giải quyết. | Product Owner chốt role/SLA; Root kiểm source/trace. |
-| M3-05 — WAIT_DATA/supplement/rerun/escalation | Request-only UI được chấp nhận trước; R137 current source/component được chấp nhận, `SOURCE_COMPONENT_ACCEPTED_RUNTIME_OPEN`. | R135 request-only receipt không chứng minh execution; R137 source chỉ áp dụng source/component. Runtime inheritance không có. | Hoàn tất E01–E06: hiển thị reason/owner/next step; chỉ chạy theo authority mới; không auto-run, hidden send hay auto-close. Không có call authority thì row giữ OPEN. | Product Owner chấp nhận user consequence; Root independent reviewer nghiệm thu runtime proof. |
-| M3-06 — asynchronous lifetime | R137 chấp nhận component cancellation/uncertainty; runtime/browser chưa chạy. | Chỉ kế thừa focused lifetime checks có trong current R137 review; không suy ra mọi interleaving hoặc browser/session behavior. | E04/T3 chứng minh route/tenant/request/token/actor/permission change, unmount và late response không làm đổi sai view hoặc resend; fault cases được ghi theo packet. | Root review; Product Owner chấp nhận visible hold/status. |
-| M3-07 — notification | `N/A_WITH_REASON`: scope R101 không gửi notification. | N/A còn áp dụng chỉ khi scope Pancake hiện tại vẫn không gửi notification; Owner xác nhận phạm vi này. | Không cần proof khi ngoài scope. Nếu scope đổi, contract riêng phải định nghĩa recipient/permission/failure/retry; notification không quyết định case state. | Owner xác nhận scope; Root nghiệm thu lý do N/A. |
-| M3-08 — browser/backend demo | R134/R135 browser proof bounded; R135 đóng failure gap cụ thể; R137 browser `NOT_RUN`. Viewport/raster/offline còn qualification. | Chỉ kế thừa evidence cùng revision/viewport/flow đã ghi; không tự chuyển B07/B08/B09 sang current-source acceptance. | G2 chứng minh current-source browser/backend positive + denied/stale/failure, reload/persistence và language. Owner phải chấp nhận từng viewport/raster/offline qualification theo scoped requirement hoặc yêu cầu proof; ghi image dimensions đúng thực tế. | Product Owner chấp nhận flow/qualification; Root xác minh source/capture/cleanup. |
+| ID | Bằng chứng hiện có | Quyết định áp dụng inheritance | Còn thiếu và proof chính xác | Owner/người nghiệm thu | Trạng thái coverage / action và destination |
+|---|---|---|---|---|---|
+| M3-01 — queue priority/evidence | `ACCEPTED_BOUNDED_CHRONOLOGICAL_QUEUE` theo R135; đây là thứ tự thời gian, không phải business urgency. | Có thể kế thừa phân trang/filter/count/order trong đúng route/fixtures R135; Owner vẫn phải quyết định queue rule và Root xác nhận UI/API R137 không đổi hành vi kế thừa. | Owner chọn oldest-first/due/overdue hoặc định nghĩa rule. Current-source queue phải giải thích vì sao case xuất hiện và khớp page/filter/count; không gọi là priority nếu rule không hỗ trợ. | Product Owner quyết định rule; Root kiểm source/evidence. | `IMPLEMENTED_UNPROVED`; Quy tắc ưu tiên và applicability current-source còn mở. Owner: Product Owner / Root. M1-01 quyết định trigger/quy tắc chờ và ngoại lệ; Owner xử lý quy tắc queue còn mở, Root đối chiếu source applicability trước G3. |
+| M3-02 — confirm/reject/correct | `ACCEPTED_BOUNDED_LOCAL_ACTIONS` theo R135; R117/R127/R128/R131 có phần bằng chứng riêng. | Chỉ kế thừa action/role/fixture đã ghi trong các receipt đó; kiểm current route và proposal/version binding trước khi dùng lại, không replay chỉ để refresh. | Chứng minh đúng role/reason, giữ nguyên proposal gốc, append actor/time/before-after; sửa/correct không ghi đè history. | Owner chấp nhận role/process; Root nghiệm thu source/trace. | `IMPLEMENTED_UNPROVED`; Quyền, reason và binding current-source chưa có acceptance đầy đủ. Owner: Root / Product Owner. Root kiểm binding và trace; Owner chấp nhận process tại G3. |
+| M3-03 — currentness/concurrency | `INHERITED_ACCEPTED_BOUNDED` theo R131/R135: local version/snapshot và hai reviewer trong phạm vi đã ghi. | Kế thừa nếu source snapshot/version contract và competing-reviewer path vẫn là cùng contract; Root đối chiếu current source. Nếu lineage/lock/claim đổi hoặc regression lộ ra thì inheritance không áp dụng. | E01–E03 chứng minh request/source/version/tenant hiện tại và POST recheck; nếu source route đổi, chạy đúng competing/stale negative đã lộ gap. Không đòi race exhaustive nếu không có root cause mới. | Root quyết định source applicability; Owner chấp nhận workflow effect. | `IMPLEMENTED_UNPROVED`; Applicability lineage và negative hiện hành còn cần đối chiếu. Owner: Root / Product Owner. Root kiểm source; G1 stale/competing negative nếu source thay đổi hoặc lộ gap; Owner chấp nhận effect. |
+| M3-04 — assignment/deadline/outcome | `INHERITED_ACCEPTED_BOUNDED` theo R127/R128/R131/R135; SLA/business ownership chưa chốt. | Kế thừa UI/audit actions trong exact route R127/128 nếu actor, workspace, status transitions còn đúng; không kế thừa business SLA chưa được quyết định. | M1-02/04 ghi owner/assignee/WAIT_DATA/escalation/deadline meaning. Current-source demo chứng minh assign, deadline, outcome, audit và reopen; assessment không được gọi là customer case đã giải quyết. | Product Owner chốt role/SLA; Root kiểm source/trace. | `IMPLEMENTED_UNPROVED`; Role, SLA và demo current-source chưa hoàn tất. Owner: Product Owner / Root. M1-02/04 quyết định role/SLA; G3 demo assignment, outcome và audit. |
+| M3-05 — WAIT_DATA/supplement/rerun/escalation | Request-only UI được chấp nhận trước; R137 current source/component được chấp nhận, `SOURCE_COMPONENT_ACCEPTED_RUNTIME_OPEN`. | R135 request-only receipt không chứng minh execution; R137 source chỉ áp dụng source/component. Runtime inheritance không có. | Hoàn tất E01–E06: hiển thị reason/owner/next step; chỉ chạy theo authority mới; không auto-run, hidden send hay auto-close. Không có call authority thì row giữ OPEN. | Product Owner chấp nhận user consequence; Root independent reviewer nghiệm thu runtime proof. | `BLOCKED`; E01–E06 chưa có runtime proof; Chrome connection và effect admission đang HOLD. Owner: Root / Product Owner. Cùng R139 G0–G3 sau thay đổi kết nối được duyệt và admission phù hợp; Owner chấp nhận user consequence. |
+| M3-06 — asynchronous lifetime | R137 chấp nhận component cancellation/uncertainty; runtime/browser chưa chạy. | Chỉ kế thừa focused lifetime checks có trong current R137 review; không suy ra mọi interleaving hoặc browser/session behavior. | E04/T3 chứng minh route/tenant/request/token/actor/permission change, unmount và late response không làm đổi sai view hoặc resend; fault cases được ghi theo packet. | Root review; Product Owner chấp nhận visible hold/status. | `IMPLEMENTED_UNPROVED`; Browser lifetime và visible hold chưa được chứng minh current-source. Owner: Root / Product Owner. Cùng R139 E04/G2 lifetime proof; Owner chấp nhận visible hold tại G3. |
+| M3-07 — notification | `N/A_WITH_REASON`: scope R101 không gửi notification. | Giữ exclusion R101 đã có; Root đối chiếu applicability với scope và source hiện hành, không mở lại quyết định Owner khi scope không đổi. | Không cần proof khi ngoài scope. Nếu scope đổi, contract riêng phải định nghĩa recipient/permission/failure/retry; notification không quyết định case state. | Root nghiệm thu applicability của N/A; chỉ khi scope đổi mới cần quyết định Owner theo change control. | `UNKNOWN`; Phạm vi R101 hiện không gửi notification; applicability với source và scope hiện hành còn cần kiểm tra. Owner: Root. G3 đối chiếu applicability của exclusion đã có; nếu scope đổi, áp dụng change control trước khi xét contract notification. |
+| M3-08 — browser/backend demo | R134/R135 browser proof bounded; R135 đóng failure gap cụ thể; R137 browser `NOT_RUN`. Viewport/raster/offline còn qualification. | Chỉ kế thừa evidence cùng revision/viewport/flow đã ghi; không tự chuyển B07/B08/B09 sang current-source acceptance. | G2 chứng minh current-source browser/backend positive + denied/stale/failure, reload/persistence và language. Owner phải chấp nhận từng viewport/raster/offline qualification theo scoped requirement hoặc yêu cầu proof; ghi image dimensions đúng thực tế. | Product Owner chấp nhận flow/qualification; Root xác minh source/capture/cleanup. | `BLOCKED`; Current-source browser/backend demo và disposition viewport/offline còn mở; Chrome connection HOLD. Owner: Root / Product Owner. Cùng R139 G2 proof và G3; Owner chấp nhận qualification viewport/raster/offline. |
 
 Chỉ nghiệm thu full M3 khi mọi hàng áp dụng có disposition hiện hành, inherited evidence còn phù hợp với source, và demo end-to-end cùng critical negatives của G3 đạt. N/A của M3-07 không bao gồm tính năng notification trong tương lai. Demo M3 synthetic không chứng minh chất lượng model tiếng Việt, live-channel coverage, production readiness hay CVF governance.
+
+
+Machine coverage là projection của bảng trên và các tiêu chí gốc §7; PLAN không cấp dispatch. `UNKNOWN` M3-07 giữ exclusion R101 đã có, chỉ cần đối chiếu applicability; không tự mở lại quyết định Owner. Trước IMPLEMENT, áp dụng quy tắc independence cho mọi UNKNOWN chưa chọn và bằng chứng ghim tương ứng.
+
+```cvf-milestone-coverage-json
+{
+  "schemaVersion": "cvf.milestoneCoverage@1.0.0",
+  "authority": {
+    "path": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
+    "heading": "## 7. M3 — Người duyệt, giao việc và kết quả xử lý",
+    "sha256": "712817cd25936efd4fb13e0dd456ebe4ddceb5fccfd1cacb83042838724065a4"
+  },
+  "milestone": {
+    "id": "M3",
+    "consumer": "Người duyệt và người xử lý ca trên một installation Pancake",
+    "outcome": "Hoàn tất review, giao việc, kết quả và lịch sử qua browser/backend theo tiêu chí M3 đã duyệt.",
+    "checkpoint": {
+      "trigger": "Thay đổi trạng thái kết nối Chrome, cạn budget hoặc thay đổi nguồn, evidence hay phụ thuộc trọng yếu.",
+      "owner": "Root điều phối; Product Owner quyết định phạm vi và acceptance nghiệp vụ.",
+      "decision": "Đối chiếu evidence và caps; tiếp tục hoặc sửa trong authority, trình Owner nếu đổi phạm vi, HOLD hoặc dừng; đưa kết quả về R139/G3."
+    }
+  },
+  "phase": "PLAN",
+  "action": {
+    "kind": "PLAN",
+    "selected": [],
+    "owner": "Root",
+    "output": "Đối chiếu M3-01..08 và checkpoint R139 trong kế hoạch hiện hành.",
+    "budgetMinutes": 30,
+    "stop": "Dừng khi đổi authority, cạn budget hoặc cần effect runtime.",
+    "next": "Root review độc lập; chỉ tiếp R139 khi prerequisite và admission tương ứng được đáp ứng."
+  },
+  "rows": [
+    {
+      "id": "M3-01",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Quy tắc ưu tiên và applicability current-source còn mở.",
+      "owner": "Product Owner / Root",
+      "destination": "M1-01 quyết định trigger/quy tắc chờ và ngoại lệ; Owner xử lý quy tắc queue còn mở, Root đối chiếu source applicability trước G3.",
+      "evidence": [
+        {
+          "path": "docs/reviews/R135_M3_ACCEPTANCE_DELTA_2026-10-20.md",
+          "sha256": "cfe89ee2ddf42dcbf80edfb316ff5a05f5f364907bfb8636d9e69bfc99bd4a00"
+        }
+      ]
+    },
+    {
+      "id": "M3-02",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Quyền, reason và binding current-source chưa có acceptance đầy đủ.",
+      "owner": "Root / Product Owner",
+      "destination": "Root kiểm binding và trace; Owner chấp nhận process tại G3.",
+      "evidence": [
+        {
+          "path": "docs/reviews/R131_M3_ACCEPTANCE_REVIEW_2026-10-19.md",
+          "sha256": "ec78f8db455589e9bad8a35d6f757ebb0068de5e175853e841a3fd0188e4c31b"
+        },
+        {
+          "path": "docs/reviews/R135_M3_ACCEPTANCE_DELTA_2026-10-20.md",
+          "sha256": "cfe89ee2ddf42dcbf80edfb316ff5a05f5f364907bfb8636d9e69bfc99bd4a00"
+        }
+      ]
+    },
+    {
+      "id": "M3-03",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Applicability lineage và negative hiện hành còn cần đối chiếu.",
+      "owner": "Root / Product Owner",
+      "destination": "Root kiểm source; G1 stale/competing negative nếu source thay đổi hoặc lộ gap; Owner chấp nhận effect.",
+      "evidence": [
+        {
+          "path": "docs/reviews/R131_M3_ACCEPTANCE_REVIEW_2026-10-19.md",
+          "sha256": "ec78f8db455589e9bad8a35d6f757ebb0068de5e175853e841a3fd0188e4c31b"
+        },
+        {
+          "path": "docs/reviews/R135_M3_ACCEPTANCE_DELTA_2026-10-20.md",
+          "sha256": "cfe89ee2ddf42dcbf80edfb316ff5a05f5f364907bfb8636d9e69bfc99bd4a00"
+        }
+      ]
+    },
+    {
+      "id": "M3-04",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Role, SLA và demo current-source chưa hoàn tất.",
+      "owner": "Product Owner / Root",
+      "destination": "M1-02/04 quyết định role/SLA; G3 demo assignment, outcome và audit.",
+      "evidence": [
+        {
+          "path": "docs/reviews/R131_M3_ACCEPTANCE_REVIEW_2026-10-19.md",
+          "sha256": "ec78f8db455589e9bad8a35d6f757ebb0068de5e175853e841a3fd0188e4c31b"
+        }
+      ]
+    },
+    {
+      "id": "M3-05",
+      "state": "BLOCKED",
+      "gap": "E01–E06 chưa có runtime proof; Chrome connection và effect admission đang HOLD.",
+      "owner": "Root / Product Owner",
+      "destination": "Cùng R139 G0–G3 sau thay đổi kết nối được duyệt và admission phù hợp; Owner chấp nhận user consequence.",
+      "evidence": [
+        {
+          "path": "docs/reviews/R137_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md",
+          "sha256": "63cc0bc309a235c7d36384b7b78afa48acafea8267622d93d191780633071783"
+        },
+        {
+          "path": "docs/reviews/R139_GEMINI_NATIVE_BROWSER_CHECK_ROOT_REVIEW_2026-10-28.md",
+          "sha256": "0f434528ae218886eca1c8c68efb68d3cab164cbad57b2a2b51af79f14135d47"
+        }
+      ]
+    },
+    {
+      "id": "M3-06",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Browser lifetime và visible hold chưa được chứng minh current-source.",
+      "owner": "Root / Product Owner",
+      "destination": "Cùng R139 E04/G2 lifetime proof; Owner chấp nhận visible hold tại G3.",
+      "evidence": [
+        {
+          "path": "docs/reviews/R137_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md",
+          "sha256": "63cc0bc309a235c7d36384b7b78afa48acafea8267622d93d191780633071783"
+        }
+      ]
+    },
+    {
+      "id": "M3-07",
+      "state": "UNKNOWN",
+      "gap": "Phạm vi R101 hiện không gửi notification; applicability với source và scope hiện hành còn cần kiểm tra.",
+      "owner": "Root",
+      "destination": "G3 đối chiếu applicability của exclusion đã có; nếu scope đổi, áp dụng change control trước khi xét contract notification.",
+      "evidence": [
+        {
+          "path": "docs/reviews/R131_M3_ACCEPTANCE_MATRIX_2026-10-19.md",
+          "sha256": "7dabfc6a2a8bbf42a4447063e961a428849b0a020ae4c02589a7fb323510f9ac"
+        }
+      ]
+    },
+    {
+      "id": "M3-08",
+      "state": "BLOCKED",
+      "gap": "Current-source browser/backend demo và disposition viewport/offline còn mở; Chrome connection HOLD.",
+      "owner": "Root / Product Owner",
+      "destination": "Cùng R139 G2 proof và G3; Owner chấp nhận qualification viewport/raster/offline.",
+      "evidence": [
+        {
+          "path": "docs/reviews/R139_GEMINI_NATIVE_BROWSER_CHECK_ROOT_REVIEW_2026-10-28.md",
+          "sha256": "0f434528ae218886eca1c8c68efb68d3cab164cbad57b2a2b51af79f14135d47"
+        },
+        {
+          "path": "docs/reviews/R135_M3_ACCEPTANCE_DELTA_2026-10-20.md",
+          "sha256": "cfe89ee2ddf42dcbf80edfb316ff5a05f5f364907bfb8636d9e69bfc99bd4a00"
+        }
+      ]
+    }
+  ],
+  "supportingWork": [
+    {
+      "criterionIds": [
+        "M3-05",
+        "M3-08"
+      ],
+      "reason": "Đối chiếu tài liệu, evidence và remainder của M3-05/M3-08 để trả gap về cùng R139; không thực hiện chẩn đoán browser.",
+      "budgetMinutes": 30,
+      "stop": "Hết budget tài liệu hoặc gặp thay đổi boundary; không thực hiện runtime effect.",
+      "returnToProduct": "Root review và đưa gap về cùng R139 G0–G3; không tạo tranche hỗ trợ."
+    }
+  ],
+  "conclusions": {
+    "tranche": "PENDING",
+    "trancheSummary": "Nội dung đối chiếu đã được Root review; static preflight đã đạt theo review bảo trì commit R139, kế hoạch sản phẩm và tranche tiếp tục mở.",
+    "trancheEvidence": [],
+    "product": "PENDING",
+    "productSummary": "Full M3 và FREEZE còn OPEN; G0–G3 và acceptance cần thiết chưa hoàn tất.",
+    "acceptance": [],
+    "owner": "Root review kỹ thuật; Product Owner chấp nhận nghiệp vụ."
+  }
+}
+```
 
 ## 5. Quyết định nghiệp vụ M1 chạy song song
 

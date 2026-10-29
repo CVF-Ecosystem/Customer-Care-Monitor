@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Portable downstream gate runner (cvf.downstreamGateProfile@1.1.0, stdlib only).
+"""Portable downstream gate runner (cvf.downstreamGateProfile@1.2.0, stdlib only).
 
 Core-owned: scripts/lib/downstream_governance/. A project copy lives in
 scripts/cvf_gates/ and is identity-pinned by .cvf/gate-profile.lock.json.
@@ -64,7 +64,7 @@ def _stage0(args: argparse.Namespace) -> list[str]:
 
 def _import_modules() -> dict:
     names = ("cvf_dg_applicability", "cvf_dg_common", "cvf_dg_continuity", "cvf_dg_coverage", "cvf_dg_install",
-             "cvf_dg_intake", "cvf_dg_review", "cvf_dg_routing")
+             "cvf_dg_intake", "cvf_dg_review", "cvf_dg_routing", "cvf_milestone_coverage")
     return {name: importlib.import_module(name) for name in names}
 
 
@@ -81,6 +81,47 @@ def _range_result(M: dict, candidates, require: bool):
     if candidates.findings:
         return common.ControlResult("CVF-DG-RANGE-01", "FAIL", candidates.findings, notes=notes)
     return common.ControlResult("CVF-DG-RANGE-01", "PASS", [], notes=notes)
+
+
+def _milestone_result(M: dict, root: Path, packets: list[str], profile: dict):
+    common, coverage = M["cvf_dg_common"], M["cvf_milestone_coverage"]
+    ControlResult, Finding = common.ControlResult, common.Finding
+    CONTROL_ID = "CVF-DG-COV-01"
+    candidates = set(packets)
+    active = root / profile["continuityContract"]["implementationPath"]
+    findings, checked = [], []
+    if active.is_file():
+        try:
+            state = common.load_json_strict(active)
+            orders = state.get("activeWorkOrders", [])
+            if not isinstance(orders, list) or not all(isinstance(p, str) for p in orders):
+                raise ValueError("activeWorkOrders must be paths")
+            if any("/archive/" in p or not p.startswith("docs/work_orders/") for p in orders):
+                raise ValueError("active orders must be non-archived work-order paths")
+            candidates.update(orders)
+        except (ValueError, OSError, AttributeError) as exc:
+            findings.append(Finding("COV_ACTIVE_INPUT_INVALID", str(active), str(exc)))
+    for rel in sorted(candidates):
+        if "/archive/" in rel:
+            continue
+        target = common.safe_relative(root, rel)
+        if target is None or not target.is_file():
+            findings.append(Finding("COV_PACKET_MISSING_OR_UNSAFE", rel, "candidate must be a project file"))
+            continue
+        issues = coverage.validate_file(root, rel)
+        findings.extend(Finding(code, rel, "milestone coverage admission refused") for code in issues)
+        if not issues:
+            value = coverage.read_file(root, rel).decode("utf-8-sig")
+            if coverage.required_artifact(rel, value) or coverage.TAG in value:
+                checked.append(rel)
+    if findings:
+        return ControlResult(CONTROL_ID, "FAIL", findings, checked_control_ids=["milestone_coverage"])
+    if not checked:
+        return ControlResult(CONTROL_ID, "NOT_APPLICABLE_WITH_REASON", [],
+                             reason="no current roadmap/executable order or declared coverage block; no coverage claim",
+                             checked_control_ids=["milestone_coverage_applicability"])
+    return ControlResult(CONTROL_ID, "PASS", [], checked_control_ids=["milestone_coverage"],
+                         notes=["checked: " + ", ".join(checked), "mechanical joins only; Local owns semantic acceptance"])
 
 
 def _local_controls(M: dict, root: Path, profile: dict, phase: str) -> list:
@@ -156,6 +197,8 @@ def run_phase(args: argparse.Namespace) -> int:
             results.append(M["cvf_dg_continuity"].check_continuity(root, profile, checker_dir))
         elif cid == "CVF-DG-APPL-01":
             results.append(M["cvf_dg_applicability"].check_applicability(root, packets(("docs/work_orders/",)), checker_dir))
+        elif cid == "CVF-DG-COV-01":
+            results.append(_milestone_result(M, root, packets(("docs/roadmaps/", "docs/work_orders/", "docs/reviews/")), profile))
         elif cid == "CVF-DG-ROUTE-01":
             results.append(M["cvf_dg_routing"].check_routing(root, packets(("docs/work_orders/", "docs/reviews/")), profile))
         elif cid == "CVF-DG-ROLE-01":

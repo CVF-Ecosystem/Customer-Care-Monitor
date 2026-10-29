@@ -1,5 +1,9 @@
 # CCMA — Roadmap phát triển sản phẩm và tiếp quản giữa các agent
 
+## Current R139 checkpoint — 2026-10-29
+
+Một R139 tích hợp cho M3-05/M3-08 đang HOLD sau Gemini `list_pages` connection failure; job đã dùng, open/read/capture/close NOT_RUN. Root chỉ nhận kết quả failure có qualification; G0 và full M3/FREEZE chưa PASS. Giữ toàn bộ caps đã dùng và UNKNOWN, Facebook/Zalo OA parked. Bước phụ thuộc là thay đổi kết nối Chrome được Owner duyệt và dispatch mới có review độc lập; không replay. [Kế hoạch nghiệm thu hiện hành](../../roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md) chứa checkpoint, coverage và destination; §7 dưới đây giữ nguyên tiêu chí được duyệt. Các checkpoint R137 và trước đó là lịch sử, không phải trạng thái tiếp theo.
+
 ## R137 — đã có mã API/trạng thái đánh giá và kiểm thử component, 2026-10-21
 
 Review độc lập chấp nhận phần source: hai GET chỉ đọc về điều kiện/trạng thái, lịch sử theo request vẫn hiển thị khi ca sang OPEN, thao tác chạy có xác nhận và lưu dấu trước khi gửi; mất kết nối/đổi phiên không tự gửi lại. Vòng quan sát dùng hạn hủy một phút và vẫn cho kiểm tra thủ công. Root kiểm tra36/36frontend,4pure Go và typecheck/build đạt; api/handlers chỉ compile, không có test route phù hợp được chạy. Một lượt sửa cùng scope đã xử lý fixture parent và hạn hủy; lỗi ban đầu giữ trong [review](../R137_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md).

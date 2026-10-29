@@ -10,7 +10,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate R1 scoped closure seed for accepted R055/R057 only; source/evidence/runtime unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-058.json`
 - Separate R1 seed for accepted R061 local metadata closure only.: `CVF_SESSION/authority/CCMAI-RUNTIME-062.json`
 - GitHub project-branch material publication receipt for the M1-M5 delivery roadmap; remote SHA readback, no product/runtime acceptance.: `docs/reviews/probes/ccma_product_delivery_publication_2026-10-13.json`
-- M1-M5 product delivery roadmap with current R137 source-only/M3 partial truth and owner-required acceptance route.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
+- M1-M5 product delivery roadmap; current R139 Chrome HOLD and canonical M3 coverage pointer, historical R137 evidence retained.: `docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md`
+- Local-admitted M3 criterion pointer to approved roadmap section; not product acceptance or execution authority.: `docs/milestone-coverage-authority.json`
 - All seven selected inheritance findings independently accepted bounded and material exported atd121c9e; full product exits remain open.: `docs/reviews/planning/CCMA_RUNTIME_CVF_INHERITANCE_ROADMAP_2026-10-12.md`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
@@ -329,7 +330,6 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Immutable narrow R060 successor seed, roles/model/budget retained, old R059 seed unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-060.json`
 - R060 bounded current phase/status/roles/budget; no FREEZE/full S2 claim.: `CVF_SESSION/tranches/CCMAI-RUNTIME-060.json`
 - R060 bounded execution observation plus exact4-line old-test maintenance, all assertions preserved.: `docs/work_orders/CCMAI_RUNTIME_060.md`
-- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_handback.json`
 - Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_M01_container_after.json`
 - Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_M01_container_before.json`
 - Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_M01.jsonl`
@@ -340,6 +340,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_M02.jsonl`
 - Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_M02_manifest.json`
 - Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_M02_stderr.log`
+- Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_handback.json`
 - Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_manifest.json`
 - Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_positive_container_after.json`
 - Actual R065 worker bounded four-Go synthetic application evidence or typed publication handback; independent acceptance pending, raw physical provenance retained.: `docs/reviews/probes/r065_worker_positive_container_before.json`
@@ -815,9 +816,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Accepted intended M2 state/API/admission/evidence contract; no implementation acceptance.: `docs/specs/M2_INTERVENTION_APPLICATION_SPEC_2026-10-14.md`
 - Sol Medium returned local M2 source/tests; initial coverage gaps explicit.: `docs/reviews/R094_M2_INTERVENTION_WORKER_RETURN_2026-10-14.md`
 - R095 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `CVF_SESSION/handoffs/AGENT_HANDOFF_M2_INTERVENTION_R094_2026-10-14.md`
-- R095 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `docs/work_orders/CCMAI_RUNTIME_095_M2_INTERVENTION_LIVE.md`
 - R095 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `CVF_SESSION/tranches/CCMAI-RUNTIME-095.json`
 - R095 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `CVF_SESSION/authority/CCMAI-RUNTIME-095.json`
+- R095 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `docs/work_orders/CCMAI_RUNTIME_095_M2_INTERVENTION_LIVE.md`
 - Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/probes/r095_root/r095_fixture.json`
 - Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/probes/r095_root/fixture_pre_live.json`
 - Actual pre-provider failure/cleanup and unchanged-owner physicalcap continuation authority; no live acceptance.: `docs/reviews/probes/r095_root/cleanup.json`
@@ -844,8 +845,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `docs/reviews/probes/r095_root/pre_effect_identity.json`
 - R095 reviewed bounded activation harness or actual pre-effect tooling evidence; no live result yet.: `docs/reviews/probes/r095_worker/worker_offline9.log`
 - R096 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `CVF_SESSION/handoffs/AGENT_HANDOFF_M2_LIVE_R095_2026-10-14.md`
-- R096 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `docs/work_orders/CCMAI_RUNTIME_096_M2_INTERVENTION_LIVE.md`
 - R096 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `CVF_SESSION/tranches/CCMAI-RUNTIME-096.json`
+- R096 bounded owner-approved authority/continuity or historical R094 handoff; no live result yet.: `docs/work_orders/CCMAI_RUNTIME_096_M2_INTERVENTION_LIVE.md`
 - Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/reviewer_receipt.json`
 - Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/repair1_go_stdout.log`
 - Actual R096 exhausted/unknown live results, source repair or bounded one-shot local proof authority; no live acceptance.: `docs/reviews/probes/r096_root/config_precheck_stdout.log`
@@ -971,9 +972,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_setup/setup_summary.json`
 - Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_setup/stderr.txt`
 - Actual scopedR100 safe evidence/identity/receipt/readback/cleanup; notwholeproduct orhosted proof.: `docs/reviews/probes/r100_root/worker_setup/stdout.txt`
+- Rootcompile/sourcebinary digest admission, API0/4 liveNOTRUN.: `docs/reviews/R100_COMPILE_BINARY_ADMISSION_2026-10-15.md`
 - Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/binary_bytes.txt`
 - Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/binary_sha256.txt`
-- Rootcompile/sourcebinary digest admission, API0/4 liveNOTRUN.: `docs/reviews/R100_COMPILE_BINARY_ADMISSION_2026-10-15.md`
 - Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/command.txt`
 - Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/cwd.txt`
 - Actual oneofflinecompile safe raw receipt; no runtime/provider effect.: `docs/reviews/probes/r100_root/worker_compile/env.txt`
@@ -4428,7 +4429,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Superseded R138 frozen documentary acceptance-plan handoff; current R139 via continuity-initial-handoff.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R138_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md`
 - Independent Root acceptance-plan review; no product/runtime/governance claim.: `docs/reviews/R138_INDEPENDENT_ACCEPTANCE_PLAN_REVIEW_2026-10-21.md`
 - R138 owner-requested documentary acceptance roadmap only; no runtime/product closure.: `docs/work_orders/CCMAI_RUNTIME_138_DELIVERY_ACCEPTANCE_PLAN.md`
-- Canonical detailed9gate acceptance route with37M1-M5/6Ecriteria; planning only, product/runtime gaps remain.: `docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md`
+- Canonical acceptance route with current R139 checkpoint and all8M3 planning coverage rows; content reviewed, legacy preflight blocked, product/runtime open.: `docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md`
 - Protected backend/frontend Git trees at R137 source; no runtime proof.: `docs/reviews/probes/r138_acceptance_plan_20261021/root_documentary_baseline.json`
 - Root final37acceptance/6E/9gates/213local targets verification, documentary only.: `docs/reviews/probes/r138_acceptance_plan_20261021/root_independent_document_checks.json`
 - R138 owner-requested documentary acceptance roadmap only; no runtime/product closure.: `CVF_SESSION/tranches/CCMAI-RUNTIME-138.json`
@@ -4512,6 +4513,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R139 browser-transfer documentary HOLD and independent qualified review; source pins verified, no runtime test or fresh admission.: `docs/reviews/R139_BROWSER_TRANSFER_RETURN_ROOT_REVIEW_2026-10-28.md`
 - R139 browser-transfer documentary HOLD and independent qualified review; source pins verified, no runtime test or fresh admission.: `docs/reviews/R139_BROWSER_TRANSFER_RETURN_2026-10-28.md`
 - Byte-identical original worker return snapshot retained for independent documentary HOLD review; not runtime proof.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/browser_transfer_20261028/worker_return_original.md`
+- Deterministic ordinal catalog ordering and Windows PowerShell5/pwsh7 view-parity checks.: `scripts/tests/test_cvf_downstream_catalog_parity.py`
 - Explicit Owner check-only literal-argv continuation; no source/recompile/runtime/API; original failure preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-CHECK-ONLY-ADMISSION.json`
 - Explicit Owner combined fresh-r3 grant: exact source/check round and conditional freshcampaign/newAPI1/additionalUSD1; not executable runtime yet.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-COMBINED-ADMISSION.json`
 - Exact fresh-r3 conditional runtime admission draft after source8bb54637 and publicpricingPASS; independent review/commit before effects; NEWAPI1/USD1, oldslot preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-RUNTIME-ADMISSION.json`
@@ -4533,6 +4535,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Actual prelaunch clock-metadata incompatibility against frozen two-second contract; no new controller/campaign invocation or source check.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/boot_identity_v2_prelaunch_clock_compatibility_20261025.json`
 - One proposed R139 decision: reconciled public Core; remaining installed-profile compatibility and successor query-local clock contract/check budget, not admitted or executed.: `docs/reviews/R139_CLOCK_AND_PROFILE_CONSOLIDATED_RECOVERY_PROPOSAL_2026-10-26.md`
 - Independent exact-hash v3 clock source/component review; worker46 and Rootcombined62 PASS, original historical proof and caps retained, no runtime release.: `docs/reviews/R139_CLOCK_V3_SOURCE_REVIEW_2026-10-26.md`
+- Root-admitted immutable exact maintenance-file hashes and explicit first-commit bootstrap; original seed remains binding.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-COMMIT-MAINTENANCE-ADMISSION.json`
+- Independent static profile/scope/catalog compatibility review and commit disposition; no product acceptance.: `docs/reviews/R139_COMMIT_MAINTENANCE_REVIEW_2026-10-29.md`
+- Owner-directed static commit compatibility SPEC; exact-path maintenance, independent review and no runtime effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-COMMIT-MAINTENANCE-SCOPE-ADMISSION.json`
 - Byte preservation for fresh same-order custody metadata/code-as-data only.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/.gitattributes`
 - Four-path intended recovery design only; source renewal pending Owner decision; no new helper or effect.: `docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_2026-10-23.md`
 - Independent Root documentary review; finite source-only proposal ready for Owner, M3 runtime remains OPEN.: `docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_REVIEW_2026-10-23.md`
@@ -4782,6 +4787,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R139 Owner-directed internal worker transition; old Antigravity dispatch withdrawn before reservation; replacement source/check proposal pending, no runtime or product acceptance.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_browser_actor_ack.json`
 - R139 Owner-directed internal worker transition; old Antigravity dispatch withdrawn before reservation; replacement source/check proposal pending, no runtime or product acceptance.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_root_actor_ack.json`
 - Owner actor-only assignment: internal source repair worker; Antigravity browser-only, unchanged C1-C4/caps/Root independent checks.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-INTERNAL-WORKER-ASSIGNMENT-ADMISSION.json`
+- Positive and negative exact maintenance-admission hash, history, path, base and role checks.: `scripts/tests/test_cvf_downstream_gate_maintenance.py`
 - Independent scoped byte-preservation disposition and49 staged-to-original comparisons; original normalization discrepancy retained.: `docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/root_byte_preservation_audit_20261028.json`
 - Owner-autonomous bounded native-tool close alternative in three validator/test source files; five focused checks, no runtime release.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-TOOL-CLOSE-SOURCE-ADMISSION.json`
 - Root native-close five original check slots completed PASS above historical20; lineage25 retained before test-isolation repair.: `docs/reviews/probes/r139_integrated_20261021/autonomous_native_close_20261027/allocation_ledger.json`
@@ -4927,6 +4933,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R139 integrated non-effect reentry design/payload/activation data only; fresh campaign/effects not authorized; original HOLD/caps unchanged, no product/governance acceptance.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt`
 - R139 approved source/activation worker candidate return; implementation/checks pending independent acceptance, no runtime/campaign activation.: `docs/reviews/R139_PAGE_TARGET_SOURCE_WORKER_RETURN_2026-10-24.md`
 - R139 approved source/activation worker candidate return; implementation/checks pending independent acceptance, no runtime/campaign activation.: `docs/reviews/R139_ACTIVATION_COORDINATOR_WORKER_RETURN_2026-10-24.md`
+- Owner-approved documentary profile1.2/freshness exception; runtime pin and effect limits unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-ROADMAP-DOCS-ADMISSION.json`
+- Independent documentary roadmap and full M3 coverage review; no product or runtime acceptance.: `docs/reviews/R139_ROADMAP_RECONCILIATION_REVIEW_2026-10-29.md`
 - Independent static import/predicate review permits two bounded inert adapter checks; no actual check or runtime result.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/root_adapter_static_clearance.json`
 - Retained failed handback metadata checks and Root corrections; source unchanged.: `docs/reviews/probes/r139_integrated_20261021/root_handback_metadata_corrections.json`
 - Root captured actual git diff from66bae8d dispatch to first repair; authoritative observed source delta, source CHANGES_REQUIRED, not a successful test/runtime receipt.: `docs/reviews/probes/r139_integrated_20261021/antigravity_integrated_source_20261023/root_observed_repair.diff`

@@ -77,12 +77,31 @@ ALLOW_MARKER = "cvf-allow-secret-fixture"
 #   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0"
 #   "workOrderStatus": <mapped display value>
 # Both must be present together; partial/unknown/unpinned/fenced/duplicate opt-in fails.
-# Only active when a valid cvf.downstreamGateProfile@1.1.0 lock is installed. The work-order
+# Only active when a known compatible 1.1.0 or 1.2.0 lock is installed. The work-order
 # Status declaration is classified by the lock-pinned Core classifier (classify_status), loaded only
 # after its bytes match the lock, so fences (backtick and tilde), duplicate/contradictory/malformed
 # declarations and backtick-wrapped values are judged by the same grammar as CVF-DG-APPL-01.
 _WORK_ORDER_GRAMMAR_ID = "cvf.workOrderStatusGrammar@1.0.0"
-_REQUIRED_PROFILE_LOCK_ID = "cvf.downstreamGateProfile@1.1.0"
+_COMPATIBLE_PROFILE_LOCK_IDS = frozenset((
+    "cvf.downstreamGateProfile@1.1.0", "cvf.downstreamGateProfile@1.2.0"))
+_MAINTENANCE_TRANCHE = "CCMAI-RUNTIME-139"
+_MAINTENANCE_BASE = "cdf3554da9e4359488f9f8dd389be9d16d11e302"
+_MAINTENANCE_ADMISSION = (
+    "CVF_SESSION/authority/CCMAI-RUNTIME-139-COMMIT-MAINTENANCE-ADMISSION.json")
+_MAINTENANCE_FIELDS = frozenset((
+    "schemaVersion", "trancheId", "baseCommit", "seedSha256", "riskCeiling",
+    "purpose", "ownerInstruction", "roles", "files", "bootstrapException"))
+_MAINTENANCE_ROLES = frozenset(("worker", "reviewer", "commitSteward"))
+_MAINTENANCE_PATH_EXACT = frozenset((
+    ".cvf/gate-profile.lock.json", ".cvf/manifest.json",
+    ".github/workflows/cvf-downstream-gates.yml", "AGENTS.md",
+    "docs/milestone-coverage-authority.json", "scripts/cvf_downstream_gate.py",
+    "scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1", ".gitignore",
+    "scripts/tests/test_cvf_downstream_gate_profile_compatibility.py",
+    "scripts/tests/test_cvf_downstream_gate_maintenance.py",
+    "scripts/tests/test_cvf_downstream_catalog_parity.py",
+    "docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md",
+    "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md"))
 _PINNED_CLASSIFIER_FILE = "check_gate_to_role_closeability.py"
 _PINNED_CLASSIFIER_CACHE = {}
 # Canonical mapping: tranche status -> allowed workOrderStatus value
@@ -166,7 +185,7 @@ def check_work_order_status_opt_in(root, tid, rec, wo_text, r):
 
     Both fields must be present together; if only one is present that is an error.
     If neither is present the record is a legacy record and this function does nothing.
-    The check requires a valid 1.1.0 lock and the lock-pinned status classifier.
+    The check requires a compatible lock and the lock-pinned status classifier.
     """
     has_grammar = "workOrderStatusGrammar" in rec
     has_status = "workOrderStatus" in rec
@@ -183,8 +202,8 @@ def check_work_order_status_opt_in(root, tid, rec, wo_text, r):
     # Require installed lock matching the profile id that defines this grammar
     lock = _profile_lock(root)
     lock_id = lock.get("profileId") if lock else None
-    if lock_id != _REQUIRED_PROFILE_LOCK_ID:
-        r.fail(f"{tid}: workOrderStatusGrammar opt-in requires {_REQUIRED_PROFILE_LOCK_ID!r} lock; got {lock_id!r}")
+    if lock_id not in _COMPATIBLE_PROFILE_LOCK_IDS:
+        r.fail(f"{tid}: workOrderStatusGrammar opt-in requires a known compatible profile lock; got {lock_id!r}")
         return
     tranche_status = rec.get("status")
     expected_wo = _GRAMMAR_STATUS_MAP.get(tranche_status) if isinstance(tranche_status, str) else None
@@ -357,6 +376,148 @@ def scope_files(root, args, base_commit):
     names |= set(git_z(root, "ls-files", "-o", "--exclude-standard", "-z"))
     names |= set(git_z(root, "diff", "--name-only", "-z", f"{base_commit}..HEAD"))
     return sorted(n.replace("\\", "/") for n in names)
+
+
+def _no_duplicate_pairs(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError("duplicate JSON key")
+        result[key] = value
+    return result
+
+
+def _lf_sha(data):
+    return hashlib.sha256(data.replace(b"\r\n", b"\n")).hexdigest()
+
+
+def _safe_maintenance_path(path):
+    if not isinstance(path, str) or not path or "\\" in path or "\x00" in path:
+        return False
+    if path.startswith("/") or ":" in path or any(part in ("", ".", "..") for part in path.split("/")):
+        return False
+    if any(c in path for c in "*?[]"):
+        return False
+    if any(part.lower().startswith(".env") or part.lower() in ("local_provider_secrets.json", "__pycache__")
+           for part in path.split("/")) or path.endswith((".pyc", ".pyo")):
+        return False
+    return path in _MAINTENANCE_PATH_EXACT or path.startswith("scripts/cvf_gates/")
+
+
+def check_maintenance_admission(root, tid, seed, out_of_scope, r):
+    """Admit only exact, hash-bound R139 static maintenance; never alter the seed.
+
+    The first same-commit admission is an explicit bootstrap exception. Once committed,
+    its first blob is immutable. In both cases every admitted file is rehashed.
+    """
+    if tid != _MAINTENANCE_TRANCHE:
+        return []
+    rel = _MAINTENANCE_ADMISSION
+    path = os.path.join(root, *rel.split("/"))
+    if not os.path.isfile(path):
+        return []
+    expected_real = os.path.join(os.path.realpath(root), *rel.split("/"))
+    if os.path.normcase(os.path.realpath(path)) != os.path.normcase(expected_real):
+        r.fail(f"{tid}: maintenance admission path is an alias")
+        return []
+    if not out_of_scope:
+        r.fail(f"{tid}: unused maintenance admission has no changed out-of-seed files")
+        return []
+    try:
+        with open(path, "rb") as fh:
+            raw = fh.read()
+        admission = json.loads(raw.decode("utf-8-sig"), object_pairs_hook=_no_duplicate_pairs)
+    except (OSError, UnicodeError, ValueError) as exc:
+        r.fail(f"{tid}: maintenance admission unreadable or invalid ({exc.__class__.__name__})")
+        return []
+    if not isinstance(admission, dict) or set(admission) != _MAINTENANCE_FIELDS:
+        r.fail(f"{tid}: maintenance admission field set is invalid")
+        return []
+    if (admission["schemaVersion"] != "1.0" or admission["trancheId"] != tid or
+            admission["purpose"] != "STATIC_REPOSITORY_MAINTENANCE_ONLY" or
+            admission["riskCeiling"] != seed.get("riskCeiling") or
+            not isinstance(admission["ownerInstruction"], str) or
+            not admission["ownerInstruction"].strip()):
+        r.fail(f"{tid}: maintenance admission identity, risk or purpose is invalid")
+        return []
+    roles = admission["roles"]
+    if (not isinstance(roles, dict) or set(roles) != _MAINTENANCE_ROLES or
+            not all(isinstance(v, str) and v.strip() for v in roles.values()) or
+            roles["worker"].strip().casefold() == roles["reviewer"].strip().casefold() or
+            roles["commitSteward"].strip().casefold() != "root"):
+        r.fail(f"{tid}: maintenance admission roles are invalid")
+        return []
+    exception = admission["bootstrapException"]
+    if (not isinstance(exception, dict) or set(exception) != {"reason", "ownerInstruction"} or
+            not isinstance(exception["reason"], str) or not exception["reason"].strip() or
+            exception["ownerInstruction"] != admission["ownerInstruction"]):
+        r.fail(f"{tid}: maintenance bootstrap exception is invalid")
+        return []
+    base = admission["baseCommit"]
+    if base != _MAINTENANCE_BASE:
+        r.fail(f"{tid}: maintenance baseCommit is invalid")
+        return []
+    files = admission["files"]
+    if not isinstance(files, dict) or not files or set(files) != set(out_of_scope):
+        r.fail(f"{tid}: maintenance file set must equal the changed out-of-seed set")
+        return []
+    if not all(_safe_maintenance_path(p) and isinstance(h, str) and re.fullmatch(r"[0-9a-f]{64}", h)
+               for p, h in files.items()):
+        r.fail(f"{tid}: maintenance file path or digest is invalid")
+        return []
+    lock = _profile_lock(root)
+    lock_files = lock.get("files") if isinstance(lock, dict) else None
+    for p, digest in files.items():
+        if p.startswith("scripts/cvf_gates/"):
+            name = p[len("scripts/cvf_gates/"):]
+            if (not isinstance(lock_files, dict) or lock.get("gatesDir") != "scripts/cvf_gates" or
+                    name not in lock_files or lock_files[name] != digest):
+                r.fail(f"{tid}: inherited gate file is not pinned by installed lock: {p}")
+                return []
+    seed_path = os.path.join(root, "CVF_SESSION", "authority", tid + ".json")
+    try:
+        with open(seed_path, "rb") as fh:
+            seed_hash = _lf_sha(fh.read())
+        if admission["seedSha256"] != seed_hash:
+            r.fail(f"{tid}: maintenance seed hash differs from immutable seed")
+            return []
+        head = verify_commit(root, "HEAD", "maintenance HEAD")
+        verify_commit(root, base, "maintenance baseCommit")
+        if _git(root, "merge-base", "--is-ancestor", base, head, check=False).returncode != 0:
+            r.fail(f"{tid}: maintenance baseCommit is not an ancestor of HEAD")
+            return []
+        added = _git(root, "log", "--diff-filter=A", "--format=%H", "--reverse", "--", rel).stdout.decode().split()
+        if added:
+            first = added[0]
+            if _git(root, "merge-base", "--is-ancestor", base, first, check=False).returncode != 0:
+                r.fail(f"{tid}: maintenance first commit predates its base")
+                return []
+            first_blob = _git(root, "show", f"{first}:{rel}").stdout
+            if first_blob.replace(b"\r\n", b"\n") != raw.replace(b"\r\n", b"\n"):
+                r.fail(f"{tid}: maintenance admission differs from its first committed content")
+                return []
+        elif head != base or _git(root, "cat-file", "-e", f"HEAD:{rel}", check=False).returncode == 0:
+            r.fail(f"{tid}: maintenance bootstrap requires absent history and HEAD equal baseCommit")
+            return []
+        staged = set(git_z(root, "diff", "--cached", "--name-only", "-z"))
+        for p, expected in files.items():
+            full = os.path.join(root, *p.split("/"))
+            expected_real = os.path.join(os.path.realpath(root), *p.split("/"))
+            if (not inside(root, p) or os.path.normcase(os.path.realpath(full)) !=
+                    os.path.normcase(expected_real) or not os.path.isfile(full)):
+                r.fail(f"{tid}: maintenance file missing or outside project: {p}")
+                continue
+            with open(full, "rb") as fh:
+                if _lf_sha(fh.read()) != expected:
+                    r.fail(f"{tid}: maintenance file hash differs: {p}")
+            if p in staged and _lf_sha(_git(root, "show", f":{p}").stdout) != expected:
+                r.fail(f"{tid}: staged maintenance file hash differs: {p}")
+        if rel in staged and _git(root, "show", f":{rel}").stdout.replace(b"\r\n", b"\n") != raw.replace(b"\r\n", b"\n"):
+            r.fail(f"{tid}: staged maintenance admission differs")
+    except (GateError, OSError) as exc:
+        r.fail(f"{tid}: maintenance admission could not be verified ({exc.__class__.__name__})")
+        return []
+    return list(files)
 
 
 # ----------------------------------------------------------------------------- gates
@@ -613,10 +774,12 @@ def gate_tranche(root, ctx, files, scope_err=None):
         return r  # already failed; scope cannot be judged without the authority
     allowed = list(seed.get("allowedPaths") or []) + ALWAYS_ALLOWED
     out_of_scope = [f for f in files if not path_matches(f, allowed)]
-    for f in out_of_scope[:20]:
+    admitted = set(check_maintenance_admission(root, active_id, seed, out_of_scope, r))
+    remaining = [f for f in out_of_scope if f not in admitted]
+    for f in remaining[:20]:
         r.fail(f"changed path outside the authorized allowedPaths: {f}")
-    if len(out_of_scope) > 20:
-        r.fail(f"... and {len(out_of_scope) - 20} more paths outside allowedPaths")
+    if len(remaining) > 20:
+        r.fail(f"... and {len(remaining) - 20} more paths outside allowedPaths")
     return r
 
 

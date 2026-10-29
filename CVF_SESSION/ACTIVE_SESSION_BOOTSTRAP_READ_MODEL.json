@@ -1,4 +1,17 @@
 {
+  "x-roadmapDocumentaryReconciliation20261029": {
+    "date": "2026-10-29",
+    "status": "STATIC_MAINTENANCE_REVIEW_PASS_PRODUCT_HOLD",
+    "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-ROADMAP-DOCS-ADMISSION.json",
+    "roadmap": "docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md",
+    "review": "docs/reviews/R139_ROADMAP_RECONCILIATION_REVIEW_2026-10-29.md",
+    "documentaryCore": "b8ead4f0d1bf9224338a206b2abcd893ec1801b1",
+    "documentaryProfile": "cvf.downstreamGateProfile@1.2.0",
+    "executionCoreUnchanged": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
+    "executionProfileUnchanged": "cvf.downstreamGateProfile@1.1.0",
+    "freshnessException": "Owner-approved documentary scope only; doctor FAIL retained",
+    "runtimeAdmission": false
+  },
   "currentMode": "BUILD",
   "activePhase": "BUILD",
   "activeTranche": "CCMAI-RUNTIME-139",

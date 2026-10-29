@@ -13,7 +13,7 @@ import subprocess
 from dataclasses import dataclass, field
 from pathlib import Path
 
-PROFILE_ID = "cvf.downstreamGateProfile@1.1.0"
+PROFILE_ID = "cvf.downstreamGateProfile@1.2.0"
 PROFILE_FILE = "cvf_downstream_gate_profile.json"
 OUTCOMES_OK = ("PASS", "NOT_APPLICABLE_WITH_REASON")
 FENCED_BLOCK = re.compile(r"(?ms)^[ \t]*(```|~~~).*?^[ \t]*\1[ \t]*$")

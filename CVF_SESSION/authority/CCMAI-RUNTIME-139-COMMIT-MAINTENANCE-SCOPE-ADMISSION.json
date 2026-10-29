@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "OWNER_DIRECTED_STATIC_COMMIT_COMPATIBILITY_REPAIR",
+  "date": "2026-10-29",
+  "ownerInstruction": "commit xử lý cho sạch trước khi tiếp tục làm",
+  "riskCeiling": "R2",
+  "baseCommit": "cdf3554da9e4359488f9f8dd389be9d16d11e302",
+  "roles": {"dispatcher": "Root", "worker": "Sol Medium", "reviewer": "Root independent reviewer", "commitSteward": "Root"},
+  "purpose": "Make the already approved documentary/profile inheritance change reviewable and committable using fail-closed repository checks; no runtime admission.",
+  "allowedWorkerPaths": [
+    "scripts/cvf_downstream_gate.py",
+    "scripts/tests/test_cvf_downstream_gate_profile_compatibility.py",
+    "scripts/tests/test_cvf_downstream_gate_maintenance.py",
+    "scripts/tests/test_cvf_downstream_catalog_parity.py",
+    "scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1",
+    ".gitignore"
+  ],
+  "allowedRootMetadata": ["CVF_SESSION/**", "CVF_SESSION_MEMORY.md", "IMPLEMENTATION_STATUS.json", "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md", "docs/reviews/R139_*.md", "docs/catalog/**", "docs/INDEX.md"],
+  "spec": [
+    "Accept only known compatible profile1.1/profile1.2 IDs while retaining lock-pinned classifier validation and all status grammar negatives; unsupported future profiles fail.",
+    "Preserve original R139 seed/record role, risk, allowedPaths, prohibitedEffects and history checks. Only exact hash-bound changed out-of-seed repository maintenance paths may be admitted by the single Root-owned COMMIT-MAINTENANCE-ADMISSION file.",
+    "Strict supplementary schema, original seed hash, base ancestry, independent reviewer and immutable first-committed supplement; reject malformed/duplicate/unsafe/deleted/unreadable/unexpected/tampered paths. No wildcard/product/secret path admission.",
+    "First-commit bootstrap exception is explicit: current HEAD must equal declared base, the supplement must have no prior history, Root admits final hashes after independent source review before commit. This is not a rewritten seed or fabricated prior commitment.",
+    "Catalog renders deterministically by ordinal id order in Windows PowerShell5 and pwsh7; exercise both views in parity checks.",
+    "Ignore Python cache outputs without deleting existing cache files. Preserve original structured-record byte style and all user changes."
+  ],
+  "testPlan": "Run focused positive/negative compatibility, exact maintenance-admission/history/scope tests and cross-shell catalog parity, then complete gate units and required profile/legacy preflights. Preserve failures. Update the old wrong-version test from newly supported1.2 to unsupported1.3 only with explicit coverage of both supported versions; do not remove existing rejection assertions.",
+  "workerBudgetMinutes": 35,
+  "reviewBudgetMinutes": 25,
+  "repairLimit": "One consolidated review; third same-root repair requires REVIEW_COST_ESCALATION_REQUIRED.",
+  "prohibitedEffects": ["Core or installed scripts/cvf_gates/lock/workflow hand-edits", "Original seeds or historical evidence rewrites", "Product source, browser, DB, Docker, fixture, key/provider/network effects", "Worker commit or self-review", "Runtime release, budget reset, push, merge, deploy or product closure"],
+  "freshnessBoundary": "Owner-approved stable documentary pin retained for this dependent static commit repair. Current doctor failures are recorded, never claimed PASS; no automatic Core adoption. Runtime execution pin and connection admission remain unchanged."
+}

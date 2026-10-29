@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "baseCommit": "cdf3554da9e4359488f9f8dd389be9d16d11e302",
+  "seedSha256": "29bdfff6c5eb3e453e9f171b012d5919c0bbd981b3b4d754395e30b5e2e1f576",
+  "riskCeiling": "R2",
+  "purpose": "STATIC_REPOSITORY_MAINTENANCE_ONLY",
+  "ownerInstruction": "commit xử lý cho sạch trước khi tiếp tục làm",
+  "roles": {
+    "worker": "Sol Medium",
+    "reviewer": "Root",
+    "commitSteward": "Root"
+  },
+  "files": {
+    ".cvf/gate-profile.lock.json": "c7b1dbbd3a8d5f967d8eaa88a897d2d7149f7a1be0e5003f44340602c1b4c851",
+    ".cvf/manifest.json": "a47f7392220bf2b882b8f7cda2aad4fab34bfcaae1e6ed77c04cb6049fe73817",
+    ".github/workflows/cvf-downstream-gates.yml": "bad09e6e0562c0cc3d5aec87cb114289d74ec85c94edf7d07109ccd9cf681774",
+    ".gitignore": "d63057e1924a725783d5285ae65cdf9bcce1e1b80342b55d711070f1ee2f96a4",
+    "AGENTS.md": "a0e48faf13dda3bbe56295dab9074fe0656d8a2d60b42028c7784b37153768cb",
+    "docs/milestone-coverage-authority.json": "199058e04c41eb0b567b553c7f3a526aa10bb3468b86e621cb62b10bddd389da",
+    "docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md": "202d491d8096d8c868ef71e3ad40c2d06ff7ced7676dd4825200fe768f387fbd",
+    "scripts/cvf_downstream_gate.py": "0dc71941c8cd4a8436cd60965de9256e7beb433d94fe0dff068912c8f0c1275a",
+    "scripts/cvf_gates/cvf_dg_common.py": "2225b925d26a66238e6f2697873b82974cca9216491bc1eabab80ea8e836dba8",
+    "scripts/cvf_gates/cvf_dg_install.py": "4e96952ef312487e5999b0b0d4db85c2eda158e2ac1cbb336beeba6876ddc316",
+    "scripts/cvf_gates/cvf_downstream_gate_profile.json": "faaf9273ada3fd826e6372898d134fe7ad0157528f25b7720211c31cfc209bd5",
+    "scripts/cvf_gates/cvf_downstream_gate_runner.py": "716544aa7a38251009867a4e0150be51b79b4304a8c5f6d7afddab4e7c5d9c07",
+    "scripts/cvf_gates/cvf_milestone_coverage.py": "5ff2e3e0b85743d30a081a9909e015574a2578e3ce7afd7a0507b05960e5a0ef",
+    "scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1": "c6fac5cb32b39359305a992a5faa22d3c08a1f466cc48cd2789a42e0bdae1a76",
+    "scripts/tests/test_cvf_downstream_catalog_parity.py": "6dd3a9a2dfc77ff0895cbcdb1c77bcd90b595bab3e72008f1bec203f12aaa008",
+    "scripts/tests/test_cvf_downstream_gate_maintenance.py": "ec9b984b922f74af33a9f2543816c86e3801cb5601267a0d98a761f444210e03",
+    "scripts/tests/test_cvf_downstream_gate_profile_compatibility.py": "30a06edc5c47f7c091488ba140f694b500658efcc5014a84ea7ac4878491c726"
+  },
+  "bootstrapException": {
+    "reason": "Owner directed clean commit after scoped documentary adoption. Root authored scope/SPEC before Sol BUILD, independently reviewed source and exact hashes. This first static maintenance admission is committed with the reviewed payload at the declared base; it is not fictitious prior history, an amended original seed or runtime authority.",
+    "ownerInstruction": "commit xử lý cho sạch trước khi tiếp tục làm"
+  }
+}

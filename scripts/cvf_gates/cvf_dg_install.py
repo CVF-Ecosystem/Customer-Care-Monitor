@@ -90,6 +90,12 @@ def install(project_root: Path, lib_dir: Path, core_root: Path, core_commit: str
     template_path = lib_dir / CI_TEMPLATE
     if not template_path.is_file():
         return {"status": "BLOCKED_CORE_SOURCE_MISSING", "detail": f"missing {CI_TEMPLATE}"}
+    old_lock = None
+    if upgrade and lock_path.is_file():
+        try:
+            old_lock = load_json_strict(lock_path)
+        except (OSError, ValueError):
+            pass  # no established generated-workflow identity: preserve existing workflow
     if lock_path.exists() and not upgrade:
         problems = verify_install(project_root, lib_dir, core_root).findings
         if problems:
@@ -114,22 +120,36 @@ def install(project_root: Path, lib_dir: Path, core_root: Path, core_commit: str
     bundle_sha, _ = bundle_digest(gates)
     workflow = project_root / paths["ciWorkflow"]
     rendered = _render_workflow(template_path.read_text(encoding="utf-8"), profile_sha, runner_sha, bundle_sha)
-    if workflow.exists():
+    generated_untouched = False
+    if upgrade and workflow.is_file() and isinstance(old_lock, dict):
+        prior = old_lock.get("ciWorkflow", {})
+        old_rendered = _render_workflow(template_path.read_text(encoding="utf-8"),
+                                       str(old_lock.get("profileSha256")), str(old_lock.get("runnerSha256")),
+                                       str(old_lock.get("bundleSha256")))
+        actual = content_sha256(workflow.read_bytes())
+        generated_untouched = (isinstance(prior, dict) and prior.get("disposition") == "CREATED"
+                               and actual == prior.get("renderedSha256")
+                               and actual == content_sha256(old_rendered.encode("utf-8")))
+    if workflow.exists() and not generated_untouched:
         disposition = "PROJECT_OWNED_PRESERVED"
     else:
         workflow.parent.mkdir(parents=True, exist_ok=True)
         workflow.write_bytes(rendered.replace("\r\n", "\n").encode("utf-8"))
         disposition = "CREATED"
+    reconcile = bool(upgrade and disposition == "PROJECT_OWNED_PRESERVED"
+                     and not all(pin in workflow.read_text(encoding="utf-8") for pin in (profile_sha, runner_sha, bundle_sha)))
     lock = {
         "schemaVersion": LOCK_SCHEMA, "profileId": PROFILE_ID, "profileVersion": profile["profileVersion"],
         "hashAlgorithm": "sha256-lf-normalized", "gatesDir": paths["gatesDir"], "coreCommit": core_commit,
         "files": files, "profileSha256": profile_sha, "runnerSha256": runner_sha, "bundleSha256": bundle_sha,
         "ciWorkflow": {"path": paths["ciWorkflow"], "disposition": disposition,
-                       "renderedSha256": content_sha256(rendered.encode("utf-8"))},
+                       "renderedSha256": content_sha256(rendered.encode("utf-8")),
+                       "ownerReconciliationRequired": reconcile},
     }
     lock_path.parent.mkdir(parents=True, exist_ok=True)
     lock_path.write_bytes(canonical_json(lock).encode("utf-8"))
-    return {"status": "UPGRADED" if upgrade else "FRESH_INSTALLED", "detail": f"profile {profile_sha[:12]} runner {runner_sha[:12]} ci {disposition}"}
+    status = "UPGRADED_CI_RECONCILIATION_REQUIRED" if reconcile else ("UPGRADED" if upgrade else "FRESH_INSTALLED")
+    return {"status": status, "detail": f"profile {profile_sha[:12]} runner {runner_sha[:12]} ci {disposition}"}
 
 
 def _check_local_override(project_root: Path, profile: dict) -> list[Finding]:
@@ -222,6 +242,12 @@ def verify_install(project_root: Path, lib_dir: Path, core_root: Path | None = N
         if expected and actual != expected:
             findings.append(Finding(label, paths["gatesDir"], "actual inherited bytes differ from the expected CI pin"))
     ci = lock.get("ciWorkflow", {})
+    if isinstance(ci, dict) and ci.get("ownerReconciliationRequired"):
+        workflow = project_root / paths["ciWorkflow"]
+        if not workflow.is_file() or not all(str(lock.get(k)) in workflow.read_text(encoding="utf-8")
+                                             for k in ("profileSha256", "runnerSha256", "bundleSha256")):
+            findings.append(Finding("CI_OWNER_RECONCILIATION_REQUIRED", paths["ciWorkflow"],
+                                    "explicit upgrade preserved edited workflow; owner must reconcile the new pins"))
     if isinstance(ci, dict) and ci.get("disposition") == "CREATED":
         workflow = project_root / ci.get("path", "")
         if not workflow.is_file() or content_sha256(workflow.read_bytes()) != ci.get("renderedSha256"):

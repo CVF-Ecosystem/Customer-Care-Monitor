@@ -376,12 +376,24 @@ function Get-CvfCatalogState {
     return "ALREADY_GOVERNED"
 }
 
+function Sort-CvfRecordsByOrdinalId {
+    param([Parameter(Mandatory = $true)][AllowEmptyCollection()][object[]]$Records)
+
+    $ordered = [System.Collections.Generic.List[object]]::new()
+    foreach ($record in $Records) { $ordered.Add($record) }
+    $ordered.Sort([System.Comparison[object]] {
+        param($left, $right)
+        return [System.StringComparer]::Ordinal.Compare([string]$left.id, [string]$right.id)
+    })
+    return $ordered.ToArray()
+}
+
 function ConvertTo-CvfIndexMarkdown {
     param([Parameter(Mandatory = $true)]$Registry)
 
     $startHereFamilies = @("schema", "tool", "manifest", "policy", "continuity", "implementation_truth", "generated_view")
-    $startHere = @($Registry.artifacts | Where-Object { $startHereFamilies -contains $_.family } | Sort-Object id)
-    $families = @($Registry.artifacts | Where-Object { $_.family -eq "governed_artifact_family" } | Sort-Object id)
+    $startHere = @(Sort-CvfRecordsByOrdinalId -Records @($Registry.artifacts | Where-Object { $startHereFamilies -contains $_.family }))
+    $families = @(Sort-CvfRecordsByOrdinalId -Records @($Registry.artifacts | Where-Object { $_.family -eq "governed_artifact_family" }))
 
     $lines = [System.Collections.Generic.List[string]]::new()
     $lines.Add("# Project Documentation Index")
@@ -405,7 +417,7 @@ function ConvertTo-CvfIndexMarkdown {
 function ConvertTo-CvfModuleCatalogMarkdown {
     param([Parameter(Mandatory = $true)]$Registry)
 
-    $modules = @($Registry.modules | Sort-Object id)
+    $modules = @(Sort-CvfRecordsByOrdinalId -Records @($Registry.modules))
     $total = $modules.Count
     $enforced = @($modules | Where-Object { $_.status -eq "ENFORCED" }).Count
     $partial = @($modules | Where-Object { $_.status -eq "PARTIAL" }).Count

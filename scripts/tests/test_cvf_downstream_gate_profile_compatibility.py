@@ -103,6 +103,12 @@ def _load_returned_adapter():
 
 
 class CanonicalMappings(unittest.TestCase):
+    def test_profile_12_uses_same_pinned_status_classifier(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            _make_lock(tmp, profile_id="cvf.downstreamGateProfile@1.2.0")
+            r = _run_opt_in(tmp, "BUILD", "ACTIVE")
+            self.assertFalse(r.problems, r.problems)
+
     def test_all_canonical_mappings(self):
         for ts, ws in CANONICAL.items():
             with self.subTest(tranche_status=ts, wo_status=ws):
@@ -204,6 +210,12 @@ class UnknownGrammar(unittest.TestCase):
 
 
 class MissingOrWrongLock(unittest.TestCase):
+    def test_future_profile_rejects_opt_in(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            _make_lock(tmp, profile_id="cvf.downstreamGateProfile@1.3.0")
+            r = _run_opt_in(tmp, "BUILD", "ACTIVE")
+            self.assertTrue(any("known compatible" in p for p in r.problems))
+
     def test_no_lock_file_rejects_opt_in(self):
         with tempfile.TemporaryDirectory() as tmp:
             r = _run_opt_in(tmp, "BUILD", "ACTIVE")

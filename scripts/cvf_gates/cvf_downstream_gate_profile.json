@@ -1,6 +1,6 @@
 {
-  "profileId": "cvf.downstreamGateProfile@1.1.0",
-  "profileVersion": "1.1.0",
+  "profileId": "cvf.downstreamGateProfile@1.2.0",
+  "profileVersion": "1.2.0",
   "ownerResponsibility": "CVF parent Core owns this single control source; project copies are identity-pinned and never an independent definition.",
   "phases": [
     "bootstrap",
@@ -113,6 +113,20 @@
         "pre-commit",
         "pr-ci"
       ]
+    },
+    {
+      "id": "CVF-DG-COV-01",
+      "title": "Source-bound product milestone coverage and distinct terminal conclusions",
+      "mandatory": true,
+      "module": "cvf_milestone_coverage",
+      "phases": [
+        "bootstrap",
+        "pre-dispatch",
+        "worker-return",
+        "reviewer-fast",
+        "pre-commit",
+        "pr-ci"
+      ]
     }
   ],
   "installedFiles": [
@@ -129,7 +143,8 @@
     "check_gate_to_role_closeability.py",
     "git-pre-commit.template",
     "project_learning_home.template.md",
-    "project_learning_record.template.md"
+    "project_learning_record.template.md",
+    "cvf_milestone_coverage.py"
   ],
   "coreSources": {
     "check_gate_to_role_closeability.py": "governance/compat/check_gate_to_role_closeability.py"

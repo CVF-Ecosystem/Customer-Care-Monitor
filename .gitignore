@@ -8,6 +8,8 @@ frontend/node_modules/
 
 # Build outputs
 frontend/dist/
+__pycache__/
+*.py[cod]
 
 # Go
 backend/cqa-server
