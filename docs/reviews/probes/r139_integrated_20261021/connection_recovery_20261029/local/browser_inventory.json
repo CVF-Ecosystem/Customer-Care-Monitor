@@ -1,0 +1,13 @@
+{
+  "evidenceClass": "CALLER_QUALIFIED_BROWSER_ONLY_PROJECTION_OF_TOOL_OUTPUT",
+  "actor": "Sol Medium, current GPT runtime, /root/commit_gate_repair",
+  "tool": "mcp__cua_repl.js / cua.getState",
+  "request": "let state = await cua.getState();",
+  "browserRelevantOriginalResult": {
+    "browsers": [],
+    "errors": ["Browsers: Error: The browser access host is unavailable"]
+  },
+  "projectionReadback": "nodeRepl.write(JSON.stringify({browsers:state.browsers,errors:state.errors}));",
+  "projectionOutput": "{\"browsers\":[],\"errors\":[\"Browsers: Error: The browser access host is unavailable\"]}",
+  "provenanceLimit": "Caller-recorded tool output, not an authenticated transcript or independent Root observation. Unrelated native-app inventory omitted."
+}

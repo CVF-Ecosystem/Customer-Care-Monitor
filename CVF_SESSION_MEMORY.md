@@ -4,7 +4,15 @@ Memory class: POINTER_RECORD
 
 <!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
 
-## Current connection recovery authority — 2026-10-29
+## Current external handoff after GPT failure — 2026-10-29
+
+CCMAI-RUNTIME-139 current-GPT Sol official inventory1 returned browsers:[] and browser access host unavailable; Root accepts bounded caller-qualified failure, not global cause or G0 PASS. Local inventory1 is spent; cumulative browser14+1=15, no tab/capture/retry. Owner full-handling grant now routes ONE independently reviewed committed Antigravity connection-recovery packet for one operator copy; external metadata/setup/job/API usage0 before transfer. Do not repeat local inventory or old Gemini job. Retain source27/controllers4/campaign1/service5/docs2/packageddocs2/pricing2 and all UNKNOWNs; product/fixture/key/provider0, runtime pin mismatch HOLD, full M3/FREEZE OPEN, Facebook/Zalo OA parked.
+
+Root ORCHESTRATOR / independent local-result REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol local connection stopped after bounded host failure; receiving Antigravity/Gemini executor pending user copy of committed external packet
+
+Packet: `docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_HANDOFF_2026-10-29.md`; Root review: `docs/reviews/R139_CONNECTION_RECOVERY_REVIEW_2026-10-29.md`. All earlier local-ready/zero-local counters below are historical, not reusable slots.
+
+## Historical local-dispatch authority — spent after accepted observation
 
 CCMAI-RUNTIME-139 Owner authorizes full supported connection handling: execute ONE fresh current-GPT Sol actor browser inventory and conditional owned example.com read/capture/close under the independently reviewed committed CONNECTION-RECOVERY-20261029 admission. Root remains orchestrator/independent result reviewer; if actual local connection is unavailable, Root reviews that result and releases one complete Antigravity transfer packet. No blind retry, cached actor identity, personal-profile exposure, raw debugging workaround or provider/product effect. Retain spent Gemini job1/browser14/source27/controllers4/campaign1/service5/docs2/packageddocs2/pricing2 and all UNKNOWNs; full M3/FREEZE OPEN, Facebook/Zalo OA parked. Product execution pin mismatch remains HOLD; new finite diagnostic budgets are separate from spent history.
 
@@ -48,9 +56,9 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
 
-CCMAI-RUNTIME-139 Owner authorizes full supported connection handling: execute ONE fresh current-GPT Sol actor browser inventory and conditional owned example.com read/capture/close under the independently reviewed committed CONNECTION-RECOVERY-20261029 admission. Root remains orchestrator/independent result reviewer; if actual local connection is unavailable, Root reviews that result and releases one complete Antigravity transfer packet. No blind retry, cached actor identity, personal-profile exposure, raw debugging workaround or provider/product effect. Retain spent Gemini job1/browser14/source27/controllers4/campaign1/service5/docs2/packageddocs2/pricing2 and all UNKNOWNs; full M3/FREEZE OPEN, Facebook/Zalo OA parked. Product execution pin mismatch remains HOLD; new finite diagnostic budgets are separate from spent history.
+CCMAI-RUNTIME-139 current-GPT Sol official inventory1 returned browsers:[] and browser access host unavailable; Root accepts bounded caller-qualified failure, not global cause or G0 PASS. Local inventory1 is spent; cumulative browser14+1=15, no tab/capture/retry. Owner full-handling grant now routes ONE independently reviewed committed Antigravity connection-recovery packet for one operator copy; external metadata/setup/job/API usage0 before transfer. Do not repeat local inventory or old Gemini job. Retain source27/controllers4/campaign1/service5/docs2/packageddocs2/pricing2 and all UNKNOWNs; product/fixture/key/provider0, runtime pin mismatch HOLD, full M3/FREEZE OPEN, Facebook/Zalo OA parked.
 
-Root ORCHESTRATOR / independent connection-result REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol Medium current-GPT browser executor; Antigravity fallback conditional on reviewed local outcome
+Root ORCHESTRATOR / independent local-result REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol local connection stopped after bounded host failure; receiving Antigravity/Gemini executor pending user copy of committed external packet
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

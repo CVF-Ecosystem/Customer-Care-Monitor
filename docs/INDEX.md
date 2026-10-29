@@ -4540,8 +4540,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Owner-directed static commit compatibility SPEC; exact-path maintenance, independent review and no runtime effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-COMMIT-MAINTENANCE-SCOPE-ADMISSION.json`
 - Byte preservation for fresh same-order custody metadata/code-as-data only.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/.gitattributes`
 - Owner-delegated supported GPT-first connection diagnostic and conditional Antigravity fallback; no product effects.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-CONNECTION-RECOVERY-20261029-ADMISSION.json`
-- One complete conditional Antigravity handoff; release requires Root-reviewed actual local outcome.: `docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_HANDOFF_2026-10-29.md`
+- One complete Antigravity dispatch after Root-reviewed local host failure; external stage fresh, runtime unreleased.: `docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_HANDOFF_2026-10-29.md`
 - Independent Terra admission and Root connection-result review; spent history and runtime boundaries retained.: `docs/reviews/R139_CONNECTION_RECOVERY_REVIEW_2026-10-29.md`
+- Root settled source-inspected local failure and cumulative browser15; external fresh and product effects0.: `docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/root_result_review.json`
 - Four-path intended recovery design only; source renewal pending Owner decision; no new helper or effect.: `docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_2026-10-23.md`
 - Independent Root documentary review; finite source-only proposal ready for Owner, M3 runtime remains OPEN.: `docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_REVIEW_2026-10-23.md`
 - R139 actual third-controller HOLD or delegated consolidated preclock repair evidence/metadata; no campaign/product acceptance.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/delegated_coordination_owner_v2_20261027.json`
@@ -4755,6 +4756,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Owner assigns Gemini browser execution and Root review; one real native-browser receiving capability check, no product G0/runtime/provider release.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-GEMINI-NATIVE-BROWSER-CHECK-ADMISSION.json`
 - Owner assigns Gemini browser execution and Root review; one real native-browser receiving capability check, no product G0/runtime/provider release.: `docs/reviews/R139_GEMINI_NATIVE_BROWSER_CHECK_HANDOFF_2026-10-28.md`
 - Byte-preserved receiving Gemini return at independent Root review; connection failure only, no browser or product PASS.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/gemini_native_browser_check_20261028/return_at_root_review.md`
+- Bounded browser-only projection: no exposed browser and host unavailable; not authenticated/global cause proof.: `docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/local/browser_inventory.json`
+- Caller-qualified current GPT browser-host failure; local inventory1 spent, no owned tab or retry.: `docs/reviews/R139_GPT_CONNECTION_RECOVERY_RETURN_2026-10-29.md`
+- Original worker local usage retained byte-exact; external remains unused.: `docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/local/usage.json`
 - New owner-approved supported HTTPS UI diagnostic only; old consumed counters unchanged, no runtime/provider authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-HTTPS-BROWSER-ADMISSION.json`
 - Fresh owner-approved one-campaign HTTPS UI slot reserved before effect; no refund/retry.: `docs/reviews/probes/r139_integrated_20261021/https_browser_reservation.json`
 - Observed supported HTTPS tool proof/original capture or bounded local read-only readiness admission; G0 aggregate/runtime remain open.: `docs/reviews/probes/r139_integrated_20261021/https_browser_outcome.json`

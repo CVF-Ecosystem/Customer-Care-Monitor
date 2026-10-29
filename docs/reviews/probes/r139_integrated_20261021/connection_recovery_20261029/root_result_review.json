@@ -1,0 +1,30 @@
+{
+  "status": "ACCEPTED_BOUNDED_LOCAL_CONNECTION_FAILURE_EXTERNAL_READY",
+  "reviewer": "Root independent of Sol execution",
+  "dispatchHead": "571476018db7f06af29596fe2b6d052ed4bd7b2e",
+  "evidenceClass": "SOURCE_INSPECTED_CALLER_QUALIFIED_WORKER_PROJECTIONS_NOT_AUTHENTICATED_TRANSCRIPT",
+  "rawSha256": {
+    "docs/reviews/R139_GPT_CONNECTION_RECOVERY_RETURN_2026-10-29.md": "fec641c9b7b85808a50fd0461adba60e4b2d3a02ff0fff836ab74bede8a12c2a",
+    "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/local/browser_inventory.json": "f5dc6345b5925c3943f85e1cba683be6316d68c856aaf9d17ef4544858393680",
+    "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/local/usage.json": "793009260c92c4cf3f9beeabb9e368aa634fd0524197e96710b5a7dfad7b57c2"
+  },
+  "localInventoryUsed": 1,
+  "localBrowserApiUsed": 1,
+  "historicalBrowserApiRetained": 14,
+  "cumulativeBrowserApiAtExternalRelease": 15,
+  "localOwnedTabs": 0,
+  "localCapture": 0,
+  "localRetry": 0,
+  "externalMetadataUsed": 0,
+  "externalSetupUsed": 0,
+  "externalJobsUsed": 0,
+  "externalBrowserApiUsed": 0,
+  "externalBudgetStillFresh": true,
+  "sourceChecksRetained": 27,
+  "controllersRetained": 4,
+  "campaignsRetained": 1,
+  "serviceQueriesRetained": 5,
+  "allUnknownEffects": "PRESERVED",
+  "productAndProviderCalls": 0,
+  "qualification": "Only this actor at this observation. Browser-host cause, other actors/global availability and infrastructure cleanup remain unverified. No owned tab was created, so tab cleanup is not applicable."
+}

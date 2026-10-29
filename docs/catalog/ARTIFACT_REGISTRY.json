@@ -5,6 +5,34 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r139-gpt-local-return-20261029",
+      "family": "continuity",
+      "path": "docs/reviews/R139_GPT_CONNECTION_RECOVERY_RETURN_2026-10-29.md",
+      "status": "ACTIVE",
+      "description": "Caller-qualified current GPT browser-host failure; local inventory1 spent, no owned tab or retry."
+    },
+    {
+      "id": "r139-gpt-local-inventory-20261029",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/local/browser_inventory.json",
+      "status": "ACTIVE",
+      "description": "Bounded browser-only projection: no exposed browser and host unavailable; not authenticated/global cause proof."
+    },
+    {
+      "id": "r139-gpt-local-usage-20261029",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/local/usage.json",
+      "status": "ACTIVE",
+      "description": "Original worker local usage retained byte-exact; external remains unused."
+    },
+    {
+      "id": "r139-connection-root-usage-20261029",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/root_result_review.json",
+      "status": "ACTIVE",
+      "description": "Root settled source-inspected local failure and cumulative browser15; external fresh and product effects0."
+    },
+    {
       "id": "r139-connection-recovery-admission-20261029",
       "family": "continuity",
       "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CONNECTION-RECOVERY-20261029-ADMISSION.json",
@@ -23,7 +51,7 @@
       "family": "continuity",
       "path": "docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_HANDOFF_2026-10-29.md",
       "status": "ACTIVE",
-      "description": "One complete conditional Antigravity handoff; release requires Root-reviewed actual local outcome."
+      "description": "One complete Antigravity dispatch after Root-reviewed local host failure; external stage fresh, runtime unreleased."
     },
     {
       "id": "r139-commit-maintenance-scope-20261029",

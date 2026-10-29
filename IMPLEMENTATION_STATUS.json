@@ -1,13 +1,16 @@
 {
   "x-connectionRecovery20261029": {
-    "status": "LOCAL_DIAGNOSTIC_REVIEWED_PENDING_COMMIT",
+    "status": "LOCAL_BOUNDED_FAILURE_REVIEWED_EXTERNAL_DISPATCH_READY",
     "admission": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CONNECTION-RECOVERY-20261029-ADMISSION.json",
     "review": "docs/reviews/R139_CONNECTION_RECOVERY_REVIEW_2026-10-29.md",
     "externalPacket": "docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_HANDOFF_2026-10-29.md",
-    "localMethodsUsed": 0,
+    "localMethodsUsed": 1,
     "externalJobsUsed": 0,
     "providerCalls": 0,
-    "productRuntimeAdmission": false
+    "productRuntimeAdmission": false,
+    "cumulativeBrowserMethods": 15,
+    "localReturn": "docs/reviews/R139_GPT_CONNECTION_RECOVERY_RETURN_2026-10-29.md",
+    "rootUsage": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/root_result_review.json"
   },
   "x-roadmapDocumentaryReconciliation20261029": {
     "date": "2026-10-29",

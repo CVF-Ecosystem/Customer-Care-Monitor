@@ -45,6 +45,12 @@ CCMAI-RUNTIME-139 HOLD_PRECLOCK_CLOCK_INCOMPATIBLE before any v2 controller invo
 
 Accepted build pins: `CVF_SESSION/authority/CCMAI-RUNTIME-139-PAGE-TARGET-ACCEPTED-BUILD-PINS-ADMISSION.json`. This section supersedes earlier current-stage source instructions below; historical bound sections and spent counters remain unchanged. No runtime admission or live deadline is issued here.
 
+## Actual current-GPT result and conditional external release — 2026-10-29
+
+Root independently inspected Sol return and raw digests: one cua.getState returned browsers:[] with browser access host unavailable in12.4081s. Browser-only projections are caller-qualified, not authenticated or Root-native; global cause/infrastructure cleanup unproved. No selection/tab/capture/close/retry occurred, owned-tab cleanup N/A. Local1+retained14 gives cumulative15; external usage0, old source27/controllers4/campaign1/service5/UNKNOWNs unchanged. Same R139, no product/provider/fixture effects. Root accepts bounded local failure and prepares the already approved Antigravity stage for independent Terra release review and commit before one user copy. Current instruction is the header above; prior local-dispatch notes are spent history. Packet: `docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_HANDOFF_2026-10-29.md`; review/settled usage linked there. This does not release G0/product runtime or change the execution-pin HOLD. Root transitions result REVIEWER -> ORCHESTRATOR/SESSION_SYNC_STEWARD/COMMIT_STEWARD for this transfer, not FREEZE. Facebook/Zalo OA parked.
+
+Current external finite verification coverage: `docs/reviews/R139_ANTIGRAVITY_CONNECTION_RECOVERY_HANDOFF_2026-10-29.md` section `## External finite verification coverage`, same M3 authority/selected05+08. Local VERIFY section below is historical spent dispatch; Root result section is REVIEW, not another local action.
+
 ## Owner-delegated connection recovery acknowledgment — 2026-10-29
 
 Finite verification coverage: `docs/reviews/R139_CONNECTION_RECOVERY_REVIEW_2026-10-29.md` section `## Finite verification coverage`, exact M3-01..08 authority with selected M3-05/M3-08; bounded VERIFY only.
