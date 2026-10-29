@@ -5031,6 +5031,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Exact Owner1USD/onecall runtime authority, sanitized credential staging or one-shot pre-effect reservation; no outcome claim.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-INTEGRATED-RUNTIME-ADMISSION.json`
 - Exact Owner1USD/onecall runtime authority, sanitized credential staging or one-shot pre-effect reservation; no outcome claim.: `docs/reviews/probes/r139_integrated_20261021/credential_staging_outcome.json`
 - Exact Owner1USD/onecall runtime authority, sanitized credential staging or one-shot pre-effect reservation; no outcome claim.: `docs/reviews/probes/r139_integrated_20261021/integrated_runtime_reservation.json`
+- Finite official native SDK source repair; separate exact Root release required before one owned capability lifecycle.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-SDK-V2-ADMISSION.json`
+- Independent SDK v2 admission/source review with full M3 finite verification coverage; runtime held.: `docs/reviews/R139_NATIVE_SDK_V2_ROOT_REVIEW_2026-10-29.md`
+- Mandatory native knowledge ingestion of bootstrap README only; local text index, no API/provider retrieval.: `docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/knowledge_ingest_v2.json`
 - Actual IAB2 selection documentation plus packaged JPEG/local-development guidance; no page or G0 proof.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_discovery_20261027/selected_browser_documentation.json`
 - R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN.: `docs/reviews/probes/r139_integrated_20261021/source_worker_return_2026-10-21.json`
 - R139 exact source/offline check provenance and independent source-only disposition; runtime G0 HOLD/G1G2 NOT_RUN.: `docs/reviews/R139_SOURCE_WORKER_RETURN_2026-10-21.md`

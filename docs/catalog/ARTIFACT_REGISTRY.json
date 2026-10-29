@@ -5,6 +5,27 @@
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
     {
+      "id": "r139-sdk-v2-preparation-20261029-1",
+      "family": "continuity",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-SDK-V2-ADMISSION.json",
+      "status": "ACTIVE",
+      "description": "Finite official native SDK source repair; separate exact Root release required before one owned capability lifecycle."
+    },
+    {
+      "id": "r139-sdk-v2-preparation-20261029-2",
+      "family": "continuity",
+      "path": "docs/reviews/R139_NATIVE_SDK_V2_ROOT_REVIEW_2026-10-29.md",
+      "status": "ACTIVE",
+      "description": "Independent SDK v2 admission/source review with full M3 finite verification coverage; runtime held."
+    },
+    {
+      "id": "r139-sdk-v2-preparation-20261029-3",
+      "family": "continuity",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/knowledge_ingest_v2.json",
+      "status": "ACTIVE",
+      "description": "Mandatory native knowledge ingestion of bootstrap README only; local text index, no API/provider retrieval."
+    },
+    {
       "id": "r139-core-maintenance-evidence-raw-policy-20261029",
       "family": "continuity",
       "path": "docs/reviews/probes/r139_integrated_20261021/core_reconciliation_20261029/.gitattributes",
