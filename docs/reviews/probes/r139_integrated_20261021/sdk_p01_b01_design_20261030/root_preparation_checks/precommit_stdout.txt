@@ -1,0 +1,14 @@
+[PASS] CVF-DG-INST-01 PASS
+[PASS] CVF-DG-CONT-01 PASS
+[PASS] CVF-DG-RANGE-01 PASS
+       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=576a45109b8efcdd373645b0fc557ac4638ced9d candidates=18 deleted=0
+[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked
+       note: docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md: status BLOCKED_WITH_REASON is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract
+[PASS] CVF-DG-ROLE-01 PASS
+       note: checked: docs/reviews/R139_SDK_P01_B01_DESIGN_ROOT_REVIEW_2026-10-30.md
+[PASS] CVF-DG-CLAIM-01 PASS
+       note: 0 explicit claim line(s) and 2 document(s) scanned
+[PASS] CVF-DG-COV-01 PASS
+       note: checked: docs/reviews/R139_SDK_P01_B01_DESIGN_ROOT_REVIEW_2026-10-30.md
+       note: mechanical joins only; Local owns semantic acceptance
+RESULT: PASS phase=pre-commit mandatoryControls=7 failed=0

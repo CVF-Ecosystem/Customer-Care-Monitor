@@ -1,0 +1,12 @@
+{
+  "kind": "INTERRUPTED_PREPARATION_RESUME",
+  "observedUtc": "2026-10-30T15:00:57.666833+00:00",
+  "previousUnitToolSession": 9164,
+  "previousPreflightToolSession": 18842,
+  "previousOutputs": "UNAVAILABLE_UNKNOWN_NOT_PASS",
+  "scopedUnitProcessObservation": "No python command matching exact suite at resume observation; does not establish previous exit code.",
+  "previousDesignWorker": "Startup/contract only acknowledged; old agent instances unavailable on resume, no semantic source exploration/output performed.",
+  "preservedBounds": "30active author minutes/36semantic sources remain overall; no previous effects or design budget reset.",
+  "replacement": "Root will appoint fresh SolMedium SPEC_AUTHOR and separate TerraHigh final reviewer after current preparation, inheriting original independent admission PASS.",
+  "newCheckAllowance": "One replacement mandatory unit invocation with persisted native stdout/stderr/exit; fresh read-only preflight/precommit. Interrupted attempts retained UNKNOWN, no runtime/source effect allocation changed."
+}

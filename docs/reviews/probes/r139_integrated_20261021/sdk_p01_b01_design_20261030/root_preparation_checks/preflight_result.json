@@ -1,0 +1,16 @@
+{
+  "kind": "MANDATORY_STATIC_PREPARATION_CHECK",
+  "name": "preflight",
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-B",
+    "scripts/cvf_downstream_gate.py",
+    "preflight"
+  ],
+  "startUtc": "2026-10-30T15:02:50.281236+00:00",
+  "endUtc": "2026-10-30T15:02:59.424887+00:00",
+  "exitCode": 0,
+  "stdoutSha256": "2a371fc4403f6ede1f5374aa47e39d14cc3a3a092113367f8d1637976c630ab1",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "note": "Prior unavailable interrupted preflight attempt remainsUNKNOWN; no product/runtime or hostedCI proof."
+}

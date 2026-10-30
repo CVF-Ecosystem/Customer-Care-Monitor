@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "BOUNDED_P01_B01_DESIGN_SPEC_ONLY",
+  "date": "2026-10-30",
+  "riskCeiling": "R2",
+  "baseCommit": "576a45109b8efcdd373645b0fc557ac4638ced9d",
+  "ownerAuthority": "Owner next explicitly continues recorded P01/B01 DESIGN/SPEC after qualified source reconciliation; standing Root orchestrator/reviewer, Terra6.1High and SolMedium worker authorization. No old audit renewal, implementation or runtime grant.",
+  "roles": {
+    "orchestratorCommitSteward": "Root",
+    "specAuthor": "Sol Medium separate worker; if unavailable Root may record availability failure and appoint separate Terra6.1High author before work, preserving total effort/history",
+    "independentReviewer": "Root independent of design author; separate Terra6.1High reviews admission and final design/projection"
+  },
+  "objective": "Resolve a testable native same-context producer/independent-observer ownership/handoff design and current execution pin successor P01, preserving old G0/E01-E06 acceptance and minimizing missing CVF adapters.",
+  "question": "Can an exact installed supported native SDK invocation carry genuine independent producer/observer operations on the same owned managed browser, with source-backed identity and original custody, while P01 adopts current execution metadata without reviving held or expired authority?",
+  "outputs": [
+    "docs/reviews/R139_SDK_P01_B01_DESIGN_SPEC_2026-10-30.md",
+    "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/design_contract.json",
+    "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/design_source_inventory.json"
+  ],
+  "authoringBounds": {
+    "workerActiveMinutes": 30,
+    "semanticDistinctSourceFilesMax": 36,
+    "rootIndependentReviewActiveMinutes": 20,
+    "peerAdmissionReviewActiveMinutes": 10,
+    "peerFinalReviewActiveMinutes": 15,
+    "sourceOrRuntimeTests": 0,
+    "networkOrSdkOrProcessEffects": 0
+  },
+  "sourceRules": "Track distinct sources before use, including prior-role semantic context, inactive project authorities and indirect dependencies. Only current canonical startup/AGENTS/manifest/policy/lock/index/activeauthority and pinned Core lifecycle/coverage contracts are exempt. Every historical project authority/vendor/helper/test/profile implementation read or used is a semantic source; missing-source attempts count. No reread of entire state/history. Stop before37th source; no silent exemption or automatic extension.",
+  "sourceFamilies": [
+    "Named source audit/reconciliation/V3 review/authority/source, latest accepted NATIVE-TOOL-CLOSE build, original R139 seed/WO and R136spec",
+    "Existing R139 supervisor/Go fixture, frozen activation/preflight/durable/recorder/payload source-as-data; exact inputs already inventoried in preceding audit",
+    "Installed Antigravity chrome-devtools-mcp build/src daemon/client.js,daemon/daemon.js,daemon/utils.js,bin/chrome-devtools.js,bin/chrome-devtools-mcp.js,bin/chrome-devtools-mcp-main.js,third_party/index.js,tools/pages.js; source reads only, targeted SDK sections rather than bulk bundle",
+    "Current public regression findings report and source-linked installed/Core gate/test implementation necessary for P01 compatibility mapping; missing private/history fixtures are not reconstructed",
+    "Direct referenced committed design/API/receipt sources within same project/Core or exact installed vendor tree, within36 total; no ignored configs/payloads/binaries/env/key files"
+  ],
+  "requiredDesignDecisions": [
+    "Compare native direct Client/StdioClientTransport reuse, any evidenced vendor-supported owned multi-client capability, and no-change existing CUA route. Do not revive rejected shared CLI daemon restart or create custom MCP/CDP/browser RPC/dispatch framework. If a small existing job-control adapter is needed, prove its supported invocation and distinguish application correlation/declared actor from native-returned IDs/attestation; no assumption that a handwritten broker equals native independent observer.",
+    "Name exactly how two actual distinct actors operate/observe the same held context. Preserve independent observation, actual native page IDs/URLs, source-enforced process/profile/creation identity and original request/result/capture/close/terminal receipts. Static log review or forged CUA tab/session/task IDs cannot replace required native operations. If evidence cannot support a design without changing locked acceptance, return DESIGN_BLOCKED with concrete alternatives and exact human decision, not a fake ready schema.",
+    "P01 explicit immutable proposed current Core15e/profile1.2/lock/runner/bundle/source/tool binding plus compatibility conditions, old authority lineage retained; no actual repin, newacceptedbuild or runtime effect release. Distinguish source component acceptance from integrated binding and doctor from actual provider/product governance.",
+    "Testable typed field/method/role/lifecycle/clock/checkpoint/no-resend/error/cleanup contracts and positive/negative acceptance cases for future offline source work. Source-derived fixtures only, no runtime/governance proof claimed now.",
+    "Smallest exact planned paths and existing R139 order scope; frozen artifacts get new versioned successors, product router/engine/frontend and old authorities/evidence unchanged. Full8M3 coverage/owned remainder reused through Root packet, fiveCorefinding applicability explicitly mapped or ownedUNKNOWN; no broad waiver.",
+    "Fresh real-provider/credential/environment/campaign admission stays separate. Specify its required fields/owner conditions but do not choose or probe keys/models/endpoints, price APIs, generate live IDs/claim/releases, or create actual secret/token state."
+  ],
+  "workerAllowedPaths": [
+    "docs/reviews/R139_SDK_P01_B01_DESIGN_SPEC_2026-10-30.md",
+    "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/design_contract.json",
+    "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/design_source_inventory.json"
+  ],
+  "prohibitedEffects": [
+    "Implementation edits, tests/compile/controller/service/SDK import/browser/native metadata/network/provider/key/env/ignoredpayload/binary queries",
+    "MCP/CDP custom transport, unsupported Chrome launch, user/shared daemon/profile/config/Core/profile/lock/gate/seed/canonical roadmap changes",
+    "Old v2/v3 run replay, budget/deadline reset, source-audit continuation, mock AI governance, product effect release",
+    "Worker authority/current-state/catalog/commit/push/deploy edits"
+  ],
+  "retained": {
+    "priorAuditWorkerActual": 17,
+    "priorAuditWorkerCap": 16,
+    "priorRootLookup": 2,
+    "priorAuditDistinctTotal": 19,
+    "newDesignNotAuditReset": true,
+    "browserCumulative": 23,
+    "v2Cleanup": "UNKNOWN",
+    "v3Run": "SPENT",
+    "sourceLegacy": 27,
+    "controllers": 4,
+    "campaigns": 1,
+    "services": 5,
+    "coreFindingsOpen": 5,
+    "productRuntime": "HOLD",
+    "fullR139M3Freeze": "OPEN",
+    "facebookZaloOA": "PARKED"
+  },
+  "stop": "One consolidated design pass within30min/36semantic files; source/authority conflict or unsupported handoff yields exact blocked decision. No automatic prototype, runtime test or next audit; Root independently determines bounded source-work readiness or routes a concrete acceptance boundary decision.",
+  "precondition": "Root doctor28/28 and continuity, independent admission PASS, committed preparation and actor acknowledgment before design output BUILD. This creates DESIGN/SPEC artifacts only; any source implementation needs separate bounded WORK_ORDER and review, and runtime needs distinct exact effect admission."
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "MANDATORY_PROJECT_GATE_UNIT_CHECK",
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "scripts/tests",
+    "-p",
+    "test_cvf_downstream_gate*.py"
+  ],
+  "startUtc": "2026-10-30T15:00:58.892443+00:00",
+  "endUtc": "2026-10-30T15:02:27.536521+00:00",
+  "exitCode": 0,
+  "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderrSha256": "9a52844b480a2c4cf870633bf93036e3d0d05e2a90df39d06cfb9e32604676b2",
+  "note": "Fresh capture after unavailable interrupted attempt; prior attempt remains UNKNOWN, no product/runtime/AI governance proof."
+}

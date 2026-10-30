@@ -1,0 +1,11 @@
+{
+  "kind": "RESUME_PREPARATION_RESOLVED",
+  "previousAttempts": "UNKNOWN_RETAINED",
+  "replacementUnits": "113PASS_87.684s",
+  "replacementPreflight": "PASS7of7",
+  "replacementPrecommit": "PASS7mandatory_closeabilityNAnotchecked",
+  "replacementAuthor": "/root/p01_b01_resume_spec SolMedium",
+  "replacementReviewer": "/root/p01_b01_resume_review Terra6.1High",
+  "actorScopeConfirmation": "Canonical startup/current authority only; no semantic domain exploration or output; unchanged overall30active minutes/36semantic source ceiling.",
+  "designRuntimeProviderEffects": 0
+}

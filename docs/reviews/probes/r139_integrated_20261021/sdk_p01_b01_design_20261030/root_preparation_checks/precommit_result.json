@@ -1,0 +1,25 @@
+{
+  "kind": "MANDATORY_STATIC_PREPARATION_CHECK",
+  "name": "precommit",
+  "argv": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-B",
+    "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+    "run",
+    "--phase",
+    "pre-commit",
+    "--project-root",
+    ".",
+    "--packet",
+    "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+    "--packet",
+    "docs/reviews/R139_SDK_P01_B01_DESIGN_ROOT_REVIEW_2026-10-30.md",
+    "--no-receipt"
+  ],
+  "startUtc": "2026-10-30T15:02:59.425200+00:00",
+  "endUtc": "2026-10-30T15:02:59.882425+00:00",
+  "exitCode": 0,
+  "stdoutSha256": "ecd2b195cd6b8384ff661e4b9cb88dffd064e2abf737c3a0fb7b86a27fb40799",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "note": "Prior unavailable interrupted preflight attempt remainsUNKNOWN; no product/runtime or hostedCI proof."
+}
