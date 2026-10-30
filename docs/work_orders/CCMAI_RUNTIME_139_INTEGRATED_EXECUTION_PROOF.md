@@ -2,7 +2,7 @@
 
 Status: BLOCKED_WITH_REASON
 Risk: R2
-Worker: Terra6.1High source audit complete; future implementation/runtime actor requires current committed admission
+Worker: Sol Medium SPEC_AUTHOR completed conditional P01/B01 design; future source worker awaits separately committed bounded WORK_ORDER
 Reviewer: Root independent source/evidence reviewer; separate Terra6.1High reviews Root-authored documentary projection
 Commit mode: WORKER_MUST_NOT_COMMIT
 providerExecutionAuthority: NONE_CURRENT_HISTORICAL_CAMPAIGNS_SPENT_OR_EXPIRED
@@ -10,9 +10,22 @@ runtimeExecutor: UNASSIGNED_UNTIL_SUPPORTED_ENVIRONMENT_AND_COMMITTED_ADMISSION
 runtimeReviewer: INDEPENDENT_REVIEWER_TO_BE_BOUND_IN_CURRENT_ADMISSION; historical reviews retained
 dispatchKind: INITIAL
 
-Current continuation: source-only product admission reconciliation2026-10-30 supersedes older operational routing below. Status remains BLOCKED_WITH_REASON; current canonical fronts and reconciliation review govern the next allowed move. Normative S01-S04/E01-E06/G0-G3 requirements remain binding; earlier dated actor assignments, pins, grants, reservations and dispositions are historical, not renewed execution authority.
+Current continuation: conditional P01/B01 design2026-10-30 is accepted for source-work-order preparation only; product runtime remains BLOCKED_WITH_REASON. Current conditional-design projection and canonical fronts govern; old source-only routing and dated operational instructions below are historical. Normative S01-S04/E01-E06/G0-G3 acceptance remains binding and no spent grant, clock or role assignment is revived.
 
-## Current product re-entry disposition — 2026-10-30
+## Current P01/B01 conditional design disposition — 2026-10-30
+
+Design/SPEC: `docs/reviews/R139_SDK_P01_B01_DESIGN_SPEC_2026-10-30.md`; independent disposition: `docs/reviews/R139_SDK_P01_B01_DESIGN_ROOT_REVIEW_2026-10-30.md`. Native foreground daemon.js plus exported sendCommand is conditionally source-adopted for offline work-order preparation, not execution/public stability proof. No CLI start/autostart/version-repair, customMCP/CDP wire, shared/default daemon restart, generic broker, fabricated CUA IDs or static log-review substitute. Actual separate actor operations and original owner/caller/capture/terminal custody remain required.
+
+| Boundary | Current state | Owned next condition |
+|---|---|---|
+| Native interface source candidate / P01 proposed current pins | Conditional DESIGN accepted afterrepair1,34of36sources, nativeVERSION1.9.0; no code/effect permission | Root bounded source WORK_ORDER for one-shot native-command adapter/current-preflight code-as-data; derive exact original-owner interface/minimal paths and independent admission before BUILD |
+| Full G0 capability and product continuation | Provisional evidence review is not completeG0; complete capability needs targetclose/observerfinal/callerterminals/originaldaemonwait/PIDcleanup | Integrated same-held-context/original-clock/G0→product→E06 continuation NOT_DESIGNED, not released by this component design |
+| Native in-flight browser relaunch | Native implementation may replace browser/action between samples; no prevention guarantee | HARD PRODUCT HOLD until source-backed enforcement or explicit Owner locked-acceptance decision; no silent guard-based waiver |
+| Integrated P01/source/environment/real provider evidence | CurrentCore15e/profile1.2 proposal, inheritedfc4components; fiveCorefinding applicabilityUNKNOWN and productexecutione9/profile1.1HOLD retained | Actual new integrated source/build/compatibility/env/grant/key/provider/campaign authority and original real-provider receipts required before E01-E06/product claim |
+
+Supervisor/Go/activation/recorder/payload/G1G2 edits are contingent future integration, not immediately authorized paths. Root alone owns any future immutable authority/build record/commit; no code/SDK/browser/provider effects occurred in this DESIGN slice. Existing nativev3spent/browser23, v2ChromeUNKNOWN, old27sourcechecks/4controllers/1campaign/5services and audit17vs16+Root2/19cost remain. FullR139/M3/FREEZE OPEN and FB/ZaloOAparked. Existing BLOCKED_WITH_REASON status/providerExecutionAuthority NONE remains unchanged.
+
+## Historical product re-entry reconciliation — 2026-10-30
 
 Source reconciliation: `docs/reviews/R139_PRODUCT_EXECUTION_ADMISSION_RECONCILIATION_ROOT_REVIEW_2026-10-30.md`. Accepted public-page native v3 capability is inherited, not rerun: oneSDKconnect/6tools, cumulativebrowser23; priorv2ChromeUNKNOWN retained. Latest NATIVE-TOOL-CLOSE accepted component sourcefc4bbe01 matches current supervisor/Go and backend/frontend trees; this corrects a stale7ef-only comparison, not product acceptance. Current project Core15e/profile1.2 differs from immutable product executione9/profile1.1 and its pinned preflight. Source/pure-component acceptance and current doctor do not release an integrated campaign.
 
@@ -559,7 +572,7 @@ Original source return is CHANGES_REQUIRED: workerPython1/1 failed (38PASS/1FAIL
 
 This manual repair uses `CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-INTEGRATED-REPAIR-ADMISSION.json`, subject to independent admission review and committed Root dispatch. Standing user AGENTS.md permits dependent same-scope repairs without redundant Owner confirmation. Objective, three source paths, acceptance contract, riskR2, effect class and commit owner remain unchanged. Original source seed, exhausted authoring/Python and zero-self-repair counters are not altered. Root now grants one explicit manual reviewer-directed repair after consolidated review; no automatic retry or further round. This is the same R139 order, not a helper tranche or new product scope.
 
-Worker: Terra6.1High source audit complete; future implementation/runtime actor requires current committed admission
+Worker: Sol Medium SPEC_AUTHOR completed conditional P01/B01 design; future source worker awaits separately committed bounded WORK_ORDER
 
 Worker runs NO Python/Go/source checks, compiler, binary, browser/probe/DB/Docker/key/provider/server actions in this repair. Ordinary editing, read-only metadata and mandatory repository gates remain permitted. Return one complete diff/hashes and budget statement; do not modify prior receipts, authority, continuity/catalog/work order or commit. Root independently reviews the repaired source, then uses ONLY the already-unused RootPython1 -> offlineCompile1 (custody moved from worker) -> auditedPureGo1, stopping on first failure. No verification slots, API/cost/resource budgets or alternate stacks are added. Exact check commands/tools/timeouts/scrubbed environment/output remain parent admission; the baseline pre-launch source pins are the accepted repaired bytes audited by Root, not the superseded failed bytes.
 

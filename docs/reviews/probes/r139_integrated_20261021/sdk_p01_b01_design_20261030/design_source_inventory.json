@@ -1,0 +1,301 @@
+{
+  "schemaVersion": "r139.designSourceInventory@1",
+  "preparationHead": "ba55a586cbf94cb3ca529161cb5c617453a545e8",
+  "authorRole": "SPEC_AUTHOR",
+  "status": "REPAIR1_34_SOURCES_NATIVE_CANDIDATE_PRODUCT_INTEGRATION_NOT_DESIGNED",
+  "semanticDistinctSources": 34,
+  "semanticLimit": 36,
+  "missingSourceAttempts": 0,
+  "accounting": "Sources counted before each read batch in author working ledger; this final inventory persists that ledger. Repeated targeted reads retain one identity. No historical authority exemption. Referenced but unread files retain inherited evidence only; no direct verification inferred.",
+  "priorAudit": {
+    "workerActual": 17,
+    "workerCap": 16,
+    "rootLookup": 2,
+    "cumulative": 19,
+    "overrunRetained": true
+  },
+  "startupExempt": [
+    "AGENTS.md",
+    ".cvf/manifest.json",
+    ".cvf/policy.json",
+    ".cvf/local-binding.json",
+    ".cvf/gate-profile.lock.json",
+    "../WORKSPACE_RULES.md",
+    "CVF_SESSION_MEMORY.md",
+    "CVF_SESSION/ACTIVE_SESSION_BOOTSTRAP_READ_MODEL.json",
+    "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+    "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/INDEX.md",
+    "docs/CVF_BOOTSTRAP_LOG_20260926.md",
+    "docs/milestone-coverage-authority.json",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-139-SDK-P01-B01-DESIGN-ADMISSION.json",
+    "docs/reviews/R139_SDK_P01_B01_DESIGN_ROOT_REVIEW_2026-10-30.md",
+    "../.Controlled-Vibe-Framework-CVF/AGENTS.md",
+    "../.Controlled-Vibe-Framework-CVF/AGENT_HANDOFF.md",
+    "../.Controlled-Vibe-Framework-CVF/docs/reference/CVF_GOVERNED_WORK_LIFECYCLE_AND_DESIGN_CONTROL_STANDARD_2026-06-11.md",
+    "../.Controlled-Vibe-Framework-CVF/docs/reference/CVF_PRODUCT_MILESTONE_COVERAGE_CONTRACT_2026-10-23.md",
+    "../.Controlled-Vibe-Framework-CVF/docs/reference/downstream_gate_profile/CVF_MILESTONE_COVERAGE_MACHINE_CONTRACT.md"
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "path": "docs/reviews/R139_PRODUCT_EXECUTION_ADMISSION_SOURCE_AUDIT_2026-10-30.md",
+      "rawSha256": "050cb21bbe44a85e91b8ee882c6925e2bd8fac8d71a707cde255b7bd0601c66d",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 1
+    },
+    {
+      "id": "S02",
+      "path": "docs/reviews/probes/r139_integrated_20261021/product_admission_reconciliation_20261030/source_pin_inventory.json",
+      "rawSha256": "caa247599a307e1408298b7e2889ec1429a026abf8dcb7e76ce01c16539f16a2",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 2
+    },
+    {
+      "id": "S03",
+      "path": "docs/reviews/R139_PRODUCT_EXECUTION_ADMISSION_RECONCILIATION_ROOT_REVIEW_2026-10-30.md",
+      "rawSha256": "c524911ae6e4c7fe06fb15c33a4ff33459a6046d77bbf0852d2777f36afe50e7",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 3
+    },
+    {
+      "id": "S04",
+      "path": "docs/reviews/probes/r139_integrated_20261021/connection_recovery_20261029/native_cli/run_owned_stdio_v3.mjs",
+      "rawSha256": "bfcdf721409b5e464d0b47f7a5522e482f05a463bd55f918e037362a84ce2622",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 4
+    },
+    {
+      "id": "S05",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-TOOL-CLOSE-ACCEPTED-BUILD-PINS-ADMISSION.json",
+      "rawSha256": "094a0a3678571c8ed03c2a278e50e352b645e71cd972fdc841fed9c3cacb065e",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 5
+    },
+    {
+      "id": "S06",
+      "path": "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/daemon/client.js",
+      "rawSha256": "fc6500be58f2de1c941d66171a43fa8bf796cbea9420575bd8b299ff4e66f1a1",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 6
+    },
+    {
+      "id": "S07",
+      "path": "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/daemon/daemon.js",
+      "rawSha256": "eab00479391fece6afe0d45afe564bf0e9e8b4f461d7ec5c9f9bfe9aefacf7fa",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 7
+    },
+    {
+      "id": "S08",
+      "path": "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/daemon/utils.js",
+      "rawSha256": "6769ad4523dfe5f65b7650117135393918146866ccb5f7d583afc271512e7f7b",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 8
+    },
+    {
+      "id": "S09",
+      "path": "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/bin/chrome-devtools.js",
+      "rawSha256": "c380c15c89425bfe8e0aeb7720bf3996d681752413ef77cb3a33f769a8c70dc5",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 9
+    },
+    {
+      "id": "S10",
+      "path": "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/bin/chrome-devtools-mcp.js",
+      "rawSha256": "9f380d06e1ac05b257e27e708c0cc4b4ba190e285ed6eb6c8aa50978d98a12c5",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 10
+    },
+    {
+      "id": "S11",
+      "path": "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/bin/chrome-devtools-mcp-main.js",
+      "rawSha256": "5ca0e81196ab6b6e1481629a2dcae7f416b3b38f74555e3138ad5cdbb055e809",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 11
+    },
+    {
+      "id": "S12",
+      "path": "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/tools/pages.js",
+      "rawSha256": "50983bd1b2f01ffa3273de3353e28fd44795d026f2b62bcc783e19156ee0147d",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 12
+    },
+    {
+      "id": "S13",
+      "path": "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/third_party/index.js",
+      "rawSha256": "fc6ae43cb8f6007eba4b0f269290ec8fea6db7670686d17967b4812d90d2cc10",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 13
+    },
+    {
+      "id": "S14",
+      "path": "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/index.js",
+      "rawSha256": "793dd988623744d46395e586500b5405fd17694cc4bef98d6593bee01563374a",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 14
+    },
+    {
+      "id": "S15",
+      "path": "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/browser.js",
+      "rawSha256": "17f861505810a9d25784fd71bf0592966f513c420b57a728b344280e97fe596c",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 15
+    },
+    {
+      "id": "S16",
+      "path": "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/config/mcp-options.js",
+      "rawSha256": "2fc554986209b3cfadcbe70552994111aadedf2e159b3de61a12b96233f18f67",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 16
+    },
+    {
+      "id": "S17",
+      "path": "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/config/cli-options.js",
+      "rawSha256": "05011d9cc5fecae6f359c4aff3272eedb35796cf2e6cbf53db39fe52a49dbffb",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 17
+    },
+    {
+      "id": "S18",
+      "path": "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+      "rawSha256": "7ff3efb95804dbe44660a3650675866a77d24941fdd5310ab271af95a56d3bd0",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 18
+    },
+    {
+      "id": "S19",
+      "path": "docs/specs/M3_EXECUTION_UI_R136_SPEC_2026-10-20.md",
+      "rawSha256": "a907d63cd64fc1eae09164a6a1e9ec18533c55c4b2e8e7d609ff408a353be6b2",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 19
+    },
+    {
+      "id": "S20",
+      "path": "scripts/r139_execution_supervisor.py",
+      "rawSha256": "9ee7f988b5a27495fd4bd4e72975f0b2a583b8e33cea49c51ac5189285f44c64",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 20
+    },
+    {
+      "id": "S21",
+      "path": "backend/api/handlers/intervention_execution_browser_test.go",
+      "rawSha256": "4e90a7225f6fc663a3dc3493b3570bdfdc9969da0b43d70445273170c41f899d",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 21
+    },
+    {
+      "id": "S22",
+      "path": "docs/reviews/R139_PUBLIC_CORE_REGRESSION_FINDINGS_2026-10-29.md",
+      "rawSha256": "2425d287861f71ebed1591ccd929007e7dea97a741a62a5a7404995eba3340be",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 22
+    },
+    {
+      "id": "S23",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v3_design.py.txt",
+      "rawSha256": "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 23
+    },
+    {
+      "id": "S24",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/recorder_design.py.txt",
+      "rawSha256": "154047cf66ffce3192b07ff4ac976f51c9a797c50b76a4dd3091f6398f207f1f",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 24
+    },
+    {
+      "id": "S25",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_payload_templates.json",
+      "rawSha256": "ffbf475dee7a28a785c2ce543ad50cda55819c72debdf8c24e0a05104d599f19",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 25
+    },
+    {
+      "id": "S26",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_durable_resume.py.txt",
+      "rawSha256": "7ab2bf4c5b97009d36b932fd7aff5cf6d5b42584844f59fc02f5605f06156eda",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 26
+    },
+    {
+      "id": "S27",
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_pinned_preflight.py.txt",
+      "rawSha256": "81784375b6948dee973ce1dd4a3b66851786273079f4becfbdd7c7378fbca233",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 27
+    },
+    {
+      "id": "S28",
+      "path": "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/McpContext.js",
+      "rawSha256": "39e41d2e578aa983fa7a3ded08ac9438af7dd8423a29829f746c0fe9e9cb70b3",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 28
+    },
+    {
+      "id": "S29",
+      "path": "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/McpResponse.js",
+      "rawSha256": "8f4189b21fe26726cf64137a74542efd4927c21dd4c2794924af95fdaf64d761",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 29
+    },
+    {
+      "id": "S30",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+      "rawSha256": "78ae94c663cb2de1484c79da0efed6382cbf85c6bc1d791d208f87358b02cc0f",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 30
+    },
+    {
+      "id": "S31",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139.json",
+      "rawSha256": "e964eb62a27b3bc7cf1b188640969baeffe4fa80f7627a8b627e08b239ec7aa0",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 31
+    },
+    {
+      "id": "S32",
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-SDK-V3-ADMISSION.json",
+      "rawSha256": "6b442b274bebc43b8b2345491369189e81cd867cc5162a8176d0707f2ddb6c32",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 32
+    },
+    {
+      "id": "S33",
+      "path": "docs/reviews/R139_NATIVE_SDK_V3_ROOT_REVIEW_2026-10-30.md",
+      "rawSha256": "6d7f905eca8d60d406ee30f698cf1d45224b4ddff8a2ef0e73c0f1a18d912ac6",
+      "use": "Source-as-data only; content or targeted semantic sections read; historical and indirect sources counted",
+      "order": 33
+    },
+    {
+      "id": "S34",
+      "path": "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/version.js",
+      "rawSha256": "ff03658d3be60d9ad055f9794f6ee2c7bbebfcfcfdc8b884d2a23083d70c2bef",
+      "use": "Consolidated repair1 direct native VERSION source; literal1.9.0; source text only",
+      "order": 34
+    }
+  ],
+  "effects": {
+    "implementation": 0,
+    "tests": 0,
+    "processQueries": 0,
+    "sdkImports": 0,
+    "browser": 0,
+    "network": 0,
+    "provider": 0,
+    "credentials": 0,
+    "binaryQueries": 0
+  },
+  "limits": "Only source text and source hashes observed. Tool binary/package metadata pins inherited from accepted records; no current binary/package inspection. Original interrupted preparation checks UNKNOWN retained by Root; no claim they passed.",
+  "repairHistory": [
+    {
+      "round": 1,
+      "newSources": 1,
+      "cumulativeSources": 34,
+      "budgetReset": false,
+      "reason": "Root/Terra consolidated independent CHANGES_REQUIRED; selected API, separate admissions, completion/clock, replacement race, minimal paths, exact VERSION"
+    }
+  ]
+}

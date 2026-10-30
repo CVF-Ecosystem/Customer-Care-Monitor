@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "ROOT_CONDITIONAL_NATIVE_INTERFACE_DESIGN_ADOPTION",
+  "preparationHead": "ba55a586cbf94cb3ca529161cb5c617453a545e8",
+  "decision": "CONDITIONAL_DESIGN_ACCEPTED_SOURCE_WORK_ORDER_PREPARATION_ONLY",
+  "adoptedCandidate": "Pinned installed foreground daemon/daemon.js under original held owner plus exported native daemon/client.js sendCommand; no CLIstart/startDaemon/ensure/versionfix/stopDaemon wrappers, custom browser wire or broker.",
+  "implementationGrantedNow": false,
+  "runtimeGrantedNow": false,
+  "productRelease": "HARD_HOLD",
+  "wholeR139M3Freeze": "OPEN",
+  "independentReviews": {
+    "root": "Independent source/design review plus native source readback PASS conditional after one consolidated repair.",
+    "separateTerra": "PASS bounded conditional design after repair1; exact artifact pins/34sources/hold/lifecycle verified."
+  },
+  "sourceAccounting": {
+    "distinctSemanticSources": 34,
+    "limit": 36,
+    "missingSourceAttempts": 0,
+    "all34RawReadbackMatchedAtReview": true,
+    "authorRemainingActiveMinutes": "UNKNOWN_NO_INDEPENDENT_STOPWATCH",
+    "observedCommitToFinalOutputSeconds": 1438.3300330638885,
+    "timeQualification": "Git commit/file-mtime wall span under30min including review waits supports a conservative upper bound when timestamps reliable; not independently measured active time or runtime monotonic proof. The1438.330s span captures functional author repair completion before later Root two-line role metadata annotation; no fresh active-time allowance or runtime clock claimed.",
+    "priorAudit": "17actual/16cap +2Rootlookups/19 retained, not reset."
+  },
+  "nativeVersion": {
+    "literal": "1.9.0",
+    "sourceId": "S34",
+    "rawSha256": "ff03658d3be60d9ad055f9794f6ee2c7bbebfcfcfdc8b884d2a23083d70c2bef"
+  },
+  "acceptedArtifactRawSha256": {
+    "docs/reviews/R139_SDK_P01_B01_DESIGN_SPEC_2026-10-30.md": "12391f735721950963e4f0740796f315089f14fcc2fd89276fe4c804ae6602ba",
+    "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/design_contract.json": "d9c0e96bd8d740f5ef7175b1251fdc0a4a1d2c0708e5b6dc6e7d5ea3eace2777",
+    "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/design_source_inventory.json": "4163c1cba510bc95c722492d4472a97eb20ec6bef5628e6075d11da563e4bcfa"
+  },
+  "reviewHistory": [
+    "Initial independent Root/Terra CHANGES_REQUIRED consolidated before repair: typedAPI route contradiction, native/product effect separation, provisional/complete lifetime, relaunch race, path scope and VERSION.",
+    "Sol repair1 under same source/effort allowance; exact34source ledger and source VERSION resolved; no implementation/tests/effects.",
+    "Minor initial33 versusfinal34 phrasing is explicitly initialpass plusversionS34, not an inventory omission.",
+    "Final precommit ROLE failed: R2 SPEC header missing exact Worker/Reviewer lines. Root SESSION_SYNC_STEWARD added only two truthful role metadata lines; removing them recovers the previously independently reviewed exact raw SPEC hash. Contract/inventory/functional text unchanged; separate peer metadata confirmation and fresh gates required.",
+    "Separate Terra targeted metadata confirmation PASS: exact two header lines only; byte-removal recovers reviewed functional SPEC; prior conditional design PASS holds. Fresh local precommit7 includingROLE on SPEC/RootReview PASS; applicable final checks/commit still required."
+  ],
+  "mandatoryHoldReasons": [
+    "Native ensureBrowserLaunched may physically relaunch and perform an in-flight action between identity samples; samples/reconnect notices do not prove prevention. Product needs source-backed enforcement or explicit Owner locked-acceptance decision, never silent relaxation.",
+    "Integrated held-context/original-clock/G0->product->E06 continuation remains NOT_DESIGNED/NOT_ADMITTED. Capability lifecycle requires full close/observer final inventory/original caller and owner terminals before bounded capability acceptance; provisional review not G0PASS.",
+    "P01 exact current proposal is not accepted integrated build/actualrepin/effect grant. Corefive productapplicabilityUNKNOWN, current environment/binary/credential/provider readiness unverified."
+  ],
+  "nextAllowedMove": "Root prepares one finite source WORK_ORDER for minimal native one-shot command adapter/current-pin preflight code-as-data; derive exact reusable owner interface and dependencies before BUILD. No generic manager or blanket Go/G1G2 changes. Offline source work only after bounded source authority/independent review/committed preparation; native capability effects and product effects separately admitted later.",
+  "effectsThisDesign": {
+    "implementation": 0,
+    "nativeRuntime": 0,
+    "browser": 0,
+    "provider": 0,
+    "designOrNativeContractTestsExecuted": 0,
+    "mandatoryRepositoryPreparationCheck": "113projectgateunitsPASS87.684s +staticpreflight/precommit; distinct from17futuredesigncases, no runtimegovernanceproof"
+  },
+  "retained": {
+    "browserCumulative": 23,
+    "v3Run": "SPENT",
+    "v2Cleanup": "UNKNOWN",
+    "legacySource": 27,
+    "controllers": 4,
+    "campaign": 1,
+    "services": 5,
+    "coreFindingsOpen": 5,
+    "facebookZaloOA": "PARKED"
+  },
+  "functionalReviewSpecRawShaBeforeRoleMetadata": "512b9272acfb6d9747a1af64d9917b4301ebbf8e11a5b4f5ba480dd9e202ba47"
+}

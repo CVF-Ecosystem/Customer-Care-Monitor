@@ -1,6 +1,6 @@
 # R139 P01/B01 — design admission and independent review
 
-Status: DESIGN_ADMISSION_ACCEPTED_RUNTIME_HELD
+Status: CONDITIONAL_DESIGN_ACCEPTED_SOURCE_WORK_ORDER_NEXT_PRODUCT_HARD_HOLD
 Risk: R2
 Worker: Separate Sol Medium SPEC_AUTHOR; distinct Terra6.1High fallback only after recorded unavailability
 Reviewer: Root independent of design author; separate Terra6.1High admission/final reviewer
@@ -12,19 +12,47 @@ Owner next continues exact DESIGN/SPEC move from576a4510. Global R139 remains BU
 
 Deliver concrete supported-native same-context producer/observer handoff and current execution-pin successor specification. Compare native reuse and no-change route; do not replace native independence with a fabricated browser ID, application label or log review, nor add a dispatch framework/custombrowser protocol. A design gap returns an exact blocked decision with reviewable alternatives. Native source facts and application adapter assumptions must be distinguished; no runtime-capability claim from source prose. Typed contracts/acceptance/failure/cleanup cases, minimal path scope and effect prerequisites required before any separate source work order.
 
-## Interrupted preparation continuation
+## Historical interrupted preparation continuation
 
 Before preparation commit the chat was interrupted. Original unit/preflight tool results became unavailable; Root records UNKNOWN and preserves that invocation history in `sdk_p01_b01_design_20261030/root_preparation_checks/resume_receipt.json`. Root doctor28/28 and scoped suite process observation repeated; no active matching unit command seen, not proof of prior exit. One replacement mandatory unit check captures native stdout/stderr/exit persistently. Previous Sol author acknowledged startup/contract only, no domain exploration or outputs; fresh Sol author/separate Terra reviewer will rehydrate under unchanged overall30minute/36source bounds. Original independent admission PASS inherited; no effects or implementation introduced.
 
-Preparation resume resolved: fresh persisted mandatory113unitPASS87.684seconds, legacy7/7 and explicitprecommit7mandatory PASS; earlier inaccessible attempts remain UNKNOWN. Source authorship appointed to replacement SolMedium `/root/p01_b01_resume_spec`, separate Terra `/root/p01_b01_resume_review` confirms inherited admission/current resume scope; each rehydrated/acknowledged before work, semantic source use0/designoutputs0. Overall30active/36source limits unchanged. Root preparation commit now precedes actual authoring; final design/review remains prospective. Native/AI governance/hostedCI or product runtime is not proved by these checks.
+Preparation resume resolved: fresh persisted mandatory113unitPASS87.684seconds, legacy7/7 and explicitprecommit7mandatory PASS; earlier inaccessible attempts remain UNKNOWN. Source authorship appointed to replacement SolMedium `/root/p01_b01_resume_spec`, separate Terra `/root/p01_b01_resume_review` confirms inherited admission/current resume scope; each rehydrated/acknowledged before work, semantic source use0/designoutputs0. Overall30active/36source limits unchanged. Historical preparation condition fulfilled by ba55a586 before authoring; final repaired conditional design is reviewed below. Native/AI governance/hostedCI or product runtime is not proved by these checks.
+
+## Historical consolidated independent design review — round1
+
+First three-artifact return reports33/36semantic sources, no implementation/tests/runtime. Root independently read the same native client/daemon/utils and browser/index source already in the ledger; foreground daemon and exported no-autostart sendCommand are a source-supported internal-interface candidate, not public stability/runtime proof. Root and separate Terra returned one consolidated CHANGES_REQUIRED set before acceptance: split stale direct-SDK methods from selected daemon methods; distinguish native G0 versus product-effect admissions; resolve provisional seal versus complete close/terminal evidence and original clock; make native in-flight browser relaunch race a hard product HOLD because samples cannot guarantee prevention; narrow immediate source paths versus contingent G1/G2 integration; bind exact native VERSION source if remaining source allowance permits. No locked acceptance waived, no cryptographic LLM attestation invented, no new broker or protocol.
+
+Sol acknowledged one design-only repair under unchanged cumulative30active/36source bounds, three outputs only. Source34 version.js is allowed only as direct referenced source within remaining capacity; no prototype/test or effect permission. If integrated continuation cannot satisfy existing custody/terminal requirements, it remains explicitly NOT_DESIGNED/NOT_ADMITTED. This is document/typed-contract repair, no implementation authoring round or runtime budget reset.
+
+## Final independent disposition and technical interface adoption
+
+Preparationba55 was committed before Sol authoring. Three functional-return artifacts were independently reviewed as SPEC512b9272, contractd9c0e96b, inventory4163c1cb; final SPEC12391f73 adds only required Root workflow role metadata, with byte-removal equivalence recorded in `root_design_disposition.json`; all34unique source raw hashes were rechecked before this documentary projection. NativeVERSION1.9.0 is directS34source with rawSHAff03658d. Source count34/36, no missing reads or implementation/tests/SDK/browser/provider effects. Prior interrupted preparation attempts remainUNKNOWN, replacement113unitPASS87.684s and persisted original outputs retained. Author did not retain a reliable independent active-time stopwatch; Git preparation→final-output file-mtime span1438.330s includes all waits and is a qualified under30minute wall upper bound, not measured active-time or runtime-clock proof.
+
+Root independently adopts the exact pinned native foreground daemon entry/export as a **conditional source-design candidate for bounded offline source-work preparation only**. It is not CLI wrapper adoption, public API stability certification, source implementation grant, accepted integrated build, runtime capability proof or product release. One held native daemon owner and separate actual actor native calls, scoped UUID/native process/page facts, unmodified outer+inner results, original caller and owner terminals and known-PID cleanup remain required; declared actor correlation is not native LLM identity. No new broker or browser protocol is authorized.
+
+After one consolidated design repair, separate Terra returned PASS bounded conditional DESIGN on exact final hashes and34sources. Selected native methods/outer-inner errors and original wait outcomes now align; direct SDK route is retained separately. Technical native capability admission and product effect admission are distinct. Capability lifecycle closes target, independently inventories, preserves caller terminals and stops/waits original daemon with known-PID observation before any bounded capability acceptance. Provisional evidence review is not G0PASS.
+
+**Hard product holds remain:** native browser.ensureBrowserLaunched can relaunch within an in-flight call; samples/reconnect detection may occur after replacement/action and cannot guarantee prevention. Product release needs source-backed enforcement or explicit Owner decision on any locked acceptance change. Integrated same-held-context/original-clock/G0→G1/G2→E06 continuation is NOT_DESIGNED/NOT_ADMITTED. Current execution/source compatibility, fiveCorefinding product applicability and fresh actual environment/credential/provider effect authority remain unresolved; none is waived by this interface choice.
+
+Immediate future source scope is at most one native sendCommand one-shot adapter and one current-pin preflight code-as-data successor; a separate source WORK_ORDER must derive exact existing-owner invocation/dependencies before BUILD. Supervisor/Go/activation/recorder/payload/G1G2 changes are contingent future integration, not a blanket grant. Offline17proposed cases are requirements, not executed tests. Current SourceCodeBUILD permission=false and all effect permissions=false. Existing R139 order, canonical roadmap/source criteria and all spent/UNKNOWN history retained; no helper tranche, automatic prototype or audit renewal.
+
+Root transitions independent DESIGN REVIEWER to SESSION_SYNC_STEWARD/COMMIT_STEWARD for this qualified conditional-design checkpoint. Next action is bounded source WORK_ORDER preparation, followed by independent admission/committed preparation before any source authoring; native/provider/product runtime stays held. Minor33source phrasing refers to initialpass; final34 includingS34VERSION is authoritative.
+
+## Final static role-metadata finding
+
+Initial final precommit ROLE failed because R2 SPEC lacked exactly one Worker and Reviewer header, despite author/reviewer described in prose. Root SESSION_SYNC_STEWARD adds exactly two truthful workflow metadata lines, no functional edit; removing those bytes recovers reviewed SPEC512b9272. Final SPEC raw hash is recorded in root_design_disposition.json; contract/inventory unchanged. This is an explicit failed gate plus metadata correction, not another implementation/design repair or silent pass. Separate Terra targeted confirmation PASS verifies exact metadata-only delta; fresh local precommit7 including ROLE on SPEC/RootReview PASS, with final range/commit checks remaining. Functional completion timing upper bound precedes this Root annotation.
+
+## Final documentary checkpoint review
+
+Separate Terra independently returned PASS for Root conditional adoption, current-WO projection and canonical continuity after exact worker-artifact review. Implementation/native/provider effects remain ungranted; physical-relaunch and integrated-lifetime hard holds and locked acceptance are preserved. Root SESSION_SYNC_STEWARD / COMMIT_STEWARD owns the exact documentary commit after applicable static gates, not tranche/product closure. Project preparation113unitPASS87.684s and native raw receipts remain preserved; no extra design/native tests are executed merely to restate the same metadata.
 
 ## Boundaries and inheritance
 
 No implementation/tests/process/SDK/browser/network/key/env/provider/DB/Docker/controller or ignored artifact inspection. Installed vendor source can be read under36file bound; frozen artifacts/oldauthorities/Core/profile/canonicalroadmap immutable. Existing R136 E01-E06/G0-G3 and all8M3 rows retained; fresh physical/API/monetary/secret/environment approval fields remain required later, no model/key choices or actual grant here. Corefive findings product applicability remains UNKNOWN unless source mapping justifies a narrower qualification; never declare failing full suite passed. Nativev3spent/browser23/v2UNKNOWN and old27/4/1/5 remain. Product/fullR139/M3/FREEZE OPEN, FB/ZaloOAparked. Earlier113gateunitPASS199.010s is historical; current replacement113PASS87.684s is persisted above. Applicable documentary gates precede commits.
 
-## Independent review
+## Historical admission checkpoint
 
-Separate Terra independent admission PASS confirms bounded distinct design question, full8M3 coverage, native independence and claim boundaries, exact36source accounting and no runtime/implementation. SolMedium SPEC_AUTHOR acknowledged canonical startup/declaration and waits for Root preparation SHA. Root preparation commit precedes substantive design exploration/outputs; final design/result review pending.
+Separate Terra independent admission PASS confirms bounded distinct design question, full8M3 coverage, native independence and claim boundaries, exact36source accounting and no runtime/implementation. SolMedium SPEC_AUTHOR acknowledged canonical startup/declaration and waits for Root preparation SHA. Historical condition fulfilled by ba55a586 preparation; final design and conditional independent review are recorded below.
 
 ```cvf-milestone-coverage-json
 {
@@ -44,18 +72,18 @@ Separate Terra independent admission PASS confirms bounded distinct design quest
       "decision": "Đối chiếu evidence và caps; tiếp tục hoặc sửa trong authority, trình Owner nếu đổi phạm vi, HOLD hoặc dừng; đưa kết quả về R139/G3."
     }
   },
-  "phase": "DISPATCH",
+  "phase": "REVIEW",
   "action": {
-    "kind": "VERIFY",
+    "kind": "REVIEW",
     "selected": [
       "M3-05",
       "M3-08"
     ],
-    "owner": "Separate design SPEC_AUTHOR; Root independent reviewer",
-    "output": "Testable source-backed P01/B01 design, typed contract and exact minimal future source work scope or concrete design-blocked decision",
+    "owner": "Root independent design reviewer; separate Terra final reviewer",
+    "output": "Conditional native-interface/current-pin design accepted for bounded source-work-order preparation only, with hard product holds",
     "budgetMinutes": 30,
     "stop": "One consolidated design pass within30min/36semantic files; source/authority conflict or unsupported handoff yields exact blocked decision. No automatic prototype, runtime test or next audit; Root independently determines bounded source-work readiness or routes a concrete acceptance boundary decision.",
-    "next": "Root independent design review then separately admits only justified source BUILD, or concrete locked-acceptance decision if unsupported",
+    "next": "Root prepares one finite source WORK_ORDER for minimal native one-shot command adapter/current-pin preflight code-as-data; derive exact reusable owner interface and dependencies before BUILD. No generic manager or blanket Go/G1G2 changes. Offline source work only after bounded source authority/independent review/committed preparation; native capability effects and product effects separately admitted later.",
     "question": "Can an exact installed supported native SDK invocation carry genuine independent producer/observer operations on the same owned managed browser, with source-backed identity and original custody, while P01 adopts current execution metadata without reviving held or expired authority?",
     "sourceBoundary": "Existing inventoriedR139 source and current profile/nativevendor supported APIs;36semantic sources max with allprior-role context counted, no executable/network/runtime/ignoredsecret effect"
   },
@@ -123,7 +151,7 @@ Separate Terra independent admission PASS confirms bounded distinct design quest
     {
       "id": "M3-05",
       "state": "BLOCKED",
-      "gap": "E01-E06 product runtime proof and execution admission/current-source applicability remain HOLD. Native isolated ExampleDomain prerequisite accepted bounded on v3; original v2 Chrome cleanupUNKNOWN stays historical. Source reconciliation confirms current component acceptance but integrated SDK actor/receipt mode and current execution successor absent; effects remain unreleased.",
+      "gap": "E01-E06 product runtime proof and execution admission/current-source applicability remain HOLD. Native isolated ExampleDomain prerequisite accepted bounded on v3; original v2 Chrome cleanupUNKNOWN stays historical. Source reconciliation confirms current component acceptance but integrated SDK actor/receipt mode and current execution successor absent; effects remain unreleased. Conditional native interface/P01 design accepted only; native physical-relaunch race and integrated original-lifetime continuation remain hard product holds.",
       "owner": "Root / Product Owner",
       "destination": "Cùng R139 G0–G3 sau thay đổi kết nối được duyệt và admission phù hợp; Owner chấp nhận user consequence.",
       "evidence": [
@@ -154,6 +182,22 @@ Separate Terra independent admission PASS confirms bounded distinct design quest
         {
           "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-TOOL-CLOSE-ACCEPTED-BUILD-PINS-ADMISSION.json",
           "sha256": "094a0a3678571c8ed03c2a278e50e352b645e71cd972fdc841fed9c3cacb065e"
+        },
+        {
+          "path": "docs/reviews/R139_SDK_P01_B01_DESIGN_SPEC_2026-10-30.md",
+          "sha256": "12391f735721950963e4f0740796f315089f14fcc2fd89276fe4c804ae6602ba"
+        },
+        {
+          "path": "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/design_contract.json",
+          "sha256": "e1f1a1d474b7afcbbab12ca2670781d9bc0cf8be8e3d1fdde9c50666b5990b6e"
+        },
+        {
+          "path": "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/design_source_inventory.json",
+          "sha256": "4751db2a729efbcd6bb74776bc22c0320af422d5a638562e6609b6980cda82d9"
+        },
+        {
+          "path": "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/root_design_disposition.json",
+          "sha256": "4f60cc50aa232b231dd975b2cf2eef6f2ed477e1bcaaaf1fe3064bd32fcd4b61"
         }
       ]
     },
@@ -186,7 +230,7 @@ Separate Terra independent admission PASS confirms bounded distinct design quest
     {
       "id": "M3-08",
       "state": "BLOCKED",
-      "gap": "Current-source product browser/backend demo and viewport/offline disposition remain OPEN. Native one-shot public-page capability accepted bounded; it does not prove app demo or responsive behavior. Source reconciliation confirms current component acceptance but integrated SDK actor/receipt mode and current execution successor absent; effects remain unreleased.",
+      "gap": "Current-source product browser/backend demo and viewport/offline disposition remain OPEN. Native one-shot public-page capability accepted bounded; it does not prove app demo or responsive behavior. Source reconciliation confirms current component acceptance but integrated SDK actor/receipt mode and current execution successor absent; effects remain unreleased. Conditional native interface/P01 design accepted only; native physical-relaunch race and integrated original-lifetime continuation remain hard product holds.",
       "owner": "Root / Product Owner",
       "destination": "Cùng R139 G2 proof và G3; Owner chấp nhận qualification viewport/raster/offline.",
       "evidence": [
@@ -217,6 +261,22 @@ Separate Terra independent admission PASS confirms bounded distinct design quest
         {
           "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-TOOL-CLOSE-ACCEPTED-BUILD-PINS-ADMISSION.json",
           "sha256": "094a0a3678571c8ed03c2a278e50e352b645e71cd972fdc841fed9c3cacb065e"
+        },
+        {
+          "path": "docs/reviews/R139_SDK_P01_B01_DESIGN_SPEC_2026-10-30.md",
+          "sha256": "12391f735721950963e4f0740796f315089f14fcc2fd89276fe4c804ae6602ba"
+        },
+        {
+          "path": "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/design_contract.json",
+          "sha256": "e1f1a1d474b7afcbbab12ca2670781d9bc0cf8be8e3d1fdde9c50666b5990b6e"
+        },
+        {
+          "path": "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/design_source_inventory.json",
+          "sha256": "4751db2a729efbcd6bb74776bc22c0320af422d5a638562e6609b6980cda82d9"
+        },
+        {
+          "path": "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/root_design_disposition.json",
+          "sha256": "4f60cc50aa232b231dd975b2cf2eef6f2ed477e1bcaaaf1fe3064bd32fcd4b61"
         }
       ]
     }
@@ -234,11 +294,28 @@ Separate Terra independent admission PASS confirms bounded distinct design quest
     }
   ],
   "conclusions": {
-    "tranche": "PENDING",
-    "trancheSummary": "P01/B01 source-backed design pending; original source audit closed qualified, not renewed.",
-    "trancheEvidence": [],
-    "product": "PENDING",
-    "productSummary": "Full R139/M3/FREEZE open, effects held and Corefive productapplicabilityUNKNOWN retained.",
+    "tranche": "BLOCKED",
+    "trancheSummary": "WholeR139open: bounded conditional design delivered/independently accepted; source implementation not granted, integrated/product lifetime design and relaunch risk unresolved.",
+    "trancheEvidence": [
+      {
+        "path": "docs/reviews/R139_SDK_P01_B01_DESIGN_SPEC_2026-10-30.md",
+        "sha256": "12391f735721950963e4f0740796f315089f14fcc2fd89276fe4c804ae6602ba"
+      },
+      {
+        "path": "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/design_contract.json",
+        "sha256": "e1f1a1d474b7afcbbab12ca2670781d9bc0cf8be8e3d1fdde9c50666b5990b6e"
+      },
+      {
+        "path": "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/design_source_inventory.json",
+        "sha256": "4751db2a729efbcd6bb74776bc22c0320af422d5a638562e6609b6980cda82d9"
+      },
+      {
+        "path": "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/root_design_disposition.json",
+        "sha256": "4f60cc50aa232b231dd975b2cf2eef6f2ed477e1bcaaaf1fe3064bd32fcd4b61"
+      }
+    ],
+    "product": "BLOCKED",
+    "productSummary": "FullM3/FREEZEopen; no product/provider/runtime proof or acceptance, Corefive productapplicabilityUNKNOWN and all original qualifications retained.",
     "acceptance": [],
     "owner": "Root review kỹ thuật; Product Owner chấp nhận nghiệp vụ."
   }

@@ -1,0 +1,627 @@
+{
+  "schemaVersion": "r139.p01b01Design@1",
+  "status": "CONDITIONAL_NATIVE_INTERFACE_DESIGN_PRODUCT_INTEGRATION_NOT_DESIGNED",
+  "executionAuthority": false,
+  "preparationHead": "ba55a586cbf94cb3ca529161cb5c617453a545e8",
+  "scope": {
+    "order": "CCMAI-RUNTIME-139",
+    "criteria": [
+      "M3-05",
+      "M3-08"
+    ],
+    "phase": "DESIGN/SPEC",
+    "riskCeiling": "R2",
+    "author": "Separate SPEC_AUTHOR",
+    "reviewer": "Root independent; separate Terra final review",
+    "commitOwner": "Root"
+  },
+  "blockers": [
+    {
+      "id": "B01-INDEPENDENT-OWNED-INVOCATION",
+      "state": "ROOT_NATIVE_INTERFACE_ADOPTION_REQUIRED",
+      "required": "Two actual distinct actors issue native operations against the same held owned browser and page, with original request/result custody and source-enforced process/profile continuity.",
+      "directSdk": "Official direct Client/StdioClientTransport owns one private spawned child. It supplies no separate actor attachment; two new direct transports are not the same browser. Reuse the vendor daemon own single Client/Stdio instead for the candidate below.",
+      "scopedNativeDaemon": "Source-supported candidate: hold the installed daemon/daemon.js native executable directly under the existing lifecycle owner, with fresh scoped CHROME_DEVTOOLS_MCP_SESSION_ID and exact pinned native args. Two actual separate actor contexts invoke native exported sendCommand against that scope; sendCommand checks daemon running and does not auto-start/reconnect. Caller correlation and original actor tool returns establish who operated; no cryptographic or native LLM-identity attestation requirement is added. This internal native interface is not a documented public stability promise; Root must accept its pinned use and source/offline contract before BUILD. Runtime proof remains future, not a reason alone to label unsupported.",
+      "owner": "Root technical owner and independent reviewer",
+      "next": "Root independently decides adoption of the exact pinned native foreground entry/export under existing R139 ownership. If source-supported semantics preserve G0, separately admit minimal source work. If they cannot preserve original ownership/independent operations, record the exact unresolved semantic and HOLD; do not ask Owner to design mechanisms."
+    },
+    {
+      "id": "P01-COMPATIBILITY",
+      "state": "PROPOSED_ONLY",
+      "required": "Immutable current execution successor plus exact current profile/source/clock/receipt compatibility review; source component acceptance is insufficient.",
+      "owner": "Root",
+      "next": "Separate bounded source WORK_ORDER only after design disposition; retain product HOLD until integrated compatibility and Core-finding applicability are settled."
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "A_DIRECT_STDIO",
+      "nativeSurface": "Client.connect(StdioClientTransport); Client.callTool; Client.close; StdioClientTransport.close/pid",
+      "sameContextIndependentActor": "NOT_DEMONSTRATED",
+      "decision": "Keep as owned single-actor native capability; no B01 PASS and no relabelled CUA receipts.",
+      "sources": [
+        "S04",
+        "S10",
+        "S11",
+        "S13",
+        "S32",
+        "S33"
+      ]
+    },
+    {
+      "id": "B_SCOPED_NATIVE_DAEMON",
+      "nativeSurface": "chrome-devtools --sessionId <caller-scope> start/status/<native tool>/stop; exported native startDaemon/sendCommand/stopDaemon",
+      "sameContextIndependentActor": "SOURCE_SUPPORTED_CANDIDATE_WITH_ACTUAL_DISTINCT_ACTOR_OPERATIONS_REQUIRED_AT_FUTURE_G0",
+      "decision": "Propose direct owned foreground native daemon entry plus native exported sendCommand, not CLI start/tool wrappers, not a shared/default daemon restart, not a new browser protocol/broker. Existing lifecycle owner holds original daemon process; actual actor A and separate actor B invoke the native primitive independently. Original actor tool references correlate declared roles; native page/PID/process receipts supply separate browser facts. Root interface/source review required; execution NOT_RUN.",
+      "sources": [
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S14",
+        "S15",
+        "S16",
+        "S17"
+      ]
+    },
+    {
+      "id": "C_EXISTING_CUA_NO_CHANGE",
+      "nativeSurface": "Existing supported_CUA_page_target validators and original CUA tool returns",
+      "sameContextIndependentActor": "REQUIRED_BUT_CURRENTLY_NOT_PROVEN",
+      "decision": "Retain existing semantics. A future real producer plus independent observer in a supported host must operate the exact tab, capture original returns and satisfy same original lifetime. Previous capability/spent runs are not reusable evidence or effect slots.",
+      "sources": [
+        "S18",
+        "S20",
+        "S21",
+        "S23",
+        "S24",
+        "S25"
+      ]
+    }
+  ],
+  "proposedP01": {
+    "kind": "IMMUTABLE_PROPOSED_CURRENT_EXECUTION_SUCCESSOR_NOT_A_GRANT",
+    "parentOldPinAuthority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-PINNED-RESUME-REPAIR-ADMISSION.json",
+    "oldCore": "e9ddcbcdcac2a9df520f5eb0761dbdb609b9deba",
+    "oldProfile": "cvf.downstreamGateProfile@1.1.0",
+    "coreCommit": "15e39450853184eb65dbde73398c69c3171a6241",
+    "profileId": "cvf.downstreamGateProfile@1.2.0",
+    "publicRemote": "https://github.com/Blackbird081/Controlled-Vibe-Framework-CVF.git",
+    "hashRules": {
+      "sourceAndAuthority": "raw SHA256 explicitly labelled; committed-byte equivalence checked under declared newline policy",
+      "profile": "sha256-lf-normalized as current lock declares",
+      "noImplicitNormalization": "Do not equate raw hashes with normalized hashes or manufacture a raw binding from a Git blob."
+    },
+    "componentAcceptance": "fc4bbe01f88718e41904498bb8ab54d68f094583 and S05; Root reconciled current supervisor/Go and backend/frontend trees in S03. This is inherited component evidence, not integrated SDK source acceptance.",
+    "toolPins": "Inherited exact metadata from accepted S05 and native S32, separately labelled below. Binary/package/tool availability NOT_RECHECKED in this source-only pass. Future effect admission must verify current exact tools before use.",
+    "compatibilityConditions": [
+      "New versioned preflight must bind current Core/profile/lock/profileSha/runnerSha/bundleSha without touching installed modules, old preflight or old authority.",
+      "Reconcile complete M3 coverage through existing Local-admitted source, role/control applicability and all explicit control results; N/A is not PASS.",
+      "Preserve legacy seven gates, current profile controls, exact packet bindings, immutable seed, historical outcomes and no automatic upstream adoption.",
+      "Root/Core maintainers must settle or retain explicit product-blocking UNKNOWN for all five inherited findings; no blanket waiver.",
+      "New accepted integrated source/test/binary/tool and versioned payload/activation/recorder hashes must be independently reviewed and committed before any new effect release.",
+      "No inherited spent/expired nonce, release, claim, campaign, provider budget or deadline can be activated by the successor."
+    ],
+    "exactProposedBindingMetadata": {
+      "lockRawSha256": "46cc56e12af8fbe3ad1e700fc9be629bfa8516d063149cbd7d267ad57a1c7d6c",
+      "runnerSha256": "716544aa7a38251009867a4e0150be51b79b4304a8c5f6d7afddab4e7c5d9c07",
+      "profileSha256": "faaf9273ada3fd826e6372898d134fe7ad0157528f25b7720211c31cfc209bd5",
+      "bundleSha256": "80edcd2e4b605f440b94df963ed304ffed0f803bfa057a951360e39f014efc2b",
+      "hashAlgorithm": "sha256-lf-normalized",
+      "acceptedComponentRecordRawSha256": "094a0a3678571c8ed03c2a278e50e352b645e71cd972fdc841fed9c3cacb065e",
+      "acceptedSourcePins": {
+        "scripts/r139_execution_supervisor.py": "9ee7f988b5a27495fd4bd4e72975f0b2a583b8e33cea49c51ac5189285f44c64",
+        "scripts/tests/test_r139_execution_supervisor.py": "4bbd3abb54646a9bcaa691c8b29ccf49f470539475a2a87732b77e2790be2283",
+        "scripts/r139_vite_config.mjs.template": "82a1d9ae8576fcd46718945d0a5cb44eb963a2a14d436a16e2bcdfb72b26bee9",
+        "backend/api/handlers/intervention_execution_browser_test.go": "4e90a7225f6fc663a3dc3493b3570bdfdc9969da0b43d70445273170c41f899d",
+        "backend/go.mod": "15fe056859327cce63780c0390c82f93a7fa3c421adaffc9c289cd5961e24716",
+        "backend/go.sum": "a7a5ba1e28e08702c104401b436cb139db1cea922fd07fdec27f99fa8308d67b",
+        "frontend/package.json": "d16bea0b83ad7eb871576061f7ea91534a2dd2fdc7eef26eb20ec908e4fca24d",
+        "frontend/package-lock.json": "da41e1de5d5b853295a303092aab9433aeea8168fda2cf0420dd94e9f579fb00",
+        "frontend/vite.config.ts": "736c63d3a72a5b126841ceedeac4b4a01854a2bec71bd57d2f46a23ec3cf68de",
+        "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v3_design.py.txt": "36f5f30777938224a6d3daf0d50b452a466ffcd4dc77f2a9e5b8e0a4ef9e241d",
+        "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_pinned_preflight.py.txt": "81784375b6948dee973ce1dd4a3b66851786273079f4becfbdd7c7378fbca233",
+        "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/r139_durable_resume.py.txt": "7ab2bf4c5b97009d36b932fd7aff5cf6d5b42584844f59fc02f5605f06156eda",
+        "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/test_r139_pinned_resume.py": "9dd100bae4dcfa18b5c1fd098de56fecc534ad59fd1a4361bda0cbb256b1f227"
+      },
+      "acceptedBackendTree": "d1eb457978ee78683c25cda98cd7e12a63ea423f",
+      "acceptedFrontendTree": "b23c158a3740ee97b30d17d0a52f5133d4ed5eff",
+      "inheritedToolPins": {
+        "python": {
+          "path": "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "sha256": "a2a4eff8d0b0c845284c607d50a3b5b966ac5a3121736a2e38e165bd6644d9fe",
+          "size": 105816
+        },
+        "git": {
+          "path": "C:\\Program Files\\Git\\cmd\\git.EXE",
+          "sha256": "22fead8244ef3a7225fb800099a4e43eca8bcec0466774917669599c2f19a05a",
+          "size": 46936
+        },
+        "powershell": {
+          "path": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+          "sha256": "60c9b29843624dd8af6b6a7b26147753be6aeef65098b9a503cc50850afe410f",
+          "size": 495616
+        },
+        "docker": {
+          "path": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\.cvf\\runtime\\r139_docker_tool_snapshot_20261026\\docker.exe",
+          "size": 44922800,
+          "sha256": "17cbf2f5f5f7693bbeda46e35dc930050b40aff06f41f9f5a69e4e2dd7fc12aa"
+        },
+        "node": {
+          "path": "C:\\Program Files\\nodejs\\node.EXE",
+          "sha256": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+          "size": 92825416
+        }
+      },
+      "inheritedNativePins": {
+        "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/package.json": "592ef654a308edcba5fb3c2b302173650096a9487e4120b96e7adbe830429b9f",
+        "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/bin/chrome-devtools.js": "c380c15c89425bfe8e0aeb7720bf3996d681752413ef77cb3a33f769a8c70dc5",
+        "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/bin/chrome-devtools-mcp.js": "9f380d06e1ac05b257e27e708c0cc4b4ba190e285ed6eb6c8aa50978d98a12c5",
+        "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/daemon/client.js": "fc6500be58f2de1c941d66171a43fa8bf796cbea9420575bd8b299ff4e66f1a1",
+        "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/daemon/utils.js": "6769ad4523dfe5f65b7650117135393918146866ccb5f7d583afc271512e7f7b",
+        "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/daemon/daemon.js": "eab00479391fece6afe0d45afe564bf0e9e8b4f461d7ec5c9f9bfe9aefacf7fa",
+        "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/config/browser-options.js": "d172515ff92e0efdda98e84581c46e2db97ba0ff3536507bf3a9da022dcd1887",
+        "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/config/mcp-options.js": "2fc554986209b3cfadcbe70552994111aadedf2e159b3de61a12b96233f18f67",
+        "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/config/cli-options.js": "05011d9cc5fecae6f359c4aff3272eedb35796cf2e6cbf53db39fe52a49dbffb",
+        "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/browser.js": "17f861505810a9d25784fd71bf0592966f513c420b57a728b344280e97fe596c",
+        "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/utils/check-for-updates.js": "e8d5efcf2dd02ec58a8f0352a90344c8fd12229d5f48b2822bea6ebb2017a9cb",
+        "C:/Program Files/nodejs/node.exe": "3602f2bb1a10f2cbab4c36886218a33c1ab3db87290e73b033c46c77147d0237",
+        "C:/Program Files/Google/Chrome/Application/chrome.exe": "480f275b63d1ea39113cbc8344ac395578acc25b432bd39af5fbc77005179aca",
+        "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/third_party/index.js": "fc6ae43cb8f6007eba4b0f269290ec8fea6db7670686d17967b4812d90d2cc10",
+        "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/bin/chrome-devtools-mcp-main.js": "5ca0e81196ab6b6e1481629a2dcae7f416b3b38f74555e3138ad5cdbb055e809",
+        "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/McpResponse.js": "8f4189b21fe26726cf64137a74542efd4927c21dd4c2794924af95fdaf64d761",
+        "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/tools/pages.js": "50983bd1b2f01ffa3273de3353e28fd44795d026f2b62bcc783e19156ee0147d",
+        "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/tools/snapshot.js": "d48d0b8199d0a423f899fb706ef483854d6846833f31d566bfb37891a3e3fc5c",
+        "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/tools/screenshot.js": "dd300be39bbba7bd7fd094c1c3a50aee767ff3f301f2716d66b0fe01b1318065",
+        "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/tools/ToolDefinition.js": "99a99804c660b47d469b99d60bc5ce5c21571b6bd69ceea19da289dbbc5793c5"
+      },
+      "verification": "Metadata copied from current lock and source-read accepted records only; inherited binaries and uninspected dependency files not queried or independently verified now. No proposed accepted build instantiated."
+    }
+  },
+  "conditionalTypedContract": {
+    "state": "SELECTED_CONDITIONAL_FOREGROUND_NATIVE_INTERFACE_CAPABILITY_ONLY; PRODUCT_INTEGRATION_NOT_DESIGNED",
+    "types": {
+      "Sha256": "lowercase 64 hex; declared raw or LF-normalized basis",
+      "Commit": "lowercase 40 hex",
+      "NativePageId": "positive safe integer actually returned by this native server/context; never a CUA tab ID",
+      "UtcObservation": "strict UTC Z timestamp with explicit observation basis",
+      "MonotonicBracket": "same pinned clock implementation and host boot identity; start/end finite numbers, end >= start",
+      "EvidenceRef": "confined original path/reference plus rawSha256; actual original request/return required",
+      "ProcessIdentity": "pid positive integer + creationUTC + exact executable path/hash + parent PID/creation + observed command/profile; PID alone invalid",
+      "ActorBinding": "actual separate actor context plus original actor tool-call/return references and declared role correlation reviewed by Root; native tool need not cryptographically attest LLM identity. Labels alone remain invalid."
+    },
+    "identityFields": {
+      "applicationCorrelation": [
+        "designId",
+        "campaignNonce",
+        "ownedScopeId",
+        "requestedDaemonSessionId",
+        "operationSequence"
+      ],
+      "nativeOrObservedFacts": [
+        "nativePageId",
+        "observedURL",
+        "serverTransportPid",
+        "serverCreationUTC",
+        "chromePid",
+        "chromeCreationUTC",
+        "profilePath",
+        "originalNativeResult"
+      ],
+      "notAvailableDoNotInvent": [
+        "nativeBrowserSessionId",
+        "nativeIndependentActorAttestation",
+        "CUATabId",
+        "CUAAgentTaskId"
+      ]
+    },
+    "roles": {
+      "lifecycleOwner": "Existing supervisor/activation owner holds original native daemon process, exclusive scope/claim, exact pins and single original clock; preserves native MCP child/browser lifetime through daemon cleanup. Two actual actor tool returns, not two labels, establish independent operations.",
+      "producer": "Actual actor A creates/controls native page, captures product evidence and requests exact native close.",
+      "observer": "Actual distinct actor B independently invokes native inventory and same-target observation before product effects, and final inventory after producer close; cannot merely inspect A logs.",
+      "reviewer": "Root independently reviews original caller/return/capture/process/terminal evidence, preserves dissent and UNKNOWN.",
+      "closerCommitOwner": "Root after independent review; no worker commit or self-approval."
+    },
+    "methods": [
+      {
+        "method": "existingOwner.launchForegroundNative",
+        "params": "Pinned node.exe + native daemon.js argv/env/cwd, fresh exclusively claimed UUID scope, positive finite technical caps",
+        "result": "Original retained process handle reference, PID/creation/start bracket/source/version1.9.0 binding; launch failure/timeout UNKNOWN recorded before any further call",
+        "allowedCaller": "Existing lifecycle owner only; no detached native CLI/startDaemon helper"
+      },
+      {
+        "method": "native sendCommand:status",
+        "params": "{method:status}, same fresh scope, finite timeout",
+        "result": "Outer success true plus result string JSON object pid/socketPath/startDate/version/args; exact original bytes and caller original process/tool return retained. success false/invalid JSON/type/mismatch/timeout -> HOLD, no ensure or repair",
+        "allowedCaller": "Bound distinct caller/owner under future technical admission; initial status before browser calls"
+      },
+      {
+        "method": "native sendCommand:invoke_tool",
+        "params": "{method:invoke_tool,tool:<fixed native method>,args:<typed native args>}, same scope, finite timeout",
+        "result": "Outer {success,result:string} with unmodified inner MCP envelope; check outer success, strict inner parse, inner isError/content/optional source-supported structuredContent. Transport success is not tool or product success. Preserve both layers and original actor tool/process exit even on rejection/timeout.",
+        "allowedCaller": "Actual distinct actors A/B independently. Native daemon internal Client.callTool is not an actor-facing allowed direct-client invocation."
+      },
+      {
+        "method": "native invoke_tool browser method set",
+        "params": "list_pages:{}; new_page:{url:admittedNonceURL,timeout:finite}; take_snapshot:{pageId:actual}; take_screenshot:{pageId:actual,format:png,filePath:freshConfined}; close_page:{pageId:exactOwned}",
+        "result": "Actual same-context page IDs/URLs/original capture/raw references; final native inventory after close; last support blank distinguished",
+        "allowedCaller": "Fixed producer/observer capability sequence only; no product execute under this design"
+      },
+      {
+        "method": "native sendCommand:stop",
+        "params": "{method:stop}, exact original scope only after identity recheck",
+        "result": "Native ack means stopping requested; not physical close/exit/absence. Timeout/rejection consumes stop and retains UNKNOWN, no resend to replacement.",
+        "allowedCaller": "Original lifecycle owner only"
+      },
+      {
+        "method": "existingOwner.waitOriginalHandle",
+        "params": "Exact original daemon and each one-shot actor handle, original finite deadline",
+        "result": "Observed original wait-returned exit code/terminal stdout-stderr refs OR timeout/wait unavailable/unknown. Known daemon/MCP/Chrome PID+creation chronology and scoped absence separately required; fresh process query cannot substitute original terminal wait.",
+        "allowedCaller": "Original owner for daemon; original actor for each one-shot caller"
+      }
+    ],
+    "lifecycle": [
+      "DESIGN_ONLY_HELD",
+      "SEPARATE_SOURCE_ACCEPTANCE_REQUIRED",
+      "FUTURE_TECHNICAL_NATIVE_CAPABILITY_EFFECT_ADMISSION",
+      "EXCLUSIVE_SCOPE_AND_ORIGINAL_OWNER_LAUNCH",
+      "STATUS_BEFORE_BROWSER_CALLS",
+      "PRODUCER_NATIVE_CREATE_CONTROL_CAPTURE",
+      "INDEPENDENT_ACTOR_NATIVE_OBSERVATION",
+      "PROVISIONAL_EVIDENCE_REVIEW_NO_G0_PASS",
+      "PRODUCER_TARGET_CLOSE",
+      "OBSERVER_FINAL_NATIVE_INVENTORY",
+      "CALLER_ORIGINAL_TERMINAL_RECEIPTS",
+      "OWNER_NATIVE_STOP_OR_EXACT_HANDLE_CLEANUP",
+      "ORIGINAL_DAEMON_WAIT_AND_KNOWN_PID_CLEANUP",
+      "INDEPENDENT_CAPABILITY_SLICE_REVIEW_ONLY",
+      "PRODUCT_INTEGRATION_NOT_DESIGNED_HARD_HOLD"
+    ],
+    "clock": {
+      "campaignSeconds": 1200,
+      "cleanupCutoffSeconds": 1020,
+      "cleanupReserveSeconds": 180,
+      "queryLocalAgreementSeconds": 2,
+      "singleQuerySeconds": 5,
+      "source": "Locked original R139 constraints inherited from S23/S30; no new clock now. Native capability effect timing/caps need separate technical admission and never claim full G0. Integrated R139 sequence across provisional review, product admission, held-context continuation and E06 terminal NOT_DESIGNED.",
+      "invariants": [
+        "One original UTC/monotonic campaign reservation; native seal never replaces campaign start.",
+        "All readiness/review/product/close/cleanup runs inside original deadline; no extension on model or quota interruption.",
+        "Current query-local original bracket and boot identity, not stale prep offset, governs admitted query checks.",
+        "Source-only offline validated receipts may resume after exact binding; uncertain external intents remain consumed UNKNOWN with no resend.",
+        "Any later integrated design must keep one original admitted1200s/+1020 cleanup clock through all review/admission/continuation; no re-reservation/restart/deadline extension. Full G0 completion cannot be asserted before all required close/terminal evidence.",
+        "A capability-only run terminally closes its native daemon/context. Its accepted receipts cannot attest a later newly launched product context, and completed caller one-shot terminals do not replace final held-daemon/E06 lifetime evidence."
+      ]
+    },
+    "checkpoints": {
+      "binding": [
+        "order",
+        "source",
+        "contract",
+        "pins",
+        "inputs",
+        "checkpointHashes",
+        "limits",
+        "originalDeadline"
+      ],
+      "write": "exclusive writer; intent/cost durable before effect; exact original result linked before COMPLETE",
+      "resume": "reuse only exact validated completed stage; absent/changed original receipt or inflight/unknown external stage cannot replay",
+      "unknown": "UNKNOWN_NO_AUTOMATIC_REPLAY; dependent effect HOLD, cleanup only within separately admitted ownership"
+    },
+    "errors": [
+      "DESIGN_BLOCKED_NATIVE_HANDOFF",
+      "PIN_SET_STALE_OR_MIXED",
+      "SOURCE_NOT_ACCEPTED",
+      "ACTOR_NOT_INDEPENDENT",
+      "NATIVE_ID_UNPROVEN",
+      "OWNERSHIP_UNKNOWN",
+      "RECONNECTED_OR_REPLACED_CONTEXT",
+      "ORIGINAL_RETURN_MISSING",
+      "CAPTURE_CUSTODY_UNKNOWN",
+      "CLOCK_OR_DEADLINE_INVALID",
+      "EFFECT_ADMISSION_MISSING",
+      "IN_FLIGHT_PERSISTENCE_FAILED",
+      "EXTERNAL_OUTCOME_UNKNOWN_NO_RESEND",
+      "TERMINAL_WAIT_UNKNOWN",
+      "CLEANUP_UNKNOWN"
+    ],
+    "cleanup": "Run finally even if parser or evidence writer fails. Exact owned native page close followed by independent original inventory; close original client/transport; record known PID/creation tuple absence or UNKNOWN. Never global browser kill, shared daemon stop/restart, personal profile access, arbitrary PID cleanup, synthesized exit, or global-absence claim from a scoped sample. Missing process identity permits only supported close of the original held object, no guessed process kill.",
+    "retainedRejectedDirectRoute": {
+      "methods": "Direct Client.connect(StdioClientTransport), Client.callTool, Client.close and StdioClientTransport.pid/close",
+      "disposition": "Retained prior single-owner capability and native daemon implementation only; not selected actor API. Two direct clients/transports cannot be presented as same owned context."
+    }
+  },
+  "futureOfflineCases": [
+    {
+      "id": "T01",
+      "kind": "positive",
+      "input": "source-derived current exact successor pins",
+      "expected": "P01 parser accepts immutable current metadata only; no execution grant"
+    },
+    {
+      "id": "T02",
+      "kind": "negative",
+      "input": "old Core/e9, profile1.1, mixed current runner/bundle, changed lock or raw/normalized mismatch",
+      "expected": "PIN_SET_STALE_OR_MIXED before effect"
+    },
+    {
+      "id": "T03",
+      "kind": "negative",
+      "input": "second Client/Stdio child presented as same context",
+      "expected": "RECONNECTED_OR_REPLACED_CONTEXT"
+    },
+    {
+      "id": "T04",
+      "kind": "negative",
+      "input": "two labels or same actor log review instead of two actual operations",
+      "expected": "ACTOR_NOT_INDEPENDENT; native handoff remains blocked"
+    },
+    {
+      "id": "T05",
+      "kind": "positive conditional",
+      "input": "future accepted native owned invocation with actual distinct actor returns, same native page/process/profile tuples and original capture",
+      "expected": "only future reservation/terminal validators accept their defined stage, never infer product acceptance"
+    },
+    {
+      "id": "T06",
+      "kind": "negative",
+      "input": "fabricated CUA IDs, caller sessionId as native session attestation, reused nativePageId across server restart",
+      "expected": "NATIVE_ID_UNPROVEN or RECONNECTED_OR_REPLACED_CONTEXT"
+    },
+    {
+      "id": "T07",
+      "kind": "negative",
+      "input": "PID reused, creation/profile/symlink/parent mismatch or ownership after parser failure only",
+      "expected": "OWNERSHIP_UNKNOWN; dependent actions stop; safe original-object cleanup attempted"
+    },
+    {
+      "id": "T08",
+      "kind": "negative",
+      "input": "daemon empty/default scope, collision, native start restart or tool autostart after loss",
+      "expected": "reject alternative before product; no replacement browser"
+    },
+    {
+      "id": "T09",
+      "kind": "negative",
+      "input": "malformed/extra-key/text-only/structured response variants contrary to exact pinned parser; native isError",
+      "expected": "fail closed with original response retained; no blind strict-v3 ExampleDomain parser reused for product"
+    },
+    {
+      "id": "T10",
+      "kind": "negative",
+      "input": "orphan intent/inflight, missing/changed receipt, new deadline after resume, failed IN_FLIGHT persistence",
+      "expected": "no external resend; failed persistence sends zero; UNKNOWN and original costs/deadline preserved"
+    },
+    {
+      "id": "T11",
+      "kind": "positive/negative",
+      "input": "valid query-local clock vs changed boot/expired deadline/out-of-bracket observation",
+      "expected": "preserve same original bracket; invalid clock HOLD, no clock reset"
+    },
+    {
+      "id": "T12",
+      "kind": "negative",
+      "input": "evidence write or close exception, original wait unavailable, Chrome known PID still present",
+      "expected": "finally continues independent cleanup steps; terminal and cleanup UNKNOWN retained, never PASS"
+    },
+    {
+      "id": "T13",
+      "kind": "negative",
+      "input": "close method returned but target remains, missing observer final inventory, baseline drift",
+      "expected": "terminal reject; last owned support blank distinguished from target"
+    },
+    {
+      "id": "T14",
+      "kind": "negative",
+      "input": "native isolated capability/doctor/static gate success used as E01-E06/provider/M3 proof",
+      "expected": "reject claim; runtime provider request/response/usage and independent product proof still required"
+    },
+    {
+      "id": "T15",
+      "kind": "positive/negative",
+      "input": "legacy CUA/native accepted fixtures vs SDK fields injected into those routes",
+      "expected": "legacy behavior unchanged; mixed routes rejected; Python and Go parity on same source-derived cases"
+    },
+    {
+      "id": "T16",
+      "kind": "negative",
+      "input": "Original Chrome dies after precheck; native ensureBrowserLaunched recreates before tool action",
+      "expected": "Samples/notice cannot enforce zero physical replacement. Retain HARD PRODUCT RELEASE HOLD, never assert guard prevented action/relaunch."
+    },
+    {
+      "id": "T17",
+      "kind": "negative",
+      "input": "Provisional evidence review before target close/final inventory/caller terminal/daemon wait",
+      "expected": "No complete capability or R139 G0 PASS; caller exit does not replace held daemon E06 terminal."
+    }
+  ],
+  "minimalPlannedPaths": {
+    "now": [
+      "docs/reviews/R139_SDK_P01_B01_DESIGN_SPEC_2026-10-30.md",
+      "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/design_contract.json",
+      "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/design_source_inventory.json"
+    ],
+    "conditionalFutureSource": [
+      "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/native_owned_command_v1.mjs",
+      "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/r139_current_pinned_preflight_v1.py.txt"
+    ],
+    "conditionalAdapter": "Immediate source candidate is at most one one-shot native sendCommand wrapper and one P01 preflight code-as-data successor. Existing original-child/evidence owner reuse must be fixed by separate source WO; any missing owner change is named/derived there, not a blanket Go/G1/G2/IN_FLIGHT edit grant.",
+    "unchanged": [
+      "product router/engine/frontend",
+      "original seeds/authority/evidence",
+      "installed profile/gates/Core",
+      "old frozen code-as-data",
+      "old durable ledger contract unless separately demonstrated missing connection"
+    ],
+    "rootOnlyFutureAuthority": "New immutable successor admission/accepted-build records; Root alone fixes exact paths/hashes after independent review. None is created by this design.",
+    "contingentIntegrationNotAdmitted": [
+      "scripts/r139_execution_supervisor.py",
+      "scripts/tests/test_r139_execution_supervisor.py",
+      "backend/api/handlers/intervention_execution_browser_test.go",
+      "new versioned activation/recorder/payload successors only after integrated design identifies exact required differences"
+    ]
+  },
+  "fiveCoreFindingApplicability": [
+    {
+      "case": "CoverageTests.test_candidate_size_and_encoding_and_deep_json",
+      "known": "Both observed outcomes reject malformed shape; Python3.13 token expectation differs.",
+      "productRelevance": "P01 current profile coverage uses declared parser/shape semantics, so exact expected token compatibility matters; no runtime effect bypass established.",
+      "disposition": "UNKNOWN_PRODUCT_APPLICABILITY; validator/tests not read in this bounded pass; Root/Core owner settles exact path before product admission."
+    },
+    {
+      "case": "CoverageTests.test_real_read_only_authority_sets",
+      "known": "Private NCR/learning fixtures absent in public export; intended authority assertions not reached.",
+      "productRelevance": "P01 may use current downstream M3 authority, not those private fixtures; source independence from runtime path has not been established.",
+      "disposition": "UNKNOWN; no waiver and no reconstruction of private fixtures."
+    },
+    {
+      "case": "InheritanceTests.test_genuine_11_explicit_upgrade_retains_project_and_updates_generated_ci",
+      "known": "Historical public Git path absent; upgrade assertions not reached.",
+      "productRelevance": "Directly relevant to claimed1.1-to1.2 compatibility; installed doctor/adoption cannot supply all upgrade behavior.",
+      "disposition": "UNKNOWN; explicit bounded compatibility evidence required before migration/product claim."
+    },
+    {
+      "case": "InheritanceTests.test_upgrade_preserves_edited_ci_and_reports_required_reconciliation",
+      "known": "Same absent old-install public history dependency; intended edited-CI assertions not reached.",
+      "productRelevance": "P01 preserves existing project/workflow bytes; edited-CI upgrade behavior remains unverified.",
+      "disposition": "UNKNOWN; preserve failing suite and current workflow; no upgrade rerun now."
+    },
+    {
+      "case": "IntakeTests.test_registry_is_parent_owned_and_links_resolve",
+      "known": "Public registry fixture absent; digest/dispositions/owners not checked.",
+      "productRelevance": "Learning/intake ownership links may affect future finding disposition; no shown runtime/browser/provider enforcement path.",
+      "disposition": "UNKNOWN; Root/Core maintainer owns mapping, not broad v3 independence waiver."
+    }
+  ],
+  "futureEffectAdmissionRequiredFields": [
+    "Owner agreement/reference and independent role bindings",
+    "fresh committed exact integrated source/build/tool/contract/receipt pins",
+    "supported environment and two actual ready actor operations with original custody",
+    "exclusive synthetic resources/tenant/job/actor/request/grant identity",
+    "provider/model/endpoint/input/output/mode limits fixed by applicable owner contract; no substitution here",
+    "key custodian and permitted one-time read/write/use destination; no secret contents in repo",
+    "finite physical API/POST/grant/browser/service/start-stop/metadata caps, money/currency and explicit retry0",
+    "original campaign nonce/boot/query-local clock/start/deadline/cleanup cutoff and original process handles",
+    "atomic IN_FLIGHT and no resend/UNKNOWN reconciliation",
+    "owned cleanup and independent terminal evidence",
+    "full M3 coverage including unresolved applicability and separate internal/product/business/external-effect conclusions"
+  ],
+  "retained": {
+    "browserCumulative": 23,
+    "v3": "SPENT_CLOSED_BOUNDED_CAPABILITY",
+    "v2Cleanup": "UNKNOWN",
+    "legacySource": 27,
+    "controllers": 4,
+    "campaigns": 1,
+    "services": 5,
+    "priorAudit": "17/16 + Root2 =19; overrun retained",
+    "fiveCoreFindings": "OPEN",
+    "fullR139M3Freeze": "OPEN",
+    "facebookZaloOA": "PARKED",
+    "runtimeProviderCredentialAuthority": "NONE"
+  },
+  "conclusions": {
+    "designSlice": "Consolidated repair1: selected foreground native-interface capability design conditional for Root adoption/source review; P01 immutable proposal; no full R139 G0 or product integration design acceptance.",
+    "product": "HARD PRODUCT RELEASE HOLD; integrated held-context/originalclock/terminal joins NOT_DESIGNED; source-backed no-physical-replacement enforcement or explicit Owner locked-acceptance change required.",
+    "nextOwner": "Root independently reviews native-interface/P01 source candidate and derives minimal separate WO. Root owns unresolved integrated design/enforcement; only an actual acceptance change goes to Owner."
+  },
+  "proposedOwnedNativeInvocation": {
+    "status": "SOURCE_SUPPORTED_INTERNAL_ENTRY_EXPORT_CANDIDATE_ONLY; COMPLETE_NATIVE_CAPABILITY_LIFECYCLE_REQUIRED; NOT_WHOLE_R139_G0",
+    "entry": "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/daemon/daemon.js",
+    "command": "C:/Program Files/nodejs/node.exe",
+    "argv": [
+      "--viaCli",
+      "--isolated",
+      "--headless",
+      "--executablePath=C:/Program Files/Google/Chrome/Application/chrome.exe",
+      "--no-usage-statistics",
+      "--no-performance-crux",
+      "--filesystemRoot=<fresh absolute owned evidence root>"
+    ],
+    "environment": {
+      "CHROME_DEVTOOLS_MCP_SESSION_ID": "<fresh exclusively claimed caller-scope matching native /^[a-fA-F0-9-]+$/>",
+      "CHROME_DEVTOOLS_MCP_NO_UPDATE_CHECKS": "1",
+      "CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS": "1",
+      "other": "Construct the same exact minimal admitted environment for native foreground owner and each one-shot caller; omit XDG_RUNTIME_DIR/XDG_ROOT and ambient session/config/provider overrides. TEMP/TMP must consistently designate the same approved owned temp parent; same native username/OS/temp resolution is required. Do not inspect credential/env payloads during design. Project-root cwd and exact pinned native paths only."
+    },
+    "scopeDerivation": "Native utils getRuntimeHome(sessionId): Windows os.tmpdir()/chrome-devtools-mcp-<scope>; daemon.pid therein. Native getSocketPath(sessionId): Windows named pipe \\\\.\\pipe/chrome-devtools-mcp-<scope>-<os.userInfo().username>/server.sock via native path.join. Let native utils derive paths; never call this a native returned browser session. Exclusive fresh scope/root claim and collision refusal before launch; no personal/default scope.",
+    "callSurface": "Each actual separate actor invokes installed exported async sendCommand(command, sessionId, timeout) from daemon/client.js through its own original native Node tool invocation. One-shot native invocation wrapper may import the pinned export and serialize its original returned envelope only; it may not implement sockets/MCP/CDP, dispatch other actors, impersonate actor IDs, or launch/retry a daemon. Exact wrapper path fixed by future source WO.",
+    "nativeCommands": [
+      "{method:status}",
+      "{method:invoke_tool,tool:list_pages,args:{}}",
+      "{method:invoke_tool,tool:new_page,args:{url:<admitted URL>,timeout:<finite>}}",
+      "{method:invoke_tool,tool:take_snapshot,args:{pageId:<actual>}}",
+      "{method:invoke_tool,tool:take_screenshot,args:{pageId:<actual>,format:png,filePath:<fresh>}}",
+      "{method:invoke_tool,tool:close_page,args:{pageId:<actual>}}",
+      "{method:stop}"
+    ],
+    "sameContextSequence": [
+      "Separate future technical native-interface effect admission precedes launch or status/browser calls; no live authority exists now. Original owner exclusively claims UUID scope, holds native foreground daemon handle and records argv/env/source/version bindings.",
+      "Initial native status awaits setup and agrees with original daemon PID/startDate/version1.9.0/args/socket BEFORE any actor browser call.",
+      "Actual actor A invokes native list_pages; capture lazy-launch MCP/Chrome process/profile identity before dependent parsing; A creates/controls/captures target through native invoke_tool and actual returned page ID.",
+      "Actual distinct actor B independently invokes native list_pages and same-target observation through its own original native tool/process return; Root manually reconciles actor correlation, native page/process facts and original capture. This is provisional capability evidence only, never complete R139 G0 acceptance.",
+      "A invokes close_page for exact target; B independently invokes final native list_pages, recording target absence and baseline. Both one-shot caller handles must have their original terminal outcomes recorded, not just daemon responses.",
+      "Owner confirms same original identity before native sendCommand stop; waits original daemon handle and records original wait/exit and known daemon/MCP/Chrome absence or UNKNOWN. Only after all mandatory terminal/custody/cleanup evidence may a reviewer accept this complete native-interface capability slice.",
+      "No product operation follows under this design: held-context continuation through original R139 G0/product admission/G1/G2/E06 close/terminal remains NOT_DESIGNED. A completed native capability lifecycle closes its browser; a later product run needs separate authority and does not inherit this context or reset old campaign clocks."
+    ],
+    "failureInvariants": [
+      "Native browser.ensureBrowserLaunched physically launches a new Chrome after loss; index reconstructs context. Pre/post samples, an error or reconnect notice can detect only after relaunch/action. They cannot enforce zero physical replacement or prevent an action in that race. HARD PRODUCT RELEASE HOLD until source-backed enforcement preserves the locked no-replacement requirement or an explicit Owner acceptance change is granted. No guard-as-proof.",
+      "Only native sendCommand export may be called by separate actors: no CLI start/startDaemon/ensure/version-repair/stopDaemon helper, custom browser wire or broker. Native internal Client/Stdio is daemon implementation, not caller permission.",
+      "Fresh nonempty UUID namespace is exclusively claimed; collision STOP, never adopt/delete. Minimal identical env for owner and callers omits XDG_RUNTIME_DIR/XDG_ROOT and ambient session/config/provider overrides, with consistent owned TEMP/TMP.",
+      "Initial native status awaits started and binds PID/startDate/version/args/socket to original held foreground process BEFORE browser calls. Native session scope and caller labels are correlation, not native browser/LLM attestation.",
+      "Native sendCommand internal liveness checks are counted separately from explicit bounded CIM observations and status/stop controls. Missing/unbounded counter HOLDs, uncertain call consumes its class.",
+      "On identity loss, no tool/status/stop is sent to a possibly foreign replacement. Only exact retained original handle/object cleanup is allowed; otherwise UNKNOWN/no automatic restart.",
+      "Stop acknowledgement, removed PID file, close return or exit0 alone never establish cleanup. Original owner wait/exit plus known daemon/MCP-child/Chrome chronology/absence are required or UNKNOWN."
+    ],
+    "smallestMissingConnection": "Use existing activation/supervisor original-child manager for native foreground daemon; a minimal one-shot wrapper for native sendCommand and existing recorder evidence connections for separate actor original returns. No generalized daemon manager, browser RPC protocol, broker, workflow scheduler or new ledger.",
+    "realAcceptanceChange": "No acceptance change authorized or proposed as silently accepted. Source capability lifecycle alone is not whole R139 G0. Product integration stays NOT_DESIGNED/HARD_HOLD because physical replacement can happen before detection and full original-clock/held-context/terminal joins are unsettled. Owner decision required only if locked acceptance is actually changed; ordinary native-interface source adoption belongs to Root.",
+    "sources": [
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S13",
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S20",
+      "S21",
+      "S23",
+      "S24",
+      "S25"
+    ],
+    "prospectiveCounterContract": {
+      "authority": "PROPOSED_COUNTER_REQUIREMENTS_NOT_EFFECT_CAPS; exact positive caps fixed by separate committed admission before run",
+      "classes": [
+        "nativeForegroundStarts",
+        "nativeSdkConnectStarts",
+        "nativeStatusControlCalls",
+        "nativeStopControlCalls",
+        "nativeBrowserToolCalls",
+        "explicitCimObservationPasses",
+        "nativeInternalLivenessChecks",
+        "actorOneShotInvocations",
+        "captures",
+        "productPOSTs",
+        "providerPhysicalCalls"
+      ],
+      "boundedPlan": "Exactly one native foreground start and one native SDK child/connect. At most four native status control calls (initial startup, independent handoff, before close, before stop) and one stop command, never replayed. Browser tool/capture/product/provider/CIM caps must be derived from fixed G0-G3 sequence and existing acceptance then explicitly committed; none is released now. Native internal liveness checks exactly one per sendCommand plus any counted native startup isDaemonRunning checks; no polling/ensure/version helper beyond fixed sequence. Two actual actors each retain every original one-shot handle/result.",
+      "capFailure": "Any missing/unbounded/overrun counter HOLD before effects; unsuccessful/unknown attempts consume their class; no refund/reset."
+    },
+    "exactNativeVersion": {
+      "literal": "1.9.0",
+      "source": "C:/Users/tiennm/AppData/Local/Programs/Antigravity/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/version.js",
+      "rawSha256": "ff03658d3be60d9ad055f9794f6ee2c7bbebfcfcfdc8b884d2a23083d70c2bef",
+      "observed": "source text only S34; no executable/version command"
+    }
+  },
+  "admissionAndAcceptanceStages": {
+    "current": "DESIGN/SPEC only, no source BUILD or effects",
+    "technicalNative": "Future distinct committed technical native-interface effect admission covers fixed public/synthetic capability lifecycle only: one native foreground/context, actual separate actor calls, finite caps, original terminals and cleanup.",
+    "provisional": "Pre-close producer/observer evidence may be independently reviewed as a prerequisite; never label full R139 G0_PASS or complete native capability before mandatory target close/final inventory/original terminals.",
+    "nativeCapabilityComplete": "Only after target close, separate final inventory, caller terminals, original daemon wait and scoped process cleanup evidence may reviewer accept bounded native-interface capability; still NOT full R139 G0/E01-E06.",
+    "product": "Distinct post-prerequisite product effect admission would be necessary but is not sufficient. Integrated held-context/originalclock/terminal mapping is NOT_DESIGNED and physical-relaunch enforcement unresolved, so HARD PRODUCT RELEASE HOLD.",
+    "noWaiver": "Caller operation terminal receipts and final held-daemon/E06 terminal are different evidence. Do not waive required original lifetime, restart original clock or promote incomplete G0."
+  }
+}
