@@ -8,7 +8,7 @@ Status: ACTIVE
 - Active phase: REVIEW
 - Active role: Cloud agent: operator-granted ORCHESTRATOR / DESIGN_OWNER / SPEC_AUTHOR / SESSION_SYNC_STEWARD (branch-only commits); independent REVIEWER = separate Opus design-review subagent; Local agent retains merge to main, R139 reopen decision and FREEZE
 - Active tranche: CCMAI-RUNTIME-141
-- Next allowed move: CCMAI-RUNTIME-141: owner-held Chrome with connect-only --wsEndpoint design spec authored on branch claude/friendly-rubin-e2npmt-r141 (source 15/15 byte-verified); independent Opus design review pending. After review the cloud ORCHESTRATOR commits and opens a PR; Local reviews, confirms A3 on Windows and decides any R139 repair-audit reopen; no merge to main by the cloud agent. R140 REVIEW_PASS awaits Local merge in PR #14. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; no runtime, Chrome/daemon, DB or provider effect; Facebook/ZaloOA parked.
+- Next allowed move: CCMAI-RUNTIME-141: owner-held Chrome connect-only relaunch-prevention design REVIEW_PASS (independent reviewer accepted after one repair; build 5fa904438d94) on branch claude/friendly-rubin-e2npmt-r141, PR to the R140 branch. Next: Local reviews PR, applies the seven recorded conditions (F3/F5/F6 partials, N-R1..N-R3, A1-A3) in its own successor contract, runs A3 on Windows and decides whether to update the R139 repair audit with an A1/A2 VERIFY discriminator; cloud agent does not merge. R140 awaits Local merge in PR #14. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; design not executable; no runtime, Chrome/daemon, DB or provider effect; Facebook/ZaloOA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## Startup acknowledgment and role transition
@@ -57,3 +57,16 @@ Review round 1, retained:
    - F3–F6: non-blocking.
 2. The spec author made the single consolidated repair round in §4.5 (R-F1 to R-F4) plus the A1/A2/A3 and citation fixes. The orchestrator re-verified F2 in source: `bin/chrome-devtools.js:187-194` auto-starts; `daemon/client.js:105-109` `sendCommand` does not.
 3. Tranche history: REVIEW_PENDING, then CHANGES_REQUIRED, then REVIEW_PENDING. Re-review goes to the same independent reviewer.
+
+Re-review and closure on the branch:
+1. The same independent reviewer re-reviewed and returned REVIEWER_ACCEPTED_DESIGN_PENDING_LOCAL.
+   - F1, F2 and F4: RESOLVED.
+   - F3, F5 and F6: PARTIAL.
+   - New non-blocking findings N-R1 to N-R3.
+2. The seed's single repair round is exhausted, so the spec bytes stay as reviewed at `5fa904438d94bea40d2a884da2c5389a0a2c91be`. All open items are recorded as Local conditions in the tranche record (`localConditions`).
+3. Tranche REVIEW_PASS; packet REVIEWER_ACCEPTED; FREEZE open.
+
+Closure-sync gate history, retained:
+1. An orchestrator script error left the state's `nextAllowedMove` stale. Preflight continuity FAIL and runner CONT-01 FAIL followed.
+2. A retry then rewrote the CRLF JSON files as LF; this was caught in the diff and CRLF was restored.
+3. Final: preflight PASS 6/6 (catalog SKIP) and runner pre-commit PASS 7/0.

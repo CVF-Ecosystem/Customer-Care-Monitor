@@ -6,7 +6,7 @@ Memory class: POINTER_RECORD
 
 ## Current R141 relaunch-prevention design checkpoint - 2026-11-05
 
-CCMAI-RUNTIME-141: owner-held Chrome with connect-only --wsEndpoint design spec authored on branch claude/friendly-rubin-e2npmt-r141 (source 15/15 byte-verified); independent Opus design review pending. After review the cloud ORCHESTRATOR commits and opens a PR; Local reviews, confirms A3 on Windows and decides any R139 repair-audit reopen; no merge to main by the cloud agent. R140 REVIEW_PASS awaits Local merge in PR #14. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; no runtime, Chrome/daemon, DB or provider effect; Facebook/ZaloOA parked.
+CCMAI-RUNTIME-141: owner-held Chrome connect-only relaunch-prevention design REVIEW_PASS (independent reviewer accepted after one repair; build 5fa904438d94) on branch claude/friendly-rubin-e2npmt-r141, PR to the R140 branch. Next: Local reviews PR, applies the seven recorded conditions (F3/F5/F6 partials, N-R1..N-R3, A1-A3) in its own successor contract, runs A3 on Windows and decides whether to update the R139 repair audit with an A1/A2 VERIFY discriminator; cloud agent does not merge. R140 awaits Local merge in PR #14. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; design not executable; no runtime, Chrome/daemon, DB or provider effect; Facebook/ZaloOA parked.
 
 Cloud agent: operator-granted ORCHESTRATOR / DESIGN_OWNER / SPEC_AUTHOR / SESSION_SYNC_STEWARD (branch-only commits); independent REVIEWER = separate Opus design-review subagent; Local agent retains merge to main, R139 reopen decision and FREEZE
 
@@ -116,7 +116,7 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R141_RELAUNCH_PREVENTION_DESIGN_2026-11-05.md
 
-CCMAI-RUNTIME-141: owner-held Chrome with connect-only --wsEndpoint design spec authored on branch claude/friendly-rubin-e2npmt-r141 (source 15/15 byte-verified); independent Opus design review pending. After review the cloud ORCHESTRATOR commits and opens a PR; Local reviews, confirms A3 on Windows and decides any R139 repair-audit reopen; no merge to main by the cloud agent. R140 REVIEW_PASS awaits Local merge in PR #14. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; no runtime, Chrome/daemon, DB or provider effect; Facebook/ZaloOA parked.
+CCMAI-RUNTIME-141: owner-held Chrome connect-only relaunch-prevention design REVIEW_PASS (independent reviewer accepted after one repair; build 5fa904438d94) on branch claude/friendly-rubin-e2npmt-r141, PR to the R140 branch. Next: Local reviews PR, applies the seven recorded conditions (F3/F5/F6 partials, N-R1..N-R3, A1-A3) in its own successor contract, runs A3 on Windows and decides whether to update the R139 repair audit with an A1/A2 VERIFY discriminator; cloud agent does not merge. R140 awaits Local merge in PR #14. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; design not executable; no runtime, Chrome/daemon, DB or provider effect; Facebook/ZaloOA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

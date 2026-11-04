@@ -1,6 +1,6 @@
 # R141 packet: physical-relaunch prevention design (DESIGN/SPEC only)
 
-Status: COMPLETE_PENDING_REVIEW
+Status: REVIEWER_ACCEPTED
 workOrderStatusGrammar: cvf.workOrderStatusGrammar@1.0.0
 Risk: R2
 Worker: Cloud ORCHESTRATOR acting as DESIGN_OWNER / SPEC_AUTHOR (documentary only)

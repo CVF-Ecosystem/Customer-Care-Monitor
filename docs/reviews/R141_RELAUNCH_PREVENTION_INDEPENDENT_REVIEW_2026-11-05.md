@@ -1,6 +1,6 @@
 # R141 independent design review: owner-held Chrome, connect-only native MCP (OHC)
 
-Status: CHANGES_REQUIRED
+Status: REVIEWER_ACCEPTED_DESIGN_PENDING_LOCAL
 Tranche: CCMAI-RUNTIME-141
 Risk: R2
 Worker: Cloud ORCHESTRATOR acting as DESIGN_OWNER / SPEC_AUTHOR (separate agent from this reviewer)
@@ -175,3 +175,97 @@ This review makes no claim of runtime, browser, AI-governance, M3-05/M3-08 or pr
 ## Public Export Disposition
 
 DEFERRED_PRIVATE_ONLY
+
+## Re-review after repair round 1
+
+Subject: the spec at commit `5fa904438d94bea40d2a884da2c5389a0a2c91be`, with the new §4.5 R-F1..R-F4, the amended §5 table, §5a, and the N6/N7/A1/A2/A3/§2 fixes. The same constraints applied as in round 1: static reading only, no execution, no network, no commit. I edited only this file: I changed the top `Status:` line and appended this section. The round-1 content above is otherwise unchanged; it matches the copy the orchestrator committed in `5fa9044`.
+
+### Cited-line verification (package dir, `build/src/`)
+
+| Spec citation | Verdict |
+|---|---|
+| `bin/chrome-devtools.js:187-194` (CLI auto-start) | CONFIRMED. The tool-command handler starts at 187. At 193-194, `if (!isDaemonRunning(sessionId)) await start(serializeArgs(mcpOptions, argv), sessionId)`. |
+| `daemon/client.js:105-109` (`sendCommand` never starts a daemon) | CONFIRMED. At 107-108 it throws `Daemon is not running.`, and the function contains no start path. |
+| `tools/script.js:60-108` (`evaluate_script` optional `pageId` and `serviceWorkerId`) | CONFIRMED. The optional `pageId` is at 71-79. The `serviceWorkerId` schema runs 103-110, ending just past the cited 108. The bypass is in the handler at 121-141. |
+| R-F4 allowlist page-scoping | CONFIRMED. Every allowed `pageId` tool is `definePageTool`: `navigate_page` (`pages.js:128`), `handle_dialog` (`pages.js:293`), `take_snapshot` and `wait_for` (`snapshot.js`), `take_screenshot` (`screenshot.js:142`), and `click`, `hover`, `fill`, `type_text`, `fill_form`, `press_key` (`input.js:119-536`). All of them get the required `pageId` schema (N7/A2). |
+
+### Disposition of round-1 findings
+
+| Finding | Disposition | Basis |
+|---|---|---|
+| F1 (blocking): reconnect notice and unpinned page IDs | **RESOLVED** | R-F1 does five things: it pins the target ID at PRELIMINARY_OBSERVED, forbids re-acquiring IDs, makes `No page found` or any unknown ID a HOLD, requires the owner to inspect every actor response before releasing the next command, and treats any `reconnected` as HOLD. With these, every page-mutating call in a rebuilt context fails closed through N5 whether or not the notice arrives. My round-1 counterexample, where the producer adopts id 2 from `list_pages`, is now forbidden and becomes a HOLD. The §5 rows carry the same rules. |
+| F2 (blocking): second launch-mode server | **RESOLVED** | R-F2 makes the owner's start the only daemon start, limits actors to `sendCommand`, forbids the CLI, `start`, `startDaemon` and ensure helpers, makes the session namespace exclusive to the owner, and makes daemon or MCP-child exit (or `Daemon is not running`) a HOLD with no restart. It adds a single-daemon preflight and a terminal observation, and §5 adds daemon/child exit to the any-state HOLD row. |
+| F3: exact argv and environment | **PARTIAL (non-blocking)** | Exact parsing and the full `wsEndpoint` shape (scheme, host, port, GUID path, non-empty) are bound, and `NODE_OPTIONS`/`NODE_*`/`npm_*` are excluded. Gaps: no post-start check that `status.args` equals the admitted argv (`daemon.js:143`); it says "the two ... variables reviewed in R139" where R139 lists three (`CHROME_DEVTOOLS_MCP_SESSION_ID`, `_NO_UPDATE_CHECKS`, `_NO_USAGE_STATISTICS`); and R139's `XDG_RUNTIME_DIR`/`XDG_ROOT` omission is not restated. |
+| F4: tool allowlist | **RESOLVED** | The explicit allowlist and denylist are complete for the product window. `evaluate_script`, `select_page`, `close_page`, extension and PWA tools are forbidden, and the list can be narrowed but not widened. Note: `navigate_page` accepts an `initScript` (arbitrary JavaScript on the pinned page). It is page-scoped, so it does not affect relaunch or context, but the execution admission may want to forbid it. |
+| F5: A1 port-squatter residual | **PARTIAL (non-blocking)** | The scope note is present, but it claims the owner "observes the original-handle exit before any further product action". Exit observation is asynchronous, so that holds only if the owner checks original-handle liveness before releasing **each** command. Even then, a tiny race remains with a hostile same-user listener, which is out of scope under R139. The WORK_ORDER should state the per-release liveness check. |
+| F6: citations and counts | **PARTIAL (non-blocking)** | §2, N6 and A3 are corrected. Remaining: §8 step 1 still says "hashing the **four** files" (it should be five); N4 still omits the `executablePath/userDataDir/channel` conflicts; the stale §4.2 closed-set wording and the §4.3 residual ("detected in that same response") remain, though §4.5 explicitly takes precedence. |
+
+### New-counterexample hunt on the amendments
+
+**N-R1: MEDIUM, non-blocking (fail-closed, but cannot run as written).** The pinned-set equality rule conflicts with native page listings.
+- The owner-launched Chrome normally has an initial tab, and that tab gets a page ID on first context creation (`McpContext.js:63,406-408`).
+- `new_page`, `navigate_page` and `list_pages` responses all list every page (`setIncludePages(true)` at `tools/pages.js:123,249,23`, rendered through `McpResponse.js:276-278`). Product popups or `target=_blank` would also add IDs (`McpContext.js:83-96`).
+- R-F1 says HOLD on "any page ID outside the pinned set appearing in any response" and "any `list_pages` result that differs from the pinned set". If the pinned set is only the `new_page` ID, the first `navigate_page` or `list_pages` therefore HOLDs.
+- This never weakens no-relaunch or same-context, because it fails safe. It does make the lifecycle unrunnable as literally written.
+- Required in the source WORK_ORDER or admission: define the pinned **inventory** as the full page-ID set observed at PRELIMINARY_OBSERVED. Mutating calls go only to the target ID. Any change in inventory leads to HOLD, unless a popup rule is explicitly admitted.
+
+**N-R2: MEDIUM, non-blocking condition on D4 (owner-relay boundary).**
+- "All actor commands are relayed through the owner's `sendCommand` boundary" can be read two ways:
+  - The owner **originates** the native calls. That would conflict with the Root lifecycle's "distinct actors with original native call receipts" and with R139 P01 ("each real actor's original one-shot ... invocation"; the wrapper "cannot ... dispatch other actors").
+  - The owner acts as a **sequencing gate**. That is consistent.
+- Neither reading creates a technical boundary: the daemon socket accepts any same-user caller (`daemon/daemon.js:176-188`, owner-only permissions at 190-191). F1 safety therefore rests on the pinning/HOLD rules (N5) plus the actor contract, equally under both readings.
+- Required binding for Local and the WORK_ORDER:
+  - Each actor performs its own original one-shot `sendCommand` invocation, only when the owner releases it.
+  - Each actor returns its unmodified envelope and caller terminal to the owner before the next release.
+  - The owner never originates, alters or replays an actor command.
+  - Any actor call without a release is a contract breach and leads to HOLD.
+
+**N-R3: LOW, non-blocking.** The R-F2 preflight wording "no Chrome process using the owned user-data-dir other than the owner's PID" must allow the owner Chrome's own descendant processes (renderer, GPU, utility, crashpad). Otherwise it trips falsely, though safely. Bind it to the descendant tree of the original handle.
+
+**N-R4: no counterexample found.** These properties still hold after the amendments:
+- **Single-daemon preflight.** It forbids the CLI route. A stray daemon under a different or default session would launch a Chrome with a different profile (`browser.js:128-133`). That Chrome cannot be reached through the GUID-pinned endpoint, so it cannot replace the held context. It is still a forbidden effect, and the terminal observation should cover it.
+- **Exact argv rule.** It closes the empty-`wsEndpoint` fallthrough.
+- **`autoConnect`.** It stays rejected and defaults off.
+- **Launch path.** No path to `index.js:173` remains for the owner's daemon.
+
+### D1–D6 after repair
+
+| ID | Verdict |
+|---|---|
+| D1 | PASS. Citations verified. The "four files" wording in §8 is a residual typo. |
+| D2 | **PASS**. The second-server threat is now argued (R-F2), and the in-process threats are unchanged. |
+| D3 | **PASS**. Same-context is enforced fail-closed through R-F1 plus N5, the residual is restated correctly in §4.5, and no-relaunch is not weakened. |
+| D4 | PASS with condition N-R2. §5 refines the Root lifecycle and adds daemon/child exit HOLD. The relay must be read as a sequencing gate that preserves original actor receipts. |
+| D5 | PASS. It makes no reopen, implementation, runtime or acceptance claim, and the PLAN coverage block is unchanged and appropriate. |
+| D6 | PASS. Independent review is completed for this design-review scope, subject to the independence limitation in §1. |
+
+### Gate result (re-run once)
+
+The same command was run at head `5fa904438d94…`. `--base` was accepted. Exit code **0**.
+
+```
+[PASS] CVF-DG-INST-01 PASS
+[PASS] CVF-DG-CONT-01 PASS
+[PASS] CVF-DG-RANGE-01 PASS  (RANGE_RESOLVED mode=RANGE base=70b0c22… head=5fa90443… candidates=12 deleted=0)
+[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - no candidate work-order packet in scope
+[PASS] CVF-DG-ROUTE-01 NOT_APPLICABLE_WITH_REASON - no dispatch packet declares dispatchKind in scope
+[PASS] CVF-DG-ROLE-01 PASS  (checked: R141 packet, spec, independent review)
+[PASS] CVF-DG-CLAIM-01 PASS  (0 explicit claim lines, 3 documents)
+[PASS] CVF-DG-COV-01 PASS  (R141 spec; mechanical joins only; Local owns semantic acceptance)
+RESULT: PASS phase=reviewer-fast mandatoryControls=8 failed=0
+```
+
+APPL-01 and ROUTE-01 are **not checked**; they did not pass. The gate passing proves only the checked static repository state.
+
+### Re-review verdict
+
+**REVIEWER_ACCEPTED_DESIGN_PENDING_LOCAL.**
+- F1 and F2 are resolved, and no new blocking defect was found.
+- The seed's single consolidated repair round has been used. The open non-blocking items (F3, F5, F6 residuals and N-R1..N-R3) go to Local as binding conditions for the updated repair-chain audit and any future source WORK_ORDER or execution admission. They are not to be fixed by another spec repair round in this tranche.
+- Local still owns:
+  - confirming reviewer independence and the seed's authorship;
+  - A3 on Windows (five files);
+  - the admitted A1/A2 VERIFY;
+  - the R139 reopen decision;
+  - the merge.
+- This acceptance covers the design document only. It is not runtime, browser, AI-governance, M3-05/M3-08 or product acceptance.
