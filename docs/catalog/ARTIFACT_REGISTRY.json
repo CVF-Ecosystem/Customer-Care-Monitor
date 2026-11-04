@@ -5496,7 +5496,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R142_DOCS_BUILD_REPAIR_2026-11-05.md",
       "status": "ACTIVE",
-      "description": "Active R142 docs site build repair handoff (config only, pending CI); R140/R141 await Local merge; R139 integration remains blocked."
+      "description": "Active R142 docs site build repair handoff (config only, REVIEW_PASS, docs CI green); R140/R141 await Local merge; R139 integration remains blocked."
     },
     {
       "id": "r060-work-order",

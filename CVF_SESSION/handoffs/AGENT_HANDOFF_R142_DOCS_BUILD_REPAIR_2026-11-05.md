@@ -8,7 +8,7 @@ Status: ACTIVE
 - Active phase: REVIEW
 - Active role: Cloud agent: operator-granted ORCHESTRATOR, then IMPLEMENTATION_WORKER (docs config) and R1 REVIEWER with recorded transition; GitHub Actions docs build is the objective check; Local agent retains merge to main and FREEZE
 - Active tranche: CCMAI-RUNTIME-142
-- Next allowed move: CCMAI-RUNTIME-142: docs build repair attempt 3 (operator-approved; ignoreDeadLinks adds roadmaps) pending the GitHub Actions docs build on PR #16; if green the cloud ORCHESTRATOR records REVIEW_PASS with the run, otherwise BLOCKED_WITH_REASON and asks before any further attempt; Local merges #14, #15, #16 in order; the cloud agent does not merge. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; no runtime, DB or provider effect; Facebook/ZaloOA parked.
+- Next allowed move: CCMAI-RUNTIME-142: docs site build repair REVIEW_PASS (docs build green on PR #16 at 9612cc512635 after operator-approved attempt 3; config-only, no evidence edits). Next: Local reviews and merges PR #14 (R140), #15 (R141), #16 (R142) in order, applies R141 Local conditions/A1-A3 and decides any R139 reopen; the cloud agent does not merge. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; no runtime, DB or provider effect; Facebook/ZaloOA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## Startup acknowledgment and decisions
@@ -38,3 +38,4 @@ CI attempt history, retained:
 
 3. **Attempt 2 result:** Vue compile errors fixed; 4 dead links to excluded `roadmaps/` remain. The CI budget is exhausted, so the tranche is CHANGES_REQUIRED / BLOCKED_WITH_REASON. Proposed one-line `ignoreDeadLinks` fix awaits operator approval.
 4. **Attempt 3:** the operator replied "cho phép" (approved one more CI attempt). `ignoreDeadLinks` now also covers `roadmaps/`. Tranche history: CHANGES_REQUIRED, then BUILD, then REVIEW_PENDING.
+5. **Attempt 3 at `9612cc512635cbce378022342cc2097d2b4e064b`:** docs build success (run 41928835349); Governance and gates success. The R1 role transition to REVIEWER is recorded in `docs/reviews/R142_DOCS_BUILD_REPAIR_REVIEW_2026-11-05.md`. Tranche REVIEW_PASS; FREEZE open.

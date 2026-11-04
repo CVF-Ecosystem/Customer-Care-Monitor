@@ -1,6 +1,6 @@
 # R142 packet: docs site build repair (config only)
 
-Status: COMPLETE_PENDING_REVIEW
+Status: REVIEWER_ACCEPTED
 workOrderStatusGrammar: cvf.workOrderStatusGrammar@1.0.0
 Risk: R1
 Worker: Cloud ORCHESTRATOR acting as IMPLEMENTATION_WORKER (docs config only)
