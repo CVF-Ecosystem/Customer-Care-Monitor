@@ -1,6 +1,6 @@
 # R142 packet: docs site build repair (config only)
 
-Status: BLOCKED_WITH_REASON
+Status: COMPLETE_PENDING_REVIEW
 workOrderStatusGrammar: cvf.workOrderStatusGrammar@1.0.0
 Risk: R1
 Worker: Cloud ORCHESTRATOR acting as IMPLEMENTATION_WORKER (docs config only)
@@ -37,6 +37,10 @@ Authority: `CVF_SESSION/authority/CCMAI-RUNTIME-142.json` (seed commit `38b76fd1
 - `roadmaps/**` is in `srcExclude` but missing from `ignoreDeadLinks`, unlike `specs/` and `work_orders/`.
 - The seed's two CI attempts are spent, so the tranche stops at BLOCKED_WITH_REASON.
 - **Proposed next fix (needs operator approval of one more CI attempt):** change `ignoreDeadLinks` to `[/(^|\/)(specs|work_orders|roadmaps)\//]`.
+
+## CI attempt 3 (operator-approved)
+
+The operator approved one more config-only attempt. `ignoreDeadLinks` now also covers `roadmaps/`. If this fails, the tranche stops at BLOCKED_WITH_REASON again and asks before any further attempt.
 
 ## Verification
 

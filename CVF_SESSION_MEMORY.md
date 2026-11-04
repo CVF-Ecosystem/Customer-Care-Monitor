@@ -6,7 +6,7 @@ Memory class: POINTER_RECORD
 
 ## Current R142 docs build repair checkpoint - 2026-11-05
 
-CCMAI-RUNTIME-142: docs build repair BLOCKED_WITH_REASON after its 2 allowed CI attempts (all Vue compile errors fixed; 4 dead links to excluded roadmaps/ remain). Next: operator approves one more config-only CI attempt (add roadmaps to ignoreDeadLinks) or Local takes it over; PR #16 open, no merge by the cloud agent. R140 (PR #14) and R141 (PR #15) REVIEW_PASS await Local. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; no runtime, DB or provider effect; Facebook/ZaloOA parked.
+CCMAI-RUNTIME-142: docs build repair attempt 3 (operator-approved; ignoreDeadLinks adds roadmaps) pending the GitHub Actions docs build on PR #16; if green the cloud ORCHESTRATOR records REVIEW_PASS with the run, otherwise BLOCKED_WITH_REASON and asks before any further attempt; Local merges #14, #15, #16 in order; the cloud agent does not merge. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; no runtime, DB or provider effect; Facebook/ZaloOA parked.
 
 Cloud agent: operator-granted ORCHESTRATOR, then IMPLEMENTATION_WORKER (docs config) and R1 REVIEWER with recorded transition; GitHub Actions docs build is the objective check; Local agent retains merge to main and FREEZE
 
@@ -123,7 +123,7 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R142_DOCS_BUILD_REPAIR_2026-11-05.md
 
-CCMAI-RUNTIME-142: docs build repair BLOCKED_WITH_REASON after its 2 allowed CI attempts (all Vue compile errors fixed; 4 dead links to excluded roadmaps/ remain). Next: operator approves one more config-only CI attempt (add roadmaps to ignoreDeadLinks) or Local takes it over; PR #16 open, no merge by the cloud agent. R140 (PR #14) and R141 (PR #15) REVIEW_PASS await Local. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; no runtime, DB or provider effect; Facebook/ZaloOA parked.
+CCMAI-RUNTIME-142: docs build repair attempt 3 (operator-approved; ignoreDeadLinks adds roadmaps) pending the GitHub Actions docs build on PR #16; if green the cloud ORCHESTRATOR records REVIEW_PASS with the run, otherwise BLOCKED_WITH_REASON and asks before any further attempt; Local merges #14, #15, #16 in order; the cloud agent does not merge. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; no runtime, DB or provider effect; Facebook/ZaloOA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

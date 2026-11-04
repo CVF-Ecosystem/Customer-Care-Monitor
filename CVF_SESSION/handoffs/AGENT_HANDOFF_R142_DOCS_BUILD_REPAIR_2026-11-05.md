@@ -8,7 +8,7 @@ Status: ACTIVE
 - Active phase: REVIEW
 - Active role: Cloud agent: operator-granted ORCHESTRATOR, then IMPLEMENTATION_WORKER (docs config) and R1 REVIEWER with recorded transition; GitHub Actions docs build is the objective check; Local agent retains merge to main and FREEZE
 - Active tranche: CCMAI-RUNTIME-142
-- Next allowed move: CCMAI-RUNTIME-142: docs build repair BLOCKED_WITH_REASON after its 2 allowed CI attempts (all Vue compile errors fixed; 4 dead links to excluded roadmaps/ remain). Next: operator approves one more config-only CI attempt (add roadmaps to ignoreDeadLinks) or Local takes it over; PR #16 open, no merge by the cloud agent. R140 (PR #14) and R141 (PR #15) REVIEW_PASS await Local. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; no runtime, DB or provider effect; Facebook/ZaloOA parked.
+- Next allowed move: CCMAI-RUNTIME-142: docs build repair attempt 3 (operator-approved; ignoreDeadLinks adds roadmaps) pending the GitHub Actions docs build on PR #16; if green the cloud ORCHESTRATOR records REVIEW_PASS with the run, otherwise BLOCKED_WITH_REASON and asks before any further attempt; Local merges #14, #15, #16 in order; the cloud agent does not merge. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; no runtime, DB or provider effect; Facebook/ZaloOA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## Startup acknowledgment and decisions
@@ -37,3 +37,4 @@ CI attempt history, retained:
 2. **Attempt 2:** a markdown-it hook adds `v-pre` to inline `<code>`, and the packet line was reworded. This is the last attempt the seed allows.
 
 3. **Attempt 2 result:** Vue compile errors fixed; 4 dead links to excluded `roadmaps/` remain. The CI budget is exhausted, so the tranche is CHANGES_REQUIRED / BLOCKED_WITH_REASON. Proposed one-line `ignoreDeadLinks` fix awaits operator approval.
+4. **Attempt 3:** the operator replied "cho phép" (approved one more CI attempt). `ignoreDeadLinks` now also covers `roadmaps/`. Tranche history: CHANGES_REQUIRED, then BUILD, then REVIEW_PENDING.
