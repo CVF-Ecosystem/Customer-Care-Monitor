@@ -60,22 +60,44 @@
     "docs/reviews/probes/r140_selection_read_20261105/worker_*"
   ],
   "baseCommit": "4c3cc11ef36f0e9e3e9738b26647f59909b04391",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PASS",
+  "phase": "REVIEW",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
   ],
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
-  "implementationStarted": false,
-  "disposition": "RELEASED_SOURCE_ONLY",
+  "workOrderStatus": "REVIEWER_ACCEPTED",
+  "implementationStarted": true,
+  "disposition": "REVIEW_PASS",
   "parentProductStatus": "R139 BUILD_BLOCKED; M3-05/08 repair audit BLOCKED, no reset",
   "reviewEvidence": [
-    "docs/reviews/probes/r140_selection_read_20261105/independent_admission.json"
+    "docs/reviews/probes/r140_selection_read_20261105/independent_admission.json",
+    "docs/reviews/R140_SELECTION_READ_WORKER_RETURN_2026-11-05.md",
+    "docs/reviews/R140_SELECTION_READ_INDEPENDENT_REVIEW_2026-11-05.md"
   ],
   "preparationCommit": "723976c9d90bcb7303f402e589c3df7924c56ba6",
-  "releaseEvidence": "docs/reviews/probes/r140_selection_read_20261105/root_release.json"
+  "releaseEvidence": "docs/reviews/probes/r140_selection_read_20261105/root_release.json",
+  "buildCommit": "59788f0ebb6c77c66fda745181506793ced5625a",
+  "x-operatorRoleAssignments20261105": {
+    "source": "Operator in cloud session",
+    "grants": [
+      "D1-D4 cloud deviations (see worker_operator_cloud_authorization.json)",
+      "independent REVIEWER = separate Opus subagent",
+      "cloud agent ORCHESTRATOR (+ session sync on branch only)"
+    ],
+    "notGranted": [
+      "merge/push to main",
+      "FREEZE",
+      "seed/authority edits",
+      "runtime/provider/browser/DB effects"
+    ],
+    "independenceLimitation": "Reviewer subagent ran in the same cloud session as the worker; Root decides whether to adopt it as the R2 independent review.",
+    "closurePending": "Root material merge to main, D1-D4 ruling, trusted bootstrap/doctor, Windows catalog gate, FREEZE",
+    "rolesFieldUnchanged": "Seed-bound roles kept verbatim; actual role holders recorded here."
+  }
 }

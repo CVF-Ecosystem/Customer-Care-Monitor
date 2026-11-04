@@ -2,9 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R140_SELECTION_READ_REPAIR_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-140", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R140_SELECTION_READ_REPAIR_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-140", "parked": true} -->
 
-## Current worker-only source dispatch - 2026-11-05
+## Current R140 review checkpoint - 2026-11-05
+
+CCMAI-RUNTIME-140: source/test REVIEW_PASS by operator-appointed independent reviewer on branch claude/friendly-rubin-e2npmt (build 59788f0ebb6c); see docs/reviews/R140_SELECTION_READ_INDEPENDENT_REVIEW_2026-11-05.md. Next: Local/Root reviews on GitHub before merge, rules on operator-granted cloud deviations D1-D4, runs trusted operator-local bootstrap/doctor and the Windows catalog gate, then decides material merge to main and FREEZE. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED, no P01 dispatch, physical-relaunch prevention still unavailable. No browser/DB/provider effect, no product acceptance; Facebook/ZaloOA parked.
+
+Cloud agent: IMPLEMENTATION_WORKER, then operator-granted ORCHESTRATOR / SESSION_SYNC_STEWARD (branch-only transport commits); independent REVIEWER = operator-appointed separate Opus subagent; Root/Local retains COMMIT_STEWARD for main, D1-D4 ruling and FREEZE
+
+Active handoff and tranche record control; operator-granted cloud deviations D1-D4 and role assignments are recorded for Root review, not as Root acceptance.
+
+
+## Historical worker-only source dispatch - 2026-11-05
 
 CCMAI-RUNTIME-140: Root has completed R139 causal assessment and fixed independent M3-06 selection-read repair contract. After committed preparation and final admission PASS, assigned worker implements only the Vue component, existing component test and exact return/evidence paths in docs/work_orders/CCMAI_RUNTIME_140_SELECTION_READ_REPAIR.md; worker does not orchestrate, change authority or commit. Source-only BUILD authorized, implementation not started. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 audit BLOCKED, no P01 dispatch, physical-relaunch prevention still unavailable. Same M3 history/costs/UNKNOWN/counters retained; no browser/DB/provider effect, no product acceptance; Facebook/ZaloOA parked.
 
@@ -94,11 +103,11 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R140_SELECTION_READ_REPAIR_2026-11-05.md
 
-CCMAI-RUNTIME-140: Root has completed R139 causal assessment and fixed independent M3-06 selection-read repair contract. After committed preparation and final admission PASS, assigned worker implements only the Vue component, existing component test and exact return/evidence paths in docs/work_orders/CCMAI_RUNTIME_140_SELECTION_READ_REPAIR.md; worker does not orchestrate, change authority or commit. Source-only BUILD authorized, implementation not started. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 audit BLOCKED, no P01 dispatch, physical-relaunch prevention still unavailable. Same M3 history/costs/UNKNOWN/counters retained; no browser/DB/provider effect, no product acceptance; Facebook/ZaloOA parked.
+CCMAI-RUNTIME-140: source/test REVIEW_PASS by operator-appointed independent reviewer on branch claude/friendly-rubin-e2npmt (build 59788f0ebb6c); see docs/reviews/R140_SELECTION_READ_INDEPENDENT_REVIEW_2026-11-05.md. Next: Local/Root reviews on GitHub before merge, rules on operator-granted cloud deviations D1-D4, runs trusted operator-local bootstrap/doctor and the Windows catalog gate, then decides material merge to main and FREEZE. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED, no P01 dispatch, physical-relaunch prevention still unavailable. No browser/DB/provider effect, no product acceptance; Facebook/ZaloOA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 
