@@ -1,0 +1,1 @@
+PREFLIGHT_ONLY: read checks passed; no latch/mirror/updater

@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "pwsh",
+    "-NoProfile",
+    "-NonInteractive",
+    "-File",
+    "docs\\reviews\\probes\\r139_integrated_20261021\\core_freshness_20261104\\worker_transaction.ps1",
+    "-PreflightOnly",
+    "-ExpectedSourceSha256",
+    "5784844638fdee042642a01ee0a8697b4fc4e296e7ca95cd663840725667b461",
+    "-ExpectedPreimagesSha256",
+    "848d6c1ffee3362fd17b032e11f802172951663793ac7d3eb2dcf46e891b0c42"
+  ],
+  "startedUtc": "2026-11-04T12:54:44.058917+00:00",
+  "durationSeconds": 3.7360445000231266,
+  "sourceRawSha256": "5784844638fdee042642a01ee0a8697b4fc4e296e7ca95cd663840725667b461",
+  "preimagesRawSha256": "848d6c1ffee3362fd17b032e11f802172951663793ac7d3eb2dcf46e891b0c42",
+  "removedChildEnvironmentNamesOnly": [
+    "GIT_PAGER"
+  ],
+  "hostEnvironmentUnchanged": true,
+  "exitCode": 1,
+  "updaterInvocations": 0,
+  "claimPresent": false,
+  "purpose": "Changed-environment operational read-only precondition; inherited GIT_PAGER removed only in child, prior fail retained"
+}

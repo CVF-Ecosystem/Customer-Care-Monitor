@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "purpose": "STATIC_PUBLIC_CORE_REPIN_ONLY",
+  "baseCommit": "38952df8bcf9e01b18a05a1da1095b1e7eda6fd8",
+  "predecessor": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-REPIN-MAINTENANCE-ADMISSION.json",
+    "sha256": "7ba35993c150f7026269284a6a8f89c9476999f4cd8d1268342fad866b34deea"
+  },
+  "seedSha256": "29bdfff6c5eb3e453e9f171b012d5919c0bbd981b3b4d754395e30b5e2e1f576",
+  "riskCeiling": "R2",
+  "roles": {
+    "worker": "SolMedium /root/source_resume_worker fixed2 source; Root COMMIT_STEWARD official transaction and metadata adoption",
+    "reviewer": "TerraHigh /root/source_resume_review independent source and actual transaction/adoption reviewer; Root independent source reviewer",
+    "commitSteward": "Root"
+  },
+  "coreFrom": "15e39450853184eb65dbde73398c69c3171a6241",
+  "coreTo": "c4c8767ac8861854f40d466ba338ffd11eb9558e",
+  "files": {
+    ".cvf/gate-profile.lock.json": "f181e5d5d46ec3d5eb86d2693e2a818fff4a4571c308189856254e8896898298",
+    ".cvf/manifest.json": "67ad29ed8445f2f8622fe0b5649312b6087e3791cb35b7eb4faa70a6182a3dd8",
+    ".github/workflows/cvf-downstream-gates.yml": "5cf931e477bc85601030c85d2c3e7cf13f3a5e7181a9fc6f68932d4548763136",
+    ".gitignore": "d63057e1924a725783d5285ae65cdf9bcce1e1b80342b55d711070f1ee2f96a4",
+    "AGENTS.md": "20bf665958d312b357f253ee9c89bc8a51ea1906f3e03b476cc89d905819b3e1",
+    "docs/milestone-coverage-authority.json": "199058e04c41eb0b567b553c7f3a526aa10bb3468b86e621cb62b10bddd389da",
+    "docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md": "202d491d8096d8c868ef71e3ad40c2d06ff7ced7676dd4825200fe768f387fbd",
+    "scripts/cvf_downstream_gate.py": "70a47e0c75d52e200ab0dd2a0bca6e664311920a691e59e2c2af59a2957ba6b8",
+    "scripts/cvf_gates/cvf_dg_common.py": "2225b925d26a66238e6f2697873b82974cca9216491bc1eabab80ea8e836dba8",
+    "scripts/cvf_gates/cvf_dg_install.py": "4e96952ef312487e5999b0b0d4db85c2eda158e2ac1cbb336beeba6876ddc316",
+    "scripts/cvf_gates/cvf_downstream_gate_profile.json": "faaf9273ada3fd826e6372898d134fe7ad0157528f25b7720211c31cfc209bd5",
+    "scripts/cvf_gates/cvf_downstream_gate_runner.py": "716544aa7a38251009867a4e0150be51b79b4304a8c5f6d7afddab4e7c5d9c07",
+    "scripts/cvf_gates/cvf_milestone_coverage.py": "02e828a256132736e17a78440c62d633a444974ab8b69b1ed9b7227364fe6ae2",
+    "scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1": "c6fac5cb32b39359305a992a5faa22d3c08a1f466cc48cd2789a42e0bdae1a76",
+    "scripts/tests/test_cvf_downstream_catalog_parity.py": "6dd3a9a2dfc77ff0895cbcdb1c77bcd90b595bab3e72008f1bec203f12aaa008",
+    "scripts/tests/test_cvf_downstream_gate_core_repin.py": "1b5dff8f743169de85ac2a0392fbf6e79d5f286131a43884838364c605d7e4ef",
+    "scripts/tests/test_cvf_downstream_gate_maintenance.py": "ec9b984b922f74af33a9f2543816c86e3801cb5601267a0d98a761f444210e03",
+    "scripts/tests/test_cvf_downstream_gate_profile_compatibility.py": "30a06edc5c47f7c091488ba140f694b500658efcc5014a84ea7ac4878491c726"
+  },
+  "bootstrapException": {
+    "reason": "Committed preparation38952 precedes source BUILD; source124units/Root4/independent Terra source and actual transaction reviewed, one lockedcachedc4 official updater/native installer. Root authors final fixed2 admission and reviewed18file payload in same material commit. Both earlier authority first blobs/historical17+18payloads preserved; nonrepinnable files/workflow/installedbundle frozen. No generic chain or product closure. Independent final adoption/admission review and doctor/gates precede commit.",
+    "ownerInstruction": "Owner standing full handling and commit authorization plus tiep; AGENTS mandatory public freshness repair, independent reviewed exact docs-only target c4. No product/runtime/effect grant beyond maintenance."
+  },
+  "ownerInstruction": "Owner standing full handling and commit authorization plus tiep; AGENTS mandatory public freshness repair, independent reviewed exact docs-only target c4. No product/runtime/effect grant beyond maintenance."
+}

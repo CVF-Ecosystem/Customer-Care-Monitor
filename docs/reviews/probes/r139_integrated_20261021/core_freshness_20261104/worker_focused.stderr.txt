@@ -1,0 +1,60 @@
+test_bad_profile_alias_and_range_rejected (test_cvf_downstream_gate_core_repin.CoreRepin.test_bad_profile_alias_and_range_rejected) ... ok
+test_bootstrap_and_committed_successor (test_cvf_downstream_gate_core_repin.CoreRepin.test_bootstrap_and_committed_successor) ... ok
+test_committed_successor_deletion_fails_closed (test_cvf_downstream_gate_core_repin.CoreRepin.test_committed_successor_deletion_fails_closed) ... ok
+test_historical_first_commit_payload_tamper (test_cvf_downstream_gate_core_repin.CoreRepin.test_historical_first_commit_payload_tamper) ... ok
+test_history_payload_and_scope_tamper (test_cvf_downstream_gate_core_repin.CoreRepin.test_history_payload_and_scope_tamper) ... ok
+test_identity_schema_roles_and_pins_rejected (test_cvf_downstream_gate_core_repin.CoreRepin.test_identity_schema_roles_and_pins_rejected) ... ok
+test_narrowed_claim_and_supplied_scope_rejected_by_actual_range (test_cvf_downstream_gate_core_repin.CoreRepin.test_narrowed_claim_and_supplied_scope_rejected_by_actual_range) ... ok
+test_payload_and_authority_staged_together (test_cvf_downstream_gate_core_repin.CoreRepin.test_payload_and_authority_staged_together) ... ok
+test_predecessor_tamper_and_unapproved_file_rejected (test_cvf_downstream_gate_core_repin.CoreRepin.test_predecessor_tamper_and_unapproved_file_rejected) ... ok
+test_staging_and_duplicate_rejected (test_cvf_downstream_gate_core_repin.CoreRepin.test_staging_and_duplicate_rejected) ... ok
+test_bootstrap_staging_atomicity_and_index_mismatch (test_cvf_downstream_gate_core_repin.CoreRepinTwo.test_bootstrap_staging_atomicity_and_index_mismatch) ... ok
+test_committed_payload_mutation_and_alias (test_cvf_downstream_gate_core_repin.CoreRepinTwo.test_committed_payload_mutation_and_alias) ... ok
+test_deleted_second_cannot_fall_back_and_later_mutation (test_cvf_downstream_gate_core_repin.CoreRepinTwo.test_deleted_second_cannot_fall_back_and_later_mutation) ... FAIL
+test_fixed_identity_fields_and_duplicate_json (test_cvf_downstream_gate_core_repin.CoreRepinTwo.test_fixed_identity_fields_and_duplicate_json) ... ok
+test_frozen_installed_workflow_and_lock_metadata (test_cvf_downstream_gate_core_repin.CoreRepinTwo.test_frozen_installed_workflow_and_lock_metadata) ... ok
+test_historical_snapshot_tamper_even_when_present_payload_is_valid (test_cvf_downstream_gate_core_repin.CoreRepinTwo.test_historical_snapshot_tamper_even_when_present_payload_is_valid) ... FAIL
+test_narrowed_range_new_payload_and_missing_file (test_cvf_downstream_gate_core_repin.CoreRepinTwo.test_narrowed_range_new_payload_and_missing_file) ... FAIL
+test_original_seed_and_both_authorities_immutable (test_cvf_downstream_gate_core_repin.CoreRepinTwo.test_original_seed_and_both_authorities_immutable) ... ok
+test_predecessor_and_roles (test_cvf_downstream_gate_core_repin.CoreRepinTwo.test_predecessor_and_roles) ... ok
+test_valid_bootstrap_staged_committed_and_snapshot_reuse (test_cvf_downstream_gate_core_repin.CoreRepinTwo.test_valid_bootstrap_staged_committed_and_snapshot_reuse) ... FAIL
+
+======================================================================
+FAIL: test_deleted_second_cannot_fall_back_and_later_mutation (test_cvf_downstream_gate_core_repin.CoreRepinTwo.test_deleted_second_cannot_fall_back_and_later_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI\scripts\tests\test_cvf_downstream_gate_core_repin.py", line 324, in test_deleted_second_cannot_fall_back_and_later_mutation
+    self.assertTrue(any("second repin first blob changed" in p for p in self.check()[1]))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_historical_snapshot_tamper_even_when_present_payload_is_valid (test_cvf_downstream_gate_core_repin.CoreRepinTwo.test_historical_snapshot_tamper_even_when_present_payload_is_valid)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI\scripts\tests\test_cvf_downstream_gate_core_repin.py", line 348, in test_historical_snapshot_tamper_even_when_present_payload_is_valid
+    path = "scripts/tests/test_cvf_downstream_gate_core_repin.py"
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_narrowed_range_new_payload_and_missing_file (test_cvf_downstream_gate_core_repin.CoreRepinTwo.test_narrowed_range_new_payload_and_missing_file)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI\scripts\tests\test_cvf_downstream_gate_core_repin.py", line 301, in test_narrowed_range_new_payload_and_missing_file
+    self.assertTrue(any("actual active range" in p for p in self.check()[1]))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_valid_bootstrap_staged_committed_and_snapshot_reuse (test_cvf_downstream_gate_core_repin.CoreRepinTwo.test_valid_bootstrap_staged_committed_and_snapshot_reuse)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI\scripts\tests\test_cvf_downstream_gate_core_repin.py", line 229, in test_valid_bootstrap_staged_committed_and_snapshot_reuse
+    self.assertEqual(len(self.second["files"]), 18)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 27 != 18
+
+----------------------------------------------------------------------
+Ran 20 tests in 270.872s
+
+FAILED (failures=4)

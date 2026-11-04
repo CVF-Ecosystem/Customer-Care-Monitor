@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "pwsh",
+    "-NoProfile",
+    "-NonInteractive",
+    "-File",
+    "docs\\reviews\\probes\\r139_integrated_20261021\\core_freshness_20261104\\worker_transaction.ps1",
+    "-PreflightOnly",
+    "-ExpectedSourceSha256",
+    "81a20833a9dc187c72b920730e0af6501a909551030e1f433621b476237a19e2",
+    "-ExpectedPreimagesSha256",
+    "848d6c1ffee3362fd17b032e11f802172951663793ac7d3eb2dcf46e891b0c42"
+  ],
+  "startedUtc": "2026-11-04T12:56:54.018499+00:00",
+  "durationSeconds": 15.995445700129494,
+  "sourceRawSha256": "81a20833a9dc187c72b920730e0af6501a909551030e1f433621b476237a19e2",
+  "preimagesRawSha256": "848d6c1ffee3362fd17b032e11f802172951663793ac7d3eb2dcf46e891b0c42",
+  "removedChildEnvironmentNamesOnly": [
+    "GIT_PAGER"
+  ],
+  "hostEnvironmentUnchanged": true,
+  "exitCode": 0,
+  "updaterInvocations": 0,
+  "claimPresent": false,
+  "purpose": "Changed-source repair2 operational preflight; two application-discovery lines select first executable; all prior failures retained"
+}

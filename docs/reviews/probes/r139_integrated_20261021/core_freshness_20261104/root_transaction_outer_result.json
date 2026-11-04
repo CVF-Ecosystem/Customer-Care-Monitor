@@ -1,0 +1,9 @@
+{
+  "startedUtc": "2026-11-04T12:59:34.178405+00:00",
+  "durationSeconds": 66.23827559989877,
+  "originalWrapperPid": 17924,
+  "waitReturned": true,
+  "exitCode": 0,
+  "claimPresent": true,
+  "sourceSha256": "81a20833a9dc187c72b920730e0af6501a909551030e1f433621b476237a19e2"
+}

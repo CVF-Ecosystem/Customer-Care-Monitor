@@ -1,0 +1,7 @@
+{
+  "currentRawSha256": "81a20833a9dc187c72b920730e0af6501a909551030e1f433621b476237a19e2",
+  "reconstructedPriorByReversingExactlyTwoDiscoveryLines": "5784844638fdee042642a01ee0a8697b4fc4e296e7ca95cd663840725667b461",
+  "expectedPriorRawSha256": "5784844638fdee042642a01ee0a8697b4fc4e296e7ca95cd663840725667b461",
+  "matchesPrior": true,
+  "executedCandidate": false
+}

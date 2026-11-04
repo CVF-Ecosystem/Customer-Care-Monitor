@@ -1,0 +1,5 @@
+Exception: D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI\docs\reviews\probes\r139_integrated_20261021\core_freshness_20261104\worker_transaction.ps1:215
+Line |
+ 215 |  … ject Name -Like 'GIT_*').Count) { throw 'Inherited GIT_* forbidden' }
+     |                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Inherited GIT_* forbidden

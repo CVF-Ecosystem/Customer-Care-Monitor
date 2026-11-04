@@ -1,0 +1,32 @@
+{
+  "completedAtUTC": "2026-11-04T12:58:13.873387+00:00",
+  "completedMonotonic": 1062641.3547155,
+  "elapsedSeconds": 1464.1016631999519,
+  "semanticSources": 10,
+  "semanticCap": 18,
+  "testBatchesInvoked": 2,
+  "repairTestBatchesInvoked": 0,
+  "focusedCommand": [
+    "python",
+    "-B",
+    "docs\\reviews\\probes\\r139_integrated_20261021\\core_freshness_20261104\\worker_test_capture.py",
+    "focused"
+  ],
+  "fullCommand": [
+    "python",
+    "-B",
+    "docs\\reviews\\probes\\r139_integrated_20261021\\core_freshness_20261104\\worker_test_capture.py",
+    "full"
+  ],
+  "capturedChildProcesses": {
+    "focused": 2045,
+    "full": 4866
+  },
+  "finalRawSha256": {
+    "scripts/cvf_downstream_gate.py": "89090d14d8eebbc90f65305013a5555b158846e5c6ed07208c6e003d8c5fb5ca",
+    "scripts/tests/test_cvf_downstream_gate_core_repin.py": "d109dafcbbc006fbca1f21d8bf6b19c8b8582779c7a7cce3d56770bd1f7edad3",
+    "docs\\reviews\\probes\\r139_integrated_20261021\\core_freshness_20261104\\worker_transaction.ps1": "81a20833a9dc187c72b920730e0af6501a909551030e1f433621b476237a19e2"
+  },
+  "workerWrapperInvocations": 0,
+  "workerCommits": 0
+}

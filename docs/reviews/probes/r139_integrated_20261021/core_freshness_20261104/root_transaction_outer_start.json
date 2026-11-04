@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "pwsh",
+    "-NoProfile",
+    "-NonInteractive",
+    "-File",
+    "docs\\reviews\\probes\\r139_integrated_20261021\\core_freshness_20261104\\worker_transaction.ps1",
+    "-Execute",
+    "-ExpectedSourceSha256",
+    "81a20833a9dc187c72b920730e0af6501a909551030e1f433621b476237a19e2"
+  ],
+  "startedUtc": "2026-11-04T12:59:34.178405+00:00",
+  "originalWrapperPid": 17924,
+  "sourceSha256": "81a20833a9dc187c72b920730e0af6501a909551030e1f433621b476237a19e2",
+  "removedChildEnvironmentNamesOnly": [
+    "GIT_PAGER"
+  ],
+  "hostEnvironmentUnchanged": true
+}

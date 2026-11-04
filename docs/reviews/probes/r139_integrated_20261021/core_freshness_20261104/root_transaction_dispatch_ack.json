@@ -1,0 +1,10 @@
+{
+  "role": "Root COMMIT_STEWARD exact-one maintenance transaction; independent result reviewer",
+  "utc": "2026-11-04T12:59:32.080891+00:00",
+  "sourceSha256": "81a20833a9dc187c72b920730e0af6501a909551030e1f433621b476237a19e2",
+  "sourceWorkerFull": "124PASS_729.542s_finalpins",
+  "independentRoot": "4PASS_155.824s_finalchecker_testpins",
+  "peer": "Source/manualdelta/preflight_receipt_review_PASS",
+  "preflight": "Final81a2_PASS_15.995s_prior2failsretained",
+  "providerBrowserProductGrant": false
+}

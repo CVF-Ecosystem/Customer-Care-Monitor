@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "pwsh",
+    "-NoProfile",
+    "-NonInteractive",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "../.Controlled-Vibe-Framework-CVF/scripts/check_cvf_workspace_agent_enforcement.ps1",
+    "-ProjectPath",
+    "."
+  ],
+  "startedUtc": "2026-11-04T13:06:41.144624+00:00",
+  "durationSeconds": 49.99158799997531,
+  "exitCode": 0
+}

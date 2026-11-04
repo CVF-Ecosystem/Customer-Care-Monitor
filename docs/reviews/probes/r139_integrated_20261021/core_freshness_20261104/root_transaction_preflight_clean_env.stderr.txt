@@ -1,0 +1,9 @@
+ParentContainsErrorRecordException: D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI\docs\reviews\probes\r139_integrated_20261021\core_freshness_20261104\worker_transaction.ps1:89
+Line |
+  89 |      $process = [Diagnostics.Process]::Start($info)
+     |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Exception calling "Start" with "1" argument(s): "An error occurred trying to start process 'C:\Program
+     | Files\Git\cmd\git.exe
+     | C:\Users\tiennm\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\git\cmd\git.exe' with working
+     | directory 'D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI'. The system cannot find the file
+     | specified."

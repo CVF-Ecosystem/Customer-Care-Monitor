@@ -1,0 +1,9 @@
+test_valid_bootstrap_staged_committed_and_snapshot_reuse (root_repin_cases.CoreRepinTwo.test_valid_bootstrap_staged_committed_and_snapshot_reuse) ... ok
+test_bootstrap_staging_atomicity_and_index_mismatch (root_repin_cases.CoreRepinTwo.test_bootstrap_staging_atomicity_and_index_mismatch) ... ok
+test_staged_symlink_mode_even_with_matching_blob (root_repin_cases.CoreRepinTwo.test_staged_symlink_mode_even_with_matching_blob) ... ok
+test_historical_snapshot_tamper_even_when_present_payload_is_valid (root_repin_cases.CoreRepinTwo.test_historical_snapshot_tamper_even_when_present_payload_is_valid) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 153.498s
+
+OK

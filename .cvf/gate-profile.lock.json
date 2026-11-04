@@ -6,7 +6,7 @@
     "path": ".github/workflows/cvf-downstream-gates.yml",
     "renderedSha256": "5cf931e477bc85601030c85d2c3e7cf13f3a5e7181a9fc6f68932d4548763136"
   },
-  "coreCommit": "15e39450853184eb65dbde73398c69c3171a6241",
+  "coreCommit": "c4c8767ac8861854f40d466ba338ffd11eb9558e",
   "files": {
     "check_gate_to_role_closeability.py": "8f00c6421eebe3c1b237e5307ac6e2b0b0343c9a35cf635bbab17aa886e00e8e",
     "cvf_dg_applicability.py": "bffde44fe38494b0dea9e658fb82eaaec31f3bd25c9964445fa837dd29b01c67",

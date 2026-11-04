@@ -1,7 +1,7 @@
 {
     "schemaVersion": "2.0",
     "cvfCoreRepository": "https://github.com/Blackbird081/Controlled-Vibe-Framework-CVF.git",
-    "cvfCoreCommit": "15e39450853184eb65dbde73398c69c3171a6241",
+    "cvfCoreCommit": "c4c8767ac8861854f40d466ba338ffd11eb9558e",
     "workspaceLayout": "SIBLING_HIDDEN_CORE",
     "cvfCoreRelativePath": "../.Controlled-Vibe-Framework-CVF",
     "workspaceRulesRelativePath": "../WORKSPACE_RULES.md",

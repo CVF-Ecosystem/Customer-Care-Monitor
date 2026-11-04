@@ -99,6 +99,10 @@ _REPIN_ADMISSION = "CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-REPIN-MAINTENAN
 _REPIN_FIELDS = frozenset(("schemaVersion", "trancheId", "purpose", "baseCommit", "predecessor", "seedSha256", "riskCeiling", "roles", "coreFrom", "coreTo", "files", "bootstrapException", "ownerInstruction"))
 _REPIN_EXACT = frozenset((".cvf/manifest.json", ".cvf/gate-profile.lock.json", "AGENTS.md", ".github/workflows/cvf-downstream-gates.yml", "scripts/cvf_downstream_gate.py", "scripts/tests/test_cvf_downstream_gate_core_repin.py"))
 _REPIN_INSTALLED = frozenset(("cvf_downstream_gate_profile.json", "cvf_downstream_gate_runner.py", "cvf_dg_common.py", "cvf_dg_install.py", "cvf_dg_continuity.py", "cvf_dg_applicability.py", "cvf_dg_routing.py", "cvf_dg_review.py", "cvf_dg_intake.py", "cvf_dg_coverage.py", "check_gate_to_role_closeability.py", "git-pre-commit.template", "project_learning_home.template.md", "project_learning_record.template.md", "cvf_milestone_coverage.py"))
+_REPIN2_BASE = "38952df8bcf9e01b18a05a1da1095b1e7eda6fd8"
+_REPIN2_CORE_TO = "c4c8767ac8861854f40d466ba338ffd11eb9558e"
+_REPIN2_ADMISSION = "CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-REPIN-2-MAINTENANCE-ADMISSION.json"
+_REPIN2_REPLACEMENTS = frozenset((".cvf/manifest.json", ".cvf/gate-profile.lock.json", "AGENTS.md", "scripts/cvf_downstream_gate.py", "scripts/tests/test_cvf_downstream_gate_core_repin.py"))
 _MAINTENANCE_PATH_EXACT = frozenset((
     ".cvf/gate-profile.lock.json", ".cvf/manifest.json",
     ".github/workflows/cvf-downstream-gates.yml", "AGENTS.md",
@@ -560,6 +564,196 @@ def check_core_repin(root, tid, seed, out_of_scope, r):
         return []
 
 
+def check_core_repin_2(root, tid, seed, out_of_scope, r):
+    """The fixed documentation-only c4 successor; historical proof comes from Git blobs."""
+    def reject(message):
+        raise GateError(message)
+
+    def read_safe(rel):
+        full = os.path.join(root, *rel.split("/"))
+        expected = os.path.join(os.path.realpath(root), *rel.split("/"))
+        if not inside(root, rel) or os.path.normcase(os.path.realpath(full)) != os.path.normcase(expected) or not os.path.isfile(full):
+            reject("missing or aliased path: " + rel)
+        with open(full, "rb") as fh:
+            return fh.read()
+
+    def obj(raw):
+        return json.loads(raw.decode("utf-8-sig"), object_pairs_hook=_no_duplicate_pairs)
+
+    def ancestor(a, b):
+        if _git(root, "merge-base", "--is-ancestor", a, b, check=False).returncode != 0:
+            reject("required ancestry missing")
+
+    def blob(commit, rel):
+        # A symlink blob must never substitute for a regular historical payload.
+        entry = _git(root, "ls-tree", "-z", commit, "--", rel).stdout
+        if not entry.startswith((b"100644 blob ", b"100755 blob ")) or entry.count(b"\x00") != 1:
+            reject("historical path is not a regular file: " + rel)
+        return _git(root, "show", f"{commit}:{rel}").stdout
+
+    def first_add(rel):
+        commits = _git(root, "log", "--diff-filter=A", "--format=%H", "--reverse", "--", rel).stdout.decode().split()
+        return commits[0] if commits else None
+
+    def index_blob(rel):
+        entry = _git(root, "ls-files", "--stage", "-z", "--", rel).stdout
+        if (not entry.startswith((b"100644 ", b"100755 ")) or entry.count(b"\x00") != 1 or
+                b" 0\t" not in entry):
+            reject("staged path is not a regular stage-zero file: " + rel)
+        return _git(root, "show", f":{rel}").stdout
+
+    def roles_and_exception(admission):
+        roles, exception = admission.get("roles"), admission.get("bootstrapException")
+        instruction = admission.get("ownerInstruction")
+        if (not isinstance(instruction, str) or not instruction.strip() or
+                not isinstance(roles, dict) or set(roles) != _MAINTENANCE_ROLES or
+                not all(isinstance(v, str) and v.strip() for v in roles.values()) or
+                roles["worker"].strip().casefold() == roles["reviewer"].strip().casefold() or
+                roles["commitSteward"].strip().casefold() != "root" or
+                not isinstance(exception, dict) or set(exception) != {"reason", "ownerInstruction"} or
+                not isinstance(exception["reason"], str) or not exception["reason"].strip() or
+                exception["ownerInstruction"] != instruction):
+            reject("roles or bootstrap exception invalid")
+
+    def payload(admission, commit, count):
+        files = admission.get("files")
+        if not isinstance(files, dict) or len(files) != count:
+            reject("historical payload count invalid")
+        for path, digest in files.items():
+            installed = path.startswith("scripts/cvf_gates/") and path[len("scripts/cvf_gates/"):] in _REPIN_INSTALLED
+            if (not _safe_maintenance_path(path) and path not in _REPIN_EXACT or
+                    path.startswith("scripts/cvf_gates/") and not installed or
+                    not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest)):
+                reject("historical payload entry invalid")
+            if _lf_sha(blob(commit, path)) != digest:
+                reject("historical first-commit payload differs: " + path)
+        return files
+
+    try:
+        head = verify_commit(root, "HEAD", "HEAD")
+        for fixed in (_MAINTENANCE_BASE, _REPIN_BASE, _REPIN2_BASE):
+            verify_commit(root, fixed, "fixed repin base")
+        staged = set(git_z(root, "diff", "--cached", "--name-only", "-z"))
+        seed_rel = "CVF_SESSION/authority/" + tid + ".json"
+        seed_raw = read_safe(seed_rel)
+        seed_first = first_add(seed_rel)
+        if not seed_first or obj(seed_raw) != seed:
+            reject("seed first commit absent or supplied seed differs")
+        ancestor(seed_first, _MAINTENANCE_BASE)
+        if any(_lf_sha(blob(c, seed_rel)) != _lf_sha(seed_raw) for c in (seed_first, _MAINTENANCE_BASE)):
+            reject("original seed first blob changed")
+
+        old_raw, prior_raw = read_safe(_MAINTENANCE_ADMISSION), read_safe(_REPIN_ADMISSION)
+        old, prior = obj(old_raw), obj(prior_raw)
+        old_first, prior_first = first_add(_MAINTENANCE_ADMISSION), first_add(_REPIN_ADMISSION)
+        if not old_first or not prior_first:
+            reject("historical admission first commit absent")
+        for a, b in ((_MAINTENANCE_BASE, old_first), (old_first, _REPIN_BASE),
+                     (_REPIN_BASE, prior_first), (prior_first, _REPIN2_BASE), (_REPIN2_BASE, head)):
+            ancestor(a, b)
+        for rel, raw, first in ((_MAINTENANCE_ADMISSION, old_raw, old_first), (_REPIN_ADMISSION, prior_raw, prior_first)):
+            if _lf_sha(blob(first, rel)) != _lf_sha(raw):
+                reject("historical admission first blob changed: " + rel)
+        if (not isinstance(old, dict) or set(old) != _MAINTENANCE_FIELDS or
+                old["schemaVersion"] != "1.0" or old["trancheId"] != tid or
+                old["baseCommit"] != _MAINTENANCE_BASE or old["purpose"] != "STATIC_REPOSITORY_MAINTENANCE_ONLY" or
+                old["riskCeiling"] != seed.get("riskCeiling") or old["seedSha256"] != _lf_sha(seed_raw)):
+            reject("historical maintenance identity invalid")
+        roles_and_exception(old)
+        old_files = payload(old, old_first, 17)
+        if (not isinstance(prior, dict) or set(prior) != _REPIN_FIELDS or
+                prior["schemaVersion"] != "1.0" or prior["trancheId"] != tid or
+                prior["purpose"] != "STATIC_PUBLIC_CORE_REPIN_ONLY" or prior["baseCommit"] != _REPIN_BASE or
+                prior["coreFrom"] != _REPIN_CORE_FROM or prior["coreTo"] != _REPIN_CORE_TO or
+                prior["riskCeiling"] != seed.get("riskCeiling") or prior["seedSha256"] != _lf_sha(seed_raw) or
+                prior["predecessor"] != {"path": _MAINTENANCE_ADMISSION, "sha256": _lf_sha(old_raw)}):
+            reject("historical first repin identity invalid")
+        roles_and_exception(prior)
+        prior_files = payload(prior, prior_first, 18)
+        for path, digest in old_files.items():
+            installed = path.startswith("scripts/cvf_gates/") and path[len("scripts/cvf_gates/"):] in _REPIN_INSTALLED
+            if path not in _REPIN_EXACT and not installed and prior_files.get(path) != digest:
+                reject("historical nonrepinnable payload changed")
+        old_lock = obj(blob(prior_first, ".cvf/gate-profile.lock.json"))
+        old_manifest = obj(blob(prior_first, ".cvf/manifest.json"))
+        if (not isinstance(old_lock, dict) or old_lock.get("coreCommit") != _REPIN_CORE_TO or
+                old_lock.get("profileId") != "cvf.downstreamGateProfile@1.2.0" or old_lock.get("profileVersion") != "1.2.0" or
+                old_lock.get("gatesDir") != "scripts/cvf_gates" or not isinstance(old_lock.get("files"), dict) or
+                set(old_lock["files"]) != _REPIN_INSTALLED or
+                not isinstance(old_manifest, dict) or old_manifest.get("cvfCoreCommit") != _REPIN_CORE_TO):
+            reject("historical profile or manifest invalid")
+        if (any(not isinstance(old_lock.get(key), str) or not re.fullmatch(r"[0-9a-f]{64}", old_lock[key])
+                for key in ("profileSha256", "runnerSha256", "bundleSha256")) or
+                old_lock["profileSha256"] != old_lock["files"]["cvf_downstream_gate_profile.json"] or
+                old_lock["runnerSha256"] != old_lock["files"]["cvf_downstream_gate_runner.py"]):
+            reject("historical profile digest pins invalid")
+        for name in _REPIN_INSTALLED:
+            digest = old_lock["files"][name]
+            if (not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest) or
+                    _lf_sha(blob(prior_first, "scripts/cvf_gates/" + name)) != digest or
+                    _lf_sha(read_safe("scripts/cvf_gates/" + name)) != digest):
+                reject("installed source differs from historical lock: " + name)
+
+        raw = read_safe(_REPIN2_ADMISSION)
+        admission = obj(raw)
+        if (tid != _MAINTENANCE_TRANCHE or not isinstance(admission, dict) or set(admission) != _REPIN_FIELDS or
+                admission["schemaVersion"] != "1.0" or admission["trancheId"] != tid or
+                admission["purpose"] != "STATIC_PUBLIC_CORE_REPIN_ONLY" or admission["baseCommit"] != _REPIN2_BASE or
+                admission["coreFrom"] != _REPIN_CORE_TO or admission["coreTo"] != _REPIN2_CORE_TO or
+                admission["riskCeiling"] != seed.get("riskCeiling") or admission["seedSha256"] != _lf_sha(seed_raw) or
+                admission["predecessor"] != {"path": _REPIN_ADMISSION, "sha256": _lf_sha(prior_raw)}):
+            reject("second repin identity or fixed pins invalid")
+        roles_and_exception(admission)
+        second_first = first_add(_REPIN2_ADMISSION)
+        if second_first:
+            ancestor(_REPIN2_BASE, second_first)
+            ancestor(second_first, head)
+            if _lf_sha(blob(second_first, _REPIN2_ADMISSION)) != _lf_sha(raw):
+                reject("second repin first blob changed")
+        elif head != _REPIN2_BASE or _git(root, "cat-file", "-e", f"HEAD:{_REPIN2_ADMISSION}", check=False).returncode == 0:
+            reject("second bootstrap requires absent history and exact base HEAD")
+        files = admission["files"]
+        if not isinstance(files, dict) or set(files) != set(prior_files) or set(files) != set(out_of_scope):
+            reject("second effective file set differs")
+        record = obj(read_safe("CVF_SESSION/tranches/" + tid + ".json"))
+        base = record.get("baseCommit")
+        if not isinstance(base, str) or not HEX40.fullmatch(base):
+            reject("active range base invalid")
+        verify_commit(root, base, "active tranche base")
+        ancestor(base, head)
+        actual = set(git_z(root, "diff", "--name-only", "-z", f"{base}..HEAD")) | set(worktree_files(root))
+        actual = {p for p in actual if not path_matches(p, list(seed.get("allowedPaths") or []) + ALWAYS_ALLOWED)}
+        if set(files) != actual:
+            reject("second differs from actual active range and worktree")
+        current_lock = obj(read_safe(".cvf/gate-profile.lock.json"))
+        expected_lock = dict(old_lock, coreCommit=_REPIN2_CORE_TO)
+        current_manifest = obj(read_safe(".cvf/manifest.json"))
+        if current_lock != expected_lock or current_manifest != dict(old_manifest, cvfCoreCommit=_REPIN2_CORE_TO):
+            reject("second manifest/lock differs from fixed documentation-only repin")
+        if not second_first and staged and _REPIN2_ADMISSION not in staged:
+            reject("bootstrap second admission must be staged with payload")
+        for rel, content in ((_MAINTENANCE_ADMISSION, old_raw), (_REPIN_ADMISSION, prior_raw),
+                             (seed_rel, seed_raw), (_REPIN2_ADMISSION, raw)):
+            if rel in staged and _lf_sha(index_blob(rel)) != _lf_sha(content):
+                reject("staged authority differs: " + rel)
+        for path, digest in files.items():
+            if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest):
+                reject("second payload digest invalid")
+            if path not in _REPIN2_REPLACEMENTS and digest != prior_files[path]:
+                reject("documentation-only frozen payload changed: " + path)
+            if _lf_sha(read_safe(path)) != digest or (path in staged and _lf_sha(index_blob(path)) != digest):
+                reject("worktree or staged second payload differs: " + path)
+            if second_first and _lf_sha(blob(second_first, path)) != digest:
+                reject("second first-commit payload differs: " + path)
+            if not second_first and _REPIN2_ADMISSION in staged and path not in staged:
+                if _lf_sha(blob(head, path)) != digest:
+                    reject("changed bootstrap second payload not staged: " + path)
+        return list(files)
+    except (GateError, OSError, UnicodeError, ValueError, TypeError, KeyError, AttributeError) as exc:
+        r.fail(f"{tid}: second core repin admission invalid ({exc})")
+        return []
+
+
 def check_maintenance_admission(root, tid, seed, out_of_scope, r):
     """Admit only exact, hash-bound R139 static maintenance; never alter the seed.
 
@@ -568,6 +762,15 @@ def check_maintenance_admission(root, tid, seed, out_of_scope, r):
     """
     if tid != _MAINTENANCE_TRANCHE:
         return []
+    second_exists = os.path.lexists(os.path.join(root, *_REPIN2_ADMISSION.split("/")))
+    if not second_exists and have_git(root):
+        try:
+            second_exists = bool(_git(root, "log", "--diff-filter=A", "--format=%H", "--", _REPIN2_ADMISSION).stdout.strip())
+        except GateError:
+            r.fail(f"{tid}: second successor history could not be verified")
+            return []
+    if second_exists:
+        return check_core_repin_2(root, tid, seed, out_of_scope, r)
     successor_exists = os.path.lexists(os.path.join(root, *_REPIN_ADMISSION.split("/")))
     if not successor_exists and have_git(root):
         try:

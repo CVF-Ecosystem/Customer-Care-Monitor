@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "pwsh",
+    "-NoProfile",
+    "-NonInteractive",
+    "-Command",
+    "$t=$null;$e=$null;[System.Management.Automation.Language.Parser]::ParseFile('docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_transaction.ps1',[ref]$t,[ref]$e) | Out-Null;if($e.Count){$e | ForEach-Object {$_.Message};exit 1};Write-Output 'PARSE_ONLY_PASS; repaired wrapper not invoked'"
+  ],
+  "observedUtc": "2026-11-04T12:49:39.337518+00:00",
+  "sourceRawSha256": "73ecc4da0bc6601554a8569505abbbfa5411f9244dc6099fd3bf3bda3b0f0597",
+  "durationSeconds": 1.6515138999093324,
+  "exitCode": 0,
+  "updaterInvocations": 0,
+  "preflightInvocations": 0,
+  "reason": "Accepted repair1 lock-lifetime/descendant-custody finding; one conditional Root repair check batch"
+}

@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "pwsh",
+    "-NoProfile",
+    "-NonInteractive",
+    "-File",
+    "docs\\reviews\\probes\\r139_integrated_20261021\\core_freshness_20261104\\worker_transaction.ps1",
+    "-PreflightOnly",
+    "-ExpectedSourceSha256",
+    "5784844638fdee042642a01ee0a8697b4fc4e296e7ca95cd663840725667b461",
+    "-ExpectedPreimagesSha256",
+    "848d6c1ffee3362fd17b032e11f802172951663793ac7d3eb2dcf46e891b0c42"
+  ],
+  "startedUtc": "2026-11-04T12:53:47.650057+00:00",
+  "durationSeconds": 3.172740099951625,
+  "sourceRawSha256": "5784844638fdee042642a01ee0a8697b4fc4e296e7ca95cd663840725667b461",
+  "preimagesRawSha256": "848d6c1ffee3362fd17b032e11f802172951663793ac7d3eb2dcf46e891b0c42",
+  "exitCode": 1,
+  "updaterInvocations": 0,
+  "purpose": "Operational read-only transaction precondition; no latch/mirror/updater effects"
+}

@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_test_capture.py",
+    "full"
+  ],
+  "startedAtUTC": "2026-11-04T12:45:34.148120+00:00",
+  "startedMonotonic": 1061881.6293822,
+  "durationSeconds": 729.5415911998134,
+  "sourceRawSha256": {
+    "scripts/cvf_downstream_gate.py": "89090d14d8eebbc90f65305013a5555b158846e5c6ed07208c6e003d8c5fb5ca",
+    "scripts/tests/test_cvf_downstream_gate_core_repin.py": "d109dafcbbc006fbca1f21d8bf6b19c8b8582779c7a7cce3d56770bd1f7edad3"
+  },
+  "exitCode": 0,
+  "testsRun": 124,
+  "failures": 0,
+  "errors": 0,
+  "error": null,
+  "skipped": 0
+}

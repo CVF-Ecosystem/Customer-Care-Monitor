@@ -1,0 +1,16 @@
+{
+  "observedUtc": "2026-11-04T13:05:19.995044+00:00",
+  "manifestLockCore": "c4c8767ac8861854f40d466ba338ffd11eb9558e",
+  "lockOnlyCoreFieldChanged": true,
+  "installedFilesUnchanged": 15,
+  "workflowFrozen": true,
+  "payloadSet": 18,
+  "replacements": [
+    ".cvf/manifest.json",
+    ".cvf/gate-profile.lock.json",
+    "AGENTS.md",
+    "scripts/cvf_downstream_gate.py",
+    "scripts/tests/test_cvf_downstream_gate_core_repin.py"
+  ],
+  "productRuntimeReleased": false
+}

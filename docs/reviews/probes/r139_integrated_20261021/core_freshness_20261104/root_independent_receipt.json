@@ -1,0 +1,17 @@
+{
+  "startedUtc": "2026-11-04T12:46:33.989704+00:00",
+  "durationSeconds": 155.8236388999503,
+  "sourceRawSha256": {
+    "scripts/cvf_downstream_gate.py": "89090d14d8eebbc90f65305013a5555b158846e5c6ed07208c6e003d8c5fb5ca",
+    "scripts/tests/test_cvf_downstream_gate_core_repin.py": "d109dafcbbc006fbca1f21d8bf6b19c8b8582779c7a7cce3d56770bd1f7edad3",
+    "docs\\reviews\\probes\\r139_integrated_20261021\\core_freshness_20261104\\worker_transaction.ps1": "86244406fa29b318cc8808e0e3b236a66da9c6aef4b90884fd3c7602c9c30906"
+  },
+  "testsRun": 4,
+  "failures": 0,
+  "errors": 0,
+  "powershellParseExit": 0,
+  "error": null,
+  "exitCode": 0,
+  "providerCalls": 0,
+  "updaterInvocations": 0
+}
