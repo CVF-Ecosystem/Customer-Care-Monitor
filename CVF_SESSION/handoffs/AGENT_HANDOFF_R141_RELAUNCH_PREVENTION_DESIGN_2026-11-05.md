@@ -49,3 +49,11 @@ Build gate history, retained:
    - R140 handoff marked SUPERSEDED, with its history kept.
    - The PLAN coverage block moved from the packet to the spec, whose status is not terminal.
 3. Result: runner worker-return PASS 7/0; preflight PASS 6/6 (catalog SKIP, Windows-only).
+
+Review round 1, retained:
+1. The independent Opus reviewer returned CHANGES_REQUIRED, recorded in `docs/reviews/R141_RELAUNCH_PREVENTION_INDEPENDENT_REVIEW_2026-11-05.md`.
+   - F1 (blocking): no pinned page-ID set, and the owner did not see every actor's responses.
+   - F2 (blocking): the native CLI auto-starts a daemon that launches Chrome.
+   - F3–F6: non-blocking.
+2. The spec author made the single consolidated repair round in §4.5 (R-F1 to R-F4) plus the A1/A2/A3 and citation fixes. The orchestrator re-verified F2 in source: `bin/chrome-devtools.js:187-194` auto-starts; `daemon/client.js:105-109` `sendCommand` does not.
+3. Tranche history: REVIEW_PENDING, then CHANGES_REQUIRED, then REVIEW_PENDING. Re-review goes to the same independent reviewer.

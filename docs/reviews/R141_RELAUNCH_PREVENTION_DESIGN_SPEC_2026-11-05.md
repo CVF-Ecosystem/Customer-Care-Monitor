@@ -1,6 +1,6 @@
 # R141 physical-relaunch prevention: owner-held Chrome with connect-only native MCP
 
-Status: DESIGN_SPEC_PENDING_INDEPENDENT_REVIEW
+Status: DESIGN_SPEC_REPAIR1_PENDING_INDEPENDENT_REREVIEW
 Tranche: CCMAI-RUNTIME-141
 Risk: R2
 Worker: Cloud ORCHESTRATOR acting as DESIGN_OWNER / SPEC_AUTHOR (documentary only)
@@ -22,7 +22,7 @@ This is a design and specification only. It proposes the reopen prerequisite nam
 
 - The public `chrome-devtools-mcp@1.9.0` npm tarball matches the registry integrity (sha512) and shasum.
 - All **15/15** native files that R139 recorded from the operator's Windows Antigravity install (S06–S17, S28, S29, S34) are byte-identical to the tarball.
-- Four further cited files come from the same verified tarball but were not in the R139 inventory: `config/browser-options.js`, `ToolHandler.js`, `tools/ToolDefinition.js` and `McpPage.js`. Their hashes are listed in the probe. **Local must confirm them on Windows.**
+- Five further files come from the same verified tarball but were not in the R139 inventory: `config/browser-options.js`, `ToolHandler.js`, `tools/ToolDefinition.js`, `McpPage.js` and `package.json`. Their hashes are listed in the probe. **Local must confirm them on Windows.** Repair round 1 (F6) corrected this count from four to five.
 - The package was never installed, imported or executed, and no package bytes are committed.
 
 ## 3. Native source facts (static; paths under `build/src/`)
@@ -34,8 +34,8 @@ This is a design and specification only. It proposes the reopen prerequisite nam
 | N3 | The only `launch` call site is `ensureBrowserLaunched` (`browser.js:198-207`, calling `launch` at `:122-197`). A grep of the package, excluding bundled puppeteer, finds its only caller at `index.js:173`. | `browser.js`, `index.js` |
 | N4 | `--wsEndpoint` (alias `-w`) is a supported option. It must use the `ws:`/`wss:` protocol and conflicts with `--browserUrl`. Its example form is `ws://127.0.0.1:9222/devtools/browser/<id>`. | `config/browser-options.js:37-60` |
 | N5 | Page IDs come from a process-wide counter that is never reset outside a test helper. The source comment says an ID issued before a reconnect "fails to resolve instead of hitting an unrelated page". | `McpContext.js:19-23,130-132,394` |
-| N6 | When the browser object changes, the context is disposed and rebuilt with `reconnected: true`. The **next** response carries `structuredContent.reconnected = true` and a "browser was restarted or reconnected" note. This is detection after the fact. | `index.js:189-201`, `McpResponse.js:505-507` |
-| N7 | `pageIdRouting` defaults to `true`. With it on and not `--slim`, page-scoped tools add `pageId: zod.number()` to their schema. The handler then resolves the page through `getPageById`, not the selected page. | `config/mcp-options.js:39-43`, `ToolHandler.js:134-140,190-196`, `tools/ToolDefinition.js:16-34` |
+| N6 | When the browser object changes, the context is disposed and rebuilt with `reconnected: true`. The **next** response carries `structuredContent.reconnected = true` and a "browser was restarted or reconnected" note. This is detection after the fact. The notice is emitted **once per context, to whichever caller comes first**, and can be lost if response formatting throws (`ToolHandler.js:183,225,238-252`). Another actor may therefore never see it. | `index.js:190-203`, `McpResponse.js:505-507` |
+| N7 | `pageIdRouting` defaults to `true`. With it on and not `--slim`, page-scoped tools add `pageId: zod.number()` to their schema. The handler then resolves the page through `getPageById`. If `pageId` is absent, the handler falls back to the selected page (`ToolHandler.js:190-196`). The reviewer cites the bundled MCP SDK as rejecting a missing required `pageId` before the handler runs (`third_party/index.js:39070,39100-39111`). Exception: `evaluate_script` declares `pageId` optional and offers a `serviceWorkerId` bypass (`tools/script.js:60-108`). | `config/mcp-options.js:39-43`, `ToolHandler.js:134-140,190-196`, `tools/ToolDefinition.js:16-34` |
 | N8 | The foreground daemon forwards its argv unchanged to the MCP server child (`args: [INDEX_SCRIPT_PATH, ...mcpServerArgs]`), so N1–N7 apply on the R139-selected daemon route. | `daemon/daemon.js:87,96` |
 | N9 | In connected mode `closeBrowser` only disconnects; it does not close Chrome. Chrome lifetime therefore stays with whoever launched it. | `browser.js:215-232` |
 
@@ -80,14 +80,66 @@ This is a design and specification only. It proposes the reopen prerequisite nam
 - The design therefore requires the product action sequence to carry a `pageId` on every page-mutating call. The only non-page-scoped calls are `new_page` (once, at the start of the window) and `list_pages`.
 - Any `reconnected: true` makes the whole window HOLD and its evidence non-acceptable. The window is not "repaired".
 
+### 4.5 Repair round 1: binding amendments (from independent review F1–F5)
+
+These amendments are part of the design. Where they conflict with §4.1–§4.3 or §5, they take precedence.
+
+**R-F2. Single daemon start; no auto-start route (fixes no-relaunch).**
+- The native CLI auto-starts a daemon with its own serialized options when none is running for the session (`bin/chrome-devtools.js:187-194`). That daemon would not carry `--wsEndpoint` and would reach the launch branch (`index.js:173`).
+- Therefore the **owner alone** starts exactly one foreground daemon process: `node <daemon.js>` with the closed-set argv. The owner holds its original handle.
+- Actors issue commands **only** through the exported native `sendCommand`. It throws `Daemon is not running.` and never starts a daemon (`daemon/client.js:105-109`).
+- The native CLI binary (`bin/chrome-devtools.js`), its `start` command and any `startDaemon`/ensure helper are forbidden for the whole campaign.
+- The session-ID namespace is exclusively claimed by the owner.
+- A daemon or MCP-child exit, or a `Daemon is not running` error, is HOLD. There is no restart.
+- Preflight before OWNER_HELD and an observation at TERMINAL must both show:
+  - no other daemon socket for the claimed session ID;
+  - no Chrome process using the owned user-data-dir other than the owner's PID.
+
+**R-F1. Pinned page-ID set; owner sees every response (fixes same-held-context).**
+- At PRELIMINARY_OBSERVED the owner records the pinned set: the page ID returned by the admitted `new_page` and confirmed by the independent observer's own native call.
+- During the product window every page-scoped call must use an ID in the pinned set.
+- All actor commands are relayed through the owner's `sendCommand` boundary, so the owner receives **every** response from every actor and checks it before releasing the next command.
+- The owner stops new work and goes to HOLD on any of the following:
+  - `reconnected: true` in any actor's response;
+  - any `No page found` or other unknown-page error;
+  - any page ID outside the pinned set appearing in any response;
+  - any `list_pages` result that differs from the pinned set.
+- Actors may not re-acquire IDs. `list_pages` is observation only, and its result must equal the pinned set.
+
+**Residual (restated).** A silent same-Chrome reconnect can still allow one call to execute in the rebuilt context. With R-F1, that call can only be:
+- a pinned-ID call, which fails because the old ID does not resolve (N5); or
+- `list_pages`, which is read-only.
+
+Its response, or the next one, triggers HOLD at the owner. No product mutation can succeed in a replaced context without the owner seeing a HOLD condition first. The physical no-relaunch requirement is unaffected.
+
+**R-F3. Exact argv and environment match.**
+- The preflight parses argv exactly and rejects anything not in the closed set. The package itself only logs unknown flags.
+- `--wsEndpoint` must be present and non-empty, use the `ws:` scheme, have host `127.0.0.1`, use the recorded port, and have path `/devtools/browser/<recorded guid>`. An empty `--wsEndpoint=` would make N1's condition false and fall through to launch.
+- `--browserUrl`, `--autoConnect` and every launch-only or routing-disabling flag listed in §4.2 are rejected.
+- The environment is an allowlist: the two session/no-update/no-stats variables reviewed in R139 plus the OS minimum. `NODE_OPTIONS` and any other `NODE_*`/`npm_*` injection variables must be unset.
+
+**R-F4. Explicit tool allowlist for the product window.**
+- **Allowed:**
+  - `new_page` (once, owner-relayed, before PRELIMINARY_OBSERVED);
+  - `list_pages` (observation only);
+  - with explicit pinned `pageId`: `navigate_page`, `take_snapshot`, `wait_for`, `take_screenshot`, `click`, `fill`, `fill_form`, `type_text`, `press_key`, `hover`, `handle_dialog`.
+- **Forbidden:**
+  - `evaluate_script` (optional `pageId`, `serviceWorkerId` bypass);
+  - `select_page`, `close_page`, `resize_page`, `click_at`, `drag`, `upload_file`, `get_tab_id`;
+  - all extension, devtools, lighthouse, performance, memory, network-mutation, emulation, screencast, pwa and webmcp tools.
+- Closing the target is done by the owner at CLEANUP through the original Chrome handle, not by an actor tool.
+- The later execution admission may narrow this list but must not widen it.
+
 ### 4.4 Assumptions that need a separately admitted check (not run here)
 
-- **A1.** Chrome refuses a WebSocket upgrade to `/devtools/browser/<guid>` when `<guid>` is not its own browser target ID. The connect then fails with no fallback.
+- **A1.** (Repair F5 scope note: if the owner's Chrome exits and a **non-Chrome** process binds the port, the connect also has to fail or produce no usable CDP session. The owner's Chrome-exit HOLD already covers this, because the owner observes the original-handle exit before any further product action.) Chrome refuses a WebSocket upgrade to `/devtools/browser/<guid>` when `<guid>` is not its own browser target ID. The connect then fails with no fallback.
   - Check: owner launches Chrome, records the GUID, then connects with a mutated GUID; expect failure.
   - Then: kill that Chrome, start a new one on the same port, connect with the old endpoint; expect failure.
 - **A2.** The MCP SDK request validation enforces the registered `pageId: zod.number()` as required. A page-scoped call without `pageId` is then rejected, not routed to the selected page.
+  - The reviewer found static support in the bundled SDK 1.30.0 (`third_party/index.js:39070,39100-39111`), so A2 is now low risk. It stays a check because it governs behaviour on the actual Windows runtime.
   - Check: one offline call without `pageId`; expect a validation error.
-- **A3.** The Windows install's copies of the four additional cited files equal the tarball hashes in the probe.
+  - Under §4.5, `evaluate_script` is forbidden, so its optional `pageId` does not depend on A2.
+- **A3.** The Windows install's copies of the **five** additional cited files equal the tarball hashes in the probe.
   - Check: a hash comparison on Windows, with no execution.
 
 All three checks need Chrome or Windows. They belong to a future execution admission run by Local, not to this tranche. Until they pass, OHC is **DESIGNED_SOURCE_BACKED_PENDING_A1_A3**, not executable.
@@ -98,11 +150,22 @@ This binds OHC into the Root-selected lifecycle in the causal assessment. It ref
 
 | State | OHC-specific requirement |
 |---|---|
-| ADMITTED → OWNER_HELD | Preconditions: exact pins including the tarball identity, an argv closed-set preflight PASS, and A1–A3 evidence accepted. The owner then performs its single Chrome launch, records the GUID endpoint and starts one daemon with `--wsEndpoint`. A missing precondition means NO_START. |
-| OWNER_HELD → PRELIMINARY_OBSERVED | The producer creates the admitted target with `new_page`. The independent observer issues its own native call against the same page ID. Both responses must lack `reconnected`. |
-| PRELIMINARY_OBSERVED → PRODUCT_WINDOW | Every page-mutating product call carries an explicit `pageId`. The original clock stays as-is (+1020 s work cutoff). |
-| Any state, on a `reconnected: true` response, a connect failure or a Chrome exit | Stop new work and go to CLEANUP, then TERMINAL HOLD. Unknown provider outcomes keep their debit or hold. No retry, relaunch or renewal. |
+| ADMITTED → OWNER_HELD | Preconditions: exact pins including the tarball identity, an exact argv/env preflight PASS (R-F3), a single-daemon/no-foreign-Chrome preflight (R-F2), and A1–A3 evidence accepted. The owner then performs its single Chrome launch, records the GUID endpoint and starts the one daemon with `--wsEndpoint`. A missing precondition means NO_START. |
+| OWNER_HELD → PRELIMINARY_OBSERVED | Through the owner relay, the producer creates the admitted target with `new_page`. The independent observer issues its own native call against that page ID. The owner records the pinned page-ID set (R-F1). Both responses must lack `reconnected`. |
+| PRELIMINARY_OBSERVED → PRODUCT_WINDOW | Only allowlisted tools (R-F4) are used, each with a pinned `pageId`. The owner checks every response for the R-F1 HOLD conditions before releasing the next command. The original clock stays as-is (+1020 s work cutoff). |
+| Any state, on any R-F1 HOLD condition, a connect failure, a daemon/child exit or a Chrome exit | Stop new work and go to CLEANUP, then TERMINAL HOLD. Unknown provider outcomes keep their debit or hold. No retry, relaunch or renewal. |
 | CLEANUP → TERMINAL | Owner closes Chrome through its original handle and waits on it within the +1200 s reserve. Daemon cleanup is exact-owned. The closing evidence is the original-handle wait plus the recorded GUID/PID. |
+
+## 5a. Repair history
+
+Independent review round 1 (`docs/reviews/R141_RELAUNCH_PREVENTION_INDEPENDENT_REVIEW_2026-11-05.md`) returned CHANGES_REQUIRED.
+
+- **F1 and F2 (blocking):** addressed by R-F1 and R-F2.
+- **F3–F5 (non-blocking):** addressed by R-F3, R-F4 and the A1 scope note.
+- **F6 (citations and file count):** corrected in §2, N6 and A3.
+- **A2:** narrowed with the reviewer's SDK citation.
+
+This is the single consolidated repair round the seed allows.
 
 ## 6. Options considered
 
