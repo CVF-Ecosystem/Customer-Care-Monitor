@@ -125,7 +125,25 @@ Mandatory static gate runs are listed separately in §6. The 28 cases are one su
 
 ## 5. Advisory second opinion (not a review)
 
-PENDING. A read-only independent advisory pass was started on the diff before this transport commit. Its result will be appended in a follow-up transport commit on the same branch; if it finds a defect, the worker reports it to Root rather than self-repairing beyond scope.
+The operator allowed an independent advisory model. It ran a read-only review by hand-tracing the diff, without running tests or typecheck, and is not a Root review. Its result: **no blocking defects.**
+
+What the advisor confirmed by tracing:
+- No stale success, error, finally or timer path remains, including when a promise ignores abort, for the same id A→B→A, after lifetime change and after unmount.
+- The execution, POST, no-resend, hold and poll bounds are unchanged.
+- The poll deadline abort still reaches the in-flight read, and supersession cannot end the poll loop.
+- No reachable stuck `loading` state was introduced.
+- Listeners are detached on supersede and in finally.
+
+Non-blocking advisor findings, retained for Root. The worker did not repair these, because of scope and the no-self-repair rule:
+
+1. **Low, S02 `expect(holdOf(reqA)).toBeNull()`.** This assertion is vacuous on the original source, because no marker is seeded. S08 is the real hold-ownership proof.
+2. **Low.** S03 A→B resolve and the S06 lifetime cases pass on the original source. They are regression guards, not race proofs, consistent with §4.
+3. **Low.** The `signal.aborted` assertions indexed by mock call depend on call ordering, which makes them brittle. They are acceptable because the contract asks for abort where supported.
+4. **Nit.** In S03-timer and S06, fake timers are installed after mount, so the first real 60 s timer is not fake-cleared. This is harmless because of the timer self-guard.
+5. **Nit.** `readSelected` returns `true` on early exits that mean "not current". This is safe only because callers re-check `current()`. A comment or a tri-state return would be clearer.
+6. **Pre-existing, not new.** If `props.signal` aborts without its identity changing, `loading` can stay true.
+
+**Worker note on the advisor's claim.** The advisor says the S03 A→B→A cases "fail against the original source". That rests on tracing. In T1 those two tests, and S05, failed first on the abort assertion. Their behavioral red therefore remains **unproven by execution**, as stated in §4.
 
 ## 6. Static gate (worker-return)
 
