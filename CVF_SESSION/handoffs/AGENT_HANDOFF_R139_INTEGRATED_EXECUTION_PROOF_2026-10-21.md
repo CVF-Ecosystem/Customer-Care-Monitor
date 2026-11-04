@@ -6,10 +6,14 @@ Status: ACTIVE
 
 - Current mode: BUILD
 - Active phase: BUILD
-- Active role: Root ORCHESTRATOR / independent DESIGN REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; SolSPEC_AUTHOR finished, separate Terra conditionalDESIGN PASS; sourceWORK_ORDER next, product HARD_HOLD
+- Active role: Root ORCHESTRATOR / WORK_ORDER_AUTHOR / independent REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; SolMedium finite freshness repair worker awaiting committed preparation; separate TerraHigh admission/source reviewer; native adapter BUILD HELD
 - Active tranche: CCMAI-RUNTIME-139
-- Next allowed move: CCMAI-RUNTIME-139 P01/B01 conditionalDESIGN independently accepted afterrepair1,34of36sources/nativeVERSION1.9.0. Root conditionally adopts exactnativeforegrounddaemon/sendCommand for source-WOpreparation ONLY; no implementation/effects. Next: Root onefinite sourceWORK_ORDER for minimalnativeone-shot adapter/current-pin-preflightdata with exactoriginalowner interface/dependencies derived beforeBUILD; no blanketGo/G1G2migration. Nativeinflightphysicalrelaunchrace HARD PRODUCTHOLD; integratedsameheldcontext/originalclock/G0->product->E06 NOT_DESIGNED, sourcebackedenforcementor explicitOwneracceptance-decisionrequired beforeproduct. CorefiveproductUNKNOWN/fullR139/M3/FREEZEOPEN; oldv3SPENT/browser23/v2UNKNOWN/27/4/1/5/audit17vs16+2/19 and interruptedcheckUNKNOWNs retained. Facebook/ZaloOAparked.
+- Next allowed move: CCMAI-RUNTIME-139 fresh doctor FAIL27/28: public Core15e behind origin/main c4c8767 docs-only. Native adapter source drafts PENDING/BUILD HELD. Next: independently review bounded CORE-FRESHNESS-20261104 admission, Root preparation commit, then Sol fixed-second-repin checker repair and independent source review before official Core transaction/project pin adoption. Preserve both prior immutable maintenance authorities, all historical costs/UNKNOWNs and source drafts. No adapter/native/browser/provider/product effects; physical relaunch HARD_HOLD/integrated lifetime NOT_DESIGNED/CorefiveproductUNKNOWN/fullR139/M3/FREEZE OPEN; Facebook/ZaloOA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
+
+## Freshness repair WORK_ORDER / role acknowledgment — 2026-11-04
+
+Fresh doctor FAIL27/28 local15e/publicc4, exactly2public documentation changes. Prior design/source preparation preserved but native source BUILD not released. Root transitions to WORK_ORDER_AUTHOR under standing full-handling authority; Sol finite read-only feasibility8sources/0checks/0effects complete. Separate Terra admission review and Root committed preparation precede Sol checker repair. One fixed second successor preserves prior immutable authorities/snapshot payloads; source review/preimages precede official Core update. Authority CORE-FRESHNESS-20261104 and Root review carry bounded contribution/cost/stop contract. No genericchain/runtime/product release; all prior costs/UNKNOWNs/holds and parked accounts remain.
 
 ## P01/B01 conditional design acceptance / next WORK_ORDER acknowledgment — 2026-10-30
 

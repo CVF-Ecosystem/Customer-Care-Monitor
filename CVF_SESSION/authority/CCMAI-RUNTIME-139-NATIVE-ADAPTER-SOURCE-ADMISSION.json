@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "FINITE_OFFLINE_NATIVE_ADAPTER_SOURCE_WORK_ORDER",
+  "date": "2026-10-30",
+  "riskCeiling": "R2",
+  "baseCommit": "ef20b771f86a092b1066b8879b103365eada1e16",
+  "ownerAuthority": "Owner tiep after conditional design ef20; Root standing source/work-order autonomy. This grants exact offline source construction/checks only, no native effect/prototype or product acceptance change.",
+  "roles": {
+    "dispatcherCommitOwner": "Root",
+    "implementationWorker": "SolMedium separate worker; TerraHigh distinct fallback only on recorded unavailability and Root role acknowledgment",
+    "independentReviewer": "Root independent; separate TerraHigh admission/source reviewer"
+  },
+  "design": "docs/reviews/R139_SDK_P01_B01_DESIGN_SPEC_2026-10-30.md",
+  "designContract": "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/design_contract.json",
+  "designDisposition": "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/root_design_disposition.json",
+  "ownerInterfaceEvidence": "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/source_v1_checks/root_owner_derivation.json",
+  "sourceStage": "WORK_ORDER_then_BUILD_OFFLINE_ONLY",
+  "question": "Can minimal pure native-command/result metadata validators and a current-pin metadata adapter satisfy the accepted source design shapes while every executable native path unconditionally HOLDs, with no invented authority or owner-time equivalence?",
+  "deliverables": [
+    "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/native_owned_command_v1.mjs",
+    "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/r139_current_pinned_preflight_v1.py.txt",
+    "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/source_v1_checks/native_owned_command.test.mjs",
+    "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/source_v1_checks/test_current_pins.py",
+    "docs/reviews/R139_NATIVE_ADAPTER_SOURCE_WORKER_RETURN_2026-10-30.md"
+  ],
+  "workerAllowedPaths": [
+    "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/native_owned_command_v1.mjs",
+    "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/r139_current_pinned_preflight_v1.py.txt",
+    "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/source_v1_checks/native_owned_command.test.mjs",
+    "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/source_v1_checks/test_current_pins.py",
+    "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/source_v1_checks/worker_*",
+    "docs/reviews/R139_NATIVE_ADAPTER_SOURCE_WORKER_RETURN_2026-10-30.md"
+  ],
+  "bounds": {
+    "workerInitialWallMinutes": 30,
+    "oneConsolidatedRepairWallMinutes": 15,
+    "workerSemanticSourcesMax": 18,
+    "workerCheckProcessesMax": 3,
+    "rootIndependentReviewMinutes": 15,
+    "rootCheckProcessesMax": 3,
+    "peerReviewMinutes": 15,
+    "nativeSdkImportsCallsStarts": 0,
+    "browserProviderDbDockerNetwork": 0,
+    "workerRepairCheckProcessesMax": 2,
+    "rootRepairCheckProcessesMax": 2,
+    "checkAccounting": "Initial worker3/root3 maximum; reserved2repair checks each may be released only for accepted changed-source findings, recording all failures/no automatic repeats. No runtime calls in any check."
+  },
+  "sourceReadPolicy": "Current canonical startup/active source authority exempt; all inactive authorities/prior-role/indirect semantic context count before use. At most18 sources directly tied to these two adapters: accepted design/JSON/inventory/disposition, exact native client/utils/version source, original supervisor owner API and frozen preflight metadata design, current installed profile metadata/helpers. No new broad audit; stop on missing owner/interface contract or19th source.",
+  "ownerContract": "Original source launch/process_creation_identity/stop_child signatures are derived in root_owner_derivation for FUTURE owner only. v1 inspects supplied identity-token syntax with explicit basis, not UTC conversion or live binding. No owner import/launch or conversion assumed. Caller never attests an original kernel handle from JSON; all native status-to-owner binding UNRESOLVED and all executable native paths unconditionally HELD.",
+  "nodeRequirements": [
+    "ESM builtins only, pure exports/inert import/help/direct-main argv guard. Directory has5project-relative levels; do not copy old6level root. Executable --run and every execution/approval option UNCONDITIONALLY return nonzero HELD before reading supplied paths/env/admission or importing native. No reachable vendor import, SDK/socket/net/child_process/browser or command execution code. No future Root release file is created or consumed. A fixture saying approved cannot open a path.",
+    "Provide pure prepare/validate native command object functions only, not a socket/MCP/CDP serializer. Closed roles OWNER/PRODUCER/OBSERVER and exact mapping: OWNER status or stop with no other fields; PRODUCER invoke_tool list_pages/new_page/take_snapshot/take_screenshot/close_page; OBSERVER invoke_tool list_pages/take_snapshot only. No alternate methods, mixed-role grants, arbitrary JS evaluation, provider/app/localhost controls or generic dispatcher.",
+    "Native command shapes: status/stop objects exactly{method}; invoke_tool exactly{method,tool,args}. list_pages args empty; new_page args{url,timeout} with url exactly about:blank or https://example.com/ and positive finite integer timeout<=30000; snapshot{pageId} positive safeinteger; screenshot{pageId,format:png,filePath} with caller-provided evidence-root/path metadata lexically confined/no parent escape; close_page{pageId}. Scope caller-provided nonemptyUUID matching native format, never generated live or described as native browser/actor identity. Validation returns source preparation only/executionAuthorityfalse.",
+    "Provide native-returned-object/inner-result-string validators: outer success boolean with exact{success,result:string} or{success:false,error:string}; preserve returned outer object and exact inner string before parsing. Recognize bounded actual recorded native text-content shape and source-described status pid/socketPath/startDate/version/args; reject isError/invalid types/unexpectedkeys/missingvalues. Do not claim raw transport bytes, duplicate-wire-key attestation or authenticated export after native library decoding; this is SOURCE_UI_METADATA_SHAPE_ONLY. No fake browser/provider success proof.",
+    "Provide owner evidence shape inspection only: tagged windows originalHandleIdentity windows-filetime-[16lowerhex] or linux proc-start-ticks-[positive decimal], positive PID and source EvidenceRef. These are original owner supplied metadata, NOT caller-held kernel handles. Native startDate is strict UTC millisecondsZ and independently tagged native-daemon-startdate basis; never convert/equate it to FILETIME/startticks. Any ownership/identity binding method remains unconditionally HELD/UNRESOLVED even if PID/times appear equal. No live owner attestation fromJSON.",
+    "No new ledger or effects: no runtime namespace, exclusive invocation claim, actual lease/release/secret, evidence capture, daemon start/stop or file mutation by module/CLI. Return/report declared actor correlation/nativeActorAttestedfalse/liveOwnerHandleVerifiedfalse. Pure functions may prepare metadata; only test harness writes explicitly authorized test receipts. Hidden native relaunch and integrated lifecycle remain HARD PRODUCT HOLD."
+  ],
+  "pythonRequirements": [
+    "Python stdlib .py.txt with inert import/help and pure validate_pin_metadata(expected,manifest,lock). Root expected metadata has exactlycoreCommit15e39450853184eb65dbde73398c69c3171a6241, profileId cvf.downstreamGateProfile@1.2.0, profileSha256 faaf9273ada3fd826e6372898d134fe7ad0157528f25b7720211c31cfc209bd5, runnerSha256716544aa7a38251009867a4e0150be51b79b4304a8c5f6d7afddab4e7c5d9c07, bundleSha25680edcd2e4b605f440b94df963ed304ffed0f803bfa057a951360e39f014efc2b. closedexpected map/exact types; manifestCore/lockCore/profile/hash fields must agree; old/mixed/missing/duplicate data fail. Other public manifest/lock fields may be preserved/ignored as explicitly unverified, not new framework validation.",
+    "Optional explicit --check-project reads only .cvf/manifest.json and .cvf/gate-profile.lock.json under provided project-root, strict JSON duplicate-key/input-size/path checks, no reparse/symlink/parent escape. No writes, subprocess/git/doctor/gates, Core/profile/install modules, binaries/env/config. No reimplementation of INSTALL/bundle verifier; existing native gates remain separately required.",
+    "Output STATIC_PIN_METADATA_ONLY with executionAuthority/runtime/productfalse and actualCoreHead/installedProfileIntegrity/toolBinary/env/provider readiness NOT_CHECKED. Equal declared digests are metadata consistency only, not evidence installed modules/true source/Git/owner or runtime grant. Preserve raw versusLF basis in reported observations, no historical pin mutation."
+  ],
+  "testPlan": {
+    "workerExactlyPlanned": [
+      "One node --check helper process",
+      "One direct Node assert/static suite process (no runner child isolation/spawn); test exported held entry and import-with-run-argv within same process",
+      "One Python unittest/static source loading process including compile() for .py.txt and confined metadata fixtures"
+    ],
+    "rootAtMostPlanned": [
+      "One Node independent guard process with one syntax child:2processes maximum, pure command/result/owner metadata negatives and unconditional held execution option",
+      "One Python independent pure metadata/static suite process:1process",
+      "Reserved accepted repair checks2only if source finding/changed bytes requires it; no silent repeats"
+    ],
+    "fixtures": "Actual recorded nativev3 text-envelope source and in-memory source-derived status/metadata fixtures only. No fake provider/browser runtime proof, technical release file or native owner lease. Node typed functions validate metadata objects, not native wire integrity. Python duplicate JSON explicitly tested. Every execution/approval option and every owner-binding path stays HELD even for approved-looking fixtures; no SDK/vendor import or process query.",
+    "capture": "Worker original stdout/stderr/argv/exit/time/source pins in uniquely named worker_* files; Root captures original independent outputs. Tests may use confined temporary fixture directories only, no ignored secret/env/config scan or broad cleanup. Count failed checks, do not silently repeat."
+  },
+  "prohibitedEffects": [
+    "Native SDK/vendor imports or actual command/process/status/kill0/browser/network/provider/key/DB/Docker/service/controller/binary readiness queries",
+    "Existing supervisor/Go/product/router/engine/frontend/frozen activation/recorder/payload or original v2/v3 artifact edits",
+    "Core/profile/lock/gate/seed/canonical roadmap changes, new generic daemon manager/broker/protocol or owner launcher",
+    "Runtime/prototype/technical release file, actual nonce namespace/claim/secret, provider grant, public push/deploy or worker commit",
+    "Worker authority/continuity/catalog/root derivation/disposition changes or helper work order/tranche"
+  ],
+  "retained": {
+    "browserCumulative": 23,
+    "v2Cleanup": "UNKNOWN",
+    "v3Run": "SPENT",
+    "legacySource": 27,
+    "controllers": 4,
+    "campaign": 1,
+    "services": 5,
+    "auditActualCap": "17/16+2Root/19retained",
+    "designSources": "34/36retained",
+    "newOfflineChecks": "Separate bounded allocation, not historical reset",
+    "coreFiveProductApplicability": "UNKNOWN",
+    "productRelaunchRace": "HARD_HOLD",
+    "integratedProductContinuation": "NOT_DESIGNED",
+    "fullR139M3Freeze": "OPEN",
+    "facebookZaloOA": "PARKED"
+  },
+  "stop": "One source pass and one consolidated repair within exact bounds; missing contract/interface or cap exhaustion -> named blocked return, no new files/manager/effects or automatic extension. At repair3 without independent new cause apply REVIEW_COST_ESCALATION_REQUIRED.",
+  "precondition": "Independent revised admission PASS, current continuity/owner derivation, Root committed preparation and worker acknowledgment before offline source BUILD. Original initial admission HOLD/finding resolution retained. Source results independently reviewed; no live native/ownership validation or future authority semantics implemented here.",
+  "scopeResolution": "Independent admission identified incomplete future authority/owner-time binding. Root narrows v1 to PURE SOURCE PREPARATION ONLY. There is no reachable native execution/import path, even if supplied data says approved; future executable caller requires separately reviewed complete implementation contract. This is not a full native command caller or G0/product capability.",
+  "acceptanceClarification": [
+    "This source stage prepares/validates fixed command objects, it does not execute native calls. Any future executable native path requires a new complete closed authority/verifier AND exact owner identity/time-basis binding reviewed before code changes.",
+    "No timestamp equivalence or JSON handle self-attestation. windows-filetime/nativeUTC fields remain separate bases; v1 ownership verification is always false/UNRESOLVED.",
+    "CLI import/help inert, --run always HELD without reading input. No root future-authority convention or parser can be invented by worker."
+  ]
+}

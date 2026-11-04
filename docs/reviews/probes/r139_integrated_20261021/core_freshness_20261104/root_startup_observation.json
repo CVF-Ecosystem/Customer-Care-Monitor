@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-04",
+  "doctor": "FAIL27/28_BEHIND_PUBLIC_REMOTE",
+  "local": "15e39450853184eb65dbde73398c69c3171a6241",
+  "originMain": "c4c8767ac8861854f40d466ba338ffd11eb9558e",
+  "changedPublicFiles": [
+    "docs/EXPORT_MANIFEST.md",
+    "docs/reference/CVF_PRODUCT_MILESTONE_COVERAGE_CONTRACT_2026-10-23.md"
+  ],
+  "knowledgeIngestFirst": "FAILED_OUTPUT_PARENT_ABSENT_exit1; parent created before corrected retry",
+  "sourceWorkerFeasibility": {
+    "semanticFiles": 8,
+    "tests": 0,
+    "effects": 0
+  },
+  "sourceAdapter": "PENDING_NO_BUILD"
+}

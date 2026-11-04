@@ -1,0 +1,27 @@
+{
+  "kind": "SOURCE_OWNER_INTERFACE_DERIVATION",
+  "sourcePath": "scripts/r139_execution_supervisor.py",
+  "sourceRawSha256": "9ee7f988b5a27495fd4bd4e72975f0b2a583b8e33cea49c51ac5189285f44c64",
+  "readOnlySources": [
+    "scripts/r139_execution_supervisor.py",
+    "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_boot_identity_v3_design.py.txt"
+  ],
+  "launch": {
+    "signature": "launch(admission, runtime:Path, name:str, argv:list[str], env:dict, children:dict)->subprocess.Popen",
+    "lines": "1441-1458",
+    "semantics": "Project-root cwd for non-go name; exclusive intent/log; original Popen stored in children before fallible creation record; returns retained original process. No new daemon manager necessary."
+  },
+  "creation": {
+    "signature": "process_creation_identity(process:subprocess.Popen)->str",
+    "lines": "1461-1477",
+    "semantics": "Windows creation identity from retained process._handle via GetProcessTimes, not fresh PID lookup; non-Windows start ticks."
+  },
+  "cleanup": {
+    "signature": "stop_child(runtime:Path,name:str,process:subprocess.Popen|None)->dict",
+    "lines": "1585-1614",
+    "semantics": "Fallback only on exact original retained Popen; terminate/kill/wait bounded; result waitObserved/exit. Native stop/graceful original wait precede fallback in future technical admission. Forced owner exit alone cannot prove MCP/Chrome cleanup."
+  },
+  "import": "Module constants/function definitions and main guard1994-1995; no target import/launch/creation query/stop invoked during derivation.",
+  "scopeDecision": "Current source slice implements caller/metadata adapters ONLY; consumes strict externally supplied owner evidence and reports that caller cannot attest live owner handle. Future original owner controller must reuse these exact functions and issue original receipts under separate technical admission. No owner launcher or supervisor/Go integration edit is needed/admitted for this offline source slice.",
+  "effects": 0
+}

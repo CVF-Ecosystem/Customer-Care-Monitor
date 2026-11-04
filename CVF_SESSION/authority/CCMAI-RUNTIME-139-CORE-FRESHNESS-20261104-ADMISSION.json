@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "kind": "FINITE_PUBLIC_DOCS_ONLY_CORE_FRESHNESS_REPAIR",
+  "date": "2026-11-04",
+  "riskCeiling": "R2",
+  "baseCommit": "ef20b771f86a092b1066b8879b103365eada1e16",
+  "ownerAuthority": "Standing Owner full handling/commit authority and latest tiep; AGENTS mandates public freshness reconciliation. This is bounded maintenance of the same R139, not product/runtime authority.",
+  "roles": {
+    "dispatcher": "Root",
+    "implementationWorker": "SolMedium /root/source_resume_worker",
+    "independentReviewer": "Root and distinct TerraHigh /root/source_resume_review",
+    "commitSteward": "Root"
+  },
+  "coreFrom": "15e39450853184eb65dbde73398c69c3171a6241",
+  "coreTo": "c4c8767ac8861854f40d466ba338ffd11eb9558e",
+  "continuationValue": {
+    "criteria": [
+      "M3-05",
+      "M3-08"
+    ],
+    "blocker": "Fresh doctor FAIL27/28 BEHIND_PUBLIC_REMOTE prevents previously prepared offline source dispatch. Cached target changes only product continuation/cost guidance and export manifest; profile/installer/doctor unchanged.",
+    "observable": "Fresh core/project pin consistency, immutable historical admissions preserved, doctor and static gates pass; enables pending pure source adapter work only.",
+    "cumulative": "Prior branch design34/36 sources, audit17/16+Root2/19, browser23, source27/controllers4/campaign1/services5, prior public suite63PASS3FAIL2ERROR; all retained. Current finite feasibility8semantic files/0tests/0effects; unmeasured time/billing UNKNOWN. No product criterion closed.",
+    "reuse": "Reuse unchanged installed profile/bundle/113 previous gate unit evidence as baseline; focused regression/full gate units only for changed checker. Cheaper manifest-only edit demonstrably fails fixed first-repin authority; skipping freshness prohibited.",
+    "stop": "One fixed docs-only target, one consolidated repair; target drift/new implementation diff/second repair same cause or exhausted ceiling -> blocked checkpoint, no automatic third successor or continued preparation."
+  },
+  "workerAllowedPaths": [
+    "scripts/cvf_downstream_gate.py",
+    "scripts/tests/test_cvf_downstream_gate_core_repin.py",
+    "docs/reviews/R139_CORE_FRESHNESS_WORKER_RETURN_2026-11-04.md",
+    "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_*"
+  ],
+  "rootAllowedProjectPaths": [
+    ".cvf/manifest.json",
+    ".cvf/gate-profile.lock.json",
+    ".cvf/local-binding.json (ignored)",
+    "AGENTS.md",
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/reviews/R139_*.md",
+    "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/**",
+    "docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md",
+    "docs/catalog/**",
+    "docs/INDEX.md"
+  ],
+  "spec": [
+    "Known freshness FAIL is the repair target, finite preparation/repair exception only. No material adapter BUILD or PASS claim until actual doctor success. Current source drafts remain PENDING, no historical acceptance.",
+    "Do not change _REPIN_* constants, original seed, first maintenance or first repin admission or their historical payloads. Add one fixed _REPIN2_ADMISSION CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-REPIN-2-MAINTENANCE-ADMISSION.json, FROM15e/TOc4 and exact Root preparation SHA provided after commit; no generic chain/caller selector/global substitution. Same closed field grammar as first repin; predecessor exactly first repin path+LFhash, seed unchanged, distinct worker/reviewer and Root commitowner. Root authors admission payload hashes after source review.",
+    "Route fixed2 worktree existence OR first-add Git history before old route, deletion must fail closed. With no fixed2 retain all existing first-repin behavior. Never invoke old current-state checker against superseded current files as historical validation.",
+    "Validate seed original-base/firstblob; first maintenance firstblob+17snapshot payload hashes/identity/roles; first repin firstblob+18snapshot payload hashes/identity/roles, historical manifest/lock15e and installed digests at that commit. Strict duplicate JSON/safe paths. Ancestry originalbase -> maintenancefirst -> repin1base -> repin1first -> preparation2base -> HEAD. Present old admissions must equal first blobs and staged versions. No history/range/Git failure accepted.",
+    "Fixed2 exact schema/base/coreFrom/coreTo/profile1.2/roles/predecessor/seed; firstblob and payload immutable after commit. First creation HEAD==preparation2base/absent history; staged authority equals worktree and every changed payload staged. Effective map equals actual tranche base-to-HEAD plus worktree paths outside original seed+ALWAYS_ALLOWED; explicit files cannot narrow. No deletions/aliases/duplicates/nonfiles/unknowns.",
+    "Only five replacement payload paths versus first repin snapshot: .cvf/manifest.json,.cvf/gate-profile.lock.json,AGENTS.md,scripts/cvf_downstream_gate.py,scripts/tests/test_cvf_downstream_gate_core_repin.py. Exact same payload path set18, every other old payload and all installed files/workflow frozen. Lock matches c4/manifest; profile/runner/bundle/files pins equal first repin historical lock; no bundle source or workflow edits.",
+    "Extend existing core_repin tests with isolated disposable Git histories: old route, valid fixed2 bootstrap/staged/committed; original history/blob/payload tamper; second deletion/fallback; wrong base/target/predecessor/roles/extra/duplicate; installed/workflow drift; narrowed actual scope, staged mismatch, later mutation. Source worker no real Core/network/install effects.",
+    "Root separately performs official updater once only after independent source review; no UpdateProjectManifests,overlay,AllowPendingCoreBackup or rulepack sync. Validate absolute workspace/Core/backup/failed-backup paths and no reparse ancestors, clean public origin/cached target; preserve exact shared preimages/absence and sibling manifest hashes before effect. operator-local profile unchanged. Clone follows remote HEAD: postclone exact c4/public origin/clean kit before dependent project adoption. Official script catch may move failed clone to timestamped failed-backup and restore old Core automatically; this built-in bounded recovery is authorized, actual paths/outcome must be recorded. Target drift/failure -> dependent HOLD, preserve all remaining originals/failed clone, no additional manual rollback or deletion without reviewed exact plan. Successful transaction retains moved original Core backup.",
+    "Root manifest/AGENTS full40 current-reference pin only, preserving historical execution e9/profile1.1 and evidence. Run official unchanged installer --upgrade from actual c4 to generate lock, no hand edits. Expect unchanged installed modules/CI pins; any difference -> HOLD review. Update local binding only if current schema requires. Source draft15e authority remains PENDING until separately updated/reviewed.",
+    "Required focused worker regression and full gate units, Root independent focused checks, catalog, explicit public precommit, legacy preflight, fresh doctor, final range checks. Preserve failed/unknown outcomes. No hosted CI, runtime governance or product completion claim."
+  ],
+  "bounds": {
+    "workerWallMinutes": 40,
+    "workerSemanticSourcesMax": 18,
+    "workerInitialTestBatchesMax": 2,
+    "workerConsolidatedRepairBatchesMax": 1,
+    "rootReviewMinutes": 20,
+    "rootInitialTestBatchesMax": 1,
+    "rootRepairTestBatchesMax": 1,
+    "officialUpdaterInvocationsMax": 1,
+    "nativeInstallerUpgradeMax": 1,
+    "providerBrowserProductEffects": 0
+  },
+  "preconditions": "Independent admission PASS and committed Root preparation SHA plus worker role acknowledgment before source edits. Official transaction only after independent source review and Root recorded transaction acknowledgment.",
+  "prohibitedEffects": [
+    "Worker commits/authority/continuity/catalog/manifest/lock/AGENTS edits",
+    "Hand edits to Core/profile/lock; sibling manifests; public push/deploy",
+    "Adapter/product/supervisor/Go/DB/Docker/browser/provider/key/env/customer effects",
+    "Old authority/evidence/roadmap rewrite; generic successor chains or automatic target adoption"
+  ],
+  "sharedTransaction": "Reuse verified official updater path, wrapper paths, backup/preserve boundaries from prior CORE-RECONCILIATION-SCOPE-ADMISSION; source updater unchanged. Current public target c4 docs-only and operator-local profile verified. Root must record actual preimage paths/hashes and restore limits before running."
+}

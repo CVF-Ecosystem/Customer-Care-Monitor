@@ -5039,6 +5039,13 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R139 integrated non-effect reentry design/payload/activation data only; fresh campaign/effects not authorized; original HOLD/caps unchanged, no product/governance acceptance.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/reentry_activation_design.py.txt`
 - R139 approved source/activation worker candidate return; implementation/checks pending independent acceptance, no runtime/campaign activation.: `docs/reviews/R139_PAGE_TARGET_SOURCE_WORKER_RETURN_2026-10-24.md`
 - R139 approved source/activation worker candidate return; implementation/checks pending independent acceptance, no runtime/campaign activation.: `docs/reviews/R139_ACTIVATION_COORDINATOR_WORKER_RETURN_2026-10-24.md`
+- Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained.: `docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/source_v1_checks/root_owner_derivation.json`
+- Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-ADAPTER-SOURCE-ADMISSION.json`
+- Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained.: `docs/reviews/R139_NATIVE_ADAPTER_SOURCE_ROOT_REVIEW_2026-10-30.md`
+- Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained.: `docs/reviews/R139_CORE_FRESHNESS_ROOT_REVIEW_2026-11-04.md`
+- Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained.: `docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/knowledge_ingest.json`
+- Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained.: `docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_startup_observation.json`
+- Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-FRESHNESS-20261104-ADMISSION.json`
 - Owner-approved documentary profile1.2/freshness exception; runtime pin and effect limits unchanged.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-ROADMAP-DOCS-ADMISSION.json`
 - Independent documentary roadmap and full M3 coverage review; no product or runtime acceptance.: `docs/reviews/R139_ROADMAP_RECONCILIATION_REVIEW_2026-10-29.md`
 - Independent static import/predicate review permits two bounded inert adapter checks; no actual check or runtime result.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/autonomous_completion_20261027/root_adapter_static_clearance.json`

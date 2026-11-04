@@ -40414,6 +40414,13 @@
       "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/gemini_native_browser_check_20261028/return_at_root_review.md",
       "status": "ACTIVE",
       "description": "Byte-preserved receiving Gemini return at independent Root review; connection failure only, no browser or product PASS."
-    }
+    },
+    {"id": "r139-resume-20261104-55f0ddb4dc543b4d", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-ADAPTER-SOURCE-ADMISSION.json", "status": "ACTIVE", "description": "Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained."},
+    {"id": "r139-resume-20261104-58522d9d783f5857", "family": "continuity", "path": "docs/reviews/R139_NATIVE_ADAPTER_SOURCE_ROOT_REVIEW_2026-10-30.md", "status": "ACTIVE", "description": "Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained."},
+    {"id": "r139-resume-20261104-0c1b975fdf519722", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/source_v1_checks/root_owner_derivation.json", "status": "ACTIVE", "description": "Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained."},
+    {"id": "r139-resume-20261104-b1bf522e9da19950", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-FRESHNESS-20261104-ADMISSION.json", "status": "ACTIVE", "description": "Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained."},
+    {"id": "r139-resume-20261104-61dde34260a2644a", "family": "continuity", "path": "docs/reviews/R139_CORE_FRESHNESS_ROOT_REVIEW_2026-11-04.md", "status": "ACTIVE", "description": "Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained."},
+    {"id": "r139-resume-20261104-6d8cbf1c29fbc9ca", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/knowledge_ingest.json", "status": "ACTIVE", "description": "Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained."},
+    {"id": "r139-resume-20261104-6e138a4880de5db5", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_startup_observation.json", "status": "ACTIVE", "description": "Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained."}
   ]
 }

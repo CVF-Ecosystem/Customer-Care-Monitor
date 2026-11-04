@@ -2,13 +2,15 @@
 
 Status: BLOCKED_WITH_REASON
 Risk: R2
-Worker: Sol Medium SPEC_AUTHOR completed conditional P01/B01 design; future source worker awaits separately committed bounded WORK_ORDER
+Worker: SolMedium finite freshness checker repair only after committed preparation; native adapter source remains PENDING
 Reviewer: Root independent source/evidence reviewer; separate Terra6.1High reviews Root-authored documentary projection
 Commit mode: WORKER_MUST_NOT_COMMIT
 providerExecutionAuthority: NONE_CURRENT_HISTORICAL_CAMPAIGNS_SPENT_OR_EXPIRED
 runtimeExecutor: UNASSIGNED_UNTIL_SUPPORTED_ENVIRONMENT_AND_COMMITTED_ADMISSION
 runtimeReviewer: INDEPENDENT_REVIEWER_TO_BE_BOUND_IN_CURRENT_ADMISSION; historical reviews retained
 dispatchKind: INITIAL
+
+Current freshness prerequisite - 2026-11-04: doctor FAIL27/28 local15e/publicc4 docs-only. See `CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-FRESHNESS-20261104-ADMISSION.json` and `docs/reviews/R139_CORE_FRESHNESS_ROOT_REVIEW_2026-11-04.md`. One bounded fixed-target maintenance repair before adapter source BUILD; no runtime/product effects. Main work-order status remains BLOCKED_WITH_REASON.
 
 Current continuation: conditional P01/B01 design2026-10-30 is accepted for source-work-order preparation only; product runtime remains BLOCKED_WITH_REASON. Current conditional-design projection and canonical fronts govern; old source-only routing and dated operational instructions below are historical. Normative S01-S04/E01-E06/G0-G3 acceptance remains binding and no spent grant, clock or role assignment is revived.
 
