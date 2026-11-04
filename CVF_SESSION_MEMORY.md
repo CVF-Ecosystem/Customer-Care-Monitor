@@ -2,9 +2,16 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R141_RELAUNCH_PREVENTION_DESIGN_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-141", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R142_DOCS_BUILD_REPAIR_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-142", "parked": true} -->
 
-## Current R141 relaunch-prevention design checkpoint - 2026-11-05
+## Current R142 docs build repair checkpoint - 2026-11-05
+
+CCMAI-RUNTIME-142: docs site build repair (VitePress markdown html:false; no evidence file edited) on branch claude/friendly-rubin-e2npmt-r142, stacked on R141; pending the GitHub Actions docs build on the PR head. If green, the cloud ORCHESTRATOR records REVIEW_PASS with the run; Local merges in order PR #14 (R140), #15 (R141), then R142; the cloud agent does not merge. R141 design REVIEW_PASS awaits Local conditions/A1-A3. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; no runtime, DB or provider effect; Facebook/ZaloOA parked.
+
+Cloud agent: operator-granted ORCHESTRATOR, then IMPLEMENTATION_WORKER (docs config) and R1 REVIEWER with recorded transition; GitHub Actions docs build is the objective check; Local agent retains merge to main and FREEZE
+
+
+## Historical R141 relaunch-prevention design checkpoint - 2026-11-05
 
 CCMAI-RUNTIME-141: owner-held Chrome connect-only relaunch-prevention design REVIEW_PASS (independent reviewer accepted after one repair; build 5fa904438d94) on branch claude/friendly-rubin-e2npmt-r141, PR to the R140 branch. Next: Local reviews PR, applies the seven recorded conditions (F3/F5/F6 partials, N-R1..N-R3, A1-A3) in its own successor contract, runs A3 on Windows and decides whether to update the R139 repair audit with an A1/A2 VERIFY discriminator; cloud agent does not merge. R140 awaits Local merge in PR #14. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; design not executable; no runtime, Chrome/daemon, DB or provider effect; Facebook/ZaloOA parked.
 
@@ -114,9 +121,9 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Contract: cvf.downstreamContinuityContract@1.0.0
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R141_RELAUNCH_PREVENTION_DESIGN_2026-11-05.md
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R142_DOCS_BUILD_REPAIR_2026-11-05.md
 
-CCMAI-RUNTIME-141: owner-held Chrome connect-only relaunch-prevention design REVIEW_PASS (independent reviewer accepted after one repair; build 5fa904438d94) on branch claude/friendly-rubin-e2npmt-r141, PR to the R140 branch. Next: Local reviews PR, applies the seven recorded conditions (F3/F5/F6 partials, N-R1..N-R3, A1-A3) in its own successor contract, runs A3 on Windows and decides whether to update the R139 repair audit with an A1/A2 VERIFY discriminator; cloud agent does not merge. R140 awaits Local merge in PR #14. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; design not executable; no runtime, Chrome/daemon, DB or provider effect; Facebook/ZaloOA parked.
+CCMAI-RUNTIME-142: docs site build repair (VitePress markdown html:false; no evidence file edited) on branch claude/friendly-rubin-e2npmt-r142, stacked on R141; pending the GitHub Actions docs build on the PR head. If green, the cloud ORCHESTRATOR records REVIEW_PASS with the run; Local merges in order PR #14 (R140), #15 (R141), then R142; the cloud agent does not merge. R141 design REVIEW_PASS awaits Local conditions/A1-A3. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; no runtime, DB or provider effect; Facebook/ZaloOA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

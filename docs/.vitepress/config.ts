@@ -23,6 +23,10 @@ export default defineConfig({
   // Governance evidence under reviews/ links to specs/ and work_orders/, which
   // exist in the repo but are excluded from the site above.
   ignoreDeadLinks: [/(^|\/)(specs|work_orders)\//],
+  // R142: governance evidence under reviews/ contains literal text such as
+  // `Promise<void>`; escape raw HTML instead of compiling it as Vue markup.
+  // Published guide pages use no raw HTML (checked 2026-11-05).
+  markdown: { html: false },
 
   head: [
     ['meta', { name: 'theme-color', content: '#1976D2' }],
