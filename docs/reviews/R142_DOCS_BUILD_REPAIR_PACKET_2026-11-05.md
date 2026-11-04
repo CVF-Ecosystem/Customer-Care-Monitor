@@ -1,6 +1,6 @@
 # R142 packet: docs site build repair (config only)
 
-Status: COMPLETE_PENDING_REVIEW
+Status: BLOCKED_WITH_REASON
 workOrderStatusGrammar: cvf.workOrderStatusGrammar@1.0.0
 Risk: R1
 Worker: Cloud ORCHESTRATOR acting as IMPLEMENTATION_WORKER (docs config only)
@@ -29,6 +29,14 @@ Authority: `CVF_SESSION/authority/CCMAI-RUNTIME-142.json` (seed commit `38b76fd1
 - **Cause:** VitePress adds `v-pre` to fenced code blocks but not to inline code spans. The first scan wrongly treated inline code as safe.
 - A corrected scan found one historical file (`reviews/R139_CLOCK_V3_G0_TECHNICAL_REVIEW_2026-10-26.md`) with a double-brace placeholder in inline code. It does not break the build, but the placeholder text was being dropped from the rendered page.
 - **Attempt 2 change, still config-only:** a markdown-it hook adds `v-pre` to every inline `<code>`, and this packet line was reworded. This is the last CI attempt the seed allows. If it fails, the tranche stops at BLOCKED_WITH_REASON with the log.
+
+## CI attempt 2 result: stopped
+
+- **Attempt 2** (head `edfe97b`, [run](https://github.com/CVF-Ecosystem/Customer-Care-Monitor/actions/runs/41928475690)): every Vue compile error is gone, including `Promise<void>` and the inline-code double brace.
+- The build now fails only on 4 dead links to `roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21`, from `reviews/learnings/feedback_orchestrator_roadmap_control.md` and `reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md` (3 links).
+- `roadmaps/**` is in `srcExclude` but missing from `ignoreDeadLinks`, unlike `specs/` and `work_orders/`.
+- The seed's two CI attempts are spent, so the tranche stops at BLOCKED_WITH_REASON.
+- **Proposed next fix (needs operator approval of one more CI attempt):** change `ignoreDeadLinks` to `[/(^|\/)(specs|work_orders|roadmaps)\//]`.
 
 ## Verification
 

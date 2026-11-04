@@ -8,7 +8,7 @@ Status: ACTIVE
 - Active phase: REVIEW
 - Active role: Cloud agent: operator-granted ORCHESTRATOR, then IMPLEMENTATION_WORKER (docs config) and R1 REVIEWER with recorded transition; GitHub Actions docs build is the objective check; Local agent retains merge to main and FREEZE
 - Active tranche: CCMAI-RUNTIME-142
-- Next allowed move: CCMAI-RUNTIME-142: docs site build repair (VitePress markdown html:false; no evidence file edited) on branch claude/friendly-rubin-e2npmt-r142, stacked on R141; pending the GitHub Actions docs build on the PR head. If green, the cloud ORCHESTRATOR records REVIEW_PASS with the run; Local merges in order PR #14 (R140), #15 (R141), then R142; the cloud agent does not merge. R141 design REVIEW_PASS awaits Local conditions/A1-A3. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; no runtime, DB or provider effect; Facebook/ZaloOA parked.
+- Next allowed move: CCMAI-RUNTIME-142: docs build repair BLOCKED_WITH_REASON after its 2 allowed CI attempts (all Vue compile errors fixed; 4 dead links to excluded roadmaps/ remain). Next: operator approves one more config-only CI attempt (add roadmaps to ignoreDeadLinks) or Local takes it over; PR #16 open, no merge by the cloud agent. R140 (PR #14) and R141 (PR #15) REVIEW_PASS await Local. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; no runtime, DB or provider effect; Facebook/ZaloOA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## Startup acknowledgment and decisions
@@ -35,3 +35,5 @@ CI attempt history, retained:
    - The build then failed on the R142 packet's own inline-code double brace.
    - The orchestrator's earlier scan wrongly assumed inline code was safe; VitePress puts `v-pre` only on fenced code.
 2. **Attempt 2:** a markdown-it hook adds `v-pre` to inline `<code>`, and the packet line was reworded. This is the last attempt the seed allows.
+
+3. **Attempt 2 result:** Vue compile errors fixed; 4 dead links to excluded `roadmaps/` remain. The CI budget is exhausted, so the tranche is CHANGES_REQUIRED / BLOCKED_WITH_REASON. Proposed one-line `ignoreDeadLinks` fix awaits operator approval.

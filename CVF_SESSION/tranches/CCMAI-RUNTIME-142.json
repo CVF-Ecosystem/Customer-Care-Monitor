@@ -28,17 +28,18 @@
   ],
   "workOrder": "docs/reviews/R142_DOCS_BUILD_REPAIR_PACKET_2026-11-05.md",
   "baseCommit": "38b76fd1214308376ebf64986f0803a9439f7da8",
-  "status": "REVIEW_PENDING",
+  "status": "CHANGES_REQUIRED",
   "phase": "REVIEW",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED"
   ],
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
-  "disposition": "BUILT_PENDING_CI_DOCS_BUILD",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
+  "disposition": "BLOCKED_WITH_REASON_CI_ATTEMPT_BUDGET_EXHAUSTED",
   "parentTranche": "CCMAI-RUNTIME-141",
   "reviewEvidence": [],
   "effects": {
@@ -56,7 +57,10 @@
     {
       "attempt": 2,
       "change": "inline code v-pre markdown-it hook; packet line reworded",
-      "result": "PENDING"
+      "result": "failure: all Vue compile errors gone; 4 dead links to excluded roadmaps/ (reviews/learnings/feedback_orchestrator_roadmap_control.md, reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md x3)",
+      "head": "edfe97bdc004ff779e5d4309155503e582167581",
+      "run": "https://github.com/CVF-Ecosystem/Customer-Care-Monitor/actions/runs/41928475690"
     }
-  ]
+  ],
+  "proposedNextFix": "One-line config change: extend ignoreDeadLinks to /(^|\\/)(specs|work_orders|roadmaps)\\// (roadmaps/ is srcExclude'd like specs/work_orders). Needs operator approval of one more CI attempt."
 }
