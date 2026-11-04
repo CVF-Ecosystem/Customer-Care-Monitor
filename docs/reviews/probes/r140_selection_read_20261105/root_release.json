@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "ccma.sourceWorkerRelease@1.0.0",
+  "status": "RELEASED_SOURCE_ONLY",
+  "releaseOwner": "Root ORCHESTRATOR / DESIGN_OWNER / COMMIT_STEWARD",
+  "role": "INTERNAL_AGENT Local",
+  "decisionOwner": "Root Local technical owner; operator retains product/business decisions",
+  "preparationBase": "723976c9d90bcb7303f402e589c3df7924c56ba6",
+  "seedCommit": "4c3cc11ef36f0e9e3e9738b26647f59909b04391",
+  "hashConvention": "LF-normalized UTF-8 SHA256",
+  "bindings": [
+    {
+      "path": "docs/work_orders/CCMAI_RUNTIME_140_SELECTION_READ_REPAIR.md",
+      "sha256": "44fcad505c5aa33d0e0d0482970fe69915e098609153a63c1a161a8c58839e98"
+    },
+    {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-140.json",
+      "sha256": "82984c72d09ec60d82bfda013b53b5b40d5dd58d22768c3024db78a996283b52"
+    },
+    {
+      "path": "docs/reviews/probes/r140_selection_read_20261105/source_preimages.json",
+      "sha256": "da51cde109624ee1688952a9f1327641e6d52fcbeadd30c1823615b75f94e6cc"
+    },
+    {
+      "path": "docs/reviews/probes/r140_selection_read_20261105/independent_admission.json",
+      "sha256": "24e744a99b5d09b5e86bf8c697f39c797f3ebdc3dc20bcd4c39c43d5c53d12c5"
+    }
+  ],
+  "preparationChecks": [
+    {
+      "path": "docs/reviews/probes/r140_selection_read_20261105/root_preflight_corrected.txt",
+      "sha256": "851c7cd96bb0ff1752e52db5309cec193f64f92a88a7b73843c061cac303c313"
+    },
+    {
+      "path": "docs/reviews/probes/r140_selection_read_20261105/root_profile_precommit_final.json",
+      "sha256": "cccfab11fa986fd2a2d9a9ffcd8e5cbbf24b6de3b31d62816bc39803a4030200"
+    }
+  ],
+  "workerAllowedPaths": [
+    "frontend/src/components/InterventionExecutionStatus.vue",
+    "frontend/src/__tests__/intervention-execution-status.test.ts",
+    "docs/reviews/R140_SELECTION_READ_WORKER_RETURN_2026-11-05.md",
+    "docs/reviews/probes/r140_selection_read_20261105/worker_*"
+  ],
+  "workerMustVerify": "Preparation base ancestor of HEAD; all bindings and original source preimages match before BUILD; read current handoff; stop on drift. Release receipt must be committed before worker edits.",
+  "acceptance": "S01-S10; source return COMPLETE_PENDING_REVIEW only; Root independent review and commit required",
+  "implementationStarted": false,
+  "parent": "CCMAI-RUNTIME-139 BUILD_BLOCKED; same M3 history retained; no P01/runtime/product release",
+  "effects": {
+    "providerCalls": 0,
+    "browserCalls": 0,
+    "databaseActions": 0
+  },
+  "publicExport": "DEFERRED_PRIVATE_ONLY"
+}

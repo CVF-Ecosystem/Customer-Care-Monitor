@@ -25,4 +25,6 @@ Read `docs/work_orders/CCMAI_RUNTIME_140_SELECTION_READ_REPAIR.md` and its sourc
 
 ## Validation / publication
 
-Final independent packet review and preflight receipt will be recorded in `docs/reviews/probes/r140_selection_read_20261105/`. No push/public-sync. Product code unchanged at preparation.
+Material preparation commit `723976c9d90bcb7303f402e589c3df7924c56ba6`. Astra independent admission ACCEPTED; local preflight7/7 and trusted operator-local pre-commit7/7 PASS. Root release: `docs/reviews/probes/r140_selection_read_20261105/root_release.json`; valid only once committed, with exact bindings/preimages and ancestor check. Worker may implement source-only S01-S10 contract after that check; implementation not started. No push/public-sync. Product code unchanged at preparation.
+
+Earlier failed preparation gates are retained alongside final PASS receipts. Public doctor remains27/28 due to known old-profile LOCK_INVALID; trusted installed-profile checks pass, no full-doctor claim.

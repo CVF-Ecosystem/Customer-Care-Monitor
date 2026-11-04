@@ -71,9 +71,11 @@
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
   "workOrderStatus": "ACTIVE",
   "implementationStarted": false,
-  "disposition": "INDEPENDENT_ADMISSION_ACCEPTED_PENDING_COMMIT_AND_GATES",
+  "disposition": "RELEASED_SOURCE_ONLY",
   "parentProductStatus": "R139 BUILD_BLOCKED; M3-05/08 repair audit BLOCKED, no reset",
   "reviewEvidence": [
     "docs/reviews/probes/r140_selection_read_20261105/independent_admission.json"
-  ]
+  ],
+  "preparationCommit": "723976c9d90bcb7303f402e589c3df7924c56ba6",
+  "releaseEvidence": "docs/reviews/probes/r140_selection_read_20261105/root_release.json"
 }
