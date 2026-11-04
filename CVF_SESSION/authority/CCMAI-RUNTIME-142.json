@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-142",
+  "authorityKind": "DISPATCHER_OWNED_DOCS_SITE_BUILD_REPAIR",
+  "riskCeiling": "R1",
+  "roles": {
+    "workOrderAuthor": "Cloud ORCHESTRATOR (operator-granted 2026-11-05)",
+    "implementationWorker": "Cloud ORCHESTRATOR acting as IMPLEMENTATION_WORKER (docs config only)",
+    "reviewer": "Cloud ORCHESTRATOR acting as REVIEWER with recorded role transition (R1) plus GitHub Actions docs build as the objective check",
+    "commitSteward": "Cloud ORCHESTRATOR for branch-only commits; Local agent for merge to main"
+  },
+  "allowedPaths": [
+    "docs/.vitepress/config.ts",
+    "docs/reviews/R142_*.md",
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/INDEX.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json"
+  ],
+  "prohibitedEffects": [
+    "Editing any historical review, receipt, evidence or probe file",
+    "Editing product source, tests, scripts, gates, CI workflows, dependencies or lockfiles",
+    "Installing or downloading packages (no npm ci in the cloud for this tranche)",
+    "Starting app, browser, DB, provider or runtime",
+    "Merge or push to main, history rewrite, deployment or public release",
+    "Claiming runtime, AI-governance or product acceptance"
+  ],
+  "ownerAuthorization": "Operator 2026-11-05 (cloud session) selected the config-only fix: add markdown html:false to the VitePress config so historical review text such as Promise<void> is escaped instead of parsed as HTML; verification by GitHub Actions; no npm ci in the cloud.",
+  "scope": "Docs site build repair only. No content edit to evidence files; no product effect.",
+  "verification": "GitHub Actions 'Build and Deploy Docs' build job on the PR head must pass; static check that published guide pages contain no raw HTML tags that the change would hide.",
+  "claimBoundary": "Documentation-site build only. No runtime, AI-governance, M3 or product acceptance.",
+  "workOrder": "docs/reviews/R142_DOCS_BUILD_REPAIR_PACKET_2026-11-05.md",
+  "executionBudget": {"activeMinutes": 30, "ciAttempts": 2, "providerCalls": 0, "runtimeStarts": 0, "dependencyInstalls": 0},
+  "parentTranche": "CCMAI-RUNTIME-141",
+  "bootstrapException": false
+}
