@@ -1,0 +1,157 @@
+{
+  "schemaVersion": "ccma.r141.sourceVerification@1.0.0",
+  "date": "2026-11-05",
+  "authorization": "Operator approved one read-only fetch in the cloud session before the R141 seed was committed (recorded here as INTAKE source verification).",
+  "package": "chrome-devtools-mcp",
+  "version": "1.9.0",
+  "tarballUrl": "https://registry.npmjs.org/chrome-devtools-mcp/-/chrome-devtools-mcp-1.9.0.tgz",
+  "registryIntegrity": "sha512-RnzXoJiUQ44hpOihWk90uOhLD/CnwDkDy0ldHMZONJ2nYQ+dWN1fq1luHHqyd+7FuYnyIlCY6uTThbN5ut9kSQ==",
+  "registryShasum": "86bf2bde0bc4ec07aa428b36ea612eaa7a37a77c",
+  "downloadedIntegrityMatches": true,
+  "downloadedShasumMatches": true,
+  "handling": "Fetched with curl into an isolated scratch directory outside the repository, extracted with tar, read only; never installed, imported or executed; no package bytes committed.",
+  "inventoryComparison": {
+    "matched": 15,
+    "total": 15,
+    "rows": [
+      {
+        "id": "S06",
+        "path": "build/src/daemon/client.js",
+        "windowsRecordedSha256": "fc6500be58f2de1c941d66171a43fa8bf796cbea9420575bd8b299ff4e66f1a1",
+        "npmTarballSha256": "fc6500be58f2de1c941d66171a43fa8bf796cbea9420575bd8b299ff4e66f1a1",
+        "match": true
+      },
+      {
+        "id": "S07",
+        "path": "build/src/daemon/daemon.js",
+        "windowsRecordedSha256": "eab00479391fece6afe0d45afe564bf0e9e8b4f461d7ec5c9f9bfe9aefacf7fa",
+        "npmTarballSha256": "eab00479391fece6afe0d45afe564bf0e9e8b4f461d7ec5c9f9bfe9aefacf7fa",
+        "match": true
+      },
+      {
+        "id": "S08",
+        "path": "build/src/daemon/utils.js",
+        "windowsRecordedSha256": "6769ad4523dfe5f65b7650117135393918146866ccb5f7d583afc271512e7f7b",
+        "npmTarballSha256": "6769ad4523dfe5f65b7650117135393918146866ccb5f7d583afc271512e7f7b",
+        "match": true
+      },
+      {
+        "id": "S09",
+        "path": "build/src/bin/chrome-devtools.js",
+        "windowsRecordedSha256": "c380c15c89425bfe8e0aeb7720bf3996d681752413ef77cb3a33f769a8c70dc5",
+        "npmTarballSha256": "c380c15c89425bfe8e0aeb7720bf3996d681752413ef77cb3a33f769a8c70dc5",
+        "match": true
+      },
+      {
+        "id": "S10",
+        "path": "build/src/bin/chrome-devtools-mcp.js",
+        "windowsRecordedSha256": "9f380d06e1ac05b257e27e708c0cc4b4ba190e285ed6eb6c8aa50978d98a12c5",
+        "npmTarballSha256": "9f380d06e1ac05b257e27e708c0cc4b4ba190e285ed6eb6c8aa50978d98a12c5",
+        "match": true
+      },
+      {
+        "id": "S11",
+        "path": "build/src/bin/chrome-devtools-mcp-main.js",
+        "windowsRecordedSha256": "5ca0e81196ab6b6e1481629a2dcae7f416b3b38f74555e3138ad5cdbb055e809",
+        "npmTarballSha256": "5ca0e81196ab6b6e1481629a2dcae7f416b3b38f74555e3138ad5cdbb055e809",
+        "match": true
+      },
+      {
+        "id": "S12",
+        "path": "build/src/tools/pages.js",
+        "windowsRecordedSha256": "50983bd1b2f01ffa3273de3353e28fd44795d026f2b62bcc783e19156ee0147d",
+        "npmTarballSha256": "50983bd1b2f01ffa3273de3353e28fd44795d026f2b62bcc783e19156ee0147d",
+        "match": true
+      },
+      {
+        "id": "S13",
+        "path": "build/src/third_party/index.js",
+        "windowsRecordedSha256": "fc6ae43cb8f6007eba4b0f269290ec8fea6db7670686d17967b4812d90d2cc10",
+        "npmTarballSha256": "fc6ae43cb8f6007eba4b0f269290ec8fea6db7670686d17967b4812d90d2cc10",
+        "match": true
+      },
+      {
+        "id": "S14",
+        "path": "build/src/index.js",
+        "windowsRecordedSha256": "793dd988623744d46395e586500b5405fd17694cc4bef98d6593bee01563374a",
+        "npmTarballSha256": "793dd988623744d46395e586500b5405fd17694cc4bef98d6593bee01563374a",
+        "match": true
+      },
+      {
+        "id": "S15",
+        "path": "build/src/browser.js",
+        "windowsRecordedSha256": "17f861505810a9d25784fd71bf0592966f513c420b57a728b344280e97fe596c",
+        "npmTarballSha256": "17f861505810a9d25784fd71bf0592966f513c420b57a728b344280e97fe596c",
+        "match": true
+      },
+      {
+        "id": "S16",
+        "path": "build/src/config/mcp-options.js",
+        "windowsRecordedSha256": "2fc554986209b3cfadcbe70552994111aadedf2e159b3de61a12b96233f18f67",
+        "npmTarballSha256": "2fc554986209b3cfadcbe70552994111aadedf2e159b3de61a12b96233f18f67",
+        "match": true
+      },
+      {
+        "id": "S17",
+        "path": "build/src/config/cli-options.js",
+        "windowsRecordedSha256": "05011d9cc5fecae6f359c4aff3272eedb35796cf2e6cbf53db39fe52a49dbffb",
+        "npmTarballSha256": "05011d9cc5fecae6f359c4aff3272eedb35796cf2e6cbf53db39fe52a49dbffb",
+        "match": true
+      },
+      {
+        "id": "S28",
+        "path": "build/src/McpContext.js",
+        "windowsRecordedSha256": "39e41d2e578aa983fa7a3ded08ac9438af7dd8423a29829f746c0fe9e9cb70b3",
+        "npmTarballSha256": "39e41d2e578aa983fa7a3ded08ac9438af7dd8423a29829f746c0fe9e9cb70b3",
+        "match": true
+      },
+      {
+        "id": "S29",
+        "path": "build/src/McpResponse.js",
+        "windowsRecordedSha256": "8f4189b21fe26726cf64137a74542efd4927c21dd4c2794924af95fdaf64d761",
+        "npmTarballSha256": "8f4189b21fe26726cf64137a74542efd4927c21dd4c2794924af95fdaf64d761",
+        "match": true
+      },
+      {
+        "id": "S34",
+        "path": "build/src/version.js",
+        "windowsRecordedSha256": "ff03658d3be60d9ad055f9794f6ee2c7bbebfcfcfdc8b884d2a23083d70c2bef",
+        "npmTarballSha256": "ff03658d3be60d9ad055f9794f6ee2c7bbebfcfcfdc8b884d2a23083d70c2bef",
+        "match": true
+      }
+    ]
+  },
+  "additionalCitedFiles": [
+    {
+      "path": "build/src/config/browser-options.js",
+      "npmTarballSha256": "d172515ff92e0efdda98e84581c46e2db97ba0ff3536507bf3a9da022dcd1887",
+      "windowsRecordedSha256": null,
+      "note": "Cited by R141 but not in the R139 inventory; identity with the Windows install inferred from the same verified tarball, Local must confirm on Windows."
+    },
+    {
+      "path": "build/src/ToolHandler.js",
+      "npmTarballSha256": "49dd8d88257394e778573e3449af6e03fdc2fab73cc8370af26205aeecd8ab7d",
+      "windowsRecordedSha256": null,
+      "note": "Cited by R141 but not in the R139 inventory; identity with the Windows install inferred from the same verified tarball, Local must confirm on Windows."
+    },
+    {
+      "path": "build/src/tools/ToolDefinition.js",
+      "npmTarballSha256": "99a99804c660b47d469b99d60bc5ce5c21571b6bd69ceea19da289dbbc5793c5",
+      "windowsRecordedSha256": null,
+      "note": "Cited by R141 but not in the R139 inventory; identity with the Windows install inferred from the same verified tarball, Local must confirm on Windows."
+    },
+    {
+      "path": "build/src/McpPage.js",
+      "npmTarballSha256": "829f11b3cb4c7b87dbb4f5b6a3f62583f4fc05746daee21e629287247debb340",
+      "windowsRecordedSha256": null,
+      "note": "Cited by R141 but not in the R139 inventory; identity with the Windows install inferred from the same verified tarball, Local must confirm on Windows."
+    },
+    {
+      "path": "package.json",
+      "npmTarballSha256": "6a14bfc51d9111957a5446ba861e462c3181c69c915f8133d8f2beac8c175021",
+      "windowsRecordedSha256": null,
+      "note": "Cited by R141 but not in the R139 inventory; identity with the Windows install inferred from the same verified tarball, Local must confirm on Windows."
+    }
+  ],
+  "conclusion": "All 15 native files recorded from the operator's Windows Antigravity install are byte-identical to the public npm chrome-devtools-mcp@1.9.0 tarball. Static citations in R141 are therefore against the same native source the R139 design inventoried."
+}
