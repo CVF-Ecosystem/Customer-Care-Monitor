@@ -1,0 +1,177 @@
+
+[1m[46m RUN [49m[22m [36mv4.1.0 [39m[90m/home/user/Customer-Care-Monitor/frontend[39m
+
+ [31m❯[39m src/__tests__/intervention-execution-status.test.ts [2m([22m[2m28 tests[22m[2m | [22m[31m10 failed[39m[2m)[22m[33m 721[2mms[22m[39m
+[31m     [31m×[31m S01: a stale rejection for A cannot clear B after the user switched to B[39m[32m 41[2mms[22m[39m
+[31m     [31m×[31m S02: A-new wins over A-old although the request ids match (A -> B -> A)[39m[32m 24[2mms[22m[39m
+[31m     [31m×[31m S03: old A readiness reject after A -> B cannot change B readiness, button or error[39m[32m 18[2mms[22m[39m
+[31m     [31m×[31m S03: old A readiness resolve after A -> B -> A cannot change the newer A readiness[39m[32m 27[2mms[22m[39m
+[31m     [31m×[31m S03: old A readiness reject after A -> B -> A cannot change the newer A readiness[39m[32m 18[2mms[22m[39m
+[31m     [31m×[31m S03: an obsolete short-lived READY cannot replace the current expiry timer[39m[32m 28[2mms[22m[39m
+[31m     [31m×[31m S04: a newer refresh of the same request wins over the overlapping selection read and keeps its spinner[39m[32m 16[2mms[22m[39m
+[31m     [31m×[31m S04: a stale selection failure after the newer refresh finished leaves the refreshed state[39m[32m 21[2mms[22m[39m
+[31m     [31m×[31m S05: an obsolete status promise that ignores abort causes no mutation and no follow-up readiness request[39m[32m 17[2mms[22m[39m
+[31m     [31m×[31m S08: an obsolete observed-execution read cannot rewrite the current durable uncertain hold[39m[32m 20[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 10 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m src/__tests__/intervention-execution-status.test.ts[2m > [22mselection-read ownership across saved requests[2m > [22mS01: a stale rejection for A cannot clear B after the user switched to B
+[31m[1mAssertionError[22m: expected 'New assessment requestProgress cannot…' not to contain 'Progress cannot be checked right now'[39m
+
+Expected: [32m"Progress cannot be checked right now"[39m
+Received: [31m"[7mNew assessment request[27mProgress cannot be checked right now[7m. Please try checking again later.Saved request · 10/20/2026, 12:00:00 AMSaved request · 10/21/2026, 12:00:00 AMRequest: Waiting for an operator to prepare the assessmentLatest observed progress: Progress cannot be checked nowReady for one deliberate assessment requestStart assessmentCheck progress[27m"[39m
+
+[36m [2m❯[22m src/__tests__/intervention-execution-status.test.ts:[2m178:26[22m[39m
+    [90m176|[39m     [35mconst[39m readinessBefore[33m=[39mcalls[33m.[39mreadiness[33m.[39mmock[33m.[39mcalls[33m.[39mlength
+    [90m177|[39m     oldA[33m.[39m[34mreject[39m([35mnew[39m [33mError[39m([32m'stale A failure'[39m))[33m;[39m[35mawait[39m [34mflushPromises[39m()
+    [90m178|[39m     [34mexpect[39m(w[33m.[39m[34mtext[39m())[33m.[39mnot[33m.[39m[34mtoContain[39m([33mTEXT[39m[33m.[39munavailable)
+    [90m   |[39m                          [31m^[39m
+    [90m179|[39m     expect(w.text()).toContain(TEXT.notStarted);expect(w.text()).toCon…
+    [90m180|[39m     [34mexpect[39m([34mbtn[39m(w[33m,[39m[33mTEXT[39m[33m.[39mstart)[33m?.[39m[34mattributes[39m([32m'disabled'[39m))[33m.[39m[34mtoBeUndefined[39m()
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/10]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/__tests__/intervention-execution-status.test.ts[2m > [22mselection-read ownership across saved requests[2m > [22mS02: A-new wins over A-old although the request ids match (A -> B -> A)
+[31m[1mAssertionError[22m: expected 'New assessment requestSaved request ·…' not to contain 'Request accepted; processing has not …'[39m
+
+Expected: [32m"Request accepted; processing has not been confirmed"[39m
+Received: [31m"New assessment requestSaved request · 10/20/2026, 12:00:00 AMSaved request · 10/21/2026, 12:00:00 AMRequest: Waiting for an operator to prepare the assessmentLatest observed progress: Request accepted; processing has not been confirmedReady for one deliberate assessment requestStart assessmentCheck progress"[39m
+
+[36m [2m❯[22m src/__tests__/intervention-execution-status.test.ts:[2m195:26[22m[39m
+    [90m193|[39m     [35mconst[39m readinessBefore[33m=[39mcalls[33m.[39mreadiness[33m.[39mmock[33m.[39mcalls[33m.[39mlength
+    [90m194|[39m     oldA[33m.[39m[34mresolve[39m([34mclaimed[39m(reqA))[33m;[39m[35mawait[39m [34mflushPromises[39m()
+    [90m195|[39m     [34mexpect[39m(w[33m.[39m[34mtext[39m())[33m.[39mnot[33m.[39m[34mtoContain[39m([33mTEXT[39m[33m.[39mclaimed)
+    [90m   |[39m                          [31m^[39m
+    [90m196|[39m     expect(w.text()).toContain(TEXT.notStarted);expect(w.text()).toCon…
+    [90m197|[39m     [34mexpect[39m(w[33m.[39m[34mtext[39m())[33m.[39mnot[33m.[39m[34mtoContain[39m([33mTEXT[39m[33m.[39munavailable)
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/10]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/__tests__/intervention-execution-status.test.ts[2m > [22mselection-read ownership across saved requests[2m > [22mS03: old A readiness reject after A -> B cannot change B readiness, button or error
+[31m[1mAssertionError[22m: expected 'New assessment requestProgress cannot…' not to contain 'Progress cannot be checked right now'[39m
+
+Expected: [32m"Progress cannot be checked right now"[39m
+Received: [31m"[7mNew assessment request[27mProgress cannot be checked right now[7m. Please try checking again later.Saved request · 10/20/2026, 12:00:00 AMSaved request · 10/21/2026, 12:00:00 AMRequest: Waiting for an operator to prepare the assessmentLatest observed progress: No processing record observedAn operator must prepare approval for this requestCheck progress[27m"[39m
+
+[36m [2m❯[22m src/__tests__/intervention-execution-status.test.ts:[2m214:26[22m[39m
+    [90m212|[39m     [35mawait[39m [34mflushPromises[39m()
+    [90m213|[39m     [34mexpect[39m(w[33m.[39m[34mtext[39m())[33m.[39m[34mtoContain[39m([33mTEXT[39m[33m.[39moperator)
+    [90m214|[39m     [34mexpect[39m(w[33m.[39m[34mtext[39m())[33m.[39mnot[33m.[39m[34mtoContain[39m([33mTEXT[39m[33m.[39munavailable)
+    [90m   |[39m                          [31m^[39m
+    [90m215|[39m     [34mexpect[39m([34mbtn[39m(w[33m,[39m[33mTEXT[39m[33m.[39mstart))[33m.[39m[34mtoBeUndefined[39m()
+    [90m216|[39m     [34mexpect[39m(calls[33m.[39mexecute)[33m.[39mnot[33m.[39m[34mtoHaveBeenCalled[39m()
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/10]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/__tests__/intervention-execution-status.test.ts[2m > [22mselection-read ownership across saved requests[2m > [22mS03: old A readiness resolve after A -> B -> A cannot change the newer A readiness
+[41m[1m FAIL [22m[49m src/__tests__/intervention-execution-status.test.ts[2m > [22mselection-read ownership across saved requests[2m > [22mS03: old A readiness reject after A -> B -> A cannot change the newer A readiness
+[31m[1mAssertionError[22m: expected false to be true // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- true[39m
+[31m+ false[39m
+
+[36m [2m❯[22m src/__tests__/intervention-execution-status.test.ts:[2m225:49[22m[39m
+    [90m223|[39m     [35mconst[39m w[33m=[39m[34mmounted[39m()[33m;[39m[35mawait[39m [34mflushPromises[39m()
+    [90m224|[39m     await click(pick(w,'A'));await click(pick(w,'B'));await click(pick…
+    [90m225|[39m     [34mexpect[39m([34msignalOf[39m(calls[33m.[39mreadiness[33m,[39m[34m1[39m)[33m.[39maborted)[33m.[39m[34mtoBe[39m([35mtrue[39m)
+    [90m   |[39m                                                 [31m^[39m
+    [90m226|[39m     if(settle==='resolve')oldReadiness.resolve(readyFor(reqA));else ol…
+    [90m227|[39m     [35mawait[39m [34mflushPromises[39m()
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/10]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/__tests__/intervention-execution-status.test.ts[2m > [22mselection-read ownership across saved requests[2m > [22mS03: an obsolete short-lived READY cannot replace the current expiry timer
+[31m[1mAssertionError[22m: expected '' to be undefined[39m
+
+[32m- Expected:[39m
+undefined
+
+[31m+ Received:[39m
+""
+
+[36m [2m❯[22m src/__tests__/intervention-execution-status.test.ts:[2m248:55[22m[39m
+    [90m246|[39m     oldReadiness[33m.[39m[34mresolve[39m([34mreadyFor[39m(reqA[33m,[39m[34m3_000[39m))[33m;[39m[35mawait[39m [34mflushPromises[39m()
+    [90m247|[39m     [35mawait[39m vi[33m.[39m[34madvanceTimersByTimeAsync[39m([34m2_500[39m)[33m;[39m[35mawait[39m [34mflushPromises[39m()
+    [90m248|[39m     [34mexpect[39m([34mbtn[39m(w[33m,[39m[33mTEXT[39m[33m.[39mstart)[33m?.[39m[34mattributes[39m([32m'disabled'[39m))[33m.[39m[34mtoBeUndefined[39m()
+    [90m   |[39m                                                       [31m^[39m
+    [90m249|[39m     [35mawait[39m vi[33m.[39m[34madvanceTimersByTimeAsync[39m([34m60_000[39m)[33m;[39m[35mawait[39m [34mflushPromises[39m()
+    [90m250|[39m     [34mexpect[39m([34mbtn[39m(w[33m,[39m[33mTEXT[39m[33m.[39mstart)[33m?.[39m[34mattributes[39m([32m'disabled'[39m))[33m.[39m[34mtoBeDefined[39m()
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/10]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/__tests__/intervention-execution-status.test.ts[2m > [22mselection-read ownership across saved requests[2m > [22mS04: a newer refresh of the same request wins over the overlapping selection read and keeps its spinner
+[31m[1mAssertionError[22m: expected 'New assessment requestLoading case in…' not to contain 'Request accepted; processing has not …'[39m
+
+Expected: [32m"Request accepted; processing has not been confirmed"[39m
+Received: [31m"New assessment requestLoading case information…Saved request · 10/20/2026, 12:00:00 AMSaved request · 10/21/2026, 12:00:00 AMRequest: Waiting for an operator to prepare the assessmentLatest observed progress: Request accepted; processing has not been confirmedReady for one deliberate assessment requestStart assessmentCheck progress"[39m
+
+[36m [2m❯[22m src/__tests__/intervention-execution-status.test.ts:[2m265:26[22m[39m
+    [90m263|[39m     selectionRead[33m.[39m[34mresolve[39m([34mclaimed[39m(reqA))[33m;[39m[35mawait[39m [34mflushPromises[39m()
+    [90m264|[39m     [34mexpect[39m(w[33m.[39m[34mtext[39m())[33m.[39m[34mtoContain[39m([33mTEXT[39m[33m.[39mloading)
+    [90m265|[39m     [34mexpect[39m(w[33m.[39m[34mtext[39m())[33m.[39mnot[33m.[39m[34mtoContain[39m([33mTEXT[39m[33m.[39mclaimed)
+    [90m   |[39m                          [31m^[39m
+    [90m266|[39m     [34mexpect[39m(calls[33m.[39mreadiness[33m.[39mmock[33m.[39mcalls[33m.[39mlength)[33m.[39m[34mtoBe[39m(readinessBefore)
+    [90m267|[39m     refreshRead[33m.[39m[34mresolve[39m([34mnoRow[39m(reqA))[33m;[39m[35mawait[39m [34mflushPromises[39m()
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/10]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/__tests__/intervention-execution-status.test.ts[2m > [22mselection-read ownership across saved requests[2m > [22mS04: a stale selection failure after the newer refresh finished leaves the refreshed state
+[31m[1mAssertionError[22m: expected 'New assessment requestProgress cannot…' not to contain 'Progress cannot be checked right now'[39m
+
+Expected: [32m"Progress cannot be checked right now"[39m
+Received: [31m"[7mNew assessment request[27mProgress cannot be checked right now[7m. Please try checking again later.Saved request · 10/20/2026, 12:00:00 AMSaved request · 10/21/2026, 12:00:00 AMRequest: Waiting for an operator to prepare the assessmentLatest observed progress: Progress cannot be checked nowReady for one deliberate assessment requestStart assessmentCheck progress[27m"[39m
+
+[36m [2m❯[22m src/__tests__/intervention-execution-status.test.ts:[2m282:26[22m[39m
+    [90m280|[39m     expect(w.text()).not.toContain(TEXT.loading);expect(w.text()).toCo…
+    [90m281|[39m     selectionRead[33m.[39m[34mreject[39m([35mnew[39m [33mError[39m([32m'late'[39m))[33m;[39m[35mawait[39m [34mflushPromises[39m()
+    [90m282|[39m     [34mexpect[39m(w[33m.[39m[34mtext[39m())[33m.[39mnot[33m.[39m[34mtoContain[39m([33mTEXT[39m[33m.[39munavailable)
+    [90m   |[39m                          [31m^[39m
+    [90m283|[39m     expect(w.text()).toContain(TEXT.notStarted);expect(w.text()).toCon…
+    [90m284|[39m     [34mexpect[39m(calls[33m.[39mexecute)[33m.[39mnot[33m.[39m[34mtoHaveBeenCalled[39m()
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/10]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/__tests__/intervention-execution-status.test.ts[2m > [22mselection-read ownership across saved requests[2m > [22mS05: an obsolete status promise that ignores abort causes no mutation and no follow-up readiness request
+[31m[1mAssertionError[22m: expected false to be true // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- true[39m
+[31m+ false[39m
+
+[36m [2m❯[22m src/__tests__/intervention-execution-status.test.ts:[2m293:46[22m[39m
+    [90m291|[39m     [35mconst[39m w[33m=[39m[34mmounted[39m()[33m;[39m[35mawait[39m [34mflushPromises[39m()
+    [90m292|[39m     await click(pick(w,'A'));await click(pick(w,'B'));await click(pick…
+    [90m293|[39m     [34mexpect[39m([34msignalOf[39m(calls[33m.[39mstatus[33m,[39m[34m1[39m)[33m.[39maborted)[33m.[39m[34mtoBe[39m([35mtrue[39m)
+    [90m   |[39m                                              [31m^[39m
+    [90m294|[39m     [34mexpect[39m([34msignalOf[39m(calls[33m.[39mstatus[33m,[39m[34m3[39m)[33m.[39maborted)[33m.[39m[34mtoBe[39m([35mfalse[39m)
+    [90m295|[39m     const statusBefore=calls.status.mock.calls.length,readinessBefore=…
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/10]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/__tests__/intervention-execution-status.test.ts[2m > [22mselection-read ownership across saved requests[2m > [22mS08: an obsolete observed-execution read cannot rewrite the current durable uncertain hold
+[31m[1mAssertionError[22m: expected 'OBSERVED' to be 'UNCERTAIN' // Object.is equality[39m
+
+Expected: [32m"UNCERTAIN"[39m
+Received: [31m"OBSERVED"[39m
+
+[36m [2m❯[22m src/__tests__/intervention-execution-status.test.ts:[2m380:33[22m[39m
+    [90m378|[39m     [35mconst[39m readinessBefore[33m=[39mcalls[33m.[39mreadiness[33m.[39mmock[33m.[39mcalls[33m.[39mlength
+    [90m379|[39m     oldA[33m.[39m[34mresolve[39m([34mclaimed[39m(reqA))[33m;[39m[35mawait[39m [34mflushPromises[39m()
+    [90m380|[39m     [34mexpect[39m([34mholdOf[39m(reqA)[33m?.[39mstate)[33m.[39m[34mtoBe[39m([32m'UNCERTAIN'[39m)
+    [90m   |[39m                                 [31m^[39m
+    [90m381|[39m     [34mexpect[39m([34mholdOf[39m(reqB))[33m.[39m[34mtoBeNull[39m()
+    [90m382|[39m     expect(w.text()).toContain(TEXT.hold);expect(w.text()).not.toConta…
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/10]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[31m10 failed[39m[22m[2m | [22m[1m[32m18 passed[39m[22m[90m (28)[39m
+[2m   Start at [22m 19:52:17
+[2m   Duration [22m 4.14s[2m (transform 2.35s, setup 0ms, import 2.95s, tests 721ms, environment 291ms)[22m
+

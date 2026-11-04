@@ -55,6 +55,24 @@ const lifetime=computed(()=>JSON.stringify([props.tenantId,props.caseRecord.id,p
 const markerKey=computed(()=>selected.value && props.actorId ? executionHoldKey(props.tenantId,props.caseRecord.id,selected.value.id,props.actorId):'')
 let generation=0, controller=new AbortController(), detachExternal:(()=>void)|null=null, mounted=true
 let expiryTimer:ReturnType<typeof setTimeout>|null=null
+// Selection/read identity (R140) is separate from execution/lifetime generation: a newer read of
+// any request, including the same request id, supersedes older reads without touching POST state.
+interface ReadOwner {seq:number; requestId:string; mine:number; key:string; signal:AbortSignal; abort:()=>void; detach:()=>void}
+let readSeq=0, activeRead:ReadOwner|null=null
+function invalidateReads() {readSeq++;const read=activeRead;activeRead=null;read?.abort();read?.detach()}
+function beginRead(mine:number,key:string,requestId:string,parentSignal:AbortSignal):ReadOwner {
+  invalidateReads()
+  const own=new AbortController(), forward=()=>own.abort()
+  let attached=true
+  parentSignal.addEventListener('abort',forward,{once:true})
+  if (parentSignal.aborted) own.abort()
+  const read:ReadOwner={seq:readSeq,requestId,mine,key,signal:own.signal,abort:()=>own.abort(),
+    detach:()=>{if(attached){attached=false;parentSignal.removeEventListener('abort',forward)}}}
+  activeRead=read
+  return read
+}
+function endRead(read:ReadOwner) {read.detach();if(activeRead===read)activeRead=null}
+function owns(read:ReadOwner) {return current(read.mine,read.key) && read.seq===readSeq && read.requestId===selectedId.value && !read.signal.aborted}
 function clearReadiness() {readiness.value=null;readinessAlive.value=false;if(expiryTimer){clearTimeout(expiryTimer);expiryTimer=null}}
 function deadlineFromServer(value:InterventionExecutionReadiness, requestStarted:number) {
   return requestStarted+Math.max(0,Date.parse(value.expires_at||'')-Date.parse(value.server_now)-1_000)
@@ -65,7 +83,8 @@ function installReadiness(value:InterventionExecutionReadiness, requestStarted:n
   const remaining=deadlineFromServer(value,requestStarted)-performance.now()
   if(remaining<=0)return
   readinessAlive.value=true
-  expiryTimer=setTimeout(()=>{readinessAlive.value=false;expiryTimer=null},remaining)
+  const timer:ReturnType<typeof setTimeout>=setTimeout(()=>{if(expiryTimer!==timer)return;readinessAlive.value=false;expiryTimer=null},remaining)
+  expiryTimer=timer
 }
 function current(mine:number,key:string) {return mounted && mine===generation && key===lifetime.value && !controller.signal.aborted && !props.signal?.aborted}
 function resetController() {
@@ -108,29 +127,35 @@ function validReadiness(value:InterventionExecutionReadiness, requestId:string):
     ['READY','AWAITING_OPERATOR_AUTHORITY','PROCESS_DISABLED','STALE_OR_INELIGIBLE','ALREADY_STARTED'].includes(value.state) &&
     (value.state!=='READY' || (Number.isSafeInteger(value.expected_case_version) && Number(value.expected_case_version)>0 && typeof value.grant_handle==='string' && !!value.grant_handle && typeof value.expires_at==='string' && Date.parse(value.expires_at)>Date.parse(value.server_now)))
 }
-async function readSelected(mine:number,key:string,includeReadiness=true,readSignal:AbortSignal=controller.signal) {
+// Returns false when a newer read or lifetime superseded this one, so callers never clear newer state.
+async function readSelected(mine:number,key:string,includeReadiness=true,parentSignal:AbortSignal=controller.signal):Promise<boolean> {
   const requestId=selectedId.value
-  if (!requestId || !current(mine,key) || readSignal.aborted) return
-  clearReadiness()
+  if (!requestId || !current(mine,key) || parentSignal.aborted) return true
+  const read=beginRead(mine,key,requestId,parentSignal)
   try {
-    const observed=await getInterventionExecutionStatus(props.tenantId,props.caseRecord.id,requestId,props.token,readSignal)
-    if (!current(mine,key)||readSignal.aborted||requestId!==selectedId.value) return
-    if (!validStatus(observed,requestId)) throw new Error('invalid status')
-    status.value=observed
-    if (observed.execution_present && markerKey.value) {try {updateExecutionHold(localStorage,markerKey.value,'OBSERVED')} catch {/* keep hold */};loadHold()}
-  } catch(e) {if (current(mine,key)&&!readSignal.aborted) {status.value=null;error.value=safeError(e)};return}
-  if (!includeReadiness || !props.canExecute || !props.actorId || hold.value || !current(mine,key) || readSignal.aborted) return
-  try {
-    const requestStarted=performance.now()
-    const observed=await getInterventionExecutionReadiness(props.tenantId,props.caseRecord.id,requestId,props.token,readSignal)
-    if (!current(mine,key)||readSignal.aborted||requestId!==selectedId.value) return
-    if (!validReadiness(observed,requestId)) throw new Error('invalid readiness')
-    installReadiness(observed,requestStarted)
-  } catch(e) {if (current(mine,key)&&!readSignal.aborted) error.value=safeError(e)}
+    clearReadiness()
+    try {
+      const observed=await getInterventionExecutionStatus(props.tenantId,props.caseRecord.id,requestId,props.token,read.signal)
+      if (!owns(read)) return false
+      if (!validStatus(observed,requestId)) throw new Error('invalid status')
+      status.value=observed
+      if (observed.execution_present && markerKey.value) {try {updateExecutionHold(localStorage,markerKey.value,'OBSERVED')} catch {/* keep hold */};loadHold()}
+    } catch(e) {if (owns(read)) {status.value=null;error.value=safeError(e)};return owns(read)}
+    if (!owns(read)) return false
+    if (!includeReadiness || !props.canExecute || !props.actorId || hold.value) return true
+    try {
+      const requestStarted=performance.now()
+      const observed=await getInterventionExecutionReadiness(props.tenantId,props.caseRecord.id,requestId,props.token,read.signal)
+      if (!owns(read)) return false
+      if (!validReadiness(observed,requestId)) throw new Error('invalid readiness')
+      installReadiness(observed,requestStarted)
+    } catch(e) {if (owns(read)) error.value=safeError(e)}
+    return owns(read)
+  } finally {endRead(read)}
 }
 async function load() {
   const mine=++generation,key=lifetime.value
-  resetController();requests.value=[];selectedId.value='';status.value=null;clearReadiness();hold.value=null;error.value='';truncated.value=false;loading.value=false;sending.value=false
+  invalidateReads();resetController();requests.value=[];selectedId.value='';status.value=null;clearReadiness();hold.value=null;error.value='';truncated.value=false;loading.value=false;sending.value=false
   if (!props.canRead || !props.tenantId || !props.token) return
   loading.value=true
   try {
@@ -156,7 +181,7 @@ async function load() {
   finally {if(current(mine,key)) loading.value=false}
 }
 function selectRequest(id:string) {
-  if(sending.value)return
+  if(sending.value||loading.value)return
   if (!requests.value.some(r=>r.id===id)) return
   const mine=generation,key=lifetime.value
   selectedId.value=id;status.value=null;clearReadiness();error.value='';loadHold()
@@ -166,8 +191,8 @@ async function refreshSelected() {
   if (!selected.value || loading.value || sending.value) return
   const mine=generation,key=lifetime.value
   error.value='';loading.value=true
-  await readSelected(mine,key)
-  if (current(mine,key)) loading.value=false
+  const stillNewest=await readSelected(mine,key)
+  if (current(mine,key) && stillNewest) loading.value=false
 }
 function delayObservation(ms:number,signal:AbortSignal):Promise<boolean> {
   return new Promise(resolve=>{
@@ -232,5 +257,5 @@ async function executeOnce() {
 }
 watch(lifetime,()=>{void load()},{immediate:true})
 watch(()=>props.signal,()=>{void load()})
-onBeforeUnmount(()=>{mounted=false;generation++;controller.abort();detachExternal?.();clearReadiness()})
+onBeforeUnmount(()=>{mounted=false;generation++;invalidateReads();controller.abort();detachExternal?.();clearReadiness()})
 </script>
