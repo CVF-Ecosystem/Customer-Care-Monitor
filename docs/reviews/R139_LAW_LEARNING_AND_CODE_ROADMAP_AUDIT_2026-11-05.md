@@ -1,6 +1,6 @@
 # R139 — tiếp thu LAW và audit code/roadmap để bàn giao
 
-Status: ACCEPTED_BOUNDED_PENDING_COMMIT
+Status: ACCEPTED_BOUNDED_COMMITTED
 Date: 2026-11-05
 Risk: R2
 Owner: Local Root orchestrator.
@@ -56,7 +56,7 @@ Doctor trước migration PASS28/28. Sau migration, public doctor1.2 báo 26/28,
 
 ## Two terminal conclusions
 
-- Learning/adoption/audit: ACCEPTED_BOUNDED, chờ material commit và readback; profile1.3/registry/rule/source audit đã được nhận. Causal-chain assessment để mở dependent BUILD vẫn là owned remainder.
+- Learning/adoption/audit: ACCEPTED_BOUNDED_COMMITTED; profile1.3/registry/rule/source audit đã được nhận. Causal-chain assessment để mở dependent BUILD vẫn là owned remainder.
 - Product: BLOCKED; full R139/M3/FREEZE OPEN. Physical-relaunch HARD_HOLD, integrated same-context/original-clock NOT_DESIGNED; Core five product UNKNOWN và Facebook/Zalo OA parking giữ nguyên.
 
 ## Public Export Disposition

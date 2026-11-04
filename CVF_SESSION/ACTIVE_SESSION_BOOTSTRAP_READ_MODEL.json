@@ -1818,5 +1818,5 @@
     "newProductRelease": false
   }
 ,
-  "x-lawLearning20261105": {"review": "docs/reviews/R139_LAW_LEARNING_AND_CODE_ROADMAP_AUDIT_2026-11-05.md", "state": "ACCEPTED_BOUNDED_PENDING_COMMIT", "registry": "docs/milestone-coverage-authority.json", "product": "BLOCKED", "enrollment": "r2/r3 UNMET; causal assessment pending; no automatic IMPLEMENT"}
+  "x-lawLearning20261105": {"review": "docs/reviews/R139_LAW_LEARNING_AND_CODE_ROADMAP_AUDIT_2026-11-05.md", "state": "ACCEPTED_BOUNDED_COMMITTED", "registry": "docs/milestone-coverage-authority.json", "product": "BLOCKED", "enrollment": "r2/r3 UNMET; causal assessment pending; no automatic IMPLEMENT"}
 }
