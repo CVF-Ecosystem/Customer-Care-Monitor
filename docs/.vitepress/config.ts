@@ -26,7 +26,16 @@ export default defineConfig({
   // R142: governance evidence under reviews/ contains literal text such as
   // `Promise<void>`; escape raw HTML instead of compiling it as Vue markup.
   // Published guide pages use no raw HTML (checked 2026-11-05).
-  markdown: { html: false },
+  // Inline code is not wrapped in v-pre by default, so double-brace text in a
+  // code span (e.g. a template placeholder) would be compiled as interpolation.
+  markdown: {
+    html: false,
+    config(md) {
+      const render = md.renderer.rules.code_inline!
+      md.renderer.rules.code_inline = (tokens, idx, options, env, self) =>
+        render(tokens, idx, options, env, self).replace(/^<code/, '<code v-pre')
+    },
+  },
 
   head: [
     ['meta', { name: 'theme-color', content: '#1976D2' }],

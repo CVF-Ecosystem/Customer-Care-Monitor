@@ -45,5 +45,18 @@
     "providerCalls": 0,
     "runtimeStarts": 0,
     "dependencyInstalls": 0
-  }
+  },
+  "ciAttempts": [
+    {
+      "attempt": 1,
+      "head": "ad146cd9553257ab0300b4555079d1492c2e1d68",
+      "run": "https://github.com/CVF-Ecosystem/Customer-Care-Monitor/actions/runs/41928227654",
+      "result": "failure: original Promise<void> error gone; new error from R142 packet inline-code double brace"
+    },
+    {
+      "attempt": 2,
+      "change": "inline code v-pre markdown-it hook; packet line reworded",
+      "result": "PENDING"
+    }
+  ]
 }

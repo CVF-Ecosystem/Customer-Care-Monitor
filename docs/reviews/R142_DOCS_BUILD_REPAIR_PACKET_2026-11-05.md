@@ -14,7 +14,7 @@ Authority: `CVF_SESSION/authority/CCMAI-RUNTIME-142.json` (seed commit `38b76fd1
 - VitePress compiles each published markdown page as a Vue template.
 - Historical review text such as `Promise<void>` (for example `reviews/R139_AUTONOMOUS_COMPLETION_ROUTE_2026-10-27.md`) is parsed as an unclosed HTML element: "Element is missing end tag".
 - A static scan of the 732 published markdown files found 10 review files with raw tag-like text outside code spans.
-- The same scan found no raw HTML in guide or home pages, and no `{{` interpolation anywhere.
+- The same scan found no raw HTML in guide or home pages.
 
 ## Change
 
@@ -22,6 +22,13 @@ Authority: `CVF_SESSION/authority/CCMAI-RUNTIME-142.json` (seed commit `38b76fd1
 
 - No evidence, review or receipt file is edited, which keeps historical bytes and hash pins intact.
 - No dependency or CI workflow change.
+
+## CI attempt 1 result and attempt 2 change
+
+- **Attempt 1** (head `ad146cd`, [run](https://github.com/CVF-Ecosystem/Customer-Care-Monitor/actions/runs/41928227654)): the original `Promise<void>` error was gone. The build then failed on this packet's own text: an inline code span containing a double opening brace raised "Interpolation end sign was not found".
+- **Cause:** VitePress adds `v-pre` to fenced code blocks but not to inline code spans. The first scan wrongly treated inline code as safe.
+- A corrected scan found one historical file (`reviews/R139_CLOCK_V3_G0_TECHNICAL_REVIEW_2026-10-26.md`) with a double-brace placeholder in inline code. It does not break the build, but the placeholder text was being dropped from the rendered page.
+- **Attempt 2 change, still config-only:** a markdown-it hook adds `v-pre` to every inline `<code>`, and this packet line was reworded. This is the last CI attempt the seed allows. If it fails, the tranche stops at BLOCKED_WITH_REASON with the log.
 
 ## Verification
 

@@ -28,3 +28,10 @@ Status: ACTIVE
 
 - No `npm ci` and no local build (operator choice).
 - No merge.
+
+CI attempt history, retained:
+1. **Attempt 1** at `ad146cd`.
+   - The original `Promise<void>` failure is resolved.
+   - The build then failed on the R142 packet's own inline-code double brace.
+   - The orchestrator's earlier scan wrongly assumed inline code was safe; VitePress puts `v-pre` only on fenced code.
+2. **Attempt 2:** a markdown-it hook adds `v-pre` to inline `<code>`, and the packet line was reworded. This is the last attempt the seed allows.
