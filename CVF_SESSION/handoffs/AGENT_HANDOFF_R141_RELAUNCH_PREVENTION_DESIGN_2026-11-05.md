@@ -70,3 +70,8 @@ Closure-sync gate history, retained:
 1. An orchestrator script error left the state's `nextAllowedMove` stale. Preflight continuity FAIL and runner CONT-01 FAIL followed.
 2. A retry then rewrote the CRLF JSON files as LF; this was caught in the diff and CRLF was restored.
 3. Final: preflight PASS 6/6 (catalog SKIP) and runner pre-commit PASS 7/0.
+
+CI finding on PR #15, retained:
+- The `CVF Governance` Windows catalog job failed: mandatory surface `continuity-initial-handoff` still pointed to the R140 handoff after the switch of active handoff. Run: https://github.com/CVF-Ecosystem/Customer-Care-Monitor/actions/runs/41909516532
+- Fix: `docs/catalog/ARTIFACT_REGISTRY.json` and the matching line in `docs/INDEX.md` now point to the R141 handoff (always-allowed catalog/index paths, byte-preserving edits).
+- The cloud has no PowerShell, so the catalog gate cannot be reproduced locally. The Windows CI re-run is the check.
