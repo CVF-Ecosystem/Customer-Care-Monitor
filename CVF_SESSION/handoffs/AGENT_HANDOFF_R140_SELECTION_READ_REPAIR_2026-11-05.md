@@ -54,3 +54,8 @@ Orchestrator sync gate history, retained:
    - CONT-01: the memory "Current Truth" block still said BUILD, and `activeWorkOrders` still listed R140.
    - ROLE-01: the review file lacked a `Worker:` line. The orchestrator added that header line only; no reviewer content changed.
 3. Final result: preflight PASS 6/6 (catalog SKIP, Windows-only), and runner pre-commit PASS 7/0. APPL-01 is NOT_APPLICABLE because the work order is no longer in an active dispatch state, so the closeability contract was not checked.
+
+Operator routing rule, 2026-11-05 (cloud session):
+- The cloud agent continues as ORCHESTRATOR.
+- After each completed tranche, it commits and opens a PR into `main` to keep traceable evidence.
+- It must never merge into `main`. The merge belongs to the Local agent, after Local runs one more review.
