@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "cvf.repairAttempt@1.0.0",
+  "milestoneId": "M3",
+  "criterionIds": [
+    "M3-05",
+    "M3-08"
+  ],
+  "trancheId": "CCMAI-RUNTIME-139",
+  "activity": "REPAIR",
+  "result": "UNMET",
+  "proofState": "STATIC_FIX_VERIFIED",
+  "elapsedMinutes": "UNKNOWN",
+  "evidence": [
+    {
+      "path": "docs/reviews/R139_REPLACEMENT_RUNTIME_INDEPENDENT_REVIEW_2026-10-21.md",
+      "sha256": "f5f7df46912f94c76a7790922504fa0eeb353f43d43c91ebae3a35c84474434d"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/r2_integrated_runtime_outcome.json",
+      "sha256": "c0d6bf50a50b1458a5bfd1bc0f4959d9a41b9a2041d4fb28a8cc10a5963493e8"
+    }
+  ]
+}

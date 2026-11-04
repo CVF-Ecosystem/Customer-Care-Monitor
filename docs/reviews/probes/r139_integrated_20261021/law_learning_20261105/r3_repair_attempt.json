@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "cvf.repairAttempt@1.0.0",
+  "milestoneId": "M3",
+  "criterionIds": [
+    "M3-05",
+    "M3-08"
+  ],
+  "trancheId": "CCMAI-RUNTIME-139",
+  "activity": "REPAIR",
+  "result": "UNMET",
+  "proofState": "STATIC_FIX_VERIFIED",
+  "elapsedMinutes": "UNKNOWN",
+  "evidence": [
+    {
+      "path": "docs/reviews/R139_FRESH_R3_INTERRUPTED_RUNTIME_REVIEW_2026-10-22.md",
+      "sha256": "ea46acffc5c54d25d9d23f257c93ffb0bf9c1f2f90213bb0bd42ba79a0eebdbc"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/r6_fresh_r3_interrupted_runtime_outcome.json",
+      "sha256": "a9c53a6d4900462432ba7d4930953c05414f401235d544d84d7771360707b554"
+    },
+    {
+      "path": "docs/reviews/R139_FRESH_R3_INDEPENDENT_SOURCE_REVIEW_2026-10-21.md",
+      "sha256": "fe902a87643eafd7ce4c1894168d1d6fd7f01c35e6ae49e1f501fa397c5d33dc"
+    }
+  ]
+}

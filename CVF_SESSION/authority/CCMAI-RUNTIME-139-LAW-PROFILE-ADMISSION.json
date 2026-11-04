@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-139",
+  "purpose": "STATIC_LAW_PROFILE_1_3_MIGRATION_ONLY",
+  "baseCommit": "56f2171af6e72e5b5c8525334966a22342232a5e",
+  "predecessor": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-REPIN-2-MAINTENANCE-ADMISSION.json",
+    "sha256": "80fd2909ba7a5b21b1378d7a77965c0b85def38a597a0794b72f0f89bd9bd755"
+  },
+  "seedSha256": "29bdfff6c5eb3e453e9f171b012d5919c0bbd981b3b4d754395e30b5e2e1f576",
+  "riskCeiling": "R2",
+  "roles": {
+    "worker": "Root documentary integration and Terra6.1High profile worker",
+    "reviewer": "AstraMedium independent /root/ccma_roadmap_review",
+    "commitSteward": "Root"
+  },
+  "coreFrom": "c4c8767ac8861854f40d466ba338ffd11eb9558e",
+  "coreTo": "UNKNOWN",
+  "files": {
+    ".cvf/gate-profile.lock.json": "2e536dcf2cee7d44f6715a5875431490e42acbc5ec8b7e5e05280478771439bb",
+    ".cvf/manifest.json": "67ad29ed8445f2f8622fe0b5649312b6087e3791cb35b7eb4faa70a6182a3dd8",
+    ".github/workflows/cvf-downstream-gates.yml": "f8cb78ebe1c319ce215df2615f53260a4671e920ff2d0feddfa7a85f81a2df4d",
+    ".gitignore": "d63057e1924a725783d5285ae65cdf9bcce1e1b80342b55d711070f1ee2f96a4",
+    "AGENTS.md": "ee57543519ca9474f33f18d6e49d03f80b0a6bbcb4c2f123ca4f61da3bf8577b",
+    "docs/milestone-coverage-authority.json": "ffdffbbda5d37aae715a58a786009b5740c58aa839ffe9d76131e3d1dbc08cf2",
+    "docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md": "fd80032e749a576d0954d98c7018d0783d827b43292b2bf4f047c8b2503b9849",
+    "scripts/cvf_downstream_gate.py": "d7ac805e82d0103435d260504bb8352f33d26b1d273b576a9fc6c74bfff922c4",
+    "scripts/cvf_gates/cvf_dg_common.py": "f3f1b01d08255d9a7a7a09648fa018178cc3820755279a190ecf120ff0262061",
+    "scripts/cvf_gates/cvf_dg_install.py": "4e96952ef312487e5999b0b0d4db85c2eda158e2ac1cbb336beeba6876ddc316",
+    "scripts/cvf_gates/cvf_downstream_gate_profile.json": "41a99910a57a5d2131f16f83d72e38e07991bf0c4f833601e668fea548a7d2e6",
+    "scripts/cvf_gates/cvf_downstream_gate_runner.py": "0447c57657ff0616f2b9c16b901fb96cb4381022acdfc7f198e1512e6c182a49",
+    "scripts/cvf_gates/cvf_milestone_coverage.py": "14e1efd0acbd54cc9b86f0b33060a6dd57764c16812a07df8e18bca68bfa141f",
+    "scripts/cvf_gates/cvf_repair_convergence.py": "7c58133bc73af0b300cb2674768864c5c8ec6680cf7103905f705897faa8d03d",
+    "scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1": "c6fac5cb32b39359305a992a5faa22d3c08a1f466cc48cd2789a42e0bdae1a76",
+    "scripts/tests/test_cvf_downstream_catalog_parity.py": "6dd3a9a2dfc77ff0895cbcdb1c77bcd90b595bab3e72008f1bec203f12aaa008",
+    "scripts/tests/test_cvf_downstream_gate_core_repin.py": "1b5dff8f743169de85ac2a0392fbf6e79d5f286131a43884838364c605d7e4ef",
+    "scripts/tests/test_cvf_downstream_gate_law_profile.py": "cfec567fa04214a40afce689edb41a88ac763d6295cc7848455f4b70088fe58c",
+    "scripts/tests/test_cvf_downstream_gate_maintenance.py": "ec9b984b922f74af33a9f2543816c86e3801cb5601267a0d98a761f444210e03",
+    "scripts/tests/test_cvf_downstream_gate_profile_compatibility.py": "3e7ad33b3a762ff1f672cceb0e18321bac81f69bbe276ce4422e00def7ad3b49"
+  },
+  "ownerInstruction": "Operator 2026-11-05 explicitly requests updating LAW learning from workspace into Customer-Care-Monitor and auditing code/roadmap before another agent continues. Authorizes this bounded profile1.3 source migration and exact documentary/current-registry updates; no R139 product effect grant or counter reset.",
+  "bootstrapException": {
+    "reason": "One explicit same-commit learning maintenance successor at exact clean base; previous seed/admissions and original frozen payload snapshots remain immutable. Current profile bytes pinned separately from public Core; only repairControls may subsequently evolve under native transition checks.",
+    "ownerInstruction": "Operator 2026-11-05 explicitly requests updating LAW learning from workspace into Customer-Care-Monitor and auditing code/roadmap before another agent continues. Authorizes this bounded profile1.3 source migration and exact documentary/current-registry updates; no R139 product effect grant or counter reset."
+  }
+}

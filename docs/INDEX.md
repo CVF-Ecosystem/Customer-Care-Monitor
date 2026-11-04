@@ -1,4 +1,4 @@
-# Project Documentation Index
+﻿# Project Documentation Index
 
 Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 
@@ -251,6 +251,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Historical R033 local message FREEZE handoff and later R034 planning intake; source closure unchanged.: `CVF_SESSION/handoffs/AGENT_HANDOFF_LOCAL_MESSAGE_FREEZE_2026-10-03.md`
 - Historical R034 offline acceptance and R035 intake/seed acknowledgment; targeted lookup only.: `CVF_SESSION/handoffs/AGENT_HANDOFF_PANCAKE_PROOF_HARNESS_2026-10-03.md`
 - Historical R050 BUILD/independent CHANGES_REQUIRED and R051 seed acknowledgment; original findings/limits preserved.: `CVF_SESSION/handoffs/AGENT_HANDOFF_SOURCE_FIRST_PROVIDER_2026-10-05.md`
+- LAW repair convergence project adoption and selected source/roadmap audit; product remains blocked.: `docs/reviews/R139_LAW_LEARNING_AND_CODE_ROADMAP_AUDIT_2026-11-05.md`
+- LAW repair convergence project adoption and selected source/roadmap audit; product remains blocked.: `docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/intake.json`
+- LAW repair convergence project adoption and selected source/roadmap audit; product remains blocked.: `docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/r2_repair_attempt.json`
+- LAW repair convergence project adoption and selected source/roadmap audit; product remains blocked.: `docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/r3_repair_attempt.json`
+- LAW repair convergence project adoption and selected source/roadmap audit; product remains blocked.: `docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/workspace_rule_pack_manifest.json`
 - Shared observed Git blob/archive representation lesson; strict archive-member manifest comparison and preflight cost control, parent assessment deferred.: `docs/reviews/learnings/feedback_archive_byte_manifest.md`
 - Shared independently verified fixture-domain and stored-prefix learning; upstream deferred.: `docs/reviews/learnings/feedback_uuid_fixtures_and_terminal_receipt_prefix.md`
 - Owner clarification: all agents classify findings before delegation; reviewer directly fixes minor authorized metadata issues with role/check/commit evidence.: `docs/reviews/learnings/feedback_minor_reviewer_repairs.md`
@@ -5839,6 +5844,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Dispatcher-owned tranche authority seeds; GOV-001 is an explicit reviewer-seeded bootstrap exception.: `CVF_SESSION/authority/`
 - Structured per-tranche contract records (phase, roles, allowed paths, review disposition) read by the downstream gate.: `CVF_SESSION/tranches/`
 - Work orders.: `docs/work_orders/`
+- Exact intake, repair attempts, independent review and original/final validation receipts for LAW profile adoption.: `docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/`
 
 Plans describe intended work. `IMPLEMENTATION_STATUS.json`, source, tests, and
 review evidence determine what is actually implemented.

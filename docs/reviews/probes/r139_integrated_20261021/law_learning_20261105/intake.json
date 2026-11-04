@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "ccma.lawLearningIntake@1.0.0",
+  "date": "2026-11-05",
+  "projectBase": "56f2171af6e72e5b5c8525334966a22342232a5e",
+  "trigger": "OPERATOR_REQUESTED_PROJECT_UPDATE_AND_AUDIT",
+  "autonomousInitialEnrollment": false,
+  "sourceWorktreeDirty": true,
+  "sourceManifestSha256": "4e1eeaa1b4c80f502cca9c8fd236db54beacdfe818e4c92c58c269be98f21b45",
+  "sourceProvenanceClaim": "Exact per-file hashes; manifest HEAD anchor is not committed profile1.3 proof. Public Core c4 remains separate.",
+  "historicalAttemptScope": "Two retained repair campaign outcomes enrolled. Not an exhaustive history census. Later bounded native capability/design acceptance does not establish M3 product resolution.",
+  "causalAssessment": "PENDING; registry audit=null holds dependent IMPLEMENT and permits only properly bounded retained-evidence VERIFY.",
+  "history": [
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/r2_repair_attempt.json",
+      "sha256": "f2158f8ef2781e5e25c93dd5a1c5e1b745214a2ce700114f2c2071cd725b99ba"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/r3_repair_attempt.json",
+      "sha256": "6cd7ffacd92bd47e2ba91050508018623a7f8d8eff2c9929b5f28cf74d719f31"
+    }
+  ],
+  "currentBudget": "No prior costs/counters reset. Cumulative total UNKNOWN; no runtime/provider/browser allocation in this audit.",
+  "doctorBeforeMigration": {
+    "result": "PASS",
+    "checks": 28,
+    "total": 28,
+    "scope": "public-Core project doctor only; no hosted CI or live readiness claim"
+  },
+  "codeFinding": "M3-06 selection reads may accept late success/error across request changes; source-derived, regression not yet executed."
+}

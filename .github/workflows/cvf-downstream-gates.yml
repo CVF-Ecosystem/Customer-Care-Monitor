@@ -26,6 +26,6 @@ jobs:
           python scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pr-ci
           --project-root .
           --base-from-env CVF_DG_BASE --head HEAD
-          --expect-profile-sha256 faaf9273ada3fd826e6372898d134fe7ad0157528f25b7720211c31cfc209bd5
-          --expect-runner-sha256 716544aa7a38251009867a4e0150be51b79b4304a8c5f6d7afddab4e7c5d9c07
-          --expect-bundle-sha256 80edcd2e4b605f440b94df963ed304ffed0f803bfa057a951360e39f014efc2b
+          --expect-profile-sha256 41a99910a57a5d2131f16f83d72e38e07991bf0c4f833601e668fea548a7d2e6
+          --expect-runner-sha256 0447c57657ff0616f2b9c16b901fb96cb4381022acdfc7f198e1512e6c182a49
+          --expect-bundle-sha256 b047fac687337aa83e8d17608c4a0712ea728eca24c02a66a8805690b3516ee3

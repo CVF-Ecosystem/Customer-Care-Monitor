@@ -1,0 +1,32 @@
+[PASS] provenance
+       note: required doc outside project not checked (portable mode): ..\WORKSPACE_RULES.md
+       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core
+[PASS] continuity
+[FAIL] tranche
+       - CCMAI-RUNTIME-139: law profile admission invalid (unexpected installed profile directory)
+       - changed path outside the authorized allowedPaths: .cvf/gate-profile.lock.json
+       - changed path outside the authorized allowedPaths: .cvf/manifest.json
+       - changed path outside the authorized allowedPaths: .github/workflows/cvf-downstream-gates.yml
+       - changed path outside the authorized allowedPaths: .gitignore
+       - changed path outside the authorized allowedPaths: AGENTS.md
+       - changed path outside the authorized allowedPaths: docs/milestone-coverage-authority.json
+       - changed path outside the authorized allowedPaths: docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md
+       - changed path outside the authorized allowedPaths: scripts/cvf_downstream_gate.py
+       - changed path outside the authorized allowedPaths: scripts/cvf_gates/cvf_dg_common.py
+       - changed path outside the authorized allowedPaths: scripts/cvf_gates/cvf_dg_install.py
+       - changed path outside the authorized allowedPaths: scripts/cvf_gates/cvf_downstream_gate_profile.json
+       - changed path outside the authorized allowedPaths: scripts/cvf_gates/cvf_downstream_gate_runner.py
+       - changed path outside the authorized allowedPaths: scripts/cvf_gates/cvf_milestone_coverage.py
+       - changed path outside the authorized allowedPaths: scripts/cvf_gates/cvf_repair_convergence.py
+       - changed path outside the authorized allowedPaths: scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1
+       - changed path outside the authorized allowedPaths: scripts/tests/test_cvf_downstream_catalog_parity.py
+       - changed path outside the authorized allowedPaths: scripts/tests/test_cvf_downstream_gate_core_repin.py
+       - changed path outside the authorized allowedPaths: scripts/tests/test_cvf_downstream_gate_law_profile.py
+       - changed path outside the authorized allowedPaths: scripts/tests/test_cvf_downstream_gate_maintenance.py
+       - changed path outside the authorized allowedPaths: scripts/tests/test_cvf_downstream_gate_profile_compatibility.py
+[PASS] claims
+[PASS] secrets
+       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read
+[PASS] workflows
+[PASS] catalog
+CVF downstream preflight: FAIL (6/7 executed gates passed)

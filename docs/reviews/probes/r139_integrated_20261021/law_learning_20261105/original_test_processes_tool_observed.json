@@ -1,0 +1,28 @@
+{
+  "evidenceKind": "TOOL_OBSERVED_SUMMARY_NOT_RAW_TRANSCRIPT",
+  "processes": [
+    {
+      "suite": "historical core repin",
+      "tests": 21,
+      "seconds": 284.948,
+      "result": "PASS",
+      "individualExitStatus": "NOT_CAPTURED"
+    },
+    {
+      "suite": "focused law profile before final history-erasure fix",
+      "tests": 6,
+      "seconds": 409.084,
+      "result": "FAIL",
+      "failure": "test_native_repair_registry_evolution_and_reset: restoration of initial empty repairControls was not rejected",
+      "individualExitStatus": "NOT_CAPTURED"
+    },
+    {
+      "suite": "profile compatibility",
+      "tests": 45,
+      "seconds": 0.407,
+      "result": "PASS",
+      "individualExitStatus": "NOT_CAPTURED"
+    }
+  ],
+  "qualification": "Three sequential unittest invocations; counts, durations and unittest result observed in tool output. Individual shell status was not separately captured. Fifth final-source focused history-erasure result is recorded separately with raw output."
+}

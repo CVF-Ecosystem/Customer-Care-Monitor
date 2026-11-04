@@ -83,7 +83,7 @@ ALLOW_MARKER = "cvf-allow-secret-fixture"
 # declarations and backtick-wrapped values are judged by the same grammar as CVF-DG-APPL-01.
 _WORK_ORDER_GRAMMAR_ID = "cvf.workOrderStatusGrammar@1.0.0"
 _COMPATIBLE_PROFILE_LOCK_IDS = frozenset((
-    "cvf.downstreamGateProfile@1.1.0", "cvf.downstreamGateProfile@1.2.0"))
+    "cvf.downstreamGateProfile@1.1.0", "cvf.downstreamGateProfile@1.2.0", "cvf.downstreamGateProfile@1.3.0"))
 _MAINTENANCE_TRANCHE = "CCMAI-RUNTIME-139"
 _MAINTENANCE_BASE = "cdf3554da9e4359488f9f8dd389be9d16d11e302"
 _MAINTENANCE_ADMISSION = (
@@ -103,6 +103,10 @@ _REPIN2_BASE = "38952df8bcf9e01b18a05a1da1095b1e7eda6fd8"
 _REPIN2_CORE_TO = "c4c8767ac8861854f40d466ba338ffd11eb9558e"
 _REPIN2_ADMISSION = "CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-REPIN-2-MAINTENANCE-ADMISSION.json"
 _REPIN2_REPLACEMENTS = frozenset((".cvf/manifest.json", ".cvf/gate-profile.lock.json", "AGENTS.md", "scripts/cvf_downstream_gate.py", "scripts/tests/test_cvf_downstream_gate_core_repin.py"))
+_LAW_BASE = "56f2171af6e72e5b5c8525334966a22342232a5e"
+_LAW_ADMISSION = "CVF_SESSION/authority/CCMAI-RUNTIME-139-LAW-PROFILE-ADMISSION.json"
+_LAW_REPLACE = frozenset((".cvf/gate-profile.lock.json", "AGENTS.md", ".github/workflows/cvf-downstream-gates.yml", "docs/milestone-coverage-authority.json", "docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md", "scripts/cvf_downstream_gate.py", "scripts/tests/test_cvf_downstream_gate_core_repin.py", "scripts/tests/test_cvf_downstream_gate_law_profile.py", "scripts/tests/test_cvf_downstream_gate_profile_compatibility.py"))
+_LAW_INSTALLED = _REPIN_INSTALLED | {"cvf_repair_convergence.py"}
 _MAINTENANCE_PATH_EXACT = frozenset((
     ".cvf/gate-profile.lock.json", ".cvf/manifest.json",
     ".github/workflows/cvf-downstream-gates.yml", "AGENTS.md",
@@ -564,7 +568,7 @@ def check_core_repin(root, tid, seed, out_of_scope, r):
         return []
 
 
-def check_core_repin_2(root, tid, seed, out_of_scope, r):
+def check_core_repin_2(root, tid, seed, out_of_scope, r, historical_only=False):
     """The fixed documentation-only c4 successor; historical proof comes from Git blobs."""
     def reject(message):
         raise GateError(message)
@@ -691,7 +695,7 @@ def check_core_repin_2(root, tid, seed, out_of_scope, r):
             digest = old_lock["files"][name]
             if (not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest) or
                     _lf_sha(blob(prior_first, "scripts/cvf_gates/" + name)) != digest or
-                    _lf_sha(read_safe("scripts/cvf_gates/" + name)) != digest):
+                    (not historical_only and _lf_sha(read_safe("scripts/cvf_gates/" + name)) != digest)):
                 reject("installed source differs from historical lock: " + name)
 
         raw = read_safe(_REPIN2_ADMISSION)
@@ -713,6 +717,19 @@ def check_core_repin_2(root, tid, seed, out_of_scope, r):
         elif head != _REPIN2_BASE or _git(root, "cat-file", "-e", f"HEAD:{_REPIN2_ADMISSION}", check=False).returncode == 0:
             reject("second bootstrap requires absent history and exact base HEAD")
         files = admission["files"]
+        if historical_only:
+            if not second_first or not isinstance(files, dict) or set(files) != set(prior_files):
+                reject("historical second payload missing or differs")
+            historical_lock = obj(blob(second_first, ".cvf/gate-profile.lock.json"))
+            historical_manifest = obj(blob(second_first, ".cvf/manifest.json"))
+            if historical_lock != dict(old_lock, coreCommit=_REPIN2_CORE_TO) or historical_manifest != dict(old_manifest, cvfCoreCommit=_REPIN2_CORE_TO):
+                reject("historical second manifest/lock differs")
+            for path, digest in files.items():
+                if (not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest) or
+                        path not in _REPIN2_REPLACEMENTS and digest != prior_files[path] or
+                        _lf_sha(blob(second_first, path)) != digest):
+                    reject("historical second payload differs: " + path)
+            return files
         if not isinstance(files, dict) or set(files) != set(prior_files) or set(files) != set(out_of_scope):
             reject("second effective file set differs")
         record = obj(read_safe("CVF_SESSION/tranches/" + tid + ".json"))
@@ -754,6 +771,145 @@ def check_core_repin_2(root, tid, seed, out_of_scope, r):
         return []
 
 
+def check_law_profile_admission(root, tid, seed, out_of_scope, r):
+    """One explicit learning migration; validate previous proof at original Git blobs."""
+    def reject(message):
+        raise GateError(message)
+
+    def safe(rel):
+        full = os.path.join(root, *rel.split("/"))
+        expected = os.path.join(os.path.realpath(root), *rel.split("/"))
+        if not inside(root, rel) or os.path.normcase(os.path.realpath(full)) != os.path.normcase(expected) or not os.path.isfile(full):
+            reject("missing or aliased path: " + rel)
+        with open(full, "rb") as f:
+            return f.read()
+
+    def obj(raw):
+        return json.loads(raw.decode("utf-8-sig"), object_pairs_hook=_no_duplicate_pairs)
+
+    def blob(commit, path):
+        entry = _git(root, "ls-tree", "-z", commit, "--", path).stdout
+        if not entry.startswith((b"100644 blob ", b"100755 blob ")) or entry.count(b"\x00") != 1:
+            reject("non-regular historical file: " + path)
+        return _git(root, "show", f"{commit}:{path}").stdout
+
+    try:
+        previous = check_core_repin_2(root, tid, seed, out_of_scope, r, historical_only=True)
+        if not previous:
+            return []
+        head = verify_commit(root, "HEAD", "HEAD")
+        verify_commit(root, _LAW_BASE, "law base")
+        if _git(root, "merge-base", "--is-ancestor", _LAW_BASE, head, check=False).returncode:
+            reject("law base is not ancestor")
+        raw = safe(_LAW_ADMISSION)
+        admission = obj(raw)
+        seed_raw = safe("CVF_SESSION/authority/" + tid + ".json")
+        prior_raw = safe(_REPIN2_ADMISSION)
+        if (not isinstance(admission, dict) or set(admission) != _REPIN_FIELDS or tid != _MAINTENANCE_TRANCHE or
+            admission["schemaVersion"] != "1.0" or admission["trancheId"] != tid or
+            admission["purpose"] != "STATIC_LAW_PROFILE_1_3_MIGRATION_ONLY" or admission["baseCommit"] != _LAW_BASE or
+            admission["seedSha256"] != _lf_sha(seed_raw) or admission["riskCeiling"] != seed.get("riskCeiling") or
+            admission["coreFrom"] != _REPIN2_CORE_TO or admission["coreTo"] != "UNKNOWN" or
+            admission["predecessor"] != {"path": _REPIN2_ADMISSION, "sha256": _lf_sha(prior_raw)}):
+            reject("law successor identity invalid")
+        instruction, roles, exception = admission["ownerInstruction"], admission["roles"], admission["bootstrapException"]
+        if (not isinstance(instruction, str) or "2026-11-05" not in instruction or not instruction.strip() or
+            not isinstance(roles, dict) or set(roles) != _MAINTENANCE_ROLES or
+            not all(isinstance(v, str) and v.strip() for v in roles.values()) or
+            roles["worker"].strip().casefold() == roles["reviewer"].strip().casefold() or
+            roles["commitSteward"].strip().casefold() != "root" or
+            not isinstance(exception, dict) or set(exception) != {"reason", "ownerInstruction"} or
+            not isinstance(exception["reason"], str) or not exception["reason"].strip() or exception["ownerInstruction"] != instruction):
+            reject("law successor roles or authorization invalid")
+        commits = _git(root, "log", "--diff-filter=A", "--format=%H", "--reverse", "--", _LAW_ADMISSION).stdout.decode().split()
+        first = commits[0] if commits else None
+        if first:
+            if (_git(root, "merge-base", "--is-ancestor", _LAW_BASE, first, check=False).returncode or
+                _git(root, "merge-base", "--is-ancestor", first, head, check=False).returncode or
+                _lf_sha(blob(first, _LAW_ADMISSION)) != _lf_sha(raw)):
+                reject("law admission first blob or ancestry invalid")
+        elif head != _LAW_BASE or _git(root, "cat-file", "-e", "HEAD:" + _LAW_ADMISSION, check=False).returncode == 0:
+            reject("law bootstrap needs exact base HEAD")
+        files = admission["files"]
+        allowed = _LAW_REPLACE | {"scripts/cvf_gates/" + n for n in _LAW_INSTALLED}
+        if not isinstance(files, dict) or set(files) != set(out_of_scope) or not set(previous).issubset(files) or set(files) - set(previous) - allowed:
+            reject("law payload scope differs")
+        record = obj(safe("CVF_SESSION/tranches/" + tid + ".json"))
+        base = record.get("baseCommit")
+        verify_commit(root, base, "active tranche base")
+        if _git(root, "merge-base", "--is-ancestor", base, head, check=False).returncode:
+            reject("active tranche base not ancestor")
+        actual = set(git_z(root, "diff", "--name-only", "-z", f"{base}..HEAD")) | set(worktree_files(root))
+        actual = {p for p in actual if not path_matches(p, list(seed.get("allowedPaths") or []) + ALWAYS_ALLOWED)}
+        if set(files) != actual:
+            reject("law payload differs from actual range")
+        lock, manifest = obj(safe(".cvf/gate-profile.lock.json")), obj(safe(".cvf/manifest.json"))
+        if (manifest != obj(blob(_LAW_BASE, ".cvf/manifest.json")) or lock.get("coreCommit") != "UNKNOWN" or
+            lock.get("profileId") != "cvf.downstreamGateProfile@1.3.0" or lock.get("profileVersion") != "1.3.0" or
+            lock.get("gatesDir") != "scripts/cvf_gates" or not isinstance(lock.get("files"), dict) or set(lock["files"]) != _LAW_INSTALLED):
+            reject("law profile or public manifest invalid")
+        if any(_lf_sha(safe("scripts/cvf_gates/" + n)) != lock["files"][n] for n in _LAW_INSTALLED):
+            reject("installed profile file differs from lock")
+        gate_dir = os.path.join(root, "scripts", "cvf_gates")
+        actual_names = set()
+        for directory, dirs, names in os.walk(gate_dir, followlinks=False):
+            if dirs:
+                reject("unexpected installed profile directory")
+            actual_names.update(os.path.relpath(os.path.join(directory, n), gate_dir).replace(os.sep, "/") for n in names)
+        bundle = hashlib.sha256("".join(f"{n}:{lock['files'][n]}\n" for n in sorted(_LAW_INSTALLED)).encode("utf-8")).hexdigest()
+        pins = (lock.get("profileSha256"), lock.get("runnerSha256"), lock.get("bundleSha256"))
+        if (actual_names != _LAW_INSTALLED or pins != (lock["files"]["cvf_downstream_gate_profile.json"], lock["files"]["cvf_downstream_gate_runner.py"], bundle) or
+            any(pin not in safe(".github/workflows/cvf-downstream-gates.yml").decode("utf-8") for pin in pins)):
+            reject("installed bundle or CI pins differ")
+        staged = set(git_z(root, "diff", "--cached", "--name-only", "-z"))
+        if not first and staged and _LAW_ADMISSION not in staged:
+            reject("bootstrap admission must be staged with payload")
+        def index_blob(path):
+            entry = _git(root, "ls-files", "--stage", "-z", "--", path).stdout
+            if not entry.startswith((b"100644 ", b"100755 ")) or entry.count(b"\x00") != 1 or b" 0\t" not in entry:
+                reject("staged path not regular: " + path)
+            return _git(root, "show", ":" + path).stdout
+        registry_path = "docs/milestone-coverage-authority.json"
+        for path, digest in files.items():
+            if (not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest) or
+                path in previous and path not in allowed and digest != previous[path]):
+                reject("law payload digest or frozen path differs: " + path)
+            current_digest = _lf_sha(safe(path))
+            if current_digest != digest and not (first and path == registry_path):
+                reject("law payload digest or frozen path differs: " + path)
+            if path in staged and _lf_sha(index_blob(path)) != current_digest:
+                reject("staged law payload differs: " + path)
+            if first and _lf_sha(blob(first, path)) != digest:
+                reject("law first-commit payload differs: " + path)
+            if not first and _LAW_ADMISSION in staged and path not in staged and _lf_sha(blob(head, path)) != digest:
+                reject("changed bootstrap payload not staged: " + path)
+        if first:
+            before, after = obj(blob(first, registry_path)), obj(safe(registry_path))
+            if (not isinstance(before, dict) or not isinstance(after, dict) or
+                {k: v for k, v in before.items() if k != "repairControls"} !=
+                {k: v for k, v in after.items() if k != "repairControls"}):
+                reject("registry non-repair definitions changed")
+            import importlib.util
+            from pathlib import Path
+            spec = importlib.util.spec_from_file_location("cvf_law_pinned_coverage", os.path.join(gate_dir, "cvf_milestone_coverage.py"))
+            if spec is None or spec.loader is None:
+                reject("pinned repair transition unavailable")
+            module = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(module)
+            failures = module.validate_repair_transition(Path(root), first)
+            if failures:
+                reject("invalid registry repair transition: " + ", ".join(failures))
+        for path, data in ((_LAW_ADMISSION, raw), (_REPIN2_ADMISSION, prior_raw),
+                           (_REPIN_ADMISSION, safe(_REPIN_ADMISSION)), (_MAINTENANCE_ADMISSION, safe(_MAINTENANCE_ADMISSION)),
+                           ("CVF_SESSION/authority/" + tid + ".json", seed_raw)):
+            if path in staged and _lf_sha(index_blob(path)) != _lf_sha(data):
+                reject("staged authority differs: " + path)
+        return list(files)
+    except (GateError, OSError, UnicodeError, ValueError, TypeError, KeyError, AttributeError) as exc:
+        r.fail(f"{tid}: law profile admission invalid ({exc})")
+        return []
+
+
 def check_maintenance_admission(root, tid, seed, out_of_scope, r):
     """Admit only exact, hash-bound R139 static maintenance; never alter the seed.
 
@@ -762,6 +918,15 @@ def check_maintenance_admission(root, tid, seed, out_of_scope, r):
     """
     if tid != _MAINTENANCE_TRANCHE:
         return []
+    law_exists = os.path.lexists(os.path.join(root, *_LAW_ADMISSION.split("/")))
+    if not law_exists and have_git(root):
+        try:
+            law_exists = bool(_git(root, "log", "--diff-filter=A", "--format=%H", "--", _LAW_ADMISSION).stdout.strip())
+        except GateError:
+            r.fail(f"{tid}: law successor history could not be verified")
+            return []
+    if law_exists:
+        return check_law_profile_admission(root, tid, seed, out_of_scope, r)
     second_exists = os.path.lexists(os.path.join(root, *_REPIN2_ADMISSION.split("/")))
     if not second_exists and have_git(root):
         try:

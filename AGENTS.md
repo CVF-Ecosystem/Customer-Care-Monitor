@@ -78,6 +78,22 @@ A tranche may inherit accepted evidence and enter at its earliest open stage whe
 Before intake, planning, producing or receiving work, apply the pinned core’s `docs/reference/CVF_GOVERNED_WORK_LIFECYCLE_AND_DESIGN_CONTROL_STANDARD_2026-06-11.md`, including its mandatory `docs/reference/CVF_PRODUCT_MILESTONE_COVERAGE_CONTRACT_2026-10-23.md`: roadmap outcomes/checkpoints, complete milestone coverage, owned remainder, bounded supporting work and separate tranche/product conclusions. Apply `docs/reference/downstream_gate_profile/CVF_MILESTONE_COVERAGE_MACHINE_CONTRACT.md`: Local admits `docs/milestone-coverage-authority.json` before implementation; missing/unknown coverage permits finite verification only.
 Design outputs for quick agent and human continuation; accept incomplete inputs for permitted clarification, read sources before asking, resolve ordinary authorized details and pause only dependent actions. Apply these rules for every role and resumed agent without operator reminder. Verification questions do not change approved direction. Preserve native capability reuse; identify only missing CVF adapter work. Preserve governed SPEC/WORK_ORDER and locked design/authority; reuse existing artifact structure.
 
+## Autonomous Repair Convergence — adopted 2026-11-05
+
+Apply the operator-local workspace learning in `docs/reviews/R139_LAW_LEARNING_AND_CODE_ROADMAP_AUDIT_2026-11-05.md` at startup, dispatch, repair return and review, without waiting for the operator to notice recurrence. After the first completed repair fails its declared outcome, Local MUST record the actual failed repair and pinned evidence in the existing `docs/milestone-coverage-authority.json` repairControls, then audit the causal chain before dependent implementation. Preserve all attempts, cumulative cost and UNKNOWNs; a new tranche/name/model does not reset the outcome or budget. A first implementation failure or accepted planned partial design alone is not this trigger.
+
+The audit distinguishes observed cause from hypothesis, remaining dependencies, a finite discriminating check, owner, stop/reopen conditions and independent review. Static source acceptance does not mean the product problem is resolved. Missing reviewed audit blocks dependent IMPLEMENT; finite VERIFY may gather retained evidence under its own bounded packet. Independent work must explain independence from affected criteria. Record operator-prompted versus autonomous application and actual recurrence/outcome; never invent a zero-error history.
+
+For this explicit Nov-5 profile migration, run the public-Core doctor for public clone/manifest/freshness checks. Its old1.2 runner reports exactly LOCK_INVALID (INST) and COV_OBJECT_SHAPE (COV) for the new1.3 lock/registry; preserve that failure, never report full doctor PASS after migration. Only these two version-mismatch results are superseded by the trusted operator-local bootstrap below, after verifying the recorded pack manifest/file hashes. Any other doctor failure still stops dependent work. This is a version-specific authority split, not a bypass of missing controls.
+
+```powershell
+python ../CVF_RULE_PACKS/operator-local/source/scripts/lib/downstream_governance/cvf_downstream_gate_runner.py run --phase bootstrap --project-root . --trusted --json
+```
+
+Use the exact installed1.3 runner and pinned CI for packet/range validation. If the active workspace pack changes, reverify provenance and deliberately reconcile; never silently trust a different pack. The immutable migration admission and local preflight bind the adopted bundle and public manifest.
+
+The public Core manifest stays pinned independently from the explicitly inherited operator-local profile. This is declared-artifact checking, not proof of autonomous discovery, hosted CI or live AI enforcement. Existing R139 physical-relaunch HARD_HOLD, original-clock constraints, consumed effects and Facebook/Zalo OA parking remain.
+
 ## Provider-Neutral Role Contract
 
 Roles are responsibilities and must never be hardcoded to a specific provider.
@@ -221,17 +237,15 @@ python -m unittest discover -s scripts/tests -p "test_cvf_downstream_gate*.py"
 - The workspace doctor remains the local prerequisite for the sibling core; the gate does not
   assume a sibling core. A pass proves the checked repository state, not runtime AI governance.
 
-## Installed Public Gate Profile (CCMAI-GOV-002)
+## Installed Gate Profile — operator-local migration 2026-11-05
 
-The pinned public profile `cvf.downstreamGateProfile@1.2.0` (public Core
-`c4c8767ac8861854f40d466ba338ffd11eb9558e`) is installed under `scripts/cvf_gates/` and pinned by
-`.cvf/gate-profile.lock.json`. Never hand-edit those modules or the lock; reinstall only from the public Core.
+The installed profile is `cvf.downstreamGateProfile@1.3.0` under `scripts/cvf_gates/`, pinned by `.cvf/gate-profile.lock.json`. Its source is the exact operator-local workspace pack recorded in the LAW migration evidence; sourceWorktreeDirty=true and lock coreCommit=UNKNOWN. Public Core remains c4c8767 for the separate base/manifest checks. Historical public1.2 proofs retain their original scope. Never hand-edit inherited modules/lock; deliberate reinstall must use the verified admitted source pack. See the Autonomous Repair Convergence section for the version-specific doctor route.
 Run with `python -B` from the project root. Portable route: [continuation guide](docs/reference/CVF_PROJECT_PORTABLE_CONTINUATION.md).
 
 | Moment | Command (project root) |
 | --- | --- |
-| Install / verify install (explicit, public Core only) | `python -B ../.Controlled-Vibe-Framework-CVF/scripts/lib/downstream_governance/cvf_downstream_gate_runner.py install --project-root . --core-root ../.Controlled-Vibe-Framework-CVF --core-commit c4c8767ac8861854f40d466ba338ffd11eb9558e` |
-| Independent anchor (Core doctor, byte comparison) | `powershell -ExecutionPolicy Bypass -File ../.Controlled-Vibe-Framework-CVF/scripts/check_cvf_workspace_agent_enforcement.ps1 -ProjectPath .` |
+| Deliberate verified-pack upgrade only | `python -B ../CVF_RULE_PACKS/operator-local/source/scripts/lib/downstream_governance/cvf_downstream_gate_runner.py install --project-root . --core-root ../CVF_RULE_PACKS/operator-local/source --core-commit UNKNOWN --upgrade` |
+| Public-base doctor (retain version mismatches; operator-local trusted bootstrap above supplies profile checks) | `powershell -ExecutionPolicy Bypass -File ../.Controlled-Vibe-Framework-CVF/scripts/check_cvf_workspace_agent_enforcement.ps1 -ProjectPath .` |
 | Before dispatching a work order | `python -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root . --packet docs/work_orders/<ORDER>.md` |
 | Worker return | `python -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase worker-return --project-root . --packet docs/work_orders/<ORDER>.md --packet docs/reviews/<RETURN>.md` |
 | Independent review | same arguments with `--phase reviewer-fast` |

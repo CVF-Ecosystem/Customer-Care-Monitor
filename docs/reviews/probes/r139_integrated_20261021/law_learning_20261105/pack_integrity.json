@@ -1,0 +1,215 @@
+{
+  "sourceWorktreeDirty": true,
+  "checkedFileCount": 52,
+  "result": "PASS",
+  "files": [
+    {
+      "id": "milestone-coverage-machine-contract",
+      "sha256": "176126e64cb80372e6851279eed0e77a980a0587b64a579067124a74dc086459"
+    },
+    {
+      "id": "downstream-gate-profile-migration",
+      "sha256": "eaaead7a89da9720a0533dd1acb20799ea431128ad80fff6b7182a79db9f2fa4"
+    },
+    {
+      "id": "build-learning-evidence-checklist",
+      "sha256": "ff07ed99360e4cd3a6b3bbb307c4d9326a518649e783bdf608ec8f0b922668b4"
+    },
+    {
+      "id": "downstream-gate-profile-source",
+      "sha256": "41a99910a57a5d2131f16f83d72e38e07991bf0c4f833601e668fea548a7d2e6"
+    },
+    {
+      "id": "downstream-gate-runner-source",
+      "sha256": "0447c57657ff0616f2b9c16b901fb96cb4381022acdfc7f198e1512e6c182a49"
+    },
+    {
+      "id": "downstream-gate-common-source",
+      "sha256": "f3f1b01d08255d9a7a7a09648fa018178cc3820755279a190ecf120ff0262061"
+    },
+    {
+      "id": "downstream-gate-install-source",
+      "sha256": "4e96952ef312487e5999b0b0d4db85c2eda158e2ac1cbb336beeba6876ddc316"
+    },
+    {
+      "id": "downstream-gate-continuity-source",
+      "sha256": "8ca92bd3c172638728e98f04ed652c32639280d236af5912ae479bb7c38fe571"
+    },
+    {
+      "id": "downstream-gate-applicability-source",
+      "sha256": "bffde44fe38494b0dea9e658fb82eaaec31f3bd25c9964445fa837dd29b01c67"
+    },
+    {
+      "id": "downstream-gate-routing-source",
+      "sha256": "a39419336ea31ec155c285291f3d5684046e8b18d88dbf47c422b3c2c59632cf"
+    },
+    {
+      "id": "downstream-gate-review-source",
+      "sha256": "2558b7635646340a73cb124121802f2f6f123ef96e240146def3e874a002034d"
+    },
+    {
+      "id": "downstream-gate-intake-source",
+      "sha256": "204aacddb1d1b64439508bcfa73c8632842b0bc1f26dcdf3422d1404e1594efc"
+    },
+    {
+      "id": "downstream-gate-coverage-source",
+      "sha256": "d768e60435268da2c8609a928972d1912d369a67d4056924c515d552a4245467"
+    },
+    {
+      "id": "downstream-milestone-coverage-source",
+      "sha256": "cd923b842aabce33f352c2ea14c55a3a7c2fa6bb549de62b3897712fc68c0b02"
+    },
+    {
+      "id": "downstream-repair-convergence-source",
+      "sha256": "227c56680648623eed294b49795e113ac520658276c8503eb6268b925a36fd3c"
+    },
+    {
+      "id": "downstream-gate-precommit-template",
+      "sha256": "547c077163eb64259362a669d1fa6cca7cc4fe06090af3c9286f09557bcf937b"
+    },
+    {
+      "id": "downstream-gate-learning-home-template",
+      "sha256": "b2982c018baedca7f076526221ad6d5d0854dab2f029390d2c7f079ded05930f"
+    },
+    {
+      "id": "downstream-gate-learning-record-template",
+      "sha256": "559d2d50c86fbfc72967d6af5b19df23c5001c48ddaca0a2b423fc574e7250d6"
+    },
+    {
+      "id": "downstream-gate-ci-template",
+      "sha256": "17e2f560e8d79758b4196c5419ab8e3cc089d1bb7570f94a71321c9465b9aa4f"
+    },
+    {
+      "id": "project-development-application-standard",
+      "sha256": "d06b62387e015160a77658f333882a2a316d54ffd0421071354cf63a3730dd7a"
+    },
+    {
+      "id": "workspace-agents-template",
+      "sha256": "18fba5fb94fc6878291f9be41015604deb4026757b43d310a8e49a92e2ed0ffc"
+    },
+    {
+      "id": "guard-orientation-index",
+      "sha256": "675c4c4a2219b53e73dc7f3fb000750eed859019b2521d01ddf66fba3ae00377"
+    },
+    {
+      "id": "workspace-rules-reference",
+      "sha256": "2ce22989bdc044ec5ec8078d41fdfc35930e5509b8bc4230387aa57386b11594"
+    },
+    {
+      "id": "product-milestone-coverage-contract",
+      "sha256": "929ff3289753f3dd60e7b0f43856d406447d555093a678d3db53586d3a1508e3"
+    },
+    {
+      "id": "workspace-profile-tiers-reference",
+      "sha256": "e33c69df0533878aad627dacbf7a3bb8c0b8cc043eef3088bee8e9947d0e658d"
+    },
+    {
+      "id": "workspace-classification-and-usage-guide",
+      "sha256": "a9468cf9ab9112f645dde026a6c964822c2a2bac8b14cb3adbb3db57dbb93457"
+    },
+    {
+      "id": "workspace-paid-user-authoring-guide",
+      "sha256": "5306daa6d99322bf84316be5f8112d126e884bb30ba8bdc070963f1fd948a2db"
+    },
+    {
+      "id": "workspace-paid-user-safe-onboarding-flow",
+      "sha256": "f4497080af546a5e1cfcef068c822f223f05d7d3cf8259ef7865df1adb8a2087"
+    },
+    {
+      "id": "downstream-agents-template",
+      "sha256": "f72f51eba89331e2c426c488e2c9fe6ba542b348e4ac9db472e27f5fb785a53e"
+    },
+    {
+      "id": "workspace-memory-template",
+      "sha256": "7ea711216a2aa63d208bf7dee374eabe15eee661121fd9837795c42a90e014fd"
+    },
+    {
+      "id": "workspace-agent-handoff-template",
+      "sha256": "c2cc54631b8823c811afd0524635a3eaf2d2806185ae1a4be11f3071df71098f"
+    },
+    {
+      "id": "text-encoding-and-symbol-discipline",
+      "sha256": "7d3adc71380c08efa35b6d8c32b22b462de14d3c15d575a0aca493b7b0c92bdf"
+    },
+    {
+      "id": "live-run-diagnostic-standard",
+      "sha256": "89c1f5bc6124f4bc83e5a942af87a36b9f6d09b68aaff214278e69341e540090"
+    },
+    {
+      "id": "agent-error-learning-philosophy",
+      "sha256": "608d6fda077501c2374679d15f93b50453dabbf4619d43e863d084a26cd5ba74"
+    },
+    {
+      "id": "operational-reference-index",
+      "sha256": "a8dac5c8538b3c19e5d6e6442f338420ba55a6babc578165299cd28f9e7474c4"
+    },
+    {
+      "id": "governance-control-matrix",
+      "sha256": "f0ad0b5899bb5f39c09bc189d87cf129e50a1b6bd4969a7ec1ce30dafed6b612"
+    },
+    {
+      "id": "agent-work-order-template",
+      "sha256": "ae37730dcb8c9b97e9015cb774af0e5891a7e7f453915914f219b414a414f1c8"
+    },
+    {
+      "id": "knowledge-absorption-priority-standard",
+      "sha256": "567c53a24785f86c7d70c2c8936c66d59db0927401f9a9f3fe4464fbc6653676"
+    },
+    {
+      "id": "template-skill-corpus-rescreen-standard",
+      "sha256": "bcded9cf88e0206fd8b73e05698116db2569d7bc54faebf44211ed00324e5913"
+    },
+    {
+      "id": "non-coder-value-measurement-standard",
+      "sha256": "f76c6423f46fc1314fada27ae75e8fc3012e46d99639aa351b47283ff236cd01"
+    },
+    {
+      "id": "session-governance-bootstrap-reference",
+      "sha256": "1b0d0aa84ff794fa365b4639152b8773643d783e263536405db6910e9f4dc430"
+    },
+    {
+      "id": "critical-repository-boundary-reference",
+      "sha256": "5173fbde3515d41e56c6a29f2eea2feac48e45da3054386777f0fd95ef14eba5"
+    },
+    {
+      "id": "knowledge-absorption-priority-checker",
+      "sha256": "980754d217324ff9dc1d6361a35f6021672105a3ad369f05c72d142ebf2d3659"
+    },
+    {
+      "id": "template-skill-standard-checker",
+      "sha256": "f413b9f5f5cc6df62441790a9770690d0f6883acb5c2d537ee0a96ec4fe2f8da"
+    },
+    {
+      "id": "gate-to-role-closeability-standard",
+      "sha256": "b3af2fcbd09160d9f2ae88c861bd67d45ba1425bd21e577bf880cb0f1f29ea3c"
+    },
+    {
+      "id": "gate-to-role-closeability-checker",
+      "sha256": "42e46ae4a16dff326afd2fe34a2c14d0aa51747ff217ae4f6c8196a672e9c98f"
+    },
+    {
+      "id": "adif-0057-entry",
+      "sha256": "bb2c6b6352aa71eee7813af8b436e722bb0f0b0b8d50c32aa60a3e066a4935cc"
+    },
+    {
+      "id": "knowledge-absorption-priority-guard",
+      "sha256": "64f1482ab388aa39ed937ca981afe4c8011ac1af00adc29a7c26d2c0610df7f0"
+    },
+    {
+      "id": "template-skill-standard-guard",
+      "sha256": "4bcc106340fa210e80af8e0c838f72d12c1bc07f264a0fa243c813f016f78ee2"
+    },
+    {
+      "id": "provenance-root-agents",
+      "sha256": "a9f1190cde66989fd4d5b339429a575259f0b73a5fa426154ce50fb308670918"
+    },
+    {
+      "id": "active-versioned-handoff",
+      "sha256": "2bab19c55e67db1a8dd616c3e4e060d6247b47196200d7c1f0c3592a45204339"
+    },
+    {
+      "id": "session-memory-front-door",
+      "sha256": "80433ea9bd78a5865e9ede2e413de5ba55764281696b625b9ebd0f9b0b76877f"
+    }
+  ]
+}

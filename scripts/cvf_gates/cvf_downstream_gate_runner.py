@@ -83,13 +83,15 @@ def _range_result(M: dict, candidates, require: bool):
     return common.ControlResult("CVF-DG-RANGE-01", "PASS", [], notes=notes)
 
 
-def _milestone_result(M: dict, root: Path, packets: list[str], profile: dict):
+def _milestone_result(M: dict, root: Path, packets: list[str], profile: dict, base=None):
     common, coverage = M["cvf_dg_common"], M["cvf_milestone_coverage"]
     ControlResult, Finding = common.ControlResult, common.Finding
     CONTROL_ID = "CVF-DG-COV-01"
     candidates = set(packets)
     active = root / profile["continuityContract"]["implementationPath"]
     findings, checked = [], []
+    findings.extend(Finding(code, coverage.AUTHORITY_REGISTRY, "repair history transition refused")
+                    for code in coverage.validate_repair_transition(root, base))
     if active.is_file():
         try:
             state = common.load_json_strict(active)
@@ -198,7 +200,7 @@ def run_phase(args: argparse.Namespace) -> int:
         elif cid == "CVF-DG-APPL-01":
             results.append(M["cvf_dg_applicability"].check_applicability(root, packets(("docs/work_orders/",)), checker_dir))
         elif cid == "CVF-DG-COV-01":
-            results.append(_milestone_result(M, root, packets(("docs/roadmaps/", "docs/work_orders/", "docs/reviews/")), profile))
+            results.append(_milestone_result(M, root, packets(("docs/roadmaps/", "docs/work_orders/", "docs/reviews/")), profile, candidates.base))
         elif cid == "CVF-DG-ROUTE-01":
             results.append(M["cvf_dg_routing"].check_routing(root, packets(("docs/work_orders/", "docs/reviews/")), profile))
         elif cid == "CVF-DG-ROLE-01":

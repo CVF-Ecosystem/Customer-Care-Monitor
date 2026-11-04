@@ -1,9 +1,28 @@
 {
-  "schemaVersion": "cvf.milestoneAuthority@1.0.0",
+  "schemaVersion": "cvf.milestoneAuthority@1.1.0",
   "milestones": {
     "M3": {
       "path": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
       "heading": "## 7. M3 — Người duyệt, giao việc và kết quả xử lý"
+    }
+  },
+  "repairControls": {
+    "M3": {
+      "history": [
+        {
+          "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/r2_repair_attempt.json",
+          "sha256": "f2158f8ef2781e5e25c93dd5a1c5e1b745214a2ce700114f2c2071cd725b99ba"
+        },
+        {
+          "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/r3_repair_attempt.json",
+          "sha256": "6cd7ffacd92bd47e2ba91050508018623a7f8d8eff2c9929b5f28cf74d719f31"
+        }
+      ],
+      "affectedCriteria": [
+        "M3-05",
+        "M3-08"
+      ],
+      "audit": null
     }
   }
 }

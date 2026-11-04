@@ -1,9 +1,15 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "updatedAt": "2026-10-30",
+  "updatedAt": "2026-11-05",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
+    {"id": "law-learning-20261105-evidence-family", "family": "governed_artifact_family", "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105", "status": "ACTIVE", "description": "Exact intake, repair attempts, independent review and original/final validation receipts for LAW profile adoption."},
+    {"id": "law-learning-20261105-5", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/workspace_rule_pack_manifest.json", "status": "ACTIVE", "description": "LAW repair convergence project adoption and selected source/roadmap audit; product remains blocked."},
+    {"id": "law-learning-20261105-4", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/r3_repair_attempt.json", "status": "ACTIVE", "description": "LAW repair convergence project adoption and selected source/roadmap audit; product remains blocked."},
+    {"id": "law-learning-20261105-3", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/r2_repair_attempt.json", "status": "ACTIVE", "description": "LAW repair convergence project adoption and selected source/roadmap audit; product remains blocked."},
+    {"id": "law-learning-20261105-2", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/intake.json", "status": "ACTIVE", "description": "LAW repair convergence project adoption and selected source/roadmap audit; product remains blocked."},
+    {"id": "law-learning-20261105-0", "family": "continuity", "path": "docs/reviews/R139_LAW_LEARNING_AND_CODE_ROADMAP_AUDIT_2026-11-05.md", "status": "ACTIVE", "description": "LAW repair convergence project adoption and selected source/roadmap audit; product remains blocked."},
     {
       "id": "r139-p01b01-design-result-20261030-4",
       "family": "continuity",

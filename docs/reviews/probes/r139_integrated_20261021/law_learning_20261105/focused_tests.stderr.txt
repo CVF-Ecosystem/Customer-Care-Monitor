@@ -1,0 +1,13 @@
+.F....
+======================================================================
+FAIL: test_native_repair_registry_evolution_and_reset (test_cvf_downstream_gate_law_profile.LawProfile.test_native_repair_registry_evolution_and_reset)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor\scripts\tests\test_cvf_downstream_gate_law_profile.py", line 118, in test_native_repair_registry_evolution_and_reset
+    self.assertTrue(self.check())
+AssertionError: [] is not true
+
+----------------------------------------------------------------------
+Ran 6 tests in 414.937s
+
+FAILED (failures=1)

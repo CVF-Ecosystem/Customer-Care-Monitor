@@ -4,6 +4,15 @@ Memory class: POINTER_RECORD
 
 <!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
 
+## Current LAW project update — 2026-11-05
+
+CCMAI-RUNTIME-139: apply operator-requested LAW learning/profile1.3 and source/roadmap audit from docs/reviews/R139_LAW_LEARNING_AND_CODE_ROADMAP_AUDIT_2026-11-05.md. Two actual r2/r3 failed repair outcomes enrolled for M3-05/M3-08; audit=null. Next Root prepares finite retained-evidence VERIFY (proposed ceiling30active minutes, no effects), completes causal-chain audit and independent admission before dependent IMPLEMENT; do not automatically build P01 wrapper. M3-06 selection late-response defect is source-derived; separate fix requires independence and scoped regression. PublicCore c4 remains; dirty operator-local profile provenance UNKNOWN with exactmanifest hashes. Physicalrelaunch HARD_HOLD, integratedsamecontext/originalclock NOT_DESIGNED, CorefiveproductUNKNOWN, wholeR139/M3/FREEZE OPEN; allpriorcosts/counters/UNKNOWN and FB/ZaloOAparking retained.
+
+Root ORCHESTRATOR / learning integration and SESSION_SYNC_STEWARD / COMMIT_STEWARD; TerraHigh profile worker; AstraMedium independent REVIEWER; next product coding agent unassigned
+
+Earlier checkpoints below retain historical evidence; this current instruction supersedes their next-move prose.
+
+
 ## Current freshness repair checkpoint - 2026-11-04
 
 CCMAI-RUNTIME-139 bounded freshness checkpoint independently REVIEW_PASS: publicCore/project pins c4c8767/profile1.2, doctor28/28, final124units and Root4criticalPASS; one lockedcachedtarget updater/nativeupgrade, both historical authorities/frozenpayloads retained. Next: Root reconcile pending offline native-command/P01 metadata source WORK_ORDER to currentc4, record finite contribution/cost and independent admission, commit preparation before separateworker sourceBUILD. Native adapter has no implementation/effect grant yet. Productphysicalrelaunch HARD_HOLD/integratedsameheldcontext/originalclock NOT_DESIGNED, CorefiveproductUNKNOWN/fullR139/M3/FREEZE OPEN; allhistoricalcosts/UNKNOWNs and originalfocused4FAIL retained; Facebook/ZaloOA parked.

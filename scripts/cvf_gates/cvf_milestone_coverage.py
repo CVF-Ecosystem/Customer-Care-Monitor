@@ -5,9 +5,12 @@ Checks declared set/identity/phase joins, not semantic truth or authenticated ro
 from __future__ import annotations
 
 import hashlib
+import importlib.util
 import json
 import re
+from functools import lru_cache
 from pathlib import Path
+from types import SimpleNamespace
 
 SCHEMA = "cvf.milestoneCoverage@1.0.0"
 TAG = "cvf-milestone-coverage-json"
@@ -17,6 +20,47 @@ ID = re.compile(r"[A-Z][A-Z0-9_-]*[0-9][A-Z0-9_-]*\Z")
 SHA = re.compile(r"[0-9a-f]{64}\Z")
 STATES = {"NOT_STARTED", "IMPLEMENTED_UNPROVED", "VERIFIED", "BLOCKED", "UNKNOWN"}
 PLACEHOLDERS = {"", "TODO", "TBD", "N/A", "NONE", "UNKNOWN", "LATER"}
+
+
+@lru_cache(maxsize=1)
+def _repair():
+    source = Path(__file__).with_name("cvf_repair_convergence.py")
+    spec = importlib.util.spec_from_file_location("cvf_portable_repair_convergence", source)
+    if spec is None or spec.loader is None:
+        raise Invalid("COV_REPAIR_MODULE_UNAVAILABLE")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def _repair_api(packet_path=None, packet_text=None):
+    cache = {}
+    def bounded_read(root, path):
+        key = (str(root.resolve()), path)
+        if key not in cache:
+            raw = read_file(root, path)
+            need(len(cache) < 128 and sum(map(len, cache.values())) + len(raw) <= 16 * MAX_BYTES,
+                 "COV_REPAIR_EVIDENCE_BUDGET")
+            cache[key] = raw
+        return cache[key]
+    def bounded_evidence(root, refs, required=False):
+        need(isinstance(refs, list) and len(refs) <= 100, "COV_EVIDENCE_LIST")
+        need(not required or bool(refs), "COV_EVIDENCE_REQUIRED")
+        for ref in refs:
+            shape(ref, ("path", "sha256"))
+            need(isinstance(ref["sha256"], str) and bool(SHA.fullmatch(ref["sha256"])), "COV_HASH_INVALID")
+            need(digest(bounded_read(root, ref["path"])) == ref["sha256"], "COV_EVIDENCE_STALE")
+    return SimpleNamespace(need=need, shape=shape, text=text, positive=positive,
+                           unique=unique, evidence=bounded_evidence, read_file=bounded_read, pairs=_pairs,
+                           packet_path=packet_path, packet_digest=digest(packet_text.encode("utf-8")) if packet_text is not None else None)
+
+
+def validate_repair_transition(root: Path, base=None) -> list[str]:
+    try:
+        _repair().transition(root, base, _repair_api())
+        return []
+    except (Invalid, OSError, UnicodeError, ValueError, TypeError, KeyError) as exc:
+        return [str(exc) if isinstance(exc, Invalid) else "COV_REPAIR_INVALID_INPUT:" + type(exc).__name__]
 
 
 class Invalid(ValueError):
@@ -134,15 +178,15 @@ def evidence(root: Path, refs, required=False):
         need(digest(read_file(root, ref["path"])) == ref["sha256"], "COV_EVIDENCE_STALE")
 
 
-def validate(root: Path, data) -> list[str]:
+def validate(root: Path, data, packet_path=None, packet_text=None) -> list[str]:
     try:
-        _validate(root, data)
+        _validate(root, data, packet_path, packet_text)
         return []
     except (Invalid, OSError, UnicodeError, ValueError, TypeError, KeyError) as exc:
         return [str(exc) if isinstance(exc, Invalid) else "COV_INVALID_INPUT:" + type(exc).__name__]
 
 
-def _validate(root: Path, data):
+def _validate(root: Path, data, packet_path=None, packet_text=None):
     shape(data, ("schemaVersion", "authority", "milestone", "phase", "action", "rows", "supportingWork", "conclusions"))
     need(data["schemaVersion"] == SCHEMA, "COV_SCHEMA")
     milestone = data["milestone"]
@@ -175,8 +219,8 @@ def _validate(root: Path, data):
         shape(authority, ("path", "heading", "sha256"))
         need(isinstance(authority["path"], str) and authority["path"].startswith("docs/"), "COV_AUTHORITY_LOCATION")
         registry = json.loads(read_file(root, AUTHORITY_REGISTRY).decode("utf-8-sig"), object_pairs_hook=_pairs)
-        shape(registry, ("schemaVersion", "milestones"))
-        need(registry["schemaVersion"] == "cvf.milestoneAuthority@1.0.0" and isinstance(registry["milestones"], dict), "COV_AUTHORITY_REGISTRY")
+        need(isinstance(registry, dict) and isinstance(registry.get("milestones"), dict), "COV_AUTHORITY_REGISTRY")
+        _repair().controls(registry, _repair_api())
         binding = registry["milestones"].get(milestone["id"])
         need(binding == {k: authority[k] for k in ("path", "heading")}, "COV_MILESTONE_AUTHORITY_MISMATCH")
         source = section(read_file(root, authority["path"]).decode("utf-8-sig"), authority["heading"])
@@ -224,6 +268,8 @@ def _validate(root: Path, data):
     evidence(root, conclusion["acceptance"], conclusion["product"] == "COMPLETE")
     if conclusion["product"] == "COMPLETE":
         need(bool(expected) and all(r["state"] == "VERIFIED" for r in rows), "COV_PRODUCT_INCOMPLETE")
+    if authority is not None:
+        _repair().validate(root, data, registry, _repair_api(packet_path, packet_text))
 
 
 def _pairs(pairs):
@@ -279,7 +325,7 @@ def validate_text(root: Path, relative: str, value: str, required=None) -> list[
         need(len(bodies[0].encode()) <= MAX_BYTES, "COV_BLOCK_OVERSIZE")
         data = json.loads(bodies[0], object_pairs_hook=_pairs,
                           parse_constant=lambda _: (_ for _ in ()).throw(Invalid("COV_JSON_CONSTANT")))
-        issues = validate(root, data)
+        issues = validate(root, data, relative, value)
         if not issues and relative.startswith("docs/work_orders/") and required:
             need(data["phase"] == "DISPATCH", "COV_EXECUTABLE_PHASE_REQUIRED")
         statuses = re.findall(r"^Status:\s*(\S+)", unfenced(value), re.M)

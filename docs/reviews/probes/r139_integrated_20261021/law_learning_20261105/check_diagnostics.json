@@ -1,0 +1,36 @@
+{
+  "initialTrustedBootstrap": {
+    "result": "FAIL",
+    "code": "COV_EVIDENCE_STALE",
+    "cause": "Root computed updated r3 attempt pin from raw CRLF rather than canonical LF bytes.",
+    "repair": "Recomputed LF-normalized digest in registry/intake; underlying receipts untouched.",
+    "rerun": "PASS INST/CONT/COV; receipt in checks directory",
+    "kind": "same-authoring metadata correction, not a completed product repair tranche"
+  },
+  "independentReviewRound1": {
+    "reviewer": "Astra Medium /root/ccma_roadmap_review",
+    "result": "CHANGES_REQUIRED",
+    "findings": [
+      "staged historical admissions must be checked",
+      "registry must allow governed append/audit continuation",
+      "r3 STATIC_FIX needs exact source-review evidence"
+    ],
+    "disposition": "worker repairing source; Root added source-review evidence pin"
+  },
+  "firstPacketPrecommit": {
+    "result": "FAIL",
+    "codes": [
+      "BUNDLE_MISMATCH/UNEXPECTED_FILE generated pyc",
+      "ROLE_FIELD_INVALID missing explicit Worker/Reviewer lines"
+    ],
+    "cause": "Root admission probe omitted -B; report combined role prose instead of required literal fields.",
+    "repair": "Removed only two generated cache files in verified project path; explicit Worker/Reviewer lines added; future commands use -B.",
+    "scope": "same-authoring metadata/tool invocation repair; no product effect"
+  },
+  "firstLocalPreflight": {
+    "result": "FAIL",
+    "cause": "Unexpected installed __pycache__ directory from Root probe; empty after files removed but strict directory-set guard correctly refused it.",
+    "repair": "Removed verified empty cache directory; final localpreflight PASS7/7.",
+    "sourceUnchanged": true
+  }
+}

@@ -1,0 +1,659 @@
+﻿{
+    "schemaVersion":  "1.0",
+    "profileName":  "operator-local",
+    "sourceRepository":  "Controlled-Vibe-Framework-CVF-Provenance",
+    "sourceCommit":  "ce825b8d1",
+    "sourceWorktreeDirty":  true,
+    "generatedAt":  "2026-11-05T00:45:40+07:00",
+    "workspaceRoot":  "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace",
+    "allowProvenanceContinuity":  true,
+    "selectionTags":  [
+                          "repository-boundary",
+                          "workspace-standard",
+                          "paid-user-safe",
+                          "operator-orientation",
+                          "downstream-governance",
+                          "work-order-authoring",
+                          "workspace-provenance-local"
+                      ],
+    "artifactCount":  53,
+    "artifacts":  [
+                      {
+                          "artifactId":  "milestone-coverage-machine-contract",
+                          "sourcePath":  "docs\\reference\\downstream_gate_profile\\CVF_MILESTONE_COVERAGE_MACHINE_CONTRACT.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\reference\\downstream_gate_profile\\CVF_MILESTONE_COVERAGE_MACHINE_CONTRACT.md",
+                          "artifactClass":  "reference-standard",
+                          "selectionTags":  [
+                                                "workspace-standard"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "176126e64cb80372e6851279eed0e77a980a0587b64a579067124a74dc086459"
+                      },
+                      {
+                          "artifactId":  "downstream-gate-profile-migration",
+                          "sourcePath":  "docs\\reference\\downstream_gate_profile\\CVF_DOWNSTREAM_GATE_PROFILE_MIGRATION.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\reference\\downstream_gate_profile\\CVF_DOWNSTREAM_GATE_PROFILE_MIGRATION.md",
+                          "artifactClass":  "reference-standard",
+                          "selectionTags":  [
+                                                "workspace-standard"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "eaaead7a89da9720a0533dd1acb20799ea431128ad80fff6b7182a79db9f2fa4"
+                      },
+                      {
+                          "artifactId":  "build-learning-evidence-checklist",
+                          "sourcePath":  "docs\\reference\\downstream_gate_profile\\CVF_BUILD_LEARNING_EVIDENCE_CHECKLIST.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\reference\\downstream_gate_profile\\CVF_BUILD_LEARNING_EVIDENCE_CHECKLIST.md",
+                          "artifactClass":  "reference-checklist",
+                          "selectionTags":  [
+                                                "workspace-standard"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "ff07ed99360e4cd3a6b3bbb307c4d9326a518649e783bdf608ec8f0b922668b4"
+                      },
+                      {
+                          "artifactId":  "downstream-gate-profile-source",
+                          "sourcePath":  "scripts\\lib\\downstream_governance\\cvf_downstream_gate_profile.json",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\scripts\\lib\\downstream_governance\\cvf_downstream_gate_profile.json",
+                          "artifactClass":  "portable-gate-source",
+                          "selectionTags":  [
+                                                "workspace-standard"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "41a99910a57a5d2131f16f83d72e38e07991bf0c4f833601e668fea548a7d2e6"
+                      },
+                      {
+                          "artifactId":  "downstream-gate-runner-source",
+                          "sourcePath":  "scripts\\lib\\downstream_governance\\cvf_downstream_gate_runner.py",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\scripts\\lib\\downstream_governance\\cvf_downstream_gate_runner.py",
+                          "artifactClass":  "portable-gate-source",
+                          "selectionTags":  [
+                                                "workspace-standard"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "0447c57657ff0616f2b9c16b901fb96cb4381022acdfc7f198e1512e6c182a49"
+                      },
+                      {
+                          "artifactId":  "downstream-gate-common-source",
+                          "sourcePath":  "scripts\\lib\\downstream_governance\\cvf_dg_common.py",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\scripts\\lib\\downstream_governance\\cvf_dg_common.py",
+                          "artifactClass":  "portable-gate-source",
+                          "selectionTags":  [
+                                                "workspace-standard"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "f3f1b01d08255d9a7a7a09648fa018178cc3820755279a190ecf120ff0262061"
+                      },
+                      {
+                          "artifactId":  "downstream-gate-install-source",
+                          "sourcePath":  "scripts\\lib\\downstream_governance\\cvf_dg_install.py",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\scripts\\lib\\downstream_governance\\cvf_dg_install.py",
+                          "artifactClass":  "portable-gate-source",
+                          "selectionTags":  [
+                                                "workspace-standard"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "4e96952ef312487e5999b0b0d4db85c2eda158e2ac1cbb336beeba6876ddc316"
+                      },
+                      {
+                          "artifactId":  "downstream-gate-continuity-source",
+                          "sourcePath":  "scripts\\lib\\downstream_governance\\cvf_dg_continuity.py",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\scripts\\lib\\downstream_governance\\cvf_dg_continuity.py",
+                          "artifactClass":  "portable-gate-source",
+                          "selectionTags":  [
+                                                "workspace-standard"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "8ca92bd3c172638728e98f04ed652c32639280d236af5912ae479bb7c38fe571"
+                      },
+                      {
+                          "artifactId":  "downstream-gate-applicability-source",
+                          "sourcePath":  "scripts\\lib\\downstream_governance\\cvf_dg_applicability.py",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\scripts\\lib\\downstream_governance\\cvf_dg_applicability.py",
+                          "artifactClass":  "portable-gate-source",
+                          "selectionTags":  [
+                                                "workspace-standard"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "bffde44fe38494b0dea9e658fb82eaaec31f3bd25c9964445fa837dd29b01c67"
+                      },
+                      {
+                          "artifactId":  "downstream-gate-routing-source",
+                          "sourcePath":  "scripts\\lib\\downstream_governance\\cvf_dg_routing.py",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\scripts\\lib\\downstream_governance\\cvf_dg_routing.py",
+                          "artifactClass":  "portable-gate-source",
+                          "selectionTags":  [
+                                                "workspace-standard"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "a39419336ea31ec155c285291f3d5684046e8b18d88dbf47c422b3c2c59632cf"
+                      },
+                      {
+                          "artifactId":  "downstream-gate-review-source",
+                          "sourcePath":  "scripts\\lib\\downstream_governance\\cvf_dg_review.py",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\scripts\\lib\\downstream_governance\\cvf_dg_review.py",
+                          "artifactClass":  "portable-gate-source",
+                          "selectionTags":  [
+                                                "workspace-standard"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "2558b7635646340a73cb124121802f2f6f123ef96e240146def3e874a002034d"
+                      },
+                      {
+                          "artifactId":  "downstream-gate-intake-source",
+                          "sourcePath":  "scripts\\lib\\downstream_governance\\cvf_dg_intake.py",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\scripts\\lib\\downstream_governance\\cvf_dg_intake.py",
+                          "artifactClass":  "portable-gate-source",
+                          "selectionTags":  [
+                                                "workspace-standard"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "204aacddb1d1b64439508bcfa73c8632842b0bc1f26dcdf3422d1404e1594efc"
+                      },
+                      {
+                          "artifactId":  "downstream-gate-coverage-source",
+                          "sourcePath":  "scripts\\lib\\downstream_governance\\cvf_dg_coverage.py",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\scripts\\lib\\downstream_governance\\cvf_dg_coverage.py",
+                          "artifactClass":  "portable-gate-source",
+                          "selectionTags":  [
+                                                "workspace-standard"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "d768e60435268da2c8609a928972d1912d369a67d4056924c515d552a4245467"
+                      },
+                      {
+                          "artifactId":  "downstream-milestone-coverage-source",
+                          "sourcePath":  "scripts\\lib\\downstream_governance\\cvf_milestone_coverage.py",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\scripts\\lib\\downstream_governance\\cvf_milestone_coverage.py",
+                          "artifactClass":  "portable-gate-source",
+                          "selectionTags":  [
+                                                "workspace-standard"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "cd923b842aabce33f352c2ea14c55a3a7c2fa6bb549de62b3897712fc68c0b02"
+                      },
+                      {
+                          "artifactId":  "downstream-repair-convergence-source",
+                          "sourcePath":  "scripts\\lib\\downstream_governance\\cvf_repair_convergence.py",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\scripts\\lib\\downstream_governance\\cvf_repair_convergence.py",
+                          "artifactClass":  "portable-gate-source",
+                          "selectionTags":  [
+                                                "workspace-standard"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "227c56680648623eed294b49795e113ac520658276c8503eb6268b925a36fd3c"
+                      },
+                      {
+                          "artifactId":  "downstream-gate-precommit-template",
+                          "sourcePath":  "scripts\\lib\\downstream_governance\\git-pre-commit.template",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\scripts\\lib\\downstream_governance\\git-pre-commit.template",
+                          "artifactClass":  "portable-gate-template",
+                          "selectionTags":  [
+                                                "workspace-standard"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "547c077163eb64259362a669d1fa6cca7cc4fe06090af3c9286f09557bcf937b"
+                      },
+                      {
+                          "artifactId":  "downstream-gate-learning-home-template",
+                          "sourcePath":  "scripts\\lib\\downstream_governance\\project_learning_home.template.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\scripts\\lib\\downstream_governance\\project_learning_home.template.md",
+                          "artifactClass":  "portable-gate-template",
+                          "selectionTags":  [
+                                                "workspace-standard"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "b2982c018baedca7f076526221ad6d5d0854dab2f029390d2c7f079ded05930f"
+                      },
+                      {
+                          "artifactId":  "downstream-gate-learning-record-template",
+                          "sourcePath":  "scripts\\lib\\downstream_governance\\project_learning_record.template.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\scripts\\lib\\downstream_governance\\project_learning_record.template.md",
+                          "artifactClass":  "portable-gate-template",
+                          "selectionTags":  [
+                                                "workspace-standard"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "559d2d50c86fbfc72967d6af5b19df23c5001c48ddaca0a2b423fc574e7250d6"
+                      },
+                      {
+                          "artifactId":  "downstream-gate-ci-template",
+                          "sourcePath":  "scripts\\lib\\downstream_governance\\downstream_pr_gates.yml.template",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\scripts\\lib\\downstream_governance\\downstream_pr_gates.yml.template",
+                          "artifactClass":  "portable-gate-template",
+                          "selectionTags":  [
+                                                "workspace-standard"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "17e2f560e8d79758b4196c5419ab8e3cc089d1bb7570f94a71321c9465b9aa4f"
+                      },
+                      {
+                          "artifactId":  "project-development-application-standard",
+                          "sourcePath":  "docs\\reference\\downstream_gate_profile\\CVF_PROJECT_DEVELOPMENT_APPLICATION_STANDARD.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\reference\\downstream_gate_profile\\CVF_PROJECT_DEVELOPMENT_APPLICATION_STANDARD.md",
+                          "artifactClass":  "reference-standard",
+                          "selectionTags":  [
+                                                "workspace-standard",
+                                                "downstream-governance"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "d06b62387e015160a77658f333882a2a316d54ffd0421071354cf63a3730dd7a"
+                      },
+                      {
+                          "artifactId":  "workspace-agents-template",
+                          "sourcePath":  "workspace_templates\\CVF_WORKSPACE_AGENTS_TEMPLATE.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\workspace_templates\\CVF_WORKSPACE_AGENTS_TEMPLATE.md",
+                          "artifactClass":  "agent-template",
+                          "selectionTags":  [
+                                                "workspace-standard",
+                                                "downstream-governance"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "18fba5fb94fc6878291f9be41015604deb4026757b43d310a8e49a92e2ed0ffc"
+                      },
+                      {
+                          "artifactId":  "guard-orientation-index",
+                          "sourcePath":  "docs\\reference\\guard_orientation\\README.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\reference\\guard_orientation\\README.md",
+                          "artifactClass":  "orientation-index",
+                          "selectionTags":  [
+                                                "workspace-premium",
+                                                "downstream-governance",
+                                                "operator-orientation"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "675c4c4a2219b53e73dc7f3fb000750eed859019b2521d01ddf66fba3ae00377"
+                      },
+                      {
+                          "artifactId":  "workspace-rules-reference",
+                          "sourcePath":  "docs\\reference\\CVF_WORKSPACE_RULES.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\reference\\CVF_WORKSPACE_RULES.md",
+                          "artifactClass":  "reference-standard",
+                          "selectionTags":  [
+                                                "workspace-standard",
+                                                "workspace-boundary"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "2ce22989bdc044ec5ec8078d41fdfc35930e5509b8bc4230387aa57386b11594"
+                      },
+                      {
+                          "artifactId":  "product-milestone-coverage-contract",
+                          "sourcePath":  "docs\\reference\\CVF_PRODUCT_MILESTONE_COVERAGE_CONTRACT_2026-10-23.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\reference\\CVF_PRODUCT_MILESTONE_COVERAGE_CONTRACT_2026-10-23.md",
+                          "artifactClass":  "reference-standard",
+                          "selectionTags":  [
+                                                "workspace-standard",
+                                                "agent-authoring"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "929ff3289753f3dd60e7b0f43856d406447d555093a678d3db53586d3a1508e3"
+                      },
+                      {
+                          "artifactId":  "workspace-profile-tiers-reference",
+                          "sourcePath":  "docs\\reference\\CVF_WORKSPACE_PROFILE_TIERS.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\reference\\CVF_WORKSPACE_PROFILE_TIERS.md",
+                          "artifactClass":  "reference-standard",
+                          "selectionTags":  [
+                                                "workspace-standard",
+                                                "workspace-boundary"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "e33c69df0533878aad627dacbf7a3bb8c0b8cc043eef3088bee8e9947d0e658d"
+                      },
+                      {
+                          "artifactId":  "workspace-classification-and-usage-guide",
+                          "sourcePath":  "docs\\guides\\CVF_WORKSPACE_CLASSIFICATION_AND_USAGE_GUIDE.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\guides\\CVF_WORKSPACE_CLASSIFICATION_AND_USAGE_GUIDE.md",
+                          "artifactClass":  "workspace-guide",
+                          "selectionTags":  [
+                                                "workspace-standard",
+                                                "workspace-boundary"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "a9468cf9ab9112f645dde026a6c964822c2a2bac8b14cb3adbb3db57dbb93457"
+                      },
+                      {
+                          "artifactId":  "workspace-paid-user-authoring-guide",
+                          "sourcePath":  "docs\\reference\\CVF_WORKSPACE_PAID_USER_AUTHORING_GUIDE.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\reference\\CVF_WORKSPACE_PAID_USER_AUTHORING_GUIDE.md",
+                          "artifactClass":  "reference-guide",
+                          "selectionTags":  [
+                                                "paid-user-safe",
+                                                "agent-authoring"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "5306daa6d99322bf84316be5f8112d126e884bb30ba8bdc070963f1fd948a2db"
+                      },
+                      {
+                          "artifactId":  "workspace-paid-user-safe-onboarding-flow",
+                          "sourcePath":  "docs\\reference\\CVF_WORKSPACE_PAID_USER_SAFE_ONBOARDING_FLOW.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\reference\\CVF_WORKSPACE_PAID_USER_SAFE_ONBOARDING_FLOW.md",
+                          "artifactClass":  "reference-guide",
+                          "selectionTags":  [
+                                                "paid-user-safe",
+                                                "workspace-onboarding"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "f4497080af546a5e1cfcef068c822f223f05d7d3cf8259ef7865df1adb8a2087"
+                      },
+                      {
+                          "artifactId":  "downstream-agents-template",
+                          "sourcePath":  "governance\\toolkit\\05_OPERATION\\CVF_DOWNSTREAM_AGENTS_TEMPLATE.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\governance\\toolkit\\05_OPERATION\\CVF_DOWNSTREAM_AGENTS_TEMPLATE.md",
+                          "artifactClass":  "agent-template",
+                          "selectionTags":  [
+                                                "workspace-standard",
+                                                "downstream-governance"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "f72f51eba89331e2c426c488e2c9fe6ba542b348e4ac9db472e27f5fb785a53e"
+                      },
+                      {
+                          "artifactId":  "workspace-memory-template",
+                          "sourcePath":  "workspace_templates\\CVF_WORKSPACE_MEMORY_TEMPLATE.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\workspace_templates\\CVF_WORKSPACE_MEMORY_TEMPLATE.md",
+                          "artifactClass":  "workspace-root-template",
+                          "selectionTags":  [
+                                                "workspace-standard",
+                                                "workspace-continuity"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "7ea711216a2aa63d208bf7dee374eabe15eee661121fd9837795c42a90e014fd"
+                      },
+                      {
+                          "artifactId":  "workspace-agent-handoff-template",
+                          "sourcePath":  "workspace_templates\\AGENT_HANDOFF_TEMPLATE.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\workspace_templates\\AGENT_HANDOFF_TEMPLATE.md",
+                          "artifactClass":  "workspace-root-template",
+                          "selectionTags":  [
+                                                "workspace-standard",
+                                                "workspace-continuity"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "c2cc54631b8823c811afd0524635a3eaf2d2806185ae1a4be11f3071df71098f"
+                      },
+                      {
+                          "artifactId":  "text-encoding-and-symbol-discipline",
+                          "sourcePath":  "docs\\reference\\CVF_TEXT_ENCODING_AND_SYMBOL_DISCIPLINE_STANDARD_2026-06-07.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\reference\\CVF_TEXT_ENCODING_AND_SYMBOL_DISCIPLINE_STANDARD_2026-06-07.md",
+                          "artifactClass":  "reference-standard",
+                          "selectionTags":  [
+                                                "workspace-standard",
+                                                "agent-authoring"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "7d3adc71380c08efa35b6d8c32b22b462de14d3c15d575a0aca493b7b0c92bdf"
+                      },
+                      {
+                          "artifactId":  "live-run-diagnostic-standard",
+                          "sourcePath":  "docs\\reference\\archive\\CVF_LIVE_RUN_DIAGNOSTIC_STANDARD_2026-05-24.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\reference\\archive\\CVF_LIVE_RUN_DIAGNOSTIC_STANDARD_2026-05-24.md",
+                          "artifactClass":  "reference-standard",
+                          "selectionTags":  [
+                                                "workspace-standard",
+                                                "live-operations"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "89c1f5bc6124f4bc83e5a942af87a36b9f6d09b68aaff214278e69341e540090"
+                      },
+                      {
+                          "artifactId":  "agent-error-learning-philosophy",
+                          "sourcePath":  "docs\\reference\\CVF_AGENT_ERROR_TO_GOVERNANCE_LEARNING_PHILOSOPHY_2026-05-28.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\reference\\CVF_AGENT_ERROR_TO_GOVERNANCE_LEARNING_PHILOSOPHY_2026-05-28.md",
+                          "artifactClass":  "reference-standard",
+                          "selectionTags":  [
+                                                "workspace-standard",
+                                                "agent-authoring"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "608d6fda077501c2374679d15f93b50453dabbf4619d43e863d084a26cd5ba74"
+                      },
+                      {
+                          "artifactId":  "operational-reference-index",
+                          "sourcePath":  "docs\\reference\\CVF_OPERATIONAL_REFERENCE_INDEX_2026-05-23.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\reference\\CVF_OPERATIONAL_REFERENCE_INDEX_2026-05-23.md",
+                          "artifactClass":  "reference-index",
+                          "selectionTags":  [
+                                                "workspace-premium",
+                                                "operator-orientation"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "a8dac5c8538b3c19e5d6e6442f338420ba55a6babc578165299cd28f9e7474c4"
+                      },
+                      {
+                          "artifactId":  "governance-control-matrix",
+                          "sourcePath":  "docs\\reference\\CVF_GOVERNANCE_CONTROL_MATRIX.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\reference\\CVF_GOVERNANCE_CONTROL_MATRIX.md",
+                          "artifactClass":  "reference-matrix",
+                          "selectionTags":  [
+                                                "workspace-premium",
+                                                "downstream-governance"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "f0ad0b5899bb5f39c09bc189d87cf129e50a1b6bd4969a7ec1ce30dafed6b612"
+                      },
+                      {
+                          "artifactId":  "agent-work-order-template",
+                          "sourcePath":  "docs\\reference\\CVF_AGENT_WORK_ORDER_TEMPLATE_2026-05-19.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\reference\\CVF_AGENT_WORK_ORDER_TEMPLATE_2026-05-19.md",
+                          "artifactClass":  "authoring-template",
+                          "selectionTags":  [
+                                                "workspace-premium",
+                                                "work-order-authoring"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "ae37730dcb8c9b97e9015cb774af0e5891a7e7f453915914f219b414a414f1c8"
+                      },
+                      {
+                          "artifactId":  "knowledge-absorption-priority-standard",
+                          "sourcePath":  "docs\\reference\\CVF_KNOWLEDGE_ABSORPTION_AND_EXTENSION_PRIORITY_STANDARD_2026-04-13.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\reference\\CVF_KNOWLEDGE_ABSORPTION_AND_EXTENSION_PRIORITY_STANDARD_2026-04-13.md",
+                          "artifactClass":  "reference-standard",
+                          "selectionTags":  [
+                                                "workspace-premium",
+                                                "downstream-governance"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "567c53a24785f86c7d70c2c8936c66d59db0927401f9a9f3fe4464fbc6653676"
+                      },
+                      {
+                          "artifactId":  "template-skill-corpus-rescreen-standard",
+                          "sourcePath":  "docs\\reference\\CVF_TEMPLATE_SKILL_CORPUS_RESCREEN_STANDARD_2026-04-14.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\reference\\CVF_TEMPLATE_SKILL_CORPUS_RESCREEN_STANDARD_2026-04-14.md",
+                          "artifactClass":  "reference-standard",
+                          "selectionTags":  [
+                                                "workspace-premium",
+                                                "downstream-governance"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "bcded9cf88e0206fd8b73e05698116db2569d7bc54faebf44211ed00324e5913"
+                      },
+                      {
+                          "artifactId":  "non-coder-value-measurement-standard",
+                          "sourcePath":  "docs\\reference\\CVF_NON_CODER_VALUE_MEASUREMENT_STANDARD_2026-04-14.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\reference\\CVF_NON_CODER_VALUE_MEASUREMENT_STANDARD_2026-04-14.md",
+                          "artifactClass":  "reference-standard",
+                          "selectionTags":  [
+                                                "workspace-premium",
+                                                "downstream-governance"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "f76c6423f46fc1314fada27ae75e8fc3012e46d99639aa351b47283ff236cd01"
+                      },
+                      {
+                          "artifactId":  "session-governance-bootstrap-reference",
+                          "sourcePath":  "docs\\reference\\CVF_SESSION_GOVERNANCE_BOOTSTRAP.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\reference\\CVF_SESSION_GOVERNANCE_BOOTSTRAP.md",
+                          "artifactClass":  "reference-standard",
+                          "selectionTags":  [
+                                                "workspace-premium",
+                                                "downstream-governance"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "1b0d0aa84ff794fa365b4639152b8773643d783e263536405db6910e9f4dc430"
+                      },
+                      {
+                          "artifactId":  "critical-repository-boundary-reference",
+                          "sourcePath":  "docs\\reference\\CVF_AGENTS_CRITICAL_REPOSITORY_BOUNDARY_2026-06-23.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\reference\\CVF_AGENTS_CRITICAL_REPOSITORY_BOUNDARY_2026-06-23.md",
+                          "artifactClass":  "reference-standard",
+                          "selectionTags":  [
+                                                "workspace-standard",
+                                                "workspace-premium",
+                                                "repository-boundary"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "5173fbde3515d41e56c6a29f2eea2feac48e45da3054386777f0fd95ef14eba5"
+                      },
+                      {
+                          "artifactId":  "knowledge-absorption-priority-checker",
+                          "sourcePath":  "governance\\compat\\check_knowledge_absorption_priority_compat.py",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\governance\\compat\\check_knowledge_absorption_priority_compat.py",
+                          "artifactClass":  "compat-checker",
+                          "selectionTags":  [
+                                                "workspace-premium",
+                                                "downstream-governance"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "980754d217324ff9dc1d6361a35f6021672105a3ad369f05c72d142ebf2d3659"
+                      },
+                      {
+                          "artifactId":  "template-skill-standard-checker",
+                          "sourcePath":  "governance\\compat\\check_template_skill_standard_guard_compat.py",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\governance\\compat\\check_template_skill_standard_guard_compat.py",
+                          "artifactClass":  "compat-checker",
+                          "selectionTags":  [
+                                                "workspace-premium",
+                                                "downstream-governance"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "f413b9f5f5cc6df62441790a9770690d0f6883acb5c2d537ee0a96ec4fe2f8da"
+                      },
+                      {
+                          "artifactId":  "gate-to-role-closeability-standard",
+                          "sourcePath":  "docs\\reference\\CVF_GATE_TO_ROLE_CLOSEABILITY_MACHINE_STANDARD.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\reference\\CVF_GATE_TO_ROLE_CLOSEABILITY_MACHINE_STANDARD.md",
+                          "artifactClass":  "reference-standard",
+                          "selectionTags":  [
+                                                "workspace-provenance-local",
+                                                "downstream-machine-governance"
+                                            ],
+                          "reviewPolicy":  "local-only",
+                          "sourceSha256":  "b3af2fcbd09160d9f2ae88c861bd67d45ba1425bd21e577bf880cb0f1f29ea3c"
+                      },
+                      {
+                          "artifactId":  "gate-to-role-closeability-checker",
+                          "sourcePath":  "governance\\compat\\check_gate_to_role_closeability.py",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\governance\\compat\\check_gate_to_role_closeability.py",
+                          "artifactClass":  "compat-checker",
+                          "selectionTags":  [
+                                                "workspace-provenance-local",
+                                                "downstream-machine-governance"
+                                            ],
+                          "reviewPolicy":  "local-only",
+                          "sourceSha256":  "42e46ae4a16dff326afd2fe34a2c14d0aa51747ff217ae4f6c8196a672e9c98f"
+                      },
+                      {
+                          "artifactId":  "adif-0057-entry",
+                          "sourcePath":  "docs\\reference\\agent_defect_intelligence\\entries\\CVF_ADIF-0057.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\docs\\reference\\agent_defect_intelligence\\entries\\CVF_ADIF-0057.md",
+                          "artifactClass":  "defect-intelligence-entry",
+                          "selectionTags":  [
+                                                "workspace-provenance-local",
+                                                "downstream-machine-governance"
+                                            ],
+                          "reviewPolicy":  "local-only",
+                          "sourceSha256":  "bb2c6b6352aa71eee7813af8b436e722bb0f0b0b8d50c32aa60a3e066a4935cc"
+                      },
+                      {
+                          "artifactId":  "knowledge-absorption-priority-guard",
+                          "sourcePath":  "governance\\toolkit\\05_OPERATION\\CVF_KNOWLEDGE_ABSORPTION_PRIORITY_GUARD.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\governance\\toolkit\\05_OPERATION\\CVF_KNOWLEDGE_ABSORPTION_PRIORITY_GUARD.md",
+                          "artifactClass":  "operation-guard",
+                          "selectionTags":  [
+                                                "workspace-premium",
+                                                "downstream-governance"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "64f1482ab388aa39ed937ca981afe4c8011ac1af00adc29a7c26d2c0610df7f0"
+                      },
+                      {
+                          "artifactId":  "template-skill-standard-guard",
+                          "sourcePath":  "governance\\toolkit\\05_OPERATION\\CVF_TEMPLATE_SKILL_STANDARD_GUARD.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\governance\\toolkit\\05_OPERATION\\CVF_TEMPLATE_SKILL_STANDARD_GUARD.md",
+                          "artifactClass":  "operation-guard",
+                          "selectionTags":  [
+                                                "workspace-premium",
+                                                "downstream-governance"
+                                            ],
+                          "reviewPolicy":  "manual-reviewed",
+                          "sourceSha256":  "4bcc106340fa210e80af8e0c838f72d12c1bc07f264a0fa243c813f016f78ee2"
+                      },
+                      {
+                          "artifactId":  "provenance-root-agents",
+                          "sourcePath":  "AGENTS.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\AGENTS.md",
+                          "artifactClass":  "continuity-surface",
+                          "selectionTags":  [
+                                                "workspace-provenance-local",
+                                                "continuity-local"
+                                            ],
+                          "reviewPolicy":  "local-only",
+                          "sourceSha256":  "a9f1190cde66989fd4d5b339429a575259f0b73a5fa426154ce50fb308670918"
+                      },
+                      {
+                          "artifactId":  "active-versioned-handoff",
+                          "sourcePath":  "AGENT_HANDOFF_V64_2026-10-26.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\AGENT_HANDOFF_V64_2026-10-26.md",
+                          "artifactClass":  "continuity-surface",
+                          "selectionTags":  [
+                                                "workspace-provenance-local",
+                                                "continuity-local"
+                                            ],
+                          "reviewPolicy":  "local-only",
+                          "sourceSha256":  "2bab19c55e67db1a8dd616c3e4e060d6247b47196200d7c1f0c3592a45204339"
+                      },
+                      {
+                          "artifactId":  "session-memory-front-door",
+                          "sourcePath":  "CVF_SESSION_MEMORY.md",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\CVF_SESSION_MEMORY.md",
+                          "artifactClass":  "continuity-surface",
+                          "selectionTags":  [
+                                                "workspace-provenance-local",
+                                                "continuity-local"
+                                            ],
+                          "reviewPolicy":  "local-only",
+                          "sourceSha256":  "80433ea9bd78a5865e9ede2e413de5ba55764281696b625b9ebd0f9b0b76877f"
+                      },
+                      {
+                          "artifactId":  "session-state-tree",
+                          "sourcePath":  "CVF_SESSION",
+                          "targetPath":  "CVF_RULE_PACKS\\operator-local\\source\\CVF_SESSION",
+                          "artifactClass":  "continuity-surface-directory",
+                          "selectionTags":  [
+                                                "workspace-provenance-local",
+                                                "continuity-local"
+                                            ],
+                          "reviewPolicy":  "local-only",
+                          "sourceSha256":  null
+                      }
+                  ],
+    "workspaceRootFiles":  [
+                               {
+                                   "artifactId":  "workspace-agents-template",
+                                   "targetPath":  "AGENTS.md",
+                                   "disposition":  "PRESERVED_EXISTING"
+                               },
+                               {
+                                   "artifactId":  "workspace-memory-template",
+                                   "targetPath":  "CVF_WORKSPACE_MEMORY.md",
+                                   "disposition":  "PRESERVED_EXISTING"
+                               },
+                               {
+                                   "artifactId":  "workspace-agent-handoff-template",
+                                   "targetPath":  "AGENT_HANDOFF.md",
+                                   "disposition":  "PRESERVED_EXISTING"
+                               }
+                           ],
+    "claimBoundary":  "COPIED_NOT_INVOKED: rule-pack files are guidance copies; copying a checker is not invoking it. Per-project gate state is reported by the downstream gate profile coverage (INSTALLED, INVOKED, PROVEN_HERMETIC)."
+}

@@ -1,6 +1,6 @@
 {
-  "profileId": "cvf.downstreamGateProfile@1.2.0",
-  "profileVersion": "1.2.0",
+  "profileId": "cvf.downstreamGateProfile@1.3.0",
+  "profileVersion": "1.3.0",
   "ownerResponsibility": "CVF parent Core owns this single control source; project copies are identity-pinned and never an independent definition.",
   "phases": [
     "bootstrap",
@@ -144,7 +144,8 @@
     "git-pre-commit.template",
     "project_learning_home.template.md",
     "project_learning_record.template.md",
-    "cvf_milestone_coverage.py"
+    "cvf_milestone_coverage.py",
+    "cvf_repair_convergence.py"
   ],
   "coreSources": {
     "check_gate_to_role_closeability.py": "governance/compat/check_gate_to_role_closeability.py"

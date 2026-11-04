@@ -212,7 +212,7 @@ class UnknownGrammar(unittest.TestCase):
 class MissingOrWrongLock(unittest.TestCase):
     def test_future_profile_rejects_opt_in(self):
         with tempfile.TemporaryDirectory() as tmp:
-            _make_lock(tmp, profile_id="cvf.downstreamGateProfile@1.3.0")
+            _make_lock(tmp, profile_id="cvf.downstreamGateProfile@1.4.0")
             r = _run_opt_in(tmp, "BUILD", "ACTIVE")
             self.assertTrue(any("known compatible" in p for p in r.problems))
 
