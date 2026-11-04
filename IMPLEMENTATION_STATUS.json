@@ -1,4 +1,5 @@
 {
+  "x-r140Preparation20261105": {"status": "SOURCE_WORKER_PACKET_PREPARED_NOT_IMPLEMENTED", "parentR139": "BUILD_BLOCKED", "scope": "M3-06 selected-read correctness only", "causalAudit": "ACCEPTED_BOUNDED; integrated implementation BLOCKED", "product": "M3/FREEZE_OPEN", "RootOwns": "orchestration/design/authority/review/commit", "workerOwns": "two source/test files and own return/evidence only"},
   "x-coreFreshness20261104": {"status": "BOUNDED_FRESHNESS_CHECKPOINT_REVIEW_PASS", "date": "2026-11-04", "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-FRESHNESS-20261104-ADMISSION.json", "successor": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-REPIN-2-MAINTENANCE-ADMISSION.json", "review": "docs/reviews/R139_CORE_FRESHNESS_ROOT_REVIEW_2026-11-04.md", "from": "15e39450853184eb65dbde73398c69c3171a6241", "currentCore": "c4c8767ac8861854f40d466ba338ffd11eb9558e", "doctor": "PASS28/28_initialFAIL27/28retained", "workerFullUnits": 124, "workerOriginalFocused": "20tests_4FAIL_fixture_repaired_not_erased", "rootIndependentCritical": 4, "workerSeconds": 1464.102, "workerSemanticSources": "10/18", "workerInitialBatches": 2, "workerExtraRepairBatches": 0, "updaterUsed": 1, "nativeUpgradeUsed": 1, "installedBundleAndWorkflow": "UNCHANGED_PROFILE1.2", "rootTransactionPreflights": "FAIL_GIT_PAGER;FAIL_MULTIPLE_COMMANDS;PASS_FINAL81a2", "sourceAdapterBuildGranted": false, "productRuntimeGranted": false, "providerCalls": 0, "browserCumulativeUnchanged": 23, "productPhysicalRelaunch": "HARD_HOLD", "integratedOriginalLifetime": "NOT_DESIGNED", "coreFiveProductApplicability": "UNKNOWN", "billingAndUnmeasuredRootTime": "UNKNOWN"},
   "x-sdkP01B01Design20261030": {"status": "CONDITIONAL_DESIGN_ACCEPTED_SOURCE_WORK_ORDER_NEXT_PRODUCT_HARD_HOLD", "authority": "CVF_SESSION/authority/CCMAI-RUNTIME-139-SDK-P01-B01-DESIGN-ADMISSION.json", "review": "docs/reviews/R139_SDK_P01_B01_DESIGN_ROOT_REVIEW_2026-10-30.md", "spec": "docs/reviews/R139_SDK_P01_B01_DESIGN_SPEC_2026-10-30.md", "supportingStage": "DESIGN_SPEC_REVIEWED_CONDITIONAL", "semanticSources": 34, "semanticSourceCap": 36, "designRepairRound": 1, "nativeVersion": "1.9.0", "implementationGranted": false, "runtimeGranted": false, "providerCalls": 0, "browserCumulativeUnchanged": 23, "integratedProductContinuation": "NOT_DESIGNED_HARD_HOLD", "physicalRelaunchPrevention": "UNRESOLVED_HARD_PRODUCT_HOLD", "timing": "Qualified1438.330scommit_to_final_mtime_upperbound; notindependentlymeasuredactive/runtimeclock"},
   "x-productAdmissionReconciliation20261030": {"status": "SOURCE_RECONCILIATION_SETTLED_QUALIFIED_MIGRATION_DESIGN_NEXT", "review": "docs/reviews/R139_PRODUCT_EXECUTION_ADMISSION_RECONCILIATION_ROOT_REVIEW_2026-10-30.md", "sourceAuditUsed": 1, "workerFilesBudget": 16, "workerFilesActual": 17, "rootExactLookupFiles": 2, "cumulativeDistinctDomainFiles": 19, "readOverrunRetained": true, "latestAcceptedComponentSource": "fc4bbe01f88718e41904498bb8ab54d68f094583", "currentProductTreesMatchAccepted": true, "integratedSdkProductBinding": "NOT_ADMITTED", "coreFindingsProductApplicability": "UNKNOWN", "runtimeCalls": 0, "providerCalls": 0, "browserCumulativeUnchanged": 23},
@@ -2182,7 +2183,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-139",
+  "activeTranche": "CCMAI-RUNTIME-140",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
@@ -2198,7 +2199,9 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [],
+  "activeWorkOrders": [
+  "docs/work_orders/CCMAI_RUNTIME_140_SELECTION_READ_REPAIR.md"
+],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",
@@ -2762,7 +2765,7 @@
     "nextGate": "Separate SPEC/work order for actual AI executor/integration or M1 business decisions",
     "actualRerun": "OPEN_EXECUTOR_NOT_INCLUDED"
   },
-  "x-activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R132_WAITDATA_REQUEST_UI_2026-10-19.md",
+  "x-activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R140_SELECTION_READ_REPAIR_2026-11-05.md",
   "x-ownerRepairContinuation": "CVF_SESSION/decisions/R102_OWNER_REPAIR_CONTINUATION_2026-10-15.json",
   "x-r102Current": {
     "status": "FROZEN_LOCAL_ONLY",

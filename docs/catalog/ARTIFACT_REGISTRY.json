@@ -4,6 +4,13 @@
   "updatedAt": "2026-11-05",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
+    {"id": "r139-causal-assessment-20261105", "family": "continuity", "path": "docs/reviews/R139_CAUSAL_CHAIN_ASSESSMENT_2026-11-05.md", "status": "ACTIVE", "description": "Reviewed causal assessment, Root lifecycle design and exact integration reopen conditions; product blocked."},
+    {"id": "r139-causal-evidence-20261105", "family": "governed_artifact_family", "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105", "status": "ACTIVE", "description": "Source pins, typed assessment and independent review; historical outcomes preserved."},
+    {"id": "r140-worker-order", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_140_SELECTION_READ_REPAIR.md", "status": "ACTIVE", "description": "Worker-only independent M3-06 correction, S01-S10 acceptance and bounded scope."},
+    {"id": "r140-authority", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-140.json", "status": "ACTIVE", "description": "Immutable committed dispatcher seed."},
+    {"id": "r140-record", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-140.json", "status": "ACTIVE", "description": "Active independent source work; R139 parent remains blocked."},
+    {"id": "r140-evidence", "family": "governed_artifact_family", "path": "docs/reviews/probes/r140_selection_read_20261105", "status": "ACTIVE", "description": "Pinned source preimages and independent preparation checks."},
+
     {"id": "law-learning-20261105-evidence-family", "family": "governed_artifact_family", "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105", "status": "ACTIVE", "description": "Exact intake, repair attempts, independent review and original/final validation receipts for LAW profile adoption."},
     {"id": "law-learning-20261105-5", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/workspace_rule_pack_manifest.json", "status": "ACTIVE", "description": "LAW repair convergence project adoption and selected source/roadmap audit; product remains blocked."},
     {"id": "law-learning-20261105-4", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/r3_repair_attempt.json", "status": "ACTIVE", "description": "LAW repair convergence project adoption and selected source/roadmap audit; product remains blocked."},
@@ -5487,9 +5494,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R140_SELECTION_READ_REPAIR_2026-11-05.md",
       "status": "ACTIVE",
-      "description": "R139 v3 native capability accepted bounded with original evidence; cumulativebrowser23, prior v2UNKNOWN and product/Core/M3 holds retained."
+      "description": "Active R140 worker-only source handoff; Root owns design/review/commit; R139 integration remains blocked."
     },
     {
       "id": "r060-work-order",

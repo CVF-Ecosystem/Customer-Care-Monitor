@@ -1,6 +1,8 @@
 # R139 — integrated execution proof
 
-Status: ACTIVE
+Status: SUPERSEDED
+
+Current routing: R140 selection-read handoff. This file retains R139 history; R139 product remains BLOCKED.
 
 ## Current State
 

@@ -1,0 +1,110 @@
+{
+  "exitCode": 2,
+  "phase": "pre-commit",
+  "range": "WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=4c3cc11ef36f0e9e3e9738b26647f59909b04391 candidates=23 deleted=0",
+  "results": [
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-INST-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-CONT-01",
+      "findings": [
+        {
+          "code": "SURFACE_MISMATCH",
+          "locator": "CVF_SESSION/ACTIVE_SESSION_STATE.json#/activeHandoff",
+          "message": "activeHandoff differs across surfaces: CVF_SESSION/ACTIVE_SESSION_STATE.json#/activeHandoff='CVF_SESSION/handoffs/AGENT_HANDOFF_R140_SELECTION_READ_REPAIR_2026-11-05.md'; CVF_SESSION_MEMORY.md#Active handoff='CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md'"
+        },
+        {
+          "code": "CONFLICTING_ACTIVE_HANDOFF",
+          "locator": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md",
+          "message": "a second handoff also declares an ACTIVE status"
+        }
+      ],
+      "notes": [],
+      "ok": false,
+      "outcome": "FAIL",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-RANGE-01",
+      "findings": [],
+      "notes": [
+        "WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=4c3cc11ef36f0e9e3e9738b26647f59909b04391 candidates=23 deleted=0"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "work_order_status_grammar",
+        "closeability_contract"
+      ],
+      "controlId": "CVF-DG-APPL-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/work_orders/CCMAI_RUNTIME_140_SELECTION_READ_REPAIR.md"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "CVF-DG-ROLE-01"
+      ],
+      "controlId": "CVF-DG-ROLE-01",
+      "findings": [
+        {
+          "code": "ROLE_FIELD_INVALID",
+          "locator": "docs/reviews/R139_CAUSAL_CHAIN_ASSESSMENT_2026-11-05.md#Reviewer",
+          "message": "R2 review needs exactly one non-empty Reviewer line"
+        },
+        {
+          "code": "ROLE_FIELD_INVALID",
+          "locator": "docs/reviews/R139_CAUSAL_CHAIN_ASSESSMENT_2026-11-05.md#Worker",
+          "message": "R2 review needs exactly one non-empty Worker line"
+        }
+      ],
+      "notes": [],
+      "ok": false,
+      "outcome": "FAIL",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "CVF-DG-CLAIM-01"
+      ],
+      "controlId": "CVF-DG-CLAIM-01",
+      "findings": [],
+      "notes": [
+        "0 explicit claim line(s) and 2 document(s) scanned"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "milestone_coverage"
+      ],
+      "controlId": "CVF-DG-COV-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md, docs/work_orders/CCMAI_RUNTIME_140_SELECTION_READ_REPAIR.md",
+        "mechanical joins only; Local owns semantic acceptance"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    }
+  ]
+}

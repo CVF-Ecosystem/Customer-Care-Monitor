@@ -1,0 +1,28 @@
+{
+  "preparationBase": "4c3cc11ef36f0e9e3e9738b26647f59909b04391",
+  "seed": {
+    "path": "CVF_SESSION/authority/CCMAI-RUNTIME-140.json",
+    "sha256": "82984c72d09ec60d82bfda013b53b5b40d5dd58d22768c3024db78a996283b52"
+  },
+  "sources": [
+    {
+      "path": "frontend/src/components/InterventionExecutionStatus.vue",
+      "sha256": "756cba7b19b347e72315ef1490255c9413e46c933844a6f9d69f0400df36c81a"
+    },
+    {
+      "path": "frontend/src/__tests__/intervention-execution-status.test.ts",
+      "sha256": "85c12c8d1023c19cbf120232c52af46b255dfcc0321537ae7875bcd157fd61e4"
+    }
+  ],
+  "protectedReadOnly": [
+    {
+      "path": "frontend/src/components/interventionExecutionHold.ts",
+      "sha256": "51b16dfef44d6fd0d293499c6f11068d00b17b18022df637a51c57372f8e3c7c"
+    },
+    {
+      "path": "frontend/src/api/intervention.ts",
+      "sha256": "b7def52447f1312991836556cfe89594a05371fd1b32f8ffa66aa86e75c62bbc"
+    }
+  ],
+  "requiredComparison": "LF-normalized SHA256; stop on source mismatch, Root alone repins"
+}

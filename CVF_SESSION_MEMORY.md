@@ -2,9 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md", "activeTranche": "CCMAI-RUNTIME-139", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R140_SELECTION_READ_REPAIR_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-140", "parked": true} -->
 
-## Current LAW project update — 2026-11-05
+## Current worker-only source dispatch - 2026-11-05
+
+CCMAI-RUNTIME-140: Root has completed R139 causal assessment and fixed independent M3-06 selection-read repair contract. After committed preparation and final admission PASS, assigned worker implements only the Vue component, existing component test and exact return/evidence paths in docs/work_orders/CCMAI_RUNTIME_140_SELECTION_READ_REPAIR.md; worker does not orchestrate, change authority or commit. Source-only BUILD authorized, implementation not started. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 audit BLOCKED, no P01 dispatch, physical-relaunch prevention still unavailable. Same M3 history/costs/UNKNOWN/counters retained; no browser/DB/provider effect, no product acceptance; Facebook/ZaloOA parked.
+
+Root ORCHESTRATOR / DESIGN_OWNER / WORK_ORDER_AUTHOR / COMMIT_STEWARD; assigned separate source IMPLEMENTATION_WORKER; Root independent source REVIEWER with separate admission reviewer
+
+Root causal design/admission is recorded in the R139 assessment; active handoff/worker packet above control. Earlier next-move prose below is historical and does not authorize P01 or product effects.
+
+
+## Historical LAW project update — 2026-11-05
 
 CCMAI-RUNTIME-139: apply operator-requested LAW learning/profile1.3 and source/roadmap audit from docs/reviews/R139_LAW_LEARNING_AND_CODE_ROADMAP_AUDIT_2026-11-05.md. Two actual r2/r3 failed repair outcomes enrolled for M3-05/M3-08; audit=null. Next Root prepares finite retained-evidence VERIFY (proposed ceiling30active minutes, no effects), completes causal-chain audit and independent admission before dependent IMPLEMENT; do not automatically build P01 wrapper. M3-06 selection late-response defect is source-derived; separate fix requires independence and scoped regression. PublicCore c4 remains; dirty operator-local profile provenance UNKNOWN with exactmanifest hashes. Physicalrelaunch HARD_HOLD, integratedsamecontext/originalclock NOT_DESIGNED, CorefiveproductUNKNOWN, wholeR139/M3/FREEZE OPEN; allpriorcosts/counters/UNKNOWN and FB/ZaloOAparking retained.
 
@@ -13,13 +22,13 @@ Root ORCHESTRATOR / learning integration and SESSION_SYNC_STEWARD / COMMIT_STEWA
 Earlier checkpoints below retain historical evidence; this current instruction supersedes their next-move prose.
 
 
-## Current freshness repair checkpoint - 2026-11-04
+## Historical freshness repair checkpoint - 2026-11-04
 
 CCMAI-RUNTIME-139 bounded freshness checkpoint independently REVIEW_PASS: publicCore/project pins c4c8767/profile1.2, doctor28/28, final124units and Root4criticalPASS; one lockedcachedtarget updater/nativeupgrade, both historical authorities/frozenpayloads retained. Next: Root reconcile pending offline native-command/P01 metadata source WORK_ORDER to currentc4, record finite contribution/cost and independent admission, commit preparation before separateworker sourceBUILD. Native adapter has no implementation/effect grant yet. Productphysicalrelaunch HARD_HOLD/integratedsameheldcontext/originalclock NOT_DESIGNED, CorefiveproductUNKNOWN/fullR139/M3/FREEZE OPEN; allhistoricalcosts/UNKNOWNs and originalfocused4FAIL retained; Facebook/ZaloOA parked.
 
 Root ORCHESTRATOR / independent SOURCE REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; SolMedium freshness worker complete; distinct TerraHigh source/transaction/adoption REVIEW_PASS; pending native adapter WORK_ORDER reconciliation before BUILD
 
-## Current conditional P01/B01 design disposition — 2026-10-30
+## Historical conditional P01/B01 design disposition — 2026-10-30
 
 CCMAI-RUNTIME-139 bounded freshness checkpoint independently REVIEW_PASS: publicCore/project pins c4c8767/profile1.2, doctor28/28, final124units and Root4criticalPASS; one lockedcachedtarget updater/nativeupgrade, both historical authorities/frozenpayloads retained. Next: Root reconcile pending offline native-command/P01 metadata source WORK_ORDER to currentc4, record finite contribution/cost and independent admission, commit preparation before separateworker sourceBUILD. Native adapter has no implementation/effect grant yet. Productphysicalrelaunch HARD_HOLD/integratedsameheldcontext/originalclock NOT_DESIGNED, CorefiveproductUNKNOWN/fullR139/M3/FREEZE OPEN; allhistoricalcosts/UNKNOWNs and originalfocused4FAIL retained; Facebook/ZaloOA parked.
 
@@ -87,11 +96,9 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Contract: cvf.downstreamContinuityContract@1.0.0
 - Current mode: BUILD
 - Active phase: BUILD
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R140_SELECTION_READ_REPAIR_2026-11-05.md
 
-CCMAI-RUNTIME-139 bounded freshness checkpoint independently REVIEW_PASS: publicCore/project pins c4c8767/profile1.2, doctor28/28, final124units and Root4criticalPASS; one lockedcachedtarget updater/nativeupgrade, both historical authorities/frozenpayloads retained. Next: Root reconcile pending offline native-command/P01 metadata source WORK_ORDER to currentc4, record finite contribution/cost and independent admission, commit preparation before separateworker sourceBUILD. Native adapter has no implementation/effect grant yet. Productphysicalrelaunch HARD_HOLD/integratedsameheldcontext/originalclock NOT_DESIGNED, CorefiveproductUNKNOWN/fullR139/M3/FREEZE OPEN; allhistoricalcosts/UNKNOWNs and originalfocused4FAIL retained; Facebook/ZaloOA parked.
-
-Root ORCHESTRATOR / independent SOURCE REVIEWER / SESSION_SYNC_STEWARD / COMMIT_STEWARD; SolMedium freshness worker complete; distinct TerraHigh source/transaction/adoption REVIEW_PASS; pending native adapter WORK_ORDER reconciliation before BUILD
+CCMAI-RUNTIME-140: Root has completed R139 causal assessment and fixed independent M3-06 selection-read repair contract. After committed preparation and final admission PASS, assigned worker implements only the Vue component, existing component test and exact return/evidence paths in docs/work_orders/CCMAI_RUNTIME_140_SELECTION_READ_REPAIR.md; worker does not orchestrate, change authority or commit. Source-only BUILD authorized, implementation not started. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 audit BLOCKED, no P01 dispatch, physical-relaunch prevention still unavailable. Same M3 history/costs/UNKNOWN/counters retained; no browser/DB/provider effect, no product acceptance; Facebook/ZaloOA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

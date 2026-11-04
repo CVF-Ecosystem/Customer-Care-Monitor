@@ -1,0 +1,26 @@
+{
+  "reviewer": "Astra Medium /root/ccma_roadmap_review",
+  "decision": "ACCEPTED",
+  "scope": "R139 causal assessment and proposed immutable R140 seed; detailed workorder separately pending",
+  "findings": [
+    "Operator-prompted recurrence must stay OPEN_APPLICATION_ENFORCEMENT_GAP, not closed RULE_EXISTS. Corrected before acceptance."
+  ],
+  "accepted": [
+    "One original owner/context/clock with provisional evidence distinct from final acceptance",
+    "Physical relaunch prevention missing -> NO_START",
+    "No reconstructed historical cause, no spent-slot transfer",
+    "Independent M3-06 worker scope, Root owns metadata/commit"
+  ],
+  "reviewed": [
+    {
+      "path": "docs/reviews/R139_CAUSAL_CHAIN_ASSESSMENT_2026-11-05.md",
+      "sha256": "c3f3f68330a752f32b1312583d5da2cbe3ef1e8629e4d53dfb3c0ceb800f764a"
+    },
+    {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-140.json",
+      "sha256": "82984c72d09ec60d82bfda013b53b5b40d5dd58d22768c3024db78a996283b52"
+    }
+  ],
+  "testsRerun": 0,
+  "rootMechanicalAmendment": "Added exact Worker/Reviewer header labels for R2 role gate; semantic assessment unchanged."
+}

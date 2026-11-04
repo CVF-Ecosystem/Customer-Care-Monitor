@@ -1,0 +1,26 @@
+{
+  "reviewer": "Astra Medium /root/ccma_roadmap_review",
+  "decision": "ACCEPTED",
+  "scope": "R140 independent M3-06 source work order admission, not implementation review",
+  "finalAdjudication": "ACTIVE matches authorized BUILD record with implementationStarted=false. Worker starts only after committed preparation and final release. Design/oracle/scope/independence accepted; no runtime/product authority.",
+  "amendments": [
+    "READY corrected to grammar-valid ACTIVE matching BUILD record",
+    "M3-08 lifecycle wording corrected to DESIGNED_NOT_EXECUTABLE; relaunch prevention still unresolved"
+  ],
+  "reviewed": [
+    {
+      "path": "docs/work_orders/CCMAI_RUNTIME_140_SELECTION_READ_REPAIR.md",
+      "sha256": "44fcad505c5aa33d0e0d0482970fe69915e098609153a63c1a161a8c58839e98"
+    },
+    {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-140.json",
+      "sha256": "82984c72d09ec60d82bfda013b53b5b40d5dd58d22768c3024db78a996283b52"
+    },
+    {
+      "path": "docs/reviews/probes/r140_selection_read_20261105/source_preimages.json",
+      "sha256": "da51cde109624ee1688952a9f1327641e6d52fcbeadd30c1823615b75f94e6cc"
+    }
+  ],
+  "rootReleaseClarification": "Root added explicit release-receipt/hash check to implement the accepted committed-preparation/final-release condition; no behavioral scope change.",
+  "testsRerun": 0
+}

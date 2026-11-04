@@ -1,0 +1,13 @@
+[PASS] provenance
+       note: required doc outside project not checked (portable mode): ..\WORKSPACE_RULES.md
+       note: sibling CVF core and ../WORKSPACE_RULES.md are local-doctor concerns; this gate assumes no sibling core
+[PASS] continuity
+[FAIL] tranche
+       - CCMAI-RUNTIME-140: workOrderStatus 'DISPATCH_READY' does not match canonical mapping 'ACTIVE' for status 'BUILD'
+[PASS] claims
+[PASS] secrets
+       note: bounded static scan of changed files; false negatives are possible and ignored/untracked local secrets are never read
+[PASS] workflows
+[FAIL] catalog
+       - catalog -Check failed: [FAIL] Governed downstream catalog validation failed: |   - artifact registry: mandatory authority surface 'continuity-initial-handoff' has unexpected path 'CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md'
+CVF downstream preflight: FAIL (5/7 executed gates passed)

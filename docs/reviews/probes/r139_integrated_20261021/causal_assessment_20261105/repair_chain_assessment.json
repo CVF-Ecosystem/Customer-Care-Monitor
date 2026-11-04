@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "cvf.repairChainAssessment@1.0.0",
+  "milestoneId": "M3",
+  "history": [
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/r2_repair_attempt.json",
+      "sha256": "f2158f8ef2781e5e25c93dd5a1c5e1b745214a2ce700114f2c2071cd725b99ba"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/r3_repair_attempt.json",
+      "sha256": "6cd7ffacd92bd47e2ba91050508018623a7f8d8eff2c9929b5f28cf74d719f31"
+    }
+  ],
+  "affectedCriteria": [
+    "M3-05",
+    "M3-08"
+  ],
+  "failureBoundary": "R139 M3-05/M3-08 integrated product outcome unmet in actual r2/r3 repairs; evidence loss and lifecycle/source limitations kept separate.",
+  "observedEvidence": [
+    {
+      "path": "docs/reviews/R139_CAUSAL_CHAIN_ASSESSMENT_2026-11-05.md",
+      "sha256": "c3f3f68330a752f32b1312583d5da2cbe3ef1e8629e4d53dfb3c0ceb800f764a"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/source_manifest.json",
+      "sha256": "4d4aede81210b493f37c720eeae93b0e6d17a941ea41eb676aab6fbe7df9593c"
+    }
+  ],
+  "causeStatus": "UNKNOWN",
+  "causeOrHypothesis": "Historical provider/manual-hold and r3 termination causes UNKNOWN. Proven source/export/elapsed-comparison gaps have bounded fixes; present integration has unsupported physical relaunch prevention and incompatible completed-capability/same-context ordering. No unproved causal unification.",
+  "remainingChain": [
+    "Source-backed pre-action physical no-relaunch enforcement or a reviewed supported alternative preserving requirement",
+    "Successor integrated contract using one original owner/context/clock, provisional readiness then G1/G2 and final terminal acceptance",
+    "Exact source/actor/runtime bindings and E01-E05 positive/negative evidence",
+    "Original waits, deadline/cleanup, effect accounting and independent E06 acceptance"
+  ],
+  "discriminator": null,
+  "correctiveAction": "Stop P01/helper implementation. Root selected integrated lifecycle in pinned assessment; hold integration until reopen prerequisites. Independent UI read-selection defect handled by R140 only, no M3-05/08 progress claim.",
+  "owner": "Root ORCHESTRATOR / DESIGN_OWNER",
+  "cumulativeMinutes": "UNKNOWN",
+  "additionalCeilingMinutes": 0,
+  "stopCondition": "No dependent implementation, capability rerun, budget renewal or runtime effects under this assessment.",
+  "reopenCondition": "Root source-verifies supported pre-action no-relaunch prevention and obtains independent review of exact successor same-context/original-clock contract before implementation; separate effect admission before execution. Unknown historical causes need not be invented or fully reconstructed.",
+  "disposition": "BLOCKED",
+  "admittedAction": null,
+  "review": {
+    "reviewer": "Astra Medium /root/ccma_roadmap_review",
+    "decision": "ACCEPTED",
+    "evidence": [
+      {
+        "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/independent_review.json",
+        "sha256": "2b2901ee21d8be80efecf860e70066bb9acf0fc263f03a780ae5b5d3982fe53e"
+      }
+    ]
+  }
+}

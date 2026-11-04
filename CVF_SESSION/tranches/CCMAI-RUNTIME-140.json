@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-140",
+  "authorityKind": "DISPATCHER_OWNED_INDEPENDENT_SELECTION_READ_REPAIR",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR",
+    "implementationWorker": "Assigned separate implementation worker",
+    "reviewer": "Root independent source REVIEWER; independent admission advisor",
+    "commitSteward": "Root COMMIT_STEWARD"
+  },
+  "allowedPaths": [
+    "frontend/src/components/InterventionExecutionStatus.vue",
+    "frontend/src/__tests__/intervention-execution-status.test.ts",
+    "docs/work_orders/CCMAI_RUNTIME_140_SELECTION_READ_REPAIR.md",
+    "docs/reviews/R140_*.md",
+    "docs/reviews/R139_CAUSAL_CHAIN_ASSESSMENT_2026-11-05.md",
+    "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/**",
+    "docs/reviews/probes/r140_selection_read_20261105/**",
+    "docs/milestone-coverage-authority.json",
+    "docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md",
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md"
+  ],
+  "prohibitedEffects": [
+    "Provider/network/credential use; actual grant issue/consume, execution POST, AI/provider or customer/channel effects",
+    "DB/container/backend/Vite/browser runtime start, access to installed/customer databases or protected resources",
+    "Existing executor, grant issuer, POST handler, startup/config, model/schema, policy/gate/profile/workflow or dependency edits",
+    "Dependency/image downloads, old authority/seed/budget reset, worker commits or seed edits",
+    "Push, merge, history rewrite, deployment or public release",
+    "Raw logs/archives/binaries/source snapshots added to Git; mocked output as AI/governance proof"
+  ],
+  "ownerAuthorization": "Owner 2026-11-05 asks Root to finish CCM causal audit, scope/design and work order; another agent only acts as worker. Root grants bounded source/test correction of proven independent M3-06 selection-read defect. No product runtime/effect permission.",
+  "scope": "Independent A03 read-selection UI race only. Parent R139 M3-05/M3-08 stays BLOCKED with same registry/failed history/costs. No P01 source dispatch, backend or harness work.",
+  "verification": "Exact preimage diff, deterministic deferred UI reads, existing component suite and app typecheck using installed tools. Independent review; zero provider/browser/DB effects. No runtime or governance claim from component mocks.",
+  "claimBoundary": "Source/component/static software evidence only. No current native DB/browser/AI execution, runtime CVF governance, full M3, hosted CI, pilot or release acceptance.",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_140_SELECTION_READ_REPAIR.md",
+  "executionBudget": {
+    "workerActiveMinutes": 45,
+    "workerFocusedTestInvocations": 3,
+    "workerTypecheckInvocations": 1,
+    "consolidatedRepairRounds": 1,
+    "repairAdditionalMinutes": 15,
+    "repairFocusedTestInvocations": 1,
+    "repairTypecheckInvocations": 1,
+    "rootReviewMinutes": 15,
+    "providerCalls": 0,
+    "browserCampaigns": 0,
+    "runtimeStarts": 0,
+    "dependencyDownloads": 0
+  },
+  "parentTranche": "CCMAI-RUNTIME-139",
+  "workerAllowedPaths": [
+    "frontend/src/components/InterventionExecutionStatus.vue",
+    "frontend/src/__tests__/intervention-execution-status.test.ts",
+    "docs/reviews/R140_SELECTION_READ_WORKER_RETURN_2026-11-05.md",
+    "docs/reviews/probes/r140_selection_read_20261105/worker_*"
+  ],
+  "baseCommit": "4c3cc11ef36f0e9e3e9738b26647f59909b04391",
+  "status": "BUILD",
+  "phase": "BUILD",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD"
+  ],
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "ACTIVE",
+  "implementationStarted": false,
+  "disposition": "INDEPENDENT_ADMISSION_ACCEPTED_PENDING_COMMIT_AND_GATES",
+  "parentProductStatus": "R139 BUILD_BLOCKED; M3-05/08 repair audit BLOCKED, no reset",
+  "reviewEvidence": [
+    "docs/reviews/probes/r140_selection_read_20261105/independent_admission.json"
+  ]
+}

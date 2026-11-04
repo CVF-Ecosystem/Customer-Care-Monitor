@@ -16,7 +16,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- R139 v3 native capability accepted bounded with original evidence; cumulativebrowser23, prior v2UNKNOWN and product/Core/M3 holds retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R139_INTEGRATED_EXECUTION_PROOF_2026-10-21.md`
+- Active R140 worker-only source handoff; Root owns design/review/commit; R139 integration remains blocked.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R140_SELECTION_READ_REPAIR_2026-11-05.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -4522,6 +4522,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R139 browser-transfer documentary HOLD and independent qualified review; source pins verified, no runtime test or fresh admission.: `docs/reviews/R139_BROWSER_TRANSFER_RETURN_2026-10-28.md`
 - Byte-identical original worker return snapshot retained for independent documentary HOLD review; not runtime proof.: `docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/browser_transfer_20261028/worker_return_original.md`
 - Deterministic ordinal catalog ordering and Windows PowerShell5/pwsh7 view-parity checks.: `scripts/tests/test_cvf_downstream_catalog_parity.py`
+- Reviewed causal assessment, Root lifecycle design and exact integration reopen conditions; product blocked.: `docs/reviews/R139_CAUSAL_CHAIN_ASSESSMENT_2026-11-05.md`
 - Explicit Owner check-only literal-argv continuation; no source/recompile/runtime/API; original failure preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-CHECK-ONLY-ADMISSION.json`
 - Explicit Owner combined fresh-r3 grant: exact source/check round and conditional freshcampaign/newAPI1/additionalUSD1; not executable runtime yet.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-COMBINED-ADMISSION.json`
 - Exact fresh-r3 conditional runtime admission draft after source8bb54637 and publicpricingPASS; independent review/commit before effects; NEWAPI1/USD1, oldslot preserved.: `CVF_SESSION/authority/CCMAI-RUNTIME-139-FRESH-R3-RUNTIME-ADMISSION.json`
@@ -5268,6 +5269,9 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Original single released pure-Go test reservation/receipt/raw log; bounded local software evidence.: `docs/reviews/probes/r139_integrated_20261021/claude_receiving_20261023/build_test.stdout.txt`
 - Section7 metadata accepted; independent Sol review operational HOLD_TRANSFER due undocumented ownership/closure/deadline/child controls; no new probe admission.: `docs/reviews/R139_WORKER_CAPABILITY_REVIEW_AND_TRANSFER_2026-10-23.md`
 - Root independent bounded local-check acceptance: compile1/1 and pure7PASS0SKIP; no runtime/provider/M3 acceptance.: `docs/reviews/R139_WORKER_OFFLINE_FINAL_REVIEW_2026-10-23.md`
+- Immutable committed dispatcher seed.: `CVF_SESSION/authority/CCMAI-RUNTIME-140.json`
+- Active independent source work; R139 parent remains blocked.: `CVF_SESSION/tranches/CCMAI-RUNTIME-140.json`
+- Worker-only independent M3-06 correction, S01-S10 acceptance and bounded scope.: `docs/work_orders/CCMAI_RUNTIME_140_SELECTION_READ_REPAIR.md`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`
@@ -5845,6 +5849,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Structured per-tranche contract records (phase, roles, allowed paths, review disposition) read by the downstream gate.: `CVF_SESSION/tranches/`
 - Work orders.: `docs/work_orders/`
 - Exact intake, repair attempts, independent review and original/final validation receipts for LAW profile adoption.: `docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/`
+- Source pins, typed assessment and independent review; historical outcomes preserved.: `docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/`
+- Pinned source preimages and independent preparation checks.: `docs/reviews/probes/r140_selection_read_20261105/`
 
 Plans describe intended work. `IMPLEMENTATION_STATUS.json`, source, tests, and
 review evidence determine what is actually implemented.

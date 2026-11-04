@@ -1,0 +1,56 @@
+{
+  "baseCommit": "bf19e55562560ab5a2813a28383d9883d2754230",
+  "scope": "Targeted retained-evidence/source assessment, not full corpus",
+  "sources": [
+    {
+      "path": "docs/reviews/R139_REPLACEMENT_RUNTIME_INDEPENDENT_REVIEW_2026-10-21.md",
+      "sha256": "f5f7df46912f94c76a7790922504fa0eeb353f43d43c91ebae3a35c84474434d"
+    },
+    {
+      "path": "docs/reviews/R139_FRESH_R3_INTERRUPTED_RUNTIME_REVIEW_2026-10-22.md",
+      "sha256": "ea46acffc5c54d25d9d23f257c93ffb0bf9c1f2f90213bb0bd42ba79a0eebdbc"
+    },
+    {
+      "path": "docs/reviews/R139_RECOVERY_SOURCE_INDEPENDENT_REVIEW_2026-10-23.md",
+      "sha256": "77f4104c8d445561cc86196d8a3f776cc441bca0243eeebca4914f40154b146d"
+    },
+    {
+      "path": "docs/reviews/R139_SDK_P01_B01_DESIGN_SPEC_2026-10-30.md",
+      "sha256": "12391f735721950963e4f0740796f315089f14fcc2fd89276fe4c804ae6602ba"
+    },
+    {
+      "path": "docs/reviews/R139_SDK_P01_B01_DESIGN_ROOT_REVIEW_2026-10-30.md",
+      "sha256": "75094d0f46e4469617f4ea25fa70d2bb153865e30b8e13c094498784cd196674"
+    },
+    {
+      "path": "backend/api/handlers/intervention_execution_browser_test.go",
+      "sha256": "4e90a7225f6fc663a3dc3493b3570bdfdc9969da0b43d70445273170c41f899d"
+    },
+    {
+      "path": "scripts/r139_execution_supervisor.py",
+      "sha256": "8334bff12870f0cd09afcefd14959a5e5ddc9f7595f0986d9762a6683e58f207"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/native_operational_20261024/recorder_design.py.txt",
+      "sha256": "154047cf66ffce3192b07ff4ac976f51c9a797c50b76a4dd3091f6398f207f1f"
+    },
+    {
+      "path": "frontend/src/components/InterventionExecutionStatus.vue",
+      "sha256": "756cba7b19b347e72315ef1490255c9413e46c933844a6f9d69f0400df36c81a"
+    },
+    {
+      "path": "frontend/src/__tests__/intervention-execution-status.test.ts",
+      "sha256": "85c12c8d1023c19cbf120232c52af46b255dfcc0321537ae7875bcd157fd61e4"
+    },
+    {
+      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-ADAPTER-SOURCE-ADMISSION.json",
+      "sha256": "f3a0d37e9cd1a447c54b68de81922e48b1e8e802d7b50981d24342880e9a6e2f"
+    }
+  ],
+  "providerCalls": 0,
+  "browserCalls": 0,
+  "runtimeStarts": 0,
+  "historicalTestsRerun": 0,
+  "priorCosts": "UNKNOWN retained; r2 physical1/1 uncertain consumed, r3 campaign spent, no transferable unused slot",
+  "startup": "52 workspace source hashes matched; public doctor27/28 LOCK_INVALID only; trusted profile1.3 INST/CONT PASS, COV N/A on then-clean declaration scope. Initial trusted check rejected two bytecode caches created by public doctor; preserved outside bundle; PYTHONDONTWRITEBYTECODE=1 required."
+}
