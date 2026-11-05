@@ -4,11 +4,11 @@ Status: ACTIVE
 
 ## Current State
 
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
-- Active role: Root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Root ORCHESTRATOR / COMMIT_STEWARD / SESSION_SYNC_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER
 - Active tranche: CCMAI-RUNTIME-151
-- Next allowed move: CCMAI-RUNTIME-151 Amendment A1 DISPATCH_READY: Root commits the independently reviewed exact-source packet and material-SHA handoff marker, then Terra may perform one combined offline test and one final-byte syntax batch before the original 17:02:18 hard stop. No Chrome, daemon, provider, DB or product effect is admitted. R139 BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-151 Amendment A1 BUILD: Terra performs only the reviewed source correction, one combined exact-source offline test and one final-byte syntax batch before the original 17:02:18 hard stop, then returns for independent Astra review. No Chrome, daemon, provider, DB or product effect is admitted. R139 BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## Transition acknowledgment
@@ -49,6 +49,12 @@ Status: ACTIVE
 
 - Astra independently accepted one same-R151 exact-source offline amendment in `docs/reviews/R151_AMENDMENT_INDEPENDENT_REVIEW_2026-11-05.md` (LF SHA-256 `0e5418ab15867d1788332433505dea00b8509a6a082061d135fcb7e08d397147`). The official amended packet LF SHA-256 is `8041a901c1568b6dc4f116aedce6b44b8e125a6759ec98350eaf50d551fe918e`; the existing M3 repair registry now pins accepted audit `460d427b7369b4c6693b81f6f7840969c441b33fb8af94f6842de65858d1c9b1`.
 - Cumulative tests 3/4 and syntax 1/2; first source attempt consumed conservatively 13 wall minutes, active minutes UNKNOWN. The original 17:02:18 hard stop and zero effect boundary remain. Root must pass amended packet pre-dispatch and commit the packet plus material-SHA marker before Terra resumes.
+
+## Amendment A1 BUILD transition acknowledgment
+
+- Reviewed Amendment A1 material committed at `0c61d58fa9b4d0fe148fe56bb9656899c5281871`. Root rechecked the compact bootstrap, state, handoff, implementation truth and docs index before transition. Installed1.3 pre-dispatch APPL/COV PASS, pre-commit PASS and portable preflight 7/7; ROUTE explicitly not applicable.
+- Root acknowledges COMMIT_STEWARD / SESSION_SYNC_STEWARD, Terra remains the separate IMPLEMENTATION_WORKER and Astra the independent REVIEWER. This handoff is the new material-SHA marker for the one remaining combined offline test and one final-byte syntax batch only. Terra must acknowledge the resumed role before edits. The official amended order remains byte-pinned at LF SHA-256 `8041a901c1568b6dc4f116aedce6b44b8e125a6759ec98350eaf50d551fe918e`.
+- The original 17:02:18 wall stop, 3/4 tests, 1/2 syntax, active minutes UNKNOWN and zero effect boundary remain. No Chrome/daemon or product admission follows.
 
 ## Public Export Disposition
 
