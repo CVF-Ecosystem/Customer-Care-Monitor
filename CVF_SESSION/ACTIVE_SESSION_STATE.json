@@ -94,9 +94,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-151",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R151_EVIDENCE_CAPTURE_2026-11-05.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-151 BUILD: Terra executes the reviewed source-only offline diagnostic repair within the 45-minute worker ceiling and returns evidence for independent Astra REVIEW. No Chrome, daemon, provider, DB or product effect is admitted. R139 BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-151 BUILD_BLOCKED: Root retains Terra candidate and Astra blocked-source review, audits the exact-source V04 and HTTP/source-binding gaps, and prepares one bounded same-tranche test amendment for independent R2 review. No further test, source edit, Chrome, daemon, provider, DB or product effect is admitted yet. R139 BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / COMMIT_STEWARD / SESSION_SYNC_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER",
+  "activeRole": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD; Astra Medium independent REVIEWER",
   "updatedAt": "2026-11-05",
   "x-resolvedCoreCommit": "15e39450853184eb65dbde73398c69c3171a6241",
   "x-ownerRoadmapDiscipline": {

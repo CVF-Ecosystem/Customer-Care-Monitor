@@ -4,12 +4,12 @@ Memory class: POINTER_RECORD
 
 <!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R151_EVIDENCE_CAPTURE_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-151", "parked": true} -->
 
-## Current R151 evidence capture repair BUILD - 2026-11-05
+## Current R151 evidence capture repair BUILD_BLOCKED - 2026-11-05
 
 - Current mode: BUILD
 - Active phase: BUILD
 
-R151 BUILD source-only diagnostic repair on branch `r151-evidence-capture`, immutable seed `9c88b241d261a97da739d4c2e7f8526371220eda`. Astra accepted the packet; M3 registry pin and installed1.3 pre-dispatch PASS are recorded. Reviewed material is committed at d2edd620dc71b318e8685b4527fb0a0ce6d87546; the handoff records the material-SHA release. Terra executes only bounded offline source repair. Astra Medium is the independent R2 reviewer; Sol 6.1 Medium supplied read-only HTTP advice. No Chrome/daemon/provider/DB/product effect. R150 INCONCLUSIVE and cleanup UNKNOWN retained; R139 BUILD_BLOCKED and M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+R151 BUILD_BLOCKED source-only diagnostic repair on branch `r151-evidence-capture`, immutable seed `9c88b241d261a97da739d4c2e7f8526371220eda`. Astra accepted the packet; M3 registry pin and installed1.3 pre-dispatch PASS are recorded. Reviewed material is committed at d2edd620dc71b318e8685b4527fb0a0ce6d87546; the handoff records the material-SHA release. Terra stopped with exact final-runner verification open after using 3/3 focused tests and 1/1 syntax batch; Astra accepted the blocked return only. Root prepares a same-R151 bounded test amendment without resetting the 17:02:18 clock. Astra Medium is the independent R2 reviewer; Sol 6.1 Medium supplied read-only HTTP advice. No Chrome/daemon/provider/DB/product effect. R150 INCONCLUSIVE and cleanup UNKNOWN retained; R139 BUILD_BLOCKED and M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
 
 Root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD
 
@@ -191,7 +191,7 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R151_EVIDENCE_CAPTURE_2026-11-05.md
 
-CCMAI-RUNTIME-151 BUILD executes the independently reviewed source-only diagnostic capture repair under material SHA d2edd620dc71b318e8685b4527fb0a0ce6d87546. R150 remains FROZEN with INCONCLUSIVE A1-b, A2 unrun and cleanup UNKNOWN. No Windows process effect is admitted. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-151 BUILD_BLOCKED retains the candidate and Astra source-not-accepted review; Root prepares a same-tranche bounded test amendment under the original clock. R150 remains FROZEN with INCONCLUSIVE A1-b, A2 unrun and cleanup UNKNOWN. No Windows process effect is admitted. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

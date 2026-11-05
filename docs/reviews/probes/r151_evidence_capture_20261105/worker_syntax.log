@@ -1,0 +1,7 @@
+owner_runner.mjs exit=0
+diagnostic_helpers.mjs exit=0
+actor_call.mjs exit=0
+worker_offline_tests.mjs exit=0
+process_snapshot.ps1 parseErrors=0
+prestart_full_tree.ps1 parseErrors=0
+worker_historical_red.ps1 parseErrors=0

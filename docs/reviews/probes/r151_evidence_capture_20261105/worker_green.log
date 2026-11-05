@@ -1,0 +1,36 @@
+PASS PS empty
+PASS PS one
+PASS PS two
+PASS PS invalid malformed
+PASS PS invalid null
+PASS PS invalid empty value
+PASS PS invalid non string
+PASS PS invalid duplicates
+PASS PS argv prefix
+PASS PS argv unrelated
+PASS PS argv quoted uppercase
+PASS PS argv separate
+PASS PS argv unknown
+PASS missing root
+PASS false root
+PASS unknown inventory
+PASS foreign profile
+PASS unknown command
+PASS descendant and orphan retained
+PASS terminal absent and pid reuse
+PASS terminal inventory unknown
+PASS original exit
+PASS original timeout
+PASS fragmented 403
+PASS fragmented 404
+PASS valid 101
+PASS invalid 101
+PASS remote eof
+PASS partial eof
+PASS reset
+PASS timeout
+PASS malformed
+PASS oversized
+PASS duplicate and late
+TOTAL 34 PASS; SKIPS 0
+exit=0

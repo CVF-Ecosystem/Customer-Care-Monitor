@@ -6,9 +6,9 @@ Status: ACTIVE
 
 - Current mode: BUILD
 - Active phase: BUILD
-- Active role: Root ORCHESTRATOR / COMMIT_STEWARD / SESSION_SYNC_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER
+- Active role: Root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD; Astra Medium independent REVIEWER
 - Active tranche: CCMAI-RUNTIME-151
-- Next allowed move: CCMAI-RUNTIME-151 BUILD: Terra executes the reviewed source-only offline diagnostic repair within the 45-minute worker ceiling and returns evidence for independent Astra REVIEW. No Chrome, daemon, provider, DB or product effect is admitted. R139 BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-151 BUILD_BLOCKED: Root retains Terra candidate and Astra blocked-source review, audits the exact-source V04 and HTTP/source-binding gaps, and prepares one bounded same-tranche test amendment for independent R2 review. No further test, source edit, Chrome, daemon, provider, DB or product effect is admitted yet. R139 BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## Transition acknowledgment
@@ -37,6 +37,13 @@ Status: ACTIVE
 - Astra independently accepted the blocked return only in `docs/reviews/R151_SOURCE_BLOCKED_RETURN_INDEPENDENT_REVIEW_2026-11-05.md` (LF SHA-256 `7dfb8ee76810be217e0f2b51d95defede0d6670d39a429d7a035b80c777edc82`); reviewer-fast PASS with ROUTE not applicable. No source or product acceptance follows.
 - Sol 6.1 Medium advised read-only reuse of R150 orchestration, with new pure diagnostic helpers and offline fixtures in the authorized R151 paths. Sol did not implement. Root accepts a Terra same-scope continuation under the unchanged official packet and seed; no new tranche or budget reset.
 - Original authorized BUILD release was `2026-11-05T16:17:18+07:00` at `d88b393c`; Root observed the blocked return by `2026-11-05T16:18:56.1140974+07:00`, so its first interval is conservatively debited two wall minutes while actual active time stays UNKNOWN. To include all subsequent advisory/worker time and waits conservatively, the hard stop is `2026-11-05T17:02:18+07:00`, 45 wall minutes after original release. Terra must retain new start/end times and stop earlier on any packet condition.
+
+## Candidate return and independent source disposition
+
+- Terra stopped source BUILD at `2026-11-05T16:30:16+07:00`, 12m58s after original release, conservatively 13 wall minutes; actual active minutes UNKNOWN. Focused invocations 3/3 and syntax batch 1/1 are consumed. Historical red exit1, successive green 34 and 39 PASS with zero skips are retained as helper evidence, not exact final-runner acceptance. Effects remain worker-reported zero.
+- Final runner candidate `d11012f6bb3bbdc681fd239eaccea068eb0dd68786682ebd145afea44f784ed9` was edited after the last green/syntax run to prevent repeated wait of a timed-out original handle. Terra returned `BLOCKED_WITH_REASON`; V04 and complete V06/V07 are open.
+- Astra's `docs/reviews/R151_FINAL_SOURCE_BLOCKED_INDEPENDENT_REVIEW_2026-11-05.md` (LF SHA-256 `6d6995f0d82703afe856a36ebd6d66ae939d947bea08c1e5abcb80879f428b16`) accepted the blocked return only, rejected source completion, and identified final orchestration, transport wiring and future source-binding evidence gaps. This is an incomplete implementation, not a proven completed failed repair; existing R139 r2/r3 causal enrollment remains.
+- Root transitions from BUILD orchestration to WORK_ORDER_AUTHOR for a same-R151 bounded amendment. The original 17:02:18 hard stop, consumed counters, source hashes and first blocked return remain. No dependent implementation/test is released until independent R2 amendment review, exact pin and pre-dispatch gate.
 
 ## Public Export Disposition
 
