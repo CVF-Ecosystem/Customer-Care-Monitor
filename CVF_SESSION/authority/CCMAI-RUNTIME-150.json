@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-150",
+  "authorityKind": "DISPATCHER_OWNED_WINDOWS_A1_A2_VERIFY_AND_REPAIR_AUDIT",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Root/Local ORCHESTRATOR and WORK_ORDER_AUTHOR",
+    "implementationWorker": "Root/Local Windows VERIFY worker after separate effect admission",
+    "reviewer": "Independent reviewer separate from Root audit author and Windows worker",
+    "commitSteward": "Root/Local COMMIT_STEWARD",
+    "closer": "Root/Local CLOSER and SESSION_SYNC_STEWARD"
+  },
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_150_A1_A2_WINDOWS_VERIFY.md",
+    "docs/reviews/R150_*.md",
+    "docs/reviews/probes/r150_a1_a2_windows_20261105/**",
+    "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a1_a2_windows_verify.json",
+    "docs/milestone-coverage-authority.json",
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md"
+  ],
+  "prohibitedEffects": [
+    "No product source, tests, dependencies, gate, workflow, CVF Core, prior repair attempts, historical audit, prior seed or R149 frozen artifact edits",
+    "No Chrome or daemon start before separate R2 effect admission and immediate same-session A3 full-tree recapture PASS",
+    "After effect admission: at most three owned Chrome launches, one owned daemon start, eight native calls and six raw WebSocket handshakes, with about:blank and localhost only; no provider, DB or product calls",
+    "No new package/network fetch beyond localhost, installation, credential or customer/channel action, automatic retry, integrated lifecycle or product campaign",
+    "No R139 IMPLEMENT reopen, M3 acceptance, physical no-relaunch or runtime-governance claim, consumed-budget reset, deployment or public release"
+  ],
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_150_A1_A2_WINDOWS_VERIFY.md",
+  "ownerAuthorization": "Operator 2026-11-05 directs Root/Local to copy the R149 Windows draft to an official Local work order, independently review a successor R139 repair audit pinned to the exact work-order bytes, update registry, admit bounded Windows effects and run A1/A2 subject to immediate A3 recapture.",
+  "scope": "Finite Windows A1/A2 VERIFY of Chrome GUID rejection and native pageId validation under the operator-relaxed A3 package identity; documentary R139 repair-audit successor and independent return review. No product integrated lifecycle.",
+  "claimBoundary": "A1_A2_PASS only removes an admission prerequisite; it is not product physical no-relaunch, runtime governance, R139 completion or M3 acceptance. R139 stays BUILD_BLOCKED and M3-05/M3-08 BLOCKED.",
+  "bootstrapException": false
+}
