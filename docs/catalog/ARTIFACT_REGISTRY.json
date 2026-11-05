@@ -5529,9 +5529,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R149_OHC_SUCCESSOR_2026-11-05.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R150_R149_ERRATA_2026-11-05.md",
       "status": "ACTIVE",
-      "description": "R149 OHC design/spec FROZEN after separate independent R2 review; Windows A1/A2 remains unadmitted."
+      "description": "Active R150 errata handoff: binding inputs (B1-B3 incl. chrome.exe --version safety, NF1) for frozen R149; A1/A2 unadmitted."
     },
     {
       "id": "r060-work-order",

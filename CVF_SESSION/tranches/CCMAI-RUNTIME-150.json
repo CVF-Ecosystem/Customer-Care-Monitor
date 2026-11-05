@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-150",
+  "authorityKind": "DISPATCHER_OWNED_R149_ERRATA_BINDING_INPUTS",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Cloud ORCHESTRATOR (operator full-roadmap grant 2026-11-05)",
+    "implementationWorker": "Cloud ORCHESTRATOR acting as SPEC_AUTHOR (documentary errata only)",
+    "reviewer": "Independent Opus review subagent appointed under operator grant (separate agent from the errata author)",
+    "commitSteward": "Cloud ORCHESTRATOR for branch-only commits; Root/Local for merge to main"
+  },
+  "allowedPaths": [
+    "docs/reviews/R150_*.md",
+    "docs/reviews/probes/r150_r149_errata_20261105/**",
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/INDEX.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json"
+  ],
+  "prohibitedEffects": [
+    "Editing frozen R149 documents or any other frozen/historical review, receipt or evidence file",
+    "Starting Chrome, the daemon, browser, DB, provider or runtime; network fetch, install, import or execution",
+    "Editing product source, tests, gates, CI, dependencies, the R139 repair audit, docs/milestone-coverage-authority.json, existing seeds or work orders",
+    "Admitting or dispatching A1/A2; reopening R139; claiming runtime, no-relaunch, AI-governance or M3 acceptance",
+    "Merge or push to main, history rewrite, deployment or public release"
+  ],
+  "workOrder": "docs/reviews/R150_R149_ERRATA_PACKET_2026-11-05.md",
+  "baseCommit": "4164a28d174da1625f4a4b2fa03414c95962cf25",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "REVIEW_PENDING"
+  ],
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
+  "disposition": "ERRATA_AUTHORED_PENDING_INDEPENDENT_REVIEW",
+  "parentTranche": "CCMAI-RUNTIME-149",
+  "reviewEvidence": [],
+  "effects": {
+    "networkFetches": 0,
+    "runtimeStarts": 0,
+    "providerCalls": 0
+  }
+}
