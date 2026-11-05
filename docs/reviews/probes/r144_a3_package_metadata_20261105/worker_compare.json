@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "ccma.r144.workerCompare@1.0.0",
+  "date": "2026-11-05",
+  "worker": "Claude Code cloud VERIFY worker",
+  "sources": {
+    "workOrderLfSha256": "0f60ed08a21e77a5b9bdc3b11db57b420f640d5e2ced4b4668ff608a11887a2e",
+    "checkoutHead": "5c43dfdff2f6fd99634fd3485c098acea1bd2a43",
+    "r141Tarball": {
+      "path": "cloud scratchpad cdm_tgz/cdm-1.9.0.tgz (retained from R141 session, not re-downloaded)",
+      "bytes": 2458275,
+      "sha1": "86bf2bde0bc4ec07aa428b36ea612eaa7a37a77c",
+      "sha512Integrity": "sha512-RnzXoJiUQ44hpOihWk90uOhLD/CnwDkDy0ldHMZONJ2nYQ+dWN1fq1luHHqyd+7FuYnyIlCY6uTThbN5ut9kSQ==",
+      "matchesSourceVerification": true
+    },
+    "npmPackageJson": {
+      "bytes": 4556,
+      "sha256": "6a14bfc51d9111957a5446ba861e462c3181c69c915f8133d8f2beac8c175021",
+      "lfLines": 117,
+      "crlf": 0,
+      "trailingNewline": true,
+      "bom": false
+    },
+    "installedPackageJson": {
+      "bytes": 2354,
+      "sha256": "592ef654a308edcba5fb3c2b302173650096a9487e4120b96e7adbe830429b9f",
+      "lfLines": 84,
+      "crlf": 0,
+      "trailingNewline": false,
+      "bom": false
+    },
+    "sourceVerificationJson": {
+      "committedRawSha256": "0d94408e86b64667d67a37e233353633f171be1486e1b5b0890fca0b7c565ac9",
+      "localCaptureRecorded": "754215058fec4f73dc10e4fd745a62d41f6e83641d7a8ed9091c9bd1691e4d44",
+      "explanation": "754215058f... equals the CRLF rendering of the identical committed LF content (Windows checkout line endings); not a content difference"
+    }
+  },
+  "comparisonPass": {
+    "parsedEqual": false,
+    "removedKeysInInstalled": [
+      "bugs",
+      "scripts"
+    ],
+    "addedKeys": [],
+    "changedValues": [],
+    "keyOrderOtherwisePreserved": true
+  },
+  "recheck": {
+    "question": "Is the installed byte stream exactly the npm JSON minus bugs/scripts re-serialized?",
+    "result": "YES: json.dumps(npm minus bugs,scripts, indent=2) without trailing newline reproduces sha256 592ef654... byte-for-byte; npm file itself equals json.dumps(indent=2)+newline"
+  },
+  "fieldsUnchanged": [
+    "name",
+    "version",
+    "description",
+    "type",
+    "bin",
+    "main",
+    "files",
+    "repository",
+    "author",
+    "license",
+    "homepage",
+    "mcpName",
+    "devDependencies(32)",
+    "peerDependencies",
+    "peerDependenciesMeta",
+    "engines",
+    "overrides",
+    "allowScripts"
+  ],
+  "fieldsAbsentInBoth": [
+    "exports",
+    "imports",
+    "dependencies"
+  ],
+  "counters": {
+    "gitFetchOfProjectRepo": 1,
+    "packageFetches": 0,
+    "comparisonPasses": 1,
+    "recheckPasses": 1,
+    "installs": 0,
+    "imports": 0,
+    "executions": 0,
+    "chromeOrMcpStarts": 0,
+    "providerCalls": 0
+  }
+}

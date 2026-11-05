@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-148",
+  "authorityKind": "DISPATCHER_OWNED_R144_A3_DISPOSITION_AND_REPAIR_AUDIT",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Root/Local ORCHESTRATOR",
+    "implementationWorker": "Root/Local documentary audit author; no product implementation",
+    "reviewer": "Independent reviewer, separate from Root audit author",
+    "commitSteward": "Root/Local COMMIT_STEWARD",
+    "closer": "Root/Local CLOSER and SESSION_SYNC_STEWARD"
+  },
+  "allowedPaths": [
+    "docs/reviews/R144_*.md",
+    "docs/reviews/R148_*.md",
+    "docs/reviews/probes/r144_a3_package_metadata_20261105/**",
+    "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_r144_disposition.json",
+    "docs/milestone-coverage-authority.json",
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md"
+  ],
+  "prohibitedEffects": [
+    "No edit to the hash-pinned R144 work order, original R139 repair attempts, prior audits, prior authority seeds, product source, tests, dependencies, gates, workflows or CVF core",
+    "No package or other new network fetch, installation, Chrome, MCP, daemon, browser, DB, provider, credential, customer/channel or runtime action",
+    "No A1/A2 admission, R139 implementation reopening, physical-relaunch proof, M3 acceptance or reset of historical costs, UNKNOWNs and consumed effects",
+    "No deployment, public release or live governance claim"
+  ],
+  "workOrder": "docs/reviews/R148_A3_DISPOSITION_AND_AUDIT_PACKET_2026-11-05.md",
+  "ownerAuthorization": "Operator 2026-11-05 asks Root/Local to review PR #17, rule on R144-D1/D2, independently review successor audit and registry pointer, close R144, and merge PR #17; full-tree Windows hash capture is read-only and A1/A2 is conditional on only package.json differing.",
+  "scope": "Documentary R144 metadata disposition and successor R139 repair-chain audit; retain work-order bytes; record Windows full-tree mismatch and keep A1/A2 unadmitted.",
+  "claimBoundary": "R144 metadata comparison may close at bounded scope; installed full-tree identity fails the strict only-package.json difference condition while README.md is absent. R139 remains BUILD_BLOCKED and M3-05/M3-08 remain BLOCKED.",
+  "bootstrapException": false
+}

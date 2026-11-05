@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "ccma.r148.windowsFullTreeComparison@1.0.0",
+  "source": "Read-only Get-ChildItem -Recurse -File and Get-FileHash -Algorithm SHA256 of current Antigravity chrome-devtools-mcp Windows directory",
+  "expectedManifest": {
+    "path": "docs/reviews/probes/r144_a3_package_metadata_20261105/root_npm_full_tree_manifest.json",
+    "sha256Lf": "272c516aa8513252e3613748406fc49d77247650e2f8610ada6b49bd4a19b398",
+    "fileCount": 348
+  },
+  "windowsCapture": {
+    "path": "docs/reviews/probes/r144_a3_package_metadata_20261105/windows_full_tree.json",
+    "sha256Lf": "5c2e19493fef20a371ef2a0a7ee71bffc738d07cadabedcaaccafaa286059948",
+    "fileCount": 347
+  },
+  "matchedCount": 346,
+  "missing": [
+    "README.md"
+  ],
+  "extra": [],
+  "mismatches": [
+    {
+      "path": "package.json",
+      "expectedBytes": 4556,
+      "observedBytes": 2354,
+      "expectedSha256": "6a14bfc51d9111957a5446ba861e462c3181c69c915f8133d8f2beac8c175021",
+      "observedSha256": "592ef654a308edcba5fb3c2b302173650096a9487e4120b96e7adbe830429b9f"
+    }
+  ],
+  "onlyPackageJsonDiffers": false,
+  "a1A2Admission": "NOT_ADMITTED",
+  "claimBoundary": "Static installed-file comparison only; no package code, Chrome/MCP, browser, provider, DB or product action executed."
+}
