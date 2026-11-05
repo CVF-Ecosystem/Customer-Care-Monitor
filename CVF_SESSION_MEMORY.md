@@ -155,7 +155,7 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Active phase: WORK_ORDER
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R144_A3_PACKAGE_METADATA_VERIFY_2026-11-05.md
 
-CCMAI-RUNTIME-147 is FROZEN at diagnostic-only scope after independent review and committed-range gates. R144 finite A3 is DISPATCH_READY after pre-dispatch PASS; Root will pin the dispatch commit in its active handoff before Claude starts. R139 remains BUILD_BLOCKED; Windows A3 is 4/5 and no A1/A2 admission is open. No fresh network fetch or runtime action is authorized; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-147 is FROZEN at diagnostic-only scope after independent review and committed-range gates. R144 finite A3 is DISPATCH_READY after pre-dispatch PASS; Dispatch commit `55a7f3af5045a7952959d8b2a0e0b79a95628b6f` is pinned in the active handoff. Operator may give Claude the exact packet. R139 remains BUILD_BLOCKED; Windows A3 is 4/5 and no A1/A2 admission is open. No fresh network fetch or runtime action is authorized; Facebook/Zalo OA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 
