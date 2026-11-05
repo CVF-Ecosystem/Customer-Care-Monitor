@@ -1,6 +1,6 @@
 # R148: R144 A3 disposition and successor repair audit
 
-Status: ACTIVE
+Status: CLOSED
 workOrderStatusGrammar: cvf.workOrderStatusGrammar@1.0.0
 Risk: R2
 Authority: `CVF_SESSION/authority/CCMAI-RUNTIME-148.json` (seed `b232d1a6080da9aaa35e2626f6890e7ac07cb9f2`)
@@ -26,3 +26,7 @@ The independent reviewer checks D1/D2 authority, raw work-order identity, full-t
 ## Public Export Disposition
 
 DEFERRED_PRIVATE_ONLY
+
+## Final review disposition
+
+Independent R148 review accepted the BLOCKED successor audit and transparent R144 closure carrier. The registry now points to the accepted audit; R144 original dispatch order remains byte-identical. R148 is FROZEN at documentary scope. Windows package full-tree mismatch keeps A1/A2 unadmitted and R139/M3 blockers intact. Root/Local retains PR #17 merge and readback.

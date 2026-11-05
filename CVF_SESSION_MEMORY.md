@@ -2,12 +2,12 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R148_A3_DISPOSITION_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-148", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R148_A3_DISPOSITION_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-148", "parked": true} -->
 
-## Current R148 documentary BUILD - 2026-11-05
+## Current R148 bounded FREEZE - 2026-11-05
 
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: FREEZE
+- Active phase: FREEZE
 
 R144 metadata result is independently reviewed. R148 separate successor audit is being prepared; README.md is absent from the Windows install (347/348 paths), so A1/A2 stays unadmitted. R139 and M3-05/M3-08 remain blocked.
 
@@ -158,11 +158,11 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: FREEZE
+- Active phase: FREEZE
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R148_A3_DISPOSITION_2026-11-05.md
 
-R148 documentary audit BUILD follows seed b232d1a6 and pre-dispatch PASS. R144 metadata comparison is reviewed; Windows full-tree capture is 347/348 with README.md missing and only package.json hash differing. A1/A2 remains unadmitted; R139 BUILD_BLOCKED and M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+R148 independent audit REVIEW_PASS and documentary FREEZE: R144 finite metadata result FROZEN through transparent successor carrier, original dispatch order unchanged. Registry points to BLOCKED successor audit. Windows installed tree 347/348, README.md missing, A1/A2 unadmitted. R139 BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked. Root next merges PR #17 and records readback.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

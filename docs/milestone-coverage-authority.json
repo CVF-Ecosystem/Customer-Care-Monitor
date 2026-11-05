@@ -3,7 +3,7 @@
   "milestones": {
     "M3": {
       "path": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
-      "heading": "## 7. M3 \u2014 Ng\u01b0\u1eddi duy\u1ec7t, giao vi\u1ec7c v\u00e0 k\u1ebft qu\u1ea3 x\u1eed l\u00fd"
+      "heading": "## 7. M3 — Người duyệt, giao việc và kết quả xử lý"
     }
   },
   "repairControls": {
@@ -23,8 +23,8 @@
         "M3-08"
       ],
       "audit": {
-        "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a3_verify.json",
-        "sha256": "9f0a083d6dfab2e4bcd0182d6d0aabf66c4231bf35fe5c47f023f627dd53e7e9"
+        "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_r144_disposition.json",
+        "sha256": "9dab727743bbbfab8f412792c8a5294a7e481c89908b8c3268ea6282c46ded5a"
       }
     }
   }
