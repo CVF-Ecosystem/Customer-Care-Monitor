@@ -1,10 +1,10 @@
 # R149 successor contract: owner-held Chrome (OHC) for the R139 integrated lifecycle
 
-Status: SUCCESSOR_CONTRACT_PENDING_INDEPENDENT_REVIEW
+Status: FROZEN_DESIGN_ONLY
 Tranche: CCMAI-RUNTIME-149
 Risk: R2
 Worker: Cloud ORCHESTRATOR acting as SPEC_AUTHOR (documentary only)
-Reviewer: Independent Opus review subagent (pending)
+Reviewer: independent `/root/r148_independent_review` after Root/Local two-file documentary repair
 Seed: `CVF_SESSION/authority/CCMAI-RUNTIME-149.json` (commit `abe76f66cb46978cc242bc1a3fdb6c0fb96a4577`)
 
 This contract consolidates every binding requirement that an executable OHC campaign must satisfy. It does **not** admit or run anything:
@@ -122,7 +122,8 @@ Any difference means HOLD before PRELIMINARY_OBSERVED.
   - At PRELIMINARY_OBSERVED the owner records the **full** page inventory returned by the observer's own `list_pages`, including Chrome's initial tab.
   - Mutating tools may target only the single admitted page ID created by the producer's `new_page`.
   - A later `list_pages` result must equal the pinned inventory, except for URL/title changes on the admitted page.
-- **F5:** before releasing **each** command, the owner confirms that its original Chrome handle and daemon child are still alive. Stated limit: a hostile process of the same user can act between the check and the command; this residual race is accepted and recorded, not prevented.
+  - Source boundary: `build/src/tools/pages.js:13-27,90-116` defines `list_pages` and `new_page`; the full inventory pin and single admitted mutation target are owner-side checks, not native MCP guarantees.
+- **F5:** before releasing **each** command, the owner confirms that its original Chrome handle and daemon child are still alive. `build/src/daemon/client.js:105-109` checks daemon liveness before `sendCommand`, but does not check the original Chrome handle; that extra check belongs to the owner. Stated limit: a hostile process of the same user can act between the check and the command; this residual race is accepted and recorded, not prevented.
 
 ## 4. HOLD conditions (any one ends new work, then CLEANUP)
 
@@ -130,7 +131,7 @@ Any difference means HOLD before PRELIMINARY_OBSERVED.
 - A page ID outside the pinned inventory, an unexpected inventory change (N-R1), or a mutation targeting a page other than the admitted one.
 - A connect failure, a `Daemon is not running` error, or the exit of Chrome, the daemon or the MCP child.
 - `status` mismatch (§2.4), A3 mismatch (§1), or an argv/environment violation (§2).
-- **N-R3:** a Chrome process using the owned user-data-dir that is **not** a descendant of the owner's original Chrome handle. Children descended from that handle (renderer, GPU, utility) are allowed.
+- **N-R3:** a Chrome process using the owned user-data-dir that is **not** a descendant of the owner's original Chrome handle. Children descended from that handle (renderer, GPU, utility) are allowed. `build/src/browser.js:38-40,89-96` shows the `wsEndpoint` path connects through Puppeteer; it does not establish process ancestry. The owner must measure ancestry from Windows process creation data.
 - Clock: the original +1020 s work cutoff is reached. There is no renewal.
 
 ## 5. Lifecycle (refines R141 §5)
@@ -150,6 +151,7 @@ The R141 spec §8 step 1 says "the four files". The correct count is **five**: `
 ## 7. Still not executable
 
 - A1 (Chrome refuses a non-matching browser GUID, including after port reuse) and A2 (a missing `pageId` is rejected before the handler) must pass the separately admitted Windows VERIFY in the draft packet.
+- Source boundary for A1: `build/src/browser.js:38-40,89-96` passes the supplied endpoint to Puppeteer; it does not prove Chrome's GUID rejection on a raw WebSocket. That behavior is the Windows A1 discriminator. Source boundary for A2: `build/src/tools/ToolDefinition.js:16-24,32-34` defines the required `pageId`; `build/src/ToolHandler.js:137-140,183-199` attaches that schema to page tools and routes validated calls. The Windows A2 discriminator must observe rejection and absence of handler effects, not infer them from static source alone.
 - Only then may Local consider a successor repair audit that names an integrated-lifecycle action. Execution of the integrated product campaign still needs its own effect admission.
 - No physical no-relaunch, M3, runtime-governance or product claim follows from this contract.
 

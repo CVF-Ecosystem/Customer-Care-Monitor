@@ -46,12 +46,12 @@ The owner-side helper may use only Node's built-in `WebSocket` (Node ≥ 22) or 
 
 **A1**
 
-- **A1-a, control.** Launch Chrome #1 with the R149 §2.1 flags but `--remote-debugging-port=<fixed free port P>`. Read `DevToolsActivePort`. Open a raw WebSocket to the exact endpoint.
+- **A1-a, control.** Launch Chrome #1 with the R149 §2.1 flags but `--remote-debugging-port=<fixed free port P>`. Read `DevToolsActivePort` if present. If absent, query only `http://127.0.0.1:P/json/version` for `webSocketDebuggerUrl`; require its port to be P and its path to be `/devtools/browser/<guid>`. If neither method yields that endpoint, stop INCONCLUSIVE. The localhost query is included in the existing network, time and call budgets. Open a raw WebSocket to the exact endpoint.
   - Expect: handshake succeeds.
   - Then send `Browser.getVersion` and record the reply.
 - **A1-b.** Open a raw WebSocket to `ws://127.0.0.1:P/devtools/browser/<guid with one hex digit changed>`.
   - Expect: handshake refused (HTTP 4xx or connection close before open).
-- **A1-c.** Close Chrome #1 through its handle and wait on it. Launch Chrome #2 on the same port P. Record its new GUID. Open a raw WebSocket to Chrome #1's old endpoint.
+- **A1-c.** Close Chrome #1 through its handle and wait on it. Launch Chrome #2 on the same port P. Record its new GUID using the same bounded endpoint-discovery rule as A1-a; require a different GUID. Open a raw WebSocket to Chrome #1's old endpoint.
   - Expect: refused.
   - Then connect to Chrome #2's endpoint. Expect: success (control).
 - **A1-d (optional, only if A1-c is inconclusive).** With no Chrome on P, connect to the old endpoint.

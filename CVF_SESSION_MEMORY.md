@@ -2,16 +2,16 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R149_OHC_SUCCESSOR_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-149", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R149_OHC_SUCCESSOR_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-149", "parked": true} -->
 
-## Current R149 OHC successor checkpoint - 2026-11-05
+## Current R149 OHC successor FREEZE - 2026-11-05
 
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: FREEZE
+- Active phase: FREEZE
 
-CCMAI-RUNTIME-149: OHC successor contract and DRAFT Windows A1/A2 VERIFY packet authored on branch claude/friendly-rubin-e2npmt-r149 under the operator full-roadmap grant and relaxed A3 condition (package.json explained, README.md absent); independent review pending, then PR without merge. Next: Local reviews, authors any R139 repair-audit successor naming the A1/A2 discriminator, admits and runs the Windows VERIFY. No execution, admission or R139 reopen by the cloud. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-149 design/spec FROZEN after independent R2 review. Root/Local may create a successor Windows A1/A2 VERIFY tranche, with a reviewed R139 repair audit, exact work-order pin, pre-dispatch gate, separate effect admission and immediate A3 full-tree recapture. No Chrome or daemon start is authorized by R149. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
 
-Cloud agent: operator-granted ORCHESTRATOR / SPEC_AUTHOR / SESSION_SYNC_STEWARD (branch-only commits); independent REVIEWER = separate Opus subagent; Root/Local retains repair-audit, admission, merge and FREEZE
+Root/Local CLOSER / COMMIT_STEWARD / SESSION_SYNC_STEWARD
 
 
 ## Historical R148 bounded FREEZE - 2026-11-05
@@ -168,11 +168,11 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: FREEZE
+- Active phase: FREEZE
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R149_OHC_SUCCESSOR_2026-11-05.md
 
-CCMAI-RUNTIME-149: OHC successor contract and DRAFT Windows A1/A2 VERIFY packet authored on branch claude/friendly-rubin-e2npmt-r149 under the operator full-roadmap grant and relaxed A3 condition (package.json explained, README.md absent); independent review pending, then PR without merge. Next: Local reviews, authors any R139 repair-audit successor naming the A1/A2 discriminator, admits and runs the Windows VERIFY. No execution, admission or R139 reopen by the cloud. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-149 design/spec FROZEN after independent R2 review. Root/Local may create a successor Windows A1/A2 VERIFY tranche, with a reviewed R139 repair audit, exact work-order pin, pre-dispatch gate, separate effect admission and immediate A3 full-tree recapture. No Chrome or daemon start is authorized by R149. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 
