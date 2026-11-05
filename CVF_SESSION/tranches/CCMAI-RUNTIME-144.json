@@ -73,5 +73,8 @@
     "R144-D2": "ACCEPTED_WORKER_BRANCH_COMMIT_PR_NO_MERGE",
     "evidence": "docs/reviews/R148_ROOT_R144_A3_DISPOSITION_2026-11-05.md"
   },
-  "outcome": "METADATA_ONLY_CANDIDATE_CLOSED_FULL_TREE_HOLD"
+  "outcome": "METADATA_ONLY_CANDIDATE_CLOSED_FULL_TREE_HOLD",
+  "mainMerged": true,
+  "mergeCommit": "8a8d05441f7855f8ffa4e233a746a0cf3a5a6106",
+  "pullRequest": "https://github.com/CVF-Ecosystem/Customer-Care-Monitor/pull/17"
 }

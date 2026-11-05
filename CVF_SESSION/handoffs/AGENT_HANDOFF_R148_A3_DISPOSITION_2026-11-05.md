@@ -8,7 +8,7 @@ Status: ACTIVE
 - Active phase: FREEZE
 - Active role: Root/Local CLOSER / COMMIT_STEWARD / SESSION_SYNC_STEWARD
 - Active tranche: CCMAI-RUNTIME-148
-- Next allowed move: CCMAI-RUNTIME-148 is FROZEN after independent audit review and bounded R144 metadata closure. Root/Local next merges PR #17 after final local and hosted checks, then records merge readback. Windows full-tree identity remains HOLD (README.md absent); A1/A2 is unadmitted. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-148 is FROZEN and PR #17 is MERGED on main at 8a8d05441f7855f8ffa4e233a746a0cf3a5a6106. Root/Local holds A1/A2 until a separately reviewed Windows full-tree identity check meets the only-package.json-differs condition; README.md is currently missing. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## Transition acknowledgment
@@ -22,3 +22,7 @@ Root/Local explicitly transitioned from ORCHESTRATOR / WORK_ORDER_AUTHOR to docu
 ## REVIEW and FREEZE acknowledgment
 
 Independent R148 reviewer accepted the BLOCKED successor audit and transparent R144 administrative status carrier. Root/Local transitioned from audit author to CLOSER / COMMIT_STEWARD / SESSION_SYNC_STEWARD, pinned the review hash in the audit and the audit hash in the existing registry, and closed R144 only at finite metadata scope. All 347 installed files were independently rehashed; README.md remains missing against npm348. Final merge to main remains Root-owned.
+
+## Main merge readback
+
+PR #17 is MERGED. GitHub reports merge commit `8a8d05441f7855f8ffa4e233a746a0cf3a5a6106`; `origin/main` and local `main` both resolve to that commit, with PR head `2818f1d6bd0c36eb41fa2bce168bb7925fe5fc5a` as its second parent. This is repository transport only. A1/A2 and R139 product execution remain held by the missing README.md full-tree condition and prior R139 controls.

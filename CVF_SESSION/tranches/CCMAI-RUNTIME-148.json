@@ -50,5 +50,8 @@
   "disposition": "REVIEW_PASS",
   "parentTranche": "CCMAI-RUNTIME-144",
   "closer": "Root/Local CLOSER after independent R2 review and static gates",
-  "productStatus": "R139 BUILD_BLOCKED; M3-05/M3-08 BLOCKED; README.md missing; A1/A2 NOT_ADMITTED"
+  "productStatus": "R139 BUILD_BLOCKED; M3-05/M3-08 BLOCKED; README.md missing; A1/A2 NOT_ADMITTED",
+  "mainMerged": true,
+  "mergeCommit": "8a8d05441f7855f8ffa4e233a746a0cf3a5a6106",
+  "pullRequest": "https://github.com/CVF-Ecosystem/Customer-Care-Monitor/pull/17"
 }

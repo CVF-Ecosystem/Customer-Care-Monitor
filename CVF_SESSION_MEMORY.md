@@ -9,7 +9,7 @@ Memory class: POINTER_RECORD
 - Current mode: FREEZE
 - Active phase: FREEZE
 
-R144 metadata result is independently reviewed. R148 separate successor audit is being prepared; README.md is absent from the Windows install (347/348 paths), so A1/A2 stays unadmitted. R139 and M3-05/M3-08 remain blocked.
+R148 successor audit and R144 finite metadata closure are FROZEN after independent review. PR #17 merged to main at `8a8d05441f7855f8ffa4e233a746a0cf3a5a6106`. The Windows installation lacks README.md (347/348 npm paths), so A1/A2 stays unadmitted. R139 BUILD_BLOCKED and M3-05/M3-08 BLOCKED remain.
 
 ## Current R144 finite A3 VERIFY dispatch - 2026-11-05
 
@@ -162,7 +162,7 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Active phase: FREEZE
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R148_A3_DISPOSITION_2026-11-05.md
 
-R148 independent audit REVIEW_PASS and documentary FREEZE: R144 finite metadata result FROZEN through transparent successor carrier, original dispatch order unchanged. Registry points to BLOCKED successor audit. Windows installed tree 347/348, README.md missing, A1/A2 unadmitted. R139 BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked. Root next merges PR #17 and records readback.
+R148 independent audit REVIEW_PASS and documentary FREEZE: R144 finite metadata result FROZEN through transparent successor carrier, original dispatch order unchanged. Registry points to BLOCKED successor audit. Windows installed tree 347/348, README.md missing, A1/A2 unadmitted. R139 BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked. PR #17 merged at `8a8d05441f7855f8ffa4e233a746a0cf3a5a6106`; Root holds A1/A2 pending separately reviewed full-tree identity.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 
