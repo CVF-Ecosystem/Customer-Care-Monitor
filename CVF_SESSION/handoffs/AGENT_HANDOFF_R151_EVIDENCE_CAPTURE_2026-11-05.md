@@ -28,7 +28,8 @@ Status: ACTIVE
 
 - Reviewed source-only material committed at `d2edd620dc71b318e8685b4527fb0a0ce6d87546`. Root verified pre-dispatch APPL/COV PASS, pre-commit PASS, portable preflight 7/7 and the downstream gate unittest suite 130/130 PASS before transition.
 - Terra receives only the official audit-pinned order `docs/work_orders/CCMAI_RUNTIME_151_EVIDENCE_CAPTURE_REPAIR.md` (LF SHA-256 `b42b14520dc3144df0499880c5f308d8935dfa702e9e23cd7cd9035d76a2211d`) and worker allowed paths. This handoff is the material-SHA release marker; no runtime effect is released.
-- Root acknowledges ORCHESTRATOR / COMMIT_STEWARD / SESSION_SYNC_STEWARD; Terra acknowledges IMPLEMENTATION_WORKER before edits; Astra remains independent REVIEWER. The official order stays byte-pinned and the administrative carrier records BUILD status.
+- Root acknowledges ORCHESTRATOR / COMMIT_STEWARD / SESSION_SYNC_STEWARD; Astra remains independent REVIEWER. The official order stays byte-pinned and the administrative carrier records BUILD status.
+- Terra explicitly rehydrated current R151 BUILD bootstrap, state, handoff, memory, implementation status, index and exact order after release marker `d88b393c`, and accepted IMPLEMENTATION_WORKER for source-only allowed paths and the 45-minute / three-test / one-syntax ceiling before any edit. Terra acknowledged R150 immutable and no process, network, provider, DB or product effects. Root recorded this acknowledgment before source BUILD.
 
 ## Public Export Disposition
 
