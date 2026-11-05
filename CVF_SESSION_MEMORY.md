@@ -9,7 +9,7 @@ Memory class: POINTER_RECORD
 - Current mode: BUILD
 - Active phase: BUILD
 
-CCMAI-RUNTIME-150 Root/Local Windows VERIFY worker may immediately recapture the exact A3 full tree. A mismatch is NO_START with zero Chrome/daemon starts. On PASS, run only the bounded A1/A2 campaign and return raw evidence for independent review. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-150 commit the single-campaign INCONCLUSIVE worker return and submit its raw evidence to independent R2 review. No retry or A2 claim. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
 
 Root/Local IMPLEMENTATION_WORKER (Windows VERIFY)
 
@@ -182,7 +182,7 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R150_A1_A2_WINDOWS_VERIFY_2026-11-05.md
 
-CCMAI-RUNTIME-150 Root/Local Windows VERIFY worker may immediately recapture the exact A3 full tree. A mismatch is NO_START with zero Chrome/daemon starts. On PASS, run only the bounded A1/A2 campaign and return raw evidence for independent review. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-150 commit the single-campaign INCONCLUSIVE worker return and submit its raw evidence to independent R2 review. No retry or A2 claim. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

@@ -5306,6 +5306,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Immutable R2 documentary seed for OHC successor contract and Windows A1/A2 draft.: `CVF_SESSION/authority/CCMAI-RUNTIME-149.json`
 - Root first-pass review records C1/C4 documentary findings and absent cloud Opus review artifact.: `docs/reviews/R149_ROOT_INDEPENDENT_REVIEW_2026-11-05.md`
 - Read-only immediate full-tree A3 comparison against pinned manifest and relaxed package identity.: `docs/reviews/probes/r150_a1_a2_windows_20261105/prestart_full_tree.ps1`
+- Immediate Windows full-tree A3 PASS with operator-relaxed package.json and absent README.md; 346 others equal.: `docs/reviews/probes/r150_a1_a2_windows_20261105/a3_prestart_full_tree.json`
 - Native one-call actor helper for fixed A1/A2 commands.: `docs/reviews/probes/r150_a1_a2_windows_20261105/actor_call.mjs`
 - Independently accepted successor R139 audit with exact A1/A2 work-order pin; registry points here.: `docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a1_a2_windows_verify.json`
 - Independent R2 acceptance of exact finite A1/A2 audit/work-order admission only; no runtime result.: `docs/reviews/R150_INDEPENDENT_A1_A2_AUDIT_REVIEW_2026-11-05.md`
@@ -5314,9 +5315,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent static review of fixed Windows A1/A2 helpers; actual runtime result remains unobserved.: `docs/reviews/R150_INDEPENDENT_HELPER_REVIEW_2026-11-05.md`
 - Exact-byte finite Windows A1/A2 work order; no start before independent audit and same-session A3 recapture.: `docs/work_orders/CCMAI_RUNTIME_150_A1_A2_WINDOWS_VERIFY.md`
 - Bounded Windows A1/A2 owner helper with pinned admission readback and exact effect counters.: `docs/reviews/probes/r150_a1_a2_windows_20261105/owner_runner.mjs`
+- Later read-only known-PID absence; terminal owned-profile cleanup remains UNKNOWN due predicate defect.: `docs/reviews/probes/r150_a1_a2_windows_20261105/postrun_known_pid_readback.json`
 - Read-only process and owned-profile inventory for Windows A1/A2.: `docs/reviews/probes/r150_a1_a2_windows_20261105/process_snapshot.ps1`
 - R150 bounded VERIFY tranche; audit and effect admitted, A3 immediate recapture pending.: `CVF_SESSION/tranches/CCMAI-RUNTIME-150.json`
+- Raw bounded Chrome #1 A1-a control and inconclusive A1-b non-101 event; cleanup and counters retained.: `docs/reviews/probes/r150_a1_a2_windows_20261105/windows_verify_raw.json`
 - Immutable R2 seed for bounded Windows A1/A2 VERIFY and successor R139 audit.: `CVF_SESSION/authority/CCMAI-RUNTIME-150.json`
+- Single Windows A1/A2 campaign INCONCLUSIVE at A1-b; A2 unrun, no product claim.: `docs/reviews/R150_A1_A2_WINDOWS_VERIFY_RETURN_2026-11-05.md`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

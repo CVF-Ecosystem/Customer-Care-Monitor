@@ -8,7 +8,7 @@ Status: ACTIVE
 - Active phase: BUILD
 - Active role: Root/Local IMPLEMENTATION_WORKER (Windows VERIFY)
 - Active tranche: CCMAI-RUNTIME-150
-- Next allowed move: CCMAI-RUNTIME-150 Root/Local Windows VERIFY worker may immediately recapture the exact A3 full tree. A mismatch is NO_START with zero Chrome/daemon starts. On PASS, run only the bounded A1/A2 campaign and return raw evidence for independent review. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-150 commit the single-campaign INCONCLUSIVE worker return and submit its raw evidence to independent R2 review. No retry or A2 claim. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## Transition acknowledgment
@@ -42,3 +42,10 @@ Status: ACTIVE
 - `docs/reviews/R150_A1_A2_EXECUTION_STATUS_CARRIER_2026-11-05.md` records ACTIVE status without changing the audit-pinned official work-order bytes. Root/Local transitions from ORCHESTRATOR / WORK_ORDER_AUTHOR / AUDIT_AUTHOR to IMPLEMENTATION_WORKER for only the bounded Windows VERIFY. The helper itself rechecks a clean committed authority/packet and pre-dispatch PASS before immediate A3 recapture.
 - The first BUILD-transition gate run failed installed CONT because `activePhase` and memory `Current Truth` were still WORK_ORDER; portable preflight failed continuity and saw the official changed order unbound after the administrative carrier replaced the record pointer. Root aligned both phase surfaces and advanced the tranche `baseCommit` to the committed pre-BUILD packet `c61b01fa89c40135093103a0852de70f82bd39ec`, preserving the original official order and its audit hash. These failures are retained, not counted as passes.
 - First BUILD pre-commit check failed ROLE_FIELD_INVALID because the administrative carrier under `docs/reviews/` lacked Worker and Reviewer fields. Root added the independent role fields before rerunning the gate.
+
+## Windows worker return
+
+- A3 immediate full-tree recapture PASS: 347/348 installed, only README.md absent, package.json exact operator-relaxed SHA, 346 other files equal by size/hash, no extras. Raw capture SHA-256 `4725d732d884494e32700f88a744b95e955b78bb410dbd91a5911e1fdb65c230`.
+- The one admitted campaign launched Chrome #1 once, made 1 localhost endpoint query and 2 raw WebSocket handshakes; daemon starts 0, native calls 0, provider/DB/product calls 0. A1-a control succeeded. Wrong-GUID A1-b raised an unspecified non-101 network error without an HTTP 4xx or close-before-open event and timed out. Worker classified `INCONCLUSIVE`, A2 unrun; no retry.
+- Original Chrome handle was closed/waited. Raw runtime SHA-256 `ec31273f3eb9629a7cfcd8b9e24c2f5ec02fb541fe76e6d1aca26f518b3529e0`. Independent raw inspection found all Chrome root/descendant `ownedProfileArg` flags false despite the admitted profile argv; terminal exact-owned cleanup is therefore UNKNOWN. A later read-only lookup found none of the twelve recorded PIDs, but does not repair the terminal predicate. The worker return is `docs/reviews/R150_A1_A2_WINDOWS_VERIFY_RETURN_2026-11-05.md`, pending independent R2 review. The effect admission is spent; R139/M3 holds remain.
+- Independent reviewer identified transient `BLOCKED_CONTINUITY_DRIFT`: the bootstrap x-r150 result reflected INCONCLUSIVE while active-state x-r150 still said pending A3/UNRUN. Root aligned the active-state extension to the same factual result before the reviewer continued; no process effect was added.

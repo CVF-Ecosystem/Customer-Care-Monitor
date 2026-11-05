@@ -44,7 +44,7 @@
   "reviewEvidence": [
     "docs/reviews/R150_INDEPENDENT_A1_A2_AUDIT_REVIEW_2026-11-05.md"
   ],
-  "disposition": "DIAGNOSTIC_ONLY_ADMITTED_PENDING_A3",
+  "disposition": "WINDOWS_A1_B_INCONCLUSIVE_PENDING_INDEPENDENT_REVIEW",
   "parentTranche": "CCMAI-RUNTIME-149",
   "effectBudget": {
     "chromeLaunches": 3,
@@ -56,10 +56,10 @@
     "productCalls": 0
   },
   "effectUsed": {
-    "chromeLaunches": 0,
+    "chromeLaunches": 1,
     "daemonStarts": 0,
     "nativeCalls": 0,
-    "rawWebSocketHandshakes": 0
+    "rawWebSocketHandshakes": 2
   },
   "effectAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-150-A1A2-EFFECT-ADMISSION.json",
   "audit": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a1_a2_windows_verify.json"
