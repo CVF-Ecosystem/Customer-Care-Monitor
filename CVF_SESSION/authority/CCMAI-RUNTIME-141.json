@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-141",
+  "authorityKind": "DISPATCHER_OWNED_RELAUNCH_PREVENTION_DESIGN",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Cloud ORCHESTRATOR (operator-granted 2026-11-05)",
+    "implementationWorker": "Cloud ORCHESTRATOR acting as DESIGN_OWNER / SPEC_AUTHOR (documentary only)",
+    "reviewer": "Independent Opus design-review subagent appointed under operator grant (separate agent from the spec author)",
+    "commitSteward": "Cloud ORCHESTRATOR for branch-only commits; Local agent for merge to main"
+  },
+  "allowedPaths": [
+    "docs/reviews/R141_*.md",
+    "docs/reviews/probes/r141_relaunch_prevention_20261105/**",
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/INDEX.md"
+  ],
+  "prohibitedEffects": [
+    "Starting Chrome, the chrome-devtools-mcp daemon/server, Antigravity, Vite, backend, DB, container or any product runtime",
+    "Provider/AI calls, credential or secret access, customer/channel effects, grant issue/consume or execution POST",
+    "Editing product source, tests, scripts, gates, CI, dependencies or lockfiles",
+    "Editing docs/milestone-coverage-authority.json, the R139 repair-chain audit, R139/R140 authority seeds or locked M3 acceptance",
+    "Committing third-party package bytes or extracted package files to Git",
+    "Network use beyond the single operator-approved read-only fetch of the public chrome-devtools-mcp@1.9.0 npm tarball",
+    "Merge or push to main, history rewrite, deployment or public release",
+    "Claiming runtime, browser, AI-governance or product acceptance from static source reading"
+  ],
+  "ownerAuthorization": "Operator 2026-11-05 (cloud session): grants the cloud agent ORCHESTRATOR to coordinate the design and admission for physical-relaunch prevention that the R139 causal assessment names as the reopen prerequisite; approved one read-only npm tarball fetch for source verification; requires a separate branch and a PR per tranche; merge to main is reserved to the Local agent after its own review.",
+  "scope": "DESIGN/SPEC only: identify a source-backed native primitive that prevents physical Chrome relaunch before action, bind it into a successor integrated-lifecycle contract proposal, and obtain an independent design review. No implementation, no runtime, no reopen of the R139 repair audit (Local decides reopen).",
+  "verification": "Byte-identity of the public package against the 15 native source hashes already recorded from the operator's Windows install; static source citations with file:line; independent design review. Unverified Chrome-side behaviour is recorded as an explicit assumption for a later separately admitted check.",
+  "claimBoundary": "Static source and design evidence only. No native process, browser, DB, provider, runtime CVF governance, M3-05/M3-08, R139 or product acceptance.",
+  "workOrder": "docs/reviews/R141_RELAUNCH_PREVENTION_DESIGN_PACKET_2026-11-05.md",
+  "executionBudget": {
+    "designActiveMinutes": 90,
+    "independentReviewMinutes": 30,
+    "consolidatedRepairRounds": 1,
+    "networkFetches": 1,
+    "providerCalls": 0,
+    "browserCampaigns": 0,
+    "runtimeStarts": 0,
+    "dependencyInstalls": 0
+  },
+  "parentTranche": "CCMAI-RUNTIME-139",
+  "bootstrapException": false
+}

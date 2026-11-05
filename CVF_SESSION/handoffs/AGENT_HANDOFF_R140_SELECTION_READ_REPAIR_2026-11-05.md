@@ -1,6 +1,8 @@
 # R140 - independent selection-read source worker handoff
 
-Status: ACTIVE
+> Superseded as the active handoff by `CVF_SESSION/handoffs/AGENT_HANDOFF_R141_RELAUNCH_PREVENTION_DESIGN_2026-11-05.md` on 2026-11-05. R140 remains REVIEW_PASS on PR #14, awaiting Local merge; this file keeps its full R140 history.
+
+Status: SUPERSEDED
 
 ## Current State
 

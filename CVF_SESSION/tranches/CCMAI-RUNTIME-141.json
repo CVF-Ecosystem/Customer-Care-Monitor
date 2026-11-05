@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-141",
+  "authorityKind": "DISPATCHER_OWNED_RELAUNCH_PREVENTION_DESIGN",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Cloud ORCHESTRATOR (operator-granted 2026-11-05)",
+    "implementationWorker": "Cloud ORCHESTRATOR acting as DESIGN_OWNER / SPEC_AUTHOR (documentary only)",
+    "reviewer": "Independent Opus design-review subagent appointed under operator grant (separate agent from the spec author)",
+    "commitSteward": "Cloud ORCHESTRATOR for branch-only commits; Local agent for merge to main"
+  },
+  "allowedPaths": [
+    "docs/reviews/R141_*.md",
+    "docs/reviews/probes/r141_relaunch_prevention_20261105/**",
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/INDEX.md"
+  ],
+  "prohibitedEffects": [
+    "Starting Chrome, the chrome-devtools-mcp daemon/server, Antigravity, Vite, backend, DB, container or any product runtime",
+    "Provider/AI calls, credential or secret access, customer/channel effects, grant issue/consume or execution POST",
+    "Editing product source, tests, scripts, gates, CI, dependencies or lockfiles",
+    "Editing docs/milestone-coverage-authority.json, the R139 repair-chain audit, R139/R140 authority seeds or locked M3 acceptance",
+    "Committing third-party package bytes or extracted package files to Git",
+    "Network use beyond the single operator-approved read-only fetch of the public chrome-devtools-mcp@1.9.0 npm tarball",
+    "Merge or push to main, history rewrite, deployment or public release",
+    "Claiming runtime, browser, AI-governance or product acceptance from static source reading"
+  ],
+  "workOrder": "docs/reviews/R141_RELAUNCH_PREVENTION_DESIGN_PACKET_2026-11-05.md",
+  "baseCommit": "19018e2d0c57f577f2cd309f7fa2611b0bc3a301",
+  "status": "REVIEW_PASS",
+  "phase": "REVIEW",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "REVIEW_PENDING",
+    "CHANGES_REQUIRED",
+    "REVIEW_PENDING",
+    "REVIEW_PASS"
+  ],
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "REVIEWER_ACCEPTED",
+  "disposition": "REVIEW_PASS",
+  "parentTranche": "CCMAI-RUNTIME-139",
+  "deliverables": [
+    "docs/reviews/R141_RELAUNCH_PREVENTION_DESIGN_SPEC_2026-11-05.md",
+    "docs/reviews/probes/r141_relaunch_prevention_20261105/source_verification.json"
+  ],
+  "reviewEvidence": [
+    "docs/reviews/R141_RELAUNCH_PREVENTION_INDEPENDENT_REVIEW_2026-11-05.md"
+  ],
+  "effects": {
+    "networkFetches": 1,
+    "providerCalls": 0,
+    "browserCalls": 0,
+    "runtimeStarts": 0,
+    "databaseActions": 0
+  },
+  "repairRounds": 1,
+  "buildCommit": "5fa904438d94bea40d2a884da2c5389a0a2c91be",
+  "localConditions": [
+    "F3: add a post-start status.args equality check; env allowlist must name the three R139 variables",
+    "F5: owner confirms the original Chrome handle is alive before releasing each command",
+    "F6: spec section 8 still says four files (A3 covers five); add N4 conflicts note",
+    "N-R1: pin the full page set observed at PRELIMINARY_OBSERVED (incl. Chrome's initial tab) and allow changes only on the target page; as written the list-equality rule would HOLD on first navigate/list",
+    "N-R2: owner relay is a sequencing gate; each actor issues its own sendCommand so original per-actor native call receipts are preserved",
+    "N-R3: foreign-Chrome preflight must allow the owner Chrome's own child processes",
+    "A1/A2 admitted Windows VERIFY; A3 Windows hashes of five files"
+  ],
+  "reviewResult": "REVIEWER_ACCEPTED_DESIGN_PENDING_LOCAL after repair round 1 (seed repair budget exhausted); design status DESIGNED_SOURCE_BACKED_PENDING_A1_A3, not executable"
+}

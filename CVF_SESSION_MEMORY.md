@@ -2,9 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R140_SELECTION_READ_REPAIR_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-140", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R141_RELAUNCH_PREVENTION_DESIGN_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-141", "parked": true} -->
 
-## Current R140 review checkpoint - 2026-11-05
+## Current R141 relaunch-prevention design checkpoint - 2026-11-05
+
+CCMAI-RUNTIME-141: owner-held Chrome connect-only relaunch-prevention design REVIEW_PASS (independent reviewer accepted after one repair; build 5fa904438d94) on branch claude/friendly-rubin-e2npmt-r141, PR to the R140 branch. Next: Local reviews PR, applies the seven recorded conditions (F3/F5/F6 partials, N-R1..N-R3, A1-A3) in its own successor contract, runs A3 on Windows and decides whether to update the R139 repair audit with an A1/A2 VERIFY discriminator; cloud agent does not merge. R140 awaits Local merge in PR #14. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; design not executable; no runtime, Chrome/daemon, DB or provider effect; Facebook/ZaloOA parked.
+
+Cloud agent: operator-granted ORCHESTRATOR / DESIGN_OWNER / SPEC_AUTHOR / SESSION_SYNC_STEWARD (branch-only commits); independent REVIEWER = separate Opus design-review subagent; Local agent retains merge to main, R139 reopen decision and FREEZE
+
+Active handoff and tranche record control. Design only; Local owns reopen and merge.
+
+
+## Historical R140 review checkpoint - 2026-11-05
 
 CCMAI-RUNTIME-140: source/test REVIEW_PASS by operator-appointed independent reviewer on branch claude/friendly-rubin-e2npmt (build 59788f0ebb6c); see docs/reviews/R140_SELECTION_READ_INDEPENDENT_REVIEW_2026-11-05.md. Next: Local/Root reviews on GitHub before merge, rules on operator-granted cloud deviations D1-D4, runs trusted operator-local bootstrap/doctor and the Windows catalog gate, then decides material merge to main and FREEZE. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED, no P01 dispatch, physical-relaunch prevention still unavailable. No browser/DB/provider effect, no product acceptance; Facebook/ZaloOA parked.
 
@@ -105,9 +114,9 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Contract: cvf.downstreamContinuityContract@1.0.0
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R140_SELECTION_READ_REPAIR_2026-11-05.md
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R141_RELAUNCH_PREVENTION_DESIGN_2026-11-05.md
 
-CCMAI-RUNTIME-140: source/test REVIEW_PASS by operator-appointed independent reviewer on branch claude/friendly-rubin-e2npmt (build 59788f0ebb6c); see docs/reviews/R140_SELECTION_READ_INDEPENDENT_REVIEW_2026-11-05.md. Next: Local/Root reviews on GitHub before merge, rules on operator-granted cloud deviations D1-D4, runs trusted operator-local bootstrap/doctor and the Windows catalog gate, then decides material merge to main and FREEZE. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED, no P01 dispatch, physical-relaunch prevention still unavailable. No browser/DB/provider effect, no product acceptance; Facebook/ZaloOA parked.
+CCMAI-RUNTIME-141: owner-held Chrome connect-only relaunch-prevention design REVIEW_PASS (independent reviewer accepted after one repair; build 5fa904438d94) on branch claude/friendly-rubin-e2npmt-r141, PR to the R140 branch. Next: Local reviews PR, applies the seven recorded conditions (F3/F5/F6 partials, N-R1..N-R3, A1-A3) in its own successor contract, runs A3 on Windows and decides whether to update the R139 repair audit with an A1/A2 VERIFY discriminator; cloud agent does not merge. R140 awaits Local merge in PR #14. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; design not executable; no runtime, Chrome/daemon, DB or provider effect; Facebook/ZaloOA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 
