@@ -22,7 +22,7 @@ Status: ACTIVE
 
 - Official order: `docs/work_orders/CCMAI_RUNTIME_150_A1_A2_WINDOWS_VERIFY.md` (LF SHA-256 `a7a2b74e1851cdcbd2dba010456e2b0d17a9ade1fdb83518e19d66343a79e398`; bytes must remain unchanged after audit pin).
 - Successor R139 audit: `docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a1_a2_windows_verify.json` (independent review accepted; registry now points to this exact audit).
-- No Chrome, daemon, provider, DB or product effect has started in R150. R139 original failure, UNKNOWN cumulative cost and consumed effects remain.
+- At that pre-execution checkpoint, no Chrome, daemon, provider, DB or product effect had started in R150. R139 original failure, UNKNOWN cumulative cost and consumed effects remain.
 
 ## Gate history before audit review
 
@@ -38,7 +38,7 @@ Status: ACTIVE
 
 ## BUILD transition
 
-- Independent static helper review `docs/reviews/R150_INDEPENDENT_HELPER_REVIEW_2026-11-05.md` passed with no runtime claim. The helper source, audit, registry, effect admission and official order were committed at `c61b01fa` after installed pre-commit PASS (7 mandatory controls) and portable preflight PASS (7/7). The 130/130 unit suite passed earlier for this packet. No Chrome or daemon effect has started.
+- Independent static helper review `docs/reviews/R150_INDEPENDENT_HELPER_REVIEW_2026-11-05.md` passed with no runtime claim. The helper source, audit, registry, effect admission and official order were committed at `c61b01fa` after installed pre-commit PASS (7 mandatory controls) and portable preflight PASS (7/7). The 130/130 unit suite passed earlier for this packet. At that BUILD transition, no Chrome or daemon effect had started.
 - `docs/reviews/R150_A1_A2_EXECUTION_STATUS_CARRIER_2026-11-05.md` records ACTIVE status without changing the audit-pinned official work-order bytes. Root/Local transitions from ORCHESTRATOR / WORK_ORDER_AUTHOR / AUDIT_AUTHOR to IMPLEMENTATION_WORKER for only the bounded Windows VERIFY. The helper itself rechecks a clean committed authority/packet and pre-dispatch PASS before immediate A3 recapture.
 - The first BUILD-transition gate run failed installed CONT because `activePhase` and memory `Current Truth` were still WORK_ORDER; portable preflight failed continuity and saw the official changed order unbound after the administrative carrier replaced the record pointer. Root aligned both phase surfaces and advanced the tranche `baseCommit` to the committed pre-BUILD packet `c61b01fa89c40135093103a0852de70f82bd39ec`, preserving the original official order and its audit hash. These failures are retained, not counted as passes.
 - First BUILD pre-commit check failed ROLE_FIELD_INVALID because the administrative carrier under `docs/reviews/` lacked Worker and Reviewer fields. Root added the independent role fields before rerunning the gate.
@@ -54,3 +54,4 @@ Status: ACTIVE
 
 - Worker evidence commit: `7052df5c6da31d6867172d26a298a7bb4b72bb9c`. Independent review `docs/reviews/R150_INDEPENDENT_WINDOWS_VERIFY_REVIEW_2026-11-05.md` accepted the bounded return as `INCONCLUSIVE` only, with terminal Chrome descendant cleanup UNKNOWN. Review did not perform runtime effects and did not claim A1/A2 PASS.
 - Root/Local CLOSER accepted that independent disposition in `docs/reviews/R150_ROOT_DISPOSITION_2026-11-05.md`. R150's finite effect admission is spent; administrative carrier moves to CLOSED, official audit-pinned work-order bytes unchanged. This closes the diagnostic tranche while R139 stays BUILD_BLOCKED, M3-05/M3-08 stay BLOCKED and integrated lifecycle remains unadmitted. A successor requires new reviewed packet/effect admission.
+- Final independent committed-range readback identified two stale present-tense pre-execution sentences in this handoff. Root qualified both with their historical checkpoint timing; the actual one-Chrome campaign remains recorded in the worker return and raw ledger.
