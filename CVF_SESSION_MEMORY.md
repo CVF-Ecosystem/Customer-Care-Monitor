@@ -2,7 +2,14 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R147_R139_A3_AUDIT_ADMISSION_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-147", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R144_A3_PACKAGE_METADATA_VERIFY_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-144", "parked": true} -->
+
+## Current R144 finite A3 VERIFY dispatch - 2026-11-05
+
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+
+R147 separate audit is FROZEN after independent review and committed-range PASS. Exact R144 packet now passes pre-dispatch and is DISPATCH_READY; Root will commit the material-SHA handoff marker before operator gives Claude the packet. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; A1/A2 and physical relaunch unproved; Facebook/Zalo OA parked.
 
 ## Current R147 separate R139 repair audit admission - 2026-11-05
 
@@ -144,11 +151,11 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: FREEZE
-- Active phase: FREEZE
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R147_R139_A3_AUDIT_ADMISSION_2026-11-05.md
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R144_A3_PACKAGE_METADATA_VERIFY_2026-11-05.md
 
-CCMAI-RUNTIME-147 is FROZEN at diagnostic-only scope after independent review and committed-range gates. R144 finite A3 pre-dispatch passed but its active dispatch transition and Claude return remain pending. R139 remains BUILD_BLOCKED; Windows A3 is 4/5 and no A1/A2 admission is open. No fresh network fetch or runtime action is authorized; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-147 is FROZEN at diagnostic-only scope after independent review and committed-range gates. R144 finite A3 is DISPATCH_READY after pre-dispatch PASS; Root will pin the dispatch commit in its active handoff before Claude starts. R139 remains BUILD_BLOCKED; Windows A3 is 4/5 and no A1/A2 admission is open. No fresh network fetch or runtime action is authorized; Facebook/Zalo OA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

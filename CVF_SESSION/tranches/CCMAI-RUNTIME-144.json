@@ -28,7 +28,7 @@
     "No worker commit, push or merge; Root/Local owns repository transport, history, deployment and public release; no governance/product acceptance claim"
   ],
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_144_A3_PACKAGE_METADATA_VERIFY.md",
-  "baseCommit": "40ef39ccf81608a967287c540548b33621f91e7c",
+  "baseCommit": "4ccb999d4a8350c854703d3883c7494fdcd5d782",
   "status": "DISPATCH_READY",
   "phase": "WORK_ORDER",
   "freeze": "OPEN",
@@ -40,7 +40,7 @@
   "workOrderStatus": "DISPATCH_READY",
   "buildCommit": null,
   "reviewEvidence": [],
-  "disposition": "FINITE_A3_VERIFY_PRE_DISPATCH_PASS_PENDING_COMMITTED_RELEASE",
+  "disposition": "FINITE_A3_VERIFY_DISPATCH_READY_R147_ADMITTED",
   "parentTranche": "CCMAI-RUNTIME-143",
   "effects": {
     "networkFetches": 0,

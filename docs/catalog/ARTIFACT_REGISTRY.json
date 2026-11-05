@@ -5511,7 +5511,7 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R147_R139_A3_AUDIT_ADMISSION_2026-11-05.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R144_A3_PACKAGE_METADATA_VERIFY_2026-11-05.md",
       "status": "ACTIVE",
       "description": "Active R144 DRAFT A3 handoff; repair audit blocks Claude dispatch and R139 runtime."
     },
