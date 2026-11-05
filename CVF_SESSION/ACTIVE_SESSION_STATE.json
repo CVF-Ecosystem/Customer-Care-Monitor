@@ -91,7 +91,7 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-144",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R144_A3_PACKAGE_METADATA_VERIFY_2026-11-05.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-144 is DISPATCH_READY for one finite A3 package-metadata VERIFY. Dispatch commit 55a7f3af5045a7952959d8b2a0e0b79a95628b6f is pinned in the active handoff; operator may give Claude the exact R144 packet. Claude must rehydrate and acknowledge before BUILD, use retained R141 tarball only if hash/integrity match, or return BLOCKED_SOURCE_UNAVAILABLE. No new fetch, Chrome/MCP, A1/A2 or product action. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-144 worker return METADATA_ONLY_CANDIDATE (a9df2da) independently REVIEWER_ACCEPTED on PR #17; cloud ORCHESTRATOR proposal docs/reviews/R144_A3_ROOT_DISPOSITION_PROPOSAL_2026-11-05.md. Next: Local authors the successor audit/registry pointer and formally closes R144 (work order bytes are audit-pinned, so the cloud did not change its status), rules on R144-D1/D2, runs the full-tree Windows hash capture against root_npm_full_tree_manifest.json, then decides any A1/A2 Windows admission. No new fetch, Chrome/MCP, A1/A2 or product action. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
   "activeRole": "Root/Local ORCHESTRATOR / WORK_ORDER_AUTHOR / COMMIT_STEWARD / SESSION_SYNC_STEWARD",
   "updatedAt": "2026-11-05",
