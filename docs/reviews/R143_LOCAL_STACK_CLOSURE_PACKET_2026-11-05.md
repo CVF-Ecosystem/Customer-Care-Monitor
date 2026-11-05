@@ -1,6 +1,6 @@
 # R143 Local stack review and metadata closure packet
 
-Status: COMPLETE_PENDING_REVIEW
+Status: CLOSED
 workOrderStatusGrammar: cvf.workOrderStatusGrammar@1.0.0
 Risk: R2
 Worker: Cloud R140 implementation worker, R141 design author and R142 docs config worker; no new product implementation
@@ -23,6 +23,6 @@ The first local closure preflight on active R142 reported an out-of-scope R140 w
 
 ## Pending closure and boundary
 
-Local accepted R140 source/component, R141 design and R142 docs config, but their FREEZE records remain pending because the required gate unit suite is failing. The full suite twice returned 129/130 PASS with `test_native_repair_registry_evolution_and_reset` failing at line 115 (`law payload differs from actual range`); focused discovery failed on both Python 3.11 and 3.13, while direct invocation of the same test passed. No tooling repair was admitted under this closure seed. R143 remains REVIEW_PENDING. R139 remains BUILD_BLOCKED; M3-05/M3-08 remain BLOCKED and M3-06 browser lifetime remains OPEN. No provider, browser, DB, customer/channel, runtime governance or product effect is admitted.
+Local accepted R140 source/component, R141 design and R142 docs config. The full suite twice returned 129/130 PASS with `test_native_repair_registry_evolution_and_reset` failing at line 115 (`law payload differs from actual range`); focused discovery failed on both Python 3.11 and 3.13, while direct invocation of the same test passed. A retained diagnostic run identified two untracked `scripts/cvf_gates/__pycache__/*.pyc` files generated inside the disposable Git fixture. These files alone differed from the admission's actual range. The installed 1.3 profile instructs `python -B`; Local ran `python -B -m unittest discover -s scripts/tests -p 'test_cvf_downstream_gate*.py'` and obtained 130/130 PASS (353.025 s). The original failures remain evidence of the default invocation's bytecode side effect; no gate/test source was changed. R140, R141 and R142 are FROZEN only for their bounded source/component, design/spec and docs config outcomes, respectively. R143 closes the Local review stack. R139 remains BUILD_BLOCKED; M3-05/M3-08 remain BLOCKED and M3-06 browser lifetime remains OPEN. No provider, browser, DB, customer/channel, runtime governance or product effect is admitted.
 
 Public Export Disposition: DEFERRED_PRIVATE_ONLY

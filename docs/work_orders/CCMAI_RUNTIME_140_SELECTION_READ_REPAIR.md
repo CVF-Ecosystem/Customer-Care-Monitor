@@ -1,6 +1,6 @@
 # R140: independent selection-read UI repair
 
-Status: REVIEWER_ACCEPTED
+Status: CLOSED
 workOrderStatusGrammar: cvf.workOrderStatusGrammar@1.0.0
 Risk: R2
 Worker: Assigned separate implementation worker

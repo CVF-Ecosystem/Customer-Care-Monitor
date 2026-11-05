@@ -60,18 +60,19 @@
     "docs/reviews/probes/r140_selection_read_20261105/worker_*"
   ],
   "baseCommit": "4c3cc11ef36f0e9e3e9738b26647f59909b04391",
-  "status": "REVIEW_PASS",
-  "phase": "REVIEW",
-  "freeze": "OPEN",
+  "status": "FROZEN",
+  "phase": "FREEZE",
+  "freeze": "FROZEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
     "BUILD",
     "REVIEW_PENDING",
-    "REVIEW_PASS"
+    "REVIEW_PASS",
+    "FROZEN"
   ],
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "REVIEWER_ACCEPTED",
+  "workOrderStatus": "CLOSED",
   "implementationStarted": true,
   "disposition": "REVIEW_PASS",
   "parentProductStatus": "R139 BUILD_BLOCKED; M3-05/08 repair audit BLOCKED, no reset",
@@ -85,7 +86,7 @@
   "releaseEvidence": "docs/reviews/probes/r140_selection_read_20261105/root_release.json",
   "buildCommit": "59788f0ebb6c77c66fda745181506793ced5625a",
   "mergeCommit": "3e1d169b6a3c0ede9fb06cbf9f62a7bad554968f",
-  "localFreezePending": "Required gate unit suite 129/130 PASS, LAW fixture failure retained in R143 packet",
+  "localFreezePending": "Historical: default Python discovery 129/130 failure retained in R143 packet.",
   "x-operatorRoleAssignments20261105": {
     "source": "Operator in cloud session",
     "grants": [
@@ -102,5 +103,7 @@
     "independenceLimitation": "Reviewer subagent ran in the same cloud session as the worker; Root decides whether to adopt it as the R2 independent review.",
     "closurePending": "Root material merge to main, D1-D4 ruling, trusted bootstrap/doctor, Windows catalog gate, FREEZE",
     "rolesFieldUnchanged": "Seed-bound roles kept verbatim; actual role holders recorded here."
-  }
+  },
+  "localFreezeResolution": "Local python -B gate unit discovery 130/130 PASS; generated fixture __pycache__ explained default-invocation failure; R143 closure packet retains original failures. No R139 runtime release.",
+  "closer": "Root/Local independent CLOSER"
 }
