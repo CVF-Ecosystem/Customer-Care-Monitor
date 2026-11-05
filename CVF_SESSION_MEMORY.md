@@ -2,9 +2,19 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R148_A3_DISPOSITION_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-148", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R149_OHC_SUCCESSOR_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-149", "parked": true} -->
 
-## Current R148 bounded FREEZE - 2026-11-05
+## Current R149 OHC successor FREEZE - 2026-11-05
+
+- Current mode: FREEZE
+- Active phase: FREEZE
+
+CCMAI-RUNTIME-149 design/spec FROZEN after independent R2 review. Root/Local may create a successor Windows A1/A2 VERIFY tranche, with a reviewed R139 repair audit, exact work-order pin, pre-dispatch gate, separate effect admission and immediate A3 full-tree recapture. No Chrome or daemon start is authorized by R149. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+
+Root/Local CLOSER / COMMIT_STEWARD / SESSION_SYNC_STEWARD
+
+
+## Historical R148 bounded FREEZE - 2026-11-05
 
 - Current mode: FREEZE
 - Active phase: FREEZE
@@ -160,9 +170,9 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Contract: cvf.downstreamContinuityContract@1.0.0
 - Current mode: FREEZE
 - Active phase: FREEZE
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R148_A3_DISPOSITION_2026-11-05.md
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R149_OHC_SUCCESSOR_2026-11-05.md
 
-R148 independent audit REVIEW_PASS and documentary FREEZE: R144 finite metadata result FROZEN through transparent successor carrier, original dispatch order unchanged. Registry points to BLOCKED successor audit. Windows installed tree 347/348, README.md missing, A1/A2 unadmitted. R139 BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked. PR #17 merged at `8a8d05441f7855f8ffa4e233a746a0cf3a5a6106`; Root holds A1/A2 pending separately reviewed full-tree identity.
+CCMAI-RUNTIME-149 design/spec FROZEN after independent R2 review. Root/Local may create a successor Windows A1/A2 VERIFY tranche, with a reviewed R139 repair audit, exact work-order pin, pre-dispatch gate, separate effect admission and immediate A3 full-tree recapture. No Chrome or daemon start is authorized by R149. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

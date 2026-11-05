@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-149",
+  "authorityKind": "DISPATCHER_OWNED_OHC_SUCCESSOR_CONTRACT_AND_A1A2_PACKET_DRAFT",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Cloud ORCHESTRATOR (operator full-roadmap grant 2026-11-05)",
+    "implementationWorker": "Cloud ORCHESTRATOR acting as SPEC_AUTHOR (documentary only)",
+    "reviewer": "Independent Opus review subagent appointed under operator grant (separate agent from the spec author)",
+    "commitSteward": "Cloud ORCHESTRATOR for branch-only commits; Root/Local for merge to main"
+  },
+  "allowedPaths": [
+    "docs/reviews/R149_*.md",
+    "docs/reviews/probes/r149_ohc_successor_20261105/**",
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/INDEX.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json"
+  ],
+  "prohibitedEffects": [
+    "Starting Chrome, the chrome-devtools-mcp daemon/server, Antigravity, browser, DB, provider or any product runtime",
+    "Network fetch, package install, import or execution",
+    "Editing product source, tests, scripts, gates, CI, dependencies, the R139 repair audit, docs/milestone-coverage-authority.json, existing seeds or any work order under docs/work_orders",
+    "Admitting or dispatching A1/A2; reopening R139; claiming physical no-relaunch, runtime, AI-governance or M3 acceptance",
+    "Merge or push to main, history rewrite, deployment or public release"
+  ],
+  "ownerAuthorization": "Operator 2026-11-05 (cloud session): full authority to proceed along the roadmap in the cloud, escalating to Local only where Windows/local is required; no merge. Operator relaxed the A3 full-tree condition from 'only package.json differs' to 'only package.json differs (as explained by R144) and README.md is absent'.",
+  "scope": "Documentary only: (1) a successor OHC contract that binds the R141 design, its section 4.5 amendments, the seven Local R141 conditions and the relaxed A3 identity; (2) a DRAFT finite Windows A1/A2 VERIFY work order for Local to admit through its own repair-audit route. No execution.",
+  "verification": "Static citations against the byte-verified npm 1.9.0 source; independent design review; gates.",
+  "claimBoundary": "Design/spec and draft packet only. No A1/A2 result, physical no-relaunch, runtime, AI-governance, R139 or M3 acceptance.",
+  "workOrder": "docs/reviews/R149_OHC_SUCCESSOR_PACKET_2026-11-05.md",
+  "executionBudget": {"designActiveMinutes": 90, "independentReviewMinutes": 30, "consolidatedRepairRounds": 1, "networkFetches": 0, "runtimeStarts": 0, "providerCalls": 0},
+  "parentTranche": "CCMAI-RUNTIME-148",
+  "bootstrapException": false
+}

@@ -1,6 +1,8 @@
 # R148 R144 metadata disposition and successor audit handoff
 
-Status: ACTIVE
+> Superseded as the active handoff by `CVF_SESSION/handoffs/AGENT_HANDOFF_R149_OHC_SUCCESSOR_2026-11-05.md` on 2026-11-05. R148 stays FROZEN.
+
+Status: SUPERSEDED
 
 ## Current State
 

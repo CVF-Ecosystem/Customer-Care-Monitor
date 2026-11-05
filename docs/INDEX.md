@@ -16,7 +16,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R148 successor audit and R144 closure handoff; README.md missing, A1/A2 held.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R148_A3_DISPOSITION_2026-11-05.md`
+- R149 OHC design/spec FROZEN after separate independent R2 review; Windows A1/A2 remains unadmitted.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R149_OHC_SUCCESSOR_2026-11-05.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -5300,6 +5300,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Root accepts R144-D1/D2 and metadata candidate, holds A1/A2 on missing README.md.: `docs/reviews/R148_ROOT_R144_A3_DISPOSITION_2026-11-05.md`
 - Read-only Windows installed package tree: 347 files with SHA-256 and byte sizes.: `docs/reviews/probes/r144_a3_package_metadata_20261105/windows_full_tree.json`
 - Npm348 versus Windows347: README.md missing, package.json hash differs, other346 files match.: `docs/reviews/probes/r144_a3_package_metadata_20261105/root_windows_full_tree_compare.json`
+- Finite Windows A1/A2 VERIFY draft for a later Local tranche; not executable under R149.: `docs/reviews/R149_A1_A2_WINDOWS_VERIFY_WORK_ORDER_DRAFT_2026-11-05.md`
+- Independently accepted design/spec binding seven R141 conditions and operator-relaxed A3 identity; no runtime admission.: `docs/reviews/R149_OHC_SUCCESSOR_CONTRACT_2026-11-05.md`
+- Separate R2 review accepts repaired C1-C6 design/spec only; A1/A2 remains unadmitted.: `docs/reviews/R149_OHC_SUCCESSOR_INDEPENDENT_REVIEW_2026-11-05.md`
+- Immutable R2 documentary seed for OHC successor contract and Windows A1/A2 draft.: `CVF_SESSION/authority/CCMAI-RUNTIME-149.json`
+- Root first-pass review records C1/C4 documentary findings and absent cloud Opus review artifact.: `docs/reviews/R149_ROOT_INDEPENDENT_REVIEW_2026-11-05.md`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

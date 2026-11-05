@@ -4,6 +4,11 @@
   "updatedAt": "2026-11-05",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
+    {"id": "r149-ohc-seed-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-149.json", "status": "ACTIVE", "description": "Immutable R2 documentary seed for OHC successor contract and Windows A1/A2 draft."},
+    {"id": "r149-ohc-contract-20261105", "family": "continuity", "path": "docs/reviews/R149_OHC_SUCCESSOR_CONTRACT_2026-11-05.md", "status": "ACTIVE", "description": "Independently accepted design/spec binding seven R141 conditions and operator-relaxed A3 identity; no runtime admission."},
+    {"id": "r149-a1a2-draft-20261105", "family": "continuity", "path": "docs/reviews/R149_A1_A2_WINDOWS_VERIFY_WORK_ORDER_DRAFT_2026-11-05.md", "status": "ACTIVE", "description": "Finite Windows A1/A2 VERIFY draft for a later Local tranche; not executable under R149."},
+    {"id": "r149-ohc-independent-review-20261105", "family": "continuity", "path": "docs/reviews/R149_OHC_SUCCESSOR_INDEPENDENT_REVIEW_2026-11-05.md", "status": "ACTIVE", "description": "Separate R2 review accepts repaired C1-C6 design/spec only; A1/A2 remains unadmitted."},
+    {"id": "r149-root-first-review-20261105", "family": "continuity", "path": "docs/reviews/R149_ROOT_INDEPENDENT_REVIEW_2026-11-05.md", "status": "ACTIVE", "description": "Root first-pass review records C1/C4 documentary findings and absent cloud Opus review artifact."},
     {"id": "r148-a3-independent-review-20261105", "family": "continuity", "path": "docs/reviews/R148_INDEPENDENT_A3_DISPOSITION_AUDIT_REVIEW_2026-11-05.md", "status": "ACTIVE", "description": "Independent R2 acceptance of bounded metadata result and BLOCKED successor audit; full-tree missing README.md."},
     {"id": "r144-a3-closure-carrier-20261105", "family": "continuity", "path": "docs/reviews/R144_A3_CLOSURE_PACKET_2026-11-05.md", "status": "ACTIVE", "description": "Transparent CLOSED administrative successor status carrier; original hash-pinned R144 dispatch order unchanged."},
     {"id": "r148-a3-seed-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-148.json", "status": "ACTIVE", "description": "Immutable R2 seed for R144 metadata disposition, Windows full-tree comparison and successor R139 repair audit."},
@@ -5524,9 +5529,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R148_A3_DISPOSITION_2026-11-05.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R149_OHC_SUCCESSOR_2026-11-05.md",
       "status": "ACTIVE",
-      "description": "Active R148 successor audit and R144 closure handoff; README.md missing, A1/A2 held."
+      "description": "R149 OHC design/spec FROZEN after separate independent R2 review; Windows A1/A2 remains unadmitted."
     },
     {
       "id": "r060-work-order",
