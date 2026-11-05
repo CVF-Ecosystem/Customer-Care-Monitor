@@ -5526,7 +5526,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R149_OHC_SUCCESSOR_2026-11-05.md",
       "status": "ACTIVE",
-      "description": "Active R149 OHC successor contract and A1/A2 Windows VERIFY draft handoff (documentary, pending review); A1/A2 unadmitted."
+      "description": "Active R149 OHC successor contract and A1/A2 Windows VERIFY draft handoff (documentary, REVIEW_PASS pending Local); A1/A2 unadmitted."
     },
     {
       "id": "r060-work-order",

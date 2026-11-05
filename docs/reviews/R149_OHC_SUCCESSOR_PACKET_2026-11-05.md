@@ -1,6 +1,6 @@
 # R149 packet: OHC successor contract and Windows A1/A2 VERIFY draft
 
-Status: COMPLETE_PENDING_REVIEW
+Status: REVIEWER_ACCEPTED
 workOrderStatusGrammar: cvf.workOrderStatusGrammar@1.0.0
 Risk: R2
 Worker: Cloud ORCHESTRATOR acting as SPEC_AUTHOR (documentary only)

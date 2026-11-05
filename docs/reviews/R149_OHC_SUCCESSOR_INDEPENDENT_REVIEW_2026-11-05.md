@@ -1,6 +1,6 @@
 # R149 independent design review: OHC successor contract and Windows A1/A2 VERIFY draft
 
-Status: CHANGES_REQUIRED
+Status: REVIEWER_ACCEPTED_PENDING_LOCAL
 Tranche: CCMAI-RUNTIME-149
 Risk: R2
 Worker: Cloud ORCHESTRATOR acting as SPEC_AUTHOR (separate agent from this reviewer)
@@ -225,3 +225,111 @@ This review makes no runtime, browser, physical no-relaunch, AI-governance, R139
 ## Public Export Disposition
 
 DEFERRED_PRIVATE_ONLY
+
+## Re-review after repair round 1
+
+Subject: repair commit `e448d5afbac370807746a9ad7bd54e6178eea14f`, covering:
+- the contract's §0 precedence, §2.2 N4 list, §2.3 TEMP/TMP and Node-flag rules, §3 N-R2 HOLD additions, §5 restored rows with native `stop`, and §5a;
+- the draft's §2 version read, §3 A1 evidence and fixed-port ownership rules, native-`stop` cleanup, and §5a.
+
+The constraints were the same as round 1: static reading only, no execution, no network, no commit. I edited only this file, changing the top `Status:` line and appending this section. The round-1 content above is unchanged; it matches the copy committed in `e448d5a`.
+
+### New citation verification (package `build/src/`)
+
+| Citation | Verdict |
+|---|---|
+| `daemon/utils.js:30-35` | CONFIRMED (Windows named-pipe block) |
+| `daemon/utils.js:60-61` | CONFIRMED (`// 3. Windows Fallback`; `path.join(os.tmpdir(), appName)`) |
+| `daemon/client.js:145-146` | CONFIRMED. These are lines in `stopDaemon`: `sendCommand({method:'stop'})`, then `waitForFile(pidFilePath, true)` with a 10 s `FILE_TIMEOUT` |
+| `config/browser-options.js:10,89,99,105` | CONFIRMED (`autoConnect`, `executablePath`, `userDataDir`, `channel` conflicts) |
+| `config/category-options.js:37` | CONFIRMED (PWA conflicts with `autoConnect`/`browserUrl`/`wsEndpoint`) |
+| `config/mcp-options.js:90,95` | CONFIRMED. `experimentalFfmpegPath` and `experimentalScreencastFps` imply `experimentalScreencast` |
+
+### Disposition of round-1 findings
+
+| Finding | Disposition | Basis |
+|---|---|---|
+| **B1** precedence and Root rows | **RESOLVED** | §0 lines 19-23: the contract only adds requirements; item 1 (the Root lifecycle) and item 2 (R141 N1–N9 and §4.5) stay controlling even where they are not repeated; the stricter rule applies; and the A3 relaxation is the only one, confined to §1. §5 now carries: R-F2's CLI/`start`/`startDaemon` prohibition (line 164); Root verification within the original clock, G1/E01–E03 before G2/E04–E06, and the no-uncertain-action and no-fabricated-seal rules (line 166); the R-F2 TERMINAL check (line 172); and TERMINAL → INDEPENDENT_ACCEPTANCE (line 175). My round-1 counterexample, PRODUCT_WINDOW entry without Root verification, is now forbidden by the contract text. |
+| **B2** N4 list | **RESOLVED** | Lines 77-85 add every conflict and implication I named, plus the `experimental*` implications. All citations were verified. |
+| **B3** `chrome.exe --version` | **RESOLVED** | Draft §2 item 2 reads `VersionInfo.ProductVersion` without executing Chrome, and explicitly forbids `--version`. |
+| M1 A1 discriminator | **RESOLVED** (with new finding NF1) | A raw HTTP upgrade records the status line. The listening PID must be the current Chrome or its descendant. A refusal counts only with a Chrome listener present and a non-101 status. |
+| M2 fixed port | **PARTIAL** (non-blocking) | A1-c now confirms that P has no listener after Chrome #1 exits, and that the listener on P is Chrome #2 by PID; otherwise INCONCLUSIVE with no retry. This closes the foreign-listener counterexample. Choosing P outside Windows' excluded and dynamic ranges is still not stated. A bad choice fails closed (INCONCLUSIVE). |
+| M3 daemon stop and MCP child | **RESOLVED** (with residual NF3) | Contract §5 line 169-170 and draft cleanup step 1 use the native `stop`, wait on the daemon handle, and confirm the MCP child has exited. Order is correct: daemon stop, then Chrome close; `closeBrowser` only disconnects in connected mode (N9). |
+| M4 environment completeness | **PARTIAL** (non-blocking) | Resolved points: the TEMP/TMP equality rule and its PID-file role (lines 112-114); the Node-flag rule with an OS command-line comparison (line 117); `LOCALAPPDATA`/`XDG_DATA_HOME` recorded (line 116). Remaining: line 91 still says the package reads "only" the seven listed variables, which line 116 contradicts. The OS minimum is still given as examples ("for example `SystemRoot`, `PATH`, `USERPROFILE`"), not an exact key list. The Node executable is not pinned by absolute path. |
+| M5 N-R2 HOLD | **RESOLVED** | Lines 139-143 make each of these a HOLD: a missing or truncated envelope, a timeout, an unreleased call, and an unreturned response. |
+| L1 coverage wording | **OPEN** (non-blocking) | The milestone-coverage block is unchanged. "A3 identity accepted under the operator-relaxed condition" and the stale "R144 … returns to Root" destination remain. |
+| L2 `--headless=new` | **OPEN** (non-blocking) | Unchanged. Local should confirm it against the M3-08 viewport/raster qualification. |
+| L3 precision | **PARTIAL** (non-blocking) | The `utils.js:30-35` citation is fixed. Still open: A3 capture `-Force`, the path-normalisation rule, a TERMINAL A3 recapture, the N-R3 detection basis, the `[selected]` marker, and the `mcp-options.js:288` citation for `CI`/`..._NO_USAGE_STATISTICS`. |
+| Draft A2 details (§6 item 5) | **OPEN** (non-blocking) | A2-a still omits the `pid` check. The accepted rejection shapes for A2-c are still unstated. |
+
+### New-defect hunt on the repair
+
+**NF1: MEDIUM, non-blocking (draft budget consistency).** The A1 evidence rule makes "each A1 probe" also send a raw HTTP upgrade (draft line 56). A raw upgrade is itself a WebSocket handshake.
+- Count: A1-a, A1-b, the A1-c old endpoint and the A1-c control, each done twice, is 8 handshakes, and the optional A1-d makes 10. The budget is "at most 6" (draft line 43).
+- Consequence: as written, the campaign hits "budget exhaustion" before it can reach `A1_A2_PASS`. This fails closed (INCONCLUSIVE, no unsafe effect), but it would waste the campaign's Chrome launches.
+- Fix: Local's adapted work order must reconcile this. Either raise the limit to 10, or count raw HTTP upgrades and `WebSocket` opens separately with explicit limits.
+
+**NF2: LOW, non-blocking (draft internal wording).** Line 47 still says the helper "may use only Node's built-in `WebSocket` … or PowerShell", while the evidence rule (line 56) uses Node `net`. Both are built-ins and no package is involved. Line 47 should read "Node built-in modules (`WebSocket`, `net`) or PowerShell".
+
+**NF3: LOW, non-blocking (CLEANUP fallback).** §5 step 1 and draft cleanup step 1 assume a live daemon. The native `stop` fails in two cases:
+- after a daemon-exit HOLD, `sendCommand` throws `Daemon is not running.`;
+- if the stop times out, `stopDaemon`'s `waitForFile` rejects after 10 s.
+
+Neither text says what happens next. Local should bind a fallback: record the failure, terminate through the original handle, wait on it, then record the PID-file state and the MCP-child state as UNKNOWN or observed. Do not delete another scope's files (R139:63). This is only a fallback gap; the existing HOLD/CLEANUP path is not weakened.
+
+**NF4: LOW, non-blocking (precedence wording).** Two statements sit side by side:
+- §0: "adds requirements; it removes none … the stricter requirement applies";
+- §3: N-R2 "supersedes the 'owner relays' wording of R-F1".
+
+R-F1's relay reading and the Root lifecycle's "distinct actors with original native call receipts" cannot both hold, so "stricter" does not decide between them. The intended reading is clear from §3, from R141 review N-R2 and from R142 condition 5: N-R2 is an accepted interpretation, not a relaxation. §0 should name it as the one sanctioned replacement of wording alongside the A3 relaxation.
+
+**No further counterexample found.**
+- The restored rows add requirements only.
+- The native `stop` order cannot reach a launch path, because the daemon has no restart logic and the MCP child shuts down on stdin EOF.
+- The A1 PID-ownership rule cannot accept a foreign listener.
+- The version read executes nothing.
+- No admission language, execution, audit or registry edit, R139 reopen or acceptance claim was introduced.
+
+Diff `aafcefbb..e448d5a`: 14 files, all within the seed's `allowedPaths`. The tranche record lists this review as `reviewEvidence` and records `repairRounds: 1`.
+
+### C1–C6 after repair
+
+| ID | Verdict |
+|---|---|
+| C1 | **PASS**. All seven conditions are bound with citations; F6 is complete. |
+| C2 | PASS (unchanged) |
+| C3 | **PASS**. The Root lifecycle and R141 stay controlling, and the omitted rows are restored. |
+| C4 | **PASS**, with NF1 binding on Local's adaptation. The draft is finite and closed, and contains no admission language. The handshake-budget inconsistency fails closed. |
+| C5 | PASS (unchanged; L1 wording remains non-blocking) |
+| C6 | PASS. The independent review and re-review are complete, subject to the §1 independence limitation. |
+
+### Gate result (re-run once)
+
+The literal `--base aafcefbb7` does not resolve, because the real prefix is `aafcefbb4…`; `git rev-parse --verify` returned 1. I resolved `aafcefbb` to `aafcefbb4d074805b21d29594b8ef74f990d367c`. Exit code **0**.
+
+```
+[PASS] CVF-DG-INST-01 PASS
+[PASS] CVF-DG-CONT-01 PASS
+[PASS] CVF-DG-RANGE-01 PASS  (RANGE_RESOLVED mode=RANGE base=aafcefbb4d07… head=e448d5afbac3… candidates=14 deleted=0)
+[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - no candidate work-order packet in scope
+[PASS] CVF-DG-ROUTE-01 NOT_APPLICABLE_WITH_REASON - no dispatch packet declares dispatchKind in scope
+[PASS] CVF-DG-ROLE-01 PASS  (checked: R149 draft, contract, independent review, packet)
+[PASS] CVF-DG-CLAIM-01 PASS  (0 explicit claim lines, 4 documents)
+[PASS] CVF-DG-COV-01 PASS  (R149 contract; mechanical joins only; Local owns semantic acceptance)
+RESULT: PASS phase=reviewer-fast mandatoryControls=8 failed=0
+```
+
+APPL-01 and ROUTE-01 were **not checked**; they did not pass. The gate passing proves only the checked static repository state.
+
+### Re-review verdict
+
+**REVIEWER_ACCEPTED_PENDING_LOCAL.**
+- B1–B3 are resolved, and no new blocking defect was found.
+- The seed's single consolidated repair round has been used.
+- The open non-blocking items are NF1–NF4, M2, M4 and L1–L3, and the draft's A2 details. They go to Local as binding inputs for its repair-audit successor and its adapted Windows work order. NF1 must be reconciled before admission. They are not to be fixed by another repair round in this tranche.
+- Local still owns:
+  - confirming reviewer independence and the seed's authorship;
+  - the R139 repair-audit successor;
+  - the A1/A2 admission and the separate Windows effect admission;
+  - the merge and the trusted bootstrap/doctor/catalog gates.
+- This acceptance covers the design and the draft documents only. It is not a runtime, browser, physical no-relaunch, AI-governance, R139, M3-05/M3-08 or product acceptance. A1/A2 remain unrun and unadmitted. Facebook/Zalo OA remain parked.

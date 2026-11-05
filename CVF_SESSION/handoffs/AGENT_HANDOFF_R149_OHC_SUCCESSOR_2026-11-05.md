@@ -8,7 +8,7 @@ Status: ACTIVE
 - Active phase: REVIEW
 - Active role: Cloud agent: operator-granted ORCHESTRATOR / SPEC_AUTHOR / SESSION_SYNC_STEWARD (branch-only commits); independent REVIEWER = separate Opus subagent; Root/Local retains repair-audit, admission, merge and FREEZE
 - Active tranche: CCMAI-RUNTIME-149
-- Next allowed move: CCMAI-RUNTIME-149: OHC successor contract and DRAFT Windows A1/A2 VERIFY packet authored on branch claude/friendly-rubin-e2npmt-r149 under the operator full-roadmap grant and relaxed A3 condition (package.json explained, README.md absent); independent review pending, then PR without merge. Next: Local reviews, authors any R139 repair-audit successor naming the A1/A2 discriminator, admits and runs the Windows VERIFY. No execution, admission or R139 reopen by the cloud. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-149: OHC successor contract and DRAFT Windows A1/A2 VERIFY packet REVIEW_PASS (independent reviewer accepted after one repair; build e448d5afbac3) on branch claude/friendly-rubin-e2npmt-r149, PR to main without cloud merge. Next: Local reviews/merges, applies the ten recorded conditions (NF1 handshake budget must be fixed before admission), authors the R139 repair-audit successor naming the A1/A2 discriminator, admits and runs the Windows VERIFY with a same-session A3 recapture. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; no execution by the cloud; Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## Startup acknowledgment
@@ -39,3 +39,13 @@ Review round 1, retained:
   - Plus non-blocking items.
 - The single consolidated repair round addressed all of them (contract §0, §2.2, §2.3, §3, §5, §5a; draft §2, §3, §5a). The orchestrator verified the B2 source lines.
 - Tranche history: REVIEW_PENDING, then CHANGES_REQUIRED, then REVIEW_PENDING. Re-review goes to the same reviewer.
+
+Re-review and closure on the branch:
+- The same reviewer returned REVIEWER_ACCEPTED_PENDING_LOCAL.
+  - B1–B3: RESOLVED.
+  - M1, M3, M5: RESOLVED.
+  - M2, M4, L3: PARTIAL.
+  - L1, L2 and the A2 details: OPEN.
+  - New non-blocking findings NF1–NF4. NF1 (handshake budget) must be fixed before admission.
+- The seed's repair round is exhausted, so the spec bytes stay as reviewed at `e448d5afbac370807746a9ad7bd54e6178eea14f`. Ten conditions are recorded in the tranche `localConditions`.
+- Tranche REVIEW_PASS; FREEZE open.
