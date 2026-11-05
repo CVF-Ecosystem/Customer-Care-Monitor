@@ -4,6 +4,17 @@
   "updatedAt": "2026-11-05",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
+    {"id": "r150-a1a2-audit-review-20261105", "family": "continuity", "path": "docs/reviews/R150_INDEPENDENT_A1_A2_AUDIT_REVIEW_2026-11-05.md", "status": "ACTIVE", "description": "Independent R2 acceptance of exact finite A1/A2 audit/work-order admission only; no runtime result."},
+    {"id": "r150-a1a2-helper-review-20261105", "family": "continuity", "path": "docs/reviews/R150_INDEPENDENT_HELPER_REVIEW_2026-11-05.md", "status": "ACTIVE", "description": "Independent static review of fixed Windows A1/A2 helpers; actual runtime result remains unobserved."},
+    {"id": "r150-a1a2-effect-admission-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-150-A1A2-EFFECT-ADMISSION.json", "status": "ACTIVE", "description": "Separate bounded Windows process-effect admission, conditional on immediate A3 full-tree recapture PASS."},
+    {"id": "r150-a1a2-seed-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-150.json", "status": "ACTIVE", "description": "Immutable R2 seed for bounded Windows A1/A2 VERIFY and successor R139 audit."},
+    {"id": "r150-a1a2-record-20261105", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-150.json", "status": "ACTIVE", "description": "R150 bounded VERIFY tranche; audit and effect admitted, A3 immediate recapture pending."},
+    {"id": "r150-a1a2-order-20261105", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_150_A1_A2_WINDOWS_VERIFY.md", "status": "ACTIVE", "description": "Exact-byte finite Windows A1/A2 work order; no start before independent audit and same-session A3 recapture."},
+    {"id": "r150-a1a2-audit-20261105", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a1_a2_windows_verify.json", "status": "ACTIVE", "description": "Independently accepted successor R139 audit with exact A1/A2 work-order pin; registry points here."},
+    {"id": "r150-a1a2-owner-helper-20261105", "family": "continuity", "path": "docs/reviews/probes/r150_a1_a2_windows_20261105/owner_runner.mjs", "status": "ACTIVE", "description": "Bounded Windows A1/A2 owner helper with pinned admission readback and exact effect counters."},
+    {"id": "r150-a1a2-actor-helper-20261105", "family": "continuity", "path": "docs/reviews/probes/r150_a1_a2_windows_20261105/actor_call.mjs", "status": "ACTIVE", "description": "Native one-call actor helper for fixed A1/A2 commands."},
+    {"id": "r150-a1a2-a3-helper-20261105", "family": "continuity", "path": "docs/reviews/probes/r150_a1_a2_windows_20261105/prestart_full_tree.ps1", "status": "ACTIVE", "description": "Read-only immediate full-tree A3 comparison against pinned manifest and relaxed package identity."},
+    {"id": "r150-a1a2-process-helper-20261105", "family": "continuity", "path": "docs/reviews/probes/r150_a1_a2_windows_20261105/process_snapshot.ps1", "status": "ACTIVE", "description": "Read-only process and owned-profile inventory for Windows A1/A2."},
     {"id": "r149-ohc-seed-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-149.json", "status": "ACTIVE", "description": "Immutable R2 documentary seed for OHC successor contract and Windows A1/A2 draft."},
     {"id": "r149-ohc-contract-20261105", "family": "continuity", "path": "docs/reviews/R149_OHC_SUCCESSOR_CONTRACT_2026-11-05.md", "status": "ACTIVE", "description": "Independently accepted design/spec binding seven R141 conditions and operator-relaxed A3 identity; no runtime admission."},
     {"id": "r149-a1a2-draft-20261105", "family": "continuity", "path": "docs/reviews/R149_A1_A2_WINDOWS_VERIFY_WORK_ORDER_DRAFT_2026-11-05.md", "status": "ACTIVE", "description": "Finite Windows A1/A2 VERIFY draft for a later Local tranche; not executable under R149."},
@@ -5529,9 +5540,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R149_OHC_SUCCESSOR_2026-11-05.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R150_A1_A2_WINDOWS_VERIFY_2026-11-05.md",
       "status": "ACTIVE",
-      "description": "R149 OHC design/spec FROZEN after separate independent R2 review; Windows A1/A2 remains unadmitted."
+      "description": "Active R150 Windows A1/A2 VERIFY; audited admission complete, immediate A3 recapture still gates process start."
     },
     {
       "id": "r060-work-order",

@@ -16,7 +16,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- R149 OHC design/spec FROZEN after separate independent R2 review; Windows A1/A2 remains unadmitted.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R149_OHC_SUCCESSOR_2026-11-05.md`
+- Active R150 Windows A1/A2 VERIFY; audited admission complete, immediate A3 recapture still gates process start.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R150_A1_A2_WINDOWS_VERIFY_2026-11-05.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -5305,6 +5305,17 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate R2 review accepts repaired C1-C6 design/spec only; A1/A2 remains unadmitted.: `docs/reviews/R149_OHC_SUCCESSOR_INDEPENDENT_REVIEW_2026-11-05.md`
 - Immutable R2 documentary seed for OHC successor contract and Windows A1/A2 draft.: `CVF_SESSION/authority/CCMAI-RUNTIME-149.json`
 - Root first-pass review records C1/C4 documentary findings and absent cloud Opus review artifact.: `docs/reviews/R149_ROOT_INDEPENDENT_REVIEW_2026-11-05.md`
+- Read-only immediate full-tree A3 comparison against pinned manifest and relaxed package identity.: `docs/reviews/probes/r150_a1_a2_windows_20261105/prestart_full_tree.ps1`
+- Native one-call actor helper for fixed A1/A2 commands.: `docs/reviews/probes/r150_a1_a2_windows_20261105/actor_call.mjs`
+- Independently accepted successor R139 audit with exact A1/A2 work-order pin; registry points here.: `docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a1_a2_windows_verify.json`
+- Independent R2 acceptance of exact finite A1/A2 audit/work-order admission only; no runtime result.: `docs/reviews/R150_INDEPENDENT_A1_A2_AUDIT_REVIEW_2026-11-05.md`
+- Separate bounded Windows process-effect admission, conditional on immediate A3 full-tree recapture PASS.: `CVF_SESSION/authority/CCMAI-RUNTIME-150-A1A2-EFFECT-ADMISSION.json`
+- Independent static review of fixed Windows A1/A2 helpers; actual runtime result remains unobserved.: `docs/reviews/R150_INDEPENDENT_HELPER_REVIEW_2026-11-05.md`
+- Exact-byte finite Windows A1/A2 work order; no start before independent audit and same-session A3 recapture.: `docs/work_orders/CCMAI_RUNTIME_150_A1_A2_WINDOWS_VERIFY.md`
+- Bounded Windows A1/A2 owner helper with pinned admission readback and exact effect counters.: `docs/reviews/probes/r150_a1_a2_windows_20261105/owner_runner.mjs`
+- Read-only process and owned-profile inventory for Windows A1/A2.: `docs/reviews/probes/r150_a1_a2_windows_20261105/process_snapshot.ps1`
+- R150 bounded VERIFY tranche; audit and effect admitted, A3 immediate recapture pending.: `CVF_SESSION/tranches/CCMAI-RUNTIME-150.json`
+- Immutable R2 seed for bounded Windows A1/A2 VERIFY and successor R139 audit.: `CVF_SESSION/authority/CCMAI-RUNTIME-150.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

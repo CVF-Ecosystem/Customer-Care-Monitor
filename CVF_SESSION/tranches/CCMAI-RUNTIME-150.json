@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-150",
+  "authorityKind": "DISPATCHER_OWNED_WINDOWS_A1_A2_VERIFY_AND_REPAIR_AUDIT",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Root/Local ORCHESTRATOR and WORK_ORDER_AUTHOR",
+    "implementationWorker": "Root/Local Windows VERIFY worker after separate effect admission",
+    "reviewer": "Independent reviewer separate from Root audit author and Windows worker",
+    "commitSteward": "Root/Local COMMIT_STEWARD",
+    "closer": "Root/Local CLOSER and SESSION_SYNC_STEWARD"
+  },
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_150_A1_A2_WINDOWS_VERIFY.md",
+    "docs/reviews/R150_*.md",
+    "docs/reviews/probes/r150_a1_a2_windows_20261105/**",
+    "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a1_a2_windows_verify.json",
+    "docs/milestone-coverage-authority.json",
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md"
+  ],
+  "prohibitedEffects": [
+    "No product source, tests, dependencies, gate, workflow, CVF Core, prior repair attempts, historical audit, prior seed or R149 frozen artifact edits",
+    "No Chrome or daemon start before separate R2 effect admission and immediate same-session A3 full-tree recapture PASS",
+    "After effect admission: at most three owned Chrome launches, one owned daemon start, eight native calls and six raw WebSocket handshakes, with about:blank and localhost only; no provider, DB or product calls",
+    "No new package/network fetch beyond localhost, installation, credential or customer/channel action, automatic retry, integrated lifecycle or product campaign",
+    "No R139 IMPLEMENT reopen, M3 acceptance, physical no-relaunch or runtime-governance claim, consumed-budget reset, deployment or public release"
+  ],
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_150_A1_A2_WINDOWS_VERIFY.md",
+  "baseCommit": "ec6eed18a5f1951d9dc54a5b49d14f804574ab67",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY"
+  ],
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "DISPATCH_READY",
+  "reviewEvidence": [
+    "docs/reviews/R150_INDEPENDENT_A1_A2_AUDIT_REVIEW_2026-11-05.md"
+  ],
+  "disposition": "DIAGNOSTIC_ONLY_ADMITTED_PENDING_A3",
+  "parentTranche": "CCMAI-RUNTIME-149",
+  "effectBudget": {
+    "chromeLaunches": 3,
+    "daemonStarts": 1,
+    "nativeCalls": 8,
+    "rawWebSocketHandshakes": 6,
+    "activeMinutes": 45,
+    "providerCalls": 0,
+    "productCalls": 0
+  },
+  "effectUsed": {
+    "chromeLaunches": 0,
+    "daemonStarts": 0,
+    "nativeCalls": 0,
+    "rawWebSocketHandshakes": 0
+  },
+  "effectAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-150-A1A2-EFFECT-ADMISSION.json",
+  "audit": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a1_a2_windows_verify.json"
+}

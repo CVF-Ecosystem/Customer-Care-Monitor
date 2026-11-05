@@ -2,9 +2,19 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R149_OHC_SUCCESSOR_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-149", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R150_A1_A2_WINDOWS_VERIFY_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-150", "parked": true} -->
 
-## Current R149 OHC successor FREEZE - 2026-11-05
+## Current R150 Windows A1/A2 VERIFY admission - 2026-11-05
+
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+
+CCMAI-RUNTIME-150 audit and exact work order are independently accepted, repair registry pinned, pre-dispatch PASS and separate Windows effect admission issued. Root/Local may enter BUILD as the selected VERIFY worker, then immediately recapture A3 full-tree identity; any mismatch is NO_START. If it passes, run only the bounded A1/A2 campaign and return raw evidence for separate review. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+
+Root/Local ORCHESTRATOR / WORK_ORDER_AUTHOR / AUDIT_AUTHOR
+
+
+## Historical R149 OHC successor FREEZE - 2026-11-05
 
 - Current mode: FREEZE
 - Active phase: FREEZE
@@ -168,11 +178,11 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: FREEZE
-- Active phase: FREEZE
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R149_OHC_SUCCESSOR_2026-11-05.md
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R150_A1_A2_WINDOWS_VERIFY_2026-11-05.md
 
-CCMAI-RUNTIME-149 design/spec FROZEN after independent R2 review. Root/Local may create a successor Windows A1/A2 VERIFY tranche, with a reviewed R139 repair audit, exact work-order pin, pre-dispatch gate, separate effect admission and immediate A3 full-tree recapture. No Chrome or daemon start is authorized by R149. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-150 audit and exact work order are independently accepted, repair registry pinned, pre-dispatch PASS and separate Windows effect admission issued. Root/Local may enter BUILD as the selected VERIFY worker, then immediately recapture A3 full-tree identity; any mismatch is NO_START. If it passes, run only the bounded A1/A2 campaign and return raw evidence for separate review. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 
