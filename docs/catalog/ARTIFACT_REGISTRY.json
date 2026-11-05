@@ -4,6 +4,17 @@
   "updatedAt": "2026-11-05",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
+    {"id": "r148-a3-seed-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-148.json", "status": "ACTIVE", "description": "Immutable R2 seed for R144 metadata disposition, Windows full-tree comparison and successor R139 repair audit."},
+    {"id": "r148-a3-packet-20261105", "family": "continuity", "path": "docs/reviews/R148_A3_DISPOSITION_AND_AUDIT_PACKET_2026-11-05.md", "status": "ACTIVE", "description": "Bounded documentary audit packet; hash-pinned R144 work order unchanged and no A1/A2 release."},
+    {"id": "r148-a3-record-20261105", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-148.json", "status": "ACTIVE", "description": "Separate R2 tranche for independent audit review and R144 closure."},
+    {"id": "r148-a3-audit-20261105", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_r144_disposition.json", "status": "ACTIVE", "description": "Successor R139 repair-chain audit: R144 metadata candidate accepted, full-tree condition failed, A1/A2 unadmitted."},
+    {"id": "r148-windows-tree-capture-20261105", "family": "continuity", "path": "docs/reviews/probes/r144_a3_package_metadata_20261105/windows_full_tree.json", "status": "ACTIVE", "description": "Read-only Windows installed package tree: 347 files with SHA-256 and byte sizes."},
+    {"id": "r148-windows-tree-compare-20261105", "family": "continuity", "path": "docs/reviews/probes/r144_a3_package_metadata_20261105/root_windows_full_tree_compare.json", "status": "ACTIVE", "description": "Npm348 versus Windows347: README.md missing, package.json hash differs, other346 files match."},
+    {"id": "r148-root-disposition-20261105", "family": "continuity", "path": "docs/reviews/R148_ROOT_R144_A3_DISPOSITION_2026-11-05.md", "status": "ACTIVE", "description": "Root accepts R144-D1/D2 and metadata candidate, holds A1/A2 on missing README.md."},
+    {"id": "r144-worker-return-20261105", "family": "continuity", "path": "docs/reviews/R144_A3_PACKAGE_METADATA_VERIFY_RETURN_2026-11-05.md", "status": "ACTIVE", "description": "Worker finite A3 metadata comparison: installed JSON equals npm manifest minus bugs and scripts, qualified only."},
+    {"id": "r144-independent-review-20261105", "family": "continuity", "path": "docs/reviews/R144_A3_PACKAGE_METADATA_INDEPENDENT_REVIEW_2026-11-05.md", "status": "ACTIVE", "description": "Separate R2 review accepts metadata candidate with procedural and record qualifications."},
+    {"id": "r144-cloud-proposal-20261105", "family": "continuity", "path": "docs/reviews/R144_A3_ROOT_DISPOSITION_PROPOSAL_2026-11-05.md", "status": "ACTIVE", "description": "Cloud proposal for Root audit, full-tree check and bounded R144 closure; not itself closure."},
+    {"id": "r144-npm-full-tree-manifest-20261105", "family": "continuity", "path": "docs/reviews/probes/r144_a3_package_metadata_20261105/root_npm_full_tree_manifest.json", "status": "ACTIVE", "description": "Verified npm tarball manifest of 348 file paths, bytes and SHA-256."},
     {"id": "r147-a3-successor-audit-20261105", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a3_verify.json", "status": "ACTIVE", "description": "Independently reviewed DIAGNOSTIC_ONLY successor preserving R139 UNKNOWNs and admitting exact finite R144 A3 VERIFY."},
     {"id": "r147-a3-independent-review-20261105", "family": "continuity", "path": "docs/reviews/R147_INDEPENDENT_A3_AUDIT_REVIEW_2026-11-05.md", "status": "ACTIVE", "description": "Independent R2 acceptance of bounded documentary successor audit; no R139 runtime release."},
 
@@ -13,8 +24,8 @@
     {"id": "r147-audit-packet-20261105", "family": "continuity", "path": "docs/reviews/R147_REPAIR_AUDIT_ADMISSION_PACKET_2026-11-05.md", "status": "ACTIVE", "description": "Root-owned documentary audit packet; R139 product remains blocked."},
 
     {"id": "r144-a3-verify-seed-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-144.json", "status": "ACTIVE", "description": "Immutable R2 seed for finite A3 package metadata VERIFY; no new fetch or runtime effect."},
-    {"id": "r144-a3-verify-order-20261105", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_144_A3_PACKAGE_METADATA_VERIFY.md", "status": "ACTIVE", "description": "DRAFT A3 metadata VERIFY packet; pre-dispatch held by R139 repair audit, no Claude work released."},
-    {"id": "r144-a3-verify-record-20261105", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-144.json", "status": "ACTIVE", "description": "R144 DRAFT with COV_REPAIR_SUCCESSOR_HELD; R139 remains BUILD_BLOCKED."},
+    {"id": "r144-a3-verify-order-20261105", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_144_A3_PACKAGE_METADATA_VERIFY.md", "status": "ACTIVE", "description": "Hash-pinned original finite A3 metadata VERIFY dispatch packet; bytes unchanged after worker return."},
+    {"id": "r144-a3-verify-record-20261105", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-144.json", "status": "ACTIVE", "description": "R144 finite metadata VERIFY returned and independently reviewed; Root closure pending."},
     {"id": "r144-a3-local-capture-20261105", "family": "continuity", "path": "docs/reviews/probes/r144_a3_package_metadata_20261105/local_capture.json", "status": "ACTIVE", "description": "Five installed Windows file hashes and bounded source capture; package.json differs from verified R141 tarball."},
     {"id": "r144-a3-installed-package-20261105", "family": "continuity", "path": "docs/reviews/probes/r144_a3_package_metadata_20261105/installed_package.json", "status": "ACTIVE", "description": "Read-only 2,354-byte Windows Antigravity installed package.json capture for exact A3 comparison."},
     {"id": "r143-closed-handoff-20261105", "family": "continuity", "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R143_LOCAL_STACK_CLOSURE_2026-11-05.md", "status": "ACTIVE", "description": "R143 bounded FREEZE of ordered Claude PR stack; R139 runtime remains blocked."},
@@ -5511,9 +5522,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R144_A3_PACKAGE_METADATA_VERIFY_2026-11-05.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R148_A3_DISPOSITION_2026-11-05.md",
       "status": "ACTIVE",
-      "description": "Active R144 DRAFT A3 handoff; repair audit blocks Claude dispatch and R139 runtime."
+      "description": "Active R148 successor audit and R144 closure handoff; README.md missing, A1/A2 held."
     },
     {
       "id": "r060-work-order",

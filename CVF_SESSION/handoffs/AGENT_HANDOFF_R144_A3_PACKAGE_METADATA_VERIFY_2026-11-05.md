@@ -1,6 +1,6 @@
 # R144 finite A3 package metadata VERIFY handoff
 
-Status: ACTIVE
+Status: HISTORICAL
 
 ## Current State
 
@@ -37,3 +37,7 @@ R147 diagnostic-only audit FROZEN at `4ccb999d4a8350c854703d3883c7494fdcd5d782` 
 - The cloud ORCHESTRATOR, under the operator's full-roadmap grant, wrote a disposition proposal plus an npm full-tree manifest.
 - The work-order status, tranche record, audit and registry are unchanged. A trial status edit made the audit-pinned packet `COV_EVIDENCE_STALE` and was reverted.
 - Gate history, retained: the first runner pre-commit FAILED ROLE-01 because the proposal lacked `Worker:`/`Reviewer:` lines. After adding them, pre-commit PASSED 7/0 and preflight PASSED 6/6 (catalog SKIP).
+
+## R148 transition
+
+Root/Local acknowledged the R144 worker return and transferred active continuity to R148 for separate audit and closure. This historical handoff preserves the cloud return and proposal; the R144 work order is unchanged.

@@ -16,7 +16,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R144 DRAFT A3 handoff; repair audit blocks Claude dispatch and R139 runtime.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R144_A3_PACKAGE_METADATA_VERIFY_2026-11-05.md`
+- Active R148 successor audit and R144 closure handoff; README.md missing, A1/A2 held.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R148_A3_DISPOSITION_2026-11-05.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -5278,15 +5278,26 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R2 bounded Local stack FROZEN; R139 runtime remains blocked.: `CVF_SESSION/tranches/CCMAI-RUNTIME-143.json`
 - Read-only 2,354-byte Windows Antigravity installed package.json capture for exact A3 comparison.: `docs/reviews/probes/r144_a3_package_metadata_20261105/installed_package.json`
 - Five installed Windows file hashes and bounded source capture; package.json differs from verified R141 tarball.: `docs/reviews/probes/r144_a3_package_metadata_20261105/local_capture.json`
-- DRAFT A3 metadata VERIFY packet; pre-dispatch held by R139 repair audit, no Claude work released.: `docs/work_orders/CCMAI_RUNTIME_144_A3_PACKAGE_METADATA_VERIFY.md`
-- R144 DRAFT with COV_REPAIR_SUCCESSOR_HELD; R139 remains BUILD_BLOCKED.: `CVF_SESSION/tranches/CCMAI-RUNTIME-144.json`
+- Hash-pinned original finite A3 metadata VERIFY dispatch packet; bytes unchanged after worker return.: `docs/work_orders/CCMAI_RUNTIME_144_A3_PACKAGE_METADATA_VERIFY.md`
+- R144 finite metadata VERIFY returned and independently reviewed; Root closure pending.: `CVF_SESSION/tranches/CCMAI-RUNTIME-144.json`
 - Immutable R2 seed for finite A3 package metadata VERIFY; no new fetch or runtime effect.: `CVF_SESSION/authority/CCMAI-RUNTIME-144.json`
+- Cloud proposal for Root audit, full-tree check and bounded R144 closure; not itself closure.: `docs/reviews/R144_A3_ROOT_DISPOSITION_PROPOSAL_2026-11-05.md`
+- Separate R2 review accepts metadata candidate with procedural and record qualifications.: `docs/reviews/R144_A3_PACKAGE_METADATA_INDEPENDENT_REVIEW_2026-11-05.md`
+- Verified npm tarball manifest of 348 file paths, bytes and SHA-256.: `docs/reviews/probes/r144_a3_package_metadata_20261105/root_npm_full_tree_manifest.json`
+- Worker finite A3 metadata comparison: installed JSON equals npm manifest minus bugs and scripts, qualified only.: `docs/reviews/R144_A3_PACKAGE_METADATA_VERIFY_RETURN_2026-11-05.md`
 - Immutable failed seed; authorityKind rejected before audit or worker action.: `CVF_SESSION/authority/CCMAI-RUNTIME-145.json`
 - Immutable failed seed; review-path allowlist rejected before audit or worker action.: `CVF_SESSION/authority/CCMAI-RUNTIME-146.json`
 - Independent R2 acceptance of bounded documentary successor audit; no R139 runtime release.: `docs/reviews/R147_INDEPENDENT_A3_AUDIT_REVIEW_2026-11-05.md`
 - Independently reviewed DIAGNOSTIC_ONLY successor preserving R139 UNKNOWNs and admitting exact finite R144 A3 VERIFY.: `docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a3_verify.json`
 - Root-owned documentary audit packet; R139 product remains blocked.: `docs/reviews/R147_REPAIR_AUDIT_ADMISSION_PACKET_2026-11-05.md`
 - Separate immutable R2 seed for R139 repair audit and finite R144 A3 VERIFY admission.: `CVF_SESSION/authority/CCMAI-RUNTIME-147.json`
+- Successor R139 repair-chain audit: R144 metadata candidate accepted, full-tree condition failed, A1/A2 unadmitted.: `docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_r144_disposition.json`
+- Bounded documentary audit packet; hash-pinned R144 work order unchanged and no A1/A2 release.: `docs/reviews/R148_A3_DISPOSITION_AND_AUDIT_PACKET_2026-11-05.md`
+- Separate R2 tranche for independent audit review and R144 closure.: `CVF_SESSION/tranches/CCMAI-RUNTIME-148.json`
+- Immutable R2 seed for R144 metadata disposition, Windows full-tree comparison and successor R139 repair audit.: `CVF_SESSION/authority/CCMAI-RUNTIME-148.json`
+- Root accepts R144-D1/D2 and metadata candidate, holds A1/A2 on missing README.md.: `docs/reviews/R148_ROOT_R144_A3_DISPOSITION_2026-11-05.md`
+- Read-only Windows installed package tree: 347 files with SHA-256 and byte sizes.: `docs/reviews/probes/r144_a3_package_metadata_20261105/windows_full_tree.json`
+- Npm348 versus Windows347: README.md missing, package.json hash differs, other346 files match.: `docs/reviews/probes/r144_a3_package_metadata_20261105/root_windows_full_tree_compare.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

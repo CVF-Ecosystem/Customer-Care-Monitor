@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-148",
+  "authorityKind": "DISPATCHER_OWNED_R144_A3_DISPOSITION_AND_REPAIR_AUDIT",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Root/Local ORCHESTRATOR",
+    "implementationWorker": "Root/Local documentary audit author; no product implementation",
+    "reviewer": "Independent reviewer, separate from Root audit author",
+    "commitSteward": "Root/Local COMMIT_STEWARD",
+    "closer": "Root/Local CLOSER and SESSION_SYNC_STEWARD"
+  },
+  "allowedPaths": [
+    "docs/reviews/R144_*.md",
+    "docs/reviews/R148_*.md",
+    "docs/reviews/probes/r144_a3_package_metadata_20261105/**",
+    "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_r144_disposition.json",
+    "docs/milestone-coverage-authority.json",
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md"
+  ],
+  "prohibitedEffects": [
+    "No edit to the hash-pinned R144 work order, original R139 repair attempts, prior audits, prior authority seeds, product source, tests, dependencies, gates, workflows or CVF core",
+    "No package or other new network fetch, installation, Chrome, MCP, daemon, browser, DB, provider, credential, customer/channel or runtime action",
+    "No A1/A2 admission, R139 implementation reopening, physical-relaunch proof, M3 acceptance or reset of historical costs, UNKNOWNs and consumed effects",
+    "No deployment, public release or live governance claim"
+  ],
+  "workOrder": "docs/reviews/R148_A3_DISPOSITION_AND_AUDIT_PACKET_2026-11-05.md",
+  "baseCommit": "b232d1a6080da9aaa35e2626f6890e7ac07cb9f2",
+  "status": "BUILD",
+  "phase": "BUILD",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD"
+  ],
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "ACTIVE",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "DOCUMENTARY_AUDIT_IN_PROGRESS",
+  "parentTranche": "CCMAI-RUNTIME-144"
+}

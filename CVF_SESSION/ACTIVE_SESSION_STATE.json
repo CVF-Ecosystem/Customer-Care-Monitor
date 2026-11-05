@@ -78,8 +78,8 @@
   },
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -89,9 +89,9 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-144",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R144_A3_PACKAGE_METADATA_VERIFY_2026-11-05.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-144 worker return METADATA_ONLY_CANDIDATE (a9df2da) independently REVIEWER_ACCEPTED on PR #17; cloud ORCHESTRATOR proposal docs/reviews/R144_A3_ROOT_DISPOSITION_PROPOSAL_2026-11-05.md. Next: Local authors the successor audit/registry pointer and formally closes R144 (work order bytes are audit-pinned, so the cloud did not change its status), rules on R144-D1/D2, runs the full-tree Windows hash capture against root_npm_full_tree_manifest.json, then decides any A1/A2 Windows admission. No new fetch, Chrome/MCP, A1/A2 or product action. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.",
+  "activeTranche": "CCMAI-RUNTIME-148",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R148_A3_DISPOSITION_2026-11-05.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-148: Prepare and independently review the R148 successor repair audit, move the M3 registry pointer, close R144 at bounded metadata scope without changing its hash-pinned work order, then merge PR #17. Windows full-tree capture has 347/348 npm paths: README.md is missing and only package.json has a hash difference. A1/A2 stays unadmitted. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
   "activeRole": "Root/Local ORCHESTRATOR / WORK_ORDER_AUTHOR / COMMIT_STEWARD / SESSION_SYNC_STEWARD",
   "updatedAt": "2026-11-05",

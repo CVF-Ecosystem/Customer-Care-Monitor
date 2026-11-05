@@ -2,7 +2,14 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R144_A3_PACKAGE_METADATA_VERIFY_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-144", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R148_A3_DISPOSITION_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-148", "parked": true} -->
+
+## Current R148 documentary BUILD - 2026-11-05
+
+- Current mode: BUILD
+- Active phase: BUILD
+
+R144 metadata result is independently reviewed. R148 separate successor audit is being prepared; README.md is absent from the Windows install (347/348 paths), so A1/A2 stays unadmitted. R139 and M3-05/M3-08 remain blocked.
 
 ## Current R144 finite A3 VERIFY dispatch - 2026-11-05
 
@@ -151,11 +158,11 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R144_A3_PACKAGE_METADATA_VERIFY_2026-11-05.md
+- Current mode: BUILD
+- Active phase: BUILD
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R148_A3_DISPOSITION_2026-11-05.md
 
-CCMAI-RUNTIME-147 is FROZEN at diagnostic-only scope after independent review and committed-range gates. R144 finite A3 is DISPATCH_READY after pre-dispatch PASS; Dispatch commit `55a7f3af5045a7952959d8b2a0e0b79a95628b6f` is pinned in the active handoff. Operator may give Claude the exact packet. R139 remains BUILD_BLOCKED; Windows A3 is 4/5 and no A1/A2 admission is open. No fresh network fetch or runtime action is authorized; Facebook/Zalo OA parked.
+R148 documentary audit BUILD follows seed b232d1a6 and pre-dispatch PASS. R144 metadata comparison is reviewed; Windows full-tree capture is 347/348 with README.md missing and only package.json hash differing. A1/A2 remains unadmitted; R139 BUILD_BLOCKED and M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 
