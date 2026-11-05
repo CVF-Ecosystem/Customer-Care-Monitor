@@ -2,9 +2,19 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R149_OHC_SUCCESSOR_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-149", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R150_R149_ERRATA_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-150", "parked": true} -->
 
-## Current R149 OHC successor FREEZE - 2026-11-05
+## Current R150 R149 errata checkpoint - 2026-11-05
+
+- Current mode: REVIEW
+- Active phase: REVIEW
+
+CCMAI-RUNTIME-150: errata binding inputs for frozen R149 REVIEW_PASS (independent reviewer E1-E6 PASS; build 821940c4b20c) on branch claude/friendly-rubin-e2npmt-r150, PR to main without cloud merge. Next: Local reviews/merges, then applies or reviews-and-rejects each erratum (E-B3 chrome.exe --version safety and NF1 first) plus R150 F1-F6 in its A1/A2 successor work order, repair-audit successor, admission and Windows run. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; no execution by the cloud; Facebook/Zalo OA parked.
+
+Cloud agent: operator-granted ORCHESTRATOR / SPEC_AUTHOR / SESSION_SYNC_STEWARD (branch-only commits); independent REVIEWER = separate Opus subagent; Root/Local retains repair-audit, admission, merge and FREEZE
+
+
+## Historical R149 OHC successor FREEZE - 2026-11-05
 
 - Current mode: FREEZE
 - Active phase: FREEZE
@@ -168,11 +178,11 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: FREEZE
-- Active phase: FREEZE
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R149_OHC_SUCCESSOR_2026-11-05.md
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R150_R149_ERRATA_2026-11-05.md
 
-CCMAI-RUNTIME-149 design/spec FROZEN after independent R2 review. Root/Local may create a successor Windows A1/A2 VERIFY tranche, with a reviewed R139 repair audit, exact work-order pin, pre-dispatch gate, separate effect admission and immediate A3 full-tree recapture. No Chrome or daemon start is authorized by R149. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-150: errata binding inputs for frozen R149 REVIEW_PASS (independent reviewer E1-E6 PASS; build 821940c4b20c) on branch claude/friendly-rubin-e2npmt-r150, PR to main without cloud merge. Next: Local reviews/merges, then applies or reviews-and-rejects each erratum (E-B3 chrome.exe --version safety and NF1 first) plus R150 F1-F6 in its A1/A2 successor work order, repair-audit successor, admission and Windows run. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; no execution by the cloud; Facebook/Zalo OA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 
