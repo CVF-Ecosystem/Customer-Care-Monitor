@@ -4,11 +4,11 @@ Status: ACTIVE
 
 ## Current State
 
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
-- Active role: Root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Root ORCHESTRATOR / COMMIT_STEWARD / SESSION_SYNC_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER
 - Active tranche: CCMAI-RUNTIME-151
-- Next allowed move: CCMAI-RUNTIME-151 DISPATCH_READY: Root commits the independently reviewed source-only packet and material-SHA handoff marker, then Terra may begin bounded offline BUILD. No Chrome, daemon, provider, DB or product effect is admitted. R139 BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-151 BUILD: Terra executes the reviewed source-only offline diagnostic repair within the 45-minute worker ceiling and returns evidence for independent Astra REVIEW. No Chrome, daemon, provider, DB or product effect is admitted. R139 BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## Transition acknowledgment
@@ -23,6 +23,12 @@ Status: ACTIVE
 - Root reproduced the Windows PowerShell 5.1 nested-array defect; Astra independently reproduced it. R150 WebSocket error/timeout lacks HTTP status. Root's `docs/reviews/R151_CAUSAL_DIAGNOSIS_AND_DESIGN_2026-11-05.md` separates those observed measurement causes from actual Chrome response and R139 product unknowns.
 - Astra accepted the source-only packet in R151_SOURCE_AUDIT_INDEPENDENT_REVIEW_2026-11-05.md. The M3 registry pins accepted audit 9173b5659e0e48758fcb665fd66185cce938437049e1dbabcc56492293f923da; exact packet b42b14520dc3144df0499880c5f308d8935dfa702e9e23cd7cd9035d76a2211d is DISPATCH_READY. Installed1.3 pre-dispatch PASS including APPL/COV; portable preflight PASS 7/7. Terra has not received BUILD release until material-SHA continuity commit. Any later Windows effect needs a separate admission after independent source review and immediate A3 recapture.
 - R139 physical no-relaunch prevention and same-owner/context/original-clock integrated lifecycle remain held. M3-05/M3-08 stay BLOCKED; Facebook/Zalo OA account/live checkpoint stays parked. No product or governance runtime claim follows from offline diagnostic tests.
+
+## BUILD dispatch acknowledgment
+
+- Reviewed source-only material committed at `d2edd620dc71b318e8685b4527fb0a0ce6d87546`. Root verified pre-dispatch APPL/COV PASS, pre-commit PASS, portable preflight 7/7 and the downstream gate unittest suite 130/130 PASS before transition.
+- Terra receives only the official audit-pinned order `docs/work_orders/CCMAI_RUNTIME_151_EVIDENCE_CAPTURE_REPAIR.md` (LF SHA-256 `b42b14520dc3144df0499880c5f308d8935dfa702e9e23cd7cd9035d76a2211d`) and worker allowed paths. This handoff is the material-SHA release marker; no runtime effect is released.
+- Root acknowledges ORCHESTRATOR / COMMIT_STEWARD / SESSION_SYNC_STEWARD; Terra acknowledges IMPLEMENTATION_WORKER before edits; Astra remains independent REVIEWER. The official order stays byte-pinned and the administrative carrier records BUILD status.
 
 ## Public Export Disposition
 
