@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-149",
+  "authorityKind": "DISPATCHER_OWNED_OHC_SUCCESSOR_CONTRACT_AND_A1A2_PACKET_DRAFT",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Cloud ORCHESTRATOR (operator full-roadmap grant 2026-11-05)",
+    "implementationWorker": "Cloud ORCHESTRATOR acting as SPEC_AUTHOR (documentary only)",
+    "reviewer": "Independent Opus review subagent appointed under operator grant (separate agent from the spec author)",
+    "commitSteward": "Cloud ORCHESTRATOR for branch-only commits; Root/Local for merge to main"
+  },
+  "allowedPaths": [
+    "docs/reviews/R149_*.md",
+    "docs/reviews/probes/r149_ohc_successor_20261105/**",
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/INDEX.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json"
+  ],
+  "prohibitedEffects": [
+    "Starting Chrome, the chrome-devtools-mcp daemon/server, Antigravity, browser, DB, provider or any product runtime",
+    "Network fetch, package install, import or execution",
+    "Editing product source, tests, scripts, gates, CI, dependencies, the R139 repair audit, docs/milestone-coverage-authority.json, existing seeds or any work order under docs/work_orders",
+    "Admitting or dispatching A1/A2; reopening R139; claiming physical no-relaunch, runtime, AI-governance or M3 acceptance",
+    "Merge or push to main, history rewrite, deployment or public release"
+  ],
+  "workOrder": "docs/reviews/R149_OHC_SUCCESSOR_PACKET_2026-11-05.md",
+  "baseCommit": "abe76f66cb46978cc242bc1a3fdb6c0fb96a4577",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "REVIEW_PENDING"
+  ],
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
+  "disposition": "SUCCESSOR_CONTRACT_AUTHORED_PENDING_INDEPENDENT_REVIEW",
+  "parentTranche": "CCMAI-RUNTIME-148",
+  "reviewEvidence": [],
+  "operatorDecisions": [
+    "Full roadmap authority in cloud; escalate to Local only when Windows/local required; no merge",
+    "A3 condition relaxed: package.json explained by R144 and README.md absent"
+  ],
+  "effects": {
+    "networkFetches": 0,
+    "runtimeStarts": 0,
+    "providerCalls": 0
+  }
+}

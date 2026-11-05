@@ -5524,9 +5524,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R148_A3_DISPOSITION_2026-11-05.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R149_OHC_SUCCESSOR_2026-11-05.md",
       "status": "ACTIVE",
-      "description": "Active R148 successor audit and R144 closure handoff; README.md missing, A1/A2 held."
+      "description": "Active R149 OHC successor contract and A1/A2 Windows VERIFY draft handoff (documentary, pending review); A1/A2 unadmitted."
     },
     {
       "id": "r060-work-order",
