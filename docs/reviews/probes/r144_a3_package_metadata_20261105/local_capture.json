@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "ccma.r144.localCapture@1.0.0",
+  "date": "2026-11-05",
+  "role": "Root/Local ORCHESTRATOR pre-dispatch source capture",
+  "source": "Current Windows Antigravity installation, chrome-devtools-mcp package directory under app.asar.unpacked/node_modules",
+  "packageVersionFromInstalledJson": "1.9.0",
+  "installedPackageJson": {
+    "path": "docs/reviews/probes/r144_a3_package_metadata_20261105/installed_package.json",
+    "rawSha256": "592ef654a308edcba5fb3c2b302173650096a9487e4120b96e7adbe830429b9f",
+    "bytes": 2354
+  },
+  "r141VerifiedNpmTarball": {
+    "sourceVerificationPath": "docs/reviews/probes/r141_relaunch_prevention_20261105/source_verification.json",
+    "sourceVerificationRawSha256": "754215058fec4f73dc10e4fd745a62d41f6e83641d7a8ed9091c9bd1691e4d44",
+    "packageJsonRawSha256": "6a14bfc51d9111957a5446ba861e462c3181c69c915f8133d8f2beac8c175021"
+  },
+  "otherFourA3InstalledRawHashes": {
+    "build/src/config/browser-options.js": "d172515ff92e0efdda98e84581c46e2db97ba0ff3536507bf3a9da022dcd1887",
+    "build/src/ToolHandler.js": "49dd8d88257394e778573e3449af6e03fdc2fab73cc8370af26205aeecd8ab7d",
+    "build/src/tools/ToolDefinition.js": "99a99804c660b47d469b99d60bc5ce5c21571b6bd69ceea19da289dbbc5793c5",
+    "build/src/McpPage.js": "829f11b3cb4c7b87dbb4f5b6a3f62583f4fc05746daee21e629287247debb340"
+  },
+  "interpretation": "Four JS files match the R141 probe; installed package.json differs. This capture does not establish whether the difference is metadata only or whether executable package identity is safe.",
+  "effects": {
+    "networkFetches": 0,
+    "installs": 0,
+    "imports": 0,
+    "chromeStarts": 0,
+    "mcpStarts": 0,
+    "providerCalls": 0
+  }
+}

@@ -1,6 +1,6 @@
 # R143 Local stack closure handoff
 
-Status: ACTIVE
+Status: FROZEN
 
 ## Current State
 

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-144",
+  "authorityKind": "DISPATCHER_OWNED_FINITE_A3_VERIFY",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Root/Local ORCHESTRATOR",
+    "implementationWorker": "Claude Code cloud VERIFY worker, documentary comparison only",
+    "reviewer": "Root/Local independent REVIEWER",
+    "commitSteward": "Root/Local COMMIT_STEWARD",
+    "closer": "Root/Local CLOSER and SESSION_SYNC_STEWARD"
+  },
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_144_A3_PACKAGE_METADATA_VERIFY.md",
+    "docs/reviews/R144_*.md",
+    "docs/reviews/probes/r144_a3_package_metadata_20261105/**",
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md"
+  ],
+  "prohibitedEffects": [
+    "No product, backend, frontend, test, gate, workflow, dependency, CVF core or existing authority/seed edits",
+    "No Chrome, MCP, daemon, browser, DB, provider, credential, customer/channel, installation or runtime action",
+    "No new network fetch; use only the retained R141 npm tarball if still available and the committed Windows metadata capture",
+    "No R139 repair audit or milestone registry edit, A1/A2 admission, R139 reopening or reset of historical budgets and UNKNOWNs",
+    "No worker commit, push or merge; Root/Local owns repository transport, history, deployment and public release; no governance/product acceptance claim"
+  ],
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_144_A3_PACKAGE_METADATA_VERIFY.md",
+  "baseCommit": "40ef39ccf81608a967287c540548b33621f91e7c",
+  "status": "WORK_ORDER",
+  "phase": "WORK_ORDER",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER"
+  ],
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "DRAFT",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "DRAFT_BLOCKED_BY_R139_REPAIR_AUDIT",
+  "parentTranche": "CCMAI-RUNTIME-143",
+  "effects": {
+    "networkFetches": 0,
+    "runtimeStarts": 0,
+    "browserCalls": 0,
+    "providerCalls": 0,
+    "dependencyInstalls": 0
+  }
+}

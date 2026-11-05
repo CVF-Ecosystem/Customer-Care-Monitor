@@ -16,7 +16,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- R143 Local stack FROZEN after gate suite 130/130 with -B; A3 4/5 and R139 integration blocked.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R143_LOCAL_STACK_CLOSURE_2026-11-05.md`
+- Active R144 DRAFT A3 handoff; repair audit blocks Claude dispatch and R139 runtime.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R144_A3_PACKAGE_METADATA_VERIFY_2026-11-05.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -5273,8 +5273,14 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Merged source/component FROZEN after profile 1.3 gate suite 130/130; R139 parent blocked.: `CVF_SESSION/tranches/CCMAI-RUNTIME-140.json`
 - Worker-only independent M3-06 correction, S01-S10 acceptance and bounded scope.: `docs/work_orders/CCMAI_RUNTIME_140_SELECTION_READ_REPAIR.md`
 - Local review of PR #14/#15/#16, D1-D4 decisions, R141 successor conditions and Windows A3 4/5 hold; no R139 reopen.: `docs/reviews/R142_LOCAL_STACK_MERGE_REVIEW_AND_SUCCESSOR_CONTRACT_2026-11-05.md`
+- R143 bounded FREEZE of ordered Claude PR stack; R139 runtime remains blocked.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R143_LOCAL_STACK_CLOSURE_2026-11-05.md`
 - Seed-bound Local closure of three merged PR tranches; retained LAW failures and profile 1.3 suite 130/130 PASS.: `docs/reviews/R143_LOCAL_STACK_CLOSURE_PACKET_2026-11-05.md`
 - R2 bounded Local stack FROZEN; R139 runtime remains blocked.: `CVF_SESSION/tranches/CCMAI-RUNTIME-143.json`
+- Read-only 2,354-byte Windows Antigravity installed package.json capture for exact A3 comparison.: `docs/reviews/probes/r144_a3_package_metadata_20261105/installed_package.json`
+- Five installed Windows file hashes and bounded source capture; package.json differs from verified R141 tarball.: `docs/reviews/probes/r144_a3_package_metadata_20261105/local_capture.json`
+- DRAFT A3 metadata VERIFY packet; pre-dispatch held by R139 repair audit, no Claude work released.: `docs/work_orders/CCMAI_RUNTIME_144_A3_PACKAGE_METADATA_VERIFY.md`
+- R144 DRAFT with COV_REPAIR_SUCCESSOR_HELD; R139 remains BUILD_BLOCKED.: `CVF_SESSION/tranches/CCMAI-RUNTIME-144.json`
+- Immutable R2 seed for finite A3 package metadata VERIFY; no new fetch or runtime effect.: `CVF_SESSION/authority/CCMAI-RUNTIME-144.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

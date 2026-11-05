@@ -2,9 +2,16 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R143_LOCAL_STACK_CLOSURE_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-143", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R144_A3_PACKAGE_METADATA_VERIFY_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-144", "parked": true} -->
 
-## Current Local stack bounded FREEZE - 2026-11-05
+## Current R144 A3 package metadata VERIFY dispatch - 2026-11-05
+
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+
+CCMAI-RUNTIME-144 is a DRAFT finite A3 VERIFY for Claude cloud, not dispatched. The immutable seed was committed first at `40ef39ccf81608a967287c540548b33621f91e7c`. Root captured the current Windows installed `chrome-devtools-mcp@1.9.0` package metadata and four matching JS hashes. Pre-dispatch refused `COV_REPAIR_SUCCESSOR_HELD`: R139's M3-05/M3-08 audit is BLOCKED with no admitted discriminator or budget. A separate independent audit/admission is needed before Claude comparison. No new fetch or runtime action; Root retains independent review and commit ownership. R139 remains BUILD_BLOCKED, M3-05/M3-08 BLOCKED, M3-06 browser lifetime OPEN; A1/A2 unadmitted; Facebook/Zalo OA parked.
+
+## Historical R143 Local stack bounded FREEZE - 2026-11-05
 
 - Current mode: FREEZE
 - Active phase: FREEZE
@@ -128,11 +135,11 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: FREEZE
-- Active phase: FREEZE
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R143_LOCAL_STACK_CLOSURE_2026-11-05.md
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R144_A3_PACKAGE_METADATA_VERIFY_2026-11-05.md
 
-CCMAI-RUNTIME-143 records Local review of R140/R141/R142 after ordered merge; FREEZE waits for the required LAW gate unit failure. R139 remains BUILD_BLOCKED; Windows A3 is 4/5 and no A1/A2 admission is open. The next finite VERIFY is bounded by the Local successor contract above.
+CCMAI-RUNTIME-144 is DRAFT after the pre-dispatch COV_REPAIR_SUCCESSOR_HELD refusal; no Claude BUILD is released. R140/R141/R142 and R143 are bounded FROZEN after profile 1.3 `python -B` suite 130/130 and green main CI. R139 remains BUILD_BLOCKED; Windows A3 is 4/5 and no A1/A2 admission is open. A separately reviewed R139 audit/admission must precede any finite comparison; no fresh network fetch or runtime action is authorized.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

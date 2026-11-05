@@ -4,6 +4,12 @@
   "updatedAt": "2026-11-05",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
+    {"id": "r144-a3-verify-seed-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-144.json", "status": "ACTIVE", "description": "Immutable R2 seed for finite A3 package metadata VERIFY; no new fetch or runtime effect."},
+    {"id": "r144-a3-verify-order-20261105", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_144_A3_PACKAGE_METADATA_VERIFY.md", "status": "ACTIVE", "description": "DRAFT A3 metadata VERIFY packet; pre-dispatch held by R139 repair audit, no Claude work released."},
+    {"id": "r144-a3-verify-record-20261105", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-144.json", "status": "ACTIVE", "description": "R144 DRAFT with COV_REPAIR_SUCCESSOR_HELD; R139 remains BUILD_BLOCKED."},
+    {"id": "r144-a3-local-capture-20261105", "family": "continuity", "path": "docs/reviews/probes/r144_a3_package_metadata_20261105/local_capture.json", "status": "ACTIVE", "description": "Five installed Windows file hashes and bounded source capture; package.json differs from verified R141 tarball."},
+    {"id": "r144-a3-installed-package-20261105", "family": "continuity", "path": "docs/reviews/probes/r144_a3_package_metadata_20261105/installed_package.json", "status": "ACTIVE", "description": "Read-only 2,354-byte Windows Antigravity installed package.json capture for exact A3 comparison."},
+    {"id": "r143-closed-handoff-20261105", "family": "continuity", "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R143_LOCAL_STACK_CLOSURE_2026-11-05.md", "status": "ACTIVE", "description": "R143 bounded FREEZE of ordered Claude PR stack; R139 runtime remains blocked."},
     {"id": "r139-causal-assessment-20261105", "family": "continuity", "path": "docs/reviews/R139_CAUSAL_CHAIN_ASSESSMENT_2026-11-05.md", "status": "ACTIVE", "description": "Reviewed causal assessment, Root lifecycle design and exact integration reopen conditions; product blocked."},
     {"id": "r139-causal-evidence-20261105", "family": "governed_artifact_family", "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105", "status": "ACTIVE", "description": "Source pins, typed assessment and independent review; historical outcomes preserved."},
     {"id": "r140-worker-order", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_140_SELECTION_READ_REPAIR.md", "status": "ACTIVE", "description": "Worker-only independent M3-06 correction, S01-S10 acceptance and bounded scope."},
@@ -5497,9 +5503,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R143_LOCAL_STACK_CLOSURE_2026-11-05.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R144_A3_PACKAGE_METADATA_VERIFY_2026-11-05.md",
       "status": "ACTIVE",
-      "description": "R143 Local stack FROZEN after gate suite 130/130 with -B; A3 4/5 and R139 integration blocked."
+      "description": "Active R144 DRAFT A3 handoff; repair audit blocks Claude dispatch and R139 runtime."
     },
     {
       "id": "r060-work-order",
