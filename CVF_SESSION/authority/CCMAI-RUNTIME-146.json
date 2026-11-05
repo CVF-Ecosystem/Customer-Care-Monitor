@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-146",
+  "authorityKind": "DISPATCHER_OWNED_R139_REPAIR_AUDIT_AND_A3_VERIFY_ADMISSION",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Root/Local ORCHESTRATOR",
+    "implementationWorker": "Root/Local audit author; no product implementation",
+    "reviewer": "Independent reviewer, separate from Root audit author",
+    "commitSteward": "Root/Local COMMIT_STEWARD",
+    "closer": "Root/Local CLOSER and SESSION_SYNC_STEWARD"
+  },
+  "allowedPaths": [
+    "docs/reviews/R145_*.md",
+    "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a3_verify.json",
+    "docs/milestone-coverage-authority.json",
+    "docs/work_orders/CCMAI_RUNTIME_144_A3_PACKAGE_METADATA_VERIFY.md",
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md"
+  ],
+  "prohibitedEffects": [
+    "No product source, test, dependency, gate, workflow, core, R139 historical attempt, original causal assessment, or existing authority seed edits",
+    "No Chrome, MCP, browser, DB, provider, credential, customer/channel, installation or runtime action",
+    "No new network fetch, R139 implementation reopening, A1/A2 admission or physical-relaunch proof claim",
+    "No reset of historical repair attempts, UNKNOWN costs, product blockers or consumed effects",
+    "No worker commit, push, merge, deployment, public release or governance/product acceptance claim"
+  ],
+  "workOrder": "docs/reviews/R146_REPAIR_AUDIT_ADMISSION_PACKET_2026-11-05.md",
+  "ownerAuthorization": "Operator 2026-11-05 directs Root/Local to resolve the R144 blocked condition and prepare a prompt for Claude; R144 handoff requires a separate independently reviewed R139 audit/admission before dispatch. R145 seed d3b04cd was invalid (authorityKind grammar); it is retained as failed preflight history and confers no scope.",
+  "scope": "Independently reviewed documentary successor to the R139 repair-chain assessment, admitting only one finite A3 package-metadata VERIFY under R144; no R139 product implementation.",
+  "claimBoundary": "Static admission only. R139 remains BUILD_BLOCKED; M3-05/M3-08 remain BLOCKED; physical relaunch and A1/A2 remain unproved and unadmitted.",
+  "bootstrapException": false
+}
