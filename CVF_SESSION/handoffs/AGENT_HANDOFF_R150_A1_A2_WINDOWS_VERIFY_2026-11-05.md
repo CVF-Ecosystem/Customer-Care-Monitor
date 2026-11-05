@@ -1,6 +1,6 @@
 # R150 - finite Windows A1/A2 VERIFY handoff
 
-Status: ACTIVE
+Status: SUPERSEDED_BY_R151
 
 ## Current State
 

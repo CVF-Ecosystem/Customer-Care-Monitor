@@ -81,8 +81,8 @@
   },
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "FREEZE",
-  "activePhase": "FREEZE",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -92,11 +92,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-150",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R150_A1_A2_WINDOWS_VERIFY_2026-11-05.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-150 FROZEN with independently reviewed INCONCLUSIVE A1-b and A2 unrun. No retry or integrated admission under this tranche. A new bounded successor must repair HTTP response capture and Chrome ownership evidence before any new Windows VERIFY. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.",
+  "activeTranche": "CCMAI-RUNTIME-151",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R151_EVIDENCE_CAPTURE_2026-11-05.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-151 DISPATCH_READY: Root commits the independently reviewed source-only packet and material-SHA handoff marker, then Terra may begin bounded offline BUILD. No Chrome, daemon, provider, DB or product effect is admitted. R139 BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root/Local CLOSER / COMMIT_STEWARD / SESSION_SYNC_STEWARD",
+  "activeRole": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD",
   "updatedAt": "2026-11-05",
   "x-resolvedCoreCommit": "15e39450853184eb65dbde73398c69c3171a6241",
   "x-ownerRoadmapDiscipline": {

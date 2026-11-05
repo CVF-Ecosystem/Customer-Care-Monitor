@@ -1,0 +1,29 @@
+# R151 - evidence capture repair handoff
+
+Status: ACTIVE
+
+## Current State
+
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active role: Root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD
+- Active tranche: CCMAI-RUNTIME-151
+- Next allowed move: CCMAI-RUNTIME-151 DISPATCH_READY: Root commits the independently reviewed source-only packet and material-SHA handoff marker, then Terra may begin bounded offline BUILD. No Chrome, daemon, provider, DB or product effect is admitted. R139 BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+- Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
+
+## Transition acknowledgment
+
+- Root rehydrated the compact bootstrap, active state, R150 handoff, implementation truth and docs index before opening R151. Public Core remains pinned at `c4c8767ac8861854f40d466ba338ffd11eb9558e` and tracks `origin/main`. Public doctor has only the known profile 1.3 `LOCK_INVALID`; trusted operator-local bootstrap INST/CONT PASS and COV not applicable before this packet.
+- R150 is FROZEN with independently reviewed A1-b INCONCLUSIVE, A2 UNRUN and terminal Chrome descendant cleanup UNKNOWN. Its one Chrome launch and two WebSocket attempts remain spent. The later PID readback does not reconstruct terminal cleanup.
+- Root role transition: CLOSER / COMMIT_STEWARD / SESSION_SYNC_STEWARD for R150 to ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD for R151. Terra 6.1 is the separate source-only worker after dispatch; Astra Medium is the independent R2 reviewer. Sol 6.1 Medium supplied read-only HTTP capture design advice.
+- The immutable R151 dispatcher seed is the first commit on branch `r151-evidence-capture`: `9c88b241d261a97da739d4c2e7f8526371220eda`. It admits only a conditional successor. The source-only packet is `docs/work_orders/CCMAI_RUNTIME_151_EVIDENCE_CAPTURE_REPAIR.md`; R150 source/evidence remain immutable.
+
+## Current gate and product boundary
+
+- Root reproduced the Windows PowerShell 5.1 nested-array defect; Astra independently reproduced it. R150 WebSocket error/timeout lacks HTTP status. Root's `docs/reviews/R151_CAUSAL_DIAGNOSIS_AND_DESIGN_2026-11-05.md` separates those observed measurement causes from actual Chrome response and R139 product unknowns.
+- Astra accepted the source-only packet in R151_SOURCE_AUDIT_INDEPENDENT_REVIEW_2026-11-05.md. The M3 registry pins accepted audit 9173b5659e0e48758fcb665fd66185cce938437049e1dbabcc56492293f923da; exact packet b42b14520dc3144df0499880c5f308d8935dfa702e9e23cd7cd9035d76a2211d is DISPATCH_READY. Installed1.3 pre-dispatch PASS including APPL/COV; portable preflight PASS 7/7. Terra has not received BUILD release until material-SHA continuity commit. Any later Windows effect needs a separate admission after independent source review and immediate A3 recapture.
+- R139 physical no-relaunch prevention and same-owner/context/original-clock integrated lifecycle remain held. M3-05/M3-08 stay BLOCKED; Facebook/Zalo OA account/live checkpoint stays parked. No product or governance runtime claim follows from offline diagnostic tests.
+
+## Public Export Disposition
+
+DEFERRED_PRIVATE_ONLY

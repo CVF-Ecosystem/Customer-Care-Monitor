@@ -5547,9 +5547,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R150_A1_A2_WINDOWS_VERIFY_2026-11-05.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R151_EVIDENCE_CAPTURE_2026-11-05.md",
       "status": "ACTIVE",
-      "description": "Active continuity pointer for R150 FROZEN INCONCLUSIVE Windows A1/A2 diagnostic; R139/M3 blocked."
+      "description": "Active continuity pointer for R151 WORK_ORDER diagnostic capture repair; R139/M3 blocked."
     },
     {
       "id": "r060-work-order",

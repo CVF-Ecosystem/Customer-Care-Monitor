@@ -2,7 +2,16 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R150_A1_A2_WINDOWS_VERIFY_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-150", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R151_EVIDENCE_CAPTURE_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-151", "parked": true} -->
+
+## Current R151 evidence capture repair WORK_ORDER - 2026-11-05
+
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+
+R151 DISPATCH_READY source-only diagnostic repair on branch `r151-evidence-capture`, immutable seed `9c88b241d261a97da739d4c2e7f8526371220eda`. Astra accepted the packet; M3 registry pin and installed1.3 pre-dispatch PASS are recorded. Root commits the packet and material-SHA continuity before Terra BUILD. Astra Medium is the independent R2 reviewer; Sol 6.1 Medium supplied read-only HTTP advice. No Chrome/daemon/provider/DB/product effect. R150 INCONCLUSIVE and cleanup UNKNOWN retained; R139 BUILD_BLOCKED and M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+
+Root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD
 
 ## Current R150 Windows A1/A2 VERIFY admission - 2026-11-05
 
@@ -178,11 +187,11 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: FREEZE
-- Active phase: FREEZE
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R150_A1_A2_WINDOWS_VERIFY_2026-11-05.md
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R151_EVIDENCE_CAPTURE_2026-11-05.md
 
-CCMAI-RUNTIME-150 FROZEN with independently reviewed INCONCLUSIVE A1-b and A2 unrun. No retry or integrated admission under this tranche. A new bounded successor must repair HTTP response capture and Chrome ownership evidence before any new Windows VERIFY. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-151 WORK_ORDER DRAFT admits only source-only diagnostic capture repair after independent audit review and pre-dispatch. R150 remains FROZEN with INCONCLUSIVE A1-b, A2 unrun and cleanup UNKNOWN. No Windows process effect is admitted. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 
