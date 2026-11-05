@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "ccma.r140.operatorCloudAuthorization@1.0.0",
+  "status": "OPERATOR_GRANTED_RECORDED_BY_WORKER_PENDING_ROOT_REVIEW",
+  "decisionOwner": "Operator (repository owner) in the cloud chat session that dispatched this worker",
+  "recordedBy": "Cloud IMPLEMENTATION_WORKER (Claude Code remote session); worker records, does not originate, this decision",
+  "decisionDate": "2026-11-04 (UTC session date)",
+  "operatorStatementSummary": "Operator asked the worker to evaluate the GitHub repository, then granted the worker permission to perform R140 in the cloud container, and required the worker to record clearly every deviation and the permission change as an operator decision so Local/Root can review the code on GitHub before merge.",
+  "reason": "R140 work order and root_release.json were authored for the operator-local Windows workspace. In the cloud container: frontend/node_modules absent; ../WORKSPACE_RULES.md absent; ../.Controlled-Vibe-Framework-CVF absent; ../CVF_RULE_PACKS/operator-local absent. Work order forbids install/download and commit/push, so without this grant the worker must stop BLOCKED_WITH_REASON (as first reported).",
+  "grantedDeviations": [
+    {"id": "D1", "what": "One `npm ci --ignore-scripts --no-audit --no-fund` in frontend/ from the committed package-lock.json", "bounds": "No lockfile/package.json byte change; network limited to registry.npmjs.org package download; counted separately from the 3 test / 1 typecheck budget", "workOrderClauseDeviated": "must not ... install or download dependencies"},
+    {"id": "D2", "what": "Worker creates a transport-only git commit of the four allowed path classes and pushes it to branch claude/friendly-rubin-e2npmt", "bounds": "No PR, no merge, no push to main; not a material commit; Root/Local reviews on GitHub and performs the material commit/merge as COMMIT_STEWARD", "workOrderClauseDeviated": "Worker must not commit, push"},
+    {"id": "D3", "what": "Operator-local trusted bootstrap and WORKSPACE_RULES.md recorded UNAVAILABLE_IN_CLOUD; substitute is the in-repo installed profile 1.3 runner after lock hash verification", "bounds": "No full-doctor or trusted-bootstrap PASS claim; Root runs the trusted operator-local route locally before material commit", "workOrderClauseDeviated": "AGENTS.md workspace-root WORKSPACE_RULES.md stop rule; startup doctor/profile route"},
+    {"id": "D4", "what": "Container Node v22.23.4 / npm 10.9.9 instead of CI Node 20", "bounds": "Disclosed environment difference; GitHub frontend.yml (Node 20) remains the independent re-check if Root opens a PR", "workOrderClauseDeviated": "none (environment disclosure)"}
+  ],
+  "notChanged": ["work order", "authority seed CVF_SESSION/authority/CCMAI-RUNTIME-140.json", "root_release.json", "continuity/state/handoff/memory", "IMPLEMENTATION_STATUS", "registry/catalog/roadmap", "backend", "dependencies/lockfile", "gates/CI", "S01-S10 acceptance", "budget caps", "no app/browser/DB/provider/secrets"],
+  "verifiedBeforeGrant": {
+    "head": "e54358ce71205964be27db0f88b9d7f9293cbca4",
+    "originMainEqualsHead": true,
+    "preparationBaseAncestor": true,
+    "seedCommitAncestor": true,
+    "releaseBindingsAndPreimages": "10/10 LF-normalized SHA256 match",
+    "publicCoreRemoteHead": "c4c8767ac8861854f40d466ba338ffd11eb9558e (matches manifest pin; not cloned)",
+    "installedProfileLockHashes": "all files match .cvf/gate-profile.lock.json",
+    "inRepoRunnerPreDispatch": "PASS 6/6 exit 0 (ROUTE-01 NOT_APPLICABLE_WITH_REASON)"
+  },
+  "rootActionRequired": "Root/Local must accept or reject D1-D4 as operator-granted deviations during review; rejection means discard branch commits, no merge."
+}
