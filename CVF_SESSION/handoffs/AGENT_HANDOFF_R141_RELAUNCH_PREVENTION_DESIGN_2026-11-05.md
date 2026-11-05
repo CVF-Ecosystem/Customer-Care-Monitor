@@ -1,6 +1,8 @@
 # R141 - physical-relaunch prevention design handoff
 
-Status: ACTIVE
+> Superseded as the active handoff by `CVF_SESSION/handoffs/AGENT_HANDOFF_R142_DOCS_BUILD_REPAIR_2026-11-05.md` on 2026-11-05. R141 stays REVIEW_PASS (PR #15) with its Local conditions.
+
+Status: SUPERSEDED
 
 ## Current State
 
