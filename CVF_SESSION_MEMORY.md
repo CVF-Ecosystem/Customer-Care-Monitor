@@ -2,7 +2,14 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R144_A3_PACKAGE_METADATA_VERIFY_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-144", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R147_R139_A3_AUDIT_ADMISSION_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-147", "parked": true} -->
+
+## Current R147 separate R139 repair audit admission - 2026-11-05
+
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+
+R147 immutable seed is committed at `07ff318312861fcd9807e874dce0ffd669bda980`. R145 and R146 seeds failed gate validation and remain immutable history. Root is authoring a separately reviewed successor audit for one finite R144 A3 VERIFY. R144 remains DRAFT until audit and pre-dispatch pass. R139 stays BUILD_BLOCKED, M3-05/M3-08 BLOCKED; A1/A2 and physical relaunch are unproved; Facebook/Zalo OA parked.
 
 ## Current R144 A3 package metadata VERIFY dispatch - 2026-11-05
 
@@ -137,7 +144,7 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Contract: cvf.downstreamContinuityContract@1.0.0
 - Current mode: WORK_ORDER
 - Active phase: WORK_ORDER
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R144_A3_PACKAGE_METADATA_VERIFY_2026-11-05.md
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R147_R139_A3_AUDIT_ADMISSION_2026-11-05.md
 
 CCMAI-RUNTIME-144 is DRAFT after the pre-dispatch COV_REPAIR_SUCCESSOR_HELD refusal; no Claude BUILD is released. R140/R141/R142 and R143 are bounded FROZEN after profile 1.3 `python -B` suite 130/130 and green main CI. R139 remains BUILD_BLOCKED; Windows A3 is 4/5 and no A1/A2 admission is open. A separately reviewed R139 audit/admission must precede any finite comparison; no fresh network fetch or runtime action is authorized.
 

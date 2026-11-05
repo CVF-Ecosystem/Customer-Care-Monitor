@@ -1,6 +1,6 @@
 # R144 finite A3 package metadata VERIFY handoff
 
-Status: ACTIVE
+Status: INACTIVE_PENDING_R147_AUDIT
 
 ## Current State
 

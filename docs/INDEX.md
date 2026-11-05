@@ -16,7 +16,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R144 DRAFT A3 handoff; repair audit blocks Claude dispatch and R139 runtime.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R144_A3_PACKAGE_METADATA_VERIFY_2026-11-05.md`
+- Active R144 DRAFT A3 handoff; repair audit blocks Claude dispatch and R139 runtime.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R147_R139_A3_AUDIT_ADMISSION_2026-11-05.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -5281,6 +5281,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - DRAFT A3 metadata VERIFY packet; pre-dispatch held by R139 repair audit, no Claude work released.: `docs/work_orders/CCMAI_RUNTIME_144_A3_PACKAGE_METADATA_VERIFY.md`
 - R144 DRAFT with COV_REPAIR_SUCCESSOR_HELD; R139 remains BUILD_BLOCKED.: `CVF_SESSION/tranches/CCMAI-RUNTIME-144.json`
 - Immutable R2 seed for finite A3 package metadata VERIFY; no new fetch or runtime effect.: `CVF_SESSION/authority/CCMAI-RUNTIME-144.json`
+- Immutable failed seed; authorityKind rejected before audit or worker action.: `CVF_SESSION/authority/CCMAI-RUNTIME-145.json`
+- Immutable failed seed; review-path allowlist rejected before audit or worker action.: `CVF_SESSION/authority/CCMAI-RUNTIME-146.json`
+- Root-owned documentary audit packet; R139 product remains blocked.: `docs/reviews/R147_REPAIR_AUDIT_ADMISSION_PACKET_2026-11-05.md`
+- Separate immutable R2 seed for R139 repair audit and finite R144 A3 VERIFY admission.: `CVF_SESSION/authority/CCMAI-RUNTIME-147.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

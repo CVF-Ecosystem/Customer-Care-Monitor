@@ -4,6 +4,11 @@
   "updatedAt": "2026-11-05",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
+    {"id": "r145-invalid-audit-seed-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-145.json", "status": "ACTIVE", "description": "Immutable failed seed; authorityKind rejected before audit or worker action."},
+    {"id": "r146-invalid-audit-seed-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-146.json", "status": "ACTIVE", "description": "Immutable failed seed; review-path allowlist rejected before audit or worker action."},
+    {"id": "r147-audit-seed-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-147.json", "status": "ACTIVE", "description": "Separate immutable R2 seed for R139 repair audit and finite R144 A3 VERIFY admission."},
+    {"id": "r147-audit-packet-20261105", "family": "continuity", "path": "docs/reviews/R147_REPAIR_AUDIT_ADMISSION_PACKET_2026-11-05.md", "status": "ACTIVE", "description": "Root-owned documentary audit packet; R139 product remains blocked."},
+
     {"id": "r144-a3-verify-seed-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-144.json", "status": "ACTIVE", "description": "Immutable R2 seed for finite A3 package metadata VERIFY; no new fetch or runtime effect."},
     {"id": "r144-a3-verify-order-20261105", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_144_A3_PACKAGE_METADATA_VERIFY.md", "status": "ACTIVE", "description": "DRAFT A3 metadata VERIFY packet; pre-dispatch held by R139 repair audit, no Claude work released."},
     {"id": "r144-a3-verify-record-20261105", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-144.json", "status": "ACTIVE", "description": "R144 DRAFT with COV_REPAIR_SUCCESSOR_HELD; R139 remains BUILD_BLOCKED."},
@@ -5503,7 +5508,7 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R144_A3_PACKAGE_METADATA_VERIFY_2026-11-05.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R147_R139_A3_AUDIT_ADMISSION_2026-11-05.md",
       "status": "ACTIVE",
       "description": "Active R144 DRAFT A3 handoff; repair audit blocks Claude dispatch and R139 runtime."
     },

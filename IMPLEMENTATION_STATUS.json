@@ -1,4 +1,5 @@
 {
+  "x-r147AuditAdmission20261105": {"status": "WORK_ORDER_DRAFT", "seedCommit": "07ff318312861fcd9807e874dce0ffd669bda980", "r139": "BUILD_BLOCKED_UNCHANGED"},
   "x-r144A3MetadataVerify20261105": {"status": "DRAFT_REPAIR_AUDIT_HOLD", "seedCommit": "40ef39ccf81608a967287c540548b33621f91e7c", "a3": "4/5_PACKAGE_JSON_MISMATCH", "r139": "BUILD_BLOCKED_UNCHANGED", "networkFetchesAllowed": 0, "runtimeStartsAllowed": 0},
   "x-r141Design20261105": {"status": "FROZEN_DESIGN_SPEC_MERGED", "date": "2026-11-05", "branch": "claude/friendly-rubin-e2npmt-r141", "seedCommit": "19018e2d0c57f577f2cd309f7fa2611b0bc3a301", "spec": "docs/reviews/R141_RELAUNCH_PREVENTION_DESIGN_SPEC_2026-11-05.md", "sourceVerification": "15/15 byte-identical to npm chrome-devtools-mcp@1.9.0", "networkFetches": 1, "providerCalls": 0, "browserCalls": 0, "runtimeStarts": 0, "r139Reopened": false, "mainMerged": true, "a3": "4/5_INSTALLED_PACKAGE_JSON_MISMATCH", "localReview": "docs/reviews/R142_LOCAL_STACK_MERGE_REVIEW_AND_SUCCESSOR_CONTRACT_2026-11-05.md"},
   "x-r140Review20261105": {"status": "FROZEN_SOURCE_COMPONENT_MERGED", "date": "2026-11-05", "branch": "claude/friendly-rubin-e2npmt", "buildCommit": "59788f0ebb6c77c66fda745181506793ced5625a", "workerReturn": "docs/reviews/R140_SELECTION_READ_WORKER_RETURN_2026-11-05.md", "review": "docs/reviews/R140_SELECTION_READ_INDEPENDENT_REVIEW_2026-11-05.md", "operatorDeviations": "docs/reviews/probes/r140_selection_read_20261105/worker_operator_cloud_authorization.json (D1-D4)", "tests": "red original 10fail/18pass exit1; green 28/28 exit0; vue-tsc exit0", "workerTestInvocations": 2, "workerTypecheck": 1, "npmCi": 1, "repairRounds": 0, "providerCalls": 0, "browserCalls": 0, "databaseActions": 0, "mainMerged": true, "freeze": "FROZEN", "r139": "BUILD_BLOCKED_UNCHANGED", "localReview": "docs/reviews/R142_LOCAL_STACK_MERGE_REVIEW_AND_SUCCESSOR_CONTRACT_2026-11-05.md"},
@@ -552,7 +553,7 @@
       "gateUnitBasis": "46PASS52.797s inherited9042f91 unchanged tools/tests",
       "exactStagedPreflight": "Required before commit, exact7 metadata paths"
     },
-    "activeTranche": "CCMAI-RUNTIME-065",
+    "activeTranche": "CCMAI-RUNTIME-147",
     "workerModel": {
       "model": "gpt-6.1-sol",
       "reasoningEffort": "medium"
@@ -2186,7 +2187,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-144",
+  "activeTranche": "CCMAI-RUNTIME-147",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
