@@ -31,6 +31,13 @@ Status: ACTIVE
 - Root acknowledges ORCHESTRATOR / COMMIT_STEWARD / SESSION_SYNC_STEWARD; Astra remains independent REVIEWER. The official order stays byte-pinned and the administrative carrier records BUILD status.
 - Terra explicitly rehydrated current R151 BUILD bootstrap, state, handoff, memory, implementation status, index and exact order after release marker `d88b393c`, and accepted IMPLEMENTATION_WORKER for source-only allowed paths and the 45-minute / three-test / one-syntax ceiling before any edit. Terra acknowledged R150 immutable and no process, network, provider, DB or product effects. Root recorded this acknowledgment before source BUILD.
 
+## Same-scope blocked return and continuation
+
+- Terra returned `BLOCKED_WITH_REASON` before source edits in `docs/reviews/R151_SOURCE_WORKER_RETURN_2026-11-05.md`; V01-V07 remain unverified, focused tests 0/3, syntax 0/1 and effects 0. Worker-return gate initially failed only missing Risk, Terra corrected it, and rerun PASS. This is execution-capacity limitation without a completed repair or corrected-test failure. Preserve the actual active-minute value UNKNOWN.
+- Astra independently accepted the blocked return only in `docs/reviews/R151_SOURCE_BLOCKED_RETURN_INDEPENDENT_REVIEW_2026-11-05.md` (LF SHA-256 `7dfb8ee76810be217e0f2b51d95defede0d6670d39a429d7a035b80c777edc82`); reviewer-fast PASS with ROUTE not applicable. No source or product acceptance follows.
+- Sol 6.1 Medium advised read-only reuse of R150 orchestration, with new pure diagnostic helpers and offline fixtures in the authorized R151 paths. Sol did not implement. Root accepts a Terra same-scope continuation under the unchanged official packet and seed; no new tranche or budget reset.
+- Original authorized BUILD release was `2026-11-05T16:17:18+07:00` at `d88b393c`; Root observed the blocked return by `2026-11-05T16:18:56.1140974+07:00`, so its first interval is conservatively debited two wall minutes while actual active time stays UNKNOWN. To include all subsequent advisory/worker time and waits conservatively, the hard stop is `2026-11-05T17:02:18+07:00`, 45 wall minutes after original release. Terra must retain new start/end times and stop earlier on any packet condition.
+
 ## Public Export Disposition
 
 DEFERRED_PRIVATE_ONLY
