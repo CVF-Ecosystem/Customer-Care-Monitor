@@ -1,6 +1,6 @@
 # R149 successor contract: owner-held Chrome (OHC) for the R139 integrated lifecycle
 
-Status: SUCCESSOR_CONTRACT_PENDING_INDEPENDENT_REVIEW
+Status: SUCCESSOR_CONTRACT_REPAIR1_PENDING_REREVIEW
 Tranche: CCMAI-RUNTIME-149
 Risk: R2
 Worker: Cloud ORCHESTRATOR acting as SPEC_AUTHOR (documentary only)
@@ -16,7 +16,11 @@ The draft Windows VERIFY packet is `docs/reviews/R149_A1_A2_WINDOWS_VERIFY_WORK_
 
 ## 0. Controlling inputs and precedence
 
-Where two sources conflict, the later item wins.
+**Precedence (repair B1).** This contract **adds** requirements; it removes none.
+
+- The Root-selected lifecycle in item 1 and the R141 N1–N9 facts and §4.5 amendments in item 2 stay controlling. Every row, check and prohibition in them still applies, even where §5 below does not repeat it.
+- Where two sources differ, the **stricter** requirement applies.
+- Item 5 (the operator's relaxed A3 condition) is the only deliberate relaxation, and it is limited to §1.
 
 1. `docs/reviews/R139_CAUSAL_CHAIN_ASSESSMENT_2026-11-05.md`: Root-selected lifecycle and reopen prerequisite.
 2. `docs/reviews/R141_RELAUNCH_PREVENTION_DESIGN_SPEC_2026-11-05.md`: OHC design, N1–N9, and §4.5 amendments R-F1 to R-F4.
@@ -70,7 +74,17 @@ The owner starts `node <pkg>/build/src/daemon/daemon.js` as a foreground child a
 - `wsHeaders` implies `wsEndpoint` (`config/browser-options.js:64`);
 - `allowedUrlPattern` conflicts with `blockedUrlPattern` (`config/mcp-options.js:109,114`).
 
-`--browserUrl`, `--autoConnect`, `--channel`, `--userDataDir`, `--isolated`, `--executablePath`, `--headless`, `--slim`, `--no-page-id-routing` and `--wsHeaders` are forbidden. An empty `--wsEndpoint=` is forbidden, because it would fall through to launch (N1).
+Repair B2 completes the list of native conflicts and implications:
+- `autoConnect` conflicts with `isolated`, `executablePath` (`config/browser-options.js:10`);
+- `executablePath` conflicts with `browserUrl`, `wsEndpoint` (`:89`);
+- `userDataDir` conflicts with `browserUrl`, `wsEndpoint`, `isolated` (`:99`);
+- `channel` conflicts with `browserUrl`, `wsEndpoint`, `executablePath` (`:105`);
+- the PWA tool category conflicts with `autoConnect`, `browserUrl`, `wsEndpoint` (`config/category-options.js:37`), so the PWA category must stay off;
+- `mcp-options.js:90,95` imply `experimental*` options, which must not be set.
+
+The native parser enforces these conflicts. The closed set does not depend on them: everything outside the five admitted flags is rejected.
+
+`--browserUrl`, `--autoConnect`, `--channel`, `--userDataDir`, `--isolated`, `--executablePath`, `--headless`, `--slim`, `--no-page-id-routing`, `--wsHeaders`, every PWA/experimental category flag, and any Node flag before the script are forbidden. An empty `--wsEndpoint=` is forbidden, because it would fall through to launch (N1).
 
 ### 2.3 Environment allowlist (F3)
 
@@ -95,10 +109,15 @@ Admitted environment for the owner and every actor:
   - every `npm_*`
   - every `PUPPETEER_*`
   - `DEBUG`
-- **Allowed:** the OS minimum, which is the R139 minimum-environment rule (`R139_SDK_P01_B01_DESIGN_SPEC_2026-10-30.md:63`).
+- **Required and identical for the owner and every actor:**
+  - `TEMP`/`TMP` point to the same fresh owned temp directory, as R139:63 requires.
+  - On Windows, `os.tmpdir()` decides the PID-file directory through `getRuntimeHome`'s fallback (`daemon/utils.js:60-61`). A different `TEMP` for an actor would break single-daemon detection.
+- **Allowed:** the remaining OS minimum (for example `SystemRoot`, `PATH`, `USERPROFILE`), which is the R139 minimum-environment rule (`R139_SDK_P01_B01_DESIGN_SPEC_2026-10-30.md:63`).
+  - `LOCALAPPDATA`/`XDG_DATA_HOME` are read only for usage-statistics persistence, which `--no-usage-statistics` and `CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS=1` disable. They are recorded but not relied on.
+- **Node flags:** the daemon must be started as `node <daemon.js> …` with no Node options before the script. `status.args` cannot show such flags, so the owner records the daemon's full process command line from the OS and compares it.
 
 **XDG resolution.**
-- On Windows the daemon socket is a named pipe that includes the username and ignores `XDG_RUNTIME_DIR` (`daemon/utils.js:29-33`).
+- On Windows the daemon socket is a named pipe that includes the username and ignores `XDG_RUNTIME_DIR` (`daemon/utils.js:30-35`).
 - However, `getRuntimeHome`, which gives the PID-file location, checks `XDG_RUNTIME_DIR` **before** the Windows fallback (`daemon/utils.js:45-62`). A set `XDG_RUNTIME_DIR` would therefore move the PID file and break single-daemon detection. That is why it must be unset.
 - `XDG_ROOT` is not read by the package; it stays unset only to satisfy R139.
 
@@ -117,6 +136,11 @@ Any difference means HOLD before PRELIMINARY_OBSERVED.
   - Each actor, producer or observer, makes its **own** original `sendCommand` call (`daemon/client.js:105-109`; it never starts a daemon).
   - The actor returns the unmodified response envelope and its terminal outcome to the owner.
   - The owner is a **sequencing gate**. It releases the next command only after checking the prior response against §4. The owner never originates, alters or replays an actor call.
+- **N-R2 HOLD additions (repair):** any of the following is a HOLD:
+  - a missing or truncated envelope;
+  - an actor call that times out;
+  - an actor call issued without an owner release;
+  - a response the actor did not return to the owner.
 - **R-F4 tool allowlist:** unchanged from R141 §4.5. `evaluate_script` stays forbidden.
 - **N-R1:**
   - At PRELIMINARY_OBSERVED the owner records the **full** page inventory returned by the observer's own `list_pages`, including Chrome's initial tab.
@@ -137,11 +161,29 @@ Any difference means HOLD before PRELIMINARY_OBSERVED.
 
 | State | Requirement |
 |---|---|
-| ADMITTED → OWNER_HELD | §1 recapture PASS; A1 and A2 evidence accepted by Local; single-daemon/no-foreign-Chrome preflight. Then the owner launches Chrome once, records the GUID endpoint, starts the daemon once, and §2.4 `status` must PASS. |
+| ADMITTED → OWNER_HELD | R-F2 remains in force throughout: the native CLI (`bin/chrome-devtools.js`), its `start` and any `startDaemon`/ensure helper are forbidden. §1 recapture PASS; A1 and A2 evidence accepted by Local; single-daemon/no-foreign-Chrome preflight. Then the owner launches Chrome once, records the GUID endpoint, starts the daemon once, and §2.4 `status` must PASS. |
 | OWNER_HELD → PRELIMINARY_OBSERVED | The producer's own `new_page` (released by the owner); the observer's own call on that page ID; the owner pins the full inventory (N-R1). |
-| PRELIMINARY_OBSERVED → PRODUCT_WINDOW | Allowlisted tools only, each with the admitted `pageId`; owner gate and F5 check before every release. |
+| PRELIMINARY_OBSERVED → PRODUCT_WINDOW | **Root verification (from the Root lifecycle, repair B1):** Root verifies the provisional evidence and the previously admitted product conditions within the original clock. **G1/E01–E03 precedes G2/E04–E06.** No product action if identity, authority, clock or pre-action enforcement is uncertain; no final-capability seal is fabricated. Then: allowlisted tools only, each with the admitted `pageId`; owner gate and F5 check before every release. |
 | any → CLEANUP | On any §4 condition. Unknown provider outcomes keep their debit or hold; there is no retry or relaunch. |
-| CLEANUP → TERMINAL | The owner closes Chrome through its original handle and waits on it and on the daemon child within the +1200 s reserve. Evidence: original-handle waits, GUID, PIDs, argv/env receipts, all actor envelopes. |
+| CLEANUP → TERMINAL | Within the +1200 s reserve:
+1. The owner sends the native `stop` command (`daemon/client.js:145-146`; the native client then waits for the PID file to be removed).
+2. The owner waits on the daemon child handle and confirms the MCP child process has exited.
+3. The owner closes Chrome through its original handle and waits on it.
+4. **R-F2 TERMINAL check:** no other daemon socket or PID file exists for the session, and no non-descendant Chrome uses the owned user-data-dir.
+
+Evidence: original-handle waits, GUID, PIDs, argv/env and command-line receipts, all actor envelopes. |
+| TERMINAL → INDEPENDENT_ACCEPTANCE | From the Root lifecycle: only now is the final integrated lifecycle and E01–E06 on current source assessed by an independent reviewer. Partial or unknown fields do not become PASS; historical r2/r3 stay unchanged. |
+
+## 5a. Repair history
+
+Independent review round 1 (`docs/reviews/R149_OHC_SUCCESSOR_INDEPENDENT_REVIEW_2026-11-05.md`) returned CHANGES_REQUIRED with B1–B3 blocking.
+
+- **B1:** precedence restated so the Root lifecycle and R141 rules stay controlling; the Root rows and R-F2 rows were restored in §5.
+- **B2:** the complete N4 conflict list was added in §2.2.
+- **B3:** fixed in the draft (version read from file metadata).
+- **Non-blocking items addressed:** `TEMP`/`TMP` and Node-flag rules (§2.3), N-R2 HOLD additions (§3), native `stop` in CLEANUP (§5), and the citation `utils.js:30-35`. The A1 evidence and fixed-port items are fixed in the draft.
+
+This is the single consolidated repair round.
 
 ## 6. Errata to R141 (F6)
 

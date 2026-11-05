@@ -30,3 +30,12 @@ Build gate history, retained:
    - CONT-01: the memory "Current Truth" block still said FREEZE. The orchestrator's edit had changed the R148 historical section by mistake; that was reverted.
    - ROLE-01: the draft's `Risk:` line was not a bare token.
 2. Both fixed. Final: runner worker-return PASS 7/0; preflight PASS 6/6 (catalog SKIP).
+
+Review round 1, retained:
+- The independent reviewer returned CHANGES_REQUIRED.
+  - B1: precedence let the contract override Root rows; the Root and R-F2 rows were dropped.
+  - B2: the N4 conflict list was incomplete.
+  - B3: the draft used `chrome.exe --version`.
+  - Plus non-blocking items.
+- The single consolidated repair round addressed all of them (contract §0, §2.2, §2.3, §3, §5, §5a; draft §2, §3, §5a). The orchestrator verified the B2 source lines.
+- Tranche history: REVIEW_PENDING, then CHANGES_REQUIRED, then REVIEW_PENDING. Re-review goes to the same reviewer.

@@ -26,7 +26,9 @@ On the operator's Windows machine, with the A3-identified `chrome-devtools-mcp@1
 ## 2. Preconditions (all, same session)
 
 1. §1 of `docs/reviews/R149_OHC_SUCCESSOR_CONTRACT_2026-11-05.md`: full-tree recapture shows exactly the relaxed A3 identity (`package.json` `592ef654…`, `README.md` absent, the other 346 equal, no extras). Otherwise NO_START.
-2. Record Chrome version (`chrome.exe --version` run from the shell is the only allowed "launch" before the campaign; it starts no browser session), Node version, OS build and Antigravity version.
+2. Record versions **without executing Chrome** (repair B3):
+   - Chrome: `(Get-Item '<chrome.exe>').VersionInfo.ProductVersion`. Do **not** run `chrome.exe --version`; on Windows that can open the operator's default profile, which R139:63 forbids.
+   - Also record the Node version, OS build and Antigravity version.
 3. Environment exactly as in R149 §2.3, with a fresh session UUID and fresh owned temp, user-data and evidence roots.
 4. No other `chrome-devtools-mcp` daemon for that session ID, and no Chrome process using the owned user-data-dir.
 
@@ -50,8 +52,9 @@ The owner-side helper may use only Node's built-in `WebSocket` (Node ≥ 22) or 
   - Expect: handshake succeeds.
   - Then send `Browser.getVersion` and record the reply.
 - **A1-b.** Open a raw WebSocket to `ws://127.0.0.1:P/devtools/browser/<guid with one hex digit changed>`.
-  - Expect: handshake refused (HTTP 4xx or connection close before open).
-- **A1-c.** Close Chrome #1 through its handle and wait on it. Launch Chrome #2 on the same port P. Record its new GUID. Open a raw WebSocket to Chrome #1's old endpoint.
+  - Expect: handshake refused.
+  - **Evidence rule (repair):** Node's built-in `WebSocket` cannot tell a refused upgrade from nothing listening. Each A1 probe therefore also sends a raw HTTP upgrade request over a TCP socket (Node `net`, no packages) and records the HTTP status line. It also records the port's listening PID (`Get-NetTCPConnection -LocalPort P -State Listen`), which must be the current Chrome's browser process or its descendant. A refusal counts only with a Chrome listener present and a non-101 status.
+- **A1-c.** Close Chrome #1 through its handle and wait on it. Confirm P has no listener. Launch Chrome #2 on the same port P. Confirm that the listener on P is Chrome #2 (by PID, same rule as above); if not, the result is INCONCLUSIVE and there is no retry. Record its new GUID. Open a raw WebSocket to Chrome #1's old endpoint.
   - Expect: refused.
   - Then connect to Chrome #2's endpoint. Expect: success (control).
 - **A1-d (optional, only if A1-c is inconclusive).** With no Chrome on P, connect to the old endpoint.
@@ -72,7 +75,7 @@ The owner-side helper may use only Node's built-in `WebSocket` (Node ≥ 22) or 
 
 **Cleanup**
 
-1. Stop the daemon through its handle and wait on it.
+1. Stop the daemon with the native `stop` command via `sendCommand` (it removes the PID file). Then wait on the daemon handle and confirm the MCP child process has exited.
 2. Close the last Chrome through its handle and wait on it.
 3. Confirm that no Chrome process uses the owned user-data-dir and no daemon PID file remains for the session.
 
@@ -101,6 +104,10 @@ Stop on any of the following:
 - any need for network beyond localhost, an install or a product page.
 
 Return the evidence with UNKNOWNs. Never retry with relaxed settings.
+
+## 5a. Repair history
+
+Independent review round 1 returned CHANGES_REQUIRED. B3 (no `chrome.exe --version`) is fixed in §2. The non-blocking items are fixed in §3: HTTP-status and listener-PID evidence for A1, the fixed-port ownership check, and native `stop` in cleanup.
 
 ## 6. Outcome classes
 
