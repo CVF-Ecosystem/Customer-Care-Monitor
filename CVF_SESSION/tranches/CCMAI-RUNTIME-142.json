@@ -45,7 +45,8 @@
   "disposition": "REVIEW_PASS",
   "parentTranche": "CCMAI-RUNTIME-141",
   "reviewEvidence": [
-    "docs/reviews/R142_DOCS_BUILD_REPAIR_REVIEW_2026-11-05.md"
+    "docs/reviews/R142_DOCS_BUILD_REPAIR_REVIEW_2026-11-05.md",
+    "docs/reviews/R142_LOCAL_STACK_MERGE_REVIEW_AND_SUCCESSOR_CONTRACT_2026-11-05.md"
   ],
   "effects": {
     "providerCalls": 0,
@@ -76,6 +77,8 @@
     }
   ],
   "buildCommit": "9612cc512635cbce378022342cc2097d2b4e064b",
+  "mergeCommit": "c47fe9c17bc9116ef8312603b3fa0fa40cc9af03",
+  "localFreezePending": "Required gate unit suite 129/130 PASS, LAW fixture failure retained in R143 packet",
   "ciRun": {
     "url": "https://github.com/CVF-Ecosystem/Customer-Care-Monitor/actions/runs/41928835349",
     "sha": "9612cc512635cbce378022342cc2097d2b4e064b",

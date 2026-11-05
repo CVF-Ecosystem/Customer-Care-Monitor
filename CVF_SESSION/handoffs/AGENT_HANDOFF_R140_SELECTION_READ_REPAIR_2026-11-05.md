@@ -1,19 +1,23 @@
 # R140 - independent selection-read source worker handoff
 
-> Superseded as the active handoff by `CVF_SESSION/handoffs/AGENT_HANDOFF_R141_RELAUNCH_PREVENTION_DESIGN_2026-11-05.md` on 2026-11-05. R140 remains REVIEW_PASS on PR #14, awaiting Local merge; this file keeps its full R140 history.
+> Historically superseded by the R141 and R142 cloud handoffs; Root/Local examined this handoff during stack closure. The R143 Local handoff now carries the active pointer. Full earlier history is retained below.
 
 Status: SUPERSEDED
 
 ## Current State
 
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Cloud agent: IMPLEMENTATION_WORKER, then operator-granted ORCHESTRATOR / SESSION_SYNC_STEWARD (branch-only transport commits); independent REVIEWER = operator-appointed separate Opus subagent; Root/Local retains COMMIT_STEWARD for main, D1-D4 ruling and FREEZE
+- Current mode: FREEZE
+- Active phase: FREEZE
+- Active role: Root/Local ORCHESTRATOR / independent REVIEWER / CLOSER / COMMIT_STEWARD / SESSION_SYNC_STEWARD
 - Active tranche: CCMAI-RUNTIME-140
-- Next allowed move: CCMAI-RUNTIME-140: source/test REVIEW_PASS by operator-appointed independent reviewer on branch claude/friendly-rubin-e2npmt (build 59788f0ebb6c); see docs/reviews/R140_SELECTION_READ_INDEPENDENT_REVIEW_2026-11-05.md. Next: Local/Root reviews on GitHub before merge, rules on operator-granted cloud deviations D1-D4, runs trusted operator-local bootstrap/doctor and the Windows catalog gate, then decides material merge to main and FREEZE. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED, no P01 dispatch, physical-relaunch prevention still unavailable. No browser/DB/provider effect, no product acceptance; Facebook/ZaloOA parked.
+- Next allowed move: CCMAI-RUNTIME-140/141/142 FROZEN after Local merged PR #14/#15/#16. Next: finite retained-evidence VERIFY of the installed Antigravity package.json hash mismatch, with independent review; only then decide a separate A1/A2 Windows admission. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED, M3-06 browser lifetime OPEN; no Chrome/daemon, DB, provider, product or governance proof; Facebook/ZaloOA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
-## Startup acknowledgment
+## Local closure acknowledgment and role transition
+
+Root/Local rehydrated the merged stack, acted as independent REVIEWER, then CLOSER / COMMIT_STEWARD / SESSION_SYNC_STEWARD. The review, D1-D4 rulings, A3 mismatch and R141 seven-condition successor contract are in `docs/reviews/R142_LOCAL_STACK_MERGE_REVIEW_AND_SUCCESSOR_CONTRACT_2026-11-05.md`. R140/R141/R142 are FROZEN only in their bounded source/design/docs scopes. R139 remains BUILD_BLOCKED; no repair-audit reopen or Windows runtime admission. Prior costs, failures and UNKNOWNs remain.
+
+## Historical startup acknowledgment
 
 Root rehydrated current project authority and transitions to WORK_ORDER_AUTHOR/COMMIT_STEWARD for source-only preparation. Public Core c4c8767; installed operator-local1.3 verified; R2; live proof required for AI/governance claims, none made here. Preparation seed commit 4c3cc11ef36f0e9e3e9738b26647f59909b04391. No worker execution or new runtime allocated.
 

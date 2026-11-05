@@ -48,7 +48,8 @@
     "docs/reviews/probes/r141_relaunch_prevention_20261105/source_verification.json"
   ],
   "reviewEvidence": [
-    "docs/reviews/R141_RELAUNCH_PREVENTION_INDEPENDENT_REVIEW_2026-11-05.md"
+    "docs/reviews/R141_RELAUNCH_PREVENTION_INDEPENDENT_REVIEW_2026-11-05.md",
+    "docs/reviews/R142_LOCAL_STACK_MERGE_REVIEW_AND_SUCCESSOR_CONTRACT_2026-11-05.md"
   ],
   "effects": {
     "networkFetches": 1,
@@ -59,6 +60,9 @@
   },
   "repairRounds": 1,
   "buildCommit": "5fa904438d94bea40d2a884da2c5389a0a2c91be",
+  "mergeCommit": "57b1570a2b9adcc08a4bacdcc6c1dede4fd02a9d",
+  "localFreezePending": "Required gate unit suite 129/130 PASS, LAW fixture failure retained in R143 packet",
+  "localA3": "4/5 raw Windows installed-package hashes match; package.json mismatch; no R139 reopen or runtime admission",
   "localConditions": [
     "F3: add a post-start status.args equality check; env allowlist must name the three R139 variables",
     "F5: owner confirms the original Chrome handle is alive before releasing each command",

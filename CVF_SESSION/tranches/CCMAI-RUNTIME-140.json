@@ -78,11 +78,14 @@
   "reviewEvidence": [
     "docs/reviews/probes/r140_selection_read_20261105/independent_admission.json",
     "docs/reviews/R140_SELECTION_READ_WORKER_RETURN_2026-11-05.md",
-    "docs/reviews/R140_SELECTION_READ_INDEPENDENT_REVIEW_2026-11-05.md"
+    "docs/reviews/R140_SELECTION_READ_INDEPENDENT_REVIEW_2026-11-05.md",
+    "docs/reviews/R142_LOCAL_STACK_MERGE_REVIEW_AND_SUCCESSOR_CONTRACT_2026-11-05.md"
   ],
   "preparationCommit": "723976c9d90bcb7303f402e589c3df7924c56ba6",
   "releaseEvidence": "docs/reviews/probes/r140_selection_read_20261105/root_release.json",
   "buildCommit": "59788f0ebb6c77c66fda745181506793ced5625a",
+  "mergeCommit": "3e1d169b6a3c0ede9fb06cbf9f62a7bad554968f",
+  "localFreezePending": "Required gate unit suite 129/130 PASS, LAW fixture failure retained in R143 packet",
   "x-operatorRoleAssignments20261105": {
     "source": "Operator in cloud session",
     "grants": [

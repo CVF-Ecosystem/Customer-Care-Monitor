@@ -2,9 +2,18 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R142_DOCS_BUILD_REPAIR_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-142", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R143_LOCAL_STACK_CLOSURE_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-143", "parked": true} -->
 
-## Current R142 docs build repair checkpoint - 2026-11-05
+## Current Local stack review, FREEZE held - 2026-11-05
+
+- Current mode: REVIEW
+- Active phase: REVIEW
+
+CCMAI-RUNTIME-143 REVIEW_PENDING after Local merged and reviewed PR #14/#15/#16. Resolve the reproducible LAW gate unit failure before FREEZE; then run committed-range checks and close the three bounded tranches. After closure, finite VERIFY must resolve the installed Antigravity package.json hash mismatch before a separate A1/A2 Windows admission. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED, M3-06 browser lifetime OPEN; no Chrome/daemon, DB, provider, product or governance proof; Facebook/ZaloOA parked.
+
+Root/Local ORCHESTRATOR / independent REVIEWER / COMMIT_STEWARD / SESSION_SYNC_STEWARD. Local decisions, D1-D4 and seven R141 successor conditions are recorded in `docs/reviews/R142_LOCAL_STACK_MERGE_REVIEW_AND_SUCCESSOR_CONTRACT_2026-11-05.md`. R140 source/component, R141 design/spec, R142 docs config are merged and REVIEW_PASS, with FREEZE OPEN because the gate unit suite is 129/130 PASS. A3 is 4/5 on the current Windows install because package.json differs. R139 repair audit and all historical cost/UNKNOWNs remain unchanged.
+
+## Historical R142 cloud review checkpoint - 2026-11-05
 
 CCMAI-RUNTIME-142: docs site build repair REVIEW_PASS (docs build green on PR #16 at 9612cc512635 after operator-approved attempt 3; config-only, no evidence edits). Next: Local reviews and merges PR #14 (R140), #15 (R141), #16 (R142) in order, applies R141 Local conditions/A1-A3 and decides any R139 reopen; the cloud agent does not merge. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; no runtime, DB or provider effect; Facebook/ZaloOA parked.
 
@@ -121,9 +130,9 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Contract: cvf.downstreamContinuityContract@1.0.0
 - Current mode: REVIEW
 - Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R142_DOCS_BUILD_REPAIR_2026-11-05.md
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R143_LOCAL_STACK_CLOSURE_2026-11-05.md
 
-CCMAI-RUNTIME-142: docs site build repair REVIEW_PASS (docs build green on PR #16 at 9612cc512635 after operator-approved attempt 3; config-only, no evidence edits). Next: Local reviews and merges PR #14 (R140), #15 (R141), #16 (R142) in order, applies R141 Local conditions/A1-A3 and decides any R139 reopen; the cloud agent does not merge. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; no runtime, DB or provider effect; Facebook/ZaloOA parked.
+CCMAI-RUNTIME-143 records Local review of R140/R141/R142 after ordered merge; FREEZE waits for the required LAW gate unit failure. R139 remains BUILD_BLOCKED; Windows A3 is 4/5 and no A1/A2 admission is open. The next finite VERIFY is bounded by the Local successor contract above.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

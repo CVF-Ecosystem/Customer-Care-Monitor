@@ -1,17 +1,21 @@
 # R142 - docs site build repair handoff
 
-Status: ACTIVE
+Status: SUPERSEDED
 
 ## Current State
 
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: Cloud agent: operator-granted ORCHESTRATOR, then IMPLEMENTATION_WORKER (docs config) and R1 REVIEWER with recorded transition; GitHub Actions docs build is the objective check; Local agent retains merge to main and FREEZE
+- Current mode: FREEZE
+- Active phase: FREEZE
+- Active role: Root/Local ORCHESTRATOR / independent REVIEWER / CLOSER / COMMIT_STEWARD / SESSION_SYNC_STEWARD
 - Active tranche: CCMAI-RUNTIME-142
-- Next allowed move: CCMAI-RUNTIME-142: docs site build repair REVIEW_PASS (docs build green on PR #16 at 9612cc512635 after operator-approved attempt 3; config-only, no evidence edits). Next: Local reviews and merges PR #14 (R140), #15 (R141), #16 (R142) in order, applies R141 Local conditions/A1-A3 and decides any R139 reopen; the cloud agent does not merge. CCMAI-RUNTIME-139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; no runtime, DB or provider effect; Facebook/ZaloOA parked.
+- Next allowed move: CCMAI-RUNTIME-142 FROZEN after Local merged PR #14/#15/#16. Next: finite retained-evidence VERIFY of the installed Antigravity package.json hash mismatch, with independent review; only then decide a separate A1/A2 Windows admission. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED, M3-06 browser lifetime OPEN; no Chrome/daemon, DB, provider, product or governance proof; Facebook/ZaloOA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
-## Startup acknowledgment and decisions
+## Local closure acknowledgment and role transition
+
+Root/Local rehydrated the merged R142 continuity and transitioned from ORCHESTRATOR to independent REVIEWER, then CLOSER / COMMIT_STEWARD / SESSION_SYNC_STEWARD. Local review and seven binding successor conditions: `docs/reviews/R142_LOCAL_STACK_MERGE_REVIEW_AND_SUCCESSOR_CONTRACT_2026-11-05.md`. PR #14, #15 and #16 were merged in order at `3e1d169b`, `57b1570a`, `c47fe9c1`. R140 source, R141 design and R142 docs config are FROZEN in their separate scopes. A3 on this Windows install is 4/5: `package.json` differs. R139 repair audit is not reopened; no A1/A2 effect admission or runtime authority. All prior failed CI attempts, product holds, costs and UNKNOWNs remain.
+
+## Historical cloud startup acknowledgment and decisions
 
 - The operator said "continue". The orchestrator found no cloud-doable R139 step: A1–A3 need Windows, and the reopen needs Local.
 - It proposed fixing the long-standing red docs build. The operator chose the config-only fix with CI verification.

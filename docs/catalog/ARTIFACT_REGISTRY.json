@@ -8,7 +8,10 @@
     {"id": "r139-causal-evidence-20261105", "family": "governed_artifact_family", "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105", "status": "ACTIVE", "description": "Source pins, typed assessment and independent review; historical outcomes preserved."},
     {"id": "r140-worker-order", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_140_SELECTION_READ_REPAIR.md", "status": "ACTIVE", "description": "Worker-only independent M3-06 correction, S01-S10 acceptance and bounded scope."},
     {"id": "r140-authority", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-140.json", "status": "ACTIVE", "description": "Immutable committed dispatcher seed."},
-    {"id": "r140-record", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-140.json", "status": "ACTIVE", "description": "Active independent source work; R139 parent remains blocked."},
+    {"id": "r140-record", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-140.json", "status": "ACTIVE", "description": "Merged source/component REVIEW_PASS; FREEZE held by gate unit failure; R139 parent blocked."},
+    {"id": "r142-local-stack-review-20261105", "family": "continuity", "path": "docs/reviews/R142_LOCAL_STACK_MERGE_REVIEW_AND_SUCCESSOR_CONTRACT_2026-11-05.md", "status": "ACTIVE", "description": "Local review of PR #14/#15/#16, D1-D4 decisions, R141 successor conditions and Windows A3 4/5 hold; no R139 reopen."},
+    {"id": "r143-local-closure-packet-20261105", "family": "continuity", "path": "docs/reviews/R143_LOCAL_STACK_CLOSURE_PACKET_2026-11-05.md", "status": "ACTIVE", "description": "Seed-bound Local review of three merged PR tranches; FREEZE pending failing LAW gate unit."},
+    {"id": "r143-local-closure-record-20261105", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-143.json", "status": "ACTIVE", "description": "R2 REVIEW_PENDING closure record; R139 remains blocked."},
     {"id": "r140-evidence", "family": "governed_artifact_family", "path": "docs/reviews/probes/r140_selection_read_20261105", "status": "ACTIVE", "description": "Pinned source preimages and independent preparation checks."},
 
     {"id": "law-learning-20261105-evidence-family", "family": "governed_artifact_family", "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105", "status": "ACTIVE", "description": "Exact intake, repair attempts, independent review and original/final validation receipts for LAW profile adoption."},
@@ -5494,9 +5497,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R142_DOCS_BUILD_REPAIR_2026-11-05.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R143_LOCAL_STACK_CLOSURE_2026-11-05.md",
       "status": "ACTIVE",
-      "description": "Active R142 docs site build repair handoff (config only, REVIEW_PASS, docs CI green); R140/R141 await Local merge; R139 integration remains blocked."
+      "description": "Active R143 Local stack review handoff: three PRs merged, FREEZE held by LAW gate unit; A3 4/5 and R139 integration blocked."
     },
     {
       "id": "r060-work-order",

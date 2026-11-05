@@ -16,7 +16,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R142 docs site build repair handoff (config only, REVIEW_PASS, docs CI green); R140/R141 await Local merge; R139 integration remains blocked.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R142_DOCS_BUILD_REPAIR_2026-11-05.md`
+- Active R143 Local stack review handoff: three PRs merged, FREEZE held by LAW gate unit; A3 4/5 and R139 integration blocked.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R143_LOCAL_STACK_CLOSURE_2026-11-05.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -5270,8 +5270,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Section7 metadata accepted; independent Sol review operational HOLD_TRANSFER due undocumented ownership/closure/deadline/child controls; no new probe admission.: `docs/reviews/R139_WORKER_CAPABILITY_REVIEW_AND_TRANSFER_2026-10-23.md`
 - Root independent bounded local-check acceptance: compile1/1 and pure7PASS0SKIP; no runtime/provider/M3 acceptance.: `docs/reviews/R139_WORKER_OFFLINE_FINAL_REVIEW_2026-10-23.md`
 - Immutable committed dispatcher seed.: `CVF_SESSION/authority/CCMAI-RUNTIME-140.json`
-- Active independent source work; R139 parent remains blocked.: `CVF_SESSION/tranches/CCMAI-RUNTIME-140.json`
+- Merged source/component REVIEW_PASS; FREEZE held by gate unit failure; R139 parent blocked.: `CVF_SESSION/tranches/CCMAI-RUNTIME-140.json`
 - Worker-only independent M3-06 correction, S01-S10 acceptance and bounded scope.: `docs/work_orders/CCMAI_RUNTIME_140_SELECTION_READ_REPAIR.md`
+- Local review of PR #14/#15/#16, D1-D4 decisions, R141 successor conditions and Windows A3 4/5 hold; no R139 reopen.: `docs/reviews/R142_LOCAL_STACK_MERGE_REVIEW_AND_SUCCESSOR_CONTRACT_2026-11-05.md`
+- Seed-bound Local review of three merged PR tranches; FREEZE pending failing LAW gate unit.: `docs/reviews/R143_LOCAL_STACK_CLOSURE_PACKET_2026-11-05.md`
+- R2 REVIEW_PENDING closure record; R139 remains blocked.: `CVF_SESSION/tranches/CCMAI-RUNTIME-143.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`
