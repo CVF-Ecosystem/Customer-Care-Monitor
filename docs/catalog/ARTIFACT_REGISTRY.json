@@ -5549,7 +5549,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R151_EVIDENCE_CAPTURE_2026-11-05.md",
       "status": "ACTIVE",
-      "description": "Active continuity pointer for R151 BUILD_BLOCKED diagnostic capture repair; R139/M3 blocked."
+      "description": "Active continuity pointer for R151 Amendment A1 WORK_ORDER; source not accepted; R139/M3 blocked."
     },
     {
       "id": "r060-work-order",

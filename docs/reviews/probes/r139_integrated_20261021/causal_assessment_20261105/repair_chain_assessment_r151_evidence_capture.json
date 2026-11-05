@@ -76,11 +76,20 @@
     {
       "path": "docs/reviews/R151_CAUSAL_DIAGNOSIS_AND_DESIGN_2026-11-05.md",
       "sha256": "15a5275e42c515a53a87641c433eb925705477332311f3822fc5b7b404c4e3a1"
+    },
+    {
+      "path": "docs/reviews/R151_FINAL_SOURCE_BLOCKED_INDEPENDENT_REVIEW_2026-11-05.md",
+      "sha256": "6d6995f0d82703afe856a36ebd6d66ae939d947bea08c1e5abcb80879f428b16"
+    },
+    {
+      "path": "docs/reviews/R151_AMENDMENT_CAUSAL_ASSESSMENT_2026-11-05.md",
+      "sha256": "8c95dcea0cda7f76094f747468b27d05a570ac872dd19c8dd286a668e2b328f6"
     }
   ],
   "causeStatus": "UNKNOWN",
-  "causeOrHypothesis": "The R150 measurement failure has source-proven causes: Windows PowerShell 5.1 nests the @(ConvertFrom-Json) profile array and defeats all profile matches; WebSocket error handling retains no HTTP response and waits for close/timeout. Positive root ownership, exact argument, descendant identity and original wait guards are source-proven gaps. The aggregate R139 product failure cause is UNKNOWN: actual Chrome HTTP rejection, terminal descendant survival, historical r2/r3 interruption/provider causes and product physical no-relaunch remain unproved.",
+  "causeOrHypothesis": "The R150 measurement failure has source-proven causes: Windows PowerShell 5.1 nests the @(ConvertFrom-Json) profile array and defeats all profile matches; WebSocket error handling retains no HTTP response and waits for close/timeout. Positive root ownership, exact argument, descendant identity and original wait guards are source-proven gaps. The aggregate R139 product failure cause is UNKNOWN: actual Chrome HTTP rejection, terminal descendant survival, historical r2/r3 interruption/provider causes and product physical no-relaunch remain unproved. R151 first candidate is incomplete: three tests and one syntax batch preceded a final runner wait change; the exact final source has not been tested. This is an observed verification sequencing gap, not a proven completed product repair failure.",
   "remainingChain": [
+    "Amend exact-source offline proof after the blocked R151 candidate: final runner timeout/next-launch/terminal sequencing, HTTP transport wiring and reviewed source admission binding remain unverified; preserve three consumed focused tests and one syntax batch.",
     "Repair and independently review the diagnostic instrument offline on actual Windows PowerShell 5.1 and Node with no process/network effects",
     "If source review accepts, separately admit one finite Windows A1/A2 VERIFY with immediate A3 recapture, exact HTTP response and Chrome ownership/cleanup evidence",
     "Source-backed pre-action physical no-relaunch enforcement or reviewed supported alternative remains necessary before integrated product execution",
@@ -88,14 +97,14 @@
   ],
   "discriminator": {
     "question": "Can the R150 HTTP upgrade and Chrome ownership evidence defects be repaired and verified offline on the current Windows PowerShell 5.1/Node toolchain without weakening A1/A2 or changing product effects?",
-    "expected": "OFFLINE_CAPTURE_ACCEPTED after red/green PS5.1 and non-network HTTP/process fixture tests plus independent R2 review, or BLOCKED_WITH_REASON with exact failed predicate; neither result is A1/A2 or M3 acceptance.",
+    "expected": "EXACT_SOURCE_OFFLINE_ACCEPTED only if the single remaining injected orchestration/transport campaign and final-byte syntax batch pass with independent R2 review; otherwise BLOCKED_WITH_REASON with exact failed predicate. Neither outcome is A1/A2 or M3 acceptance.",
     "budgetMinutes": 45
   },
-  "correctiveAction": "Admit only R151 source-only diagnostic helper correction under the exact order. Terra edits new R151 artifacts and returns offline evidence; Astra independently reviews. Any later Chrome/daemon effect needs a separate admission in the same R151 tranche after source review, current gates and immediate A3 recapture. Do not run an integrated product campaign.",
+  "correctiveAction": "Admit only same-R151 source-only Amendment A1: one remaining combined exact-final-source offline test and one final-byte syntax batch, after source-only corrections, under the original hard stop 17:02:18 and unchanged 45-minute ceiling. Terra edits existing worker paths; Astra independently reviews. A later Chrome/daemon effect needs separate admission and current source manifest binding. No integrated product campaign.",
   "owner": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR; Terra 6.1 source-only worker; Astra Medium independent R2 reviewer; Product Owner retains M3 business acceptance.",
   "cumulativeMinutes": "UNKNOWN",
   "additionalCeilingMinutes": 45,
-  "stopCondition": "Stop on work-order/audit/registry mismatch, protected edits, unexpected corrected PS5.1 or HTTP fixture failure, ambiguous ownership/response, 45 worker active minutes, three focused tests or one syntax check. No Chrome/daemon before separate effect admission and immediate A3 PASS; no automatic retry or old-budget reset.",
+  "stopCondition": "Stop on work-order/audit/registry mismatch, protected edits, unexpected corrected test or syntax failure, ambiguous ownership/response, original 45-minute ceiling or 17:02:18 hard wall stop, four total focused tests or two syntax batches. Three tests and one syntax batch are already consumed. No Chrome/daemon before separate effect admission and immediate A3 PASS; no retry or budget reset.",
   "reopenCondition": "OFFLINE_CAPTURE_ACCEPTED with independent review only permits Root to consider a separate bounded Windows A1/A2 effect admission; an offline failure keeps diagnostic support blocked. R139/M3 stay blocked until actual A1/A2 and independent integrated E06, including physical no-relaunch, are separately evidenced.",
   "disposition": "REPAIR_ADMITTED",
   "admittedAction": {
@@ -108,7 +117,7 @@
     "output": "docs/reviews/R151_SOURCE_WORKER_RETURN_2026-11-05.md",
     "packet": {
       "path": "docs/work_orders/CCMAI_RUNTIME_151_EVIDENCE_CAPTURE_REPAIR.md",
-      "sha256": "b42b14520dc3144df0499880c5f308d8935dfa702e9e23cd7cd9035d76a2211d"
+      "sha256": "8041a901c1568b6dc4f116aedce6b44b8e125a6759ec98350eaf50d551fe918e"
     }
   },
   "review": {
@@ -116,8 +125,8 @@
     "decision": "ACCEPTED",
     "evidence": [
       {
-        "path": "docs/reviews/R151_SOURCE_AUDIT_INDEPENDENT_REVIEW_2026-11-05.md",
-        "sha256": "09a58f7b02b6001aa27238fccb3eaa4eae77f83dff3cb2c9a6648baa8ea85ec5"
+        "path": "docs/reviews/R151_AMENDMENT_INDEPENDENT_REVIEW_2026-11-05.md",
+        "sha256": "0e5418ab15867d1788332433505dea00b8509a6a082061d135fcb7e08d397147"
       }
     ]
   }

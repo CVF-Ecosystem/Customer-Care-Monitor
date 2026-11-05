@@ -4,11 +4,11 @@ Status: ACTIVE
 
 ## Current State
 
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: Root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD; Astra Medium independent REVIEWER
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active role: Root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD
 - Active tranche: CCMAI-RUNTIME-151
-- Next allowed move: CCMAI-RUNTIME-151 BUILD_BLOCKED: Root retains Terra candidate and Astra blocked-source review, audits the exact-source V04 and HTTP/source-binding gaps, and prepares one bounded same-tranche test amendment for independent R2 review. No further test, source edit, Chrome, daemon, provider, DB or product effect is admitted yet. R139 BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-151 Amendment A1 DISPATCH_READY: Root commits the independently reviewed exact-source packet and material-SHA handoff marker, then Terra may perform one combined offline test and one final-byte syntax batch before the original 17:02:18 hard stop. No Chrome, daemon, provider, DB or product effect is admitted. R139 BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## Transition acknowledgment
@@ -44,6 +44,11 @@ Status: ACTIVE
 - Final runner candidate `d11012f6bb3bbdc681fd239eaccea068eb0dd68786682ebd145afea44f784ed9` was edited after the last green/syntax run to prevent repeated wait of a timed-out original handle. Terra returned `BLOCKED_WITH_REASON`; V04 and complete V06/V07 are open.
 - Astra's `docs/reviews/R151_FINAL_SOURCE_BLOCKED_INDEPENDENT_REVIEW_2026-11-05.md` (LF SHA-256 `6d6995f0d82703afe856a36ebd6d66ae939d947bea08c1e5abcb80879f428b16`) accepted the blocked return only, rejected source completion, and identified final orchestration, transport wiring and future source-binding evidence gaps. This is an incomplete implementation, not a proven completed failed repair; existing R139 r2/r3 causal enrollment remains.
 - Root transitions from BUILD orchestration to WORK_ORDER_AUTHOR for a same-R151 bounded amendment. The original 17:02:18 hard stop, consumed counters, source hashes and first blocked return remain. No dependent implementation/test is released until independent R2 amendment review, exact pin and pre-dispatch gate.
+
+## Amendment A1 independent admission
+
+- Astra independently accepted one same-R151 exact-source offline amendment in `docs/reviews/R151_AMENDMENT_INDEPENDENT_REVIEW_2026-11-05.md` (LF SHA-256 `0e5418ab15867d1788332433505dea00b8509a6a082061d135fcb7e08d397147`). The official amended packet LF SHA-256 is `8041a901c1568b6dc4f116aedce6b44b8e125a6759ec98350eaf50d551fe918e`; the existing M3 repair registry now pins accepted audit `460d427b7369b4c6693b81f6f7840969c441b33fb8af94f6842de65858d1c9b1`.
+- Cumulative tests 3/4 and syntax 1/2; first source attempt consumed conservatively 13 wall minutes, active minutes UNKNOWN. The original 17:02:18 hard stop and zero effect boundary remain. Root must pass amended packet pre-dispatch and commit the packet plus material-SHA marker before Terra resumes.
 
 ## Public Export Disposition
 
