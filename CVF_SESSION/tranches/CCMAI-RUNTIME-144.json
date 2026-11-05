@@ -29,17 +29,18 @@
   ],
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_144_A3_PACKAGE_METADATA_VERIFY.md",
   "baseCommit": "40ef39ccf81608a967287c540548b33621f91e7c",
-  "status": "WORK_ORDER",
+  "status": "DISPATCH_READY",
   "phase": "WORK_ORDER",
   "freeze": "OPEN",
   "history": [
-    "WORK_ORDER"
+    "WORK_ORDER",
+    "DISPATCH_READY"
   ],
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "DRAFT",
+  "workOrderStatus": "DISPATCH_READY",
   "buildCommit": null,
   "reviewEvidence": [],
-  "disposition": "DRAFT_BLOCKED_BY_R139_REPAIR_AUDIT",
+  "disposition": "FINITE_A3_VERIFY_PRE_DISPATCH_PASS_PENDING_COMMITTED_RELEASE",
   "parentTranche": "CCMAI-RUNTIME-143",
   "effects": {
     "networkFetches": 0,

@@ -4,6 +4,9 @@
   "updatedAt": "2026-11-05",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
+    {"id": "r147-a3-successor-audit-20261105", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a3_verify.json", "status": "ACTIVE", "description": "Independently reviewed DIAGNOSTIC_ONLY successor preserving R139 UNKNOWNs and admitting exact finite R144 A3 VERIFY."},
+    {"id": "r147-a3-independent-review-20261105", "family": "continuity", "path": "docs/reviews/R147_INDEPENDENT_A3_AUDIT_REVIEW_2026-11-05.md", "status": "ACTIVE", "description": "Independent R2 acceptance of bounded documentary successor audit; no R139 runtime release."},
+
     {"id": "r145-invalid-audit-seed-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-145.json", "status": "ACTIVE", "description": "Immutable failed seed; authorityKind rejected before audit or worker action."},
     {"id": "r146-invalid-audit-seed-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-146.json", "status": "ACTIVE", "description": "Immutable failed seed; review-path allowlist rejected before audit or worker action."},
     {"id": "r147-audit-seed-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-147.json", "status": "ACTIVE", "description": "Separate immutable R2 seed for R139 repair audit and finite R144 A3 VERIFY admission."},

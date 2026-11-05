@@ -5283,6 +5283,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Immutable R2 seed for finite A3 package metadata VERIFY; no new fetch or runtime effect.: `CVF_SESSION/authority/CCMAI-RUNTIME-144.json`
 - Immutable failed seed; authorityKind rejected before audit or worker action.: `CVF_SESSION/authority/CCMAI-RUNTIME-145.json`
 - Immutable failed seed; review-path allowlist rejected before audit or worker action.: `CVF_SESSION/authority/CCMAI-RUNTIME-146.json`
+- Independent R2 acceptance of bounded documentary successor audit; no R139 runtime release.: `docs/reviews/R147_INDEPENDENT_A3_AUDIT_REVIEW_2026-11-05.md`
+- Independently reviewed DIAGNOSTIC_ONLY successor preserving R139 UNKNOWNs and admitting exact finite R144 A3 VERIFY.: `docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a3_verify.json`
 - Root-owned documentary audit packet; R139 product remains blocked.: `docs/reviews/R147_REPAIR_AUDIT_ADMISSION_PACKET_2026-11-05.md`
 - Separate immutable R2 seed for R139 repair audit and finite R144 A3 VERIFY admission.: `CVF_SESSION/authority/CCMAI-RUNTIME-147.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`

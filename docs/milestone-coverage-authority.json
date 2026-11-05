@@ -23,8 +23,8 @@
         "M3-08"
       ],
       "audit": {
-        "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment.json",
-        "sha256": "5dc8aac9f9acc9caf1dd4d9fe6c2c3714d0e1a477b7d1ccae8c7a267edc81c6c"
+        "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a3_verify.json",
+        "sha256": "9f0a083d6dfab2e4bcd0182d6d0aabf66c4231bf35fe5c47f023f627dd53e7e9"
       }
     }
   }

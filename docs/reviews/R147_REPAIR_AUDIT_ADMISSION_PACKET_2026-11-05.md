@@ -24,3 +24,7 @@ R145 seed `d3b04cd4` failed authorityKind grammar; R146 seed `44907dc2` had an i
 ## Close condition
 
 R147 closes after independent review, static gate acceptance of successor audit and registry, committed-range validation, and a separate R144 pre-dispatch PASS. If any check fails, R144 remains DRAFT and failure is retained. Root is sole commit steward. Claude receives final R144 packet through operator.
+
+## Review return before material commit
+
+Independent subagent review `docs/reviews/R147_INDEPENDENT_A3_AUDIT_REVIEW_2026-11-05.md` accepted the exact diagnostic-only audit. Root pinned its normalized SHA-256 `c338137496722f72a9c53025867761d442c0ce2f9038029ceb5968ef80ce8ef2` in the successor audit, and pinned the successor audit hash `9f0a083d6dfab2e4bcd0182d6d0aabf66c4231bf35fe5c47f023f627dd53e7e9` in the existing M3 repair registry. The installed profile R144 pre-dispatch returned PASS 6/6; route was `NOT_APPLICABLE_WITH_REASON` because this packet declares no dispatchKind. This is a static admission, not an A3 result or R139 product proof.
