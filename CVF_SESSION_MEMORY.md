@@ -2,16 +2,16 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R150_A1_A2_WINDOWS_VERIFY_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-150", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R150_A1_A2_WINDOWS_VERIFY_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-150", "parked": true} -->
 
 ## Current R150 Windows A1/A2 VERIFY admission - 2026-11-05
 
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: FREEZE
+- Active phase: FREEZE
 
-CCMAI-RUNTIME-150 commit the single-campaign INCONCLUSIVE worker return and submit its raw evidence to independent R2 review. No retry or A2 claim. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-150 FROZEN with independently reviewed INCONCLUSIVE A1-b and A2 unrun. No retry or integrated admission under this tranche. A new bounded successor must repair HTTP response capture and Chrome ownership evidence before any new Windows VERIFY. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
 
-Root/Local IMPLEMENTATION_WORKER (Windows VERIFY)
+Root/Local CLOSER / COMMIT_STEWARD / SESSION_SYNC_STEWARD
 
 
 ## Historical R149 OHC successor FREEZE - 2026-11-05
@@ -178,11 +178,11 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: FREEZE
+- Active phase: FREEZE
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R150_A1_A2_WINDOWS_VERIFY_2026-11-05.md
 
-CCMAI-RUNTIME-150 commit the single-campaign INCONCLUSIVE worker return and submit its raw evidence to independent R2 review. No retry or A2 claim. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-150 FROZEN with independently reviewed INCONCLUSIVE A1-b and A2 unrun. No retry or integrated admission under this tranche. A new bounded successor must repair HTTP response capture and Chrome ownership evidence before any new Windows VERIFY. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

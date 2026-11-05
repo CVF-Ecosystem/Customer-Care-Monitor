@@ -31,20 +31,30 @@
   ],
   "workOrder": "docs/reviews/R150_A1_A2_EXECUTION_STATUS_CARRIER_2026-11-05.md",
   "baseCommit": "c61b01fa89c40135093103a0852de70f82bd39ec",
-  "status": "BUILD",
-  "phase": "BUILD",
-  "freeze": "OPEN",
+  "status": "FROZEN",
+  "phase": "FREEZE",
+  "freeze": "FROZEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING",
+    "REVIEW_PASS",
+    "FROZEN"
   ],
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "CLOSED",
   "reviewEvidence": [
-    "docs/reviews/R150_INDEPENDENT_A1_A2_AUDIT_REVIEW_2026-11-05.md"
+    "docs/reviews/R150_INDEPENDENT_A1_A2_AUDIT_REVIEW_2026-11-05.md",
+    "docs/reviews/R150_INDEPENDENT_HELPER_REVIEW_2026-11-05.md",
+    "docs/reviews/R150_INDEPENDENT_WINDOWS_VERIFY_REVIEW_2026-11-05.md"
   ],
-  "disposition": "WINDOWS_A1_B_INCONCLUSIVE_PENDING_INDEPENDENT_REVIEW",
+  "disposition": "REVIEW_PASS",
+  "runtimeOutcome": "INCONCLUSIVE_A1_B_A2_UNRUN",
+  "terminalChromeDescendantCleanup": "UNKNOWN",
+  "effectAdmissionSpent": true,
+  "buildCommit": "7052df5c6da31d6867172d26a298a7bb4b72bb9c",
+  "closer": "Root/Local CLOSER / COMMIT_STEWARD / SESSION_SYNC_STEWARD",
   "parentTranche": "CCMAI-RUNTIME-149",
   "effectBudget": {
     "chromeLaunches": 3,

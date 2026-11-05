@@ -6,14 +6,16 @@
   "artifacts": [
     {"id": "r150-a1a2-audit-review-20261105", "family": "continuity", "path": "docs/reviews/R150_INDEPENDENT_A1_A2_AUDIT_REVIEW_2026-11-05.md", "status": "ACTIVE", "description": "Independent R2 acceptance of exact finite A1/A2 audit/work-order admission only; no runtime result."},
     {"id": "r150-a1a2-helper-review-20261105", "family": "continuity", "path": "docs/reviews/R150_INDEPENDENT_HELPER_REVIEW_2026-11-05.md", "status": "ACTIVE", "description": "Independent static review of fixed Windows A1/A2 helpers; actual runtime result remains unobserved."},
-    {"id": "r150-a1a2-build-carrier-20261105", "family": "continuity", "path": "docs/reviews/R150_A1_A2_EXECUTION_STATUS_CARRIER_2026-11-05.md", "status": "ACTIVE", "description": "Administrative ACTIVE carrier for R150 BUILD, preserving exact official order bytes."},
+    {"id": "r150-a1a2-runtime-review-20261105", "family": "continuity", "path": "docs/reviews/R150_INDEPENDENT_WINDOWS_VERIFY_REVIEW_2026-11-05.md", "status": "ACTIVE", "description": "Independent R2 acceptance of INCONCLUSIVE A1-b return; terminal Chrome descendant cleanup UNKNOWN."},
+    {"id": "r150-a1a2-root-disposition-20261105", "family": "continuity", "path": "docs/reviews/R150_ROOT_DISPOSITION_2026-11-05.md", "status": "ACTIVE", "description": "Root closes bounded diagnostic R150 without A1/A2 or product acceptance."},
+    {"id": "r150-a1a2-build-carrier-20261105", "family": "continuity", "path": "docs/reviews/R150_A1_A2_EXECUTION_STATUS_CARRIER_2026-11-05.md", "status": "ACTIVE", "description": "Administrative CLOSED carrier for R150 FREEZE, preserving exact official order bytes."},
     {"id": "r150-a1a2-worker-return-20261105", "family": "continuity", "path": "docs/reviews/R150_A1_A2_WINDOWS_VERIFY_RETURN_2026-11-05.md", "status": "ACTIVE", "description": "Single Windows A1/A2 campaign INCONCLUSIVE at A1-b; A2 unrun, no product claim."},
     {"id": "r150-a1a2-a3-prestart-20261105", "family": "continuity", "path": "docs/reviews/probes/r150_a1_a2_windows_20261105/a3_prestart_full_tree.json", "status": "ACTIVE", "description": "Immediate Windows full-tree A3 PASS with operator-relaxed package.json and absent README.md; 346 others equal."},
     {"id": "r150-a1a2-runtime-raw-20261105", "family": "continuity", "path": "docs/reviews/probes/r150_a1_a2_windows_20261105/windows_verify_raw.json", "status": "ACTIVE", "description": "Raw bounded Chrome #1 A1-a control and inconclusive A1-b non-101 event; cleanup and counters retained."},
     {"id": "r150-a1a2-pid-readback-20261105", "family": "continuity", "path": "docs/reviews/probes/r150_a1_a2_windows_20261105/postrun_known_pid_readback.json", "status": "ACTIVE", "description": "Later read-only known-PID absence; terminal owned-profile cleanup remains UNKNOWN due predicate defect."},
     {"id": "r150-a1a2-effect-admission-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-150-A1A2-EFFECT-ADMISSION.json", "status": "ACTIVE", "description": "Separate bounded Windows process-effect admission, conditional on immediate A3 full-tree recapture PASS."},
     {"id": "r150-a1a2-seed-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-150.json", "status": "ACTIVE", "description": "Immutable R2 seed for bounded Windows A1/A2 VERIFY and successor R139 audit."},
-    {"id": "r150-a1a2-record-20261105", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-150.json", "status": "ACTIVE", "description": "R150 bounded VERIFY tranche; audit and effect admitted, A3 immediate recapture pending."},
+    {"id": "r150-a1a2-record-20261105", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-150.json", "status": "ACTIVE", "description": "R150 finite VERIFY FROZEN as independently reviewed INCONCLUSIVE diagnostic; R139/M3 blocked."},
     {"id": "r150-a1a2-order-20261105", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_150_A1_A2_WINDOWS_VERIFY.md", "status": "ACTIVE", "description": "Exact-byte finite Windows A1/A2 work order; no start before independent audit and same-session A3 recapture."},
     {"id": "r150-a1a2-audit-20261105", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a1_a2_windows_verify.json", "status": "ACTIVE", "description": "Independently accepted successor R139 audit with exact A1/A2 work-order pin; registry points here."},
     {"id": "r150-a1a2-owner-helper-20261105", "family": "continuity", "path": "docs/reviews/probes/r150_a1_a2_windows_20261105/owner_runner.mjs", "status": "ACTIVE", "description": "Bounded Windows A1/A2 owner helper with pinned admission readback and exact effect counters."},
@@ -5547,7 +5549,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R150_A1_A2_WINDOWS_VERIFY_2026-11-05.md",
       "status": "ACTIVE",
-      "description": "Active R150 Windows A1/A2 VERIFY; audited admission complete, immediate A3 recapture still gates process start."
+      "description": "Active continuity pointer for R150 FROZEN INCONCLUSIVE Windows A1/A2 diagnostic; R139/M3 blocked."
     },
     {
       "id": "r060-work-order",
