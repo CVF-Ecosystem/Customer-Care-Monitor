@@ -1,6 +1,6 @@
 # R147: separate R139 repair audit and finite A3 VERIFY admission
 
-Status: DRAFT
+Status: CLOSED
 workOrderStatusGrammar: cvf.workOrderStatusGrammar@1.0.0
 Risk: R2
 Worker: Root/Local audit author
@@ -28,3 +28,7 @@ R147 closes after independent review, static gate acceptance of successor audit 
 ## Review return before material commit
 
 Independent subagent review `docs/reviews/R147_INDEPENDENT_A3_AUDIT_REVIEW_2026-11-05.md` accepted the exact diagnostic-only audit. Root pinned its normalized SHA-256 `c338137496722f72a9c53025867761d442c0ce2f9038029ceb5968ef80ce8ef2` in the successor audit, and pinned the successor audit hash `9f0a083d6dfab2e4bcd0182d6d0aabf66c4231bf35fe5c47f023f627dd53e7e9` in the existing M3 repair registry. The installed profile R144 pre-dispatch returned PASS 6/6; route was `NOT_APPLICABLE_WITH_REASON` because this packet declares no dispatchKind. This is a static admission, not an A3 result or R139 product proof.
+
+## Final bounded disposition
+
+Independent review and the committed R147 material range (`07ff3183` to `aa226a88`) passed portable 7/7 and installed profile 8/8 static gates. An initial local pr-ci invocation used incorrect manually supplied profile pins and was refused at stage 0; the corrected invocation used the exact three pins in `.github/workflows/cvf-downstream-gates.yml` and passed 8/8. This failure is retained; it did not change the installed pack. R147 closes as documentary `DIAGNOSTIC_ONLY` admission. R144 still requires its own committed dispatch transition before Claude begins.
