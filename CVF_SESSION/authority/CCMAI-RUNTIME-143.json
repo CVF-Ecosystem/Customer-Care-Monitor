@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-143",
+  "authorityKind": "DISPATCHER_OWNED_LOCAL_STACK_REVIEW_CLOSURE",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Root/Local ORCHESTRATOR",
+    "implementationWorker": "Cloud workers for R140 source, R141 design and R142 docs config; no R143 product implementation",
+    "reviewer": "Root/Local independent of the cloud implementation/design workers",
+    "commitSteward": "Root/Local COMMIT_STEWARD",
+    "closer": "Root/Local CLOSER and SESSION_SYNC_STEWARD"
+  },
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_140_SELECTION_READ_REPAIR.md",
+    "docs/reviews/R141_RELAUNCH_PREVENTION_DESIGN_PACKET_2026-11-05.md",
+    "docs/reviews/R142_DOCS_BUILD_REPAIR_PACKET_2026-11-05.md",
+    "docs/reviews/R142_LOCAL_STACK_MERGE_REVIEW_AND_SUCCESSOR_CONTRACT_2026-11-05.md",
+    "docs/reviews/R143_*.md",
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md"
+  ],
+  "prohibitedEffects": [
+    "Product source, test, backend, VitePress config, dependency, gate, CI or seed edits outside this new seed",
+    "Chrome, daemon, browser, DB, provider, credential, customer/channel or runtime actions",
+    "Changing the R139 repair audit or milestone coverage authority, reopening R139 or resetting historical budgets",
+    "History rewrite, deployment, public release or AI-governance/product acceptance claim"
+  ],
+  "ownerAuthorization": "Operator 2026-11-05 directs Root/Local to review and merge PR #14/#15/#16 in order, record FREEZE/disposition for each tranche and synchronize continuity/catalog/index. Ordered merges are already complete; this seed bounds only the remaining local closure.",
+  "scope": "Review and metadata closure of accepted R140 source, R141 design and R142 docs configuration on main. Record D1-D4, A3 and seven R141 Local conditions. No implementation or R139 runtime reopening.",
+  "verification": "Root independently reviews exact merged source and CI/test evidence; installed-profile and legacy gates, catalog and committed-range checks pass. A3 mismatch remains a documented hold, not an execution release.",
+  "claimBoundary": "Tranche-level source/design/docs closure only. R139/M3 product, physical relaunch runtime, provider and governance claims remain open.",
+  "workOrder": "docs/reviews/R143_LOCAL_STACK_CLOSURE_PACKET_2026-11-05.md",
+  "executionBudget": {"providerCalls": 0, "browserCalls": 0, "runtimeStarts": 0, "dependencyInstalls": 0},
+  "parentTranche": "CCMAI-RUNTIME-142",
+  "bootstrapException": false
+}
