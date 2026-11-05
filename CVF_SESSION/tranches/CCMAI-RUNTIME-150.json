@@ -29,17 +29,18 @@
     "No new package/network fetch beyond localhost, installation, credential or customer/channel action, automatic retry, integrated lifecycle or product campaign",
     "No R139 IMPLEMENT reopen, M3 acceptance, physical no-relaunch or runtime-governance claim, consumed-budget reset, deployment or public release"
   ],
-  "workOrder": "docs/work_orders/CCMAI_RUNTIME_150_A1_A2_WINDOWS_VERIFY.md",
-  "baseCommit": "ec6eed18a5f1951d9dc54a5b49d14f804574ab67",
-  "status": "DISPATCH_READY",
-  "phase": "WORK_ORDER",
+  "workOrder": "docs/reviews/R150_A1_A2_EXECUTION_STATUS_CARRIER_2026-11-05.md",
+  "baseCommit": "c61b01fa89c40135093103a0852de70f82bd39ec",
+  "status": "BUILD",
+  "phase": "BUILD",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
-    "DISPATCH_READY"
+    "DISPATCH_READY",
+    "BUILD"
   ],
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "DISPATCH_READY",
+  "workOrderStatus": "ACTIVE",
   "reviewEvidence": [
     "docs/reviews/R150_INDEPENDENT_A1_A2_AUDIT_REVIEW_2026-11-05.md"
   ],

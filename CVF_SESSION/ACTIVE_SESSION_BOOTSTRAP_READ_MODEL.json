@@ -1,5 +1,5 @@
 {
-  "x-r150A1A2WindowsVerify20261105": {"status": "EFFECT_ADMITTED_PENDING_A3", "seedCommit": "ec6eed18a5f1951d9dc54a5b49d14f804574ab67", "workOrderSha256": "a7a2b74e1851cdcbd2dba010456e2b0d17a9ade1fdb83518e19d66343a79e398", "r139": "BUILD_BLOCKED_UNCHANGED", "a1a2": "UNRUN"},
+  "x-r150A1A2WindowsVerify20261105": {"status": "BUILD_PENDING_A3", "seedCommit": "ec6eed18a5f1951d9dc54a5b49d14f804574ab67", "workOrderSha256": "a7a2b74e1851cdcbd2dba010456e2b0d17a9ade1fdb83518e19d66343a79e398", "r139": "BUILD_BLOCKED_UNCHANGED", "a1a2": "UNRUN"},
   "x-r149OhcSuccessor20261105": {"status": "FROZEN_DESIGN_ONLY", "branch": "claude/friendly-rubin-e2npmt-r149", "seedCommit": "abe76f66cb46978cc242bc1a3fdb6c0fb96a4577", "a3ConditionRelaxedByOperator": "package.json explained + README.md absent", "a1a2": "UNRUN_UNADMITTED", "networkFetches": 0, "runtimeStarts": 0},
   "x-r148A3Disposition20261105": {"status": "FROZEN_AUDIT_BLOCKED", "seedCommit": "b232d1a6080da9aaa35e2626f6890e7ac07cb9f2", "buildCommit": "fc5ebc3df1797c166c93fe80791b7f251dae1e49", "audit": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_r144_disposition.json", "r144": "FROZEN_METADATA_ONLY", "windowsTree": "347/348_README_MISSING", "a1a2": "NOT_ADMITTED", "r139": "BUILD_BLOCKED_UNCHANGED", "mainMerged": true, "mergeCommit": "8a8d05441f7855f8ffa4e233a746a0cf3a5a6106"},
   "x-r147AuditAdmission20261105": {"status": "FROZEN_DIAGNOSTIC_ONLY", "seedCommit": "07ff318312861fcd9807e874dce0ffd669bda980", "failedSeeds": ["d3b04cd426f6a9bba719474f2e4a4f1b909c314b", "44907dc26b4d8b66af22cbf24714e776a2b71f12"], "r139": "BUILD_BLOCKED_UNCHANGED"},
@@ -79,12 +79,12 @@
     "freshnessException": "Owner-approved documentary scope only; doctor FAIL retained",
     "runtimeAdmission": false
   },
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "activeTranche": "CCMAI-RUNTIME-150",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R150_A1_A2_WINDOWS_VERIFY_2026-11-05.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-150 audit and exact work order are independently accepted, repair registry pinned, pre-dispatch PASS and separate Windows effect admission issued. Root/Local may enter BUILD as the selected VERIFY worker, then immediately recapture A3 full-tree identity; any mismatch is NO_START. If it passes, run only the bounded A1/A2 campaign and return raw evidence for separate review. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.",
-  "activeRole": "Root/Local ORCHESTRATOR / WORK_ORDER_AUTHOR / AUDIT_AUTHOR",
+  "nextAllowedMove": "CCMAI-RUNTIME-150 Root/Local Windows VERIFY worker may immediately recapture the exact A3 full tree. A mismatch is NO_START with zero Chrome/daemon starts. On PASS, run only the bounded A1/A2 campaign and return raw evidence for independent review. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.",
+  "activeRole": "Root/Local IMPLEMENTATION_WORKER (Windows VERIFY)",
   "updatedAt": "2026-11-05",
   "schemaVersion": "1.0",
   "parkedCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",

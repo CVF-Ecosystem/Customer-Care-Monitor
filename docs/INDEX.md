@@ -5309,6 +5309,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Native one-call actor helper for fixed A1/A2 commands.: `docs/reviews/probes/r150_a1_a2_windows_20261105/actor_call.mjs`
 - Independently accepted successor R139 audit with exact A1/A2 work-order pin; registry points here.: `docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a1_a2_windows_verify.json`
 - Independent R2 acceptance of exact finite A1/A2 audit/work-order admission only; no runtime result.: `docs/reviews/R150_INDEPENDENT_A1_A2_AUDIT_REVIEW_2026-11-05.md`
+- Administrative ACTIVE carrier for R150 BUILD, preserving exact official order bytes.: `docs/reviews/R150_A1_A2_EXECUTION_STATUS_CARRIER_2026-11-05.md`
 - Separate bounded Windows process-effect admission, conditional on immediate A3 full-tree recapture PASS.: `CVF_SESSION/authority/CCMAI-RUNTIME-150-A1A2-EFFECT-ADMISSION.json`
 - Independent static review of fixed Windows A1/A2 helpers; actual runtime result remains unobserved.: `docs/reviews/R150_INDEPENDENT_HELPER_REVIEW_2026-11-05.md`
 - Exact-byte finite Windows A1/A2 work order; no start before independent audit and same-session A3 recapture.: `docs/work_orders/CCMAI_RUNTIME_150_A1_A2_WINDOWS_VERIFY.md`
