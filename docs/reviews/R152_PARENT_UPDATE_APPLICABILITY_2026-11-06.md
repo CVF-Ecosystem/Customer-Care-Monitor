@@ -1,6 +1,6 @@
 # R152 parent workspace update applicability
 
-Status: APPLICABILITY_DECISION_PENDING_INDEPENDENT_REVIEW
+Status: ACCEPTED_DOCUMENTARY_ONLY_ROADMAP_FORM_RECHECKED
 Date: 2026-11-06
 Risk: R2
 Effect boundary: no product/runtime effect
@@ -34,4 +34,19 @@ R152 independence assessment: The proposed change would touch policy, installed 
 
 ## Finite exit
 
-Current exit: the shared development application mapping is recorded and independently reviewed; R152 installation remains unadmitted. One future maintenance route must either admit a genuine maintenance criterion within the project authority or provide a reviewed profile contract that explicitly supports tooling migration. Then revise this same R152 packet and review before dispatch, preserving the failed attempt and source pins. Do not expand to product investigation or create per-control tranches.
+Current exit: the shared development application mapping is recorded and independently reviewed; R152 installation remains unadmitted. The next decision is whether profile 1.4 materially advances an already authorized project outcome and is worth its cumulative cost compared with retaining installed 1.3. If needed, establish a compatible reviewed admission route under the existing project authority before revising this same R152 packet. A new maintenance criterion or an M3/M5 label cannot be created merely to satisfy the gate. Preserve the failed attempt and source pins; do not expand to product investigation or create per-control tranches.
+
+## Roadmap progress form v1.2 (hiệu chỉnh 1) recheck
+
+The operator-provided supplementary source is `D:/UNG DUNG AI/TOOL AI 2026/Controlled-Vibe-Framework-CVF/docs/reference/downstream_gate_profile/CVF_ROADMAP_PROGRESS_FORM.md`, raw SHA-256 `3f0917927e46f24212f80e1b6a8579067c2e0c21fad9d17ec34f719f77733c78`. Its separate provenance repository HEAD is `b065142dec80fd45c106c3ff4687526918248cf6`; the file's last commit is `feb691726a3be5bd4b3ac4dc402d22c69bc79235`. It is not part of the project's pinned public Core or the verified f817 pack delivery. This form is application guidance; it does not change the project Core pin, profile, machine gate or authority.
+
+The project's M1–M5 delivery roadmap already supplies the main user-outcome table. Its M3-01…08 acceptance remains the canonical product coverage; the machine registry currently admits M3 only. The form calls for one authoritative table and stable criterion IDs, so R152 adds no duplicate coverage table. M3-06 UI lifetime and M5 release/CI have their own outcomes; profile installation does not by itself implement either one.
+
+| Form question | R152 answer and decision |
+| --- | --- |
+| Result and gap | R152 changes development governance tooling, with no demonstrated direct M3/M5 acceptance contribution. R151 source/effects and R139/M3 remain held. Current activation launcher reports `BLOCKED_SOURCE_POLICY`; prospective active R152 pre-dispatch failed `COV_BLOCK_REQUIRED`. |
+| Reuse and cheaper sufficient path | Installed profile 1.3 remains identity verified for its stated scope. The f817 profile 1.4 delivery is verified but uninstalled. Keep 1.3 while assessing whether the next authorized action actually depends on 1.4; do not build a project adapter or invent a criterion. |
+| Cost and stop | R152 has one retained failed prospective pre-dispatch, source comparison and independent review. Root reports one prior 130-test gate suite (377.089 seconds) from the session tool result; no separate retained receipt was located, so this timing/count is not independently verified. This correction's first mandatory 130-test invocation used `python` without `-B`: 129 passed, one LAW fixture range test failed after Python created `__pycache__` inside its disposable Git fixture (459.660 seconds). A focused rerun with `python -B` passed in 50.766 seconds; the full `python -B` rerun passed 130/130 in 374.880 seconds. These attempts and durations are cumulative, not a reset. Root's total active time and monetary cost are UNKNOWN; no provider or product effect occurred. No new migration budget is inferred. Stop preparatory expansion until a concrete dependency and proportionate additional ceiling are recorded. |
+| Checkpoint and authority | Root ORCHESTRATOR at the next actual product/maintenance dispatch checks necessity, source revision, cumulative cost and cheaper alternative. Astra independently reviews a revised exact packet if an authorized route exists; otherwise defer installation with the existing 1.3 scope and open activation limitation stated. Product Owner retains business acceptance and release decisions. |
+
+This recheck retains the failed machine result. The form supplies no exception to `COV_BLOCK_REQUIRED`; it separates tranche, internal product readiness, user acceptance and release decisions. No milestone, runtime or hosted CI claim follows from adopting the form.
