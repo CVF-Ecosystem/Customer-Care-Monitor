@@ -4,6 +4,12 @@
   "updatedAt": "2026-11-06",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
+    {"id": "r154-reconciliation-seed-20261106", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-154.json", "status": "ACTIVE", "description": "Committed R2 dispatcher seed for one bounded repository history reconciliation."},
+    {"id": "r154-reconciliation-record-20261106", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-154.json", "status": "ACTIVE", "description": "R154 work order record; worker merge held until independent dispatch review and exact gates."},
+    {"id": "r153-m2-entry-historical-handoff-20261106", "family": "continuity", "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R153_M2_ENTRY_INVENTORY_2026-11-06.md", "status": "RETIRED", "description": "Frozen R153 source inventory handoff; superseded as active pointer by R154, with product holds retained."},
+    {"id": "r154-reconciliation-order-20261106", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_154_REPOSITORY_RECONCILIATION.md", "status": "ACTIVE", "description": "One bounded no-rewrite/no-force integration packet with independent R2 review."},
+    {"id": "r154-reconciliation-criterion-20261106", "family": "continuity", "path": "docs/reviews/planning/CCMA_REPOSITORY_CONTINUITY_2026-11-06.md", "status": "ACTIVE", "description": "Project-specific RC-01 development repository continuity criterion; no M5 release claim."},
+    {"id": "r154-reconciliation-predispatch-review-20261106", "family": "continuity", "path": "docs/reviews/R154_REPOSITORY_RECONCILIATION_PREDISPATCH_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Astra independent design acceptance; dispatch continuity and gates still required."},
     {"id": "r153-m2-entry-seed-20261106", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-153.json", "status": "ACTIVE", "description": "Committed dispatcher seed for one finite read-only M2-04 source inventory."},
     {"id": "r153-m2-entry-record-20261106", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-153.json", "status": "ACTIVE", "description": "R2 DISPATCH_READY null-authority VERIFY record; no implementation or product acceptance."},
     {"id": "r153-m2-entry-order-20261106", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_153_M2_ENTRY_INVENTORY.md", "status": "ACTIVE", "description": "Finite one-pass M2-04 entry-path source inventory packet."},
@@ -5571,9 +5577,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R153_M2_ENTRY_INVENTORY_2026-11-06.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md",
       "status": "ACTIVE",
-      "description": "FROZEN R153 T0 M2-04 inventory handoff; product acceptance OPEN/UNKNOWN and R152/R151/R139/M3 holds retained."
+      "description": "Current R154 repository reconciliation handoff; R153 frozen inventory and all product holds retained."
     },
     {
       "id": "r060-work-order",

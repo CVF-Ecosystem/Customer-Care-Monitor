@@ -2,7 +2,16 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R153_M2_ENTRY_INVENTORY_2026-11-06.md", "activeTranche": "CCMAI-RUNTIME-153", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md", "activeTranche": "CCMAI-RUNTIME-154", "parked": true} -->
+## Current R154 repository reconciliation DISPATCH_READY - 2026-11-06
+
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+
+Owner requested one unified development repository after remote update. Root seeded R154 at `a31f7adf51be7e3493e4b1f112164a4044d2206b` and admitted the project-specific RC-01 repository-continuity criterion; Astra accepted the final packet, installed pre-dispatch passed with ROUTE N/A and portable preflight passed 7/7. Terra's one pinned no-commit merge is released only when the commit containing this handoff exists. Local and remote R150 share authority filenames but represent different work. Local R150 Windows effects/UNKNOWNs, R153 consumed 12-file pass, R152 profile1.4 deferral, R151 BUILD_BLOCKED, R139/M3 holds and account parking remain. No product or runtime acceptance follows from repository reconciliation.
+
+Root ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 worker held; Astra Medium independent reviewer.
+
 ## Current R153 finite M2-04 source VERIFY FROZEN - 2026-11-06
 
 - Current mode: FREEZE
@@ -205,11 +214,11 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: FREEZE
-- Active phase: FREEZE
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R153_M2_ENTRY_INVENTORY_2026-11-06.md
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md
 
-CCMAI-RUNTIME-153 FROZEN: the one-pass T0 M2-04 entry-path inventory was independently accepted; the 12-file cap is spent. M2-04 common admission and product acceptance remain OPEN/UNKNOWN, with no runtime or governance claim. R152 profile1.4 installation deferred at DRAFT; R151 BUILD_BLOCKED with third-repair NO-GO, R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and Facebook/Zalo OA parked. Any further source comparison requires a new bounded authority and cost decision.
+CCMAI-RUNTIME-154 DISPATCH_READY: Root admitted project-specific RC-01 repository continuity and Astra accepted the final packet; exact active-packet and portable gates passed. One no-commit merge is allowed only after this handoff's dispatch commit. R153 one-pass T0 inventory remains FROZEN with its 12-file cap spent and M2 OPEN/UNKNOWN. R152 profile1.4 installation deferred at DRAFT; R151 BUILD_BLOCKED with third-repair NO-GO, R139/M3 blocked, R150 Windows INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and Facebook/Zalo OA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

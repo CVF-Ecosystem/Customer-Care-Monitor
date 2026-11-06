@@ -81,8 +81,8 @@
   },
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "FREEZE",
-  "activePhase": "FREEZE",
+  "currentMode": "WORK_ORDER",
+  "activePhase": "WORK_ORDER",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -92,11 +92,11 @@
     "REVIEW",
     "FREEZE"
   ],
-  "activeTranche": "CCMAI-RUNTIME-153",
-  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R153_M2_ENTRY_INVENTORY_2026-11-06.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-153 FROZEN after one independently reviewed T0 M2-04 inventory; its 12-file pass is consumed. M2-04 common admission and product acceptance remain OPEN/UNKNOWN. Root may decide whether one consolidated M2 source/evidence comparison is necessary under new authority; no automatic dispatch. R152 profile1.4 installation deferred at DRAFT; R151 BUILD_BLOCKED, R139/M3 blocked, R150 INCONCLUSIVE and Facebook/Zalo OA parked.",
+  "activeTranche": "CCMAI-RUNTIME-154",
+  "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md",
+  "nextAllowedMove": "CCMAI-RUNTIME-154 DISPATCH_READY: after the commit containing this dispatch handoff, Terra may perform one pinned no-commit merge of f7405c47; Root retains merge-commit ownership. R153 remains FROZEN; R152 DRAFT, R151 BUILD_BLOCKED, R139/M3 blocked, R150 Windows INCONCLUSIVE with consumed effects and cleanup UNKNOWN, accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root CLOSER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 VERIFY return accepted; Astra Medium independent review accepted",
+  "activeRole": "Root ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER held; Astra Medium independent R2 REVIEWER",
   "updatedAt": "2026-11-06",
   "x-resolvedCoreCommit": "15e39450853184eb65dbde73398c69c3171a6241",
   "x-ownerRoadmapDiscipline": {

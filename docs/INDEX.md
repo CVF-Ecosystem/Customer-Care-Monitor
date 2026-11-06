@@ -16,7 +16,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- FROZEN R153 T0 M2-04 inventory handoff; product acceptance OPEN/UNKNOWN and R152/R151/R139/M3 holds retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R153_M2_ENTRY_INVENTORY_2026-11-06.md`
+- Current R154 repository reconciliation handoff; R153 frozen inventory and all product holds retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -5341,12 +5341,18 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent R2 acceptance of R152 deferral and finite R153 design only.: `docs/reviews/R152_PROFILE_14_NECESSITY_INDEPENDENT_REVIEW_2026-11-06.md`
 - Independent R2 acceptance of roadmap form v1.2 documentary correction; profile1.4 installation held.: `docs/reviews/R152_ROADMAP_FORM_INDEPENDENT_REVIEW_2026-11-06.md`
 - Independent R2 assessment of external form v1.4 and CCMA-specific M1-M5 reference map; gate-profile installation held.: `docs/reviews/R152_ROADMAP_FORM_V14_INDEPENDENT_REVIEW_2026-11-06.md`
+- Frozen R153 source inventory handoff; superseded as active pointer by R154, with product holds retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R153_M2_ENTRY_INVENTORY_2026-11-06.md`
 - Finite one-pass M2-04 entry-path source inventory packet.: `docs/work_orders/CCMAI_RUNTIME_153_M2_ENTRY_INVENTORY.md`
 - Independent R2 acceptance of exact finite R153 VERIFY packet after continuity repair; dispatch commit required.: `docs/reviews/R153_M2_ENTRY_INVENTORY_PACKET_INDEPENDENT_REVIEW_2026-11-06.md`
 - R2 DISPATCH_READY null-authority VERIFY record; no implementation or product acceptance.: `CVF_SESSION/tranches/CCMAI-RUNTIME-153.json`
 - Independent R2 acceptance of bounded T0 source map; M2 product remains OPEN/UNKNOWN.: `docs/reviews/R153_M2_ENTRY_INVENTORY_INDEPENDENT_REVIEW_2026-11-06.md`
 - Terra's consumed 12-file T0 entry-path inventory with owned admission UNKNOWNs.: `docs/reviews/R153_M2_ENTRY_INVENTORY_WORKER_RETURN_2026-11-06.md`
 - Committed dispatcher seed for one finite read-only M2-04 source inventory.: `CVF_SESSION/authority/CCMAI-RUNTIME-153.json`
+- Project-specific RC-01 development repository continuity criterion; no M5 release claim.: `docs/reviews/planning/CCMA_REPOSITORY_CONTINUITY_2026-11-06.md`
+- One bounded no-rewrite/no-force integration packet with independent R2 review.: `docs/work_orders/CCMAI_RUNTIME_154_REPOSITORY_RECONCILIATION.md`
+- Astra independent design acceptance; dispatch continuity and gates still required.: `docs/reviews/R154_REPOSITORY_RECONCILIATION_PREDISPATCH_REVIEW_2026-11-06.md`
+- R154 work order record; worker merge held until independent dispatch review and exact gates.: `CVF_SESSION/tranches/CCMAI-RUNTIME-154.json`
+- Committed R2 dispatcher seed for one bounded repository history reconciliation.: `CVF_SESSION/authority/CCMAI-RUNTIME-154.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

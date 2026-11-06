@@ -4,6 +4,10 @@
     "M3": {
       "path": "docs/reviews/planning/CCMA_PRODUCT_DELIVERY_ROADMAP_2026-10-13.md",
       "heading": "## 7. M3 — Người duyệt, giao việc và kết quả xử lý"
+    },
+    "RC": {
+      "path": "docs/reviews/planning/CCMA_REPOSITORY_CONTINUITY_2026-11-06.md",
+      "heading": "## Repository continuity criterion"
     }
   },
   "repairControls": {

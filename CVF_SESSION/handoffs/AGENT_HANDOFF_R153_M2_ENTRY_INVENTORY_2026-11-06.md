@@ -1,6 +1,6 @@
 # R153 — finite M2-04 entry-path inventory handoff
 
-Status: ACTIVE
+Status: HISTORICAL
 
 ## Current State
 
