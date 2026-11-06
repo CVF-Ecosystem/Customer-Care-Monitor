@@ -4,9 +4,10 @@
   "updatedAt": "2026-11-06",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
-    {"id": "r152-parent-applicability-20261106", "family": "continuity", "path": "docs/reviews/R152_PARENT_UPDATE_APPLICABILITY_2026-11-06.md", "status": "ACTIVE", "description": "Shared development guidance mapped to project controls; profile1.4 route held."},
+    {"id": "r152-parent-applicability-20261106", "family": "continuity", "path": "docs/reviews/R152_PARENT_UPDATE_APPLICABILITY_2026-11-06.md", "status": "ACTIVE", "description": "Shared form v1.4 mapped to CCMA M1-M5 controls with source-delivery gap; downstream gate profile1.4 held."},
     {"id": "r152-independent-disposition-20261106", "family": "continuity", "path": "docs/reviews/R152_DISPOSITION_INDEPENDENT_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Independent R2 acceptance of documentary guidance and migration hold only."},
     {"id": "r152-roadmap-form-review-20261106", "family": "continuity", "path": "docs/reviews/R152_ROADMAP_FORM_INDEPENDENT_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Independent R2 acceptance of roadmap form v1.2 documentary correction; profile1.4 installation held."},
+    {"id": "r152-roadmap-form-v14-review-20261106", "family": "continuity", "path": "docs/reviews/R152_ROADMAP_FORM_V14_INDEPENDENT_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Independent R2 assessment of external form v1.4 and CCMA-specific M1-M5 reference map; gate-profile installation held."},
     {"id": "r152-maintenance-seed-20261106", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-152.json", "status": "ACTIVE", "description": "Immutable R2 seed for one bounded parent workspace maintenance scope."},
     {"id": "r152-maintenance-record-20261106", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-152.json", "status": "ACTIVE", "description": "DRAFT/WORK_ORDER maintenance record; no worker BUILD or profile upgrade."},
     {"id": "r152-maintenance-order-20261106", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_152_WORKSPACE_ACTIVATION.md", "status": "ACTIVE", "description": "Draft profile1.4 migration packet held on genuine maintenance coverage route."},
@@ -5564,7 +5565,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R152_WORKSPACE_ACTIVATION_2026-11-06.md",
       "status": "ACTIVE",
-      "description": "Active R152 WORK_ORDER DRAFT handoff; roadmap-form necessity and cost decision before any profile1.4 admission. R151 and R139/M3 remain blocked."
+      "description": "Active R152 WORK_ORDER DRAFT handoff; external form v1.4 and CCMA-specific M1-M5 map; gate-profile admission held. R151 and R139/M3 blocked."
     },
     {
       "id": "r060-work-order",

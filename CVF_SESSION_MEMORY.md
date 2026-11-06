@@ -8,7 +8,7 @@ Memory class: POINTER_RECORD
 - Current mode: WORK_ORDER
 - Active phase: WORK_ORDER
 
-Clean parent pack f8175616c delivery verified (53/53 hashed files); project-development guidance mapped to existing project controls and independently accepted in the R152 review. Roadmap form v1.2 correction 1 was checked as supplementary guidance against the existing M1-M5 roadmap. Profile1.4 remains uninstalled after a prospective installed1.3 pre-dispatch failed COV_BLOCK_REQUIRED. Root must first decide necessity, cumulative cost and whether installed1.3 suffices; a criterion cannot be invented to pass the gate. R152 packet/record are DRAFT/WORK_ORDER; no worker BUILD or policy/lock/CI/activation change. R151 stays BUILD_BLOCKED with spent costs and UNKNOWNs; R139/M3 blocked, R150 inconclusive, accounts parked.
+Clean parent pack f8175616c delivery verified (53/53 hashed files); project-development guidance mapped to existing project controls and independently accepted in the R152 review. The operator-supplied roadmap form v1.4 was checked against the existing M1-M5 roadmap; the active pack does not yet deliver the form. R152 now maps CCMA-specific controls by existing criterion IDs without changing the master coverage table. Profile1.4 remains uninstalled after a prospective installed1.3 pre-dispatch failed COV_BLOCK_REQUIRED. Root must first decide necessity, cumulative cost and whether installed1.3 suffices; a criterion cannot be invented to pass the gate. R152 packet/record are DRAFT/WORK_ORDER; no worker BUILD or policy/lock/CI/activation change. R151 stays BUILD_BLOCKED with spent costs and UNKNOWNs; R139/M3 blocked, R150 inconclusive, accounts parked.
 
 Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER held.
 
@@ -200,7 +200,7 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Active phase: WORK_ORDER
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R152_WORKSPACE_ACTIVATION_2026-11-06.md
 
-CCMAI-RUNTIME-152 DRAFT: clean parent delivery verified and shared development guidance mapped; roadmap form v1.2 correction 1 checked against M1-M5. Profile1.4 installation is held after COV_BLOCK_REQUIRED; next decide necessity, cumulative cost and whether installed1.3 suffices, then seek a genuine authorized route or defer. R151 remains BUILD_BLOCKED with reviewed third-repair NO-GO and narrow design-only comparison. Five focused tests/two syntax batches spent, prior active minutes UNKNOWN, no new worker/effect allowance. R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and Facebook/Zalo OA parked.
+CCMAI-RUNTIME-152 DRAFT: clean parent delivery verified and shared development guidance mapped; external roadmap form v1.4 added a CCMA-specific M1-M5 reference map, while pack delivery of that form remains unproved. Profile1.4 installation is held after COV_BLOCK_REQUIRED; next decide necessity, cumulative cost and whether installed1.3 suffices, then seek a genuine authorized route or defer. R151 remains BUILD_BLOCKED with reviewed third-repair NO-GO and narrow design-only comparison. Five focused tests/two syntax batches spent, prior active minutes UNKNOWN, no new worker/effect allowance. R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and Facebook/Zalo OA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 
