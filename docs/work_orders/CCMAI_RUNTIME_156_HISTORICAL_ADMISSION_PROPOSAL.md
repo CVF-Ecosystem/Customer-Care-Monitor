@@ -1,6 +1,6 @@
 # R156 — incremental historical audit/action join proposal
 
-Status: COMPLETE_PENDING_REVIEW
+Status: CLOSED
 workOrderStatusGrammar: cvf.workOrderStatusGrammar@1.0.0
 Risk: R2
 Authority: `CVF_SESSION/authority/CCMAI-RUNTIME-156.json` committed at `0ea490f02f993d396def1cda32215dd1212cbad2`
@@ -143,3 +143,7 @@ RC-01 is the sole existing RC criterion; it remains BLOCKED. Proposal work never
 ## Public Export Disposition
 
 DEFERRED_PRIVATE_ONLY
+
+## Final bounded disposition
+
+Material build705ef67c772020959d04066f14ae0b7dd77c81a8 retains final code and independent12/12 exit0 evidence. Root independent implementation review accepted STATIC_CANDIDATE_ONLY; installed1.3 scoped R156 range0ea490f0..705ef67c and portable7/7 passed. APPL and ROUTE explicitly not applicable at terminal checks; dispatch APPL was checked earlier. This block preserves original DISPATCH coverage snapshot and RC-01 BLOCKED. R156 closes only this tested uninstalled proposal. Parent acceptance/version/delivery, deliberate project adoption and ORIGINAL R154 required range still outstanding. R155 partial, all old failures/spend/UNKNOWN and product/account holds retained. No further worker/reviewer test allowance.

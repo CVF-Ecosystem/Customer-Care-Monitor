@@ -5,7 +5,7 @@ Risk: R2
 Date: 2026-11-06
 Worker: Sol 6.1 Medium IMPLEMENTATION_WORKER
 Reviewer: Root independent R2 REVIEWER
-Source build: uncommitted exact candidate pins below; COMMIT_STEWARD binds actual material commit separately
+Source build: `705ef67c772020959d04066f14ae0b7dd77c81a8`; exact final candidate pins below
 
 ## Verdict
 

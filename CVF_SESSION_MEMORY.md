@@ -2,15 +2,15 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R156_HISTORICAL_JOIN_2026-11-06.md", "activeTranche": "CCMAI-RUNTIME-156", "parked": true} -->
-## Current R156 final-source REVIEW — 2026-11-06
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R156_HISTORICAL_JOIN_2026-11-06.md", "activeTranche": "CCMAI-RUNTIME-156", "parked": true} -->
+## Current R156 FROZEN static candidate only — 2026-11-06
 
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: FREEZE
+- Active phase: FREEZE
 
-CCMAI-RUNTIME-156 REVIEW_PENDING: Root accepted final uninstalled candidate after independent12/12 methods exit0; commit exact source/review/evidence, then bind material SHA and check committed range before candidate-only disposition. Parent acceptance/delivery and deliberate adoption remain required; R154/RC-01 original gate and all product/runtime/account holds stay blocked. Five worker and one reviewer invocations spent; no further tests or automatic successor.
+CCMAI-RUNTIME-156 FROZEN_STATIC_CANDIDATE_ONLY: build705ef67c independently reviewed12/12 and R156 committed range checked; parent intake ready in docs/reviews/learnings/R155_HISTORICAL_REPAIR_ADMISSION_2026-11-06.md. Parent CVF maintainer must accept/version/deliver source; Root may only prepare separately authorized deliberate adoption after verified delivery. Installed1.3 unchanged; original R154/RC-01 gate unresolved, R155 BUILD_BLOCKED, R151/R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and accounts parked. Five worker and one reviewer invocations spent; no automatic retry/successor, no product or governance acceptance.
 
-Root independent review, no source authorship. Solfinalsource worker-unverified, previous actualpositive/default/collision casespassed within9/10workerresult; all rawfailures retained. Rootfinalsuite decides candidate-only acceptance. No installed or parent mutation.
+Root independently accepted exact final source after12/12 exit0; two failed Sol runs and R155partial retained. Build705ef67c and R156 scopedrange/portable checks accepted; installed25protectedfiles unchanged. Parent intake prepared, no message/push/adoption. This freeze is supporting proposal only, not RC-01/M1–M5 completion.
 
 ## Current R155 BUILD_BLOCKED partial candidate — 2026-11-06
 
@@ -236,11 +236,11 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: FREEZE
+- Active phase: FREEZE
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R156_HISTORICAL_JOIN_2026-11-06.md
 
-CCMAI-RUNTIME-156 REVIEW_PENDING: Root accepted final uninstalled candidate after independent12/12 methods exit0; commit exact source/review/evidence, then bind material SHA and check committed range before candidate-only disposition. Parent acceptance/delivery and deliberate adoption remain required; R154/RC-01 original gate and all product/runtime/account holds stay blocked. Five worker and one reviewer invocations spent; no further tests or automatic successor.
+CCMAI-RUNTIME-156 FROZEN_STATIC_CANDIDATE_ONLY: build705ef67c independently reviewed12/12 and R156 committed range checked; parent intake ready in docs/reviews/learnings/R155_HISTORICAL_REPAIR_ADMISSION_2026-11-06.md. Parent CVF maintainer must accept/version/deliver source; Root may only prepare separately authorized deliberate adoption after verified delivery. Installed1.3 unchanged; original R154/RC-01 gate unresolved, R155 BUILD_BLOCKED, R151/R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and accounts parked. Five worker and one reviewer invocations spent; no automatic retry/successor, no product or governance acceptance.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

@@ -1,0 +1,23 @@
+{
+  "sourceBuild": "705ef67c772020959d04066f14ae0b7dd77c81a8",
+  "base": "0ea490f02f993d396def1cda32215dd1212cbad2",
+  "installed1_3PrCi": "PASS",
+  "checked": [
+    "INST",
+    "CONT",
+    "RANGE",
+    "ROLE",
+    "CLAIM",
+    "COV"
+  ],
+  "notCheckedWithReason": [
+    "APPL terminal status",
+    "ROUTE no dispatchKind"
+  ],
+  "portablePreflight": "PASS7/7",
+  "originalR154Range": "UNRESOLVED_FAILURE_RETAINED",
+  "hostedCiObserved": false,
+  "rootReviewerMethods": 12,
+  "rootReviewerExitCode": 0,
+  "claimBoundary": "R156 static candidate slice only; no installed or runtime proof"
+}

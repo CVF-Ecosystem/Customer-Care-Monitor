@@ -31,3 +31,7 @@ R156 deliverable: docs/reviews/probes/r156_historical_join_20261106/README.md, p
 ## Product / operational remainder
 
 R154/RC-01, R151/R139/M3 remain blocked. R150 INCONCLUSIVE, A2 UNRUN, cleanupUNKNOWN and spent effects unchanged; Facebook/ZaloOA parked. No provider, browser, database, customer data, product runtime, deployment or release proof in this work. Public doctor knownLOCK_INVALID/COV_OBJECT_SHAPE failures retained; exact pinned1.3 static gate results never imply full doctorPASS, hostedCI or runtime AI governance.
+
+## Material handoff binding
+
+Tested uninstalled source/review/evidence committed705ef67c772020959d04066f14ae0b7dd77c81a8 on r155-historical-admission-repair. R156 scoped committedrange0ea490f0..705ef67c passed locally with terminal APPL/ROUTE N/A; portable7/7. This is not the original R154 range or hosted evidence. Final continuity closes only R156candidate slice and leaves parent-owned acceptance/delivery and RC/product holds explicit. No external message/push occurred.
