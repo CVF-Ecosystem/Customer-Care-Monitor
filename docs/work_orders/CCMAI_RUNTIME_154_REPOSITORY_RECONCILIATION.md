@@ -1,6 +1,6 @@
 # R154 — repository history reconciliation
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 workOrderStatusGrammar: cvf.workOrderStatusGrammar@1.0.0
 Tranche: CCMAI-RUNTIME-154
 Authority: `CVF_SESSION/authority/CCMAI-RUNTIME-154.json` seeded at `a31f7adf`
@@ -27,6 +27,10 @@ Stop on unknown first-add result, seed-at-base mismatch, altered consumed effect
 ## Review and closure
 
 Before dispatch, Astra independently checks the RC-01 admission, source pins, complete scope, collision strategy, packet coverage and role separation. After return, Astra checks both-parent provenance, exact bytes and F1–F6 interpretation. Root runs the installed1.3 exact-packet gates and portable preflight plus required downstream gate unit suite before a material commit. Closure requires one canonical current continuity pointer, both histories as ancestors, no changed frozen R150 outcome, no lost errata evidence, independent review and a clean checked branch. A push or PR may make the unified result reviewable, but this packet does not authorize force-push, release or deployment. Product conclusions remain OPEN.
+
+## Actual merged result and blocked gate
+
+The normal merge commit `229d98b3b33a17e4d23b3ded34cdd4455c5ca5d3` has both pinned tips as ancestors. Canonical local R150 authority and tranche bytes still match their original local versions; the remote R150 originals and unique errata are retained with provenance. The portable repository preflight passed 7/7 and the required gate unit suite passed 130/130 before the merge. The installed1.3 `pr-ci` range from pinned `f7405c470207dc0d3be64e6eca79b7050d3f79d8` to the merged HEAD returned `COV_REPAIR_ACTION_MISMATCH` for the preserved historical R150 work order: its admitted VERIFY action is compared with today's R151 IMPLEMENT audit. That is a temporal gate binding defect; no R150 packet or current M3 audit may be rewritten to fabricate a pass. RC-01 and this tranche remain blocked pending a parent-reviewed historical admission binding correction and deliberate pinned gate adoption. A draft PR may expose the exact result; no green CI, product or governance claim follows.
 
 ## Gate-To-Role Closeability Contract
 

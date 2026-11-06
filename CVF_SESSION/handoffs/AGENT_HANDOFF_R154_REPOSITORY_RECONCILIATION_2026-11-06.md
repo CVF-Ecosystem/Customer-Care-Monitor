@@ -1,17 +1,20 @@
 # R154 — repository reconciliation handoff
 
 Status: ACTIVE
+Disposition: BUILD_BLOCKED_REQUIRED_RANGE_GATE
 
 ## Current State
 
 - Current mode: BUILD
 - Active phase: BUILD
-- Active role: Terra 6.1 IMPLEMENTATION_WORKER for one no-commit merge; Root ORCHESTRATOR / COMMIT_STEWARD; Astra Medium independent R2 REVIEWER
+- Active role: Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD for blocked disposition; Astra Medium independent R2 REVIEWER; Terra 6.1 worker returned
 - Active tranche: CCMAI-RUNTIME-154
-- Next allowed move: CCMAI-RUNTIME-154 BUILD: Terra may perform one pinned no-commit merge of f7405c47, preserve both R150 origins and return exact tree evidence; Root owns merge commit and independent review. R153 remains FROZEN; R152 DRAFT, R151 BUILD_BLOCKED, R139/M3 blocked, R150 Windows INCONCLUSIVE with consumed effects and cleanup UNKNOWN, accounts parked.
+- Next allowed move: CCMAI-RUNTIME-154 BUILD_BLOCKED: merge 229d98b3 preserves both histories and R150 evidence; installed1.3 pr-ci fails COV_REPAIR_ACTION_MISMATCH on historical R150 versus current R151 audit. Publish a blocked draft PR for review; require a parent-reviewed historical admission binding before RC-01 closure. R153 FROZEN, R152 DRAFT, R151 BUILD_BLOCKED, R139/M3 blocked, R150 Windows INCONCLUSIVE with spent effects and cleanup UNKNOWN, accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## Transition acknowledgment
+
+Root rehydrated the merged R154 state, memory, handoff, implementation truth and index before this blocked disposition. Terra's bounded merge work is complete and Root committed normal merge `229d98b3b33a17e4d23b3ded34cdd4455c5ca5d3`; both pinned histories and exact R150 origins survive. Astra's independent postmerge review accepts provenance and reproduces the installed1.3 PR-range `COV_REPAIR_ACTION_MISMATCH` for frozen R150 VERIFY versus current R151 IMPLEMENT audit. Root transitions from commit stewardship of BUILD to ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD for BUILD_BLOCKED. The required range gate is HOLD; RC-01 and R154 cannot FREEZE. One draft PR may expose the result without a green CI or main-merge claim. No product/provider/Windows effects or spent budgets change.
 
 Root rehydrated the R153 FROZEN continuity, implementation truth and index before opening R154. The Owner explicitly requested one unified repository after the GitHub update. Local R150 Windows VERIFY and remote R150 documentary errata reuse the same authority/tranche filenames; this is the cause of the unsafe direct merge. Root seeded R154 at `a31f7adf51be7e3493e4b1f112164a4044d2206b` before any merge. The new RC-01 criterion is a development repository outcome, separate from M5 release. Terra must rehydrate and declare IMPLEMENTATION_WORKER only after independent pre-dispatch review and exact gates. No merge, Windows, product, provider or runtime effect has occurred under R154 at this handoff.
 

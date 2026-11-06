@@ -5356,13 +5356,14 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Cloud independent errata review and F1–F6 qualifications; Local review pending.: `docs/reviews/R150_R149_ERRATA_INDEPENDENT_REVIEW_2026-11-05.md`
 - Historical cloud errata handoff; exact original ACTIVE version is archived.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R150_R149_ERRATA_2026-11-05.md`
 - Archived cloud R150 seed, tranche and original handoff identities, separate from canonical Windows R150.: `CVF_SESSION/history/r150-cloud-errata-4164a28d/provenance.json`
+- Independent R2 merge provenance acceptance and required installed PR-range coverage hold.: `docs/reviews/R154_POSTMERGE_PROVENANCE_AND_GATE_HOLD_2026-11-06.md`
 - Astra independently accepted preserved merge candidate, with actual DAG checks pending Root commit.: `docs/reviews/R154_REPOSITORY_RECONCILIATION_INDEPENDENT_REVIEW_2026-11-06.md`
-- Project-specific RC-01 development repository continuity criterion; no M5 release claim.: `docs/reviews/planning/CCMA_REPOSITORY_CONTINUITY_2026-11-06.md`
-- One bounded no-rewrite/no-force integration packet with independent R2 review.: `docs/work_orders/CCMAI_RUNTIME_154_REPOSITORY_RECONCILIATION.md`
+- Project-specific RC-01 remains blocked on required historical range gate; no M5 release claim.: `docs/reviews/planning/CCMA_REPOSITORY_CONTINUITY_2026-11-06.md`
+- One bounded no-rewrite integration packet now blocked by historical range gate.: `docs/work_orders/CCMAI_RUNTIME_154_REPOSITORY_RECONCILIATION.md`
 - Astra independent design acceptance; dispatch continuity and gates still required.: `docs/reviews/R154_REPOSITORY_RECONCILIATION_PREDISPATCH_REVIEW_2026-11-06.md`
-- R154 work order record; worker merge held until independent dispatch review and exact gates.: `CVF_SESSION/tranches/CCMAI-RUNTIME-154.json`
+- R154 merge completed; required PR-range coverage gate blocks RC-01 closure.: `CVF_SESSION/tranches/CCMAI-RUNTIME-154.json`
 - Committed R2 dispatcher seed for one bounded repository history reconciliation.: `CVF_SESSION/authority/CCMAI-RUNTIME-154.json`
-- R154 no-commit merge candidate, byte provenance and qualifications; independent review pending.: `docs/reviews/R154_WORKER_RETURN_2026-11-06.md`
+- R154 no-commit merge candidate, byte provenance and qualifications; postmerge review records gate hold.: `docs/reviews/R154_WORKER_RETURN_2026-11-06.md`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

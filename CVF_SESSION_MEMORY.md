@@ -3,14 +3,14 @@
 Memory class: POINTER_RECORD
 
 <!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md", "activeTranche": "CCMAI-RUNTIME-154", "parked": true} -->
-## Current R154 repository reconciliation BUILD - 2026-11-06
+## Current R154 repository reconciliation BUILD_BLOCKED - 2026-11-06
 
 - Current mode: BUILD
 - Active phase: BUILD
 
-Owner requested one unified development repository after remote update. Root seeded R154 at `a31f7adf51be7e3493e4b1f112164a4044d2206b` and admitted project-specific RC-01. Astra accepted the exact packet; installed pre-dispatch, portable preflight and 130 gate units passed. Root committed dispatch at `284c6a6e` and transferred only the one no-commit merge to Terra. Local and remote R150 share authority filenames but represent different work. Local R150 Windows effects/UNKNOWNs, R153 consumed 12-file pass, R152 profile1.4 deferral, R151 BUILD_BLOCKED, R139/M3 holds and account parking remain. No product or runtime acceptance follows from repository reconciliation.
+Owner requested one unified development repository after remote update. Root seeded R154 at `a31f7adf51be7e3493e4b1f112164a4044d2206b` and admitted project-specific RC-01. Terra completed one pinned merge; Root committed `229d98b3b33a17e4d23b3ded34cdd4455c5ca5d3` with both histories, exact local R150 authority and archived remote R150 originals. Astra independently accepted merge provenance. Installed1.3 PR-range gate then failed COV_REPAIR_ACTION_MISMATCH because it compares historical R150 VERIFY with current R151 IMPLEMENT audit. R154/RC-01 remain BUILD_BLOCKED; no FREEZE, green CI or product acceptance. R153 consumed 12-file pass, R152 profile1.4 deferral, R151 BUILD_BLOCKED, R139/M3 holds, R150 Windows effects/UNKNOWNs and account parking remain.
 
-Terra 6.1 IMPLEMENTATION_WORKER for one no-commit merge; Root ORCHESTRATOR / COMMIT_STEWARD; Astra Medium independent reviewer.
+Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD for blocked disposition; Astra Medium independent R2 REVIEWER; Terra 6.1 worker returned.
 
 ## Current R153 finite M2-04 source VERIFY FROZEN - 2026-11-06
 
@@ -218,7 +218,7 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md
 
-CCMAI-RUNTIME-154 BUILD: Root admitted project-specific RC-01 repository continuity, Astra accepted the final DISPATCH_READY packet and Root committed dispatch at `284c6a6e`. Terra may execute only one pinned no-commit merge; Root owns the merge commit. R153 one-pass T0 inventory remains FROZEN with its 12-file cap spent and M2 OPEN/UNKNOWN. R152 profile1.4 installation deferred at DRAFT; R151 BUILD_BLOCKED with third-repair NO-GO, R139/M3 blocked, R150 Windows INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and Facebook/Zalo OA parked.
+CCMAI-RUNTIME-154 BUILD_BLOCKED: merge `229d98b3` preserves both histories and R150 evidence; independent R2 review accepts provenance. Installed1.3 PR-range COV_REPAIR_ACTION_MISMATCH blocks RC-01 closure until parent-reviewed historical admission binding is delivered and deliberately adopted. Draft PR may expose this hold; no green CI/main merge/FREEZE claim. R153 one-pass T0 inventory remains FROZEN with its 12-file cap spent and M2 OPEN/UNKNOWN. R152 profile1.4 installation deferred at DRAFT; R151 BUILD_BLOCKED with third-repair NO-GO, R139/M3 blocked, R150 Windows INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and Facebook/Zalo OA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 
