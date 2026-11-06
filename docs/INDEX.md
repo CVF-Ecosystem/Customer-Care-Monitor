@@ -5365,11 +5365,15 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R154 merge completed; required PR-range coverage gate blocks RC-01 closure.: `CVF_SESSION/tranches/CCMAI-RUNTIME-154.json`
 - Committed R2 dispatcher seed for one bounded repository history reconciliation.: `CVF_SESSION/authority/CCMAI-RUNTIME-154.json`
 - R154 no-commit merge candidate, byte provenance and qualifications; postmerge review records gate hold.: `docs/reviews/R154_WORKER_RETURN_2026-11-06.md`
+- Uninstalled provenance-only candidate, not ready for integration.: `docs/reviews/probes/r155_historical_binding_20261106/README.md`
 - Sol independent exact seed/design acceptance recorded by Root; no parent or implementation acceptance.: `docs/reviews/R155_DISPATCH_DESIGN_REVIEW_2026-11-06.md`
+- Root independent CHANGES_REQUIRED with Sol read-only concurrence; no fix acceptance.: `docs/reviews/R155_INDEPENDENT_IMPLEMENTATION_REVIEW_2026-11-06.md`
 - New parent pack ee68e90d3 verified56 hashed files and one directory; no historical fix delivered.: `CVF_SESSION/history/r155-parent-delivery-20261106/verification.json`
 - Exact reviewed uninstalled historical-admission candidate and static fixture contract.: `docs/work_orders/CCMAI_RUNTIME_155_HISTORICAL_ADMISSION_PROPOSAL.md`
 - R155 candidate-only bounded dispatch record; original RC-01 remains blocked.: `CVF_SESSION/tranches/CCMAI-RUNTIME-155.json`
 - Bounded uninstalled historical-admission repair proposal authority; no installed gate or parent adoption.: `CVF_SESSION/authority/CCMAI-RUNTIME-155.json`
+- Terra partial unsupported return; all spent invocations retained.: `docs/reviews/R155_WORKER_RETURN_2026-11-06.md`
+- Prospective incremental Sol fallback seed; prior spend preserved, no BUILD release.: `CVF_SESSION/authority/CCMAI-RUNTIME-156.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

@@ -1,6 +1,6 @@
 # R155 — historical admission fix proposal for parent review
 
-Status: ACTIVE
+Status: BLOCKED_WITH_REASON
 workOrderStatusGrammar: cvf.workOrderStatusGrammar@1.0.0
 Risk: R2
 Authority: `CVF_SESSION/authority/CCMAI-RUNTIME-155.json` at `839e1fecc4f4fa23cb3896f1b5f4818458f01def`
@@ -139,3 +139,7 @@ The existing authoritative RC table remains unchanged. All its criteria (RC-01 o
 ## Public Export Disposition
 
 DEFERRED_PRIVATE_ONLY
+
+## Actual initial implementation disposition
+
+Terra returned PARTIAL/UNSUPPORTED; Root independent review requires changes. Provenance-only preflight cannot admit and incorrectly equates current/historical registry bytes. Six subset tests are not outcome acceptance. Both initial invocations and one cleanup repair rerun are spent; no R155 second pass. Retain all original artifacts. See R155_INDEPENDENT_IMPLEMENTATION_REVIEW_2026-11-06.md for the exact incremental Root decision and parent boundary. RC-01 and product remain BLOCKED.

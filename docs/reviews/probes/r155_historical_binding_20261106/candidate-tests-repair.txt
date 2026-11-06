@@ -1,0 +1,11 @@
+test_binding_parse_and_path_fail_closed (__main__.CandidateTests.test_binding_parse_and_path_fail_closed) ... ok
+test_execution_paths_rejected (__main__.CandidateTests.test_execution_paths_rejected) ... ok
+test_head_and_ancestry_rejected (__main__.CandidateTests.test_head_and_ancestry_rejected) ... ok
+test_missing_binding_and_review (__main__.CandidateTests.test_missing_binding_and_review) ... ok
+test_mutated_bound_bytes_rejected (__main__.CandidateTests.test_mutated_bound_bytes_rejected) ... ok
+test_provenance_only_is_unsupported (__main__.CandidateTests.test_provenance_only_is_unsupported) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 3.959s
+
+OK

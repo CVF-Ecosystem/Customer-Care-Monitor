@@ -1,0 +1,31 @@
+{
+  "sourceCommit": "b04f60c544617c494379cd8f92fe54aa1d3ed26a",
+  "files": {
+    ".cvf/policy.json": "3dbde143840876a642a2885f66015e13d0fe5f6ce25b2e29d8b1241e5632998c",
+    ".cvf/gate-profile.lock.json": "929ae15fa1ad6243a87400a3bd1aec3f6f1738e4a545395df4088cbd54ea7007",
+    ".github/workflows/cvf-downstream-gates.yml": "d3679377465e6c4346c13ace4f86aaf15a9356e7fb868f6b17122e415749e069",
+    "docs/milestone-coverage-authority.json": "c7cc6dd542def41689691514168113fe825bbf23e3dc36e88a2d5e83efed7339",
+    "CVF_SESSION/authority/CCMAI-RUNTIME-150.json": "043554d36c1c93436d22a05a59a30904e708863e6830b6bd0e31448a23b52d27",
+    "CVF_SESSION/tranches/CCMAI-RUNTIME-150.json": "16f0694ee454f89d66425e62fc0737bfd63d63d144ad9384dcbcd7cabe191b98",
+    "docs/work_orders/CCMAI_RUNTIME_150_A1_A2_WINDOWS_VERIFY.md": "4ddd6db0fab65636b07b86358d59ad85e0f3ddf7512870cea7cc8e571f1f2cfb",
+    "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a1_a2_windows_verify.json": "619bb671f1456205f93e1b8cdb421d05f3d1fbbdc4312144c8efa1f7ac031a88",
+    "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_r151_evidence_capture.json": "4e9ca61e7e1bb129f2996f3cea6228467fe9d1b8b915b8b1bd5f2d2ecc2955c5",
+    "scripts/cvf_gates/check_gate_to_role_closeability.py": "8f00c6421eebe3c1b237e5307ac6e2b0b0343c9a35cf635bbab17aa886e00e8e",
+    "scripts/cvf_gates/cvf_dg_applicability.py": "bffde44fe38494b0dea9e658fb82eaaec31f3bd25c9964445fa837dd29b01c67",
+    "scripts/cvf_gates/cvf_dg_common.py": "9153aca8af554b3fee6df5ff28f79efaa8592a439b893f421048a7739391fd2e",
+    "scripts/cvf_gates/cvf_dg_continuity.py": "8ca92bd3c172638728e98f04ed652c32639280d236af5912ae479bb7c38fe571",
+    "scripts/cvf_gates/cvf_dg_coverage.py": "d768e60435268da2c8609a928972d1912d369a67d4056924c515d552a4245467",
+    "scripts/cvf_gates/cvf_dg_install.py": "4e96952ef312487e5999b0b0d4db85c2eda158e2ac1cbb336beeba6876ddc316",
+    "scripts/cvf_gates/cvf_dg_intake.py": "204aacddb1d1b64439508bcfa73c8632842b0bc1f26dcdf3422d1404e1594efc",
+    "scripts/cvf_gates/cvf_dg_review.py": "2558b7635646340a73cb124121802f2f6f123ef96e240146def3e874a002034d",
+    "scripts/cvf_gates/cvf_dg_routing.py": "a39419336ea31ec155c285291f3d5684046e8b18d88dbf47c422b3c2c59632cf",
+    "scripts/cvf_gates/cvf_downstream_gate_profile.json": "db5428e5c4dc3f4a566aa6076b883ccb2e923693a493b0f4a87f98eb54ec714d",
+    "scripts/cvf_gates/cvf_downstream_gate_runner.py": "ec97dbc37bb31ea9cc4163df8a49b402827116a10f8939c3bba52504e304d347",
+    "scripts/cvf_gates/cvf_milestone_coverage.py": "cd923b842aabce33f352c2ea14c55a3a7c2fa6bb549de62b3897712fc68c0b02",
+    "scripts/cvf_gates/cvf_repair_convergence.py": "227c56680648623eed294b49795e113ac520658276c8503eb6268b925a36fd3c",
+    "scripts/cvf_gates/git-pre-commit.template": "547c077163eb64259362a669d1fa6cca7cc4fe06090af3c9286f09557bcf937b",
+    "scripts/cvf_gates/project_learning_home.template.md": "b2982c018baedca7f076526221ad6d5d0854dab2f029390d2c7f079ded05930f",
+    "scripts/cvf_gates/project_learning_record.template.md": "559d2d50c86fbfc72967d6af5b19df23c5001c48ddaca0a2b423fc574e7250d6"
+  },
+  "claimBoundary": "Pre-worker raw byte baseline for forbidden mutation surfaces; no runtime proof"
+}

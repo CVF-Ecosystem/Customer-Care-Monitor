@@ -42,18 +42,21 @@
   "bootstrapException": false,
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_155_HISTORICAL_ADMISSION_PROPOSAL.md",
   "baseCommit": "839e1fecc4f4fa23cb3896f1b5f4818458f01def",
-  "status": "BUILD",
+  "status": "BUILD_BLOCKED",
   "phase": "BUILD",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
   "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "UNINSTALLED_CANDIDATE_BUILD_COMMIT_REQUIRED",
+  "reviewEvidence": [
+    "docs/reviews/R155_INDEPENDENT_IMPLEMENTATION_REVIEW_2026-11-06.md"
+  ],
+  "disposition": "PARTIAL_INITIAL_IMPLEMENTATION_NOT_ACCEPTED_JOIN_MISSING",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "BUILD_BLOCKED"
   ],
   "parentTranche": "CCMAI-RUNTIME-154"
 }

@@ -1,0 +1,6 @@
+{
+  "protectedFiles": 25,
+  "mismatches": [],
+  "reviewer": "Root",
+  "fixtureRetention": "First failed synthetic repo reversibly moved to ignored .cvf/runtime/r155; no deletion, no nested .git committed"
+}

@@ -3,12 +3,14 @@
 Memory class: POINTER_RECORD
 
 <!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R155_HISTORICAL_ADMISSION_2026-11-06.md", "activeTranche": "CCMAI-RUNTIME-155", "parked": true} -->
-## Current R155 candidate-only BUILD — 2026-11-06
+## Current R155 BUILD_BLOCKED partial candidate — 2026-11-06
 
 - Current mode: BUILD
 - Active phase: BUILD
 
-Root rehydrated corrected R154 and committed R155 seed839e1fec; independent Sol seed/design review accepted after three documented draft corrections. Terra6.1 High is released only after committed BUILD marker and fresh declaration; exact packet design/gates accepted. Root remains orchestrator/reviewer and commit/session steward. Scope is one UNINSTALLED historical-admission candidate+static fixtures and parent intake; no source-pack/inherited gate change. Original R154/RC-01 gate stays BLOCKED despite observed main merge e38d6795. All R139/R151/R150 UNKNOWNs/spent costs and account parking remain. Root required130 units PASS369.257s and preflight7/7; public doctor FAIL27/28 LOCK_INVALID only.
+CCMAI-RUNTIME-155 BUILD_BLOCKED: initial candidate is PARTIAL/UNSUPPORTED and not an accepted fix; three worker invocations spent, active/cost UNKNOWN. Root independently rejected missing historical joins and current-registry conflation. Root may commit separately reviewed prospective R156 Sol fallback authority for one45-minute/two-invocation incremental candidate implementation with cumulative spend preserved. No R155 retry or installed/Core/parent change. R154/RC-01 original gate, R151/R139/M3 and R150/account holds remain.
+
+Root reviewed Terra implementation independently; Sol read-only assessment confirmed missing joins/current-registry conflation. Six subset tests passed after cleanup repair, not fix acceptance. No installed/parent mutation; all R139/R151/R150/account holds and cumulative costs remain.
 
 ## R154 main-merge observation and R155 intake — 2026-11-06
 
@@ -229,7 +231,7 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R155_HISTORICAL_ADMISSION_2026-11-06.md
 
-R155 BUILD candidate-only work order awaits committed marker before Terra starts; exact dispatch design/gates accepted. Actual main merge e38d6795 is recorded; R154/RC-01 remains BLOCKED on original historical-action gate failure. Parent ee68e90d3 has no fix and installed1.3 stays unchanged. R151/R139/M3 blocked; R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and spent effects retained; accounts parked. Root orchestrator/reviewer; Terra6.1 High proposal worker; Sol6.1 Medium independent design reviewer. No parent adoption or runtime/product acceptance.
+CCMAI-RUNTIME-155 BUILD_BLOCKED: initial candidate is PARTIAL/UNSUPPORTED and not an accepted fix; three worker invocations spent, active/cost UNKNOWN. Root independently rejected missing historical joins and current-registry conflation. Root may commit separately reviewed prospective R156 Sol fallback authority for one45-minute/two-invocation incremental candidate implementation with cumulative spend preserved. No R155 retry or installed/Core/parent change. R154/RC-01 original gate, R151/R139/M3 and R150/account holds remain.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

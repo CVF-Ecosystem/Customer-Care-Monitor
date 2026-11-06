@@ -4,6 +4,10 @@
   "updatedAt": "2026-11-06",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
+    {"id": "r155-worker-return-20261106", "family": "continuity", "path": "docs/reviews/R155_WORKER_RETURN_2026-11-06.md", "status": "ACTIVE", "description": "Terra partial unsupported return; all spent invocations retained."},
+    {"id": "r155-implementation-review-20261106", "family": "continuity", "path": "docs/reviews/R155_INDEPENDENT_IMPLEMENTATION_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Root independent CHANGES_REQUIRED with Sol read-only concurrence; no fix acceptance."},
+    {"id": "r155-candidate-20261106", "family": "continuity", "path": "docs/reviews/probes/r155_historical_binding_20261106/README.md", "status": "ACTIVE", "description": "Uninstalled provenance-only candidate, not ready for integration."},
+    {"id": "r156-incremental-seed-20261106", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-156.json", "status": "ACTIVE", "description": "Prospective incremental Sol fallback seed; prior spend preserved, no BUILD release."},
     {"id": "r155-dispatch-design-review-20261106", "family": "continuity", "path": "docs/reviews/R155_DISPATCH_DESIGN_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Sol independent exact seed/design acceptance recorded by Root; no parent or implementation acceptance."},
     {"id": "r155-proposal-record-20261106", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-155.json", "status": "ACTIVE", "description": "R155 candidate-only bounded dispatch record; original RC-01 remains blocked."},
     {"id": "r155-proposal-order-20261106", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_155_HISTORICAL_ADMISSION_PROPOSAL.md", "status": "ACTIVE", "description": "Exact reviewed uninstalled historical-admission candidate and static fixture contract."},

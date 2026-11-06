@@ -1,0 +1,29 @@
+test_binding_parse_and_path_fail_closed (__main__.CandidateTests.test_binding_parse_and_path_fail_closed) ... ok
+test_execution_paths_rejected (__main__.CandidateTests.test_execution_paths_rejected) ... ok
+test_head_and_ancestry_rejected (__main__.CandidateTests.test_head_and_ancestry_rejected) ... ok
+test_missing_binding_and_review (__main__.CandidateTests.test_missing_binding_and_review) ... ok
+test_mutated_bound_bytes_rejected (__main__.CandidateTests.test_mutated_bound_bytes_rejected) ... ok
+test_provenance_only_is_unsupported (__main__.CandidateTests.test_provenance_only_is_unsupported) ... ok
+tearDownClass (__main__.CandidateTests) ... ERROR
+
+======================================================================
+ERROR: tearDownClass (__main__.CandidateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI\docs\reviews\probes\r155_historical_binding_20261106\test_candidate.py", line 48, in tearDownClass
+    shutil.rmtree(cls.tmp)
+    ~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\tiennm\AppData\Local\Programs\Python\Python313\Lib\shutil.py", line 790, in rmtree
+    return _rmtree_unsafe(path, onexc)
+  File "C:\Users\tiennm\AppData\Local\Programs\Python\Python313\Lib\shutil.py", line 629, in _rmtree_unsafe
+    onexc(os.unlink, fullname, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tiennm\AppData\Local\Programs\Python\Python313\Lib\shutil.py", line 625, in _rmtree_unsafe
+    os.unlink(fullname)
+    ~~~~~~~~~^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r155_historical_binding_20261106\\r155_fixture_z52h_n_c\\repo\\.git\\objects\\0d\\4e77fbe77b5a30eb9c50ebe677f6a7f664bd5b'
+
+----------------------------------------------------------------------
+Ran 6 tests in 4.229s
+
+FAILED (errors=1)
