@@ -1,6 +1,6 @@
 # R154 — repository reconciliation handoff
 
-Status: ACTIVE
+Status: HISTORICAL
 Disposition: BUILD_BLOCKED_REQUIRED_RANGE_GATE
 
 ## Current State
@@ -43,3 +43,7 @@ DEFERRED_PRIVATE_ONLY
 ## Observed main merge and successor intake — 2026-11-06
 
 Root freshly rehydrated canonical continuity and observed main/origin-main e38d679548bdc80ba9f4bc10a2e0d09056a2189f (GitHub merge of PR21, parents f7405c47 and 9ea1cfaf, commit time 17:35:05 +07). The earlier draft/unmerged statement above is historical observation, superseded here; no actor attribution or successful gate is inferred. BLOCKED_CONTINUITY_DRIFT was detected and dependent BUILD held until this synchronization. Root is ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD for successor preparation. User assigns Root independent review of Terra work; historical Astra reviews remain unchanged. R154/RC-01 remains BUILD_BLOCKED. Public doctor is FAIL27/28 with only LOCK_INVALID, COV PASS; never full doctor PASS. Parent ee68e90d3 verifies 56 hashed files and one unhashed continuity directory; repair module equals installed normalized7c58133b, so profile1.4 is not adopted. R155 seed authorizes only project-local uninstalled proposal/tests after independent design review and committed dispatch. No worker BUILD yet.
+
+## Successor pointer
+
+R155 is the sole active handoff for uninstalled proposal preparation. R154 remains BUILD_BLOCKED; this pointer is not closure or acceptance.

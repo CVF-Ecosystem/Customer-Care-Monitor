@@ -1,0 +1,26 @@
+{
+  "phase": "pre-dispatch",
+  "result": "FAIL_RETAINED",
+  "controls": {
+    "INST": "PASS",
+    "CONT": "FAIL",
+    "RANGE": "PASS",
+    "APPL": "FAIL",
+    "ROUTE": "NOT_APPLICABLE_WITH_REASON",
+    "COV": "PASS"
+  },
+  "findings": [
+    "Root transition omitted existing Current Truth stanza",
+    "Root exact-text catalog replacement did not match multiline canonical entry, leaving duplicate old handoff",
+    "Root applied path-family topology to dispatch_continuity row, which requires EXACT_PATHS"
+  ],
+  "correction": "Current Truth and canonical catalog entry synchronized; dispatch_continuity uses EXACT_PATHS while multi-artifact surfaces remain bounded families",
+  "workerReleased": false,
+  "subsequentPreCommitFinding": {
+    "code": "RISK_MISSING",
+    "path": "docs/reviews/R155_DISPATCH_DESIGN_REVIEW_2026-11-06.md",
+    "cause": "Root message-record artifact omitted mandatory Risk line",
+    "correction": "Added Risk:R2; review meaning unchanged",
+    "workerReleased": false
+  }
+}

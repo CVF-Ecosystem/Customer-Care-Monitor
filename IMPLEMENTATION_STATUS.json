@@ -2191,7 +2191,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-154",
+  "activeTranche": "CCMAI-RUNTIME-155",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",
@@ -2207,7 +2207,7 @@
     "publicationReceipt": "docs/reviews/probes/gov002_reviewed_publication_2026-10-12.json",
     "freeze": "OPEN"
   },
-  "activeWorkOrders": [],
+  "activeWorkOrders": ["docs/work_orders/CCMAI_RUNTIME_155_HISTORICAL_ADMISSION_PROPOSAL.md"],
   "x-historicalPreR088ActiveFields": {
     "currentPhase": "REVIEW",
     "activeTranche": "CCMAI-GOV-002-C1",

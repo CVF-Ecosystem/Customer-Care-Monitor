@@ -1,0 +1,35 @@
+# R155 — historical admission repair proposal handoff
+
+Status: ACTIVE
+Disposition: BUILD_UNINSTALLED_CANDIDATE_ONLY
+
+## Current State
+
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 High IMPLEMENTATION_WORKER proposal only; Root independent R2 REVIEWER of implementation; Sol 6.1 Medium independent design reviewer/advisor
+- Active tranche: CCMAI-RUNTIME-155
+- Next allowed move: CCMAI-RUNTIME-155 BUILD: Terra may implement only the committed uninstalled candidate and static fixtures after fresh declaration, within packet75 active minutes and invocation caps; Root reviews. No installed/profile/Core/parent mutation. R154/RC-01 original range stays BLOCKED despite main merge; R151/R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and accounts parked.
+- Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
+
+## Transition acknowledgment
+
+Root re-read canonical summary/state/memory, corrected R154 active handoff, implementation truth and docs index before this transition. Public Core c4c8767 remains read-only; live evidence required YES, trancheriskR2. R154 current observations now agree with actual main merge e38d6795. Root transitions ORCHESTRATOR/SPEC_AUTHOR to WORK_ORDER_AUTHOR/SESSION_SYNC_STEWARD/COMMIT_STEWARD. User assigns Terra6.1 High worker and Root independent reviewer; Sol6.1 Medium reviewed this governance-significant seed/design independently. Seed committed at 839e1fecc4f4fa23cb3896f1b5f4818458f01def, before BUILD. Initial design findings and final draft hash6ba1227b are retained in CVF_SESSION/history/r155-parent-delivery-20261106/packet_design_review.md. Real packet changes reviewed status, seed reference and the mandatory dispatch_continuity topology narrowing to EXACT_PATHS; no scope widening.
+
+Material-SHA marker: `docs/work_orders/CCMAI_RUNTIME_155_HISTORICAL_ADMISSION_PROPOSAL.md` SHA-256 `a0c207ece80d4c35c81ebbb587be3b9c445edbdc90fab759f5f2e1ac20b606f7` at BUILD/ACTIVE. Worker must not edit until dispatch commit, BUILD marker and fresh own declaration. Root alone stages/commits project; static synthetic fixture commits only are permitted under packet.
+
+## Baseline and cost
+
+Original R154 merged-range failure f7405c47..229d98b3 remains mandatory HOLD, not canceled by main merge or later narrow range. Parent ee68e90d3 has no fix; installation1.4 would not solve defect and remains deferred. Public doctor FAIL27/28 only LOCK_INVALID; COV PASS; installed1.3 pins unchanged. Root130 gate tests PASS369.257s; portable7/7. Root/advisory prior active time and monetary cost UNKNOWN; worker75active-min cap cumulative, two initial fixture invocations plus one justified targeted rerun. No product/provider/browser/DB effects. R150 counters/cleanup UNKNOWN and all holds remain.
+
+## Next owned result
+
+Terra returns uninstalled code/diff, baseline failure, candidate fixture evidence and exact gaps. Root independently reviews implementation and prepares one project-local parent learning intake. Parent acceptance/delivery and separate deliberate project upgrade remain prerequisite for original R154 gate recheck. R155 completion cannot close RC-01 or M1–M5. No remote message/publication authorized.
+
+## Public Export Disposition
+
+DEFERRED_PRIVATE_ONLY
+
+## BUILD transition acknowledgment before worker release
+
+Root re-read canonical continuity, active handoff, implementation truth and index at WORK_ORDER/R155 after exact independent Sol acceptance of DISPATCH_READY packet193d623e. Installed1.3 pre-dispatch and pre-commit checked APPL/COV PASS; ROUTE not applicable, ROLE not applicable at pre-commit. Portable7/7 and unchanged-tooling130 unit result retained. Root transitions to ORCHESTRATOR/SESSION_SYNC_STEWARD/COMMIT_STEWARD for bounded Terra worker release; Root will separately declare REVIEWER after return. This status-only BUILD marker is committed before worker starts. Candidate-only scope and all parent/product holds remain.

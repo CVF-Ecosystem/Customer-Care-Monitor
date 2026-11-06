@@ -2,7 +2,14 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md", "activeTranche": "CCMAI-RUNTIME-154", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R155_HISTORICAL_ADMISSION_2026-11-06.md", "activeTranche": "CCMAI-RUNTIME-155", "parked": true} -->
+## Current R155 candidate-only BUILD — 2026-11-06
+
+- Current mode: BUILD
+- Active phase: BUILD
+
+Root rehydrated corrected R154 and committed R155 seed839e1fec; independent Sol seed/design review accepted after three documented draft corrections. Terra6.1 High is released only after committed BUILD marker and fresh declaration; exact packet design/gates accepted. Root remains orchestrator/reviewer and commit/session steward. Scope is one UNINSTALLED historical-admission candidate+static fixtures and parent intake; no source-pack/inherited gate change. Original R154/RC-01 gate stays BLOCKED despite observed main merge e38d6795. All R139/R151/R150 UNKNOWNs/spent costs and account parking remain. Root required130 units PASS369.257s and preflight7/7; public doctor FAIL27/28 LOCK_INVALID only.
+
 ## R154 main-merge observation and R155 intake — 2026-11-06
 
 PR21 is already merged on main at e38d6795; prior draft/unmerged statements below retain their historical observation scope. R154/RC-01 stays BUILD_BLOCKED on original f7405c47 range failure. Root detected BLOCKED_CONTINUITY_DRIFT and reconciled canonical next-move text before further work. Parent ee68e90d3 delivers no fix (repair module unchanged); installed1.3 retained. User authorizes Terra6.1 High, Sol6.1 Medium when hard and Root orchestrator/reviewer. R155 seed bounds one uninstalled project-local fix proposal; no parent/gate adoption, runtime or product effect. All R139/R151/R150 holds, spent costs/UNKNOWNs and accounts parking persist.
@@ -73,8 +80,8 @@ R148 successor audit and R144 finite metadata closure are FROZEN after independe
 
 ## Current R144 finite A3 VERIFY dispatch - 2026-11-05
 
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
+- Current mode: BUILD
+- Active phase: BUILD
 
 R147 separate audit is FROZEN after independent review and committed-range PASS. Exact R144 packet now passes pre-dispatch and is DISPATCH_READY; Root will commit the material-SHA handoff marker before operator gives Claude the packet. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; A1/A2 and physical relaunch unproved; Facebook/Zalo OA parked.
 
@@ -89,8 +96,8 @@ R147 immutable seed is committed at `07ff318312861fcd9807e874dce0ffd669bda980`. 
 
 ## Current R144 A3 package metadata VERIFY dispatch - 2026-11-05
 
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
+- Current mode: BUILD
+- Active phase: BUILD
 
 CCMAI-RUNTIME-144 is a DRAFT finite A3 VERIFY for Claude cloud, not dispatched. The immutable seed was committed first at `40ef39ccf81608a967287c540548b33621f91e7c`. Root captured the current Windows installed `chrome-devtools-mcp@1.9.0` package metadata and four matching JS hashes. Pre-dispatch refused `COV_REPAIR_SUCCESSOR_HELD`: R139's M3-05/M3-08 audit is BLOCKED with no admitted discriminator or budget. A separate independent audit/admission is needed before Claude comparison. No new fetch or runtime action; Root retains independent review and commit ownership. R139 remains BUILD_BLOCKED, M3-05/M3-08 BLOCKED, M3-06 browser lifetime OPEN; A1/A2 unadmitted; Facebook/Zalo OA parked.
 
@@ -220,9 +227,9 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Contract: cvf.downstreamContinuityContract@1.0.0
 - Current mode: BUILD
 - Active phase: BUILD
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R155_HISTORICAL_ADMISSION_2026-11-06.md
 
-CCMAI-RUNTIME-154 BUILD_BLOCKED: merge `229d98b3` preserves both histories and R150 evidence; independent R2 review accepts provenance. Draft PR #21 is open; hosted gate run 42195844783 confirms PR-range COV_REPAIR_ACTION_MISMATCH. RC-01 closure and main merge require parent-reviewed historical admission binding and deliberate pinned delivery. No green CI/FREEZE claim. R153 one-pass T0 inventory remains FROZEN with its 12-file cap spent and M2 OPEN/UNKNOWN. R152 profile1.4 installation deferred at DRAFT; R151 BUILD_BLOCKED with third-repair NO-GO, R139/M3 blocked, R150 Windows INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and Facebook/Zalo OA parked.
+R155 BUILD candidate-only work order awaits committed marker before Terra starts; exact dispatch design/gates accepted. Actual main merge e38d6795 is recorded; R154/RC-01 remains BLOCKED on original historical-action gate failure. Parent ee68e90d3 has no fix and installed1.3 stays unchanged. R151/R139/M3 blocked; R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and spent effects retained; accounts parked. Root orchestrator/reviewer; Terra6.1 High proposal worker; Sol6.1 Medium independent design reviewer. No parent adoption or runtime/product acceptance.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

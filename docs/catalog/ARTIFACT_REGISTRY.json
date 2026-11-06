@@ -4,6 +4,10 @@
   "updatedAt": "2026-11-06",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
+    {"id": "r155-dispatch-design-review-20261106", "family": "continuity", "path": "docs/reviews/R155_DISPATCH_DESIGN_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Sol independent exact seed/design acceptance recorded by Root; no parent or implementation acceptance."},
+    {"id": "r155-proposal-record-20261106", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-155.json", "status": "ACTIVE", "description": "R155 candidate-only bounded dispatch record; original RC-01 remains blocked."},
+    {"id": "r155-proposal-order-20261106", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_155_HISTORICAL_ADMISSION_PROPOSAL.md", "status": "ACTIVE", "description": "Exact reviewed uninstalled historical-admission candidate and static fixture contract."},
+    {"id": "r154-historical-handoff-20261106", "family": "continuity", "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md", "status": "RETIRED", "description": "R154 history reconciled to observed main merge; original required gate unresolved."},
     {"id": "r155-proposal-seed-20261106", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-155.json", "status": "ACTIVE", "description": "Bounded uninstalled historical-admission repair proposal authority; no installed gate or parent adoption."},
     {"id": "r155-parent-source-verification-20261106", "family": "continuity", "path": "CVF_SESSION/history/r155-parent-delivery-20261106/verification.json", "status": "ACTIVE", "description": "New parent pack ee68e90d3 verified56 hashed files and one directory; no historical fix delivered."},
     {"id": "r154-postmerge-gate-hold-20261106", "family": "continuity", "path": "docs/reviews/R154_POSTMERGE_PROVENANCE_AND_GATE_HOLD_2026-11-06.md", "status": "ACTIVE", "description": "Independent R2 merge provenance acceptance and required installed PR-range coverage hold."},
@@ -5590,9 +5594,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R155_HISTORICAL_ADMISSION_2026-11-06.md",
       "status": "ACTIVE",
-      "description": "Current R154 repository reconciliation handoff; R153 frozen inventory and all product holds retained."
+      "description": "Current R155 uninstalled repair proposal; R154 required range and all product holds retained."
     },
     {
       "id": "r060-work-order",

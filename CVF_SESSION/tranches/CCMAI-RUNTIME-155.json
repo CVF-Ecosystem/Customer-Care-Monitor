@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-155",
+  "authorityKind": "DISPATCHER_OWNED_HISTORICAL_ADMISSION_REPAIR_PROPOSAL",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Root ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR",
+    "implementationWorker": "Terra 6.1 High IMPLEMENTATION_WORKER, proposal only",
+    "reviewer": "Root independent R2 REVIEWER of Terra implementation",
+    "technicalAdvisor": "Sol 6.1 Medium independent design reviewer and technical advisor",
+    "commitSteward": "Root COMMIT_STEWARD",
+    "closer": "Root CLOSER / SESSION_SYNC_STEWARD"
+  },
+  "allowedPaths": [
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/INDEX.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/work_orders/CCMAI_RUNTIME_155_HISTORICAL_ADMISSION_PROPOSAL.md",
+    "docs/reviews/R155_*.md",
+    "docs/reviews/probes/r155_historical_binding_20261106/**",
+    "docs/reviews/learnings/R155_HISTORICAL_REPAIR_ADMISSION_2026-11-06.md",
+    "docs/reviews/learnings/README.md",
+    "docs/reviews/planning/CCMA_REPOSITORY_CONTINUITY_2026-11-06.md"
+  ],
+  "workerAllowedPaths": [
+    "docs/reviews/R155_WORKER_RETURN_2026-11-06.md",
+    "docs/reviews/probes/r155_historical_binding_20261106/**"
+  ],
+  "prohibitedEffects": [
+    "No edit of installed gate modules, lock, policy, workflow, activation receipt, product source, dependencies, historical seed/work order/audit/evidence or milestone registry",
+    "No mutation outside this project, including read-only public Core and parent source pack; candidate code is a project-local uninstalled proposal only",
+    "No provider, network, browser, daemon, database, credential, customer/channel, runtime, push, merge, deployment or release effect",
+    "No skip/disable of required gates, historical-status exemption, R154/RC-01 closure or hosted CI/runtime governance/product acceptance claim from proposal tests",
+    "No R139/R151/R150 retry or consumed-budget reset; preserve original failures, elapsed/cost UNKNOWNs and account parking",
+    "One implementation proposal pass, two initial focused static fixture invocations plus at most one justified repair round; stop after 75 active worker minutes or unresolved source/authority uncertainty"
+  ],
+  "scope": "Prepare one tested but UNINSTALLED project-local historical-admission fix proposal for parent review, preserve actual installed failure, reconcile observed main merge continuity. Existing RC-01 remains BLOCKED until parent-reviewed source is delivered, deliberately adopted and required original range passes. Root reviews Terra implementation; Sol independently reviews design authority. No parent adoption authorized.",
+  "ownerAuthorization": "Owner on 2026-11-06 directs handling current blocker, authorizes Terra 6.1 High and Sol 6.1 Medium for hard work, and assigns Root orchestrator/reviewer. This successor bounds necessary project-local repair preparation without altering read-only Core or prior seeds.",
+  "claimBoundary": "Static source/fixture proposal only. Not an installed gate change, admission grant, hosted CI, product or runtime AI governance proof.",
+  "bootstrapException": false,
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_155_HISTORICAL_ADMISSION_PROPOSAL.md",
+  "baseCommit": "839e1fecc4f4fa23cb3896f1b5f4818458f01def",
+  "status": "BUILD",
+  "phase": "BUILD",
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "ACTIVE",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "UNINSTALLED_CANDIDATE_BUILD_COMMIT_REQUIRED",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD"
+  ],
+  "parentTranche": "CCMAI-RUNTIME-154"
+}

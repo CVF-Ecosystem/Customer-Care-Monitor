@@ -16,7 +16,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R154 repository reconciliation handoff; R153 frozen inventory and all product holds retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md`
+- Current R155 uninstalled repair proposal; R154 required range and all product holds retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R155_HISTORICAL_ADMISSION_2026-11-06.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -5356,6 +5356,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Cloud independent errata review and F1–F6 qualifications; Local review pending.: `docs/reviews/R150_R149_ERRATA_INDEPENDENT_REVIEW_2026-11-05.md`
 - Historical cloud errata handoff; exact original ACTIVE version is archived.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R150_R149_ERRATA_2026-11-05.md`
 - Archived cloud R150 seed, tranche and original handoff identities, separate from canonical Windows R150.: `CVF_SESSION/history/r150-cloud-errata-4164a28d/provenance.json`
+- R154 history reconciled to observed main merge; original required gate unresolved.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md`
 - Independent R2 merge provenance acceptance and required installed PR-range coverage hold.: `docs/reviews/R154_POSTMERGE_PROVENANCE_AND_GATE_HOLD_2026-11-06.md`
 - Astra independently accepted preserved merge candidate, with actual DAG checks pending Root commit.: `docs/reviews/R154_REPOSITORY_RECONCILIATION_INDEPENDENT_REVIEW_2026-11-06.md`
 - Project-specific RC-01 remains blocked on required historical range gate; no M5 release claim.: `docs/reviews/planning/CCMA_REPOSITORY_CONTINUITY_2026-11-06.md`
@@ -5364,7 +5365,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R154 merge completed; required PR-range coverage gate blocks RC-01 closure.: `CVF_SESSION/tranches/CCMAI-RUNTIME-154.json`
 - Committed R2 dispatcher seed for one bounded repository history reconciliation.: `CVF_SESSION/authority/CCMAI-RUNTIME-154.json`
 - R154 no-commit merge candidate, byte provenance and qualifications; postmerge review records gate hold.: `docs/reviews/R154_WORKER_RETURN_2026-11-06.md`
+- Sol independent exact seed/design acceptance recorded by Root; no parent or implementation acceptance.: `docs/reviews/R155_DISPATCH_DESIGN_REVIEW_2026-11-06.md`
 - New parent pack ee68e90d3 verified56 hashed files and one directory; no historical fix delivered.: `CVF_SESSION/history/r155-parent-delivery-20261106/verification.json`
+- Exact reviewed uninstalled historical-admission candidate and static fixture contract.: `docs/work_orders/CCMAI_RUNTIME_155_HISTORICAL_ADMISSION_PROPOSAL.md`
+- R155 candidate-only bounded dispatch record; original RC-01 remains blocked.: `CVF_SESSION/tranches/CCMAI-RUNTIME-155.json`
 - Bounded uninstalled historical-admission repair proposal authority; no installed gate or parent adoption.: `CVF_SESSION/authority/CCMAI-RUNTIME-155.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
