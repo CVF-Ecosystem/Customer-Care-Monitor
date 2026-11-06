@@ -94,9 +94,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-153",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R153_M2_ENTRY_INVENTORY_2026-11-06.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-153 DISPATCH_READY finite M2-04 source-only VERIFY. Obtain Astra independent exact-packet review, commit dispatch continuity and material-SHA marker, then Terra may inspect at most 12 implementation files or 20 active minutes and return T0 mapping only. R152 profile1.4 installation is deferred at DRAFT; R151 BUILD_BLOCKED, R139/M3 blocked, R150 INCONCLUSIVE and Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-153 DISPATCH_READY finite M2-04 source-only VERIFY. Astra independently accepted the exact packet and Root committed dispatch continuity at 50485cc7. Terra may now inspect at most 12 implementation files or 20 active minutes and return T0 mapping only. R152 profile1.4 installation is deferred at DRAFT; R151 BUILD_BLOCKED, R139/M3 blocked, R150 INCONCLUSIVE and Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 VERIFY worker pending independent packet review",
+  "activeRole": "Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 read-only VERIFY worker dispatched; Astra Medium independent REVIEWER",
   "updatedAt": "2026-11-06",
   "x-resolvedCoreCommit": "15e39450853184eb65dbde73398c69c3171a6241",
   "x-ownerRoadmapDiscipline": {

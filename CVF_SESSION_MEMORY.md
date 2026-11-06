@@ -8,9 +8,9 @@ Memory class: POINTER_RECORD
 - Current mode: WORK_ORDER
 - Active phase: WORK_ORDER
 
-R152 profile1.4 installation was independently deferred; its packet stays DRAFT, with COV_BLOCK_REQUIRED and BLOCKED_SOURCE_POLICY retained. R153 has a committed seed at `c96c479589f9d5d2b2a62dc02cbf14b27a23c5c2` and one DISPATCH_READY read-only packet. Its null-authority VERIFY is limited to one pass of at most 12 implementation files or 20 active minutes. Pre-dispatch static APPL and COV passed; independent exact-packet review and continuity commit precede Terra's source reading. No M2 acceptance, runtime, provider or governance claim follows. R151 BUILD_BLOCKED, R139/M3 blocked, R150 INCONCLUSIVE and Facebook/Zalo OA parked.
+R152 profile1.4 installation was independently deferred; its packet stays DRAFT, with COV_BLOCK_REQUIRED and BLOCKED_SOURCE_POLICY retained. R153 has a committed seed at `c96c479589f9d5d2b2a62dc02cbf14b27a23c5c2` and one DISPATCH_READY read-only packet. Its null-authority VERIFY is limited to one pass of at most 12 implementation files or 20 active minutes. Astra independently accepted the exact packet and Root committed dispatch continuity at `50485cc7dc19b916d0b4e64ade0d8eaad222b55c`. Terra's first attempt stopped before source reading because the prior text still said pending; this successor synchronization removes that drift and now permits only the finite source return. No M2 acceptance, runtime, provider or governance claim follows. R151 BUILD_BLOCKED, R139/M3 blocked, R150 INCONCLUSIVE and Facebook/Zalo OA parked.
 
-Root ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 VERIFY worker pending independent packet review.
+Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 read-only VERIFY worker dispatched; Astra Medium independent REVIEWER.
 
 ## Current R152 WORK_ORDER DRAFT - 2026-11-06
 
@@ -209,7 +209,7 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Active phase: WORK_ORDER
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R153_M2_ENTRY_INVENTORY_2026-11-06.md
 
-CCMAI-RUNTIME-153 DISPATCH_READY: finite M2-04 source-only VERIFY under committed seed and null machine authority; Astra exact-packet review and dispatch continuity commit precede Terra's 12-file/20-minute one-pass inventory. R152 profile1.4 installation was independently deferred and remains DRAFT after COV_BLOCK_REQUIRED; installed1.3 retained. R151 BUILD_BLOCKED with reviewed third-repair NO-GO, R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and Facebook/Zalo OA parked. No M2 acceptance or runtime effect.
+CCMAI-RUNTIME-153 DISPATCH_READY: finite M2-04 source-only VERIFY under committed seed and null machine authority; Astra exact-packet review and dispatch continuity commit 50485cc7 are complete. Terra may perform the 12-file/20-minute one-pass inventory after rehydration. R152 profile1.4 installation was independently deferred and remains DRAFT after COV_BLOCK_REQUIRED; installed1.3 retained. R151 BUILD_BLOCKED with reviewed third-repair NO-GO, R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and Facebook/Zalo OA parked. No M2 acceptance or runtime effect.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 
