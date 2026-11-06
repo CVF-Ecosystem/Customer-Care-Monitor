@@ -8,7 +8,7 @@ Status: ACTIVE
 - Active phase: BUILD
 - Active role: Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER held
 - Active tranche: CCMAI-RUNTIME-151
-- Next allowed move: CCMAI-RUNTIME-151 BUILD_BLOCKED. V04 production replacement/finalization design is independently accepted at design scope only. Root must resolve REVIEW_COST_ESCALATION_REQUIRED with an explicit cost/route decision before any third source correction; Terra remains held. No source edit, test, syntax, Windows effect or product claim is released. Five focused tests and two syntax batches spent; prior active minutes UNKNOWN. R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-151 BUILD_BLOCKED. Independent R2 review accepted Root's NO-GO third full-runner repair cost decision. Root may prepare one bounded read-only exact-instrument comparison for a fresh narrow Windows A1-b/cleanup diagnostic within R151; source and effect admission remain separate prerequisites. Terra held; no source edit, test, syntax, Windows effect or product claim released. Five focused tests and two syntax batches spent; prior active minutes UNKNOWN. R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## Transition acknowledgment
@@ -102,6 +102,12 @@ Status: ACTIVE
 - Root rehydrated the R151 BUILD_BLOCKED continuity and transitioned to SPEC_AUTHOR for one same-tranche read-only design in `docs/reviews/R151_V04_PRODUCTION_SEAM_DESIGN_2026-11-06.md`. It proposes a shared production replacement transaction, actual production timeout mutation discriminator, and shared finalization/consumer paths. No source, fixture, syntax or runtime effect followed.
 - Astra's first and corrected-design reviews each returned CHANGES_REQUIRED on terminal persisted PASS ambiguity. Both findings remain in `docs/reviews/R151_V04_PRODUCTION_SEAM_DESIGN_INDEPENDENT_REVIEW_2026-11-06.md` and `docs/reviews/R151_V04_PRODUCTION_SEAM_CORRECTED_DESIGN_INDEPENDENT_REVIEW_2026-11-06.md`. Root corrected the same design artifact with an independently verifiable candidate and separate immutable acceptance seal; no rollback after I/O failure is assumed.
 - Astra independently accepted the exact final design LF SHA-256 `61791ff0aa88f7a24a10a17c5d20b484cfa7eb7f1caf69a1d2833b0ef4a4159a` in `docs/reviews/R151_V04_PRODUCTION_SEAM_SEALED_DESIGN_INDEPENDENT_REVIEW_2026-11-06.md` at DESIGN scope only. This is not source, Windows filesystem, product or governance proof. Review cost escalation remains unresolved; no third repair is released. Root resumes ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD, Terra held. Five tests and two syntax batches remain spent; prior active minutes UNKNOWN.
+
+## Third-repair cost route disposition - 2026-11-06
+
+- Root as ORCHESTRATOR recorded `docs/reviews/R151_V04_THIRD_REPAIR_COST_ROUTE_DECISION_2026-11-06.md`: NO-GO for a third correction of the full runner. Sol 6.1 Medium supplied a read-only rough forecast of 250-450 changed/added lines, 20-30 focused cases and 45-75 active worker minutes, not measured effort or authorization. Source acceptance alone would remain diagnostic, with Windows filesystem/runtime and R139/M3 holds unresolved.
+- Astra independently accepted the NO-GO and a narrow Windows observation **as a design question only** in `docs/reviews/R151_V04_COST_ROUTE_INDEPENDENT_REVIEW_2026-11-06.md` (corrected decision LF SHA-256 `f97b0bd5430aaa3d12b64752d567bc87482eb9189a1a31b9a63c7de5ee822b32`; the review retains the gate-field metadata correction). This resolves the recorded cost escalation by stopping the costly implementation route. It grants no source, test or Windows effect allowance.
+- Root may next compare exact accepted helper/instrument/command and observer custody for a single fresh A1-b/terminal cleanup diagnostic under a finite read-only packet in the same R151. The immutable seed still requires deterministic offline source evidence, independent source review, separate R2 effect admission, pre-dispatch and immediate A3 recapture before Chrome/native startup. R150 missing HTTP and cleanup facts cannot be retroactively recovered; A1-c/A2 and R139/M3 remain open.
 
 ## Public Export Disposition
 
