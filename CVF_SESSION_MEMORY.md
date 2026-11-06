@@ -2,14 +2,23 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R151_EVIDENCE_CAPTURE_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-151", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R152_WORKSPACE_ACTIVATION_2026-11-06.md", "activeTranche": "CCMAI-RUNTIME-152", "parked": true} -->
+## Current R152 WORK_ORDER DRAFT - 2026-11-06
 
-## Current R151 BUILD_BLOCKED and V04 cost escalation - 2026-11-06
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+
+Clean parent pack f8175616c delivery verified (53/53 hashed files); project-development guidance mapped to existing project controls and independently accepted in the R152 review. Profile1.4 remains uninstalled because a prospective installed1.3 pre-dispatch failed COV_BLOCK_REQUIRED for an unadmitted maintenance coverage route. R152 packet/record are DRAFT/WORK_ORDER; no worker BUILD or policy/lock/CI/activation change. R151 stays BUILD_BLOCKED with spent costs and UNKNOWNs; R139/M3 blocked, R150 inconclusive, accounts parked.
+
+Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER held.
+
+
+## Prior R151 BUILD_BLOCKED and V04 cost escalation - 2026-11-06
 
 - Current mode: BUILD
 - Active phase: BUILD
 
-R151 A2 candidate remains unaccepted after independent V04 review despite 52-PASS fixture, final syntax and source-level V06 static review. A2 tests real cleanup but replacement timeout still uses a test-authored callback, so production close/wait/launch integration is unproved. Root's third full-runner repair NO-GO remains independently accepted. A single narrow A1-b/cleanup instrument comparison was independently accepted at design scope only in `docs/reviews/R151_NARROW_A1B_CLEANUP_COMPARISON_INDEPENDENT_REVIEW_2026-11-06.md`; no accepted executable observer exists. Active workspace pack drift now requires deliberate provenance/activation reconciliation before any material source/effect packet. Five focused tests and two syntax batches cumulatively evidenced, earlier active minutes UNKNOWN; original Nov5 stop and A2 allowance spent. No worker edit/test/Windows effect released. R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, R139/M3 blocked and Facebook/Zalo OA parked.
+R151 A2 candidate remains unaccepted after independent V04 review despite 52-PASS fixture, final syntax and source-level V06 static review. A2 tests real cleanup but replacement timeout still uses a test-authored callback, so production close/wait/launch integration is unproved. Root's third full-runner repair NO-GO remains independently accepted. A single narrow A1-b/cleanup instrument comparison was independently accepted at design scope only in `docs/reviews/R151_NARROW_A1B_CLEANUP_COMPARISON_INDEPENDENT_REVIEW_2026-11-06.md`; no accepted executable observer exists. R152 verified the clean parent pack delivery and applied its project-development guidance, but profile1.4 installation is unadmitted: installed1.3 pre-dispatch requires a genuine maintenance coverage route. R152 remains DRAFT/WORK_ORDER; resolve it before any material source/effect packet. Five focused tests and two syntax batches cumulatively evidenced, earlier active minutes UNKNOWN; original Nov5 stop and A2 allowance spent. No worker edit/test/Windows effect released. R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, R139/M3 blocked and Facebook/Zalo OA parked.
 
 Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER held
 
@@ -187,11 +196,11 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R151_EVIDENCE_CAPTURE_2026-11-05.md
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R152_WORKSPACE_ACTIVATION_2026-11-06.md
 
-CCMAI-RUNTIME-151 BUILD_BLOCKED; reviewed NO-GO third full-runner repair retained. Narrow A1-b/cleanup comparison accepted at design scope only, current source/Windows dispatch NO-GO. Reconcile changed workspace pack provenance/activation against installed1.3 before any material source/effect packet. Five focused tests/two syntax batches evidenced, prior active minutes UNKNOWN, no new worker/effect allowance. R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and Facebook/Zalo OA parked.
+CCMAI-RUNTIME-152 DRAFT: clean parent delivery verified and shared development guidance mapped; profile1.4 installation held on missing genuine maintenance coverage admission. R151 remains BUILD_BLOCKED with reviewed third-repair NO-GO and narrow design-only comparison. Five focused tests/two syntax batches spent, prior active minutes UNKNOWN, no new worker/effect allowance. R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and Facebook/Zalo OA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

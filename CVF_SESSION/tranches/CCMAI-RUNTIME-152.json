@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-152",
+  "authorityKind": "DISPATCHER_OWNED_WORKSPACE_ACTIVATION_PROFILE_MAINTENANCE",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR",
+    "implementationWorker": "Terra 6.1 IMPLEMENTATION_WORKER",
+    "reviewer": "Astra Medium independent R2 REVIEWER, separate from the implementation worker",
+    "technicalAdvisor": "Sol 6.1 Medium read-only advisor if needed",
+    "commitSteward": "Root COMMIT_STEWARD",
+    "closer": "Root CLOSER / SESSION_SYNC_STEWARD"
+  },
+  "allowedPaths": [
+    ".cvf/policy.json",
+    ".cvf/gate-profile.lock.json",
+    ".cvf/workspace-activation.json",
+    ".github/workflows/cvf-downstream-gates.yml",
+    "AGENTS.md",
+    "scripts/cvf_gates/**",
+    "docs/work_orders/CCMAI_RUNTIME_152_WORKSPACE_ACTIVATION.md",
+    "docs/reviews/R152_*.md",
+    "docs/reviews/probes/r152_workspace_activation_20261106/**",
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md"
+  ],
+  "workerAllowedPaths": [
+    ".cvf/policy.json",
+    ".cvf/gate-profile.lock.json",
+    ".cvf/workspace-activation.json",
+    ".github/workflows/cvf-downstream-gates.yml",
+    "AGENTS.md",
+    "scripts/cvf_gates/**",
+    "docs/reviews/R152_WORKER_RETURN_2026-11-06.md",
+    "docs/reviews/probes/r152_workspace_activation_20261106/**"
+  ],
+  "prohibitedEffects": [
+    "No edit to public CVF Core, historical authority seeds, frozen evidence, product source, dependencies or product acceptance criteria",
+    "No provider, browser, daemon, database, customer/channel, credential, product runtime, network fetch, push, merge, deployment or public release",
+    "No R151 source/effect release, consumed-budget reset, R139/M3 reopen or runtime AI-governance claim from static checks",
+    "No hand-edit of inherited gate modules or lock: use the verified operator-local installer and reconcile project-owned CI deliberately"
+  ],
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_152_WORKSPACE_ACTIVATION.md",
+  "ownerAuthorization": "Owner directs project agents to assess the updated parent CVF workspace and autonomously synchronize applicable shared capability while retaining project-specific controls. This seed bounds one R2 tooling maintenance tranche; R151 remains blocked.",
+  "scope": "Adopt the verified clean operator-local workspace profile 1.4 activation and project-development application guidance in one bounded maintenance packet. Record exact upgrade authority, policy route, installed bundle, CI pins, action-bound activation receipt, independent review, and continuity. Preserve project-specific R151 and M3 constraints.",
+  "claimBoundary": "Static installation and activation evidence proves checked repository state only; it does not prove live AI governance, product behavior, R151 repair outcome, hosted CI or release readiness.",
+  "baseCommit": "9fda0939ae1078ca4555ec6eb6dbe01b675f7ce3",
+  "status": "WORK_ORDER",
+  "phase": "WORK_ORDER",
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "DRAFT",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "BLOCKED_MAINTENANCE_COVERAGE_ROUTE",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER"
+  ],
+  "parentTranche": "CCMAI-RUNTIME-151"
+}

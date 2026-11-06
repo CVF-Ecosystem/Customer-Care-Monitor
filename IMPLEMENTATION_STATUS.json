@@ -1,4 +1,5 @@
 {
+  "x-r152ParentWorkspaceUpdate20261106": {"status": "DRAFT_WORK_ORDER_MAINTENANCE_COVERAGE_ROUTE_BLOCKED", "sourcePack": "f8175616c clean; 53/53 hashed files verified", "publicCore": "c4c8767ac8861854f40d466ba338ffd11eb9558e unchanged", "developmentGuidance": "Mapped common baseline, project controls and task evidence in R152 applicability review", "profile": "1.3 installed; 1.4 not installed", "failedPreDispatch": "APPL contract_missing and COV_BLOCK_REQUIRED on prospective active R152 packet; retained", "workerBuild": false, "productEffects": 0, "r151": "BUILD_BLOCKED_UNCHANGED", "r139M3": "BLOCKED_UNCHANGED", "next": "Resolve genuine maintenance coverage route within R152, independently review exact packet before dispatch"},
   "x-r148A3Disposition20261105": {"status": "FROZEN_AUDIT_BLOCKED", "r144": "FROZEN_METADATA_ONLY", "windowsTree": "347/348_README_MISSING", "a1a2": "NOT_ADMITTED", "r139": "BUILD_BLOCKED_UNCHANGED", "mainMerged": true, "mergeCommit": "8a8d05441f7855f8ffa4e233a746a0cf3a5a6106"},
   "x-r147AuditAdmission20261105": {"status": "FROZEN_DIAGNOSTIC_ONLY", "seedCommit": "07ff318312861fcd9807e874dce0ffd669bda980", "r139": "BUILD_BLOCKED_UNCHANGED"},
   "x-r144A3MetadataVerify20261105": {"status": "FROZEN_METADATA_ONLY_CANDIDATE_FULL_TREE_HOLD", "seedCommit": "40ef39ccf81608a967287c540548b33621f91e7c", "a3": "METADATA_ONLY_CANDIDATE_FULL_TREE_HOLD", "r139": "BUILD_BLOCKED_UNCHANGED", "networkFetchesAllowed": 0, "runtimeStartsAllowed": 0},
@@ -209,7 +210,7 @@
   },
   "projectName": "Customer-Care-Monitor-AI",
   "overallStatus": "IN_PROGRESS",
-  "currentPhase": "BUILD",
+  "currentPhase": "WORK_ORDER",
   "completedCapabilities": [
     "R118 REVIEW_PASS SOURCE_COMPONENT_ONLY at7f74a75f93671973bcfe55b5cb491076c0d2bdf9: current proposal pointer/lineage binding, safe legacy fallback and proposal-less data actions, VN/EN WAIT_DATA history. Root24tests/app typecheckPASS, original byte archive/source pins verified; changed-screen UI proof NOT_RUN/FREEZE OPEN. docs/reviews/R118_INDEPENDENT_UI_SOURCE_REVIEW_2026-10-18.md",
     "R117 bounded WAIT_DATA backend real synthetic flow independently accepted: new same-case proposal after source revision, faithful realAlibaba340/297tokens, synthetic CONFIRM persisted, one call/debit, native11top11nested+engine1PASS. Exact owned owner-authorized restart/finalstop and operational protected equality observed; original interruption/cleanupHOLD retained. Current UI/fullM2/M3/pilot/release remain OPEN. docs/reviews/R117_FINAL_INDEPENDENT_REVIEW_2026-10-18.md",
@@ -2188,7 +2189,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-151",
+  "activeTranche": "CCMAI-RUNTIME-152",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",

@@ -1,0 +1,16 @@
+Command: python -B scripts/cvf_gates/cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root . --packet docs/work_orders/CCMAI_RUNTIME_152_WORKSPACE_ACTIVATION.md
+Context: prospective DISPATCH_READY R152 packet under installed cvf.downstreamGateProfile@1.3.0, before worker release or pack installation.
+Exit code: 1
+
+[PASS] CVF-DG-INST-01 PASS
+[PASS] CVF-DG-CONT-01 PASS
+[PASS] CVF-DG-RANGE-01 PASS
+       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=9fda0939ae1078ca4555ec6eb6dbe01b675f7ce3 candidates=3 deleted=0
+[FAIL] CVF-DG-APPL-01 FAIL
+       contract_missing @ docs/work_orders/CCMAI_RUNTIME_152_WORKSPACE_ACTIVATION.md: missing `## Gate-To-Role Closeability Contract`
+[PASS] CVF-DG-ROUTE-01 NOT_APPLICABLE_WITH_REASON - no dispatch packet declares dispatchKind in scope
+[FAIL] CVF-DG-COV-01 FAIL
+       COV_BLOCK_REQUIRED @ docs/work_orders/CCMAI_RUNTIME_152_WORKSPACE_ACTIVATION.md: milestone coverage admission refused
+RESULT: FAIL phase=pre-dispatch mandatoryControls=6 failed=2
+
+The exact prospective packet was subsequently parked; this retained failure is not a test of its final PARKED bytes. The missing APPL table is fixable; COV requires a genuine admitted maintenance action and cannot be replaced with an unrelated M3 product criterion.

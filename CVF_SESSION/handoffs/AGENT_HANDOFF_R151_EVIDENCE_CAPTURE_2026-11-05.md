@@ -1,6 +1,6 @@
 # R151 - evidence capture repair handoff
 
-Status: ACTIVE
+Status: HISTORICAL
 
 ## Current State
 
@@ -8,7 +8,7 @@ Status: ACTIVE
 - Active phase: BUILD
 - Active role: Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER held
 - Active tranche: CCMAI-RUNTIME-151
-- Next allowed move: CCMAI-RUNTIME-151 BUILD_BLOCKED. Narrow A1-b/cleanup instrument comparison accepted at design scope only, with NO-GO for current source dispatch or Windows run. Active workspace pack changed; reconcile provenance/activation against installed profile 1.3 before any material source or effect packet. Terra held; no source edit, test, syntax, Windows effect or product claim released. Five focused tests and two syntax batches spent; prior active minutes UNKNOWN. R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-151 BUILD_BLOCKED. Parent pack f8175616c delivery verified; project-development guidance mapped in R152 review. Profile 1.4 installation remains unadmitted: R152 DRAFT/WORK_ORDER after installed1.3 pre-dispatch COV_BLOCK_REQUIRED on maintenance coverage. Resolve a genuine reviewed maintenance route in the same R152 scope before profile/policy/CI/activation changes or any R151 material source/effect packet. Terra held; no source edit, test, Windows effect or product claim released. Five focused tests and two syntax batches spent; prior active minutes UNKNOWN. R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## Transition acknowledgment
@@ -114,6 +114,12 @@ Status: ACTIVE
 - Root rehydrated current R151 continuity and public Core `c4c8767`, transitioned from ORCHESTRATOR to ORCHESTRATOR / SPEC_AUTHOR for one read-only comparison `docs/reviews/R151_NARROW_A1B_CLEANUP_INSTRUMENT_COMPARISON_2026-11-06.md`, then resumed ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD for disposition. Existing HTTP, process-snapshot and ledger helpers are reusable at their reviewed scope but no accepted narrow executable observer exists. Only fresh wrong-GUID HTTP and scoped terminal cleanup are prospective; A1-c/A2/R139/M3 remain open.
 - Astra independently accepted that exact comparison LF SHA-256 `664ed511ddcf5edb20d1967d6329d2d46439f80901db2863f331ad2832da6b66` in `docs/reviews/R151_NARROW_A1B_CLEANUP_COMPARISON_INDEPENDENT_REVIEW_2026-11-06.md` at DESIGN scope only. It retains NO-GO for current source/Windows dispatch and rejects any generic-WebSocket-error or later-PID-absence proof. No test, syntax, source edit or runtime effect was performed.
 - Public doctor remains 27/28 with only the known installed1.3/public1.2 LOCK_INVALID. The active workspace operator-local pack changed from the Nov5 admitted dirty `ce825b8d1` to clean `f8175616c`; its runner differs from installed1.3. The changed source-pack trusted bootstrap returned INST LOCK_INVALID and ACT ACT_INVALID_INPUT for missing `.cvf/workspace-activation.json`; the installed runner trusted bootstrap returned INST TRUSTED_SOURCE_MISSING against that source. Neither is PASS. Installed profile files match the existing lock 16/16 and CI pins, so Root retains the pinned project bytes and does not upgrade. Deliberate provenance/activation reconciliation is required before a material source/effect packet; the changed pack is not silently trusted.
+
+## R152 parent workspace applicability and held profile migration - 2026-11-06
+
+- Root rehydrated current R151 state and verified public Core c4c8767 and clean operator-local delivery f8175616c (53/53 hashed files). Parent project-development guidance is mapped to common baseline, R151/R139/M3 project controls and task evidence in `docs/reviews/R152_PARENT_UPDATE_APPLICABILITY_2026-11-06.md`; Astra independently accepted documentary adoption and the held migration disposition.
+- Separate immutable R152 maintenance seed first committed at `9fda0939ae1078ca4555ec6eb6dbe01b675f7ce3`. Prospective installed1.3 pre-dispatch failed APPL contract_missing and COV_BLOCK_REQUIRED; the real blocker is a missing genuine maintenance criterion/route. The tempting M3-06 relabel and null-authority VERIFY disguise were rejected. Exact failure is retained under R152 probe evidence.
+- R152 stays DRAFT/WORK_ORDER with no BUILD dispatch, profile1.4 install, policy/lock/CI/activation mutation or product effect. Existing profile1.3, public Core pin and R151 source/effect hold remain. Root must resolve the maintenance coverage route within R152 and seek independent exact packet review before any future dispatch. No per-control successor tranche or budget reset is created.
 
 ## Public Export Disposition
 

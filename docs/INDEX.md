@@ -16,7 +16,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R151 BUILD_BLOCKED pointer with narrow design-only acceptance and workspace-pack drift hold; R139/M3 blocked.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R151_EVIDENCE_CAPTURE_2026-11-05.md`
+- Active R151 BUILD_BLOCKED pointer with narrow design-only acceptance and workspace-pack drift hold; R139/M3 blocked.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R152_WORKSPACE_ACTIVATION_2026-11-06.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -5331,6 +5331,12 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Independent R151 sealed-design acceptance only; third repair and runtime remain held.: `docs/reviews/R151_V04_PRODUCTION_SEAM_SEALED_DESIGN_INDEPENDENT_REVIEW_2026-11-06.md`
 - R151 V04 production replacement and finalization seam design; accepted at design scope only.: `docs/reviews/R151_V04_PRODUCTION_SEAM_DESIGN_2026-11-06.md`
 - Root NO-GO for third full-runner repair; narrow Windows observation remains design-only and held.: `docs/reviews/R151_V04_THIRD_REPAIR_COST_ROUTE_DECISION_2026-11-06.md`
+- Retained installed1.3 pre-dispatch APPL/COV failure on prospective active packet.: `docs/reviews/probes/r152_workspace_activation_20261106/pre_dispatch_failed_20261106.txt`
+- Independent R2 acceptance of documentary guidance and migration hold only.: `docs/reviews/R152_DISPOSITION_INDEPENDENT_REVIEW_2026-11-06.md`
+- Draft profile1.4 migration packet held on genuine maintenance coverage route.: `docs/work_orders/CCMAI_RUNTIME_152_WORKSPACE_ACTIVATION.md`
+- DRAFT/WORK_ORDER maintenance record; no worker BUILD or profile upgrade.: `CVF_SESSION/tranches/CCMAI-RUNTIME-152.json`
+- Immutable R2 seed for one bounded parent workspace maintenance scope.: `CVF_SESSION/authority/CCMAI-RUNTIME-152.json`
+- Shared development guidance mapped to project controls; profile1.4 route held.: `docs/reviews/R152_PARENT_UPDATE_APPLICABILITY_2026-11-06.md`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`
