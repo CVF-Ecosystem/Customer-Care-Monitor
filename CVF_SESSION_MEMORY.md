@@ -2,15 +2,15 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R153_M2_ENTRY_INVENTORY_2026-11-06.md", "activeTranche": "CCMAI-RUNTIME-153", "parked": true} -->
-## Current R153 finite M2-04 source VERIFY - 2026-11-06
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R153_M2_ENTRY_INVENTORY_2026-11-06.md", "activeTranche": "CCMAI-RUNTIME-153", "parked": true} -->
+## Current R153 finite M2-04 source VERIFY FROZEN - 2026-11-06
 
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
+- Current mode: FREEZE
+- Active phase: FREEZE
 
-R152 profile1.4 installation was independently deferred; its packet stays DRAFT, with COV_BLOCK_REQUIRED and BLOCKED_SOURCE_POLICY retained. R153 has a committed seed at `c96c479589f9d5d2b2a62dc02cbf14b27a23c5c2` and one DISPATCH_READY read-only packet. Its null-authority VERIFY is limited to one pass of at most 12 implementation files or 20 active minutes. Astra independently accepted the exact packet and Root committed dispatch continuity at `50485cc7dc19b916d0b4e64ade0d8eaad222b55c`. Terra's first attempt stopped before source reading because the prior text still said pending; this successor synchronization removes that drift and now permits only the finite source return. No M2 acceptance, runtime, provider or governance claim follows. R151 BUILD_BLOCKED, R139/M3 blocked, R150 INCONCLUSIVE and Facebook/Zalo OA parked.
+R152 profile1.4 installation was independently deferred; its packet stays DRAFT, with COV_BLOCK_REQUIRED and BLOCKED_SOURCE_POLICY retained. R153 seed `c96c4795`, dispatch `50485cc7`, synchronization `2733ba12`, and Terra source return `68551e35` are committed. Terra's first attempt stopped before source reading on pending-text drift; after correction it opened exactly 12 implementation files and reported under one elapsed minute. Astra independently accepted only the bounded T0 inventory after matching 12 hashes and sampling eight files; it did not meter worker actions. R153 tranche COMPLETE/FROZEN for this inventory; M2-04 common admission and product acceptance OPEN/UNKNOWN. No M2 acceptance, runtime, provider or governance claim follows. R151 BUILD_BLOCKED, R139/M3 blocked, R150 INCONCLUSIVE and Facebook/Zalo OA parked.
 
-Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 read-only VERIFY worker dispatched; Astra Medium independent REVIEWER.
+Root CLOSER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 VERIFY return accepted; Astra Medium independent review accepted.
 
 ## Current R152 WORK_ORDER DRAFT - 2026-11-06
 
@@ -205,11 +205,11 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
+- Current mode: FREEZE
+- Active phase: FREEZE
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R153_M2_ENTRY_INVENTORY_2026-11-06.md
 
-CCMAI-RUNTIME-153 DISPATCH_READY: finite M2-04 source-only VERIFY under committed seed and null machine authority; Astra exact-packet review and dispatch continuity commit 50485cc7 are complete. Terra may perform the 12-file/20-minute one-pass inventory after rehydration. R152 profile1.4 installation was independently deferred and remains DRAFT after COV_BLOCK_REQUIRED; installed1.3 retained. R151 BUILD_BLOCKED with reviewed third-repair NO-GO, R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and Facebook/Zalo OA parked. No M2 acceptance or runtime effect.
+CCMAI-RUNTIME-153 FROZEN: the one-pass T0 M2-04 entry-path inventory was independently accepted; the 12-file cap is spent. M2-04 common admission and product acceptance remain OPEN/UNKNOWN, with no runtime or governance claim. R152 profile1.4 installation deferred at DRAFT; R151 BUILD_BLOCKED with third-repair NO-GO, R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and Facebook/Zalo OA parked. Any further source comparison requires a new bounded authority and cost decision.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

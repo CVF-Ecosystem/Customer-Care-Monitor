@@ -1,6 +1,6 @@
 # R153: finite M2-04 entry-path source inventory
 
-Status: DISPATCH_READY
+Status: CLOSED
 workOrderStatusGrammar: cvf.workOrderStatusGrammar@1.0.0
 Risk: R2
 Authority: `CVF_SESSION/authority/CCMAI-RUNTIME-153.json` at `c96c479589f9d5d2b2a62dc02cbf14b27a23c5c2`
@@ -58,3 +58,7 @@ The M2 master roadmap remains authoritative; the machine registry currently admi
 ## Public Export Disposition
 
 DEFERRED_PRIVATE_ONLY
+
+## Post-review disposition
+
+This work order's coverage block preserves the original DISPATCH/VERIFY snapshot at the dispatch commit `50485cc7dc19b916d0b4e64ade0d8eaad222b55c`. Terra's finite T0 inventory was committed at `68551e35e5af8caba9f8d45a8856d138bd9e0c57` and independently accepted in `docs/reviews/R153_M2_ENTRY_INVENTORY_INDEPENDENT_REVIEW_2026-11-06.md`. The 12-file pass is consumed. R153 closes only this source inventory; M2-04 common admission and M2 product acceptance remain OPEN/UNKNOWN. No runtime, no-bypass or live governance proof was produced.

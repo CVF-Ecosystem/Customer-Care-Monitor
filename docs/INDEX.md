@@ -16,7 +16,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R153 finite M2-04 source-only VERIFY handoff; R152 profile1.4 installation deferred and R151/R139/M3 holds retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R153_M2_ENTRY_INVENTORY_2026-11-06.md`
+- FROZEN R153 T0 M2-04 inventory handoff; product acceptance OPEN/UNKNOWN and R152/R151/R139/M3 holds retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R153_M2_ENTRY_INVENTORY_2026-11-06.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -5344,6 +5344,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Finite one-pass M2-04 entry-path source inventory packet.: `docs/work_orders/CCMAI_RUNTIME_153_M2_ENTRY_INVENTORY.md`
 - Independent R2 acceptance of exact finite R153 VERIFY packet after continuity repair; dispatch commit required.: `docs/reviews/R153_M2_ENTRY_INVENTORY_PACKET_INDEPENDENT_REVIEW_2026-11-06.md`
 - R2 DISPATCH_READY null-authority VERIFY record; no implementation or product acceptance.: `CVF_SESSION/tranches/CCMAI-RUNTIME-153.json`
+- Independent R2 acceptance of bounded T0 source map; M2 product remains OPEN/UNKNOWN.: `docs/reviews/R153_M2_ENTRY_INVENTORY_INDEPENDENT_REVIEW_2026-11-06.md`
+- Terra's consumed 12-file T0 entry-path inventory with owned admission UNKNOWNs.: `docs/reviews/R153_M2_ENTRY_INVENTORY_WORKER_RETURN_2026-11-06.md`
 - Committed dispatcher seed for one finite read-only M2-04 source inventory.: `CVF_SESSION/authority/CCMAI-RUNTIME-153.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`

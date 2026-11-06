@@ -8,6 +8,8 @@
     {"id": "r153-m2-entry-record-20261106", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-153.json", "status": "ACTIVE", "description": "R2 DISPATCH_READY null-authority VERIFY record; no implementation or product acceptance."},
     {"id": "r153-m2-entry-order-20261106", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_153_M2_ENTRY_INVENTORY.md", "status": "ACTIVE", "description": "Finite one-pass M2-04 entry-path source inventory packet."},
     {"id": "r153-m2-entry-packet-review-20261106", "family": "continuity", "path": "docs/reviews/R153_M2_ENTRY_INVENTORY_PACKET_INDEPENDENT_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Independent R2 acceptance of exact finite R153 VERIFY packet after continuity repair; dispatch commit required."},
+    {"id": "r153-m2-entry-return-20261106", "family": "continuity", "path": "docs/reviews/R153_M2_ENTRY_INVENTORY_WORKER_RETURN_2026-11-06.md", "status": "ACTIVE", "description": "Terra's consumed 12-file T0 entry-path inventory with owned admission UNKNOWNs."},
+    {"id": "r153-m2-entry-result-review-20261106", "family": "continuity", "path": "docs/reviews/R153_M2_ENTRY_INVENTORY_INDEPENDENT_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Independent R2 acceptance of bounded T0 source map; M2 product remains OPEN/UNKNOWN."},
     {"id": "r152-profile14-necessity-20261106", "family": "continuity", "path": "docs/reviews/R152_PROFILE_14_NECESSITY_DISPOSITION_2026-11-06.md", "status": "ACTIVE", "description": "Defers profile1.4 installation while preserving cumulative cost and source-policy hold."},
     {"id": "r152-profile14-necessity-review-20261106", "family": "continuity", "path": "docs/reviews/R152_PROFILE_14_NECESSITY_INDEPENDENT_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Independent R2 acceptance of R152 deferral and finite R153 design only."},
     {"id": "r152-parent-applicability-20261106", "family": "continuity", "path": "docs/reviews/R152_PARENT_UPDATE_APPLICABILITY_2026-11-06.md", "status": "ACTIVE", "description": "Shared form v1.4 mapped to CCMA M1-M5 controls with source-delivery gap; downstream gate profile1.4 held."},
@@ -5571,7 +5573,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R153_M2_ENTRY_INVENTORY_2026-11-06.md",
       "status": "ACTIVE",
-      "description": "Active R153 finite M2-04 source-only VERIFY handoff; R152 profile1.4 installation deferred and R151/R139/M3 holds retained."
+      "description": "FROZEN R153 T0 M2-04 inventory handoff; product acceptance OPEN/UNKNOWN and R152/R151/R139/M3 holds retained."
     },
     {
       "id": "r060-work-order",
