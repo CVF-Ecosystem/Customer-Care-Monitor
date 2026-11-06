@@ -1,5 +1,6 @@
 {
-  "x-r152ParentWorkspaceUpdate20261106": {"status": "DRAFT_WORK_ORDER_MAINTENANCE_COVERAGE_ROUTE_BLOCKED", "sourcePack": "f8175616c clean; 53/53 hashed files verified", "publicCore": "c4c8767ac8861854f40d466ba338ffd11eb9558e unchanged", "developmentGuidance": "Mapped common baseline and CCMA-specific M1-M5 controls in R152 applicability review; external form v1.4 not present in active pack", "profile": "1.3 installed; 1.4 not installed", "failedPreDispatch": "APPL contract_missing and COV_BLOCK_REQUIRED on prospective active R152 packet; retained", "workerBuild": false, "productEffects": 0, "r151": "BUILD_BLOCKED_UNCHANGED", "r139M3": "BLOCKED_UNCHANGED", "next": "Assess profile1.4 necessity against authorized outcome, cumulative cost and installed1.3 alternative; obtain genuine reviewed admission route or defer"},
+  "x-r153M2EntryInventory20261106": {"status": "DISPATCH_READY_PENDING_INDEPENDENT_PACKET_REVIEW", "seedCommit": "c96c479589f9d5d2b2a62dc02cbf14b27a23c5c2", "workOrder": "docs/work_orders/CCMAI_RUNTIME_153_M2_ENTRY_INVENTORY.md", "scope": "Null-authority finite source VERIFY; 12 implementation files or 20 active minutes", "productAcceptance": false, "runtimeEffects": 0, "next": "Astra exact-packet review, dispatch continuity commit, then Terra bounded source return"},
+  "x-r152ParentWorkspaceUpdate20261106": {"status": "DRAFT_WORK_ORDER_PROFILE14_INSTALLATION_DEFERRED", "sourcePack": "f8175616c clean; 53/53 hashed files verified", "publicCore": "c4c8767ac8861854f40d466ba338ffd11eb9558e unchanged", "developmentGuidance": "Mapped common baseline and CCMA-specific M1-M5 controls in R152 applicability review; external form v1.4 not present in active pack", "profile": "1.3 installed; 1.4 not installed", "failedPreDispatch": "APPL contract_missing and COV_BLOCK_REQUIRED on prospective active R152 packet; retained", "workerBuild": false, "productEffects": 0, "r151": "BUILD_BLOCKED_UNCHANGED", "r139M3": "BLOCKED_UNCHANGED", "next": "Revisit only if a genuine authorized criterion depends on profile1.4 and source/authority route is reconciled"},
   "x-r148A3Disposition20261105": {"status": "FROZEN_AUDIT_BLOCKED", "r144": "FROZEN_METADATA_ONLY", "windowsTree": "347/348_README_MISSING", "a1a2": "NOT_ADMITTED", "r139": "BUILD_BLOCKED_UNCHANGED", "mainMerged": true, "mergeCommit": "8a8d05441f7855f8ffa4e233a746a0cf3a5a6106"},
   "x-r147AuditAdmission20261105": {"status": "FROZEN_DIAGNOSTIC_ONLY", "seedCommit": "07ff318312861fcd9807e874dce0ffd669bda980", "r139": "BUILD_BLOCKED_UNCHANGED"},
   "x-r144A3MetadataVerify20261105": {"status": "FROZEN_METADATA_ONLY_CANDIDATE_FULL_TREE_HOLD", "seedCommit": "40ef39ccf81608a967287c540548b33621f91e7c", "a3": "METADATA_ONLY_CANDIDATE_FULL_TREE_HOLD", "r139": "BUILD_BLOCKED_UNCHANGED", "networkFetchesAllowed": 0, "runtimeStartsAllowed": 0},
@@ -2189,7 +2190,7 @@
     "freeze": "OPEN",
     "independentReviewCommit": "937cf893948ca7ec505c27519f32c04d3ce40b1c"
   },
-  "activeTranche": "CCMAI-RUNTIME-152",
+  "activeTranche": "CCMAI-RUNTIME-153",
   "x-portableCvfAdoption": {
     "status": "REVIEW_PASS_BOUNDED_STATIC_PACKAGE",
     "workOrder": "docs/work_orders/CCMAI_GOV_002.md",

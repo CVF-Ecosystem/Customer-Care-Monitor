@@ -1,6 +1,6 @@
 # R152 - parent workspace applicability handoff
 
-Status: ACTIVE
+Status: SUPERSEDED_BY_R153_ACTIVE; R152 installation remains DRAFT
 
 ## Current State
 

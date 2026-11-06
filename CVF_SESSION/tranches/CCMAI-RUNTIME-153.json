@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-153",
+  "authorityKind": "DISPATCHER_OWNED_M2_ENTRY_PATH_FINITE_VERIFY",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR",
+    "implementationWorker": "Terra 6.1 read-only VERIFY worker",
+    "reviewer": "Astra Medium independent R2 REVIEWER",
+    "commitSteward": "Root COMMIT_STEWARD",
+    "closer": "Root CLOSER / SESSION_SYNC_STEWARD"
+  },
+  "allowedPaths": ["docs/work_orders/CCMAI_RUNTIME_153_M2_ENTRY_INVENTORY.md", "docs/reviews/R153_*.md", "CVF_SESSION/**", "CVF_SESSION_MEMORY.md", "IMPLEMENTATION_STATUS.json", "docs/catalog/ARTIFACT_REGISTRY.json", "docs/INDEX.md"],
+  "workerAllowedPaths": ["docs/reviews/R153_M2_ENTRY_INVENTORY_WORKER_RETURN_2026-11-06.md"],
+  "prohibitedEffects": [
+    "No product source, test, dependency, policy, gate, workflow, public Core, prior seed, approved roadmap criterion or milestone registry edit",
+    "No provider, browser, daemon, database, network, credential, customer/channel, runtime, push, merge, deploy or public release",
+    "No R139/R151 effect or repair retry, consumed-budget reset, product/gate-governance PASS or M2/M3 closure from static evidence",
+    "One source pass, at most 12 distinct implementation files and 20 active minutes; stop on runtime-proof dependency or uncertainty"
+  ],
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_153_M2_ENTRY_INVENTORY.md",
+  "scope": "One finite read-only M2-04 entry-path inventory and owned gap map under null-authority VERIFY. Root dispatches and reviews, Terra reads source, Astra independently reviews; no implementation.",
+  "claimBoundary": "T0 source identity and declared routing only; no runtime admission, no bypass-absence claim, no live AI governance or product acceptance.",
+  "baseCommit": "1683b7f80d7c89877d53fa4ec05b6fa4301c6e09",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "DISPATCH_READY",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "FINITE_VERIFY_PENDING",
+  "freeze": "OPEN",
+  "history": ["WORK_ORDER", "DISPATCH_READY"],
+  "parentTranche": "CCMAI-RUNTIME-152"
+}
