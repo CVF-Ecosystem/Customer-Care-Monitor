@@ -218,7 +218,7 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md
 
-CCMAI-RUNTIME-154 BUILD_BLOCKED: merge `229d98b3` preserves both histories and R150 evidence; independent R2 review accepts provenance. Installed1.3 PR-range COV_REPAIR_ACTION_MISMATCH blocks RC-01 closure until parent-reviewed historical admission binding is delivered and deliberately adopted. Draft PR may expose this hold; no green CI/main merge/FREEZE claim. R153 one-pass T0 inventory remains FROZEN with its 12-file cap spent and M2 OPEN/UNKNOWN. R152 profile1.4 installation deferred at DRAFT; R151 BUILD_BLOCKED with third-repair NO-GO, R139/M3 blocked, R150 Windows INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and Facebook/Zalo OA parked.
+CCMAI-RUNTIME-154 BUILD_BLOCKED: merge `229d98b3` preserves both histories and R150 evidence; independent R2 review accepts provenance. Draft PR #21 is open; hosted gate run 42195844783 confirms PR-range COV_REPAIR_ACTION_MISMATCH. RC-01 closure and main merge require parent-reviewed historical admission binding and deliberate pinned delivery. No green CI/FREEZE claim. R153 one-pass T0 inventory remains FROZEN with its 12-file cap spent and M2 OPEN/UNKNOWN. R152 profile1.4 installation deferred at DRAFT; R151 BUILD_BLOCKED with third-repair NO-GO, R139/M3 blocked, R150 Windows INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and Facebook/Zalo OA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

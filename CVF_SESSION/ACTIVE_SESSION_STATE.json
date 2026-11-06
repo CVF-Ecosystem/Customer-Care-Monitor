@@ -94,7 +94,7 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-154",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-154 BUILD_BLOCKED: merge 229d98b3 preserves both histories and R150 evidence; installed1.3 pr-ci fails COV_REPAIR_ACTION_MISMATCH on historical R150 versus current R151 audit. Publish a blocked draft PR for review; require a parent-reviewed historical admission binding before RC-01 closure. R153 FROZEN, R152 DRAFT, R151 BUILD_BLOCKED, R139/M3 blocked, R150 Windows INCONCLUSIVE with spent effects and cleanup UNKNOWN, accounts parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-154 BUILD_BLOCKED: draft PR #21 carries merged branch 229d98b3 and R150 provenance. Hosted gate run 42195844783 confirms COV_REPAIR_ACTION_MISMATCH on historical R150 versus current R151 audit. Obtain a parent-reviewed historical admission binding and deliberately pinned gate delivery before RC-01 closure or main merge. R153 FROZEN, R152 DRAFT, R151 BUILD_BLOCKED, R139/M3 blocked, R150 Windows INCONCLUSIVE with spent effects and cleanup UNKNOWN, accounts parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
   "activeRole": "Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD for blocked disposition; Astra Medium independent R2 REVIEWER; Terra 6.1 worker returned",
   "updatedAt": "2026-11-06",
