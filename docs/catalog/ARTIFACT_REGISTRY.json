@@ -4,6 +4,8 @@
   "updatedAt": "2026-11-06",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
+    {"id": "r151-narrow-a1b-cleanup-comparison-20261106", "family": "continuity", "path": "docs/reviews/R151_NARROW_A1B_CLEANUP_INSTRUMENT_COMPARISON_2026-11-06.md", "status": "ACTIVE", "description": "Read-only R151 instrument comparison; no accepted observer or Windows dispatch."},
+    {"id": "r151-narrow-a1b-cleanup-comparison-review-20261106", "family": "continuity", "path": "docs/reviews/R151_NARROW_A1B_CLEANUP_COMPARISON_INDEPENDENT_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Independent design-only acceptance of narrow comparison; workspace pack reconciliation held."},
     {"id": "r151-v04-third-repair-cost-route-20261106", "family": "continuity", "path": "docs/reviews/R151_V04_THIRD_REPAIR_COST_ROUTE_DECISION_2026-11-06.md", "status": "ACTIVE", "description": "Root NO-GO for third full-runner repair; narrow Windows observation remains design-only and held."},
     {"id": "r151-v04-cost-route-independent-review-20261106", "family": "continuity", "path": "docs/reviews/R151_V04_COST_ROUTE_INDEPENDENT_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Independent R2 acceptance of cost NO-GO only; source and Windows effect not admitted."},
     {"id": "r151-v04-production-seam-design-20261106", "family": "continuity", "path": "docs/reviews/R151_V04_PRODUCTION_SEAM_DESIGN_2026-11-06.md", "status": "ACTIVE", "description": "R151 V04 production replacement and finalization seam design; accepted at design scope only."},
@@ -5555,7 +5557,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R151_EVIDENCE_CAPTURE_2026-11-05.md",
       "status": "ACTIVE",
-      "description": "Active R151 BUILD_BLOCKED pointer with reviewed cost NO-GO and narrow-route design question; R139/M3 blocked."
+      "description": "Active R151 BUILD_BLOCKED pointer with narrow design-only acceptance and workspace-pack drift hold; R139/M3 blocked."
     },
     {
       "id": "r060-work-order",
