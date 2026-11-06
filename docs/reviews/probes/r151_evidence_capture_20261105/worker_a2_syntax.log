@@ -1,0 +1,7 @@
+node --check owner_runner.mjs EXIT=0
+node --check diagnostic_helpers.mjs EXIT=0
+node --check worker_offline_tests.mjs EXIT=0
+PowerShell ParseFile process_snapshot.ps1 ERRORS=0
+PowerShell ParseFile prestart_full_tree.ps1 ERRORS=0
+PowerShell ParseFile worker_historical_red.ps1 ERRORS=0
+BATCH EXIT=0

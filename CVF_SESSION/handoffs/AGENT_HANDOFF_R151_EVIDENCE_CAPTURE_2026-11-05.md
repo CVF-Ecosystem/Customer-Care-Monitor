@@ -6,9 +6,9 @@ Status: ACTIVE
 
 - Current mode: BUILD
 - Active phase: BUILD
-- Active role: Root ORCHESTRATOR / COMMIT_STEWARD / SESSION_SYNC_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER
+- Active role: Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER held
 - Active tranche: CCMAI-RUNTIME-151
-- Next allowed move: CCMAI-RUNTIME-151 A2 BUILD source-only: Terra may perform one guarded runner correction, one exact-runner injected offline test and one final-byte syntax batch after fresh rehydration and role acknowledgment. Release 2026-11-06T07:42:44+07:00; conservative active deadline 2026-11-06T08:02:44+07:00, hard wall 2026-11-06T08:12:44+07:00; stop at the earlier limit. Old Nov5 stop, four tests and one evidenced syntax stay spent. No Chrome/daemon/provider/DB/product/network/socket effect. Astra independent REVIEW follows; R139/M3 blocked, Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-151 BUILD_BLOCKED after A2 independent review: actual runner replacement timeout/next-launch integration V04 remains unproved. Preserve candidate, 52-PASS fixture and final syntax as partial source evidence; five cumulative focused tests and two evidenced syntax batches spent, prior active minutes UNKNOWN. Root audits repeated V04 cause/cost before any dependent IMPLEMENT; no worker retry, Windows effect or product claim. R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## Transition acknowledgment
@@ -85,6 +85,12 @@ Status: ACTIVE
 
 - Terra rehydrated committed BUILD marker `ef6e61db73dc9e312f6a255d920cb7e1cd9eb92f`, all canonical continuity surfaces and exact packet LF SHA-256 `57a76055fc62aa74ef864ae4972140f6940ccee7553abf61d310b4d1917d8d91`. Terra explicitly accepted IMPLEMENTATION_WORKER with one source correction, one combined offline test, one final-byte syntax batch, conservative 08:02:44 and hard-wall 08:12:44 +07 stops, historical four tests/one syntax and prior active UNKNOWN. Terra reported no edits or effects and waits for this committed acknowledgment before editing.
 - Root records that role acknowledgment in the active handoff before worker source BUILD. The original Nov5 deadline and old costs remain; no Chrome, daemon, socket, provider, DB, product or network effect is released.
+
+## A2 worker return and independent source disposition
+
+- Terra completed the one A2 source pass before its conservative deadline, retained a seven-file exact manifest, one added focused test reporting 52 PASS/0 skips/worker-reported exit0, and one final-byte syntax batch exit0. Worker-return gate APPL/ROLE/COV PASS and portable preflight 7/7 PASS. Terra returned BLOCKED_WITH_REASON without source or runtime claim; historical A1 return content remains preserved under a historical heading.
+- Astra reviewed the exact candidate in `docs/reviews/R151_A2_SOURCE_INDEPENDENT_REVIEW_2026-11-06.md` and returned BLOCKED. V06 preserved control flow received independent final-hash static review. V04 remained unproved because timeout/replacement fixtures use a test-written close callback rather than production closeHandle/wait/launch wiring. Actual cleanup under custody failure is improved but does not close V04. No reviewer source acceptance or Windows effect admission.
+- Root records `docs/reviews/R151_A2_ROOT_BLOCKED_DISPOSITION_2026-11-06.md` and transitions to ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD. R151 returns BUILD_BLOCKED; five cumulative focused tests and two evidenced syntax batches are spent, old stop expired, earlier active minutes UNKNOWN. Audit the repeated V04 cause/cost before any dependent IMPLEMENT. No third repair pass, extra test or source edit is released. R150/R139/M3 holds and account parking remain.
 
 ## Public Export Disposition
 

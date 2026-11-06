@@ -7,7 +7,46 @@ import net from 'node:net';
 import {OwnershipLedger, negativeProbe, waitOriginal, validateSourceManifest, createHandleCustody, replaceOwnedChrome, terminalChromeDecision} from './diagnostic_helpers.mjs';
 import {spawn, spawnSync} from 'node:child_process';
 import {randomUUID, createHash} from 'node:crypto';
-import {fileURLToPath} from 'node:url';
+import {fileURLToPath, pathToFileURL} from 'node:url';
+
+// These seams are the same orchestration used by the admitted CLI and offline fixtures.
+export async function runReplacement(options) { return replaceOwnedChrome(options); }
+export async function runCleanup({daemon, chrome, custody, actor, waitExit, closeHandle,
+  snapshot, ledgers, record, cleanupErrors, canStop, mcpPid, pidFileExists}) {
+  const fail = (name, error) => {
+    cleanupErrors.push(`${name}: ${String(error)}`);
+    try { record('cleanup_error', {name, message:String(error)}); }
+    catch (e) { cleanupErrors.push(`cleanup evidence: ${String(e)}`); }
+  };
+  if (daemon && daemon.exitCode===null && daemon.signalCode===null) {
+    if (canStop) { try { const stopped=await actor('stop'); record('daemon_stop_ack',{envelope:stopped}); } catch(e) { fail('daemon stop',e); } }
+    let waited, waitFailed=false;
+    try { waited=await waitExit(daemon,'daemon',12000); } catch(e) { waitFailed=true; fail('daemon wait',e); }
+    if (waitFailed || waited?.timeout || custody.anyTimeout) {
+      fail('daemon wait','original wait timed out or custody unknown');
+      try { daemon.kill('SIGTERM'); } catch(e) { fail('daemon kill',e); }
+    }
+  }
+  if (chrome && chrome.exitCode===null && chrome.signalCode===null) {
+    try { await closeHandle(chrome,'last Chrome'); } catch(e) { fail('Chrome wait',e); }
+  }
+  let terminal='UNKNOWN';
+  try {
+    const rows=await snapshot();
+    const terminalLedgers=[...ledgers.values()].map(l=>l.terminal(rows));
+    record('chrome_identity_terminal',{terminalLedgers,waitTimedOut:custody.anyTimeout});
+    const leftovers=rows.filter(r=>String(r.name).toLowerCase()==='chrome.exe'&&r.ownedProfileArg);
+    const childLeft=mcpPid!==null && rows.some(r=>r.pid===mcpPid);
+    const daemonLeft=daemon && (daemon.exitCode===null && daemon.signalCode===null || rows.some(r=>r.pid===daemon.pid));
+    const pidLeft=pidFileExists();
+    record('cleanup_terminal',{leftoverOwnedChrome:leftovers,mcpChildStillAlive:childLeft,daemonStillAlive:!!daemonLeft,pidFileStillExists:pidLeft,daemonPid:daemon?.pid,chromePid:chrome?.pid});
+    if (!leftovers.length && !childLeft && !daemonLeft && !(daemon && mcpPid===null) && !pidLeft)
+      terminal=terminalChromeDecision({ledgerResults:terminalLedgers,waitTimedOut:custody.anyTimeout,cleanupErrors});
+  } catch(e) { fail('terminal snapshot or persistence',e); }
+  return terminal;
+}
+
+async function main() {
 
 const [pkgRoot, manifestPath, chromeExe, outputDir, projectRoot] = process.argv.slice(2);
 if (![pkgRoot, manifestPath, chromeExe, outputDir, projectRoot].every(Boolean)) {
@@ -124,7 +163,7 @@ const save = () => fs.writeFileSync(resultPath, JSON.stringify({
     CHROME_DEVTOOLS_MCP_NO_UPDATE_CHECKS: '1',
     CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS: '1',
   },
-  tempRoot, evidenceRoot, capturePath, endpoints: {endpoint1, endpoint2}, events,
+  tempRoot, evidenceRoot, capturePath, endpoints: {endpoint1, endpoint2}, events, cleanupErrors,
   admissionGate: {exitCode:gate.status, output:gate.stdout},
 }, null, 2) + '\n');
 function record(kind, data = {}) { events.push({at: new Date().toISOString(), kind, ...data}); save(); }
@@ -330,7 +369,7 @@ try {
     }
     if (outcome !== 'A1_FAIL') {
       const firstPid=chrome.pid;
-      chrome=await replaceOwnedChrome({handle:chrome,close:h=>closeHandle(h,'Chrome #1'),snapshot,ledger:ledgers.get(firstPid),record,launch:()=>{ debit('chromeLaunches'); const next=startProcess(chromeExe,chromeArgs(profile2),'Chrome #2'); next.r151Profile=profile2; return next; }});
+      chrome=await runReplacement({handle:chrome,close:h=>closeHandle(h,'Chrome #1'),snapshot,ledger:ledgers.get(firstPid),record,launch:()=>{ debit('chromeLaunches'); const next=startProcess(chromeExe,chromeArgs(profile2),'Chrome #2'); next.r151Profile=profile2; return next; }});
       endpoint2=await discoverEndpoint(port,profile2,'Chrome #2');
       if (endpoint2===endpoint1) throw new Error('Chrome #2 GUID did not change');
       alive(chrome,'Chrome #2');checkOwnedChrome(chrome.pid);
@@ -391,37 +430,16 @@ try {
   stopReason=stopReason || String(error);
   record('error',{message:String(error),stack:error?.stack});
 } finally {
-  if (daemon && daemon.exitCode===null && daemon.signalCode===null) {
-    try {
-      if (counters.nativeCalls<8 && chrome && chrome.exitCode===null && chrome.signalCode===null) {
-        const stopped=await actor('stop'); record('daemon_stop_ack',{envelope:stopped});
-      }
-    } catch (error) {cleanupErrors.push(String(error));cleanupRecord('cleanup_error',{name:'daemon stop',message:String(error)});}
-    const waited=await waitExit(daemon,'daemon',12000);
-    if (waited?.timeout) { const sent=daemon.kill('SIGTERM'); cleanupErrors.push('daemon original wait timed out'); cleanupRecord('cleanup_error',{name:'daemon wait',message:'original wait timed out',terminationSent:sent}); }
-  }
-  if (chrome && chrome.exitCode===null && chrome.signalCode===null) { try { await closeHandle(chrome,'last Chrome'); } catch(error) { cleanupErrors.push(String(error));cleanupRecord('cleanup_error',{name:'Chrome wait',message:String(error)}); } }
-  try {
-    const rows=snapshot();
-    const terminalLedgers=[...ledgers.values()].map(l=>l.terminal(rows));
-    cleanupRecord('chrome_identity_terminal',{terminalLedgers,waitTimedOut:custody.anyTimeout});
-    if (terminalChromeDecision({ledgerResults:terminalLedgers,waitTimedOut:custody.anyTimeout,cleanupErrors})!=='ABSENT') { if(outcome==='A1_A2_PASS') outcome='INCONCLUSIVE'; stopReason=stopReason || 'Chrome terminal ownership unknown'; }
-    const leftovers=rows.filter(r=>r.name.toLowerCase()==='chrome.exe'&&r.ownedProfileArg);
-    const childLeft=mcpPid!==null && rows.some(r=>r.pid===mcpPid);
-    const daemonLeft=daemon && (daemon.exitCode===null && daemon.signalCode===null || rows.some(r=>r.pid===daemon.pid));
-    record('cleanup_terminal',{leftoverOwnedChrome: leftovers, mcpChildStillAlive:childLeft,
-      daemonStillAlive:!!daemonLeft,pidFileStillExists:fs.existsSync(pidFile),daemonPid:daemon?.pid,chromePid:chrome?.pid});
-    if (leftovers.length || childLeft || daemonLeft || (daemon && mcpPid===null) || fs.existsSync(pidFile)) {
-      if (outcome==='A1_A2_PASS') outcome='INCONCLUSIVE';
-      stopReason=stopReason || 'cleanup incomplete';
-    }
-  } catch(error) {
-    if (outcome==='A1_A2_PASS') outcome='INCONCLUSIVE';
-    cleanupErrors.push(String(error)); cleanupRecord('cleanup_error',{name:'terminal snapshot',message:String(error)});
-  }
+  const terminal=await runCleanup({daemon,chrome,custody,actor,waitExit,closeHandle,snapshot,ledgers,record,cleanupErrors,
+    canStop:counters.nativeCalls<8 && chrome && chrome.exitCode===null && chrome.signalCode===null,
+    mcpPid,pidFileExists:()=>fs.existsSync(pidFile)});
+  if (terminal!=='ABSENT') { if(outcome==='A1_A2_PASS') outcome='INCONCLUSIVE'; stopReason=stopReason || 'cleanup incomplete or unknown'; }
   if (Date.now()-startedAt > ceilingMs && outcome==='A1_A2_PASS') {
     outcome='INCONCLUSIVE';stopReason='45 active minute ceiling exceeded';
   }
-  save();
-  process.stdout.write(JSON.stringify({outcome,stopReason,counters,resultPath,capturePath})+'\n');
+  try { save(); } catch(error) { cleanupErrors.push(`final persistence: ${String(error)}`); if(outcome==='A1_A2_PASS') outcome='INCONCLUSIVE'; stopReason=stopReason || 'final persistence failed'; }
+  process.stdout.write(JSON.stringify({outcome,stopReason,counters,resultPath,capturePath,cleanupErrors})+'\n');
 }
+}
+
+if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) await main();

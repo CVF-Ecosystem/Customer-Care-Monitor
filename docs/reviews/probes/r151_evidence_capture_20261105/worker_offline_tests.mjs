@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import fs from 'node:fs';
 import {OwnershipLedger, waitOriginal, createUpgradeCapture, negativeProbe, createHandleCustody, replaceOwnedChrome, terminalChromeDecision, validateSourceManifest} from './diagnostic_helpers.mjs';
+import {runCleanup, runReplacement} from './owner_runner.mjs';
 
 let count=0; function check(name,fn){fn(); count++; console.log(`PASS ${name}`);}
 const ps=process.env.SystemRoot+'\\System32\\WindowsPowerShell\\v1.0\\powershell.exe';
@@ -85,5 +86,23 @@ for(const [event,expected] of [['response','HTTP_4XX_REFUSAL'],['end','REMOTE_CL
 check('reviewed manifest binding',()=>{
  const bytes=Buffer.from('source');const hash=b=>createHash('sha256').update(b).digest('hex');const manifest=Buffer.from(JSON.stringify({files:{'a':hash(bytes)}}));const pin=hash(manifest);const args={manifestBytes:manifest,expectedManifestSha256:pin,reviewText:`review ${pin}`,requiredPaths:['a'],readFile:()=>bytes};validateSourceManifest(args);assert.throws(()=>validateSourceManifest({...args,readFile:()=>Buffer.from('altered')}));assert.throws(()=>validateSourceManifest({...args,reviewText:'unreviewed'}));assert.throws(()=>validateSourceManifest({...args,requiredPaths:['a','b']}));
 });
-check('exact candidate manifest',()=>{const m=JSON.parse(fs.readFileSync(new URL('./worker_exact_source_manifest.json',import.meta.url),'utf8'));for(const [name,hash] of Object.entries(m.files)){const bytes=fs.readFileSync(new URL('./'+name,import.meta.url));assert.equal(createHash('sha256').update(bytes).digest('hex'),hash,name);}});
+{
+ const daemon={pid:11,exitCode:null,signalCode:null,kill:()=>true}, chrome={pid:12,exitCode:null,signalCode:null};
+ let close=0, observations=0, waits=0;const errors=[];const events=[];
+ const custody=createHandleCustody({wait:async()=>{waits++;return {timeout:true};},record:()=>{throw Error('custody persistence');}});
+ const result=await runCleanup({daemon,chrome,custody,actor:async()=>({}),waitExit:(h,n,t)=>custody.wait(h,n,t),closeHandle:async()=>{close++;},snapshot:()=>{observations++;return [];},ledgers:new Map([[1,{terminal:()=>({verdict:'ABSENT'})}]]),record:(kind,data)=>events.push({kind,data}),cleanupErrors:errors,canStop:false,mcpPid:13,pidFileExists:()=>false});
+ assert.equal(result,'UNKNOWN');assert.equal(close,1);assert.equal(observations,1);assert.equal(waits,1);assert.ok(errors.some(e=>e.includes('custody persistence')));assert.ok(events.some(e=>e.kind==='chrome_identity_terminal'));count++;console.log('PASS runner cleanup custody failure');
+}
+{
+ let launches=0, waits=0;const h={};const c=createHandleCustody({wait:async()=>{waits++;return {timeout:true};},record:()=>{}});
+ await assert.rejects(runReplacement({handle:h,close:async h=>{const r=await c.wait(h,'original',1);if(r.timeout)throw Error('timeout');},snapshot:()=>[],ledger:{terminal:()=>({verdict:'ABSENT'})},record:()=>{},launch:()=>{launches++;}}));
+ assert.equal(waits,1);assert.equal(launches,0);
+ const errors=[];const result=await runCleanup({daemon:null,chrome:null,custody:c,actor:async()=>{},waitExit:async()=>{},closeHandle:async()=>{},snapshot:()=>[],ledgers:new Map([[1,{terminal:()=>({verdict:'UNKNOWN'})}]]),record:()=>{},cleanupErrors:errors,canStop:false,mcpPid:null,pidFileExists:()=>false});
+ assert.equal(result,'UNKNOWN');count++;console.log('PASS runner timeout blocks replacement and unknown terminal');
+}
+{
+ const result=await runCleanup({daemon:null,chrome:null,custody:{anyTimeout:false},actor:async()=>{},waitExit:async()=>{},closeHandle:async()=>{},snapshot:()=>[],ledgers:new Map([[1,{terminal:()=>({verdict:'UNKNOWN',identities:[{pid:2,state:'UNKNOWN'}]})}]]),record:()=>{},cleanupErrors:[],canStop:false,mcpPid:null,pidFileExists:()=>false});
+ assert.equal(result,'UNKNOWN');count++;console.log('PASS runner unknown descendant blocks terminal');
+}
+check('exact candidate manifest',()=>{const m=JSON.parse(fs.readFileSync(new URL('./worker_a2_source_manifest.json',import.meta.url),'utf8'));for(const [name,hash] of Object.entries(m.files)){const bytes=fs.readFileSync(new URL('./'+name,import.meta.url));assert.equal(createHash('sha256').update(bytes).digest('hex'),hash,name);}});
 console.log(`TOTAL ${count} PASS; SKIPS 0`);

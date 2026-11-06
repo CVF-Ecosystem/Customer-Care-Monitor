@@ -1,9 +1,28 @@
 # R151 source worker return
 
+## A2 source-only return — 2026-11-06
+
 Status: BLOCKED_WITH_REASON
 Risk: R2
 Worker: Terra 6.1 IMPLEMENTATION_WORKER
 Reviewer: Astra Medium independent REVIEWER
+
+The A2 source pass is complete and its focused checks passed; V06 still requires independent static review of the exact final A3, positive WebSocket, A1-c and A2 paths. String-presence checks do not discharge that obligation. Independent review of the full diff and other acceptance obligations also remains. No source acceptance or runtime admission is claimed.
+
+The runner now puts executable setup inside its CLI entry and exposes the production replacement and cleanup functions for injected fixtures. Guarded daemon stop, wait, kill, Chrome close, terminal inventory and persistence record failures; cleanup errors and missing terminal evidence prevent terminal ABSENT. The single offline test imported the runner and exercised the real cleanup and replacement seams with custody persistence throwing, timeout and zero replacement launches, and an unknown descendant. It also executed the existing PowerShell, ownership, HTTP transport and reviewed-manifest fixtures. This is offline diagnostic evidence only.
+
+Candidate identities, raw SHA-256, are recorded in `docs/reviews/probes/r151_evidence_capture_20261105/worker_a2_source_manifest.json` (manifest raw-byte SHA-256 `80c51918248391b333b5aff9ee023eb17b940eb430b832ad4a2689b897fee523`; LF-normalized SHA-256 differs). Runner `0714964711391772de75f151ed97e7d27ba3f61c02f4056b3e535604b88ffcca`; tests `57370533b859c86cce93142b26bf4ca897d74a2c60bb7827a0e91ab7a266b740`. The manifest also pins the unchanged helper, actor, and PowerShell sources.
+
+- Combined invocation: `node docs/reviews/probes/r151_evidence_capture_20261105/worker_offline_tests.mjs` redirected to `worker_a2_offline_test.log`, exit 0, 52 PASS, 0 skips. Raw log SHA-256 `11204b544f49a5721834edd0fb58251dc15a2aec6fc967779a057671c95a3c50`. Root's hold arrived after this invocation had already completed; Root was informed immediately.
+- Final-byte syntax batch: `node --check` on owner_runner.mjs, diagnostic_helpers.mjs and worker_offline_tests.mjs; Windows PowerShell 5.1 `System.Management.Automation.Language.Parser.ParseFile` on process_snapshot.ps1, prestart_full_tree.ps1 and worker_historical_red.ps1. Each Node exit was 0, each parser reported 0 errors, batch exit 0. Raw `worker_a2_syntax.log` SHA-256 `775cd3f75f05a80820b4b13693fb84cf7900fc15393d4c1abaf200020cfe229f`. No source or test bytes were edited after the manifest or checks.
+- This A2 allocation spent one of one focused test and one of one syntax batch. Historical four focused tests and one evidenced syntax remain spent; old unused syntax expired; earlier active time remains UNKNOWN. Release `2026-11-06T07:42:44+07:00`, source/check work stopped by `2026-11-06T07:46:40+07:00`, conservative elapsed under four minutes against the 20-minute active cap, hard wall deadline 08:12:44.
+- Changed paths: `owner_runner.mjs`, `worker_offline_tests.mjs`, new `worker_a2_source_manifest.json`, `worker_a2_offline_test.log`, `worker_a2_syntax.log` under `docs/reviews/probes/r151_evidence_capture_20261105/`, plus this return. R150 and protected sources were not edited. No Chrome, daemon, socket, provider, DB, product, network or package effects were invoked.
+
+### Return-Time Closeability Recheck
+
+BLOCKED pending Astra's independent R2 source review, including final-hash V06 control flow and remaining obligations, followed by Root's gates and disposition. The worker has no further test or source correction allowance in A2, does not commit or alter authority, and did not dispatch effects. R150 remains INCONCLUSIVE, A2 UNRUN and terminal cleanup UNKNOWN; R139 and M3 remain blocked.
+
+Historical original return: BLOCKED_WITH_REASON, risk R2, worker Terra 6.1 IMPLEMENTATION_WORKER, reviewer Astra Medium independent REVIEWER.
 
 ## Disposition
 

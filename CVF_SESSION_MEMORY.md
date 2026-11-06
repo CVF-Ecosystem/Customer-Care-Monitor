@@ -4,14 +4,14 @@ Memory class: POINTER_RECORD
 
 <!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R151_EVIDENCE_CAPTURE_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-151", "parked": true} -->
 
-## Current R151 A2 source-only BUILD - 2026-11-06
+## Current R151 A2 source result BUILD_BLOCKED - 2026-11-06
 
 - Current mode: BUILD
 - Active phase: BUILD
 
-R151 A2 exact packet was independently reviewed and installed1.3 pre-dispatch/pre-commit plus portable preflight passed. Material order commit `edb7f4d1` was followed by timed source-only release 2026-11-06T07:42:44+07:00; conservative active deadline 2026-11-06T08:02:44+07:00, hard wall 2026-11-06T08:12:44+07:00. Terra acknowledged the conditional worker role before this transition and must rehydrate/ACK the committed marker before editing. One correction pass, one focused actual-runner injected test and one final-byte syntax batch are allowed; no runtime effects. Old Nov5 stop, four spent tests, one evidenced syntax, unknown active minutes and unaccepted source remain. Astra reviews the return independently. R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, Facebook/Zalo OA parked.
+Terra A2 candidate has matching seven-file hashes, one added fixture test reporting 52 PASS/0 skips and one final-byte syntax batch exit0; old source history is retained. Astra independently reviewed final-hash V06 static control flow and BLOCKED source acceptance because V04 timeout/replacement fixture supplies a test-written close callback rather than exercising production closeHandle/wait/launch wiring. Root disposition: `docs/reviews/R151_A2_ROOT_BLOCKED_DISPOSITION_2026-11-06.md`. Five cumulative focused tests and two evidenced syntax batches spent; old Nov5 stop expired, previous active minutes UNKNOWN, A2 worker stop by 07:46:40 +07 before its deadline. R151 BUILD_BLOCKED, no new worker source/test or Windows effect allowance. Root audits repeated V04 cause/cost before any dependent IMPLEMENT. R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN; R139/M3 blocked, Facebook/Zalo OA parked.
 
-Root ORCHESTRATOR / COMMIT_STEWARD / SESSION_SYNC_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER
+Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER held
 
 ## Current R150 Windows A1/A2 VERIFY admission - 2026-11-05
 
@@ -191,7 +191,7 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R151_EVIDENCE_CAPTURE_2026-11-05.md
 
-CCMAI-RUNTIME-151 A2 source-only BUILD release 2026-11-06T07:42:44+07:00, conservative active deadline 2026-11-06T08:02:44+07:00, wall deadline 2026-11-06T08:12:44+07:00. One actual-runner focused offline test and one final-byte syntax batch maximum after one source pass; historical A1 costs/deadline preserved. No Chrome/daemon/provider/DB/product effect; R139/M3 blocked; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-151 source BUILD_BLOCKED after independently reviewed A2 V04 integration-proof gap. Five focused tests/two syntax batches cumulatively evidenced; no further worker allowance. Root audits cause and cost before any dependent IMPLEMENT. No Chrome/daemon/provider/DB/product effect; R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and Facebook/Zalo OA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

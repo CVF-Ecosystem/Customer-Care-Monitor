@@ -40,10 +40,10 @@
   "scope": "Repair the R150 measurement defects in new R151 probe artifacts: capture the actual HTTP WebSocket upgrade outcome and prove exact Chrome ownership/descendant cleanup. First perform source-only offline verification and independent review. A finite Windows A1/A2 diagnostic may follow only within this same tranche after separate effect admission; no integrated product execution.",
   "claimBoundary": "Source tests prove only the diagnostic helper. A later A1/A2 result may remove an admission prerequisite but cannot by itself prove product physical no-relaunch, runtime AI governance, R139 completion or M3 acceptance. R139 and M3-05/M3-08 remain blocked.",
   "baseCommit": "edb7f4d1432e659a9789e1c57a568835d50b2924",
-  "status": "BUILD",
+  "status": "BUILD_BLOCKED",
   "phase": "BUILD",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "BLOCKED_WITH_REASON",
   "buildCommit": null,
   "reviewEvidence": [
     "docs/reviews/R151_SOURCE_AUDIT_INDEPENDENT_REVIEW_2026-11-05.md",
@@ -52,9 +52,10 @@
     "docs/reviews/R151_EXPIRED_AMENDMENT_INDEPENDENT_REVIEW_2026-11-06.md",
     "docs/reviews/R151_PROSPECTIVE_A2_INDEPENDENT_REVIEW_2026-11-06.md",
     "docs/reviews/R151_A2_PACKET_INDEPENDENT_REVIEW_2026-11-06.md",
-    "docs/reviews/R151_A2_CORRECTED_PACKET_INDEPENDENT_REVIEW_2026-11-06.md"
+    "docs/reviews/R151_A2_CORRECTED_PACKET_INDEPENDENT_REVIEW_2026-11-06.md",
+    "docs/reviews/R151_A2_SOURCE_INDEPENDENT_REVIEW_2026-11-06.md"
   ],
-  "disposition": "A2_SOURCE_ONLY_BUILD_RELEASED_PENDING_WORKER_RETURN",
+  "disposition": "A2_SOURCE_BLOCKED_V04_INTEGRATION_PROOF_GAP",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -65,7 +66,8 @@
     "BUILD",
     "BUILD_BLOCKED",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "BUILD_BLOCKED"
   ],
   "parentTranche": "CCMAI-RUNTIME-150",
   "x-a2ReleaseAt": "2026-11-06T07:42:44+07:00",

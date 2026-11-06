@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "r151.a2.source-manifest@1",
+  "files": {
+    "owner_runner.mjs": "0714964711391772de75f151ed97e7d27ba3f61c02f4056b3e535604b88ffcca",
+    "diagnostic_helpers.mjs": "fe1f1bb92e63c5c3b8048949b9af4c957a340fcb5e105c45ff81e60c9e6b8df0",
+    "worker_offline_tests.mjs": "57370533b859c86cce93142b26bf4ca897d74a2c60bb7827a0e91ab7a266b740",
+    "actor_call.mjs": "e8809991c2d26a0ff8dc83665cc4ac93aa199221164ae3d4665a26f30bb7a8c1",
+    "process_snapshot.ps1": "50b99cdbb0f7fd621edc5fe493bacd65e0dd0b56d8f5722ba4cf42a54f81d939",
+    "prestart_full_tree.ps1": "8b1dec9c5f945f988b2a32a4804559c1ce44cf20225c902bd19985ed2bbd4db2",
+    "worker_historical_red.ps1": "8a4de27d8b19445216cb6a3ac71ef01fc6e04192509cd5f7b8e83ca209b7fa98"
+  }
+}
