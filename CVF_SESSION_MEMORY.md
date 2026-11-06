@@ -2,15 +2,15 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md", "activeTranche": "CCMAI-RUNTIME-154", "parked": true} -->
-## Current R154 repository reconciliation DISPATCH_READY - 2026-11-06
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md", "activeTranche": "CCMAI-RUNTIME-154", "parked": true} -->
+## Current R154 repository reconciliation BUILD - 2026-11-06
 
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
+- Current mode: BUILD
+- Active phase: BUILD
 
-Owner requested one unified development repository after remote update. Root seeded R154 at `a31f7adf51be7e3493e4b1f112164a4044d2206b` and admitted the project-specific RC-01 repository-continuity criterion; Astra accepted the final packet, installed pre-dispatch passed with ROUTE N/A and portable preflight passed 7/7. Terra's one pinned no-commit merge is released only when the commit containing this handoff exists. Local and remote R150 share authority filenames but represent different work. Local R150 Windows effects/UNKNOWNs, R153 consumed 12-file pass, R152 profile1.4 deferral, R151 BUILD_BLOCKED, R139/M3 holds and account parking remain. No product or runtime acceptance follows from repository reconciliation.
+Owner requested one unified development repository after remote update. Root seeded R154 at `a31f7adf51be7e3493e4b1f112164a4044d2206b` and admitted project-specific RC-01. Astra accepted the exact packet; installed pre-dispatch, portable preflight and 130 gate units passed. Root committed dispatch at `284c6a6e` and transferred only the one no-commit merge to Terra. Local and remote R150 share authority filenames but represent different work. Local R150 Windows effects/UNKNOWNs, R153 consumed 12-file pass, R152 profile1.4 deferral, R151 BUILD_BLOCKED, R139/M3 holds and account parking remain. No product or runtime acceptance follows from repository reconciliation.
 
-Root ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 worker held; Astra Medium independent reviewer.
+Terra 6.1 IMPLEMENTATION_WORKER for one no-commit merge; Root ORCHESTRATOR / COMMIT_STEWARD; Astra Medium independent reviewer.
 
 ## Current R153 finite M2-04 source VERIFY FROZEN - 2026-11-06
 
@@ -23,8 +23,8 @@ Root CLOSER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 VE
 
 ## Current R152 WORK_ORDER DRAFT - 2026-11-06
 
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
+- Current mode: BUILD
+- Active phase: BUILD
 
 Clean parent pack f8175616c delivery verified (53/53 hashed files); project-development guidance mapped to existing project controls and independently accepted in the R152 review. The operator-supplied roadmap form v1.4 was checked against the existing M1-M5 roadmap; the active pack does not yet deliver the form. R152 now maps CCMA-specific controls by existing criterion IDs without changing the master coverage table. Profile1.4 remains uninstalled after a prospective installed1.3 pre-dispatch failed COV_BLOCK_REQUIRED. Root must first decide necessity, cumulative cost and whether installed1.3 suffices; a criterion cannot be invented to pass the gate. R152 packet/record are DRAFT/WORK_ORDER; no worker BUILD or policy/lock/CI/activation change. R151 stays BUILD_BLOCKED with spent costs and UNKNOWNs; R139/M3 blocked, R150 inconclusive, accounts parked.
 
@@ -214,11 +214,11 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
+- Current mode: BUILD
+- Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md
 
-CCMAI-RUNTIME-154 DISPATCH_READY: Root admitted project-specific RC-01 repository continuity and Astra accepted the final packet; exact active-packet and portable gates passed. One no-commit merge is allowed only after this handoff's dispatch commit. R153 one-pass T0 inventory remains FROZEN with its 12-file cap spent and M2 OPEN/UNKNOWN. R152 profile1.4 installation deferred at DRAFT; R151 BUILD_BLOCKED with third-repair NO-GO, R139/M3 blocked, R150 Windows INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and Facebook/Zalo OA parked.
+CCMAI-RUNTIME-154 BUILD: Root admitted project-specific RC-01 repository continuity, Astra accepted the final DISPATCH_READY packet and Root committed dispatch at `284c6a6e`. Terra may execute only one pinned no-commit merge; Root owns the merge commit. R153 one-pass T0 inventory remains FROZEN with its 12-file cap spent and M2 OPEN/UNKNOWN. R152 profile1.4 installation deferred at DRAFT; R151 BUILD_BLOCKED with third-repair NO-GO, R139/M3 blocked, R150 Windows INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and Facebook/Zalo OA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

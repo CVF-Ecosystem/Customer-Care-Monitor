@@ -1,6 +1,6 @@
 # R154 — repository history reconciliation
 
-Status: DISPATCH_READY
+Status: ACTIVE
 workOrderStatusGrammar: cvf.workOrderStatusGrammar@1.0.0
 Tranche: CCMAI-RUNTIME-154
 Authority: `CVF_SESSION/authority/CCMAI-RUNTIME-154.json` seeded at `a31f7adf`
