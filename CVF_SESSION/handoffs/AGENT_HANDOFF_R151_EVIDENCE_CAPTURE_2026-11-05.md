@@ -8,7 +8,7 @@ Status: ACTIVE
 - Active phase: BUILD
 - Active role: Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER held
 - Active tranche: CCMAI-RUNTIME-151
-- Next allowed move: CCMAI-RUNTIME-151 BUILD_BLOCKED after A2 independent review: actual runner replacement timeout/next-launch integration V04 remains unproved. Preserve candidate, 52-PASS fixture and final syntax as partial source evidence; five cumulative focused tests and two evidenced syntax batches spent, prior active minutes UNKNOWN. Root audits repeated V04 cause/cost before any dependent IMPLEMENT; no worker retry, Windows effect or product claim. R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-151 BUILD_BLOCKED with independently accepted V04 causal/cost audit: REVIEW_COST_ESCALATION_REQUIRED before a third correction. Root may prepare a bounded read-only design/verification packet for one shared production close/timeout/launch seam and independent review; no source edit, test, syntax, Windows effect or product claim. Five cumulative focused tests and two evidenced syntax batches spent; prior active minutes UNKNOWN. R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## Transition acknowledgment
@@ -91,6 +91,11 @@ Status: ACTIVE
 - Terra completed the one A2 source pass before its conservative deadline, retained a seven-file exact manifest, one added focused test reporting 52 PASS/0 skips/worker-reported exit0, and one final-byte syntax batch exit0. Worker-return gate APPL/ROLE/COV PASS and portable preflight 7/7 PASS. Terra returned BLOCKED_WITH_REASON without source or runtime claim; historical A1 return content remains preserved under a historical heading.
 - Astra reviewed the exact candidate in `docs/reviews/R151_A2_SOURCE_INDEPENDENT_REVIEW_2026-11-06.md` and returned BLOCKED. V06 preserved control flow received independent final-hash static review. V04 remained unproved because timeout/replacement fixtures use a test-written close callback rather than production closeHandle/wait/launch wiring. Actual cleanup under custody failure is improved but does not close V04. No reviewer source acceptance or Windows effect admission.
 - Root records `docs/reviews/R151_A2_ROOT_BLOCKED_DISPOSITION_2026-11-06.md` and transitions to ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD. R151 returns BUILD_BLOCKED; five cumulative focused tests and two evidenced syntax batches are spent, old stop expired, earlier active minutes UNKNOWN. Audit the repeated V04 cause/cost before any dependent IMPLEMENT. No third repair pass, extra test or source edit is released. R150/R139/M3 holds and account parking remain.
+
+## Repeated V04 causal and cost audit
+
+- Root distinguished the A1 helper-only proof gap from A2's partially improved actual cleanup proof and still substituted production replacement timeout callback in `docs/reviews/R151_V04_CAUSAL_CHAIN_AND_COST_AUDIT_2026-11-06.md`. Astra independently accepted the causal/cost audit only in `docs/reviews/R151_V04_CAUSAL_AUDIT_INDEPENDENT_REVIEW_2026-11-06.md`; source and product remain blocked.
+- A prospective third R151 source correction without a new independent root cause triggers `REVIEW_COST_ESCALATION_REQUIRED`. Root records that stop now. The spent A2 audit/registry admission cannot fund another source pass. Only bounded read-only design/verification preparation for a shared production close/timeout/launch seam and independent review is the next move. Historical five tests, two evidenced syntax batches, expired Nov5 stop, A2 one-test/one-syntax exhaustion and UNKNOWN active minutes persist.
 
 ## Public Export Disposition
 
