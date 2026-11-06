@@ -4,11 +4,11 @@ Status: ACTIVE
 
 ## Current State
 
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
 - Active role: Root ORCHESTRATOR / WORK_ORDER_AUTHOR / COMMIT_STEWARD / SESSION_SYNC_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER held
 - Active tranche: CCMAI-RUNTIME-151
-- Next allowed move: CCMAI-RUNTIME-151 BUILD_BLOCKED: retain four spent focused tests, one evidenced syntax batch, expired 2026-11-05 17:02:18 +07:00 stop and unaccepted runner cleanup path. Root prepares a same-R151 prospective bounded amendment for independent R2 admission; no Terra source edit, test, syntax or Chrome/daemon/provider/DB/product effect until new authority and acknowledgment. R139 BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-151 A2 WORK_ORDER: Astra independently reviews the exact corrected source-only packet and pending audit; Root reconciles acceptance pin, registry, gates and committed release marker before any Terra edit or test. New 20-active/30-wall clock starts only at future recorded BUILD release. Original Nov5 stop, four tests and one evidenced syntax stay spent. No Chrome/daemon/provider/DB/product effect. R139/M3 blocked; Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## Transition acknowledgment
@@ -63,6 +63,17 @@ Status: ACTIVE
 - The final source candidate hashes match the seven-file worker manifest. The fourth focused offline invocation reports 49 PASS, zero skips and exit 0 before the original wall stop. Cumulative focused tests 4/4; syntax evidence 1/2, with the unused allowance expired. Actual active time UNKNOWN. No amended worker return exists.
 - Final runner syntax is unproved. Its daemon wait inside `finally` may throw from custody persistence before Chrome cleanup and terminal inventory. Shared helper fixtures do not execute this orchestration. Source acceptance is withheld, R151 `BUILD_BLOCKED`, carrier `BLOCKED_WITH_REASON`; no Windows VERIFY or product admission.
 - Root transitions to ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD for a prospective same-R151 amendment. A new finite budget and independent R2 admission are needed before Terra can resume. The old stop and spent attempts cannot be reset. No Chrome, daemon, provider, DB, product, network or socket effect is released. R139/M3 and R150 dispositions remain as above.
+
+## Same-R151 A2 WORK_ORDER reentry - 2026-11-06
+
+- Root rehydrated the current blocked continuity and transitioned ORCHESTRATOR / WORK_ORDER_AUTHOR to WORK_ORDER for a prospective source-only A2. Astra independently conditionally accepted the proposal; its first exact DRAFT packet review returned CHANGES_REQUIRED for stale supporting-work budget and historical A1 imperative. Root corrected both, retained that failed review and repinned the revised packet/audit/registry.
+- The official order is now the active record workOrder at DISPATCH_READY for exact corrected-byte review. This is administrative preparation only. The prior blocked status carrier remains historical. Terra remains held until Astra accepts the exact packet, pre-dispatch and pre-commit pass, material is committed, and a fresh BUILD release timestamp/deadline plus Terra role acknowledgment are recorded.
+- The new prospective allocation is 20 measured active minutes and a 30 wall-minute cap from the future release, one additional focused offline test and one new final-byte syntax batch. The old 17:02:18 stop, 4/4 focused tests, 1/2 evidenced syntax and UNKNOWN historical active time remain. Zero Chrome/daemon/provider/DB/product/network/socket effects.
+
+## A2 corrected packet acceptance and dispatch preparation
+
+- Astra accepted the exact source-only A2 packet LF SHA-256 `57a76055fc62aa74ef864ae4972140f6940ccee7553abf61d310b4d1917d8d91` in `docs/reviews/R151_A2_CORRECTED_PACKET_INDEPENDENT_REVIEW_2026-11-06.md`; its prior CHANGES_REQUIRED review remains retained. Root marked the current audit `REPAIR_ADMITTED` and repinned the M3 registry without changing the reviewed packet or substantive causal assessment.
+- Installed1.3 pre-dispatch APPL/COV PASS, pre-commit PASS and portable downstream preflight 7/7 PASS in WORK_ORDER. ROUTE is explicitly NOT_APPLICABLE_WITH_REASON. These static gates do not accept source or runtime behavior. Commit the reviewed material, then record a separate timed BUILD release and Terra acknowledgment before any source edit or test.
 
 ## Public Export Disposition
 

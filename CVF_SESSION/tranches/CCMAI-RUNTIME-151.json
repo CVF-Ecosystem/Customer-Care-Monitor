@@ -35,23 +35,26 @@
     "No provider, database, customer/channel, credential or product call; no package download, external network, automatic retry, integrated product lifecycle or budget reset",
     "No R139 IMPLEMENT reopen, M3 acceptance, physical no-relaunch or runtime-governance claim, push, merge, deployment or public release"
   ],
-  "workOrder": "docs/reviews/R151_SOURCE_EXECUTION_STATUS_CARRIER_2026-11-05.md",
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_151_EVIDENCE_CAPTURE_REPAIR.md",
   "ownerAuthorization": "Owner directs Root to act as orchestrator, find causes before implementation and assign Terra 6.1 as worker, Astra Medium as independent reviewer, with Sol 6.1 Medium for difficult technical diagnosis. This seed bounds one successor after R150 INCONCLUSIVE; process effects require a later separate R2 admission.",
   "scope": "Repair the R150 measurement defects in new R151 probe artifacts: capture the actual HTTP WebSocket upgrade outcome and prove exact Chrome ownership/descendant cleanup. First perform source-only offline verification and independent review. A finite Windows A1/A2 diagnostic may follow only within this same tranche after separate effect admission; no integrated product execution.",
   "claimBoundary": "Source tests prove only the diagnostic helper. A later A1/A2 result may remove an admission prerequisite but cannot by itself prove product physical no-relaunch, runtime AI governance, R139 completion or M3 acceptance. R139 and M3-05/M3-08 remain blocked.",
   "baseCommit": "0c61d58fa9b4d0fe148fe56bb9656899c5281871",
-  "status": "BUILD_BLOCKED",
-  "phase": "BUILD",
+  "status": "DISPATCH_READY",
+  "phase": "WORK_ORDER",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "BLOCKED_WITH_REASON",
+  "workOrderStatus": "DISPATCH_READY",
   "buildCommit": null,
   "reviewEvidence": [
     "docs/reviews/R151_SOURCE_AUDIT_INDEPENDENT_REVIEW_2026-11-05.md",
     "docs/reviews/R151_FINAL_SOURCE_BLOCKED_INDEPENDENT_REVIEW_2026-11-05.md",
     "docs/reviews/R151_AMENDMENT_INDEPENDENT_REVIEW_2026-11-05.md",
-    "docs/reviews/R151_EXPIRED_AMENDMENT_INDEPENDENT_REVIEW_2026-11-06.md"
+    "docs/reviews/R151_EXPIRED_AMENDMENT_INDEPENDENT_REVIEW_2026-11-06.md",
+    "docs/reviews/R151_PROSPECTIVE_A2_INDEPENDENT_REVIEW_2026-11-06.md",
+    "docs/reviews/R151_A2_PACKET_INDEPENDENT_REVIEW_2026-11-06.md",
+    "docs/reviews/R151_A2_CORRECTED_PACKET_INDEPENDENT_REVIEW_2026-11-06.md"
   ],
-  "disposition": "EXPIRED_AMENDMENT_SOURCE_NOT_ACCEPTED",
+  "disposition": "A2_SOURCE_ONLY_PACKET_REVIEW_ACCEPTED_PENDING_DISPATCH_GATES",
   "freeze": "OPEN",
   "history": [
     "WORK_ORDER",
@@ -60,7 +63,8 @@
     "BUILD_BLOCKED",
     "DISPATCH_READY",
     "BUILD",
-    "BUILD_BLOCKED"
+    "BUILD_BLOCKED",
+    "DISPATCH_READY"
   ],
   "parentTranche": "CCMAI-RUNTIME-150"
 }
