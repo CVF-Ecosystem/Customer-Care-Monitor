@@ -81,6 +81,11 @@ Status: ACTIVE
 - Root now acknowledges ORCHESTRATOR / COMMIT_STEWARD / SESSION_SYNC_STEWARD and records the timed release 2026-11-06T07:42:44+07:00; conservative active deadline 2026-11-06T08:02:44+07:00; hard wall 2026-11-06T08:12:44+07:00. This handoff and accompanying receipt form the material-SHA release marker. Terra must rehydrate this committed marker and explicitly acknowledge the live clock before any edit or test. If measuring active time fails, all release-to-stop elapsed time counts against the 20-minute cap.
 - The official A2 packet stays exact-byte pinned at `57a76055fc62aa74ef864ae4972140f6940ccee7553abf61d310b4d1917d8d91`; the audit registry pin is retained. No Windows/product effect is admitted.
 
+## A2 worker post-marker acknowledgment
+
+- Terra rehydrated committed BUILD marker `ef6e61db73dc9e312f6a255d920cb7e1cd9eb92f`, all canonical continuity surfaces and exact packet LF SHA-256 `57a76055fc62aa74ef864ae4972140f6940ccee7553abf61d310b4d1917d8d91`. Terra explicitly accepted IMPLEMENTATION_WORKER with one source correction, one combined offline test, one final-byte syntax batch, conservative 08:02:44 and hard-wall 08:12:44 +07 stops, historical four tests/one syntax and prior active UNKNOWN. Terra reported no edits or effects and waits for this committed acknowledgment before editing.
+- Root records that role acknowledgment in the active handoff before worker source BUILD. The original Nov5 deadline and old costs remain; no Chrome, daemon, socket, provider, DB, product or network effect is released.
+
 ## Public Export Disposition
 
 DEFERRED_PRIVATE_ONLY
