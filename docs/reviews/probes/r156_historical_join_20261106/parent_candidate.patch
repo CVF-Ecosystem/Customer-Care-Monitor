@@ -1,0 +1,178 @@
+--- a/cvf_downstream_gate_runner.py
++++ b/cvf_downstream_gate_runner.py
+@@ -83,13 +83,14 @@
+     return common.ControlResult("CVF-DG-RANGE-01", "PASS", [], notes=notes)
+ 
+ 
+-def _milestone_result(M: dict, root: Path, packets: list[str], profile: dict, base=None):
++def _milestone_result(M: dict, root: Path, packets: list[str], profile: dict, base=None, historical=None):
+     common, coverage = M["cvf_dg_common"], M["cvf_milestone_coverage"]
+     ControlResult, Finding = common.ControlResult, common.Finding
+     CONTROL_ID = "CVF-DG-COV-01"
+     candidates = set(packets)
+     active = root / profile["continuityContract"]["implementationPath"]
+     findings, checked = [], []
++    orders = []
+     findings.extend(Finding(code, coverage.AUTHORITY_REGISTRY, "repair history transition refused")
+                     for code in coverage.validate_repair_transition(root, base))
+     if active.is_file():
+@@ -103,6 +104,10 @@
+             candidates.update(orders)
+         except (ValueError, OSError, AttributeError) as exc:
+             findings.append(Finding("COV_ACTIVE_INPUT_INVALID", str(active), str(exc)))
++    if historical is not None:
++        historical = dict(historical, active=orders)
++        findings.extend(Finding(code, "historical-admissions", "retrospective binding refused")
++                        for code in coverage.validate_historical_context(root, historical))
+     for rel in sorted(candidates):
+         if "/archive/" in rel:
+             continue
+@@ -110,7 +115,8 @@
+         if target is None or not target.is_file():
+             findings.append(Finding("COV_PACKET_MISSING_OR_UNSAFE", rel, "candidate must be a project file"))
+             continue
+-        issues = coverage.validate_file(root, rel)
++        context = None if historical is None else dict(historical, active=orders)
++        issues = coverage.validate_file(root, rel, historical=context)
+         findings.extend(Finding(code, rel, "milestone coverage admission refused") for code in issues)
+         if not issues:
+             value = coverage.read_file(root, rel).decode("utf-8-sig")
+@@ -200,7 +206,10 @@
+         elif cid == "CVF-DG-APPL-01":
+             results.append(M["cvf_dg_applicability"].check_applicability(root, packets(("docs/work_orders/",)), checker_dir))
+         elif cid == "CVF-DG-COV-01":
+-            results.append(_milestone_result(M, root, packets(("docs/roadmaps/", "docs/work_orders/", "docs/reviews/")), profile, candidates.base))
++            results.append(_milestone_result(M, root, packets(("docs/roadmaps/", "docs/work_orders/", "docs/reviews/")), profile, candidates.base, historical=None if not args.historical_admissions else {
++                "phase": phase, "head": candidates.head, "base": candidates.base, "active": [],
++                "explicit": args.packet or [], "manifest": {"path": args.historical_admissions,
++                "sha256": args.historical_admissions_sha256, "commit": args.historical_admissions_commit}}))
+         elif cid == "CVF-DG-ROUTE-01":
+             results.append(M["cvf_dg_routing"].check_routing(root, packets(("docs/work_orders/", "docs/reviews/")), profile))
+         elif cid == "CVF-DG-ROLE-01":
+@@ -252,6 +261,9 @@
+     run.add_argument("--base")
+     run.add_argument("--base-from-env", help="name of an environment variable holding the PR/push base commit")
+     run.add_argument("--head")
++    run.add_argument("--historical-admissions", help="UNINSTALLED candidate proposed binding path")
++    run.add_argument("--historical-admissions-sha256")
++    run.add_argument("--historical-admissions-commit")
+     run.add_argument("--trusted", action="store_true", help="run from the Core copy and compare the project copy to Core sources")
+     run.add_argument("--expect-profile-sha256")
+     run.add_argument("--expect-runner-sha256")
+--- a/cvf_milestone_coverage.py
++++ b/cvf_milestone_coverage.py
+@@ -33,11 +33,14 @@
+     return module
+ 
+ 
+-def _repair_api(packet_path=None, packet_text=None):
++def _repair_api(packet_path=None, packet_text=None, strict=False):
+     cache = {}
+     def bounded_read(root, path):
+         key = (str(root.resolve()), path)
+         if key not in cache:
++            if strict:
++                from cvf_historical_admissions import Reader
++                Reader(root, SimpleNamespace(need=need)).safe(path)
+             raw = read_file(root, path)
+             need(len(cache) < 128 and sum(map(len, cache.values())) + len(raw) <= 16 * MAX_BYTES,
+                  "COV_REPAIR_EVIDENCE_BUDGET")
+@@ -178,15 +181,17 @@
+         need(digest(read_file(root, ref["path"])) == ref["sha256"], "COV_EVIDENCE_STALE")
+ 
+ 
+-def validate(root: Path, data, packet_path=None, packet_text=None) -> list[str]:
+-    try:
+-        _validate(root, data, packet_path, packet_text)
++def validate(root: Path, data, packet_path=None, packet_text=None, historical=None) -> list[str]:
++    try:
++        if historical is not None:
++            _repair().transition(root, historical["base"], _repair_api(strict=True))
++        _validate(root, data, packet_path, packet_text, historical)
+         return []
+     except (Invalid, OSError, UnicodeError, ValueError, TypeError, KeyError) as exc:
+         return [str(exc) if isinstance(exc, Invalid) else "COV_INVALID_INPUT:" + type(exc).__name__]
+ 
+ 
+-def _validate(root: Path, data, packet_path=None, packet_text=None):
++def _validate(root: Path, data, packet_path=None, packet_text=None, historical=None):
+     shape(data, ("schemaVersion", "authority", "milestone", "phase", "action", "rows", "supportingWork", "conclusions"))
+     need(data["schemaVersion"] == SCHEMA, "COV_SCHEMA")
+     milestone = data["milestone"]
+@@ -269,7 +274,7 @@
+     if conclusion["product"] == "COMPLETE":
+         need(bool(expected) and all(r["state"] == "VERIFIED" for r in rows), "COV_PRODUCT_INCOMPLETE")
+     if authority is not None:
+-        _repair().validate(root, data, registry, _repair_api(packet_path, packet_text))
++        _repair().validate(root, data, registry, _repair_api(packet_path, packet_text, strict=historical is not None), historical)
+ 
+ 
+ def _pairs(pairs):
+@@ -298,7 +303,7 @@
+     return len(status) != 1 or not status[0].startswith(("DRAFT", "HOLD", "CLOSED", "COMPLETE", "BLOCKED", "REJECTED", "SUPERSEDED", "ARCHIVED"))
+ 
+ 
+-def validate_text(root: Path, relative: str, value: str, required=None) -> list[str]:
++def validate_text(root: Path, relative: str, value: str, required=None, historical=None) -> list[str]:
+     if len(value.encode("utf-8")) > MAX_BYTES:
+         return ["COV_FILE_MISSING_OR_OVERSIZE"]
+     if required is None:
+@@ -325,7 +330,7 @@
+         need(len(bodies[0].encode()) <= MAX_BYTES, "COV_BLOCK_OVERSIZE")
+         data = json.loads(bodies[0], object_pairs_hook=_pairs,
+                           parse_constant=lambda _: (_ for _ in ()).throw(Invalid("COV_JSON_CONSTANT")))
+-        issues = validate(root, data, relative, value)
++        issues = validate(root, data, relative, value, historical)
+         if not issues and relative.startswith("docs/work_orders/") and required:
+             need(data["phase"] == "DISPATCH", "COV_EXECUTABLE_PHASE_REQUIRED")
+         statuses = re.findall(r"^Status:\s*(\S+)", unfenced(value), re.M)
+@@ -338,8 +343,20 @@
+         return [str(exc) if isinstance(exc, Invalid) else "COV_INVALID_JSON"]
+ 
+ 
+-def validate_file(root: Path, relative: str) -> list[str]:
+-    try:
+-        return validate_text(root, relative, read_file(root, relative).decode("utf-8-sig"))
++def validate_historical_context(root, historical):
++    try:
++        from cvf_historical_admissions import select
++        api = _repair_api(strict=True)
++        _repair().transition(root, historical["base"], api)
++        registry = _repair().parse(read_file(root, AUTHORITY_REGISTRY), api)
++        select(root, None, historical, registry, _repair(), api)
++        return []
++    except (Invalid, OSError, UnicodeError, ValueError, TypeError, KeyError) as exc:
++        return [str(exc) if isinstance(exc, Invalid) else "HIST_INVALID_INPUT:" + type(exc).__name__]
++
++
++def validate_file(root: Path, relative: str, historical=None) -> list[str]:
++    try:
++        return validate_text(root, relative, read_file(root, relative).decode("utf-8-sig"), historical=historical)
+     except (Invalid, OSError, UnicodeError) as exc:
+         return [str(exc) if isinstance(exc, Invalid) else "COV_INVALID_INPUT:" + type(exc).__name__]
+--- a/cvf_repair_convergence.py
++++ b/cvf_repair_convergence.py
+@@ -139,7 +139,7 @@
+     return failed, audit
+ 
+ 
+-def validate(root, data, registry, api):
++def validate(root, data, registry, api, historical=None):
+     enrolled = controls(registry, api)
+     milestone = data["milestone"]["id"]
+     if milestone not in enrolled:
+@@ -148,6 +148,14 @@
+     api.need(affected <= {r["id"] for r in data["rows"]}, "COV_REPAIR_CRITERIA_MISMATCH")
+     api.need(not affected or data["conclusions"]["product"] != "COMPLETE",
+              "COV_REPAIR_UNRESOLVED_PRODUCT")
++    if historical is not None:
++        from cvf_historical_admissions import select
++        from types import SimpleNamespace
++        historical_audit = select(root, api.packet_path, historical, registry,
++            SimpleNamespace(controls=controls, parse=parse, inspect_control=inspect_control, REGISTRY=REGISTRY), api)
++        if historical_audit is not None:
++            api.need(historical_audit["milestoneId"] == milestone, "HIST_MILESTONE")
++            audit = historical_audit
+     if data["action"]["kind"] not in ("IMPLEMENT", "VERIFY") or not affected:
+         return
+     selected = set(data["action"]["selected"])

@@ -1,0 +1,27 @@
+test_actual_retained_positive_and_default_strict (__main__.HistoricalJoinTests.test_actual_retained_positive_and_default_strict) ... ok
+test_actual_wrong_anchor_and_all_bindings (__main__.HistoricalJoinTests.test_actual_wrong_anchor_and_all_bindings) ... FAIL
+test_both_parent_merge_collision_preserves_current_authority (__main__.HistoricalJoinTests.test_both_parent_merge_collision_preserves_current_authority) ... ok
+test_current_history_audit_cost_product_guards (__main__.HistoricalJoinTests.test_current_history_audit_cost_product_guards) ... ok
+test_execution_head_commits_and_review_denials (__main__.HistoricalJoinTests.test_execution_head_commits_and_review_denials) ... ok
+test_forged_terminal_and_binding_provenance (__main__.HistoricalJoinTests.test_forged_terminal_and_binding_provenance) ... ok
+test_mutable_files_and_action_semantics (__main__.HistoricalJoinTests.test_mutable_files_and_action_semantics) ... ok
+test_parse_paths_bounds_and_nonancestor (__main__.HistoricalJoinTests.test_parse_paths_bounds_and_nonancestor) ... ok
+test_post_terminal_commit_then_revert_is_not_immutable (__main__.HistoricalJoinTests.test_post_terminal_commit_then_revert_is_not_immutable) ... ok
+test_real_copied_runner_integration (__main__.HistoricalJoinTests.test_real_copied_runner_integration) ... ok
+
+======================================================================
+FAIL: test_actual_wrong_anchor_and_all_bindings (__main__.HistoricalJoinTests.test_actual_wrong_anchor_and_all_bindings)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI\docs\reviews\probes\r156_historical_join_20261106\test_join.py", line 186, in test_actual_wrong_anchor_and_all_bindings
+    self.assert_rejected(self.validate(self.publish([row])),'HIST_AUDIT_SELECTION')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI\docs\reviews\probes\r156_historical_join_20261106\test_join.py", line 159, in assert_rejected
+    if expected: self.assertTrue(any(expected in i for i in issues), issues)
+                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ['HIST_BLOB_ENTRY']
+
+----------------------------------------------------------------------
+Ran 10 tests in 110.452s
+
+FAILED (failures=1)

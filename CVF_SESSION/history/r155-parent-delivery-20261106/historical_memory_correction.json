@@ -1,0 +1,10 @@
+{
+  "sourceBaseline": "e38d679548bdc80ba9f4bc10a2e0d09056a2189f",
+  "rootFinding": "Earlier Root WORK_ORDER-to-BUILD text replacement affected two historical R144 memory snippets; discovered by final section comparison",
+  "correction": "Restored both historical blocks exactly from baseline; current front marker/current truth and new R155/R156 records preserved",
+  "blocks": [
+    "## Current R144 finite A3 VERIFY dispatch - 2026-11-05",
+    "## Current R144 A3 package metadata VERIFY dispatch - 2026-11-05"
+  ],
+  "candidateSourceChanged": false
+}

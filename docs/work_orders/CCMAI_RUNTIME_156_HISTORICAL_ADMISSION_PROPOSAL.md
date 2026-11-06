@@ -1,6 +1,6 @@
 # R156 — incremental historical audit/action join proposal
 
-Status: ACTIVE
+Status: COMPLETE_PENDING_REVIEW
 workOrderStatusGrammar: cvf.workOrderStatusGrammar@1.0.0
 Risk: R2
 Authority: `CVF_SESSION/authority/CCMAI-RUNTIME-156.json` committed at `0ea490f02f993d396def1cda32215dd1212cbad2`

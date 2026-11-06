@@ -1,0 +1,17 @@
+test_actual_retained_positive_and_default_strict (__main__.HistoricalJoinTests.test_actual_retained_positive_and_default_strict) ... ok
+test_actual_wrong_anchor (__main__.HistoricalJoinTests.test_actual_wrong_anchor) ... ok
+test_both_parent_merge_collision_preserves_current_authority (__main__.HistoricalJoinTests.test_both_parent_merge_collision_preserves_current_authority) ... ok
+test_current_history_audit_cost_product_guards (__main__.HistoricalJoinTests.test_current_history_audit_cost_product_guards) ... ok
+test_duplicate_bindings_are_rejected (__main__.HistoricalJoinTests.test_duplicate_bindings_are_rejected) ... ok
+test_execution_head_commits_and_review_denials (__main__.HistoricalJoinTests.test_execution_head_commits_and_review_denials) ... ok
+test_forged_terminal_and_binding_provenance (__main__.HistoricalJoinTests.test_forged_terminal_and_binding_provenance) ... ok
+test_mutable_files_and_action_semantics (__main__.HistoricalJoinTests.test_mutable_files_and_action_semantics) ... ok
+test_parse_paths_bounds_and_nonancestor (__main__.HistoricalJoinTests.test_parse_paths_bounds_and_nonancestor) ... ok
+test_post_terminal_commit_then_revert_is_not_immutable (__main__.HistoricalJoinTests.test_post_terminal_commit_then_revert_is_not_immutable) ... ok
+test_real_copied_runner_integration (__main__.HistoricalJoinTests.test_real_copied_runner_integration) ... ok
+test_unselected_bindings_are_fully_checked (__main__.HistoricalJoinTests.test_unselected_bindings_are_fully_checked) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 119.544s
+
+OK

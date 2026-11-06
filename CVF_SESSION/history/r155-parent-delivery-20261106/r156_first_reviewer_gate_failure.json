@@ -1,0 +1,9 @@
+{
+  "phase": "reviewer-fast",
+  "result": "FAIL_RETAINED",
+  "control": "CONT",
+  "finding": "ACTIVE_WORK_ORDER_NOT_ACTIVE",
+  "rootCause": "Root kept COMPLETE_PENDING_REVIEW packet in activeWorkOrders after moving to REVIEW",
+  "correction": "Clear activeWorkOrders only, preserve exact packet validation and REVIEW_PENDING tranche; no source/test change",
+  "otherResults": "INST/RANGE/ROLE/CLAIM/COV PASS; APPL and ROUTE explicitly NOT_APPLICABLE_WITH_REASON"
+}

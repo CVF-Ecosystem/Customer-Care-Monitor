@@ -46,3 +46,5 @@ Quy ước này hướng dẫn ghi và dùng learning; việc lưu record không
 - [Phân lớp evidence độ phủ sync](feedback_sync_coverage_evidence_layers.md)
 
 - [Dispatch readiness, browser evidence và trách nhiệm Root trước giao việc](feedback_dispatch_readiness_and_browser_evidence.md) — đọc trước mọi UI/browser handoff; draft được sửa, effectiveness còn OPEN.
+
+- [Historical admission R154–R156: tested candidate, parent acceptance/delivery pending](R155_HISTORICAL_REPAIR_ADMISSION_2026-11-06.md) — preserve original gate failure and all unsuccessful attempts; read before source adoption.

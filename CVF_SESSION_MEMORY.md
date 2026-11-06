@@ -2,15 +2,15 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R156_HISTORICAL_JOIN_2026-11-06.md", "activeTranche": "CCMAI-RUNTIME-156", "parked": true} -->
-## Current R156 incremental uninstalled BUILD — 2026-11-06
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R156_HISTORICAL_JOIN_2026-11-06.md", "activeTranche": "CCMAI-RUNTIME-156", "parked": true} -->
+## Current R156 final-source REVIEW — 2026-11-06
 
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 
-CCMAI-RUNTIME-156 BUILD: after committed exact marker and fresh declaration, Sol implements actual historical audit/action joins in uninstalled module copies, prospective45 minutes/two candidate invocations; prior R155three invocations and cumulative active/cost UNKNOWN retained. Root independently reviews. No installed/Core/parent mutation or automatic further successor. R154/RC-01 original gate, R151/R139/M3, R150 inconclusive/cleanup UNKNOWN and accounts parked.
+CCMAI-RUNTIME-156 REVIEW_PENDING: Root accepted final uninstalled candidate after independent12/12 methods exit0; commit exact source/review/evidence, then bind material SHA and check committed range before candidate-only disposition. Parent acceptance/delivery and deliberate adoption remain required; R154/RC-01 original gate and all product/runtime/account holds stay blocked. Five worker and one reviewer invocations spent; no further tests or automatic successor.
 
-Root explicit incremental decision follows independent R155 nonacceptance, not budget reset. Terra independently reviewed Rootseed d479afd8 and packet00029e03; final doctor-source clarification retained. R155 remains BUILD_BLOCKED and immutable candidate artifacts retained. Root reviewer, Sol fallback worker. Parent/source/installed adoption and all product acceptance remain separate. Latest public doctor26/28 known2mismatches, nofullPASS.
+Root independent review, no source authorship. Solfinalsource worker-unverified, previous actualpositive/default/collision casespassed within9/10workerresult; all rawfailures retained. Rootfinalsuite decides candidate-only acceptance. No installed or parent mutation.
 
 ## Current R155 BUILD_BLOCKED partial candidate — 2026-11-06
 
@@ -91,8 +91,8 @@ R148 successor audit and R144 finite metadata closure are FROZEN after independe
 
 ## Current R144 finite A3 VERIFY dispatch - 2026-11-05
 
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
 
 R147 separate audit is FROZEN after independent review and committed-range PASS. Exact R144 packet now passes pre-dispatch and is DISPATCH_READY; Root will commit the material-SHA handoff marker before operator gives Claude the packet. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; A1/A2 and physical relaunch unproved; Facebook/Zalo OA parked.
 
@@ -107,8 +107,8 @@ R147 immutable seed is committed at `07ff318312861fcd9807e874dce0ffd669bda980`. 
 
 ## Current R144 A3 package metadata VERIFY dispatch - 2026-11-05
 
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
 
 CCMAI-RUNTIME-144 is a DRAFT finite A3 VERIFY for Claude cloud, not dispatched. The immutable seed was committed first at `40ef39ccf81608a967287c540548b33621f91e7c`. Root captured the current Windows installed `chrome-devtools-mcp@1.9.0` package metadata and four matching JS hashes. Pre-dispatch refused `COV_REPAIR_SUCCESSOR_HELD`: R139's M3-05/M3-08 audit is BLOCKED with no admitted discriminator or budget. A separate independent audit/admission is needed before Claude comparison. No new fetch or runtime action; Root retains independent review and commit ownership. R139 remains BUILD_BLOCKED, M3-05/M3-08 BLOCKED, M3-06 browser lifetime OPEN; A1/A2 unadmitted; Facebook/Zalo OA parked.
 
@@ -236,11 +236,11 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R156_HISTORICAL_JOIN_2026-11-06.md
 
-CCMAI-RUNTIME-156 BUILD: after committed exact marker and fresh declaration, Sol implements actual historical audit/action joins in uninstalled module copies, prospective45 minutes/two candidate invocations; prior R155three invocations and cumulative active/cost UNKNOWN retained. Root independently reviews. No installed/Core/parent mutation or automatic further successor. R154/RC-01 original gate, R151/R139/M3, R150 inconclusive/cleanup UNKNOWN and accounts parked.
+CCMAI-RUNTIME-156 REVIEW_PENDING: Root accepted final uninstalled candidate after independent12/12 methods exit0; commit exact source/review/evidence, then bind material SHA and check committed range before candidate-only disposition. Parent acceptance/delivery and deliberate adoption remain required; R154/RC-01 original gate and all product/runtime/account holds stay blocked. Five worker and one reviewer invocations spent; no further tests or automatic successor.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

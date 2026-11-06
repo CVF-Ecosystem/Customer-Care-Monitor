@@ -1,0 +1,22 @@
+{
+  "reviewer": "Root independent R2 REVIEWER",
+  "command": [
+    "python",
+    "-B",
+    "docs/reviews/probes/r156_historical_join_20261106/test_join.py"
+  ],
+  "exitCode": 0,
+  "elapsedSeconds": 119.7100644998718,
+  "completedAt": "2026-11-06T18:36:49.507278+07:00",
+  "sourcePins": {
+    "candidate/cvf_downstream_gate_runner.py": "923af9caf155b842ad5c14ae307966517274d1b28b70df303011de12e734cabc",
+    "candidate/cvf_milestone_coverage.py": "f992b5bf646b76d70753b099bcab89ec91f04eae507d6f14688cb9ad8863d54b",
+    "candidate/cvf_repair_convergence.py": "87bf3f18a37138e554a004ed5bb0b1a27c74a98fd300669f1a1eaffcd268883d",
+    "candidate/cvf_historical_admissions.py": "3af939ccd7e5b6953498fa363aee14fa39eb003143ad696686f70d05d33dc68b",
+    "test_join.py": "e564ea96b2375e6596da392c3c6b230823d5cb77af8d9b95ce4fc632f29e76c8",
+    "parent_candidate.patch": "63ae8823f05f644fcb0e5c9a475cafc05cd03a94e4cf02cbf5fdace33b21c1bc"
+  },
+  "scope": "STATIC_CANDIDATE_ONLY; no installed/full original range/hosted/runtime governance claim",
+  "reviewerInvocationsUsed": 1,
+  "workerInvocationsUsed": 5
+}

@@ -4,6 +4,11 @@
   "updatedAt": "2026-11-06",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
+    {"id": "r156-worker-return-20261106", "family": "continuity", "path": "docs/reviews/R156_WORKER_RETURN_2026-11-06.md", "status": "ACTIVE", "description": "Sol actual joined candidate, failed worker runs and final worker-unverified source preserved."},
+    {"id": "r156-final-review-20261106", "family": "continuity", "path": "docs/reviews/R156_INDEPENDENT_IMPLEMENTATION_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Root independent final12/12 static candidate acceptance; original gate and parent acceptance remain blocked."},
+    {"id": "r156-proposal-20261106", "family": "continuity", "path": "docs/reviews/probes/r156_historical_join_20261106/README.md", "status": "ACTIVE", "description": "Three-module patch and strict helper, actual historical/current tests, uninstalled."},
+    {"id": "r156-reviewer-run-20261106", "family": "continuity", "path": "docs/reviews/probes/r156_historical_join_20261106/reviewer_run.json", "status": "ACTIVE", "description": "One independent final-source suite12methods exit0; not hosted or installed proof."},
+    {"id": "r155-r156-parent-intake-20261106", "family": "continuity", "path": "docs/reviews/learnings/R155_HISTORICAL_REPAIR_ADMISSION_2026-11-06.md", "status": "ACTIVE", "description": "Project-local prepared parent intake; tested candidate ready, no external message or adoption."},
     {"id": "r156-packet-review-20261106", "family": "continuity", "path": "docs/reviews/R156_PACKET_DESIGN_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Terra independent exact R156 packet acceptance with doctor-source clarification, no implementation acceptance."},
     {"id": "r156-incremental-record-20261106", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-156.json", "status": "ACTIVE", "description": "Explicit incremental Sol allowance preserving R155spend andUNKNOWN cumulative time."},
     {"id": "r156-incremental-order-20261106", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_156_HISTORICAL_ADMISSION_PROPOSAL.md", "status": "ACTIVE", "description": "Actual historical joins in uninstalled copies; no parent/install authority."},

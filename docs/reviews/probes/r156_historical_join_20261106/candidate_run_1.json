@@ -1,0 +1,14 @@
+{
+  "label": "STATIC_CANDIDATE_ONLY",
+  "command": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-B",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r156_historical_join_20261106\\test_join.py"
+  ],
+  "exitCode": 1,
+  "invocation": 1,
+  "cumulativeWorkerInvocations": 4,
+  "durationSeconds": 0.5351336998865008,
+  "prospectiveElapsedSeconds": 469.1948514999822,
+  "endUTC": "2026-11-06T11:22:11.378474+00:00"
+}

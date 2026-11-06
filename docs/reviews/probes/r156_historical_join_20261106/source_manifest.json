@@ -1,0 +1,87 @@
+{
+  "check_gate_to_role_closeability.py": {
+    "source": "8f00c6421eebe3c1b237e5307ac6e2b0b0343c9a35cf635bbab17aa886e00e8e",
+    "candidate": "8f00c6421eebe3c1b237e5307ac6e2b0b0343c9a35cf635bbab17aa886e00e8e",
+    "modified": false
+  },
+  "cvf_dg_applicability.py": {
+    "source": "bffde44fe38494b0dea9e658fb82eaaec31f3bd25c9964445fa837dd29b01c67",
+    "candidate": "bffde44fe38494b0dea9e658fb82eaaec31f3bd25c9964445fa837dd29b01c67",
+    "modified": false
+  },
+  "cvf_dg_common.py": {
+    "source": "f3f1b01d08255d9a7a7a09648fa018178cc3820755279a190ecf120ff0262061",
+    "candidate": "f3f1b01d08255d9a7a7a09648fa018178cc3820755279a190ecf120ff0262061",
+    "modified": false
+  },
+  "cvf_dg_continuity.py": {
+    "source": "8ca92bd3c172638728e98f04ed652c32639280d236af5912ae479bb7c38fe571",
+    "candidate": "8ca92bd3c172638728e98f04ed652c32639280d236af5912ae479bb7c38fe571",
+    "modified": false
+  },
+  "cvf_dg_coverage.py": {
+    "source": "d768e60435268da2c8609a928972d1912d369a67d4056924c515d552a4245467",
+    "candidate": "d768e60435268da2c8609a928972d1912d369a67d4056924c515d552a4245467",
+    "modified": false
+  },
+  "cvf_dg_install.py": {
+    "source": "4e96952ef312487e5999b0b0d4db85c2eda158e2ac1cbb336beeba6876ddc316",
+    "candidate": "4e96952ef312487e5999b0b0d4db85c2eda158e2ac1cbb336beeba6876ddc316",
+    "modified": false
+  },
+  "cvf_dg_intake.py": {
+    "source": "204aacddb1d1b64439508bcfa73c8632842b0bc1f26dcdf3422d1404e1594efc",
+    "candidate": "204aacddb1d1b64439508bcfa73c8632842b0bc1f26dcdf3422d1404e1594efc",
+    "modified": false
+  },
+  "cvf_dg_review.py": {
+    "source": "2558b7635646340a73cb124121802f2f6f123ef96e240146def3e874a002034d",
+    "candidate": "2558b7635646340a73cb124121802f2f6f123ef96e240146def3e874a002034d",
+    "modified": false
+  },
+  "cvf_dg_routing.py": {
+    "source": "a39419336ea31ec155c285291f3d5684046e8b18d88dbf47c422b3c2c59632cf",
+    "candidate": "a39419336ea31ec155c285291f3d5684046e8b18d88dbf47c422b3c2c59632cf",
+    "modified": false
+  },
+  "cvf_downstream_gate_profile.json": {
+    "source": "41a99910a57a5d2131f16f83d72e38e07991bf0c4f833601e668fea548a7d2e6",
+    "candidate": "41a99910a57a5d2131f16f83d72e38e07991bf0c4f833601e668fea548a7d2e6",
+    "modified": false
+  },
+  "cvf_downstream_gate_runner.py": {
+    "source": "0447c57657ff0616f2b9c16b901fb96cb4381022acdfc7f198e1512e6c182a49",
+    "candidate": "923af9caf155b842ad5c14ae307966517274d1b28b70df303011de12e734cabc",
+    "modified": true
+  },
+  "cvf_historical_admissions.py": {
+    "source": null,
+    "candidate": "3af939ccd7e5b6953498fa363aee14fa39eb003143ad696686f70d05d33dc68b",
+    "modified": true
+  },
+  "cvf_milestone_coverage.py": {
+    "source": "14e1efd0acbd54cc9b86f0b33060a6dd57764c16812a07df8e18bca68bfa141f",
+    "candidate": "f992b5bf646b76d70753b099bcab89ec91f04eae507d6f14688cb9ad8863d54b",
+    "modified": true
+  },
+  "cvf_repair_convergence.py": {
+    "source": "7c58133bc73af0b300cb2674768864c5c8ec6680cf7103905f705897faa8d03d",
+    "candidate": "87bf3f18a37138e554a004ed5bb0b1a27c74a98fd300669f1a1eaffcd268883d",
+    "modified": true
+  },
+  "git-pre-commit.template": {
+    "source": "547c077163eb64259362a669d1fa6cca7cc4fe06090af3c9286f09557bcf937b",
+    "candidate": "547c077163eb64259362a669d1fa6cca7cc4fe06090af3c9286f09557bcf937b",
+    "modified": false
+  },
+  "project_learning_home.template.md": {
+    "source": "b2982c018baedca7f076526221ad6d5d0854dab2f029390d2c7f079ded05930f",
+    "candidate": "b2982c018baedca7f076526221ad6d5d0854dab2f029390d2c7f079ded05930f",
+    "modified": false
+  },
+  "project_learning_record.template.md": {
+    "source": "559d2d50c86fbfc72967d6af5b19df23c5001c48ddaca0a2b423fc574e7250d6",
+    "candidate": "559d2d50c86fbfc72967d6af5b19df23c5001c48ddaca0a2b423fc574e7250d6",
+    "modified": false
+  }
+}

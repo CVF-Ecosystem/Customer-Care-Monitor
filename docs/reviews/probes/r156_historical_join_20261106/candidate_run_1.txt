@@ -1,0 +1,42 @@
+setUpClass (__main__.HistoricalJoinTests) ... ERROR
+
+======================================================================
+ERROR: setUpClass (__main__.HistoricalJoinTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI\docs\reviews\probes\r156_historical_join_20261106\test_join.py", line 99, in setUpClass
+    for path in (REGISTRY, PACKET, CURRENT_PACKET, AUDIT, SEED, RECORD): materialize(path,True)
+                                                                         ~~~~~~~~~~~^^^^^^^^^^^
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI\docs\reviews\probes\r156_historical_join_20261106\test_join.py", line 98, in materialize
+    walk(data)
+    ~~~~^^^^^^
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI\docs\reviews\probes\r156_historical_join_20261106\test_join.py", line 95, in walk
+    for v in value.values(): walk(v)
+                             ~~~~^^^
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI\docs\reviews\probes\r156_historical_join_20261106\test_join.py", line 95, in walk
+    for v in value.values(): walk(v)
+                             ~~~~^^^
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI\docs\reviews\probes\r156_historical_join_20261106\test_join.py", line 95, in walk
+    for v in value.values(): walk(v)
+                             ~~~~^^^
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI\docs\reviews\probes\r156_historical_join_20261106\test_join.py", line 94, in walk
+    materialize(value['path'])
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI\docs\reviews\probes\r156_historical_join_20261106\test_join.py", line 82, in materialize
+    write(cls.root, path, (PROJECT/path).read_bytes().replace(b'\r\n',b'\n'))
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\Customer-Care-Monitor-AI\docs\reviews\probes\r156_historical_join_20261106\test_join.py", line 47, in write
+    p.write_bytes(raw)
+    ~~~~~~~~~~~~~^^^^^
+  File "C:\Users\tiennm\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 641, in write_bytes
+    with self.open(mode='wb') as f:
+         ~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\tiennm\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor-AI\\docs\\reviews\\probes\\r156_historical_join_20261106\\.runtime\\retained_ixn3v47m\\docs\\reviews\\probes\\r139_integrated_20261021\\causal_assessment_20261105\\repair_chain_assessment_r151_evidence_capture.json'
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.391s
+
+FAILED (errors=1)
