@@ -3,6 +3,42 @@ import net from 'node:net';
 import {randomBytes, createHash} from 'node:crypto';
 import path from 'node:path';
 
+export function validateSourceManifest({manifestBytes,expectedManifestSha256,reviewText,requiredPaths,readFile}) {
+  const sha=b=>createHash('sha256').update(b).digest('hex');
+  if (!/^[a-f0-9]{64}$/.test(expectedManifestSha256) || sha(manifestBytes)!==expectedManifestSha256 || !reviewText.includes(expectedManifestSha256)) throw Error('reviewed source manifest mismatch');
+  const m=JSON.parse(manifestBytes.toString('utf8'));
+  if (!m.files || Object.keys(m.files).length!==requiredPaths.length || requiredPaths.some(p=>!Object.hasOwn(m.files,p))) throw Error('source manifest path set mismatch');
+  for (const p of requiredPaths) if (!/^[a-f0-9]{64}$/.test(m.files[p]) || sha(readFile(p))!==m.files[p]) throw Error(`source manifest bytes mismatch: ${p}`);
+}
+
+export function createHandleCustody({wait,record}) {
+  const timedOut=new Set(), waited=new Set(); let anyTimeout=false;
+  return {
+    get anyTimeout(){return anyTimeout;},
+    async wait(child,name,timeoutMs) {
+      if (waited.has(child)) throw Error(`${name} original handle already waited`);
+      waited.add(child);
+      const result={name,...await wait(child,timeoutMs)};
+      if(result.timeout){timedOut.add(child);anyTimeout=true;}
+      record('original_handle_wait',result);
+      return result;
+    },
+    hasTimedOut(child){return timedOut.has(child);},
+  };
+}
+
+export async function replaceOwnedChrome({handle,close,snapshot,ledger,launch,record}) {
+  await close(handle);
+  const terminal=ledger.terminal(await snapshot());
+  record('first_chrome_terminal',terminal);
+  if(terminal.verdict!=='ABSENT') throw Error('Chrome #1 cleanup not proven');
+  return launch();
+}
+
+export function terminalChromeDecision({ledgerResults,waitTimedOut,cleanupErrors=[]}) {
+  return !waitTimedOut && cleanupErrors.length===0 && ledgerResults.length>0 && ledgerResults.every(x=>x.verdict==='ABSENT') ? 'ABSENT' : 'UNKNOWN';
+}
+
 const chrome = r => String(r.name || '').toLowerCase() === 'chrome.exe';
 const key = r => `${r.pid}:${r.createdAt}`;
 export class OwnershipLedger {
@@ -80,15 +116,16 @@ export function createUpgradeCapture({key, maxHeader=16384, settle, teardown}) {
   };
 }
 
-export function negativeProbe(url, debit, timeoutMs=10000) {
+export function negativeProbe(url, debit, timeoutMs=10000, deps={}) {
   const u=new URL(url);
   if(u.protocol!=='ws:' || u.hostname!=='127.0.0.1' || !u.port || u.username || u.password || u.search || u.hash || !/^\/devtools\/browser\/[0-9a-f-]+$/i.test(u.pathname)) throw Error('invalid endpoint');
-  debit(); const key=randomBytes(16).toString('base64');
+  debit(); const key=(deps.randomBytes || randomBytes)(16).toString('base64');
   return new Promise(resolve=>{
-    const socket=net.createConnection({host:'127.0.0.1',port:Number(u.port)}); let timer;
-    const cap=createUpgradeCapture({key,settle:resolve,teardown:()=>{clearTimeout(timer);socket.destroy();}});
-    timer=setTimeout(()=>cap.timeout(),timeoutMs);
-    socket.once('connect',()=>socket.write(`GET ${u.pathname} HTTP/1.1\r\nHost: 127.0.0.1:${u.port}\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Key: ${key}\r\nSec-WebSocket-Version: 13\r\n\r\n`));
+    const socket=(deps.connect || net.createConnection)({host:'127.0.0.1',port:Number(u.port)}); let timer;
+    const request=`GET ${u.pathname} HTTP/1.1\r\nHost: 127.0.0.1:${u.port}\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Key: ${key}\r\nSec-WebSocket-Version: 13\r\n\r\n`;
+    const cap=createUpgradeCapture({key,settle:r=>resolve({...r,url:u.href,requestKey:key,requestHeaders:{host:`127.0.0.1:${u.port}`,upgrade:'websocket',connection:'Upgrade',version:'13'}}),teardown:()=>{(deps.clearTimer || clearTimeout)(timer);socket.destroy();}});
+    timer=(deps.setTimer || setTimeout)(()=>cap.timeout(),timeoutMs);
+    socket.once('connect',()=>socket.write(request));
     socket.on('data',c=>cap.data(c)); socket.once('end',()=>cap.end()); socket.once('error',e=>cap.error(e));
     socket.once('close',()=>cap.error('socket closed without remote EOF'));
   });

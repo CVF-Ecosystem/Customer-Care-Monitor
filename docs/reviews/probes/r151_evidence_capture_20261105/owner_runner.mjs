@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import net from 'node:net';
-import {OwnershipLedger, negativeProbe, waitOriginal} from './diagnostic_helpers.mjs';
+import {OwnershipLedger, negativeProbe, waitOriginal, validateSourceManifest, createHandleCustody, replaceOwnedChrome, terminalChromeDecision} from './diagnostic_helpers.mjs';
 import {spawn, spawnSync} from 'node:child_process';
 import {randomUUID, createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
@@ -42,10 +42,11 @@ if (lfHash(manifestPath) !== '272c516aa8513252e3613748406fc49d77247650e2f8610ada
 const projectFile = p => path.join(projectRoot,p);
 const admission = JSON.parse(fs.readFileSync(projectFile('CVF_SESSION/authority/CCMAI-RUNTIME-151-A1A2-EFFECT-ADMISSION.json'),'utf8'));
 if (admission.trancheId !== 'CCMAI-RUNTIME-151' || admission.decision !== 'ADMITTED_BOUNDED_VERIFY_ONLY') throw new Error('effect admission missing');
-if (admission.workOrder?.lfSha256 !== 'b42b14520dc3144df0499880c5f308d8935dfa702e9e23cd7cd9035d76a2211d' || admission.audit?.lfSha256 !== '9173b5659e0e48758fcb665fd66185cce938437049e1dbabcc56492293f923da') throw new Error('R151 packet/audit pin mismatch');
 for (const field of ['workOrder','audit','independentAuditReview','independentSourceReview']) {
   if (lfHash(projectFile(admission[field].path)) !== admission[field].lfSha256) throw new Error(`${field} admission pin mismatch`);
 }
+const sourcePaths=['owner_runner.mjs','diagnostic_helpers.mjs','process_snapshot.ps1','prestart_full_tree.ps1','actor_call.mjs'].map(p=>'docs/reviews/probes/r151_evidence_capture_20261105/'+p);
+validateSourceManifest({manifestBytes:fs.readFileSync(projectFile(admission.sourceManifest.path)),expectedManifestSha256:admission.sourceManifest.sha256,reviewText:fs.readFileSync(projectFile(admission.independentSourceReview.path),'utf8'),requiredPaths:sourcePaths,readFile:p=>fs.readFileSync(projectFile(p))});
 const coverage = JSON.parse(fs.readFileSync(projectFile('docs/milestone-coverage-authority.json'),'utf8'));
 if (coverage.repairControls?.M3?.audit?.path !== admission.audit.path ||
     coverage.repairControls.M3.audit.sha256 !== admission.audit.lfSha256) throw new Error('repair registry pointer mismatch');
@@ -65,7 +66,7 @@ const pinnedPaths = [
   'docs/reviews/probes/r151_evidence_capture_20261105/process_snapshot.ps1',
   'docs/reviews/probes/r151_evidence_capture_20261105/actor_call.mjs',
   'docs/reviews/probes/r151_evidence_capture_20261105/diagnostic_helpers.mjs',
-  admission.independentSourceReview.path,
+  admission.independentSourceReview.path, admission.sourceManifest.path,
 ];
 const committed = spawnSync('git',['status','--porcelain','--untracked-files=all','--',...pinnedPaths],
   {cwd:projectRoot,encoding:'utf8',timeout:30000});
@@ -108,7 +109,7 @@ const counters = {chromeLaunches: 0, daemonStarts: 0, nativeCalls: 0,
 const events = [];
 let chrome = null, daemon = null, mcpPid = null, endpoint1 = null, endpoint2 = null;
 let outcome = 'INCONCLUSIVE', stopReason = null, startedAt = Date.now();
-const ledgers = new Map(); const timedOutHandles = new Set(); let waitTimedOut = false;
+const ledgers = new Map(); const cleanupErrors=[];
 const ceilingMs = 45 * 60 * 1000;
 const caps = {chromeLaunches: 3, daemonStarts: 1, nativeCalls: 8,
   rawWebSocketHandshakes: 6, endpointDiscoveryQueries: 2};
@@ -127,6 +128,8 @@ const save = () => fs.writeFileSync(resultPath, JSON.stringify({
   admissionGate: {exitCode:gate.status, output:gate.stdout},
 }, null, 2) + '\n');
 function record(kind, data = {}) { events.push({at: new Date().toISOString(), kind, ...data}); save(); }
+function cleanupRecord(kind,data={}) { try { record(kind,data); } catch(error) { cleanupErrors.push(String(error)); process.stderr.write(`cleanup evidence failure: ${String(error)}\n`); } }
+const custody=createHandleCustody({wait:waitOriginal,record});
 function debit(key) {
   if (Date.now() - startedAt > ceilingMs) throw new Error('45 active minute ceiling');
   if (counters[key] >= caps[key]) throw new Error(`${key} ceiling`);
@@ -191,20 +194,17 @@ function startProcess(exe, args, name) {
 }
 async function waitExit(child, name, timeoutMs = 12000) {
   if (!child) return null;
-  const result = {name,...await waitOriginal(child,timeoutMs),stderr:child.r150Lines?.stderr};
-  if (result.timeout) { waitTimedOut=true; timedOutHandles.add(child); }
-  record('original_handle_wait',result);
-  return result;
+  return custody.wait(child,name,timeoutMs);
 }
 async function closeHandle(child,name) {
   if (!child) return;
-  if (timedOutHandles.has(child)) throw new Error(`${name} original wait already timed out`);
+  if (custody.hasTimedOut(child)) throw new Error(`${name} original wait already timed out`);
   if (child.exitCode === null && child.signalCode === null) {
     const sent = child.kill('SIGTERM');
     record('original_handle_close',{name,pid:child.pid,signal:'SIGTERM',sent});
   }
   const result=await waitExit(child,name);
-  if (result?.timeout) { waitTimedOut=true; throw new Error(`${name} original wait timeout`); }
+  if (result?.timeout) throw new Error(`${name} original wait timeout`);
   return result;
 }
 async function discoverEndpoint(port, profile, label) {
@@ -329,11 +329,8 @@ try {
       if (!post1.opened || !post1.browserVersionReply?.result) throw new Error('A1-b post-control failed');
     }
     if (outcome !== 'A1_FAIL') {
-      const firstPid=chrome.pid; await closeHandle(chrome,'Chrome #1');
-      const after1=snapshot();
-      const firstTerminal=ledgers.get(firstPid)?.terminal(after1);
-      if (!firstTerminal || firstTerminal.verdict!=='ABSENT') throw new Error('Chrome #1 cleanup not proven');
-      chrome=null; debit('chromeLaunches');chrome=startProcess(chromeExe,chromeArgs(profile2),'Chrome #2'); chrome.r151Profile=profile2;
+      const firstPid=chrome.pid;
+      chrome=await replaceOwnedChrome({handle:chrome,close:h=>closeHandle(h,'Chrome #1'),snapshot,ledger:ledgers.get(firstPid),record,launch:()=>{ debit('chromeLaunches'); const next=startProcess(chromeExe,chromeArgs(profile2),'Chrome #2'); next.r151Profile=profile2; return next; }});
       endpoint2=await discoverEndpoint(port,profile2,'Chrome #2');
       if (endpoint2===endpoint1) throw new Error('Chrome #2 GUID did not change');
       alive(chrome,'Chrome #2');checkOwnedChrome(chrome.pid);
@@ -399,16 +396,16 @@ try {
       if (counters.nativeCalls<8 && chrome && chrome.exitCode===null && chrome.signalCode===null) {
         const stopped=await actor('stop'); record('daemon_stop_ack',{envelope:stopped});
       }
-    } catch (error) {record('cleanup_error',{name:'daemon stop',message:String(error)});}
+    } catch (error) {cleanupErrors.push(String(error));cleanupRecord('cleanup_error',{name:'daemon stop',message:String(error)});}
     const waited=await waitExit(daemon,'daemon',12000);
-    if (waited?.timeout) { const sent=daemon.kill('SIGTERM'); record('cleanup_error',{name:'daemon wait',message:'original wait timed out',terminationSent:sent}); }
+    if (waited?.timeout) { const sent=daemon.kill('SIGTERM'); cleanupErrors.push('daemon original wait timed out'); cleanupRecord('cleanup_error',{name:'daemon wait',message:'original wait timed out',terminationSent:sent}); }
   }
-  if (chrome && chrome.exitCode===null && chrome.signalCode===null) { try { await closeHandle(chrome,'last Chrome'); } catch(error) { record('cleanup_error',{name:'Chrome wait',message:String(error)}); } }
+  if (chrome && chrome.exitCode===null && chrome.signalCode===null) { try { await closeHandle(chrome,'last Chrome'); } catch(error) { cleanupErrors.push(String(error));cleanupRecord('cleanup_error',{name:'Chrome wait',message:String(error)}); } }
   try {
     const rows=snapshot();
     const terminalLedgers=[...ledgers.values()].map(l=>l.terminal(rows));
-    record('chrome_identity_terminal',{terminalLedgers,waitTimedOut});
-    if (waitTimedOut || !terminalLedgers.length || terminalLedgers.some(l=>l.verdict!=='ABSENT')) { if(outcome==='A1_A2_PASS') outcome='INCONCLUSIVE'; stopReason=stopReason || 'Chrome terminal ownership unknown'; }
+    cleanupRecord('chrome_identity_terminal',{terminalLedgers,waitTimedOut:custody.anyTimeout});
+    if (terminalChromeDecision({ledgerResults:terminalLedgers,waitTimedOut:custody.anyTimeout,cleanupErrors})!=='ABSENT') { if(outcome==='A1_A2_PASS') outcome='INCONCLUSIVE'; stopReason=stopReason || 'Chrome terminal ownership unknown'; }
     const leftovers=rows.filter(r=>r.name.toLowerCase()==='chrome.exe'&&r.ownedProfileArg);
     const childLeft=mcpPid!==null && rows.some(r=>r.pid===mcpPid);
     const daemonLeft=daemon && (daemon.exitCode===null && daemon.signalCode===null || rows.some(r=>r.pid===daemon.pid));
@@ -420,7 +417,7 @@ try {
     }
   } catch(error) {
     if (outcome==='A1_A2_PASS') outcome='INCONCLUSIVE';
-    record('cleanup_error',{name:'terminal snapshot',message:String(error)});
+    cleanupErrors.push(String(error)); cleanupRecord('cleanup_error',{name:'terminal snapshot',message:String(error)});
   }
   if (Date.now()-startedAt > ceilingMs && outcome==='A1_A2_PASS') {
     outcome='INCONCLUSIVE';stopReason='45 active minute ceiling exceeded';

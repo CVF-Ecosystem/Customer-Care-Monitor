@@ -94,10 +94,10 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-151",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R151_EVIDENCE_CAPTURE_2026-11-05.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-151 Amendment A1 BUILD: Terra performs only the reviewed source correction, one combined exact-source offline test and one final-byte syntax batch before the original 17:02:18 hard stop, then returns for independent Astra review. No Chrome, daemon, provider, DB or product effect is admitted. R139 BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-151 BUILD_BLOCKED: retain four spent focused tests, one evidenced syntax batch, expired 2026-11-05 17:02:18 +07:00 stop and unaccepted runner cleanup path. Root prepares a same-R151 prospective bounded amendment for independent R2 admission; no Terra source edit, test, syntax or Chrome/daemon/provider/DB/product effect until new authority and acknowledgment. R139 BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / COMMIT_STEWARD / SESSION_SYNC_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER",
-  "updatedAt": "2026-11-05",
+  "activeRole": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR / COMMIT_STEWARD / SESSION_SYNC_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER held",
+  "updatedAt": "2026-11-06",
   "x-resolvedCoreCommit": "15e39450853184eb65dbde73398c69c3171a6241",
   "x-ownerRoadmapDiscipline": {
     "date": "2026-10-12",

@@ -6,9 +6,9 @@ Status: ACTIVE
 
 - Current mode: BUILD
 - Active phase: BUILD
-- Active role: Root ORCHESTRATOR / COMMIT_STEWARD / SESSION_SYNC_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER
+- Active role: Root ORCHESTRATOR / WORK_ORDER_AUTHOR / COMMIT_STEWARD / SESSION_SYNC_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER held
 - Active tranche: CCMAI-RUNTIME-151
-- Next allowed move: CCMAI-RUNTIME-151 Amendment A1 BUILD: Terra performs only the reviewed source correction, one combined exact-source offline test and one final-byte syntax batch before the original 17:02:18 hard stop, then returns for independent Astra review. No Chrome, daemon, provider, DB or product effect is admitted. R139 BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-151 BUILD_BLOCKED: retain four spent focused tests, one evidenced syntax batch, expired 2026-11-05 17:02:18 +07:00 stop and unaccepted runner cleanup path. Root prepares a same-R151 prospective bounded amendment for independent R2 admission; no Terra source edit, test, syntax or Chrome/daemon/provider/DB/product effect until new authority and acknowledgment. R139 BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## Transition acknowledgment
@@ -56,6 +56,13 @@ Status: ACTIVE
 - Root acknowledges COMMIT_STEWARD / SESSION_SYNC_STEWARD, Terra remains the separate IMPLEMENTATION_WORKER and Astra the independent REVIEWER. This handoff is the new material-SHA marker for the one remaining combined offline test and one final-byte syntax batch only. Terra must acknowledge the resumed role before edits. The official amended order remains byte-pinned at LF SHA-256 `8041a901c1568b6dc4f116aedce6b44b8e125a6759ec98350eaf50d551fe918e`.
 - The original 17:02:18 wall stop, 3/4 tests, 1/2 syntax, active minutes UNKNOWN and zero effect boundary remain. No Chrome/daemon or product admission follows.
 - Terra rehydrated the BUILD bootstrap, state, handoff, memory, implementation status, index and amended order at `2026-11-05T16:43:33+07:00`, and accepted IMPLEMENTATION_WORKER on unchanged R151 worker paths before edits. Terra acknowledged cumulative 3/4 tests, 1/2 syntax, active minutes UNKNOWN, original 17:02:18 stop and zero Chrome/daemon/provider/DB/product/network/listening-socket effects. Root recorded this acknowledgment before release.
+
+## Expired Amendment A1 disposition - 2026-11-06
+
+- Root rehydrated current project state, verified public Core and installed profile, then independently reconciled the interrupted amended candidate and retained logs in `docs/reviews/R151_INTERRUPTED_AMENDMENT_ROOT_ASSESSMENT_2026-11-06.md`. Astra Medium separately reviewed the exact evidence in `docs/reviews/R151_EXPIRED_AMENDMENT_INDEPENDENT_REVIEW_2026-11-06.md`.
+- The final source candidate hashes match the seven-file worker manifest. The fourth focused offline invocation reports 49 PASS, zero skips and exit 0 before the original wall stop. Cumulative focused tests 4/4; syntax evidence 1/2, with the unused allowance expired. Actual active time UNKNOWN. No amended worker return exists.
+- Final runner syntax is unproved. Its daemon wait inside `finally` may throw from custody persistence before Chrome cleanup and terminal inventory. Shared helper fixtures do not execute this orchestration. Source acceptance is withheld, R151 `BUILD_BLOCKED`, carrier `BLOCKED_WITH_REASON`; no Windows VERIFY or product admission.
+- Root transitions to ORCHESTRATOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD for a prospective same-R151 amendment. A new finite budget and independent R2 admission are needed before Terra can resume. The old stop and spent attempts cannot be reset. No Chrome, daemon, provider, DB, product, network or socket effect is released. R139/M3 and R150 dispositions remain as above.
 
 ## Public Export Disposition
 
