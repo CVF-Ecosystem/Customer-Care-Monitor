@@ -2,7 +2,16 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R155_HISTORICAL_ADMISSION_2026-11-06.md", "activeTranche": "CCMAI-RUNTIME-155", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R156_HISTORICAL_JOIN_2026-11-06.md", "activeTranche": "CCMAI-RUNTIME-156", "parked": true} -->
+## Current R156 incremental uninstalled BUILD — 2026-11-06
+
+- Current mode: BUILD
+- Active phase: BUILD
+
+CCMAI-RUNTIME-156 BUILD: after committed exact marker and fresh declaration, Sol implements actual historical audit/action joins in uninstalled module copies, prospective45 minutes/two candidate invocations; prior R155three invocations and cumulative active/cost UNKNOWN retained. Root independently reviews. No installed/Core/parent mutation or automatic further successor. R154/RC-01 original gate, R151/R139/M3, R150 inconclusive/cleanup UNKNOWN and accounts parked.
+
+Root explicit incremental decision follows independent R155 nonacceptance, not budget reset. Terra independently reviewed Rootseed d479afd8 and packet00029e03; final doctor-source clarification retained. R155 remains BUILD_BLOCKED and immutable candidate artifacts retained. Root reviewer, Sol fallback worker. Parent/source/installed adoption and all product acceptance remain separate. Latest public doctor26/28 known2mismatches, nofullPASS.
+
 ## Current R155 BUILD_BLOCKED partial candidate — 2026-11-06
 
 - Current mode: BUILD
@@ -229,9 +238,9 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Contract: cvf.downstreamContinuityContract@1.0.0
 - Current mode: BUILD
 - Active phase: BUILD
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R155_HISTORICAL_ADMISSION_2026-11-06.md
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R156_HISTORICAL_JOIN_2026-11-06.md
 
-CCMAI-RUNTIME-155 BUILD_BLOCKED: initial candidate is PARTIAL/UNSUPPORTED and not an accepted fix; three worker invocations spent, active/cost UNKNOWN. Root independently rejected missing historical joins and current-registry conflation. Root may commit separately reviewed prospective R156 Sol fallback authority for one45-minute/two-invocation incremental candidate implementation with cumulative spend preserved. No R155 retry or installed/Core/parent change. R154/RC-01 original gate, R151/R139/M3 and R150/account holds remain.
+CCMAI-RUNTIME-156 BUILD: after committed exact marker and fresh declaration, Sol implements actual historical audit/action joins in uninstalled module copies, prospective45 minutes/two candidate invocations; prior R155three invocations and cumulative active/cost UNKNOWN retained. Root independently reviews. No installed/Core/parent mutation or automatic further successor. R154/RC-01 original gate, R151/R139/M3, R150 inconclusive/cleanup UNKNOWN and accounts parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

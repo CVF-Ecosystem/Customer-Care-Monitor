@@ -1,6 +1,6 @@
 # R155 — historical admission repair proposal handoff
 
-Status: ACTIVE
+Status: HISTORICAL
 Disposition: BUILD_BLOCKED_PARTIAL_INITIAL_IMPLEMENTATION
 
 ## Current State
@@ -37,3 +37,11 @@ Root re-read canonical continuity, active handoff, implementation truth and inde
 ## Worker return / Root review acknowledgment
 
 Root rehydrated current canonical paths before receiving Terra return and declared independent REVIEWER (no candidate authorship). R155 initial result is PARTIAL/UNSUPPORTED, not fix acceptance. Sol read-only assessment independently identified missing joins and current/historical registry conflation. Initial installed failure remains; first6method suite exit1 Windows teardown, cleanup-only repair6PASS exit0; all3workerinvocations spent, actual active/cost UNKNOWN. Not a failed completed functional repair; do not fabricate repairControls enrollment. Protected25forbiddenfiles unchanged. Failed fixture reversibly retained under ignored runtime, no nested Git objects staged. Root returns ORCHESTRATOR for one explicit prospective Sol fallback admission; no automatic retry or budget reset. R154 and product remain held.
+
+## Latest doctor observation before R156 admission
+
+After R155 partial return, Root reran public doctor: FAIL26/28 exactly LOCK_INVALID and COV_OBJECT_SHAPE on changed R155 work order; all other26checksPASS. Recorded at CVF_SESSION/history/r155-parent-delivery-20261106/doctor_r156_admission.json (actual tool result2213d2). Earlier FAIL27/28 above is the prior observation, not the latest. Both known public1.2/installed1.3 mismatches remain failures; pinned installed1.3 packet/precommit and portable7/7 are the admitted static route. No full doctorPASS or source upgrade.
+
+## Successor pointer
+
+R156 becomes sole active handoff for explicitly admitted Sol incremental candidate. R155 remains BUILD_BLOCKED, not closed; spent counters retained.

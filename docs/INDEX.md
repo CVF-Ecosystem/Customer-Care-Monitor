@@ -16,7 +16,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R155 uninstalled repair proposal; R154 required range and all product holds retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R155_HISTORICAL_ADMISSION_2026-11-06.md`
+- Current R156 Sol incremental joined candidate; R155 and original R154/product holds retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R156_HISTORICAL_JOIN_2026-11-06.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -5365,6 +5365,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R154 merge completed; required PR-range coverage gate blocks RC-01 closure.: `CVF_SESSION/tranches/CCMAI-RUNTIME-154.json`
 - Committed R2 dispatcher seed for one bounded repository history reconciliation.: `CVF_SESSION/authority/CCMAI-RUNTIME-154.json`
 - R154 no-commit merge candidate, byte provenance and qualifications; postmerge review records gate hold.: `docs/reviews/R154_WORKER_RETURN_2026-11-06.md`
+- Historical R155 partial implementation, BUILD_BLOCKED andspent allowance retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R155_HISTORICAL_ADMISSION_2026-11-06.md`
 - Uninstalled provenance-only candidate, not ready for integration.: `docs/reviews/probes/r155_historical_binding_20261106/README.md`
 - Sol independent exact seed/design acceptance recorded by Root; no parent or implementation acceptance.: `docs/reviews/R155_DISPATCH_DESIGN_REVIEW_2026-11-06.md`
 - Root independent CHANGES_REQUIRED with Sol read-only concurrence; no fix acceptance.: `docs/reviews/R155_INDEPENDENT_IMPLEMENTATION_REVIEW_2026-11-06.md`
@@ -5373,7 +5374,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R155 candidate-only bounded dispatch record; original RC-01 remains blocked.: `CVF_SESSION/tranches/CCMAI-RUNTIME-155.json`
 - Bounded uninstalled historical-admission repair proposal authority; no installed gate or parent adoption.: `CVF_SESSION/authority/CCMAI-RUNTIME-155.json`
 - Terra partial unsupported return; all spent invocations retained.: `docs/reviews/R155_WORKER_RETURN_2026-11-06.md`
+- Actual historical joins in uninstalled copies; no parent/install authority.: `docs/work_orders/CCMAI_RUNTIME_156_HISTORICAL_ADMISSION_PROPOSAL.md`
+- Explicit incremental Sol allowance preserving R155spend andUNKNOWN cumulative time.: `CVF_SESSION/tranches/CCMAI-RUNTIME-156.json`
 - Prospective incremental Sol fallback seed; prior spend preserved, no BUILD release.: `CVF_SESSION/authority/CCMAI-RUNTIME-156.json`
+- Terra independent exact R156 packet acceptance with doctor-source clarification, no implementation acceptance.: `docs/reviews/R156_PACKET_DESIGN_REVIEW_2026-11-06.md`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

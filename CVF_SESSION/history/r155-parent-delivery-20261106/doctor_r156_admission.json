@@ -1,0 +1,22 @@
+{
+  "observedAt": "2026-11-06T18:11:48.041624+07:00",
+  "command": "powershell -ExecutionPolicy Bypass -File ../.Controlled-Vibe-Framework-CVF/scripts/check_cvf_workspace_agent_enforcement.ps1 -ProjectPath .",
+  "exitCode": 1,
+  "passed": 26,
+  "total": 28,
+  "failures": [
+    {
+      "control": "CVF-DG-INST-01",
+      "code": "LOCK_INVALID",
+      "path": ".cvf/gate-profile.lock.json"
+    },
+    {
+      "control": "CVF-DG-COV-01",
+      "code": "COV_OBJECT_SHAPE",
+      "path": "docs/work_orders/CCMAI_RUNTIME_155_HISTORICAL_ADMISSION_PROPOSAL.md"
+    }
+  ],
+  "allOtherChecks": "PASS",
+  "source": "Root observed exec tool result2213d2 during R156 admission preparation; this JSON is faithful recorded result, not independently signed receipt",
+  "scope": "Both known public1.2 versus installed1.3 mismatches; never full doctorPASS; exact pinned1.3 checks retained"
+}

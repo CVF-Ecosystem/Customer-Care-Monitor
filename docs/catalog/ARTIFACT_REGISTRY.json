@@ -4,6 +4,10 @@
   "updatedAt": "2026-11-06",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
+    {"id": "r156-packet-review-20261106", "family": "continuity", "path": "docs/reviews/R156_PACKET_DESIGN_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Terra independent exact R156 packet acceptance with doctor-source clarification, no implementation acceptance."},
+    {"id": "r156-incremental-record-20261106", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-156.json", "status": "ACTIVE", "description": "Explicit incremental Sol allowance preserving R155spend andUNKNOWN cumulative time."},
+    {"id": "r156-incremental-order-20261106", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_156_HISTORICAL_ADMISSION_PROPOSAL.md", "status": "ACTIVE", "description": "Actual historical joins in uninstalled copies; no parent/install authority."},
+    {"id": "r155-blocked-handoff-20261106", "family": "continuity", "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R155_HISTORICAL_ADMISSION_2026-11-06.md", "status": "RETIRED", "description": "Historical R155 partial implementation, BUILD_BLOCKED andspent allowance retained."},
     {"id": "r155-worker-return-20261106", "family": "continuity", "path": "docs/reviews/R155_WORKER_RETURN_2026-11-06.md", "status": "ACTIVE", "description": "Terra partial unsupported return; all spent invocations retained."},
     {"id": "r155-implementation-review-20261106", "family": "continuity", "path": "docs/reviews/R155_INDEPENDENT_IMPLEMENTATION_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Root independent CHANGES_REQUIRED with Sol read-only concurrence; no fix acceptance."},
     {"id": "r155-candidate-20261106", "family": "continuity", "path": "docs/reviews/probes/r155_historical_binding_20261106/README.md", "status": "ACTIVE", "description": "Uninstalled provenance-only candidate, not ready for integration."},
@@ -5598,9 +5602,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R155_HISTORICAL_ADMISSION_2026-11-06.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R156_HISTORICAL_JOIN_2026-11-06.md",
       "status": "ACTIVE",
-      "description": "Current R155 uninstalled repair proposal; R154 required range and all product holds retained."
+      "description": "Current R156 Sol incremental joined candidate; R155 and original R154/product holds retained."
     },
     {
       "id": "r060-work-order",

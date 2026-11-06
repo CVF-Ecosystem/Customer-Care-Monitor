@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-156",
+  "authorityKind": "DISPATCHER_OWNED_INCREMENTAL_HISTORICAL_JOIN_PROPOSAL",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Root ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR",
+    "implementationWorker": "Sol 6.1 Medium IMPLEMENTATION_WORKER, proposal only",
+    "reviewer": "Root independent R2 REVIEWER of Sol implementation",
+    "technicalAdvisor": "Terra 6.1 High independent packet reviewer; prior R155 author",
+    "commitSteward": "Root COMMIT_STEWARD",
+    "closer": "Root CLOSER / SESSION_SYNC_STEWARD"
+  },
+  "allowedPaths": [
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/INDEX.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/work_orders/CCMAI_RUNTIME_156_HISTORICAL_ADMISSION_PROPOSAL.md",
+    "docs/reviews/R156_*.md",
+    "docs/reviews/probes/r156_historical_join_20261106/**",
+    "docs/reviews/learnings/README.md",
+    "docs/reviews/planning/CCMA_REPOSITORY_CONTINUITY_2026-11-06.md",
+    "docs/reviews/learnings/R155_HISTORICAL_REPAIR_ADMISSION_2026-11-06.md"
+  ],
+  "workerAllowedPaths": [
+    "docs/reviews/R156_WORKER_RETURN_2026-11-06.md",
+    "docs/reviews/probes/r156_historical_join_20261106/**"
+  ],
+  "prohibitedEffects": [
+    "No edit of installed gate modules, lock, policy, workflow, activation receipt, product source, dependencies, historical seed/work order/audit/evidence or milestone registry",
+    "No mutation outside this project, including read-only public Core and parent source pack; candidate code is a project-local uninstalled proposal only",
+    "No provider, network, browser, daemon, database, credential, customer/channel, runtime, push, merge, deployment or release effect",
+    "No skip/disable of required gates, historical-status exemption, R154/RC-01 closure or hosted CI/runtime governance/product acceptance claim from proposal tests",
+    "No R139/R151/R150 retry or consumed-budget reset; preserve original failures, elapsed/cost UNKNOWNs and account parking",
+    "Incremental allowance only: preserve R155 three spent invocations and UNKNOWN active/cost; at most45 additional active Sol minutes and two candidate test invocations (one consolidated and one justified targeted correction), at most12 additional semantic source files. No further automatic successor or budget reset.",
+    "R155 initial candidate, tests, logs and worker return remain byte-identical; no retrospective change of that result"
+  ],
+  "scope": "Implement actual historical audit/action join and current-control integration in project-local copies of exactly the three pinned runner/coverage/repair modules plus a strict helper and static tests. Reuse unchanged inherited dependencies; do not alter installed copies. Correct bounded historical Git snapshot read versus current registry conflation. Deliver actual retained R150/c61 positive, wrong ec6 denial, current R151 strictness and two-parent fixture, or return BLOCKED. No new discovery audit.",
+  "ownerAuthorization": "Current user authorizes resolution, Sol6.1 Medium fallback when difficult, Root orchestrator/reviewer. Root explicitly admits necessary incremental candidate implementation after independent R155 nonacceptance, additional cap prospective and all prior spend preserved. No authority for parent/Core or installed-gate mutation.",
+  "claimBoundary": "Static source/fixture proposal only. Not an installed gate change, admission grant, hosted CI, product or runtime AI governance proof.",
+  "bootstrapException": false,
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_156_HISTORICAL_ADMISSION_PROPOSAL.md",
+  "baseCommit": "0ea490f02f993d396def1cda32215dd1212cbad2",
+  "status": "BUILD",
+  "phase": "BUILD",
+  "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
+  "workOrderStatus": "ACTIVE",
+  "buildCommit": null,
+  "reviewEvidence": [],
+  "disposition": "UNINSTALLED_INCREMENTAL_BUILD_COMMIT_REQUIRED",
+  "freeze": "OPEN",
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD"
+  ],
+  "parentTranche": "CCMAI-RUNTIME-155"
+}
