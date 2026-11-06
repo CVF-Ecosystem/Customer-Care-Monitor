@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-150",
+  "authorityKind": "DISPATCHER_OWNED_R149_ERRATA_BINDING_INPUTS",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Cloud ORCHESTRATOR (operator full-roadmap grant 2026-11-05)",
+    "implementationWorker": "Cloud ORCHESTRATOR acting as SPEC_AUTHOR (documentary errata only)",
+    "reviewer": "Independent Opus review subagent appointed under operator grant (separate agent from the errata author)",
+    "commitSteward": "Cloud ORCHESTRATOR for branch-only commits; Root/Local for merge to main"
+  },
+  "allowedPaths": [
+    "docs/reviews/R150_*.md",
+    "docs/reviews/probes/r150_r149_errata_20261105/**",
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/INDEX.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json"
+  ],
+  "prohibitedEffects": [
+    "Editing frozen R149 documents or any other frozen/historical review, receipt or evidence file",
+    "Starting Chrome, the daemon, browser, DB, provider or runtime; network fetch, install, import or execution",
+    "Editing product source, tests, gates, CI, dependencies, the R139 repair audit, docs/milestone-coverage-authority.json, existing seeds or work orders",
+    "Admitting or dispatching A1/A2; reopening R139; claiming runtime, no-relaunch, AI-governance or M3 acceptance",
+    "Merge or push to main, history rewrite, deployment or public release"
+  ],
+  "ownerAuthorization": "Operator 2026-11-05: full roadmap authority in the cloud, escalate to Local only where Windows/local is required, no merge. R149 was frozen on main via PR #19 from the pre-repair build d8e66c1, so the cloud independent review findings (B1-B3 blocking, NF1-NF4 and partial items) recorded on PR #18 are not on main; this errata carries them forward as binding inputs.",
+  "scope": "Documentary errata only: identify each defect in the frozen main R149 contract/draft with exact line references, state the required correction, and preserve the cloud independent review artifact as evidence. No edit to frozen bytes.",
+  "verification": "Line references against origin/main 6ded46c; independent review; gates.",
+  "claimBoundary": "Errata/binding inputs only. No A1/A2 result, admission, runtime, no-relaunch, AI-governance, R139 or M3 acceptance.",
+  "workOrder": "docs/reviews/R150_R149_ERRATA_PACKET_2026-11-05.md",
+  "executionBudget": {"designActiveMinutes": 45, "independentReviewMinutes": 20, "consolidatedRepairRounds": 1, "networkFetches": 0, "runtimeStarts": 0, "providerCalls": 0},
+  "parentTranche": "CCMAI-RUNTIME-149",
+  "bootstrapException": false
+}
