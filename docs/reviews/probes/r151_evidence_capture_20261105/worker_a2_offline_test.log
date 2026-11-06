@@ -1,0 +1,53 @@
+PASS PS empty
+PASS PS one
+PASS PS two
+PASS PS invalid malformed
+PASS PS invalid null
+PASS PS invalid empty value
+PASS PS invalid non string
+PASS PS invalid duplicates
+PASS PS argv prefix
+PASS PS argv unrelated
+PASS PS argv quoted uppercase
+PASS PS argv separate
+PASS PS argv unknown
+PASS missing root
+PASS false root
+PASS unknown inventory
+PASS foreign profile
+PASS unknown command
+PASS descendant and orphan retained
+PASS terminal absent and pid reuse
+PASS terminal inventory unknown
+PASS unknown terminal creation time
+PASS descendant via intermediate process
+PASS root pid reuse blocks
+PASS original exit
+PASS original timeout
+PASS fragmented 403
+PASS fragmented 404
+PASS valid 101
+PASS invalid 101
+PASS remote eof
+PASS partial eof
+PASS reset
+PASS timeout
+PASS malformed
+PASS oversized
+PASS duplicate and late
+PASS positive and A2 controls retained
+PASS actor source is historical preimage
+PASS actual replacement seam timeout
+PASS replacement exit and unknown terminal
+PASS late exit stays timed out
+PASS cleanup record failure retained
+PASS injected transport response
+PASS injected transport end
+PASS injected transport reset
+PASS injected transport local
+PASS reviewed manifest binding
+PASS runner cleanup custody failure
+PASS runner timeout blocks replacement and unknown terminal
+PASS runner unknown descendant blocks terminal
+PASS exact candidate manifest
+TOTAL 52 PASS; SKIPS 0

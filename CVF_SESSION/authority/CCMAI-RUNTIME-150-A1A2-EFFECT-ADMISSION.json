@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "ccma.windowsEffectAdmission@1.0.0",
+  "trancheId": "CCMAI-RUNTIME-150",
+  "decision": "ADMITTED_BOUNDED_VERIFY_ONLY",
+  "admitter": "Root/Local ORCHESTRATOR under operator 2026-11-05 Windows VERIFY instruction",
+  "worker": "Root/Local Windows VERIFY worker",
+  "reviewer": "Independent R2 reviewer separate from Root/Local audit author and Windows worker",
+  "workOrder": {
+    "path": "docs/work_orders/CCMAI_RUNTIME_150_A1_A2_WINDOWS_VERIFY.md",
+    "lfSha256": "a7a2b74e1851cdcbd2dba010456e2b0d17a9ade1fdb83518e19d66343a79e398"
+  },
+  "audit": {
+    "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a1_a2_windows_verify.json",
+    "lfSha256": "d408ddc42ff5b2c802ef9188f45ba166c30853b7685d643f4965333decc6dbf4"
+  },
+  "independentAuditReview": {
+    "path": "docs/reviews/R150_INDEPENDENT_A1_A2_AUDIT_REVIEW_2026-11-05.md",
+    "lfSha256": "4e06f8b7245f4b3913a049f309bd1299b978724202bcc938665e7680b83368b6"
+  },
+  "preDispatchGate": "PASS 6 mandatory controls after registry pointer update; ROUTE NOT_APPLICABLE_WITH_REASON",
+  "startPredicate": "Immediately recapture installed full tree: package.json raw SHA-256 592ef654a308edcba5fb3c2b302173650096a9487e4120b96e7adbe830429b9f, README.md absent, other 346 manifest paths present with equal size/hash, no extras; otherwise NO_START with zero runtime effects.",
+  "limits": {
+    "activeMinutes": 45,
+    "chromeLaunches": 3,
+    "daemonStarts": 1,
+    "nativeCalls": 8,
+    "rawWebSocketHandshakes": 6,
+    "endpointDiscoveryQueries": 2,
+    "providerCalls": 0,
+    "databaseCalls": 0,
+    "productCalls": 0
+  },
+  "allowedTargets": ["about:blank", "127.0.0.1", "localhost"],
+  "stop": "Stop on A3 mismatch, out-of-scope process/network/page, argv/env violation, unexpected process, inconclusive evidence, budget limit, or need for relaxed retry; clean owned processes and retain UNKNOWNs.",
+  "notAdmitted": ["integrated lifecycle", "product campaign", "R139 IMPLEMENT reopen", "physical no-relaunch acceptance", "M3 acceptance", "runtime AI governance claim", "provider, DB, Facebook or Zalo OA action"]
+}

@@ -16,7 +16,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Active R150 errata handoff: binding inputs (B1-B3 incl. chrome.exe --version safety, NF1) for frozen R149; A1/A2 unadmitted.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R150_R149_ERRATA_2026-11-05.md`
+- Current R154 repository reconciliation handoff; R153 frozen inventory and all product holds retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -5305,6 +5305,65 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Separate R2 review accepts repaired C1-C6 design/spec only; A1/A2 remains unadmitted.: `docs/reviews/R149_OHC_SUCCESSOR_INDEPENDENT_REVIEW_2026-11-05.md`
 - Immutable R2 documentary seed for OHC successor contract and Windows A1/A2 draft.: `CVF_SESSION/authority/CCMAI-RUNTIME-149.json`
 - Root first-pass review records C1/C4 documentary findings and absent cloud Opus review artifact.: `docs/reviews/R149_ROOT_INDEPENDENT_REVIEW_2026-11-05.md`
+- Read-only immediate full-tree A3 comparison against pinned manifest and relaxed package identity.: `docs/reviews/probes/r150_a1_a2_windows_20261105/prestart_full_tree.ps1`
+- Immediate Windows full-tree A3 PASS with operator-relaxed package.json and absent README.md; 346 others equal.: `docs/reviews/probes/r150_a1_a2_windows_20261105/a3_prestart_full_tree.json`
+- Native one-call actor helper for fixed A1/A2 commands.: `docs/reviews/probes/r150_a1_a2_windows_20261105/actor_call.mjs`
+- Independently accepted successor R139 audit with exact A1/A2 work-order pin; registry points here.: `docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a1_a2_windows_verify.json`
+- Independent R2 acceptance of exact finite A1/A2 audit/work-order admission only; no runtime result.: `docs/reviews/R150_INDEPENDENT_A1_A2_AUDIT_REVIEW_2026-11-05.md`
+- Administrative CLOSED carrier for R150 FREEZE, preserving exact official order bytes.: `docs/reviews/R150_A1_A2_EXECUTION_STATUS_CARRIER_2026-11-05.md`
+- Separate bounded Windows process-effect admission, conditional on immediate A3 full-tree recapture PASS.: `CVF_SESSION/authority/CCMAI-RUNTIME-150-A1A2-EFFECT-ADMISSION.json`
+- Independent static review of fixed Windows A1/A2 helpers; actual runtime result remains unobserved.: `docs/reviews/R150_INDEPENDENT_HELPER_REVIEW_2026-11-05.md`
+- Exact-byte finite Windows A1/A2 work order; no start before independent audit and same-session A3 recapture.: `docs/work_orders/CCMAI_RUNTIME_150_A1_A2_WINDOWS_VERIFY.md`
+- Bounded Windows A1/A2 owner helper with pinned admission readback and exact effect counters.: `docs/reviews/probes/r150_a1_a2_windows_20261105/owner_runner.mjs`
+- Later read-only known-PID absence; terminal owned-profile cleanup remains UNKNOWN due predicate defect.: `docs/reviews/probes/r150_a1_a2_windows_20261105/postrun_known_pid_readback.json`
+- Read-only process and owned-profile inventory for Windows A1/A2.: `docs/reviews/probes/r150_a1_a2_windows_20261105/process_snapshot.ps1`
+- R150 finite VERIFY FROZEN as independently reviewed INCONCLUSIVE diagnostic; R139/M3 blocked.: `CVF_SESSION/tranches/CCMAI-RUNTIME-150.json`
+- Root closes bounded diagnostic R150 without A1/A2 or product acceptance.: `docs/reviews/R150_ROOT_DISPOSITION_2026-11-05.md`
+- Raw bounded Chrome #1 A1-a control and inconclusive A1-b non-101 event; cleanup and counters retained.: `docs/reviews/probes/r150_a1_a2_windows_20261105/windows_verify_raw.json`
+- Independent R2 acceptance of INCONCLUSIVE A1-b return; terminal Chrome descendant cleanup UNKNOWN.: `docs/reviews/R150_INDEPENDENT_WINDOWS_VERIFY_REVIEW_2026-11-05.md`
+- Immutable R2 seed for bounded Windows A1/A2 VERIFY and successor R139 audit.: `CVF_SESSION/authority/CCMAI-RUNTIME-150.json`
+- Single Windows A1/A2 campaign INCONCLUSIVE at A1-b; A2 unrun, no product claim.: `docs/reviews/R150_A1_A2_WINDOWS_VERIFY_RETURN_2026-11-05.md`
+- Read-only R151 instrument comparison; no accepted observer or Windows dispatch.: `docs/reviews/R151_NARROW_A1B_CLEANUP_INSTRUMENT_COMPARISON_2026-11-06.md`
+- Independent design-only acceptance of narrow comparison; workspace pack reconciliation held.: `docs/reviews/R151_NARROW_A1B_CLEANUP_COMPARISON_INDEPENDENT_REVIEW_2026-11-06.md`
+- Independent R2 acceptance of cost NO-GO only; source and Windows effect not admitted.: `docs/reviews/R151_V04_COST_ROUTE_INDEPENDENT_REVIEW_2026-11-06.md`
+- Second independent R151 V04 design review, CHANGES_REQUIRED on post-replacement readback failure.: `docs/reviews/R151_V04_PRODUCTION_SEAM_CORRECTED_DESIGN_INDEPENDENT_REVIEW_2026-11-06.md`
+- First independent R151 V04 design review, CHANGES_REQUIRED on terminal persisted PASS ambiguity.: `docs/reviews/R151_V04_PRODUCTION_SEAM_DESIGN_INDEPENDENT_REVIEW_2026-11-06.md`
+- Independent R151 sealed-design acceptance only; third repair and runtime remain held.: `docs/reviews/R151_V04_PRODUCTION_SEAM_SEALED_DESIGN_INDEPENDENT_REVIEW_2026-11-06.md`
+- R151 V04 production replacement and finalization seam design; accepted at design scope only.: `docs/reviews/R151_V04_PRODUCTION_SEAM_DESIGN_2026-11-06.md`
+- Root NO-GO for third full-runner repair; narrow Windows observation remains design-only and held.: `docs/reviews/R151_V04_THIRD_REPAIR_COST_ROUTE_DECISION_2026-11-06.md`
+- Retained installed1.3 pre-dispatch APPL/COV failure on prospective active packet.: `docs/reviews/probes/r152_workspace_activation_20261106/pre_dispatch_failed_20261106.txt`
+- Independent R2 acceptance of documentary guidance and migration hold only.: `docs/reviews/R152_DISPOSITION_INDEPENDENT_REVIEW_2026-11-06.md`
+- Draft profile1.4 migration packet held on genuine maintenance coverage route.: `docs/work_orders/CCMAI_RUNTIME_152_WORKSPACE_ACTIVATION.md`
+- DRAFT/WORK_ORDER maintenance record; no worker BUILD or profile upgrade.: `CVF_SESSION/tranches/CCMAI-RUNTIME-152.json`
+- Immutable R2 seed for one bounded parent workspace maintenance scope.: `CVF_SESSION/authority/CCMAI-RUNTIME-152.json`
+- Shared form v1.4 mapped to CCMA M1-M5 controls with source-delivery gap; downstream gate profile1.4 held.: `docs/reviews/R152_PARENT_UPDATE_APPLICABILITY_2026-11-06.md`
+- Defers profile1.4 installation while preserving cumulative cost and source-policy hold.: `docs/reviews/R152_PROFILE_14_NECESSITY_DISPOSITION_2026-11-06.md`
+- Independent R2 acceptance of R152 deferral and finite R153 design only.: `docs/reviews/R152_PROFILE_14_NECESSITY_INDEPENDENT_REVIEW_2026-11-06.md`
+- Independent R2 acceptance of roadmap form v1.2 documentary correction; profile1.4 installation held.: `docs/reviews/R152_ROADMAP_FORM_INDEPENDENT_REVIEW_2026-11-06.md`
+- Independent R2 assessment of external form v1.4 and CCMA-specific M1-M5 reference map; gate-profile installation held.: `docs/reviews/R152_ROADMAP_FORM_V14_INDEPENDENT_REVIEW_2026-11-06.md`
+- Frozen R153 source inventory handoff; superseded as active pointer by R154, with product holds retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R153_M2_ENTRY_INVENTORY_2026-11-06.md`
+- Finite one-pass M2-04 entry-path source inventory packet.: `docs/work_orders/CCMAI_RUNTIME_153_M2_ENTRY_INVENTORY.md`
+- Independent R2 acceptance of exact finite R153 VERIFY packet after continuity repair; dispatch commit required.: `docs/reviews/R153_M2_ENTRY_INVENTORY_PACKET_INDEPENDENT_REVIEW_2026-11-06.md`
+- R2 DISPATCH_READY null-authority VERIFY record; no implementation or product acceptance.: `CVF_SESSION/tranches/CCMAI-RUNTIME-153.json`
+- Independent R2 acceptance of bounded T0 source map; M2 product remains OPEN/UNKNOWN.: `docs/reviews/R153_M2_ENTRY_INVENTORY_INDEPENDENT_REVIEW_2026-11-06.md`
+- Terra's consumed 12-file T0 entry-path inventory with owned admission UNKNOWNs.: `docs/reviews/R153_M2_ENTRY_INVENTORY_WORKER_RETURN_2026-11-06.md`
+- Committed dispatcher seed for one finite read-only M2-04 source inventory.: `CVF_SESSION/authority/CCMAI-RUNTIME-153.json`
+- Historical cloud repaired contract copy with disclosed header and fence changes.: `docs/reviews/probes/r150_r149_errata_20261105/cloud_repaired_r149_contract_ec86f91.md`
+- Historical cloud repaired draft copy; Local corrections require separate reconciliation.: `docs/reviews/probes/r150_r149_errata_20261105/cloud_repaired_r149_draft_ec86f91.md`
+- Preserved cloud R149 review evidence copy.: `docs/reviews/probes/r150_r149_errata_20261105/cloud_subagent_r149_review_ec86f91.md`
+- Cloud R149 errata inputs preserved with Local reconciliation pending.: `docs/reviews/R150_R149_ERRATA_BINDING_INPUTS_2026-11-05.md`
+- Historical cloud R150 errata packet; distinct from local Windows R150.: `docs/reviews/R150_R149_ERRATA_PACKET_2026-11-05.md`
+- Cloud independent errata review and F1–F6 qualifications; Local review pending.: `docs/reviews/R150_R149_ERRATA_INDEPENDENT_REVIEW_2026-11-05.md`
+- Historical cloud errata handoff; exact original ACTIVE version is archived.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R150_R149_ERRATA_2026-11-05.md`
+- Archived cloud R150 seed, tranche and original handoff identities, separate from canonical Windows R150.: `CVF_SESSION/history/r150-cloud-errata-4164a28d/provenance.json`
+- Independent R2 merge provenance acceptance and required installed PR-range coverage hold.: `docs/reviews/R154_POSTMERGE_PROVENANCE_AND_GATE_HOLD_2026-11-06.md`
+- Astra independently accepted preserved merge candidate, with actual DAG checks pending Root commit.: `docs/reviews/R154_REPOSITORY_RECONCILIATION_INDEPENDENT_REVIEW_2026-11-06.md`
+- Project-specific RC-01 remains blocked on required historical range gate; no M5 release claim.: `docs/reviews/planning/CCMA_REPOSITORY_CONTINUITY_2026-11-06.md`
+- One bounded no-rewrite integration packet now blocked by historical range gate.: `docs/work_orders/CCMAI_RUNTIME_154_REPOSITORY_RECONCILIATION.md`
+- Astra independent design acceptance; dispatch continuity and gates still required.: `docs/reviews/R154_REPOSITORY_RECONCILIATION_PREDISPATCH_REVIEW_2026-11-06.md`
+- R154 merge completed; required PR-range coverage gate blocks RC-01 closure.: `CVF_SESSION/tranches/CCMAI-RUNTIME-154.json`
+- Committed R2 dispatcher seed for one bounded repository history reconciliation.: `CVF_SESSION/authority/CCMAI-RUNTIME-154.json`
+- R154 no-commit merge candidate, byte provenance and qualifications; postmerge review records gate hold.: `docs/reviews/R154_WORKER_RETURN_2026-11-06.md`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

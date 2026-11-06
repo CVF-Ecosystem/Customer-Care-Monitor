@@ -2,16 +2,52 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R150_R149_ERRATA_2026-11-05.md", "activeTranche": "CCMAI-RUNTIME-150", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md", "activeTranche": "CCMAI-RUNTIME-154", "parked": true} -->
+## Current R154 repository reconciliation BUILD_BLOCKED - 2026-11-06
 
-## Current R150 R149 errata checkpoint - 2026-11-05
+- Current mode: BUILD
+- Active phase: BUILD
 
-- Current mode: REVIEW
-- Active phase: REVIEW
+Owner requested one unified development repository after remote update. Root seeded R154 at `a31f7adf51be7e3493e4b1f112164a4044d2206b` and admitted project-specific RC-01. Terra completed one pinned merge; Root committed `229d98b3b33a17e4d23b3ded34cdd4455c5ca5d3` with both histories, exact local R150 authority and archived remote R150 originals. Astra independently accepted merge provenance. Installed1.3 PR-range gate then failed COV_REPAIR_ACTION_MISMATCH because it compares historical R150 VERIFY with current R151 IMPLEMENT audit. R154/RC-01 remain BUILD_BLOCKED; no FREEZE, green CI or product acceptance. R153 consumed 12-file pass, R152 profile1.4 deferral, R151 BUILD_BLOCKED, R139/M3 holds, R150 Windows effects/UNKNOWNs and account parking remain.
 
-CCMAI-RUNTIME-150: errata binding inputs for frozen R149 REVIEW_PASS (independent reviewer E1-E6 PASS; build 821940c4b20c) on branch claude/friendly-rubin-e2npmt-r150, PR to main without cloud merge. Next: Local reviews/merges, then applies or reviews-and-rejects each erratum (E-B3 chrome.exe --version safety and NF1 first) plus R150 F1-F6 in its A1/A2 successor work order, repair-audit successor, admission and Windows run. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; no execution by the cloud; Facebook/Zalo OA parked.
+Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD for blocked disposition; Astra Medium independent R2 REVIEWER; Terra 6.1 worker returned.
 
-Cloud agent: operator-granted ORCHESTRATOR / SPEC_AUTHOR / SESSION_SYNC_STEWARD (branch-only commits); independent REVIEWER = separate Opus subagent; Root/Local retains repair-audit, admission, merge and FREEZE
+## Current R153 finite M2-04 source VERIFY FROZEN - 2026-11-06
+
+- Current mode: FREEZE
+- Active phase: FREEZE
+
+R152 profile1.4 installation was independently deferred; its packet stays DRAFT, with COV_BLOCK_REQUIRED and BLOCKED_SOURCE_POLICY retained. R153 seed `c96c4795`, dispatch `50485cc7`, synchronization `2733ba12`, and Terra source return `68551e35` are committed. Terra's first attempt stopped before source reading on pending-text drift; after correction it opened exactly 12 implementation files and reported under one elapsed minute. Astra independently accepted only the bounded T0 inventory after matching 12 hashes and sampling eight files; it did not meter worker actions. R153 tranche COMPLETE/FROZEN for this inventory; M2-04 common admission and product acceptance OPEN/UNKNOWN. No M2 acceptance, runtime, provider or governance claim follows. R151 BUILD_BLOCKED, R139/M3 blocked, R150 INCONCLUSIVE and Facebook/Zalo OA parked.
+
+Root CLOSER / ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 VERIFY return accepted; Astra Medium independent review accepted.
+
+## Current R152 WORK_ORDER DRAFT - 2026-11-06
+
+- Current mode: BUILD
+- Active phase: BUILD
+
+Clean parent pack f8175616c delivery verified (53/53 hashed files); project-development guidance mapped to existing project controls and independently accepted in the R152 review. The operator-supplied roadmap form v1.4 was checked against the existing M1-M5 roadmap; the active pack does not yet deliver the form. R152 now maps CCMA-specific controls by existing criterion IDs without changing the master coverage table. Profile1.4 remains uninstalled after a prospective installed1.3 pre-dispatch failed COV_BLOCK_REQUIRED. Root must first decide necessity, cumulative cost and whether installed1.3 suffices; a criterion cannot be invented to pass the gate. R152 packet/record are DRAFT/WORK_ORDER; no worker BUILD or policy/lock/CI/activation change. R151 stays BUILD_BLOCKED with spent costs and UNKNOWNs; R139/M3 blocked, R150 inconclusive, accounts parked.
+
+Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER held.
+
+
+## Prior R151 BUILD_BLOCKED and V04 cost escalation - 2026-11-06
+
+- Current mode: BUILD
+- Active phase: BUILD
+
+R151 A2 candidate remains unaccepted after independent V04 review despite 52-PASS fixture, final syntax and source-level V06 static review. A2 tests real cleanup but replacement timeout still uses a test-authored callback, so production close/wait/launch integration is unproved. Root's third full-runner repair NO-GO remains independently accepted. A single narrow A1-b/cleanup instrument comparison was independently accepted at design scope only in `docs/reviews/R151_NARROW_A1B_CLEANUP_COMPARISON_INDEPENDENT_REVIEW_2026-11-06.md`; no accepted executable observer exists. R152 verified the clean parent pack delivery and applied its project-development guidance, but profile1.4 installation is unadmitted: installed1.3 pre-dispatch requires a genuine maintenance coverage route. R152 remains DRAFT/WORK_ORDER; decide necessity and an authorized admission route or defer before any material source/effect packet. Five focused tests and two syntax batches cumulatively evidenced, earlier active minutes UNKNOWN; original Nov5 stop and A2 allowance spent. No worker edit/test/Windows effect released. R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, R139/M3 blocked and Facebook/Zalo OA parked.
+
+Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER held
+
+## Current R150 Windows A1/A2 VERIFY admission - 2026-11-05
+
+- Current mode: FREEZE
+- Active phase: FREEZE
+
+CCMAI-RUNTIME-150 FROZEN with independently reviewed INCONCLUSIVE A1-b and A2 unrun. No retry or integrated admission under this tranche. A new bounded successor must repair HTTP response capture and Chrome ownership evidence before any new Windows VERIFY. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; Facebook/Zalo OA parked.
+
+Root/Local CLOSER / COMMIT_STEWARD / SESSION_SYNC_STEWARD
 
 
 ## Historical R149 OHC successor FREEZE - 2026-11-05
@@ -178,11 +214,11 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R150_R149_ERRATA_2026-11-05.md
+- Current mode: BUILD
+- Active phase: BUILD
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md
 
-CCMAI-RUNTIME-150: errata binding inputs for frozen R149 REVIEW_PASS (independent reviewer E1-E6 PASS; build 821940c4b20c) on branch claude/friendly-rubin-e2npmt-r150, PR to main without cloud merge. Next: Local reviews/merges, then applies or reviews-and-rejects each erratum (E-B3 chrome.exe --version safety and NF1 first) plus R150 F1-F6 in its A1/A2 successor work order, repair-audit successor, admission and Windows run. R139 remains BUILD_BLOCKED; M3-05/M3-08 BLOCKED; no execution by the cloud; Facebook/Zalo OA parked.
+CCMAI-RUNTIME-154 BUILD_BLOCKED: merge `229d98b3` preserves both histories and R150 evidence; independent R2 review accepts provenance. Draft PR #21 is open; hosted gate run 42195844783 confirms PR-range COV_REPAIR_ACTION_MISMATCH. RC-01 closure and main merge require parent-reviewed historical admission binding and deliberate pinned delivery. No green CI/FREEZE claim. R153 one-pass T0 inventory remains FROZEN with its 12-file cap spent and M2 OPEN/UNKNOWN. R152 profile1.4 installation deferred at DRAFT; R151 BUILD_BLOCKED with third-repair NO-GO, R139/M3 blocked, R150 Windows INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and Facebook/Zalo OA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "r154.remote-r150-archive@1",
+  "seedCommit": "4164a28d174da1625f4a4b2fa03414c95962cf25",
+  "buildCommit": "821940c4b20cecbb6ff7184e5befbd5a80e3d9d5",
+  "reviewCommit": "5677ccd4",
+  "files": [
+    {
+      "originalPath": "CVF_SESSION/authority/CCMAI-RUNTIME-150.json",
+      "archivePath": "CVF_SESSION/history/r150-cloud-errata-4164a28d/CVF_SESSION/authority/CCMAI-RUNTIME-150.json",
+      "sourceCommit": "f7405c470207dc0d3be64e6eca79b7050d3f79d8",
+      "blobSha1": "3b9a84cb9893a8fc46017029f44f8a9b0c49ba02",
+      "rawSha256": "ce8d9351effe10bf9f4e7b94a5249d10cc09b51fe92794372f87c78b09dc4aee"
+    },
+    {
+      "originalPath": "CVF_SESSION/tranches/CCMAI-RUNTIME-150.json",
+      "archivePath": "CVF_SESSION/history/r150-cloud-errata-4164a28d/CVF_SESSION/tranches/CCMAI-RUNTIME-150.json",
+      "sourceCommit": "f7405c470207dc0d3be64e6eca79b7050d3f79d8",
+      "blobSha1": "aaf13fe3619cedac44ce93320f21d3d338f53f6c",
+      "rawSha256": "89c6e2f0c007fb3225b9e404e3c27624b25008892ee47a77a8efd0c6517209c7"
+    },
+    {
+      "originalPath": "CVF_SESSION/handoffs/AGENT_HANDOFF_R150_R149_ERRATA_2026-11-05.md",
+      "archivePath": "CVF_SESSION/history/r150-cloud-errata-4164a28d/CVF_SESSION/handoffs/AGENT_HANDOFF_R150_R149_ERRATA_2026-11-05.md",
+      "sourceCommit": "f7405c470207dc0d3be64e6eca79b7050d3f79d8",
+      "blobSha1": "a08d2e0025c369a5cce6ade3c63e02235a489464",
+      "rawSha256": "a26e9f778e451e607cd7779ed493c7f33fbb970ec64e635f54b1bbb02ab641ac"
+    }
+  ]
+}

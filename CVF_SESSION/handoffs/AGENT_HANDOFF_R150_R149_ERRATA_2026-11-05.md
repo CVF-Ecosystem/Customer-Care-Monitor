@@ -1,6 +1,8 @@
 # R150 - R149 errata handoff
 
-Status: ACTIVE
+Status: HISTORICAL
+
+The original ACTIVE handoff is preserved byte-for-byte under `CVF_SESSION/history/r150-cloud-errata-4164a28d/`; its R150 identifier refers to the distinct cloud errata lineage. The current handoff is `CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md`.
 
 ## Current State
 

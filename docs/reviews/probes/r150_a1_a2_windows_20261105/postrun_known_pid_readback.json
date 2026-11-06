@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "ccma.r150.postrunKnownPidReadback@1.0.0",
+  "capturedAtUtc": "2026-11-05T07:45:27Z",
+  "source": "windows_verify_raw.json process_snapshot ownedChrome descendant PID list",
+  "query": "Get-CimInstance Win32_Process | Where-Object { $ids -contains [int]$_.ProcessId } | Select-Object ProcessId,ParentProcessId,Name,CreationDate",
+  "queriedPids": [40468, 41324, 23968, 684, 9640, 28560, 20292, 12928, 38312, 34248, 35920, 39952],
+  "observedRows": [],
+  "scopeLimit": "Later read-only PID lookup found no previously recorded Chrome root/descendant PIDs. It does not repair the terminal cleanup predicate: all in-campaign ownedProfileArg flags were false despite the root's admitted user-data-dir argv, so exact terminal owned-profile cleanup remains UNKNOWN."
+}

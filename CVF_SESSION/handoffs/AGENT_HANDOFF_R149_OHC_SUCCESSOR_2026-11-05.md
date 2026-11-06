@@ -1,6 +1,6 @@
 # R149 - OHC successor contract handoff
 
-> Superseded as the active handoff by `CVF_SESSION/handoffs/AGENT_HANDOFF_R150_R149_ERRATA_2026-11-05.md` on 2026-11-05. R149 stays FROZEN.
+> Superseded as the active handoff by `CVF_SESSION/handoffs/AGENT_HANDOFF_R150_A1_A2_WINDOWS_VERIFY_2026-11-05.md` on 2026-11-05. R149 design/spec remains FROZEN.
 
 Status: SUPERSEDED
 

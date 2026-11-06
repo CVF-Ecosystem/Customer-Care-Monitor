@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "cvf.r151A2SourceRelease@1.0.0",
+  "tranche": "CCMAI-RUNTIME-151",
+  "materialCommit": "edb7f4d1432e659a9789e1c57a568835d50b2924",
+  "releaseAt": "2026-11-06T07:42:44+07:00",
+  "conservativeActiveDeadline": "2026-11-06T08:02:44+07:00",
+  "hardWallDeadline": "2026-11-06T08:12:44+07:00",
+  "activeBudgetMinutes": 20,
+  "wallBudgetMinutes": 30,
+  "historicalFocusedTestsUsed": 4,
+  "historicalSyntaxBatchesEvidenced": 1,
+  "historicalActiveMinutes": "UNKNOWN",
+  "historicalHardStop": "2026-11-05T17:02:18+07:00",
+  "newFocusedTestAllowance": 1,
+  "newSyntaxBatchAllowance": 1,
+  "effectClass": "OFFLINE_SOURCE_ONLY_ZERO_RUNTIME_EFFECTS",
+  "sourceAcceptance": "NOT_YET_REVIEWED"
+}

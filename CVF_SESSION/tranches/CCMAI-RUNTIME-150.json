@@ -1,61 +1,76 @@
 {
   "schemaVersion": "1.0",
   "trancheId": "CCMAI-RUNTIME-150",
-  "authorityKind": "DISPATCHER_OWNED_R149_ERRATA_BINDING_INPUTS",
+  "authorityKind": "DISPATCHER_OWNED_WINDOWS_A1_A2_VERIFY_AND_REPAIR_AUDIT",
   "riskCeiling": "R2",
   "roles": {
-    "workOrderAuthor": "Cloud ORCHESTRATOR (operator full-roadmap grant 2026-11-05)",
-    "implementationWorker": "Cloud ORCHESTRATOR acting as SPEC_AUTHOR (documentary errata only)",
-    "reviewer": "Independent Opus review subagent appointed under operator grant (separate agent from the errata author)",
-    "commitSteward": "Cloud ORCHESTRATOR for branch-only commits; Root/Local for merge to main"
+    "workOrderAuthor": "Root/Local ORCHESTRATOR and WORK_ORDER_AUTHOR",
+    "implementationWorker": "Root/Local Windows VERIFY worker after separate effect admission",
+    "reviewer": "Independent reviewer separate from Root audit author and Windows worker",
+    "commitSteward": "Root/Local COMMIT_STEWARD",
+    "closer": "Root/Local CLOSER and SESSION_SYNC_STEWARD"
   },
   "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_150_A1_A2_WINDOWS_VERIFY.md",
     "docs/reviews/R150_*.md",
-    "docs/reviews/probes/r150_r149_errata_20261105/**",
+    "docs/reviews/probes/r150_a1_a2_windows_20261105/**",
+    "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a1_a2_windows_verify.json",
+    "docs/milestone-coverage-authority.json",
     "CVF_SESSION/**",
     "CVF_SESSION_MEMORY.md",
     "IMPLEMENTATION_STATUS.json",
-    "docs/INDEX.md",
-    "docs/catalog/ARTIFACT_REGISTRY.json"
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md"
   ],
   "prohibitedEffects": [
-    "Editing frozen R149 documents or any other frozen/historical review, receipt or evidence file",
-    "Starting Chrome, the daemon, browser, DB, provider or runtime; network fetch, install, import or execution",
-    "Editing product source, tests, gates, CI, dependencies, the R139 repair audit, docs/milestone-coverage-authority.json, existing seeds or work orders",
-    "Admitting or dispatching A1/A2; reopening R139; claiming runtime, no-relaunch, AI-governance or M3 acceptance",
-    "Merge or push to main, history rewrite, deployment or public release"
+    "No product source, tests, dependencies, gate, workflow, CVF Core, prior repair attempts, historical audit, prior seed or R149 frozen artifact edits",
+    "No Chrome or daemon start before separate R2 effect admission and immediate same-session A3 full-tree recapture PASS",
+    "After effect admission: at most three owned Chrome launches, one owned daemon start, eight native calls and six raw WebSocket handshakes, with about:blank and localhost only; no provider, DB or product calls",
+    "No new package/network fetch beyond localhost, installation, credential or customer/channel action, automatic retry, integrated lifecycle or product campaign",
+    "No R139 IMPLEMENT reopen, M3 acceptance, physical no-relaunch or runtime-governance claim, consumed-budget reset, deployment or public release"
   ],
-  "workOrder": "docs/reviews/R150_R149_ERRATA_PACKET_2026-11-05.md",
-  "baseCommit": "4164a28d174da1625f4a4b2fa03414c95962cf25",
-  "status": "REVIEW_PASS",
-  "phase": "REVIEW",
-  "freeze": "OPEN",
+  "workOrder": "docs/reviews/R150_A1_A2_EXECUTION_STATUS_CARRIER_2026-11-05.md",
+  "baseCommit": "c61b01fa89c40135093103a0852de70f82bd39ec",
+  "status": "FROZEN",
+  "phase": "FREEZE",
+  "freeze": "FROZEN",
   "history": [
     "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD",
     "REVIEW_PENDING",
-    "REVIEW_PASS"
+    "REVIEW_PASS",
+    "FROZEN"
   ],
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "REVIEWER_ACCEPTED",
-  "disposition": "REVIEW_PASS",
-  "parentTranche": "CCMAI-RUNTIME-149",
+  "workOrderStatus": "CLOSED",
   "reviewEvidence": [
-    "docs/reviews/R150_R149_ERRATA_INDEPENDENT_REVIEW_2026-11-05.md"
+    "docs/reviews/R150_INDEPENDENT_A1_A2_AUDIT_REVIEW_2026-11-05.md",
+    "docs/reviews/R150_INDEPENDENT_HELPER_REVIEW_2026-11-05.md",
+    "docs/reviews/R150_INDEPENDENT_WINDOWS_VERIFY_REVIEW_2026-11-05.md"
   ],
-  "effects": {
-    "networkFetches": 0,
-    "runtimeStarts": 0,
-    "providerCalls": 0
+  "disposition": "REVIEW_PASS",
+  "runtimeOutcome": "INCONCLUSIVE_A1_B_A2_UNRUN",
+  "terminalChromeDescendantCleanup": "UNKNOWN",
+  "effectAdmissionSpent": true,
+  "buildCommit": "7052df5c6da31d6867172d26a298a7bb4b72bb9c",
+  "closer": "Root/Local CLOSER / COMMIT_STEWARD / SESSION_SYNC_STEWARD",
+  "parentTranche": "CCMAI-RUNTIME-149",
+  "effectBudget": {
+    "chromeLaunches": 3,
+    "daemonStarts": 1,
+    "nativeCalls": 8,
+    "rawWebSocketHandshakes": 6,
+    "activeMinutes": 45,
+    "providerCalls": 0,
+    "productCalls": 0
   },
-  "buildCommit": "821940c4b20cecbb6ff7184e5befbd5a80e3d9d5",
-  "localConditions": [
-    "F1: E-L coverage wording already matches main; Local should instead address the cloud review's L1 points ('accepted' implies an unrecorded Local acceptance; stale R144 destination)",
-    "F2: E-B1a should also name N-R1 and N-R3 as R141-review additions that E-B1d relies on",
-    "F3: E-NF1 shortfall mostly depends on adopting E-M1; size the budget to the A1 steps Local actually adopts",
-    "F4: credit Local's overlapping admission notes where they already cover an erratum",
-    "F5: the cloud evidence copies predate Local's on-main corrections (A1 /json/version discovery, source-boundary citations); keep both",
-    "F6: minor wording and line-range precision listed in the R150 review"
-  ],
-  "repairRounds": 0,
-  "reviewResult": "REVIEWER_ACCEPTED_PENDING_LOCAL (E1-E6 PASS); non-blocking F1-F6 recorded without repair to keep reviewed bytes"
+  "effectUsed": {
+    "chromeLaunches": 1,
+    "daemonStarts": 0,
+    "nativeCalls": 0,
+    "rawWebSocketHandshakes": 2
+  },
+  "effectAdmission": "CVF_SESSION/authority/CCMAI-RUNTIME-150-A1A2-EFFECT-ADMISSION.json",
+  "audit": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a1_a2_windows_verify.json"
 }

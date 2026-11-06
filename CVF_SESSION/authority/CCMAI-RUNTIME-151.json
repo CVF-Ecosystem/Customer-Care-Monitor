@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-151",
+  "authorityKind": "DISPATCHER_OWNED_R150_EVIDENCE_CAPTURE_REPAIR_AND_FINITE_VERIFY",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR",
+    "implementationWorker": "Terra 6.1 source-only IMPLEMENTATION_WORKER; Root Windows VERIFY worker only after separate effect admission",
+    "reviewer": "Astra Medium independent R2 REVIEWER, separate from all implementation workers",
+    "technicalAdvisor": "Sol 6.1 Medium read-only technical advisor if needed",
+    "commitSteward": "Root COMMIT_STEWARD",
+    "closer": "Root CLOSER / SESSION_SYNC_STEWARD"
+  },
+  "allowedPaths": [
+    "docs/work_orders/CCMAI_RUNTIME_151_EVIDENCE_CAPTURE_REPAIR.md",
+    "docs/reviews/R151_*.md",
+    "docs/reviews/probes/r151_evidence_capture_20261105/**",
+    "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_r151_evidence_capture.json",
+    "docs/milestone-coverage-authority.json",
+    "docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md",
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/INDEX.md"
+  ],
+  "workerAllowedPaths": [
+    "docs/reviews/probes/r151_evidence_capture_20261105/**",
+    "docs/reviews/R151_SOURCE_WORKER_RETURN_2026-11-05.md"
+  ],
+  "prohibitedEffects": [
+    "No edit to R150 or earlier frozen work orders, helpers, raw evidence, reviews, authority seeds or repair attempts; no product source, dependencies, gate/profile/workflow or public CVF Core edits",
+    "No Chrome or native daemon start before the source repair has deterministic offline tests, independent R2 source review, a separately reviewed effect admission, passing pre-dispatch gate and immediate A3 full-tree recapture",
+    "Any later admitted Windows VERIFY stays within three owned Chrome launches, one owned daemon start, eight native calls, six WebSocket handshakes, two localhost endpoint queries and 45 active minutes; about:blank and localhost only",
+    "No provider, database, customer/channel, credential or product call; no package download, external network, automatic retry, integrated product lifecycle or budget reset",
+    "No R139 IMPLEMENT reopen, M3 acceptance, physical no-relaunch or runtime-governance claim, push, merge, deployment or public release"
+  ],
+  "workOrder": "docs/work_orders/CCMAI_RUNTIME_151_EVIDENCE_CAPTURE_REPAIR.md",
+  "ownerAuthorization": "Owner directs Root to act as orchestrator, find causes before implementation and assign Terra 6.1 as worker, Astra Medium as independent reviewer, with Sol 6.1 Medium for difficult technical diagnosis. This seed bounds one successor after R150 INCONCLUSIVE; process effects require a later separate R2 admission.",
+  "scope": "Repair the R150 measurement defects in new R151 probe artifacts: capture the actual HTTP WebSocket upgrade outcome and prove exact Chrome ownership/descendant cleanup. First perform source-only offline verification and independent review. A finite Windows A1/A2 diagnostic may follow only within this same tranche after separate effect admission; no integrated product execution.",
+  "claimBoundary": "Source tests prove only the diagnostic helper. A later A1/A2 result may remove an admission prerequisite but cannot by itself prove product physical no-relaunch, runtime AI governance, R139 completion or M3 acceptance. R139 and M3-05/M3-08 remain blocked."
+}

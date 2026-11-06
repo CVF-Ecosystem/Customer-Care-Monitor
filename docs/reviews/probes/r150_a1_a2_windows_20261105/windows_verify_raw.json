@@ -1,0 +1,525 @@
+{
+  "schemaVersion": "ccma.r150.windowsVerifyRaw@1.0.0",
+  "sessionId": "84c3904e-779f-4232-bab0-a04b9c0adf4f",
+  "generatedAt": "2026-11-05T07:42:41.127Z",
+  "outcome": "INCONCLUSIVE",
+  "stopReason": "Error: A1-b refusal was not observed",
+  "counters": {
+    "chromeLaunches": 1,
+    "daemonStarts": 0,
+    "nativeCalls": 0,
+    "rawWebSocketHandshakes": 2,
+    "endpointDiscoveryQueries": 1
+  },
+  "activeElapsedMs": 22810,
+  "packageRoot": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Antigravity\\resources\\app.asar.unpacked\\node_modules\\chrome-devtools-mcp",
+  "chromeExe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "nodeVersion": "v22.17.0",
+  "osBuild": "10.0.26200",
+  "environmentKeys": [
+    "APPDATA",
+    "CHROME_DEVTOOLS_MCP_NO_UPDATE_CHECKS",
+    "CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS",
+    "CHROME_DEVTOOLS_MCP_SESSION_ID",
+    "CommonProgramFiles",
+    "HOMEDRIVE",
+    "HOMEPATH",
+    "LOCALAPPDATA",
+    "OS",
+    "PATH",
+    "PATHEXT",
+    "PROCESSOR_ARCHITECTURE",
+    "ProgramData",
+    "ProgramFiles",
+    "SystemRoot",
+    "TEMP",
+    "TMP",
+    "USERDOMAIN",
+    "USERNAME",
+    "USERPROFILE"
+  ],
+  "admittedEnvironmentValues": {
+    "CHROME_DEVTOOLS_MCP_SESSION_ID": "84c3904e-779f-4232-bab0-a04b9c0adf4f",
+    "CHROME_DEVTOOLS_MCP_NO_UPDATE_CHECKS": "1",
+    "CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS": "1"
+  },
+  "tempRoot": "C:\\Users\\DELL\\AppData\\Local\\Temp\\cvf-r150-84c3904e-779f-4232-bab0-a04b9c0adf4f",
+  "evidenceRoot": "C:\\Users\\DELL\\AppData\\Local\\Temp\\cvf-r150-84c3904e-779f-4232-bab0-a04b9c0adf4f\\mcp-evidence",
+  "capturePath": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\Customer-Care-Monitor\\docs\\reviews\\probes\\r150_a1_a2_windows_20261105\\a3_prestart_full_tree.json",
+  "endpoints": {
+    "endpoint1": "ws://127.0.0.1:58837/devtools/browser/c07cd12f-289d-40ad-be0a-9cade2e11811",
+    "endpoint2": null
+  },
+  "events": [
+    {
+      "at": "2026-11-05T07:42:14.927Z",
+      "kind": "versions",
+      "chrome": "156.0.8078.81",
+      "antigravity": "2.29.0",
+      "node": "v22.17.0",
+      "osBuild": "10.0.26200"
+    },
+    {
+      "at": "2026-11-05T07:42:14.948Z",
+      "kind": "preflight",
+      "port": 58837,
+      "pidFile": "C:\\Users\\DELL\\AppData\\Local\\Temp\\cvf-r150-84c3904e-779f-4232-bab0-a04b9c0adf4f\\chrome-devtools-mcp-84c3904e-779f-4232-bab0-a04b9c0adf4f\\daemon.pid",
+      "profiles": [
+        "C:\\Users\\DELL\\AppData\\Local\\Temp\\cvf-r150-84c3904e-779f-4232-bab0-a04b9c0adf4f\\chrome1",
+        "C:\\Users\\DELL\\AppData\\Local\\Temp\\cvf-r150-84c3904e-779f-4232-bab0-a04b9c0adf4f\\chrome2"
+      ],
+      "envKeys": [
+        "APPDATA",
+        "CHROME_DEVTOOLS_MCP_NO_UPDATE_CHECKS",
+        "CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS",
+        "CHROME_DEVTOOLS_MCP_SESSION_ID",
+        "CommonProgramFiles",
+        "HOMEDRIVE",
+        "HOMEPATH",
+        "LOCALAPPDATA",
+        "OS",
+        "PATH",
+        "PATHEXT",
+        "PROCESSOR_ARCHITECTURE",
+        "ProgramData",
+        "ProgramFiles",
+        "SystemRoot",
+        "TEMP",
+        "TMP",
+        "USERDOMAIN",
+        "USERNAME",
+        "USERPROFILE"
+      ]
+    },
+    {
+      "at": "2026-11-05T07:42:18.316Z",
+      "kind": "a3_prestart",
+      "status": 0,
+      "stdout": "A3_PRESTART PASS actual=347 otherMatched=346 packageJson=592ef654a308edcba5fb3c2b302173650096a9487e4120b96e7adbe830429b9f missing=README.md extra= mismatch=\r\n",
+      "stderr": ""
+    },
+    {
+      "at": "2026-11-05T07:42:18.331Z",
+      "kind": "process_start",
+      "name": "Chrome #1",
+      "pid": 40468,
+      "exe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "args": [
+        "--remote-debugging-port=58837",
+        "--user-data-dir=C:\\Users\\DELL\\AppData\\Local\\Temp\\cvf-r150-84c3904e-779f-4232-bab0-a04b9c0adf4f\\chrome1",
+        "--headless=new",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "about:blank"
+      ],
+      "startedAt": "2026-11-05T07:42:18.331Z"
+    },
+    {
+      "at": "2026-11-05T07:42:23.817Z",
+      "kind": "endpoint_query",
+      "label": "Chrome #1",
+      "url": "http://127.0.0.1:58837/json/version",
+      "httpStatus": 200,
+      "endpoint": "ws://127.0.0.1:58837/devtools/browser/c07cd12f-289d-40ad-be0a-9cade2e11811"
+    },
+    {
+      "at": "2026-11-05T07:42:23.818Z",
+      "kind": "endpoint_discovery",
+      "label": "Chrome #1",
+      "method": "/json/version",
+      "endpoint": "ws://127.0.0.1:58837/devtools/browser/c07cd12f-289d-40ad-be0a-9cade2e11811"
+    },
+    {
+      "at": "2026-11-05T07:42:25.635Z",
+      "kind": "process_snapshot",
+      "rootPid": 40468,
+      "ownedChrome": [
+        {
+          "pid": 40468,
+          "parentPid": 5976,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.3220370Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 41324,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.3470500Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 23968,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.5766650Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 684,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.5813820Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 9640,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.6143620Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 28560,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.7130070Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 20292,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.7612040Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 12928,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.8019440Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 38312,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.9061110Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 34248,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:22.4329920Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 35920,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:22.4424280Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 39952,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:22.8349320Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        }
+      ],
+      "foreignCount": 0
+    },
+    {
+      "at": "2026-11-05T07:42:25.656Z",
+      "kind": "websocket_handshake",
+      "label": "A1-a control",
+      "url": "ws://127.0.0.1:58837/devtools/browser/c07cd12f-289d-40ad-be0a-9cade2e11811",
+      "opened": true,
+      "browserVersionReply": {
+        "id": 1,
+        "result": {
+          "protocolVersion": "1.3",
+          "product": "Chrome/156.0.8078.81",
+          "revision": "@060bedfb508f73250e93aeb9ca8149b3958995d8",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+          "jsVersion": "15.6.75.27"
+        }
+      }
+    },
+    {
+      "at": "2026-11-05T07:42:27.521Z",
+      "kind": "process_snapshot",
+      "rootPid": 40468,
+      "ownedChrome": [
+        {
+          "pid": 40468,
+          "parentPid": 5976,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.3220370Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 41324,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.3470500Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 23968,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.5766650Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 684,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.5813820Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 9640,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.6143620Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 28560,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.7130070Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 20292,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.7612040Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 12928,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.8019440Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 38312,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.9061110Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 34248,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:22.4329920Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 35920,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:22.4424280Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 39952,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:22.8349320Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        }
+      ],
+      "foreignCount": 0
+    },
+    {
+      "at": "2026-11-05T07:42:37.535Z",
+      "kind": "websocket_handshake",
+      "label": "A1-b wrong GUID",
+      "url": "ws://127.0.0.1:58837/devtools/browser/a07cd12f-289d-40ad-be0a-9cade2e11811",
+      "opened": false,
+      "timeout": true,
+      "error": "Received network error or non-101 status code."
+    },
+    {
+      "at": "2026-11-05T07:42:39.269Z",
+      "kind": "process_snapshot",
+      "rootPid": 40468,
+      "ownedChrome": [
+        {
+          "pid": 40468,
+          "parentPid": 5976,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.3220370Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 41324,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.3470500Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 23968,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.5766650Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 684,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.5813820Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 9640,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.6143620Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 28560,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.7130070Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 20292,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.7612040Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 38312,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:18.9061110Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 34248,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:22.4329920Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        },
+        {
+          "pid": 39952,
+          "parentPid": 40468,
+          "name": "chrome.exe",
+          "createdAt": "2026-11-05T07:42:22.8349320Z",
+          "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "ownedProfileArg": false,
+          "commandLineKnown": true
+        }
+      ],
+      "foreignCount": 0
+    },
+    {
+      "at": "2026-11-05T07:42:39.271Z",
+      "kind": "error",
+      "message": "Error: A1-b refusal was not observed",
+      "stack": "Error: A1-b refusal was not observed\n    at file:///D:/UNG%20DUNG%20AI/TOOL%20AI%202026/CVF-Workspace/Customer-Care-Monitor/docs/reviews/probes/r150_a1_a2_windows_20261105/owner_runner.mjs:322:13"
+    },
+    {
+      "at": "2026-11-05T07:42:39.279Z",
+      "kind": "original_handle_close",
+      "name": "last Chrome",
+      "pid": 40468,
+      "signal": "SIGTERM",
+      "sent": true
+    },
+    {
+      "at": "2026-11-05T07:42:39.441Z",
+      "kind": "original_handle_wait",
+      "name": "last Chrome",
+      "pid": 40468,
+      "exitCode": null,
+      "signalCode": "SIGTERM",
+      "stderr": "[40468:38416:1105/144218.635:ERROR:chrome\\browser\\extensions\\external_registry_loader_win.cc:147] Missing value path for key Software\\Google\\Chrome\\Extensions\\dngcpimnedloihjnnfngkgjoidhnaolf.\r\n[40468:38416:1105/144218.635:ERROR:chrome\\browser\\extensions\\external_registry_loader_win.cc:147] Missing value path for key Software\\Google\\Chrome\\Extensions\\fcoeoabgfenejglbffodgkkbkcdhcgfn.\r\n\r\nDevTools listening on ws://127.0.0.1:58837/devtools/browser/c07cd12f-289d-40ad-be0a-9cade2e11811\r\nCreated TensorFlow Lite XNNPACK delegate for CPU.\r\n[40468:39076:1105/144237.689:ERROR:chrome\\updater\\ipc\\update_service_dialer_win.cc:77] Failed to open named pipe server process 9428: Access is denied. (0x5)\r\n[40468:39076:1105/144237.892:ERROR:chrome\\updater\\ipc\\update_service_dialer_win.cc:77] Failed to open named pipe server process 9428: Access is denied. (0x5)\r\n[40468:39076:1105/144238.295:ERROR:chrome\\updater\\ipc\\update_service_dialer_win.cc:77] Failed to open named pipe server process 9428: Access is denied. (0x5)\r\n[40468:39076:1105/144238.903:ERROR:chrome\\updater\\ipc\\update_service_dialer_win.cc:77] Failed to open named pipe server process 9428: Access is denied. (0x5)\r\n"
+    },
+    {
+      "at": "2026-11-05T07:42:41.126Z",
+      "kind": "cleanup_terminal",
+      "leftoverOwnedChrome": [],
+      "mcpChildStillAlive": false,
+      "daemonStillAlive": false,
+      "pidFileStillExists": false,
+      "chromePid": 40468
+    }
+  ],
+  "admissionGate": {
+    "exitCode": 0,
+    "output": "[PASS] CVF-DG-INST-01 PASS\r\n[PASS] CVF-DG-CONT-01 PASS\r\n[PASS] CVF-DG-RANGE-01 PASS\r\n       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=3143de9271b4882728296693f0f704fbc3c172b3 candidates=0 deleted=0\r\n[PASS] CVF-DG-APPL-01 PASS\r\n       note: checked: docs/work_orders/CCMAI_RUNTIME_150_A1_A2_WINDOWS_VERIFY.md\r\n[PASS] CVF-DG-ROUTE-01 NOT_APPLICABLE_WITH_REASON - no dispatch packet declares dispatchKind in scope\r\n[PASS] CVF-DG-COV-01 PASS\r\n       note: checked: docs/work_orders/CCMAI_RUNTIME_150_A1_A2_WINDOWS_VERIFY.md\r\n       note: mechanical joins only; Local owns semantic acceptance\r\nRESULT: PASS phase=pre-dispatch mandatoryControls=6 failed=0\r\n"
+  }
+}

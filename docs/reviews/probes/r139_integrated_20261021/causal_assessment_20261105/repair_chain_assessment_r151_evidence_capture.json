@@ -1,0 +1,156 @@
+{
+  "schemaVersion": "cvf.repairChainAssessment@1.0.0",
+  "milestoneId": "M3",
+  "history": [
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/r2_repair_attempt.json",
+      "sha256": "f2158f8ef2781e5e25c93dd5a1c5e1b745214a2ce700114f2c2071cd725b99ba"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/r3_repair_attempt.json",
+      "sha256": "6cd7ffacd92bd47e2ba91050508018623a7f8d8eff2c9929b5f28cf74d719f31"
+    }
+  ],
+  "affectedCriteria": [
+    "M3-05",
+    "M3-08"
+  ],
+  "failureBoundary": "R139 M3-05/M3-08 remain unmet after r2/r3; R150 A1-b INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN. R151 A1 source candidate is incomplete: final log 49 PASS but no final-byte syntax, no executed runner orchestration, and a static custody-throw path can bypass Chrome cleanup. Original Nov5 hard stop expired; no completed product repair failure is inferred.",
+  "observedEvidence": [
+    {
+      "path": "docs/reviews/R139_CAUSAL_CHAIN_ASSESSMENT_2026-11-05.md",
+      "sha256": "c3f3f68330a752f32b1312583d5da2cbe3ef1e8629e4d53dfb3c0ceb800f764a"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/source_manifest.json",
+      "sha256": "4d4aede81210b493f37c720eeae93b0e6d17a941ea41eb676aab6fbe7df9593c"
+    },
+    {
+      "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment.json",
+      "sha256": "5dc8aac9f9acc9caf1dd4d9fe6c2c3714d0e1a477b7d1ccae8c7a267edc81c6c"
+    },
+    {
+      "path": "docs/reviews/probes/r144_a3_package_metadata_20261105/local_capture.json",
+      "sha256": "1526b0febfc870c46cf20acd69f99462d2852734cfe5ccdc6e963539cb5cc25b"
+    },
+    {
+      "path": "docs/reviews/probes/r141_relaunch_prevention_20261105/source_verification.json",
+      "sha256": "0d94408e86b64667d67a37e233353633f171be1486e1b5b0890fca0b7c565ac9"
+    },
+    {
+      "path": "docs/reviews/R144_A3_PACKAGE_METADATA_VERIFY_RETURN_2026-11-05.md",
+      "sha256": "58d8b8f7d5abf78fd6eea0014295dad15e0b8cf5861b7d0f4c42743c97b5cdd1"
+    },
+    {
+      "path": "docs/reviews/R144_A3_PACKAGE_METADATA_INDEPENDENT_REVIEW_2026-11-05.md",
+      "sha256": "6029d4dca32b8fb7c3a4dc330aca05ee392a6478dc690e9efc351f320d973ada"
+    },
+    {
+      "path": "docs/reviews/probes/r144_a3_package_metadata_20261105/root_windows_full_tree_compare.json",
+      "sha256": "3cfebe748f55e6f40eaf833009d29f5755f28cddc90fac4bc9cc2c444a6453ba"
+    },
+    {
+      "path": "docs/reviews/R149_OHC_SUCCESSOR_CONTRACT_2026-11-05.md",
+      "sha256": "95688ad00e7deb03d66777a9aa26703571fa13a86f47c40c09334c659dff32de"
+    },
+    {
+      "path": "docs/reviews/R149_OHC_SUCCESSOR_INDEPENDENT_REVIEW_2026-11-05.md",
+      "sha256": "8f776ea576270cb45bde2918b101aebe7800608c24e0726152271c29c32213df"
+    },
+    {
+      "path": "docs/work_orders/CCMAI_RUNTIME_150_A1_A2_WINDOWS_VERIFY.md",
+      "sha256": "a7a2b74e1851cdcbd2dba010456e2b0d17a9ade1fdb83518e19d66343a79e398"
+    },
+    {
+      "path": "docs/reviews/R150_A1_A2_WINDOWS_VERIFY_RETURN_2026-11-05.md",
+      "sha256": "820c0035793c3e5b1eaa5c155f108b5403798c34060d148d5992d26fddfb7d10"
+    },
+    {
+      "path": "docs/reviews/R150_INDEPENDENT_WINDOWS_VERIFY_REVIEW_2026-11-05.md",
+      "sha256": "25f9ce7a2704e088840cbe9d8109c3ee815e2f614a18f09c97ccb4c64cee2836"
+    },
+    {
+      "path": "docs/reviews/probes/r150_a1_a2_windows_20261105/windows_verify_raw.json",
+      "sha256": "ec31273f3eb9629a7cfcd8b9e24c2f5ec02fb541fe76e6d1aca26f518b3529e0"
+    },
+    {
+      "path": "docs/reviews/R151_CAUSAL_DIAGNOSIS_AND_DESIGN_2026-11-05.md",
+      "sha256": "15a5275e42c515a53a87641c433eb925705477332311f3822fc5b7b404c4e3a1"
+    },
+    {
+      "path": "docs/reviews/R151_FINAL_SOURCE_BLOCKED_INDEPENDENT_REVIEW_2026-11-05.md",
+      "sha256": "6d6995f0d82703afe856a36ebd6d66ae939d947bea08c1e5abcb80879f428b16"
+    },
+    {
+      "path": "docs/reviews/R151_AMENDMENT_CAUSAL_ASSESSMENT_2026-11-05.md",
+      "sha256": "8c95dcea0cda7f76094f747468b27d05a570ac872dd19c8dd286a668e2b328f6"
+    },
+    {
+      "path": "docs/reviews/R151_INTERRUPTED_AMENDMENT_ROOT_ASSESSMENT_2026-11-06.md",
+      "sha256": "c0705604d227726a025fc76b75217e81d3676bd7ef7f54b36276416029fb8ea6"
+    },
+    {
+      "path": "docs/reviews/R151_EXPIRED_AMENDMENT_INDEPENDENT_REVIEW_2026-11-06.md",
+      "sha256": "cf443882fd06e86d3e0a9c72977f930462d504ccd7240ec7fc37736971e23b68"
+    },
+    {
+      "path": "docs/reviews/R151_PROSPECTIVE_A2_SOURCE_REPAIR_DECISION_2026-11-06.md",
+      "sha256": "5859a55b0e5ba2003a37b668685db4dd39da79ce6df1bd6d3b06a5551de6853e"
+    },
+    {
+      "path": "docs/reviews/R151_PROSPECTIVE_A2_INDEPENDENT_REVIEW_2026-11-06.md",
+      "sha256": "1aa1b7c79ec4ab20073e601e273fc5006de52146cf32c76d7dcd32ede9b53070"
+    },
+    {
+      "path": "docs/reviews/R151_A2_PACKET_INDEPENDENT_REVIEW_2026-11-06.md",
+      "sha256": "7cc09c809eb7d3cfdebfcc1563a11344fec9241d107f76ad040835be16c17ab5"
+    }
+  ],
+  "causeStatus": "UNKNOWN",
+  "causeOrHypothesis": "Observed R150 measurement defects and R151 source verification gap are recorded. Astra statically found an unguarded awaited daemon wait in runner finally; custody save can throw before Chrome cleanup and terminal inventory. Actual occurrence is unproved. R139 aggregate product cause remains UNKNOWN; physical no-relaunch and integrated same-owner/context/original-clock proof remain open.",
+  "remainingChain": [
+    "Prospective same-R151 A2: guard runner cleanup and execute actual runner orchestration in one injected offline test plus final-byte syntax, preserving 4/4 focused tests, 1/2 evidenced syntax and expired Nov5 stop.",
+    "Independent R2 exact-source review and reviewed source manifest before any Windows effect admission.",
+    "Separate finite Windows A1/A2 admission with immediate A3 recapture and exact HTTP/Chrome ownership/cleanup evidence, only after source acceptance.",
+    "Source-backed physical no-relaunch and integrated original owner/context/clock plus E01-E06 review remain necessary for R139/M3."
+  ],
+  "discriminator": {
+    "question": "Can the actual R151 runner preserve Chrome cleanup and terminal inventory after custody persistence failure while retaining A1/A2 controls and zero effects?",
+    "expected": "Only one directly injected exact-runner offline campaign and one final-byte syntax batch may support independent source acceptance; failure or missing proof returns BLOCKED_WITH_REASON. No product outcome follows.",
+    "budgetMinutes": 20
+  },
+  "correctiveAction": "Prospective same-R151 A2 source-only repair: one guarded cleanup/orchestration pass, one actual-runner injected offline test, one final-byte syntax batch within a separate 20 active/30 wall-minute allocation from future committed release. Historical Nov5 stop and 4 tests/1 evidenced syntax stay spent; zero runtime effects.",
+  "owner": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR; Terra 6.1 source-only worker; Astra Medium independent R2 reviewer; Product Owner retains M3 business acceptance.",
+  "cumulativeMinutes": "UNKNOWN",
+  "additionalCeilingMinutes": 20,
+  "stopCondition": "Stop on exact packet/audit/registry mismatch, unreviewed authority, protected path, unexpected corrected test/syntax failure, import side effect, missing direct runner proof, 20 measured active or 30 wall minutes from future release, or any runtime/network/product effect. One new focused test and one new syntax batch only; no retry/reset.",
+  "reopenCondition": "OFFLINE_CAPTURE_ACCEPTED with independent review only permits Root to consider a separate bounded Windows A1/A2 effect admission; an offline failure keeps diagnostic support blocked. R139/M3 stay blocked until actual A1/A2 and independent integrated E06, including physical no-relaunch, are separately evidenced.",
+  "disposition": "REPAIR_ADMITTED",
+  "admittedAction": {
+    "kind": "IMPLEMENT",
+    "selected": [
+      "M3-05",
+      "M3-08"
+    ],
+    "owner": "Terra 6.1 IMPLEMENTATION_WORKER for source-only diagnostic capture",
+    "output": "docs/reviews/R151_SOURCE_WORKER_RETURN_2026-11-05.md",
+    "packet": {
+      "path": "docs/work_orders/CCMAI_RUNTIME_151_EVIDENCE_CAPTURE_REPAIR.md",
+      "sha256": "57a76055fc62aa74ef864ae4972140f6940ccee7553abf61d310b4d1917d8d91"
+    }
+  },
+  "review": {
+    "reviewer": "Astra Medium independent R2 reviewer, separate from Terra source worker and Root audit author",
+    "decision": "ACCEPTED",
+    "evidence": [
+      {
+        "path": "docs/reviews/R151_PROSPECTIVE_A2_INDEPENDENT_REVIEW_2026-11-06.md",
+        "sha256": "1aa1b7c79ec4ab20073e601e273fc5006de52146cf32c76d7dcd32ede9b53070"
+      },
+      {
+        "path": "docs/reviews/R151_A2_CORRECTED_PACKET_INDEPENDENT_REVIEW_2026-11-06.md",
+        "sha256": "d4fbcca3f72e7b0e98bc94960588c529a944b5ddee6feaa35001d3686405e632"
+      }
+    ]
+  }
+}
