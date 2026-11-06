@@ -81,8 +81,8 @@
   },
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "WORK_ORDER",
-  "activePhase": "WORK_ORDER",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -94,9 +94,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-151",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R151_EVIDENCE_CAPTURE_2026-11-05.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-151 A2 WORK_ORDER: Astra independently reviews the exact corrected source-only packet and pending audit; Root reconciles acceptance pin, registry, gates and committed release marker before any Terra edit or test. New 20-active/30-wall clock starts only at future recorded BUILD release. Original Nov5 stop, four tests and one evidenced syntax stay spent. No Chrome/daemon/provider/DB/product effect. R139/M3 blocked; Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-151 A2 BUILD source-only: Terra may perform one guarded runner correction, one exact-runner injected offline test and one final-byte syntax batch after fresh rehydration and role acknowledgment. Release 2026-11-06T07:42:44+07:00; conservative active deadline 2026-11-06T08:02:44+07:00, hard wall 2026-11-06T08:12:44+07:00; stop at the earlier limit. Old Nov5 stop, four tests and one evidenced syntax stay spent. No Chrome/daemon/provider/DB/product/network/socket effect. Astra independent REVIEW follows; R139/M3 blocked, Facebook/Zalo OA parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR / COMMIT_STEWARD / SESSION_SYNC_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER held",
+  "activeRole": "Root ORCHESTRATOR / COMMIT_STEWARD / SESSION_SYNC_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER",
   "updatedAt": "2026-11-06",
   "x-resolvedCoreCommit": "15e39450853184eb65dbde73398c69c3171a6241",
   "x-ownerRoadmapDiscipline": {

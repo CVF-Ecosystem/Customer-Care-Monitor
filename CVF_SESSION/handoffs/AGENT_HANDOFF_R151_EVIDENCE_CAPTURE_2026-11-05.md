@@ -4,11 +4,11 @@ Status: ACTIVE
 
 ## Current State
 
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
-- Active role: Root ORCHESTRATOR / WORK_ORDER_AUTHOR / COMMIT_STEWARD / SESSION_SYNC_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER held
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: Root ORCHESTRATOR / COMMIT_STEWARD / SESSION_SYNC_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER
 - Active tranche: CCMAI-RUNTIME-151
-- Next allowed move: CCMAI-RUNTIME-151 A2 WORK_ORDER: Astra independently reviews the exact corrected source-only packet and pending audit; Root reconciles acceptance pin, registry, gates and committed release marker before any Terra edit or test. New 20-active/30-wall clock starts only at future recorded BUILD release. Original Nov5 stop, four tests and one evidenced syntax stay spent. No Chrome/daemon/provider/DB/product effect. R139/M3 blocked; Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-151 A2 BUILD source-only: Terra may perform one guarded runner correction, one exact-runner injected offline test and one final-byte syntax batch after fresh rehydration and role acknowledgment. Release 2026-11-06T07:42:44+07:00; conservative active deadline 2026-11-06T08:02:44+07:00, hard wall 2026-11-06T08:12:44+07:00; stop at the earlier limit. Old Nov5 stop, four tests and one evidenced syntax stay spent. No Chrome/daemon/provider/DB/product/network/socket effect. Astra independent REVIEW follows; R139/M3 blocked, Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## Transition acknowledgment
@@ -74,6 +74,12 @@ Status: ACTIVE
 
 - Astra accepted the exact source-only A2 packet LF SHA-256 `57a76055fc62aa74ef864ae4972140f6940ccee7553abf61d310b4d1917d8d91` in `docs/reviews/R151_A2_CORRECTED_PACKET_INDEPENDENT_REVIEW_2026-11-06.md`; its prior CHANGES_REQUIRED review remains retained. Root marked the current audit `REPAIR_ADMITTED` and repinned the M3 registry without changing the reviewed packet or substantive causal assessment.
 - Installed1.3 pre-dispatch APPL/COV PASS, pre-commit PASS and portable downstream preflight 7/7 PASS in WORK_ORDER. ROUTE is explicitly NOT_APPLICABLE_WITH_REASON. These static gates do not accept source or runtime behavior. Commit the reviewed material, then record a separate timed BUILD release and Terra acknowledgment before any source edit or test.
+
+## A2 timed BUILD transition acknowledgment
+
+- Terra 6.1 rehydrated the accepted R151 A2 WORK_ORDER at material commit `edb7f4d1432e659a9789e1c57a568835d50b2924` and acknowledged its conditional IMPLEMENTATION_WORKER role, one source pass, one test, one syntax, 20-active/30-wall limit, old four tests/one evidenced syntax and zero effects before this BUILD transition. Sol 6.1 Medium gave read-only cleanup/import guidance; it made no edits or tests.
+- Root now acknowledges ORCHESTRATOR / COMMIT_STEWARD / SESSION_SYNC_STEWARD and records the timed release 2026-11-06T07:42:44+07:00; conservative active deadline 2026-11-06T08:02:44+07:00; hard wall 2026-11-06T08:12:44+07:00. This handoff and accompanying receipt form the material-SHA release marker. Terra must rehydrate this committed marker and explicitly acknowledge the live clock before any edit or test. If measuring active time fails, all release-to-stop elapsed time counts against the 20-minute cap.
+- The official A2 packet stays exact-byte pinned at `57a76055fc62aa74ef864ae4972140f6940ccee7553abf61d310b4d1917d8d91`; the audit registry pin is retained. No Windows/product effect is admitted.
 
 ## Public Export Disposition
 
