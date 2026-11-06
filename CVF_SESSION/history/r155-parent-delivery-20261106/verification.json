@@ -1,0 +1,236 @@
+{
+  "sourceCommit": "ee68e90d3",
+  "sourceWorktreeDirty": false,
+  "manifestRawSha256": "f95b2fb90ab6f578c9bf75f529d76da5f946e860b858fbba0216bde00575ec61",
+  "verifiedFiles": 56,
+  "unhashedDirectories": [
+    "session-state-tree"
+  ],
+  "artifacts": [
+    {
+      "artifactId": "milestone-coverage-machine-contract",
+      "sha256": "28a73f73df1d4d17731ef80ae7595f8bcfc0facf543e1877a023b20a28ff1aec"
+    },
+    {
+      "artifactId": "downstream-gate-profile-migration",
+      "sha256": "2813dcabc3a517541a8cb308e0c1f1e41809f720d055c2023871951aaac52d5a"
+    },
+    {
+      "artifactId": "build-learning-evidence-checklist",
+      "sha256": "ff07ed99360e4cd3a6b3bbb307c4d9326a518649e783bdf608ec8f0b922668b4"
+    },
+    {
+      "artifactId": "downstream-gate-profile-source",
+      "sha256": "cef123ab02f3c4610e14c8b610ef9f2c00d8312d28ff8b72bd3968cb70d09998"
+    },
+    {
+      "artifactId": "downstream-gate-runner-source",
+      "sha256": "6b608a8a138f54b5dfc0462f5845fcf6a5bc916270ada5b0bf6d6909a153b3bd"
+    },
+    {
+      "artifactId": "downstream-gate-common-source",
+      "sha256": "7591d2cbc928eb51dfd677c57951f540b29763446ca06e37f29066b5721b0614"
+    },
+    {
+      "artifactId": "downstream-gate-install-source",
+      "sha256": "4e96952ef312487e5999b0b0d4db85c2eda158e2ac1cbb336beeba6876ddc316"
+    },
+    {
+      "artifactId": "downstream-gate-continuity-source",
+      "sha256": "8ca92bd3c172638728e98f04ed652c32639280d236af5912ae479bb7c38fe571"
+    },
+    {
+      "artifactId": "downstream-gate-applicability-source",
+      "sha256": "bffde44fe38494b0dea9e658fb82eaaec31f3bd25c9964445fa837dd29b01c67"
+    },
+    {
+      "artifactId": "downstream-gate-routing-source",
+      "sha256": "a39419336ea31ec155c285291f3d5684046e8b18d88dbf47c422b3c2c59632cf"
+    },
+    {
+      "artifactId": "downstream-gate-review-source",
+      "sha256": "2558b7635646340a73cb124121802f2f6f123ef96e240146def3e874a002034d"
+    },
+    {
+      "artifactId": "downstream-gate-intake-source",
+      "sha256": "204aacddb1d1b64439508bcfa73c8632842b0bc1f26dcdf3422d1404e1594efc"
+    },
+    {
+      "artifactId": "downstream-gate-coverage-source",
+      "sha256": "d768e60435268da2c8609a928972d1912d369a67d4056924c515d552a4245467"
+    },
+    {
+      "artifactId": "downstream-milestone-coverage-source",
+      "sha256": "14e1efd0acbd54cc9b86f0b33060a6dd57764c16812a07df8e18bca68bfa141f"
+    },
+    {
+      "artifactId": "downstream-repair-convergence-source",
+      "sha256": "7c58133bc73af0b300cb2674768864c5c8ec6680cf7103905f705897faa8d03d"
+    },
+    {
+      "artifactId": "downstream-workspace-activation-source",
+      "sha256": "5000eb79b1ce7cc8c6c5d92c7c5691370225a2a9df36bc070773f05376583431"
+    },
+    {
+      "artifactId": "downstream-gate-precommit-template",
+      "sha256": "547c077163eb64259362a669d1fa6cca7cc4fe06090af3c9286f09557bcf937b"
+    },
+    {
+      "artifactId": "downstream-gate-learning-home-template",
+      "sha256": "b2982c018baedca7f076526221ad6d5d0854dab2f029390d2c7f079ded05930f"
+    },
+    {
+      "artifactId": "downstream-gate-learning-record-template",
+      "sha256": "559d2d50c86fbfc72967d6af5b19df23c5001c48ddaca0a2b423fc574e7250d6"
+    },
+    {
+      "artifactId": "downstream-gate-ci-template",
+      "sha256": "17e2f560e8d79758b4196c5419ab8e3cc089d1bb7570f94a71321c9465b9aa4f"
+    },
+    {
+      "artifactId": "governed-work-lifecycle-standard",
+      "sha256": "d8fabf29c4e251e668759f00f40bf113459f3f3c3629948330bc707436e4394e"
+    },
+    {
+      "artifactId": "roadmap-progress-form",
+      "sha256": "5b72318d26adeef04d5786a7e98fda3c1fd27dccdb88fc8a2de16f502b717c98"
+    },
+    {
+      "artifactId": "roadmap-progress-form-source-snapshot",
+      "sha256": "fcb92c850f1a296e222bb03ab76dc15020943ef6d474dc1a880607773c117164"
+    },
+    {
+      "artifactId": "project-development-application-standard",
+      "sha256": "d06b62387e015160a77658f333882a2a316d54ffd0421071354cf63a3730dd7a"
+    },
+    {
+      "artifactId": "workspace-agents-template",
+      "sha256": "2d7753947fe7515c16a4099bcb0b2aff9519849742b57df5958c866b9319cfc7"
+    },
+    {
+      "artifactId": "guard-orientation-index",
+      "sha256": "675c4c4a2219b53e73dc7f3fb000750eed859019b2521d01ddf66fba3ae00377"
+    },
+    {
+      "artifactId": "workspace-rules-reference",
+      "sha256": "8febc6682a5deba16083a0f456dc16928afe3ecf9bbb0579b1e4bd1daa8f6f0f"
+    },
+    {
+      "artifactId": "product-milestone-coverage-contract",
+      "sha256": "4775ac4add0c35920104b5f7b55e406b8cdb78ccc7772f776d7c451d798db012"
+    },
+    {
+      "artifactId": "workspace-profile-tiers-reference",
+      "sha256": "e33c69df0533878aad627dacbf7a3bb8c0b8cc043eef3088bee8e9947d0e658d"
+    },
+    {
+      "artifactId": "workspace-classification-and-usage-guide",
+      "sha256": "a9468cf9ab9112f645dde026a6c964822c2a2bac8b14cb3adbb3db57dbb93457"
+    },
+    {
+      "artifactId": "workspace-paid-user-authoring-guide",
+      "sha256": "5306daa6d99322bf84316be5f8112d126e884bb30ba8bdc070963f1fd948a2db"
+    },
+    {
+      "artifactId": "workspace-paid-user-safe-onboarding-flow",
+      "sha256": "f4497080af546a5e1cfcef068c822f223f05d7d3cf8259ef7865df1adb8a2087"
+    },
+    {
+      "artifactId": "downstream-agents-template",
+      "sha256": "26a60302b806155c679d4680a915fe9c977f1f366776b30abc87f13cb1cbce1d"
+    },
+    {
+      "artifactId": "workspace-memory-template",
+      "sha256": "7ea711216a2aa63d208bf7dee374eabe15eee661121fd9837795c42a90e014fd"
+    },
+    {
+      "artifactId": "workspace-agent-handoff-template",
+      "sha256": "c2cc54631b8823c811afd0524635a3eaf2d2806185ae1a4be11f3071df71098f"
+    },
+    {
+      "artifactId": "text-encoding-and-symbol-discipline",
+      "sha256": "9d8e232ca3c87a58bbd3f09275e302f59c008de93cc4c3615a95b952e8344f2a"
+    },
+    {
+      "artifactId": "live-run-diagnostic-standard",
+      "sha256": "9568a27a5999a37c0fccc6c89bafcf37e3f0c76a143feeb7721dac6a65bb9cd5"
+    },
+    {
+      "artifactId": "agent-error-learning-philosophy",
+      "sha256": "3cda52976aaa63827d2db83f5d7d5bd509fd9963a8bfa4e80ead22bb128cfcd1"
+    },
+    {
+      "artifactId": "operational-reference-index",
+      "sha256": "a8dac5c8538b3c19e5d6e6442f338420ba55a6babc578165299cd28f9e7474c4"
+    },
+    {
+      "artifactId": "governance-control-matrix",
+      "sha256": "fa68156e3584bd661de805bdedd92a2c9b03160b17a2b2f65c4c4041bac981a3"
+    },
+    {
+      "artifactId": "agent-work-order-template",
+      "sha256": "e8970f1661ecea2b73800d95d5c171dd65dbfa6e7eab1a652857b9fbf174305b"
+    },
+    {
+      "artifactId": "knowledge-absorption-priority-standard",
+      "sha256": "1017ef1ba5236d7ef695295d56d976587c65837482d4579b6908868255f30ecb"
+    },
+    {
+      "artifactId": "template-skill-corpus-rescreen-standard",
+      "sha256": "bcded9cf88e0206fd8b73e05698116db2569d7bc54faebf44211ed00324e5913"
+    },
+    {
+      "artifactId": "non-coder-value-measurement-standard",
+      "sha256": "f76c6423f46fc1314fada27ae75e8fc3012e46d99639aa351b47283ff236cd01"
+    },
+    {
+      "artifactId": "session-governance-bootstrap-reference",
+      "sha256": "3a62039e66d836ea443ff1ceda00dc739c4a7be73ed205085bdbae4751e90043"
+    },
+    {
+      "artifactId": "critical-repository-boundary-reference",
+      "sha256": "e93effc4e97680fe869cec107d628b33e67733d0208c64c0612cb1ea720f2337"
+    },
+    {
+      "artifactId": "knowledge-absorption-priority-checker",
+      "sha256": "a6dac7033891bf5070b8f6772acb53b1cb64a4b57a674cc782cf5dd9ca6d3886"
+    },
+    {
+      "artifactId": "template-skill-standard-checker",
+      "sha256": "059e93eee909e3960ea0009fc955d132724d11b47dd95438d9d90d1f78b5d1c3"
+    },
+    {
+      "artifactId": "gate-to-role-closeability-standard",
+      "sha256": "b3af2fcbd09160d9f2ae88c861bd67d45ba1425bd21e577bf880cb0f1f29ea3c"
+    },
+    {
+      "artifactId": "gate-to-role-closeability-checker",
+      "sha256": "8f00c6421eebe3c1b237e5307ac6e2b0b0343c9a35cf635bbab17aa886e00e8e"
+    },
+    {
+      "artifactId": "adif-0057-entry",
+      "sha256": "bb2c6b6352aa71eee7813af8b436e722bb0f0b0b8d50c32aa60a3e066a4935cc"
+    },
+    {
+      "artifactId": "knowledge-absorption-priority-guard",
+      "sha256": "48a66127e94002d1762007801b4d859ab76c7676916d21ddb826ad791376c4ac"
+    },
+    {
+      "artifactId": "template-skill-standard-guard",
+      "sha256": "b1356dbb87974ee070ec183c4123a5d9a0c219d718bed8e57fad6d3739f2aa2a"
+    },
+    {
+      "artifactId": "provenance-root-agents",
+      "sha256": "2ebe6c1a6847824835d2d0711462f3f69811bc00fa85542e059d6cd4981ecba2"
+    },
+    {
+      "artifactId": "active-versioned-handoff",
+      "sha256": "a9f67572d6ba53517bef5c7fc055e4ed5d70d7a8462be1f7025026a8ae97ce38"
+    },
+    {
+      "artifactId": "session-memory-front-door",
+      "sha256": "2960963f75a00dc7ec99ef8e21e486dfd0f643c1f6757b1f66c21066e9c57b52"
+    }
+  ],
+  "firstAttempt": "Stopped with PermissionError when the verifier treated the declared null-hash continuity directory as a file; no source read or mutation through that path. Corrected to verify hashed file entries only and directory existence separately."
+}

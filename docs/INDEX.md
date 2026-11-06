@@ -5364,6 +5364,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - R154 merge completed; required PR-range coverage gate blocks RC-01 closure.: `CVF_SESSION/tranches/CCMAI-RUNTIME-154.json`
 - Committed R2 dispatcher seed for one bounded repository history reconciliation.: `CVF_SESSION/authority/CCMAI-RUNTIME-154.json`
 - R154 no-commit merge candidate, byte provenance and qualifications; postmerge review records gate hold.: `docs/reviews/R154_WORKER_RETURN_2026-11-06.md`
+- New parent pack ee68e90d3 verified56 hashed files and one directory; no historical fix delivered.: `CVF_SESSION/history/r155-parent-delivery-20261106/verification.json`
+- Bounded uninstalled historical-admission repair proposal authority; no installed gate or parent adoption.: `CVF_SESSION/authority/CCMAI-RUNTIME-155.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

@@ -4,6 +4,8 @@
   "updatedAt": "2026-11-06",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
+    {"id": "r155-proposal-seed-20261106", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-155.json", "status": "ACTIVE", "description": "Bounded uninstalled historical-admission repair proposal authority; no installed gate or parent adoption."},
+    {"id": "r155-parent-source-verification-20261106", "family": "continuity", "path": "CVF_SESSION/history/r155-parent-delivery-20261106/verification.json", "status": "ACTIVE", "description": "New parent pack ee68e90d3 verified56 hashed files and one directory; no historical fix delivered."},
     {"id": "r154-postmerge-gate-hold-20261106", "family": "continuity", "path": "docs/reviews/R154_POSTMERGE_PROVENANCE_AND_GATE_HOLD_2026-11-06.md", "status": "ACTIVE", "description": "Independent R2 merge provenance acceptance and required installed PR-range coverage hold."},
     {"id": "r154-worker-return-20261106", "family": "continuity", "path": "docs/reviews/R154_WORKER_RETURN_2026-11-06.md", "status": "ACTIVE", "description": "R154 no-commit merge candidate, byte provenance and qualifications; postmerge review records gate hold."},
     {"id": "r154-cloud-r150-provenance-20261106", "family": "continuity", "path": "CVF_SESSION/history/r150-cloud-errata-4164a28d/provenance.json", "status": "ACTIVE", "description": "Archived cloud R150 seed, tranche and original handoff identities, separate from canonical Windows R150."},

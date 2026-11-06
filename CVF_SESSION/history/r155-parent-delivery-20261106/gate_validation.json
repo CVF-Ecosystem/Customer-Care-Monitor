@@ -1,0 +1,11 @@
+{
+  "unitCommand": "python -B -m unittest discover -s scripts/tests -p \"test_cvf_downstream_gate*.py\"",
+  "unitResult": "OK",
+  "tests": 130,
+  "elapsedSeconds": 369.257,
+  "exitCode": 0,
+  "scope": "Unchanged installed1.3 gate unit suite before R155 seed commit; no runtime governance proof",
+  "installedPreCommit": "PASS; APPL and ROLE explicitly NOT_APPLICABLE_WITH_REASON, COV checked exact R154 packet",
+  "portablePreflight": "PASS7/7",
+  "publicDoctor": "FAIL27/28; INST LOCK_INVALID only, COV PASS"
+}

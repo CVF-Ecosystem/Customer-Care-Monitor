@@ -3,6 +3,10 @@
 Memory class: POINTER_RECORD
 
 <!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md", "activeTranche": "CCMAI-RUNTIME-154", "parked": true} -->
+## R154 main-merge observation and R155 intake — 2026-11-06
+
+PR21 is already merged on main at e38d6795; prior draft/unmerged statements below retain their historical observation scope. R154/RC-01 stays BUILD_BLOCKED on original f7405c47 range failure. Root detected BLOCKED_CONTINUITY_DRIFT and reconciled canonical next-move text before further work. Parent ee68e90d3 delivers no fix (repair module unchanged); installed1.3 retained. User authorizes Terra6.1 High, Sol6.1 Medium when hard and Root orchestrator/reviewer. R155 seed bounds one uninstalled project-local fix proposal; no parent/gate adoption, runtime or product effect. All R139/R151/R150 holds, spent costs/UNKNOWNs and accounts parking persist.
+
 ## Current R154 repository reconciliation BUILD_BLOCKED - 2026-11-06
 
 - Current mode: BUILD

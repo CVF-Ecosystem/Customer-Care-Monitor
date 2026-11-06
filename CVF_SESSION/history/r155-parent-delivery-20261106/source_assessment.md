@@ -1,0 +1,9 @@
+# R155 supplemental application assessment
+
+Root records source ee68e90d3 separately from public Core c4c8767 and installed profile1.3. Verified manifest raw SHA256 f95b2fb90ab6f578c9bf75f529d76da5f946e860b858fbba0216bde00575ec61; 56 file hashes matched, one continuity directory has null hash and only existence checked. No folder-hash claim.
+
+Project-development application standard SHA256 d06b62387e015160a77658f333882a2a316d54ffd0421071354cf63a3730dd7a; common roadmap form1.4 SHA256 5b72318d26adeef04d5786a7e98fda3c1fd27dccdb88fc8a2de16f502b717c98. Their connection is applied in existing R155 task brief: consumer/outcome -> actual historical-action defect -> reuse existing validator/native Git ancestry -> exact source and admission conditions -> bounded candidate fixtures -> owned parent acceptance/delivery/adoption remainder. No competing roadmap/registry is introduced. RC-01 authoritative criterion stays mandatory and BLOCKED; M1–M5 criteria remain unchanged. Root owns admission/review and Terra proposal implementation; Sol independent design review. Costs/time UNKNOWN retained; no test-count progress or promised date.
+
+Public doctor this intake returned FAIL27/28: only INST/LOCK_INVALID (public1.2 versus installed1.3); COV PASS, not COV_OBJECT_SHAPE. All public path, remote, kit, origin/main, clean/core manifest and catalog checks PASS. This is neither full doctor PASS nor live governance proof. Exact installed1.3 runner pins remain the pre-commit/packet route. No parent1.4 adoption.
+
+Knowledge ingestor is absent from project scripts but resolves at pinned public Core scripts/ingest_cvf_downstream_knowledge.ps1. It is invoked from project cwd with output under ignored .cvf/runtime/r155; no source or project knowledge file rewritten. Source folder is bootstrap guidance, no project-domain knowledge.

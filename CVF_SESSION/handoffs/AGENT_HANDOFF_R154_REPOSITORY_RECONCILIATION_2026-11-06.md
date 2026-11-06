@@ -9,7 +9,7 @@ Disposition: BUILD_BLOCKED_REQUIRED_RANGE_GATE
 - Active phase: BUILD
 - Active role: Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD for blocked disposition; Astra Medium independent R2 REVIEWER; Terra 6.1 worker returned
 - Active tranche: CCMAI-RUNTIME-154
-- Next allowed move: CCMAI-RUNTIME-154 BUILD_BLOCKED: draft PR #21 carries merged branch 229d98b3 and R150 provenance. Hosted gate run 42195844783 confirms COV_REPAIR_ACTION_MISMATCH on historical R150 versus current R151 audit. Obtain a parent-reviewed historical admission binding and deliberately pinned gate delivery before RC-01 closure or main merge. R153 FROZEN, R152 DRAFT, R151 BUILD_BLOCKED, R139/M3 blocked, R150 Windows INCONCLUSIVE with spent effects and cleanup UNKNOWN, accounts parked.
+- Next allowed move: CCMAI-RUNTIME-154 BUILD_BLOCKED: PR #21 is already merged on main at e38d679548bdc80ba9f4bc10a2e0d09056a2189f; this is observed repository history, not gate acceptance. Original f7405c47 range failure remains unresolved. Parent delivery ee68e90d3 has no historical-admission fix; preserve installed1.3. Root prepares separately bounded R155 uninstalled proposal and independent review before any parent delivery/adoption. R153 FROZEN, R152 DRAFT, R151 BUILD_BLOCKED, R139/M3 blocked, R150 INCONCLUSIVE with spent effects and cleanup UNKNOWN, accounts parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## Transition acknowledgment
@@ -39,3 +39,7 @@ R153's 12-file source pass is consumed and M2 remains OPEN/UNKNOWN. R152 profile
 ## Public Export Disposition
 
 DEFERRED_PRIVATE_ONLY
+
+## Observed main merge and successor intake — 2026-11-06
+
+Root freshly rehydrated canonical continuity and observed main/origin-main e38d679548bdc80ba9f4bc10a2e0d09056a2189f (GitHub merge of PR21, parents f7405c47 and 9ea1cfaf, commit time 17:35:05 +07). The earlier draft/unmerged statement above is historical observation, superseded here; no actor attribution or successful gate is inferred. BLOCKED_CONTINUITY_DRIFT was detected and dependent BUILD held until this synchronization. Root is ORCHESTRATOR / SPEC_AUTHOR / WORK_ORDER_AUTHOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD for successor preparation. User assigns Root independent review of Terra work; historical Astra reviews remain unchanged. R154/RC-01 remains BUILD_BLOCKED. Public doctor is FAIL27/28 with only LOCK_INVALID, COV PASS; never full doctor PASS. Parent ee68e90d3 verifies 56 hashed files and one unhashed continuity directory; repair module equals installed normalized7c58133b, so profile1.4 is not adopted. R155 seed authorizes only project-local uninstalled proposal/tests after independent design review and committed dispatch. No worker BUILD yet.
