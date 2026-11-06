@@ -8,7 +8,7 @@ Status: ACTIVE
 - Active phase: BUILD
 - Active role: Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER held
 - Active tranche: CCMAI-RUNTIME-151
-- Next allowed move: CCMAI-RUNTIME-151 BUILD_BLOCKED with independently accepted V04 causal/cost audit: REVIEW_COST_ESCALATION_REQUIRED before a third correction. Root may prepare a bounded read-only design/verification packet for one shared production close/timeout/launch seam and independent review; no source edit, test, syntax, Windows effect or product claim. Five cumulative focused tests and two evidenced syntax batches spent; prior active minutes UNKNOWN. R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-151 BUILD_BLOCKED. V04 production replacement/finalization design is independently accepted at design scope only. Root must resolve REVIEW_COST_ESCALATION_REQUIRED with an explicit cost/route decision before any third source correction; Terra remains held. No source edit, test, syntax, Windows effect or product claim is released. Five focused tests and two syntax batches spent; prior active minutes UNKNOWN. R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## Transition acknowledgment
@@ -96,6 +96,12 @@ Status: ACTIVE
 
 - Root distinguished the A1 helper-only proof gap from A2's partially improved actual cleanup proof and still substituted production replacement timeout callback in `docs/reviews/R151_V04_CAUSAL_CHAIN_AND_COST_AUDIT_2026-11-06.md`. Astra independently accepted the causal/cost audit only in `docs/reviews/R151_V04_CAUSAL_AUDIT_INDEPENDENT_REVIEW_2026-11-06.md`; source and product remain blocked.
 - A prospective third R151 source correction without a new independent root cause triggers `REVIEW_COST_ESCALATION_REQUIRED`. Root records that stop now. The spent A2 audit/registry admission cannot fund another source pass. Only bounded read-only design/verification preparation for a shared production close/timeout/launch seam and independent review is the next move. Historical five tests, two evidenced syntax batches, expired Nov5 stop, A2 one-test/one-syntax exhaustion and UNKNOWN active minutes persist.
+
+## V04 read-only design review and cost hold - 2026-11-06
+
+- Root rehydrated the R151 BUILD_BLOCKED continuity and transitioned to SPEC_AUTHOR for one same-tranche read-only design in `docs/reviews/R151_V04_PRODUCTION_SEAM_DESIGN_2026-11-06.md`. It proposes a shared production replacement transaction, actual production timeout mutation discriminator, and shared finalization/consumer paths. No source, fixture, syntax or runtime effect followed.
+- Astra's first and corrected-design reviews each returned CHANGES_REQUIRED on terminal persisted PASS ambiguity. Both findings remain in `docs/reviews/R151_V04_PRODUCTION_SEAM_DESIGN_INDEPENDENT_REVIEW_2026-11-06.md` and `docs/reviews/R151_V04_PRODUCTION_SEAM_CORRECTED_DESIGN_INDEPENDENT_REVIEW_2026-11-06.md`. Root corrected the same design artifact with an independently verifiable candidate and separate immutable acceptance seal; no rollback after I/O failure is assumed.
+- Astra independently accepted the exact final design LF SHA-256 `61791ff0aa88f7a24a10a17c5d20b484cfa7eb7f1caf69a1d2833b0ef4a4159a` in `docs/reviews/R151_V04_PRODUCTION_SEAM_SEALED_DESIGN_INDEPENDENT_REVIEW_2026-11-06.md` at DESIGN scope only. This is not source, Windows filesystem, product or governance proof. Review cost escalation remains unresolved; no third repair is released. Root resumes ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD, Terra held. Five tests and two syntax batches remain spent; prior active minutes UNKNOWN.
 
 ## Public Export Disposition
 

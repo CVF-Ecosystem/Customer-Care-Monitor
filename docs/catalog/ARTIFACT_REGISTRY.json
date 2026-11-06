@@ -1,9 +1,13 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "updatedAt": "2026-11-05",
+  "updatedAt": "2026-11-06",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
+    {"id": "r151-v04-production-seam-design-20261106", "family": "continuity", "path": "docs/reviews/R151_V04_PRODUCTION_SEAM_DESIGN_2026-11-06.md", "status": "ACTIVE", "description": "R151 V04 production replacement and finalization seam design; accepted at design scope only."},
+    {"id": "r151-v04-design-first-review-20261106", "family": "continuity", "path": "docs/reviews/R151_V04_PRODUCTION_SEAM_DESIGN_INDEPENDENT_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "First independent R151 V04 design review, CHANGES_REQUIRED on terminal persisted PASS ambiguity."},
+    {"id": "r151-v04-design-corrected-review-20261106", "family": "continuity", "path": "docs/reviews/R151_V04_PRODUCTION_SEAM_CORRECTED_DESIGN_INDEPENDENT_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Second independent R151 V04 design review, CHANGES_REQUIRED on post-replacement readback failure."},
+    {"id": "r151-v04-design-sealed-review-20261106", "family": "continuity", "path": "docs/reviews/R151_V04_PRODUCTION_SEAM_SEALED_DESIGN_INDEPENDENT_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Independent R151 sealed-design acceptance only; third repair and runtime remain held."},
     {"id": "r150-a1a2-audit-review-20261105", "family": "continuity", "path": "docs/reviews/R150_INDEPENDENT_A1_A2_AUDIT_REVIEW_2026-11-05.md", "status": "ACTIVE", "description": "Independent R2 acceptance of exact finite A1/A2 audit/work-order admission only; no runtime result."},
     {"id": "r150-a1a2-helper-review-20261105", "family": "continuity", "path": "docs/reviews/R150_INDEPENDENT_HELPER_REVIEW_2026-11-05.md", "status": "ACTIVE", "description": "Independent static review of fixed Windows A1/A2 helpers; actual runtime result remains unobserved."},
     {"id": "r150-a1a2-runtime-review-20261105", "family": "continuity", "path": "docs/reviews/R150_INDEPENDENT_WINDOWS_VERIFY_REVIEW_2026-11-05.md", "status": "ACTIVE", "description": "Independent R2 acceptance of INCONCLUSIVE A1-b return; terminal Chrome descendant cleanup UNKNOWN."},
@@ -5549,7 +5553,7 @@
       "family": "continuity",
       "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R151_EVIDENCE_CAPTURE_2026-11-05.md",
       "status": "ACTIVE",
-      "description": "Active R151 BUILD_BLOCKED pointer with accepted V04 audit and cost escalation before another repair; R139/M3 blocked."
+      "description": "Active R151 BUILD_BLOCKED pointer with reviewed V04 design and unresolved cost escalation; R139/M3 blocked."
     },
     {
       "id": "r060-work-order",

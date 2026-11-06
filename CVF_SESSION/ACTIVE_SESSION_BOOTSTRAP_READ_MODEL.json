@@ -83,7 +83,7 @@
   "activePhase": "BUILD",
   "activeTranche": "CCMAI-RUNTIME-151",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R151_EVIDENCE_CAPTURE_2026-11-05.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-151 BUILD_BLOCKED with independently accepted V04 causal/cost audit: REVIEW_COST_ESCALATION_REQUIRED before a third correction. Root may prepare a bounded read-only design/verification packet for one shared production close/timeout/launch seam and independent review; no source edit, test, syntax, Windows effect or product claim. Five cumulative focused tests and two evidenced syntax batches spent; prior active minutes UNKNOWN. R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, Facebook/Zalo OA parked.",
+  "nextAllowedMove": "CCMAI-RUNTIME-151 BUILD_BLOCKED. V04 production replacement/finalization design is independently accepted at design scope only. Root must resolve REVIEW_COST_ESCALATION_REQUIRED with an explicit cost/route decision before any third source correction; Terra remains held. No source edit, test, syntax, Windows effect or product claim is released. Five focused tests and two syntax batches spent; prior active minutes UNKNOWN. R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, Facebook/Zalo OA parked.",
   "activeRole": "Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER held",
   "updatedAt": "2026-11-06",
   "schemaVersion": "1.0",

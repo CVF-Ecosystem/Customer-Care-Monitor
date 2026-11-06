@@ -9,7 +9,7 @@ Memory class: POINTER_RECORD
 - Current mode: BUILD
 - Active phase: BUILD
 
-R151 A2 candidate remains unaccepted after independent V04 review despite 52-PASS fixture, final syntax and source-level V06 static review. Root causal/cost audit `docs/reviews/R151_V04_CAUSAL_CHAIN_AND_COST_AUDIT_2026-11-06.md` was independently accepted by Astra in `docs/reviews/R151_V04_CAUSAL_AUDIT_INDEPENDENT_REVIEW_2026-11-06.md`: A2 tests real cleanup but replacement timeout still uses a test-authored callback, so production close/wait/launch integration is unproved. Five focused tests and two syntax batches cumulatively evidenced, earlier active minutes UNKNOWN; original Nov5 stop and A2 test/source allowance spent. `REVIEW_COST_ESCALATION_REQUIRED` before a third correction without a new independent cause. Next only bounded read-only design/verification packet and independent review; no source edit/test/Windows effect. R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, R139/M3 blocked and Facebook/Zalo OA parked.
+R151 A2 candidate remains unaccepted after independent V04 review despite 52-PASS fixture, final syntax and source-level V06 static review. Root causal/cost audit `docs/reviews/R151_V04_CAUSAL_CHAIN_AND_COST_AUDIT_2026-11-06.md` was independently accepted by Astra: A2 tests real cleanup but replacement timeout still uses a test-authored callback, so production close/wait/launch integration is unproved. Root's read-only production-seam design received two retained CHANGES_REQUIRED reviews before Astra accepted its final exact bytes in `docs/reviews/R151_V04_PRODUCTION_SEAM_SEALED_DESIGN_INDEPENDENT_REVIEW_2026-11-06.md` at design scope only. Five focused tests and two syntax batches cumulatively evidenced, earlier active minutes UNKNOWN; original Nov5 stop and A2 allowance spent. `REVIEW_COST_ESCALATION_REQUIRED` requires an explicit cost/route decision before a third source correction; no worker edit/test/Windows effect released. R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, R139/M3 blocked and Facebook/Zalo OA parked.
 
 Root ORCHESTRATOR / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Terra 6.1 IMPLEMENTATION_WORKER held
 
@@ -191,7 +191,7 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 - Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R151_EVIDENCE_CAPTURE_2026-11-05.md
 
-CCMAI-RUNTIME-151 BUILD_BLOCKED; independently accepted V04 causal/cost audit requires REVIEW_COST_ESCALATION_REQUIRED before a third correction. Only bounded read-only design/verification preparation is next. Five focused tests/two syntax batches evidenced, prior active minutes UNKNOWN, no new worker/effect allowance. R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and Facebook/Zalo OA parked.
+CCMAI-RUNTIME-151 BUILD_BLOCKED; V04 production replacement/finalization design independently accepted at design scope only after two retained CHANGES_REQUIRED reviews. Root must resolve REVIEW_COST_ESCALATION_REQUIRED through an explicit cost/route decision before a third source correction. Five focused tests/two syntax batches evidenced, prior active minutes UNKNOWN, no new worker/effect allowance. R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and Facebook/Zalo OA parked.
 
 ### Historical pre-G0 checkpoint — superseded 2026-10-27
 
