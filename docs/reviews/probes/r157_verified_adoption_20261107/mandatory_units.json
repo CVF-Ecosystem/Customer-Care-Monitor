@@ -1,0 +1,17 @@
+{
+  "command": "python -B -m unittest discover -s scripts/tests -p 'test_cvf_downstream_gate*.py'",
+  "exitCode": 0,
+  "methods": 131,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "seconds": 1037.816,
+  "sourceFrozenBeforeAfter": {
+    "scripts/cvf_downstream_gate.py": "fb15a1f7a63f3554a3ba6a795e026e8e54be4ceb11fd642ff8dce5c579ba32d8",
+    "scripts/tests/test_cvf_downstream_gate_profile_compatibility.py": "4696f5158eac15d7b03760eb405b8a9ef78f230d4b83829d89c57baa0eb771cf"
+  },
+  "staticLoaderCount": 131,
+  "functionalInvocationOrdinal": 4,
+  "retainedOutputSha256": "6f10c7f1ac68c21d5f3ab06cf478a86e1719aaaca814ab27534fc96419c26726",
+  "claimBoundary": "Static local repository gate and tamper fixtures only; no provider/runtime AI governance or hostedCI proof"
+}

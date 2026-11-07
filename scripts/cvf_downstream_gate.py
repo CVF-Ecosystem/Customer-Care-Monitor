@@ -83,7 +83,8 @@ ALLOW_MARKER = "cvf-allow-secret-fixture"
 # declarations and backtick-wrapped values are judged by the same grammar as CVF-DG-APPL-01.
 _WORK_ORDER_GRAMMAR_ID = "cvf.workOrderStatusGrammar@1.0.0"
 _COMPATIBLE_PROFILE_LOCK_IDS = frozenset((
-    "cvf.downstreamGateProfile@1.1.0", "cvf.downstreamGateProfile@1.2.0", "cvf.downstreamGateProfile@1.3.0"))
+    "cvf.downstreamGateProfile@1.1.0", "cvf.downstreamGateProfile@1.2.0", "cvf.downstreamGateProfile@1.3.0",
+    "cvf.downstreamGateProfile@1.4.1"))
 _MAINTENANCE_TRANCHE = "CCMAI-RUNTIME-139"
 _MAINTENANCE_BASE = "cdf3554da9e4359488f9f8dd389be9d16d11e302"
 _MAINTENANCE_ADMISSION = (

@@ -50,10 +50,10 @@
   "bootstrapException": false,
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md",
   "baseCommit": "e3335dff0cb9b2f0d3345b229131e503a96d805d",
-  "status": "BUILD",
-  "phase": "BUILD",
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "ACTIVE",
+  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
   "buildCommit": null,
   "reviewEvidence": [],
   "disposition": "PENDING",
@@ -61,6 +61,7 @@
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ]
 }

@@ -1,0 +1,16 @@
+{
+  "observedCause": "Root proposed installed bundle from every source-family file; native installer correctly reported CI reconciliation required for installed18-file digest",
+  "initialPin": "c9eba034434337aa66f10bf4855ddf23ae729aac46cc94b7d8d514b4b25fe6df",
+  "correctNativeInstalledBundle": "d7e56f089a3ba9ca289953caeb7fa452cefde371b9ab82a793baf3552169654f",
+  "installedFiles": 18,
+  "sourceBytesChanged": false,
+  "lockHandEdited": false,
+  "finiteCheck": "Independent exact installedFiles source hash map equaled18 native installed files and lock; correct CI pin; trusted bootstrap/pre-dispatch and independent Terra review still required",
+  "owner": "Root metadata; Terra independent reviewer",
+  "stop": "Any other source/hash/gate mismatch holds Sol; no gate waiver",
+  "originalFailureRetained": true,
+  "helperFailures": [
+    "UTF8BOM before native install",
+    "partial helper finish missing core variable; no repeated installer"
+  ]
+}

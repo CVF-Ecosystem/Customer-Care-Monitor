@@ -1,0 +1,15 @@
+{
+  "action": {
+    "packet": "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md",
+    "sha256": "3628c6c3e807262304998e686b49bbbfddc610b7ce632eb4ae2cc2555e57314b",
+    "criteria": [
+      "RC-01"
+    ]
+  },
+  "purpose": "INVOCATION",
+  "controlId": "CVF-DG-APPL-01",
+  "reviewer": "Root reviewed configured invocation and verified installed source bytes; independent Terra final review pending",
+  "authority": "R157 immutable seed e3335dff and reviewed packet777b3058; native installer BUILD7d29796c; final independent Terra review required before Sol",
+  "decision": "ACCEPTED",
+  "claimBoundary": "Static configured control invocation/source identity; actual native gate result separately retained; no runtime AI governance claim."
+}

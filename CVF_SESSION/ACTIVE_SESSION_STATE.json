@@ -81,8 +81,8 @@
   },
   "schemaVersion": "1.0",
   "projectName": "Customer-Care-Monitor-AI",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -94,9 +94,9 @@
   ],
   "activeTranche": "CCMAI-RUNTIME-157",
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R157_VERIFIED_ADOPTION_2026-11-07.md",
-  "nextAllowedMove": "CCMAI-RUNTIME-157 BUILD: Root executes admitted verified native1.4.1 installer, officialCore68 repin, explicit operator-local ACT/source policy and CI historical pins. Sol remains unreleased until trusted new-pack bootstrap and explicit packet pre-dispatch PASS and independent Terra adoption review; then exact1.4.1 portable compatibility change only. Original f740 range must PASS before RC-01 closure. R139/M3/R151 HOLD, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, spent effects and FB/Zalo parked; no provider/push/release/runtime.",
+  "nextAllowedMove": "CCMAI-RUNTIME-157 REVIEW: Sol exact1.4.1 compatibility source returned and independently reviewed by Root; native adoption metadata independently accepted by Terra. Complete mandatoryunits and exact scope/precommit checks, commit reviewed adoption, then verify actual original f740..newHEAD allcandidates before RC-01 closure. No provider/push/release/runtime; R139/M3/R151 HOLD, R150 INCONCLUSIVE/A2 UNRUN/cleanupUNKNOWN, spent effects and FB/Zalo parked.",
   "parkedOperatorCheckpoint": "OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS: Facebook account and Zalo OA account setup/credentials/connectivity/live tests parked until owner resumes; prior local acceptance preserved.",
-  "activeRole": "Root ORCHESTRATOR / native INSTALLATION_STEWARD / SESSION_SYNC_STEWARD / COMMIT_STEWARD; Sol not released; Terra independent adoption REVIEWER",
+  "activeRole": "Root independent Sol-code REVIEWER / COMMIT_STEWARD / SESSION_SYNC_STEWARD; Sol stopped; Terra independent Root-adoption REVIEWER",
   "updatedAt": "2026-11-07",
   "x-resolvedCoreCommit": "15e39450853184eb65dbde73398c69c3171a6241",
   "x-ownerRoadmapDiscipline": {

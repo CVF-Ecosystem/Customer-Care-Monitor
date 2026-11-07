@@ -1,0 +1,28 @@
+{
+  "original75MinuteSegment": "UNKNOWN_RETAINED",
+  "additionalAllowanceSeconds": 5400,
+  "priorSourceConsumedSeconds": 4847.7579525,
+  "terraAdoptionReviewTurnSeconds": [
+    77.297,
+    59.41,
+    46.488,
+    71.362,
+    76.908
+  ],
+  "terraChargedSeconds": 331.465,
+  "consumedSeconds": 5273.1299525,
+  "remainingSeconds": 126.8700474999996,
+  "consolidatedWorkerInvocationsUsed": 4,
+  "consolidatedWorkerCeiling": 4,
+  "targetedRepairInvocationsUsed": 1,
+  "targetedRepairCeiling": 1,
+  "priorRepairSegmentOverrunSeconds": 4.3105933,
+  "source": "Codex app read_thread lifecycle durationMs, all completed turns; worker self-reported UNKNOWN/shorter wall intervals retained and superseded by externally measured full lifecycle",
+  "meteringUncertainty": "Original75 UNKNOWN; providerbilling/token/root orchestration total UNKNOWN; no reset",
+  "solCompatibilityLifecycleSeconds": 93.907,
+  "solSelfReportedSeconds": 76,
+  "solDeclaredSegmentCeilingSeconds": 90,
+  "solSegmentOverrunSeconds": 3.907,
+  "consolidated4Status": "PASS_131_OF_131_NO_SKIPS_ROOT_INDEPENDENT_MANDATORY_REVIEW",
+  "additionalAutomaticWorkerInvocationsAllowed": 0
+}

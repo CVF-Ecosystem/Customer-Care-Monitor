@@ -103,6 +103,14 @@ def _load_returned_adapter():
 
 
 class CanonicalMappings(unittest.TestCase):
+    def test_profile_141_all_canonical_mappings_use_pinned_classifier(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            _make_lock(tmp, profile_id="cvf.downstreamGateProfile@1.4.1")
+            for ts, ws in CANONICAL.items():
+                with self.subTest(tranche_status=ts, wo_status=ws):
+                    r = _run_opt_in(tmp, ts, ws)
+                    self.assertFalse(r.problems, r.problems)
+
     def test_profile_12_uses_same_pinned_status_classifier(self):
         with tempfile.TemporaryDirectory() as tmp:
             _make_lock(tmp, profile_id="cvf.downstreamGateProfile@1.2.0")
@@ -211,10 +219,12 @@ class UnknownGrammar(unittest.TestCase):
 
 class MissingOrWrongLock(unittest.TestCase):
     def test_future_profile_rejects_opt_in(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            _make_lock(tmp, profile_id="cvf.downstreamGateProfile@1.4.0")
-            r = _run_opt_in(tmp, "BUILD", "ACTIVE")
-            self.assertTrue(any("known compatible" in p for p in r.problems))
+        for profile_id in ("cvf.downstreamGateProfile@1.4.0", "cvf.downstreamGateProfile@1.4.2"):
+            with self.subTest(profile_id=profile_id):
+                with tempfile.TemporaryDirectory() as tmp:
+                    _make_lock(tmp, profile_id=profile_id)
+                    r = _run_opt_in(tmp, "BUILD", "ACTIVE")
+                    self.assertTrue(any("known compatible" in p for p in r.problems))
 
     def test_no_lock_file_rejects_opt_in(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -244,14 +254,16 @@ class PinnedClassifierIntegrity(unittest.TestCase):
         return os.path.join(tmp, *lock["gatesDir"].split("/"), CHECKER)
 
     def test_tampered_classifier_copy_is_refused_before_import(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            lock = _make_lock(tmp)
-            marker = os.path.join(tmp, "executed.flag")
-            with open(self._gates_checker(tmp, lock), "a", encoding="utf-8") as fh:
-                fh.write("\nopen(%r, 'w').write('x')\n" % marker)
-            r = _run_opt_in(tmp, "BUILD", "ACTIVE")
-            self.assertTrue(any("lock pin" in p for p in r.problems), r.problems)
-            self.assertFalse(os.path.exists(marker), "tampered code must not execute")
+        for profile_id in (PROFILE_LOCK_ID, "cvf.downstreamGateProfile@1.4.1"):
+            with self.subTest(profile_id=profile_id):
+                with tempfile.TemporaryDirectory() as tmp:
+                    lock = _make_lock(tmp, profile_id=profile_id)
+                    marker = os.path.join(tmp, "executed.flag")
+                    with open(self._gates_checker(tmp, lock), "a", encoding="utf-8") as fh:
+                        fh.write("\nopen(%r, 'w').write('x')\n" % marker)
+                    r = _run_opt_in(tmp, "BUILD", "ACTIVE")
+                    self.assertTrue(any("lock pin" in p for p in r.problems), r.problems)
+                    self.assertFalse(os.path.exists(marker), "tampered code must not execute")
 
     def test_missing_classifier_file_is_refused(self):
         with tempfile.TemporaryDirectory() as tmp:

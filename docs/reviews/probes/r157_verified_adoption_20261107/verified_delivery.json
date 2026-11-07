@@ -8,8 +8,31 @@
   "pins": {
     "profileSha256": "3e14e4ad99a18416752b4666c4f0bed4cc7436068ef6e1c8768f34505e566c1f",
     "runnerSha256": "f21777579758f152ddad55f153edd1921162ac16ed24788943638fc1602669c1",
-    "bundleSha256": "c9eba034434337aa66f10bf4855ddf23ae729aac46cc94b7d8d514b4b25fe6df"
+    "bundleSha256": "d7e56f089a3ba9ca289953caeb7fa452cefde371b9ab82a793baf3552169654f"
   },
   "profileId": "cvf.downstreamGateProfile@1.4.1",
-  "publicCoreCommit": "68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6"
+  "publicCoreCommit": "68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6",
+  "initialIncorrectInstalledBundlePin": "c9eba034434337aa66f10bf4855ddf23ae729aac46cc94b7d8d514b4b25fe6df",
+  "initialPinCause": "Root computed every source-family file, not profile installedFiles; native installer correctly exposed discrepancy",
+  "installedFileCount": 18,
+  "installedFilesVerified": {
+    "cvf_downstream_gate_profile.json": "3e14e4ad99a18416752b4666c4f0bed4cc7436068ef6e1c8768f34505e566c1f",
+    "cvf_downstream_gate_runner.py": "f21777579758f152ddad55f153edd1921162ac16ed24788943638fc1602669c1",
+    "cvf_dg_common.py": "3f804a2d39fe1763533a931b0c3d7ec1009c248ef387ec05b24eb21c5c95e828",
+    "cvf_dg_install.py": "4e96952ef312487e5999b0b0d4db85c2eda158e2ac1cbb336beeba6876ddc316",
+    "cvf_dg_continuity.py": "8ca92bd3c172638728e98f04ed652c32639280d236af5912ae479bb7c38fe571",
+    "cvf_dg_applicability.py": "bffde44fe38494b0dea9e658fb82eaaec31f3bd25c9964445fa837dd29b01c67",
+    "cvf_dg_routing.py": "a39419336ea31ec155c285291f3d5684046e8b18d88dbf47c422b3c2c59632cf",
+    "cvf_dg_review.py": "2558b7635646340a73cb124121802f2f6f123ef96e240146def3e874a002034d",
+    "cvf_dg_intake.py": "204aacddb1d1b64439508bcfa73c8632842b0bc1f26dcdf3422d1404e1594efc",
+    "cvf_dg_coverage.py": "d768e60435268da2c8609a928972d1912d369a67d4056924c515d552a4245467",
+    "check_gate_to_role_closeability.py": "8f00c6421eebe3c1b237e5307ac6e2b0b0343c9a35cf635bbab17aa886e00e8e",
+    "git-pre-commit.template": "547c077163eb64259362a669d1fa6cca7cc4fe06090af3c9286f09557bcf937b",
+    "project_learning_home.template.md": "b2982c018baedca7f076526221ad6d5d0854dab2f029390d2c7f079ded05930f",
+    "project_learning_record.template.md": "559d2d50c86fbfc72967d6af5b19df23c5001c48ddaca0a2b423fc574e7250d6",
+    "cvf_milestone_coverage.py": "1ebace5ec131023eb1787b164bf1958805421e29fcae2665ddd8e8f1a784dbbe",
+    "cvf_repair_convergence.py": "67f3e364491fee1c0185d259eefc30dedb9f00536f0abffa153728ca08944d42",
+    "cvf_historical_admissions.py": "f5da07ddaa7e6e7c87345758ef030e7f8e3d8328d7a9cad95ca1da06fe78196d",
+    "cvf_workspace_activation.py": "5000eb79b1ce7cc8c6c5d92c7c5691370225a2a9df36bc070773f05376583431"
+  }
 }

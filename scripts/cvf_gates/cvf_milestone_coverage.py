@@ -33,11 +33,14 @@ def _repair():
     return module
 
 
-def _repair_api(packet_path=None, packet_text=None):
+def _repair_api(packet_path=None, packet_text=None, strict=False):
     cache = {}
     def bounded_read(root, path):
         key = (str(root.resolve()), path)
         if key not in cache:
+            if strict:
+                from cvf_historical_admissions import Reader
+                Reader(root, SimpleNamespace(need=need)).safe(path)
             raw = read_file(root, path)
             need(len(cache) < 128 and sum(map(len, cache.values())) + len(raw) <= 16 * MAX_BYTES,
                  "COV_REPAIR_EVIDENCE_BUDGET")
@@ -178,15 +181,17 @@ def evidence(root: Path, refs, required=False):
         need(digest(read_file(root, ref["path"])) == ref["sha256"], "COV_EVIDENCE_STALE")
 
 
-def validate(root: Path, data, packet_path=None, packet_text=None) -> list[str]:
+def validate(root: Path, data, packet_path=None, packet_text=None, historical=None) -> list[str]:
     try:
-        _validate(root, data, packet_path, packet_text)
+        if historical is not None:
+            _repair().transition(root, historical["base"], _repair_api(strict=True))
+        _validate(root, data, packet_path, packet_text, historical)
         return []
     except (Invalid, OSError, UnicodeError, ValueError, TypeError, KeyError) as exc:
         return [str(exc) if isinstance(exc, Invalid) else "COV_INVALID_INPUT:" + type(exc).__name__]
 
 
-def _validate(root: Path, data, packet_path=None, packet_text=None):
+def _validate(root: Path, data, packet_path=None, packet_text=None, historical=None):
     shape(data, ("schemaVersion", "authority", "milestone", "phase", "action", "rows", "supportingWork", "conclusions"))
     need(data["schemaVersion"] == SCHEMA, "COV_SCHEMA")
     milestone = data["milestone"]
@@ -269,7 +274,7 @@ def _validate(root: Path, data, packet_path=None, packet_text=None):
     if conclusion["product"] == "COMPLETE":
         need(bool(expected) and all(r["state"] == "VERIFIED" for r in rows), "COV_PRODUCT_INCOMPLETE")
     if authority is not None:
-        _repair().validate(root, data, registry, _repair_api(packet_path, packet_text))
+        _repair().validate(root, data, registry, _repair_api(packet_path, packet_text, strict=historical is not None), historical)
 
 
 def _pairs(pairs):
@@ -298,7 +303,7 @@ def required_artifact(relative: str, value: str) -> bool:
     return len(status) != 1 or not status[0].startswith(("DRAFT", "HOLD", "CLOSED", "COMPLETE", "BLOCKED", "REJECTED", "SUPERSEDED", "ARCHIVED"))
 
 
-def validate_text(root: Path, relative: str, value: str, required=None) -> list[str]:
+def validate_text(root: Path, relative: str, value: str, required=None, historical=None) -> list[str]:
     if len(value.encode("utf-8")) > MAX_BYTES:
         return ["COV_FILE_MISSING_OR_OVERSIZE"]
     if required is None:
@@ -325,7 +330,17 @@ def validate_text(root: Path, relative: str, value: str, required=None) -> list[
         need(len(bodies[0].encode()) <= MAX_BYTES, "COV_BLOCK_OVERSIZE")
         data = json.loads(bodies[0], object_pairs_hook=_pairs,
                           parse_constant=lambda _: (_ for _ in ()).throw(Invalid("COV_JSON_CONSTANT")))
-        issues = validate(root, data, relative, value)
+        # Bound nesting explicitly rather than relying on the interpreter's
+        # process-global recursion limit (which varies between hosts/loaders).
+        pending = [(data, 0)]
+        while pending:
+            item, depth = pending.pop()
+            if depth > 128:
+                raise ValueError("coverage JSON nesting limit")
+            if isinstance(item, (dict, list)):
+                children = item.values() if isinstance(item, dict) else item
+                pending.extend((child, depth + 1) for child in children)
+        issues = validate(root, data, relative, value, historical)
         if not issues and relative.startswith("docs/work_orders/") and required:
             need(data["phase"] == "DISPATCH", "COV_EXECUTABLE_PHASE_REQUIRED")
         statuses = re.findall(r"^Status:\s*(\S+)", unfenced(value), re.M)
@@ -338,8 +353,20 @@ def validate_text(root: Path, relative: str, value: str, required=None) -> list[
         return [str(exc) if isinstance(exc, Invalid) else "COV_INVALID_JSON"]
 
 
-def validate_file(root: Path, relative: str) -> list[str]:
+def validate_historical_context(root, historical):
     try:
-        return validate_text(root, relative, read_file(root, relative).decode("utf-8-sig"))
+        from cvf_historical_admissions import select
+        api = _repair_api(strict=True)
+        _repair().transition(root, historical["base"], api)
+        registry = _repair().parse(read_file(root, AUTHORITY_REGISTRY), api)
+        select(root, None, historical, registry, _repair(), api)
+        return []
+    except (Invalid, OSError, UnicodeError, ValueError, TypeError, KeyError) as exc:
+        return [str(exc) if isinstance(exc, Invalid) else "HIST_INVALID_INPUT:" + type(exc).__name__]
+
+
+def validate_file(root: Path, relative: str, historical=None) -> list[str]:
+    try:
+        return validate_text(root, relative, read_file(root, relative).decode("utf-8-sig"), historical=historical)
     except (Invalid, OSError, UnicodeError) as exc:
         return [str(exc) if isinstance(exc, Invalid) else "COV_INVALID_INPUT:" + type(exc).__name__]

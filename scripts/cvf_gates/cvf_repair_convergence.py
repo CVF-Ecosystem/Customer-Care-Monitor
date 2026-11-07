@@ -6,6 +6,7 @@ and commands outside the gate are not intercepted. No effect permission is creat
 from __future__ import annotations
 
 import json
+import math
 import subprocess
 from pathlib import Path
 
@@ -17,8 +18,18 @@ LEGACY = "cvf.milestoneAuthority@1.0.0"
 def parse(raw, api):
     def constant(_):
         api.need(False, "COV_REPAIR_NONFINITE")
-    return json.loads(raw.decode("utf-8-sig"), object_pairs_hook=api.pairs,
-                      parse_constant=constant)
+    value = json.loads(raw.decode("utf-8-sig"), object_pairs_hook=api.pairs,
+                       parse_constant=constant)
+    pending = [(value, 0)]
+    while pending:
+        item, depth = pending.pop()
+        api.need(depth <= 128, "COV_REPAIR_JSON_DEPTH")
+        if isinstance(item, float):
+            api.need(math.isfinite(item), "COV_REPAIR_NONFINITE")
+        if isinstance(item, (dict, list)):
+            children = item.values() if isinstance(item, dict) else item
+            pending.extend((child, depth + 1) for child in children)
+    return value
 
 
 def pinned(root, ref, api):
@@ -139,7 +150,7 @@ def inspect_control(root, milestone, row, api):
     return failed, audit
 
 
-def validate(root, data, registry, api):
+def validate(root, data, registry, api, historical=None):
     enrolled = controls(registry, api)
     milestone = data["milestone"]["id"]
     if milestone not in enrolled:
@@ -148,6 +159,14 @@ def validate(root, data, registry, api):
     api.need(affected <= {r["id"] for r in data["rows"]}, "COV_REPAIR_CRITERIA_MISMATCH")
     api.need(not affected or data["conclusions"]["product"] != "COMPLETE",
              "COV_REPAIR_UNRESOLVED_PRODUCT")
+    if historical is not None:
+        from cvf_historical_admissions import select
+        from types import SimpleNamespace
+        historical_audit = select(root, api.packet_path, historical, registry,
+            SimpleNamespace(controls=controls, parse=parse, inspect_control=inspect_control, REGISTRY=REGISTRY), api)
+        if historical_audit is not None:
+            api.need(historical_audit["milestoneId"] == milestone, "HIST_MILESTONE")
+            audit = historical_audit
     if data["action"]["kind"] not in ("IMPLEMENT", "VERIFY") or not affected:
         return
     selected = set(data["action"]["selected"])

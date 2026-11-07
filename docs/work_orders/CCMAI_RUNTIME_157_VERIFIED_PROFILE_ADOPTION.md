@@ -1,6 +1,6 @@
 # R157 — verified operator-local profile adoption
 
-Status: ACTIVE
+Status: COMPLETE_PENDING_REVIEW
 workOrderStatusGrammar: cvf.workOrderStatusGrammar@1.0.0
 Risk: R2
 Authority: `CVF_SESSION/authority/CCMAI-RUNTIME-157.json`

@@ -1,0 +1,2 @@
+python -B ../CVF_RULE_PACKS/operator-local/source/scripts/lib/downstream_governance/cvf_downstream_gate_runner.py run --phase pre-dispatch --project-root . --trusted --packet docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md
+Declared static configured invocation; actual result is retained separately. This record is not runtime AI governance or hostedCI proof.

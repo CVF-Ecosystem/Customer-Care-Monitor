@@ -1,0 +1,262 @@
+{
+  "schemaVersion": "cvf.workspaceActivation@1.0.0",
+  "identity": {
+    "projectRootSha256": "118ae5e1a401ba15aac7af388964313d5947f3c5191c682648afd028d99104c4",
+    "manifestSha256": "333979f23385595a02fc738066de27cbc2454356d136bcd1110f36ad03efdf83",
+    "policySha256": "5feac086232dd44b9d707a11713856a236ce23f695492afe863e16f75edfbb13",
+    "lockSha256": "bc2ac2aeb220dce995712c5b10a2ffa93e79918c3a23fed124e03f667c8542b3",
+    "coreCommit": "68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6",
+    "profileId": "cvf.downstreamGateProfile@1.4.1",
+    "profileSha256": "3e14e4ad99a18416752b4666c4f0bed4cc7436068ef6e1c8768f34505e566c1f",
+    "deliveryFingerprint": "71c5656283ff0c3bb7270f7b6fe66ace4545b378b89d06d443eecddb113a95f0",
+    "sourceRoute": "AUTHORIZED_SUPPLEMENTAL"
+  },
+  "sourcePolicy": "CORE_AND_SUPPLEMENTAL",
+  "reviewer": "Root static source/receipt review; independent Terra final adoption review required before Sol",
+  "authority": "R157 immutable seed e3335dff and reviewed packet777b3058; native installer BUILD7d29796c; final independent Terra review required before Sol",
+  "actions": [
+    {
+      "packet": "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md",
+      "sha256": "3628c6c3e807262304998e686b49bbbfddc610b7ce632eb4ae2cc2555e57314b",
+      "criteria": [
+        "RC-01"
+      ]
+    }
+  ],
+  "supplemental": [
+    {
+      "id": "SUPPLEMENTAL_ASSESSMENT",
+      "mode": "INSPECTED",
+      "sourceSha256": "625a400a47278c1ebe28a01c4321d691be583a0c3de467025566ce189253fc97",
+      "owner": "Root Local pack adoption maintainer",
+      "actions": [
+        "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md"
+      ],
+      "disposition": "ASSESSED",
+      "reviewEvidence": [
+        {
+          "path": "docs/reviews/probes/r157_verified_adoption_20261107/activation_reviews/supplemental.json",
+          "sha256": "61626f42d346ca10b32cb3e521f8a1c19383eeb387ea317467f8c2ee8a09de04"
+        }
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "id": "CVF-DG-INST-01",
+      "owner": "Root Local adoption maintainer",
+      "authority": "R157 immutable seed e3335dff and reviewed packet777b3058; native installer BUILD7d29796c; final independent Terra review required before Sol",
+      "reason": "Invoke this mandatory source control through the exact trusted pack pre-dispatch configuration; semantic outcomes remain owned by Local",
+      "actions": [
+        "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md"
+      ],
+      "criteria": [
+        "RC-01"
+      ],
+      "evidence": {
+        "path": "docs/reviews/probes/r157_verified_adoption_20261107/activation_reviews/CVF-DG-INST-01.json",
+        "sha256": "7b970982d1778182d9a8874ca8882b9f5b1ac2882e7a79616d2d7315e905341a"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md",
+          "sha256": "3628c6c3e807262304998e686b49bbbfddc610b7ce632eb4ae2cc2555e57314b",
+          "criteria": [
+            "RC-01"
+          ]
+        }
+      ],
+      "disposition": "APPLIED",
+      "configuredInvocation": {
+        "path": "docs/reviews/probes/r157_verified_adoption_20261107/configured_pre_dispatch.txt",
+        "sha256": "a927d588616efaeebbcd3c11ff923ac234f3b32407e3ce75cf98577b14ad8309"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/probes/r157_verified_adoption_20261107/activation_reviews/CVF-DG-INST-01.json",
+          "sha256": "7b970982d1778182d9a8874ca8882b9f5b1ac2882e7a79616d2d7315e905341a"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-CONT-01",
+      "owner": "Root Local adoption maintainer",
+      "authority": "R157 immutable seed e3335dff and reviewed packet777b3058; native installer BUILD7d29796c; final independent Terra review required before Sol",
+      "reason": "Invoke this mandatory source control through the exact trusted pack pre-dispatch configuration; semantic outcomes remain owned by Local",
+      "actions": [
+        "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md"
+      ],
+      "criteria": [
+        "RC-01"
+      ],
+      "evidence": {
+        "path": "docs/reviews/probes/r157_verified_adoption_20261107/activation_reviews/CVF-DG-CONT-01.json",
+        "sha256": "16b773d2f19508789b735ee06dd4cc647b0d9177059085ba17a370b6f41cbd80"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md",
+          "sha256": "3628c6c3e807262304998e686b49bbbfddc610b7ce632eb4ae2cc2555e57314b",
+          "criteria": [
+            "RC-01"
+          ]
+        }
+      ],
+      "disposition": "APPLIED",
+      "configuredInvocation": {
+        "path": "docs/reviews/probes/r157_verified_adoption_20261107/configured_pre_dispatch.txt",
+        "sha256": "a927d588616efaeebbcd3c11ff923ac234f3b32407e3ce75cf98577b14ad8309"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/probes/r157_verified_adoption_20261107/activation_reviews/CVF-DG-CONT-01.json",
+          "sha256": "16b773d2f19508789b735ee06dd4cc647b0d9177059085ba17a370b6f41cbd80"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-RANGE-01",
+      "owner": "Root Local adoption maintainer",
+      "authority": "R157 immutable seed e3335dff and reviewed packet777b3058; native installer BUILD7d29796c; final independent Terra review required before Sol",
+      "reason": "Invoke this mandatory source control through the exact trusted pack pre-dispatch configuration; semantic outcomes remain owned by Local",
+      "actions": [
+        "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md"
+      ],
+      "criteria": [
+        "RC-01"
+      ],
+      "evidence": {
+        "path": "docs/reviews/probes/r157_verified_adoption_20261107/activation_reviews/CVF-DG-RANGE-01.json",
+        "sha256": "649d79eac9f536be3f0c7db0e5ecdf13ba9d394b813b4be08bb38c936e730bf8"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md",
+          "sha256": "3628c6c3e807262304998e686b49bbbfddc610b7ce632eb4ae2cc2555e57314b",
+          "criteria": [
+            "RC-01"
+          ]
+        }
+      ],
+      "disposition": "APPLIED",
+      "configuredInvocation": {
+        "path": "docs/reviews/probes/r157_verified_adoption_20261107/configured_pre_dispatch.txt",
+        "sha256": "a927d588616efaeebbcd3c11ff923ac234f3b32407e3ce75cf98577b14ad8309"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/probes/r157_verified_adoption_20261107/activation_reviews/CVF-DG-RANGE-01.json",
+          "sha256": "649d79eac9f536be3f0c7db0e5ecdf13ba9d394b813b4be08bb38c936e730bf8"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-APPL-01",
+      "owner": "Root Local adoption maintainer",
+      "authority": "R157 immutable seed e3335dff and reviewed packet777b3058; native installer BUILD7d29796c; final independent Terra review required before Sol",
+      "reason": "Invoke this mandatory source control through the exact trusted pack pre-dispatch configuration; semantic outcomes remain owned by Local",
+      "actions": [
+        "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md"
+      ],
+      "criteria": [
+        "RC-01"
+      ],
+      "evidence": {
+        "path": "docs/reviews/probes/r157_verified_adoption_20261107/activation_reviews/CVF-DG-APPL-01.json",
+        "sha256": "d7ba1a7ec4a256f267748aa1f76c9a1577fa137abe36fe9f4a616d93ed57ccc4"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md",
+          "sha256": "3628c6c3e807262304998e686b49bbbfddc610b7ce632eb4ae2cc2555e57314b",
+          "criteria": [
+            "RC-01"
+          ]
+        }
+      ],
+      "disposition": "APPLIED",
+      "configuredInvocation": {
+        "path": "docs/reviews/probes/r157_verified_adoption_20261107/configured_pre_dispatch.txt",
+        "sha256": "a927d588616efaeebbcd3c11ff923ac234f3b32407e3ce75cf98577b14ad8309"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/probes/r157_verified_adoption_20261107/activation_reviews/CVF-DG-APPL-01.json",
+          "sha256": "d7ba1a7ec4a256f267748aa1f76c9a1577fa137abe36fe9f4a616d93ed57ccc4"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-ROUTE-01",
+      "owner": "Root Local adoption maintainer",
+      "authority": "R157 immutable seed e3335dff and reviewed packet777b3058; native installer BUILD7d29796c; final independent Terra review required before Sol",
+      "reason": "Invoke this mandatory source control through the exact trusted pack pre-dispatch configuration; semantic outcomes remain owned by Local",
+      "actions": [
+        "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md"
+      ],
+      "criteria": [
+        "RC-01"
+      ],
+      "evidence": {
+        "path": "docs/reviews/probes/r157_verified_adoption_20261107/activation_reviews/CVF-DG-ROUTE-01.json",
+        "sha256": "8812add3037308e93cb1e6a4fe0559cf0a1fc1fe303ea0a2e0b4dc07c8081e0e"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md",
+          "sha256": "3628c6c3e807262304998e686b49bbbfddc610b7ce632eb4ae2cc2555e57314b",
+          "criteria": [
+            "RC-01"
+          ]
+        }
+      ],
+      "disposition": "APPLIED",
+      "configuredInvocation": {
+        "path": "docs/reviews/probes/r157_verified_adoption_20261107/configured_pre_dispatch.txt",
+        "sha256": "a927d588616efaeebbcd3c11ff923ac234f3b32407e3ce75cf98577b14ad8309"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/probes/r157_verified_adoption_20261107/activation_reviews/CVF-DG-ROUTE-01.json",
+          "sha256": "8812add3037308e93cb1e6a4fe0559cf0a1fc1fe303ea0a2e0b4dc07c8081e0e"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-COV-01",
+      "owner": "Root Local adoption maintainer",
+      "authority": "R157 immutable seed e3335dff and reviewed packet777b3058; native installer BUILD7d29796c; final independent Terra review required before Sol",
+      "reason": "Invoke this mandatory source control through the exact trusted pack pre-dispatch configuration; semantic outcomes remain owned by Local",
+      "actions": [
+        "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md"
+      ],
+      "criteria": [
+        "RC-01"
+      ],
+      "evidence": {
+        "path": "docs/reviews/probes/r157_verified_adoption_20261107/activation_reviews/CVF-DG-COV-01.json",
+        "sha256": "baaba6de022bf53b2f2fa7be04854fd1ad3e63e5a106a606dadc5cd9939f8140"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md",
+          "sha256": "3628c6c3e807262304998e686b49bbbfddc610b7ce632eb4ae2cc2555e57314b",
+          "criteria": [
+            "RC-01"
+          ]
+        }
+      ],
+      "disposition": "APPLIED",
+      "configuredInvocation": {
+        "path": "docs/reviews/probes/r157_verified_adoption_20261107/configured_pre_dispatch.txt",
+        "sha256": "a927d588616efaeebbcd3c11ff923ac234f3b32407e3ce75cf98577b14ad8309"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/probes/r157_verified_adoption_20261107/activation_reviews/CVF-DG-COV-01.json",
+          "sha256": "baaba6de022bf53b2f2fa7be04854fd1ad3e63e5a106a606dadc5cd9939f8140"
+        }
+      ]
+    }
+  ]
+}

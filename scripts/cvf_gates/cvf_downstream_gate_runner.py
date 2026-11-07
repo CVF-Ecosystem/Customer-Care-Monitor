@@ -51,8 +51,8 @@ def _stage0_bundle(directory: Path) -> tuple[str, dict[str, str]]:
 def _stage0(args: argparse.Namespace) -> list[str]:
     """Verify the CI pins against actual bytes BEFORE any sibling module is imported (project copy only)."""
     problems: list[str] = []
-    if args.phase == "pr-ci":
-        problems += [f"PIN_REQUIRED @ --{name.replace('_', '-')}: the pr-ci phase must be pinned" for name in CI_REQUIRED_PINS if not getattr(args, name)]
+    if args.phase in ("pr-ci", "pre-dispatch"):
+        problems += [f"PIN_REQUIRED @ --{name.replace('_', '-')}: this phase must be pinned" for name in CI_REQUIRED_PINS if not getattr(args, name)]
     bundle, files = _stage0_bundle(HERE)
     for label, expected, actual in (("PROFILE_PIN_MISMATCH", args.expect_profile_sha256, files.get(PROFILE_FILE)),
                                     ("RUNNER_PIN_MISMATCH", args.expect_runner_sha256, files.get(RUNNER_FILE)),
@@ -64,7 +64,7 @@ def _stage0(args: argparse.Namespace) -> list[str]:
 
 def _import_modules() -> dict:
     names = ("cvf_dg_applicability", "cvf_dg_common", "cvf_dg_continuity", "cvf_dg_coverage", "cvf_dg_install",
-             "cvf_dg_intake", "cvf_dg_review", "cvf_dg_routing", "cvf_milestone_coverage")
+             "cvf_dg_intake", "cvf_dg_review", "cvf_dg_routing", "cvf_milestone_coverage", "cvf_workspace_activation")
     return {name: importlib.import_module(name) for name in names}
 
 
@@ -83,13 +83,14 @@ def _range_result(M: dict, candidates, require: bool):
     return common.ControlResult("CVF-DG-RANGE-01", "PASS", [], notes=notes)
 
 
-def _milestone_result(M: dict, root: Path, packets: list[str], profile: dict, base=None):
+def _milestone_result(M: dict, root: Path, packets: list[str], profile: dict, base=None, historical=None):
     common, coverage = M["cvf_dg_common"], M["cvf_milestone_coverage"]
     ControlResult, Finding = common.ControlResult, common.Finding
     CONTROL_ID = "CVF-DG-COV-01"
     candidates = set(packets)
     active = root / profile["continuityContract"]["implementationPath"]
     findings, checked = [], []
+    orders = []
     findings.extend(Finding(code, coverage.AUTHORITY_REGISTRY, "repair history transition refused")
                     for code in coverage.validate_repair_transition(root, base))
     if active.is_file():
@@ -103,6 +104,10 @@ def _milestone_result(M: dict, root: Path, packets: list[str], profile: dict, ba
             candidates.update(orders)
         except (ValueError, OSError, AttributeError) as exc:
             findings.append(Finding("COV_ACTIVE_INPUT_INVALID", str(active), str(exc)))
+    if historical is not None:
+        historical = dict(historical, active=orders)
+        findings.extend(Finding(code, "historical-admissions", "retrospective binding refused")
+                        for code in coverage.validate_historical_context(root, historical))
     for rel in sorted(candidates):
         if "/archive/" in rel:
             continue
@@ -110,7 +115,8 @@ def _milestone_result(M: dict, root: Path, packets: list[str], profile: dict, ba
         if target is None or not target.is_file():
             findings.append(Finding("COV_PACKET_MISSING_OR_UNSAFE", rel, "candidate must be a project file"))
             continue
-        issues = coverage.validate_file(root, rel)
+        context = None if historical is None else dict(historical, active=orders)
+        issues = coverage.validate_file(root, rel, historical=context)
         findings.extend(Finding(code, rel, "milestone coverage admission refused") for code in issues)
         if not issues:
             value = coverage.read_file(root, rel).decode("utf-8-sig")
@@ -151,6 +157,12 @@ def _local_controls(M: dict, root: Path, profile: dict, phase: str) -> list:
 
 
 def run_phase(args: argparse.Namespace) -> int:
+    historical_flags = (args.historical_admissions, args.historical_admissions_sha256,
+                        args.historical_admissions_commit)
+    if any(x is not None for x in historical_flags) and (
+            not all(type(x) is str and x for x in historical_flags) or args.phase != "pr-ci"):
+        print("RESULT: BLOCKED_INVALID_INPUT HIST_ARGUMENTS: complete historical triplet requires pr-ci")
+        return EXIT_BLOCKED
     root = Path(args.project_root).resolve()
     trusted = bool(args.trusted)
     if not trusted:
@@ -200,7 +212,12 @@ def run_phase(args: argparse.Namespace) -> int:
         elif cid == "CVF-DG-APPL-01":
             results.append(M["cvf_dg_applicability"].check_applicability(root, packets(("docs/work_orders/",)), checker_dir))
         elif cid == "CVF-DG-COV-01":
-            results.append(_milestone_result(M, root, packets(("docs/roadmaps/", "docs/work_orders/", "docs/reviews/")), profile, candidates.base))
+            results.append(_milestone_result(M, root, packets(("docs/roadmaps/", "docs/work_orders/", "docs/reviews/")), profile, candidates.base, historical=None if not args.historical_admissions else {
+                "phase": phase, "head": candidates.head, "base": candidates.base, "active": [],
+                "explicit": args.packet or [], "manifest": {"path": args.historical_admissions,
+                "sha256": args.historical_admissions_sha256, "commit": args.historical_admissions_commit}}))
+        elif cid == "CVF-DG-ACT-01":
+            results.append(M["cvf_workspace_activation"].check_activation(root, profile, args.packet or [], phase, core_root))
         elif cid == "CVF-DG-ROUTE-01":
             results.append(M["cvf_dg_routing"].check_routing(root, packets(("docs/work_orders/", "docs/reviews/")), profile))
         elif cid == "CVF-DG-ROLE-01":
@@ -252,6 +269,9 @@ def _parser() -> argparse.ArgumentParser:
     run.add_argument("--base")
     run.add_argument("--base-from-env", help="name of an environment variable holding the PR/push base commit")
     run.add_argument("--head")
+    run.add_argument("--historical-admissions", help="pinned retrospective admission manifest; pr-ci only")
+    run.add_argument("--historical-admissions-sha256")
+    run.add_argument("--historical-admissions-commit")
     run.add_argument("--trusted", action="store_true", help="run from the Core copy and compare the project copy to Core sources")
     run.add_argument("--expect-profile-sha256")
     run.add_argument("--expect-runner-sha256")

@@ -2,13 +2,13 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R157_VERIFIED_ADOPTION_2026-11-07.md", "activeTranche": "CCMAI-RUNTIME-157", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R157_VERIFIED_ADOPTION_2026-11-07.md", "activeTranche": "CCMAI-RUNTIME-157", "parked": true} -->
 ## Current R157 verified adoption — 2026-11-07
 
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 
-CCMAI-RUNTIME-157 BUILD: Root executes admitted verified native1.4.1 installer, officialCore68 repin, explicit operator-local ACT/source policy and CI historical pins. Sol remains unreleased until trusted new-pack bootstrap and explicit packet pre-dispatch PASS and independent Terra adoption review; then exact1.4.1 portable compatibility change only. Original f740 range must PASS before RC-01 closure. R139/M3/R151 HOLD, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, spent effects and FB/Zalo parked; no provider/push/release/runtime.
+CCMAI-RUNTIME-157 REVIEW: Sol exact1.4.1 compatibility source returned and independently reviewed by Root; native adoption metadata independently accepted by Terra. Complete mandatoryunits and exact scope/precommit checks, commit reviewed adoption, then verify actual original f740..newHEAD allcandidates before RC-01 closure. No provider/push/release/runtime; R139/M3/R151 HOLD, R150 INCONCLUSIVE/A2 UNRUN/cleanupUNKNOWN, spent effects and FB/Zalo parked.
 
 
 ## Current R156 FROZEN static candidate only — 2026-11-06
@@ -244,11 +244,11 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R157_VERIFIED_ADOPTION_2026-11-07.md
 
-CCMAI-RUNTIME-157 BUILD: Root executes admitted verified native1.4.1 installer, officialCore68 repin, explicit operator-local ACT/source policy and CI historical pins. Sol remains unreleased until trusted new-pack bootstrap and explicit packet pre-dispatch PASS and independent Terra adoption review; then exact1.4.1 portable compatibility change only. Original f740 range must PASS before RC-01 closure. R139/M3/R151 HOLD, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, spent effects and FB/Zalo parked; no provider/push/release/runtime.
+CCMAI-RUNTIME-157 REVIEW: Sol exact1.4.1 compatibility source returned and independently reviewed by Root; native adoption metadata independently accepted by Terra. Complete mandatoryunits and exact scope/precommit checks, commit reviewed adoption, then verify actual original f740..newHEAD allcandidates before RC-01 closure. No provider/push/release/runtime; R139/M3/R151 HOLD, R150 INCONCLUSIVE/A2 UNRUN/cleanupUNKNOWN, spent effects and FB/Zalo parked.
 
 ## Historical R114 bounded UI result
 

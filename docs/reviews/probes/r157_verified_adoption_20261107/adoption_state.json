@@ -1,0 +1,15 @@
+{
+  "trustedBootstrapExit": 0,
+  "trustedPreDispatch": "PASS7controls, ROUTE not applicable because packet does not declare dispatchKind; ACT APPLIED verifies static configured invocation",
+  "publicDoctor": "FAIL27/29 exactly LOCK_INVALID and ACT_CORE_PATH_MISMATCH; publicbase/freshness/Corepin pass; public1.4.0 vs adopted1.4.1 and publictrustedsource vs verifiedoperatorpack; full adoptedprofile/ACT independentlyPASS",
+  "nativeInstaller": "One invocation UPGRADED_CI_RECONCILIATION_REQUIRED; source18 files and lock verified, project-owned CI actualpins corrected, native reconciliationRequired history retained",
+  "risk": "R2",
+  "independentFinalReview": "Terra ACCEPT_WITH_LIMITS_PENDING_EXECUTION actual18files/source/policy/ACT; Root independent Sol code review source accepted pending mandatoryunits",
+  "sourceHash": "97604ee2a7d85bf133961d968a1c6d0eb3d5042acd969dd700accaf2767b4239",
+  "testsHash": "98e08b4f85844c10ad30443bc12946aa4bd3a002223688ef5f67f4b1e551861a",
+  "originalRangeStatus": "PENDING_COMMITTED_ADOPTION",
+  "product": "R139/M3/R151 HOLD, R150 INCONCLUSIVE A2unrun cleanupUNKNOWN effects spent accounts parked",
+  "solSourceRawSha256": "fb15a1f7a63f3554a3ba6a795e026e8e54be4ceb11fd642ff8dce5c579ba32d8",
+  "solTestsRawSha256": "4696f5158eac15d7b03760eb405b8a9ef78f230d4b83829d89c57baa0eb771cf",
+  "originalRangePreliminary": "PASS f740..7d29796c allcandidates inclR150+R151; installedadoption stilluncommitted, finalcommittedrange required"
+}

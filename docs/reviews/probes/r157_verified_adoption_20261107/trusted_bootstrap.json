@@ -1,0 +1,47 @@
+{
+  "exitCode": 0,
+  "phase": "bootstrap",
+  "range": "WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=7d29796c0c0880e45305307e9ff664674d6f632f candidates=25 deleted=0",
+  "results": [
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-INST-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-CONT-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "milestone_coverage_applicability"
+      ],
+      "controlId": "CVF-DG-COV-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "NOT_APPLICABLE_WITH_REASON",
+      "reason": "no current roadmap/executable order or declared coverage block; no coverage claim"
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-ACT-01",
+      "findings": [],
+      "notes": [
+        "Mechanical evidence bindings; Local reviews semantic authority and invocation truth."
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    }
+  ]
+}

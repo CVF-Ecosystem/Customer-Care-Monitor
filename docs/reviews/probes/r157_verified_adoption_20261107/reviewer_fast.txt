@@ -1,0 +1,15 @@
+[PASS] CVF-DG-INST-01 PASS
+[PASS] CVF-DG-CONT-01 PASS
+[PASS] CVF-DG-RANGE-01 PASS
+       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=7d29796c0c0880e45305307e9ff664674d6f632f candidates=44 deleted=0
+[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked
+       note: docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract
+[PASS] CVF-DG-ROUTE-01 NOT_APPLICABLE_WITH_REASON - no dispatch packet declares dispatchKind in scope
+[PASS] CVF-DG-ROLE-01 PASS
+       note: checked: docs/reviews/R157_ADMISSION_REVIEW_2026-11-07.md, docs/reviews/R157_COMPATIBILITY_ROOT_REVIEW_2026-11-07.md, docs/reviews/R157_COMPATIBILITY_WORKER_RETURN_2026-11-07.md, docs/reviews/R157_INDEPENDENT_ADOPTION_REVIEW_2026-11-07.md
+[PASS] CVF-DG-CLAIM-01 PASS
+       note: 0 explicit claim line(s) and 5 document(s) scanned
+[PASS] CVF-DG-COV-01 PASS
+       note: checked: docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md
+       note: mechanical joins only; Local owns semantic acceptance
+RESULT: PASS phase=reviewer-fast mandatoryControls=8 failed=0
