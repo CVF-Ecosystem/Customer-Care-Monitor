@@ -2,13 +2,13 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R157_VERIFIED_ADOPTION_2026-11-07.md", "activeTranche": "CCMAI-RUNTIME-157", "parked": true} -->
-## Current R157 verified adoption admission — 2026-11-07
+<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R157_VERIFIED_ADOPTION_2026-11-07.md", "activeTranche": "CCMAI-RUNTIME-157", "parked": true} -->
+## Current R157 verified adoption — 2026-11-07
 
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
+- Current mode: BUILD
+- Active phase: BUILD
 
-CCMAI-RUNTIME-157 DISPATCH_READY: verified clean1.4.1 pack source023323447 and immutable historical review accepted; run applicable installed1.3 packet pre-dispatch and portable gates, commit exact admission/manifest before native installer BUILD. Then configure reviewed ACT and require trusted new-pack bootstrap/pre-dispatch PASS before Sol exact portable1.4.1 compatibility repair. Root independently reviews Sol code, Terra independently reviews Root adoption; original f740 range must PASS before RC-01 closure. No provider/push/release/runtime; R139/M3/R151 holds, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, all spent effects/UNKNOWN and FB/Zalo parking retained.
+CCMAI-RUNTIME-157 BUILD: Root executes admitted verified native1.4.1 installer, officialCore68 repin, explicit operator-local ACT/source policy and CI historical pins. Sol remains unreleased until trusted new-pack bootstrap and explicit packet pre-dispatch PASS and independent Terra adoption review; then exact1.4.1 portable compatibility change only. Original f740 range must PASS before RC-01 closure. R139/M3/R151 HOLD, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, spent effects and FB/Zalo parked; no provider/push/release/runtime.
 
 
 ## Current R156 FROZEN static candidate only — 2026-11-06
@@ -244,11 +244,11 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: WORK_ORDER
-- Active phase: WORK_ORDER
+- Current mode: BUILD
+- Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R157_VERIFIED_ADOPTION_2026-11-07.md
 
-CCMAI-RUNTIME-157 DISPATCH_READY: verified clean1.4.1 pack source023323447 and immutable historical review accepted; run applicable installed1.3 packet pre-dispatch and portable gates, commit exact admission/manifest before native installer BUILD. Then configure reviewed ACT and require trusted new-pack bootstrap/pre-dispatch PASS before Sol exact portable1.4.1 compatibility repair. Root independently reviews Sol code, Terra independently reviews Root adoption; original f740 range must PASS before RC-01 closure. No provider/push/release/runtime; R139/M3/R151 holds, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, all spent effects/UNKNOWN and FB/Zalo parking retained.
+CCMAI-RUNTIME-157 BUILD: Root executes admitted verified native1.4.1 installer, officialCore68 repin, explicit operator-local ACT/source policy and CI historical pins. Sol remains unreleased until trusted new-pack bootstrap and explicit packet pre-dispatch PASS and independent Terra adoption review; then exact1.4.1 portable compatibility change only. Original f740 range must PASS before RC-01 closure. R139/M3/R151 HOLD, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, spent effects and FB/Zalo parked; no provider/push/release/runtime.
 
 ## Historical R114 bounded UI result
 
