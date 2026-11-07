@@ -5383,6 +5383,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Three-module patch and strict helper, actual historical/current tests, uninstalled.: `docs/reviews/probes/r156_historical_join_20261106/README.md`
 - One independent final-source suite12methods exit0; not hosted or installed proof.: `docs/reviews/probes/r156_historical_join_20261106/reviewer_run.json`
 - Sol actual joined candidate, failed worker runs and final worker-unverified source preserved.: `docs/reviews/R156_WORKER_RETURN_2026-11-06.md`
+- Independent declared actual R150 immutable temporal binding review; no runtime authority.: `docs/reviews/probes/r157_verified_adoption_20261107/historical_review.json`
+- Immutable dispatcher seed for native verified pack adoption, R2 independent review.: `CVF_SESSION/authority/CCMAI-RUNTIME-157.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

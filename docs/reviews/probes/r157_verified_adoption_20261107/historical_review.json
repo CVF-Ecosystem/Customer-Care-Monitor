@@ -1,0 +1,7 @@
+{
+  "schemaVersion": "cvf.historicalAdmissionReview@1.0.0",
+  "decision": "ACCEPTED",
+  "reviewer": "Terra 6.1 High independent R2 reviewer",
+  "worker": "Root historical admission metadata author",
+  "bindingsSha256": "b25a2e1125d0b813c16dd1030dd457f835bbb5dde9c594344895f5cbd4a3f0b3"
+}

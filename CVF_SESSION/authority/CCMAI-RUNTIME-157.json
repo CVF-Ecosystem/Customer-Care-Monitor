@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-157",
+  "authorityKind": "DISPATCHER_OWNED_VERIFIED_OPERATOR_PACK_ADOPTION",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR",
+    "implementationWorker": "Sol 6.1 Medium narrow profile compatibility repair only",
+    "reviewer": "Root independently reviews Sol code; Terra independently reviews Root adoption metadata",
+    "commitSteward": "Root COMMIT_STEWARD",
+    "closer": "Root CLOSER / SESSION_SYNC_STEWARD",
+    "installationSteward": "Root verified native installer and metadata orchestrator"
+  },
+  "allowedPaths": [
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "AGENTS.md",
+    ".cvf/manifest.json",
+    ".cvf/policy.json",
+    ".cvf/gate-profile.lock.json",
+    ".cvf/workspace-activation.json",
+    ".cvf/workspace-activation-upgrade.json",
+    "scripts/cvf_gates/**",
+    ".github/workflows/cvf-downstream-gates.yml",
+    "docs/INDEX.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md",
+    "docs/reviews/R157_*.md",
+    "docs/reviews/probes/r157_verified_adoption_20261107/**",
+    "docs/reviews/planning/CCMA_REPOSITORY_CONTINUITY_2026-11-06.md",
+    "scripts/cvf_downstream_gate.py",
+    "scripts/tests/test_cvf_downstream_gate_profile_compatibility.py"
+  ],
+  "workerAllowedPaths": [
+    "scripts/cvf_downstream_gate.py",
+    "scripts/tests/test_cvf_downstream_gate_profile_compatibility.py",
+    "docs/reviews/R157_COMPATIBILITY_WORKER_RETURN_2026-11-07.md"
+  ],
+  "prohibitedEffects": [
+    "No hand edit of inherited modules or lock; exact verified pack native installer only",
+    "No product code, provider, credential, browser, daemon, database, customer/channel, runtime, push, merge, deployment or release effect",
+    "No mutation of frozen R150 packet/audit/seed/record/evidence; no historical blanket exemption",
+    "Preserve R139/M3 HOLD, R151 hold, R150 INCONCLUSIVE A2 UNRUN cleanup UNKNOWN, spent effects and account parking",
+    "No reset of old75 UNKNOWN, additional5400 active-worker clock, shared3of4 consolidated and1of1 targeted invocations; independent reviewer clock is charged"
+  ],
+  "scope": "Adopt accepted parent1.4.1 via verified operator-local pack using native installer, officially repin public Core68a7446, reconcile ACT/source policy, immutable historical R150 admission, CI pins and original f740..HEAD range with all candidates; static repository criterion RC-01 only. Existing portable adapter explicitly admits known lock IDs only through1.3; add exactly1.4.1 to compatible allowlist, preserve pinned classifier/digest/unknown refusal and verify through existing mandatory units. No other gate weakening.",
+  "ownerAuthorization": "Persisted explicit user approval for parent maintenance/local commits, verified pack distribution and deliberate CCMA adoption, additional90worker minutes, official publicCore update and CCMA-only repin. No network/provider/publication effect.",
+  "claimBoundary": "Declared static repository state and provenance only, not live AI governance, hosted CI, deployment or product readiness.",
+  "bootstrapException": false
+}
