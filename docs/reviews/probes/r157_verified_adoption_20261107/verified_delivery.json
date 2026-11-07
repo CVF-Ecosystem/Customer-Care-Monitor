@@ -1,0 +1,15 @@
+{
+  "sourceCommit": "023323447",
+  "sourceWorktreeDirty": false,
+  "artifacts": 58,
+  "verifiedFiles": 57,
+  "directoryEntries": 1,
+  "deliveryManifestSha256": "625a400a47278c1ebe28a01c4321d691be583a0c3de467025566ce189253fc97",
+  "pins": {
+    "profileSha256": "3e14e4ad99a18416752b4666c4f0bed4cc7436068ef6e1c8768f34505e566c1f",
+    "runnerSha256": "f21777579758f152ddad55f153edd1921162ac16ed24788943638fc1602669c1",
+    "bundleSha256": "c9eba034434337aa66f10bf4855ddf23ae729aac46cc94b7d8d514b4b25fe6df"
+  },
+  "profileId": "cvf.downstreamGateProfile@1.4.1",
+  "publicCoreCommit": "68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6"
+}

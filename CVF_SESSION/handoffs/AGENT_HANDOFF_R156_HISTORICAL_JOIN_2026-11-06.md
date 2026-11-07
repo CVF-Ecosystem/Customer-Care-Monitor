@@ -1,6 +1,6 @@
 # R156 — incremental historical join proposal handoff
 
-Status: ACTIVE
+Status: SUPERSEDED_BY_R157
 Disposition: FROZEN_STATIC_CANDIDATE_ONLY_PARENT_REVIEW_REQUIRED
 
 ## Current State

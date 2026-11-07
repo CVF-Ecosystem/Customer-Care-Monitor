@@ -4,881 +4,138 @@
   "updatedAt": "2026-11-07",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
-    {
-      "id": "r157-historical-review",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r157_verified_adoption_20261107/historical_review.json",
-      "status": "ACTIVE",
-      "description": "Independent declared actual R150 immutable temporal binding review; no runtime authority."
-    },
-    {
-      "id": "r157-seed",
-      "family": "continuity",
-      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-157.json",
-      "status": "ACTIVE",
-      "description": "Immutable dispatcher seed for native verified pack adoption, R2 independent review."
-    },
-    {
-      "id": "r156-worker-return-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R156_WORKER_RETURN_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Sol actual joined candidate, failed worker runs and final worker-unverified source preserved."
-    },
-    {
-      "id": "r156-final-review-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R156_INDEPENDENT_IMPLEMENTATION_REVIEW_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Root independent final12/12 static candidate acceptance; original gate and parent acceptance remain blocked."
-    },
-    {
-      "id": "r156-proposal-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r156_historical_join_20261106/README.md",
-      "status": "ACTIVE",
-      "description": "Three-module patch and strict helper, actual historical/current tests, uninstalled."
-    },
-    {
-      "id": "r156-reviewer-run-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r156_historical_join_20261106/reviewer_run.json",
-      "status": "ACTIVE",
-      "description": "One independent final-source suite12methods exit0; not hosted or installed proof."
-    },
-    {
-      "id": "r155-r156-parent-intake-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/learnings/R155_HISTORICAL_REPAIR_ADMISSION_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Project-local prepared parent intake; tested candidate ready, no external message or adoption."
-    },
-    {
-      "id": "r156-packet-review-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R156_PACKET_DESIGN_REVIEW_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Terra independent exact R156 packet acceptance with doctor-source clarification, no implementation acceptance."
-    },
-    {
-      "id": "r156-incremental-record-20261106",
-      "family": "continuity",
-      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-156.json",
-      "status": "ACTIVE",
-      "description": "Explicit incremental Sol allowance preserving R155spend andUNKNOWN cumulative time."
-    },
-    {
-      "id": "r156-incremental-order-20261106",
-      "family": "continuity",
-      "path": "docs/work_orders/CCMAI_RUNTIME_156_HISTORICAL_ADMISSION_PROPOSAL.md",
-      "status": "ACTIVE",
-      "description": "Actual historical joins in uninstalled copies; no parent/install authority."
-    },
-    {
-      "id": "r155-blocked-handoff-20261106",
-      "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R155_HISTORICAL_ADMISSION_2026-11-06.md",
-      "status": "RETIRED",
-      "description": "Historical R155 partial implementation, BUILD_BLOCKED andspent allowance retained."
-    },
-    {
-      "id": "r155-worker-return-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R155_WORKER_RETURN_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Terra partial unsupported return; all spent invocations retained."
-    },
-    {
-      "id": "r155-implementation-review-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R155_INDEPENDENT_IMPLEMENTATION_REVIEW_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Root independent CHANGES_REQUIRED with Sol read-only concurrence; no fix acceptance."
-    },
-    {
-      "id": "r155-candidate-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r155_historical_binding_20261106/README.md",
-      "status": "ACTIVE",
-      "description": "Uninstalled provenance-only candidate, not ready for integration."
-    },
-    {
-      "id": "r156-incremental-seed-20261106",
-      "family": "continuity",
-      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-156.json",
-      "status": "ACTIVE",
-      "description": "Prospective incremental Sol fallback seed; prior spend preserved, no BUILD release."
-    },
-    {
-      "id": "r155-dispatch-design-review-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R155_DISPATCH_DESIGN_REVIEW_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Sol independent exact seed/design acceptance recorded by Root; no parent or implementation acceptance."
-    },
-    {
-      "id": "r155-proposal-record-20261106",
-      "family": "continuity",
-      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-155.json",
-      "status": "ACTIVE",
-      "description": "R155 candidate-only bounded dispatch record; original RC-01 remains blocked."
-    },
-    {
-      "id": "r155-proposal-order-20261106",
-      "family": "continuity",
-      "path": "docs/work_orders/CCMAI_RUNTIME_155_HISTORICAL_ADMISSION_PROPOSAL.md",
-      "status": "ACTIVE",
-      "description": "Exact reviewed uninstalled historical-admission candidate and static fixture contract."
-    },
-    {
-      "id": "r154-historical-handoff-20261106",
-      "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md",
-      "status": "RETIRED",
-      "description": "R154 history reconciled to observed main merge; original required gate unresolved."
-    },
-    {
-      "id": "r155-proposal-seed-20261106",
-      "family": "continuity",
-      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-155.json",
-      "status": "ACTIVE",
-      "description": "Bounded uninstalled historical-admission repair proposal authority; no installed gate or parent adoption."
-    },
-    {
-      "id": "r155-parent-source-verification-20261106",
-      "family": "continuity",
-      "path": "CVF_SESSION/history/r155-parent-delivery-20261106/verification.json",
-      "status": "ACTIVE",
-      "description": "New parent pack ee68e90d3 verified56 hashed files and one directory; no historical fix delivered."
-    },
-    {
-      "id": "r154-postmerge-gate-hold-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R154_POSTMERGE_PROVENANCE_AND_GATE_HOLD_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Independent R2 merge provenance acceptance and required installed PR-range coverage hold."
-    },
-    {
-      "id": "r154-worker-return-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R154_WORKER_RETURN_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "R154 no-commit merge candidate, byte provenance and qualifications; postmerge review records gate hold."
-    },
-    {
-      "id": "r154-cloud-r150-provenance-20261106",
-      "family": "continuity",
-      "path": "CVF_SESSION/history/r150-cloud-errata-4164a28d/provenance.json",
-      "status": "ACTIVE",
-      "description": "Archived cloud R150 seed, tranche and original handoff identities, separate from canonical Windows R150."
-    },
-    {
-      "id": "r154-cloud-r150-historical-handoff-20261106",
-      "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R150_R149_ERRATA_2026-11-05.md",
-      "status": "RETIRED",
-      "description": "Historical cloud errata handoff; exact original ACTIVE version is archived."
-    },
-    {
-      "id": "r154-cloud-r150-errata-packet-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R150_R149_ERRATA_PACKET_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Historical cloud R150 errata packet; distinct from local Windows R150."
-    },
-    {
-      "id": "r154-cloud-r150-errata-inputs-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R150_R149_ERRATA_BINDING_INPUTS_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Cloud R149 errata inputs preserved with Local reconciliation pending."
-    },
-    {
-      "id": "r154-cloud-r150-errata-review-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R150_R149_ERRATA_INDEPENDENT_REVIEW_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Cloud independent errata review and F1–F6 qualifications; Local review pending."
-    },
-    {
-      "id": "r154-cloud-r149-review-copy-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r150_r149_errata_20261105/cloud_subagent_r149_review_ec86f91.md",
-      "status": "ACTIVE",
-      "description": "Preserved cloud R149 review evidence copy."
-    },
-    {
-      "id": "r154-cloud-r149-contract-copy-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r150_r149_errata_20261105/cloud_repaired_r149_contract_ec86f91.md",
-      "status": "ACTIVE",
-      "description": "Historical cloud repaired contract copy with disclosed header and fence changes."
-    },
-    {
-      "id": "r154-cloud-r149-draft-copy-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r150_r149_errata_20261105/cloud_repaired_r149_draft_ec86f91.md",
-      "status": "ACTIVE",
-      "description": "Historical cloud repaired draft copy; Local corrections require separate reconciliation."
-    },
-    {
-      "id": "r154-reconciliation-seed-20261106",
-      "family": "continuity",
-      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-154.json",
-      "status": "ACTIVE",
-      "description": "Committed R2 dispatcher seed for one bounded repository history reconciliation."
-    },
-    {
-      "id": "r154-reconciliation-record-20261106",
-      "family": "continuity",
-      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-154.json",
-      "status": "ACTIVE",
-      "description": "R154 merge completed; required PR-range coverage gate blocks RC-01 closure."
-    },
-    {
-      "id": "r153-m2-entry-historical-handoff-20261106",
-      "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R153_M2_ENTRY_INVENTORY_2026-11-06.md",
-      "status": "RETIRED",
-      "description": "Frozen R153 source inventory handoff; superseded as active pointer by R154, with product holds retained."
-    },
-    {
-      "id": "r154-reconciliation-order-20261106",
-      "family": "continuity",
-      "path": "docs/work_orders/CCMAI_RUNTIME_154_REPOSITORY_RECONCILIATION.md",
-      "status": "ACTIVE",
-      "description": "One bounded no-rewrite integration packet now blocked by historical range gate."
-    },
-    {
-      "id": "r154-reconciliation-criterion-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/planning/CCMA_REPOSITORY_CONTINUITY_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Project-specific RC-01 remains blocked on required historical range gate; no M5 release claim."
-    },
-    {
-      "id": "r154-reconciliation-predispatch-review-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R154_REPOSITORY_RECONCILIATION_PREDISPATCH_REVIEW_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Astra independent design acceptance; dispatch continuity and gates still required."
-    },
-    {
-      "id": "r154-reconciliation-candidate-review-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R154_REPOSITORY_RECONCILIATION_INDEPENDENT_REVIEW_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Astra independently accepted preserved merge candidate, with actual DAG checks pending Root commit."
-    },
-    {
-      "id": "r153-m2-entry-seed-20261106",
-      "family": "continuity",
-      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-153.json",
-      "status": "ACTIVE",
-      "description": "Committed dispatcher seed for one finite read-only M2-04 source inventory."
-    },
-    {
-      "id": "r153-m2-entry-record-20261106",
-      "family": "continuity",
-      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-153.json",
-      "status": "ACTIVE",
-      "description": "R2 DISPATCH_READY null-authority VERIFY record; no implementation or product acceptance."
-    },
-    {
-      "id": "r153-m2-entry-order-20261106",
-      "family": "continuity",
-      "path": "docs/work_orders/CCMAI_RUNTIME_153_M2_ENTRY_INVENTORY.md",
-      "status": "ACTIVE",
-      "description": "Finite one-pass M2-04 entry-path source inventory packet."
-    },
-    {
-      "id": "r153-m2-entry-packet-review-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R153_M2_ENTRY_INVENTORY_PACKET_INDEPENDENT_REVIEW_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Independent R2 acceptance of exact finite R153 VERIFY packet after continuity repair; dispatch commit required."
-    },
-    {
-      "id": "r153-m2-entry-return-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R153_M2_ENTRY_INVENTORY_WORKER_RETURN_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Terra's consumed 12-file T0 entry-path inventory with owned admission UNKNOWNs."
-    },
-    {
-      "id": "r153-m2-entry-result-review-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R153_M2_ENTRY_INVENTORY_INDEPENDENT_REVIEW_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Independent R2 acceptance of bounded T0 source map; M2 product remains OPEN/UNKNOWN."
-    },
-    {
-      "id": "r152-profile14-necessity-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R152_PROFILE_14_NECESSITY_DISPOSITION_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Defers profile1.4 installation while preserving cumulative cost and source-policy hold."
-    },
-    {
-      "id": "r152-profile14-necessity-review-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R152_PROFILE_14_NECESSITY_INDEPENDENT_REVIEW_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Independent R2 acceptance of R152 deferral and finite R153 design only."
-    },
-    {
-      "id": "r152-parent-applicability-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R152_PARENT_UPDATE_APPLICABILITY_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Shared form v1.4 mapped to CCMA M1-M5 controls with source-delivery gap; downstream gate profile1.4 held."
-    },
-    {
-      "id": "r152-independent-disposition-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R152_DISPOSITION_INDEPENDENT_REVIEW_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Independent R2 acceptance of documentary guidance and migration hold only."
-    },
-    {
-      "id": "r152-roadmap-form-review-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R152_ROADMAP_FORM_INDEPENDENT_REVIEW_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Independent R2 acceptance of roadmap form v1.2 documentary correction; profile1.4 installation held."
-    },
-    {
-      "id": "r152-roadmap-form-v14-review-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R152_ROADMAP_FORM_V14_INDEPENDENT_REVIEW_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Independent R2 assessment of external form v1.4 and CCMA-specific M1-M5 reference map; gate-profile installation held."
-    },
-    {
-      "id": "r152-maintenance-seed-20261106",
-      "family": "continuity",
-      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-152.json",
-      "status": "ACTIVE",
-      "description": "Immutable R2 seed for one bounded parent workspace maintenance scope."
-    },
-    {
-      "id": "r152-maintenance-record-20261106",
-      "family": "continuity",
-      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-152.json",
-      "status": "ACTIVE",
-      "description": "DRAFT/WORK_ORDER maintenance record; no worker BUILD or profile upgrade."
-    },
-    {
-      "id": "r152-maintenance-order-20261106",
-      "family": "continuity",
-      "path": "docs/work_orders/CCMAI_RUNTIME_152_WORKSPACE_ACTIVATION.md",
-      "status": "ACTIVE",
-      "description": "Draft profile1.4 migration packet held on genuine maintenance coverage route."
-    },
-    {
-      "id": "r152-failed-predispatch-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r152_workspace_activation_20261106/pre_dispatch_failed_20261106.txt",
-      "status": "ACTIVE",
-      "description": "Retained installed1.3 pre-dispatch APPL/COV failure on prospective active packet."
-    },
-    {
-      "id": "r151-narrow-a1b-cleanup-comparison-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R151_NARROW_A1B_CLEANUP_INSTRUMENT_COMPARISON_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Read-only R151 instrument comparison; no accepted observer or Windows dispatch."
-    },
-    {
-      "id": "r151-narrow-a1b-cleanup-comparison-review-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R151_NARROW_A1B_CLEANUP_COMPARISON_INDEPENDENT_REVIEW_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Independent design-only acceptance of narrow comparison; workspace pack reconciliation held."
-    },
-    {
-      "id": "r151-v04-third-repair-cost-route-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R151_V04_THIRD_REPAIR_COST_ROUTE_DECISION_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Root NO-GO for third full-runner repair; narrow Windows observation remains design-only and held."
-    },
-    {
-      "id": "r151-v04-cost-route-independent-review-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R151_V04_COST_ROUTE_INDEPENDENT_REVIEW_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Independent R2 acceptance of cost NO-GO only; source and Windows effect not admitted."
-    },
-    {
-      "id": "r151-v04-production-seam-design-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R151_V04_PRODUCTION_SEAM_DESIGN_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "R151 V04 production replacement and finalization seam design; accepted at design scope only."
-    },
-    {
-      "id": "r151-v04-design-first-review-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R151_V04_PRODUCTION_SEAM_DESIGN_INDEPENDENT_REVIEW_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "First independent R151 V04 design review, CHANGES_REQUIRED on terminal persisted PASS ambiguity."
-    },
-    {
-      "id": "r151-v04-design-corrected-review-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R151_V04_PRODUCTION_SEAM_CORRECTED_DESIGN_INDEPENDENT_REVIEW_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Second independent R151 V04 design review, CHANGES_REQUIRED on post-replacement readback failure."
-    },
-    {
-      "id": "r151-v04-design-sealed-review-20261106",
-      "family": "continuity",
-      "path": "docs/reviews/R151_V04_PRODUCTION_SEAM_SEALED_DESIGN_INDEPENDENT_REVIEW_2026-11-06.md",
-      "status": "ACTIVE",
-      "description": "Independent R151 sealed-design acceptance only; third repair and runtime remain held."
-    },
-    {
-      "id": "r150-a1a2-audit-review-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/R150_INDEPENDENT_A1_A2_AUDIT_REVIEW_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Independent R2 acceptance of exact finite A1/A2 audit/work-order admission only; no runtime result."
-    },
-    {
-      "id": "r150-a1a2-helper-review-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/R150_INDEPENDENT_HELPER_REVIEW_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Independent static review of fixed Windows A1/A2 helpers; actual runtime result remains unobserved."
-    },
-    {
-      "id": "r150-a1a2-runtime-review-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/R150_INDEPENDENT_WINDOWS_VERIFY_REVIEW_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Independent R2 acceptance of INCONCLUSIVE A1-b return; terminal Chrome descendant cleanup UNKNOWN."
-    },
-    {
-      "id": "r150-a1a2-root-disposition-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/R150_ROOT_DISPOSITION_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Root closes bounded diagnostic R150 without A1/A2 or product acceptance."
-    },
-    {
-      "id": "r150-a1a2-build-carrier-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/R150_A1_A2_EXECUTION_STATUS_CARRIER_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Administrative CLOSED carrier for R150 FREEZE, preserving exact official order bytes."
-    },
-    {
-      "id": "r150-a1a2-worker-return-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/R150_A1_A2_WINDOWS_VERIFY_RETURN_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Single Windows A1/A2 campaign INCONCLUSIVE at A1-b; A2 unrun, no product claim."
-    },
-    {
-      "id": "r150-a1a2-a3-prestart-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r150_a1_a2_windows_20261105/a3_prestart_full_tree.json",
-      "status": "ACTIVE",
-      "description": "Immediate Windows full-tree A3 PASS with operator-relaxed package.json and absent README.md; 346 others equal."
-    },
-    {
-      "id": "r150-a1a2-runtime-raw-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r150_a1_a2_windows_20261105/windows_verify_raw.json",
-      "status": "ACTIVE",
-      "description": "Raw bounded Chrome #1 A1-a control and inconclusive A1-b non-101 event; cleanup and counters retained."
-    },
-    {
-      "id": "r150-a1a2-pid-readback-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r150_a1_a2_windows_20261105/postrun_known_pid_readback.json",
-      "status": "ACTIVE",
-      "description": "Later read-only known-PID absence; terminal owned-profile cleanup remains UNKNOWN due predicate defect."
-    },
-    {
-      "id": "r150-a1a2-effect-admission-20261105",
-      "family": "continuity",
-      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-150-A1A2-EFFECT-ADMISSION.json",
-      "status": "ACTIVE",
-      "description": "Separate bounded Windows process-effect admission, conditional on immediate A3 full-tree recapture PASS."
-    },
-    {
-      "id": "r150-a1a2-seed-20261105",
-      "family": "continuity",
-      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-150.json",
-      "status": "ACTIVE",
-      "description": "Immutable R2 seed for bounded Windows A1/A2 VERIFY and successor R139 audit."
-    },
-    {
-      "id": "r150-a1a2-record-20261105",
-      "family": "continuity",
-      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-150.json",
-      "status": "ACTIVE",
-      "description": "R150 finite VERIFY FROZEN as independently reviewed INCONCLUSIVE diagnostic; R139/M3 blocked."
-    },
-    {
-      "id": "r150-a1a2-order-20261105",
-      "family": "continuity",
-      "path": "docs/work_orders/CCMAI_RUNTIME_150_A1_A2_WINDOWS_VERIFY.md",
-      "status": "ACTIVE",
-      "description": "Exact-byte finite Windows A1/A2 work order; no start before independent audit and same-session A3 recapture."
-    },
-    {
-      "id": "r150-a1a2-audit-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a1_a2_windows_verify.json",
-      "status": "ACTIVE",
-      "description": "Independently accepted successor R139 audit with exact A1/A2 work-order pin; registry points here."
-    },
-    {
-      "id": "r150-a1a2-owner-helper-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r150_a1_a2_windows_20261105/owner_runner.mjs",
-      "status": "ACTIVE",
-      "description": "Bounded Windows A1/A2 owner helper with pinned admission readback and exact effect counters."
-    },
-    {
-      "id": "r150-a1a2-actor-helper-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r150_a1_a2_windows_20261105/actor_call.mjs",
-      "status": "ACTIVE",
-      "description": "Native one-call actor helper for fixed A1/A2 commands."
-    },
-    {
-      "id": "r150-a1a2-a3-helper-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r150_a1_a2_windows_20261105/prestart_full_tree.ps1",
-      "status": "ACTIVE",
-      "description": "Read-only immediate full-tree A3 comparison against pinned manifest and relaxed package identity."
-    },
-    {
-      "id": "r150-a1a2-process-helper-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r150_a1_a2_windows_20261105/process_snapshot.ps1",
-      "status": "ACTIVE",
-      "description": "Read-only process and owned-profile inventory for Windows A1/A2."
-    },
-    {
-      "id": "r149-ohc-seed-20261105",
-      "family": "continuity",
-      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-149.json",
-      "status": "ACTIVE",
-      "description": "Immutable R2 documentary seed for OHC successor contract and Windows A1/A2 draft."
-    },
-    {
-      "id": "r149-ohc-contract-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/R149_OHC_SUCCESSOR_CONTRACT_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Independently accepted design/spec binding seven R141 conditions and operator-relaxed A3 identity; no runtime admission."
-    },
-    {
-      "id": "r149-a1a2-draft-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/R149_A1_A2_WINDOWS_VERIFY_WORK_ORDER_DRAFT_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Finite Windows A1/A2 VERIFY draft for a later Local tranche; not executable under R149."
-    },
-    {
-      "id": "r149-ohc-independent-review-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/R149_OHC_SUCCESSOR_INDEPENDENT_REVIEW_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Separate R2 review accepts repaired C1-C6 design/spec only; A1/A2 remains unadmitted."
-    },
-    {
-      "id": "r149-root-first-review-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/R149_ROOT_INDEPENDENT_REVIEW_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Root first-pass review records C1/C4 documentary findings and absent cloud Opus review artifact."
-    },
-    {
-      "id": "r148-a3-independent-review-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/R148_INDEPENDENT_A3_DISPOSITION_AUDIT_REVIEW_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Independent R2 acceptance of bounded metadata result and BLOCKED successor audit; full-tree missing README.md."
-    },
-    {
-      "id": "r144-a3-closure-carrier-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/R144_A3_CLOSURE_PACKET_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Transparent CLOSED administrative successor status carrier; original hash-pinned R144 dispatch order unchanged."
-    },
-    {
-      "id": "r148-a3-seed-20261105",
-      "family": "continuity",
-      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-148.json",
-      "status": "ACTIVE",
-      "description": "Immutable R2 seed for R144 metadata disposition, Windows full-tree comparison and successor R139 repair audit."
-    },
-    {
-      "id": "r148-a3-packet-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/R148_A3_DISPOSITION_AND_AUDIT_PACKET_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Bounded documentary audit packet; hash-pinned R144 work order unchanged and no A1/A2 release."
-    },
-    {
-      "id": "r148-a3-record-20261105",
-      "family": "continuity",
-      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-148.json",
-      "status": "ACTIVE",
-      "description": "Separate R2 tranche for independently accepted audit, registry pointer and R144 metadata closure."
-    },
-    {
-      "id": "r148-a3-audit-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_r144_disposition.json",
-      "status": "ACTIVE",
-      "description": "Successor R139 repair-chain audit: R144 metadata candidate accepted, full-tree condition failed, A1/A2 unadmitted."
-    },
-    {
-      "id": "r148-windows-tree-capture-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r144_a3_package_metadata_20261105/windows_full_tree.json",
-      "status": "ACTIVE",
-      "description": "Read-only Windows installed package tree: 347 files with SHA-256 and byte sizes."
-    },
-    {
-      "id": "r148-windows-tree-compare-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r144_a3_package_metadata_20261105/root_windows_full_tree_compare.json",
-      "status": "ACTIVE",
-      "description": "Npm348 versus Windows347: README.md missing, package.json hash differs, other346 files match."
-    },
-    {
-      "id": "r148-root-disposition-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/R148_ROOT_R144_A3_DISPOSITION_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Root accepts R144-D1/D2 and metadata candidate, holds A1/A2 on missing README.md."
-    },
-    {
-      "id": "r144-worker-return-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/R144_A3_PACKAGE_METADATA_VERIFY_RETURN_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Worker finite A3 metadata comparison: installed JSON equals npm manifest minus bugs and scripts, qualified only."
-    },
-    {
-      "id": "r144-independent-review-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/R144_A3_PACKAGE_METADATA_INDEPENDENT_REVIEW_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Separate R2 review accepts metadata candidate with procedural and record qualifications."
-    },
-    {
-      "id": "r144-cloud-proposal-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/R144_A3_ROOT_DISPOSITION_PROPOSAL_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Cloud proposal for Root audit, full-tree check and bounded R144 closure; not itself closure."
-    },
-    {
-      "id": "r144-npm-full-tree-manifest-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r144_a3_package_metadata_20261105/root_npm_full_tree_manifest.json",
-      "status": "ACTIVE",
-      "description": "Verified npm tarball manifest of 348 file paths, bytes and SHA-256."
-    },
-    {
-      "id": "r147-a3-successor-audit-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a3_verify.json",
-      "status": "ACTIVE",
-      "description": "Independently reviewed DIAGNOSTIC_ONLY successor preserving R139 UNKNOWNs and admitting exact finite R144 A3 VERIFY."
-    },
-    {
-      "id": "r147-a3-independent-review-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/R147_INDEPENDENT_A3_AUDIT_REVIEW_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Independent R2 acceptance of bounded documentary successor audit; no R139 runtime release."
-    },
-    {
-      "id": "r145-invalid-audit-seed-20261105",
-      "family": "continuity",
-      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-145.json",
-      "status": "ACTIVE",
-      "description": "Immutable failed seed; authorityKind rejected before audit or worker action."
-    },
-    {
-      "id": "r146-invalid-audit-seed-20261105",
-      "family": "continuity",
-      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-146.json",
-      "status": "ACTIVE",
-      "description": "Immutable failed seed; review-path allowlist rejected before audit or worker action."
-    },
-    {
-      "id": "r147-audit-seed-20261105",
-      "family": "continuity",
-      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-147.json",
-      "status": "ACTIVE",
-      "description": "Separate immutable R2 seed for R139 repair audit and finite R144 A3 VERIFY admission."
-    },
-    {
-      "id": "r147-audit-packet-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/R147_REPAIR_AUDIT_ADMISSION_PACKET_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Root-owned documentary audit packet; R139 product remains blocked."
-    },
-    {
-      "id": "r144-a3-verify-seed-20261105",
-      "family": "continuity",
-      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-144.json",
-      "status": "ACTIVE",
-      "description": "Immutable R2 seed for finite A3 package metadata VERIFY; no new fetch or runtime effect."
-    },
-    {
-      "id": "r144-a3-verify-order-20261105",
-      "family": "continuity",
-      "path": "docs/work_orders/CCMAI_RUNTIME_144_A3_PACKAGE_METADATA_VERIFY.md",
-      "status": "ACTIVE",
-      "description": "Hash-pinned original finite A3 metadata VERIFY dispatch packet; bytes unchanged after worker return."
-    },
-    {
-      "id": "r144-a3-verify-record-20261105",
-      "family": "continuity",
-      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-144.json",
-      "status": "ACTIVE",
-      "description": "R144 finite metadata VERIFY FROZEN at bounded scope through transparent successor status carrier; A1/A2 held."
-    },
-    {
-      "id": "r144-a3-local-capture-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r144_a3_package_metadata_20261105/local_capture.json",
-      "status": "ACTIVE",
-      "description": "Five installed Windows file hashes and bounded source capture; package.json differs from verified R141 tarball."
-    },
-    {
-      "id": "r144-a3-installed-package-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r144_a3_package_metadata_20261105/installed_package.json",
-      "status": "ACTIVE",
-      "description": "Read-only 2,354-byte Windows Antigravity installed package.json capture for exact A3 comparison."
-    },
-    {
-      "id": "r143-closed-handoff-20261105",
-      "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R143_LOCAL_STACK_CLOSURE_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "R143 bounded FREEZE of ordered Claude PR stack; R139 runtime remains blocked."
-    },
-    {
-      "id": "r139-causal-assessment-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/R139_CAUSAL_CHAIN_ASSESSMENT_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Reviewed causal assessment, Root lifecycle design and exact integration reopen conditions; product blocked."
-    },
-    {
-      "id": "r139-causal-evidence-20261105",
-      "family": "governed_artifact_family",
-      "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105",
-      "status": "ACTIVE",
-      "description": "Source pins, typed assessment and independent review; historical outcomes preserved."
-    },
-    {
-      "id": "r140-worker-order",
-      "family": "continuity",
-      "path": "docs/work_orders/CCMAI_RUNTIME_140_SELECTION_READ_REPAIR.md",
-      "status": "ACTIVE",
-      "description": "Worker-only independent M3-06 correction, S01-S10 acceptance and bounded scope."
-    },
-    {
-      "id": "r140-authority",
-      "family": "continuity",
-      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-140.json",
-      "status": "ACTIVE",
-      "description": "Immutable committed dispatcher seed."
-    },
-    {
-      "id": "r140-record",
-      "family": "continuity",
-      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-140.json",
-      "status": "ACTIVE",
-      "description": "Merged source/component FROZEN after profile 1.3 gate suite 130/130; R139 parent blocked."
-    },
-    {
-      "id": "r142-local-stack-review-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/R142_LOCAL_STACK_MERGE_REVIEW_AND_SUCCESSOR_CONTRACT_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Local review of PR #14/#15/#16, D1-D4 decisions, R141 successor conditions and Windows A3 4/5 hold; no R139 reopen."
-    },
-    {
-      "id": "r143-local-closure-packet-20261105",
-      "family": "continuity",
-      "path": "docs/reviews/R143_LOCAL_STACK_CLOSURE_PACKET_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "Seed-bound Local closure of three merged PR tranches; retained LAW failures and profile 1.3 suite 130/130 PASS."
-    },
-    {
-      "id": "r143-local-closure-record-20261105",
-      "family": "continuity",
-      "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-143.json",
-      "status": "ACTIVE",
-      "description": "R2 bounded Local stack FROZEN; R139 runtime remains blocked."
-    },
-    {
-      "id": "r140-evidence",
-      "family": "governed_artifact_family",
-      "path": "docs/reviews/probes/r140_selection_read_20261105",
-      "status": "ACTIVE",
-      "description": "Pinned source preimages and independent preparation checks."
-    },
-    {
-      "id": "law-learning-20261105-evidence-family",
-      "family": "governed_artifact_family",
-      "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105",
-      "status": "ACTIVE",
-      "description": "Exact intake, repair attempts, independent review and original/final validation receipts for LAW profile adoption."
-    },
-    {
-      "id": "law-learning-20261105-5",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/workspace_rule_pack_manifest.json",
-      "status": "ACTIVE",
-      "description": "LAW repair convergence project adoption and selected source/roadmap audit; product remains blocked."
-    },
-    {
-      "id": "law-learning-20261105-4",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/r3_repair_attempt.json",
-      "status": "ACTIVE",
-      "description": "LAW repair convergence project adoption and selected source/roadmap audit; product remains blocked."
-    },
-    {
-      "id": "law-learning-20261105-3",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/r2_repair_attempt.json",
-      "status": "ACTIVE",
-      "description": "LAW repair convergence project adoption and selected source/roadmap audit; product remains blocked."
-    },
-    {
-      "id": "law-learning-20261105-2",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/intake.json",
-      "status": "ACTIVE",
-      "description": "LAW repair convergence project adoption and selected source/roadmap audit; product remains blocked."
-    },
-    {
-      "id": "law-learning-20261105-0",
-      "family": "continuity",
-      "path": "docs/reviews/R139_LAW_LEARNING_AND_CODE_ROADMAP_AUDIT_2026-11-05.md",
-      "status": "ACTIVE",
-      "description": "LAW repair convergence project adoption and selected source/roadmap audit; product remains blocked."
-    },
+    {"id": "r157-order", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md", "status": "ACTIVE", "description": "Verified native pack adoption and exact portable compatibility repair; original range required."},
+    {"id": "r157-seed", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-157.json", "status": "ACTIVE", "description": "Immutable R2 adoption seed."},
+    {"id": "r157-historical-review", "family": "continuity", "path": "docs/reviews/probes/r157_verified_adoption_20261107/historical_review.json", "status": "ACTIVE", "description": "Terra independent exact frozen R150 binding review."},
+    {"id": "r157-historical-manifest", "family": "continuity", "path": "docs/reviews/probes/r157_verified_adoption_20261107/historical_manifest.json", "status": "ACTIVE", "description": "Pinned retrospective R150 admission, no effect authority."},
+    {"id": "r157-delivery", "family": "continuity", "path": "docs/reviews/probes/r157_verified_adoption_20261107/verified_delivery.json", "status": "ACTIVE", "description": "Clean source023323447,57filehashes and58artifact verification."},
+
+    {"id": "r156-worker-return-20261106", "family": "continuity", "path": "docs/reviews/R156_WORKER_RETURN_2026-11-06.md", "status": "ACTIVE", "description": "Sol actual joined candidate, failed worker runs and final worker-unverified source preserved."},
+    {"id": "r156-final-review-20261106", "family": "continuity", "path": "docs/reviews/R156_INDEPENDENT_IMPLEMENTATION_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Root independent final12/12 static candidate acceptance; original gate and parent acceptance remain blocked."},
+    {"id": "r156-proposal-20261106", "family": "continuity", "path": "docs/reviews/probes/r156_historical_join_20261106/README.md", "status": "ACTIVE", "description": "Three-module patch and strict helper, actual historical/current tests, uninstalled."},
+    {"id": "r156-reviewer-run-20261106", "family": "continuity", "path": "docs/reviews/probes/r156_historical_join_20261106/reviewer_run.json", "status": "ACTIVE", "description": "One independent final-source suite12methods exit0; not hosted or installed proof."},
+    {"id": "r155-r156-parent-intake-20261106", "family": "continuity", "path": "docs/reviews/learnings/R155_HISTORICAL_REPAIR_ADMISSION_2026-11-06.md", "status": "ACTIVE", "description": "Project-local prepared parent intake; tested candidate ready, no external message or adoption."},
+    {"id": "r156-packet-review-20261106", "family": "continuity", "path": "docs/reviews/R156_PACKET_DESIGN_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Terra independent exact R156 packet acceptance with doctor-source clarification, no implementation acceptance."},
+    {"id": "r156-incremental-record-20261106", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-156.json", "status": "ACTIVE", "description": "Explicit incremental Sol allowance preserving R155spend andUNKNOWN cumulative time."},
+    {"id": "r156-incremental-order-20261106", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_156_HISTORICAL_ADMISSION_PROPOSAL.md", "status": "ACTIVE", "description": "Actual historical joins in uninstalled copies; no parent/install authority."},
+    {"id": "r155-blocked-handoff-20261106", "family": "continuity", "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R155_HISTORICAL_ADMISSION_2026-11-06.md", "status": "RETIRED", "description": "Historical R155 partial implementation, BUILD_BLOCKED andspent allowance retained."},
+    {"id": "r155-worker-return-20261106", "family": "continuity", "path": "docs/reviews/R155_WORKER_RETURN_2026-11-06.md", "status": "ACTIVE", "description": "Terra partial unsupported return; all spent invocations retained."},
+    {"id": "r155-implementation-review-20261106", "family": "continuity", "path": "docs/reviews/R155_INDEPENDENT_IMPLEMENTATION_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Root independent CHANGES_REQUIRED with Sol read-only concurrence; no fix acceptance."},
+    {"id": "r155-candidate-20261106", "family": "continuity", "path": "docs/reviews/probes/r155_historical_binding_20261106/README.md", "status": "ACTIVE", "description": "Uninstalled provenance-only candidate, not ready for integration."},
+    {"id": "r156-incremental-seed-20261106", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-156.json", "status": "ACTIVE", "description": "Prospective incremental Sol fallback seed; prior spend preserved, no BUILD release."},
+    {"id": "r155-dispatch-design-review-20261106", "family": "continuity", "path": "docs/reviews/R155_DISPATCH_DESIGN_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Sol independent exact seed/design acceptance recorded by Root; no parent or implementation acceptance."},
+    {"id": "r155-proposal-record-20261106", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-155.json", "status": "ACTIVE", "description": "R155 candidate-only bounded dispatch record; original RC-01 remains blocked."},
+    {"id": "r155-proposal-order-20261106", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_155_HISTORICAL_ADMISSION_PROPOSAL.md", "status": "ACTIVE", "description": "Exact reviewed uninstalled historical-admission candidate and static fixture contract."},
+    {"id": "r154-historical-handoff-20261106", "family": "continuity", "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R154_REPOSITORY_RECONCILIATION_2026-11-06.md", "status": "RETIRED", "description": "R154 history reconciled to observed main merge; original required gate unresolved."},
+    {"id": "r155-proposal-seed-20261106", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-155.json", "status": "ACTIVE", "description": "Bounded uninstalled historical-admission repair proposal authority; no installed gate or parent adoption."},
+    {"id": "r155-parent-source-verification-20261106", "family": "continuity", "path": "CVF_SESSION/history/r155-parent-delivery-20261106/verification.json", "status": "ACTIVE", "description": "New parent pack ee68e90d3 verified56 hashed files and one directory; no historical fix delivered."},
+    {"id": "r154-postmerge-gate-hold-20261106", "family": "continuity", "path": "docs/reviews/R154_POSTMERGE_PROVENANCE_AND_GATE_HOLD_2026-11-06.md", "status": "ACTIVE", "description": "Independent R2 merge provenance acceptance and required installed PR-range coverage hold."},
+    {"id": "r154-worker-return-20261106", "family": "continuity", "path": "docs/reviews/R154_WORKER_RETURN_2026-11-06.md", "status": "ACTIVE", "description": "R154 no-commit merge candidate, byte provenance and qualifications; postmerge review records gate hold."},
+    {"id": "r154-cloud-r150-provenance-20261106", "family": "continuity", "path": "CVF_SESSION/history/r150-cloud-errata-4164a28d/provenance.json", "status": "ACTIVE", "description": "Archived cloud R150 seed, tranche and original handoff identities, separate from canonical Windows R150."},
+    {"id": "r154-cloud-r150-historical-handoff-20261106", "family": "continuity", "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R150_R149_ERRATA_2026-11-05.md", "status": "RETIRED", "description": "Historical cloud errata handoff; exact original ACTIVE version is archived."},
+    {"id": "r154-cloud-r150-errata-packet-20261106", "family": "continuity", "path": "docs/reviews/R150_R149_ERRATA_PACKET_2026-11-05.md", "status": "ACTIVE", "description": "Historical cloud R150 errata packet; distinct from local Windows R150."},
+    {"id": "r154-cloud-r150-errata-inputs-20261106", "family": "continuity", "path": "docs/reviews/R150_R149_ERRATA_BINDING_INPUTS_2026-11-05.md", "status": "ACTIVE", "description": "Cloud R149 errata inputs preserved with Local reconciliation pending."},
+    {"id": "r154-cloud-r150-errata-review-20261106", "family": "continuity", "path": "docs/reviews/R150_R149_ERRATA_INDEPENDENT_REVIEW_2026-11-05.md", "status": "ACTIVE", "description": "Cloud independent errata review and F1–F6 qualifications; Local review pending."},
+    {"id": "r154-cloud-r149-review-copy-20261106", "family": "continuity", "path": "docs/reviews/probes/r150_r149_errata_20261105/cloud_subagent_r149_review_ec86f91.md", "status": "ACTIVE", "description": "Preserved cloud R149 review evidence copy."},
+    {"id": "r154-cloud-r149-contract-copy-20261106", "family": "continuity", "path": "docs/reviews/probes/r150_r149_errata_20261105/cloud_repaired_r149_contract_ec86f91.md", "status": "ACTIVE", "description": "Historical cloud repaired contract copy with disclosed header and fence changes."},
+    {"id": "r154-cloud-r149-draft-copy-20261106", "family": "continuity", "path": "docs/reviews/probes/r150_r149_errata_20261105/cloud_repaired_r149_draft_ec86f91.md", "status": "ACTIVE", "description": "Historical cloud repaired draft copy; Local corrections require separate reconciliation."},
+    {"id": "r154-reconciliation-seed-20261106", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-154.json", "status": "ACTIVE", "description": "Committed R2 dispatcher seed for one bounded repository history reconciliation."},
+    {"id": "r154-reconciliation-record-20261106", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-154.json", "status": "ACTIVE", "description": "R154 merge completed; required PR-range coverage gate blocks RC-01 closure."},
+    {"id": "r153-m2-entry-historical-handoff-20261106", "family": "continuity", "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R153_M2_ENTRY_INVENTORY_2026-11-06.md", "status": "RETIRED", "description": "Frozen R153 source inventory handoff; superseded as active pointer by R154, with product holds retained."},
+    {"id": "r154-reconciliation-order-20261106", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_154_REPOSITORY_RECONCILIATION.md", "status": "ACTIVE", "description": "One bounded no-rewrite integration packet now blocked by historical range gate."},
+    {"id": "r154-reconciliation-criterion-20261106", "family": "continuity", "path": "docs/reviews/planning/CCMA_REPOSITORY_CONTINUITY_2026-11-06.md", "status": "ACTIVE", "description": "Project-specific RC-01 remains blocked on required historical range gate; no M5 release claim."},
+    {"id": "r154-reconciliation-predispatch-review-20261106", "family": "continuity", "path": "docs/reviews/R154_REPOSITORY_RECONCILIATION_PREDISPATCH_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Astra independent design acceptance; dispatch continuity and gates still required."},
+    {"id": "r154-reconciliation-candidate-review-20261106", "family": "continuity", "path": "docs/reviews/R154_REPOSITORY_RECONCILIATION_INDEPENDENT_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Astra independently accepted preserved merge candidate, with actual DAG checks pending Root commit."},
+    {"id": "r153-m2-entry-seed-20261106", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-153.json", "status": "ACTIVE", "description": "Committed dispatcher seed for one finite read-only M2-04 source inventory."},
+    {"id": "r153-m2-entry-record-20261106", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-153.json", "status": "ACTIVE", "description": "R2 DISPATCH_READY null-authority VERIFY record; no implementation or product acceptance."},
+    {"id": "r153-m2-entry-order-20261106", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_153_M2_ENTRY_INVENTORY.md", "status": "ACTIVE", "description": "Finite one-pass M2-04 entry-path source inventory packet."},
+    {"id": "r153-m2-entry-packet-review-20261106", "family": "continuity", "path": "docs/reviews/R153_M2_ENTRY_INVENTORY_PACKET_INDEPENDENT_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Independent R2 acceptance of exact finite R153 VERIFY packet after continuity repair; dispatch commit required."},
+    {"id": "r153-m2-entry-return-20261106", "family": "continuity", "path": "docs/reviews/R153_M2_ENTRY_INVENTORY_WORKER_RETURN_2026-11-06.md", "status": "ACTIVE", "description": "Terra's consumed 12-file T0 entry-path inventory with owned admission UNKNOWNs."},
+    {"id": "r153-m2-entry-result-review-20261106", "family": "continuity", "path": "docs/reviews/R153_M2_ENTRY_INVENTORY_INDEPENDENT_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Independent R2 acceptance of bounded T0 source map; M2 product remains OPEN/UNKNOWN."},
+    {"id": "r152-profile14-necessity-20261106", "family": "continuity", "path": "docs/reviews/R152_PROFILE_14_NECESSITY_DISPOSITION_2026-11-06.md", "status": "ACTIVE", "description": "Defers profile1.4 installation while preserving cumulative cost and source-policy hold."},
+    {"id": "r152-profile14-necessity-review-20261106", "family": "continuity", "path": "docs/reviews/R152_PROFILE_14_NECESSITY_INDEPENDENT_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Independent R2 acceptance of R152 deferral and finite R153 design only."},
+    {"id": "r152-parent-applicability-20261106", "family": "continuity", "path": "docs/reviews/R152_PARENT_UPDATE_APPLICABILITY_2026-11-06.md", "status": "ACTIVE", "description": "Shared form v1.4 mapped to CCMA M1-M5 controls with source-delivery gap; downstream gate profile1.4 held."},
+    {"id": "r152-independent-disposition-20261106", "family": "continuity", "path": "docs/reviews/R152_DISPOSITION_INDEPENDENT_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Independent R2 acceptance of documentary guidance and migration hold only."},
+    {"id": "r152-roadmap-form-review-20261106", "family": "continuity", "path": "docs/reviews/R152_ROADMAP_FORM_INDEPENDENT_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Independent R2 acceptance of roadmap form v1.2 documentary correction; profile1.4 installation held."},
+    {"id": "r152-roadmap-form-v14-review-20261106", "family": "continuity", "path": "docs/reviews/R152_ROADMAP_FORM_V14_INDEPENDENT_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Independent R2 assessment of external form v1.4 and CCMA-specific M1-M5 reference map; gate-profile installation held."},
+    {"id": "r152-maintenance-seed-20261106", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-152.json", "status": "ACTIVE", "description": "Immutable R2 seed for one bounded parent workspace maintenance scope."},
+    {"id": "r152-maintenance-record-20261106", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-152.json", "status": "ACTIVE", "description": "DRAFT/WORK_ORDER maintenance record; no worker BUILD or profile upgrade."},
+    {"id": "r152-maintenance-order-20261106", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_152_WORKSPACE_ACTIVATION.md", "status": "ACTIVE", "description": "Draft profile1.4 migration packet held on genuine maintenance coverage route."},
+    {"id": "r152-failed-predispatch-20261106", "family": "continuity", "path": "docs/reviews/probes/r152_workspace_activation_20261106/pre_dispatch_failed_20261106.txt", "status": "ACTIVE", "description": "Retained installed1.3 pre-dispatch APPL/COV failure on prospective active packet."},
+    {"id": "r151-narrow-a1b-cleanup-comparison-20261106", "family": "continuity", "path": "docs/reviews/R151_NARROW_A1B_CLEANUP_INSTRUMENT_COMPARISON_2026-11-06.md", "status": "ACTIVE", "description": "Read-only R151 instrument comparison; no accepted observer or Windows dispatch."},
+    {"id": "r151-narrow-a1b-cleanup-comparison-review-20261106", "family": "continuity", "path": "docs/reviews/R151_NARROW_A1B_CLEANUP_COMPARISON_INDEPENDENT_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Independent design-only acceptance of narrow comparison; workspace pack reconciliation held."},
+    {"id": "r151-v04-third-repair-cost-route-20261106", "family": "continuity", "path": "docs/reviews/R151_V04_THIRD_REPAIR_COST_ROUTE_DECISION_2026-11-06.md", "status": "ACTIVE", "description": "Root NO-GO for third full-runner repair; narrow Windows observation remains design-only and held."},
+    {"id": "r151-v04-cost-route-independent-review-20261106", "family": "continuity", "path": "docs/reviews/R151_V04_COST_ROUTE_INDEPENDENT_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Independent R2 acceptance of cost NO-GO only; source and Windows effect not admitted."},
+    {"id": "r151-v04-production-seam-design-20261106", "family": "continuity", "path": "docs/reviews/R151_V04_PRODUCTION_SEAM_DESIGN_2026-11-06.md", "status": "ACTIVE", "description": "R151 V04 production replacement and finalization seam design; accepted at design scope only."},
+    {"id": "r151-v04-design-first-review-20261106", "family": "continuity", "path": "docs/reviews/R151_V04_PRODUCTION_SEAM_DESIGN_INDEPENDENT_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "First independent R151 V04 design review, CHANGES_REQUIRED on terminal persisted PASS ambiguity."},
+    {"id": "r151-v04-design-corrected-review-20261106", "family": "continuity", "path": "docs/reviews/R151_V04_PRODUCTION_SEAM_CORRECTED_DESIGN_INDEPENDENT_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Second independent R151 V04 design review, CHANGES_REQUIRED on post-replacement readback failure."},
+    {"id": "r151-v04-design-sealed-review-20261106", "family": "continuity", "path": "docs/reviews/R151_V04_PRODUCTION_SEAM_SEALED_DESIGN_INDEPENDENT_REVIEW_2026-11-06.md", "status": "ACTIVE", "description": "Independent R151 sealed-design acceptance only; third repair and runtime remain held."},
+    {"id": "r150-a1a2-audit-review-20261105", "family": "continuity", "path": "docs/reviews/R150_INDEPENDENT_A1_A2_AUDIT_REVIEW_2026-11-05.md", "status": "ACTIVE", "description": "Independent R2 acceptance of exact finite A1/A2 audit/work-order admission only; no runtime result."},
+    {"id": "r150-a1a2-helper-review-20261105", "family": "continuity", "path": "docs/reviews/R150_INDEPENDENT_HELPER_REVIEW_2026-11-05.md", "status": "ACTIVE", "description": "Independent static review of fixed Windows A1/A2 helpers; actual runtime result remains unobserved."},
+    {"id": "r150-a1a2-runtime-review-20261105", "family": "continuity", "path": "docs/reviews/R150_INDEPENDENT_WINDOWS_VERIFY_REVIEW_2026-11-05.md", "status": "ACTIVE", "description": "Independent R2 acceptance of INCONCLUSIVE A1-b return; terminal Chrome descendant cleanup UNKNOWN."},
+    {"id": "r150-a1a2-root-disposition-20261105", "family": "continuity", "path": "docs/reviews/R150_ROOT_DISPOSITION_2026-11-05.md", "status": "ACTIVE", "description": "Root closes bounded diagnostic R150 without A1/A2 or product acceptance."},
+    {"id": "r150-a1a2-build-carrier-20261105", "family": "continuity", "path": "docs/reviews/R150_A1_A2_EXECUTION_STATUS_CARRIER_2026-11-05.md", "status": "ACTIVE", "description": "Administrative CLOSED carrier for R150 FREEZE, preserving exact official order bytes."},
+    {"id": "r150-a1a2-worker-return-20261105", "family": "continuity", "path": "docs/reviews/R150_A1_A2_WINDOWS_VERIFY_RETURN_2026-11-05.md", "status": "ACTIVE", "description": "Single Windows A1/A2 campaign INCONCLUSIVE at A1-b; A2 unrun, no product claim."},
+    {"id": "r150-a1a2-a3-prestart-20261105", "family": "continuity", "path": "docs/reviews/probes/r150_a1_a2_windows_20261105/a3_prestart_full_tree.json", "status": "ACTIVE", "description": "Immediate Windows full-tree A3 PASS with operator-relaxed package.json and absent README.md; 346 others equal."},
+    {"id": "r150-a1a2-runtime-raw-20261105", "family": "continuity", "path": "docs/reviews/probes/r150_a1_a2_windows_20261105/windows_verify_raw.json", "status": "ACTIVE", "description": "Raw bounded Chrome #1 A1-a control and inconclusive A1-b non-101 event; cleanup and counters retained."},
+    {"id": "r150-a1a2-pid-readback-20261105", "family": "continuity", "path": "docs/reviews/probes/r150_a1_a2_windows_20261105/postrun_known_pid_readback.json", "status": "ACTIVE", "description": "Later read-only known-PID absence; terminal owned-profile cleanup remains UNKNOWN due predicate defect."},
+    {"id": "r150-a1a2-effect-admission-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-150-A1A2-EFFECT-ADMISSION.json", "status": "ACTIVE", "description": "Separate bounded Windows process-effect admission, conditional on immediate A3 full-tree recapture PASS."},
+    {"id": "r150-a1a2-seed-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-150.json", "status": "ACTIVE", "description": "Immutable R2 seed for bounded Windows A1/A2 VERIFY and successor R139 audit."},
+    {"id": "r150-a1a2-record-20261105", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-150.json", "status": "ACTIVE", "description": "R150 finite VERIFY FROZEN as independently reviewed INCONCLUSIVE diagnostic; R139/M3 blocked."},
+    {"id": "r150-a1a2-order-20261105", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_150_A1_A2_WINDOWS_VERIFY.md", "status": "ACTIVE", "description": "Exact-byte finite Windows A1/A2 work order; no start before independent audit and same-session A3 recapture."},
+    {"id": "r150-a1a2-audit-20261105", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a1_a2_windows_verify.json", "status": "ACTIVE", "description": "Independently accepted successor R139 audit with exact A1/A2 work-order pin; registry points here."},
+    {"id": "r150-a1a2-owner-helper-20261105", "family": "continuity", "path": "docs/reviews/probes/r150_a1_a2_windows_20261105/owner_runner.mjs", "status": "ACTIVE", "description": "Bounded Windows A1/A2 owner helper with pinned admission readback and exact effect counters."},
+    {"id": "r150-a1a2-actor-helper-20261105", "family": "continuity", "path": "docs/reviews/probes/r150_a1_a2_windows_20261105/actor_call.mjs", "status": "ACTIVE", "description": "Native one-call actor helper for fixed A1/A2 commands."},
+    {"id": "r150-a1a2-a3-helper-20261105", "family": "continuity", "path": "docs/reviews/probes/r150_a1_a2_windows_20261105/prestart_full_tree.ps1", "status": "ACTIVE", "description": "Read-only immediate full-tree A3 comparison against pinned manifest and relaxed package identity."},
+    {"id": "r150-a1a2-process-helper-20261105", "family": "continuity", "path": "docs/reviews/probes/r150_a1_a2_windows_20261105/process_snapshot.ps1", "status": "ACTIVE", "description": "Read-only process and owned-profile inventory for Windows A1/A2."},
+    {"id": "r149-ohc-seed-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-149.json", "status": "ACTIVE", "description": "Immutable R2 documentary seed for OHC successor contract and Windows A1/A2 draft."},
+    {"id": "r149-ohc-contract-20261105", "family": "continuity", "path": "docs/reviews/R149_OHC_SUCCESSOR_CONTRACT_2026-11-05.md", "status": "ACTIVE", "description": "Independently accepted design/spec binding seven R141 conditions and operator-relaxed A3 identity; no runtime admission."},
+    {"id": "r149-a1a2-draft-20261105", "family": "continuity", "path": "docs/reviews/R149_A1_A2_WINDOWS_VERIFY_WORK_ORDER_DRAFT_2026-11-05.md", "status": "ACTIVE", "description": "Finite Windows A1/A2 VERIFY draft for a later Local tranche; not executable under R149."},
+    {"id": "r149-ohc-independent-review-20261105", "family": "continuity", "path": "docs/reviews/R149_OHC_SUCCESSOR_INDEPENDENT_REVIEW_2026-11-05.md", "status": "ACTIVE", "description": "Separate R2 review accepts repaired C1-C6 design/spec only; A1/A2 remains unadmitted."},
+    {"id": "r149-root-first-review-20261105", "family": "continuity", "path": "docs/reviews/R149_ROOT_INDEPENDENT_REVIEW_2026-11-05.md", "status": "ACTIVE", "description": "Root first-pass review records C1/C4 documentary findings and absent cloud Opus review artifact."},
+    {"id": "r148-a3-independent-review-20261105", "family": "continuity", "path": "docs/reviews/R148_INDEPENDENT_A3_DISPOSITION_AUDIT_REVIEW_2026-11-05.md", "status": "ACTIVE", "description": "Independent R2 acceptance of bounded metadata result and BLOCKED successor audit; full-tree missing README.md."},
+    {"id": "r144-a3-closure-carrier-20261105", "family": "continuity", "path": "docs/reviews/R144_A3_CLOSURE_PACKET_2026-11-05.md", "status": "ACTIVE", "description": "Transparent CLOSED administrative successor status carrier; original hash-pinned R144 dispatch order unchanged."},
+    {"id": "r148-a3-seed-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-148.json", "status": "ACTIVE", "description": "Immutable R2 seed for R144 metadata disposition, Windows full-tree comparison and successor R139 repair audit."},
+    {"id": "r148-a3-packet-20261105", "family": "continuity", "path": "docs/reviews/R148_A3_DISPOSITION_AND_AUDIT_PACKET_2026-11-05.md", "status": "ACTIVE", "description": "Bounded documentary audit packet; hash-pinned R144 work order unchanged and no A1/A2 release."},
+    {"id": "r148-a3-record-20261105", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-148.json", "status": "ACTIVE", "description": "Separate R2 tranche for independently accepted audit, registry pointer and R144 metadata closure."},
+    {"id": "r148-a3-audit-20261105", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_r144_disposition.json", "status": "ACTIVE", "description": "Successor R139 repair-chain audit: R144 metadata candidate accepted, full-tree condition failed, A1/A2 unadmitted."},
+    {"id": "r148-windows-tree-capture-20261105", "family": "continuity", "path": "docs/reviews/probes/r144_a3_package_metadata_20261105/windows_full_tree.json", "status": "ACTIVE", "description": "Read-only Windows installed package tree: 347 files with SHA-256 and byte sizes."},
+    {"id": "r148-windows-tree-compare-20261105", "family": "continuity", "path": "docs/reviews/probes/r144_a3_package_metadata_20261105/root_windows_full_tree_compare.json", "status": "ACTIVE", "description": "Npm348 versus Windows347: README.md missing, package.json hash differs, other346 files match."},
+    {"id": "r148-root-disposition-20261105", "family": "continuity", "path": "docs/reviews/R148_ROOT_R144_A3_DISPOSITION_2026-11-05.md", "status": "ACTIVE", "description": "Root accepts R144-D1/D2 and metadata candidate, holds A1/A2 on missing README.md."},
+    {"id": "r144-worker-return-20261105", "family": "continuity", "path": "docs/reviews/R144_A3_PACKAGE_METADATA_VERIFY_RETURN_2026-11-05.md", "status": "ACTIVE", "description": "Worker finite A3 metadata comparison: installed JSON equals npm manifest minus bugs and scripts, qualified only."},
+    {"id": "r144-independent-review-20261105", "family": "continuity", "path": "docs/reviews/R144_A3_PACKAGE_METADATA_INDEPENDENT_REVIEW_2026-11-05.md", "status": "ACTIVE", "description": "Separate R2 review accepts metadata candidate with procedural and record qualifications."},
+    {"id": "r144-cloud-proposal-20261105", "family": "continuity", "path": "docs/reviews/R144_A3_ROOT_DISPOSITION_PROPOSAL_2026-11-05.md", "status": "ACTIVE", "description": "Cloud proposal for Root audit, full-tree check and bounded R144 closure; not itself closure."},
+    {"id": "r144-npm-full-tree-manifest-20261105", "family": "continuity", "path": "docs/reviews/probes/r144_a3_package_metadata_20261105/root_npm_full_tree_manifest.json", "status": "ACTIVE", "description": "Verified npm tarball manifest of 348 file paths, bytes and SHA-256."},
+    {"id": "r147-a3-successor-audit-20261105", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a3_verify.json", "status": "ACTIVE", "description": "Independently reviewed DIAGNOSTIC_ONLY successor preserving R139 UNKNOWNs and admitting exact finite R144 A3 VERIFY."},
+    {"id": "r147-a3-independent-review-20261105", "family": "continuity", "path": "docs/reviews/R147_INDEPENDENT_A3_AUDIT_REVIEW_2026-11-05.md", "status": "ACTIVE", "description": "Independent R2 acceptance of bounded documentary successor audit; no R139 runtime release."},
+
+    {"id": "r145-invalid-audit-seed-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-145.json", "status": "ACTIVE", "description": "Immutable failed seed; authorityKind rejected before audit or worker action."},
+    {"id": "r146-invalid-audit-seed-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-146.json", "status": "ACTIVE", "description": "Immutable failed seed; review-path allowlist rejected before audit or worker action."},
+    {"id": "r147-audit-seed-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-147.json", "status": "ACTIVE", "description": "Separate immutable R2 seed for R139 repair audit and finite R144 A3 VERIFY admission."},
+    {"id": "r147-audit-packet-20261105", "family": "continuity", "path": "docs/reviews/R147_REPAIR_AUDIT_ADMISSION_PACKET_2026-11-05.md", "status": "ACTIVE", "description": "Root-owned documentary audit packet; R139 product remains blocked."},
+
+    {"id": "r144-a3-verify-seed-20261105", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-144.json", "status": "ACTIVE", "description": "Immutable R2 seed for finite A3 package metadata VERIFY; no new fetch or runtime effect."},
+    {"id": "r144-a3-verify-order-20261105", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_144_A3_PACKAGE_METADATA_VERIFY.md", "status": "ACTIVE", "description": "Hash-pinned original finite A3 metadata VERIFY dispatch packet; bytes unchanged after worker return."},
+    {"id": "r144-a3-verify-record-20261105", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-144.json", "status": "ACTIVE", "description": "R144 finite metadata VERIFY FROZEN at bounded scope through transparent successor status carrier; A1/A2 held."},
+    {"id": "r144-a3-local-capture-20261105", "family": "continuity", "path": "docs/reviews/probes/r144_a3_package_metadata_20261105/local_capture.json", "status": "ACTIVE", "description": "Five installed Windows file hashes and bounded source capture; package.json differs from verified R141 tarball."},
+    {"id": "r144-a3-installed-package-20261105", "family": "continuity", "path": "docs/reviews/probes/r144_a3_package_metadata_20261105/installed_package.json", "status": "ACTIVE", "description": "Read-only 2,354-byte Windows Antigravity installed package.json capture for exact A3 comparison."},
+    {"id": "r143-closed-handoff-20261105", "family": "continuity", "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R143_LOCAL_STACK_CLOSURE_2026-11-05.md", "status": "ACTIVE", "description": "R143 bounded FREEZE of ordered Claude PR stack; R139 runtime remains blocked."},
+    {"id": "r139-causal-assessment-20261105", "family": "continuity", "path": "docs/reviews/R139_CAUSAL_CHAIN_ASSESSMENT_2026-11-05.md", "status": "ACTIVE", "description": "Reviewed causal assessment, Root lifecycle design and exact integration reopen conditions; product blocked."},
+    {"id": "r139-causal-evidence-20261105", "family": "governed_artifact_family", "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105", "status": "ACTIVE", "description": "Source pins, typed assessment and independent review; historical outcomes preserved."},
+    {"id": "r140-worker-order", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_140_SELECTION_READ_REPAIR.md", "status": "ACTIVE", "description": "Worker-only independent M3-06 correction, S01-S10 acceptance and bounded scope."},
+    {"id": "r140-authority", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-140.json", "status": "ACTIVE", "description": "Immutable committed dispatcher seed."},
+    {"id": "r140-record", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-140.json", "status": "ACTIVE", "description": "Merged source/component FROZEN after profile 1.3 gate suite 130/130; R139 parent blocked."},
+    {"id": "r142-local-stack-review-20261105", "family": "continuity", "path": "docs/reviews/R142_LOCAL_STACK_MERGE_REVIEW_AND_SUCCESSOR_CONTRACT_2026-11-05.md", "status": "ACTIVE", "description": "Local review of PR #14/#15/#16, D1-D4 decisions, R141 successor conditions and Windows A3 4/5 hold; no R139 reopen."},
+    {"id": "r143-local-closure-packet-20261105", "family": "continuity", "path": "docs/reviews/R143_LOCAL_STACK_CLOSURE_PACKET_2026-11-05.md", "status": "ACTIVE", "description": "Seed-bound Local closure of three merged PR tranches; retained LAW failures and profile 1.3 suite 130/130 PASS."},
+    {"id": "r143-local-closure-record-20261105", "family": "continuity", "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-143.json", "status": "ACTIVE", "description": "R2 bounded Local stack FROZEN; R139 runtime remains blocked."},
+    {"id": "r140-evidence", "family": "governed_artifact_family", "path": "docs/reviews/probes/r140_selection_read_20261105", "status": "ACTIVE", "description": "Pinned source preimages and independent preparation checks."},
+
+    {"id": "law-learning-20261105-evidence-family", "family": "governed_artifact_family", "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105", "status": "ACTIVE", "description": "Exact intake, repair attempts, independent review and original/final validation receipts for LAW profile adoption."},
+    {"id": "law-learning-20261105-5", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/workspace_rule_pack_manifest.json", "status": "ACTIVE", "description": "LAW repair convergence project adoption and selected source/roadmap audit; product remains blocked."},
+    {"id": "law-learning-20261105-4", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/r3_repair_attempt.json", "status": "ACTIVE", "description": "LAW repair convergence project adoption and selected source/roadmap audit; product remains blocked."},
+    {"id": "law-learning-20261105-3", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/r2_repair_attempt.json", "status": "ACTIVE", "description": "LAW repair convergence project adoption and selected source/roadmap audit; product remains blocked."},
+    {"id": "law-learning-20261105-2", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/law_learning_20261105/intake.json", "status": "ACTIVE", "description": "LAW repair convergence project adoption and selected source/roadmap audit; product remains blocked."},
+    {"id": "law-learning-20261105-0", "family": "continuity", "path": "docs/reviews/R139_LAW_LEARNING_AND_CODE_ROADMAP_AUDIT_2026-11-05.md", "status": "ACTIVE", "description": "LAW repair convergence project adoption and selected source/roadmap audit; product remains blocked."},
     {
       "id": "r139-p01b01-design-result-20261030-4",
       "family": "continuity",
@@ -6356,9 +5613,9 @@
     {
       "id": "continuity-initial-handoff",
       "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R156_HISTORICAL_JOIN_2026-11-06.md",
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R157_VERIFIED_ADOPTION_2026-11-07.md",
       "status": "ACTIVE",
-      "description": "Current R156 Sol incremental joined candidate; R155 and original R154/product holds retained."
+      "description": "Current R157 verified native profile adoption; original range and product holds retained."
     },
     {
       "id": "r060-work-order",
@@ -41290,418 +40547,64 @@
       "status": "ACTIVE",
       "description": "Byte-preserved receiving Gemini return at independent Root review; connection failure only, no browser or product PASS."
     },
-    {
-      "id": "r139-resume-20261104-55f0ddb4dc543b4d",
-      "family": "continuity",
-      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-ADAPTER-SOURCE-ADMISSION.json",
-      "status": "ACTIVE",
-      "description": "Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained."
-    },
-    {
-      "id": "r139-resume-20261104-58522d9d783f5857",
-      "family": "continuity",
-      "path": "docs/reviews/R139_NATIVE_ADAPTER_SOURCE_ROOT_REVIEW_2026-10-30.md",
-      "status": "ACTIVE",
-      "description": "Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained."
-    },
-    {
-      "id": "r139-resume-20261104-0c1b975fdf519722",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/source_v1_checks/root_owner_derivation.json",
-      "status": "ACTIVE",
-      "description": "Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained."
-    },
-    {
-      "id": "r139-resume-20261104-b1bf522e9da19950",
-      "family": "continuity",
-      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-FRESHNESS-20261104-ADMISSION.json",
-      "status": "ACTIVE",
-      "description": "Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained."
-    },
-    {
-      "id": "r139-resume-20261104-61dde34260a2644a",
-      "family": "continuity",
-      "path": "docs/reviews/R139_CORE_FRESHNESS_ROOT_REVIEW_2026-11-04.md",
-      "status": "ACTIVE",
-      "description": "Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained."
-    },
-    {
-      "id": "r139-resume-20261104-6d8cbf1c29fbc9ca",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/knowledge_ingest.json",
-      "status": "ACTIVE",
-      "description": "Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained."
-    },
-    {
-      "id": "r139-resume-20261104-6e138a4880de5db5",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_startup_observation.json",
-      "status": "ACTIVE",
-      "description": "Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained."
-    },
-    {
-      "id": "r139-freshness-20261104-5790f02b221d875f",
-      "family": "continuity",
-      "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-REPIN-2-MAINTENANCE-ADMISSION.json",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-c08b6e4131936d54",
-      "family": "continuity",
-      "path": "docs/reviews/R139_CORE_FRESHNESS_WORKER_RETURN_2026-11-04.md",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-2c3b114c1e4f3f68",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_adoption_integrity.json",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-fd1f64c17a036482",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_discovery_delta_proof.json",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-f40fe1f984cc4d52",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_independent.stderr.txt",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-3e48f472ffee16f4",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_independent.stdout.txt",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-393b902ed390d89b",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_independent_children.jsonl",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-fb1f2acefb78cc8e",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_independent_receipt.json",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-0ac74ffdcd1b1e50",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_installer.stderr.txt",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-a6bb02ca77b04027",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_installer.stdout.txt",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-2df629cc025afeb9",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_installer_receipt.json",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-2dbc211b9f47f64b",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_preimages.json",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-9c180399c99fd80e",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_repair_parse.stderr.txt",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-96393ae1ec538d9d",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_repair_parse.stdout.txt",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-29e4daaedfec3e07",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_repair_parse_receipt.json",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-02b2d2348ee52e9a",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_attempt.claim",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-988dfc85f758b5a7",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_dispatch_ack.json",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-e0d60b52fffaa12d",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_outer.stderr.txt",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-1e6073b5d465e9c2",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_outer.stdout.txt",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-adc7f4b2c6e276d1",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_outer_result.json",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-2492a7cefc0e8c21",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_outer_start.json",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-ae9107bb801c51df",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_preflight.stderr.txt",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-655fd5661c314d27",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_preflight.stdout.txt",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-54fd2fdcf0dca3f5",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_preflight_clean_env.stderr.txt",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-bfb02cbe9a01e5fd",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_preflight_clean_env.stdout.txt",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-f4f77dd3f4b7de01",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_preflight_clean_env_receipt.json",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-7bd325b7891c3a98",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_preflight_discovery_repair.stderr.txt",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-2ea970714e7091ba",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_preflight_discovery_repair.stdout.txt",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-19e1be1d28d074d5",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_preflight_discovery_repair_receipt.json",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-186c87e2dcbff299",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_preflight_receipt.json",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-226f7af0018b21e6",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_result.json",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-aa208eab519532bb",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_result_review.json",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-2ca29722943be059",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_result_review_initial.json",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-3887103e6cfaf125",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_updater.stderr.txt",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-ea76c7627bb979f7",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_updater.stdout.txt",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-d0f03429e762df8d",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_completion.json",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-67afe4ed615418c5",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_focused.stderr.txt",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-e5d78e8726a217c8",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_focused.stdout.txt",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-1e229739dfae9d2a",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_focused_children.jsonl",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-39215ce0d1897f47",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_focused_receipt.json",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-9981d6bdd8138adc",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_full.stderr.txt",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-dbc3b2ad7ad4f460",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_full.stdout.txt",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-35c3a0df40e53db3",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_full_children.jsonl",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-7d2d082c45127725",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_full_receipt.json",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-06ff78cbce187318",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_started.json",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-577aad2321b132f3",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_test_capture.py",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-20261104-d5a7aece7ccc3a77",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_transaction.ps1",
-      "status": "ACTIVE",
-      "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."
-    },
-    {
-      "id": "r139-freshness-final-feb8dbd6bb3272ea",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_adoption_doctor.stderr.txt",
-      "status": "ACTIVE",
-      "description": "Independent bounded freshness checkpoint evidence; whole R139/M3 product remains blocked."
-    },
-    {
-      "id": "r139-freshness-final-38d67d9fb39e78f2",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_adoption_doctor.stdout.txt",
-      "status": "ACTIVE",
-      "description": "Independent bounded freshness checkpoint evidence; whole R139/M3 product remains blocked."
-    },
-    {
-      "id": "r139-freshness-final-3108eb4483da4899",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_adoption_doctor_receipt.json",
-      "status": "ACTIVE",
-      "description": "Independent bounded freshness checkpoint evidence; whole R139/M3 product remains blocked."
-    },
-    {
-      "id": "r139-freshness-final-3f26adaabb28d12a",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_checkpoint_disposition.json",
-      "status": "ACTIVE",
-      "description": "Independent bounded freshness checkpoint evidence; whole R139/M3 product remains blocked."
-    },
-    {
-      "id": "r139-freshness-raw-custody-20261104",
-      "family": "continuity",
-      "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/.gitattributes",
-      "status": "ACTIVE",
-      "description": "Preserve original raw evidence/candidate bytes in this finite probe; no global attribute or executable scope change."
-    }
+    {"id": "r139-resume-20261104-55f0ddb4dc543b4d", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-NATIVE-ADAPTER-SOURCE-ADMISSION.json", "status": "ACTIVE", "description": "Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained."},
+    {"id": "r139-resume-20261104-58522d9d783f5857", "family": "continuity", "path": "docs/reviews/R139_NATIVE_ADAPTER_SOURCE_ROOT_REVIEW_2026-10-30.md", "status": "ACTIVE", "description": "Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained."},
+    {"id": "r139-resume-20261104-0c1b975fdf519722", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/sdk_p01_b01_design_20261030/source_v1_checks/root_owner_derivation.json", "status": "ACTIVE", "description": "Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained."},
+    {"id": "r139-resume-20261104-b1bf522e9da19950", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-FRESHNESS-20261104-ADMISSION.json", "status": "ACTIVE", "description": "Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained."},
+    {"id": "r139-resume-20261104-61dde34260a2644a", "family": "continuity", "path": "docs/reviews/R139_CORE_FRESHNESS_ROOT_REVIEW_2026-11-04.md", "status": "ACTIVE", "description": "Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained."},
+    {"id": "r139-resume-20261104-6d8cbf1c29fbc9ca", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/knowledge_ingest.json", "status": "ACTIVE", "description": "Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained."},
+    {"id": "r139-resume-20261104-6e138a4880de5db5", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_startup_observation.json", "status": "ACTIVE", "description": "Bounded freshness repair preparation; native source draft PENDING, product/runtime holds retained."},
+    {"id": "r139-freshness-20261104-5790f02b221d875f", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-139-CORE-REPIN-2-MAINTENANCE-ADMISSION.json", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-c08b6e4131936d54", "family": "continuity", "path": "docs/reviews/R139_CORE_FRESHNESS_WORKER_RETURN_2026-11-04.md", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-2c3b114c1e4f3f68", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_adoption_integrity.json", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-fd1f64c17a036482", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_discovery_delta_proof.json", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-f40fe1f984cc4d52", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_independent.stderr.txt", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-3e48f472ffee16f4", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_independent.stdout.txt", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-393b902ed390d89b", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_independent_children.jsonl", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-fb1f2acefb78cc8e", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_independent_receipt.json", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-0ac74ffdcd1b1e50", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_installer.stderr.txt", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-a6bb02ca77b04027", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_installer.stdout.txt", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-2df629cc025afeb9", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_installer_receipt.json", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-2dbc211b9f47f64b", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_preimages.json", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-9c180399c99fd80e", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_repair_parse.stderr.txt", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-96393ae1ec538d9d", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_repair_parse.stdout.txt", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-29e4daaedfec3e07", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_repair_parse_receipt.json", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-02b2d2348ee52e9a", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_attempt.claim", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-988dfc85f758b5a7", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_dispatch_ack.json", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-e0d60b52fffaa12d", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_outer.stderr.txt", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-1e6073b5d465e9c2", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_outer.stdout.txt", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-adc7f4b2c6e276d1", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_outer_result.json", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-2492a7cefc0e8c21", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_outer_start.json", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-ae9107bb801c51df", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_preflight.stderr.txt", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-655fd5661c314d27", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_preflight.stdout.txt", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-54fd2fdcf0dca3f5", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_preflight_clean_env.stderr.txt", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-bfb02cbe9a01e5fd", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_preflight_clean_env.stdout.txt", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-f4f77dd3f4b7de01", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_preflight_clean_env_receipt.json", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-7bd325b7891c3a98", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_preflight_discovery_repair.stderr.txt", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-2ea970714e7091ba", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_preflight_discovery_repair.stdout.txt", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-19e1be1d28d074d5", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_preflight_discovery_repair_receipt.json", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-186c87e2dcbff299", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_preflight_receipt.json", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-226f7af0018b21e6", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_result.json", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-aa208eab519532bb", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_result_review.json", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-2ca29722943be059", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_transaction_result_review_initial.json", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-3887103e6cfaf125", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_updater.stderr.txt", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-ea76c7627bb979f7", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_updater.stdout.txt", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-d0f03429e762df8d", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_completion.json", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-67afe4ed615418c5", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_focused.stderr.txt", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-e5d78e8726a217c8", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_focused.stdout.txt", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-1e229739dfae9d2a", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_focused_children.jsonl", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-39215ce0d1897f47", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_focused_receipt.json", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-9981d6bdd8138adc", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_full.stderr.txt", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-dbc3b2ad7ad4f460", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_full.stdout.txt", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-35c3a0df40e53db3", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_full_children.jsonl", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-7d2d082c45127725", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_full_receipt.json", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-06ff78cbce187318", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_started.json", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-577aad2321b132f3", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_test_capture.py", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-20261104-d5a7aece7ccc3a77", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/worker_transaction.ps1", "status": "ACTIVE", "description": "Finite docs-only Core freshness repair source/results; originals and limits retained; no product/runtime acceptance."},
+    {"id": "r139-freshness-final-feb8dbd6bb3272ea", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_adoption_doctor.stderr.txt", "status": "ACTIVE", "description": "Independent bounded freshness checkpoint evidence; whole R139/M3 product remains blocked."},
+    {"id": "r139-freshness-final-38d67d9fb39e78f2", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_adoption_doctor.stdout.txt", "status": "ACTIVE", "description": "Independent bounded freshness checkpoint evidence; whole R139/M3 product remains blocked."},
+    {"id": "r139-freshness-final-3108eb4483da4899", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_adoption_doctor_receipt.json", "status": "ACTIVE", "description": "Independent bounded freshness checkpoint evidence; whole R139/M3 product remains blocked."},
+    {"id": "r139-freshness-final-3f26adaabb28d12a", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/root_checkpoint_disposition.json", "status": "ACTIVE", "description": "Independent bounded freshness checkpoint evidence; whole R139/M3 product remains blocked."},
+    {"id": "r139-freshness-raw-custody-20261104", "family": "continuity", "path": "docs/reviews/probes/r139_integrated_20261021/core_freshness_20261104/.gitattributes", "status": "ACTIVE", "description": "Preserve original raw evidence/candidate bytes in this finite probe; no global attribute or executable scope change."}
   ]
 }

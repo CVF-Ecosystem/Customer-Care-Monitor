@@ -16,7 +16,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Active session/phase/role state.: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
 - Historical pre-message F02 evidence/FREEZE assessment; next-step recommendation superseded by the post-R032 assessment.: `docs/reviews/F02_REMAINING_EVIDENCE_AND_FREEZE_ASSESSMENT_2026-10-02.md`
 - Historical post-R032 assessment/proposal; owner delegates local closure decisions, now executed under R033; live remains OPEN.: `docs/reviews/F02_POST_R032_EVIDENCE_AND_LOCAL_FREEZE_PROPOSAL_2026-10-03.md`
-- Current R156 Sol incremental joined candidate; R155 and original R154/product holds retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R156_HISTORICAL_JOIN_2026-11-06.md`
+- Current R157 verified native profile adoption; original range and product holds retained.: `CVF_SESSION/handoffs/AGENT_HANDOFF_R157_VERIFIED_ADOPTION_2026-11-07.md`
 - Downstream gate learning intake for CVF parent assessment and transfer; source evidence and deferred disposition.: `docs/reviews/learnings/CCMAI_TO_CVF_DOWNSTREAM_GATE_LEARNING_INTAKE_2026-10-01.md`
 - Owner-agreed shared finding/learning folder convention: immediate project learning and CVF parent intake.: `docs/reviews/learnings/README.md`
 - Shared learning: repair acknowledgment, continuity synchronization, mutation validity and evidence honesty; read before BUILD/REPAIR.: `docs/reviews/learnings/feedback_cvf_repair_workflow.md`
@@ -5383,8 +5383,11 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Three-module patch and strict helper, actual historical/current tests, uninstalled.: `docs/reviews/probes/r156_historical_join_20261106/README.md`
 - One independent final-source suite12methods exit0; not hosted or installed proof.: `docs/reviews/probes/r156_historical_join_20261106/reviewer_run.json`
 - Sol actual joined candidate, failed worker runs and final worker-unverified source preserved.: `docs/reviews/R156_WORKER_RETURN_2026-11-06.md`
-- Independent declared actual R150 immutable temporal binding review; no runtime authority.: `docs/reviews/probes/r157_verified_adoption_20261107/historical_review.json`
-- Immutable dispatcher seed for native verified pack adoption, R2 independent review.: `CVF_SESSION/authority/CCMAI-RUNTIME-157.json`
+- Clean source023323447,57filehashes and58artifact verification.: `docs/reviews/probes/r157_verified_adoption_20261107/verified_delivery.json`
+- Pinned retrospective R150 admission, no effect authority.: `docs/reviews/probes/r157_verified_adoption_20261107/historical_manifest.json`
+- Terra independent exact frozen R150 binding review.: `docs/reviews/probes/r157_verified_adoption_20261107/historical_review.json`
+- Verified native pack adoption and exact portable compatibility repair; original range required.: `docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md`
+- Immutable R2 adoption seed.: `CVF_SESSION/authority/CCMAI-RUNTIME-157.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

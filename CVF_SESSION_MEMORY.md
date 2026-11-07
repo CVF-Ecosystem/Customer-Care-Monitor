@@ -2,7 +2,15 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R156_HISTORICAL_JOIN_2026-11-06.md", "activeTranche": "CCMAI-RUNTIME-156", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "WORK_ORDER", "activePhase": "WORK_ORDER", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R157_VERIFIED_ADOPTION_2026-11-07.md", "activeTranche": "CCMAI-RUNTIME-157", "parked": true} -->
+## Current R157 verified adoption admission — 2026-11-07
+
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+
+CCMAI-RUNTIME-157 DISPATCH_READY: verified clean1.4.1 pack source023323447 and immutable historical review accepted; run applicable installed1.3 packet pre-dispatch and portable gates, commit exact admission/manifest before native installer BUILD. Then configure reviewed ACT and require trusted new-pack bootstrap/pre-dispatch PASS before Sol exact portable1.4.1 compatibility repair. Root independently reviews Sol code, Terra independently reviews Root adoption; original f740 range must PASS before RC-01 closure. No provider/push/release/runtime; R139/M3/R151 holds, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, all spent effects/UNKNOWN and FB/Zalo parking retained.
+
+
 ## Current R156 FROZEN static candidate only — 2026-11-06
 
 - Current mode: FREEZE
@@ -236,39 +244,11 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: FREEZE
-- Active phase: FREEZE
-- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R156_HISTORICAL_JOIN_2026-11-06.md
+- Current mode: WORK_ORDER
+- Active phase: WORK_ORDER
+- Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R157_VERIFIED_ADOPTION_2026-11-07.md
 
-CCMAI-RUNTIME-156 FROZEN_STATIC_CANDIDATE_ONLY: build705ef67c independently reviewed12/12 and R156 committed range checked; parent intake ready in docs/reviews/learnings/R155_HISTORICAL_REPAIR_ADMISSION_2026-11-06.md. Parent CVF maintainer must accept/version/deliver source; Root may only prepare separately authorized deliberate adoption after verified delivery. Installed1.3 unchanged; original R154/RC-01 gate unresolved, R155 BUILD_BLOCKED, R151/R139/M3 blocked, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN and accounts parked. Five worker and one reviewer invocations spent; no automatic retry/successor, no product or governance acceptance.
-
-### Historical pre-G0 checkpoint — superseded 2026-10-27
-
-CCMAI-RUNTIME-139 delegated consolidated preclock repair source checks PASS: original controllers23500/2560/28928 all retained exit1 (used3), allocation002 ceiling4; cumulative checks20 include retained18 plus worker13552 and Root24424 each PASS5. Exact inherited source-budget dictionary restored, delegated accounting separate; full source preclock contracts independently audited. Finalize current v2 metadata/actor/source bindings and independent technical review, pinned gates and clean commit before one fourth original controller. Nonce299b601cf7509d9727de5d1de197990f, source7ef/build6b unchanged. Campaign0/1, services/CUA/fixture/key/provider0; one R139/M3-05/M3-08 order, API1<=USD1 and1200/+1020 unchanged, actual G0 and separate Runtime Effect Admission before fixture/key/provider. No blind retry, helper tranche or Owner relay. Product B blocked; Facebook/Zalo OA parked.
-
-Root ORCHESTRATOR / BUDGET_STEWARD / snapshot metadata author / COMMIT_STEWARD; Sol implementation worker and independent reviewer, browser workers unreleased
-
-### Historical R139 instructions and progression — superseded 2026-10-27
-
-Owner reiteration2026-10-23: no fragmented tranches; follow roadmap. Root keeps ONE existing R139 outcome-based order across G0/G1/G2/G3; no helper/metadata prompt chain or repeated Owner relay. Complete consolidated readiness/admission before redispatch. Historical substep instructions and prior HOLD_TRANSFER are completed/spent context; the Current Truth instruction above governs this continuation. Directive recorded in existing order/continuity, no new learning artifact or tranche. Effectiveness must be judged by product acceptance.
-
-Historical consumed G0 handoff (NOT executable again): `CVF_SESSION/authority/CCMAI-RUNTIME-139-ANTIGRAVITY-G0-ADMISSION.json`, one bounded native G0 actual capability trial in Antigravity. Owner selection supersedes transfer recommendation, without overriding tool policy/history. Root independent code review plus Luna admission review accepted exact contract; runtime NOT_RUN. Product B/key/provider authority unchanged. Earlier transfer-only and spent compile/pure instructions below are historical.
-
-Latest runtime review: `docs/reviews/R139_ANTIGRAVITY_G0_RUNTIME_REVIEW_2026-10-23.md`. G0HOLD accepted with qualifications; campaign1/1 spent. Child wait/self-stop bounded only; parent HOLD, missing marker/null listener, placeholder WebP and raw terminal/env/timing gaps retained. Keep Antigravity and one consolidated route; no retry or new supporting prompt.
-
-Canonical roadmap: docs/roadmaps/CCMA_DELIVERY_ACCEPTANCE_PLAN_2026-10-21.md. R137 product source unchanged; R139 original setup HOLD retained; no full M3 acceptance.
-
-Current decision packet: `docs/reviews/R139_CONSOLIDATED_RECOVERY_DESIGN_REVIEW_2026-10-23.md`; Sol design independently reviewed by Root. Core restored to public b69e1088/origin/main; doctor27/27 PASS, inherited e9ddcb pin warning. Owner delegation preferences retained: Luna Max ordinarily, Sol Medium for difficult work; Alibaba permission requires bounded applicable admission and never renews spent campaigns. No new tranche or effect.
-
-Recovery source/evidence commit: `0ac2661825ff0c85bbdb74805d8086bca68991a7`; independent source acceptance only, runtime HOLD_TRANSFER. Latest transfer packet: `docs/reviews/R139_RECOVERY_SOURCE_AND_RUNTIME_TRANSFER_2026-10-23.md`.
-
-Claude receiving-worker annex prepared in `docs/work_orders/CCMAI_RUNTIME_139_INTEGRATED_EXECUTION_PROOF.md` (2026-10-23): owner designates Claude; Root orchestrator/independent reviewer. Receiving metadata intake/report only; fresh committed admission before browser/process/fixture/key/API effects. Same R139 HOLD_TRANSFER; old budgets and parked checkpoint unchanged.
-
-Claude A report received; independent review `docs/reviews/R139_CLAUDE_RECEIVING_READINESS_REVIEW_2026-10-23.md`: CHANGES_REQUIRED documentary clarification (HEAD/provenance, command evidence, browser contract, real provider wording, bounded readiness proposal). Four source hashes corroborated; receiving ignored binary/toolchain absent. One consolidated report repair only; B BLOCKED_PENDING_ADMISSION and old counters unchanged.
-
-Claude Revision1 independently ACCEPTED_BOUNDED_DOCUMENTARY_INTAKE; original findings preserved in review supplement. Session logs remain worker-reported/unverified. Proposed next packet: `docs/reviews/R139_CLAUDE_RECEIVING_ADMISSION_PROPOSAL_2026-10-23.md` (one offline build/check and explicit browser topology decision; no effect granted). B remains BLOCKED_PENDING_ADMISSION; no further report-repair loop.
-
-Owner-approved Claude offline admission independently accepted by Luna after one consolidated source-input repair. Admission `CVF_SESSION/authority/CCMAI-RUNTIME-139-CLAUDE-OFFLINE-BUILD-ADMISSION.json`: ready after Root commit for compile1 only; return actual binary receipt to Root before pure1 release. Root final message pins exact dispatch HEAD. No browser/probe/runtime/key/API authority; B still blocked.
+CCMAI-RUNTIME-157 DISPATCH_READY: verified clean1.4.1 pack source023323447 and immutable historical review accepted; run applicable installed1.3 packet pre-dispatch and portable gates, commit exact admission/manifest before native installer BUILD. Then configure reviewed ACT and require trusted new-pack bootstrap/pre-dispatch PASS before Sol exact portable1.4.1 compatibility repair. Root independently reviews Sol code, Terra independently reviews Root adoption; original f740 range must PASS before RC-01 closure. No provider/push/release/runtime; R139/M3/R151 holds, R150 INCONCLUSIVE/A2 UNRUN/cleanup UNKNOWN, all spent effects/UNKNOWN and FB/Zalo parking retained.
 
 ## Historical R114 bounded UI result
 

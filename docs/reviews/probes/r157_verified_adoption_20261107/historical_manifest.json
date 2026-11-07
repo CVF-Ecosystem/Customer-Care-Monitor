@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "cvf.historicalRepairAdmissions@1.0.0",
+  "bindings": [
+    {
+      "milestone": "M3",
+      "tranche": "CCMAI-RUNTIME-150",
+      "packet": {
+        "path": "docs/work_orders/CCMAI_RUNTIME_150_A1_A2_WINDOWS_VERIFY.md",
+        "sha256": "a7a2b74e1851cdcbd2dba010456e2b0d17a9ade1fdb83518e19d66343a79e398"
+      },
+      "admission": "c61b01fa89c40135093103a0852de70f82bd39ec",
+      "build": "7052df5c6da31d6867172d26a298a7bb4b72bb9c",
+      "terminal": "ed9d55b25290fd8b640f16e0635fbe895e9b9b5f",
+      "registry": {
+        "path": "docs/milestone-coverage-authority.json",
+        "sha256": "80f98893b8641404037ccb6617bd82ca022f0a5f472f219f3d8b2b6825137c70"
+      },
+      "audit": {
+        "path": "docs/reviews/probes/r139_integrated_20261021/causal_assessment_20261105/repair_chain_assessment_a1_a2_windows_verify.json",
+        "sha256": "d408ddc42ff5b2c802ef9188f45ba166c30853b7685d643f4965333decc6dbf4"
+      },
+      "seed": {
+        "path": "CVF_SESSION/authority/CCMAI-RUNTIME-150.json",
+        "sha256": "6771e05a82f2e5b0905077d08adb2bf40b0ec34ad74a744ee12155ff43ec2f10"
+      },
+      "terminalRecord": {
+        "path": "CVF_SESSION/tranches/CCMAI-RUNTIME-150.json",
+        "sha256": "beb5e85f37a725ef145822e3eb2fb83b74ec26ec3fe231e088d3d3576599cf79"
+      },
+      "carrier": {
+        "path": "docs/reviews/R150_A1_A2_EXECUTION_STATUS_CARRIER_2026-11-05.md",
+        "sha256": "b24a1b37694a0de8c1a76679c099f13c13568a3108bd2d757ef1c976c9ab2cd4"
+      },
+      "reviewEvidence": [
+        {
+          "path": "docs/reviews/R150_INDEPENDENT_A1_A2_AUDIT_REVIEW_2026-11-05.md",
+          "sha256": "4e06f8b7245f4b3913a049f309bd1299b978724202bcc938665e7680b83368b6"
+        },
+        {
+          "path": "docs/reviews/R150_INDEPENDENT_HELPER_REVIEW_2026-11-05.md",
+          "sha256": "f0cd75efb21c93557bbc3230c1d9b704501c82f2388d6d75b2cb49818eb6f652"
+        },
+        {
+          "path": "docs/reviews/R150_INDEPENDENT_WINDOWS_VERIFY_REVIEW_2026-11-05.md",
+          "sha256": "25f9ce7a2704e088840cbe9d8109c3ee815e2f614a18f09c97ccb4c64cee2836"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "path": "docs/reviews/probes/r157_verified_adoption_20261107/historical_review.json",
+    "sha256": "73484387f71866e06b9d1adef7a17a96bc252b3b98b869119bf0c09aa0e43e8c",
+    "commit": "e3335dff0cb9b2f0d3345b229131e503a96d805d"
+  }
+}
