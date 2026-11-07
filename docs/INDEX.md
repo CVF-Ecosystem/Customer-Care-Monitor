@@ -5389,6 +5389,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Root independent Sol source review and131mandatoryunit PASS.: `docs/reviews/R157_COMPATIBILITY_ROOT_REVIEW_2026-11-07.md`
 - Sol exact1.4.1 compatibility source, original return and Root closeability amendment.: `docs/reviews/R157_COMPATIBILITY_WORKER_RETURN_2026-11-07.md`
 - Clean source023323447,57filehashes and58artifact verification.: `docs/reviews/probes/r157_verified_adoption_20261107/verified_delivery.json`
+- Verified repository RC-01 through actual committed original range; product/runtime holds retained.: `docs/reviews/R157_FINAL_REPOSITORY_DISPOSITION_2026-11-07.md`
 - Pinned retrospective R150 admission, no effect authority.: `docs/reviews/probes/r157_verified_adoption_20261107/historical_manifest.json`
 - Terra independent exact frozen R150 binding review.: `docs/reviews/probes/r157_verified_adoption_20261107/historical_review.json`
 - Verified native pack adoption and exact portable compatibility repair; original range required.: `docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md`

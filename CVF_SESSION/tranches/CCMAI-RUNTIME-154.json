@@ -57,9 +57,25 @@
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
   "workOrderStatus": "BLOCKED_WITH_REASON",
   "buildCommit": "229d98b3b33a17e4d23b3ded34cdd4455c5ca5d3",
-  "reviewEvidence": ["docs/reviews/R154_REPOSITORY_RECONCILIATION_INDEPENDENT_REVIEW_2026-11-06.md", "docs/reviews/R154_POSTMERGE_PROVENANCE_AND_GATE_HOLD_2026-11-06.md"],
+  "reviewEvidence": [
+    "docs/reviews/R154_REPOSITORY_RECONCILIATION_INDEPENDENT_REVIEW_2026-11-06.md",
+    "docs/reviews/R154_POSTMERGE_PROVENANCE_AND_GATE_HOLD_2026-11-06.md"
+  ],
   "disposition": "MERGE_PROVENANCE_ACCEPTED_REQUIRED_PR_RANGE_COV_REPAIR_ACTION_MISMATCH_HOLD",
   "freeze": "OPEN",
-  "history": ["WORK_ORDER", "DISPATCH_READY", "BUILD", "BUILD_BLOCKED"],
-  "parentTranche": "CCMAI-RUNTIME-153"
+  "history": [
+    "WORK_ORDER",
+    "DISPATCH_READY",
+    "BUILD",
+    "BUILD_BLOCKED"
+  ],
+  "parentTranche": "CCMAI-RUNTIME-153",
+  "successorResolution": {
+    "tranche": "CCMAI-RUNTIME-157",
+    "status": "RESOLVED_BY_VERIFIED_REPOSITORY_SUCCESSOR",
+    "buildCommit": "f862c77d431f0b45a07fff4fb9e2342c86415648",
+    "evidence": "docs/reviews/R157_FINAL_REPOSITORY_DISPOSITION_2026-11-07.md",
+    "originalStatusOutcomeAndSpendPreserved": true,
+    "scope": "RepositoryRC-01 only; this does not rewrite original failed/partial result or product holds"
+  }
 }

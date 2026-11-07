@@ -58,5 +58,13 @@
     "BUILD",
     "BUILD_BLOCKED"
   ],
-  "parentTranche": "CCMAI-RUNTIME-154"
+  "parentTranche": "CCMAI-RUNTIME-154",
+  "successorResolution": {
+    "tranche": "CCMAI-RUNTIME-157",
+    "status": "RESOLVED_BY_VERIFIED_REPOSITORY_SUCCESSOR",
+    "buildCommit": "f862c77d431f0b45a07fff4fb9e2342c86415648",
+    "evidence": "docs/reviews/R157_FINAL_REPOSITORY_DISPOSITION_2026-11-07.md",
+    "originalStatusOutcomeAndSpendPreserved": true,
+    "scope": "RepositoryRC-01 only; this does not rewrite original failed/partial result or product holds"
+  }
 }

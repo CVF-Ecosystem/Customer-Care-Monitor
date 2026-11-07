@@ -1,0 +1,81 @@
+{
+  "base": "f7405c470207dc0d3be64e6eca79b7050d3f79d8",
+  "head": "f862c77d431f0b45a07fff4fb9e2342c86415648",
+  "command": [
+    "C:\\Users\\tiennm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-B",
+    "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+    "run",
+    "--phase",
+    "pr-ci",
+    "--project-root",
+    ".",
+    "--base",
+    "f7405c470207dc0d3be64e6eca79b7050d3f79d8",
+    "--head",
+    "f862c77d431f0b45a07fff4fb9e2342c86415648",
+    "--json",
+    "--expect-profile-sha256",
+    "3e14e4ad99a18416752b4666c4f0bed4cc7436068ef6e1c8768f34505e566c1f",
+    "--expect-runner-sha256",
+    "f21777579758f152ddad55f153edd1921162ac16ed24788943638fc1602669c1",
+    "--expect-bundle-sha256",
+    "d7e56f089a3ba9ca289953caeb7fa452cefde371b9ab82a793baf3552169654f",
+    "--historical-admissions",
+    "docs/reviews/probes/r157_verified_adoption_20261107/historical_manifest.json",
+    "--historical-admissions-sha256",
+    "683ec6423294c5ce7ee06bc5c507c4592db25f5da1ca6e53b9b48f4aa375a31e",
+    "--historical-admissions-commit",
+    "777b30582f71aef5e4d786efc58e135fe06d2d1f"
+  ],
+  "exitCode": 0,
+  "sourcePins": {
+    "profileSha256": "3e14e4ad99a18416752b4666c4f0bed4cc7436068ef6e1c8768f34505e566c1f",
+    "runnerSha256": "f21777579758f152ddad55f153edd1921162ac16ed24788943638fc1602669c1",
+    "bundleSha256": "d7e56f089a3ba9ca289953caeb7fa452cefde371b9ab82a793baf3552169654f"
+  },
+  "historicalManifest": {
+    "path": "docs/reviews/probes/r157_verified_adoption_20261107/historical_manifest.json",
+    "sha256": "683ec6423294c5ce7ee06bc5c507c4592db25f5da1ca6e53b9b48f4aa375a31e",
+    "commit": "777b30582f71aef5e4d786efc58e135fe06d2d1f"
+  },
+  "range": "RANGE_RESOLVED mode=RANGE base=f7405c470207dc0d3be64e6eca79b7050d3f79d8 head=f862c77d431f0b45a07fff4fb9e2342c86415648 candidates=227 deleted=0",
+  "outcomes": [
+    {
+      "id": "CVF-DG-INST-01",
+      "outcome": "PASS"
+    },
+    {
+      "id": "CVF-DG-CONT-01",
+      "outcome": "PASS"
+    },
+    {
+      "id": "CVF-DG-RANGE-01",
+      "outcome": "PASS"
+    },
+    {
+      "id": "CVF-DG-APPL-01",
+      "outcome": "PASS"
+    },
+    {
+      "id": "CVF-DG-ROUTE-01",
+      "outcome": "NOT_APPLICABLE_WITH_REASON"
+    },
+    {
+      "id": "CVF-DG-ROLE-01",
+      "outcome": "PASS"
+    },
+    {
+      "id": "CVF-DG-CLAIM-01",
+      "outcome": "PASS"
+    },
+    {
+      "id": "CVF-DG-COV-01",
+      "outcome": "PASS"
+    }
+  ],
+  "allCandidatesNoPacketOverride": true,
+  "merged229dAndBothDevelopmentHistoriesAncestors": true,
+  "observedAtUtc": "2026-11-07T11:33:20.523603+00:00",
+  "claimBoundary": "Static local repository range only, not hostedCI, provider governance or product readiness"
+}

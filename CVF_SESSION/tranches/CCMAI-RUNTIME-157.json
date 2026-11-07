@@ -50,18 +50,25 @@
   "bootstrapException": false,
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md",
   "baseCommit": "e3335dff0cb9b2f0d3345b229131e503a96d805d",
-  "status": "REVIEW_PENDING",
-  "phase": "REVIEW",
+  "status": "FROZEN",
+  "phase": "FREEZE",
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "workOrderStatus": "COMPLETE_PENDING_REVIEW",
-  "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "PENDING",
-  "freeze": "OPEN",
+  "workOrderStatus": "CLOSED",
+  "buildCommit": "f862c77d431f0b45a07fff4fb9e2342c86415648",
+  "reviewEvidence": [
+    "docs/reviews/R157_INDEPENDENT_ADOPTION_REVIEW_2026-11-07.md",
+    "docs/reviews/R157_COMPATIBILITY_ROOT_REVIEW_2026-11-07.md",
+    "docs/reviews/R157_ADOPTION_RETURN_2026-11-07.md"
+  ],
+  "disposition": "REVIEW_PASS",
+  "freeze": "FROZEN",
   "history": [
     "WORK_ORDER",
     "DISPATCH_READY",
     "BUILD",
-    "REVIEW_PENDING"
-  ]
+    "REVIEW_PENDING",
+    "REVIEW_PASS",
+    "FROZEN"
+  ],
+  "closer": "Root CLOSER / COMMIT_STEWARD; independent Terra metadata review and Root independent Sol source review accepted, original range/units verified; repository RC-01 only"
 }

@@ -2,13 +2,13 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R157_VERIFIED_ADOPTION_2026-11-07.md", "activeTranche": "CCMAI-RUNTIME-157", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "FREEZE", "activePhase": "FREEZE", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R157_VERIFIED_ADOPTION_2026-11-07.md", "activeTranche": "CCMAI-RUNTIME-157", "parked": true} -->
 ## Current R157 verified adoption — 2026-11-07
 
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: FREEZE
+- Active phase: FREEZE
 
-CCMAI-RUNTIME-157 REVIEW: Sol exact1.4.1 compatibility source returned and independently reviewed by Root; native adoption metadata independently accepted by Terra. Complete mandatoryunits and exact scope/precommit checks, commit reviewed adoption, then verify actual original f740..newHEAD allcandidates before RC-01 closure. No provider/push/release/runtime; R139/M3/R151 HOLD, R150 INCONCLUSIVE/A2 UNRUN/cleanupUNKNOWN, spent effects and FB/Zalo parked.
+CCMAI-RUNTIME-157 FROZEN_REPOSITORY_CRITERION_ONLY: verified native1.4.1 adoption and independent reviews, mandatoryunits/portable gates and original f740..committedHEAD allcandidates passed; R154 original repository gate cleared through R157, failed historical attempts retained. Continue from owned product roadmap only under a new governed scope; R139/M3/R151 remain HOLD, R150 INCONCLUSIVE/A2 UNRUN/cleanupUNKNOWN and spent effects, FB/Zalo parked. No provider/push/release/runtime or product/hostedCI acceptance.
 
 
 ## Current R156 FROZEN static candidate only — 2026-11-06
@@ -244,11 +244,11 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: FREEZE
+- Active phase: FREEZE
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R157_VERIFIED_ADOPTION_2026-11-07.md
 
-CCMAI-RUNTIME-157 REVIEW: Sol exact1.4.1 compatibility source returned and independently reviewed by Root; native adoption metadata independently accepted by Terra. Complete mandatoryunits and exact scope/precommit checks, commit reviewed adoption, then verify actual original f740..newHEAD allcandidates before RC-01 closure. No provider/push/release/runtime; R139/M3/R151 HOLD, R150 INCONCLUSIVE/A2 UNRUN/cleanupUNKNOWN, spent effects and FB/Zalo parked.
+CCMAI-RUNTIME-157 FROZEN_REPOSITORY_CRITERION_ONLY: verified native1.4.1 adoption and independent reviews, mandatoryunits/portable gates and original f740..committedHEAD allcandidates passed; R154 original repository gate cleared through R157, failed historical attempts retained. Continue from owned product roadmap only under a new governed scope; R139/M3/R151 remain HOLD, R150 INCONCLUSIVE/A2 UNRUN/cleanupUNKNOWN and spent effects, FB/Zalo parked. No provider/push/release/runtime or product/hostedCI acceptance.
 
 ## Historical R114 bounded UI result
 

@@ -4,6 +4,8 @@
   "updatedAt": "2026-11-07",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
+    {"id": "r157-final-disposition", "family": "continuity", "path": "docs/reviews/R157_FINAL_REPOSITORY_DISPOSITION_2026-11-07.md", "status": "ACTIVE", "description": "Verified repository RC-01 through actual committed original range; product/runtime holds retained."},
+
     {"id": "r157-admission-review", "family": "continuity", "path": "docs/reviews/R157_ADMISSION_REVIEW_2026-11-07.md", "status": "ACTIVE", "description": "Independent conditional native adoption admission and actual reconciliation disclosures."},
     {"id": "r157-adoption-review", "family": "continuity", "path": "docs/reviews/R157_INDEPENDENT_ADOPTION_REVIEW_2026-11-07.md", "status": "ACTIVE", "description": "Terra independent actual installed18file metadata/source review; static limits."},
     {"id": "r157-compat-worker", "family": "continuity", "path": "docs/reviews/R157_COMPATIBILITY_WORKER_RETURN_2026-11-07.md", "status": "ACTIVE", "description": "Sol exact1.4.1 compatibility source, original return and Root closeability amendment."},

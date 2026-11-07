@@ -30,5 +30,69 @@
     },
     "reviewAuthority": "Terra actual conditional status-only refresh, recorded R157 independent adoption review; no claim of review of future bytes",
     "applicableGateRecheck": "REQUIRED_AFTER_THIS_REFRESH"
+  },
+  {
+    "transition": "REVIEW_PASS",
+    "oldAction": {
+      "packet": "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md",
+      "sha256": "3628c6c3e807262304998e686b49bbbfddc610b7ce632eb4ae2cc2555e57314b",
+      "criteria": [
+        "RC-01"
+      ]
+    },
+    "newAction": {
+      "packet": "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md",
+      "sha256": "e5a12c7782794b4a4f20c6e2d7bd1444ecc804dd89f0518d1dfa475ad6e9938e",
+      "criteria": [
+        "RC-01"
+      ]
+    },
+    "packetBodyEqualExceptStatus": true,
+    "criteriaEqual": true,
+    "sourceIdentityUnchanged": {
+      "projectRootSha256": "118ae5e1a401ba15aac7af388964313d5947f3c5191c682648afd028d99104c4",
+      "manifestSha256": "333979f23385595a02fc738066de27cbc2454356d136bcd1110f36ad03efdf83",
+      "policySha256": "5feac086232dd44b9d707a11713856a236ce23f695492afe863e16f75edfbb13",
+      "lockSha256": "bc2ac2aeb220dce995712c5b10a2ffa93e79918c3a23fed124e03f667c8542b3",
+      "coreCommit": "68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6",
+      "profileId": "cvf.downstreamGateProfile@1.4.1",
+      "profileSha256": "3e14e4ad99a18416752b4666c4f0bed4cc7436068ef6e1c8768f34505e566c1f",
+      "deliveryFingerprint": "71c5656283ff0c3bb7270f7b6fe66ace4545b378b89d06d443eecddb113a95f0",
+      "sourceRoute": "AUTHORIZED_SUPPLEMENTAL"
+    },
+    "reviewAuthority": "Terra actual conditional status-only refresh, recorded R157 independent adoption review; no claim of review of future bytes",
+    "applicableGateRecheck": "REQUIRED_AFTER_THIS_REFRESH"
+  },
+  {
+    "transition": "FROZEN",
+    "oldAction": {
+      "packet": "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md",
+      "sha256": "e5a12c7782794b4a4f20c6e2d7bd1444ecc804dd89f0518d1dfa475ad6e9938e",
+      "criteria": [
+        "RC-01"
+      ]
+    },
+    "newAction": {
+      "packet": "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md",
+      "sha256": "01447ca50bbc09c7278f3f4f8f1854695e272a9a568f187da2793fe99da727bf",
+      "criteria": [
+        "RC-01"
+      ]
+    },
+    "packetBodyEqualExceptStatus": true,
+    "criteriaEqual": true,
+    "sourceIdentityUnchanged": {
+      "projectRootSha256": "118ae5e1a401ba15aac7af388964313d5947f3c5191c682648afd028d99104c4",
+      "manifestSha256": "333979f23385595a02fc738066de27cbc2454356d136bcd1110f36ad03efdf83",
+      "policySha256": "5feac086232dd44b9d707a11713856a236ce23f695492afe863e16f75edfbb13",
+      "lockSha256": "bc2ac2aeb220dce995712c5b10a2ffa93e79918c3a23fed124e03f667c8542b3",
+      "coreCommit": "68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6",
+      "profileId": "cvf.downstreamGateProfile@1.4.1",
+      "profileSha256": "3e14e4ad99a18416752b4666c4f0bed4cc7436068ef6e1c8768f34505e566c1f",
+      "deliveryFingerprint": "71c5656283ff0c3bb7270f7b6fe66ace4545b378b89d06d443eecddb113a95f0",
+      "sourceRoute": "AUTHORIZED_SUPPLEMENTAL"
+    },
+    "reviewAuthority": "Terra actual conditional status-only refresh, recorded R157 independent adoption review; no claim of review of future bytes",
+    "applicableGateRecheck": "REQUIRED_AFTER_THIS_REFRESH"
   }
 ]
