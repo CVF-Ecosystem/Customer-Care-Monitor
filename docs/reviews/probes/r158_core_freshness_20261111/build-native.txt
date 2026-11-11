@@ -1,0 +1,13 @@
+[PASS] CVF-DG-INST-01 PASS
+[PASS] CVF-DG-CONT-01 PASS
+[PASS] CVF-DG-RANGE-01 PASS
+       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=d0d25c7a8fc48dbbb08b39050a094806f6f31de7 candidates=19 deleted=0
+[PASS] CVF-DG-APPL-01 PASS
+       note: checked: docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md
+[PASS] CVF-DG-ROLE-01 NOT_APPLICABLE_WITH_REASON - no role-bearing review artifact in scope
+[PASS] CVF-DG-CLAIM-01 PASS
+       note: 0 explicit claim line(s) and 1 document(s) scanned
+[PASS] CVF-DG-COV-01 PASS
+       note: checked: docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md
+       note: mechanical joins only; Local owns semantic acceptance
+RESULT: PASS phase=pre-commit mandatoryControls=7 failed=0

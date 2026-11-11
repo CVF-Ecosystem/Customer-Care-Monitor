@@ -1,0 +1,11 @@
+{
+  "initialAdmission": "Terra CHANGES_REQUIRED copied R157 closeability rows and workspace effects, corrected before seed commit",
+  "initialRegistryUpdate": "Root line-only replacement truncated multiline registry object. Native catalog failed. Root restored committed registry and replaced full parsed object; catalog and portable subsequently PASS. No Core effect before correction.",
+  "preDispatchFailures": [
+    "Removed required gate IDs/topology/continuity ownership when rewriting copied rows; first APPL FAIL retained",
+    "Restored mandatory rows but direct focused_checker_tests dependency missing; second APPL FAIL retained"
+  ],
+  "correctiveOutcome": "Exact third pre-dispatch APPL/COV/ACT PASS before BUILD commit6e0bdd1e",
+  "metadataProofCapture": "Pack JSON UTF8 BOM failed initial source proof capture after metadata writes. Corrected utf-8-sig reader and fully verified57pack/18installed/131unit identities. No source mutation.",
+  "limits": "Static packet preparation checks are not completed product repairs. Product holds and original repair convergence ledger remain retained."
+}

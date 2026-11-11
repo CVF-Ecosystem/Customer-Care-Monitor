@@ -2,10 +2,10 @@
 
 Memory class: POINTER_RECORD
 
-<!-- cvf-front-marker {"currentMode": "BUILD", "activePhase": "BUILD", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R158_CORE_FRESHNESS_2026-11-11.md", "activeTranche": "CCMAI-RUNTIME-158", "parked": true} -->
+<!-- cvf-front-marker {"currentMode": "REVIEW", "activePhase": "REVIEW", "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_R158_CORE_FRESHNESS_2026-11-11.md", "activeTranche": "CCMAI-RUNTIME-158", "parked": true} -->
 ## Current R158 official Core freshness — 2026-11-11
 
-CCMAI-RUNTIME-158 BUILD: Execute native official Core68 to5de updater with retained backup/workspace snapshots, CCMA-only repin and ACT verification. Independent Terra actual metadata review and committed original all-candidate range are required before closure. R139/M3/R151 HOLD, R150 INCONCLUSIVE/A2 UNRUN/cleanupUNKNOWN/spent effects and Facebook/Zalo OA parked.
+CCMAI-RUNTIME-158 REVIEW_PENDING: Terra independently review actual official5de/Core backup/workspace and CCMA ACT metadata. Root verifies portable/native gates, commits accepted result and runs original f740..actualHEAD all-candidate range. R139/M3/R151 HOLD, R150 INCONCLUSIVE/A2 UNRUN/cleanupUNKNOWN/spent effects and Facebook/Zalo OA parked.
 
 
 ## Current R157 verified adoption — 2026-11-07
@@ -249,11 +249,11 @@ Owner explicitly agrees: pin Core/profile for an admitted campaign, separate Git
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_R158_CORE_FRESHNESS_2026-11-11.md
 
-CCMAI-RUNTIME-158 BUILD: Execute native official Core68 to5de updater with retained backup/workspace snapshots, CCMA-only repin and ACT verification. Independent Terra actual metadata review and committed original all-candidate range are required before closure. R139/M3/R151 HOLD, R150 INCONCLUSIVE/A2 UNRUN/cleanupUNKNOWN/spent effects and Facebook/Zalo OA parked.
+CCMAI-RUNTIME-158 REVIEW_PENDING: Terra independently review actual official5de/Core backup/workspace and CCMA ACT metadata. Root verifies portable/native gates, commits accepted result and runs original f740..actualHEAD all-candidate range. R139/M3/R151 HOLD, R150 INCONCLUSIVE/A2 UNRUN/cleanupUNKNOWN/spent effects and Facebook/Zalo OA parked.
 
 ## Historical R114 bounded UI result
 

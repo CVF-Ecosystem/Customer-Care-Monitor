@@ -21,6 +21,6 @@
   "workspaceActivationExecutableSource": "OPERATOR_LOCAL_PACK",
   "workspaceActivationUpgrade": {
     "path": ".cvf/workspace-activation-upgrade.json",
-    "sha256": "fbfa60c94ce26b2d0e5cda4feaeec88ea6c535561e7a3bbbaf0eaec6b8513269"
+    "sha256": "a109995d5c5f5a1f3a9a5802f1c18afe06e263c9c96e625c3d3f86f808e06daf"
   }
 }

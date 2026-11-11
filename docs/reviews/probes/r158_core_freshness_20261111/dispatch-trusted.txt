@@ -1,0 +1,19 @@
+[PASS] CVF-DG-INST-01 PASS
+[PASS] CVF-DG-CONT-01 PASS
+[PASS] CVF-DG-RANGE-01 PASS
+       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=d0d25c7a8fc48dbbb08b39050a094806f6f31de7 candidates=19 deleted=0
+[FAIL] CVF-DG-APPL-01 FAIL
+       dispatch_continuity_invalid @ docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md: dispatch_continuity topology must be EXACT_PATHS
+       dispatch_continuity_invalid @ docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md: dispatch_continuity commitOwner must be session-sync-steward
+       dispatch_continuity_invalid @ docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md: dispatch_continuity mutationSurface must name an exact AGENT_HANDOFF material-SHA marker
+       mandatory_gates_missing @ docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md: missing mandatory gate ids: adif_integrity, focused_checker_tests, pre_implementation_autorun, terminal_completion_review
+       post_material_continuity_bypassed @ docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md: committed_range_closure must depend directly on continuity so GC-020 can record the material SHA before clean split-range closure
+       terminal_continuity_invalid @ docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md: continuity commitOwner must be session-sync-steward
+       terminal_continuity_invalid @ docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md: continuity must depend directly on terminal_completion_review
+[PASS] CVF-DG-ROUTE-01 NOT_APPLICABLE_WITH_REASON - no dispatch packet declares dispatchKind in scope
+[PASS] CVF-DG-COV-01 PASS
+       note: checked: docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md
+       note: mechanical joins only; Local owns semantic acceptance
+[PASS] CVF-DG-ACT-01 PASS
+       note: Mechanical evidence bindings; Local reviews semantic authority and invocation truth.
+RESULT: FAIL phase=pre-dispatch mandatoryControls=7 failed=1

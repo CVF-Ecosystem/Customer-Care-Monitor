@@ -8,10 +8,32 @@
       "durationMs": 67332,
       "observedSecondsApproximately": 45,
       "outcome": "CHANGES_REQUIRED"
+    },
+    {
+      "agent": "terra_r158_review",
+      "thread": "01a1cad0-6ecf-70d2-98a8-134a31a8a08a",
+      "turn": "01a1cad3-ec69-73b0-af55-f3377a19bee5",
+      "durationMs": 33204,
+      "observedSecondsApproximately": 9,
+      "outcome": "ACCEPT_WITH_CONDITIONS"
+    },
+    {
+      "agent": "terra_r158_review",
+      "thread": "01a1cad0-6ecf-70d2-98a8-134a31a8a08a",
+      "turn": "01a1cada-d7f8-73d2-be95-25aea1aca379",
+      "durationMs": 54715,
+      "outcome": "CONDITIONAL_PASS_CURRENT_STATIC_IDENTITY"
+    },
+    {
+      "agent": "terra_r158_review",
+      "thread": "01a1cad0-6ecf-70d2-98a8-134a31a8a08a",
+      "turn": "01a1cadd-6cc9-7a11-bd8b-c0812e622501",
+      "durationMs": 33845,
+      "outcome": "PASS_CORRECTION_AND_REVIEW_SCOPE"
     }
   ],
-  "consumedSeconds": 67.332,
-  "remainingSeconds": 532.668,
+  "consumedSeconds": 189.096,
+  "remainingSeconds": 410.904,
   "priorBudget": {
     "additionalSeconds": 5400,
     "used": 5376.3439525,

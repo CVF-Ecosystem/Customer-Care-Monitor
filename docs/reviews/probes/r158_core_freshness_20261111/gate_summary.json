@@ -1,0 +1,12 @@
+{
+  "publicDoctor": "FAIL27/29",
+  "retainedPublicFindings": [
+    "LOCK_INVALID",
+    "ACT_CORE_PATH_MISMATCH"
+  ],
+  "publicFreshnessRestored": true,
+  "trustedBootstrapExit": 0,
+  "trustedPreDispatch": "PASS all applicable includingACT/APPL/COV",
+  "route": "NOT_APPLICABLE_WITH_REASON no dispatchKind; route contract not checked",
+  "scope": "Exact individually reconciled source/version checks only, no publicdoctorPASS or live governance claim"
+}

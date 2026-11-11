@@ -1,0 +1,13 @@
+[PASS] CVF-DG-INST-01 PASS
+[PASS] CVF-DG-CONT-01 PASS
+[PASS] CVF-DG-RANGE-01 PASS
+       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=d0d25c7a8fc48dbbb08b39050a094806f6f31de7 candidates=19 deleted=0
+[FAIL] CVF-DG-APPL-01 FAIL
+       dispatch_continuity_bypassed @ docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md: focused_checker_tests must depend on dispatch_continuity before implementation proof proceeds
+[PASS] CVF-DG-ROUTE-01 NOT_APPLICABLE_WITH_REASON - no dispatch packet declares dispatchKind in scope
+[PASS] CVF-DG-COV-01 PASS
+       note: checked: docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md
+       note: mechanical joins only; Local owns semantic acceptance
+[PASS] CVF-DG-ACT-01 PASS
+       note: Mechanical evidence bindings; Local reviews semantic authority and invocation truth.
+RESULT: FAIL phase=pre-dispatch mandatoryControls=7 failed=1

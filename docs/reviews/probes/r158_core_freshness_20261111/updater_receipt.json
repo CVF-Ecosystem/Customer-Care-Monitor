@@ -1,0 +1,140 @@
+{
+  "startedUtc": "2026-11-11T13:43:15.405599+00:00",
+  "finishedUtc": "2026-11-11T13:43:36.383823+00:00",
+  "nativeUpdaterExit": 0,
+  "from": "68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6",
+  "target": "5de22b138abccc04e098f910b29ab26a1fbec4ac",
+  "observed": "5de22b138abccc04e098f910b29ab26a1fbec4ac",
+  "remote": "https://github.com/Blackbird081/Controlled-Vibe-Framework-CVF.git",
+  "originMain": "5de22b138abccc04e098f910b29ab26a1fbec4ac",
+  "coreClean": true,
+  "backupPath": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups\\.Controlled-Vibe-Framework-CVF-20261111-204316",
+  "backupHead": "68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6",
+  "workspaceArtifacts": [
+    {
+      "path": "New-CVF-Governed-Project.ps1",
+      "exists": true,
+      "sha256": "894abf48463a262085f07c54109b94f919abb395a383bd7f13d983d313463fe6",
+      "postExists": true,
+      "postSha256": "894abf48463a262085f07c54109b94f919abb395a383bd7f13d983d313463fe6"
+    },
+    {
+      "path": "Run-CVF-NewProject-Enforcement.ps1",
+      "exists": true,
+      "sha256": "cc6bda211bba26860a95094119fc0192f798faefe727d7556d361948397360ce",
+      "postExists": true,
+      "postSha256": "cc6bda211bba26860a95094119fc0192f798faefe727d7556d361948397360ce"
+    },
+    {
+      "path": "Update-CVF-Workspace.ps1",
+      "exists": true,
+      "sha256": "57f68a7ea8448b15e4527a08ad1ba24c7864190261f31eba467d9673721cd48d",
+      "postExists": true,
+      "postSha256": "57f68a7ea8448b15e4527a08ad1ba24c7864190261f31eba467d9673721cd48d"
+    },
+    {
+      "path": "Update-CVF-Workspace-Public-Profile.ps1",
+      "exists": true,
+      "sha256": "2406120363ec5e2e52ac1e44c188649fb5b3457b2e608621673526107a7b5644",
+      "postExists": true,
+      "postSha256": "2406120363ec5e2e52ac1e44c188649fb5b3457b2e608621673526107a7b5644"
+    },
+    {
+      "path": "Test-CVF-Workspace.ps1",
+      "exists": true,
+      "sha256": "904cb69a956662c5adf9c139f5f46b71c5eda83e477cc12cb56af04317a790c9",
+      "postExists": true,
+      "postSha256": "904cb69a956662c5adf9c139f5f46b71c5eda83e477cc12cb56af04317a790c9"
+    },
+    {
+      "path": "Repair-CVF-Workspace.ps1",
+      "exists": true,
+      "sha256": "8c07b8464404a21b17e83f16d77c820f5ee156b8cba1b75d305efbd86c18bb59",
+      "postExists": true,
+      "postSha256": "8c07b8464404a21b17e83f16d77c820f5ee156b8cba1b75d305efbd86c18bb59"
+    },
+    {
+      "path": "Manage-CVF-Workspace.ps1",
+      "exists": true,
+      "sha256": "bc785df7bbb42f9bc5436bbd0d1679078685d4a8f83d19b71f49323321af052f",
+      "postExists": true,
+      "postSha256": "bc785df7bbb42f9bc5436bbd0d1679078685d4a8f83d19b71f49323321af052f"
+    },
+    {
+      "path": ".agents/workflows/cvf-onboard.md",
+      "exists": true,
+      "sha256": "c76757bd877a7d9c2244d0dc84ac061bd540c8c7059d21ad8a30ad4332421e9e",
+      "postExists": true,
+      "postSha256": "c76757bd877a7d9c2244d0dc84ac061bd540c8c7059d21ad8a30ad4332421e9e"
+    },
+    {
+      "path": ".agents/workflows/pre-commit-check.md",
+      "exists": true,
+      "sha256": "51a2cd88e9ea9cf94a6e138725de2fbdea7bacd213a2dadba2db9ae25042e5ec",
+      "postExists": true,
+      "postSha256": "51a2cd88e9ea9cf94a6e138725de2fbdea7bacd213a2dadba2db9ae25042e5ec"
+    },
+    {
+      "path": "WORKSPACE_RULES.md",
+      "exists": true,
+      "sha256": "f2c0340e7e15a21c21a7028b7480afc79753131b52f79b57035dda93fda82854",
+      "postExists": true,
+      "postSha256": "ffcadecf699cfb6a96a7c48a7c1c353a21bf8d00e6d0b6990c3e0ef63bca9110"
+    },
+    {
+      "path": "WORKSPACE_PROJECT_ENFORCEMENT_BASELINE.json",
+      "exists": true,
+      "sha256": "a4ac3cb61e18b136d9cb6a39dd298774d56aeb37fbab3e6864c52fa0936f29fb",
+      "postExists": true,
+      "postSha256": "a4ac3cb61e18b136d9cb6a39dd298774d56aeb37fbab3e6864c52fa0936f29fb"
+    },
+    {
+      "path": "CVF_WORKSPACE_USER_GUIDE.md",
+      "exists": true,
+      "sha256": "e9ee19358bbec02ef09bd5a6ea62860e470f10aa44fea3692abf9ca919f3f080",
+      "postExists": true,
+      "postSha256": "e9ee19358bbec02ef09bd5a6ea62860e470f10aa44fea3692abf9ca919f3f080"
+    },
+    {
+      "path": "CVF_WORKSPACE_HUONG_DAN_SU_DUNG.md",
+      "exists": true,
+      "sha256": "f103178164bb72e27623243a9fd034d7f3aa89f2d2c0fadb585e9e6ca9a2d818",
+      "postExists": true,
+      "postSha256": "f103178164bb72e27623243a9fd034d7f3aa89f2d2c0fadb585e9e6ca9a2d818"
+    },
+    {
+      "path": "CVF_WORKSPACE_CLASSIFICATION_GUIDE.md",
+      "exists": true,
+      "sha256": "242af38e1f187f1eff9ce06dc11051403de03cf4218ae17c6726f883371a3ccd",
+      "postExists": true,
+      "postSha256": "242af38e1f187f1eff9ce06dc11051403de03cf4218ae17c6726f883371a3ccd"
+    },
+    {
+      "path": "Get-CVF-Workspace-OverlayProfiles.ps1",
+      "exists": false,
+      "sha256": null,
+      "postExists": false,
+      "postSha256": null
+    },
+    {
+      "path": "Update-CVF-Workspace-Overlay.ps1",
+      "exists": false,
+      "sha256": null,
+      "postExists": false,
+      "postSha256": null
+    },
+    {
+      "path": "CVF_WORKSPACE_OVERLAY_STATUS.json",
+      "exists": false,
+      "sha256": null,
+      "postExists": false,
+      "postSha256": null
+    }
+  ],
+  "activeProfile": "operator-local",
+  "publicProfileSyncSelected": false,
+  "updateProjectManifests": false,
+  "overlay": false,
+  "allowPendingCoreBackup": false,
+  "backupRetained": true
+}

@@ -1,14 +1,14 @@
 {
   "schemaVersion": "cvf.workspaceActivationUpgrade@1.0.0",
   "decision": "ACCEPTED",
-  "reviewer": "Terra 6.1 High independent admission reviewer; final bytes review required before Sol",
-  "authority": "Committed R157 seed e3335dff; independently reviewed packet777b3058 and persisted user upgrade/publicCore grants",
+  "reviewer": "Terra independent R158 admission reviewer; actual metadata review required before closure",
+  "authority": "User Nov11 exact official5de upgrade, immutable R158 seed d0d25c7a and independent admission",
   "reviewEvidence": {
-    "path": "docs/reviews/R157_ADMISSION_REVIEW_2026-11-07.md",
-    "sha256": "a2f15474558c45e161063ef224f8a1dc5a6c903e00bcde8fa4f41baa9527208b"
+    "path": "docs/reviews/R158_ADMISSION_REVIEW_2026-11-11.md",
+    "sha256": "95473bcd2e88daf27d45adf2ff1d2044bd5909cf2c8b6785714412c47fc1739e"
   },
   "expected": {
-    "projectCoreCommit": "68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6",
+    "projectCoreCommit": "5de22b138abccc04e098f910b29ab26a1fbec4ac",
     "deliveryManifestSha256": "625a400a47278c1ebe28a01c4321d691be583a0c3de467025566ce189253fc97",
     "profileSha256": "3e14e4ad99a18416752b4666c4f0bed4cc7436068ef6e1c8768f34505e566c1f",
     "runnerSha256": "f21777579758f152ddad55f153edd1921162ac16ed24788943638fc1602669c1",

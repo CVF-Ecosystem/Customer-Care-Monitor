@@ -75,10 +75,11 @@
   "freeze": "OPEN",
   "history": [
     "DISPATCH_READY",
-    "BUILD"
+    "BUILD",
+    "REVIEW_PENDING"
   ],
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "status": "BUILD",
-  "phase": "BUILD",
-  "workOrderStatus": "ACTIVE"
+  "status": "REVIEW_PENDING",
+  "phase": "REVIEW",
+  "workOrderStatus": "COMPLETE_PENDING_REVIEW"
 }

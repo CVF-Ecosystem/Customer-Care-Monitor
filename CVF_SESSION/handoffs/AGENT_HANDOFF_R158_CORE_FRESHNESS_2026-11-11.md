@@ -1,15 +1,15 @@
 # R158 official Core freshness and CCMA identity
 
 Status: ACTIVE
-Disposition: BUILD
+Disposition: REVIEW_PENDING
 
 ## Current State
 
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active role: Root ORCHESTRATOR / official updater and identity metadata steward / COMMIT_STEWARD / SESSION_SYNC_STEWARD; Terra independent R2 REVIEWER
 - Active tranche: CCMAI-RUNTIME-158
-- Next allowed move: CCMAI-RUNTIME-158 BUILD: Execute native official Core68 to5de updater with retained backup/workspace snapshots, CCMA-only repin and ACT verification. Independent Terra actual metadata review and committed original all-candidate range are required before closure. R139/M3/R151 HOLD, R150 INCONCLUSIVE/A2 UNRUN/cleanupUNKNOWN/spent effects and Facebook/Zalo OA parked.
+- Next allowed move: CCMAI-RUNTIME-158 REVIEW_PENDING: Terra independently review actual official5de/Core backup/workspace and CCMA ACT metadata. Root verifies portable/native gates, commits accepted result and runs original f740..actualHEAD all-candidate range. R139/M3/R151 HOLD, R150 INCONCLUSIVE/A2 UNRUN/cleanupUNKNOWN/spent effects and Facebook/Zalo OA parked.
 - Parked operator checkpoint: OWNER_DEFERRED_FACEBOOK_ZALO_OA_ACCOUNTS
 
 ## Authority and bounds
@@ -35,3 +35,15 @@ Root re-read current manifest/policy, bootstrap/state/memory, active handoff, im
 ## BUILD acknowledgment
 
 Root re-read current manifest/policy, bootstrap/state/memory, active handoff, implementation truth and index before this transition. R2 and live evidence YES. Independent Terra owns actual metadata review. Exact current packet raw SHA256 `ec8cd209c672ebf80fefd1b9bbf4ad68d0c7ac444ca8c4ebb116ea97529bdeca`.
+
+## BUILD acknowledgment
+
+Root re-read current manifest/policy, bootstrap/state/memory, active handoff, implementation truth and index before this transition. R2 and live evidence YES. Independent Terra owns actual metadata review. Exact current packet raw SHA256 `ec8cd209c672ebf80fefd1b9bbf4ad68d0c7ac444ca8c4ebb116ea97529bdeca`.
+
+## REVIEW_PENDING acknowledgment
+
+Root re-read current manifest/policy, bootstrap/state/memory, active handoff, implementation truth and index before this transition. R2 and live evidence YES. Independent Terra owns actual metadata review. Exact current packet raw SHA256 `e3632892f299f0576bb245d0909fbceaaf597c4ec42de3312f5a2f749706e7c3`.
+
+## REVIEW_PENDING acknowledgment
+
+Root re-read current manifest/policy, bootstrap/state/memory, active handoff, implementation truth and index before this transition. R2 and live evidence YES. Independent Terra owns actual metadata review. Exact current packet raw SHA256 `e3632892f299f0576bb245d0909fbceaaf597c4ec42de3312f5a2f749706e7c3`.

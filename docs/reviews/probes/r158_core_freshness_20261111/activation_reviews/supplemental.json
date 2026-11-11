@@ -1,15 +1,15 @@
 {
   "action": {
     "packet": "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md",
-    "sha256": "ec8cd209c672ebf80fefd1b9bbf4ad68d0c7ac444ca8c4ebb116ea97529bdeca",
+    "sha256": "e3632892f299f0576bb245d0909fbceaaf597c4ec42de3312f5a2f749706e7c3",
     "criteria": [
       "RC-01"
     ]
   },
   "purpose": "SUPPLEMENTAL_ASSESSMENT",
   "controlId": "SUPPLEMENTAL_ASSESSMENT",
-  "reviewer": "Root source/action receipt steward; Terra independent R158 admission and actual metadata review",
-  "authority": "User approved official5de and additional600 review seconds; immutable R158 dispatcher seed and independent admission",
+  "reviewer": "Root Local source/action receipt steward",
+  "authority": "User approved official5de and additional600 review seconds; immutable R158 seed; Terra completed bounded admission/metadata review recorded separately in R158_CORE_FRESHNESS_REVIEW_2026-11-11.md",
   "decision": "ACCEPTED",
-  "scope": "Retained independently admitted625a manifest57 file hashes and installed18 identities, no pack refresh. Actual R158 changes reviewed separately."
+  "scope": "Retained independently admitted625a manifest57 file hashes and installed18 identities, no pack refresh. Terra completed bounded metadata review recorded independently; Root verifies pack57 hashes. Terra independently checked installed18 identities, with no gate invocation or full pack audit by Terra."
 }

@@ -1,6 +1,6 @@
 # R158 — official Core freshness and ACT identity
 
-Status: ACTIVE
+Status: COMPLETE_PENDING_REVIEW
 workOrderStatusGrammar: cvf.workOrderStatusGrammar@1.0.0
 Risk: R2
 Authority: `CVF_SESSION/authority/CCMAI-RUNTIME-158.json`
@@ -75,9 +75,9 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
       "decision": "Accept only exact publicfreshness and adoptedbundle/ACT/originalrange checks, or retain hold"
     }
   },
-  "phase": "DISPATCH",
+  "phase": "REVIEW",
   "action": {
-    "kind": "VERIFY",
+    "kind": "REVIEW",
     "selected": [
       "RC-01"
     ],
@@ -85,9 +85,7 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
     "output": "docs/reviews/R158_CORE_FRESHNESS_REVIEW_2026-11-11.md",
     "budgetMinutes": 10,
     "stop": "Exact5de only; stop on unrelated doctor failure, source/bundle mismatch, exhausted600reviewseconds or new effect",
-    "next": "Root independent gate/range checks and local closure",
-    "question": "Can the explicitly approved officialCore5de base refresh restore freshness while the admitted1.4.1 bundle and product holds retain their verified identities?",
-    "sourceBoundary": "Official68..5de Git inventory, verified operator-local source/lock, current project identity and actual doctor/ACT outputs"
+    "next": "Root material commit and actual original f740..HEAD all-candidate verification, then independent terminal disposition"
   },
   "rows": [
     {
@@ -120,11 +118,11 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
     }
   ],
   "conclusions": {
-    "tranche": "PENDING",
-    "trancheSummary": "Officialbase freshness admission and verification pending",
+    "tranche": "BLOCKED",
+    "trancheSummary": "Actual updater and bounded static metadata reviewed conditionally; correction/required controls and committed original range remain before closure",
     "trancheEvidence": [],
-    "product": "PENDING",
-    "productSummary": "RC-01 accepted; product/runtime remains held",
+    "product": "BLOCKED",
+    "productSummary": "R139/M3/R151 held; R150 INCONCLUSIVE/A2 UNRUN/cleanupUNKNOWN/spent effects and Facebook/Zalo OA parked",
     "acceptance": [],
     "owner": "Root technical proposal disposition; parent owns source acceptance; Product Owner retains product acceptance"
   }

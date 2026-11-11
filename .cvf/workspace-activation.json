@@ -2,22 +2,22 @@
   "schemaVersion": "cvf.workspaceActivation@1.0.0",
   "identity": {
     "projectRootSha256": "118ae5e1a401ba15aac7af388964313d5947f3c5191c682648afd028d99104c4",
-    "manifestSha256": "333979f23385595a02fc738066de27cbc2454356d136bcd1110f36ad03efdf83",
-    "policySha256": "5feac086232dd44b9d707a11713856a236ce23f695492afe863e16f75edfbb13",
+    "manifestSha256": "0035f76139fa562c04d2398a56a2e437a4edbd520e330d732e21e7c7762f7f9f",
+    "policySha256": "e6daa5b3405850e032068b6745f5f94d3a6a626b7511e0bface3b01a00282aa3",
     "lockSha256": "bc2ac2aeb220dce995712c5b10a2ffa93e79918c3a23fed124e03f667c8542b3",
-    "coreCommit": "68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6",
+    "coreCommit": "5de22b138abccc04e098f910b29ab26a1fbec4ac",
     "profileId": "cvf.downstreamGateProfile@1.4.1",
     "profileSha256": "3e14e4ad99a18416752b4666c4f0bed4cc7436068ef6e1c8768f34505e566c1f",
     "deliveryFingerprint": "71c5656283ff0c3bb7270f7b6fe66ace4545b378b89d06d443eecddb113a95f0",
     "sourceRoute": "AUTHORIZED_SUPPLEMENTAL"
   },
   "sourcePolicy": "CORE_AND_SUPPLEMENTAL",
-  "reviewer": "Root source/action receipt steward; Terra independent R158 admission and actual metadata review",
-  "authority": "User approved official5de and additional600 review seconds; immutable R158 dispatcher seed and independent admission",
+  "reviewer": "Root Local source/action receipt steward",
+  "authority": "User approved official5de and additional600 review seconds; immutable R158 seed; Terra completed bounded admission/metadata review recorded separately in R158_CORE_FRESHNESS_REVIEW_2026-11-11.md",
   "actions": [
     {
       "packet": "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md",
-      "sha256": "ec8cd209c672ebf80fefd1b9bbf4ad68d0c7ac444ca8c4ebb116ea97529bdeca",
+      "sha256": "e3632892f299f0576bb245d0909fbceaaf597c4ec42de3312f5a2f749706e7c3",
       "criteria": [
         "RC-01"
       ]
@@ -36,7 +36,7 @@
       "reviewEvidence": [
         {
           "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/supplemental.json",
-          "sha256": "9053e0b0f276c3063f5cbee83d8fed41becb337f5670a6da2883eeec6b4caa00"
+          "sha256": "13a39f5eeac35e01535d9850355242519d34488c6fc0411a88326018567eedae"
         }
       ]
     }
@@ -45,7 +45,7 @@
     {
       "id": "CVF-DG-INST-01",
       "owner": "Root R158 identity metadata steward",
-      "authority": "User approved official5de and additional600 review seconds; immutable R158 dispatcher seed and independent admission",
+      "authority": "User approved official5de and additional600 review seconds; immutable R158 seed; Terra completed bounded admission/metadata review recorded separately in R158_CORE_FRESHNESS_REVIEW_2026-11-11.md",
       "reason": "Invoke this mandatory source control through the exact trusted pack pre-dispatch configuration; semantic outcomes remain owned by Local",
       "actions": [
         "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md"
@@ -55,12 +55,12 @@
       ],
       "evidence": {
         "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-INST-01.json",
-        "sha256": "6084f22ed2b1269a84de537927d869d3a9d5bd1cb322b74a490eaa55b6f77ac1"
+        "sha256": "12d0f1cf8476a2d7e005e452ae271d4210af914ec87c7e7f2feaa05e5646abe9"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md",
-          "sha256": "ec8cd209c672ebf80fefd1b9bbf4ad68d0c7ac444ca8c4ebb116ea97529bdeca",
+          "sha256": "e3632892f299f0576bb245d0909fbceaaf597c4ec42de3312f5a2f749706e7c3",
           "criteria": [
             "RC-01"
           ]
@@ -74,14 +74,14 @@
       "invocationEvidence": [
         {
           "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-INST-01.json",
-          "sha256": "6084f22ed2b1269a84de537927d869d3a9d5bd1cb322b74a490eaa55b6f77ac1"
+          "sha256": "12d0f1cf8476a2d7e005e452ae271d4210af914ec87c7e7f2feaa05e5646abe9"
         }
       ]
     },
     {
       "id": "CVF-DG-CONT-01",
       "owner": "Root R158 identity metadata steward",
-      "authority": "User approved official5de and additional600 review seconds; immutable R158 dispatcher seed and independent admission",
+      "authority": "User approved official5de and additional600 review seconds; immutable R158 seed; Terra completed bounded admission/metadata review recorded separately in R158_CORE_FRESHNESS_REVIEW_2026-11-11.md",
       "reason": "Invoke this mandatory source control through the exact trusted pack pre-dispatch configuration; semantic outcomes remain owned by Local",
       "actions": [
         "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md"
@@ -91,12 +91,12 @@
       ],
       "evidence": {
         "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-CONT-01.json",
-        "sha256": "dbbf7a02656302ca3ec52208e80b4ee67b9a65c71fed87a4c69138223c59f4ec"
+        "sha256": "a27d2eba246ea791e6fdcb6dbf150f733d698b6bae77c2fb27cde943194f1233"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md",
-          "sha256": "ec8cd209c672ebf80fefd1b9bbf4ad68d0c7ac444ca8c4ebb116ea97529bdeca",
+          "sha256": "e3632892f299f0576bb245d0909fbceaaf597c4ec42de3312f5a2f749706e7c3",
           "criteria": [
             "RC-01"
           ]
@@ -110,14 +110,14 @@
       "invocationEvidence": [
         {
           "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-CONT-01.json",
-          "sha256": "dbbf7a02656302ca3ec52208e80b4ee67b9a65c71fed87a4c69138223c59f4ec"
+          "sha256": "a27d2eba246ea791e6fdcb6dbf150f733d698b6bae77c2fb27cde943194f1233"
         }
       ]
     },
     {
       "id": "CVF-DG-RANGE-01",
       "owner": "Root R158 identity metadata steward",
-      "authority": "User approved official5de and additional600 review seconds; immutable R158 dispatcher seed and independent admission",
+      "authority": "User approved official5de and additional600 review seconds; immutable R158 seed; Terra completed bounded admission/metadata review recorded separately in R158_CORE_FRESHNESS_REVIEW_2026-11-11.md",
       "reason": "Invoke this mandatory source control through the exact trusted pack pre-dispatch configuration; semantic outcomes remain owned by Local",
       "actions": [
         "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md"
@@ -127,12 +127,12 @@
       ],
       "evidence": {
         "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-RANGE-01.json",
-        "sha256": "bf29fc4631f57d95f3ce0934eb98ec19f0d866be79e0fbcfe1dfc2d3381c0c53"
+        "sha256": "da7bd0b1f7898fe92c3082712c8fa72ae0ad1d230c8b60232e2189ac5307a9f9"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md",
-          "sha256": "ec8cd209c672ebf80fefd1b9bbf4ad68d0c7ac444ca8c4ebb116ea97529bdeca",
+          "sha256": "e3632892f299f0576bb245d0909fbceaaf597c4ec42de3312f5a2f749706e7c3",
           "criteria": [
             "RC-01"
           ]
@@ -146,14 +146,14 @@
       "invocationEvidence": [
         {
           "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-RANGE-01.json",
-          "sha256": "bf29fc4631f57d95f3ce0934eb98ec19f0d866be79e0fbcfe1dfc2d3381c0c53"
+          "sha256": "da7bd0b1f7898fe92c3082712c8fa72ae0ad1d230c8b60232e2189ac5307a9f9"
         }
       ]
     },
     {
       "id": "CVF-DG-APPL-01",
       "owner": "Root R158 identity metadata steward",
-      "authority": "User approved official5de and additional600 review seconds; immutable R158 dispatcher seed and independent admission",
+      "authority": "User approved official5de and additional600 review seconds; immutable R158 seed; Terra completed bounded admission/metadata review recorded separately in R158_CORE_FRESHNESS_REVIEW_2026-11-11.md",
       "reason": "Invoke this mandatory source control through the exact trusted pack pre-dispatch configuration; semantic outcomes remain owned by Local",
       "actions": [
         "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md"
@@ -163,12 +163,12 @@
       ],
       "evidence": {
         "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-APPL-01.json",
-        "sha256": "cc226926ec2b5587ed9027f366e6a881371d4975fd189f7faf09d475edb933d8"
+        "sha256": "08d6f9ed8d80677a1577414755443ee591f9be4f58c4e3a8b4e1c1bb07c5b270"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md",
-          "sha256": "ec8cd209c672ebf80fefd1b9bbf4ad68d0c7ac444ca8c4ebb116ea97529bdeca",
+          "sha256": "e3632892f299f0576bb245d0909fbceaaf597c4ec42de3312f5a2f749706e7c3",
           "criteria": [
             "RC-01"
           ]
@@ -182,14 +182,14 @@
       "invocationEvidence": [
         {
           "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-APPL-01.json",
-          "sha256": "cc226926ec2b5587ed9027f366e6a881371d4975fd189f7faf09d475edb933d8"
+          "sha256": "08d6f9ed8d80677a1577414755443ee591f9be4f58c4e3a8b4e1c1bb07c5b270"
         }
       ]
     },
     {
       "id": "CVF-DG-ROUTE-01",
       "owner": "Root R158 identity metadata steward",
-      "authority": "User approved official5de and additional600 review seconds; immutable R158 dispatcher seed and independent admission",
+      "authority": "User approved official5de and additional600 review seconds; immutable R158 seed; Terra completed bounded admission/metadata review recorded separately in R158_CORE_FRESHNESS_REVIEW_2026-11-11.md",
       "reason": "Invoke this mandatory source control through the exact trusted pack pre-dispatch configuration; semantic outcomes remain owned by Local",
       "actions": [
         "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md"
@@ -199,12 +199,12 @@
       ],
       "evidence": {
         "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-ROUTE-01.json",
-        "sha256": "cee2e003cfc12d5648b4b9c57829b9bbac97faca7e628964d0d9a4e1ca169c18"
+        "sha256": "001d3b0cf730308d5911e843c87a61634661c07c5f2558b410ffd178e40697c9"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md",
-          "sha256": "ec8cd209c672ebf80fefd1b9bbf4ad68d0c7ac444ca8c4ebb116ea97529bdeca",
+          "sha256": "e3632892f299f0576bb245d0909fbceaaf597c4ec42de3312f5a2f749706e7c3",
           "criteria": [
             "RC-01"
           ]
@@ -218,14 +218,14 @@
       "invocationEvidence": [
         {
           "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-ROUTE-01.json",
-          "sha256": "cee2e003cfc12d5648b4b9c57829b9bbac97faca7e628964d0d9a4e1ca169c18"
+          "sha256": "001d3b0cf730308d5911e843c87a61634661c07c5f2558b410ffd178e40697c9"
         }
       ]
     },
     {
       "id": "CVF-DG-COV-01",
       "owner": "Root R158 identity metadata steward",
-      "authority": "User approved official5de and additional600 review seconds; immutable R158 dispatcher seed and independent admission",
+      "authority": "User approved official5de and additional600 review seconds; immutable R158 seed; Terra completed bounded admission/metadata review recorded separately in R158_CORE_FRESHNESS_REVIEW_2026-11-11.md",
       "reason": "Invoke this mandatory source control through the exact trusted pack pre-dispatch configuration; semantic outcomes remain owned by Local",
       "actions": [
         "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md"
@@ -235,12 +235,12 @@
       ],
       "evidence": {
         "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-COV-01.json",
-        "sha256": "00264c81e27f7eb95977d1a80b89dd63c8aa2d5bc9a605552099a68c1f47c57f"
+        "sha256": "a5bc09f1a3a024d28e5960451fe217f391a134d0b04aa9897cb932136c1aaa7a"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md",
-          "sha256": "ec8cd209c672ebf80fefd1b9bbf4ad68d0c7ac444ca8c4ebb116ea97529bdeca",
+          "sha256": "e3632892f299f0576bb245d0909fbceaaf597c4ec42de3312f5a2f749706e7c3",
           "criteria": [
             "RC-01"
           ]
@@ -254,7 +254,7 @@
       "invocationEvidence": [
         {
           "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-COV-01.json",
-          "sha256": "00264c81e27f7eb95977d1a80b89dd63c8aa2d5bc9a605552099a68c1f47c57f"
+          "sha256": "a5bc09f1a3a024d28e5960451fe217f391a134d0b04aa9897cb932136c1aaa7a"
         }
       ]
     }
