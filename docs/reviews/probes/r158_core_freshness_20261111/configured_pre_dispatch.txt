@@ -1,0 +1,1 @@
+python -B ../CVF_RULE_PACKS/operator-local/source/scripts/lib/downstream_governance/cvf_downstream_gate_runner.py run --trusted --phase pre-dispatch --project-root . --packet docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md

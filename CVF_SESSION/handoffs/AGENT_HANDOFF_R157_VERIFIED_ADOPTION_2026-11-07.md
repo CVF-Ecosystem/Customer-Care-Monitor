@@ -1,6 +1,6 @@
 # R157 — verified operator-local profile adoption
 
-Status: ACTIVE
+Status: SUPERSEDED_BY_R158
 Disposition: FROZEN
 
 ## Current State
@@ -18,7 +18,7 @@ Root re-read manifest, policy, bootstrap/state/memory, active R156 handoff, impl
 
 Material-SHA marker: authority seed `e3335dff0cb9b2f0d3345b229131e503a96d805d`; current packet SHA256 `01447ca50bbc09c7278f3f4f8f1854695e272a9a568f187da2793fe99da727bf`.
 
-## Outcomes and boundary
+## Historical dispatch snapshot
 
 RC-01 remains blocked pending actual originalrange and independent final review. R156 frozen proposal, R155 partial, R139/M3 and R151 held, R150 INCONCLUSIVE/A2 UNRUN/cleanupUNKNOWN/spent effects and FB/Zalo parking unchanged. No product/runtime/provider/hostedCI/push/release acceptance.
 

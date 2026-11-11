@@ -4,6 +4,9 @@
   "updatedAt": "2026-11-07",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
+    {"id": "r157-historical-handoff", "family": "continuity", "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R157_VERIFIED_ADOPTION_2026-11-07.md", "status": "ACTIVE", "description": "Historical R157 frozen repository criterion and independent reviews."},
+    {"id": "r158-work-order", "family": "continuity", "path": "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md", "status": "ACTIVE", "description": "Bounded exact official Core5de transaction and CCMA action identity verification."},
+
     {"id": "r158-authority", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-158.json", "status": "ACTIVE", "description": "User-approved exact official Core5de freshness and CCMA identity maintenance dispatcher authority."},
     {"id": "r158-admission", "family": "continuity", "path": "docs/reviews/R158_ADMISSION_REVIEW_2026-11-11.md", "status": "ACTIVE", "description": "Terra independent corrected admission with native updater transaction and final review conditions."},
 
@@ -5622,13 +5625,7 @@
       "status": "ACTIVE",
       "description": "Pre-BUILD scalar test/additive receipt contract contradiction; exact4-line patch proposed, source/runtime0, owner boundary disposition pending."
     },
-    {
-      "id": "continuity-initial-handoff",
-      "family": "continuity",
-      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R157_VERIFIED_ADOPTION_2026-11-07.md",
-      "status": "ACTIVE",
-      "description": "Current R157 verified native profile adoption; original range and product holds retained."
-    },
+    {"id": "continuity-initial-handoff", "family": "continuity", "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_R158_CORE_FRESHNESS_2026-11-11.md", "status": "ACTIVE", "description": "Current R158 user-approved official Core freshness and CCMA identity maintenance."},
     {
       "id": "r060-work-order",
       "family": "continuity",
