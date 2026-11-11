@@ -5395,6 +5395,8 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Verified native pack adoption and exact portable compatibility repair; original range required.: `docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md`
 - Immutable R2 adoption seed.: `CVF_SESSION/authority/CCMAI-RUNTIME-157.json`
 - 131mandatorymethods PASS, no skips, source hashes frozen.: `docs/reviews/probes/r157_verified_adoption_20261107/mandatory_units.json`
+- Terra independent corrected admission with native updater transaction and final review conditions.: `docs/reviews/R158_ADMISSION_REVIEW_2026-11-11.md`
+- User-approved exact official Core5de freshness and CCMA identity maintenance dispatcher authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-158.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/manifest.json`
 - Owner-resumed read-only Docker capability HOLD; no product start or old-slot reuse.: `docs/reviews/probes/r112_resume_20261017T021300Z/command_001_server_version.stdout.bin`

@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0",
+  "trancheId": "CCMAI-RUNTIME-158",
+  "authorityKind": "DISPATCHER_OWNED_OFFICIAL_CORE_FRESHNESS_RECONCILIATION",
+  "riskCeiling": "R2",
+  "roles": {
+    "workOrderAuthor": "Root ORCHESTRATOR / WORK_ORDER_AUTHOR",
+    "implementationWorker": "Root official updater and identity metadata steward",
+    "reviewer": "Terra 6.1 High independent R2 REVIEWER",
+    "commitSteward": "Root COMMIT_STEWARD",
+    "closer": "Root CLOSER / SESSION_SYNC_STEWARD"
+  },
+  "allowedPaths": [
+    "CVF_SESSION/**",
+    "CVF_SESSION_MEMORY.md",
+    "IMPLEMENTATION_STATUS.json",
+    "AGENTS.md",
+    ".cvf/manifest.json",
+    ".cvf/policy.json",
+    ".cvf/workspace-activation-upgrade.json",
+    ".cvf/workspace-activation.json",
+    "docs/INDEX.md",
+    "docs/catalog/ARTIFACT_REGISTRY.json",
+    "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md",
+    "docs/reviews/R158_*.md",
+    "docs/reviews/probes/r158_core_freshness_20261111/**"
+  ],
+  "workerAllowedPaths": [],
+  "prohibitedEffects": [
+    "No product/source/test/inherited module or lock edit; preserve adopted1.4.1 bundle and CI pins",
+    "No provider/runtime/customer/channel/credential/browser/daemon/database effect",
+    "No push/publication/release/deployment",
+    "No broad Core freshness waiver or silent new target beyond reviewed5de",
+    "Preserve original75 UNKNOWN, prior5400 consumed5376.3439525, all failed attempts and all4consolidated+1targeted spent; new600reviewseconds additive only",
+    "PublicCore modification only through official updater to exact5de with retained68 backup and verified target paths; project repin onlyCCMA",
+    "R139/M3/R151 holds, R150 INCONCLUSIVE/A2unrun/cleanupUNKNOWN/spent effects and Facebook/Zalo parking persist"
+  ],
+  "scope": "Apply official publicCore68a7446 to5de22b1 via native updater, preserve backup and operator-local1.4.1, repinCCMA and reviewed upgrade/ACT identity, clarify historicalR157dispatch heading, verify public freshness/native profile/original range and close metadata.",
+  "ownerAuthorization": "Explicit operator response approves official5de update/backup/CCMArepinACT and atmost10minutes review-worker allowance; existing Root orchestrator/reviewer and Terra6.1High delegation grant persists.",
+  "claimBoundary": "Static public source identity and local repository evidence. Product/runtime/hostedCI outcomes are held.",
+  "bootstrapException": false,
+  "workspaceEffects": {
+    "authority": "User-approved official updater includes generated workspace rules/wrappers",
+    "workspaceRoot": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace",
+    "coreTarget": "5de22b138abccc04e098f910b29ab26a1fbec4ac",
+    "backupRoot": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\_cvf-core-backups",
+    "generatedArtifactPaths": [
+      "New-CVF-Governed-Project.ps1",
+      "Run-CVF-NewProject-Enforcement.ps1",
+      "Update-CVF-Workspace.ps1",
+      "Update-CVF-Workspace-Public-Profile.ps1",
+      "Test-CVF-Workspace.ps1",
+      "Repair-CVF-Workspace.ps1",
+      "Manage-CVF-Workspace.ps1",
+      ".agents/workflows/cvf-onboard.md",
+      ".agents/workflows/pre-commit-check.md",
+      "WORKSPACE_RULES.md",
+      "WORKSPACE_PROJECT_ENFORCEMENT_BASELINE.json",
+      "CVF_WORKSPACE_USER_GUIDE.md",
+      "CVF_WORKSPACE_HUONG_DAN_SU_DUNG.md",
+      "CVF_WORKSPACE_CLASSIFICATION_GUIDE.md"
+    ],
+    "orphanRemovalPaths": [
+      "Get-CVF-Workspace-OverlayProfiles.ps1",
+      "Update-CVF-Workspace-Overlay.ps1",
+      "CVF_WORKSPACE_OVERLAY_STATUS.json"
+    ],
+    "rollback": "Retain byte snapshots of every enumerated existing workspace artifact and presence flags. On updater failure restore these snapshots after native Core rollback. On target drift preserve replacement Core under backup root and restore old Core and workspace snapshots before dependent dispatch. No project-wide repin or profile synchronization."
+  }
+}

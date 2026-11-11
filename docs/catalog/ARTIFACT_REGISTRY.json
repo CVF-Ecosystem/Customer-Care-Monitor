@@ -4,6 +4,9 @@
   "updatedAt": "2026-11-07",
   "claimBoundary": "Registers generated bootstrap authority surfaces only; it does not claim runtime module capability.",
   "artifacts": [
+    {"id": "r158-authority", "family": "continuity", "path": "CVF_SESSION/authority/CCMAI-RUNTIME-158.json", "status": "ACTIVE", "description": "User-approved exact official Core5de freshness and CCMA identity maintenance dispatcher authority."},
+    {"id": "r158-admission", "family": "continuity", "path": "docs/reviews/R158_ADMISSION_REVIEW_2026-11-11.md", "status": "ACTIVE", "description": "Terra independent corrected admission with native updater transaction and final review conditions."},
+
     {"id": "r157-final-disposition", "family": "continuity", "path": "docs/reviews/R157_FINAL_REPOSITORY_DISPOSITION_2026-11-07.md", "status": "ACTIVE", "description": "Verified repository RC-01 through actual committed original range; product/runtime holds retained."},
 
     {"id": "r157-admission-review", "family": "continuity", "path": "docs/reviews/R157_ADMISSION_REVIEW_2026-11-07.md", "status": "ACTIVE", "description": "Independent conditional native adoption admission and actual reconciliation disclosures."},

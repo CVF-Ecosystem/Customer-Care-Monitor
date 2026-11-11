@@ -1,0 +1,22 @@
+{
+  "approvedAdditionalSeconds": 600,
+  "segments": [
+    {
+      "agent": "terra_r158_review",
+      "thread": "01a1cad0-6ecf-70d2-98a8-134a31a8a08a",
+      "turn": "01a1cad0-70a0-7a11-97c4-c79e8e36d92b",
+      "durationMs": 67332,
+      "observedSecondsApproximately": 45,
+      "outcome": "CHANGES_REQUIRED"
+    }
+  ],
+  "consumedSeconds": 67.332,
+  "remainingSeconds": 532.668,
+  "priorBudget": {
+    "additionalSeconds": 5400,
+    "used": 5376.3439525,
+    "remaining": 23.6560475,
+    "original75Minutes": "UNKNOWN",
+    "workerFunctionalSuites": "4consolidated+1targeted spent"
+  }
+}
