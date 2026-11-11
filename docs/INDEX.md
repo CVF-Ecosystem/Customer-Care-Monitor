@@ -5398,6 +5398,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - 131mandatorymethods PASS, no skips, source hashes frozen.: `docs/reviews/probes/r157_verified_adoption_20261107/mandatory_units.json`
 - Terra independent corrected admission with native updater transaction and final review conditions.: `docs/reviews/R158_ADMISSION_REVIEW_2026-11-11.md`
 - User-approved exact official Core5de freshness and CCMA identity maintenance dispatcher authority.: `CVF_SESSION/authority/CCMAI-RUNTIME-158.json`
+- Bounded officialCore freshness disposition, product holds and mandatory final committed-range verification.: `docs/reviews/R158_FINAL_FRESHNESS_DISPOSITION_2026-11-11.md`
 - Actual publicdoctor27/29 retained source/version findings and trusted source checks.: `docs/reviews/probes/r158_core_freshness_20261111/gate_summary.json`
 - Terra independent actual static metadata and18installed identities review, conditional status refresh.: `docs/reviews/R158_CORE_FRESHNESS_REVIEW_2026-11-11.md`
 - Actual officialCore updater and CCMA pin/ACT evidence; committed-range closure pending.: `docs/reviews/R158_CORE_FRESHNESS_RETURN_2026-11-11.md`

@@ -1,0 +1,68 @@
+[
+  {
+    "status": "REVIEW_PASS",
+    "oldAction": {
+      "packet": "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md",
+      "sha256": "c6d6f9501a023c710e74ba1fe3a28da32b717519f1bf91aa90d60c84f258085d",
+      "criteria": [
+        "RC-01"
+      ]
+    },
+    "newAction": {
+      "packet": "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md",
+      "sha256": "5932e1224a15e0199c1bb030d8ccd40a09275b3a005a9a01f3775694411a2984",
+      "criteria": [
+        "RC-01"
+      ]
+    },
+    "packetBodyEqualExceptStatus": true,
+    "criteriaEqual": true,
+    "identityUnchanged": {
+      "projectRootSha256": "118ae5e1a401ba15aac7af388964313d5947f3c5191c682648afd028d99104c4",
+      "manifestSha256": "0035f76139fa562c04d2398a56a2e437a4edbd520e330d732e21e7c7762f7f9f",
+      "policySha256": "e6daa5b3405850e032068b6745f5f94d3a6a626b7511e0bface3b01a00282aa3",
+      "lockSha256": "bc2ac2aeb220dce995712c5b10a2ffa93e79918c3a23fed124e03f667c8542b3",
+      "coreCommit": "5de22b138abccc04e098f910b29ab26a1fbec4ac",
+      "profileId": "cvf.downstreamGateProfile@1.4.1",
+      "profileSha256": "3e14e4ad99a18416752b4666c4f0bed4cc7436068ef6e1c8768f34505e566c1f",
+      "deliveryFingerprint": "71c5656283ff0c3bb7270f7b6fe66ace4545b378b89d06d443eecddb113a95f0",
+      "sourceRoute": "AUTHORIZED_SUPPLEMENTAL"
+    },
+    "receiptControlSemanticsEqual": true,
+    "reviewAuthority": "Terra conditional status-only refresh under recorded actual R158 review",
+    "requiredGateRecheck": "REQUIRED"
+  },
+  {
+    "status": "FROZEN",
+    "oldAction": {
+      "packet": "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md",
+      "sha256": "5932e1224a15e0199c1bb030d8ccd40a09275b3a005a9a01f3775694411a2984",
+      "criteria": [
+        "RC-01"
+      ]
+    },
+    "newAction": {
+      "packet": "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md",
+      "sha256": "a3a731e1d7d93e6962f423e934b0bfd06aae7c67dd4ebdef342f6118ded7098e",
+      "criteria": [
+        "RC-01"
+      ]
+    },
+    "packetBodyEqualExceptStatus": true,
+    "criteriaEqual": true,
+    "identityUnchanged": {
+      "projectRootSha256": "118ae5e1a401ba15aac7af388964313d5947f3c5191c682648afd028d99104c4",
+      "manifestSha256": "0035f76139fa562c04d2398a56a2e437a4edbd520e330d732e21e7c7762f7f9f",
+      "policySha256": "e6daa5b3405850e032068b6745f5f94d3a6a626b7511e0bface3b01a00282aa3",
+      "lockSha256": "bc2ac2aeb220dce995712c5b10a2ffa93e79918c3a23fed124e03f667c8542b3",
+      "coreCommit": "5de22b138abccc04e098f910b29ab26a1fbec4ac",
+      "profileId": "cvf.downstreamGateProfile@1.4.1",
+      "profileSha256": "3e14e4ad99a18416752b4666c4f0bed4cc7436068ef6e1c8768f34505e566c1f",
+      "deliveryFingerprint": "71c5656283ff0c3bb7270f7b6fe66ace4545b378b89d06d443eecddb113a95f0",
+      "sourceRoute": "AUTHORIZED_SUPPLEMENTAL"
+    },
+    "receiptControlSemanticsEqual": true,
+    "reviewAuthority": "Terra conditional status-only refresh under recorded actual R158 review",
+    "requiredGateRecheck": "REQUIRED"
+  }
+]

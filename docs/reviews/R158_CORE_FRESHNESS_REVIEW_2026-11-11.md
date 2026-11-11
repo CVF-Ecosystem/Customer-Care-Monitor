@@ -18,3 +18,9 @@ DEFERRED_PRIVATE_ONLY
 ## Correction and review-scope recheck
 
 Terra independently returned PASS_CORRECTION_AND_REVIEW_SCOPE after reading the corrected Root-only receipt attribution, exact current action binding and substantive REVIEW/REVIEW coverage. Both tranche and product conclusions remain BLOCKED pending committed-range closure. Material commit may follow actual current ACT and applicable checks. APPL not applicable at COMPLETE_PENDING_REVIEW remains distinct from retained BUILD APPL PASS. Material original all-candidate range precedes terminal review and must rerun after final continuity commit. Final COMPLETE coverage remains separately unreviewed.
+
+## Terminal review and withdrawn hash finding
+
+Terra initially rejected two terminal COV references by applying ACT raw-byte hash semantics. Root checked the admitted contract and installed COV digest, retaining both raw and CRLF-to-LF normalized diagnostics. Terra independently rechecked contract line57 and installed code digest lines98-99, then expressly withdrew the blocker. Both normalized evidence values exactly match the packet. Original rejection and correction are retained, with no evidence-byte drift or reference mutation.
+
+Terra accepted terminal COV COMPLETE only for the bounded material079fb7ba freshness/range result, with product BLOCKED. Acceptance is conditional on exact status-only body/criteria/source/control equality proofs, refreshed raw ACT bindings, actual applicable gate reruns and the final continuity-commit original all-candidate range pass. No future pass was asserted by the reviewer. Root owns checking these conditions and the local commit/final disposition.

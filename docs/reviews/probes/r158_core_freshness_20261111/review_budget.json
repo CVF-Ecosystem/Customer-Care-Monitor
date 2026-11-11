@@ -30,15 +30,31 @@
       "turn": "01a1cadd-6cc9-7a11-bd8b-c0812e622501",
       "durationMs": 33845,
       "outcome": "PASS_CORRECTION_AND_REVIEW_SCOPE"
+    },
+    {
+      "agent": "terra_r158_review",
+      "thread": "01a1cad0-6ecf-70d2-98a8-134a31a8a08a",
+      "turn": "01a1cae1-9388-7d90-8d3b-466f451a37c2",
+      "durationMs": 45558,
+      "outcome": "TERMINAL_REJECTED_RAW_HASH_INTERPRETATION"
+    },
+    {
+      "agent": "terra_r158_review",
+      "thread": "01a1cad0-6ecf-70d2-98a8-134a31a8a08a",
+      "turn": "01a1cae2-a067-7590-8a9f-78588855638a",
+      "durationMs": 21363,
+      "outcome": "WITHDRAW_BLOCKER_COV_CONTRACT_VERIFIED_CONDITIONAL_TERMINAL_ACCEPT"
     }
   ],
-  "consumedSeconds": 189.096,
-  "remainingSeconds": 410.904,
+  "consumedSeconds": 256.017,
+  "remainingSeconds": 343.983,
   "priorBudget": {
     "additionalSeconds": 5400,
     "used": 5376.3439525,
     "remaining": 23.6560475,
     "original75Minutes": "UNKNOWN",
     "workerFunctionalSuites": "4consolidated+1targeted spent"
-  }
+  },
+  "workerFinished": true,
+  "meter": "Codex app read_thread completed-turn durationMs, full lifecycle including startup/final"
 }

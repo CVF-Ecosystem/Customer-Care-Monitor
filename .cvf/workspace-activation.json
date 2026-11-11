@@ -17,7 +17,7 @@
   "actions": [
     {
       "packet": "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md",
-      "sha256": "e3632892f299f0576bb245d0909fbceaaf597c4ec42de3312f5a2f749706e7c3",
+      "sha256": "a3a731e1d7d93e6962f423e934b0bfd06aae7c67dd4ebdef342f6118ded7098e",
       "criteria": [
         "RC-01"
       ]
@@ -36,7 +36,7 @@
       "reviewEvidence": [
         {
           "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/supplemental.json",
-          "sha256": "13a39f5eeac35e01535d9850355242519d34488c6fc0411a88326018567eedae"
+          "sha256": "feb3128d87d05d42a632dba17f30cf627abedd467cdd6535385889ff4d4e3d67"
         }
       ]
     }
@@ -55,12 +55,12 @@
       ],
       "evidence": {
         "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-INST-01.json",
-        "sha256": "12d0f1cf8476a2d7e005e452ae271d4210af914ec87c7e7f2feaa05e5646abe9"
+        "sha256": "f1915e19050ed8699156764e7cc11000aadab80ab836c340760961964181da71"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md",
-          "sha256": "e3632892f299f0576bb245d0909fbceaaf597c4ec42de3312f5a2f749706e7c3",
+          "sha256": "a3a731e1d7d93e6962f423e934b0bfd06aae7c67dd4ebdef342f6118ded7098e",
           "criteria": [
             "RC-01"
           ]
@@ -74,7 +74,7 @@
       "invocationEvidence": [
         {
           "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-INST-01.json",
-          "sha256": "12d0f1cf8476a2d7e005e452ae271d4210af914ec87c7e7f2feaa05e5646abe9"
+          "sha256": "f1915e19050ed8699156764e7cc11000aadab80ab836c340760961964181da71"
         }
       ]
     },
@@ -91,12 +91,12 @@
       ],
       "evidence": {
         "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-CONT-01.json",
-        "sha256": "a27d2eba246ea791e6fdcb6dbf150f733d698b6bae77c2fb27cde943194f1233"
+        "sha256": "b674f56ed6f5659bf2f0219a43cfbb76dcd6db8bcd6cb7edc5c54db57ea96502"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md",
-          "sha256": "e3632892f299f0576bb245d0909fbceaaf597c4ec42de3312f5a2f749706e7c3",
+          "sha256": "a3a731e1d7d93e6962f423e934b0bfd06aae7c67dd4ebdef342f6118ded7098e",
           "criteria": [
             "RC-01"
           ]
@@ -110,7 +110,7 @@
       "invocationEvidence": [
         {
           "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-CONT-01.json",
-          "sha256": "a27d2eba246ea791e6fdcb6dbf150f733d698b6bae77c2fb27cde943194f1233"
+          "sha256": "b674f56ed6f5659bf2f0219a43cfbb76dcd6db8bcd6cb7edc5c54db57ea96502"
         }
       ]
     },
@@ -127,12 +127,12 @@
       ],
       "evidence": {
         "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-RANGE-01.json",
-        "sha256": "da7bd0b1f7898fe92c3082712c8fa72ae0ad1d230c8b60232e2189ac5307a9f9"
+        "sha256": "860587b529d276b2b0c660e6ec67420b2b04ecc8e04021dc44e92133fb1970e5"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md",
-          "sha256": "e3632892f299f0576bb245d0909fbceaaf597c4ec42de3312f5a2f749706e7c3",
+          "sha256": "a3a731e1d7d93e6962f423e934b0bfd06aae7c67dd4ebdef342f6118ded7098e",
           "criteria": [
             "RC-01"
           ]
@@ -146,7 +146,7 @@
       "invocationEvidence": [
         {
           "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-RANGE-01.json",
-          "sha256": "da7bd0b1f7898fe92c3082712c8fa72ae0ad1d230c8b60232e2189ac5307a9f9"
+          "sha256": "860587b529d276b2b0c660e6ec67420b2b04ecc8e04021dc44e92133fb1970e5"
         }
       ]
     },
@@ -163,12 +163,12 @@
       ],
       "evidence": {
         "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-APPL-01.json",
-        "sha256": "08d6f9ed8d80677a1577414755443ee591f9be4f58c4e3a8b4e1c1bb07c5b270"
+        "sha256": "7eb4f1125cbd0b886010e727d9adece96402524bcc99a53fba590c7bc1716ef8"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md",
-          "sha256": "e3632892f299f0576bb245d0909fbceaaf597c4ec42de3312f5a2f749706e7c3",
+          "sha256": "a3a731e1d7d93e6962f423e934b0bfd06aae7c67dd4ebdef342f6118ded7098e",
           "criteria": [
             "RC-01"
           ]
@@ -182,7 +182,7 @@
       "invocationEvidence": [
         {
           "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-APPL-01.json",
-          "sha256": "08d6f9ed8d80677a1577414755443ee591f9be4f58c4e3a8b4e1c1bb07c5b270"
+          "sha256": "7eb4f1125cbd0b886010e727d9adece96402524bcc99a53fba590c7bc1716ef8"
         }
       ]
     },
@@ -199,12 +199,12 @@
       ],
       "evidence": {
         "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-ROUTE-01.json",
-        "sha256": "001d3b0cf730308d5911e843c87a61634661c07c5f2558b410ffd178e40697c9"
+        "sha256": "90d49e65ae6923ce4ba8a8f7100dbf3c931a795c545f51ee8bca4dc71453eb1d"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md",
-          "sha256": "e3632892f299f0576bb245d0909fbceaaf597c4ec42de3312f5a2f749706e7c3",
+          "sha256": "a3a731e1d7d93e6962f423e934b0bfd06aae7c67dd4ebdef342f6118ded7098e",
           "criteria": [
             "RC-01"
           ]
@@ -218,7 +218,7 @@
       "invocationEvidence": [
         {
           "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-ROUTE-01.json",
-          "sha256": "001d3b0cf730308d5911e843c87a61634661c07c5f2558b410ffd178e40697c9"
+          "sha256": "90d49e65ae6923ce4ba8a8f7100dbf3c931a795c545f51ee8bca4dc71453eb1d"
         }
       ]
     },
@@ -235,12 +235,12 @@
       ],
       "evidence": {
         "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-COV-01.json",
-        "sha256": "a5bc09f1a3a024d28e5960451fe217f391a134d0b04aa9897cb932136c1aaa7a"
+        "sha256": "37f103039e6e114b04a593feb6ddff7d66cf42e67255a27b8d5a591106ae24d0"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md",
-          "sha256": "e3632892f299f0576bb245d0909fbceaaf597c4ec42de3312f5a2f749706e7c3",
+          "sha256": "a3a731e1d7d93e6962f423e934b0bfd06aae7c67dd4ebdef342f6118ded7098e",
           "criteria": [
             "RC-01"
           ]
@@ -254,7 +254,7 @@
       "invocationEvidence": [
         {
           "path": "docs/reviews/probes/r158_core_freshness_20261111/activation_reviews/CVF-DG-COV-01.json",
-          "sha256": "a5bc09f1a3a024d28e5960451fe217f391a134d0b04aa9897cb932136c1aaa7a"
+          "sha256": "37f103039e6e114b04a593feb6ddff7d66cf42e67255a27b8d5a591106ae24d0"
         }
       ]
     }

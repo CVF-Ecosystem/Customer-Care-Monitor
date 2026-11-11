@@ -1,0 +1,89 @@
+{
+  "exitCode": 0,
+  "phase": "worker-return",
+  "range": "WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=079fb7bafbc24663ace52dbe1c34a9d012d752cf candidates=24 deleted=0",
+  "results": [
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-INST-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-CONT-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-RANGE-01",
+      "findings": [],
+      "notes": [
+        "WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=079fb7bafbc24663ace52dbe1c34a9d012d752cf candidates=24 deleted=0"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "work_order_status_grammar"
+      ],
+      "controlId": "CVF-DG-APPL-01",
+      "findings": [],
+      "notes": [
+        "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md: status CLOSED is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract"
+      ],
+      "ok": true,
+      "outcome": "NOT_APPLICABLE_WITH_REASON",
+      "reason": "every candidate is explicitly not active; closeability contract was not checked"
+    },
+    {
+      "checkedControlIds": [
+        "CVF-DG-ROLE-01"
+      ],
+      "controlId": "CVF-DG-ROLE-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/reviews/R158_CORE_FRESHNESS_RETURN_2026-11-11.md, docs/reviews/R158_CORE_FRESHNESS_REVIEW_2026-11-11.md, docs/reviews/R158_FINAL_FRESHNESS_DISPOSITION_2026-11-11.md"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "CVF-DG-CLAIM-01"
+      ],
+      "controlId": "CVF-DG-CLAIM-01",
+      "findings": [],
+      "notes": [
+        "0 explicit claim line(s) and 4 document(s) scanned"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "milestone_coverage"
+      ],
+      "controlId": "CVF-DG-COV-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md",
+        "mechanical joins only; Local owns semantic acceptance"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    }
+  ]
+}

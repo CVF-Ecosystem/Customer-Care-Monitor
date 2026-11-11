@@ -1,6 +1,6 @@
 # R158 — official Core freshness and ACT identity
 
-Status: COMPLETE_PENDING_REVIEW
+Status: CLOSED
 workOrderStatusGrammar: cvf.workOrderStatusGrammar@1.0.0
 Risk: R2
 Authority: `CVF_SESSION/authority/CCMAI-RUNTIME-158.json`
@@ -85,23 +85,31 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
     "output": "docs/reviews/R158_CORE_FRESHNESS_REVIEW_2026-11-11.md",
     "budgetMinutes": 10,
     "stop": "Exact5de only; stop on unrelated doctor failure, source/bundle mismatch, exhausted600reviewseconds or new effect",
-    "next": "Root material commit and actual original f740..HEAD all-candidate verification, then independent terminal disposition"
+    "next": "Root bounded closure continuity/status commit and final original f740..actualHEAD all-candidate verification"
   },
   "rows": [
     {
       "id": "RC-01",
       "state": "VERIFIED",
-      "gap": "RC-01 accepted at8786; newly advanced publicCore requires bounded freshness support before dependent work",
+      "gap": "Exact official5de freshness and reviewed CCMA identity accepted through actual material original range; product holds retain existing owners",
       "owner": "Root Core freshness steward; Terra independent reviewer",
-      "destination": "R158 officialbase freshness and ACT identity verification",
+      "destination": "Existing owned product roadmap under governed scope",
       "evidence": [
         {
-          "path": "docs/reviews/R154_POSTMERGE_PROVENANCE_AND_GATE_HOLD_2026-11-06.md",
-          "sha256": "ed5e43bd6992412e3def99de8e8bf88a56ca4f434205a2689ba8f9632843b3f2"
+          "path": "docs/reviews/probes/r158_core_freshness_20261111/updater_receipt.json",
+          "sha256": "511435cba8f0eb7f0ae76d0db9a324d29fcf66e841402a9e29fb121b457eb342"
         },
         {
-          "path": "docs/reviews/R155_INDEPENDENT_IMPLEMENTATION_REVIEW_2026-11-06.md",
-          "sha256": "88bad9653338691c43d968e7af0bc61710d4ceb442134ba73d15f91a67241c12"
+          "path": "docs/reviews/probes/r158_core_freshness_20261111/gate_summary.json",
+          "sha256": "4fc78ee1fd9f86854113a53ccae459f78ff31ecff0213704e6b9f7f7f3ca4742"
+        },
+        {
+          "path": "docs/reviews/probes/r158_core_freshness_20261111/source_identity_reuse.json",
+          "sha256": "c9d9f68e4d0de92e3ccda078b45bb1b8008a41fa10007002ea539687f0bdd273"
+        },
+        {
+          "path": "docs/reviews/probes/r158_core_freshness_20261111/material_range_summary.json",
+          "sha256": "6b53efa9eb8d5288a7888ce1d470f194e087ffb4c61253adf5fe6f8a189e23e1"
         }
       ]
     }
@@ -118,11 +126,28 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
     }
   ],
   "conclusions": {
-    "tranche": "BLOCKED",
-    "trancheSummary": "Actual updater and bounded static metadata reviewed conditionally; correction/required controls and committed original range remain before closure",
-    "trancheEvidence": [],
+    "tranche": "COMPLETE",
+    "trancheSummary": "Official5de public freshness restored, backup68 retained, CCMA-only pin and actual ACT/trusted static checks accepted; material079fb7ba original all-candidate range PASS",
+    "trancheEvidence": [
+      {
+        "path": "docs/reviews/probes/r158_core_freshness_20261111/updater_receipt.json",
+        "sha256": "511435cba8f0eb7f0ae76d0db9a324d29fcf66e841402a9e29fb121b457eb342"
+      },
+      {
+        "path": "docs/reviews/probes/r158_core_freshness_20261111/gate_summary.json",
+        "sha256": "4fc78ee1fd9f86854113a53ccae459f78ff31ecff0213704e6b9f7f7f3ca4742"
+      },
+      {
+        "path": "docs/reviews/probes/r158_core_freshness_20261111/source_identity_reuse.json",
+        "sha256": "c9d9f68e4d0de92e3ccda078b45bb1b8008a41fa10007002ea539687f0bdd273"
+      },
+      {
+        "path": "docs/reviews/probes/r158_core_freshness_20261111/material_range_summary.json",
+        "sha256": "6b53efa9eb8d5288a7888ce1d470f194e087ffb4c61253adf5fe6f8a189e23e1"
+      }
+    ],
     "product": "BLOCKED",
-    "productSummary": "R139/M3/R151 held; R150 INCONCLUSIVE/A2 UNRUN/cleanupUNKNOWN/spent effects and Facebook/Zalo OA parked",
+    "productSummary": "Repository RC-01 remains verified; project R139/M3/R151 HOLD, R150 INCONCLUSIVE/A2 UNRUN/cleanupUNKNOWN/spent effects and Facebook/Zalo OA parked",
     "acceptance": [],
     "owner": "Root technical proposal disposition; parent owns source acceptance; Product Owner retains product acceptance"
   }

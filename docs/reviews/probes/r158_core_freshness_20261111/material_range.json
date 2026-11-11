@@ -1,0 +1,117 @@
+{
+  "exitCode": 0,
+  "phase": "pr-ci",
+  "range": "RANGE_RESOLVED mode=RANGE base=f7405c470207dc0d3be64e6eca79b7050d3f79d8 head=079fb7bafbc24663ace52dbe1c34a9d012d752cf candidates=266 deleted=0",
+  "results": [
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-INST-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-CONT-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-RANGE-01",
+      "findings": [],
+      "notes": [
+        "RANGE_RESOLVED mode=RANGE base=f7405c470207dc0d3be64e6eca79b7050d3f79d8 head=079fb7bafbc24663ace52dbe1c34a9d012d752cf candidates=266 deleted=0"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "work_order_status_grammar",
+        "closeability_contract"
+      ],
+      "controlId": "CVF-DG-APPL-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/work_orders/CCMAI_RUNTIME_150_A1_A2_WINDOWS_VERIFY.md, docs/work_orders/CCMAI_RUNTIME_151_EVIDENCE_CAPTURE_REPAIR.md",
+        "docs/work_orders/CCMAI_RUNTIME_152_WORKSPACE_ACTIVATION.md: status DRAFT is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract",
+        "docs/work_orders/CCMAI_RUNTIME_153_M2_ENTRY_INVENTORY.md: status CLOSED is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract",
+        "docs/work_orders/CCMAI_RUNTIME_154_REPOSITORY_RECONCILIATION.md: status BLOCKED_WITH_REASON is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract",
+        "docs/work_orders/CCMAI_RUNTIME_155_HISTORICAL_ADMISSION_PROPOSAL.md: status BLOCKED_WITH_REASON is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract",
+        "docs/work_orders/CCMAI_RUNTIME_156_HISTORICAL_ADMISSION_PROPOSAL.md: status CLOSED is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract",
+        "docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md: status CLOSED is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract",
+        "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md: status COMPLETE_PENDING_REVIEW is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "CVF-DG-ROUTE-01"
+      ],
+      "controlId": "CVF-DG-ROUTE-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "NOT_APPLICABLE_WITH_REASON",
+      "reason": "no dispatch packet declares dispatchKind in scope"
+    },
+    {
+      "checkedControlIds": [
+        "CVF-DG-ROLE-01"
+      ],
+      "controlId": "CVF-DG-ROLE-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/reviews/R150_A1_A2_EXECUTION_STATUS_CARRIER_2026-11-05.md, docs/reviews/R150_A1_A2_WINDOWS_VERIFY_RETURN_2026-11-05.md, docs/reviews/R150_INDEPENDENT_A1_A2_AUDIT_REVIEW_2026-11-05.md, docs/reviews/R150_INDEPENDENT_HELPER_REVIEW_2026-11-05.md, docs/reviews/R150_INDEPENDENT_WINDOWS_VERIFY_REVIEW_2026-11-05.md, docs/reviews/R150_ROOT_DISPOSITION_2026-11-05.md, docs/reviews/R151_A2_CORRECTED_PACKET_INDEPENDENT_REVIEW_2026-11-06.md, docs/reviews/R151_A2_PACKET_INDEPENDENT_REVIEW_2026-11-06.md, docs/reviews/R151_A2_ROOT_BLOCKED_DISPOSITION_2026-11-06.md, docs/reviews/R151_A2_SOURCE_INDEPENDENT_REVIEW_2026-11-06.md, docs/reviews/R151_AMENDMENT_CAUSAL_ASSESSMENT_2026-11-05.md, docs/reviews/R151_AMENDMENT_INDEPENDENT_REVIEW_2026-11-05.md, docs/reviews/R151_CAUSAL_DIAGNOSIS_AND_DESIGN_2026-11-05.md, docs/reviews/R151_EXPIRED_AMENDMENT_INDEPENDENT_REVIEW_2026-11-06.md, docs/reviews/R151_FINAL_SOURCE_BLOCKED_INDEPENDENT_REVIEW_2026-11-05.md, docs/reviews/R151_INTERRUPTED_AMENDMENT_ROOT_ASSESSMENT_2026-11-06.md, docs/reviews/R151_NARROW_A1B_CLEANUP_COMPARISON_INDEPENDENT_REVIEW_2026-11-06.md, docs/reviews/R151_NARROW_A1B_CLEANUP_INSTRUMENT_COMPARISON_2026-11-06.md, docs/reviews/R151_PROSPECTIVE_A2_INDEPENDENT_REVIEW_2026-11-06.md, docs/reviews/R151_PROSPECTIVE_A2_SOURCE_REPAIR_DECISION_2026-11-06.md, docs/reviews/R151_SOURCE_AUDIT_INDEPENDENT_REVIEW_2026-11-05.md, docs/reviews/R151_SOURCE_BLOCKED_RETURN_INDEPENDENT_REVIEW_2026-11-05.md, docs/reviews/R151_SOURCE_EXECUTION_STATUS_CARRIER_2026-11-05.md, docs/reviews/R151_SOURCE_WORKER_RETURN_2026-11-05.md, docs/reviews/R151_V04_CAUSAL_AUDIT_INDEPENDENT_REVIEW_2026-11-06.md, docs/reviews/R151_V04_CAUSAL_CHAIN_AND_COST_AUDIT_2026-11-06.md, docs/reviews/R151_V04_COST_ROUTE_INDEPENDENT_REVIEW_2026-11-06.md, docs/reviews/R151_V04_PRODUCTION_SEAM_CORRECTED_DESIGN_INDEPENDENT_REVIEW_2026-11-06.md, docs/reviews/R151_V04_PRODUCTION_SEAM_DESIGN_2026-11-06.md, docs/reviews/R151_V04_PRODUCTION_SEAM_DESIGN_INDEPENDENT_REVIEW_2026-11-06.md, docs/reviews/R151_V04_PRODUCTION_SEAM_SEALED_DESIGN_INDEPENDENT_REVIEW_2026-11-06.md, docs/reviews/R151_V04_THIRD_REPAIR_COST_ROUTE_DECISION_2026-11-06.md, docs/reviews/R152_DISPOSITION_INDEPENDENT_REVIEW_2026-11-06.md, docs/reviews/R152_PARENT_UPDATE_APPLICABILITY_2026-11-06.md, docs/reviews/R152_PROFILE_14_NECESSITY_DISPOSITION_2026-11-06.md, docs/reviews/R152_PROFILE_14_NECESSITY_INDEPENDENT_REVIEW_2026-11-06.md, docs/reviews/R152_ROADMAP_FORM_INDEPENDENT_REVIEW_2026-11-06.md, docs/reviews/R152_ROADMAP_FORM_V14_INDEPENDENT_REVIEW_2026-11-06.md, docs/reviews/R153_M2_ENTRY_INVENTORY_INDEPENDENT_REVIEW_2026-11-06.md, docs/reviews/R153_M2_ENTRY_INVENTORY_PACKET_INDEPENDENT_REVIEW_2026-11-06.md, docs/reviews/R153_M2_ENTRY_INVENTORY_WORKER_RETURN_2026-11-06.md, docs/reviews/R154_POSTMERGE_PROVENANCE_AND_GATE_HOLD_2026-11-06.md, docs/reviews/R154_REPOSITORY_RECONCILIATION_INDEPENDENT_REVIEW_2026-11-06.md, docs/reviews/R154_REPOSITORY_RECONCILIATION_PREDISPATCH_REVIEW_2026-11-06.md, docs/reviews/R154_WORKER_RETURN_2026-11-06.md, docs/reviews/R155_DISPATCH_DESIGN_REVIEW_2026-11-06.md, docs/reviews/R155_INDEPENDENT_IMPLEMENTATION_REVIEW_2026-11-06.md, docs/reviews/R156_INDEPENDENT_IMPLEMENTATION_REVIEW_2026-11-06.md, docs/reviews/R156_PACKET_DESIGN_REVIEW_2026-11-06.md, docs/reviews/R157_ADMISSION_REVIEW_2026-11-07.md, docs/reviews/R157_ADOPTION_RETURN_2026-11-07.md, docs/reviews/R157_COMPATIBILITY_ROOT_REVIEW_2026-11-07.md, docs/reviews/R157_COMPATIBILITY_WORKER_RETURN_2026-11-07.md, docs/reviews/R157_FINAL_REPOSITORY_DISPOSITION_2026-11-07.md, docs/reviews/R157_INDEPENDENT_ADOPTION_REVIEW_2026-11-07.md, docs/reviews/R158_ADMISSION_REVIEW_2026-11-11.md, docs/reviews/R158_CORE_FRESHNESS_RETURN_2026-11-11.md, docs/reviews/R158_CORE_FRESHNESS_REVIEW_2026-11-11.md",
+        "docs/reviews/R155_WORKER_RETURN_2026-11-06.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)",
+        "docs/reviews/R156_WORKER_RETURN_2026-11-06.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)",
+        "docs/reviews/learnings/R155_HISTORICAL_REPAIR_ADMISSION_2026-11-06.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)",
+        "docs/reviews/learnings/README.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)",
+        "docs/reviews/planning/CCMA_REPOSITORY_CONTINUITY_2026-11-06.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)",
+        "docs/reviews/probes/r155_historical_binding_20261106/README.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)",
+        "docs/reviews/probes/r156_historical_join_20261106/README.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)",
+        "docs/reviews/probes/r156_historical_join_20261106/candidate/project_learning_home.template.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)",
+        "docs/reviews/probes/r156_historical_join_20261106/candidate/project_learning_record.template.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "CVF-DG-CLAIM-01"
+      ],
+      "controlId": "CVF-DG-CLAIM-01",
+      "findings": [],
+      "notes": [
+        "0 explicit claim line(s) and 76 document(s) scanned"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "milestone_coverage"
+      ],
+      "controlId": "CVF-DG-COV-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/work_orders/CCMAI_RUNTIME_150_A1_A2_WINDOWS_VERIFY.md, docs/work_orders/CCMAI_RUNTIME_151_EVIDENCE_CAPTURE_REPAIR.md, docs/work_orders/CCMAI_RUNTIME_153_M2_ENTRY_INVENTORY.md, docs/work_orders/CCMAI_RUNTIME_154_REPOSITORY_RECONCILIATION.md, docs/work_orders/CCMAI_RUNTIME_155_HISTORICAL_ADMISSION_PROPOSAL.md, docs/work_orders/CCMAI_RUNTIME_156_HISTORICAL_ADMISSION_PROPOSAL.md, docs/work_orders/CCMAI_RUNTIME_157_VERIFIED_PROFILE_ADOPTION.md, docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md",
+        "mechanical joins only; Local owns semantic acceptance"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    }
+  ]
+}

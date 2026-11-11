@@ -1,0 +1,13 @@
+[PASS] CVF-DG-INST-01 PASS
+[PASS] CVF-DG-CONT-01 PASS
+[PASS] CVF-DG-RANGE-01 PASS
+       note: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=079fb7bafbc24663ace52dbe1c34a9d012d752cf candidates=24 deleted=0
+[PASS] CVF-DG-APPL-01 NOT_APPLICABLE_WITH_REASON - every candidate is explicitly not active; closeability contract was not checked
+       note: docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md: status CLOSED is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract
+[PASS] CVF-DG-ROUTE-01 NOT_APPLICABLE_WITH_REASON - no dispatch packet declares dispatchKind in scope
+[PASS] CVF-DG-COV-01 PASS
+       note: checked: docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md
+       note: mechanical joins only; Local owns semantic acceptance
+[PASS] CVF-DG-ACT-01 PASS
+       note: Mechanical evidence bindings; Local reviews semantic authority and invocation truth.
+RESULT: PASS phase=pre-dispatch mandatoryControls=7 failed=0

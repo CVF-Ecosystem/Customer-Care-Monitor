@@ -1,0 +1,42 @@
+{
+  "initialReview": "REJECTED_RAW_HASH_MISMATCH",
+  "correctedReview": "WITHDRAWN_COV_NORMALIZES_CRLF_TO_LF",
+  "evidenceByteDrift": false,
+  "evidenceReferencesChanged": false,
+  "contract": "CVF_MILESTONE_COVERAGE_MACHINE_CONTRACT.md line57",
+  "installedDigest": "cvf_milestone_coverage.py lines98-99",
+  "rows": [
+    {
+      "path": "docs/reviews/probes/r158_core_freshness_20261111/updater_receipt.json",
+      "sha256": "511435cba8f0eb7f0ae76d0db9a324d29fcf66e841402a9e29fb121b457eb342",
+      "rawSha256": "3527ea3eee82076c8c7997b36b63878d3b8e84003cec179015b74e5ed0d363a9",
+      "normalizedSha256": "511435cba8f0eb7f0ae76d0db9a324d29fcf66e841402a9e29fb121b457eb342",
+      "crlfCount": 140,
+      "matchesCovContract": true
+    },
+    {
+      "path": "docs/reviews/probes/r158_core_freshness_20261111/gate_summary.json",
+      "sha256": "4fc78ee1fd9f86854113a53ccae459f78ff31ecff0213704e6b9f7f7f3ca4742",
+      "rawSha256": "2770002e9d8f7d05f28cd4c6097ab0a84ff5c453d1ecad27b3b4226f7b5360e7",
+      "normalizedSha256": "4fc78ee1fd9f86854113a53ccae459f78ff31ecff0213704e6b9f7f7f3ca4742",
+      "crlfCount": 12,
+      "matchesCovContract": true
+    },
+    {
+      "path": "docs/reviews/probes/r158_core_freshness_20261111/source_identity_reuse.json",
+      "sha256": "c9d9f68e4d0de92e3ccda078b45bb1b8008a41fa10007002ea539687f0bdd273",
+      "rawSha256": "c9d9f68e4d0de92e3ccda078b45bb1b8008a41fa10007002ea539687f0bdd273",
+      "normalizedSha256": "c9d9f68e4d0de92e3ccda078b45bb1b8008a41fa10007002ea539687f0bdd273",
+      "crlfCount": 0,
+      "matchesCovContract": true
+    },
+    {
+      "path": "docs/reviews/probes/r158_core_freshness_20261111/material_range_summary.json",
+      "sha256": "6b53efa9eb8d5288a7888ce1d470f194e087ffb4c61253adf5fe6f8a189e23e1",
+      "rawSha256": "6b53efa9eb8d5288a7888ce1d470f194e087ffb4c61253adf5fe6f8a189e23e1",
+      "normalizedSha256": "6b53efa9eb8d5288a7888ce1d470f194e087ffb4c61253adf5fe6f8a189e23e1",
+      "crlfCount": 0,
+      "matchesCovContract": true
+    }
+  ]
+}

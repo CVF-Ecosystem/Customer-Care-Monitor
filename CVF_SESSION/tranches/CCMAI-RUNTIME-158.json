@@ -69,17 +69,23 @@
   },
   "workOrder": "docs/work_orders/CCMAI_RUNTIME_158_OFFICIAL_CORE_FRESHNESS.md",
   "baseCommit": "d0d25c7a8fc48dbbb08b39050a094806f6f31de7",
-  "buildCommit": null,
-  "reviewEvidence": [],
-  "disposition": "PENDING",
-  "freeze": "OPEN",
+  "buildCommit": "079fb7bafbc24663ace52dbe1c34a9d012d752cf",
+  "reviewEvidence": [
+    "docs/reviews/R158_CORE_FRESHNESS_REVIEW_2026-11-11.md",
+    "docs/reviews/R158_CORE_FRESHNESS_RETURN_2026-11-11.md"
+  ],
+  "disposition": "REVIEW_PASS",
+  "freeze": "FROZEN",
   "history": [
     "DISPATCH_READY",
     "BUILD",
-    "REVIEW_PENDING"
+    "REVIEW_PENDING",
+    "REVIEW_PASS",
+    "FROZEN"
   ],
   "workOrderStatusGrammar": "cvf.workOrderStatusGrammar@1.0.0",
-  "status": "REVIEW_PENDING",
-  "phase": "REVIEW",
-  "workOrderStatus": "COMPLETE_PENDING_REVIEW"
+  "status": "FROZEN",
+  "phase": "FREEZE",
+  "workOrderStatus": "CLOSED",
+  "closer": "Root CLOSER / COMMIT_STEWARD / SESSION_SYNC_STEWARD; independent Terra bounded metadata and terminal coverage review accepted, actual static controls and original committed-range checks required before reporting closure"
 }

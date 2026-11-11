@@ -7,5 +7,19 @@
   ],
   "correctiveOutcome": "Exact third pre-dispatch APPL/COV/ACT PASS before BUILD commit6e0bdd1e",
   "metadataProofCapture": "Pack JSON UTF8 BOM failed initial source proof capture after metadata writes. Corrected utf-8-sig reader and fully verified57pack/18installed/131unit identities. No source mutation.",
-  "limits": "Static packet preparation checks are not completed product repairs. Product holds and original repair convergence ledger remain retained."
+  "limits": "Static packet preparation checks are not completed product repairs. Product holds and original repair convergence ledger remain retained.",
+  "intermediateStatusGateFailure": {
+    "status": "REVIEWER_ACCEPTED",
+    "phase": "REVIEW",
+    "failure": "COV_EXECUTABLE_PHASE_REQUIRED",
+    "cause": "Inherited COV required_artifact treats REVIEWER_ACCEPTED as executable and requires DISPATCH, while reviewed terminal COV requires REVIEW. Native APPL classifies status not active.",
+    "resolution": "Retained failed reviewer-fast and trustedACT results, made independently permitted status-only transition to CLOSED/FROZEN, verified unchanged body/criteria/source/control semantics and actual frozen worker/reviewer/precommit/COV/ACT PASS. Inherited code unchanged.",
+    "productRepairOutcome": "No product outcome claim or outcome-budget reset."
+  },
+  "finalPortableCloserFinding": {
+    "failure": "FROZEN record missing explicit recorded closer",
+    "correction": "Added actual Root closer responsible for independently reviewed result and final actual range verification",
+    "originalOutput": "closure-portable-missing-closer.txt",
+    "gateRecheck": "Required and performed before final commit"
+  }
 }
